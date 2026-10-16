@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/morphology.html">MORPHOLOGY</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/morphology.html">MORPHOLOGY</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>rod shaped</h1>
     <p class="curie"><code>METPO:1000681</code> · CLASS · REVIEWED</p>
 
@@ -85,9 +96,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>MreB</strong>
+
             <span class="edge-predicate">interacts with</span>
             <strong>Rod complex</strong>
-            <code>biolink:interacts_with</code>
+
+            <a href="https://w3id.org/biolink/vocab/interacts_with" rel="nofollow noreferrer"><code>biolink:interacts_with</code></a>
             <p>MreB filaments interact with the Rod complex that elongates the cell wall.</p>
             <ul>
 
@@ -102,9 +115,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>Rod complex</strong>
+
             <span class="edge-predicate">directs</span>
             <strong>peptidoglycan synthesis</strong>
-            <code>RO:0002211</code>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0009252" rel="nofollow noreferrer"><code>GO:0009252</code></a>
+            <a href="http://purl.obolibrary.org/obo/RO_0002211" rel="nofollow noreferrer"><code>RO:0002211</code></a>
             <p>Rod complexes direct sidewall peptidoglycan synthesis.</p>
             <ul>
 
@@ -119,9 +134,11 @@
 
           <li id="pathograph-1-edge-3">
             <strong>peptidoglycan synthesis</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0009252" rel="nofollow noreferrer"><code>GO:0009252</code></a>
             <span class="edge-predicate">has output</span>
             <strong>lateral cell-wall elongation</strong>
-            <code>RO:0002234</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002234" rel="nofollow noreferrer"><code>RO:0002234</code></a>
             <p>Directed peptidoglycan synthesis elongates rod-shaped cells.</p>
             <ul>
 
@@ -136,9 +153,11 @@
 
           <li id="pathograph-1-edge-4">
             <strong>lateral cell-wall elongation</strong>
+
             <span class="edge-predicate">regulates</span>
             <strong>rod shaped</strong>
-            <code>RO:0002211</code>
+            <a href="https://w3id.org/metpo/1000681" rel="nofollow noreferrer"><code>METPO:1000681</code></a>
+            <a href="http://purl.obolibrary.org/obo/RO_0002211" rel="nofollow noreferrer"><code>RO:0002211</code></a>
             <p>Lateral wall elongation preserves the cylindrical rod morphology.</p>
             <ul>
 
@@ -153,8 +172,10 @@
 
           <li id="pathograph-1-edge-5">
             <strong>FtsZ</strong>
+            <a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR000158/" rel="nofollow noreferrer"><code>InterPro:IPR000158</code></a>
             <span class="edge-predicate">coordinates with</span>
             <strong>peptidoglycan synthesis</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0009252" rel="nofollow noreferrer"><code>GO:0009252</code></a>
 
             <p>FtsZ coordinates division-associated peptidoglycan synthesis with rod cell morphology.</p>
             <ul>
@@ -170,9 +191,11 @@
 
           <li id="pathograph-1-edge-6">
             <strong>RodA-PBP2 complex</strong>
+
             <span class="edge-predicate">positively regulates</span>
             <strong>rod shaped</strong>
-            <code>RO:0002213</code>
+            <a href="https://w3id.org/metpo/1000681" rel="nofollow noreferrer"><code>METPO:1000681</code></a>
+            <a href="http://purl.obolibrary.org/obo/RO_0002213" rel="nofollow noreferrer"><code>RO:0002213</code></a>
             <p>The active elongation synthase complex supports proper rod-shaped morphology during growth.</p>
             <ul>
 
@@ -187,9 +210,11 @@
 
           <li id="pathograph-1-edge-7">
             <strong>PBP2 structural opening</strong>
+
             <span class="edge-predicate">activates</span>
             <strong>RodA polymerization activity</strong>
-            <code>RO:0002213</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002213" rel="nofollow noreferrer"><code>RO:0002213</code></a>
             <p>Conformational opening of PBP2 allosterically stimulates RodA polymerization.</p>
             <ul>
 
@@ -204,9 +229,11 @@
 
           <li id="pathograph-1-edge-8">
             <strong>PBP2 structural opening</strong>
+
             <span class="edge-predicate">enables</span>
             <strong>peptidoglycan crosslinking</strong>
-            <code>RO:0002327</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002327" rel="nofollow noreferrer"><code>RO:0002327</code></a>
             <p>The open state elevates the PBP2 TP domain toward the PG layer, enabling crosslinking.</p>
             <ul>
 
@@ -221,9 +248,11 @@
 
           <li id="pathograph-1-edge-9">
             <strong>MreC</strong>
+
             <span class="edge-predicate">activates</span>
             <strong>RodA-PBP2 complex</strong>
-            <code>RO:0002213</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002213" rel="nofollow noreferrer"><code>RO:0002213</code></a>
             <p>MreC binds the PBP2 pedestal domain and biases RodA-PBP2 into the open, catalytically active conformation.</p>
             <ul>
 
@@ -238,9 +267,11 @@
 
           <li id="pathograph-1-edge-10">
             <strong>RodA polymerization activity</strong>
+
             <span class="edge-predicate">regulates</span>
             <strong>elongasome processivity</strong>
-            <code>RO:0002211</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002211" rel="nofollow noreferrer"><code>RO:0002211</code></a>
             <p>RodA abundance/activity tunes processive dynamics of MreB-associated elongasomes.</p>
             <ul>
 
@@ -255,9 +286,11 @@
 
           <li id="pathograph-1-edge-11">
             <strong>elongasome processivity</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>rod-shaped sidewall reinforcement</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>Processive circumferential synthesis lays long glycan hoops that mechanically reinforce the cylinder.</p>
             <ul>
 
@@ -349,6 +382,12 @@
       <ul class="nn-list">
 
         <li>
+          <span class="nn-cat">morphology</span>
+          <a href="../../traits/morphology/lateral_flagellation.html">lateral flagellation</a>
+          <span class="sim">0.402</span>
+        </li>
+
+        <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/ph_range_mid1.html">pH range mid1</a>
           <span class="sim">0.401</span>
@@ -388,12 +427,6 @@
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/temperature_range_mid4.html">temperature range mid4</a>
           <span class="sim">0.391</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/temperature_delta_mid2.html">temperature delta mid2</a>
-          <span class="sim">0.389</span>
         </li>
 
       </ul>
@@ -1012,7 +1045,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking rod shape to MreB-guided peptidoglycan synthesis, Rod complex activity, cell-wall elongation, and FtsZ division coupling.", "edges": [{"description": "MreB filaments interact with the Rod complex that elongates the cell wall.", "evidence": [{"notes": "Supports MreB-Rod complex interaction in rod-shape regulation.", "reference": "DOI:10.1146/annurev-cellbio-010521-010834", "snippet": "MreB filaments interact with Rod complexes"}], "id": "edge-1", "is_orphan": false, "predicate": "interacts with", "predicate_id": "biolink:interacts_with", "source": "mreB", "target": "rod_complex"}, {"description": "Rod complexes direct sidewall peptidoglycan synthesis.", "evidence": [{"notes": "Supports Rod complex contribution to wall insertion.", "reference": "DOI:10.1146/annurev-cellbio-010521-010834", "snippet": "Rod complexes drive cell wall insertion"}], "id": "edge-2", "is_orphan": false, "predicate": "directs", "predicate_id": "RO:0002211", "source": "rod_complex", "target": "peptidoglycan_synthesis"}, {"description": "Directed peptidoglycan synthesis elongates rod-shaped cells.", "evidence": [{"notes": "Supports peptidoglycan synthesis in cell elongation.", "reference": "DOI:10.1038/nrmicro2677", "snippet": "elongation mode of peptidoglycan synthesis"}], "id": "edge-3", "is_orphan": false, "predicate": "has output", "predicate_id": "RO:0002234", "source": "peptidoglycan_synthesis", "target": "lateral_cell_wall_elongation"}, {"description": "Lateral wall elongation preserves the cylindrical rod morphology.", "evidence": [{"notes": "Supports MreB-associated cell-wall synthesis as important for rod shape restoration and maintenance.", "reference": "DOI:10.1016/j.tim.2011.11.004", "snippet": "restores its rod shape"}], "id": "edge-4", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "lateral_cell_wall_elongation", "target": "rod_shaped_trait"}, {"description": "FtsZ coordinates division-associated peptidoglycan synthesis with rod cell morphology.", "evidence": [{"notes": "Supports FtsZ-PBP collaboration in bacterial cell-shape generation.", "reference": "DOI:10.1038/nrmicro1205", "snippet": "FtsZ collaborates with penicillin binding proteins"}], "id": "edge-5", "is_orphan": false, "predicate": "coordinates with", "predicate_id": null, "source": "ftsZ", "target": "peptidoglycan_synthesis"}, {"description": "The active elongation synthase complex supports proper rod-shaped morphology during growth.", "evidence": [{"notes": "Structural opening couples RodA glycan polymerization and PBP2 crosslinking, a coupling essential in vivo for rod-shaped growth.", "reference": "DOI:10.1038/s41467-023-39037-9"}], "id": "edge-6", "is_orphan": false, "predicate": "positively regulates", "predicate_id": "RO:0002213", "source": "rodA_pbp2_complex", "target": "rod_shaped_trait"}, {"description": "Conformational opening of PBP2 allosterically stimulates RodA polymerization.", "evidence": [{"notes": "Structural opening promotes RodA polymerization activity.", "reference": "DOI:10.1038/s41467-023-39037-9"}], "id": "edge-7", "is_orphan": false, "predicate": "activates", "predicate_id": "RO:0002213", "source": "pbp2_structural_opening", "target": "rodA_polymerization"}, {"description": "The open state elevates the PBP2 TP domain toward the PG layer, enabling crosslinking.", "evidence": [{"notes": "Opening of PBP2 elevates the TP domain, facilitating crosslinking.", "reference": "DOI:10.1038/s41467-023-39037-9"}], "id": "edge-8", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "pbp2_structural_opening", "target": "pg_crosslinking"}, {"description": "MreC binds the PBP2 pedestal domain and biases RodA-PBP2 into the open, catalytically active conformation.", "evidence": [{"notes": "MreC is implicated as an activator that promotes the open, catalytically active conformation of PBP2.", "reference": "DOI:10.1038/s41467-023-39037-9"}], "id": "edge-9", "is_orphan": false, "predicate": "activates", "predicate_id": "RO:0002213", "source": "mreC", "target": "rodA_pbp2_complex"}, {"description": "RodA abundance/activity tunes processive dynamics of MreB-associated elongasomes.", "evidence": [{"notes": "RodA abundance regulates elongasome processivity, reversal frequency, and pausing.", "reference": "DOI:10.1038/s41467-024-49785-x"}], "id": "edge-10", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "rodA_polymerization", "target": "elongasome_processivity"}, {"description": "Processive circumferential synthesis lays long glycan hoops that mechanically reinforce the cylinder.", "evidence": [{"notes": "Long glycan strands act as barrel-hoop-like reinforcing structures of the rod sidewall.", "reference": "DOI:10.1038/s41467-024-49785-x"}], "id": "edge-11", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "elongasome_processivity", "target": "sidewall_reinforcement"}], "evidence_rows": [{"description": "MreB filaments interact with the Rod complex that elongates the cell wall.", "edge_id": "edge-1", "evidence": [{"notes": "Supports MreB-Rod complex interaction in rod-shape regulation.", "reference": "DOI:10.1146/annurev-cellbio-010521-010834", "snippet": "MreB filaments interact with Rod complexes"}], "predicate": "interacts with", "predicate_id": "biolink:interacts_with", "source": "MreB", "target": "Rod complex"}, {"description": "Rod complexes direct sidewall peptidoglycan synthesis.", "edge_id": "edge-2", "evidence": [{"notes": "Supports Rod complex contribution to wall insertion.", "reference": "DOI:10.1146/annurev-cellbio-010521-010834", "snippet": "Rod complexes drive cell wall insertion"}], "predicate": "directs", "predicate_id": "RO:0002211", "source": "Rod complex", "target": "peptidoglycan synthesis"}, {"description": "Directed peptidoglycan synthesis elongates rod-shaped cells.", "edge_id": "edge-3", "evidence": [{"notes": "Supports peptidoglycan synthesis in cell elongation.", "reference": "DOI:10.1038/nrmicro2677", "snippet": "elongation mode of peptidoglycan synthesis"}], "predicate": "has output", "predicate_id": "RO:0002234", "source": "peptidoglycan synthesis", "target": "lateral cell-wall elongation"}, {"description": "Lateral wall elongation preserves the cylindrical rod morphology.", "edge_id": "edge-4", "evidence": [{"notes": "Supports MreB-associated cell-wall synthesis as important for rod shape restoration and maintenance.", "reference": "DOI:10.1016/j.tim.2011.11.004", "snippet": "restores its rod shape"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "lateral cell-wall elongation", "target": "rod shaped"}, {"description": "FtsZ coordinates division-associated peptidoglycan synthesis with rod cell morphology.", "edge_id": "edge-5", "evidence": [{"notes": "Supports FtsZ-PBP collaboration in bacterial cell-shape generation.", "reference": "DOI:10.1038/nrmicro1205", "snippet": "FtsZ collaborates with penicillin binding proteins"}], "predicate": "coordinates with", "predicate_id": null, "source": "FtsZ", "target": "peptidoglycan synthesis"}, {"description": "The active elongation synthase complex supports proper rod-shaped morphology during growth.", "edge_id": "edge-6", "evidence": [{"notes": "Structural opening couples RodA glycan polymerization and PBP2 crosslinking, a coupling essential in vivo for rod-shaped growth.", "reference": "DOI:10.1038/s41467-023-39037-9"}], "predicate": "positively regulates", "predicate_id": "RO:0002213", "source": "RodA-PBP2 complex", "target": "rod shaped"}, {"description": "Conformational opening of PBP2 allosterically stimulates RodA polymerization.", "edge_id": "edge-7", "evidence": [{"notes": "Structural opening promotes RodA polymerization activity.", "reference": "DOI:10.1038/s41467-023-39037-9"}], "predicate": "activates", "predicate_id": "RO:0002213", "source": "PBP2 structural opening", "target": "RodA polymerization activity"}, {"description": "The open state elevates the PBP2 TP domain toward the PG layer, enabling crosslinking.", "edge_id": "edge-8", "evidence": [{"notes": "Opening of PBP2 elevates the TP domain, facilitating crosslinking.", "reference": "DOI:10.1038/s41467-023-39037-9"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "PBP2 structural opening", "target": "peptidoglycan crosslinking"}, {"description": "MreC binds the PBP2 pedestal domain and biases RodA-PBP2 into the open, catalytically active conformation.", "edge_id": "edge-9", "evidence": [{"notes": "MreC is implicated as an activator that promotes the open, catalytically active conformation of PBP2.", "reference": "DOI:10.1038/s41467-023-39037-9"}], "predicate": "activates", "predicate_id": "RO:0002213", "source": "MreC", "target": "RodA-PBP2 complex"}, {"description": "RodA abundance/activity tunes processive dynamics of MreB-associated elongasomes.", "edge_id": "edge-10", "evidence": [{"notes": "RodA abundance regulates elongasome processivity, reversal frequency, and pausing.", "reference": "DOI:10.1038/s41467-024-49785-x"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "RodA polymerization activity", "target": "elongasome processivity"}, {"description": "Processive circumferential synthesis lays long glycan hoops that mechanically reinforce the cylinder.", "edge_id": "edge-11", "evidence": [{"notes": "Long glycan strands act as barrel-hoop-like reinforcing structures of the rod sidewall.", "reference": "DOI:10.1038/s41467-024-49785-x"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "elongasome processivity", "target": "rod-shaped sidewall reinforcement"}], "graph_id": "rod_shaped_mreB_peptidoglycan", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Processive circumferential movement of MreB-associated elongasomes during sidewall synthesis.", "grounding": null, "id": "elongasome_processivity", "is_orphan": false, "label": "elongasome processivity", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Division-ring protein coordinating septal growth.", "grounding": "InterPro:IPR000158", "id": "ftsZ", "is_orphan": false, "label": "FtsZ", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Sidewall growth that lengthens rod-shaped cells.", "grounding": null, "id": "lateral_cell_wall_elongation", "is_orphan": false, "label": "lateral cell-wall elongation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Actin-like protein involved in rod-shape maintenance.", "grounding": null, "id": "mreB", "is_orphan": false, "label": "MreB", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Periplasmic Rod-system component that activates PBP2 by promoting its open conformation.", "grounding": null, "id": "mreC", "is_orphan": false, "label": "MreC", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#cffafe", "description": "Open/active conformational state of PBP2 that allosterically activates the elongation synthase.", "grounding": null, "id": "pbp2_structural_opening", "is_orphan": false, "label": "PBP2 structural opening", "node_type": "MOLECULAR_FUNCTION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Cell-wall synthesis and remodeling process.", "grounding": "GO:0009252", "id": "peptidoglycan_synthesis", "is_orphan": false, "label": "peptidoglycan synthesis", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Transpeptidation crosslinking of peptidoglycan strands during sidewall synthesis.", "grounding": null, "id": "pg_crosslinking", "is_orphan": false, "label": "peptidoglycan crosslinking", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Elongation synthase complex (RodA glycosyltransferase + PBP2 transpeptidase) of the Rod system.", "grounding": null, "id": "rodA_pbp2_complex", "is_orphan": false, "label": "RodA-PBP2 complex", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#cffafe", "description": "Glycan-strand polymerizing (glycosyltransferase) activity of RodA.", "grounding": null, "id": "rodA_polymerization", "is_orphan": false, "label": "RodA polymerization activity", "node_type": "MOLECULAR_FUNCTION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Cell-wall elongation machinery associated with MreB in rod-shaped bacteria.", "grounding": null, "id": "rod_complex", "is_orphan": false, "label": "Rod complex", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Elongated cylindrical bacterial morphology.", "grounding": "METPO:1000681", "id": "rod_shaped_trait", "is_orphan": false, "label": "rod shaped", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Mechanical reinforcement of the cylindrical sidewall via long circumferential glycan hoops.", "grounding": null, "id": "sidewall_reinforcement", "is_orphan": false, "label": "rod-shaped sidewall reinforcement", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This record is a broad environmental or morphological classification spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement descriptor; contextual protein nodes do not receive token UniProt examples.", "scope_status": "NONMECHANISTIC", "title": "Rod-shape MreB and peptidoglycan mechanism"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking rod shape to MreB-guided peptidoglycan synthesis, Rod complex activity, cell-wall elongation, and FtsZ division coupling.", "edges": [{"description": "MreB filaments interact with the Rod complex that elongates the cell wall.", "evidence": [{"notes": "Supports MreB-Rod complex interaction in rod-shape regulation.", "reference": "DOI:10.1146/annurev-cellbio-010521-010834", "snippet": "MreB filaments interact with Rod complexes"}], "id": "edge-1", "is_orphan": false, "predicate": "interacts with", "predicate_id": "biolink:interacts_with", "source": "mreB", "target": "rod_complex"}, {"description": "Rod complexes direct sidewall peptidoglycan synthesis.", "evidence": [{"notes": "Supports Rod complex contribution to wall insertion.", "reference": "DOI:10.1146/annurev-cellbio-010521-010834", "snippet": "Rod complexes drive cell wall insertion"}], "id": "edge-2", "is_orphan": false, "predicate": "directs", "predicate_id": "RO:0002211", "source": "rod_complex", "target": "peptidoglycan_synthesis"}, {"description": "Directed peptidoglycan synthesis elongates rod-shaped cells.", "evidence": [{"notes": "Supports peptidoglycan synthesis in cell elongation.", "reference": "DOI:10.1038/nrmicro2677", "snippet": "elongation mode of peptidoglycan synthesis"}], "id": "edge-3", "is_orphan": false, "predicate": "has output", "predicate_id": "RO:0002234", "source": "peptidoglycan_synthesis", "target": "lateral_cell_wall_elongation"}, {"description": "Lateral wall elongation preserves the cylindrical rod morphology.", "evidence": [{"notes": "Supports MreB-associated cell-wall synthesis as important for rod shape restoration and maintenance.", "reference": "DOI:10.1016/j.tim.2011.11.004", "snippet": "restores its rod shape"}], "id": "edge-4", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "lateral_cell_wall_elongation", "target": "rod_shaped_trait"}, {"description": "FtsZ coordinates division-associated peptidoglycan synthesis with rod cell morphology.", "evidence": [{"notes": "Supports FtsZ-PBP collaboration in bacterial cell-shape generation.", "reference": "DOI:10.1038/nrmicro1205", "snippet": "FtsZ collaborates with penicillin binding proteins"}], "id": "edge-5", "is_orphan": false, "predicate": "coordinates with", "predicate_id": null, "source": "ftsZ", "target": "peptidoglycan_synthesis"}, {"description": "The active elongation synthase complex supports proper rod-shaped morphology during growth.", "evidence": [{"notes": "Structural opening couples RodA glycan polymerization and PBP2 crosslinking, a coupling essential in vivo for rod-shaped growth.", "reference": "DOI:10.1038/s41467-023-39037-9"}], "id": "edge-6", "is_orphan": false, "predicate": "positively regulates", "predicate_id": "RO:0002213", "source": "rodA_pbp2_complex", "target": "rod_shaped_trait"}, {"description": "Conformational opening of PBP2 allosterically stimulates RodA polymerization.", "evidence": [{"notes": "Structural opening promotes RodA polymerization activity.", "reference": "DOI:10.1038/s41467-023-39037-9"}], "id": "edge-7", "is_orphan": false, "predicate": "activates", "predicate_id": "RO:0002213", "source": "pbp2_structural_opening", "target": "rodA_polymerization"}, {"description": "The open state elevates the PBP2 TP domain toward the PG layer, enabling crosslinking.", "evidence": [{"notes": "Opening of PBP2 elevates the TP domain, facilitating crosslinking.", "reference": "DOI:10.1038/s41467-023-39037-9"}], "id": "edge-8", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "pbp2_structural_opening", "target": "pg_crosslinking"}, {"description": "MreC binds the PBP2 pedestal domain and biases RodA-PBP2 into the open, catalytically active conformation.", "evidence": [{"notes": "MreC is implicated as an activator that promotes the open, catalytically active conformation of PBP2.", "reference": "DOI:10.1038/s41467-023-39037-9"}], "id": "edge-9", "is_orphan": false, "predicate": "activates", "predicate_id": "RO:0002213", "source": "mreC", "target": "rodA_pbp2_complex"}, {"description": "RodA abundance/activity tunes processive dynamics of MreB-associated elongasomes.", "evidence": [{"notes": "RodA abundance regulates elongasome processivity, reversal frequency, and pausing.", "reference": "DOI:10.1038/s41467-024-49785-x"}], "id": "edge-10", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "rodA_polymerization", "target": "elongasome_processivity"}, {"description": "Processive circumferential synthesis lays long glycan hoops that mechanically reinforce the cylinder.", "evidence": [{"notes": "Long glycan strands act as barrel-hoop-like reinforcing structures of the rod sidewall.", "reference": "DOI:10.1038/s41467-024-49785-x"}], "id": "edge-11", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "elongasome_processivity", "target": "sidewall_reinforcement"}], "evidence_rows": [{"description": "MreB filaments interact with the Rod complex that elongates the cell wall.", "edge_id": "edge-1", "evidence": [{"notes": "Supports MreB-Rod complex interaction in rod-shape regulation.", "reference": "DOI:10.1146/annurev-cellbio-010521-010834", "snippet": "MreB filaments interact with Rod complexes"}], "predicate": "interacts with", "predicate_id": "biolink:interacts_with", "source": "MreB", "source_grounding": null, "target": "Rod complex", "target_grounding": null}, {"description": "Rod complexes direct sidewall peptidoglycan synthesis.", "edge_id": "edge-2", "evidence": [{"notes": "Supports Rod complex contribution to wall insertion.", "reference": "DOI:10.1146/annurev-cellbio-010521-010834", "snippet": "Rod complexes drive cell wall insertion"}], "predicate": "directs", "predicate_id": "RO:0002211", "source": "Rod complex", "source_grounding": null, "target": "peptidoglycan synthesis", "target_grounding": "GO:0009252"}, {"description": "Directed peptidoglycan synthesis elongates rod-shaped cells.", "edge_id": "edge-3", "evidence": [{"notes": "Supports peptidoglycan synthesis in cell elongation.", "reference": "DOI:10.1038/nrmicro2677", "snippet": "elongation mode of peptidoglycan synthesis"}], "predicate": "has output", "predicate_id": "RO:0002234", "source": "peptidoglycan synthesis", "source_grounding": "GO:0009252", "target": "lateral cell-wall elongation", "target_grounding": null}, {"description": "Lateral wall elongation preserves the cylindrical rod morphology.", "edge_id": "edge-4", "evidence": [{"notes": "Supports MreB-associated cell-wall synthesis as important for rod shape restoration and maintenance.", "reference": "DOI:10.1016/j.tim.2011.11.004", "snippet": "restores its rod shape"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "lateral cell-wall elongation", "source_grounding": null, "target": "rod shaped", "target_grounding": "METPO:1000681"}, {"description": "FtsZ coordinates division-associated peptidoglycan synthesis with rod cell morphology.", "edge_id": "edge-5", "evidence": [{"notes": "Supports FtsZ-PBP collaboration in bacterial cell-shape generation.", "reference": "DOI:10.1038/nrmicro1205", "snippet": "FtsZ collaborates with penicillin binding proteins"}], "predicate": "coordinates with", "predicate_id": null, "source": "FtsZ", "source_grounding": "InterPro:IPR000158", "target": "peptidoglycan synthesis", "target_grounding": "GO:0009252"}, {"description": "The active elongation synthase complex supports proper rod-shaped morphology during growth.", "edge_id": "edge-6", "evidence": [{"notes": "Structural opening couples RodA glycan polymerization and PBP2 crosslinking, a coupling essential in vivo for rod-shaped growth.", "reference": "DOI:10.1038/s41467-023-39037-9"}], "predicate": "positively regulates", "predicate_id": "RO:0002213", "source": "RodA-PBP2 complex", "source_grounding": null, "target": "rod shaped", "target_grounding": "METPO:1000681"}, {"description": "Conformational opening of PBP2 allosterically stimulates RodA polymerization.", "edge_id": "edge-7", "evidence": [{"notes": "Structural opening promotes RodA polymerization activity.", "reference": "DOI:10.1038/s41467-023-39037-9"}], "predicate": "activates", "predicate_id": "RO:0002213", "source": "PBP2 structural opening", "source_grounding": null, "target": "RodA polymerization activity", "target_grounding": null}, {"description": "The open state elevates the PBP2 TP domain toward the PG layer, enabling crosslinking.", "edge_id": "edge-8", "evidence": [{"notes": "Opening of PBP2 elevates the TP domain, facilitating crosslinking.", "reference": "DOI:10.1038/s41467-023-39037-9"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "PBP2 structural opening", "source_grounding": null, "target": "peptidoglycan crosslinking", "target_grounding": null}, {"description": "MreC binds the PBP2 pedestal domain and biases RodA-PBP2 into the open, catalytically active conformation.", "edge_id": "edge-9", "evidence": [{"notes": "MreC is implicated as an activator that promotes the open, catalytically active conformation of PBP2.", "reference": "DOI:10.1038/s41467-023-39037-9"}], "predicate": "activates", "predicate_id": "RO:0002213", "source": "MreC", "source_grounding": null, "target": "RodA-PBP2 complex", "target_grounding": null}, {"description": "RodA abundance/activity tunes processive dynamics of MreB-associated elongasomes.", "edge_id": "edge-10", "evidence": [{"notes": "RodA abundance regulates elongasome processivity, reversal frequency, and pausing.", "reference": "DOI:10.1038/s41467-024-49785-x"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "RodA polymerization activity", "source_grounding": null, "target": "elongasome processivity", "target_grounding": null}, {"description": "Processive circumferential synthesis lays long glycan hoops that mechanically reinforce the cylinder.", "edge_id": "edge-11", "evidence": [{"notes": "Long glycan strands act as barrel-hoop-like reinforcing structures of the rod sidewall.", "reference": "DOI:10.1038/s41467-024-49785-x"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "elongasome processivity", "source_grounding": null, "target": "rod-shaped sidewall reinforcement", "target_grounding": null}], "graph_id": "rod_shaped_mreB_peptidoglycan", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Processive circumferential movement of MreB-associated elongasomes during sidewall synthesis.", "grounding": null, "id": "elongasome_processivity", "is_orphan": false, "label": "elongasome processivity", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Division-ring protein coordinating septal growth.", "grounding": "InterPro:IPR000158", "id": "ftsZ", "is_orphan": false, "label": "FtsZ", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Sidewall growth that lengthens rod-shaped cells.", "grounding": null, "id": "lateral_cell_wall_elongation", "is_orphan": false, "label": "lateral cell-wall elongation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Actin-like protein involved in rod-shape maintenance.", "grounding": null, "id": "mreB", "is_orphan": false, "label": "MreB", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Periplasmic Rod-system component that activates PBP2 by promoting its open conformation.", "grounding": null, "id": "mreC", "is_orphan": false, "label": "MreC", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#cffafe", "description": "Open/active conformational state of PBP2 that allosterically activates the elongation synthase.", "grounding": null, "id": "pbp2_structural_opening", "is_orphan": false, "label": "PBP2 structural opening", "node_type": "MOLECULAR_FUNCTION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Cell-wall synthesis and remodeling process.", "grounding": "GO:0009252", "id": "peptidoglycan_synthesis", "is_orphan": false, "label": "peptidoglycan synthesis", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Transpeptidation crosslinking of peptidoglycan strands during sidewall synthesis.", "grounding": null, "id": "pg_crosslinking", "is_orphan": false, "label": "peptidoglycan crosslinking", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Elongation synthase complex (RodA glycosyltransferase + PBP2 transpeptidase) of the Rod system.", "grounding": null, "id": "rodA_pbp2_complex", "is_orphan": false, "label": "RodA-PBP2 complex", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#cffafe", "description": "Glycan-strand polymerizing (glycosyltransferase) activity of RodA.", "grounding": null, "id": "rodA_polymerization", "is_orphan": false, "label": "RodA polymerization activity", "node_type": "MOLECULAR_FUNCTION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Cell-wall elongation machinery associated with MreB in rod-shaped bacteria.", "grounding": null, "id": "rod_complex", "is_orphan": false, "label": "Rod complex", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Elongated cylindrical bacterial morphology.", "grounding": "METPO:1000681", "id": "rod_shaped_trait", "is_orphan": false, "label": "rod shaped", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Mechanical reinforcement of the cylindrical sidewall via long circumferential glycan hoops.", "grounding": null, "id": "sidewall_reinforcement", "is_orphan": false, "label": "rod-shaped sidewall reinforcement", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This record is a broad environmental or morphological classification spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement descriptor; contextual protein nodes do not receive token UniProt examples.", "scope_status": "NONMECHANISTIC", "title": "Rod-shape MreB and peptidoglycan mechanism"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -1032,13 +1065,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-08-26 03:23 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

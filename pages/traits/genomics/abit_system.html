@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/genomics.html">GENOMICS</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/genomics.html">GENOMICS</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>AbiT system</h1>
     <p class="curie"><code>traitmech:000230</code> · CLASS · PROPOSED</p>
 
@@ -121,9 +132,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>abiT locus</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>AbiTi-AbiTii antiphage activity</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>The abiT locus carries abiTi, abiTii, and the promoter required for the complete phage-resistance phenotype.</p>
             <ul>
 
@@ -138,9 +151,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>AbiTi-AbiTii antiphage activity</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>interrupted late phage development</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>AbiT activity interferes with late phage development after early phage gene expression.</p>
             <ul>
 
@@ -161,9 +176,11 @@
 
           <li id="pathograph-1-edge-3">
             <strong>interrupted late phage development</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>restricted phage propagation</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>Failed phage DNA maturation or capsid production limits completion of the phage lytic cycle.</p>
             <ul>
 
@@ -178,9 +195,11 @@
 
           <li id="pathograph-1-edge-4">
             <strong>restricted phage propagation</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>AbiT system</strong>
-            <code>METPO:2007700</code>
+            <code>traitmech:000230</code>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>Restriction of 936/P335 phage propagation realizes the AbiT abortive-infection defense trait.</p>
             <ul>
 
@@ -195,8 +214,10 @@
 
           <li id="pathograph-1-edge-5">
             <strong>AbiT system</strong>
+            <code>traitmech:000230</code>
             <span class="edge-predicate">is a</span>
             <strong>abortive infection system</strong>
+            <code>traitmech:000214</code>
             <code>rdfs:subClassOf</code>
             <p>AbiT system possession is an abortive-infection-system trait.</p>
             <ul>
@@ -258,11 +279,75 @@
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
 
-      <p class="no-match">No kg-microbe node embedding matched this record
-        in the 2026-04-25 deepwalk.</p>
+      <p class="match-method">Matched <strong>1</strong>
+        kg-microbe node
+        via <em>parent_proxy</em>.</p>
+      <ul class="kgm-nodes">
+
+        <li><code>METPO:1000188</code> <span class="dim-preview">[-0.956, -1.962, -3.148, +1.274, …]</span></li>
+
+      </ul>
+      <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
 
     </div>
 
+
+    <div class="card">
+      <h2>Nearest neighbors in embedding space</h2>
+      <p class="meta">Top-8 cosine-similar METPO traits
+        from the 2026-04-25 deepwalk (512-D).</p>
+      <ul class="nn-list">
+
+        <li>
+          <span class="nn-cat">upper</span>
+          <a href="../../traits/upper/quality.html">quality</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/jukab_system.html">JukAB system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/integrative_conjugative_element.html">integrative conjugative element</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/ig_like_schlafen_system.html">Ig-like Schlafen system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hypnos_system.html">Hypnos system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hna_system.html">Hna system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hma_system.html">Hma system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hesat_system.html">Hesat system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+      </ul>
+    </div>
 
 
 
@@ -350,6 +435,11 @@
     </dl>
   </div>
 
+
+  <div class="card rail-kgm">
+    <h2>kg-microbe</h2>
+    <p class="meta">1 matching node (parent_proxy)</p>
+  </div>
 
 </aside>
 </div>
@@ -683,7 +773,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed process sketch linking the two-gene abiT locus to AbiTi-AbiTii antiphage activity, impaired phage DNA replication or capsid production, restricted phage propagation, and abortive-infection system possession.", "edges": [{"description": "The abiT locus carries abiTi, abiTii, and the promoter required for the complete phage-resistance phenotype.", "evidence": [{"notes": "Bouchard et al. showed that both abiT genes are required for full AbiT activity.", "reference": "DOI:10.1128/JB.184.22.6325-6332.2002", "snippet": "Two genes are responsible for the antiphage activity of AbiT"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "abit_locus", "target": "abiti_abitii_antiphage_activity"}, {"description": "AbiT activity interferes with late phage development after early phage gene expression.", "evidence": [{"notes": "Bouchard et al. found reduced DNA replication and failed encapsidation in AbiT-containing infected cells.", "reference": "DOI:10.1128/JB.184.22.6325-6332.2002", "snippet": "It appears that AbiT affects DNA replication and also prevents effective encapsidation"}, {"notes": "Labrie et al. refine the AbiT phenotype by linking wild-type p2 capsid protein synthesis blockage to an AbiT-sensitive capsid gene.", "reference": "DOI:10.1128/AEM.01755-12", "snippet": "AbiT blocks capsid protein synthesis of the wild-type phage, while it does not affect the resistant phage p2.t3, mutated in the capsid gene"}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "abiti_abitii_antiphage_activity", "target": "interrupted_late_phage_development"}, {"description": "Failed phage DNA maturation or capsid production limits completion of the phage lytic cycle.", "evidence": [{"notes": "Bouchard et al. support a late-stage block in the phage lytic cycle.", "reference": "DOI:10.1128/JB.184.22.6325-6332.2002", "snippet": "The monitoring of the intracellular phage infection process by DNA replication, gene expression, and electron microscopy as well as the study of phage mutants by genome mapping indicated that AbiT is likely to act at a later stage of the phage lytic cycle"}], "id": "edge-3", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "interrupted_late_phage_development", "target": "restricted_phage_propagation"}, {"description": "Restriction of 936/P335 phage propagation realizes the AbiT abortive-infection defense trait.", "evidence": [{"notes": "Bouchard et al. define AbiT as a pED1 abortive-infection phage resistance system.", "reference": "DOI:10.1128/JB.184.22.6325-6332.2002", "snippet": "The fact that resistant cells do not survive phage infection proves that the antiphage system carried by pED1 is an Abi mechanism. It was therefore named AbiT."}], "id": "edge-4", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "restricted_phage_propagation", "target": "abit_system_trait"}, {"description": "AbiT system possession is an abortive-infection-system trait.", "evidence": [{"notes": "Bouchard et al. place AbiT in the abortive infection class of phage defense.", "reference": "DOI:10.1128/JB.184.22.6325-6332.2002", "snippet": "Here, we describe the isolation and characterization of a novel Abi mechanism encoded by plasmid pED1 from L. lactis"}], "id": "edge-5", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "abit_system_trait", "target": "abortive_infection_system_trait"}], "evidence_rows": [{"description": "The abiT locus carries abiTi, abiTii, and the promoter required for the complete phage-resistance phenotype.", "edge_id": "edge-1", "evidence": [{"notes": "Bouchard et al. showed that both abiT genes are required for full AbiT activity.", "reference": "DOI:10.1128/JB.184.22.6325-6332.2002", "snippet": "Two genes are responsible for the antiphage activity of AbiT"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "abiT locus", "target": "AbiTi-AbiTii antiphage activity"}, {"description": "AbiT activity interferes with late phage development after early phage gene expression.", "edge_id": "edge-2", "evidence": [{"notes": "Bouchard et al. found reduced DNA replication and failed encapsidation in AbiT-containing infected cells.", "reference": "DOI:10.1128/JB.184.22.6325-6332.2002", "snippet": "It appears that AbiT affects DNA replication and also prevents effective encapsidation"}, {"notes": "Labrie et al. refine the AbiT phenotype by linking wild-type p2 capsid protein synthesis blockage to an AbiT-sensitive capsid gene.", "reference": "DOI:10.1128/AEM.01755-12", "snippet": "AbiT blocks capsid protein synthesis of the wild-type phage, while it does not affect the resistant phage p2.t3, mutated in the capsid gene"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "AbiTi-AbiTii antiphage activity", "target": "interrupted late phage development"}, {"description": "Failed phage DNA maturation or capsid production limits completion of the phage lytic cycle.", "edge_id": "edge-3", "evidence": [{"notes": "Bouchard et al. support a late-stage block in the phage lytic cycle.", "reference": "DOI:10.1128/JB.184.22.6325-6332.2002", "snippet": "The monitoring of the intracellular phage infection process by DNA replication, gene expression, and electron microscopy as well as the study of phage mutants by genome mapping indicated that AbiT is likely to act at a later stage of the phage lytic cycle"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "interrupted late phage development", "target": "restricted phage propagation"}, {"description": "Restriction of 936/P335 phage propagation realizes the AbiT abortive-infection defense trait.", "edge_id": "edge-4", "evidence": [{"notes": "Bouchard et al. define AbiT as a pED1 abortive-infection phage resistance system.", "reference": "DOI:10.1128/JB.184.22.6325-6332.2002", "snippet": "The fact that resistant cells do not survive phage infection proves that the antiphage system carried by pED1 is an Abi mechanism. It was therefore named AbiT."}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "restricted phage propagation", "target": "AbiT system"}, {"description": "AbiT system possession is an abortive-infection-system trait.", "edge_id": "edge-5", "evidence": [{"notes": "Bouchard et al. place AbiT in the abortive infection class of phage defense.", "reference": "DOI:10.1128/JB.184.22.6325-6332.2002", "snippet": "Here, we describe the isolation and characterization of a novel Abi mechanism encoded by plasmid pED1 from L. lactis"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "AbiT system", "target": "abortive infection system"}], "graph_id": "abit_late_phage_development_block", "issues": [], "nodes": [{"color": "#f3f4f6", "description": "A two-gene abortive-infection locus encoding AbiTi and AbiTii.", "grounding": null, "id": "abit_locus", "is_orphan": false, "label": "abiT locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded AbiT two-component abortive-infection system.", "grounding": "traitmech:000230", "id": "abit_system_trait", "is_orphan": false, "label": "AbiT system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Abortive-infection antiphage activity mediated by the AbiTi and AbiTii host proteins.", "grounding": null, "id": "abiti_abitii_antiphage_activity", "is_orphan": false, "label": "AbiTi-AbiTii antiphage activity", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded abortive-infection phage defense system.", "grounding": "traitmech:000214", "id": "abortive_infection_system_trait", "is_orphan": false, "label": "abortive infection system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "AbiT-associated impairment of phage DNA replication, phage DNA encapsidation, or capsid protein synthesis after early phage gene expression.", "grounding": null, "id": "interrupted_late_phage_development", "is_orphan": false, "label": "interrupted late phage development", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Reduced completion of 936 or P335 phage propagation in an AbiT-containing infected host cell.", "grounding": null, "id": "restricted_phage_propagation", "is_orphan": false, "label": "restricted phage propagation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "The graph captures AbiT at the system level without asserting a molecular function for AbiTi or AbiTii, the exact host target, the direct phage activator, or that every AbiT-insensitive phage mutates the same phage gene.", "scope_status": "NONMECHANISTIC", "title": "AbiT activity blocks late phage development"}];
+  var graphs = [{"description": "Evidence-backed process sketch linking the two-gene abiT locus to AbiTi-AbiTii antiphage activity, impaired phage DNA replication or capsid production, restricted phage propagation, and abortive-infection system possession.", "edges": [{"description": "The abiT locus carries abiTi, abiTii, and the promoter required for the complete phage-resistance phenotype.", "evidence": [{"notes": "Bouchard et al. showed that both abiT genes are required for full AbiT activity.", "reference": "DOI:10.1128/JB.184.22.6325-6332.2002", "snippet": "Two genes are responsible for the antiphage activity of AbiT"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "abit_locus", "target": "abiti_abitii_antiphage_activity"}, {"description": "AbiT activity interferes with late phage development after early phage gene expression.", "evidence": [{"notes": "Bouchard et al. found reduced DNA replication and failed encapsidation in AbiT-containing infected cells.", "reference": "DOI:10.1128/JB.184.22.6325-6332.2002", "snippet": "It appears that AbiT affects DNA replication and also prevents effective encapsidation"}, {"notes": "Labrie et al. refine the AbiT phenotype by linking wild-type p2 capsid protein synthesis blockage to an AbiT-sensitive capsid gene.", "reference": "DOI:10.1128/AEM.01755-12", "snippet": "AbiT blocks capsid protein synthesis of the wild-type phage, while it does not affect the resistant phage p2.t3, mutated in the capsid gene"}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "abiti_abitii_antiphage_activity", "target": "interrupted_late_phage_development"}, {"description": "Failed phage DNA maturation or capsid production limits completion of the phage lytic cycle.", "evidence": [{"notes": "Bouchard et al. support a late-stage block in the phage lytic cycle.", "reference": "DOI:10.1128/JB.184.22.6325-6332.2002", "snippet": "The monitoring of the intracellular phage infection process by DNA replication, gene expression, and electron microscopy as well as the study of phage mutants by genome mapping indicated that AbiT is likely to act at a later stage of the phage lytic cycle"}], "id": "edge-3", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "interrupted_late_phage_development", "target": "restricted_phage_propagation"}, {"description": "Restriction of 936/P335 phage propagation realizes the AbiT abortive-infection defense trait.", "evidence": [{"notes": "Bouchard et al. define AbiT as a pED1 abortive-infection phage resistance system.", "reference": "DOI:10.1128/JB.184.22.6325-6332.2002", "snippet": "The fact that resistant cells do not survive phage infection proves that the antiphage system carried by pED1 is an Abi mechanism. It was therefore named AbiT."}], "id": "edge-4", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "restricted_phage_propagation", "target": "abit_system_trait"}, {"description": "AbiT system possession is an abortive-infection-system trait.", "evidence": [{"notes": "Bouchard et al. place AbiT in the abortive infection class of phage defense.", "reference": "DOI:10.1128/JB.184.22.6325-6332.2002", "snippet": "Here, we describe the isolation and characterization of a novel Abi mechanism encoded by plasmid pED1 from L. lactis"}], "id": "edge-5", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "abit_system_trait", "target": "abortive_infection_system_trait"}], "evidence_rows": [{"description": "The abiT locus carries abiTi, abiTii, and the promoter required for the complete phage-resistance phenotype.", "edge_id": "edge-1", "evidence": [{"notes": "Bouchard et al. showed that both abiT genes are required for full AbiT activity.", "reference": "DOI:10.1128/JB.184.22.6325-6332.2002", "snippet": "Two genes are responsible for the antiphage activity of AbiT"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "abiT locus", "source_grounding": null, "target": "AbiTi-AbiTii antiphage activity", "target_grounding": null}, {"description": "AbiT activity interferes with late phage development after early phage gene expression.", "edge_id": "edge-2", "evidence": [{"notes": "Bouchard et al. found reduced DNA replication and failed encapsidation in AbiT-containing infected cells.", "reference": "DOI:10.1128/JB.184.22.6325-6332.2002", "snippet": "It appears that AbiT affects DNA replication and also prevents effective encapsidation"}, {"notes": "Labrie et al. refine the AbiT phenotype by linking wild-type p2 capsid protein synthesis blockage to an AbiT-sensitive capsid gene.", "reference": "DOI:10.1128/AEM.01755-12", "snippet": "AbiT blocks capsid protein synthesis of the wild-type phage, while it does not affect the resistant phage p2.t3, mutated in the capsid gene"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "AbiTi-AbiTii antiphage activity", "source_grounding": null, "target": "interrupted late phage development", "target_grounding": null}, {"description": "Failed phage DNA maturation or capsid production limits completion of the phage lytic cycle.", "edge_id": "edge-3", "evidence": [{"notes": "Bouchard et al. support a late-stage block in the phage lytic cycle.", "reference": "DOI:10.1128/JB.184.22.6325-6332.2002", "snippet": "The monitoring of the intracellular phage infection process by DNA replication, gene expression, and electron microscopy as well as the study of phage mutants by genome mapping indicated that AbiT is likely to act at a later stage of the phage lytic cycle"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "interrupted late phage development", "source_grounding": null, "target": "restricted phage propagation", "target_grounding": null}, {"description": "Restriction of 936/P335 phage propagation realizes the AbiT abortive-infection defense trait.", "edge_id": "edge-4", "evidence": [{"notes": "Bouchard et al. define AbiT as a pED1 abortive-infection phage resistance system.", "reference": "DOI:10.1128/JB.184.22.6325-6332.2002", "snippet": "The fact that resistant cells do not survive phage infection proves that the antiphage system carried by pED1 is an Abi mechanism. It was therefore named AbiT."}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "restricted phage propagation", "source_grounding": null, "target": "AbiT system", "target_grounding": "traitmech:000230"}, {"description": "AbiT system possession is an abortive-infection-system trait.", "edge_id": "edge-5", "evidence": [{"notes": "Bouchard et al. place AbiT in the abortive infection class of phage defense.", "reference": "DOI:10.1128/JB.184.22.6325-6332.2002", "snippet": "Here, we describe the isolation and characterization of a novel Abi mechanism encoded by plasmid pED1 from L. lactis"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "AbiT system", "source_grounding": "traitmech:000230", "target": "abortive infection system", "target_grounding": "traitmech:000214"}], "graph_id": "abit_late_phage_development_block", "issues": [], "nodes": [{"color": "#f3f4f6", "description": "A two-gene abortive-infection locus encoding AbiTi and AbiTii.", "grounding": null, "id": "abit_locus", "is_orphan": false, "label": "abiT locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded AbiT two-component abortive-infection system.", "grounding": "traitmech:000230", "id": "abit_system_trait", "is_orphan": false, "label": "AbiT system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Abortive-infection antiphage activity mediated by the AbiTi and AbiTii host proteins.", "grounding": null, "id": "abiti_abitii_antiphage_activity", "is_orphan": false, "label": "AbiTi-AbiTii antiphage activity", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded abortive-infection phage defense system.", "grounding": "traitmech:000214", "id": "abortive_infection_system_trait", "is_orphan": false, "label": "abortive infection system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "AbiT-associated impairment of phage DNA replication, phage DNA encapsidation, or capsid protein synthesis after early phage gene expression.", "grounding": null, "id": "interrupted_late_phage_development", "is_orphan": false, "label": "interrupted late phage development", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Reduced completion of 936 or P335 phage propagation in an AbiT-containing infected host cell.", "grounding": null, "id": "restricted_phage_propagation", "is_orphan": false, "label": "restricted phage propagation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "The graph captures AbiT at the system level without asserting a molecular function for AbiTi or AbiTii, the exact host target, the direct phage activator, or that every AbiT-insensitive phage mutates the same phage gene.", "scope_status": "NONMECHANISTIC", "title": "AbiT activity blocks late phage development"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -703,13 +793,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-09-15 22:05 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

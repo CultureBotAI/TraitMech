@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/genomics.html">GENOMICS</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/genomics.html">GENOMICS</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>CapRel system</h1>
     <p class="curie"><code>traitmech:000244</code> · CLASS · PROPOSED</p>
 
@@ -109,9 +120,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>CapRel locus</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>CapRel toxSAS activation</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>Fused CapRel loci encode the N-terminal toxin domain and C-terminal antitoxin sensor domain that keep CapRel inhibited until phage trigger binding.</p>
             <ul>
 
@@ -126,9 +139,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>phage trigger binding</strong>
+
             <span class="edge-predicate">activates</span>
             <strong>CapRel toxSAS activation</strong>
-            <code>RO:0002213</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002213" rel="nofollow noreferrer"><code>RO:0002213</code></a>
             <p>Binding of phage-encoded triggers to the C-terminal CapRel sensor relieves autoinhibition of the toxSAS domain.</p>
             <ul>
 
@@ -149,9 +164,11 @@
 
           <li id="pathograph-1-edge-3">
             <strong>CapRel toxSAS activation</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>tRNA pyrophosphorylation</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>CapRel trigger binding activates the toxSAS domain that pyrophosphorylates tRNAs.</p>
             <ul>
 
@@ -166,9 +183,11 @@
 
           <li id="pathograph-1-edge-4">
             <strong>tRNA pyrophosphorylation</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>translation blockade</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>tRNA pyrophosphorylation blocks cellular translation during CapRel antiviral activation.</p>
             <ul>
 
@@ -183,9 +202,11 @@
 
           <li id="pathograph-1-edge-5">
             <strong>translation blockade</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>restricted phage propagation</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>Translation blockade contributes to restriction of the infecting phage.</p>
             <ul>
 
@@ -200,9 +221,11 @@
 
           <li id="pathograph-1-edge-6">
             <strong>restricted phage propagation</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>CapRel system</strong>
-            <code>METPO:2007700</code>
+            <code>traitmech:000244</code>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>CapRel-dependent restriction of phage propagation realizes the CapRel system trait.</p>
             <ul>
 
@@ -217,8 +240,10 @@
 
           <li id="pathograph-1-edge-7">
             <strong>CapRel system</strong>
+            <code>traitmech:000244</code>
             <span class="edge-predicate">is a</span>
             <strong>phage defense system</strong>
+            <code>traitmech:000209</code>
             <code>rdfs:subClassOf</code>
             <p>CapRel system possession is a phage-defense-system trait.</p>
             <ul>
@@ -291,11 +316,75 @@
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
 
-      <p class="no-match">No kg-microbe node embedding matched this record
-        in the 2026-04-25 deepwalk.</p>
+      <p class="match-method">Matched <strong>1</strong>
+        kg-microbe node
+        via <em>parent_proxy</em>.</p>
+      <ul class="kgm-nodes">
+
+        <li><code>METPO:1000188</code> <span class="dim-preview">[-0.956, -1.962, -3.148, +1.274, …]</span></li>
+
+      </ul>
+      <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
 
     </div>
 
+
+    <div class="card">
+      <h2>Nearest neighbors in embedding space</h2>
+      <p class="meta">Top-8 cosine-similar METPO traits
+        from the 2026-04-25 deepwalk (512-D).</p>
+      <ul class="nn-list">
+
+        <li>
+          <span class="nn-cat">upper</span>
+          <a href="../../traits/upper/quality.html">quality</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/jukab_system.html">JukAB system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/integrative_conjugative_element.html">integrative conjugative element</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/ig_like_schlafen_system.html">Ig-like Schlafen system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hypnos_system.html">Hypnos system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hna_system.html">Hna system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hma_system.html">Hma system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hesat_system.html">Hesat system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+      </ul>
+    </div>
 
 
 
@@ -408,6 +497,11 @@
     </dl>
   </div>
 
+
+  <div class="card rail-kgm">
+    <h2>kg-microbe</h2>
+    <p class="meta">1 matching node (parent_proxy)</p>
+  </div>
 
 </aside>
 </div>
@@ -741,7 +835,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed process sketch linking a fused CapRel toxin-antitoxin locus to direct phage-protein sensing, toxSAS activation, tRNA pyrophosphorylation, translation inhibition, and restricted phage propagation.", "edges": [{"description": "Fused CapRel loci encode the N-terminal toxin domain and C-terminal antitoxin sensor domain that keep CapRel inhibited until phage trigger binding.", "evidence": [{"notes": "Zhang et al. support the C-terminal CapRel domain as both antitoxin and phage-infection sensor.", "reference": "DOI:10.1038/s41586-022-05444-z", "snippet": "regulates the toxic N-terminal region, serving as both antitoxin and phage infection sensor"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "caprel_locus", "target": "caprel_toxin_activation"}, {"description": "Binding of phage-encoded triggers to the C-terminal CapRel sensor relieves autoinhibition of the toxSAS domain.", "evidence": [{"notes": "Zhang et al. identify phage major capsid protein as a direct CapRelSJ46 trigger.", "reference": "DOI:10.1038/s41586-022-05444-z", "snippet": "major capsid protein binds directly to the C-terminal domain"}, {"notes": "Zhang et al. show that CapRelSJ46 can directly sense an alternative Gp54 trigger.", "reference": "DOI:10.1038/s41586-024-08039-y", "snippet": "directly binds and senses two completely unrelated and structurally different phage proteins using the same sensor domain"}], "id": "edge-2", "is_orphan": false, "predicate": "activates", "predicate_id": "RO:0002213", "source": "phage_trigger_binding", "target": "caprel_toxin_activation"}, {"description": "CapRel trigger binding activates the toxSAS domain that pyrophosphorylates tRNAs.", "evidence": [{"notes": "Zhang et al. connect relief of autoinhibition to CapRel toxSAS-mediated tRNA pyrophosphorylation.", "reference": "DOI:10.1038/s41586-022-05444-z", "snippet": "This open state enables CapRelSJ46 to pyrophosphorylate tRNAs"}], "id": "edge-3", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "caprel_toxin_activation", "target": "trna_pyrophosphorylation"}, {"description": "tRNA pyrophosphorylation blocks cellular translation during CapRel antiviral activation.", "evidence": [{"notes": "Zhang et al. identify translation blockade as the immediate outcome of CapRel-mediated tRNA pyrophosphorylation.", "reference": "DOI:10.1038/s41586-022-05444-z", "snippet": "pyrophosphorylate tRNAs, which blocks translation"}], "id": "edge-4", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "trna_pyrophosphorylation", "target": "translation_blockade"}, {"description": "Translation blockade contributes to restriction of the infecting phage.", "evidence": [{"notes": "Zhang et al. connect translation blockade to restriction of viral infection.", "reference": "DOI:10.1038/s41586-022-05444-z", "snippet": "blocks translation to restrict viral infection"}], "id": "edge-5", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "translation_blockade", "target": "restricted_phage_propagation"}, {"description": "CapRel-dependent restriction of phage propagation realizes the CapRel system trait.", "evidence": [{"notes": "Zhang et al. support fused CapRels as anti-phage defense systems.", "reference": "DOI:10.1038/s41586-022-05444-z", "snippet": "fused CapRels can provide anti-phage defence"}], "id": "edge-6", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "restricted_phage_propagation", "target": "caprel_system_trait"}, {"description": "CapRel system possession is a phage-defense-system trait.", "evidence": [{"notes": "Zhang et al. place CapRelSJ46 in the anti-phage toxin-antitoxin-system family.", "reference": "DOI:10.1038/s41586-022-05444-z", "snippet": "a fused anti-phage toxin-antitoxin system"}], "id": "edge-7", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "caprel_system_trait", "target": "phage_defense_system"}], "evidence_rows": [{"description": "Fused CapRel loci encode the N-terminal toxin domain and C-terminal antitoxin sensor domain that keep CapRel inhibited until phage trigger binding.", "edge_id": "edge-1", "evidence": [{"notes": "Zhang et al. support the C-terminal CapRel domain as both antitoxin and phage-infection sensor.", "reference": "DOI:10.1038/s41586-022-05444-z", "snippet": "regulates the toxic N-terminal region, serving as both antitoxin and phage infection sensor"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "CapRel locus", "target": "CapRel toxSAS activation"}, {"description": "Binding of phage-encoded triggers to the C-terminal CapRel sensor relieves autoinhibition of the toxSAS domain.", "edge_id": "edge-2", "evidence": [{"notes": "Zhang et al. identify phage major capsid protein as a direct CapRelSJ46 trigger.", "reference": "DOI:10.1038/s41586-022-05444-z", "snippet": "major capsid protein binds directly to the C-terminal domain"}, {"notes": "Zhang et al. show that CapRelSJ46 can directly sense an alternative Gp54 trigger.", "reference": "DOI:10.1038/s41586-024-08039-y", "snippet": "directly binds and senses two completely unrelated and structurally different phage proteins using the same sensor domain"}], "predicate": "activates", "predicate_id": "RO:0002213", "source": "phage trigger binding", "target": "CapRel toxSAS activation"}, {"description": "CapRel trigger binding activates the toxSAS domain that pyrophosphorylates tRNAs.", "edge_id": "edge-3", "evidence": [{"notes": "Zhang et al. connect relief of autoinhibition to CapRel toxSAS-mediated tRNA pyrophosphorylation.", "reference": "DOI:10.1038/s41586-022-05444-z", "snippet": "This open state enables CapRelSJ46 to pyrophosphorylate tRNAs"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "CapRel toxSAS activation", "target": "tRNA pyrophosphorylation"}, {"description": "tRNA pyrophosphorylation blocks cellular translation during CapRel antiviral activation.", "edge_id": "edge-4", "evidence": [{"notes": "Zhang et al. identify translation blockade as the immediate outcome of CapRel-mediated tRNA pyrophosphorylation.", "reference": "DOI:10.1038/s41586-022-05444-z", "snippet": "pyrophosphorylate tRNAs, which blocks translation"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "tRNA pyrophosphorylation", "target": "translation blockade"}, {"description": "Translation blockade contributes to restriction of the infecting phage.", "edge_id": "edge-5", "evidence": [{"notes": "Zhang et al. connect translation blockade to restriction of viral infection.", "reference": "DOI:10.1038/s41586-022-05444-z", "snippet": "blocks translation to restrict viral infection"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "translation blockade", "target": "restricted phage propagation"}, {"description": "CapRel-dependent restriction of phage propagation realizes the CapRel system trait.", "edge_id": "edge-6", "evidence": [{"notes": "Zhang et al. support fused CapRels as anti-phage defense systems.", "reference": "DOI:10.1038/s41586-022-05444-z", "snippet": "fused CapRels can provide anti-phage defence"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "restricted phage propagation", "target": "CapRel system"}, {"description": "CapRel system possession is a phage-defense-system trait.", "edge_id": "edge-7", "evidence": [{"notes": "Zhang et al. place CapRelSJ46 in the anti-phage toxin-antitoxin-system family.", "reference": "DOI:10.1038/s41586-022-05444-z", "snippet": "a fused anti-phage toxin-antitoxin system"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "CapRel system", "target": "phage defense system"}], "graph_id": "caprel_phage_triggered_translation_blockade", "issues": [], "nodes": [{"color": "#f3f4f6", "description": "A fused CapRel toxin-antitoxin locus encoding an N-terminal toxSAS toxin domain and a C-terminal antitoxin sensor domain.", "grounding": null, "id": "caprel_locus", "is_orphan": false, "label": "CapRel locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded fused CapRel toxin-antitoxin phage-defense system.", "grounding": "traitmech:000244", "id": "caprel_system_trait", "is_orphan": false, "label": "CapRel system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Relief of autoinhibition that activates the N-terminal CapRel toxSAS toxin domain.", "grounding": null, "id": "caprel_toxin_activation", "is_orphan": false, "label": "CapRel toxSAS activation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of one or more genome-encoded immune systems that inhibit bacteriophage infection.", "grounding": "traitmech:000209", "id": "phage_defense_system", "is_orphan": false, "label": "phage defense system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Direct binding of a phage-encoded trigger protein to the CapRel antitoxin sensor domain.", "grounding": null, "id": "phage_trigger_binding", "is_orphan": false, "label": "phage trigger binding", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Reduced bacteriophage propagation in cells whose CapRel system has blocked translation.", "grounding": null, "id": "restricted_phage_propagation", "is_orphan": false, "label": "restricted phage propagation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Inhibition of cellular translation downstream of CapRel-mediated tRNA pyrophosphorylation.", "grounding": null, "id": "translation_blockade", "is_orphan": false, "label": "translation blockade", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Pyrophosphorylation of transfer RNAs by activated CapRel toxSAS toxin activity.", "grounding": null, "id": "trna_pyrophosphorylation", "is_orphan": false, "label": "tRNA pyrophosphorylation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "The graph captures CapRelSJ46 major-capsid-protein and Gp54 trigger evidence without claiming one universal CapRel phage trigger, allosteric route, escape route, or phage specificity across all fused CapRel homologs.", "scope_status": "NONMECHANISTIC", "title": "CapRel sensors couple phage trigger binding to translation blockade"}];
+  var graphs = [{"description": "Evidence-backed process sketch linking a fused CapRel toxin-antitoxin locus to direct phage-protein sensing, toxSAS activation, tRNA pyrophosphorylation, translation inhibition, and restricted phage propagation.", "edges": [{"description": "Fused CapRel loci encode the N-terminal toxin domain and C-terminal antitoxin sensor domain that keep CapRel inhibited until phage trigger binding.", "evidence": [{"notes": "Zhang et al. support the C-terminal CapRel domain as both antitoxin and phage-infection sensor.", "reference": "DOI:10.1038/s41586-022-05444-z", "snippet": "regulates the toxic N-terminal region, serving as both antitoxin and phage infection sensor"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "caprel_locus", "target": "caprel_toxin_activation"}, {"description": "Binding of phage-encoded triggers to the C-terminal CapRel sensor relieves autoinhibition of the toxSAS domain.", "evidence": [{"notes": "Zhang et al. identify phage major capsid protein as a direct CapRelSJ46 trigger.", "reference": "DOI:10.1038/s41586-022-05444-z", "snippet": "major capsid protein binds directly to the C-terminal domain"}, {"notes": "Zhang et al. show that CapRelSJ46 can directly sense an alternative Gp54 trigger.", "reference": "DOI:10.1038/s41586-024-08039-y", "snippet": "directly binds and senses two completely unrelated and structurally different phage proteins using the same sensor domain"}], "id": "edge-2", "is_orphan": false, "predicate": "activates", "predicate_id": "RO:0002213", "source": "phage_trigger_binding", "target": "caprel_toxin_activation"}, {"description": "CapRel trigger binding activates the toxSAS domain that pyrophosphorylates tRNAs.", "evidence": [{"notes": "Zhang et al. connect relief of autoinhibition to CapRel toxSAS-mediated tRNA pyrophosphorylation.", "reference": "DOI:10.1038/s41586-022-05444-z", "snippet": "This open state enables CapRelSJ46 to pyrophosphorylate tRNAs"}], "id": "edge-3", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "caprel_toxin_activation", "target": "trna_pyrophosphorylation"}, {"description": "tRNA pyrophosphorylation blocks cellular translation during CapRel antiviral activation.", "evidence": [{"notes": "Zhang et al. identify translation blockade as the immediate outcome of CapRel-mediated tRNA pyrophosphorylation.", "reference": "DOI:10.1038/s41586-022-05444-z", "snippet": "pyrophosphorylate tRNAs, which blocks translation"}], "id": "edge-4", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "trna_pyrophosphorylation", "target": "translation_blockade"}, {"description": "Translation blockade contributes to restriction of the infecting phage.", "evidence": [{"notes": "Zhang et al. connect translation blockade to restriction of viral infection.", "reference": "DOI:10.1038/s41586-022-05444-z", "snippet": "blocks translation to restrict viral infection"}], "id": "edge-5", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "translation_blockade", "target": "restricted_phage_propagation"}, {"description": "CapRel-dependent restriction of phage propagation realizes the CapRel system trait.", "evidence": [{"notes": "Zhang et al. support fused CapRels as anti-phage defense systems.", "reference": "DOI:10.1038/s41586-022-05444-z", "snippet": "fused CapRels can provide anti-phage defence"}], "id": "edge-6", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "restricted_phage_propagation", "target": "caprel_system_trait"}, {"description": "CapRel system possession is a phage-defense-system trait.", "evidence": [{"notes": "Zhang et al. place CapRelSJ46 in the anti-phage toxin-antitoxin-system family.", "reference": "DOI:10.1038/s41586-022-05444-z", "snippet": "a fused anti-phage toxin-antitoxin system"}], "id": "edge-7", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "caprel_system_trait", "target": "phage_defense_system"}], "evidence_rows": [{"description": "Fused CapRel loci encode the N-terminal toxin domain and C-terminal antitoxin sensor domain that keep CapRel inhibited until phage trigger binding.", "edge_id": "edge-1", "evidence": [{"notes": "Zhang et al. support the C-terminal CapRel domain as both antitoxin and phage-infection sensor.", "reference": "DOI:10.1038/s41586-022-05444-z", "snippet": "regulates the toxic N-terminal region, serving as both antitoxin and phage infection sensor"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "CapRel locus", "source_grounding": null, "target": "CapRel toxSAS activation", "target_grounding": null}, {"description": "Binding of phage-encoded triggers to the C-terminal CapRel sensor relieves autoinhibition of the toxSAS domain.", "edge_id": "edge-2", "evidence": [{"notes": "Zhang et al. identify phage major capsid protein as a direct CapRelSJ46 trigger.", "reference": "DOI:10.1038/s41586-022-05444-z", "snippet": "major capsid protein binds directly to the C-terminal domain"}, {"notes": "Zhang et al. show that CapRelSJ46 can directly sense an alternative Gp54 trigger.", "reference": "DOI:10.1038/s41586-024-08039-y", "snippet": "directly binds and senses two completely unrelated and structurally different phage proteins using the same sensor domain"}], "predicate": "activates", "predicate_id": "RO:0002213", "source": "phage trigger binding", "source_grounding": null, "target": "CapRel toxSAS activation", "target_grounding": null}, {"description": "CapRel trigger binding activates the toxSAS domain that pyrophosphorylates tRNAs.", "edge_id": "edge-3", "evidence": [{"notes": "Zhang et al. connect relief of autoinhibition to CapRel toxSAS-mediated tRNA pyrophosphorylation.", "reference": "DOI:10.1038/s41586-022-05444-z", "snippet": "This open state enables CapRelSJ46 to pyrophosphorylate tRNAs"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "CapRel toxSAS activation", "source_grounding": null, "target": "tRNA pyrophosphorylation", "target_grounding": null}, {"description": "tRNA pyrophosphorylation blocks cellular translation during CapRel antiviral activation.", "edge_id": "edge-4", "evidence": [{"notes": "Zhang et al. identify translation blockade as the immediate outcome of CapRel-mediated tRNA pyrophosphorylation.", "reference": "DOI:10.1038/s41586-022-05444-z", "snippet": "pyrophosphorylate tRNAs, which blocks translation"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "tRNA pyrophosphorylation", "source_grounding": null, "target": "translation blockade", "target_grounding": null}, {"description": "Translation blockade contributes to restriction of the infecting phage.", "edge_id": "edge-5", "evidence": [{"notes": "Zhang et al. connect translation blockade to restriction of viral infection.", "reference": "DOI:10.1038/s41586-022-05444-z", "snippet": "blocks translation to restrict viral infection"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "translation blockade", "source_grounding": null, "target": "restricted phage propagation", "target_grounding": null}, {"description": "CapRel-dependent restriction of phage propagation realizes the CapRel system trait.", "edge_id": "edge-6", "evidence": [{"notes": "Zhang et al. support fused CapRels as anti-phage defense systems.", "reference": "DOI:10.1038/s41586-022-05444-z", "snippet": "fused CapRels can provide anti-phage defence"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "restricted phage propagation", "source_grounding": null, "target": "CapRel system", "target_grounding": "traitmech:000244"}, {"description": "CapRel system possession is a phage-defense-system trait.", "edge_id": "edge-7", "evidence": [{"notes": "Zhang et al. place CapRelSJ46 in the anti-phage toxin-antitoxin-system family.", "reference": "DOI:10.1038/s41586-022-05444-z", "snippet": "a fused anti-phage toxin-antitoxin system"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "CapRel system", "source_grounding": "traitmech:000244", "target": "phage defense system", "target_grounding": "traitmech:000209"}], "graph_id": "caprel_phage_triggered_translation_blockade", "issues": [], "nodes": [{"color": "#f3f4f6", "description": "A fused CapRel toxin-antitoxin locus encoding an N-terminal toxSAS toxin domain and a C-terminal antitoxin sensor domain.", "grounding": null, "id": "caprel_locus", "is_orphan": false, "label": "CapRel locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded fused CapRel toxin-antitoxin phage-defense system.", "grounding": "traitmech:000244", "id": "caprel_system_trait", "is_orphan": false, "label": "CapRel system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Relief of autoinhibition that activates the N-terminal CapRel toxSAS toxin domain.", "grounding": null, "id": "caprel_toxin_activation", "is_orphan": false, "label": "CapRel toxSAS activation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of one or more genome-encoded immune systems that inhibit bacteriophage infection.", "grounding": "traitmech:000209", "id": "phage_defense_system", "is_orphan": false, "label": "phage defense system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Direct binding of a phage-encoded trigger protein to the CapRel antitoxin sensor domain.", "grounding": null, "id": "phage_trigger_binding", "is_orphan": false, "label": "phage trigger binding", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Reduced bacteriophage propagation in cells whose CapRel system has blocked translation.", "grounding": null, "id": "restricted_phage_propagation", "is_orphan": false, "label": "restricted phage propagation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Inhibition of cellular translation downstream of CapRel-mediated tRNA pyrophosphorylation.", "grounding": null, "id": "translation_blockade", "is_orphan": false, "label": "translation blockade", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Pyrophosphorylation of transfer RNAs by activated CapRel toxSAS toxin activity.", "grounding": null, "id": "trna_pyrophosphorylation", "is_orphan": false, "label": "tRNA pyrophosphorylation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "The graph captures CapRelSJ46 major-capsid-protein and Gp54 trigger evidence without claiming one universal CapRel phage trigger, allosteric route, escape route, or phage specificity across all fused CapRel homologs.", "scope_status": "NONMECHANISTIC", "title": "CapRel sensors couple phage trigger binding to translation blockade"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -761,13 +855,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-09-18 15:43 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

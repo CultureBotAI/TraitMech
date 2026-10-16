@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/genomics.html">GENOMICS</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/genomics.html">GENOMICS</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>DS-7 system</h1>
     <p class="curie"><code>traitmech:000431</code> · CLASS · PROPOSED</p>
 
@@ -141,9 +152,11 @@ Bas60	B.1	MG1655	24-07-17_MVB1_VPUS_VAME_EV.png	400000	SVIR	H52A	24-07-18	24-07-
 
           <li id="pathograph-1-edge-1">
             <strong>DS-7 locus</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>reduced bacteriophage plaquing</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>The DS-7/SVIR locus contributes to reduced bacteriophage plaquing when plasmid expressed.</p>
             <ul>
 
@@ -184,9 +197,11 @@ Bas60	B.1	MG1655	24-07-17_MVB1_VPUS_VAME_EV.png	400000	SVIR	H52A	24-07-18	24-07-
 
           <li id="pathograph-1-edge-2">
             <strong>reduced bacteriophage plaquing</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>DS-7 system</strong>
-            <code>METPO:2007700</code>
+            <code>traitmech:000431</code>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>DS-7-mediated phage plaquing reduction realizes the DS-7 system trait.</p>
             <ul>
 
@@ -213,8 +228,10 @@ Bas60	B.1	MG1655	24-07-17_MVB1_VPUS_VAME_EV.png	400000	SVIR	H52A	24-07-18	24-07-
 
           <li id="pathograph-1-edge-3">
             <strong>DS-7 system</strong>
+            <code>traitmech:000431</code>
             <span class="edge-predicate">is a</span>
             <strong>phage defense system</strong>
+            <code>traitmech:000209</code>
             <code>rdfs:subClassOf</code>
             <p>DS-7 system possession is a phage-defense-system trait.</p>
             <ul>
@@ -295,11 +312,75 @@ Bas60	B.1	MG1655	24-07-17_MVB1_VPUS_VAME_EV.png	400000	SVIR	H52A	24-07-18	24-07-
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
 
-      <p class="no-match">No kg-microbe node embedding matched this record
-        in the 2026-04-25 deepwalk.</p>
+      <p class="match-method">Matched <strong>1</strong>
+        kg-microbe node
+        via <em>parent_proxy</em>.</p>
+      <ul class="kgm-nodes">
+
+        <li><code>METPO:1000188</code> <span class="dim-preview">[-0.956, -1.962, -3.148, +1.274, …]</span></li>
+
+      </ul>
+      <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
 
     </div>
 
+
+    <div class="card">
+      <h2>Nearest neighbors in embedding space</h2>
+      <p class="meta">Top-8 cosine-similar METPO traits
+        from the 2026-04-25 deepwalk (512-D).</p>
+      <ul class="nn-list">
+
+        <li>
+          <span class="nn-cat">upper</span>
+          <a href="../../traits/upper/quality.html">quality</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/lamassu_cap4_nuclease_system.html">Lamassu-Cap4 nuclease system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/lamassu_amidase_system.html">Lamassu-Amidase system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/kongming_system.html">Kongming system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/kiwa_system.html">Kiwa system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/kamadhenu_system.html">Kamadhenu system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/jukab_system.html">JukAB system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/integrative_conjugative_element.html">integrative conjugative element</a>
+          <span class="sim">1.000</span>
+        </li>
+
+      </ul>
+    </div>
 
 
 
@@ -496,6 +577,11 @@ Bas60	B.1	MG1655	24-07-17_MVB1_VPUS_VAME_EV.png	400000	SVIR	H52A	24-07-18	24-07-
     </dl>
   </div>
 
+
+  <div class="card rail-kgm">
+    <h2>kg-microbe</h2>
+    <p class="meta">1 matching node (parent_proxy)</p>
+  </div>
 
 </aside>
 </div>
@@ -829,7 +915,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Conservative system-level sketch linking the single-gene DS-7 locus to reduced bacteriophage plaquing without resolving DS-7 component function or effector activity.", "edges": [{"description": "The DS-7/SVIR locus contributes to reduced bacteriophage plaquing when plasmid expressed.", "evidence": [{"notes": "DeWeirdt et al. experimentally validate DefensePredictor-discovered systems by assaying cloned transcriptional units against E. coli phages.", "reference": "DOI:10.1126/science.adv7924", "snippet": "To test for anti-phage defense, we placed each TU with its predicted native promoter region on a low-copy number plasmid in E. coli MG1655 and challenged these strains with a panel of 24 diverse E. coli phages (Fig. 3; fig. S2). In total, 42 (45% of 94) of the cloned TUs produced smaller plaque sizes or reduced the efficiency of plating (EOP) at least ten-fold relative to an empty vector control strain"}, {"notes": "The final Science supplementary Table S6 maps working_id SVIR to DS_name DS-7, marks the cloned transcriptional unit as defensive, and records NZ_QOYF01000007.1 positions 310084-311190 with product accession WP_225403053.1.", "reference": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S6.xlsx", "snippet": "SVIR\tNZ_QOYF01000007.1\tGCF_003334585.1\t+\tTrue\tFalse\tFalse\tTrue\tDefensePredictor hits\t310084\t311190\tDUF2634 domain-containing protein\tWP_225403053.1\t5.785481186679323\t3.623314765621056\tTrue\tTrue\tPredicted novel defense gene\tDS-7"}, {"notes": "The final Science supplementary Table S7 reports an SVIR assay row with a Bas60 phage readout and a -log(EOP) value of 2.699.", "reference": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S7.xlsx", "snippet": "Bas60\t1.2\tpLAND\t24-03-08_EV_HHHD_PIN2_CRDO.png\t5000000\tSVIR\t24-03-12\t24-03-12_SVIR_PIN8_NTTI_NADR.png\t2\t100\t\t10000\t2.6989700043360187\tTrue\t\t\tLB\t37"}, {"notes": "The final Science supplementary Table S7 System Mutants sheet pairs wild-type SVIR and SVIR H52A in a Bas60 assay panel, with -log(EOP) shifting from 1.331 to 0.477 for the H52A mutant.", "reference": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S7.xlsx", "snippet": "Bas60\tA.1\tMG1655\t24-07-10_EV_MNAC-K375A_MNAC-N84A_MNAC-D52A.png\t3000000\tSVIR\t\t24-07-12\t24-07-12_HIPA_HIPA-D139A_SVIR_SVIR-H52A_DISA_DISA-D433A.png\t4\t14\t\t140000\t1.330993219\nBas60\tA.1\tMG1655\t24-07-10_EV_MNAC-K375A_MNAC-N84A_MNAC-D52A.png\t3000000\tSVIR\tH52A\t24-07-12\t24-07-12_HIPA_HIPA-D139A_SVIR_SVIR-H52A_DISA_DISA-D433A.png\t5\t10\t\t1000000\t0.4771212547"}, {"notes": "The final Science supplementary Table S7 System Mutants sheet records a second SVIR versus SVIR H52A Bas60 panel, with -log(EOP) shifting from 5.602 to 0.260 for the H52A mutant.", "reference": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S7.xlsx", "snippet": "Bas60\tB.1\tMG1655\t24-07-17_MVB1_VPUS_VAME_EV.png\t400000\tSVIR\t\t24-07-18\t24-07-18_DISA-R468A_DISA_SVIR_DISA-D433A_SVIR-H52A.png\t0\t1\t\t1\t5.602059991\nBas60\tB.1\tMG1655\t24-07-17_MVB1_VPUS_VAME_EV.png\t400000\tSVIR\tH52A\t24-07-18\t24-07-18_DISA-R468A_DISA_SVIR_DISA-D433A_SVIR-H52A.png\t4\t22\t\t220000\t0.2596373105"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "ds_7_locus", "target": "reduced_phage_plaquing"}, {"description": "DS-7-mediated phage plaquing reduction realizes the DS-7 system trait.", "evidence": [{"notes": "DeWeirdt et al. name each validated transcriptional unit as a DefensePredictor discovered system.", "reference": "DOI:10.1126/science.adv7924", "snippet": "We refer to these validated TUs as DefensePredictor discovered systems (DSs), with genes in multi-gene TUs denoted by an alphabetical suffix, e.g., DS-8A is the first gene of DS-8."}, {"notes": "The final Science supplementary Table S6 maps working_id SVIR to DS_name DS-7, marks the cloned transcriptional unit as defensive, and records NZ_QOYF01000007.1 positions 310084-311190 with product accession WP_225403053.1.", "reference": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S6.xlsx", "snippet": "SVIR\tNZ_QOYF01000007.1\tGCF_003334585.1\t+\tTrue\tFalse\tFalse\tTrue\tDefensePredictor hits\t310084\t311190\tDUF2634 domain-containing protein\tWP_225403053.1\t5.785481186679323\t3.623314765621056\tTrue\tTrue\tPredicted novel defense gene\tDS-7"}, {"notes": "The final Science supplementary Table S7 reports an SVIR assay row with a Bas60 phage readout and a -log(EOP) value of 2.699.", "reference": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S7.xlsx", "snippet": "Bas60\t1.2\tpLAND\t24-03-08_EV_HHHD_PIN2_CRDO.png\t5000000\tSVIR\t24-03-12\t24-03-12_SVIR_PIN8_NTTI_NADR.png\t2\t100\t\t10000\t2.6989700043360187\tTrue\t\t\tLB\t37"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "reduced_phage_plaquing", "target": "ds_7_system_trait"}, {"description": "DS-7 system possession is a phage-defense-system trait.", "evidence": [{"notes": "DeWeirdt et al. validate DSs as anti-phage systems.", "reference": "DOI:10.1126/science.adv7924", "snippet": "To test for anti-phage defense, we placed each TU with its predicted native promoter region on a low-copy number plasmid in E. coli MG1655 and challenged these strains with a panel of 24 diverse E. coli phages (Fig. 3; fig. S2). In total, 42 (45% of 94) of the cloned TUs produced smaller plaque sizes or reduced the efficiency of plating (EOP) at least ten-fold relative to an empty vector control strain"}, {"notes": "The pinned DefenseFinder article registry maps the DS-7 source key to the preprint DOI for the DeWeirdt et al. DefensePredictor study, which has since been published in Science.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| DS-7 | 10\\.1101/2025\\.01\\.08\\.631726 | DefensePredictor: A machine learning model to discover novel prokaryotic immune systems | "}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "ds_7_system_trait", "target": "phage_defense_system"}], "evidence_rows": [{"description": "The DS-7/SVIR locus contributes to reduced bacteriophage plaquing when plasmid expressed.", "edge_id": "edge-1", "evidence": [{"notes": "DeWeirdt et al. experimentally validate DefensePredictor-discovered systems by assaying cloned transcriptional units against E. coli phages.", "reference": "DOI:10.1126/science.adv7924", "snippet": "To test for anti-phage defense, we placed each TU with its predicted native promoter region on a low-copy number plasmid in E. coli MG1655 and challenged these strains with a panel of 24 diverse E. coli phages (Fig. 3; fig. S2). In total, 42 (45% of 94) of the cloned TUs produced smaller plaque sizes or reduced the efficiency of plating (EOP) at least ten-fold relative to an empty vector control strain"}, {"notes": "The final Science supplementary Table S6 maps working_id SVIR to DS_name DS-7, marks the cloned transcriptional unit as defensive, and records NZ_QOYF01000007.1 positions 310084-311190 with product accession WP_225403053.1.", "reference": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S6.xlsx", "snippet": "SVIR\tNZ_QOYF01000007.1\tGCF_003334585.1\t+\tTrue\tFalse\tFalse\tTrue\tDefensePredictor hits\t310084\t311190\tDUF2634 domain-containing protein\tWP_225403053.1\t5.785481186679323\t3.623314765621056\tTrue\tTrue\tPredicted novel defense gene\tDS-7"}, {"notes": "The final Science supplementary Table S7 reports an SVIR assay row with a Bas60 phage readout and a -log(EOP) value of 2.699.", "reference": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S7.xlsx", "snippet": "Bas60\t1.2\tpLAND\t24-03-08_EV_HHHD_PIN2_CRDO.png\t5000000\tSVIR\t24-03-12\t24-03-12_SVIR_PIN8_NTTI_NADR.png\t2\t100\t\t10000\t2.6989700043360187\tTrue\t\t\tLB\t37"}, {"notes": "The final Science supplementary Table S7 System Mutants sheet pairs wild-type SVIR and SVIR H52A in a Bas60 assay panel, with -log(EOP) shifting from 1.331 to 0.477 for the H52A mutant.", "reference": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S7.xlsx", "snippet": "Bas60\tA.1\tMG1655\t24-07-10_EV_MNAC-K375A_MNAC-N84A_MNAC-D52A.png\t3000000\tSVIR\t\t24-07-12\t24-07-12_HIPA_HIPA-D139A_SVIR_SVIR-H52A_DISA_DISA-D433A.png\t4\t14\t\t140000\t1.330993219\nBas60\tA.1\tMG1655\t24-07-10_EV_MNAC-K375A_MNAC-N84A_MNAC-D52A.png\t3000000\tSVIR\tH52A\t24-07-12\t24-07-12_HIPA_HIPA-D139A_SVIR_SVIR-H52A_DISA_DISA-D433A.png\t5\t10\t\t1000000\t0.4771212547"}, {"notes": "The final Science supplementary Table S7 System Mutants sheet records a second SVIR versus SVIR H52A Bas60 panel, with -log(EOP) shifting from 5.602 to 0.260 for the H52A mutant.", "reference": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S7.xlsx", "snippet": "Bas60\tB.1\tMG1655\t24-07-17_MVB1_VPUS_VAME_EV.png\t400000\tSVIR\t\t24-07-18\t24-07-18_DISA-R468A_DISA_SVIR_DISA-D433A_SVIR-H52A.png\t0\t1\t\t1\t5.602059991\nBas60\tB.1\tMG1655\t24-07-17_MVB1_VPUS_VAME_EV.png\t400000\tSVIR\tH52A\t24-07-18\t24-07-18_DISA-R468A_DISA_SVIR_DISA-D433A_SVIR-H52A.png\t4\t22\t\t220000\t0.2596373105"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "DS-7 locus", "target": "reduced bacteriophage plaquing"}, {"description": "DS-7-mediated phage plaquing reduction realizes the DS-7 system trait.", "edge_id": "edge-2", "evidence": [{"notes": "DeWeirdt et al. name each validated transcriptional unit as a DefensePredictor discovered system.", "reference": "DOI:10.1126/science.adv7924", "snippet": "We refer to these validated TUs as DefensePredictor discovered systems (DSs), with genes in multi-gene TUs denoted by an alphabetical suffix, e.g., DS-8A is the first gene of DS-8."}, {"notes": "The final Science supplementary Table S6 maps working_id SVIR to DS_name DS-7, marks the cloned transcriptional unit as defensive, and records NZ_QOYF01000007.1 positions 310084-311190 with product accession WP_225403053.1.", "reference": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S6.xlsx", "snippet": "SVIR\tNZ_QOYF01000007.1\tGCF_003334585.1\t+\tTrue\tFalse\tFalse\tTrue\tDefensePredictor hits\t310084\t311190\tDUF2634 domain-containing protein\tWP_225403053.1\t5.785481186679323\t3.623314765621056\tTrue\tTrue\tPredicted novel defense gene\tDS-7"}, {"notes": "The final Science supplementary Table S7 reports an SVIR assay row with a Bas60 phage readout and a -log(EOP) value of 2.699.", "reference": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S7.xlsx", "snippet": "Bas60\t1.2\tpLAND\t24-03-08_EV_HHHD_PIN2_CRDO.png\t5000000\tSVIR\t24-03-12\t24-03-12_SVIR_PIN8_NTTI_NADR.png\t2\t100\t\t10000\t2.6989700043360187\tTrue\t\t\tLB\t37"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "reduced bacteriophage plaquing", "target": "DS-7 system"}, {"description": "DS-7 system possession is a phage-defense-system trait.", "edge_id": "edge-3", "evidence": [{"notes": "DeWeirdt et al. validate DSs as anti-phage systems.", "reference": "DOI:10.1126/science.adv7924", "snippet": "To test for anti-phage defense, we placed each TU with its predicted native promoter region on a low-copy number plasmid in E. coli MG1655 and challenged these strains with a panel of 24 diverse E. coli phages (Fig. 3; fig. S2). In total, 42 (45% of 94) of the cloned TUs produced smaller plaque sizes or reduced the efficiency of plating (EOP) at least ten-fold relative to an empty vector control strain"}, {"notes": "The pinned DefenseFinder article registry maps the DS-7 source key to the preprint DOI for the DeWeirdt et al. DefensePredictor study, which has since been published in Science.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| DS-7 | 10\\.1101/2025\\.01\\.08\\.631726 | DefensePredictor: A machine learning model to discover novel prokaryotic immune systems | "}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "DS-7 system", "target": "phage defense system"}], "graph_id": "ds_7_locus_reduces_phage_plaquing", "issues": [], "nodes": [{"color": "#f3f4f6", "description": "A single-gene DefensePredictor-discovered system locus represented in the pinned DefenseFinder HMM inventory by one DS-7 custom profile.", "grounding": null, "id": "ds_7_locus", "is_orphan": false, "label": "DS-7 locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded DS-7 phage-defense system.", "grounding": "traitmech:000431", "id": "ds_7_system_trait", "is_orphan": false, "label": "DS-7 system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of one or more genome-encoded immune systems that inhibit bacteriophage infection.", "grounding": "traitmech:000209", "id": "phage_defense_system", "is_orphan": false, "label": "phage defense system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Reduced efficiency of plaquing by bacteriophage Bas60 in cells carrying cloned SVIR.", "grounding": null, "id": "reduced_phage_plaquing", "is_orphan": false, "label": "reduced bacteriophage plaquing", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "The graph captures DS-7 as the validated SVIR transcriptional unit with one product accession and with a DefenseFinder DS-7 profile row. It does not assert native host breadth, exact profile-to-protein correspondence, the direct viral trigger or substrate, the exact HNH endonuclease activity, phage-baseplate-like domain relevance, phage target breadth, or DefenseFinder rule-level detection criteria.", "scope_status": "NONMECHANISTIC", "title": "DS-7 locus reduces bacteriophage plaquing"}];
+  var graphs = [{"description": "Conservative system-level sketch linking the single-gene DS-7 locus to reduced bacteriophage plaquing without resolving DS-7 component function or effector activity.", "edges": [{"description": "The DS-7/SVIR locus contributes to reduced bacteriophage plaquing when plasmid expressed.", "evidence": [{"notes": "DeWeirdt et al. experimentally validate DefensePredictor-discovered systems by assaying cloned transcriptional units against E. coli phages.", "reference": "DOI:10.1126/science.adv7924", "snippet": "To test for anti-phage defense, we placed each TU with its predicted native promoter region on a low-copy number plasmid in E. coli MG1655 and challenged these strains with a panel of 24 diverse E. coli phages (Fig. 3; fig. S2). In total, 42 (45% of 94) of the cloned TUs produced smaller plaque sizes or reduced the efficiency of plating (EOP) at least ten-fold relative to an empty vector control strain"}, {"notes": "The final Science supplementary Table S6 maps working_id SVIR to DS_name DS-7, marks the cloned transcriptional unit as defensive, and records NZ_QOYF01000007.1 positions 310084-311190 with product accession WP_225403053.1.", "reference": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S6.xlsx", "snippet": "SVIR\tNZ_QOYF01000007.1\tGCF_003334585.1\t+\tTrue\tFalse\tFalse\tTrue\tDefensePredictor hits\t310084\t311190\tDUF2634 domain-containing protein\tWP_225403053.1\t5.785481186679323\t3.623314765621056\tTrue\tTrue\tPredicted novel defense gene\tDS-7"}, {"notes": "The final Science supplementary Table S7 reports an SVIR assay row with a Bas60 phage readout and a -log(EOP) value of 2.699.", "reference": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S7.xlsx", "snippet": "Bas60\t1.2\tpLAND\t24-03-08_EV_HHHD_PIN2_CRDO.png\t5000000\tSVIR\t24-03-12\t24-03-12_SVIR_PIN8_NTTI_NADR.png\t2\t100\t\t10000\t2.6989700043360187\tTrue\t\t\tLB\t37"}, {"notes": "The final Science supplementary Table S7 System Mutants sheet pairs wild-type SVIR and SVIR H52A in a Bas60 assay panel, with -log(EOP) shifting from 1.331 to 0.477 for the H52A mutant.", "reference": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S7.xlsx", "snippet": "Bas60\tA.1\tMG1655\t24-07-10_EV_MNAC-K375A_MNAC-N84A_MNAC-D52A.png\t3000000\tSVIR\t\t24-07-12\t24-07-12_HIPA_HIPA-D139A_SVIR_SVIR-H52A_DISA_DISA-D433A.png\t4\t14\t\t140000\t1.330993219\nBas60\tA.1\tMG1655\t24-07-10_EV_MNAC-K375A_MNAC-N84A_MNAC-D52A.png\t3000000\tSVIR\tH52A\t24-07-12\t24-07-12_HIPA_HIPA-D139A_SVIR_SVIR-H52A_DISA_DISA-D433A.png\t5\t10\t\t1000000\t0.4771212547"}, {"notes": "The final Science supplementary Table S7 System Mutants sheet records a second SVIR versus SVIR H52A Bas60 panel, with -log(EOP) shifting from 5.602 to 0.260 for the H52A mutant.", "reference": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S7.xlsx", "snippet": "Bas60\tB.1\tMG1655\t24-07-17_MVB1_VPUS_VAME_EV.png\t400000\tSVIR\t\t24-07-18\t24-07-18_DISA-R468A_DISA_SVIR_DISA-D433A_SVIR-H52A.png\t0\t1\t\t1\t5.602059991\nBas60\tB.1\tMG1655\t24-07-17_MVB1_VPUS_VAME_EV.png\t400000\tSVIR\tH52A\t24-07-18\t24-07-18_DISA-R468A_DISA_SVIR_DISA-D433A_SVIR-H52A.png\t4\t22\t\t220000\t0.2596373105"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "ds_7_locus", "target": "reduced_phage_plaquing"}, {"description": "DS-7-mediated phage plaquing reduction realizes the DS-7 system trait.", "evidence": [{"notes": "DeWeirdt et al. name each validated transcriptional unit as a DefensePredictor discovered system.", "reference": "DOI:10.1126/science.adv7924", "snippet": "We refer to these validated TUs as DefensePredictor discovered systems (DSs), with genes in multi-gene TUs denoted by an alphabetical suffix, e.g., DS-8A is the first gene of DS-8."}, {"notes": "The final Science supplementary Table S6 maps working_id SVIR to DS_name DS-7, marks the cloned transcriptional unit as defensive, and records NZ_QOYF01000007.1 positions 310084-311190 with product accession WP_225403053.1.", "reference": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S6.xlsx", "snippet": "SVIR\tNZ_QOYF01000007.1\tGCF_003334585.1\t+\tTrue\tFalse\tFalse\tTrue\tDefensePredictor hits\t310084\t311190\tDUF2634 domain-containing protein\tWP_225403053.1\t5.785481186679323\t3.623314765621056\tTrue\tTrue\tPredicted novel defense gene\tDS-7"}, {"notes": "The final Science supplementary Table S7 reports an SVIR assay row with a Bas60 phage readout and a -log(EOP) value of 2.699.", "reference": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S7.xlsx", "snippet": "Bas60\t1.2\tpLAND\t24-03-08_EV_HHHD_PIN2_CRDO.png\t5000000\tSVIR\t24-03-12\t24-03-12_SVIR_PIN8_NTTI_NADR.png\t2\t100\t\t10000\t2.6989700043360187\tTrue\t\t\tLB\t37"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "reduced_phage_plaquing", "target": "ds_7_system_trait"}, {"description": "DS-7 system possession is a phage-defense-system trait.", "evidence": [{"notes": "DeWeirdt et al. validate DSs as anti-phage systems.", "reference": "DOI:10.1126/science.adv7924", "snippet": "To test for anti-phage defense, we placed each TU with its predicted native promoter region on a low-copy number plasmid in E. coli MG1655 and challenged these strains with a panel of 24 diverse E. coli phages (Fig. 3; fig. S2). In total, 42 (45% of 94) of the cloned TUs produced smaller plaque sizes or reduced the efficiency of plating (EOP) at least ten-fold relative to an empty vector control strain"}, {"notes": "The pinned DefenseFinder article registry maps the DS-7 source key to the preprint DOI for the DeWeirdt et al. DefensePredictor study, which has since been published in Science.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| DS-7 | 10\\.1101/2025\\.01\\.08\\.631726 | DefensePredictor: A machine learning model to discover novel prokaryotic immune systems | "}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "ds_7_system_trait", "target": "phage_defense_system"}], "evidence_rows": [{"description": "The DS-7/SVIR locus contributes to reduced bacteriophage plaquing when plasmid expressed.", "edge_id": "edge-1", "evidence": [{"notes": "DeWeirdt et al. experimentally validate DefensePredictor-discovered systems by assaying cloned transcriptional units against E. coli phages.", "reference": "DOI:10.1126/science.adv7924", "snippet": "To test for anti-phage defense, we placed each TU with its predicted native promoter region on a low-copy number plasmid in E. coli MG1655 and challenged these strains with a panel of 24 diverse E. coli phages (Fig. 3; fig. S2). In total, 42 (45% of 94) of the cloned TUs produced smaller plaque sizes or reduced the efficiency of plating (EOP) at least ten-fold relative to an empty vector control strain"}, {"notes": "The final Science supplementary Table S6 maps working_id SVIR to DS_name DS-7, marks the cloned transcriptional unit as defensive, and records NZ_QOYF01000007.1 positions 310084-311190 with product accession WP_225403053.1.", "reference": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S6.xlsx", "snippet": "SVIR\tNZ_QOYF01000007.1\tGCF_003334585.1\t+\tTrue\tFalse\tFalse\tTrue\tDefensePredictor hits\t310084\t311190\tDUF2634 domain-containing protein\tWP_225403053.1\t5.785481186679323\t3.623314765621056\tTrue\tTrue\tPredicted novel defense gene\tDS-7"}, {"notes": "The final Science supplementary Table S7 reports an SVIR assay row with a Bas60 phage readout and a -log(EOP) value of 2.699.", "reference": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S7.xlsx", "snippet": "Bas60\t1.2\tpLAND\t24-03-08_EV_HHHD_PIN2_CRDO.png\t5000000\tSVIR\t24-03-12\t24-03-12_SVIR_PIN8_NTTI_NADR.png\t2\t100\t\t10000\t2.6989700043360187\tTrue\t\t\tLB\t37"}, {"notes": "The final Science supplementary Table S7 System Mutants sheet pairs wild-type SVIR and SVIR H52A in a Bas60 assay panel, with -log(EOP) shifting from 1.331 to 0.477 for the H52A mutant.", "reference": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S7.xlsx", "snippet": "Bas60\tA.1\tMG1655\t24-07-10_EV_MNAC-K375A_MNAC-N84A_MNAC-D52A.png\t3000000\tSVIR\t\t24-07-12\t24-07-12_HIPA_HIPA-D139A_SVIR_SVIR-H52A_DISA_DISA-D433A.png\t4\t14\t\t140000\t1.330993219\nBas60\tA.1\tMG1655\t24-07-10_EV_MNAC-K375A_MNAC-N84A_MNAC-D52A.png\t3000000\tSVIR\tH52A\t24-07-12\t24-07-12_HIPA_HIPA-D139A_SVIR_SVIR-H52A_DISA_DISA-D433A.png\t5\t10\t\t1000000\t0.4771212547"}, {"notes": "The final Science supplementary Table S7 System Mutants sheet records a second SVIR versus SVIR H52A Bas60 panel, with -log(EOP) shifting from 5.602 to 0.260 for the H52A mutant.", "reference": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S7.xlsx", "snippet": "Bas60\tB.1\tMG1655\t24-07-17_MVB1_VPUS_VAME_EV.png\t400000\tSVIR\t\t24-07-18\t24-07-18_DISA-R468A_DISA_SVIR_DISA-D433A_SVIR-H52A.png\t0\t1\t\t1\t5.602059991\nBas60\tB.1\tMG1655\t24-07-17_MVB1_VPUS_VAME_EV.png\t400000\tSVIR\tH52A\t24-07-18\t24-07-18_DISA-R468A_DISA_SVIR_DISA-D433A_SVIR-H52A.png\t4\t22\t\t220000\t0.2596373105"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "DS-7 locus", "source_grounding": null, "target": "reduced bacteriophage plaquing", "target_grounding": null}, {"description": "DS-7-mediated phage plaquing reduction realizes the DS-7 system trait.", "edge_id": "edge-2", "evidence": [{"notes": "DeWeirdt et al. name each validated transcriptional unit as a DefensePredictor discovered system.", "reference": "DOI:10.1126/science.adv7924", "snippet": "We refer to these validated TUs as DefensePredictor discovered systems (DSs), with genes in multi-gene TUs denoted by an alphabetical suffix, e.g., DS-8A is the first gene of DS-8."}, {"notes": "The final Science supplementary Table S6 maps working_id SVIR to DS_name DS-7, marks the cloned transcriptional unit as defensive, and records NZ_QOYF01000007.1 positions 310084-311190 with product accession WP_225403053.1.", "reference": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S6.xlsx", "snippet": "SVIR\tNZ_QOYF01000007.1\tGCF_003334585.1\t+\tTrue\tFalse\tFalse\tTrue\tDefensePredictor hits\t310084\t311190\tDUF2634 domain-containing protein\tWP_225403053.1\t5.785481186679323\t3.623314765621056\tTrue\tTrue\tPredicted novel defense gene\tDS-7"}, {"notes": "The final Science supplementary Table S7 reports an SVIR assay row with a Bas60 phage readout and a -log(EOP) value of 2.699.", "reference": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S7.xlsx", "snippet": "Bas60\t1.2\tpLAND\t24-03-08_EV_HHHD_PIN2_CRDO.png\t5000000\tSVIR\t24-03-12\t24-03-12_SVIR_PIN8_NTTI_NADR.png\t2\t100\t\t10000\t2.6989700043360187\tTrue\t\t\tLB\t37"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "reduced bacteriophage plaquing", "source_grounding": null, "target": "DS-7 system", "target_grounding": "traitmech:000431"}, {"description": "DS-7 system possession is a phage-defense-system trait.", "edge_id": "edge-3", "evidence": [{"notes": "DeWeirdt et al. validate DSs as anti-phage systems.", "reference": "DOI:10.1126/science.adv7924", "snippet": "To test for anti-phage defense, we placed each TU with its predicted native promoter region on a low-copy number plasmid in E. coli MG1655 and challenged these strains with a panel of 24 diverse E. coli phages (Fig. 3; fig. S2). In total, 42 (45% of 94) of the cloned TUs produced smaller plaque sizes or reduced the efficiency of plating (EOP) at least ten-fold relative to an empty vector control strain"}, {"notes": "The pinned DefenseFinder article registry maps the DS-7 source key to the preprint DOI for the DeWeirdt et al. DefensePredictor study, which has since been published in Science.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| DS-7 | 10\\.1101/2025\\.01\\.08\\.631726 | DefensePredictor: A machine learning model to discover novel prokaryotic immune systems | "}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "DS-7 system", "source_grounding": "traitmech:000431", "target": "phage defense system", "target_grounding": "traitmech:000209"}], "graph_id": "ds_7_locus_reduces_phage_plaquing", "issues": [], "nodes": [{"color": "#f3f4f6", "description": "A single-gene DefensePredictor-discovered system locus represented in the pinned DefenseFinder HMM inventory by one DS-7 custom profile.", "grounding": null, "id": "ds_7_locus", "is_orphan": false, "label": "DS-7 locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded DS-7 phage-defense system.", "grounding": "traitmech:000431", "id": "ds_7_system_trait", "is_orphan": false, "label": "DS-7 system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of one or more genome-encoded immune systems that inhibit bacteriophage infection.", "grounding": "traitmech:000209", "id": "phage_defense_system", "is_orphan": false, "label": "phage defense system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Reduced efficiency of plaquing by bacteriophage Bas60 in cells carrying cloned SVIR.", "grounding": null, "id": "reduced_phage_plaquing", "is_orphan": false, "label": "reduced bacteriophage plaquing", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "The graph captures DS-7 as the validated SVIR transcriptional unit with one product accession and with a DefenseFinder DS-7 profile row. It does not assert native host breadth, exact profile-to-protein correspondence, the direct viral trigger or substrate, the exact HNH endonuclease activity, phage-baseplate-like domain relevance, phage target breadth, or DefenseFinder rule-level detection criteria.", "scope_status": "NONMECHANISTIC", "title": "DS-7 locus reduces bacteriophage plaquing"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -849,13 +935,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-09-28 09:58 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

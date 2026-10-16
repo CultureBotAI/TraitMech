@@ -1,0 +1,223 @@
+{% extends "base.html" %}
+{% block content %}
+<header>
+  <p class="breadcrumb"><a href="{{ root }}index.html">TraitMech</a> <span>›</span> Text embedding map</p>
+  <h1>Full-corpus text embedding map (BGE-large + PaCMAP)</h1>
+  <p class="tagline">PaCMAP 2D projection of <strong>{{ n_points }}</strong> TraitMech records
+    embedded with <code>BAAI/bge-large-en-v1.5</code> (1024-D text embeddings over label, category,
+    definition, synonyms, causal mechanisms, and canonical taxa). Hover for details; click to open the trait page.</p>
+</header>
+
+<div class="browse-layout">
+<aside class="facets facet-sidebar" id="facet-panel" aria-label="Filter traits"></aside>
+<div class="browse-main">
+<section class="umap-controls">
+  <label class="umap-search-label">Search
+    <input type="search" id="search-input" disabled placeholder="Search by label, CURIE, or category…">
+  </label>
+  <span class="meta" id="visible-count">Loading…</span>
+</section>
+
+<p id="map-status" role="status">Loading map data…</p>
+<button id="map-retry" type="button" hidden>Retry loading map</button>
+<div id="umap-plot"></div>
+<div id="umap-tooltip" class="umap-tooltip"></div>
+
+<details class="data-table-details">
+  <summary>View data as table</summary>
+  <div class="data-table-actions"><a id="csv-download" hidden download="trait_corpus_map.csv">Download CSV</a></div>
+  <div class="data-table-scroll">
+    <table class="data-table" id="data-table">
+      <thead><tr><th>Label</th><th>CURIE</th><th>Category</th><th>Term kind</th><th>PaCMAP x</th><th>PaCMAP y</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+</details>
+</div>
+</div>
+
+<script src="{{ root }}d3.v7.min.js"></script>
+<script>
+let loading = false;
+function loadMap() {
+  if (loading) return;
+  loading = true;
+  document.getElementById("map-retry").hidden = true;
+  document.getElementById("map-status").textContent = "Loading map data…";
+  document.getElementById("visible-count").textContent = "Loading…";
+  return fetch("{{ data_url }}")
+  .then(r => { if (!r.ok) throw new Error("Map request failed"); return r.json(); })
+  .then(raw => {
+    const points = Array.isArray(raw) ? raw : (raw.points || []);
+    if (!Array.isArray(points) || !points.length) {
+      throw new Error("Invalid map data");
+    }
+    const plotEl = document.getElementById("umap-plot");
+    plotEl.replaceChildren();
+    const W = Math.max(520, Math.min(820, (plotEl.clientWidth || 820) - 16));
+    const H = 640;
+    const margin = { top: 20, right: 20, bottom: 30, left: 30 };
+
+    const svg = d3.select("#umap-plot").append("svg")
+      .attr("width", W).attr("height", H);
+    const g = svg.append("g")
+      .attr("transform", `translate(${margin.left},${margin.top})`);
+
+    const getX = d => d.x !== undefined ? d.x : d.umap_x;
+    const getY = d => d.y !== undefined ? d.y : d.umap_y;
+
+    const xExtent = d3.extent(points, getX);
+    const yExtent = d3.extent(points, getY);
+    const x = d3.scaleLinear().domain(xExtent).range([0, W - margin.left - margin.right]).nice();
+    const y = d3.scaleLinear().domain(yExtent).range([H - margin.top - margin.bottom, 0]).nice();
+
+    const cats = Array.from(new Set(points.map(d => d.category || "OTHER"))).sort();
+    const kinds = Array.from(new Set(points.map(d => d.term_kind || "OTHER"))).sort();
+    const color = d3.scaleOrdinal().domain(cats).range(d3.schemeTableau10);
+
+    const tooltip = d3.select("#umap-tooltip");
+
+    const dots = g.selectAll("circle").data(points).join("circle")
+      .attr("cx", d => x(getX(d)))
+      .attr("cy", d => y(getY(d)))
+      .attr("r", 4.5)
+      .attr("fill", d => color(d.category || "OTHER"))
+      .attr("opacity", 0.8)
+      .style("cursor", "pointer")
+      .on("mouseover", (e, d) => {
+        tooltip.style("display", "block")
+          .html(`<strong>${d.label}</strong><br><span class="muted">${d.id} · ${d.category || ""} · ${d.term_kind || ""}</span>`);
+      })
+      .on("mousemove", (e) => {
+        tooltip.style("left", (e.pageX + 10) + "px").style("top", (e.pageY - 28) + "px");
+      })
+      .on("mouseout", () => tooltip.style("display", "none"))
+      .on("click", (e, d) => {
+        if (d.href) window.location.href = d.href;
+      });
+
+    const activeCategories = new Set(cats);
+    const activeKinds = new Set(kinds);
+
+    function buildFacets() {
+      const panel = document.getElementById("facet-panel");
+      if (!panel) return;
+      panel.innerHTML = '<h3>Filter points</h3>';
+      const groups = document.createElement("div");
+      groups.className = "facet-groups";
+
+      // Category facet
+      const catCounts = {};
+      points.forEach(d => { const v = d.category || "OTHER"; catCounts[v] = (catCounts[v] || 0) + 1; });
+      const catGrp = document.createElement("div");
+      catGrp.className = "facet-group";
+      catGrp.innerHTML = '<div class="facet-title">Category</div>';
+      Object.keys(catCounts).sort().forEach(v => {
+        const lab = document.createElement("label");
+        lab.className = "facet-opt";
+        lab.innerHTML = `<input type="checkbox" checked><span>${v}</span><span class="cnt">${catCounts[v].toLocaleString()}</span>`;
+        lab.querySelector("input").addEventListener("change", (e) => {
+          if (e.target.checked) activeCategories.add(v); else activeCategories.delete(v);
+          update();
+        });
+        catGrp.appendChild(lab);
+      });
+      groups.appendChild(catGrp);
+
+      // Term kind facet
+      const kindCounts = {};
+      points.forEach(d => { const v = d.term_kind || "OTHER"; kindCounts[v] = (kindCounts[v] || 0) + 1; });
+      const kindGrp = document.createElement("div");
+      kindGrp.className = "facet-group";
+      kindGrp.innerHTML = '<div class="facet-title">Term kind</div>';
+      Object.keys(kindCounts).sort().forEach(v => {
+        const lab = document.createElement("label");
+        lab.className = "facet-opt";
+        lab.innerHTML = `<input type="checkbox" checked><span>${v}</span><span class="cnt">${kindCounts[v].toLocaleString()}</span>`;
+        lab.querySelector("input").addEventListener("change", (e) => {
+          if (e.target.checked) activeKinds.add(v); else activeKinds.delete(v);
+          update();
+        });
+        kindGrp.appendChild(lab);
+      });
+      groups.appendChild(kindGrp);
+
+      panel.appendChild(groups);
+      const showing = document.createElement("div");
+      showing.className = "facet-showing";
+      showing.innerHTML = `Showing <b id="facet-count">${points.length.toLocaleString()}</b> of ${points.length.toLocaleString()} traits`;
+      panel.appendChild(showing);
+    }
+
+    function update() {
+      const searchEl = document.getElementById("search-input");
+      const q = searchEl.value.toLowerCase().trim();
+      const url = new URL(window.location.href);
+      if (q) url.searchParams.set("q", searchEl.value.trim());
+      else url.searchParams.delete("q");
+      history.replaceState(null, "", url);
+
+      let visible = 0;
+      dots.each(function(d) {
+        const inFacet = activeCategories.has(d.category || "OTHER") && activeKinds.has(d.term_kind || "OTHER");
+        const pass = inFacet && (!q ||
+          (d.label || "").toLowerCase().includes(q) ||
+          (d.id || "").toLowerCase().includes(q) ||
+          (d.category || "").toLowerCase().includes(q));
+        if (pass) visible++;
+        d3.select(this)
+          .style("display", inFacet ? null : "none")
+          .attr("opacity", pass ? 0.8 : 0.05);
+      });
+      document.getElementById("visible-count").textContent = `${visible} visible`;
+      const fc = document.getElementById("facet-count");
+      if (fc) fc.textContent = visible.toLocaleString();
+    }
+
+    const initQ = new URLSearchParams(window.location.search).get("q") || "";
+    if (initQ) document.getElementById("search-input").value = initQ;
+    document.getElementById("search-input").oninput = update;
+    buildFacets();
+    update();
+
+    function esc(s) {
+      return String(s == null ? "" : s)
+        .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+    }
+    function buildDataTable() {
+      const tbody = document.querySelector("#data-table tbody");
+      if (!tbody) return;
+      const rows = points.slice().sort((a, b) => (a.label || "").localeCompare(b.label || ""));
+      tbody.innerHTML = rows.map(d => {
+        const label = d.href ? `<a href="${esc(d.href)}">${esc(d.label)}</a>` : esc(d.label);
+        return `<tr><td>${label}</td><td><code>${esc(d.id)}</code></td><td>${esc(d.category)}</td><td>${esc(d.term_kind)}</td>` +
+          `<td class="num">${(+getX(d)).toFixed(3)}</td><td class="num">${(+getY(d)).toFixed(3)}</td></tr>`;
+      }).join("");
+      const csvRows = [["label", "id", "category", "term_kind", "x", "y"]].concat(
+        rows.map(d => [d.label, d.id, d.category, d.term_kind, getX(d), getY(d)]));
+      const csv = csvRows.map(r => r.map(v => {
+        const s = String(v == null ? "" : v);
+        return /[",\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s;
+      }).join(",")).join("\n");
+      const link = document.getElementById("csv-download");
+      if (link) link.href = "data:text/csv;charset=utf-8," + encodeURIComponent(csv);
+    }
+    buildDataTable();
+    document.getElementById("search-input").disabled = false;
+    document.getElementById("csv-download").hidden = false;
+    document.getElementById("map-status").textContent = points.length + " records loaded.";
+  }).catch(() => {
+    document.getElementById("umap-plot").replaceChildren();
+    document.getElementById("facet-panel").replaceChildren();
+    document.querySelector("#data-table tbody").replaceChildren();
+    document.getElementById("visible-count").textContent = "Unavailable";
+    document.getElementById("map-status").textContent =
+      "Map data could not be loaded. Retry, or use Browse to read the trait records.";
+    document.getElementById("map-retry").hidden = false;
+    document.getElementById("search-input").disabled = true;
+  }).finally(() => { loading = false; });
+}
+document.getElementById("map-retry").addEventListener("click", loadMap);
+loadMap();
+</script>
+{% endblock %}

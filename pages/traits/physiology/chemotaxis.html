@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/physiology.html">PHYSIOLOGY</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/physiology.html">PHYSIOLOGY</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>chemotaxis</h1>
     <p class="curie"><code>traitmech:000086</code> · CLASS · REVIEWED</p>
 
@@ -85,9 +96,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>chemical gradient</strong>
+
             <span class="edge-predicate">causes</span>
             <strong>chemotaxis</strong>
-            <code>biolink:causes</code>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0006935" rel="nofollow noreferrer"><code>GO:0006935</code></a>
+            <a href="https://w3id.org/biolink/vocab/causes" rel="nofollow noreferrer"><code>biolink:causes</code></a>
             <p>A chemical gradient drives the chemotaxis signaling response.</p>
             <ul>
 
@@ -102,9 +115,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>chemotaxis</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0006935" rel="nofollow noreferrer"><code>GO:0006935</code></a>
             <span class="edge-predicate">confers</span>
             <strong>chemotaxis</strong>
-            <code>METPO:2007700</code>
+            <code>traitmech:000086</code>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>The chemotaxis signaling process realizes the trait.</p>
             <ul>
 
@@ -119,9 +134,11 @@
 
           <li id="pathograph-1-edge-3">
             <strong>chemoreceptor (MCP)</strong>
+            <a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR004090/" rel="nofollow noreferrer"><code>InterPro:IPR004090</code></a>
             <span class="edge-predicate">modulates</span>
             <strong>CheA autophosphorylation</strong>
-            <code>RO:0002211</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002211" rel="nofollow noreferrer"><code>RO:0002211</code></a>
             <p>Effector binding to chemoreceptors modulates CheA autophosphorylation activity.</p>
             <ul>
 
@@ -136,8 +153,10 @@
 
           <li id="pathograph-1-edge-4">
             <strong>CheA histidine kinase</strong>
+            <a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR051315/" rel="nofollow noreferrer"><code>InterPro:IPR051315</code></a>
             <span class="edge-predicate">phosphorylates</span>
             <strong>CheY response regulator</strong>
+
 
             <p>Phosphorylated CheA transfers phosphoryl groups to the response regulator CheY.</p>
             <ul>
@@ -153,8 +172,10 @@
 
           <li id="pathograph-1-edge-5">
             <strong>CheA histidine kinase</strong>
+            <a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR051315/" rel="nofollow noreferrer"><code>InterPro:IPR051315</code></a>
             <span class="edge-predicate">phosphorylates</span>
             <strong>CheB methylesterase</strong>
+            <a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR000673/" rel="nofollow noreferrer"><code>InterPro:IPR000673</code></a>
 
             <p>Phosphorylated CheA transfers phosphoryl groups to the methylesterase CheB.</p>
             <ul>
@@ -170,8 +191,10 @@
 
           <li id="pathograph-1-edge-6">
             <strong>CheY response regulator</strong>
+
             <span class="edge-predicate">induces</span>
             <strong>clockwise flagellar rotation</strong>
+
 
             <p>Phosphorylated CheY interacts with the flagellar motor to induce clockwise rotation.</p>
             <ul>
@@ -187,8 +210,10 @@
 
           <li id="pathograph-1-edge-7">
             <strong>CheZ phosphatase</strong>
+            <a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR007439/" rel="nofollow noreferrer"><code>InterPro:IPR007439</code></a>
             <span class="edge-predicate">dephosphorylates</span>
             <strong>CheY response regulator</strong>
+
 
             <p>CheZ phosphatase dephosphorylates CheY-P to maintain a stable signaling pool.</p>
             <ul>
@@ -204,8 +229,10 @@
 
           <li id="pathograph-1-edge-8">
             <strong>CheR methyltransferase</strong>
+            <a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR000780/" rel="nofollow noreferrer"><code>InterPro:IPR000780</code></a>
             <span class="edge-predicate">methylates</span>
             <strong>chemoreceptor (MCP)</strong>
+            <a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR004090/" rel="nofollow noreferrer"><code>InterPro:IPR004090</code></a>
 
             <p>CheR methylates chemoreceptors as part of the reversible adaptation system.</p>
             <ul>
@@ -221,8 +248,10 @@
 
           <li id="pathograph-1-edge-9">
             <strong>CheB methylesterase</strong>
+            <a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR000673/" rel="nofollow noreferrer"><code>InterPro:IPR000673</code></a>
             <span class="edge-predicate">demethylates</span>
             <strong>chemoreceptor (MCP)</strong>
+            <a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR004090/" rel="nofollow noreferrer"><code>InterPro:IPR004090</code></a>
 
             <p>CheB demethylates chemoreceptors as part of the reversible adaptation system.</p>
             <ul>
@@ -238,8 +267,10 @@
 
           <li id="pathograph-1-edge-10">
             <strong>CheW coupling protein</strong>
+            <a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR039315/" rel="nofollow noreferrer"><code>InterPro:IPR039315</code></a>
             <span class="edge-predicate">scaffolds</span>
             <strong>CheA histidine kinase</strong>
+            <a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR051315/" rel="nofollow noreferrer"><code>InterPro:IPR051315</code></a>
 
             <p>CheW couples and scaffolds CheA with chemoreceptors in the core signaling unit baseplate.</p>
             <ul>
@@ -255,9 +286,11 @@
 
           <li id="pathograph-1-edge-11">
             <strong>chemoreceptor (MCP)</strong>
+            <a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR004090/" rel="nofollow noreferrer"><code>InterPro:IPR004090</code></a>
             <span class="edge-predicate">contributes to</span>
             <strong>chemotaxis</strong>
-            <code>RO:0002326</code>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0006935" rel="nofollow noreferrer"><code>GO:0006935</code></a>
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>Chemoreceptor arrays contribute ligand sensing and CheA control to the chemotaxis process.</p>
             <ul>
 
@@ -372,7 +405,7 @@
     <div class="card">
       <h2>Cross-references</h2>
       <ul class="xrefs">
-        <li><code>GO:0006935</code></li>
+        <li><a href="https://amigo.geneontology.org/amigo/term/GO:0006935" rel="nofollow noreferrer"><code>GO:0006935</code></a></li>
       </ul>
     </div>
 
@@ -400,50 +433,50 @@
       <ul class="nn-list">
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/cadmium_tolerant.html">cadmium tolerant</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/cytogamy.html">cytogamy</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/sulfur_globule.html">sulfur globule</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/coccolith_production.html">coccolith production</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/cobalt_tolerant.html">cobalt tolerant</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/coagulase_activity.html">coagulase activity</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/copper_tolerant.html">copper tolerant</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/chemotropism.html">chemotropism</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/desiccation_tolerant.html">desiccation tolerant</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/cellular_rejuvenation.html">functional cellular rejuvenation</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/piezotolerant.html">piezotolerant</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/cellular_contraction.html">cell body or cytoplasmic projection contraction</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/obligately_piezophilic.html">obligately piezophilic</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/cellular_buoyancy.html">cellular buoyancy</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/gas_vesicle.html">gas vesicle</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/cold_shock_response.html">cold shock response</a>
           <span class="sim">1.000</span>
         </li>
 
@@ -1021,7 +1054,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking chemical gradients to biased motility via flagellar motor control.", "edges": [{"description": "A chemical gradient drives the chemotaxis signaling response.", "evidence": [{"notes": "Wadhams \u0026 Armitage review gradient-guided chemotaxis signaling.", "reference": "DOI:10.1038/nrm1524"}], "id": "edge-1", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "chemical_gradient", "target": "chemotaxis_process"}, {"description": "The chemotaxis signaling process realizes the trait.", "evidence": [{"notes": "Porter et al. review chemotaxis signal processing.", "reference": "DOI:10.1038/nrmicro2505"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "chemotaxis_process", "target": "chemotaxis_trait"}, {"description": "Effector binding to chemoreceptors modulates CheA autophosphorylation activity.", "evidence": [{"notes": "Upon effector binding to the receptor, the autophosphorylation activity of CheA is modulated by chemoreceptors.", "reference": "DOI:10.1146/annurev-micro-032421-110850"}], "id": "edge-3", "is_orphan": false, "predicate": "modulates", "predicate_id": "RO:0002211", "source": "chemoreceptor_mcp", "target": "chea_autophosphorylation"}, {"description": "Phosphorylated CheA transfers phosphoryl groups to the response regulator CheY.", "evidence": [{"notes": "When CheA is phosphorylated, it can activate its response regulators CheB and CheY via phosphoryl transfer.", "reference": "DOI:10.1146/annurev-micro-032421-110850"}], "id": "edge-4", "is_orphan": false, "predicate": "phosphorylates", "predicate_id": null, "source": "chea_kinase", "target": "chey"}, {"description": "Phosphorylated CheA transfers phosphoryl groups to the methylesterase CheB.", "evidence": [{"notes": "When CheA is phosphorylated, it can activate its response regulators CheB and CheY via phosphoryl transfer.", "reference": "DOI:10.1146/annurev-micro-032421-110850"}], "id": "edge-5", "is_orphan": false, "predicate": "phosphorylates", "predicate_id": null, "source": "chea_kinase", "target": "cheb"}, {"description": "Phosphorylated CheY interacts with the flagellar motor to induce clockwise rotation.", "evidence": [{"notes": "CheY-P interacts with the flagella to induce clockwise rotation.", "reference": "DOI:10.1146/annurev-micro-032421-110850"}], "id": "edge-6", "is_orphan": false, "predicate": "induces", "predicate_id": null, "source": "chey", "target": "cw_flagellar_rotation"}, {"description": "CheZ phosphatase dephosphorylates CheY-P to maintain a stable signaling pool.", "evidence": [{"notes": "The phosphatase CheZ dephosphorylates CheY to ensure a stable pool of CheY is available.", "reference": "DOI:10.1146/annurev-micro-032421-110850"}], "id": "edge-7", "is_orphan": false, "predicate": "dephosphorylates", "predicate_id": null, "source": "chez", "target": "chey"}, {"description": "CheR methylates chemoreceptors as part of the reversible adaptation system.", "evidence": [{"notes": "CheB, along with CheR, constitutes an adaptation system that reversibly methylates receptors.", "reference": "DOI:10.1146/annurev-micro-032421-110850"}], "id": "edge-8", "is_orphan": false, "predicate": "methylates", "predicate_id": null, "source": "cher", "target": "chemoreceptor_mcp"}, {"description": "CheB demethylates chemoreceptors as part of the reversible adaptation system.", "evidence": [{"notes": "CheB, along with CheR, constitutes an adaptation system that reversibly methylates/demethylates receptors.", "reference": "DOI:10.1146/annurev-micro-032421-110850"}], "id": "edge-9", "is_orphan": false, "predicate": "demethylates", "predicate_id": null, "source": "cheb", "target": "chemoreceptor_mcp"}, {"description": "CheW couples and scaffolds CheA with chemoreceptors in the core signaling unit baseplate.", "evidence": [{"notes": "The coupling protein CheW secures CheA; the baseplate consists of the chemoreceptor PIR, CheA, and CheW.", "reference": "DOI:10.1146/annurev-micro-032421-110850"}], "id": "edge-10", "is_orphan": false, "predicate": "scaffolds", "predicate_id": null, "source": "chew", "target": "chea_kinase"}, {"description": "Chemoreceptor arrays contribute ligand sensing and CheA control to the chemotaxis process.", "evidence": [{"notes": "Verified against the public PMC author manuscript.", "reference": "DOI:10.1016/j.tim.2022.10.007", "snippet": "The chemoreceptor nanoarray complexes with the cytosolic histidine kinase chemotaxis protein A (CheA) and regulates its autophosphorylation based on chemoreceptor ligand occupancy"}], "id": "edge-11", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "chemoreceptor_mcp", "target": "chemotaxis_process"}], "evidence_rows": [{"description": "A chemical gradient drives the chemotaxis signaling response.", "edge_id": "edge-1", "evidence": [{"notes": "Wadhams \u0026 Armitage review gradient-guided chemotaxis signaling.", "reference": "DOI:10.1038/nrm1524"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "chemical gradient", "target": "chemotaxis"}, {"description": "The chemotaxis signaling process realizes the trait.", "edge_id": "edge-2", "evidence": [{"notes": "Porter et al. review chemotaxis signal processing.", "reference": "DOI:10.1038/nrmicro2505"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "chemotaxis", "target": "chemotaxis"}, {"description": "Effector binding to chemoreceptors modulates CheA autophosphorylation activity.", "edge_id": "edge-3", "evidence": [{"notes": "Upon effector binding to the receptor, the autophosphorylation activity of CheA is modulated by chemoreceptors.", "reference": "DOI:10.1146/annurev-micro-032421-110850"}], "predicate": "modulates", "predicate_id": "RO:0002211", "source": "chemoreceptor (MCP)", "target": "CheA autophosphorylation"}, {"description": "Phosphorylated CheA transfers phosphoryl groups to the response regulator CheY.", "edge_id": "edge-4", "evidence": [{"notes": "When CheA is phosphorylated, it can activate its response regulators CheB and CheY via phosphoryl transfer.", "reference": "DOI:10.1146/annurev-micro-032421-110850"}], "predicate": "phosphorylates", "predicate_id": null, "source": "CheA histidine kinase", "target": "CheY response regulator"}, {"description": "Phosphorylated CheA transfers phosphoryl groups to the methylesterase CheB.", "edge_id": "edge-5", "evidence": [{"notes": "When CheA is phosphorylated, it can activate its response regulators CheB and CheY via phosphoryl transfer.", "reference": "DOI:10.1146/annurev-micro-032421-110850"}], "predicate": "phosphorylates", "predicate_id": null, "source": "CheA histidine kinase", "target": "CheB methylesterase"}, {"description": "Phosphorylated CheY interacts with the flagellar motor to induce clockwise rotation.", "edge_id": "edge-6", "evidence": [{"notes": "CheY-P interacts with the flagella to induce clockwise rotation.", "reference": "DOI:10.1146/annurev-micro-032421-110850"}], "predicate": "induces", "predicate_id": null, "source": "CheY response regulator", "target": "clockwise flagellar rotation"}, {"description": "CheZ phosphatase dephosphorylates CheY-P to maintain a stable signaling pool.", "edge_id": "edge-7", "evidence": [{"notes": "The phosphatase CheZ dephosphorylates CheY to ensure a stable pool of CheY is available.", "reference": "DOI:10.1146/annurev-micro-032421-110850"}], "predicate": "dephosphorylates", "predicate_id": null, "source": "CheZ phosphatase", "target": "CheY response regulator"}, {"description": "CheR methylates chemoreceptors as part of the reversible adaptation system.", "edge_id": "edge-8", "evidence": [{"notes": "CheB, along with CheR, constitutes an adaptation system that reversibly methylates receptors.", "reference": "DOI:10.1146/annurev-micro-032421-110850"}], "predicate": "methylates", "predicate_id": null, "source": "CheR methyltransferase", "target": "chemoreceptor (MCP)"}, {"description": "CheB demethylates chemoreceptors as part of the reversible adaptation system.", "edge_id": "edge-9", "evidence": [{"notes": "CheB, along with CheR, constitutes an adaptation system that reversibly methylates/demethylates receptors.", "reference": "DOI:10.1146/annurev-micro-032421-110850"}], "predicate": "demethylates", "predicate_id": null, "source": "CheB methylesterase", "target": "chemoreceptor (MCP)"}, {"description": "CheW couples and scaffolds CheA with chemoreceptors in the core signaling unit baseplate.", "edge_id": "edge-10", "evidence": [{"notes": "The coupling protein CheW secures CheA; the baseplate consists of the chemoreceptor PIR, CheA, and CheW.", "reference": "DOI:10.1146/annurev-micro-032421-110850"}], "predicate": "scaffolds", "predicate_id": null, "source": "CheW coupling protein", "target": "CheA histidine kinase"}, {"description": "Chemoreceptor arrays contribute ligand sensing and CheA control to the chemotaxis process.", "edge_id": "edge-11", "evidence": [{"notes": "Verified against the public PMC author manuscript.", "reference": "DOI:10.1016/j.tim.2022.10.007", "snippet": "The chemoreceptor nanoarray complexes with the cytosolic histidine kinase chemotaxis protein A (CheA) and regulates its autophosphorylation based on chemoreceptor ligand occupancy"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "chemoreceptor (MCP)", "target": "chemotaxis"}], "graph_id": "chemotaxis_gradient_response", "issues": [], "nodes": [{"color": "#cffafe", "description": "Autophosphorylation activity of the CheA histidine kinase.", "grounding": null, "id": "chea_autophosphorylation", "is_orphan": false, "label": "CheA autophosphorylation", "node_type": "MOLECULAR_FUNCTION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Histidine autokinase whose activity is modulated by chemoreceptors.", "grounding": "InterPro:IPR051315", "id": "chea_kinase", "is_orphan": false, "label": "CheA histidine kinase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Phospho-regulated methylesterase that demethylates chemoreceptors during adaptation.", "grounding": "InterPro:IPR000673", "id": "cheb", "is_orphan": false, "label": "CheB methylesterase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Spatial gradient of attractant or repellent.", "grounding": null, "id": "chemical_gradient", "is_orphan": false, "label": "chemical gradient", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Methyl-accepting chemotaxis protein that binds attractant/repellent ligands.", "grounding": "InterPro:IPR004090", "id": "chemoreceptor_mcp", "is_orphan": false, "label": "chemoreceptor (MCP)", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Signal transduction biasing motor switching.", "grounding": "GO:0006935", "id": "chemotaxis_process", "is_orphan": false, "label": "chemotaxis", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Biased movement along chemical gradients.", "grounding": "traitmech:000086", "id": "chemotaxis_trait", "is_orphan": false, "label": "chemotaxis", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Methyltransferase that methylates chemoreceptors during adaptation.", "grounding": "InterPro:IPR000780", "id": "cher", "is_orphan": false, "label": "CheR methyltransferase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Adaptor/scaffold coupling CheA to chemoreceptors in the core signaling unit.", "grounding": "InterPro:IPR039315", "id": "chew", "is_orphan": false, "label": "CheW coupling protein", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Response regulator that, when phosphorylated, controls flagellar motor switching.", "grounding": null, "id": "chey", "is_orphan": false, "label": "CheY response regulator", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 160, "evidence": [{"notes": "The primary E. coli motor study directly links CheY to control of flagellar rotational direction; UniProtKB P0AE67 is the reviewed K-12 CheY entry.", "reference": "DOI:10.1073/pnas.1000935107", "snippet": "Chemotaxis signaling protein CheY binds to the rotor protein FliN"}], "gene_symbol": "cheY", "protein_label": "Chemotaxis protein CheY", "proteome_id": "UP000000625", "retrieved_on": "2026-08-24", "role": "Phosphorylated CheY binds the E. coli flagellar switch and raises the probability of clockwise motor rotation.", "sequence_version": 2, "taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli K-12", "uniprot_id": "UniProtKB:P0AE67"}], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Phosphatase that dephosphorylates CheY-P to reset signaling.", "grounding": "InterPro:IPR007439", "id": "chez", "is_orphan": false, "label": "CheZ phosphatase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Clockwise flagellar motor rotation that promotes tumbling.", "grounding": null, "id": "cw_flagellar_rotation", "is_orphan": false, "label": "clockwise flagellar rotation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 160, "evidence": [{"notes": "The primary E. coli motor study directly links CheY to control of flagellar rotational direction; UniProtKB P0AE67 is the reviewed K-12 CheY entry.", "reference": "DOI:10.1073/pnas.1000935107", "snippet": "Chemotaxis signaling protein CheY binds to the rotor protein FliN"}], "gene_symbol": "cheY", "node_id": "chey", "node_label": "CheY response regulator", "protein_label": "Chemotaxis protein CheY", "proteome_id": "UP000000625", "retrieved_on": "2026-08-24", "role": "Phosphorylated CheY binds the E. coli flagellar switch and raises the probability of clockwise motor rotation.", "sequence_version": 2, "taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli K-12", "uniprot_id": "UniProtKB:P0AE67"}], "scope_notes": "This graph represents the enterobacterial CheA-CheY pathway exemplified by E. coli K-12. Chemotaxis systems in other taxa can omit CheZ, use alternative adaptation proteins, or contain multiple paralogous receptor arrays.", "scope_status": "MECHANISTIC", "title": "Gradient-guided chemotactic movement"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking chemical gradients to biased motility via flagellar motor control.", "edges": [{"description": "A chemical gradient drives the chemotaxis signaling response.", "evidence": [{"notes": "Wadhams \u0026 Armitage review gradient-guided chemotaxis signaling.", "reference": "DOI:10.1038/nrm1524"}], "id": "edge-1", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "chemical_gradient", "target": "chemotaxis_process"}, {"description": "The chemotaxis signaling process realizes the trait.", "evidence": [{"notes": "Porter et al. review chemotaxis signal processing.", "reference": "DOI:10.1038/nrmicro2505"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "chemotaxis_process", "target": "chemotaxis_trait"}, {"description": "Effector binding to chemoreceptors modulates CheA autophosphorylation activity.", "evidence": [{"notes": "Upon effector binding to the receptor, the autophosphorylation activity of CheA is modulated by chemoreceptors.", "reference": "DOI:10.1146/annurev-micro-032421-110850"}], "id": "edge-3", "is_orphan": false, "predicate": "modulates", "predicate_id": "RO:0002211", "source": "chemoreceptor_mcp", "target": "chea_autophosphorylation"}, {"description": "Phosphorylated CheA transfers phosphoryl groups to the response regulator CheY.", "evidence": [{"notes": "When CheA is phosphorylated, it can activate its response regulators CheB and CheY via phosphoryl transfer.", "reference": "DOI:10.1146/annurev-micro-032421-110850"}], "id": "edge-4", "is_orphan": false, "predicate": "phosphorylates", "predicate_id": null, "source": "chea_kinase", "target": "chey"}, {"description": "Phosphorylated CheA transfers phosphoryl groups to the methylesterase CheB.", "evidence": [{"notes": "When CheA is phosphorylated, it can activate its response regulators CheB and CheY via phosphoryl transfer.", "reference": "DOI:10.1146/annurev-micro-032421-110850"}], "id": "edge-5", "is_orphan": false, "predicate": "phosphorylates", "predicate_id": null, "source": "chea_kinase", "target": "cheb"}, {"description": "Phosphorylated CheY interacts with the flagellar motor to induce clockwise rotation.", "evidence": [{"notes": "CheY-P interacts with the flagella to induce clockwise rotation.", "reference": "DOI:10.1146/annurev-micro-032421-110850"}], "id": "edge-6", "is_orphan": false, "predicate": "induces", "predicate_id": null, "source": "chey", "target": "cw_flagellar_rotation"}, {"description": "CheZ phosphatase dephosphorylates CheY-P to maintain a stable signaling pool.", "evidence": [{"notes": "The phosphatase CheZ dephosphorylates CheY to ensure a stable pool of CheY is available.", "reference": "DOI:10.1146/annurev-micro-032421-110850"}], "id": "edge-7", "is_orphan": false, "predicate": "dephosphorylates", "predicate_id": null, "source": "chez", "target": "chey"}, {"description": "CheR methylates chemoreceptors as part of the reversible adaptation system.", "evidence": [{"notes": "CheB, along with CheR, constitutes an adaptation system that reversibly methylates receptors.", "reference": "DOI:10.1146/annurev-micro-032421-110850"}], "id": "edge-8", "is_orphan": false, "predicate": "methylates", "predicate_id": null, "source": "cher", "target": "chemoreceptor_mcp"}, {"description": "CheB demethylates chemoreceptors as part of the reversible adaptation system.", "evidence": [{"notes": "CheB, along with CheR, constitutes an adaptation system that reversibly methylates/demethylates receptors.", "reference": "DOI:10.1146/annurev-micro-032421-110850"}], "id": "edge-9", "is_orphan": false, "predicate": "demethylates", "predicate_id": null, "source": "cheb", "target": "chemoreceptor_mcp"}, {"description": "CheW couples and scaffolds CheA with chemoreceptors in the core signaling unit baseplate.", "evidence": [{"notes": "The coupling protein CheW secures CheA; the baseplate consists of the chemoreceptor PIR, CheA, and CheW.", "reference": "DOI:10.1146/annurev-micro-032421-110850"}], "id": "edge-10", "is_orphan": false, "predicate": "scaffolds", "predicate_id": null, "source": "chew", "target": "chea_kinase"}, {"description": "Chemoreceptor arrays contribute ligand sensing and CheA control to the chemotaxis process.", "evidence": [{"notes": "Verified against the public PMC author manuscript.", "reference": "DOI:10.1016/j.tim.2022.10.007", "snippet": "The chemoreceptor nanoarray complexes with the cytosolic histidine kinase chemotaxis protein A (CheA) and regulates its autophosphorylation based on chemoreceptor ligand occupancy"}], "id": "edge-11", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "chemoreceptor_mcp", "target": "chemotaxis_process"}], "evidence_rows": [{"description": "A chemical gradient drives the chemotaxis signaling response.", "edge_id": "edge-1", "evidence": [{"notes": "Wadhams \u0026 Armitage review gradient-guided chemotaxis signaling.", "reference": "DOI:10.1038/nrm1524"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "chemical gradient", "source_grounding": null, "target": "chemotaxis", "target_grounding": "GO:0006935"}, {"description": "The chemotaxis signaling process realizes the trait.", "edge_id": "edge-2", "evidence": [{"notes": "Porter et al. review chemotaxis signal processing.", "reference": "DOI:10.1038/nrmicro2505"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "chemotaxis", "source_grounding": "GO:0006935", "target": "chemotaxis", "target_grounding": "traitmech:000086"}, {"description": "Effector binding to chemoreceptors modulates CheA autophosphorylation activity.", "edge_id": "edge-3", "evidence": [{"notes": "Upon effector binding to the receptor, the autophosphorylation activity of CheA is modulated by chemoreceptors.", "reference": "DOI:10.1146/annurev-micro-032421-110850"}], "predicate": "modulates", "predicate_id": "RO:0002211", "source": "chemoreceptor (MCP)", "source_grounding": "InterPro:IPR004090", "target": "CheA autophosphorylation", "target_grounding": null}, {"description": "Phosphorylated CheA transfers phosphoryl groups to the response regulator CheY.", "edge_id": "edge-4", "evidence": [{"notes": "When CheA is phosphorylated, it can activate its response regulators CheB and CheY via phosphoryl transfer.", "reference": "DOI:10.1146/annurev-micro-032421-110850"}], "predicate": "phosphorylates", "predicate_id": null, "source": "CheA histidine kinase", "source_grounding": "InterPro:IPR051315", "target": "CheY response regulator", "target_grounding": null}, {"description": "Phosphorylated CheA transfers phosphoryl groups to the methylesterase CheB.", "edge_id": "edge-5", "evidence": [{"notes": "When CheA is phosphorylated, it can activate its response regulators CheB and CheY via phosphoryl transfer.", "reference": "DOI:10.1146/annurev-micro-032421-110850"}], "predicate": "phosphorylates", "predicate_id": null, "source": "CheA histidine kinase", "source_grounding": "InterPro:IPR051315", "target": "CheB methylesterase", "target_grounding": "InterPro:IPR000673"}, {"description": "Phosphorylated CheY interacts with the flagellar motor to induce clockwise rotation.", "edge_id": "edge-6", "evidence": [{"notes": "CheY-P interacts with the flagella to induce clockwise rotation.", "reference": "DOI:10.1146/annurev-micro-032421-110850"}], "predicate": "induces", "predicate_id": null, "source": "CheY response regulator", "source_grounding": null, "target": "clockwise flagellar rotation", "target_grounding": null}, {"description": "CheZ phosphatase dephosphorylates CheY-P to maintain a stable signaling pool.", "edge_id": "edge-7", "evidence": [{"notes": "The phosphatase CheZ dephosphorylates CheY to ensure a stable pool of CheY is available.", "reference": "DOI:10.1146/annurev-micro-032421-110850"}], "predicate": "dephosphorylates", "predicate_id": null, "source": "CheZ phosphatase", "source_grounding": "InterPro:IPR007439", "target": "CheY response regulator", "target_grounding": null}, {"description": "CheR methylates chemoreceptors as part of the reversible adaptation system.", "edge_id": "edge-8", "evidence": [{"notes": "CheB, along with CheR, constitutes an adaptation system that reversibly methylates receptors.", "reference": "DOI:10.1146/annurev-micro-032421-110850"}], "predicate": "methylates", "predicate_id": null, "source": "CheR methyltransferase", "source_grounding": "InterPro:IPR000780", "target": "chemoreceptor (MCP)", "target_grounding": "InterPro:IPR004090"}, {"description": "CheB demethylates chemoreceptors as part of the reversible adaptation system.", "edge_id": "edge-9", "evidence": [{"notes": "CheB, along with CheR, constitutes an adaptation system that reversibly methylates/demethylates receptors.", "reference": "DOI:10.1146/annurev-micro-032421-110850"}], "predicate": "demethylates", "predicate_id": null, "source": "CheB methylesterase", "source_grounding": "InterPro:IPR000673", "target": "chemoreceptor (MCP)", "target_grounding": "InterPro:IPR004090"}, {"description": "CheW couples and scaffolds CheA with chemoreceptors in the core signaling unit baseplate.", "edge_id": "edge-10", "evidence": [{"notes": "The coupling protein CheW secures CheA; the baseplate consists of the chemoreceptor PIR, CheA, and CheW.", "reference": "DOI:10.1146/annurev-micro-032421-110850"}], "predicate": "scaffolds", "predicate_id": null, "source": "CheW coupling protein", "source_grounding": "InterPro:IPR039315", "target": "CheA histidine kinase", "target_grounding": "InterPro:IPR051315"}, {"description": "Chemoreceptor arrays contribute ligand sensing and CheA control to the chemotaxis process.", "edge_id": "edge-11", "evidence": [{"notes": "Verified against the public PMC author manuscript.", "reference": "DOI:10.1016/j.tim.2022.10.007", "snippet": "The chemoreceptor nanoarray complexes with the cytosolic histidine kinase chemotaxis protein A (CheA) and regulates its autophosphorylation based on chemoreceptor ligand occupancy"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "chemoreceptor (MCP)", "source_grounding": "InterPro:IPR004090", "target": "chemotaxis", "target_grounding": "GO:0006935"}], "graph_id": "chemotaxis_gradient_response", "issues": [], "nodes": [{"color": "#cffafe", "description": "Autophosphorylation activity of the CheA histidine kinase.", "grounding": null, "id": "chea_autophosphorylation", "is_orphan": false, "label": "CheA autophosphorylation", "node_type": "MOLECULAR_FUNCTION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Histidine autokinase whose activity is modulated by chemoreceptors.", "grounding": "InterPro:IPR051315", "id": "chea_kinase", "is_orphan": false, "label": "CheA histidine kinase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Phospho-regulated methylesterase that demethylates chemoreceptors during adaptation.", "grounding": "InterPro:IPR000673", "id": "cheb", "is_orphan": false, "label": "CheB methylesterase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Spatial gradient of attractant or repellent.", "grounding": null, "id": "chemical_gradient", "is_orphan": false, "label": "chemical gradient", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Methyl-accepting chemotaxis protein that binds attractant/repellent ligands.", "grounding": "InterPro:IPR004090", "id": "chemoreceptor_mcp", "is_orphan": false, "label": "chemoreceptor (MCP)", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Signal transduction biasing motor switching.", "grounding": "GO:0006935", "id": "chemotaxis_process", "is_orphan": false, "label": "chemotaxis", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Biased movement along chemical gradients.", "grounding": "traitmech:000086", "id": "chemotaxis_trait", "is_orphan": false, "label": "chemotaxis", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Methyltransferase that methylates chemoreceptors during adaptation.", "grounding": "InterPro:IPR000780", "id": "cher", "is_orphan": false, "label": "CheR methyltransferase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Adaptor/scaffold coupling CheA to chemoreceptors in the core signaling unit.", "grounding": "InterPro:IPR039315", "id": "chew", "is_orphan": false, "label": "CheW coupling protein", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Response regulator that, when phosphorylated, controls flagellar motor switching.", "grounding": null, "id": "chey", "is_orphan": false, "label": "CheY response regulator", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 160, "evidence": [{"notes": "The primary E. coli motor study directly links CheY to control of flagellar rotational direction; UniProtKB P0AE67 is the reviewed K-12 CheY entry.", "reference": "DOI:10.1073/pnas.1000935107", "snippet": "Chemotaxis signaling protein CheY binds to the rotor protein FliN"}], "gene_symbol": "cheY", "protein_label": "Chemotaxis protein CheY", "proteome_id": "UP000000625", "retrieved_on": "2026-08-24", "role": "Phosphorylated CheY binds the E. coli flagellar switch and raises the probability of clockwise motor rotation.", "sequence_version": 2, "taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli K-12", "uniprot_id": "UniProtKB:P0AE67"}], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Phosphatase that dephosphorylates CheY-P to reset signaling.", "grounding": "InterPro:IPR007439", "id": "chez", "is_orphan": false, "label": "CheZ phosphatase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Clockwise flagellar motor rotation that promotes tumbling.", "grounding": null, "id": "cw_flagellar_rotation", "is_orphan": false, "label": "clockwise flagellar rotation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 160, "evidence": [{"notes": "The primary E. coli motor study directly links CheY to control of flagellar rotational direction; UniProtKB P0AE67 is the reviewed K-12 CheY entry.", "reference": "DOI:10.1073/pnas.1000935107", "snippet": "Chemotaxis signaling protein CheY binds to the rotor protein FliN"}], "gene_symbol": "cheY", "node_id": "chey", "node_label": "CheY response regulator", "protein_label": "Chemotaxis protein CheY", "proteome_id": "UP000000625", "retrieved_on": "2026-08-24", "role": "Phosphorylated CheY binds the E. coli flagellar switch and raises the probability of clockwise motor rotation.", "sequence_version": 2, "taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli K-12", "uniprot_id": "UniProtKB:P0AE67"}], "scope_notes": "This graph represents the enterobacterial CheA-CheY pathway exemplified by E. coli K-12. Chemotaxis systems in other taxa can omit CheZ, use alternative adaptation proteins, or contain multiple paralogous receptor arrays.", "scope_status": "MECHANISTIC", "title": "Gradient-guided chemotactic movement"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -1041,13 +1074,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-08-31 09:40 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

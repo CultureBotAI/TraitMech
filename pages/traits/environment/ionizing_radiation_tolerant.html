@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/environment.html">ENVIRONMENT</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/environment.html">ENVIRONMENT</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>ionizing radiation tolerant</h1>
     <p class="curie"><code>traitmech:000008</code> · CLASS · REVIEWED</p>
 
@@ -85,9 +96,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>gamma radiation</strong>
+
             <span class="edge-predicate">challenges</span>
             <strong>ionizing radiation tolerant</strong>
-            <code>METPO:2007406</code>
+            <code>traitmech:000008</code>
+            <a href="https://w3id.org/metpo/2007406" rel="nofollow noreferrer"><code>METPO:2007406</code></a>
             <p>Gamma exposure is the environmental challenge the trait counters.</p>
             <ul>
 
@@ -102,9 +115,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>double-strand break repair</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0006302" rel="nofollow noreferrer"><code>GO:0006302</code></a>
             <span class="edge-predicate">confers</span>
             <strong>ionizing radiation tolerant</strong>
-            <code>METPO:2007700</code>
+            <code>traitmech:000008</code>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>Efficient DSB repair restores chromosomal integrity after ionizing-radiation damage.</p>
             <ul>
 
@@ -119,9 +134,11 @@
 
           <li id="pathograph-1-edge-3">
             <strong>manganese-mediated oxidative-damage protection</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>ionizing radiation tolerant</strong>
-            <code>METPO:2007700</code>
+            <code>traitmech:000008</code>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>Mn-antioxidant proteome protection preserves repair capacity under irradiation.</p>
             <ul>
 
@@ -136,9 +153,11 @@
 
           <li id="pathograph-1-edge-4">
             <strong>gamma radiation</strong>
+
             <span class="edge-predicate">causes</span>
             <strong>DNA double-strand breaks and clustered lesions</strong>
-            <code>biolink:causes</code>
+
+            <a href="https://w3id.org/biolink/vocab/causes" rel="nofollow noreferrer"><code>biolink:causes</code></a>
             <p>Ionizing radiation produces DNA double- and single-strand breaks and complex clustered lesions.</p>
             <ul>
 
@@ -153,8 +172,10 @@
 
           <li id="pathograph-1-edge-5">
             <strong>double-strand break repair</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0006302" rel="nofollow noreferrer"><code>GO:0006302</code></a>
             <span class="edge-predicate">repairs</span>
             <strong>DNA double-strand breaks and clustered lesions</strong>
+
 
             <p>Double-strand break repair resolves the clustered DNA lesions inflicted by ionizing radiation.</p>
             <ul>
@@ -170,8 +191,10 @@
 
           <li id="pathograph-1-edge-6">
             <strong>high intracellular Mn/Fe ratio</strong>
+
             <span class="edge-predicate">positively correlates with</span>
             <strong>ionizing radiation tolerant</strong>
+            <code>traitmech:000008</code>
 
             <p>A high intracellular Mn/Fe ratio correlates with antioxidant proteome protection and survival of ionizing radiation.</p>
             <ul>
@@ -187,9 +210,11 @@
 
           <li id="pathograph-1-edge-7">
             <strong>high intracellular Mn/Fe ratio</strong>
+
             <span class="edge-predicate">enables</span>
             <strong>manganese-mediated oxidative-damage protection</strong>
-            <code>RO:0002327</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002327" rel="nofollow noreferrer"><code>RO:0002327</code></a>
             <p>A high Mn/Fe ratio supplies the Mn(II) complexes that shield repair proteins from oxidative damage.</p>
             <ul>
 
@@ -280,49 +305,49 @@
 
         <li>
           <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/cadmium_tolerant.html">cadmium tolerant</a>
-          <span class="sim">1.000</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/sulfur_globule.html">sulfur globule</a>
+          <a href="../../traits/environment/metal_tolerant.html">metal tolerant</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/cobalt_tolerant.html">cobalt tolerant</a>
+          <a href="../../traits/environment/mercury_tolerant.html">mercury tolerant</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/copper_tolerant.html">copper tolerant</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/cystine_arylamidase_activity.html">cystine arylamidase activity</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/desiccation_tolerant.html">desiccation tolerant</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/coccolith_production.html">coccolith production</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/piezophilic.html">piezophilic</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/coagulase_activity.html">coagulase activity</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/obligately_piezophilic.html">obligately piezophilic</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/chemotropism.html">chemotropism</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/gas_vesicle.html">gas vesicle</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/chemotaxis.html">chemotaxis</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/cellular_rejuvenation.html">functional cellular rejuvenation</a>
           <span class="sim">1.000</span>
         </li>
 
@@ -852,7 +877,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking gamma-radiation exposure to efficient repair of DNA double-strand breaks and Mn-mediated oxidative protection.", "edges": [{"description": "Gamma exposure is the environmental challenge the trait counters.", "evidence": [{"notes": "Deinococcus radiodurans tolerates gamma D10 doses exceeding 12 kGy.", "reference": "DOI:10.3390/genes14091803"}], "id": "edge-1", "is_orphan": false, "predicate": "challenges", "predicate_id": "METPO:2007406", "source": "gamma_radiation", "target": "ionizing_tolerant_trait"}, {"description": "Efficient DSB repair restores chromosomal integrity after ionizing-radiation damage.", "evidence": [{"notes": "D. radiodurans tolerates lethal gamma doses through DSB-repair machinery.", "reference": "DOI:10.3390/genes14091803"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "dsb_repair", "target": "ionizing_tolerant_trait"}, {"description": "Mn-antioxidant proteome protection preserves repair capacity under irradiation.", "evidence": [{"notes": "Intracellular Mn/Fe ratio correlates with bacterial radiation resistance.", "reference": "DOI:10.1101/cshperspect.a012765"}], "id": "edge-3", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "mn_antioxidant_protection", "target": "ionizing_tolerant_trait"}, {"description": "Ionizing radiation produces DNA double- and single-strand breaks and complex clustered lesions.", "evidence": [{"notes": "Ionizing radiation produces single- and double-strand DNA breaks, abasic sites and complex clustered lesions (broad radiobiology, across taxa).", "reference": "DOI:10.1007/978-3-031-18810-7_9"}], "id": "edge-4", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "gamma_radiation", "target": "dsb_clustered_lesions"}, {"description": "Double-strand break repair resolves the clustered DNA lesions inflicted by ionizing radiation.", "evidence": [{"notes": "DSB-repair machinery resolves radiation-induced strand breaks and clustered lesions to restore chromosomal integrity.", "reference": "DOI:10.1007/978-3-031-18810-7_9"}], "id": "edge-5", "is_orphan": false, "predicate": "repairs", "predicate_id": null, "source": "dsb_repair", "target": "dsb_clustered_lesions"}, {"description": "A high intracellular Mn/Fe ratio correlates with antioxidant proteome protection and survival of ionizing radiation.", "evidence": [{"notes": "Strong correlation: radiation-resistant bacteria carry more Mn2+ and ~3x less Fe2+, giving antioxidant protection of the cellular proteome.", "reference": "DOI:10.1101/cshperspect.a012765"}], "id": "edge-6", "is_orphan": false, "predicate": "positively correlates with", "predicate_id": null, "source": "mn_fe_ratio", "target": "ionizing_tolerant_trait"}, {"description": "A high Mn/Fe ratio supplies the Mn(II) complexes that shield repair proteins from oxidative damage.", "evidence": [{"notes": "Elevated Mn/Fe ratio underlies Mn-antioxidant protection of the proteome during irradiation.", "reference": "DOI:10.1101/cshperspect.a012765"}], "id": "edge-7", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "mn_fe_ratio", "target": "mn_antioxidant_protection"}], "evidence_rows": [{"description": "Gamma exposure is the environmental challenge the trait counters.", "edge_id": "edge-1", "evidence": [{"notes": "Deinococcus radiodurans tolerates gamma D10 doses exceeding 12 kGy.", "reference": "DOI:10.3390/genes14091803"}], "predicate": "challenges", "predicate_id": "METPO:2007406", "source": "gamma radiation", "target": "ionizing radiation tolerant"}, {"description": "Efficient DSB repair restores chromosomal integrity after ionizing-radiation damage.", "edge_id": "edge-2", "evidence": [{"notes": "D. radiodurans tolerates lethal gamma doses through DSB-repair machinery.", "reference": "DOI:10.3390/genes14091803"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "double-strand break repair", "target": "ionizing radiation tolerant"}, {"description": "Mn-antioxidant proteome protection preserves repair capacity under irradiation.", "edge_id": "edge-3", "evidence": [{"notes": "Intracellular Mn/Fe ratio correlates with bacterial radiation resistance.", "reference": "DOI:10.1101/cshperspect.a012765"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "manganese-mediated oxidative-damage protection", "target": "ionizing radiation tolerant"}, {"description": "Ionizing radiation produces DNA double- and single-strand breaks and complex clustered lesions.", "edge_id": "edge-4", "evidence": [{"notes": "Ionizing radiation produces single- and double-strand DNA breaks, abasic sites and complex clustered lesions (broad radiobiology, across taxa).", "reference": "DOI:10.1007/978-3-031-18810-7_9"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "gamma radiation", "target": "DNA double-strand breaks and clustered lesions"}, {"description": "Double-strand break repair resolves the clustered DNA lesions inflicted by ionizing radiation.", "edge_id": "edge-5", "evidence": [{"notes": "DSB-repair machinery resolves radiation-induced strand breaks and clustered lesions to restore chromosomal integrity.", "reference": "DOI:10.1007/978-3-031-18810-7_9"}], "predicate": "repairs", "predicate_id": null, "source": "double-strand break repair", "target": "DNA double-strand breaks and clustered lesions"}, {"description": "A high intracellular Mn/Fe ratio correlates with antioxidant proteome protection and survival of ionizing radiation.", "edge_id": "edge-6", "evidence": [{"notes": "Strong correlation: radiation-resistant bacteria carry more Mn2+ and ~3x less Fe2+, giving antioxidant protection of the cellular proteome.", "reference": "DOI:10.1101/cshperspect.a012765"}], "predicate": "positively correlates with", "predicate_id": null, "source": "high intracellular Mn/Fe ratio", "target": "ionizing radiation tolerant"}, {"description": "A high Mn/Fe ratio supplies the Mn(II) complexes that shield repair proteins from oxidative damage.", "edge_id": "edge-7", "evidence": [{"notes": "Elevated Mn/Fe ratio underlies Mn-antioxidant protection of the proteome during irradiation.", "reference": "DOI:10.1101/cshperspect.a012765"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "high intracellular Mn/Fe ratio", "target": "manganese-mediated oxidative-damage protection"}], "graph_id": "ionizing_radiation_tolerance_dsb_repair", "issues": [], "nodes": [{"color": "#f3f4f6", "description": "Single- and double-strand DNA breaks, abasic sites and complex clustered lesions produced by ionizing radiation.", "grounding": null, "id": "dsb_clustered_lesions", "is_orphan": false, "label": "DNA double-strand breaks and clustered lesions", "node_type": "STATE", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Repair of radiation-induced DNA double-strand breaks.", "grounding": "GO:0006302", "id": "dsb_repair", "is_orphan": false, "label": "double-strand break repair", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "High-energy ionizing radiation causing DNA double-strand breaks.", "grounding": null, "id": "gamma_radiation", "is_orphan": false, "label": "gamma radiation", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Survival of high doses of ionizing (gamma) radiation.", "grounding": "traitmech:000008", "id": "ionizing_tolerant_trait", "is_orphan": false, "label": "ionizing radiation tolerant", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Mn(II)-antioxidant shielding of repair proteins from oxidative damage.", "grounding": null, "id": "mn_antioxidant_protection", "is_orphan": false, "label": "manganese-mediated oxidative-damage protection", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Elevated intracellular manganese-to-iron concentration ratio associated with antioxidant proteome protection.", "grounding": null, "id": "mn_fe_ratio", "is_orphan": false, "label": "high intracellular Mn/Fe ratio", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This record is a broad environmental or morphological classification spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement descriptor; contextual protein nodes do not receive token UniProt examples.", "scope_status": "NONMECHANISTIC", "title": "Ionizing-radiation tolerance via double-strand-break repair"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking gamma-radiation exposure to efficient repair of DNA double-strand breaks and Mn-mediated oxidative protection.", "edges": [{"description": "Gamma exposure is the environmental challenge the trait counters.", "evidence": [{"notes": "Deinococcus radiodurans tolerates gamma D10 doses exceeding 12 kGy.", "reference": "DOI:10.3390/genes14091803"}], "id": "edge-1", "is_orphan": false, "predicate": "challenges", "predicate_id": "METPO:2007406", "source": "gamma_radiation", "target": "ionizing_tolerant_trait"}, {"description": "Efficient DSB repair restores chromosomal integrity after ionizing-radiation damage.", "evidence": [{"notes": "D. radiodurans tolerates lethal gamma doses through DSB-repair machinery.", "reference": "DOI:10.3390/genes14091803"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "dsb_repair", "target": "ionizing_tolerant_trait"}, {"description": "Mn-antioxidant proteome protection preserves repair capacity under irradiation.", "evidence": [{"notes": "Intracellular Mn/Fe ratio correlates with bacterial radiation resistance.", "reference": "DOI:10.1101/cshperspect.a012765"}], "id": "edge-3", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "mn_antioxidant_protection", "target": "ionizing_tolerant_trait"}, {"description": "Ionizing radiation produces DNA double- and single-strand breaks and complex clustered lesions.", "evidence": [{"notes": "Ionizing radiation produces single- and double-strand DNA breaks, abasic sites and complex clustered lesions (broad radiobiology, across taxa).", "reference": "DOI:10.1007/978-3-031-18810-7_9"}], "id": "edge-4", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "gamma_radiation", "target": "dsb_clustered_lesions"}, {"description": "Double-strand break repair resolves the clustered DNA lesions inflicted by ionizing radiation.", "evidence": [{"notes": "DSB-repair machinery resolves radiation-induced strand breaks and clustered lesions to restore chromosomal integrity.", "reference": "DOI:10.1007/978-3-031-18810-7_9"}], "id": "edge-5", "is_orphan": false, "predicate": "repairs", "predicate_id": null, "source": "dsb_repair", "target": "dsb_clustered_lesions"}, {"description": "A high intracellular Mn/Fe ratio correlates with antioxidant proteome protection and survival of ionizing radiation.", "evidence": [{"notes": "Strong correlation: radiation-resistant bacteria carry more Mn2+ and ~3x less Fe2+, giving antioxidant protection of the cellular proteome.", "reference": "DOI:10.1101/cshperspect.a012765"}], "id": "edge-6", "is_orphan": false, "predicate": "positively correlates with", "predicate_id": null, "source": "mn_fe_ratio", "target": "ionizing_tolerant_trait"}, {"description": "A high Mn/Fe ratio supplies the Mn(II) complexes that shield repair proteins from oxidative damage.", "evidence": [{"notes": "Elevated Mn/Fe ratio underlies Mn-antioxidant protection of the proteome during irradiation.", "reference": "DOI:10.1101/cshperspect.a012765"}], "id": "edge-7", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "mn_fe_ratio", "target": "mn_antioxidant_protection"}], "evidence_rows": [{"description": "Gamma exposure is the environmental challenge the trait counters.", "edge_id": "edge-1", "evidence": [{"notes": "Deinococcus radiodurans tolerates gamma D10 doses exceeding 12 kGy.", "reference": "DOI:10.3390/genes14091803"}], "predicate": "challenges", "predicate_id": "METPO:2007406", "source": "gamma radiation", "source_grounding": null, "target": "ionizing radiation tolerant", "target_grounding": "traitmech:000008"}, {"description": "Efficient DSB repair restores chromosomal integrity after ionizing-radiation damage.", "edge_id": "edge-2", "evidence": [{"notes": "D. radiodurans tolerates lethal gamma doses through DSB-repair machinery.", "reference": "DOI:10.3390/genes14091803"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "double-strand break repair", "source_grounding": "GO:0006302", "target": "ionizing radiation tolerant", "target_grounding": "traitmech:000008"}, {"description": "Mn-antioxidant proteome protection preserves repair capacity under irradiation.", "edge_id": "edge-3", "evidence": [{"notes": "Intracellular Mn/Fe ratio correlates with bacterial radiation resistance.", "reference": "DOI:10.1101/cshperspect.a012765"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "manganese-mediated oxidative-damage protection", "source_grounding": null, "target": "ionizing radiation tolerant", "target_grounding": "traitmech:000008"}, {"description": "Ionizing radiation produces DNA double- and single-strand breaks and complex clustered lesions.", "edge_id": "edge-4", "evidence": [{"notes": "Ionizing radiation produces single- and double-strand DNA breaks, abasic sites and complex clustered lesions (broad radiobiology, across taxa).", "reference": "DOI:10.1007/978-3-031-18810-7_9"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "gamma radiation", "source_grounding": null, "target": "DNA double-strand breaks and clustered lesions", "target_grounding": null}, {"description": "Double-strand break repair resolves the clustered DNA lesions inflicted by ionizing radiation.", "edge_id": "edge-5", "evidence": [{"notes": "DSB-repair machinery resolves radiation-induced strand breaks and clustered lesions to restore chromosomal integrity.", "reference": "DOI:10.1007/978-3-031-18810-7_9"}], "predicate": "repairs", "predicate_id": null, "source": "double-strand break repair", "source_grounding": "GO:0006302", "target": "DNA double-strand breaks and clustered lesions", "target_grounding": null}, {"description": "A high intracellular Mn/Fe ratio correlates with antioxidant proteome protection and survival of ionizing radiation.", "edge_id": "edge-6", "evidence": [{"notes": "Strong correlation: radiation-resistant bacteria carry more Mn2+ and ~3x less Fe2+, giving antioxidant protection of the cellular proteome.", "reference": "DOI:10.1101/cshperspect.a012765"}], "predicate": "positively correlates with", "predicate_id": null, "source": "high intracellular Mn/Fe ratio", "source_grounding": null, "target": "ionizing radiation tolerant", "target_grounding": "traitmech:000008"}, {"description": "A high Mn/Fe ratio supplies the Mn(II) complexes that shield repair proteins from oxidative damage.", "edge_id": "edge-7", "evidence": [{"notes": "Elevated Mn/Fe ratio underlies Mn-antioxidant protection of the proteome during irradiation.", "reference": "DOI:10.1101/cshperspect.a012765"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "high intracellular Mn/Fe ratio", "source_grounding": null, "target": "manganese-mediated oxidative-damage protection", "target_grounding": null}], "graph_id": "ionizing_radiation_tolerance_dsb_repair", "issues": [], "nodes": [{"color": "#f3f4f6", "description": "Single- and double-strand DNA breaks, abasic sites and complex clustered lesions produced by ionizing radiation.", "grounding": null, "id": "dsb_clustered_lesions", "is_orphan": false, "label": "DNA double-strand breaks and clustered lesions", "node_type": "STATE", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Repair of radiation-induced DNA double-strand breaks.", "grounding": "GO:0006302", "id": "dsb_repair", "is_orphan": false, "label": "double-strand break repair", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "High-energy ionizing radiation causing DNA double-strand breaks.", "grounding": null, "id": "gamma_radiation", "is_orphan": false, "label": "gamma radiation", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Survival of high doses of ionizing (gamma) radiation.", "grounding": "traitmech:000008", "id": "ionizing_tolerant_trait", "is_orphan": false, "label": "ionizing radiation tolerant", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Mn(II)-antioxidant shielding of repair proteins from oxidative damage.", "grounding": null, "id": "mn_antioxidant_protection", "is_orphan": false, "label": "manganese-mediated oxidative-damage protection", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Elevated intracellular manganese-to-iron concentration ratio associated with antioxidant proteome protection.", "grounding": null, "id": "mn_fe_ratio", "is_orphan": false, "label": "high intracellular Mn/Fe ratio", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This record is a broad environmental or morphological classification spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement descriptor; contextual protein nodes do not receive token UniProt examples.", "scope_status": "NONMECHANISTIC", "title": "Ionizing-radiation tolerance via double-strand-break repair"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -872,13 +897,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-08-26 03:23 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

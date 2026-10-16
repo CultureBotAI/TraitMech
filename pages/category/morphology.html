@@ -13,7 +13,12 @@
     <nav>
       <a href="../index.html">Home</a>
       <a href="../browse.html">Browse</a>
+      <a href="../map.html">Text map</a>
+      <a href="../sequence-map.html">Sequence map (pLM)</a>
       <a href="../umap.html">Embedding space</a>
+      <a href="../graph.html">Graph layout</a>
+      <a href="../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -26,10 +31,37 @@
   <h1>Morphology <span class="meta">(129)</span></h1>
 </header>
 
+<div class="browse-layout">
+<aside id="facet-sidebar" class="facet-sidebar" aria-label="Filter traits">
+  <h2>Filter records</h2>
+  <div class="facet-group">
+    <div class="facet-group-title">Category</div>
+    <div class="facet-options">
+      <button type="button" class="facet-btn active" data-facet="category" data-val=""><span>All categories</span><span class="facet-count">129</span></button>
+
+      <button type="button" class="facet-btn" data-facet="category" data-val="MORPHOLOGY"><span>MORPHOLOGY</span><span class="facet-count">129</span></button>
+
+    </div>
+  </div>
+  <div class="facet-group">
+    <div class="facet-group-title">Term kind</div>
+    <div class="facet-options">
+      <button type="button" class="facet-btn active" data-facet="kind" data-val=""><span>All kinds</span><span class="facet-count">129</span></button>
+
+
+      <button type="button" class="facet-btn" data-facet="kind" data-val="CLASS"><span>CLASS</span><span class="facet-count">129</span></button>
+
+
+    </div>
+  </div>
+  <button type="button" id="facet-clear-btn" class="facet-clear">Clear all filters</button>
+</aside>
+<div class="browse-main">
 <form id="record-filters" class="record-filters" hidden>
-  <div><label for="record-query">Search records</label><input id="record-query" type="search" placeholder="Label, identifier, definition…"></div>
+  <div class="record-query-wrap"><label for="record-query">Search records</label><input id="record-query" type="search" placeholder="Search by label, METPO CURIE, synonym, or definition…"></div>
   <div><label for="record-category">Category</label><select id="record-category"><option value="">All categories</option><option value="MORPHOLOGY">MORPHOLOGY</option></select></div>
   <div><label for="record-kind">Kind</label><select id="record-kind"><option value="">All kinds</option><option value="CLASS">CLASS</option></select></div>
+  <div><label for="record-sort">Sort by</label><select id="record-sort" name="sort"><option value="label-asc">Label (A–Z)</option><option value="label-desc">Label (Z–A)</option><option value="id-asc">Identifier (A–Z)</option><option value="category">Category</option><option value="kind">Kind</option><option value="kgm-desc">kg-microbe nodes (high–low)</option><option value="synonyms-desc">Synonyms (high–low)</option></select></div>
   <button type="reset">Clear filters</button>
 </form>
 <p id="record-count" role="status" aria-live="polite">129 records</p>
@@ -42,7 +74,7 @@
 
 <tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms="surface layer"><td><a href="../traits/morphology/s_layer.html">S-layer</a><p class="record-definition">A morphology trait in which the cell surface is coated by a crystalline, two-dimensional array of self-assembling proteinaceous (glyco)protein subunits (a surface layer), found in many bacteria and most archaea.</p></td><td><code>traitmech:000064</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>1</td><td>1</td></tr>
 
-<tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/morphology/akinete.html">akinete</a><p class="record-definition">A morphology trait in which a filamentous cyanobacterium differentiates enlarged, thick-coated, spore-like dormant cells called akinetes that can germinate into vegetative cells.</p></td><td><code>traitmech:000185</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>0</td><td>0</td></tr>
+<tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/morphology/akinete.html">akinete</a><p class="record-definition">A morphology trait in which a filamentous cyanobacterium differentiates enlarged, thick-coated, spore-like dormant cells called akinetes that can germinate into vegetative cells.</p></td><td><code>traitmech:000185</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>1</td><td>0</td></tr>
 
 <tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/morphology/amphitrichous.html">amphitrichous</a><p class="record-definition">A flagellar arrangement with flagella (single filaments or tufts) at both poles of the cell.</p></td><td><code>traitmech:000059</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>1</td><td>0</td></tr>
 
@@ -50,7 +82,7 @@
 
 <tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms="bacillus"><td><a href="../traits/morphology/bacillus_shaped.html">bacillus shaped</a><p class="record-definition">A cell shape characterized by an elongated, rod cylindrical morphology with relatively parallel sides and rounded ends.</p></td><td><code>METPO:1000667</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>1</td><td>1</td></tr>
 
-<tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/morphology/baeocyte_formation.html">baeocyte formation</a><p class="record-definition">A morphological phenotype in which a cyanobacterium forms small reproductive cells called baeocytes by multiple fission within a mother cell.</p></td><td><code>traitmech:000672</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>0</td><td>0</td></tr>
+<tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/morphology/baeocyte_formation.html">baeocyte formation</a><p class="record-definition">A morphological phenotype in which a cyanobacterium forms small reproductive cells called baeocytes by multiple fission within a mother cell.</p></td><td><code>traitmech:000672</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>1</td><td>0</td></tr>
 
 <tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms="Pigment_black"><td><a href="../traits/morphology/black_pigmented.html">black pigmented</a><p class="record-definition">A pigmentation phenotype in which microbial colonies or cells appear black or very dark due to accumulation of dark pigments such as melanins.</p></td><td><code>METPO:1003022</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>1</td><td>1</td></tr>
 
@@ -90,7 +122,7 @@
 
 <tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms="coccus coccus-shaped"><td><a href="../traits/morphology/coccus_shaped.html">coccus shaped</a><p class="record-definition">A cell shape in which an organism has a spherical or nearly spherical morphology, with roughly equal dimensions in all directions.</p></td><td><code>METPO:1000668</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>1</td><td>2</td></tr>
 
-<tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/morphology/coenobium_formation.html">coenobium formation</a><p class="record-definition">A morphological phenotype in which an alga forms clonal multicellular colonies whose cell complement is established during colony formation, with subsequent colony growth by cell enlargement rather than addition of cells.</p></td><td><code>traitmech:000655</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>0</td><td>0</td></tr>
+<tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/morphology/coenobium_formation.html">coenobium formation</a><p class="record-definition">A morphological phenotype in which an alga forms clonal multicellular colonies whose cell complement is established during colony formation, with subsequent colony growth by cell enlargement rather than addition of cells.</p></td><td><code>traitmech:000655</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>1</td><td>0</td></tr>
 
 <tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms="Pigment_cream"><td><a href="../traits/morphology/cream_pigmented.html">cream pigmented</a><p class="record-definition">A pigmentation phenotype in which colony or cell coloration is a pale, off-white or cream hue, typically reflecting low-density carotenoid or other light-absorbing pigments.</p></td><td><code>METPO:1003024</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>1</td><td>1</td></tr>
 
@@ -98,11 +130,11 @@
 
 <tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms="S_curved_spiral curved-shaped"><td><a href="../traits/morphology/curved_shaped.html">curved shaped</a><p class="record-definition">A cell shape in which an organism has a bent or curved cell body rather than a straight rod or sphere.</p></td><td><code>METPO:1000670</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>1</td><td>2</td></tr>
 
-<tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/morphology/false_branching.html">cyanobacterial false branching</a><p class="record-definition">A morphological phenotype in which a filamentous cyanobacterium forms an apparent branch by trichome-bundle partitioning or lateral trichome protrusion without generating a branch-point cell connecting at least three neighboring cells at that junction.</p></td><td><code>traitmech:000675</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>0</td><td>0</td></tr>
+<tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/morphology/false_branching.html">cyanobacterial false branching</a><p class="record-definition">A morphological phenotype in which a filamentous cyanobacterium forms an apparent branch by trichome-bundle partitioning or lateral trichome protrusion without generating a branch-point cell connecting at least three neighboring cells at that junction.</p></td><td><code>traitmech:000675</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>1</td><td>0</td></tr>
 
-<tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/morphology/cyanobacterial_multiseriate_trichome_formation.html">cyanobacterial multiseriate trichome formation</a><p class="record-definition">A morphological phenotype in which a cyanobacterium develops a trichome containing more than one adjacent row of cells through cell division in multiple planes.</p></td><td><code>traitmech:000676</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>0</td><td>0</td></tr>
+<tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/morphology/cyanobacterial_multiseriate_trichome_formation.html">cyanobacterial multiseriate trichome formation</a><p class="record-definition">A morphological phenotype in which a cyanobacterium develops a trichome containing more than one adjacent row of cells through cell division in multiple planes.</p></td><td><code>traitmech:000676</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>1</td><td>0</td></tr>
 
-<tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/morphology/cyanophycin_granule.html">cyanophycin granule</a><p class="record-definition">An intracellular storage inclusion composed of cyanophycin, a nonribosomal arginine- and aspartate-rich polymer serving as a nitrogen reserve.</p></td><td><code>traitmech:000673</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>0</td><td>0</td></tr>
+<tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/morphology/cyanophycin_granule.html">cyanophycin granule</a><p class="record-definition">An intracellular storage inclusion composed of cyanophycin, a nonribosomal arginine- and aspartate-rich polymer serving as a nitrogen reserve.</p></td><td><code>traitmech:000673</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>1</td><td>0</td></tr>
 
 <tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms="diplococcus-shaped"><td><a href="../traits/morphology/diplococcus_shaped.html">diplococcus shaped</a><p class="record-definition">A cell shape in which spherical cells remain attached in pairs following cell division, forming characteristic doublets.</p></td><td><code>METPO:1000671</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>1</td><td>1</td></tr>
 
@@ -112,9 +144,9 @@
 
 <tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/morphology/ellipsoidal.html">ellipsoidal</a><p class="record-definition">A cell shape in which an organism has an oval or ellipse morphology, elongated along one axis with rounded ends, intermediate between spherical and rod-shaped.</p></td><td><code>METPO:1000673</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>1</td><td>0</td></tr>
 
-<tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/morphology/expansion_driven_sliding_motility.html">expansion-driven sliding motility</a><p class="record-definition">A phenotype in which a microbial population spreads across a supporting surface through passive displacement of cells by expansive forces generated within the colony, without active locomotory propulsion of the displaced cells.</p></td><td><code>traitmech:000703</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>0</td><td>0</td></tr>
+<tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/morphology/expansion_driven_sliding_motility.html">expansion-driven sliding motility</a><p class="record-definition">A phenotype in which a microbial population spreads across a supporting surface through passive displacement of cells by expansive forces generated within the colony, without active locomotory propulsion of the displaced cells.</p></td><td><code>traitmech:000703</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>1</td><td>0</td></tr>
 
-<tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/morphology/ferrosome.html">ferrosome</a><p class="record-definition">A morphology trait in which a bacterial cell forms membrane-bound ferrosome organelles that store intracellular iron as non-crystalline iron phosphate biomineral.</p></td><td><code>traitmech:000527</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>0</td><td>0</td></tr>
+<tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/morphology/ferrosome.html">ferrosome</a><p class="record-definition">A morphology trait in which a bacterial cell forms membrane-bound ferrosome organelles that store intracellular iron as non-crystalline iron phosphate biomineral.</p></td><td><code>traitmech:000527</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>1</td><td>0</td></tr>
 
 <tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms="S_filament filament filament-shaped"><td><a href="../traits/morphology/filament_shaped.html">filament shaped</a><p class="record-definition">A cell shape in which an organism grows as elongated filamentous cells or hypha-like structures.</p></td><td><code>METPO:1000674</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>1</td><td>3</td></tr>
 
@@ -124,43 +156,43 @@
 
 <tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms="flask flask-shaped"><td><a href="../traits/morphology/flask_shaped.html">flask shaped</a><p class="record-definition">A cell shape in which an organism has a bulbous body with a narrower neck-like extension at one pole.</p></td><td><code>METPO:1000675</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>1</td><td>2</td></tr>
 
-<tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/morphology/fungal_hartig_net_formation.html">fungal Hartig net formation</a><p class="record-definition">A morphological phenotype in which a fungus forms an intercellular hyphal network, called a Hartig net, within a plant root.</p></td><td><code>traitmech:000667</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>0</td><td>0</td></tr>
+<tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/morphology/fungal_hartig_net_formation.html">fungal Hartig net formation</a><p class="record-definition">A morphological phenotype in which a fungus forms an intercellular hyphal network, called a Hartig net, within a plant root.</p></td><td><code>traitmech:000667</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>1</td><td>0</td></tr>
 
-<tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/morphology/fungal_adhesive_column_trap_formation.html">fungal adhesive-column trap formation</a><p class="record-definition">A morphological phenotype in which a fungus forms columns of serially arranged hyphal cells with adhesive surfaces that serve as nematode traps.</p></td><td><code>traitmech:000681</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>0</td><td>0</td></tr>
+<tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/morphology/fungal_adhesive_column_trap_formation.html">fungal adhesive-column trap formation</a><p class="record-definition">A morphological phenotype in which a fungus forms columns of serially arranged hyphal cells with adhesive surfaces that serve as nematode traps.</p></td><td><code>traitmech:000681</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>1</td><td>0</td></tr>
 
-<tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/morphology/fungal_adhesive_knob_trap_formation.html">fungal adhesive-knob trap formation</a><p class="record-definition">A morphological phenotype in which a fungus forms unicellular knobs at hyphal apices that serve as adhesive nematode traps.</p></td><td><code>traitmech:000679</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>0</td><td>0</td></tr>
+<tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/morphology/fungal_adhesive_knob_trap_formation.html">fungal adhesive-knob trap formation</a><p class="record-definition">A morphological phenotype in which a fungus forms unicellular knobs at hyphal apices that serve as adhesive nematode traps.</p></td><td><code>traitmech:000679</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>1</td><td>0</td></tr>
 
-<tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/morphology/fungal_adhesive_net_trap_formation.html">fungal adhesive-net trap formation</a><p class="record-definition">A morphological phenotype in which a fungus forms three-dimensional networks of interconnected hyphal loops that serve as adhesive nematode traps.</p></td><td><code>traitmech:000678</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>0</td><td>0</td></tr>
+<tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/morphology/fungal_adhesive_net_trap_formation.html">fungal adhesive-net trap formation</a><p class="record-definition">A morphological phenotype in which a fungus forms three-dimensional networks of interconnected hyphal loops that serve as adhesive nematode traps.</p></td><td><code>traitmech:000678</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>1</td><td>0</td></tr>
 
-<tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/morphology/fungal_appressorium_formation.html">fungal appressorium formation</a><p class="record-definition">A morphological phenotype in which a fungus forms specialized surface-associated penetration structures called appressoria.</p></td><td><code>traitmech:000659</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>0</td><td>0</td></tr>
+<tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/morphology/fungal_appressorium_formation.html">fungal appressorium formation</a><p class="record-definition">A morphological phenotype in which a fungus forms specialized surface-associated penetration structures called appressoria.</p></td><td><code>traitmech:000659</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>1</td><td>0</td></tr>
 
-<tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/morphology/fungal_arbuscule_formation.html">fungal arbuscule formation</a><p class="record-definition">A morphological phenotype in which a fungus forms highly branched hyphal structures, called arbuscules, within living plant cells during arbuscular mycorrhizal symbiosis.</p></td><td><code>traitmech:000664</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>0</td><td>0</td></tr>
+<tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/morphology/fungal_arbuscule_formation.html">fungal arbuscule formation</a><p class="record-definition">A morphological phenotype in which a fungus forms highly branched hyphal structures, called arbuscules, within living plant cells during arbuscular mycorrhizal symbiosis.</p></td><td><code>traitmech:000664</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>1</td><td>0</td></tr>
 
-<tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/morphology/fungal_auxiliary_cell_formation.html">fungal auxiliary cell formation</a><p class="record-definition">A morphological phenotype in which an arbuscular mycorrhizal fungus forms auxiliary cells, typically clustered hyphal swellings, on mycelium outside plant tissue.</p></td><td><code>traitmech:000671</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>0</td><td>0</td></tr>
+<tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/morphology/fungal_auxiliary_cell_formation.html">fungal auxiliary cell formation</a><p class="record-definition">A morphological phenotype in which an arbuscular mycorrhizal fungus forms auxiliary cells, typically clustered hyphal swellings, on mycelium outside plant tissue.</p></td><td><code>traitmech:000671</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>1</td><td>0</td></tr>
 
-<tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/morphology/fungal_branched_absorbing_structure_formation.html">fungal branched absorbing structure formation</a><p class="record-definition">A morphological phenotype in which an arbuscular mycorrhizal fungus forms localized, dichotomously branched groups of progressively finer hyphae, called branched absorbing structures, on its extraradical runner hyphae.</p></td><td><code>traitmech:000665</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>0</td><td>0</td></tr>
+<tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/morphology/fungal_branched_absorbing_structure_formation.html">fungal branched absorbing structure formation</a><p class="record-definition">A morphological phenotype in which an arbuscular mycorrhizal fungus forms localized, dichotomously branched groups of progressively finer hyphae, called branched absorbing structures, on its extraradical runner hyphae.</p></td><td><code>traitmech:000665</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>1</td><td>0</td></tr>
 
-<tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/morphology/fungal_chlamydospore_formation.html">fungal chlamydospore formation</a><p class="record-definition">A morphological phenotype in which a fungus forms enlarged, thick-walled cells called chlamydospores.</p></td><td><code>traitmech:000658</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>0</td><td>0</td></tr>
+<tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/morphology/fungal_chlamydospore_formation.html">fungal chlamydospore formation</a><p class="record-definition">A morphological phenotype in which a fungus forms enlarged, thick-walled cells called chlamydospores.</p></td><td><code>traitmech:000658</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>1</td><td>0</td></tr>
 
-<tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/morphology/fungal_conidiation.html">fungal conidiation</a><p class="record-definition">A reproductive phenotype in which a fungus produces nonmotile asexual propagules called conidia through outgrowth from conidiogenous cells or conversion of pre-existing hyphal cells.</p></td><td><code>traitmech:000657</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>0</td><td>0</td></tr>
+<tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/morphology/fungal_conidiation.html">fungal conidiation</a><p class="record-definition">A reproductive phenotype in which a fungus produces nonmotile asexual propagules called conidia through outgrowth from conidiogenous cells or conversion of pre-existing hyphal cells.</p></td><td><code>traitmech:000657</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>1</td><td>0</td></tr>
 
-<tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/morphology/fungal_constricting_ring_formation.html">fungal constricting-ring trap formation</a><p class="record-definition">A morphological phenotype in which a fungus forms three-celled hyphal ring traps whose mature ring cells inflate inward to mechanically capture nematodes.</p></td><td><code>traitmech:000677</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>0</td><td>0</td></tr>
+<tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/morphology/fungal_constricting_ring_formation.html">fungal constricting-ring trap formation</a><p class="record-definition">A morphological phenotype in which a fungus forms three-celled hyphal ring traps whose mature ring cells inflate inward to mechanically capture nematodes.</p></td><td><code>traitmech:000677</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>1</td><td>0</td></tr>
 
-<tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/morphology/fungal_internal_mycorrhizal_vesicle_formation.html">fungal internal mycorrhizal vesicle formation</a><p class="record-definition">A morphological phenotype in which a fungus forms lipid-storage hyphal swellings, called internal vesicles, within plant tissue during arbuscular mycorrhizal colonization.</p></td><td><code>traitmech:000670</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>0</td><td>0</td></tr>
+<tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/morphology/fungal_internal_mycorrhizal_vesicle_formation.html">fungal internal mycorrhizal vesicle formation</a><p class="record-definition">A morphological phenotype in which a fungus forms lipid-storage hyphal swellings, called internal vesicles, within plant tissue during arbuscular mycorrhizal colonization.</p></td><td><code>traitmech:000670</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>1</td><td>0</td></tr>
 
-<tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/morphology/fungal_mycelial_cord_formation.html">fungal mycelial cord formation</a><p class="record-definition">A morphological phenotype in which a fungus forms linear multihyphal cords by aggregation behind an extending margin of diffuse hyphae.</p></td><td><code>traitmech:000669</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>0</td><td>0</td></tr>
+<tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/morphology/fungal_mycelial_cord_formation.html">fungal mycelial cord formation</a><p class="record-definition">A morphological phenotype in which a fungus forms linear multihyphal cords by aggregation behind an extending margin of diffuse hyphae.</p></td><td><code>traitmech:000669</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>1</td><td>0</td></tr>
 
-<tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/morphology/fungal_nematode_trap_formation.html">fungal nematode-trap formation</a><p class="record-definition">A morphological phenotype in which a fungus differentiates hyphae into specialized nematode-capturing structures.</p></td><td><code>traitmech:000718</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>0</td><td>0</td></tr>
+<tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/morphology/fungal_nematode_trap_formation.html">fungal nematode-trap formation</a><p class="record-definition">A morphological phenotype in which a fungus differentiates hyphae into specialized nematode-capturing structures.</p></td><td><code>traitmech:000718</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>1</td><td>0</td></tr>
 
-<tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/morphology/fungal_nonconstricting_ring_trap_formation.html">fungal nonconstricting-ring trap formation</a><p class="record-definition">A morphological phenotype in which a fungus forms stalked, three-celled hyphal rings that trap nematodes without inward inflation of the ring cells.</p></td><td><code>traitmech:000680</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>0</td><td>0</td></tr>
+<tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/morphology/fungal_nonconstricting_ring_trap_formation.html">fungal nonconstricting-ring trap formation</a><p class="record-definition">A morphological phenotype in which a fungus forms stalked, three-celled hyphal rings that trap nematodes without inward inflation of the ring cells.</p></td><td><code>traitmech:000680</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>1</td><td>0</td></tr>
 
-<tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/morphology/fungal_peloton_formation.html">fungal peloton formation</a><p class="record-definition">A morphological phenotype in which a fungus forms intracellular coiled hyphal masses, called pelotons, in association with a plant host.</p></td><td><code>traitmech:000666</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>0</td><td>0</td></tr>
+<tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/morphology/fungal_peloton_formation.html">fungal peloton formation</a><p class="record-definition">A morphological phenotype in which a fungus forms intracellular coiled hyphal masses, called pelotons, in association with a plant host.</p></td><td><code>traitmech:000666</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>1</td><td>0</td></tr>
 
-<tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/morphology/fungal_rhizomorph_formation.html">fungal rhizomorph formation</a><p class="record-definition">A morphological phenotype in which a fungus forms root-like, multihyphal structures through coordinated hyphal growth.</p></td><td><code>traitmech:000662</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>0</td><td>0</td></tr>
+<tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/morphology/fungal_rhizomorph_formation.html">fungal rhizomorph formation</a><p class="record-definition">A morphological phenotype in which a fungus forms root-like, multihyphal structures through coordinated hyphal growth.</p></td><td><code>traitmech:000662</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>1</td><td>0</td></tr>
 
-<tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/morphology/fungal_root_mantle_formation.html">fungal root mantle formation</a><p class="record-definition">A morphological phenotype in which a fungus forms an external sheath of aggregated hyphae, called a mantle, around a plant root.</p></td><td><code>traitmech:000668</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>0</td><td>0</td></tr>
+<tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/morphology/fungal_root_mantle_formation.html">fungal root mantle formation</a><p class="record-definition">A morphological phenotype in which a fungus forms an external sheath of aggregated hyphae, called a mantle, around a plant root.</p></td><td><code>traitmech:000668</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>1</td><td>0</td></tr>
 
-<tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/morphology/fungal_sclerotium_formation.html">fungal sclerotium formation</a><p class="record-definition">A morphological phenotype in which a fungus forms compact mycelial resting bodies called sclerotia.</p></td><td><code>traitmech:000660</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>0</td><td>0</td></tr>
+<tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/morphology/fungal_sclerotium_formation.html">fungal sclerotium formation</a><p class="record-definition">A morphological phenotype in which a fungus forms compact mycelial resting bodies called sclerotia.</p></td><td><code>traitmech:000660</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>1</td><td>0</td></tr>
 
 <tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms="fusiform"><td><a href="../traits/morphology/fusiform_shaped.html">fusiform shaped</a><p class="record-definition">A cell shape that is wide in the middle and tapers at both ends.</p></td><td><code>METPO:1000690</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>1</td><td>1</td></tr>
 
@@ -182,21 +214,21 @@
 
 <tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms="heterocyst-forming"><td><a href="../traits/morphology/heterocyst.html">heterocyst</a><p class="record-definition">A morphology trait in which a filamentous cyanobacterium differentiates specialized, thick-walled cells (heterocysts) that create a microoxic interior for oxygen-sensitive nitrogen fixation.</p></td><td><code>traitmech:000073</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>1</td><td>1</td></tr>
 
-<tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms="holdfast adhesin"><td><a href="../traits/morphology/holdfast.html">holdfast</a><p class="record-definition">A morphology trait in which a bacterial cell produces a localized polar adhesive matrix called a holdfast that mediates permanent attachment to surfaces.</p></td><td><code>traitmech:000184</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>0</td><td>1</td></tr>
+<tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms="holdfast adhesin"><td><a href="../traits/morphology/holdfast.html">holdfast</a><p class="record-definition">A morphology trait in which a bacterial cell produces a localized polar adhesive matrix called a holdfast that mediates permanent attachment to surfaces.</p></td><td><code>traitmech:000184</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>1</td><td>1</td></tr>
 
-<tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/morphology/hormogonium_formation.html">hormogonium formation</a><p class="record-definition">A morphological phenotype in which a filamentous cyanobacterium differentiates short, initially heterocyst-free filaments called hormogonia that are distinct from mature vegetative trichomes.</p></td><td><code>traitmech:000651</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>0</td><td>0</td></tr>
+<tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/morphology/hormogonium_formation.html">hormogonium formation</a><p class="record-definition">A morphological phenotype in which a filamentous cyanobacterium differentiates short, initially heterocyst-free filaments called hormogonia that are distinct from mature vegetative trichomes.</p></td><td><code>traitmech:000651</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>1</td><td>0</td></tr>
 
 <tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms="cytoplasmic inclusion"><td><a href="../traits/morphology/intracellular_inclusion.html">intracellular inclusion</a><p class="record-definition">A morphology trait describing a discrete intracellular body — a storage granule, gas-filled structure, or protein-bounded microcompartment/organelle — that compartmentalizes material or function within a prokaryotic cell.</p></td><td><code>traitmech:000066</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>1</td><td>1</td></tr>
 
 <tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms="irregular"><td><a href="../traits/morphology/irregular_shaped.html">irregular shaped</a><p class="record-definition">A cell shape lacking a consistent geometric form across individual cells of a population.</p></td><td><code>METPO:1000691</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>1</td><td>1</td></tr>
 
-<tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/morphology/lateral_flagellation.html">lateral flagellation</a><p class="record-definition">A motility phenotype in which flagella emerge from the lateral side of the cell.</p></td><td><code>METPO:1005036</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>0</td><td>0</td></tr>
+<tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/morphology/lateral_flagellation.html">lateral flagellation</a><p class="record-definition">A motility phenotype in which flagella emerge from the lateral side of the cell.</p></td><td><code>METPO:1005036</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>1</td><td>0</td></tr>
 
 <tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/morphology/lophotrichous.html">lophotrichous</a><p class="record-definition">A flagellar arrangement with a tuft of multiple flagella at one pole of the cell.</p></td><td><code>traitmech:000058</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>1</td><td>0</td></tr>
 
 <tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/morphology/magnetosome.html">magnetosome</a><p class="record-definition">A membrane-bounded intracellular organelle containing a magnetic iron-mineral crystal (magnetite or greigite); chains of magnetosomes allow magnetotactic bacteria to align with and navigate along geomagnetic field lines.</p></td><td><code>traitmech:000071</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>1</td><td>0</td></tr>
 
-<tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/morphology/microbial_haustorium_formation.html">microbial haustorium formation</a><p class="record-definition">A morphological phenotype in which a fungus or oomycete forms specialized hyphal outgrowths, called haustoria, that establish intimate interfaces with living host cells.</p></td><td><code>traitmech:000663</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>0</td><td>0</td></tr>
+<tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/morphology/microbial_haustorium_formation.html">microbial haustorium formation</a><p class="record-definition">A morphological phenotype in which a fungus or oomycete forms specialized hyphal outgrowths, called haustoria, that establish intimate interfaces with living host cells.</p></td><td><code>traitmech:000663</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>1</td><td>0</td></tr>
 
 <tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/morphology/monotrichous.html">monotrichous</a><p class="record-definition">A flagellar arrangement with a single flagellum, typically located at one pole of the cell.</p></td><td><code>traitmech:000057</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>1</td><td>0</td></tr>
 
@@ -206,7 +238,7 @@
 
 <tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms="mycelium-forming hyphal growth"><td><a href="../traits/morphology/mycelial_growth.html">mycelial growth</a><p class="record-definition">A morphology trait in which a bacterium grows as branching, filamentous hyphae that form a mycelium, often with subsequent differentiation into aerial hyphae and spores, as in Streptomyces.</p></td><td><code>traitmech:000074</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>1</td><td>2</td></tr>
 
-<tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/morphology/necridium_formation.html">necridium formation</a><p class="record-definition">A morphological phenotype in which a filamentous cyanobacterium forms degenerating separation cells called necridia whose disintegration permits trichome fragmentation.</p></td><td><code>traitmech:000674</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>0</td><td>0</td></tr>
+<tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/morphology/necridium_formation.html">necridium formation</a><p class="record-definition">A morphological phenotype in which a filamentous cyanobacterium forms degenerating separation cells called necridia whose disintegration permits trichome fragmentation.</p></td><td><code>traitmech:000674</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>1</td><td>0</td></tr>
 
 <tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms="no non-motile"><td><a href="../traits/morphology/non_motile.html">non motile</a><p class="record-definition">A motility in which an organism lacks the ability to move independently under its own power.</p></td><td><code>METPO:1000703</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>1</td><td>2</td></tr>
 
@@ -218,7 +250,7 @@
 
 <tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms="S_ovoid ovoid-shaped"><td><a href="../traits/morphology/ovoid_shaped.html">ovoid shaped</a><p class="record-definition">A cell shape in which an organism has an oval morphology, rounded at both ends with one end often slightly broader than the other.</p></td><td><code>METPO:1000677</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>1</td><td>2</td></tr>
 
-<tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/morphology/palmelloid_formation.html">palmelloid formation</a><p class="record-definition">A morphological phenotype in which algal cells form nonmotile multicellular groups by retention within a mother-cell wall or by adhesion through extracellular gelatinous material.</p></td><td><code>traitmech:000654</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>0</td><td>0</td></tr>
+<tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/morphology/palmelloid_formation.html">palmelloid formation</a><p class="record-definition">A morphological phenotype in which algal cells form nonmotile multicellular groups by retention within a mother-cell wall or by adhesion through extracellular gelatinous material.</p></td><td><code>traitmech:000654</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>1</td><td>0</td></tr>
 
 <tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/morphology/peritrichous.html">peritrichous</a><p class="record-definition">A flagellar arrangement with flagella distributed over the entire cell surface rather than localized to the poles.</p></td><td><code>traitmech:000060</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>1</td><td>0</td></tr>
 
@@ -228,17 +260,17 @@
 
 <tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms="S_star_dumbbell_pleomorphic pleomorphic pleomorphic-shaped"><td><a href="../traits/morphology/pleomorphic_shaped.html">pleomorphic shaped</a><p class="record-definition">A cell shape characterized by variable and irregular morphology, where individual cells within a population exhibit multiple distinct shapes.</p></td><td><code>METPO:1000679</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>1</td><td>3</td></tr>
 
-<tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms="flagellum arrangement"><td><a href="../traits/morphology/polar_flagellation.html">polar flagellation</a><p class="record-definition">A motility phenotype in which one or more flagella are located at one or both poles of the cell.</p></td><td><code>METPO:1005032</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>0</td><td>1</td></tr>
+<tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms="flagellum arrangement"><td><a href="../traits/morphology/polar_flagellation.html">polar flagellation</a><p class="record-definition">A motility phenotype in which one or more flagella are located at one or both poles of the cell.</p></td><td><code>METPO:1005032</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>1</td><td>1</td></tr>
 
 <tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms="PHB granule polyhydroxybutyrate inclusion PHA granule"><td><a href="../traits/morphology/polyhydroxyalkanoate_granule.html">polyhydroxyalkanoate granule</a><p class="record-definition">An intracellular storage inclusion composed of polyhydroxyalkanoate (e.g. polyhydroxybutyrate, PHB), a carbon and energy reserve accumulated as cytoplasmic granules.</p></td><td><code>traitmech:000067</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>1</td><td>3</td></tr>
 
 <tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms="volutin granule metachromatic granule"><td><a href="../traits/morphology/polyphosphate_granule.html">polyphosphate granule</a><p class="record-definition">An intracellular storage inclusion of inorganic polyphosphate (a polymer of many phosphate residues), historically called a volutin or metachromatic granule, serving as a phosphate and energy reserve.</p></td><td><code>traitmech:000068</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>1</td><td>2</td></tr>
 
-<tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms="polytrichous"><td><a href="../traits/morphology/polytrichous_flagellation.html">polytrichous flagellation</a><p class="record-definition">A flagellar arrangement in which multiple flagella (typically a tuft) are present per cell, often combined with polar attachment.</p></td><td><code>METPO:1007006</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>0</td><td>1</td></tr>
+<tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms="polytrichous"><td><a href="../traits/morphology/polytrichous_flagellation.html">polytrichous flagellation</a><p class="record-definition">A flagellar arrangement in which multiple flagella (typically a tuft) are present per cell, often combined with polar attachment.</p></td><td><code>METPO:1007006</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>1</td><td>1</td></tr>
 
 <tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms="stalked prostheca"><td><a href="../traits/morphology/prosthecate.html">prosthecate</a><p class="record-definition">A morphology trait in which the cell bears one or more prosthecae — tubular extensions of the cell envelope (stalks) — that increase nutrient-uptake surface area or mediate attachment, as in Caulobacter.</p></td><td><code>traitmech:000065</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>1</td><td>2</td></tr>
 
-<tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/morphology/pseudohyphal_growth.html">pseudohyphal growth</a><p class="record-definition">A morphological phenotype in which elongated budding yeast cells remain attached in chains with constrictions at the junctions between cells.</p></td><td><code>traitmech:000653</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>0</td><td>0</td></tr>
+<tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/morphology/pseudohyphal_growth.html">pseudohyphal growth</a><p class="record-definition">A morphological phenotype in which elongated budding yeast cells remain attached in chains with constrictions at the junctions between cells.</p></td><td><code>traitmech:000653</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>1</td><td>0</td></tr>
 
 <tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms="Pigment_red"><td><a href="../traits/morphology/red_pigmented.html">red pigmented</a><p class="record-definition">A pigmentation phenotype in which microbial colonies or cells appear red due to production of red pigments such as prodiginines or carotenoids.</p></td><td><code>METPO:1003028</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>1</td><td>1</td></tr>
 
@@ -246,7 +278,7 @@
 
 <tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms="S_rod rod-shaped"><td><a href="../traits/morphology/rod_shaped.html">rod shaped</a><p class="record-definition">A cell shape in which an organism has an elongated, cylindrical morphology with relatively straight sides and rounded or flat ends.</p></td><td><code>METPO:1000681</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>1</td><td>2</td></tr>
 
-<tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/morphology/rosette_cell_arrangement.html">rosette cell arrangement</a><p class="record-definition">A morphological phenotype in which cells form multicellular clusters organized around a shared central region, with corresponding cell poles directed inward.</p></td><td><code>traitmech:000652</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>0</td><td>0</td></tr>
+<tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/morphology/rosette_cell_arrangement.html">rosette cell arrangement</a><p class="record-definition">A morphological phenotype in which cells form multicellular clusters organized around a shared central region, with corresponding cell poles directed inward.</p></td><td><code>traitmech:000652</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>1</td><td>0</td></tr>
 
 <tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms="cubic packet cocci"><td><a href="../traits/morphology/sarcina_arrangement.html">sarcina arrangement</a><p class="record-definition">A cell arrangement in which cocci divide in three perpendicular planes and remain attached as cubic packets of eight (sarcinae).</p></td><td><code>traitmech:000120</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>1</td><td>1</td></tr>
 
@@ -272,15 +304,15 @@
 
 <tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms="chain-forming cocci"><td><a href="../traits/morphology/streptococcus_arrangement.html">streptococcus arrangement</a><p class="record-definition">A cell arrangement in which dividing cocci remain attached in chains because successive division planes are parallel and daughter cells do not fully separate.</p></td><td><code>traitmech:000117</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>1</td><td>1</td></tr>
 
-<tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/morphology/subpolar_flagellation.html">subpolar flagellation</a><p class="record-definition">A motility phenotype in which flagella are located near but not at the cell pole.</p></td><td><code>METPO:1005037</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>0</td><td>0</td></tr>
+<tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/morphology/subpolar_flagellation.html">subpolar flagellation</a><p class="record-definition">A motility phenotype in which flagella are located near but not at the cell pole.</p></td><td><code>METPO:1005037</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>1</td><td>0</td></tr>
 
 <tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms="sulfur inclusion"><td><a href="../traits/morphology/sulfur_globule.html">sulfur globule</a><p class="record-definition">An intracellular (or periplasmic) inclusion of elemental sulfur formed as an intermediate during the oxidation of reduced sulfur compounds, characteristic of many sulfur-oxidizing and phototrophic sulfur bacteria.</p></td><td><code>traitmech:000069</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>1</td><td>1</td></tr>
 
 <tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms="swarming"><td><a href="../traits/morphology/swarming_motility.html">swarming motility</a><p class="record-definition">A flagella-dependent, multicellular surface motility in which cells move rapidly and coordinately across a surface, typically accompanied by hyperflagellation and secretion of a wetting surfactant.</p></td><td><code>traitmech:000062</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>1</td><td>1</td></tr>
 
-<tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/morphology/swimming_motility.html">swimming motility</a><p class="record-definition">A motile phenotype in which an organism propels itself through a liquid medium.</p></td><td><code>traitmech:000702</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>0</td><td>0</td></tr>
+<tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/morphology/swimming_motility.html">swimming motility</a><p class="record-definition">A motile phenotype in which an organism propels itself through a liquid medium.</p></td><td><code>traitmech:000702</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>1</td><td>0</td></tr>
 
-<tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/morphology/synnema_formation.html">synnema formation</a><p class="record-definition">A morphological phenotype in which fungal hyphae aggregate into an erect, stalk-like asexual reproductive structure, with conidiogenous elements borne from the stalk in its fertile form.</p></td><td><code>traitmech:000656</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>0</td><td>0</td></tr>
+<tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/morphology/synnema_formation.html">synnema formation</a><p class="record-definition">A morphological phenotype in which fungal hyphae aggregate into an erect, stalk-like asexual reproductive structure, with conidiogenous elements borne from the stalk in its fertile form.</p></td><td><code>traitmech:000656</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>1</td><td>0</td></tr>
 
 <tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms="tailed"><td><a href="../traits/morphology/tailed_shaped.html">tailed shaped</a><p class="record-definition">A cell shape in which an organism has an elongated polar appendage or stalk extending from the cell body.</p></td><td><code>METPO:1000695</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>1</td><td>1</td></tr>
 
@@ -290,7 +322,7 @@
 
 <tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms="twitching"><td><a href="../traits/morphology/twitching_motility.html">twitching motility</a><p class="record-definition">A flagella-independent surface motility driven by the extension, attachment, and retraction of type IV pili, producing intermittent, jerky translocation of cells across moist surfaces.</p></td><td><code>traitmech:000061</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>1</td><td>1</td></tr>
 
-<tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms="type IV pili T4P"><td><a href="../traits/morphology/type_iv_pilus.html">type IV pilus</a><p class="record-definition">A morphology trait in which a cell produces extracellular type-IV-pilin filaments that dynamically extend from and retract toward the cell surface.</p></td><td><code>traitmech:000175</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>0</td><td>2</td></tr>
+<tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms="type IV pili T4P"><td><a href="../traits/morphology/type_iv_pilus.html">type IV pilus</a><p class="record-definition">A morphology trait in which a cell produces extracellular type-IV-pilin filaments that dynamically extend from and retract toward the cell surface.</p></td><td><code>traitmech:000175</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>1</td><td>2</td></tr>
 
 <tr data-category="MORPHOLOGY" data-kind="CLASS" data-synonyms="vibrio vibrio-shaped"><td><a href="../traits/morphology/vibrio_shaped.html">vibrio shaped</a><p class="record-definition">A cell shape in which an organism has a curved rod or comma morphology, characterized by a short curved cylindrical form with a single arc.</p></td><td><code>METPO:1000686</code></td><td>MORPHOLOGY</td><td>CLASS</td><td>1</td><td>2</td></tr>
 
@@ -300,6 +332,8 @@
 
 </tbody>
 </table>
+</div>
+</div>
 </div>
 <script src="../assets/record-browser.js" defer></script>
 
@@ -315,13 +349,20 @@
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Corpus as of 2026-10-16 01:41 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

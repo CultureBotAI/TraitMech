@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/genomics.html">GENOMICS</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/genomics.html">GENOMICS</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>TgvAB system</h1>
     <p class="curie"><code>traitmech:000412</code> · CLASS · PROPOSED</p>
 
@@ -115,9 +126,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>TgvAB locus</strong>
+
             <span class="edge-predicate">enables</span>
             <strong>TgvAB-dependent type IV restriction</strong>
-            <code>RO:0002327</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002327" rel="nofollow noreferrer"><code>RO:0002327</code></a>
             <p>A TgvAB locus encodes both proteins required for modification-dependent restriction of T-even phage DNA.</p>
             <ul>
 
@@ -156,9 +169,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>TgvAB-dependent type IV restriction</strong>
+
             <span class="edge-predicate">mitigates</span>
             <strong>glucosylated hmC phage DNA</strong>
-            <code>METPO:2007407</code>
+
+            <a href="https://w3id.org/metpo/2007407" rel="nofollow noreferrer"><code>METPO:2007407</code></a>
             <p>TgvAB-dependent type IV restriction targets T-even-like phage DNA bearing glucosylated 5-hydroxymethylcytosine.</p>
             <ul>
 
@@ -173,9 +188,11 @@
 
           <li id="pathograph-1-edge-3">
             <strong>TgvAB-dependent type IV restriction</strong>
+
             <span class="edge-predicate">mitigates</span>
             <strong>T-even-like phage propagation</strong>
-            <code>METPO:2007407</code>
+
+            <a href="https://w3id.org/metpo/2007407" rel="nofollow noreferrer"><code>METPO:2007407</code></a>
             <p>Restriction of hypermodified T-even-like phage DNA inhibits productive phage propagation.</p>
             <ul>
 
@@ -196,9 +213,11 @@
 
           <li id="pathograph-1-edge-4">
             <strong>TgvAB-dependent type IV restriction</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>TgvAB system</strong>
-            <code>METPO:2007700</code>
+            <code>traitmech:000412</code>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>TgvAB-dependent type IV restriction realizes the TgvAB system trait.</p>
             <ul>
 
@@ -225,8 +244,10 @@
 
           <li id="pathograph-1-edge-5">
             <strong>TgvAB system</strong>
+            <code>traitmech:000412</code>
             <span class="edge-predicate">is a</span>
             <strong>restriction-modification system</strong>
+            <code>traitmech:000095</code>
             <code>rdfs:subClassOf</code>
             <p>TgvAB is a GmrSD-related type IV restriction system in the broader restriction-modification family.</p>
             <ul>
@@ -301,11 +322,75 @@
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
 
-      <p class="no-match">No kg-microbe node embedding matched this record
-        in the 2026-04-25 deepwalk.</p>
+      <p class="match-method">Matched <strong>1</strong>
+        kg-microbe node
+        via <em>parent_proxy</em>.</p>
+      <ul class="kgm-nodes">
+
+        <li><code>METPO:1000188</code> <span class="dim-preview">[-0.956, -1.962, -3.148, +1.274, …]</span></li>
+
+      </ul>
+      <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
 
     </div>
 
+
+    <div class="card">
+      <h2>Nearest neighbors in embedding space</h2>
+      <p class="meta">Top-8 cosine-similar METPO traits
+        from the 2026-04-25 deepwalk (512-D).</p>
+      <ul class="nn-list">
+
+        <li>
+          <span class="nn-cat">upper</span>
+          <a href="../../traits/upper/quality.html">quality</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hna_system.html">Hna system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hma_system.html">Hma system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hesat_system.html">Hesat system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_08_system.html">HEC-08 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_07_system.html">HEC-07 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_06_system.html">HEC-06 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_05_system.html">HEC-05 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+      </ul>
+    </div>
 
 
 
@@ -445,6 +530,11 @@
     </dl>
   </div>
 
+
+  <div class="card rail-kgm">
+    <h2>kg-microbe</h2>
+    <p class="meta">1 matching node (parent_proxy)</p>
+  </div>
 
 </aside>
 </div>
@@ -778,7 +868,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Conservative system-level sketch linking a two-gene TgvAB locus to modification-dependent type IV restriction of glucosylated hmC-containing T-even-like phage DNA and TgvAB system possession.", "edges": [{"description": "A TgvAB locus encodes both proteins required for modification-dependent restriction of T-even phage DNA.", "evidence": [{"notes": "Vizzarro et al. define the embedded VPI-2 TgvAB locus as a GmrSD-related type IV restriction system.", "reference": "DOI:10.1128/jb.00145-24", "snippet": "the two genes embedded within the T1RM system encode a novel two-protein modification-dependent restriction system related to the GmrSD family of type IV restriction enzymes"}, {"notes": "Gomez and Waters show that anti-phage activity requires both TgvA and TgvB.", "reference": "DOI:10.1128/jb.00143-24", "snippet": "both TgvA and TgvB are required for defense against T2, T4, and T6"}, {"notes": "The pinned DefenseFinder article registry maps the named TgvAB system to the Vizzarro et al. VPI-2 restriction-systems paper. The pinned rules table (https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv) does not list TgvAB, so the registry and HMM rows support a named system-possession trait rather than complete DefenseFinder detection criteria.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| TgvAB | 10\\.1128/jb\\.00145-24 | Vibrio cholerae pathogenicity island 2 encodes two distinct types of restriction systems |"}, {"notes": "The pinned DefenseFinder HMM inventory records TgvAB__TgvA as a custom TgvAB profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| TgvAB__TgvA                                      |                                                   | TgvAB                  | Custom                  | 200    |"}, {"notes": "The pinned DefenseFinder HMM inventory records TgvAB__TgvB as a custom TgvAB profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| TgvAB__TgvB                                      |                                                   | TgvAB                  | Custom                  | 400    |"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "tgvab_locus", "target": "tgvab_dependent_type_iv_restriction"}, {"description": "TgvAB-dependent type IV restriction targets T-even-like phage DNA bearing glucosylated 5-hydroxymethylcytosine.", "evidence": [{"notes": "Gomez and Waters directly connect the TgvAB system to targeting glucosylated 5-hydroxymethylcytosine during phage defense.", "reference": "DOI:10.1128/jb.00143-24", "snippet": "TgvAB targets phage DNA with glucosylated 5-hydroxymethylcytosine (5hmC) bases"}], "id": "edge-2", "is_orphan": false, "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "tgvab_dependent_type_iv_restriction", "target": "glucosylated_hmc_phage_dna"}, {"description": "Restriction of hypermodified T-even-like phage DNA inhibits productive phage propagation.", "evidence": [{"notes": "Vizzarro et al. support TgvAB anti-phage activity against hypermodified phages.", "reference": "DOI:10.1128/jb.00145-24", "snippet": "potent anti-phage activity against diverse members of the Tevenvirinae"}, {"notes": "Gomez and Waters identify glucosylated 5-hydroxymethylcytosine as the phage-DNA modification targeted by TgvAB.", "reference": "DOI:10.1128/jb.00143-24", "snippet": "TgvAB targets phage DNA with glucosylated 5-hydroxymethylcytosine (5hmC) bases"}], "id": "edge-3", "is_orphan": false, "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "tgvab_dependent_type_iv_restriction", "target": "t_even_like_phage_propagation"}, {"description": "TgvAB-dependent type IV restriction realizes the TgvAB system trait.", "evidence": [{"notes": "Vizzarro et al. frame TgvAB as a type IV restriction system recognizing hypermodified cytosines.", "reference": "DOI:10.1128/jb.00145-24", "snippet": "novel modification-dependent type IV restriction system that recognizes hypermodified cytosines"}, {"notes": "Gomez and Waters report that both encoded TgvAB components are required for anti-phage activity.", "reference": "DOI:10.1128/jb.00143-24", "snippet": "both TgvA and TgvB are required for defense against T2, T4, and T6"}, {"notes": "The pinned DefenseFinder article registry maps the named TgvAB system to the Vizzarro et al. VPI-2 restriction-systems paper. The pinned rules table (https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv) does not list TgvAB, so the registry and HMM rows support a named system-possession trait rather than complete DefenseFinder detection criteria.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| TgvAB | 10\\.1128/jb\\.00145-24 | Vibrio cholerae pathogenicity island 2 encodes two distinct types of restriction systems |"}], "id": "edge-4", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "tgvab_dependent_type_iv_restriction", "target": "tgvab_system_trait"}, {"description": "TgvAB is a GmrSD-related type IV restriction system in the broader restriction-modification family.", "evidence": [{"notes": "Vizzarro et al. place TgvAB among GmrSD-family type IV restriction enzymes.", "reference": "DOI:10.1128/jb.00145-24", "snippet": "the two genes embedded within the T1RM system encode a novel two-protein modification-dependent restriction system related to the GmrSD family of type IV restriction enzymes"}], "id": "edge-5", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "tgvab_system_trait", "target": "restriction_modification_system"}], "evidence_rows": [{"description": "A TgvAB locus encodes both proteins required for modification-dependent restriction of T-even phage DNA.", "edge_id": "edge-1", "evidence": [{"notes": "Vizzarro et al. define the embedded VPI-2 TgvAB locus as a GmrSD-related type IV restriction system.", "reference": "DOI:10.1128/jb.00145-24", "snippet": "the two genes embedded within the T1RM system encode a novel two-protein modification-dependent restriction system related to the GmrSD family of type IV restriction enzymes"}, {"notes": "Gomez and Waters show that anti-phage activity requires both TgvA and TgvB.", "reference": "DOI:10.1128/jb.00143-24", "snippet": "both TgvA and TgvB are required for defense against T2, T4, and T6"}, {"notes": "The pinned DefenseFinder article registry maps the named TgvAB system to the Vizzarro et al. VPI-2 restriction-systems paper. The pinned rules table (https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv) does not list TgvAB, so the registry and HMM rows support a named system-possession trait rather than complete DefenseFinder detection criteria.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| TgvAB | 10\\.1128/jb\\.00145-24 | Vibrio cholerae pathogenicity island 2 encodes two distinct types of restriction systems |"}, {"notes": "The pinned DefenseFinder HMM inventory records TgvAB__TgvA as a custom TgvAB profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| TgvAB__TgvA                                      |                                                   | TgvAB                  | Custom                  | 200    |"}, {"notes": "The pinned DefenseFinder HMM inventory records TgvAB__TgvB as a custom TgvAB profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| TgvAB__TgvB                                      |                                                   | TgvAB                  | Custom                  | 400    |"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "TgvAB locus", "target": "TgvAB-dependent type IV restriction"}, {"description": "TgvAB-dependent type IV restriction targets T-even-like phage DNA bearing glucosylated 5-hydroxymethylcytosine.", "edge_id": "edge-2", "evidence": [{"notes": "Gomez and Waters directly connect the TgvAB system to targeting glucosylated 5-hydroxymethylcytosine during phage defense.", "reference": "DOI:10.1128/jb.00143-24", "snippet": "TgvAB targets phage DNA with glucosylated 5-hydroxymethylcytosine (5hmC) bases"}], "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "TgvAB-dependent type IV restriction", "target": "glucosylated hmC phage DNA"}, {"description": "Restriction of hypermodified T-even-like phage DNA inhibits productive phage propagation.", "edge_id": "edge-3", "evidence": [{"notes": "Vizzarro et al. support TgvAB anti-phage activity against hypermodified phages.", "reference": "DOI:10.1128/jb.00145-24", "snippet": "potent anti-phage activity against diverse members of the Tevenvirinae"}, {"notes": "Gomez and Waters identify glucosylated 5-hydroxymethylcytosine as the phage-DNA modification targeted by TgvAB.", "reference": "DOI:10.1128/jb.00143-24", "snippet": "TgvAB targets phage DNA with glucosylated 5-hydroxymethylcytosine (5hmC) bases"}], "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "TgvAB-dependent type IV restriction", "target": "T-even-like phage propagation"}, {"description": "TgvAB-dependent type IV restriction realizes the TgvAB system trait.", "edge_id": "edge-4", "evidence": [{"notes": "Vizzarro et al. frame TgvAB as a type IV restriction system recognizing hypermodified cytosines.", "reference": "DOI:10.1128/jb.00145-24", "snippet": "novel modification-dependent type IV restriction system that recognizes hypermodified cytosines"}, {"notes": "Gomez and Waters report that both encoded TgvAB components are required for anti-phage activity.", "reference": "DOI:10.1128/jb.00143-24", "snippet": "both TgvA and TgvB are required for defense against T2, T4, and T6"}, {"notes": "The pinned DefenseFinder article registry maps the named TgvAB system to the Vizzarro et al. VPI-2 restriction-systems paper. The pinned rules table (https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv) does not list TgvAB, so the registry and HMM rows support a named system-possession trait rather than complete DefenseFinder detection criteria.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| TgvAB | 10\\.1128/jb\\.00145-24 | Vibrio cholerae pathogenicity island 2 encodes two distinct types of restriction systems |"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "TgvAB-dependent type IV restriction", "target": "TgvAB system"}, {"description": "TgvAB is a GmrSD-related type IV restriction system in the broader restriction-modification family.", "edge_id": "edge-5", "evidence": [{"notes": "Vizzarro et al. place TgvAB among GmrSD-family type IV restriction enzymes.", "reference": "DOI:10.1128/jb.00145-24", "snippet": "the two genes embedded within the T1RM system encode a novel two-protein modification-dependent restriction system related to the GmrSD family of type IV restriction enzymes"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "TgvAB system", "target": "restriction-modification system"}], "graph_id": "tgvab_type_iv_restriction", "issues": [], "nodes": [{"color": "#dcfce7", "description": "T-even-like bacteriophage DNA carrying glucosylated 5-hydroxymethylcytosine modifications.", "grounding": null, "id": "glucosylated_hmc_phage_dna", "is_orphan": false, "label": "glucosylated hmC phage DNA", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a methyltransferase and restriction endonuclease system for self/non-self DNA discrimination.", "grounding": "traitmech:000095", "id": "restriction_modification_system", "is_orphan": false, "label": "restriction-modification system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Productive propagation of T-even-like phages whose genomes carry glucosylated hmC.", "grounding": null, "id": "t_even_like_phage_propagation", "is_orphan": false, "label": "T-even-like phage propagation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Modification-dependent restriction of hypermodified phage DNA by TgvAB.", "grounding": null, "id": "tgvab_dependent_type_iv_restriction", "is_orphan": false, "label": "TgvAB-dependent type IV restriction", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "A two-gene locus encoding TgvA and TgvB GmrSD-related modification-dependent restriction proteins.", "grounding": null, "id": "tgvab_locus", "is_orphan": false, "label": "TgvAB locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded TgvAB modification-dependent restriction system.", "grounding": "traitmech:000412", "id": "tgvab_system_trait", "is_orphan": false, "label": "TgvAB system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "The graph captures TgvAB at VPI-2, T-even-like-phage, and type-IV-restriction level without asserting complete native host breadth, exact TgvA/TgvB subunit stoichiometry, or a DefenseFinder rule-level profile combination.", "scope_status": "NONMECHANISTIC", "title": "TgvAB restricts glucosylated T-even-like phage DNA"}];
+  var graphs = [{"description": "Conservative system-level sketch linking a two-gene TgvAB locus to modification-dependent type IV restriction of glucosylated hmC-containing T-even-like phage DNA and TgvAB system possession.", "edges": [{"description": "A TgvAB locus encodes both proteins required for modification-dependent restriction of T-even phage DNA.", "evidence": [{"notes": "Vizzarro et al. define the embedded VPI-2 TgvAB locus as a GmrSD-related type IV restriction system.", "reference": "DOI:10.1128/jb.00145-24", "snippet": "the two genes embedded within the T1RM system encode a novel two-protein modification-dependent restriction system related to the GmrSD family of type IV restriction enzymes"}, {"notes": "Gomez and Waters show that anti-phage activity requires both TgvA and TgvB.", "reference": "DOI:10.1128/jb.00143-24", "snippet": "both TgvA and TgvB are required for defense against T2, T4, and T6"}, {"notes": "The pinned DefenseFinder article registry maps the named TgvAB system to the Vizzarro et al. VPI-2 restriction-systems paper. The pinned rules table (https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv) does not list TgvAB, so the registry and HMM rows support a named system-possession trait rather than complete DefenseFinder detection criteria.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| TgvAB | 10\\.1128/jb\\.00145-24 | Vibrio cholerae pathogenicity island 2 encodes two distinct types of restriction systems |"}, {"notes": "The pinned DefenseFinder HMM inventory records TgvAB__TgvA as a custom TgvAB profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| TgvAB__TgvA                                      |                                                   | TgvAB                  | Custom                  | 200    |"}, {"notes": "The pinned DefenseFinder HMM inventory records TgvAB__TgvB as a custom TgvAB profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| TgvAB__TgvB                                      |                                                   | TgvAB                  | Custom                  | 400    |"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "tgvab_locus", "target": "tgvab_dependent_type_iv_restriction"}, {"description": "TgvAB-dependent type IV restriction targets T-even-like phage DNA bearing glucosylated 5-hydroxymethylcytosine.", "evidence": [{"notes": "Gomez and Waters directly connect the TgvAB system to targeting glucosylated 5-hydroxymethylcytosine during phage defense.", "reference": "DOI:10.1128/jb.00143-24", "snippet": "TgvAB targets phage DNA with glucosylated 5-hydroxymethylcytosine (5hmC) bases"}], "id": "edge-2", "is_orphan": false, "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "tgvab_dependent_type_iv_restriction", "target": "glucosylated_hmc_phage_dna"}, {"description": "Restriction of hypermodified T-even-like phage DNA inhibits productive phage propagation.", "evidence": [{"notes": "Vizzarro et al. support TgvAB anti-phage activity against hypermodified phages.", "reference": "DOI:10.1128/jb.00145-24", "snippet": "potent anti-phage activity against diverse members of the Tevenvirinae"}, {"notes": "Gomez and Waters identify glucosylated 5-hydroxymethylcytosine as the phage-DNA modification targeted by TgvAB.", "reference": "DOI:10.1128/jb.00143-24", "snippet": "TgvAB targets phage DNA with glucosylated 5-hydroxymethylcytosine (5hmC) bases"}], "id": "edge-3", "is_orphan": false, "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "tgvab_dependent_type_iv_restriction", "target": "t_even_like_phage_propagation"}, {"description": "TgvAB-dependent type IV restriction realizes the TgvAB system trait.", "evidence": [{"notes": "Vizzarro et al. frame TgvAB as a type IV restriction system recognizing hypermodified cytosines.", "reference": "DOI:10.1128/jb.00145-24", "snippet": "novel modification-dependent type IV restriction system that recognizes hypermodified cytosines"}, {"notes": "Gomez and Waters report that both encoded TgvAB components are required for anti-phage activity.", "reference": "DOI:10.1128/jb.00143-24", "snippet": "both TgvA and TgvB are required for defense against T2, T4, and T6"}, {"notes": "The pinned DefenseFinder article registry maps the named TgvAB system to the Vizzarro et al. VPI-2 restriction-systems paper. The pinned rules table (https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv) does not list TgvAB, so the registry and HMM rows support a named system-possession trait rather than complete DefenseFinder detection criteria.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| TgvAB | 10\\.1128/jb\\.00145-24 | Vibrio cholerae pathogenicity island 2 encodes two distinct types of restriction systems |"}], "id": "edge-4", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "tgvab_dependent_type_iv_restriction", "target": "tgvab_system_trait"}, {"description": "TgvAB is a GmrSD-related type IV restriction system in the broader restriction-modification family.", "evidence": [{"notes": "Vizzarro et al. place TgvAB among GmrSD-family type IV restriction enzymes.", "reference": "DOI:10.1128/jb.00145-24", "snippet": "the two genes embedded within the T1RM system encode a novel two-protein modification-dependent restriction system related to the GmrSD family of type IV restriction enzymes"}], "id": "edge-5", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "tgvab_system_trait", "target": "restriction_modification_system"}], "evidence_rows": [{"description": "A TgvAB locus encodes both proteins required for modification-dependent restriction of T-even phage DNA.", "edge_id": "edge-1", "evidence": [{"notes": "Vizzarro et al. define the embedded VPI-2 TgvAB locus as a GmrSD-related type IV restriction system.", "reference": "DOI:10.1128/jb.00145-24", "snippet": "the two genes embedded within the T1RM system encode a novel two-protein modification-dependent restriction system related to the GmrSD family of type IV restriction enzymes"}, {"notes": "Gomez and Waters show that anti-phage activity requires both TgvA and TgvB.", "reference": "DOI:10.1128/jb.00143-24", "snippet": "both TgvA and TgvB are required for defense against T2, T4, and T6"}, {"notes": "The pinned DefenseFinder article registry maps the named TgvAB system to the Vizzarro et al. VPI-2 restriction-systems paper. The pinned rules table (https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv) does not list TgvAB, so the registry and HMM rows support a named system-possession trait rather than complete DefenseFinder detection criteria.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| TgvAB | 10\\.1128/jb\\.00145-24 | Vibrio cholerae pathogenicity island 2 encodes two distinct types of restriction systems |"}, {"notes": "The pinned DefenseFinder HMM inventory records TgvAB__TgvA as a custom TgvAB profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| TgvAB__TgvA                                      |                                                   | TgvAB                  | Custom                  | 200    |"}, {"notes": "The pinned DefenseFinder HMM inventory records TgvAB__TgvB as a custom TgvAB profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| TgvAB__TgvB                                      |                                                   | TgvAB                  | Custom                  | 400    |"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "TgvAB locus", "source_grounding": null, "target": "TgvAB-dependent type IV restriction", "target_grounding": null}, {"description": "TgvAB-dependent type IV restriction targets T-even-like phage DNA bearing glucosylated 5-hydroxymethylcytosine.", "edge_id": "edge-2", "evidence": [{"notes": "Gomez and Waters directly connect the TgvAB system to targeting glucosylated 5-hydroxymethylcytosine during phage defense.", "reference": "DOI:10.1128/jb.00143-24", "snippet": "TgvAB targets phage DNA with glucosylated 5-hydroxymethylcytosine (5hmC) bases"}], "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "TgvAB-dependent type IV restriction", "source_grounding": null, "target": "glucosylated hmC phage DNA", "target_grounding": null}, {"description": "Restriction of hypermodified T-even-like phage DNA inhibits productive phage propagation.", "edge_id": "edge-3", "evidence": [{"notes": "Vizzarro et al. support TgvAB anti-phage activity against hypermodified phages.", "reference": "DOI:10.1128/jb.00145-24", "snippet": "potent anti-phage activity against diverse members of the Tevenvirinae"}, {"notes": "Gomez and Waters identify glucosylated 5-hydroxymethylcytosine as the phage-DNA modification targeted by TgvAB.", "reference": "DOI:10.1128/jb.00143-24", "snippet": "TgvAB targets phage DNA with glucosylated 5-hydroxymethylcytosine (5hmC) bases"}], "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "TgvAB-dependent type IV restriction", "source_grounding": null, "target": "T-even-like phage propagation", "target_grounding": null}, {"description": "TgvAB-dependent type IV restriction realizes the TgvAB system trait.", "edge_id": "edge-4", "evidence": [{"notes": "Vizzarro et al. frame TgvAB as a type IV restriction system recognizing hypermodified cytosines.", "reference": "DOI:10.1128/jb.00145-24", "snippet": "novel modification-dependent type IV restriction system that recognizes hypermodified cytosines"}, {"notes": "Gomez and Waters report that both encoded TgvAB components are required for anti-phage activity.", "reference": "DOI:10.1128/jb.00143-24", "snippet": "both TgvA and TgvB are required for defense against T2, T4, and T6"}, {"notes": "The pinned DefenseFinder article registry maps the named TgvAB system to the Vizzarro et al. VPI-2 restriction-systems paper. The pinned rules table (https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv) does not list TgvAB, so the registry and HMM rows support a named system-possession trait rather than complete DefenseFinder detection criteria.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| TgvAB | 10\\.1128/jb\\.00145-24 | Vibrio cholerae pathogenicity island 2 encodes two distinct types of restriction systems |"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "TgvAB-dependent type IV restriction", "source_grounding": null, "target": "TgvAB system", "target_grounding": "traitmech:000412"}, {"description": "TgvAB is a GmrSD-related type IV restriction system in the broader restriction-modification family.", "edge_id": "edge-5", "evidence": [{"notes": "Vizzarro et al. place TgvAB among GmrSD-family type IV restriction enzymes.", "reference": "DOI:10.1128/jb.00145-24", "snippet": "the two genes embedded within the T1RM system encode a novel two-protein modification-dependent restriction system related to the GmrSD family of type IV restriction enzymes"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "TgvAB system", "source_grounding": "traitmech:000412", "target": "restriction-modification system", "target_grounding": "traitmech:000095"}], "graph_id": "tgvab_type_iv_restriction", "issues": [], "nodes": [{"color": "#dcfce7", "description": "T-even-like bacteriophage DNA carrying glucosylated 5-hydroxymethylcytosine modifications.", "grounding": null, "id": "glucosylated_hmc_phage_dna", "is_orphan": false, "label": "glucosylated hmC phage DNA", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a methyltransferase and restriction endonuclease system for self/non-self DNA discrimination.", "grounding": "traitmech:000095", "id": "restriction_modification_system", "is_orphan": false, "label": "restriction-modification system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Productive propagation of T-even-like phages whose genomes carry glucosylated hmC.", "grounding": null, "id": "t_even_like_phage_propagation", "is_orphan": false, "label": "T-even-like phage propagation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Modification-dependent restriction of hypermodified phage DNA by TgvAB.", "grounding": null, "id": "tgvab_dependent_type_iv_restriction", "is_orphan": false, "label": "TgvAB-dependent type IV restriction", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "A two-gene locus encoding TgvA and TgvB GmrSD-related modification-dependent restriction proteins.", "grounding": null, "id": "tgvab_locus", "is_orphan": false, "label": "TgvAB locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded TgvAB modification-dependent restriction system.", "grounding": "traitmech:000412", "id": "tgvab_system_trait", "is_orphan": false, "label": "TgvAB system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "The graph captures TgvAB at VPI-2, T-even-like-phage, and type-IV-restriction level without asserting complete native host breadth, exact TgvA/TgvB subunit stoichiometry, or a DefenseFinder rule-level profile combination.", "scope_status": "NONMECHANISTIC", "title": "TgvAB restricts glucosylated T-even-like phage DNA"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -798,13 +888,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-09-27 16:50 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/genomics.html">GENOMICS</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/genomics.html">GENOMICS</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>SanaTA system</h1>
     <p class="curie"><code>traitmech:000373</code> · CLASS · PROPOSED</p>
 
@@ -121,9 +132,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>SanaTA locus</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>T7 gene 4.5 mutant resistance</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>A cloned sanaTA toxin-antitoxin system can reduce sensitivity to T7 phages lacking gene 4.5, and DefenseFinder models SanaTA as a two-profile SanaA/SanaT system.</p>
             <ul>
 
@@ -156,9 +169,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>T7 gene 4.5 mutant resistance</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>SanaTA system</strong>
-            <code>METPO:2007700</code>
+            <code>traitmech:000373</code>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>SanaTA-mediated resistance to T7 gene 4.5 mutants realizes the SanaTA system trait.</p>
             <ul>
 
@@ -179,8 +194,10 @@
 
           <li id="pathograph-1-edge-3">
             <strong>SanaTA system</strong>
+            <code>traitmech:000373</code>
             <span class="edge-predicate">is a</span>
             <strong>phage defense system</strong>
+            <code>traitmech:000209</code>
             <code>rdfs:subClassOf</code>
             <p>SanaTA system possession is a phage-defense-system trait.</p>
             <ul>
@@ -263,11 +280,75 @@
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
 
-      <p class="no-match">No kg-microbe node embedding matched this record
-        in the 2026-04-25 deepwalk.</p>
+      <p class="match-method">Matched <strong>1</strong>
+        kg-microbe node
+        via <em>parent_proxy</em>.</p>
+      <ul class="kgm-nodes">
+
+        <li><code>METPO:1000188</code> <span class="dim-preview">[-0.956, -1.962, -3.148, +1.274, …]</span></li>
+
+      </ul>
+      <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
 
     </div>
 
+
+    <div class="card">
+      <h2>Nearest neighbors in embedding space</h2>
+      <p class="meta">Top-8 cosine-similar METPO traits
+        from the 2026-04-25 deepwalk (512-D).</p>
+      <ul class="nn-list">
+
+        <li>
+          <span class="nn-cat">upper</span>
+          <a href="../../traits/upper/quality.html">quality</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hna_system.html">Hna system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hma_system.html">Hma system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hesat_system.html">Hesat system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_08_system.html">HEC-08 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_07_system.html">HEC-07 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_06_system.html">HEC-06 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_05_system.html">HEC-05 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+      </ul>
+    </div>
 
 
 
@@ -392,6 +473,11 @@
     </dl>
   </div>
 
+
+  <div class="card rail-kgm">
+    <h2>kg-microbe</h2>
+    <p class="meta">1 matching node (parent_proxy)</p>
+  </div>
 
 </aside>
 </div>
@@ -725,7 +811,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Conservative system-level sketch linking a DefenseFinder SanaTA locus to resistance against T7 phages lacking gene 4.5 anti-defense activity.", "edges": [{"description": "A cloned sanaTA toxin-antitoxin system can reduce sensitivity to T7 phages lacking gene 4.5, and DefenseFinder models SanaTA as a two-profile SanaA/SanaT system.", "evidence": [{"notes": "Sberro et al. show that SanaTA reduced sensitivity to T7 mutants lacking gene 4.5.", "reference": "PMID:23478446", "snippet": "One of the tested systems, sanaTA, was found to provide E. coli with resistance against T7\u03944.5 and T7\u03944.3\u03944.5\u03944.7, reducing sensitivity to these phage strains by about 3 orders of magnitude"}, {"notes": "The DefenseFinder rules table models SanaTA as a two-profile system requiring SanaTA__SanaA and SanaTA__SanaT.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "SanaTA\tSanaTA\t2\t2\tSanaTA__SanaA, SanaTA__SanaT\t\t\t"}, {"notes": "The DefenseFinder HMM inventory records SanaTA__SanaA under SanaTA.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| SanaTA__SanaA                                    | SanaTA__SanaA                                    | SanaTA                 | Custom                  | 20     |"}, {"notes": "The DefenseFinder HMM inventory records SanaTA__SanaT under SanaTA.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| SanaTA__SanaT                                    | SanaTA__SanaT                                    | SanaTA                 | Custom                  | 20     |"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "sanata_locus", "target": "t7_gene_45_mutant_resistance"}, {"description": "SanaTA-mediated resistance to T7 gene 4.5 mutants realizes the SanaTA system trait.", "evidence": [{"notes": "Sberro et al. frame T7 gene 4.5 as the anti-defense context for SanaTA-mediated abortive infection.", "reference": "PMID:23478446", "snippet": "Since the sanaTA system provides resistance to the T7\u03944.5 mutant phage but not to the WT T7 phage, we hypothesized that the 4.5 gene codes for an anti-defense mechanism that overcomes the abortive infection imposed by the TA system."}, {"notes": "The DefenseFinder article registry maps the named SanaTA system to the Sberro et al. toxin/antitoxin shotgun-cloning paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "SanaTA | 10\\.1016/j\\.molcel\\.2013\\.02\\.002 | Discovery of functional toxin/antitoxin systems in bacteria by shotgun cloning"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "t7_gene_45_mutant_resistance", "target": "sanata_system_trait"}, {"description": "SanaTA system possession is a phage-defense-system trait.", "evidence": [{"notes": "Sberro et al. connect newly discovered toxin-antitoxin modules to phage resistance in T7 infection experiments.", "reference": "DOI:10.1016/j.molcel.2013.02.002", "snippet": "Infection experiments with T7 phage showed that two of the new modules can provide resistance against phage."}, {"notes": "The DefenseFinder article registry maps the named SanaTA system to the Sberro et al. toxin/antitoxin shotgun-cloning paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "SanaTA | 10\\.1016/j\\.molcel\\.2013\\.02\\.002 | Discovery of functional toxin/antitoxin systems in bacteria by shotgun cloning"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "sanata_system_trait", "target": "phage_defense_system"}], "evidence_rows": [{"description": "A cloned sanaTA toxin-antitoxin system can reduce sensitivity to T7 phages lacking gene 4.5, and DefenseFinder models SanaTA as a two-profile SanaA/SanaT system.", "edge_id": "edge-1", "evidence": [{"notes": "Sberro et al. show that SanaTA reduced sensitivity to T7 mutants lacking gene 4.5.", "reference": "PMID:23478446", "snippet": "One of the tested systems, sanaTA, was found to provide E. coli with resistance against T7\u03944.5 and T7\u03944.3\u03944.5\u03944.7, reducing sensitivity to these phage strains by about 3 orders of magnitude"}, {"notes": "The DefenseFinder rules table models SanaTA as a two-profile system requiring SanaTA__SanaA and SanaTA__SanaT.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "SanaTA\tSanaTA\t2\t2\tSanaTA__SanaA, SanaTA__SanaT\t\t\t"}, {"notes": "The DefenseFinder HMM inventory records SanaTA__SanaA under SanaTA.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| SanaTA__SanaA                                    | SanaTA__SanaA                                    | SanaTA                 | Custom                  | 20     |"}, {"notes": "The DefenseFinder HMM inventory records SanaTA__SanaT under SanaTA.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| SanaTA__SanaT                                    | SanaTA__SanaT                                    | SanaTA                 | Custom                  | 20     |"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "SanaTA locus", "target": "T7 gene 4.5 mutant resistance"}, {"description": "SanaTA-mediated resistance to T7 gene 4.5 mutants realizes the SanaTA system trait.", "edge_id": "edge-2", "evidence": [{"notes": "Sberro et al. frame T7 gene 4.5 as the anti-defense context for SanaTA-mediated abortive infection.", "reference": "PMID:23478446", "snippet": "Since the sanaTA system provides resistance to the T7\u03944.5 mutant phage but not to the WT T7 phage, we hypothesized that the 4.5 gene codes for an anti-defense mechanism that overcomes the abortive infection imposed by the TA system."}, {"notes": "The DefenseFinder article registry maps the named SanaTA system to the Sberro et al. toxin/antitoxin shotgun-cloning paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "SanaTA | 10\\.1016/j\\.molcel\\.2013\\.02\\.002 | Discovery of functional toxin/antitoxin systems in bacteria by shotgun cloning"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "T7 gene 4.5 mutant resistance", "target": "SanaTA system"}, {"description": "SanaTA system possession is a phage-defense-system trait.", "edge_id": "edge-3", "evidence": [{"notes": "Sberro et al. connect newly discovered toxin-antitoxin modules to phage resistance in T7 infection experiments.", "reference": "DOI:10.1016/j.molcel.2013.02.002", "snippet": "Infection experiments with T7 phage showed that two of the new modules can provide resistance against phage."}, {"notes": "The DefenseFinder article registry maps the named SanaTA system to the Sberro et al. toxin/antitoxin shotgun-cloning paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "SanaTA | 10\\.1016/j\\.molcel\\.2013\\.02\\.002 | Discovery of functional toxin/antitoxin systems in bacteria by shotgun cloning"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "SanaTA system", "target": "phage defense system"}], "graph_id": "sanata_locus_restricts_t7_mutants", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Possession of one or more genome-encoded immune systems that inhibit bacteriophage infection.", "grounding": "traitmech:000209", "id": "phage_defense_system", "is_orphan": false, "label": "phage defense system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "A sanaTA toxin-antitoxin phage-defense locus represented by the DefenseFinder SanaTA__SanaA and SanaTA__SanaT profiles.", "grounding": null, "id": "sanata_locus", "is_orphan": false, "label": "SanaTA locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded SanaTA phage-defense system.", "grounding": "traitmech:000373", "id": "sanata_system_trait", "is_orphan": false, "label": "SanaTA system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Restriction of T7 phage mutants that lack the gene 4.5 anti-defense activity in a host expressing SanaTA.", "grounding": null, "id": "t7_gene_45_mutant_resistance", "is_orphan": false, "label": "T7 gene 4.5 mutant resistance", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "The graph captures SanaTA as a named two-profile toxin-antitoxin phage-defense system while leaving native host breadth, SanaA and SanaT molecular activities, the exact T7 Gp4.5/Lon interaction sequence, and the extra pinned SanaTA__SanaT_1 HMM row unresolved.", "scope_status": "NONMECHANISTIC", "title": "SanaTA loci restrict T7 gene 4.5 mutants"}];
+  var graphs = [{"description": "Conservative system-level sketch linking a DefenseFinder SanaTA locus to resistance against T7 phages lacking gene 4.5 anti-defense activity.", "edges": [{"description": "A cloned sanaTA toxin-antitoxin system can reduce sensitivity to T7 phages lacking gene 4.5, and DefenseFinder models SanaTA as a two-profile SanaA/SanaT system.", "evidence": [{"notes": "Sberro et al. show that SanaTA reduced sensitivity to T7 mutants lacking gene 4.5.", "reference": "PMID:23478446", "snippet": "One of the tested systems, sanaTA, was found to provide E. coli with resistance against T7\u03944.5 and T7\u03944.3\u03944.5\u03944.7, reducing sensitivity to these phage strains by about 3 orders of magnitude"}, {"notes": "The DefenseFinder rules table models SanaTA as a two-profile system requiring SanaTA__SanaA and SanaTA__SanaT.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "SanaTA\tSanaTA\t2\t2\tSanaTA__SanaA, SanaTA__SanaT\t\t\t"}, {"notes": "The DefenseFinder HMM inventory records SanaTA__SanaA under SanaTA.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| SanaTA__SanaA                                    | SanaTA__SanaA                                    | SanaTA                 | Custom                  | 20     |"}, {"notes": "The DefenseFinder HMM inventory records SanaTA__SanaT under SanaTA.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| SanaTA__SanaT                                    | SanaTA__SanaT                                    | SanaTA                 | Custom                  | 20     |"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "sanata_locus", "target": "t7_gene_45_mutant_resistance"}, {"description": "SanaTA-mediated resistance to T7 gene 4.5 mutants realizes the SanaTA system trait.", "evidence": [{"notes": "Sberro et al. frame T7 gene 4.5 as the anti-defense context for SanaTA-mediated abortive infection.", "reference": "PMID:23478446", "snippet": "Since the sanaTA system provides resistance to the T7\u03944.5 mutant phage but not to the WT T7 phage, we hypothesized that the 4.5 gene codes for an anti-defense mechanism that overcomes the abortive infection imposed by the TA system."}, {"notes": "The DefenseFinder article registry maps the named SanaTA system to the Sberro et al. toxin/antitoxin shotgun-cloning paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "SanaTA | 10\\.1016/j\\.molcel\\.2013\\.02\\.002 | Discovery of functional toxin/antitoxin systems in bacteria by shotgun cloning"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "t7_gene_45_mutant_resistance", "target": "sanata_system_trait"}, {"description": "SanaTA system possession is a phage-defense-system trait.", "evidence": [{"notes": "Sberro et al. connect newly discovered toxin-antitoxin modules to phage resistance in T7 infection experiments.", "reference": "DOI:10.1016/j.molcel.2013.02.002", "snippet": "Infection experiments with T7 phage showed that two of the new modules can provide resistance against phage."}, {"notes": "The DefenseFinder article registry maps the named SanaTA system to the Sberro et al. toxin/antitoxin shotgun-cloning paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "SanaTA | 10\\.1016/j\\.molcel\\.2013\\.02\\.002 | Discovery of functional toxin/antitoxin systems in bacteria by shotgun cloning"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "sanata_system_trait", "target": "phage_defense_system"}], "evidence_rows": [{"description": "A cloned sanaTA toxin-antitoxin system can reduce sensitivity to T7 phages lacking gene 4.5, and DefenseFinder models SanaTA as a two-profile SanaA/SanaT system.", "edge_id": "edge-1", "evidence": [{"notes": "Sberro et al. show that SanaTA reduced sensitivity to T7 mutants lacking gene 4.5.", "reference": "PMID:23478446", "snippet": "One of the tested systems, sanaTA, was found to provide E. coli with resistance against T7\u03944.5 and T7\u03944.3\u03944.5\u03944.7, reducing sensitivity to these phage strains by about 3 orders of magnitude"}, {"notes": "The DefenseFinder rules table models SanaTA as a two-profile system requiring SanaTA__SanaA and SanaTA__SanaT.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "SanaTA\tSanaTA\t2\t2\tSanaTA__SanaA, SanaTA__SanaT\t\t\t"}, {"notes": "The DefenseFinder HMM inventory records SanaTA__SanaA under SanaTA.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| SanaTA__SanaA                                    | SanaTA__SanaA                                    | SanaTA                 | Custom                  | 20     |"}, {"notes": "The DefenseFinder HMM inventory records SanaTA__SanaT under SanaTA.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| SanaTA__SanaT                                    | SanaTA__SanaT                                    | SanaTA                 | Custom                  | 20     |"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "SanaTA locus", "source_grounding": null, "target": "T7 gene 4.5 mutant resistance", "target_grounding": null}, {"description": "SanaTA-mediated resistance to T7 gene 4.5 mutants realizes the SanaTA system trait.", "edge_id": "edge-2", "evidence": [{"notes": "Sberro et al. frame T7 gene 4.5 as the anti-defense context for SanaTA-mediated abortive infection.", "reference": "PMID:23478446", "snippet": "Since the sanaTA system provides resistance to the T7\u03944.5 mutant phage but not to the WT T7 phage, we hypothesized that the 4.5 gene codes for an anti-defense mechanism that overcomes the abortive infection imposed by the TA system."}, {"notes": "The DefenseFinder article registry maps the named SanaTA system to the Sberro et al. toxin/antitoxin shotgun-cloning paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "SanaTA | 10\\.1016/j\\.molcel\\.2013\\.02\\.002 | Discovery of functional toxin/antitoxin systems in bacteria by shotgun cloning"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "T7 gene 4.5 mutant resistance", "source_grounding": null, "target": "SanaTA system", "target_grounding": "traitmech:000373"}, {"description": "SanaTA system possession is a phage-defense-system trait.", "edge_id": "edge-3", "evidence": [{"notes": "Sberro et al. connect newly discovered toxin-antitoxin modules to phage resistance in T7 infection experiments.", "reference": "DOI:10.1016/j.molcel.2013.02.002", "snippet": "Infection experiments with T7 phage showed that two of the new modules can provide resistance against phage."}, {"notes": "The DefenseFinder article registry maps the named SanaTA system to the Sberro et al. toxin/antitoxin shotgun-cloning paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "SanaTA | 10\\.1016/j\\.molcel\\.2013\\.02\\.002 | Discovery of functional toxin/antitoxin systems in bacteria by shotgun cloning"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "SanaTA system", "source_grounding": "traitmech:000373", "target": "phage defense system", "target_grounding": "traitmech:000209"}], "graph_id": "sanata_locus_restricts_t7_mutants", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Possession of one or more genome-encoded immune systems that inhibit bacteriophage infection.", "grounding": "traitmech:000209", "id": "phage_defense_system", "is_orphan": false, "label": "phage defense system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "A sanaTA toxin-antitoxin phage-defense locus represented by the DefenseFinder SanaTA__SanaA and SanaTA__SanaT profiles.", "grounding": null, "id": "sanata_locus", "is_orphan": false, "label": "SanaTA locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded SanaTA phage-defense system.", "grounding": "traitmech:000373", "id": "sanata_system_trait", "is_orphan": false, "label": "SanaTA system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Restriction of T7 phage mutants that lack the gene 4.5 anti-defense activity in a host expressing SanaTA.", "grounding": null, "id": "t7_gene_45_mutant_resistance", "is_orphan": false, "label": "T7 gene 4.5 mutant resistance", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "The graph captures SanaTA as a named two-profile toxin-antitoxin phage-defense system while leaving native host breadth, SanaA and SanaT molecular activities, the exact T7 Gp4.5/Lon interaction sequence, and the extra pinned SanaTA__SanaT_1 HMM row unresolved.", "scope_status": "NONMECHANISTIC", "title": "SanaTA loci restrict T7 gene 4.5 mutants"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -745,13 +831,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-09-25 06:20 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

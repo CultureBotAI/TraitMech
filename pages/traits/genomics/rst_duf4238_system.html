@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/genomics.html">GENOMICS</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/genomics.html">GENOMICS</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>Rst_DUF4238 system</h1>
     <p class="curie"><code>traitmech:000374</code> · CLASS · PROPOSED</p>
 
@@ -121,9 +132,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>Rst_DUF4238 locus</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>T7 phage resistance</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>Rousset et al. linked a cloned one-protein DUF4238 locus to strong T7 resistance, and DefenseFinder models Rst_DUF4238 as a single-profile DUF4238_Pers system.</p>
             <ul>
 
@@ -150,9 +163,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>T7 phage resistance</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>Rst_DUF4238 system</strong>
-            <code>METPO:2007700</code>
+            <code>traitmech:000374</code>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>Strong T7 resistance realizes the Rst_DUF4238 system trait.</p>
             <ul>
 
@@ -173,8 +188,10 @@
 
           <li id="pathograph-1-edge-3">
             <strong>Rst_DUF4238 system</strong>
+            <code>traitmech:000374</code>
             <span class="edge-predicate">is a</span>
             <strong>phage defense system</strong>
+            <code>traitmech:000209</code>
             <code>rdfs:subClassOf</code>
             <p>Rst_DUF4238 system possession is a phage-defense-system trait.</p>
             <ul>
@@ -255,11 +272,75 @@
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
 
-      <p class="no-match">No kg-microbe node embedding matched this record
-        in the 2026-04-25 deepwalk.</p>
+      <p class="match-method">Matched <strong>1</strong>
+        kg-microbe node
+        via <em>parent_proxy</em>.</p>
+      <ul class="kgm-nodes">
+
+        <li><code>METPO:1000188</code> <span class="dim-preview">[-0.956, -1.962, -3.148, +1.274, …]</span></li>
+
+      </ul>
+      <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
 
     </div>
 
+
+    <div class="card">
+      <h2>Nearest neighbors in embedding space</h2>
+      <p class="meta">Top-8 cosine-similar METPO traits
+        from the 2026-04-25 deepwalk (512-D).</p>
+      <ul class="nn-list">
+
+        <li>
+          <span class="nn-cat">upper</span>
+          <a href="../../traits/upper/quality.html">quality</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hna_system.html">Hna system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hma_system.html">Hma system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hesat_system.html">Hesat system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_08_system.html">HEC-08 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_07_system.html">HEC-07 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_06_system.html">HEC-06 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_05_system.html">HEC-05 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+      </ul>
+    </div>
 
 
 
@@ -398,6 +479,11 @@
     </dl>
   </div>
 
+
+  <div class="card rail-kgm">
+    <h2>kg-microbe</h2>
+    <p class="meta">1 matching node (parent_proxy)</p>
+  </div>
 
 </aside>
 </div>
@@ -731,7 +817,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Conservative system-level sketch linking the named Rst_DUF4238 single-gene locus model to strong T7 phage resistance.", "edges": [{"description": "Rousset et al. linked a cloned one-protein DUF4238 locus to strong T7 resistance, and DefenseFinder models Rst_DUF4238 as a single-profile DUF4238_Pers system.", "evidence": [{"notes": "Rousset et al. describe the one-protein DUF4238 candidate from the P2-encoded hotspot and connect it to strong T7 resistance.", "reference": "DOI:10.1016/j.chom.2022.02.018", "snippet": "The first system consists of a single protein with a DUF4238 domain (whose molecular function is currently unknown) that provides strong resistance against T7."}, {"notes": "The DefenseFinder rules table models Rst_DUF4238 as a single-profile system requiring Rst_DUF4238__DUF4238_Pers.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Rst_DUF4238\tRst_DUF4238\t1\t1\tRst_DUF4238__DUF4238_Pers\t\t\t"}, {"notes": "The DefenseFinder HMM inventory records Rst_DUF4238__DUF4238_Pers under Rst_DUF4238.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Rst_DUF4238__DUF4238_Pers                        | Rst_DUF4238__DUF4238_Pers                        | Rst_DUF4238            | Custom                  | 100    |"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "rst_duf4238_locus", "target": "t7_phage_resistance"}, {"description": "Strong T7 resistance realizes the Rst_DUF4238 system trait.", "evidence": [{"notes": "Rousset et al. describe the one-protein DUF4238 candidate from the P2-encoded hotspot and connect it to strong T7 resistance.", "reference": "DOI:10.1016/j.chom.2022.02.018", "snippet": "The first system consists of a single protein with a DUF4238 domain (whose molecular function is currently unknown) that provides strong resistance against T7."}, {"notes": "The pinned DefenseFinder wiki page names Rst_DUF4238 as a single-gene system and links it to strong T7 resistance.", "reference": "https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/rst_duf4238.md", "snippet": "Rst_DUF4238 is a single gene system found in a screen of phage and phage-satellites antiviral hotspots :ref{doi=10.1016/j.chom.2022.02.018}. It was shown to provide *E.coli* with a strong resistance against phage T7."}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "t7_phage_resistance", "target": "rst_duf4238_system_trait"}, {"description": "Rst_DUF4238 system possession is a phage-defense-system trait.", "evidence": [{"notes": "The Figure 5 legend frames the cloned P2-hotspot hits, including the DUF4238 system, as validated defense systems in a replicated phage-resistance heatmap.", "reference": "DOI:10.1016/j.chom.2022.02.018", "snippet": "Phage resistance heatmaps of the validated defense systems show the median fold resistance of three independent replicates against a panel of eight phages"}, {"notes": "The DefenseFinder article registry maps the named Rst_DUF4238 system to the Rousset et al. preprint.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "Rst_DUF4238 | 10\\.1101/2021\\.01\\.21\\.427644 | Prophage-encoded hotspots of bacterial immune systems"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "rst_duf4238_system_trait", "target": "phage_defense_system"}], "evidence_rows": [{"description": "Rousset et al. linked a cloned one-protein DUF4238 locus to strong T7 resistance, and DefenseFinder models Rst_DUF4238 as a single-profile DUF4238_Pers system.", "edge_id": "edge-1", "evidence": [{"notes": "Rousset et al. describe the one-protein DUF4238 candidate from the P2-encoded hotspot and connect it to strong T7 resistance.", "reference": "DOI:10.1016/j.chom.2022.02.018", "snippet": "The first system consists of a single protein with a DUF4238 domain (whose molecular function is currently unknown) that provides strong resistance against T7."}, {"notes": "The DefenseFinder rules table models Rst_DUF4238 as a single-profile system requiring Rst_DUF4238__DUF4238_Pers.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Rst_DUF4238\tRst_DUF4238\t1\t1\tRst_DUF4238__DUF4238_Pers\t\t\t"}, {"notes": "The DefenseFinder HMM inventory records Rst_DUF4238__DUF4238_Pers under Rst_DUF4238.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Rst_DUF4238__DUF4238_Pers                        | Rst_DUF4238__DUF4238_Pers                        | Rst_DUF4238            | Custom                  | 100    |"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Rst_DUF4238 locus", "target": "T7 phage resistance"}, {"description": "Strong T7 resistance realizes the Rst_DUF4238 system trait.", "edge_id": "edge-2", "evidence": [{"notes": "Rousset et al. describe the one-protein DUF4238 candidate from the P2-encoded hotspot and connect it to strong T7 resistance.", "reference": "DOI:10.1016/j.chom.2022.02.018", "snippet": "The first system consists of a single protein with a DUF4238 domain (whose molecular function is currently unknown) that provides strong resistance against T7."}, {"notes": "The pinned DefenseFinder wiki page names Rst_DUF4238 as a single-gene system and links it to strong T7 resistance.", "reference": "https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/rst_duf4238.md", "snippet": "Rst_DUF4238 is a single gene system found in a screen of phage and phage-satellites antiviral hotspots :ref{doi=10.1016/j.chom.2022.02.018}. It was shown to provide *E.coli* with a strong resistance against phage T7."}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "T7 phage resistance", "target": "Rst_DUF4238 system"}, {"description": "Rst_DUF4238 system possession is a phage-defense-system trait.", "edge_id": "edge-3", "evidence": [{"notes": "The Figure 5 legend frames the cloned P2-hotspot hits, including the DUF4238 system, as validated defense systems in a replicated phage-resistance heatmap.", "reference": "DOI:10.1016/j.chom.2022.02.018", "snippet": "Phage resistance heatmaps of the validated defense systems show the median fold resistance of three independent replicates against a panel of eight phages"}, {"notes": "The DefenseFinder article registry maps the named Rst_DUF4238 system to the Rousset et al. preprint.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "Rst_DUF4238 | 10\\.1101/2021\\.01\\.21\\.427644 | Prophage-encoded hotspots of bacterial immune systems"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "Rst_DUF4238 system", "target": "phage defense system"}], "graph_id": "rst_duf4238_locus_restricts_t7", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Possession of one or more genome-encoded immune systems that inhibit bacteriophage infection.", "grounding": "traitmech:000209", "id": "phage_defense_system", "is_orphan": false, "label": "phage defense system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "A single-gene DUF4238 phage-defense locus represented by the custom DefenseFinder Rst_DUF4238__DUF4238_Pers profile.", "grounding": null, "id": "rst_duf4238_locus", "is_orphan": false, "label": "Rst_DUF4238 locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded Rst_DUF4238 phage-defense system.", "grounding": "traitmech:000374", "id": "rst_duf4238_system_trait", "is_orphan": false, "label": "Rst_DUF4238 system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Strong resistance against phage T7 in a host expressing an Rst_DUF4238 locus.", "grounding": null, "id": "t7_phage_resistance", "is_orphan": false, "label": "T7 phage resistance", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "The graph captures Rst_DUF4238 as a named DefenseFinder single-profile phage-defense system while leaving native host breadth, the molecular activity of the DUF4238 component, exact DUF4238_Pers profile grounding, and the mechanism of T7 restriction unresolved.", "scope_status": "NONMECHANISTIC", "title": "Rst_DUF4238 loci restrict T7 phage"}];
+  var graphs = [{"description": "Conservative system-level sketch linking the named Rst_DUF4238 single-gene locus model to strong T7 phage resistance.", "edges": [{"description": "Rousset et al. linked a cloned one-protein DUF4238 locus to strong T7 resistance, and DefenseFinder models Rst_DUF4238 as a single-profile DUF4238_Pers system.", "evidence": [{"notes": "Rousset et al. describe the one-protein DUF4238 candidate from the P2-encoded hotspot and connect it to strong T7 resistance.", "reference": "DOI:10.1016/j.chom.2022.02.018", "snippet": "The first system consists of a single protein with a DUF4238 domain (whose molecular function is currently unknown) that provides strong resistance against T7."}, {"notes": "The DefenseFinder rules table models Rst_DUF4238 as a single-profile system requiring Rst_DUF4238__DUF4238_Pers.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Rst_DUF4238\tRst_DUF4238\t1\t1\tRst_DUF4238__DUF4238_Pers\t\t\t"}, {"notes": "The DefenseFinder HMM inventory records Rst_DUF4238__DUF4238_Pers under Rst_DUF4238.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Rst_DUF4238__DUF4238_Pers                        | Rst_DUF4238__DUF4238_Pers                        | Rst_DUF4238            | Custom                  | 100    |"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "rst_duf4238_locus", "target": "t7_phage_resistance"}, {"description": "Strong T7 resistance realizes the Rst_DUF4238 system trait.", "evidence": [{"notes": "Rousset et al. describe the one-protein DUF4238 candidate from the P2-encoded hotspot and connect it to strong T7 resistance.", "reference": "DOI:10.1016/j.chom.2022.02.018", "snippet": "The first system consists of a single protein with a DUF4238 domain (whose molecular function is currently unknown) that provides strong resistance against T7."}, {"notes": "The pinned DefenseFinder wiki page names Rst_DUF4238 as a single-gene system and links it to strong T7 resistance.", "reference": "https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/rst_duf4238.md", "snippet": "Rst_DUF4238 is a single gene system found in a screen of phage and phage-satellites antiviral hotspots :ref{doi=10.1016/j.chom.2022.02.018}. It was shown to provide *E.coli* with a strong resistance against phage T7."}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "t7_phage_resistance", "target": "rst_duf4238_system_trait"}, {"description": "Rst_DUF4238 system possession is a phage-defense-system trait.", "evidence": [{"notes": "The Figure 5 legend frames the cloned P2-hotspot hits, including the DUF4238 system, as validated defense systems in a replicated phage-resistance heatmap.", "reference": "DOI:10.1016/j.chom.2022.02.018", "snippet": "Phage resistance heatmaps of the validated defense systems show the median fold resistance of three independent replicates against a panel of eight phages"}, {"notes": "The DefenseFinder article registry maps the named Rst_DUF4238 system to the Rousset et al. preprint.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "Rst_DUF4238 | 10\\.1101/2021\\.01\\.21\\.427644 | Prophage-encoded hotspots of bacterial immune systems"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "rst_duf4238_system_trait", "target": "phage_defense_system"}], "evidence_rows": [{"description": "Rousset et al. linked a cloned one-protein DUF4238 locus to strong T7 resistance, and DefenseFinder models Rst_DUF4238 as a single-profile DUF4238_Pers system.", "edge_id": "edge-1", "evidence": [{"notes": "Rousset et al. describe the one-protein DUF4238 candidate from the P2-encoded hotspot and connect it to strong T7 resistance.", "reference": "DOI:10.1016/j.chom.2022.02.018", "snippet": "The first system consists of a single protein with a DUF4238 domain (whose molecular function is currently unknown) that provides strong resistance against T7."}, {"notes": "The DefenseFinder rules table models Rst_DUF4238 as a single-profile system requiring Rst_DUF4238__DUF4238_Pers.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Rst_DUF4238\tRst_DUF4238\t1\t1\tRst_DUF4238__DUF4238_Pers\t\t\t"}, {"notes": "The DefenseFinder HMM inventory records Rst_DUF4238__DUF4238_Pers under Rst_DUF4238.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Rst_DUF4238__DUF4238_Pers                        | Rst_DUF4238__DUF4238_Pers                        | Rst_DUF4238            | Custom                  | 100    |"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Rst_DUF4238 locus", "source_grounding": null, "target": "T7 phage resistance", "target_grounding": null}, {"description": "Strong T7 resistance realizes the Rst_DUF4238 system trait.", "edge_id": "edge-2", "evidence": [{"notes": "Rousset et al. describe the one-protein DUF4238 candidate from the P2-encoded hotspot and connect it to strong T7 resistance.", "reference": "DOI:10.1016/j.chom.2022.02.018", "snippet": "The first system consists of a single protein with a DUF4238 domain (whose molecular function is currently unknown) that provides strong resistance against T7."}, {"notes": "The pinned DefenseFinder wiki page names Rst_DUF4238 as a single-gene system and links it to strong T7 resistance.", "reference": "https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/rst_duf4238.md", "snippet": "Rst_DUF4238 is a single gene system found in a screen of phage and phage-satellites antiviral hotspots :ref{doi=10.1016/j.chom.2022.02.018}. It was shown to provide *E.coli* with a strong resistance against phage T7."}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "T7 phage resistance", "source_grounding": null, "target": "Rst_DUF4238 system", "target_grounding": "traitmech:000374"}, {"description": "Rst_DUF4238 system possession is a phage-defense-system trait.", "edge_id": "edge-3", "evidence": [{"notes": "The Figure 5 legend frames the cloned P2-hotspot hits, including the DUF4238 system, as validated defense systems in a replicated phage-resistance heatmap.", "reference": "DOI:10.1016/j.chom.2022.02.018", "snippet": "Phage resistance heatmaps of the validated defense systems show the median fold resistance of three independent replicates against a panel of eight phages"}, {"notes": "The DefenseFinder article registry maps the named Rst_DUF4238 system to the Rousset et al. preprint.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "Rst_DUF4238 | 10\\.1101/2021\\.01\\.21\\.427644 | Prophage-encoded hotspots of bacterial immune systems"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "Rst_DUF4238 system", "source_grounding": "traitmech:000374", "target": "phage defense system", "target_grounding": "traitmech:000209"}], "graph_id": "rst_duf4238_locus_restricts_t7", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Possession of one or more genome-encoded immune systems that inhibit bacteriophage infection.", "grounding": "traitmech:000209", "id": "phage_defense_system", "is_orphan": false, "label": "phage defense system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "A single-gene DUF4238 phage-defense locus represented by the custom DefenseFinder Rst_DUF4238__DUF4238_Pers profile.", "grounding": null, "id": "rst_duf4238_locus", "is_orphan": false, "label": "Rst_DUF4238 locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded Rst_DUF4238 phage-defense system.", "grounding": "traitmech:000374", "id": "rst_duf4238_system_trait", "is_orphan": false, "label": "Rst_DUF4238 system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Strong resistance against phage T7 in a host expressing an Rst_DUF4238 locus.", "grounding": null, "id": "t7_phage_resistance", "is_orphan": false, "label": "T7 phage resistance", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "The graph captures Rst_DUF4238 as a named DefenseFinder single-profile phage-defense system while leaving native host breadth, the molecular activity of the DUF4238 component, exact DUF4238_Pers profile grounding, and the mechanism of T7 restriction unresolved.", "scope_status": "NONMECHANISTIC", "title": "Rst_DUF4238 loci restrict T7 phage"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -751,13 +837,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-09-26 07:32 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/ecology.html">ECOLOGY</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/ecology.html">ECOLOGY</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>biosafety level 4</h1>
     <p class="curie"><code>METPO:1001105</code> · CLASS · REVIEWED</p>
 
@@ -79,9 +90,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>extreme pathogen hazard</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>biosafety level 4</strong>
-            <code>METPO:2007700</code>
+            <a href="https://w3id.org/metpo/1001105" rel="nofollow noreferrer"><code>METPO:1001105</code></a>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>Extreme pathogen hazard without available treatment yields BSL-4 classification.</p>
             <ul>
 
@@ -96,8 +109,10 @@
 
           <li id="pathograph-1-edge-2">
             <strong>biosafety level 4</strong>
+            <a href="https://w3id.org/metpo/1001105" rel="nofollow noreferrer"><code>METPO:1001105</code></a>
             <span class="edge-predicate">is a</span>
             <strong>biosafety level</strong>
+            <a href="https://w3id.org/metpo/1001101" rel="nofollow noreferrer"><code>METPO:1001101</code></a>
             <code>rdfs:subClassOf</code>
             <p>BSL-4 is a member of the biosafety-level classification.</p>
             <ul>
@@ -113,8 +128,10 @@
 
           <li id="pathograph-1-edge-3">
             <strong>life-threatening disease</strong>
+
             <span class="edge-predicate">requires containment level</span>
             <strong>biosafety level 4</strong>
+            <a href="https://w3id.org/metpo/1001105" rel="nofollow noreferrer"><code>METPO:1001105</code></a>
 
             <p>Organisms causing life-threatening disease in a healthy host require BSL-4 maximum containment.</p>
             <ul>
@@ -136,8 +153,10 @@
 
           <li id="pathograph-1-edge-4">
             <strong>absence of effective prevention or treatment</strong>
+
             <span class="edge-predicate">requires containment level</span>
             <strong>biosafety level 4</strong>
+            <a href="https://w3id.org/metpo/1001105" rel="nofollow noreferrer"><code>METPO:1001105</code></a>
 
             <p>Absence of effective prevention or treatment for an agent mandates BSL-4 containment.</p>
             <ul>
@@ -159,8 +178,10 @@
 
           <li id="pathograph-1-edge-5">
             <strong>high risk of aerosol-transmitted laboratory infection</strong>
+
             <span class="edge-predicate">requires containment level</span>
             <strong>biosafety level 4</strong>
+            <a href="https://w3id.org/metpo/1001105" rel="nofollow noreferrer"><code>METPO:1001105</code></a>
 
             <p>High risk of aerosol-transmitted laboratory infection is a defining BSL-4 criterion.</p>
             <ul>
@@ -176,8 +197,10 @@
 
           <li id="pathograph-1-edge-6">
             <strong>biosafety level 4</strong>
+            <a href="https://w3id.org/metpo/1001105" rel="nofollow noreferrer"><code>METPO:1001105</code></a>
             <span class="edge-predicate">necessitates use of</span>
             <strong>positive-pressure air-supplied suit</strong>
+
 
             <p>BSL-4 containment necessitates wearing a full-body positive-pressure air-supplied suit.</p>
             <ul>
@@ -199,8 +222,10 @@
 
           <li id="pathograph-1-edge-7">
             <strong>biosafety level 4</strong>
+            <a href="https://w3id.org/metpo/1001105" rel="nofollow noreferrer"><code>METPO:1001105</code></a>
             <span class="edge-predicate">requires</span>
             <strong>airlock</strong>
+
 
             <p>BSL-4 facilities require airlocks as a maximum-containment engineering control.</p>
             <ul>
@@ -216,8 +241,10 @@
 
           <li id="pathograph-1-edge-8">
             <strong>biosafety level 4</strong>
+            <a href="https://w3id.org/metpo/1001105" rel="nofollow noreferrer"><code>METPO:1001105</code></a>
             <span class="edge-predicate">requires</span>
             <strong>decontamination shower</strong>
+
 
             <p>BSL-4 facilities require personnel decontamination showers.</p>
             <ul>
@@ -233,8 +260,10 @@
 
           <li id="pathograph-1-edge-9">
             <strong>biosafety level 4</strong>
+            <a href="https://w3id.org/metpo/1001105" rel="nofollow noreferrer"><code>METPO:1001105</code></a>
             <span class="edge-predicate">requires</span>
             <strong>specialized waste disposal</strong>
+
 
             <p>BSL-4 facilities require specialized waste disposal systems.</p>
             <ul>
@@ -344,31 +373,31 @@
 
         <li>
           <span class="nn-cat">genomics</span>
-          <a href="../../traits/genomics/pangenome_openness.html">pangenome openness</a>
+          <a href="../../traits/genomics/hec_05_system.html">HEC-05 system</a>
           <span class="sim">0.866</span>
         </li>
 
         <li>
           <span class="nn-cat">genomics</span>
-          <a href="../../traits/genomics/mobile_genetic_element.html">mobile genetic element</a>
+          <a href="../../traits/genomics/hec_06_system.html">HEC-06 system</a>
           <span class="sim">0.866</span>
         </li>
 
         <li>
           <span class="nn-cat">genomics</span>
-          <a href="../../traits/genomics/genomic_island.html">genomic island</a>
+          <a href="../../traits/genomics/hec_07_system.html">HEC-07 system</a>
           <span class="sim">0.866</span>
         </li>
 
         <li>
           <span class="nn-cat">genomics</span>
-          <a href="../../traits/genomics/genome_streamlining.html">genome streamlining</a>
+          <a href="../../traits/genomics/hec_08_system.html">HEC-08 system</a>
           <span class="sim">0.866</span>
         </li>
 
         <li>
           <span class="nn-cat">genomics</span>
-          <a href="../../traits/genomics/genome_size.html">genome size</a>
+          <a href="../../traits/genomics/hesat_system.html">Hesat system</a>
           <span class="sim">0.866</span>
         </li>
 
@@ -976,7 +1005,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking extreme virulence, aerosol transmissibility, and absence of available treatments to BSL-4 classification.", "edges": [{"description": "Extreme pathogen hazard without available treatment yields BSL-4 classification.", "evidence": [{"notes": "Supports extreme virulence with absent countermeasures as the basis of BSL-4 classification.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "id": "edge-1", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "extreme_pathogen_hazard", "target": "bsl4_trait"}, {"description": "BSL-4 is a member of the biosafety-level classification.", "evidence": [{"notes": "Supports BSL-4 as a member of the biosafety-level classification.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "bsl4_trait", "target": "biosafety_level"}, {"description": "Organisms causing life-threatening disease in a healthy host require BSL-4 maximum containment.", "evidence": [{"notes": "\"Organisms that cause life-threatening disease in a healthy host...\"", "reference": "DOI:10.1016/j.pathol.2020.09.006"}, {"notes": "BSL-4 as the highest containment level for the most dangerous, life-threatening agents.", "reference": "DOI:10.3390/laboratories1030013"}], "id": "edge-3", "is_orphan": false, "predicate": "requires containment level", "predicate_id": null, "source": "life_threatening_disease", "target": "bsl4_trait"}, {"description": "Absence of effective prevention or treatment for an agent mandates BSL-4 containment.", "evidence": [{"notes": "\"effective prevention and/or treatment are not usually available\"", "reference": "DOI:10.1016/j.pathol.2020.09.006"}, {"notes": "BSL-4 representing maximum containment for agents with severe risks and no available treatments.", "reference": "DOI:10.3390/laboratories1030013"}], "id": "edge-4", "is_orphan": false, "predicate": "requires containment level", "predicate_id": null, "source": "no_effective_countermeasure", "target": "bsl4_trait"}, {"description": "High risk of aerosol-transmitted laboratory infection is a defining BSL-4 criterion.", "evidence": [{"notes": "\"pose a high risk of aerosol-transmitted laboratory infections with no vaccine or therapy\"", "reference": "DOI:10.1016/j.pathol.2020.09.006"}], "id": "edge-5", "is_orphan": false, "predicate": "requires containment level", "predicate_id": null, "source": "aerosol_lab_infection_risk", "target": "bsl4_trait"}, {"description": "BSL-4 containment necessitates wearing a full-body positive-pressure air-supplied suit.", "evidence": [{"notes": "\"wearing a full body, positive pressure, air supplied suit\"", "reference": "DOI:10.1016/j.pathol.2020.09.006"}, {"notes": "Suit labs adopted positive pressure suits as a hallmark advanced containment strategy.", "reference": "DOI:10.3390/laboratories1030013"}], "id": "edge-6", "is_orphan": false, "predicate": "necessitates use of", "predicate_id": null, "source": "bsl4_trait", "target": "positive_pressure_suit"}, {"description": "BSL-4 facilities require airlocks as a maximum-containment engineering control.", "evidence": [{"notes": "\"requires airlocks, showers, and specialized waste disposal\"", "reference": "DOI:10.3390/laboratories1030013"}], "id": "edge-7", "is_orphan": false, "predicate": "requires", "predicate_id": null, "source": "bsl4_trait", "target": "airlock"}, {"description": "BSL-4 facilities require personnel decontamination showers.", "evidence": [{"notes": "\"requires airlocks, showers, and specialized waste disposal\"", "reference": "DOI:10.3390/laboratories1030013"}], "id": "edge-8", "is_orphan": false, "predicate": "requires", "predicate_id": null, "source": "bsl4_trait", "target": "decontamination_shower"}, {"description": "BSL-4 facilities require specialized waste disposal systems.", "evidence": [{"notes": "\"requires airlocks, showers, and specialized waste disposal\"", "reference": "DOI:10.3390/laboratories1030013"}], "id": "edge-9", "is_orphan": false, "predicate": "requires", "predicate_id": null, "source": "bsl4_trait", "target": "specialized_waste_disposal"}], "evidence_rows": [{"description": "Extreme pathogen hazard without available treatment yields BSL-4 classification.", "edge_id": "edge-1", "evidence": [{"notes": "Supports extreme virulence with absent countermeasures as the basis of BSL-4 classification.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "extreme pathogen hazard", "target": "biosafety level 4"}, {"description": "BSL-4 is a member of the biosafety-level classification.", "edge_id": "edge-2", "evidence": [{"notes": "Supports BSL-4 as a member of the biosafety-level classification.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "biosafety level 4", "target": "biosafety level"}, {"description": "Organisms causing life-threatening disease in a healthy host require BSL-4 maximum containment.", "edge_id": "edge-3", "evidence": [{"notes": "\"Organisms that cause life-threatening disease in a healthy host...\"", "reference": "DOI:10.1016/j.pathol.2020.09.006"}, {"notes": "BSL-4 as the highest containment level for the most dangerous, life-threatening agents.", "reference": "DOI:10.3390/laboratories1030013"}], "predicate": "requires containment level", "predicate_id": null, "source": "life-threatening disease", "target": "biosafety level 4"}, {"description": "Absence of effective prevention or treatment for an agent mandates BSL-4 containment.", "edge_id": "edge-4", "evidence": [{"notes": "\"effective prevention and/or treatment are not usually available\"", "reference": "DOI:10.1016/j.pathol.2020.09.006"}, {"notes": "BSL-4 representing maximum containment for agents with severe risks and no available treatments.", "reference": "DOI:10.3390/laboratories1030013"}], "predicate": "requires containment level", "predicate_id": null, "source": "absence of effective prevention or treatment", "target": "biosafety level 4"}, {"description": "High risk of aerosol-transmitted laboratory infection is a defining BSL-4 criterion.", "edge_id": "edge-5", "evidence": [{"notes": "\"pose a high risk of aerosol-transmitted laboratory infections with no vaccine or therapy\"", "reference": "DOI:10.1016/j.pathol.2020.09.006"}], "predicate": "requires containment level", "predicate_id": null, "source": "high risk of aerosol-transmitted laboratory infection", "target": "biosafety level 4"}, {"description": "BSL-4 containment necessitates wearing a full-body positive-pressure air-supplied suit.", "edge_id": "edge-6", "evidence": [{"notes": "\"wearing a full body, positive pressure, air supplied suit\"", "reference": "DOI:10.1016/j.pathol.2020.09.006"}, {"notes": "Suit labs adopted positive pressure suits as a hallmark advanced containment strategy.", "reference": "DOI:10.3390/laboratories1030013"}], "predicate": "necessitates use of", "predicate_id": null, "source": "biosafety level 4", "target": "positive-pressure air-supplied suit"}, {"description": "BSL-4 facilities require airlocks as a maximum-containment engineering control.", "edge_id": "edge-7", "evidence": [{"notes": "\"requires airlocks, showers, and specialized waste disposal\"", "reference": "DOI:10.3390/laboratories1030013"}], "predicate": "requires", "predicate_id": null, "source": "biosafety level 4", "target": "airlock"}, {"description": "BSL-4 facilities require personnel decontamination showers.", "edge_id": "edge-8", "evidence": [{"notes": "\"requires airlocks, showers, and specialized waste disposal\"", "reference": "DOI:10.3390/laboratories1030013"}], "predicate": "requires", "predicate_id": null, "source": "biosafety level 4", "target": "decontamination shower"}, {"description": "BSL-4 facilities require specialized waste disposal systems.", "edge_id": "edge-9", "evidence": [{"notes": "\"requires airlocks, showers, and specialized waste disposal\"", "reference": "DOI:10.3390/laboratories1030013"}], "predicate": "requires", "predicate_id": null, "source": "biosafety level 4", "target": "specialized waste disposal"}], "graph_id": "biosafety_level_4_extreme_hazard", "issues": [], "nodes": [{"color": "#ecfccb", "description": "High likelihood of laboratory-acquired infection via aerosol transmission.", "grounding": null, "id": "aerosol_lab_infection_risk", "is_orphan": false, "label": "high risk of aerosol-transmitted laboratory infection", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ccfbf1", "description": "Air-sealed entry/exit chamber required for BSL-4 maximum-containment facilities.", "grounding": null, "id": "airlock", "is_orphan": false, "label": "airlock", "node_type": "EXPERIMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Hazard-classification axis for biological agents.", "grounding": "METPO:1001101", "id": "biosafety_level", "is_orphan": false, "label": "biosafety level", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Extreme-risk agents causing life-threatening disease with no available treatment; maximum containment required.", "grounding": "METPO:1001105", "id": "bsl4_trait", "is_orphan": false, "label": "biosafety level 4", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ccfbf1", "description": "Mandatory personnel decontamination shower in BSL-4 facilities.", "grounding": null, "id": "decontamination_shower", "is_orphan": false, "label": "decontamination shower", "node_type": "EXPERIMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Pathogens with extreme virulence, aerosol transmission, and absent or inadequate medical countermeasures.", "grounding": null, "id": "extreme_pathogen_hazard", "is_orphan": false, "label": "extreme pathogen hazard", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Disease that threatens the life of a healthy host, a defining hazard criterion for BSL-4 agents.", "grounding": null, "id": "life_threatening_disease", "is_orphan": false, "label": "life-threatening disease", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Lack of available vaccine or therapy for the agent, a defining BSL-4 hazard criterion.", "grounding": null, "id": "no_effective_countermeasure", "is_orphan": false, "label": "absence of effective prevention or treatment", "node_type": "STATE", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ccfbf1", "description": "Full-body positive-pressure air-supplied protective suit, a hallmark engineering control of BSL-4 suit labs.", "grounding": null, "id": "positive_pressure_suit", "is_orphan": false, "label": "positive-pressure air-supplied suit", "node_type": "EXPERIMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ccfbf1", "description": "Specialized waste decontamination and disposal system required at BSL-4.", "grounding": null, "id": "specialized_waste_disposal", "is_orphan": false, "label": "specialized waste disposal", "node_type": "EXPERIMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This broad ecological, host-relationship, habitat, or hazard classification spans multiple taxa and mechanisms; contextual protein nodes do not receive token UniProt examples.", "scope_status": "NONMECHANISTIC", "title": "BSL-4 extreme-hazard classification"}];
+  var graphs = [{"description": "DOI-backed graph linking extreme virulence, aerosol transmissibility, and absence of available treatments to BSL-4 classification.", "edges": [{"description": "Extreme pathogen hazard without available treatment yields BSL-4 classification.", "evidence": [{"notes": "Supports extreme virulence with absent countermeasures as the basis of BSL-4 classification.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "id": "edge-1", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "extreme_pathogen_hazard", "target": "bsl4_trait"}, {"description": "BSL-4 is a member of the biosafety-level classification.", "evidence": [{"notes": "Supports BSL-4 as a member of the biosafety-level classification.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "bsl4_trait", "target": "biosafety_level"}, {"description": "Organisms causing life-threatening disease in a healthy host require BSL-4 maximum containment.", "evidence": [{"notes": "\"Organisms that cause life-threatening disease in a healthy host...\"", "reference": "DOI:10.1016/j.pathol.2020.09.006"}, {"notes": "BSL-4 as the highest containment level for the most dangerous, life-threatening agents.", "reference": "DOI:10.3390/laboratories1030013"}], "id": "edge-3", "is_orphan": false, "predicate": "requires containment level", "predicate_id": null, "source": "life_threatening_disease", "target": "bsl4_trait"}, {"description": "Absence of effective prevention or treatment for an agent mandates BSL-4 containment.", "evidence": [{"notes": "\"effective prevention and/or treatment are not usually available\"", "reference": "DOI:10.1016/j.pathol.2020.09.006"}, {"notes": "BSL-4 representing maximum containment for agents with severe risks and no available treatments.", "reference": "DOI:10.3390/laboratories1030013"}], "id": "edge-4", "is_orphan": false, "predicate": "requires containment level", "predicate_id": null, "source": "no_effective_countermeasure", "target": "bsl4_trait"}, {"description": "High risk of aerosol-transmitted laboratory infection is a defining BSL-4 criterion.", "evidence": [{"notes": "\"pose a high risk of aerosol-transmitted laboratory infections with no vaccine or therapy\"", "reference": "DOI:10.1016/j.pathol.2020.09.006"}], "id": "edge-5", "is_orphan": false, "predicate": "requires containment level", "predicate_id": null, "source": "aerosol_lab_infection_risk", "target": "bsl4_trait"}, {"description": "BSL-4 containment necessitates wearing a full-body positive-pressure air-supplied suit.", "evidence": [{"notes": "\"wearing a full body, positive pressure, air supplied suit\"", "reference": "DOI:10.1016/j.pathol.2020.09.006"}, {"notes": "Suit labs adopted positive pressure suits as a hallmark advanced containment strategy.", "reference": "DOI:10.3390/laboratories1030013"}], "id": "edge-6", "is_orphan": false, "predicate": "necessitates use of", "predicate_id": null, "source": "bsl4_trait", "target": "positive_pressure_suit"}, {"description": "BSL-4 facilities require airlocks as a maximum-containment engineering control.", "evidence": [{"notes": "\"requires airlocks, showers, and specialized waste disposal\"", "reference": "DOI:10.3390/laboratories1030013"}], "id": "edge-7", "is_orphan": false, "predicate": "requires", "predicate_id": null, "source": "bsl4_trait", "target": "airlock"}, {"description": "BSL-4 facilities require personnel decontamination showers.", "evidence": [{"notes": "\"requires airlocks, showers, and specialized waste disposal\"", "reference": "DOI:10.3390/laboratories1030013"}], "id": "edge-8", "is_orphan": false, "predicate": "requires", "predicate_id": null, "source": "bsl4_trait", "target": "decontamination_shower"}, {"description": "BSL-4 facilities require specialized waste disposal systems.", "evidence": [{"notes": "\"requires airlocks, showers, and specialized waste disposal\"", "reference": "DOI:10.3390/laboratories1030013"}], "id": "edge-9", "is_orphan": false, "predicate": "requires", "predicate_id": null, "source": "bsl4_trait", "target": "specialized_waste_disposal"}], "evidence_rows": [{"description": "Extreme pathogen hazard without available treatment yields BSL-4 classification.", "edge_id": "edge-1", "evidence": [{"notes": "Supports extreme virulence with absent countermeasures as the basis of BSL-4 classification.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "extreme pathogen hazard", "source_grounding": null, "target": "biosafety level 4", "target_grounding": "METPO:1001105"}, {"description": "BSL-4 is a member of the biosafety-level classification.", "edge_id": "edge-2", "evidence": [{"notes": "Supports BSL-4 as a member of the biosafety-level classification.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "biosafety level 4", "source_grounding": "METPO:1001105", "target": "biosafety level", "target_grounding": "METPO:1001101"}, {"description": "Organisms causing life-threatening disease in a healthy host require BSL-4 maximum containment.", "edge_id": "edge-3", "evidence": [{"notes": "\"Organisms that cause life-threatening disease in a healthy host...\"", "reference": "DOI:10.1016/j.pathol.2020.09.006"}, {"notes": "BSL-4 as the highest containment level for the most dangerous, life-threatening agents.", "reference": "DOI:10.3390/laboratories1030013"}], "predicate": "requires containment level", "predicate_id": null, "source": "life-threatening disease", "source_grounding": null, "target": "biosafety level 4", "target_grounding": "METPO:1001105"}, {"description": "Absence of effective prevention or treatment for an agent mandates BSL-4 containment.", "edge_id": "edge-4", "evidence": [{"notes": "\"effective prevention and/or treatment are not usually available\"", "reference": "DOI:10.1016/j.pathol.2020.09.006"}, {"notes": "BSL-4 representing maximum containment for agents with severe risks and no available treatments.", "reference": "DOI:10.3390/laboratories1030013"}], "predicate": "requires containment level", "predicate_id": null, "source": "absence of effective prevention or treatment", "source_grounding": null, "target": "biosafety level 4", "target_grounding": "METPO:1001105"}, {"description": "High risk of aerosol-transmitted laboratory infection is a defining BSL-4 criterion.", "edge_id": "edge-5", "evidence": [{"notes": "\"pose a high risk of aerosol-transmitted laboratory infections with no vaccine or therapy\"", "reference": "DOI:10.1016/j.pathol.2020.09.006"}], "predicate": "requires containment level", "predicate_id": null, "source": "high risk of aerosol-transmitted laboratory infection", "source_grounding": null, "target": "biosafety level 4", "target_grounding": "METPO:1001105"}, {"description": "BSL-4 containment necessitates wearing a full-body positive-pressure air-supplied suit.", "edge_id": "edge-6", "evidence": [{"notes": "\"wearing a full body, positive pressure, air supplied suit\"", "reference": "DOI:10.1016/j.pathol.2020.09.006"}, {"notes": "Suit labs adopted positive pressure suits as a hallmark advanced containment strategy.", "reference": "DOI:10.3390/laboratories1030013"}], "predicate": "necessitates use of", "predicate_id": null, "source": "biosafety level 4", "source_grounding": "METPO:1001105", "target": "positive-pressure air-supplied suit", "target_grounding": null}, {"description": "BSL-4 facilities require airlocks as a maximum-containment engineering control.", "edge_id": "edge-7", "evidence": [{"notes": "\"requires airlocks, showers, and specialized waste disposal\"", "reference": "DOI:10.3390/laboratories1030013"}], "predicate": "requires", "predicate_id": null, "source": "biosafety level 4", "source_grounding": "METPO:1001105", "target": "airlock", "target_grounding": null}, {"description": "BSL-4 facilities require personnel decontamination showers.", "edge_id": "edge-8", "evidence": [{"notes": "\"requires airlocks, showers, and specialized waste disposal\"", "reference": "DOI:10.3390/laboratories1030013"}], "predicate": "requires", "predicate_id": null, "source": "biosafety level 4", "source_grounding": "METPO:1001105", "target": "decontamination shower", "target_grounding": null}, {"description": "BSL-4 facilities require specialized waste disposal systems.", "edge_id": "edge-9", "evidence": [{"notes": "\"requires airlocks, showers, and specialized waste disposal\"", "reference": "DOI:10.3390/laboratories1030013"}], "predicate": "requires", "predicate_id": null, "source": "biosafety level 4", "source_grounding": "METPO:1001105", "target": "specialized waste disposal", "target_grounding": null}], "graph_id": "biosafety_level_4_extreme_hazard", "issues": [], "nodes": [{"color": "#ecfccb", "description": "High likelihood of laboratory-acquired infection via aerosol transmission.", "grounding": null, "id": "aerosol_lab_infection_risk", "is_orphan": false, "label": "high risk of aerosol-transmitted laboratory infection", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ccfbf1", "description": "Air-sealed entry/exit chamber required for BSL-4 maximum-containment facilities.", "grounding": null, "id": "airlock", "is_orphan": false, "label": "airlock", "node_type": "EXPERIMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Hazard-classification axis for biological agents.", "grounding": "METPO:1001101", "id": "biosafety_level", "is_orphan": false, "label": "biosafety level", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Extreme-risk agents causing life-threatening disease with no available treatment; maximum containment required.", "grounding": "METPO:1001105", "id": "bsl4_trait", "is_orphan": false, "label": "biosafety level 4", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ccfbf1", "description": "Mandatory personnel decontamination shower in BSL-4 facilities.", "grounding": null, "id": "decontamination_shower", "is_orphan": false, "label": "decontamination shower", "node_type": "EXPERIMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Pathogens with extreme virulence, aerosol transmission, and absent or inadequate medical countermeasures.", "grounding": null, "id": "extreme_pathogen_hazard", "is_orphan": false, "label": "extreme pathogen hazard", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Disease that threatens the life of a healthy host, a defining hazard criterion for BSL-4 agents.", "grounding": null, "id": "life_threatening_disease", "is_orphan": false, "label": "life-threatening disease", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Lack of available vaccine or therapy for the agent, a defining BSL-4 hazard criterion.", "grounding": null, "id": "no_effective_countermeasure", "is_orphan": false, "label": "absence of effective prevention or treatment", "node_type": "STATE", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ccfbf1", "description": "Full-body positive-pressure air-supplied protective suit, a hallmark engineering control of BSL-4 suit labs.", "grounding": null, "id": "positive_pressure_suit", "is_orphan": false, "label": "positive-pressure air-supplied suit", "node_type": "EXPERIMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ccfbf1", "description": "Specialized waste decontamination and disposal system required at BSL-4.", "grounding": null, "id": "specialized_waste_disposal", "is_orphan": false, "label": "specialized waste disposal", "node_type": "EXPERIMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This broad ecological, host-relationship, habitat, or hazard classification spans multiple taxa and mechanisms; contextual protein nodes do not receive token UniProt examples.", "scope_status": "NONMECHANISTIC", "title": "BSL-4 extreme-hazard classification"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -996,13 +1025,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-08-31 04:43 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

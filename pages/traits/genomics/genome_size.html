@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/genomics.html">GENOMICS</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/genomics.html">GENOMICS</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>genome size</h1>
     <p class="curie"><code>traitmech:000098</code> · CLASS · REVIEWED</p>
 
@@ -85,9 +96,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>effective population size</strong>
+
             <span class="edge-predicate">regulates</span>
             <strong>reductive genome evolution</strong>
-            <code>RO:0002211</code>
+            <a href="https://w3id.org/metpo/1007721" rel="nofollow noreferrer"><code>METPO:1007721</code></a>
+            <a href="http://purl.obolibrary.org/obo/RO_0002211" rel="nofollow noreferrer"><code>RO:0002211</code></a>
             <p>Large Ne strengthens selection against superfluous DNA; small Ne permits drift-driven loss in symbionts.</p>
             <ul>
 
@@ -102,9 +115,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>reductive genome evolution</strong>
+            <a href="https://w3id.org/metpo/1007721" rel="nofollow noreferrer"><code>METPO:1007721</code></a>
             <span class="edge-predicate">causes</span>
             <strong>genome size</strong>
-            <code>biolink:causes</code>
+            <code>traitmech:000098</code>
+            <a href="https://w3id.org/biolink/vocab/causes" rel="nofollow noreferrer"><code>biolink:causes</code></a>
             <p>Reductive evolution sets the observed genome length.</p>
             <ul>
 
@@ -119,8 +134,10 @@
 
           <li id="pathograph-1-edge-3">
             <strong>ocean depth</strong>
+
             <span class="edge-predicate">positively associated with</span>
             <strong>genome size</strong>
+            <code>traitmech:000098</code>
 
             <p>Average genome size of marine communities increases with ocean depth.</p>
             <ul>
@@ -136,8 +153,10 @@
 
           <li id="pathograph-1-edge-4">
             <strong>soil pH</strong>
+            <a href="http://purl.obolibrary.org/obo/ENVO_09200010" rel="nofollow noreferrer"><code>ENVO:09200010</code></a>
             <span class="edge-predicate">negatively associated with</span>
             <strong>genome size</strong>
+            <code>traitmech:000098</code>
 
             <p>Low-pH soils host communities with larger average genomes.</p>
             <ul>
@@ -153,9 +172,11 @@
 
           <li id="pathograph-1-edge-5">
             <strong>horizontal gene transfer</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0009292" rel="nofollow noreferrer"><code>GO:0009292</code></a>
             <span class="edge-predicate">increases</span>
             <strong>genome size</strong>
-            <code>RO:0002213</code>
+            <code>traitmech:000098</code>
+            <a href="http://purl.obolibrary.org/obo/RO_0002213" rel="nofollow noreferrer"><code>RO:0002213</code></a>
             <p>HGT is a driving force behind genome expansion, adding accessory gene content.</p>
             <ul>
 
@@ -170,8 +191,10 @@
 
           <li id="pathograph-1-edge-6">
             <strong>mobile genetic elements</strong>
+
             <span class="edge-predicate">mediates</span>
             <strong>horizontal gene transfer</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0009292" rel="nofollow noreferrer"><code>GO:0009292</code></a>
 
             <p>MGEs (plasmids, phages, ICEs, transposons, insertion sequences) carry out HGT.</p>
             <ul>
@@ -187,9 +210,11 @@
 
           <li id="pathograph-1-edge-7">
             <strong>gene loss</strong>
+
             <span class="edge-predicate">decreases</span>
             <strong>genome size</strong>
-            <code>RO:0002212</code>
+            <code>traitmech:000098</code>
+            <a href="http://purl.obolibrary.org/obo/RO_0002212" rel="nofollow noreferrer"><code>RO:0002212</code></a>
             <p>Loss of protein-coding genes reduces genome length.</p>
             <ul>
 
@@ -204,8 +229,10 @@
 
           <li id="pathograph-1-edge-8">
             <strong>metabolic versatility</strong>
+
             <span class="edge-predicate">positively associated with</span>
             <strong>genome size</strong>
+            <code>traitmech:000098</code>
 
             <p>Greater metabolic versatility is correlated with larger genomes.</p>
             <ul>
@@ -303,43 +330,43 @@
 
         <li>
           <span class="nn-cat">genomics</span>
-          <a href="../../traits/genomics/codon_usage_bias.html">codon usage bias</a>
+          <a href="../../traits/genomics/hypnos_system.html">Hypnos system</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">genomics</span>
-          <a href="../../traits/genomics/crispr_cas_system.html">CRISPR-Cas system</a>
+          <a href="../../traits/genomics/hna_system.html">Hna system</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">genomics</span>
-          <a href="../../traits/genomics/gc_skew.html">GC skew</a>
+          <a href="../../traits/genomics/hma_system.html">Hma system</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">genomics</span>
-          <a href="../../traits/genomics/genome_streamlining.html">genome streamlining</a>
+          <a href="../../traits/genomics/hesat_system.html">Hesat system</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">genomics</span>
-          <a href="../../traits/genomics/genomic_island.html">genomic island</a>
+          <a href="../../traits/genomics/hec_08_system.html">HEC-08 system</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">genomics</span>
-          <a href="../../traits/genomics/mobile_genetic_element.html">mobile genetic element</a>
+          <a href="../../traits/genomics/hec_07_system.html">HEC-07 system</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">genomics</span>
-          <a href="../../traits/genomics/pangenome_openness.html">pangenome openness</a>
+          <a href="../../traits/genomics/hec_06_system.html">HEC-06 system</a>
           <span class="sim">1.000</span>
         </li>
 
@@ -887,7 +914,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking effective population size and lifestyle to reductive evolution shaping prokaryotic genome length.", "edges": [{"description": "Large Ne strengthens selection against superfluous DNA; small Ne permits drift-driven loss in symbionts.", "evidence": [{"notes": "Batut et al. compare reductive genome evolution at both ends of the population-size spectrum.", "reference": "DOI:10.1038/nrmicro3331"}], "id": "edge-1", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "effective_population_size", "target": "reductive_genome_evolution"}, {"description": "Reductive evolution sets the observed genome length.", "evidence": [{"notes": "Giovannoni et al. link streamlining theory to small genomes in abundant free-living microbes.", "reference": "DOI:10.1038/ismej.2014.60"}], "id": "edge-2", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "reductive_genome_evolution", "target": "genome_size_trait"}, {"description": "Average genome size of marine communities increases with ocean depth.", "evidence": [{"notes": "Ngugi 2023: AGS increases with depth across epipelagic, mesopelagic and bathypelagic metagenomes.", "reference": "DOI:10.1038/s41467-023-36988-x"}], "id": "edge-3", "is_orphan": false, "predicate": "positively associated with", "predicate_id": null, "source": "ocean_depth", "target": "genome_size_trait"}, {"description": "Low-pH soils host communities with larger average genomes.", "evidence": [{"notes": "Chuckran 2023: negative AGS-pH relationship in soil; strengthened after microbial-DNA correction (R2 0.32-\u003e0.57).", "reference": "DOI:10.1101/2021.11.17.469016"}], "id": "edge-4", "is_orphan": false, "predicate": "negatively associated with", "predicate_id": null, "source": "soil_ph", "target": "genome_size_trait"}, {"description": "HGT is a driving force behind genome expansion, adding accessory gene content.", "evidence": [{"notes": "Dmitrijeva 2024: HGT described as driving force behind genome expansion; ~42.5% of genes affected by HGT per species.", "reference": "DOI:10.1038/s41559-024-02357-0"}], "id": "edge-5", "is_orphan": false, "predicate": "increases", "predicate_id": "RO:0002213", "source": "horizontal_gene_transfer", "target": "genome_size_trait"}, {"description": "MGEs (plasmids, phages, ICEs, transposons, insertion sequences) carry out HGT.", "evidence": [{"notes": "Kogay 2024: MGEs crucial for horizontal gene transfer, including plasmids, ICEs, transposons, IS and phages.", "reference": "DOI:10.1111/1462-2920.16630"}], "id": "edge-6", "is_orphan": false, "predicate": "mediates", "predicate_id": null, "source": "mobile_genetic_elements", "target": "horizontal_gene_transfer"}, {"description": "Loss of protein-coding genes reduces genome length.", "evidence": [{"notes": "Dong 2024: KO-abundance changes track genome size, indicating protein-coding gene loss and genome reduction.", "reference": "DOI:10.1038/s41467-024-50368-z"}], "id": "edge-7", "is_orphan": false, "predicate": "decreases", "predicate_id": "RO:0002212", "source": "gene_loss", "target": "genome_size_trait"}, {"description": "Greater metabolic versatility is correlated with larger genomes.", "evidence": [{"notes": "Piton 2023: soil bacterial trait axis of metabolic versatility strongly positively correlated with genome size (R2=0.64).", "reference": "DOI:10.1038/s41564-023-01465-0"}], "id": "edge-8", "is_orphan": false, "predicate": "positively associated with", "predicate_id": null, "source": "metabolic_versatility", "target": "genome_size_trait"}], "evidence_rows": [{"description": "Large Ne strengthens selection against superfluous DNA; small Ne permits drift-driven loss in symbionts.", "edge_id": "edge-1", "evidence": [{"notes": "Batut et al. compare reductive genome evolution at both ends of the population-size spectrum.", "reference": "DOI:10.1038/nrmicro3331"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "effective population size", "target": "reductive genome evolution"}, {"description": "Reductive evolution sets the observed genome length.", "edge_id": "edge-2", "evidence": [{"notes": "Giovannoni et al. link streamlining theory to small genomes in abundant free-living microbes.", "reference": "DOI:10.1038/ismej.2014.60"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "reductive genome evolution", "target": "genome size"}, {"description": "Average genome size of marine communities increases with ocean depth.", "edge_id": "edge-3", "evidence": [{"notes": "Ngugi 2023: AGS increases with depth across epipelagic, mesopelagic and bathypelagic metagenomes.", "reference": "DOI:10.1038/s41467-023-36988-x"}], "predicate": "positively associated with", "predicate_id": null, "source": "ocean depth", "target": "genome size"}, {"description": "Low-pH soils host communities with larger average genomes.", "edge_id": "edge-4", "evidence": [{"notes": "Chuckran 2023: negative AGS-pH relationship in soil; strengthened after microbial-DNA correction (R2 0.32-\u003e0.57).", "reference": "DOI:10.1101/2021.11.17.469016"}], "predicate": "negatively associated with", "predicate_id": null, "source": "soil pH", "target": "genome size"}, {"description": "HGT is a driving force behind genome expansion, adding accessory gene content.", "edge_id": "edge-5", "evidence": [{"notes": "Dmitrijeva 2024: HGT described as driving force behind genome expansion; ~42.5% of genes affected by HGT per species.", "reference": "DOI:10.1038/s41559-024-02357-0"}], "predicate": "increases", "predicate_id": "RO:0002213", "source": "horizontal gene transfer", "target": "genome size"}, {"description": "MGEs (plasmids, phages, ICEs, transposons, insertion sequences) carry out HGT.", "edge_id": "edge-6", "evidence": [{"notes": "Kogay 2024: MGEs crucial for horizontal gene transfer, including plasmids, ICEs, transposons, IS and phages.", "reference": "DOI:10.1111/1462-2920.16630"}], "predicate": "mediates", "predicate_id": null, "source": "mobile genetic elements", "target": "horizontal gene transfer"}, {"description": "Loss of protein-coding genes reduces genome length.", "edge_id": "edge-7", "evidence": [{"notes": "Dong 2024: KO-abundance changes track genome size, indicating protein-coding gene loss and genome reduction.", "reference": "DOI:10.1038/s41467-024-50368-z"}], "predicate": "decreases", "predicate_id": "RO:0002212", "source": "gene loss", "target": "genome size"}, {"description": "Greater metabolic versatility is correlated with larger genomes.", "edge_id": "edge-8", "evidence": [{"notes": "Piton 2023: soil bacterial trait axis of metabolic versatility strongly positively correlated with genome size (R2=0.64).", "reference": "DOI:10.1038/s41564-023-01465-0"}], "predicate": "positively associated with", "predicate_id": null, "source": "metabolic versatility", "target": "genome size"}], "graph_id": "genome_size_population_lifestyle", "issues": [], "nodes": [{"color": "#dcfce7", "description": "Long-term breeding population size shaping selection efficiency.", "grounding": null, "id": "effective_population_size", "is_orphan": false, "label": "effective population size", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Loss of protein-coding genes leading to genome reduction.", "grounding": null, "id": "gene_loss", "is_orphan": false, "label": "gene loss", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Total genomic length of an organism.", "grounding": "traitmech:000098", "id": "genome_size_trait", "is_orphan": false, "label": "genome size", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Acquisition of genetic material between organisms, expanding gene content.", "grounding": "GO:0009292", "id": "horizontal_gene_transfer", "is_orphan": false, "label": "horizontal gene transfer", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Breadth of metabolic functions encoded by a genome.", "grounding": null, "id": "metabolic_versatility", "is_orphan": false, "label": "metabolic versatility", "node_type": "CAPACITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Plasmids, phages, ICEs, transposons and insertion sequences that move DNA between genomes.", "grounding": null, "id": "mobile_genetic_elements", "is_orphan": false, "label": "mobile genetic elements", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Depth layer in the marine water column (epipelagic to bathypelagic).", "grounding": null, "id": "ocean_depth", "is_orphan": false, "label": "ocean depth", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Selective and drift-driven loss of genomic content.", "grounding": "METPO:1007721", "id": "reductive_genome_evolution", "is_orphan": false, "label": "reductive genome evolution", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Acidity/alkalinity of soil habitat.", "grounding": "ENVO:09200010", "id": "soil_ph", "is_orphan": false, "label": "soil pH", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This genomics record is a measurement, genomic-element classification, or population-level descriptor rather than one taxon-specific protein mechanism; contextual protein nodes do not receive token UniProt examples.", "scope_status": "NONMECHANISTIC", "title": "Genome size reflects effective population size and lifestyle"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking effective population size and lifestyle to reductive evolution shaping prokaryotic genome length.", "edges": [{"description": "Large Ne strengthens selection against superfluous DNA; small Ne permits drift-driven loss in symbionts.", "evidence": [{"notes": "Batut et al. compare reductive genome evolution at both ends of the population-size spectrum.", "reference": "DOI:10.1038/nrmicro3331"}], "id": "edge-1", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "effective_population_size", "target": "reductive_genome_evolution"}, {"description": "Reductive evolution sets the observed genome length.", "evidence": [{"notes": "Giovannoni et al. link streamlining theory to small genomes in abundant free-living microbes.", "reference": "DOI:10.1038/ismej.2014.60"}], "id": "edge-2", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "reductive_genome_evolution", "target": "genome_size_trait"}, {"description": "Average genome size of marine communities increases with ocean depth.", "evidence": [{"notes": "Ngugi 2023: AGS increases with depth across epipelagic, mesopelagic and bathypelagic metagenomes.", "reference": "DOI:10.1038/s41467-023-36988-x"}], "id": "edge-3", "is_orphan": false, "predicate": "positively associated with", "predicate_id": null, "source": "ocean_depth", "target": "genome_size_trait"}, {"description": "Low-pH soils host communities with larger average genomes.", "evidence": [{"notes": "Chuckran 2023: negative AGS-pH relationship in soil; strengthened after microbial-DNA correction (R2 0.32-\u003e0.57).", "reference": "DOI:10.1101/2021.11.17.469016"}], "id": "edge-4", "is_orphan": false, "predicate": "negatively associated with", "predicate_id": null, "source": "soil_ph", "target": "genome_size_trait"}, {"description": "HGT is a driving force behind genome expansion, adding accessory gene content.", "evidence": [{"notes": "Dmitrijeva 2024: HGT described as driving force behind genome expansion; ~42.5% of genes affected by HGT per species.", "reference": "DOI:10.1038/s41559-024-02357-0"}], "id": "edge-5", "is_orphan": false, "predicate": "increases", "predicate_id": "RO:0002213", "source": "horizontal_gene_transfer", "target": "genome_size_trait"}, {"description": "MGEs (plasmids, phages, ICEs, transposons, insertion sequences) carry out HGT.", "evidence": [{"notes": "Kogay 2024: MGEs crucial for horizontal gene transfer, including plasmids, ICEs, transposons, IS and phages.", "reference": "DOI:10.1111/1462-2920.16630"}], "id": "edge-6", "is_orphan": false, "predicate": "mediates", "predicate_id": null, "source": "mobile_genetic_elements", "target": "horizontal_gene_transfer"}, {"description": "Loss of protein-coding genes reduces genome length.", "evidence": [{"notes": "Dong 2024: KO-abundance changes track genome size, indicating protein-coding gene loss and genome reduction.", "reference": "DOI:10.1038/s41467-024-50368-z"}], "id": "edge-7", "is_orphan": false, "predicate": "decreases", "predicate_id": "RO:0002212", "source": "gene_loss", "target": "genome_size_trait"}, {"description": "Greater metabolic versatility is correlated with larger genomes.", "evidence": [{"notes": "Piton 2023: soil bacterial trait axis of metabolic versatility strongly positively correlated with genome size (R2=0.64).", "reference": "DOI:10.1038/s41564-023-01465-0"}], "id": "edge-8", "is_orphan": false, "predicate": "positively associated with", "predicate_id": null, "source": "metabolic_versatility", "target": "genome_size_trait"}], "evidence_rows": [{"description": "Large Ne strengthens selection against superfluous DNA; small Ne permits drift-driven loss in symbionts.", "edge_id": "edge-1", "evidence": [{"notes": "Batut et al. compare reductive genome evolution at both ends of the population-size spectrum.", "reference": "DOI:10.1038/nrmicro3331"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "effective population size", "source_grounding": null, "target": "reductive genome evolution", "target_grounding": "METPO:1007721"}, {"description": "Reductive evolution sets the observed genome length.", "edge_id": "edge-2", "evidence": [{"notes": "Giovannoni et al. link streamlining theory to small genomes in abundant free-living microbes.", "reference": "DOI:10.1038/ismej.2014.60"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "reductive genome evolution", "source_grounding": "METPO:1007721", "target": "genome size", "target_grounding": "traitmech:000098"}, {"description": "Average genome size of marine communities increases with ocean depth.", "edge_id": "edge-3", "evidence": [{"notes": "Ngugi 2023: AGS increases with depth across epipelagic, mesopelagic and bathypelagic metagenomes.", "reference": "DOI:10.1038/s41467-023-36988-x"}], "predicate": "positively associated with", "predicate_id": null, "source": "ocean depth", "source_grounding": null, "target": "genome size", "target_grounding": "traitmech:000098"}, {"description": "Low-pH soils host communities with larger average genomes.", "edge_id": "edge-4", "evidence": [{"notes": "Chuckran 2023: negative AGS-pH relationship in soil; strengthened after microbial-DNA correction (R2 0.32-\u003e0.57).", "reference": "DOI:10.1101/2021.11.17.469016"}], "predicate": "negatively associated with", "predicate_id": null, "source": "soil pH", "source_grounding": "ENVO:09200010", "target": "genome size", "target_grounding": "traitmech:000098"}, {"description": "HGT is a driving force behind genome expansion, adding accessory gene content.", "edge_id": "edge-5", "evidence": [{"notes": "Dmitrijeva 2024: HGT described as driving force behind genome expansion; ~42.5% of genes affected by HGT per species.", "reference": "DOI:10.1038/s41559-024-02357-0"}], "predicate": "increases", "predicate_id": "RO:0002213", "source": "horizontal gene transfer", "source_grounding": "GO:0009292", "target": "genome size", "target_grounding": "traitmech:000098"}, {"description": "MGEs (plasmids, phages, ICEs, transposons, insertion sequences) carry out HGT.", "edge_id": "edge-6", "evidence": [{"notes": "Kogay 2024: MGEs crucial for horizontal gene transfer, including plasmids, ICEs, transposons, IS and phages.", "reference": "DOI:10.1111/1462-2920.16630"}], "predicate": "mediates", "predicate_id": null, "source": "mobile genetic elements", "source_grounding": null, "target": "horizontal gene transfer", "target_grounding": "GO:0009292"}, {"description": "Loss of protein-coding genes reduces genome length.", "edge_id": "edge-7", "evidence": [{"notes": "Dong 2024: KO-abundance changes track genome size, indicating protein-coding gene loss and genome reduction.", "reference": "DOI:10.1038/s41467-024-50368-z"}], "predicate": "decreases", "predicate_id": "RO:0002212", "source": "gene loss", "source_grounding": null, "target": "genome size", "target_grounding": "traitmech:000098"}, {"description": "Greater metabolic versatility is correlated with larger genomes.", "edge_id": "edge-8", "evidence": [{"notes": "Piton 2023: soil bacterial trait axis of metabolic versatility strongly positively correlated with genome size (R2=0.64).", "reference": "DOI:10.1038/s41564-023-01465-0"}], "predicate": "positively associated with", "predicate_id": null, "source": "metabolic versatility", "source_grounding": null, "target": "genome size", "target_grounding": "traitmech:000098"}], "graph_id": "genome_size_population_lifestyle", "issues": [], "nodes": [{"color": "#dcfce7", "description": "Long-term breeding population size shaping selection efficiency.", "grounding": null, "id": "effective_population_size", "is_orphan": false, "label": "effective population size", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Loss of protein-coding genes leading to genome reduction.", "grounding": null, "id": "gene_loss", "is_orphan": false, "label": "gene loss", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Total genomic length of an organism.", "grounding": "traitmech:000098", "id": "genome_size_trait", "is_orphan": false, "label": "genome size", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Acquisition of genetic material between organisms, expanding gene content.", "grounding": "GO:0009292", "id": "horizontal_gene_transfer", "is_orphan": false, "label": "horizontal gene transfer", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Breadth of metabolic functions encoded by a genome.", "grounding": null, "id": "metabolic_versatility", "is_orphan": false, "label": "metabolic versatility", "node_type": "CAPACITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Plasmids, phages, ICEs, transposons and insertion sequences that move DNA between genomes.", "grounding": null, "id": "mobile_genetic_elements", "is_orphan": false, "label": "mobile genetic elements", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Depth layer in the marine water column (epipelagic to bathypelagic).", "grounding": null, "id": "ocean_depth", "is_orphan": false, "label": "ocean depth", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Selective and drift-driven loss of genomic content.", "grounding": "METPO:1007721", "id": "reductive_genome_evolution", "is_orphan": false, "label": "reductive genome evolution", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Acidity/alkalinity of soil habitat.", "grounding": "ENVO:09200010", "id": "soil_ph", "is_orphan": false, "label": "soil pH", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This genomics record is a measurement, genomic-element classification, or population-level descriptor rather than one taxon-specific protein mechanism; contextual protein nodes do not receive token UniProt examples.", "scope_status": "NONMECHANISTIC", "title": "Genome size reflects effective population size and lifestyle"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -907,13 +934,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-08-31 04:43 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

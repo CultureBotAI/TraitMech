@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/genomics.html">GENOMICS</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/genomics.html">GENOMICS</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>Kongming system</h1>
     <p class="curie"><code>traitmech:000501</code> · CLASS · PROPOSED</p>
 
@@ -115,9 +126,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>Kongming locus</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>dITP immune signaling</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>Kongming loci mediate phage-triggered production of dITP immune messengers.</p>
             <ul>
 
@@ -144,9 +157,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>dITP immune signaling</strong>
+
             <span class="edge-predicate">activates</span>
             <strong>KomC NADase activation</strong>
-            <code>RO:0002213</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002213" rel="nofollow noreferrer"><code>RO:0002213</code></a>
             <p>dITP binding activates KomC NADase activity in the Kongming KomBC effector complex.</p>
             <ul>
 
@@ -167,9 +182,11 @@
 
           <li id="pathograph-1-edge-3">
             <strong>KomC NADase activation</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>NAD depletion-linked infected-cell death</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>KomBC effector activation mediates NAD depletion that can kill phage-infected cells.</p>
             <ul>
 
@@ -196,9 +213,11 @@
 
           <li id="pathograph-1-edge-4">
             <strong>NAD depletion-linked infected-cell death</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>Kongming system</strong>
-            <code>METPO:2007700</code>
+            <code>traitmech:000501</code>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>dITP-triggered NAD depletion and infected-cell death realize the Kongming system trait.</p>
             <ul>
 
@@ -213,8 +232,10 @@
 
           <li id="pathograph-1-edge-5">
             <strong>Kongming system</strong>
+            <code>traitmech:000501</code>
             <span class="edge-predicate">is a</span>
             <strong>phage defense system</strong>
+            <code>traitmech:000209</code>
             <code>rdfs:subClassOf</code>
             <p>Kongming system possession is a phage-defense-system trait.</p>
             <ul>
@@ -301,11 +322,75 @@
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
 
-      <p class="no-match">No kg-microbe node embedding matched this record
-        in the 2026-04-25 deepwalk.</p>
+      <p class="match-method">Matched <strong>1</strong>
+        kg-microbe node
+        via <em>parent_proxy</em>.</p>
+      <ul class="kgm-nodes">
+
+        <li><code>METPO:1000188</code> <span class="dim-preview">[-0.956, -1.962, -3.148, +1.274, …]</span></li>
+
+      </ul>
+      <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
 
     </div>
 
+
+    <div class="card">
+      <h2>Nearest neighbors in embedding space</h2>
+      <p class="meta">Top-8 cosine-similar METPO traits
+        from the 2026-04-25 deepwalk (512-D).</p>
+      <ul class="nn-list">
+
+        <li>
+          <span class="nn-cat">upper</span>
+          <a href="../../traits/upper/quality.html">quality</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hna_system.html">Hna system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hma_system.html">Hma system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hesat_system.html">Hesat system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_08_system.html">HEC-08 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_07_system.html">HEC-07 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_06_system.html">HEC-06 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_05_system.html">HEC-05 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+      </ul>
+    </div>
 
 
 
@@ -458,6 +543,11 @@
     </dl>
   </div>
 
+
+  <div class="card rail-kgm">
+    <h2>kg-microbe</h2>
+    <p class="meta">1 matching node (parent_proxy)</p>
+  </div>
 
 </aside>
 </div>
@@ -791,7 +881,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Conservative system-level sketch linking a Kongming locus to phage-triggered dITP signaling, KomBC activation, NAD depletion, infected-cell death, and Kongming system possession.", "edges": [{"description": "Kongming loci mediate phage-triggered production of dITP immune messengers.", "evidence": [{"notes": "Zeng et al. describe the Science Kongming paper\u0027s antiphage system as a nucleobase-modification immune-signaling pathway.", "reference": "DOI:10.1126/science.ads6055", "snippet": "In this study, we reveal a bacterial antiphage system that mediates immune signaling through nucleobase modification."}, {"notes": "Zeng et al. connect phage-triggered Kongming immunity to system-dependent production of dITP immune messengers.", "reference": "DOI:10.1126/science.ads6055", "snippet": "Immunity is triggered by phage nucleotide kinases, which, combined with the system-encoded adenosine deaminase, produce deoxyinosine triphosphates (dITPs) as immune messengers."}, {"notes": "The pinned DefenseFinder article registry maps the named Kongming system to the Zeng et al. Science paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| Kongming | 10\\.1126/science\\.ads6055 | Base-modified nucleotides mediate immune signaling in bacteria | "}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "kongming_locus", "target": "ditp_immune_signaling"}, {"description": "dITP binding activates KomC NADase activity in the Kongming KomBC effector complex.", "evidence": [{"notes": "Li et al. describe dITP as a phage-infection-generated Kongming activation signal.", "reference": "DOI:10.1038/s41467-026-74710-9", "snippet": "The Kongming system is activated by an atypical signaling nucleotide, dITP, generated upon phage infection."}, {"notes": "Li et al. connect dITP-bound KomB to activation of KomC NADase activity within the Kongming KomBC effector complex.", "reference": "DOI:10.1038/s41467-026-74710-9", "snippet": "Binding of dITP to KomB initiates progressive conformational rearrangements within the filament, ultimately remodeling the filament into a distinct architecture in which KomC adopts an active conformation with NADase activity."}], "id": "edge-2", "is_orphan": false, "predicate": "activates", "predicate_id": "RO:0002213", "source": "ditp_immune_signaling", "target": "komc_nadase_activation"}, {"description": "KomBC effector activation mediates NAD depletion that can kill phage-infected cells.", "evidence": [{"notes": "Zeng et al. place dITP upstream of an effector that depletes NAD and drives infected-cell death.", "reference": "DOI:10.1126/science.ads6055", "snippet": "The dITP signal activates a downstream effector to mediate depletion of cellular nicotinamide adenine dinucleotide (oxidized form), resulting in population-level defense through the death of infected cells."}, {"notes": "Li et al. name the Kongming effector complex and its KomB and KomC components.", "reference": "DOI:10.1038/s41467-026-74710-9", "snippet": "One of them is the Kongming system, which includes an effector complex (KomBC), composed of a non-canonical purine NTP pyrophosphatase (KomB) and a SIR2 domain-containing protein (KomC)."}, {"notes": "Li et al. connect dITP-bound KomB to activation of KomC NADase activity within the Kongming KomBC effector complex.", "reference": "DOI:10.1038/s41467-026-74710-9", "snippet": "Binding of dITP to KomB initiates progressive conformational rearrangements within the filament, ultimately remodeling the filament into a distinct architecture in which KomC adopts an active conformation with NADase activity."}], "id": "edge-3", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "komc_nadase_activation", "target": "nad_depletion_cell_death"}, {"description": "dITP-triggered NAD depletion and infected-cell death realize the Kongming system trait.", "evidence": [{"notes": "Zeng et al. place dITP upstream of an effector that depletes NAD and drives infected-cell death.", "reference": "DOI:10.1126/science.ads6055", "snippet": "The dITP signal activates a downstream effector to mediate depletion of cellular nicotinamide adenine dinucleotide (oxidized form), resulting in population-level defense through the death of infected cells."}], "id": "edge-4", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "nad_depletion_cell_death", "target": "kongming_system_trait"}, {"description": "Kongming system possession is a phage-defense-system trait.", "evidence": [{"notes": "Zeng et al. describe the Science Kongming paper\u0027s antiphage system as a nucleobase-modification immune-signaling pathway.", "reference": "DOI:10.1126/science.ads6055", "snippet": "In this study, we reveal a bacterial antiphage system that mediates immune signaling through nucleobase modification."}, {"notes": "Li et al. describe dITP as a phage-infection-generated Kongming activation signal.", "reference": "DOI:10.1038/s41467-026-74710-9", "snippet": "The Kongming system is activated by an atypical signaling nucleotide, dITP, generated upon phage infection."}, {"notes": "The pinned DefenseFinder article registry maps the named Kongming system to the Zeng et al. Science paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| Kongming | 10\\.1126/science\\.ads6055 | Base-modified nucleotides mediate immune signaling in bacteria | "}], "id": "edge-5", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "kongming_system_trait", "target": "phage_defense_system"}], "evidence_rows": [{"description": "Kongming loci mediate phage-triggered production of dITP immune messengers.", "edge_id": "edge-1", "evidence": [{"notes": "Zeng et al. describe the Science Kongming paper\u0027s antiphage system as a nucleobase-modification immune-signaling pathway.", "reference": "DOI:10.1126/science.ads6055", "snippet": "In this study, we reveal a bacterial antiphage system that mediates immune signaling through nucleobase modification."}, {"notes": "Zeng et al. connect phage-triggered Kongming immunity to system-dependent production of dITP immune messengers.", "reference": "DOI:10.1126/science.ads6055", "snippet": "Immunity is triggered by phage nucleotide kinases, which, combined with the system-encoded adenosine deaminase, produce deoxyinosine triphosphates (dITPs) as immune messengers."}, {"notes": "The pinned DefenseFinder article registry maps the named Kongming system to the Zeng et al. Science paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| Kongming | 10\\.1126/science\\.ads6055 | Base-modified nucleotides mediate immune signaling in bacteria | "}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Kongming locus", "target": "dITP immune signaling"}, {"description": "dITP binding activates KomC NADase activity in the Kongming KomBC effector complex.", "edge_id": "edge-2", "evidence": [{"notes": "Li et al. describe dITP as a phage-infection-generated Kongming activation signal.", "reference": "DOI:10.1038/s41467-026-74710-9", "snippet": "The Kongming system is activated by an atypical signaling nucleotide, dITP, generated upon phage infection."}, {"notes": "Li et al. connect dITP-bound KomB to activation of KomC NADase activity within the Kongming KomBC effector complex.", "reference": "DOI:10.1038/s41467-026-74710-9", "snippet": "Binding of dITP to KomB initiates progressive conformational rearrangements within the filament, ultimately remodeling the filament into a distinct architecture in which KomC adopts an active conformation with NADase activity."}], "predicate": "activates", "predicate_id": "RO:0002213", "source": "dITP immune signaling", "target": "KomC NADase activation"}, {"description": "KomBC effector activation mediates NAD depletion that can kill phage-infected cells.", "edge_id": "edge-3", "evidence": [{"notes": "Zeng et al. place dITP upstream of an effector that depletes NAD and drives infected-cell death.", "reference": "DOI:10.1126/science.ads6055", "snippet": "The dITP signal activates a downstream effector to mediate depletion of cellular nicotinamide adenine dinucleotide (oxidized form), resulting in population-level defense through the death of infected cells."}, {"notes": "Li et al. name the Kongming effector complex and its KomB and KomC components.", "reference": "DOI:10.1038/s41467-026-74710-9", "snippet": "One of them is the Kongming system, which includes an effector complex (KomBC), composed of a non-canonical purine NTP pyrophosphatase (KomB) and a SIR2 domain-containing protein (KomC)."}, {"notes": "Li et al. connect dITP-bound KomB to activation of KomC NADase activity within the Kongming KomBC effector complex.", "reference": "DOI:10.1038/s41467-026-74710-9", "snippet": "Binding of dITP to KomB initiates progressive conformational rearrangements within the filament, ultimately remodeling the filament into a distinct architecture in which KomC adopts an active conformation with NADase activity."}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "KomC NADase activation", "target": "NAD depletion-linked infected-cell death"}, {"description": "dITP-triggered NAD depletion and infected-cell death realize the Kongming system trait.", "edge_id": "edge-4", "evidence": [{"notes": "Zeng et al. place dITP upstream of an effector that depletes NAD and drives infected-cell death.", "reference": "DOI:10.1126/science.ads6055", "snippet": "The dITP signal activates a downstream effector to mediate depletion of cellular nicotinamide adenine dinucleotide (oxidized form), resulting in population-level defense through the death of infected cells."}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "NAD depletion-linked infected-cell death", "target": "Kongming system"}, {"description": "Kongming system possession is a phage-defense-system trait.", "edge_id": "edge-5", "evidence": [{"notes": "Zeng et al. describe the Science Kongming paper\u0027s antiphage system as a nucleobase-modification immune-signaling pathway.", "reference": "DOI:10.1126/science.ads6055", "snippet": "In this study, we reveal a bacterial antiphage system that mediates immune signaling through nucleobase modification."}, {"notes": "Li et al. describe dITP as a phage-infection-generated Kongming activation signal.", "reference": "DOI:10.1038/s41467-026-74710-9", "snippet": "The Kongming system is activated by an atypical signaling nucleotide, dITP, generated upon phage infection."}, {"notes": "The pinned DefenseFinder article registry maps the named Kongming system to the Zeng et al. Science paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| Kongming | 10\\.1126/science\\.ads6055 | Base-modified nucleotides mediate immune signaling in bacteria | "}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "Kongming system", "target": "phage defense system"}], "graph_id": "kongming_ditp_nadase_defense", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Production of deoxyinosine triphosphate immune messengers after phage infection.", "grounding": null, "id": "ditp_immune_signaling", "is_orphan": false, "label": "dITP immune signaling", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Activation of KomC NADase activity in the KomBC effector complex after dITP binding to KomB.", "grounding": null, "id": "komc_nadase_activation", "is_orphan": false, "label": "KomC NADase activation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "A Kongming anti-phage locus encoding dITP immune-signaling and KomBC effector functions.", "grounding": null, "id": "kongming_locus", "is_orphan": false, "label": "Kongming locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded Kongming phage-defense system.", "grounding": "traitmech:000501", "id": "kongming_system_trait", "is_orphan": false, "label": "Kongming system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Depletion of cellular NAD followed by death of infected cells during population-level defense.", "grounding": null, "id": "nad_depletion_cell_death", "is_orphan": false, "label": "NAD depletion-linked infected-cell death", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of one or more genome-encoded immune systems that inhibit bacteriophage infection.", "grounding": "traitmech:000209", "id": "phage_defense_system", "is_orphan": false, "label": "phage defense system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "The graph captures Kongming as a named dITP-signaling phage-defense system while leaving exact locus breadth, natural host breadth, phage nucleotide-kinase inputs, profile-to-component mapping, and DefenseFinder HMM/rules detection criteria unresolved.", "scope_status": "NONMECHANISTIC", "title": "Kongming loci activate dITP-linked NADase defense"}];
+  var graphs = [{"description": "Conservative system-level sketch linking a Kongming locus to phage-triggered dITP signaling, KomBC activation, NAD depletion, infected-cell death, and Kongming system possession.", "edges": [{"description": "Kongming loci mediate phage-triggered production of dITP immune messengers.", "evidence": [{"notes": "Zeng et al. describe the Science Kongming paper\u0027s antiphage system as a nucleobase-modification immune-signaling pathway.", "reference": "DOI:10.1126/science.ads6055", "snippet": "In this study, we reveal a bacterial antiphage system that mediates immune signaling through nucleobase modification."}, {"notes": "Zeng et al. connect phage-triggered Kongming immunity to system-dependent production of dITP immune messengers.", "reference": "DOI:10.1126/science.ads6055", "snippet": "Immunity is triggered by phage nucleotide kinases, which, combined with the system-encoded adenosine deaminase, produce deoxyinosine triphosphates (dITPs) as immune messengers."}, {"notes": "The pinned DefenseFinder article registry maps the named Kongming system to the Zeng et al. Science paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| Kongming | 10\\.1126/science\\.ads6055 | Base-modified nucleotides mediate immune signaling in bacteria | "}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "kongming_locus", "target": "ditp_immune_signaling"}, {"description": "dITP binding activates KomC NADase activity in the Kongming KomBC effector complex.", "evidence": [{"notes": "Li et al. describe dITP as a phage-infection-generated Kongming activation signal.", "reference": "DOI:10.1038/s41467-026-74710-9", "snippet": "The Kongming system is activated by an atypical signaling nucleotide, dITP, generated upon phage infection."}, {"notes": "Li et al. connect dITP-bound KomB to activation of KomC NADase activity within the Kongming KomBC effector complex.", "reference": "DOI:10.1038/s41467-026-74710-9", "snippet": "Binding of dITP to KomB initiates progressive conformational rearrangements within the filament, ultimately remodeling the filament into a distinct architecture in which KomC adopts an active conformation with NADase activity."}], "id": "edge-2", "is_orphan": false, "predicate": "activates", "predicate_id": "RO:0002213", "source": "ditp_immune_signaling", "target": "komc_nadase_activation"}, {"description": "KomBC effector activation mediates NAD depletion that can kill phage-infected cells.", "evidence": [{"notes": "Zeng et al. place dITP upstream of an effector that depletes NAD and drives infected-cell death.", "reference": "DOI:10.1126/science.ads6055", "snippet": "The dITP signal activates a downstream effector to mediate depletion of cellular nicotinamide adenine dinucleotide (oxidized form), resulting in population-level defense through the death of infected cells."}, {"notes": "Li et al. name the Kongming effector complex and its KomB and KomC components.", "reference": "DOI:10.1038/s41467-026-74710-9", "snippet": "One of them is the Kongming system, which includes an effector complex (KomBC), composed of a non-canonical purine NTP pyrophosphatase (KomB) and a SIR2 domain-containing protein (KomC)."}, {"notes": "Li et al. connect dITP-bound KomB to activation of KomC NADase activity within the Kongming KomBC effector complex.", "reference": "DOI:10.1038/s41467-026-74710-9", "snippet": "Binding of dITP to KomB initiates progressive conformational rearrangements within the filament, ultimately remodeling the filament into a distinct architecture in which KomC adopts an active conformation with NADase activity."}], "id": "edge-3", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "komc_nadase_activation", "target": "nad_depletion_cell_death"}, {"description": "dITP-triggered NAD depletion and infected-cell death realize the Kongming system trait.", "evidence": [{"notes": "Zeng et al. place dITP upstream of an effector that depletes NAD and drives infected-cell death.", "reference": "DOI:10.1126/science.ads6055", "snippet": "The dITP signal activates a downstream effector to mediate depletion of cellular nicotinamide adenine dinucleotide (oxidized form), resulting in population-level defense through the death of infected cells."}], "id": "edge-4", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "nad_depletion_cell_death", "target": "kongming_system_trait"}, {"description": "Kongming system possession is a phage-defense-system trait.", "evidence": [{"notes": "Zeng et al. describe the Science Kongming paper\u0027s antiphage system as a nucleobase-modification immune-signaling pathway.", "reference": "DOI:10.1126/science.ads6055", "snippet": "In this study, we reveal a bacterial antiphage system that mediates immune signaling through nucleobase modification."}, {"notes": "Li et al. describe dITP as a phage-infection-generated Kongming activation signal.", "reference": "DOI:10.1038/s41467-026-74710-9", "snippet": "The Kongming system is activated by an atypical signaling nucleotide, dITP, generated upon phage infection."}, {"notes": "The pinned DefenseFinder article registry maps the named Kongming system to the Zeng et al. Science paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| Kongming | 10\\.1126/science\\.ads6055 | Base-modified nucleotides mediate immune signaling in bacteria | "}], "id": "edge-5", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "kongming_system_trait", "target": "phage_defense_system"}], "evidence_rows": [{"description": "Kongming loci mediate phage-triggered production of dITP immune messengers.", "edge_id": "edge-1", "evidence": [{"notes": "Zeng et al. describe the Science Kongming paper\u0027s antiphage system as a nucleobase-modification immune-signaling pathway.", "reference": "DOI:10.1126/science.ads6055", "snippet": "In this study, we reveal a bacterial antiphage system that mediates immune signaling through nucleobase modification."}, {"notes": "Zeng et al. connect phage-triggered Kongming immunity to system-dependent production of dITP immune messengers.", "reference": "DOI:10.1126/science.ads6055", "snippet": "Immunity is triggered by phage nucleotide kinases, which, combined with the system-encoded adenosine deaminase, produce deoxyinosine triphosphates (dITPs) as immune messengers."}, {"notes": "The pinned DefenseFinder article registry maps the named Kongming system to the Zeng et al. Science paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| Kongming | 10\\.1126/science\\.ads6055 | Base-modified nucleotides mediate immune signaling in bacteria | "}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Kongming locus", "source_grounding": null, "target": "dITP immune signaling", "target_grounding": null}, {"description": "dITP binding activates KomC NADase activity in the Kongming KomBC effector complex.", "edge_id": "edge-2", "evidence": [{"notes": "Li et al. describe dITP as a phage-infection-generated Kongming activation signal.", "reference": "DOI:10.1038/s41467-026-74710-9", "snippet": "The Kongming system is activated by an atypical signaling nucleotide, dITP, generated upon phage infection."}, {"notes": "Li et al. connect dITP-bound KomB to activation of KomC NADase activity within the Kongming KomBC effector complex.", "reference": "DOI:10.1038/s41467-026-74710-9", "snippet": "Binding of dITP to KomB initiates progressive conformational rearrangements within the filament, ultimately remodeling the filament into a distinct architecture in which KomC adopts an active conformation with NADase activity."}], "predicate": "activates", "predicate_id": "RO:0002213", "source": "dITP immune signaling", "source_grounding": null, "target": "KomC NADase activation", "target_grounding": null}, {"description": "KomBC effector activation mediates NAD depletion that can kill phage-infected cells.", "edge_id": "edge-3", "evidence": [{"notes": "Zeng et al. place dITP upstream of an effector that depletes NAD and drives infected-cell death.", "reference": "DOI:10.1126/science.ads6055", "snippet": "The dITP signal activates a downstream effector to mediate depletion of cellular nicotinamide adenine dinucleotide (oxidized form), resulting in population-level defense through the death of infected cells."}, {"notes": "Li et al. name the Kongming effector complex and its KomB and KomC components.", "reference": "DOI:10.1038/s41467-026-74710-9", "snippet": "One of them is the Kongming system, which includes an effector complex (KomBC), composed of a non-canonical purine NTP pyrophosphatase (KomB) and a SIR2 domain-containing protein (KomC)."}, {"notes": "Li et al. connect dITP-bound KomB to activation of KomC NADase activity within the Kongming KomBC effector complex.", "reference": "DOI:10.1038/s41467-026-74710-9", "snippet": "Binding of dITP to KomB initiates progressive conformational rearrangements within the filament, ultimately remodeling the filament into a distinct architecture in which KomC adopts an active conformation with NADase activity."}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "KomC NADase activation", "source_grounding": null, "target": "NAD depletion-linked infected-cell death", "target_grounding": null}, {"description": "dITP-triggered NAD depletion and infected-cell death realize the Kongming system trait.", "edge_id": "edge-4", "evidence": [{"notes": "Zeng et al. place dITP upstream of an effector that depletes NAD and drives infected-cell death.", "reference": "DOI:10.1126/science.ads6055", "snippet": "The dITP signal activates a downstream effector to mediate depletion of cellular nicotinamide adenine dinucleotide (oxidized form), resulting in population-level defense through the death of infected cells."}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "NAD depletion-linked infected-cell death", "source_grounding": null, "target": "Kongming system", "target_grounding": "traitmech:000501"}, {"description": "Kongming system possession is a phage-defense-system trait.", "edge_id": "edge-5", "evidence": [{"notes": "Zeng et al. describe the Science Kongming paper\u0027s antiphage system as a nucleobase-modification immune-signaling pathway.", "reference": "DOI:10.1126/science.ads6055", "snippet": "In this study, we reveal a bacterial antiphage system that mediates immune signaling through nucleobase modification."}, {"notes": "Li et al. describe dITP as a phage-infection-generated Kongming activation signal.", "reference": "DOI:10.1038/s41467-026-74710-9", "snippet": "The Kongming system is activated by an atypical signaling nucleotide, dITP, generated upon phage infection."}, {"notes": "The pinned DefenseFinder article registry maps the named Kongming system to the Zeng et al. Science paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| Kongming | 10\\.1126/science\\.ads6055 | Base-modified nucleotides mediate immune signaling in bacteria | "}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "Kongming system", "source_grounding": "traitmech:000501", "target": "phage defense system", "target_grounding": "traitmech:000209"}], "graph_id": "kongming_ditp_nadase_defense", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Production of deoxyinosine triphosphate immune messengers after phage infection.", "grounding": null, "id": "ditp_immune_signaling", "is_orphan": false, "label": "dITP immune signaling", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Activation of KomC NADase activity in the KomBC effector complex after dITP binding to KomB.", "grounding": null, "id": "komc_nadase_activation", "is_orphan": false, "label": "KomC NADase activation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "A Kongming anti-phage locus encoding dITP immune-signaling and KomBC effector functions.", "grounding": null, "id": "kongming_locus", "is_orphan": false, "label": "Kongming locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded Kongming phage-defense system.", "grounding": "traitmech:000501", "id": "kongming_system_trait", "is_orphan": false, "label": "Kongming system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Depletion of cellular NAD followed by death of infected cells during population-level defense.", "grounding": null, "id": "nad_depletion_cell_death", "is_orphan": false, "label": "NAD depletion-linked infected-cell death", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of one or more genome-encoded immune systems that inhibit bacteriophage infection.", "grounding": "traitmech:000209", "id": "phage_defense_system", "is_orphan": false, "label": "phage defense system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "The graph captures Kongming as a named dITP-signaling phage-defense system while leaving exact locus breadth, natural host breadth, phage nucleotide-kinase inputs, profile-to-component mapping, and DefenseFinder HMM/rules detection criteria unresolved.", "scope_status": "NONMECHANISTIC", "title": "Kongming loci activate dITP-linked NADase defense"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -811,13 +901,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-09-30 22:05 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/environment.html">ENVIRONMENT</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/environment.html">ENVIRONMENT</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>NaCl optimum mid2</h1>
     <p class="curie"><code>METPO:1000467</code> · CLASS · REVIEWED</p>
 
@@ -79,9 +90,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>elevated NaCl</strong>
+
             <span class="edge-predicate">regulates</span>
             <strong>pronounced compatible-solute accumulation</strong>
-            <code>RO:0002211</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002211" rel="nofollow noreferrer"><code>RO:0002211</code></a>
             <p>Elevated NaCl drives substantial compatible-solute accumulation.</p>
             <ul>
 
@@ -96,9 +109,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>pronounced compatible-solute accumulation</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>NaCl optimum mid2</strong>
-            <code>METPO:2007700</code>
+            <a href="https://w3id.org/metpo/1000467" rel="nofollow noreferrer"><code>METPO:1000467</code></a>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>Pronounced compatible-solute accumulation yields a 3–8% NaCl-optimum setpoint.</p>
             <ul>
 
@@ -113,8 +128,10 @@
 
           <li id="pathograph-1-edge-3">
             <strong>NaCl optimum mid2</strong>
+            <a href="https://w3id.org/metpo/1000467" rel="nofollow noreferrer"><code>METPO:1000467</code></a>
             <span class="edge-predicate">is a</span>
             <strong>NaCl optimum</strong>
+            <a href="https://w3id.org/metpo/1000333" rel="nofollow noreferrer"><code>METPO:1000333</code></a>
             <code>rdfs:subClassOf</code>
             <p>NaCl optimum mid2 is a quantitative bin of the NaCl-optimum phenotype.</p>
             <ul>
@@ -130,8 +147,10 @@
 
           <li id="pathograph-1-edge-4">
             <strong>elevated NaCl</strong>
+
             <span class="edge-predicate">induces</span>
             <strong>ectoine biosynthesis module (ectABC)</strong>
+
 
             <p>Elevated salinity (&gt;3% NaCl) triggers the canonical ectoine biosynthesis pathway.</p>
             <ul>
@@ -147,8 +166,10 @@
 
           <li id="pathograph-1-edge-5">
             <strong>elevated NaCl</strong>
+
             <span class="edge-predicate">upregulates</span>
             <strong>ectoine biosynthesis module (ectABC)</strong>
+
 
             <p>Salt stress at ~6% w/v NaCl (within the 3-8% window) upregulates the ectoine biosynthesis module.</p>
             <ul>
@@ -164,9 +185,11 @@
 
           <li id="pathograph-1-edge-6">
             <strong>ectoine biosynthesis module (ectABC)</strong>
+
             <span class="edge-predicate">has output</span>
             <strong>ectoine</strong>
-            <code>RO:0002234</code>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:27592" rel="nofollow noreferrer"><code>CHEBI:27592</code></a>
+            <a href="http://purl.obolibrary.org/obo/RO_0002234" rel="nofollow noreferrer"><code>RO:0002234</code></a>
             <p>The ectABC pathway synthesizes the compatible solute ectoine.</p>
             <ul>
 
@@ -181,8 +204,10 @@
 
           <li id="pathograph-1-edge-7">
             <strong>pronounced compatible-solute accumulation</strong>
+
             <span class="edge-predicate">is a</span>
             <strong>compatible-solute strategy</strong>
+
             <code>rdfs:subClassOf</code>
             <p>Pronounced organic-osmolyte accumulation is an instance of the compatible-solute osmoadaptation strategy.</p>
             <ul>
@@ -198,8 +223,10 @@
 
           <li id="pathograph-1-edge-8">
             <strong>compatible-solute strategy</strong>
+
             <span class="edge-predicate">uses</span>
             <strong>ectoine</strong>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:27592" rel="nofollow noreferrer"><code>CHEBI:27592</code></a>
 
             <p>Compatible-solute osmoadaptation employs ectoine as an organic osmolyte.</p>
             <ul>
@@ -215,8 +242,10 @@
 
           <li id="pathograph-1-edge-9">
             <strong>compatible-solute strategy</strong>
+
             <span class="edge-predicate">uses</span>
             <strong>glycine betaine</strong>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:17750" rel="nofollow noreferrer"><code>CHEBI:17750</code></a>
 
             <p>Compatible-solute osmoadaptation employs glycine betaine as an organic osmolyte.</p>
             <ul>
@@ -232,8 +261,10 @@
 
           <li id="pathograph-1-edge-10">
             <strong>compatible-solute strategy</strong>
+
             <span class="edge-predicate">uses</span>
             <strong>L-proline</strong>
+
 
             <p>Compatible-solute osmoadaptation employs L-proline as an organic osmolyte.</p>
             <ul>
@@ -931,7 +962,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking pronounced compatible-solute accumulation at elevated NaCl to a 3\u20138% (w/v) NaCl-optimum (moderate halophile).", "edges": [{"description": "Elevated NaCl drives substantial compatible-solute accumulation.", "evidence": [{"notes": "Supports compatible-solute accumulation as the osmoadaptive response at elevated NaCl.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "synthesize organic osmotic solutes"}], "id": "edge-1", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "elevated_nacl", "target": "pronounced_compatible_solutes"}, {"description": "Pronounced compatible-solute accumulation yields a 3\u20138% NaCl-optimum setpoint.", "evidence": [{"notes": "Supports the 3\u20138% optimum as the moderate-halophile outcome.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "moderate halophile"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "pronounced_compatible_solutes", "target": "nacl_optimum_mid2_trait"}, {"description": "NaCl optimum mid2 is a quantitative bin of the NaCl-optimum phenotype.", "evidence": [{"notes": "Supports the 3\u20138% optimum as a value within the NaCl-optimum distribution.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "optimal NaCl"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "nacl_optimum_mid2_trait", "target": "nacl_optimum"}, {"description": "Elevated salinity (\u003e3% NaCl) triggers the canonical ectoine biosynthesis pathway.", "evidence": [{"notes": "Exposure to salt concentrations higher than 3% NaCl triggers biosynthesis and intracellular accumulation of ectoine as a major compatible solute (Zou et al. 2024).", "reference": "DOI:10.1128/aem.01905-23"}], "id": "edge-4", "is_orphan": false, "predicate": "induces", "predicate_id": null, "source": "elevated_nacl", "target": "ectoine_biosynthesis_module"}, {"description": "Salt stress at ~6% w/v NaCl (within the 3-8% window) upregulates the ectoine biosynthesis module.", "evidence": [{"notes": "Transcriptomics showed the ectoine biosynthesis module is upregulated under salt stress, with 60 g/L NaCl (~6% w/v, inside 3-8% window) optimal for growth (Chen et al. 2024).", "reference": "DOI:10.1186/s12934-024-02515-w"}], "id": "edge-5", "is_orphan": false, "predicate": "upregulates", "predicate_id": null, "source": "elevated_nacl", "target": "ectoine_biosynthesis_module"}, {"description": "The ectABC pathway synthesizes the compatible solute ectoine.", "evidence": [{"notes": "Biosynthesis and intracellular accumulation of ectoine as a major compatible solute via the ectoine pathway (Zou et al. 2024).", "reference": "DOI:10.1128/aem.01905-23"}], "id": "edge-6", "is_orphan": false, "predicate": "has output", "predicate_id": "RO:0002234", "source": "ectoine_biosynthesis_module", "target": "ectoine"}, {"description": "Pronounced organic-osmolyte accumulation is an instance of the compatible-solute osmoadaptation strategy.", "evidence": [{"notes": "The compatible-solute strategy accumulates small organic osmolytes including glycine, betaine, and ectoine (Neagu \u0026 Stancu 2025).", "reference": "DOI:10.3390/biotech14020049"}], "id": "edge-7", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "pronounced_compatible_solutes", "target": "compatible_solute_strategy"}, {"description": "Compatible-solute osmoadaptation employs ectoine as an organic osmolyte.", "evidence": [{"notes": "Many species naturally produce the osmolyte ectoine (plus hydroxyectoine, betaine, glycine, proline) (Coimbra et al. 2025).", "reference": "DOI:10.1186/s12934-025-02757-2"}], "id": "edge-8", "is_orphan": false, "predicate": "uses", "predicate_id": null, "source": "compatible_solute_strategy", "target": "ectoine"}, {"description": "Compatible-solute osmoadaptation employs glycine betaine as an organic osmolyte.", "evidence": [{"notes": "Identified compatible solutes include glycine, betaine, and ectoine (Neagu \u0026 Stancu 2025).", "reference": "DOI:10.3390/biotech14020049"}], "id": "edge-9", "is_orphan": false, "predicate": "uses", "predicate_id": null, "source": "compatible_solute_strategy", "target": "glycine_betaine"}, {"description": "Compatible-solute osmoadaptation employs L-proline as an organic osmolyte.", "evidence": [{"notes": "Many species naturally produce the osmolyte ectoine plus hydroxyectoine, betaine, glycine, proline (Coimbra et al. 2025).", "reference": "DOI:10.1186/s12934-025-02757-2"}], "id": "edge-10", "is_orphan": false, "predicate": "uses", "predicate_id": null, "source": "compatible_solute_strategy", "target": "l_proline"}], "evidence_rows": [{"description": "Elevated NaCl drives substantial compatible-solute accumulation.", "edge_id": "edge-1", "evidence": [{"notes": "Supports compatible-solute accumulation as the osmoadaptive response at elevated NaCl.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "synthesize organic osmotic solutes"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "elevated NaCl", "target": "pronounced compatible-solute accumulation"}, {"description": "Pronounced compatible-solute accumulation yields a 3\u20138% NaCl-optimum setpoint.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the 3\u20138% optimum as the moderate-halophile outcome.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "moderate halophile"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "pronounced compatible-solute accumulation", "target": "NaCl optimum mid2"}, {"description": "NaCl optimum mid2 is a quantitative bin of the NaCl-optimum phenotype.", "edge_id": "edge-3", "evidence": [{"notes": "Supports the 3\u20138% optimum as a value within the NaCl-optimum distribution.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "optimal NaCl"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "NaCl optimum mid2", "target": "NaCl optimum"}, {"description": "Elevated salinity (\u003e3% NaCl) triggers the canonical ectoine biosynthesis pathway.", "edge_id": "edge-4", "evidence": [{"notes": "Exposure to salt concentrations higher than 3% NaCl triggers biosynthesis and intracellular accumulation of ectoine as a major compatible solute (Zou et al. 2024).", "reference": "DOI:10.1128/aem.01905-23"}], "predicate": "induces", "predicate_id": null, "source": "elevated NaCl", "target": "ectoine biosynthesis module (ectABC)"}, {"description": "Salt stress at ~6% w/v NaCl (within the 3-8% window) upregulates the ectoine biosynthesis module.", "edge_id": "edge-5", "evidence": [{"notes": "Transcriptomics showed the ectoine biosynthesis module is upregulated under salt stress, with 60 g/L NaCl (~6% w/v, inside 3-8% window) optimal for growth (Chen et al. 2024).", "reference": "DOI:10.1186/s12934-024-02515-w"}], "predicate": "upregulates", "predicate_id": null, "source": "elevated NaCl", "target": "ectoine biosynthesis module (ectABC)"}, {"description": "The ectABC pathway synthesizes the compatible solute ectoine.", "edge_id": "edge-6", "evidence": [{"notes": "Biosynthesis and intracellular accumulation of ectoine as a major compatible solute via the ectoine pathway (Zou et al. 2024).", "reference": "DOI:10.1128/aem.01905-23"}], "predicate": "has output", "predicate_id": "RO:0002234", "source": "ectoine biosynthesis module (ectABC)", "target": "ectoine"}, {"description": "Pronounced organic-osmolyte accumulation is an instance of the compatible-solute osmoadaptation strategy.", "edge_id": "edge-7", "evidence": [{"notes": "The compatible-solute strategy accumulates small organic osmolytes including glycine, betaine, and ectoine (Neagu \u0026 Stancu 2025).", "reference": "DOI:10.3390/biotech14020049"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "pronounced compatible-solute accumulation", "target": "compatible-solute strategy"}, {"description": "Compatible-solute osmoadaptation employs ectoine as an organic osmolyte.", "edge_id": "edge-8", "evidence": [{"notes": "Many species naturally produce the osmolyte ectoine (plus hydroxyectoine, betaine, glycine, proline) (Coimbra et al. 2025).", "reference": "DOI:10.1186/s12934-025-02757-2"}], "predicate": "uses", "predicate_id": null, "source": "compatible-solute strategy", "target": "ectoine"}, {"description": "Compatible-solute osmoadaptation employs glycine betaine as an organic osmolyte.", "edge_id": "edge-9", "evidence": [{"notes": "Identified compatible solutes include glycine, betaine, and ectoine (Neagu \u0026 Stancu 2025).", "reference": "DOI:10.3390/biotech14020049"}], "predicate": "uses", "predicate_id": null, "source": "compatible-solute strategy", "target": "glycine betaine"}, {"description": "Compatible-solute osmoadaptation employs L-proline as an organic osmolyte.", "edge_id": "edge-10", "evidence": [{"notes": "Many species naturally produce the osmolyte ectoine plus hydroxyectoine, betaine, glycine, proline (Coimbra et al. 2025).", "reference": "DOI:10.1186/s12934-025-02757-2"}], "predicate": "uses", "predicate_id": null, "source": "compatible-solute strategy", "target": "L-proline"}], "graph_id": "nacl_optimum_mid2_moderate_halophile", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Osmoadaptation strategy buffering osmotic stress via accumulation of small organic osmolytes.", "grounding": null, "id": "compatible_solute_strategy", "is_orphan": false, "label": "compatible-solute strategy", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Major organic compatible solute (CHEBI:22563) accumulated during osmoadaptation.", "grounding": "CHEBI:27592", "id": "ectoine", "is_orphan": false, "label": "ectoine", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#e0e7ff", "description": "Canonical ectABC (ectA/ectB/ectC) pathway producing the compatible solute ectoine.", "grounding": null, "id": "ectoine_biosynthesis_module", "is_orphan": false, "label": "ectoine biosynthesis module (ectABC)", "node_type": "PATHWAY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "External NaCl ~3\u20138% w/v, typical of saline lakes and salt marshes.", "grounding": null, "id": "elevated_nacl", "is_orphan": false, "label": "elevated NaCl", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Organic compatible solute (CHEBI:17750) used in compatible-solute osmoadaptation.", "grounding": "CHEBI:17750", "id": "glycine_betaine", "is_orphan": false, "label": "glycine betaine", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Organic compatible solute (CHEBI:26271) used in compatible-solute osmoadaptation.", "grounding": null, "id": "l_proline", "is_orphan": false, "label": "L-proline", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "NaCl concentration supporting maximal growth.", "grounding": "METPO:1000333", "id": "nacl_optimum", "is_orphan": false, "label": "NaCl optimum", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "NaCl optimum approximately 3\u20138% w/v.", "grounding": "METPO:1000467", "id": "nacl_optimum_mid2_trait", "is_orphan": false, "label": "NaCl optimum mid2", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Substantial accumulation of organic osmolytes (ectoine, glycine betaine) under moderately hypersaline conditions.", "grounding": null, "id": "pronounced_compatible_solutes", "is_orphan": false, "label": "pronounced compatible-solute accumulation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This record is a quantitative measurement, interval, or bin in the environmental phenotype hierarchy; a token protein example would misrepresent the measured value as one inherited molecular mechanism.", "scope_status": "NONMECHANISTIC", "title": "NaCl-optimum-mid2 moderate-halophile setpoint"}];
+  var graphs = [{"description": "DOI-backed graph linking pronounced compatible-solute accumulation at elevated NaCl to a 3\u20138% (w/v) NaCl-optimum (moderate halophile).", "edges": [{"description": "Elevated NaCl drives substantial compatible-solute accumulation.", "evidence": [{"notes": "Supports compatible-solute accumulation as the osmoadaptive response at elevated NaCl.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "synthesize organic osmotic solutes"}], "id": "edge-1", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "elevated_nacl", "target": "pronounced_compatible_solutes"}, {"description": "Pronounced compatible-solute accumulation yields a 3\u20138% NaCl-optimum setpoint.", "evidence": [{"notes": "Supports the 3\u20138% optimum as the moderate-halophile outcome.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "moderate halophile"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "pronounced_compatible_solutes", "target": "nacl_optimum_mid2_trait"}, {"description": "NaCl optimum mid2 is a quantitative bin of the NaCl-optimum phenotype.", "evidence": [{"notes": "Supports the 3\u20138% optimum as a value within the NaCl-optimum distribution.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "optimal NaCl"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "nacl_optimum_mid2_trait", "target": "nacl_optimum"}, {"description": "Elevated salinity (\u003e3% NaCl) triggers the canonical ectoine biosynthesis pathway.", "evidence": [{"notes": "Exposure to salt concentrations higher than 3% NaCl triggers biosynthesis and intracellular accumulation of ectoine as a major compatible solute (Zou et al. 2024).", "reference": "DOI:10.1128/aem.01905-23"}], "id": "edge-4", "is_orphan": false, "predicate": "induces", "predicate_id": null, "source": "elevated_nacl", "target": "ectoine_biosynthesis_module"}, {"description": "Salt stress at ~6% w/v NaCl (within the 3-8% window) upregulates the ectoine biosynthesis module.", "evidence": [{"notes": "Transcriptomics showed the ectoine biosynthesis module is upregulated under salt stress, with 60 g/L NaCl (~6% w/v, inside 3-8% window) optimal for growth (Chen et al. 2024).", "reference": "DOI:10.1186/s12934-024-02515-w"}], "id": "edge-5", "is_orphan": false, "predicate": "upregulates", "predicate_id": null, "source": "elevated_nacl", "target": "ectoine_biosynthesis_module"}, {"description": "The ectABC pathway synthesizes the compatible solute ectoine.", "evidence": [{"notes": "Biosynthesis and intracellular accumulation of ectoine as a major compatible solute via the ectoine pathway (Zou et al. 2024).", "reference": "DOI:10.1128/aem.01905-23"}], "id": "edge-6", "is_orphan": false, "predicate": "has output", "predicate_id": "RO:0002234", "source": "ectoine_biosynthesis_module", "target": "ectoine"}, {"description": "Pronounced organic-osmolyte accumulation is an instance of the compatible-solute osmoadaptation strategy.", "evidence": [{"notes": "The compatible-solute strategy accumulates small organic osmolytes including glycine, betaine, and ectoine (Neagu \u0026 Stancu 2025).", "reference": "DOI:10.3390/biotech14020049"}], "id": "edge-7", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "pronounced_compatible_solutes", "target": "compatible_solute_strategy"}, {"description": "Compatible-solute osmoadaptation employs ectoine as an organic osmolyte.", "evidence": [{"notes": "Many species naturally produce the osmolyte ectoine (plus hydroxyectoine, betaine, glycine, proline) (Coimbra et al. 2025).", "reference": "DOI:10.1186/s12934-025-02757-2"}], "id": "edge-8", "is_orphan": false, "predicate": "uses", "predicate_id": null, "source": "compatible_solute_strategy", "target": "ectoine"}, {"description": "Compatible-solute osmoadaptation employs glycine betaine as an organic osmolyte.", "evidence": [{"notes": "Identified compatible solutes include glycine, betaine, and ectoine (Neagu \u0026 Stancu 2025).", "reference": "DOI:10.3390/biotech14020049"}], "id": "edge-9", "is_orphan": false, "predicate": "uses", "predicate_id": null, "source": "compatible_solute_strategy", "target": "glycine_betaine"}, {"description": "Compatible-solute osmoadaptation employs L-proline as an organic osmolyte.", "evidence": [{"notes": "Many species naturally produce the osmolyte ectoine plus hydroxyectoine, betaine, glycine, proline (Coimbra et al. 2025).", "reference": "DOI:10.1186/s12934-025-02757-2"}], "id": "edge-10", "is_orphan": false, "predicate": "uses", "predicate_id": null, "source": "compatible_solute_strategy", "target": "l_proline"}], "evidence_rows": [{"description": "Elevated NaCl drives substantial compatible-solute accumulation.", "edge_id": "edge-1", "evidence": [{"notes": "Supports compatible-solute accumulation as the osmoadaptive response at elevated NaCl.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "synthesize organic osmotic solutes"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "elevated NaCl", "source_grounding": null, "target": "pronounced compatible-solute accumulation", "target_grounding": null}, {"description": "Pronounced compatible-solute accumulation yields a 3\u20138% NaCl-optimum setpoint.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the 3\u20138% optimum as the moderate-halophile outcome.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "moderate halophile"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "pronounced compatible-solute accumulation", "source_grounding": null, "target": "NaCl optimum mid2", "target_grounding": "METPO:1000467"}, {"description": "NaCl optimum mid2 is a quantitative bin of the NaCl-optimum phenotype.", "edge_id": "edge-3", "evidence": [{"notes": "Supports the 3\u20138% optimum as a value within the NaCl-optimum distribution.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "optimal NaCl"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "NaCl optimum mid2", "source_grounding": "METPO:1000467", "target": "NaCl optimum", "target_grounding": "METPO:1000333"}, {"description": "Elevated salinity (\u003e3% NaCl) triggers the canonical ectoine biosynthesis pathway.", "edge_id": "edge-4", "evidence": [{"notes": "Exposure to salt concentrations higher than 3% NaCl triggers biosynthesis and intracellular accumulation of ectoine as a major compatible solute (Zou et al. 2024).", "reference": "DOI:10.1128/aem.01905-23"}], "predicate": "induces", "predicate_id": null, "source": "elevated NaCl", "source_grounding": null, "target": "ectoine biosynthesis module (ectABC)", "target_grounding": null}, {"description": "Salt stress at ~6% w/v NaCl (within the 3-8% window) upregulates the ectoine biosynthesis module.", "edge_id": "edge-5", "evidence": [{"notes": "Transcriptomics showed the ectoine biosynthesis module is upregulated under salt stress, with 60 g/L NaCl (~6% w/v, inside 3-8% window) optimal for growth (Chen et al. 2024).", "reference": "DOI:10.1186/s12934-024-02515-w"}], "predicate": "upregulates", "predicate_id": null, "source": "elevated NaCl", "source_grounding": null, "target": "ectoine biosynthesis module (ectABC)", "target_grounding": null}, {"description": "The ectABC pathway synthesizes the compatible solute ectoine.", "edge_id": "edge-6", "evidence": [{"notes": "Biosynthesis and intracellular accumulation of ectoine as a major compatible solute via the ectoine pathway (Zou et al. 2024).", "reference": "DOI:10.1128/aem.01905-23"}], "predicate": "has output", "predicate_id": "RO:0002234", "source": "ectoine biosynthesis module (ectABC)", "source_grounding": null, "target": "ectoine", "target_grounding": "CHEBI:27592"}, {"description": "Pronounced organic-osmolyte accumulation is an instance of the compatible-solute osmoadaptation strategy.", "edge_id": "edge-7", "evidence": [{"notes": "The compatible-solute strategy accumulates small organic osmolytes including glycine, betaine, and ectoine (Neagu \u0026 Stancu 2025).", "reference": "DOI:10.3390/biotech14020049"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "pronounced compatible-solute accumulation", "source_grounding": null, "target": "compatible-solute strategy", "target_grounding": null}, {"description": "Compatible-solute osmoadaptation employs ectoine as an organic osmolyte.", "edge_id": "edge-8", "evidence": [{"notes": "Many species naturally produce the osmolyte ectoine (plus hydroxyectoine, betaine, glycine, proline) (Coimbra et al. 2025).", "reference": "DOI:10.1186/s12934-025-02757-2"}], "predicate": "uses", "predicate_id": null, "source": "compatible-solute strategy", "source_grounding": null, "target": "ectoine", "target_grounding": "CHEBI:27592"}, {"description": "Compatible-solute osmoadaptation employs glycine betaine as an organic osmolyte.", "edge_id": "edge-9", "evidence": [{"notes": "Identified compatible solutes include glycine, betaine, and ectoine (Neagu \u0026 Stancu 2025).", "reference": "DOI:10.3390/biotech14020049"}], "predicate": "uses", "predicate_id": null, "source": "compatible-solute strategy", "source_grounding": null, "target": "glycine betaine", "target_grounding": "CHEBI:17750"}, {"description": "Compatible-solute osmoadaptation employs L-proline as an organic osmolyte.", "edge_id": "edge-10", "evidence": [{"notes": "Many species naturally produce the osmolyte ectoine plus hydroxyectoine, betaine, glycine, proline (Coimbra et al. 2025).", "reference": "DOI:10.1186/s12934-025-02757-2"}], "predicate": "uses", "predicate_id": null, "source": "compatible-solute strategy", "source_grounding": null, "target": "L-proline", "target_grounding": null}], "graph_id": "nacl_optimum_mid2_moderate_halophile", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Osmoadaptation strategy buffering osmotic stress via accumulation of small organic osmolytes.", "grounding": null, "id": "compatible_solute_strategy", "is_orphan": false, "label": "compatible-solute strategy", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Major organic compatible solute (CHEBI:22563) accumulated during osmoadaptation.", "grounding": "CHEBI:27592", "id": "ectoine", "is_orphan": false, "label": "ectoine", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#e0e7ff", "description": "Canonical ectABC (ectA/ectB/ectC) pathway producing the compatible solute ectoine.", "grounding": null, "id": "ectoine_biosynthesis_module", "is_orphan": false, "label": "ectoine biosynthesis module (ectABC)", "node_type": "PATHWAY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "External NaCl ~3\u20138% w/v, typical of saline lakes and salt marshes.", "grounding": null, "id": "elevated_nacl", "is_orphan": false, "label": "elevated NaCl", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Organic compatible solute (CHEBI:17750) used in compatible-solute osmoadaptation.", "grounding": "CHEBI:17750", "id": "glycine_betaine", "is_orphan": false, "label": "glycine betaine", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Organic compatible solute (CHEBI:26271) used in compatible-solute osmoadaptation.", "grounding": null, "id": "l_proline", "is_orphan": false, "label": "L-proline", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "NaCl concentration supporting maximal growth.", "grounding": "METPO:1000333", "id": "nacl_optimum", "is_orphan": false, "label": "NaCl optimum", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "NaCl optimum approximately 3\u20138% w/v.", "grounding": "METPO:1000467", "id": "nacl_optimum_mid2_trait", "is_orphan": false, "label": "NaCl optimum mid2", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Substantial accumulation of organic osmolytes (ectoine, glycine betaine) under moderately hypersaline conditions.", "grounding": null, "id": "pronounced_compatible_solutes", "is_orphan": false, "label": "pronounced compatible-solute accumulation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This record is a quantitative measurement, interval, or bin in the environmental phenotype hierarchy; a token protein example would misrepresent the measured value as one inherited molecular mechanism.", "scope_status": "NONMECHANISTIC", "title": "NaCl-optimum-mid2 moderate-halophile setpoint"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -951,13 +982,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-08-31 04:43 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/environment.html">ENVIRONMENT</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/environment.html">ENVIRONMENT</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>cadmium tolerant</h1>
     <p class="curie"><code>traitmech:000013</code> · CLASS · REVIEWED</p>
 
@@ -85,9 +96,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>cadmium(2+) ion</strong>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:48775" rel="nofollow noreferrer"><code>CHEBI:48775</code></a>
             <span class="edge-predicate">challenges</span>
             <strong>cadmium tolerant</strong>
-            <code>METPO:2007406</code>
+            <code>traitmech:000013</code>
+            <a href="https://w3id.org/metpo/2007406" rel="nofollow noreferrer"><code>METPO:2007406</code></a>
             <p>Cytoplasmic cadmium is the toxic challenge the trait counters.</p>
             <ul>
 
@@ -102,9 +115,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>czc cation-efflux system</strong>
+
             <span class="edge-predicate">enables</span>
             <strong>cadmium ion transmembrane transport</strong>
-            <code>RO:0002327</code>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0030001" rel="nofollow noreferrer"><code>GO:0030001</code></a>
+            <a href="http://purl.obolibrary.org/obo/RO_0002327" rel="nofollow noreferrer"><code>RO:0002327</code></a>
             <p>CzcP exports cadmium together with zinc and cobalt cations.</p>
             <ul>
 
@@ -119,9 +134,11 @@
 
           <li id="pathograph-1-edge-3">
             <strong>cadmium ion transmembrane transport</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0030001" rel="nofollow noreferrer"><code>GO:0030001</code></a>
             <span class="edge-predicate">mitigates</span>
             <strong>cadmium(2+) ion</strong>
-            <code>METPO:2007407</code>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:48775" rel="nofollow noreferrer"><code>CHEBI:48775</code></a>
+            <a href="https://w3id.org/metpo/2007407" rel="nofollow noreferrer"><code>METPO:2007407</code></a>
             <p>Czc-mediated export depletes the cytoplasmic cadmium pool.</p>
             <ul>
 
@@ -136,9 +153,11 @@
 
           <li id="pathograph-1-edge-4">
             <strong>metallothionein / thiol-rich metal-binding proteins</strong>
+
             <span class="edge-predicate">enables</span>
             <strong>cadmium ion sequestration</strong>
-            <code>RO:0002327</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002327" rel="nofollow noreferrer"><code>RO:0002327</code></a>
             <p>Thiol-rich metallothioneins bind and sequester cytoplasmic Cd(2+).</p>
             <ul>
 
@@ -153,9 +172,11 @@
 
           <li id="pathograph-1-edge-5">
             <strong>cadmium ion sequestration</strong>
+
             <span class="edge-predicate">mitigates</span>
             <strong>cadmium(2+) ion</strong>
-            <code>METPO:2007407</code>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:48775" rel="nofollow noreferrer"><code>CHEBI:48775</code></a>
+            <a href="https://w3id.org/metpo/2007407" rel="nofollow noreferrer"><code>METPO:2007407</code></a>
             <p>Sequestration of cadmium lowers the free toxic cytoplasmic Cd(2+) pool.</p>
             <ul>
 
@@ -170,9 +191,11 @@
 
           <li id="pathograph-1-edge-6">
             <strong>CadA P-type (P1B) ATPase</strong>
+
             <span class="edge-predicate">enables</span>
             <strong>cadmium ion transmembrane transport</strong>
-            <code>RO:0002327</code>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0030001" rel="nofollow noreferrer"><code>GO:0030001</code></a>
+            <a href="http://purl.obolibrary.org/obo/RO_0002327" rel="nofollow noreferrer"><code>RO:0002327</code></a>
             <p>CadA P1B-type ATPase uses ATP to pump Cd(II) from cytoplasm to periplasm.</p>
             <ul>
 
@@ -187,8 +210,10 @@
 
           <li id="pathograph-1-edge-7">
             <strong>zinc(2+) ion</strong>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:29105" rel="nofollow noreferrer"><code>CHEBI:29105</code></a>
             <span class="edge-predicate">induces</span>
             <strong>czc cation-efflux system</strong>
+
 
             <p>Zinc cross-induces expression of the czc cation-efflux cadmium-resistance program.</p>
             <ul>
@@ -314,20 +339,8 @@
       <ul class="nn-list">
 
         <li>
-          <span class="nn-cat">physiology</span>
-          <a href="../../traits/physiology/quorum_sensing.html">quorum sensing</a>
-          <span class="sim">1.000</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/sulfur_globule.html">sulfur globule</a>
-          <span class="sim">1.000</span>
-        </li>
-
-        <li>
           <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/cobalt_tolerant.html">cobalt tolerant</a>
+          <a href="../../traits/environment/desiccation_tolerant.html">desiccation tolerant</a>
           <span class="sim">1.000</span>
         </li>
 
@@ -339,25 +352,37 @@
 
         <li>
           <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/desiccation_tolerant.html">desiccation tolerant</a>
+          <a href="../../traits/environment/cobalt_tolerant.html">cobalt tolerant</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/piezophilic.html">piezophilic</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/cystine_arylamidase_activity.html">cystine arylamidase activity</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/obligately_piezophilic.html">obligately piezophilic</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/coagulase_activity.html">coagulase activity</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/gas_vesicle.html">gas vesicle</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/chemotropism.html">chemotropism</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/chemotaxis.html">chemotaxis</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/cellular_rejuvenation.html">functional cellular rejuvenation</a>
           <span class="sim">1.000</span>
         </li>
 
@@ -914,7 +939,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking the cobalt-zinc-cadmium (czc) efflux determinant to cytoplasmic cadmium detoxification.", "edges": [{"description": "Cytoplasmic cadmium is the toxic challenge the trait counters.", "evidence": [{"notes": "Cupriavidus metallidurans BS1 tolerates Cd(2+) to a MIC of 2.5 mM.", "reference": "DOI:10.3389/fmicb.2020.00047"}], "id": "edge-1", "is_orphan": false, "predicate": "challenges", "predicate_id": "METPO:2007406", "source": "cadmium_ion", "target": "cadmium_tolerant_trait"}, {"description": "CzcP exports cadmium together with zinc and cobalt cations.", "evidence": [{"notes": "CzcP exports transition metals Zn(2+), Cd(2+), and Co(2+).", "reference": "DOI:10.1111/j.1365-2958.2009.06792.x"}], "id": "edge-2", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "czc_efflux_system", "target": "cadmium_export"}, {"description": "Czc-mediated export depletes the cytoplasmic cadmium pool.", "evidence": [{"notes": "The czc efflux system of C. metallidurans confers cadmium resistance.", "reference": "DOI:10.1111/j.1365-2958.2009.06792.x"}], "id": "edge-3", "is_orphan": false, "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "cadmium_export", "target": "cadmium_ion"}, {"description": "Thiol-rich metallothioneins bind and sequester cytoplasmic Cd(2+).", "evidence": [{"notes": "Metallothioneins bind Cd(II); thiol-rich proteins mediate cadmium sequestration as a microbial resistance mechanism.", "reference": "DOI:10.1007/s40201-023-00887-6"}], "id": "edge-4", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "metallothionein_proteins", "target": "cadmium_sequestration"}, {"description": "Sequestration of cadmium lowers the free toxic cytoplasmic Cd(2+) pool.", "evidence": [{"notes": "Metallothionein/thiol-rich sequestration removes free cytoplasmic Cd(II) as a detoxification mechanism.", "reference": "DOI:10.1007/s40201-023-00887-6"}], "id": "edge-5", "is_orphan": false, "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "cadmium_sequestration", "target": "cadmium_ion"}, {"description": "CadA P1B-type ATPase uses ATP to pump Cd(II) from cytoplasm to periplasm.", "evidence": [{"notes": "P-type (P1B) ATPases (CadA) use ATP to pump Cd(II) from cytoplasm to periplasm.", "reference": "DOI:10.1007/s40201-023-00887-6"}], "id": "edge-6", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "cada_ptype_atpase", "target": "cadmium_export"}, {"description": "Zinc cross-induces expression of the czc cation-efflux cadmium-resistance program.", "evidence": [{"notes": "czc expression is induced by zinc; zinc exposure enhances cadmium resistance via the efflux program.", "reference": "DOI:10.1007/s40201-023-00887-6"}], "id": "edge-7", "is_orphan": false, "predicate": "induces", "predicate_id": null, "source": "zinc_ion", "target": "czc_efflux_system"}], "evidence_rows": [{"description": "Cytoplasmic cadmium is the toxic challenge the trait counters.", "edge_id": "edge-1", "evidence": [{"notes": "Cupriavidus metallidurans BS1 tolerates Cd(2+) to a MIC of 2.5 mM.", "reference": "DOI:10.3389/fmicb.2020.00047"}], "predicate": "challenges", "predicate_id": "METPO:2007406", "source": "cadmium(2+) ion", "target": "cadmium tolerant"}, {"description": "CzcP exports cadmium together with zinc and cobalt cations.", "edge_id": "edge-2", "evidence": [{"notes": "CzcP exports transition metals Zn(2+), Cd(2+), and Co(2+).", "reference": "DOI:10.1111/j.1365-2958.2009.06792.x"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "czc cation-efflux system", "target": "cadmium ion transmembrane transport"}, {"description": "Czc-mediated export depletes the cytoplasmic cadmium pool.", "edge_id": "edge-3", "evidence": [{"notes": "The czc efflux system of C. metallidurans confers cadmium resistance.", "reference": "DOI:10.1111/j.1365-2958.2009.06792.x"}], "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "cadmium ion transmembrane transport", "target": "cadmium(2+) ion"}, {"description": "Thiol-rich metallothioneins bind and sequester cytoplasmic Cd(2+).", "edge_id": "edge-4", "evidence": [{"notes": "Metallothioneins bind Cd(II); thiol-rich proteins mediate cadmium sequestration as a microbial resistance mechanism.", "reference": "DOI:10.1007/s40201-023-00887-6"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "metallothionein / thiol-rich metal-binding proteins", "target": "cadmium ion sequestration"}, {"description": "Sequestration of cadmium lowers the free toxic cytoplasmic Cd(2+) pool.", "edge_id": "edge-5", "evidence": [{"notes": "Metallothionein/thiol-rich sequestration removes free cytoplasmic Cd(II) as a detoxification mechanism.", "reference": "DOI:10.1007/s40201-023-00887-6"}], "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "cadmium ion sequestration", "target": "cadmium(2+) ion"}, {"description": "CadA P1B-type ATPase uses ATP to pump Cd(II) from cytoplasm to periplasm.", "edge_id": "edge-6", "evidence": [{"notes": "P-type (P1B) ATPases (CadA) use ATP to pump Cd(II) from cytoplasm to periplasm.", "reference": "DOI:10.1007/s40201-023-00887-6"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "CadA P-type (P1B) ATPase", "target": "cadmium ion transmembrane transport"}, {"description": "Zinc cross-induces expression of the czc cation-efflux cadmium-resistance program.", "edge_id": "edge-7", "evidence": [{"notes": "czc expression is induced by zinc; zinc exposure enhances cadmium resistance via the efflux program.", "reference": "DOI:10.1007/s40201-023-00887-6"}], "predicate": "induces", "predicate_id": null, "source": "zinc(2+) ion", "target": "czc cation-efflux system"}], "graph_id": "cadmium_tolerance_czc_efflux", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "ATP-driven P1B-type efflux ATPase pumping Cd(II) from cytoplasm to periplasm.", "grounding": null, "id": "cada_ptype_atpase", "is_orphan": false, "label": "CadA P-type (P1B) ATPase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Active export of Cd(2+) across the cytoplasmic membrane.", "grounding": "GO:0030001", "id": "cadmium_export", "is_orphan": false, "label": "cadmium ion transmembrane transport", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Toxic transition-metal cation accumulating in the cytoplasm.", "grounding": "CHEBI:48775", "id": "cadmium_ion", "is_orphan": false, "label": "cadmium(2+) ion", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Intracellular binding and sequestration of cadmium ions, lowering free cytoplasmic Cd(2+).", "grounding": null, "id": "cadmium_sequestration", "is_orphan": false, "label": "cadmium ion sequestration", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Capacity to grow at elevated Cd(2+) concentrations.", "grounding": "traitmech:000013", "id": "cadmium_tolerant_trait", "is_orphan": false, "label": "cadmium tolerant", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "CzcCBA/CzcP machinery exporting Cd, Zn, and Co cations.", "grounding": null, "id": "czc_efflux_system", "is_orphan": false, "label": "czc cation-efflux system", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 153, "evidence": [{"notes": "The cited source supports the represented protein-to-trait branch; UniProt verifies this current strain-matched protein entry.", "reference": "DOI:10.1111/j.1365-2958.2009.06792.x", "snippet": "Czc machinery exports cadmium, zinc, and cobalt"}], "gene_symbol": "czcA", "protein_label": "Cobalt-zinc-cadmium resistance protein CzcA", "proteome_id": "UP000002429", "retrieved_on": "2026-08-25", "role": "CzcA is the inner-membrane transporter component of the CH34 CzcCBA pump exporting cadmium, zinc, and cobalt.", "sequence_version": 3, "taxon_id": "NCBITaxon:266264", "taxon_label": "Cupriavidus metallidurans CH34", "uniprot_id": "UniProtKB:P13511"}], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Cysteine-rich proteins that bind and sequester cytoplasmic Cd(2+).", "grounding": null, "id": "metallothionein_proteins", "is_orphan": false, "label": "metallothionein / thiol-rich metal-binding proteins", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Divalent metal cation that cross-induces the czc cadmium-resistance program.", "grounding": "CHEBI:29105", "id": "zinc_ion", "is_orphan": false, "label": "zinc(2+) ion", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 153, "evidence": [{"notes": "The cited source supports the represented protein-to-trait branch; UniProt verifies this current strain-matched protein entry.", "reference": "DOI:10.1111/j.1365-2958.2009.06792.x", "snippet": "Czc machinery exports cadmium, zinc, and cobalt"}], "gene_symbol": "czcA", "node_id": "czc_efflux_system", "node_label": "czc cation-efflux system", "protein_label": "Cobalt-zinc-cadmium resistance protein CzcA", "proteome_id": "UP000002429", "retrieved_on": "2026-08-25", "role": "CzcA is the inner-membrane transporter component of the CH34 CzcCBA pump exporting cadmium, zinc, and cobalt.", "sequence_version": 3, "taxon_id": "NCBITaxon:266264", "taxon_label": "Cupriavidus metallidurans CH34", "uniprot_id": "UniProtKB:P13511"}], "scope_notes": "The taxon-matched protein example anchors one experimentally supported causal branch; it is not presented as a universal mechanism for every taxon or every contextual branch in this graph.", "scope_status": "MECHANISTIC", "title": "Cadmium tolerance via czc cation-efflux system"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking the cobalt-zinc-cadmium (czc) efflux determinant to cytoplasmic cadmium detoxification.", "edges": [{"description": "Cytoplasmic cadmium is the toxic challenge the trait counters.", "evidence": [{"notes": "Cupriavidus metallidurans BS1 tolerates Cd(2+) to a MIC of 2.5 mM.", "reference": "DOI:10.3389/fmicb.2020.00047"}], "id": "edge-1", "is_orphan": false, "predicate": "challenges", "predicate_id": "METPO:2007406", "source": "cadmium_ion", "target": "cadmium_tolerant_trait"}, {"description": "CzcP exports cadmium together with zinc and cobalt cations.", "evidence": [{"notes": "CzcP exports transition metals Zn(2+), Cd(2+), and Co(2+).", "reference": "DOI:10.1111/j.1365-2958.2009.06792.x"}], "id": "edge-2", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "czc_efflux_system", "target": "cadmium_export"}, {"description": "Czc-mediated export depletes the cytoplasmic cadmium pool.", "evidence": [{"notes": "The czc efflux system of C. metallidurans confers cadmium resistance.", "reference": "DOI:10.1111/j.1365-2958.2009.06792.x"}], "id": "edge-3", "is_orphan": false, "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "cadmium_export", "target": "cadmium_ion"}, {"description": "Thiol-rich metallothioneins bind and sequester cytoplasmic Cd(2+).", "evidence": [{"notes": "Metallothioneins bind Cd(II); thiol-rich proteins mediate cadmium sequestration as a microbial resistance mechanism.", "reference": "DOI:10.1007/s40201-023-00887-6"}], "id": "edge-4", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "metallothionein_proteins", "target": "cadmium_sequestration"}, {"description": "Sequestration of cadmium lowers the free toxic cytoplasmic Cd(2+) pool.", "evidence": [{"notes": "Metallothionein/thiol-rich sequestration removes free cytoplasmic Cd(II) as a detoxification mechanism.", "reference": "DOI:10.1007/s40201-023-00887-6"}], "id": "edge-5", "is_orphan": false, "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "cadmium_sequestration", "target": "cadmium_ion"}, {"description": "CadA P1B-type ATPase uses ATP to pump Cd(II) from cytoplasm to periplasm.", "evidence": [{"notes": "P-type (P1B) ATPases (CadA) use ATP to pump Cd(II) from cytoplasm to periplasm.", "reference": "DOI:10.1007/s40201-023-00887-6"}], "id": "edge-6", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "cada_ptype_atpase", "target": "cadmium_export"}, {"description": "Zinc cross-induces expression of the czc cation-efflux cadmium-resistance program.", "evidence": [{"notes": "czc expression is induced by zinc; zinc exposure enhances cadmium resistance via the efflux program.", "reference": "DOI:10.1007/s40201-023-00887-6"}], "id": "edge-7", "is_orphan": false, "predicate": "induces", "predicate_id": null, "source": "zinc_ion", "target": "czc_efflux_system"}], "evidence_rows": [{"description": "Cytoplasmic cadmium is the toxic challenge the trait counters.", "edge_id": "edge-1", "evidence": [{"notes": "Cupriavidus metallidurans BS1 tolerates Cd(2+) to a MIC of 2.5 mM.", "reference": "DOI:10.3389/fmicb.2020.00047"}], "predicate": "challenges", "predicate_id": "METPO:2007406", "source": "cadmium(2+) ion", "source_grounding": "CHEBI:48775", "target": "cadmium tolerant", "target_grounding": "traitmech:000013"}, {"description": "CzcP exports cadmium together with zinc and cobalt cations.", "edge_id": "edge-2", "evidence": [{"notes": "CzcP exports transition metals Zn(2+), Cd(2+), and Co(2+).", "reference": "DOI:10.1111/j.1365-2958.2009.06792.x"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "czc cation-efflux system", "source_grounding": null, "target": "cadmium ion transmembrane transport", "target_grounding": "GO:0030001"}, {"description": "Czc-mediated export depletes the cytoplasmic cadmium pool.", "edge_id": "edge-3", "evidence": [{"notes": "The czc efflux system of C. metallidurans confers cadmium resistance.", "reference": "DOI:10.1111/j.1365-2958.2009.06792.x"}], "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "cadmium ion transmembrane transport", "source_grounding": "GO:0030001", "target": "cadmium(2+) ion", "target_grounding": "CHEBI:48775"}, {"description": "Thiol-rich metallothioneins bind and sequester cytoplasmic Cd(2+).", "edge_id": "edge-4", "evidence": [{"notes": "Metallothioneins bind Cd(II); thiol-rich proteins mediate cadmium sequestration as a microbial resistance mechanism.", "reference": "DOI:10.1007/s40201-023-00887-6"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "metallothionein / thiol-rich metal-binding proteins", "source_grounding": null, "target": "cadmium ion sequestration", "target_grounding": null}, {"description": "Sequestration of cadmium lowers the free toxic cytoplasmic Cd(2+) pool.", "edge_id": "edge-5", "evidence": [{"notes": "Metallothionein/thiol-rich sequestration removes free cytoplasmic Cd(II) as a detoxification mechanism.", "reference": "DOI:10.1007/s40201-023-00887-6"}], "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "cadmium ion sequestration", "source_grounding": null, "target": "cadmium(2+) ion", "target_grounding": "CHEBI:48775"}, {"description": "CadA P1B-type ATPase uses ATP to pump Cd(II) from cytoplasm to periplasm.", "edge_id": "edge-6", "evidence": [{"notes": "P-type (P1B) ATPases (CadA) use ATP to pump Cd(II) from cytoplasm to periplasm.", "reference": "DOI:10.1007/s40201-023-00887-6"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "CadA P-type (P1B) ATPase", "source_grounding": null, "target": "cadmium ion transmembrane transport", "target_grounding": "GO:0030001"}, {"description": "Zinc cross-induces expression of the czc cation-efflux cadmium-resistance program.", "edge_id": "edge-7", "evidence": [{"notes": "czc expression is induced by zinc; zinc exposure enhances cadmium resistance via the efflux program.", "reference": "DOI:10.1007/s40201-023-00887-6"}], "predicate": "induces", "predicate_id": null, "source": "zinc(2+) ion", "source_grounding": "CHEBI:29105", "target": "czc cation-efflux system", "target_grounding": null}], "graph_id": "cadmium_tolerance_czc_efflux", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "ATP-driven P1B-type efflux ATPase pumping Cd(II) from cytoplasm to periplasm.", "grounding": null, "id": "cada_ptype_atpase", "is_orphan": false, "label": "CadA P-type (P1B) ATPase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Active export of Cd(2+) across the cytoplasmic membrane.", "grounding": "GO:0030001", "id": "cadmium_export", "is_orphan": false, "label": "cadmium ion transmembrane transport", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Toxic transition-metal cation accumulating in the cytoplasm.", "grounding": "CHEBI:48775", "id": "cadmium_ion", "is_orphan": false, "label": "cadmium(2+) ion", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Intracellular binding and sequestration of cadmium ions, lowering free cytoplasmic Cd(2+).", "grounding": null, "id": "cadmium_sequestration", "is_orphan": false, "label": "cadmium ion sequestration", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Capacity to grow at elevated Cd(2+) concentrations.", "grounding": "traitmech:000013", "id": "cadmium_tolerant_trait", "is_orphan": false, "label": "cadmium tolerant", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "CzcCBA/CzcP machinery exporting Cd, Zn, and Co cations.", "grounding": null, "id": "czc_efflux_system", "is_orphan": false, "label": "czc cation-efflux system", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 153, "evidence": [{"notes": "The cited source supports the represented protein-to-trait branch; UniProt verifies this current strain-matched protein entry.", "reference": "DOI:10.1111/j.1365-2958.2009.06792.x", "snippet": "Czc machinery exports cadmium, zinc, and cobalt"}], "gene_symbol": "czcA", "protein_label": "Cobalt-zinc-cadmium resistance protein CzcA", "proteome_id": "UP000002429", "retrieved_on": "2026-08-25", "role": "CzcA is the inner-membrane transporter component of the CH34 CzcCBA pump exporting cadmium, zinc, and cobalt.", "sequence_version": 3, "taxon_id": "NCBITaxon:266264", "taxon_label": "Cupriavidus metallidurans CH34", "uniprot_id": "UniProtKB:P13511"}], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Cysteine-rich proteins that bind and sequester cytoplasmic Cd(2+).", "grounding": null, "id": "metallothionein_proteins", "is_orphan": false, "label": "metallothionein / thiol-rich metal-binding proteins", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Divalent metal cation that cross-induces the czc cadmium-resistance program.", "grounding": "CHEBI:29105", "id": "zinc_ion", "is_orphan": false, "label": "zinc(2+) ion", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 153, "evidence": [{"notes": "The cited source supports the represented protein-to-trait branch; UniProt verifies this current strain-matched protein entry.", "reference": "DOI:10.1111/j.1365-2958.2009.06792.x", "snippet": "Czc machinery exports cadmium, zinc, and cobalt"}], "gene_symbol": "czcA", "node_id": "czc_efflux_system", "node_label": "czc cation-efflux system", "protein_label": "Cobalt-zinc-cadmium resistance protein CzcA", "proteome_id": "UP000002429", "retrieved_on": "2026-08-25", "role": "CzcA is the inner-membrane transporter component of the CH34 CzcCBA pump exporting cadmium, zinc, and cobalt.", "sequence_version": 3, "taxon_id": "NCBITaxon:266264", "taxon_label": "Cupriavidus metallidurans CH34", "uniprot_id": "UniProtKB:P13511"}], "scope_notes": "The taxon-matched protein example anchors one experimentally supported causal branch; it is not presented as a universal mechanism for every taxon or every contextual branch in this graph.", "scope_status": "MECHANISTIC", "title": "Cadmium tolerance via czc cation-efflux system"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -934,13 +959,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-08-26 03:23 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

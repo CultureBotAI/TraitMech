@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/physiology.html">PHYSIOLOGY</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/physiology.html">PHYSIOLOGY</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>natural competence</h1>
     <p class="curie"><code>traitmech:000087</code> · CLASS · REVIEWED</p>
 
@@ -85,9 +96,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>establishment of competence for transformation</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0030420" rel="nofollow noreferrer"><code>GO:0030420</code></a>
             <span class="edge-predicate">consumes</span>
             <strong>extracellular DNA</strong>
-            <code>biolink:consumes</code>
+
+            <a href="https://w3id.org/biolink/vocab/consumes" rel="nofollow noreferrer"><code>biolink:consumes</code></a>
             <p>Competence drives uptake of extracellular DNA.</p>
             <ul>
 
@@ -102,9 +115,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>establishment of competence for transformation</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0030420" rel="nofollow noreferrer"><code>GO:0030420</code></a>
             <span class="edge-predicate">confers</span>
             <strong>natural competence</strong>
-            <code>METPO:2007700</code>
+            <code>traitmech:000087</code>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>The competence program realizes the natural-competence trait.</p>
             <ul>
 
@@ -119,8 +134,10 @@
 
           <li id="pathograph-1-edge-3">
             <strong>type IV competence pilus</strong>
+
             <span class="edge-predicate">binds</span>
             <strong>extracellular DNA</strong>
+
 
             <p>Competence pili are retractile, DNA-binding filaments that capture extracellular DNA.</p>
             <ul>
@@ -136,9 +153,11 @@
 
           <li id="pathograph-1-edge-4">
             <strong>competence pilus retraction</strong>
+
             <span class="edge-predicate">promotes</span>
             <strong>extracellular DNA uptake</strong>
-            <code>RO:0002213</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002213" rel="nofollow noreferrer"><code>RO:0002213</code></a>
             <p>Pilus retraction is mechanistically coupled to DNA delivery into the uptake apparatus.</p>
             <ul>
 
@@ -153,8 +172,10 @@
 
           <li id="pathograph-1-edge-5">
             <strong>ComEC</strong>
+            <a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR052159/" rel="nofollow noreferrer"><code>InterPro:IPR052159</code></a>
             <span class="edge-predicate">required for</span>
             <strong>extracellular DNA uptake</strong>
+
 
             <p>ComEC forms a membrane channel required for DNA uptake.</p>
             <ul>
@@ -170,8 +191,10 @@
 
           <li id="pathograph-1-edge-6">
             <strong>ComEA</strong>
+
             <span class="edge-predicate">mediates transfer to</span>
             <strong>periplasm</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0042597" rel="nofollow noreferrer"><code>GO:0042597</code></a>
 
             <p>ComEA acts as an external DNA receptor and mediates transfer of DNA into the periplasm.</p>
             <ul>
@@ -187,8 +210,10 @@
 
           <li id="pathograph-1-edge-7">
             <strong>DprA</strong>
+
             <span class="edge-predicate">recruits</span>
             <strong>RecA</strong>
+            <a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR013765/" rel="nofollow noreferrer"><code>InterPro:IPR013765</code></a>
 
             <p>DprA protects incoming ssDNA and recruits RecA for recombination.</p>
             <ul>
@@ -204,8 +229,10 @@
 
           <li id="pathograph-1-edge-8">
             <strong>RecA</strong>
+            <a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR013765/" rel="nofollow noreferrer"><code>InterPro:IPR013765</code></a>
             <span class="edge-predicate">mediates</span>
             <strong>homologous recombination of transforming DNA</strong>
+
 
             <p>RecA mediates homologous recombination of incoming transforming DNA into the genome.</p>
             <ul>
@@ -221,9 +248,11 @@
 
           <li id="pathograph-1-edge-9">
             <strong>competence pilus retraction</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>establishment of competence for transformation</strong>
-            <code>RO:0002326</code>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0030420" rel="nofollow noreferrer"><code>GO:0030420</code></a>
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>Retraction of DNA-bound competence pili initiates uptake during the competence process.</p>
             <ul>
 
@@ -238,9 +267,11 @@
 
           <li id="pathograph-1-edge-10">
             <strong>ComEA</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>extracellular DNA uptake</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>ComEA-dependent molecular ratcheting contributes to DNA uptake into the periplasm.</p>
             <ul>
 
@@ -255,9 +286,11 @@
 
           <li id="pathograph-1-edge-11">
             <strong>homologous recombination of transforming DNA</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>establishment of competence for transformation</strong>
-            <code>RO:0002326</code>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0030420" rel="nofollow noreferrer"><code>GO:0030420</code></a>
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>RecA-mediated homologous recombination integrates incoming DNA and completes natural transformation.</p>
             <ul>
 
@@ -391,50 +424,50 @@
       <ul class="nn-list">
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/cadmium_tolerant.html">cadmium tolerant</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/cystine_arylamidase_activity.html">cystine arylamidase activity</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/sulfur_globule.html">sulfur globule</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/coagulase_activity.html">coagulase activity</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/cobalt_tolerant.html">cobalt tolerant</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/chemotropism.html">chemotropism</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/copper_tolerant.html">copper tolerant</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/chemotaxis.html">chemotaxis</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/desiccation_tolerant.html">desiccation tolerant</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/cellular_rejuvenation.html">functional cellular rejuvenation</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/piezotolerant.html">piezotolerant</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/cellular_contraction.html">cell body or cytoplasmic projection contraction</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/obligately_piezophilic.html">obligately piezophilic</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/cellular_buoyancy.html">cellular buoyancy</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/gas_vesicle.html">gas vesicle</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/coccolith_production.html">coccolith production</a>
           <span class="sim">1.000</span>
         </li>
 
@@ -1012,7 +1045,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking the competence program to uptake of extracellular DNA and genomic integration.", "edges": [{"description": "Competence drives uptake of extracellular DNA.", "evidence": [{"notes": "Johnston et al. review DNA-uptake mechanisms of competence.", "reference": "DOI:10.1038/nrmicro3199"}], "id": "edge-1", "is_orphan": false, "predicate": "consumes", "predicate_id": "biolink:consumes", "source": "competence_process", "target": "extracellular_dna"}, {"description": "The competence program realizes the natural-competence trait.", "evidence": [{"notes": "Transformation is a major route of bacterial DNA acquisition.", "reference": "DOI:10.1038/s41579-021-00650-4"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "competence_process", "target": "natural_competence_trait"}, {"description": "Competence pili are retractile, DNA-binding filaments that capture extracellular DNA.", "evidence": [{"notes": "Competence pili \"produce retractile, DNA-binding pili\" and co-localize DNA at their tips (Zuke \u0026 Burton 2024).", "reference": "DOI:10.1128/mmbr.00125-23"}], "id": "edge-3", "is_orphan": false, "predicate": "binds", "predicate_id": null, "source": "competence_pilus", "target": "extracellular_dna"}, {"description": "Pilus retraction is mechanistically coupled to DNA delivery into the uptake apparatus.", "evidence": [{"notes": "Physical obstruction of T4P retraction decreased transformation rate (Zuke \u0026 Burton 2024).", "reference": "DOI:10.1128/mmbr.00125-23"}], "id": "edge-4", "is_orphan": false, "predicate": "promotes", "predicate_id": "RO:0002213", "source": "pilus_retraction", "target": "dna_uptake"}, {"description": "ComEC forms a membrane channel required for DNA uptake.", "evidence": [{"notes": "\"ComEC is a membrane channel required for DNA uptake\" (Hardy et al. 2024).", "reference": "DOI:10.1101/2024.02.06.579203"}], "id": "edge-5", "is_orphan": false, "predicate": "required for", "predicate_id": null, "source": "comec", "target": "dna_uptake"}, {"description": "ComEA acts as an external DNA receptor and mediates transfer of DNA into the periplasm.", "evidence": [{"notes": "\"ComEA functions as an external DNA receptor and mediates transfer into the periplasm\" (Hardy et al. 2024).", "reference": "DOI:10.1101/2024.02.06.579203"}], "id": "edge-6", "is_orphan": false, "predicate": "mediates transfer to", "predicate_id": null, "source": "comea", "target": "periplasm"}, {"description": "DprA protects incoming ssDNA and recruits RecA for recombination.", "evidence": [{"notes": "\"DprA hands incoming ssDNA to RecA\" / \"protection of incoming ssDNA by DprA and recruitment of RecA\" (Mazzamurro et al. 2024).", "reference": "DOI:10.1371/journal.pbio.3002814"}], "id": "edge-7", "is_orphan": false, "predicate": "recruits", "predicate_id": null, "source": "dpra", "target": "reca"}, {"description": "RecA mediates homologous recombination of incoming transforming DNA into the genome.", "evidence": [{"notes": "Transformation is followed by RecA-dependent homologous recombination (Mazzamurro et al. 2024).", "reference": "DOI:10.1371/journal.pbio.3002814"}], "id": "edge-8", "is_orphan": false, "predicate": "mediates", "predicate_id": null, "source": "reca", "target": "homologous_recombination"}, {"description": "Retraction of DNA-bound competence pili initiates uptake during the competence process.", "evidence": [{"notes": "Verified against the open Nature Microbiology primary article.", "reference": "DOI:10.1038/s41564-018-0174-y", "snippet": "retraction of DNA-bound type IV competence pili initiates the process of DNA uptake"}], "id": "edge-9", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "pilus_retraction", "target": "competence_process"}, {"description": "ComEA-dependent molecular ratcheting contributes to DNA uptake into the periplasm.", "evidence": [{"notes": "Verified against the open Nature Microbiology primary article.", "reference": "DOI:10.1038/s41564-018-0174-y", "snippet": "uptake facilitated by ComEA-dependent molecular ratcheting"}], "id": "edge-10", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "comea", "target": "dna_uptake"}, {"description": "RecA-mediated homologous recombination integrates incoming DNA and completes natural transformation.", "evidence": [{"notes": "Verified against the open Journal of Bacteriology primary article.", "reference": "DOI:10.1128/jb.00156-23", "snippet": "RecA binds to the ssDNA and directs homologous recombination of the incoming ssDNA into the chromosome"}], "id": "edge-11", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "homologous_recombination", "target": "competence_process"}], "evidence_rows": [{"description": "Competence drives uptake of extracellular DNA.", "edge_id": "edge-1", "evidence": [{"notes": "Johnston et al. review DNA-uptake mechanisms of competence.", "reference": "DOI:10.1038/nrmicro3199"}], "predicate": "consumes", "predicate_id": "biolink:consumes", "source": "establishment of competence for transformation", "target": "extracellular DNA"}, {"description": "The competence program realizes the natural-competence trait.", "edge_id": "edge-2", "evidence": [{"notes": "Transformation is a major route of bacterial DNA acquisition.", "reference": "DOI:10.1038/s41579-021-00650-4"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "establishment of competence for transformation", "target": "natural competence"}, {"description": "Competence pili are retractile, DNA-binding filaments that capture extracellular DNA.", "edge_id": "edge-3", "evidence": [{"notes": "Competence pili \"produce retractile, DNA-binding pili\" and co-localize DNA at their tips (Zuke \u0026 Burton 2024).", "reference": "DOI:10.1128/mmbr.00125-23"}], "predicate": "binds", "predicate_id": null, "source": "type IV competence pilus", "target": "extracellular DNA"}, {"description": "Pilus retraction is mechanistically coupled to DNA delivery into the uptake apparatus.", "edge_id": "edge-4", "evidence": [{"notes": "Physical obstruction of T4P retraction decreased transformation rate (Zuke \u0026 Burton 2024).", "reference": "DOI:10.1128/mmbr.00125-23"}], "predicate": "promotes", "predicate_id": "RO:0002213", "source": "competence pilus retraction", "target": "extracellular DNA uptake"}, {"description": "ComEC forms a membrane channel required for DNA uptake.", "edge_id": "edge-5", "evidence": [{"notes": "\"ComEC is a membrane channel required for DNA uptake\" (Hardy et al. 2024).", "reference": "DOI:10.1101/2024.02.06.579203"}], "predicate": "required for", "predicate_id": null, "source": "ComEC", "target": "extracellular DNA uptake"}, {"description": "ComEA acts as an external DNA receptor and mediates transfer of DNA into the periplasm.", "edge_id": "edge-6", "evidence": [{"notes": "\"ComEA functions as an external DNA receptor and mediates transfer into the periplasm\" (Hardy et al. 2024).", "reference": "DOI:10.1101/2024.02.06.579203"}], "predicate": "mediates transfer to", "predicate_id": null, "source": "ComEA", "target": "periplasm"}, {"description": "DprA protects incoming ssDNA and recruits RecA for recombination.", "edge_id": "edge-7", "evidence": [{"notes": "\"DprA hands incoming ssDNA to RecA\" / \"protection of incoming ssDNA by DprA and recruitment of RecA\" (Mazzamurro et al. 2024).", "reference": "DOI:10.1371/journal.pbio.3002814"}], "predicate": "recruits", "predicate_id": null, "source": "DprA", "target": "RecA"}, {"description": "RecA mediates homologous recombination of incoming transforming DNA into the genome.", "edge_id": "edge-8", "evidence": [{"notes": "Transformation is followed by RecA-dependent homologous recombination (Mazzamurro et al. 2024).", "reference": "DOI:10.1371/journal.pbio.3002814"}], "predicate": "mediates", "predicate_id": null, "source": "RecA", "target": "homologous recombination of transforming DNA"}, {"description": "Retraction of DNA-bound competence pili initiates uptake during the competence process.", "edge_id": "edge-9", "evidence": [{"notes": "Verified against the open Nature Microbiology primary article.", "reference": "DOI:10.1038/s41564-018-0174-y", "snippet": "retraction of DNA-bound type IV competence pili initiates the process of DNA uptake"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "competence pilus retraction", "target": "establishment of competence for transformation"}, {"description": "ComEA-dependent molecular ratcheting contributes to DNA uptake into the periplasm.", "edge_id": "edge-10", "evidence": [{"notes": "Verified against the open Nature Microbiology primary article.", "reference": "DOI:10.1038/s41564-018-0174-y", "snippet": "uptake facilitated by ComEA-dependent molecular ratcheting"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "ComEA", "target": "extracellular DNA uptake"}, {"description": "RecA-mediated homologous recombination integrates incoming DNA and completes natural transformation.", "edge_id": "edge-11", "evidence": [{"notes": "Verified against the open Journal of Bacteriology primary article.", "reference": "DOI:10.1128/jb.00156-23", "snippet": "RecA binds to the ssDNA and directs homologous recombination of the incoming ssDNA into the chromosome"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "homologous recombination of transforming DNA", "target": "establishment of competence for transformation"}], "graph_id": "natural_competence_dna_uptake", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "DNA receptor that binds incoming DNA and mediates transfer toward the periplasm.", "grounding": null, "id": "comea", "is_orphan": false, "label": "ComEA", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Inner-membrane channel required for DNA uptake into the cytoplasm.", "grounding": "InterPro:IPR052159", "id": "comec", "is_orphan": false, "label": "ComEC", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Retractile DNA-binding pilus filament of the competence apparatus.", "grounding": null, "id": "competence_pilus", "is_orphan": false, "label": "type IV competence pilus", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Development of the DNA-uptake state.", "grounding": "GO:0030420", "id": "competence_process", "is_orphan": false, "label": "establishment of competence for transformation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Import of bound extracellular DNA across the cell envelope.", "grounding": null, "id": "dna_uptake", "is_orphan": false, "label": "extracellular DNA uptake", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Competence ssDNA-binding protein that protects incoming DNA and recruits RecA.", "grounding": null, "id": "dpra", "is_orphan": false, "label": "DprA", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Free environmental DNA taken up by competent cells.", "grounding": null, "id": "extracellular_dna", "is_orphan": false, "label": "extracellular DNA", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Integration of incoming ssDNA into the genome via homologous recombination.", "grounding": null, "id": "homologous_recombination", "is_orphan": false, "label": "homologous recombination of transforming DNA", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Capacity to take up and integrate environmental DNA.", "grounding": "traitmech:000087", "id": "natural_competence_trait", "is_orphan": false, "label": "natural competence", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ede9fe", "description": "Compartment to which bound DNA is transferred during uptake.", "grounding": "GO:0042597", "id": "periplasm", "is_orphan": false, "label": "periplasm", "node_type": "CELLULAR_LOCALIZATION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Disassembly of the competence pilus that pulls bound DNA toward the cell.", "grounding": null, "id": "pilus_retraction", "is_orphan": false, "label": "competence pilus retraction", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Recombinase that mediates homologous recombination of transforming DNA.", "grounding": "InterPro:IPR013765", "id": "reca", "is_orphan": false, "label": "RecA", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 116, "evidence": [{"notes": "The R6 transformation study showed rapid donor-DNA degradation and loss of homologous integration in recA mutants; UniProtKB P0A452 is the reviewed R6 RecA entry.", "reference": "DOI:10.1046/j.1365-2958.2003.03702.x", "snippet": "incoming ssDNA requires active protection prior to the RecA-driven search for homology"}], "gene_symbol": "recA", "protein_label": "Protein RecA", "proteome_id": "UP000000586", "retrieved_on": "2026-08-24", "role": "Competence-induced RecA protects transforming single-stranded DNA and catalyzes its homologous integration in pneumococcal strain R6.", "sequence_version": 1, "taxon_id": "NCBITaxon:171101", "taxon_label": "Streptococcus pneumoniae R6", "uniprot_id": "UniProtKB:P0A452"}], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 116, "evidence": [{"notes": "The R6 transformation study showed rapid donor-DNA degradation and loss of homologous integration in recA mutants; UniProtKB P0A452 is the reviewed R6 RecA entry.", "reference": "DOI:10.1046/j.1365-2958.2003.03702.x", "snippet": "incoming ssDNA requires active protection prior to the RecA-driven search for homology"}], "gene_symbol": "recA", "node_id": "reca", "node_label": "RecA", "protein_label": "Protein RecA", "proteome_id": "UP000000586", "retrieved_on": "2026-08-24", "role": "Competence-induced RecA protects transforming single-stranded DNA and catalyzes its homologous integration in pneumococcal strain R6.", "sequence_version": 1, "taxon_id": "NCBITaxon:171101", "taxon_label": "Streptococcus pneumoniae R6", "uniprot_id": "UniProtKB:P0A452"}], "scope_notes": "This graph combines conserved DNA-uptake and recombination modules while allowing taxon-specific pilus architectures. The S. pneumoniae R6 RecA example supports the post-uptake homologous-recombination branch.", "scope_status": "MECHANISTIC", "title": "Competence-driven DNA uptake and transformation"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking the competence program to uptake of extracellular DNA and genomic integration.", "edges": [{"description": "Competence drives uptake of extracellular DNA.", "evidence": [{"notes": "Johnston et al. review DNA-uptake mechanisms of competence.", "reference": "DOI:10.1038/nrmicro3199"}], "id": "edge-1", "is_orphan": false, "predicate": "consumes", "predicate_id": "biolink:consumes", "source": "competence_process", "target": "extracellular_dna"}, {"description": "The competence program realizes the natural-competence trait.", "evidence": [{"notes": "Transformation is a major route of bacterial DNA acquisition.", "reference": "DOI:10.1038/s41579-021-00650-4"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "competence_process", "target": "natural_competence_trait"}, {"description": "Competence pili are retractile, DNA-binding filaments that capture extracellular DNA.", "evidence": [{"notes": "Competence pili \"produce retractile, DNA-binding pili\" and co-localize DNA at their tips (Zuke \u0026 Burton 2024).", "reference": "DOI:10.1128/mmbr.00125-23"}], "id": "edge-3", "is_orphan": false, "predicate": "binds", "predicate_id": null, "source": "competence_pilus", "target": "extracellular_dna"}, {"description": "Pilus retraction is mechanistically coupled to DNA delivery into the uptake apparatus.", "evidence": [{"notes": "Physical obstruction of T4P retraction decreased transformation rate (Zuke \u0026 Burton 2024).", "reference": "DOI:10.1128/mmbr.00125-23"}], "id": "edge-4", "is_orphan": false, "predicate": "promotes", "predicate_id": "RO:0002213", "source": "pilus_retraction", "target": "dna_uptake"}, {"description": "ComEC forms a membrane channel required for DNA uptake.", "evidence": [{"notes": "\"ComEC is a membrane channel required for DNA uptake\" (Hardy et al. 2024).", "reference": "DOI:10.1101/2024.02.06.579203"}], "id": "edge-5", "is_orphan": false, "predicate": "required for", "predicate_id": null, "source": "comec", "target": "dna_uptake"}, {"description": "ComEA acts as an external DNA receptor and mediates transfer of DNA into the periplasm.", "evidence": [{"notes": "\"ComEA functions as an external DNA receptor and mediates transfer into the periplasm\" (Hardy et al. 2024).", "reference": "DOI:10.1101/2024.02.06.579203"}], "id": "edge-6", "is_orphan": false, "predicate": "mediates transfer to", "predicate_id": null, "source": "comea", "target": "periplasm"}, {"description": "DprA protects incoming ssDNA and recruits RecA for recombination.", "evidence": [{"notes": "\"DprA hands incoming ssDNA to RecA\" / \"protection of incoming ssDNA by DprA and recruitment of RecA\" (Mazzamurro et al. 2024).", "reference": "DOI:10.1371/journal.pbio.3002814"}], "id": "edge-7", "is_orphan": false, "predicate": "recruits", "predicate_id": null, "source": "dpra", "target": "reca"}, {"description": "RecA mediates homologous recombination of incoming transforming DNA into the genome.", "evidence": [{"notes": "Transformation is followed by RecA-dependent homologous recombination (Mazzamurro et al. 2024).", "reference": "DOI:10.1371/journal.pbio.3002814"}], "id": "edge-8", "is_orphan": false, "predicate": "mediates", "predicate_id": null, "source": "reca", "target": "homologous_recombination"}, {"description": "Retraction of DNA-bound competence pili initiates uptake during the competence process.", "evidence": [{"notes": "Verified against the open Nature Microbiology primary article.", "reference": "DOI:10.1038/s41564-018-0174-y", "snippet": "retraction of DNA-bound type IV competence pili initiates the process of DNA uptake"}], "id": "edge-9", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "pilus_retraction", "target": "competence_process"}, {"description": "ComEA-dependent molecular ratcheting contributes to DNA uptake into the periplasm.", "evidence": [{"notes": "Verified against the open Nature Microbiology primary article.", "reference": "DOI:10.1038/s41564-018-0174-y", "snippet": "uptake facilitated by ComEA-dependent molecular ratcheting"}], "id": "edge-10", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "comea", "target": "dna_uptake"}, {"description": "RecA-mediated homologous recombination integrates incoming DNA and completes natural transformation.", "evidence": [{"notes": "Verified against the open Journal of Bacteriology primary article.", "reference": "DOI:10.1128/jb.00156-23", "snippet": "RecA binds to the ssDNA and directs homologous recombination of the incoming ssDNA into the chromosome"}], "id": "edge-11", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "homologous_recombination", "target": "competence_process"}], "evidence_rows": [{"description": "Competence drives uptake of extracellular DNA.", "edge_id": "edge-1", "evidence": [{"notes": "Johnston et al. review DNA-uptake mechanisms of competence.", "reference": "DOI:10.1038/nrmicro3199"}], "predicate": "consumes", "predicate_id": "biolink:consumes", "source": "establishment of competence for transformation", "source_grounding": "GO:0030420", "target": "extracellular DNA", "target_grounding": null}, {"description": "The competence program realizes the natural-competence trait.", "edge_id": "edge-2", "evidence": [{"notes": "Transformation is a major route of bacterial DNA acquisition.", "reference": "DOI:10.1038/s41579-021-00650-4"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "establishment of competence for transformation", "source_grounding": "GO:0030420", "target": "natural competence", "target_grounding": "traitmech:000087"}, {"description": "Competence pili are retractile, DNA-binding filaments that capture extracellular DNA.", "edge_id": "edge-3", "evidence": [{"notes": "Competence pili \"produce retractile, DNA-binding pili\" and co-localize DNA at their tips (Zuke \u0026 Burton 2024).", "reference": "DOI:10.1128/mmbr.00125-23"}], "predicate": "binds", "predicate_id": null, "source": "type IV competence pilus", "source_grounding": null, "target": "extracellular DNA", "target_grounding": null}, {"description": "Pilus retraction is mechanistically coupled to DNA delivery into the uptake apparatus.", "edge_id": "edge-4", "evidence": [{"notes": "Physical obstruction of T4P retraction decreased transformation rate (Zuke \u0026 Burton 2024).", "reference": "DOI:10.1128/mmbr.00125-23"}], "predicate": "promotes", "predicate_id": "RO:0002213", "source": "competence pilus retraction", "source_grounding": null, "target": "extracellular DNA uptake", "target_grounding": null}, {"description": "ComEC forms a membrane channel required for DNA uptake.", "edge_id": "edge-5", "evidence": [{"notes": "\"ComEC is a membrane channel required for DNA uptake\" (Hardy et al. 2024).", "reference": "DOI:10.1101/2024.02.06.579203"}], "predicate": "required for", "predicate_id": null, "source": "ComEC", "source_grounding": "InterPro:IPR052159", "target": "extracellular DNA uptake", "target_grounding": null}, {"description": "ComEA acts as an external DNA receptor and mediates transfer of DNA into the periplasm.", "edge_id": "edge-6", "evidence": [{"notes": "\"ComEA functions as an external DNA receptor and mediates transfer into the periplasm\" (Hardy et al. 2024).", "reference": "DOI:10.1101/2024.02.06.579203"}], "predicate": "mediates transfer to", "predicate_id": null, "source": "ComEA", "source_grounding": null, "target": "periplasm", "target_grounding": "GO:0042597"}, {"description": "DprA protects incoming ssDNA and recruits RecA for recombination.", "edge_id": "edge-7", "evidence": [{"notes": "\"DprA hands incoming ssDNA to RecA\" / \"protection of incoming ssDNA by DprA and recruitment of RecA\" (Mazzamurro et al. 2024).", "reference": "DOI:10.1371/journal.pbio.3002814"}], "predicate": "recruits", "predicate_id": null, "source": "DprA", "source_grounding": null, "target": "RecA", "target_grounding": "InterPro:IPR013765"}, {"description": "RecA mediates homologous recombination of incoming transforming DNA into the genome.", "edge_id": "edge-8", "evidence": [{"notes": "Transformation is followed by RecA-dependent homologous recombination (Mazzamurro et al. 2024).", "reference": "DOI:10.1371/journal.pbio.3002814"}], "predicate": "mediates", "predicate_id": null, "source": "RecA", "source_grounding": "InterPro:IPR013765", "target": "homologous recombination of transforming DNA", "target_grounding": null}, {"description": "Retraction of DNA-bound competence pili initiates uptake during the competence process.", "edge_id": "edge-9", "evidence": [{"notes": "Verified against the open Nature Microbiology primary article.", "reference": "DOI:10.1038/s41564-018-0174-y", "snippet": "retraction of DNA-bound type IV competence pili initiates the process of DNA uptake"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "competence pilus retraction", "source_grounding": null, "target": "establishment of competence for transformation", "target_grounding": "GO:0030420"}, {"description": "ComEA-dependent molecular ratcheting contributes to DNA uptake into the periplasm.", "edge_id": "edge-10", "evidence": [{"notes": "Verified against the open Nature Microbiology primary article.", "reference": "DOI:10.1038/s41564-018-0174-y", "snippet": "uptake facilitated by ComEA-dependent molecular ratcheting"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "ComEA", "source_grounding": null, "target": "extracellular DNA uptake", "target_grounding": null}, {"description": "RecA-mediated homologous recombination integrates incoming DNA and completes natural transformation.", "edge_id": "edge-11", "evidence": [{"notes": "Verified against the open Journal of Bacteriology primary article.", "reference": "DOI:10.1128/jb.00156-23", "snippet": "RecA binds to the ssDNA and directs homologous recombination of the incoming ssDNA into the chromosome"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "homologous recombination of transforming DNA", "source_grounding": null, "target": "establishment of competence for transformation", "target_grounding": "GO:0030420"}], "graph_id": "natural_competence_dna_uptake", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "DNA receptor that binds incoming DNA and mediates transfer toward the periplasm.", "grounding": null, "id": "comea", "is_orphan": false, "label": "ComEA", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Inner-membrane channel required for DNA uptake into the cytoplasm.", "grounding": "InterPro:IPR052159", "id": "comec", "is_orphan": false, "label": "ComEC", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Retractile DNA-binding pilus filament of the competence apparatus.", "grounding": null, "id": "competence_pilus", "is_orphan": false, "label": "type IV competence pilus", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Development of the DNA-uptake state.", "grounding": "GO:0030420", "id": "competence_process", "is_orphan": false, "label": "establishment of competence for transformation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Import of bound extracellular DNA across the cell envelope.", "grounding": null, "id": "dna_uptake", "is_orphan": false, "label": "extracellular DNA uptake", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Competence ssDNA-binding protein that protects incoming DNA and recruits RecA.", "grounding": null, "id": "dpra", "is_orphan": false, "label": "DprA", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Free environmental DNA taken up by competent cells.", "grounding": null, "id": "extracellular_dna", "is_orphan": false, "label": "extracellular DNA", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Integration of incoming ssDNA into the genome via homologous recombination.", "grounding": null, "id": "homologous_recombination", "is_orphan": false, "label": "homologous recombination of transforming DNA", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Capacity to take up and integrate environmental DNA.", "grounding": "traitmech:000087", "id": "natural_competence_trait", "is_orphan": false, "label": "natural competence", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ede9fe", "description": "Compartment to which bound DNA is transferred during uptake.", "grounding": "GO:0042597", "id": "periplasm", "is_orphan": false, "label": "periplasm", "node_type": "CELLULAR_LOCALIZATION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Disassembly of the competence pilus that pulls bound DNA toward the cell.", "grounding": null, "id": "pilus_retraction", "is_orphan": false, "label": "competence pilus retraction", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Recombinase that mediates homologous recombination of transforming DNA.", "grounding": "InterPro:IPR013765", "id": "reca", "is_orphan": false, "label": "RecA", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 116, "evidence": [{"notes": "The R6 transformation study showed rapid donor-DNA degradation and loss of homologous integration in recA mutants; UniProtKB P0A452 is the reviewed R6 RecA entry.", "reference": "DOI:10.1046/j.1365-2958.2003.03702.x", "snippet": "incoming ssDNA requires active protection prior to the RecA-driven search for homology"}], "gene_symbol": "recA", "protein_label": "Protein RecA", "proteome_id": "UP000000586", "retrieved_on": "2026-08-24", "role": "Competence-induced RecA protects transforming single-stranded DNA and catalyzes its homologous integration in pneumococcal strain R6.", "sequence_version": 1, "taxon_id": "NCBITaxon:171101", "taxon_label": "Streptococcus pneumoniae R6", "uniprot_id": "UniProtKB:P0A452"}], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 116, "evidence": [{"notes": "The R6 transformation study showed rapid donor-DNA degradation and loss of homologous integration in recA mutants; UniProtKB P0A452 is the reviewed R6 RecA entry.", "reference": "DOI:10.1046/j.1365-2958.2003.03702.x", "snippet": "incoming ssDNA requires active protection prior to the RecA-driven search for homology"}], "gene_symbol": "recA", "node_id": "reca", "node_label": "RecA", "protein_label": "Protein RecA", "proteome_id": "UP000000586", "retrieved_on": "2026-08-24", "role": "Competence-induced RecA protects transforming single-stranded DNA and catalyzes its homologous integration in pneumococcal strain R6.", "sequence_version": 1, "taxon_id": "NCBITaxon:171101", "taxon_label": "Streptococcus pneumoniae R6", "uniprot_id": "UniProtKB:P0A452"}], "scope_notes": "This graph combines conserved DNA-uptake and recombination modules while allowing taxon-specific pilus architectures. The S. pneumoniae R6 RecA example supports the post-uptake homologous-recombination branch.", "scope_status": "MECHANISTIC", "title": "Competence-driven DNA uptake and transformation"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -1032,13 +1065,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-08-31 11:16 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

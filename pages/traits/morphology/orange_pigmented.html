@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/morphology.html">MORPHOLOGY</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/morphology.html">MORPHOLOGY</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>orange pigmented</h1>
     <p class="curie"><code>METPO:1003026</code> · CLASS · REVIEWED</p>
 
@@ -79,9 +90,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>Crt enzymes</strong>
+
             <span class="edge-predicate">catalyzes</span>
             <strong>carotenoid biosynthesis</strong>
-            <code>biolink:catalyzes</code>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0016117" rel="nofollow noreferrer"><code>GO:0016117</code></a>
+            <a href="https://w3id.org/biolink/vocab/catalyzes" rel="nofollow noreferrer"><code>biolink:catalyzes</code></a>
             <p>Crt enzymes catalyze bacterial carotenoid biosynthetic reactions.</p>
             <ul>
 
@@ -96,9 +109,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>carotenoid biosynthesis</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0016117" rel="nofollow noreferrer"><code>GO:0016117</code></a>
             <span class="edge-predicate">has output</span>
             <strong>orange carotenoids</strong>
-            <code>RO:0002234</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002234" rel="nofollow noreferrer"><code>RO:0002234</code></a>
             <p>Carotenoid biosynthesis produces orange pigments in representative bacteria.</p>
             <ul>
 
@@ -113,9 +128,11 @@
 
           <li id="pathograph-1-edge-3">
             <strong>carotenoid biosynthesis</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0016117" rel="nofollow noreferrer"><code>GO:0016117</code></a>
             <span class="edge-predicate">has output</span>
             <strong>staphyloxanthin</strong>
-            <code>RO:0002234</code>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:71690" rel="nofollow noreferrer"><code>CHEBI:71690</code></a>
+            <a href="http://purl.obolibrary.org/obo/RO_0002234" rel="nofollow noreferrer"><code>RO:0002234</code></a>
             <p>The S. aureus carotenoid pathway produces staphyloxanthin.</p>
             <ul>
 
@@ -130,9 +147,11 @@
 
           <li id="pathograph-1-edge-4">
             <strong>orange carotenoids</strong>
+
             <span class="edge-predicate">causes</span>
             <strong>visible orange color</strong>
-            <code>biolink:causes</code>
+
+            <a href="https://w3id.org/biolink/vocab/causes" rel="nofollow noreferrer"><code>biolink:causes</code></a>
             <p>Orange carotenoids cause visible orange pigmentation.</p>
             <ul>
 
@@ -147,9 +166,11 @@
 
           <li id="pathograph-1-edge-5">
             <strong>visible orange color</strong>
+
             <span class="edge-predicate">manifests as</span>
             <strong>orange pigmented</strong>
-            <code>METPO:2007400</code>
+            <a href="https://w3id.org/metpo/1003026" rel="nofollow noreferrer"><code>METPO:1003026</code></a>
+            <a href="https://w3id.org/metpo/2007400" rel="nofollow noreferrer"><code>METPO:2007400</code></a>
             <p>Visible orange color manifests the orange-pigmented phenotype.</p>
             <ul>
 
@@ -164,8 +185,10 @@
 
           <li id="pathograph-1-edge-6">
             <strong>lycopene beta-cyclase (CrtY)</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0045436" rel="nofollow noreferrer"><code>GO:0045436</code></a>
             <span class="edge-predicate">converts</span>
             <strong>lycopene</strong>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:15948" rel="nofollow noreferrer"><code>CHEBI:15948</code></a>
 
             <p>CrtY lycopene beta-cyclase acts on lycopene as substrate.</p>
             <ul>
@@ -181,8 +204,10 @@
 
           <li id="pathograph-1-edge-7">
             <strong>lycopene</strong>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:15948" rel="nofollow noreferrer"><code>CHEBI:15948</code></a>
             <span class="edge-predicate">is converted to</span>
             <strong>beta-carotene</strong>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:17579" rel="nofollow noreferrer"><code>CHEBI:17579</code></a>
 
             <p>Lycopene cyclization yields orange beta-carotene.</p>
             <ul>
@@ -198,8 +223,10 @@
 
           <li id="pathograph-1-edge-8">
             <strong>beta-carotene hydroxylase (CrtZ)</strong>
+
             <span class="edge-predicate">converts</span>
             <strong>beta-carotene</strong>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:17579" rel="nofollow noreferrer"><code>CHEBI:17579</code></a>
 
             <p>CrtZ beta-carotene hydroxylase acts on beta-carotene.</p>
             <ul>
@@ -215,8 +242,10 @@
 
           <li id="pathograph-1-edge-9">
             <strong>beta-carotene</strong>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:17579" rel="nofollow noreferrer"><code>CHEBI:17579</code></a>
             <span class="edge-predicate">is converted to</span>
             <strong>zeaxanthin</strong>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:27547" rel="nofollow noreferrer"><code>CHEBI:27547</code></a>
 
             <p>Hydroxylation of beta-carotene yields zeaxanthin.</p>
             <ul>
@@ -232,9 +261,11 @@
 
           <li id="pathograph-1-edge-10">
             <strong>carotenoid ketolase (CrtW)</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>ketocarotenoid biosynthesis</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>CrtW ketolase drives ketocarotenoid (e.g., canthaxanthin/astaxanthin) formation.</p>
             <ul>
 
@@ -249,8 +280,10 @@
 
           <li id="pathograph-1-edge-11">
             <strong>carotenoid accumulation</strong>
+
             <span class="edge-predicate">protects against</span>
             <strong>oxidative stress / reactive oxygen species</strong>
+
 
             <p>Accumulated carotenoids act as antioxidants neutralizing reactive oxygen species.</p>
             <ul>
@@ -266,8 +299,10 @@
 
           <li id="pathograph-1-edge-12">
             <strong>orange pigmented</strong>
+            <a href="https://w3id.org/metpo/1003026" rel="nofollow noreferrer"><code>METPO:1003026</code></a>
             <span class="edge-predicate">has material basis in</span>
             <strong>carotenoid accumulation</strong>
+
 
             <p>The orange-pigmented phenotype is materially based on carotenoid accumulation.</p>
             <ul>
@@ -994,7 +1029,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking orange microbial pigmentation to Crt enzymes, carotenoid biosynthesis, orange carotenoid accumulation, and visible orange color.", "edges": [{"description": "Crt enzymes catalyze bacterial carotenoid biosynthetic reactions.", "evidence": [{"notes": "Supports Crt enzymes as catalysts in bacterial carotenoid pathways.", "reference": "DOI:10.1080/1040841X.2025.2526423", "snippet": "crt genes ... reactions they catalyze"}], "id": "edge-1", "is_orphan": false, "predicate": "catalyzes", "predicate_id": "biolink:catalyzes", "source": "crt_enzymes", "target": "carotenoid_biosynthesis"}, {"description": "Carotenoid biosynthesis produces orange pigments in representative bacteria.", "evidence": [{"notes": "Supports carotenoid biosynthesis as a route to orange bacterial pigmentation.", "reference": "DOI:10.1080/1040841X.2025.2526423", "snippet": "orange ... pigmentation in bacteria"}], "id": "edge-2", "is_orphan": false, "predicate": "has output", "predicate_id": "RO:0002234", "source": "carotenoid_biosynthesis", "target": "orange_carotenoids"}, {"description": "The S. aureus carotenoid pathway produces staphyloxanthin.", "evidence": [{"notes": "Supports staphyloxanthin-related C30 carotenoid pigments in S. aureus.", "reference": "DOI:10.1128/JB.147.3.900-913.1981", "snippet": "triterpenoid carotenoids possessing a C30 chain"}], "id": "edge-3", "is_orphan": false, "predicate": "has output", "predicate_id": "RO:0002234", "source": "carotenoid_biosynthesis", "target": "staphyloxanthin"}, {"description": "Orange carotenoids cause visible orange pigmentation.", "evidence": [{"notes": "Supports carotenoid pigments as determinants of orange color.", "reference": "DOI:10.1080/1040841X.2025.2526423", "snippet": "responsible for ... orange ... pigmentation"}], "id": "edge-4", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "orange_carotenoids", "target": "visible_orange_color"}, {"description": "Visible orange color manifests the orange-pigmented phenotype.", "evidence": [{"notes": "Supports the trait-level color assignment.", "reference": "DOI:10.1080/1040841X.2025.2526423", "snippet": "orange ... pigmentation in bacteria"}], "id": "edge-5", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "visible_orange_color", "target": "orange_pigmented_trait"}, {"description": "CrtY lycopene beta-cyclase acts on lycopene as substrate.", "evidence": [{"notes": "lycopene is converted to beta-carotene by ring-forming lycopene cyclases; in bacteria the enzyme is crtY. Broad microbial applicability.", "reference": "DOI:10.3390/microorganisms11030614"}], "id": "edge-6", "is_orphan": false, "predicate": "converts", "predicate_id": null, "source": "crt_y_lycopene_cyclase", "target": "lycopene"}, {"description": "Lycopene cyclization yields orange beta-carotene.", "evidence": [{"notes": "lycopene is converted to beta-carotene by ring-forming lycopene cyclases (crtY). Broad microbial applicability.", "reference": "DOI:10.3390/microorganisms11030614"}], "id": "edge-7", "is_orphan": false, "predicate": "is converted to", "predicate_id": null, "source": "lycopene", "target": "beta_carotene"}, {"description": "CrtZ beta-carotene hydroxylase acts on beta-carotene.", "evidence": [{"notes": "conversion of beta-carotene to zeaxanthin by crtZ. Strong general edge supporting orange/yellow branches.", "reference": "DOI:10.3390/microorganisms11030614"}], "id": "edge-8", "is_orphan": false, "predicate": "converts", "predicate_id": null, "source": "crt_z_hydroxylase", "target": "beta_carotene"}, {"description": "Hydroxylation of beta-carotene yields zeaxanthin.", "evidence": [{"notes": "crtZ encodes a beta-carotene hydroxylase converting beta-carotene to zeaxanthin. Strong general edge.", "reference": "DOI:10.3390/microorganisms11030614"}], "id": "edge-9", "is_orphan": false, "predicate": "is converted to", "predicate_id": null, "source": "beta_carotene", "target": "zeaxanthin"}, {"description": "CrtW ketolase drives ketocarotenoid (e.g., canthaxanthin/astaxanthin) formation.", "evidence": [{"notes": "ketolation by ketolases such as crtW yields ketocarotenoids (canthaxanthin/astaxanthin). Strong for the ketocarotenoid branch; orange-to-red hue.", "reference": "DOI:10.3390/microorganisms11030614"}], "id": "edge-10", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "crt_w_ketolase", "target": "ketocarotenoid_biosynthesis"}, {"description": "Accumulated carotenoids act as antioxidants neutralizing reactive oxygen species.", "evidence": [{"notes": "acts as an antioxidant protecting against hydrogen peroxide and hydroxyl radicals. Strong, broad functional edge across taxa.", "reference": "DOI:10.7759/cureus.59892"}], "id": "edge-11", "is_orphan": false, "predicate": "protects against", "predicate_id": null, "source": "carotenoid_accumulation", "target": "oxidative_stress"}, {"description": "The orange-pigmented phenotype is materially based on carotenoid accumulation.", "evidence": [{"notes": "orange carotenoid; golden yellow-orange pigment. High-level edge suitable for TraitMech root graph across diverse taxa.", "reference": "DOI:10.7759/cureus.59892"}], "id": "edge-12", "is_orphan": false, "predicate": "has material basis in", "predicate_id": null, "source": "orange_pigmented_trait", "target": "carotenoid_accumulation"}], "evidence_rows": [{"description": "Crt enzymes catalyze bacterial carotenoid biosynthetic reactions.", "edge_id": "edge-1", "evidence": [{"notes": "Supports Crt enzymes as catalysts in bacterial carotenoid pathways.", "reference": "DOI:10.1080/1040841X.2025.2526423", "snippet": "crt genes ... reactions they catalyze"}], "predicate": "catalyzes", "predicate_id": "biolink:catalyzes", "source": "Crt enzymes", "target": "carotenoid biosynthesis"}, {"description": "Carotenoid biosynthesis produces orange pigments in representative bacteria.", "edge_id": "edge-2", "evidence": [{"notes": "Supports carotenoid biosynthesis as a route to orange bacterial pigmentation.", "reference": "DOI:10.1080/1040841X.2025.2526423", "snippet": "orange ... pigmentation in bacteria"}], "predicate": "has output", "predicate_id": "RO:0002234", "source": "carotenoid biosynthesis", "target": "orange carotenoids"}, {"description": "The S. aureus carotenoid pathway produces staphyloxanthin.", "edge_id": "edge-3", "evidence": [{"notes": "Supports staphyloxanthin-related C30 carotenoid pigments in S. aureus.", "reference": "DOI:10.1128/JB.147.3.900-913.1981", "snippet": "triterpenoid carotenoids possessing a C30 chain"}], "predicate": "has output", "predicate_id": "RO:0002234", "source": "carotenoid biosynthesis", "target": "staphyloxanthin"}, {"description": "Orange carotenoids cause visible orange pigmentation.", "edge_id": "edge-4", "evidence": [{"notes": "Supports carotenoid pigments as determinants of orange color.", "reference": "DOI:10.1080/1040841X.2025.2526423", "snippet": "responsible for ... orange ... pigmentation"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "orange carotenoids", "target": "visible orange color"}, {"description": "Visible orange color manifests the orange-pigmented phenotype.", "edge_id": "edge-5", "evidence": [{"notes": "Supports the trait-level color assignment.", "reference": "DOI:10.1080/1040841X.2025.2526423", "snippet": "orange ... pigmentation in bacteria"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "visible orange color", "target": "orange pigmented"}, {"description": "CrtY lycopene beta-cyclase acts on lycopene as substrate.", "edge_id": "edge-6", "evidence": [{"notes": "lycopene is converted to beta-carotene by ring-forming lycopene cyclases; in bacteria the enzyme is crtY. Broad microbial applicability.", "reference": "DOI:10.3390/microorganisms11030614"}], "predicate": "converts", "predicate_id": null, "source": "lycopene beta-cyclase (CrtY)", "target": "lycopene"}, {"description": "Lycopene cyclization yields orange beta-carotene.", "edge_id": "edge-7", "evidence": [{"notes": "lycopene is converted to beta-carotene by ring-forming lycopene cyclases (crtY). Broad microbial applicability.", "reference": "DOI:10.3390/microorganisms11030614"}], "predicate": "is converted to", "predicate_id": null, "source": "lycopene", "target": "beta-carotene"}, {"description": "CrtZ beta-carotene hydroxylase acts on beta-carotene.", "edge_id": "edge-8", "evidence": [{"notes": "conversion of beta-carotene to zeaxanthin by crtZ. Strong general edge supporting orange/yellow branches.", "reference": "DOI:10.3390/microorganisms11030614"}], "predicate": "converts", "predicate_id": null, "source": "beta-carotene hydroxylase (CrtZ)", "target": "beta-carotene"}, {"description": "Hydroxylation of beta-carotene yields zeaxanthin.", "edge_id": "edge-9", "evidence": [{"notes": "crtZ encodes a beta-carotene hydroxylase converting beta-carotene to zeaxanthin. Strong general edge.", "reference": "DOI:10.3390/microorganisms11030614"}], "predicate": "is converted to", "predicate_id": null, "source": "beta-carotene", "target": "zeaxanthin"}, {"description": "CrtW ketolase drives ketocarotenoid (e.g., canthaxanthin/astaxanthin) formation.", "edge_id": "edge-10", "evidence": [{"notes": "ketolation by ketolases such as crtW yields ketocarotenoids (canthaxanthin/astaxanthin). Strong for the ketocarotenoid branch; orange-to-red hue.", "reference": "DOI:10.3390/microorganisms11030614"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "carotenoid ketolase (CrtW)", "target": "ketocarotenoid biosynthesis"}, {"description": "Accumulated carotenoids act as antioxidants neutralizing reactive oxygen species.", "edge_id": "edge-11", "evidence": [{"notes": "acts as an antioxidant protecting against hydrogen peroxide and hydroxyl radicals. Strong, broad functional edge across taxa.", "reference": "DOI:10.7759/cureus.59892"}], "predicate": "protects against", "predicate_id": null, "source": "carotenoid accumulation", "target": "oxidative stress / reactive oxygen species"}, {"description": "The orange-pigmented phenotype is materially based on carotenoid accumulation.", "edge_id": "edge-12", "evidence": [{"notes": "orange carotenoid; golden yellow-orange pigment. High-level edge suitable for TraitMech root graph across diverse taxa.", "reference": "DOI:10.7759/cureus.59892"}], "predicate": "has material basis in", "predicate_id": null, "source": "orange pigmented", "target": "carotenoid accumulation"}], "graph_id": "orange_pigmented_carotenoid_accumulation", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Common orange carotenoid end product or branch intermediate in many microbes.", "grounding": "CHEBI:17579", "id": "beta_carotene", "is_orphan": false, "label": "beta-carotene", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "High-level mechanistic basis for many orange microbial phenotypes across bacteria, archaea, and yeasts.", "grounding": null, "id": "carotenoid_accumulation", "is_orphan": false, "label": "carotenoid accumulation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#e0e7ff", "description": "Enzymatic pathway producing carotenoid pigments.", "grounding": "GO:0016117", "id": "carotenoid_biosynthesis", "is_orphan": false, "label": "carotenoid biosynthesis", "node_type": "PATHWAY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Bacterial carotenoid biosynthetic enzymes.", "grounding": null, "id": "crt_enzymes", "is_orphan": false, "label": "Crt enzymes", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Ketolase producing orange/red ketocarotenoids such as canthaxanthin and astaxanthin.", "grounding": null, "id": "crt_w_ketolase", "is_orphan": false, "label": "carotenoid ketolase (CrtW)", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Lycopene cyclase converting lycopene toward beta-carotene in bacteria.", "grounding": "GO:0045436", "id": "crt_y_lycopene_cyclase", "is_orphan": false, "label": "lycopene beta-cyclase (CrtY)", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Enzyme converting beta-carotene to zeaxanthin.", "grounding": null, "id": "crt_z_hydroxylase", "is_orphan": false, "label": "beta-carotene hydroxylase (CrtZ)", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Pathway branch producing orange-to-red ketocarotenoids.", "grounding": null, "id": "ketocarotenoid_biosynthesis", "is_orphan": false, "label": "ketocarotenoid biosynthesis", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Red carotenoid intermediate upstream of cyclization.", "grounding": "CHEBI:15948", "id": "lycopene", "is_orphan": false, "label": "lycopene", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Carotenoid pigments with orange visible coloration.", "grounding": null, "id": "orange_carotenoids", "is_orphan": false, "label": "orange carotenoids", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Microbial pigmentation appearing orange.", "grounding": "METPO:1003026", "id": "orange_pigmented_trait", "is_orphan": false, "label": "orange pigmented", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Oxidative stressor (ROS) against which carotenoids confer protection.", "grounding": null, "id": "oxidative_stress", "is_orphan": false, "label": "oxidative stress / reactive oxygen species", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Golden-orange C30 carotenoid pigment from Staphylococcus aureus.", "grounding": "CHEBI:71690", "id": "staphyloxanthin", "is_orphan": false, "label": "staphyloxanthin", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#cffafe", "description": "Observed orange colony or cell color.", "grounding": null, "id": "visible_orange_color", "is_orphan": false, "label": "visible orange color", "node_type": "MOLECULAR_FUNCTION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Oxygenated carotenoid contributing yellow-orange coloration.", "grounding": "CHEBI:27547", "id": "zeaxanthin", "is_orphan": false, "label": "zeaxanthin", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This record is a broad environmental or morphological classification spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement descriptor; contextual protein nodes do not receive token UniProt examples.", "scope_status": "NONMECHANISTIC", "title": "Orange pigmentation carotenoid mechanism"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking orange microbial pigmentation to Crt enzymes, carotenoid biosynthesis, orange carotenoid accumulation, and visible orange color.", "edges": [{"description": "Crt enzymes catalyze bacterial carotenoid biosynthetic reactions.", "evidence": [{"notes": "Supports Crt enzymes as catalysts in bacterial carotenoid pathways.", "reference": "DOI:10.1080/1040841X.2025.2526423", "snippet": "crt genes ... reactions they catalyze"}], "id": "edge-1", "is_orphan": false, "predicate": "catalyzes", "predicate_id": "biolink:catalyzes", "source": "crt_enzymes", "target": "carotenoid_biosynthesis"}, {"description": "Carotenoid biosynthesis produces orange pigments in representative bacteria.", "evidence": [{"notes": "Supports carotenoid biosynthesis as a route to orange bacterial pigmentation.", "reference": "DOI:10.1080/1040841X.2025.2526423", "snippet": "orange ... pigmentation in bacteria"}], "id": "edge-2", "is_orphan": false, "predicate": "has output", "predicate_id": "RO:0002234", "source": "carotenoid_biosynthesis", "target": "orange_carotenoids"}, {"description": "The S. aureus carotenoid pathway produces staphyloxanthin.", "evidence": [{"notes": "Supports staphyloxanthin-related C30 carotenoid pigments in S. aureus.", "reference": "DOI:10.1128/JB.147.3.900-913.1981", "snippet": "triterpenoid carotenoids possessing a C30 chain"}], "id": "edge-3", "is_orphan": false, "predicate": "has output", "predicate_id": "RO:0002234", "source": "carotenoid_biosynthesis", "target": "staphyloxanthin"}, {"description": "Orange carotenoids cause visible orange pigmentation.", "evidence": [{"notes": "Supports carotenoid pigments as determinants of orange color.", "reference": "DOI:10.1080/1040841X.2025.2526423", "snippet": "responsible for ... orange ... pigmentation"}], "id": "edge-4", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "orange_carotenoids", "target": "visible_orange_color"}, {"description": "Visible orange color manifests the orange-pigmented phenotype.", "evidence": [{"notes": "Supports the trait-level color assignment.", "reference": "DOI:10.1080/1040841X.2025.2526423", "snippet": "orange ... pigmentation in bacteria"}], "id": "edge-5", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "visible_orange_color", "target": "orange_pigmented_trait"}, {"description": "CrtY lycopene beta-cyclase acts on lycopene as substrate.", "evidence": [{"notes": "lycopene is converted to beta-carotene by ring-forming lycopene cyclases; in bacteria the enzyme is crtY. Broad microbial applicability.", "reference": "DOI:10.3390/microorganisms11030614"}], "id": "edge-6", "is_orphan": false, "predicate": "converts", "predicate_id": null, "source": "crt_y_lycopene_cyclase", "target": "lycopene"}, {"description": "Lycopene cyclization yields orange beta-carotene.", "evidence": [{"notes": "lycopene is converted to beta-carotene by ring-forming lycopene cyclases (crtY). Broad microbial applicability.", "reference": "DOI:10.3390/microorganisms11030614"}], "id": "edge-7", "is_orphan": false, "predicate": "is converted to", "predicate_id": null, "source": "lycopene", "target": "beta_carotene"}, {"description": "CrtZ beta-carotene hydroxylase acts on beta-carotene.", "evidence": [{"notes": "conversion of beta-carotene to zeaxanthin by crtZ. Strong general edge supporting orange/yellow branches.", "reference": "DOI:10.3390/microorganisms11030614"}], "id": "edge-8", "is_orphan": false, "predicate": "converts", "predicate_id": null, "source": "crt_z_hydroxylase", "target": "beta_carotene"}, {"description": "Hydroxylation of beta-carotene yields zeaxanthin.", "evidence": [{"notes": "crtZ encodes a beta-carotene hydroxylase converting beta-carotene to zeaxanthin. Strong general edge.", "reference": "DOI:10.3390/microorganisms11030614"}], "id": "edge-9", "is_orphan": false, "predicate": "is converted to", "predicate_id": null, "source": "beta_carotene", "target": "zeaxanthin"}, {"description": "CrtW ketolase drives ketocarotenoid (e.g., canthaxanthin/astaxanthin) formation.", "evidence": [{"notes": "ketolation by ketolases such as crtW yields ketocarotenoids (canthaxanthin/astaxanthin). Strong for the ketocarotenoid branch; orange-to-red hue.", "reference": "DOI:10.3390/microorganisms11030614"}], "id": "edge-10", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "crt_w_ketolase", "target": "ketocarotenoid_biosynthesis"}, {"description": "Accumulated carotenoids act as antioxidants neutralizing reactive oxygen species.", "evidence": [{"notes": "acts as an antioxidant protecting against hydrogen peroxide and hydroxyl radicals. Strong, broad functional edge across taxa.", "reference": "DOI:10.7759/cureus.59892"}], "id": "edge-11", "is_orphan": false, "predicate": "protects against", "predicate_id": null, "source": "carotenoid_accumulation", "target": "oxidative_stress"}, {"description": "The orange-pigmented phenotype is materially based on carotenoid accumulation.", "evidence": [{"notes": "orange carotenoid; golden yellow-orange pigment. High-level edge suitable for TraitMech root graph across diverse taxa.", "reference": "DOI:10.7759/cureus.59892"}], "id": "edge-12", "is_orphan": false, "predicate": "has material basis in", "predicate_id": null, "source": "orange_pigmented_trait", "target": "carotenoid_accumulation"}], "evidence_rows": [{"description": "Crt enzymes catalyze bacterial carotenoid biosynthetic reactions.", "edge_id": "edge-1", "evidence": [{"notes": "Supports Crt enzymes as catalysts in bacterial carotenoid pathways.", "reference": "DOI:10.1080/1040841X.2025.2526423", "snippet": "crt genes ... reactions they catalyze"}], "predicate": "catalyzes", "predicate_id": "biolink:catalyzes", "source": "Crt enzymes", "source_grounding": null, "target": "carotenoid biosynthesis", "target_grounding": "GO:0016117"}, {"description": "Carotenoid biosynthesis produces orange pigments in representative bacteria.", "edge_id": "edge-2", "evidence": [{"notes": "Supports carotenoid biosynthesis as a route to orange bacterial pigmentation.", "reference": "DOI:10.1080/1040841X.2025.2526423", "snippet": "orange ... pigmentation in bacteria"}], "predicate": "has output", "predicate_id": "RO:0002234", "source": "carotenoid biosynthesis", "source_grounding": "GO:0016117", "target": "orange carotenoids", "target_grounding": null}, {"description": "The S. aureus carotenoid pathway produces staphyloxanthin.", "edge_id": "edge-3", "evidence": [{"notes": "Supports staphyloxanthin-related C30 carotenoid pigments in S. aureus.", "reference": "DOI:10.1128/JB.147.3.900-913.1981", "snippet": "triterpenoid carotenoids possessing a C30 chain"}], "predicate": "has output", "predicate_id": "RO:0002234", "source": "carotenoid biosynthesis", "source_grounding": "GO:0016117", "target": "staphyloxanthin", "target_grounding": "CHEBI:71690"}, {"description": "Orange carotenoids cause visible orange pigmentation.", "edge_id": "edge-4", "evidence": [{"notes": "Supports carotenoid pigments as determinants of orange color.", "reference": "DOI:10.1080/1040841X.2025.2526423", "snippet": "responsible for ... orange ... pigmentation"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "orange carotenoids", "source_grounding": null, "target": "visible orange color", "target_grounding": null}, {"description": "Visible orange color manifests the orange-pigmented phenotype.", "edge_id": "edge-5", "evidence": [{"notes": "Supports the trait-level color assignment.", "reference": "DOI:10.1080/1040841X.2025.2526423", "snippet": "orange ... pigmentation in bacteria"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "visible orange color", "source_grounding": null, "target": "orange pigmented", "target_grounding": "METPO:1003026"}, {"description": "CrtY lycopene beta-cyclase acts on lycopene as substrate.", "edge_id": "edge-6", "evidence": [{"notes": "lycopene is converted to beta-carotene by ring-forming lycopene cyclases; in bacteria the enzyme is crtY. Broad microbial applicability.", "reference": "DOI:10.3390/microorganisms11030614"}], "predicate": "converts", "predicate_id": null, "source": "lycopene beta-cyclase (CrtY)", "source_grounding": "GO:0045436", "target": "lycopene", "target_grounding": "CHEBI:15948"}, {"description": "Lycopene cyclization yields orange beta-carotene.", "edge_id": "edge-7", "evidence": [{"notes": "lycopene is converted to beta-carotene by ring-forming lycopene cyclases (crtY). Broad microbial applicability.", "reference": "DOI:10.3390/microorganisms11030614"}], "predicate": "is converted to", "predicate_id": null, "source": "lycopene", "source_grounding": "CHEBI:15948", "target": "beta-carotene", "target_grounding": "CHEBI:17579"}, {"description": "CrtZ beta-carotene hydroxylase acts on beta-carotene.", "edge_id": "edge-8", "evidence": [{"notes": "conversion of beta-carotene to zeaxanthin by crtZ. Strong general edge supporting orange/yellow branches.", "reference": "DOI:10.3390/microorganisms11030614"}], "predicate": "converts", "predicate_id": null, "source": "beta-carotene hydroxylase (CrtZ)", "source_grounding": null, "target": "beta-carotene", "target_grounding": "CHEBI:17579"}, {"description": "Hydroxylation of beta-carotene yields zeaxanthin.", "edge_id": "edge-9", "evidence": [{"notes": "crtZ encodes a beta-carotene hydroxylase converting beta-carotene to zeaxanthin. Strong general edge.", "reference": "DOI:10.3390/microorganisms11030614"}], "predicate": "is converted to", "predicate_id": null, "source": "beta-carotene", "source_grounding": "CHEBI:17579", "target": "zeaxanthin", "target_grounding": "CHEBI:27547"}, {"description": "CrtW ketolase drives ketocarotenoid (e.g., canthaxanthin/astaxanthin) formation.", "edge_id": "edge-10", "evidence": [{"notes": "ketolation by ketolases such as crtW yields ketocarotenoids (canthaxanthin/astaxanthin). Strong for the ketocarotenoid branch; orange-to-red hue.", "reference": "DOI:10.3390/microorganisms11030614"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "carotenoid ketolase (CrtW)", "source_grounding": null, "target": "ketocarotenoid biosynthesis", "target_grounding": null}, {"description": "Accumulated carotenoids act as antioxidants neutralizing reactive oxygen species.", "edge_id": "edge-11", "evidence": [{"notes": "acts as an antioxidant protecting against hydrogen peroxide and hydroxyl radicals. Strong, broad functional edge across taxa.", "reference": "DOI:10.7759/cureus.59892"}], "predicate": "protects against", "predicate_id": null, "source": "carotenoid accumulation", "source_grounding": null, "target": "oxidative stress / reactive oxygen species", "target_grounding": null}, {"description": "The orange-pigmented phenotype is materially based on carotenoid accumulation.", "edge_id": "edge-12", "evidence": [{"notes": "orange carotenoid; golden yellow-orange pigment. High-level edge suitable for TraitMech root graph across diverse taxa.", "reference": "DOI:10.7759/cureus.59892"}], "predicate": "has material basis in", "predicate_id": null, "source": "orange pigmented", "source_grounding": "METPO:1003026", "target": "carotenoid accumulation", "target_grounding": null}], "graph_id": "orange_pigmented_carotenoid_accumulation", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Common orange carotenoid end product or branch intermediate in many microbes.", "grounding": "CHEBI:17579", "id": "beta_carotene", "is_orphan": false, "label": "beta-carotene", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "High-level mechanistic basis for many orange microbial phenotypes across bacteria, archaea, and yeasts.", "grounding": null, "id": "carotenoid_accumulation", "is_orphan": false, "label": "carotenoid accumulation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#e0e7ff", "description": "Enzymatic pathway producing carotenoid pigments.", "grounding": "GO:0016117", "id": "carotenoid_biosynthesis", "is_orphan": false, "label": "carotenoid biosynthesis", "node_type": "PATHWAY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Bacterial carotenoid biosynthetic enzymes.", "grounding": null, "id": "crt_enzymes", "is_orphan": false, "label": "Crt enzymes", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Ketolase producing orange/red ketocarotenoids such as canthaxanthin and astaxanthin.", "grounding": null, "id": "crt_w_ketolase", "is_orphan": false, "label": "carotenoid ketolase (CrtW)", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Lycopene cyclase converting lycopene toward beta-carotene in bacteria.", "grounding": "GO:0045436", "id": "crt_y_lycopene_cyclase", "is_orphan": false, "label": "lycopene beta-cyclase (CrtY)", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Enzyme converting beta-carotene to zeaxanthin.", "grounding": null, "id": "crt_z_hydroxylase", "is_orphan": false, "label": "beta-carotene hydroxylase (CrtZ)", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Pathway branch producing orange-to-red ketocarotenoids.", "grounding": null, "id": "ketocarotenoid_biosynthesis", "is_orphan": false, "label": "ketocarotenoid biosynthesis", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Red carotenoid intermediate upstream of cyclization.", "grounding": "CHEBI:15948", "id": "lycopene", "is_orphan": false, "label": "lycopene", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Carotenoid pigments with orange visible coloration.", "grounding": null, "id": "orange_carotenoids", "is_orphan": false, "label": "orange carotenoids", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Microbial pigmentation appearing orange.", "grounding": "METPO:1003026", "id": "orange_pigmented_trait", "is_orphan": false, "label": "orange pigmented", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Oxidative stressor (ROS) against which carotenoids confer protection.", "grounding": null, "id": "oxidative_stress", "is_orphan": false, "label": "oxidative stress / reactive oxygen species", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Golden-orange C30 carotenoid pigment from Staphylococcus aureus.", "grounding": "CHEBI:71690", "id": "staphyloxanthin", "is_orphan": false, "label": "staphyloxanthin", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#cffafe", "description": "Observed orange colony or cell color.", "grounding": null, "id": "visible_orange_color", "is_orphan": false, "label": "visible orange color", "node_type": "MOLECULAR_FUNCTION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Oxygenated carotenoid contributing yellow-orange coloration.", "grounding": "CHEBI:27547", "id": "zeaxanthin", "is_orphan": false, "label": "zeaxanthin", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This record is a broad environmental or morphological classification spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement descriptor; contextual protein nodes do not receive token UniProt examples.", "scope_status": "NONMECHANISTIC", "title": "Orange pigmentation carotenoid mechanism"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -1014,13 +1049,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-08-26 03:23 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

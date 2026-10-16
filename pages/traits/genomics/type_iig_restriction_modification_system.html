@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/genomics.html">GENOMICS</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/genomics.html">GENOMICS</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>type IIG restriction-modification system</h1>
     <p class="curie"><code>traitmech:000375</code> · CLASS · PROPOSED</p>
 
@@ -128,9 +139,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>type IIG restriction-modification locus</strong>
+
             <span class="edge-predicate">enables</span>
             <strong>foreign unmethylated DNA cleavage</strong>
-            <code>RO:0002327</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002327" rel="nofollow noreferrer"><code>RO:0002327</code></a>
             <p>Type IIG loci encode the fusion architecture and methyltransferase context needed to cleave unprotected foreign DNA.</p>
             <ul>
 
@@ -157,9 +170,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>foreign unmethylated DNA cleavage</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>type IIG restriction-modification system</strong>
-            <code>METPO:2007700</code>
+            <code>traitmech:000375</code>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>Type IIG restriction-modification activity realizes the organism-level Type IIG R-M system trait.</p>
             <ul>
 
@@ -186,8 +201,10 @@
 
           <li id="pathograph-1-edge-3">
             <strong>type IIG restriction-modification system</strong>
+            <code>traitmech:000375</code>
             <span class="edge-predicate">is a</span>
             <strong>restriction-modification system</strong>
+            <code>traitmech:000095</code>
             <code>rdfs:subClassOf</code>
             <p>A Type IIG R-M system is a subtype of broader restriction-modification system possession.</p>
             <ul>
@@ -279,11 +296,75 @@
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
 
-      <p class="no-match">No kg-microbe node embedding matched this record
-        in the 2026-04-25 deepwalk.</p>
+      <p class="match-method">Matched <strong>1</strong>
+        kg-microbe node
+        via <em>parent_proxy</em>.</p>
+      <ul class="kgm-nodes">
+
+        <li><code>METPO:1000188</code> <span class="dim-preview">[-0.956, -1.962, -3.148, +1.274, …]</span></li>
+
+      </ul>
+      <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
 
     </div>
 
+
+    <div class="card">
+      <h2>Nearest neighbors in embedding space</h2>
+      <p class="meta">Top-8 cosine-similar METPO traits
+        from the 2026-04-25 deepwalk (512-D).</p>
+      <ul class="nn-list">
+
+        <li>
+          <span class="nn-cat">upper</span>
+          <a href="../../traits/upper/quality.html">quality</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hna_system.html">Hna system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hma_system.html">Hma system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hesat_system.html">Hesat system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_08_system.html">HEC-08 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_07_system.html">HEC-07 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_06_system.html">HEC-06 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_05_system.html">HEC-05 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+      </ul>
+    </div>
 
 
 
@@ -441,6 +522,11 @@
     </dl>
   </div>
 
+
+  <div class="card rail-kgm">
+    <h2>kg-microbe</h2>
+    <p class="meta">1 matching node (parent_proxy)</p>
+  </div>
 
 </aside>
 </div>
@@ -774,7 +860,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Conservative system-level sketch linking Type IIG restriction-methyltransferase-specificity fusion loci to restriction-modification-mediated foreign DNA cleavage.", "edges": [{"description": "Type IIG loci encode the fusion architecture and methyltransferase context needed to cleave unprotected foreign DNA.", "evidence": [{"notes": "Shen et al. define Type IIG restriction-modification systems as systems that combine restriction, methyltransferase, and specificity subunits in one uninterrupted protein chain.", "reference": "DOI:10.1093/nar/gkr543", "snippet": "Type IIG R\u2013M systems also follow this general strategy for target recognition, but instead of encoding separate REase, MTase and specificity subunits, they have evolved to combine them within a single uninterrupted protein chain."}, {"notes": "The characterized BpuSI Type IIG example carries two companion methyltransferase genes and an R-M fusion gene, supporting a locus-level system trait rather than a single protein trait.", "reference": "DOI:10.1093/nar/gkr543", "snippet": "The entire BpuSI R\u2013M system consists of two MTase genes (M1 and M2) and the R\u2013M fusion gene."}, {"notes": "The cloned Tth111II Type IIGS enzyme has endonuclease, methylase, and specificity domains in one polypeptide.", "reference": "DOI:10.1038/srep03838", "snippet": "Tth111II contains both endonuclease (R) and methylase (M) domains and a shared specificity domain (S)."}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "type_iig_rm_locus", "target": "foreign_unmethylated_dna_cleavage"}, {"description": "Type IIG restriction-modification activity realizes the organism-level Type IIG R-M system trait.", "evidence": [{"notes": "Zhu et al. place Type IIG in the Type II restriction enzyme classification and describe variable target symmetry plus AdoMet/SAM-sensitive endonuclease activity.", "reference": "DOI:10.1038/srep03838", "snippet": "Type IIG (symmetric or asymmetric target sites; endonuclease activity affected by AdoMet (SAM))"}, {"notes": "Zhu et al. frame the Type IIGS decision between cleaving and modifying unmodified DNA in the broader restriction-modification role of cleaving foreign invading DNA.", "reference": "DOI:10.1038/srep03838", "snippet": "The biological function of restriction-modification systems is to restrict/cleave foreign invading DNA"}, {"notes": "The DefenseFinder rules table models RM_Type_IIG as an RM subsystem that requires the RM_Type_IIG__Type_IIG profile group and excludes two non-RM profiles.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "RM\tRM_Type_IIG\t1\t1\tRM_Type_IIG__Type_IIG\t\tBREX__pglZB, DISARM__drmB\t"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "foreign_unmethylated_dna_cleavage", "target": "type_iig_restriction_modification_system_trait"}, {"description": "A Type IIG R-M system is a subtype of broader restriction-modification system possession.", "evidence": [{"notes": "Shen et al. define Type IIG restriction-modification systems as systems that combine restriction, methyltransferase, and specificity subunits in one uninterrupted protein chain.", "reference": "DOI:10.1093/nar/gkr543", "snippet": "Type IIG R\u2013M systems also follow this general strategy for target recognition, but instead of encoding separate REase, MTase and specificity subunits, they have evolved to combine them within a single uninterrupted protein chain."}, {"notes": "The pinned DefenseFinder article registry maps the named RM_Type_IIG model to the REBASE update.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "RM_Type_IIG | 10\\.1093/nar/gkac975 | REBASE: a database for DNA restriction and modification: enzymes, genes and genomes"}, {"notes": "The DefenseFinder HMM inventory lists eight custom profiles under the RM_Type_IIG system namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| RM_Type_IIG__Type_IIG_1                          |                                                  | RM_Type_IIG            | Custom                  | 300    |\n| RM_Type_IIG__Type_IIG_2                          |                                                  | RM_Type_IIG            | Custom                  | 300    |\n| RM_Type_IIG__Type_IIG_3                          |                                                  | RM_Type_IIG            | Custom                  | 300    |\n| RM_Type_IIG__Type_IIG_4                          |                                                  | RM_Type_IIG            | Custom                  | 300    |\n| RM_Type_IIG__Type_IIG_5                          |                                                  | RM_Type_IIG            | Custom                  | 300    |\n| RM_Type_IIG__Type_IIG_FAM_0.einsi_trimmed        |                                                  | RM_Type_IIG            | Custom                  | 300    |\n| RM_Type_IIG__Type_IIG_FAM_1.einsi_trimmed        |                                                  | RM_Type_IIG            | Custom                  | 300    |\n| RM_Type_IIG__Type_IIG_FAM_2.einsi_trimmed        |                                                  | RM_Type_IIG            | Custom                  | 300    |"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "type_iig_restriction_modification_system_trait", "target": "restriction_modification_system"}], "evidence_rows": [{"description": "Type IIG loci encode the fusion architecture and methyltransferase context needed to cleave unprotected foreign DNA.", "edge_id": "edge-1", "evidence": [{"notes": "Shen et al. define Type IIG restriction-modification systems as systems that combine restriction, methyltransferase, and specificity subunits in one uninterrupted protein chain.", "reference": "DOI:10.1093/nar/gkr543", "snippet": "Type IIG R\u2013M systems also follow this general strategy for target recognition, but instead of encoding separate REase, MTase and specificity subunits, they have evolved to combine them within a single uninterrupted protein chain."}, {"notes": "The characterized BpuSI Type IIG example carries two companion methyltransferase genes and an R-M fusion gene, supporting a locus-level system trait rather than a single protein trait.", "reference": "DOI:10.1093/nar/gkr543", "snippet": "The entire BpuSI R\u2013M system consists of two MTase genes (M1 and M2) and the R\u2013M fusion gene."}, {"notes": "The cloned Tth111II Type IIGS enzyme has endonuclease, methylase, and specificity domains in one polypeptide.", "reference": "DOI:10.1038/srep03838", "snippet": "Tth111II contains both endonuclease (R) and methylase (M) domains and a shared specificity domain (S)."}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "type IIG restriction-modification locus", "target": "foreign unmethylated DNA cleavage"}, {"description": "Type IIG restriction-modification activity realizes the organism-level Type IIG R-M system trait.", "edge_id": "edge-2", "evidence": [{"notes": "Zhu et al. place Type IIG in the Type II restriction enzyme classification and describe variable target symmetry plus AdoMet/SAM-sensitive endonuclease activity.", "reference": "DOI:10.1038/srep03838", "snippet": "Type IIG (symmetric or asymmetric target sites; endonuclease activity affected by AdoMet (SAM))"}, {"notes": "Zhu et al. frame the Type IIGS decision between cleaving and modifying unmodified DNA in the broader restriction-modification role of cleaving foreign invading DNA.", "reference": "DOI:10.1038/srep03838", "snippet": "The biological function of restriction-modification systems is to restrict/cleave foreign invading DNA"}, {"notes": "The DefenseFinder rules table models RM_Type_IIG as an RM subsystem that requires the RM_Type_IIG__Type_IIG profile group and excludes two non-RM profiles.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "RM\tRM_Type_IIG\t1\t1\tRM_Type_IIG__Type_IIG\t\tBREX__pglZB, DISARM__drmB\t"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "foreign unmethylated DNA cleavage", "target": "type IIG restriction-modification system"}, {"description": "A Type IIG R-M system is a subtype of broader restriction-modification system possession.", "edge_id": "edge-3", "evidence": [{"notes": "Shen et al. define Type IIG restriction-modification systems as systems that combine restriction, methyltransferase, and specificity subunits in one uninterrupted protein chain.", "reference": "DOI:10.1093/nar/gkr543", "snippet": "Type IIG R\u2013M systems also follow this general strategy for target recognition, but instead of encoding separate REase, MTase and specificity subunits, they have evolved to combine them within a single uninterrupted protein chain."}, {"notes": "The pinned DefenseFinder article registry maps the named RM_Type_IIG model to the REBASE update.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "RM_Type_IIG | 10\\.1093/nar/gkac975 | REBASE: a database for DNA restriction and modification: enzymes, genes and genomes"}, {"notes": "The DefenseFinder HMM inventory lists eight custom profiles under the RM_Type_IIG system namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| RM_Type_IIG__Type_IIG_1                          |                                                  | RM_Type_IIG            | Custom                  | 300    |\n| RM_Type_IIG__Type_IIG_2                          |                                                  | RM_Type_IIG            | Custom                  | 300    |\n| RM_Type_IIG__Type_IIG_3                          |                                                  | RM_Type_IIG            | Custom                  | 300    |\n| RM_Type_IIG__Type_IIG_4                          |                                                  | RM_Type_IIG            | Custom                  | 300    |\n| RM_Type_IIG__Type_IIG_5                          |                                                  | RM_Type_IIG            | Custom                  | 300    |\n| RM_Type_IIG__Type_IIG_FAM_0.einsi_trimmed        |                                                  | RM_Type_IIG            | Custom                  | 300    |\n| RM_Type_IIG__Type_IIG_FAM_1.einsi_trimmed        |                                                  | RM_Type_IIG            | Custom                  | 300    |\n| RM_Type_IIG__Type_IIG_FAM_2.einsi_trimmed        |                                                  | RM_Type_IIG            | Custom                  | 300    |"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "type IIG restriction-modification system", "target": "restriction-modification system"}], "graph_id": "type_iig_rm_locus_restricts_foreign_dna", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Restriction of invading DNA that has not been protected by cognate methylation.", "grounding": null, "id": "foreign_unmethylated_dna_cleavage", "is_orphan": false, "label": "foreign unmethylated DNA cleavage", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a methyltransferase and restriction endonuclease system for self/non-self DNA discrimination.", "grounding": "traitmech:000095", "id": "restriction_modification_system", "is_orphan": false, "label": "restriction-modification system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded type IIG restriction-modification system.", "grounding": "traitmech:000375", "id": "type_iig_restriction_modification_system_trait", "is_orphan": false, "label": "type IIG restriction-modification system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "A Type IIG R-M locus centered on a single restriction-methyltransferase-specificity fusion gene and, in some systems, one or more companion methyltransferase genes.", "grounding": null, "id": "type_iig_rm_locus", "is_orphan": false, "label": "type IIG restriction-modification locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "The graph captures the reusable Type IIG locus architecture and the DefenseFinder RM_Type_IIG custom-profile namespace without asserting an accession-level mapping between each custom HMM, BpuSI, Tth111II, or companion methyltransferases.", "scope_status": "NONMECHANISTIC", "title": "Type IIG R-M loci mark self and restrict foreign DNA"}];
+  var graphs = [{"description": "Conservative system-level sketch linking Type IIG restriction-methyltransferase-specificity fusion loci to restriction-modification-mediated foreign DNA cleavage.", "edges": [{"description": "Type IIG loci encode the fusion architecture and methyltransferase context needed to cleave unprotected foreign DNA.", "evidence": [{"notes": "Shen et al. define Type IIG restriction-modification systems as systems that combine restriction, methyltransferase, and specificity subunits in one uninterrupted protein chain.", "reference": "DOI:10.1093/nar/gkr543", "snippet": "Type IIG R\u2013M systems also follow this general strategy for target recognition, but instead of encoding separate REase, MTase and specificity subunits, they have evolved to combine them within a single uninterrupted protein chain."}, {"notes": "The characterized BpuSI Type IIG example carries two companion methyltransferase genes and an R-M fusion gene, supporting a locus-level system trait rather than a single protein trait.", "reference": "DOI:10.1093/nar/gkr543", "snippet": "The entire BpuSI R\u2013M system consists of two MTase genes (M1 and M2) and the R\u2013M fusion gene."}, {"notes": "The cloned Tth111II Type IIGS enzyme has endonuclease, methylase, and specificity domains in one polypeptide.", "reference": "DOI:10.1038/srep03838", "snippet": "Tth111II contains both endonuclease (R) and methylase (M) domains and a shared specificity domain (S)."}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "type_iig_rm_locus", "target": "foreign_unmethylated_dna_cleavage"}, {"description": "Type IIG restriction-modification activity realizes the organism-level Type IIG R-M system trait.", "evidence": [{"notes": "Zhu et al. place Type IIG in the Type II restriction enzyme classification and describe variable target symmetry plus AdoMet/SAM-sensitive endonuclease activity.", "reference": "DOI:10.1038/srep03838", "snippet": "Type IIG (symmetric or asymmetric target sites; endonuclease activity affected by AdoMet (SAM))"}, {"notes": "Zhu et al. frame the Type IIGS decision between cleaving and modifying unmodified DNA in the broader restriction-modification role of cleaving foreign invading DNA.", "reference": "DOI:10.1038/srep03838", "snippet": "The biological function of restriction-modification systems is to restrict/cleave foreign invading DNA"}, {"notes": "The DefenseFinder rules table models RM_Type_IIG as an RM subsystem that requires the RM_Type_IIG__Type_IIG profile group and excludes two non-RM profiles.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "RM\tRM_Type_IIG\t1\t1\tRM_Type_IIG__Type_IIG\t\tBREX__pglZB, DISARM__drmB\t"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "foreign_unmethylated_dna_cleavage", "target": "type_iig_restriction_modification_system_trait"}, {"description": "A Type IIG R-M system is a subtype of broader restriction-modification system possession.", "evidence": [{"notes": "Shen et al. define Type IIG restriction-modification systems as systems that combine restriction, methyltransferase, and specificity subunits in one uninterrupted protein chain.", "reference": "DOI:10.1093/nar/gkr543", "snippet": "Type IIG R\u2013M systems also follow this general strategy for target recognition, but instead of encoding separate REase, MTase and specificity subunits, they have evolved to combine them within a single uninterrupted protein chain."}, {"notes": "The pinned DefenseFinder article registry maps the named RM_Type_IIG model to the REBASE update.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "RM_Type_IIG | 10\\.1093/nar/gkac975 | REBASE: a database for DNA restriction and modification: enzymes, genes and genomes"}, {"notes": "The DefenseFinder HMM inventory lists eight custom profiles under the RM_Type_IIG system namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| RM_Type_IIG__Type_IIG_1                          |                                                  | RM_Type_IIG            | Custom                  | 300    |\n| RM_Type_IIG__Type_IIG_2                          |                                                  | RM_Type_IIG            | Custom                  | 300    |\n| RM_Type_IIG__Type_IIG_3                          |                                                  | RM_Type_IIG            | Custom                  | 300    |\n| RM_Type_IIG__Type_IIG_4                          |                                                  | RM_Type_IIG            | Custom                  | 300    |\n| RM_Type_IIG__Type_IIG_5                          |                                                  | RM_Type_IIG            | Custom                  | 300    |\n| RM_Type_IIG__Type_IIG_FAM_0.einsi_trimmed        |                                                  | RM_Type_IIG            | Custom                  | 300    |\n| RM_Type_IIG__Type_IIG_FAM_1.einsi_trimmed        |                                                  | RM_Type_IIG            | Custom                  | 300    |\n| RM_Type_IIG__Type_IIG_FAM_2.einsi_trimmed        |                                                  | RM_Type_IIG            | Custom                  | 300    |"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "type_iig_restriction_modification_system_trait", "target": "restriction_modification_system"}], "evidence_rows": [{"description": "Type IIG loci encode the fusion architecture and methyltransferase context needed to cleave unprotected foreign DNA.", "edge_id": "edge-1", "evidence": [{"notes": "Shen et al. define Type IIG restriction-modification systems as systems that combine restriction, methyltransferase, and specificity subunits in one uninterrupted protein chain.", "reference": "DOI:10.1093/nar/gkr543", "snippet": "Type IIG R\u2013M systems also follow this general strategy for target recognition, but instead of encoding separate REase, MTase and specificity subunits, they have evolved to combine them within a single uninterrupted protein chain."}, {"notes": "The characterized BpuSI Type IIG example carries two companion methyltransferase genes and an R-M fusion gene, supporting a locus-level system trait rather than a single protein trait.", "reference": "DOI:10.1093/nar/gkr543", "snippet": "The entire BpuSI R\u2013M system consists of two MTase genes (M1 and M2) and the R\u2013M fusion gene."}, {"notes": "The cloned Tth111II Type IIGS enzyme has endonuclease, methylase, and specificity domains in one polypeptide.", "reference": "DOI:10.1038/srep03838", "snippet": "Tth111II contains both endonuclease (R) and methylase (M) domains and a shared specificity domain (S)."}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "type IIG restriction-modification locus", "source_grounding": null, "target": "foreign unmethylated DNA cleavage", "target_grounding": null}, {"description": "Type IIG restriction-modification activity realizes the organism-level Type IIG R-M system trait.", "edge_id": "edge-2", "evidence": [{"notes": "Zhu et al. place Type IIG in the Type II restriction enzyme classification and describe variable target symmetry plus AdoMet/SAM-sensitive endonuclease activity.", "reference": "DOI:10.1038/srep03838", "snippet": "Type IIG (symmetric or asymmetric target sites; endonuclease activity affected by AdoMet (SAM))"}, {"notes": "Zhu et al. frame the Type IIGS decision between cleaving and modifying unmodified DNA in the broader restriction-modification role of cleaving foreign invading DNA.", "reference": "DOI:10.1038/srep03838", "snippet": "The biological function of restriction-modification systems is to restrict/cleave foreign invading DNA"}, {"notes": "The DefenseFinder rules table models RM_Type_IIG as an RM subsystem that requires the RM_Type_IIG__Type_IIG profile group and excludes two non-RM profiles.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "RM\tRM_Type_IIG\t1\t1\tRM_Type_IIG__Type_IIG\t\tBREX__pglZB, DISARM__drmB\t"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "foreign unmethylated DNA cleavage", "source_grounding": null, "target": "type IIG restriction-modification system", "target_grounding": "traitmech:000375"}, {"description": "A Type IIG R-M system is a subtype of broader restriction-modification system possession.", "edge_id": "edge-3", "evidence": [{"notes": "Shen et al. define Type IIG restriction-modification systems as systems that combine restriction, methyltransferase, and specificity subunits in one uninterrupted protein chain.", "reference": "DOI:10.1093/nar/gkr543", "snippet": "Type IIG R\u2013M systems also follow this general strategy for target recognition, but instead of encoding separate REase, MTase and specificity subunits, they have evolved to combine them within a single uninterrupted protein chain."}, {"notes": "The pinned DefenseFinder article registry maps the named RM_Type_IIG model to the REBASE update.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "RM_Type_IIG | 10\\.1093/nar/gkac975 | REBASE: a database for DNA restriction and modification: enzymes, genes and genomes"}, {"notes": "The DefenseFinder HMM inventory lists eight custom profiles under the RM_Type_IIG system namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| RM_Type_IIG__Type_IIG_1                          |                                                  | RM_Type_IIG            | Custom                  | 300    |\n| RM_Type_IIG__Type_IIG_2                          |                                                  | RM_Type_IIG            | Custom                  | 300    |\n| RM_Type_IIG__Type_IIG_3                          |                                                  | RM_Type_IIG            | Custom                  | 300    |\n| RM_Type_IIG__Type_IIG_4                          |                                                  | RM_Type_IIG            | Custom                  | 300    |\n| RM_Type_IIG__Type_IIG_5                          |                                                  | RM_Type_IIG            | Custom                  | 300    |\n| RM_Type_IIG__Type_IIG_FAM_0.einsi_trimmed        |                                                  | RM_Type_IIG            | Custom                  | 300    |\n| RM_Type_IIG__Type_IIG_FAM_1.einsi_trimmed        |                                                  | RM_Type_IIG            | Custom                  | 300    |\n| RM_Type_IIG__Type_IIG_FAM_2.einsi_trimmed        |                                                  | RM_Type_IIG            | Custom                  | 300    |"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "type IIG restriction-modification system", "source_grounding": "traitmech:000375", "target": "restriction-modification system", "target_grounding": "traitmech:000095"}], "graph_id": "type_iig_rm_locus_restricts_foreign_dna", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Restriction of invading DNA that has not been protected by cognate methylation.", "grounding": null, "id": "foreign_unmethylated_dna_cleavage", "is_orphan": false, "label": "foreign unmethylated DNA cleavage", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a methyltransferase and restriction endonuclease system for self/non-self DNA discrimination.", "grounding": "traitmech:000095", "id": "restriction_modification_system", "is_orphan": false, "label": "restriction-modification system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded type IIG restriction-modification system.", "grounding": "traitmech:000375", "id": "type_iig_restriction_modification_system_trait", "is_orphan": false, "label": "type IIG restriction-modification system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "A Type IIG R-M locus centered on a single restriction-methyltransferase-specificity fusion gene and, in some systems, one or more companion methyltransferase genes.", "grounding": null, "id": "type_iig_rm_locus", "is_orphan": false, "label": "type IIG restriction-modification locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "The graph captures the reusable Type IIG locus architecture and the DefenseFinder RM_Type_IIG custom-profile namespace without asserting an accession-level mapping between each custom HMM, BpuSI, Tth111II, or companion methyltransferases.", "scope_status": "NONMECHANISTIC", "title": "Type IIG R-M loci mark self and restrict foreign DNA"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -794,13 +880,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-09-30 13:45 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

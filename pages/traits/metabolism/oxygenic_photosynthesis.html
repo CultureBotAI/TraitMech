@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/metabolism.html">METABOLISM</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/metabolism.html">METABOLISM</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>oxygenic photosynthesis</h1>
     <p class="curie"><code>traitmech:000034</code> · CLASS · REVIEWED</p>
 
@@ -85,9 +96,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>water</strong>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:15377" rel="nofollow noreferrer"><code>CHEBI:15377</code></a>
             <span class="edge-predicate">oxidized to</span>
             <strong>molecular oxygen</strong>
-            <code>METPO:2007405</code>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:15379" rel="nofollow noreferrer"><code>CHEBI:15379</code></a>
+            <a href="https://w3id.org/metpo/2007405" rel="nofollow noreferrer"><code>METPO:2007405</code></a>
             <p>Water is the electron donor; its oxidation releases O2.</p>
             <ul>
 
@@ -102,9 +115,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>photosynthetic electron transport</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0009767" rel="nofollow noreferrer"><code>GO:0009767</code></a>
             <span class="edge-predicate">confers</span>
             <strong>oxygenic photosynthesis</strong>
-            <code>METPO:2007700</code>
+            <code>traitmech:000034</code>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>Two linked photosystems power electron flow from water to NADP+.</p>
             <ul>
 
@@ -119,9 +134,11 @@
 
           <li id="pathograph-1-edge-3">
             <strong>photosystem II</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0009523" rel="nofollow noreferrer"><code>GO:0009523</code></a>
             <span class="edge-predicate">oxidizes</span>
             <strong>water</strong>
-            <code>METPO:2007803</code>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:15377" rel="nofollow noreferrer"><code>CHEBI:15377</code></a>
+            <a href="https://w3id.org/metpo/2007803" rel="nofollow noreferrer"><code>METPO:2007803</code></a>
             <p>PSII is the primary catalyst of water oxidation in oxygenic photosynthesis.</p>
             <ul>
 
@@ -136,9 +153,11 @@
 
           <li id="pathograph-1-edge-4">
             <strong>photosystem II</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0009523" rel="nofollow noreferrer"><code>GO:0009523</code></a>
             <span class="edge-predicate">reduces</span>
             <strong>plastoquinone/plastoquinol pool</strong>
-            <code>METPO:2007802</code>
+
+            <a href="https://w3id.org/metpo/2007802" rel="nofollow noreferrer"><code>METPO:2007802</code></a>
             <p>Electrons extracted from water reduce plastoquinone (PQ -&gt; PQH2).</p>
             <ul>
 
@@ -153,9 +172,11 @@
 
           <li id="pathograph-1-edge-5">
             <strong>plastoquinone/plastoquinol pool</strong>
+
             <span class="edge-predicate">donates electrons to</span>
             <strong>cytochrome b6f complex</strong>
-            <code>METPO:2007403</code>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0009512" rel="nofollow noreferrer"><code>GO:0009512</code></a>
+            <a href="https://w3id.org/metpo/2007403" rel="nofollow noreferrer"><code>METPO:2007403</code></a>
             <p>Plastoquinol diffuses to reduce the cytochrome b6f complex.</p>
             <ul>
 
@@ -170,9 +191,11 @@
 
           <li id="pathograph-1-edge-6">
             <strong>cytochrome b6f complex</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0009512" rel="nofollow noreferrer"><code>GO:0009512</code></a>
             <span class="edge-predicate">transfers electrons to</span>
             <strong>photosystem I</strong>
-            <code>METPO:2007403</code>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0009522" rel="nofollow noreferrer"><code>GO:0009522</code></a>
+            <a href="https://w3id.org/metpo/2007403" rel="nofollow noreferrer"><code>METPO:2007403</code></a>
             <p>Cyt b6f transfers electrons to PSI via soluble carriers (plastocyanin or cytochrome c6).</p>
             <ul>
 
@@ -187,9 +210,11 @@
 
           <li id="pathograph-1-edge-7">
             <strong>photosystem I</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0009522" rel="nofollow noreferrer"><code>GO:0009522</code></a>
             <span class="edge-predicate">reduces</span>
             <strong>ferredoxin</strong>
-            <code>METPO:2007802</code>
+
+            <a href="https://w3id.org/metpo/2007802" rel="nofollow noreferrer"><code>METPO:2007802</code></a>
             <p>PSI oxidizes plastocyanin and reduces ferredoxin.</p>
             <ul>
 
@@ -204,9 +229,11 @@
 
           <li id="pathograph-1-edge-8">
             <strong>ferredoxin-NADP+ reductase</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0004324" rel="nofollow noreferrer"><code>GO:0004324</code></a>
             <span class="edge-predicate">reduces</span>
             <strong>NADPH</strong>
-            <code>METPO:2007802</code>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:16474" rel="nofollow noreferrer"><code>CHEBI:16474</code></a>
+            <a href="https://w3id.org/metpo/2007802" rel="nofollow noreferrer"><code>METPO:2007802</code></a>
             <p>Ferredoxin-NADP+ reductase reduces NADP+ to NADPH using ferredoxin electrons.</p>
             <ul>
 
@@ -221,9 +248,11 @@
 
           <li id="pathograph-1-edge-9">
             <strong>photosynthetic electron transport</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0009767" rel="nofollow noreferrer"><code>GO:0009767</code></a>
             <span class="edge-predicate">generates</span>
             <strong>proton motive force</strong>
-            <code>biolink:produces</code>
+            <a href="https://w3id.org/metpo/1007500" rel="nofollow noreferrer"><code>METPO:1007500</code></a>
+            <a href="https://w3id.org/biolink/vocab/produces" rel="nofollow noreferrer"><code>biolink:produces</code></a>
             <p>Linear electron transport generates the transthylakoid proton motive force.</p>
             <ul>
 
@@ -238,8 +267,10 @@
 
           <li id="pathograph-1-edge-10">
             <strong>proton motive force</strong>
+            <a href="https://w3id.org/metpo/1007500" rel="nofollow noreferrer"><code>METPO:1007500</code></a>
             <span class="edge-predicate">drives</span>
             <strong>ATP</strong>
+
 
             <p>The proton motive force drives ATP synthesis by ATP synthase.</p>
             <ul>
@@ -255,9 +286,11 @@
 
           <li id="pathograph-1-edge-11">
             <strong>photosystem II</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0009523" rel="nofollow noreferrer"><code>GO:0009523</code></a>
             <span class="edge-predicate">contributes to</span>
             <strong>oxygenic photosynthesis</strong>
-            <code>RO:0002326</code>
+            <code>traitmech:000034</code>
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>PSII supplies the water-oxidation entry point.</p>
             <ul>
 
@@ -272,9 +305,11 @@
 
           <li id="pathograph-1-edge-12">
             <strong>ferredoxin</strong>
+
             <span class="edge-predicate">donates electrons to</span>
             <strong>ferredoxin-NADP+ reductase</strong>
-            <code>METPO:2007403</code>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0004324" rel="nofollow noreferrer"><code>GO:0004324</code></a>
+            <a href="https://w3id.org/metpo/2007403" rel="nofollow noreferrer"><code>METPO:2007403</code></a>
             <p>Reduced ferredoxin transfers PSI electrons to FNR.</p>
             <ul>
 
@@ -409,13 +444,25 @@
 
         <li>
           <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/lignin_degradation.html">lignin degradation</a>
+          <a href="../../traits/metabolism/sulfur_oxidation.html">sulfur oxidation</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/sulfur_oxidation.html">sulfur oxidation</a>
+          <a href="../../traits/metabolism/dark_hydrogen_oxidation.html">dark hydrogen oxidation</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">metabolism</span>
+          <a href="../../traits/metabolism/dark_oxidation_of_sulfur_compounds.html">dark oxidation of sulfur compounds</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">metabolism</span>
+          <a href="../../traits/metabolism/dicarboxylate_four_hydroxybutyrate_cycle.html">dicarboxylate/4-hydroxybutyrate cycle</a>
           <span class="sim">1.000</span>
         </li>
 
@@ -427,31 +474,19 @@
 
         <li>
           <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/reductive_tca_cycle.html">reductive tricarboxylic acid cycle</a>
+          <a href="../../traits/metabolism/hydrocarbon_degradation.html">hydrocarbon degradation</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/proteorhodopsin_phototrophy.html">proteorhodopsin phototrophy</a>
+          <a href="../../traits/metabolism/iron_oxidation.html">iron oxidation</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/proteolysis.html">proteolysis</a>
-          <span class="sim">1.000</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/phototrophy.html">phototrophy</a>
-          <span class="sim">1.000</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/photosynthesis.html">photosynthesis</a>
+          <a href="../../traits/metabolism/lignin_degradation.html">lignin degradation</a>
           <span class="sim">1.000</span>
         </li>
 
@@ -1065,7 +1100,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking two linked photosystems and water oxidation to CO2 fixation and oxygen evolution.", "edges": [{"description": "Water is the electron donor; its oxidation releases O2.", "evidence": [{"notes": "Bryant \u0026 Frigaard contrast oxygenic photosynthesis (water-splitting, O2-evolving) with anoxygenic phototrophy.", "reference": "DOI:10.1016/j.tim.2006.09.001"}], "id": "edge-1", "is_orphan": false, "predicate": "oxidized to", "predicate_id": "METPO:2007405", "source": "water", "target": "molecular_oxygen"}, {"description": "Two linked photosystems power electron flow from water to NADP+.", "evidence": [{"notes": "Fischer et al. support water-oxidizing, O2-evolving photosynthesis as a cyanobacterial innovation.", "reference": "DOI:10.1146/annurev-earth-060313-054810"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "photosynthetic_etc", "target": "oxygenic_photosynthesis_trait"}, {"description": "PSII is the primary catalyst of water oxidation in oxygenic photosynthesis.", "evidence": [{"notes": "Shevela et al. 2023: PSII is the primary catalyst of water oxidation in oxygenic photosynthesis.", "reference": "DOI:10.1007/s11120-022-00991-y"}], "id": "edge-3", "is_orphan": false, "predicate": "oxidizes", "predicate_id": "METPO:2007803", "source": "photosystem_ii", "target": "water"}, {"description": "Electrons extracted from water reduce plastoquinone (PQ -\u003e PQH2).", "evidence": [{"notes": "Shevela et al. 2023: water oxidation extracts electrons that reduce plastoquinone (PQ -\u003e PQH2).", "reference": "DOI:10.1007/s11120-022-00991-y"}], "id": "edge-4", "is_orphan": false, "predicate": "reduces", "predicate_id": "METPO:2007802", "source": "photosystem_ii", "target": "plastoquinone_pool"}, {"description": "Plastoquinol diffuses to reduce the cytochrome b6f complex.", "evidence": [{"notes": "Milrad et al. 2024: PQH2 diffuses to reduce the cytochrome b6f complex.", "reference": "DOI:10.3390/plants13152103"}], "id": "edge-5", "is_orphan": false, "predicate": "donates electrons to", "predicate_id": "METPO:2007403", "source": "plastoquinone_pool", "target": "cytochrome_b6f"}, {"description": "Cyt b6f transfers electrons to PSI via soluble carriers (plastocyanin or cytochrome c6).", "evidence": [{"notes": "Milrad et al. 2024: electrons transferred from Cytb6f to PSI via plastocyanin or cytochrome c6.", "reference": "DOI:10.3390/plants13152103"}], "id": "edge-6", "is_orphan": false, "predicate": "transfers electrons to", "predicate_id": "METPO:2007403", "source": "cytochrome_b6f", "target": "photosystem_i"}, {"description": "PSI oxidizes plastocyanin and reduces ferredoxin.", "evidence": [{"notes": "Grettenberger et al. 2024: PSI oxidizes plastocyanin and reduces ferredoxin.", "reference": "DOI:10.1111/1751-7915.14519"}], "id": "edge-7", "is_orphan": false, "predicate": "reduces", "predicate_id": "METPO:2007802", "source": "photosystem_i", "target": "ferredoxin"}, {"description": "Ferredoxin-NADP+ reductase reduces NADP+ to NADPH using ferredoxin electrons.", "evidence": [{"notes": "Grettenberger et al. 2024: electrons via ferredoxin and FNR reduce NADP+ to NADPH.", "reference": "DOI:10.1111/1751-7915.14519"}], "id": "edge-8", "is_orphan": false, "predicate": "reduces", "predicate_id": "METPO:2007802", "source": "fnr", "target": "nadph"}, {"description": "Linear electron transport generates the transthylakoid proton motive force.", "evidence": [{"notes": "Milrad et al. 2024: membrane proton motive force produced by these transfers comprises dpH and dPsi.", "reference": "DOI:10.3390/plants13152103"}], "id": "edge-9", "is_orphan": false, "predicate": "generates", "predicate_id": "biolink:produces", "source": "photosynthetic_etc", "target": "proton_motive_force"}, {"description": "The proton motive force drives ATP synthesis by ATP synthase.", "evidence": [{"notes": "Shevela et al. 2023: raised proton motive force drives ATP synthesis by ATP synthase.", "reference": "DOI:10.1007/s11120-022-00991-y"}], "id": "edge-10", "is_orphan": false, "predicate": "drives", "predicate_id": null, "source": "proton_motive_force", "target": "atp"}, {"description": "PSII supplies the water-oxidation entry point.", "evidence": [{"notes": "Verified against the public PMC full text.", "reference": "DOI:10.1007/s11120-019-00648-3", "snippet": "The electrons for this process originate from water oxidation that takes place in PS II"}], "id": "edge-11", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "photosystem_ii", "target": "oxygenic_photosynthesis_trait"}, {"description": "Reduced ferredoxin transfers PSI electrons to FNR.", "evidence": [{"notes": "Verified against the public PMC full text.", "reference": "DOI:10.1039/D2SC01546C", "snippet": "Fd (or Fld) then shuttles the electrons from PSI to ferredoxin NADP+-reductase (FNR) for the reduction of NADP+ to NADPH that is used in carbon fixation"}], "id": "edge-12", "is_orphan": false, "predicate": "donates electrons to", "predicate_id": "METPO:2007403", "source": "ferredoxin", "target": "fnr"}], "evidence_rows": [{"description": "Water is the electron donor; its oxidation releases O2.", "edge_id": "edge-1", "evidence": [{"notes": "Bryant \u0026 Frigaard contrast oxygenic photosynthesis (water-splitting, O2-evolving) with anoxygenic phototrophy.", "reference": "DOI:10.1016/j.tim.2006.09.001"}], "predicate": "oxidized to", "predicate_id": "METPO:2007405", "source": "water", "target": "molecular oxygen"}, {"description": "Two linked photosystems power electron flow from water to NADP+.", "edge_id": "edge-2", "evidence": [{"notes": "Fischer et al. support water-oxidizing, O2-evolving photosynthesis as a cyanobacterial innovation.", "reference": "DOI:10.1146/annurev-earth-060313-054810"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "photosynthetic electron transport", "target": "oxygenic photosynthesis"}, {"description": "PSII is the primary catalyst of water oxidation in oxygenic photosynthesis.", "edge_id": "edge-3", "evidence": [{"notes": "Shevela et al. 2023: PSII is the primary catalyst of water oxidation in oxygenic photosynthesis.", "reference": "DOI:10.1007/s11120-022-00991-y"}], "predicate": "oxidizes", "predicate_id": "METPO:2007803", "source": "photosystem II", "target": "water"}, {"description": "Electrons extracted from water reduce plastoquinone (PQ -\u003e PQH2).", "edge_id": "edge-4", "evidence": [{"notes": "Shevela et al. 2023: water oxidation extracts electrons that reduce plastoquinone (PQ -\u003e PQH2).", "reference": "DOI:10.1007/s11120-022-00991-y"}], "predicate": "reduces", "predicate_id": "METPO:2007802", "source": "photosystem II", "target": "plastoquinone/plastoquinol pool"}, {"description": "Plastoquinol diffuses to reduce the cytochrome b6f complex.", "edge_id": "edge-5", "evidence": [{"notes": "Milrad et al. 2024: PQH2 diffuses to reduce the cytochrome b6f complex.", "reference": "DOI:10.3390/plants13152103"}], "predicate": "donates electrons to", "predicate_id": "METPO:2007403", "source": "plastoquinone/plastoquinol pool", "target": "cytochrome b6f complex"}, {"description": "Cyt b6f transfers electrons to PSI via soluble carriers (plastocyanin or cytochrome c6).", "edge_id": "edge-6", "evidence": [{"notes": "Milrad et al. 2024: electrons transferred from Cytb6f to PSI via plastocyanin or cytochrome c6.", "reference": "DOI:10.3390/plants13152103"}], "predicate": "transfers electrons to", "predicate_id": "METPO:2007403", "source": "cytochrome b6f complex", "target": "photosystem I"}, {"description": "PSI oxidizes plastocyanin and reduces ferredoxin.", "edge_id": "edge-7", "evidence": [{"notes": "Grettenberger et al. 2024: PSI oxidizes plastocyanin and reduces ferredoxin.", "reference": "DOI:10.1111/1751-7915.14519"}], "predicate": "reduces", "predicate_id": "METPO:2007802", "source": "photosystem I", "target": "ferredoxin"}, {"description": "Ferredoxin-NADP+ reductase reduces NADP+ to NADPH using ferredoxin electrons.", "edge_id": "edge-8", "evidence": [{"notes": "Grettenberger et al. 2024: electrons via ferredoxin and FNR reduce NADP+ to NADPH.", "reference": "DOI:10.1111/1751-7915.14519"}], "predicate": "reduces", "predicate_id": "METPO:2007802", "source": "ferredoxin-NADP+ reductase", "target": "NADPH"}, {"description": "Linear electron transport generates the transthylakoid proton motive force.", "edge_id": "edge-9", "evidence": [{"notes": "Milrad et al. 2024: membrane proton motive force produced by these transfers comprises dpH and dPsi.", "reference": "DOI:10.3390/plants13152103"}], "predicate": "generates", "predicate_id": "biolink:produces", "source": "photosynthetic electron transport", "target": "proton motive force"}, {"description": "The proton motive force drives ATP synthesis by ATP synthase.", "edge_id": "edge-10", "evidence": [{"notes": "Shevela et al. 2023: raised proton motive force drives ATP synthesis by ATP synthase.", "reference": "DOI:10.1007/s11120-022-00991-y"}], "predicate": "drives", "predicate_id": null, "source": "proton motive force", "target": "ATP"}, {"description": "PSII supplies the water-oxidation entry point.", "edge_id": "edge-11", "evidence": [{"notes": "Verified against the public PMC full text.", "reference": "DOI:10.1007/s11120-019-00648-3", "snippet": "The electrons for this process originate from water oxidation that takes place in PS II"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "photosystem II", "target": "oxygenic photosynthesis"}, {"description": "Reduced ferredoxin transfers PSI electrons to FNR.", "edge_id": "edge-12", "evidence": [{"notes": "Verified against the public PMC full text.", "reference": "DOI:10.1039/D2SC01546C", "snippet": "Fd (or Fld) then shuttles the electrons from PSI to ferredoxin NADP+-reductase (FNR) for the reduction of NADP+ to NADPH that is used in carbon fixation"}], "predicate": "donates electrons to", "predicate_id": "METPO:2007403", "source": "ferredoxin", "target": "ferredoxin-NADP+ reductase"}], "graph_id": "oxygenic_photosynthesis_water_splitting", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Energy currency synthesized by ATP synthase driven by the pmf.", "grounding": null, "id": "atp", "is_orphan": false, "label": "ATP", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Electron transfer complex linking PSII/plastoquinol to PSI.", "grounding": "GO:0009512", "id": "cytochrome_b6f", "is_orphan": false, "label": "cytochrome b6f complex", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Iron-sulfur electron carrier reduced by PSI.", "grounding": null, "id": "ferredoxin", "is_orphan": false, "label": "ferredoxin", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Enzyme reducing NADP+ to NADPH using ferredoxin-derived electrons.", "grounding": "GO:0004324", "id": "fnr", "is_orphan": false, "label": "ferredoxin-NADP+ reductase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "O2 released by water oxidation.", "grounding": "CHEBI:15379", "id": "molecular_oxygen", "is_orphan": false, "label": "molecular oxygen", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Reducing equivalent generated by the light reactions.", "grounding": "CHEBI:16474", "id": "nadph", "is_orphan": false, "label": "NADPH", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Light-driven CO2 fixation that oxidizes water and evolves O2.", "grounding": "traitmech:000034", "id": "oxygenic_photosynthesis_trait", "is_orphan": false, "label": "oxygenic photosynthesis", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#e0e7ff", "description": "Linked-photosystem electron transport powering CO2 fixation.", "grounding": "GO:0009767", "id": "photosynthetic_etc", "is_orphan": false, "label": "photosynthetic electron transport", "node_type": "PATHWAY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Pigment-protein complex that oxidizes plastocyanin/cyt c6 and reduces ferredoxin.", "grounding": "GO:0009522", "id": "photosystem_i", "is_orphan": false, "label": "photosystem I", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Pigment-protein complex that catalyzes light-driven water oxidation.", "grounding": "GO:0009523", "id": "photosystem_ii", "is_orphan": false, "label": "photosystem II", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 186, "evidence": [{"notes": "A primary Synechocystis PCC 6803 study identifies PsbA/D1 as a PSII subunit and studies its biogenesis; UniProtKB P16033 verifies the reviewed PsbA2 protein and strain taxon.", "reference": "DOI:10.1074/jbc.M806116200", "snippet": "the PsbA (D1) subunit of photosystem II (PSII)"}], "gene_symbol": "psbA2", "protein_label": "Photosystem II protein D1 2", "retrieved_on": "2026-08-24", "role": "D1 reaction-center component of photosystem II; this accession is not presented as the complete water-oxidizing complex.", "sequence_version": 1, "taxon_id": "NCBITaxon:1111708", "taxon_label": "Synechocystis sp. PCC 6803", "uniprot_id": "UniProtKB:P16033"}], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Mobile quinone electron carrier reduced by PSII (PQ -\u003e PQH2).", "grounding": null, "id": "plastoquinone_pool", "is_orphan": false, "label": "plastoquinone/plastoquinol pool", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Transthylakoid proton motive force generated by linear electron transport.", "grounding": "METPO:1007500", "id": "proton_motive_force", "is_orphan": false, "label": "proton motive force", "node_type": "STATE", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Electron donor for oxygenic photosynthesis.", "grounding": "CHEBI:15377", "id": "water", "is_orphan": false, "label": "water", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 186, "evidence": [{"notes": "A primary Synechocystis PCC 6803 study identifies PsbA/D1 as a PSII subunit and studies its biogenesis; UniProtKB P16033 verifies the reviewed PsbA2 protein and strain taxon.", "reference": "DOI:10.1074/jbc.M806116200", "snippet": "the PsbA (D1) subunit of photosystem II (PSII)"}], "gene_symbol": "psbA2", "node_id": "photosystem_ii", "node_label": "photosystem II", "protein_label": "Photosystem II protein D1 2", "retrieved_on": "2026-08-24", "role": "D1 reaction-center component of photosystem II; this accession is not presented as the complete water-oxidizing complex.", "sequence_version": 1, "taxon_id": "NCBITaxon:1111708", "taxon_label": "Synechocystis sp. PCC 6803", "uniprot_id": "UniProtKB:P16033"}], "scope_notes": "Represents the canonical cyanobacterial linear electron-transfer route and uses the D1 component of photosystem II from Synechocystis PCC 6803 as its taxon-paired example; one D1 accession does not denote the complete PSII complex.", "scope_status": "MECHANISTIC", "title": "Oxygenic photosynthesis splits water and releases O2"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking two linked photosystems and water oxidation to CO2 fixation and oxygen evolution.", "edges": [{"description": "Water is the electron donor; its oxidation releases O2.", "evidence": [{"notes": "Bryant \u0026 Frigaard contrast oxygenic photosynthesis (water-splitting, O2-evolving) with anoxygenic phototrophy.", "reference": "DOI:10.1016/j.tim.2006.09.001"}], "id": "edge-1", "is_orphan": false, "predicate": "oxidized to", "predicate_id": "METPO:2007405", "source": "water", "target": "molecular_oxygen"}, {"description": "Two linked photosystems power electron flow from water to NADP+.", "evidence": [{"notes": "Fischer et al. support water-oxidizing, O2-evolving photosynthesis as a cyanobacterial innovation.", "reference": "DOI:10.1146/annurev-earth-060313-054810"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "photosynthetic_etc", "target": "oxygenic_photosynthesis_trait"}, {"description": "PSII is the primary catalyst of water oxidation in oxygenic photosynthesis.", "evidence": [{"notes": "Shevela et al. 2023: PSII is the primary catalyst of water oxidation in oxygenic photosynthesis.", "reference": "DOI:10.1007/s11120-022-00991-y"}], "id": "edge-3", "is_orphan": false, "predicate": "oxidizes", "predicate_id": "METPO:2007803", "source": "photosystem_ii", "target": "water"}, {"description": "Electrons extracted from water reduce plastoquinone (PQ -\u003e PQH2).", "evidence": [{"notes": "Shevela et al. 2023: water oxidation extracts electrons that reduce plastoquinone (PQ -\u003e PQH2).", "reference": "DOI:10.1007/s11120-022-00991-y"}], "id": "edge-4", "is_orphan": false, "predicate": "reduces", "predicate_id": "METPO:2007802", "source": "photosystem_ii", "target": "plastoquinone_pool"}, {"description": "Plastoquinol diffuses to reduce the cytochrome b6f complex.", "evidence": [{"notes": "Milrad et al. 2024: PQH2 diffuses to reduce the cytochrome b6f complex.", "reference": "DOI:10.3390/plants13152103"}], "id": "edge-5", "is_orphan": false, "predicate": "donates electrons to", "predicate_id": "METPO:2007403", "source": "plastoquinone_pool", "target": "cytochrome_b6f"}, {"description": "Cyt b6f transfers electrons to PSI via soluble carriers (plastocyanin or cytochrome c6).", "evidence": [{"notes": "Milrad et al. 2024: electrons transferred from Cytb6f to PSI via plastocyanin or cytochrome c6.", "reference": "DOI:10.3390/plants13152103"}], "id": "edge-6", "is_orphan": false, "predicate": "transfers electrons to", "predicate_id": "METPO:2007403", "source": "cytochrome_b6f", "target": "photosystem_i"}, {"description": "PSI oxidizes plastocyanin and reduces ferredoxin.", "evidence": [{"notes": "Grettenberger et al. 2024: PSI oxidizes plastocyanin and reduces ferredoxin.", "reference": "DOI:10.1111/1751-7915.14519"}], "id": "edge-7", "is_orphan": false, "predicate": "reduces", "predicate_id": "METPO:2007802", "source": "photosystem_i", "target": "ferredoxin"}, {"description": "Ferredoxin-NADP+ reductase reduces NADP+ to NADPH using ferredoxin electrons.", "evidence": [{"notes": "Grettenberger et al. 2024: electrons via ferredoxin and FNR reduce NADP+ to NADPH.", "reference": "DOI:10.1111/1751-7915.14519"}], "id": "edge-8", "is_orphan": false, "predicate": "reduces", "predicate_id": "METPO:2007802", "source": "fnr", "target": "nadph"}, {"description": "Linear electron transport generates the transthylakoid proton motive force.", "evidence": [{"notes": "Milrad et al. 2024: membrane proton motive force produced by these transfers comprises dpH and dPsi.", "reference": "DOI:10.3390/plants13152103"}], "id": "edge-9", "is_orphan": false, "predicate": "generates", "predicate_id": "biolink:produces", "source": "photosynthetic_etc", "target": "proton_motive_force"}, {"description": "The proton motive force drives ATP synthesis by ATP synthase.", "evidence": [{"notes": "Shevela et al. 2023: raised proton motive force drives ATP synthesis by ATP synthase.", "reference": "DOI:10.1007/s11120-022-00991-y"}], "id": "edge-10", "is_orphan": false, "predicate": "drives", "predicate_id": null, "source": "proton_motive_force", "target": "atp"}, {"description": "PSII supplies the water-oxidation entry point.", "evidence": [{"notes": "Verified against the public PMC full text.", "reference": "DOI:10.1007/s11120-019-00648-3", "snippet": "The electrons for this process originate from water oxidation that takes place in PS II"}], "id": "edge-11", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "photosystem_ii", "target": "oxygenic_photosynthesis_trait"}, {"description": "Reduced ferredoxin transfers PSI electrons to FNR.", "evidence": [{"notes": "Verified against the public PMC full text.", "reference": "DOI:10.1039/D2SC01546C", "snippet": "Fd (or Fld) then shuttles the electrons from PSI to ferredoxin NADP+-reductase (FNR) for the reduction of NADP+ to NADPH that is used in carbon fixation"}], "id": "edge-12", "is_orphan": false, "predicate": "donates electrons to", "predicate_id": "METPO:2007403", "source": "ferredoxin", "target": "fnr"}], "evidence_rows": [{"description": "Water is the electron donor; its oxidation releases O2.", "edge_id": "edge-1", "evidence": [{"notes": "Bryant \u0026 Frigaard contrast oxygenic photosynthesis (water-splitting, O2-evolving) with anoxygenic phototrophy.", "reference": "DOI:10.1016/j.tim.2006.09.001"}], "predicate": "oxidized to", "predicate_id": "METPO:2007405", "source": "water", "source_grounding": "CHEBI:15377", "target": "molecular oxygen", "target_grounding": "CHEBI:15379"}, {"description": "Two linked photosystems power electron flow from water to NADP+.", "edge_id": "edge-2", "evidence": [{"notes": "Fischer et al. support water-oxidizing, O2-evolving photosynthesis as a cyanobacterial innovation.", "reference": "DOI:10.1146/annurev-earth-060313-054810"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "photosynthetic electron transport", "source_grounding": "GO:0009767", "target": "oxygenic photosynthesis", "target_grounding": "traitmech:000034"}, {"description": "PSII is the primary catalyst of water oxidation in oxygenic photosynthesis.", "edge_id": "edge-3", "evidence": [{"notes": "Shevela et al. 2023: PSII is the primary catalyst of water oxidation in oxygenic photosynthesis.", "reference": "DOI:10.1007/s11120-022-00991-y"}], "predicate": "oxidizes", "predicate_id": "METPO:2007803", "source": "photosystem II", "source_grounding": "GO:0009523", "target": "water", "target_grounding": "CHEBI:15377"}, {"description": "Electrons extracted from water reduce plastoquinone (PQ -\u003e PQH2).", "edge_id": "edge-4", "evidence": [{"notes": "Shevela et al. 2023: water oxidation extracts electrons that reduce plastoquinone (PQ -\u003e PQH2).", "reference": "DOI:10.1007/s11120-022-00991-y"}], "predicate": "reduces", "predicate_id": "METPO:2007802", "source": "photosystem II", "source_grounding": "GO:0009523", "target": "plastoquinone/plastoquinol pool", "target_grounding": null}, {"description": "Plastoquinol diffuses to reduce the cytochrome b6f complex.", "edge_id": "edge-5", "evidence": [{"notes": "Milrad et al. 2024: PQH2 diffuses to reduce the cytochrome b6f complex.", "reference": "DOI:10.3390/plants13152103"}], "predicate": "donates electrons to", "predicate_id": "METPO:2007403", "source": "plastoquinone/plastoquinol pool", "source_grounding": null, "target": "cytochrome b6f complex", "target_grounding": "GO:0009512"}, {"description": "Cyt b6f transfers electrons to PSI via soluble carriers (plastocyanin or cytochrome c6).", "edge_id": "edge-6", "evidence": [{"notes": "Milrad et al. 2024: electrons transferred from Cytb6f to PSI via plastocyanin or cytochrome c6.", "reference": "DOI:10.3390/plants13152103"}], "predicate": "transfers electrons to", "predicate_id": "METPO:2007403", "source": "cytochrome b6f complex", "source_grounding": "GO:0009512", "target": "photosystem I", "target_grounding": "GO:0009522"}, {"description": "PSI oxidizes plastocyanin and reduces ferredoxin.", "edge_id": "edge-7", "evidence": [{"notes": "Grettenberger et al. 2024: PSI oxidizes plastocyanin and reduces ferredoxin.", "reference": "DOI:10.1111/1751-7915.14519"}], "predicate": "reduces", "predicate_id": "METPO:2007802", "source": "photosystem I", "source_grounding": "GO:0009522", "target": "ferredoxin", "target_grounding": null}, {"description": "Ferredoxin-NADP+ reductase reduces NADP+ to NADPH using ferredoxin electrons.", "edge_id": "edge-8", "evidence": [{"notes": "Grettenberger et al. 2024: electrons via ferredoxin and FNR reduce NADP+ to NADPH.", "reference": "DOI:10.1111/1751-7915.14519"}], "predicate": "reduces", "predicate_id": "METPO:2007802", "source": "ferredoxin-NADP+ reductase", "source_grounding": "GO:0004324", "target": "NADPH", "target_grounding": "CHEBI:16474"}, {"description": "Linear electron transport generates the transthylakoid proton motive force.", "edge_id": "edge-9", "evidence": [{"notes": "Milrad et al. 2024: membrane proton motive force produced by these transfers comprises dpH and dPsi.", "reference": "DOI:10.3390/plants13152103"}], "predicate": "generates", "predicate_id": "biolink:produces", "source": "photosynthetic electron transport", "source_grounding": "GO:0009767", "target": "proton motive force", "target_grounding": "METPO:1007500"}, {"description": "The proton motive force drives ATP synthesis by ATP synthase.", "edge_id": "edge-10", "evidence": [{"notes": "Shevela et al. 2023: raised proton motive force drives ATP synthesis by ATP synthase.", "reference": "DOI:10.1007/s11120-022-00991-y"}], "predicate": "drives", "predicate_id": null, "source": "proton motive force", "source_grounding": "METPO:1007500", "target": "ATP", "target_grounding": null}, {"description": "PSII supplies the water-oxidation entry point.", "edge_id": "edge-11", "evidence": [{"notes": "Verified against the public PMC full text.", "reference": "DOI:10.1007/s11120-019-00648-3", "snippet": "The electrons for this process originate from water oxidation that takes place in PS II"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "photosystem II", "source_grounding": "GO:0009523", "target": "oxygenic photosynthesis", "target_grounding": "traitmech:000034"}, {"description": "Reduced ferredoxin transfers PSI electrons to FNR.", "edge_id": "edge-12", "evidence": [{"notes": "Verified against the public PMC full text.", "reference": "DOI:10.1039/D2SC01546C", "snippet": "Fd (or Fld) then shuttles the electrons from PSI to ferredoxin NADP+-reductase (FNR) for the reduction of NADP+ to NADPH that is used in carbon fixation"}], "predicate": "donates electrons to", "predicate_id": "METPO:2007403", "source": "ferredoxin", "source_grounding": null, "target": "ferredoxin-NADP+ reductase", "target_grounding": "GO:0004324"}], "graph_id": "oxygenic_photosynthesis_water_splitting", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Energy currency synthesized by ATP synthase driven by the pmf.", "grounding": null, "id": "atp", "is_orphan": false, "label": "ATP", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Electron transfer complex linking PSII/plastoquinol to PSI.", "grounding": "GO:0009512", "id": "cytochrome_b6f", "is_orphan": false, "label": "cytochrome b6f complex", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Iron-sulfur electron carrier reduced by PSI.", "grounding": null, "id": "ferredoxin", "is_orphan": false, "label": "ferredoxin", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Enzyme reducing NADP+ to NADPH using ferredoxin-derived electrons.", "grounding": "GO:0004324", "id": "fnr", "is_orphan": false, "label": "ferredoxin-NADP+ reductase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "O2 released by water oxidation.", "grounding": "CHEBI:15379", "id": "molecular_oxygen", "is_orphan": false, "label": "molecular oxygen", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Reducing equivalent generated by the light reactions.", "grounding": "CHEBI:16474", "id": "nadph", "is_orphan": false, "label": "NADPH", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Light-driven CO2 fixation that oxidizes water and evolves O2.", "grounding": "traitmech:000034", "id": "oxygenic_photosynthesis_trait", "is_orphan": false, "label": "oxygenic photosynthesis", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#e0e7ff", "description": "Linked-photosystem electron transport powering CO2 fixation.", "grounding": "GO:0009767", "id": "photosynthetic_etc", "is_orphan": false, "label": "photosynthetic electron transport", "node_type": "PATHWAY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Pigment-protein complex that oxidizes plastocyanin/cyt c6 and reduces ferredoxin.", "grounding": "GO:0009522", "id": "photosystem_i", "is_orphan": false, "label": "photosystem I", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Pigment-protein complex that catalyzes light-driven water oxidation.", "grounding": "GO:0009523", "id": "photosystem_ii", "is_orphan": false, "label": "photosystem II", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 186, "evidence": [{"notes": "A primary Synechocystis PCC 6803 study identifies PsbA/D1 as a PSII subunit and studies its biogenesis; UniProtKB P16033 verifies the reviewed PsbA2 protein and strain taxon.", "reference": "DOI:10.1074/jbc.M806116200", "snippet": "the PsbA (D1) subunit of photosystem II (PSII)"}], "gene_symbol": "psbA2", "protein_label": "Photosystem II protein D1 2", "retrieved_on": "2026-08-24", "role": "D1 reaction-center component of photosystem II; this accession is not presented as the complete water-oxidizing complex.", "sequence_version": 1, "taxon_id": "NCBITaxon:1111708", "taxon_label": "Synechocystis sp. PCC 6803", "uniprot_id": "UniProtKB:P16033"}], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Mobile quinone electron carrier reduced by PSII (PQ -\u003e PQH2).", "grounding": null, "id": "plastoquinone_pool", "is_orphan": false, "label": "plastoquinone/plastoquinol pool", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Transthylakoid proton motive force generated by linear electron transport.", "grounding": "METPO:1007500", "id": "proton_motive_force", "is_orphan": false, "label": "proton motive force", "node_type": "STATE", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Electron donor for oxygenic photosynthesis.", "grounding": "CHEBI:15377", "id": "water", "is_orphan": false, "label": "water", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 186, "evidence": [{"notes": "A primary Synechocystis PCC 6803 study identifies PsbA/D1 as a PSII subunit and studies its biogenesis; UniProtKB P16033 verifies the reviewed PsbA2 protein and strain taxon.", "reference": "DOI:10.1074/jbc.M806116200", "snippet": "the PsbA (D1) subunit of photosystem II (PSII)"}], "gene_symbol": "psbA2", "node_id": "photosystem_ii", "node_label": "photosystem II", "protein_label": "Photosystem II protein D1 2", "retrieved_on": "2026-08-24", "role": "D1 reaction-center component of photosystem II; this accession is not presented as the complete water-oxidizing complex.", "sequence_version": 1, "taxon_id": "NCBITaxon:1111708", "taxon_label": "Synechocystis sp. PCC 6803", "uniprot_id": "UniProtKB:P16033"}], "scope_notes": "Represents the canonical cyanobacterial linear electron-transfer route and uses the D1 component of photosystem II from Synechocystis PCC 6803 as its taxon-paired example; one D1 accession does not denote the complete PSII complex.", "scope_status": "MECHANISTIC", "title": "Oxygenic photosynthesis splits water and releases O2"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -1085,13 +1120,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-08-31 09:05 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

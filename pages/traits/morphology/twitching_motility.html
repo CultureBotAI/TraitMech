@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/morphology.html">MORPHOLOGY</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/morphology.html">MORPHOLOGY</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>twitching motility</h1>
     <p class="curie"><code>traitmech:000061</code> · CLASS · REVIEWED</p>
 
@@ -85,9 +96,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>type IV pilus</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0044096" rel="nofollow noreferrer"><code>GO:0044096</code></a>
             <span class="edge-predicate">confers</span>
             <strong>twitching motility</strong>
-            <code>METPO:2007700</code>
+            <code>traitmech:000061</code>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>Type IV pili are the molecular engines of twitching motility.</p>
             <ul>
 
@@ -102,9 +115,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>type IV pilus assembly</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0043107" rel="nofollow noreferrer"><code>GO:0043107</code></a>
             <span class="edge-predicate">confers</span>
             <strong>twitching motility</strong>
-            <code>METPO:2007700</code>
+            <code>traitmech:000061</code>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>Extension–attachment–retraction cycles pull the cell across the surface.</p>
             <ul>
 
@@ -119,8 +134,10 @@
 
           <li id="pathograph-1-edge-3">
             <strong>PilB extension ATPase</strong>
+
             <span class="edge-predicate">drives</span>
             <strong>type IV pilus extension</strong>
+
 
             <p>PilB ATPase powers extension of the type IV pilus filament.</p>
             <ul>
@@ -136,8 +153,10 @@
 
           <li id="pathograph-1-edge-4">
             <strong>PilT retraction ATPase</strong>
+
             <span class="edge-predicate">drives</span>
             <strong>type IV pilus retraction</strong>
+
 
             <p>PilT ATPase powers retraction of the type IV pilus filament.</p>
             <ul>
@@ -153,9 +172,11 @@
 
           <li id="pathograph-1-edge-5">
             <strong>type IV pilus retraction</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>twitching motility</strong>
-            <code>METPO:2007700</code>
+            <code>traitmech:000061</code>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>Pilus retraction pulls the cell across the surface, producing twitching translocation.</p>
             <ul>
 
@@ -170,8 +191,10 @@
 
           <li id="pathograph-1-edge-6">
             <strong>PilQ secretin</strong>
+
             <span class="edge-predicate">enables surface exposure of</span>
             <strong>type IV pilus surface exposure</strong>
+
 
             <p>PilQ secretin is required for surface exposure of the assembled pilus filament.</p>
             <ul>
@@ -187,9 +210,11 @@
 
           <li id="pathograph-1-edge-7">
             <strong>PilM/N/O/P alignment complex</strong>
+
             <span class="edge-predicate">part of</span>
             <strong>type IV pilus machine</strong>
-            <code>biolink:part_of</code>
+
+            <a href="https://w3id.org/biolink/vocab/part_of" rel="nofollow noreferrer"><code>biolink:part_of</code></a>
             <p>The PilM/N/O/P alignment subcomplex is a structural part of the type IV pilus machine.</p>
             <ul>
 
@@ -204,9 +229,11 @@
 
           <li id="pathograph-1-edge-8">
             <strong>type IV pilus extension</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>type IV pilus assembly</strong>
-            <code>RO:0002326</code>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0043107" rel="nofollow noreferrer"><code>GO:0043107</code></a>
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>Extension polymerizes pilin subunits into the assembled type IV pilus fiber.</p>
             <ul>
 
@@ -221,9 +248,11 @@
 
           <li id="pathograph-1-edge-9">
             <strong>type IV pilus surface exposure</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>type IV pilus</strong>
-            <code>RO:0002326</code>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0044096" rel="nofollow noreferrer"><code>GO:0044096</code></a>
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>Extrusion through the secretin exposes the assembled type IV pilus beyond the outer membrane.</p>
             <ul>
 
@@ -238,9 +267,11 @@
 
           <li id="pathograph-1-edge-10">
             <strong>type IV pilus machine</strong>
+
             <span class="edge-predicate">enables</span>
             <strong>type IV pilus assembly</strong>
-            <code>RO:0002327</code>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0043107" rel="nofollow noreferrer"><code>GO:0043107</code></a>
+            <a href="http://purl.obolibrary.org/obo/RO_0002327" rel="nofollow noreferrer"><code>RO:0002327</code></a>
             <p>The envelope-spanning type IV pilus machine enables motor-driven assembly and disassembly of the pilus filament.</p>
             <ul>
 
@@ -375,50 +406,50 @@
 
         <li>
           <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/motile.html">motile</a>
-          <span class="sim">1.000</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">morphology</span>
           <a href="../../traits/morphology/swarming_motility.html">swarming motility</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/bacillus_shaped.html">bacillus shaped</a>
-          <span class="sim">0.578</span>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/durotaxis.html">durotaxis</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/rheotaxis.html">rheotaxis</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/energy_taxis.html">energy taxis</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/thermotaxis.html">thermotaxis</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/phototaxis.html">phototaxis</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/galvanotaxis.html">galvanotaxis</a>
+          <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/non_spore_forming.html">non-spore forming</a>
-          <span class="sim">0.427</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/gram_negative.html">gram negative</a>
-          <span class="sim">0.419</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/facultatively_aerobic.html">facultatively aerobic</a>
-          <span class="sim">0.419</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/aerobic.html">aerobic</a>
-          <span class="sim">0.378</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/spore_forming.html">spore forming</a>
-          <span class="sim">0.364</span>
+          <a href="../../traits/morphology/swimming_motility.html">swimming motility</a>
+          <span class="sim">1.000</span>
         </li>
 
       </ul>
@@ -983,7 +1014,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking type-IV-pilus dynamics (extension, surface attachment, retraction) to flagella-independent surface translocation.", "edges": [{"description": "Type IV pili are the molecular engines of twitching motility.", "evidence": [{"notes": "Mattick describes twitching as type-IV-pilus-driven surface translocation.", "reference": "DOI:10.1146/annurev.micro.56.012302.160938"}], "id": "edge-1", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "type_iv_pilus", "target": "twitching_trait"}, {"description": "Extension\u2013attachment\u2013retraction cycles pull the cell across the surface.", "evidence": [{"notes": "Harshey treats twitching as a distinct surface-translocation strategy.", "reference": "DOI:10.1146/annurev.micro.57.030502.091014"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "pilus_assembly", "target": "twitching_trait"}, {"description": "PilB ATPase powers extension of the type IV pilus filament.", "evidence": [{"notes": "Roberge \u0026 Burrows 2024: \"Extension is driven by PilB bound to PilC\"; T4P undergo cycles of extension/retraction powered by cytoplasmic motor ATPases.", "reference": "DOI:10.1128/jb.00359-24"}], "id": "edge-3", "is_orphan": false, "predicate": "drives", "predicate_id": null, "source": "pilb_extension_atpase", "target": "pilus_extension"}, {"description": "PilT ATPase powers retraction of the type IV pilus filament.", "evidence": [{"notes": "Roberge \u0026 Burrows 2024: \"Retraction is driven by PilT, which engages with PilC within the same cytoplasmic socket.\"", "reference": "DOI:10.1128/jb.00359-24"}], "id": "edge-4", "is_orphan": false, "predicate": "drives", "predicate_id": null, "source": "pilt_retraction_atpase", "target": "pilus_retraction"}, {"description": "Pilus retraction pulls the cell across the surface, producing twitching translocation.", "evidence": [{"notes": "Geiger et al. 2024: twitching is movement that pulls the cell across a surface through cooperative binding, pulling, and unbinding.", "reference": "DOI:10.1128/jb.00442-23"}], "id": "edge-5", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "pilus_retraction", "target": "twitching_trait"}, {"description": "PilQ secretin is required for surface exposure of the assembled pilus filament.", "evidence": [{"notes": "Pelicic 2023: pilQ pilT mutants assemble filaments trapped in the periplasm, indicating PilQ is required for surface exposure.", "reference": "DOI:10.1099/mic.0.001311"}], "id": "edge-6", "is_orphan": false, "predicate": "enables surface exposure of", "predicate_id": null, "source": "pilq_secretin", "target": "pilus_filament_surface_exposure"}, {"description": "The PilM/N/O/P alignment subcomplex is a structural part of the type IV pilus machine.", "evidence": [{"notes": "Guo et al. 2024: the T4P machine includes an alignment subcomplex consisting of PilP, PilO, PilN, and PilM.", "reference": "DOI:10.1038/s41467-024-53638-y"}], "id": "edge-7", "is_orphan": false, "predicate": "part of", "predicate_id": "biolink:part_of", "source": "pilmnop_alignment_complex", "target": "t4p_machine"}, {"description": "Extension polymerizes pilin subunits into the assembled type IV pilus fiber.", "evidence": [{"notes": "Verified against the open Europe PMC full text.", "reference": "DOI:10.1128/jb.00359-24", "snippet": "PilA subunits are ultimately extracted from their reservoir in the cytoplasmic membrane and polymerized to form a pilus fiber"}], "id": "edge-8", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "pilus_extension", "target": "pilus_assembly"}, {"description": "Extrusion through the secretin exposes the assembled type IV pilus beyond the outer membrane.", "evidence": [{"notes": "Verified against the open Europe PMC full text.", "reference": "DOI:10.1128/jb.00359-24", "snippet": "The pilus is extruded through the periplasm, guided by the cylindrical alignment subcomplex, and finally through a gated secretin pore in the outer membrane"}], "id": "edge-9", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "pilus_filament_surface_exposure", "target": "type_iv_pilus"}, {"description": "The envelope-spanning type IV pilus machine enables motor-driven assembly and disassembly of the pilus filament.", "evidence": [{"notes": "Verified against the open Europe PMC full text.", "reference": "DOI:10.1038/s41467-024-53638-y", "snippet": "PilC is the inner membrane platform protein that coordinates with ATPase motors to drive assembly and disassembly of major pilin subunits into the extending and retracting pilus, respectively"}], "id": "edge-10", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "t4p_machine", "target": "pilus_assembly"}], "evidence_rows": [{"description": "Type IV pili are the molecular engines of twitching motility.", "edge_id": "edge-1", "evidence": [{"notes": "Mattick describes twitching as type-IV-pilus-driven surface translocation.", "reference": "DOI:10.1146/annurev.micro.56.012302.160938"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "type IV pilus", "target": "twitching motility"}, {"description": "Extension\u2013attachment\u2013retraction cycles pull the cell across the surface.", "edge_id": "edge-2", "evidence": [{"notes": "Harshey treats twitching as a distinct surface-translocation strategy.", "reference": "DOI:10.1146/annurev.micro.57.030502.091014"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "type IV pilus assembly", "target": "twitching motility"}, {"description": "PilB ATPase powers extension of the type IV pilus filament.", "edge_id": "edge-3", "evidence": [{"notes": "Roberge \u0026 Burrows 2024: \"Extension is driven by PilB bound to PilC\"; T4P undergo cycles of extension/retraction powered by cytoplasmic motor ATPases.", "reference": "DOI:10.1128/jb.00359-24"}], "predicate": "drives", "predicate_id": null, "source": "PilB extension ATPase", "target": "type IV pilus extension"}, {"description": "PilT ATPase powers retraction of the type IV pilus filament.", "edge_id": "edge-4", "evidence": [{"notes": "Roberge \u0026 Burrows 2024: \"Retraction is driven by PilT, which engages with PilC within the same cytoplasmic socket.\"", "reference": "DOI:10.1128/jb.00359-24"}], "predicate": "drives", "predicate_id": null, "source": "PilT retraction ATPase", "target": "type IV pilus retraction"}, {"description": "Pilus retraction pulls the cell across the surface, producing twitching translocation.", "edge_id": "edge-5", "evidence": [{"notes": "Geiger et al. 2024: twitching is movement that pulls the cell across a surface through cooperative binding, pulling, and unbinding.", "reference": "DOI:10.1128/jb.00442-23"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "type IV pilus retraction", "target": "twitching motility"}, {"description": "PilQ secretin is required for surface exposure of the assembled pilus filament.", "edge_id": "edge-6", "evidence": [{"notes": "Pelicic 2023: pilQ pilT mutants assemble filaments trapped in the periplasm, indicating PilQ is required for surface exposure.", "reference": "DOI:10.1099/mic.0.001311"}], "predicate": "enables surface exposure of", "predicate_id": null, "source": "PilQ secretin", "target": "type IV pilus surface exposure"}, {"description": "The PilM/N/O/P alignment subcomplex is a structural part of the type IV pilus machine.", "edge_id": "edge-7", "evidence": [{"notes": "Guo et al. 2024: the T4P machine includes an alignment subcomplex consisting of PilP, PilO, PilN, and PilM.", "reference": "DOI:10.1038/s41467-024-53638-y"}], "predicate": "part of", "predicate_id": "biolink:part_of", "source": "PilM/N/O/P alignment complex", "target": "type IV pilus machine"}, {"description": "Extension polymerizes pilin subunits into the assembled type IV pilus fiber.", "edge_id": "edge-8", "evidence": [{"notes": "Verified against the open Europe PMC full text.", "reference": "DOI:10.1128/jb.00359-24", "snippet": "PilA subunits are ultimately extracted from their reservoir in the cytoplasmic membrane and polymerized to form a pilus fiber"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "type IV pilus extension", "target": "type IV pilus assembly"}, {"description": "Extrusion through the secretin exposes the assembled type IV pilus beyond the outer membrane.", "edge_id": "edge-9", "evidence": [{"notes": "Verified against the open Europe PMC full text.", "reference": "DOI:10.1128/jb.00359-24", "snippet": "The pilus is extruded through the periplasm, guided by the cylindrical alignment subcomplex, and finally through a gated secretin pore in the outer membrane"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "type IV pilus surface exposure", "target": "type IV pilus"}, {"description": "The envelope-spanning type IV pilus machine enables motor-driven assembly and disassembly of the pilus filament.", "edge_id": "edge-10", "evidence": [{"notes": "Verified against the open Europe PMC full text.", "reference": "DOI:10.1038/s41467-024-53638-y", "snippet": "PilC is the inner membrane platform protein that coordinates with ATPase motors to drive assembly and disassembly of major pilin subunits into the extending and retracting pilus, respectively"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "type IV pilus machine", "target": "type IV pilus assembly"}], "graph_id": "twitching_type_iv_pilus_retraction", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Cytoplasmic motor ATPase that powers type IV pilus filament extension.", "grounding": null, "id": "pilb_extension_atpase", "is_orphan": false, "label": "PilB extension ATPase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ede9fe", "description": "Inner-membrane/periplasmic alignment subcomplex of the type IV pilus machine.", "grounding": null, "id": "pilmnop_alignment_complex", "is_orphan": false, "label": "PilM/N/O/P alignment complex", "node_type": "CELLULAR_LOCALIZATION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Outer-membrane secretin channel through which the pilus filament is exposed to the cell surface.", "grounding": null, "id": "pilq_secretin", "is_orphan": false, "label": "PilQ secretin", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Cytoplasmic motor ATPase that powers type IV pilus retraction.", "grounding": null, "id": "pilt_retraction_atpase", "is_orphan": false, "label": "PilT retraction ATPase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 147, "evidence": [{"notes": "The cited source supports the represented protein-to-trait branch; UniProt verifies this current strain-matched protein entry.", "reference": "DOI:10.1128/jb.00359-24", "snippet": "retraction is driven by PilT"}], "gene_symbol": "pilT", "protein_label": "Type IV pilus retraction ATPase PilT", "proteome_id": "UP000002438", "retrieved_on": "2026-08-25", "role": "PAO1 PilT powers type-IV-pilus retraction that pulls the cell across a surface.", "sequence_version": 1, "taxon_id": "NCBITaxon:208964", "taxon_label": "Pseudomonas aeruginosa PAO1", "uniprot_id": "UniProtKB:P24559"}], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Polymerization and disassembly cycles driving pilus extension and retraction.", "grounding": "GO:0043107", "id": "pilus_assembly", "is_orphan": false, "label": "type IV pilus assembly", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Polymerization of pilin subunits extending the pilus filament.", "grounding": null, "id": "pilus_extension", "is_orphan": false, "label": "type IV pilus extension", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Exposure of the assembled pilus filament beyond the cell envelope to the external surface.", "grounding": null, "id": "pilus_filament_surface_exposure", "is_orphan": false, "label": "type IV pilus surface exposure", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Depolymerization of pilin subunits retracting the pilus and pulling the cell.", "grounding": null, "id": "pilus_retraction", "is_orphan": false, "label": "type IV pilus retraction", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ede9fe", "description": "Multiprotein nanomachine assembling, extending and retracting the type IV pilus.", "grounding": null, "id": "t4p_machine", "is_orphan": false, "label": "type IV pilus machine", "node_type": "CELLULAR_LOCALIZATION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Flagella-independent surface motility on moist substrates.", "grounding": "traitmech:000061", "id": "twitching_trait", "is_orphan": false, "label": "twitching motility", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ede9fe", "description": "Surface filament that extends, attaches, and retracts to pull the cell forward.", "grounding": "GO:0044096", "id": "type_iv_pilus", "is_orphan": false, "label": "type IV pilus", "node_type": "CELLULAR_LOCALIZATION", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 147, "evidence": [{"notes": "The cited source supports the represented protein-to-trait branch; UniProt verifies this current strain-matched protein entry.", "reference": "DOI:10.1128/jb.00359-24", "snippet": "retraction is driven by PilT"}], "gene_symbol": "pilT", "node_id": "pilt_retraction_atpase", "node_label": "PilT retraction ATPase", "protein_label": "Type IV pilus retraction ATPase PilT", "proteome_id": "UP000002438", "retrieved_on": "2026-08-25", "role": "PAO1 PilT powers type-IV-pilus retraction that pulls the cell across a surface.", "sequence_version": 1, "taxon_id": "NCBITaxon:208964", "taxon_label": "Pseudomonas aeruginosa PAO1", "uniprot_id": "UniProtKB:P24559"}], "scope_notes": "The taxon-matched protein example anchors one experimentally supported causal branch; it is not presented as a universal mechanism for every taxon or every contextual branch in this graph.", "scope_status": "MECHANISTIC", "title": "Twitching motility via type IV pilus extension and retraction"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking type-IV-pilus dynamics (extension, surface attachment, retraction) to flagella-independent surface translocation.", "edges": [{"description": "Type IV pili are the molecular engines of twitching motility.", "evidence": [{"notes": "Mattick describes twitching as type-IV-pilus-driven surface translocation.", "reference": "DOI:10.1146/annurev.micro.56.012302.160938"}], "id": "edge-1", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "type_iv_pilus", "target": "twitching_trait"}, {"description": "Extension\u2013attachment\u2013retraction cycles pull the cell across the surface.", "evidence": [{"notes": "Harshey treats twitching as a distinct surface-translocation strategy.", "reference": "DOI:10.1146/annurev.micro.57.030502.091014"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "pilus_assembly", "target": "twitching_trait"}, {"description": "PilB ATPase powers extension of the type IV pilus filament.", "evidence": [{"notes": "Roberge \u0026 Burrows 2024: \"Extension is driven by PilB bound to PilC\"; T4P undergo cycles of extension/retraction powered by cytoplasmic motor ATPases.", "reference": "DOI:10.1128/jb.00359-24"}], "id": "edge-3", "is_orphan": false, "predicate": "drives", "predicate_id": null, "source": "pilb_extension_atpase", "target": "pilus_extension"}, {"description": "PilT ATPase powers retraction of the type IV pilus filament.", "evidence": [{"notes": "Roberge \u0026 Burrows 2024: \"Retraction is driven by PilT, which engages with PilC within the same cytoplasmic socket.\"", "reference": "DOI:10.1128/jb.00359-24"}], "id": "edge-4", "is_orphan": false, "predicate": "drives", "predicate_id": null, "source": "pilt_retraction_atpase", "target": "pilus_retraction"}, {"description": "Pilus retraction pulls the cell across the surface, producing twitching translocation.", "evidence": [{"notes": "Geiger et al. 2024: twitching is movement that pulls the cell across a surface through cooperative binding, pulling, and unbinding.", "reference": "DOI:10.1128/jb.00442-23"}], "id": "edge-5", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "pilus_retraction", "target": "twitching_trait"}, {"description": "PilQ secretin is required for surface exposure of the assembled pilus filament.", "evidence": [{"notes": "Pelicic 2023: pilQ pilT mutants assemble filaments trapped in the periplasm, indicating PilQ is required for surface exposure.", "reference": "DOI:10.1099/mic.0.001311"}], "id": "edge-6", "is_orphan": false, "predicate": "enables surface exposure of", "predicate_id": null, "source": "pilq_secretin", "target": "pilus_filament_surface_exposure"}, {"description": "The PilM/N/O/P alignment subcomplex is a structural part of the type IV pilus machine.", "evidence": [{"notes": "Guo et al. 2024: the T4P machine includes an alignment subcomplex consisting of PilP, PilO, PilN, and PilM.", "reference": "DOI:10.1038/s41467-024-53638-y"}], "id": "edge-7", "is_orphan": false, "predicate": "part of", "predicate_id": "biolink:part_of", "source": "pilmnop_alignment_complex", "target": "t4p_machine"}, {"description": "Extension polymerizes pilin subunits into the assembled type IV pilus fiber.", "evidence": [{"notes": "Verified against the open Europe PMC full text.", "reference": "DOI:10.1128/jb.00359-24", "snippet": "PilA subunits are ultimately extracted from their reservoir in the cytoplasmic membrane and polymerized to form a pilus fiber"}], "id": "edge-8", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "pilus_extension", "target": "pilus_assembly"}, {"description": "Extrusion through the secretin exposes the assembled type IV pilus beyond the outer membrane.", "evidence": [{"notes": "Verified against the open Europe PMC full text.", "reference": "DOI:10.1128/jb.00359-24", "snippet": "The pilus is extruded through the periplasm, guided by the cylindrical alignment subcomplex, and finally through a gated secretin pore in the outer membrane"}], "id": "edge-9", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "pilus_filament_surface_exposure", "target": "type_iv_pilus"}, {"description": "The envelope-spanning type IV pilus machine enables motor-driven assembly and disassembly of the pilus filament.", "evidence": [{"notes": "Verified against the open Europe PMC full text.", "reference": "DOI:10.1038/s41467-024-53638-y", "snippet": "PilC is the inner membrane platform protein that coordinates with ATPase motors to drive assembly and disassembly of major pilin subunits into the extending and retracting pilus, respectively"}], "id": "edge-10", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "t4p_machine", "target": "pilus_assembly"}], "evidence_rows": [{"description": "Type IV pili are the molecular engines of twitching motility.", "edge_id": "edge-1", "evidence": [{"notes": "Mattick describes twitching as type-IV-pilus-driven surface translocation.", "reference": "DOI:10.1146/annurev.micro.56.012302.160938"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "type IV pilus", "source_grounding": "GO:0044096", "target": "twitching motility", "target_grounding": "traitmech:000061"}, {"description": "Extension\u2013attachment\u2013retraction cycles pull the cell across the surface.", "edge_id": "edge-2", "evidence": [{"notes": "Harshey treats twitching as a distinct surface-translocation strategy.", "reference": "DOI:10.1146/annurev.micro.57.030502.091014"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "type IV pilus assembly", "source_grounding": "GO:0043107", "target": "twitching motility", "target_grounding": "traitmech:000061"}, {"description": "PilB ATPase powers extension of the type IV pilus filament.", "edge_id": "edge-3", "evidence": [{"notes": "Roberge \u0026 Burrows 2024: \"Extension is driven by PilB bound to PilC\"; T4P undergo cycles of extension/retraction powered by cytoplasmic motor ATPases.", "reference": "DOI:10.1128/jb.00359-24"}], "predicate": "drives", "predicate_id": null, "source": "PilB extension ATPase", "source_grounding": null, "target": "type IV pilus extension", "target_grounding": null}, {"description": "PilT ATPase powers retraction of the type IV pilus filament.", "edge_id": "edge-4", "evidence": [{"notes": "Roberge \u0026 Burrows 2024: \"Retraction is driven by PilT, which engages with PilC within the same cytoplasmic socket.\"", "reference": "DOI:10.1128/jb.00359-24"}], "predicate": "drives", "predicate_id": null, "source": "PilT retraction ATPase", "source_grounding": null, "target": "type IV pilus retraction", "target_grounding": null}, {"description": "Pilus retraction pulls the cell across the surface, producing twitching translocation.", "edge_id": "edge-5", "evidence": [{"notes": "Geiger et al. 2024: twitching is movement that pulls the cell across a surface through cooperative binding, pulling, and unbinding.", "reference": "DOI:10.1128/jb.00442-23"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "type IV pilus retraction", "source_grounding": null, "target": "twitching motility", "target_grounding": "traitmech:000061"}, {"description": "PilQ secretin is required for surface exposure of the assembled pilus filament.", "edge_id": "edge-6", "evidence": [{"notes": "Pelicic 2023: pilQ pilT mutants assemble filaments trapped in the periplasm, indicating PilQ is required for surface exposure.", "reference": "DOI:10.1099/mic.0.001311"}], "predicate": "enables surface exposure of", "predicate_id": null, "source": "PilQ secretin", "source_grounding": null, "target": "type IV pilus surface exposure", "target_grounding": null}, {"description": "The PilM/N/O/P alignment subcomplex is a structural part of the type IV pilus machine.", "edge_id": "edge-7", "evidence": [{"notes": "Guo et al. 2024: the T4P machine includes an alignment subcomplex consisting of PilP, PilO, PilN, and PilM.", "reference": "DOI:10.1038/s41467-024-53638-y"}], "predicate": "part of", "predicate_id": "biolink:part_of", "source": "PilM/N/O/P alignment complex", "source_grounding": null, "target": "type IV pilus machine", "target_grounding": null}, {"description": "Extension polymerizes pilin subunits into the assembled type IV pilus fiber.", "edge_id": "edge-8", "evidence": [{"notes": "Verified against the open Europe PMC full text.", "reference": "DOI:10.1128/jb.00359-24", "snippet": "PilA subunits are ultimately extracted from their reservoir in the cytoplasmic membrane and polymerized to form a pilus fiber"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "type IV pilus extension", "source_grounding": null, "target": "type IV pilus assembly", "target_grounding": "GO:0043107"}, {"description": "Extrusion through the secretin exposes the assembled type IV pilus beyond the outer membrane.", "edge_id": "edge-9", "evidence": [{"notes": "Verified against the open Europe PMC full text.", "reference": "DOI:10.1128/jb.00359-24", "snippet": "The pilus is extruded through the periplasm, guided by the cylindrical alignment subcomplex, and finally through a gated secretin pore in the outer membrane"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "type IV pilus surface exposure", "source_grounding": null, "target": "type IV pilus", "target_grounding": "GO:0044096"}, {"description": "The envelope-spanning type IV pilus machine enables motor-driven assembly and disassembly of the pilus filament.", "edge_id": "edge-10", "evidence": [{"notes": "Verified against the open Europe PMC full text.", "reference": "DOI:10.1038/s41467-024-53638-y", "snippet": "PilC is the inner membrane platform protein that coordinates with ATPase motors to drive assembly and disassembly of major pilin subunits into the extending and retracting pilus, respectively"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "type IV pilus machine", "source_grounding": null, "target": "type IV pilus assembly", "target_grounding": "GO:0043107"}], "graph_id": "twitching_type_iv_pilus_retraction", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Cytoplasmic motor ATPase that powers type IV pilus filament extension.", "grounding": null, "id": "pilb_extension_atpase", "is_orphan": false, "label": "PilB extension ATPase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ede9fe", "description": "Inner-membrane/periplasmic alignment subcomplex of the type IV pilus machine.", "grounding": null, "id": "pilmnop_alignment_complex", "is_orphan": false, "label": "PilM/N/O/P alignment complex", "node_type": "CELLULAR_LOCALIZATION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Outer-membrane secretin channel through which the pilus filament is exposed to the cell surface.", "grounding": null, "id": "pilq_secretin", "is_orphan": false, "label": "PilQ secretin", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Cytoplasmic motor ATPase that powers type IV pilus retraction.", "grounding": null, "id": "pilt_retraction_atpase", "is_orphan": false, "label": "PilT retraction ATPase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 147, "evidence": [{"notes": "The cited source supports the represented protein-to-trait branch; UniProt verifies this current strain-matched protein entry.", "reference": "DOI:10.1128/jb.00359-24", "snippet": "retraction is driven by PilT"}], "gene_symbol": "pilT", "protein_label": "Type IV pilus retraction ATPase PilT", "proteome_id": "UP000002438", "retrieved_on": "2026-08-25", "role": "PAO1 PilT powers type-IV-pilus retraction that pulls the cell across a surface.", "sequence_version": 1, "taxon_id": "NCBITaxon:208964", "taxon_label": "Pseudomonas aeruginosa PAO1", "uniprot_id": "UniProtKB:P24559"}], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Polymerization and disassembly cycles driving pilus extension and retraction.", "grounding": "GO:0043107", "id": "pilus_assembly", "is_orphan": false, "label": "type IV pilus assembly", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Polymerization of pilin subunits extending the pilus filament.", "grounding": null, "id": "pilus_extension", "is_orphan": false, "label": "type IV pilus extension", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Exposure of the assembled pilus filament beyond the cell envelope to the external surface.", "grounding": null, "id": "pilus_filament_surface_exposure", "is_orphan": false, "label": "type IV pilus surface exposure", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Depolymerization of pilin subunits retracting the pilus and pulling the cell.", "grounding": null, "id": "pilus_retraction", "is_orphan": false, "label": "type IV pilus retraction", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ede9fe", "description": "Multiprotein nanomachine assembling, extending and retracting the type IV pilus.", "grounding": null, "id": "t4p_machine", "is_orphan": false, "label": "type IV pilus machine", "node_type": "CELLULAR_LOCALIZATION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Flagella-independent surface motility on moist substrates.", "grounding": "traitmech:000061", "id": "twitching_trait", "is_orphan": false, "label": "twitching motility", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ede9fe", "description": "Surface filament that extends, attaches, and retracts to pull the cell forward.", "grounding": "GO:0044096", "id": "type_iv_pilus", "is_orphan": false, "label": "type IV pilus", "node_type": "CELLULAR_LOCALIZATION", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 147, "evidence": [{"notes": "The cited source supports the represented protein-to-trait branch; UniProt verifies this current strain-matched protein entry.", "reference": "DOI:10.1128/jb.00359-24", "snippet": "retraction is driven by PilT"}], "gene_symbol": "pilT", "node_id": "pilt_retraction_atpase", "node_label": "PilT retraction ATPase", "protein_label": "Type IV pilus retraction ATPase PilT", "proteome_id": "UP000002438", "retrieved_on": "2026-08-25", "role": "PAO1 PilT powers type-IV-pilus retraction that pulls the cell across a surface.", "sequence_version": 1, "taxon_id": "NCBITaxon:208964", "taxon_label": "Pseudomonas aeruginosa PAO1", "uniprot_id": "UniProtKB:P24559"}], "scope_notes": "The taxon-matched protein example anchors one experimentally supported causal branch; it is not presented as a universal mechanism for every taxon or every contextual branch in this graph.", "scope_status": "MECHANISTIC", "title": "Twitching motility via type IV pilus extension and retraction"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -1003,13 +1034,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-08-31 06:52 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

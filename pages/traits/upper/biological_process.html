@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/upper.html">UPPER</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/upper.html">UPPER</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>biological process</h1>
     <p class="curie"><code>METPO:1000630</code> · CLASS · REVIEWED</p>
 
@@ -85,9 +96,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>molecular function</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0003674" rel="nofollow noreferrer"><code>GO:0003674</code></a>
             <span class="edge-predicate">contributes to</span>
             <strong>biological process</strong>
-            <code>RO:0002326</code>
+            <a href="https://w3id.org/metpo/1000630" rel="nofollow noreferrer"><code>METPO:1000630</code></a>
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>Molecular functions collectively accomplish broader biological processes.</p>
             <ul>
 
@@ -102,8 +115,10 @@
 
           <li id="pathograph-1-edge-2">
             <strong>metabolism</strong>
+            <a href="https://w3id.org/metpo/1000060" rel="nofollow noreferrer"><code>METPO:1000060</code></a>
             <span class="edge-predicate">specializes</span>
             <strong>biological process</strong>
+            <a href="https://w3id.org/metpo/1000630" rel="nofollow noreferrer"><code>METPO:1000630</code></a>
             <code>rdfs:subClassOf</code>
             <p>In TraitMech, metabolism is the non-environmental child class under biological process.</p>
             <ul>
@@ -119,9 +134,11 @@
 
           <li id="pathograph-1-edge-3">
             <strong>molecular function</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0003674" rel="nofollow noreferrer"><code>GO:0003674</code></a>
             <span class="edge-predicate">part of</span>
             <strong>biological process</strong>
-            <code>biolink:part_of</code>
+            <a href="https://w3id.org/metpo/1000630" rel="nofollow noreferrer"><code>METPO:1000630</code></a>
+            <a href="https://w3id.org/biolink/vocab/part_of" rel="nofollow noreferrer"><code>biolink:part_of</code></a>
             <p>GO Molecular Functions are linked to Biological Processes by mereological part_of relations.</p>
             <ul>
 
@@ -136,9 +153,11 @@
 
           <li id="pathograph-1-edge-4">
             <strong>molecular function</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0003674" rel="nofollow noreferrer"><code>GO:0003674</code></a>
             <span class="edge-predicate">occurs in</span>
             <strong>cellular component</strong>
-            <code>biolink:occurs_in</code>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0005575" rel="nofollow noreferrer"><code>GO:0005575</code></a>
+            <a href="https://w3id.org/biolink/vocab/occurs_in" rel="nofollow noreferrer"><code>biolink:occurs_in</code></a>
             <p>A molecular activity occurs in a cellular component (BFO:0000066).</p>
             <ul>
 
@@ -153,9 +172,11 @@
 
           <li id="pathograph-1-edge-5">
             <strong>molecular function</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0003674" rel="nofollow noreferrer"><code>GO:0003674</code></a>
             <span class="edge-predicate">has input</span>
             <strong>chemical input entity</strong>
-            <code>RO:0002233</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002233" rel="nofollow noreferrer"><code>RO:0002233</code></a>
             <p>A molecular activity has a chemical entity as input (RO:0002233).</p>
             <ul>
 
@@ -170,9 +191,11 @@
 
           <li id="pathograph-1-edge-6">
             <strong>molecular function</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0003674" rel="nofollow noreferrer"><code>GO:0003674</code></a>
             <span class="edge-predicate">has output</span>
             <strong>chemical output entity</strong>
-            <code>RO:0002234</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002234" rel="nofollow noreferrer"><code>RO:0002234</code></a>
             <p>A molecular activity has a chemical entity as output (RO:0002234).</p>
             <ul>
 
@@ -187,8 +210,10 @@
 
           <li id="pathograph-1-edge-7">
             <strong>molecular function</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0003674" rel="nofollow noreferrer"><code>GO:0003674</code></a>
             <span class="edge-predicate">causally upstream of or within</span>
             <strong>downstream molecular function</strong>
+
 
             <p>GO-CAMs causally link molecular functions into structured models of biological processes (RO:0002418).</p>
             <ul>
@@ -260,7 +285,7 @@
     <div class="card">
       <h2>Cross-references</h2>
       <ul class="xrefs">
-        <li><code>GO:0008150</code></li>
+        <li><a href="https://amigo.geneontology.org/amigo/term/GO:0008150" rel="nofollow noreferrer"><code>GO:0008150</code></a></li>
       </ul>
     </div>
 
@@ -286,6 +311,18 @@
       <p class="meta">Top-8 cosine-similar METPO traits
         from the 2026-04-25 deepwalk (512-D).</p>
       <ul class="nn-list">
+
+        <li>
+          <span class="nn-cat">metabolism</span>
+          <a href="../../traits/metabolism/complete_ammonia_oxidation.html">complete ammonia oxidation</a>
+          <span class="sim">0.979</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">metabolism</span>
+          <a href="../../traits/metabolism/nitrification.html">nitrification</a>
+          <span class="sim">0.979</span>
+        </li>
 
         <li>
           <span class="nn-cat">metabolism</span>
@@ -321,18 +358,6 @@
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/electron_transfer.html">Electron transfer</a>
           <span class="sim">0.923</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/substrate_level_phosphorylation.html">Substrate-level phosphorylation</a>
-          <span class="sim">0.920</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/three_hydroxypropionate_bicycle.html">3-hydroxypropionate bicycle</a>
-          <span class="sim">0.873</span>
         </li>
 
       </ul>
@@ -866,7 +891,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed upper-ontology context graph linking biological process to molecular functions, gene products, and the non-environmental child metabolism class.", "edges": [{"description": "Molecular functions collectively accomplish broader biological processes.", "evidence": [{"notes": "Supports GO annotation across molecular functions and biological processes.", "reference": "DOI:10.1093/database/bat054", "snippet": "Molecular Function, Biological Process and Cellular Component"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "molecular_function", "target": "biological_process_trait"}, {"description": "In TraitMech, metabolism is the non-environmental child class under biological process.", "evidence": [{"notes": "Supports parent-child is-a interpretation for GO-style process hierarchies.", "reference": "DOI:10.1093/database/bat054", "snippet": "child term is a subtype of the parent term"}], "id": "edge-2", "is_orphan": false, "predicate": "specializes", "predicate_id": "rdfs:subClassOf", "source": "metabolism_trait", "target": "biological_process_trait"}, {"description": "GO Molecular Functions are linked to Biological Processes by mereological part_of relations.", "evidence": [{"notes": "a GO Molecular Function and a GO Biological Process (BP) are linked by mereological (part_of) relations", "reference": "DOI:10.1186/s40708-023-00208-5"}], "id": "edge-3", "is_orphan": false, "predicate": "part of", "predicate_id": "biolink:part_of", "source": "molecular_function", "target": "biological_process_trait"}, {"description": "A molecular activity occurs in a cellular component (BFO:0000066).", "evidence": [{"notes": "Occurs in [BFO:0000066]; example \"glucokinase activity occurs in cytosol\".", "reference": "DOI:10.1186/s40708-023-00208-5"}], "id": "edge-4", "is_orphan": false, "predicate": "occurs in", "predicate_id": "biolink:occurs_in", "source": "molecular_function", "target": "cellular_component"}, {"description": "A molecular activity has a chemical entity as input (RO:0002233).", "evidence": [{"notes": "Has input [RO:0002233]", "reference": "DOI:10.1186/s40708-023-00208-5"}], "id": "edge-5", "is_orphan": false, "predicate": "has input", "predicate_id": "RO:0002233", "source": "molecular_function", "target": "chemical_input"}, {"description": "A molecular activity has a chemical entity as output (RO:0002234).", "evidence": [{"notes": "Has output [RO:0002234]", "reference": "DOI:10.1186/s40708-023-00208-5"}], "id": "edge-6", "is_orphan": false, "predicate": "has output", "predicate_id": "RO:0002234", "source": "molecular_function", "target": "chemical_output"}, {"description": "GO-CAMs causally link molecular functions into structured models of biological processes (RO:0002418).", "evidence": [{"notes": "GO-CAMs arrange GO annotations into structured models of biological processes by causally linking GO Molecular Functions", "reference": "DOI:10.1186/s40708-023-00208-5"}], "id": "edge-7", "is_orphan": false, "predicate": "causally upstream of or within", "predicate_id": null, "source": "molecular_function", "target": "molecular_function_downstream"}], "evidence_rows": [{"description": "Molecular functions collectively accomplish broader biological processes.", "edge_id": "edge-1", "evidence": [{"notes": "Supports GO annotation across molecular functions and biological processes.", "reference": "DOI:10.1093/database/bat054", "snippet": "Molecular Function, Biological Process and Cellular Component"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "molecular function", "target": "biological process"}, {"description": "In TraitMech, metabolism is the non-environmental child class under biological process.", "edge_id": "edge-2", "evidence": [{"notes": "Supports parent-child is-a interpretation for GO-style process hierarchies.", "reference": "DOI:10.1093/database/bat054", "snippet": "child term is a subtype of the parent term"}], "predicate": "specializes", "predicate_id": "rdfs:subClassOf", "source": "metabolism", "target": "biological process"}, {"description": "GO Molecular Functions are linked to Biological Processes by mereological part_of relations.", "edge_id": "edge-3", "evidence": [{"notes": "a GO Molecular Function and a GO Biological Process (BP) are linked by mereological (part_of) relations", "reference": "DOI:10.1186/s40708-023-00208-5"}], "predicate": "part of", "predicate_id": "biolink:part_of", "source": "molecular function", "target": "biological process"}, {"description": "A molecular activity occurs in a cellular component (BFO:0000066).", "edge_id": "edge-4", "evidence": [{"notes": "Occurs in [BFO:0000066]; example \"glucokinase activity occurs in cytosol\".", "reference": "DOI:10.1186/s40708-023-00208-5"}], "predicate": "occurs in", "predicate_id": "biolink:occurs_in", "source": "molecular function", "target": "cellular component"}, {"description": "A molecular activity has a chemical entity as input (RO:0002233).", "edge_id": "edge-5", "evidence": [{"notes": "Has input [RO:0002233]", "reference": "DOI:10.1186/s40708-023-00208-5"}], "predicate": "has input", "predicate_id": "RO:0002233", "source": "molecular function", "target": "chemical input entity"}, {"description": "A molecular activity has a chemical entity as output (RO:0002234).", "edge_id": "edge-6", "evidence": [{"notes": "Has output [RO:0002234]", "reference": "DOI:10.1186/s40708-023-00208-5"}], "predicate": "has output", "predicate_id": "RO:0002234", "source": "molecular function", "target": "chemical output entity"}, {"description": "GO-CAMs causally link molecular functions into structured models of biological processes (RO:0002418).", "edge_id": "edge-7", "evidence": [{"notes": "GO-CAMs arrange GO annotations into structured models of biological processes by causally linking GO Molecular Functions", "reference": "DOI:10.1186/s40708-023-00208-5"}], "predicate": "causally upstream of or within", "predicate_id": null, "source": "molecular function", "target": "downstream molecular function"}], "graph_id": "biological_process_go_upper_context", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Upper-level process class for genetically encoded biological programs.", "grounding": "METPO:1000630", "id": "biological_process_trait", "is_orphan": false, "label": "biological process", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": ["GO:0008150"]}, {"color": "#ede9fe", "description": "GO cellular component where a molecular activity occurs.", "grounding": "GO:0005575", "id": "cellular_component", "is_orphan": false, "label": "cellular component", "node_type": "CELLULAR_LOCALIZATION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Chemical entity consumed as input of a molecular activity.", "grounding": null, "id": "chemical_input", "is_orphan": false, "label": "chemical input entity", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Chemical entity produced as output of a molecular activity.", "grounding": null, "id": "chemical_output", "is_orphan": false, "label": "chemical output entity", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Non-environmental TraitMech child class under biological process.", "grounding": "METPO:1000060", "id": "metabolism_trait", "is_orphan": false, "label": "metabolism", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#cffafe", "description": "Elemental molecular activity carried out by a gene product.", "grounding": "GO:0003674", "id": "molecular_function", "is_orphan": false, "label": "molecular function", "node_type": "MOLECULAR_FUNCTION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#cffafe", "description": "A molecular function causally downstream of another in a GO-CAM model.", "grounding": null, "id": "molecular_function_downstream", "is_orphan": false, "label": "downstream molecular function", "node_type": "MOLECULAR_FUNCTION", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This is an upper-ontology context graph, not a taxon-specific biological mechanism. Gene products are described by the remaining GO-CAM context but are not modeled as primary causal nodes or token protein examples.", "scope_status": "NONMECHANISTIC", "title": "Biological process upper-class context"}];
+  var graphs = [{"description": "DOI-backed upper-ontology context graph linking biological process to molecular functions, gene products, and the non-environmental child metabolism class.", "edges": [{"description": "Molecular functions collectively accomplish broader biological processes.", "evidence": [{"notes": "Supports GO annotation across molecular functions and biological processes.", "reference": "DOI:10.1093/database/bat054", "snippet": "Molecular Function, Biological Process and Cellular Component"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "molecular_function", "target": "biological_process_trait"}, {"description": "In TraitMech, metabolism is the non-environmental child class under biological process.", "evidence": [{"notes": "Supports parent-child is-a interpretation for GO-style process hierarchies.", "reference": "DOI:10.1093/database/bat054", "snippet": "child term is a subtype of the parent term"}], "id": "edge-2", "is_orphan": false, "predicate": "specializes", "predicate_id": "rdfs:subClassOf", "source": "metabolism_trait", "target": "biological_process_trait"}, {"description": "GO Molecular Functions are linked to Biological Processes by mereological part_of relations.", "evidence": [{"notes": "a GO Molecular Function and a GO Biological Process (BP) are linked by mereological (part_of) relations", "reference": "DOI:10.1186/s40708-023-00208-5"}], "id": "edge-3", "is_orphan": false, "predicate": "part of", "predicate_id": "biolink:part_of", "source": "molecular_function", "target": "biological_process_trait"}, {"description": "A molecular activity occurs in a cellular component (BFO:0000066).", "evidence": [{"notes": "Occurs in [BFO:0000066]; example \"glucokinase activity occurs in cytosol\".", "reference": "DOI:10.1186/s40708-023-00208-5"}], "id": "edge-4", "is_orphan": false, "predicate": "occurs in", "predicate_id": "biolink:occurs_in", "source": "molecular_function", "target": "cellular_component"}, {"description": "A molecular activity has a chemical entity as input (RO:0002233).", "evidence": [{"notes": "Has input [RO:0002233]", "reference": "DOI:10.1186/s40708-023-00208-5"}], "id": "edge-5", "is_orphan": false, "predicate": "has input", "predicate_id": "RO:0002233", "source": "molecular_function", "target": "chemical_input"}, {"description": "A molecular activity has a chemical entity as output (RO:0002234).", "evidence": [{"notes": "Has output [RO:0002234]", "reference": "DOI:10.1186/s40708-023-00208-5"}], "id": "edge-6", "is_orphan": false, "predicate": "has output", "predicate_id": "RO:0002234", "source": "molecular_function", "target": "chemical_output"}, {"description": "GO-CAMs causally link molecular functions into structured models of biological processes (RO:0002418).", "evidence": [{"notes": "GO-CAMs arrange GO annotations into structured models of biological processes by causally linking GO Molecular Functions", "reference": "DOI:10.1186/s40708-023-00208-5"}], "id": "edge-7", "is_orphan": false, "predicate": "causally upstream of or within", "predicate_id": null, "source": "molecular_function", "target": "molecular_function_downstream"}], "evidence_rows": [{"description": "Molecular functions collectively accomplish broader biological processes.", "edge_id": "edge-1", "evidence": [{"notes": "Supports GO annotation across molecular functions and biological processes.", "reference": "DOI:10.1093/database/bat054", "snippet": "Molecular Function, Biological Process and Cellular Component"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "molecular function", "source_grounding": "GO:0003674", "target": "biological process", "target_grounding": "METPO:1000630"}, {"description": "In TraitMech, metabolism is the non-environmental child class under biological process.", "edge_id": "edge-2", "evidence": [{"notes": "Supports parent-child is-a interpretation for GO-style process hierarchies.", "reference": "DOI:10.1093/database/bat054", "snippet": "child term is a subtype of the parent term"}], "predicate": "specializes", "predicate_id": "rdfs:subClassOf", "source": "metabolism", "source_grounding": "METPO:1000060", "target": "biological process", "target_grounding": "METPO:1000630"}, {"description": "GO Molecular Functions are linked to Biological Processes by mereological part_of relations.", "edge_id": "edge-3", "evidence": [{"notes": "a GO Molecular Function and a GO Biological Process (BP) are linked by mereological (part_of) relations", "reference": "DOI:10.1186/s40708-023-00208-5"}], "predicate": "part of", "predicate_id": "biolink:part_of", "source": "molecular function", "source_grounding": "GO:0003674", "target": "biological process", "target_grounding": "METPO:1000630"}, {"description": "A molecular activity occurs in a cellular component (BFO:0000066).", "edge_id": "edge-4", "evidence": [{"notes": "Occurs in [BFO:0000066]; example \"glucokinase activity occurs in cytosol\".", "reference": "DOI:10.1186/s40708-023-00208-5"}], "predicate": "occurs in", "predicate_id": "biolink:occurs_in", "source": "molecular function", "source_grounding": "GO:0003674", "target": "cellular component", "target_grounding": "GO:0005575"}, {"description": "A molecular activity has a chemical entity as input (RO:0002233).", "edge_id": "edge-5", "evidence": [{"notes": "Has input [RO:0002233]", "reference": "DOI:10.1186/s40708-023-00208-5"}], "predicate": "has input", "predicate_id": "RO:0002233", "source": "molecular function", "source_grounding": "GO:0003674", "target": "chemical input entity", "target_grounding": null}, {"description": "A molecular activity has a chemical entity as output (RO:0002234).", "edge_id": "edge-6", "evidence": [{"notes": "Has output [RO:0002234]", "reference": "DOI:10.1186/s40708-023-00208-5"}], "predicate": "has output", "predicate_id": "RO:0002234", "source": "molecular function", "source_grounding": "GO:0003674", "target": "chemical output entity", "target_grounding": null}, {"description": "GO-CAMs causally link molecular functions into structured models of biological processes (RO:0002418).", "edge_id": "edge-7", "evidence": [{"notes": "GO-CAMs arrange GO annotations into structured models of biological processes by causally linking GO Molecular Functions", "reference": "DOI:10.1186/s40708-023-00208-5"}], "predicate": "causally upstream of or within", "predicate_id": null, "source": "molecular function", "source_grounding": "GO:0003674", "target": "downstream molecular function", "target_grounding": null}], "graph_id": "biological_process_go_upper_context", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Upper-level process class for genetically encoded biological programs.", "grounding": "METPO:1000630", "id": "biological_process_trait", "is_orphan": false, "label": "biological process", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": ["GO:0008150"]}, {"color": "#ede9fe", "description": "GO cellular component where a molecular activity occurs.", "grounding": "GO:0005575", "id": "cellular_component", "is_orphan": false, "label": "cellular component", "node_type": "CELLULAR_LOCALIZATION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Chemical entity consumed as input of a molecular activity.", "grounding": null, "id": "chemical_input", "is_orphan": false, "label": "chemical input entity", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Chemical entity produced as output of a molecular activity.", "grounding": null, "id": "chemical_output", "is_orphan": false, "label": "chemical output entity", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Non-environmental TraitMech child class under biological process.", "grounding": "METPO:1000060", "id": "metabolism_trait", "is_orphan": false, "label": "metabolism", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#cffafe", "description": "Elemental molecular activity carried out by a gene product.", "grounding": "GO:0003674", "id": "molecular_function", "is_orphan": false, "label": "molecular function", "node_type": "MOLECULAR_FUNCTION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#cffafe", "description": "A molecular function causally downstream of another in a GO-CAM model.", "grounding": null, "id": "molecular_function_downstream", "is_orphan": false, "label": "downstream molecular function", "node_type": "MOLECULAR_FUNCTION", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This is an upper-ontology context graph, not a taxon-specific biological mechanism. Gene products are described by the remaining GO-CAM context but are not modeled as primary causal nodes or token protein examples.", "scope_status": "NONMECHANISTIC", "title": "Biological process upper-class context"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -886,13 +911,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-08-26 06:15 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

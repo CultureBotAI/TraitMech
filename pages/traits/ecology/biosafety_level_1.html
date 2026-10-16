@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/ecology.html">ECOLOGY</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/ecology.html">ECOLOGY</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>biosafety level 1</h1>
     <p class="curie"><code>METPO:1001102</code> · CLASS · REVIEWED</p>
 
@@ -79,9 +90,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>low pathogen hazard</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>biosafety level 1</strong>
-            <code>METPO:2007700</code>
+            <a href="https://w3id.org/metpo/1001102" rel="nofollow noreferrer"><code>METPO:1001102</code></a>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>Low pathogen hazard yields BSL-1 classification.</p>
             <ul>
 
@@ -96,8 +109,10 @@
 
           <li id="pathograph-1-edge-2">
             <strong>biosafety level 1</strong>
+            <a href="https://w3id.org/metpo/1001102" rel="nofollow noreferrer"><code>METPO:1001102</code></a>
             <span class="edge-predicate">is a</span>
             <strong>biosafety level</strong>
+            <a href="https://w3id.org/metpo/1001101" rel="nofollow noreferrer"><code>METPO:1001101</code></a>
             <code>rdfs:subClassOf</code>
             <p>BSL-1 is a quantitative class within the biosafety-level classification axis.</p>
             <ul>
@@ -113,8 +128,10 @@
 
           <li id="pathograph-1-edge-3">
             <strong>low-risk agent</strong>
+
             <span class="edge-predicate">qualifies for</span>
             <strong>biosafety level 1</strong>
+            <a href="https://w3id.org/metpo/1001102" rel="nofollow noreferrer"><code>METPO:1001102</code></a>
 
             <p>Low-risk agents unlikely to cause disease in healthy adults qualify for BSL-1.</p>
             <ul>
@@ -130,8 +147,10 @@
 
           <li id="pathograph-1-edge-4">
             <strong>low pathogen hazard</strong>
+
             <span class="edge-predicate">qualifies for</span>
             <strong>biosafety level 1</strong>
+            <a href="https://w3id.org/metpo/1001102" rel="nofollow noreferrer"><code>METPO:1001102</code></a>
 
             <p>Organisms not known to consistently cause disease in healthy adults qualify for BSL-1.</p>
             <ul>
@@ -147,8 +166,10 @@
 
           <li id="pathograph-1-edge-5">
             <strong>standard microbiological practices</strong>
+
             <span class="edge-predicate">enables containment at</span>
             <strong>biosafety level 1</strong>
+            <a href="https://w3id.org/metpo/1001102" rel="nofollow noreferrer"><code>METPO:1001102</code></a>
 
             <p>Standard microbiological practices provide the basic containment defining BSL-1.</p>
             <ul>
@@ -164,8 +185,10 @@
 
           <li id="pathograph-1-edge-6">
             <strong>hand washing</strong>
+
             <span class="edge-predicate">is good microbiological practice supporting</span>
             <strong>standard microbiological practices</strong>
+
 
             <p>Hand washing is among the best good microbiological practices underpinning standard practices.</p>
             <ul>
@@ -181,8 +204,10 @@
 
           <li id="pathograph-1-edge-7">
             <strong>biosafety risk assessment factors</strong>
+
             <span class="edge-predicate">determine</span>
             <strong>biosafety level selection</strong>
+
 
             <p>Risk assessment factors determine the biosafety level assigned to work.</p>
             <ul>
@@ -198,8 +223,10 @@
 
           <li id="pathograph-1-edge-8">
             <strong>biosafety level selection</strong>
+
             <span class="edge-predicate">assigns</span>
             <strong>biosafety level</strong>
+            <a href="https://w3id.org/metpo/1001101" rel="nofollow noreferrer"><code>METPO:1001101</code></a>
 
             <p>The selection process assigns a biosafety level on the classification axis.</p>
             <ul>
@@ -215,9 +242,11 @@
 
           <li id="pathograph-1-edge-9">
             <strong>specific virulence traits</strong>
+
             <span class="edge-predicate">enables</span>
             <strong>disease causation</strong>
-            <code>RO:0002327</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002327" rel="nofollow noreferrer"><code>RO:0002327</code></a>
             <p>Specific virulence traits render an organism capable of causing disease; their absence is compatible with BSL-1.</p>
             <ul>
 
@@ -332,6 +361,18 @@
 
         <li>
           <span class="nn-cat">ecology</span>
+          <a href="../../traits/ecology/fungal_nematode_endoparasitism.html">fungal nematode endoparasitism</a>
+          <span class="sim">0.251</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">ecology</span>
+          <a href="../../traits/ecology/fungal_nematode_egg_parasitism.html">fungal nematode egg parasitism</a>
+          <span class="sim">0.251</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">ecology</span>
           <a href="../../traits/ecology/biosafety_level.html">biosafety level</a>
           <span class="sim">0.238</span>
         </li>
@@ -340,18 +381,6 @@
           <span class="nn-cat">physiology</span>
           <a href="../../traits/physiology/photoautotrophic.html">photoautotrophic</a>
           <span class="sim">0.225</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">ecology</span>
-          <a href="../../traits/ecology/pathogenic_to_host.html">pathogenic to host</a>
-          <span class="sim">0.185</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">ecology</span>
-          <a href="../../traits/ecology/opportunistic_pathogen.html">opportunistic pathogen</a>
-          <span class="sim">0.185</span>
         </li>
 
       </ul>
@@ -901,7 +930,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking the absence of significant pathogen hazard properties to BSL-1 classification and minimal containment requirements.", "edges": [{"description": "Low pathogen hazard yields BSL-1 classification.", "evidence": [{"notes": "Supports the absence of virulence factors as the basis of BSL-1 classification.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "id": "edge-1", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "low_pathogen_hazard", "target": "bsl1_trait"}, {"description": "BSL-1 is a quantitative class within the biosafety-level classification axis.", "evidence": [{"notes": "Supports BSL-1 as a member of the biosafety-level classification.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "bsl1_trait", "target": "biosafety_level"}, {"description": "Low-risk agents unlikely to cause disease in healthy adults qualify for BSL-1.", "evidence": [{"notes": "BSL-1 is the level for low-risk agents unlikely to cause disease in healthy adults.", "reference": "DOI:10.3390/laboratories1030013"}], "id": "edge-3", "is_orphan": false, "predicate": "qualifies for", "predicate_id": null, "source": "low_risk_agent", "target": "bsl1_trait"}, {"description": "Organisms not known to consistently cause disease in healthy adults qualify for BSL-1.", "evidence": [{"notes": "Defined strains of viable microorganisms not known to consistently cause disease in healthy adult humans.", "reference": "DOI:10.2172/1887109"}], "id": "edge-4", "is_orphan": false, "predicate": "qualifies for", "predicate_id": null, "source": "low_pathogen_hazard", "target": "bsl1_trait"}, {"description": "Standard microbiological practices provide the basic containment defining BSL-1.", "evidence": [{"notes": "BSL-1 represents a basic level of containment relying on standard microbiological best practices and procedures.", "reference": "DOI:10.47328/ufvbbt.2024.220"}], "id": "edge-5", "is_orphan": false, "predicate": "enables containment at", "predicate_id": null, "source": "standard_microbiological_practices", "target": "bsl1_trait"}, {"description": "Hand washing is among the best good microbiological practices underpinning standard practices.", "evidence": [{"notes": "Among GMPP, one of the best practices is hand washing.", "reference": "DOI:10.3389/fpubh.2022.965853"}], "id": "edge-6", "is_orphan": false, "predicate": "is good microbiological practice supporting", "predicate_id": null, "source": "hand_washing", "target": "standard_microbiological_practices"}, {"description": "Risk assessment factors determine the biosafety level assigned to work.", "evidence": [{"notes": "Pathogenicity, route of transmission, stability, infectious dose, concentration, origin, prophylaxis, and personnel experience determine biosafety level.", "reference": "DOI:10.2172/1887109"}], "id": "edge-7", "is_orphan": false, "predicate": "determine", "predicate_id": null, "source": "risk_assessment_factors", "target": "biosafety_level_selection"}, {"description": "The selection process assigns a biosafety level on the classification axis.", "evidence": [{"notes": "Risk assessment factors determine risk and therefore biosafety level assignment.", "reference": "DOI:10.2172/1887109"}], "id": "edge-8", "is_orphan": false, "predicate": "assigns", "predicate_id": null, "source": "biosafety_level_selection", "target": "biosafety_level"}, {"description": "Specific virulence traits render an organism capable of causing disease; their absence is compatible with BSL-1.", "evidence": [{"notes": "Strains encode specific virulence traits that render them capable of causing disease.", "reference": "DOI:10.3390/microorganisms11020344"}], "id": "edge-9", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "virulence_traits", "target": "disease_causation"}], "evidence_rows": [{"description": "Low pathogen hazard yields BSL-1 classification.", "edge_id": "edge-1", "evidence": [{"notes": "Supports the absence of virulence factors as the basis of BSL-1 classification.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "low pathogen hazard", "target": "biosafety level 1"}, {"description": "BSL-1 is a quantitative class within the biosafety-level classification axis.", "edge_id": "edge-2", "evidence": [{"notes": "Supports BSL-1 as a member of the biosafety-level classification.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "biosafety level 1", "target": "biosafety level"}, {"description": "Low-risk agents unlikely to cause disease in healthy adults qualify for BSL-1.", "edge_id": "edge-3", "evidence": [{"notes": "BSL-1 is the level for low-risk agents unlikely to cause disease in healthy adults.", "reference": "DOI:10.3390/laboratories1030013"}], "predicate": "qualifies for", "predicate_id": null, "source": "low-risk agent", "target": "biosafety level 1"}, {"description": "Organisms not known to consistently cause disease in healthy adults qualify for BSL-1.", "edge_id": "edge-4", "evidence": [{"notes": "Defined strains of viable microorganisms not known to consistently cause disease in healthy adult humans.", "reference": "DOI:10.2172/1887109"}], "predicate": "qualifies for", "predicate_id": null, "source": "low pathogen hazard", "target": "biosafety level 1"}, {"description": "Standard microbiological practices provide the basic containment defining BSL-1.", "edge_id": "edge-5", "evidence": [{"notes": "BSL-1 represents a basic level of containment relying on standard microbiological best practices and procedures.", "reference": "DOI:10.47328/ufvbbt.2024.220"}], "predicate": "enables containment at", "predicate_id": null, "source": "standard microbiological practices", "target": "biosafety level 1"}, {"description": "Hand washing is among the best good microbiological practices underpinning standard practices.", "edge_id": "edge-6", "evidence": [{"notes": "Among GMPP, one of the best practices is hand washing.", "reference": "DOI:10.3389/fpubh.2022.965853"}], "predicate": "is good microbiological practice supporting", "predicate_id": null, "source": "hand washing", "target": "standard microbiological practices"}, {"description": "Risk assessment factors determine the biosafety level assigned to work.", "edge_id": "edge-7", "evidence": [{"notes": "Pathogenicity, route of transmission, stability, infectious dose, concentration, origin, prophylaxis, and personnel experience determine biosafety level.", "reference": "DOI:10.2172/1887109"}], "predicate": "determine", "predicate_id": null, "source": "biosafety risk assessment factors", "target": "biosafety level selection"}, {"description": "The selection process assigns a biosafety level on the classification axis.", "edge_id": "edge-8", "evidence": [{"notes": "Risk assessment factors determine risk and therefore biosafety level assignment.", "reference": "DOI:10.2172/1887109"}], "predicate": "assigns", "predicate_id": null, "source": "biosafety level selection", "target": "biosafety level"}, {"description": "Specific virulence traits render an organism capable of causing disease; their absence is compatible with BSL-1.", "edge_id": "edge-9", "evidence": [{"notes": "Strains encode specific virulence traits that render them capable of causing disease.", "reference": "DOI:10.3390/microorganisms11020344"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "specific virulence traits", "target": "disease causation"}], "graph_id": "biosafety_level_1_minimal_hazard", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Hazard-classification axis for biological agents.", "grounding": "METPO:1001101", "id": "biosafety_level", "is_orphan": false, "label": "biosafety level", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Process of assigning a biosafety level based on risk assessment.", "grounding": null, "id": "biosafety_level_selection", "is_orphan": false, "label": "biosafety level selection", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Minimal hazard to healthy adults; standard microbiological practices only.", "grounding": "METPO:1001102", "id": "bsl1_trait", "is_orphan": false, "label": "biosafety level 1", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Process by which an organism causes disease in a host.", "grounding": null, "id": "disease_causation", "is_orphan": false, "label": "disease causation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "A core good microbiological practice for risk reduction.", "grounding": null, "id": "hand_washing", "is_orphan": false, "label": "hand washing", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Absence or low expression of virulence factors producing disease in healthy adults.", "grounding": null, "id": "low_pathogen_hazard", "is_orphan": false, "label": "low pathogen hazard", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "A biological agent unlikely to cause disease in healthy adults.", "grounding": null, "id": "low_risk_agent", "is_orphan": false, "label": "low-risk agent", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ccfbf1", "description": "Pathogenicity, transmission route, stability, infectious dose, concentration, origin, prophylaxis, personnel experience.", "grounding": null, "id": "risk_assessment_factors", "is_orphan": false, "label": "biosafety risk assessment factors", "node_type": "EXPERIMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Basic containment relying on standard microbiological best practices and procedures.", "grounding": null, "id": "standard_microbiological_practices", "is_orphan": false, "label": "standard microbiological practices", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Genetic/protein determinants that render an organism capable of causing disease.", "grounding": null, "id": "virulence_traits", "is_orphan": false, "label": "specific virulence traits", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This broad ecological, host-relationship, habitat, or hazard classification spans multiple taxa and mechanisms; contextual protein nodes do not receive token UniProt examples.", "scope_status": "NONMECHANISTIC", "title": "BSL-1 minimal-hazard classification"}];
+  var graphs = [{"description": "DOI-backed graph linking the absence of significant pathogen hazard properties to BSL-1 classification and minimal containment requirements.", "edges": [{"description": "Low pathogen hazard yields BSL-1 classification.", "evidence": [{"notes": "Supports the absence of virulence factors as the basis of BSL-1 classification.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "id": "edge-1", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "low_pathogen_hazard", "target": "bsl1_trait"}, {"description": "BSL-1 is a quantitative class within the biosafety-level classification axis.", "evidence": [{"notes": "Supports BSL-1 as a member of the biosafety-level classification.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "bsl1_trait", "target": "biosafety_level"}, {"description": "Low-risk agents unlikely to cause disease in healthy adults qualify for BSL-1.", "evidence": [{"notes": "BSL-1 is the level for low-risk agents unlikely to cause disease in healthy adults.", "reference": "DOI:10.3390/laboratories1030013"}], "id": "edge-3", "is_orphan": false, "predicate": "qualifies for", "predicate_id": null, "source": "low_risk_agent", "target": "bsl1_trait"}, {"description": "Organisms not known to consistently cause disease in healthy adults qualify for BSL-1.", "evidence": [{"notes": "Defined strains of viable microorganisms not known to consistently cause disease in healthy adult humans.", "reference": "DOI:10.2172/1887109"}], "id": "edge-4", "is_orphan": false, "predicate": "qualifies for", "predicate_id": null, "source": "low_pathogen_hazard", "target": "bsl1_trait"}, {"description": "Standard microbiological practices provide the basic containment defining BSL-1.", "evidence": [{"notes": "BSL-1 represents a basic level of containment relying on standard microbiological best practices and procedures.", "reference": "DOI:10.47328/ufvbbt.2024.220"}], "id": "edge-5", "is_orphan": false, "predicate": "enables containment at", "predicate_id": null, "source": "standard_microbiological_practices", "target": "bsl1_trait"}, {"description": "Hand washing is among the best good microbiological practices underpinning standard practices.", "evidence": [{"notes": "Among GMPP, one of the best practices is hand washing.", "reference": "DOI:10.3389/fpubh.2022.965853"}], "id": "edge-6", "is_orphan": false, "predicate": "is good microbiological practice supporting", "predicate_id": null, "source": "hand_washing", "target": "standard_microbiological_practices"}, {"description": "Risk assessment factors determine the biosafety level assigned to work.", "evidence": [{"notes": "Pathogenicity, route of transmission, stability, infectious dose, concentration, origin, prophylaxis, and personnel experience determine biosafety level.", "reference": "DOI:10.2172/1887109"}], "id": "edge-7", "is_orphan": false, "predicate": "determine", "predicate_id": null, "source": "risk_assessment_factors", "target": "biosafety_level_selection"}, {"description": "The selection process assigns a biosafety level on the classification axis.", "evidence": [{"notes": "Risk assessment factors determine risk and therefore biosafety level assignment.", "reference": "DOI:10.2172/1887109"}], "id": "edge-8", "is_orphan": false, "predicate": "assigns", "predicate_id": null, "source": "biosafety_level_selection", "target": "biosafety_level"}, {"description": "Specific virulence traits render an organism capable of causing disease; their absence is compatible with BSL-1.", "evidence": [{"notes": "Strains encode specific virulence traits that render them capable of causing disease.", "reference": "DOI:10.3390/microorganisms11020344"}], "id": "edge-9", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "virulence_traits", "target": "disease_causation"}], "evidence_rows": [{"description": "Low pathogen hazard yields BSL-1 classification.", "edge_id": "edge-1", "evidence": [{"notes": "Supports the absence of virulence factors as the basis of BSL-1 classification.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "low pathogen hazard", "source_grounding": null, "target": "biosafety level 1", "target_grounding": "METPO:1001102"}, {"description": "BSL-1 is a quantitative class within the biosafety-level classification axis.", "edge_id": "edge-2", "evidence": [{"notes": "Supports BSL-1 as a member of the biosafety-level classification.", "reference": "DOI:10.1146/annurev.micro.62.081307.162938", "snippet": "virulence factors"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "biosafety level 1", "source_grounding": "METPO:1001102", "target": "biosafety level", "target_grounding": "METPO:1001101"}, {"description": "Low-risk agents unlikely to cause disease in healthy adults qualify for BSL-1.", "edge_id": "edge-3", "evidence": [{"notes": "BSL-1 is the level for low-risk agents unlikely to cause disease in healthy adults.", "reference": "DOI:10.3390/laboratories1030013"}], "predicate": "qualifies for", "predicate_id": null, "source": "low-risk agent", "source_grounding": null, "target": "biosafety level 1", "target_grounding": "METPO:1001102"}, {"description": "Organisms not known to consistently cause disease in healthy adults qualify for BSL-1.", "edge_id": "edge-4", "evidence": [{"notes": "Defined strains of viable microorganisms not known to consistently cause disease in healthy adult humans.", "reference": "DOI:10.2172/1887109"}], "predicate": "qualifies for", "predicate_id": null, "source": "low pathogen hazard", "source_grounding": null, "target": "biosafety level 1", "target_grounding": "METPO:1001102"}, {"description": "Standard microbiological practices provide the basic containment defining BSL-1.", "edge_id": "edge-5", "evidence": [{"notes": "BSL-1 represents a basic level of containment relying on standard microbiological best practices and procedures.", "reference": "DOI:10.47328/ufvbbt.2024.220"}], "predicate": "enables containment at", "predicate_id": null, "source": "standard microbiological practices", "source_grounding": null, "target": "biosafety level 1", "target_grounding": "METPO:1001102"}, {"description": "Hand washing is among the best good microbiological practices underpinning standard practices.", "edge_id": "edge-6", "evidence": [{"notes": "Among GMPP, one of the best practices is hand washing.", "reference": "DOI:10.3389/fpubh.2022.965853"}], "predicate": "is good microbiological practice supporting", "predicate_id": null, "source": "hand washing", "source_grounding": null, "target": "standard microbiological practices", "target_grounding": null}, {"description": "Risk assessment factors determine the biosafety level assigned to work.", "edge_id": "edge-7", "evidence": [{"notes": "Pathogenicity, route of transmission, stability, infectious dose, concentration, origin, prophylaxis, and personnel experience determine biosafety level.", "reference": "DOI:10.2172/1887109"}], "predicate": "determine", "predicate_id": null, "source": "biosafety risk assessment factors", "source_grounding": null, "target": "biosafety level selection", "target_grounding": null}, {"description": "The selection process assigns a biosafety level on the classification axis.", "edge_id": "edge-8", "evidence": [{"notes": "Risk assessment factors determine risk and therefore biosafety level assignment.", "reference": "DOI:10.2172/1887109"}], "predicate": "assigns", "predicate_id": null, "source": "biosafety level selection", "source_grounding": null, "target": "biosafety level", "target_grounding": "METPO:1001101"}, {"description": "Specific virulence traits render an organism capable of causing disease; their absence is compatible with BSL-1.", "edge_id": "edge-9", "evidence": [{"notes": "Strains encode specific virulence traits that render them capable of causing disease.", "reference": "DOI:10.3390/microorganisms11020344"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "specific virulence traits", "source_grounding": null, "target": "disease causation", "target_grounding": null}], "graph_id": "biosafety_level_1_minimal_hazard", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Hazard-classification axis for biological agents.", "grounding": "METPO:1001101", "id": "biosafety_level", "is_orphan": false, "label": "biosafety level", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Process of assigning a biosafety level based on risk assessment.", "grounding": null, "id": "biosafety_level_selection", "is_orphan": false, "label": "biosafety level selection", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Minimal hazard to healthy adults; standard microbiological practices only.", "grounding": "METPO:1001102", "id": "bsl1_trait", "is_orphan": false, "label": "biosafety level 1", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Process by which an organism causes disease in a host.", "grounding": null, "id": "disease_causation", "is_orphan": false, "label": "disease causation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "A core good microbiological practice for risk reduction.", "grounding": null, "id": "hand_washing", "is_orphan": false, "label": "hand washing", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Absence or low expression of virulence factors producing disease in healthy adults.", "grounding": null, "id": "low_pathogen_hazard", "is_orphan": false, "label": "low pathogen hazard", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "A biological agent unlikely to cause disease in healthy adults.", "grounding": null, "id": "low_risk_agent", "is_orphan": false, "label": "low-risk agent", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ccfbf1", "description": "Pathogenicity, transmission route, stability, infectious dose, concentration, origin, prophylaxis, personnel experience.", "grounding": null, "id": "risk_assessment_factors", "is_orphan": false, "label": "biosafety risk assessment factors", "node_type": "EXPERIMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Basic containment relying on standard microbiological best practices and procedures.", "grounding": null, "id": "standard_microbiological_practices", "is_orphan": false, "label": "standard microbiological practices", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Genetic/protein determinants that render an organism capable of causing disease.", "grounding": null, "id": "virulence_traits", "is_orphan": false, "label": "specific virulence traits", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This broad ecological, host-relationship, habitat, or hazard classification spans multiple taxa and mechanisms; contextual protein nodes do not receive token UniProt examples.", "scope_status": "NONMECHANISTIC", "title": "BSL-1 minimal-hazard classification"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -921,13 +950,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-08-26 03:23 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

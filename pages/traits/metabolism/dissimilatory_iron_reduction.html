@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/metabolism.html">METABOLISM</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/metabolism.html">METABOLISM</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>dissimilatory iron reduction</h1>
     <p class="curie"><code>traitmech:000031</code> · CLASS · REVIEWED</p>
 
@@ -85,9 +96,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>iron(3+)</strong>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:29034" rel="nofollow noreferrer"><code>CHEBI:29034</code></a>
             <span class="edge-predicate">oxidized to</span>
             <strong>iron(2+)</strong>
-            <code>METPO:2007405</code>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:29033" rel="nofollow noreferrer"><code>CHEBI:29033</code></a>
+            <a href="https://w3id.org/metpo/2007405" rel="nofollow noreferrer"><code>METPO:2007405</code></a>
             <p>Fe(III) is reduced to Fe(II) as DIR terminal-acceptor chemistry.</p>
             <ul>
 
@@ -102,9 +115,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>dissimilatory iron reduction</strong>
+            <code>traitmech:000031</code>
             <span class="edge-predicate">has electron acceptor</span>
             <strong>iron(3+)</strong>
-            <code>METPO:2007702</code>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:29034" rel="nofollow noreferrer"><code>CHEBI:29034</code></a>
+            <a href="https://w3id.org/metpo/2007702" rel="nofollow noreferrer"><code>METPO:2007702</code></a>
             <p>Fe(III) acts as terminal electron acceptor enabling DIR.</p>
             <ul>
 
@@ -119,8 +134,10 @@
 
           <li id="pathograph-1-edge-3">
             <strong>dissimilatory iron reduction</strong>
+            <code>traitmech:000031</code>
             <span class="edge-predicate">is a</span>
             <strong>energy-conserving anaerobic respiration</strong>
+
             <code>rdfs:subClassOf</code>
             <p>DIR is a form of energy-conserving anaerobic respiration.</p>
             <ul>
@@ -136,8 +153,10 @@
 
           <li id="pathograph-1-edge-4">
             <strong>oxidation of organic matter</strong>
+
             <span class="edge-predicate">coupled to</span>
             <strong>iron(3+)</strong>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:29034" rel="nofollow noreferrer"><code>CHEBI:29034</code></a>
 
             <p>Oxidation of organic matter is coupled to Fe(III) reduction in DIR.</p>
             <ul>
@@ -153,8 +172,10 @@
 
           <li id="pathograph-1-edge-5">
             <strong>H2 oxidation</strong>
+
             <span class="edge-predicate">coupled to</span>
             <strong>iron(3+)</strong>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:29034" rel="nofollow noreferrer"><code>CHEBI:29034</code></a>
 
             <p>H2 oxidation can serve as the electron donor coupled to Fe(III) reduction.</p>
             <ul>
@@ -170,8 +191,10 @@
 
           <li id="pathograph-1-edge-6">
             <strong>dissolved Fe(III)-organic-matter complex</strong>
+
             <span class="edge-predicate">reduced faster than</span>
             <strong>solid Fe(III) mineral</strong>
+
 
             <p>Dissolved Fe(III)-OM complexes are reduced at significantly higher rates than solid Fe(III) minerals.</p>
             <ul>
@@ -187,9 +210,11 @@
 
           <li id="pathograph-1-edge-7">
             <strong>dissimilatory iron reduction</strong>
+            <code>traitmech:000031</code>
             <span class="edge-predicate">has electron acceptor</span>
             <strong>solid Fe(III) mineral</strong>
-            <code>METPO:2007702</code>
+
+            <a href="https://w3id.org/metpo/2007702" rel="nofollow noreferrer"><code>METPO:2007702</code></a>
             <p>Insoluble Fe(III) oxides are the environmentally dominant terminal electron acceptor for DIR, which is why the trait requires extracellular electron transfer.</p>
             <ul>
 
@@ -204,9 +229,11 @@
 
           <li id="pathograph-1-edge-8">
             <strong>dissimilatory iron reduction</strong>
+            <code>traitmech:000031</code>
             <span class="edge-predicate">has electron acceptor</span>
             <strong>dissolved Fe(III)-organic-matter complex</strong>
-            <code>METPO:2007702</code>
+
+            <a href="https://w3id.org/metpo/2007702" rel="nofollow noreferrer"><code>METPO:2007702</code></a>
             <p>Solubilised Fe(III) is a second terminal electron acceptor pool, reachable without direct contact with the mineral surface.</p>
             <ul>
 
@@ -221,8 +248,10 @@
 
           <li id="pathograph-1-edge-9">
             <strong>MtrC-family surface decaheme c-type cytochrome</strong>
+            <a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR020014/" rel="nofollow noreferrer"><code>InterPro:IPR020014</code></a>
             <span class="edge-predicate">enables reduction of</span>
             <strong>solid Fe(III) mineral</strong>
+
 
             <p>Cell-surface MtrC supports efficient extracellular reduction of insoluble Fe(III) acceptors in S. oneidensis MR-1.</p>
             <ul>
@@ -360,37 +389,13 @@
 
         <li>
           <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/anaerobic_oxidation_of_methane.html">anaerobic oxidation of methane</a>
+          <a href="../../traits/metabolism/thiosulfate_respiration.html">thiosulfate respiration</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/anaerobic_respiration.html">Anaerobic respiration</a>
-          <span class="sim">1.000</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/dissimilatory_sulfate_reduction.html">dissimilatory sulfate reduction</a>
-          <span class="sim">1.000</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/dissimilatory_nitrate_reduction_to_ammonium.html">dissimilatory nitrate reduction to ammonium</a>
-          <span class="sim">1.000</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/denitrification.html">denitrification</a>
-          <span class="sim">1.000</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/dissimilatory_metal_reduction.html">dissimilatory metal reduction</a>
+          <a href="../../traits/metabolism/chlorate_respiration.html">chlorate respiration</a>
           <span class="sim">1.000</span>
         </li>
 
@@ -402,8 +407,32 @@
 
         <li>
           <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/respiration.html">respiration</a>
-          <span class="sim">0.968</span>
+          <a href="../../traits/metabolism/dissimilatory_metal_reduction.html">dissimilatory metal reduction</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">metabolism</span>
+          <a href="../../traits/metabolism/dissimilatory_nitrate_reduction_to_ammonium.html">dissimilatory nitrate reduction to ammonium</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">metabolism</span>
+          <a href="../../traits/metabolism/dissimilatory_sulfate_reduction.html">dissimilatory sulfate reduction</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">metabolism</span>
+          <a href="../../traits/metabolism/trimethylamine_n_oxide_respiration.html">trimethylamine N-oxide respiration</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">metabolism</span>
+          <a href="../../traits/metabolism/iodate_respiration.html">iodate respiration</a>
+          <span class="sim">1.000</span>
         </li>
 
       </ul>
@@ -968,7 +997,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking ferric iron as terminal electron acceptor to anaerobic respiration in Geobacter and Shewanella.", "edges": [{"description": "Fe(III) is reduced to Fe(II) as DIR terminal-acceptor chemistry.", "evidence": [{"notes": "Lovley establishes Fe(III) reduction coupled to organic-matter oxidation as energy-conserving anaerobic respiration.", "reference": "DOI:10.1128/mr.55.2.259-287.1991"}], "id": "edge-1", "is_orphan": false, "predicate": "oxidized to", "predicate_id": "METPO:2007405", "source": "ferric_iron", "target": "ferrous_iron"}, {"description": "Fe(III) acts as terminal electron acceptor enabling DIR.", "evidence": [{"notes": "Nealson \u0026 Saffarini support Fe(III) as a terminal electron acceptor competitive with nitrate.", "reference": "PMID:7826009"}], "id": "edge-2", "is_orphan": false, "predicate": "has electron acceptor", "predicate_id": "METPO:2007702", "source": "dir_trait", "target": "ferric_iron"}, {"description": "DIR is a form of energy-conserving anaerobic respiration.", "evidence": [{"notes": "Organisms can obtain energy by completely oxidizing organic compounds to CO2 with Fe(III) or Mn(IV) as the sole acceptor.", "reference": "DOI:10.1128/mr.55.2.259-287.1991"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "dir_trait", "target": "anaerobic_respiration"}, {"description": "Oxidation of organic matter is coupled to Fe(III) reduction in DIR.", "evidence": [{"notes": "The oxidation of organic matter coupled to the reduction of Fe(III) or Mn(IV) is the direct result of enzymatic activity of specialized microorganisms.", "reference": "DOI:10.1128/mr.55.2.259-287.1991"}], "id": "edge-4", "is_orphan": false, "predicate": "coupled to", "predicate_id": null, "source": "organic_matter_oxidation", "target": "ferric_iron"}, {"description": "H2 oxidation can serve as the electron donor coupled to Fe(III) reduction.", "evidence": [{"notes": "Abundant evidence that H2 oxidation can be coupled to Fe(III)/Mn(IV) reduction in sediments.", "reference": "DOI:10.1128/mr.55.2.259-287.1991"}], "id": "edge-5", "is_orphan": false, "predicate": "coupled to", "predicate_id": null, "source": "hydrogen_oxidation", "target": "ferric_iron"}, {"description": "Dissolved Fe(III)-OM complexes are reduced at significantly higher rates than solid Fe(III) minerals.", "evidence": [{"notes": "The reduction rates of dissolved Fe(III)-OM complexes are significantly higher than those observed for solid Fe(III) minerals.", "reference": "DOI:10.1007/s10533-024-01186-4"}], "id": "edge-6", "is_orphan": false, "predicate": "reduced faster than", "predicate_id": null, "source": "dissolved_fe3_om_complex", "target": "solid_fe3_mineral"}, {"description": "Insoluble Fe(III) oxides are the environmentally dominant terminal electron acceptor for DIR, which is why the trait requires extracellular electron transfer.", "evidence": [{"notes": "Lovley et al. identify insoluble Fe(III)/Mn(IV) oxides as the prevalent environmental form of the acceptor, which is what ties the solid-mineral pool to the trait rather than leaving it a free-standing geochemical observation.", "reference": "PMID:15518832", "snippet": "Unlike other commonly considered electron acceptors, Fe(III) and Mn(IV) oxides, the most prevalent form of Fe(III) and Mn(IV) in most environments, are insoluble."}], "id": "edge-7", "is_orphan": false, "predicate": "has electron acceptor", "predicate_id": "METPO:2007702", "source": "dir_trait", "target": "solid_fe3_mineral"}, {"description": "Solubilised Fe(III) is a second terminal electron acceptor pool, reachable without direct contact with the mineral surface.", "evidence": [{"notes": "Establishes that a solubilised, non-contact Fe(III) pool is respired, which is what attaches the dissolved-vs-solid rate comparison to the trait. Scope caveat kept explicit (issue 297) - the quote is about chelators the organism itself secretes, whereas this node is ambient Fe(III)-organic-matter complex, so it supports the existence of the pool rather than its origin.", "reference": "PMID:15518832", "snippet": "In contrast, Shewanella and Geothrix species produce chelators that solubilize Fe(III) and release electron-shuttling compounds that transfer electrons from the cell surface to the surface of Fe(III) oxides not in direct contact with the cells."}], "id": "edge-8", "is_orphan": false, "predicate": "has electron acceptor", "predicate_id": "METPO:2007702", "source": "dir_trait", "target": "dissolved_fe3_om_complex"}, {"description": "Cell-surface MtrC supports efficient extracellular reduction of insoluble Fe(III) acceptors in S. oneidensis MR-1.", "evidence": [{"notes": "This primary-source edge is restricted to the Shewanella MR-1 branch; Geobacter and other iron reducers can use different extracellular electron-transfer machinery.", "reference": "DOI:10.1073/pnas.0604517103", "snippet": "The decaheme c-type cytochrome MtrC (SO1778) had been implicated in efficient reduction of Fe(III) and Mn(IV) by MR-1."}], "id": "edge-9", "is_orphan": false, "predicate": "enables reduction of", "predicate_id": null, "source": "mtrc", "target": "solid_fe3_mineral"}], "evidence_rows": [{"description": "Fe(III) is reduced to Fe(II) as DIR terminal-acceptor chemistry.", "edge_id": "edge-1", "evidence": [{"notes": "Lovley establishes Fe(III) reduction coupled to organic-matter oxidation as energy-conserving anaerobic respiration.", "reference": "DOI:10.1128/mr.55.2.259-287.1991"}], "predicate": "oxidized to", "predicate_id": "METPO:2007405", "source": "iron(3+)", "target": "iron(2+)"}, {"description": "Fe(III) acts as terminal electron acceptor enabling DIR.", "edge_id": "edge-2", "evidence": [{"notes": "Nealson \u0026 Saffarini support Fe(III) as a terminal electron acceptor competitive with nitrate.", "reference": "PMID:7826009"}], "predicate": "has electron acceptor", "predicate_id": "METPO:2007702", "source": "dissimilatory iron reduction", "target": "iron(3+)"}, {"description": "DIR is a form of energy-conserving anaerobic respiration.", "edge_id": "edge-3", "evidence": [{"notes": "Organisms can obtain energy by completely oxidizing organic compounds to CO2 with Fe(III) or Mn(IV) as the sole acceptor.", "reference": "DOI:10.1128/mr.55.2.259-287.1991"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "dissimilatory iron reduction", "target": "energy-conserving anaerobic respiration"}, {"description": "Oxidation of organic matter is coupled to Fe(III) reduction in DIR.", "edge_id": "edge-4", "evidence": [{"notes": "The oxidation of organic matter coupled to the reduction of Fe(III) or Mn(IV) is the direct result of enzymatic activity of specialized microorganisms.", "reference": "DOI:10.1128/mr.55.2.259-287.1991"}], "predicate": "coupled to", "predicate_id": null, "source": "oxidation of organic matter", "target": "iron(3+)"}, {"description": "H2 oxidation can serve as the electron donor coupled to Fe(III) reduction.", "edge_id": "edge-5", "evidence": [{"notes": "Abundant evidence that H2 oxidation can be coupled to Fe(III)/Mn(IV) reduction in sediments.", "reference": "DOI:10.1128/mr.55.2.259-287.1991"}], "predicate": "coupled to", "predicate_id": null, "source": "H2 oxidation", "target": "iron(3+)"}, {"description": "Dissolved Fe(III)-OM complexes are reduced at significantly higher rates than solid Fe(III) minerals.", "edge_id": "edge-6", "evidence": [{"notes": "The reduction rates of dissolved Fe(III)-OM complexes are significantly higher than those observed for solid Fe(III) minerals.", "reference": "DOI:10.1007/s10533-024-01186-4"}], "predicate": "reduced faster than", "predicate_id": null, "source": "dissolved Fe(III)-organic-matter complex", "target": "solid Fe(III) mineral"}, {"description": "Insoluble Fe(III) oxides are the environmentally dominant terminal electron acceptor for DIR, which is why the trait requires extracellular electron transfer.", "edge_id": "edge-7", "evidence": [{"notes": "Lovley et al. identify insoluble Fe(III)/Mn(IV) oxides as the prevalent environmental form of the acceptor, which is what ties the solid-mineral pool to the trait rather than leaving it a free-standing geochemical observation.", "reference": "PMID:15518832", "snippet": "Unlike other commonly considered electron acceptors, Fe(III) and Mn(IV) oxides, the most prevalent form of Fe(III) and Mn(IV) in most environments, are insoluble."}], "predicate": "has electron acceptor", "predicate_id": "METPO:2007702", "source": "dissimilatory iron reduction", "target": "solid Fe(III) mineral"}, {"description": "Solubilised Fe(III) is a second terminal electron acceptor pool, reachable without direct contact with the mineral surface.", "edge_id": "edge-8", "evidence": [{"notes": "Establishes that a solubilised, non-contact Fe(III) pool is respired, which is what attaches the dissolved-vs-solid rate comparison to the trait. Scope caveat kept explicit (issue 297) - the quote is about chelators the organism itself secretes, whereas this node is ambient Fe(III)-organic-matter complex, so it supports the existence of the pool rather than its origin.", "reference": "PMID:15518832", "snippet": "In contrast, Shewanella and Geothrix species produce chelators that solubilize Fe(III) and release electron-shuttling compounds that transfer electrons from the cell surface to the surface of Fe(III) oxides not in direct contact with the cells."}], "predicate": "has electron acceptor", "predicate_id": "METPO:2007702", "source": "dissimilatory iron reduction", "target": "dissolved Fe(III)-organic-matter complex"}, {"description": "Cell-surface MtrC supports efficient extracellular reduction of insoluble Fe(III) acceptors in S. oneidensis MR-1.", "edge_id": "edge-9", "evidence": [{"notes": "This primary-source edge is restricted to the Shewanella MR-1 branch; Geobacter and other iron reducers can use different extracellular electron-transfer machinery.", "reference": "DOI:10.1073/pnas.0604517103", "snippet": "The decaheme c-type cytochrome MtrC (SO1778) had been implicated in efficient reduction of Fe(III) and Mn(IV) by MR-1."}], "predicate": "enables reduction of", "predicate_id": null, "source": "MtrC-family surface decaheme c-type cytochrome", "target": "solid Fe(III) mineral"}], "graph_id": "dir_ferric_iron_respiration", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Anaerobic respiratory metabolism conserving energy via a terminal electron acceptor.", "grounding": null, "id": "anaerobic_respiration", "is_orphan": false, "label": "energy-conserving anaerobic respiration", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Anaerobic respiration on Fe(III) as terminal electron acceptor.", "grounding": "traitmech:000031", "id": "dir_trait", "is_orphan": false, "label": "dissimilatory iron reduction", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Soluble Fe(III) bound to organic matter; reduced faster than solid Fe(III) minerals.", "grounding": null, "id": "dissolved_fe3_om_complex", "is_orphan": false, "label": "dissolved Fe(III)-organic-matter complex", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Terminal electron acceptor reduced in DIR.", "grounding": "CHEBI:29034", "id": "ferric_iron", "is_orphan": false, "label": "iron(3+)", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Soluble product released after Fe(III) reduction.", "grounding": "CHEBI:29033", "id": "ferrous_iron", "is_orphan": false, "label": "iron(2+)", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Oxidation of molecular hydrogen as an electron donor coupled to Fe(III) reduction.", "grounding": null, "id": "hydrogen_oxidation", "is_orphan": false, "label": "H2 oxidation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Cell-surface decaheme cytochrome supporting extracellular reduction of ferric iron in Shewanella.", "grounding": "InterPro:IPR020014", "id": "mtrc", "is_orphan": false, "label": "MtrC-family surface decaheme c-type cytochrome", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "UNREVIEWED", "entry_version": 125, "evidence": [{"notes": "The primary S. oneidensis MR-1 study supports the MtrC role in metal reduction. UniProtKB Q8EG34 is the exact unreviewed MtrC entry from reference proteome UP000008186 and verifies the strain taxon.", "reference": "DOI:10.1073/pnas.0604517103", "snippet": "The decaheme c-type cytochrome MtrC (SO1778) had been implicated in efficient reduction of Fe(III) and Mn(IV) by MR-1."}], "gene_symbol": "mtrC", "protein_label": "Extracellular iron oxide respiratory system surface decaheme cytochrome c component MtrC", "proteome_id": "UP000008186", "retrieved_on": "2026-08-24", "role": "MtrC cell-surface component implicated in efficient Fe(III) reduction; this accession is not presented as the complete MtrCAB conduit.", "sequence_version": 1, "taxon_id": "NCBITaxon:211586", "taxon_label": "Shewanella oneidensis MR-1", "uniprot_id": "UniProtKB:Q8EG34"}], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Oxidation of organic carbon serving as the electron donor in DIR.", "grounding": null, "id": "organic_matter_oxidation", "is_orphan": false, "label": "oxidation of organic matter", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Insoluble Fe(III) oxide mineral phase serving as terminal electron acceptor.", "grounding": null, "id": "solid_fe3_mineral", "is_orphan": false, "label": "solid Fe(III) mineral", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "UNREVIEWED", "entry_version": 125, "evidence": [{"notes": "The primary S. oneidensis MR-1 study supports the MtrC role in metal reduction. UniProtKB Q8EG34 is the exact unreviewed MtrC entry from reference proteome UP000008186 and verifies the strain taxon.", "reference": "DOI:10.1073/pnas.0604517103", "snippet": "The decaheme c-type cytochrome MtrC (SO1778) had been implicated in efficient reduction of Fe(III) and Mn(IV) by MR-1."}], "gene_symbol": "mtrC", "node_id": "mtrc", "node_label": "MtrC-family surface decaheme c-type cytochrome", "protein_label": "Extracellular iron oxide respiratory system surface decaheme cytochrome c component MtrC", "proteome_id": "UP000008186", "retrieved_on": "2026-08-24", "role": "MtrC cell-surface component implicated in efficient Fe(III) reduction; this accession is not presented as the complete MtrCAB conduit.", "sequence_version": 1, "taxon_id": "NCBITaxon:211586", "taxon_label": "Shewanella oneidensis MR-1", "uniprot_id": "UniProtKB:Q8EG34"}], "scope_notes": "The graph combines Geobacter and Shewanella routes. The taxon-paired MtrC example supports the extracellular Fe(III)-reduction branch in S. oneidensis MR-1 and is not asserted as a universal component of all iron reducers.", "scope_status": "MECHANISTIC", "title": "Dissimilatory iron reduction respires Fe(III) to Fe(II)"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking ferric iron as terminal electron acceptor to anaerobic respiration in Geobacter and Shewanella.", "edges": [{"description": "Fe(III) is reduced to Fe(II) as DIR terminal-acceptor chemistry.", "evidence": [{"notes": "Lovley establishes Fe(III) reduction coupled to organic-matter oxidation as energy-conserving anaerobic respiration.", "reference": "DOI:10.1128/mr.55.2.259-287.1991"}], "id": "edge-1", "is_orphan": false, "predicate": "oxidized to", "predicate_id": "METPO:2007405", "source": "ferric_iron", "target": "ferrous_iron"}, {"description": "Fe(III) acts as terminal electron acceptor enabling DIR.", "evidence": [{"notes": "Nealson \u0026 Saffarini support Fe(III) as a terminal electron acceptor competitive with nitrate.", "reference": "PMID:7826009"}], "id": "edge-2", "is_orphan": false, "predicate": "has electron acceptor", "predicate_id": "METPO:2007702", "source": "dir_trait", "target": "ferric_iron"}, {"description": "DIR is a form of energy-conserving anaerobic respiration.", "evidence": [{"notes": "Organisms can obtain energy by completely oxidizing organic compounds to CO2 with Fe(III) or Mn(IV) as the sole acceptor.", "reference": "DOI:10.1128/mr.55.2.259-287.1991"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "dir_trait", "target": "anaerobic_respiration"}, {"description": "Oxidation of organic matter is coupled to Fe(III) reduction in DIR.", "evidence": [{"notes": "The oxidation of organic matter coupled to the reduction of Fe(III) or Mn(IV) is the direct result of enzymatic activity of specialized microorganisms.", "reference": "DOI:10.1128/mr.55.2.259-287.1991"}], "id": "edge-4", "is_orphan": false, "predicate": "coupled to", "predicate_id": null, "source": "organic_matter_oxidation", "target": "ferric_iron"}, {"description": "H2 oxidation can serve as the electron donor coupled to Fe(III) reduction.", "evidence": [{"notes": "Abundant evidence that H2 oxidation can be coupled to Fe(III)/Mn(IV) reduction in sediments.", "reference": "DOI:10.1128/mr.55.2.259-287.1991"}], "id": "edge-5", "is_orphan": false, "predicate": "coupled to", "predicate_id": null, "source": "hydrogen_oxidation", "target": "ferric_iron"}, {"description": "Dissolved Fe(III)-OM complexes are reduced at significantly higher rates than solid Fe(III) minerals.", "evidence": [{"notes": "The reduction rates of dissolved Fe(III)-OM complexes are significantly higher than those observed for solid Fe(III) minerals.", "reference": "DOI:10.1007/s10533-024-01186-4"}], "id": "edge-6", "is_orphan": false, "predicate": "reduced faster than", "predicate_id": null, "source": "dissolved_fe3_om_complex", "target": "solid_fe3_mineral"}, {"description": "Insoluble Fe(III) oxides are the environmentally dominant terminal electron acceptor for DIR, which is why the trait requires extracellular electron transfer.", "evidence": [{"notes": "Lovley et al. identify insoluble Fe(III)/Mn(IV) oxides as the prevalent environmental form of the acceptor, which is what ties the solid-mineral pool to the trait rather than leaving it a free-standing geochemical observation.", "reference": "PMID:15518832", "snippet": "Unlike other commonly considered electron acceptors, Fe(III) and Mn(IV) oxides, the most prevalent form of Fe(III) and Mn(IV) in most environments, are insoluble."}], "id": "edge-7", "is_orphan": false, "predicate": "has electron acceptor", "predicate_id": "METPO:2007702", "source": "dir_trait", "target": "solid_fe3_mineral"}, {"description": "Solubilised Fe(III) is a second terminal electron acceptor pool, reachable without direct contact with the mineral surface.", "evidence": [{"notes": "Establishes that a solubilised, non-contact Fe(III) pool is respired, which is what attaches the dissolved-vs-solid rate comparison to the trait. Scope caveat kept explicit (issue 297) - the quote is about chelators the organism itself secretes, whereas this node is ambient Fe(III)-organic-matter complex, so it supports the existence of the pool rather than its origin.", "reference": "PMID:15518832", "snippet": "In contrast, Shewanella and Geothrix species produce chelators that solubilize Fe(III) and release electron-shuttling compounds that transfer electrons from the cell surface to the surface of Fe(III) oxides not in direct contact with the cells."}], "id": "edge-8", "is_orphan": false, "predicate": "has electron acceptor", "predicate_id": "METPO:2007702", "source": "dir_trait", "target": "dissolved_fe3_om_complex"}, {"description": "Cell-surface MtrC supports efficient extracellular reduction of insoluble Fe(III) acceptors in S. oneidensis MR-1.", "evidence": [{"notes": "This primary-source edge is restricted to the Shewanella MR-1 branch; Geobacter and other iron reducers can use different extracellular electron-transfer machinery.", "reference": "DOI:10.1073/pnas.0604517103", "snippet": "The decaheme c-type cytochrome MtrC (SO1778) had been implicated in efficient reduction of Fe(III) and Mn(IV) by MR-1."}], "id": "edge-9", "is_orphan": false, "predicate": "enables reduction of", "predicate_id": null, "source": "mtrc", "target": "solid_fe3_mineral"}], "evidence_rows": [{"description": "Fe(III) is reduced to Fe(II) as DIR terminal-acceptor chemistry.", "edge_id": "edge-1", "evidence": [{"notes": "Lovley establishes Fe(III) reduction coupled to organic-matter oxidation as energy-conserving anaerobic respiration.", "reference": "DOI:10.1128/mr.55.2.259-287.1991"}], "predicate": "oxidized to", "predicate_id": "METPO:2007405", "source": "iron(3+)", "source_grounding": "CHEBI:29034", "target": "iron(2+)", "target_grounding": "CHEBI:29033"}, {"description": "Fe(III) acts as terminal electron acceptor enabling DIR.", "edge_id": "edge-2", "evidence": [{"notes": "Nealson \u0026 Saffarini support Fe(III) as a terminal electron acceptor competitive with nitrate.", "reference": "PMID:7826009"}], "predicate": "has electron acceptor", "predicate_id": "METPO:2007702", "source": "dissimilatory iron reduction", "source_grounding": "traitmech:000031", "target": "iron(3+)", "target_grounding": "CHEBI:29034"}, {"description": "DIR is a form of energy-conserving anaerobic respiration.", "edge_id": "edge-3", "evidence": [{"notes": "Organisms can obtain energy by completely oxidizing organic compounds to CO2 with Fe(III) or Mn(IV) as the sole acceptor.", "reference": "DOI:10.1128/mr.55.2.259-287.1991"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "dissimilatory iron reduction", "source_grounding": "traitmech:000031", "target": "energy-conserving anaerobic respiration", "target_grounding": null}, {"description": "Oxidation of organic matter is coupled to Fe(III) reduction in DIR.", "edge_id": "edge-4", "evidence": [{"notes": "The oxidation of organic matter coupled to the reduction of Fe(III) or Mn(IV) is the direct result of enzymatic activity of specialized microorganisms.", "reference": "DOI:10.1128/mr.55.2.259-287.1991"}], "predicate": "coupled to", "predicate_id": null, "source": "oxidation of organic matter", "source_grounding": null, "target": "iron(3+)", "target_grounding": "CHEBI:29034"}, {"description": "H2 oxidation can serve as the electron donor coupled to Fe(III) reduction.", "edge_id": "edge-5", "evidence": [{"notes": "Abundant evidence that H2 oxidation can be coupled to Fe(III)/Mn(IV) reduction in sediments.", "reference": "DOI:10.1128/mr.55.2.259-287.1991"}], "predicate": "coupled to", "predicate_id": null, "source": "H2 oxidation", "source_grounding": null, "target": "iron(3+)", "target_grounding": "CHEBI:29034"}, {"description": "Dissolved Fe(III)-OM complexes are reduced at significantly higher rates than solid Fe(III) minerals.", "edge_id": "edge-6", "evidence": [{"notes": "The reduction rates of dissolved Fe(III)-OM complexes are significantly higher than those observed for solid Fe(III) minerals.", "reference": "DOI:10.1007/s10533-024-01186-4"}], "predicate": "reduced faster than", "predicate_id": null, "source": "dissolved Fe(III)-organic-matter complex", "source_grounding": null, "target": "solid Fe(III) mineral", "target_grounding": null}, {"description": "Insoluble Fe(III) oxides are the environmentally dominant terminal electron acceptor for DIR, which is why the trait requires extracellular electron transfer.", "edge_id": "edge-7", "evidence": [{"notes": "Lovley et al. identify insoluble Fe(III)/Mn(IV) oxides as the prevalent environmental form of the acceptor, which is what ties the solid-mineral pool to the trait rather than leaving it a free-standing geochemical observation.", "reference": "PMID:15518832", "snippet": "Unlike other commonly considered electron acceptors, Fe(III) and Mn(IV) oxides, the most prevalent form of Fe(III) and Mn(IV) in most environments, are insoluble."}], "predicate": "has electron acceptor", "predicate_id": "METPO:2007702", "source": "dissimilatory iron reduction", "source_grounding": "traitmech:000031", "target": "solid Fe(III) mineral", "target_grounding": null}, {"description": "Solubilised Fe(III) is a second terminal electron acceptor pool, reachable without direct contact with the mineral surface.", "edge_id": "edge-8", "evidence": [{"notes": "Establishes that a solubilised, non-contact Fe(III) pool is respired, which is what attaches the dissolved-vs-solid rate comparison to the trait. Scope caveat kept explicit (issue 297) - the quote is about chelators the organism itself secretes, whereas this node is ambient Fe(III)-organic-matter complex, so it supports the existence of the pool rather than its origin.", "reference": "PMID:15518832", "snippet": "In contrast, Shewanella and Geothrix species produce chelators that solubilize Fe(III) and release electron-shuttling compounds that transfer electrons from the cell surface to the surface of Fe(III) oxides not in direct contact with the cells."}], "predicate": "has electron acceptor", "predicate_id": "METPO:2007702", "source": "dissimilatory iron reduction", "source_grounding": "traitmech:000031", "target": "dissolved Fe(III)-organic-matter complex", "target_grounding": null}, {"description": "Cell-surface MtrC supports efficient extracellular reduction of insoluble Fe(III) acceptors in S. oneidensis MR-1.", "edge_id": "edge-9", "evidence": [{"notes": "This primary-source edge is restricted to the Shewanella MR-1 branch; Geobacter and other iron reducers can use different extracellular electron-transfer machinery.", "reference": "DOI:10.1073/pnas.0604517103", "snippet": "The decaheme c-type cytochrome MtrC (SO1778) had been implicated in efficient reduction of Fe(III) and Mn(IV) by MR-1."}], "predicate": "enables reduction of", "predicate_id": null, "source": "MtrC-family surface decaheme c-type cytochrome", "source_grounding": "InterPro:IPR020014", "target": "solid Fe(III) mineral", "target_grounding": null}], "graph_id": "dir_ferric_iron_respiration", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Anaerobic respiratory metabolism conserving energy via a terminal electron acceptor.", "grounding": null, "id": "anaerobic_respiration", "is_orphan": false, "label": "energy-conserving anaerobic respiration", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Anaerobic respiration on Fe(III) as terminal electron acceptor.", "grounding": "traitmech:000031", "id": "dir_trait", "is_orphan": false, "label": "dissimilatory iron reduction", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Soluble Fe(III) bound to organic matter; reduced faster than solid Fe(III) minerals.", "grounding": null, "id": "dissolved_fe3_om_complex", "is_orphan": false, "label": "dissolved Fe(III)-organic-matter complex", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Terminal electron acceptor reduced in DIR.", "grounding": "CHEBI:29034", "id": "ferric_iron", "is_orphan": false, "label": "iron(3+)", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Soluble product released after Fe(III) reduction.", "grounding": "CHEBI:29033", "id": "ferrous_iron", "is_orphan": false, "label": "iron(2+)", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Oxidation of molecular hydrogen as an electron donor coupled to Fe(III) reduction.", "grounding": null, "id": "hydrogen_oxidation", "is_orphan": false, "label": "H2 oxidation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Cell-surface decaheme cytochrome supporting extracellular reduction of ferric iron in Shewanella.", "grounding": "InterPro:IPR020014", "id": "mtrc", "is_orphan": false, "label": "MtrC-family surface decaheme c-type cytochrome", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "UNREVIEWED", "entry_version": 125, "evidence": [{"notes": "The primary S. oneidensis MR-1 study supports the MtrC role in metal reduction. UniProtKB Q8EG34 is the exact unreviewed MtrC entry from reference proteome UP000008186 and verifies the strain taxon.", "reference": "DOI:10.1073/pnas.0604517103", "snippet": "The decaheme c-type cytochrome MtrC (SO1778) had been implicated in efficient reduction of Fe(III) and Mn(IV) by MR-1."}], "gene_symbol": "mtrC", "protein_label": "Extracellular iron oxide respiratory system surface decaheme cytochrome c component MtrC", "proteome_id": "UP000008186", "retrieved_on": "2026-08-24", "role": "MtrC cell-surface component implicated in efficient Fe(III) reduction; this accession is not presented as the complete MtrCAB conduit.", "sequence_version": 1, "taxon_id": "NCBITaxon:211586", "taxon_label": "Shewanella oneidensis MR-1", "uniprot_id": "UniProtKB:Q8EG34"}], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Oxidation of organic carbon serving as the electron donor in DIR.", "grounding": null, "id": "organic_matter_oxidation", "is_orphan": false, "label": "oxidation of organic matter", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Insoluble Fe(III) oxide mineral phase serving as terminal electron acceptor.", "grounding": null, "id": "solid_fe3_mineral", "is_orphan": false, "label": "solid Fe(III) mineral", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "UNREVIEWED", "entry_version": 125, "evidence": [{"notes": "The primary S. oneidensis MR-1 study supports the MtrC role in metal reduction. UniProtKB Q8EG34 is the exact unreviewed MtrC entry from reference proteome UP000008186 and verifies the strain taxon.", "reference": "DOI:10.1073/pnas.0604517103", "snippet": "The decaheme c-type cytochrome MtrC (SO1778) had been implicated in efficient reduction of Fe(III) and Mn(IV) by MR-1."}], "gene_symbol": "mtrC", "node_id": "mtrc", "node_label": "MtrC-family surface decaheme c-type cytochrome", "protein_label": "Extracellular iron oxide respiratory system surface decaheme cytochrome c component MtrC", "proteome_id": "UP000008186", "retrieved_on": "2026-08-24", "role": "MtrC cell-surface component implicated in efficient Fe(III) reduction; this accession is not presented as the complete MtrCAB conduit.", "sequence_version": 1, "taxon_id": "NCBITaxon:211586", "taxon_label": "Shewanella oneidensis MR-1", "uniprot_id": "UniProtKB:Q8EG34"}], "scope_notes": "The graph combines Geobacter and Shewanella routes. The taxon-paired MtrC example supports the extracellular Fe(III)-reduction branch in S. oneidensis MR-1 and is not asserted as a universal component of all iron reducers.", "scope_status": "MECHANISTIC", "title": "Dissimilatory iron reduction respires Fe(III) to Fe(II)"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -988,13 +1017,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-08-24 08:00 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/physiology.html">PHYSIOLOGY</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/physiology.html">PHYSIOLOGY</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>chemoheterotrophic</h1>
     <p class="curie"><code>METPO:1000636</code> · CLASS · REVIEWED</p>
 
@@ -85,9 +96,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>chemoheterotrophic</strong>
+            <a href="https://w3id.org/metpo/1000636" rel="nofollow noreferrer"><code>METPO:1000636</code></a>
             <span class="edge-predicate">has energy source</span>
             <strong>organic molecule</strong>
-            <code>METPO:2007807</code>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:72695" rel="nofollow noreferrer"><code>CHEBI:72695</code></a>
+            <a href="https://w3id.org/metpo/2007807" rel="nofollow noreferrer"><code>METPO:2007807</code></a>
             <p>Chemoheterotrophs derive chemical energy from organic compounds.</p>
             <ul>
 
@@ -102,9 +115,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>chemoheterotrophic</strong>
+            <a href="https://w3id.org/metpo/1000636" rel="nofollow noreferrer"><code>METPO:1000636</code></a>
             <span class="edge-predicate">has carbon source</span>
             <strong>organic molecule</strong>
-            <code>METPO:2007806</code>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:72695" rel="nofollow noreferrer"><code>CHEBI:72695</code></a>
+            <a href="https://w3id.org/metpo/2007806" rel="nofollow noreferrer"><code>METPO:2007806</code></a>
             <p>Chemoheterotrophs use organic compounds as carbon sources.</p>
             <ul>
 
@@ -119,8 +134,10 @@
 
           <li id="pathograph-1-edge-3">
             <strong>organic molecule</strong>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:72695" rel="nofollow noreferrer"><code>CHEBI:72695</code></a>
             <span class="edge-predicate">broken down by</span>
             <strong>catabolism</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0009056" rel="nofollow noreferrer"><code>GO:0009056</code></a>
 
             <p>Organic molecules are catabolized to release energy and precursors.</p>
             <ul>
@@ -136,8 +153,10 @@
 
           <li id="pathograph-1-edge-4">
             <strong>catabolism</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0009056" rel="nofollow noreferrer"><code>GO:0009056</code></a>
             <span class="edge-predicate">can proceed through</span>
             <strong>respiration</strong>
+            <a href="https://w3id.org/metpo/1000800" rel="nofollow noreferrer"><code>METPO:1000800</code></a>
 
             <p>Organic catabolism can conserve energy through respiration.</p>
             <ul>
@@ -153,8 +172,10 @@
 
           <li id="pathograph-1-edge-5">
             <strong>catabolism</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0009056" rel="nofollow noreferrer"><code>GO:0009056</code></a>
             <span class="edge-predicate">can proceed through</span>
             <strong>fermentation</strong>
+            <a href="https://w3id.org/metpo/1002005" rel="nofollow noreferrer"><code>METPO:1002005</code></a>
 
             <p>Organic catabolism can conserve energy through fermentation.</p>
             <ul>
@@ -170,9 +191,11 @@
 
           <li id="pathograph-1-edge-6">
             <strong>respiration</strong>
+            <a href="https://w3id.org/metpo/1000800" rel="nofollow noreferrer"><code>METPO:1000800</code></a>
             <span class="edge-predicate">has output</span>
             <strong>ATP</strong>
-            <code>RO:0002234</code>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:30616" rel="nofollow noreferrer"><code>CHEBI:30616</code></a>
+            <a href="http://purl.obolibrary.org/obo/RO_0002234" rel="nofollow noreferrer"><code>RO:0002234</code></a>
             <p>Respiration supports ATP synthesis.</p>
             <ul>
 
@@ -187,9 +210,11 @@
 
           <li id="pathograph-1-edge-7">
             <strong>fermentation</strong>
+            <a href="https://w3id.org/metpo/1002005" rel="nofollow noreferrer"><code>METPO:1002005</code></a>
             <span class="edge-predicate">has output</span>
             <strong>ATP</strong>
-            <code>RO:0002234</code>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:30616" rel="nofollow noreferrer"><code>CHEBI:30616</code></a>
+            <a href="http://purl.obolibrary.org/obo/RO_0002234" rel="nofollow noreferrer"><code>RO:0002234</code></a>
             <p>Fermentation can produce ATP by substrate-level phosphorylation.</p>
             <ul>
 
@@ -204,9 +229,11 @@
 
           <li id="pathograph-1-edge-8">
             <strong>catabolism</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0009056" rel="nofollow noreferrer"><code>GO:0009056</code></a>
             <span class="edge-predicate">has output</span>
             <strong>precursor metabolites</strong>
-            <code>RO:0002234</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002234" rel="nofollow noreferrer"><code>RO:0002234</code></a>
             <p>Catabolism supplies precursors for biosynthesis.</p>
             <ul>
 
@@ -221,9 +248,11 @@
 
           <li id="pathograph-1-edge-9">
             <strong>precursor metabolites</strong>
+
             <span class="edge-predicate">incorporated into</span>
             <strong>biomass</strong>
-            <code>biolink:part_of</code>
+            <a href="https://w3id.org/metpo/1007501" rel="nofollow noreferrer"><code>METPO:1007501</code></a>
+            <a href="https://w3id.org/biolink/vocab/part_of" rel="nofollow noreferrer"><code>biolink:part_of</code></a>
             <p>Organic-carbon precursors are incorporated into biomass.</p>
             <ul>
 
@@ -238,9 +267,11 @@
 
           <li id="pathograph-1-edge-10">
             <strong>Embden-Meyerhof glycolysis pathway</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>catabolism</strong>
-            <code>RO:0002326</code>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0009056" rel="nofollow noreferrer"><code>GO:0009056</code></a>
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>Embden-Meyerhof glycolysis is a core route of organic-substrate catabolism in chemoheterotrophs.</p>
             <ul>
 
@@ -255,9 +286,11 @@
 
           <li id="pathograph-1-edge-11">
             <strong>fermentation</strong>
+            <a href="https://w3id.org/metpo/1002005" rel="nofollow noreferrer"><code>METPO:1002005</code></a>
             <span class="edge-predicate">generates</span>
             <strong>short-chain fatty acids</strong>
-            <code>biolink:produces</code>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:26666" rel="nofollow noreferrer"><code>CHEBI:26666</code></a>
+            <a href="https://w3id.org/biolink/vocab/produces" rel="nofollow noreferrer"><code>biolink:produces</code></a>
             <p>Fermentation of organic substrates yields short-chain fatty acids such as acetate, succinate, and propionate.</p>
             <ul>
 
@@ -272,8 +305,10 @@
 
           <li id="pathograph-1-edge-12">
             <strong>PEP-dependent phosphotransferase system (mannitol PTS)</strong>
+
             <span class="edge-predicate">imports and phosphorylates</span>
             <strong>mannitol</strong>
+
 
             <p>A PEP-dependent phosphotransferase system imports and phosphorylates mannitol as an organic substrate.</p>
             <ul>
@@ -289,8 +324,10 @@
 
           <li id="pathograph-1-edge-13">
             <strong>mtlD mannitol-1-phosphate dehydrogenase</strong>
+            <a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR023028/" rel="nofollow noreferrer"><code>InterPro:IPR023028</code></a>
             <span class="edge-predicate">converts</span>
             <strong>fructose-6-phosphate</strong>
+
 
             <p>mtlD converts mannitol-1-phosphate to fructose-6-phosphate, feeding catabolism into glycolysis.</p>
             <ul>
@@ -306,8 +343,10 @@
 
           <li id="pathograph-1-edge-14">
             <strong>fructose-6-phosphate</strong>
+
             <span class="edge-predicate">broken down by</span>
             <strong>Embden-Meyerhof glycolysis pathway</strong>
+
 
             <p>Fructose-6-phosphate is metabolized through the Embden-Meyerhof glycolysis pathway.</p>
             <ul>
@@ -323,9 +362,11 @@
 
           <li id="pathograph-1-edge-15">
             <strong>mannitol</strong>
+
             <span class="edge-predicate">participates in</span>
             <strong>catabolism</strong>
-            <code>biolink:participates_in</code>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0009056" rel="nofollow noreferrer"><code>GO:0009056</code></a>
+            <a href="https://w3id.org/biolink/vocab/participates_in" rel="nofollow noreferrer"><code>biolink:participates_in</code></a>
             <p>Imported mannitol is converted through mannitol-1-phosphate and fructose-6-phosphate before entering glycolytic catabolism.</p>
             <ul>
 
@@ -480,6 +521,12 @@
 
         <li>
           <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/aerobic_anoxygenic_phototrophy.html">aerobic anoxygenic phototrophy</a>
+          <span class="sim">0.284</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">physiology</span>
           <a href="../../traits/physiology/photoheterotrophic.html">photoheterotrophic</a>
           <span class="sim">0.284</span>
         </li>
@@ -500,12 +547,6 @@
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/obligately_aerobic.html">obligately aerobic</a>
           <span class="sim">0.272</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">physiology</span>
-          <a href="../../traits/physiology/chemoorganotrophic.html">chemoorganotrophic</a>
-          <span class="sim">0.270</span>
         </li>
 
       </ul>
@@ -1121,7 +1162,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking organic molecules as chemical energy and carbon sources to catabolism, respiration or fermentation, ATP, and biomass.", "edges": [{"description": "Chemoheterotrophs derive chemical energy from organic compounds.", "evidence": [{"notes": "Supports organic molecules as energy sources in chemoheterotrophic growth.", "reference": "DOI:10.1021/acsomega.3c02205", "snippet": "organic molecules ... energy source"}], "id": "edge-1", "is_orphan": false, "predicate": "has energy source", "predicate_id": "METPO:2007807", "source": "chemoheterotrophic_trait", "target": "organic_molecule"}, {"description": "Chemoheterotrophs use organic compounds as carbon sources.", "evidence": [{"notes": "Supports organic compounds as carbon sources in chemoheterotrophy.", "reference": "DOI:10.1016/B978-012373944-5.00083-3", "snippet": "reduced organic compound"}], "id": "edge-2", "is_orphan": false, "predicate": "has carbon source", "predicate_id": "METPO:2007806", "source": "chemoheterotrophic_trait", "target": "organic_molecule"}, {"description": "Organic molecules are catabolized to release energy and precursors.", "evidence": [{"notes": "Supports catabolism of organic nutrients.", "reference": "DOI:10.1016/B978-012373944-5.00083-3", "snippet": "breakdown of nutrients"}], "id": "edge-3", "is_orphan": false, "predicate": "broken down by", "predicate_id": null, "source": "organic_molecule", "target": "catabolism"}, {"description": "Organic catabolism can conserve energy through respiration.", "evidence": [{"notes": "Supports respiratory electron transport as an energy-conserving route.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "membrane-bound electron transport chain"}], "id": "edge-4", "is_orphan": false, "predicate": "can proceed through", "predicate_id": null, "source": "catabolism", "target": "respiration"}, {"description": "Organic catabolism can conserve energy through fermentation.", "evidence": [{"notes": "Supports fermentation of organic substrates without external electron acceptors.", "reference": "DOI:10.3389/fmicb.2021.703525", "snippet": "substrate ... electron donor as well as acceptor"}], "id": "edge-5", "is_orphan": false, "predicate": "can proceed through", "predicate_id": null, "source": "catabolism", "target": "fermentation"}, {"description": "Respiration supports ATP synthesis.", "evidence": [{"notes": "Supports ATP synthesis from respiratory energy conservation.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "drives ATP synthesis"}], "id": "edge-6", "is_orphan": false, "predicate": "has output", "predicate_id": "RO:0002234", "source": "respiration", "target": "atp"}, {"description": "Fermentation can produce ATP by substrate-level phosphorylation.", "evidence": [{"notes": "Supports ATP formation during fermentative metabolism.", "reference": "DOI:10.1111/1751-7915.13746", "snippet": "substrate-level phosphorylation"}], "id": "edge-7", "is_orphan": false, "predicate": "has output", "predicate_id": "RO:0002234", "source": "fermentation", "target": "atp"}, {"description": "Catabolism supplies precursors for biosynthesis.", "evidence": [{"notes": "Supports catabolism as a source of biosynthetic precursors.", "reference": "DOI:10.1016/B978-012373944-5.00083-3", "snippet": "precursor compounds for anabolism"}], "id": "edge-8", "is_orphan": false, "predicate": "has output", "predicate_id": "RO:0002234", "source": "catabolism", "target": "precursor_metabolites"}, {"description": "Organic-carbon precursors are incorporated into biomass.", "evidence": [{"notes": "Supports assimilation of compounds into cell material.", "reference": "DOI:10.1016/B978-012373944-5.00083-3", "snippet": "incorporation of a compound into biomass"}], "id": "edge-9", "is_orphan": false, "predicate": "incorporated into", "predicate_id": "biolink:part_of", "source": "precursor_metabolites", "target": "biomass"}, {"description": "Embden-Meyerhof glycolysis is a core route of organic-substrate catabolism in chemoheterotrophs.", "evidence": [{"notes": "harbor the Embden-Meyerhof-Parnas glycolysis pathway; broad mechanistic core of chemoheterotrophic catabolism.", "reference": "DOI:10.1128/mbio.00992-24"}], "id": "edge-10", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "emp_glycolysis", "target": "catabolism"}, {"description": "Fermentation of organic substrates yields short-chain fatty acids such as acetate, succinate, and propionate.", "evidence": [{"notes": "subsequent fermentation to short-chain fatty acids (acetate, succinate, propionate); broadly useful fermentation output edge.", "reference": "DOI:10.1016/j.chom.2024.05.011"}], "id": "edge-11", "is_orphan": false, "predicate": "generates", "predicate_id": "biolink:produces", "source": "fermentation", "target": "short_chain_fatty_acids"}, {"description": "A PEP-dependent phosphotransferase system imports and phosphorylates mannitol as an organic substrate.", "evidence": [{"notes": "mannitol is imported/phosphorylated via a PEP-PTS to mannitol-1-phosphate; canonical organotrophic uptake mechanism.", "reference": "DOI:10.1016/j.chom.2024.05.011"}], "id": "edge-12", "is_orphan": false, "predicate": "imports and phosphorylates", "predicate_id": null, "source": "mannitol_pts", "target": "mannitol"}, {"description": "mtlD converts mannitol-1-phosphate to fructose-6-phosphate, feeding catabolism into glycolysis.", "evidence": [{"notes": "converted by mtlD to fructose-6-phosphate and enters glycolysis; bridge from transport to central carbon metabolism.", "reference": "DOI:10.1016/j.chom.2024.05.011"}], "id": "edge-13", "is_orphan": false, "predicate": "converts", "predicate_id": null, "source": "mtld", "target": "fructose_6_phosphate"}, {"description": "Fructose-6-phosphate is metabolized through the Embden-Meyerhof glycolysis pathway.", "evidence": [{"notes": "enters glycolysis; links upstream sugar catabolism to the glycolytic pathway.", "reference": "DOI:10.1016/j.chom.2024.05.011"}], "id": "edge-14", "is_orphan": false, "predicate": "broken down by", "predicate_id": null, "source": "fructose_6_phosphate", "target": "emp_glycolysis"}, {"description": "Imported mannitol is converted through mannitol-1-phosphate and fructose-6-phosphate before entering glycolytic catabolism.", "evidence": [{"notes": "Verified against the open PLOS Biology primary article.", "reference": "DOI:10.1371/journal.pbio.3002198", "snippet": "mannitol 1P (toxic when accumulating) is oxidized by MtlD to fructose 6P, where it enters glycolysis"}], "id": "edge-15", "is_orphan": false, "predicate": "participates in", "predicate_id": "biolink:participates_in", "source": "mannitol", "target": "catabolism"}], "evidence_rows": [{"description": "Chemoheterotrophs derive chemical energy from organic compounds.", "edge_id": "edge-1", "evidence": [{"notes": "Supports organic molecules as energy sources in chemoheterotrophic growth.", "reference": "DOI:10.1021/acsomega.3c02205", "snippet": "organic molecules ... energy source"}], "predicate": "has energy source", "predicate_id": "METPO:2007807", "source": "chemoheterotrophic", "target": "organic molecule"}, {"description": "Chemoheterotrophs use organic compounds as carbon sources.", "edge_id": "edge-2", "evidence": [{"notes": "Supports organic compounds as carbon sources in chemoheterotrophy.", "reference": "DOI:10.1016/B978-012373944-5.00083-3", "snippet": "reduced organic compound"}], "predicate": "has carbon source", "predicate_id": "METPO:2007806", "source": "chemoheterotrophic", "target": "organic molecule"}, {"description": "Organic molecules are catabolized to release energy and precursors.", "edge_id": "edge-3", "evidence": [{"notes": "Supports catabolism of organic nutrients.", "reference": "DOI:10.1016/B978-012373944-5.00083-3", "snippet": "breakdown of nutrients"}], "predicate": "broken down by", "predicate_id": null, "source": "organic molecule", "target": "catabolism"}, {"description": "Organic catabolism can conserve energy through respiration.", "edge_id": "edge-4", "evidence": [{"notes": "Supports respiratory electron transport as an energy-conserving route.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "membrane-bound electron transport chain"}], "predicate": "can proceed through", "predicate_id": null, "source": "catabolism", "target": "respiration"}, {"description": "Organic catabolism can conserve energy through fermentation.", "edge_id": "edge-5", "evidence": [{"notes": "Supports fermentation of organic substrates without external electron acceptors.", "reference": "DOI:10.3389/fmicb.2021.703525", "snippet": "substrate ... electron donor as well as acceptor"}], "predicate": "can proceed through", "predicate_id": null, "source": "catabolism", "target": "fermentation"}, {"description": "Respiration supports ATP synthesis.", "edge_id": "edge-6", "evidence": [{"notes": "Supports ATP synthesis from respiratory energy conservation.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "drives ATP synthesis"}], "predicate": "has output", "predicate_id": "RO:0002234", "source": "respiration", "target": "ATP"}, {"description": "Fermentation can produce ATP by substrate-level phosphorylation.", "edge_id": "edge-7", "evidence": [{"notes": "Supports ATP formation during fermentative metabolism.", "reference": "DOI:10.1111/1751-7915.13746", "snippet": "substrate-level phosphorylation"}], "predicate": "has output", "predicate_id": "RO:0002234", "source": "fermentation", "target": "ATP"}, {"description": "Catabolism supplies precursors for biosynthesis.", "edge_id": "edge-8", "evidence": [{"notes": "Supports catabolism as a source of biosynthetic precursors.", "reference": "DOI:10.1016/B978-012373944-5.00083-3", "snippet": "precursor compounds for anabolism"}], "predicate": "has output", "predicate_id": "RO:0002234", "source": "catabolism", "target": "precursor metabolites"}, {"description": "Organic-carbon precursors are incorporated into biomass.", "edge_id": "edge-9", "evidence": [{"notes": "Supports assimilation of compounds into cell material.", "reference": "DOI:10.1016/B978-012373944-5.00083-3", "snippet": "incorporation of a compound into biomass"}], "predicate": "incorporated into", "predicate_id": "biolink:part_of", "source": "precursor metabolites", "target": "biomass"}, {"description": "Embden-Meyerhof glycolysis is a core route of organic-substrate catabolism in chemoheterotrophs.", "edge_id": "edge-10", "evidence": [{"notes": "harbor the Embden-Meyerhof-Parnas glycolysis pathway; broad mechanistic core of chemoheterotrophic catabolism.", "reference": "DOI:10.1128/mbio.00992-24"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Embden-Meyerhof glycolysis pathway", "target": "catabolism"}, {"description": "Fermentation of organic substrates yields short-chain fatty acids such as acetate, succinate, and propionate.", "edge_id": "edge-11", "evidence": [{"notes": "subsequent fermentation to short-chain fatty acids (acetate, succinate, propionate); broadly useful fermentation output edge.", "reference": "DOI:10.1016/j.chom.2024.05.011"}], "predicate": "generates", "predicate_id": "biolink:produces", "source": "fermentation", "target": "short-chain fatty acids"}, {"description": "A PEP-dependent phosphotransferase system imports and phosphorylates mannitol as an organic substrate.", "edge_id": "edge-12", "evidence": [{"notes": "mannitol is imported/phosphorylated via a PEP-PTS to mannitol-1-phosphate; canonical organotrophic uptake mechanism.", "reference": "DOI:10.1016/j.chom.2024.05.011"}], "predicate": "imports and phosphorylates", "predicate_id": null, "source": "PEP-dependent phosphotransferase system (mannitol PTS)", "target": "mannitol"}, {"description": "mtlD converts mannitol-1-phosphate to fructose-6-phosphate, feeding catabolism into glycolysis.", "edge_id": "edge-13", "evidence": [{"notes": "converted by mtlD to fructose-6-phosphate and enters glycolysis; bridge from transport to central carbon metabolism.", "reference": "DOI:10.1016/j.chom.2024.05.011"}], "predicate": "converts", "predicate_id": null, "source": "mtlD mannitol-1-phosphate dehydrogenase", "target": "fructose-6-phosphate"}, {"description": "Fructose-6-phosphate is metabolized through the Embden-Meyerhof glycolysis pathway.", "edge_id": "edge-14", "evidence": [{"notes": "enters glycolysis; links upstream sugar catabolism to the glycolytic pathway.", "reference": "DOI:10.1016/j.chom.2024.05.011"}], "predicate": "broken down by", "predicate_id": null, "source": "fructose-6-phosphate", "target": "Embden-Meyerhof glycolysis pathway"}, {"description": "Imported mannitol is converted through mannitol-1-phosphate and fructose-6-phosphate before entering glycolytic catabolism.", "edge_id": "edge-15", "evidence": [{"notes": "Verified against the open PLOS Biology primary article.", "reference": "DOI:10.1371/journal.pbio.3002198", "snippet": "mannitol 1P (toxic when accumulating) is oxidized by MtlD to fructose 6P, where it enters glycolysis"}], "predicate": "participates in", "predicate_id": "biolink:participates_in", "source": "mannitol", "target": "catabolism"}], "graph_id": "chemoheterotrophic_organic_energy_carbon", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Energy carrier produced during chemoheterotrophic metabolism.", "grounding": "CHEBI:30616", "id": "atp", "is_orphan": false, "label": "ATP", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Cell material formed from organic carbon.", "grounding": "METPO:1007501", "id": "biomass", "is_orphan": false, "label": "biomass", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Breakdown of nutrients to generate energy and biosynthetic precursors.", "grounding": "GO:0009056", "id": "catabolism", "is_orphan": false, "label": "catabolism", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Trophic type obtaining energy and carbon from organic compounds.", "grounding": "METPO:1000636", "id": "chemoheterotrophic_trait", "is_orphan": false, "label": "chemoheterotrophic", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#e0e7ff", "description": "Central glycolytic pathway converting sugars to pyruvate with ATP and reducing equivalents.", "grounding": null, "id": "emp_glycolysis", "is_orphan": false, "label": "Embden-Meyerhof glycolysis pathway", "node_type": "PATHWAY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Organic-substrate redox balancing route with substrate-level phosphorylation.", "grounding": "METPO:1002005", "id": "fermentation", "is_orphan": false, "label": "fermentation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Glycolytic intermediate entering central carbon catabolism.", "grounding": null, "id": "fructose_6_phosphate", "is_orphan": false, "label": "fructose-6-phosphate", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Sugar alcohol imported and phosphorylated as an organic carbon and energy source.", "grounding": null, "id": "mannitol", "is_orphan": false, "label": "mannitol", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "PEP-PTS transporter importing and phosphorylating sugar alcohols during organotrophic uptake.", "grounding": null, "id": "mannitol_pts", "is_orphan": false, "label": "PEP-dependent phosphotransferase system (mannitol PTS)", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Enzyme converting mannitol-1-phosphate to fructose-6-phosphate, bridging uptake to glycolysis.", "grounding": "InterPro:IPR023028", "id": "mtld", "is_orphan": false, "label": "mtlD mannitol-1-phosphate dehydrogenase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 187, "evidence": [{"notes": "The primary purification study establishes the E. coli enzyme and catalytic activity; UniProtKB P09424 is the reviewed K-12 MtlD entry.", "reference": "DOI:10.1128/jb.159.3.986-990.1984", "snippet": "Purification and properties of D-mannitol-1-phosphate dehydrogenase from Escherichia coli"}], "gene_symbol": "mtlD", "protein_label": "Mannitol-1-phosphate 5-dehydrogenase", "retrieved_on": "2026-08-24", "role": "E. coli MtlD enzyme catalyzing the mannitol-1-phosphate dehydrogenase step that connects PTS uptake to fructose-6-phosphate and glycolysis.", "sequence_version": 3, "taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli K-12", "uniprot_id": "UniProtKB:P09424"}], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Reduced organic compound used for energy and carbon.", "grounding": "CHEBI:72695", "id": "organic_molecule", "is_orphan": false, "label": "organic molecule", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Central intermediates used for biosynthesis.", "grounding": null, "id": "precursor_metabolites", "is_orphan": false, "label": "precursor metabolites", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#e0e7ff", "description": "Electron-transport route for energy conservation.", "grounding": "METPO:1000800", "id": "respiration", "is_orphan": false, "label": "respiration", "node_type": "PATHWAY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Fermentation end products such as acetate, propionate, and succinate.", "grounding": "CHEBI:26666", "id": "short_chain_fatty_acids", "is_orphan": false, "label": "short-chain fatty acids", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 187, "evidence": [{"notes": "The primary purification study establishes the E. coli enzyme and catalytic activity; UniProtKB P09424 is the reviewed K-12 MtlD entry.", "reference": "DOI:10.1128/jb.159.3.986-990.1984", "snippet": "Purification and properties of D-mannitol-1-phosphate dehydrogenase from Escherichia coli"}], "gene_symbol": "mtlD", "node_id": "mtld", "node_label": "mtlD mannitol-1-phosphate dehydrogenase", "protein_label": "Mannitol-1-phosphate 5-dehydrogenase", "retrieved_on": "2026-08-24", "role": "E. coli MtlD enzyme catalyzing the mannitol-1-phosphate dehydrogenase step that connects PTS uptake to fructose-6-phosphate and glycolysis.", "sequence_version": 3, "taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli K-12", "uniprot_id": "UniProtKB:P09424"}], "scope_notes": "This broad graph combines respiratory, fermentative, glycolytic, and mannitol-utilization branches rather than asserting one universal route. The E. coli K-12 MtlD example anchors only mannitol-1-phosphate conversion and does not represent the multicomponent PTS or all chemoheterotrophic catabolism.", "scope_status": "MECHANISTIC", "title": "Chemoheterotrophic organic energy and carbon metabolism"}];
+  var graphs = [{"description": "DOI-backed graph linking organic molecules as chemical energy and carbon sources to catabolism, respiration or fermentation, ATP, and biomass.", "edges": [{"description": "Chemoheterotrophs derive chemical energy from organic compounds.", "evidence": [{"notes": "Supports organic molecules as energy sources in chemoheterotrophic growth.", "reference": "DOI:10.1021/acsomega.3c02205", "snippet": "organic molecules ... energy source"}], "id": "edge-1", "is_orphan": false, "predicate": "has energy source", "predicate_id": "METPO:2007807", "source": "chemoheterotrophic_trait", "target": "organic_molecule"}, {"description": "Chemoheterotrophs use organic compounds as carbon sources.", "evidence": [{"notes": "Supports organic compounds as carbon sources in chemoheterotrophy.", "reference": "DOI:10.1016/B978-012373944-5.00083-3", "snippet": "reduced organic compound"}], "id": "edge-2", "is_orphan": false, "predicate": "has carbon source", "predicate_id": "METPO:2007806", "source": "chemoheterotrophic_trait", "target": "organic_molecule"}, {"description": "Organic molecules are catabolized to release energy and precursors.", "evidence": [{"notes": "Supports catabolism of organic nutrients.", "reference": "DOI:10.1016/B978-012373944-5.00083-3", "snippet": "breakdown of nutrients"}], "id": "edge-3", "is_orphan": false, "predicate": "broken down by", "predicate_id": null, "source": "organic_molecule", "target": "catabolism"}, {"description": "Organic catabolism can conserve energy through respiration.", "evidence": [{"notes": "Supports respiratory electron transport as an energy-conserving route.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "membrane-bound electron transport chain"}], "id": "edge-4", "is_orphan": false, "predicate": "can proceed through", "predicate_id": null, "source": "catabolism", "target": "respiration"}, {"description": "Organic catabolism can conserve energy through fermentation.", "evidence": [{"notes": "Supports fermentation of organic substrates without external electron acceptors.", "reference": "DOI:10.3389/fmicb.2021.703525", "snippet": "substrate ... electron donor as well as acceptor"}], "id": "edge-5", "is_orphan": false, "predicate": "can proceed through", "predicate_id": null, "source": "catabolism", "target": "fermentation"}, {"description": "Respiration supports ATP synthesis.", "evidence": [{"notes": "Supports ATP synthesis from respiratory energy conservation.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "drives ATP synthesis"}], "id": "edge-6", "is_orphan": false, "predicate": "has output", "predicate_id": "RO:0002234", "source": "respiration", "target": "atp"}, {"description": "Fermentation can produce ATP by substrate-level phosphorylation.", "evidence": [{"notes": "Supports ATP formation during fermentative metabolism.", "reference": "DOI:10.1111/1751-7915.13746", "snippet": "substrate-level phosphorylation"}], "id": "edge-7", "is_orphan": false, "predicate": "has output", "predicate_id": "RO:0002234", "source": "fermentation", "target": "atp"}, {"description": "Catabolism supplies precursors for biosynthesis.", "evidence": [{"notes": "Supports catabolism as a source of biosynthetic precursors.", "reference": "DOI:10.1016/B978-012373944-5.00083-3", "snippet": "precursor compounds for anabolism"}], "id": "edge-8", "is_orphan": false, "predicate": "has output", "predicate_id": "RO:0002234", "source": "catabolism", "target": "precursor_metabolites"}, {"description": "Organic-carbon precursors are incorporated into biomass.", "evidence": [{"notes": "Supports assimilation of compounds into cell material.", "reference": "DOI:10.1016/B978-012373944-5.00083-3", "snippet": "incorporation of a compound into biomass"}], "id": "edge-9", "is_orphan": false, "predicate": "incorporated into", "predicate_id": "biolink:part_of", "source": "precursor_metabolites", "target": "biomass"}, {"description": "Embden-Meyerhof glycolysis is a core route of organic-substrate catabolism in chemoheterotrophs.", "evidence": [{"notes": "harbor the Embden-Meyerhof-Parnas glycolysis pathway; broad mechanistic core of chemoheterotrophic catabolism.", "reference": "DOI:10.1128/mbio.00992-24"}], "id": "edge-10", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "emp_glycolysis", "target": "catabolism"}, {"description": "Fermentation of organic substrates yields short-chain fatty acids such as acetate, succinate, and propionate.", "evidence": [{"notes": "subsequent fermentation to short-chain fatty acids (acetate, succinate, propionate); broadly useful fermentation output edge.", "reference": "DOI:10.1016/j.chom.2024.05.011"}], "id": "edge-11", "is_orphan": false, "predicate": "generates", "predicate_id": "biolink:produces", "source": "fermentation", "target": "short_chain_fatty_acids"}, {"description": "A PEP-dependent phosphotransferase system imports and phosphorylates mannitol as an organic substrate.", "evidence": [{"notes": "mannitol is imported/phosphorylated via a PEP-PTS to mannitol-1-phosphate; canonical organotrophic uptake mechanism.", "reference": "DOI:10.1016/j.chom.2024.05.011"}], "id": "edge-12", "is_orphan": false, "predicate": "imports and phosphorylates", "predicate_id": null, "source": "mannitol_pts", "target": "mannitol"}, {"description": "mtlD converts mannitol-1-phosphate to fructose-6-phosphate, feeding catabolism into glycolysis.", "evidence": [{"notes": "converted by mtlD to fructose-6-phosphate and enters glycolysis; bridge from transport to central carbon metabolism.", "reference": "DOI:10.1016/j.chom.2024.05.011"}], "id": "edge-13", "is_orphan": false, "predicate": "converts", "predicate_id": null, "source": "mtld", "target": "fructose_6_phosphate"}, {"description": "Fructose-6-phosphate is metabolized through the Embden-Meyerhof glycolysis pathway.", "evidence": [{"notes": "enters glycolysis; links upstream sugar catabolism to the glycolytic pathway.", "reference": "DOI:10.1016/j.chom.2024.05.011"}], "id": "edge-14", "is_orphan": false, "predicate": "broken down by", "predicate_id": null, "source": "fructose_6_phosphate", "target": "emp_glycolysis"}, {"description": "Imported mannitol is converted through mannitol-1-phosphate and fructose-6-phosphate before entering glycolytic catabolism.", "evidence": [{"notes": "Verified against the open PLOS Biology primary article.", "reference": "DOI:10.1371/journal.pbio.3002198", "snippet": "mannitol 1P (toxic when accumulating) is oxidized by MtlD to fructose 6P, where it enters glycolysis"}], "id": "edge-15", "is_orphan": false, "predicate": "participates in", "predicate_id": "biolink:participates_in", "source": "mannitol", "target": "catabolism"}], "evidence_rows": [{"description": "Chemoheterotrophs derive chemical energy from organic compounds.", "edge_id": "edge-1", "evidence": [{"notes": "Supports organic molecules as energy sources in chemoheterotrophic growth.", "reference": "DOI:10.1021/acsomega.3c02205", "snippet": "organic molecules ... energy source"}], "predicate": "has energy source", "predicate_id": "METPO:2007807", "source": "chemoheterotrophic", "source_grounding": "METPO:1000636", "target": "organic molecule", "target_grounding": "CHEBI:72695"}, {"description": "Chemoheterotrophs use organic compounds as carbon sources.", "edge_id": "edge-2", "evidence": [{"notes": "Supports organic compounds as carbon sources in chemoheterotrophy.", "reference": "DOI:10.1016/B978-012373944-5.00083-3", "snippet": "reduced organic compound"}], "predicate": "has carbon source", "predicate_id": "METPO:2007806", "source": "chemoheterotrophic", "source_grounding": "METPO:1000636", "target": "organic molecule", "target_grounding": "CHEBI:72695"}, {"description": "Organic molecules are catabolized to release energy and precursors.", "edge_id": "edge-3", "evidence": [{"notes": "Supports catabolism of organic nutrients.", "reference": "DOI:10.1016/B978-012373944-5.00083-3", "snippet": "breakdown of nutrients"}], "predicate": "broken down by", "predicate_id": null, "source": "organic molecule", "source_grounding": "CHEBI:72695", "target": "catabolism", "target_grounding": "GO:0009056"}, {"description": "Organic catabolism can conserve energy through respiration.", "edge_id": "edge-4", "evidence": [{"notes": "Supports respiratory electron transport as an energy-conserving route.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "membrane-bound electron transport chain"}], "predicate": "can proceed through", "predicate_id": null, "source": "catabolism", "source_grounding": "GO:0009056", "target": "respiration", "target_grounding": "METPO:1000800"}, {"description": "Organic catabolism can conserve energy through fermentation.", "edge_id": "edge-5", "evidence": [{"notes": "Supports fermentation of organic substrates without external electron acceptors.", "reference": "DOI:10.3389/fmicb.2021.703525", "snippet": "substrate ... electron donor as well as acceptor"}], "predicate": "can proceed through", "predicate_id": null, "source": "catabolism", "source_grounding": "GO:0009056", "target": "fermentation", "target_grounding": "METPO:1002005"}, {"description": "Respiration supports ATP synthesis.", "edge_id": "edge-6", "evidence": [{"notes": "Supports ATP synthesis from respiratory energy conservation.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "drives ATP synthesis"}], "predicate": "has output", "predicate_id": "RO:0002234", "source": "respiration", "source_grounding": "METPO:1000800", "target": "ATP", "target_grounding": "CHEBI:30616"}, {"description": "Fermentation can produce ATP by substrate-level phosphorylation.", "edge_id": "edge-7", "evidence": [{"notes": "Supports ATP formation during fermentative metabolism.", "reference": "DOI:10.1111/1751-7915.13746", "snippet": "substrate-level phosphorylation"}], "predicate": "has output", "predicate_id": "RO:0002234", "source": "fermentation", "source_grounding": "METPO:1002005", "target": "ATP", "target_grounding": "CHEBI:30616"}, {"description": "Catabolism supplies precursors for biosynthesis.", "edge_id": "edge-8", "evidence": [{"notes": "Supports catabolism as a source of biosynthetic precursors.", "reference": "DOI:10.1016/B978-012373944-5.00083-3", "snippet": "precursor compounds for anabolism"}], "predicate": "has output", "predicate_id": "RO:0002234", "source": "catabolism", "source_grounding": "GO:0009056", "target": "precursor metabolites", "target_grounding": null}, {"description": "Organic-carbon precursors are incorporated into biomass.", "edge_id": "edge-9", "evidence": [{"notes": "Supports assimilation of compounds into cell material.", "reference": "DOI:10.1016/B978-012373944-5.00083-3", "snippet": "incorporation of a compound into biomass"}], "predicate": "incorporated into", "predicate_id": "biolink:part_of", "source": "precursor metabolites", "source_grounding": null, "target": "biomass", "target_grounding": "METPO:1007501"}, {"description": "Embden-Meyerhof glycolysis is a core route of organic-substrate catabolism in chemoheterotrophs.", "edge_id": "edge-10", "evidence": [{"notes": "harbor the Embden-Meyerhof-Parnas glycolysis pathway; broad mechanistic core of chemoheterotrophic catabolism.", "reference": "DOI:10.1128/mbio.00992-24"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Embden-Meyerhof glycolysis pathway", "source_grounding": null, "target": "catabolism", "target_grounding": "GO:0009056"}, {"description": "Fermentation of organic substrates yields short-chain fatty acids such as acetate, succinate, and propionate.", "edge_id": "edge-11", "evidence": [{"notes": "subsequent fermentation to short-chain fatty acids (acetate, succinate, propionate); broadly useful fermentation output edge.", "reference": "DOI:10.1016/j.chom.2024.05.011"}], "predicate": "generates", "predicate_id": "biolink:produces", "source": "fermentation", "source_grounding": "METPO:1002005", "target": "short-chain fatty acids", "target_grounding": "CHEBI:26666"}, {"description": "A PEP-dependent phosphotransferase system imports and phosphorylates mannitol as an organic substrate.", "edge_id": "edge-12", "evidence": [{"notes": "mannitol is imported/phosphorylated via a PEP-PTS to mannitol-1-phosphate; canonical organotrophic uptake mechanism.", "reference": "DOI:10.1016/j.chom.2024.05.011"}], "predicate": "imports and phosphorylates", "predicate_id": null, "source": "PEP-dependent phosphotransferase system (mannitol PTS)", "source_grounding": null, "target": "mannitol", "target_grounding": null}, {"description": "mtlD converts mannitol-1-phosphate to fructose-6-phosphate, feeding catabolism into glycolysis.", "edge_id": "edge-13", "evidence": [{"notes": "converted by mtlD to fructose-6-phosphate and enters glycolysis; bridge from transport to central carbon metabolism.", "reference": "DOI:10.1016/j.chom.2024.05.011"}], "predicate": "converts", "predicate_id": null, "source": "mtlD mannitol-1-phosphate dehydrogenase", "source_grounding": "InterPro:IPR023028", "target": "fructose-6-phosphate", "target_grounding": null}, {"description": "Fructose-6-phosphate is metabolized through the Embden-Meyerhof glycolysis pathway.", "edge_id": "edge-14", "evidence": [{"notes": "enters glycolysis; links upstream sugar catabolism to the glycolytic pathway.", "reference": "DOI:10.1016/j.chom.2024.05.011"}], "predicate": "broken down by", "predicate_id": null, "source": "fructose-6-phosphate", "source_grounding": null, "target": "Embden-Meyerhof glycolysis pathway", "target_grounding": null}, {"description": "Imported mannitol is converted through mannitol-1-phosphate and fructose-6-phosphate before entering glycolytic catabolism.", "edge_id": "edge-15", "evidence": [{"notes": "Verified against the open PLOS Biology primary article.", "reference": "DOI:10.1371/journal.pbio.3002198", "snippet": "mannitol 1P (toxic when accumulating) is oxidized by MtlD to fructose 6P, where it enters glycolysis"}], "predicate": "participates in", "predicate_id": "biolink:participates_in", "source": "mannitol", "source_grounding": null, "target": "catabolism", "target_grounding": "GO:0009056"}], "graph_id": "chemoheterotrophic_organic_energy_carbon", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Energy carrier produced during chemoheterotrophic metabolism.", "grounding": "CHEBI:30616", "id": "atp", "is_orphan": false, "label": "ATP", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Cell material formed from organic carbon.", "grounding": "METPO:1007501", "id": "biomass", "is_orphan": false, "label": "biomass", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Breakdown of nutrients to generate energy and biosynthetic precursors.", "grounding": "GO:0009056", "id": "catabolism", "is_orphan": false, "label": "catabolism", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Trophic type obtaining energy and carbon from organic compounds.", "grounding": "METPO:1000636", "id": "chemoheterotrophic_trait", "is_orphan": false, "label": "chemoheterotrophic", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#e0e7ff", "description": "Central glycolytic pathway converting sugars to pyruvate with ATP and reducing equivalents.", "grounding": null, "id": "emp_glycolysis", "is_orphan": false, "label": "Embden-Meyerhof glycolysis pathway", "node_type": "PATHWAY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Organic-substrate redox balancing route with substrate-level phosphorylation.", "grounding": "METPO:1002005", "id": "fermentation", "is_orphan": false, "label": "fermentation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Glycolytic intermediate entering central carbon catabolism.", "grounding": null, "id": "fructose_6_phosphate", "is_orphan": false, "label": "fructose-6-phosphate", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Sugar alcohol imported and phosphorylated as an organic carbon and energy source.", "grounding": null, "id": "mannitol", "is_orphan": false, "label": "mannitol", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "PEP-PTS transporter importing and phosphorylating sugar alcohols during organotrophic uptake.", "grounding": null, "id": "mannitol_pts", "is_orphan": false, "label": "PEP-dependent phosphotransferase system (mannitol PTS)", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Enzyme converting mannitol-1-phosphate to fructose-6-phosphate, bridging uptake to glycolysis.", "grounding": "InterPro:IPR023028", "id": "mtld", "is_orphan": false, "label": "mtlD mannitol-1-phosphate dehydrogenase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 187, "evidence": [{"notes": "The primary purification study establishes the E. coli enzyme and catalytic activity; UniProtKB P09424 is the reviewed K-12 MtlD entry.", "reference": "DOI:10.1128/jb.159.3.986-990.1984", "snippet": "Purification and properties of D-mannitol-1-phosphate dehydrogenase from Escherichia coli"}], "gene_symbol": "mtlD", "protein_label": "Mannitol-1-phosphate 5-dehydrogenase", "retrieved_on": "2026-08-24", "role": "E. coli MtlD enzyme catalyzing the mannitol-1-phosphate dehydrogenase step that connects PTS uptake to fructose-6-phosphate and glycolysis.", "sequence_version": 3, "taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli K-12", "uniprot_id": "UniProtKB:P09424"}], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Reduced organic compound used for energy and carbon.", "grounding": "CHEBI:72695", "id": "organic_molecule", "is_orphan": false, "label": "organic molecule", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Central intermediates used for biosynthesis.", "grounding": null, "id": "precursor_metabolites", "is_orphan": false, "label": "precursor metabolites", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#e0e7ff", "description": "Electron-transport route for energy conservation.", "grounding": "METPO:1000800", "id": "respiration", "is_orphan": false, "label": "respiration", "node_type": "PATHWAY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Fermentation end products such as acetate, propionate, and succinate.", "grounding": "CHEBI:26666", "id": "short_chain_fatty_acids", "is_orphan": false, "label": "short-chain fatty acids", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 187, "evidence": [{"notes": "The primary purification study establishes the E. coli enzyme and catalytic activity; UniProtKB P09424 is the reviewed K-12 MtlD entry.", "reference": "DOI:10.1128/jb.159.3.986-990.1984", "snippet": "Purification and properties of D-mannitol-1-phosphate dehydrogenase from Escherichia coli"}], "gene_symbol": "mtlD", "node_id": "mtld", "node_label": "mtlD mannitol-1-phosphate dehydrogenase", "protein_label": "Mannitol-1-phosphate 5-dehydrogenase", "retrieved_on": "2026-08-24", "role": "E. coli MtlD enzyme catalyzing the mannitol-1-phosphate dehydrogenase step that connects PTS uptake to fructose-6-phosphate and glycolysis.", "sequence_version": 3, "taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli K-12", "uniprot_id": "UniProtKB:P09424"}], "scope_notes": "This broad graph combines respiratory, fermentative, glycolytic, and mannitol-utilization branches rather than asserting one universal route. The E. coli K-12 MtlD example anchors only mannitol-1-phosphate conversion and does not represent the multicomponent PTS or all chemoheterotrophic catabolism.", "scope_status": "MECHANISTIC", "title": "Chemoheterotrophic organic energy and carbon metabolism"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -1141,13 +1182,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-08-31 10:46 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

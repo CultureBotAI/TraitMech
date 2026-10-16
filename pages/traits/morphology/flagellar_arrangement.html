@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/morphology.html">MORPHOLOGY</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/morphology.html">MORPHOLOGY</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>flagellar arrangement</h1>
     <p class="curie"><code>traitmech:000056</code> · CLASS · REVIEWED</p>
 
@@ -85,9 +96,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>bacterial-type flagellum</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0009288" rel="nofollow noreferrer"><code>GO:0009288</code></a>
             <span class="edge-predicate">defines</span>
             <strong>flagellar arrangement</strong>
-            <code>METPO:2007500</code>
+            <code>traitmech:000056</code>
+            <a href="https://w3id.org/metpo/2007500" rel="nofollow noreferrer"><code>METPO:2007500</code></a>
             <p>The cellular distribution of flagella defines the arrangement.</p>
             <ul>
 
@@ -102,9 +115,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>FlhF/FlhG flagellar placement regulation</strong>
+
             <span class="edge-predicate">regulates</span>
             <strong>flagellar arrangement</strong>
-            <code>RO:0002211</code>
+            <code>traitmech:000056</code>
+            <a href="http://purl.obolibrary.org/obo/RO_0002211" rel="nofollow noreferrer"><code>RO:0002211</code></a>
             <p>FlhF/FlhG set the species-specific flagellation pattern.</p>
             <ul>
 
@@ -119,8 +134,10 @@
 
           <li id="pathograph-1-edge-3">
             <strong>FlhG</strong>
+            <a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR033875/" rel="nofollow noreferrer"><code>InterPro:IPR033875</code></a>
             <span class="edge-predicate">stimulates GTPase activity of</span>
             <strong>FlhF</strong>
+
 
             <p>FlhG stimulates the GTPase activity of FlhF, a conserved core regulatory interaction governing flagellar placement.</p>
             <ul>
@@ -136,8 +153,10 @@
 
           <li id="pathograph-1-edge-4">
             <strong>FlhF</strong>
+
             <span class="edge-predicate">directs to cell pole</span>
             <strong>FliF (MS-ring protein)</strong>
+
 
             <p>FlhF is required to direct the initial MS-ring protein FliF to the cell pole, nucleating basal-body assembly.</p>
             <ul>
@@ -153,8 +172,10 @@
 
           <li id="pathograph-1-edge-5">
             <strong>FlhF</strong>
+
             <span class="edge-predicate">binds</span>
             <strong>FliG</strong>
+
 
             <p>FlhF binds FliG, coupling the placement regulator to C-ring/MS-ring assembly.</p>
             <ul>
@@ -170,8 +191,10 @@
 
           <li id="pathograph-1-edge-6">
             <strong>FliG</strong>
+
             <span class="edge-predicate">engages / recruits</span>
             <strong>FliF (MS-ring protein)</strong>
+
 
             <p>FlhF-bound FliG engages the MS-ring protein FliF, recruiting a FliF-FliG complex to the pole.</p>
             <ul>
@@ -187,8 +210,10 @@
 
           <li id="pathograph-1-edge-7">
             <strong>FlhF</strong>
+
             <span class="edge-predicate">establishes</span>
             <strong>marking of future flagellar assembly site</strong>
+
 
             <p>FlhF marks the future flagellar assembly site, after which basal-body assembly proceeds.</p>
             <ul>
@@ -204,8 +229,10 @@
 
           <li id="pathograph-1-edge-8">
             <strong>marking of future flagellar assembly site</strong>
+
             <span class="edge-predicate">occurs at</span>
             <strong>cell pole</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0060187" rel="nofollow noreferrer"><code>GO:0060187</code></a>
 
             <p>The marking of the future flagellar assembly site localizes basal-body building blocks to the cell pole.</p>
             <ul>
@@ -320,19 +347,7 @@
 
         <li>
           <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/monotrichous.html">monotrichous</a>
-          <span class="sim">1.000</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/amphitrichous.html">amphitrichous</a>
-          <span class="sim">1.000</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/lophotrichous.html">lophotrichous</a>
+          <a href="../../traits/morphology/flagellated.html">flagellated</a>
           <span class="sim">1.000</span>
         </li>
 
@@ -344,26 +359,38 @@
 
         <li>
           <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/flagellated.html">flagellated</a>
+          <a href="../../traits/morphology/monotrichous.html">monotrichous</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/ph_range_mid2.html">pH range mid2</a>
-          <span class="sim">0.443</span>
+          <span class="nn-cat">morphology</span>
+          <a href="../../traits/morphology/polytrichous_flagellation.html">polytrichous flagellation</a>
+          <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/ph_range_mid1.html">pH range mid1</a>
-          <span class="sim">0.437</span>
+          <span class="nn-cat">morphology</span>
+          <a href="../../traits/morphology/lophotrichous.html">lophotrichous</a>
+          <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/ph_range_mid3.html">pH range mid3</a>
-          <span class="sim">0.433</span>
+          <span class="nn-cat">morphology</span>
+          <a href="../../traits/morphology/amphitrichous.html">amphitrichous</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">morphology</span>
+          <a href="../../traits/morphology/lateral_flagellation.html">lateral flagellation</a>
+          <span class="sim">0.764</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">morphology</span>
+          <a href="../../traits/morphology/subpolar_flagellation.html">subpolar flagellation</a>
+          <span class="sim">0.743</span>
         </li>
 
       </ul>
@@ -925,7 +952,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking FlhF/FlhG-regulated flagellar placement to the cellular flagellation pattern.", "edges": [{"description": "The cellular distribution of flagella defines the arrangement.", "evidence": [{"notes": "Bacterial flagellum review supports the flagellum as the locomotory organelle whose number and placement define the arrangement.", "reference": "DOI:10.3390/biom9070279"}], "id": "edge-1", "is_orphan": false, "predicate": "defines", "predicate_id": "METPO:2007500", "source": "bacterial_flagellum", "target": "flagellar_arrangement_trait"}, {"description": "FlhF/FlhG set the species-specific flagellation pattern.", "evidence": [{"notes": "Schuhmacher et al. describe FlhF/FlhG governance of the flagellation pattern.", "reference": "DOI:10.1093/femsre/fuv034"}], "id": "edge-2", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "flhf_flhg_regulation", "target": "flagellar_arrangement_trait"}, {"description": "FlhG stimulates the GTPase activity of FlhF, a conserved core regulatory interaction governing flagellar placement.", "evidence": [{"notes": "Dornes 2024: \"FlhG acts on FlhF by stimulating its GTPase activity\" - conserved core regulatory edge.", "reference": "DOI:10.1038/s41467-024-50274-4"}], "id": "edge-3", "is_orphan": false, "predicate": "stimulates GTPase activity of", "predicate_id": null, "source": "flhg", "target": "flhf"}, {"description": "FlhF is required to direct the initial MS-ring protein FliF to the cell pole, nucleating basal-body assembly.", "evidence": [{"notes": "Dornes 2024: \"FlhF... is required to direct the initial MS-ring protein FliF to the cell pole.\"", "reference": "DOI:10.1038/s41467-024-50274-4"}], "id": "edge-4", "is_orphan": false, "predicate": "directs to cell pole", "predicate_id": null, "source": "flhf", "target": "flif_msring"}, {"description": "FlhF binds FliG, coupling the placement regulator to C-ring/MS-ring assembly.", "evidence": [{"notes": "Dornes 2024: FlhF B-domain (FliG Interaction Domain) is necessary and sufficient for FliG binding.", "reference": "DOI:10.1038/s41467-024-50274-4"}], "id": "edge-5", "is_orphan": false, "predicate": "binds", "predicate_id": null, "source": "flhf", "target": "flig"}, {"description": "FlhF-bound FliG engages the MS-ring protein FliF, recruiting a FliF-FliG complex to the pole.", "evidence": [{"notes": "Dornes 2024: \"FlhF-bound FliG then engages the MS-ring protein FliF, recruiting a FliF-FliG complex to the pole.\"", "reference": "DOI:10.1038/s41467-024-50274-4"}], "id": "edge-6", "is_orphan": false, "predicate": "engages / recruits", "predicate_id": null, "source": "flig", "target": "flif_msring"}, {"description": "FlhF marks the future flagellar assembly site, after which basal-body assembly proceeds.", "evidence": [{"notes": "Schuhmacher 2015: \"After FlhF marked the future flagellar site, assembly of the basal body will proceed.\"", "reference": "DOI:10.1093/femsre/fuv034"}], "id": "edge-7", "is_orphan": false, "predicate": "establishes", "predicate_id": null, "source": "flhf", "target": "flagellar_assembly_site_marking"}, {"description": "The marking of the future flagellar assembly site localizes basal-body building blocks to the cell pole.", "evidence": [{"notes": "Schuhmacher 2015: FlhF B-domain recruits MS-ring component FliF to the cell pole.", "reference": "DOI:10.1093/femsre/fuv034"}], "id": "edge-8", "is_orphan": false, "predicate": "occurs at", "predicate_id": null, "source": "flagellar_assembly_site_marking", "target": "cell_pole"}], "evidence_rows": [{"description": "The cellular distribution of flagella defines the arrangement.", "edge_id": "edge-1", "evidence": [{"notes": "Bacterial flagellum review supports the flagellum as the locomotory organelle whose number and placement define the arrangement.", "reference": "DOI:10.3390/biom9070279"}], "predicate": "defines", "predicate_id": "METPO:2007500", "source": "bacterial-type flagellum", "target": "flagellar arrangement"}, {"description": "FlhF/FlhG set the species-specific flagellation pattern.", "edge_id": "edge-2", "evidence": [{"notes": "Schuhmacher et al. describe FlhF/FlhG governance of the flagellation pattern.", "reference": "DOI:10.1093/femsre/fuv034"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "FlhF/FlhG flagellar placement regulation", "target": "flagellar arrangement"}, {"description": "FlhG stimulates the GTPase activity of FlhF, a conserved core regulatory interaction governing flagellar placement.", "edge_id": "edge-3", "evidence": [{"notes": "Dornes 2024: \"FlhG acts on FlhF by stimulating its GTPase activity\" - conserved core regulatory edge.", "reference": "DOI:10.1038/s41467-024-50274-4"}], "predicate": "stimulates GTPase activity of", "predicate_id": null, "source": "FlhG", "target": "FlhF"}, {"description": "FlhF is required to direct the initial MS-ring protein FliF to the cell pole, nucleating basal-body assembly.", "edge_id": "edge-4", "evidence": [{"notes": "Dornes 2024: \"FlhF... is required to direct the initial MS-ring protein FliF to the cell pole.\"", "reference": "DOI:10.1038/s41467-024-50274-4"}], "predicate": "directs to cell pole", "predicate_id": null, "source": "FlhF", "target": "FliF (MS-ring protein)"}, {"description": "FlhF binds FliG, coupling the placement regulator to C-ring/MS-ring assembly.", "edge_id": "edge-5", "evidence": [{"notes": "Dornes 2024: FlhF B-domain (FliG Interaction Domain) is necessary and sufficient for FliG binding.", "reference": "DOI:10.1038/s41467-024-50274-4"}], "predicate": "binds", "predicate_id": null, "source": "FlhF", "target": "FliG"}, {"description": "FlhF-bound FliG engages the MS-ring protein FliF, recruiting a FliF-FliG complex to the pole.", "edge_id": "edge-6", "evidence": [{"notes": "Dornes 2024: \"FlhF-bound FliG then engages the MS-ring protein FliF, recruiting a FliF-FliG complex to the pole.\"", "reference": "DOI:10.1038/s41467-024-50274-4"}], "predicate": "engages / recruits", "predicate_id": null, "source": "FliG", "target": "FliF (MS-ring protein)"}, {"description": "FlhF marks the future flagellar assembly site, after which basal-body assembly proceeds.", "edge_id": "edge-7", "evidence": [{"notes": "Schuhmacher 2015: \"After FlhF marked the future flagellar site, assembly of the basal body will proceed.\"", "reference": "DOI:10.1093/femsre/fuv034"}], "predicate": "establishes", "predicate_id": null, "source": "FlhF", "target": "marking of future flagellar assembly site"}, {"description": "The marking of the future flagellar assembly site localizes basal-body building blocks to the cell pole.", "edge_id": "edge-8", "evidence": [{"notes": "Schuhmacher 2015: FlhF B-domain recruits MS-ring component FliF to the cell pole.", "reference": "DOI:10.1093/femsre/fuv034"}], "predicate": "occurs at", "predicate_id": null, "source": "marking of future flagellar assembly site", "target": "cell pole"}], "graph_id": "flagellar_arrangement_flhf_flhg", "issues": [], "nodes": [{"color": "#ede9fe", "description": "Helical proteinaceous locomotory organelle of bacteria.", "grounding": "GO:0009288", "id": "bacterial_flagellum", "is_orphan": false, "label": "bacterial-type flagellum", "node_type": "CELLULAR_LOCALIZATION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ede9fe", "description": "Polar region of the bacterial cell where flagellar assembly is nucleated.", "grounding": "GO:0060187", "id": "cell_pole", "is_orphan": false, "label": "cell pole", "node_type": "CELLULAR_LOCALIZATION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Number and spatial distribution of flagella on the cell.", "grounding": "traitmech:000056", "id": "flagellar_arrangement_trait", "is_orphan": false, "label": "flagellar arrangement", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Spatial designation of the future flagellar assembly site that precedes basal-body assembly.", "grounding": null, "id": "flagellar_assembly_site_marking", "is_orphan": false, "label": "marking of future flagellar assembly site", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "SRP-type GTPase that marks the future flagellar assembly site and directs MS-ring protein FliF to the cell pole.", "grounding": null, "id": "flhf", "is_orphan": false, "label": "FlhF", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Regulatory system setting flagellar number and cellular position.", "grounding": null, "id": "flhf_flhg_regulation", "is_orphan": false, "label": "FlhF/FlhG flagellar placement regulation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "MinD-type ATPase that stimulates FlhF GTPase activity and limits/positions flagellar number.", "grounding": "InterPro:IPR033875", "id": "flhg", "is_orphan": false, "label": "FlhG", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "MS-ring forming protein recruited to the cell pole as the earliest basal-body assembly step.", "grounding": null, "id": "flif_msring", "is_orphan": false, "label": "FliF (MS-ring protein)", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "C-ring switch protein bound by FlhF and engaging FliF during basal-body assembly.", "grounding": null, "id": "flig", "is_orphan": false, "label": "FliG", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "Flagellar arrangement is a classification axis whose child patterns have different placement programs. The graph is contextual and does not define one protein mechanism shared by every arrangement class.", "scope_status": "NONMECHANISTIC", "title": "Flagellar arrangement set by FlhF/FlhG flagellation pattern"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking FlhF/FlhG-regulated flagellar placement to the cellular flagellation pattern.", "edges": [{"description": "The cellular distribution of flagella defines the arrangement.", "evidence": [{"notes": "Bacterial flagellum review supports the flagellum as the locomotory organelle whose number and placement define the arrangement.", "reference": "DOI:10.3390/biom9070279"}], "id": "edge-1", "is_orphan": false, "predicate": "defines", "predicate_id": "METPO:2007500", "source": "bacterial_flagellum", "target": "flagellar_arrangement_trait"}, {"description": "FlhF/FlhG set the species-specific flagellation pattern.", "evidence": [{"notes": "Schuhmacher et al. describe FlhF/FlhG governance of the flagellation pattern.", "reference": "DOI:10.1093/femsre/fuv034"}], "id": "edge-2", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "flhf_flhg_regulation", "target": "flagellar_arrangement_trait"}, {"description": "FlhG stimulates the GTPase activity of FlhF, a conserved core regulatory interaction governing flagellar placement.", "evidence": [{"notes": "Dornes 2024: \"FlhG acts on FlhF by stimulating its GTPase activity\" - conserved core regulatory edge.", "reference": "DOI:10.1038/s41467-024-50274-4"}], "id": "edge-3", "is_orphan": false, "predicate": "stimulates GTPase activity of", "predicate_id": null, "source": "flhg", "target": "flhf"}, {"description": "FlhF is required to direct the initial MS-ring protein FliF to the cell pole, nucleating basal-body assembly.", "evidence": [{"notes": "Dornes 2024: \"FlhF... is required to direct the initial MS-ring protein FliF to the cell pole.\"", "reference": "DOI:10.1038/s41467-024-50274-4"}], "id": "edge-4", "is_orphan": false, "predicate": "directs to cell pole", "predicate_id": null, "source": "flhf", "target": "flif_msring"}, {"description": "FlhF binds FliG, coupling the placement regulator to C-ring/MS-ring assembly.", "evidence": [{"notes": "Dornes 2024: FlhF B-domain (FliG Interaction Domain) is necessary and sufficient for FliG binding.", "reference": "DOI:10.1038/s41467-024-50274-4"}], "id": "edge-5", "is_orphan": false, "predicate": "binds", "predicate_id": null, "source": "flhf", "target": "flig"}, {"description": "FlhF-bound FliG engages the MS-ring protein FliF, recruiting a FliF-FliG complex to the pole.", "evidence": [{"notes": "Dornes 2024: \"FlhF-bound FliG then engages the MS-ring protein FliF, recruiting a FliF-FliG complex to the pole.\"", "reference": "DOI:10.1038/s41467-024-50274-4"}], "id": "edge-6", "is_orphan": false, "predicate": "engages / recruits", "predicate_id": null, "source": "flig", "target": "flif_msring"}, {"description": "FlhF marks the future flagellar assembly site, after which basal-body assembly proceeds.", "evidence": [{"notes": "Schuhmacher 2015: \"After FlhF marked the future flagellar site, assembly of the basal body will proceed.\"", "reference": "DOI:10.1093/femsre/fuv034"}], "id": "edge-7", "is_orphan": false, "predicate": "establishes", "predicate_id": null, "source": "flhf", "target": "flagellar_assembly_site_marking"}, {"description": "The marking of the future flagellar assembly site localizes basal-body building blocks to the cell pole.", "evidence": [{"notes": "Schuhmacher 2015: FlhF B-domain recruits MS-ring component FliF to the cell pole.", "reference": "DOI:10.1093/femsre/fuv034"}], "id": "edge-8", "is_orphan": false, "predicate": "occurs at", "predicate_id": null, "source": "flagellar_assembly_site_marking", "target": "cell_pole"}], "evidence_rows": [{"description": "The cellular distribution of flagella defines the arrangement.", "edge_id": "edge-1", "evidence": [{"notes": "Bacterial flagellum review supports the flagellum as the locomotory organelle whose number and placement define the arrangement.", "reference": "DOI:10.3390/biom9070279"}], "predicate": "defines", "predicate_id": "METPO:2007500", "source": "bacterial-type flagellum", "source_grounding": "GO:0009288", "target": "flagellar arrangement", "target_grounding": "traitmech:000056"}, {"description": "FlhF/FlhG set the species-specific flagellation pattern.", "edge_id": "edge-2", "evidence": [{"notes": "Schuhmacher et al. describe FlhF/FlhG governance of the flagellation pattern.", "reference": "DOI:10.1093/femsre/fuv034"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "FlhF/FlhG flagellar placement regulation", "source_grounding": null, "target": "flagellar arrangement", "target_grounding": "traitmech:000056"}, {"description": "FlhG stimulates the GTPase activity of FlhF, a conserved core regulatory interaction governing flagellar placement.", "edge_id": "edge-3", "evidence": [{"notes": "Dornes 2024: \"FlhG acts on FlhF by stimulating its GTPase activity\" - conserved core regulatory edge.", "reference": "DOI:10.1038/s41467-024-50274-4"}], "predicate": "stimulates GTPase activity of", "predicate_id": null, "source": "FlhG", "source_grounding": "InterPro:IPR033875", "target": "FlhF", "target_grounding": null}, {"description": "FlhF is required to direct the initial MS-ring protein FliF to the cell pole, nucleating basal-body assembly.", "edge_id": "edge-4", "evidence": [{"notes": "Dornes 2024: \"FlhF... is required to direct the initial MS-ring protein FliF to the cell pole.\"", "reference": "DOI:10.1038/s41467-024-50274-4"}], "predicate": "directs to cell pole", "predicate_id": null, "source": "FlhF", "source_grounding": null, "target": "FliF (MS-ring protein)", "target_grounding": null}, {"description": "FlhF binds FliG, coupling the placement regulator to C-ring/MS-ring assembly.", "edge_id": "edge-5", "evidence": [{"notes": "Dornes 2024: FlhF B-domain (FliG Interaction Domain) is necessary and sufficient for FliG binding.", "reference": "DOI:10.1038/s41467-024-50274-4"}], "predicate": "binds", "predicate_id": null, "source": "FlhF", "source_grounding": null, "target": "FliG", "target_grounding": null}, {"description": "FlhF-bound FliG engages the MS-ring protein FliF, recruiting a FliF-FliG complex to the pole.", "edge_id": "edge-6", "evidence": [{"notes": "Dornes 2024: \"FlhF-bound FliG then engages the MS-ring protein FliF, recruiting a FliF-FliG complex to the pole.\"", "reference": "DOI:10.1038/s41467-024-50274-4"}], "predicate": "engages / recruits", "predicate_id": null, "source": "FliG", "source_grounding": null, "target": "FliF (MS-ring protein)", "target_grounding": null}, {"description": "FlhF marks the future flagellar assembly site, after which basal-body assembly proceeds.", "edge_id": "edge-7", "evidence": [{"notes": "Schuhmacher 2015: \"After FlhF marked the future flagellar site, assembly of the basal body will proceed.\"", "reference": "DOI:10.1093/femsre/fuv034"}], "predicate": "establishes", "predicate_id": null, "source": "FlhF", "source_grounding": null, "target": "marking of future flagellar assembly site", "target_grounding": null}, {"description": "The marking of the future flagellar assembly site localizes basal-body building blocks to the cell pole.", "edge_id": "edge-8", "evidence": [{"notes": "Schuhmacher 2015: FlhF B-domain recruits MS-ring component FliF to the cell pole.", "reference": "DOI:10.1093/femsre/fuv034"}], "predicate": "occurs at", "predicate_id": null, "source": "marking of future flagellar assembly site", "source_grounding": null, "target": "cell pole", "target_grounding": "GO:0060187"}], "graph_id": "flagellar_arrangement_flhf_flhg", "issues": [], "nodes": [{"color": "#ede9fe", "description": "Helical proteinaceous locomotory organelle of bacteria.", "grounding": "GO:0009288", "id": "bacterial_flagellum", "is_orphan": false, "label": "bacterial-type flagellum", "node_type": "CELLULAR_LOCALIZATION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ede9fe", "description": "Polar region of the bacterial cell where flagellar assembly is nucleated.", "grounding": "GO:0060187", "id": "cell_pole", "is_orphan": false, "label": "cell pole", "node_type": "CELLULAR_LOCALIZATION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Number and spatial distribution of flagella on the cell.", "grounding": "traitmech:000056", "id": "flagellar_arrangement_trait", "is_orphan": false, "label": "flagellar arrangement", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Spatial designation of the future flagellar assembly site that precedes basal-body assembly.", "grounding": null, "id": "flagellar_assembly_site_marking", "is_orphan": false, "label": "marking of future flagellar assembly site", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "SRP-type GTPase that marks the future flagellar assembly site and directs MS-ring protein FliF to the cell pole.", "grounding": null, "id": "flhf", "is_orphan": false, "label": "FlhF", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Regulatory system setting flagellar number and cellular position.", "grounding": null, "id": "flhf_flhg_regulation", "is_orphan": false, "label": "FlhF/FlhG flagellar placement regulation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "MinD-type ATPase that stimulates FlhF GTPase activity and limits/positions flagellar number.", "grounding": "InterPro:IPR033875", "id": "flhg", "is_orphan": false, "label": "FlhG", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "MS-ring forming protein recruited to the cell pole as the earliest basal-body assembly step.", "grounding": null, "id": "flif_msring", "is_orphan": false, "label": "FliF (MS-ring protein)", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "C-ring switch protein bound by FlhF and engaging FliF during basal-body assembly.", "grounding": null, "id": "flig", "is_orphan": false, "label": "FliG", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "Flagellar arrangement is a classification axis whose child patterns have different placement programs. The graph is contextual and does not define one protein mechanism shared by every arrangement class.", "scope_status": "NONMECHANISTIC", "title": "Flagellar arrangement set by FlhF/FlhG flagellation pattern"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -945,13 +972,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-08-26 19:05 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

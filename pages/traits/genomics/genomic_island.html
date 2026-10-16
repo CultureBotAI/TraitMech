@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/genomics.html">GENOMICS</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/genomics.html">GENOMICS</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>genomic island</h1>
     <p class="curie"><code>traitmech:000093</code> · CLASS · REVIEWED</p>
 
@@ -85,9 +96,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>horizontal gene transfer</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0009292" rel="nofollow noreferrer"><code>GO:0009292</code></a>
             <span class="edge-predicate">causes</span>
             <strong>genomic island</strong>
-            <code>biolink:causes</code>
+            <code>traitmech:000093</code>
+            <a href="https://w3id.org/biolink/vocab/causes" rel="nofollow noreferrer"><code>biolink:causes</code></a>
             <p>Genomic islands are integrated into host chromosomes via HGT.</p>
             <ul>
 
@@ -102,9 +115,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>genomic island</strong>
+            <code>traitmech:000093</code>
             <span class="edge-predicate">contributes to</span>
             <strong>accessory function</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>Genomic islands deliver pathogenicity, symbiosis, or metabolic modules to the host.</p>
             <ul>
 
@@ -119,9 +134,11 @@
 
           <li id="pathograph-1-edge-3">
             <strong>genomic island</strong>
+            <code>traitmech:000093</code>
             <span class="edge-predicate">includes</span>
             <strong>integrase/recombinase/transposase mobility module</strong>
-            <code>biolink:has_part</code>
+
+            <a href="https://w3id.org/biolink/vocab/has_part" rel="nofollow noreferrer"><code>biolink:has_part</code></a>
             <p>Genomic islands often include integration modules made up of DDE transposases or tyrosine/serine recombinases.</p>
             <ul>
 
@@ -136,9 +153,11 @@
 
           <li id="pathograph-1-edge-4">
             <strong>integrative conjugative element</strong>
+            <code>traitmech:000410</code>
             <span class="edge-predicate">enables</span>
             <strong>conjugation</strong>
-            <code>RO:0002327</code>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0009291" rel="nofollow noreferrer"><code>GO:0009291</code></a>
+            <a href="http://purl.obolibrary.org/obo/RO_0002327" rel="nofollow noreferrer"><code>RO:0002327</code></a>
             <p>Self-transmissible ICE-type genomic islands disseminate by conjugation.</p>
             <ul>
 
@@ -153,9 +172,11 @@
 
           <li id="pathograph-1-edge-5">
             <strong>type IV secretion system (T4SS)</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0043684" rel="nofollow noreferrer"><code>GO:0043684</code></a>
             <span class="edge-predicate">enables</span>
             <strong>conjugation</strong>
-            <code>RO:0002327</code>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0009291" rel="nofollow noreferrer"><code>GO:0009291</code></a>
+            <a href="http://purl.obolibrary.org/obo/RO_0002327" rel="nofollow noreferrer"><code>RO:0002327</code></a>
             <p>ICE-encoded type IV secretion systems translocate DNA between mating cells in direct contact.</p>
             <ul>
 
@@ -170,9 +191,11 @@
 
           <li id="pathograph-1-edge-6">
             <strong>integrative mobilizable element (IME)</strong>
+
             <span class="edge-predicate">depends on</span>
             <strong>conjugation</strong>
-            <code>RO:0002502</code>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0009291" rel="nofollow noreferrer"><code>GO:0009291</code></a>
+            <a href="http://purl.obolibrary.org/obo/RO_0002502" rel="nofollow noreferrer"><code>RO:0002502</code></a>
             <p>IME-type genomic islands depend on helper ICE or conjugative-plasmid transfer machinery for conjugative mobilization.</p>
             <ul>
 
@@ -187,8 +210,10 @@
 
           <li id="pathograph-1-edge-7">
             <strong>integrative conjugative element</strong>
+            <code>traitmech:000410</code>
             <span class="edge-predicate">is a</span>
             <strong>genomic island</strong>
+            <code>traitmech:000093</code>
             <code>rdfs:subClassOf</code>
             <p>Integrative-conjugative-element possession is a genomic-island possession trait.</p>
             <ul>
@@ -295,43 +320,43 @@
 
         <li>
           <span class="nn-cat">genomics</span>
-          <a href="../../traits/genomics/codon_usage_bias.html">codon usage bias</a>
+          <a href="../../traits/genomics/hypnos_system.html">Hypnos system</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">genomics</span>
-          <a href="../../traits/genomics/crispr_cas_system.html">CRISPR-Cas system</a>
+          <a href="../../traits/genomics/hna_system.html">Hna system</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">genomics</span>
-          <a href="../../traits/genomics/gc_skew.html">GC skew</a>
+          <a href="../../traits/genomics/hma_system.html">Hma system</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">genomics</span>
-          <a href="../../traits/genomics/genome_size.html">genome size</a>
+          <a href="../../traits/genomics/hesat_system.html">Hesat system</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">genomics</span>
-          <a href="../../traits/genomics/genome_streamlining.html">genome streamlining</a>
+          <a href="../../traits/genomics/hec_08_system.html">HEC-08 system</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">genomics</span>
-          <a href="../../traits/genomics/mobile_genetic_element.html">mobile genetic element</a>
+          <a href="../../traits/genomics/hec_07_system.html">HEC-07 system</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">genomics</span>
-          <a href="../../traits/genomics/pangenome_openness.html">pangenome openness</a>
+          <a href="../../traits/genomics/hec_06_system.html">HEC-06 system</a>
           <span class="sim">1.000</span>
         </li>
 
@@ -921,7 +946,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking horizontal gene transfer to acquisition of genomic islands that confer accessory phenotypes (pathogenicity, symbiosis, metabolism).", "edges": [{"description": "Genomic islands are integrated into host chromosomes via HGT.", "evidence": [{"notes": "Verified against the open Juhas et al. full text; the review\u0027s mobile-genomic-island life cycle places HGT acquisition before chromosomal integration.", "reference": "DOI:10.1111/j.1574-6976.2008.00136.x", "snippet": "acquisition by horizontal gene transfer; (2) integration into the host\u0027s chromosome"}], "id": "edge-1", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "horizontal_gene_transfer", "target": "gi_trait"}, {"description": "Genomic islands deliver pathogenicity, symbiosis, or metabolic modules to the host.", "evidence": [{"notes": "Verified against the Nature Reviews Microbiology publisher abstract; Dobrindt et al. describe genomic islands as gain-of-function elements affecting ecological and pathogenic traits.", "reference": "DOI:10.1038/nrmicro884", "snippet": "GEIs contribute to fitness and adaptation"}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "gi_trait", "target": "accessory_function"}, {"description": "Genomic islands often include integration modules made up of DDE transposases or tyrosine/serine recombinases.", "evidence": [{"notes": "Verified against the open Bioteau et al. methods; the AtollGenDB integrase module tracks the same DDE transposase, serine recombinase, and tyrosine recombinase families used for genomic-island mobility classification.", "reference": "DOI:10.1093/nar/gkad644", "snippet": "tyrosine (INT_Tyr) and serine (large unidirectional type, INT_Ser) recombinases, as well as DDE transposases"}], "id": "edge-3", "is_orphan": false, "predicate": "includes", "predicate_id": "biolink:has_part", "source": "gi_trait", "target": "mobility_module"}, {"description": "Self-transmissible ICE-type genomic islands disseminate by conjugation.", "evidence": [{"notes": "Verified against the open Bioteau et al. introduction; ICEs are presented as self-transmissible genomic islands that disseminate DNA by conjugation.", "reference": "DOI:10.1093/nar/gkad644", "snippet": "ICEs disseminate by conjugation, a mechanism involving the secretion of DNA from the donor cell"}], "id": "edge-4", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "integrative_conjugative_element", "target": "conjugation"}, {"description": "ICE-encoded type IV secretion systems translocate DNA between mating cells in direct contact.", "evidence": [{"notes": "Verified against the open Bioteau et al. introduction; the paper describes ICE conjugation as direct-contact DNA translocation mediated by a T4SS.", "reference": "DOI:10.1093/nar/gkad644", "snippet": "the DNA is translocated between mating cells in direct contact by a type IV secretion system"}], "id": "edge-5", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "type_iv_secretion_system", "target": "conjugation"}, {"description": "IME-type genomic islands depend on helper ICE or conjugative-plasmid transfer machinery for conjugative mobilization.", "evidence": [{"notes": "Verified against the open Bioteau et al. introduction; IMEs are framed as mobilizable genomic islands that rely on helper ICE or conjugative-plasmid apparatus.", "reference": "DOI:10.1093/nar/gkad644", "snippet": "spread via the conjugative apparatus encoded by a helper ICE or conjugative plasmid"}], "id": "edge-6", "is_orphan": false, "predicate": "depends on", "predicate_id": "RO:0002502", "source": "integrative_mobilizable_element", "target": "conjugation"}, {"description": "Integrative-conjugative-element possession is a genomic-island possession trait.", "evidence": [{"notes": "Bioteau et al. place integrative and conjugative elements among the mobile-genetic-element subclasses encompassed by genomic islands.", "reference": "DOI:10.1093/nar/gkad644", "snippet": "The term \u2018genomic island\u2019 encompasses diverse types of mobile genetic elements that exhibit various structures and gene contents, including prophages, transposons, integrated plasmids, integrative and mobilizable elements (IMEs), and integrative and conjugative elements (ICEs)"}], "id": "edge-7", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "integrative_conjugative_element", "target": "gi_trait"}], "evidence_rows": [{"description": "Genomic islands are integrated into host chromosomes via HGT.", "edge_id": "edge-1", "evidence": [{"notes": "Verified against the open Juhas et al. full text; the review\u0027s mobile-genomic-island life cycle places HGT acquisition before chromosomal integration.", "reference": "DOI:10.1111/j.1574-6976.2008.00136.x", "snippet": "acquisition by horizontal gene transfer; (2) integration into the host\u0027s chromosome"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "horizontal gene transfer", "target": "genomic island"}, {"description": "Genomic islands deliver pathogenicity, symbiosis, or metabolic modules to the host.", "edge_id": "edge-2", "evidence": [{"notes": "Verified against the Nature Reviews Microbiology publisher abstract; Dobrindt et al. describe genomic islands as gain-of-function elements affecting ecological and pathogenic traits.", "reference": "DOI:10.1038/nrmicro884", "snippet": "GEIs contribute to fitness and adaptation"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "genomic island", "target": "accessory function"}, {"description": "Genomic islands often include integration modules made up of DDE transposases or tyrosine/serine recombinases.", "edge_id": "edge-3", "evidence": [{"notes": "Verified against the open Bioteau et al. methods; the AtollGenDB integrase module tracks the same DDE transposase, serine recombinase, and tyrosine recombinase families used for genomic-island mobility classification.", "reference": "DOI:10.1093/nar/gkad644", "snippet": "tyrosine (INT_Tyr) and serine (large unidirectional type, INT_Ser) recombinases, as well as DDE transposases"}], "predicate": "includes", "predicate_id": "biolink:has_part", "source": "genomic island", "target": "integrase/recombinase/transposase mobility module"}, {"description": "Self-transmissible ICE-type genomic islands disseminate by conjugation.", "edge_id": "edge-4", "evidence": [{"notes": "Verified against the open Bioteau et al. introduction; ICEs are presented as self-transmissible genomic islands that disseminate DNA by conjugation.", "reference": "DOI:10.1093/nar/gkad644", "snippet": "ICEs disseminate by conjugation, a mechanism involving the secretion of DNA from the donor cell"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "integrative conjugative element", "target": "conjugation"}, {"description": "ICE-encoded type IV secretion systems translocate DNA between mating cells in direct contact.", "edge_id": "edge-5", "evidence": [{"notes": "Verified against the open Bioteau et al. introduction; the paper describes ICE conjugation as direct-contact DNA translocation mediated by a T4SS.", "reference": "DOI:10.1093/nar/gkad644", "snippet": "the DNA is translocated between mating cells in direct contact by a type IV secretion system"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "type IV secretion system (T4SS)", "target": "conjugation"}, {"description": "IME-type genomic islands depend on helper ICE or conjugative-plasmid transfer machinery for conjugative mobilization.", "edge_id": "edge-6", "evidence": [{"notes": "Verified against the open Bioteau et al. introduction; IMEs are framed as mobilizable genomic islands that rely on helper ICE or conjugative-plasmid apparatus.", "reference": "DOI:10.1093/nar/gkad644", "snippet": "spread via the conjugative apparatus encoded by a helper ICE or conjugative plasmid"}], "predicate": "depends on", "predicate_id": "RO:0002502", "source": "integrative mobilizable element (IME)", "target": "conjugation"}, {"description": "Integrative-conjugative-element possession is a genomic-island possession trait.", "edge_id": "edge-7", "evidence": [{"notes": "Bioteau et al. place integrative and conjugative elements among the mobile-genetic-element subclasses encompassed by genomic islands.", "reference": "DOI:10.1093/nar/gkad644", "snippet": "The term \u2018genomic island\u2019 encompasses diverse types of mobile genetic elements that exhibit various structures and gene contents, including prophages, transposons, integrated plasmids, integrative and mobilizable elements (IMEs), and integrative and conjugative elements (ICEs)"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "integrative conjugative element", "target": "genomic island"}], "graph_id": "gi_hgt_accessory_function", "issues": [], "nodes": [{"color": "#f3f4f6", "description": "Pathogenicity, symbiosis, or metabolic capability encoded by the island.", "grounding": null, "id": "accessory_function", "is_orphan": false, "label": "accessory function", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Contact-dependent transfer of DNA between cells.", "grounding": "GO:0009291", "id": "conjugation", "is_orphan": false, "label": "conjugation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a horizontally acquired chromosomal island.", "grounding": "traitmech:000093", "id": "gi_trait", "is_orphan": false, "label": "genomic island", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Transfer of genetic material between organisms outside vertical descent.", "grounding": "GO:0009292", "id": "horizontal_gene_transfer", "is_orphan": false, "label": "horizontal gene transfer", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a self-transmissible integrative and conjugative genomic island.", "grounding": "traitmech:000410", "id": "integrative_conjugative_element", "is_orphan": false, "label": "integrative conjugative element", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Genomic island subclass that lacks its own conjugation apparatus and spreads using a helper ICE or conjugative plasmid.", "grounding": null, "id": "integrative_mobilizable_element", "is_orphan": false, "label": "integrative mobilizable element (IME)", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "DDE transposases or tyrosine/serine recombinases that mediate island integration and mobility.", "grounding": null, "id": "mobility_module", "is_orphan": false, "label": "integrase/recombinase/transposase mobility module", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Secretion apparatus that mediates conjugative DNA transfer.", "grounding": "GO:0043684", "id": "type_iv_secretion_system", "is_orphan": false, "label": "type IV secretion system (T4SS)", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This genomics record is a measurement, genomic-element classification, or population-level descriptor rather than one taxon-specific protein mechanism; contextual protein nodes do not receive token UniProt examples.", "scope_status": "NONMECHANISTIC", "title": "Genomic islands acquired by HGT carry accessory functions"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking horizontal gene transfer to acquisition of genomic islands that confer accessory phenotypes (pathogenicity, symbiosis, metabolism).", "edges": [{"description": "Genomic islands are integrated into host chromosomes via HGT.", "evidence": [{"notes": "Verified against the open Juhas et al. full text; the review\u0027s mobile-genomic-island life cycle places HGT acquisition before chromosomal integration.", "reference": "DOI:10.1111/j.1574-6976.2008.00136.x", "snippet": "acquisition by horizontal gene transfer; (2) integration into the host\u0027s chromosome"}], "id": "edge-1", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "horizontal_gene_transfer", "target": "gi_trait"}, {"description": "Genomic islands deliver pathogenicity, symbiosis, or metabolic modules to the host.", "evidence": [{"notes": "Verified against the Nature Reviews Microbiology publisher abstract; Dobrindt et al. describe genomic islands as gain-of-function elements affecting ecological and pathogenic traits.", "reference": "DOI:10.1038/nrmicro884", "snippet": "GEIs contribute to fitness and adaptation"}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "gi_trait", "target": "accessory_function"}, {"description": "Genomic islands often include integration modules made up of DDE transposases or tyrosine/serine recombinases.", "evidence": [{"notes": "Verified against the open Bioteau et al. methods; the AtollGenDB integrase module tracks the same DDE transposase, serine recombinase, and tyrosine recombinase families used for genomic-island mobility classification.", "reference": "DOI:10.1093/nar/gkad644", "snippet": "tyrosine (INT_Tyr) and serine (large unidirectional type, INT_Ser) recombinases, as well as DDE transposases"}], "id": "edge-3", "is_orphan": false, "predicate": "includes", "predicate_id": "biolink:has_part", "source": "gi_trait", "target": "mobility_module"}, {"description": "Self-transmissible ICE-type genomic islands disseminate by conjugation.", "evidence": [{"notes": "Verified against the open Bioteau et al. introduction; ICEs are presented as self-transmissible genomic islands that disseminate DNA by conjugation.", "reference": "DOI:10.1093/nar/gkad644", "snippet": "ICEs disseminate by conjugation, a mechanism involving the secretion of DNA from the donor cell"}], "id": "edge-4", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "integrative_conjugative_element", "target": "conjugation"}, {"description": "ICE-encoded type IV secretion systems translocate DNA between mating cells in direct contact.", "evidence": [{"notes": "Verified against the open Bioteau et al. introduction; the paper describes ICE conjugation as direct-contact DNA translocation mediated by a T4SS.", "reference": "DOI:10.1093/nar/gkad644", "snippet": "the DNA is translocated between mating cells in direct contact by a type IV secretion system"}], "id": "edge-5", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "type_iv_secretion_system", "target": "conjugation"}, {"description": "IME-type genomic islands depend on helper ICE or conjugative-plasmid transfer machinery for conjugative mobilization.", "evidence": [{"notes": "Verified against the open Bioteau et al. introduction; IMEs are framed as mobilizable genomic islands that rely on helper ICE or conjugative-plasmid apparatus.", "reference": "DOI:10.1093/nar/gkad644", "snippet": "spread via the conjugative apparatus encoded by a helper ICE or conjugative plasmid"}], "id": "edge-6", "is_orphan": false, "predicate": "depends on", "predicate_id": "RO:0002502", "source": "integrative_mobilizable_element", "target": "conjugation"}, {"description": "Integrative-conjugative-element possession is a genomic-island possession trait.", "evidence": [{"notes": "Bioteau et al. place integrative and conjugative elements among the mobile-genetic-element subclasses encompassed by genomic islands.", "reference": "DOI:10.1093/nar/gkad644", "snippet": "The term \u2018genomic island\u2019 encompasses diverse types of mobile genetic elements that exhibit various structures and gene contents, including prophages, transposons, integrated plasmids, integrative and mobilizable elements (IMEs), and integrative and conjugative elements (ICEs)"}], "id": "edge-7", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "integrative_conjugative_element", "target": "gi_trait"}], "evidence_rows": [{"description": "Genomic islands are integrated into host chromosomes via HGT.", "edge_id": "edge-1", "evidence": [{"notes": "Verified against the open Juhas et al. full text; the review\u0027s mobile-genomic-island life cycle places HGT acquisition before chromosomal integration.", "reference": "DOI:10.1111/j.1574-6976.2008.00136.x", "snippet": "acquisition by horizontal gene transfer; (2) integration into the host\u0027s chromosome"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "horizontal gene transfer", "source_grounding": "GO:0009292", "target": "genomic island", "target_grounding": "traitmech:000093"}, {"description": "Genomic islands deliver pathogenicity, symbiosis, or metabolic modules to the host.", "edge_id": "edge-2", "evidence": [{"notes": "Verified against the Nature Reviews Microbiology publisher abstract; Dobrindt et al. describe genomic islands as gain-of-function elements affecting ecological and pathogenic traits.", "reference": "DOI:10.1038/nrmicro884", "snippet": "GEIs contribute to fitness and adaptation"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "genomic island", "source_grounding": "traitmech:000093", "target": "accessory function", "target_grounding": null}, {"description": "Genomic islands often include integration modules made up of DDE transposases or tyrosine/serine recombinases.", "edge_id": "edge-3", "evidence": [{"notes": "Verified against the open Bioteau et al. methods; the AtollGenDB integrase module tracks the same DDE transposase, serine recombinase, and tyrosine recombinase families used for genomic-island mobility classification.", "reference": "DOI:10.1093/nar/gkad644", "snippet": "tyrosine (INT_Tyr) and serine (large unidirectional type, INT_Ser) recombinases, as well as DDE transposases"}], "predicate": "includes", "predicate_id": "biolink:has_part", "source": "genomic island", "source_grounding": "traitmech:000093", "target": "integrase/recombinase/transposase mobility module", "target_grounding": null}, {"description": "Self-transmissible ICE-type genomic islands disseminate by conjugation.", "edge_id": "edge-4", "evidence": [{"notes": "Verified against the open Bioteau et al. introduction; ICEs are presented as self-transmissible genomic islands that disseminate DNA by conjugation.", "reference": "DOI:10.1093/nar/gkad644", "snippet": "ICEs disseminate by conjugation, a mechanism involving the secretion of DNA from the donor cell"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "integrative conjugative element", "source_grounding": "traitmech:000410", "target": "conjugation", "target_grounding": "GO:0009291"}, {"description": "ICE-encoded type IV secretion systems translocate DNA between mating cells in direct contact.", "edge_id": "edge-5", "evidence": [{"notes": "Verified against the open Bioteau et al. introduction; the paper describes ICE conjugation as direct-contact DNA translocation mediated by a T4SS.", "reference": "DOI:10.1093/nar/gkad644", "snippet": "the DNA is translocated between mating cells in direct contact by a type IV secretion system"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "type IV secretion system (T4SS)", "source_grounding": "GO:0043684", "target": "conjugation", "target_grounding": "GO:0009291"}, {"description": "IME-type genomic islands depend on helper ICE or conjugative-plasmid transfer machinery for conjugative mobilization.", "edge_id": "edge-6", "evidence": [{"notes": "Verified against the open Bioteau et al. introduction; IMEs are framed as mobilizable genomic islands that rely on helper ICE or conjugative-plasmid apparatus.", "reference": "DOI:10.1093/nar/gkad644", "snippet": "spread via the conjugative apparatus encoded by a helper ICE or conjugative plasmid"}], "predicate": "depends on", "predicate_id": "RO:0002502", "source": "integrative mobilizable element (IME)", "source_grounding": null, "target": "conjugation", "target_grounding": "GO:0009291"}, {"description": "Integrative-conjugative-element possession is a genomic-island possession trait.", "edge_id": "edge-7", "evidence": [{"notes": "Bioteau et al. place integrative and conjugative elements among the mobile-genetic-element subclasses encompassed by genomic islands.", "reference": "DOI:10.1093/nar/gkad644", "snippet": "The term \u2018genomic island\u2019 encompasses diverse types of mobile genetic elements that exhibit various structures and gene contents, including prophages, transposons, integrated plasmids, integrative and mobilizable elements (IMEs), and integrative and conjugative elements (ICEs)"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "integrative conjugative element", "source_grounding": "traitmech:000410", "target": "genomic island", "target_grounding": "traitmech:000093"}], "graph_id": "gi_hgt_accessory_function", "issues": [], "nodes": [{"color": "#f3f4f6", "description": "Pathogenicity, symbiosis, or metabolic capability encoded by the island.", "grounding": null, "id": "accessory_function", "is_orphan": false, "label": "accessory function", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Contact-dependent transfer of DNA between cells.", "grounding": "GO:0009291", "id": "conjugation", "is_orphan": false, "label": "conjugation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a horizontally acquired chromosomal island.", "grounding": "traitmech:000093", "id": "gi_trait", "is_orphan": false, "label": "genomic island", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Transfer of genetic material between organisms outside vertical descent.", "grounding": "GO:0009292", "id": "horizontal_gene_transfer", "is_orphan": false, "label": "horizontal gene transfer", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a self-transmissible integrative and conjugative genomic island.", "grounding": "traitmech:000410", "id": "integrative_conjugative_element", "is_orphan": false, "label": "integrative conjugative element", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Genomic island subclass that lacks its own conjugation apparatus and spreads using a helper ICE or conjugative plasmid.", "grounding": null, "id": "integrative_mobilizable_element", "is_orphan": false, "label": "integrative mobilizable element (IME)", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "DDE transposases or tyrosine/serine recombinases that mediate island integration and mobility.", "grounding": null, "id": "mobility_module", "is_orphan": false, "label": "integrase/recombinase/transposase mobility module", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Secretion apparatus that mediates conjugative DNA transfer.", "grounding": "GO:0043684", "id": "type_iv_secretion_system", "is_orphan": false, "label": "type IV secretion system (T4SS)", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This genomics record is a measurement, genomic-element classification, or population-level descriptor rather than one taxon-specific protein mechanism; contextual protein nodes do not receive token UniProt examples.", "scope_status": "NONMECHANISTIC", "title": "Genomic islands acquired by HGT carry accessory functions"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -941,13 +966,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-09-27 14:44 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

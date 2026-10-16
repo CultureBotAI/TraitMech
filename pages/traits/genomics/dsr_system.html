@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/genomics.html">GENOMICS</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/genomics.html">GENOMICS</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>Dsr system</h1>
     <p class="curie"><code>traitmech:000280</code> · CLASS · PROPOSED</p>
 
@@ -133,9 +144,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>Dsr locus</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>SIR2-domain antiphage activity</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>Dsr loci encode SIR2-domain defense-associated sirtuin proteins.</p>
             <ul>
 
@@ -156,9 +169,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>SIR2-domain antiphage activity</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>subtype-specific phage resistance</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>Garb et al. showed that DSR SIR2-domain effectors can degrade NAD+ during infection and abort phage propagation.</p>
             <ul>
 
@@ -173,9 +188,11 @@
 
           <li id="pathograph-1-edge-3">
             <strong>Dsr locus</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>subtype-specific phage resistance</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>Garb et al. support DSR NAD+ depletion as an abortive phage-defense outcome, while DefenseFinder models Dsr_I and Dsr_II as named Dsr subtypes.</p>
             <ul>
 
@@ -202,9 +219,11 @@
 
           <li id="pathograph-1-edge-4">
             <strong>subtype-specific phage resistance</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>Dsr system</strong>
-            <code>METPO:2007700</code>
+            <code>traitmech:000280</code>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>DefenseFinder represents Dsr as Dsr_I and Dsr_II subtypes within its Dsr system models.</p>
             <ul>
 
@@ -225,8 +244,10 @@
 
           <li id="pathograph-1-edge-5">
             <strong>Dsr system</strong>
+            <code>traitmech:000280</code>
             <span class="edge-predicate">is a</span>
             <strong>phage defense system</strong>
+            <code>traitmech:000209</code>
             <code>rdfs:subClassOf</code>
             <p>Dsr system possession is a phage-defense-system trait.</p>
             <ul>
@@ -299,11 +320,75 @@
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
 
-      <p class="no-match">No kg-microbe node embedding matched this record
-        in the 2026-04-25 deepwalk.</p>
+      <p class="match-method">Matched <strong>1</strong>
+        kg-microbe node
+        via <em>parent_proxy</em>.</p>
+      <ul class="kgm-nodes">
+
+        <li><code>METPO:1000188</code> <span class="dim-preview">[-0.956, -1.962, -3.148, +1.274, …]</span></li>
+
+      </ul>
+      <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
 
     </div>
 
+
+    <div class="card">
+      <h2>Nearest neighbors in embedding space</h2>
+      <p class="meta">Top-8 cosine-similar METPO traits
+        from the 2026-04-25 deepwalk (512-D).</p>
+      <ul class="nn-list">
+
+        <li>
+          <span class="nn-cat">upper</span>
+          <a href="../../traits/upper/quality.html">quality</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/lamassu_cap4_nuclease_system.html">Lamassu-Cap4 nuclease system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/lamassu_amidase_system.html">Lamassu-Amidase system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/kongming_system.html">Kongming system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/kiwa_system.html">Kiwa system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/kamadhenu_system.html">Kamadhenu system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/jukab_system.html">JukAB system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/integrative_conjugative_element.html">integrative conjugative element</a>
+          <span class="sim">1.000</span>
+        </li>
+
+      </ul>
+    </div>
 
 
 
@@ -403,6 +488,11 @@
     </dl>
   </div>
 
+
+  <div class="card rail-kgm">
+    <h2>kg-microbe</h2>
+    <p class="meta">1 matching node (parent_proxy)</p>
+  </div>
 
 </aside>
 </div>
@@ -736,7 +826,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Conservative system-level sketch linking a Dsr locus to SIR2-domain NAD+ depletion, subtype-specific bacteriophage resistance, and the Dsr system trait.", "edges": [{"description": "Dsr loci encode SIR2-domain defense-associated sirtuin proteins.", "evidence": [{"notes": "Gao et al. connect the Dsr name to a defense-associated sirtuin candidate.", "reference": "DOI:10.1126/science.aba0372", "snippet": "dsr, defense-associated sirtuin"}, {"notes": "DefenseFinder includes Dsr1 in the Dsr_I custom model profile inventory.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "Dsr_I__Dsr1                                      | Dsr_I__Dsr1                                      | Dsr_I"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "dsr_locus", "target": "sir2_domain_antiphage_activity"}, {"description": "Garb et al. showed that DSR SIR2-domain effectors can degrade NAD+ during infection and abort phage propagation.", "evidence": [{"notes": "DSR SIR2-domain activity can deplete NAD+ during infection in an abortive phage defense outcome.", "reference": "DOI:10.1038/s41564-022-01207-8", "snippet": "DSR proteins degrade nicotinamide adenine dinucleotide (NAD+) during infection, depleting the cell of this essential molecule and aborting phage propagation"}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "sir2_domain_antiphage_activity", "target": "subtype_specific_phage_resistance"}, {"description": "Garb et al. support DSR NAD+ depletion as an abortive phage-defense outcome, while DefenseFinder models Dsr_I and Dsr_II as named Dsr subtypes.", "evidence": [{"notes": "Garb et al. directly support infection-coupled DSR NAD+ depletion as an abortive antiphage output.", "reference": "DOI:10.1038/s41564-022-01207-8", "snippet": "DSR proteins degrade nicotinamide adenine dinucleotide (NAD+) during infection, depleting the cell of this essential molecule and aborting phage propagation"}, {"notes": "The DefenseFinder rules table supports Dsr_I as a named defense-system subtype model with a Dsr1 profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Dsr\tDsr_I\t1\t1\tDsr_I__Dsr1"}, {"notes": "The DefenseFinder rules table supports Dsr_II as a named defense-system subtype model with a Dsr2 profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Dsr\tDsr_II\t1\t1\tDsr_II__Dsr2"}], "id": "edge-3", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "dsr_locus", "target": "subtype_specific_phage_resistance"}, {"description": "DefenseFinder represents Dsr as Dsr_I and Dsr_II subtypes within its Dsr system models.", "evidence": [{"notes": "The Dsr_I rule links the Dsr system namespace to the Dsr_I subtype and Dsr1 profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Dsr\tDsr_I\t1\t1\tDsr_I__Dsr1"}, {"notes": "The Dsr_II rule links the Dsr system namespace to the Dsr_II subtype and Dsr2 profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Dsr\tDsr_II\t1\t1\tDsr_II__Dsr2"}], "id": "edge-4", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "subtype_specific_phage_resistance", "target": "dsr_system_trait"}, {"description": "Dsr system possession is a phage-defense-system trait.", "evidence": [{"notes": "DefenseFinder associates Dsr with the Gao et al. prokaryotic antiviral-immunity paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "Dsr | 10\\.1126/science\\.aba0372 | Diverse enzymatic activities mediate antiviral immunity in prokaryotes"}], "id": "edge-5", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "dsr_system_trait", "target": "phage_defense_system"}], "evidence_rows": [{"description": "Dsr loci encode SIR2-domain defense-associated sirtuin proteins.", "edge_id": "edge-1", "evidence": [{"notes": "Gao et al. connect the Dsr name to a defense-associated sirtuin candidate.", "reference": "DOI:10.1126/science.aba0372", "snippet": "dsr, defense-associated sirtuin"}, {"notes": "DefenseFinder includes Dsr1 in the Dsr_I custom model profile inventory.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "Dsr_I__Dsr1                                      | Dsr_I__Dsr1                                      | Dsr_I"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Dsr locus", "target": "SIR2-domain antiphage activity"}, {"description": "Garb et al. showed that DSR SIR2-domain effectors can degrade NAD+ during infection and abort phage propagation.", "edge_id": "edge-2", "evidence": [{"notes": "DSR SIR2-domain activity can deplete NAD+ during infection in an abortive phage defense outcome.", "reference": "DOI:10.1038/s41564-022-01207-8", "snippet": "DSR proteins degrade nicotinamide adenine dinucleotide (NAD+) during infection, depleting the cell of this essential molecule and aborting phage propagation"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "SIR2-domain antiphage activity", "target": "subtype-specific phage resistance"}, {"description": "Garb et al. support DSR NAD+ depletion as an abortive phage-defense outcome, while DefenseFinder models Dsr_I and Dsr_II as named Dsr subtypes.", "edge_id": "edge-3", "evidence": [{"notes": "Garb et al. directly support infection-coupled DSR NAD+ depletion as an abortive antiphage output.", "reference": "DOI:10.1038/s41564-022-01207-8", "snippet": "DSR proteins degrade nicotinamide adenine dinucleotide (NAD+) during infection, depleting the cell of this essential molecule and aborting phage propagation"}, {"notes": "The DefenseFinder rules table supports Dsr_I as a named defense-system subtype model with a Dsr1 profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Dsr\tDsr_I\t1\t1\tDsr_I__Dsr1"}, {"notes": "The DefenseFinder rules table supports Dsr_II as a named defense-system subtype model with a Dsr2 profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Dsr\tDsr_II\t1\t1\tDsr_II__Dsr2"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Dsr locus", "target": "subtype-specific phage resistance"}, {"description": "DefenseFinder represents Dsr as Dsr_I and Dsr_II subtypes within its Dsr system models.", "edge_id": "edge-4", "evidence": [{"notes": "The Dsr_I rule links the Dsr system namespace to the Dsr_I subtype and Dsr1 profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Dsr\tDsr_I\t1\t1\tDsr_I__Dsr1"}, {"notes": "The Dsr_II rule links the Dsr system namespace to the Dsr_II subtype and Dsr2 profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Dsr\tDsr_II\t1\t1\tDsr_II__Dsr2"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "subtype-specific phage resistance", "target": "Dsr system"}, {"description": "Dsr system possession is a phage-defense-system trait.", "edge_id": "edge-5", "evidence": [{"notes": "DefenseFinder associates Dsr with the Gao et al. prokaryotic antiviral-immunity paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "Dsr | 10\\.1126/science\\.aba0372 | Diverse enzymatic activities mediate antiviral immunity in prokaryotes"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "Dsr system", "target": "phage defense system"}], "graph_id": "dsr_sirtuin_antiphage_defense", "issues": [], "nodes": [{"color": "#f3f4f6", "description": "A defense-associated sirtuin antiphage locus represented by Dsr subtype profiles.", "grounding": null, "id": "dsr_locus", "is_orphan": false, "label": "Dsr locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded defense-associated sirtuin phage defense system.", "grounding": "traitmech:000280", "id": "dsr_system_trait", "is_orphan": false, "label": "Dsr system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of one or more genome-encoded immune systems that inhibit bacteriophage infection.", "grounding": "traitmech:000209", "id": "phage_defense_system", "is_orphan": false, "label": "phage defense system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#cffafe", "description": "NADase-associated molecular activity carried by a Dsr SIR2-domain antiphage protein.", "grounding": null, "id": "sir2_domain_antiphage_activity", "is_orphan": false, "label": "SIR2-domain antiphage activity", "node_type": "MOLECULAR_FUNCTION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Protection against particular bacteriophages by a Dsr subtype.", "grounding": null, "id": "subtype_specific_phage_resistance", "is_orphan": false, "label": "subtype-specific phage resistance", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "The graph captures Dsr systems at the family level while leaving DefenseFinder Dsr_I/Dsr_II profile boundaries, subtype-specific triggers outside DSR2, host ranges, anti-defense proteins, and exact phage targets unresolved. This Dsr family is distinct from metabolic dissimilatory sulfite reductase DsrAB systems.", "scope_status": "NONMECHANISTIC", "title": "Dsr loci encode SIR2-domain antiphage proteins"}];
+  var graphs = [{"description": "Conservative system-level sketch linking a Dsr locus to SIR2-domain NAD+ depletion, subtype-specific bacteriophage resistance, and the Dsr system trait.", "edges": [{"description": "Dsr loci encode SIR2-domain defense-associated sirtuin proteins.", "evidence": [{"notes": "Gao et al. connect the Dsr name to a defense-associated sirtuin candidate.", "reference": "DOI:10.1126/science.aba0372", "snippet": "dsr, defense-associated sirtuin"}, {"notes": "DefenseFinder includes Dsr1 in the Dsr_I custom model profile inventory.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "Dsr_I__Dsr1                                      | Dsr_I__Dsr1                                      | Dsr_I"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "dsr_locus", "target": "sir2_domain_antiphage_activity"}, {"description": "Garb et al. showed that DSR SIR2-domain effectors can degrade NAD+ during infection and abort phage propagation.", "evidence": [{"notes": "DSR SIR2-domain activity can deplete NAD+ during infection in an abortive phage defense outcome.", "reference": "DOI:10.1038/s41564-022-01207-8", "snippet": "DSR proteins degrade nicotinamide adenine dinucleotide (NAD+) during infection, depleting the cell of this essential molecule and aborting phage propagation"}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "sir2_domain_antiphage_activity", "target": "subtype_specific_phage_resistance"}, {"description": "Garb et al. support DSR NAD+ depletion as an abortive phage-defense outcome, while DefenseFinder models Dsr_I and Dsr_II as named Dsr subtypes.", "evidence": [{"notes": "Garb et al. directly support infection-coupled DSR NAD+ depletion as an abortive antiphage output.", "reference": "DOI:10.1038/s41564-022-01207-8", "snippet": "DSR proteins degrade nicotinamide adenine dinucleotide (NAD+) during infection, depleting the cell of this essential molecule and aborting phage propagation"}, {"notes": "The DefenseFinder rules table supports Dsr_I as a named defense-system subtype model with a Dsr1 profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Dsr\tDsr_I\t1\t1\tDsr_I__Dsr1"}, {"notes": "The DefenseFinder rules table supports Dsr_II as a named defense-system subtype model with a Dsr2 profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Dsr\tDsr_II\t1\t1\tDsr_II__Dsr2"}], "id": "edge-3", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "dsr_locus", "target": "subtype_specific_phage_resistance"}, {"description": "DefenseFinder represents Dsr as Dsr_I and Dsr_II subtypes within its Dsr system models.", "evidence": [{"notes": "The Dsr_I rule links the Dsr system namespace to the Dsr_I subtype and Dsr1 profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Dsr\tDsr_I\t1\t1\tDsr_I__Dsr1"}, {"notes": "The Dsr_II rule links the Dsr system namespace to the Dsr_II subtype and Dsr2 profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Dsr\tDsr_II\t1\t1\tDsr_II__Dsr2"}], "id": "edge-4", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "subtype_specific_phage_resistance", "target": "dsr_system_trait"}, {"description": "Dsr system possession is a phage-defense-system trait.", "evidence": [{"notes": "DefenseFinder associates Dsr with the Gao et al. prokaryotic antiviral-immunity paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "Dsr | 10\\.1126/science\\.aba0372 | Diverse enzymatic activities mediate antiviral immunity in prokaryotes"}], "id": "edge-5", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "dsr_system_trait", "target": "phage_defense_system"}], "evidence_rows": [{"description": "Dsr loci encode SIR2-domain defense-associated sirtuin proteins.", "edge_id": "edge-1", "evidence": [{"notes": "Gao et al. connect the Dsr name to a defense-associated sirtuin candidate.", "reference": "DOI:10.1126/science.aba0372", "snippet": "dsr, defense-associated sirtuin"}, {"notes": "DefenseFinder includes Dsr1 in the Dsr_I custom model profile inventory.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "Dsr_I__Dsr1                                      | Dsr_I__Dsr1                                      | Dsr_I"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Dsr locus", "source_grounding": null, "target": "SIR2-domain antiphage activity", "target_grounding": null}, {"description": "Garb et al. showed that DSR SIR2-domain effectors can degrade NAD+ during infection and abort phage propagation.", "edge_id": "edge-2", "evidence": [{"notes": "DSR SIR2-domain activity can deplete NAD+ during infection in an abortive phage defense outcome.", "reference": "DOI:10.1038/s41564-022-01207-8", "snippet": "DSR proteins degrade nicotinamide adenine dinucleotide (NAD+) during infection, depleting the cell of this essential molecule and aborting phage propagation"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "SIR2-domain antiphage activity", "source_grounding": null, "target": "subtype-specific phage resistance", "target_grounding": null}, {"description": "Garb et al. support DSR NAD+ depletion as an abortive phage-defense outcome, while DefenseFinder models Dsr_I and Dsr_II as named Dsr subtypes.", "edge_id": "edge-3", "evidence": [{"notes": "Garb et al. directly support infection-coupled DSR NAD+ depletion as an abortive antiphage output.", "reference": "DOI:10.1038/s41564-022-01207-8", "snippet": "DSR proteins degrade nicotinamide adenine dinucleotide (NAD+) during infection, depleting the cell of this essential molecule and aborting phage propagation"}, {"notes": "The DefenseFinder rules table supports Dsr_I as a named defense-system subtype model with a Dsr1 profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Dsr\tDsr_I\t1\t1\tDsr_I__Dsr1"}, {"notes": "The DefenseFinder rules table supports Dsr_II as a named defense-system subtype model with a Dsr2 profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Dsr\tDsr_II\t1\t1\tDsr_II__Dsr2"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Dsr locus", "source_grounding": null, "target": "subtype-specific phage resistance", "target_grounding": null}, {"description": "DefenseFinder represents Dsr as Dsr_I and Dsr_II subtypes within its Dsr system models.", "edge_id": "edge-4", "evidence": [{"notes": "The Dsr_I rule links the Dsr system namespace to the Dsr_I subtype and Dsr1 profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Dsr\tDsr_I\t1\t1\tDsr_I__Dsr1"}, {"notes": "The Dsr_II rule links the Dsr system namespace to the Dsr_II subtype and Dsr2 profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Dsr\tDsr_II\t1\t1\tDsr_II__Dsr2"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "subtype-specific phage resistance", "source_grounding": null, "target": "Dsr system", "target_grounding": "traitmech:000280"}, {"description": "Dsr system possession is a phage-defense-system trait.", "edge_id": "edge-5", "evidence": [{"notes": "DefenseFinder associates Dsr with the Gao et al. prokaryotic antiviral-immunity paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "Dsr | 10\\.1126/science\\.aba0372 | Diverse enzymatic activities mediate antiviral immunity in prokaryotes"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "Dsr system", "source_grounding": "traitmech:000280", "target": "phage defense system", "target_grounding": "traitmech:000209"}], "graph_id": "dsr_sirtuin_antiphage_defense", "issues": [], "nodes": [{"color": "#f3f4f6", "description": "A defense-associated sirtuin antiphage locus represented by Dsr subtype profiles.", "grounding": null, "id": "dsr_locus", "is_orphan": false, "label": "Dsr locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded defense-associated sirtuin phage defense system.", "grounding": "traitmech:000280", "id": "dsr_system_trait", "is_orphan": false, "label": "Dsr system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of one or more genome-encoded immune systems that inhibit bacteriophage infection.", "grounding": "traitmech:000209", "id": "phage_defense_system", "is_orphan": false, "label": "phage defense system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#cffafe", "description": "NADase-associated molecular activity carried by a Dsr SIR2-domain antiphage protein.", "grounding": null, "id": "sir2_domain_antiphage_activity", "is_orphan": false, "label": "SIR2-domain antiphage activity", "node_type": "MOLECULAR_FUNCTION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Protection against particular bacteriophages by a Dsr subtype.", "grounding": null, "id": "subtype_specific_phage_resistance", "is_orphan": false, "label": "subtype-specific phage resistance", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "The graph captures Dsr systems at the family level while leaving DefenseFinder Dsr_I/Dsr_II profile boundaries, subtype-specific triggers outside DSR2, host ranges, anti-defense proteins, and exact phage targets unresolved. This Dsr family is distinct from metabolic dissimilatory sulfite reductase DsrAB systems.", "scope_status": "NONMECHANISTIC", "title": "Dsr loci encode SIR2-domain antiphage proteins"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -756,13 +846,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-09-19 13:00 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

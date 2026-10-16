@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/environment.html">ENVIRONMENT</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/environment.html">ENVIRONMENT</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>xerophilic</h1>
     <p class="curie"><code>traitmech:000011</code> · CLASS · REVIEWED</p>
 
@@ -85,9 +96,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>low water activity environment</strong>
+
             <span class="edge-predicate">selects for</span>
             <strong>xerophilic</strong>
-            <code>METPO:2007401</code>
+            <code>traitmech:000011</code>
+            <a href="https://w3id.org/metpo/2007401" rel="nofollow noreferrer"><code>METPO:2007401</code></a>
             <p>Persistent low-aw habitats favor organisms with active xerophilic growth.</p>
             <ul>
 
@@ -102,9 +115,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>xerophilic</strong>
+            <code>traitmech:000011</code>
             <span class="edge-predicate">enables</span>
             <strong>response to osmotic stress</strong>
-            <code>RO:0002327</code>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0006970" rel="nofollow noreferrer"><code>GO:0006970</code></a>
+            <a href="http://purl.obolibrary.org/obo/RO_0002327" rel="nofollow noreferrer"><code>RO:0002327</code></a>
             <p>Xerophilic organisms mount sustained osmotic adaptation supporting growth under low-aw stress.</p>
             <ul>
 
@@ -119,9 +134,11 @@
 
           <li id="pathograph-1-edge-3">
             <strong>low water activity environment</strong>
+
             <span class="edge-predicate">increases</span>
             <strong>compatible solute accumulation</strong>
-            <code>RO:0002213</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002213" rel="nofollow noreferrer"><code>RO:0002213</code></a>
             <p>Low water activity drives intracellular accumulation of compatible solutes (osmolytes).</p>
             <ul>
 
@@ -136,9 +153,11 @@
 
           <li id="pathograph-1-edge-4">
             <strong>low-molecular-weight polyols (glycerol, erythritol, arabitol)</strong>
+
             <span class="edge-predicate">enables</span>
             <strong>osmotic adjustment</strong>
-            <code>RO:0002327</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002327" rel="nofollow noreferrer"><code>RO:0002327</code></a>
             <p>Low-molecular-weight polyols are effective compatible solutes for osmotic adjustment at low aw.</p>
             <ul>
 
@@ -153,9 +172,11 @@
 
           <li id="pathograph-1-edge-5">
             <strong>high osmolarity glycerol (HOG) pathway</strong>
+
             <span class="edge-predicate">increases</span>
             <strong>response to osmotic stress</strong>
-            <code>RO:0002213</code>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0006970" rel="nofollow noreferrer"><code>GO:0006970</code></a>
+            <a href="http://purl.obolibrary.org/obo/RO_0002213" rel="nofollow noreferrer"><code>RO:0002213</code></a>
             <p>Activation of the HOG pathway drives osmotic adaptation under low-aw/high-osmolarity stress.</p>
             <ul>
 
@@ -170,9 +191,11 @@
 
           <li id="pathograph-1-edge-6">
             <strong>low water activity environment</strong>
+
             <span class="edge-predicate">increases</span>
             <strong>plasma membrane fluidity alteration</strong>
-            <code>RO:0002213</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002213" rel="nofollow noreferrer"><code>RO:0002213</code></a>
             <p>Low-aw/hypersaline stress drives alteration of plasma membrane fluidity as a broad fungal adaptation.</p>
             <ul>
 
@@ -187,9 +210,11 @@
 
           <li id="pathograph-1-edge-7">
             <strong>compatible solute accumulation</strong>
+
             <span class="edge-predicate">enables</span>
             <strong>osmotic adjustment</strong>
-            <code>RO:0002327</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002327" rel="nofollow noreferrer"><code>RO:0002327</code></a>
             <p>Accumulation of compatible solutes enables osmotic adjustment under low-water-activity stress.</p>
             <ul>
 
@@ -280,49 +305,49 @@
 
         <li>
           <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/cadmium_tolerant.html">cadmium tolerant</a>
+          <a href="../../traits/environment/zinc_tolerant.html">zinc tolerant</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/sulfur_globule.html">sulfur globule</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/cystine_arylamidase_activity.html">cystine arylamidase activity</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/cobalt_tolerant.html">cobalt tolerant</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/coagulase_activity.html">coagulase activity</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/copper_tolerant.html">copper tolerant</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/chemotropism.html">chemotropism</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/desiccation_tolerant.html">desiccation tolerant</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/chemotaxis.html">chemotaxis</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/piezotolerant.html">piezotolerant</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/cellular_rejuvenation.html">functional cellular rejuvenation</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/obligately_piezophilic.html">obligately piezophilic</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/cellular_contraction.html">cell body or cytoplasmic projection contraction</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/gas_vesicle.html">gas vesicle</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/cellular_buoyancy.html">cellular buoyancy</a>
           <span class="sim">1.000</span>
         </li>
 
@@ -876,7 +901,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking low-water-activity environments to active growth via osmotic adaptation.", "edges": [{"description": "Persistent low-aw habitats favor organisms with active xerophilic growth.", "evidence": [{"notes": "Low-water-activity review supports growth at very low aw as the defining xerophile feature.", "reference": "DOI:10.1098/rstb.2004.1502"}], "id": "edge-1", "is_orphan": false, "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "low_water_activity", "target": "xerophilic_trait"}, {"description": "Xerophilic organisms mount sustained osmotic adaptation supporting growth under low-aw stress.", "evidence": [{"notes": "Anhydrobiosis review supports low-aw adaptation as the physiological context distinguishing xerophilic growth from desiccation survival.", "reference": "DOI:10.3390/microorganisms10020432"}], "id": "edge-2", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "xerophilic_trait", "target": "osmotic_adaptation"}, {"description": "Low water activity drives intracellular accumulation of compatible solutes (osmolytes).", "evidence": [{"notes": "Microbes respond to low aw primarily via intracellular accumulation of compatible solutes (osmolytes) \u2014 broad cross-microbial statement.", "reference": "DOI:10.34293/sijash.v7i3.473"}], "id": "edge-3", "is_orphan": false, "predicate": "increases", "predicate_id": "RO:0002213", "source": "low_water_activity", "target": "compatible_solute_accumulation"}, {"description": "Low-molecular-weight polyols are effective compatible solutes for osmotic adjustment at low aw.", "evidence": [{"notes": "Polyols with lower molecular weight such as glycerol, erythritol, and arabitol were more effective for osmotic adjustment.", "reference": "DOI:10.1007/978-3-031-81904-9_3"}], "id": "edge-4", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "low_mw_polyols", "target": "osmotic_adjustment"}, {"description": "Activation of the HOG pathway drives osmotic adaptation under low-aw/high-osmolarity stress.", "evidence": [{"notes": "Adaptation by activating the high osmolarity glycerol (HOG) pathway; pathway-level edge relevant across low-aw settings.", "reference": "DOI:10.3390/jof10040290"}], "id": "edge-5", "is_orphan": false, "predicate": "increases", "predicate_id": "RO:0002213", "source": "hog_pathway", "target": "osmotic_adaptation"}, {"description": "Low-aw/hypersaline stress drives alteration of plasma membrane fluidity as a broad fungal adaptation.", "evidence": [{"notes": "Fungi employ physiological adaptations including altering plasma membrane fluidity; broad adaptation likely relevant across low-aw settings.", "reference": "DOI:10.3390/jof10040290"}], "id": "edge-6", "is_orphan": false, "predicate": "increases", "predicate_id": "RO:0002213", "source": "low_water_activity", "target": "membrane_fluidity_remodeling"}, {"description": "Accumulation of compatible solutes enables osmotic adjustment under low-water-activity stress.", "evidence": [{"notes": "Supports the general process bridge from compatible-solute accumulation to osmotic adjustment without asserting a universal solute identity.", "reference": "DOI:10.1046/j.1462-2920.2002.00335.x", "snippet": "rely exclusively on the accumulation of compatible solutes for osmoadaptation"}], "id": "edge-7", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "compatible_solute_accumulation", "target": "osmotic_adjustment"}], "evidence_rows": [{"description": "Persistent low-aw habitats favor organisms with active xerophilic growth.", "edge_id": "edge-1", "evidence": [{"notes": "Low-water-activity review supports growth at very low aw as the defining xerophile feature.", "reference": "DOI:10.1098/rstb.2004.1502"}], "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "low water activity environment", "target": "xerophilic"}, {"description": "Xerophilic organisms mount sustained osmotic adaptation supporting growth under low-aw stress.", "edge_id": "edge-2", "evidence": [{"notes": "Anhydrobiosis review supports low-aw adaptation as the physiological context distinguishing xerophilic growth from desiccation survival.", "reference": "DOI:10.3390/microorganisms10020432"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "xerophilic", "target": "response to osmotic stress"}, {"description": "Low water activity drives intracellular accumulation of compatible solutes (osmolytes).", "edge_id": "edge-3", "evidence": [{"notes": "Microbes respond to low aw primarily via intracellular accumulation of compatible solutes (osmolytes) \u2014 broad cross-microbial statement.", "reference": "DOI:10.34293/sijash.v7i3.473"}], "predicate": "increases", "predicate_id": "RO:0002213", "source": "low water activity environment", "target": "compatible solute accumulation"}, {"description": "Low-molecular-weight polyols are effective compatible solutes for osmotic adjustment at low aw.", "edge_id": "edge-4", "evidence": [{"notes": "Polyols with lower molecular weight such as glycerol, erythritol, and arabitol were more effective for osmotic adjustment.", "reference": "DOI:10.1007/978-3-031-81904-9_3"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "low-molecular-weight polyols (glycerol, erythritol, arabitol)", "target": "osmotic adjustment"}, {"description": "Activation of the HOG pathway drives osmotic adaptation under low-aw/high-osmolarity stress.", "edge_id": "edge-5", "evidence": [{"notes": "Adaptation by activating the high osmolarity glycerol (HOG) pathway; pathway-level edge relevant across low-aw settings.", "reference": "DOI:10.3390/jof10040290"}], "predicate": "increases", "predicate_id": "RO:0002213", "source": "high osmolarity glycerol (HOG) pathway", "target": "response to osmotic stress"}, {"description": "Low-aw/hypersaline stress drives alteration of plasma membrane fluidity as a broad fungal adaptation.", "edge_id": "edge-6", "evidence": [{"notes": "Fungi employ physiological adaptations including altering plasma membrane fluidity; broad adaptation likely relevant across low-aw settings.", "reference": "DOI:10.3390/jof10040290"}], "predicate": "increases", "predicate_id": "RO:0002213", "source": "low water activity environment", "target": "plasma membrane fluidity alteration"}, {"description": "Accumulation of compatible solutes enables osmotic adjustment under low-water-activity stress.", "edge_id": "edge-7", "evidence": [{"notes": "Supports the general process bridge from compatible-solute accumulation to osmotic adjustment without asserting a universal solute identity.", "reference": "DOI:10.1046/j.1462-2920.2002.00335.x", "snippet": "rely exclusively on the accumulation of compatible solutes for osmoadaptation"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "compatible solute accumulation", "target": "osmotic adjustment"}], "graph_id": "xerophilic_low_water_activity_growth", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Intracellular build-up of osmoprotective small molecules under low water activity.", "grounding": null, "id": "compatible_solute_accumulation", "is_orphan": false, "label": "compatible solute accumulation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#e0e7ff", "description": "Canonical osmotic-stress MAPK signaling pathway driving osmotic adaptation.", "grounding": null, "id": "hog_pathway", "is_orphan": false, "label": "high osmolarity glycerol (HOG) pathway", "node_type": "PATHWAY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Small polyols used as compatible solutes effective for osmotic adjustment at low aw.", "grounding": null, "id": "low_mw_polyols", "is_orphan": false, "label": "low-molecular-weight polyols (glycerol, erythritol, arabitol)", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Desiccated, high-sugar, or high-solute substrate with low aw.", "grounding": null, "id": "low_water_activity", "is_orphan": false, "label": "low water activity environment", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Adjustment of plasma membrane fluidity/composition during low-aw/high-salt stress.", "grounding": null, "id": "membrane_fluidity_remodeling", "is_orphan": false, "label": "plasma membrane fluidity alteration", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Cellular response maintaining turgor under solute or water stress.", "grounding": "GO:0006970", "id": "osmotic_adaptation", "is_orphan": false, "label": "response to osmotic stress", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Balancing of internal osmotic potential to sustain turgor and growth under low aw.", "grounding": null, "id": "osmotic_adjustment", "is_orphan": false, "label": "osmotic adjustment", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Growth at low water activity (low aw) substrates.", "grounding": "traitmech:000011", "id": "xerophilic_trait", "is_orphan": false, "label": "xerophilic", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This record is a broad environmental or morphological classification spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement descriptor; contextual protein nodes do not receive token UniProt examples.", "scope_status": "NONMECHANISTIC", "title": "Xerophilic growth at low water activity"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking low-water-activity environments to active growth via osmotic adaptation.", "edges": [{"description": "Persistent low-aw habitats favor organisms with active xerophilic growth.", "evidence": [{"notes": "Low-water-activity review supports growth at very low aw as the defining xerophile feature.", "reference": "DOI:10.1098/rstb.2004.1502"}], "id": "edge-1", "is_orphan": false, "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "low_water_activity", "target": "xerophilic_trait"}, {"description": "Xerophilic organisms mount sustained osmotic adaptation supporting growth under low-aw stress.", "evidence": [{"notes": "Anhydrobiosis review supports low-aw adaptation as the physiological context distinguishing xerophilic growth from desiccation survival.", "reference": "DOI:10.3390/microorganisms10020432"}], "id": "edge-2", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "xerophilic_trait", "target": "osmotic_adaptation"}, {"description": "Low water activity drives intracellular accumulation of compatible solutes (osmolytes).", "evidence": [{"notes": "Microbes respond to low aw primarily via intracellular accumulation of compatible solutes (osmolytes) \u2014 broad cross-microbial statement.", "reference": "DOI:10.34293/sijash.v7i3.473"}], "id": "edge-3", "is_orphan": false, "predicate": "increases", "predicate_id": "RO:0002213", "source": "low_water_activity", "target": "compatible_solute_accumulation"}, {"description": "Low-molecular-weight polyols are effective compatible solutes for osmotic adjustment at low aw.", "evidence": [{"notes": "Polyols with lower molecular weight such as glycerol, erythritol, and arabitol were more effective for osmotic adjustment.", "reference": "DOI:10.1007/978-3-031-81904-9_3"}], "id": "edge-4", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "low_mw_polyols", "target": "osmotic_adjustment"}, {"description": "Activation of the HOG pathway drives osmotic adaptation under low-aw/high-osmolarity stress.", "evidence": [{"notes": "Adaptation by activating the high osmolarity glycerol (HOG) pathway; pathway-level edge relevant across low-aw settings.", "reference": "DOI:10.3390/jof10040290"}], "id": "edge-5", "is_orphan": false, "predicate": "increases", "predicate_id": "RO:0002213", "source": "hog_pathway", "target": "osmotic_adaptation"}, {"description": "Low-aw/hypersaline stress drives alteration of plasma membrane fluidity as a broad fungal adaptation.", "evidence": [{"notes": "Fungi employ physiological adaptations including altering plasma membrane fluidity; broad adaptation likely relevant across low-aw settings.", "reference": "DOI:10.3390/jof10040290"}], "id": "edge-6", "is_orphan": false, "predicate": "increases", "predicate_id": "RO:0002213", "source": "low_water_activity", "target": "membrane_fluidity_remodeling"}, {"description": "Accumulation of compatible solutes enables osmotic adjustment under low-water-activity stress.", "evidence": [{"notes": "Supports the general process bridge from compatible-solute accumulation to osmotic adjustment without asserting a universal solute identity.", "reference": "DOI:10.1046/j.1462-2920.2002.00335.x", "snippet": "rely exclusively on the accumulation of compatible solutes for osmoadaptation"}], "id": "edge-7", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "compatible_solute_accumulation", "target": "osmotic_adjustment"}], "evidence_rows": [{"description": "Persistent low-aw habitats favor organisms with active xerophilic growth.", "edge_id": "edge-1", "evidence": [{"notes": "Low-water-activity review supports growth at very low aw as the defining xerophile feature.", "reference": "DOI:10.1098/rstb.2004.1502"}], "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "low water activity environment", "source_grounding": null, "target": "xerophilic", "target_grounding": "traitmech:000011"}, {"description": "Xerophilic organisms mount sustained osmotic adaptation supporting growth under low-aw stress.", "edge_id": "edge-2", "evidence": [{"notes": "Anhydrobiosis review supports low-aw adaptation as the physiological context distinguishing xerophilic growth from desiccation survival.", "reference": "DOI:10.3390/microorganisms10020432"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "xerophilic", "source_grounding": "traitmech:000011", "target": "response to osmotic stress", "target_grounding": "GO:0006970"}, {"description": "Low water activity drives intracellular accumulation of compatible solutes (osmolytes).", "edge_id": "edge-3", "evidence": [{"notes": "Microbes respond to low aw primarily via intracellular accumulation of compatible solutes (osmolytes) \u2014 broad cross-microbial statement.", "reference": "DOI:10.34293/sijash.v7i3.473"}], "predicate": "increases", "predicate_id": "RO:0002213", "source": "low water activity environment", "source_grounding": null, "target": "compatible solute accumulation", "target_grounding": null}, {"description": "Low-molecular-weight polyols are effective compatible solutes for osmotic adjustment at low aw.", "edge_id": "edge-4", "evidence": [{"notes": "Polyols with lower molecular weight such as glycerol, erythritol, and arabitol were more effective for osmotic adjustment.", "reference": "DOI:10.1007/978-3-031-81904-9_3"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "low-molecular-weight polyols (glycerol, erythritol, arabitol)", "source_grounding": null, "target": "osmotic adjustment", "target_grounding": null}, {"description": "Activation of the HOG pathway drives osmotic adaptation under low-aw/high-osmolarity stress.", "edge_id": "edge-5", "evidence": [{"notes": "Adaptation by activating the high osmolarity glycerol (HOG) pathway; pathway-level edge relevant across low-aw settings.", "reference": "DOI:10.3390/jof10040290"}], "predicate": "increases", "predicate_id": "RO:0002213", "source": "high osmolarity glycerol (HOG) pathway", "source_grounding": null, "target": "response to osmotic stress", "target_grounding": "GO:0006970"}, {"description": "Low-aw/hypersaline stress drives alteration of plasma membrane fluidity as a broad fungal adaptation.", "edge_id": "edge-6", "evidence": [{"notes": "Fungi employ physiological adaptations including altering plasma membrane fluidity; broad adaptation likely relevant across low-aw settings.", "reference": "DOI:10.3390/jof10040290"}], "predicate": "increases", "predicate_id": "RO:0002213", "source": "low water activity environment", "source_grounding": null, "target": "plasma membrane fluidity alteration", "target_grounding": null}, {"description": "Accumulation of compatible solutes enables osmotic adjustment under low-water-activity stress.", "edge_id": "edge-7", "evidence": [{"notes": "Supports the general process bridge from compatible-solute accumulation to osmotic adjustment without asserting a universal solute identity.", "reference": "DOI:10.1046/j.1462-2920.2002.00335.x", "snippet": "rely exclusively on the accumulation of compatible solutes for osmoadaptation"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "compatible solute accumulation", "source_grounding": null, "target": "osmotic adjustment", "target_grounding": null}], "graph_id": "xerophilic_low_water_activity_growth", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Intracellular build-up of osmoprotective small molecules under low water activity.", "grounding": null, "id": "compatible_solute_accumulation", "is_orphan": false, "label": "compatible solute accumulation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#e0e7ff", "description": "Canonical osmotic-stress MAPK signaling pathway driving osmotic adaptation.", "grounding": null, "id": "hog_pathway", "is_orphan": false, "label": "high osmolarity glycerol (HOG) pathway", "node_type": "PATHWAY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Small polyols used as compatible solutes effective for osmotic adjustment at low aw.", "grounding": null, "id": "low_mw_polyols", "is_orphan": false, "label": "low-molecular-weight polyols (glycerol, erythritol, arabitol)", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Desiccated, high-sugar, or high-solute substrate with low aw.", "grounding": null, "id": "low_water_activity", "is_orphan": false, "label": "low water activity environment", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Adjustment of plasma membrane fluidity/composition during low-aw/high-salt stress.", "grounding": null, "id": "membrane_fluidity_remodeling", "is_orphan": false, "label": "plasma membrane fluidity alteration", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Cellular response maintaining turgor under solute or water stress.", "grounding": "GO:0006970", "id": "osmotic_adaptation", "is_orphan": false, "label": "response to osmotic stress", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Balancing of internal osmotic potential to sustain turgor and growth under low aw.", "grounding": null, "id": "osmotic_adjustment", "is_orphan": false, "label": "osmotic adjustment", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Growth at low water activity (low aw) substrates.", "grounding": "traitmech:000011", "id": "xerophilic_trait", "is_orphan": false, "label": "xerophilic", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This record is a broad environmental or morphological classification spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement descriptor; contextual protein nodes do not receive token UniProt examples.", "scope_status": "NONMECHANISTIC", "title": "Xerophilic growth at low water activity"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -896,13 +921,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-08-26 10:32 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

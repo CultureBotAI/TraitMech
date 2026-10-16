@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/ecology.html">ECOLOGY</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/ecology.html">ECOLOGY</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>epiphytic</h1>
     <p class="curie"><code>traitmech:000443</code> · CLASS · PROPOSED</p>
 
@@ -85,9 +96,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>living external plant surface</strong>
+
             <span class="edge-predicate">enables</span>
             <strong>epiphytic colonization</strong>
-            <code>RO:0002327</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002327" rel="nofollow noreferrer"><code>RO:0002327</code></a>
             <p>Living aerial plant surfaces are the host tissue habitat where epiphytic populations establish.</p>
             <ul>
 
@@ -102,9 +115,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>epiphytic colonization</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>epiphytic</strong>
-            <code>METPO:2007700</code>
+            <code>traitmech:000443</code>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>Epiphytic colonization realizes the plant-surface epiphytic ecological trait.</p>
             <ul>
 
@@ -176,11 +191,75 @@
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
 
-      <p class="no-match">No kg-microbe node embedding matched this record
-        in the 2026-04-25 deepwalk.</p>
+      <p class="match-method">Matched <strong>1</strong>
+        kg-microbe node
+        via <em>parent_proxy</em>.</p>
+      <ul class="kgm-nodes">
+
+        <li><code>METPO:1000059</code> <span class="dim-preview">[-2.682, -2.070, -3.656, -0.652, …]</span></li>
+
+      </ul>
+      <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
 
     </div>
 
+
+    <div class="card">
+      <h2>Nearest neighbors in embedding space</h2>
+      <p class="meta">Top-8 cosine-similar METPO traits
+        from the 2026-04-25 deepwalk (512-D).</p>
+      <ul class="nn-list">
+
+        <li>
+          <span class="nn-cat">ecology</span>
+          <a href="../../traits/ecology/habitat_association.html">habitat association</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">ecology</span>
+          <a href="../../traits/ecology/gut_associated.html">gut-associated</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">ecology</span>
+          <a href="../../traits/ecology/fungal_nematophagy.html">fungal nematophagy</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">ecology</span>
+          <a href="../../traits/ecology/kin_discrimination.html">kin discrimination</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">ecology</span>
+          <a href="../../traits/ecology/mutualism.html">mutualism</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">ecology</span>
+          <a href="../../traits/ecology/free_living.html">free-living</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">ecology</span>
+          <a href="../../traits/ecology/nitrogen_fixing_symbiosis.html">nitrogen-fixing symbiosis</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">ecology</span>
+          <a href="../../traits/ecology/nutritional_fungal_mycoparasitism.html">nutritional fungal mycoparasitism</a>
+          <span class="sim">1.000</span>
+        </li>
+
+      </ul>
+    </div>
 
 
 
@@ -249,6 +328,11 @@
     </dl>
   </div>
 
+
+  <div class="card rail-kgm">
+    <h2>kg-microbe</h2>
+    <p class="meta">1 matching node (parent_proxy)</p>
+  </div>
 
 </aside>
 </div>
@@ -582,7 +666,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed ecological sketch connecting exposed living plant surfaces to epiphytic residence.", "edges": [{"description": "Living aerial plant surfaces are the host tissue habitat where epiphytic populations establish.", "evidence": [{"notes": "Lindow and Brandl define the phyllosphere as an aerial plant habitat and its inhabitants as epiphytes.", "reference": "DOI:10.1128/AEM.69.4.1875-1883.2003", "snippet": "The aerial habitat colonized by these microbes is termed the phyllosphere, and the inhabitants are called epiphytes."}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "external_plant_surface", "target": "epiphytic_colonization"}, {"description": "Epiphytic colonization realizes the plant-surface epiphytic ecological trait.", "evidence": [{"notes": "Fones et al. define epiphytic microbes by leaf-surface residence.", "reference": "DOI:10.1186/s12915-024-01967-1", "snippet": "Epiphytic microbes are those that live for some or all of their life cycle on the surface of plant leaves."}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "epiphytic_colonization", "target": "epiphytic_trait"}], "evidence_rows": [{"description": "Living aerial plant surfaces are the host tissue habitat where epiphytic populations establish.", "edge_id": "edge-1", "evidence": [{"notes": "Lindow and Brandl define the phyllosphere as an aerial plant habitat and its inhabitants as epiphytes.", "reference": "DOI:10.1128/AEM.69.4.1875-1883.2003", "snippet": "The aerial habitat colonized by these microbes is termed the phyllosphere, and the inhabitants are called epiphytes."}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "living external plant surface", "target": "epiphytic colonization"}, {"description": "Epiphytic colonization realizes the plant-surface epiphytic ecological trait.", "edge_id": "edge-2", "evidence": [{"notes": "Fones et al. define epiphytic microbes by leaf-surface residence.", "reference": "DOI:10.1186/s12915-024-01967-1", "snippet": "Epiphytic microbes are those that live for some or all of their life cycle on the surface of plant leaves."}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "epiphytic colonization", "target": "epiphytic"}], "graph_id": "epiphytic_plant_surface_colonization", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Residence of microbial populations on the surface of leaves or other aerial plant parts.", "grounding": null, "id": "epiphytic_colonization", "is_orphan": false, "label": "epiphytic colonization", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Residence on living aerial plant surfaces.", "grounding": "traitmech:000443", "id": "epiphytic_trait", "is_orphan": false, "label": "epiphytic", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "An aerial external plant host surface occupied by epiphytic microbes.", "grounding": null, "id": "external_plant_surface", "is_orphan": false, "label": "living external plant surface", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This broad plant-host habitat trait spans bacteria, yeasts, and filamentous fungi on external plant surfaces and does not assert one universal molecular colonization mechanism.", "scope_status": "NONMECHANISTIC", "title": "Plant-surface colonization defines epiphytism"}];
+  var graphs = [{"description": "Evidence-backed ecological sketch connecting exposed living plant surfaces to epiphytic residence.", "edges": [{"description": "Living aerial plant surfaces are the host tissue habitat where epiphytic populations establish.", "evidence": [{"notes": "Lindow and Brandl define the phyllosphere as an aerial plant habitat and its inhabitants as epiphytes.", "reference": "DOI:10.1128/AEM.69.4.1875-1883.2003", "snippet": "The aerial habitat colonized by these microbes is termed the phyllosphere, and the inhabitants are called epiphytes."}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "external_plant_surface", "target": "epiphytic_colonization"}, {"description": "Epiphytic colonization realizes the plant-surface epiphytic ecological trait.", "evidence": [{"notes": "Fones et al. define epiphytic microbes by leaf-surface residence.", "reference": "DOI:10.1186/s12915-024-01967-1", "snippet": "Epiphytic microbes are those that live for some or all of their life cycle on the surface of plant leaves."}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "epiphytic_colonization", "target": "epiphytic_trait"}], "evidence_rows": [{"description": "Living aerial plant surfaces are the host tissue habitat where epiphytic populations establish.", "edge_id": "edge-1", "evidence": [{"notes": "Lindow and Brandl define the phyllosphere as an aerial plant habitat and its inhabitants as epiphytes.", "reference": "DOI:10.1128/AEM.69.4.1875-1883.2003", "snippet": "The aerial habitat colonized by these microbes is termed the phyllosphere, and the inhabitants are called epiphytes."}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "living external plant surface", "source_grounding": null, "target": "epiphytic colonization", "target_grounding": null}, {"description": "Epiphytic colonization realizes the plant-surface epiphytic ecological trait.", "edge_id": "edge-2", "evidence": [{"notes": "Fones et al. define epiphytic microbes by leaf-surface residence.", "reference": "DOI:10.1186/s12915-024-01967-1", "snippet": "Epiphytic microbes are those that live for some or all of their life cycle on the surface of plant leaves."}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "epiphytic colonization", "source_grounding": null, "target": "epiphytic", "target_grounding": "traitmech:000443"}], "graph_id": "epiphytic_plant_surface_colonization", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Residence of microbial populations on the surface of leaves or other aerial plant parts.", "grounding": null, "id": "epiphytic_colonization", "is_orphan": false, "label": "epiphytic colonization", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Residence on living aerial plant surfaces.", "grounding": "traitmech:000443", "id": "epiphytic_trait", "is_orphan": false, "label": "epiphytic", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "An aerial external plant host surface occupied by epiphytic microbes.", "grounding": null, "id": "external_plant_surface", "is_orphan": false, "label": "living external plant surface", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This broad plant-host habitat trait spans bacteria, yeasts, and filamentous fungi on external plant surfaces and does not assert one universal molecular colonization mechanism.", "scope_status": "NONMECHANISTIC", "title": "Plant-surface colonization defines epiphytism"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -602,13 +686,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-09-28 20:21 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

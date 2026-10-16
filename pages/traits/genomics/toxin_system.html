@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/genomics.html">GENOMICS</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/genomics.html">GENOMICS</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>ToxIN system</h1>
     <p class="curie"><code>traitmech:000226</code> · CLASS · PROPOSED</p>
 
@@ -121,9 +132,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>toxIN locus</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>ToxIN type III toxin-antitoxin activity</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>The toxIN locus encodes the defining type III protein-RNA toxin-antitoxin module.</p>
             <ul>
 
@@ -138,9 +151,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>ToxIN type III toxin-antitoxin activity</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>ToxN-dependent growth inhibition</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>The ToxIN toxin-antitoxin module couples ToxN growth inhibition to ToxI RNA antitoxin counteraction.</p>
             <ul>
 
@@ -155,9 +170,11 @@
 
           <li id="pathograph-1-edge-3">
             <strong>toxIN locus</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>restricted phage propagation</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>The native toxIN locus contributes to abortive restriction of phage propagation.</p>
             <ul>
 
@@ -172,9 +189,11 @@
 
           <li id="pathograph-1-edge-4">
             <strong>restricted phage propagation</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>ToxIN system</strong>
-            <code>METPO:2007700</code>
+            <code>traitmech:000226</code>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>Restriction of phage propagation realizes the ToxIN abortive-infection defense trait.</p>
             <ul>
 
@@ -189,8 +208,10 @@
 
           <li id="pathograph-1-edge-5">
             <strong>ToxIN system</strong>
+            <code>traitmech:000226</code>
             <span class="edge-predicate">is a</span>
             <strong>abortive infection system</strong>
+            <code>traitmech:000214</code>
             <code>rdfs:subClassOf</code>
             <p>ToxIN system possession is an abortive-infection-system trait.</p>
             <ul>
@@ -252,11 +273,75 @@
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
 
-      <p class="no-match">No kg-microbe node embedding matched this record
-        in the 2026-04-25 deepwalk.</p>
+      <p class="match-method">Matched <strong>1</strong>
+        kg-microbe node
+        via <em>parent_proxy</em>.</p>
+      <ul class="kgm-nodes">
+
+        <li><code>METPO:1000188</code> <span class="dim-preview">[-0.956, -1.962, -3.148, +1.274, …]</span></li>
+
+      </ul>
+      <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
 
     </div>
 
+
+    <div class="card">
+      <h2>Nearest neighbors in embedding space</h2>
+      <p class="meta">Top-8 cosine-similar METPO traits
+        from the 2026-04-25 deepwalk (512-D).</p>
+      <ul class="nn-list">
+
+        <li>
+          <span class="nn-cat">upper</span>
+          <a href="../../traits/upper/quality.html">quality</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hna_system.html">Hna system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hma_system.html">Hma system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hesat_system.html">Hesat system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_08_system.html">HEC-08 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_07_system.html">HEC-07 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_06_system.html">HEC-06 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_05_system.html">HEC-05 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+      </ul>
+    </div>
 
 
 
@@ -344,6 +429,11 @@
     </dl>
   </div>
 
+
+  <div class="card rail-kgm">
+    <h2>kg-microbe</h2>
+    <p class="meta">1 matching node (parent_proxy)</p>
+  </div>
 
 </aside>
 </div>
@@ -677,7 +767,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed process sketch linking a toxIN locus to type III toxin-antitoxin activity, ToxN-dependent growth inhibition, restricted phage propagation, and abortive-infection system possession.", "edges": [{"description": "The toxIN locus encodes the defining type III protein-RNA toxin-antitoxin module.", "evidence": [{"notes": "Fineran et al. show that ToxIN constitutes a protein-RNA toxin-antitoxin system.", "reference": "DOI:10.1073/pnas.0808832106", "snippet": "ToxIN defines an entirely new TA class that functions via a novel protein-RNA mechanism"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "toxin_locus", "target": "toxin_type_iii_toxin_antitoxin_activity"}, {"description": "The ToxIN toxin-antitoxin module couples ToxN growth inhibition to ToxI RNA antitoxin counteraction.", "evidence": [{"notes": "Fineran et al. identify ToxN as the toxic component and ToxI repeats as RNA antitoxins.", "reference": "DOI:10.1073/pnas.0808832106", "snippet": "ToxN inhibiting bacterial growth and the tandemly repeated ToxI RNA antitoxin counteracting the toxicity"}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "toxin_type_iii_toxin_antitoxin_activity", "target": "toxn_growth_inhibition"}, {"description": "The native toxIN locus contributes to abortive restriction of phage propagation.", "evidence": [{"notes": "Fineran et al. connect the toxIN locus to the abortive-infection phage resistance output.", "reference": "DOI:10.1073/pnas.0808832106", "snippet": "All of our data are consistent with ToxIN functioning as a phage Abi system"}], "id": "edge-3", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "toxin_locus", "target": "restricted_phage_propagation"}, {"description": "Restriction of phage propagation realizes the ToxIN abortive-infection defense trait.", "evidence": [{"notes": "Blower et al. describe ToxIN as a two-component Abi system that aborts phage infection.", "reference": "DOI:10.1128/JB.00720-09", "snippet": "this two-component Abi system operates as a novel protein-RNA toxin-antitoxin (TA) system to abort phage infection in multiple gram-negative bacteria"}], "id": "edge-4", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "restricted_phage_propagation", "target": "toxin_system_trait"}, {"description": "ToxIN system possession is an abortive-infection-system trait.", "evidence": [{"notes": "Blower et al. place ToxIN in the abortive infection class of phage defense.", "reference": "DOI:10.1128/JB.00720-09", "snippet": "Designated ToxIN, this two-component abortive infection system acts as a toxin-antitoxin module"}], "id": "edge-5", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "toxin_system_trait", "target": "abortive_infection_system_trait"}], "evidence_rows": [{"description": "The toxIN locus encodes the defining type III protein-RNA toxin-antitoxin module.", "edge_id": "edge-1", "evidence": [{"notes": "Fineran et al. show that ToxIN constitutes a protein-RNA toxin-antitoxin system.", "reference": "DOI:10.1073/pnas.0808832106", "snippet": "ToxIN defines an entirely new TA class that functions via a novel protein-RNA mechanism"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "toxIN locus", "target": "ToxIN type III toxin-antitoxin activity"}, {"description": "The ToxIN toxin-antitoxin module couples ToxN growth inhibition to ToxI RNA antitoxin counteraction.", "edge_id": "edge-2", "evidence": [{"notes": "Fineran et al. identify ToxN as the toxic component and ToxI repeats as RNA antitoxins.", "reference": "DOI:10.1073/pnas.0808832106", "snippet": "ToxN inhibiting bacterial growth and the tandemly repeated ToxI RNA antitoxin counteracting the toxicity"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "ToxIN type III toxin-antitoxin activity", "target": "ToxN-dependent growth inhibition"}, {"description": "The native toxIN locus contributes to abortive restriction of phage propagation.", "edge_id": "edge-3", "evidence": [{"notes": "Fineran et al. connect the toxIN locus to the abortive-infection phage resistance output.", "reference": "DOI:10.1073/pnas.0808832106", "snippet": "All of our data are consistent with ToxIN functioning as a phage Abi system"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "toxIN locus", "target": "restricted phage propagation"}, {"description": "Restriction of phage propagation realizes the ToxIN abortive-infection defense trait.", "edge_id": "edge-4", "evidence": [{"notes": "Blower et al. describe ToxIN as a two-component Abi system that aborts phage infection.", "reference": "DOI:10.1128/JB.00720-09", "snippet": "this two-component Abi system operates as a novel protein-RNA toxin-antitoxin (TA) system to abort phage infection in multiple gram-negative bacteria"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "restricted phage propagation", "target": "ToxIN system"}, {"description": "ToxIN system possession is an abortive-infection-system trait.", "edge_id": "edge-5", "evidence": [{"notes": "Blower et al. place ToxIN in the abortive infection class of phage defense.", "reference": "DOI:10.1128/JB.00720-09", "snippet": "Designated ToxIN, this two-component abortive infection system acts as a toxin-antitoxin module"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "ToxIN system", "target": "abortive infection system"}], "graph_id": "toxin_type_iii_ta_antiphage_activity", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Possession of a genome-encoded abortive-infection phage defense system.", "grounding": "traitmech:000214", "id": "abortive_infection_system_trait", "is_orphan": false, "label": "abortive infection system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Reduced completion of phage propagation in a ToxIN-containing infected host cell.", "grounding": null, "id": "restricted_phage_propagation", "is_orphan": false, "label": "restricted phage propagation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "A type III protein-RNA toxin-antitoxin abortive-infection locus encoding the ToxN toxin and tandem ToxI RNA antitoxins.", "grounding": null, "id": "toxin_locus", "is_orphan": false, "label": "toxIN locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded toxIN type III toxin-antitoxin abortive-infection system.", "grounding": "traitmech:000226", "id": "toxin_system_trait", "is_orphan": false, "label": "ToxIN system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Protein-RNA toxin-antitoxin activity of ToxIN, in which tandem ToxI RNA repeats counteract ToxN toxicity.", "grounding": null, "id": "toxin_type_iii_toxin_antitoxin_activity", "is_orphan": false, "label": "ToxIN type III toxin-antitoxin activity", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Reversible bacterial growth inhibition caused by ToxN toxin activity.", "grounding": null, "id": "toxn_growth_inhibition", "is_orphan": false, "label": "ToxN-dependent growth inhibition", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "The graph captures ToxIN at the system level without asserting a universal phage activator, an exact molecular target for ToxN, or the stoichiometry of ToxI neutralization.", "scope_status": "NONMECHANISTIC", "title": "ToxIN type III toxin-antitoxin activity restricts phage propagation"}];
+  var graphs = [{"description": "Evidence-backed process sketch linking a toxIN locus to type III toxin-antitoxin activity, ToxN-dependent growth inhibition, restricted phage propagation, and abortive-infection system possession.", "edges": [{"description": "The toxIN locus encodes the defining type III protein-RNA toxin-antitoxin module.", "evidence": [{"notes": "Fineran et al. show that ToxIN constitutes a protein-RNA toxin-antitoxin system.", "reference": "DOI:10.1073/pnas.0808832106", "snippet": "ToxIN defines an entirely new TA class that functions via a novel protein-RNA mechanism"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "toxin_locus", "target": "toxin_type_iii_toxin_antitoxin_activity"}, {"description": "The ToxIN toxin-antitoxin module couples ToxN growth inhibition to ToxI RNA antitoxin counteraction.", "evidence": [{"notes": "Fineran et al. identify ToxN as the toxic component and ToxI repeats as RNA antitoxins.", "reference": "DOI:10.1073/pnas.0808832106", "snippet": "ToxN inhibiting bacterial growth and the tandemly repeated ToxI RNA antitoxin counteracting the toxicity"}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "toxin_type_iii_toxin_antitoxin_activity", "target": "toxn_growth_inhibition"}, {"description": "The native toxIN locus contributes to abortive restriction of phage propagation.", "evidence": [{"notes": "Fineran et al. connect the toxIN locus to the abortive-infection phage resistance output.", "reference": "DOI:10.1073/pnas.0808832106", "snippet": "All of our data are consistent with ToxIN functioning as a phage Abi system"}], "id": "edge-3", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "toxin_locus", "target": "restricted_phage_propagation"}, {"description": "Restriction of phage propagation realizes the ToxIN abortive-infection defense trait.", "evidence": [{"notes": "Blower et al. describe ToxIN as a two-component Abi system that aborts phage infection.", "reference": "DOI:10.1128/JB.00720-09", "snippet": "this two-component Abi system operates as a novel protein-RNA toxin-antitoxin (TA) system to abort phage infection in multiple gram-negative bacteria"}], "id": "edge-4", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "restricted_phage_propagation", "target": "toxin_system_trait"}, {"description": "ToxIN system possession is an abortive-infection-system trait.", "evidence": [{"notes": "Blower et al. place ToxIN in the abortive infection class of phage defense.", "reference": "DOI:10.1128/JB.00720-09", "snippet": "Designated ToxIN, this two-component abortive infection system acts as a toxin-antitoxin module"}], "id": "edge-5", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "toxin_system_trait", "target": "abortive_infection_system_trait"}], "evidence_rows": [{"description": "The toxIN locus encodes the defining type III protein-RNA toxin-antitoxin module.", "edge_id": "edge-1", "evidence": [{"notes": "Fineran et al. show that ToxIN constitutes a protein-RNA toxin-antitoxin system.", "reference": "DOI:10.1073/pnas.0808832106", "snippet": "ToxIN defines an entirely new TA class that functions via a novel protein-RNA mechanism"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "toxIN locus", "source_grounding": null, "target": "ToxIN type III toxin-antitoxin activity", "target_grounding": null}, {"description": "The ToxIN toxin-antitoxin module couples ToxN growth inhibition to ToxI RNA antitoxin counteraction.", "edge_id": "edge-2", "evidence": [{"notes": "Fineran et al. identify ToxN as the toxic component and ToxI repeats as RNA antitoxins.", "reference": "DOI:10.1073/pnas.0808832106", "snippet": "ToxN inhibiting bacterial growth and the tandemly repeated ToxI RNA antitoxin counteracting the toxicity"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "ToxIN type III toxin-antitoxin activity", "source_grounding": null, "target": "ToxN-dependent growth inhibition", "target_grounding": null}, {"description": "The native toxIN locus contributes to abortive restriction of phage propagation.", "edge_id": "edge-3", "evidence": [{"notes": "Fineran et al. connect the toxIN locus to the abortive-infection phage resistance output.", "reference": "DOI:10.1073/pnas.0808832106", "snippet": "All of our data are consistent with ToxIN functioning as a phage Abi system"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "toxIN locus", "source_grounding": null, "target": "restricted phage propagation", "target_grounding": null}, {"description": "Restriction of phage propagation realizes the ToxIN abortive-infection defense trait.", "edge_id": "edge-4", "evidence": [{"notes": "Blower et al. describe ToxIN as a two-component Abi system that aborts phage infection.", "reference": "DOI:10.1128/JB.00720-09", "snippet": "this two-component Abi system operates as a novel protein-RNA toxin-antitoxin (TA) system to abort phage infection in multiple gram-negative bacteria"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "restricted phage propagation", "source_grounding": null, "target": "ToxIN system", "target_grounding": "traitmech:000226"}, {"description": "ToxIN system possession is an abortive-infection-system trait.", "edge_id": "edge-5", "evidence": [{"notes": "Blower et al. place ToxIN in the abortive infection class of phage defense.", "reference": "DOI:10.1128/JB.00720-09", "snippet": "Designated ToxIN, this two-component abortive infection system acts as a toxin-antitoxin module"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "ToxIN system", "source_grounding": "traitmech:000226", "target": "abortive infection system", "target_grounding": "traitmech:000214"}], "graph_id": "toxin_type_iii_ta_antiphage_activity", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Possession of a genome-encoded abortive-infection phage defense system.", "grounding": "traitmech:000214", "id": "abortive_infection_system_trait", "is_orphan": false, "label": "abortive infection system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Reduced completion of phage propagation in a ToxIN-containing infected host cell.", "grounding": null, "id": "restricted_phage_propagation", "is_orphan": false, "label": "restricted phage propagation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "A type III protein-RNA toxin-antitoxin abortive-infection locus encoding the ToxN toxin and tandem ToxI RNA antitoxins.", "grounding": null, "id": "toxin_locus", "is_orphan": false, "label": "toxIN locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded toxIN type III toxin-antitoxin abortive-infection system.", "grounding": "traitmech:000226", "id": "toxin_system_trait", "is_orphan": false, "label": "ToxIN system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Protein-RNA toxin-antitoxin activity of ToxIN, in which tandem ToxI RNA repeats counteract ToxN toxicity.", "grounding": null, "id": "toxin_type_iii_toxin_antitoxin_activity", "is_orphan": false, "label": "ToxIN type III toxin-antitoxin activity", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Reversible bacterial growth inhibition caused by ToxN toxin activity.", "grounding": null, "id": "toxn_growth_inhibition", "is_orphan": false, "label": "ToxN-dependent growth inhibition", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "The graph captures ToxIN at the system level without asserting a universal phage activator, an exact molecular target for ToxN, or the stoichiometry of ToxI neutralization.", "scope_status": "NONMECHANISTIC", "title": "ToxIN type III toxin-antitoxin activity restricts phage propagation"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -697,13 +787,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-09-15 19:25 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

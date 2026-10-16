@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/morphology.html">MORPHOLOGY</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/morphology.html">MORPHOLOGY</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>ferrosome</h1>
     <p class="curie"><code>traitmech:000527</code> · CLASS · PROPOSED</p>
 
@@ -103,9 +114,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>ferrosome formation</strong>
+
             <span class="edge-predicate">has output</span>
             <strong>ferrosome</strong>
-            <code>RO:0002234</code>
+            <code>traitmech:000527</code>
+            <a href="http://purl.obolibrary.org/obo/RO_0002234" rel="nofollow noreferrer"><code>RO:0002234</code></a>
             <p>Fez-dependent ferrosome formation produces the ferrosome intracellular organelle.</p>
             <ul>
 
@@ -138,9 +151,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>non-crystalline iron phosphate biomineral</strong>
+
             <span class="edge-predicate">located in</span>
             <strong>ferrosome</strong>
-            <code>biolink:located_in</code>
+            <code>traitmech:000527</code>
+            <a href="https://w3id.org/biolink/vocab/located_in" rel="nofollow noreferrer"><code>biolink:located_in</code></a>
             <p>Non-crystalline iron phosphate biominerals are stored within ferrosome organelles.</p>
             <ul>
 
@@ -155,9 +170,11 @@
 
           <li id="pathograph-1-edge-3">
             <strong>ferrosome</strong>
+            <code>traitmech:000527</code>
             <span class="edge-predicate">enables</span>
             <strong>iron storage</strong>
-            <code>RO:0002327</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002327" rel="nofollow noreferrer"><code>RO:0002327</code></a>
             <p>Ferrosome organelles realize intracellular iron storage.</p>
             <ul>
 
@@ -224,11 +241,75 @@
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
 
-      <p class="no-match">No kg-microbe node embedding matched this record
-        in the 2026-04-25 deepwalk.</p>
+      <p class="match-method">Matched <strong>1</strong>
+        kg-microbe node
+        via <em>parent_proxy</em>.</p>
+      <ul class="kgm-nodes">
+
+        <li><code>METPO:1000059</code> <span class="dim-preview">[-2.682, -2.070, -3.656, -0.652, …]</span></li>
+
+      </ul>
+      <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
 
     </div>
 
+
+    <div class="card">
+      <h2>Nearest neighbors in embedding space</h2>
+      <p class="meta">Top-8 cosine-similar METPO traits
+        from the 2026-04-25 deepwalk (512-D).</p>
+      <ul class="nn-list">
+
+        <li>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/cytogamy.html">cytogamy</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/coccolith_production.html">coccolith production</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/coagulase_activity.html">coagulase activity</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/chemotropism.html">chemotropism</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/chemotaxis.html">chemotaxis</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/cellular_rejuvenation.html">functional cellular rejuvenation</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/cellular_contraction.html">cell body or cytoplasmic projection contraction</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/cold_shock_response.html">cold shock response</a>
+          <span class="sim">1.000</span>
+        </li>
+
+      </ul>
+    </div>
 
 
 
@@ -354,6 +435,11 @@
     </dl>
   </div>
 
+
+  <div class="card rail-kgm">
+    <h2>kg-microbe</h2>
+    <p class="meta">1 matching node (parent_proxy)</p>
+  </div>
 
 </aside>
 </div>
@@ -687,7 +773,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking Fez-dependent formation to membrane-bound iron-storage organelles.", "edges": [{"description": "Fez-dependent ferrosome formation produces the ferrosome intracellular organelle.", "evidence": [{"notes": "Grant et al. establish ferrosomes as an iron-storage organelle class.", "reference": "DOI:10.1038/s41586-022-04741-x", "snippet": "Overall, this work establishes ferrosomes as a new class of iron storage organelles"}, {"notes": "Grant et al. support Fez protein-dependent ferrosome formation in Desulfovibrio magneticus.", "reference": "DOI:10.1038/s41586-022-04741-x", "snippet": "we identify three ferrosome-associated (Fez) proteins that are responsible for forming ferrosomes"}, {"notes": "Grant et al. support fez operon sufficiency for ferrosome formation in heterologous bacterial hosts.", "reference": "DOI:10.1038/s41586-022-04741-x", "snippet": "fez operons are sufficient for ferrosome formation in foreign hosts"}, {"notes": "Pi et al. support FezA- and FezB-dependent ferrosome formation in C. difficile.", "reference": "DOI:10.1038/s41586-023-06719-9", "snippet": "We found that a membrane protein (FezA) and a P1B6-ATPase transporter (FezB), repressed by both iron and the ferric uptake regulator Fur, are required for ferrosome formation"}], "id": "edge-1", "is_orphan": false, "predicate": "has output", "predicate_id": "RO:0002234", "source": "ferrosome_formation", "target": "ferrosome_trait"}, {"description": "Non-crystalline iron phosphate biominerals are stored within ferrosome organelles.", "evidence": [{"notes": "Pi et al. support membrane-bound ferrosome organelles storing non-crystalline iron phosphate in Clostridioides difficile.", "reference": "DOI:10.1038/s41586-023-06719-9", "snippet": "Here we report that C. difficile undergoes an intracellular iron biomineralization process and stores iron in membrane-bound ferrosome organelles containing non-crystalline iron phosphate biominerals."}], "id": "edge-2", "is_orphan": false, "predicate": "located in", "predicate_id": "biolink:located_in", "source": "non_crystalline_iron_phosphate", "target": "ferrosome_trait"}, {"description": "Ferrosome organelles realize intracellular iron storage.", "evidence": [{"notes": "Grant et al. establish ferrosomes as an iron-storage organelle class.", "reference": "DOI:10.1038/s41586-022-04741-x", "snippet": "Overall, this work establishes ferrosomes as a new class of iron storage organelles"}, {"notes": "Pi et al. support membrane-bound ferrosome organelles storing non-crystalline iron phosphate in Clostridioides difficile.", "reference": "DOI:10.1038/s41586-023-06719-9", "snippet": "Here we report that C. difficile undergoes an intracellular iron biomineralization process and stores iron in membrane-bound ferrosome organelles containing non-crystalline iron phosphate biominerals."}], "id": "edge-3", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "ferrosome_trait", "target": "iron_storage"}], "evidence_rows": [{"description": "Fez-dependent ferrosome formation produces the ferrosome intracellular organelle.", "edge_id": "edge-1", "evidence": [{"notes": "Grant et al. establish ferrosomes as an iron-storage organelle class.", "reference": "DOI:10.1038/s41586-022-04741-x", "snippet": "Overall, this work establishes ferrosomes as a new class of iron storage organelles"}, {"notes": "Grant et al. support Fez protein-dependent ferrosome formation in Desulfovibrio magneticus.", "reference": "DOI:10.1038/s41586-022-04741-x", "snippet": "we identify three ferrosome-associated (Fez) proteins that are responsible for forming ferrosomes"}, {"notes": "Grant et al. support fez operon sufficiency for ferrosome formation in heterologous bacterial hosts.", "reference": "DOI:10.1038/s41586-022-04741-x", "snippet": "fez operons are sufficient for ferrosome formation in foreign hosts"}, {"notes": "Pi et al. support FezA- and FezB-dependent ferrosome formation in C. difficile.", "reference": "DOI:10.1038/s41586-023-06719-9", "snippet": "We found that a membrane protein (FezA) and a P1B6-ATPase transporter (FezB), repressed by both iron and the ferric uptake regulator Fur, are required for ferrosome formation"}], "predicate": "has output", "predicate_id": "RO:0002234", "source": "ferrosome formation", "target": "ferrosome"}, {"description": "Non-crystalline iron phosphate biominerals are stored within ferrosome organelles.", "edge_id": "edge-2", "evidence": [{"notes": "Pi et al. support membrane-bound ferrosome organelles storing non-crystalline iron phosphate in Clostridioides difficile.", "reference": "DOI:10.1038/s41586-023-06719-9", "snippet": "Here we report that C. difficile undergoes an intracellular iron biomineralization process and stores iron in membrane-bound ferrosome organelles containing non-crystalline iron phosphate biominerals."}], "predicate": "located in", "predicate_id": "biolink:located_in", "source": "non-crystalline iron phosphate biomineral", "target": "ferrosome"}, {"description": "Ferrosome organelles realize intracellular iron storage.", "edge_id": "edge-3", "evidence": [{"notes": "Grant et al. establish ferrosomes as an iron-storage organelle class.", "reference": "DOI:10.1038/s41586-022-04741-x", "snippet": "Overall, this work establishes ferrosomes as a new class of iron storage organelles"}, {"notes": "Pi et al. support membrane-bound ferrosome organelles storing non-crystalline iron phosphate in Clostridioides difficile.", "reference": "DOI:10.1038/s41586-023-06719-9", "snippet": "Here we report that C. difficile undergoes an intracellular iron biomineralization process and stores iron in membrane-bound ferrosome organelles containing non-crystalline iron phosphate biominerals."}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "ferrosome", "target": "iron storage"}], "graph_id": "ferrosome_iron_storage", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Fez-dependent biogenesis of membrane-bound intracellular ferrosome organelles.", "grounding": null, "id": "ferrosome_formation", "is_orphan": false, "label": "ferrosome formation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Membrane-bound organelle storing intracellular iron as non-crystalline iron phosphate.", "grounding": "traitmech:000527", "id": "ferrosome_trait", "is_orphan": false, "label": "ferrosome", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Intracellular storage of iron in a recoverable organelle-associated pool.", "grounding": null, "id": "iron_storage", "is_orphan": false, "label": "iron storage", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Non-crystalline iron phosphate mineral stored inside ferrosomes.", "grounding": null, "id": "non_crystalline_iron_phosphate", "is_orphan": false, "label": "non-crystalline iron phosphate biomineral", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "The graph captures broad Fez-dependent formation and ferrosome iron storage at process and organelle level without asserting one taxon-universal Fez component roster, individual Fez-protein activity, accession-level protein examples, iron-remobilization mechanism, membrane-localization path, iron-deficiency trigger, or host-colonization output.", "scope_status": "NONMECHANISTIC", "title": "Fez proteins form iron-storing ferrosomes"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking Fez-dependent formation to membrane-bound iron-storage organelles.", "edges": [{"description": "Fez-dependent ferrosome formation produces the ferrosome intracellular organelle.", "evidence": [{"notes": "Grant et al. establish ferrosomes as an iron-storage organelle class.", "reference": "DOI:10.1038/s41586-022-04741-x", "snippet": "Overall, this work establishes ferrosomes as a new class of iron storage organelles"}, {"notes": "Grant et al. support Fez protein-dependent ferrosome formation in Desulfovibrio magneticus.", "reference": "DOI:10.1038/s41586-022-04741-x", "snippet": "we identify three ferrosome-associated (Fez) proteins that are responsible for forming ferrosomes"}, {"notes": "Grant et al. support fez operon sufficiency for ferrosome formation in heterologous bacterial hosts.", "reference": "DOI:10.1038/s41586-022-04741-x", "snippet": "fez operons are sufficient for ferrosome formation in foreign hosts"}, {"notes": "Pi et al. support FezA- and FezB-dependent ferrosome formation in C. difficile.", "reference": "DOI:10.1038/s41586-023-06719-9", "snippet": "We found that a membrane protein (FezA) and a P1B6-ATPase transporter (FezB), repressed by both iron and the ferric uptake regulator Fur, are required for ferrosome formation"}], "id": "edge-1", "is_orphan": false, "predicate": "has output", "predicate_id": "RO:0002234", "source": "ferrosome_formation", "target": "ferrosome_trait"}, {"description": "Non-crystalline iron phosphate biominerals are stored within ferrosome organelles.", "evidence": [{"notes": "Pi et al. support membrane-bound ferrosome organelles storing non-crystalline iron phosphate in Clostridioides difficile.", "reference": "DOI:10.1038/s41586-023-06719-9", "snippet": "Here we report that C. difficile undergoes an intracellular iron biomineralization process and stores iron in membrane-bound ferrosome organelles containing non-crystalline iron phosphate biominerals."}], "id": "edge-2", "is_orphan": false, "predicate": "located in", "predicate_id": "biolink:located_in", "source": "non_crystalline_iron_phosphate", "target": "ferrosome_trait"}, {"description": "Ferrosome organelles realize intracellular iron storage.", "evidence": [{"notes": "Grant et al. establish ferrosomes as an iron-storage organelle class.", "reference": "DOI:10.1038/s41586-022-04741-x", "snippet": "Overall, this work establishes ferrosomes as a new class of iron storage organelles"}, {"notes": "Pi et al. support membrane-bound ferrosome organelles storing non-crystalline iron phosphate in Clostridioides difficile.", "reference": "DOI:10.1038/s41586-023-06719-9", "snippet": "Here we report that C. difficile undergoes an intracellular iron biomineralization process and stores iron in membrane-bound ferrosome organelles containing non-crystalline iron phosphate biominerals."}], "id": "edge-3", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "ferrosome_trait", "target": "iron_storage"}], "evidence_rows": [{"description": "Fez-dependent ferrosome formation produces the ferrosome intracellular organelle.", "edge_id": "edge-1", "evidence": [{"notes": "Grant et al. establish ferrosomes as an iron-storage organelle class.", "reference": "DOI:10.1038/s41586-022-04741-x", "snippet": "Overall, this work establishes ferrosomes as a new class of iron storage organelles"}, {"notes": "Grant et al. support Fez protein-dependent ferrosome formation in Desulfovibrio magneticus.", "reference": "DOI:10.1038/s41586-022-04741-x", "snippet": "we identify three ferrosome-associated (Fez) proteins that are responsible for forming ferrosomes"}, {"notes": "Grant et al. support fez operon sufficiency for ferrosome formation in heterologous bacterial hosts.", "reference": "DOI:10.1038/s41586-022-04741-x", "snippet": "fez operons are sufficient for ferrosome formation in foreign hosts"}, {"notes": "Pi et al. support FezA- and FezB-dependent ferrosome formation in C. difficile.", "reference": "DOI:10.1038/s41586-023-06719-9", "snippet": "We found that a membrane protein (FezA) and a P1B6-ATPase transporter (FezB), repressed by both iron and the ferric uptake regulator Fur, are required for ferrosome formation"}], "predicate": "has output", "predicate_id": "RO:0002234", "source": "ferrosome formation", "source_grounding": null, "target": "ferrosome", "target_grounding": "traitmech:000527"}, {"description": "Non-crystalline iron phosphate biominerals are stored within ferrosome organelles.", "edge_id": "edge-2", "evidence": [{"notes": "Pi et al. support membrane-bound ferrosome organelles storing non-crystalline iron phosphate in Clostridioides difficile.", "reference": "DOI:10.1038/s41586-023-06719-9", "snippet": "Here we report that C. difficile undergoes an intracellular iron biomineralization process and stores iron in membrane-bound ferrosome organelles containing non-crystalline iron phosphate biominerals."}], "predicate": "located in", "predicate_id": "biolink:located_in", "source": "non-crystalline iron phosphate biomineral", "source_grounding": null, "target": "ferrosome", "target_grounding": "traitmech:000527"}, {"description": "Ferrosome organelles realize intracellular iron storage.", "edge_id": "edge-3", "evidence": [{"notes": "Grant et al. establish ferrosomes as an iron-storage organelle class.", "reference": "DOI:10.1038/s41586-022-04741-x", "snippet": "Overall, this work establishes ferrosomes as a new class of iron storage organelles"}, {"notes": "Pi et al. support membrane-bound ferrosome organelles storing non-crystalline iron phosphate in Clostridioides difficile.", "reference": "DOI:10.1038/s41586-023-06719-9", "snippet": "Here we report that C. difficile undergoes an intracellular iron biomineralization process and stores iron in membrane-bound ferrosome organelles containing non-crystalline iron phosphate biominerals."}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "ferrosome", "source_grounding": "traitmech:000527", "target": "iron storage", "target_grounding": null}], "graph_id": "ferrosome_iron_storage", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Fez-dependent biogenesis of membrane-bound intracellular ferrosome organelles.", "grounding": null, "id": "ferrosome_formation", "is_orphan": false, "label": "ferrosome formation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Membrane-bound organelle storing intracellular iron as non-crystalline iron phosphate.", "grounding": "traitmech:000527", "id": "ferrosome_trait", "is_orphan": false, "label": "ferrosome", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Intracellular storage of iron in a recoverable organelle-associated pool.", "grounding": null, "id": "iron_storage", "is_orphan": false, "label": "iron storage", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Non-crystalline iron phosphate mineral stored inside ferrosomes.", "grounding": null, "id": "non_crystalline_iron_phosphate", "is_orphan": false, "label": "non-crystalline iron phosphate biomineral", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "The graph captures broad Fez-dependent formation and ferrosome iron storage at process and organelle level without asserting one taxon-universal Fez component roster, individual Fez-protein activity, accession-level protein examples, iron-remobilization mechanism, membrane-localization path, iron-deficiency trigger, or host-colonization output.", "scope_status": "NONMECHANISTIC", "title": "Fez proteins form iron-storing ferrosomes"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -707,13 +793,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-10-01 22:05 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

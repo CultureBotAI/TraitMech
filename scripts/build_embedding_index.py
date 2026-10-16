@@ -49,6 +49,10 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 # Newest available kg-microbe-derived deepwalk: 512-D, 2026-06-26 (v3),
 # includes METPO CURIEs directly. Source-of-truth for direct-METPO matching.
 DEFAULT_KGM_DEEPWALK = (
+    REPO_ROOT.parent / "CommunityMech" / "data" / "embeddings"
+    / "DeepWalkSkipGramEnsmallen_degreenorm_embedding_512_v3_2026-06-26_12_55_27.tsv.gz"
+)
+LEGACY_NESTED_KGM_DEEPWALK = (
     REPO_ROOT.parent / "CommunityMech" / "CommunityMech" / "data" / "embeddings"
     / "DeepWalkSkipGramEnsmallen_degreenorm_embedding_512_v3_2026-06-26_12_55_27.tsv.gz"
 )
@@ -433,20 +437,45 @@ def main() -> int:
                          "so the pacmap default output is not overwritten.")
     ap.add_argument("--method", choices=["pacmap", "umap", "sfdp"], default="pacmap",
                     help="2-D reducer for the trait projection (default: pacmap)")
+    ap.add_argument("--skip-vendor", action="store_true",
+                    help="reuse existing data/embeddings/deepwalk_traits.tsv.gz without re-scanning --src")
+    ap.add_argument("--re-vendor", action="store_true",
+                    help="force re-scanning --src even if deepwalk_traits.tsv.gz is newer than --src")
     args = ap.parse_args()
 
     src = args.src
-    if not src.exists():
-        if FALLBACK_KGM_DEEPWALK.exists():
-            print(f"  Primary embedding missing ({src}); using fallback {FALLBACK_KGM_DEEPWALK.name}")
-            src = FALLBACK_KGM_DEEPWALK
-        else:
-            print(f"deepwalk source missing: {src}", file=sys.stderr)
-            return 2
+    reuse_vendored = bool(args.skip_vendor and args.out_deepwalk.exists())
+    if not reuse_vendored:
+        if not src.exists():
+            if LEGACY_NESTED_KGM_DEEPWALK.exists():
+                src = LEGACY_NESTED_KGM_DEEPWALK
+            elif FALLBACK_KGM_DEEPWALK.exists():
+                print(f"  Primary embedding missing ({src}); using fallback {FALLBACK_KGM_DEEPWALK.name}")
+                src = FALLBACK_KGM_DEEPWALK
+            elif args.out_deepwalk.exists():
+                print(f"  External deepwalk source missing ({src}); reusing vendored {args.out_deepwalk.name}")
+                src = args.out_deepwalk
+                reuse_vendored = True
+            else:
+                print(f"deepwalk source missing: {src}", file=sys.stderr)
+                return 2
+        elif (
+            not args.re_vendor
+            and args.out_deepwalk.exists()
+            and args.out_deepwalk.stat().st_size > 0
+            and args.out_deepwalk.stat().st_mtime >= src.stat().st_mtime
+        ):
+            reuse_vendored = True
 
-    print(f"[1/4] Vendoring slim deepwalk subset → {args.out_deepwalk}")
-    print(f"      source: {src.name}")
-    n_rows, nodes = vendor_slim_deepwalk(src, args.out_deepwalk)
+    if reuse_vendored:
+        print(f"[1/4] Reusing vendored slim deepwalk subset → {args.out_deepwalk}")
+        vectors_existing = load_embedding_vectors(args.out_deepwalk)
+        nodes = set(vectors_existing.keys())
+        n_rows = len(nodes)
+    else:
+        print(f"[1/4] Vendoring slim deepwalk subset → {args.out_deepwalk}")
+        print(f"      source: {src.name}")
+        n_rows, nodes = vendor_slim_deepwalk(src, args.out_deepwalk)
     metpo_count = sum(1 for n in nodes if n.startswith("METPO:"))
     print(f"      {n_rows} trait-relevant rows carried; {len(nodes)} unique node ids "
           f"(METPO:* = {metpo_count})")

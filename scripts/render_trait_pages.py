@@ -47,6 +47,8 @@ PAGES_DIR = REPO_ROOT / "pages"
 RAW_OWL = REPO_ROOT / "data" / "raw" / "metpo.owl"
 UMAP_JSON = EMBED_DIR / "trait_umap.json"
 GRAPH_JSON = EMBED_DIR / "trait_graph.json"
+CORPUS_MAP_JSON = EMBED_DIR / "corpus_map.json"
+SEQUENCE_MAP_JSON = EMBED_DIR / "sequence_map.json"
 NN_JSON = EMBED_DIR / "trait_nearest_neighbors.json"
 
 DIM_PREVIEW = 4  # number of dims to show inline next to each kg-microbe node
@@ -127,12 +129,52 @@ def reference_url(reference: object) -> str | None:
     return None
 
 
+PREFIX_URL = {
+    "GO": "https://amigo.geneontology.org/amigo/term/{curie}",
+    "CHEBI": "https://www.ebi.ac.uk/chebi/searchId.do?chebiId={curie}",
+    "METPO": "https://w3id.org/metpo/{local}",
+    "EC": "https://www.ExplorEnz.info/search2.php?ec_no={local}",
+    "KEGG": "https://www.kegg.jp/entry/{local}",
+    "RHEA": "https://www.rhea-db.org/rhea/{local}",
+    "UniProtKB": "https://www.uniprot.org/uniprotkb/{local}/entry",
+    "Pfam": "https://www.ebi.ac.uk/interpro/entry/pfam/{local}/",
+    "InterPro": "https://www.ebi.ac.uk/interpro/entry/InterPro/{local}/",
+    "ENVO": "http://purl.obolibrary.org/obo/ENVO_{local}",
+    "PATO": "http://purl.obolibrary.org/obo/PATO_{local}",
+    "RO": "http://purl.obolibrary.org/obo/RO_{local}",
+    "BFO": "http://purl.obolibrary.org/obo/BFO_{local}",
+    "UO": "http://purl.obolibrary.org/obo/UO_{local}",
+    "SO": "http://purl.obolibrary.org/obo/SO_{local}",
+    "CL": "http://purl.obolibrary.org/obo/CL_{local}",
+    "UBERON": "http://purl.obolibrary.org/obo/UBERON_{local}",
+    "NCBITaxon": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id={local}",
+    "biolink": "https://w3id.org/biolink/vocab/{local}",
+    "Reactome": "https://reactome.org/content/detail/{local}",
+    "MetaCyc": "https://metacyc.org/META/NEW-IMAGE?object={local}",
+}
+
+
+def curie_url(curie: object) -> str | None:
+    """Resolve ontology/database CURIEs to canonical external URLs."""
+    if not isinstance(curie, str) or ":" not in curie:
+        return None
+    ref = reference_url(curie)
+    if ref:
+        return ref
+    prefix, local = curie.strip().split(":", 1)
+    tmpl = PREFIX_URL.get(prefix)
+    if not tmpl or not local:
+        return None
+    return tmpl.format(curie=curie.strip(), local=local.strip())
+
+
 def template_environment() -> Environment:
     env = Environment(
         loader=FileSystemLoader(str(TEMPLATES_DIR)),
         autoescape=select_autoescape(["html"]),
     )
     env.filters["reference_url"] = reference_url
+    env.filters["curie_url"] = curie_url
     return env
 
 
@@ -626,6 +668,46 @@ def render_pages(args: argparse.Namespace) -> int:
         )
         write_html(pages_dir / "graph.html", graph_html)
 
+    # Render full-corpus text embedding map (BGE-large + PaCMAP) if data exists.
+    if CORPUS_MAP_JSON.exists():
+        corpus_map_dst = pages_dir / "data" / "corpus_map.json"
+        corpus_map_dst.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(CORPUS_MAP_JSON, corpus_map_dst)
+        import json as _json
+        corpus_raw = _json.loads(CORPUS_MAP_JSON.read_text())
+        corpus_pts = corpus_raw if isinstance(corpus_raw, list) else corpus_raw.get("points", [])
+        map_html = env.get_template("map.html").render(
+            title="Full-corpus text embedding map",
+            root="",
+            data_url="data/corpus_map.json",
+            n_points=len(corpus_pts),
+            metpo_version=metpo_version,
+            generated_at=corpus_stamp,
+            total_traits=len(traits),
+            embedding_coverage_pct=_coverage_pct(match_table, len(traits)),
+        )
+        write_html(pages_dir / "map.html", map_html)
+
+    # Render ESM-2 protein sequence embedding map if data exists.
+    if SEQUENCE_MAP_JSON.exists():
+        seq_map_dst = pages_dir / "data" / "sequence_map.json"
+        seq_map_dst.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(SEQUENCE_MAP_JSON, seq_map_dst)
+        import json as _json
+        seq_raw = _json.loads(SEQUENCE_MAP_JSON.read_text())
+        seq_pts = seq_raw if isinstance(seq_raw, list) else seq_raw.get("points", [])
+        seq_html = env.get_template("sequence-map.html").render(
+            title="Protein sequence embedding map (ESM-2 pLM)",
+            root="",
+            data_url="data/sequence_map.json",
+            n_points=len(seq_pts),
+            metpo_version=metpo_version,
+            generated_at=corpus_stamp,
+            total_traits=len(traits),
+            embedding_coverage_pct=_coverage_pct(match_table, len(traits)),
+        )
+        write_html(pages_dir / "sequence-map.html", seq_html)
+
     # Render landing page.
     category_counts = {cat: len(items) for cat, items in sorted(category_lists.items(), key=lambda x: -len(x[1]))}
     embedding_per_category: dict[str, int] = defaultdict(int)
@@ -661,6 +743,14 @@ def render_pages(args: argparse.Namespace) -> int:
         generated_at=corpus_stamp,
     )
     write_html(pages_dir / "browse.html", browse)
+
+    # Write bulk corpus JSON export for downstream consumers.
+    import json as _json
+    traits_json_dst = pages_dir / "data" / "traits.json"
+    traits_json_dst.parent.mkdir(parents=True, exist_ok=True)
+    traits_json_dst.write_text(
+        _json.dumps([doc for _path, doc in traits], indent=2, default=str) + "\n"
+    )
 
     print(f"Wrote {written} trait pages")
     print(f"Wrote {len(category_lists)} category index pages")

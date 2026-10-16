@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/morphology.html">MORPHOLOGY</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/morphology.html">MORPHOLOGY</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>sarcina arrangement</h1>
     <p class="curie"><code>traitmech:000120</code> · CLASS · REVIEWED</p>
 
@@ -85,9 +96,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>three perpendicular division planes</strong>
+
             <span class="edge-predicate">causes</span>
             <strong>sarcina arrangement</strong>
-            <code>biolink:causes</code>
+            <code>traitmech:000120</code>
+            <a href="https://w3id.org/biolink/vocab/causes" rel="nofollow noreferrer"><code>biolink:causes</code></a>
             <p>Three perpendicular division planes with incomplete separation yield cubic eight-cell packets.</p>
             <ul>
 
@@ -102,9 +115,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>cell division</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0051301" rel="nofollow noreferrer"><code>GO:0051301</code></a>
             <span class="edge-predicate">confers</span>
             <strong>sarcina arrangement</strong>
-            <code>METPO:2007700</code>
+            <code>traitmech:000120</code>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>Bacterial cell division underlies sarcina packet formation.</p>
             <ul>
 
@@ -119,8 +134,10 @@
 
           <li id="pathograph-1-edge-3">
             <strong>FtsZ</strong>
+            <a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR000158/" rel="nofollow noreferrer"><code>InterPro:IPR000158</code></a>
             <span class="edge-predicate">polymerizes to form</span>
             <strong>Z ring</strong>
+
 
             <p>FtsZ polymerizes to form the dynamic Z ring at the division site.</p>
             <ul>
@@ -136,8 +153,10 @@
 
           <li id="pathograph-1-edge-4">
             <strong>FtsA</strong>
+            <a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR020823/" rel="nofollow noreferrer"><code>InterPro:IPR020823</code></a>
             <span class="edge-predicate">attaches</span>
             <strong>Z ring</strong>
+
 
             <p>FtsA tethers the Z ring to the cytoplasmic membrane for proper divisome assembly.</p>
             <ul>
@@ -153,8 +172,10 @@
 
           <li id="pathograph-1-edge-5">
             <strong>FtsA</strong>
+            <a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR020823/" rel="nofollow noreferrer"><code>InterPro:IPR020823</code></a>
             <span class="edge-predicate">attaches Z ring to</span>
             <strong>cytoplasmic membrane</strong>
+
 
             <p>FtsA attaches the Z ring to the cytoplasmic membrane.</p>
             <ul>
@@ -170,8 +191,10 @@
 
           <li id="pathograph-1-edge-6">
             <strong>peptidoglycan synthetases and hydrolases</strong>
+
             <span class="edge-predicate">cooperate in</span>
             <strong>septal peptidoglycan remodeling</strong>
+
 
             <p>PG synthetases and hydrolases work together to build the septal cross-wall.</p>
             <ul>
@@ -187,8 +210,10 @@
 
           <li id="pathograph-1-edge-7">
             <strong>cell wall synthesis at division site</strong>
+
             <span class="edge-predicate">drives</span>
             <strong>division septum formation</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0000917" rel="nofollow noreferrer"><code>GO:0000917</code></a>
 
             <p>FtsZ-dependent cell wall synthesis at the division site drives septum formation.</p>
             <ul>
@@ -204,8 +229,10 @@
 
           <li id="pathograph-1-edge-8">
             <strong>peptidoglycan hydrolases</strong>
+
             <span class="edge-predicate">degrade</span>
             <strong>peripheral peptidoglycan bridge</strong>
+
 
             <p>Peptidoglycan hydrolases degrade the peripheral PG bridge connecting daughter cells.</p>
             <ul>
@@ -221,8 +248,10 @@
 
           <li id="pathograph-1-edge-9">
             <strong>peripheral peptidoglycan bridge</strong>
+
             <span class="edge-predicate">degradation triggers</span>
             <strong>daughter-cell separation</strong>
+
 
             <p>Degradation of the peripheral PG bridge triggers daughter-cell splitting; incomplete separation retains packets.</p>
             <ul>
@@ -314,13 +343,7 @@
 
         <li>
           <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/tetrad_arrangement.html">tetrad arrangement</a>
-          <span class="sim">1.000</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/staphylococcus_arrangement.html">staphylococcus arrangement</a>
+          <a href="../../traits/morphology/cell_shape.html">cell shape</a>
           <span class="sim">1.000</span>
         </li>
 
@@ -332,7 +355,13 @@
 
         <li>
           <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/cell_shape.html">cell shape</a>
+          <a href="../../traits/morphology/staphylococcus_arrangement.html">staphylococcus arrangement</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">morphology</span>
+          <a href="../../traits/morphology/tetrad_arrangement.html">tetrad arrangement</a>
           <span class="sim">1.000</span>
         </li>
 
@@ -904,7 +933,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking division in three perpendicular planes with incomplete separation to cubic eight-cell packets.", "edges": [{"description": "Three perpendicular division planes with incomplete separation yield cubic eight-cell packets.", "evidence": [{"notes": "Three-plane division with incomplete daughter-cell separation yields cubic eight-cell packets.", "reference": "DOI:10.1038/ncomms4842"}], "id": "edge-1", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "three_plane_perpendicular_division", "target": "sarcina_trait"}, {"description": "Bacterial cell division underlies sarcina packet formation.", "evidence": [{"notes": "Young treats the sarcina cubic packet as a division-plane-determined coccal arrangement.", "reference": "DOI:10.1128/MMBR.00001-06"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "cell_division", "target": "sarcina_trait"}, {"description": "FtsZ polymerizes to form the dynamic Z ring at the division site.", "evidence": [{"notes": "FtsZ polymerizes to form a dynamic structure known as the Z ring; broadly conserved bacterial/coccal mechanism.", "reference": "DOI:10.1002/mbo3.1338"}], "id": "edge-3", "is_orphan": false, "predicate": "polymerizes to form", "predicate_id": null, "source": "ftsz_protein", "target": "z_ring"}, {"description": "FtsA tethers the Z ring to the cytoplasmic membrane for proper divisome assembly.", "evidence": [{"notes": "Proper Z ring assembly requires attachment to the cytoplasmic membrane via interactions with FtsA; general divisome mechanism.", "reference": "DOI:10.1002/mbo3.1338"}], "id": "edge-4", "is_orphan": false, "predicate": "attaches", "predicate_id": null, "source": "ftsa_protein", "target": "z_ring"}, {"description": "FtsA attaches the Z ring to the cytoplasmic membrane.", "evidence": [{"notes": "Z ring attachment to the cytoplasmic membrane occurs via interactions with FtsA.", "reference": "DOI:10.1002/mbo3.1338"}], "id": "edge-5", "is_orphan": false, "predicate": "attaches Z ring to", "predicate_id": null, "source": "ftsa_protein", "target": "cytoplasmic_membrane"}, {"description": "PG synthetases and hydrolases work together to build the septal cross-wall.", "evidence": [{"notes": "PG synthetases and hydrolases work together to incorporate new PG into the existing mesh and to make the septal cross wall; general cell-wall remodeling principle.", "reference": "DOI:10.1002/mbo3.1338"}], "id": "edge-6", "is_orphan": false, "predicate": "cooperate in", "predicate_id": null, "source": "pg_synthetases_hydrolases", "target": "septal_pg_remodeling"}, {"description": "FtsZ-dependent cell wall synthesis at the division site drives septum formation.", "evidence": [{"notes": "FtsZ-dependent cell wall synthesis is predominant; coccal cell wall synthesis occurs mainly at the division site, driving septation.", "reference": "DOI:10.1111/j.1574-6976.2007.00098.x"}], "id": "edge-7", "is_orphan": false, "predicate": "drives", "predicate_id": null, "source": "cell_wall_synthesis_division_site", "target": "septum_formation"}, {"description": "Peptidoglycan hydrolases degrade the peripheral PG bridge connecting daughter cells.", "evidence": [{"notes": "Hydrolases likely trigger cell splitting by degrading the peripheral bridge, not the entire septum; general separation mechanism.", "reference": "DOI:10.1002/mbo3.1338"}], "id": "edge-8", "is_orphan": false, "predicate": "degrade", "predicate_id": null, "source": "pg_hydrolases", "target": "peripheral_pg_bridge"}, {"description": "Degradation of the peripheral PG bridge triggers daughter-cell splitting; incomplete separation retains packets.", "evidence": [{"notes": "Degradation of the peripheral PG bridge, together with mechanical factors, results in a sudden crack that separates the cells; regulated/incomplete separation determines packet retention.", "reference": "DOI:10.1002/mbo3.1338"}], "id": "edge-9", "is_orphan": false, "predicate": "degradation triggers", "predicate_id": null, "source": "peripheral_pg_bridge", "target": "daughter_cell_separation"}], "evidence_rows": [{"description": "Three perpendicular division planes with incomplete separation yield cubic eight-cell packets.", "edge_id": "edge-1", "evidence": [{"notes": "Three-plane division with incomplete daughter-cell separation yields cubic eight-cell packets.", "reference": "DOI:10.1038/ncomms4842"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "three perpendicular division planes", "target": "sarcina arrangement"}, {"description": "Bacterial cell division underlies sarcina packet formation.", "edge_id": "edge-2", "evidence": [{"notes": "Young treats the sarcina cubic packet as a division-plane-determined coccal arrangement.", "reference": "DOI:10.1128/MMBR.00001-06"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "cell division", "target": "sarcina arrangement"}, {"description": "FtsZ polymerizes to form the dynamic Z ring at the division site.", "edge_id": "edge-3", "evidence": [{"notes": "FtsZ polymerizes to form a dynamic structure known as the Z ring; broadly conserved bacterial/coccal mechanism.", "reference": "DOI:10.1002/mbo3.1338"}], "predicate": "polymerizes to form", "predicate_id": null, "source": "FtsZ", "target": "Z ring"}, {"description": "FtsA tethers the Z ring to the cytoplasmic membrane for proper divisome assembly.", "edge_id": "edge-4", "evidence": [{"notes": "Proper Z ring assembly requires attachment to the cytoplasmic membrane via interactions with FtsA; general divisome mechanism.", "reference": "DOI:10.1002/mbo3.1338"}], "predicate": "attaches", "predicate_id": null, "source": "FtsA", "target": "Z ring"}, {"description": "FtsA attaches the Z ring to the cytoplasmic membrane.", "edge_id": "edge-5", "evidence": [{"notes": "Z ring attachment to the cytoplasmic membrane occurs via interactions with FtsA.", "reference": "DOI:10.1002/mbo3.1338"}], "predicate": "attaches Z ring to", "predicate_id": null, "source": "FtsA", "target": "cytoplasmic membrane"}, {"description": "PG synthetases and hydrolases work together to build the septal cross-wall.", "edge_id": "edge-6", "evidence": [{"notes": "PG synthetases and hydrolases work together to incorporate new PG into the existing mesh and to make the septal cross wall; general cell-wall remodeling principle.", "reference": "DOI:10.1002/mbo3.1338"}], "predicate": "cooperate in", "predicate_id": null, "source": "peptidoglycan synthetases and hydrolases", "target": "septal peptidoglycan remodeling"}, {"description": "FtsZ-dependent cell wall synthesis at the division site drives septum formation.", "edge_id": "edge-7", "evidence": [{"notes": "FtsZ-dependent cell wall synthesis is predominant; coccal cell wall synthesis occurs mainly at the division site, driving septation.", "reference": "DOI:10.1111/j.1574-6976.2007.00098.x"}], "predicate": "drives", "predicate_id": null, "source": "cell wall synthesis at division site", "target": "division septum formation"}, {"description": "Peptidoglycan hydrolases degrade the peripheral PG bridge connecting daughter cells.", "edge_id": "edge-8", "evidence": [{"notes": "Hydrolases likely trigger cell splitting by degrading the peripheral bridge, not the entire septum; general separation mechanism.", "reference": "DOI:10.1002/mbo3.1338"}], "predicate": "degrade", "predicate_id": null, "source": "peptidoglycan hydrolases", "target": "peripheral peptidoglycan bridge"}, {"description": "Degradation of the peripheral PG bridge triggers daughter-cell splitting; incomplete separation retains packets.", "edge_id": "edge-9", "evidence": [{"notes": "Degradation of the peripheral PG bridge, together with mechanical factors, results in a sudden crack that separates the cells; regulated/incomplete separation determines packet retention.", "reference": "DOI:10.1002/mbo3.1338"}], "predicate": "degradation triggers", "predicate_id": null, "source": "peripheral peptidoglycan bridge", "target": "daughter-cell separation"}], "graph_id": "sarcina_three_plane_division_packet", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Bacterial binary fission.", "grounding": "GO:0051301", "id": "cell_division", "is_orphan": false, "label": "cell division", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "FtsZ-dependent peptidoglycan synthesis localized to the division site.", "grounding": null, "id": "cell_wall_synthesis_division_site", "is_orphan": false, "label": "cell wall synthesis at division site", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ede9fe", "description": "Plasma membrane to which the divisome attaches.", "grounding": null, "id": "cytoplasmic_membrane", "is_orphan": false, "label": "cytoplasmic membrane", "node_type": "CELLULAR_LOCALIZATION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Physical splitting of daughter cells after division.", "grounding": null, "id": "daughter_cell_separation", "is_orphan": false, "label": "daughter-cell separation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Actin-like protein tethering the Z ring to the cytoplasmic membrane.", "grounding": "InterPro:IPR020823", "id": "ftsa_protein", "is_orphan": false, "label": "FtsA", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Tubulin-like division protein that polymerizes at the division site.", "grounding": "InterPro:IPR000158", "id": "ftsz_protein", "is_orphan": false, "label": "FtsZ", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ede9fe", "description": "Peripheral peptidoglycan connection holding daughter cells together after septation.", "grounding": null, "id": "peripheral_pg_bridge", "is_orphan": false, "label": "peripheral peptidoglycan bridge", "node_type": "CELLULAR_LOCALIZATION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Enzymes that cleave peptidoglycan bonds to enable daughter-cell separation.", "grounding": null, "id": "pg_hydrolases", "is_orphan": false, "label": "peptidoglycan hydrolases", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Enzymes that synthesize and degrade peptidoglycan during division.", "grounding": null, "id": "pg_synthetases_hydrolases", "is_orphan": false, "label": "peptidoglycan synthetases and hydrolases", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Cocci attached as cubic packets of eight (sarcinae).", "grounding": "traitmech:000120", "id": "sarcina_trait", "is_orphan": false, "label": "sarcina arrangement", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Coordinated synthesis and hydrolysis of peptidoglycan to build the septal cross-wall.", "grounding": null, "id": "septal_pg_remodeling", "is_orphan": false, "label": "septal peptidoglycan remodeling", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Formation of the division septum (cross-wall).", "grounding": "GO:0000917", "id": "septum_formation", "is_orphan": false, "label": "division septum formation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Successive division planes oriented along three orthogonal axes.", "grounding": null, "id": "three_plane_perpendicular_division", "is_orphan": false, "label": "three perpendicular division planes", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ede9fe", "description": "Dynamic FtsZ polymer ring that marks the division site.", "grounding": null, "id": "z_ring", "is_orphan": false, "label": "Z ring", "node_type": "CELLULAR_LOCALIZATION", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This record is a broad environmental or morphological classification spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement descriptor; contextual protein nodes do not receive token UniProt examples.", "scope_status": "NONMECHANISTIC", "title": "Sarcina arrangement via three-plane perpendicular division"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking division in three perpendicular planes with incomplete separation to cubic eight-cell packets.", "edges": [{"description": "Three perpendicular division planes with incomplete separation yield cubic eight-cell packets.", "evidence": [{"notes": "Three-plane division with incomplete daughter-cell separation yields cubic eight-cell packets.", "reference": "DOI:10.1038/ncomms4842"}], "id": "edge-1", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "three_plane_perpendicular_division", "target": "sarcina_trait"}, {"description": "Bacterial cell division underlies sarcina packet formation.", "evidence": [{"notes": "Young treats the sarcina cubic packet as a division-plane-determined coccal arrangement.", "reference": "DOI:10.1128/MMBR.00001-06"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "cell_division", "target": "sarcina_trait"}, {"description": "FtsZ polymerizes to form the dynamic Z ring at the division site.", "evidence": [{"notes": "FtsZ polymerizes to form a dynamic structure known as the Z ring; broadly conserved bacterial/coccal mechanism.", "reference": "DOI:10.1002/mbo3.1338"}], "id": "edge-3", "is_orphan": false, "predicate": "polymerizes to form", "predicate_id": null, "source": "ftsz_protein", "target": "z_ring"}, {"description": "FtsA tethers the Z ring to the cytoplasmic membrane for proper divisome assembly.", "evidence": [{"notes": "Proper Z ring assembly requires attachment to the cytoplasmic membrane via interactions with FtsA; general divisome mechanism.", "reference": "DOI:10.1002/mbo3.1338"}], "id": "edge-4", "is_orphan": false, "predicate": "attaches", "predicate_id": null, "source": "ftsa_protein", "target": "z_ring"}, {"description": "FtsA attaches the Z ring to the cytoplasmic membrane.", "evidence": [{"notes": "Z ring attachment to the cytoplasmic membrane occurs via interactions with FtsA.", "reference": "DOI:10.1002/mbo3.1338"}], "id": "edge-5", "is_orphan": false, "predicate": "attaches Z ring to", "predicate_id": null, "source": "ftsa_protein", "target": "cytoplasmic_membrane"}, {"description": "PG synthetases and hydrolases work together to build the septal cross-wall.", "evidence": [{"notes": "PG synthetases and hydrolases work together to incorporate new PG into the existing mesh and to make the septal cross wall; general cell-wall remodeling principle.", "reference": "DOI:10.1002/mbo3.1338"}], "id": "edge-6", "is_orphan": false, "predicate": "cooperate in", "predicate_id": null, "source": "pg_synthetases_hydrolases", "target": "septal_pg_remodeling"}, {"description": "FtsZ-dependent cell wall synthesis at the division site drives septum formation.", "evidence": [{"notes": "FtsZ-dependent cell wall synthesis is predominant; coccal cell wall synthesis occurs mainly at the division site, driving septation.", "reference": "DOI:10.1111/j.1574-6976.2007.00098.x"}], "id": "edge-7", "is_orphan": false, "predicate": "drives", "predicate_id": null, "source": "cell_wall_synthesis_division_site", "target": "septum_formation"}, {"description": "Peptidoglycan hydrolases degrade the peripheral PG bridge connecting daughter cells.", "evidence": [{"notes": "Hydrolases likely trigger cell splitting by degrading the peripheral bridge, not the entire septum; general separation mechanism.", "reference": "DOI:10.1002/mbo3.1338"}], "id": "edge-8", "is_orphan": false, "predicate": "degrade", "predicate_id": null, "source": "pg_hydrolases", "target": "peripheral_pg_bridge"}, {"description": "Degradation of the peripheral PG bridge triggers daughter-cell splitting; incomplete separation retains packets.", "evidence": [{"notes": "Degradation of the peripheral PG bridge, together with mechanical factors, results in a sudden crack that separates the cells; regulated/incomplete separation determines packet retention.", "reference": "DOI:10.1002/mbo3.1338"}], "id": "edge-9", "is_orphan": false, "predicate": "degradation triggers", "predicate_id": null, "source": "peripheral_pg_bridge", "target": "daughter_cell_separation"}], "evidence_rows": [{"description": "Three perpendicular division planes with incomplete separation yield cubic eight-cell packets.", "edge_id": "edge-1", "evidence": [{"notes": "Three-plane division with incomplete daughter-cell separation yields cubic eight-cell packets.", "reference": "DOI:10.1038/ncomms4842"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "three perpendicular division planes", "source_grounding": null, "target": "sarcina arrangement", "target_grounding": "traitmech:000120"}, {"description": "Bacterial cell division underlies sarcina packet formation.", "edge_id": "edge-2", "evidence": [{"notes": "Young treats the sarcina cubic packet as a division-plane-determined coccal arrangement.", "reference": "DOI:10.1128/MMBR.00001-06"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "cell division", "source_grounding": "GO:0051301", "target": "sarcina arrangement", "target_grounding": "traitmech:000120"}, {"description": "FtsZ polymerizes to form the dynamic Z ring at the division site.", "edge_id": "edge-3", "evidence": [{"notes": "FtsZ polymerizes to form a dynamic structure known as the Z ring; broadly conserved bacterial/coccal mechanism.", "reference": "DOI:10.1002/mbo3.1338"}], "predicate": "polymerizes to form", "predicate_id": null, "source": "FtsZ", "source_grounding": "InterPro:IPR000158", "target": "Z ring", "target_grounding": null}, {"description": "FtsA tethers the Z ring to the cytoplasmic membrane for proper divisome assembly.", "edge_id": "edge-4", "evidence": [{"notes": "Proper Z ring assembly requires attachment to the cytoplasmic membrane via interactions with FtsA; general divisome mechanism.", "reference": "DOI:10.1002/mbo3.1338"}], "predicate": "attaches", "predicate_id": null, "source": "FtsA", "source_grounding": "InterPro:IPR020823", "target": "Z ring", "target_grounding": null}, {"description": "FtsA attaches the Z ring to the cytoplasmic membrane.", "edge_id": "edge-5", "evidence": [{"notes": "Z ring attachment to the cytoplasmic membrane occurs via interactions with FtsA.", "reference": "DOI:10.1002/mbo3.1338"}], "predicate": "attaches Z ring to", "predicate_id": null, "source": "FtsA", "source_grounding": "InterPro:IPR020823", "target": "cytoplasmic membrane", "target_grounding": null}, {"description": "PG synthetases and hydrolases work together to build the septal cross-wall.", "edge_id": "edge-6", "evidence": [{"notes": "PG synthetases and hydrolases work together to incorporate new PG into the existing mesh and to make the septal cross wall; general cell-wall remodeling principle.", "reference": "DOI:10.1002/mbo3.1338"}], "predicate": "cooperate in", "predicate_id": null, "source": "peptidoglycan synthetases and hydrolases", "source_grounding": null, "target": "septal peptidoglycan remodeling", "target_grounding": null}, {"description": "FtsZ-dependent cell wall synthesis at the division site drives septum formation.", "edge_id": "edge-7", "evidence": [{"notes": "FtsZ-dependent cell wall synthesis is predominant; coccal cell wall synthesis occurs mainly at the division site, driving septation.", "reference": "DOI:10.1111/j.1574-6976.2007.00098.x"}], "predicate": "drives", "predicate_id": null, "source": "cell wall synthesis at division site", "source_grounding": null, "target": "division septum formation", "target_grounding": "GO:0000917"}, {"description": "Peptidoglycan hydrolases degrade the peripheral PG bridge connecting daughter cells.", "edge_id": "edge-8", "evidence": [{"notes": "Hydrolases likely trigger cell splitting by degrading the peripheral bridge, not the entire septum; general separation mechanism.", "reference": "DOI:10.1002/mbo3.1338"}], "predicate": "degrade", "predicate_id": null, "source": "peptidoglycan hydrolases", "source_grounding": null, "target": "peripheral peptidoglycan bridge", "target_grounding": null}, {"description": "Degradation of the peripheral PG bridge triggers daughter-cell splitting; incomplete separation retains packets.", "edge_id": "edge-9", "evidence": [{"notes": "Degradation of the peripheral PG bridge, together with mechanical factors, results in a sudden crack that separates the cells; regulated/incomplete separation determines packet retention.", "reference": "DOI:10.1002/mbo3.1338"}], "predicate": "degradation triggers", "predicate_id": null, "source": "peripheral peptidoglycan bridge", "source_grounding": null, "target": "daughter-cell separation", "target_grounding": null}], "graph_id": "sarcina_three_plane_division_packet", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Bacterial binary fission.", "grounding": "GO:0051301", "id": "cell_division", "is_orphan": false, "label": "cell division", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "FtsZ-dependent peptidoglycan synthesis localized to the division site.", "grounding": null, "id": "cell_wall_synthesis_division_site", "is_orphan": false, "label": "cell wall synthesis at division site", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ede9fe", "description": "Plasma membrane to which the divisome attaches.", "grounding": null, "id": "cytoplasmic_membrane", "is_orphan": false, "label": "cytoplasmic membrane", "node_type": "CELLULAR_LOCALIZATION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Physical splitting of daughter cells after division.", "grounding": null, "id": "daughter_cell_separation", "is_orphan": false, "label": "daughter-cell separation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Actin-like protein tethering the Z ring to the cytoplasmic membrane.", "grounding": "InterPro:IPR020823", "id": "ftsa_protein", "is_orphan": false, "label": "FtsA", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Tubulin-like division protein that polymerizes at the division site.", "grounding": "InterPro:IPR000158", "id": "ftsz_protein", "is_orphan": false, "label": "FtsZ", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ede9fe", "description": "Peripheral peptidoglycan connection holding daughter cells together after septation.", "grounding": null, "id": "peripheral_pg_bridge", "is_orphan": false, "label": "peripheral peptidoglycan bridge", "node_type": "CELLULAR_LOCALIZATION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Enzymes that cleave peptidoglycan bonds to enable daughter-cell separation.", "grounding": null, "id": "pg_hydrolases", "is_orphan": false, "label": "peptidoglycan hydrolases", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Enzymes that synthesize and degrade peptidoglycan during division.", "grounding": null, "id": "pg_synthetases_hydrolases", "is_orphan": false, "label": "peptidoglycan synthetases and hydrolases", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Cocci attached as cubic packets of eight (sarcinae).", "grounding": "traitmech:000120", "id": "sarcina_trait", "is_orphan": false, "label": "sarcina arrangement", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Coordinated synthesis and hydrolysis of peptidoglycan to build the septal cross-wall.", "grounding": null, "id": "septal_pg_remodeling", "is_orphan": false, "label": "septal peptidoglycan remodeling", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Formation of the division septum (cross-wall).", "grounding": "GO:0000917", "id": "septum_formation", "is_orphan": false, "label": "division septum formation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Successive division planes oriented along three orthogonal axes.", "grounding": null, "id": "three_plane_perpendicular_division", "is_orphan": false, "label": "three perpendicular division planes", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ede9fe", "description": "Dynamic FtsZ polymer ring that marks the division site.", "grounding": null, "id": "z_ring", "is_orphan": false, "label": "Z ring", "node_type": "CELLULAR_LOCALIZATION", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This record is a broad environmental or morphological classification spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement descriptor; contextual protein nodes do not receive token UniProt examples.", "scope_status": "NONMECHANISTIC", "title": "Sarcina arrangement via three-plane perpendicular division"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -924,13 +953,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-08-26 03:23 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

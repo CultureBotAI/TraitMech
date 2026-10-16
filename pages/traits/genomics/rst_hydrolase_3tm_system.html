@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/genomics.html">GENOMICS</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/genomics.html">GENOMICS</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>Rst_Hydrolase-3Tm system</h1>
     <p class="curie"><code>traitmech:000402</code> · CLASS · PROPOSED</p>
 
@@ -132,9 +143,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>Rst_Hydrolase-3Tm locus</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>T7 phage resistance</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>Rousset et al. linked a HAD-like hydrolase plus transmembrane-protein locus to T7 restriction, and DefenseFinder models Rst_Hydrolase-3Tm as a two-profile Rst_Hydrolase-Tm system.</p>
             <ul>
 
@@ -168,9 +181,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>T7 phage resistance</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>Rst_Hydrolase-3Tm system</strong>
-            <code>METPO:2007700</code>
+            <code>traitmech:000402</code>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>Rst_Hydrolase-3Tm-linked T7 resistance realizes the Rst_Hydrolase-3Tm system trait.</p>
             <ul>
 
@@ -201,8 +216,10 @@
 
           <li id="pathograph-1-edge-3">
             <strong>Rst_Hydrolase-3Tm system</strong>
+            <code>traitmech:000402</code>
             <span class="edge-predicate">is a</span>
             <strong>phage defense system</strong>
+            <code>traitmech:000209</code>
             <code>rdfs:subClassOf</code>
             <p>Rst_Hydrolase-3Tm system possession is a phage-defense-system trait.</p>
             <ul>
@@ -287,11 +304,75 @@
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
 
-      <p class="no-match">No kg-microbe node embedding matched this record
-        in the 2026-04-25 deepwalk.</p>
+      <p class="match-method">Matched <strong>1</strong>
+        kg-microbe node
+        via <em>parent_proxy</em>.</p>
+      <ul class="kgm-nodes">
+
+        <li><code>METPO:1000188</code> <span class="dim-preview">[-0.956, -1.962, -3.148, +1.274, …]</span></li>
+
+      </ul>
+      <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
 
     </div>
 
+
+    <div class="card">
+      <h2>Nearest neighbors in embedding space</h2>
+      <p class="meta">Top-8 cosine-similar METPO traits
+        from the 2026-04-25 deepwalk (512-D).</p>
+      <ul class="nn-list">
+
+        <li>
+          <span class="nn-cat">upper</span>
+          <a href="../../traits/upper/quality.html">quality</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hna_system.html">Hna system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hma_system.html">Hma system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hesat_system.html">Hesat system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_08_system.html">HEC-08 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_07_system.html">HEC-07 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_06_system.html">HEC-06 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_05_system.html">HEC-05 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+      </ul>
+    </div>
 
 
 
@@ -431,6 +512,11 @@
     </dl>
   </div>
 
+
+  <div class="card rail-kgm">
+    <h2>kg-microbe</h2>
+    <p class="meta">1 matching node (parent_proxy)</p>
+  </div>
 
 </aside>
 </div>
@@ -764,7 +850,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Conservative system-level sketch linking a named Rst_Hydrolase-3Tm two-gene locus model to T7 phage resistance.", "edges": [{"description": "Rousset et al. linked a HAD-like hydrolase plus transmembrane-protein locus to T7 restriction, and DefenseFinder models Rst_Hydrolase-3Tm as a two-profile Rst_Hydrolase-Tm system.", "evidence": [{"notes": "Rousset et al. experimentally linked a HAD-like hydrolase plus transmembrane-protein pair to specific inhibition of phage T7 growth.", "reference": "DOI:10.1016/j.chom.2022.02.018", "snippet": "two systems that specifically inhibit the growth of phage T7: an ATP-dependent helicase associated with a DUF2290 protein and a HAD-like hydrolase associated with a transmembrane protein"}, {"notes": "The pinned DefenseFinder wiki page names Rst_Hydrolase-3Tm as a two-component Hydrolase/Hydrolase-Tm system.", "reference": "https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/223cf269/content/3.defense-systems/rst_hydrolase-3tm.md", "snippet": "The Rst_Hydrolase-3Tm is composed of 2 proteins: Hydrolase and Hydrolase-Tm."}, {"notes": "The DefenseFinder rules table maps Rst_Hydrolase-3Tm to a two-profile Rst_Hydrolase-Tm model requiring Hydrolase and Hydrolase-Tm profiles.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Rst_Hydrolase-3Tm\tRst_Hydrolase-Tm\t2\t2\tRst_Hydrolase-Tm__Hydrolase, Rst_Hydrolase-Tm__Hydrolase-Tm\t\t\t"}, {"notes": "The DefenseFinder HMM inventory records Hydrolase and Hydrolase-Tm profiles under the normalized Rst_Hydrolase-Tm system namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Rst_Hydrolase-Tm__Hydrolase                      | Rst_Hydrolase-Tm__Hydrolase                      | Rst_Hydrolase-Tm       | Custom                  | 20     |\n| Rst_Hydrolase-Tm__Hydrolase-Tm                   | Rst_Hydrolase-Tm__Hydrolase-Tm                   | Rst_Hydrolase-Tm       | Custom                  | 20     |"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "rst_hydrolase_3tm_locus", "target": "t7_phage_resistance"}, {"description": "Rst_Hydrolase-3Tm-linked T7 resistance realizes the Rst_Hydrolase-3Tm system trait.", "evidence": [{"notes": "Rousset et al. experimentally linked a HAD-like hydrolase plus transmembrane-protein pair to specific inhibition of phage T7 growth.", "reference": "DOI:10.1016/j.chom.2022.02.018", "snippet": "two systems that specifically inhibit the growth of phage T7: an ATP-dependent helicase associated with a DUF2290 protein and a HAD-like hydrolase associated with a transmembrane protein"}, {"notes": "The DefenseFinder experimental-validation diagram links Rousset et al. to an Escherichia coli P4-locus source expressed in Escherichia coli against T7.", "reference": "https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/223cf269/content/3.defense-systems/rst_hydrolase-3tm.md", "snippet": "Rousset_2022[\u003ca href=\u0027https://doi.org/10.1016/j.chom.2022.02.018\u0027\u003eRousset et al., 2022\u003c/a\u003e] --\u003e Origin_0\n    Origin_0[Escherichia coli P4 loci \n\u003ca href=\u0027https://ncbi.nlm.nih.gov/protein/WP_000754434.1\u0027\u003eWP_000754434.1\u003c/a\u003e, \u003ca href=\u0027https://ncbi.nlm.nih.gov/protein/WP_001401335.1\u0027\u003eWP_001401335.1\u003c/a\u003e] --\u003e Expressed_0[Escherichia coli]\n    Expressed_0[Escherichia coli] ----\u003e T7"}, {"notes": "The DefenseFinder experimental-validation diagram lists T7 in the Rst_Hydrolase-3Tm protects-against subgraph.", "reference": "https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/223cf269/content/3.defense-systems/rst_hydrolase-3tm.md", "snippet": "subgraph Title4[Protects against]\n        T7"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "t7_phage_resistance", "target": "rst_hydrolase_3tm_system_trait"}, {"description": "Rst_Hydrolase-3Tm system possession is a phage-defense-system trait.", "evidence": [{"notes": "The Figure 2 legend frames the cloned P4-hotspot hits, including the hydrolase plus transmembrane-protein system, as validated defense systems in a replicated phage-resistance heatmap.", "reference": "DOI:10.1016/j.chom.2022.02.018", "snippet": "Phage resistance heatmap of the validated defense systems shows the mean fold resistance of three independent replicates against a panel of eight phages"}, {"notes": "The DefenseFinder article registry maps the named Rst_Hydrolase-3Tm system to the Rousset et al. preprint.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "Rst_Hydrolase-3Tm | 10\\.1101/2021\\.01\\.21\\.427644 | Prophage-encoded hotspots of bacterial immune systems"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "rst_hydrolase_3tm_system_trait", "target": "phage_defense_system"}], "evidence_rows": [{"description": "Rousset et al. linked a HAD-like hydrolase plus transmembrane-protein locus to T7 restriction, and DefenseFinder models Rst_Hydrolase-3Tm as a two-profile Rst_Hydrolase-Tm system.", "edge_id": "edge-1", "evidence": [{"notes": "Rousset et al. experimentally linked a HAD-like hydrolase plus transmembrane-protein pair to specific inhibition of phage T7 growth.", "reference": "DOI:10.1016/j.chom.2022.02.018", "snippet": "two systems that specifically inhibit the growth of phage T7: an ATP-dependent helicase associated with a DUF2290 protein and a HAD-like hydrolase associated with a transmembrane protein"}, {"notes": "The pinned DefenseFinder wiki page names Rst_Hydrolase-3Tm as a two-component Hydrolase/Hydrolase-Tm system.", "reference": "https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/223cf269/content/3.defense-systems/rst_hydrolase-3tm.md", "snippet": "The Rst_Hydrolase-3Tm is composed of 2 proteins: Hydrolase and Hydrolase-Tm."}, {"notes": "The DefenseFinder rules table maps Rst_Hydrolase-3Tm to a two-profile Rst_Hydrolase-Tm model requiring Hydrolase and Hydrolase-Tm profiles.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Rst_Hydrolase-3Tm\tRst_Hydrolase-Tm\t2\t2\tRst_Hydrolase-Tm__Hydrolase, Rst_Hydrolase-Tm__Hydrolase-Tm\t\t\t"}, {"notes": "The DefenseFinder HMM inventory records Hydrolase and Hydrolase-Tm profiles under the normalized Rst_Hydrolase-Tm system namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Rst_Hydrolase-Tm__Hydrolase                      | Rst_Hydrolase-Tm__Hydrolase                      | Rst_Hydrolase-Tm       | Custom                  | 20     |\n| Rst_Hydrolase-Tm__Hydrolase-Tm                   | Rst_Hydrolase-Tm__Hydrolase-Tm                   | Rst_Hydrolase-Tm       | Custom                  | 20     |"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Rst_Hydrolase-3Tm locus", "target": "T7 phage resistance"}, {"description": "Rst_Hydrolase-3Tm-linked T7 resistance realizes the Rst_Hydrolase-3Tm system trait.", "edge_id": "edge-2", "evidence": [{"notes": "Rousset et al. experimentally linked a HAD-like hydrolase plus transmembrane-protein pair to specific inhibition of phage T7 growth.", "reference": "DOI:10.1016/j.chom.2022.02.018", "snippet": "two systems that specifically inhibit the growth of phage T7: an ATP-dependent helicase associated with a DUF2290 protein and a HAD-like hydrolase associated with a transmembrane protein"}, {"notes": "The DefenseFinder experimental-validation diagram links Rousset et al. to an Escherichia coli P4-locus source expressed in Escherichia coli against T7.", "reference": "https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/223cf269/content/3.defense-systems/rst_hydrolase-3tm.md", "snippet": "Rousset_2022[\u003ca href=\u0027https://doi.org/10.1016/j.chom.2022.02.018\u0027\u003eRousset et al., 2022\u003c/a\u003e] --\u003e Origin_0\n    Origin_0[Escherichia coli P4 loci \n\u003ca href=\u0027https://ncbi.nlm.nih.gov/protein/WP_000754434.1\u0027\u003eWP_000754434.1\u003c/a\u003e, \u003ca href=\u0027https://ncbi.nlm.nih.gov/protein/WP_001401335.1\u0027\u003eWP_001401335.1\u003c/a\u003e] --\u003e Expressed_0[Escherichia coli]\n    Expressed_0[Escherichia coli] ----\u003e T7"}, {"notes": "The DefenseFinder experimental-validation diagram lists T7 in the Rst_Hydrolase-3Tm protects-against subgraph.", "reference": "https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/223cf269/content/3.defense-systems/rst_hydrolase-3tm.md", "snippet": "subgraph Title4[Protects against]\n        T7"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "T7 phage resistance", "target": "Rst_Hydrolase-3Tm system"}, {"description": "Rst_Hydrolase-3Tm system possession is a phage-defense-system trait.", "edge_id": "edge-3", "evidence": [{"notes": "The Figure 2 legend frames the cloned P4-hotspot hits, including the hydrolase plus transmembrane-protein system, as validated defense systems in a replicated phage-resistance heatmap.", "reference": "DOI:10.1016/j.chom.2022.02.018", "snippet": "Phage resistance heatmap of the validated defense systems shows the mean fold resistance of three independent replicates against a panel of eight phages"}, {"notes": "The DefenseFinder article registry maps the named Rst_Hydrolase-3Tm system to the Rousset et al. preprint.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "Rst_Hydrolase-3Tm | 10\\.1101/2021\\.01\\.21\\.427644 | Prophage-encoded hotspots of bacterial immune systems"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "Rst_Hydrolase-3Tm system", "target": "phage defense system"}], "graph_id": "rst_hydrolase_3tm_locus_restricts_t7", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Possession of one or more genome-encoded immune systems that inhibit bacteriophage infection.", "grounding": "traitmech:000209", "id": "phage_defense_system", "is_orphan": false, "label": "phage defense system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "A two-gene hydrolase/transmembrane phage-defense locus represented by the DefenseFinder Rst_Hydrolase-Tm profiles.", "grounding": null, "id": "rst_hydrolase_3tm_locus", "is_orphan": false, "label": "Rst_Hydrolase-3Tm locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded Rst_Hydrolase-3Tm phage-defense system.", "grounding": "traitmech:000402", "id": "rst_hydrolase_3tm_system_trait", "is_orphan": false, "label": "Rst_Hydrolase-3Tm system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Resistance against phage T7 in a host expressing an Rst_Hydrolase-3Tm locus.", "grounding": null, "id": "t7_phage_resistance", "is_orphan": false, "label": "T7 phage resistance", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "The graph captures Rst_Hydrolase-3Tm as a named DefenseFinder two-profile phage-defense system while leaving native host breadth, the exact Rst_Hydrolase-3Tm-to-Rst_Hydrolase-Tm naming relationship, Hydrolase and Hydrolase-Tm molecular roles, and the mechanism of T7 restriction unresolved.", "scope_status": "NONMECHANISTIC", "title": "Rst_Hydrolase-3Tm loci restrict T7"}];
+  var graphs = [{"description": "Conservative system-level sketch linking a named Rst_Hydrolase-3Tm two-gene locus model to T7 phage resistance.", "edges": [{"description": "Rousset et al. linked a HAD-like hydrolase plus transmembrane-protein locus to T7 restriction, and DefenseFinder models Rst_Hydrolase-3Tm as a two-profile Rst_Hydrolase-Tm system.", "evidence": [{"notes": "Rousset et al. experimentally linked a HAD-like hydrolase plus transmembrane-protein pair to specific inhibition of phage T7 growth.", "reference": "DOI:10.1016/j.chom.2022.02.018", "snippet": "two systems that specifically inhibit the growth of phage T7: an ATP-dependent helicase associated with a DUF2290 protein and a HAD-like hydrolase associated with a transmembrane protein"}, {"notes": "The pinned DefenseFinder wiki page names Rst_Hydrolase-3Tm as a two-component Hydrolase/Hydrolase-Tm system.", "reference": "https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/223cf269/content/3.defense-systems/rst_hydrolase-3tm.md", "snippet": "The Rst_Hydrolase-3Tm is composed of 2 proteins: Hydrolase and Hydrolase-Tm."}, {"notes": "The DefenseFinder rules table maps Rst_Hydrolase-3Tm to a two-profile Rst_Hydrolase-Tm model requiring Hydrolase and Hydrolase-Tm profiles.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Rst_Hydrolase-3Tm\tRst_Hydrolase-Tm\t2\t2\tRst_Hydrolase-Tm__Hydrolase, Rst_Hydrolase-Tm__Hydrolase-Tm\t\t\t"}, {"notes": "The DefenseFinder HMM inventory records Hydrolase and Hydrolase-Tm profiles under the normalized Rst_Hydrolase-Tm system namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Rst_Hydrolase-Tm__Hydrolase                      | Rst_Hydrolase-Tm__Hydrolase                      | Rst_Hydrolase-Tm       | Custom                  | 20     |\n| Rst_Hydrolase-Tm__Hydrolase-Tm                   | Rst_Hydrolase-Tm__Hydrolase-Tm                   | Rst_Hydrolase-Tm       | Custom                  | 20     |"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "rst_hydrolase_3tm_locus", "target": "t7_phage_resistance"}, {"description": "Rst_Hydrolase-3Tm-linked T7 resistance realizes the Rst_Hydrolase-3Tm system trait.", "evidence": [{"notes": "Rousset et al. experimentally linked a HAD-like hydrolase plus transmembrane-protein pair to specific inhibition of phage T7 growth.", "reference": "DOI:10.1016/j.chom.2022.02.018", "snippet": "two systems that specifically inhibit the growth of phage T7: an ATP-dependent helicase associated with a DUF2290 protein and a HAD-like hydrolase associated with a transmembrane protein"}, {"notes": "The DefenseFinder experimental-validation diagram links Rousset et al. to an Escherichia coli P4-locus source expressed in Escherichia coli against T7.", "reference": "https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/223cf269/content/3.defense-systems/rst_hydrolase-3tm.md", "snippet": "Rousset_2022[\u003ca href=\u0027https://doi.org/10.1016/j.chom.2022.02.018\u0027\u003eRousset et al., 2022\u003c/a\u003e] --\u003e Origin_0\n    Origin_0[Escherichia coli P4 loci \n\u003ca href=\u0027https://ncbi.nlm.nih.gov/protein/WP_000754434.1\u0027\u003eWP_000754434.1\u003c/a\u003e, \u003ca href=\u0027https://ncbi.nlm.nih.gov/protein/WP_001401335.1\u0027\u003eWP_001401335.1\u003c/a\u003e] --\u003e Expressed_0[Escherichia coli]\n    Expressed_0[Escherichia coli] ----\u003e T7"}, {"notes": "The DefenseFinder experimental-validation diagram lists T7 in the Rst_Hydrolase-3Tm protects-against subgraph.", "reference": "https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/223cf269/content/3.defense-systems/rst_hydrolase-3tm.md", "snippet": "subgraph Title4[Protects against]\n        T7"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "t7_phage_resistance", "target": "rst_hydrolase_3tm_system_trait"}, {"description": "Rst_Hydrolase-3Tm system possession is a phage-defense-system trait.", "evidence": [{"notes": "The Figure 2 legend frames the cloned P4-hotspot hits, including the hydrolase plus transmembrane-protein system, as validated defense systems in a replicated phage-resistance heatmap.", "reference": "DOI:10.1016/j.chom.2022.02.018", "snippet": "Phage resistance heatmap of the validated defense systems shows the mean fold resistance of three independent replicates against a panel of eight phages"}, {"notes": "The DefenseFinder article registry maps the named Rst_Hydrolase-3Tm system to the Rousset et al. preprint.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "Rst_Hydrolase-3Tm | 10\\.1101/2021\\.01\\.21\\.427644 | Prophage-encoded hotspots of bacterial immune systems"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "rst_hydrolase_3tm_system_trait", "target": "phage_defense_system"}], "evidence_rows": [{"description": "Rousset et al. linked a HAD-like hydrolase plus transmembrane-protein locus to T7 restriction, and DefenseFinder models Rst_Hydrolase-3Tm as a two-profile Rst_Hydrolase-Tm system.", "edge_id": "edge-1", "evidence": [{"notes": "Rousset et al. experimentally linked a HAD-like hydrolase plus transmembrane-protein pair to specific inhibition of phage T7 growth.", "reference": "DOI:10.1016/j.chom.2022.02.018", "snippet": "two systems that specifically inhibit the growth of phage T7: an ATP-dependent helicase associated with a DUF2290 protein and a HAD-like hydrolase associated with a transmembrane protein"}, {"notes": "The pinned DefenseFinder wiki page names Rst_Hydrolase-3Tm as a two-component Hydrolase/Hydrolase-Tm system.", "reference": "https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/223cf269/content/3.defense-systems/rst_hydrolase-3tm.md", "snippet": "The Rst_Hydrolase-3Tm is composed of 2 proteins: Hydrolase and Hydrolase-Tm."}, {"notes": "The DefenseFinder rules table maps Rst_Hydrolase-3Tm to a two-profile Rst_Hydrolase-Tm model requiring Hydrolase and Hydrolase-Tm profiles.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Rst_Hydrolase-3Tm\tRst_Hydrolase-Tm\t2\t2\tRst_Hydrolase-Tm__Hydrolase, Rst_Hydrolase-Tm__Hydrolase-Tm\t\t\t"}, {"notes": "The DefenseFinder HMM inventory records Hydrolase and Hydrolase-Tm profiles under the normalized Rst_Hydrolase-Tm system namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Rst_Hydrolase-Tm__Hydrolase                      | Rst_Hydrolase-Tm__Hydrolase                      | Rst_Hydrolase-Tm       | Custom                  | 20     |\n| Rst_Hydrolase-Tm__Hydrolase-Tm                   | Rst_Hydrolase-Tm__Hydrolase-Tm                   | Rst_Hydrolase-Tm       | Custom                  | 20     |"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Rst_Hydrolase-3Tm locus", "source_grounding": null, "target": "T7 phage resistance", "target_grounding": null}, {"description": "Rst_Hydrolase-3Tm-linked T7 resistance realizes the Rst_Hydrolase-3Tm system trait.", "edge_id": "edge-2", "evidence": [{"notes": "Rousset et al. experimentally linked a HAD-like hydrolase plus transmembrane-protein pair to specific inhibition of phage T7 growth.", "reference": "DOI:10.1016/j.chom.2022.02.018", "snippet": "two systems that specifically inhibit the growth of phage T7: an ATP-dependent helicase associated with a DUF2290 protein and a HAD-like hydrolase associated with a transmembrane protein"}, {"notes": "The DefenseFinder experimental-validation diagram links Rousset et al. to an Escherichia coli P4-locus source expressed in Escherichia coli against T7.", "reference": "https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/223cf269/content/3.defense-systems/rst_hydrolase-3tm.md", "snippet": "Rousset_2022[\u003ca href=\u0027https://doi.org/10.1016/j.chom.2022.02.018\u0027\u003eRousset et al., 2022\u003c/a\u003e] --\u003e Origin_0\n    Origin_0[Escherichia coli P4 loci \n\u003ca href=\u0027https://ncbi.nlm.nih.gov/protein/WP_000754434.1\u0027\u003eWP_000754434.1\u003c/a\u003e, \u003ca href=\u0027https://ncbi.nlm.nih.gov/protein/WP_001401335.1\u0027\u003eWP_001401335.1\u003c/a\u003e] --\u003e Expressed_0[Escherichia coli]\n    Expressed_0[Escherichia coli] ----\u003e T7"}, {"notes": "The DefenseFinder experimental-validation diagram lists T7 in the Rst_Hydrolase-3Tm protects-against subgraph.", "reference": "https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/223cf269/content/3.defense-systems/rst_hydrolase-3tm.md", "snippet": "subgraph Title4[Protects against]\n        T7"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "T7 phage resistance", "source_grounding": null, "target": "Rst_Hydrolase-3Tm system", "target_grounding": "traitmech:000402"}, {"description": "Rst_Hydrolase-3Tm system possession is a phage-defense-system trait.", "edge_id": "edge-3", "evidence": [{"notes": "The Figure 2 legend frames the cloned P4-hotspot hits, including the hydrolase plus transmembrane-protein system, as validated defense systems in a replicated phage-resistance heatmap.", "reference": "DOI:10.1016/j.chom.2022.02.018", "snippet": "Phage resistance heatmap of the validated defense systems shows the mean fold resistance of three independent replicates against a panel of eight phages"}, {"notes": "The DefenseFinder article registry maps the named Rst_Hydrolase-3Tm system to the Rousset et al. preprint.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "Rst_Hydrolase-3Tm | 10\\.1101/2021\\.01\\.21\\.427644 | Prophage-encoded hotspots of bacterial immune systems"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "Rst_Hydrolase-3Tm system", "source_grounding": "traitmech:000402", "target": "phage defense system", "target_grounding": "traitmech:000209"}], "graph_id": "rst_hydrolase_3tm_locus_restricts_t7", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Possession of one or more genome-encoded immune systems that inhibit bacteriophage infection.", "grounding": "traitmech:000209", "id": "phage_defense_system", "is_orphan": false, "label": "phage defense system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "A two-gene hydrolase/transmembrane phage-defense locus represented by the DefenseFinder Rst_Hydrolase-Tm profiles.", "grounding": null, "id": "rst_hydrolase_3tm_locus", "is_orphan": false, "label": "Rst_Hydrolase-3Tm locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded Rst_Hydrolase-3Tm phage-defense system.", "grounding": "traitmech:000402", "id": "rst_hydrolase_3tm_system_trait", "is_orphan": false, "label": "Rst_Hydrolase-3Tm system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Resistance against phage T7 in a host expressing an Rst_Hydrolase-3Tm locus.", "grounding": null, "id": "t7_phage_resistance", "is_orphan": false, "label": "T7 phage resistance", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "The graph captures Rst_Hydrolase-3Tm as a named DefenseFinder two-profile phage-defense system while leaving native host breadth, the exact Rst_Hydrolase-3Tm-to-Rst_Hydrolase-Tm naming relationship, Hydrolase and Hydrolase-Tm molecular roles, and the mechanism of T7 restriction unresolved.", "scope_status": "NONMECHANISTIC", "title": "Rst_Hydrolase-3Tm loci restrict T7"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -784,13 +870,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-09-27 05:07 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

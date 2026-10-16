@@ -24,6 +24,13 @@
         padding:64px 24px 52px;text-align:center;border-bottom:1px solid var(--line)}
   .hero h1{margin:0 0 .2em;font-size:2.7rem;letter-spacing:-.02em}
   .hero .tagline{margin:0 auto;max-width:660px;font-size:1.15rem}
+  .hero-nav{display:flex;flex-wrap:wrap;gap:18px;justify-content:center;margin-bottom:20px;font-size:.92rem;font-weight:600}
+  .hero-nav a{color:var(--ink);opacity:.82}
+  .hero-nav a:hover{color:var(--accent);opacity:1;text-decoration:none}
+  .hero-search{display:flex;gap:10px;max-width:640px;margin:24px auto 0;justify-content:center}
+  .hero-search input[type="search"]{flex:1;padding:12px 16px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink);font-size:1rem;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+  .hero-search input[type="search"]:focus{outline:2px solid var(--accent);outline-offset:2px}
+  .hero-search button{border:0;cursor:pointer}
   .stats{display:flex;flex-wrap:wrap;gap:24px;justify-content:center;margin-top:30px}
   .stat{background:rgba(255,255,255,.6);border:1px solid var(--line);border-radius:12px;
         padding:12px 22px;min-width:120px;color:inherit;text-decoration:none}
@@ -107,12 +114,26 @@
 </head>
 <body>
   <header class="hero">
+    <nav class="hero-nav" aria-label="Main navigation">
+      <a href="browse.html">Browse</a>
+      <a href="map.html">Text map</a>
+      <a href="sequence-map.html">Sequence map (pLM)</a>
+      <a href="umap.html">Embedding space</a>
+      <a href="graph.html">Graph layout</a>
+      <a href="data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
+      <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
+    </nav>
     <h1>TraitMech</h1>
     <p class="tagline">Microbial ecophysiological trait knowledge base, seeded from METPO and curated incrementally.</p>
+    <form class="hero-search" action="browse.html" method="get" role="search">
+      <input type="search" name="q" placeholder="Search 1130 traits by label, METPO CURIE, synonym, or definition…" aria-label="Search traits">
+      <button type="submit" class="btn">Search</button>
+    </form>
     <div class="stats">
       <a class="stat" href="browse.html"><b>1130</b><span>trait records</span></a>
       <a class="stat" href="browse.html"><b>10</b><span>categories</span></a>
-      <a class="stat" href="umap.html"><b>42.2%</b><span>embedded</span></a>
+      <a class="stat" href="umap.html"><b>100.0%</b><span>embedded</span></a>
     </div>
   </header>
   <main class="wrap">
@@ -121,19 +142,19 @@
         <div class="ic">&#128270;</div>
         <div class="actions"><a class="btn" href="browse.html">Browse records &rarr;</a></div>
         <h2>Record browser</h2>
-        <p>Browse traits by category — definitions, causal graphs, kg-microbe matches, and nearest neighbors.</p>
+        <p>Browse traits by category with left-hand facets — definitions, causal graphs, kg-microbe matches, and nearest neighbors.</p>
       </div>
       <div class="card">
         <div class="ic">&#128506;&#65039;</div>
-        <div class="actions"><a class="btn" href="umap.html">Explore embedding (PaCMAP) &rarr;</a><a class="btn" href="graph.html">Graph layout &rarr;</a></div>
+        <div class="actions"><a class="btn" href="map.html">Text map (1130) &rarr;</a><a class="btn" href="sequence-map.html">Sequence map (pLM) &rarr;</a><a class="btn" href="umap.html">Explore embedding (PaCMAP) &rarr;</a><a class="btn" href="graph.html">Graph layout &rarr;</a></div>
         <h2>Embedding browser</h2>
-        <p>Interactive PaCMAP of the trait embedding space with click-through to records.</p>
+        <p>Interactive PaCMAP projections of full-corpus BGE-large text embeddings, ESM-2 protein sequence embeddings, and KG-Microbe deepwalk space.</p>
       </div>
       <div class="card">
         <div class="ic">&#128187;</div>
-        <div class="actions"><a class="btn" href="https://github.com/CultureBotAI/TraitMech">View on GitHub &rarr;</a></div>
-        <h2>GitHub</h2>
-        <p>Source code, data, schema, and the curation workflow.</p>
+        <div class="actions"><a class="btn" href="https://github.com/CultureBotAI/TraitMech">View on GitHub &rarr;</a><a class="btn" href="data/traits.json">Download traits.json &rarr;</a><a class="btn" href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema &rarr;</a></div>
+        <h2>Data, Schema &amp; GitHub</h2>
+        <p>Source code, bulk corpus JSON export, LinkML schema, and the curation workflow.</p>
       </div>
     </div>
   </main>
@@ -142,7 +163,15 @@
       <a href="https://culturebotai.github.io/CultureMech/">CultureMech</a>&middot;<a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a>&middot;<a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a>&middot;<span>TraitMech</span>&middot;<a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a>
     </div>
     <div class="fam">
-      <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a>&middot;<a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a>&middot;<a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>&middot;<a href="data/traits.json">traits.json</a>&middot;<a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> &middot;
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> &middot;
+      third-party source terms apply
+    </div>
+    <div class="fam">
+      Corpus as of 2026-10-16 01:41 UTC &middot; Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a> &middot; 1130 TraitRecords
     </div>
     <p class="fam"><a href="https://culturebotai.github.io/mechs/">All Mech projects</a></p>
 </footer>

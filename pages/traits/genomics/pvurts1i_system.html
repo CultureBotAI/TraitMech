@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/genomics.html">GENOMICS</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/genomics.html">GENOMICS</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>PvuRts1I system</h1>
     <p class="curie"><code>traitmech:000511</code> · CLASS · PROPOSED</p>
 
@@ -103,9 +114,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>PvuRts1I-family locus</strong>
+
             <span class="edge-predicate">enables</span>
             <strong>PvuRts1I modified-HMC restriction</strong>
-            <code>RO:0002327</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002327" rel="nofollow noreferrer"><code>RO:0002327</code></a>
             <p>PvuRts1I-family loci encode modification-dependent restriction endonucleases.</p>
             <ul>
 
@@ -126,9 +139,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>PvuRts1I modified-HMC restriction</strong>
+
             <span class="edge-predicate">mitigates</span>
             <strong>PvuRts1I-targeted modified-HMC DNA</strong>
-            <code>METPO:2007407</code>
+
+            <a href="https://w3id.org/metpo/2007407" rel="nofollow noreferrer"><code>METPO:2007407</code></a>
             <p>PvuRts1I-family restriction targets DNA with 5hmC or 5ghmC modifications.</p>
             <ul>
 
@@ -149,9 +164,11 @@
 
           <li id="pathograph-1-edge-3">
             <strong>PvuRts1I modified-HMC restriction</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>PvuRts1I system</strong>
-            <code>METPO:2007700</code>
+            <code>traitmech:000511</code>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>PvuRts1I-family modified-HMC restriction realizes the organism-level PvuRts1I system possession trait.</p>
             <ul>
 
@@ -172,8 +189,10 @@
 
           <li id="pathograph-1-edge-4">
             <strong>PvuRts1I system</strong>
+            <code>traitmech:000511</code>
             <span class="edge-predicate">is a</span>
             <strong>type IV modification-dependent restriction system</strong>
+            <code>traitmech:000496</code>
             <code>rdfs:subClassOf</code>
             <p>PvuRts1I system possession is a Type IV modification-dependent restriction system trait.</p>
             <ul>
@@ -250,11 +269,75 @@
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
 
-      <p class="no-match">No kg-microbe node embedding matched this record
-        in the 2026-04-25 deepwalk.</p>
+      <p class="match-method">Matched <strong>1</strong>
+        kg-microbe node
+        via <em>parent_proxy</em>.</p>
+      <ul class="kgm-nodes">
+
+        <li><code>METPO:1000188</code> <span class="dim-preview">[-0.956, -1.962, -3.148, +1.274, …]</span></li>
+
+      </ul>
+      <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
 
     </div>
 
+
+    <div class="card">
+      <h2>Nearest neighbors in embedding space</h2>
+      <p class="meta">Top-8 cosine-similar METPO traits
+        from the 2026-04-25 deepwalk (512-D).</p>
+      <ul class="nn-list">
+
+        <li>
+          <span class="nn-cat">upper</span>
+          <a href="../../traits/upper/quality.html">quality</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hna_system.html">Hna system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hma_system.html">Hma system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hesat_system.html">Hesat system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_08_system.html">HEC-08 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_07_system.html">HEC-07 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_06_system.html">HEC-06 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_05_system.html">HEC-05 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+      </ul>
+    </div>
 
 
 
@@ -419,6 +502,11 @@
     </dl>
   </div>
 
+
+  <div class="card rail-kgm">
+    <h2>kg-microbe</h2>
+    <p class="meta">1 matching node (parent_proxy)</p>
+  </div>
 
 </aside>
 </div>
@@ -752,7 +840,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Conservative system-level sketch linking a PvuRts1I-family locus to modified-hydroxymethylcytosine DNA restriction and to the Type IV restriction parent trait.", "edges": [{"description": "PvuRts1I-family loci encode modification-dependent restriction endonucleases.", "evidence": [{"notes": "Wang et al. support PvuRts1I as the founding member of a family of modification-dependent restriction enzymes.", "reference": "DOI:10.1093/nar/gkr607", "snippet": "Using PvuRts1I as the founding member, we define a family of homologous proteins with similar DNA modification-dependent recognition properties."}, {"notes": "Wang et al. support PvuRts1I-family enzymes as modification-dependent restriction endonucleases that cleave both DNA strands at a defined offset from the modified cytosine.", "reference": "DOI:10.1093/nar/gkr607", "snippet": "We show that these enzymes introduce a double-stranded cleavage at the 3\u0027-side away from the recognized modified cytosine."}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "pvurts1i_family_locus", "target": "pvurts1i_modified_hmc_restriction"}, {"description": "PvuRts1I-family restriction targets DNA with 5hmC or 5ghmC modifications.", "evidence": [{"notes": "Wang et al. support PvuRts1I recognition of 5hmC- and 5ghmC-containing double-stranded DNA.", "reference": "DOI:10.1093/nar/gkr607", "snippet": "PvuRts1I is a modification-dependent restriction endonuclease that recognizes 5-hydroxymethylcytosine (5hmC) as well as 5-glucosylhydroxymethylcytosine (5ghmC) in double-stranded DNA."}, {"notes": "Wang et al. support PvuRts1I-family enzymes as modification-dependent restriction endonucleases that cleave both DNA strands at a defined offset from the modified cytosine.", "reference": "DOI:10.1093/nar/gkr607", "snippet": "We show that these enzymes introduce a double-stranded cleavage at the 3\u0027-side away from the recognized modified cytosine."}], "id": "edge-2", "is_orphan": false, "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "pvurts1i_modified_hmc_restriction", "target": "pvurts1i_modified_hmc_dna"}, {"description": "PvuRts1I-family modified-HMC restriction realizes the organism-level PvuRts1I system possession trait.", "evidence": [{"notes": "Wang et al. support PvuRts1I recognition of 5hmC- and 5ghmC-containing double-stranded DNA.", "reference": "DOI:10.1093/nar/gkr607", "snippet": "PvuRts1I is a modification-dependent restriction endonuclease that recognizes 5-hydroxymethylcytosine (5hmC) as well as 5-glucosylhydroxymethylcytosine (5ghmC) in double-stranded DNA."}, {"notes": "The pinned DefenseFinder article registry maps the PvuRts1I source key to the Wang et al. PvuRts1I-family paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| PvuRts1I | 10\\.1093/nar/gkr607 | Comparative characterization of the PvuRts1I family of restriction enzymes and their application in mapping genomic 5-hydroxymethylcytosine | "}], "id": "edge-3", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "pvurts1i_modified_hmc_restriction", "target": "pvurts1i_system_trait"}, {"description": "PvuRts1I system possession is a Type IV modification-dependent restriction system trait.", "evidence": [{"notes": "Wang et al. support PvuRts1I as the founding member of a family of modification-dependent restriction enzymes.", "reference": "DOI:10.1093/nar/gkr607", "snippet": "Using PvuRts1I as the founding member, we define a family of homologous proteins with similar DNA modification-dependent recognition properties."}, {"notes": "Loenen and Raleigh define the Type IV class as modification-dependent restriction enzymes.", "reference": "DOI:10.1093/nar/gkt747", "snippet": "The new class of modification-dependent restriction enzymes was named Type IV, as distinct from the familiar modification-blocked Types I-III."}], "id": "edge-4", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "pvurts1i_system_trait", "target": "type_iv_modification_dependent_restriction"}], "evidence_rows": [{"description": "PvuRts1I-family loci encode modification-dependent restriction endonucleases.", "edge_id": "edge-1", "evidence": [{"notes": "Wang et al. support PvuRts1I as the founding member of a family of modification-dependent restriction enzymes.", "reference": "DOI:10.1093/nar/gkr607", "snippet": "Using PvuRts1I as the founding member, we define a family of homologous proteins with similar DNA modification-dependent recognition properties."}, {"notes": "Wang et al. support PvuRts1I-family enzymes as modification-dependent restriction endonucleases that cleave both DNA strands at a defined offset from the modified cytosine.", "reference": "DOI:10.1093/nar/gkr607", "snippet": "We show that these enzymes introduce a double-stranded cleavage at the 3\u0027-side away from the recognized modified cytosine."}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "PvuRts1I-family locus", "target": "PvuRts1I modified-HMC restriction"}, {"description": "PvuRts1I-family restriction targets DNA with 5hmC or 5ghmC modifications.", "edge_id": "edge-2", "evidence": [{"notes": "Wang et al. support PvuRts1I recognition of 5hmC- and 5ghmC-containing double-stranded DNA.", "reference": "DOI:10.1093/nar/gkr607", "snippet": "PvuRts1I is a modification-dependent restriction endonuclease that recognizes 5-hydroxymethylcytosine (5hmC) as well as 5-glucosylhydroxymethylcytosine (5ghmC) in double-stranded DNA."}, {"notes": "Wang et al. support PvuRts1I-family enzymes as modification-dependent restriction endonucleases that cleave both DNA strands at a defined offset from the modified cytosine.", "reference": "DOI:10.1093/nar/gkr607", "snippet": "We show that these enzymes introduce a double-stranded cleavage at the 3\u0027-side away from the recognized modified cytosine."}], "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "PvuRts1I modified-HMC restriction", "target": "PvuRts1I-targeted modified-HMC DNA"}, {"description": "PvuRts1I-family modified-HMC restriction realizes the organism-level PvuRts1I system possession trait.", "edge_id": "edge-3", "evidence": [{"notes": "Wang et al. support PvuRts1I recognition of 5hmC- and 5ghmC-containing double-stranded DNA.", "reference": "DOI:10.1093/nar/gkr607", "snippet": "PvuRts1I is a modification-dependent restriction endonuclease that recognizes 5-hydroxymethylcytosine (5hmC) as well as 5-glucosylhydroxymethylcytosine (5ghmC) in double-stranded DNA."}, {"notes": "The pinned DefenseFinder article registry maps the PvuRts1I source key to the Wang et al. PvuRts1I-family paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| PvuRts1I | 10\\.1093/nar/gkr607 | Comparative characterization of the PvuRts1I family of restriction enzymes and their application in mapping genomic 5-hydroxymethylcytosine | "}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "PvuRts1I modified-HMC restriction", "target": "PvuRts1I system"}, {"description": "PvuRts1I system possession is a Type IV modification-dependent restriction system trait.", "edge_id": "edge-4", "evidence": [{"notes": "Wang et al. support PvuRts1I as the founding member of a family of modification-dependent restriction enzymes.", "reference": "DOI:10.1093/nar/gkr607", "snippet": "Using PvuRts1I as the founding member, we define a family of homologous proteins with similar DNA modification-dependent recognition properties."}, {"notes": "Loenen and Raleigh define the Type IV class as modification-dependent restriction enzymes.", "reference": "DOI:10.1093/nar/gkt747", "snippet": "The new class of modification-dependent restriction enzymes was named Type IV, as distinct from the familiar modification-blocked Types I-III."}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "PvuRts1I system", "target": "type IV modification-dependent restriction system"}], "graph_id": "pvurts1i_restricts_modified_hmc_dna", "issues": [], "nodes": [{"color": "#f3f4f6", "description": "A locus encoding a PvuRts1I-family modification-dependent restriction endonuclease.", "grounding": null, "id": "pvurts1i_family_locus", "is_orphan": false, "label": "PvuRts1I-family locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Double-stranded DNA containing 5hmC or 5ghmC in a PvuRts1I-family recognition context.", "grounding": null, "id": "pvurts1i_modified_hmc_dna", "is_orphan": false, "label": "PvuRts1I-targeted modified-HMC DNA", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Modification-dependent restriction of 5hmC- or 5ghmC-containing DNA by a PvuRts1I-family endonuclease.", "grounding": null, "id": "pvurts1i_modified_hmc_restriction", "is_orphan": false, "label": "PvuRts1I modified-HMC restriction", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded PvuRts1I-family modification-dependent restriction system.", "grounding": "traitmech:000511", "id": "pvurts1i_system_trait", "is_orphan": false, "label": "PvuRts1I system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded Type IV modification-dependent restriction system.", "grounding": "traitmech:000496", "id": "type_iv_modification_dependent_restriction", "is_orphan": false, "label": "type IV modification-dependent restriction system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "The graph captures PvuRts1I as a named Type IV modification-dependent restriction family while leaving natural host breadth, exact target selectivity across characterized homologs, accession-level protein examples, and DefenseFinder RM_Type_IV HMM/rules mapping unresolved.", "scope_status": "NONMECHANISTIC", "title": "PvuRts1I restricts modified-HMC DNA"}];
+  var graphs = [{"description": "Conservative system-level sketch linking a PvuRts1I-family locus to modified-hydroxymethylcytosine DNA restriction and to the Type IV restriction parent trait.", "edges": [{"description": "PvuRts1I-family loci encode modification-dependent restriction endonucleases.", "evidence": [{"notes": "Wang et al. support PvuRts1I as the founding member of a family of modification-dependent restriction enzymes.", "reference": "DOI:10.1093/nar/gkr607", "snippet": "Using PvuRts1I as the founding member, we define a family of homologous proteins with similar DNA modification-dependent recognition properties."}, {"notes": "Wang et al. support PvuRts1I-family enzymes as modification-dependent restriction endonucleases that cleave both DNA strands at a defined offset from the modified cytosine.", "reference": "DOI:10.1093/nar/gkr607", "snippet": "We show that these enzymes introduce a double-stranded cleavage at the 3\u0027-side away from the recognized modified cytosine."}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "pvurts1i_family_locus", "target": "pvurts1i_modified_hmc_restriction"}, {"description": "PvuRts1I-family restriction targets DNA with 5hmC or 5ghmC modifications.", "evidence": [{"notes": "Wang et al. support PvuRts1I recognition of 5hmC- and 5ghmC-containing double-stranded DNA.", "reference": "DOI:10.1093/nar/gkr607", "snippet": "PvuRts1I is a modification-dependent restriction endonuclease that recognizes 5-hydroxymethylcytosine (5hmC) as well as 5-glucosylhydroxymethylcytosine (5ghmC) in double-stranded DNA."}, {"notes": "Wang et al. support PvuRts1I-family enzymes as modification-dependent restriction endonucleases that cleave both DNA strands at a defined offset from the modified cytosine.", "reference": "DOI:10.1093/nar/gkr607", "snippet": "We show that these enzymes introduce a double-stranded cleavage at the 3\u0027-side away from the recognized modified cytosine."}], "id": "edge-2", "is_orphan": false, "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "pvurts1i_modified_hmc_restriction", "target": "pvurts1i_modified_hmc_dna"}, {"description": "PvuRts1I-family modified-HMC restriction realizes the organism-level PvuRts1I system possession trait.", "evidence": [{"notes": "Wang et al. support PvuRts1I recognition of 5hmC- and 5ghmC-containing double-stranded DNA.", "reference": "DOI:10.1093/nar/gkr607", "snippet": "PvuRts1I is a modification-dependent restriction endonuclease that recognizes 5-hydroxymethylcytosine (5hmC) as well as 5-glucosylhydroxymethylcytosine (5ghmC) in double-stranded DNA."}, {"notes": "The pinned DefenseFinder article registry maps the PvuRts1I source key to the Wang et al. PvuRts1I-family paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| PvuRts1I | 10\\.1093/nar/gkr607 | Comparative characterization of the PvuRts1I family of restriction enzymes and their application in mapping genomic 5-hydroxymethylcytosine | "}], "id": "edge-3", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "pvurts1i_modified_hmc_restriction", "target": "pvurts1i_system_trait"}, {"description": "PvuRts1I system possession is a Type IV modification-dependent restriction system trait.", "evidence": [{"notes": "Wang et al. support PvuRts1I as the founding member of a family of modification-dependent restriction enzymes.", "reference": "DOI:10.1093/nar/gkr607", "snippet": "Using PvuRts1I as the founding member, we define a family of homologous proteins with similar DNA modification-dependent recognition properties."}, {"notes": "Loenen and Raleigh define the Type IV class as modification-dependent restriction enzymes.", "reference": "DOI:10.1093/nar/gkt747", "snippet": "The new class of modification-dependent restriction enzymes was named Type IV, as distinct from the familiar modification-blocked Types I-III."}], "id": "edge-4", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "pvurts1i_system_trait", "target": "type_iv_modification_dependent_restriction"}], "evidence_rows": [{"description": "PvuRts1I-family loci encode modification-dependent restriction endonucleases.", "edge_id": "edge-1", "evidence": [{"notes": "Wang et al. support PvuRts1I as the founding member of a family of modification-dependent restriction enzymes.", "reference": "DOI:10.1093/nar/gkr607", "snippet": "Using PvuRts1I as the founding member, we define a family of homologous proteins with similar DNA modification-dependent recognition properties."}, {"notes": "Wang et al. support PvuRts1I-family enzymes as modification-dependent restriction endonucleases that cleave both DNA strands at a defined offset from the modified cytosine.", "reference": "DOI:10.1093/nar/gkr607", "snippet": "We show that these enzymes introduce a double-stranded cleavage at the 3\u0027-side away from the recognized modified cytosine."}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "PvuRts1I-family locus", "source_grounding": null, "target": "PvuRts1I modified-HMC restriction", "target_grounding": null}, {"description": "PvuRts1I-family restriction targets DNA with 5hmC or 5ghmC modifications.", "edge_id": "edge-2", "evidence": [{"notes": "Wang et al. support PvuRts1I recognition of 5hmC- and 5ghmC-containing double-stranded DNA.", "reference": "DOI:10.1093/nar/gkr607", "snippet": "PvuRts1I is a modification-dependent restriction endonuclease that recognizes 5-hydroxymethylcytosine (5hmC) as well as 5-glucosylhydroxymethylcytosine (5ghmC) in double-stranded DNA."}, {"notes": "Wang et al. support PvuRts1I-family enzymes as modification-dependent restriction endonucleases that cleave both DNA strands at a defined offset from the modified cytosine.", "reference": "DOI:10.1093/nar/gkr607", "snippet": "We show that these enzymes introduce a double-stranded cleavage at the 3\u0027-side away from the recognized modified cytosine."}], "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "PvuRts1I modified-HMC restriction", "source_grounding": null, "target": "PvuRts1I-targeted modified-HMC DNA", "target_grounding": null}, {"description": "PvuRts1I-family modified-HMC restriction realizes the organism-level PvuRts1I system possession trait.", "edge_id": "edge-3", "evidence": [{"notes": "Wang et al. support PvuRts1I recognition of 5hmC- and 5ghmC-containing double-stranded DNA.", "reference": "DOI:10.1093/nar/gkr607", "snippet": "PvuRts1I is a modification-dependent restriction endonuclease that recognizes 5-hydroxymethylcytosine (5hmC) as well as 5-glucosylhydroxymethylcytosine (5ghmC) in double-stranded DNA."}, {"notes": "The pinned DefenseFinder article registry maps the PvuRts1I source key to the Wang et al. PvuRts1I-family paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| PvuRts1I | 10\\.1093/nar/gkr607 | Comparative characterization of the PvuRts1I family of restriction enzymes and their application in mapping genomic 5-hydroxymethylcytosine | "}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "PvuRts1I modified-HMC restriction", "source_grounding": null, "target": "PvuRts1I system", "target_grounding": "traitmech:000511"}, {"description": "PvuRts1I system possession is a Type IV modification-dependent restriction system trait.", "edge_id": "edge-4", "evidence": [{"notes": "Wang et al. support PvuRts1I as the founding member of a family of modification-dependent restriction enzymes.", "reference": "DOI:10.1093/nar/gkr607", "snippet": "Using PvuRts1I as the founding member, we define a family of homologous proteins with similar DNA modification-dependent recognition properties."}, {"notes": "Loenen and Raleigh define the Type IV class as modification-dependent restriction enzymes.", "reference": "DOI:10.1093/nar/gkt747", "snippet": "The new class of modification-dependent restriction enzymes was named Type IV, as distinct from the familiar modification-blocked Types I-III."}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "PvuRts1I system", "source_grounding": "traitmech:000511", "target": "type IV modification-dependent restriction system", "target_grounding": "traitmech:000496"}], "graph_id": "pvurts1i_restricts_modified_hmc_dna", "issues": [], "nodes": [{"color": "#f3f4f6", "description": "A locus encoding a PvuRts1I-family modification-dependent restriction endonuclease.", "grounding": null, "id": "pvurts1i_family_locus", "is_orphan": false, "label": "PvuRts1I-family locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Double-stranded DNA containing 5hmC or 5ghmC in a PvuRts1I-family recognition context.", "grounding": null, "id": "pvurts1i_modified_hmc_dna", "is_orphan": false, "label": "PvuRts1I-targeted modified-HMC DNA", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Modification-dependent restriction of 5hmC- or 5ghmC-containing DNA by a PvuRts1I-family endonuclease.", "grounding": null, "id": "pvurts1i_modified_hmc_restriction", "is_orphan": false, "label": "PvuRts1I modified-HMC restriction", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded PvuRts1I-family modification-dependent restriction system.", "grounding": "traitmech:000511", "id": "pvurts1i_system_trait", "is_orphan": false, "label": "PvuRts1I system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded Type IV modification-dependent restriction system.", "grounding": "traitmech:000496", "id": "type_iv_modification_dependent_restriction", "is_orphan": false, "label": "type IV modification-dependent restriction system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "The graph captures PvuRts1I as a named Type IV modification-dependent restriction family while leaving natural host breadth, exact target selectivity across characterized homologs, accession-level protein examples, and DefenseFinder RM_Type_IV HMM/rules mapping unresolved.", "scope_status": "NONMECHANISTIC", "title": "PvuRts1I restricts modified-HMC DNA"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -772,13 +860,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-10-01 09:28 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

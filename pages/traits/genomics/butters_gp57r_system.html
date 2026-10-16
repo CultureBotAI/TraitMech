@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/genomics.html">GENOMICS</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/genomics.html">GENOMICS</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>Butters gp57r system</h1>
     <p class="curie"><code>traitmech:000299</code> · CLASS · PROPOSED</p>
 
@@ -115,9 +126,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>Butters gp57r locus</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>restricted phage propagation</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>Mohammed et al. show that Butters gp57r is necessary and sufficient for Island3 inhibition, and DefenseFinder catalogs a gp57r profile in the Butters_gp57r model namespace.</p>
             <ul>
 
@@ -144,9 +157,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>restricted phage propagation</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>Butters gp57r system</strong>
-            <code>METPO:2007700</code>
+            <code>traitmech:000299</code>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>Butters-gp57r-associated restriction of phage propagation realizes the Butters gp57r system trait.</p>
             <ul>
 
@@ -167,8 +182,10 @@
 
           <li id="pathograph-1-edge-3">
             <strong>Butters gp57r system</strong>
+            <code>traitmech:000299</code>
             <span class="edge-predicate">is a</span>
             <strong>phage defense system</strong>
+            <code>traitmech:000209</code>
             <code>rdfs:subClassOf</code>
             <p>Butters gp57r system possession is a phage-defense-system trait.</p>
             <ul>
@@ -239,11 +256,75 @@
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
 
-      <p class="no-match">No kg-microbe node embedding matched this record
-        in the 2026-04-25 deepwalk.</p>
+      <p class="match-method">Matched <strong>1</strong>
+        kg-microbe node
+        via <em>parent_proxy</em>.</p>
+      <ul class="kgm-nodes">
+
+        <li><code>METPO:1000188</code> <span class="dim-preview">[-0.956, -1.962, -3.148, +1.274, …]</span></li>
+
+      </ul>
+      <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
 
     </div>
 
+
+    <div class="card">
+      <h2>Nearest neighbors in embedding space</h2>
+      <p class="meta">Top-8 cosine-similar METPO traits
+        from the 2026-04-25 deepwalk (512-D).</p>
+      <ul class="nn-list">
+
+        <li>
+          <span class="nn-cat">upper</span>
+          <a href="../../traits/upper/quality.html">quality</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/jukab_system.html">JukAB system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/integrative_conjugative_element.html">integrative conjugative element</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/ig_like_schlafen_system.html">Ig-like Schlafen system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hypnos_system.html">Hypnos system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hna_system.html">Hna system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hma_system.html">Hma system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hesat_system.html">Hesat system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+      </ul>
+    </div>
 
 
 
@@ -343,6 +424,11 @@
     </dl>
   </div>
 
+
+  <div class="card rail-kgm">
+    <h2>kg-microbe</h2>
+    <p class="meta">1 matching node (parent_proxy)</p>
+  </div>
 
 </aside>
 </div>
@@ -676,7 +762,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Conservative system-level sketch linking possession of a Butters gp57r locus to restricted bacteriophage propagation without asserting the unresolved gp57r substrate, nuclease output, or phage-tail escape mechanism.", "edges": [{"description": "Mohammed et al. show that Butters gp57r is necessary and sufficient for Island3 inhibition, and DefenseFinder catalogs a gp57r profile in the Butters_gp57r model namespace.", "evidence": [{"notes": "Mohammed et al. support gp57r as the Butters component that can restrict Island3 and additional heterotypic phages.", "reference": "DOI:10.1101/2023.01.03.522681", "snippet": "Butters gp57r is both necessary and sufficient to inhibit infection by Island3 and other phages"}, {"notes": "The DefenseFinder HMM inventory records a Butters gp57r profile for Butters_gp57r__gp57r in the Butters_gp57r model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "Butters_gp57r__gp57r                             | Butters_gp57r__gp57r                             | Butters_gp57r"}, {"notes": "The DefenseFinder rules table models Butters_gp57r as a one-component system requiring the gp57r profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Butters_gp57r\tButters_gp57r\t1\t1\tButters_gp57r__gp57r"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "butters_gp57r_locus", "target": "restricted_phage_propagation"}, {"description": "Butters-gp57r-associated restriction of phage propagation realizes the Butters gp57r system trait.", "evidence": [{"notes": "Mohammed et al. show that recombinant expression of Butters gene 57r can reproduce Butters-mediated Island3 defense.", "reference": "DOI:10.1101/2023.01.03.522681", "snippet": "mc2155(gp57r) recapitulated defense against Island3 comparable to that mounted by mc2155(Butters)"}, {"notes": "DefenseFinder records Butters_gp57r as a named system from the Mohammed et al. Butters gp57r antiphage-system preprint.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "Butters_gp57r | 10\\.1101/2023\\.01\\.03\\.522681 | Identification of a new antiphage system inMycobacteriumphage Butters"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "restricted_phage_propagation", "target": "butters_gp57r_system_trait"}, {"description": "Butters gp57r system possession is a phage-defense-system trait.", "evidence": [{"notes": "DefenseFinder associates Butters_gp57r with the Mohammed et al. Butters gp57r antiphage-system preprint.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| Butters_gp57r | 10\\.1101/2023\\.01\\.03\\.522681 | Identification of a new antiphage system inMycobacteriumphage Butters |"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "butters_gp57r_system_trait", "target": "phage_defense_system"}], "evidence_rows": [{"description": "Mohammed et al. show that Butters gp57r is necessary and sufficient for Island3 inhibition, and DefenseFinder catalogs a gp57r profile in the Butters_gp57r model namespace.", "edge_id": "edge-1", "evidence": [{"notes": "Mohammed et al. support gp57r as the Butters component that can restrict Island3 and additional heterotypic phages.", "reference": "DOI:10.1101/2023.01.03.522681", "snippet": "Butters gp57r is both necessary and sufficient to inhibit infection by Island3 and other phages"}, {"notes": "The DefenseFinder HMM inventory records a Butters gp57r profile for Butters_gp57r__gp57r in the Butters_gp57r model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "Butters_gp57r__gp57r                             | Butters_gp57r__gp57r                             | Butters_gp57r"}, {"notes": "The DefenseFinder rules table models Butters_gp57r as a one-component system requiring the gp57r profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Butters_gp57r\tButters_gp57r\t1\t1\tButters_gp57r__gp57r"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Butters gp57r locus", "target": "restricted phage propagation"}, {"description": "Butters-gp57r-associated restriction of phage propagation realizes the Butters gp57r system trait.", "edge_id": "edge-2", "evidence": [{"notes": "Mohammed et al. show that recombinant expression of Butters gene 57r can reproduce Butters-mediated Island3 defense.", "reference": "DOI:10.1101/2023.01.03.522681", "snippet": "mc2155(gp57r) recapitulated defense against Island3 comparable to that mounted by mc2155(Butters)"}, {"notes": "DefenseFinder records Butters_gp57r as a named system from the Mohammed et al. Butters gp57r antiphage-system preprint.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "Butters_gp57r | 10\\.1101/2023\\.01\\.03\\.522681 | Identification of a new antiphage system inMycobacteriumphage Butters"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "restricted phage propagation", "target": "Butters gp57r system"}, {"description": "Butters gp57r system possession is a phage-defense-system trait.", "edge_id": "edge-3", "evidence": [{"notes": "DefenseFinder associates Butters_gp57r with the Mohammed et al. Butters gp57r antiphage-system preprint.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| Butters_gp57r | 10\\.1101/2023\\.01\\.03\\.522681 | Identification of a new antiphage system inMycobacteriumphage Butters |"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "Butters gp57r system", "target": "phage defense system"}], "graph_id": "butters_gp57r_locus_restricts_phage", "issues": [], "nodes": [{"color": "#f3f4f6", "description": "A Butters gp57r anti-phage defense locus cataloged in DefenseFinder with a gp57r HMM profile.", "grounding": null, "id": "butters_gp57r_locus", "is_orphan": false, "label": "Butters gp57r locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded Butters gp57r phage-defense system.", "grounding": "traitmech:000299", "id": "butters_gp57r_system_trait", "is_orphan": false, "label": "Butters gp57r system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of one or more genome-encoded immune systems that inhibit bacteriophage infection.", "grounding": "traitmech:000209", "id": "phage_defense_system", "is_orphan": false, "label": "phage defense system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Reduced propagation of bacteriophage in cells carrying the Butters gp57r system.", "grounding": null, "id": "restricted_phage_propagation", "is_orphan": false, "label": "restricted phage propagation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "The graph captures Butters gp57r as a named anti-phage system with a DefenseFinder gp57r profile while leaving the direct Island3 or PurpleHaze trigger, the role of the HEPN-associated RX4-6H motif, the primary gp57r molecular output, and homolog breadth unresolved.", "scope_status": "NONMECHANISTIC", "title": "Butters gp57r loci confer heterotypic phage defense"}];
+  var graphs = [{"description": "Conservative system-level sketch linking possession of a Butters gp57r locus to restricted bacteriophage propagation without asserting the unresolved gp57r substrate, nuclease output, or phage-tail escape mechanism.", "edges": [{"description": "Mohammed et al. show that Butters gp57r is necessary and sufficient for Island3 inhibition, and DefenseFinder catalogs a gp57r profile in the Butters_gp57r model namespace.", "evidence": [{"notes": "Mohammed et al. support gp57r as the Butters component that can restrict Island3 and additional heterotypic phages.", "reference": "DOI:10.1101/2023.01.03.522681", "snippet": "Butters gp57r is both necessary and sufficient to inhibit infection by Island3 and other phages"}, {"notes": "The DefenseFinder HMM inventory records a Butters gp57r profile for Butters_gp57r__gp57r in the Butters_gp57r model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "Butters_gp57r__gp57r                             | Butters_gp57r__gp57r                             | Butters_gp57r"}, {"notes": "The DefenseFinder rules table models Butters_gp57r as a one-component system requiring the gp57r profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Butters_gp57r\tButters_gp57r\t1\t1\tButters_gp57r__gp57r"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "butters_gp57r_locus", "target": "restricted_phage_propagation"}, {"description": "Butters-gp57r-associated restriction of phage propagation realizes the Butters gp57r system trait.", "evidence": [{"notes": "Mohammed et al. show that recombinant expression of Butters gene 57r can reproduce Butters-mediated Island3 defense.", "reference": "DOI:10.1101/2023.01.03.522681", "snippet": "mc2155(gp57r) recapitulated defense against Island3 comparable to that mounted by mc2155(Butters)"}, {"notes": "DefenseFinder records Butters_gp57r as a named system from the Mohammed et al. Butters gp57r antiphage-system preprint.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "Butters_gp57r | 10\\.1101/2023\\.01\\.03\\.522681 | Identification of a new antiphage system inMycobacteriumphage Butters"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "restricted_phage_propagation", "target": "butters_gp57r_system_trait"}, {"description": "Butters gp57r system possession is a phage-defense-system trait.", "evidence": [{"notes": "DefenseFinder associates Butters_gp57r with the Mohammed et al. Butters gp57r antiphage-system preprint.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| Butters_gp57r | 10\\.1101/2023\\.01\\.03\\.522681 | Identification of a new antiphage system inMycobacteriumphage Butters |"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "butters_gp57r_system_trait", "target": "phage_defense_system"}], "evidence_rows": [{"description": "Mohammed et al. show that Butters gp57r is necessary and sufficient for Island3 inhibition, and DefenseFinder catalogs a gp57r profile in the Butters_gp57r model namespace.", "edge_id": "edge-1", "evidence": [{"notes": "Mohammed et al. support gp57r as the Butters component that can restrict Island3 and additional heterotypic phages.", "reference": "DOI:10.1101/2023.01.03.522681", "snippet": "Butters gp57r is both necessary and sufficient to inhibit infection by Island3 and other phages"}, {"notes": "The DefenseFinder HMM inventory records a Butters gp57r profile for Butters_gp57r__gp57r in the Butters_gp57r model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "Butters_gp57r__gp57r                             | Butters_gp57r__gp57r                             | Butters_gp57r"}, {"notes": "The DefenseFinder rules table models Butters_gp57r as a one-component system requiring the gp57r profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Butters_gp57r\tButters_gp57r\t1\t1\tButters_gp57r__gp57r"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Butters gp57r locus", "source_grounding": null, "target": "restricted phage propagation", "target_grounding": null}, {"description": "Butters-gp57r-associated restriction of phage propagation realizes the Butters gp57r system trait.", "edge_id": "edge-2", "evidence": [{"notes": "Mohammed et al. show that recombinant expression of Butters gene 57r can reproduce Butters-mediated Island3 defense.", "reference": "DOI:10.1101/2023.01.03.522681", "snippet": "mc2155(gp57r) recapitulated defense against Island3 comparable to that mounted by mc2155(Butters)"}, {"notes": "DefenseFinder records Butters_gp57r as a named system from the Mohammed et al. Butters gp57r antiphage-system preprint.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "Butters_gp57r | 10\\.1101/2023\\.01\\.03\\.522681 | Identification of a new antiphage system inMycobacteriumphage Butters"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "restricted phage propagation", "source_grounding": null, "target": "Butters gp57r system", "target_grounding": "traitmech:000299"}, {"description": "Butters gp57r system possession is a phage-defense-system trait.", "edge_id": "edge-3", "evidence": [{"notes": "DefenseFinder associates Butters_gp57r with the Mohammed et al. Butters gp57r antiphage-system preprint.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| Butters_gp57r | 10\\.1101/2023\\.01\\.03\\.522681 | Identification of a new antiphage system inMycobacteriumphage Butters |"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "Butters gp57r system", "source_grounding": "traitmech:000299", "target": "phage defense system", "target_grounding": "traitmech:000209"}], "graph_id": "butters_gp57r_locus_restricts_phage", "issues": [], "nodes": [{"color": "#f3f4f6", "description": "A Butters gp57r anti-phage defense locus cataloged in DefenseFinder with a gp57r HMM profile.", "grounding": null, "id": "butters_gp57r_locus", "is_orphan": false, "label": "Butters gp57r locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded Butters gp57r phage-defense system.", "grounding": "traitmech:000299", "id": "butters_gp57r_system_trait", "is_orphan": false, "label": "Butters gp57r system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of one or more genome-encoded immune systems that inhibit bacteriophage infection.", "grounding": "traitmech:000209", "id": "phage_defense_system", "is_orphan": false, "label": "phage defense system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Reduced propagation of bacteriophage in cells carrying the Butters gp57r system.", "grounding": null, "id": "restricted_phage_propagation", "is_orphan": false, "label": "restricted phage propagation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "The graph captures Butters gp57r as a named anti-phage system with a DefenseFinder gp57r profile while leaving the direct Island3 or PurpleHaze trigger, the role of the HEPN-associated RX4-6H motif, the primary gp57r molecular output, and homolog breadth unresolved.", "scope_status": "NONMECHANISTIC", "title": "Butters gp57r loci confer heterotypic phage defense"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -696,13 +782,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-09-20 02:23 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

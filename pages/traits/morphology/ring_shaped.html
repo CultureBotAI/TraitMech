@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/morphology.html">MORPHOLOGY</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/morphology.html">MORPHOLOGY</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>ring shaped</h1>
     <p class="curie"><code>METPO:1000680</code> · CLASS · REVIEWED</p>
 
@@ -79,9 +90,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>strongly curved peptidoglycan growth</strong>
+
             <span class="edge-predicate">has output</span>
             <strong>pole-to-pole closure</strong>
-            <code>RO:0002234</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002234" rel="nofollow noreferrer"><code>RO:0002234</code></a>
             <p>Strong axial curvature brings the poles into proximity.</p>
             <ul>
 
@@ -96,9 +109,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>pole-to-pole closure</strong>
+
             <span class="edge-predicate">causes</span>
             <strong>toroidal geometry</strong>
-            <code>biolink:causes</code>
+
+            <a href="https://w3id.org/biolink/vocab/causes" rel="nofollow noreferrer"><code>biolink:causes</code></a>
             <p>Pole-to-pole closure yields a toroidal body.</p>
             <ul>
 
@@ -113,9 +128,11 @@
 
           <li id="pathograph-1-edge-3">
             <strong>toroidal geometry</strong>
+
             <span class="edge-predicate">manifests as</span>
             <strong>ring shaped</strong>
-            <code>METPO:2007400</code>
+            <a href="https://w3id.org/metpo/1000680" rel="nofollow noreferrer"><code>METPO:1000680</code></a>
+            <a href="https://w3id.org/metpo/2007400" rel="nofollow noreferrer"><code>METPO:2007400</code></a>
             <p>Toroidal geometry manifests the ring-shaped trait.</p>
             <ul>
 
@@ -130,9 +147,11 @@
 
           <li id="pathograph-1-edge-4">
             <strong>MreB filaments</strong>
+
             <span class="edge-predicate">associated with</span>
             <strong>rate of cell wall growth</strong>
-            <code>biolink:associated_with</code>
+
+            <a href="https://w3id.org/biolink/vocab/associated_with" rel="nofollow noreferrer"><code>biolink:associated_with</code></a>
             <p>MreB filament motion is associated with the rate of cell-wall growth.</p>
             <ul>
 
@@ -147,9 +166,11 @@
 
           <li id="pathograph-1-edge-5">
             <strong>MreB filaments</strong>
+
             <span class="edge-predicate">regulates</span>
             <strong>peptidoglycan insertion perpendicular to long axis</strong>
-            <code>RO:0002211</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002211" rel="nofollow noreferrer"><code>RO:0002211</code></a>
             <p>MreB double filaments guide the orientation of peptidoglycan insertion perpendicular to the long axis.</p>
             <ul>
 
@@ -164,9 +185,11 @@
 
           <li id="pathograph-1-edge-6">
             <strong>bactofilin polymers</strong>
+
             <span class="edge-predicate">regulates</span>
             <strong>cell wall biosynthesis</strong>
-            <code>RO:0002211</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002211" rel="nofollow noreferrer"><code>RO:0002211</code></a>
             <p>Bactofilin polymers regulate cell-wall biosynthesis.</p>
             <ul>
 
@@ -181,9 +204,11 @@
 
           <li id="pathograph-1-edge-7">
             <strong>bactofilin-M23 peptidase module</strong>
+
             <span class="edge-predicate">promotes</span>
             <strong>local change in cell wall biosynthesis mode</strong>
-            <code>RO:0002213</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002213" rel="nofollow noreferrer"><code>RO:0002213</code></a>
             <p>Conserved bactofilin and M23 peptidase module promotes local changes in cell-wall biosynthesis mode.</p>
             <ul>
 
@@ -198,9 +223,11 @@
 
           <li id="pathograph-1-edge-8">
             <strong>CrvA polymer</strong>
+
             <span class="edge-predicate">regulates</span>
             <strong>skewed peptidoglycan synthesis rates</strong>
-            <code>RO:0002211</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002211" rel="nofollow noreferrer"><code>RO:0002211</code></a>
             <p>CrvA polymer formation regulates skewed peptidoglycan synthesis rates to generate curvature.</p>
             <ul>
 
@@ -215,9 +242,11 @@
 
           <li id="pathograph-1-edge-9">
             <strong>crescentin</strong>
+
             <span class="edge-predicate">promotes</span>
             <strong>cell curvature</strong>
-            <code>RO:0002213</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002213" rel="nofollow noreferrer"><code>RO:0002213</code></a>
             <p>Crescentin promotes cell curvature.</p>
             <ul>
 
@@ -290,7 +319,7 @@
     <div class="card">
       <h2>Cross-references</h2>
       <ul class="xrefs">
-        <li><code>PATO:0002539</code></li>
+        <li><a href="http://purl.obolibrary.org/obo/PATO_0002539" rel="nofollow noreferrer"><code>PATO:0002539</code></a></li>
       </ul>
     </div>
 
@@ -325,13 +354,13 @@
 
         <li>
           <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/sarcina_arrangement.html">sarcina arrangement</a>
+          <a href="../../traits/morphology/cell_shape.html">cell shape</a>
           <span class="sim">0.821</span>
         </li>
 
         <li>
           <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/streptococcus_arrangement.html">streptococcus arrangement</a>
+          <a href="../../traits/morphology/sarcina_arrangement.html">sarcina arrangement</a>
           <span class="sim">0.821</span>
         </li>
 
@@ -343,13 +372,13 @@
 
         <li>
           <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/tetrad_arrangement.html">tetrad arrangement</a>
+          <a href="../../traits/morphology/streptococcus_arrangement.html">streptococcus arrangement</a>
           <span class="sim">0.821</span>
         </li>
 
         <li>
           <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/cell_shape.html">cell shape</a>
+          <a href="../../traits/morphology/tetrad_arrangement.html">tetrad arrangement</a>
           <span class="sim">0.821</span>
         </li>
 
@@ -966,7 +995,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking strongly curved peptidoglycan growth and pole-to-pole closure to toroidal ring morphology.", "edges": [{"description": "Strong axial curvature brings the poles into proximity.", "evidence": [{"notes": "Supports curvature-generating wall growth as a producer of closed ring forms.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "cell curvature"}], "id": "edge-1", "is_orphan": false, "predicate": "has output", "predicate_id": "RO:0002234", "source": "curved_pg_growth", "target": "pole_to_pole_closure"}, {"description": "Pole-to-pole closure yields a toroidal body.", "evidence": [{"notes": "Supports closed ring forms as genetically determined shape outcomes.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "cell shape is genetically determined"}], "id": "edge-2", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "pole_to_pole_closure", "target": "toroidal_geometry"}, {"description": "Toroidal geometry manifests the ring-shaped trait.", "evidence": [{"notes": "Supports the trait endpoint via curvature-driven closure.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "cell curvature"}], "id": "edge-3", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "toroidal_geometry", "target": "ring_shaped_trait"}, {"description": "MreB filament motion is associated with the rate of cell-wall growth.", "evidence": [{"notes": "Verified against the open Dersch et al. text; the edge remains associative and contextual rather than direct ring-shape evidence.", "reference": "DOI:10.3390/microorganisms12071309", "snippet": "motion of MreB filaments correlates with the rate of cell wall growth"}], "id": "edge-4", "is_orphan": false, "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "mreb_filaments", "target": "cell_wall_growth_rate"}, {"description": "MreB double filaments guide the orientation of peptidoglycan insertion perpendicular to the long axis.", "evidence": [{"notes": "Verified against the open Middlemiss et al. text; the edge supports contextual MreB-guided peptidoglycan insertion.", "reference": "DOI:10.1038/s41467-024-49785-x", "snippet": "guide peptidoglycan insertion perpendicular to the long axis of the cell"}], "id": "edge-5", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "mreb_filaments", "target": "pg_insertion_perpendicular"}, {"description": "Bactofilin polymers regulate cell-wall biosynthesis.", "evidence": [{"notes": "Verified against the open Pohl et al. abstract; bactofilin spatial wall-biosynthesis regulation is retained as comparative Hyphomonas morphogenesis evidence.", "reference": "DOI:10.7554/eLife.86577.2", "snippet": "central role in the spatial regulation of cell wall biosynthesis"}], "id": "edge-6", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "bactofilin_polymers", "target": "cell_wall_biosynthesis"}, {"description": "Conserved bactofilin and M23 peptidase module promotes local changes in cell-wall biosynthesis mode.", "evidence": [{"notes": "Verified against the open Pohl et al. abstract; the conserved bactofilin/M23 module is retained as comparative cell-wall morphogenesis evidence.", "reference": "DOI:10.7554/eLife.86577.2", "snippet": "promotes local changes in the mode of cell wall biosynthesis"}], "id": "edge-7", "is_orphan": false, "predicate": "promotes", "predicate_id": "RO:0002213", "source": "bactofilin_lmdc_module", "target": "wall_biosynthesis_mode_change"}, {"description": "CrvA polymer formation regulates skewed peptidoglycan synthesis rates to generate curvature.", "evidence": [{"notes": "Verified against the open Schiller et al. article text; CrvA is retained as a comparative bacterial curvature module.", "reference": "DOI:10.1038/s41467-024-45196-0", "snippet": "CrvA in Vibrio cholerae, which skews peptidoglycan synthesis rates"}], "id": "edge-8", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "crva_polymer", "target": "pg_synthesis_rate_skew"}, {"description": "Crescentin promotes cell curvature.", "evidence": [{"notes": "Verified against the open Schiller et al. article text; Schiller et al. list crescentin in the same bacterial curvature-component statement.", "reference": "DOI:10.1038/s41467-024-45196-0", "snippet": "Helical cells require components that promote curvature, such as the polymer and filament-forming CrvA in Vibrio cholerae, which skews peptidoglycan synthesis rates, or the intermediate filament-like protein crescentin in C. crescentus"}], "id": "edge-9", "is_orphan": false, "predicate": "promotes", "predicate_id": "RO:0002213", "source": "crescentin", "target": "cell_curvature"}], "evidence_rows": [{"description": "Strong axial curvature brings the poles into proximity.", "edge_id": "edge-1", "evidence": [{"notes": "Supports curvature-generating wall growth as a producer of closed ring forms.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "cell curvature"}], "predicate": "has output", "predicate_id": "RO:0002234", "source": "strongly curved peptidoglycan growth", "target": "pole-to-pole closure"}, {"description": "Pole-to-pole closure yields a toroidal body.", "edge_id": "edge-2", "evidence": [{"notes": "Supports closed ring forms as genetically determined shape outcomes.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "cell shape is genetically determined"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "pole-to-pole closure", "target": "toroidal geometry"}, {"description": "Toroidal geometry manifests the ring-shaped trait.", "edge_id": "edge-3", "evidence": [{"notes": "Supports the trait endpoint via curvature-driven closure.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "cell curvature"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "toroidal geometry", "target": "ring shaped"}, {"description": "MreB filament motion is associated with the rate of cell-wall growth.", "edge_id": "edge-4", "evidence": [{"notes": "Verified against the open Dersch et al. text; the edge remains associative and contextual rather than direct ring-shape evidence.", "reference": "DOI:10.3390/microorganisms12071309", "snippet": "motion of MreB filaments correlates with the rate of cell wall growth"}], "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "MreB filaments", "target": "rate of cell wall growth"}, {"description": "MreB double filaments guide the orientation of peptidoglycan insertion perpendicular to the long axis.", "edge_id": "edge-5", "evidence": [{"notes": "Verified against the open Middlemiss et al. text; the edge supports contextual MreB-guided peptidoglycan insertion.", "reference": "DOI:10.1038/s41467-024-49785-x", "snippet": "guide peptidoglycan insertion perpendicular to the long axis of the cell"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "MreB filaments", "target": "peptidoglycan insertion perpendicular to long axis"}, {"description": "Bactofilin polymers regulate cell-wall biosynthesis.", "edge_id": "edge-6", "evidence": [{"notes": "Verified against the open Pohl et al. abstract; bactofilin spatial wall-biosynthesis regulation is retained as comparative Hyphomonas morphogenesis evidence.", "reference": "DOI:10.7554/eLife.86577.2", "snippet": "central role in the spatial regulation of cell wall biosynthesis"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "bactofilin polymers", "target": "cell wall biosynthesis"}, {"description": "Conserved bactofilin and M23 peptidase module promotes local changes in cell-wall biosynthesis mode.", "edge_id": "edge-7", "evidence": [{"notes": "Verified against the open Pohl et al. abstract; the conserved bactofilin/M23 module is retained as comparative cell-wall morphogenesis evidence.", "reference": "DOI:10.7554/eLife.86577.2", "snippet": "promotes local changes in the mode of cell wall biosynthesis"}], "predicate": "promotes", "predicate_id": "RO:0002213", "source": "bactofilin-M23 peptidase module", "target": "local change in cell wall biosynthesis mode"}, {"description": "CrvA polymer formation regulates skewed peptidoglycan synthesis rates to generate curvature.", "edge_id": "edge-8", "evidence": [{"notes": "Verified against the open Schiller et al. article text; CrvA is retained as a comparative bacterial curvature module.", "reference": "DOI:10.1038/s41467-024-45196-0", "snippet": "CrvA in Vibrio cholerae, which skews peptidoglycan synthesis rates"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "CrvA polymer", "target": "skewed peptidoglycan synthesis rates"}, {"description": "Crescentin promotes cell curvature.", "edge_id": "edge-9", "evidence": [{"notes": "Verified against the open Schiller et al. article text; Schiller et al. list crescentin in the same bacterial curvature-component statement.", "reference": "DOI:10.1038/s41467-024-45196-0", "snippet": "Helical cells require components that promote curvature, such as the polymer and filament-forming CrvA in Vibrio cholerae, which skews peptidoglycan synthesis rates, or the intermediate filament-like protein crescentin in C. crescentus"}], "predicate": "promotes", "predicate_id": "RO:0002213", "source": "crescentin", "target": "cell curvature"}], "graph_id": "ring_shaped_curved_growth_closure", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Conserved bactofilin and M23 peptidase functional module remodeling the wall locally.", "grounding": null, "id": "bactofilin_lmdc_module", "is_orphan": false, "label": "bactofilin-M23 peptidase module", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Cytoskeletal bactofilin polymers that localize to sites of wall remodeling.", "grounding": null, "id": "bactofilin_polymers", "is_orphan": false, "label": "bactofilin polymers", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Degree of curvature of the cell body.", "grounding": null, "id": "cell_curvature", "is_orphan": false, "label": "cell curvature", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Spatially regulated synthesis of the peptidoglycan cell wall.", "grounding": null, "id": "cell_wall_biosynthesis", "is_orphan": false, "label": "cell wall biosynthesis", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Rate of peptidoglycan cell-wall synthesis during growth.", "grounding": null, "id": "cell_wall_growth_rate", "is_orphan": false, "label": "rate of cell wall growth", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Intermediate filament-like protein promoting cell curvature.", "grounding": null, "id": "crescentin", "is_orphan": false, "label": "crescentin", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Periplasmic CrvA polymer that skews peptidoglycan synthesis to generate curvature.", "grounding": null, "id": "crva_polymer", "is_orphan": false, "label": "CrvA polymer", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Asymmetric lateral wall synthesis producing high cell curvature.", "grounding": null, "id": "curved_pg_growth", "is_orphan": false, "label": "strongly curved peptidoglycan growth", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Actin-like cytoskeletal filaments guiding cell-wall synthesis.", "grounding": null, "id": "mreb_filaments", "is_orphan": false, "label": "MreB filaments", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Circumferential peptidoglycan insertion oriented perpendicular to the cell long axis.", "grounding": null, "id": "pg_insertion_perpendicular", "is_orphan": false, "label": "peptidoglycan insertion perpendicular to long axis", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Asymmetric peptidoglycan synthesis rates across the cell body.", "grounding": null, "id": "pg_synthesis_rate_skew", "is_orphan": false, "label": "skewed peptidoglycan synthesis rates", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Connection or near-contact of the two cell poles producing a ring.", "grounding": null, "id": "pole_to_pole_closure", "is_orphan": false, "label": "pole-to-pole closure", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Closed circular or toroidal cell geometry.", "grounding": "METPO:1000680", "id": "ring_shaped_trait", "is_orphan": false, "label": "ring shaped", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Closed ring-like cell-body geometry.", "grounding": null, "id": "toroidal_geometry", "is_orphan": false, "label": "toroidal geometry", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Local shift in the mode of cell-wall synthesis producing shape changes.", "grounding": null, "id": "wall_biosynthesis_mode_change", "is_orphan": false, "label": "local change in cell wall biosynthesis mode", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This record is a ring-shape classification. Its contextual protein modules come from several taxa and support curvature or wall organization, not the proposed pole-to-pole closure into a ring; no token protein example is assigned.", "scope_status": "NONMECHANISTIC", "title": "Ring-shape curved growth and pole closure"}];
+  var graphs = [{"description": "DOI-backed graph linking strongly curved peptidoglycan growth and pole-to-pole closure to toroidal ring morphology.", "edges": [{"description": "Strong axial curvature brings the poles into proximity.", "evidence": [{"notes": "Supports curvature-generating wall growth as a producer of closed ring forms.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "cell curvature"}], "id": "edge-1", "is_orphan": false, "predicate": "has output", "predicate_id": "RO:0002234", "source": "curved_pg_growth", "target": "pole_to_pole_closure"}, {"description": "Pole-to-pole closure yields a toroidal body.", "evidence": [{"notes": "Supports closed ring forms as genetically determined shape outcomes.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "cell shape is genetically determined"}], "id": "edge-2", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "pole_to_pole_closure", "target": "toroidal_geometry"}, {"description": "Toroidal geometry manifests the ring-shaped trait.", "evidence": [{"notes": "Supports the trait endpoint via curvature-driven closure.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "cell curvature"}], "id": "edge-3", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "toroidal_geometry", "target": "ring_shaped_trait"}, {"description": "MreB filament motion is associated with the rate of cell-wall growth.", "evidence": [{"notes": "Verified against the open Dersch et al. text; the edge remains associative and contextual rather than direct ring-shape evidence.", "reference": "DOI:10.3390/microorganisms12071309", "snippet": "motion of MreB filaments correlates with the rate of cell wall growth"}], "id": "edge-4", "is_orphan": false, "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "mreb_filaments", "target": "cell_wall_growth_rate"}, {"description": "MreB double filaments guide the orientation of peptidoglycan insertion perpendicular to the long axis.", "evidence": [{"notes": "Verified against the open Middlemiss et al. text; the edge supports contextual MreB-guided peptidoglycan insertion.", "reference": "DOI:10.1038/s41467-024-49785-x", "snippet": "guide peptidoglycan insertion perpendicular to the long axis of the cell"}], "id": "edge-5", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "mreb_filaments", "target": "pg_insertion_perpendicular"}, {"description": "Bactofilin polymers regulate cell-wall biosynthesis.", "evidence": [{"notes": "Verified against the open Pohl et al. abstract; bactofilin spatial wall-biosynthesis regulation is retained as comparative Hyphomonas morphogenesis evidence.", "reference": "DOI:10.7554/eLife.86577.2", "snippet": "central role in the spatial regulation of cell wall biosynthesis"}], "id": "edge-6", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "bactofilin_polymers", "target": "cell_wall_biosynthesis"}, {"description": "Conserved bactofilin and M23 peptidase module promotes local changes in cell-wall biosynthesis mode.", "evidence": [{"notes": "Verified against the open Pohl et al. abstract; the conserved bactofilin/M23 module is retained as comparative cell-wall morphogenesis evidence.", "reference": "DOI:10.7554/eLife.86577.2", "snippet": "promotes local changes in the mode of cell wall biosynthesis"}], "id": "edge-7", "is_orphan": false, "predicate": "promotes", "predicate_id": "RO:0002213", "source": "bactofilin_lmdc_module", "target": "wall_biosynthesis_mode_change"}, {"description": "CrvA polymer formation regulates skewed peptidoglycan synthesis rates to generate curvature.", "evidence": [{"notes": "Verified against the open Schiller et al. article text; CrvA is retained as a comparative bacterial curvature module.", "reference": "DOI:10.1038/s41467-024-45196-0", "snippet": "CrvA in Vibrio cholerae, which skews peptidoglycan synthesis rates"}], "id": "edge-8", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "crva_polymer", "target": "pg_synthesis_rate_skew"}, {"description": "Crescentin promotes cell curvature.", "evidence": [{"notes": "Verified against the open Schiller et al. article text; Schiller et al. list crescentin in the same bacterial curvature-component statement.", "reference": "DOI:10.1038/s41467-024-45196-0", "snippet": "Helical cells require components that promote curvature, such as the polymer and filament-forming CrvA in Vibrio cholerae, which skews peptidoglycan synthesis rates, or the intermediate filament-like protein crescentin in C. crescentus"}], "id": "edge-9", "is_orphan": false, "predicate": "promotes", "predicate_id": "RO:0002213", "source": "crescentin", "target": "cell_curvature"}], "evidence_rows": [{"description": "Strong axial curvature brings the poles into proximity.", "edge_id": "edge-1", "evidence": [{"notes": "Supports curvature-generating wall growth as a producer of closed ring forms.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "cell curvature"}], "predicate": "has output", "predicate_id": "RO:0002234", "source": "strongly curved peptidoglycan growth", "source_grounding": null, "target": "pole-to-pole closure", "target_grounding": null}, {"description": "Pole-to-pole closure yields a toroidal body.", "edge_id": "edge-2", "evidence": [{"notes": "Supports closed ring forms as genetically determined shape outcomes.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "cell shape is genetically determined"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "pole-to-pole closure", "source_grounding": null, "target": "toroidal geometry", "target_grounding": null}, {"description": "Toroidal geometry manifests the ring-shaped trait.", "edge_id": "edge-3", "evidence": [{"notes": "Supports the trait endpoint via curvature-driven closure.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "cell curvature"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "toroidal geometry", "source_grounding": null, "target": "ring shaped", "target_grounding": "METPO:1000680"}, {"description": "MreB filament motion is associated with the rate of cell-wall growth.", "edge_id": "edge-4", "evidence": [{"notes": "Verified against the open Dersch et al. text; the edge remains associative and contextual rather than direct ring-shape evidence.", "reference": "DOI:10.3390/microorganisms12071309", "snippet": "motion of MreB filaments correlates with the rate of cell wall growth"}], "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "MreB filaments", "source_grounding": null, "target": "rate of cell wall growth", "target_grounding": null}, {"description": "MreB double filaments guide the orientation of peptidoglycan insertion perpendicular to the long axis.", "edge_id": "edge-5", "evidence": [{"notes": "Verified against the open Middlemiss et al. text; the edge supports contextual MreB-guided peptidoglycan insertion.", "reference": "DOI:10.1038/s41467-024-49785-x", "snippet": "guide peptidoglycan insertion perpendicular to the long axis of the cell"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "MreB filaments", "source_grounding": null, "target": "peptidoglycan insertion perpendicular to long axis", "target_grounding": null}, {"description": "Bactofilin polymers regulate cell-wall biosynthesis.", "edge_id": "edge-6", "evidence": [{"notes": "Verified against the open Pohl et al. abstract; bactofilin spatial wall-biosynthesis regulation is retained as comparative Hyphomonas morphogenesis evidence.", "reference": "DOI:10.7554/eLife.86577.2", "snippet": "central role in the spatial regulation of cell wall biosynthesis"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "bactofilin polymers", "source_grounding": null, "target": "cell wall biosynthesis", "target_grounding": null}, {"description": "Conserved bactofilin and M23 peptidase module promotes local changes in cell-wall biosynthesis mode.", "edge_id": "edge-7", "evidence": [{"notes": "Verified against the open Pohl et al. abstract; the conserved bactofilin/M23 module is retained as comparative cell-wall morphogenesis evidence.", "reference": "DOI:10.7554/eLife.86577.2", "snippet": "promotes local changes in the mode of cell wall biosynthesis"}], "predicate": "promotes", "predicate_id": "RO:0002213", "source": "bactofilin-M23 peptidase module", "source_grounding": null, "target": "local change in cell wall biosynthesis mode", "target_grounding": null}, {"description": "CrvA polymer formation regulates skewed peptidoglycan synthesis rates to generate curvature.", "edge_id": "edge-8", "evidence": [{"notes": "Verified against the open Schiller et al. article text; CrvA is retained as a comparative bacterial curvature module.", "reference": "DOI:10.1038/s41467-024-45196-0", "snippet": "CrvA in Vibrio cholerae, which skews peptidoglycan synthesis rates"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "CrvA polymer", "source_grounding": null, "target": "skewed peptidoglycan synthesis rates", "target_grounding": null}, {"description": "Crescentin promotes cell curvature.", "edge_id": "edge-9", "evidence": [{"notes": "Verified against the open Schiller et al. article text; Schiller et al. list crescentin in the same bacterial curvature-component statement.", "reference": "DOI:10.1038/s41467-024-45196-0", "snippet": "Helical cells require components that promote curvature, such as the polymer and filament-forming CrvA in Vibrio cholerae, which skews peptidoglycan synthesis rates, or the intermediate filament-like protein crescentin in C. crescentus"}], "predicate": "promotes", "predicate_id": "RO:0002213", "source": "crescentin", "source_grounding": null, "target": "cell curvature", "target_grounding": null}], "graph_id": "ring_shaped_curved_growth_closure", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Conserved bactofilin and M23 peptidase functional module remodeling the wall locally.", "grounding": null, "id": "bactofilin_lmdc_module", "is_orphan": false, "label": "bactofilin-M23 peptidase module", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Cytoskeletal bactofilin polymers that localize to sites of wall remodeling.", "grounding": null, "id": "bactofilin_polymers", "is_orphan": false, "label": "bactofilin polymers", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Degree of curvature of the cell body.", "grounding": null, "id": "cell_curvature", "is_orphan": false, "label": "cell curvature", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Spatially regulated synthesis of the peptidoglycan cell wall.", "grounding": null, "id": "cell_wall_biosynthesis", "is_orphan": false, "label": "cell wall biosynthesis", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Rate of peptidoglycan cell-wall synthesis during growth.", "grounding": null, "id": "cell_wall_growth_rate", "is_orphan": false, "label": "rate of cell wall growth", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Intermediate filament-like protein promoting cell curvature.", "grounding": null, "id": "crescentin", "is_orphan": false, "label": "crescentin", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Periplasmic CrvA polymer that skews peptidoglycan synthesis to generate curvature.", "grounding": null, "id": "crva_polymer", "is_orphan": false, "label": "CrvA polymer", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Asymmetric lateral wall synthesis producing high cell curvature.", "grounding": null, "id": "curved_pg_growth", "is_orphan": false, "label": "strongly curved peptidoglycan growth", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Actin-like cytoskeletal filaments guiding cell-wall synthesis.", "grounding": null, "id": "mreb_filaments", "is_orphan": false, "label": "MreB filaments", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Circumferential peptidoglycan insertion oriented perpendicular to the cell long axis.", "grounding": null, "id": "pg_insertion_perpendicular", "is_orphan": false, "label": "peptidoglycan insertion perpendicular to long axis", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Asymmetric peptidoglycan synthesis rates across the cell body.", "grounding": null, "id": "pg_synthesis_rate_skew", "is_orphan": false, "label": "skewed peptidoglycan synthesis rates", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Connection or near-contact of the two cell poles producing a ring.", "grounding": null, "id": "pole_to_pole_closure", "is_orphan": false, "label": "pole-to-pole closure", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Closed circular or toroidal cell geometry.", "grounding": "METPO:1000680", "id": "ring_shaped_trait", "is_orphan": false, "label": "ring shaped", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Closed ring-like cell-body geometry.", "grounding": null, "id": "toroidal_geometry", "is_orphan": false, "label": "toroidal geometry", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Local shift in the mode of cell-wall synthesis producing shape changes.", "grounding": null, "id": "wall_biosynthesis_mode_change", "is_orphan": false, "label": "local change in cell wall biosynthesis mode", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This record is a ring-shape classification. Its contextual protein modules come from several taxa and support curvature or wall organization, not the proposed pole-to-pole closure into a ring; no token protein example is assigned.", "scope_status": "NONMECHANISTIC", "title": "Ring-shape curved growth and pole closure"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -986,13 +1015,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-09-07 20:05 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

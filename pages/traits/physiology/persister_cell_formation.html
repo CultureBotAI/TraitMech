@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/physiology.html">PHYSIOLOGY</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/physiology.html">PHYSIOLOGY</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>persister cell formation</h1>
     <p class="curie"><code>traitmech:000082</code> · CLASS · REVIEWED</p>
 
@@ -85,9 +96,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>HipA toxin and high-persistence HipA variants</strong>
+            <a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR052028/" rel="nofollow noreferrer"><code>InterPro:IPR052028</code></a>
             <span class="edge-predicate">promotes</span>
             <strong>dormancy process</strong>
-            <code>RO:0002213</code>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0022611" rel="nofollow noreferrer"><code>GO:0022611</code></a>
+            <a href="http://purl.obolibrary.org/obo/RO_0002213" rel="nofollow noreferrer"><code>RO:0002213</code></a>
             <p>High-persistence HipA variants and experimentally elevated HipA kinase activity promote growth arrest in the E. coli K-12 persister branch.</p>
             <ul>
 
@@ -108,9 +121,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>dormancy process</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0022611" rel="nofollow noreferrer"><code>GO:0022611</code></a>
             <span class="edge-predicate">confers</span>
             <strong>persister cell formation</strong>
-            <code>METPO:2007700</code>
+            <code>traitmech:000082</code>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>Dormancy underlies stochastic persister formation.</p>
             <ul>
 
@@ -125,9 +140,11 @@
 
           <li id="pathograph-1-edge-3">
             <strong>persister cell formation</strong>
+            <code>traitmech:000082</code>
             <span class="edge-predicate">enables</span>
             <strong>antibiotic tolerance</strong>
-            <code>RO:0002327</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002327" rel="nofollow noreferrer"><code>RO:0002327</code></a>
             <p>Persister cells transiently tolerate antibiotics.</p>
             <ul>
 
@@ -142,8 +159,10 @@
 
           <li id="pathograph-1-edge-4">
             <strong>persister cell formation</strong>
+            <code>traitmech:000082</code>
             <span class="edge-predicate">characterized by</span>
             <strong>biphasic killing curve</strong>
+
 
             <p>Persistence produces a biphasic time-kill curve diagnostic of a tolerant subpopulation.</p>
             <ul>
@@ -159,8 +178,10 @@
 
           <li id="pathograph-1-edge-5">
             <strong>persister cell formation</strong>
+            <code>traitmech:000082</code>
             <span class="edge-predicate">has characteristic</span>
             <strong>minimum inhibitory concentration of susceptible cells</strong>
+
 
             <p>Persisters retain the same MIC as susceptible cells, distinguishing persistence from resistance.</p>
             <ul>
@@ -176,8 +197,10 @@
 
           <li id="pathograph-1-edge-6">
             <strong>antibiotic resistance</strong>
+
             <span class="edge-predicate">has characteristic</span>
             <strong>elevated minimum inhibitory concentration</strong>
+
 
             <p>Resistant bacteria have a significantly higher MIC, contrasting with the unchanged MIC of persisters.</p>
             <ul>
@@ -193,8 +216,10 @@
 
           <li id="pathograph-1-edge-7">
             <strong>antibiotic tolerance</strong>
+
             <span class="edge-predicate">has characteristic</span>
             <strong>whole-population phenotype</strong>
+
 
             <p>Tolerance applies to the whole population, whereas persisters are a small subpopulation.</p>
             <ul>
@@ -210,9 +235,11 @@
 
           <li id="pathograph-1-edge-8">
             <strong>persister cell formation</strong>
+            <code>traitmech:000082</code>
             <span class="edge-predicate">enables</span>
             <strong>oxidative phosphorylation</strong>
-            <code>RO:0002327</code>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0006119" rel="nofollow noreferrer"><code>GO:0006119</code></a>
+            <a href="http://purl.obolibrary.org/obo/RO_0002327" rel="nofollow noreferrer"><code>RO:0002327</code></a>
             <p>Persisters actively undergo a residual level of oxidative phosphorylation even during nutrient starvation.</p>
             <ul>
 
@@ -227,8 +254,10 @@
 
           <li id="pathograph-1-edge-9">
             <strong>oxidative phosphorylation</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0006119" rel="nofollow noreferrer"><code>GO:0006119</code></a>
             <span class="edge-predicate">results in</span>
             <strong>proton motive force</strong>
+            <a href="https://w3id.org/metpo/1007500" rel="nofollow noreferrer"><code>METPO:1007500</code></a>
 
             <p>Residual oxidative phosphorylation generates proton motive force that sustains persister survival.</p>
             <ul>
@@ -244,8 +273,10 @@
 
           <li id="pathograph-1-edge-10">
             <strong>antibiotic resistance</strong>
+
             <span class="edge-predicate">is distinct from</span>
             <strong>persister cell formation</strong>
+            <code>traitmech:000082</code>
 
             <p>Genetic antibiotic resistance is explicitly distinct from the phenotypic persistence trait.</p>
             <ul>
@@ -380,50 +411,50 @@
       <ul class="nn-list">
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/cadmium_tolerant.html">cadmium tolerant</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/cystine_arylamidase_activity.html">cystine arylamidase activity</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/sulfur_globule.html">sulfur globule</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/coagulase_activity.html">coagulase activity</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/cobalt_tolerant.html">cobalt tolerant</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/chemotropism.html">chemotropism</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/copper_tolerant.html">copper tolerant</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/chemotaxis.html">chemotaxis</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/desiccation_tolerant.html">desiccation tolerant</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/cellular_rejuvenation.html">functional cellular rejuvenation</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/piezophilic.html">piezophilic</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/cellular_contraction.html">cell body or cytoplasmic projection contraction</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/obligately_piezophilic.html">obligately piezophilic</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/cellular_buoyancy.html">cellular buoyancy</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/gas_vesicle.html">gas vesicle</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/coccolith_production.html">coccolith production</a>
           <span class="sim">1.000</span>
         </li>
 
@@ -1007,7 +1038,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking dormancy to stochastic persister formation and transient antibiotic tolerance.", "edges": [{"description": "High-persistence HipA variants and experimentally elevated HipA kinase activity promote growth arrest in the E. coli K-12 persister branch.", "evidence": [{"notes": "This experiment supports a causal HipA-to-growth-arrest link under overexpression; it does not establish a universal wild-type requirement.", "reference": "DOI:10.1128/jb.01237-06", "snippet": "Kinase activity of overexpressed HipA is required for growth arrest and multidrug tolerance"}, {"notes": "The original K-12 evidence is specifically for the high-persistence hipA7 allele and limits this edge to that strain-specific branch.", "reference": "DOI:10.1128/jb.155.2.768-775.1983", "snippet": "hipA, a newly recognized gene of Escherichia coli K-12 that affects frequency of persistence"}], "id": "edge-1", "is_orphan": false, "predicate": "promotes", "predicate_id": "RO:0002213", "source": "hipa_toxin", "target": "dormancy_process"}, {"description": "Dormancy underlies stochastic persister formation.", "evidence": [{"notes": "Lewis reviews persisters as dormant tolerant variants.", "reference": "DOI:10.1146/annurev.micro.112408.134306"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "dormancy_process", "target": "persister_trait"}, {"description": "Persister cells transiently tolerate antibiotics.", "evidence": [{"notes": "Lewis links persisters to recalcitrant infection.", "reference": "DOI:10.1038/nrmicro1557"}], "id": "edge-3", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "persister_trait", "target": "antibiotic_tolerance"}, {"description": "Persistence produces a biphasic time-kill curve diagnostic of a tolerant subpopulation.", "evidence": [{"notes": "A hallmark of persistence is the biphasic killing curve.", "reference": "DOI:10.1128/ecosalplus.esp-0025-2022"}], "id": "edge-4", "is_orphan": false, "predicate": "characterized by", "predicate_id": null, "source": "persister_trait", "target": "biphasic_killing_curve"}, {"description": "Persisters retain the same MIC as susceptible cells, distinguishing persistence from resistance.", "evidence": [{"notes": "Persisters had the same minimum inhibitory concentration (MIC) as the susceptible cells.", "reference": "DOI:10.1186/s12866-024-03628-3"}], "id": "edge-5", "is_orphan": false, "predicate": "has characteristic", "predicate_id": null, "source": "persister_trait", "target": "mic_susceptible"}, {"description": "Resistant bacteria have a significantly higher MIC, contrasting with the unchanged MIC of persisters.", "evidence": [{"notes": "The MIC of resistant bacteria was significantly higher; scope edge excluding resistance from persistence.", "reference": "DOI:10.1186/s12866-024-03628-3"}], "id": "edge-6", "is_orphan": false, "predicate": "has characteristic", "predicate_id": null, "source": "antibiotic_resistance", "target": "elevated_mic"}, {"description": "Tolerance applies to the whole population, whereas persisters are a small subpopulation.", "evidence": [{"notes": "Persisters are a smaller subpopulation, whereas tolerance is for the microbiota as a whole.", "reference": "DOI:10.1186/s12866-024-03628-3"}], "id": "edge-7", "is_orphan": false, "predicate": "has characteristic", "predicate_id": null, "source": "antibiotic_tolerance", "target": "whole_population_phenotype"}, {"description": "Persisters actively undergo a residual level of oxidative phosphorylation even during nutrient starvation.", "evidence": [{"notes": "Persisters still actively generated PMF by undergoing a certain level of oxidative phosphorylation, even after complete nutrient starvation for 24 h.", "reference": "DOI:10.1111/1751-7915.70042"}], "id": "edge-8", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "persister_trait", "target": "oxidative_phosphorylation"}, {"description": "Residual oxidative phosphorylation generates proton motive force that sustains persister survival.", "evidence": [{"notes": "Persisters generated PMF via oxidative phosphorylation; ETC components maintain PMF underlying tolerance.", "reference": "DOI:10.1111/1751-7915.70042"}], "id": "edge-9", "is_orphan": false, "predicate": "results in", "predicate_id": null, "source": "oxidative_phosphorylation", "target": "proton_motive_force"}, {"description": "Genetic antibiotic resistance is explicitly distinct from the phenotypic persistence trait.", "evidence": [{"notes": "Verified against the open consensus statement; this contrast edge does not treat resistance as a persistence mechanism.", "reference": "DOI:10.1038/s41579-019-0196-3", "snippet": "Resistance, tolerance and persistence are distinct responses to antibiotic treatment"}], "id": "edge-10", "is_orphan": false, "predicate": "is distinct from", "predicate_id": null, "source": "antibiotic_resistance", "target": "persister_trait"}], "evidence_rows": [{"description": "High-persistence HipA variants and experimentally elevated HipA kinase activity promote growth arrest in the E. coli K-12 persister branch.", "edge_id": "edge-1", "evidence": [{"notes": "This experiment supports a causal HipA-to-growth-arrest link under overexpression; it does not establish a universal wild-type requirement.", "reference": "DOI:10.1128/jb.01237-06", "snippet": "Kinase activity of overexpressed HipA is required for growth arrest and multidrug tolerance"}, {"notes": "The original K-12 evidence is specifically for the high-persistence hipA7 allele and limits this edge to that strain-specific branch.", "reference": "DOI:10.1128/jb.155.2.768-775.1983", "snippet": "hipA, a newly recognized gene of Escherichia coli K-12 that affects frequency of persistence"}], "predicate": "promotes", "predicate_id": "RO:0002213", "source": "HipA toxin and high-persistence HipA variants", "target": "dormancy process"}, {"description": "Dormancy underlies stochastic persister formation.", "edge_id": "edge-2", "evidence": [{"notes": "Lewis reviews persisters as dormant tolerant variants.", "reference": "DOI:10.1146/annurev.micro.112408.134306"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "dormancy process", "target": "persister cell formation"}, {"description": "Persister cells transiently tolerate antibiotics.", "edge_id": "edge-3", "evidence": [{"notes": "Lewis links persisters to recalcitrant infection.", "reference": "DOI:10.1038/nrmicro1557"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "persister cell formation", "target": "antibiotic tolerance"}, {"description": "Persistence produces a biphasic time-kill curve diagnostic of a tolerant subpopulation.", "edge_id": "edge-4", "evidence": [{"notes": "A hallmark of persistence is the biphasic killing curve.", "reference": "DOI:10.1128/ecosalplus.esp-0025-2022"}], "predicate": "characterized by", "predicate_id": null, "source": "persister cell formation", "target": "biphasic killing curve"}, {"description": "Persisters retain the same MIC as susceptible cells, distinguishing persistence from resistance.", "edge_id": "edge-5", "evidence": [{"notes": "Persisters had the same minimum inhibitory concentration (MIC) as the susceptible cells.", "reference": "DOI:10.1186/s12866-024-03628-3"}], "predicate": "has characteristic", "predicate_id": null, "source": "persister cell formation", "target": "minimum inhibitory concentration of susceptible cells"}, {"description": "Resistant bacteria have a significantly higher MIC, contrasting with the unchanged MIC of persisters.", "edge_id": "edge-6", "evidence": [{"notes": "The MIC of resistant bacteria was significantly higher; scope edge excluding resistance from persistence.", "reference": "DOI:10.1186/s12866-024-03628-3"}], "predicate": "has characteristic", "predicate_id": null, "source": "antibiotic resistance", "target": "elevated minimum inhibitory concentration"}, {"description": "Tolerance applies to the whole population, whereas persisters are a small subpopulation.", "edge_id": "edge-7", "evidence": [{"notes": "Persisters are a smaller subpopulation, whereas tolerance is for the microbiota as a whole.", "reference": "DOI:10.1186/s12866-024-03628-3"}], "predicate": "has characteristic", "predicate_id": null, "source": "antibiotic tolerance", "target": "whole-population phenotype"}, {"description": "Persisters actively undergo a residual level of oxidative phosphorylation even during nutrient starvation.", "edge_id": "edge-8", "evidence": [{"notes": "Persisters still actively generated PMF by undergoing a certain level of oxidative phosphorylation, even after complete nutrient starvation for 24 h.", "reference": "DOI:10.1111/1751-7915.70042"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "persister cell formation", "target": "oxidative phosphorylation"}, {"description": "Residual oxidative phosphorylation generates proton motive force that sustains persister survival.", "edge_id": "edge-9", "evidence": [{"notes": "Persisters generated PMF via oxidative phosphorylation; ETC components maintain PMF underlying tolerance.", "reference": "DOI:10.1111/1751-7915.70042"}], "predicate": "results in", "predicate_id": null, "source": "oxidative phosphorylation", "target": "proton motive force"}, {"description": "Genetic antibiotic resistance is explicitly distinct from the phenotypic persistence trait.", "edge_id": "edge-10", "evidence": [{"notes": "Verified against the open consensus statement; this contrast edge does not treat resistance as a persistence mechanism.", "reference": "DOI:10.1038/s41579-019-0196-3", "snippet": "Resistance, tolerance and persistence are distinct responses to antibiotic treatment"}], "predicate": "is distinct from", "predicate_id": null, "source": "antibiotic resistance", "target": "persister cell formation"}], "graph_id": "persister_dormancy_tolerance", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Genetically encoded ability to grow at elevated antibiotic concentrations; distinct from tolerance/persistence.", "grounding": null, "id": "antibiotic_resistance", "is_orphan": false, "label": "antibiotic resistance", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Transient survival of lethal antibiotic exposure.", "grounding": null, "id": "antibiotic_tolerance", "is_orphan": false, "label": "antibiotic tolerance", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ccfbf1", "description": "Hallmark biphasic time-kill readout: rapid death of bulk population then slow killing of persister subpopulation.", "grounding": null, "id": "biphasic_killing_curve", "is_orphan": false, "label": "biphasic killing curve", "node_type": "EXPERIMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Reversible quiescence underlying persistence.", "grounding": "GO:0022611", "id": "dormancy_process", "is_orphan": false, "label": "dormancy process", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Increased MIC characteristic of resistant bacteria, distinguishing resistance from persistence.", "grounding": null, "id": "elevated_mic", "is_orphan": false, "label": "elevated minimum inhibitory concentration", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "HipA serine/threonine kinase toxin; specific variants or elevated activity can arrest growth and increase antibiotic persistence in E. coli.", "grounding": "InterPro:IPR052028", "id": "hipa_toxin", "is_orphan": false, "label": "HipA toxin and high-persistence HipA variants", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 176, "evidence": [{"notes": "The primary K-12 study isolates the high-persistence hipA7 allele; UniProtKB P23874 is the reviewed HipA entry for the same taxon, but does not encode the allele distinction.", "reference": "DOI:10.1128/jb.155.2.768-775.1983", "snippet": "hipA, a newly recognized gene of Escherichia coli K-12 that affects frequency of persistence"}], "gene_symbol": "hipA", "protein_label": "Serine/threonine-protein kinase toxin HipA", "retrieved_on": "2026-08-24", "role": "Reviewed K-12 HipA sequence instance underlying the experimentally studied hipA7 variant and HipA-overexpression systems; the accession itself denotes the wild-type protein, not the hipA7 allele.", "sequence_version": 2, "taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli K-12", "uniprot_id": "UniProtKB:P23874"}], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "MIC value characteristic of antibiotic-susceptible cells; unchanged in persisters.", "grounding": null, "id": "mic_susceptible", "is_orphan": false, "label": "minimum inhibitory concentration of susceptible cells", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#e0e7ff", "description": "Residual respiratory ATP synthesis maintaining proton motive force in persisters.", "grounding": "GO:0006119", "id": "oxidative_phosphorylation", "is_orphan": false, "label": "oxidative phosphorylation", "node_type": "PATHWAY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Stochastic formation of dormant, drug-tolerant variants.", "grounding": "traitmech:000082", "id": "persister_trait", "is_orphan": false, "label": "persister cell formation", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Transmembrane electrochemical gradient maintained by persisters during starvation.", "grounding": "METPO:1007500", "id": "proton_motive_force", "is_orphan": false, "label": "proton motive force", "node_type": "STATE", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Property applying to the entire population rather than a small subpopulation.", "grounding": null, "id": "whole_population_phenotype", "is_orphan": false, "label": "whole-population phenotype", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 176, "evidence": [{"notes": "The primary K-12 study isolates the high-persistence hipA7 allele; UniProtKB P23874 is the reviewed HipA entry for the same taxon, but does not encode the allele distinction.", "reference": "DOI:10.1128/jb.155.2.768-775.1983", "snippet": "hipA, a newly recognized gene of Escherichia coli K-12 that affects frequency of persistence"}], "gene_symbol": "hipA", "node_id": "hipa_toxin", "node_label": "HipA toxin and high-persistence HipA variants", "protein_label": "Serine/threonine-protein kinase toxin HipA", "retrieved_on": "2026-08-24", "role": "Reviewed K-12 HipA sequence instance underlying the experimentally studied hipA7 variant and HipA-overexpression systems; the accession itself denotes the wild-type protein, not the hipA7 allele.", "sequence_version": 2, "taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli K-12", "uniprot_id": "UniProtKB:P23874"}], "scope_notes": "The HipA branch is an E. coli K-12 example, not a universal persister mechanism. The original high-persistence result is hipA7-allele-specific, and later growth-arrest evidence uses HipA overexpression; neither establishes that wild-type HipA is required for persistence in every organism or condition.", "scope_status": "MECHANISTIC", "title": "Persister dormancy and antibiotic tolerance"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking dormancy to stochastic persister formation and transient antibiotic tolerance.", "edges": [{"description": "High-persistence HipA variants and experimentally elevated HipA kinase activity promote growth arrest in the E. coli K-12 persister branch.", "evidence": [{"notes": "This experiment supports a causal HipA-to-growth-arrest link under overexpression; it does not establish a universal wild-type requirement.", "reference": "DOI:10.1128/jb.01237-06", "snippet": "Kinase activity of overexpressed HipA is required for growth arrest and multidrug tolerance"}, {"notes": "The original K-12 evidence is specifically for the high-persistence hipA7 allele and limits this edge to that strain-specific branch.", "reference": "DOI:10.1128/jb.155.2.768-775.1983", "snippet": "hipA, a newly recognized gene of Escherichia coli K-12 that affects frequency of persistence"}], "id": "edge-1", "is_orphan": false, "predicate": "promotes", "predicate_id": "RO:0002213", "source": "hipa_toxin", "target": "dormancy_process"}, {"description": "Dormancy underlies stochastic persister formation.", "evidence": [{"notes": "Lewis reviews persisters as dormant tolerant variants.", "reference": "DOI:10.1146/annurev.micro.112408.134306"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "dormancy_process", "target": "persister_trait"}, {"description": "Persister cells transiently tolerate antibiotics.", "evidence": [{"notes": "Lewis links persisters to recalcitrant infection.", "reference": "DOI:10.1038/nrmicro1557"}], "id": "edge-3", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "persister_trait", "target": "antibiotic_tolerance"}, {"description": "Persistence produces a biphasic time-kill curve diagnostic of a tolerant subpopulation.", "evidence": [{"notes": "A hallmark of persistence is the biphasic killing curve.", "reference": "DOI:10.1128/ecosalplus.esp-0025-2022"}], "id": "edge-4", "is_orphan": false, "predicate": "characterized by", "predicate_id": null, "source": "persister_trait", "target": "biphasic_killing_curve"}, {"description": "Persisters retain the same MIC as susceptible cells, distinguishing persistence from resistance.", "evidence": [{"notes": "Persisters had the same minimum inhibitory concentration (MIC) as the susceptible cells.", "reference": "DOI:10.1186/s12866-024-03628-3"}], "id": "edge-5", "is_orphan": false, "predicate": "has characteristic", "predicate_id": null, "source": "persister_trait", "target": "mic_susceptible"}, {"description": "Resistant bacteria have a significantly higher MIC, contrasting with the unchanged MIC of persisters.", "evidence": [{"notes": "The MIC of resistant bacteria was significantly higher; scope edge excluding resistance from persistence.", "reference": "DOI:10.1186/s12866-024-03628-3"}], "id": "edge-6", "is_orphan": false, "predicate": "has characteristic", "predicate_id": null, "source": "antibiotic_resistance", "target": "elevated_mic"}, {"description": "Tolerance applies to the whole population, whereas persisters are a small subpopulation.", "evidence": [{"notes": "Persisters are a smaller subpopulation, whereas tolerance is for the microbiota as a whole.", "reference": "DOI:10.1186/s12866-024-03628-3"}], "id": "edge-7", "is_orphan": false, "predicate": "has characteristic", "predicate_id": null, "source": "antibiotic_tolerance", "target": "whole_population_phenotype"}, {"description": "Persisters actively undergo a residual level of oxidative phosphorylation even during nutrient starvation.", "evidence": [{"notes": "Persisters still actively generated PMF by undergoing a certain level of oxidative phosphorylation, even after complete nutrient starvation for 24 h.", "reference": "DOI:10.1111/1751-7915.70042"}], "id": "edge-8", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "persister_trait", "target": "oxidative_phosphorylation"}, {"description": "Residual oxidative phosphorylation generates proton motive force that sustains persister survival.", "evidence": [{"notes": "Persisters generated PMF via oxidative phosphorylation; ETC components maintain PMF underlying tolerance.", "reference": "DOI:10.1111/1751-7915.70042"}], "id": "edge-9", "is_orphan": false, "predicate": "results in", "predicate_id": null, "source": "oxidative_phosphorylation", "target": "proton_motive_force"}, {"description": "Genetic antibiotic resistance is explicitly distinct from the phenotypic persistence trait.", "evidence": [{"notes": "Verified against the open consensus statement; this contrast edge does not treat resistance as a persistence mechanism.", "reference": "DOI:10.1038/s41579-019-0196-3", "snippet": "Resistance, tolerance and persistence are distinct responses to antibiotic treatment"}], "id": "edge-10", "is_orphan": false, "predicate": "is distinct from", "predicate_id": null, "source": "antibiotic_resistance", "target": "persister_trait"}], "evidence_rows": [{"description": "High-persistence HipA variants and experimentally elevated HipA kinase activity promote growth arrest in the E. coli K-12 persister branch.", "edge_id": "edge-1", "evidence": [{"notes": "This experiment supports a causal HipA-to-growth-arrest link under overexpression; it does not establish a universal wild-type requirement.", "reference": "DOI:10.1128/jb.01237-06", "snippet": "Kinase activity of overexpressed HipA is required for growth arrest and multidrug tolerance"}, {"notes": "The original K-12 evidence is specifically for the high-persistence hipA7 allele and limits this edge to that strain-specific branch.", "reference": "DOI:10.1128/jb.155.2.768-775.1983", "snippet": "hipA, a newly recognized gene of Escherichia coli K-12 that affects frequency of persistence"}], "predicate": "promotes", "predicate_id": "RO:0002213", "source": "HipA toxin and high-persistence HipA variants", "source_grounding": "InterPro:IPR052028", "target": "dormancy process", "target_grounding": "GO:0022611"}, {"description": "Dormancy underlies stochastic persister formation.", "edge_id": "edge-2", "evidence": [{"notes": "Lewis reviews persisters as dormant tolerant variants.", "reference": "DOI:10.1146/annurev.micro.112408.134306"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "dormancy process", "source_grounding": "GO:0022611", "target": "persister cell formation", "target_grounding": "traitmech:000082"}, {"description": "Persister cells transiently tolerate antibiotics.", "edge_id": "edge-3", "evidence": [{"notes": "Lewis links persisters to recalcitrant infection.", "reference": "DOI:10.1038/nrmicro1557"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "persister cell formation", "source_grounding": "traitmech:000082", "target": "antibiotic tolerance", "target_grounding": null}, {"description": "Persistence produces a biphasic time-kill curve diagnostic of a tolerant subpopulation.", "edge_id": "edge-4", "evidence": [{"notes": "A hallmark of persistence is the biphasic killing curve.", "reference": "DOI:10.1128/ecosalplus.esp-0025-2022"}], "predicate": "characterized by", "predicate_id": null, "source": "persister cell formation", "source_grounding": "traitmech:000082", "target": "biphasic killing curve", "target_grounding": null}, {"description": "Persisters retain the same MIC as susceptible cells, distinguishing persistence from resistance.", "edge_id": "edge-5", "evidence": [{"notes": "Persisters had the same minimum inhibitory concentration (MIC) as the susceptible cells.", "reference": "DOI:10.1186/s12866-024-03628-3"}], "predicate": "has characteristic", "predicate_id": null, "source": "persister cell formation", "source_grounding": "traitmech:000082", "target": "minimum inhibitory concentration of susceptible cells", "target_grounding": null}, {"description": "Resistant bacteria have a significantly higher MIC, contrasting with the unchanged MIC of persisters.", "edge_id": "edge-6", "evidence": [{"notes": "The MIC of resistant bacteria was significantly higher; scope edge excluding resistance from persistence.", "reference": "DOI:10.1186/s12866-024-03628-3"}], "predicate": "has characteristic", "predicate_id": null, "source": "antibiotic resistance", "source_grounding": null, "target": "elevated minimum inhibitory concentration", "target_grounding": null}, {"description": "Tolerance applies to the whole population, whereas persisters are a small subpopulation.", "edge_id": "edge-7", "evidence": [{"notes": "Persisters are a smaller subpopulation, whereas tolerance is for the microbiota as a whole.", "reference": "DOI:10.1186/s12866-024-03628-3"}], "predicate": "has characteristic", "predicate_id": null, "source": "antibiotic tolerance", "source_grounding": null, "target": "whole-population phenotype", "target_grounding": null}, {"description": "Persisters actively undergo a residual level of oxidative phosphorylation even during nutrient starvation.", "edge_id": "edge-8", "evidence": [{"notes": "Persisters still actively generated PMF by undergoing a certain level of oxidative phosphorylation, even after complete nutrient starvation for 24 h.", "reference": "DOI:10.1111/1751-7915.70042"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "persister cell formation", "source_grounding": "traitmech:000082", "target": "oxidative phosphorylation", "target_grounding": "GO:0006119"}, {"description": "Residual oxidative phosphorylation generates proton motive force that sustains persister survival.", "edge_id": "edge-9", "evidence": [{"notes": "Persisters generated PMF via oxidative phosphorylation; ETC components maintain PMF underlying tolerance.", "reference": "DOI:10.1111/1751-7915.70042"}], "predicate": "results in", "predicate_id": null, "source": "oxidative phosphorylation", "source_grounding": "GO:0006119", "target": "proton motive force", "target_grounding": "METPO:1007500"}, {"description": "Genetic antibiotic resistance is explicitly distinct from the phenotypic persistence trait.", "edge_id": "edge-10", "evidence": [{"notes": "Verified against the open consensus statement; this contrast edge does not treat resistance as a persistence mechanism.", "reference": "DOI:10.1038/s41579-019-0196-3", "snippet": "Resistance, tolerance and persistence are distinct responses to antibiotic treatment"}], "predicate": "is distinct from", "predicate_id": null, "source": "antibiotic resistance", "source_grounding": null, "target": "persister cell formation", "target_grounding": "traitmech:000082"}], "graph_id": "persister_dormancy_tolerance", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Genetically encoded ability to grow at elevated antibiotic concentrations; distinct from tolerance/persistence.", "grounding": null, "id": "antibiotic_resistance", "is_orphan": false, "label": "antibiotic resistance", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Transient survival of lethal antibiotic exposure.", "grounding": null, "id": "antibiotic_tolerance", "is_orphan": false, "label": "antibiotic tolerance", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ccfbf1", "description": "Hallmark biphasic time-kill readout: rapid death of bulk population then slow killing of persister subpopulation.", "grounding": null, "id": "biphasic_killing_curve", "is_orphan": false, "label": "biphasic killing curve", "node_type": "EXPERIMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Reversible quiescence underlying persistence.", "grounding": "GO:0022611", "id": "dormancy_process", "is_orphan": false, "label": "dormancy process", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Increased MIC characteristic of resistant bacteria, distinguishing resistance from persistence.", "grounding": null, "id": "elevated_mic", "is_orphan": false, "label": "elevated minimum inhibitory concentration", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "HipA serine/threonine kinase toxin; specific variants or elevated activity can arrest growth and increase antibiotic persistence in E. coli.", "grounding": "InterPro:IPR052028", "id": "hipa_toxin", "is_orphan": false, "label": "HipA toxin and high-persistence HipA variants", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 176, "evidence": [{"notes": "The primary K-12 study isolates the high-persistence hipA7 allele; UniProtKB P23874 is the reviewed HipA entry for the same taxon, but does not encode the allele distinction.", "reference": "DOI:10.1128/jb.155.2.768-775.1983", "snippet": "hipA, a newly recognized gene of Escherichia coli K-12 that affects frequency of persistence"}], "gene_symbol": "hipA", "protein_label": "Serine/threonine-protein kinase toxin HipA", "retrieved_on": "2026-08-24", "role": "Reviewed K-12 HipA sequence instance underlying the experimentally studied hipA7 variant and HipA-overexpression systems; the accession itself denotes the wild-type protein, not the hipA7 allele.", "sequence_version": 2, "taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli K-12", "uniprot_id": "UniProtKB:P23874"}], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "MIC value characteristic of antibiotic-susceptible cells; unchanged in persisters.", "grounding": null, "id": "mic_susceptible", "is_orphan": false, "label": "minimum inhibitory concentration of susceptible cells", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#e0e7ff", "description": "Residual respiratory ATP synthesis maintaining proton motive force in persisters.", "grounding": "GO:0006119", "id": "oxidative_phosphorylation", "is_orphan": false, "label": "oxidative phosphorylation", "node_type": "PATHWAY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Stochastic formation of dormant, drug-tolerant variants.", "grounding": "traitmech:000082", "id": "persister_trait", "is_orphan": false, "label": "persister cell formation", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Transmembrane electrochemical gradient maintained by persisters during starvation.", "grounding": "METPO:1007500", "id": "proton_motive_force", "is_orphan": false, "label": "proton motive force", "node_type": "STATE", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Property applying to the entire population rather than a small subpopulation.", "grounding": null, "id": "whole_population_phenotype", "is_orphan": false, "label": "whole-population phenotype", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 176, "evidence": [{"notes": "The primary K-12 study isolates the high-persistence hipA7 allele; UniProtKB P23874 is the reviewed HipA entry for the same taxon, but does not encode the allele distinction.", "reference": "DOI:10.1128/jb.155.2.768-775.1983", "snippet": "hipA, a newly recognized gene of Escherichia coli K-12 that affects frequency of persistence"}], "gene_symbol": "hipA", "node_id": "hipa_toxin", "node_label": "HipA toxin and high-persistence HipA variants", "protein_label": "Serine/threonine-protein kinase toxin HipA", "retrieved_on": "2026-08-24", "role": "Reviewed K-12 HipA sequence instance underlying the experimentally studied hipA7 variant and HipA-overexpression systems; the accession itself denotes the wild-type protein, not the hipA7 allele.", "sequence_version": 2, "taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli K-12", "uniprot_id": "UniProtKB:P23874"}], "scope_notes": "The HipA branch is an E. coli K-12 example, not a universal persister mechanism. The original high-persistence result is hipA7-allele-specific, and later growth-arrest evidence uses HipA overexpression; neither establishes that wild-type HipA is required for persistence in every organism or condition.", "scope_status": "MECHANISTIC", "title": "Persister dormancy and antibiotic tolerance"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -1027,13 +1058,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-08-31 09:40 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

@@ -100,7 +100,9 @@ def _graph_for_template(graph: dict[str, Any]) -> dict[str, Any]:
         evidence_rows.append({
             "edge_id": edge_id,
             "source": _node_label(node_by_id, subject),
+            "source_grounding": _node_grounding(node_by_id, subject),
             "target": _node_label(node_by_id, obj),
+            "target_grounding": _node_grounding(node_by_id, obj),
             "predicate": edge.get("predicate") or "",
             "predicate_id": edge.get("predicate_id"),
             "description": edge.get("description"),
@@ -155,3 +157,11 @@ def _node_label(node_by_id: dict[str, dict[str, Any]], node_id: str) -> str:
     if not node:
         return node_id
     return str(node.get("label") or node_id)
+
+
+def _node_grounding(node_by_id: dict[str, dict[str, Any]], node_id: str) -> str | None:
+    node = node_by_id.get(node_id)
+    if not node or not node.get("grounding"):
+        return None
+    return str(node.get("grounding"))
+

@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/morphology.html">MORPHOLOGY</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/morphology.html">MORPHOLOGY</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>gram negative</h1>
     <p class="curie"><code>METPO:1000699</code> · CLASS · REVIEWED</p>
 
@@ -85,9 +96,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>outer membrane</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0019867" rel="nofollow noreferrer"><code>GO:0019867</code></a>
             <span class="edge-predicate">defines</span>
             <strong>gram negative</strong>
-            <code>METPO:2007500</code>
+            <a href="https://w3id.org/metpo/1000699" rel="nofollow noreferrer"><code>METPO:1000699</code></a>
+            <a href="https://w3id.org/metpo/2007500" rel="nofollow noreferrer"><code>METPO:2007500</code></a>
             <p>The outer membrane is a defining feature of the Gram-negative cell envelope.</p>
             <ul>
 
@@ -102,9 +115,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>lipopolysaccharide</strong>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:16412" rel="nofollow noreferrer"><code>CHEBI:16412</code></a>
             <span class="edge-predicate">localized in</span>
             <strong>outer membrane</strong>
-            <code>biolink:located_in</code>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0019867" rel="nofollow noreferrer"><code>GO:0019867</code></a>
+            <a href="https://w3id.org/biolink/vocab/located_in" rel="nofollow noreferrer"><code>biolink:located_in</code></a>
             <p>LPS is found on the outer surface of the Gram-negative outer membrane.</p>
             <ul>
 
@@ -119,9 +134,11 @@
 
           <li id="pathograph-1-edge-3">
             <strong>thin peptidoglycan layer</strong>
+
             <span class="edge-predicate">localized in</span>
             <strong>periplasmic space</strong>
-            <code>biolink:located_in</code>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0042597" rel="nofollow noreferrer"><code>GO:0042597</code></a>
+            <a href="https://w3id.org/biolink/vocab/located_in" rel="nofollow noreferrer"><code>biolink:located_in</code></a>
             <p>Gram-negative peptidoglycan is a thin layer in the periplasm.</p>
             <ul>
 
@@ -136,8 +153,10 @@
 
           <li id="pathograph-1-edge-4">
             <strong>thin peptidoglycan layer</strong>
+
             <span class="edge-predicate">fails to retain</span>
             <strong>crystal violet-iodine complex</strong>
+
 
             <p>Thin peptidoglycan and outer-membrane disruption allow dye complex loss during decolorization.</p>
             <ul>
@@ -153,9 +172,11 @@
 
           <li id="pathograph-1-edge-5">
             <strong>counterstain</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>gram negative</strong>
-            <code>METPO:2007700</code>
+            <a href="https://w3id.org/metpo/1000699" rel="nofollow noreferrer"><code>METPO:1000699</code></a>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>Counterstain gives decolorized Gram-negative cells their pink/red appearance.</p>
             <ul>
 
@@ -170,8 +191,10 @@
 
           <li id="pathograph-1-edge-6">
             <strong>lipopolysaccharide</strong>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:16412" rel="nofollow noreferrer"><code>CHEBI:16412</code></a>
             <span class="edge-predicate">occupies</span>
             <strong>outer membrane outer leaflet</strong>
+
 
             <p>LPS occupies the outer leaflet of the Gram-negative outer membrane (OM asymmetry).</p>
             <ul>
@@ -187,8 +210,10 @@
 
           <li id="pathograph-1-edge-7">
             <strong>divalent cations (Mg2+/Ca2+)</strong>
+
             <span class="edge-predicate">stabilizes</span>
             <strong>lipopolysaccharide</strong>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:16412" rel="nofollow noreferrer"><code>CHEBI:16412</code></a>
 
             <p>Divalent cations (Mg2+/Ca2+) stabilize LPS packing in the OM outer leaflet.</p>
             <ul>
@@ -204,9 +229,11 @@
 
           <li id="pathograph-1-edge-8">
             <strong>lipopolysaccharide</strong>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:16412" rel="nofollow noreferrer"><code>CHEBI:16412</code></a>
             <span class="edge-predicate">contributes to</span>
             <strong>outer membrane barrier function</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>Tight LPS packing with OM proteins creates the impermeable OM barrier.</p>
             <ul>
 
@@ -221,9 +248,11 @@
 
           <li id="pathograph-1-edge-9">
             <strong>Lpt pathway</strong>
+
             <span class="edge-predicate">transports</span>
             <strong>lipopolysaccharide</strong>
-            <code>METPO:2007812</code>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:16412" rel="nofollow noreferrer"><code>CHEBI:16412</code></a>
+            <a href="https://w3id.org/metpo/2007812" rel="nofollow noreferrer"><code>METPO:2007812</code></a>
             <p>The Lpt machinery transports LPS across the periplasm for insertion into the OM.</p>
             <ul>
 
@@ -238,8 +267,10 @@
 
           <li id="pathograph-1-edge-10">
             <strong>BAM complex</strong>
+
             <span class="edge-predicate">inserts</span>
             <strong>beta-barrel outer membrane proteins</strong>
+
 
             <p>The BAM complex folds and inserts beta-barrel OMPs into the outer membrane.</p>
             <ul>
@@ -255,8 +286,10 @@
 
           <li id="pathograph-1-edge-11">
             <strong>Mla pathway</strong>
+
             <span class="edge-predicate">maintains</span>
             <strong>outer membrane lipid asymmetry</strong>
+
 
             <p>The Mla pathway counteracts phospholipid flipping to maintain OM lipid asymmetry.</p>
             <ul>
@@ -272,8 +305,10 @@
 
           <li id="pathograph-1-edge-12">
             <strong>Tol-Pal system</strong>
+
             <span class="edge-predicate">safeguards</span>
             <strong>cell envelope connectivity</strong>
+
 
             <p>Tol-Pal safeguards connectivity between the three layers of the Gram-negative envelope.</p>
             <ul>
@@ -384,33 +419,33 @@
         </li>
 
         <li>
-          <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/twitching_motility.html">twitching motility</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/photokinesis.html">photokinesis</a>
           <span class="sim">0.419</span>
         </li>
 
         <li>
-          <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/swarming_motility.html">swarming motility</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/gyrotaxis.html">gyrotaxis</a>
           <span class="sim">0.419</span>
         </li>
 
         <li>
-          <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/motile.html">motile</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/rheotaxis.html">rheotaxis</a>
           <span class="sim">0.419</span>
         </li>
 
         <li>
-          <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/non_motile.html">non motile</a>
-          <span class="sim">0.320</span>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/ph_taxis.html">pH taxis</a>
+          <span class="sim">0.419</span>
         </li>
 
         <li>
-          <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/coccus_shaped.html">coccus shaped</a>
-          <span class="sim">0.263</span>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/osmotaxis.html">osmotaxis</a>
+          <span class="sim">0.419</span>
         </li>
 
       </ul>
@@ -987,7 +1022,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking Gram-negative staining to outer membrane architecture, lipopolysaccharide, thin peptidoglycan, decolorization, and counterstain uptake.", "edges": [{"description": "The outer membrane is a defining feature of the Gram-negative cell envelope.", "evidence": [{"notes": "Supports outer membrane as the key Gram-negative envelope feature.", "reference": "DOI:10.1038/s41579-019-0201-x", "snippet": "defining feature of the Gram-negative cell envelope"}], "id": "edge-1", "is_orphan": false, "predicate": "defines", "predicate_id": "METPO:2007500", "source": "outer_membrane", "target": "gram_negative_trait"}, {"description": "LPS is found on the outer surface of the Gram-negative outer membrane.", "evidence": [{"notes": "Supports LPS as a surface-exposed outer-membrane component.", "reference": "DOI:10.1038/s41579-019-0201-x", "snippet": "lipopolysaccharide exclusively found on the surface"}], "id": "edge-2", "is_orphan": false, "predicate": "localized in", "predicate_id": "biolink:located_in", "source": "lipopolysaccharide", "target": "outer_membrane"}, {"description": "Gram-negative peptidoglycan is a thin layer in the periplasm.", "evidence": [{"notes": "Supports thin periplasmic peptidoglycan in Gram-negative envelopes.", "reference": "DOI:10.1016/j.bbalip.2016.10.010", "snippet": "periplasm ... containing a thin layer of peptidoglycan"}], "id": "edge-3", "is_orphan": false, "predicate": "localized in", "predicate_id": "biolink:located_in", "source": "thin_peptidoglycan_layer", "target": "periplasmic_space"}, {"description": "Thin peptidoglycan and outer-membrane disruption allow dye complex loss during decolorization.", "evidence": [{"notes": "Inference from Gram-positive retention mechanism; thinner Gram-negative peptidoglycan contributes to non-retention.", "reference": "DOI:10.3109/10520299609117151", "snippet": "cell wall ... responsible for retention"}], "id": "edge-4", "is_orphan": false, "predicate": "fails to retain", "predicate_id": null, "source": "thin_peptidoglycan_layer", "target": "crystal_violet_iodine_complex"}, {"description": "Counterstain gives decolorized Gram-negative cells their pink/red appearance.", "evidence": [{"notes": "Supports Gram stain procedure context; counterstain appearance follows dye-complex loss.", "reference": "DOI:10.3109/10520299609117151", "snippet": "mechanism of the Gram stain"}], "id": "edge-5", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "counterstain", "target": "gram_negative_trait"}, {"description": "LPS occupies the outer leaflet of the Gram-negative outer membrane (OM asymmetry).", "evidence": [{"notes": "LPS occupies the outer leaflet while phospholipids occupy the inner leaflet.", "reference": "DOI:10.1146/annurev-micro-032521-014507"}], "id": "edge-6", "is_orphan": false, "predicate": "occupies", "predicate_id": null, "source": "lipopolysaccharide", "target": "outer_membrane_outer_leaflet"}, {"description": "Divalent cations (Mg2+/Ca2+) stabilize LPS packing in the OM outer leaflet.", "evidence": [{"notes": "Divalent cations (Mg2+/Ca2+) stabilize LPS packing.", "reference": "DOI:10.3390/pathogens13100889"}], "id": "edge-7", "is_orphan": false, "predicate": "stabilizes", "predicate_id": null, "source": "divalent_cations", "target": "lipopolysaccharide"}, {"description": "Tight LPS packing with OM proteins creates the impermeable OM barrier.", "evidence": [{"notes": "The tight packing of LPS and OM proteins creates an impermeable barrier.", "reference": "DOI:10.1146/annurev-micro-032521-014507"}], "id": "edge-8", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "lipopolysaccharide", "target": "outer_membrane_barrier_function"}, {"description": "The Lpt machinery transports LPS across the periplasm for insertion into the OM.", "evidence": [{"notes": "LPS transported to the OM by the ATP-driven Lpt machinery; moves LPS across periplasm for OM insertion.", "reference": "DOI:10.1007/s12275-024-00137-w"}], "id": "edge-9", "is_orphan": false, "predicate": "transports", "predicate_id": "METPO:2007812", "source": "lpt_pathway", "target": "lipopolysaccharide"}, {"description": "The BAM complex folds and inserts beta-barrel OMPs into the outer membrane.", "evidence": [{"notes": "The Bam complex (BamA-E) folds uOMPs into beta-barrels.", "reference": "DOI:10.3390/pathogens13100889"}], "id": "edge-10", "is_orphan": false, "predicate": "inserts", "predicate_id": null, "source": "bam_complex", "target": "beta_barrel_omps"}, {"description": "The Mla pathway counteracts phospholipid flipping to maintain OM lipid asymmetry.", "evidence": [{"notes": "Mla system performs retrograde transport to counteract PL flipping to the outer leaflet.", "reference": "DOI:10.3390/pathogens13100889"}], "id": "edge-11", "is_orphan": false, "predicate": "maintains", "predicate_id": null, "source": "mla_pathway", "target": "outer_membrane_lipid_asymmetry"}, {"description": "Tol-Pal safeguards connectivity between the three layers of the Gram-negative envelope.", "evidence": [{"notes": "Tol-Pal safeguards connectivity between the three layers of the Gram-negative cell envelope.", "reference": "DOI:10.1038/s44259-024-00065-0"}], "id": "edge-12", "is_orphan": false, "predicate": "safeguards", "predicate_id": null, "source": "tol_pal_system", "target": "cell_envelope_connectivity"}], "evidence_rows": [{"description": "The outer membrane is a defining feature of the Gram-negative cell envelope.", "edge_id": "edge-1", "evidence": [{"notes": "Supports outer membrane as the key Gram-negative envelope feature.", "reference": "DOI:10.1038/s41579-019-0201-x", "snippet": "defining feature of the Gram-negative cell envelope"}], "predicate": "defines", "predicate_id": "METPO:2007500", "source": "outer membrane", "target": "gram negative"}, {"description": "LPS is found on the outer surface of the Gram-negative outer membrane.", "edge_id": "edge-2", "evidence": [{"notes": "Supports LPS as a surface-exposed outer-membrane component.", "reference": "DOI:10.1038/s41579-019-0201-x", "snippet": "lipopolysaccharide exclusively found on the surface"}], "predicate": "localized in", "predicate_id": "biolink:located_in", "source": "lipopolysaccharide", "target": "outer membrane"}, {"description": "Gram-negative peptidoglycan is a thin layer in the periplasm.", "edge_id": "edge-3", "evidence": [{"notes": "Supports thin periplasmic peptidoglycan in Gram-negative envelopes.", "reference": "DOI:10.1016/j.bbalip.2016.10.010", "snippet": "periplasm ... containing a thin layer of peptidoglycan"}], "predicate": "localized in", "predicate_id": "biolink:located_in", "source": "thin peptidoglycan layer", "target": "periplasmic space"}, {"description": "Thin peptidoglycan and outer-membrane disruption allow dye complex loss during decolorization.", "edge_id": "edge-4", "evidence": [{"notes": "Inference from Gram-positive retention mechanism; thinner Gram-negative peptidoglycan contributes to non-retention.", "reference": "DOI:10.3109/10520299609117151", "snippet": "cell wall ... responsible for retention"}], "predicate": "fails to retain", "predicate_id": null, "source": "thin peptidoglycan layer", "target": "crystal violet-iodine complex"}, {"description": "Counterstain gives decolorized Gram-negative cells their pink/red appearance.", "edge_id": "edge-5", "evidence": [{"notes": "Supports Gram stain procedure context; counterstain appearance follows dye-complex loss.", "reference": "DOI:10.3109/10520299609117151", "snippet": "mechanism of the Gram stain"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "counterstain", "target": "gram negative"}, {"description": "LPS occupies the outer leaflet of the Gram-negative outer membrane (OM asymmetry).", "edge_id": "edge-6", "evidence": [{"notes": "LPS occupies the outer leaflet while phospholipids occupy the inner leaflet.", "reference": "DOI:10.1146/annurev-micro-032521-014507"}], "predicate": "occupies", "predicate_id": null, "source": "lipopolysaccharide", "target": "outer membrane outer leaflet"}, {"description": "Divalent cations (Mg2+/Ca2+) stabilize LPS packing in the OM outer leaflet.", "edge_id": "edge-7", "evidence": [{"notes": "Divalent cations (Mg2+/Ca2+) stabilize LPS packing.", "reference": "DOI:10.3390/pathogens13100889"}], "predicate": "stabilizes", "predicate_id": null, "source": "divalent cations (Mg2+/Ca2+)", "target": "lipopolysaccharide"}, {"description": "Tight LPS packing with OM proteins creates the impermeable OM barrier.", "edge_id": "edge-8", "evidence": [{"notes": "The tight packing of LPS and OM proteins creates an impermeable barrier.", "reference": "DOI:10.1146/annurev-micro-032521-014507"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "lipopolysaccharide", "target": "outer membrane barrier function"}, {"description": "The Lpt machinery transports LPS across the periplasm for insertion into the OM.", "edge_id": "edge-9", "evidence": [{"notes": "LPS transported to the OM by the ATP-driven Lpt machinery; moves LPS across periplasm for OM insertion.", "reference": "DOI:10.1007/s12275-024-00137-w"}], "predicate": "transports", "predicate_id": "METPO:2007812", "source": "Lpt pathway", "target": "lipopolysaccharide"}, {"description": "The BAM complex folds and inserts beta-barrel OMPs into the outer membrane.", "edge_id": "edge-10", "evidence": [{"notes": "The Bam complex (BamA-E) folds uOMPs into beta-barrels.", "reference": "DOI:10.3390/pathogens13100889"}], "predicate": "inserts", "predicate_id": null, "source": "BAM complex", "target": "beta-barrel outer membrane proteins"}, {"description": "The Mla pathway counteracts phospholipid flipping to maintain OM lipid asymmetry.", "edge_id": "edge-11", "evidence": [{"notes": "Mla system performs retrograde transport to counteract PL flipping to the outer leaflet.", "reference": "DOI:10.3390/pathogens13100889"}], "predicate": "maintains", "predicate_id": null, "source": "Mla pathway", "target": "outer membrane lipid asymmetry"}, {"description": "Tol-Pal safeguards connectivity between the three layers of the Gram-negative envelope.", "edge_id": "edge-12", "evidence": [{"notes": "Tol-Pal safeguards connectivity between the three layers of the Gram-negative cell envelope.", "reference": "DOI:10.1038/s44259-024-00065-0"}], "predicate": "safeguards", "predicate_id": null, "source": "Tol-Pal system", "target": "cell envelope connectivity"}], "graph_id": "gram_negative_outer_membrane_dye_loss", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Beta-barrel assembly machinery (BamA-E) that folds and inserts OMPs into the outer membrane.", "grounding": null, "id": "bam_complex", "is_orphan": false, "label": "BAM complex", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Beta-barrel outer membrane proteins folded and inserted by the BAM complex.", "grounding": null, "id": "beta_barrel_omps", "is_orphan": false, "label": "beta-barrel outer membrane proteins", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Maintained connectivity between outer membrane, peptidoglycan, and inner membrane.", "grounding": null, "id": "cell_envelope_connectivity", "is_orphan": false, "label": "cell envelope connectivity", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Safranin or similar stain producing pink/red appearance.", "grounding": null, "id": "counterstain", "is_orphan": false, "label": "counterstain", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Dye complex removed during decolorization in Gram-negative cells.", "grounding": null, "id": "crystal_violet_iodine_complex", "is_orphan": false, "label": "crystal violet-iodine complex", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Magnesium and calcium ions that bridge and stabilize LPS packing in the OM.", "grounding": null, "id": "divalent_cations", "is_orphan": false, "label": "divalent cations (Mg2+/Ca2+)", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Gram stain phenotype in which cells lose crystal violet and appear pink or red after counterstaining.", "grounding": "METPO:1000699", "id": "gram_negative_trait", "is_orphan": false, "label": "gram negative", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Glycolipid found in the outer leaflet of Gram-negative outer membranes.", "grounding": "CHEBI:16412", "id": "lipopolysaccharide", "is_orphan": false, "label": "lipopolysaccharide", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#e0e7ff", "description": "Trans-envelope ATP-driven machinery transporting LPS from the inner to outer membrane.", "grounding": null, "id": "lpt_pathway", "is_orphan": false, "label": "Lpt pathway", "node_type": "PATHWAY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#e0e7ff", "description": "Retrograde phospholipid transport system maintaining outer membrane lipid asymmetry.", "grounding": null, "id": "mla_pathway", "is_orphan": false, "label": "Mla pathway", "node_type": "PATHWAY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ede9fe", "description": "Gram-negative outer membrane outside the peptidoglycan layer.", "grounding": "GO:0019867", "id": "outer_membrane", "is_orphan": false, "label": "outer membrane", "node_type": "CELLULAR_LOCALIZATION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#cffafe", "description": "Low-permeability barrier property of the Gram-negative outer membrane.", "grounding": null, "id": "outer_membrane_barrier_function", "is_orphan": false, "label": "outer membrane barrier function", "node_type": "MOLECULAR_FUNCTION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Asymmetric lipid distribution (LPS outer / phospholipid inner) of the OM.", "grounding": null, "id": "outer_membrane_lipid_asymmetry", "is_orphan": false, "label": "outer membrane lipid asymmetry", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ede9fe", "description": "Outer leaflet of the Gram-negative outer membrane, occupied by LPS.", "grounding": null, "id": "outer_membrane_outer_leaflet", "is_orphan": false, "label": "outer membrane outer leaflet", "node_type": "CELLULAR_LOCALIZATION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ede9fe", "description": "Cell-envelope compartment between inner and outer membranes.", "grounding": "GO:0042597", "id": "periplasmic_space", "is_orphan": false, "label": "periplasmic space", "node_type": "CELLULAR_LOCALIZATION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ede9fe", "description": "Thin peptidoglycan layer in the Gram-negative periplasm.", "grounding": null, "id": "thin_peptidoglycan_layer", "is_orphan": false, "label": "thin peptidoglycan layer", "node_type": "CELLULAR_LOCALIZATION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Envelope-spanning complex safeguarding connectivity of the Gram-negative cell envelope.", "grounding": null, "id": "tol_pal_system", "is_orphan": false, "label": "Tol-Pal system", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "Gram-negative is an envelope/staining classification rather than one inherited protein mechanism. Contextual envelope complexes are retained without assigning a token UniProt example.", "scope_status": "NONMECHANISTIC", "title": "Gram-negative outer-membrane dye-loss mechanism"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking Gram-negative staining to outer membrane architecture, lipopolysaccharide, thin peptidoglycan, decolorization, and counterstain uptake.", "edges": [{"description": "The outer membrane is a defining feature of the Gram-negative cell envelope.", "evidence": [{"notes": "Supports outer membrane as the key Gram-negative envelope feature.", "reference": "DOI:10.1038/s41579-019-0201-x", "snippet": "defining feature of the Gram-negative cell envelope"}], "id": "edge-1", "is_orphan": false, "predicate": "defines", "predicate_id": "METPO:2007500", "source": "outer_membrane", "target": "gram_negative_trait"}, {"description": "LPS is found on the outer surface of the Gram-negative outer membrane.", "evidence": [{"notes": "Supports LPS as a surface-exposed outer-membrane component.", "reference": "DOI:10.1038/s41579-019-0201-x", "snippet": "lipopolysaccharide exclusively found on the surface"}], "id": "edge-2", "is_orphan": false, "predicate": "localized in", "predicate_id": "biolink:located_in", "source": "lipopolysaccharide", "target": "outer_membrane"}, {"description": "Gram-negative peptidoglycan is a thin layer in the periplasm.", "evidence": [{"notes": "Supports thin periplasmic peptidoglycan in Gram-negative envelopes.", "reference": "DOI:10.1016/j.bbalip.2016.10.010", "snippet": "periplasm ... containing a thin layer of peptidoglycan"}], "id": "edge-3", "is_orphan": false, "predicate": "localized in", "predicate_id": "biolink:located_in", "source": "thin_peptidoglycan_layer", "target": "periplasmic_space"}, {"description": "Thin peptidoglycan and outer-membrane disruption allow dye complex loss during decolorization.", "evidence": [{"notes": "Inference from Gram-positive retention mechanism; thinner Gram-negative peptidoglycan contributes to non-retention.", "reference": "DOI:10.3109/10520299609117151", "snippet": "cell wall ... responsible for retention"}], "id": "edge-4", "is_orphan": false, "predicate": "fails to retain", "predicate_id": null, "source": "thin_peptidoglycan_layer", "target": "crystal_violet_iodine_complex"}, {"description": "Counterstain gives decolorized Gram-negative cells their pink/red appearance.", "evidence": [{"notes": "Supports Gram stain procedure context; counterstain appearance follows dye-complex loss.", "reference": "DOI:10.3109/10520299609117151", "snippet": "mechanism of the Gram stain"}], "id": "edge-5", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "counterstain", "target": "gram_negative_trait"}, {"description": "LPS occupies the outer leaflet of the Gram-negative outer membrane (OM asymmetry).", "evidence": [{"notes": "LPS occupies the outer leaflet while phospholipids occupy the inner leaflet.", "reference": "DOI:10.1146/annurev-micro-032521-014507"}], "id": "edge-6", "is_orphan": false, "predicate": "occupies", "predicate_id": null, "source": "lipopolysaccharide", "target": "outer_membrane_outer_leaflet"}, {"description": "Divalent cations (Mg2+/Ca2+) stabilize LPS packing in the OM outer leaflet.", "evidence": [{"notes": "Divalent cations (Mg2+/Ca2+) stabilize LPS packing.", "reference": "DOI:10.3390/pathogens13100889"}], "id": "edge-7", "is_orphan": false, "predicate": "stabilizes", "predicate_id": null, "source": "divalent_cations", "target": "lipopolysaccharide"}, {"description": "Tight LPS packing with OM proteins creates the impermeable OM barrier.", "evidence": [{"notes": "The tight packing of LPS and OM proteins creates an impermeable barrier.", "reference": "DOI:10.1146/annurev-micro-032521-014507"}], "id": "edge-8", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "lipopolysaccharide", "target": "outer_membrane_barrier_function"}, {"description": "The Lpt machinery transports LPS across the periplasm for insertion into the OM.", "evidence": [{"notes": "LPS transported to the OM by the ATP-driven Lpt machinery; moves LPS across periplasm for OM insertion.", "reference": "DOI:10.1007/s12275-024-00137-w"}], "id": "edge-9", "is_orphan": false, "predicate": "transports", "predicate_id": "METPO:2007812", "source": "lpt_pathway", "target": "lipopolysaccharide"}, {"description": "The BAM complex folds and inserts beta-barrel OMPs into the outer membrane.", "evidence": [{"notes": "The Bam complex (BamA-E) folds uOMPs into beta-barrels.", "reference": "DOI:10.3390/pathogens13100889"}], "id": "edge-10", "is_orphan": false, "predicate": "inserts", "predicate_id": null, "source": "bam_complex", "target": "beta_barrel_omps"}, {"description": "The Mla pathway counteracts phospholipid flipping to maintain OM lipid asymmetry.", "evidence": [{"notes": "Mla system performs retrograde transport to counteract PL flipping to the outer leaflet.", "reference": "DOI:10.3390/pathogens13100889"}], "id": "edge-11", "is_orphan": false, "predicate": "maintains", "predicate_id": null, "source": "mla_pathway", "target": "outer_membrane_lipid_asymmetry"}, {"description": "Tol-Pal safeguards connectivity between the three layers of the Gram-negative envelope.", "evidence": [{"notes": "Tol-Pal safeguards connectivity between the three layers of the Gram-negative cell envelope.", "reference": "DOI:10.1038/s44259-024-00065-0"}], "id": "edge-12", "is_orphan": false, "predicate": "safeguards", "predicate_id": null, "source": "tol_pal_system", "target": "cell_envelope_connectivity"}], "evidence_rows": [{"description": "The outer membrane is a defining feature of the Gram-negative cell envelope.", "edge_id": "edge-1", "evidence": [{"notes": "Supports outer membrane as the key Gram-negative envelope feature.", "reference": "DOI:10.1038/s41579-019-0201-x", "snippet": "defining feature of the Gram-negative cell envelope"}], "predicate": "defines", "predicate_id": "METPO:2007500", "source": "outer membrane", "source_grounding": "GO:0019867", "target": "gram negative", "target_grounding": "METPO:1000699"}, {"description": "LPS is found on the outer surface of the Gram-negative outer membrane.", "edge_id": "edge-2", "evidence": [{"notes": "Supports LPS as a surface-exposed outer-membrane component.", "reference": "DOI:10.1038/s41579-019-0201-x", "snippet": "lipopolysaccharide exclusively found on the surface"}], "predicate": "localized in", "predicate_id": "biolink:located_in", "source": "lipopolysaccharide", "source_grounding": "CHEBI:16412", "target": "outer membrane", "target_grounding": "GO:0019867"}, {"description": "Gram-negative peptidoglycan is a thin layer in the periplasm.", "edge_id": "edge-3", "evidence": [{"notes": "Supports thin periplasmic peptidoglycan in Gram-negative envelopes.", "reference": "DOI:10.1016/j.bbalip.2016.10.010", "snippet": "periplasm ... containing a thin layer of peptidoglycan"}], "predicate": "localized in", "predicate_id": "biolink:located_in", "source": "thin peptidoglycan layer", "source_grounding": null, "target": "periplasmic space", "target_grounding": "GO:0042597"}, {"description": "Thin peptidoglycan and outer-membrane disruption allow dye complex loss during decolorization.", "edge_id": "edge-4", "evidence": [{"notes": "Inference from Gram-positive retention mechanism; thinner Gram-negative peptidoglycan contributes to non-retention.", "reference": "DOI:10.3109/10520299609117151", "snippet": "cell wall ... responsible for retention"}], "predicate": "fails to retain", "predicate_id": null, "source": "thin peptidoglycan layer", "source_grounding": null, "target": "crystal violet-iodine complex", "target_grounding": null}, {"description": "Counterstain gives decolorized Gram-negative cells their pink/red appearance.", "edge_id": "edge-5", "evidence": [{"notes": "Supports Gram stain procedure context; counterstain appearance follows dye-complex loss.", "reference": "DOI:10.3109/10520299609117151", "snippet": "mechanism of the Gram stain"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "counterstain", "source_grounding": null, "target": "gram negative", "target_grounding": "METPO:1000699"}, {"description": "LPS occupies the outer leaflet of the Gram-negative outer membrane (OM asymmetry).", "edge_id": "edge-6", "evidence": [{"notes": "LPS occupies the outer leaflet while phospholipids occupy the inner leaflet.", "reference": "DOI:10.1146/annurev-micro-032521-014507"}], "predicate": "occupies", "predicate_id": null, "source": "lipopolysaccharide", "source_grounding": "CHEBI:16412", "target": "outer membrane outer leaflet", "target_grounding": null}, {"description": "Divalent cations (Mg2+/Ca2+) stabilize LPS packing in the OM outer leaflet.", "edge_id": "edge-7", "evidence": [{"notes": "Divalent cations (Mg2+/Ca2+) stabilize LPS packing.", "reference": "DOI:10.3390/pathogens13100889"}], "predicate": "stabilizes", "predicate_id": null, "source": "divalent cations (Mg2+/Ca2+)", "source_grounding": null, "target": "lipopolysaccharide", "target_grounding": "CHEBI:16412"}, {"description": "Tight LPS packing with OM proteins creates the impermeable OM barrier.", "edge_id": "edge-8", "evidence": [{"notes": "The tight packing of LPS and OM proteins creates an impermeable barrier.", "reference": "DOI:10.1146/annurev-micro-032521-014507"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "lipopolysaccharide", "source_grounding": "CHEBI:16412", "target": "outer membrane barrier function", "target_grounding": null}, {"description": "The Lpt machinery transports LPS across the periplasm for insertion into the OM.", "edge_id": "edge-9", "evidence": [{"notes": "LPS transported to the OM by the ATP-driven Lpt machinery; moves LPS across periplasm for OM insertion.", "reference": "DOI:10.1007/s12275-024-00137-w"}], "predicate": "transports", "predicate_id": "METPO:2007812", "source": "Lpt pathway", "source_grounding": null, "target": "lipopolysaccharide", "target_grounding": "CHEBI:16412"}, {"description": "The BAM complex folds and inserts beta-barrel OMPs into the outer membrane.", "edge_id": "edge-10", "evidence": [{"notes": "The Bam complex (BamA-E) folds uOMPs into beta-barrels.", "reference": "DOI:10.3390/pathogens13100889"}], "predicate": "inserts", "predicate_id": null, "source": "BAM complex", "source_grounding": null, "target": "beta-barrel outer membrane proteins", "target_grounding": null}, {"description": "The Mla pathway counteracts phospholipid flipping to maintain OM lipid asymmetry.", "edge_id": "edge-11", "evidence": [{"notes": "Mla system performs retrograde transport to counteract PL flipping to the outer leaflet.", "reference": "DOI:10.3390/pathogens13100889"}], "predicate": "maintains", "predicate_id": null, "source": "Mla pathway", "source_grounding": null, "target": "outer membrane lipid asymmetry", "target_grounding": null}, {"description": "Tol-Pal safeguards connectivity between the three layers of the Gram-negative envelope.", "edge_id": "edge-12", "evidence": [{"notes": "Tol-Pal safeguards connectivity between the three layers of the Gram-negative cell envelope.", "reference": "DOI:10.1038/s44259-024-00065-0"}], "predicate": "safeguards", "predicate_id": null, "source": "Tol-Pal system", "source_grounding": null, "target": "cell envelope connectivity", "target_grounding": null}], "graph_id": "gram_negative_outer_membrane_dye_loss", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Beta-barrel assembly machinery (BamA-E) that folds and inserts OMPs into the outer membrane.", "grounding": null, "id": "bam_complex", "is_orphan": false, "label": "BAM complex", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Beta-barrel outer membrane proteins folded and inserted by the BAM complex.", "grounding": null, "id": "beta_barrel_omps", "is_orphan": false, "label": "beta-barrel outer membrane proteins", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Maintained connectivity between outer membrane, peptidoglycan, and inner membrane.", "grounding": null, "id": "cell_envelope_connectivity", "is_orphan": false, "label": "cell envelope connectivity", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Safranin or similar stain producing pink/red appearance.", "grounding": null, "id": "counterstain", "is_orphan": false, "label": "counterstain", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Dye complex removed during decolorization in Gram-negative cells.", "grounding": null, "id": "crystal_violet_iodine_complex", "is_orphan": false, "label": "crystal violet-iodine complex", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Magnesium and calcium ions that bridge and stabilize LPS packing in the OM.", "grounding": null, "id": "divalent_cations", "is_orphan": false, "label": "divalent cations (Mg2+/Ca2+)", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Gram stain phenotype in which cells lose crystal violet and appear pink or red after counterstaining.", "grounding": "METPO:1000699", "id": "gram_negative_trait", "is_orphan": false, "label": "gram negative", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Glycolipid found in the outer leaflet of Gram-negative outer membranes.", "grounding": "CHEBI:16412", "id": "lipopolysaccharide", "is_orphan": false, "label": "lipopolysaccharide", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#e0e7ff", "description": "Trans-envelope ATP-driven machinery transporting LPS from the inner to outer membrane.", "grounding": null, "id": "lpt_pathway", "is_orphan": false, "label": "Lpt pathway", "node_type": "PATHWAY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#e0e7ff", "description": "Retrograde phospholipid transport system maintaining outer membrane lipid asymmetry.", "grounding": null, "id": "mla_pathway", "is_orphan": false, "label": "Mla pathway", "node_type": "PATHWAY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ede9fe", "description": "Gram-negative outer membrane outside the peptidoglycan layer.", "grounding": "GO:0019867", "id": "outer_membrane", "is_orphan": false, "label": "outer membrane", "node_type": "CELLULAR_LOCALIZATION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#cffafe", "description": "Low-permeability barrier property of the Gram-negative outer membrane.", "grounding": null, "id": "outer_membrane_barrier_function", "is_orphan": false, "label": "outer membrane barrier function", "node_type": "MOLECULAR_FUNCTION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Asymmetric lipid distribution (LPS outer / phospholipid inner) of the OM.", "grounding": null, "id": "outer_membrane_lipid_asymmetry", "is_orphan": false, "label": "outer membrane lipid asymmetry", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ede9fe", "description": "Outer leaflet of the Gram-negative outer membrane, occupied by LPS.", "grounding": null, "id": "outer_membrane_outer_leaflet", "is_orphan": false, "label": "outer membrane outer leaflet", "node_type": "CELLULAR_LOCALIZATION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ede9fe", "description": "Cell-envelope compartment between inner and outer membranes.", "grounding": "GO:0042597", "id": "periplasmic_space", "is_orphan": false, "label": "periplasmic space", "node_type": "CELLULAR_LOCALIZATION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ede9fe", "description": "Thin peptidoglycan layer in the Gram-negative periplasm.", "grounding": null, "id": "thin_peptidoglycan_layer", "is_orphan": false, "label": "thin peptidoglycan layer", "node_type": "CELLULAR_LOCALIZATION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Envelope-spanning complex safeguarding connectivity of the Gram-negative cell envelope.", "grounding": null, "id": "tol_pal_system", "is_orphan": false, "label": "Tol-Pal system", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "Gram-negative is an envelope/staining classification rather than one inherited protein mechanism. Contextual envelope complexes are retained without assigning a token UniProt example.", "scope_status": "NONMECHANISTIC", "title": "Gram-negative outer-membrane dye-loss mechanism"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -1007,13 +1042,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-08-26 03:23 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

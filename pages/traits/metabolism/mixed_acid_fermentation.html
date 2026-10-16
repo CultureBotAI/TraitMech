@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/metabolism.html">METABOLISM</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/metabolism.html">METABOLISM</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>mixed-acid fermentation</h1>
     <p class="curie"><code>traitmech:000027</code> · CLASS · REVIEWED</p>
 
@@ -85,9 +96,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>mixed-acid fermentation</strong>
+            <code>traitmech:000027</code>
             <span class="edge-predicate">participates in</span>
             <strong>fermentation</strong>
-            <code>biolink:participates_in</code>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0006113" rel="nofollow noreferrer"><code>GO:0006113</code></a>
+            <a href="https://w3id.org/biolink/vocab/participates_in" rel="nofollow noreferrer"><code>biolink:participates_in</code></a>
             <p>Mixed-acid fermentation is a class of fermentation metabolism.</p>
             <ul>
 
@@ -102,9 +115,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>mixed-acid fermentation</strong>
+            <code>traitmech:000027</code>
             <span class="edge-predicate">produces</span>
             <strong>mixed acid + ethanol + CO2/H2 products</strong>
-            <code>METPO:2007800</code>
+
+            <a href="https://w3id.org/metpo/2007800" rel="nofollow noreferrer"><code>METPO:2007800</code></a>
             <p>The pathway yields the characteristic acid + ethanol + gas spectrum.</p>
             <ul>
 
@@ -119,8 +134,10 @@
 
           <li id="pathograph-1-edge-3">
             <strong>mixed-acid fermentation</strong>
+            <code>traitmech:000027</code>
             <span class="edge-predicate">has output</span>
             <strong>pyruvate</strong>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:15361" rel="nofollow noreferrer"><code>CHEBI:15361</code></a>
 
             <p>Glycolysis upstream of mixed-acid fermentation produces pyruvate.</p>
             <ul>
@@ -136,8 +153,10 @@
 
           <li id="pathograph-1-edge-4">
             <strong>pyruvate formate lyase (PflB)</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0008861" rel="nofollow noreferrer"><code>GO:0008861</code></a>
             <span class="edge-predicate">catalyzes conversion of</span>
             <strong>pyruvate</strong>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:15361" rel="nofollow noreferrer"><code>CHEBI:15361</code></a>
 
             <p>PflB cleaves pyruvate into formate and acetyl-CoA.</p>
             <ul>
@@ -153,9 +172,11 @@
 
           <li id="pathograph-1-edge-5">
             <strong>pyruvate formate lyase (PflB)</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0008861" rel="nofollow noreferrer"><code>GO:0008861</code></a>
             <span class="edge-predicate">produces</span>
             <strong>formate</strong>
-            <code>METPO:2007800</code>
+
+            <a href="https://w3id.org/metpo/2007800" rel="nofollow noreferrer"><code>METPO:2007800</code></a>
             <p>PflB cleavage of pyruvate yields formate.</p>
             <ul>
 
@@ -170,8 +191,10 @@
 
           <li id="pathograph-1-edge-6">
             <strong>phosphotransacetylase / acetate kinase (Pta/AckA)</strong>
+
             <span class="edge-predicate">converts</span>
             <strong>acetate</strong>
+
 
             <p>Pta and AckA convert acetyl-CoA to acetate (with ATP generation).</p>
             <ul>
@@ -187,8 +210,10 @@
 
           <li id="pathograph-1-edge-7">
             <strong>formate</strong>
+
             <span class="edge-predicate">induces synthesis of</span>
             <strong>formate hydrogenlyase complex (FHL)</strong>
+
 
             <p>Formate induces synthesis of the membrane-bound FHL complex.</p>
             <ul>
@@ -204,9 +229,11 @@
 
           <li id="pathograph-1-edge-8">
             <strong>formate hydrogenlyase complex (FHL)</strong>
+
             <span class="edge-predicate">produces</span>
             <strong>molecular hydrogen</strong>
-            <code>METPO:2007800</code>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:18276" rel="nofollow noreferrer"><code>CHEBI:18276</code></a>
+            <a href="https://w3id.org/metpo/2007800" rel="nofollow noreferrer"><code>METPO:2007800</code></a>
             <p>FHL disproportionates formate into CO2 and H2.</p>
             <ul>
 
@@ -221,9 +248,11 @@
 
           <li id="pathograph-1-edge-9">
             <strong>formate hydrogenlyase complex (FHL)</strong>
+
             <span class="edge-predicate">produces</span>
             <strong>carbon dioxide</strong>
-            <code>METPO:2007800</code>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:16526" rel="nofollow noreferrer"><code>CHEBI:16526</code></a>
+            <a href="https://w3id.org/metpo/2007800" rel="nofollow noreferrer"><code>METPO:2007800</code></a>
             <p>FHL disproportionates formate into CO2 and H2.</p>
             <ul>
 
@@ -238,9 +267,11 @@
 
           <li id="pathograph-1-edge-10">
             <strong>acidic conditions</strong>
+
             <span class="edge-predicate">positively regulates</span>
             <strong>formate hydrogenlyase complex (FHL)</strong>
-            <code>RO:0002213</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002213" rel="nofollow noreferrer"><code>RO:0002213</code></a>
             <p>Acidic conditions favor FHL-mediated formate cleavage.</p>
             <ul>
 
@@ -255,9 +286,11 @@
 
           <li id="pathograph-1-edge-11">
             <strong>ambient molecular oxygen</strong>
+
             <span class="edge-predicate">inhibits</span>
             <strong>molecular hydrogen</strong>
-            <code>RO:0002212</code>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:18276" rel="nofollow noreferrer"><code>CHEBI:18276</code></a>
+            <a href="http://purl.obolibrary.org/obo/RO_0002212" rel="nofollow noreferrer"><code>RO:0002212</code></a>
             <p>Oxygen prevents fermentative hydrogen generation.</p>
             <ul>
 
@@ -272,8 +305,10 @@
 
           <li id="pathograph-1-edge-12">
             <strong>mixed-acid fermentation</strong>
+            <code>traitmech:000027</code>
             <span class="edge-predicate">lowers</span>
             <strong>cytoplasmic pH</strong>
+
 
             <p>Acid generation by MAF lowers cytoplasmic pH.</p>
             <ul>
@@ -289,9 +324,11 @@
 
           <li id="pathograph-1-edge-13">
             <strong>pyruvate formate lyase (PflB)</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0008861" rel="nofollow noreferrer"><code>GO:0008861</code></a>
             <span class="edge-predicate">produces</span>
             <strong>acetyl-CoA</strong>
-            <code>METPO:2007800</code>
+
+            <a href="https://w3id.org/metpo/2007800" rel="nofollow noreferrer"><code>METPO:2007800</code></a>
             <p>Pyruvate formate-lyase cleaves pyruvate into acetyl-CoA and formate.</p>
             <ul>
 
@@ -306,8 +343,10 @@
 
           <li id="pathograph-1-edge-14">
             <strong>acetyl-CoA</strong>
+
             <span class="edge-predicate">is metabolized by</span>
             <strong>phosphotransacetylase / acetate kinase (Pta/AckA)</strong>
+
 
             <p>The Pta/AckA enzyme pair metabolizes acetyl-CoA through the acetate-producing branch of mixed-acid fermentation.</p>
             <ul>
@@ -434,13 +473,13 @@
 
         <li>
           <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/fermentative_hydrogen_production.html">fermentative hydrogen production</a>
+          <a href="../../traits/metabolism/butyric_acid_fermentation.html">butyric acid fermentation</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/propionic_acid_fermentation.html">propionic acid fermentation</a>
+          <a href="../../traits/metabolism/acetone_butanol_ethanol_fermentation.html">acetone-butanol-ethanol fermentation</a>
           <span class="sim">1.000</span>
         </li>
 
@@ -458,26 +497,26 @@
 
         <li>
           <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/lactic_acid_fermentation.html">lactic acid fermentation</a>
+          <a href="../../traits/metabolism/fermentative_hydrogen_production.html">fermentative hydrogen production</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/respiration.html">respiration</a>
-          <span class="sim">0.644</span>
+          <a href="../../traits/metabolism/citrate_fermentation.html">citrate fermentation</a>
+          <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/dissimilatory_iron_reduction.html">dissimilatory iron reduction</a>
-          <span class="sim">0.600</span>
+          <a href="../../traits/metabolism/butanediol_fermentation.html">2,3-butanediol fermentation</a>
+          <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/anaerobic_respiration.html">Anaerobic respiration</a>
-          <span class="sim">0.600</span>
+          <a href="../../traits/metabolism/lactic_acid_fermentation.html">lactic acid fermentation</a>
+          <span class="sim">1.000</span>
         </li>
 
       </ul>
@@ -1066,7 +1105,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking glycolytic sugar catabolism to mixed acid + ethanol + CO2 + H2 production in enterobacteria.", "edges": [{"description": "Mixed-acid fermentation is a class of fermentation metabolism.", "evidence": [{"notes": "Energy-conservation review lists the mixed-acid product spectrum.", "reference": "DOI:10.3389/fmicb.2021.703525"}], "id": "edge-1", "is_orphan": false, "predicate": "participates in", "predicate_id": "biolink:participates_in", "source": "mixed_acid_fermentation_trait", "target": "fermentation_process"}, {"description": "The pathway yields the characteristic acid + ethanol + gas spectrum.", "evidence": [{"notes": "Classical-fermentation review describes mixed-acid fermentation by enterobacteria.", "reference": "DOI:10.3390/molecules31020333"}], "id": "edge-2", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2007800", "source": "mixed_acid_fermentation_trait", "target": "mixed_acid_products"}, {"description": "Glycolysis upstream of mixed-acid fermentation produces pyruvate.", "evidence": [{"notes": "Pyruvate, ATP, and NADH are produced when glucose or other carbon sources reach the primary glycolytic pathway.", "reference": "DOI:10.35812/cellulosechemtechnol.2024.58.90"}], "id": "edge-3", "is_orphan": false, "predicate": "has output", "predicate_id": null, "source": "mixed_acid_fermentation_trait", "target": "pyruvate"}, {"description": "PflB cleaves pyruvate into formate and acetyl-CoA.", "evidence": [{"notes": "Pyruvate formate lyase (PflB) catalyzes the conversion of pyruvate into formate and acetyl-CoA.", "reference": "DOI:10.1128/iai.00176-23"}], "id": "edge-4", "is_orphan": false, "predicate": "catalyzes conversion of", "predicate_id": null, "source": "pyruvate_formate_lyase", "target": "pyruvate"}, {"description": "PflB cleavage of pyruvate yields formate.", "evidence": [{"notes": "Pyruvate formate lyase (PflB) catalyzes the conversion of pyruvate into formate and acetyl-CoA.", "reference": "DOI:10.1128/iai.00176-23"}], "id": "edge-5", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2007800", "source": "pyruvate_formate_lyase", "target": "formate"}, {"description": "Pta and AckA convert acetyl-CoA to acetate (with ATP generation).", "evidence": [{"notes": "Acetyl-CoA is further metabolized by Pta and AckA to generate acetate.", "reference": "DOI:10.1128/iai.00176-23"}], "id": "edge-6", "is_orphan": false, "predicate": "converts", "predicate_id": null, "source": "pta_acka", "target": "acetate"}, {"description": "Formate induces synthesis of the membrane-bound FHL complex.", "evidence": [{"notes": "Formate induces the synthesis of the membrane-bound FHL complex that catalyzes formate disproportionation into CO2 and H2.", "reference": "DOI:10.1128/aem.01472-24"}], "id": "edge-7", "is_orphan": false, "predicate": "induces synthesis of", "predicate_id": null, "source": "formate", "target": "fhl_complex"}, {"description": "FHL disproportionates formate into CO2 and H2.", "evidence": [{"notes": "Formate is disproportionated into CO2 and H2 by the formate hydrogenlyase complex via FdhF and hydrogenase 3 (HycE).", "reference": "DOI:10.1128/aem.01472-24"}], "id": "edge-8", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2007800", "source": "fhl_complex", "target": "hydrogen"}, {"description": "FHL disproportionates formate into CO2 and H2.", "evidence": [{"notes": "Formate is disproportionated into CO2 and H2 by the formate hydrogenlyase complex.", "reference": "DOI:10.1128/aem.01472-24"}], "id": "edge-9", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2007800", "source": "fhl_complex", "target": "co2"}, {"description": "Acidic conditions favor FHL-mediated formate cleavage.", "evidence": [{"notes": "The enzyme complex formate:hydrogen lyase (FHL) cleaves formate under acidic conditions into H2 and CO2.", "reference": "DOI:10.35812/cellulosechemtechnol.2024.58.90"}], "id": "edge-10", "is_orphan": false, "predicate": "positively regulates", "predicate_id": "RO:0002213", "source": "acidic_conditions", "target": "fhl_complex"}, {"description": "Oxygen prevents fermentative hydrogen generation.", "evidence": [{"notes": "The presence of oxygen prevents the generation of hydrogen.", "reference": "DOI:10.35812/cellulosechemtechnol.2024.58.90"}], "id": "edge-11", "is_orphan": false, "predicate": "inhibits", "predicate_id": "RO:0002212", "source": "ambient_oxygen", "target": "hydrogen"}, {"description": "Acid generation by MAF lowers cytoplasmic pH.", "evidence": [{"notes": "MAF results in the generation of acid, which subsequently lowers the pH of the cytoplasm.", "reference": "DOI:10.1128/iai.00176-23"}], "id": "edge-12", "is_orphan": false, "predicate": "lowers", "predicate_id": null, "source": "mixed_acid_fermentation_trait", "target": "cytoplasm_ph"}, {"description": "Pyruvate formate-lyase cleaves pyruvate into acetyl-CoA and formate.", "evidence": [{"notes": "Connecting edge wiring the enrichment node into the graph.", "reference": "DOI:10.3389/fmicb.2021.703525"}], "id": "edge-13", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2007800", "source": "pyruvate_formate_lyase", "target": "acetyl_coa"}, {"description": "The Pta/AckA enzyme pair metabolizes acetyl-CoA through the acetate-producing branch of mixed-acid fermentation.", "evidence": [{"notes": "Verified against the public PMC full text.", "reference": "DOI:10.1128/iai.00176-23", "snippet": "Acetyl-CoA is further metabolized by Pta and AckA to generate acetate"}], "id": "edge-14", "is_orphan": false, "predicate": "is metabolized by", "predicate_id": null, "source": "acetyl_coa", "target": "pta_acka"}], "evidence_rows": [{"description": "Mixed-acid fermentation is a class of fermentation metabolism.", "edge_id": "edge-1", "evidence": [{"notes": "Energy-conservation review lists the mixed-acid product spectrum.", "reference": "DOI:10.3389/fmicb.2021.703525"}], "predicate": "participates in", "predicate_id": "biolink:participates_in", "source": "mixed-acid fermentation", "target": "fermentation"}, {"description": "The pathway yields the characteristic acid + ethanol + gas spectrum.", "edge_id": "edge-2", "evidence": [{"notes": "Classical-fermentation review describes mixed-acid fermentation by enterobacteria.", "reference": "DOI:10.3390/molecules31020333"}], "predicate": "produces", "predicate_id": "METPO:2007800", "source": "mixed-acid fermentation", "target": "mixed acid + ethanol + CO2/H2 products"}, {"description": "Glycolysis upstream of mixed-acid fermentation produces pyruvate.", "edge_id": "edge-3", "evidence": [{"notes": "Pyruvate, ATP, and NADH are produced when glucose or other carbon sources reach the primary glycolytic pathway.", "reference": "DOI:10.35812/cellulosechemtechnol.2024.58.90"}], "predicate": "has output", "predicate_id": null, "source": "mixed-acid fermentation", "target": "pyruvate"}, {"description": "PflB cleaves pyruvate into formate and acetyl-CoA.", "edge_id": "edge-4", "evidence": [{"notes": "Pyruvate formate lyase (PflB) catalyzes the conversion of pyruvate into formate and acetyl-CoA.", "reference": "DOI:10.1128/iai.00176-23"}], "predicate": "catalyzes conversion of", "predicate_id": null, "source": "pyruvate formate lyase (PflB)", "target": "pyruvate"}, {"description": "PflB cleavage of pyruvate yields formate.", "edge_id": "edge-5", "evidence": [{"notes": "Pyruvate formate lyase (PflB) catalyzes the conversion of pyruvate into formate and acetyl-CoA.", "reference": "DOI:10.1128/iai.00176-23"}], "predicate": "produces", "predicate_id": "METPO:2007800", "source": "pyruvate formate lyase (PflB)", "target": "formate"}, {"description": "Pta and AckA convert acetyl-CoA to acetate (with ATP generation).", "edge_id": "edge-6", "evidence": [{"notes": "Acetyl-CoA is further metabolized by Pta and AckA to generate acetate.", "reference": "DOI:10.1128/iai.00176-23"}], "predicate": "converts", "predicate_id": null, "source": "phosphotransacetylase / acetate kinase (Pta/AckA)", "target": "acetate"}, {"description": "Formate induces synthesis of the membrane-bound FHL complex.", "edge_id": "edge-7", "evidence": [{"notes": "Formate induces the synthesis of the membrane-bound FHL complex that catalyzes formate disproportionation into CO2 and H2.", "reference": "DOI:10.1128/aem.01472-24"}], "predicate": "induces synthesis of", "predicate_id": null, "source": "formate", "target": "formate hydrogenlyase complex (FHL)"}, {"description": "FHL disproportionates formate into CO2 and H2.", "edge_id": "edge-8", "evidence": [{"notes": "Formate is disproportionated into CO2 and H2 by the formate hydrogenlyase complex via FdhF and hydrogenase 3 (HycE).", "reference": "DOI:10.1128/aem.01472-24"}], "predicate": "produces", "predicate_id": "METPO:2007800", "source": "formate hydrogenlyase complex (FHL)", "target": "molecular hydrogen"}, {"description": "FHL disproportionates formate into CO2 and H2.", "edge_id": "edge-9", "evidence": [{"notes": "Formate is disproportionated into CO2 and H2 by the formate hydrogenlyase complex.", "reference": "DOI:10.1128/aem.01472-24"}], "predicate": "produces", "predicate_id": "METPO:2007800", "source": "formate hydrogenlyase complex (FHL)", "target": "carbon dioxide"}, {"description": "Acidic conditions favor FHL-mediated formate cleavage.", "edge_id": "edge-10", "evidence": [{"notes": "The enzyme complex formate:hydrogen lyase (FHL) cleaves formate under acidic conditions into H2 and CO2.", "reference": "DOI:10.35812/cellulosechemtechnol.2024.58.90"}], "predicate": "positively regulates", "predicate_id": "RO:0002213", "source": "acidic conditions", "target": "formate hydrogenlyase complex (FHL)"}, {"description": "Oxygen prevents fermentative hydrogen generation.", "edge_id": "edge-11", "evidence": [{"notes": "The presence of oxygen prevents the generation of hydrogen.", "reference": "DOI:10.35812/cellulosechemtechnol.2024.58.90"}], "predicate": "inhibits", "predicate_id": "RO:0002212", "source": "ambient molecular oxygen", "target": "molecular hydrogen"}, {"description": "Acid generation by MAF lowers cytoplasmic pH.", "edge_id": "edge-12", "evidence": [{"notes": "MAF results in the generation of acid, which subsequently lowers the pH of the cytoplasm.", "reference": "DOI:10.1128/iai.00176-23"}], "predicate": "lowers", "predicate_id": null, "source": "mixed-acid fermentation", "target": "cytoplasmic pH"}, {"description": "Pyruvate formate-lyase cleaves pyruvate into acetyl-CoA and formate.", "edge_id": "edge-13", "evidence": [{"notes": "Connecting edge wiring the enrichment node into the graph.", "reference": "DOI:10.3389/fmicb.2021.703525"}], "predicate": "produces", "predicate_id": "METPO:2007800", "source": "pyruvate formate lyase (PflB)", "target": "acetyl-CoA"}, {"description": "The Pta/AckA enzyme pair metabolizes acetyl-CoA through the acetate-producing branch of mixed-acid fermentation.", "edge_id": "edge-14", "evidence": [{"notes": "Verified against the public PMC full text.", "reference": "DOI:10.1128/iai.00176-23", "snippet": "Acetyl-CoA is further metabolized by Pta and AckA to generate acetate"}], "predicate": "is metabolized by", "predicate_id": null, "source": "acetyl-CoA", "target": "phosphotransacetylase / acetate kinase (Pta/AckA)"}], "graph_id": "mixed_acid_fermentation_enterobacterial", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Major mixed-acid fermentation end product.", "grounding": null, "id": "acetate", "is_orphan": false, "label": "acetate", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Branch-point intermediate from pyruvate cleavage.", "grounding": null, "id": "acetyl_coa", "is_orphan": false, "label": "acetyl-CoA", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Low-pH environment favoring formate cleavage by FHL.", "grounding": null, "id": "acidic_conditions", "is_orphan": false, "label": "acidic conditions", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Oxygen, which suppresses fermentative hydrogen production.", "grounding": null, "id": "ambient_oxygen", "is_orphan": false, "label": "ambient molecular oxygen", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Gas product of formate disproportionation.", "grounding": "CHEBI:16526", "id": "co2", "is_orphan": false, "label": "carbon dioxide", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Intracellular pH lowered by acid accumulation during fermentation.", "grounding": null, "id": "cytoplasm_ph", "is_orphan": false, "label": "cytoplasmic pH", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "ATP-yielding catabolism with organic terminal acceptors.", "grounding": "GO:0006113", "id": "fermentation_process", "is_orphan": false, "label": "fermentation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Membrane complex disproportionating formate into CO2 and H2.", "grounding": null, "id": "fhl_complex", "is_orphan": false, "label": "formate hydrogenlyase complex (FHL)", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Acid product and substrate for the formate hydrogenlyase complex.", "grounding": null, "id": "formate", "is_orphan": false, "label": "formate", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Gas product of formate disproportionation by FHL.", "grounding": "CHEBI:18276", "id": "hydrogen", "is_orphan": false, "label": "molecular hydrogen", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Fermentation producing a mixture of acids and gases.", "grounding": "traitmech:000027", "id": "mixed_acid_fermentation_trait", "is_orphan": false, "label": "mixed-acid fermentation", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Lactate, acetate, formate, succinate, ethanol, CO2, H2.", "grounding": null, "id": "mixed_acid_products", "is_orphan": false, "label": "mixed acid + ethanol + CO2/H2 products", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Enzyme pair converting acetyl-CoA to acetate with ATP generation.", "grounding": null, "id": "pta_acka", "is_orphan": false, "label": "phosphotransacetylase / acetate kinase (Pta/AckA)", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Central glycolytic intermediate feeding fermentation branches.", "grounding": "CHEBI:15361", "id": "pyruvate", "is_orphan": false, "label": "pyruvate", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Enzyme cleaving pyruvate to formate and acetyl-CoA under anaerobiosis.", "grounding": "GO:0008861", "id": "pyruvate_formate_lyase", "is_orphan": false, "label": "pyruvate formate lyase (PflB)", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 217, "evidence": [{"notes": "The primary structural study establishes the E. coli PFL role; UniProtKB P09373 verifies the reviewed PflB protein and K-12 taxon.", "reference": "DOI:10.1016/S0969-2126(99)80098-7", "snippet": "The dimeric pyruvate formate lyase is the final enzyme in anaerobic glycolysis in Escherichia coli."}], "gene_symbol": "pflB", "protein_label": "Formate acetyltransferase 1", "retrieved_on": "2026-08-24", "role": "PflB enzyme generating formate and acetyl-CoA from pyruvate during anaerobic glycolysis in E. coli.", "sequence_version": 2, "taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli K-12", "uniprot_id": "UniProtKB:P09373"}], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 217, "evidence": [{"notes": "The primary structural study establishes the E. coli PFL role; UniProtKB P09373 verifies the reviewed PflB protein and K-12 taxon.", "reference": "DOI:10.1016/S0969-2126(99)80098-7", "snippet": "The dimeric pyruvate formate lyase is the final enzyme in anaerobic glycolysis in Escherichia coli."}], "gene_symbol": "pflB", "node_id": "pyruvate_formate_lyase", "node_label": "pyruvate formate lyase (PflB)", "protein_label": "Formate acetyltransferase 1", "retrieved_on": "2026-08-24", "role": "PflB enzyme generating formate and acetyl-CoA from pyruvate during anaerobic glycolysis in E. coli.", "sequence_version": 2, "taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli K-12", "uniprot_id": "UniProtKB:P09373"}], "scope_notes": "Represents the enterobacterial branch centered on E. coli. The taxon-paired protein example establishes PflB, while Pta/AckA and FHL remain combined module labels pending component-level curation.", "scope_status": "MECHANISTIC", "title": "Mixed-acid fermentation yields a spectrum of acids plus ethanol and gases"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking glycolytic sugar catabolism to mixed acid + ethanol + CO2 + H2 production in enterobacteria.", "edges": [{"description": "Mixed-acid fermentation is a class of fermentation metabolism.", "evidence": [{"notes": "Energy-conservation review lists the mixed-acid product spectrum.", "reference": "DOI:10.3389/fmicb.2021.703525"}], "id": "edge-1", "is_orphan": false, "predicate": "participates in", "predicate_id": "biolink:participates_in", "source": "mixed_acid_fermentation_trait", "target": "fermentation_process"}, {"description": "The pathway yields the characteristic acid + ethanol + gas spectrum.", "evidence": [{"notes": "Classical-fermentation review describes mixed-acid fermentation by enterobacteria.", "reference": "DOI:10.3390/molecules31020333"}], "id": "edge-2", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2007800", "source": "mixed_acid_fermentation_trait", "target": "mixed_acid_products"}, {"description": "Glycolysis upstream of mixed-acid fermentation produces pyruvate.", "evidence": [{"notes": "Pyruvate, ATP, and NADH are produced when glucose or other carbon sources reach the primary glycolytic pathway.", "reference": "DOI:10.35812/cellulosechemtechnol.2024.58.90"}], "id": "edge-3", "is_orphan": false, "predicate": "has output", "predicate_id": null, "source": "mixed_acid_fermentation_trait", "target": "pyruvate"}, {"description": "PflB cleaves pyruvate into formate and acetyl-CoA.", "evidence": [{"notes": "Pyruvate formate lyase (PflB) catalyzes the conversion of pyruvate into formate and acetyl-CoA.", "reference": "DOI:10.1128/iai.00176-23"}], "id": "edge-4", "is_orphan": false, "predicate": "catalyzes conversion of", "predicate_id": null, "source": "pyruvate_formate_lyase", "target": "pyruvate"}, {"description": "PflB cleavage of pyruvate yields formate.", "evidence": [{"notes": "Pyruvate formate lyase (PflB) catalyzes the conversion of pyruvate into formate and acetyl-CoA.", "reference": "DOI:10.1128/iai.00176-23"}], "id": "edge-5", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2007800", "source": "pyruvate_formate_lyase", "target": "formate"}, {"description": "Pta and AckA convert acetyl-CoA to acetate (with ATP generation).", "evidence": [{"notes": "Acetyl-CoA is further metabolized by Pta and AckA to generate acetate.", "reference": "DOI:10.1128/iai.00176-23"}], "id": "edge-6", "is_orphan": false, "predicate": "converts", "predicate_id": null, "source": "pta_acka", "target": "acetate"}, {"description": "Formate induces synthesis of the membrane-bound FHL complex.", "evidence": [{"notes": "Formate induces the synthesis of the membrane-bound FHL complex that catalyzes formate disproportionation into CO2 and H2.", "reference": "DOI:10.1128/aem.01472-24"}], "id": "edge-7", "is_orphan": false, "predicate": "induces synthesis of", "predicate_id": null, "source": "formate", "target": "fhl_complex"}, {"description": "FHL disproportionates formate into CO2 and H2.", "evidence": [{"notes": "Formate is disproportionated into CO2 and H2 by the formate hydrogenlyase complex via FdhF and hydrogenase 3 (HycE).", "reference": "DOI:10.1128/aem.01472-24"}], "id": "edge-8", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2007800", "source": "fhl_complex", "target": "hydrogen"}, {"description": "FHL disproportionates formate into CO2 and H2.", "evidence": [{"notes": "Formate is disproportionated into CO2 and H2 by the formate hydrogenlyase complex.", "reference": "DOI:10.1128/aem.01472-24"}], "id": "edge-9", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2007800", "source": "fhl_complex", "target": "co2"}, {"description": "Acidic conditions favor FHL-mediated formate cleavage.", "evidence": [{"notes": "The enzyme complex formate:hydrogen lyase (FHL) cleaves formate under acidic conditions into H2 and CO2.", "reference": "DOI:10.35812/cellulosechemtechnol.2024.58.90"}], "id": "edge-10", "is_orphan": false, "predicate": "positively regulates", "predicate_id": "RO:0002213", "source": "acidic_conditions", "target": "fhl_complex"}, {"description": "Oxygen prevents fermentative hydrogen generation.", "evidence": [{"notes": "The presence of oxygen prevents the generation of hydrogen.", "reference": "DOI:10.35812/cellulosechemtechnol.2024.58.90"}], "id": "edge-11", "is_orphan": false, "predicate": "inhibits", "predicate_id": "RO:0002212", "source": "ambient_oxygen", "target": "hydrogen"}, {"description": "Acid generation by MAF lowers cytoplasmic pH.", "evidence": [{"notes": "MAF results in the generation of acid, which subsequently lowers the pH of the cytoplasm.", "reference": "DOI:10.1128/iai.00176-23"}], "id": "edge-12", "is_orphan": false, "predicate": "lowers", "predicate_id": null, "source": "mixed_acid_fermentation_trait", "target": "cytoplasm_ph"}, {"description": "Pyruvate formate-lyase cleaves pyruvate into acetyl-CoA and formate.", "evidence": [{"notes": "Connecting edge wiring the enrichment node into the graph.", "reference": "DOI:10.3389/fmicb.2021.703525"}], "id": "edge-13", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2007800", "source": "pyruvate_formate_lyase", "target": "acetyl_coa"}, {"description": "The Pta/AckA enzyme pair metabolizes acetyl-CoA through the acetate-producing branch of mixed-acid fermentation.", "evidence": [{"notes": "Verified against the public PMC full text.", "reference": "DOI:10.1128/iai.00176-23", "snippet": "Acetyl-CoA is further metabolized by Pta and AckA to generate acetate"}], "id": "edge-14", "is_orphan": false, "predicate": "is metabolized by", "predicate_id": null, "source": "acetyl_coa", "target": "pta_acka"}], "evidence_rows": [{"description": "Mixed-acid fermentation is a class of fermentation metabolism.", "edge_id": "edge-1", "evidence": [{"notes": "Energy-conservation review lists the mixed-acid product spectrum.", "reference": "DOI:10.3389/fmicb.2021.703525"}], "predicate": "participates in", "predicate_id": "biolink:participates_in", "source": "mixed-acid fermentation", "source_grounding": "traitmech:000027", "target": "fermentation", "target_grounding": "GO:0006113"}, {"description": "The pathway yields the characteristic acid + ethanol + gas spectrum.", "edge_id": "edge-2", "evidence": [{"notes": "Classical-fermentation review describes mixed-acid fermentation by enterobacteria.", "reference": "DOI:10.3390/molecules31020333"}], "predicate": "produces", "predicate_id": "METPO:2007800", "source": "mixed-acid fermentation", "source_grounding": "traitmech:000027", "target": "mixed acid + ethanol + CO2/H2 products", "target_grounding": null}, {"description": "Glycolysis upstream of mixed-acid fermentation produces pyruvate.", "edge_id": "edge-3", "evidence": [{"notes": "Pyruvate, ATP, and NADH are produced when glucose or other carbon sources reach the primary glycolytic pathway.", "reference": "DOI:10.35812/cellulosechemtechnol.2024.58.90"}], "predicate": "has output", "predicate_id": null, "source": "mixed-acid fermentation", "source_grounding": "traitmech:000027", "target": "pyruvate", "target_grounding": "CHEBI:15361"}, {"description": "PflB cleaves pyruvate into formate and acetyl-CoA.", "edge_id": "edge-4", "evidence": [{"notes": "Pyruvate formate lyase (PflB) catalyzes the conversion of pyruvate into formate and acetyl-CoA.", "reference": "DOI:10.1128/iai.00176-23"}], "predicate": "catalyzes conversion of", "predicate_id": null, "source": "pyruvate formate lyase (PflB)", "source_grounding": "GO:0008861", "target": "pyruvate", "target_grounding": "CHEBI:15361"}, {"description": "PflB cleavage of pyruvate yields formate.", "edge_id": "edge-5", "evidence": [{"notes": "Pyruvate formate lyase (PflB) catalyzes the conversion of pyruvate into formate and acetyl-CoA.", "reference": "DOI:10.1128/iai.00176-23"}], "predicate": "produces", "predicate_id": "METPO:2007800", "source": "pyruvate formate lyase (PflB)", "source_grounding": "GO:0008861", "target": "formate", "target_grounding": null}, {"description": "Pta and AckA convert acetyl-CoA to acetate (with ATP generation).", "edge_id": "edge-6", "evidence": [{"notes": "Acetyl-CoA is further metabolized by Pta and AckA to generate acetate.", "reference": "DOI:10.1128/iai.00176-23"}], "predicate": "converts", "predicate_id": null, "source": "phosphotransacetylase / acetate kinase (Pta/AckA)", "source_grounding": null, "target": "acetate", "target_grounding": null}, {"description": "Formate induces synthesis of the membrane-bound FHL complex.", "edge_id": "edge-7", "evidence": [{"notes": "Formate induces the synthesis of the membrane-bound FHL complex that catalyzes formate disproportionation into CO2 and H2.", "reference": "DOI:10.1128/aem.01472-24"}], "predicate": "induces synthesis of", "predicate_id": null, "source": "formate", "source_grounding": null, "target": "formate hydrogenlyase complex (FHL)", "target_grounding": null}, {"description": "FHL disproportionates formate into CO2 and H2.", "edge_id": "edge-8", "evidence": [{"notes": "Formate is disproportionated into CO2 and H2 by the formate hydrogenlyase complex via FdhF and hydrogenase 3 (HycE).", "reference": "DOI:10.1128/aem.01472-24"}], "predicate": "produces", "predicate_id": "METPO:2007800", "source": "formate hydrogenlyase complex (FHL)", "source_grounding": null, "target": "molecular hydrogen", "target_grounding": "CHEBI:18276"}, {"description": "FHL disproportionates formate into CO2 and H2.", "edge_id": "edge-9", "evidence": [{"notes": "Formate is disproportionated into CO2 and H2 by the formate hydrogenlyase complex.", "reference": "DOI:10.1128/aem.01472-24"}], "predicate": "produces", "predicate_id": "METPO:2007800", "source": "formate hydrogenlyase complex (FHL)", "source_grounding": null, "target": "carbon dioxide", "target_grounding": "CHEBI:16526"}, {"description": "Acidic conditions favor FHL-mediated formate cleavage.", "edge_id": "edge-10", "evidence": [{"notes": "The enzyme complex formate:hydrogen lyase (FHL) cleaves formate under acidic conditions into H2 and CO2.", "reference": "DOI:10.35812/cellulosechemtechnol.2024.58.90"}], "predicate": "positively regulates", "predicate_id": "RO:0002213", "source": "acidic conditions", "source_grounding": null, "target": "formate hydrogenlyase complex (FHL)", "target_grounding": null}, {"description": "Oxygen prevents fermentative hydrogen generation.", "edge_id": "edge-11", "evidence": [{"notes": "The presence of oxygen prevents the generation of hydrogen.", "reference": "DOI:10.35812/cellulosechemtechnol.2024.58.90"}], "predicate": "inhibits", "predicate_id": "RO:0002212", "source": "ambient molecular oxygen", "source_grounding": null, "target": "molecular hydrogen", "target_grounding": "CHEBI:18276"}, {"description": "Acid generation by MAF lowers cytoplasmic pH.", "edge_id": "edge-12", "evidence": [{"notes": "MAF results in the generation of acid, which subsequently lowers the pH of the cytoplasm.", "reference": "DOI:10.1128/iai.00176-23"}], "predicate": "lowers", "predicate_id": null, "source": "mixed-acid fermentation", "source_grounding": "traitmech:000027", "target": "cytoplasmic pH", "target_grounding": null}, {"description": "Pyruvate formate-lyase cleaves pyruvate into acetyl-CoA and formate.", "edge_id": "edge-13", "evidence": [{"notes": "Connecting edge wiring the enrichment node into the graph.", "reference": "DOI:10.3389/fmicb.2021.703525"}], "predicate": "produces", "predicate_id": "METPO:2007800", "source": "pyruvate formate lyase (PflB)", "source_grounding": "GO:0008861", "target": "acetyl-CoA", "target_grounding": null}, {"description": "The Pta/AckA enzyme pair metabolizes acetyl-CoA through the acetate-producing branch of mixed-acid fermentation.", "edge_id": "edge-14", "evidence": [{"notes": "Verified against the public PMC full text.", "reference": "DOI:10.1128/iai.00176-23", "snippet": "Acetyl-CoA is further metabolized by Pta and AckA to generate acetate"}], "predicate": "is metabolized by", "predicate_id": null, "source": "acetyl-CoA", "source_grounding": null, "target": "phosphotransacetylase / acetate kinase (Pta/AckA)", "target_grounding": null}], "graph_id": "mixed_acid_fermentation_enterobacterial", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Major mixed-acid fermentation end product.", "grounding": null, "id": "acetate", "is_orphan": false, "label": "acetate", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Branch-point intermediate from pyruvate cleavage.", "grounding": null, "id": "acetyl_coa", "is_orphan": false, "label": "acetyl-CoA", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Low-pH environment favoring formate cleavage by FHL.", "grounding": null, "id": "acidic_conditions", "is_orphan": false, "label": "acidic conditions", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Oxygen, which suppresses fermentative hydrogen production.", "grounding": null, "id": "ambient_oxygen", "is_orphan": false, "label": "ambient molecular oxygen", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Gas product of formate disproportionation.", "grounding": "CHEBI:16526", "id": "co2", "is_orphan": false, "label": "carbon dioxide", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Intracellular pH lowered by acid accumulation during fermentation.", "grounding": null, "id": "cytoplasm_ph", "is_orphan": false, "label": "cytoplasmic pH", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "ATP-yielding catabolism with organic terminal acceptors.", "grounding": "GO:0006113", "id": "fermentation_process", "is_orphan": false, "label": "fermentation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Membrane complex disproportionating formate into CO2 and H2.", "grounding": null, "id": "fhl_complex", "is_orphan": false, "label": "formate hydrogenlyase complex (FHL)", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Acid product and substrate for the formate hydrogenlyase complex.", "grounding": null, "id": "formate", "is_orphan": false, "label": "formate", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Gas product of formate disproportionation by FHL.", "grounding": "CHEBI:18276", "id": "hydrogen", "is_orphan": false, "label": "molecular hydrogen", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Fermentation producing a mixture of acids and gases.", "grounding": "traitmech:000027", "id": "mixed_acid_fermentation_trait", "is_orphan": false, "label": "mixed-acid fermentation", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Lactate, acetate, formate, succinate, ethanol, CO2, H2.", "grounding": null, "id": "mixed_acid_products", "is_orphan": false, "label": "mixed acid + ethanol + CO2/H2 products", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Enzyme pair converting acetyl-CoA to acetate with ATP generation.", "grounding": null, "id": "pta_acka", "is_orphan": false, "label": "phosphotransacetylase / acetate kinase (Pta/AckA)", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Central glycolytic intermediate feeding fermentation branches.", "grounding": "CHEBI:15361", "id": "pyruvate", "is_orphan": false, "label": "pyruvate", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Enzyme cleaving pyruvate to formate and acetyl-CoA under anaerobiosis.", "grounding": "GO:0008861", "id": "pyruvate_formate_lyase", "is_orphan": false, "label": "pyruvate formate lyase (PflB)", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 217, "evidence": [{"notes": "The primary structural study establishes the E. coli PFL role; UniProtKB P09373 verifies the reviewed PflB protein and K-12 taxon.", "reference": "DOI:10.1016/S0969-2126(99)80098-7", "snippet": "The dimeric pyruvate formate lyase is the final enzyme in anaerobic glycolysis in Escherichia coli."}], "gene_symbol": "pflB", "protein_label": "Formate acetyltransferase 1", "retrieved_on": "2026-08-24", "role": "PflB enzyme generating formate and acetyl-CoA from pyruvate during anaerobic glycolysis in E. coli.", "sequence_version": 2, "taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli K-12", "uniprot_id": "UniProtKB:P09373"}], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 217, "evidence": [{"notes": "The primary structural study establishes the E. coli PFL role; UniProtKB P09373 verifies the reviewed PflB protein and K-12 taxon.", "reference": "DOI:10.1016/S0969-2126(99)80098-7", "snippet": "The dimeric pyruvate formate lyase is the final enzyme in anaerobic glycolysis in Escherichia coli."}], "gene_symbol": "pflB", "node_id": "pyruvate_formate_lyase", "node_label": "pyruvate formate lyase (PflB)", "protein_label": "Formate acetyltransferase 1", "retrieved_on": "2026-08-24", "role": "PflB enzyme generating formate and acetyl-CoA from pyruvate during anaerobic glycolysis in E. coli.", "sequence_version": 2, "taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli K-12", "uniprot_id": "UniProtKB:P09373"}], "scope_notes": "Represents the enterobacterial branch centered on E. coli. The taxon-paired protein example establishes PflB, while Pta/AckA and FHL remain combined module labels pending component-level curation.", "scope_status": "MECHANISTIC", "title": "Mixed-acid fermentation yields a spectrum of acids plus ethanol and gases"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -1086,13 +1125,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-08-31 08:25 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

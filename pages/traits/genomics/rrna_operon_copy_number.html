@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/genomics.html">GENOMICS</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/genomics.html">GENOMICS</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>rRNA operon copy number</h1>
     <p class="curie"><code>traitmech:000101</code> · CLASS · REVIEWED</p>
 
@@ -85,9 +96,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>rRNA operon copy number</strong>
+            <code>traitmech:000101</code>
             <span class="edge-predicate">enables</span>
             <strong>ribosome biogenesis</strong>
-            <code>RO:0002327</code>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0042254" rel="nofollow noreferrer"><code>GO:0042254</code></a>
+            <a href="http://purl.obolibrary.org/obo/RO_0002327" rel="nofollow noreferrer"><code>RO:0002327</code></a>
             <p>Higher rrn copy number raises rRNA transcription capacity for ribosome assembly.</p>
             <ul>
 
@@ -102,9 +115,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>rRNA operon copy number</strong>
+            <code>traitmech:000101</code>
             <span class="edge-predicate">associated with</span>
             <strong>maximal growth rate</strong>
-            <code>biolink:associated_with</code>
+
+            <a href="https://w3id.org/biolink/vocab/associated_with" rel="nofollow noreferrer"><code>biolink:associated_with</code></a>
             <p>rrn copy number correlates with maximal growth rate across bacteria.</p>
             <ul>
 
@@ -119,8 +134,10 @@
 
           <li id="pathograph-1-edge-3">
             <strong>rRNA operon copy number</strong>
+            <code>traitmech:000101</code>
             <span class="edge-predicate">increases capacity for</span>
             <strong>rRNA transcription</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0009303" rel="nofollow noreferrer"><code>GO:0009303</code></a>
 
             <p>Multiple rrn operons increase capacity to raise rRNA transcription and ribosome synthesis rapidly.</p>
             <ul>
@@ -136,9 +153,11 @@
 
           <li id="pathograph-1-edge-4">
             <strong>rRNA operon copy number</strong>
+            <code>traitmech:000101</code>
             <span class="edge-predicate">decreases</span>
             <strong>growth efficiency</strong>
-            <code>RO:0002212</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002212" rel="nofollow noreferrer"><code>RO:0002212</code></a>
             <p>Higher rrn copy number is associated with lower growth (carbon use) efficiency.</p>
             <ul>
 
@@ -153,8 +172,10 @@
 
           <li id="pathograph-1-edge-5">
             <strong>rRNA operon copy number</strong>
+            <code>traitmech:000101</code>
             <span class="edge-predicate">positively associated with</span>
             <strong>chemotactic motility</strong>
+
 
             <p>Higher rrn copy number is associated with greater probability of chemotactic motility across genomes.</p>
             <ul>
@@ -170,8 +191,10 @@
 
           <li id="pathograph-1-edge-6">
             <strong>rRNA operon copy number</strong>
+            <code>traitmech:000101</code>
             <span class="edge-predicate">positively correlates with</span>
             <strong>genome size</strong>
+
 
             <p>rrn copy number positively correlates with genome size across bacteria.</p>
             <ul>
@@ -269,43 +292,43 @@
 
         <li>
           <span class="nn-cat">genomics</span>
-          <a href="../../traits/genomics/codon_usage_bias.html">codon usage bias</a>
+          <a href="../../traits/genomics/hna_system.html">Hna system</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">genomics</span>
-          <a href="../../traits/genomics/crispr_cas_system.html">CRISPR-Cas system</a>
+          <a href="../../traits/genomics/hma_system.html">Hma system</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">genomics</span>
-          <a href="../../traits/genomics/gc_skew.html">GC skew</a>
+          <a href="../../traits/genomics/hesat_system.html">Hesat system</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">genomics</span>
-          <a href="../../traits/genomics/genome_size.html">genome size</a>
+          <a href="../../traits/genomics/hec_08_system.html">HEC-08 system</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">genomics</span>
-          <a href="../../traits/genomics/genome_streamlining.html">genome streamlining</a>
+          <a href="../../traits/genomics/hec_07_system.html">HEC-07 system</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">genomics</span>
-          <a href="../../traits/genomics/genomic_island.html">genomic island</a>
+          <a href="../../traits/genomics/hec_06_system.html">HEC-06 system</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">genomics</span>
-          <a href="../../traits/genomics/mobile_genetic_element.html">mobile genetic element</a>
+          <a href="../../traits/genomics/hec_05_system.html">HEC-05 system</a>
           <span class="sim">1.000</span>
         </li>
 
@@ -856,7 +879,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking rrn copy number to ribosome biogenesis capacity and maximal growth rate.", "edges": [{"description": "Higher rrn copy number raises rRNA transcription capacity for ribosome assembly.", "evidence": [{"notes": "Klappenbach et al. tie rrn copy number to copiotrophic strategies with fast ribosome assembly.", "reference": "DOI:10.1128/AEM.66.4.1328-1333.2000"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "rrna_copy_trait", "target": "ribosome_biogenesis"}, {"description": "rrn copy number correlates with maximal growth rate across bacteria.", "evidence": [{"notes": "Roller et al. link rrn copy number to bacterial growth rate and growth efficiency.", "reference": "DOI:10.1038/nmicrobiol.2016.160"}], "id": "edge-2", "is_orphan": false, "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "rrna_copy_trait", "target": "maximal_growth_rate"}, {"description": "Multiple rrn operons increase capacity to raise rRNA transcription and ribosome synthesis rapidly.", "evidence": [{"notes": "rrn transcription can account for up to ~70% of cellular transcription during rapid growth; multiple operons increase ability to raise ribosome synthesis rapidly.", "reference": "DOI:10.1128/AEM.66.4.1328-1333.2000"}], "id": "edge-3", "is_orphan": false, "predicate": "increases capacity for", "predicate_id": null, "source": "rrna_copy_trait", "target": "rrna_transcription"}, {"description": "Higher rrn copy number is associated with lower growth (carbon use) efficiency.", "evidence": [{"notes": "Roller et al.: growth efficiency is inversely related to maximal growth rate and rrn copy number.", "reference": "DOI:10.1038/nmicrobiol.2016.160"}], "id": "edge-4", "is_orphan": false, "predicate": "decreases", "predicate_id": "RO:0002212", "source": "rrna_copy_trait", "target": "growth_efficiency"}, {"description": "Higher rrn copy number is associated with greater probability of chemotactic motility across genomes.", "evidence": [{"notes": "Chemotactic motility shows a positive relationship with log2-rrn (up to +41.25% non-phylogenetic, +10.60% phylogenetic) across 1,167 genomes.", "reference": "DOI:10.1038/nmicrobiol.2016.160"}], "id": "edge-5", "is_orphan": false, "predicate": "positively associated with", "predicate_id": null, "source": "rrna_copy_trait", "target": "chemotactic_motility"}, {"description": "rrn copy number positively correlates with genome size across bacteria.", "evidence": [{"notes": "Genome size and rrn copy number show a positive logarithmic relationship; ~+0.66 Mbp phylogenetically for 15 vs 1 rrn.", "reference": "DOI:10.1038/nmicrobiol.2016.160"}], "id": "edge-6", "is_orphan": false, "predicate": "positively correlates with", "predicate_id": null, "source": "rrna_copy_trait", "target": "genome_size"}], "evidence_rows": [{"description": "Higher rrn copy number raises rRNA transcription capacity for ribosome assembly.", "edge_id": "edge-1", "evidence": [{"notes": "Klappenbach et al. tie rrn copy number to copiotrophic strategies with fast ribosome assembly.", "reference": "DOI:10.1128/AEM.66.4.1328-1333.2000"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "rRNA operon copy number", "target": "ribosome biogenesis"}, {"description": "rrn copy number correlates with maximal growth rate across bacteria.", "edge_id": "edge-2", "evidence": [{"notes": "Roller et al. link rrn copy number to bacterial growth rate and growth efficiency.", "reference": "DOI:10.1038/nmicrobiol.2016.160"}], "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "rRNA operon copy number", "target": "maximal growth rate"}, {"description": "Multiple rrn operons increase capacity to raise rRNA transcription and ribosome synthesis rapidly.", "edge_id": "edge-3", "evidence": [{"notes": "rrn transcription can account for up to ~70% of cellular transcription during rapid growth; multiple operons increase ability to raise ribosome synthesis rapidly.", "reference": "DOI:10.1128/AEM.66.4.1328-1333.2000"}], "predicate": "increases capacity for", "predicate_id": null, "source": "rRNA operon copy number", "target": "rRNA transcription"}, {"description": "Higher rrn copy number is associated with lower growth (carbon use) efficiency.", "edge_id": "edge-4", "evidence": [{"notes": "Roller et al.: growth efficiency is inversely related to maximal growth rate and rrn copy number.", "reference": "DOI:10.1038/nmicrobiol.2016.160"}], "predicate": "decreases", "predicate_id": "RO:0002212", "source": "rRNA operon copy number", "target": "growth efficiency"}, {"description": "Higher rrn copy number is associated with greater probability of chemotactic motility across genomes.", "edge_id": "edge-5", "evidence": [{"notes": "Chemotactic motility shows a positive relationship with log2-rrn (up to +41.25% non-phylogenetic, +10.60% phylogenetic) across 1,167 genomes.", "reference": "DOI:10.1038/nmicrobiol.2016.160"}], "predicate": "positively associated with", "predicate_id": null, "source": "rRNA operon copy number", "target": "chemotactic motility"}, {"description": "rrn copy number positively correlates with genome size across bacteria.", "edge_id": "edge-6", "evidence": [{"notes": "Genome size and rrn copy number show a positive logarithmic relationship; ~+0.66 Mbp phylogenetically for 15 vs 1 rrn.", "reference": "DOI:10.1038/nmicrobiol.2016.160"}], "predicate": "positively correlates with", "predicate_id": null, "source": "rRNA operon copy number", "target": "genome size"}], "graph_id": "rrn_copy_growth_rate", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Directed cell movement in response to chemical gradients.", "grounding": null, "id": "chemotactic_motility", "is_orphan": false, "label": "chemotactic motility", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Total genome length of an organism.", "grounding": null, "id": "genome_size", "is_orphan": false, "label": "genome size", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Carbon/substrate use efficiency of biomass production.", "grounding": null, "id": "growth_efficiency", "is_orphan": false, "label": "growth efficiency", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Upper bound on per-cell exponential growth rate.", "grounding": null, "id": "maximal_growth_rate", "is_orphan": false, "label": "maximal growth rate", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Assembly of ribosomal RNA and proteins into functional ribosomes.", "grounding": "GO:0042254", "id": "ribosome_biogenesis", "is_orphan": false, "label": "ribosome biogenesis", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Number of rrn operons encoded per genome.", "grounding": "traitmech:000101", "id": "rrna_copy_trait", "is_orphan": false, "label": "rRNA operon copy number", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Synthesis of ribosomal RNA from rrn operons by RNA polymerase.", "grounding": "GO:0009303", "id": "rrna_transcription", "is_orphan": false, "label": "rRNA transcription", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This genomics record is a measurement, genomic-element classification, or population-level descriptor rather than one taxon-specific protein mechanism; contextual protein nodes do not receive token UniProt examples.", "scope_status": "NONMECHANISTIC", "title": "rRNA operon copy number sets ribosome biogenesis and growth rate"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking rrn copy number to ribosome biogenesis capacity and maximal growth rate.", "edges": [{"description": "Higher rrn copy number raises rRNA transcription capacity for ribosome assembly.", "evidence": [{"notes": "Klappenbach et al. tie rrn copy number to copiotrophic strategies with fast ribosome assembly.", "reference": "DOI:10.1128/AEM.66.4.1328-1333.2000"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "rrna_copy_trait", "target": "ribosome_biogenesis"}, {"description": "rrn copy number correlates with maximal growth rate across bacteria.", "evidence": [{"notes": "Roller et al. link rrn copy number to bacterial growth rate and growth efficiency.", "reference": "DOI:10.1038/nmicrobiol.2016.160"}], "id": "edge-2", "is_orphan": false, "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "rrna_copy_trait", "target": "maximal_growth_rate"}, {"description": "Multiple rrn operons increase capacity to raise rRNA transcription and ribosome synthesis rapidly.", "evidence": [{"notes": "rrn transcription can account for up to ~70% of cellular transcription during rapid growth; multiple operons increase ability to raise ribosome synthesis rapidly.", "reference": "DOI:10.1128/AEM.66.4.1328-1333.2000"}], "id": "edge-3", "is_orphan": false, "predicate": "increases capacity for", "predicate_id": null, "source": "rrna_copy_trait", "target": "rrna_transcription"}, {"description": "Higher rrn copy number is associated with lower growth (carbon use) efficiency.", "evidence": [{"notes": "Roller et al.: growth efficiency is inversely related to maximal growth rate and rrn copy number.", "reference": "DOI:10.1038/nmicrobiol.2016.160"}], "id": "edge-4", "is_orphan": false, "predicate": "decreases", "predicate_id": "RO:0002212", "source": "rrna_copy_trait", "target": "growth_efficiency"}, {"description": "Higher rrn copy number is associated with greater probability of chemotactic motility across genomes.", "evidence": [{"notes": "Chemotactic motility shows a positive relationship with log2-rrn (up to +41.25% non-phylogenetic, +10.60% phylogenetic) across 1,167 genomes.", "reference": "DOI:10.1038/nmicrobiol.2016.160"}], "id": "edge-5", "is_orphan": false, "predicate": "positively associated with", "predicate_id": null, "source": "rrna_copy_trait", "target": "chemotactic_motility"}, {"description": "rrn copy number positively correlates with genome size across bacteria.", "evidence": [{"notes": "Genome size and rrn copy number show a positive logarithmic relationship; ~+0.66 Mbp phylogenetically for 15 vs 1 rrn.", "reference": "DOI:10.1038/nmicrobiol.2016.160"}], "id": "edge-6", "is_orphan": false, "predicate": "positively correlates with", "predicate_id": null, "source": "rrna_copy_trait", "target": "genome_size"}], "evidence_rows": [{"description": "Higher rrn copy number raises rRNA transcription capacity for ribosome assembly.", "edge_id": "edge-1", "evidence": [{"notes": "Klappenbach et al. tie rrn copy number to copiotrophic strategies with fast ribosome assembly.", "reference": "DOI:10.1128/AEM.66.4.1328-1333.2000"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "rRNA operon copy number", "source_grounding": "traitmech:000101", "target": "ribosome biogenesis", "target_grounding": "GO:0042254"}, {"description": "rrn copy number correlates with maximal growth rate across bacteria.", "edge_id": "edge-2", "evidence": [{"notes": "Roller et al. link rrn copy number to bacterial growth rate and growth efficiency.", "reference": "DOI:10.1038/nmicrobiol.2016.160"}], "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "rRNA operon copy number", "source_grounding": "traitmech:000101", "target": "maximal growth rate", "target_grounding": null}, {"description": "Multiple rrn operons increase capacity to raise rRNA transcription and ribosome synthesis rapidly.", "edge_id": "edge-3", "evidence": [{"notes": "rrn transcription can account for up to ~70% of cellular transcription during rapid growth; multiple operons increase ability to raise ribosome synthesis rapidly.", "reference": "DOI:10.1128/AEM.66.4.1328-1333.2000"}], "predicate": "increases capacity for", "predicate_id": null, "source": "rRNA operon copy number", "source_grounding": "traitmech:000101", "target": "rRNA transcription", "target_grounding": "GO:0009303"}, {"description": "Higher rrn copy number is associated with lower growth (carbon use) efficiency.", "edge_id": "edge-4", "evidence": [{"notes": "Roller et al.: growth efficiency is inversely related to maximal growth rate and rrn copy number.", "reference": "DOI:10.1038/nmicrobiol.2016.160"}], "predicate": "decreases", "predicate_id": "RO:0002212", "source": "rRNA operon copy number", "source_grounding": "traitmech:000101", "target": "growth efficiency", "target_grounding": null}, {"description": "Higher rrn copy number is associated with greater probability of chemotactic motility across genomes.", "edge_id": "edge-5", "evidence": [{"notes": "Chemotactic motility shows a positive relationship with log2-rrn (up to +41.25% non-phylogenetic, +10.60% phylogenetic) across 1,167 genomes.", "reference": "DOI:10.1038/nmicrobiol.2016.160"}], "predicate": "positively associated with", "predicate_id": null, "source": "rRNA operon copy number", "source_grounding": "traitmech:000101", "target": "chemotactic motility", "target_grounding": null}, {"description": "rrn copy number positively correlates with genome size across bacteria.", "edge_id": "edge-6", "evidence": [{"notes": "Genome size and rrn copy number show a positive logarithmic relationship; ~+0.66 Mbp phylogenetically for 15 vs 1 rrn.", "reference": "DOI:10.1038/nmicrobiol.2016.160"}], "predicate": "positively correlates with", "predicate_id": null, "source": "rRNA operon copy number", "source_grounding": "traitmech:000101", "target": "genome size", "target_grounding": null}], "graph_id": "rrn_copy_growth_rate", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Directed cell movement in response to chemical gradients.", "grounding": null, "id": "chemotactic_motility", "is_orphan": false, "label": "chemotactic motility", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Total genome length of an organism.", "grounding": null, "id": "genome_size", "is_orphan": false, "label": "genome size", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Carbon/substrate use efficiency of biomass production.", "grounding": null, "id": "growth_efficiency", "is_orphan": false, "label": "growth efficiency", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Upper bound on per-cell exponential growth rate.", "grounding": null, "id": "maximal_growth_rate", "is_orphan": false, "label": "maximal growth rate", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Assembly of ribosomal RNA and proteins into functional ribosomes.", "grounding": "GO:0042254", "id": "ribosome_biogenesis", "is_orphan": false, "label": "ribosome biogenesis", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Number of rrn operons encoded per genome.", "grounding": "traitmech:000101", "id": "rrna_copy_trait", "is_orphan": false, "label": "rRNA operon copy number", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Synthesis of ribosomal RNA from rrn operons by RNA polymerase.", "grounding": "GO:0009303", "id": "rrna_transcription", "is_orphan": false, "label": "rRNA transcription", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This genomics record is a measurement, genomic-element classification, or population-level descriptor rather than one taxon-specific protein mechanism; contextual protein nodes do not receive token UniProt examples.", "scope_status": "NONMECHANISTIC", "title": "rRNA operon copy number sets ribosome biogenesis and growth rate"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -876,13 +899,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-08-26 03:23 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

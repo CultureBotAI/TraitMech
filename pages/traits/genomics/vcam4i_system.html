@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/genomics.html">GENOMICS</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/genomics.html">GENOMICS</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>VcaM4I system</h1>
     <p class="curie"><code>traitmech:000514</code> · CLASS · PROPOSED</p>
 
@@ -115,9 +126,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>VcaM4I-family locus</strong>
+
             <span class="edge-predicate">enables</span>
             <strong>VcaM4I EVE-HNH DNA restriction</strong>
-            <code>RO:0002327</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002327" rel="nofollow noreferrer"><code>RO:0002327</code></a>
             <p>VcaM4I-family loci encode EVE-HNH endonucleases that restrict 5mC/5hmC-modified DNA.</p>
             <ul>
 
@@ -138,9 +151,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>VcaM4I EVE-HNH DNA restriction</strong>
+
             <span class="edge-predicate">mitigates</span>
             <strong>VcaM4I-targeted modified-cytosine DNA</strong>
-            <code>METPO:2007407</code>
+
+            <a href="https://w3id.org/metpo/2007407" rel="nofollow noreferrer"><code>METPO:2007407</code></a>
             <p>VcaM4I-family EVE-HNH restriction targets 5mC- or 5hmC-modified DNA.</p>
             <ul>
 
@@ -161,9 +176,11 @@
 
           <li id="pathograph-1-edge-3">
             <strong>VcaM4I EVE-HNH DNA restriction</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>VcaM4I system</strong>
-            <code>METPO:2007700</code>
+            <code>traitmech:000514</code>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>VcaM4I-family EVE-HNH DNA restriction realizes the organism-level VcaM4I system possession trait.</p>
             <ul>
 
@@ -178,8 +195,10 @@
 
           <li id="pathograph-1-edge-4">
             <strong>VcaM4I system</strong>
+            <code>traitmech:000514</code>
             <span class="edge-predicate">is a</span>
             <strong>type IV modification-dependent restriction system</strong>
+            <code>traitmech:000496</code>
             <code>rdfs:subClassOf</code>
             <p>VcaM4I system possession is a Type IV modification-dependent restriction system trait.</p>
             <ul>
@@ -256,11 +275,75 @@
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
 
-      <p class="no-match">No kg-microbe node embedding matched this record
-        in the 2026-04-25 deepwalk.</p>
+      <p class="match-method">Matched <strong>1</strong>
+        kg-microbe node
+        via <em>parent_proxy</em>.</p>
+      <ul class="kgm-nodes">
+
+        <li><code>METPO:1000188</code> <span class="dim-preview">[-0.956, -1.962, -3.148, +1.274, …]</span></li>
+
+      </ul>
+      <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
 
     </div>
 
+
+    <div class="card">
+      <h2>Nearest neighbors in embedding space</h2>
+      <p class="meta">Top-8 cosine-similar METPO traits
+        from the 2026-04-25 deepwalk (512-D).</p>
+      <ul class="nn-list">
+
+        <li>
+          <span class="nn-cat">upper</span>
+          <a href="../../traits/upper/quality.html">quality</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hna_system.html">Hna system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hma_system.html">Hma system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hesat_system.html">Hesat system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_08_system.html">HEC-08 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_07_system.html">HEC-07 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_06_system.html">HEC-06 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_05_system.html">HEC-05 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+      </ul>
+    </div>
 
 
 
@@ -420,6 +503,11 @@
     </dl>
   </div>
 
+
+  <div class="card rail-kgm">
+    <h2>kg-microbe</h2>
+    <p class="meta">1 matching node (parent_proxy)</p>
+  </div>
 
 </aside>
 </div>
@@ -753,7 +841,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Conservative system-level sketch linking a VcaM4I-family locus to EVE-HNH 5mC/5hmC-dependent DNA restriction and to the Type IV restriction parent trait.", "edges": [{"description": "VcaM4I-family loci encode EVE-HNH endonucleases that restrict 5mC/5hmC-modified DNA.", "evidence": [{"notes": "Mierzejewska et al. support the EVE-HNH architecture of VcaM4I-family modification-dependent restriction endonucleases.", "reference": "DOI:10.1093/nar/gkaa1218", "snippet": "EVE domains belong to the PUA superfamily, and are present in MDREs in combination with HNH nuclease domains."}, {"notes": "Mierzejewska et al. biochemically characterized VcaM4I and solved structures of apo and modified-DNA-bound enzyme.", "reference": "DOI:10.1093/nar/gkaa1218", "snippet": "Here, we present a biochemical characterization of the EVE-HNH endonuclease VcaM4I and crystal structures of the protein alone, with EVE domain bound to either 5mC modified dsDNA or to 5mC/5hmC containing ssDNA."}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "vcam4i_family_locus", "target": "vcam4i_eve_hnh_restriction"}, {"description": "VcaM4I-family EVE-HNH restriction targets 5mC- or 5hmC-modified DNA.", "evidence": [{"notes": "Mierzejewska et al. support VcaM4I EVE-domain recognition of 5mC/5hmC-containing DNA.", "reference": "DOI:10.1093/nar/gkaa1218", "snippet": "The EVE domain is moderately specific for 5mC/5hmC containing DNA according to EMSA experiments."}, {"notes": "Mierzejewska et al. support the VcaM4I EVE base-binding pocket and HNH catalytic residues by digestion and restriction assays.", "reference": "DOI:10.1093/nar/gkaa1218", "snippet": "The role of the key residues in the EVE and HNH domains of VcaM4I is confirmed by digestion and restriction assays with the enzyme variants that differ from the wild-type by changes to the base binding pocket or to the catalytic residues."}], "id": "edge-2", "is_orphan": false, "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "vcam4i_eve_hnh_restriction", "target": "vcam4i_modified_cytosine_dna"}, {"description": "VcaM4I-family EVE-HNH DNA restriction realizes the organism-level VcaM4I system possession trait.", "evidence": [{"notes": "The pinned DefenseFinder article registry maps the VcaM4I source key to the Mierzejewska et al. structural paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| VcaM4I | 10\\.1093/nar/gkaa1218 | Crystal structures of the EVE-HNH endonuclease VcaM4I in the presence and absence of DNA | "}], "id": "edge-3", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "vcam4i_eve_hnh_restriction", "target": "vcam4i_system_trait"}, {"description": "VcaM4I system possession is a Type IV modification-dependent restriction system trait.", "evidence": [{"notes": "Mierzejewska et al. support VcaM4I as a nuclease whose domain organization modulates toxic DNA cleavage.", "reference": "DOI:10.1093/nar/gkaa1218", "snippet": "Removal of the EVE domain and inter-domain linker, but not of the EVE domain alone converts VcaM4I into a non-specific toxic nuclease."}, {"notes": "Loenen and Raleigh define the Type IV class as modification-dependent restriction enzymes.", "reference": "DOI:10.1093/nar/gkt747", "snippet": "The new class of modification-dependent restriction enzymes was named Type IV, as distinct from the familiar modification-blocked Types I-III."}], "id": "edge-4", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "vcam4i_system_trait", "target": "type_iv_modification_dependent_restriction"}], "evidence_rows": [{"description": "VcaM4I-family loci encode EVE-HNH endonucleases that restrict 5mC/5hmC-modified DNA.", "edge_id": "edge-1", "evidence": [{"notes": "Mierzejewska et al. support the EVE-HNH architecture of VcaM4I-family modification-dependent restriction endonucleases.", "reference": "DOI:10.1093/nar/gkaa1218", "snippet": "EVE domains belong to the PUA superfamily, and are present in MDREs in combination with HNH nuclease domains."}, {"notes": "Mierzejewska et al. biochemically characterized VcaM4I and solved structures of apo and modified-DNA-bound enzyme.", "reference": "DOI:10.1093/nar/gkaa1218", "snippet": "Here, we present a biochemical characterization of the EVE-HNH endonuclease VcaM4I and crystal structures of the protein alone, with EVE domain bound to either 5mC modified dsDNA or to 5mC/5hmC containing ssDNA."}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "VcaM4I-family locus", "target": "VcaM4I EVE-HNH DNA restriction"}, {"description": "VcaM4I-family EVE-HNH restriction targets 5mC- or 5hmC-modified DNA.", "edge_id": "edge-2", "evidence": [{"notes": "Mierzejewska et al. support VcaM4I EVE-domain recognition of 5mC/5hmC-containing DNA.", "reference": "DOI:10.1093/nar/gkaa1218", "snippet": "The EVE domain is moderately specific for 5mC/5hmC containing DNA according to EMSA experiments."}, {"notes": "Mierzejewska et al. support the VcaM4I EVE base-binding pocket and HNH catalytic residues by digestion and restriction assays.", "reference": "DOI:10.1093/nar/gkaa1218", "snippet": "The role of the key residues in the EVE and HNH domains of VcaM4I is confirmed by digestion and restriction assays with the enzyme variants that differ from the wild-type by changes to the base binding pocket or to the catalytic residues."}], "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "VcaM4I EVE-HNH DNA restriction", "target": "VcaM4I-targeted modified-cytosine DNA"}, {"description": "VcaM4I-family EVE-HNH DNA restriction realizes the organism-level VcaM4I system possession trait.", "edge_id": "edge-3", "evidence": [{"notes": "The pinned DefenseFinder article registry maps the VcaM4I source key to the Mierzejewska et al. structural paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| VcaM4I | 10\\.1093/nar/gkaa1218 | Crystal structures of the EVE-HNH endonuclease VcaM4I in the presence and absence of DNA | "}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "VcaM4I EVE-HNH DNA restriction", "target": "VcaM4I system"}, {"description": "VcaM4I system possession is a Type IV modification-dependent restriction system trait.", "edge_id": "edge-4", "evidence": [{"notes": "Mierzejewska et al. support VcaM4I as a nuclease whose domain organization modulates toxic DNA cleavage.", "reference": "DOI:10.1093/nar/gkaa1218", "snippet": "Removal of the EVE domain and inter-domain linker, but not of the EVE domain alone converts VcaM4I into a non-specific toxic nuclease."}, {"notes": "Loenen and Raleigh define the Type IV class as modification-dependent restriction enzymes.", "reference": "DOI:10.1093/nar/gkt747", "snippet": "The new class of modification-dependent restriction enzymes was named Type IV, as distinct from the familiar modification-blocked Types I-III."}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "VcaM4I system", "target": "type IV modification-dependent restriction system"}], "graph_id": "vcam4i_restricts_modified_cytosine_dna", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Possession of a genome-encoded Type IV modification-dependent restriction system.", "grounding": "traitmech:000496", "id": "type_iv_modification_dependent_restriction", "is_orphan": false, "label": "type IV modification-dependent restriction system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Modification-dependent restriction of 5mC/5hmC-modified DNA by a VcaM4I-family EVE-HNH endonuclease.", "grounding": null, "id": "vcam4i_eve_hnh_restriction", "is_orphan": false, "label": "VcaM4I EVE-HNH DNA restriction", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "A locus encoding a VcaM4I-family EVE-HNH modification-dependent restriction endonuclease.", "grounding": null, "id": "vcam4i_family_locus", "is_orphan": false, "label": "VcaM4I-family locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "DNA containing 5-methylcytosine or 5-hydroxymethylcytosine in a VcaM4I-family recognition context.", "grounding": null, "id": "vcam4i_modified_cytosine_dna", "is_orphan": false, "label": "VcaM4I-targeted modified-cytosine DNA", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded VcaM4I-family modification-dependent restriction system.", "grounding": "traitmech:000514", "id": "vcam4i_system_trait", "is_orphan": false, "label": "VcaM4I system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "The graph captures VcaM4I as a named Type IV modification-dependent restriction family while leaving natural host breadth, exact modified-DNA sequence-context specificity across EVE-HNH homologs, accession-level protein examples, and DefenseFinder RM_Type_IV HMM/rules mapping unresolved.", "scope_status": "NONMECHANISTIC", "title": "VcaM4I restricts modified-cytosine DNA"}];
+  var graphs = [{"description": "Conservative system-level sketch linking a VcaM4I-family locus to EVE-HNH 5mC/5hmC-dependent DNA restriction and to the Type IV restriction parent trait.", "edges": [{"description": "VcaM4I-family loci encode EVE-HNH endonucleases that restrict 5mC/5hmC-modified DNA.", "evidence": [{"notes": "Mierzejewska et al. support the EVE-HNH architecture of VcaM4I-family modification-dependent restriction endonucleases.", "reference": "DOI:10.1093/nar/gkaa1218", "snippet": "EVE domains belong to the PUA superfamily, and are present in MDREs in combination with HNH nuclease domains."}, {"notes": "Mierzejewska et al. biochemically characterized VcaM4I and solved structures of apo and modified-DNA-bound enzyme.", "reference": "DOI:10.1093/nar/gkaa1218", "snippet": "Here, we present a biochemical characterization of the EVE-HNH endonuclease VcaM4I and crystal structures of the protein alone, with EVE domain bound to either 5mC modified dsDNA or to 5mC/5hmC containing ssDNA."}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "vcam4i_family_locus", "target": "vcam4i_eve_hnh_restriction"}, {"description": "VcaM4I-family EVE-HNH restriction targets 5mC- or 5hmC-modified DNA.", "evidence": [{"notes": "Mierzejewska et al. support VcaM4I EVE-domain recognition of 5mC/5hmC-containing DNA.", "reference": "DOI:10.1093/nar/gkaa1218", "snippet": "The EVE domain is moderately specific for 5mC/5hmC containing DNA according to EMSA experiments."}, {"notes": "Mierzejewska et al. support the VcaM4I EVE base-binding pocket and HNH catalytic residues by digestion and restriction assays.", "reference": "DOI:10.1093/nar/gkaa1218", "snippet": "The role of the key residues in the EVE and HNH domains of VcaM4I is confirmed by digestion and restriction assays with the enzyme variants that differ from the wild-type by changes to the base binding pocket or to the catalytic residues."}], "id": "edge-2", "is_orphan": false, "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "vcam4i_eve_hnh_restriction", "target": "vcam4i_modified_cytosine_dna"}, {"description": "VcaM4I-family EVE-HNH DNA restriction realizes the organism-level VcaM4I system possession trait.", "evidence": [{"notes": "The pinned DefenseFinder article registry maps the VcaM4I source key to the Mierzejewska et al. structural paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| VcaM4I | 10\\.1093/nar/gkaa1218 | Crystal structures of the EVE-HNH endonuclease VcaM4I in the presence and absence of DNA | "}], "id": "edge-3", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "vcam4i_eve_hnh_restriction", "target": "vcam4i_system_trait"}, {"description": "VcaM4I system possession is a Type IV modification-dependent restriction system trait.", "evidence": [{"notes": "Mierzejewska et al. support VcaM4I as a nuclease whose domain organization modulates toxic DNA cleavage.", "reference": "DOI:10.1093/nar/gkaa1218", "snippet": "Removal of the EVE domain and inter-domain linker, but not of the EVE domain alone converts VcaM4I into a non-specific toxic nuclease."}, {"notes": "Loenen and Raleigh define the Type IV class as modification-dependent restriction enzymes.", "reference": "DOI:10.1093/nar/gkt747", "snippet": "The new class of modification-dependent restriction enzymes was named Type IV, as distinct from the familiar modification-blocked Types I-III."}], "id": "edge-4", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "vcam4i_system_trait", "target": "type_iv_modification_dependent_restriction"}], "evidence_rows": [{"description": "VcaM4I-family loci encode EVE-HNH endonucleases that restrict 5mC/5hmC-modified DNA.", "edge_id": "edge-1", "evidence": [{"notes": "Mierzejewska et al. support the EVE-HNH architecture of VcaM4I-family modification-dependent restriction endonucleases.", "reference": "DOI:10.1093/nar/gkaa1218", "snippet": "EVE domains belong to the PUA superfamily, and are present in MDREs in combination with HNH nuclease domains."}, {"notes": "Mierzejewska et al. biochemically characterized VcaM4I and solved structures of apo and modified-DNA-bound enzyme.", "reference": "DOI:10.1093/nar/gkaa1218", "snippet": "Here, we present a biochemical characterization of the EVE-HNH endonuclease VcaM4I and crystal structures of the protein alone, with EVE domain bound to either 5mC modified dsDNA or to 5mC/5hmC containing ssDNA."}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "VcaM4I-family locus", "source_grounding": null, "target": "VcaM4I EVE-HNH DNA restriction", "target_grounding": null}, {"description": "VcaM4I-family EVE-HNH restriction targets 5mC- or 5hmC-modified DNA.", "edge_id": "edge-2", "evidence": [{"notes": "Mierzejewska et al. support VcaM4I EVE-domain recognition of 5mC/5hmC-containing DNA.", "reference": "DOI:10.1093/nar/gkaa1218", "snippet": "The EVE domain is moderately specific for 5mC/5hmC containing DNA according to EMSA experiments."}, {"notes": "Mierzejewska et al. support the VcaM4I EVE base-binding pocket and HNH catalytic residues by digestion and restriction assays.", "reference": "DOI:10.1093/nar/gkaa1218", "snippet": "The role of the key residues in the EVE and HNH domains of VcaM4I is confirmed by digestion and restriction assays with the enzyme variants that differ from the wild-type by changes to the base binding pocket or to the catalytic residues."}], "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "VcaM4I EVE-HNH DNA restriction", "source_grounding": null, "target": "VcaM4I-targeted modified-cytosine DNA", "target_grounding": null}, {"description": "VcaM4I-family EVE-HNH DNA restriction realizes the organism-level VcaM4I system possession trait.", "edge_id": "edge-3", "evidence": [{"notes": "The pinned DefenseFinder article registry maps the VcaM4I source key to the Mierzejewska et al. structural paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| VcaM4I | 10\\.1093/nar/gkaa1218 | Crystal structures of the EVE-HNH endonuclease VcaM4I in the presence and absence of DNA | "}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "VcaM4I EVE-HNH DNA restriction", "source_grounding": null, "target": "VcaM4I system", "target_grounding": "traitmech:000514"}, {"description": "VcaM4I system possession is a Type IV modification-dependent restriction system trait.", "edge_id": "edge-4", "evidence": [{"notes": "Mierzejewska et al. support VcaM4I as a nuclease whose domain organization modulates toxic DNA cleavage.", "reference": "DOI:10.1093/nar/gkaa1218", "snippet": "Removal of the EVE domain and inter-domain linker, but not of the EVE domain alone converts VcaM4I into a non-specific toxic nuclease."}, {"notes": "Loenen and Raleigh define the Type IV class as modification-dependent restriction enzymes.", "reference": "DOI:10.1093/nar/gkt747", "snippet": "The new class of modification-dependent restriction enzymes was named Type IV, as distinct from the familiar modification-blocked Types I-III."}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "VcaM4I system", "source_grounding": "traitmech:000514", "target": "type IV modification-dependent restriction system", "target_grounding": "traitmech:000496"}], "graph_id": "vcam4i_restricts_modified_cytosine_dna", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Possession of a genome-encoded Type IV modification-dependent restriction system.", "grounding": "traitmech:000496", "id": "type_iv_modification_dependent_restriction", "is_orphan": false, "label": "type IV modification-dependent restriction system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Modification-dependent restriction of 5mC/5hmC-modified DNA by a VcaM4I-family EVE-HNH endonuclease.", "grounding": null, "id": "vcam4i_eve_hnh_restriction", "is_orphan": false, "label": "VcaM4I EVE-HNH DNA restriction", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "A locus encoding a VcaM4I-family EVE-HNH modification-dependent restriction endonuclease.", "grounding": null, "id": "vcam4i_family_locus", "is_orphan": false, "label": "VcaM4I-family locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "DNA containing 5-methylcytosine or 5-hydroxymethylcytosine in a VcaM4I-family recognition context.", "grounding": null, "id": "vcam4i_modified_cytosine_dna", "is_orphan": false, "label": "VcaM4I-targeted modified-cytosine DNA", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded VcaM4I-family modification-dependent restriction system.", "grounding": "traitmech:000514", "id": "vcam4i_system_trait", "is_orphan": false, "label": "VcaM4I system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "The graph captures VcaM4I as a named Type IV modification-dependent restriction family while leaving natural host breadth, exact modified-DNA sequence-context specificity across EVE-HNH homologs, accession-level protein examples, and DefenseFinder RM_Type_IV HMM/rules mapping unresolved.", "scope_status": "NONMECHANISTIC", "title": "VcaM4I restricts modified-cytosine DNA"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -773,13 +861,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-10-01 11:48 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

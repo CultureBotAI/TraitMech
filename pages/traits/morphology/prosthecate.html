@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/morphology.html">MORPHOLOGY</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/morphology.html">MORPHOLOGY</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>prosthecate</h1>
     <p class="curie"><code>traitmech:000065</code> · CLASS · REVIEWED</p>
 
@@ -85,9 +96,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>stalk extension</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>prosthecate</strong>
-            <code>METPO:2007700</code>
+            <code>traitmech:000065</code>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>Regulated stalk-extension elongation realizes the prosthecate phenotype.</p>
             <ul>
 
@@ -102,9 +115,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>prosthecate</strong>
+            <code>traitmech:000065</code>
             <span class="edge-predicate">contributes to</span>
             <strong>nutrient-uptake surface area</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>Stalks expand nutrient-uptake surface area, aiding oligotrophic growth.</p>
             <ul>
 
@@ -119,8 +134,10 @@
 
           <li id="pathograph-1-edge-3">
             <strong>MreB</strong>
+
             <span class="edge-predicate">is required for</span>
             <strong>stalk extension</strong>
+
 
             <p>MreB is necessary for stalk formation; depletion causes a stalk elongation defect.</p>
             <ul>
@@ -136,8 +153,10 @@
 
           <li id="pathograph-1-edge-4">
             <strong>RodA</strong>
+            <a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR001182/" rel="nofollow noreferrer"><code>InterPro:IPR001182</code></a>
             <span class="edge-predicate">is required for</span>
             <strong>stalk extension</strong>
+
 
             <p>RodA is necessary for stalk formation; depletion causes a stalk elongation defect.</p>
             <ul>
@@ -153,9 +172,11 @@
 
           <li id="pathograph-1-edge-5">
             <strong>bactofilins</strong>
+
             <span class="edge-predicate">localizes to</span>
             <strong>zone of active cell wall growth</strong>
-            <code>biolink:located_in</code>
+
+            <a href="https://w3id.org/biolink/vocab/located_in" rel="nofollow noreferrer"><code>biolink:located_in</code></a>
             <p>Many bactofilins localize to zones of active cell wall growth, supporting stalk biogenesis.</p>
             <ul>
 
@@ -170,8 +191,10 @@
 
           <li id="pathograph-1-edge-6">
             <strong>StpABCD complex</strong>
+
             <span class="edge-predicate">composes</span>
             <strong>stalk crossbands</strong>
+
 
             <p>The four-protein StpABCD complex composes the stalk crossbands.</p>
             <ul>
@@ -187,9 +210,11 @@
 
           <li id="pathograph-1-edge-7">
             <strong>stalk crossbands</strong>
+
             <span class="edge-predicate">limits</span>
             <strong>diffusion along stalk</strong>
-            <code>RO:0002212</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002212" rel="nofollow noreferrer"><code>RO:0002212</code></a>
             <p>Crossbands limit diffusion along the length of the stalk, compartmentalizing it.</p>
             <ul>
 
@@ -204,8 +229,10 @@
 
           <li id="pathograph-1-edge-8">
             <strong>prosthecate</strong>
+            <code>traitmech:000065</code>
             <span class="edge-predicate">facilitates</span>
             <strong>nutrient-uptake surface area</strong>
+
 
             <p>Prosthecae/stalks facilitate nutrient uptake.</p>
             <ul>
@@ -298,50 +325,50 @@
       <ul class="nn-list">
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/cadmium_tolerant.html">cadmium tolerant</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/cytogamy.html">cytogamy</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">physiology</span>
-          <a href="../../traits/physiology/bioluminescence.html">bioluminescence</a>
+          <a href="../../traits/physiology/coccolith_production.html">coccolith production</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/cobalt_tolerant.html">cobalt tolerant</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/coagulase_activity.html">coagulase activity</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/copper_tolerant.html">copper tolerant</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/chemotropism.html">chemotropism</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/desiccation_tolerant.html">desiccation tolerant</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/chemotaxis.html">chemotaxis</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/piezotolerant.html">piezotolerant</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/cellular_rejuvenation.html">functional cellular rejuvenation</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/obligately_piezophilic.html">obligately piezophilic</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/cellular_contraction.html">cell body or cytoplasmic projection contraction</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/gas_vesicle.html">gas vesicle</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/cold_shock_response.html">cold shock response</a>
           <span class="sim">1.000</span>
         </li>
 
@@ -895,7 +922,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking developmental stalk extension to increased uptake surface area and substrate attachment.", "edges": [{"description": "Regulated stalk-extension elongation realizes the prosthecate phenotype.", "evidence": [{"notes": "Curtis \u0026 Brun review the Caulobacter stalk as a regulated developmental appendage.", "reference": "DOI:10.1128/MMBR.00040-09"}], "id": "edge-1", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "stalk_extension", "target": "prosthecate_trait"}, {"description": "Stalks expand nutrient-uptake surface area, aiding oligotrophic growth.", "evidence": [{"notes": "Wagner \u0026 Brun describe the Caulobacter stalk as a cell-envelope extension increasing nutrient-uptake surface area.", "reference": "DOI:10.1111/j.1365-2958.2007.05633.x"}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "prosthecate_trait", "target": "uptake_surface_area"}, {"description": "MreB is necessary for stalk formation; depletion causes a stalk elongation defect.", "evidence": [{"notes": "Barrows \u0026 Goley: MreB and RodA are necessary for stalk formation, as depletion of either protein results in a stalk elongation defect.", "reference": "DOI:10.1128/jb.00384-22"}], "id": "edge-3", "is_orphan": false, "predicate": "is required for", "predicate_id": null, "source": "mreb", "target": "stalk_extension"}, {"description": "RodA is necessary for stalk formation; depletion causes a stalk elongation defect.", "evidence": [{"notes": "Barrows \u0026 Goley: depletion of either protein (MreB or RodA) results in a stalk elongation defect.", "reference": "DOI:10.1128/jb.00384-22"}], "id": "edge-4", "is_orphan": false, "predicate": "is required for", "predicate_id": null, "source": "roda", "target": "stalk_extension"}, {"description": "Many bactofilins localize to zones of active cell wall growth, supporting stalk biogenesis.", "evidence": [{"notes": "Richter et al.: many bactofilins localize to zones of active cell wall growth.", "reference": "DOI:10.1371/journal.pgen.1010788"}], "id": "edge-5", "is_orphan": false, "predicate": "localizes to", "predicate_id": "biolink:located_in", "source": "bactofilins", "target": "cell_wall_growth_zone"}, {"description": "The four-protein StpABCD complex composes the stalk crossbands.", "evidence": [{"notes": "Barrows \u0026 Goley: crossbands are composed of a complex of four proteins, StpABCD.", "reference": "DOI:10.1128/jb.00384-22"}], "id": "edge-6", "is_orphan": false, "predicate": "composes", "predicate_id": null, "source": "stpabcd_complex", "target": "stalk_crossbands"}, {"description": "Crossbands limit diffusion along the length of the stalk, compartmentalizing it.", "evidence": [{"notes": "Barrows \u0026 Goley: crossbands that limit diffusion along the length of the stalk.", "reference": "DOI:10.1128/jb.00384-22"}], "id": "edge-7", "is_orphan": false, "predicate": "limits", "predicate_id": "RO:0002212", "source": "stalk_crossbands", "target": "stalk_diffusion"}, {"description": "Prosthecae/stalks facilitate nutrient uptake.", "evidence": [{"notes": "Richter et al.: prosthecae/stalks facilitate nutrient uptake.", "reference": "DOI:10.1371/journal.pgen.1010788"}], "id": "edge-8", "is_orphan": false, "predicate": "facilitates", "predicate_id": null, "source": "prosthecate_trait", "target": "uptake_surface_area"}], "evidence_rows": [{"description": "Regulated stalk-extension elongation realizes the prosthecate phenotype.", "edge_id": "edge-1", "evidence": [{"notes": "Curtis \u0026 Brun review the Caulobacter stalk as a regulated developmental appendage.", "reference": "DOI:10.1128/MMBR.00040-09"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "stalk extension", "target": "prosthecate"}, {"description": "Stalks expand nutrient-uptake surface area, aiding oligotrophic growth.", "edge_id": "edge-2", "evidence": [{"notes": "Wagner \u0026 Brun describe the Caulobacter stalk as a cell-envelope extension increasing nutrient-uptake surface area.", "reference": "DOI:10.1111/j.1365-2958.2007.05633.x"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "prosthecate", "target": "nutrient-uptake surface area"}, {"description": "MreB is necessary for stalk formation; depletion causes a stalk elongation defect.", "edge_id": "edge-3", "evidence": [{"notes": "Barrows \u0026 Goley: MreB and RodA are necessary for stalk formation, as depletion of either protein results in a stalk elongation defect.", "reference": "DOI:10.1128/jb.00384-22"}], "predicate": "is required for", "predicate_id": null, "source": "MreB", "target": "stalk extension"}, {"description": "RodA is necessary for stalk formation; depletion causes a stalk elongation defect.", "edge_id": "edge-4", "evidence": [{"notes": "Barrows \u0026 Goley: depletion of either protein (MreB or RodA) results in a stalk elongation defect.", "reference": "DOI:10.1128/jb.00384-22"}], "predicate": "is required for", "predicate_id": null, "source": "RodA", "target": "stalk extension"}, {"description": "Many bactofilins localize to zones of active cell wall growth, supporting stalk biogenesis.", "edge_id": "edge-5", "evidence": [{"notes": "Richter et al.: many bactofilins localize to zones of active cell wall growth.", "reference": "DOI:10.1371/journal.pgen.1010788"}], "predicate": "localizes to", "predicate_id": "biolink:located_in", "source": "bactofilins", "target": "zone of active cell wall growth"}, {"description": "The four-protein StpABCD complex composes the stalk crossbands.", "edge_id": "edge-6", "evidence": [{"notes": "Barrows \u0026 Goley: crossbands are composed of a complex of four proteins, StpABCD.", "reference": "DOI:10.1128/jb.00384-22"}], "predicate": "composes", "predicate_id": null, "source": "StpABCD complex", "target": "stalk crossbands"}, {"description": "Crossbands limit diffusion along the length of the stalk, compartmentalizing it.", "edge_id": "edge-7", "evidence": [{"notes": "Barrows \u0026 Goley: crossbands that limit diffusion along the length of the stalk.", "reference": "DOI:10.1128/jb.00384-22"}], "predicate": "limits", "predicate_id": "RO:0002212", "source": "stalk crossbands", "target": "diffusion along stalk"}, {"description": "Prosthecae/stalks facilitate nutrient uptake.", "edge_id": "edge-8", "evidence": [{"notes": "Richter et al.: prosthecae/stalks facilitate nutrient uptake.", "reference": "DOI:10.1371/journal.pgen.1010788"}], "predicate": "facilitates", "predicate_id": null, "source": "prosthecate", "target": "nutrient-uptake surface area"}], "graph_id": "prosthecate_stalk_nutrient_uptake", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Cytoskeletal proteins that localize to zones of active cell wall growth.", "grounding": null, "id": "bactofilins", "is_orphan": false, "label": "bactofilins", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ede9fe", "description": "Subcellular site of active peptidoglycan synthesis.", "grounding": null, "id": "cell_wall_growth_zone", "is_orphan": false, "label": "zone of active cell wall growth", "node_type": "CELLULAR_LOCALIZATION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Bacterial actin homolog cytoskeletal protein.", "grounding": null, "id": "mreb", "is_orphan": false, "label": "MreB", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of one or more cell-envelope-extension stalks (prosthecae).", "grounding": "traitmech:000065", "id": "prosthecate_trait", "is_orphan": false, "label": "prosthecate", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "SEDS family cell-wall synthesis protein.", "grounding": "InterPro:IPR001182", "id": "roda", "is_orphan": false, "label": "RodA", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ede9fe", "description": "Periodic protein bands traversing the stalk lumen.", "grounding": null, "id": "stalk_crossbands", "is_orphan": false, "label": "stalk crossbands", "node_type": "CELLULAR_LOCALIZATION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Molecular diffusion along the length of the stalk lumen.", "grounding": null, "id": "stalk_diffusion", "is_orphan": false, "label": "diffusion along stalk", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Polar extension of cell envelope producing the prostheca.", "grounding": null, "id": "stalk_extension", "is_orphan": false, "label": "stalk extension", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Four-protein complex (StpA, StpB, StpC, StpD) forming stalk crossbands.", "grounding": null, "id": "stpabcd_complex", "is_orphan": false, "label": "StpABCD complex", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Effective transport surface available for nutrient uptake.", "grounding": null, "id": "uptake_surface_area", "is_orphan": false, "label": "nutrient-uptake surface area", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This record is a broad environmental or morphological classification spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement descriptor; contextual protein nodes do not receive token UniProt examples.", "scope_status": "NONMECHANISTIC", "title": "Prostheca / stalk extends nutrient-uptake surface"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking developmental stalk extension to increased uptake surface area and substrate attachment.", "edges": [{"description": "Regulated stalk-extension elongation realizes the prosthecate phenotype.", "evidence": [{"notes": "Curtis \u0026 Brun review the Caulobacter stalk as a regulated developmental appendage.", "reference": "DOI:10.1128/MMBR.00040-09"}], "id": "edge-1", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "stalk_extension", "target": "prosthecate_trait"}, {"description": "Stalks expand nutrient-uptake surface area, aiding oligotrophic growth.", "evidence": [{"notes": "Wagner \u0026 Brun describe the Caulobacter stalk as a cell-envelope extension increasing nutrient-uptake surface area.", "reference": "DOI:10.1111/j.1365-2958.2007.05633.x"}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "prosthecate_trait", "target": "uptake_surface_area"}, {"description": "MreB is necessary for stalk formation; depletion causes a stalk elongation defect.", "evidence": [{"notes": "Barrows \u0026 Goley: MreB and RodA are necessary for stalk formation, as depletion of either protein results in a stalk elongation defect.", "reference": "DOI:10.1128/jb.00384-22"}], "id": "edge-3", "is_orphan": false, "predicate": "is required for", "predicate_id": null, "source": "mreb", "target": "stalk_extension"}, {"description": "RodA is necessary for stalk formation; depletion causes a stalk elongation defect.", "evidence": [{"notes": "Barrows \u0026 Goley: depletion of either protein (MreB or RodA) results in a stalk elongation defect.", "reference": "DOI:10.1128/jb.00384-22"}], "id": "edge-4", "is_orphan": false, "predicate": "is required for", "predicate_id": null, "source": "roda", "target": "stalk_extension"}, {"description": "Many bactofilins localize to zones of active cell wall growth, supporting stalk biogenesis.", "evidence": [{"notes": "Richter et al.: many bactofilins localize to zones of active cell wall growth.", "reference": "DOI:10.1371/journal.pgen.1010788"}], "id": "edge-5", "is_orphan": false, "predicate": "localizes to", "predicate_id": "biolink:located_in", "source": "bactofilins", "target": "cell_wall_growth_zone"}, {"description": "The four-protein StpABCD complex composes the stalk crossbands.", "evidence": [{"notes": "Barrows \u0026 Goley: crossbands are composed of a complex of four proteins, StpABCD.", "reference": "DOI:10.1128/jb.00384-22"}], "id": "edge-6", "is_orphan": false, "predicate": "composes", "predicate_id": null, "source": "stpabcd_complex", "target": "stalk_crossbands"}, {"description": "Crossbands limit diffusion along the length of the stalk, compartmentalizing it.", "evidence": [{"notes": "Barrows \u0026 Goley: crossbands that limit diffusion along the length of the stalk.", "reference": "DOI:10.1128/jb.00384-22"}], "id": "edge-7", "is_orphan": false, "predicate": "limits", "predicate_id": "RO:0002212", "source": "stalk_crossbands", "target": "stalk_diffusion"}, {"description": "Prosthecae/stalks facilitate nutrient uptake.", "evidence": [{"notes": "Richter et al.: prosthecae/stalks facilitate nutrient uptake.", "reference": "DOI:10.1371/journal.pgen.1010788"}], "id": "edge-8", "is_orphan": false, "predicate": "facilitates", "predicate_id": null, "source": "prosthecate_trait", "target": "uptake_surface_area"}], "evidence_rows": [{"description": "Regulated stalk-extension elongation realizes the prosthecate phenotype.", "edge_id": "edge-1", "evidence": [{"notes": "Curtis \u0026 Brun review the Caulobacter stalk as a regulated developmental appendage.", "reference": "DOI:10.1128/MMBR.00040-09"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "stalk extension", "source_grounding": null, "target": "prosthecate", "target_grounding": "traitmech:000065"}, {"description": "Stalks expand nutrient-uptake surface area, aiding oligotrophic growth.", "edge_id": "edge-2", "evidence": [{"notes": "Wagner \u0026 Brun describe the Caulobacter stalk as a cell-envelope extension increasing nutrient-uptake surface area.", "reference": "DOI:10.1111/j.1365-2958.2007.05633.x"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "prosthecate", "source_grounding": "traitmech:000065", "target": "nutrient-uptake surface area", "target_grounding": null}, {"description": "MreB is necessary for stalk formation; depletion causes a stalk elongation defect.", "edge_id": "edge-3", "evidence": [{"notes": "Barrows \u0026 Goley: MreB and RodA are necessary for stalk formation, as depletion of either protein results in a stalk elongation defect.", "reference": "DOI:10.1128/jb.00384-22"}], "predicate": "is required for", "predicate_id": null, "source": "MreB", "source_grounding": null, "target": "stalk extension", "target_grounding": null}, {"description": "RodA is necessary for stalk formation; depletion causes a stalk elongation defect.", "edge_id": "edge-4", "evidence": [{"notes": "Barrows \u0026 Goley: depletion of either protein (MreB or RodA) results in a stalk elongation defect.", "reference": "DOI:10.1128/jb.00384-22"}], "predicate": "is required for", "predicate_id": null, "source": "RodA", "source_grounding": "InterPro:IPR001182", "target": "stalk extension", "target_grounding": null}, {"description": "Many bactofilins localize to zones of active cell wall growth, supporting stalk biogenesis.", "edge_id": "edge-5", "evidence": [{"notes": "Richter et al.: many bactofilins localize to zones of active cell wall growth.", "reference": "DOI:10.1371/journal.pgen.1010788"}], "predicate": "localizes to", "predicate_id": "biolink:located_in", "source": "bactofilins", "source_grounding": null, "target": "zone of active cell wall growth", "target_grounding": null}, {"description": "The four-protein StpABCD complex composes the stalk crossbands.", "edge_id": "edge-6", "evidence": [{"notes": "Barrows \u0026 Goley: crossbands are composed of a complex of four proteins, StpABCD.", "reference": "DOI:10.1128/jb.00384-22"}], "predicate": "composes", "predicate_id": null, "source": "StpABCD complex", "source_grounding": null, "target": "stalk crossbands", "target_grounding": null}, {"description": "Crossbands limit diffusion along the length of the stalk, compartmentalizing it.", "edge_id": "edge-7", "evidence": [{"notes": "Barrows \u0026 Goley: crossbands that limit diffusion along the length of the stalk.", "reference": "DOI:10.1128/jb.00384-22"}], "predicate": "limits", "predicate_id": "RO:0002212", "source": "stalk crossbands", "source_grounding": null, "target": "diffusion along stalk", "target_grounding": null}, {"description": "Prosthecae/stalks facilitate nutrient uptake.", "edge_id": "edge-8", "evidence": [{"notes": "Richter et al.: prosthecae/stalks facilitate nutrient uptake.", "reference": "DOI:10.1371/journal.pgen.1010788"}], "predicate": "facilitates", "predicate_id": null, "source": "prosthecate", "source_grounding": "traitmech:000065", "target": "nutrient-uptake surface area", "target_grounding": null}], "graph_id": "prosthecate_stalk_nutrient_uptake", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Cytoskeletal proteins that localize to zones of active cell wall growth.", "grounding": null, "id": "bactofilins", "is_orphan": false, "label": "bactofilins", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ede9fe", "description": "Subcellular site of active peptidoglycan synthesis.", "grounding": null, "id": "cell_wall_growth_zone", "is_orphan": false, "label": "zone of active cell wall growth", "node_type": "CELLULAR_LOCALIZATION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Bacterial actin homolog cytoskeletal protein.", "grounding": null, "id": "mreb", "is_orphan": false, "label": "MreB", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of one or more cell-envelope-extension stalks (prosthecae).", "grounding": "traitmech:000065", "id": "prosthecate_trait", "is_orphan": false, "label": "prosthecate", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "SEDS family cell-wall synthesis protein.", "grounding": "InterPro:IPR001182", "id": "roda", "is_orphan": false, "label": "RodA", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ede9fe", "description": "Periodic protein bands traversing the stalk lumen.", "grounding": null, "id": "stalk_crossbands", "is_orphan": false, "label": "stalk crossbands", "node_type": "CELLULAR_LOCALIZATION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Molecular diffusion along the length of the stalk lumen.", "grounding": null, "id": "stalk_diffusion", "is_orphan": false, "label": "diffusion along stalk", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Polar extension of cell envelope producing the prostheca.", "grounding": null, "id": "stalk_extension", "is_orphan": false, "label": "stalk extension", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Four-protein complex (StpA, StpB, StpC, StpD) forming stalk crossbands.", "grounding": null, "id": "stpabcd_complex", "is_orphan": false, "label": "StpABCD complex", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Effective transport surface available for nutrient uptake.", "grounding": null, "id": "uptake_surface_area", "is_orphan": false, "label": "nutrient-uptake surface area", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This record is a broad environmental or morphological classification spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement descriptor; contextual protein nodes do not receive token UniProt examples.", "scope_status": "NONMECHANISTIC", "title": "Prostheca / stalk extends nutrient-uptake surface"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -915,13 +942,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-08-26 03:23 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

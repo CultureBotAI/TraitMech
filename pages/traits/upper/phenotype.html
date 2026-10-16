@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/upper.html">UPPER</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/upper.html">UPPER</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>phenotype</h1>
     <p class="curie"><code>METPO:1000059</code> · CLASS · REVIEWED</p>
 
@@ -85,8 +96,10 @@
 
           <li id="pathograph-1-edge-1">
             <strong>phenotype</strong>
+            <a href="https://w3id.org/metpo/1000059" rel="nofollow noreferrer"><code>METPO:1000059</code></a>
             <span class="edge-predicate">is a</span>
             <strong>quality</strong>
+            <a href="https://w3id.org/metpo/1000188" rel="nofollow noreferrer"><code>METPO:1000188</code></a>
             <code>rdfs:subClassOf</code>
             <p>Phenotypes are modeled as qualities or quality-bearing descriptions of entities.</p>
             <ul>
@@ -102,8 +115,10 @@
 
           <li id="pathograph-1-edge-2">
             <strong>morphology child traits</strong>
+
             <span class="edge-predicate">specializes</span>
             <strong>phenotype</strong>
+            <a href="https://w3id.org/metpo/1000059" rel="nofollow noreferrer"><code>METPO:1000059</code></a>
             <code>rdfs:subClassOf</code>
             <p>Morphology classes are non-environmental child phenotypes in TraitMech.</p>
             <ul>
@@ -119,8 +134,10 @@
 
           <li id="pathograph-1-edge-3">
             <strong>trophic type</strong>
+            <a href="https://w3id.org/metpo/1000631" rel="nofollow noreferrer"><code>METPO:1000631</code></a>
             <span class="edge-predicate">specializes</span>
             <strong>phenotype</strong>
+            <a href="https://w3id.org/metpo/1000059" rel="nofollow noreferrer"><code>METPO:1000059</code></a>
             <code>rdfs:subClassOf</code>
             <p>Trophic type is retained as a non-environmental physiology child under phenotype.</p>
             <ul>
@@ -136,8 +153,10 @@
 
           <li id="pathograph-1-edge-4">
             <strong>pathogenic to host</strong>
+            <a href="https://w3id.org/metpo/1004000" rel="nofollow noreferrer"><code>METPO:1004000</code></a>
             <span class="edge-predicate">specializes</span>
             <strong>phenotype</strong>
+            <a href="https://w3id.org/metpo/1000059" rel="nofollow noreferrer"><code>METPO:1000059</code></a>
             <code>rdfs:subClassOf</code>
             <p>Pathogenic-to-host is retained as a non-environmental ecology child under phenotype.</p>
             <ul>
@@ -642,50 +661,50 @@
       <ul class="nn-list">
 
         <li>
-          <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/polyhydroxyalkanoate_granule.html">polyhydroxyalkanoate granule</a>
-          <span class="sim">1.000</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/cobalt_tolerant.html">cobalt tolerant</a>
-          <span class="sim">1.000</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/copper_tolerant.html">copper tolerant</a>
-          <span class="sim">1.000</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/desiccation_tolerant.html">desiccation tolerant</a>
-          <span class="sim">1.000</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/piezotolerant.html">piezotolerant</a>
-          <span class="sim">1.000</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/gas_vesicle.html">gas vesicle</a>
-          <span class="sim">1.000</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/uv_radiation_tolerant.html">UV radiation tolerant</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/cystine_arylamidase_activity.html">cystine arylamidase activity</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">physiology</span>
-          <a href="../../traits/physiology/quorum_sensing.html">quorum sensing</a>
+          <a href="../../traits/physiology/coagulase_activity.html">coagulase activity</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/chemotropism.html">chemotropism</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/chemotaxis.html">chemotaxis</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/cellular_rejuvenation.html">functional cellular rejuvenation</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/cellular_contraction.html">cell body or cytoplasmic projection contraction</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/cellular_buoyancy.html">cellular buoyancy</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/coccolith_production.html">coccolith production</a>
           <span class="sim">1.000</span>
         </li>
 
@@ -1184,7 +1203,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed upper-ontology context graph linking phenotype to its quality parent and to non-environmental, non-genomic TraitMech child groupings.", "edges": [{"description": "Phenotypes are modeled as qualities or quality-bearing descriptions of entities.", "evidence": [{"notes": "Supports phenotype representation through PATO quality classes.", "reference": "DOI:10.1186/gb-2010-11-1-r2", "snippet": "ontology of qualities termed Phenotype and Trait ontology"}], "id": "edge-1", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "phenotype_trait", "target": "quality_parent"}, {"description": "Morphology classes are non-environmental child phenotypes in TraitMech.", "evidence": [{"notes": "Supports morphology-like qualities as phenotype descriptors.", "reference": "DOI:10.1186/gb-2010-11-1-r2", "snippet": "size, color, shape, structure"}], "id": "edge-2", "is_orphan": false, "predicate": "specializes", "predicate_id": "rdfs:subClassOf", "source": "morphology_children", "target": "phenotype_trait"}, {"description": "Trophic type is retained as a non-environmental physiology child under phenotype.", "evidence": [{"notes": "Supports phenotype classes as organized through ontology-backed definitions and parent-child placement.", "reference": "DOI:10.1186/gb-2010-11-1-r2", "snippet": "logical definitions and associated ontologies"}], "id": "edge-3", "is_orphan": false, "predicate": "specializes", "predicate_id": "rdfs:subClassOf", "source": "physiology_child", "target": "phenotype_trait"}, {"description": "Pathogenic-to-host is retained as a non-environmental ecology child under phenotype.", "evidence": [{"notes": "Supports phenotype hierarchies spanning different biological domains.", "reference": "DOI:10.1186/gb-2010-11-1-r2", "snippet": "phenotype ontologies across multiple species"}], "id": "edge-4", "is_orphan": false, "predicate": "specializes", "predicate_id": "rdfs:subClassOf", "source": "ecology_child", "target": "phenotype_trait"}], "evidence_rows": [{"description": "Phenotypes are modeled as qualities or quality-bearing descriptions of entities.", "edge_id": "edge-1", "evidence": [{"notes": "Supports phenotype representation through PATO quality classes.", "reference": "DOI:10.1186/gb-2010-11-1-r2", "snippet": "ontology of qualities termed Phenotype and Trait ontology"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "phenotype", "target": "quality"}, {"description": "Morphology classes are non-environmental child phenotypes in TraitMech.", "edge_id": "edge-2", "evidence": [{"notes": "Supports morphology-like qualities as phenotype descriptors.", "reference": "DOI:10.1186/gb-2010-11-1-r2", "snippet": "size, color, shape, structure"}], "predicate": "specializes", "predicate_id": "rdfs:subClassOf", "source": "morphology child traits", "target": "phenotype"}, {"description": "Trophic type is retained as a non-environmental physiology child under phenotype.", "edge_id": "edge-3", "evidence": [{"notes": "Supports phenotype classes as organized through ontology-backed definitions and parent-child placement.", "reference": "DOI:10.1186/gb-2010-11-1-r2", "snippet": "logical definitions and associated ontologies"}], "predicate": "specializes", "predicate_id": "rdfs:subClassOf", "source": "trophic type", "target": "phenotype"}, {"description": "Pathogenic-to-host is retained as a non-environmental ecology child under phenotype.", "edge_id": "edge-4", "evidence": [{"notes": "Supports phenotype hierarchies spanning different biological domains.", "reference": "DOI:10.1186/gb-2010-11-1-r2", "snippet": "phenotype ontologies across multiple species"}], "predicate": "specializes", "predicate_id": "rdfs:subClassOf", "source": "pathogenic to host", "target": "phenotype"}], "graph_id": "phenotype_quality_child_context", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Ecology child class under phenotype.", "grounding": "METPO:1004000", "id": "ecology_child", "is_orphan": false, "label": "pathogenic to host", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Non-environmental morphology children such as cell shape, cell size, Gram stain, pigmentation, motility, and sporulation.", "grounding": null, "id": "morphology_children", "is_orphan": false, "label": "morphology child traits", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Upper-level class for organismal qualities and observable trait classes.", "grounding": "METPO:1000059", "id": "phenotype_trait", "is_orphan": false, "label": "phenotype", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Physiology child class under phenotype.", "grounding": "METPO:1000631", "id": "physiology_child", "is_orphan": false, "label": "trophic type", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Parent upper class for qualities.", "grounding": "METPO:1000188", "id": "quality_parent", "is_orphan": false, "label": "quality", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "Phenotype is an upper classification spanning many unrelated mechanisms; assigning one token protein would be misleading.", "scope_status": "NONMECHANISTIC", "title": "Phenotype quality and child-trait context"}];
+  var graphs = [{"description": "DOI-backed upper-ontology context graph linking phenotype to its quality parent and to non-environmental, non-genomic TraitMech child groupings.", "edges": [{"description": "Phenotypes are modeled as qualities or quality-bearing descriptions of entities.", "evidence": [{"notes": "Supports phenotype representation through PATO quality classes.", "reference": "DOI:10.1186/gb-2010-11-1-r2", "snippet": "ontology of qualities termed Phenotype and Trait ontology"}], "id": "edge-1", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "phenotype_trait", "target": "quality_parent"}, {"description": "Morphology classes are non-environmental child phenotypes in TraitMech.", "evidence": [{"notes": "Supports morphology-like qualities as phenotype descriptors.", "reference": "DOI:10.1186/gb-2010-11-1-r2", "snippet": "size, color, shape, structure"}], "id": "edge-2", "is_orphan": false, "predicate": "specializes", "predicate_id": "rdfs:subClassOf", "source": "morphology_children", "target": "phenotype_trait"}, {"description": "Trophic type is retained as a non-environmental physiology child under phenotype.", "evidence": [{"notes": "Supports phenotype classes as organized through ontology-backed definitions and parent-child placement.", "reference": "DOI:10.1186/gb-2010-11-1-r2", "snippet": "logical definitions and associated ontologies"}], "id": "edge-3", "is_orphan": false, "predicate": "specializes", "predicate_id": "rdfs:subClassOf", "source": "physiology_child", "target": "phenotype_trait"}, {"description": "Pathogenic-to-host is retained as a non-environmental ecology child under phenotype.", "evidence": [{"notes": "Supports phenotype hierarchies spanning different biological domains.", "reference": "DOI:10.1186/gb-2010-11-1-r2", "snippet": "phenotype ontologies across multiple species"}], "id": "edge-4", "is_orphan": false, "predicate": "specializes", "predicate_id": "rdfs:subClassOf", "source": "ecology_child", "target": "phenotype_trait"}], "evidence_rows": [{"description": "Phenotypes are modeled as qualities or quality-bearing descriptions of entities.", "edge_id": "edge-1", "evidence": [{"notes": "Supports phenotype representation through PATO quality classes.", "reference": "DOI:10.1186/gb-2010-11-1-r2", "snippet": "ontology of qualities termed Phenotype and Trait ontology"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "phenotype", "source_grounding": "METPO:1000059", "target": "quality", "target_grounding": "METPO:1000188"}, {"description": "Morphology classes are non-environmental child phenotypes in TraitMech.", "edge_id": "edge-2", "evidence": [{"notes": "Supports morphology-like qualities as phenotype descriptors.", "reference": "DOI:10.1186/gb-2010-11-1-r2", "snippet": "size, color, shape, structure"}], "predicate": "specializes", "predicate_id": "rdfs:subClassOf", "source": "morphology child traits", "source_grounding": null, "target": "phenotype", "target_grounding": "METPO:1000059"}, {"description": "Trophic type is retained as a non-environmental physiology child under phenotype.", "edge_id": "edge-3", "evidence": [{"notes": "Supports phenotype classes as organized through ontology-backed definitions and parent-child placement.", "reference": "DOI:10.1186/gb-2010-11-1-r2", "snippet": "logical definitions and associated ontologies"}], "predicate": "specializes", "predicate_id": "rdfs:subClassOf", "source": "trophic type", "source_grounding": "METPO:1000631", "target": "phenotype", "target_grounding": "METPO:1000059"}, {"description": "Pathogenic-to-host is retained as a non-environmental ecology child under phenotype.", "edge_id": "edge-4", "evidence": [{"notes": "Supports phenotype hierarchies spanning different biological domains.", "reference": "DOI:10.1186/gb-2010-11-1-r2", "snippet": "phenotype ontologies across multiple species"}], "predicate": "specializes", "predicate_id": "rdfs:subClassOf", "source": "pathogenic to host", "source_grounding": "METPO:1004000", "target": "phenotype", "target_grounding": "METPO:1000059"}], "graph_id": "phenotype_quality_child_context", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Ecology child class under phenotype.", "grounding": "METPO:1004000", "id": "ecology_child", "is_orphan": false, "label": "pathogenic to host", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Non-environmental morphology children such as cell shape, cell size, Gram stain, pigmentation, motility, and sporulation.", "grounding": null, "id": "morphology_children", "is_orphan": false, "label": "morphology child traits", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Upper-level class for organismal qualities and observable trait classes.", "grounding": "METPO:1000059", "id": "phenotype_trait", "is_orphan": false, "label": "phenotype", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Physiology child class under phenotype.", "grounding": "METPO:1000631", "id": "physiology_child", "is_orphan": false, "label": "trophic type", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Parent upper class for qualities.", "grounding": "METPO:1000188", "id": "quality_parent", "is_orphan": false, "label": "quality", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "Phenotype is an upper classification spanning many unrelated mechanisms; assigning one token protein would be misleading.", "scope_status": "NONMECHANISTIC", "title": "Phenotype quality and child-trait context"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -1204,13 +1223,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-08-26 03:23 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

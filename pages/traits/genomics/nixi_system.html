@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/genomics.html">GENOMICS</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/genomics.html">GENOMICS</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>NixI system</h1>
     <p class="curie"><code>traitmech:000333</code> · CLASS · PROPOSED</p>
 
@@ -121,9 +132,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>NixI locus</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>ICP1 genome cleavage</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>The PLE-encoded NixI nicking endonuclease is necessary for cleavage of ICP1 DNA in vivo, and DefenseFinder models NixI with the mandatory NixI__NixI profile.</p>
             <ul>
 
@@ -150,9 +163,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>NixI locus</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>ICP1 replication inhibition</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>NixI inhibits ICP1 replication and decreases ICP1 virion production.</p>
             <ul>
 
@@ -173,9 +188,11 @@
 
           <li id="pathograph-1-edge-3">
             <strong>ICP1 genome cleavage</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>ICP1 replication inhibition</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>NixI-dependent cleavage of the ICP1 genome contributes to inhibition of ICP1 replication.</p>
             <ul>
 
@@ -196,9 +213,11 @@
 
           <li id="pathograph-1-edge-4">
             <strong>ICP1 replication inhibition</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>NixI system</strong>
-            <code>METPO:2007700</code>
+            <code>traitmech:000333</code>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>NixI-dependent ICP1 replication inhibition realizes the NixI system trait.</p>
             <ul>
 
@@ -219,8 +238,10 @@
 
           <li id="pathograph-1-edge-5">
             <strong>NixI system</strong>
+            <code>traitmech:000333</code>
             <span class="edge-predicate">is a</span>
             <strong>phage defense system</strong>
+            <code>traitmech:000209</code>
             <code>rdfs:subClassOf</code>
             <p>NixI system possession is a phage-defense-system trait.</p>
             <ul>
@@ -291,11 +312,75 @@
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
 
-      <p class="no-match">No kg-microbe node embedding matched this record
-        in the 2026-04-25 deepwalk.</p>
+      <p class="match-method">Matched <strong>1</strong>
+        kg-microbe node
+        via <em>parent_proxy</em>.</p>
+      <ul class="kgm-nodes">
+
+        <li><code>METPO:1000188</code> <span class="dim-preview">[-0.956, -1.962, -3.148, +1.274, …]</span></li>
+
+      </ul>
+      <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
 
     </div>
 
+
+    <div class="card">
+      <h2>Nearest neighbors in embedding space</h2>
+      <p class="meta">Top-8 cosine-similar METPO traits
+        from the 2026-04-25 deepwalk (512-D).</p>
+      <ul class="nn-list">
+
+        <li>
+          <span class="nn-cat">upper</span>
+          <a href="../../traits/upper/quality.html">quality</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hna_system.html">Hna system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hma_system.html">Hma system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hesat_system.html">Hesat system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_08_system.html">HEC-08 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_07_system.html">HEC-07 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_06_system.html">HEC-06 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_05_system.html">HEC-05 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+      </ul>
+    </div>
 
 
 
@@ -432,6 +517,11 @@
     </dl>
   </div>
 
+
+  <div class="card rail-kgm">
+    <h2>kg-microbe</h2>
+    <p class="meta">1 matching node (parent_proxy)</p>
+  </div>
 
 </aside>
 </div>
@@ -765,7 +855,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Conservative system-level sketch linking a NixI-family phage-satellite locus to ICP1 genome cleavage, ICP1 replication inhibition, and the NixI system trait.", "edges": [{"description": "The PLE-encoded NixI nicking endonuclease is necessary for cleavage of ICP1 DNA in vivo, and DefenseFinder models NixI with the mandatory NixI__NixI profile.", "evidence": [{"notes": "LeGault et al. support NixI as the PLE-encoded nicking endonuclease responsible for ICP1 genome cleavage.", "reference": "DOI:10.1093/nar/gkac002", "snippet": "Together, these data show that PLE encodes a nicking endonuclease, NixI, that is necessary for cleavage of ICP1\u2019s genome in vivo and that shows in vitro specificity for sequences found in ICP1\u2019s genome"}, {"notes": "The DefenseFinder rules table models NixI with the NixI__NixI profile as its mandatory component and an optional NixI__Stix profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "NixI\tNixI\t1\t1\tNixI__NixI\tNixI__Stix\t\t"}, {"notes": "The DefenseFinder HMM inventory records NixI__NixI under the NixI model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| NixI__NixI                                       | NixI__NixI                                       | NixI                   | Custom                  | 20     |"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "nixi_locus", "target": "icp1_genome_cleavage"}, {"description": "NixI inhibits ICP1 replication and decreases ICP1 virion production.", "evidence": [{"notes": "LeGault et al. show that NixI is a potent inhibitor of ICP1 replication.", "reference": "DOI:10.1093/nar/gkac002", "snippet": "Together, these data demonstrate that nixI is a potent inhibitor of ICP1 replication, resulting in decreased virion production."}, {"notes": "LeGault et al. show that NixI is sufficient to limit ICP1 progeny production.", "reference": "DOI:10.1093/nar/gkac002", "snippet": "NixI, however, is sufficient to limit ICP1 progeny production in a single round of infection"}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "nixi_locus", "target": "icp1_replication_inhibition"}, {"description": "NixI-dependent cleavage of the ICP1 genome contributes to inhibition of ICP1 replication.", "evidence": [{"notes": "LeGault et al. connect NixI\u0027s nicking of ICP1 DNA to blocked phage development during the transition to rolling-circle replication.", "reference": "DOI:10.1093/nar/gkac002", "snippet": "Here, we characterize a PLE-encoded nuclease, NixI, that blocks phage development likely by nicking ICP1\u2019s genome as it transitions to RCR"}, {"notes": "LeGault et al. support NixI as the PLE-encoded nicking endonuclease responsible for ICP1 genome cleavage.", "reference": "DOI:10.1093/nar/gkac002", "snippet": "Together, these data show that PLE encodes a nicking endonuclease, NixI, that is necessary for cleavage of ICP1\u2019s genome in vivo and that shows in vitro specificity for sequences found in ICP1\u2019s genome"}], "id": "edge-3", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "icp1_genome_cleavage", "target": "icp1_replication_inhibition"}, {"description": "NixI-dependent ICP1 replication inhibition realizes the NixI system trait.", "evidence": [{"notes": "LeGault et al. characterize NixI as a PLE-encoded nuclease blocking ICP1 phage development.", "reference": "DOI:10.1093/nar/gkac002", "snippet": "Here, we characterize a PLE-encoded nuclease, NixI, that blocks phage development likely by nicking ICP1\u2019s genome as it transitions to RCR"}, {"notes": "The DefenseFinder article registry maps the named NixI model namespace to the LeGault et al. PLE-encoded nicking-nuclease preprint, later published under DOI:10.1093/nar/gkac002.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "NixI | 10\\.1101/2021\\.07\\.12\\.452122 | A phage parasite deploys a nicking nuclease effector to inhibit replication of its viral host"}], "id": "edge-4", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "icp1_replication_inhibition", "target": "nixi_system_trait"}, {"description": "NixI system possession is a phage-defense-system trait.", "evidence": [{"notes": "LeGault et al. place phage parasites such as NixI-encoding PLE among host defense systems because they inhibit their viral hosts.", "reference": "DOI:10.1093/nar/gkac002", "snippet": "Phage parasites can be considered host defense systems, as the parasite inhibits production of its viral host, benefiting the bacterial population"}], "id": "edge-5", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "nixi_system_trait", "target": "phage_defense_system"}], "evidence_rows": [{"description": "The PLE-encoded NixI nicking endonuclease is necessary for cleavage of ICP1 DNA in vivo, and DefenseFinder models NixI with the mandatory NixI__NixI profile.", "edge_id": "edge-1", "evidence": [{"notes": "LeGault et al. support NixI as the PLE-encoded nicking endonuclease responsible for ICP1 genome cleavage.", "reference": "DOI:10.1093/nar/gkac002", "snippet": "Together, these data show that PLE encodes a nicking endonuclease, NixI, that is necessary for cleavage of ICP1\u2019s genome in vivo and that shows in vitro specificity for sequences found in ICP1\u2019s genome"}, {"notes": "The DefenseFinder rules table models NixI with the NixI__NixI profile as its mandatory component and an optional NixI__Stix profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "NixI\tNixI\t1\t1\tNixI__NixI\tNixI__Stix\t\t"}, {"notes": "The DefenseFinder HMM inventory records NixI__NixI under the NixI model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| NixI__NixI                                       | NixI__NixI                                       | NixI                   | Custom                  | 20     |"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "NixI locus", "target": "ICP1 genome cleavage"}, {"description": "NixI inhibits ICP1 replication and decreases ICP1 virion production.", "edge_id": "edge-2", "evidence": [{"notes": "LeGault et al. show that NixI is a potent inhibitor of ICP1 replication.", "reference": "DOI:10.1093/nar/gkac002", "snippet": "Together, these data demonstrate that nixI is a potent inhibitor of ICP1 replication, resulting in decreased virion production."}, {"notes": "LeGault et al. show that NixI is sufficient to limit ICP1 progeny production.", "reference": "DOI:10.1093/nar/gkac002", "snippet": "NixI, however, is sufficient to limit ICP1 progeny production in a single round of infection"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "NixI locus", "target": "ICP1 replication inhibition"}, {"description": "NixI-dependent cleavage of the ICP1 genome contributes to inhibition of ICP1 replication.", "edge_id": "edge-3", "evidence": [{"notes": "LeGault et al. connect NixI\u0027s nicking of ICP1 DNA to blocked phage development during the transition to rolling-circle replication.", "reference": "DOI:10.1093/nar/gkac002", "snippet": "Here, we characterize a PLE-encoded nuclease, NixI, that blocks phage development likely by nicking ICP1\u2019s genome as it transitions to RCR"}, {"notes": "LeGault et al. support NixI as the PLE-encoded nicking endonuclease responsible for ICP1 genome cleavage.", "reference": "DOI:10.1093/nar/gkac002", "snippet": "Together, these data show that PLE encodes a nicking endonuclease, NixI, that is necessary for cleavage of ICP1\u2019s genome in vivo and that shows in vitro specificity for sequences found in ICP1\u2019s genome"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "ICP1 genome cleavage", "target": "ICP1 replication inhibition"}, {"description": "NixI-dependent ICP1 replication inhibition realizes the NixI system trait.", "edge_id": "edge-4", "evidence": [{"notes": "LeGault et al. characterize NixI as a PLE-encoded nuclease blocking ICP1 phage development.", "reference": "DOI:10.1093/nar/gkac002", "snippet": "Here, we characterize a PLE-encoded nuclease, NixI, that blocks phage development likely by nicking ICP1\u2019s genome as it transitions to RCR"}, {"notes": "The DefenseFinder article registry maps the named NixI model namespace to the LeGault et al. PLE-encoded nicking-nuclease preprint, later published under DOI:10.1093/nar/gkac002.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "NixI | 10\\.1101/2021\\.07\\.12\\.452122 | A phage parasite deploys a nicking nuclease effector to inhibit replication of its viral host"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "ICP1 replication inhibition", "target": "NixI system"}, {"description": "NixI system possession is a phage-defense-system trait.", "edge_id": "edge-5", "evidence": [{"notes": "LeGault et al. place phage parasites such as NixI-encoding PLE among host defense systems because they inhibit their viral hosts.", "reference": "DOI:10.1093/nar/gkac002", "snippet": "Phage parasites can be considered host defense systems, as the parasite inhibits production of its viral host, benefiting the bacterial population"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "NixI system", "target": "phage defense system"}], "graph_id": "nixi_locus_inhibits_icp1_replication", "issues": [], "nodes": [{"color": "#ecfccb", "description": "NixI-dependent cleavage of the ICP1 bacteriophage genome in PLE-positive Vibrio cholerae.", "grounding": null, "id": "icp1_genome_cleavage", "is_orphan": false, "label": "ICP1 genome cleavage", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Inhibition of ICP1 genome replication and progeny production by NixI.", "grounding": null, "id": "icp1_replication_inhibition", "is_orphan": false, "label": "ICP1 replication inhibition", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "A NixI-family phage-satellite locus represented by the DefenseFinder NixI__NixI profile.", "grounding": null, "id": "nixi_locus", "is_orphan": false, "label": "NixI locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded NixI phage-defense system.", "grounding": "traitmech:000333", "id": "nixi_system_trait", "is_orphan": false, "label": "NixI system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of one or more genome-encoded immune systems that inhibit bacteriophage infection.", "grounding": "traitmech:000209", "id": "phage_defense_system", "is_orphan": false, "label": "phage defense system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "The graph captures NixI as a named DefenseFinder single-mandatory-profile system without asserting the exact satellite self-protection mechanism, the complete set of PLE-encoded anti-ICP1 mechanisms, the accession-level natural-host protein, the full functional breadth of divergent NixI homologs, or the experimental scope of the optional NixI__Stix profile.", "scope_status": "NONMECHANISTIC", "title": "NixI loci inhibit ICP1 replication"}];
+  var graphs = [{"description": "Conservative system-level sketch linking a NixI-family phage-satellite locus to ICP1 genome cleavage, ICP1 replication inhibition, and the NixI system trait.", "edges": [{"description": "The PLE-encoded NixI nicking endonuclease is necessary for cleavage of ICP1 DNA in vivo, and DefenseFinder models NixI with the mandatory NixI__NixI profile.", "evidence": [{"notes": "LeGault et al. support NixI as the PLE-encoded nicking endonuclease responsible for ICP1 genome cleavage.", "reference": "DOI:10.1093/nar/gkac002", "snippet": "Together, these data show that PLE encodes a nicking endonuclease, NixI, that is necessary for cleavage of ICP1\u2019s genome in vivo and that shows in vitro specificity for sequences found in ICP1\u2019s genome"}, {"notes": "The DefenseFinder rules table models NixI with the NixI__NixI profile as its mandatory component and an optional NixI__Stix profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "NixI\tNixI\t1\t1\tNixI__NixI\tNixI__Stix\t\t"}, {"notes": "The DefenseFinder HMM inventory records NixI__NixI under the NixI model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| NixI__NixI                                       | NixI__NixI                                       | NixI                   | Custom                  | 20     |"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "nixi_locus", "target": "icp1_genome_cleavage"}, {"description": "NixI inhibits ICP1 replication and decreases ICP1 virion production.", "evidence": [{"notes": "LeGault et al. show that NixI is a potent inhibitor of ICP1 replication.", "reference": "DOI:10.1093/nar/gkac002", "snippet": "Together, these data demonstrate that nixI is a potent inhibitor of ICP1 replication, resulting in decreased virion production."}, {"notes": "LeGault et al. show that NixI is sufficient to limit ICP1 progeny production.", "reference": "DOI:10.1093/nar/gkac002", "snippet": "NixI, however, is sufficient to limit ICP1 progeny production in a single round of infection"}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "nixi_locus", "target": "icp1_replication_inhibition"}, {"description": "NixI-dependent cleavage of the ICP1 genome contributes to inhibition of ICP1 replication.", "evidence": [{"notes": "LeGault et al. connect NixI\u0027s nicking of ICP1 DNA to blocked phage development during the transition to rolling-circle replication.", "reference": "DOI:10.1093/nar/gkac002", "snippet": "Here, we characterize a PLE-encoded nuclease, NixI, that blocks phage development likely by nicking ICP1\u2019s genome as it transitions to RCR"}, {"notes": "LeGault et al. support NixI as the PLE-encoded nicking endonuclease responsible for ICP1 genome cleavage.", "reference": "DOI:10.1093/nar/gkac002", "snippet": "Together, these data show that PLE encodes a nicking endonuclease, NixI, that is necessary for cleavage of ICP1\u2019s genome in vivo and that shows in vitro specificity for sequences found in ICP1\u2019s genome"}], "id": "edge-3", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "icp1_genome_cleavage", "target": "icp1_replication_inhibition"}, {"description": "NixI-dependent ICP1 replication inhibition realizes the NixI system trait.", "evidence": [{"notes": "LeGault et al. characterize NixI as a PLE-encoded nuclease blocking ICP1 phage development.", "reference": "DOI:10.1093/nar/gkac002", "snippet": "Here, we characterize a PLE-encoded nuclease, NixI, that blocks phage development likely by nicking ICP1\u2019s genome as it transitions to RCR"}, {"notes": "The DefenseFinder article registry maps the named NixI model namespace to the LeGault et al. PLE-encoded nicking-nuclease preprint, later published under DOI:10.1093/nar/gkac002.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "NixI | 10\\.1101/2021\\.07\\.12\\.452122 | A phage parasite deploys a nicking nuclease effector to inhibit replication of its viral host"}], "id": "edge-4", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "icp1_replication_inhibition", "target": "nixi_system_trait"}, {"description": "NixI system possession is a phage-defense-system trait.", "evidence": [{"notes": "LeGault et al. place phage parasites such as NixI-encoding PLE among host defense systems because they inhibit their viral hosts.", "reference": "DOI:10.1093/nar/gkac002", "snippet": "Phage parasites can be considered host defense systems, as the parasite inhibits production of its viral host, benefiting the bacterial population"}], "id": "edge-5", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "nixi_system_trait", "target": "phage_defense_system"}], "evidence_rows": [{"description": "The PLE-encoded NixI nicking endonuclease is necessary for cleavage of ICP1 DNA in vivo, and DefenseFinder models NixI with the mandatory NixI__NixI profile.", "edge_id": "edge-1", "evidence": [{"notes": "LeGault et al. support NixI as the PLE-encoded nicking endonuclease responsible for ICP1 genome cleavage.", "reference": "DOI:10.1093/nar/gkac002", "snippet": "Together, these data show that PLE encodes a nicking endonuclease, NixI, that is necessary for cleavage of ICP1\u2019s genome in vivo and that shows in vitro specificity for sequences found in ICP1\u2019s genome"}, {"notes": "The DefenseFinder rules table models NixI with the NixI__NixI profile as its mandatory component and an optional NixI__Stix profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "NixI\tNixI\t1\t1\tNixI__NixI\tNixI__Stix\t\t"}, {"notes": "The DefenseFinder HMM inventory records NixI__NixI under the NixI model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| NixI__NixI                                       | NixI__NixI                                       | NixI                   | Custom                  | 20     |"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "NixI locus", "source_grounding": null, "target": "ICP1 genome cleavage", "target_grounding": null}, {"description": "NixI inhibits ICP1 replication and decreases ICP1 virion production.", "edge_id": "edge-2", "evidence": [{"notes": "LeGault et al. show that NixI is a potent inhibitor of ICP1 replication.", "reference": "DOI:10.1093/nar/gkac002", "snippet": "Together, these data demonstrate that nixI is a potent inhibitor of ICP1 replication, resulting in decreased virion production."}, {"notes": "LeGault et al. show that NixI is sufficient to limit ICP1 progeny production.", "reference": "DOI:10.1093/nar/gkac002", "snippet": "NixI, however, is sufficient to limit ICP1 progeny production in a single round of infection"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "NixI locus", "source_grounding": null, "target": "ICP1 replication inhibition", "target_grounding": null}, {"description": "NixI-dependent cleavage of the ICP1 genome contributes to inhibition of ICP1 replication.", "edge_id": "edge-3", "evidence": [{"notes": "LeGault et al. connect NixI\u0027s nicking of ICP1 DNA to blocked phage development during the transition to rolling-circle replication.", "reference": "DOI:10.1093/nar/gkac002", "snippet": "Here, we characterize a PLE-encoded nuclease, NixI, that blocks phage development likely by nicking ICP1\u2019s genome as it transitions to RCR"}, {"notes": "LeGault et al. support NixI as the PLE-encoded nicking endonuclease responsible for ICP1 genome cleavage.", "reference": "DOI:10.1093/nar/gkac002", "snippet": "Together, these data show that PLE encodes a nicking endonuclease, NixI, that is necessary for cleavage of ICP1\u2019s genome in vivo and that shows in vitro specificity for sequences found in ICP1\u2019s genome"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "ICP1 genome cleavage", "source_grounding": null, "target": "ICP1 replication inhibition", "target_grounding": null}, {"description": "NixI-dependent ICP1 replication inhibition realizes the NixI system trait.", "edge_id": "edge-4", "evidence": [{"notes": "LeGault et al. characterize NixI as a PLE-encoded nuclease blocking ICP1 phage development.", "reference": "DOI:10.1093/nar/gkac002", "snippet": "Here, we characterize a PLE-encoded nuclease, NixI, that blocks phage development likely by nicking ICP1\u2019s genome as it transitions to RCR"}, {"notes": "The DefenseFinder article registry maps the named NixI model namespace to the LeGault et al. PLE-encoded nicking-nuclease preprint, later published under DOI:10.1093/nar/gkac002.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "NixI | 10\\.1101/2021\\.07\\.12\\.452122 | A phage parasite deploys a nicking nuclease effector to inhibit replication of its viral host"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "ICP1 replication inhibition", "source_grounding": null, "target": "NixI system", "target_grounding": "traitmech:000333"}, {"description": "NixI system possession is a phage-defense-system trait.", "edge_id": "edge-5", "evidence": [{"notes": "LeGault et al. place phage parasites such as NixI-encoding PLE among host defense systems because they inhibit their viral hosts.", "reference": "DOI:10.1093/nar/gkac002", "snippet": "Phage parasites can be considered host defense systems, as the parasite inhibits production of its viral host, benefiting the bacterial population"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "NixI system", "source_grounding": "traitmech:000333", "target": "phage defense system", "target_grounding": "traitmech:000209"}], "graph_id": "nixi_locus_inhibits_icp1_replication", "issues": [], "nodes": [{"color": "#ecfccb", "description": "NixI-dependent cleavage of the ICP1 bacteriophage genome in PLE-positive Vibrio cholerae.", "grounding": null, "id": "icp1_genome_cleavage", "is_orphan": false, "label": "ICP1 genome cleavage", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Inhibition of ICP1 genome replication and progeny production by NixI.", "grounding": null, "id": "icp1_replication_inhibition", "is_orphan": false, "label": "ICP1 replication inhibition", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "A NixI-family phage-satellite locus represented by the DefenseFinder NixI__NixI profile.", "grounding": null, "id": "nixi_locus", "is_orphan": false, "label": "NixI locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded NixI phage-defense system.", "grounding": "traitmech:000333", "id": "nixi_system_trait", "is_orphan": false, "label": "NixI system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of one or more genome-encoded immune systems that inhibit bacteriophage infection.", "grounding": "traitmech:000209", "id": "phage_defense_system", "is_orphan": false, "label": "phage defense system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "The graph captures NixI as a named DefenseFinder single-mandatory-profile system without asserting the exact satellite self-protection mechanism, the complete set of PLE-encoded anti-ICP1 mechanisms, the accession-level natural-host protein, the full functional breadth of divergent NixI homologs, or the experimental scope of the optional NixI__Stix profile.", "scope_status": "NONMECHANISTIC", "title": "NixI loci inhibit ICP1 replication"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -785,13 +875,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-09-21 10:31 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

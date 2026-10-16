@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/morphology.html">MORPHOLOGY</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/morphology.html">MORPHOLOGY</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>polyphosphate granule</h1>
     <p class="curie"><code>traitmech:000068</code> · CLASS · REVIEWED</p>
 
@@ -85,9 +96,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>inorganic polyphosphate</strong>
+
             <span class="edge-predicate">located in</span>
             <strong>polyphosphate granule</strong>
-            <code>biolink:located_in</code>
+            <code>traitmech:000068</code>
+            <a href="https://w3id.org/biolink/vocab/located_in" rel="nofollow noreferrer"><code>biolink:located_in</code></a>
             <p>Inorganic polyphosphate accumulates as granules in the cytoplasm.</p>
             <ul>
 
@@ -102,9 +115,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>polyphosphate granule</strong>
+            <code>traitmech:000068</code>
             <span class="edge-predicate">contributes to</span>
             <strong>phosphate / energy reserve</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>PolyP granules supply phosphate and energy for growth and survival.</p>
             <ul>
 
@@ -119,8 +134,10 @@
 
           <li id="pathograph-1-edge-3">
             <strong>polyphosphate kinase (PPK)</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0008976" rel="nofollow noreferrer"><code>GO:0008976</code></a>
             <span class="edge-predicate">synthesizes</span>
             <strong>inorganic polyphosphate</strong>
+
 
             <p>Polyphosphate kinase (PPK) synthesizes inorganic polyP using ATP.</p>
             <ul>
@@ -136,9 +153,11 @@
 
           <li id="pathograph-1-edge-4">
             <strong>exopolyphosphatase (PPX)</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0004309" rel="nofollow noreferrer"><code>GO:0004309</code></a>
             <span class="edge-predicate">degrades</span>
             <strong>inorganic polyphosphate</strong>
-            <code>METPO:2007809</code>
+
+            <a href="https://w3id.org/metpo/2007809" rel="nofollow noreferrer"><code>METPO:2007809</code></a>
             <p>Exopolyphosphatase (PPX) degrades inorganic polyphosphate.</p>
             <ul>
 
@@ -153,8 +172,10 @@
 
           <li id="pathograph-1-edge-5">
             <strong>inorganic polyphosphate</strong>
+
             <span class="edge-predicate">binds</span>
             <strong>divalent cations</strong>
+
 
             <p>PolyP chelates/binds divalent cations, affecting polyP biophysics and granule composition.</p>
             <ul>
@@ -170,9 +191,11 @@
 
           <li id="pathograph-1-edge-6">
             <strong>inorganic polyphosphate</strong>
+
             <span class="edge-predicate">promotes</span>
             <strong>stress survival / stress response</strong>
-            <code>RO:0002213</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002213" rel="nofollow noreferrer"><code>RO:0002213</code></a>
             <p>PolyP accumulation promotes survival in stationary phase and nutrient starvation.</p>
             <ul>
 
@@ -308,50 +331,50 @@
       <ul class="nn-list">
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/cadmium_tolerant.html">cadmium tolerant</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/cytogamy.html">cytogamy</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">physiology</span>
-          <a href="../../traits/physiology/bioluminescence.html">bioluminescence</a>
+          <a href="../../traits/physiology/coccolith_production.html">coccolith production</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/cobalt_tolerant.html">cobalt tolerant</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/coagulase_activity.html">coagulase activity</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/copper_tolerant.html">copper tolerant</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/chemotropism.html">chemotropism</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/desiccation_tolerant.html">desiccation tolerant</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/chemotaxis.html">chemotaxis</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/piezotolerant.html">piezotolerant</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/cellular_rejuvenation.html">functional cellular rejuvenation</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/obligately_piezophilic.html">obligately piezophilic</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/cellular_contraction.html">cell body or cytoplasmic projection contraction</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/gas_vesicle.html">gas vesicle</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/cold_shock_response.html">cold shock response</a>
           <span class="sim">1.000</span>
         </li>
 
@@ -908,7 +931,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking inorganic polyphosphate accumulation to volutin/metachromatic granules supporting growth and survival.", "edges": [{"description": "Inorganic polyphosphate accumulates as granules in the cytoplasm.", "evidence": [{"notes": "Rao, G\u00f3mez-Garc\u00eda \u0026 Kornberg review polyphosphate accumulation as granules.", "reference": "DOI:10.1146/annurev.biochem.77.083007.093039"}], "id": "edge-1", "is_orphan": false, "predicate": "located in", "predicate_id": "biolink:located_in", "source": "inorganic_polyphosphate", "target": "polyp_granule_trait"}, {"description": "PolyP granules supply phosphate and energy for growth and survival.", "evidence": [{"notes": "Greening \u0026 Lithgow include polyphosphate bodies among bacterial intracellular inclusions.", "reference": "DOI:10.1038/s41579-020-0413-0"}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "polyp_granule_trait", "target": "phosphate_energy_reserve"}, {"description": "Polyphosphate kinase (PPK) synthesizes inorganic polyP using ATP.", "evidence": [{"notes": "Polyphosphate is synthesized by polyphosphate kinase (PPK), which rapidly synthesizes polyP using ATP as a co-substrate.", "reference": "DOI:10.1371/journal.pbio.3002558"}], "id": "edge-3", "is_orphan": false, "predicate": "synthesizes", "predicate_id": null, "source": "ppk", "target": "inorganic_polyphosphate"}, {"description": "Exopolyphosphatase (PPX) degrades inorganic polyphosphate.", "evidence": [{"notes": "Polyphosphate is degraded by exopolyphosphatase PPX; canonical core metabolism edge.", "reference": "DOI:10.1371/journal.pbio.3002558"}], "id": "edge-4", "is_orphan": false, "predicate": "degrades", "predicate_id": "METPO:2007809", "source": "ppx", "target": "inorganic_polyphosphate"}, {"description": "PolyP chelates/binds divalent cations, affecting polyP biophysics and granule composition.", "evidence": [{"notes": "PolyP granules contain associated cations; polyP can bind iron and inhibit Fenton chemistry. Strong general biochemical edge.", "reference": "DOI:10.3390/biom14080937"}], "id": "edge-5", "is_orphan": false, "predicate": "binds", "predicate_id": null, "source": "inorganic_polyphosphate", "target": "divalent_cations"}, {"description": "PolyP accumulation promotes survival in stationary phase and nutrient starvation.", "evidence": [{"notes": "PolyP serves as phosphate/energy storage and supports survival in stationary phase and nutrient starvation; ppk mutants show stress sensitivity.", "reference": "DOI:10.3390/biom14080937"}], "id": "edge-6", "is_orphan": false, "predicate": "promotes", "predicate_id": "RO:0002213", "source": "inorganic_polyphosphate", "target": "stress_survival"}], "evidence_rows": [{"description": "Inorganic polyphosphate accumulates as granules in the cytoplasm.", "edge_id": "edge-1", "evidence": [{"notes": "Rao, G\u00f3mez-Garc\u00eda \u0026 Kornberg review polyphosphate accumulation as granules.", "reference": "DOI:10.1146/annurev.biochem.77.083007.093039"}], "predicate": "located in", "predicate_id": "biolink:located_in", "source": "inorganic polyphosphate", "target": "polyphosphate granule"}, {"description": "PolyP granules supply phosphate and energy for growth and survival.", "edge_id": "edge-2", "evidence": [{"notes": "Greening \u0026 Lithgow include polyphosphate bodies among bacterial intracellular inclusions.", "reference": "DOI:10.1038/s41579-020-0413-0"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "polyphosphate granule", "target": "phosphate / energy reserve"}, {"description": "Polyphosphate kinase (PPK) synthesizes inorganic polyP using ATP.", "edge_id": "edge-3", "evidence": [{"notes": "Polyphosphate is synthesized by polyphosphate kinase (PPK), which rapidly synthesizes polyP using ATP as a co-substrate.", "reference": "DOI:10.1371/journal.pbio.3002558"}], "predicate": "synthesizes", "predicate_id": null, "source": "polyphosphate kinase (PPK)", "target": "inorganic polyphosphate"}, {"description": "Exopolyphosphatase (PPX) degrades inorganic polyphosphate.", "edge_id": "edge-4", "evidence": [{"notes": "Polyphosphate is degraded by exopolyphosphatase PPX; canonical core metabolism edge.", "reference": "DOI:10.1371/journal.pbio.3002558"}], "predicate": "degrades", "predicate_id": "METPO:2007809", "source": "exopolyphosphatase (PPX)", "target": "inorganic polyphosphate"}, {"description": "PolyP chelates/binds divalent cations, affecting polyP biophysics and granule composition.", "edge_id": "edge-5", "evidence": [{"notes": "PolyP granules contain associated cations; polyP can bind iron and inhibit Fenton chemistry. Strong general biochemical edge.", "reference": "DOI:10.3390/biom14080937"}], "predicate": "binds", "predicate_id": null, "source": "inorganic polyphosphate", "target": "divalent cations"}, {"description": "PolyP accumulation promotes survival in stationary phase and nutrient starvation.", "edge_id": "edge-6", "evidence": [{"notes": "PolyP serves as phosphate/energy storage and supports survival in stationary phase and nutrient starvation; ppk mutants show stress sensitivity.", "reference": "DOI:10.3390/biom14080937"}], "predicate": "promotes", "predicate_id": "RO:0002213", "source": "inorganic polyphosphate", "target": "stress survival / stress response"}], "graph_id": "polyphosphate_granule_storage", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Divalent metal cations (Ca2+, Mg2+, Fe2+/Fe3+, Zn2+) bound by polyP.", "grounding": null, "id": "divalent_cations", "is_orphan": false, "label": "divalent cations", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Polymer of many phosphate residues stored as a granule.", "grounding": null, "id": "inorganic_polyphosphate", "is_orphan": false, "label": "inorganic polyphosphate", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Reservoir of phosphate and high-energy phosphoanhydride bonds.", "grounding": null, "id": "phosphate_energy_reserve", "is_orphan": false, "label": "phosphate / energy reserve", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Cytoplasmic inclusion of inorganic polyphosphate.", "grounding": "traitmech:000068", "id": "polyp_granule_trait", "is_orphan": false, "label": "polyphosphate granule", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Enzyme that synthesizes inorganic polyphosphate from ATP.", "grounding": "GO:0008976", "id": "ppk", "is_orphan": false, "label": "polyphosphate kinase (PPK)", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "UNREVIEWED", "entry_version": 69, "evidence": [{"notes": "The cited source supports the represented protein-to-trait branch; UniProt verifies this current strain-matched protein entry.", "reference": "PMID:22923697", "snippet": "polyphosphate accumulation by Microlunatus phosphovorus"}], "gene_symbol": "ppk", "protein_label": "Polyphosphate kinase", "proteome_id": "UP000007947", "retrieved_on": "2026-08-25", "role": "The NM-1 polyphosphate kinase synthesizes the polyphosphate stored in intracellular granules.", "sequence_version": 1, "taxon_id": "NCBITaxon:1032480", "taxon_label": "Microlunatus phosphovorus NM-1", "uniprot_id": "UniProtKB:F5XF46"}], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Enzyme that degrades inorganic polyphosphate.", "grounding": "GO:0004309", "id": "ppx", "is_orphan": false, "label": "exopolyphosphatase (PPX)", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Survival during stationary phase, nutrient starvation, and stress.", "grounding": null, "id": "stress_survival", "is_orphan": false, "label": "stress survival / stress response", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "UNREVIEWED", "entry_version": 69, "evidence": [{"notes": "The cited source supports the represented protein-to-trait branch; UniProt verifies this current strain-matched protein entry.", "reference": "PMID:22923697", "snippet": "polyphosphate accumulation by Microlunatus phosphovorus"}], "gene_symbol": "ppk", "node_id": "ppk", "node_label": "polyphosphate kinase (PPK)", "protein_label": "Polyphosphate kinase", "proteome_id": "UP000007947", "retrieved_on": "2026-08-25", "role": "The NM-1 polyphosphate kinase synthesizes the polyphosphate stored in intracellular granules.", "sequence_version": 1, "taxon_id": "NCBITaxon:1032480", "taxon_label": "Microlunatus phosphovorus NM-1", "uniprot_id": "UniProtKB:F5XF46"}], "scope_notes": "The taxon-matched protein example anchors one experimentally supported causal branch; it is not presented as a universal mechanism for every taxon or every contextual branch in this graph.", "scope_status": "MECHANISTIC", "title": "Polyphosphate granules store phosphate and energy as inorganic polyP"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking inorganic polyphosphate accumulation to volutin/metachromatic granules supporting growth and survival.", "edges": [{"description": "Inorganic polyphosphate accumulates as granules in the cytoplasm.", "evidence": [{"notes": "Rao, G\u00f3mez-Garc\u00eda \u0026 Kornberg review polyphosphate accumulation as granules.", "reference": "DOI:10.1146/annurev.biochem.77.083007.093039"}], "id": "edge-1", "is_orphan": false, "predicate": "located in", "predicate_id": "biolink:located_in", "source": "inorganic_polyphosphate", "target": "polyp_granule_trait"}, {"description": "PolyP granules supply phosphate and energy for growth and survival.", "evidence": [{"notes": "Greening \u0026 Lithgow include polyphosphate bodies among bacterial intracellular inclusions.", "reference": "DOI:10.1038/s41579-020-0413-0"}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "polyp_granule_trait", "target": "phosphate_energy_reserve"}, {"description": "Polyphosphate kinase (PPK) synthesizes inorganic polyP using ATP.", "evidence": [{"notes": "Polyphosphate is synthesized by polyphosphate kinase (PPK), which rapidly synthesizes polyP using ATP as a co-substrate.", "reference": "DOI:10.1371/journal.pbio.3002558"}], "id": "edge-3", "is_orphan": false, "predicate": "synthesizes", "predicate_id": null, "source": "ppk", "target": "inorganic_polyphosphate"}, {"description": "Exopolyphosphatase (PPX) degrades inorganic polyphosphate.", "evidence": [{"notes": "Polyphosphate is degraded by exopolyphosphatase PPX; canonical core metabolism edge.", "reference": "DOI:10.1371/journal.pbio.3002558"}], "id": "edge-4", "is_orphan": false, "predicate": "degrades", "predicate_id": "METPO:2007809", "source": "ppx", "target": "inorganic_polyphosphate"}, {"description": "PolyP chelates/binds divalent cations, affecting polyP biophysics and granule composition.", "evidence": [{"notes": "PolyP granules contain associated cations; polyP can bind iron and inhibit Fenton chemistry. Strong general biochemical edge.", "reference": "DOI:10.3390/biom14080937"}], "id": "edge-5", "is_orphan": false, "predicate": "binds", "predicate_id": null, "source": "inorganic_polyphosphate", "target": "divalent_cations"}, {"description": "PolyP accumulation promotes survival in stationary phase and nutrient starvation.", "evidence": [{"notes": "PolyP serves as phosphate/energy storage and supports survival in stationary phase and nutrient starvation; ppk mutants show stress sensitivity.", "reference": "DOI:10.3390/biom14080937"}], "id": "edge-6", "is_orphan": false, "predicate": "promotes", "predicate_id": "RO:0002213", "source": "inorganic_polyphosphate", "target": "stress_survival"}], "evidence_rows": [{"description": "Inorganic polyphosphate accumulates as granules in the cytoplasm.", "edge_id": "edge-1", "evidence": [{"notes": "Rao, G\u00f3mez-Garc\u00eda \u0026 Kornberg review polyphosphate accumulation as granules.", "reference": "DOI:10.1146/annurev.biochem.77.083007.093039"}], "predicate": "located in", "predicate_id": "biolink:located_in", "source": "inorganic polyphosphate", "source_grounding": null, "target": "polyphosphate granule", "target_grounding": "traitmech:000068"}, {"description": "PolyP granules supply phosphate and energy for growth and survival.", "edge_id": "edge-2", "evidence": [{"notes": "Greening \u0026 Lithgow include polyphosphate bodies among bacterial intracellular inclusions.", "reference": "DOI:10.1038/s41579-020-0413-0"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "polyphosphate granule", "source_grounding": "traitmech:000068", "target": "phosphate / energy reserve", "target_grounding": null}, {"description": "Polyphosphate kinase (PPK) synthesizes inorganic polyP using ATP.", "edge_id": "edge-3", "evidence": [{"notes": "Polyphosphate is synthesized by polyphosphate kinase (PPK), which rapidly synthesizes polyP using ATP as a co-substrate.", "reference": "DOI:10.1371/journal.pbio.3002558"}], "predicate": "synthesizes", "predicate_id": null, "source": "polyphosphate kinase (PPK)", "source_grounding": "GO:0008976", "target": "inorganic polyphosphate", "target_grounding": null}, {"description": "Exopolyphosphatase (PPX) degrades inorganic polyphosphate.", "edge_id": "edge-4", "evidence": [{"notes": "Polyphosphate is degraded by exopolyphosphatase PPX; canonical core metabolism edge.", "reference": "DOI:10.1371/journal.pbio.3002558"}], "predicate": "degrades", "predicate_id": "METPO:2007809", "source": "exopolyphosphatase (PPX)", "source_grounding": "GO:0004309", "target": "inorganic polyphosphate", "target_grounding": null}, {"description": "PolyP chelates/binds divalent cations, affecting polyP biophysics and granule composition.", "edge_id": "edge-5", "evidence": [{"notes": "PolyP granules contain associated cations; polyP can bind iron and inhibit Fenton chemistry. Strong general biochemical edge.", "reference": "DOI:10.3390/biom14080937"}], "predicate": "binds", "predicate_id": null, "source": "inorganic polyphosphate", "source_grounding": null, "target": "divalent cations", "target_grounding": null}, {"description": "PolyP accumulation promotes survival in stationary phase and nutrient starvation.", "edge_id": "edge-6", "evidence": [{"notes": "PolyP serves as phosphate/energy storage and supports survival in stationary phase and nutrient starvation; ppk mutants show stress sensitivity.", "reference": "DOI:10.3390/biom14080937"}], "predicate": "promotes", "predicate_id": "RO:0002213", "source": "inorganic polyphosphate", "source_grounding": null, "target": "stress survival / stress response", "target_grounding": null}], "graph_id": "polyphosphate_granule_storage", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Divalent metal cations (Ca2+, Mg2+, Fe2+/Fe3+, Zn2+) bound by polyP.", "grounding": null, "id": "divalent_cations", "is_orphan": false, "label": "divalent cations", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Polymer of many phosphate residues stored as a granule.", "grounding": null, "id": "inorganic_polyphosphate", "is_orphan": false, "label": "inorganic polyphosphate", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Reservoir of phosphate and high-energy phosphoanhydride bonds.", "grounding": null, "id": "phosphate_energy_reserve", "is_orphan": false, "label": "phosphate / energy reserve", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Cytoplasmic inclusion of inorganic polyphosphate.", "grounding": "traitmech:000068", "id": "polyp_granule_trait", "is_orphan": false, "label": "polyphosphate granule", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Enzyme that synthesizes inorganic polyphosphate from ATP.", "grounding": "GO:0008976", "id": "ppk", "is_orphan": false, "label": "polyphosphate kinase (PPK)", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "UNREVIEWED", "entry_version": 69, "evidence": [{"notes": "The cited source supports the represented protein-to-trait branch; UniProt verifies this current strain-matched protein entry.", "reference": "PMID:22923697", "snippet": "polyphosphate accumulation by Microlunatus phosphovorus"}], "gene_symbol": "ppk", "protein_label": "Polyphosphate kinase", "proteome_id": "UP000007947", "retrieved_on": "2026-08-25", "role": "The NM-1 polyphosphate kinase synthesizes the polyphosphate stored in intracellular granules.", "sequence_version": 1, "taxon_id": "NCBITaxon:1032480", "taxon_label": "Microlunatus phosphovorus NM-1", "uniprot_id": "UniProtKB:F5XF46"}], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Enzyme that degrades inorganic polyphosphate.", "grounding": "GO:0004309", "id": "ppx", "is_orphan": false, "label": "exopolyphosphatase (PPX)", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Survival during stationary phase, nutrient starvation, and stress.", "grounding": null, "id": "stress_survival", "is_orphan": false, "label": "stress survival / stress response", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "UNREVIEWED", "entry_version": 69, "evidence": [{"notes": "The cited source supports the represented protein-to-trait branch; UniProt verifies this current strain-matched protein entry.", "reference": "PMID:22923697", "snippet": "polyphosphate accumulation by Microlunatus phosphovorus"}], "gene_symbol": "ppk", "node_id": "ppk", "node_label": "polyphosphate kinase (PPK)", "protein_label": "Polyphosphate kinase", "proteome_id": "UP000007947", "retrieved_on": "2026-08-25", "role": "The NM-1 polyphosphate kinase synthesizes the polyphosphate stored in intracellular granules.", "sequence_version": 1, "taxon_id": "NCBITaxon:1032480", "taxon_label": "Microlunatus phosphovorus NM-1", "uniprot_id": "UniProtKB:F5XF46"}], "scope_notes": "The taxon-matched protein example anchors one experimentally supported causal branch; it is not presented as a universal mechanism for every taxon or every contextual branch in this graph.", "scope_status": "MECHANISTIC", "title": "Polyphosphate granules store phosphate and energy as inorganic polyP"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -928,13 +951,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-08-26 03:23 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

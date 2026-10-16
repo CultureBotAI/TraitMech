@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/genomics.html">GENOMICS</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/genomics.html">GENOMICS</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>Retron system</h1>
     <p class="curie"><code>traitmech:000235</code> · CLASS · PROPOSED</p>
 
@@ -121,9 +132,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>retron locus</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>retron msDNA biosynthesis</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>Retron loci encode the reverse transcriptase and non-coding RNA components that biosynthesize msDNA.</p>
             <ul>
 
@@ -138,9 +151,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>retron locus</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>RT-msDNA effector control</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>Complete retron defensive units include an associated effector coupled to the RT/ncRNA core.</p>
             <ul>
 
@@ -155,9 +170,11 @@
 
           <li id="pathograph-1-edge-3">
             <strong>retron msDNA biosynthesis</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>RT-msDNA effector control</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>The reverse-transcriptase-msDNA complex can control associated retron effector activity.</p>
             <ul>
 
@@ -172,9 +189,11 @@
 
           <li id="pathograph-1-edge-4">
             <strong>RT-msDNA effector control</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>effector-dependent abortive infection</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>Phage-triggered perturbation of retron effector control can activate an associated effector.</p>
             <ul>
 
@@ -189,9 +208,11 @@
 
           <li id="pathograph-1-edge-5">
             <strong>effector-dependent abortive infection</strong>
+
             <span class="edge-predicate">mitigates</span>
             <strong>phage growth</strong>
-            <code>METPO:2007407</code>
+
+            <a href="https://w3id.org/metpo/2007407" rel="nofollow noreferrer"><code>METPO:2007407</code></a>
             <p>Retron effector activation can block phage amplification through abortive infection.</p>
             <ul>
 
@@ -206,9 +227,11 @@
 
           <li id="pathograph-1-edge-6">
             <strong>effector-dependent abortive infection</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>Retron system</strong>
-            <code>METPO:2007700</code>
+            <code>traitmech:000235</code>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>Associated effector activity realizes the Retron system defense phenotype.</p>
             <ul>
 
@@ -223,8 +246,10 @@
 
           <li id="pathograph-1-edge-7">
             <strong>Retron system</strong>
+            <code>traitmech:000235</code>
             <span class="edge-predicate">is a</span>
             <strong>phage defense system</strong>
+            <code>traitmech:000209</code>
             <code>rdfs:subClassOf</code>
             <p>Retron system possession is a phage-defense-system trait.</p>
             <ul>
@@ -286,11 +311,75 @@
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
 
-      <p class="no-match">No kg-microbe node embedding matched this record
-        in the 2026-04-25 deepwalk.</p>
+      <p class="match-method">Matched <strong>1</strong>
+        kg-microbe node
+        via <em>parent_proxy</em>.</p>
+      <ul class="kgm-nodes">
+
+        <li><code>METPO:1000188</code> <span class="dim-preview">[-0.956, -1.962, -3.148, +1.274, …]</span></li>
+
+      </ul>
+      <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
 
     </div>
 
+
+    <div class="card">
+      <h2>Nearest neighbors in embedding space</h2>
+      <p class="meta">Top-8 cosine-similar METPO traits
+        from the 2026-04-25 deepwalk (512-D).</p>
+      <ul class="nn-list">
+
+        <li>
+          <span class="nn-cat">upper</span>
+          <a href="../../traits/upper/quality.html">quality</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hna_system.html">Hna system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hma_system.html">Hma system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hesat_system.html">Hesat system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_08_system.html">HEC-08 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_07_system.html">HEC-07 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_06_system.html">HEC-06 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_05_system.html">HEC-05 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+      </ul>
+    </div>
 
 
 
@@ -416,6 +505,11 @@
     </dl>
   </div>
 
+
+  <div class="card rail-kgm">
+    <h2>kg-microbe</h2>
+    <p class="meta">1 matching node (parent_proxy)</p>
+  </div>
 
 </aside>
 </div>
@@ -749,7 +843,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed process sketch linking a complete retron locus to RT/ncRNA-dependent msDNA biosynthesis, control of associated effectors, abortive-infection outputs, and inhibition of phage growth.", "edges": [{"description": "Retron loci encode the reverse transcriptase and non-coding RNA components that biosynthesize msDNA.", "evidence": [{"notes": "Millman et al. describe the RT and ncRNA parts of the retron msDNA-biosynthesis module.", "reference": "DOI:10.1016/j.cell.2020.09.065", "snippet": "Retrons encode a non-coding RNA (ncRNA) and a reverse transcriptase (RT)"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "retron_locus", "target": "retron_msdna_biosynthesis"}, {"description": "Complete retron defensive units include an associated effector coupled to the RT/ncRNA core.", "evidence": [{"notes": "Millman et al. support the effector as a required part of a complete retron defensive unit.", "reference": "DOI:10.1016/j.cell.2020.09.065", "snippet": "The defensive unit is composed of three components: the RT, the ncRNA, and an effector protein"}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "retron_locus", "target": "rt_msdna_effector_control"}, {"description": "The reverse-transcriptase-msDNA complex can control associated retron effector activity.", "evidence": [{"notes": "Bobonis et al. connect msDNA biosynthesis and the RT-msDNA complex to RcaT toxin control in Retron-Sen2.", "reference": "DOI:10.1038/s41586-022-05091-4", "snippet": "RcaT is neutralized by the reverse transcriptase\u2013msDNA antitoxin complex, and becomes active upon perturbation of msDNA biosynthesis"}], "id": "edge-3", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "retron_msdna_biosynthesis", "target": "rt_msdna_effector_control"}, {"description": "Phage-triggered perturbation of retron effector control can activate an associated effector.", "evidence": [{"notes": "Bobonis et al. support phage-triggered activation of the RcaT effector in Retron-Sen2.", "reference": "DOI:10.1038/s41586-022-05091-4", "snippet": "phage-related triggers directly modify the msDNA, thereby activating RcaT and inhibiting bacterial growth"}], "id": "edge-4", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "rt_msdna_effector_control", "target": "effector_dependent_abortive_infection"}, {"description": "Retron effector activation can block phage amplification through abortive infection.", "evidence": [{"notes": "Millman et al. link multiple retron systems to broad antiphage defense by abortive infection.", "reference": "DOI:10.1016/j.cell.2020.09.065", "snippet": "We examined multiple retron systems and show that they confer defense against a broad range of phages via abortive infection"}], "id": "edge-5", "is_orphan": false, "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "effector_dependent_abortive_infection", "target": "phage_growth"}, {"description": "Associated effector activity realizes the Retron system defense phenotype.", "evidence": [{"notes": "Millman et al. support complete retron systems in which the retron and associated effector genes together confer defense.", "reference": "DOI:10.1016/j.cell.2020.09.065", "snippet": "retrons, functioning together with their associated effector genes, form anti-phage defense systems"}], "id": "edge-6", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "effector_dependent_abortive_infection", "target": "retron_system_trait"}, {"description": "Retron system possession is a phage-defense-system trait.", "evidence": [{"notes": "Millman et al. support Retron system as a child of phage defense system.", "reference": "DOI:10.1016/j.cell.2020.09.065", "snippet": "We report that retrons function as anti-phage defense systems"}], "id": "edge-7", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "retron_system_trait", "target": "phage_defense_system"}], "evidence_rows": [{"description": "Retron loci encode the reverse transcriptase and non-coding RNA components that biosynthesize msDNA.", "edge_id": "edge-1", "evidence": [{"notes": "Millman et al. describe the RT and ncRNA parts of the retron msDNA-biosynthesis module.", "reference": "DOI:10.1016/j.cell.2020.09.065", "snippet": "Retrons encode a non-coding RNA (ncRNA) and a reverse transcriptase (RT)"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "retron locus", "target": "retron msDNA biosynthesis"}, {"description": "Complete retron defensive units include an associated effector coupled to the RT/ncRNA core.", "edge_id": "edge-2", "evidence": [{"notes": "Millman et al. support the effector as a required part of a complete retron defensive unit.", "reference": "DOI:10.1016/j.cell.2020.09.065", "snippet": "The defensive unit is composed of three components: the RT, the ncRNA, and an effector protein"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "retron locus", "target": "RT-msDNA effector control"}, {"description": "The reverse-transcriptase-msDNA complex can control associated retron effector activity.", "edge_id": "edge-3", "evidence": [{"notes": "Bobonis et al. connect msDNA biosynthesis and the RT-msDNA complex to RcaT toxin control in Retron-Sen2.", "reference": "DOI:10.1038/s41586-022-05091-4", "snippet": "RcaT is neutralized by the reverse transcriptase\u2013msDNA antitoxin complex, and becomes active upon perturbation of msDNA biosynthesis"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "retron msDNA biosynthesis", "target": "RT-msDNA effector control"}, {"description": "Phage-triggered perturbation of retron effector control can activate an associated effector.", "edge_id": "edge-4", "evidence": [{"notes": "Bobonis et al. support phage-triggered activation of the RcaT effector in Retron-Sen2.", "reference": "DOI:10.1038/s41586-022-05091-4", "snippet": "phage-related triggers directly modify the msDNA, thereby activating RcaT and inhibiting bacterial growth"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "RT-msDNA effector control", "target": "effector-dependent abortive infection"}, {"description": "Retron effector activation can block phage amplification through abortive infection.", "edge_id": "edge-5", "evidence": [{"notes": "Millman et al. link multiple retron systems to broad antiphage defense by abortive infection.", "reference": "DOI:10.1016/j.cell.2020.09.065", "snippet": "We examined multiple retron systems and show that they confer defense against a broad range of phages via abortive infection"}], "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "effector-dependent abortive infection", "target": "phage growth"}, {"description": "Associated effector activity realizes the Retron system defense phenotype.", "edge_id": "edge-6", "evidence": [{"notes": "Millman et al. support complete retron systems in which the retron and associated effector genes together confer defense.", "reference": "DOI:10.1016/j.cell.2020.09.065", "snippet": "retrons, functioning together with their associated effector genes, form anti-phage defense systems"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "effector-dependent abortive infection", "target": "Retron system"}, {"description": "Retron system possession is a phage-defense-system trait.", "edge_id": "edge-7", "evidence": [{"notes": "Millman et al. support Retron system as a child of phage defense system.", "reference": "DOI:10.1016/j.cell.2020.09.065", "snippet": "We report that retrons function as anti-phage defense systems"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "Retron system", "target": "phage defense system"}], "graph_id": "retron_msdna_effector_abortive_defense", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Activation of a retron-associated effector output that arrests or kills infected host cells and limits phage amplification.", "grounding": null, "id": "effector_dependent_abortive_infection", "is_orphan": false, "label": "effector-dependent abortive infection", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of one or more genome-encoded immune systems that inhibit bacteriophage infection.", "grounding": "traitmech:000209", "id": "phage_defense_system", "is_orphan": false, "label": "phage defense system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Bacteriophage growth and amplification inside a bacterial host population.", "grounding": null, "id": "phage_growth", "is_orphan": false, "label": "phage growth", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "A complete retron antiphage locus encoding a reverse transcriptase, msr/msd non-coding RNA, and an associated effector.", "grounding": null, "id": "retron_locus", "is_orphan": false, "label": "retron locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Reverse-transcriptase-dependent production of multicopy single-stranded DNA from a retron non-coding RNA template.", "grounding": null, "id": "retron_msdna_biosynthesis", "is_orphan": false, "label": "retron msDNA biosynthesis", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded Retron phage-defense system.", "grounding": "traitmech:000235", "id": "retron_system_trait", "is_orphan": false, "label": "Retron system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Regulation of retron effector activity by reverse-transcriptase-msDNA complexes.", "grounding": null, "id": "rt_msdna_effector_control", "is_orphan": false, "label": "RT-msDNA effector control", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "The graph stays at the retron family level and uses the Ec48 RecBCD-guarding and Retron-Sen2 RcaT mechanisms as characterized examples without asserting one universal effector fold, phage trigger, direct msDNA-modification event, guarded host target, or Retron-Septu release architecture across all retron antiphage loci.", "scope_status": "NONMECHANISTIC", "title": "Retrons couple msDNA complexes to effector activation"}];
+  var graphs = [{"description": "Evidence-backed process sketch linking a complete retron locus to RT/ncRNA-dependent msDNA biosynthesis, control of associated effectors, abortive-infection outputs, and inhibition of phage growth.", "edges": [{"description": "Retron loci encode the reverse transcriptase and non-coding RNA components that biosynthesize msDNA.", "evidence": [{"notes": "Millman et al. describe the RT and ncRNA parts of the retron msDNA-biosynthesis module.", "reference": "DOI:10.1016/j.cell.2020.09.065", "snippet": "Retrons encode a non-coding RNA (ncRNA) and a reverse transcriptase (RT)"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "retron_locus", "target": "retron_msdna_biosynthesis"}, {"description": "Complete retron defensive units include an associated effector coupled to the RT/ncRNA core.", "evidence": [{"notes": "Millman et al. support the effector as a required part of a complete retron defensive unit.", "reference": "DOI:10.1016/j.cell.2020.09.065", "snippet": "The defensive unit is composed of three components: the RT, the ncRNA, and an effector protein"}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "retron_locus", "target": "rt_msdna_effector_control"}, {"description": "The reverse-transcriptase-msDNA complex can control associated retron effector activity.", "evidence": [{"notes": "Bobonis et al. connect msDNA biosynthesis and the RT-msDNA complex to RcaT toxin control in Retron-Sen2.", "reference": "DOI:10.1038/s41586-022-05091-4", "snippet": "RcaT is neutralized by the reverse transcriptase\u2013msDNA antitoxin complex, and becomes active upon perturbation of msDNA biosynthesis"}], "id": "edge-3", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "retron_msdna_biosynthesis", "target": "rt_msdna_effector_control"}, {"description": "Phage-triggered perturbation of retron effector control can activate an associated effector.", "evidence": [{"notes": "Bobonis et al. support phage-triggered activation of the RcaT effector in Retron-Sen2.", "reference": "DOI:10.1038/s41586-022-05091-4", "snippet": "phage-related triggers directly modify the msDNA, thereby activating RcaT and inhibiting bacterial growth"}], "id": "edge-4", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "rt_msdna_effector_control", "target": "effector_dependent_abortive_infection"}, {"description": "Retron effector activation can block phage amplification through abortive infection.", "evidence": [{"notes": "Millman et al. link multiple retron systems to broad antiphage defense by abortive infection.", "reference": "DOI:10.1016/j.cell.2020.09.065", "snippet": "We examined multiple retron systems and show that they confer defense against a broad range of phages via abortive infection"}], "id": "edge-5", "is_orphan": false, "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "effector_dependent_abortive_infection", "target": "phage_growth"}, {"description": "Associated effector activity realizes the Retron system defense phenotype.", "evidence": [{"notes": "Millman et al. support complete retron systems in which the retron and associated effector genes together confer defense.", "reference": "DOI:10.1016/j.cell.2020.09.065", "snippet": "retrons, functioning together with their associated effector genes, form anti-phage defense systems"}], "id": "edge-6", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "effector_dependent_abortive_infection", "target": "retron_system_trait"}, {"description": "Retron system possession is a phage-defense-system trait.", "evidence": [{"notes": "Millman et al. support Retron system as a child of phage defense system.", "reference": "DOI:10.1016/j.cell.2020.09.065", "snippet": "We report that retrons function as anti-phage defense systems"}], "id": "edge-7", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "retron_system_trait", "target": "phage_defense_system"}], "evidence_rows": [{"description": "Retron loci encode the reverse transcriptase and non-coding RNA components that biosynthesize msDNA.", "edge_id": "edge-1", "evidence": [{"notes": "Millman et al. describe the RT and ncRNA parts of the retron msDNA-biosynthesis module.", "reference": "DOI:10.1016/j.cell.2020.09.065", "snippet": "Retrons encode a non-coding RNA (ncRNA) and a reverse transcriptase (RT)"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "retron locus", "source_grounding": null, "target": "retron msDNA biosynthesis", "target_grounding": null}, {"description": "Complete retron defensive units include an associated effector coupled to the RT/ncRNA core.", "edge_id": "edge-2", "evidence": [{"notes": "Millman et al. support the effector as a required part of a complete retron defensive unit.", "reference": "DOI:10.1016/j.cell.2020.09.065", "snippet": "The defensive unit is composed of three components: the RT, the ncRNA, and an effector protein"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "retron locus", "source_grounding": null, "target": "RT-msDNA effector control", "target_grounding": null}, {"description": "The reverse-transcriptase-msDNA complex can control associated retron effector activity.", "edge_id": "edge-3", "evidence": [{"notes": "Bobonis et al. connect msDNA biosynthesis and the RT-msDNA complex to RcaT toxin control in Retron-Sen2.", "reference": "DOI:10.1038/s41586-022-05091-4", "snippet": "RcaT is neutralized by the reverse transcriptase\u2013msDNA antitoxin complex, and becomes active upon perturbation of msDNA biosynthesis"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "retron msDNA biosynthesis", "source_grounding": null, "target": "RT-msDNA effector control", "target_grounding": null}, {"description": "Phage-triggered perturbation of retron effector control can activate an associated effector.", "edge_id": "edge-4", "evidence": [{"notes": "Bobonis et al. support phage-triggered activation of the RcaT effector in Retron-Sen2.", "reference": "DOI:10.1038/s41586-022-05091-4", "snippet": "phage-related triggers directly modify the msDNA, thereby activating RcaT and inhibiting bacterial growth"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "RT-msDNA effector control", "source_grounding": null, "target": "effector-dependent abortive infection", "target_grounding": null}, {"description": "Retron effector activation can block phage amplification through abortive infection.", "edge_id": "edge-5", "evidence": [{"notes": "Millman et al. link multiple retron systems to broad antiphage defense by abortive infection.", "reference": "DOI:10.1016/j.cell.2020.09.065", "snippet": "We examined multiple retron systems and show that they confer defense against a broad range of phages via abortive infection"}], "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "effector-dependent abortive infection", "source_grounding": null, "target": "phage growth", "target_grounding": null}, {"description": "Associated effector activity realizes the Retron system defense phenotype.", "edge_id": "edge-6", "evidence": [{"notes": "Millman et al. support complete retron systems in which the retron and associated effector genes together confer defense.", "reference": "DOI:10.1016/j.cell.2020.09.065", "snippet": "retrons, functioning together with their associated effector genes, form anti-phage defense systems"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "effector-dependent abortive infection", "source_grounding": null, "target": "Retron system", "target_grounding": "traitmech:000235"}, {"description": "Retron system possession is a phage-defense-system trait.", "edge_id": "edge-7", "evidence": [{"notes": "Millman et al. support Retron system as a child of phage defense system.", "reference": "DOI:10.1016/j.cell.2020.09.065", "snippet": "We report that retrons function as anti-phage defense systems"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "Retron system", "source_grounding": "traitmech:000235", "target": "phage defense system", "target_grounding": "traitmech:000209"}], "graph_id": "retron_msdna_effector_abortive_defense", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Activation of a retron-associated effector output that arrests or kills infected host cells and limits phage amplification.", "grounding": null, "id": "effector_dependent_abortive_infection", "is_orphan": false, "label": "effector-dependent abortive infection", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of one or more genome-encoded immune systems that inhibit bacteriophage infection.", "grounding": "traitmech:000209", "id": "phage_defense_system", "is_orphan": false, "label": "phage defense system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Bacteriophage growth and amplification inside a bacterial host population.", "grounding": null, "id": "phage_growth", "is_orphan": false, "label": "phage growth", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "A complete retron antiphage locus encoding a reverse transcriptase, msr/msd non-coding RNA, and an associated effector.", "grounding": null, "id": "retron_locus", "is_orphan": false, "label": "retron locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Reverse-transcriptase-dependent production of multicopy single-stranded DNA from a retron non-coding RNA template.", "grounding": null, "id": "retron_msdna_biosynthesis", "is_orphan": false, "label": "retron msDNA biosynthesis", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded Retron phage-defense system.", "grounding": "traitmech:000235", "id": "retron_system_trait", "is_orphan": false, "label": "Retron system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Regulation of retron effector activity by reverse-transcriptase-msDNA complexes.", "grounding": null, "id": "rt_msdna_effector_control", "is_orphan": false, "label": "RT-msDNA effector control", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "The graph stays at the retron family level and uses the Ec48 RecBCD-guarding and Retron-Sen2 RcaT mechanisms as characterized examples without asserting one universal effector fold, phage trigger, direct msDNA-modification event, guarded host target, or Retron-Septu release architecture across all retron antiphage loci.", "scope_status": "NONMECHANISTIC", "title": "Retrons couple msDNA complexes to effector activation"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -769,13 +863,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-09-16 01:28 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>
