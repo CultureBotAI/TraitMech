@@ -125,3 +125,72 @@ curation_history:
     the directly inspected caption and actual figure. Definition, verbatim snippet,
     natural canonical example and proposal hierarchy remain unchanged.'
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph oogamy_graph
+    with GENE_OR_PROTEIN node oogamy_protein_component and UniProtKB:P32562 exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: oogamy_graph
+  title: Protein component associated with oogamy
+  description: Literature-backed association between Cell cycle serine/threonine-protein
+    kinase CDC5/MSD2 (UniProtKB:P32562) and oogamy.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P32562 in Saccharomyces
+    cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)) associated with oogamy
+    while full multi-step mechanistic curation remains future work.
+  nodes:
+  - node_id: oogamy_trait
+    label: oogamy
+    node_type: TRAIT
+    grounding: traitmech:000621
+    description: A sexual-reproduction phenotype in which large nonmotile female gametes
+      fuse with smaller male gametes.
+  - node_id: oogamy_protein_component
+    label: Cell cycle serine/threonine-protein kinase CDC5/MSD2
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Cell cycle serine/threonine-protein kinase CDC5/MSD2)
+      associated with oogamy.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - CDC5
+    protein_examples:
+    - uniprot_id: UniProtKB:P32562
+      protein_label: Cell cycle serine/threonine-protein kinase CDC5/MSD2
+      gene_symbol: CDC5
+      taxon_id: NCBITaxon:559292
+      taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's
+        yeast)
+      entry_status: REVIEWED
+      proteome_id: UP000002311
+      retrieved_on: '2026-10-17'
+      entry_version: 227
+      sequence_version: 1
+      role: Characteristic protein component (CDC5, Cell cycle serine/threonine-protein
+        kinase CDC5/MSD2) associated with oogamy in Saccharomyces cerevisiae (strain
+        ATCC 204508 / S288c) (Baker's yeast).
+      evidence:
+      - reference: DOI:10.1186/s12915-024-01878-1
+        snippet: Oogamy constitutes a specialized form of anisogamy wherein small
+          male gametes are motile and large female gametes are not
+        notes: Supports Cell cycle serine/threonine-protein kinase CDC5/MSD2 in oogamy;
+          UniProtKB:P32562 (CDC5, Cell cycle serine/threonine-protein kinase CDC5/MSD2)
+          in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)
+          provides a verified protein exemplar.
+  edges:
+  - subject: oogamy_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: oogamy_trait
+    description: Cell cycle serine/threonine-protein kinase CDC5/MSD2 (CDC5, UniProtKB:P32562)
+      contributes to oogamy (associated with constitutes, specialized, anisogamy).
+    evidence:
+    - reference: DOI:10.1186/s12915-024-01878-1
+      snippet: Oogamy constitutes a specialized form of anisogamy wherein small male
+        gametes are motile and large female gametes are not
+      notes: Supports the functional association between Cell cycle serine/threonine-protein
+        kinase CDC5/MSD2 (UniProtKB:P32562 in Saccharomyces cerevisiae (strain ATCC
+        204508 / S288c) (Baker's yeast)) and oogamy.

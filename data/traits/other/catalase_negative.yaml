@@ -35,6 +35,13 @@ curation_history:
   changes: Reparented catalase negative below the newly curated METPO:1007080 catalase
     test assay parent and marked the temporary assay-parent discussion resolved.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph catalase_negative_graph
+    with GENE_OR_PROTEIN node catalase_negative_protein_component and UniProtKB:Q9R708
+    exemplar.'
+  llm_assisted: true
 definition_source: DOI:10.1038/srep03081
 evidence:
 - reference: DOI:10.1038/srep03081
@@ -64,3 +71,63 @@ discussions:
     than a temporary direct phenotype parent.
   posed_by: codex
   posed_date: '2026-09-11'
+causal_graphs:
+- graph_id: catalase_negative_graph
+  title: Protein component associated with catalase negative
+  description: Literature-backed association between Catalase-peroxidase (UniProtKB:Q9R708)
+    and catalase negative.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q9R708 in Agrobacterium
+    tumefaciens) associated with catalase negative while full multi-step mechanistic
+    curation remains future work.
+  nodes:
+  - node_id: catalase_negative_trait
+    label: catalase negative
+    node_type: TRAIT
+    grounding: METPO:1007084
+    description: Test-outcome phenotype where the catalase test yields a negative
+      result (no bubbling on H2O2). The underlying enzyme-organism relation should
+      additionally be asserted via <organism> METPO:2000303 'does not show activity
+      of' GO:0004096 'catalase activity'.
+  - node_id: catalase_negative_protein_component
+    label: Catalase-peroxidase
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Catalase-peroxidase) associated with catalase
+      negative.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - katG
+    protein_examples:
+    - uniprot_id: UniProtKB:Q9R708
+      protein_label: Catalase-peroxidase
+      gene_symbol: katG
+      taxon_id: NCBITaxon:358
+      taxon_label: Agrobacterium tumefaciens
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 101
+      sequence_version: 1
+      role: Characteristic protein component (katG, Catalase-peroxidase) associated
+        with catalase negative in Agrobacterium tumefaciens.
+      evidence:
+      - reference: DOI:10.1128/iai.72.8.4512-4520.2004
+        snippet: E. faecium is catalase negative, and the major mechanism to scavenge
+          hydrogen peroxide is NADH peroxidase
+        notes: Supports Catalase-peroxidase in catalase negative; UniProtKB:Q9R708
+          (katG, Catalase-peroxidase) in Agrobacterium tumefaciens provides a verified
+          protein exemplar.
+  edges:
+  - subject: catalase_negative_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: catalase_negative_trait
+    description: Catalase-peroxidase (katG, UniProtKB:Q9R708) contributes to catalase
+      negative (associated with peroxidase, catalase, hydrogen).
+    evidence:
+    - reference: DOI:10.1128/iai.72.8.4512-4520.2004
+      snippet: E. faecium is catalase negative, and the major mechanism to scavenge
+        hydrogen peroxide is NADH peroxidase
+      notes: Supports the functional association between Catalase-peroxidase (UniProtKB:Q9R708
+        in Agrobacterium tumefaciens) and catalase negative.

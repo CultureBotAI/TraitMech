@@ -66,6 +66,28 @@ causal_graphs:
       for this aggregate use.
     description: Membrane antiporters extruding Na+ in exchange for H+ to maintain
       ion homeostasis.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q9RGZ5
+      protein_label: Na(+)/H(+) antiporter subunit A
+      gene_symbol: mrpA
+      taxon_id: NCBITaxon:398511
+      taxon_label: Alkalihalophilus pseudofirmus (strain ATCC BAA-2126 / JCM 17055
+        / OF4) (Bacillus pseudofirmus)
+      entry_status: REVIEWED
+      proteome_id: UP000001544
+      retrieved_on: '2026-10-17'
+      entry_version: 115
+      sequence_version: 2
+      role: Exemplar protein (mrpA, Na(+)/H(+) antiporter subunit A) representing
+        Na+/H+ antiporters in Alkalihalophilus pseudofirmus (strain ATCC BAA-2126
+        / JCM 17055 / OF4) (Bacillus pseudofirmus) for NaCl optimum.
+      evidence:
+      - reference: DOI:10.1093/femsre/fuy009
+        snippet: Na+/H+ antiporters
+        notes: Supports Na+/H+ antiporters in NaCl optimum; UniProtKB:Q9RGZ5 (mrpA,
+          Na(+)/H(+) antiporter subunit A) in Alkalihalophilus pseudofirmus (strain
+          ATCC BAA-2126 / JCM 17055 / OF4) (Bacillus pseudofirmus) provides a verified
+          protein exemplar.
   - node_id: maximal_growth_rate
     label: maximal growth rate
     node_type: QUALITY
@@ -456,4 +478,10 @@ curation_history:
   changes: 'Addressed PR #664 adversarial review: replaced copied nonmechanistic bridge
     snippets with independent exact source snippets while preserving the existing
     connector edge scope.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q9RGZ5 (mrpA)
+    protein example to node na_h_antiporters.'
   llm_assisted: true

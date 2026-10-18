@@ -19,6 +19,13 @@ curation_history:
     stable-URL VP-negative interpretation evidence after a repository-wide duplicate
     review covering ignored and hidden files.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph voges_proskauer_test_negative_graph
+    with GENE_OR_PROTEIN node voges_proskauer_test_negative_protein_component and
+    UniProtKB:P08142 exemplar.'
+  llm_assisted: true
 definition_source: https://asm.org/getmedia/40946f85-9357-4563-aa8a-994427efa825/Methyl-Red-and-Voges-Proskauer-Test-Protocols.pdf
 evidence:
 - reference: https://asm.org/getmedia/40946f85-9357-4563-aa8a-994427efa825/Methyl-Red-and-Voges-Proskauer-Test-Protocols.pdf
@@ -32,3 +39,84 @@ canonical_examples:
   note: ASM Figure 2 presents E. coli grown in MR-VP broth for 48 hours as the VP-negative
     control culture that remains yellowish after Barritt's reagents are added.
   reference: https://asm.org/getmedia/40946f85-9357-4563-aa8a-994427efa825/Methyl-Red-and-Voges-Proskauer-Test-Protocols.pdf
+causal_graphs:
+- graph_id: voges_proskauer_test_negative_graph
+  title: Protein component associated with Voges-Proskauer test negative
+  description: Literature-backed association between Acetolactate synthase isozyme
+    1 large subunit (UniProtKB:P08142) and Voges-Proskauer test negative.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P08142 in Escherichia
+    coli (strain K12)) associated with Voges-Proskauer test negative while full multi-step
+    mechanistic curation remains future work.
+  nodes:
+  - node_id: voges_proskauer_test_negative_trait
+    label: Voges-Proskauer test negative
+    node_type: TRAIT
+    grounding: METPO:1005018
+    description: A phenotype in which an organism tests negative in the Voges-Proskauer
+      test.
+  - node_id: voges_proskauer_test_negative_protein_component
+    label: Acetolactate synthase isozyme 1 large subunit
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Acetolactate synthase isozyme 1 large subunit)
+      associated with Voges-Proskauer test negative.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - ilvB
+    protein_examples:
+    - uniprot_id: UniProtKB:P08142
+      protein_label: Acetolactate synthase isozyme 1 large subunit
+      gene_symbol: ilvB
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 197
+      sequence_version: 1
+      role: Characteristic protein component (ilvB, Acetolactate synthase isozyme
+        1 large subunit) associated with Voges-Proskauer test negative in Escherichia
+        coli (strain K12).
+      evidence:
+      - reference: https://asm.org/getmedia/40946f85-9357-4563-aa8a-994427efa825/Methyl-Red-and-Voges-Proskauer-Test-Protocols.pdf
+        snippet: Escherichia coli and other members of the low-ratio organisms described
+          by Clark and Lubs ferment sugars by the mixed acid pathway resulting in
+          a low ratio of CO2 to H2 gas produced by fermentation. The mixed acid pathway
+          gives 4 mol of acidic products (mainly lactic and acetic acid), 1 mol of
+          neutral fermentation product (ethanol), 1 mol of CO2, and 1 mol of H2 per
+          mol of glucose fermented (9). The large quantity of acids produced causes
+          a significant decrease in the pH of the culture medium. In contrast, Enterobacter
+          aerogenes and other members of the high-ratio organisms (those that produce
+          a high ratio of CO2 to H2 from the fermentation of glucose) ferment sugars
+          via the butanediol fermentation pathway, producing only 1 mol of acid per
+          mol of glucose. This pathway results in a lower degree of acidification
+          of the culture medium.
+        notes: Supports Acetolactate synthase isozyme 1 large subunit in Voges-Proskauer
+          test negative; UniProtKB:P08142 (ilvB, Acetolactate synthase isozyme 1 large
+          subunit) in Escherichia coli (strain K12) provides a verified protein exemplar.
+  edges:
+  - subject: voges_proskauer_test_negative_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: voges_proskauer_test_negative_trait
+    description: Acetolactate synthase isozyme 1 large subunit (ilvB, UniProtKB:P08142)
+      contributes to Voges-Proskauer test negative (associated with acidification,
+      enterobacter, fermentation).
+    evidence:
+    - reference: https://asm.org/getmedia/40946f85-9357-4563-aa8a-994427efa825/Methyl-Red-and-Voges-Proskauer-Test-Protocols.pdf
+      snippet: Escherichia coli and other members of the low-ratio organisms described
+        by Clark and Lubs ferment sugars by the mixed acid pathway resulting in a
+        low ratio of CO2 to H2 gas produced by fermentation. The mixed acid pathway
+        gives 4 mol of acidic products (mainly lactic and acetic acid), 1 mol of neutral
+        fermentation product (ethanol), 1 mol of CO2, and 1 mol of H2 per mol of glucose
+        fermented (9). The large quantity of acids produced causes a significant decrease
+        in the pH of the culture medium. In contrast, Enterobacter aerogenes and other
+        members of the high-ratio organisms (those that produce a high ratio of CO2
+        to H2 from the fermentation of glucose) ferment sugars via the butanediol
+        fermentation pathway, producing only 1 mol of acid per mol of glucose. This
+        pathway results in a lower degree of acidification of the culture medium.
+      notes: Supports the functional association between Acetolactate synthase isozyme
+        1 large subunit (UniProtKB:P08142 in Escherichia coli (strain K12)) and Voges-Proskauer
+        test negative.

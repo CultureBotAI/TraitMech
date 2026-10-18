@@ -63,3 +63,78 @@ curation_history:
     a repository-wide duplicate review covering ignored and hidden files; METPO has
     no exact alanine arylamidase activity class yet.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph alanine_arylamidase_activity_graph
+    with GENE_OR_PROTEIN node alanine_arylamidase_activity_protein_component and UniProtKB:P00957
+    exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: alanine_arylamidase_activity_graph
+  title: Protein component associated with alanine arylamidase activity
+  description: Literature-backed association between Alanine--tRNA ligase (UniProtKB:P00957)
+    and alanine arylamidase activity.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P00957 in Escherichia
+    coli (strain K12)) associated with alanine arylamidase activity while full multi-step
+    mechanistic curation remains future work.
+  nodes:
+  - node_id: alanine_arylamidase_activity_trait
+    label: alanine arylamidase activity
+    node_type: TRAIT
+    grounding: traitmech:000161
+    description: A physiological enzyme-activity phenotype in which a cell exhibits
+      alanine arylamidase/alanyl aminopeptidase activity, releasing N-terminal residues
+      from peptide, amide, or arylamide substrates with preference for alanine.
+  - node_id: alanine_arylamidase_activity_protein_component
+    label: Alanine--tRNA ligase
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Alanine--tRNA ligase) associated with alanine
+      arylamidase activity.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - alaS
+    protein_examples:
+    - uniprot_id: UniProtKB:P00957
+      protein_label: Alanine--tRNA ligase
+      gene_symbol: alaS
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 221
+      sequence_version: 2
+      role: Characteristic protein component (alaS, Alanine--tRNA ligase) associated
+        with alanine arylamidase activity in Escherichia coli (strain K12).
+      evidence:
+      - reference: DOI:10.1099/ijsem.0.006017
+        snippet: 'enzymatic activities are present for: α-galactosidase, N-acetyl-β-glucosaminidase,
+          arginine arylamidase, proline arylamidase, leucyl glycine arylamidase, phenylalanine
+          arylamidase, leucine arylamidase, tyrosine arylamidase, alanine arylamidase,
+          glycine arylamidase, histidine arylamidase, glutamyl glutamic acid arylamidase,
+          serine arylamidase, valine arylamidase, cysteine arylamidase, esterase,
+          esterase lipase, alpha-chymotrypsin'
+        notes: Supports Alanine--tRNA ligase in alanine arylamidase activity; UniProtKB:P00957
+          (alaS, Alanine--tRNA ligase) in Escherichia coli (strain K12) provides a
+          verified protein exemplar.
+  edges:
+  - subject: alanine_arylamidase_activity_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: alanine_arylamidase_activity_trait
+    description: Alanine--tRNA ligase (alaS, UniProtKB:P00957) contributes to alanine
+      arylamidase activity (associated with glucosaminidase, galactosidase, phenylalanine).
+    evidence:
+    - reference: DOI:10.1099/ijsem.0.006017
+      snippet: 'enzymatic activities are present for: α-galactosidase, N-acetyl-β-glucosaminidase,
+        arginine arylamidase, proline arylamidase, leucyl glycine arylamidase, phenylalanine
+        arylamidase, leucine arylamidase, tyrosine arylamidase, alanine arylamidase,
+        glycine arylamidase, histidine arylamidase, glutamyl glutamic acid arylamidase,
+        serine arylamidase, valine arylamidase, cysteine arylamidase, esterase, esterase
+        lipase, alpha-chymotrypsin'
+      notes: Supports the functional association between Alanine--tRNA ligase (UniProtKB:P00957
+        in Escherichia coli (strain K12)) and alanine arylamidase activity.

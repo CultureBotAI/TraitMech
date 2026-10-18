@@ -175,7 +175,7 @@ causal_graphs:
       taxon_label: Escherichia coli K-12
       entry_status: REVIEWED
       retrieved_on: '2026-08-24'
-      entry_version: 155
+      entry_version: 156
       sequence_version: 2
       role: Beta component of the E. coli F1 catalytic head in respiratory ATP synthesis;
         it is not presented as the complete complex.
@@ -419,4 +419,10 @@ curation_history:
   action: ADD_PATHWAY_CONTEXT
   changes: Added pinned PathwayMech context on reviewed causal nodes with explicit
     route and organism limitations; retained existing groundings and exact xrefs.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:P0ABB4
+    version metadata (entry_version=156, sequence_version=2).'
   llm_assisted: true

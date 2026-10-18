@@ -96,3 +96,67 @@ curation_history:
     and retained the supplementary lateral-flagellin exception without conflating
     soft-agar and liquid assays. Addresses issue #1872; prior curation event preserved.'
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph swimming_motility_graph
+    with GENE_OR_PROTEIN node swimming_motility_protein_component and UniProtKB:Q56331
+    exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: swimming_motility_graph
+  title: Protein component associated with swimming motility
+  description: Literature-backed association between Motility protein A (UniProtKB:Q56331)
+    and swimming motility.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q56331 in Treponema
+    phagedenis) associated with swimming motility while full multi-step mechanistic
+    curation remains future work.
+  nodes:
+  - node_id: swimming_motility_trait
+    label: swimming motility
+    node_type: TRAIT
+    grounding: traitmech:000702
+    description: A motile phenotype in which an organism propels itself through a
+      liquid medium.
+  - node_id: swimming_motility_protein_component
+    label: Motility protein A
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Motility protein A) associated with swimming motility.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - motA
+    protein_examples:
+    - uniprot_id: UniProtKB:Q56331
+      protein_label: Motility protein A
+      gene_symbol: motA
+      taxon_id: NCBITaxon:162
+      taxon_label: Treponema phagedenis
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 85
+      sequence_version: 1
+      role: Characteristic protein component (motA, Motility protein A) associated
+        with swimming motility in Treponema phagedenis.
+      evidence:
+      - reference: DOI:10.1038/s41467-018-07802-w
+        snippet: However, the free-swimming capability of the different strains did
+          not correlate well to the spreading capability in soft agar.
+        notes: Supports Motility protein A in swimming motility; UniProtKB:Q56331
+          (motA, Motility protein A) in Treponema phagedenis provides a verified protein
+          exemplar.
+  edges:
+  - subject: swimming_motility_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: swimming_motility_trait
+    description: Motility protein A (motA, UniProtKB:Q56331) contributes to swimming
+      motility (associated with capability, correlate, different).
+    evidence:
+    - reference: DOI:10.1038/s41467-018-07802-w
+      snippet: However, the free-swimming capability of the different strains did
+        not correlate well to the spreading capability in soft agar.
+      notes: Supports the functional association between Motility protein A (UniProtKB:Q56331
+        in Treponema phagedenis) and swimming motility.

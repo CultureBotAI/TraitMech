@@ -56,3 +56,83 @@ curation_history:
     no exact glycine arylamidase activity class yet and the placeholder is reserved
     in proposals/metpo_traitmech_v47.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph glycine_arylamidase_activity_graph
+    with GENE_OR_PROTEIN node glycine_arylamidase_activity_protein_component and UniProtKB:P14175
+    exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: glycine_arylamidase_activity_graph
+  title: Protein component associated with glycine arylamidase activity
+  description: Literature-backed association between Glycine betaine/proline betaine
+    transport system ATP-binding protein ProV (UniProtKB:P14175) and glycine arylamidase
+    activity.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P14175 in Escherichia
+    coli (strain K12)) associated with glycine arylamidase activity while full multi-step
+    mechanistic curation remains future work.
+  nodes:
+  - node_id: glycine_arylamidase_activity_trait
+    label: glycine arylamidase activity
+    node_type: TRAIT
+    grounding: traitmech:000170
+    description: A physiological enzyme-activity phenotype in which a cell produces
+      active glycine arylamidase enzymes that hydrolyze glycine arylamide substrates.
+  - node_id: glycine_arylamidase_activity_protein_component
+    label: Glycine betaine/proline betaine transport system ATP-binding protein ProV
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Glycine betaine/proline betaine transport system
+      ATP-binding protein ProV) associated with glycine arylamidase activity.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - proV
+    protein_examples:
+    - uniprot_id: UniProtKB:P14175
+      protein_label: Glycine betaine/proline betaine transport system ATP-binding
+        protein ProV
+      gene_symbol: proV
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 204
+      sequence_version: 1
+      role: Characteristic protein component (proV, Glycine betaine/proline betaine
+        transport system ATP-binding protein ProV) associated with glycine arylamidase
+        activity in Escherichia coli (strain K12).
+      evidence:
+      - reference: DOI:10.1099/ijsem.0.006017
+        snippet: 'enzymatic activities are present for: α-galactosidase, N-acetyl-β-glucosaminidase,
+          arginine arylamidase, proline arylamidase, leucyl glycine arylamidase, phenylalanine
+          arylamidase, leucine arylamidase, tyrosine arylamidase, alanine arylamidase,
+          glycine arylamidase, histidine arylamidase, glutamyl glutamic acid arylamidase,
+          serine arylamidase, valine arylamidase, cysteine arylamidase, esterase,
+          esterase lipase, alpha-chymotrypsin'
+        notes: Supports Glycine betaine/proline betaine transport system ATP-binding
+          protein ProV in glycine arylamidase activity; UniProtKB:P14175 (proV, Glycine
+          betaine/proline betaine transport system ATP-binding protein ProV) in Escherichia
+          coli (strain K12) provides a verified protein exemplar.
+  edges:
+  - subject: glycine_arylamidase_activity_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: glycine_arylamidase_activity_trait
+    description: Glycine betaine/proline betaine transport system ATP-binding protein
+      ProV (proV, UniProtKB:P14175) contributes to glycine arylamidase activity (associated
+      with glucosaminidase, galactosidase, phenylalanine).
+    evidence:
+    - reference: DOI:10.1099/ijsem.0.006017
+      snippet: 'enzymatic activities are present for: α-galactosidase, N-acetyl-β-glucosaminidase,
+        arginine arylamidase, proline arylamidase, leucyl glycine arylamidase, phenylalanine
+        arylamidase, leucine arylamidase, tyrosine arylamidase, alanine arylamidase,
+        glycine arylamidase, histidine arylamidase, glutamyl glutamic acid arylamidase,
+        serine arylamidase, valine arylamidase, cysteine arylamidase, esterase, esterase
+        lipase, alpha-chymotrypsin'
+      notes: Supports the functional association between Glycine betaine/proline betaine
+        transport system ATP-binding protein ProV (UniProtKB:P14175 in Escherichia
+        coli (strain K12)) and glycine arylamidase activity.

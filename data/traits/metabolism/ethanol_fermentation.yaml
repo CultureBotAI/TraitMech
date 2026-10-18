@@ -80,7 +80,7 @@ causal_graphs:
       entry_status: REVIEWED
       proteome_id: UP000001173
       retrieved_on: '2026-08-23'
-      entry_version: 173
+      entry_version: 174
       sequence_version: 1
       role: Catalyzes the gateway decarboxylation of pyruvate to acetaldehyde in the
         ethanol-production pathway; this accession is a protein instance, not the
@@ -106,6 +106,28 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Enzyme (EC 1.1.1.1) reducing acetaldehyde to ethanol using NADH.
     grounding: GO:0004022
+    protein_examples:
+    - uniprot_id: UniProtKB:P00330
+      protein_label: Alcohol dehydrogenase 1
+      gene_symbol: ADH1
+      taxon_id: NCBITaxon:559292
+      taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's
+        yeast)
+      entry_status: REVIEWED
+      proteome_id: UP000002311
+      retrieved_on: '2026-10-17'
+      entry_version: 239
+      sequence_version: 5
+      role: Exemplar protein (ADH1, Alcohol dehydrogenase 1) representing alcohol
+        dehydrogenase in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's
+        yeast) for ethanol fermentation.
+      evidence:
+      - reference: DOI:10.5376/be.2024.14.0025
+        snippet: reduction of acetaldehyde to ethanol, a reaction catalyzed by alcohol
+          dehydrogenase (ADH)
+        notes: Supports alcohol dehydrogenase in ethanol fermentation; UniProtKB:P00330
+          (ADH1, Alcohol dehydrogenase 1) in Saccharomyces cerevisiae (strain ATCC
+          204508 / S288c) (Baker's yeast) provides a verified protein exemplar.
   - node_id: nadh
     label: NADH
     node_type: CHEMICAL
@@ -301,4 +323,11 @@ curation_history:
     declared exact synonym(s): ''glucose fermentation to ethanol''. Evidence is predicate-scoped
     in the versioned ontology snapshots; OAK cross-checked direct data, and OLS4 spot-checked
     release deltas and disputed hits.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:P06672
+    version metadata (entry_version=174, sequence_version=1); added UniProtKB:P00330
+    (ADH1) protein example to node alcohol_dehydrogenase.'
   llm_assisted: true

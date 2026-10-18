@@ -50,3 +50,64 @@ curation_history:
     duplicate review covering ignored and hidden files; METPO has no exact amylase
     activity class yet.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph amylase_activity_graph
+    with GENE_OR_PROTEIN node amylase_activity_protein_component and UniProtKB:P06278
+    exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: amylase_activity_graph
+  title: Protein component associated with amylase activity
+  description: Literature-backed association between Alpha-amylase (UniProtKB:P06278)
+    and amylase activity.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P06278 in Bacillus
+    licheniformis) associated with amylase activity while full multi-step mechanistic
+    curation remains future work.
+  nodes:
+  - node_id: amylase_activity_trait
+    label: amylase activity
+    node_type: TRAIT
+    grounding: traitmech:000162
+    description: A physiological enzyme-activity phenotype in which a cell produces
+      active amylolytic enzymes that hydrolyze starch.
+  - node_id: amylase_activity_protein_component
+    label: Alpha-amylase
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Alpha-amylase) associated with amylase activity.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - amyS
+    protein_examples:
+    - uniprot_id: UniProtKB:P06278
+      protein_label: Alpha-amylase
+      gene_symbol: amyS
+      taxon_id: NCBITaxon:1402
+      taxon_label: Bacillus licheniformis
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 174
+      sequence_version: 1
+      role: Characteristic protein component (amyS, Alpha-amylase) associated with
+        amylase activity in Bacillus licheniformis.
+      evidence:
+      - reference: DOI:10.1007/s00018-023-04812-w
+        snippet: the Bacteroides ovatus (Bo) extracellular α-amylase, BoGH13ASus
+        notes: Supports Alpha-amylase in amylase activity; UniProtKB:P06278 (amyS,
+          Alpha-amylase) in Bacillus licheniformis provides a verified protein exemplar.
+  edges:
+  - subject: amylase_activity_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: amylase_activity_trait
+    description: Alpha-amylase (amyS, UniProtKB:P06278) contributes to amylase activity
+      (associated with extracellular, bacteroides, bogh13asus).
+    evidence:
+    - reference: DOI:10.1007/s00018-023-04812-w
+      snippet: the Bacteroides ovatus (Bo) extracellular α-amylase, BoGH13ASus
+      notes: Supports the functional association between Alpha-amylase (UniProtKB:P06278
+        in Bacillus licheniformis) and amylase activity.

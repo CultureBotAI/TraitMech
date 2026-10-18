@@ -91,3 +91,73 @@ curation_history:
     Corrected-paper scope retained; mechanisms and mappings remain open. Timestamp
     is the observed UTC decision.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph epibiotic_bacterial_predation_graph
+    with GENE_OR_PROTEIN node epibiotic_bacterial_predation_protein_component and
+    UniProtKB:Q07766 exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: epibiotic_bacterial_predation_graph
+  title: Protein component associated with epibiotic bacterial predation
+  description: Literature-backed association between CRISPR-associated protein Cas5
+    (UniProtKB:Q07766) and epibiotic bacterial predation.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q07766 in Myxococcus
+    xanthus (strain DK1622)) associated with epibiotic bacterial predation while full
+    multi-step mechanistic curation remains future work.
+  nodes:
+  - node_id: epibiotic_bacterial_predation_trait
+    label: epibiotic bacterial predation
+    node_type: TRAIT
+    grounding: traitmech:000697
+    description: A predatory bacterial phenotype in which a bacterium kills and obtains
+      nutrients from bacterial prey while attached and growing externally, without
+      its cell body entering the prey cell.
+  - node_id: epibiotic_bacterial_predation_protein_component
+    label: CRISPR-associated protein Cas5
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (CRISPR-associated protein Cas5) associated with
+      epibiotic bacterial predation.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - devS
+    protein_examples:
+    - uniprot_id: UniProtKB:Q07766
+      protein_label: CRISPR-associated protein Cas5
+      gene_symbol: devS
+      taxon_id: NCBITaxon:246197
+      taxon_label: Myxococcus xanthus (strain DK1622)
+      entry_status: REVIEWED
+      proteome_id: UP000002402
+      retrieved_on: '2026-10-17'
+      entry_version: 113
+      sequence_version: 1
+      role: Characteristic protein component (devS, CRISPR-associated protein Cas5)
+        associated with epibiotic bacterial predation in Myxococcus xanthus (strain
+        DK1622).
+      evidence:
+      - reference: DOI:10.1038/s41467-024-48042-5
+        snippet: Bdellovibrio exovorus is an obligate epibiotic predator that attaches
+          on the prey cell surface, where it grows and proliferates.
+        notes: Supports CRISPR-associated protein Cas5 in epibiotic bacterial predation;
+          UniProtKB:Q07766 (devS, CRISPR-associated protein Cas5) in Myxococcus xanthus
+          (strain DK1622) provides a verified protein exemplar.
+  edges:
+  - subject: epibiotic_bacterial_predation_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: epibiotic_bacterial_predation_trait
+    description: CRISPR-associated protein Cas5 (devS, UniProtKB:Q07766) contributes
+      to epibiotic bacterial predation (associated with bdellovibrio, proliferates,
+      epibiotic).
+    evidence:
+    - reference: DOI:10.1038/s41467-024-48042-5
+      snippet: Bdellovibrio exovorus is an obligate epibiotic predator that attaches
+        on the prey cell surface, where it grows and proliferates.
+      notes: Supports the functional association between CRISPR-associated protein
+        Cas5 (UniProtKB:Q07766 in Myxococcus xanthus (strain DK1622)) and epibiotic
+        bacterial predation.

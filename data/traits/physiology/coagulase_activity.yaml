@@ -41,3 +41,69 @@ curation_history:
   changes: Added the active METPO coagulase activity class as a DOI-backed TraitRecord
     after a repository-wide duplicate review covering ignored and hidden files.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph coagulase_activity_graph
+    with GENE_OR_PROTEIN node coagulase_activity_protein_component and UniProtKB:P0C1U8
+    exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: coagulase_activity_graph
+  title: Protein component associated with coagulase activity
+  description: Literature-backed association between Glutamyl endopeptidase (UniProtKB:P0C1U8)
+    and coagulase activity.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P0C1U8 in Staphylococcus
+    aureus) associated with coagulase activity while full multi-step mechanistic curation
+    remains future work.
+  nodes:
+  - node_id: coagulase_activity_trait
+    label: coagulase activity
+    node_type: TRAIT
+    grounding: METPO:1007089
+    description: A physiological enzyme-activity phenotype in which a cell produces
+      coagulase factors that activate prothrombin and convert fibrinogen to fibrin,
+      clotting blood plasma.
+  - node_id: coagulase_activity_protein_component
+    label: Glutamyl endopeptidase
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Glutamyl endopeptidase) associated with coagulase
+      activity.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - sspA
+    protein_examples:
+    - uniprot_id: UniProtKB:P0C1U8
+      protein_label: Glutamyl endopeptidase
+      gene_symbol: sspA
+      taxon_id: NCBITaxon:1280
+      taxon_label: Staphylococcus aureus
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 96
+      sequence_version: 1
+      role: Characteristic protein component (sspA, Glutamyl endopeptidase) associated
+        with coagulase activity in Staphylococcus aureus.
+      evidence:
+      - reference: DOI:10.1371/journal.ppat.1001036
+        snippet: Clinical isolates of the human pathogen Staphylococcus aureus secrete
+          coagulase (Coa), a polypeptide that binds to and activates prothrombin
+        notes: Supports Glutamyl endopeptidase in coagulase activity; UniProtKB:P0C1U8
+          (sspA, Glutamyl endopeptidase) in Staphylococcus aureus provides a verified
+          protein exemplar.
+  edges:
+  - subject: coagulase_activity_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: coagulase_activity_trait
+    description: Glutamyl endopeptidase (sspA, UniProtKB:P0C1U8) contributes to coagulase
+      activity (associated with staphylococcus, polypeptide, prothrombin).
+    evidence:
+    - reference: DOI:10.1371/journal.ppat.1001036
+      snippet: Clinical isolates of the human pathogen Staphylococcus aureus secrete
+        coagulase (Coa), a polypeptide that binds to and activates prothrombin
+      notes: Supports the functional association between Glutamyl endopeptidase (UniProtKB:P0C1U8
+        in Staphylococcus aureus) and coagulase activity.

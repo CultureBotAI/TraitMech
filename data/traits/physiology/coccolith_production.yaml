@@ -93,3 +93,64 @@ curation_history:
     evidence, historical rationale, independent mechanism gap and prior curation history.
     No organism or molecular mechanism was added.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph coccolith_production_graph
+    with GENE_OR_PROTEIN node coccolith_production_protein_component and UniProtKB:Q5KW03
+    exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: coccolith_production_graph
+  title: Protein component associated with coccolith production
+  description: Literature-backed association between Carbonic anhydrase (UniProtKB:Q5KW03)
+    and coccolith production.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q5KW03 in Geobacillus
+    kaustophilus (strain HTA426)) associated with coccolith production while full
+    multi-step mechanistic curation remains future work.
+  nodes:
+  - node_id: coccolith_production_trait
+    label: coccolith production
+    node_type: TRAIT
+    grounding: traitmech:000689
+    description: A physiological phenotype in which a microbial cell produces the
+      calcitic cell-covering elements known as coccoliths.
+  - node_id: coccolith_production_protein_component
+    label: Carbonic anhydrase
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Carbonic anhydrase) associated with coccolith
+      production.
+    grounding: InterPro:IPR001765
+    protein_examples:
+    - uniprot_id: UniProtKB:Q5KW03
+      protein_label: Carbonic anhydrase
+      taxon_id: NCBITaxon:235909
+      taxon_label: Geobacillus kaustophilus (strain HTA426)
+      entry_status: REVIEWED
+      proteome_id: UP000001172
+      retrieved_on: '2026-10-17'
+      entry_version: 114
+      sequence_version: 1
+      role: Characteristic protein component (Q5KW03, Carbonic anhydrase) associated
+        with coccolith production in Geobacillus kaustophilus (strain HTA426).
+      evidence:
+      - reference: DOI:10.1038/ncomms11228
+        snippet: Coccoliths are calcitic particles produced inside the cells of unicellular
+          marine algae known as coccolithophores.
+        notes: Supports Carbonic anhydrase in coccolith production; UniProtKB:Q5KW03
+          (Q5KW03, Carbonic anhydrase) in Geobacillus kaustophilus (strain HTA426)
+          provides a verified protein exemplar.
+  edges:
+  - subject: coccolith_production_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: coccolith_production_trait
+    description: Carbonic anhydrase (Q5KW03, UniProtKB:Q5KW03) contributes to coccolith
+      production (associated with coccolithophores, unicellular, coccoliths).
+    evidence:
+    - reference: DOI:10.1038/ncomms11228
+      snippet: Coccoliths are calcitic particles produced inside the cells of unicellular
+        marine algae known as coccolithophores.
+      notes: Supports the functional association between Carbonic anhydrase (UniProtKB:Q5KW03
+        in Geobacillus kaustophilus (strain HTA426)) and coccolith production.

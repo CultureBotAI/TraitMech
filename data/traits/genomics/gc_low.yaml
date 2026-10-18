@@ -79,6 +79,36 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Nucleotide biases of DNA replication and repair enzymes contributing
       to genome base composition.
+  - node_id: gc_low_protein_component
+    label: Chromosomal replication initiator protein DnaA
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Chromosomal replication initiator protein DnaA)
+      associated with GC low.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - dnaA
+    protein_examples:
+    - uniprot_id: UniProtKB:P05648
+      protein_label: Chromosomal replication initiator protein DnaA
+      gene_symbol: dnaA
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
+      entry_status: REVIEWED
+      proteome_id: UP000001570
+      retrieved_on: '2026-10-17'
+      entry_version: 178
+      sequence_version: 1
+      role: Characteristic protein component (dnaA, Chromosomal replication initiator
+        protein DnaA) associated with GC low in Bacillus subtilis (strain 168).
+      evidence:
+      - reference: DOI:10.1371/journal.pgen.1001107
+        snippet: The genomic GC-content of bacteria varies dramatically, from less
+          than 20% to more than 70%
+        notes: Supports Chromosomal replication initiator protein DnaA in GC low;
+          UniProtKB:P05648 (dnaA, Chromosomal replication initiator protein DnaA)
+          in Bacillus subtilis (strain 168) provides a verified protein exemplar.
   edges:
   - subject: moderate_mutation_bias
     predicate: contributes to
@@ -169,6 +199,17 @@ causal_graphs:
         the AT-enriching C>A/T pattern as a specific bacterial mutational-spectrum
         context rather than a direct cause of the METPO GC_42.65_57.0 bin.
     predicate_id: rdfs:subClassOf
+  - subject: gc_low_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: gc_low_trait
+    description: Chromosomal replication initiator protein DnaA (dnaA, UniProtKB:P05648)
+      contributes to GC low (associated with dramatically, bacteria, content).
+    evidence:
+    - reference: DOI:10.1371/journal.pgen.1001107
+      snippet: The genomic GC-content of bacteria varies dramatically, from
+      notes: Supports the functional association between Chromosomal replication initiator
+        protein DnaA (UniProtKB:P05648 in Bacillus subtilis (strain 168)) and GC low.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.816924+00:00'
   curator: seed_from_metpo
@@ -256,4 +297,10 @@ curation_history:
   changes: 'Addressed PR #664 adversarial review: replaced the copied GC-low connector
     snippet with exact Ruis et al. wording defining a mutational spectrum as combined
     context-dependent substitution signatures.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    gc_low_protein_component with UniProtKB:P05648 (dnaA) exemplar.'
   llm_assisted: true

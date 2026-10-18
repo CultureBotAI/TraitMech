@@ -89,3 +89,73 @@ curation_history:
     and structured METPO review found no exact record. Reserved METPO:1060900 in v532;
     existing records unchanged.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph synnema_formation_graph
+    with GENE_OR_PROTEIN node synnema_formation_protein_component and UniProtKB:Q31IK3
+    exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: synnema_formation_graph
+  title: Protein component associated with synnema formation
+  description: Literature-backed association between Ribulose bisphosphate carboxylase
+    (UniProtKB:Q31IK3) and synnema formation.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q31IK3 in Hydrogenovibrio
+    crunogenus (strain DSM 25203 / XCL-2) (Thiomicrospira crunogena)) associated with
+    synnema formation while full multi-step mechanistic curation remains future work.
+  nodes:
+  - node_id: synnema_formation_trait
+    label: synnema formation
+    node_type: TRAIT
+    grounding: traitmech:000656
+    description: A morphological phenotype in which fungal hyphae aggregate into an
+      erect, stalk-like asexual reproductive structure, with conidiogenous elements
+      borne from the stalk in its fertile form.
+  - node_id: synnema_formation_protein_component
+    label: Ribulose bisphosphate carboxylase
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Ribulose bisphosphate carboxylase) associated
+      with synnema formation.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - cbbM
+    protein_examples:
+    - uniprot_id: UniProtKB:Q31IK3
+      protein_label: Ribulose bisphosphate carboxylase
+      gene_symbol: cbbM
+      taxon_id: NCBITaxon:317025
+      taxon_label: Hydrogenovibrio crunogenus (strain DSM 25203 / XCL-2) (Thiomicrospira
+        crunogena)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 111
+      sequence_version: 1
+      role: Characteristic protein component (cbbM, Ribulose bisphosphate carboxylase)
+        associated with synnema formation in Hydrogenovibrio crunogenus (strain DSM
+        25203 / XCL-2) (Thiomicrospira crunogena).
+      evidence:
+      - reference: DOI:10.3390/ijms21186660
+        snippet: deletion of the brlA gene blocked conidiation but not the formation
+          of synnemata formed by aggregation of hyphal mycelia.
+        notes: Supports Ribulose bisphosphate carboxylase in synnema formation; UniProtKB:Q31IK3
+          (cbbM, Ribulose bisphosphate carboxylase) in Hydrogenovibrio crunogenus
+          (strain DSM 25203 / XCL-2) (Thiomicrospira crunogena) provides a verified
+          protein exemplar.
+  edges:
+  - subject: synnema_formation_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: synnema_formation_trait
+    description: Ribulose bisphosphate carboxylase (cbbM, UniProtKB:Q31IK3) contributes
+      to synnema formation (associated with aggregation, conidiation, synnemata).
+    evidence:
+    - reference: DOI:10.3390/ijms21186660
+      snippet: deletion of the brlA gene blocked conidiation but not the formation
+        of synnemata formed by aggregation of hyphal mycelia.
+      notes: Supports the functional association between Ribulose bisphosphate carboxylase
+        (UniProtKB:Q31IK3 in Hydrogenovibrio crunogenus (strain DSM 25203 / XCL-2)
+        (Thiomicrospira crunogena)) and synnema formation.

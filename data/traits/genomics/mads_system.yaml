@@ -147,6 +147,37 @@ causal_graphs:
     grounding: traitmech:000209
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
+  - node_id: mads_system_protein_component
+    label: Adenine-specific methyltransferase PglX
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Adenine-specific methyltransferase PglX) associated
+      with MADS system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - pglX
+    protein_examples:
+    - uniprot_id: UniProtKB:Q8CJM2
+      protein_label: Adenine-specific methyltransferase PglX
+      gene_symbol: pglX
+      taxon_id: NCBITaxon:100226
+      taxon_label: Streptomyces coelicolor (strain ATCC BAA-471 / A3(2) / M145)
+      entry_status: REVIEWED
+      proteome_id: UP000001973
+      retrieved_on: '2026-10-17'
+      entry_version: 102
+      sequence_version: 1
+      role: Characteristic protein component (pglX, Adenine-specific methyltransferase
+        PglX) associated with MADS system in Streptomyces coelicolor (strain ATCC
+        BAA-471 / A3(2) / M145).
+      evidence:
+      - reference: DOI:10.1016/j.chom.2024.07.005
+        snippet: MADS interacts with a CRISPR-Cas system in its native host to provide
+          robust and durable resistance against phages
+        notes: Supports Adenine-specific methyltransferase PglX in MADS system; UniProtKB:Q8CJM2
+          (pglX, Adenine-specific methyltransferase PglX) in Streptomyces coelicolor
+          (strain ATCC BAA-471 / A3(2) / M145) provides a verified protein exemplar.
   edges:
   - subject: mads_locus
     predicate: contributes to
@@ -259,6 +290,24 @@ causal_graphs:
         synergistically by disrupting phage cooperation
       notes: The DefenseFinder article registry maps the named MADS system to the
         Maestri et al. preprint.
+  - subject: mads_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: mads_system_trait
+    description: Adenine-specific methyltransferase PglX (pglX, UniProtKB:Q8CJM2)
+      contributes to MADS system (associated with trimmed, custom, einsi).
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| RM_Type_IIG__Type_IIG_1 | | RM_Type_IIG | Custom | 300 | | RM_Type_IIG__Type_IIG_2
+        | | RM_Type_IIG | Custom | 300 | | RM_Type_IIG__Type_IIG_3 | | RM_Type_IIG
+        | Custom | 300 | | RM_Type_IIG__Type_IIG_4 | | RM_Type_IIG | Custom | 300
+        | | RM_Type_IIG__Type_IIG_5 | | RM_Type_IIG | Custom | 300 | | RM_Type_IIG__Type_IIG_FAM_0.einsi_trimmed
+        | | RM_Type_IIG | Custom | 300 | | RM_Type_IIG__Type_IIG_FAM_1.einsi_trimmed
+        | | RM_Type_IIG | Custom | 300 | | RM_Type_IIG__Type_IIG_FAM_2.einsi_trimmed
+        | | RM_Type_IIG | Custom | 300 |'
+      notes: Supports the functional association between Adenine-specific methyltransferase
+        PglX (UniProtKB:Q8CJM2 in Streptomyces coelicolor (strain ATCC BAA-471 / A3(2)
+        / M145)) and MADS system.
 discussions:
 - discussion_id: mads-profile-activity-gap
   prompt: Resolve MADS subtype boundaries, MADS3-4 relationships, and Mad1-Mad8 profile-to-activity
@@ -293,4 +342,10 @@ curation_history:
     system after an ignored-and-hidden duplicate review found no exact live TraitMech,
     METPO, history, or prior proposal record; the replacement placeholder is reserved
     in proposals/metpo_traitmech_v247.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    mads_system_protein_component with UniProtKB:Q8CJM2 (pglX) exemplar.'
   llm_assisted: true

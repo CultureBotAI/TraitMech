@@ -66,6 +66,36 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Homeoviscous adaptation preserving membrane fluidity at elevated
       hydrostatic pressure.
+  - node_id: obligately_piezophilic_protein_component
+    label: Chaperone protein DnaK
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Chaperone protein DnaK) associated with obligately
+      piezophilic.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - dnaK
+    protein_examples:
+    - uniprot_id: UniProtKB:P0A6Y8
+      protein_label: Chaperone protein DnaK
+      gene_symbol: dnaK
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 183
+      sequence_version: 2
+      role: Characteristic protein component (dnaK, Chaperone protein DnaK) associated
+        with obligately piezophilic in Escherichia coli (strain K12).
+      evidence:
+      - reference: DOI:10.3389/fmolb.2022.1058381
+        snippet: Piezophiles, microorganisms adapted to high pressure, have developed
+          key strategies to maintain the integrity of their lipid membrane
+        notes: Supports Chaperone protein DnaK in obligately piezophilic; UniProtKB:P0A6Y8
+          (dnaK, Chaperone protein DnaK) in Escherichia coli (strain K12) provides
+          a verified protein exemplar.
   edges:
   - subject: obligate_hhp
     predicate: causes
@@ -141,6 +171,18 @@ causal_graphs:
         as a high-level bridge from high-pressure membrane adaptation to HHP-dependent
         machinery.
     predicate_id: RO:0002326
+  - subject: obligately_piezophilic_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: obligate_piezophilic_trait
+    description: Chaperone protein DnaK (dnaK, UniProtKB:P0A6Y8) contributes to obligately
+      piezophilic (associated with microorganisms, piezophiles, preference).
+    evidence:
+    - reference: DOI:10.3389/fmolb.2022.1058381
+      snippet: Microorganisms adapted to HHP are usually known as piezophiles, referring
+        to their preference for high pressure
+      notes: Supports the functional association between Chaperone protein DnaK (UniProtKB:P0A6Y8
+        in Escherichia coli (strain K12)) and obligately piezophilic.
 curation_history:
 - timestamp: '2026-05-28T00:00:00Z'
   curator: claude
@@ -204,4 +246,10 @@ curation_history:
   changes: 'Addressed PR #664 adversarial review issue #680: replaced the subjectless
     HHP lipid-packing connector snippet with exact Tamby et al. wording that names
     unsaturation and branching as membrane adaptations to HHP and extreme temperature.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    obligately_piezophilic_protein_component with UniProtKB:P0A6Y8 (dnaK) exemplar.'
   llm_assisted: true

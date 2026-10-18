@@ -82,6 +82,42 @@ causal_graphs:
     grounding: traitmech:000496
     description: Possession of a genome-encoded Type IV modification-dependent restriction
       system.
+  - node_id: pvurts1i_system_protein_component
+    label: Type I restriction enzyme SsaAORF53P endonuclease subunit
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Type I restriction enzyme SsaAORF53P endonuclease
+      subunit) associated with PvuRts1I system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - hsdR
+    protein_examples:
+    - uniprot_id: UniProtKB:Q4A127
+      protein_label: Type I restriction enzyme SsaAORF53P endonuclease subunit
+      gene_symbol: hsdR
+      taxon_id: NCBITaxon:342451
+      taxon_label: Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
+        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+      entry_status: REVIEWED
+      proteome_id: UP000006371
+      retrieved_on: '2026-10-17'
+      entry_version: 116
+      sequence_version: 1
+      role: Characteristic protein component (hsdR, Type I restriction enzyme SsaAORF53P
+        endonuclease subunit) associated with PvuRts1I system in Staphylococcus saprophyticus
+        subsp. saprophyticus (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292
+        / S-41).
+      evidence:
+      - reference: DOI:10.1093/nar/gkr607
+        snippet: PvuRts1I is a modification-dependent restriction endonuclease that
+          recognizes 5-hydroxymethylcytosine (5hmC) as well as 5-glucosylhydroxymethylcytosine
+          (5ghmC) in double-stranded DNA.
+        notes: Supports Type I restriction enzyme SsaAORF53P endonuclease subunit
+          in PvuRts1I system; UniProtKB:Q4A127 (hsdR, Type I restriction enzyme SsaAORF53P
+          endonuclease subunit) in Staphylococcus saprophyticus subsp. saprophyticus
+          (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) provides
+          a verified protein exemplar.
   edges:
   - subject: pvurts1i_family_locus
     predicate: enables
@@ -154,6 +190,21 @@ causal_graphs:
         Type IV, as distinct from the familiar modification-blocked Types I-III.
       notes: Loenen and Raleigh define the Type IV class as modification-dependent
         restriction enzymes.
+  - subject: pvurts1i_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: pvurts1i_system_trait
+    description: Type I restriction enzyme SsaAORF53P endonuclease subunit (hsdR,
+      UniProtKB:Q4A127) contributes to PvuRts1I system (associated with endonuclease,
+      nucleotides, restriction).
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: '| McrBC | 10\.1093/emboj/20\.12\.3210 | The McrBC restriction endonuclease
+        assembles into a ring structure in the presence of G nucleotides |'
+      notes: Supports the functional association between Type I restriction enzyme
+        SsaAORF53P endonuclease subunit (UniProtKB:Q4A127 in Staphylococcus saprophyticus
+        subsp. saprophyticus (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292
+        / S-41)) and PvuRts1I system.
 discussions:
 - discussion_id: pvurts1i-defensefinder-model-gap
   prompt: Resolve PvuRts1I-family breadth, 5hmC and 5ghmC target selectivity across
@@ -225,4 +276,10 @@ curation_history:
   changes: 'Addressed PR #1514 adversarial review issue #1515 by tightening the PvuRts1I
     system definition to match the Wang et al. 3''-side cleavage evidence without
     claiming a fixed cleavage distance.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    pvurts1i_system_protein_component with UniProtKB:Q4A127 (hsdR) exemplar.'
   llm_assisted: true

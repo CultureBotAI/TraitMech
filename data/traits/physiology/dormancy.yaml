@@ -72,6 +72,26 @@ causal_graphs:
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: This umbrella combines unrelated toxin and antitoxin families;
       the graph evidence does not identify one exact protein-family term.
+    protein_examples:
+    - uniprot_id: UniProtKB:O50462
+      protein_label: Antitoxin RelB
+      gene_symbol: relB
+      taxon_id: NCBITaxon:83332
+      taxon_label: Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)
+      entry_status: REVIEWED
+      proteome_id: UP000001584
+      retrieved_on: '2026-10-17'
+      entry_version: 117
+      sequence_version: 1
+      role: Exemplar protein (relB, Antitoxin RelB) representing toxin-antitoxin modules
+        in Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv) for dormancy.
+      evidence:
+      - reference: DOI:10.3389/fmicb.2024.1386179
+        snippet: environmental stress might govern the formation of 100S ribosomes,
+          which were only detectable during periods of protein synthesis arrest
+        notes: Supports toxin-antitoxin modules in dormancy; UniProtKB:O50462 (relB,
+          Antitoxin RelB) in Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)
+          provides a verified protein exemplar.
   - node_id: ribosome_hibernation_factors
     label: ribosome hibernation factors (RMF/HPF/RaiA)
     node_type: GENE_OR_PROTEIN
@@ -79,6 +99,26 @@ causal_graphs:
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: RMF, HPF, and RaiA are distinct ribosome-associated protein families,
       so no single semantic family term represents the aggregate node.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0AFW2
+      protein_label: Ribosome modulation factor
+      gene_symbol: rmf
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 137
+      sequence_version: 1
+      role: Exemplar protein (rmf, Ribosome modulation factor) representing ribosome
+        hibernation factors (RMF/HPF/RaiA) in Escherichia coli (strain K12) for dormancy.
+      evidence:
+      - reference: DOI:10.3389/fmicb.2024.1386179
+        snippet: environmental stress might govern the formation of 100S ribosomes,
+          which were only detectable during periods of protein synthesis arrest
+        notes: Supports ribosome hibernation factors (RMF/HPF/RaiA) in dormancy; UniProtKB:P0AFW2
+          (rmf, Ribosome modulation factor) in Escherichia coli (strain K12) provides
+          a verified protein exemplar.
   - node_id: protein_synthesis
     label: protein synthesis
     node_type: BIOLOGICAL_PROCESS
@@ -107,7 +147,7 @@ causal_graphs:
       taxon_label: Mycobacterium tuberculosis H37Rv
       entry_status: REVIEWED
       retrieved_on: '2026-08-24'
-      entry_version: 53
+      entry_version: 54
       sequence_version: 1
       role: H37Rv RpfB component of the Rpf family that contributes to recovery from
         dormancy; it does not denote all five paralogues.
@@ -254,4 +294,12 @@ curation_history:
   action: CONNECT_CAUSAL_GRAPH_COMPONENTS
   changes: 'Resolved issue #183 graph fragmentation (2 components to 1) with one public-source,
     verbatim-snippet-backed connector. No paid research service was called.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:P9WG29
+    version metadata (entry_version=54, sequence_version=1); added UniProtKB:O50462
+    (relB) protein example to node toxin_antitoxin_modules; added UniProtKB:P0AFW2
+    (rmf) protein example to node ribosome_hibernation_factors.'
   llm_assisted: true

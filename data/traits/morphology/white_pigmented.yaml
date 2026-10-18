@@ -54,6 +54,28 @@ causal_graphs:
     - crtM
     - crtN
     operon: crtOPQMN
+    protein_examples:
+    - uniprot_id: UniProtKB:Q9RGZ5
+      protein_label: Na(+)/H(+) antiporter subunit A
+      gene_symbol: mrpA
+      taxon_id: NCBITaxon:398511
+      taxon_label: Alkalihalophilus pseudofirmus (strain ATCC BAA-2126 / JCM 17055
+        / OF4) (Bacillus pseudofirmus)
+      entry_status: REVIEWED
+      proteome_id: UP000001544
+      retrieved_on: '2026-10-17'
+      entry_version: 115
+      sequence_version: 2
+      role: Exemplar protein (mrpA, Na(+)/H(+) antiporter subunit A) representing
+        CrtOPQMN staphyloxanthin enzyme module in Alkalihalophilus pseudofirmus (strain
+        ATCC BAA-2126 / JCM 17055 / OF4) (Bacillus pseudofirmus) for white pigmented.
+      evidence:
+      - reference: DOI:10.2147/IDR.S49039
+        snippet: white-colony phenotype actually lacked the crtOPQMN operon
+        notes: Supports CrtOPQMN staphyloxanthin enzyme module in white pigmented;
+          UniProtKB:Q9RGZ5 (mrpA, Na(+)/H(+) antiporter subunit A) in Alkalihalophilus
+          pseudofirmus (strain ATCC BAA-2126 / JCM 17055 / OF4) (Bacillus pseudofirmus)
+          provides a verified protein exemplar.
   - node_id: staphyloxanthin_biosynthesis
     label: staphyloxanthin biosynthesis
     node_type: BIOLOGICAL_PROCESS
@@ -95,6 +117,26 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Alternative sigma factor B; positive regulator of staphyloxanthin
       biosynthesis genes.
+    protein_examples:
+    - uniprot_id: UniProtKB:P9WGI5
+      protein_label: RNA polymerase sigma factor SigB
+      gene_symbol: sigB
+      taxon_id: NCBITaxon:83332
+      taxon_label: Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)
+      entry_status: REVIEWED
+      proteome_id: UP000001584
+      retrieved_on: '2026-10-17'
+      entry_version: 57
+      sequence_version: 1
+      role: Exemplar protein (sigB, RNA polymerase sigma factor SigB) representing
+        SigB (sigma factor B) in Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)
+        for white pigmented.
+      evidence:
+      - reference: DOI:10.2147/IDR.S49039
+        snippet: white-colony phenotype actually lacked the crtOPQMN operon
+        notes: Supports SigB (sigma factor B) in white pigmented; UniProtKB:P9WGI5
+          (sigB, RNA polymerase sigma factor SigB) in Mycobacterium tuberculosis (strain
+          ATCC 25618 / H37Rv) provides a verified protein exemplar.
   - node_id: glmS
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: GlmS is a contextual metabolic example and not a universal determinant
@@ -103,6 +145,25 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Glucosamine-6-phosphate synthase; transcriptional upregulator of
       sigB.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q8NVE6
+      protein_label: Glutamine--fructose-6-phosphate aminotransferase [isomerizing]
+      gene_symbol: glmS
+      taxon_id: NCBITaxon:196620
+      taxon_label: Staphylococcus aureus (strain MW2)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 125
+      sequence_version: 2
+      role: Exemplar protein (glmS, Glutamine--fructose-6-phosphate aminotransferase
+        [isomerizing]) representing GlmS in Staphylococcus aureus (strain MW2) for
+        white pigmented.
+      evidence:
+      - reference: DOI:10.2147/IDR.S49039
+        snippet: white-colony phenotype actually lacked the crtOPQMN operon
+        notes: Supports GlmS in white pigmented; UniProtKB:Q8NVE6 (glmS, Glutamine--fructose-6-phosphate
+          aminotransferase [isomerizing]) in Staphylococcus aureus (strain MW2) provides
+          a verified protein exemplar.
   edges:
   - subject: staphyloxanthin_enzyme_module
     predicate: catalyzes
@@ -329,4 +390,12 @@ curation_history:
   changes: Added a mutant-specific Serratia marcescens white-colony example from DOI:10.3389/fmicb.2021.793202,
     explicitly retaining SCQ1 delta-slyA context in the note; verified the current
     species taxon and label through NCBI Taxonomy.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q9RGZ5 (mrpA)
+    protein example to node staphyloxanthin_enzyme_module; added UniProtKB:P9WGI5
+    (sigB) protein example to node sigB; added UniProtKB:Q8NVE6 (glmS) protein example
+    to node glmS.'
   llm_assisted: true

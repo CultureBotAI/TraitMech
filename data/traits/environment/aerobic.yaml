@@ -71,6 +71,25 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Dehydrogenases (e.g. NADH dehydrogenases) that feed electrons into
       the respiratory chain.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0A9P0
+      protein_label: Dihydrolipoyl dehydrogenase
+      gene_symbol: lpdA
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 161
+      sequence_version: 2
+      role: Exemplar protein (lpdA, Dihydrolipoyl dehydrogenase) representing substrate
+        dehydrogenases in Escherichia coli (strain K12) for aerobic.
+      evidence:
+      - reference: PMID:21183663
+        snippet: Bacillus subtilis is an aerobic spore-forming Gram-positive bacterium
+        notes: Supports substrate dehydrogenases in aerobic; UniProtKB:P0A9P0 (lpdA,
+          Dihydrolipoyl dehydrogenase) in Escherichia coli (strain K12) provides a
+          verified protein exemplar.
   - node_id: quinone_pool
     label: quinone pool
     node_type: CHEMICAL
@@ -84,6 +103,25 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Respiratory quinol/cytochrome oxidases that reduce O2 to water as
       the final ETC step.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0ABI8
+      protein_label: Cytochrome bo(3) ubiquinol oxidase subunit 1
+      gene_symbol: cyoB
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 154
+      sequence_version: 1
+      role: Exemplar protein (cyoB, Cytochrome bo(3) ubiquinol oxidase subunit 1)
+        representing terminal oxidases in Escherichia coli (strain K12) for aerobic.
+      evidence:
+      - reference: DOI:10.1016/j.celrep.2023.112444
+        snippet: terminal oxidases transfer electrons from the ETC to O2
+        notes: Supports terminal oxidases in aerobic; UniProtKB:P0ABI8 (cyoB, Cytochrome
+          bo(3) ubiquinol oxidase subunit 1) in Escherichia coli (strain K12) provides
+          a verified protein exemplar.
   - node_id: proton_motive_force
     label: proton motive force
     node_type: STATE
@@ -110,6 +148,28 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Superoxide dismutases, catalases and peroxidases that detoxify reactive
       oxygen species.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q4A0Q1
+      protein_label: Oxygen-dependent choline dehydrogenase
+      gene_symbol: betA
+      taxon_id: NCBITaxon:342451
+      taxon_label: Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
+        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+      entry_status: REVIEWED
+      proteome_id: UP000006371
+      retrieved_on: '2026-10-17'
+      entry_version: 127
+      sequence_version: 1
+      role: Exemplar protein (betA, Oxygen-dependent choline dehydrogenase) representing
+        ROS-scavenging enzymes in Staphylococcus saprophyticus subsp. saprophyticus
+        (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) for aerobic.
+      evidence:
+      - reference: DOI:10.1038/s41579-021-00583-y
+        snippet: vulnerable to direct poisoning by molecular oxygen and ROS
+        notes: Supports ROS-scavenging enzymes in aerobic; UniProtKB:Q4A0Q1 (betA,
+          Oxygen-dependent choline dehydrogenase) in Staphylococcus saprophyticus
+          subsp. saprophyticus (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC
+          7292 / S-41) provides a verified protein exemplar.
   edges:
   - subject: aerobic_trait
     predicate: depends on
@@ -337,4 +397,12 @@ curation_history:
   changes: 'Ontology exact-match review (2026-08-25): approved exact xref(s): PATO:0001455.
     Evidence is predicate-scoped in the versioned ontology snapshots; OAK cross-checked
     direct data, and OLS4 spot-checked release deltas and disputed hits.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P0A9P0 (lpdA)
+    protein example to node substrate_dehydrogenases; added UniProtKB:P0ABI8 (cyoB)
+    protein example to node terminal_oxidases; added UniProtKB:Q4A0Q1 (betA) protein
+    example to node ros_scavenging_enzymes.'
   llm_assisted: true

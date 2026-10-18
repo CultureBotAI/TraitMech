@@ -78,7 +78,7 @@ causal_graphs:
       taxon_label: Aliivibrio fischeri
       entry_status: REVIEWED
       retrieved_on: '2026-08-24'
-      entry_version: 97
+      entry_version: 98
       sequence_version: 1
       role: LuxI synthesizes the 3-oxo-C6-HSL autoinducer that activates the LuxR-dependent
         quorum-sensing circuit in A. fischeri.
@@ -94,6 +94,26 @@ causal_graphs:
     description: Cognate sensor protein/receptor that detects accumulated autoinducer
       and alters gene expression.
     grounding: InterPro:IPR000792
+    protein_examples:
+    - uniprot_id: UniProtKB:P12746
+      protein_label: Transcriptional activator protein LuxR
+      gene_symbol: luxR
+      taxon_id: NCBITaxon:668
+      taxon_label: Aliivibrio fischeri (Vibrio fischeri)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 124
+      sequence_version: 3
+      role: Exemplar protein (luxR, Transcriptional activator protein LuxR) representing
+        LuxR-family AHL receptor in Aliivibrio fischeri (Vibrio fischeri) for quorum
+        sensing.
+      evidence:
+      - reference: DOI:10.1146/annurev.micro.55.1.165
+        snippet: Quorum sensing is the regulation of gene expression in response to
+          fluctuations in cell-population density.
+        notes: Supports LuxR-family AHL receptor in quorum sensing; UniProtKB:P12746
+          (luxR, Transcriptional activator protein LuxR) in Aliivibrio fischeri (Vibrio
+          fischeri) provides a verified protein exemplar.
   - node_id: quorum_quenching_enzyme
     label: AiiA quorum-quenching AHL lactonase
     node_type: GENE_OR_PROTEIN
@@ -108,7 +128,7 @@ causal_graphs:
       taxon_label: Bacillus thuringiensis subsp. kurstaki
       entry_status: REVIEWED
       retrieved_on: '2026-08-23'
-      entry_version: 47
+      entry_version: 48
       sequence_version: 1
       role: Zinc-dependent AHL lactonase that hydrolyzes N-acyl-L-homoserine lactone
         signals, thereby interrupting the AHL/LuxR signaling branch.
@@ -304,4 +324,12 @@ curation_history:
     (1 edge); DOI:10.3390/ijms25052655 -> DOI:10.1016/j.molcel.2011.04.003 (1 edge);
     DOI:10.3390/ijms25052655 -> DOI:10.1073/pnas.0504996102 (1 edge); DOI:10.3390/ijms25052655
     -> DOI:10.1128/mbio.01079-17 (1 edge).'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:P12747
+    version metadata (entry_version=98, sequence_version=1); refreshed UniProtKB:P0CJ63
+    version metadata (entry_version=48, sequence_version=1); added UniProtKB:P12746
+    (luxR) protein example to node signal_receptor.'
   llm_assisted: true

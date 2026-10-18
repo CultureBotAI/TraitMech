@@ -86,3 +86,74 @@ curation_history:
     Ignored-and-hidden novelty searches and structured METPO review found no exact
     record. Reserved METPO:1060500 in v528; existing records unchanged.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph rosette_cell_arrangement_graph
+    with GENE_OR_PROTEIN node rosette_cell_arrangement_protein_component and UniProtKB:Q31IK3
+    exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: rosette_cell_arrangement_graph
+  title: Protein component associated with rosette cell arrangement
+  description: Literature-backed association between Ribulose bisphosphate carboxylase
+    (UniProtKB:Q31IK3) and rosette cell arrangement.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q31IK3 in Hydrogenovibrio
+    crunogenus (strain DSM 25203 / XCL-2) (Thiomicrospira crunogena)) associated with
+    rosette cell arrangement while full multi-step mechanistic curation remains future
+    work.
+  nodes:
+  - node_id: rosette_cell_arrangement_trait
+    label: rosette cell arrangement
+    node_type: TRAIT
+    grounding: traitmech:000652
+    description: A morphological phenotype in which cells form multicellular clusters
+      organized around a shared central region, with corresponding cell poles directed
+      inward.
+  - node_id: rosette_cell_arrangement_protein_component
+    label: Ribulose bisphosphate carboxylase
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Ribulose bisphosphate carboxylase) associated
+      with rosette cell arrangement.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - cbbM
+    protein_examples:
+    - uniprot_id: UniProtKB:Q31IK3
+      protein_label: Ribulose bisphosphate carboxylase
+      gene_symbol: cbbM
+      taxon_id: NCBITaxon:317025
+      taxon_label: Hydrogenovibrio crunogenus (strain DSM 25203 / XCL-2) (Thiomicrospira
+        crunogena)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 111
+      sequence_version: 1
+      role: Characteristic protein component (cbbM, Ribulose bisphosphate carboxylase)
+        associated with rosette cell arrangement in Hydrogenovibrio crunogenus (strain
+        DSM 25203 / XCL-2) (Thiomicrospira crunogena).
+      evidence:
+      - reference: DOI:10.7554/eLife.41482
+        snippet: all cells are oriented with their basal poles toward the rosette
+          center and their apical flagella extending out from the rosette surface
+        notes: Supports Ribulose bisphosphate carboxylase in rosette cell arrangement;
+          UniProtKB:Q31IK3 (cbbM, Ribulose bisphosphate carboxylase) in Hydrogenovibrio
+          crunogenus (strain DSM 25203 / XCL-2) (Thiomicrospira crunogena) provides
+          a verified protein exemplar.
+  edges:
+  - subject: rosette_cell_arrangement_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: rosette_cell_arrangement_trait
+    description: Ribulose bisphosphate carboxylase (cbbM, UniProtKB:Q31IK3) contributes
+      to rosette cell arrangement (associated with extending, flagella, oriented).
+    evidence:
+    - reference: DOI:10.7554/eLife.41482
+      snippet: all cells are oriented with their basal poles toward the rosette center
+        and their apical flagella extending out from the rosette surface
+      notes: Supports the functional association between Ribulose bisphosphate carboxylase
+        (UniProtKB:Q31IK3 in Hydrogenovibrio crunogenus (strain DSM 25203 / XCL-2)
+        (Thiomicrospira crunogena)) and rosette cell arrangement.

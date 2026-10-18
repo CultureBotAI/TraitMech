@@ -95,3 +95,77 @@ curation_history:
     limits are explicit. Existing traits unchanged; timestamp is the observed UTC
     curation decision.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph carbon_source_memory_graph
+    with GENE_OR_PROTEIN node carbon_source_memory_protein_component and UniProtKB:Q72AA0
+    exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: carbon_source_memory_graph
+  title: Protein component associated with carbon-source memory
+  description: Literature-backed association between Transcriptional regulator CooA
+    (UniProtKB:Q72AA0) and carbon-source memory.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q72AA0 in Nitratidesulfovibrio
+    vulgaris (strain ATCC 29579 / DSM 644 / CCUG 34227 / NCIMB 8303 / VKM B-1760 /
+    Hildenborough) (Desulfovibrio vulgaris)) associated with carbon-source memory
+    while full multi-step mechanistic curation remains future work.
+  nodes:
+  - node_id: carbon_source_memory_trait
+    label: carbon-source memory
+    node_type: TRAIT
+    grounding: traitmech:000706
+    description: A physiological phenotype in which a non-genetic cellular state established
+      by prior carbon-source conditions persists after those conditions change and
+      alters subsequent induction or growth responses to carbon sources.
+  - node_id: carbon_source_memory_protein_component
+    label: Transcriptional regulator CooA
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Transcriptional regulator CooA) associated with
+      carbon-source memory.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - cooA
+    protein_examples:
+    - uniprot_id: UniProtKB:Q72AA0
+      protein_label: Transcriptional regulator CooA
+      gene_symbol: cooA
+      taxon_id: NCBITaxon:882
+      taxon_label: Nitratidesulfovibrio vulgaris (strain ATCC 29579 / DSM 644 / CCUG
+        34227 / NCIMB 8303 / VKM B-1760 / Hildenborough) (Desulfovibrio vulgaris)
+      entry_status: REVIEWED
+      proteome_id: UP000002194
+      retrieved_on: '2026-10-17'
+      entry_version: 137
+      sequence_version: 1
+      role: Characteristic protein component (cooA, Transcriptional regulator CooA)
+        associated with carbon-source memory in Nitratidesulfovibrio vulgaris (strain
+        ATCC 29579 / DSM 644 / CCUG 34227 / NCIMB 8303 / VKM B-1760 / Hildenborough)
+        (Desulfovibrio vulgaris).
+      evidence:
+      - reference: DOI:10.1371/journal.pgen.1004556
+        snippet: Cells grown under cyclical glucose/lactose conditions thus displayed
+          phenotypic memory of their previous metabolic adaptation.
+        notes: Supports Transcriptional regulator CooA in carbon-source memory; UniProtKB:Q72AA0
+          (cooA, Transcriptional regulator CooA) in Nitratidesulfovibrio vulgaris
+          (strain ATCC 29579 / DSM 644 / CCUG 34227 / NCIMB 8303 / VKM B-1760 / Hildenborough)
+          (Desulfovibrio vulgaris) provides a verified protein exemplar.
+  edges:
+  - subject: carbon_source_memory_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: carbon_source_memory_trait
+    description: Transcriptional regulator CooA (cooA, UniProtKB:Q72AA0) contributes
+      to carbon-source memory (associated with adaptation, conditions, phenotypic).
+    evidence:
+    - reference: DOI:10.1371/journal.pgen.1004556
+      snippet: Cells grown under cyclical glucose/lactose conditions thus displayed
+        phenotypic memory of their previous metabolic adaptation.
+      notes: Supports the functional association between Transcriptional regulator
+        CooA (UniProtKB:Q72AA0 in Nitratidesulfovibrio vulgaris (strain ATCC 29579
+        / DSM 644 / CCUG 34227 / NCIMB 8303 / VKM B-1760 / Hildenborough) (Desulfovibrio
+        vulgaris)) and carbon-source memory.

@@ -66,3 +66,80 @@ curation_history:
     the trait around leucyl-glycine arylamide substrates rather than free leucyl-glycine
     dipeptide substrates.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph leucyl_glycine_arylamidase_activity_graph
+    with GENE_OR_PROTEIN node leucyl_glycine_arylamidase_activity_protein_component
+    and UniProtKB:B5BKS6 exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: leucyl_glycine_arylamidase_activity_graph
+  title: Protein component associated with leucyl glycine arylamidase activity
+  description: Literature-backed association between Probable cytosol aminopeptidase
+    (UniProtKB:B5BKS6) and leucyl glycine arylamidase activity.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:B5BKS6 in Salmonella
+    paratyphi A (strain AKU_12601)) associated with leucyl glycine arylamidase activity
+    while full multi-step mechanistic curation remains future work.
+  nodes:
+  - node_id: leucyl_glycine_arylamidase_activity_trait
+    label: leucyl glycine arylamidase activity
+    node_type: TRAIT
+    grounding: traitmech:000178
+    description: A physiological enzyme-activity phenotype in which a cell produces
+      active leucyl-glycine arylamidase enzymes that hydrolyze leucyl-glycine arylamide
+      substrates.
+  - node_id: leucyl_glycine_arylamidase_activity_protein_component
+    label: Probable cytosol aminopeptidase
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Probable cytosol aminopeptidase) associated with
+      leucyl glycine arylamidase activity.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - pepA
+    protein_examples:
+    - uniprot_id: UniProtKB:B5BKS6
+      protein_label: Probable cytosol aminopeptidase
+      gene_symbol: pepA
+      taxon_id: NCBITaxon:554290
+      taxon_label: Salmonella paratyphi A (strain AKU_12601)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 76
+      sequence_version: 1
+      role: Characteristic protein component (pepA, Probable cytosol aminopeptidase)
+        associated with leucyl glycine arylamidase activity in Salmonella paratyphi
+        A (strain AKU_12601).
+      evidence:
+      - reference: DOI:10.1099/ijsem.0.006017
+        snippet: 'enzymatic activities are present for: α-galactosidase, N-acetyl-β-glucosaminidase,
+          arginine arylamidase, proline arylamidase, leucyl glycine arylamidase, phenylalanine
+          arylamidase, leucine arylamidase, tyrosine arylamidase, alanine arylamidase,
+          glycine arylamidase, histidine arylamidase, glutamyl glutamic acid arylamidase,
+          serine arylamidase, valine arylamidase, cysteine arylamidase, esterase,
+          esterase lipase, alpha-chymotrypsin'
+        notes: Supports Probable cytosol aminopeptidase in leucyl glycine arylamidase
+          activity; UniProtKB:B5BKS6 (pepA, Probable cytosol aminopeptidase) in Salmonella
+          paratyphi A (strain AKU_12601) provides a verified protein exemplar.
+  edges:
+  - subject: leucyl_glycine_arylamidase_activity_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: leucyl_glycine_arylamidase_activity_trait
+    description: Probable cytosol aminopeptidase (pepA, UniProtKB:B5BKS6) contributes
+      to leucyl glycine arylamidase activity (associated with glucosaminidase, galactosidase,
+      phenylalanine).
+    evidence:
+    - reference: DOI:10.1099/ijsem.0.006017
+      snippet: 'enzymatic activities are present for: α-galactosidase, N-acetyl-β-glucosaminidase,
+        arginine arylamidase, proline arylamidase, leucyl glycine arylamidase, phenylalanine
+        arylamidase, leucine arylamidase, tyrosine arylamidase, alanine arylamidase,
+        glycine arylamidase, histidine arylamidase, glutamyl glutamic acid arylamidase,
+        serine arylamidase, valine arylamidase, cysteine arylamidase, esterase, esterase
+        lipase, alpha-chymotrypsin'
+      notes: Supports the functional association between Probable cytosol aminopeptidase
+        (UniProtKB:B5BKS6 in Salmonella paratyphi A (strain AKU_12601)) and leucyl
+        glycine arylamidase activity.

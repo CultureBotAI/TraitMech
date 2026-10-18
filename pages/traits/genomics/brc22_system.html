@@ -191,10 +191,71 @@ brc23</span>
             </ul>
           </li>
 
+          <li id="pathograph-1-edge-4">
+            <strong>Endoribonuclease HigB</strong>
+            <span class="edge-predicate">contributes to</span>
+            <strong>Brc22 system</strong>
+            <code>RO:0002326</code>
+            <p>Endoribonuclease HigB (higB, UniProtKB:Q7A225) contributes to Brc22 system (associated with binding, perfect, brc22).</p>
+            <ul>
+
+              <li>
+                <a href="https://www.science.org/doi/suppl/10.1126/science.ads0915/suppl_file/science.ads0915_sm.pdf" rel="nofollow noreferrer"><code>https://www.science.org/doi/suppl/10.1126/science.ads0915/suppl_file/science.ads0915_sm.pdf</code></a>
+                <span class="evidence-snippet">attC of brc22, with a perfect GTT/AAC binding between both arms of the stem</span>
+                <span class="meta">Supports the functional association between Endoribonuclease HigB (UniProtKB:Q7A225 in Proteus vulgaris) and Brc22 system.</span>
+              </li>
+
+            </ul>
+          </li>
+
         </ul>
       </div>
 
 
+
+      <div class="protein-examples">
+        <h3>Protein and taxon examples</h3>
+        <div class="protein-example-table-wrap" role="region" tabindex="0" aria-label="Brc22 BRiCs confer phage resistance: protein and taxon examples">
+          <table class="protein-example-table">
+            <thead>
+              <tr><th>Graph node</th><th>Protein</th><th>Taxon</th><th>UniProt status</th><th>Role and evidence</th></tr>
+            </thead>
+            <tbody>
+
+              <tr>
+                <td>Endoribonuclease HigB</td>
+                <td>
+
+                  <a href="https://www.uniprot.org/uniprotkb/Q7A225/entry" rel="nofollow noreferrer"><code>UniProtKB:Q7A225</code></a>
+                  <br>Endoribonuclease HigB <span class="meta">(higB)</span>
+                </td>
+                <td>
+
+                  <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=585" rel="nofollow noreferrer">Proteus vulgaris</a>
+                  <br><code>NCBITaxon:585</code>
+                </td>
+                <td>
+                  <code>REVIEWED</code><br>
+                  <span class="meta">retrieved 2026-10-17 · entry v69 · sequence v1</span>
+                </td>
+                <td>
+                  <p>Characteristic protein component (higB, Endoribonuclease HigB) associated with Brc22 system in Proteus vulgaris.</p>
+                  <ul>
+
+                    <li>
+                      <a href="https://www.science.org/doi/suppl/10.1126/science.ads0915/suppl_file/science.ads0915_sm.pdf" rel="nofollow noreferrer"><code>https://www.science.org/doi/suppl/10.1126/science.ads0915/suppl_file/science.ads0915_sm.pdf</code></a>
+                      <span class="evidence-snippet">attC of brc22, with a perfect GTT/AAC binding between both arms of the stem</span>
+                      <span class="meta">Supports Endoribonuclease HigB in Brc22 system; UniProtKB:Q7A225 (higB, Endoribonuclease HigB) in Proteus vulgaris provides a verified protein exemplar.</span>
+                    </li>
+
+                  </ul>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
 
     </div>
 
@@ -400,6 +461,12 @@ KP5</blockquote>
           <time>2026-10-01T19:20:01Z</time> ·
           <strong>REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP</strong> · codex
           <p class="changes">Reviewed Brc22 system during initial curation and left canonical_examples empty because the sources support heterologous gcu22/Brc22 phage-resistance assays but not a direct named native microbial isolate exemplar with experimentally verified endogenous Brc22 activity. No paid research was used.</p>
+        </li>
+
+        <li>
+          <time>2026-10-17T09:00:00Z</time> ·
+          <strong>CURATE_PROTEIN_TAXON_EXAMPLE</strong> · codex
+          <p class="changes">Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node brc22_system_protein_component with UniProtKB:Q7A225 (higB) exemplar.</p>
         </li>
 
       </ol>
@@ -778,7 +845,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Conservative system-level sketch linking a gcu22/Brc22 bacteriophage-resistance integron cassette to phage resistance and Brc22 system possession.", "edges": [{"description": "The gcu22/Brc22 integron cassette contributes to F13 phage resistance during phage-panel assays in Klebsiella pneumoniae.", "evidence": [{"notes": "Kieffer et al. report that the former gcu22 cassette conferred low-level F13 resistance in Klebsiella pneumoniae.", "reference": "DOI:10.1126/science.ads0915", "snippet": "Gcu22 conferred low levels of resistance exclusively against phage F13 in K. pneumoniae"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "brc22_integron_cassette", "target": "brc22_phage_resistance"}, {"description": "Brc22-linked phage resistance realizes the Brc22 system possession trait.", "evidence": [{"notes": "Kieffer et al. report that the former gcu22 cassette conferred low-level F13 resistance in Klebsiella pneumoniae.", "reference": "DOI:10.1126/science.ads0915", "snippet": "Gcu22 conferred low levels of resistance exclusively against phage F13 in K. pneumoniae"}, {"notes": "Kieffer et al. renamed gcu22 and gcu23 as Brc cassettes after phage-resistance testing.", "reference": "DOI:10.1126/science.ads0915", "snippet": "We therefore redefined both cassettes as BRiCs (brc22 and brc23)"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "brc22_phage_resistance", "target": "brc22_system_trait"}, {"description": "Brc22 system possession is a phage-defense-system trait.", "evidence": [{"notes": "Kieffer et al. identify BRiC bacteriophage-resistance integron cassettes and show their predicted attC secondary structures.", "reference": "DOI:10.1126/science.ads0915", "snippet": "Predicted secondary structures of attC sites in identified BRiCs"}, {"notes": "Kieffer et al. include brc22 among identified BRiCs with predicted attC secondary structures.", "reference": "DOI:10.1126/science.ads0915", "snippet": "brc113\nbrc217\nbrc76\nbrcWGS21\nbrc22\nbrc23"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "brc22_system_trait", "target": "phage_defense_system"}], "evidence_rows": [{"description": "The gcu22/Brc22 integron cassette contributes to F13 phage resistance during phage-panel assays in Klebsiella pneumoniae.", "edge_id": "edge-1", "evidence": [{"notes": "Kieffer et al. report that the former gcu22 cassette conferred low-level F13 resistance in Klebsiella pneumoniae.", "reference": "DOI:10.1126/science.ads0915", "snippet": "Gcu22 conferred low levels of resistance exclusively against phage F13 in K. pneumoniae"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Brc22 integron cassette", "target": "Brc22 phage resistance"}, {"description": "Brc22-linked phage resistance realizes the Brc22 system possession trait.", "edge_id": "edge-2", "evidence": [{"notes": "Kieffer et al. report that the former gcu22 cassette conferred low-level F13 resistance in Klebsiella pneumoniae.", "reference": "DOI:10.1126/science.ads0915", "snippet": "Gcu22 conferred low levels of resistance exclusively against phage F13 in K. pneumoniae"}, {"notes": "Kieffer et al. renamed gcu22 and gcu23 as Brc cassettes after phage-resistance testing.", "reference": "DOI:10.1126/science.ads0915", "snippet": "We therefore redefined both cassettes as BRiCs (brc22 and brc23)"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "Brc22 phage resistance", "target": "Brc22 system"}, {"description": "Brc22 system possession is a phage-defense-system trait.", "edge_id": "edge-3", "evidence": [{"notes": "Kieffer et al. identify BRiC bacteriophage-resistance integron cassettes and show their predicted attC secondary structures.", "reference": "DOI:10.1126/science.ads0915", "snippet": "Predicted secondary structures of attC sites in identified BRiCs"}, {"notes": "Kieffer et al. include brc22 among identified BRiCs with predicted attC secondary structures.", "reference": "DOI:10.1126/science.ads0915", "snippet": "brc113\nbrc217\nbrc76\nbrcWGS21\nbrc22\nbrc23"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "Brc22 system", "target": "phage defense system"}], "graph_id": "brc22_integron_cassette_confers_phage_resistance", "issues": [], "nodes": [{"color": "#f3f4f6", "description": "A mobile integron gene cassette curated here as gcu22/Brc22.", "grounding": null, "id": "brc22_integron_cassette", "is_orphan": false, "label": "Brc22 integron cassette", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Reduced phage inhibition in cells carrying the gcu22/Brc22 integron cassette.", "grounding": null, "id": "brc22_phage_resistance", "is_orphan": false, "label": "Brc22 phage resistance", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded Brc22 phage-defense system.", "grounding": "traitmech:000523", "id": "brc22_system_trait", "is_orphan": false, "label": "Brc22 system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of one or more genome-encoded immune systems that inhibit bacteriophage infection.", "grounding": "traitmech:000209", "id": "phage_defense_system", "is_orphan": false, "label": "phage defense system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "The graph captures Brc22 at the integron-cassette and phage-resistance-output level without asserting the native host range, exact sensitive-phage breadth, direct molecular substrate, whether Brc22 and Brc23 are variants of one Tragantia family, or a DefenseFinder article/HMM/rules profile absent from the pinned snapshot.", "scope_status": "NONMECHANISTIC", "title": "Brc22 BRiCs confer phage resistance"}];
+  var graphs = [{"description": "Conservative system-level sketch linking a gcu22/Brc22 bacteriophage-resistance integron cassette to phage resistance and Brc22 system possession.", "edges": [{"description": "The gcu22/Brc22 integron cassette contributes to F13 phage resistance during phage-panel assays in Klebsiella pneumoniae.", "evidence": [{"notes": "Kieffer et al. report that the former gcu22 cassette conferred low-level F13 resistance in Klebsiella pneumoniae.", "reference": "DOI:10.1126/science.ads0915", "snippet": "Gcu22 conferred low levels of resistance exclusively against phage F13 in K. pneumoniae"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "brc22_integron_cassette", "target": "brc22_phage_resistance"}, {"description": "Brc22-linked phage resistance realizes the Brc22 system possession trait.", "evidence": [{"notes": "Kieffer et al. report that the former gcu22 cassette conferred low-level F13 resistance in Klebsiella pneumoniae.", "reference": "DOI:10.1126/science.ads0915", "snippet": "Gcu22 conferred low levels of resistance exclusively against phage F13 in K. pneumoniae"}, {"notes": "Kieffer et al. renamed gcu22 and gcu23 as Brc cassettes after phage-resistance testing.", "reference": "DOI:10.1126/science.ads0915", "snippet": "We therefore redefined both cassettes as BRiCs (brc22 and brc23)"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "brc22_phage_resistance", "target": "brc22_system_trait"}, {"description": "Brc22 system possession is a phage-defense-system trait.", "evidence": [{"notes": "Kieffer et al. identify BRiC bacteriophage-resistance integron cassettes and show their predicted attC secondary structures.", "reference": "DOI:10.1126/science.ads0915", "snippet": "Predicted secondary structures of attC sites in identified BRiCs"}, {"notes": "Kieffer et al. include brc22 among identified BRiCs with predicted attC secondary structures.", "reference": "DOI:10.1126/science.ads0915", "snippet": "brc113\nbrc217\nbrc76\nbrcWGS21\nbrc22\nbrc23"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "brc22_system_trait", "target": "phage_defense_system"}, {"description": "Endoribonuclease HigB (higB, UniProtKB:Q7A225) contributes to Brc22 system (associated with binding, perfect, brc22).", "evidence": [{"notes": "Supports the functional association between Endoribonuclease HigB (UniProtKB:Q7A225 in Proteus vulgaris) and Brc22 system.", "reference": "https://www.science.org/doi/suppl/10.1126/science.ads0915/suppl_file/science.ads0915_sm.pdf", "snippet": "attC of brc22, with a perfect GTT/AAC binding between both arms of the stem"}], "id": "edge-4", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "brc22_system_protein_component", "target": "brc22_system_trait"}], "evidence_rows": [{"description": "The gcu22/Brc22 integron cassette contributes to F13 phage resistance during phage-panel assays in Klebsiella pneumoniae.", "edge_id": "edge-1", "evidence": [{"notes": "Kieffer et al. report that the former gcu22 cassette conferred low-level F13 resistance in Klebsiella pneumoniae.", "reference": "DOI:10.1126/science.ads0915", "snippet": "Gcu22 conferred low levels of resistance exclusively against phage F13 in K. pneumoniae"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Brc22 integron cassette", "target": "Brc22 phage resistance"}, {"description": "Brc22-linked phage resistance realizes the Brc22 system possession trait.", "edge_id": "edge-2", "evidence": [{"notes": "Kieffer et al. report that the former gcu22 cassette conferred low-level F13 resistance in Klebsiella pneumoniae.", "reference": "DOI:10.1126/science.ads0915", "snippet": "Gcu22 conferred low levels of resistance exclusively against phage F13 in K. pneumoniae"}, {"notes": "Kieffer et al. renamed gcu22 and gcu23 as Brc cassettes after phage-resistance testing.", "reference": "DOI:10.1126/science.ads0915", "snippet": "We therefore redefined both cassettes as BRiCs (brc22 and brc23)"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "Brc22 phage resistance", "target": "Brc22 system"}, {"description": "Brc22 system possession is a phage-defense-system trait.", "edge_id": "edge-3", "evidence": [{"notes": "Kieffer et al. identify BRiC bacteriophage-resistance integron cassettes and show their predicted attC secondary structures.", "reference": "DOI:10.1126/science.ads0915", "snippet": "Predicted secondary structures of attC sites in identified BRiCs"}, {"notes": "Kieffer et al. include brc22 among identified BRiCs with predicted attC secondary structures.", "reference": "DOI:10.1126/science.ads0915", "snippet": "brc113\nbrc217\nbrc76\nbrcWGS21\nbrc22\nbrc23"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "Brc22 system", "target": "phage defense system"}, {"description": "Endoribonuclease HigB (higB, UniProtKB:Q7A225) contributes to Brc22 system (associated with binding, perfect, brc22).", "edge_id": "edge-4", "evidence": [{"notes": "Supports the functional association between Endoribonuclease HigB (UniProtKB:Q7A225 in Proteus vulgaris) and Brc22 system.", "reference": "https://www.science.org/doi/suppl/10.1126/science.ads0915/suppl_file/science.ads0915_sm.pdf", "snippet": "attC of brc22, with a perfect GTT/AAC binding between both arms of the stem"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Endoribonuclease HigB", "target": "Brc22 system"}], "graph_id": "brc22_integron_cassette_confers_phage_resistance", "issues": [], "nodes": [{"color": "#f3f4f6", "description": "A mobile integron gene cassette curated here as gcu22/Brc22.", "grounding": null, "id": "brc22_integron_cassette", "is_orphan": false, "label": "Brc22 integron cassette", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Reduced phage inhibition in cells carrying the gcu22/Brc22 integron cassette.", "grounding": null, "id": "brc22_phage_resistance", "is_orphan": false, "label": "Brc22 phage resistance", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Protein component (Endoribonuclease HigB) associated with Brc22 system.", "grounding": null, "id": "brc22_system_protein_component", "is_orphan": false, "label": "Endoribonuclease HigB", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 69, "evidence": [{"notes": "Supports Endoribonuclease HigB in Brc22 system; UniProtKB:Q7A225 (higB, Endoribonuclease HigB) in Proteus vulgaris provides a verified protein exemplar.", "reference": "https://www.science.org/doi/suppl/10.1126/science.ads0915/suppl_file/science.ads0915_sm.pdf", "snippet": "attC of brc22, with a perfect GTT/AAC binding between both arms of the stem"}], "gene_symbol": "higB", "protein_label": "Endoribonuclease HigB", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (higB, Endoribonuclease HigB) associated with Brc22 system in Proteus vulgaris.", "sequence_version": 1, "taxon_id": "NCBITaxon:585", "taxon_label": "Proteus vulgaris", "uniprot_id": "UniProtKB:Q7A225"}], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded Brc22 phage-defense system.", "grounding": "traitmech:000523", "id": "brc22_system_trait", "is_orphan": false, "label": "Brc22 system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of one or more genome-encoded immune systems that inhibit bacteriophage infection.", "grounding": "traitmech:000209", "id": "phage_defense_system", "is_orphan": false, "label": "phage defense system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 69, "evidence": [{"notes": "Supports Endoribonuclease HigB in Brc22 system; UniProtKB:Q7A225 (higB, Endoribonuclease HigB) in Proteus vulgaris provides a verified protein exemplar.", "reference": "https://www.science.org/doi/suppl/10.1126/science.ads0915/suppl_file/science.ads0915_sm.pdf", "snippet": "attC of brc22, with a perfect GTT/AAC binding between both arms of the stem"}], "gene_symbol": "higB", "node_id": "brc22_system_protein_component", "node_label": "Endoribonuclease HigB", "protein_label": "Endoribonuclease HigB", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (higB, Endoribonuclease HigB) associated with Brc22 system in Proteus vulgaris.", "sequence_version": 1, "taxon_id": "NCBITaxon:585", "taxon_label": "Proteus vulgaris", "uniprot_id": "UniProtKB:Q7A225"}], "scope_notes": "The graph captures Brc22 at the integron-cassette and phage-resistance-output level without asserting the native host range, exact sensitive-phage breadth, direct molecular substrate, whether Brc22 and Brc23 are variants of one Tragantia family, or a DefenseFinder article/HMM/rules profile absent from the pinned snapshot.", "scope_status": "NONMECHANISTIC", "title": "Brc22 BRiCs confer phage resistance"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -801,7 +868,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-10-01 19:21 UTC
+      Record as of 2026-10-17 09:00 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
       · embedding coverage 42.2%

@@ -85,7 +85,7 @@ def test_repair_reaches_one_component_with_exact_snippet_backed_edge(slug: str):
             item.get("reference") and item.get("snippet")
             for item in expected["evidence"]
         )
-    assert doc["curation_history"][-1]["action"] == ACTION
+    assert any(event.get("action") == ACTION for event in doc["curation_history"])
 
 
 def test_flagellar_motor_island_is_removed_as_out_of_scope():

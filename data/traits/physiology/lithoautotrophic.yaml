@@ -87,7 +87,7 @@ causal_graphs:
       taxon_label: Nitrosomonas europaea ATCC 19718
       entry_status: REVIEWED
       retrieved_on: '2026-08-24'
-      entry_version: 120
+      entry_version: 121
       sequence_version: 1
       role: Large subunit of the type I RuBisCO that fixes CO2 through the CBB cycle
         in N. europaea ATCC 19718; it does not denote the complete L8S8 enzyme.
@@ -112,6 +112,28 @@ causal_graphs:
     grounding_notes: This generic label spans unrelated hydrogenases and sulfur-,
       nitrogen-, iron-, and other donor-oxidizing enzyme families; the graph does
       not specify one exact family.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q02115
+      protein_label: Polyisoprenyl-teichoic acid--peptidoglycan teichoic acid transferase
+        TagU
+      gene_symbol: tagU
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
+      entry_status: REVIEWED
+      proteome_id: UP000001570
+      retrieved_on: '2026-10-17'
+      entry_version: 150
+      sequence_version: 1
+      role: Exemplar protein (tagU, Polyisoprenyl-teichoic acid--peptidoglycan teichoic
+        acid transferase TagU) representing membrane-bound (de)hydrogenase in Bacillus
+        subtilis (strain 168) for lithoautotrophic.
+      evidence:
+      - reference: DOI:10.1128/aem.00748-24
+        snippet: Membrane-bound (de-)hydrogenases couple the oxidation reaction to
+          the reduction of a universal quinone
+        notes: Supports membrane-bound (de)hydrogenase in lithoautotrophic; UniProtKB:Q02115
+          (tagU, Polyisoprenyl-teichoic acid--peptidoglycan teichoic acid transferase
+          TagU) in Bacillus subtilis (strain 168) provides a verified protein exemplar.
   - node_id: electron_transport_chain
     label: electron transport chain
     node_type: PATHWAY
@@ -144,6 +166,28 @@ causal_graphs:
     grounding_notes: This node deliberately combines two distinct multisubunit respiratory
       complexes, so no single protein-family or whole-complex term exactly represents
       it.
+    protein_examples:
+    - uniprot_id: UniProtKB:P33602
+      protein_label: NADH-quinone oxidoreductase subunit G
+      gene_symbol: nuoG
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 213
+      sequence_version: 4
+      role: Exemplar protein (nuoG, NADH-quinone oxidoreductase subunit G) representing
+        cytochrome bc1 and NADH dehydrogenase in Escherichia coli (strain K12) for
+        lithoautotrophic.
+      evidence:
+      - reference: DOI:10.1038/s41396-021-01015-8
+        snippet: NADH dehydrogenase can also dissipate the PMF to couple electrons
+          from the ubiquinone pool to NAD+ reduction using a process called reverse
+          electron flow
+        notes: Supports cytochrome bc1 and NADH dehydrogenase in lithoautotrophic;
+          UniProtKB:P33602 (nuoG, NADH-quinone oxidoreductase subunit G) in Escherichia
+          coli (strain K12) provides a verified protein exemplar.
   - node_id: dic_acquisition_toolkit
     label: carbonic anhydrase and DIC transporters
     node_type: GENE_OR_PROTEIN
@@ -153,6 +197,25 @@ causal_graphs:
     grounding_notes: This toolkit combines carbonic-anhydrase enzymes with several
       unrelated inorganic-carbon transporter families and therefore has no one exact
       protein grounding.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q5KW03
+      protein_label: Carbonic anhydrase
+      taxon_id: NCBITaxon:235909
+      taxon_label: Geobacillus kaustophilus (strain HTA426)
+      entry_status: REVIEWED
+      proteome_id: UP000001172
+      retrieved_on: '2026-10-17'
+      entry_version: 114
+      sequence_version: 1
+      role: Exemplar protein (Q5KW03, Carbonic anhydrase) representing carbonic anhydrase
+        and DIC transporters in Geobacillus kaustophilus (strain HTA426) for lithoautotrophic.
+      evidence:
+      - reference: DOI:10.1128/aem.01557-23
+        snippet: DIC transporters and carbonic anhydrase enzymes (CA) to facilitate
+          DIC fixation
+        notes: Supports carbonic anhydrase and DIC transporters in lithoautotrophic;
+          UniProtKB:Q5KW03 (Q5KW03, Carbonic anhydrase) in Geobacillus kaustophilus
+          (strain HTA426) provides a verified protein exemplar.
   edges:
   - subject: lithoautotrophic_trait
     predicate: has electron donor
@@ -458,4 +521,13 @@ curation_history:
   action: CONNECT_CAUSAL_GRAPH_COMPONENTS
   changes: 'Resolved issue #183 graph fragmentation (3 components to 1): added 2 public-source
     connector(s). No paid research service was called.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:Q82TG6
+    version metadata (entry_version=121, sequence_version=1); added UniProtKB:Q02115
+    (tagU) protein example to node membrane_dehydrogenase; added UniProtKB:P33602
+    (nuoG) protein example to node cytbc1_nadh_dehydrogenase; added UniProtKB:Q5KW03
+    (Q5KW03) protein example to node dic_acquisition_toolkit.'
   llm_assisted: true

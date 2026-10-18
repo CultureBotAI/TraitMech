@@ -70,6 +70,35 @@ causal_graphs:
     node_type: CELLULAR_LOCALIZATION
     description: Peptidoglycan-based cell wall layer that does not adopt the polygonal
       cell shape.
+  - node_id: triangular_shaped_protein_component
+    label: Cell shape-determining protein MreB
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Cell shape-determining protein MreB) associated
+      with triangular shaped.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - mreB
+    protein_examples:
+    - uniprot_id: UniProtKB:Q01465
+      protein_label: Cell shape-determining protein MreB
+      gene_symbol: mreB
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
+      entry_status: REVIEWED
+      proteome_id: UP000001570
+      retrieved_on: '2026-10-17'
+      entry_version: 148
+      sequence_version: 3
+      role: Characteristic protein component (mreB, Cell shape-determining protein
+        MreB) associated with triangular shaped in Bacillus subtilis (strain 168).
+      evidence:
+      - reference: DOI:10.1146/annurev-cellbio-101011-155745
+        snippet: MreB-directed peptidoglycan synthesis
+        notes: Supports Cell shape-determining protein MreB in triangular shaped;
+          UniProtKB:Q01465 (mreB, Cell shape-determining protein MreB) in Bacillus
+          subtilis (strain 168) provides a verified protein exemplar.
   edges:
   - subject: planar_envelope_growth
     predicate: enables
@@ -135,6 +164,17 @@ causal_graphs:
       notes: '"the S-layer and outer membrane, but not the peptidoglycan layer and
         the cytoplasmic membrane, exhibited the polygonal shape"; negative boundary
         edge.'
+  - subject: triangular_shaped_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: triangular_shaped_trait
+    description: Cell shape-determining protein MreB (mreB, UniProtKB:Q01465) contributes
+      to triangular shaped (associated with peptidoglycan, directed, mreb).
+    evidence:
+    - reference: DOI:10.1146/annurev-cellbio-101011-155745
+      snippet: MreB-directed peptidoglycan synthesis
+      notes: Supports the functional association between Cell shape-determining protein
+        MreB (UniProtKB:Q01465 in Bacillus subtilis (strain 168)) and triangular shaped.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.901416+00:00'
   curator: seed_from_metpo
@@ -190,4 +230,10 @@ curation_history:
     tranche of 2026-08-24/25, which shipped without a per-record event. In this record
     the tranche: set graph scope triangular_shaped_planar_polygonal_growth=NONMECHANISTIC
     with scope_notes.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    triangular_shaped_protein_component with UniProtKB:Q01465 (mreB) exemplar.'
   llm_assisted: true

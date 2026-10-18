@@ -54,6 +54,26 @@ causal_graphs:
     label: tyrosinase/laccase oxidases
     node_type: GENE_OR_PROTEIN
     description: Oxidative enzymes that can catalyze melanin precursor oxidation.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0ABI8
+      protein_label: Cytochrome bo(3) ubiquinol oxidase subunit 1
+      gene_symbol: cyoB
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 154
+      sequence_version: 1
+      role: Exemplar protein (cyoB, Cytochrome bo(3) ubiquinol oxidase subunit 1)
+        representing tyrosinase/laccase oxidases in Escherichia coli (strain K12)
+        for black pigmented.
+      evidence:
+      - reference: DOI:10.1016/j.biotechadv.2021.107773
+        snippet: Eumelanin and allomelanin impart black/brown color
+        notes: Supports tyrosinase/laccase oxidases in black pigmented; UniProtKB:P0ABI8
+          (cyoB, Cytochrome bo(3) ubiquinol oxidase subunit 1) in Escherichia coli
+          (strain K12) provides a verified protein exemplar.
   - node_id: melanin_biosynthesis
     label: melanin biosynthesis
     node_type: BIOLOGICAL_PROCESS
@@ -82,6 +102,25 @@ causal_graphs:
     description: Enzyme synthesizing tetrahydroxynaphthalene precursor of the DHN-melanin
       pathway.
     grounding: GO:0016218
+    protein_examples:
+    - uniprot_id: UniProtKB:B4ER96
+      protein_label: Spectinabilin polyketide synthase system protein NorB
+      gene_symbol: norB
+      taxon_id: NCBITaxon:67339
+      taxon_label: Streptomyces orinoci (Streptoverticillium orinoci)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 93
+      sequence_version: 1
+      role: Exemplar protein (norB, Spectinabilin polyketide synthase system protein
+        NorB) representing polyketide synthase (PKS) in Streptomyces orinoci (Streptoverticillium
+        orinoci) for black pigmented.
+      evidence:
+      - reference: DOI:10.1016/j.biotechadv.2021.107773
+        snippet: Eumelanin and allomelanin impart black/brown color
+        notes: Supports polyketide synthase (PKS) in black pigmented; UniProtKB:B4ER96
+          (norB, Spectinabilin polyketide synthase system protein NorB) in Streptomyces
+          orinoci (Streptoverticillium orinoci) provides a verified protein exemplar.
   - node_id: dhn_melanin
     label: DHN-melanin (allomelanin)
     node_type: CHEMICAL
@@ -92,6 +131,23 @@ causal_graphs:
     description: Copper-dependent oxidase catalyzing hydroxylation and oxidation steps
       of the DOPA-melanin pathway.
     grounding: GO:0004503
+    protein_examples:
+    - uniprot_id: UniProtKB:A0A261GVB1
+      protein_label: Tyrosinase HcTyr2
+      taxon_id: NCBITaxon:1926491
+      taxon_label: Hahella sp. (strain CCB-MM4)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 19
+      sequence_version: 1
+      role: Exemplar protein (A0A261GVB1, Tyrosinase HcTyr2) representing tyrosinase
+        in Hahella sp. (strain CCB-MM4) for black pigmented.
+      evidence:
+      - reference: DOI:10.1016/j.biotechadv.2021.107773
+        snippet: Eumelanin and allomelanin impart black/brown color
+        notes: Supports tyrosinase in black pigmented; UniProtKB:A0A261GVB1 (A0A261GVB1,
+          Tyrosinase HcTyr2) in Hahella sp. (strain CCB-MM4) provides a verified protein
+          exemplar.
   - node_id: hydroxyphenylpyruvate
     label: 4-hydroxyphenylpyruvate
     node_type: CHEMICAL
@@ -117,6 +173,25 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Enzyme converting 4-hydroxyphenylpyruvate to homogentisic acid in
       the pyomelanin route.
+    protein_examples:
+    - uniprot_id: UniProtKB:A0AAE7AGQ2
+      protein_label: 4-hydroxyphenylpyruvate dioxygenase
+      gene_symbol: hppD
+      taxon_id: NCBITaxon:651
+      taxon_label: Aeromonas media
+      entry_status: UNREVIEWED
+      proteome_id: UP000502657
+      retrieved_on: '2026-10-17'
+      entry_version: 9
+      sequence_version: 1
+      role: Exemplar protein (hppD, 4-hydroxyphenylpyruvate dioxygenase) representing
+        HppD (4-hydroxyphenylpyruvate dioxygenase) in Aeromonas media for black pigmented.
+      evidence:
+      - reference: DOI:10.1016/j.biotechadv.2021.107773
+        snippet: Eumelanin and allomelanin impart black/brown color
+        notes: Supports HppD (4-hydroxyphenylpyruvate dioxygenase) in black pigmented;
+          UniProtKB:A0AAE7AGQ2 (hppD, 4-hydroxyphenylpyruvate dioxygenase) in Aeromonas
+          media provides a verified protein exemplar.
   - node_id: homogentisic_acid
     label: homogentisic acid (HGA)
     node_type: CHEMICAL
@@ -129,6 +204,28 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Enzyme converting HGA to maleylacetoacetate; loss leads to HGA accumulation
       and pyomelanin.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q88E47
+      protein_label: Homogentisate 1,2-dioxygenase
+      gene_symbol: hmgA
+      taxon_id: NCBITaxon:160488
+      taxon_label: Pseudomonas putida (strain ATCC 47054 / DSM 6125 / CFBP 8728 /
+        NCIMB 11950 / KT2440)
+      entry_status: REVIEWED
+      proteome_id: UP000000556
+      retrieved_on: '2026-10-17'
+      entry_version: 121
+      sequence_version: 1
+      role: Exemplar protein (hmgA, Homogentisate 1,2-dioxygenase) representing HmgA
+        (homogentisate 1,2-dioxygenase) in Pseudomonas putida (strain ATCC 47054 /
+        DSM 6125 / CFBP 8728 / NCIMB 11950 / KT2440) for black pigmented.
+      evidence:
+      - reference: DOI:10.1016/j.biotechadv.2021.107773
+        snippet: Eumelanin and allomelanin impart black/brown color
+        notes: Supports HmgA (homogentisate 1,2-dioxygenase) in black pigmented; UniProtKB:Q88E47
+          (hmgA, Homogentisate 1,2-dioxygenase) in Pseudomonas putida (strain ATCC
+          47054 / DSM 6125 / CFBP 8728 / NCIMB 11950 / KT2440) provides a verified
+          protein exemplar.
   edges:
   - subject: phenolic_precursors
     predicate: feed into
@@ -326,4 +423,13 @@ curation_history:
     the tranche: set graph scope black_pigmented_melanin_polymer=NONMECHANISTIC with
     scope_notes; marked 3 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (tyrosinase_laccase_oxidases, hppd, hmga).'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P0ABI8 (cyoB)
+    protein example to node tyrosinase_laccase_oxidases; added UniProtKB:B4ER96 (norB)
+    protein example to node polyketide_synthase; added UniProtKB:A0A261GVB1 (A0A261GVB1)
+    protein example to node tyrosinase; added UniProtKB:A0AAE7AGQ2 (hppD) protein
+    example to node hppd (+1 more).'
   llm_assisted: true

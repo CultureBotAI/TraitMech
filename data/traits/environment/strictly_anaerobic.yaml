@@ -62,6 +62,29 @@ causal_graphs:
     label: oxygen-sensitive enzymes
     node_type: GENE_OR_PROTEIN
     description: Anaerobic enzymes vulnerable to oxygen or ROS.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q4A0Q1
+      protein_label: Oxygen-dependent choline dehydrogenase
+      gene_symbol: betA
+      taxon_id: NCBITaxon:342451
+      taxon_label: Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
+        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+      entry_status: REVIEWED
+      proteome_id: UP000006371
+      retrieved_on: '2026-10-17'
+      entry_version: 127
+      sequence_version: 1
+      role: Exemplar protein (betA, Oxygen-dependent choline dehydrogenase) representing
+        oxygen-sensitive enzymes in Staphylococcus saprophyticus subsp. saprophyticus
+        (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) for strictly
+        anaerobic.
+      evidence:
+      - reference: PMID:39189748
+        snippet: Clostridioides difficile is a strict anaerobic, sporulating Firmicutes
+        notes: Supports oxygen-sensitive enzymes in strictly anaerobic; UniProtKB:Q4A0Q1
+          (betA, Oxygen-dependent choline dehydrogenase) in Staphylococcus saprophyticus
+          subsp. saprophyticus (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC
+          7292 / S-41) provides a verified protein exemplar.
   - node_id: iron_sulfur_cluster_enzymes
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
@@ -70,6 +93,25 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Mononuclear iron enzymes and solvent-exposed iron-sulfur cluster
       enzymes that are directly oxidized by oxygen.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0DW32
+      protein_label: Arsenate respiratory reductase iron-sulfur subunit ArrB
+      gene_symbol: arrB
+      taxon_id: NCBITaxon:309797
+      taxon_label: Chrysiogenes arsenatis
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 11
+      sequence_version: 1
+      role: Exemplar protein (arrB, Arsenate respiratory reductase iron-sulfur subunit
+        ArrB) representing iron-sulfur cluster enzymes in Chrysiogenes arsenatis for
+        strictly anaerobic.
+      evidence:
+      - reference: PMID:39189748
+        snippet: Clostridioides difficile is a strict anaerobic, sporulating Firmicutes
+        notes: Supports iron-sulfur cluster enzymes in strictly anaerobic; UniProtKB:P0DW32
+          (arrB, Arsenate respiratory reductase iron-sulfur subunit ArrB) in Chrysiogenes
+          arsenatis provides a verified protein exemplar.
   - node_id: glycyl_radical_enzymes
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
@@ -77,6 +119,25 @@ causal_graphs:
     label: glycyl radical enzymes
     node_type: GENE_OR_PROTEIN
     description: Enzyme class inherently incompatible with molecular oxygen.
+    protein_examples:
+    - uniprot_id: UniProtKB:A0A069AMK2
+      protein_label: Trans-4-hydroxy-L-proline dehydratase activating enzyme
+      gene_symbol: pflE
+      taxon_id: NCBITaxon:1496
+      taxon_label: Clostridioides difficile (Peptoclostridium difficile)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 63
+      sequence_version: 1
+      role: Exemplar protein (pflE, Trans-4-hydroxy-L-proline dehydratase activating
+        enzyme) representing glycyl radical enzymes in Clostridioides difficile (Peptoclostridium
+        difficile) for strictly anaerobic.
+      evidence:
+      - reference: PMID:39189748
+        snippet: Clostridioides difficile is a strict anaerobic, sporulating Firmicutes
+        notes: Supports glycyl radical enzymes in strictly anaerobic; UniProtKB:A0A069AMK2
+          (pflE, Trans-4-hydroxy-L-proline dehydratase activating enzyme) in Clostridioides
+          difficile (Peptoclostridium difficile) provides a verified protein exemplar.
   - node_id: low_potential_metabolic_enzymes
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
@@ -85,6 +146,25 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Oxygen-sensitive anaerobic energy-metabolism enzymes such as pyruvate:ferredoxin
       oxidoreductase (PFOR) and pyruvate formate lyase (PFL).
+    protein_examples:
+    - uniprot_id: UniProtKB:Q2RMD6
+      protein_label: Pyruvate:ferredoxin oxidoreductase
+      taxon_id: NCBITaxon:264732
+      taxon_label: Moorella thermoacetica (strain ATCC 39073 / JCM 9320)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 129
+      sequence_version: 1
+      role: Exemplar protein (Q2RMD6, Pyruvate:ferredoxin oxidoreductase) representing
+        low-potential energy-metabolism enzymes (PFOR/PFL) in Moorella thermoacetica
+        (strain ATCC 39073 / JCM 9320) for strictly anaerobic.
+      evidence:
+      - reference: PMID:39189748
+        snippet: Clostridioides difficile is a strict anaerobic, sporulating Firmicutes
+        notes: Supports low-potential energy-metabolism enzymes (PFOR/PFL) in strictly
+          anaerobic; UniProtKB:Q2RMD6 (Q2RMD6, Pyruvate:ferredoxin oxidoreductase)
+          in Moorella thermoacetica (strain ATCC 39073 / JCM 9320) provides a verified
+          protein exemplar.
   edges:
   - subject: anoxic_condition
     predicate: confers
@@ -225,4 +305,13 @@ curation_history:
     with scope_notes; marked 4 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (oxygen_sensitive_enzymes, iron_sulfur_cluster_enzymes, glycyl_radical_enzymes,
     low_potential_metabolic_enzymes).'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q4A0Q1 (betA)
+    protein example to node oxygen_sensitive_enzymes; added UniProtKB:P0DW32 (arrB)
+    protein example to node iron_sulfur_cluster_enzymes; added UniProtKB:A0A069AMK2
+    (pflE) protein example to node glycyl_radical_enzymes; added UniProtKB:Q2RMD6
+    (Q2RMD6) protein example to node low_potential_metabolic_enzymes.'
   llm_assisted: true

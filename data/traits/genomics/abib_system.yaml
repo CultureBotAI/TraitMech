@@ -105,6 +105,38 @@ causal_graphs:
     node_type: TRAIT
     grounding: traitmech:000214
     description: Possession of a genome-encoded abortive-infection phage-defense system.
+  - node_id: abib_system_protein_component
+    label: Ribosome hibernation promotion factor
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Ribosome hibernation promotion factor) associated
+      with AbiB system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - hpf
+    protein_examples:
+    - uniprot_id: UniProtKB:A2RIX0
+      protein_label: Ribosome hibernation promotion factor
+      gene_symbol: hpf
+      taxon_id: NCBITaxon:416870
+      taxon_label: Lactococcus lactis subsp. cremoris (strain MG1363)
+      entry_status: REVIEWED
+      proteome_id: UP000000364
+      retrieved_on: '2026-10-17'
+      entry_version: 88
+      sequence_version: 1
+      role: Characteristic protein component (hpf, Ribosome hibernation promotion
+        factor) associated with AbiB system in Lactococcus lactis subsp. cremoris
+        (strain MG1363).
+      evidence:
+      - reference: PMID:8825768
+        snippet: The abortive infection determinant AbiB prevents growth of the sensitive
+          phage bIL170, but not of the resistant phage bIL41, on Lactococcus lactis
+          strain IL1403
+        notes: Supports Ribosome hibernation promotion factor in AbiB system; UniProtKB:A2RIX0
+          (hpf, Ribosome hibernation promotion factor) in Lactococcus lactis subsp.
+          cremoris (strain MG1363) provides a verified protein exemplar.
   edges:
   - subject: abib_locus
     predicate: contributes to
@@ -174,6 +206,20 @@ causal_graphs:
     - reference: PMID:8825768
       snippet: The abortive infection determinant AbiB
       notes: Parreira et al. place AbiB in the abortive-infection class of phage defense.
+  - subject: abib_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: abib_system_trait
+    description: Ribosome hibernation promotion factor (hpf, UniProtKB:A2RIX0) contributes
+      to AbiB system (associated with determinant, lactococcus, infection).
+    evidence:
+    - reference: PMID:8825768
+      snippet: The abortive infection determinant AbiB prevents growth of the sensitive
+        phage bIL170, but not of the resistant phage bIL41, on Lactococcus lactis
+        strain IL1403
+      notes: Supports the functional association between Ribosome hibernation promotion
+        factor (UniProtKB:A2RIX0 in Lactococcus lactis subsp. cremoris (strain MG1363))
+        and AbiB system.
 discussions:
 - discussion_id: abib-trigger-and-rnase-gap
   prompt: Resolve the AbiB phage trigger, AbiB molecular function, and RNase effector
@@ -197,4 +243,10 @@ curation_history:
     infection system parent after an ignored-and-hidden duplicate review found no
     exact live TraitMech, METPO, history, or prior proposal record; the replacement
     placeholder is reserved in proposals/metpo_traitmech_v196.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    abib_system_protein_component with UniProtKB:A2RIX0 (hpf) exemplar.'
   llm_assisted: true

@@ -45,3 +45,72 @@ curation_history:
     a repository-wide duplicate review covering ignored and hidden files; METPO has
     no exact alpha-fucosidase activity class yet.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph alpha_fucosidase_activity_graph
+    with GENE_OR_PROTEIN node alpha_fucosidase_activity_protein_component and UniProtKB:P39914
+    exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: alpha_fucosidase_activity_graph
+  title: Protein component associated with alpha-fucosidase activity
+  description: Literature-backed association between Monothiol bacilliredoxin BrxC
+    (UniProtKB:P39914) and alpha-fucosidase activity.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P39914 in Bacillus
+    subtilis (strain 168)) associated with alpha-fucosidase activity while full multi-step
+    mechanistic curation remains future work.
+  nodes:
+  - node_id: alpha_fucosidase_activity_trait
+    label: alpha-fucosidase activity
+    node_type: TRAIT
+    grounding: traitmech:000152
+    description: A physiological enzyme-activity phenotype in which a cell produces
+      active alpha-fucosidase enzymes that hydrolyze alpha-L-fucosides to L-fucose
+      and an alcohol.
+  - node_id: alpha_fucosidase_activity_protein_component
+    label: Monothiol bacilliredoxin BrxC
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Monothiol bacilliredoxin BrxC) associated with
+      alpha-fucosidase activity.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - brxC
+    protein_examples:
+    - uniprot_id: UniProtKB:P39914
+      protein_label: Monothiol bacilliredoxin BrxC
+      gene_symbol: brxC
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
+      entry_status: REVIEWED
+      proteome_id: UP000001570
+      retrieved_on: '2026-10-17'
+      entry_version: 128
+      sequence_version: 1
+      role: Characteristic protein component (brxC, Monothiol bacilliredoxin BrxC)
+        associated with alpha-fucosidase activity in Bacillus subtilis (strain 168).
+      evidence:
+      - reference: DOI:10.1128/jcm.22.3.333-335.1985
+        snippet: Positive reactions for alpha-glucosidase, beta-glucosidase, alpha-fucosidase,
+          and alpha-glucuronidase suggest that "B. forsythus" may be saccharolytic.
+        notes: Supports Monothiol bacilliredoxin BrxC in alpha-fucosidase activity;
+          UniProtKB:P39914 (brxC, Monothiol bacilliredoxin BrxC) in Bacillus subtilis
+          (strain 168) provides a verified protein exemplar.
+  edges:
+  - subject: alpha_fucosidase_activity_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: alpha_fucosidase_activity_trait
+    description: Monothiol bacilliredoxin BrxC (brxC, UniProtKB:P39914) contributes
+      to alpha-fucosidase activity (associated with glucuronidase, saccharolytic,
+      glucosidase).
+    evidence:
+    - reference: DOI:10.1128/jcm.22.3.333-335.1985
+      snippet: Positive reactions for alpha-glucosidase, beta-glucosidase, alpha-fucosidase,
+        and alpha-glucuronidase suggest that "B. forsythus" may be saccharolytic.
+      notes: Supports the functional association between Monothiol bacilliredoxin
+        BrxC (UniProtKB:P39914 in Bacillus subtilis (strain 168)) and alpha-fucosidase
+        activity.

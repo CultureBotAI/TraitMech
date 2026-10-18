@@ -85,3 +85,69 @@ curation_history:
     text and figures. Added a natural NRRL1555 exemplar tied only to the 2004 assay,
     and deferred unresolved mechanisms.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph gravitropism_graph
+    with GENE_OR_PROTEIN node gravitropism_protein_component and UniProtKB:Q00828
+    exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: gravitropism_graph
+  title: Protein component associated with gravitropism
+  description: Literature-backed association between Response regulator aspartate
+    phosphatase A (UniProtKB:Q00828) and gravitropism.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q00828 in Bacillus
+    subtilis (strain 168)) associated with gravitropism while full multi-step mechanistic
+    curation remains future work.
+  nodes:
+  - node_id: gravitropism_trait
+    label: gravitropism
+    node_type: TRAIT
+    grounding: traitmech:000599
+    description: A phenotype in which growth is directionally oriented or reoriented
+      in response to gravity.
+  - node_id: gravitropism_protein_component
+    label: Response regulator aspartate phosphatase A
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Response regulator aspartate phosphatase A) associated
+      with gravitropism.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - rapA
+    protein_examples:
+    - uniprot_id: UniProtKB:Q00828
+      protein_label: Response regulator aspartate phosphatase A
+      gene_symbol: rapA
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
+      entry_status: REVIEWED
+      proteome_id: UP000001570
+      retrieved_on: '2026-10-17'
+      entry_version: 149
+      sequence_version: 2
+      role: Characteristic protein component (rapA, Response regulator aspartate phosphatase
+        A) associated with gravitropism in Bacillus subtilis (strain 168).
+      evidence:
+      - reference: DOI:10.1007/s004250050744
+        snippet: In rhizoids, positive gravitropic curvature is caused by differential
+          growth limited to the opposite subapical flanks of the apical dome
+        notes: Supports Response regulator aspartate phosphatase A in gravitropism;
+          UniProtKB:Q00828 (rapA, Response regulator aspartate phosphatase A) in Bacillus
+          subtilis (strain 168) provides a verified protein exemplar.
+  edges:
+  - subject: gravitropism_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: gravitropism_trait
+    description: Response regulator aspartate phosphatase A (rapA, UniProtKB:Q00828)
+      contributes to gravitropism (associated with differential, gravitropic, curvature).
+    evidence:
+    - reference: DOI:10.1007/s004250050744
+      snippet: In rhizoids, positive gravitropic curvature is caused by differential
+        growth limited to the opposite subapical flanks of the apical dome
+      notes: Supports the functional association between Response regulator aspartate
+        phosphatase A (UniProtKB:Q00828 in Bacillus subtilis (strain 168)) and gravitropism.

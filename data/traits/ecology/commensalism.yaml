@@ -55,6 +55,30 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Host mucosal antibody that can promote commensal colonization of
       the mucus layer.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q49VU2
+      protein_label: Peptidase T
+      gene_symbol: pepT
+      taxon_id: NCBITaxon:342451
+      taxon_label: Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
+        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+      entry_status: REVIEWED
+      proteome_id: UP000006371
+      retrieved_on: '2026-10-17'
+      entry_version: 124
+      sequence_version: 1
+      role: Exemplar protein (pepT, Peptidase T) representing secretory IgA in Staphylococcus
+        saprophyticus subsp. saprophyticus (strain ATCC 15305 / DSM 20229 / NCIMB
+        8711 / NCTC 7292 / S-41) for commensalism.
+      evidence:
+      - reference: DOI:10.1073/pnas.1218525110
+        snippet: This review examines how a growing knowledge of the vast range of
+          animal-bacterial interactions, whether in shared ecosystems or intimate
+          symbioses, is fundamentally altering our understanding of animal biology.
+        notes: Supports secretory IgA in commensalism; UniProtKB:Q49VU2 (pepT, Peptidase
+          T) in Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC 15305
+          / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) provides a verified protein
+          exemplar.
   - node_id: mucus_layer
     label: host mucus / mucins
     node_type: ENVIRONMENTAL_FACTOR
@@ -67,6 +91,27 @@ causal_graphs:
     label: bacterial glycan-binding proteins
     node_type: GENE_OR_PROTEIN
     description: Microbial adhesins mediating attachment to host mucin glycans.
+    protein_examples:
+    - uniprot_id: UniProtKB:P08191
+      protein_label: Type 1 fimbrin D-mannose specific adhesin
+      gene_symbol: fimH
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 198
+      sequence_version: 2
+      role: Exemplar protein (fimH, Type 1 fimbrin D-mannose specific adhesin) representing
+        bacterial glycan-binding proteins in Escherichia coli (strain K12) for commensalism.
+      evidence:
+      - reference: DOI:10.1073/pnas.1218525110
+        snippet: This review examines how a growing knowledge of the vast range of
+          animal-bacterial interactions, whether in shared ecosystems or intimate
+          symbioses, is fundamentally altering our understanding of animal biology.
+        notes: Supports bacterial glycan-binding proteins in commensalism; UniProtKB:P08191
+          (fimH, Type 1 fimbrin D-mannose specific adhesin) in Escherichia coli (strain
+          K12) provides a verified protein exemplar.
   - node_id: mucin_attachment
     label: attachment to mucin
     node_type: BIOLOGICAL_PROCESS
@@ -243,6 +288,13 @@ curation_history:
     the tranche: set graph scope commensalism_neutral_host=NONMECHANISTIC with scope_notes;
     marked 2 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (secretory_iga,
     glycan_binding_proteins).'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q49VU2 (pepT)
+    protein example to node secretory_iga; added UniProtKB:P08191 (fimH) protein example
+    to node glycan_binding_proteins.'
   llm_assisted: true
 discussions:
 - discussion_id: kgscan-3606bdcc991b

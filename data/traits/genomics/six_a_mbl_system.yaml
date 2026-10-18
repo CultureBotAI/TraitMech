@@ -86,6 +86,36 @@ causal_graphs:
     grounding: traitmech:000209
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
+  - node_id: six_a_mbl_system_protein_component
+    label: Thoeris anti-defense 1
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Thoeris anti-defense 1) associated with 6A-MBL
+      system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - tad1
+    protein_examples:
+    - uniprot_id: UniProtKB:P0DW61
+      protein_label: Thoeris anti-defense 1
+      gene_symbol: tad1
+      taxon_id: NCBITaxon:1392497
+      taxon_label: Clostridioides mangenotii (strain LM2)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 11
+      sequence_version: 1
+      role: Characteristic protein component (tad1, Thoeris anti-defense 1) associated
+        with 6A-MBL system in Clostridioides mangenotii (strain LM2).
+      evidence:
+      - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+        snippet: 6A_MBL | 10\.1016/j\.chom\.2024\.07\.007 | Bacterial homologs of
+          innate eukaryotic antiviral defenses with anti-phage activity highlight
+          shared evolutionary roots of viral defenses
+        notes: Supports Thoeris anti-defense 1 in 6A-MBL system; UniProtKB:P0DW61
+          (tad1, Thoeris anti-defense 1) in Clostridioides mangenotii (strain LM2)
+          provides a verified protein exemplar.
   edges:
   - subject: six_a_mbl_locus
     predicate: contributes to
@@ -141,6 +171,18 @@ causal_graphs:
         roots of viral defenses
       notes: The DefenseFinder article registry maps the named 6A-MBL system to the
         van den Berg et al. antiphage-system discovery paper.
+  - subject: six_a_mbl_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: six_a_mbl_system_trait
+    description: Thoeris anti-defense 1 (tad1, UniProtKB:P0DW61) contributes to 6A-MBL
+      system (associated with landscape, pangenome, defense).
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: PD-Lambda-2 | 10\.1101/2022\.05\.12\.491691 | Mapping the landscape
+        of anti-phage defense mechanisms in the E\. coli pangenome
+      notes: Supports the functional association between Thoeris anti-defense 1 (UniProtKB:P0DW61
+        in Clostridioides mangenotii (strain LM2)) and 6A-MBL system.
 discussions:
 - discussion_id: six-a-mbl-mechanism-gap
   prompt: Resolve 6A-MBL phage triggers and effector outputs before minting narrower
@@ -178,4 +220,10 @@ curation_history:
   changes: 'Resolved issue #1148 by sourcing the exact 6A-MBL synonym from the stable
     van den Berg Zenodo record that names 6A-MBL verbatim, leaving DefenseFinder model
     and component labels as related synonyms.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    six_a_mbl_system_protein_component with UniProtKB:P0DW61 (tad1) exemplar.'
   llm_assisted: true

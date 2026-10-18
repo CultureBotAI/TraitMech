@@ -64,6 +64,25 @@ causal_graphs:
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: This generic node spans unrelated cognate methyltransferase families
       across restriction-modification system types.
+    protein_examples:
+    - uniprot_id: UniProtKB:P21311
+      protein_label: Retron Ec67 DNA adenine methylase
+      gene_symbol: dam
+      taxon_id: NCBITaxon:562
+      taxon_label: Escherichia coli
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 105
+      sequence_version: 1
+      role: Exemplar protein (dam, Retron Ec67 DNA adenine methylase) representing
+        cognate DNA methyltransferase in Escherichia coli for restriction-modification
+        system.
+      evidence:
+      - reference: PMID:5312500
+        snippet: restriction enzyme from Hemophilus influenzae
+        notes: Supports cognate DNA methyltransferase in restriction-modification
+          system; UniProtKB:P21311 (dam, Retron Ec67 DNA adenine methylase) in Escherichia
+          coli provides a verified protein exemplar.
   - node_id: host_site_methylation
     label: host recognition site methylation
     node_type: BIOLOGICAL_PROCESS
@@ -84,7 +103,7 @@ causal_graphs:
       taxon_label: Haemophilus influenzae Rd KW20
       entry_status: REVIEWED
       retrieved_on: '2026-08-25'
-      entry_version: 124
+      entry_version: 125
       sequence_version: 2
       role: HindII recognizes its target sequence and cleaves foreign double-stranded
         DNA as the restriction component of the HindII system.
@@ -105,6 +124,26 @@ causal_graphs:
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: This functional label spans unrelated plasmid-encoded methyltransferase
       families.
+    protein_examples:
+    - uniprot_id: UniProtKB:P08957
+      protein_label: Type I restriction enzyme EcoKI methylase subunit
+      gene_symbol: hsdM
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 190
+      sequence_version: 1
+      role: Exemplar protein (hsdM, Type I restriction enzyme EcoKI methylase subunit)
+        representing plasmid-encoded methylase in Escherichia coli (strain K12) for
+        restriction-modification system.
+      evidence:
+      - reference: PMID:5312500
+        snippet: restriction enzyme from Hemophilus influenzae
+        notes: Supports plasmid-encoded methylase in restriction-modification system;
+          UniProtKB:P08957 (hsdM, Type I restriction enzyme EcoKI methylase subunit)
+          in Escherichia coli (strain K12) provides a verified protein exemplar.
   - node_id: phage_mtase
     label: phage-encoded DNA methyltransferase
     node_type: GENE_OR_PROTEIN
@@ -113,6 +152,25 @@ causal_graphs:
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: This functional label spans unrelated phage DNA-methyltransferase
       families.
+    protein_examples:
+    - uniprot_id: UniProtKB:P21311
+      protein_label: Retron Ec67 DNA adenine methylase
+      gene_symbol: dam
+      taxon_id: NCBITaxon:562
+      taxon_label: Escherichia coli
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 105
+      sequence_version: 1
+      role: Exemplar protein (dam, Retron Ec67 DNA adenine methylase) representing
+        phage-encoded DNA methyltransferase in Escherichia coli for restriction-modification
+        system.
+      evidence:
+      - reference: PMID:5312500
+        snippet: restriction enzyme from Hemophilus influenzae
+        notes: Supports phage-encoded DNA methyltransferase in restriction-modification
+          system; UniProtKB:P21311 (dam, Retron Ec67 DNA adenine methylase) in Escherichia
+          coli provides a verified protein exemplar.
   edges:
   - subject: rm_trait
     predicate: enables
@@ -248,4 +306,13 @@ curation_history:
   action: REFINED_PARENT_TRAITS
   changes: Reparented restriction-modification system from the broad genomics parent
     to the newly minted phage defense system parent.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:P44413
+    version metadata (entry_version=125, sequence_version=2); added UniProtKB:P21311
+    (dam) protein example to node cognate_mtase; added UniProtKB:P08957 (hsdM) protein
+    example to node plasmid_methylase; added UniProtKB:P21311 (dam) protein example
+    to node phage_mtase.'
   llm_assisted: true

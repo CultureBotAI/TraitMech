@@ -63,6 +63,26 @@ causal_graphs:
       a quantitative measurement graph; no exact semantic family term was established
       for this aggregate use.
     description: K+ import transporters (KupA/KupB, KimA, Kdp).
+    protein_examples:
+    - uniprot_id: UniProtKB:P96589
+      protein_label: Potassium transporter KimA
+      gene_symbol: kimA
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
+      entry_status: REVIEWED
+      proteome_id: UP000001570
+      retrieved_on: '2026-10-17'
+      entry_version: 124
+      sequence_version: 1
+      role: Exemplar protein (kimA, Potassium transporter KimA) representing potassium
+        uptake systems in Bacillus subtilis (strain 168) for NaCl delta mid2.
+      evidence:
+      - reference: DOI:10.1128/mmbr.00181-23
+        snippet: potassium and compatible solute transport are vital for bacteria
+          to survive changes in external osmolality
+        notes: Supports potassium uptake systems in NaCl delta mid2; UniProtKB:P96589
+          (kimA, Potassium transporter KimA) in Bacillus subtilis (strain 168) provides
+          a verified protein exemplar.
   - node_id: cell_volume_regulation
     label: cell volume regulation
     node_type: BIOLOGICAL_PROCESS
@@ -253,4 +273,10 @@ curation_history:
   changes: 'Reviewed the nacl_delta_mid2_broad_breadth graph for issue #183: added
     exact snippets to 6 causal-edge evidence items, grounded 2 residual predicates,
     and repaired 2 local node-type conflicts. No paid research service was called.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P96589 (kimA)
+    protein example to node potassium_uptake_systems.'
   llm_assisted: true

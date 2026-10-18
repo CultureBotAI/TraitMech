@@ -60,3 +60,72 @@ curation_history:
     after a repository-wide duplicate review covering ignored and hidden files; METPO
     has no exact beta-N-acetylhexosaminidase activity class yet.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph beta_n_acetylhexosaminidase_activity_graph
+    with GENE_OR_PROTEIN node beta_n_acetylhexosaminidase_activity_protein_component
+    and UniProtKB:P0C2S5 exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: beta_n_acetylhexosaminidase_activity_graph
+  title: Protein component associated with beta-N-acetylhexosaminidase activity
+  description: Literature-backed association between Cellulose 1,4-beta-cellobiosidase
+    (reducing end) CelS (UniProtKB:P0C2S5) and beta-N-acetylhexosaminidase activity.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P0C2S5 in Acetivibrio
+    thermocellus) associated with beta-N-acetylhexosaminidase activity while full
+    multi-step mechanistic curation remains future work.
+  nodes:
+  - node_id: beta_n_acetylhexosaminidase_activity_trait
+    label: beta-N-acetylhexosaminidase activity
+    node_type: TRAIT
+    grounding: traitmech:000157
+    description: A physiological enzyme-activity phenotype in which a cell produces
+      active beta-N-acetylhexosaminidase enzymes that hydrolyze terminal, non-reducing
+      N-acetyl-D-hexosamine residues in N-acetyl-beta-D-hexosaminides.
+  - node_id: beta_n_acetylhexosaminidase_activity_protein_component
+    label: Cellulose 1,4-beta-cellobiosidase (reducing end) CelS
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Cellulose 1,4-beta-cellobiosidase (reducing end)
+      CelS) associated with beta-N-acetylhexosaminidase activity.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - celS
+    protein_examples:
+    - uniprot_id: UniProtKB:P0C2S5
+      protein_label: Cellulose 1,4-beta-cellobiosidase (reducing end) CelS
+      gene_symbol: celS
+      taxon_id: NCBITaxon:1515
+      taxon_label: Acetivibrio thermocellus
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 81
+      sequence_version: 1
+      role: Characteristic protein component (celS, Cellulose 1,4-beta-cellobiosidase
+        (reducing end) CelS) associated with beta-N-acetylhexosaminidase activity
+        in Acetivibrio thermocellus.
+      evidence:
+      - reference: https://iubmb.qmul.ac.uk/enzyme/EC3/2/1/52.html
+        snippet: 'Reaction: Hydrolysis of terminal non-reducing N-acetyl-D-hexosamine
+          residues in N-acetyl-β-D-hexosaminides'
+        notes: Supports Cellulose 1,4-beta-cellobiosidase (reducing end) CelS in beta-N-acetylhexosaminidase
+          activity; UniProtKB:P0C2S5 (celS, Cellulose 1,4-beta-cellobiosidase (reducing
+          end) CelS) in Acetivibrio thermocellus provides a verified protein exemplar.
+  edges:
+  - subject: beta_n_acetylhexosaminidase_activity_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: beta_n_acetylhexosaminidase_activity_trait
+    description: Cellulose 1,4-beta-cellobiosidase (reducing end) CelS (celS, UniProtKB:P0C2S5)
+      contributes to beta-N-acetylhexosaminidase activity (associated with hexosaminides,
+      hexosamine, hydrolysis).
+    evidence:
+    - reference: https://iubmb.qmul.ac.uk/enzyme/EC3/2/1/52.html
+      snippet: 'Reaction: Hydrolysis of terminal non-reducing N-acetyl-D-hexosamine
+        residues in N-acetyl-β-D-hexosaminides'
+      notes: Supports the functional association between Cellulose 1,4-beta-cellobiosidase
+        (reducing end) CelS (UniProtKB:P0C2S5 in Acetivibrio thermocellus) and beta-N-acetylhexosaminidase
+        activity.

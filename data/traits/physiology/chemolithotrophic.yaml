@@ -78,7 +78,7 @@ causal_graphs:
       taxon_label: Nitrosomonas europaea ATCC 19718
       entry_status: REVIEWED
       retrieved_on: '2026-08-24'
-      entry_version: 126
+      entry_version: 127
       sequence_version: 2
       role: AmoA alpha-subunit component of the N. europaea ammonia monooxygenase;
         the accession maps two duplicated amoA gene copies and is not the whole enzyme
@@ -108,6 +108,28 @@ causal_graphs:
     grounding_notes: Sox denotes a variable multienzyme pathway assembled from several
       distinct component families; no one protein-family term represents the complete
       generic system in this cross-branch graph.
+    protein_examples:
+    - uniprot_id: UniProtKB:D3RNN8
+      protein_label: Sulfite dehydrogenase subunit A
+      gene_symbol: soeA
+      taxon_id: NCBITaxon:572477
+      taxon_label: Allochromatium vinosum (strain ATCC 17899 / DSM 180 / NBRC 103801
+        / NCIMB 10441 / D) (Chromatium vinosum)
+      entry_status: REVIEWED
+      proteome_id: UP000001441
+      retrieved_on: '2026-10-17'
+      entry_version: 77
+      sequence_version: 1
+      role: Exemplar protein (soeA, Sulfite dehydrogenase subunit A) representing
+        Sox enzyme system in Allochromatium vinosum (strain ATCC 17899 / DSM 180 /
+        NBRC 103801 / NCIMB 10441 / D) (Chromatium vinosum) for chemolithotrophic.
+      evidence:
+      - reference: DOI:10.1016/B978-0-12-378630-2.00219-X
+        snippet: chemolithotrophic bacteria and archaea
+        notes: Supports Sox enzyme system in chemolithotrophic; UniProtKB:D3RNN8 (soeA,
+          Sulfite dehydrogenase subunit A) in Allochromatium vinosum (strain ATCC
+          17899 / DSM 180 / NBRC 103801 / NCIMB 10441 / D) (Chromatium vinosum) provides
+          a verified protein exemplar.
   - node_id: thiosulfate
     label: thiosulfate
     node_type: CHEMICAL
@@ -429,4 +451,11 @@ curation_history:
   action: CONNECT_CAUSAL_GRAPH_COMPONENTS
   changes: 'Resolved issue #183 graph fragmentation (5 components to 1): added 4 public-source
     connector(s). No paid research service was called.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:Q04507
+    version metadata (entry_version=127, sequence_version=2); added UniProtKB:D3RNN8
+    (soeA) protein example to node sox_enzyme_system.'
   llm_assisted: true

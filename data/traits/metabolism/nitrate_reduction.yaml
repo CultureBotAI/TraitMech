@@ -24,3 +24,67 @@ curation_history:
   changes: Proposed a DOI-backed FAPROTAX metabolic capability from proposals/metpo_traitmech_v11
     after repository-wide duplicate review.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph nitrate_reduction_graph
+    with GENE_OR_PROTEIN node nitrate_reduction_protein_component and UniProtKB:Q9LA24
+    exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: nitrate_reduction_graph
+  title: Protein component associated with nitrate reduction
+  description: Literature-backed association between Fumarate and nitrate reduction
+    regulatory protein (UniProtKB:Q9LA24) and nitrate reduction.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q9LA24 in Shigella
+    dysenteriae) associated with nitrate reduction while full multi-step mechanistic
+    curation remains future work.
+  nodes:
+  - node_id: nitrate_reduction_trait
+    label: nitrate reduction
+    node_type: TRAIT
+    grounding: traitmech:000134
+    description: A metabolism in which an organism reduces nitrate, whether for energy
+      conservation or for assimilation into biomass.
+  - node_id: nitrate_reduction_protein_component
+    label: Fumarate and nitrate reduction regulatory protein
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Fumarate and nitrate reduction regulatory protein)
+      associated with nitrate reduction.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - fnr
+    protein_examples:
+    - uniprot_id: UniProtKB:Q9LA24
+      protein_label: Fumarate and nitrate reduction regulatory protein
+      gene_symbol: fnr
+      taxon_id: NCBITaxon:622
+      taxon_label: Shigella dysenteriae
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 106
+      sequence_version: 2
+      role: Characteristic protein component (fnr, Fumarate and nitrate reduction
+        regulatory protein) associated with nitrate reduction in Shigella dysenteriae.
+      evidence:
+      - reference: DOI:10.1128/JB.181.21.6573-6584.1999
+        snippet: Nitrate reduction can be performed with three different purposes
+        notes: Supports Fumarate and nitrate reduction regulatory protein in nitrate
+          reduction; UniProtKB:Q9LA24 (fnr, Fumarate and nitrate reduction regulatory
+          protein) in Shigella dysenteriae provides a verified protein exemplar.
+  edges:
+  - subject: nitrate_reduction_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: nitrate_reduction_trait
+    description: Fumarate and nitrate reduction regulatory protein (fnr, UniProtKB:Q9LA24)
+      contributes to nitrate reduction (associated with different, performed, reduction).
+    evidence:
+    - reference: DOI:10.1128/JB.181.21.6573-6584.1999
+      snippet: Nitrate reduction can be performed with three different purposes
+      notes: Supports the functional association between Fumarate and nitrate reduction
+        regulatory protein (UniProtKB:Q9LA24 in Shigella dysenteriae) and nitrate
+        reduction.

@@ -109,3 +109,73 @@ curation_history:
     in v486 under released phenotype. Deferred lexical mappings and protein-resolved
     graphs.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph homothallism_graph
+    with GENE_OR_PROTEIN node homothallism_protein_component and UniProtKB:Q5AD13
+    exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: homothallism_graph
+  title: Protein component associated with homothallism
+  description: Literature-backed association between Filamentous growth regulator
+    15 (UniProtKB:Q5AD13) and homothallism.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q5AD13 in Candida
+    albicans (strain SC5314 / ATCC MYA-2876) (Yeast)) associated with homothallism
+    while full multi-step mechanistic curation remains future work.
+  nodes:
+  - node_id: homothallism_trait
+    label: homothallism
+    node_type: TRAIT
+    grounding: traitmech:000609
+    description: A fungal phenotype enabling a culture founded from a single spore
+      to reproduce sexually in isolation from a mating partner.
+  - node_id: homothallism_protein_component
+    label: Filamentous growth regulator 15
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Filamentous growth regulator 15) associated with
+      homothallism.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - FGR15
+    protein_examples:
+    - uniprot_id: UniProtKB:Q5AD13
+      protein_label: Filamentous growth regulator 15
+      gene_symbol: FGR15
+      taxon_id: NCBITaxon:237561
+      taxon_label: Candida albicans (strain SC5314 / ATCC MYA-2876) (Yeast)
+      entry_status: REVIEWED
+      proteome_id: UP000000559
+      retrieved_on: '2026-10-17'
+      entry_version: 100
+      sequence_version: 2
+      role: Characteristic protein component (FGR15, Filamentous growth regulator
+        15) associated with homothallism in Candida albicans (strain SC5314 / ATCC
+        MYA-2876) (Yeast).
+      evidence:
+      - reference: DOI:10.1371/journal.pgen.1006981
+        snippet: The filamentous fungus Chromocrea spinulosa (Trichoderma spinulosum)
+          exhibits both self-fertile (homothallic) and self-sterile (heterothallic)
+          sexual reproductive behavior.
+        notes: Supports Filamentous growth regulator 15 in homothallism; UniProtKB:Q5AD13
+          (FGR15, Filamentous growth regulator 15) in Candida albicans (strain SC5314
+          / ATCC MYA-2876) (Yeast) provides a verified protein exemplar.
+  edges:
+  - subject: homothallism_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: homothallism_trait
+    description: Filamentous growth regulator 15 (FGR15, UniProtKB:Q5AD13) contributes
+      to homothallism (associated with heterothallic, reproductive, filamentous).
+    evidence:
+    - reference: DOI:10.1371/journal.pgen.1006981
+      snippet: The filamentous fungus Chromocrea spinulosa (Trichoderma spinulosum)
+        exhibits both self-fertile (homothallic) and self-sterile (heterothallic)
+        sexual reproductive behavior.
+      notes: Supports the functional association between Filamentous growth regulator
+        15 (UniProtKB:Q5AD13 in Candida albicans (strain SC5314 / ATCC MYA-2876) (Yeast))
+        and homothallism.

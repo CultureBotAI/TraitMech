@@ -100,3 +100,73 @@ curation_history:
     no exact record. Reserved METPO:1059400 in v517 with v514's unchanged parent context.
     Deferred unverified examples, mappings and protein graphs.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph ribophagy_graph
+    with GENE_OR_PROTEIN node ribophagy_protein_component and UniProtKB:P39968 exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: ribophagy_graph
+  title: Protein component associated with ribophagy
+  description: Literature-backed association between Vacuolar protein 8 (UniProtKB:P39968)
+    and ribophagy.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P39968 in Saccharomyces
+    cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)) associated with ribophagy
+    while full multi-step mechanistic curation remains future work.
+  nodes:
+  - node_id: ribophagy_trait
+    label: ribophagy
+    node_type: TRAIT
+    grounding: traitmech:000641
+    description: An autophagy phenotype in which a microbial cell selectively degrades
+      mature ribosomes or their subunits through macroautophagic delivery to lysosomal
+      or vacuolar compartments.
+  - node_id: ribophagy_protein_component
+    label: Vacuolar protein 8
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Vacuolar protein 8) associated with ribophagy.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - VAC8
+    protein_examples:
+    - uniprot_id: UniProtKB:P39968
+      protein_label: Vacuolar protein 8
+      gene_symbol: VAC8
+      taxon_id: NCBITaxon:559292
+      taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's
+        yeast)
+      entry_status: REVIEWED
+      proteome_id: UP000002311
+      retrieved_on: '2026-10-17'
+      entry_version: 206
+      sequence_version: 3
+      role: Characteristic protein component (VAC8, Vacuolar protein 8) associated
+        with ribophagy in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's
+        yeast).
+      evidence:
+      - reference: DOI:10.1016/j.jbc.2025.108554
+        snippet: We discovered that most ribosomes are selectively degraded, whose
+          mechanism differs from the previously reported selective degradation process
+          called "ribophagy."
+        notes: Supports Vacuolar protein 8 in ribophagy; UniProtKB:P39968 (VAC8, Vacuolar
+          protein 8) in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's
+          yeast) provides a verified protein exemplar.
+  edges:
+  - subject: ribophagy_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: ribophagy_trait
+    description: Vacuolar protein 8 (VAC8, UniProtKB:P39968) contributes to ribophagy
+      (associated with selectively, discovered, previously).
+    evidence:
+    - reference: DOI:10.1016/j.jbc.2025.108554
+      snippet: We discovered that most ribosomes are selectively degraded, whose mechanism
+        differs from the previously reported selective degradation process called
+        "ribophagy."
+      notes: Supports the functional association between Vacuolar protein 8 (UniProtKB:P39968
+        in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast))
+        and ribophagy.

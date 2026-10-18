@@ -98,6 +98,25 @@ causal_graphs:
       for this aggregate use.
     description: Membrane safety-valve channels releasing solutes during sudden hypoosmotic
       shocks.
+    protein_examples:
+    - uniprot_id: UniProtKB:T0DVE4
+      protein_label: Small-conductance mechanosensitive channel
+      gene_symbol: mscS
+      taxon_id: NCBITaxon:1355530
+      taxon_label: Helicobacter pylori (strain UM084)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 40
+      sequence_version: 1
+      role: Exemplar protein (mscS, Small-conductance mechanosensitive channel) representing
+        mechanosensitive channels (MscL/MscS) in Helicobacter pylori (strain UM084)
+        for NaCl delta.
+      evidence:
+      - reference: DOI:10.3390/microorganisms12081738
+        snippet: mechanosensitive channels, which serve as safety valves
+        notes: Supports mechanosensitive channels (MscL/MscS) in NaCl delta; UniProtKB:T0DVE4
+          (mscS, Small-conductance mechanosensitive channel) in Helicobacter pylori
+          (strain UM084) provides a verified protein exemplar.
   - node_id: hypoosmotic_shock
     label: hypoosmotic shock
     node_type: ENVIRONMENTAL_FACTOR
@@ -300,4 +319,10 @@ curation_history:
     exact snippets to 6 causal-edge evidence items, grounded 3 residual predicates,
     and preserved the graph as a nonmechanistic quantitative NaCl-range-breadth classification.
     No paid research service was called.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:T0DVE4 (mscS)
+    protein example to node mechanosensitive_channels.'
   llm_assisted: true

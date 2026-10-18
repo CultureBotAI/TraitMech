@@ -82,3 +82,72 @@ curation_history:
     evidence and retained the stable strain-provenance URL in the canonical example
     note. Both primary DOI studies and their verified abstract snippets remain.'
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph energy_taxis_graph
+    with GENE_OR_PROTEIN node energy_taxis_protein_component and UniProtKB:P0A9W3
+    exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: energy_taxis_graph
+  title: Protein component associated with energy taxis
+  description: Literature-backed association between Energy-dependent translational
+    throttle protein EttA (UniProtKB:P0A9W3) and energy taxis.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P0A9W3 in Escherichia
+    coli (strain K12)) associated with energy taxis while full multi-step mechanistic
+    curation remains future work.
+  nodes:
+  - node_id: energy_taxis_trait
+    label: energy taxis
+    node_type: TRAIT
+    grounding: traitmech:000590
+    description: A motile phenotype in which directional locomotion is regulated by
+      sensing changes in the electron transport system associated with cellular energy
+      generation.
+  - node_id: energy_taxis_protein_component
+    label: Energy-dependent translational throttle protein EttA
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Energy-dependent translational throttle protein
+      EttA) associated with energy taxis.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - ettA
+    protein_examples:
+    - uniprot_id: UniProtKB:P0A9W3
+      protein_label: Energy-dependent translational throttle protein EttA
+      gene_symbol: ettA
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 139
+      sequence_version: 2
+      role: Characteristic protein component (ettA, Energy-dependent translational
+        throttle protein EttA) associated with energy taxis in Escherichia coli (strain
+        K12).
+      evidence:
+      - reference: DOI:10.1128/jb.186.19.6595-6604.2004
+        snippet: Motility responses triggered by changes in the electron transport
+          system are collectively known as energy taxis.
+        notes: Supports Energy-dependent translational throttle protein EttA in energy
+          taxis; UniProtKB:P0A9W3 (ettA, Energy-dependent translational throttle protein
+          EttA) in Escherichia coli (strain K12) provides a verified protein exemplar.
+  edges:
+  - subject: energy_taxis_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: energy_taxis_trait
+    description: Energy-dependent translational throttle protein EttA (ettA, UniProtKB:P0A9W3)
+      contributes to energy taxis (associated with collectively, responses, transport).
+    evidence:
+    - reference: DOI:10.1128/jb.186.19.6595-6604.2004
+      snippet: Motility responses triggered by changes in the electron transport system
+        are collectively known as energy taxis.
+      notes: Supports the functional association between Energy-dependent translational
+        throttle protein EttA (UniProtKB:P0A9W3 in Escherichia coli (strain K12))
+        and energy taxis.

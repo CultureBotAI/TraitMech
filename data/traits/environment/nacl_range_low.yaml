@@ -78,6 +78,26 @@ causal_graphs:
       a quantitative measurement graph; no exact semantic family term was established
       for this aggregate use.
     description: Tension-gated channels (MscL/MscS) that vent solutes to prevent lysis.
+    protein_examples:
+    - uniprot_id: UniProtKB:T0DVE4
+      protein_label: Small-conductance mechanosensitive channel
+      gene_symbol: mscS
+      taxon_id: NCBITaxon:1355530
+      taxon_label: Helicobacter pylori (strain UM084)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 40
+      sequence_version: 1
+      role: Exemplar protein (mscS, Small-conductance mechanosensitive channel) representing
+        mechanosensitive channels MscL/MscS in Helicobacter pylori (strain UM084)
+        for NaCl range low.
+      evidence:
+      - reference: DOI:10.1093/femsml/uqad020
+        snippet: hyperosmotic stress by addition of either non-ionic osmolyte sucrose
+          or ionic solute NaCl
+        notes: Supports mechanosensitive channels MscL/MscS in NaCl range low; UniProtKB:T0DVE4
+          (mscS, Small-conductance mechanosensitive channel) in Helicobacter pylori
+          (strain UM084) provides a verified protein exemplar.
   - node_id: c_di_amp
     label: cyclic di-AMP
     node_type: CHEMICAL
@@ -92,6 +112,29 @@ causal_graphs:
       for this aggregate use.
     description: ABC-type transporters that import compatible solutes like glycine
       betaine.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q49XI8
+      protein_label: Phosphate import ATP-binding protein PstB
+      gene_symbol: pstB
+      taxon_id: NCBITaxon:342451
+      taxon_label: Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
+        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+      entry_status: REVIEWED
+      proteome_id: UP000006371
+      retrieved_on: '2026-10-17'
+      entry_version: 133
+      sequence_version: 1
+      role: Exemplar protein (pstB, Phosphate import ATP-binding protein PstB) representing
+        OpuA/OpuC compatible-solute importers in Staphylococcus saprophyticus subsp.
+        saprophyticus (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+        for NaCl range low.
+      evidence:
+      - reference: DOI:10.1128/mmbr.00181-23
+        snippet: Cyclic di-AMP binds to the CBS domains of compatible solute importers
+        notes: Supports OpuA/OpuC compatible-solute importers in NaCl range low; UniProtKB:Q49XI8
+          (pstB, Phosphate import ATP-binding protein PstB) in Staphylococcus saprophyticus
+          subsp. saprophyticus (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC
+          7292 / S-41) provides a verified protein exemplar.
   - node_id: choline_uptake
     label: choline uptake
     node_type: BIOLOGICAL_PROCESS
@@ -257,4 +300,11 @@ curation_history:
     bridge snippet with exact Bhowmick et al. wording that normalizes the K+ superscript
     and names both cation and compatible-solute accumulation after an external osmotic
     upshift.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:T0DVE4 (mscS)
+    protein example to node mechanosensitive_channels; added UniProtKB:Q49XI8 (pstB)
+    protein example to node opu_solute_importers.'
   llm_assisted: true

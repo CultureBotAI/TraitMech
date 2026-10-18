@@ -127,3 +127,74 @@ curation_history:
     recovery, mixed induced/repressed gene set and assay timing discrepancy; definition,
     identifiers and PROPOSED status are unchanged.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph enhanced_transcriptional_reactivation_memory_graph
+    with GENE_OR_PROTEIN node enhanced_transcriptional_reactivation_memory_protein_component
+    and UniProtKB:Q12510 exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: enhanced_transcriptional_reactivation_memory_graph
+  title: Protein component associated with enhanced transcriptional reactivation memory
+  description: Literature-backed association between DNA damage-binding protein CMR1
+    (UniProtKB:Q12510) and enhanced transcriptional reactivation memory.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q12510 in Saccharomyces
+    cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)) associated with enhanced
+    transcriptional reactivation memory while full multi-step mechanistic curation
+    remains future work.
+  nodes:
+  - node_id: enhanced_transcriptional_reactivation_memory_trait
+    label: enhanced transcriptional reactivation memory
+    node_type: TRAIT
+    grounding: traitmech:000713
+    description: A physiological phenotype in which a microbial cell or lineage retains
+      a non-genetic state from prior inducing conditions that enhances the rate or
+      magnitude of later transcriptional activation after intervening repression.
+  - node_id: enhanced_transcriptional_reactivation_memory_protein_component
+    label: DNA damage-binding protein CMR1
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (DNA damage-binding protein CMR1) associated with
+      enhanced transcriptional reactivation memory.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - CMR1
+    protein_examples:
+    - uniprot_id: UniProtKB:Q12510
+      protein_label: DNA damage-binding protein CMR1
+      gene_symbol: CMR1
+      taxon_id: NCBITaxon:559292
+      taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's
+        yeast)
+      entry_status: REVIEWED
+      proteome_id: UP000002311
+      retrieved_on: '2026-10-17'
+      entry_version: 191
+      sequence_version: 1
+      role: Characteristic protein component (CMR1, DNA damage-binding protein CMR1)
+        associated with enhanced transcriptional reactivation memory in Saccharomyces
+        cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast).
+      evidence:
+      - reference: DOI:10.7554/eLife.77646
+        snippet: Upon Anchor Away of Opi1, reactivation was faster than activation
+        notes: Supports DNA damage-binding protein CMR1 in enhanced transcriptional
+          reactivation memory; UniProtKB:Q12510 (CMR1, DNA damage-binding protein
+          CMR1) in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's
+          yeast) provides a verified protein exemplar.
+  edges:
+  - subject: enhanced_transcriptional_reactivation_memory_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: enhanced_transcriptional_reactivation_memory_trait
+    description: DNA damage-binding protein CMR1 (CMR1, UniProtKB:Q12510) contributes
+      to enhanced transcriptional reactivation memory (associated with reactivation,
+      activation, anchor).
+    evidence:
+    - reference: DOI:10.7554/eLife.77646
+      snippet: Upon Anchor Away of Opi1, reactivation was faster than activation
+      notes: Supports the functional association between DNA damage-binding protein
+        CMR1 (UniProtKB:Q12510 in Saccharomyces cerevisiae (strain ATCC 204508 / S288c)
+        (Baker's yeast)) and enhanced transcriptional reactivation memory.

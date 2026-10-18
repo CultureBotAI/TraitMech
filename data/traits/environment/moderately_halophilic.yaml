@@ -73,6 +73,27 @@ causal_graphs:
     label: EctD (ectoine hydroxylase)
     node_type: GENE_OR_PROTEIN
     description: Ectoine hydroxylase converting ectoine to hydroxyectoine.
+    protein_examples:
+    - uniprot_id: UniProtKB:E1VA04
+      protein_label: Ectoine dioxygenase
+      gene_symbol: ectD
+      taxon_id: NCBITaxon:768066
+      taxon_label: Halomonas elongata (strain ATCC 33173 / DSM 2581 / NBRC 15536 /
+        NCIMB 2198 / 1H9)
+      entry_status: REVIEWED
+      proteome_id: UP000008707
+      retrieved_on: '2026-10-17'
+      entry_version: 58
+      sequence_version: 1
+      role: Exemplar protein (ectD, Ectoine dioxygenase) representing EctD (ectoine
+        hydroxylase) in Halomonas elongata (strain ATCC 33173 / DSM 2581 / NBRC 15536
+        / NCIMB 2198 / 1H9) for moderately halophilic.
+      evidence:
+      - reference: PMID:9758852
+        snippet: moderately halophilic bacterium Halomonas elongata
+        notes: Supports EctD (ectoine hydroxylase) in moderately halophilic; UniProtKB:E1VA04
+          (ectD, Ectoine dioxygenase) in Halomonas elongata (strain ATCC 33173 / DSM
+          2581 / NBRC 15536 / NCIMB 2198 / 1H9) provides a verified protein exemplar.
   - node_id: bcct_transporters
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
@@ -81,6 +102,27 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Betaine/carnitine/choline transporter family importing compatible
       solutes.
+    protein_examples:
+    - uniprot_id: UniProtKB:O34992
+      protein_label: Glycine betaine/carnitine/choline transport ATP-binding protein
+        OpuCA
+      gene_symbol: opuCA
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
+      entry_status: REVIEWED
+      proteome_id: UP000001570
+      retrieved_on: '2026-10-17'
+      entry_version: 149
+      sequence_version: 1
+      role: Exemplar protein (opuCA, Glycine betaine/carnitine/choline transport ATP-binding
+        protein OpuCA) representing BCCT transporters in Bacillus subtilis (strain
+        168) for moderately halophilic.
+      evidence:
+      - reference: PMID:9758852
+        snippet: moderately halophilic bacterium Halomonas elongata
+        notes: Supports BCCT transporters in moderately halophilic; UniProtKB:O34992
+          (opuCA, Glycine betaine/carnitine/choline transport ATP-binding protein
+          OpuCA) in Bacillus subtilis (strain 168) provides a verified protein exemplar.
   - node_id: teaabc_transporter
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
@@ -88,6 +130,26 @@ causal_graphs:
     label: TeaABC TRAP transporter
     node_type: GENE_OR_PROTEIN
     description: TRAP transporter importing ectoine and hydroxyectoine.
+    protein_examples:
+    - uniprot_id: UniProtKB:W6KHH6
+      protein_label: Magnetosome protein MamB
+      gene_symbol: mamB
+      taxon_id: NCBITaxon:1288970
+      taxon_label: Magnetospira sp. (strain QH-2) (Marine magnetic spirillum (strain
+        QH-2))
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 55
+      sequence_version: 1
+      role: Exemplar protein (mamB, Magnetosome protein MamB) representing TeaABC
+        TRAP transporter in Magnetospira sp. (strain QH-2) (Marine magnetic spirillum
+        (strain QH-2)) for moderately halophilic.
+      evidence:
+      - reference: PMID:9758852
+        snippet: moderately halophilic bacterium Halomonas elongata
+        notes: Supports TeaABC TRAP transporter in moderately halophilic; UniProtKB:W6KHH6
+          (mamB, Magnetosome protein MamB) in Magnetospira sp. (strain QH-2) (Marine
+          magnetic spirillum (strain QH-2)) provides a verified protein exemplar.
   - node_id: salt_out_strategy
     label: salt-out (compatible-solute) strategy
     node_type: BIOLOGICAL_PROCESS
@@ -290,4 +352,12 @@ curation_history:
     the tranche: set graph scope moderate_halophile_compatible_solutes=NONMECHANISTIC
     with scope_notes; marked 3 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (ectd, bcct_transporters, teaabc_transporter).'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:E1VA04 (ectD)
+    protein example to node ectd; added UniProtKB:O34992 (opuCA) protein example to
+    node bcct_transporters; added UniProtKB:W6KHH6 (mamB) protein example to node
+    teaabc_transporter.'
   llm_assisted: true

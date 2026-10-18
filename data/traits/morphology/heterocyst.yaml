@@ -75,7 +75,7 @@ causal_graphs:
       entry_status: REVIEWED
       proteome_id: UP000002483
       retrieved_on: '2026-08-25'
-      entry_version: 120
+      entry_version: 121
       sequence_version: 3
       role: HetR is the master positive regulator initiating heterocyst differentiation
         in PCC 7120.
@@ -111,6 +111,25 @@ causal_graphs:
     label: PatS peptide
     node_type: GENE_OR_PROTEIN
     description: Inhibitory peptide controlling heterocyst pattern/spacing.
+    protein_examples:
+    - uniprot_id: UniProtKB:O52748
+      protein_label: Transcriptional regulator peptide PatS
+      gene_symbol: patS
+      taxon_id: NCBITaxon:103690
+      taxon_label: Nostoc sp. (strain PCC 7120 / SAG 25.82 / UTEX 2576)
+      entry_status: REVIEWED
+      proteome_id: UP000002483
+      retrieved_on: '2026-10-17'
+      entry_version: 81
+      sequence_version: 1
+      role: Exemplar protein (patS, Transcriptional regulator peptide PatS) representing
+        PatS peptide in Nostoc sp. (strain PCC 7120 / SAG 25.82 / UTEX 2576) for heterocyst.
+      evidence:
+      - reference: DOI:10.1371/journal.pone.0289761
+        snippet: hetR, the master regulator of heterocyst development
+        notes: Supports PatS peptide in heterocyst; UniProtKB:O52748 (patS, Transcriptional
+          regulator peptide PatS) in Nostoc sp. (strain PCC 7120 / SAG 25.82 / UTEX
+          2576) provides a verified protein exemplar.
   - node_id: hetn_regulator
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
@@ -118,6 +137,25 @@ causal_graphs:
     label: HetN regulator
     node_type: GENE_OR_PROTEIN
     description: Regulator maintaining heterocyst spacing pattern.
+    protein_examples:
+    - uniprot_id: UniProtKB:P37694
+      protein_label: Ketoacyl reductase HetN
+      gene_symbol: hetN
+      taxon_id: NCBITaxon:103690
+      taxon_label: Nostoc sp. (strain PCC 7120 / SAG 25.82 / UTEX 2576)
+      entry_status: REVIEWED
+      proteome_id: UP000002483
+      retrieved_on: '2026-10-17'
+      entry_version: 125
+      sequence_version: 2
+      role: Exemplar protein (hetN, Ketoacyl reductase HetN) representing HetN regulator
+        in Nostoc sp. (strain PCC 7120 / SAG 25.82 / UTEX 2576) for heterocyst.
+      evidence:
+      - reference: DOI:10.1371/journal.pone.0289761
+        snippet: hetR, the master regulator of heterocyst development
+        notes: Supports HetN regulator in heterocyst; UniProtKB:P37694 (hetN, Ketoacyl
+          reductase HetN) in Nostoc sp. (strain PCC 7120 / SAG 25.82 / UTEX 2576)
+          provides a verified protein exemplar.
   edges:
   - subject: cell_differentiation
     predicate: confers
@@ -310,4 +348,12 @@ curation_history:
     branch: its primary source states that more studies are required to understand
     the regulation exerted by FurC on hetR expression (DOI:10.1371/journal.pone.0289761),
     so no directional bridge was asserted. No paid research service was called.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:P27709
+    version metadata (entry_version=121, sequence_version=3); added UniProtKB:O52748
+    (patS) protein example to node pats_peptide; added UniProtKB:P37694 (hetN) protein
+    example to node hetn_regulator.'
   llm_assisted: true

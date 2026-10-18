@@ -57,6 +57,27 @@ causal_graphs:
       for this aggregate use.
     description: F0F1-ATP synthase/ATPase complex that can hydrolyze ATP to consume
       and export intracellular protons.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q3YW59
+      protein_label: Zinc/cadmium/lead-transporting P-type ATPase
+      gene_symbol: zntA
+      taxon_id: NCBITaxon:300269
+      taxon_label: Shigella sonnei (strain Ss046)
+      entry_status: REVIEWED
+      proteome_id: UP000002529
+      retrieved_on: '2026-10-17'
+      entry_version: 138
+      sequence_version: 1
+      role: Exemplar protein (zntA, Zinc/cadmium/lead-transporting P-type ATPase)
+        representing F0F1-ATPase in Shigella sonnei (strain Ss046) for pH delta mid1.
+      evidence:
+      - reference: DOI:10.1038/nrmicro2549
+        snippet: For pH homeostasis under alkaline conditions, active transport of
+          protons inward is a crucial adaptation, which usually involves activation
+          and transcriptional up-regulation of key cation/proton antiporters
+        notes: Supports F0F1-ATPase in pH delta mid1; UniProtKB:Q3YW59 (zntA, Zinc/cadmium/lead-transporting
+          P-type ATPase) in Shigella sonnei (strain Ss046) provides a verified protein
+          exemplar.
   - node_id: cytoplasmic_ph_homeostasis
     label: cytoplasmic pH homeostasis
     node_type: BIOLOGICAL_PROCESS
@@ -79,6 +100,30 @@ causal_graphs:
       a quantitative measurement graph; no exact semantic family term was established
       for this aggregate use.
     description: Glutaminase converting glutamine to glutamate plus ammonia.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q9WYN9
+      protein_label: Protein-glutamate methylesterase/protein-glutamine glutaminase
+      gene_symbol: cheB
+      taxon_id: NCBITaxon:243274
+      taxon_label: Thermotoga maritima (strain ATCC 43589 / DSM 3109 / JCM 10099 /
+        NBRC 100826 / MSB8)
+      entry_status: REVIEWED
+      proteome_id: UP000008183
+      retrieved_on: '2026-10-17'
+      entry_version: 158
+      sequence_version: 1
+      role: Exemplar protein (cheB, Protein-glutamate methylesterase/protein-glutamine
+        glutaminase) representing YbaS glutaminase in Thermotoga maritima (strain
+        ATCC 43589 / DSM 3109 / JCM 10099 / NBRC 100826 / MSB8) for pH delta mid1.
+      evidence:
+      - reference: DOI:10.1038/nrmicro2549
+        snippet: For pH homeostasis under alkaline conditions, active transport of
+          protons inward is a crucial adaptation, which usually involves activation
+          and transcriptional up-regulation of key cation/proton antiporters
+        notes: Supports YbaS glutaminase in pH delta mid1; UniProtKB:Q9WYN9 (cheB,
+          Protein-glutamate methylesterase/protein-glutamine glutaminase) in Thermotoga
+          maritima (strain ATCC 43589 / DSM 3109 / JCM 10099 / NBRC 100826 / MSB8)
+          provides a verified protein exemplar.
   - node_id: ammonia
     label: ammonia
     node_type: CHEMICAL
@@ -304,4 +349,11 @@ curation_history:
     canonical example(s): Lederbergia graminis (NCBITaxon:735518; DOI:10.1099/ijs.0.023820-0).
     The note retains the measured value or scopes broad-class examples to the cited
     branch; no paid research was used.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q3YW59 (zntA)
+    protein example to node f0f1_atpase; added UniProtKB:Q9WYN9 (cheB) protein example
+    to node ybas_glutaminase.'
   llm_assisted: true

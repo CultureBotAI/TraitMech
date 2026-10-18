@@ -115,3 +115,74 @@ curation_history:
     rationale, definition, evidence, Neff example, independent taxonomy/mechanism
     discussions and prior history.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph pinocytosis_graph
+    with GENE_OR_PROTEIN node pinocytosis_protein_component and UniProtKB:Q02115 exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: pinocytosis_graph
+  title: Protein component associated with pinocytosis
+  description: Literature-backed association between Polyisoprenyl-teichoic acid--peptidoglycan
+    teichoic acid transferase TagU (UniProtKB:Q02115) and pinocytosis.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q02115 in Bacillus
+    subtilis (strain 168)) associated with pinocytosis while full multi-step mechanistic
+    curation remains future work.
+  nodes:
+  - node_id: pinocytosis_trait
+    label: pinocytosis
+    node_type: TRAIT
+    grounding: traitmech:000635
+    description: A physiological phenotype in which a microbial organism internalizes
+      surrounding extracellular fluid and dissolved material into membrane-bound compartments
+      formed from its plasma membrane.
+  - node_id: pinocytosis_protein_component
+    label: Polyisoprenyl-teichoic acid--peptidoglycan teichoic acid transferase TagU
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Polyisoprenyl-teichoic acid--peptidoglycan teichoic
+      acid transferase TagU) associated with pinocytosis.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - tagU
+    protein_examples:
+    - uniprot_id: UniProtKB:Q02115
+      protein_label: Polyisoprenyl-teichoic acid--peptidoglycan teichoic acid transferase
+        TagU
+      gene_symbol: tagU
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
+      entry_status: REVIEWED
+      proteome_id: UP000001570
+      retrieved_on: '2026-10-17'
+      entry_version: 150
+      sequence_version: 1
+      role: Characteristic protein component (tagU, Polyisoprenyl-teichoic acid--peptidoglycan
+        teichoic acid transferase TagU) associated with pinocytosis in Bacillus subtilis
+        (strain 168).
+      evidence:
+      - reference: DOI:10.1083/jcb.53.3.681
+        snippet: HRP activity was found exclusively within membrane profiles within
+          the cytoplasm, confirming the pinocytotic mode of uptake.
+        notes: Supports Polyisoprenyl-teichoic acid--peptidoglycan teichoic acid transferase
+          TagU in pinocytosis; UniProtKB:Q02115 (tagU, Polyisoprenyl-teichoic acid--peptidoglycan
+          teichoic acid transferase TagU) in Bacillus subtilis (strain 168) provides
+          a verified protein exemplar.
+  edges:
+  - subject: pinocytosis_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: pinocytosis_trait
+    description: Polyisoprenyl-teichoic acid--peptidoglycan teichoic acid transferase
+      TagU (tagU, UniProtKB:Q02115) contributes to pinocytosis (associated with exclusively,
+      pinocytotic, confirming).
+    evidence:
+    - reference: DOI:10.1083/jcb.53.3.681
+      snippet: HRP activity was found exclusively within membrane profiles within
+        the cytoplasm, confirming the pinocytotic mode of uptake.
+      notes: Supports the functional association between Polyisoprenyl-teichoic acid--peptidoglycan
+        teichoic acid transferase TagU (UniProtKB:Q02115 in Bacillus subtilis (strain
+        168)) and pinocytosis.

@@ -76,6 +76,35 @@ causal_graphs:
     grounding: traitmech:000209
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
+  - node_id: gao_iet_system_protein_component
+    label: Phage infection protein
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Phage infection protein) associated with Gao-Iet
+      system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - pip
+    protein_examples:
+    - uniprot_id: UniProtKB:P49022
+      protein_label: Phage infection protein
+      gene_symbol: pip
+      taxon_id: NCBITaxon:1360
+      taxon_label: Lactococcus lactis subsp. lactis (Streptococcus lactis)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 85
+      sequence_version: 1
+      role: Characteristic protein component (pip, Phage infection protein) associated
+        with Gao-Iet system in Lactococcus lactis subsp. lactis (Streptococcus lactis).
+      evidence:
+      - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+        snippet: Pif | 10\.1007/BF00327934 | Molecular analysis of F plasmid pif region
+          specifying abortive infection of T7 phage
+        notes: Supports Phage infection protein in Gao-Iet system; UniProtKB:P49022
+          (pip, Phage infection protein) in Lactococcus lactis subsp. lactis (Streptococcus
+          lactis) provides a verified protein exemplar.
   edges:
   - subject: gao_iet_locus
     predicate: contributes to
@@ -137,6 +166,18 @@ causal_graphs:
       snippet: "Gao_Iet\tGao_Iet\t2\t2\tGao_Iet__IetA, Gao_Iet__IetS"
       notes: The DefenseFinder rules table models Gao_Iet as a two-profile system
         requiring the Gao_Iet__IetA and Gao_Iet__IetS profiles.
+  - subject: gao_iet_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: gao_iet_system_trait
+    description: Phage infection protein (pip, UniProtKB:P49022) contributes to Gao-Iet
+      system (associated with bf00327934, specifying, infection).
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: Pif | 10\.1007/BF00327934 | Molecular analysis of F plasmid pif region
+        specifying abortive infection of T7 phage
+      notes: Supports the functional association between Phage infection protein (UniProtKB:P49022
+        in Lactococcus lactis subsp. lactis (Streptococcus lactis)) and Gao-Iet system.
 discussions:
 - discussion_id: gao-iet-mechanism-gap
   prompt: Resolve Gao_Iet natural hosts, IetA/IetS component functions, phage triggers,
@@ -159,4 +200,10 @@ curation_history:
     defense system after an ignored-and-hidden duplicate review found no exact live
     TraitMech, METPO, history, or prior proposal record; the replacement placeholder
     is reserved in proposals/metpo_traitmech_v231.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    gao_iet_system_protein_component with UniProtKB:P49022 (pip) exemplar.'
   llm_assisted: true

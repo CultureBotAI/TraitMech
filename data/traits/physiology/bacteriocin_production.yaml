@@ -46,3 +46,68 @@ curation_history:
   changes: 'Resolved PR #899 review issue #900 by grounding bacteriocin production
     to GO:0030152 and removing the obsolete xref-gap TODO.'
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph bacteriocin_production_graph
+    with GENE_OR_PROTEIN node bacteriocin_production_protein_component and UniProtKB:P08715
+    exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: bacteriocin_production_graph
+  title: Protein component associated with bacteriocin production
+  description: Literature-backed association between Hemolysin, plasmid (UniProtKB:P08715)
+    and bacteriocin production.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P08715 in Escherichia
+    coli) associated with bacteriocin production while full multi-step mechanistic
+    curation remains future work.
+  nodes:
+  - node_id: bacteriocin_production_trait
+    label: bacteriocin production
+    node_type: TRAIT
+    grounding: traitmech:000183
+    description: A physiological trait in which bacteria produce bacteriocins, ribosomally
+      synthesized antimicrobial peptides or proteins that kill or inhibit other bacteria.
+  - node_id: bacteriocin_production_protein_component
+    label: Hemolysin, plasmid
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Hemolysin, plasmid) associated with bacteriocin
+      production.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - hlyA
+    protein_examples:
+    - uniprot_id: UniProtKB:P08715
+      protein_label: Hemolysin, plasmid
+      gene_symbol: hlyA
+      taxon_id: NCBITaxon:562
+      taxon_label: Escherichia coli
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 130
+      sequence_version: 1
+      role: Characteristic protein component (hlyA, Hemolysin, plasmid) associated
+        with bacteriocin production in Escherichia coli.
+      evidence:
+      - reference: DOI:10.3389/fmicb.2016.00461
+        snippet: Bacteriocins are ribosomally synthesized antimicrobial peptides produced
+          by bacteria, which have the ability to kill or inhibit other bacteria.
+        notes: Supports Hemolysin, plasmid in bacteriocin production; UniProtKB:P08715
+          (hlyA, Hemolysin, plasmid) in Escherichia coli provides a verified protein
+          exemplar.
+  edges:
+  - subject: bacteriocin_production_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: bacteriocin_production_trait
+    description: Hemolysin, plasmid (hlyA, UniProtKB:P08715) contributes to bacteriocin
+      production (associated with antimicrobial, bacteriocins, ribosomally).
+    evidence:
+    - reference: DOI:10.3389/fmicb.2016.00461
+      snippet: Bacteriocins are ribosomally synthesized antimicrobial peptides produced
+        by bacteria, which have the ability to kill or inhibit other bacteria.
+      notes: Supports the functional association between Hemolysin, plasmid (UniProtKB:P08715
+        in Escherichia coli) and bacteriocin production.

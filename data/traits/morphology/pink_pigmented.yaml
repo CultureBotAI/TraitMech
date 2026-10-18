@@ -51,6 +51,28 @@ causal_graphs:
     label: Crt enzymes
     node_type: GENE_OR_PROTEIN
     description: Bacterial carotenoid biosynthetic enzymes.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q49Z16
+      protein_label: L-threonine dehydratase biosynthetic IlvA
+      gene_symbol: ilvA
+      taxon_id: NCBITaxon:342451
+      taxon_label: Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
+        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+      entry_status: REVIEWED
+      proteome_id: UP000006371
+      retrieved_on: '2026-10-17'
+      entry_version: 124
+      sequence_version: 1
+      role: Exemplar protein (ilvA, L-threonine dehydratase biosynthetic IlvA) representing
+        Crt enzymes in Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
+        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) for pink pigmented.
+      evidence:
+      - reference: DOI:10.1080/1040841X.2025.2526423
+        snippet: responsible for the red, pink, orange, and yellow pigmentation
+        notes: Supports Crt enzymes in pink pigmented; UniProtKB:Q49Z16 (ilvA, L-threonine
+          dehydratase biosynthetic IlvA) in Staphylococcus saprophyticus subsp. saprophyticus
+          (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) provides
+          a verified protein exemplar.
   - node_id: carotenoid_biosynthesis
     label: carotenoid biosynthesis
     node_type: PATHWAY
@@ -77,6 +99,30 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Protein module encoded alongside carotenoid enzymes in phototrophs.
     operon: photosynthesis gene cluster
+    protein_examples:
+    - uniprot_id: UniProtKB:Q59066
+      protein_label: CRISPR system single-strand-specific deoxyribonuclease Cas10/Csm1
+      gene_symbol: cas10
+      taxon_id: NCBITaxon:243232
+      taxon_label: Methanocaldococcus jannaschii (strain ATCC 43067 / DSM 2661 / JAL-1
+        / JCM 10045 / NBRC 100440) (Methanococcus jannaschii)
+      entry_status: REVIEWED
+      proteome_id: UP000000805
+      retrieved_on: '2026-10-17'
+      entry_version: 115
+      sequence_version: 1
+      role: Exemplar protein (cas10, CRISPR system single-strand-specific deoxyribonuclease
+        Cas10/Csm1) representing photosynthesis protein module in Methanocaldococcus
+        jannaschii (strain ATCC 43067 / DSM 2661 / JAL-1 / JCM 10045 / NBRC 100440)
+        (Methanococcus jannaschii) for pink pigmented.
+      evidence:
+      - reference: DOI:10.1080/1040841X.2025.2526423
+        snippet: responsible for the red, pink, orange, and yellow pigmentation
+        notes: Supports photosynthesis protein module in pink pigmented; UniProtKB:Q59066
+          (cas10, CRISPR system single-strand-specific deoxyribonuclease Cas10/Csm1)
+          in Methanocaldococcus jannaschii (strain ATCC 43067 / DSM 2661 / JAL-1 /
+          JCM 10045 / NBRC 100440) (Methanococcus jannaschii) provides a verified
+          protein exemplar.
   - node_id: ambient_oxygen
     label: ambient molecular oxygen
     node_type: ENVIRONMENTAL_FACTOR
@@ -93,6 +139,24 @@ causal_graphs:
     - crtI
     - crtB
     operon: crtI-crtB
+    protein_examples:
+    - uniprot_id: UniProtKB:P54981
+      protein_label: Phytoene dehydrogenase
+      gene_symbol: crtI
+      taxon_id: NCBITaxon:1911
+      taxon_label: Streptomyces griseus
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 93
+      sequence_version: 1
+      role: Exemplar protein (crtI, Phytoene dehydrogenase) representing CrtI-CrtB
+        carotenoid enzyme module in Streptomyces griseus for pink pigmented.
+      evidence:
+      - reference: DOI:10.1080/1040841X.2025.2526423
+        snippet: responsible for the red, pink, orange, and yellow pigmentation
+        notes: Supports CrtI-CrtB carotenoid enzyme module in pink pigmented; UniProtKB:P54981
+          (crtI, Phytoene dehydrogenase) in Streptomyces griseus provides a verified
+          protein exemplar.
   edges:
   - subject: isoprenoid_precursors
     predicate: feed into
@@ -293,4 +357,12 @@ curation_history:
     the tranche: set graph scope pink_pigmented_carotenoid_color=NONMECHANISTIC with
     scope_notes; marked 3 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (crt_enzymes, photosynthesis_gene_cluster, crt_operon).'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q49Z16 (ilvA)
+    protein example to node crt_enzymes; added UniProtKB:Q59066 (cas10) protein example
+    to node photosynthesis_gene_cluster; added UniProtKB:P54981 (crtI) protein example
+    to node crt_operon.'
   llm_assisted: true

@@ -48,3 +48,75 @@ curation_history:
     after a repository-wide duplicate review covering ignored and hidden files; METPO
     has no exact pyrrolidonyl arylamidase activity class yet.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph pyrrolidonyl_arylamidase_activity_graph
+    with GENE_OR_PROTEIN node pyrrolidonyl_arylamidase_activity_protein_component
+    and UniProtKB:P97224 exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: pyrrolidonyl_arylamidase_activity_graph
+  title: Protein component associated with pyrrolidonyl arylamidase activity
+  description: Literature-backed association between Thiosulfate dehydrogenase [quinone]
+    small subunit (UniProtKB:P97224) and pyrrolidonyl arylamidase activity.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P97224 in Acidianus
+    ambivalens (Desulfurolobus ambivalens)) associated with pyrrolidonyl arylamidase
+    activity while full multi-step mechanistic curation remains future work.
+  nodes:
+  - node_id: pyrrolidonyl_arylamidase_activity_trait
+    label: pyrrolidonyl arylamidase activity
+    node_type: TRAIT
+    grounding: traitmech:000155
+    description: A physiological enzyme-activity phenotype in which a cell produces
+      active pyrrolidonyl arylamidase enzymes that release N-terminal pyroglutamyl
+      groups from peptide substrates.
+  - node_id: pyrrolidonyl_arylamidase_activity_protein_component
+    label: Thiosulfate dehydrogenase [quinone] small subunit
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Thiosulfate dehydrogenase [quinone] small subunit)
+      associated with pyrrolidonyl arylamidase activity.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - doxA
+    protein_examples:
+    - uniprot_id: UniProtKB:P97224
+      protein_label: Thiosulfate dehydrogenase [quinone] small subunit
+      gene_symbol: doxA
+      taxon_id: NCBITaxon:2283
+      taxon_label: Acidianus ambivalens (Desulfurolobus ambivalens)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 59
+      sequence_version: 1
+      role: Characteristic protein component (doxA, Thiosulfate dehydrogenase [quinone]
+        small subunit) associated with pyrrolidonyl arylamidase activity in Acidianus
+        ambivalens (Desulfurolobus ambivalens).
+      evidence:
+      - reference: DOI:10.1128/JCM.37.11.3443-3447.1999
+        snippet: The strains displayed acid phosphatase, alkaline phosphatase, ester
+          lipase C8 (weak reaction), esterase C4 (weak reaction), leucine arylamidase,
+          phosphoamidase, and pyrrolidonyl arylamidase activity.
+        notes: Supports Thiosulfate dehydrogenase [quinone] small subunit in pyrrolidonyl
+          arylamidase activity; UniProtKB:P97224 (doxA, Thiosulfate dehydrogenase
+          [quinone] small subunit) in Acidianus ambivalens (Desulfurolobus ambivalens)
+          provides a verified protein exemplar.
+  edges:
+  - subject: pyrrolidonyl_arylamidase_activity_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: pyrrolidonyl_arylamidase_activity_trait
+    description: Thiosulfate dehydrogenase [quinone] small subunit (doxA, UniProtKB:P97224)
+      contributes to pyrrolidonyl arylamidase activity (associated with phosphoamidase,
+      pyrrolidonyl, arylamidase).
+    evidence:
+    - reference: DOI:10.1128/JCM.37.11.3443-3447.1999
+      snippet: The strains displayed acid phosphatase, alkaline phosphatase, ester
+        lipase C8 (weak reaction), esterase C4 (weak reaction), leucine arylamidase,
+        phosphoamidase, and pyrrolidonyl arylamidase activity.
+      notes: Supports the functional association between Thiosulfate dehydrogenase
+        [quinone] small subunit (UniProtKB:P97224 in Acidianus ambivalens (Desulfurolobus
+        ambivalens)) and pyrrolidonyl arylamidase activity.

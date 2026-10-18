@@ -70,6 +70,36 @@ causal_graphs:
     node_type: MOLECULAR_FUNCTION
     description: Efficiency of NHEJ end-joining via stabilized short overhang / microhomology
       pairing.
+  - node_id: gc_mid1_protein_component
+    label: Chromosomal replication initiator protein DnaA
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Chromosomal replication initiator protein DnaA)
+      associated with GC mid1.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - dnaA
+    protein_examples:
+    - uniprot_id: UniProtKB:P05648
+      protein_label: Chromosomal replication initiator protein DnaA
+      gene_symbol: dnaA
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
+      entry_status: REVIEWED
+      proteome_id: UP000001570
+      retrieved_on: '2026-10-17'
+      entry_version: 178
+      sequence_version: 1
+      role: Characteristic protein component (dnaA, Chromosomal replication initiator
+        protein DnaA) associated with GC mid1 in Bacillus subtilis (strain 168).
+      evidence:
+      - reference: DOI:10.1128/spectrum.02145-22
+        snippet: ancient adaptations transformed the DRR system, producing mutational
+          biases that shaped GC-content evolution
+        notes: Supports Chromosomal replication initiator protein DnaA in GC mid1;
+          UniProtKB:P05648 (dnaA, Chromosomal replication initiator protein DnaA)
+          in Bacillus subtilis (strain 168) provides a verified protein exemplar.
   edges:
   - subject: strong_gbgc
     predicate: confers
@@ -126,6 +156,18 @@ causal_graphs:
     - reference: DOI:10.1371/journal.pgen.1008493
       notes: High GC via increased hydrogen bonds may stabilize short overhang/microhomology
         pairing and increase NHEJ efficiency.
+  - subject: gc_mid1_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: gc_mid1_trait
+    description: Chromosomal replication initiator protein DnaA (dnaA, UniProtKB:P05648)
+      contributes to GC mid1 (associated with adaptations, transformed, mutational).
+    evidence:
+    - reference: DOI:10.1128/spectrum.02145-22
+      snippet: ancient adaptations transformed the DRR system, producing mutational
+        biases that shaped GC-content evolution
+      notes: Supports the functional association between Chromosomal replication initiator
+        protein DnaA (UniProtKB:P05648 in Bacillus subtilis (strain 168)) and GC mid1.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.817373+00:00'
   curator: seed_from_metpo
@@ -184,4 +226,10 @@ curation_history:
     canonical example(s): Streptomyces coelicolor A3(2) (NCBITaxon:100226; DOI:10.1038/417141a).
     The note retains the measured value or scopes broad-class examples to the cited
     branch; no paid research was used.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    gc_mid1_protein_component with UniProtKB:P05648 (dnaA) exemplar.'
   llm_assisted: true

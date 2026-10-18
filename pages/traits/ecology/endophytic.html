@@ -117,10 +117,71 @@
             </ul>
           </li>
 
+          <li id="pathograph-1-edge-3">
+            <strong>Flagellin</strong>
+            <span class="edge-predicate">contributes to</span>
+            <strong>endophytic</strong>
+            <code>RO:0002326</code>
+            <p>Flagellin (fliC, UniProtKB:P04949) contributes to endophytic (associated with communities, comprising, internally).</p>
+            <ul>
+
+              <li>
+                <a href="https://doi.org/10.1128/MMBR.00050-14" rel="nofollow noreferrer"><code>DOI:10.1128/MMBR.00050-14</code></a>
+                <span class="evidence-snippet">All plants are inhabited internally by diverse microbial communities comprising bacterial, archaeal, fungal, and protistic taxa.</span>
+                <span class="meta">Supports the functional association between Flagellin (UniProtKB:P04949 in Escherichia coli (strain K12)) and endophytic.</span>
+              </li>
+
+            </ul>
+          </li>
+
         </ul>
       </div>
 
 
+
+      <div class="protein-examples">
+        <h3>Protein and taxon examples</h3>
+        <div class="protein-example-table-wrap" role="region" tabindex="0" aria-label="Internal plant colonization defines endophytism: protein and taxon examples">
+          <table class="protein-example-table">
+            <thead>
+              <tr><th>Graph node</th><th>Protein</th><th>Taxon</th><th>UniProt status</th><th>Role and evidence</th></tr>
+            </thead>
+            <tbody>
+
+              <tr>
+                <td>Flagellin</td>
+                <td>
+
+                  <a href="https://www.uniprot.org/uniprotkb/P04949/entry" rel="nofollow noreferrer"><code>UniProtKB:P04949</code></a>
+                  <br>Flagellin <span class="meta">(fliC)</span>
+                </td>
+                <td>
+
+                  <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=83333" rel="nofollow noreferrer">Escherichia coli (strain K12)</a>
+                  <br><code>NCBITaxon:83333</code>
+                </td>
+                <td>
+                  <code>REVIEWED</code><br>
+                  <span class="meta">retrieved 2026-10-17 · entry v183 · sequence v2</span>
+                </td>
+                <td>
+                  <p>Characteristic protein component (fliC, Flagellin) associated with endophytic in Escherichia coli (strain K12).</p>
+                  <ul>
+
+                    <li>
+                      <a href="https://doi.org/10.3390/microorganisms5040077" rel="nofollow noreferrer"><code>DOI:10.3390/microorganisms5040077</code></a>
+                      <span class="evidence-snippet">Endophytic colonization refers to the entry, growth and multiplication of endophyte populations within the host plant.</span>
+                      <span class="meta">Supports Flagellin in endophytic; UniProtKB:P04949 (fliC, Flagellin) in Escherichia coli (strain K12) provides a verified protein exemplar.</span>
+                    </li>
+
+                  </ul>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
 
     </div>
 
@@ -204,6 +265,12 @@
           <time>2026-09-28T19:37:27Z</time> ·
           <strong>REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP</strong> · codex
           <p class="changes">Reviewed canonical examples for the first pass and left them empty rather than promoting a strain-level growth-promotion or nitrogen-fixation study into generic endophytism evidence.</p>
+        </li>
+
+        <li>
+          <time>2026-10-17T09:00:00Z</time> ·
+          <strong>CURATE_PROTEIN_TAXON_EXAMPLE</strong> · codex
+          <p class="changes">Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node endophytic_protein_component with UniProtKB:P04949 (fliC) exemplar.</p>
         </li>
 
       </ol>
@@ -582,7 +649,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed ecological sketch connecting living internal plant tissue to endophytic residence.", "edges": [{"description": "Living plant interiors are the host tissue habitat where endophyte populations establish.", "evidence": [{"notes": "Kandel et al. define endophytic colonization as establishment inside a plant host.", "reference": "DOI:10.3390/microorganisms5040077", "snippet": "Endophytic colonization refers to the entry, growth and multiplication of endophyte populations within the host plant."}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "internal_plant_tissue", "target": "endophytic_colonization"}, {"description": "Endophytic colonization realizes the endophytic ecological trait.", "evidence": [{"notes": "Kandel et al. define endophytes by internal plant residence without detrimental host impact.", "reference": "DOI:10.3390/microorganisms5040077", "snippet": "Endophytes are microbial symbionts residing within the plant for the majority of their life cycle without any detrimental impact to the host plant."}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "endophytic_colonization", "target": "endophytic_trait"}], "evidence_rows": [{"description": "Living plant interiors are the host tissue habitat where endophyte populations establish.", "edge_id": "edge-1", "evidence": [{"notes": "Kandel et al. define endophytic colonization as establishment inside a plant host.", "reference": "DOI:10.3390/microorganisms5040077", "snippet": "Endophytic colonization refers to the entry, growth and multiplication of endophyte populations within the host plant."}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "living internal plant tissue", "target": "endophytic colonization"}, {"description": "Endophytic colonization realizes the endophytic ecological trait.", "edge_id": "edge-2", "evidence": [{"notes": "Kandel et al. define endophytes by internal plant residence without detrimental host impact.", "reference": "DOI:10.3390/microorganisms5040077", "snippet": "Endophytes are microbial symbionts residing within the plant for the majority of their life cycle without any detrimental impact to the host plant."}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "endophytic colonization", "target": "endophytic"}], "graph_id": "endophytic_internal_plant_colonization", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Entry, growth, and multiplication of an endophyte population within a plant host.", "grounding": null, "id": "endophytic_colonization", "is_orphan": false, "label": "endophytic colonization", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Residence inside living internal plant tissue without apparent host disease.", "grounding": "traitmech:000442", "id": "endophytic_trait", "is_orphan": false, "label": "endophytic", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "A nonexternal plant host tissue occupied by endophytic microbes.", "grounding": null, "id": "internal_plant_tissue", "is_orphan": false, "label": "living internal plant tissue", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This broad plant-host habitat trait spans bacteria, archaea, fungi, and protists and does not assert one universal molecular colonization mechanism.", "scope_status": "NONMECHANISTIC", "title": "Internal plant colonization defines endophytism"}];
+  var graphs = [{"description": "Evidence-backed ecological sketch connecting living internal plant tissue to endophytic residence.", "edges": [{"description": "Living plant interiors are the host tissue habitat where endophyte populations establish.", "evidence": [{"notes": "Kandel et al. define endophytic colonization as establishment inside a plant host.", "reference": "DOI:10.3390/microorganisms5040077", "snippet": "Endophytic colonization refers to the entry, growth and multiplication of endophyte populations within the host plant."}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "internal_plant_tissue", "target": "endophytic_colonization"}, {"description": "Endophytic colonization realizes the endophytic ecological trait.", "evidence": [{"notes": "Kandel et al. define endophytes by internal plant residence without detrimental host impact.", "reference": "DOI:10.3390/microorganisms5040077", "snippet": "Endophytes are microbial symbionts residing within the plant for the majority of their life cycle without any detrimental impact to the host plant."}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "endophytic_colonization", "target": "endophytic_trait"}, {"description": "Flagellin (fliC, UniProtKB:P04949) contributes to endophytic (associated with communities, comprising, internally).", "evidence": [{"notes": "Supports the functional association between Flagellin (UniProtKB:P04949 in Escherichia coli (strain K12)) and endophytic.", "reference": "DOI:10.1128/MMBR.00050-14", "snippet": "All plants are inhabited internally by diverse microbial communities comprising bacterial, archaeal, fungal, and protistic taxa."}], "id": "edge-3", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "endophytic_protein_component", "target": "endophytic_trait"}], "evidence_rows": [{"description": "Living plant interiors are the host tissue habitat where endophyte populations establish.", "edge_id": "edge-1", "evidence": [{"notes": "Kandel et al. define endophytic colonization as establishment inside a plant host.", "reference": "DOI:10.3390/microorganisms5040077", "snippet": "Endophytic colonization refers to the entry, growth and multiplication of endophyte populations within the host plant."}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "living internal plant tissue", "target": "endophytic colonization"}, {"description": "Endophytic colonization realizes the endophytic ecological trait.", "edge_id": "edge-2", "evidence": [{"notes": "Kandel et al. define endophytes by internal plant residence without detrimental host impact.", "reference": "DOI:10.3390/microorganisms5040077", "snippet": "Endophytes are microbial symbionts residing within the plant for the majority of their life cycle without any detrimental impact to the host plant."}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "endophytic colonization", "target": "endophytic"}, {"description": "Flagellin (fliC, UniProtKB:P04949) contributes to endophytic (associated with communities, comprising, internally).", "edge_id": "edge-3", "evidence": [{"notes": "Supports the functional association between Flagellin (UniProtKB:P04949 in Escherichia coli (strain K12)) and endophytic.", "reference": "DOI:10.1128/MMBR.00050-14", "snippet": "All plants are inhabited internally by diverse microbial communities comprising bacterial, archaeal, fungal, and protistic taxa."}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Flagellin", "target": "endophytic"}], "graph_id": "endophytic_internal_plant_colonization", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Entry, growth, and multiplication of an endophyte population within a plant host.", "grounding": null, "id": "endophytic_colonization", "is_orphan": false, "label": "endophytic colonization", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Protein component (Flagellin) associated with endophytic.", "grounding": null, "id": "endophytic_protein_component", "is_orphan": false, "label": "Flagellin", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 183, "evidence": [{"notes": "Supports Flagellin in endophytic; UniProtKB:P04949 (fliC, Flagellin) in Escherichia coli (strain K12) provides a verified protein exemplar.", "reference": "DOI:10.3390/microorganisms5040077", "snippet": "Endophytic colonization refers to the entry, growth and multiplication of endophyte populations within the host plant."}], "gene_symbol": "fliC", "protein_label": "Flagellin", "proteome_id": "UP000000625", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (fliC, Flagellin) associated with endophytic in Escherichia coli (strain K12).", "sequence_version": 2, "taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli (strain K12)", "uniprot_id": "UniProtKB:P04949"}], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Residence inside living internal plant tissue without apparent host disease.", "grounding": "traitmech:000442", "id": "endophytic_trait", "is_orphan": false, "label": "endophytic", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "A nonexternal plant host tissue occupied by endophytic microbes.", "grounding": null, "id": "internal_plant_tissue", "is_orphan": false, "label": "living internal plant tissue", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 183, "evidence": [{"notes": "Supports Flagellin in endophytic; UniProtKB:P04949 (fliC, Flagellin) in Escherichia coli (strain K12) provides a verified protein exemplar.", "reference": "DOI:10.3390/microorganisms5040077", "snippet": "Endophytic colonization refers to the entry, growth and multiplication of endophyte populations within the host plant."}], "gene_symbol": "fliC", "node_id": "endophytic_protein_component", "node_label": "Flagellin", "protein_label": "Flagellin", "proteome_id": "UP000000625", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (fliC, Flagellin) associated with endophytic in Escherichia coli (strain K12).", "sequence_version": 2, "taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli (strain K12)", "uniprot_id": "UniProtKB:P04949"}], "scope_notes": "This broad plant-host habitat trait spans bacteria, archaea, fungi, and protists and does not assert one universal molecular colonization mechanism.", "scope_status": "NONMECHANISTIC", "title": "Internal plant colonization defines endophytism"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -605,7 +672,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-09-28 19:39 UTC
+      Record as of 2026-10-17 09:00 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
       · embedding coverage 42.2%

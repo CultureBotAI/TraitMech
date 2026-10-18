@@ -51,11 +51,49 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Membrane protein involved in division-site placement in S. pneumoniae.
     grounding: InterPro:IPR030858
+    protein_examples:
+    - uniprot_id: UniProtKB:Q8DR55
+      protein_label: Mid-cell-anchored protein Z
+      gene_symbol: mapZ
+      taxon_id: NCBITaxon:171101
+      taxon_label: Streptococcus pneumoniae (strain ATCC BAA-255 / R6)
+      entry_status: REVIEWED
+      proteome_id: UP000000586
+      retrieved_on: '2026-10-17'
+      entry_version: 100
+      sequence_version: 1
+      role: Exemplar protein (mapZ, Mid-cell-anchored protein Z) representing MapZ
+        in Streptococcus pneumoniae (strain ATCC BAA-255 / R6) for ovoid shaped.
+      evidence:
+      - reference: DOI:10.1016/j.cub.2021.04.041
+        snippet: ovoid-shaped bacteria
+        notes: Supports MapZ in ovoid shaped; UniProtKB:Q8DR55 (mapZ, Mid-cell-anchored
+          protein Z) in Streptococcus pneumoniae (strain ATCC BAA-255 / R6) provides
+          a verified protein exemplar.
   - node_id: divIVA
     label: DivIVA
     node_type: GENE_OR_PROTEIN
     description: Protein involved in septum splitting and elongation in ovococci.
     grounding: InterPro:IPR007793
+    protein_examples:
+    - uniprot_id: UniProtKB:P71021
+      protein_label: Septum site-determining protein DivIVA
+      gene_symbol: divIVA
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
+      entry_status: REVIEWED
+      proteome_id: UP000001570
+      retrieved_on: '2026-10-17'
+      entry_version: 132
+      sequence_version: 1
+      role: Exemplar protein (divIVA, Septum site-determining protein DivIVA) representing
+        DivIVA in Bacillus subtilis (strain 168) for ovoid shaped.
+      evidence:
+      - reference: DOI:10.1128/mbio.01311-24
+        snippet: DivIVA controls the dynamics of septum splitting and cell elongation
+        notes: Supports DivIVA in ovoid shaped; UniProtKB:P71021 (divIVA, Septum site-determining
+          protein DivIVA) in Bacillus subtilis (strain 168) provides a verified protein
+          exemplar.
   - node_id: septum_splitting
     label: septum splitting
     node_type: BIOLOGICAL_PROCESS
@@ -85,6 +123,26 @@ causal_graphs:
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: FtsW and PBP2x are distinct protein families; no single semantic
       family term represents this two-protein complex.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0ABG4
+      protein_label: Probable peptidoglycan glycosyltransferase FtsW
+      gene_symbol: ftsW
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 150
+      sequence_version: 1
+      role: Exemplar protein (ftsW, Probable peptidoglycan glycosyltransferase FtsW)
+        representing FtsW-PBP2x complex in Escherichia coli (strain K12) for ovoid
+        shaped.
+      evidence:
+      - reference: DOI:10.1016/j.cub.2021.04.041
+        snippet: ovoid-shaped bacteria
+        notes: Supports FtsW-PBP2x complex in ovoid shaped; UniProtKB:P0ABG4 (ftsW,
+          Probable peptidoglycan glycosyltransferase FtsW) in Escherichia coli (strain
+          K12) provides a verified protein exemplar.
   - node_id: roda_pbp2b
     label: RodA-PBP2b elongasome
     node_type: GENE_OR_PROTEIN
@@ -100,7 +158,7 @@ causal_graphs:
       taxon_label: Streptococcus pneumoniae R6
       entry_status: REVIEWED
       retrieved_on: '2026-08-25'
-      entry_version: 110
+      entry_version: 111
       sequence_version: 1
       role: R6 PBP2b is the transpeptidase component of the RodA-PBP2b elongasome
         that performs peripheral peptidoglycan synthesis.
@@ -285,4 +343,12 @@ curation_history:
     (ftsw_pbp2x, roda_pbp2b); added taxon-paired protein example(s) UniProtKB:P0A3M6
     on roda_pbp2b (NCBITaxon:171101); regrounded 1 node(s) (mapZ: none->InterPro:IPR030858);
     added canonical example(s) NCBITaxon:171101.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:P0A3M6
+    version metadata (entry_version=111, sequence_version=1); added UniProtKB:Q8DR55
+    (mapZ) protein example to node mapZ; added UniProtKB:P71021 (divIVA) protein example
+    to node divIVA; added UniProtKB:P0ABG4 (ftsW) protein example to node ftsw_pbp2x.'
   llm_assisted: true

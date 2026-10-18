@@ -60,6 +60,27 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Enzyme family catalyzing the first methane oxidation step.
     grounding: GO:0015050
+    protein_examples:
+    - uniprot_id: UniProtKB:P22869
+      protein_label: Methane monooxygenase component A alpha chain
+      gene_symbol: mmoX
+      taxon_id: NCBITaxon:243233
+      taxon_label: Methylococcus capsulatus (strain ATCC 33009 / NCIMB 11132 / Bath)
+      entry_status: REVIEWED
+      proteome_id: UP000006821
+      retrieved_on: '2026-10-17'
+      entry_version: 162
+      sequence_version: 3
+      role: Exemplar protein (mmoX, Methane monooxygenase component A alpha chain)
+        representing methane monooxygenase in Methylococcus capsulatus (strain ATCC
+        33009 / NCIMB 11132 / Bath) for methanotrophic.
+      evidence:
+      - reference: DOI:10.1099/13500872-145-5-1235
+        snippet: multiple pmo gene copies contribute to particulate methane monooxygenase
+          activity
+        notes: Supports methane monooxygenase in methanotrophic; UniProtKB:P22869
+          (mmoX, Methane monooxygenase component A alpha chain) in Methylococcus capsulatus
+          (strain ATCC 33009 / NCIMB 11132 / Bath) provides a verified protein exemplar.
   - node_id: intracellular_membrane
     label: intracellular membrane
     node_type: CELLULAR_LOCALIZATION
@@ -78,6 +99,24 @@ causal_graphs:
     grounding_notes: The label spans calcium- and lanthanide-dependent PQQ enzymes
       and other methanol-dehydrogenase classes; the cited graph does not select one
       exact family.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q8KP10
+      protein_label: Methanol dehydrogenase activator
+      gene_symbol: act
+      taxon_id: NCBITaxon:1471
+      taxon_label: Bacillus methanolicus
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 79
+      sequence_version: 1
+      role: Exemplar protein (act, Methanol dehydrogenase activator) representing
+        methanol dehydrogenase in Bacillus methanolicus for methanotrophic.
+      evidence:
+      - reference: DOI:10.3109/10409238.2012.697865
+        snippet: Methanol is further converted to formaldehyde by methanol dehydrogenase
+        notes: Supports methanol dehydrogenase in methanotrophic; UniProtKB:Q8KP10
+          (act, Methanol dehydrogenase activator) in Bacillus methanolicus provides
+          a verified protein exemplar.
   - node_id: formaldehyde
     label: formaldehyde
     node_type: CHEMICAL
@@ -115,7 +154,7 @@ causal_graphs:
       taxon_label: Methylococcus capsulatus Bath
       entry_status: REVIEWED
       retrieved_on: '2026-08-24'
-      entry_version: 76
+      entry_version: 77
       sequence_version: 1
       role: PmoB alpha component of the Bath-strain pMMO; this accession is not presented
         as the full PmoABC complex.
@@ -136,6 +175,27 @@ causal_graphs:
     - mmoY
     - mmoZ
     operon: mmoXYZ
+    protein_examples:
+    - uniprot_id: UniProtKB:P22869
+      protein_label: Methane monooxygenase component A alpha chain
+      gene_symbol: mmoX
+      taxon_id: NCBITaxon:243233
+      taxon_label: Methylococcus capsulatus (strain ATCC 33009 / NCIMB 11132 / Bath)
+      entry_status: REVIEWED
+      proteome_id: UP000006821
+      retrieved_on: '2026-10-17'
+      entry_version: 162
+      sequence_version: 3
+      role: Exemplar protein (mmoX, Methane monooxygenase component A alpha chain)
+        representing soluble methane monooxygenase (sMMO) in Methylococcus capsulatus
+        (strain ATCC 33009 / NCIMB 11132 / Bath) for methanotrophic.
+      evidence:
+      - reference: DOI:10.1099/13500872-145-5-1235
+        snippet: multiple pmo gene copies contribute to particulate methane monooxygenase
+          activity
+        notes: Supports soluble methane monooxygenase (sMMO) in methanotrophic; UniProtKB:P22869
+          (mmoX, Methane monooxygenase component A alpha chain) in Methylococcus capsulatus
+          (strain ATCC 33009 / NCIMB 11132 / Bath) provides a verified protein exemplar.
   - node_id: methanobactin
     label: methanobactin
     node_type: CHEMICAL
@@ -421,4 +481,13 @@ curation_history:
   action: CONNECT_CAUSAL_GRAPH_COMPONENTS
   changes: 'Resolved issue #183 graph fragmentation (3 components to 1) with 2 public-source,
     verbatim-snippet-backed connector(s). No paid research service was called.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:G1UBD1
+    version metadata (entry_version=77, sequence_version=1); added UniProtKB:P22869
+    (mmoX) protein example to node methane_monooxygenase; added UniProtKB:Q8KP10 (act)
+    protein example to node methanol_dehydrogenase; added UniProtKB:P22869 (mmoX)
+    protein example to node soluble_methane_monooxygenase.'
   llm_assisted: true

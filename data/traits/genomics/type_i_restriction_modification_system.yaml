@@ -90,6 +90,39 @@ causal_graphs:
     grounding: traitmech:000095
     description: Possession of a methyltransferase and restriction endonuclease system
       for self/non-self DNA discrimination.
+  - node_id: type_i_restriction_modification_system_protein_component
+    label: Type I restriction enzyme EcoKI methylase subunit
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Type I restriction enzyme EcoKI methylase subunit)
+      associated with type I restriction-modification system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - hsdM
+    protein_examples:
+    - uniprot_id: UniProtKB:P08957
+      protein_label: Type I restriction enzyme EcoKI methylase subunit
+      gene_symbol: hsdM
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 190
+      sequence_version: 1
+      role: Characteristic protein component (hsdM, Type I restriction enzyme EcoKI
+        methylase subunit) associated with type I restriction-modification system
+        in Escherichia coli (strain K12).
+      evidence:
+      - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+        snippet: '| GmrSD_RM_Type_IV | 10\.1016/j\.jmb\.2006\.11\.051 | A type IV
+          modification dependent restriction nuclease that targets glucosylated hydroxymethyl
+          cytosine modified DNAs |'
+        notes: Supports Type I restriction enzyme EcoKI methylase subunit in type
+          I restriction-modification system; UniProtKB:P08957 (hsdM, Type I restriction
+          enzyme EcoKI methylase subunit) in Escherichia coli (strain K12) provides
+          a verified protein exemplar.
   edges:
   - subject: type_i_rm_locus
     predicate: enables
@@ -152,6 +185,21 @@ causal_graphs:
       snippet: Type I R–M enzymes are pentameric proteins of composition 2R+2M+S.
       notes: Loenen et al. describe the Type I R-M enzyme complex as a 2R+2M+S pentamer
         with both restriction-endonuclease and methyltransferase activities.
+  - subject: type_i_restriction_modification_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: type_i_restriction_modification_system_trait
+    description: Type I restriction enzyme EcoKI methylase subunit (hsdM, UniProtKB:P08957)
+      contributes to type I restriction-modification system (associated with hydroxymethyl,
+      glucosylated, modification).
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: '| GmrSD_RM_Type_IV | 10\.1016/j\.jmb\.2006\.11\.051 | A type IV modification
+        dependent restriction nuclease that targets glucosylated hydroxymethyl cytosine
+        modified DNAs |'
+      notes: Supports the functional association between Type I restriction enzyme
+        EcoKI methylase subunit (UniProtKB:P08957 in Escherichia coli (strain K12))
+        and type I restriction-modification system.
 discussions:
 - discussion_id: type-i-rm-profile-interpretation-gap
   prompt: Resolve the accession-level relationships between DefenseFinder RM Type
@@ -218,4 +266,11 @@ curation_history:
     class, a DefenseFinder system model, and multiple biochemical enzyme examples,
     but not a single stable NCBITaxon strain exemplar for the whole broad Type I branch.
     No paid research was used.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    type_i_restriction_modification_system_protein_component with UniProtKB:P08957
+    (hsdM) exemplar.'
   llm_assisted: true

@@ -59,6 +59,26 @@ causal_graphs:
     label: cell appendages and adhesins
     node_type: GENE_OR_PROTEIN
     description: Flagella, pili, fimbriae, and adhesins including mucus-binding proteins.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0ABW8
+      protein_label: CS1 fimbrial subunit A
+      gene_symbol: csoA
+      taxon_id: NCBITaxon:562
+      taxon_label: Escherichia coli
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 43
+      sequence_version: 1
+      role: Exemplar protein (csoA, CS1 fimbrial subunit A) representing cell appendages
+        and adhesins in Escherichia coli for host-associated.
+      evidence:
+      - reference: DOI:10.1073/pnas.1218525110
+        snippet: This review examines how a growing knowledge of the vast range of
+          animal-bacterial interactions, whether in shared ecosystems or intimate
+          symbioses, is fundamentally altering our understanding of animal biology.
+        notes: Supports cell appendages and adhesins in host-associated; UniProtKB:P0ABW8
+          (csoA, CS1 fimbrial subunit A) in Escherichia coli provides a verified protein
+          exemplar.
   - node_id: host_surface_attachment
     label: attachment to host surfaces
     node_type: BIOLOGICAL_PROCESS
@@ -244,4 +264,10 @@ curation_history:
     tranche of 2026-08-24/25, which shipped without a per-record event. In this record
     the tranche: set graph scope host_associated_microbiome=NONMECHANISTIC with scope_notes;
     marked 1 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (host_surface_adhesins).'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P0ABW8 (csoA)
+    protein example to node host_surface_adhesins.'
   llm_assisted: true

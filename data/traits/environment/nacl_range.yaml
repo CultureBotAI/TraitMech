@@ -73,6 +73,27 @@ causal_graphs:
       for this aggregate use.
     description: Low-affinity potassium import systems (TrkAH, KtrAB, KtrCD) with
       c-di-AMP-binding gating subunits.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q9L6L2
+      protein_label: Trk system potassium uptake protein TrkH
+      gene_symbol: trkH
+      taxon_id: NCBITaxon:99287
+      taxon_label: Salmonella typhimurium (strain LT2 / SGSC1412 / ATCC 700720)
+      entry_status: REVIEWED
+      proteome_id: UP000001014
+      retrieved_on: '2026-10-17'
+      entry_version: 117
+      sequence_version: 1
+      role: Exemplar protein (trkH, Trk system potassium uptake protein TrkH) representing
+        Trk/Ktr potassium influx systems in Salmonella typhimurium (strain LT2 / SGSC1412
+        / ATCC 700720) for NaCl range.
+      evidence:
+      - reference: DOI:10.1128/mmbr.00181-23
+        snippet: potassium and compatible solute transport are vital for bacteria
+          to survive changes in external osmolality
+        notes: Supports Trk/Ktr potassium influx systems in NaCl range; UniProtKB:Q9L6L2
+          (trkH, Trk system potassium uptake protein TrkH) in Salmonella typhimurium
+          (strain LT2 / SGSC1412 / ATCC 700720) provides a verified protein exemplar.
   - node_id: kima_kup_k_uptake
     label: KimA/Kup high-affinity K+ uptake transporters
     node_type: GENE_OR_PROTEIN
@@ -82,6 +103,28 @@ causal_graphs:
       for this aggregate use.
     description: High-affinity potassium uptake transporters (KimA, KupA/KupB) directly
       inhibited by c-di-AMP.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q8ZKW1
+      protein_label: Low affinity potassium transport system protein Kup
+      gene_symbol: kup
+      taxon_id: NCBITaxon:99287
+      taxon_label: Salmonella typhimurium (strain LT2 / SGSC1412 / ATCC 700720)
+      entry_status: REVIEWED
+      proteome_id: UP000001014
+      retrieved_on: '2026-10-17'
+      entry_version: 105
+      sequence_version: 1
+      role: Exemplar protein (kup, Low affinity potassium transport system protein
+        Kup) representing KimA/Kup high-affinity K+ uptake transporters in Salmonella
+        typhimurium (strain LT2 / SGSC1412 / ATCC 700720) for NaCl range.
+      evidence:
+      - reference: DOI:10.1128/mmbr.00181-23
+        snippet: potassium and compatible solute transport are vital for bacteria
+          to survive changes in external osmolality
+        notes: Supports KimA/Kup high-affinity K+ uptake transporters in NaCl range;
+          UniProtKB:Q8ZKW1 (kup, Low affinity potassium transport system protein Kup)
+          in Salmonella typhimurium (strain LT2 / SGSC1412 / ATCC 700720) provides
+          a verified protein exemplar.
   - node_id: kdp_expression
     label: Kdp system / KdpFABC expression
     node_type: BIOLOGICAL_PROCESS
@@ -96,6 +139,26 @@ causal_graphs:
       for this aggregate use.
     description: ABC-type compatible-solute importers (OpuA family) bound and regulated
       by c-di-AMP.
+    protein_examples:
+    - uniprot_id: UniProtKB:P77334
+      protein_label: Cyclic di-GMP phosphodiesterase PdeR
+      gene_symbol: pdeR
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 178
+      sequence_version: 1
+      role: Exemplar protein (pdeR, Cyclic di-GMP phosphodiesterase PdeR) representing
+        OpuA-like compatible-solute importers in Escherichia coli (strain K12) for
+        NaCl range.
+      evidence:
+      - reference: DOI:10.1128/mmbr.00181-23
+        snippet: Cyclic di-AMP binds to the CBS domains of compatible solute importers
+        notes: Supports OpuA-like compatible-solute importers in NaCl range; UniProtKB:P77334
+          (pdeR, Cyclic di-GMP phosphodiesterase PdeR) in Escherichia coli (strain
+          K12) provides a verified protein exemplar.
   edges:
   - subject: ambient_nacl
     predicate: defines
@@ -278,4 +341,12 @@ curation_history:
     canonical example(s): Kushneria aurantia (NCBITaxon:504092; DOI:10.1099/ijs.0.001461-0).
     The note retains the measured value or scopes broad-class examples to the cited
     branch; no paid research was used.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q9L6L2 (trkH)
+    protein example to node trk_ktr_k_influx; added UniProtKB:Q8ZKW1 (kup) protein
+    example to node kima_kup_k_uptake; added UniProtKB:P77334 (pdeR) protein example
+    to node opua_solute_importers.'
   llm_assisted: true

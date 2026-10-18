@@ -50,6 +50,25 @@ causal_graphs:
     label: MreB cytoskeleton
     node_type: GENE_OR_PROTEIN
     description: Actin-like MreB filaments organizing lateral cell-wall synthesis.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q01465
+      protein_label: Cell shape-determining protein MreB
+      gene_symbol: mreB
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
+      entry_status: REVIEWED
+      proteome_id: UP000001570
+      retrieved_on: '2026-10-17'
+      entry_version: 148
+      sequence_version: 3
+      role: Exemplar protein (mreB, Cell shape-determining protein MreB) representing
+        MreB cytoskeleton in Bacillus subtilis (strain 168) for cell width small.
+      evidence:
+      - reference: DOI:10.1146/annurev-cellbio-101011-155745
+        snippet: MreB-directed peptidoglycan synthesis
+        notes: Supports MreB cytoskeleton in cell width small; UniProtKB:Q01465 (mreB,
+          Cell shape-determining protein MreB) in Bacillus subtilis (strain 168) provides
+          a verified protein exemplar.
   - node_id: rod_complex_pg
     label: Rod-complex peptidoglycan synthesis
     node_type: BIOLOGICAL_PROCESS
@@ -62,6 +81,25 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Periplasmic Rod-complex protein that favors the open, active PBP2
       state.
+    protein_examples:
+    - uniprot_id: UniProtKB:P84480
+      protein_label: Cell shape-determining protein MreC
+      gene_symbol: mreC
+      taxon_id: NCBITaxon:1422
+      taxon_label: Geobacillus stearothermophilus (Bacillus stearothermophilus)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 44
+      sequence_version: 1
+      role: Exemplar protein (mreC, Cell shape-determining protein MreC) representing
+        MreC in Geobacillus stearothermophilus (Bacillus stearothermophilus) for cell
+        width small.
+      evidence:
+      - reference: DOI:10.1146/annurev-cellbio-101011-155745
+        snippet: cell shape is genetically determined
+        notes: Supports MreC in cell width small; UniProtKB:P84480 (mreC, Cell shape-determining
+          protein MreC) in Geobacillus stearothermophilus (Bacillus stearothermophilus)
+          provides a verified protein exemplar.
   - node_id: roda_pbp2_open
     label: RodA-PBP2 open conformation
     node_type: STATE
@@ -257,4 +295,11 @@ curation_history:
     canonical example(s): Oceanimonas pelagia (NCBITaxon:3028314; DOI:10.1007/s10482-024-01948-y).
     The note retains the measured value or scopes broad-class examples to the cited
     branch; no paid research was used.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q01465 (mreB)
+    protein example to node mreb_cytoskeleton; added UniProtKB:P84480 (mreC) protein
+    example to node mrec_protein.'
   llm_assisted: true

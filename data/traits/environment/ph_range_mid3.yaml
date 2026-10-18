@@ -68,6 +68,30 @@ causal_graphs:
       a quantitative measurement graph; no exact semantic family term was established
       for this aggregate use.
     description: Multi-subunit cation/proton antiporter conserved in many alkaliphiles.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q9RGZ5
+      protein_label: Na(+)/H(+) antiporter subunit A
+      gene_symbol: mrpA
+      taxon_id: NCBITaxon:398511
+      taxon_label: Alkalihalophilus pseudofirmus (strain ATCC BAA-2126 / JCM 17055
+        / OF4) (Bacillus pseudofirmus)
+      entry_status: REVIEWED
+      proteome_id: UP000001544
+      retrieved_on: '2026-10-17'
+      entry_version: 115
+      sequence_version: 2
+      role: Exemplar protein (mrpA, Na(+)/H(+) antiporter subunit A) representing
+        Mrp Na+/H+ antiporter complex in Alkalihalophilus pseudofirmus (strain ATCC
+        BAA-2126 / JCM 17055 / OF4) (Bacillus pseudofirmus) for pH range mid3.
+      evidence:
+      - reference: DOI:10.1038/nrmicro2549
+        snippet: For pH homeostasis under alkaline conditions, active transport of
+          protons inward is a crucial adaptation, which usually involves activation
+          and transcriptional up-regulation of key cation/proton antiporters
+        notes: Supports Mrp Na+/H+ antiporter complex in pH range mid3; UniProtKB:Q9RGZ5
+          (mrpA, Na(+)/H(+) antiporter subunit A) in Alkalihalophilus pseudofirmus
+          (strain ATCC BAA-2126 / JCM 17055 / OF4) (Bacillus pseudofirmus) provides
+          a verified protein exemplar.
   - node_id: intracellular_ph_homeostasis
     label: intracellular pH homeostasis
     node_type: BIOLOGICAL_PROCESS
@@ -240,4 +264,10 @@ curation_history:
     canonical example(s): Evansella tamaricis (NCBITaxon:2069301; DOI:10.1099/ijsem.0.002543).
     The note retains the measured value or scopes broad-class examples to the cited
     branch; no paid research was used.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q9RGZ5 (mrpA)
+    protein example to node mrp_antiporter.'
   llm_assisted: true

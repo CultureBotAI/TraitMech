@@ -56,6 +56,28 @@ causal_graphs:
     label: czc/cnr cobalt efflux system
     node_type: GENE_OR_PROTEIN
     description: CzcCBA/CzcP and Cnr pumps exporting cobalt cations.
+    protein_examples:
+    - uniprot_id: UniProtKB:P13510
+      protein_label: Cobalt-zinc-cadmium resistance protein CzcB
+      gene_symbol: czcB
+      taxon_id: NCBITaxon:266264
+      taxon_label: Cupriavidus metallidurans (strain ATCC 43123 / DSM 2839 / NBRC
+        102507 / CH34) (Ralstonia metallidurans)
+      entry_status: REVIEWED
+      proteome_id: UP000002429
+      retrieved_on: '2026-10-17'
+      entry_version: 151
+      sequence_version: 2
+      role: Exemplar protein (czcB, Cobalt-zinc-cadmium resistance protein CzcB) representing
+        czc/cnr cobalt efflux system in Cupriavidus metallidurans (strain ATCC 43123
+        / DSM 2839 / NBRC 102507 / CH34) (Ralstonia metallidurans) for cobalt tolerant.
+      evidence:
+      - reference: DOI:10.1111/j.1365-2958.2009.06792.x
+        snippet: Czc machinery exports cadmium, zinc, and cobalt
+        notes: Supports czc/cnr cobalt efflux system in cobalt tolerant; UniProtKB:P13510
+          (czcB, Cobalt-zinc-cadmium resistance protein CzcB) in Cupriavidus metallidurans
+          (strain ATCC 43123 / DSM 2839 / NBRC 102507 / CH34) (Ralstonia metallidurans)
+          provides a verified protein exemplar.
   - node_id: cobalt_export
     label: cobalt ion transmembrane transport
     node_type: BIOLOGICAL_PROCESS
@@ -74,7 +96,7 @@ causal_graphs:
       entry_status: REVIEWED
       proteome_id: UP000002429
       retrieved_on: '2026-08-25'
-      entry_version: 153
+      entry_version: 154
       sequence_version: 3
       role: CzcA is one transporter component of the CH34 CzcCBA complex that exports
         cobalt, zinc, and cadmium.
@@ -95,6 +117,28 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Sensor kinase CzcS and response regulator CzcR that transcriptionally
       activate czcCBA.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q44007
+      protein_label: Sensor protein CzcS
+      gene_symbol: czcS
+      taxon_id: NCBITaxon:266264
+      taxon_label: Cupriavidus metallidurans (strain ATCC 43123 / DSM 2839 / NBRC
+        102507 / CH34) (Ralstonia metallidurans)
+      entry_status: REVIEWED
+      proteome_id: UP000002429
+      retrieved_on: '2026-10-17'
+      entry_version: 166
+      sequence_version: 2
+      role: Exemplar protein (czcS, Sensor protein CzcS) representing CzcS/CzcR two-component
+        system in Cupriavidus metallidurans (strain ATCC 43123 / DSM 2839 / NBRC 102507
+        / CH34) (Ralstonia metallidurans) for cobalt tolerant.
+      evidence:
+      - reference: DOI:10.1111/j.1365-2958.2009.06792.x
+        snippet: Czc machinery exports cadmium, zinc, and cobalt
+        notes: Supports CzcS/CzcR two-component system in cobalt tolerant; UniProtKB:Q44007
+          (czcS, Sensor protein CzcS) in Cupriavidus metallidurans (strain ATCC 43123
+          / DSM 2839 / NBRC 102507 / CH34) (Ralstonia metallidurans) provides a verified
+          protein exemplar.
   - node_id: czcCBA_expression
     label: czcCBA operon expression
     node_type: BIOLOGICAL_PROCESS
@@ -116,6 +160,31 @@ causal_graphs:
     - cnrH
     - cnrT
     operon: cnrCBAYXHT
+    protein_examples:
+    - uniprot_id: UniProtKB:P37972
+      protein_label: Nickel and cobalt resistance protein CnrA
+      gene_symbol: cnrA
+      taxon_id: NCBITaxon:266264
+      taxon_label: Cupriavidus metallidurans (strain ATCC 43123 / DSM 2839 / NBRC
+        102507 / CH34) (Ralstonia metallidurans)
+      entry_status: REVIEWED
+      proteome_id: UP000002429
+      retrieved_on: '2026-10-17'
+      entry_version: 137
+      sequence_version: 2
+      role: Exemplar protein (cnrA, Nickel and cobalt resistance protein CnrA) representing
+        Cnr cobalt-nickel resistance protein module in Cupriavidus metallidurans (strain
+        ATCC 43123 / DSM 2839 / NBRC 102507 / CH34) (Ralstonia metallidurans) for
+        cobalt tolerant.
+      evidence:
+      - reference: DOI:10.3389/fmicb.2020.00047
+        snippet: C. metallidurans BS1 conferred resistance to Zn2+ displaying a MIC
+          of 20 mM, Cd2+ (2.5 mM), Co2+ (20mM), Ni2+ (8 mM), As3+ (3.5 mM), Cu2+ (5
+          mM), Au3+ (1 uM) and Pb2+ (1.7 mM)
+        notes: Supports Cnr cobalt-nickel resistance protein module in cobalt tolerant;
+          UniProtKB:P37972 (cnrA, Nickel and cobalt resistance protein CnrA) in Cupriavidus
+          metallidurans (strain ATCC 43123 / DSM 2839 / NBRC 102507 / CH34) (Ralstonia
+          metallidurans) provides a verified protein exemplar.
   - node_id: dmeF_exporter
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
@@ -123,6 +192,28 @@ causal_graphs:
     label: DmeF CDF-family exporter
     node_type: GENE_OR_PROTEIN
     description: Cation diffusion facilitator with cobalt as preferred substrate.
+    protein_examples:
+    - uniprot_id: UniProtKB:P13510
+      protein_label: Cobalt-zinc-cadmium resistance protein CzcB
+      gene_symbol: czcB
+      taxon_id: NCBITaxon:266264
+      taxon_label: Cupriavidus metallidurans (strain ATCC 43123 / DSM 2839 / NBRC
+        102507 / CH34) (Ralstonia metallidurans)
+      entry_status: REVIEWED
+      proteome_id: UP000002429
+      retrieved_on: '2026-10-17'
+      entry_version: 151
+      sequence_version: 2
+      role: Exemplar protein (czcB, Cobalt-zinc-cadmium resistance protein CzcB) representing
+        DmeF CDF-family exporter in Cupriavidus metallidurans (strain ATCC 43123 /
+        DSM 2839 / NBRC 102507 / CH34) (Ralstonia metallidurans) for cobalt tolerant.
+      evidence:
+      - reference: DOI:10.1111/j.1365-2958.2009.06792.x
+        snippet: Czc machinery exports cadmium, zinc, and cobalt
+        notes: Supports DmeF CDF-family exporter in cobalt tolerant; UniProtKB:P13510
+          (czcB, Cobalt-zinc-cadmium resistance protein CzcB) in Cupriavidus metallidurans
+          (strain ATCC 43123 / DSM 2839 / NBRC 102507 / CH34) (Ralstonia metallidurans)
+          provides a verified protein exemplar.
   - node_id: rcnA_exporter
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
@@ -130,6 +221,28 @@ causal_graphs:
     label: RcnA/YohM Co/Ni efflux protein
     node_type: GENE_OR_PROTEIN
     description: Membrane-bound efflux system conferring nickel and cobalt resistance.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q8ZM94
+      protein_label: Nickel/cobalt efflux system RcnA
+      gene_symbol: rcnA
+      taxon_id: NCBITaxon:99287
+      taxon_label: Salmonella typhimurium (strain LT2 / SGSC1412 / ATCC 700720)
+      entry_status: REVIEWED
+      proteome_id: UP000001014
+      retrieved_on: '2026-10-17'
+      entry_version: 105
+      sequence_version: 1
+      role: Exemplar protein (rcnA, Nickel/cobalt efflux system RcnA) representing
+        RcnA/YohM Co/Ni efflux protein in Salmonella typhimurium (strain LT2 / SGSC1412
+        / ATCC 700720) for cobalt tolerant.
+      evidence:
+      - reference: PMID:12829273
+        snippet: CBA efflux pumps driven by proteins of the resistance-nodulation-cell
+          division superfamily, P-type ATPases, cation diffusion facilitator and chromate
+          proteins
+        notes: Supports RcnA/YohM Co/Ni efflux protein in cobalt tolerant; UniProtKB:Q8ZM94
+          (rcnA, Nickel/cobalt efflux system RcnA) in Salmonella typhimurium (strain
+          LT2 / SGSC1412 / ATCC 700720) provides a verified protein exemplar.
   - node_id: cobalt_homeostasis
     label: cellular cobalt homeostasis
     node_type: BIOLOGICAL_PROCESS
@@ -273,4 +386,13 @@ curation_history:
     (cobalt_efflux_system, czcCBA_complex, czcRS_two_component, cnr_operon, dmeF_exporter,
     rcnA_exporter); added taxon-paired protein example(s) UniProtKB:P13511 on czcCBA_complex
     (NCBITaxon:266264); added canonical example(s) NCBITaxon:266264.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:P13511
+    version metadata (entry_version=154, sequence_version=3); added UniProtKB:P13510
+    (czcB) protein example to node cobalt_efflux_system; added UniProtKB:Q44007 (czcS)
+    protein example to node czcRS_two_component; added UniProtKB:P37972 (cnrA) protein
+    example to node cnr_operon (+2 more).'
   llm_assisted: true

@@ -55,6 +55,26 @@ causal_graphs:
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: This node explicitly combines MreB with analogous but unrelated
       shape systems and therefore has no exact single family grounding.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q01465
+      protein_label: Cell shape-determining protein MreB
+      gene_symbol: mreB
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
+      entry_status: REVIEWED
+      proteome_id: UP000001570
+      retrieved_on: '2026-10-17'
+      entry_version: 148
+      sequence_version: 3
+      role: Exemplar protein (mreB, Cell shape-determining protein MreB) representing
+        weak/absent shape-determining cytoskeleton in Bacillus subtilis (strain 168)
+        for pleomorphic shaped.
+      evidence:
+      - reference: DOI:10.1146/annurev-cellbio-101011-155745
+        snippet: MreB-directed peptidoglycan synthesis
+        notes: Supports weak/absent shape-determining cytoskeleton in pleomorphic
+          shaped; UniProtKB:Q01465 (mreB, Cell shape-determining protein MreB) in
+          Bacillus subtilis (strain 168) provides a verified protein exemplar.
   - node_id: weak_cell_wall
     label: weak or absent peptidoglycan wall
     node_type: CELLULAR_LOCALIZATION
@@ -217,4 +237,10 @@ curation_history:
     the tranche: set graph scope pleomorphic_shaped_relaxed_shape_control=NONMECHANISTIC
     with scope_notes; marked 1 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (weak_cytoskeleton).'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q01465 (mreB)
+    protein example to node weak_cytoskeleton.'
   llm_assisted: true

@@ -55,6 +55,28 @@ causal_graphs:
     grounding_notes: The Sox system comprises multiple non-equivalent protein components;
       no single GO or InterPro term denotes the complete generic system represented
       here.
+    protein_examples:
+    - uniprot_id: UniProtKB:D3RNN8
+      protein_label: Sulfite dehydrogenase subunit A
+      gene_symbol: soeA
+      taxon_id: NCBITaxon:572477
+      taxon_label: Allochromatium vinosum (strain ATCC 17899 / DSM 180 / NBRC 103801
+        / NCIMB 10441 / D) (Chromatium vinosum)
+      entry_status: REVIEWED
+      proteome_id: UP000001441
+      retrieved_on: '2026-10-17'
+      entry_version: 77
+      sequence_version: 1
+      role: Exemplar protein (soeA, Sulfite dehydrogenase subunit A) representing
+        Sox enzyme system in Allochromatium vinosum (strain ATCC 17899 / DSM 180 /
+        NBRC 103801 / NCIMB 10441 / D) (Chromatium vinosum) for sulfur oxidation.
+      evidence:
+      - reference: DOI:10.1111/j.1574-6976.2009.00187.x
+        snippet: lithotrophic sulfur oxidation
+        notes: Supports Sox enzyme system in sulfur oxidation; UniProtKB:D3RNN8 (soeA,
+          Sulfite dehydrogenase subunit A) in Allochromatium vinosum (strain ATCC
+          17899 / DSM 180 / NBRC 103801 / NCIMB 10441 / D) (Chromatium vinosum) provides
+          a verified protein exemplar.
   - node_id: hydrogen_sulfide
     label: hydrogen sulfide
     node_type: CHEMICAL
@@ -100,6 +122,26 @@ causal_graphs:
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: The graph does not resolve a taxon-specific PDO family, fusion
       architecture, or glutathione dependence needed for an exact semantic grounding.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q9S2F4
+      protein_label: 4-hydroxyphenylpyruvate dioxygenase
+      gene_symbol: hpd
+      taxon_id: NCBITaxon:100226
+      taxon_label: Streptomyces coelicolor (strain ATCC BAA-471 / A3(2) / M145)
+      entry_status: REVIEWED
+      proteome_id: UP000001973
+      retrieved_on: '2026-10-17'
+      entry_version: 132
+      sequence_version: 1
+      role: Exemplar protein (hpd, 4-hydroxyphenylpyruvate dioxygenase) representing
+        persulfide dioxygenase (PDO) in Streptomyces coelicolor (strain ATCC BAA-471
+        / A3(2) / M145) for sulfur oxidation.
+      evidence:
+      - reference: DOI:10.1111/j.1574-6976.2009.00187.x
+        snippet: lithotrophic sulfur oxidation
+        notes: Supports persulfide dioxygenase (PDO) in sulfur oxidation; UniProtKB:Q9S2F4
+          (hpd, 4-hydroxyphenylpyruvate dioxygenase) in Streptomyces coelicolor (strain
+          ATCC BAA-471 / A3(2) / M145) provides a verified protein exemplar.
   - node_id: glutathione_persulfide
     label: glutathione persulfide (GSSH)
     node_type: CHEMICAL
@@ -119,6 +161,26 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Oxidizes thiosulfate to tetrathionate.
     grounding: GO:0050338
+    protein_examples:
+    - uniprot_id: UniProtKB:Q4FQB7
+      protein_label: Thiosulfate dehydrogenase
+      gene_symbol: tsdA
+      taxon_id: NCBITaxon:259536
+      taxon_label: Psychrobacter arcticus (strain DSM 17307 / VKM B-2377 / 273-4)
+      entry_status: REVIEWED
+      proteome_id: UP000000546
+      retrieved_on: '2026-10-17'
+      entry_version: 116
+      sequence_version: 1
+      role: Exemplar protein (tsdA, Thiosulfate dehydrogenase) representing thiosulfate
+        dehydrogenase (TsdA) in Psychrobacter arcticus (strain DSM 17307 / VKM B-2377
+        / 273-4) for sulfur oxidation.
+      evidence:
+      - reference: DOI:10.1111/j.1574-6976.2009.00187.x
+        snippet: lithotrophic sulfur oxidation
+        notes: Supports thiosulfate dehydrogenase (TsdA) in sulfur oxidation; UniProtKB:Q4FQB7
+          (tsdA, Thiosulfate dehydrogenase) in Psychrobacter arcticus (strain DSM
+          17307 / VKM B-2377 / 273-4) provides a verified protein exemplar.
   - node_id: tetrathionate
     label: tetrathionate
     node_type: CHEMICAL
@@ -133,6 +195,29 @@ causal_graphs:
     grounding_notes: TetH proteins are taxon- and acidophile-specific members of broader
       hydrolase families; no exact verified GO or InterPro term was assigned to this
       generic pathway label.
+    protein_examples:
+    - uniprot_id: UniProtKB:B7J3C9
+      protein_label: Tetrathionate hydrolase
+      gene_symbol: tth
+      taxon_id: NCBITaxon:243159
+      taxon_label: Acidithiobacillus ferrooxidans (strain ATCC 23270 / DSM 14882 /
+        CIP 104768 / NCIMB 8455) (Ferrobacillus ferrooxidans (strain ATCC 23270))
+      entry_status: REVIEWED
+      proteome_id: UP000001362
+      retrieved_on: '2026-10-17'
+      entry_version: 82
+      sequence_version: 1
+      role: Exemplar protein (tth, Tetrathionate hydrolase) representing tetrathionate
+        hydrolase (TetH) in Acidithiobacillus ferrooxidans (strain ATCC 23270 / DSM
+        14882 / CIP 104768 / NCIMB 8455) (Ferrobacillus ferrooxidans (strain ATCC
+        23270)) for sulfur oxidation.
+      evidence:
+      - reference: DOI:10.1111/j.1574-6976.2009.00187.x
+        snippet: lithotrophic sulfur oxidation
+        notes: Supports tetrathionate hydrolase (TetH) in sulfur oxidation; UniProtKB:B7J3C9
+          (tth, Tetrathionate hydrolase) in Acidithiobacillus ferrooxidans (strain
+          ATCC 23270 / DSM 14882 / CIP 104768 / NCIMB 8455) (Ferrobacillus ferrooxidans
+          (strain ATCC 23270)) provides a verified protein exemplar.
   edges:
   - subject: sox_system
     predicate: confers
@@ -300,4 +385,12 @@ curation_history:
   changes: Scoped the cross-taxon sulfur-oxidation mechanism, added a DOI-backed Thiobacillus
     denitrificans SQR protein example, and documented why the broad Sox, PDO, and
     TetH labels remain reviewed label-only nodes.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:D3RNN8 (soeA)
+    protein example to node sox_system; added UniProtKB:Q9S2F4 (hpd) protein example
+    to node pdo_enzyme; added UniProtKB:Q4FQB7 (tsdA) protein example to node tsda_enzyme;
+    added UniProtKB:B7J3C9 (tth) protein example to node teth_enzyme.'
   llm_assisted: true

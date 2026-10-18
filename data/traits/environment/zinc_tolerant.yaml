@@ -56,6 +56,28 @@ causal_graphs:
     label: czc cation-efflux system
     node_type: GENE_OR_PROTEIN
     description: CzcCBA/CzcP machinery exporting Zn, Cd, and Co cations.
+    protein_examples:
+    - uniprot_id: UniProtKB:P13510
+      protein_label: Cobalt-zinc-cadmium resistance protein CzcB
+      gene_symbol: czcB
+      taxon_id: NCBITaxon:266264
+      taxon_label: Cupriavidus metallidurans (strain ATCC 43123 / DSM 2839 / NBRC
+        102507 / CH34) (Ralstonia metallidurans)
+      entry_status: REVIEWED
+      proteome_id: UP000002429
+      retrieved_on: '2026-10-17'
+      entry_version: 151
+      sequence_version: 2
+      role: Exemplar protein (czcB, Cobalt-zinc-cadmium resistance protein CzcB) representing
+        czc cation-efflux system in Cupriavidus metallidurans (strain ATCC 43123 /
+        DSM 2839 / NBRC 102507 / CH34) (Ralstonia metallidurans) for zinc tolerant.
+      evidence:
+      - reference: DOI:10.1111/j.1365-2958.2009.06792.x
+        snippet: Czc machinery exports cadmium, zinc, and cobalt
+        notes: Supports czc cation-efflux system in zinc tolerant; UniProtKB:P13510
+          (czcB, Cobalt-zinc-cadmium resistance protein CzcB) in Cupriavidus metallidurans
+          (strain ATCC 43123 / DSM 2839 / NBRC 102507 / CH34) (Ralstonia metallidurans)
+          provides a verified protein exemplar.
   - node_id: zinc_export
     label: zinc ion transmembrane transport
     node_type: BIOLOGICAL_PROCESS
@@ -74,7 +96,7 @@ causal_graphs:
       entry_status: UNREVIEWED
       proteome_id: UP000002429
       retrieved_on: '2026-08-25'
-      entry_version: 135
+      entry_version: 136
       sequence_version: 1
       role: CH34 ZntA is a P-type ATPase that exports cytoplasmic zinc.
       evidence:
@@ -92,6 +114,25 @@ causal_graphs:
     label: ZntR MerR-family regulator
     node_type: GENE_OR_PROTEIN
     description: MerR-family zinc-responsive transcriptional activator of zntA.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0ACS6
+      protein_label: HTH-type transcriptional regulator ZntR
+      gene_symbol: zntR
+      taxon_id: NCBITaxon:83334
+      taxon_label: Escherichia coli O157:H7
+      entry_status: REVIEWED
+      proteome_id: UP000000558
+      retrieved_on: '2026-10-17'
+      entry_version: 115
+      sequence_version: 1
+      role: Exemplar protein (zntR, HTH-type transcriptional regulator ZntR) representing
+        ZntR MerR-family regulator in Escherichia coli O157:H7 for zinc tolerant.
+      evidence:
+      - reference: PMID:33540705
+        snippet: zinc resistance determinants in Cupriavidus metallidurans
+        notes: Supports ZntR MerR-family regulator in zinc tolerant; UniProtKB:P0ACS6
+          (zntR, HTH-type transcriptional regulator ZntR) in Escherichia coli O157:H7
+          provides a verified protein exemplar.
   - node_id: znta_expression
     label: zntA transcription
     node_type: BIOLOGICAL_PROCESS
@@ -103,6 +144,28 @@ causal_graphs:
     label: CzcCBA RND efflux complex
     node_type: GENE_OR_PROTEIN
     description: RND transenvelope pump exporting zinc from the periplasm.
+    protein_examples:
+    - uniprot_id: UniProtKB:P13510
+      protein_label: Cobalt-zinc-cadmium resistance protein CzcB
+      gene_symbol: czcB
+      taxon_id: NCBITaxon:266264
+      taxon_label: Cupriavidus metallidurans (strain ATCC 43123 / DSM 2839 / NBRC
+        102507 / CH34) (Ralstonia metallidurans)
+      entry_status: REVIEWED
+      proteome_id: UP000002429
+      retrieved_on: '2026-10-17'
+      entry_version: 151
+      sequence_version: 2
+      role: Exemplar protein (czcB, Cobalt-zinc-cadmium resistance protein CzcB) representing
+        CzcCBA RND efflux complex in Cupriavidus metallidurans (strain ATCC 43123
+        / DSM 2839 / NBRC 102507 / CH34) (Ralstonia metallidurans) for zinc tolerant.
+      evidence:
+      - reference: DOI:10.1111/j.1365-2958.2009.06792.x
+        snippet: Czc machinery exports cadmium, zinc, and cobalt
+        notes: Supports CzcCBA RND efflux complex in zinc tolerant; UniProtKB:P13510
+          (czcB, Cobalt-zinc-cadmium resistance protein CzcB) in Cupriavidus metallidurans
+          (strain ATCC 43123 / DSM 2839 / NBRC 102507 / CH34) (Ralstonia metallidurans)
+          provides a verified protein exemplar.
   - node_id: polyphosphate
     label: polyphosphate
     node_type: CHEMICAL
@@ -281,4 +344,13 @@ curation_history:
     znta_atpase, zntr_regulator, czccba_complex); added taxon-paired protein example(s)
     UniProtKB:Q1LEH0 on znta_atpase (NCBITaxon:266264); added canonical example(s)
     NCBITaxon:266264.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:Q1LEH0
+    version metadata (entry_version=136, sequence_version=1); added UniProtKB:P13510
+    (czcB) protein example to node czc_efflux_system; added UniProtKB:P0ACS6 (zntR)
+    protein example to node zntr_regulator; added UniProtKB:P13510 (czcB) protein
+    example to node czccba_complex.'
   llm_assisted: true

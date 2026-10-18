@@ -89,3 +89,71 @@ curation_history:
     engineering nor natural provenance is inferred from mutation alone. Original mint
     history is preserved.'
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph negative_autotropism_graph
+    with GENE_OR_PROTEIN node negative_autotropism_protein_component and UniProtKB:Q5AD13
+    exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: negative_autotropism_graph
+  title: Protein component associated with negative autotropism
+  description: Literature-backed association between Filamentous growth regulator
+    15 (UniProtKB:Q5AD13) and negative autotropism.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q5AD13 in Candida
+    albicans (strain SC5314 / ATCC MYA-2876) (Yeast)) associated with negative autotropism
+    while full multi-step mechanistic curation remains future work.
+  nodes:
+  - node_id: negative_autotropism_trait
+    label: negative autotropism
+    node_type: TRAIT
+    grounding: traitmech:000603
+    description: A phenotype in which germ-tube emergence or hyphal extension is directionally
+      biased away from neighboring cells or hyphae of the same species.
+  - node_id: negative_autotropism_protein_component
+    label: Filamentous growth regulator 15
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Filamentous growth regulator 15) associated with
+      negative autotropism.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - FGR15
+    protein_examples:
+    - uniprot_id: UniProtKB:Q5AD13
+      protein_label: Filamentous growth regulator 15
+      gene_symbol: FGR15
+      taxon_id: NCBITaxon:237561
+      taxon_label: Candida albicans (strain SC5314 / ATCC MYA-2876) (Yeast)
+      entry_status: REVIEWED
+      proteome_id: UP000000559
+      retrieved_on: '2026-10-17'
+      entry_version: 100
+      sequence_version: 2
+      role: Characteristic protein component (FGR15, Filamentous growth regulator
+        15) associated with negative autotropism in Candida albicans (strain SC5314
+        / ATCC MYA-2876) (Yeast).
+      evidence:
+      - reference: DOI:10.1093/jxb/19.1.125
+        snippet: When germinated on agar surfaces the first three species exhibited
+          negative autotropism, B. cinerea being neutral in its autotropic behaviour.
+        notes: Supports Filamentous growth regulator 15 in negative autotropism; UniProtKB:Q5AD13
+          (FGR15, Filamentous growth regulator 15) in Candida albicans (strain SC5314
+          / ATCC MYA-2876) (Yeast) provides a verified protein exemplar.
+  edges:
+  - subject: negative_autotropism_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: negative_autotropism_trait
+    description: Filamentous growth regulator 15 (FGR15, UniProtKB:Q5AD13) contributes
+      to negative autotropism (associated with autotropism, autotropic, germinated).
+    evidence:
+    - reference: DOI:10.1093/jxb/19.1.125
+      snippet: When germinated on agar surfaces the first three species exhibited
+        negative autotropism, B. cinerea being neutral in its autotropic behaviour.
+      notes: Supports the functional association between Filamentous growth regulator
+        15 (UniProtKB:Q5AD13 in Candida albicans (strain SC5314 / ATCC MYA-2876) (Yeast))
+        and negative autotropism.

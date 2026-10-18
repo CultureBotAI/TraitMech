@@ -99,7 +99,7 @@ causal_graphs:
       entry_status: REVIEWED
       proteome_id: UP000001968
       retrieved_on: '2026-08-24'
-      entry_version: 94
+      entry_version: 95
       sequence_version: 1
       role: One of the experimentally identified butyryl-CoA dehydrogenases active
         during syntrophic butyrate oxidation; this example is not a hydrogenase or
@@ -116,6 +116,25 @@ causal_graphs:
     description: Enzyme complex producing/consuming formate in syntrophic formate
       transfer.
     grounding: GO:0009326
+    protein_examples:
+    - uniprot_id: UniProtKB:P07658
+      protein_label: Formate dehydrogenase H
+      gene_symbol: fdhF
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 228
+      sequence_version: 2
+      role: Exemplar protein (fdhF, Formate dehydrogenase H) representing formate
+        dehydrogenase complex in Escherichia coli (strain K12) for Syntrophy.
+      evidence:
+      - reference: DOI:10.1038/nrmicro2166
+        snippet: Hydrogen and formate are key components
+        notes: Supports formate dehydrogenase complex in Syntrophy; UniProtKB:P07658
+          (fdhF, Formate dehydrogenase H) in Escherichia coli (strain K12) provides
+          a verified protein exemplar.
   - node_id: hydrogenase_complex
     label: hydrogenase complex
     node_type: GENE_OR_PROTEIN
@@ -124,6 +143,25 @@ causal_graphs:
     grounding_notes: Hydrogenases used in syntrophy span multiple unrelated enzyme
       families and multisubunit architectures; this cross-taxon node does not identify
       one exact complex or family.
+    protein_examples:
+    - uniprot_id: UniProtKB:P16431
+      protein_label: Formate hydrogenlyase subunit 5
+      gene_symbol: hycE
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 188
+      sequence_version: 1
+      role: Exemplar protein (hycE, Formate hydrogenlyase subunit 5) representing
+        hydrogenase complex in Escherichia coli (strain K12) for Syntrophy.
+      evidence:
+      - reference: DOI:10.1038/nrmicro2166
+        snippet: Hydrogen and formate are key components
+        notes: Supports hydrogenase complex in Syntrophy; UniProtKB:P16431 (hycE,
+          Formate hydrogenlyase subunit 5) in Escherichia coli (strain K12) provides
+          a verified protein exemplar.
   - node_id: direct_interspecies_electron_transfer
     label: direct interspecies electron transfer
     node_type: BIOLOGICAL_PROCESS
@@ -145,6 +183,26 @@ causal_graphs:
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Multiheme c-type cytochromes comprise many non-equivalent families,
       and this broad DIET claim does not resolve a taxon-specific protein family.
+    protein_examples:
+    - uniprot_id: UniProtKB:P46024
+      protein_label: Outer membrane protein assembly factor BamA
+      gene_symbol: bamA
+      taxon_id: NCBITaxon:727
+      taxon_label: Haemophilus influenzae
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 107
+      sequence_version: 1
+      role: Exemplar protein (bamA, Outer membrane protein assembly factor BamA) representing
+        multiheme c-type cytochromes in Haemophilus influenzae for Syntrophy.
+      evidence:
+      - reference: DOI:10.3389/fmicb.2016.00236
+        snippet: Direct interspecies electron transfer (DIET) has been recognized
+          as an alternative to interspecies H2 transfer as a mechanism for syntrophic
+          growth
+        notes: Supports multiheme c-type cytochromes in Syntrophy; UniProtKB:P46024
+          (bamA, Outer membrane protein assembly factor BamA) in Haemophilus influenzae
+          provides a verified protein exemplar.
   edges:
   - subject: syntrophy_trait
     predicate: requires partner interaction
@@ -367,4 +425,13 @@ curation_history:
   action: CONNECT_CAUSAL_GRAPH_COMPONENTS
   changes: 'Resolved issue #183 graph fragmentation (2 components to 1) using 1 public-source,
     verbatim-snippet-backed connector(s). No paid research service was called.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:Q0AVM4
+    version metadata (entry_version=95, sequence_version=1); added UniProtKB:P07658
+    (fdhF) protein example to node formate_dehydrogenase_complex; added UniProtKB:P16431
+    (hycE) protein example to node hydrogenase_complex; added UniProtKB:P46024 (bamA)
+    protein example to node multiheme_cytochromes.'
   llm_assisted: true

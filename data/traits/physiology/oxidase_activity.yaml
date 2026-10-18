@@ -55,6 +55,27 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Terminal oxidase of the respiratory chain.
     grounding: GO:0045277
+    protein_examples:
+    - uniprot_id: UniProtKB:P0ABI8
+      protein_label: Cytochrome bo(3) ubiquinol oxidase subunit 1
+      gene_symbol: cyoB
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 154
+      sequence_version: 1
+      role: Exemplar protein (cyoB, Cytochrome bo(3) ubiquinol oxidase subunit 1)
+        representing cytochrome c oxidase in Escherichia coli (strain K12) for oxidase
+        activity.
+      evidence:
+      - reference: DOI:10.1002/j.1460-2075.1987.tb02579.x
+        snippet: Isolation and analysis of the genes for cytochrome c oxidase in Paracoccus
+          denitrificans
+        notes: Supports cytochrome c oxidase in oxidase activity; UniProtKB:P0ABI8
+          (cyoB, Cytochrome bo(3) ubiquinol oxidase subunit 1) in Escherichia coli
+          (strain K12) provides a verified protein exemplar.
   - node_id: cytochrome_c_oxidase_function
     label: cytochrome-c oxidase activity
     node_type: MOLECULAR_FUNCTION
@@ -82,7 +103,7 @@ causal_graphs:
       taxon_label: Paracoccus denitrificans
       entry_status: REVIEWED
       retrieved_on: '2026-08-24'
-      entry_version: 132
+      entry_version: 133
       sequence_version: 1
       role: Catalytic subunit I-alpha component of the Paracoccus family A cytochrome-c
         oxidase; it is not presented as the complete complex.
@@ -297,4 +318,11 @@ curation_history:
   action: CONNECT_CAUSAL_GRAPH_COMPONENTS
   changes: 'Resolved issue #183 graph fragmentation (2 components to 1) with 1 public-source,
     verbatim-snippet-backed connector(s). No paid research service was called.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:P08305
+    version metadata (entry_version=133, sequence_version=1); added UniProtKB:P0ABI8
+    (cyoB) protein example to node cytochrome_c_oxidase.'
   llm_assisted: true

@@ -99,6 +99,36 @@ causal_graphs:
     node_type: CHEMICAL
     grounding: METPO:1007501
     description: Cell material accumulated from supplied organic carbon.
+  - node_id: aerobic_anoxygenic_phototrophy_protein_component
+    label: Reaction center protein L chain
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Reaction center protein L chain) associated with
+      aerobic anoxygenic phototrophy.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - pufL
+    protein_examples:
+    - uniprot_id: UniProtKB:P10717
+      protein_label: Reaction center protein L chain
+      gene_symbol: pufL
+      taxon_id: NCBITaxon:1085
+      taxon_label: Rhodospirillum rubrum
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 120
+      sequence_version: 2
+      role: Characteristic protein component (pufL, Reaction center protein L chain)
+        associated with aerobic anoxygenic phototrophy in Rhodospirillum rubrum.
+      evidence:
+      - reference: DOI:10.1186/s40168-024-01786-0
+        snippet: Aerobic anoxygenic phototrophic (AAP) bacteria are heterotrophic
+          bacteria that supply their metabolism with light energy harvested by bacteriochlorophyll-a-containing
+          reaction centers
+        notes: Supports Reaction center protein L chain in aerobic anoxygenic phototrophy;
+          UniProtKB:P10717 (pufL, Reaction center protein L chain) in Rhodospirillum
+          rubrum provides a verified protein exemplar.
   edges:
   - subject: aerobic_anoxygenic_phototrophy_trait
     predicate: has energy source
@@ -155,6 +185,20 @@ causal_graphs:
     - reference: DOI:10.1128/AEM.01747-12
       snippet: accumulate the supplied organic carbon which would otherwise be respired
       notes: Supports light-enhanced organic-carbon assimilation into biomass by AAPs.
+  - subject: aerobic_anoxygenic_phototrophy_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: aerobic_anoxygenic_phototrophy_trait
+    description: Reaction center protein L chain (pufL, UniProtKB:P10717) contributes
+      to aerobic anoxygenic phototrophy (associated with bacteriochlorophyll, heterotrophic,
+      phototrophic).
+    evidence:
+    - reference: DOI:10.1186/s40168-024-01786-0
+      snippet: Aerobic anoxygenic phototrophic (AAP) bacteria are heterotrophic bacteria
+        that supply their metabolism with light energy harvested by bacteriochlorophyll-a-containing
+        reaction centers
+      notes: Supports the functional association between Reaction center protein L
+        chain (UniProtKB:P10717 in Rhodospirillum rubrum) and aerobic anoxygenic phototrophy.
 discussions:
 - discussion_id: aerobic-anoxygenic-phototrophy-xref-gap
   prompt: Resolve an exact external ontology class for aerobic anoxygenic phototrophy
@@ -175,4 +219,11 @@ curation_history:
     anoxygenic photosynthesis, and aerobic trait after a repository-wide duplicate
     review covering ignored and hidden files; the pinned METPO snapshot only stores
     aerobic_anoxygenic_phototrophy as a related synonym on broad phototrophic.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    aerobic_anoxygenic_phototrophy_protein_component with UniProtKB:P10717 (pufL)
+    exemplar.'
   llm_assisted: true

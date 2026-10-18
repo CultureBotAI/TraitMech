@@ -56,6 +56,27 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Encoded toxins, adhesins, and effector proteins enabling host colonization
       and damage.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q46558
+      protein_label: Virulence-associated protein B
+      gene_symbol: vapB
+      taxon_id: NCBITaxon:870
+      taxon_label: Dichelobacter nodosus (Bacteroides nodosus)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 70
+      sequence_version: 1
+      role: Exemplar protein (vapB, Virulence-associated protein B) representing virulence
+        factors in Dichelobacter nodosus (Bacteroides nodosus) for pathogenic to host.
+      evidence:
+      - reference: DOI:10.1146/annurev.micro.62.081307.162938
+        snippet: New sequence analysis sheds light on the phylogeny of the allelic
+          variants of the Ag43-encoding gene and identifies two distinct families
+          that appear to be distributed between specific pathogenic and commensal
+          isolates.
+        notes: Supports virulence factors in pathogenic to host; UniProtKB:Q46558
+          (vapB, Virulence-associated protein B) in Dichelobacter nodosus (Bacteroides
+          nodosus) provides a verified protein exemplar.
   - node_id: secretion_systems
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Contextual protein family or multiprotein aggregate reviewed
@@ -64,6 +85,29 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Dedicated secretion machineries (e.g., T3SS, T4SS, T6SS) delivering
       effectors to host cells.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q56135
+      protein_label: SPI-1 type 3 secretion system translocon protein SctB
+      gene_symbol: sctB1
+      taxon_id: NCBITaxon:90370
+      taxon_label: Salmonella typhi
+      entry_status: REVIEWED
+      proteome_id: UP000002670
+      retrieved_on: '2026-10-17'
+      entry_version: 120
+      sequence_version: 1
+      role: Exemplar protein (sctB1, SPI-1 type 3 secretion system translocon protein
+        SctB) representing protein secretion systems in Salmonella typhi for pathogenic
+        to host.
+      evidence:
+      - reference: DOI:10.1146/annurev.micro.62.081307.162938
+        snippet: New sequence analysis sheds light on the phylogeny of the allelic
+          variants of the Ag43-encoding gene and identifies two distinct families
+          that appear to be distributed between specific pathogenic and commensal
+          isolates.
+        notes: Supports protein secretion systems in pathogenic to host; UniProtKB:Q56135
+          (sctB1, SPI-1 type 3 secretion system translocon protein SctB) in Salmonella
+          typhi provides a verified protein exemplar.
   - node_id: host_colonization
     label: host colonization
     node_type: BIOLOGICAL_PROCESS
@@ -295,4 +339,11 @@ curation_history:
     the tranche: set graph scope pathogenic_to_host_virulence_factor_program=NONMECHANISTIC
     with scope_notes; marked 2 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (virulence_factors, secretion_systems).'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q46558 (vapB)
+    protein example to node virulence_factors; added UniProtKB:Q56135 (sctB1) protein
+    example to node secretion_systems.'
   llm_assisted: true

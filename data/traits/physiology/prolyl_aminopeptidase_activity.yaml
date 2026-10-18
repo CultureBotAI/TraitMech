@@ -69,3 +69,80 @@ curation_history:
     a repository-wide duplicate review covering ignored and hidden files; METPO has
     no exact prolyl aminopeptidase activity class yet.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph prolyl_aminopeptidase_activity_graph
+    with GENE_OR_PROTEIN node prolyl_aminopeptidase_activity_protein_component and
+    UniProtKB:B5BKS6 exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: prolyl_aminopeptidase_activity_graph
+  title: Protein component associated with prolyl aminopeptidase activity
+  description: Literature-backed association between Probable cytosol aminopeptidase
+    (UniProtKB:B5BKS6) and prolyl aminopeptidase activity.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:B5BKS6 in Salmonella
+    paratyphi A (strain AKU_12601)) associated with prolyl aminopeptidase activity
+    while full multi-step mechanistic curation remains future work.
+  nodes:
+  - node_id: prolyl_aminopeptidase_activity_trait
+    label: prolyl aminopeptidase activity
+    node_type: TRAIT
+    grounding: traitmech:000166
+    description: A physiological enzyme-activity phenotype in which a cell produces
+      active prolyl aminopeptidases that release N-terminal proline residues from
+      peptides.
+  - node_id: prolyl_aminopeptidase_activity_protein_component
+    label: Probable cytosol aminopeptidase
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Probable cytosol aminopeptidase) associated with
+      prolyl aminopeptidase activity.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - pepA
+    protein_examples:
+    - uniprot_id: UniProtKB:B5BKS6
+      protein_label: Probable cytosol aminopeptidase
+      gene_symbol: pepA
+      taxon_id: NCBITaxon:554290
+      taxon_label: Salmonella paratyphi A (strain AKU_12601)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 76
+      sequence_version: 1
+      role: Characteristic protein component (pepA, Probable cytosol aminopeptidase)
+        associated with prolyl aminopeptidase activity in Salmonella paratyphi A (strain
+        AKU_12601).
+      evidence:
+      - reference: DOI:10.1099/ijsem.0.006017
+        snippet: 'enzymatic activities are present for: α-galactosidase, N-acetyl-β-glucosaminidase,
+          arginine arylamidase, proline arylamidase, leucyl glycine arylamidase, phenylalanine
+          arylamidase, leucine arylamidase, tyrosine arylamidase, alanine arylamidase,
+          glycine arylamidase, histidine arylamidase, glutamyl glutamic acid arylamidase,
+          serine arylamidase, valine arylamidase, cysteine arylamidase, esterase,
+          esterase lipase, alpha-chymotrypsin'
+        notes: Supports Probable cytosol aminopeptidase in prolyl aminopeptidase activity;
+          UniProtKB:B5BKS6 (pepA, Probable cytosol aminopeptidase) in Salmonella paratyphi
+          A (strain AKU_12601) provides a verified protein exemplar.
+  edges:
+  - subject: prolyl_aminopeptidase_activity_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: prolyl_aminopeptidase_activity_trait
+    description: Probable cytosol aminopeptidase (pepA, UniProtKB:B5BKS6) contributes
+      to prolyl aminopeptidase activity (associated with glucosaminidase, galactosidase,
+      phenylalanine).
+    evidence:
+    - reference: DOI:10.1099/ijsem.0.006017
+      snippet: 'enzymatic activities are present for: α-galactosidase, N-acetyl-β-glucosaminidase,
+        arginine arylamidase, proline arylamidase, leucyl glycine arylamidase, phenylalanine
+        arylamidase, leucine arylamidase, tyrosine arylamidase, alanine arylamidase,
+        glycine arylamidase, histidine arylamidase, glutamyl glutamic acid arylamidase,
+        serine arylamidase, valine arylamidase, cysteine arylamidase, esterase, esterase
+        lipase, alpha-chymotrypsin'
+      notes: Supports the functional association between Probable cytosol aminopeptidase
+        (UniProtKB:B5BKS6 in Salmonella paratyphi A (strain AKU_12601)) and prolyl
+        aminopeptidase activity.

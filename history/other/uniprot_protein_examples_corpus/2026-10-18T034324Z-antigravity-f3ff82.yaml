@@ -1,0 +1,29 @@
+history_version: 1
+target:
+  kind: other
+  path: reports/graph_protein_taxon_coverage.tsv
+  slug: uniprot_protein_examples_corpus
+session:
+  id: 2026-10-18T034324Z-antigravity-f3ff82
+  timestamp: '2026-10-18T03:43:24Z'
+  actors:
+  - type: ai_agent
+    name: antigravity
+    model: gemini-3-pro
+    agent_tool: antigravity
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - protein_examples
+  summary: Curate UniProt protein examples across all biological traits and causal graphs
+  details: 'Populated source-backed, UniProt-verified ProteinExample entries across the TraitMech
+    corpus: refreshed 112 stale UniProt entry/sequence versions, added protein_examples to
+    672 existing GENE_OR_PROTEIN causal graph nodes, added GENE_OR_PROTEIN nodes with protein_examples
+    and RO:0002326 edges to 361 genomics and 56 non-genomics NONMECHANISTIC graphs that previously
+    lacked protein nodes, and added NONMECHANISTIC causal graphs with GENE_OR_PROTEIN nodes
+    and protein_examples to 287 biological CLASS traits that previously lacked causal_graphs
+    (excluding DO_NOT_WORK.md and administrative/upper/deprecated records). Verified with
+    validate_strict.py (0 errors) and audit_graph_protein_taxa.py --fail-on gaps (0 gaps,
+    0 errors across 1,006 graphs).'

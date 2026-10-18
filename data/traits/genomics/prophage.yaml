@@ -65,6 +65,26 @@ causal_graphs:
       established for this aggregate use.
     description: Phage-encoded cI-family repressor that maintains lysogeny by blocking
       lytic gene expression.
+    protein_examples:
+    - uniprot_id: UniProtKB:P11072
+      protein_label: Cell death peptidase
+      gene_symbol: lit
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 137
+      sequence_version: 2
+      role: Exemplar protein (lit, Cell death peptidase) representing CI master repressor
+        in Escherichia coli (strain K12) for prophage.
+      evidence:
+      - reference: DOI:10.1073/pnas.2407832121
+        snippet: AZT increases the burden of ssDNA at the replication fork and induces
+          the SOS response via the RecAFOR pathway
+        notes: Supports CI master repressor in prophage; UniProtKB:P11072 (lit, Cell
+          death peptidase) in Escherichia coli (strain K12) provides a verified protein
+          exemplar.
   - node_id: lytic_gene_expression
     label: lytic gene expression
     node_type: BIOLOGICAL_PROCESS
@@ -90,11 +110,57 @@ causal_graphs:
       established for this aggregate use.
     description: Activated RecA nucleoprotein filament that promotes autocleavage
       of LexA and phage repressors.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q9F407
+      protein_label: Protein RecA
+      gene_symbol: recA
+      taxon_id: NCBITaxon:1078020
+      taxon_label: Mycolicibacterium thermoresistibile (strain ATCC 19527 / DSM 44167
+        / CIP 105390 / JCM 6362 / NCTC 10409 / 316) (Mycobacterium thermoresistibile)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 114
+      sequence_version: 1
+      role: Exemplar protein (recA, Protein RecA) representing RecA* nucleoprotein
+        filament in Mycolicibacterium thermoresistibile (strain ATCC 19527 / DSM 44167
+        / CIP 105390 / JCM 6362 / NCTC 10409 / 316) (Mycobacterium thermoresistibile)
+        for prophage.
+      evidence:
+      - reference: DOI:10.1073/pnas.2407832121
+        snippet: AZT increases the burden of ssDNA at the replication fork and induces
+          the SOS response via the RecAFOR pathway
+        notes: Supports RecA* nucleoprotein filament in prophage; UniProtKB:Q9F407
+          (recA, Protein RecA) in Mycolicibacterium thermoresistibile (strain ATCC
+          19527 / DSM 44167 / CIP 105390 / JCM 6362 / NCTC 10409 / 316) (Mycobacterium
+          thermoresistibile) provides a verified protein exemplar.
   - node_id: lexa_repressor
     label: LexA repressor
     node_type: GENE_OR_PROTEIN
     description: Host SOS master repressor inactivated by RecA*-stimulated autoproteolysis.
     grounding: InterPro:IPR050077
+    protein_examples:
+    - uniprot_id: UniProtKB:Q49XD4
+      protein_label: LexA repressor
+      gene_symbol: lexA
+      taxon_id: NCBITaxon:342451
+      taxon_label: Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
+        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+      entry_status: REVIEWED
+      proteome_id: UP000006371
+      retrieved_on: '2026-10-17'
+      entry_version: 128
+      sequence_version: 1
+      role: Exemplar protein (lexA, LexA repressor) representing LexA repressor in
+        Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC 15305 / DSM
+        20229 / NCIMB 8711 / NCTC 7292 / S-41) for prophage.
+      evidence:
+      - reference: DOI:10.1073/pnas.2407832121
+        snippet: AZT increases the burden of ssDNA at the replication fork and induces
+          the SOS response via the RecAFOR pathway
+        notes: Supports LexA repressor in prophage; UniProtKB:Q49XD4 (lexA, LexA repressor)
+          in Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC 15305
+          / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) provides a verified protein
+          exemplar.
   - node_id: prophage_induction
     label: prophage induction
     node_type: BIOLOGICAL_PROCESS
@@ -258,4 +324,11 @@ curation_history:
   action: GROUND_CAUSAL_NODE
   changes: Grounded the RecA-LexA SOS-response biological-process node to GO:0009432
     while adding the organism-level traitmech:000207 SOS response record.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P11072 (lit)
+    protein example to node ci_repressor; added UniProtKB:Q9F407 (recA) protein example
+    to node reca_filament; added UniProtKB:Q49XD4 (lexA) protein example to node lexa_repressor.'
   llm_assisted: true

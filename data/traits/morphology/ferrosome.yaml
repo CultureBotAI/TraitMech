@@ -71,6 +71,37 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Intracellular storage of iron in a recoverable organelle-associated
       pool.
+  - node_id: ferrosome_protein_component
+    label: Magnetosome protein MamB
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Magnetosome protein MamB) associated with ferrosome.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - mamB
+    protein_examples:
+    - uniprot_id: UniProtKB:W6KHH6
+      protein_label: Magnetosome protein MamB
+      gene_symbol: mamB
+      taxon_id: NCBITaxon:1288970
+      taxon_label: Magnetospira sp. (strain QH-2) (Marine magnetic spirillum (strain
+        QH-2))
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 55
+      sequence_version: 1
+      role: Characteristic protein component (mamB, Magnetosome protein MamB) associated
+        with ferrosome in Magnetospira sp. (strain QH-2) (Marine magnetic spirillum
+        (strain QH-2)).
+      evidence:
+      - reference: DOI:10.1038/s41586-023-06719-9
+        snippet: Here we report that C. difficile undergoes an intracellular iron
+          biomineralization process and stores iron in membrane-bound ferrosome organelles
+          containing non-crystalline iron phosphate biominerals.
+        notes: Supports Magnetosome protein MamB in ferrosome; UniProtKB:W6KHH6 (mamB,
+          Magnetosome protein MamB) in Magnetospira sp. (strain QH-2) (Marine magnetic
+          spirillum (strain QH-2)) provides a verified protein exemplar.
   edges:
   - subject: ferrosome_formation
     predicate: has output
@@ -127,6 +158,18 @@ causal_graphs:
         non-crystalline iron phosphate biominerals.
       notes: Pi et al. support membrane-bound ferrosome organelles storing non-crystalline
         iron phosphate in Clostridioides difficile.
+  - subject: ferrosome_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: ferrosome_trait
+    description: Magnetosome protein MamB (mamB, UniProtKB:W6KHH6) contributes to
+      ferrosome (associated with membrane, found, feza).
+    evidence:
+    - reference: DOI:10.1038/s41586-023-06719-9
+      snippet: We found that a membrane protein (FezA) and
+      notes: Supports the functional association between Magnetosome protein MamB
+        (UniProtKB:W6KHH6 in Magnetospira sp. (strain QH-2) (Marine magnetic spirillum
+        (strain QH-2))) and ferrosome.
 discussions:
 - discussion_id: ferrosome-xref-gap
   prompt: Resolve exact external ontology xrefs for the bacterial ferrosome morphology
@@ -147,4 +190,10 @@ curation_history:
     inclusion parent after an ignored-and-hidden duplicate review found no exact same-scope
     TraitMech, METPO, history, or prior proposal record; the replacement placeholder
     is reserved in proposals/metpo_traitmech_v404.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    ferrosome_protein_component with UniProtKB:W6KHH6 (mamB) exemplar.'
   llm_assisted: true

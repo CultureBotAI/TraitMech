@@ -60,6 +60,25 @@ causal_graphs:
     label: acidic halophilic proteins
     node_type: GENE_OR_PROTEIN
     description: Proteins enriched in acidic residues and adapted to high ionic strength.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q9R6X2
+      protein_label: Potassium-transporting ATPase potassium-binding subunit
+      gene_symbol: kdpA
+      taxon_id: NCBITaxon:29412
+      taxon_label: Anabaena sp. (strain L31)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 89
+      sequence_version: 1
+      role: Exemplar protein (kdpA, Potassium-transporting ATPase potassium-binding
+        subunit) representing acidic halophilic proteins in Anabaena sp. (strain L31)
+        for extremely halophilic.
+      evidence:
+      - reference: PMID:11790755
+        snippet: A cytochrome in an extremely halophilic archaeon, Haloferax volcanii
+        notes: Supports acidic halophilic proteins in extremely halophilic; UniProtKB:Q9R6X2
+          (kdpA, Potassium-transporting ATPase potassium-binding subunit) in Anabaena
+          sp. (strain L31) provides a verified protein exemplar.
   - node_id: osmotic_stress
     label: osmotic stress
     node_type: BIOLOGICAL_PROCESS
@@ -72,6 +91,24 @@ causal_graphs:
     label: Na+/H+ antiporter
     node_type: GENE_OR_PROTEIN
     description: Membrane transporter mediating sodium exclusion in exchange for protons.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q93F90
+      protein_label: Na(+)/H(+) antiporter NhaA
+      gene_symbol: nhaA
+      taxon_id: NCBITaxon:1890
+      taxon_label: Streptomyces antibioticus
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 71
+      sequence_version: 1
+      role: Exemplar protein (nhaA, Na(+)/H(+) antiporter NhaA) representing Na+/H+
+        antiporter in Streptomyces antibioticus for extremely halophilic.
+      evidence:
+      - reference: PMID:11790755
+        snippet: A cytochrome in an extremely halophilic archaeon, Haloferax volcanii
+        notes: Supports Na+/H+ antiporter in extremely halophilic; UniProtKB:Q93F90
+          (nhaA, Na(+)/H(+) antiporter NhaA) in Streptomyces antibioticus provides
+          a verified protein exemplar.
   - node_id: sodium_efflux
     label: sodium efflux
     node_type: BIOLOGICAL_PROCESS
@@ -282,4 +319,11 @@ curation_history:
     the tranche: set graph scope extreme_halophile_salt_in_acidic_proteome=NONMECHANISTIC
     with scope_notes; marked 2 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (acidic_halophilic_proteins, na_h_antiporter).'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q9R6X2 (kdpA)
+    protein example to node acidic_halophilic_proteins; added UniProtKB:Q93F90 (nhaA)
+    protein example to node na_h_antiporter.'
   llm_assisted: true

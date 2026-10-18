@@ -93,3 +93,70 @@ curation_history:
     novelty searches and the pinned METPO audit found no exact record. Reserved METPO:1060400
     in v527. Deferred unresolved strain/protein anchors; existing records unchanged.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph hormogonium_formation_graph
+    with GENE_OR_PROTEIN node hormogonium_formation_protein_component and UniProtKB:P07860
+    exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: hormogonium_formation_graph
+  title: Protein component associated with hormogonium formation
+  description: Literature-backed association between RNA polymerase sigma-F factor
+    (UniProtKB:P07860) and hormogonium formation.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P07860 in Bacillus
+    subtilis (strain 168)) associated with hormogonium formation while full multi-step
+    mechanistic curation remains future work.
+  nodes:
+  - node_id: hormogonium_formation_trait
+    label: hormogonium formation
+    node_type: TRAIT
+    grounding: traitmech:000651
+    description: A morphological phenotype in which a filamentous cyanobacterium differentiates
+      short, initially heterocyst-free filaments called hormogonia that are distinct
+      from mature vegetative trichomes.
+  - node_id: hormogonium_formation_protein_component
+    label: RNA polymerase sigma-F factor
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (RNA polymerase sigma-F factor) associated with
+      hormogonium formation.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - sigF
+    protein_examples:
+    - uniprot_id: UniProtKB:P07860
+      protein_label: RNA polymerase sigma-F factor
+      gene_symbol: sigF
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
+      entry_status: REVIEWED
+      proteome_id: UP000001570
+      retrieved_on: '2026-10-17'
+      entry_version: 175
+      sequence_version: 1
+      role: Characteristic protein component (sigF, RNA polymerase sigma-F factor)
+        associated with hormogonium formation in Bacillus subtilis (strain 168).
+      evidence:
+      - reference: DOI:10.1128/mSphere.00231-19
+        snippet: both sigC and sigJ may be required for an early stage in hormogonium
+          development, while sigF is late acting.
+        notes: Supports RNA polymerase sigma-F factor in hormogonium formation; UniProtKB:P07860
+          (sigF, RNA polymerase sigma-F factor) in Bacillus subtilis (strain 168)
+          provides a verified protein exemplar.
+  edges:
+  - subject: hormogonium_formation_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: hormogonium_formation_trait
+    description: RNA polymerase sigma-F factor (sigF, UniProtKB:P07860) contributes
+      to hormogonium formation (associated with development, hormogonium, acting).
+    evidence:
+    - reference: DOI:10.1128/mSphere.00231-19
+      snippet: both sigC and sigJ may be required for an early stage in hormogonium
+        development, while sigF is late acting.
+      notes: Supports the functional association between RNA polymerase sigma-F factor
+        (UniProtKB:P07860 in Bacillus subtilis (strain 168)) and hormogonium formation.

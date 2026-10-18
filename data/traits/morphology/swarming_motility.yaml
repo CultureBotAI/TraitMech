@@ -67,6 +67,36 @@ causal_graphs:
     label: swarm expansion
     node_type: BIOLOGICAL_PROCESS
     description: Outward dendritic spreading of a multicellular swarm across a surface.
+  - node_id: swarming_motility_protein_component
+    label: mRNA interferase toxin MqsR
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (mRNA interferase toxin MqsR) associated with swarming
+      motility.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - mqsR
+    protein_examples:
+    - uniprot_id: UniProtKB:Q46865
+      protein_label: mRNA interferase toxin MqsR
+      gene_symbol: mqsR
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 144
+      sequence_version: 1
+      role: Characteristic protein component (mqsR, mRNA interferase toxin MqsR) associated
+        with swarming motility in Escherichia coli (strain K12).
+      evidence:
+      - reference: DOI:10.1038/nrmicro2405
+        snippet: The focus of bacteriology is changing from planktonic to surface
+          environments, and so interest in swarming motility is on the rise.
+        notes: Supports mRNA interferase toxin MqsR in swarming motility; UniProtKB:Q46865
+          (mqsR, mRNA interferase toxin MqsR) in Escherichia coli (strain K12) provides
+          a verified protein exemplar.
   edges:
   - subject: bacterial_flagellum
     predicate: confers
@@ -122,6 +152,18 @@ causal_graphs:
       notes: 'Bru et al. 2023: two activities are essential for forming dendritic
         swarms - surfactant production and flagellar activity.'
     predicate_id: RO:0002213
+  - subject: swarming_motility_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: swarming_trait
+    description: mRNA interferase toxin MqsR (mqsR, UniProtKB:Q46865) contributes
+      to swarming motility (associated with bacteriology, environments, planktonic).
+    evidence:
+    - reference: DOI:10.1038/nrmicro2405
+      snippet: The focus of bacteriology is changing from planktonic to surface environments,
+        and so interest in swarming motility is on the rise.
+      notes: Supports the functional association between mRNA interferase toxin MqsR
+        (UniProtKB:Q46865 in Escherichia coli (strain K12)) and swarming motility.
 curation_history:
 - timestamp: '2026-06-03T00:00:00Z'
   curator: claude
@@ -170,4 +212,10 @@ curation_history:
     tranche of 2026-08-24/25, which shipped without a per-record event. In this record
     the tranche: set graph scope swarming_hyperflagellation_surfactant=NONMECHANISTIC
     with scope_notes.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    swarming_motility_protein_component with UniProtKB:Q46865 (mqsR) exemplar.'
   llm_assisted: true

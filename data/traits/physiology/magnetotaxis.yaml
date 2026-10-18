@@ -58,3 +58,72 @@ curation_history:
     of its source sentence after PR review requested stricter snippet verification;
     resolves issue 852.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph magnetotaxis_graph
+    with GENE_OR_PROTEIN node magnetotaxis_protein_component and UniProtKB:W6KHH6
+    exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: magnetotaxis_graph
+  title: Protein component associated with magnetotaxis
+  description: Literature-backed association between Magnetosome protein MamB (UniProtKB:W6KHH6)
+    and magnetotaxis.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:W6KHH6 in Magnetospira
+    sp. (strain QH-2) (Marine magnetic spirillum (strain QH-2))) associated with magnetotaxis
+    while full multi-step mechanistic curation remains future work.
+  nodes:
+  - node_id: magnetotaxis_trait
+    label: magnetotaxis
+    node_type: TRAIT
+    grounding: traitmech:000176
+    description: A behavioral physiology in which magnetosome-bearing motile cells
+      align with geomagnetic field lines and navigate along that axis.
+  - node_id: magnetotaxis_protein_component
+    label: Magnetosome protein MamB
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Magnetosome protein MamB) associated with magnetotaxis.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - mamB
+    protein_examples:
+    - uniprot_id: UniProtKB:W6KHH6
+      protein_label: Magnetosome protein MamB
+      gene_symbol: mamB
+      taxon_id: NCBITaxon:1288970
+      taxon_label: Magnetospira sp. (strain QH-2) (Marine magnetic spirillum (strain
+        QH-2))
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 55
+      sequence_version: 1
+      role: Characteristic protein component (mamB, Magnetosome protein MamB) associated
+        with magnetotaxis in Magnetospira sp. (strain QH-2) (Marine magnetic spirillum
+        (strain QH-2)).
+      evidence:
+      - reference: DOI:10.1038/s41396-018-0098-9
+        snippet: The origin and evolution of magnetoreception, which in diverse prokaryotes
+          and protozoa is known as magnetotaxis and enables these microorganisms to
+          detect Earth's magnetic field for orientation and navigation
+        notes: Supports Magnetosome protein MamB in magnetotaxis; UniProtKB:W6KHH6
+          (mamB, Magnetosome protein MamB) in Magnetospira sp. (strain QH-2) (Marine
+          magnetic spirillum (strain QH-2)) provides a verified protein exemplar.
+  edges:
+  - subject: magnetotaxis_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: magnetotaxis_trait
+    description: Magnetosome protein MamB (mamB, UniProtKB:W6KHH6) contributes to
+      magnetotaxis (associated with magnetoreception, microorganisms, magnetotaxis).
+    evidence:
+    - reference: DOI:10.1038/s41396-018-0098-9
+      snippet: The origin and evolution of magnetoreception, which in diverse prokaryotes
+        and protozoa is known as magnetotaxis and enables these microorganisms to
+        detect Earth's magnetic field for orientation and navigation
+      notes: Supports the functional association between Magnetosome protein MamB
+        (UniProtKB:W6KHH6 in Magnetospira sp. (strain QH-2) (Marine magnetic spirillum
+        (strain QH-2))) and magnetotaxis.

@@ -91,6 +91,27 @@ causal_graphs:
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: This label denotes a multisubunit cbb3 terminal-oxidase complex
       across FeOB lineages; exact subunit composition and taxon are not fixed here.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0ABI8
+      protein_label: Cytochrome bo(3) ubiquinol oxidase subunit 1
+      gene_symbol: cyoB
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 154
+      sequence_version: 1
+      role: Exemplar protein (cyoB, Cytochrome bo(3) ubiquinol oxidase subunit 1)
+        representing cbb3-type terminal oxidase in Escherichia coli (strain K12) for
+        iron oxidation.
+      evidence:
+      - reference: DOI:10.1128/mSystems.00038-23
+        snippet: multiheme cytochromes (MHCs) in Gallionellaceae FeOB, which may facilitate
+          extracellular electron uptake and the oxidation of different iron substrates
+        notes: Supports cbb3-type terminal oxidase in iron oxidation; UniProtKB:P0ABI8
+          (cyoB, Cytochrome bo(3) ubiquinol oxidase subunit 1) in Escherichia coli
+          (strain K12) provides a verified protein exemplar.
   - node_id: bd_oxidase
     label: cytochrome bd-type terminal oxidase
     node_type: GENE_OR_PROTEIN
@@ -98,6 +119,27 @@ causal_graphs:
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: This label denotes a multisubunit cytochrome-bd terminal oxidase
       across lineages; the graph does not identify a specific complex composition.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q2YKD6
+      protein_label: Cytochrome bd ubiquinol oxidase subunit X
+      gene_symbol: cydX
+      taxon_id: NCBITaxon:359391
+      taxon_label: Brucella abortus (strain 2308)
+      entry_status: REVIEWED
+      proteome_id: UP000002719
+      retrieved_on: '2026-10-17'
+      entry_version: 76
+      sequence_version: 2
+      role: Exemplar protein (cydX, Cytochrome bd ubiquinol oxidase subunit X) representing
+        cytochrome bd-type terminal oxidase in Brucella abortus (strain 2308) for
+        iron oxidation.
+      evidence:
+      - reference: DOI:10.1128/mSystems.00038-23
+        snippet: multiheme cytochromes (MHCs) in Gallionellaceae FeOB, which may facilitate
+          extracellular electron uptake and the oxidation of different iron substrates
+        notes: Supports cytochrome bd-type terminal oxidase in iron oxidation; UniProtKB:Q2YKD6
+          (cydX, Cytochrome bd ubiquinol oxidase subunit X) in Brucella abortus (strain
+          2308) provides a verified protein exemplar.
   - node_id: microaerobic_conditions
     label: microaerobic conditions
     node_type: ENVIRONMENTAL_FACTOR
@@ -123,6 +165,29 @@ causal_graphs:
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Multiheme c-type cytochromes comprise many non-equivalent families
       and heme architectures; the cited graph claim does not resolve one exact family.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q49YT7
+      protein_label: Bacterial non-heme ferritin
+      gene_symbol: ftnA
+      taxon_id: NCBITaxon:342451
+      taxon_label: Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
+        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+      entry_status: REVIEWED
+      proteome_id: UP000006371
+      retrieved_on: '2026-10-17'
+      entry_version: 114
+      sequence_version: 1
+      role: Exemplar protein (ftnA, Bacterial non-heme ferritin) representing multiheme
+        c-type cytochromes in Staphylococcus saprophyticus subsp. saprophyticus (strain
+        ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) for iron oxidation.
+      evidence:
+      - reference: DOI:10.1128/mSystems.00038-23
+        snippet: multiheme cytochromes (MHCs) in Gallionellaceae FeOB, which may facilitate
+          extracellular electron uptake and the oxidation of different iron substrates
+        notes: Supports multiheme c-type cytochromes in iron oxidation; UniProtKB:Q49YT7
+          (ftnA, Bacterial non-heme ferritin) in Staphylococcus saprophyticus subsp.
+          saprophyticus (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 /
+          S-41) provides a verified protein exemplar.
   - node_id: extracellular_electron_transfer
     label: extracellular electron transfer
     node_type: BIOLOGICAL_PROCESS
@@ -296,4 +361,11 @@ curation_history:
   action: CONNECT_CAUSAL_GRAPH_COMPONENTS
   changes: 'Resolved issue #183 graph fragmentation (5 components to 1) with 4 public-source
     connector(s). No paid research service was called.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P0ABI8 (cyoB)
+    protein example to node cbb3_oxidase; added UniProtKB:Q2YKD6 (cydX) protein example
+    to node bd_oxidase; added UniProtKB:Q49YT7 (ftnA) protein example to node multiheme_cytochromes.'
   llm_assisted: true

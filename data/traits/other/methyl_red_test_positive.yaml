@@ -43,6 +43,13 @@ curation_history:
   changes: Moved the methyl-red parent-gap closure into resolution_note and resolved_date
     so the original non-assay parent rationale remains visible.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph methyl_red_test_positive_graph
+    with GENE_OR_PROTEIN node methyl_red_test_positive_protein_component and UniProtKB:Q882Z2
+    exemplar.'
+  llm_assisted: true
 definition_source: https://asm.org/getmedia/40946f85-9357-4563-aa8a-994427efa825/Methyl-Red-and-Voges-Proskauer-Test-Protocols.pdf
 evidence:
 - reference: https://asm.org/getmedia/40946f85-9357-4563-aa8a-994427efa825/Methyl-Red-and-Voges-Proskauer-Test-Protocols.pdf
@@ -81,3 +88,68 @@ discussions:
     instead of a temporary direct phenotype parent; this resolves the exact METPO
     assay-parent gap, not the broader non-assay parent question for assay-outcome
     phenotypes.
+causal_graphs:
+- graph_id: methyl_red_test_positive_graph
+  title: Protein component associated with methyl red test positive
+  description: Literature-backed association between Methyl-accepting chemotaxis protein
+    PscA (UniProtKB:Q882Z2) and methyl red test positive.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q882Z2 in Pseudomonas
+    syringae pv. tomato (strain ATCC BAA-871 / DC3000)) associated with methyl red
+    test positive while full multi-step mechanistic curation remains future work.
+  nodes:
+  - node_id: methyl_red_test_positive_trait
+    label: methyl red test positive
+    node_type: TRAIT
+    grounding: METPO:1005014
+    description: A phenotype in which an organism tests positive in the methyl red
+      test, indicating mixed acid fermentation.
+  - node_id: methyl_red_test_positive_protein_component
+    label: Methyl-accepting chemotaxis protein PscA
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Methyl-accepting chemotaxis protein PscA) associated
+      with methyl red test positive.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - pscA
+    protein_examples:
+    - uniprot_id: UniProtKB:Q882Z2
+      protein_label: Methyl-accepting chemotaxis protein PscA
+      gene_symbol: pscA
+      taxon_id: NCBITaxon:223283
+      taxon_label: Pseudomonas syringae pv. tomato (strain ATCC BAA-871 / DC3000)
+      entry_status: REVIEWED
+      proteome_id: UP000002515
+      retrieved_on: '2026-10-17'
+      entry_version: 123
+      sequence_version: 1
+      role: Characteristic protein component (pscA, Methyl-accepting chemotaxis protein
+        PscA) associated with methyl red test positive in Pseudomonas syringae pv.
+        tomato (strain ATCC BAA-871 / DC3000).
+      evidence:
+      - reference: https://asm.org/getmedia/40946f85-9357-4563-aa8a-994427efa825/Methyl-Red-and-Voges-Proskauer-Test-Protocols.pdf
+        snippet: When the culture medium turns red after addition of methyl red, because
+          of a pH at or below 4.4 from the fermentation of glucose, the culture has
+          a positive result for the MR test (Fig.1A).
+        notes: Supports Methyl-accepting chemotaxis protein PscA in methyl red test
+          positive; UniProtKB:Q882Z2 (pscA, Methyl-accepting chemotaxis protein PscA)
+          in Pseudomonas syringae pv. tomato (strain ATCC BAA-871 / DC3000) provides
+          a verified protein exemplar.
+  edges:
+  - subject: methyl_red_test_positive_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: methyl_red_test_positive_trait
+    description: Methyl-accepting chemotaxis protein PscA (pscA, UniProtKB:Q882Z2)
+      contributes to methyl red test positive (associated with fermentation, addition,
+      because).
+    evidence:
+    - reference: https://asm.org/getmedia/40946f85-9357-4563-aa8a-994427efa825/Methyl-Red-and-Voges-Proskauer-Test-Protocols.pdf
+      snippet: When the culture medium turns red after addition of methyl red, because
+        of a pH at or below 4.4 from the fermentation of glucose, the culture has
+        a positive result for the MR test (Fig.1A).
+      notes: Supports the functional association between Methyl-accepting chemotaxis
+        protein PscA (UniProtKB:Q882Z2 in Pseudomonas syringae pv. tomato (strain
+        ATCC BAA-871 / DC3000)) and methyl red test positive.

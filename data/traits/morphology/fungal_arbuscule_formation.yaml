@@ -86,3 +86,74 @@ curation_history:
     1061700-1061799. Kept host markers, timing disagreements and ontology scope explicit;
     protein-level mechanism deferred.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph fungal_arbuscule_formation_graph
+    with GENE_OR_PROTEIN node fungal_arbuscule_formation_protein_component and UniProtKB:P06971
+    exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: fungal_arbuscule_formation_graph
+  title: Protein component associated with fungal arbuscule formation
+  description: Literature-backed association between Ferrichrome outer membrane transporter/phage
+    receptor (UniProtKB:P06971) and fungal arbuscule formation.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P06971 in Escherichia
+    coli (strain K12)) associated with fungal arbuscule formation while full multi-step
+    mechanistic curation remains future work.
+  nodes:
+  - node_id: fungal_arbuscule_formation_trait
+    label: fungal arbuscule formation
+    node_type: TRAIT
+    grounding: traitmech:000664
+    description: A morphological phenotype in which a fungus forms highly branched
+      hyphal structures, called arbuscules, within living plant cells during arbuscular
+      mycorrhizal symbiosis.
+  - node_id: fungal_arbuscule_formation_protein_component
+    label: Ferrichrome outer membrane transporter/phage receptor
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Ferrichrome outer membrane transporter/phage receptor)
+      associated with fungal arbuscule formation.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - fhuA
+    protein_examples:
+    - uniprot_id: UniProtKB:P06971
+      protein_label: Ferrichrome outer membrane transporter/phage receptor
+      gene_symbol: fhuA
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 229
+      sequence_version: 2
+      role: Characteristic protein component (fhuA, Ferrichrome outer membrane transporter/phage
+        receptor) associated with fungal arbuscule formation in Escherichia coli (strain
+        K12).
+      evidence:
+      - reference: DOI:10.1104/pp.109.141879
+        snippet: In the arbuscular mycorrhizal symbiosis, the fungal symbiont colonizes
+          root cortical cells, where it establishes differentiated hyphae called arbuscules.
+        notes: Supports Ferrichrome outer membrane transporter/phage receptor in fungal
+          arbuscule formation; UniProtKB:P06971 (fhuA, Ferrichrome outer membrane
+          transporter/phage receptor) in Escherichia coli (strain K12) provides a
+          verified protein exemplar.
+  edges:
+  - subject: fungal_arbuscule_formation_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: fungal_arbuscule_formation_trait
+    description: Ferrichrome outer membrane transporter/phage receptor (fhuA, UniProtKB:P06971)
+      contributes to fungal arbuscule formation (associated with differentiated, establishes,
+      mycorrhizal).
+    evidence:
+    - reference: DOI:10.1104/pp.109.141879
+      snippet: In the arbuscular mycorrhizal symbiosis, the fungal symbiont colonizes
+        root cortical cells, where it establishes differentiated hyphae called arbuscules.
+      notes: Supports the functional association between Ferrichrome outer membrane
+        transporter/phage receptor (UniProtKB:P06971 in Escherichia coli (strain K12))
+        and fungal arbuscule formation.

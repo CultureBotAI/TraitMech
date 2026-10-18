@@ -66,3 +66,75 @@ curation_history:
     repository-wide duplicate review covering ignored and hidden files; METPO has
     no exact pyrazinamidase activity class yet.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph pyrazinamidase_activity_graph
+    with GENE_OR_PROTEIN node pyrazinamidase_activity_protein_component and UniProtKB:P07001
+    exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: pyrazinamidase_activity_graph
+  title: Protein component associated with pyrazinamidase activity
+  description: Literature-backed association between NAD(P) transhydrogenase subunit
+    alpha (UniProtKB:P07001) and pyrazinamidase activity.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P07001 in Escherichia
+    coli (strain K12)) associated with pyrazinamidase activity while full multi-step
+    mechanistic curation remains future work.
+  nodes:
+  - node_id: pyrazinamidase_activity_trait
+    label: pyrazinamidase activity
+    node_type: TRAIT
+    grounding: traitmech:000163
+    description: A physiological enzyme-activity phenotype in which a cell produces
+      active nicotinamidase/pyrazinamidase enzymes that hydrolyze nicotinamide and
+      can convert pyrazinamide to pyrazinoic acid.
+  - node_id: pyrazinamidase_activity_protein_component
+    label: NAD(P) transhydrogenase subunit alpha
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (NAD(P) transhydrogenase subunit alpha) associated
+      with pyrazinamidase activity.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - pntA
+    protein_examples:
+    - uniprot_id: UniProtKB:P07001
+      protein_label: NAD(P) transhydrogenase subunit alpha
+      gene_symbol: pntA
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 209
+      sequence_version: 2
+      role: Characteristic protein component (pntA, NAD(P) transhydrogenase subunit
+        alpha) associated with pyrazinamidase activity in Escherichia coli (strain
+        K12).
+      evidence:
+      - reference: DOI:10.1111/j.1742-4658.2007.06241.x
+        snippet: The nicotinamidase/pyrazinamidase (PncA) of Mycobacterium tuberculosis
+          is involved in the activation of the important front-line antituberculosis
+          drug pyrazinamide by converting it into the active form, pyrazinoic acid.
+        notes: Supports NAD(P) transhydrogenase subunit alpha in pyrazinamidase activity;
+          UniProtKB:P07001 (pntA, NAD(P) transhydrogenase subunit alpha) in Escherichia
+          coli (strain K12) provides a verified protein exemplar.
+  edges:
+  - subject: pyrazinamidase_activity_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: pyrazinamidase_activity_trait
+    description: NAD(P) transhydrogenase subunit alpha (pntA, UniProtKB:P07001) contributes
+      to pyrazinamidase activity (associated with antituberculosis, nicotinamidase,
+      pyrazinamidase).
+    evidence:
+    - reference: DOI:10.1111/j.1742-4658.2007.06241.x
+      snippet: The nicotinamidase/pyrazinamidase (PncA) of Mycobacterium tuberculosis
+        is involved in the activation of the important front-line antituberculosis
+        drug pyrazinamide by converting it into the active form, pyrazinoic acid.
+      notes: Supports the functional association between NAD(P) transhydrogenase subunit
+        alpha (UniProtKB:P07001 in Escherichia coli (strain K12)) and pyrazinamidase
+        activity.

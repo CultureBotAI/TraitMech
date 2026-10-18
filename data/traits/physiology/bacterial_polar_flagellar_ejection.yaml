@@ -125,3 +125,72 @@ curation_history:
     the verbatim excerpt, native NOT_IN_ABSTRACT outcome, biological claims and prior
     history. Source HTML and PDF pages were rechecked for issue #1947.'
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph bacterial_polar_flagellar_ejection_graph
+    with GENE_OR_PROTEIN node bacterial_polar_flagellar_ejection_protein_component
+    and UniProtKB:P0ABZ1 exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: bacterial_polar_flagellar_ejection_graph
+  title: Protein component associated with bacterial polar flagellar ejection
+  description: Literature-backed association between Flagellar motor switch protein
+    FliG (UniProtKB:P0ABZ1) and bacterial polar flagellar ejection.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P0ABZ1 in Escherichia
+    coli (strain K12)) associated with bacterial polar flagellar ejection while full
+    multi-step mechanistic curation remains future work.
+  nodes:
+  - node_id: bacterial_polar_flagellar_ejection_trait
+    label: bacterial polar flagellar ejection
+    node_type: TRAIT
+    grounding: traitmech:000732
+    description: A physiological phenotype in which a bacterium actively ejects previously
+      assembled axial structures of a polar flagellum by separation at its base.
+  - node_id: bacterial_polar_flagellar_ejection_protein_component
+    label: Flagellar motor switch protein FliG
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Flagellar motor switch protein FliG) associated
+      with bacterial polar flagellar ejection.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - fliG
+    protein_examples:
+    - uniprot_id: UniProtKB:P0ABZ1
+      protein_label: Flagellar motor switch protein FliG
+      gene_symbol: fliG
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 133
+      sequence_version: 1
+      role: Characteristic protein component (fliG, Flagellar motor switch protein
+        FliG) associated with bacterial polar flagellar ejection in Escherichia coli
+        (strain K12).
+      evidence:
+      - reference: DOI:10.1038/s41467-026-75593-6
+        snippet: Nutrient depletion significantly increases the frequency of flagellar
+          shedding and the accumulation of closed FOMCs
+        notes: Supports Flagellar motor switch protein FliG in bacterial polar flagellar
+          ejection; UniProtKB:P0ABZ1 (fliG, Flagellar motor switch protein FliG) in
+          Escherichia coli (strain K12) provides a verified protein exemplar.
+  edges:
+  - subject: bacterial_polar_flagellar_ejection_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: bacterial_polar_flagellar_ejection_trait
+    description: Flagellar motor switch protein FliG (fliG, UniProtKB:P0ABZ1) contributes
+      to bacterial polar flagellar ejection (associated with significantly, accumulation,
+      depletion).
+    evidence:
+    - reference: DOI:10.1038/s41467-026-75593-6
+      snippet: Nutrient depletion significantly increases the frequency of flagellar
+        shedding and the accumulation of closed FOMCs
+      notes: Supports the functional association between Flagellar motor switch protein
+        FliG (UniProtKB:P0ABZ1 in Escherichia coli (strain K12)) and bacterial polar
+        flagellar ejection.

@@ -75,7 +75,7 @@ causal_graphs:
       taxon_label: Synechocystis sp. PCC 6803
       entry_status: REVIEWED
       retrieved_on: '2026-08-24'
-      entry_version: 186
+      entry_version: 187
       sequence_version: 1
       role: D1 reaction-center component of photosystem II; this accession is not
         presented as the complete water-oxidizing complex.
@@ -94,12 +94,54 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Electron transfer complex linking PSII/plastoquinol to PSI.
     grounding: GO:0009512
+    protein_examples:
+    - uniprot_id: UniProtKB:Q57038
+      protein_label: Cytochrome b6
+      gene_symbol: petB
+      taxon_id: NCBITaxon:1111708
+      taxon_label: Synechocystis sp. (strain ATCC 27184 / PCC 6803 / Kazusa)
+      entry_status: REVIEWED
+      proteome_id: UP000001425
+      retrieved_on: '2026-10-17'
+      entry_version: 166
+      sequence_version: 1
+      role: Exemplar protein (petB, Cytochrome b6) representing cytochrome b6f complex
+        in Synechocystis sp. (strain ATCC 27184 / PCC 6803 / Kazusa) for oxygenic
+        photosynthesis.
+      evidence:
+      - reference: DOI:10.1111/1751-7915.14519
+        snippet: Photosynthesis in cyanobacteria requires effective light harvesting
+          and the transfer of high-energy electrons through two photosystems
+        notes: Supports cytochrome b6f complex in oxygenic photosynthesis; UniProtKB:Q57038
+          (petB, Cytochrome b6) in Synechocystis sp. (strain ATCC 27184 / PCC 6803
+          / Kazusa) provides a verified protein exemplar.
   - node_id: photosystem_i
     label: photosystem I
     node_type: GENE_OR_PROTEIN
     description: Pigment-protein complex that oxidizes plastocyanin/cyt c6 and reduces
       ferredoxin.
     grounding: GO:0009522
+    protein_examples:
+    - uniprot_id: UniProtKB:P74367
+      protein_label: Photosystem II lipoprotein Psb27
+      gene_symbol: psb27
+      taxon_id: NCBITaxon:1111708
+      taxon_label: Synechocystis sp. (strain ATCC 27184 / PCC 6803 / Kazusa)
+      entry_status: REVIEWED
+      proteome_id: UP000001425
+      retrieved_on: '2026-10-17'
+      entry_version: 127
+      sequence_version: 2
+      role: Exemplar protein (psb27, Photosystem II lipoprotein Psb27) representing
+        photosystem I in Synechocystis sp. (strain ATCC 27184 / PCC 6803 / Kazusa)
+        for oxygenic photosynthesis.
+      evidence:
+      - reference: DOI:10.1111/1751-7915.14519
+        snippet: Photosynthesis in cyanobacteria requires effective light harvesting
+          and the transfer of high-energy electrons through two photosystems
+        notes: Supports photosystem I in oxygenic photosynthesis; UniProtKB:P74367
+          (psb27, Photosystem II lipoprotein Psb27) in Synechocystis sp. (strain ATCC
+          27184 / PCC 6803 / Kazusa) provides a verified protein exemplar.
   - node_id: ferredoxin
     label: ferredoxin
     node_type: GENE_OR_PROTEIN
@@ -107,11 +149,57 @@ causal_graphs:
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Ferredoxin is an umbrella label spanning multiple iron-sulfur
       protein families; the cited pathway evidence does not identify one exact family.
+    protein_examples:
+    - uniprot_id: UniProtKB:H6LC28
+      protein_label: Na(+)-translocating ferredoxin:NAD(+) oxidoreductase complex
+        subunit A
+      gene_symbol: rnfA
+      taxon_id: NCBITaxon:931626
+      taxon_label: Acetobacterium woodii (strain ATCC 29683 / DSM 1030 / JCM 2381
+        / KCTC 1655 / WB1)
+      entry_status: REVIEWED
+      proteome_id: UP000007177
+      retrieved_on: '2026-10-17'
+      entry_version: 60
+      sequence_version: 2
+      role: Exemplar protein (rnfA, Na(+)-translocating ferredoxin:NAD(+) oxidoreductase
+        complex subunit A) representing ferredoxin in Acetobacterium woodii (strain
+        ATCC 29683 / DSM 1030 / JCM 2381 / KCTC 1655 / WB1) for oxygenic photosynthesis.
+      evidence:
+      - reference: DOI:10.1039/D2SC01546C
+        snippet: Fd (or Fld) then shuttles the electrons from PSI to ferredoxin NADP+-reductase
+          (FNR) for the reduction of NADP+ to NADPH that is used in carbon fixation
+        notes: Supports ferredoxin in oxygenic photosynthesis; UniProtKB:H6LC28 (rnfA,
+          Na(+)-translocating ferredoxin:NAD(+) oxidoreductase complex subunit A)
+          in Acetobacterium woodii (strain ATCC 29683 / DSM 1030 / JCM 2381 / KCTC
+          1655 / WB1) provides a verified protein exemplar.
   - node_id: fnr
     label: ferredoxin-NADP+ reductase
     node_type: GENE_OR_PROTEIN
     description: Enzyme reducing NADP+ to NADPH using ferredoxin-derived electrons.
     grounding: GO:0004324
+    protein_examples:
+    - uniprot_id: UniProtKB:Q44549
+      protein_label: Ferredoxin--NADP reductase
+      gene_symbol: petH
+      taxon_id: NCBITaxon:240292
+      taxon_label: Trichormus variabilis (strain ATCC 29413 / PCC 7937) (Anabaena
+        variabilis)
+      entry_status: REVIEWED
+      proteome_id: UP000002533
+      retrieved_on: '2026-10-17'
+      entry_version: 157
+      sequence_version: 1
+      role: Exemplar protein (petH, Ferredoxin--NADP reductase) representing ferredoxin-NADP+
+        reductase in Trichormus variabilis (strain ATCC 29413 / PCC 7937) (Anabaena
+        variabilis) for oxygenic photosynthesis.
+      evidence:
+      - reference: DOI:10.1039/D2SC01546C
+        snippet: Fd (or Fld) then shuttles the electrons from PSI to ferredoxin NADP+-reductase
+          (FNR) for the reduction of NADP+ to NADPH that is used in carbon fixation
+        notes: Supports ferredoxin-NADP+ reductase in oxygenic photosynthesis; UniProtKB:Q44549
+          (petH, Ferredoxin--NADP reductase) in Trichormus variabilis (strain ATCC
+          29413 / PCC 7937) (Anabaena variabilis) provides a verified protein exemplar.
   - node_id: nadph
     label: NADPH
     node_type: CHEMICAL
@@ -359,4 +447,13 @@ curation_history:
   action: GROUND_CAUSAL_PREDICATES
   changes: Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv
     (METPO:2007403×1).
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:P16033
+    version metadata (entry_version=187, sequence_version=1); added UniProtKB:Q57038
+    (petB) protein example to node cytochrome_b6f; added UniProtKB:P74367 (psb27)
+    protein example to node photosystem_i; added UniProtKB:H6LC28 (rnfA) protein example
+    to node ferredoxin (+1 more).'
   llm_assisted: true

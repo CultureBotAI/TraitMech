@@ -83,6 +83,26 @@ causal_graphs:
     description: Desaturase enzyme (e.g., Des) that introduces double bonds into membrane
       fatty acids.
     grounding: InterPro:IPR012171
+    protein_examples:
+    - uniprot_id: UniProtKB:O34653
+      protein_label: Fatty acid desaturase
+      gene_symbol: des
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
+      entry_status: REVIEWED
+      proteome_id: UP000001570
+      retrieved_on: '2026-10-17'
+      entry_version: 130
+      sequence_version: 1
+      role: Exemplar protein (des, Fatty acid desaturase) representing fatty acid
+        desaturase in Bacillus subtilis (strain 168) for temperature preference.
+      evidence:
+      - reference: DOI:10.1007/s42770-023-01057-4
+        snippet: When the temperature drops, DesK/DesR is the two-component system
+          involved in membrane adaptation
+        notes: Supports fatty acid desaturase in temperature preference; UniProtKB:O34653
+          (des, Fatty acid desaturase) in Bacillus subtilis (strain 168) provides
+          a verified protein exemplar.
   - node_id: unsaturated_membrane_fatty_acids
     label: unsaturated membrane fatty acids
     node_type: CHEMICAL
@@ -336,4 +356,10 @@ curation_history:
     Thermoanaerobacter kivui (NCBITaxon:2325; DOI:10.3389/fmicb.2023.1265216). The
     note retains the measured value or scopes broad-class examples to the cited branch;
     no paid research was used.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:O34653 (des)
+    protein example to node fatty_acid_desaturase.'
   llm_assisted: true

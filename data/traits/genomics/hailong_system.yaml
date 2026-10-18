@@ -111,6 +111,36 @@ causal_graphs:
     grounding: traitmech:000209
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
+  - node_id: hailong_system_protein_component
+    label: Endoribonuclease HigB
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Endoribonuclease HigB) associated with Hailong
+      system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - higB
+    protein_examples:
+    - uniprot_id: UniProtKB:Q7A225
+      protein_label: Endoribonuclease HigB
+      gene_symbol: higB
+      taxon_id: NCBITaxon:585
+      taxon_label: Proteus vulgaris
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 69
+      sequence_version: 1
+      role: Characteristic protein component (higB, Endoribonuclease HigB) associated
+        with Hailong system in Proteus vulgaris.
+      evidence:
+      - reference: DOI:10.1016/j.molcel.2025.06.011
+        snippet: the bacterial Hailong anti-phage system, in which constitutively
+          synthesized DNA oligonucleotides inhibit a toxic ion channel-a molecular
+          booby trap primed for activation by phage exonucleases
+        notes: Supports Endoribonuclease HigB in Hailong system; UniProtKB:Q7A225
+          (higB, Endoribonuclease HigB) in Proteus vulgaris provides a verified protein
+          exemplar.
   edges:
   - subject: hailong_locus
     predicate: contributes to
@@ -198,6 +228,19 @@ causal_graphs:
       snippet: Here we discover a family of bacterial defence systems, which we name
         Hailong
       notes: Tan et al. place Hailong in the bacterial phage-defense system family.
+  - subject: hailong_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: hailong_system_trait
+    description: Endoribonuclease HigB (higB, UniProtKB:Q7A225) contributes to Hailong
+      system (associated with oligonucleotides, constitutively, exonucleases).
+    evidence:
+    - reference: DOI:10.1016/j.molcel.2025.06.011
+      snippet: the bacterial Hailong anti-phage system, in which constitutively synthesized
+        DNA oligonucleotides inhibit a toxic ion channel-a molecular booby trap primed
+        for activation by phage exonucleases
+      notes: Supports the functional association between Endoribonuclease HigB (UniProtKB:Q7A225
+        in Proteus vulgaris) and Hailong system.
 discussions:
 - discussion_id: hailong-mechanism-and-family-breadth-gap
   prompt: Resolve Hailong ODA transfer, phage-trigger breadth, HalA ion specificity,
@@ -220,4 +263,10 @@ curation_history:
     defense system parent after an ignored-and-hidden duplicate review found no exact
     live TraitMech, METPO, or prior proposal record; the replacement placeholder is
     reserved in proposals/metpo_traitmech_v119.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    hailong_system_protein_component with UniProtKB:Q7A225 (higB) exemplar.'
   llm_assisted: true

@@ -26,3 +26,66 @@ curation_history:
   changes: Proposed a DOI-backed FAPROTAX metabolic capability from proposals/metpo_traitmech_v11
     after repository-wide duplicate review.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph methanol_oxidation_graph
+    with GENE_OR_PROTEIN node methanol_oxidation_protein_component and UniProtKB:Q8KP10
+    exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: methanol_oxidation_graph
+  title: Protein component associated with methanol oxidation
+  description: Literature-backed association between Methanol dehydrogenase activator
+    (UniProtKB:Q8KP10) and methanol oxidation.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q8KP10 in Bacillus
+    methanolicus) associated with methanol oxidation while full multi-step mechanistic
+    curation remains future work.
+  nodes:
+  - node_id: methanol_oxidation_trait
+    label: methanol oxidation
+    node_type: TRAIT
+    grounding: traitmech:000133
+    description: A metabolism in which an organism oxidizes methanol, typically to
+      formaldehyde, as a carbon and energy source.
+  - node_id: methanol_oxidation_protein_component
+    label: Methanol dehydrogenase activator
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Methanol dehydrogenase activator) associated with
+      methanol oxidation.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - act
+    protein_examples:
+    - uniprot_id: UniProtKB:Q8KP10
+      protein_label: Methanol dehydrogenase activator
+      gene_symbol: act
+      taxon_id: NCBITaxon:1471
+      taxon_label: Bacillus methanolicus
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 79
+      sequence_version: 1
+      role: Characteristic protein component (act, Methanol dehydrogenase activator)
+        associated with methanol oxidation in Bacillus methanolicus.
+      evidence:
+      - reference: DOI:10.3389/fbioe.2021.787791
+        snippet: oxidation of methanol occurs in the periplasmic space
+        notes: Supports Methanol dehydrogenase activator in methanol oxidation; UniProtKB:Q8KP10
+          (act, Methanol dehydrogenase activator) in Bacillus methanolicus provides
+          a verified protein exemplar.
+  edges:
+  - subject: methanol_oxidation_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: methanol_oxidation_trait
+    description: Methanol dehydrogenase activator (act, UniProtKB:Q8KP10) contributes
+      to methanol oxidation (associated with periplasmic, oxidation, methanol).
+    evidence:
+    - reference: DOI:10.3389/fbioe.2021.787791
+      snippet: oxidation of methanol occurs in the periplasmic space
+      notes: Supports the functional association between Methanol dehydrogenase activator
+        (UniProtKB:Q8KP10 in Bacillus methanolicus) and methanol oxidation.

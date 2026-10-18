@@ -70,6 +70,36 @@ causal_graphs:
     grounding: traitmech:000324
     description: Possession of a genome-encoded RexAB abortive-infection phage-defense
       system.
+  - node_id: rexab_system_protein_component
+    label: Exonuclease/helicase subunit RexA
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Exonuclease/helicase subunit RexA) associated
+      with RexAB system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - rexA
+    protein_examples:
+    - uniprot_id: UniProtKB:Q97QP9
+      protein_label: Exonuclease/helicase subunit RexA
+      gene_symbol: rexA
+      taxon_id: NCBITaxon:170187
+      taxon_label: Streptococcus pneumoniae serotype 4 (strain ATCC BAA-334 / TIGR4)
+      entry_status: REVIEWED
+      proteome_id: UP000000585
+      retrieved_on: '2026-10-17'
+      entry_version: 142
+      sequence_version: 1
+      role: Characteristic protein component (rexA, Exonuclease/helicase subunit RexA)
+        associated with RexAB system in Streptococcus pneumoniae serotype 4 (strain
+        ATCC BAA-334 / TIGR4).
+      evidence:
+      - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+        snippet: '| RexAB__RexA | RexAB__RexA | RexAB | PF15969.7 | 25 |'
+        notes: Supports Exonuclease/helicase subunit RexA in RexAB system; UniProtKB:Q97QP9
+          (rexA, Exonuclease/helicase subunit RexA) in Streptococcus pneumoniae serotype
+          4 (strain ATCC BAA-334 / TIGR4) provides a verified protein exemplar.
   edges:
   - subject: rexab_locus
     predicate: contributes to
@@ -112,6 +142,22 @@ causal_graphs:
         lambda: tolerance and altruistic cell death'
       notes: The DefenseFinder article registry maps the named RexAB model namespace
         to the bacteriophage-lambda Rex system paper.
+  - subject: rexab_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: rexab_system_trait
+    description: Exonuclease/helicase subunit RexA (rexA, UniProtKB:Q97QP9) contributes
+      to RexAB system (associated with helicaseduf2290, helicase, duf2290).
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| Rst_HelicaseDUF2290__DUF2290 | Rst_HelicaseDUF2290__DUF2290___DUF2290
+        | Rst_HelicaseDUF2290 | PF10053.11 | 25 | | Rst_HelicaseDUF2290__DUF2290_Pers
+        | Rst_HelicaseDUF2290__DUF2290_Pers___DUF2290_Pers | Rst_HelicaseDUF2290 |
+        Custom | 20 | | Rst_HelicaseDUF2290__Helicase | Rst_HelicaseDUF2290__Helicase___Helicase
+        | Rst_HelicaseDUF2290 | Custom | 20 |'
+      notes: Supports the functional association between Exonuclease/helicase subunit
+        RexA (UniProtKB:Q97QP9 in Streptococcus pneumoniae serotype 4 (strain ATCC
+        BAA-334 / TIGR4)) and RexAB system.
 discussions:
 - discussion_id: rexab-mechanism-gap
   prompt: Resolve the direct RexAB phage trigger, RexA and RexB molecular coupling,
@@ -145,4 +191,10 @@ curation_history:
     rexA and rexB exclusion system and the pinned DefenseFinder registry maps a two-profile
     RexAB namespace, but the available curation sources do not identify a natural
     organism instance with a directly observed RexAB locus. No paid research was used.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    rexab_system_protein_component with UniProtKB:Q97QP9 (rexA) exemplar.'
   llm_assisted: true

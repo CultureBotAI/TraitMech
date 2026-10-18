@@ -85,6 +85,24 @@ causal_graphs:
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: This aggregate spans multiple transporter and biosynthetic protein
       families and is retained only as contextual protein information.
+    protein_examples:
+    - uniprot_id: UniProtKB:P29166
+      protein_label: Iron hydrogenase 1
+      taxon_id: NCBITaxon:1501
+      taxon_label: Clostridium pasteurianum
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 159
+      sequence_version: 1
+      role: Exemplar protein (P29166, Iron hydrogenase 1) representing osmolyte transport
+        and synthesis proteins in Clostridium pasteurianum for habitat association.
+      evidence:
+      - reference: DOI:10.1038/nrmicro.2017.87
+        snippet: crucial roles in nutrient cycling, the maintenance of soil fertility
+          and soil carbon sequestration
+        notes: Supports osmolyte transport and synthesis proteins in habitat association;
+          UniProtKB:P29166 (P29166, Iron hydrogenase 1) in Clostridium pasteurianum
+          provides a verified protein exemplar.
   edges:
   - subject: habitat
     predicate: causes
@@ -206,4 +224,10 @@ curation_history:
     canonical example(s): Candidatus Pelagibacter ubique HTCC1062 (NCBITaxon:335992;
     PMID:16109880). The note retains the measured value or scopes broad-class examples
     to the cited branch; no paid research was used.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P29166 (P29166)
+    protein example to node osmolyte_transport_synthesis_proteins.'
   llm_assisted: true

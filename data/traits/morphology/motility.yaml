@@ -57,11 +57,55 @@ causal_graphs:
     label: flagellar motor
     node_type: GENE_OR_PROTEIN
     description: Rotary motor that powers flagellar swimming or swarming.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q9WZE6
+      protein_label: Flagellar motor switch protein FliM
+      gene_symbol: fliM
+      taxon_id: NCBITaxon:243274
+      taxon_label: Thermotoga maritima (strain ATCC 43589 / DSM 3109 / JCM 10099 /
+        NBRC 100826 / MSB8)
+      entry_status: REVIEWED
+      proteome_id: UP000008183
+      retrieved_on: '2026-10-17'
+      entry_version: 140
+      sequence_version: 1
+      role: Exemplar protein (fliM, Flagellar motor switch protein FliM) representing
+        flagellar motor in Thermotoga maritima (strain ATCC 43589 / DSM 3109 / JCM
+        10099 / NBRC 100826 / MSB8) for motility.
+      evidence:
+      - reference: DOI:10.1038/s41579-021-00626-4
+        snippet: proton-driven motor that powers type 9 secretion and gliding motility
+        notes: Supports flagellar motor in motility; UniProtKB:Q9WZE6 (fliM, Flagellar
+          motor switch protein FliM) in Thermotoga maritima (strain ATCC 43589 / DSM
+          3109 / JCM 10099 / NBRC 100826 / MSB8) provides a verified protein exemplar.
   - node_id: type_iv_pilus
     label: type IV pilus
     node_type: GENE_OR_PROTEIN
     description: Dynamic pilus that powers twitching and related surface motility.
     grounding: GO:0044096
+    protein_examples:
+    - uniprot_id: UniProtKB:Q9JVW4
+      protein_label: Type IV pilus biogenesis and competence protein PilQ
+      gene_symbol: pilQ
+      taxon_id: NCBITaxon:122587
+      taxon_label: Neisseria meningitidis serogroup A / serotype 4A (strain DSM 15465
+        / Z2491)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 113
+      sequence_version: 1
+      role: Exemplar protein (pilQ, Type IV pilus biogenesis and competence protein
+        PilQ) representing type IV pilus in Neisseria meningitidis serogroup A / serotype
+        4A (strain DSM 15465 / Z2491) for motility.
+      evidence:
+      - reference: DOI:10.1128/jb.00359-24
+        snippet: The pilus is extruded through the periplasm, guided by the cylindrical
+          alignment subcomplex, and finally through a gated secretin pore in the outer
+          membrane
+        notes: Supports type IV pilus in motility; UniProtKB:Q9JVW4 (pilQ, Type IV
+          pilus biogenesis and competence protein PilQ) in Neisseria meningitidis
+          serogroup A / serotype 4A (strain DSM 15465 / Z2491) provides a verified
+          protein exemplar.
   - node_id: gliding_motility_machinery
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Gliding motility uses unrelated machineries in different lineages,
@@ -70,6 +114,25 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Cell-envelope motors and adhesins that move bacteria over surfaces
       without flagella.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q1D823
+      protein_label: Adventurous-gliding motility protein Z
+      gene_symbol: aglZ
+      taxon_id: NCBITaxon:246197
+      taxon_label: Myxococcus xanthus (strain DK1622)
+      entry_status: REVIEWED
+      proteome_id: UP000002402
+      retrieved_on: '2026-10-17'
+      entry_version: 123
+      sequence_version: 1
+      role: Exemplar protein (aglZ, Adventurous-gliding motility protein Z) representing
+        gliding motility machinery in Myxococcus xanthus (strain DK1622) for motility.
+      evidence:
+      - reference: DOI:10.1038/s41579-021-00626-4
+        snippet: proton-driven motor that powers type 9 secretion and gliding motility
+        notes: Supports gliding motility machinery in motility; UniProtKB:Q1D823 (aglZ,
+          Adventurous-gliding motility protein Z) in Myxococcus xanthus (strain DK1622)
+          provides a verified protein exemplar.
   - node_id: ion_motive_force
     label: ion motive force
     node_type: BIOLOGICAL_PROCESS
@@ -91,6 +154,26 @@ causal_graphs:
     label: PilB extension ATPase
     node_type: GENE_OR_PROTEIN
     description: Homohexameric ATPase that drives type IV pilus extension.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q6FF45
+      protein_label: Type IV pilus assembly ATPase PilB
+      gene_symbol: pilB
+      taxon_id: NCBITaxon:62977
+      taxon_label: Acinetobacter baylyi (strain ATCC 33305 / BD413 / ADP1)
+      entry_status: REVIEWED
+      proteome_id: UP000000430
+      retrieved_on: '2026-10-17'
+      entry_version: 113
+      sequence_version: 1
+      role: Exemplar protein (pilB, Type IV pilus assembly ATPase PilB) representing
+        PilB extension ATPase in Acinetobacter baylyi (strain ATCC 33305 / BD413 /
+        ADP1) for motility.
+      evidence:
+      - reference: DOI:10.1038/s41579-019-0195-4
+        snippet: Cycles of pilus extension, binding and retraction
+        notes: Supports PilB extension ATPase in motility; UniProtKB:Q6FF45 (pilB,
+          Type IV pilus assembly ATPase PilB) in Acinetobacter baylyi (strain ATCC
+          33305 / BD413 / ADP1) provides a verified protein exemplar.
   - node_id: pilt_retraction_atpase
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: The contextual graph supports a PilT-like retraction ATPase but
@@ -98,6 +181,28 @@ causal_graphs:
     label: PilT retraction ATPase
     node_type: GENE_OR_PROTEIN
     description: Antagonistic ATPase that drives type IV pilus retraction.
+    protein_examples:
+    - uniprot_id: UniProtKB:P24559
+      protein_label: Type IV pilus retraction ATPase PilT
+      gene_symbol: pilT
+      taxon_id: NCBITaxon:208964
+      taxon_label: Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116
+        / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)
+      entry_status: REVIEWED
+      proteome_id: UP000002438
+      retrieved_on: '2026-10-17'
+      entry_version: 148
+      sequence_version: 1
+      role: Exemplar protein (pilT, Type IV pilus retraction ATPase PilT) representing
+        PilT retraction ATPase in Pseudomonas aeruginosa (strain ATCC 15692 / DSM
+        22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1) for motility.
+      evidence:
+      - reference: DOI:10.1038/s41579-019-0195-4
+        snippet: Cycles of pilus extension, binding and retraction
+        notes: Supports PilT retraction ATPase in motility; UniProtKB:P24559 (pilT,
+          Type IV pilus retraction ATPase PilT) in Pseudomonas aeruginosa (strain
+          ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101
+          / PAO1) provides a verified protein exemplar.
   - node_id: t4p_retraction
     label: type IV pilus retraction
     node_type: BIOLOGICAL_PROCESS
@@ -115,6 +220,28 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Archaeal rotary propulsion filament, the analogue of the bacterial
       flagellum.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q4J9J9
+      protein_label: HTH-type transcriptional activator ArnR
+      gene_symbol: arnR
+      taxon_id: NCBITaxon:330779
+      taxon_label: Sulfolobus acidocaldarius (strain ATCC 33909 / DSM 639 / JCM 8929
+        / NBRC 15157 / NCIMB 11770)
+      entry_status: REVIEWED
+      proteome_id: UP000001018
+      retrieved_on: '2026-10-17'
+      entry_version: 96
+      sequence_version: 1
+      role: Exemplar protein (arnR, HTH-type transcriptional activator ArnR) representing
+        archaellum in Sulfolobus acidocaldarius (strain ATCC 33909 / DSM 639 / JCM
+        8929 / NBRC 15157 / NCIMB 11770) for motility.
+      evidence:
+      - reference: DOI:10.3390/biom9070279
+        snippet: bacterial flagellum is a helical filamentous organelle responsible
+          for motility
+        notes: Supports archaellum in motility; UniProtKB:Q4J9J9 (arnR, HTH-type transcriptional
+          activator ArnR) in Sulfolobus acidocaldarius (strain ATCC 33909 / DSM 639
+          / JCM 8929 / NBRC 15157 / NCIMB 11770) provides a verified protein exemplar.
   edges:
   - subject: flagellar_motor
     predicate: confers
@@ -356,4 +483,13 @@ curation_history:
     this record is an upper class whose graph is NONMECHANISTIC and spans alternative
     mechanisms. Taxon ids and labels were verified against NCBI taxonomy and every
     DOI resolved through Crossref. No gene or operon was promoted to a primary entry.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q9WZE6 (fliM)
+    protein example to node flagellar_motor; added UniProtKB:Q9JVW4 (pilQ) protein
+    example to node type_iv_pilus; added UniProtKB:Q1D823 (aglZ) protein example to
+    node gliding_motility_machinery; added UniProtKB:Q6FF45 (pilB) protein example
+    to node pilb_extension_atpase (+2 more).'
   llm_assisted: true

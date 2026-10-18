@@ -100,6 +100,41 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Lysis of the spent prey cell wall and exit of newly formed predator
       progeny.
+  - node_id: predatory_bacterium_protein_component
+    label: ATP-dependent Clp protease proteolytic subunit
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (ATP-dependent Clp protease proteolytic subunit)
+      associated with predatory bacterium.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - clpP
+    protein_examples:
+    - uniprot_id: UniProtKB:Q49VZ2
+      protein_label: ATP-dependent Clp protease proteolytic subunit
+      gene_symbol: clpP
+      taxon_id: NCBITaxon:342451
+      taxon_label: Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
+        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+      entry_status: REVIEWED
+      proteome_id: UP000006371
+      retrieved_on: '2026-10-17'
+      entry_version: 116
+      sequence_version: 1
+      role: Characteristic protein component (clpP, ATP-dependent Clp protease proteolytic
+        subunit) associated with predatory bacterium in Staphylococcus saprophyticus
+        subsp. saprophyticus (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292
+        / S-41).
+      evidence:
+      - reference: DOI:10.1038/s41467-024-47412-3
+        snippet: swim rapidly to another Gram-negative bacterial prey surface and
+          then attach to it
+        notes: Supports ATP-dependent Clp protease proteolytic subunit in predatory
+          bacterium; UniProtKB:Q49VZ2 (clpP, ATP-dependent Clp protease proteolytic
+          subunit) in Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
+          15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) provides a verified protein
+          exemplar.
   edges:
   - subject: predatory_trait
     predicate: enables
@@ -220,6 +255,20 @@ causal_graphs:
       notes: Kaplan et al. place progeny exit after consumption, intraperiplasmic
         growth, and synchronous septation.
     predicate_id: biolink:precedes
+  - subject: predatory_bacterium_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: predatory_trait
+    description: ATP-dependent Clp protease proteolytic subunit (clpP, UniProtKB:Q49VZ2)
+      contributes to predatory bacterium (associated with internalized, periplasm,
+      filament).
+    evidence:
+    - reference: DOI:10.1038/s41564-023-01401-2
+      snippet: most or all of the filament was internalized to the periplasm
+      notes: Supports the functional association between ATP-dependent Clp protease
+        proteolytic subunit (UniProtKB:Q49VZ2 in Staphylococcus saprophyticus subsp.
+        saprophyticus (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41))
+        and predatory bacterium.
 curation_history:
 - timestamp: '2026-06-02T00:00:00Z'
   curator: claude
@@ -274,4 +323,10 @@ curation_history:
   changes: Removed the interim edge's unnecessary temporal implication about invasion
     preceding killing. The final wording only qualifies the existing invasion/digestion
     claim to B. bacteriovorus; prior event retained.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    predatory_bacterium_protein_component with UniProtKB:Q49VZ2 (clpP) exemplar.'
   llm_assisted: true

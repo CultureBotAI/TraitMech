@@ -56,6 +56,29 @@ causal_graphs:
       a broad environmental classification; no single exact family term denotes this
       aggregate use.
     description: Regulatory systems such as FNR-type sensors that respond to oxygen.
+    protein_examples:
+    - uniprot_id: UniProtKB:P54292
+      protein_label: HTH-type quorum-sensing regulator RhlR
+      gene_symbol: rhlR
+      taxon_id: NCBITaxon:208964
+      taxon_label: Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116
+        / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)
+      entry_status: REVIEWED
+      proteome_id: UP000002438
+      retrieved_on: '2026-10-17'
+      entry_version: 151
+      sequence_version: 1
+      role: Exemplar protein (rhlR, HTH-type quorum-sensing regulator RhlR) representing
+        oxygen-sensing regulation in Pseudomonas aeruginosa (strain ATCC 15692 / DSM
+        22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1) for facultative
+        oxygen preference.
+      evidence:
+      - reference: DOI:10.1111/cmi.13338
+        snippet: cope with changing oxygen levels
+        notes: Supports oxygen-sensing regulation in facultative oxygen preference;
+          UniProtKB:P54292 (rhlR, HTH-type quorum-sensing regulator RhlR) in Pseudomonas
+          aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG
+          12228 / 1C / PRS 101 / PAO1) provides a verified protein exemplar.
   - node_id: aerobic_energy_pathways
     label: aerobic energy-generating pathways
     node_type: PATHWAY
@@ -80,6 +103,26 @@ causal_graphs:
       aggregate use.
     description: High-affinity terminal oxidase enabling oxygen respiration at low
       O2 tensions.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q2YKD6
+      protein_label: Cytochrome bd ubiquinol oxidase subunit X
+      gene_symbol: cydX
+      taxon_id: NCBITaxon:359391
+      taxon_label: Brucella abortus (strain 2308)
+      entry_status: REVIEWED
+      proteome_id: UP000002719
+      retrieved_on: '2026-10-17'
+      entry_version: 76
+      sequence_version: 2
+      role: Exemplar protein (cydX, Cytochrome bd ubiquinol oxidase subunit X) representing
+        cytochrome bd terminal oxidase in Brucella abortus (strain 2308) for facultative
+        oxygen preference.
+      evidence:
+      - reference: DOI:10.1016/j.celrep.2023.112444
+        snippet: terminal oxidases transfer electrons from the ETC to O2
+        notes: Supports cytochrome bd terminal oxidase in facultative oxygen preference;
+          UniProtKB:Q2YKD6 (cydX, Cytochrome bd ubiquinol oxidase subunit X) in Brucella
+          abortus (strain 2308) provides a verified protein exemplar.
   edges:
   - subject: facultative_oxygen_trait
     predicate: responds to
@@ -221,6 +264,13 @@ curation_history:
     the tranche: set graph scope facultative_oxygen_preference_switching=NONMECHANISTIC
     with scope_notes; marked 2 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (oxygen_sensing_regulation, terminal_oxidase_cytochrome_bd).'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P54292 (rhlR)
+    protein example to node oxygen_sensing_regulation; added UniProtKB:Q2YKD6 (cydX)
+    protein example to node terminal_oxidase_cytochrome_bd.'
   llm_assisted: true
 canonical_examples:
 - taxon_id: NCBITaxon:562

@@ -49,6 +49,34 @@ causal_graphs:
     grounding: traitmech:000442
     description: Residence inside living internal plant tissue without apparent host
       disease.
+  - node_id: endophytic_protein_component
+    label: Flagellin
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Flagellin) associated with endophytic.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - fliC
+    protein_examples:
+    - uniprot_id: UniProtKB:P04949
+      protein_label: Flagellin
+      gene_symbol: fliC
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 183
+      sequence_version: 2
+      role: Characteristic protein component (fliC, Flagellin) associated with endophytic
+        in Escherichia coli (strain K12).
+      evidence:
+      - reference: DOI:10.3390/microorganisms5040077
+        snippet: Endophytic colonization refers to the entry, growth and multiplication
+          of endophyte populations within the host plant.
+        notes: Supports Flagellin in endophytic; UniProtKB:P04949 (fliC, Flagellin)
+          in Escherichia coli (strain K12) provides a verified protein exemplar.
   edges:
   - subject: internal_plant_tissue
     predicate: enables
@@ -73,6 +101,18 @@ causal_graphs:
         majority of their life cycle without any detrimental impact to the host plant.
       notes: Kandel et al. define endophytes by internal plant residence without detrimental
         host impact.
+  - subject: endophytic_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: endophytic_trait
+    description: Flagellin (fliC, UniProtKB:P04949) contributes to endophytic (associated
+      with communities, comprising, internally).
+    evidence:
+    - reference: DOI:10.1128/MMBR.00050-14
+      snippet: All plants are inhabited internally by diverse microbial communities
+        comprising bacterial, archaeal, fungal, and protistic taxa.
+      notes: Supports the functional association between Flagellin (UniProtKB:P04949
+        in Escherichia coli (strain K12)) and endophytic.
 curation_history:
 - timestamp: '2026-09-28T19:37:27Z'
   curator: codex
@@ -87,4 +127,10 @@ curation_history:
   changes: Reviewed canonical examples for the first pass and left them empty rather
     than promoting a strain-level growth-promotion or nitrogen-fixation study into
     generic endophytism evidence.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    endophytic_protein_component with UniProtKB:P04949 (fliC) exemplar.'
   llm_assisted: true

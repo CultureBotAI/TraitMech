@@ -66,6 +66,26 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Septal and peripheral PG hydrolases (e.g. FtsEX-PcsB, CbpD) that
       cleave muropeptides enabling splitting.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q8DMY4
+      protein_label: Peptidoglycan hydrolase PcsB
+      gene_symbol: pcsB
+      taxon_id: NCBITaxon:171101
+      taxon_label: Streptococcus pneumoniae (strain ATCC BAA-255 / R6)
+      entry_status: REVIEWED
+      proteome_id: UP000000586
+      retrieved_on: '2026-10-17'
+      entry_version: 98
+      sequence_version: 1
+      role: Exemplar protein (pcsB, Peptidoglycan hydrolase PcsB) representing peptidoglycan
+        hydrolases in Streptococcus pneumoniae (strain ATCC BAA-255 / R6) for streptococcus
+        arrangement.
+      evidence:
+      - reference: DOI:10.1038/ncomms4842
+        snippet: Separation of daughter cells during bacterial cell division
+        notes: Supports peptidoglycan hydrolases in streptococcus arrangement; UniProtKB:Q8DMY4
+          (pcsB, Peptidoglycan hydrolase PcsB) in Streptococcus pneumoniae (strain
+          ATCC BAA-255 / R6) provides a verified protein exemplar.
   - node_id: pcsb_autolysin
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
@@ -73,6 +93,26 @@ causal_graphs:
     label: PcsB autolysin
     node_type: GENE_OR_PROTEIN
     description: Essential PG autolysin coordinating PG remodeling with cell division.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q8DMY4
+      protein_label: Peptidoglycan hydrolase PcsB
+      gene_symbol: pcsB
+      taxon_id: NCBITaxon:171101
+      taxon_label: Streptococcus pneumoniae (strain ATCC BAA-255 / R6)
+      entry_status: REVIEWED
+      proteome_id: UP000000586
+      retrieved_on: '2026-10-17'
+      entry_version: 98
+      sequence_version: 1
+      role: Exemplar protein (pcsB, Peptidoglycan hydrolase PcsB) representing PcsB
+        autolysin in Streptococcus pneumoniae (strain ATCC BAA-255 / R6) for streptococcus
+        arrangement.
+      evidence:
+      - reference: DOI:10.1038/ncomms4842
+        snippet: Separation of daughter cells during bacterial cell division
+        notes: Supports PcsB autolysin in streptococcus arrangement; UniProtKB:Q8DMY4
+          (pcsB, Peptidoglycan hydrolase PcsB) in Streptococcus pneumoniae (strain
+          ATCC BAA-255 / R6) provides a verified protein exemplar.
   - node_id: ftsex_complex
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
@@ -80,6 +120,26 @@ causal_graphs:
     label: FtsEX complex
     node_type: GENE_OR_PROTEIN
     description: Membrane complex required for PcsB autolysin function.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q8DMY4
+      protein_label: Peptidoglycan hydrolase PcsB
+      gene_symbol: pcsB
+      taxon_id: NCBITaxon:171101
+      taxon_label: Streptococcus pneumoniae (strain ATCC BAA-255 / R6)
+      entry_status: REVIEWED
+      proteome_id: UP000000586
+      retrieved_on: '2026-10-17'
+      entry_version: 98
+      sequence_version: 1
+      role: Exemplar protein (pcsB, Peptidoglycan hydrolase PcsB) representing FtsEX
+        complex in Streptococcus pneumoniae (strain ATCC BAA-255 / R6) for streptococcus
+        arrangement.
+      evidence:
+      - reference: DOI:10.1038/ncomms4842
+        snippet: Separation of daughter cells during bacterial cell division
+        notes: Supports FtsEX complex in streptococcus arrangement; UniProtKB:Q8DMY4
+          (pcsB, Peptidoglycan hydrolase PcsB) in Streptococcus pneumoniae (strain
+          ATCC BAA-255 / R6) provides a verified protein exemplar.
   - node_id: lipoteichoic_acid
     label: lipoteichoic acid
     node_type: CHEMICAL
@@ -218,4 +278,12 @@ curation_history:
     the tranche: set graph scope streptococcus_parallel_division_chain=NONMECHANISTIC
     with scope_notes; marked 3 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (pg_hydrolases, pcsb_autolysin, ftsex_complex).'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q8DMY4 (pcsB)
+    protein example to node pg_hydrolases; added UniProtKB:Q8DMY4 (pcsB) protein example
+    to node pcsb_autolysin; added UniProtKB:Q8DMY4 (pcsB) protein example to node
+    ftsex_complex.'
   llm_assisted: true

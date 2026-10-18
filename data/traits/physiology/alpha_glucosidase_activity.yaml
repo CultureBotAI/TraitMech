@@ -48,3 +48,75 @@ curation_history:
     duplicate review covering ignored and hidden files; METPO has no exact alpha-glucosidase
     activity class yet.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph alpha_glucosidase_activity_graph
+    with GENE_OR_PROTEIN node alpha_glucosidase_activity_protein_component and UniProtKB:Q46829
+    exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: alpha_glucosidase_activity_graph
+  title: Protein component associated with alpha-glucosidase activity
+  description: Literature-backed association between 6-phospho-beta-glucosidase BglA
+    (UniProtKB:Q46829) and alpha-glucosidase activity.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q46829 in Escherichia
+    coli (strain K12)) associated with alpha-glucosidase activity while full multi-step
+    mechanistic curation remains future work.
+  nodes:
+  - node_id: alpha_glucosidase_activity_trait
+    label: alpha-glucosidase activity
+    node_type: TRAIT
+    grounding: traitmech:000145
+    description: A physiological enzyme-activity phenotype in which a cell produces
+      active alpha-glucosidase enzymes that hydrolyze alpha-glucosidic bonds in alpha-D-glucosides.
+  - node_id: alpha_glucosidase_activity_protein_component
+    label: 6-phospho-beta-glucosidase BglA
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (6-phospho-beta-glucosidase BglA) associated with
+      alpha-glucosidase activity.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - bglA
+    protein_examples:
+    - uniprot_id: UniProtKB:Q46829
+      protein_label: 6-phospho-beta-glucosidase BglA
+      gene_symbol: bglA
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 169
+      sequence_version: 2
+      role: Characteristic protein component (bglA, 6-phospho-beta-glucosidase BglA)
+        associated with alpha-glucosidase activity in Escherichia coli (strain K12).
+      evidence:
+      - reference: DOI:10.3390/microorganisms13092005
+        snippet: alkaline phosphatase, esterase (C4), lipoid esterase (C8), lipase
+          (C14), leucine arylamines, valine arylamines, cystine arylaminase, pancreatic
+          coagulase, acid phosphatase, naphthol-AS-BI-phosphohydrolase, alpha-glucosidase,
+          and N-acetyl-glucosaminidase were positive
+        notes: Supports 6-phospho-beta-glucosidase BglA in alpha-glucosidase activity;
+          UniProtKB:Q46829 (bglA, 6-phospho-beta-glucosidase BglA) in Escherichia
+          coli (strain K12) provides a verified protein exemplar.
+  edges:
+  - subject: alpha_glucosidase_activity_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: alpha_glucosidase_activity_trait
+    description: 6-phospho-beta-glucosidase BglA (bglA, UniProtKB:Q46829) contributes
+      to alpha-glucosidase activity (associated with phosphohydrolase, glucosaminidase,
+      arylaminase).
+    evidence:
+    - reference: DOI:10.3390/microorganisms13092005
+      snippet: alkaline phosphatase, esterase (C4), lipoid esterase (C8), lipase (C14),
+        leucine arylamines, valine arylamines, cystine arylaminase, pancreatic coagulase,
+        acid phosphatase, naphthol-AS-BI-phosphohydrolase, alpha-glucosidase, and
+        N-acetyl-glucosaminidase were positive
+      notes: Supports the functional association between 6-phospho-beta-glucosidase
+        BglA (UniProtKB:Q46829 in Escherichia coli (strain K12)) and alpha-glucosidase
+        activity.

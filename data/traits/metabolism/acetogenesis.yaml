@@ -76,7 +76,7 @@ causal_graphs:
       taxon_label: Neomoorella thermoacetica
       entry_status: REVIEWED
       retrieved_on: '2026-08-24'
-      entry_version: 125
+      entry_version: 126
       sequence_version: 1
       role: AcsB alpha component that combines CO, CoA, and the CoFeSP-borne methyl
         group to form acetyl-CoA; this accession is not the complete CODH/ACS complex.
@@ -423,4 +423,10 @@ curation_history:
   action: ADD_PATHWAY_CONTEXT
   changes: Added pinned PathwayMech context on reviewed causal nodes with explicit
     route and organism limitations; retained existing groundings and exact xrefs.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:P27988
+    version metadata (entry_version=126, sequence_version=1).'
   llm_assisted: true

@@ -106,6 +106,35 @@ causal_graphs:
     node_type: ENVIRONMENTAL_FACTOR
     description: Available water (aw); a key abiotic constraint co-determining salinity
       limits.
+  - node_id: salinity_phenotype_with_numerical_limits_protein_component
+    label: Glutamate 5-kinase
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Glutamate 5-kinase) associated with salinity phenotype
+      with numerical limits.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - proB
+    protein_examples:
+    - uniprot_id: UniProtKB:B5BDP8
+      protein_label: Glutamate 5-kinase
+      gene_symbol: proB
+      taxon_id: NCBITaxon:554290
+      taxon_label: Salmonella paratyphi A (strain AKU_12601)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 86
+      sequence_version: 1
+      role: Characteristic protein component (proB, Glutamate 5-kinase) associated
+        with salinity phenotype with numerical limits in Salmonella paratyphi A (strain
+        AKU_12601).
+      evidence:
+      - reference: DOI:10.1093/femsre/fuy009
+        snippet: salinity range
+        notes: Supports Glutamate 5-kinase in salinity phenotype with numerical limits;
+          UniProtKB:B5BDP8 (proB, Glutamate 5-kinase) in Salmonella paratyphi A (strain
+          AKU_12601) provides a verified protein exemplar.
   edges:
   - subject: nacl_concentration_axis
     predicate: defines
@@ -211,6 +240,19 @@ causal_graphs:
     - reference: DOI:10.1038/s41559-024-02505-6
       notes: Systems of lower water activity constrain growth; relevant beyond NaCl-only
         limits.
+  - subject: salinity_phenotype_with_numerical_limits_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: salinity_phenotype_trait
+    description: Glutamate 5-kinase (proB, UniProtKB:B5BDP8) contributes to salinity
+      phenotype with numerical limits (associated with concentration, intracellular,
+      transport).
+    evidence:
+    - reference: DOI:10.1128/aem.00145-24
+      snippet: transport systems that regulate intracellular Na+/K+/H+ concentration
+      notes: Supports the functional association between Glutamate 5-kinase (UniProtKB:B5BDP8
+        in Salmonella paratyphi A (strain AKU_12601)) and salinity phenotype with
+        numerical limits.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.846379+00:00'
   curator: seed_from_metpo
@@ -306,4 +348,11 @@ curation_history:
   action: ADD_PATHWAY_CONTEXT
   changes: Added pinned PathwayMech context on reviewed causal nodes with explicit
     route and organism limitations; retained existing groundings and exact xrefs.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    salinity_phenotype_with_numerical_limits_protein_component with UniProtKB:B5BDP8
+    (proB) exemplar.'
   llm_assisted: true

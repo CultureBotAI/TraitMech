@@ -88,3 +88,69 @@ curation_history:
     identified in inspected owners. Other records unchanged. Timestamp records observed
     acceptance, not later writing.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph nematode_egg_hatching_stimulatory_activity_graph
+    with GENE_OR_PROTEIN node nematode_egg_hatching_stimulatory_activity_protein_component
+    and UniProtKB:P07254 exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: nematode_egg_hatching_stimulatory_activity_graph
+  title: Protein component associated with nematode egg-hatching stimulatory activity
+  description: Literature-backed association between Chitinase A (UniProtKB:P07254)
+    and nematode egg-hatching stimulatory activity.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P07254 in Serratia
+    marcescens) associated with nematode egg-hatching stimulatory activity while full
+    multi-step mechanistic curation remains future work.
+  nodes:
+  - node_id: nematode_egg_hatching_stimulatory_activity_trait
+    label: nematode egg-hatching stimulatory activity
+    node_type: TRAIT
+    grounding: traitmech:000724
+    description: A physiological capability of a microorganism to increase nematode
+      egg hatching over a defined observation interval relative to comparable controls
+      without that microbial influence.
+  - node_id: nematode_egg_hatching_stimulatory_activity_protein_component
+    label: Chitinase A
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Chitinase A) associated with nematode egg-hatching
+      stimulatory activity.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - chiA
+    protein_examples:
+    - uniprot_id: UniProtKB:P07254
+      protein_label: Chitinase A
+      gene_symbol: chiA
+      taxon_id: NCBITaxon:615
+      taxon_label: Serratia marcescens
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 159
+      sequence_version: 3
+      role: Characteristic protein component (chiA, Chitinase A) associated with nematode
+        egg-hatching stimulatory activity in Serratia marcescens.
+      evidence:
+      - reference: DOI:10.1186/s13071-015-0986-z
+        snippet: When incubated with Gram-positive bacteria, only T. muris eggs showed
+          noticeable hatching after 20 h, although with high variability.
+        notes: Supports Chitinase A in nematode egg-hatching stimulatory activity;
+          UniProtKB:P07254 (chiA, Chitinase A) in Serratia marcescens provides a verified
+          protein exemplar.
+  edges:
+  - subject: nematode_egg_hatching_stimulatory_activity_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: nematode_egg_hatching_stimulatory_activity_trait
+    description: Chitinase A (chiA, UniProtKB:P07254) contributes to nematode egg-hatching
+      stimulatory activity (associated with variability, noticeable, incubated).
+    evidence:
+    - reference: DOI:10.1186/s13071-015-0986-z
+      snippet: When incubated with Gram-positive bacteria, only T. muris eggs showed
+        noticeable hatching after 20 h, although with high variability.
+      notes: Supports the functional association between Chitinase A (UniProtKB:P07254
+        in Serratia marcescens) and nematode egg-hatching stimulatory activity.

@@ -87,6 +87,30 @@ causal_graphs:
       for this aggregate use.
     description: Proton-translocating NADH dehydrogenase I (Complex I) operon enriched
       in piezophiles.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q59516
+      protein_label: Glycerate dehydrogenase
+      gene_symbol: hprA
+      taxon_id: NCBITaxon:272630
+      taxon_label: Methylorubrum extorquens (strain ATCC 14718 / DSM 1338 / JCM 2805
+        / NCIMB 9133 / AM1) (Methylobacterium extorquens)
+      entry_status: REVIEWED
+      proteome_id: UP000009081
+      retrieved_on: '2026-10-17'
+      entry_version: 154
+      sequence_version: 3
+      role: Exemplar protein (hprA, Glycerate dehydrogenase) representing nuo NADH
+        dehydrogenase I complex in Methylorubrum extorquens (strain ATCC 14718 / DSM
+        1338 / JCM 2805 / NCIMB 9133 / AM1) (Methylobacterium extorquens) for pressure
+        delta.
+      evidence:
+      - reference: DOI:10.3389/fmolb.2022.1058381
+        snippet: Piezophiles, microorganisms adapted to high pressure, have developed
+          key strategies to maintain the integrity of their lipid membrane
+        notes: Supports nuo NADH dehydrogenase I complex in pressure delta; UniProtKB:Q59516
+          (hprA, Glycerate dehydrogenase) in Methylorubrum extorquens (strain ATCC
+          14718 / DSM 1338 / JCM 2805 / NCIMB 9133 / AM1) (Methylobacterium extorquens)
+          provides a verified protein exemplar.
   - node_id: high_pressure_energy_conservation
     label: high-pressure respiratory energy conservation
     node_type: BIOLOGICAL_PROCESS
@@ -244,4 +268,10 @@ curation_history:
     canonical example(s): Colwellia marinimaniae (NCBITaxon:1513592; DOI:10.1099/ijsem.0.001671).
     The note retains the measured value or scopes broad-class examples to the cited
     branch; no paid research was used.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q59516 (hprA)
+    protein example to node nuo_complex_i.'
   llm_assisted: true

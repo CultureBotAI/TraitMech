@@ -87,6 +87,28 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Transporters importing glycine betaine, proline, ectoine, or other
       osmoprotectants.
+    protein_examples:
+    - uniprot_id: UniProtKB:P14175
+      protein_label: Glycine betaine/proline betaine transport system ATP-binding
+        protein ProV
+      gene_symbol: proV
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 204
+      sequence_version: 1
+      role: Exemplar protein (proV, Glycine betaine/proline betaine transport system
+        ATP-binding protein ProV) representing compatible-solute uptake systems in
+        Escherichia coli (strain K12) for non halophilic.
+      evidence:
+      - reference: DOI:10.1128/mmbr.00181-23
+        snippet: potassium and compatible solute transport are vital for bacteria
+          to survive changes in external osmolality
+        notes: Supports compatible-solute uptake systems in non halophilic; UniProtKB:P14175
+          (proV, Glycine betaine/proline betaine transport system ATP-binding protein
+          ProV) in Escherichia coli (strain K12) provides a verified protein exemplar.
   - node_id: osmotic_upshift
     label: osmotic upshift
     node_type: ENVIRONMENTAL_FACTOR
@@ -309,4 +331,10 @@ curation_history:
     no sodium-free or universal species-wide requirement is inferred. Retained NCBITaxon:562
     and its independently checked NCBI label. Definition, hierarchy, graph and other
     example unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P14175 (proV)
+    protein example to node compatible_solute_uptake.'
   llm_assisted: true

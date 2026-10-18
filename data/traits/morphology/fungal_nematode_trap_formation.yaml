@@ -110,3 +110,73 @@ curation_history:
     column cell-count usage. No sequence-derived mechanism or universal capture guarantee
     asserted. Timestamp is observed post-audit acceptance, not estimated writing time.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph fungal_nematode_trap_formation_graph
+    with GENE_OR_PROTEIN node fungal_nematode_trap_formation_protein_component and
+    UniProtKB:P41832 exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: fungal_nematode_trap_formation_graph
+  title: Protein component associated with fungal nematode-trap formation
+  description: Literature-backed association between Protein BNI1 (UniProtKB:P41832)
+    and fungal nematode-trap formation.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P41832 in Saccharomyces
+    cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)) associated with fungal
+    nematode-trap formation while full multi-step mechanistic curation remains future
+    work.
+  nodes:
+  - node_id: fungal_nematode_trap_formation_trait
+    label: fungal nematode-trap formation
+    node_type: TRAIT
+    grounding: traitmech:000718
+    description: A morphological phenotype in which a fungus differentiates hyphae
+      into specialized nematode-capturing structures.
+  - node_id: fungal_nematode_trap_formation_protein_component
+    label: Protein BNI1
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Protein BNI1) associated with fungal nematode-trap
+      formation.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - BNI1
+    protein_examples:
+    - uniprot_id: UniProtKB:P41832
+      protein_label: Protein BNI1
+      gene_symbol: BNI1
+      taxon_id: NCBITaxon:559292
+      taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's
+        yeast)
+      entry_status: REVIEWED
+      proteome_id: UP000002311
+      retrieved_on: '2026-10-17'
+      entry_version: 224
+      sequence_version: 3
+      role: Characteristic protein component (BNI1, Protein BNI1) associated with
+        fungal nematode-trap formation in Saccharomyces cerevisiae (strain ATCC 204508
+        / S288c) (Baker's yeast).
+      evidence:
+      - reference: DOI:10.1016/j.isci.2020.101057
+        snippet: Nematode-trapping fungi (NTF) can switch to pathogens by producing
+          various trapping devices to capture nematodes.
+        notes: Supports Protein BNI1 in fungal nematode-trap formation; UniProtKB:P41832
+          (BNI1, Protein BNI1) in Saccharomyces cerevisiae (strain ATCC 204508 / S288c)
+          (Baker's yeast) provides a verified protein exemplar.
+  edges:
+  - subject: fungal_nematode_trap_formation_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: fungal_nematode_trap_formation_trait
+    description: Protein BNI1 (BNI1, UniProtKB:P41832) contributes to fungal nematode-trap
+      formation (associated with nematodes, pathogens, producing).
+    evidence:
+    - reference: DOI:10.1016/j.isci.2020.101057
+      snippet: Nematode-trapping fungi (NTF) can switch to pathogens by producing
+        various trapping devices to capture nematodes.
+      notes: Supports the functional association between Protein BNI1 (UniProtKB:P41832
+        in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast))
+        and fungal nematode-trap formation.

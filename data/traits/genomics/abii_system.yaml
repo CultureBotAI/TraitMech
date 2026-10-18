@@ -110,6 +110,38 @@ causal_graphs:
     node_type: TRAIT
     grounding: traitmech:000214
     description: Possession of a genome-encoded abortive-infection phage-defense system.
+  - node_id: abii_system_protein_component
+    label: Ribosome hibernation promotion factor
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Ribosome hibernation promotion factor) associated
+      with AbiI system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - hpf
+    protein_examples:
+    - uniprot_id: UniProtKB:A2RIX0
+      protein_label: Ribosome hibernation promotion factor
+      gene_symbol: hpf
+      taxon_id: NCBITaxon:416870
+      taxon_label: Lactococcus lactis subsp. cremoris (strain MG1363)
+      entry_status: REVIEWED
+      proteome_id: UP000000364
+      retrieved_on: '2026-10-17'
+      entry_version: 88
+      sequence_version: 1
+      role: Characteristic protein component (hpf, Ribosome hibernation promotion
+        factor) associated with AbiI system in Lactococcus lactis subsp. cremoris
+        (strain MG1363).
+      evidence:
+      - reference: PMID:9195753
+        snippet: DNA sequencing revealed that the abortive infection was encoded by
+          a single open reading frame (ORF), designated abiI, encoding a 332 amino
+          acid protein
+        notes: Supports Ribosome hibernation promotion factor in AbiI system; UniProtKB:A2RIX0
+          (hpf, Ribosome hibernation promotion factor) in Lactococcus lactis subsp.
+          cremoris (strain MG1363) provides a verified protein exemplar.
   edges:
   - subject: abii_locus
     predicate: contributes to
@@ -175,6 +207,19 @@ causal_graphs:
       snippet: The mechanism of phage resistance encoded by pND817 involved abortive
         infection
       notes: Su et al. place AbiI in the abortive infection class of phage defense.
+  - subject: abii_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: abii_system_trait
+    description: Ribosome hibernation promotion factor (hpf, UniProtKB:A2RIX0) contributes
+      to AbiI system (associated with significant, predicted, database).
+    evidence:
+    - reference: PMID:9195753
+      snippet: Neither abiI nor the predicted product showed significant homology
+        to any existing sequence in the GenBank database
+      notes: Supports the functional association between Ribosome hibernation promotion
+        factor (UniProtKB:A2RIX0 in Lactococcus lactis subsp. cremoris (strain MG1363))
+        and AbiI system.
 discussions:
 - discussion_id: abii-trigger-and-effector-gap
   prompt: Resolve the AbiI phage trigger, molecular activity, and direct arrest target
@@ -205,4 +250,10 @@ curation_history:
     infection system parent after an ignored-and-hidden duplicate review found no
     exact live TraitMech, METPO, history, or prior proposal record; the replacement
     placeholder is reserved in proposals/metpo_traitmech_v193.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    abii_system_protein_component with UniProtKB:A2RIX0 (hpf) exemplar.'
   llm_assisted: true

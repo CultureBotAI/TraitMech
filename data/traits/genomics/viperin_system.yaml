@@ -74,6 +74,35 @@ causal_graphs:
     grounding: traitmech:000209
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
+  - node_id: viperin_system_protein_component
+    label: S-adenosylmethionine-dependent nucleotide dehydratase
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (S-adenosylmethionine-dependent nucleotide dehydratase)
+      associated with Viperin system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - vip60
+    protein_examples:
+    - uniprot_id: UniProtKB:P0DW53
+      protein_label: S-adenosylmethionine-dependent nucleotide dehydratase
+      gene_symbol: vip60
+      taxon_id: NCBITaxon:342955
+      taxon_label: Lacinutrix mariniflava
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 14
+      sequence_version: 1
+      role: Characteristic protein component (vip60, S-adenosylmethionine-dependent
+        nucleotide dehydratase) associated with Viperin system in Lacinutrix mariniflava.
+      evidence:
+      - reference: DOI:10.1038/s41586-020-2762-2
+        snippet: Here we show that eukaryotic viperin originated from a clade of bacterial
+          and archaeal proteins that protect against phage infection
+        notes: Supports S-adenosylmethionine-dependent nucleotide dehydratase in Viperin
+          system; UniProtKB:P0DW53 (vip60, S-adenosylmethionine-dependent nucleotide
+          dehydratase) in Lacinutrix mariniflava provides a verified protein exemplar.
   edges:
   - subject: viperin_locus
     predicate: contributes to
@@ -123,6 +152,19 @@ causal_graphs:
       snippet: Here we show that eukaryotic viperin originated from a clade of bacterial
         and archaeal proteins that protect against phage infection
       notes: Bernheim et al. support Viperin as a prokaryotic phage-defense system.
+  - subject: viperin_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: viperin_system_trait
+    description: S-adenosylmethionine-dependent nucleotide dehydratase (vip60, UniProtKB:P0DW53)
+      contributes to Viperin system (associated with activation, coordinate, inhibition).
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: '| Clover | 10\.1038/s41586-026-10135-0 | Nucleotide signals coordinate
+        activation and inhibition of bacterial immunity |'
+      notes: Supports the functional association between S-adenosylmethionine-dependent
+        nucleotide dehydratase (UniProtKB:P0DW53 in Lacinutrix mariniflava) and Viperin
+        system.
 discussions:
 - discussion_id: viperin-product-and-subtype-gap
   prompt: Resolve Viperin nucleotide products, accessory genes, and phage-target breadth
@@ -158,4 +200,10 @@ curation_history:
   action: EDIT
   changes: 'Aligned the Viperin definition with the bacterial and archaeal prokaryotic
     scope identified in Claude review issue #1038.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    viperin_system_protein_component with UniProtKB:P0DW53 (vip60) exemplar.'
   llm_assisted: true

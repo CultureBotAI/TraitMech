@@ -63,6 +63,37 @@ causal_graphs:
     description: Ribosome assembly and start-codon recognition that begins protein
       synthesis.
     grounding: GO:0006413
+  - node_id: codon_usage_bias_protein_component
+    label: Elongation factor G
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Elongation factor G) associated with codon usage
+      bias.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - fusA
+    protein_examples:
+    - uniprot_id: UniProtKB:P0A6M8
+      protein_label: Elongation factor G
+      gene_symbol: fusA
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 165
+      sequence_version: 2
+      role: Characteristic protein component (fusA, Elongation factor G) associated
+        with codon usage bias in Escherichia coli (strain K12).
+      evidence:
+      - reference: DOI:10.1038/nrg2899
+        snippet: Although recent advances in sequencing and synthetic biology have
+          helped to resolve longstanding questions about codon bias, they have also
+          uncovered striking patterns that suggest new hypotheses about protein synthesis.
+        notes: Supports Elongation factor G in codon usage bias; UniProtKB:P0A6M8
+          (fusA, Elongation factor G) in Escherichia coli (strain K12) provides a
+          verified protein exemplar.
   edges:
   - subject: codon_bias_trait
     predicate: regulates
@@ -122,6 +153,19 @@ causal_graphs:
       notes: Plotkin & Kudla discuss translation initiation as a major mechanism linking
         5' sequence features to expression.
     predicate_id: biolink:part_of
+  - subject: codon_usage_bias_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: codon_bias_trait
+    description: Elongation factor G (fusA, UniProtKB:P0A6M8) contributes to codon
+      usage bias (associated with longstanding, hypotheses, sequencing).
+    evidence:
+    - reference: DOI:10.1038/nrg2899
+      snippet: Although recent advances in sequencing and synthetic biology have helped
+        to resolve longstanding questions about codon bias, they have also uncovered
+        striking patterns that suggest new hypotheses about protein synthesis.
+      notes: Supports the functional association between Elongation factor G (UniProtKB:P0A6M8
+        in Escherichia coli (strain K12)) and codon usage bias.
 curation_history:
 - timestamp: '2026-06-05T00:00:00Z'
   curator: claude
@@ -161,4 +205,10 @@ curation_history:
     tranche of 2026-08-24/25, which shipped without a per-record event. In this record
     the tranche: set graph scope codon_bias_translation_efficiency=NONMECHANISTIC
     with scope_notes.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    codon_usage_bias_protein_component with UniProtKB:P0A6M8 (fusA) exemplar.'
   llm_assisted: true

@@ -68,6 +68,24 @@ causal_graphs:
     label: Na+/H+ antiporter
     node_type: GENE_OR_PROTEIN
     description: Secondary transporter exchanging sodium and protons.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q93F90
+      protein_label: Na(+)/H(+) antiporter NhaA
+      gene_symbol: nhaA
+      taxon_id: NCBITaxon:1890
+      taxon_label: Streptomyces antibioticus
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 71
+      sequence_version: 1
+      role: Exemplar protein (nhaA, Na(+)/H(+) antiporter NhaA) representing Na+/H+
+        antiporter in Streptomyces antibioticus for alkaliphilic.
+      evidence:
+      - reference: DOI:10.1007/BF00762685
+        snippet: secondary Na+/H+ antiporter
+        notes: Supports Na+/H+ antiporter in alkaliphilic; UniProtKB:Q93F90 (nhaA,
+          Na(+)/H(+) antiporter NhaA) in Streptomyces antibioticus provides a verified
+          protein exemplar.
   - node_id: cytoplasmic_ph_homeostasis
     label: cytoplasmic pH homeostasis
     node_type: BIOLOGICAL_PROCESS
@@ -81,6 +99,28 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Multisubunit cation/proton antiporter complex with an indispensable
       role in alkaliphile high-pH homeostasis.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q9RGZ5
+      protein_label: Na(+)/H(+) antiporter subunit A
+      gene_symbol: mrpA
+      taxon_id: NCBITaxon:398511
+      taxon_label: Alkalihalophilus pseudofirmus (strain ATCC BAA-2126 / JCM 17055
+        / OF4) (Bacillus pseudofirmus)
+      entry_status: REVIEWED
+      proteome_id: UP000001544
+      retrieved_on: '2026-10-17'
+      entry_version: 115
+      sequence_version: 2
+      role: Exemplar protein (mrpA, Na(+)/H(+) antiporter subunit A) representing
+        Mrp Na+/H+ antiporter complex in Alkalihalophilus pseudofirmus (strain ATCC
+        BAA-2126 / JCM 17055 / OF4) (Bacillus pseudofirmus) for alkaliphilic.
+      evidence:
+      - reference: DOI:10.1007/BF00762685
+        snippet: secondary Na+/H+ antiporter
+        notes: Supports Mrp Na+/H+ antiporter complex in alkaliphilic; UniProtKB:Q9RGZ5
+          (mrpA, Na(+)/H(+) antiporter subunit A) in Alkalihalophilus pseudofirmus
+          (strain ATCC BAA-2126 / JCM 17055 / OF4) (Bacillus pseudofirmus) provides
+          a verified protein exemplar.
   - node_id: atp_synthase_c_subunit_motifs
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
@@ -89,6 +129,31 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: c-subunit motifs that alter rotor shape and promote tight proton
       binding in the ion site at high pH.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q49Z52
+      protein_label: ATP synthase subunit alpha
+      gene_symbol: atpA
+      taxon_id: NCBITaxon:342451
+      taxon_label: Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
+        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+      entry_status: REVIEWED
+      proteome_id: UP000006371
+      retrieved_on: '2026-10-17'
+      entry_version: 137
+      sequence_version: 1
+      role: Exemplar protein (atpA, ATP synthase subunit alpha) representing ATP synthase
+        c-subunit alkaline-adaptive motifs in Staphylococcus saprophyticus subsp.
+        saprophyticus (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+        for alkaliphilic.
+      evidence:
+      - reference: DOI:10.1038/nrmicro2549
+        snippet: For pH homeostasis under alkaline conditions, active transport of
+          protons inward is a crucial adaptation, which usually involves activation
+          and transcriptional up-regulation of key cation/proton antiporters
+        notes: Supports ATP synthase c-subunit alkaline-adaptive motifs in alkaliphilic;
+          UniProtKB:Q49Z52 (atpA, ATP synthase subunit alpha) in Staphylococcus saprophyticus
+          subsp. saprophyticus (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC
+          7292 / S-41) provides a verified protein exemplar.
   - node_id: atp_synthase_proton_binding
     label: ATP synthase proton binding efficiency at high pH
     node_type: MOLECULAR_FUNCTION
@@ -316,3 +381,11 @@ curation_history:
   changes: 'Migrated source-owned fields to locked METPO 2026-06-12: label ''alkaphilic''
     -> ''alkaliphilic''; synonyms synchronized at ontology-declared scope; grounded
     node alkaphilic_trait label synchronized'
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q93F90 (nhaA)
+    protein example to node sodium_proton_antiporter; added UniProtKB:Q9RGZ5 (mrpA)
+    protein example to node mrp_antiporter_complex; added UniProtKB:Q49Z52 (atpA)
+    protein example to node atp_synthase_c_subunit_motifs.'
+  llm_assisted: true

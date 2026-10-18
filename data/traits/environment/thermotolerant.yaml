@@ -57,6 +57,25 @@ causal_graphs:
     label: chaperone proteins
     node_type: GENE_OR_PROTEIN
     description: Molecular chaperones refolding heat-damaged proteins.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0A6Z3
+      protein_label: Chaperone protein HtpG
+      gene_symbol: htpG
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 166
+      sequence_version: 1
+      role: Exemplar protein (htpG, Chaperone protein HtpG) representing chaperone
+        proteins in Escherichia coli (strain K12) for thermotolerant.
+      evidence:
+      - reference: DOI:10.1099/00207713-52-6-2203
+        snippet: Pseudomonas thermotolerans sp. nov., a thermotolerant species
+        notes: Supports chaperone proteins in thermotolerant; UniProtKB:P0A6Z3 (htpG,
+          Chaperone protein HtpG) in Escherichia coli (strain K12) provides a verified
+          protein exemplar.
   - node_id: limited_thermostability
     label: limited thermostability
     node_type: BIOLOGICAL_PROCESS
@@ -70,6 +89,26 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Alternative RNA polymerase sigma factor that activates the heat-shock
       regulon.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0AGB3
+      protein_label: RNA polymerase sigma factor RpoH
+      gene_symbol: rpoH
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 151
+      sequence_version: 1
+      role: Exemplar protein (rpoH, RNA polymerase sigma factor RpoH) representing
+        RpoH (sigma-32) heat-shock sigma factor in Escherichia coli (strain K12) for
+        thermotolerant.
+      evidence:
+      - reference: DOI:10.1099/00207713-52-6-2203
+        snippet: Pseudomonas thermotolerans sp. nov., a thermotolerant species
+        notes: Supports RpoH (sigma-32) heat-shock sigma factor in thermotolerant;
+          UniProtKB:P0AGB3 (rpoH, RNA polymerase sigma factor RpoH) in Escherichia
+          coli (strain K12) provides a verified protein exemplar.
   - node_id: heat_shock_chaperone_expression
     label: heat-shock chaperone gene expression
     node_type: BIOLOGICAL_PROCESS
@@ -83,6 +122,25 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Extracytoplasmic-stress sigma factor inducing periplasmic proteases
       and envelope-protective genes.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0AGB6
+      protein_label: ECF RNA polymerase sigma-E factor
+      gene_symbol: rpoE
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 145
+      sequence_version: 1
+      role: Exemplar protein (rpoE, ECF RNA polymerase sigma-E factor) representing
+        RpoE envelope-stress sigma factor in Escherichia coli (strain K12) for thermotolerant.
+      evidence:
+      - reference: DOI:10.1099/00207713-52-6-2203
+        snippet: Pseudomonas thermotolerans sp. nov., a thermotolerant species
+        notes: Supports RpoE envelope-stress sigma factor in thermotolerant; UniProtKB:P0AGB6
+          (rpoE, ECF RNA polymerase sigma-E factor) in Escherichia coli (strain K12)
+          provides a verified protein exemplar.
   - node_id: membrane_protein_folding_lps
     label: membrane protein folding and LPS biosynthesis
     node_type: BIOLOGICAL_PROCESS
@@ -302,4 +360,12 @@ curation_history:
   action: GROUND_CAUSAL_NODE
   changes: Grounded the exact heat-shock-response biological-process node to the newly
     minted local traitmech:000205 heat shock response record.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P0A6Z3 (htpG)
+    protein example to node chaperone_proteins; added UniProtKB:P0AGB3 (rpoH) protein
+    example to node rpoH_sigma32; added UniProtKB:P0AGB6 (rpoE) protein example to
+    node rpoE_envelope_sigma.'
   llm_assisted: true

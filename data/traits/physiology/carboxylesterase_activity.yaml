@@ -49,3 +49,75 @@ curation_history:
     a repository-wide duplicate review covering ignored and hidden files; METPO has
     no exact carboxylesterase activity class yet.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph carboxylesterase_activity_graph
+    with GENE_OR_PROTEIN node carboxylesterase_activity_protein_component and UniProtKB:B5BHG7
+    exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: carboxylesterase_activity_graph
+  title: Protein component associated with carboxylesterase activity
+  description: Literature-backed association between Pimeloyl-[acyl-carrier protein]
+    methyl ester esterase (UniProtKB:B5BHG7) and carboxylesterase activity.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:B5BHG7 in Salmonella
+    paratyphi A (strain AKU_12601)) associated with carboxylesterase activity while
+    full multi-step mechanistic curation remains future work.
+  nodes:
+  - node_id: carboxylesterase_activity_trait
+    label: carboxylesterase activity
+    node_type: TRAIT
+    grounding: traitmech:000156
+    description: A physiological enzyme-activity phenotype in which a cell produces
+      active carboxylesterase enzymes that hydrolyze carboxylic esters to alcohols
+      and carboxylates.
+  - node_id: carboxylesterase_activity_protein_component
+    label: Pimeloyl-[acyl-carrier protein] methyl ester esterase
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Pimeloyl-[acyl-carrier protein] methyl ester esterase)
+      associated with carboxylesterase activity.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - bioH
+    protein_examples:
+    - uniprot_id: UniProtKB:B5BHG7
+      protein_label: Pimeloyl-[acyl-carrier protein] methyl ester esterase
+      gene_symbol: bioH
+      taxon_id: NCBITaxon:554290
+      taxon_label: Salmonella paratyphi A (strain AKU_12601)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 78
+      sequence_version: 1
+      role: Characteristic protein component (bioH, Pimeloyl-[acyl-carrier protein]
+        methyl ester esterase) associated with carboxylesterase activity in Salmonella
+        paratyphi A (strain AKU_12601).
+      evidence:
+      - reference: DOI:10.1128/JCM.43.8.3713-3717.2005
+        snippet: Alkaline phosphatase, esterase (C4), esterase lipase (C8), leucine
+          arylamidase, acid phosphatase, and naphthol-AS-BI-phosphohydrolase were
+          clearly positive
+        notes: Supports Pimeloyl-[acyl-carrier protein] methyl ester esterase in carboxylesterase
+          activity; UniProtKB:B5BHG7 (bioH, Pimeloyl-[acyl-carrier protein] methyl
+          ester esterase) in Salmonella paratyphi A (strain AKU_12601) provides a
+          verified protein exemplar.
+  edges:
+  - subject: carboxylesterase_activity_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: carboxylesterase_activity_trait
+    description: Pimeloyl-[acyl-carrier protein] methyl ester esterase (bioH, UniProtKB:B5BHG7)
+      contributes to carboxylesterase activity (associated with phosphohydrolase,
+      arylamidase, phosphatase).
+    evidence:
+    - reference: DOI:10.1128/JCM.43.8.3713-3717.2005
+      snippet: Alkaline phosphatase, esterase (C4), esterase lipase (C8), leucine
+        arylamidase, acid phosphatase, and naphthol-AS-BI-phosphohydrolase were clearly
+        positive
+      notes: Supports the functional association between Pimeloyl-[acyl-carrier protein]
+        methyl ester esterase (UniProtKB:B5BHG7 in Salmonella paratyphi A (strain
+        AKU_12601)) and carboxylesterase activity.

@@ -70,6 +70,25 @@ causal_graphs:
     grounding_notes: This umbrella combines long bifunctional Rel/SpoT homologues
       with small alarmone synthetase and hydrolase subfamilies; one family term would
       not preserve those catalytic distinctions.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0AG20
+      protein_label: GTP pyrophosphokinase
+      gene_symbol: relA
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 144
+      sequence_version: 1
+      role: Exemplar protein (relA, GTP pyrophosphokinase) representing RelA/SpoT
+        homologue enzymes in Escherichia coli (strain K12) for stress response.
+      evidence:
+      - reference: DOI:10.1038/nrmicro3032
+        snippet: In response, bacteria activate elegant adaptive strategies
+        notes: Supports RelA/SpoT homologue enzymes in stress response; UniProtKB:P0AG20
+          (relA, GTP pyrophosphokinase) in Escherichia coli (strain K12) provides
+          a verified protein exemplar.
   - node_id: nutrient_limitation
     label: nutrient limitation
     node_type: ENVIRONMENTAL_FACTOR
@@ -95,7 +114,7 @@ causal_graphs:
       taxon_label: Escherichia coli K-12
       entry_status: REVIEWED
       retrieved_on: '2026-08-24'
-      entry_version: 207
+      entry_version: 208
       sequence_version: 3
       role: E. coli K-12 sigma-S factor directing stationary-phase and general-stress
         transcription; it anchors only this enterobacterial branch.
@@ -114,6 +133,25 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: RNA chaperone enabling sRNA-dependent translational regulation.
     grounding: InterPro:IPR005001
+    protein_examples:
+    - uniprot_id: UniProtKB:P0A1R0
+      protein_label: RNA-binding protein Hfq
+      gene_symbol: hfq
+      taxon_id: NCBITaxon:99287
+      taxon_label: Salmonella typhimurium (strain LT2 / SGSC1412 / ATCC 700720)
+      entry_status: REVIEWED
+      proteome_id: UP000001014
+      retrieved_on: '2026-10-17'
+      entry_version: 116
+      sequence_version: 2
+      role: Exemplar protein (hfq, RNA-binding protein Hfq) representing Hfq in Salmonella
+        typhimurium (strain LT2 / SGSC1412 / ATCC 700720) for stress response.
+      evidence:
+      - reference: DOI:10.1038/nrmicro3032
+        snippet: In response, bacteria activate elegant adaptive strategies
+        notes: Supports Hfq in stress response; UniProtKB:P0A1R0 (hfq, RNA-binding
+          protein Hfq) in Salmonella typhimurium (strain LT2 / SGSC1412 / ATCC 700720)
+          provides a verified protein exemplar.
   edges:
   - subject: environmental_stress
     predicate: causes
@@ -269,4 +307,12 @@ curation_history:
   changes: Marked the graph mechanistic and enterobacterial in scope, reviewed the
     heterogeneous RSH umbrella as label-only, grounded RpoS and Hfq to exact InterPro
     families, and added DOI-cited E. coli K-12 RpoS P13445.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:P13445
+    version metadata (entry_version=208, sequence_version=3); added UniProtKB:P0AG20
+    (relA) protein example to node rsh_enzymes; added UniProtKB:P0A1R0 (hfq) protein
+    example to node hfq.'
   llm_assisted: true

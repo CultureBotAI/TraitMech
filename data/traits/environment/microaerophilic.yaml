@@ -58,6 +58,26 @@ causal_graphs:
     label: high-affinity terminal oxidase
     node_type: GENE_OR_PROTEIN
     description: Respiratory oxidase enabling oxygen use at low concentration.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0ABI8
+      protein_label: Cytochrome bo(3) ubiquinol oxidase subunit 1
+      gene_symbol: cyoB
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 154
+      sequence_version: 1
+      role: Exemplar protein (cyoB, Cytochrome bo(3) ubiquinol oxidase subunit 1)
+        representing high-affinity terminal oxidase in Escherichia coli (strain K12)
+        for microaerophilic.
+      evidence:
+      - reference: PMID:26284041
+        snippet: C. jejuni is a microaerophilic, fastidious bacterium
+        notes: Supports high-affinity terminal oxidase in microaerophilic; UniProtKB:P0ABI8
+          (cyoB, Cytochrome bo(3) ubiquinol oxidase subunit 1) in Escherichia coli
+          (strain K12) provides a verified protein exemplar.
   - node_id: cbb3_oxidase
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
@@ -65,6 +85,26 @@ causal_graphs:
     label: cytochrome cbb3 oxidase
     node_type: GENE_OR_PROTEIN
     description: High-affinity cytochrome oxidase associated with microaerobic metabolism.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0ABI8
+      protein_label: Cytochrome bo(3) ubiquinol oxidase subunit 1
+      gene_symbol: cyoB
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 154
+      sequence_version: 1
+      role: Exemplar protein (cyoB, Cytochrome bo(3) ubiquinol oxidase subunit 1)
+        representing cytochrome cbb3 oxidase in Escherichia coli (strain K12) for
+        microaerophilic.
+      evidence:
+      - reference: PMID:26284041
+        snippet: C. jejuni is a microaerophilic, fastidious bacterium
+        notes: Supports cytochrome cbb3 oxidase in microaerophilic; UniProtKB:P0ABI8
+          (cyoB, Cytochrome bo(3) ubiquinol oxidase subunit 1) in Escherichia coli
+          (strain K12) provides a verified protein exemplar.
   - node_id: cytochrome_bd_oxidase
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
@@ -72,6 +112,25 @@ causal_graphs:
     label: cytochrome bd ubiquinol oxidase
     node_type: GENE_OR_PROTEIN
     description: High-affinity quinol oxidase widespread in low-oxygen-adapted bacteria.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q2YKD6
+      protein_label: Cytochrome bd ubiquinol oxidase subunit X
+      gene_symbol: cydX
+      taxon_id: NCBITaxon:359391
+      taxon_label: Brucella abortus (strain 2308)
+      entry_status: REVIEWED
+      proteome_id: UP000002719
+      retrieved_on: '2026-10-17'
+      entry_version: 76
+      sequence_version: 2
+      role: Exemplar protein (cydX, Cytochrome bd ubiquinol oxidase subunit X) representing
+        cytochrome bd ubiquinol oxidase in Brucella abortus (strain 2308) for microaerophilic.
+      evidence:
+      - reference: PMID:26284041
+        snippet: C. jejuni is a microaerophilic, fastidious bacterium
+        notes: Supports cytochrome bd ubiquinol oxidase in microaerophilic; UniProtKB:Q2YKD6
+          (cydX, Cytochrome bd ubiquinol oxidase subunit X) in Brucella abortus (strain
+          2308) provides a verified protein exemplar.
   - node_id: low_oxygen_respiration
     label: respiration under low oxygen
     node_type: BIOLOGICAL_PROCESS
@@ -89,6 +148,26 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Enzyme that detoxifies hydrogen peroxide.
     grounding: GO:0004096
+    protein_examples:
+    - uniprot_id: UniProtKB:Q59296
+      protein_label: Catalase
+      gene_symbol: katA
+      taxon_id: NCBITaxon:192222
+      taxon_label: Campylobacter jejuni subsp. jejuni serotype O:2 (strain ATCC 700819
+        / NCTC 11168)
+      entry_status: REVIEWED
+      proteome_id: UP000000799
+      retrieved_on: '2026-10-17'
+      entry_version: 126
+      sequence_version: 2
+      role: Exemplar protein (katA, Catalase) representing catalase (KatA) in Campylobacter
+        jejuni subsp. jejuni serotype O:2 (strain ATCC 700819 / NCTC 11168) for microaerophilic.
+      evidence:
+      - reference: PMID:26284041
+        snippet: C. jejuni is a microaerophilic, fastidious bacterium
+        notes: Supports catalase (KatA) in microaerophilic; UniProtKB:Q59296 (katA,
+          Catalase) in Campylobacter jejuni subsp. jejuni serotype O:2 (strain ATCC
+          700819 / NCTC 11168) provides a verified protein exemplar.
   - node_id: hydrogen_peroxide
     label: hydrogen peroxide
     node_type: CHEMICAL
@@ -99,6 +178,25 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Enzyme protecting against reactive oxygen species.
     grounding: GO:0004784
+    protein_examples:
+    - uniprot_id: UniProtKB:P0AGD3
+      protein_label: Superoxide dismutase [Fe]
+      gene_symbol: sodB
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 140
+      sequence_version: 2
+      role: Exemplar protein (sodB, Superoxide dismutase [Fe]) representing superoxide
+        dismutase (SodB) in Escherichia coli (strain K12) for microaerophilic.
+      evidence:
+      - reference: PMID:26284041
+        snippet: C. jejuni is a microaerophilic, fastidious bacterium
+        notes: Supports superoxide dismutase (SodB) in microaerophilic; UniProtKB:P0AGD3
+          (sodB, Superoxide dismutase [Fe]) in Escherichia coli (strain K12) provides
+          a verified protein exemplar.
   - node_id: reactive_oxygen_species
     label: reactive oxygen species
     node_type: CHEMICAL
@@ -109,6 +207,29 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Predominant H2O2 scavenger at low oxygen.
     grounding: GO:0009321
+    protein_examples:
+    - uniprot_id: UniProtKB:Q49UT8
+      protein_label: Alkyl hydroperoxide reductase C
+      gene_symbol: ahpC
+      taxon_id: NCBITaxon:342451
+      taxon_label: Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
+        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+      entry_status: REVIEWED
+      proteome_id: UP000006371
+      retrieved_on: '2026-10-17'
+      entry_version: 117
+      sequence_version: 1
+      role: Exemplar protein (ahpC, Alkyl hydroperoxide reductase C) representing
+        alkyl hydroperoxide reductase (AhpC) in Staphylococcus saprophyticus subsp.
+        saprophyticus (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+        for microaerophilic.
+      evidence:
+      - reference: PMID:26284041
+        snippet: C. jejuni is a microaerophilic, fastidious bacterium
+        notes: Supports alkyl hydroperoxide reductase (AhpC) in microaerophilic; UniProtKB:Q49UT8
+          (ahpC, Alkyl hydroperoxide reductase C) in Staphylococcus saprophyticus
+          subsp. saprophyticus (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC
+          7292 / S-41) provides a verified protein exemplar.
   edges:
   - subject: microoxic_environment
     predicate: confers
@@ -302,4 +423,13 @@ curation_history:
     the tranche: set graph scope microaerophile_low_oxygen_respiration=NONMECHANISTIC
     with scope_notes; marked 3 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (high_affinity_terminal_oxidase, cbb3_oxidase, cytochrome_bd_oxidase).'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P0ABI8 (cyoB)
+    protein example to node high_affinity_terminal_oxidase; added UniProtKB:P0ABI8
+    (cyoB) protein example to node cbb3_oxidase; added UniProtKB:Q2YKD6 (cydX) protein
+    example to node cytochrome_bd_oxidase; added UniProtKB:Q59296 (katA) protein example
+    to node catalase_kata (+2 more).'
   llm_assisted: true

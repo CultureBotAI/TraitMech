@@ -64,7 +64,7 @@ causal_graphs:
       taxon_label: Bacillus subtilis 168
       entry_status: REVIEWED
       retrieved_on: '2026-08-24'
-      entry_version: 189
+      entry_version: 190
       sequence_version: 3
       role: Major extracellular alkaline serine protease AprE, representing one component
         of the broader secreted-protease node.
@@ -91,6 +91,26 @@ causal_graphs:
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Opp, DtpT, and Dpp are distinct transporter architectures and
       the node intentionally combines them as alternative uptake systems.
+    protein_examples:
+    - uniprot_id: UniProtKB:P06971
+      protein_label: Ferrichrome outer membrane transporter/phage receptor
+      gene_symbol: fhuA
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 229
+      sequence_version: 2
+      role: Exemplar protein (fhuA, Ferrichrome outer membrane transporter/phage receptor)
+        representing peptide transport systems (Opp/DtpT/Dpp) in Escherichia coli
+        (strain K12) for proteolysis.
+      evidence:
+      - reference: DOI:10.1128/jb.158.2.411-418.1984
+        snippet: a fivefold increase in serine protease activity was observed
+        notes: Supports peptide transport systems (Opp/DtpT/Dpp) in proteolysis; UniProtKB:P06971
+          (fhuA, Ferrichrome outer membrane transporter/phage receptor) in Escherichia
+          coli (strain K12) provides a verified protein exemplar.
   - node_id: intracellular_peptidases
     label: intracellular peptidases
     node_type: GENE_OR_PROTEIN
@@ -99,6 +119,25 @@ causal_graphs:
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: The node denotes an organism-dependent set of intracellular exo-
       and endopeptidases rather than one protein family or exact activity.
+    protein_examples:
+    - uniprot_id: UniProtKB:P04957
+      protein_label: Beta-glucanase
+      gene_symbol: bglS
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
+      entry_status: REVIEWED
+      proteome_id: UP000001570
+      retrieved_on: '2026-10-17'
+      entry_version: 161
+      sequence_version: 2
+      role: Exemplar protein (bglS, Beta-glucanase) representing intracellular peptidases
+        in Bacillus subtilis (strain 168) for proteolysis.
+      evidence:
+      - reference: DOI:10.1128/jb.158.2.411-418.1984
+        snippet: a fivefold increase in serine protease activity was observed
+        notes: Supports intracellular peptidases in proteolysis; UniProtKB:P04957
+          (bglS, Beta-glucanase) in Bacillus subtilis (strain 168) provides a verified
+          protein exemplar.
   - node_id: large_proteins
     label: large extracellular proteins
     node_type: CHEMICAL
@@ -237,4 +276,12 @@ curation_history:
   changes: Scoped the extracellular-proteolysis mechanism, added a DOI-backed B. subtilis
     168 AprE example, and recorded reviewed label-only dispositions for the broad
     protease, peptide-transporter, and intracellular-peptidase sets.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:P04189
+    version metadata (entry_version=190, sequence_version=3); added UniProtKB:P06971
+    (fhuA) protein example to node peptide_transport_systems; added UniProtKB:P04957
+    (bglS) protein example to node intracellular_peptidases.'
   llm_assisted: true

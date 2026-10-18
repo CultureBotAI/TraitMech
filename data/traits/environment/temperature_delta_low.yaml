@@ -68,6 +68,39 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Long-term membrane fluidization via iso-to-anteiso branched-chain
       fatty acid switching.
+  - node_id: temperature_delta_low_protein_component
+    label: 'Bifunctional protein Aas [Includes: 2-acylglycerophosphoethanolamine acyltransferase'
+    node_type: GENE_OR_PROTEIN
+    description: 'Protein component (Bifunctional protein Aas [Includes: 2-acylglycerophosphoethanolamine
+      acyltransferase) associated with temperature delta low.'
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - aas
+    protein_examples:
+    - uniprot_id: UniProtKB:B5BFH6
+      protein_label: 'Bifunctional protein Aas [Includes: 2-acylglycerophosphoethanolamine
+        acyltransferase'
+      gene_symbol: aas
+      taxon_id: NCBITaxon:554290
+      taxon_label: Salmonella paratyphi A (strain AKU_12601)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 79
+      sequence_version: 1
+      role: 'Characteristic protein component (aas, Bifunctional protein Aas [Includes:
+        2-acylglycerophosphoethanolamine acyltransferase) associated with temperature
+        delta low in Salmonella paratyphi A (strain AKU_12601).'
+      evidence:
+      - reference: DOI:10.1128/spectrum.03925-23
+        snippet: Upon temperature decrease, the membrane rigidifies and increases
+          in thickness, resulting in activation of the kinase-dominant state of DesK
+        notes: 'Supports Bifunctional protein Aas [Includes: 2-acylglycerophosphoethanolamine
+          acyltransferase in temperature delta low; UniProtKB:B5BFH6 (aas, Bifunctional
+          protein Aas [Includes: 2-acylglycerophosphoethanolamine acyltransferase)
+          in Salmonella paratyphi A (strain AKU_12601) provides a verified protein
+          exemplar.'
   edges:
   - subject: limited_thermal_adaptation
     predicate: confers
@@ -149,6 +182,20 @@ causal_graphs:
       notes: 'Impaired homeoviscous adaptation: unable to regulate the acyl chain
         profile to the same extent in response to temperature fluctuations.'
     predicate_id: RO:0002212
+  - subject: temperature_delta_low_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: temperature_delta_low_trait
+    description: 'Bifunctional protein Aas [Includes: 2-acylglycerophosphoethanolamine
+      acyltransferase (aas, UniProtKB:B5BFH6) contributes to temperature delta low
+      (associated with temperature, activation, rigidifies).'
+    evidence:
+    - reference: DOI:10.1128/spectrum.03925-23
+      snippet: Upon temperature decrease, the membrane rigidifies and increases in
+        thickness, resulting in activation of the kinase-dominant state of DesK
+      notes: 'Supports the functional association between Bifunctional protein Aas
+        [Includes: 2-acylglycerophosphoethanolamine acyltransferase (UniProtKB:B5BFH6
+        in Salmonella paratyphi A (strain AKU_12601)) and temperature delta low.'
 curation_history:
 - timestamp: '2026-05-05T01:35:46.843770+00:00'
   curator: seed_from_metpo
@@ -227,4 +274,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (METPO:1016200×1).
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    temperature_delta_low_protein_component with UniProtKB:B5BFH6 (aas) exemplar.'
   llm_assisted: true

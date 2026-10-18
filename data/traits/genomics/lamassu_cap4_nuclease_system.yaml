@@ -91,6 +91,40 @@ causal_graphs:
     node_type: TRAIT
     grounding: traitmech:000232
     description: Possession of a genome-encoded Lamassu phage-defense system.
+  - node_id: lamassu_cap4_nuclease_system_protein_component
+    label: Lamassu protein LmuB
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Lamassu protein LmuB) associated with Lamassu-Cap4
+      nuclease system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - lmuB
+    protein_examples:
+    - uniprot_id: UniProtKB:P0DW44
+      protein_label: Lamassu protein LmuB
+      gene_symbol: lmuB
+      taxon_id: NCBITaxon:1761765
+      taxon_label: Bacillus sp. (strain NCIM 5461 / CCTCC AB 2011126 / NIO-1130)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 8
+      sequence_version: 1
+      role: Characteristic protein component (lmuB, Lamassu protein LmuB) associated
+        with Lamassu-Cap4 nuclease system in Bacillus sp. (strain NCIM 5461 / CCTCC
+        AB 2011126 / NIO-1130).
+      evidence:
+      - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+        snippet: Lamassu-Fam Lamassu-Hydrolase 2 2 Lamassu-Fam__LmuA_effector_Hydrolase,
+          Lamassu-Fam__LmuB_SMC_Cap4_nuclease_II Lamassu-Fam__LmuC_acc_Lipase Lamassu-Fam__LmuA_effector_Amidase,
+          Lamassu-Fam__LmuA_effector_Cap4_nuclease, Lamassu-Fam__LmuA_effector_Cap4_nuclease_II,
+          Lamassu-Fam__LmuA_effector_FMO, Lamassu-Fam__LmuA_effector_Lipase, Lamassu-Fam__LmuA_effector_Mrr,
+          Lamassu-Fam__LmuA_effector_PDDEXK, Lamassu-Fam__LmuA_effector_Protease,
+          Lamassu-Fam__LmuA_effector_Sir2, Lamassu-Fam__LmuA_effector_hypothetical
+        notes: Supports Lamassu protein LmuB in Lamassu-Cap4 nuclease system; UniProtKB:P0DW44
+          (lmuB, Lamassu protein LmuB) in Bacillus sp. (strain NCIM 5461 / CCTCC AB
+          2011126 / NIO-1130) provides a verified protein exemplar.
   edges:
   - subject: lamassu_cap4_nuclease_locus
     predicate: contributes to
@@ -158,6 +192,23 @@ causal_graphs:
       notes: The pinned DefenseFinder rules table places the Lamassu-Cap4_nuclease
         subsystem under the Lamassu-Fam system key with 2 mandatory matches and 2
         genes required.
+  - subject: lamassu_cap4_nuclease_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: lamassu_cap4_nuclease_system_trait
+    description: Lamassu protein LmuB (lmuB, UniProtKB:P0DW44) contributes to Lamassu-Cap4
+      nuclease system (associated with hydrolase, effector, nuclease).
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: Lamassu-Fam Lamassu-Hydrolase 2 2 Lamassu-Fam__LmuA_effector_Hydrolase,
+        Lamassu-Fam__LmuB_SMC_Cap4_nuclease_II Lamassu-Fam__LmuC_acc_Lipase Lamassu-Fam__LmuA_effector_Amidase,
+        Lamassu-Fam__LmuA_effector_Cap4_nuclease, Lamassu-Fam__LmuA_effector_Cap4_nuclease_II,
+        Lamassu-Fam__LmuA_effector_FMO, Lamassu-Fam__LmuA_effector_Lipase, Lamassu-Fam__LmuA_effector_Mrr,
+        Lamassu-Fam__LmuA_effector_PDDEXK, Lamassu-Fam__LmuA_effector_Protease, Lamassu-Fam__LmuA_effector_Sir2,
+        Lamassu-Fam__LmuA_effector_hypothetical
+      notes: Supports the functional association between Lamassu protein LmuB (UniProtKB:P0DW44
+        in Bacillus sp. (strain NCIM 5461 / CCTCC AB 2011126 / NIO-1130)) and Lamassu-Cap4
+        nuclease system.
 discussions:
 - discussion_id: lamassu-cap4-nuclease-activity-gap
   prompt: Resolve Lamassu-Cap4 nuclease phage triggers, native hosts, Cap4 nuclease
@@ -218,4 +269,10 @@ curation_history:
     subtype but not an accession-backed native microbial taxon exemplar tied to the
     Lamassu-Cap4_nuclease profiles and experimentally verified endogenous activity.
     No paid research was used.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    lamassu_cap4_nuclease_system_protein_component with UniProtKB:P0DW44 (lmuB) exemplar.'
   llm_assisted: true

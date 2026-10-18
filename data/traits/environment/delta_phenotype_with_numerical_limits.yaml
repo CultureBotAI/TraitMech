@@ -87,6 +87,37 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Central metabolic network whose key metabolite levels are buffered
       across a wide temperature range.
+  - node_id: delta_phenotype_with_numerical_limits_protein_component
+    label: sn-1 oleoyl-lipid 12-desaturase
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (sn-1 oleoyl-lipid 12-desaturase) associated with
+      delta phenotype with numerical limits.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - desA
+    protein_examples:
+    - uniprot_id: UniProtKB:Q55231
+      protein_label: sn-1 oleoyl-lipid 12-desaturase
+      gene_symbol: desA
+      taxon_id: NCBITaxon:32049
+      taxon_label: Picosynechococcus sp. (strain ATCC 27264 / PCC 7002 / PR-6) (Agmenellum
+        quadruplicatum)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 127
+      sequence_version: 1
+      role: Characteristic protein component (desA, sn-1 oleoyl-lipid 12-desaturase)
+        associated with delta phenotype with numerical limits in Picosynechococcus
+        sp. (strain ATCC 27264 / PCC 7002 / PR-6) (Agmenellum quadruplicatum).
+      evidence:
+      - reference: DOI:10.1016/s0300-9629(97)00003-0
+        snippet: changes in the membrane lipid composition
+        notes: Supports sn-1 oleoyl-lipid 12-desaturase in delta phenotype with numerical
+          limits; UniProtKB:Q55231 (desA, sn-1 oleoyl-lipid 12-desaturase) in Picosynechococcus
+          sp. (strain ATCC 27264 / PCC 7002 / PR-6) (Agmenellum quadruplicatum) provides
+          a verified protein exemplar.
   edges:
   - subject: numerical_environmental_axis
     predicate: defines
@@ -176,6 +207,19 @@ causal_graphs:
       notes: Different growth temperatures induce broad transcriptional changes, yet
         most key central metabolites show overlapping trends via intense regulatory-metabolic
         cross talk; maintenance across 0 and 15C.
+  - subject: delta_phenotype_with_numerical_limits_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: delta_phenotype_trait
+    description: sn-1 oleoyl-lipid 12-desaturase (desA, UniProtKB:Q55231) contributes
+      to delta phenotype with numerical limits (associated with composition, membrane,
+      changes).
+    evidence:
+    - reference: DOI:10.1016/s0300-9629(97)00003-0
+      snippet: changes in the membrane lipid composition
+      notes: Supports the functional association between sn-1 oleoyl-lipid 12-desaturase
+        (UniProtKB:Q55231 in Picosynechococcus sp. (strain ATCC 27264 / PCC 7002 /
+        PR-6) (Agmenellum quadruplicatum)) and delta phenotype with numerical limits.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.847283+00:00'
   curator: seed_from_metpo
@@ -242,4 +286,11 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (METPO:1016200×1).
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    delta_phenotype_with_numerical_limits_protein_component with UniProtKB:Q55231
+    (desA) exemplar.'
   llm_assisted: true

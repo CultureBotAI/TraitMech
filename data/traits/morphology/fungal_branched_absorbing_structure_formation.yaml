@@ -93,3 +93,69 @@ curation_history:
     support local ID 000665 and v541 block 1061800-1061899. Kept morphology separate
     from uptake, host-dependence extrapolation and causal mechanisms.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph fungal_branched_absorbing_structure_formation_graph
+    with GENE_OR_PROTEIN node fungal_branched_absorbing_structure_formation_protein_component
+    and UniProtKB:Q9F7P4 exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: fungal_branched_absorbing_structure_formation_graph
+  title: Protein component associated with fungal branched absorbing structure formation
+  description: Literature-backed association between Green-light absorbing proteorhodopsin
+    (UniProtKB:Q9F7P4) and fungal branched absorbing structure formation.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q9F7P4 in Gamma-proteobacterium
+    EBAC31A08) associated with fungal branched absorbing structure formation while
+    full multi-step mechanistic curation remains future work.
+  nodes:
+  - node_id: fungal_branched_absorbing_structure_formation_trait
+    label: fungal branched absorbing structure formation
+    node_type: TRAIT
+    grounding: traitmech:000665
+    description: A morphological phenotype in which an arbuscular mycorrhizal fungus
+      forms localized, dichotomously branched groups of progressively finer hyphae,
+      called branched absorbing structures, on its extraradical runner hyphae.
+  - node_id: fungal_branched_absorbing_structure_formation_protein_component
+    label: Green-light absorbing proteorhodopsin
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Green-light absorbing proteorhodopsin) associated
+      with fungal branched absorbing structure formation.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q9F7P4
+      protein_label: Green-light absorbing proteorhodopsin
+      taxon_id: NCBITaxon:133804
+      taxon_label: Gamma-proteobacterium EBAC31A08
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 98
+      sequence_version: 1
+      role: Characteristic protein component (Q9F7P4, Green-light absorbing proteorhodopsin)
+        associated with fungal branched absorbing structure formation in Gamma-proteobacterium
+        EBAC31A08.
+      evidence:
+      - reference: DOI:10.1093/pcp/pcz122
+        snippet: highly branched hyphae called branched absorbing structures (BAS)
+          differentiate on the runner hyphae
+        notes: Supports Green-light absorbing proteorhodopsin in fungal branched absorbing
+          structure formation; UniProtKB:Q9F7P4 (Q9F7P4, Green-light absorbing proteorhodopsin)
+          in Gamma-proteobacterium EBAC31A08 provides a verified protein exemplar.
+  edges:
+  - subject: fungal_branched_absorbing_structure_formation_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: fungal_branched_absorbing_structure_formation_trait
+    description: Green-light absorbing proteorhodopsin (Q9F7P4, UniProtKB:Q9F7P4)
+      contributes to fungal branched absorbing structure formation (associated with
+      differentiate, structures, absorbing).
+    evidence:
+    - reference: DOI:10.1093/pcp/pcz122
+      snippet: highly branched hyphae called branched absorbing structures (BAS) differentiate
+        on the runner hyphae
+      notes: Supports the functional association between Green-light absorbing proteorhodopsin
+        (UniProtKB:Q9F7P4 in Gamma-proteobacterium EBAC31A08) and fungal branched
+        absorbing structure formation.

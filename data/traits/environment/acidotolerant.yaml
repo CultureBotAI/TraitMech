@@ -81,6 +81,40 @@ causal_graphs:
     node_type: MOLECULAR_FUNCTION
     description: Na+/H+ and K+/H+ antiporter activity exchanging cations for protons
       to stabilize intracellular pH.
+  - node_id: acidotolerant_protein_component
+    label: Na(+)/H(+) antiporter subunit A
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Na(+)/H(+) antiporter subunit A) associated with
+      acidotolerant.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - mrpA
+    protein_examples:
+    - uniprot_id: UniProtKB:Q9RGZ5
+      protein_label: Na(+)/H(+) antiporter subunit A
+      gene_symbol: mrpA
+      taxon_id: NCBITaxon:398511
+      taxon_label: Alkalihalophilus pseudofirmus (strain ATCC BAA-2126 / JCM 17055
+        / OF4) (Bacillus pseudofirmus)
+      entry_status: REVIEWED
+      proteome_id: UP000001544
+      retrieved_on: '2026-10-17'
+      entry_version: 115
+      sequence_version: 2
+      role: Characteristic protein component (mrpA, Na(+)/H(+) antiporter subunit
+        A) associated with acidotolerant in Alkalihalophilus pseudofirmus (strain
+        ATCC BAA-2126 / JCM 17055 / OF4) (Bacillus pseudofirmus).
+      evidence:
+      - reference: DOI:10.1038/nrmicro2549
+        snippet: For pH homeostasis under alkaline conditions, active transport of
+          protons inward is a crucial adaptation, which usually involves activation
+          and transcriptional up-regulation of key cation/proton antiporters
+        notes: Supports Na(+)/H(+) antiporter subunit A in acidotolerant; UniProtKB:Q9RGZ5
+          (mrpA, Na(+)/H(+) antiporter subunit A) in Alkalihalophilus pseudofirmus
+          (strain ATCC BAA-2126 / JCM 17055 / OF4) (Bacillus pseudofirmus) provides
+          a verified protein exemplar.
   edges:
   - subject: acidic_exposure
     predicate: challenges
@@ -169,6 +203,20 @@ causal_graphs:
       notes: Na+/H+ and K+/H+ antiporters support cytoplasmic pH control; generic
         across bacteria.
     predicate_id: RO:0002326
+  - subject: acidotolerant_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: acidotolerant_trait
+    description: Na(+)/H(+) antiporter subunit A (mrpA, UniProtKB:Q9RGZ5) contributes
+      to acidotolerant (associated with transcriptional, antiporters, homeostasis).
+    evidence:
+    - reference: DOI:10.1038/nrmicro2549
+      snippet: For pH homeostasis under alkaline conditions, active transport of protons
+        inward is a crucial adaptation, which usually involves activation and transcriptional
+        up-regulation of key cation/proton antiporters
+      notes: Supports the functional association between Na(+)/H(+) antiporter subunit
+        A (UniProtKB:Q9RGZ5 in Alkalihalophilus pseudofirmus (strain ATCC BAA-2126
+        / JCM 17055 / OF4) (Bacillus pseudofirmus)) and acidotolerant.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.941434+00:00'
   curator: seed_from_metpo
@@ -272,4 +320,10 @@ curation_history:
     tranche of 2026-08-24/25, which shipped without a per-record event. In this record
     the tranche: set graph scope acidotolerant_acid_stress_homeostasis=NONMECHANISTIC
     with scope_notes.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    acidotolerant_protein_component with UniProtKB:Q9RGZ5 (mrpA) exemplar.'
   llm_assisted: true

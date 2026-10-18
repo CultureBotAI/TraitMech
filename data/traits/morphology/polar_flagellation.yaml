@@ -23,6 +23,13 @@ curation_history:
     flagellar-arrangement evidence after a repository-wide duplicate review covering
     ignored and hidden files.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph polar_flagellation_graph
+    with GENE_OR_PROTEIN node polar_flagellation_protein_component and UniProtKB:O52908
+    exemplar.'
+  llm_assisted: true
 definition_source: DOI:10.1093/femsre/fuv034
 evidence:
 - reference: DOI:10.1093/femsre/fuv034
@@ -46,3 +53,67 @@ canonical_examples:
   note: Kojima et al. describe V. alginolyticus as a marine bacterium with a single
     polar flagellum.
   reference: DOI:10.3390/biom10040533
+causal_graphs:
+- graph_id: polar_flagellation_graph
+  title: Protein component associated with polar flagellation
+  description: Literature-backed association between Flagellar biosynthesis protein
+    FlhF (UniProtKB:O52908) and polar flagellation.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:O52908 in Campylobacter
+    jejuni subsp. jejuni serotype O:2 (strain ATCC 700819 / NCTC 11168)) associated
+    with polar flagellation while full multi-step mechanistic curation remains future
+    work.
+  nodes:
+  - node_id: polar_flagellation_trait
+    label: polar flagellation
+    node_type: TRAIT
+    grounding: METPO:1005032
+    description: A motility phenotype in which one or more flagella are located at
+      one or both poles of the cell.
+  - node_id: polar_flagellation_protein_component
+    label: Flagellar biosynthesis protein FlhF
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Flagellar biosynthesis protein FlhF) associated
+      with polar flagellation.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - flhF
+    protein_examples:
+    - uniprot_id: UniProtKB:O52908
+      protein_label: Flagellar biosynthesis protein FlhF
+      gene_symbol: flhF
+      taxon_id: NCBITaxon:192222
+      taxon_label: Campylobacter jejuni subsp. jejuni serotype O:2 (strain ATCC 700819
+        / NCTC 11168)
+      entry_status: REVIEWED
+      proteome_id: UP000000799
+      retrieved_on: '2026-10-17'
+      entry_version: 144
+      sequence_version: 2
+      role: Characteristic protein component (flhF, Flagellar biosynthesis protein
+        FlhF) associated with polar flagellation in Campylobacter jejuni subsp. jejuni
+        serotype O:2 (strain ATCC 700819 / NCTC 11168).
+      evidence:
+      - reference: DOI:10.3390/biom10040533
+        snippet: Some bacterial species, such as the marine bacterium Vibrio alginolyticus,
+          have a single polar flagellum that allows it to swim in liquid environments.
+        notes: Supports Flagellar biosynthesis protein FlhF in polar flagellation;
+          UniProtKB:O52908 (flhF, Flagellar biosynthesis protein FlhF) in Campylobacter
+          jejuni subsp. jejuni serotype O:2 (strain ATCC 700819 / NCTC 11168) provides
+          a verified protein exemplar.
+  edges:
+  - subject: polar_flagellation_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: polar_flagellation_trait
+    description: Flagellar biosynthesis protein FlhF (flhF, UniProtKB:O52908) contributes
+      to polar flagellation (associated with alginolyticus, environments, bacterium).
+    evidence:
+    - reference: DOI:10.3390/biom10040533
+      snippet: Some bacterial species, such as the marine bacterium Vibrio alginolyticus,
+        have a single polar flagellum that allows it to swim in liquid environments.
+      notes: Supports the functional association between Flagellar biosynthesis protein
+        FlhF (UniProtKB:O52908 in Campylobacter jejuni subsp. jejuni serotype O:2
+        (strain ATCC 700819 / NCTC 11168)) and polar flagellation.

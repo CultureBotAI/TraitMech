@@ -49,3 +49,74 @@ curation_history:
     has no exact naphthol-AS-BI-phosphohydrolase activity class yet and the placeholder
     is reserved in proposals/metpo_traitmech_v51.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph naphthol_as_bi_phosphohydrolase_activity_graph
+    with GENE_OR_PROTEIN node naphthol_as_bi_phosphohydrolase_activity_protein_component
+    and UniProtKB:P39914 exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: naphthol_as_bi_phosphohydrolase_activity_graph
+  title: Protein component associated with naphthol-AS-BI-phosphohydrolase activity
+  description: Literature-backed association between Monothiol bacilliredoxin BrxC
+    (UniProtKB:P39914) and naphthol-AS-BI-phosphohydrolase activity.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P39914 in Bacillus
+    subtilis (strain 168)) associated with naphthol-AS-BI-phosphohydrolase activity
+    while full multi-step mechanistic curation remains future work.
+  nodes:
+  - node_id: naphthol_as_bi_phosphohydrolase_activity_trait
+    label: naphthol-AS-BI-phosphohydrolase activity
+    node_type: TRAIT
+    grounding: traitmech:000174
+    description: A physiological enzyme-activity phenotype in which a cell produces
+      active phosphohydrolases that hydrolyze naphthol-AS-BI-phosphate substrates.
+  - node_id: naphthol_as_bi_phosphohydrolase_activity_protein_component
+    label: Monothiol bacilliredoxin BrxC
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Monothiol bacilliredoxin BrxC) associated with
+      naphthol-AS-BI-phosphohydrolase activity.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - brxC
+    protein_examples:
+    - uniprot_id: UniProtKB:P39914
+      protein_label: Monothiol bacilliredoxin BrxC
+      gene_symbol: brxC
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
+      entry_status: REVIEWED
+      proteome_id: UP000001570
+      retrieved_on: '2026-10-17'
+      entry_version: 128
+      sequence_version: 1
+      role: Characteristic protein component (brxC, Monothiol bacilliredoxin BrxC)
+        associated with naphthol-AS-BI-phosphohydrolase activity in Bacillus subtilis
+        (strain 168).
+      evidence:
+      - reference: DOI:10.1128/JCM.43.8.3713-3717.2005
+        snippet: Alkaline phosphatase, esterase (C4), esterase lipase (C8), leucine
+          arylamidase, acid phosphatase, and naphthol-AS-BI-phosphohydrolase were
+          clearly positive
+        notes: Supports Monothiol bacilliredoxin BrxC in naphthol-AS-BI-phosphohydrolase
+          activity; UniProtKB:P39914 (brxC, Monothiol bacilliredoxin BrxC) in Bacillus
+          subtilis (strain 168) provides a verified protein exemplar.
+  edges:
+  - subject: naphthol_as_bi_phosphohydrolase_activity_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: naphthol_as_bi_phosphohydrolase_activity_trait
+    description: Monothiol bacilliredoxin BrxC (brxC, UniProtKB:P39914) contributes
+      to naphthol-AS-BI-phosphohydrolase activity (associated with phosphohydrolase,
+      arylamidase, phosphatase).
+    evidence:
+    - reference: DOI:10.1128/JCM.43.8.3713-3717.2005
+      snippet: Alkaline phosphatase, esterase (C4), esterase lipase (C8), leucine
+        arylamidase, acid phosphatase, and naphthol-AS-BI-phosphohydrolase were clearly
+        positive
+      notes: Supports the functional association between Monothiol bacilliredoxin
+        BrxC (UniProtKB:P39914 in Bacillus subtilis (strain 168)) and naphthol-AS-BI-phosphohydrolase
+        activity.

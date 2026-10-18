@@ -62,7 +62,7 @@ causal_graphs:
       entry_status: REVIEWED
       proteome_id: UP000002429
       retrieved_on: '2026-08-25'
-      entry_version: 153
+      entry_version: 154
       sequence_version: 3
       role: CzcA is the inner-membrane transporter component of the CH34 CzcCBA pump
         exporting cadmium, zinc, and cobalt.
@@ -86,6 +86,28 @@ causal_graphs:
     label: metallothionein / thiol-rich metal-binding proteins
     node_type: GENE_OR_PROTEIN
     description: Cysteine-rich proteins that bind and sequester cytoplasmic Cd(2+).
+    protein_examples:
+    - uniprot_id: UniProtKB:A4N8V8
+      protein_label: Putative metal ABC transporter substrate-binding protein Hpf
+      gene_symbol: hpf
+      taxon_id: NCBITaxon:375177
+      taxon_label: Haemophilus influenzae (strain NTHi 3655)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 60
+      sequence_version: 1
+      role: Exemplar protein (hpf, Putative metal ABC transporter substrate-binding
+        protein Hpf) representing metallothionein / thiol-rich metal-binding proteins
+        in Haemophilus influenzae (strain NTHi 3655) for cadmium tolerant.
+      evidence:
+      - reference: DOI:10.3389/fmicb.2020.00047
+        snippet: This metallophilic strain BS1, harbors numerous gene clusters encoding
+          metal-resistance determinants enabling detoxification of transition metal
+          ions and complexes
+        notes: Supports metallothionein / thiol-rich metal-binding proteins in cadmium
+          tolerant; UniProtKB:A4N8V8 (hpf, Putative metal ABC transporter substrate-binding
+          protein Hpf) in Haemophilus influenzae (strain NTHi 3655) provides a verified
+          protein exemplar.
   - node_id: cadmium_sequestration
     label: cadmium ion sequestration
     node_type: BIOLOGICAL_PROCESS
@@ -99,6 +121,25 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: ATP-driven P1B-type efflux ATPase pumping Cd(II) from cytoplasm to
       periplasm.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0A9H3
+      protein_label: Inducible lysine decarboxylase
+      gene_symbol: cadA
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 145
+      sequence_version: 1
+      role: Exemplar protein (cadA, Inducible lysine decarboxylase) representing CadA
+        P-type (P1B) ATPase in Escherichia coli (strain K12) for cadmium tolerant.
+      evidence:
+      - reference: DOI:10.1111/j.1365-2958.2009.06792.x
+        snippet: Czc machinery exports cadmium, zinc, and cobalt
+        notes: Supports CadA P-type (P1B) ATPase in cadmium tolerant; UniProtKB:P0A9H3
+          (cadA, Inducible lysine decarboxylase) in Escherichia coli (strain K12)
+          provides a verified protein exemplar.
   - node_id: zinc_ion
     label: zinc(2+) ion
     node_type: CHEMICAL
@@ -220,4 +261,12 @@ curation_history:
     metallothionein_proteins, cada_ptype_atpase); added taxon-paired protein example(s)
     UniProtKB:P13511 on czc_efflux_system (NCBITaxon:266264); added canonical example(s)
     NCBITaxon:266264.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:P13511
+    version metadata (entry_version=154, sequence_version=3); added UniProtKB:A4N8V8
+    (hpf) protein example to node metallothionein_proteins; added UniProtKB:P0A9H3
+    (cadA) protein example to node cada_ptype_atpase.'
   llm_assisted: true

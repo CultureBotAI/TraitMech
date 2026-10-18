@@ -61,6 +61,36 @@ causal_graphs:
     description: Gas-vesicle-mediated capacity for upward flotation or water-column
       positioning.
     grounding: traitmech:000528
+  - node_id: cellular_buoyancy_protein_component
+    label: Gas vesicle protein C
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Gas vesicle protein C) associated with cellular
+      buoyancy.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - gvpC
+    protein_examples:
+    - uniprot_id: UniProtKB:Q8YUS9
+      protein_label: Gas vesicle protein C
+      gene_symbol: gvpC
+      taxon_id: NCBITaxon:103690
+      taxon_label: Nostoc sp. (strain PCC 7120 / SAG 25.82 / UTEX 2576)
+      entry_status: REVIEWED
+      proteome_id: UP000002483
+      retrieved_on: '2026-10-17'
+      entry_version: 100
+      sequence_version: 1
+      role: Characteristic protein component (gvpC, Gas vesicle protein C) associated
+        with cellular buoyancy in Nostoc sp. (strain PCC 7120 / SAG 25.82 / UTEX 2576).
+      evidence:
+      - reference: DOI:10.1186/s13036-024-00426-3
+        snippet: The gas vesicle (GV) is like a hollow nanoparticle consisting of
+          an internal gas and a protein shell
+        notes: Supports Gas vesicle protein C in cellular buoyancy; UniProtKB:Q8YUS9
+          (gvpC, Gas vesicle protein C) in Nostoc sp. (strain PCC 7120 / SAG 25.82
+          / UTEX 2576) provides a verified protein exemplar.
   edges:
   - subject: gas_vesicle_shell
     predicate: part of
@@ -91,6 +121,18 @@ causal_graphs:
         for photosynthesis
       notes: Feng et al. describe gas vesicles giving photosynthetic bacteria buoyancy
         to move upward toward sufficient light.
+  - subject: cellular_buoyancy_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: cellular_buoyancy_trait
+    description: Gas vesicle protein C (gvpC, UniProtKB:Q8YUS9) contributes to cellular
+      buoyancy (associated with approximately, buoyancy, occupied).
+    evidence:
+    - reference: DOI:10.3390/life12091455
+      snippet: Approximately 3–10% of the cell volume must be occupied by gas vesicles
+        to provide buoyancy
+      notes: Supports the functional association between Gas vesicle protein C (UniProtKB:Q8YUS9
+        in Nostoc sp. (strain PCC 7120 / SAG 25.82 / UTEX 2576)) and cellular buoyancy.
 discussions:
 - discussion_id: cellular-buoyancy-xref-gap
   prompt: Resolve exact external ontology xrefs for gas-vesicle-mediated cellular
@@ -111,4 +153,10 @@ curation_history:
     ignored-and-hidden duplicate review found no exact same-scope TraitMech, METPO,
     history, or prior proposal record; the replacement placeholder is reserved in
     proposals/metpo_traitmech_v405.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    cellular_buoyancy_protein_component with UniProtKB:Q8YUS9 (gvpC) exemplar.'
   llm_assisted: true

@@ -137,3 +137,68 @@ curation_history:
     motility scope. Preserved the broad size-based definition, evidence, canonical
     example, parent and remaining open mapping questions.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph anisogamy_graph
+    with GENE_OR_PROTEIN node anisogamy_protein_component and UniProtKB:B5BJ71 exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: anisogamy_graph
+  title: Protein component associated with anisogamy
+  description: Literature-backed association between tRNA-cytidine(32) 2-sulfurtransferase
+    (UniProtKB:B5BJ71) and anisogamy.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:B5BJ71 in Salmonella
+    paratyphi A (strain AKU_12601)) associated with anisogamy while full multi-step
+    mechanistic curation remains future work.
+  nodes:
+  - node_id: anisogamy_trait
+    label: anisogamy
+    node_type: TRAIT
+    grounding: traitmech:000620
+    description: A sexual-reproduction phenotype in which the fusing gametes belong
+      to two types that differ in size, with smaller male and larger female gametes.
+  - node_id: anisogamy_protein_component
+    label: tRNA-cytidine(32) 2-sulfurtransferase
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (tRNA-cytidine(32) 2-sulfurtransferase) associated
+      with anisogamy.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - ttcA
+    protein_examples:
+    - uniprot_id: UniProtKB:B5BJ71
+      protein_label: tRNA-cytidine(32) 2-sulfurtransferase
+      gene_symbol: ttcA
+      taxon_id: NCBITaxon:554290
+      taxon_label: Salmonella paratyphi A (strain AKU_12601)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 73
+      sequence_version: 1
+      role: Characteristic protein component (ttcA, tRNA-cytidine(32) 2-sulfurtransferase)
+        associated with anisogamy in Salmonella paratyphi A (strain AKU_12601).
+      evidence:
+      - reference: DOI:10.1186/1471-2148-14-37
+        snippet: Obligately anisogamous conjugation between male and female motile
+          gametes occurred outside the female colony (external fertilization during
+          anisogamy).
+        notes: Supports tRNA-cytidine(32) 2-sulfurtransferase in anisogamy; UniProtKB:B5BJ71
+          (ttcA, tRNA-cytidine(32) 2-sulfurtransferase) in Salmonella paratyphi A
+          (strain AKU_12601) provides a verified protein exemplar.
+  edges:
+  - subject: anisogamy_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: anisogamy_trait
+    description: tRNA-cytidine(32) 2-sulfurtransferase (ttcA, UniProtKB:B5BJ71) contributes
+      to anisogamy (associated with fertilization, anisogamous, conjugation).
+    evidence:
+    - reference: DOI:10.1186/1471-2148-14-37
+      snippet: Obligately anisogamous conjugation between male and female motile gametes
+        occurred outside the female colony (external fertilization during anisogamy).
+      notes: Supports the functional association between tRNA-cytidine(32) 2-sulfurtransferase
+        (UniProtKB:B5BJ71 in Salmonella paratyphi A (strain AKU_12601)) and anisogamy.

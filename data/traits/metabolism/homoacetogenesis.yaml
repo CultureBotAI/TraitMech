@@ -107,6 +107,26 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Enzyme reducing CO2 to formate in the methyl branch.
     grounding: GO:0009326
+    protein_examples:
+    - uniprot_id: UniProtKB:P33160
+      protein_label: Formate dehydrogenase
+      taxon_id: NCBITaxon:33067
+      taxon_label: Pseudomonas sp. (strain 101) (Achromobacter parvulus T1)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 129
+      sequence_version: 3
+      role: Exemplar protein (P33160, Formate dehydrogenase) representing formate
+        dehydrogenase in Pseudomonas sp. (strain 101) (Achromobacter parvulus T1)
+        for Homoacetogenesis.
+      evidence:
+      - reference: DOI:10.1016/j.bbapap.2008.08.012
+        snippet: use the reductive acetyl-CoA or Wood-Ljungdahl pathway as their main
+          mechanism for energy conservation and for synthesis of acetyl-CoA and cell
+          carbon from CO2
+        notes: Supports formate dehydrogenase in Homoacetogenesis; UniProtKB:P33160
+          (P33160, Formate dehydrogenase) in Pseudomonas sp. (strain 101) (Achromobacter
+          parvulus T1) provides a verified protein exemplar.
   - node_id: formyl_thf
     label: formyl-tetrahydrofolate
     node_type: CHEMICAL
@@ -116,6 +136,27 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Formate--tetrahydrofolate ligase converting formate to formyl-THF.
     grounding: GO:0004329
+    protein_examples:
+    - uniprot_id: UniProtKB:P21164
+      protein_label: Formate--tetrahydrofolate ligase
+      gene_symbol: fhs
+      taxon_id: NCBITaxon:1525
+      taxon_label: Neomoorella thermoacetica (Clostridium thermoaceticum)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 115
+      sequence_version: 1
+      role: Exemplar protein (fhs, Formate--tetrahydrofolate ligase) representing
+        formyl-THF synthetase (Fhs) in Neomoorella thermoacetica (Clostridium thermoaceticum)
+        for Homoacetogenesis.
+      evidence:
+      - reference: DOI:10.1016/j.bbapap.2008.08.012
+        snippet: use the reductive acetyl-CoA or Wood-Ljungdahl pathway as their main
+          mechanism for energy conservation and for synthesis of acetyl-CoA and cell
+          carbon from CO2
+        notes: Supports formyl-THF synthetase (Fhs) in Homoacetogenesis; UniProtKB:P21164
+          (fhs, Formate--tetrahydrofolate ligase) in Neomoorella thermoacetica (Clostridium
+          thermoaceticum) provides a verified protein exemplar.
   - node_id: methyl_branch
     label: methyl branch of WLP
     node_type: PATHWAY
@@ -140,7 +181,7 @@ causal_graphs:
       taxon_label: Neomoorella thermoacetica
       entry_status: REVIEWED
       retrieved_on: '2026-08-24'
-      entry_version: 125
+      entry_version: 126
       sequence_version: 1
       role: AcsB alpha component of CODH/ACS that forms acetyl-CoA; this accession
         is not presented as the complete complex.
@@ -156,6 +197,29 @@ causal_graphs:
     description: Enzyme generating ATP by substrate-level phosphorylation during acetate
       formation.
     grounding: GO:0008776
+    protein_examples:
+    - uniprot_id: UniProtKB:Q49YE2
+      protein_label: Acetate kinase
+      gene_symbol: ackA
+      taxon_id: NCBITaxon:342451
+      taxon_label: Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
+        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+      entry_status: REVIEWED
+      proteome_id: UP000006371
+      retrieved_on: '2026-10-17'
+      entry_version: 112
+      sequence_version: 1
+      role: Exemplar protein (ackA, Acetate kinase) representing acetate kinase in
+        Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC 15305 / DSM
+        20229 / NCIMB 8711 / NCTC 7292 / S-41) for Homoacetogenesis.
+      evidence:
+      - reference: DOI:10.1039/d4cb00099d
+        snippet: As part of the arginine deiminase (ADI) pathway, carbamate kinase
+          generates one ATP molecule
+        notes: Supports acetate kinase in Homoacetogenesis; UniProtKB:Q49YE2 (ackA,
+          Acetate kinase) in Staphylococcus saprophyticus subsp. saprophyticus (strain
+          ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) provides a verified
+          protein exemplar.
   - node_id: substrate_level_phosphorylation
     label: substrate-level phosphorylation
     node_type: BIOLOGICAL_PROCESS
@@ -168,6 +232,28 @@ causal_graphs:
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Rnf and Ech are distinct, taxon-dependent multisubunit alternatives;
       no one complex or family term can ground this deliberately disjunctive node.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0A9W3
+      protein_label: Energy-dependent translational throttle protein EttA
+      gene_symbol: ettA
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 139
+      sequence_version: 2
+      role: Exemplar protein (ettA, Energy-dependent translational throttle protein
+        EttA) representing membrane energy-conservation module (Rnf/Ech) in Escherichia
+        coli (strain K12) for Homoacetogenesis.
+      evidence:
+      - reference: DOI:10.1016/j.bbapap.2008.08.012
+        snippet: use the reductive acetyl-CoA or Wood-Ljungdahl pathway as their main
+          mechanism for energy conservation and for synthesis of acetyl-CoA and cell
+          carbon from CO2
+        notes: Supports membrane energy-conservation module (Rnf/Ech) in Homoacetogenesis;
+          UniProtKB:P0A9W3 (ettA, Energy-dependent translational throttle protein
+          EttA) in Escherichia coli (strain K12) provides a verified protein exemplar.
   - node_id: transmembrane_ion_gradient
     label: transmembrane ion gradient
     node_type: BIOLOGICAL_PROCESS
@@ -179,6 +265,29 @@ causal_graphs:
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: The node is intentionally broad across proton- and sodium-coupled
       F/V-type ATP synthases; an exact complex term requires a taxon-specific architecture.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q49Z52
+      protein_label: ATP synthase subunit alpha
+      gene_symbol: atpA
+      taxon_id: NCBITaxon:342451
+      taxon_label: Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
+        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+      entry_status: REVIEWED
+      proteome_id: UP000006371
+      retrieved_on: '2026-10-17'
+      entry_version: 137
+      sequence_version: 1
+      role: Exemplar protein (atpA, ATP synthase subunit alpha) representing ATP synthase
+        in Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC 15305 /
+        DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) for Homoacetogenesis.
+      evidence:
+      - reference: DOI:10.1039/d4cb00099d
+        snippet: As part of the arginine deiminase (ADI) pathway, carbamate kinase
+          generates one ATP molecule
+        notes: Supports ATP synthase in Homoacetogenesis; UniProtKB:Q49Z52 (atpA,
+          ATP synthase subunit alpha) in Staphylococcus saprophyticus subsp. saprophyticus
+          (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) provides
+          a verified protein exemplar.
   edges:
   - subject: homoacetogenesis_trait
     predicate: occurs in
@@ -512,4 +621,13 @@ curation_history:
   action: ADD_PATHWAY_CONTEXT
   changes: Added pinned PathwayMech context on reviewed causal nodes with explicit
     route and organism limitations; retained existing groundings and exact xrefs.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:P27988
+    version metadata (entry_version=126, sequence_version=1); added UniProtKB:P33160
+    (P33160) protein example to node formate_dehydrogenase; added UniProtKB:P21164
+    (fhs) protein example to node formyl_thf_synthetase; added UniProtKB:Q49YE2 (ackA)
+    protein example to node acetate_kinase (+2 more).'
   llm_assisted: true

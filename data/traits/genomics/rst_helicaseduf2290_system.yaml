@@ -126,6 +126,37 @@ causal_graphs:
     grounding: traitmech:000209
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
+  - node_id: rst_helicaseduf2290_system_protein_component
+    label: Phage T7 exclusion protein
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Phage T7 exclusion protein) associated with Rst_HelicaseDUF2290
+      system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - pifA
+    protein_examples:
+    - uniprot_id: UniProtKB:P96329
+      protein_label: Phage T7 exclusion protein
+      gene_symbol: pifA
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 96
+      sequence_version: 2
+      role: Characteristic protein component (pifA, Phage T7 exclusion protein) associated
+        with Rst_HelicaseDUF2290 system in Escherichia coli (strain K12).
+      evidence:
+      - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/223cf269/content/3.defense-systems/rst_helicaseduf2290.md
+        snippet: The Rst_HelicaseDUF2290 system was discovered during a screen for
+          defense systems targeted at hotspots of antiphage activity in phages and
+          phage-satellites. It is composed of 2 proteins, a helicase and a protein
+          with the domain DUF2290.
+        notes: Supports Phage T7 exclusion protein in Rst_HelicaseDUF2290 system;
+          UniProtKB:P96329 (pifA, Phage T7 exclusion protein) in Escherichia coli
+          (strain K12) provides a verified protein exemplar.
   edges:
   - subject: rst_helicaseduf2290_locus
     predicate: contributes to
@@ -208,6 +239,21 @@ causal_graphs:
         hotspots of bacterial immune systems
       notes: The DefenseFinder article registry maps the named Rst_HelicaseDUF2290
         system to the Rousset et al. preprint.
+  - subject: rst_helicaseduf2290_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: rst_helicaseduf2290_system_trait
+    description: Phage T7 exclusion protein (pifA, UniProtKB:P96329) contributes to
+      Rst_HelicaseDUF2290 system (associated with helicaseduf2290, quasipneumoniae,
+      klebsiella).
+    evidence:
+    - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/223cf269/content/3.defense-systems/rst_helicaseduf2290.md
+      snippet: The Rst_HelicaseDUF2290 system in *Klebsiella quasipneumoniae* (GCF_003020825.1,
+        NZ_CP023478) is composed of 2 proteins Helicase (WP_046623504.1) DUF2290_Pers
+        (WP_046623503.1)
+      notes: Supports the functional association between Phage T7 exclusion protein
+        (UniProtKB:P96329 in Escherichia coli (strain K12)) and Rst_HelicaseDUF2290
+        system.
 discussions:
 - discussion_id: rst-helicaseduf2290-host-mechanism-gap
   prompt: Resolve Rst_HelicaseDUF2290 native host breadth, accession-level DUF2290/helicase
@@ -280,4 +326,10 @@ curation_history:
   changes: Corrected the Rousset et al. replicated phage-resistance heatmap evidence
     for the P4-hotspot Rst_HelicaseDUF2290 system from the Figure 5 P2 median-fold-resistance
     legend to the Figure 2 P4 mean-fold-resistance legend.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    rst_helicaseduf2290_system_protein_component with UniProtKB:P96329 (pifA) exemplar.'
   llm_assisted: true

@@ -28,6 +28,13 @@ curation_history:
     Epibacterium ulvae surface-association evidence after a repository-wide duplicate
     review covering ignored and hidden files.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph epibiont_phenotype_graph
+    with GENE_OR_PROTEIN node epibiont_phenotype_protein_component and UniProtKB:A4N8V8
+    exemplar.'
+  llm_assisted: true
 definition_source: DOI:10.1099/ijs.0.042838-0
 evidence:
 - reference: DOI:10.1099/ijs.0.042838-0
@@ -44,3 +51,64 @@ canonical_examples:
   note: Species represented by type strain U95 (= DSM 24752 = LMG 26464), which was
     isolated from the surface of the marine green alga Ulva australis.
   reference: https://bacdive.dsmz.de/strain/24523
+causal_graphs:
+- graph_id: epibiont_phenotype_graph
+  title: Protein component associated with epibiont phenotype
+  description: Literature-backed association between Putative metal ABC transporter
+    substrate-binding protein Hpf (UniProtKB:A4N8V8) and epibiont phenotype.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:A4N8V8 in Haemophilus
+    influenzae (strain NTHi 3655)) associated with epibiont phenotype while full multi-step
+    mechanistic curation remains future work.
+  nodes:
+  - node_id: epibiont_phenotype_trait
+    label: epibiont phenotype
+    node_type: TRAIT
+    grounding: METPO:1007093
+    description: A phenotype characterized by a microbe that lives on the external
+      surface of a host organism or substrate, as distinct from endosymbionts (which
+      live inside the host); captures host-association mode, not specific host taxonomy.
+  - node_id: epibiont_phenotype_protein_component
+    label: Putative metal ABC transporter substrate-binding protein Hpf
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Putative metal ABC transporter substrate-binding
+      protein Hpf) associated with epibiont phenotype.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - hpf
+    protein_examples:
+    - uniprot_id: UniProtKB:A4N8V8
+      protein_label: Putative metal ABC transporter substrate-binding protein Hpf
+      gene_symbol: hpf
+      taxon_id: NCBITaxon:375177
+      taxon_label: Haemophilus influenzae (strain NTHi 3655)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 60
+      sequence_version: 1
+      role: Characteristic protein component (hpf, Putative metal ABC transporter
+        substrate-binding protein Hpf) associated with epibiont phenotype in Haemophilus
+        influenzae (strain NTHi 3655).
+      evidence:
+      - reference: https://bacdive.dsmz.de/strain/24523
+        snippet: isolated from surface of the marine green alga Ulva australis
+        notes: Supports Putative metal ABC transporter substrate-binding protein Hpf
+          in epibiont phenotype; UniProtKB:A4N8V8 (hpf, Putative metal ABC transporter
+          substrate-binding protein Hpf) in Haemophilus influenzae (strain NTHi 3655)
+          provides a verified protein exemplar.
+  edges:
+  - subject: epibiont_phenotype_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: epibiont_phenotype_trait
+    description: Putative metal ABC transporter substrate-binding protein Hpf (hpf,
+      UniProtKB:A4N8V8) contributes to epibiont phenotype (associated with australis,
+      isolated, surface).
+    evidence:
+    - reference: https://bacdive.dsmz.de/strain/24523
+      snippet: isolated from surface of the marine green alga Ulva australis
+      notes: Supports the functional association between Putative metal ABC transporter
+        substrate-binding protein Hpf (UniProtKB:A4N8V8 in Haemophilus influenzae
+        (strain NTHi 3655)) and epibiont phenotype.

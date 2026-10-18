@@ -122,3 +122,71 @@ curation_history:
     Preserved all definitions, parents, evidence, examples and prior history. Component
     absence, LmuB-length family and experimental activity remain separate claims.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph short_lamassu_system_graph
+    with GENE_OR_PROTEIN node short_lamassu_system_protein_component and UniProtKB:P0DW44
+    exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: short_lamassu_system_graph
+  title: Protein component associated with short Lamassu system
+  description: Literature-backed association between Lamassu protein LmuB (UniProtKB:P0DW44)
+    and short Lamassu system.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P0DW44 in Bacillus
+    sp. (strain NCIM 5461 / CCTCC AB 2011126 / NIO-1130)) associated with short Lamassu
+    system while full multi-step mechanistic curation remains future work.
+  nodes:
+  - node_id: short_lamassu_system_trait
+    label: short Lamassu system
+    node_type: TRAIT
+    grounding: traitmech:000570
+    description: A Lamassu system in which an organism possesses a locus from the
+      short-LmuB family, characterized by shorter coiled-coil regions in its SMC-like
+      LmuB sensor than in long Lamassu systems.
+  - node_id: short_lamassu_system_protein_component
+    label: Lamassu protein LmuB
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Lamassu protein LmuB) associated with short Lamassu
+      system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - lmuB
+    protein_examples:
+    - uniprot_id: UniProtKB:P0DW44
+      protein_label: Lamassu protein LmuB
+      gene_symbol: lmuB
+      taxon_id: NCBITaxon:1761765
+      taxon_label: Bacillus sp. (strain NCIM 5461 / CCTCC AB 2011126 / NIO-1130)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 8
+      sequence_version: 1
+      role: Characteristic protein component (lmuB, Lamassu protein LmuB) associated
+        with short Lamassu system in Bacillus sp. (strain NCIM 5461 / CCTCC AB 2011126
+        / NIO-1130).
+      evidence:
+      - reference: DOI:10.1073/pnas.2519643122
+        snippet: others are type-specific like the flavin-containing monooxygenase
+          (FMO) for long Lamassu, and HNH, SMEK, and Lipase for short Lamassu.
+        notes: Supports Lamassu protein LmuB in short Lamassu system; UniProtKB:P0DW44
+          (lmuB, Lamassu protein LmuB) in Bacillus sp. (strain NCIM 5461 / CCTCC AB
+          2011126 / NIO-1130) provides a verified protein exemplar.
+  edges:
+  - subject: short_lamassu_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: short_lamassu_system_trait
+    description: Lamassu protein LmuB (lmuB, UniProtKB:P0DW44) contributes to short
+      Lamassu system (associated with monooxygenase, containing, lamassu).
+    evidence:
+    - reference: DOI:10.1073/pnas.2519643122
+      snippet: others are type-specific like the flavin-containing monooxygenase (FMO)
+        for long Lamassu, and HNH, SMEK, and Lipase for short Lamassu.
+      notes: Supports the functional association between Lamassu protein LmuB (UniProtKB:P0DW44
+        in Bacillus sp. (strain NCIM 5461 / CCTCC AB 2011126 / NIO-1130)) and short
+        Lamassu system.

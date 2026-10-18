@@ -136,3 +136,75 @@ curation_history:
     mapping or universal protein mechanism is inferred. Timestamp records observed
     allocation, not acquisition.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph bacterial_flagellar_filament_internalization_graph
+    with GENE_OR_PROTEIN node bacterial_flagellar_filament_internalization_protein_component
+    and UniProtKB:Q9ZL91 exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: bacterial_flagellar_filament_internalization_graph
+  title: Protein component associated with bacterial flagellar filament internalization
+  description: Literature-backed association between Flagellar hook-associated protein
+    2 (UniProtKB:Q9ZL91) and bacterial flagellar filament internalization.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q9ZL91 in Helicobacter
+    pylori (strain J99 / ATCC 700824) (Campylobacter pylori J99)) associated with
+    bacterial flagellar filament internalization while full multi-step mechanistic
+    curation remains future work.
+  nodes:
+  - node_id: bacterial_flagellar_filament_internalization_trait
+    label: bacterial flagellar filament internalization
+    node_type: TRAIT
+    grounding: traitmech:000735
+    description: A physiological phenotype in which a bacterium withdraws an assembled
+      portion of its own flagellar filament from outside its cell body into its cell-body
+      periplasm.
+  - node_id: bacterial_flagellar_filament_internalization_protein_component
+    label: Flagellar hook-associated protein 2
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Flagellar hook-associated protein 2) associated
+      with bacterial flagellar filament internalization.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - fliD
+    protein_examples:
+    - uniprot_id: UniProtKB:Q9ZL91
+      protein_label: Flagellar hook-associated protein 2
+      gene_symbol: fliD
+      taxon_id: NCBITaxon:85963
+      taxon_label: Helicobacter pylori (strain J99 / ATCC 700824) (Campylobacter pylori
+        J99)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 113
+      sequence_version: 3
+      role: Characteristic protein component (fliD, Flagellar hook-associated protein
+        2) associated with bacterial flagellar filament internalization in Helicobacter
+        pylori (strain J99 / ATCC 700824) (Campylobacter pylori J99).
+      evidence:
+      - reference: DOI:10.1063/pt.nkma.bqid
+        snippet: B. bacteriovorus retracts its extracellular hook and filament into
+          its own periplasmic space
+        notes: Supports Flagellar hook-associated protein 2 in bacterial flagellar
+          filament internalization; UniProtKB:Q9ZL91 (fliD, Flagellar hook-associated
+          protein 2) in Helicobacter pylori (strain J99 / ATCC 700824) (Campylobacter
+          pylori J99) provides a verified protein exemplar.
+  edges:
+  - subject: bacterial_flagellar_filament_internalization_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: bacterial_flagellar_filament_internalization_trait
+    description: Flagellar hook-associated protein 2 (fliD, UniProtKB:Q9ZL91) contributes
+      to bacterial flagellar filament internalization (associated with bacteriovorus,
+      extracellular, periplasmic).
+    evidence:
+    - reference: DOI:10.1063/pt.nkma.bqid
+      snippet: B. bacteriovorus retracts its extracellular hook and filament into
+        its own periplasmic space
+      notes: Supports the functional association between Flagellar hook-associated
+        protein 2 (UniProtKB:Q9ZL91 in Helicobacter pylori (strain J99 / ATCC 700824)
+        (Campylobacter pylori J99)) and bacterial flagellar filament internalization.

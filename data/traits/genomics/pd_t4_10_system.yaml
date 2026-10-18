@@ -105,6 +105,37 @@ causal_graphs:
     node_type: TRAIT
     grounding: traitmech:000214
     description: Possession of a genome-encoded abortive-infection phage-defense system.
+  - node_id: pd_t4_10_system_protein_component
+    label: Abortive infection protein
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Abortive infection protein) associated with PD-T4-10
+      system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - abi
+    protein_examples:
+    - uniprot_id: UniProtKB:P18024
+      protein_label: Abortive infection protein
+      gene_symbol: abi
+      taxon_id: NCBITaxon:562
+      taxon_label: Escherichia coli
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 49
+      sequence_version: 1
+      role: Characteristic protein component (abi, Abortive infection protein) associated
+        with PD-T4-10 system in Escherichia coli.
+      evidence:
+      - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t4-10.md
+        snippet: 'The PD-T4-10 system is composed of 2 proteins: PD-T4-10_B and, PD-T4-10_A.
+          These ORFs are overlapping and PD-T4-10_B is toxic while PD-T4-10_A neutralizes
+          its toxicity, hinting at a toxin-antitoxin (TA) mechanism. It confers resitance
+          to T2, T4, T6 and SECphi27 through an Abi defense mechanism :ref{doi=10.1038/s41564-022-01219-4}.'
+        notes: Supports Abortive infection protein in PD-T4-10 system; UniProtKB:P18024
+          (abi, Abortive infection protein) in Escherichia coli provides a verified
+          protein exemplar.
   edges:
   - subject: pd_t4_10_locus
     predicate: contributes to
@@ -203,6 +234,19 @@ causal_graphs:
         \t\t"
       notes: The DefenseFinder rules table models PD-T4-10 as a two-profile system
         requiring PD-T4-10__PD-T4-10_A and PD-T4-10__PD-T4-10_B.
+  - subject: pd_t4_10_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: pd_t4_10_system_trait
+    description: Abortive infection protein (abi, UniProtKB:P18024) contributes to
+      PD-T4-10 system (associated with custom, pd, t4).
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| PD-T4-9__PD-T4-9_A | PD-T4-9__PD-T4-9_A | PD-T4-9 | Custom | 20
+        | | PD-T4-9__PD-T4-9_B | PD-T4-9__PD-T4-9_B | PD-T4-9 | Custom | 20 | | PD-T4-9__PD-T4-9_C
+        | PD-T4-9__PD-T4-9_C | PD-T4-9 | Custom | 20 |'
+      notes: Supports the functional association between Abortive infection protein
+        (UniProtKB:P18024 in Escherichia coli) and PD-T4-10 system.
 discussions:
 - discussion_id: pd-t4-10-mechanism-gap
   prompt: Resolve PD-T4-10 natural host breadth, direct phage trigger, the toxic PD-T4-10_B
@@ -278,4 +322,10 @@ curation_history:
     graph, a DefenseFinder two-profile system model, and a RefSeq Escherichia fergusonii
     example, but not a direct native microbial isolate exemplar with experimentally
     verified endogenous PD-T4-10 activity. No paid research was used.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    pd_t4_10_system_protein_component with UniProtKB:P18024 (abi) exemplar.'
   llm_assisted: true

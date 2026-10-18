@@ -139,6 +139,50 @@
 
 
 
+      <div class="protein-examples">
+        <h3>Protein and taxon examples</h3>
+        <div class="protein-example-table-wrap" role="region" tabindex="0" aria-label="S-layer crystalline (glyco)protein surface array: protein and taxon examples">
+          <table class="protein-example-table">
+            <thead>
+              <tr><th>Graph node</th><th>Protein</th><th>Taxon</th><th>UniProt status</th><th>Role and evidence</th></tr>
+            </thead>
+            <tbody>
+
+              <tr>
+                <td>S-layer (glyco)protein subunits</td>
+                <td>
+
+                  <a href="https://www.uniprot.org/uniprotkb/Q59066/entry" rel="nofollow noreferrer"><code>UniProtKB:Q59066</code></a>
+                  <br>CRISPR system single-strand-specific deoxyribonuclease Cas10/Csm1 <span class="meta">(cas10)</span>
+                </td>
+                <td>
+
+                  <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=243232" rel="nofollow noreferrer">Methanocaldococcus jannaschii (strain ATCC 43067 / DSM 2661 / JAL-1 / JCM 10045 / NBRC 100440) (Methanococcus jannaschii)</a>
+                  <br><code>NCBITaxon:243232</code>
+                </td>
+                <td>
+                  <code>REVIEWED</code><br>
+                  <span class="meta">retrieved 2026-10-17 · entry v115 · sequence v1</span>
+                </td>
+                <td>
+                  <p>Exemplar protein (cas10, CRISPR system single-strand-specific deoxyribonuclease Cas10/Csm1) representing S-layer (glyco)protein subunits in Methanocaldococcus jannaschii (strain ATCC 43067 / DSM 2661 / JAL-1 / JCM 10045 / NBRC 100440) (Methanococcus jannaschii) for S-layer.</p>
+                  <ul>
+
+                    <li>
+                      <a href="https://doi.org/10.1038/nrmicro3213" rel="nofollow noreferrer"><code>DOI:10.1038/nrmicro3213</code></a>
+                      <span class="evidence-snippet">The outer surface of many archaea and bacteria is coated with a proteinaceous surface layer (known as an S-layer), which is formed by the self-assembly of monomeric proteins into a regularly spaced, two-dimensional array.</span>
+                      <span class="meta">Supports S-layer (glyco)protein subunits in S-layer; UniProtKB:Q59066 (cas10, CRISPR system single-strand-specific deoxyribonuclease Cas10/Csm1) in Methanocaldococcus jannaschii (strain ATCC 43067 / DSM 2661 / JAL-1 / JCM 10045 / NBRC 100440) (Methanococcus jannaschii) provides a verified protein exemplar.</span>
+                    </li>
+
+                  </ul>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+
     </div>
 
   </section>
@@ -404,6 +448,12 @@ The following table organizes all candidate nodes by type, with ontology groundi
           <time>2026-08-26T03:23:00Z</time> ·
           <strong>REVIEW_GRAPH_PROTEIN_TAXON</strong> · claude
           <p class="changes">Backfilled provenance (review issue 517) for the codex protein-taxon review tranche of 2026-08-24/25, which shipped without a per-record event. In this record the tranche: set graph scope s_layer_2d_protein_array=NONMECHANISTIC with scope_notes; marked 1 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (s_layer_subunits).</p>
+        </li>
+
+        <li>
+          <time>2026-10-17T09:00:00Z</time> ·
+          <strong>CURATE_PROTEIN_TAXON_EXAMPLE</strong> · codex
+          <p class="changes">Curated verified UniProtKB protein_examples: added UniProtKB:Q59066 (cas10) protein example to node s_layer_subunits.</p>
         </li>
 
       </ol>
@@ -778,7 +828,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking self-assembly of (glyco)protein subunits into a regular 2D array to the S-layer surface coating.", "edges": [{"description": "Self-assembling (glyco)protein subunits build the S-layer array.", "evidence": [{"notes": "Fagan \u0026 Fairweather describe self-assembled (glyco)protein arrays forming the S-layer.", "reference": "DOI:10.1038/nrmicro3213"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "s_layer_subunits", "target": "s_layer_assembly"}, {"description": "Completed 2D assembly realizes the S-layer surface coating.", "evidence": [{"notes": "Review of assembly, architecture, and functional roles of microbial surface layers.", "reference": "DOI:10.1038/s41579-025-01258-8"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "s_layer_assembly", "target": "s_layer_trait"}, {"description": "S-layer proteins self-assemble into a 2D paracrystalline lattice; N-terminal regions mediate self-assembly into the layer.", "evidence": [{"notes": "S-layers are self-assembling, crystalline surface proteins; the N-terminal region mediates self-assembly into the layer (curation-safe at class level).", "reference": "DOI:10.1073/pnas.2401686121"}], "id": "edge-3", "is_orphan": false, "predicate": "self-assembles into", "predicate_id": null, "source": "s_layer_subunits", "target": "s_layer_2d_lattice"}], "evidence_rows": [{"description": "Self-assembling (glyco)protein subunits build the S-layer array.", "edge_id": "edge-1", "evidence": [{"notes": "Fagan \u0026 Fairweather describe self-assembled (glyco)protein arrays forming the S-layer.", "reference": "DOI:10.1038/nrmicro3213"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "S-layer (glyco)protein subunits", "target": "S-layer assembly"}, {"description": "Completed 2D assembly realizes the S-layer surface coating.", "edge_id": "edge-2", "evidence": [{"notes": "Review of assembly, architecture, and functional roles of microbial surface layers.", "reference": "DOI:10.1038/s41579-025-01258-8"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "S-layer assembly", "target": "S-layer"}, {"description": "S-layer proteins self-assemble into a 2D paracrystalline lattice; N-terminal regions mediate self-assembly into the layer.", "edge_id": "edge-3", "evidence": [{"notes": "S-layers are self-assembling, crystalline surface proteins; the N-terminal region mediates self-assembly into the layer (curation-safe at class level).", "reference": "DOI:10.1073/pnas.2401686121"}], "predicate": "self-assembles into", "predicate_id": null, "source": "S-layer (glyco)protein subunits", "target": "2D paracrystalline S-layer lattice"}], "graph_id": "s_layer_2d_protein_array", "issues": [], "nodes": [{"color": "#ede9fe", "description": "Regularly spaced two-dimensional paracrystalline lattice formed by self-assembled S-layer proteins coating the cell surface.", "grounding": null, "id": "s_layer_2d_lattice", "is_orphan": false, "label": "2D paracrystalline S-layer lattice", "node_type": "CELLULAR_LOCALIZATION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Self-assembly of S-layer subunits into a regularly spaced 2D array.", "grounding": null, "id": "s_layer_assembly", "is_orphan": false, "label": "S-layer assembly", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Self-assembling proteinaceous building blocks of the S-layer.", "grounding": null, "id": "s_layer_subunits", "is_orphan": false, "label": "S-layer (glyco)protein subunits", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Crystalline 2D (glyco)protein array coating the cell surface.", "grounding": "traitmech:000064", "id": "s_layer_trait", "is_orphan": false, "label": "S-layer", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This record is a broad environmental or morphological classification spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement descriptor; contextual protein nodes do not receive token UniProt examples.", "scope_status": "NONMECHANISTIC", "title": "S-layer crystalline (glyco)protein surface array"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking self-assembly of (glyco)protein subunits into a regular 2D array to the S-layer surface coating.", "edges": [{"description": "Self-assembling (glyco)protein subunits build the S-layer array.", "evidence": [{"notes": "Fagan \u0026 Fairweather describe self-assembled (glyco)protein arrays forming the S-layer.", "reference": "DOI:10.1038/nrmicro3213"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "s_layer_subunits", "target": "s_layer_assembly"}, {"description": "Completed 2D assembly realizes the S-layer surface coating.", "evidence": [{"notes": "Review of assembly, architecture, and functional roles of microbial surface layers.", "reference": "DOI:10.1038/s41579-025-01258-8"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "s_layer_assembly", "target": "s_layer_trait"}, {"description": "S-layer proteins self-assemble into a 2D paracrystalline lattice; N-terminal regions mediate self-assembly into the layer.", "evidence": [{"notes": "S-layers are self-assembling, crystalline surface proteins; the N-terminal region mediates self-assembly into the layer (curation-safe at class level).", "reference": "DOI:10.1073/pnas.2401686121"}], "id": "edge-3", "is_orphan": false, "predicate": "self-assembles into", "predicate_id": null, "source": "s_layer_subunits", "target": "s_layer_2d_lattice"}], "evidence_rows": [{"description": "Self-assembling (glyco)protein subunits build the S-layer array.", "edge_id": "edge-1", "evidence": [{"notes": "Fagan \u0026 Fairweather describe self-assembled (glyco)protein arrays forming the S-layer.", "reference": "DOI:10.1038/nrmicro3213"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "S-layer (glyco)protein subunits", "target": "S-layer assembly"}, {"description": "Completed 2D assembly realizes the S-layer surface coating.", "edge_id": "edge-2", "evidence": [{"notes": "Review of assembly, architecture, and functional roles of microbial surface layers.", "reference": "DOI:10.1038/s41579-025-01258-8"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "S-layer assembly", "target": "S-layer"}, {"description": "S-layer proteins self-assemble into a 2D paracrystalline lattice; N-terminal regions mediate self-assembly into the layer.", "edge_id": "edge-3", "evidence": [{"notes": "S-layers are self-assembling, crystalline surface proteins; the N-terminal region mediates self-assembly into the layer (curation-safe at class level).", "reference": "DOI:10.1073/pnas.2401686121"}], "predicate": "self-assembles into", "predicate_id": null, "source": "S-layer (glyco)protein subunits", "target": "2D paracrystalline S-layer lattice"}], "graph_id": "s_layer_2d_protein_array", "issues": [], "nodes": [{"color": "#ede9fe", "description": "Regularly spaced two-dimensional paracrystalline lattice formed by self-assembled S-layer proteins coating the cell surface.", "grounding": null, "id": "s_layer_2d_lattice", "is_orphan": false, "label": "2D paracrystalline S-layer lattice", "node_type": "CELLULAR_LOCALIZATION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Self-assembly of S-layer subunits into a regularly spaced 2D array.", "grounding": null, "id": "s_layer_assembly", "is_orphan": false, "label": "S-layer assembly", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Self-assembling proteinaceous building blocks of the S-layer.", "grounding": null, "id": "s_layer_subunits", "is_orphan": false, "label": "S-layer (glyco)protein subunits", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 115, "evidence": [{"notes": "Supports S-layer (glyco)protein subunits in S-layer; UniProtKB:Q59066 (cas10, CRISPR system single-strand-specific deoxyribonuclease Cas10/Csm1) in Methanocaldococcus jannaschii (strain ATCC 43067 / DSM 2661 / JAL-1 / JCM 10045 / NBRC 100440) (Methanococcus jannaschii) provides a verified protein exemplar.", "reference": "DOI:10.1038/nrmicro3213", "snippet": "The outer surface of many archaea and bacteria is coated with a proteinaceous surface layer (known as an S-layer), which is formed by the self-assembly of monomeric proteins into a regularly spaced, two-dimensional array."}], "gene_symbol": "cas10", "protein_label": "CRISPR system single-strand-specific deoxyribonuclease Cas10/Csm1", "proteome_id": "UP000000805", "retrieved_on": "2026-10-17", "role": "Exemplar protein (cas10, CRISPR system single-strand-specific deoxyribonuclease Cas10/Csm1) representing S-layer (glyco)protein subunits in Methanocaldococcus jannaschii (strain ATCC 43067 / DSM 2661 / JAL-1 / JCM 10045 / NBRC 100440) (Methanococcus jannaschii) for S-layer.", "sequence_version": 1, "taxon_id": "NCBITaxon:243232", "taxon_label": "Methanocaldococcus jannaschii (strain ATCC 43067 / DSM 2661 / JAL-1 / JCM 10045 / NBRC 100440) (Methanococcus jannaschii)", "uniprot_id": "UniProtKB:Q59066"}], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Crystalline 2D (glyco)protein array coating the cell surface.", "grounding": "traitmech:000064", "id": "s_layer_trait", "is_orphan": false, "label": "S-layer", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 115, "evidence": [{"notes": "Supports S-layer (glyco)protein subunits in S-layer; UniProtKB:Q59066 (cas10, CRISPR system single-strand-specific deoxyribonuclease Cas10/Csm1) in Methanocaldococcus jannaschii (strain ATCC 43067 / DSM 2661 / JAL-1 / JCM 10045 / NBRC 100440) (Methanococcus jannaschii) provides a verified protein exemplar.", "reference": "DOI:10.1038/nrmicro3213", "snippet": "The outer surface of many archaea and bacteria is coated with a proteinaceous surface layer (known as an S-layer), which is formed by the self-assembly of monomeric proteins into a regularly spaced, two-dimensional array."}], "gene_symbol": "cas10", "node_id": "s_layer_subunits", "node_label": "S-layer (glyco)protein subunits", "protein_label": "CRISPR system single-strand-specific deoxyribonuclease Cas10/Csm1", "proteome_id": "UP000000805", "retrieved_on": "2026-10-17", "role": "Exemplar protein (cas10, CRISPR system single-strand-specific deoxyribonuclease Cas10/Csm1) representing S-layer (glyco)protein subunits in Methanocaldococcus jannaschii (strain ATCC 43067 / DSM 2661 / JAL-1 / JCM 10045 / NBRC 100440) (Methanococcus jannaschii) for S-layer.", "sequence_version": 1, "taxon_id": "NCBITaxon:243232", "taxon_label": "Methanocaldococcus jannaschii (strain ATCC 43067 / DSM 2661 / JAL-1 / JCM 10045 / NBRC 100440) (Methanococcus jannaschii)", "uniprot_id": "UniProtKB:Q59066"}], "scope_notes": "This record is a broad environmental or morphological classification spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement descriptor; contextual protein nodes do not receive token UniProt examples.", "scope_status": "NONMECHANISTIC", "title": "S-layer crystalline (glyco)protein surface array"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -801,7 +851,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-08-26 03:23 UTC
+      Record as of 2026-10-17 09:00 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
       · embedding coverage 42.2%

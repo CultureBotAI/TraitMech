@@ -107,6 +107,27 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Bacterial surface adhesins binding host receptors, a prerequisite
       for long-term colonization.
+    protein_examples:
+    - uniprot_id: UniProtKB:P08191
+      protein_label: Type 1 fimbrin D-mannose specific adhesin
+      gene_symbol: fimH
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 198
+      sequence_version: 2
+      role: Exemplar protein (fimH, Type 1 fimbrin D-mannose specific adhesin) representing
+        adhesins in Escherichia coli (strain K12) for symbiosis.
+      evidence:
+      - reference: DOI:10.1073/pnas.1218525110
+        snippet: This review examines how a growing knowledge of the vast range of
+          animal-bacterial interactions, whether in shared ecosystems or intimate
+          symbioses, is fundamentally altering our understanding of animal biology.
+        notes: Supports adhesins in symbiosis; UniProtKB:P08191 (fimH, Type 1 fimbrin
+          D-mannose specific adhesin) in Escherichia coli (strain K12) provides a
+          verified protein exemplar.
   edges:
   - subject: host_organism
     predicate: causes
@@ -274,4 +295,10 @@ curation_history:
     tranche of 2026-08-24/25, which shipped without a per-record event. In this record
     the tranche: set graph scope symbiosis_host_interaction=NONMECHANISTIC with scope_notes;
     marked 1 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (adhesins).'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P08191 (fimH)
+    protein example to node adhesins.'
   llm_assisted: true

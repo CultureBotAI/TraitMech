@@ -47,6 +47,25 @@ causal_graphs:
     label: metazoan-adapted virulence factors
     node_type: GENE_OR_PROTEIN
     description: Virulence factors tuned to animal-cell receptors and tissues.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q46558
+      protein_label: Virulence-associated protein B
+      gene_symbol: vapB
+      taxon_id: NCBITaxon:870
+      taxon_label: Dichelobacter nodosus (Bacteroides nodosus)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 70
+      sequence_version: 1
+      role: Exemplar protein (vapB, Virulence-associated protein B) representing metazoan-adapted
+        virulence factors in Dichelobacter nodosus (Bacteroides nodosus) for animal
+        pathogen.
+      evidence:
+      - reference: DOI:10.1146/annurev.micro.62.081307.162938
+        snippet: virulence factors
+        notes: Supports metazoan-adapted virulence factors in animal pathogen; UniProtKB:Q46558
+          (vapB, Virulence-associated protein B) in Dichelobacter nodosus (Bacteroides
+          nodosus) provides a verified protein exemplar.
   - node_id: immune_evasion
     label: immune evasion
     node_type: BIOLOGICAL_PROCESS
@@ -66,6 +85,28 @@ causal_graphs:
     label: bacterial adhesins
     node_type: GENE_OR_PROTEIN
     description: Bacterial surface molecules mediating adherence to host tissues.
+    protein_examples:
+    - uniprot_id: UniProtKB:P08191
+      protein_label: Type 1 fimbrin D-mannose specific adhesin
+      gene_symbol: fimH
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 198
+      sequence_version: 2
+      role: Exemplar protein (fimH, Type 1 fimbrin D-mannose specific adhesin) representing
+        bacterial adhesins in Escherichia coli (strain K12) for animal pathogen.
+      evidence:
+      - reference: DOI:10.1146/annurev.micro.62.081307.162938
+        snippet: New sequence analysis sheds light on the phylogeny of the allelic
+          variants of the Ag43-encoding gene and identifies two distinct families
+          that appear to be distributed between specific pathogenic and commensal
+          isolates.
+        notes: Supports bacterial adhesins in animal pathogen; UniProtKB:P08191 (fimH,
+          Type 1 fimbrin D-mannose specific adhesin) in Escherichia coli (strain K12)
+          provides a verified protein exemplar.
   - node_id: host_cell_attachment
     label: attachment to host cells and mucosa
     node_type: BIOLOGICAL_PROCESS
@@ -78,6 +119,29 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Bacterial surface proteins that bind host complement regulators factor
       H and C4BP.
+    protein_examples:
+    - uniprot_id: UniProtKB:A4N8V8
+      protein_label: Putative metal ABC transporter substrate-binding protein Hpf
+      gene_symbol: hpf
+      taxon_id: NCBITaxon:375177
+      taxon_label: Haemophilus influenzae (strain NTHi 3655)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 60
+      sequence_version: 1
+      role: Exemplar protein (hpf, Putative metal ABC transporter substrate-binding
+        protein Hpf) representing complement-regulator-binding surface proteins in
+        Haemophilus influenzae (strain NTHi 3655) for animal pathogen.
+      evidence:
+      - reference: DOI:10.1146/annurev.micro.62.081307.162938
+        snippet: New sequence analysis sheds light on the phylogeny of the allelic
+          variants of the Ag43-encoding gene and identifies two distinct families
+          that appear to be distributed between specific pathogenic and commensal
+          isolates.
+        notes: Supports complement-regulator-binding surface proteins in animal pathogen;
+          UniProtKB:A4N8V8 (hpf, Putative metal ABC transporter substrate-binding
+          protein Hpf) in Haemophilus influenzae (strain NTHi 3655) provides a verified
+          protein exemplar.
   - node_id: complement_evasion
     label: complement evasion
     node_type: BIOLOGICAL_PROCESS
@@ -90,6 +154,26 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Injectisome multiprotein complex forming syringe-like structures
       on bacteria.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q56135
+      protein_label: SPI-1 type 3 secretion system translocon protein SctB
+      gene_symbol: sctB1
+      taxon_id: NCBITaxon:90370
+      taxon_label: Salmonella typhi
+      entry_status: REVIEWED
+      proteome_id: UP000002670
+      retrieved_on: '2026-10-17'
+      entry_version: 120
+      sequence_version: 1
+      role: Exemplar protein (sctB1, SPI-1 type 3 secretion system translocon protein
+        SctB) representing type III secretion system in Salmonella typhi for animal
+        pathogen.
+      evidence:
+      - reference: DOI:10.1038/nrmicro1592
+        snippet: secretion systems
+        notes: Supports type III secretion system in animal pathogen; UniProtKB:Q56135
+          (sctB1, SPI-1 type 3 secretion system translocon protein SctB) in Salmonella
+          typhi provides a verified protein exemplar.
   - node_id: t3ss_effector_delivery
     label: effector delivery into host-cell cytoplasm
     node_type: BIOLOGICAL_PROCESS
@@ -100,6 +184,26 @@ causal_graphs:
     description: Versatile nanomachine translocating effector proteins or toxins into
       target cells.
     grounding: GO:0043684
+    protein_examples:
+    - uniprot_id: UniProtKB:Q56135
+      protein_label: SPI-1 type 3 secretion system translocon protein SctB
+      gene_symbol: sctB1
+      taxon_id: NCBITaxon:90370
+      taxon_label: Salmonella typhi
+      entry_status: REVIEWED
+      proteome_id: UP000002670
+      retrieved_on: '2026-10-17'
+      entry_version: 120
+      sequence_version: 1
+      role: Exemplar protein (sctB1, SPI-1 type 3 secretion system translocon protein
+        SctB) representing type IV secretion system in Salmonella typhi for animal
+        pathogen.
+      evidence:
+      - reference: DOI:10.1038/nrmicro1592
+        snippet: secretion systems
+        notes: Supports type IV secretion system in animal pathogen; UniProtKB:Q56135
+          (sctB1, SPI-1 type 3 secretion system translocon protein SctB) in Salmonella
+          typhi provides a verified protein exemplar.
   - node_id: effector_translocation_t4ss
     label: effector/toxin translocation into target cells
     node_type: BIOLOGICAL_PROCESS
@@ -120,6 +224,28 @@ causal_graphs:
     label: TonB-dependent transporters
     node_type: GENE_OR_PROTEIN
     description: Outer-membrane transporters importing siderophore-Fe3+ complexes.
+    protein_examples:
+    - uniprot_id: UniProtKB:P02929
+      protein_label: Protein TonB
+      gene_symbol: tonB
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 204
+      sequence_version: 2
+      role: Exemplar protein (tonB, Protein TonB) representing TonB-dependent transporters
+        in Escherichia coli (strain K12) for animal pathogen.
+      evidence:
+      - reference: DOI:10.1146/annurev.micro.62.081307.162938
+        snippet: New sequence analysis sheds light on the phylogeny of the allelic
+          variants of the Ag43-encoding gene and identifies two distinct families
+          that appear to be distributed between specific pathogenic and commensal
+          isolates.
+        notes: Supports TonB-dependent transporters in animal pathogen; UniProtKB:P02929
+          (tonB, Protein TonB) in Escherichia coli (strain K12) provides a verified
+          protein exemplar.
   - node_id: siderophore_iron_import
     label: siderophore-Fe3+ complex import
     node_type: BIOLOGICAL_PROCESS
@@ -361,6 +487,15 @@ curation_history:
     with scope_notes; marked 5 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (metazoan_virulence_factors, bacterial_adhesins, complement_regulator_binding_proteins,
     type_iii_secretion_system, tonb_dependent_transporters).'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q46558 (vapB)
+    protein example to node metazoan_virulence_factors; added UniProtKB:P08191 (fimH)
+    protein example to node bacterial_adhesins; added UniProtKB:A4N8V8 (hpf) protein
+    example to node complement_regulator_binding_proteins; added UniProtKB:Q56135
+    (sctB1) protein example to node type_iii_secretion_system (+2 more).'
   llm_assisted: true
 discussions:
 - discussion_id: kgscan-30bcdf4a32b0

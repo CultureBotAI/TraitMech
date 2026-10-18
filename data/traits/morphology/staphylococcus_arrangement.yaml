@@ -58,6 +58,25 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: S. aureus division-site placement factor that prevents aberrant Z-ring
       placement.
+    protein_examples:
+    - uniprot_id: UniProtKB:P71021
+      protein_label: Septum site-determining protein DivIVA
+      gene_symbol: divIVA
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
+      entry_status: REVIEWED
+      proteome_id: UP000001570
+      retrieved_on: '2026-10-17'
+      entry_version: 132
+      sequence_version: 1
+      role: Exemplar protein (divIVA, Septum site-determining protein DivIVA) representing
+        FacZ in Bacillus subtilis (strain 168) for staphylococcus arrangement.
+      evidence:
+      - reference: DOI:10.1038/ncomms4842
+        snippet: Separation of daughter cells during bacterial cell division
+        notes: Supports FacZ in staphylococcus arrangement; UniProtKB:P71021 (divIVA,
+          Septum site-determining protein DivIVA) in Bacillus subtilis (strain 168)
+          provides a verified protein exemplar.
   - node_id: gpsb
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
@@ -66,11 +85,51 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Conserved cell-division regulator that promotes lateral interactions
       between FtsZ filaments.
+    protein_examples:
+    - uniprot_id: UniProtKB:A0AJZ3
+      protein_label: Cell cycle adapter protein GpsB
+      gene_symbol: gpsB
+      taxon_id: NCBITaxon:386043
+      taxon_label: Listeria welshimeri serovar 6b (strain ATCC 35897 / DSM 20650 /
+        CCUG 15529 / CIP 8149 / NCTC 11857 / SLCC 5334 / V8)
+      entry_status: REVIEWED
+      proteome_id: UP000000779
+      retrieved_on: '2026-10-17'
+      entry_version: 87
+      sequence_version: 1
+      role: Exemplar protein (gpsB, Cell cycle adapter protein GpsB) representing
+        GpsB in Listeria welshimeri serovar 6b (strain ATCC 35897 / DSM 20650 / CCUG
+        15529 / CIP 8149 / NCTC 11857 / SLCC 5334 / V8) for staphylococcus arrangement.
+      evidence:
+      - reference: DOI:10.1038/ncomms4842
+        snippet: Separation of daughter cells during bacterial cell division
+        notes: Supports GpsB in staphylococcus arrangement; UniProtKB:A0AJZ3 (gpsB,
+          Cell cycle adapter protein GpsB) in Listeria welshimeri serovar 6b (strain
+          ATCC 35897 / DSM 20650 / CCUG 15529 / CIP 8149 / NCTC 11857 / SLCC 5334
+          / V8) provides a verified protein exemplar.
   - node_id: ftsz
     label: FtsZ
     node_type: GENE_OR_PROTEIN
     description: Tubulin-like central divisome protein forming the cytokinetic Z-ring.
     grounding: InterPro:IPR000158
+    protein_examples:
+    - uniprot_id: UniProtKB:P0A031
+      protein_label: Cell division protein FtsZ
+      gene_symbol: ftsZ
+      taxon_id: NCBITaxon:1280
+      taxon_label: Staphylococcus aureus
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 113
+      sequence_version: 1
+      role: Exemplar protein (ftsZ, Cell division protein FtsZ) representing FtsZ
+        in Staphylococcus aureus for staphylococcus arrangement.
+      evidence:
+      - reference: DOI:10.1038/ncomms4842
+        snippet: Separation of daughter cells during bacterial cell division
+        notes: Supports FtsZ in staphylococcus arrangement; UniProtKB:P0A031 (ftsZ,
+          Cell division protein FtsZ) in Staphylococcus aureus provides a verified
+          protein exemplar.
   - node_id: ftsz_ring
     label: FtsZ Z-ring
     node_type: CELLULAR_LOCALIZATION
@@ -213,4 +272,11 @@ curation_history:
     the tranche: set graph scope staphylococcus_irregular_division_cluster=NONMECHANISTIC
     with scope_notes; marked 2 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (facz, gpsb).'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P71021 (divIVA)
+    protein example to node facz; added UniProtKB:A0AJZ3 (gpsB) protein example to
+    node gpsb; added UniProtKB:P0A031 (ftsZ) protein example to node ftsz.'
   llm_assisted: true

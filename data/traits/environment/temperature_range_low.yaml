@@ -82,6 +82,26 @@ causal_graphs:
       a quantitative measurement graph; no exact semantic family term was established
       for this aggregate use.
     description: CspA/CspC family cold-shock proteins acting as RNA chaperones.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0A9X9
+      protein_label: Cold shock protein CspA
+      gene_symbol: cspA
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 146
+      sequence_version: 2
+      role: Exemplar protein (cspA, Cold shock protein CspA) representing cold-shock
+        proteins in Escherichia coli (strain K12) for temperature range low.
+      evidence:
+      - reference: DOI:10.3389/fmicb.2023.1197797
+        snippet: ice binding, cold shock and heat shock proteins to sustain their
+          physiological state
+        notes: Supports cold-shock proteins in temperature range low; UniProtKB:P0A9X9
+          (cspA, Cold shock protein CspA) in Escherichia coli (strain K12) provides
+          a verified protein exemplar.
   - node_id: rna_chaperone_activity
     label: RNA chaperone activity
     node_type: MOLECULAR_FUNCTION
@@ -106,6 +126,27 @@ causal_graphs:
       for this aggregate use.
     description: GroEL and DnaK chaperones assisting protein folding under temperature
       stress.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0A6Y8
+      protein_label: Chaperone protein DnaK
+      gene_symbol: dnaK
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 183
+      sequence_version: 2
+      role: Exemplar protein (dnaK, Chaperone protein DnaK) representing GroEL/DnaK
+        molecular chaperones in Escherichia coli (strain K12) for temperature range
+        low.
+      evidence:
+      - reference: DOI:10.1007/s42770-023-01057-4
+        snippet: When the temperature drops, DesK/DesR is the two-component system
+          involved in membrane adaptation
+        notes: Supports GroEL/DnaK molecular chaperones in temperature range low;
+          UniProtKB:P0A6Y8 (dnaK, Chaperone protein DnaK) in Escherichia coli (strain
+          K12) provides a verified protein exemplar.
   - node_id: protein_misfolding
     label: protein misfolding
     node_type: BIOLOGICAL_PROCESS
@@ -250,4 +291,11 @@ curation_history:
     canonical example(s): Aestuariibius violaceus (NCBITaxon:3234132; DOI:10.1099/ijsem.0.006834).
     The note retains the measured value or scopes broad-class examples to the cited
     branch; no paid research was used.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P0A9X9 (cspA)
+    protein example to node cold_shock_proteins; added UniProtKB:P0A6Y8 (dnaK) protein
+    example to node molecular_chaperones.'
   llm_assisted: true

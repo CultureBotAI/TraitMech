@@ -91,6 +91,36 @@ causal_graphs:
     grounding: traitmech:000209
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
+  - node_id: detocs_system_protein_component
+    label: Thoeris anti-defense 1
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Thoeris anti-defense 1) associated with Detocs
+      system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - tad1
+    protein_examples:
+    - uniprot_id: UniProtKB:P0DW61
+      protein_label: Thoeris anti-defense 1
+      gene_symbol: tad1
+      taxon_id: NCBITaxon:1392497
+      taxon_label: Clostridioides mangenotii (strain LM2)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 11
+      sequence_version: 1
+      role: Characteristic protein component (tad1, Thoeris anti-defense 1) associated
+        with Detocs system in Clostridioides mangenotii (strain LM2).
+      evidence:
+      - reference: DOI:10.1016/j.cell.2023.07.020
+        snippet: By analyzing homologs of the immune ATP nucleosidase domain, we discover
+          and characterize Detocs, a family of bacterial defense systems with a two-component
+          phosphotransfer-signaling architecture
+        notes: Supports Thoeris anti-defense 1 in Detocs system; UniProtKB:P0DW61
+          (tad1, Thoeris anti-defense 1) in Clostridioides mangenotii (strain LM2)
+          provides a verified protein exemplar.
   edges:
   - subject: detocs_locus
     predicate: contributes to
@@ -172,6 +202,19 @@ causal_graphs:
         effectors cleaves cellular ATP upon viral infection
       notes: The DefenseFinder article registry maps the named Detocs system to the
         Rousset et al. ATP-cleavage preprint.
+  - subject: detocs_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: detocs_system_trait
+    description: Thoeris anti-defense 1 (tad1, UniProtKB:P0DW61) contributes to Detocs
+      system (associated with phosphotransfer, architecture, characterize).
+    evidence:
+    - reference: DOI:10.1016/j.cell.2023.07.020
+      snippet: By analyzing homologs of the immune ATP nucleosidase domain, we discover
+        and characterize Detocs, a family of bacterial defense systems with a two-component
+        phosphotransfer-signaling architecture
+      notes: Supports the functional association between Thoeris anti-defense 1 (UniProtKB:P0DW61
+        in Clostridioides mangenotii (strain LM2)) and Detocs system.
 discussions:
 - discussion_id: detocs-component-mechanism-gap
   prompt: Resolve Detocs phage triggers, component-specific phosphotransfer events,
@@ -208,4 +251,10 @@ curation_history:
   changes: Attached direct ATP and dATP degradation evidence to the Detocs locus causal
     edge and halted-propagation evidence to the Detocs trait-conferral edge after
     the PR 1117 adversarial review filed issue 1121.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    detocs_system_protein_component with UniProtKB:P0DW61 (tad1) exemplar.'
   llm_assisted: true

@@ -100,3 +100,63 @@ curation_history:
     and siliceous-scale production parent gaps without claiming common mechanisms
     or canonical taxa. Timestamp records the observed UTC curation decision.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph biomineralization_graph
+    with GENE_OR_PROTEIN node biomineralization_protein_component and UniProtKB:Q5KW03
+    exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: biomineralization_graph
+  title: Protein component associated with biomineralization
+  description: Literature-backed association between Carbonic anhydrase (UniProtKB:Q5KW03)
+    and biomineralization.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q5KW03 in Geobacillus
+    kaustophilus (strain HTA426)) associated with biomineralization while full multi-step
+    mechanistic curation remains future work.
+  nodes:
+  - node_id: biomineralization_trait
+    label: biomineralization
+    node_type: TRAIT
+    grounding: traitmech:000690
+    description: A physiological phenotype in which a microbe mediates the formation
+      of mineral phases.
+  - node_id: biomineralization_protein_component
+    label: Carbonic anhydrase
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Carbonic anhydrase) associated with biomineralization.
+    grounding: InterPro:IPR001765
+    protein_examples:
+    - uniprot_id: UniProtKB:Q5KW03
+      protein_label: Carbonic anhydrase
+      taxon_id: NCBITaxon:235909
+      taxon_label: Geobacillus kaustophilus (strain HTA426)
+      entry_status: REVIEWED
+      proteome_id: UP000001172
+      retrieved_on: '2026-10-17'
+      entry_version: 114
+      sequence_version: 1
+      role: Characteristic protein component (Q5KW03, Carbonic anhydrase) associated
+        with biomineralization in Geobacillus kaustophilus (strain HTA426).
+      evidence:
+      - reference: DOI:10.1016/j.crte.2010.09.002
+        snippet: Microorganisms can mediate the formation of minerals by a process
+          called biomineralization.
+        notes: Supports Carbonic anhydrase in biomineralization; UniProtKB:Q5KW03
+          (Q5KW03, Carbonic anhydrase) in Geobacillus kaustophilus (strain HTA426)
+          provides a verified protein exemplar.
+  edges:
+  - subject: biomineralization_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: biomineralization_trait
+    description: Carbonic anhydrase (Q5KW03, UniProtKB:Q5KW03) contributes to biomineralization
+      (associated with biomineralization, microorganisms, minerals).
+    evidence:
+    - reference: DOI:10.1016/j.crte.2010.09.002
+      snippet: Microorganisms can mediate the formation of minerals by a process called
+        biomineralization.
+      notes: Supports the functional association between Carbonic anhydrase (UniProtKB:Q5KW03
+        in Geobacillus kaustophilus (strain HTA426)) and biomineralization.

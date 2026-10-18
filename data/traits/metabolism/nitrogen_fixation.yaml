@@ -48,6 +48,25 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Oxygen-sensitive enzyme complex that reduces dinitrogen.
     grounding: GO:0016610
+    protein_examples:
+    - uniprot_id: UniProtKB:P00459
+      protein_label: Nitrogenase iron protein 1
+      gene_symbol: nifH1
+      taxon_id: NCBITaxon:354
+      taxon_label: Azotobacter vinelandii
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 168
+      sequence_version: 2
+      role: Exemplar protein (nifH1, Nitrogenase iron protein 1) representing nitrogenase
+        in Azotobacter vinelandii for nitrogen fixation.
+      evidence:
+      - reference: DOI:10.34133/bdr.0005
+        snippet: In the biological nitrogen fixation reaction, N2 is reduced to form
+          NH3 under ambient conditions by the nitrogenase enzyme
+        notes: Supports nitrogenase in nitrogen fixation; UniProtKB:P00459 (nifH1,
+          Nitrogenase iron protein 1) in Azotobacter vinelandii provides a verified
+          protein exemplar.
   - node_id: nitrogen_fixation_process
     label: nitrogen fixation
     node_type: BIOLOGICAL_PROCESS
@@ -72,6 +91,27 @@ causal_graphs:
     grounding_notes: The combined label intentionally denotes alternative ferredoxin
       and flavodoxin donors; no single exact family term covers both without overstating
       a taxon-specific carrier.
+    protein_examples:
+    - uniprot_id: UniProtKB:A0L6X0
+      protein_label: Nitrogenase iron protein
+      gene_symbol: nifH
+      taxon_id: NCBITaxon:156889
+      taxon_label: Magnetococcus marinus (strain ATCC BAA-1437 / JCM 17883 / MC-1)
+      entry_status: REVIEWED
+      proteome_id: UP000002586
+      retrieved_on: '2026-10-17'
+      entry_version: 98
+      sequence_version: 1
+      role: Exemplar protein (nifH, Nitrogenase iron protein) representing ferredoxin/flavodoxin
+        in Magnetococcus marinus (strain ATCC BAA-1437 / JCM 17883 / MC-1) for nitrogen
+        fixation.
+      evidence:
+      - reference: DOI:10.34133/bdr.0005
+        snippet: In the biological nitrogen fixation reaction, N2 is reduced to form
+          NH3 under ambient conditions by the nitrogenase enzyme
+        notes: Supports ferredoxin/flavodoxin in nitrogen fixation; UniProtKB:A0L6X0
+          (nifH, Nitrogenase iron protein) in Magnetococcus marinus (strain ATCC BAA-1437
+          / JCM 17883 / MC-1) provides a verified protein exemplar.
   - node_id: nifh_fe_protein
     label: NifH (Fe-protein)
     node_type: GENE_OR_PROTEIN
@@ -86,7 +126,7 @@ causal_graphs:
       taxon_label: Azotobacter vinelandii
       entry_status: REVIEWED
       retrieved_on: '2026-08-23'
-      entry_version: 167
+      entry_version: 168
       sequence_version: 2
       role: ATP-coupled Fe-protein component that transfers electrons to the catalytic
         MoFe protein in the A. vinelandii nitrogenase system.
@@ -325,4 +365,12 @@ curation_history:
     replacements: DOI:10.1038/nrmicro.2018.9 -> DOI:10.34133/bdr.0005 (1 edge); DOI:10.1038/nrmicro954
     -> DOI:10.34133/bdr.0005 (3 edges); DOI:10.1128/aem.00378-23 -> DOI:10.34133/bdr.0005
     (1 edge).'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:P00459
+    version metadata (entry_version=168, sequence_version=2); added UniProtKB:P00459
+    (nifH1) protein example to node nitrogenase; added UniProtKB:A0L6X0 (nifH) protein
+    example to node ferredoxin_flavodoxin.'
   llm_assisted: true

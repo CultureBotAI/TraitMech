@@ -24,3 +24,70 @@ curation_history:
   changes: Proposed a DOI-backed FAPROTAX metabolic capability from proposals/metpo_traitmech_v11
     after repository-wide duplicate review.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph thiosulfate_respiration_graph
+    with GENE_OR_PROTEIN node thiosulfate_respiration_protein_component and UniProtKB:P97224
+    exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: thiosulfate_respiration_graph
+  title: Protein component associated with thiosulfate respiration
+  description: Literature-backed association between Thiosulfate dehydrogenase [quinone]
+    small subunit (UniProtKB:P97224) and thiosulfate respiration.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P97224 in Acidianus
+    ambivalens (Desulfurolobus ambivalens)) associated with thiosulfate respiration
+    while full multi-step mechanistic curation remains future work.
+  nodes:
+  - node_id: thiosulfate_respiration_trait
+    label: thiosulfate respiration
+    node_type: TRAIT
+    grounding: traitmech:000126
+    description: A respiration of sulfur compounds in which thiosulfate is the terminal
+      electron acceptor.
+  - node_id: thiosulfate_respiration_protein_component
+    label: Thiosulfate dehydrogenase [quinone] small subunit
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Thiosulfate dehydrogenase [quinone] small subunit)
+      associated with thiosulfate respiration.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - doxA
+    protein_examples:
+    - uniprot_id: UniProtKB:P97224
+      protein_label: Thiosulfate dehydrogenase [quinone] small subunit
+      gene_symbol: doxA
+      taxon_id: NCBITaxon:2283
+      taxon_label: Acidianus ambivalens (Desulfurolobus ambivalens)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 59
+      sequence_version: 1
+      role: Characteristic protein component (doxA, Thiosulfate dehydrogenase [quinone]
+        small subunit) associated with thiosulfate respiration in Acidianus ambivalens
+        (Desulfurolobus ambivalens).
+      evidence:
+      - reference: DOI:10.3389/fmicb.2023.1108245
+        snippet: sulfate, sulfur, or thiosulfate respiration
+        notes: Supports Thiosulfate dehydrogenase [quinone] small subunit in thiosulfate
+          respiration; UniProtKB:P97224 (doxA, Thiosulfate dehydrogenase [quinone]
+          small subunit) in Acidianus ambivalens (Desulfurolobus ambivalens) provides
+          a verified protein exemplar.
+  edges:
+  - subject: thiosulfate_respiration_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: thiosulfate_respiration_trait
+    description: Thiosulfate dehydrogenase [quinone] small subunit (doxA, UniProtKB:P97224)
+      contributes to thiosulfate respiration (associated with respiration, thiosulfate,
+      sulfate).
+    evidence:
+    - reference: DOI:10.3389/fmicb.2023.1108245
+      snippet: sulfate, sulfur, or thiosulfate respiration
+      notes: Supports the functional association between Thiosulfate dehydrogenase
+        [quinone] small subunit (UniProtKB:P97224 in Acidianus ambivalens (Desulfurolobus
+        ambivalens)) and thiosulfate respiration.

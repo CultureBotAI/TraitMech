@@ -90,6 +90,38 @@ causal_graphs:
     grounding: traitmech:000209
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
+  - node_id: rst_duf4238_system_protein_component
+    label: Phage infection protein
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Phage infection protein) associated with Rst_DUF4238
+      system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - pip
+    protein_examples:
+    - uniprot_id: UniProtKB:P49022
+      protein_label: Phage infection protein
+      gene_symbol: pip
+      taxon_id: NCBITaxon:1360
+      taxon_label: Lactococcus lactis subsp. lactis (Streptococcus lactis)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 85
+      sequence_version: 1
+      role: Characteristic protein component (pip, Phage infection protein) associated
+        with Rst_DUF4238 system in Lactococcus lactis subsp. lactis (Streptococcus
+        lactis).
+      evidence:
+      - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/rst_duf4238.md
+        snippet: Rst_DUF4238 is a single gene system found in a screen of phage and
+          phage-satellites antiviral hotspots :ref{doi=10.1016/j.chom.2022.02.018}.
+          It was shown to provide *E.coli* with a strong resistance against phage
+          T7.
+        notes: Supports Phage infection protein in Rst_DUF4238 system; UniProtKB:P49022
+          (pip, Phage infection protein) in Lactococcus lactis subsp. lactis (Streptococcus
+          lactis) provides a verified protein exemplar.
   edges:
   - subject: rst_duf4238_locus
     predicate: contributes to
@@ -150,6 +182,20 @@ causal_graphs:
         of bacterial immune systems
       notes: The DefenseFinder article registry maps the named Rst_DUF4238 system
         to the Rousset et al. preprint.
+  - subject: rst_duf4238_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: rst_duf4238_system_trait
+    description: Phage infection protein (pip, UniProtKB:P49022) contributes to Rst_DUF4238
+      system (associated with completion, preventing, infection).
+    evidence:
+    - reference: DOI:10.1016/j.chom.2022.02.018
+      snippet: Therefore, ariAB seem to halt growth in infected cells, preventing
+        the completion of the phage cycle, a typical feature of abortive infection
+        systems
+      notes: Supports the functional association between Phage infection protein (UniProtKB:P49022
+        in Lactococcus lactis subsp. lactis (Streptococcus lactis)) and Rst_DUF4238
+        system.
 discussions:
 - discussion_id: rst-duf4238-host-mechanism-gap
   prompt: Resolve Rst_DUF4238 native host breadth, accession-level DUF4238 proteins,
@@ -202,4 +248,10 @@ curation_history:
     DUF4238 locus assayed in Escherichia coli and a DefenseFinder RefSeq model example,
     but not a direct native host exemplar with experimental Rst_DUF4238 activity.
     No paid research was used.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    rst_duf4238_system_protein_component with UniProtKB:P49022 (pip) exemplar.'
   llm_assisted: true

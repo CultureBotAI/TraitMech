@@ -90,6 +90,34 @@ causal_graphs:
     node_type: QUALITY
     description: Minimum and maximum growth-supporting temperatures that flank the
       thermal niche.
+  - node_id: temperature_delta_mid1_protein_component
+    label: Fatty acid desaturase
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Fatty acid desaturase) associated with temperature
+      delta mid1.
+    grounding: InterPro:IPR012171
+    gene_symbols:
+    - des
+    protein_examples:
+    - uniprot_id: UniProtKB:O34653
+      protein_label: Fatty acid desaturase
+      gene_symbol: des
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
+      entry_status: REVIEWED
+      proteome_id: UP000001570
+      retrieved_on: '2026-10-17'
+      entry_version: 130
+      sequence_version: 1
+      role: Characteristic protein component (des, Fatty acid desaturase) associated
+        with temperature delta mid1 in Bacillus subtilis (strain 168).
+      evidence:
+      - reference: DOI:10.1128/spectrum.03925-23
+        snippet: Upon temperature decrease, the membrane rigidifies and increases
+          in thickness, resulting in activation of the kinase-dominant state of DesK
+        notes: Supports Fatty acid desaturase in temperature delta mid1; UniProtKB:O34653
+          (des, Fatty acid desaturase) in Bacillus subtilis (strain 168) provides
+          a verified protein exemplar.
   edges:
   - subject: moderate_thermal_adaptation
     predicate: confers
@@ -183,6 +211,18 @@ causal_graphs:
       notes: 'Noll 2020: thermal breadth treated as a cardinal-temperature bounded
         niche property.'
     predicate_id: rdfs:subClassOf
+  - subject: temperature_delta_mid1_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: temperature_delta_mid1_trait
+    description: Fatty acid desaturase (des, UniProtKB:O34653) contributes to temperature
+      delta mid1 (associated with temperature, activation, rigidifies).
+    evidence:
+    - reference: DOI:10.1128/spectrum.03925-23
+      snippet: Upon temperature decrease, the membrane rigidifies and increases in
+        thickness, resulting in activation of the kinase-dominant state of DesK
+      notes: Supports the functional association between Fatty acid desaturase (UniProtKB:O34653
+        in Bacillus subtilis (strain 168)) and temperature delta mid1.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.844372+00:00'
   curator: seed_from_metpo
@@ -247,4 +287,10 @@ curation_history:
     canonical example(s): Pontibacterium sinense (NCBITaxon:2781979; DOI:10.1099/ijsem.0.006018).
     The note retains the measured value or scopes broad-class examples to the cited
     branch; no paid research was used.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    temperature_delta_mid1_protein_component with UniProtKB:O34653 (des) exemplar.'
   llm_assisted: true

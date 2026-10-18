@@ -80,7 +80,7 @@ causal_graphs:
       taxon_label: Escherichia coli K-12
       entry_status: REVIEWED
       retrieved_on: '2026-08-24'
-      entry_version: 207
+      entry_version: 208
       sequence_version: 3
       role: E. coli K-12 sigma-S factor whose loss shortens VBNC persistence and resuscitation
         competence under cold oligotrophic stress.
@@ -245,4 +245,10 @@ curation_history:
     added taxon-paired protein example(s) UniProtKB:P13445 on rpos (NCBITaxon:83333);
     regrounded 1 node(s) (rpos: none->InterPro:IPR012761); added 0 node(s) and 1 edge(s);
     added canonical example(s) NCBITaxon:83333.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:P13445
+    version metadata (entry_version=208, sequence_version=3).'
   llm_assisted: true

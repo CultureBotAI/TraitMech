@@ -58,7 +58,7 @@ causal_graphs:
       entry_status: UNREVIEWED
       proteome_id: UP000502657
       retrieved_on: '2026-08-25'
-      entry_version: 8
+      entry_version: 9
       sequence_version: 1
       role: Aeromonas HppD converts 4-hydroxyphenylpyruvate to homogentisate in the
         pyomelanin-producing branch that generates brown pigmentation.
@@ -93,6 +93,28 @@ causal_graphs:
     description: Enzyme (HmgA) that degrades homogentisic acid to maleylacetoacetate,
       diverting flux away from pyomelanin.
     grounding: GO:0004411
+    protein_examples:
+    - uniprot_id: UniProtKB:Q88E47
+      protein_label: Homogentisate 1,2-dioxygenase
+      gene_symbol: hmgA
+      taxon_id: NCBITaxon:160488
+      taxon_label: Pseudomonas putida (strain ATCC 47054 / DSM 6125 / CFBP 8728 /
+        NCIMB 11950 / KT2440)
+      entry_status: REVIEWED
+      proteome_id: UP000000556
+      retrieved_on: '2026-10-17'
+      entry_version: 121
+      sequence_version: 1
+      role: Exemplar protein (hmgA, Homogentisate 1,2-dioxygenase) representing homogentisate
+        1,2-dioxygenase in Pseudomonas putida (strain ATCC 47054 / DSM 6125 / CFBP
+        8728 / NCIMB 11950 / KT2440) for brown pigmented.
+      evidence:
+      - reference: DOI:10.1128/AEM.67.8.3463-3468.2001
+        snippet: Brown pigments are produced when homogentisic acid accumulates
+        notes: Supports homogentisate 1,2-dioxygenase in brown pigmented; UniProtKB:Q88E47
+          (hmgA, Homogentisate 1,2-dioxygenase) in Pseudomonas putida (strain ATCC
+          47054 / DSM 6125 / CFBP 8728 / NCIMB 11950 / KT2440) provides a verified
+          protein exemplar.
   - node_id: maleylacetoacetate
     label: maleylacetoacetate
     node_type: CHEMICAL
@@ -313,4 +335,11 @@ curation_history:
   action: CONNECT_CAUSAL_GRAPH_COMPONENTS
   changes: 'Resolved issue #183 graph fragmentation (2 components to 1) using 1 source-
     and verbatim-snippet-backed connector(s). No paid research service was called.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:A0AAE7AGQ2
+    version metadata (entry_version=9, sequence_version=1); added UniProtKB:Q88E47
+    (hmgA) protein example to node hmgA.'
   llm_assisted: true

@@ -104,6 +104,29 @@ causal_graphs:
       a quantitative measurement graph; no exact semantic family term was established
       for this aggregate use.
     description: ATP synthase coupling proton re-entry (PMF) to ATP generation.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q49Z52
+      protein_label: ATP synthase subunit alpha
+      gene_symbol: atpA
+      taxon_id: NCBITaxon:342451
+      taxon_label: Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
+        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+      entry_status: REVIEWED
+      proteome_id: UP000006371
+      retrieved_on: '2026-10-17'
+      entry_version: 137
+      sequence_version: 1
+      role: Exemplar protein (atpA, ATP synthase subunit alpha) representing F0F1-ATPase
+        in Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC 15305 /
+        DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) for pH range mid2.
+      evidence:
+      - reference: DOI:10.1093/femsre/fuad033
+        snippet: the F0F1-ATPase (fermentative bacteria), or decarboxylation pathways
+          (next paragraph) prevent the internal pH from becoming too low
+        notes: Supports F0F1-ATPase in pH range mid2; UniProtKB:Q49Z52 (atpA, ATP
+          synthase subunit alpha) in Staphylococcus saprophyticus subsp. saprophyticus
+          (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) provides
+          a verified protein exemplar.
   - node_id: atp_synthesis
     label: ATP synthesis
     node_type: BIOLOGICAL_PROCESS
@@ -117,6 +140,25 @@ causal_graphs:
       a quantitative measurement graph; no exact semantic family term was established
       for this aggregate use.
     description: Antiporters with a direct role in sustaining membrane potential.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q93F90
+      protein_label: Na(+)/H(+) antiporter NhaA
+      gene_symbol: nhaA
+      taxon_id: NCBITaxon:1890
+      taxon_label: Streptomyces antibioticus
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 71
+      sequence_version: 1
+      role: Exemplar protein (nhaA, Na(+)/H(+) antiporter NhaA) representing proton:ion
+        antiporters in Streptomyces antibioticus for pH range mid2.
+      evidence:
+      - reference: DOI:10.1093/femsre/fuad033
+        snippet: Proton-sensing ion/H+ antiporters acidify the cytoplasm by exporting
+          K+ or Na+ in exchange for protons when the internal pH gets too high
+        notes: Supports proton:ion antiporters in pH range mid2; UniProtKB:Q93F90
+          (nhaA, Na(+)/H(+) antiporter NhaA) in Streptomyces antibioticus provides
+          a verified protein exemplar.
   - node_id: membrane_potential
     label: membrane potential (Δψ)
     node_type: STATE
@@ -323,4 +365,11 @@ curation_history:
   action: ADVERSARIAL_REVIEW_REPAIR
   changes: 'Addressed PR #664 adversarial review issue #692: normalized the Poolman
     PMF snippet to quote the source''s uppercase membrane potential symbol.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q49Z52 (atpA)
+    protein example to node f0f1_atpase; added UniProtKB:Q93F90 (nhaA) protein example
+    to node proton_ion_antiporters.'
   llm_assisted: true

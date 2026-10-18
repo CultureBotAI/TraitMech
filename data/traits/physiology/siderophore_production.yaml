@@ -54,3 +54,82 @@ curation_history:
     siderophore class in the local snapshot and the replacement placeholder is reserved
     in proposals/metpo_traitmech_v63.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph siderophore_production_graph
+    with GENE_OR_PROTEIN node siderophore_production_protein_component and UniProtKB:Q8EG34
+    exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: siderophore_production_graph
+  title: Protein component associated with siderophore production
+  description: Literature-backed association between Extracellular iron oxide respiratory
+    system surface decaheme cytochrome c component MtrC (UniProtKB:Q8EG34) and siderophore
+    production.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q8EG34 in Shewanella
+    oneidensis (strain ATCC 700550 / JCM 31522 / CIP 106686 / LMG 19005 / NCIMB 14063
+    / MR-1)) associated with siderophore production while full multi-step mechanistic
+    curation remains future work.
+  nodes:
+  - node_id: siderophore_production_trait
+    label: siderophore production
+    node_type: TRAIT
+    grounding: traitmech:000186
+    description: A physiological trait in which bacteria biosynthesize and release
+      siderophores that scavenge extracellular iron for uptake.
+  - node_id: siderophore_production_protein_component
+    label: Extracellular iron oxide respiratory system surface decaheme cytochrome
+      c component MtrC
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Extracellular iron oxide respiratory system surface
+      decaheme cytochrome c component MtrC) associated with siderophore production.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - mtrC
+    protein_examples:
+    - uniprot_id: UniProtKB:Q8EG34
+      protein_label: Extracellular iron oxide respiratory system surface decaheme
+        cytochrome c component MtrC
+      gene_symbol: mtrC
+      taxon_id: NCBITaxon:211586
+      taxon_label: Shewanella oneidensis (strain ATCC 700550 / JCM 31522 / CIP 106686
+        / LMG 19005 / NCIMB 14063 / MR-1)
+      entry_status: UNREVIEWED
+      proteome_id: UP000008186
+      retrieved_on: '2026-10-17'
+      entry_version: 126
+      sequence_version: 1
+      role: Characteristic protein component (mtrC, Extracellular iron oxide respiratory
+        system surface decaheme cytochrome c component MtrC) associated with siderophore
+        production in Shewanella oneidensis (strain ATCC 700550 / JCM 31522 / CIP
+        106686 / LMG 19005 / NCIMB 14063 / MR-1).
+      evidence:
+      - reference: DOI:10.15698/mic2018.10.649
+        snippet: Pyoverdines are fluorescent siderophores of pseudomonads that play
+          important roles for growth under iron-limiting conditions.
+        notes: Supports Extracellular iron oxide respiratory system surface decaheme
+          cytochrome c component MtrC in siderophore production; UniProtKB:Q8EG34
+          (mtrC, Extracellular iron oxide respiratory system surface decaheme cytochrome
+          c component MtrC) in Shewanella oneidensis (strain ATCC 700550 / JCM 31522
+          / CIP 106686 / LMG 19005 / NCIMB 14063 / MR-1) provides a verified protein
+          exemplar.
+  edges:
+  - subject: siderophore_production_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: siderophore_production_trait
+    description: Extracellular iron oxide respiratory system surface decaheme cytochrome
+      c component MtrC (mtrC, UniProtKB:Q8EG34) contributes to siderophore production
+      (associated with pseudomonads, siderophores, fluorescent).
+    evidence:
+    - reference: DOI:10.15698/mic2018.10.649
+      snippet: Pyoverdines are fluorescent siderophores of pseudomonads that play
+        important roles for growth under iron-limiting conditions.
+      notes: Supports the functional association between Extracellular iron oxide
+        respiratory system surface decaheme cytochrome c component MtrC (UniProtKB:Q8EG34
+        in Shewanella oneidensis (strain ATCC 700550 / JCM 31522 / CIP 106686 / LMG
+        19005 / NCIMB 14063 / MR-1)) and siderophore production.

@@ -47,6 +47,25 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Enzyme catalyzing the light-emitting reaction.
     grounding: GO:0047646
+    protein_examples:
+    - uniprot_id: UniProtKB:P0ADV5
+      protein_label: Luciferase-like monooxygenase
+      gene_symbol: yhbW
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 123
+      sequence_version: 1
+      role: Exemplar protein (yhbW, Luciferase-like monooxygenase) representing luciferase
+        in Escherichia coli (strain K12) for bioluminescence.
+      evidence:
+      - reference: DOI:10.1146/annurev.cellbio.21.012704.131001
+        snippet: Bacteria communicate with one another using chemical signal molecules.
+        notes: Supports luciferase in bioluminescence; UniProtKB:P0ADV5 (yhbW, Luciferase-like
+          monooxygenase) in Escherichia coli (strain K12) provides a verified protein
+          exemplar.
   - node_id: bioluminescence_process
     label: bioluminescence
     node_type: BIOLOGICAL_PROCESS
@@ -76,6 +95,24 @@ causal_graphs:
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: LuxG homologs differ in pyridine-nucleotide preference, and the
       graph does not resolve a single exact reductase family or cofactor specificity.
+    protein_examples:
+    - uniprot_id: UniProtKB:P24273
+      protein_label: Probable flavin reductase
+      gene_symbol: luxG
+      taxon_id: NCBITaxon:668
+      taxon_label: Aliivibrio fischeri (Vibrio fischeri)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 77
+      sequence_version: 1
+      role: Exemplar protein (luxG, Probable flavin reductase) representing LuxG flavin
+        reductase in Aliivibrio fischeri (Vibrio fischeri) for bioluminescence.
+      evidence:
+      - reference: DOI:10.1146/annurev.cellbio.21.012704.131001
+        snippet: Bacteria communicate with one another using chemical signal molecules.
+        notes: Supports LuxG flavin reductase in bioluminescence; UniProtKB:P24273
+          (luxG, Probable flavin reductase) in Aliivibrio fischeri (Vibrio fischeri)
+          provides a verified protein exemplar.
   - node_id: luxcde_complex
     label: LuxCDE fatty acid reductase complex
     node_type: GENE_OR_PROTEIN
@@ -83,6 +120,25 @@ causal_graphs:
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: This node denotes the three distinct LuxC, LuxD, and LuxE components;
       no single protein-family grounding can represent the complete reductase system.
+    protein_examples:
+    - uniprot_id: UniProtKB:P12748
+      protein_label: Long-chain acyl-protein thioester reductase
+      gene_symbol: luxC
+      taxon_id: NCBITaxon:668
+      taxon_label: Aliivibrio fischeri (Vibrio fischeri)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 89
+      sequence_version: 3
+      role: Exemplar protein (luxC, Long-chain acyl-protein thioester reductase) representing
+        LuxCDE fatty acid reductase complex in Aliivibrio fischeri (Vibrio fischeri)
+        for bioluminescence.
+      evidence:
+      - reference: DOI:10.1146/annurev.cellbio.21.012704.131001
+        snippet: Bacteria communicate with one another using chemical signal molecules.
+        notes: Supports LuxCDE fatty acid reductase complex in bioluminescence; UniProtKB:P12748
+          (luxC, Long-chain acyl-protein thioester reductase) in Aliivibrio fischeri
+          (Vibrio fischeri) provides a verified protein exemplar.
   - node_id: lux_i
     label: LuxI autoinducer synthase
     node_type: GENE_OR_PROTEIN
@@ -96,7 +152,7 @@ causal_graphs:
       taxon_label: Aliivibrio fischeri
       entry_status: REVIEWED
       retrieved_on: '2026-08-24'
-      entry_version: 97
+      entry_version: 98
       sequence_version: 1
       role: LuxI synthesizes the 3-oxo-C6-HSL autoinducer that activates LuxR-dependent
         lux-locus expression in A. fischeri; it is a regulatory component, not the
@@ -115,6 +171,24 @@ causal_graphs:
     grounding_notes: LuxR-family transcription factors include many signal specificities;
       the graph names the A. fischeri regulator but no exact whole-protein ontology
       term was verified beyond broad LuxR domains.
+    protein_examples:
+    - uniprot_id: UniProtKB:P12746
+      protein_label: Transcriptional activator protein LuxR
+      gene_symbol: luxR
+      taxon_id: NCBITaxon:668
+      taxon_label: Aliivibrio fischeri (Vibrio fischeri)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 124
+      sequence_version: 3
+      role: Exemplar protein (luxR, Transcriptional activator protein LuxR) representing
+        LuxR transcription factor in Aliivibrio fischeri (Vibrio fischeri) for bioluminescence.
+      evidence:
+      - reference: DOI:10.1146/annurev.cellbio.21.012704.131001
+        snippet: Bacteria communicate with one another using chemical signal molecules.
+        notes: Supports LuxR transcription factor in bioluminescence; UniProtKB:P12746
+          (luxR, Transcriptional activator protein LuxR) in Aliivibrio fischeri (Vibrio
+          fischeri) provides a verified protein exemplar.
   - node_id: autoinducer_hsl
     label: 3-oxo-C6-HSL autoinducer
     node_type: CHEMICAL
@@ -313,4 +387,13 @@ curation_history:
   changes: Reviewed the Lux-system scope and every protein node, converted the canonical
     A. fischeri citation to DOI, grounded luciferase and LuxI functions, and added
     a reviewed A. fischeri LuxI protein example.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:P12747
+    version metadata (entry_version=98, sequence_version=1); added UniProtKB:P0ADV5
+    (yhbW) protein example to node luciferase; added UniProtKB:P24273 (luxG) protein
+    example to node lux_g; added UniProtKB:P12748 (luxC) protein example to node luxcde_complex
+    (+1 more).'
   llm_assisted: true

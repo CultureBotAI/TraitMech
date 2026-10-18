@@ -97,6 +97,26 @@ causal_graphs:
     description: Enzyme oxidizing thiosulfate to tetrathionate, entry step of the
       S4 intermediate pathway.
     grounding: GO:0050338
+    protein_examples:
+    - uniprot_id: UniProtKB:Q4FQB7
+      protein_label: Thiosulfate dehydrogenase
+      gene_symbol: tsdA
+      taxon_id: NCBITaxon:259536
+      taxon_label: Psychrobacter arcticus (strain DSM 17307 / VKM B-2377 / 273-4)
+      entry_status: REVIEWED
+      proteome_id: UP000000546
+      retrieved_on: '2026-10-17'
+      entry_version: 116
+      sequence_version: 1
+      role: Exemplar protein (tsdA, Thiosulfate dehydrogenase) representing TsdA thiosulfate
+        dehydrogenase in Psychrobacter arcticus (strain DSM 17307 / VKM B-2377 / 273-4)
+        for Disproportionation.
+      evidence:
+      - reference: DOI:10.1126/science.1120306
+        snippet: catalyzes an oxygen-dependent disproportionation of elemental sulfur
+        notes: Supports TsdA thiosulfate dehydrogenase in Disproportionation; UniProtKB:Q4FQB7
+          (tsdA, Thiosulfate dehydrogenase) in Psychrobacter arcticus (strain DSM
+          17307 / VKM B-2377 / 273-4) provides a verified protein exemplar.
   - node_id: teth_tetrathionate_hydrolase
     label: TetH tetrathionate hydrolase
     node_type: GENE_OR_PROTEIN
@@ -106,6 +126,29 @@ causal_graphs:
     grounding_notes: TetH proteins are taxon- and acidophile-specific members of broader
       hydrolase families; no exact verified GO or InterPro term was assigned to this
       generic pathway label.
+    protein_examples:
+    - uniprot_id: UniProtKB:B7J3C9
+      protein_label: Tetrathionate hydrolase
+      gene_symbol: tth
+      taxon_id: NCBITaxon:243159
+      taxon_label: Acidithiobacillus ferrooxidans (strain ATCC 23270 / DSM 14882 /
+        CIP 104768 / NCIMB 8455) (Ferrobacillus ferrooxidans (strain ATCC 23270))
+      entry_status: REVIEWED
+      proteome_id: UP000001362
+      retrieved_on: '2026-10-17'
+      entry_version: 82
+      sequence_version: 1
+      role: Exemplar protein (tth, Tetrathionate hydrolase) representing TetH tetrathionate
+        hydrolase in Acidithiobacillus ferrooxidans (strain ATCC 23270 / DSM 14882
+        / CIP 104768 / NCIMB 8455) (Ferrobacillus ferrooxidans (strain ATCC 23270))
+        for Disproportionation.
+      evidence:
+      - reference: DOI:10.1126/science.1120306
+        snippet: catalyzes an oxygen-dependent disproportionation of elemental sulfur
+        notes: Supports TetH tetrathionate hydrolase in Disproportionation; UniProtKB:B7J3C9
+          (tth, Tetrathionate hydrolase) in Acidithiobacillus ferrooxidans (strain
+          ATCC 23270 / DSM 14882 / CIP 104768 / NCIMB 8455) (Ferrobacillus ferrooxidans
+          (strain ATCC 23270)) provides a verified protein exemplar.
   - node_id: sor_sulfur_oxygenase_reductase
     label: SOR sulfur oxygenase reductase
     node_type: GENE_OR_PROTEIN
@@ -120,7 +163,7 @@ causal_graphs:
       taxon_label: Acidianus ambivalens
       entry_status: REVIEWED
       retrieved_on: '2026-08-24'
-      entry_version: 101
+      entry_version: 102
       sequence_version: 3
       role: Catalytic subunit forming the homo-24-mer SOR that performs oxygen-dependent
         elemental-sulfur disproportionation in A. ambivalens.
@@ -396,4 +439,12 @@ curation_history:
     added a DOI-backed reviewed A. ambivalens SOR example, and documented TetH plus
     the distinction between aerobic SOR chemistry and anaerobic disproportionating
     growth.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:P29082
+    version metadata (entry_version=102, sequence_version=3); added UniProtKB:Q4FQB7
+    (tsdA) protein example to node tsda_thiosulfate_dehydrogenase; added UniProtKB:B7J3C9
+    (tth) protein example to node teth_tetrathionate_hydrolase.'
   llm_assisted: true

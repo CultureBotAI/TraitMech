@@ -55,6 +55,28 @@ causal_graphs:
     label: bacterial adhesins
     node_type: GENE_OR_PROTEIN
     description: Bacterial surface adhesins that bind host receptors.
+    protein_examples:
+    - uniprot_id: UniProtKB:P08191
+      protein_label: Type 1 fimbrin D-mannose specific adhesin
+      gene_symbol: fimH
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 198
+      sequence_version: 2
+      role: Exemplar protein (fimH, Type 1 fimbrin D-mannose specific adhesin) representing
+        bacterial adhesins in Escherichia coli (strain K12) for gut-associated.
+      evidence:
+      - reference: DOI:10.1073/pnas.1718635115
+        snippet: Remarkably, measurements of luminal oxygen levels show nearly identical
+          pO2 (partial pressure of oxygen) profiles in conventional and germ-free
+          mice, pointing to the existence of oxygen consumption mechanisms other than
+          microbial respiration
+        notes: Supports bacterial adhesins in gut-associated; UniProtKB:P08191 (fimH,
+          Type 1 fimbrin D-mannose specific adhesin) in Escherichia coli (strain K12)
+          provides a verified protein exemplar.
   - node_id: mucosal_adhesion
     label: adhesion to intestinal mucus/epithelium
     node_type: BIOLOGICAL_PROCESS
@@ -380,6 +402,12 @@ curation_history:
     that both microbes and oxidative chemistry regulate luminal oxygen, so the note
     now bounds SOLE causation rather than denying a microbial contribution. No causal
     claim changed.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P08191 (fimH)
+    protein example to node adhesins.'
   llm_assisted: true
 discussions:
 - discussion_id: kgscan-4fc1a06fa1e3

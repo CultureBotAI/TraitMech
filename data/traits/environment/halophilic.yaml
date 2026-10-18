@@ -69,6 +69,24 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Membrane antiporter that exports sodium from the cytoplasm in exchange
       for protons.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q93F90
+      protein_label: Na(+)/H(+) antiporter NhaA
+      gene_symbol: nhaA
+      taxon_id: NCBITaxon:1890
+      taxon_label: Streptomyces antibioticus
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 71
+      sequence_version: 1
+      role: Exemplar protein (nhaA, Na(+)/H(+) antiporter NhaA) representing Na+/H+
+        antiporter in Streptomyces antibioticus for halophilic.
+      evidence:
+      - reference: PMID:19329623
+        snippet: Salinicoccus albus sp. nov., a halophilic bacterium from a salt mine
+        notes: Supports Na+/H+ antiporter in halophilic; UniProtKB:Q93F90 (nhaA, Na(+)/H(+)
+          antiporter NhaA) in Streptomyces antibioticus provides a verified protein
+          exemplar.
   - node_id: sodium_ion
     label: sodium ion
     node_type: CHEMICAL
@@ -81,6 +99,29 @@ causal_graphs:
     label: K+ uniport system
     node_type: GENE_OR_PROTEIN
     description: Uniport transport system that imports potassium into the cell.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q9I540
+      protein_label: Probable potassium transport system protein Kup
+      gene_symbol: kup
+      taxon_id: NCBITaxon:208964
+      taxon_label: Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116
+        / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)
+      entry_status: REVIEWED
+      proteome_id: UP000002438
+      retrieved_on: '2026-10-17'
+      entry_version: 109
+      sequence_version: 1
+      role: Exemplar protein (kup, Probable potassium transport system protein Kup)
+        representing K+ uniport system in Pseudomonas aeruginosa (strain ATCC 15692
+        / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1) for
+        halophilic.
+      evidence:
+      - reference: PMID:19329623
+        snippet: Salinicoccus albus sp. nov., a halophilic bacterium from a salt mine
+        notes: Supports K+ uniport system in halophilic; UniProtKB:Q9I540 (kup, Probable
+          potassium transport system protein Kup) in Pseudomonas aeruginosa (strain
+          ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101
+          / PAO1) provides a verified protein exemplar.
   - node_id: potassium_ion
     label: potassium ion
     node_type: CHEMICAL
@@ -108,6 +149,28 @@ causal_graphs:
     - ectB
     - ectC
     operon: ectABC
+    protein_examples:
+    - uniprot_id: UniProtKB:Q9ZEU6
+      protein_label: L-ectoine synthase
+      gene_symbol: ectC
+      taxon_id: NCBITaxon:290398
+      taxon_label: Chromohalobacter israelensis (strain ATCC BAA-138 / DSM 3043 /
+        CIP 106854 / NCIMB 13768 / 1H11) (Chromohalobacter salexigens)
+      entry_status: REVIEWED
+      proteome_id: UP000000239
+      retrieved_on: '2026-10-17'
+      entry_version: 130
+      sequence_version: 1
+      role: Exemplar protein (ectC, L-ectoine synthase) representing EctABC ectoine-biosynthesis
+        enzyme module in Chromohalobacter israelensis (strain ATCC BAA-138 / DSM 3043
+        / CIP 106854 / NCIMB 13768 / 1H11) (Chromohalobacter salexigens) for halophilic.
+      evidence:
+      - reference: PMID:19329623
+        snippet: Salinicoccus albus sp. nov., a halophilic bacterium from a salt mine
+        notes: Supports EctABC ectoine-biosynthesis enzyme module in halophilic; UniProtKB:Q9ZEU6
+          (ectC, L-ectoine synthase) in Chromohalobacter israelensis (strain ATCC
+          BAA-138 / DSM 3043 / CIP 106854 / NCIMB 13768 / 1H11) (Chromohalobacter
+          salexigens) provides a verified protein exemplar.
   - node_id: ectoine
     label: ectoine
     node_type: CHEMICAL
@@ -351,4 +414,12 @@ curation_history:
     the tranche: set graph scope halophilic_osmoadaptation=NONMECHANISTIC with scope_notes;
     marked 3 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (na_h_antiporter,
     k_uniport, ectABC_operon).'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q93F90 (nhaA)
+    protein example to node na_h_antiporter; added UniProtKB:Q9I540 (kup) protein
+    example to node k_uniport; added UniProtKB:Q9ZEU6 (ectC) protein example to node
+    ectABC_operon.'
   llm_assisted: true

@@ -62,7 +62,7 @@ causal_graphs:
       entry_status: REVIEWED
       proteome_id: UP000018922
       retrieved_on: '2026-08-25'
-      entry_version: 86
+      entry_version: 87
       sequence_version: 1
       role: MamK polymerizes into an actin-like scaffold that organizes magnetosomes
         into chains.
@@ -102,6 +102,27 @@ causal_graphs:
     - mamO
     - mamQ
     operon: mamAB
+    protein_examples:
+    - uniprot_id: UniProtKB:W6KHH6
+      protein_label: Magnetosome protein MamB
+      gene_symbol: mamB
+      taxon_id: NCBITaxon:1288970
+      taxon_label: Magnetospira sp. (strain QH-2) (Marine magnetic spirillum (strain
+        QH-2))
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 55
+      sequence_version: 1
+      role: Exemplar protein (mamB, Magnetosome protein MamB) representing MamAB magnetosome
+        protein module in Magnetospira sp. (strain QH-2) (Marine magnetic spirillum
+        (strain QH-2)) for magnetosome.
+      evidence:
+      - reference: DOI:10.1128/mbio.01649-23
+        snippet: To efficiently navigate within the geomagnetic field, magnetotactic
+          bacteria (MTB) align their magnetosome organelles into chains
+        notes: Supports MamAB magnetosome protein module in magnetosome; UniProtKB:W6KHH6
+          (mamB, Magnetosome protein MamB) in Magnetospira sp. (strain QH-2) (Marine
+          magnetic spirillum (strain QH-2)) provides a verified protein exemplar.
   - node_id: biomineralization
     label: magnetosome biomineralization
     node_type: BIOLOGICAL_PROCESS
@@ -114,6 +135,27 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Magnetosome membrane protein implicated in membrane invagination
       and crystal formation.
+    protein_examples:
+    - uniprot_id: UniProtKB:W6KHH6
+      protein_label: Magnetosome protein MamB
+      gene_symbol: mamB
+      taxon_id: NCBITaxon:1288970
+      taxon_label: Magnetospira sp. (strain QH-2) (Marine magnetic spirillum (strain
+        QH-2))
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 55
+      sequence_version: 1
+      role: Exemplar protein (mamB, Magnetosome protein MamB) representing MamB in
+        Magnetospira sp. (strain QH-2) (Marine magnetic spirillum (strain QH-2)) for
+        magnetosome.
+      evidence:
+      - reference: DOI:10.1128/mbio.01649-23
+        snippet: To efficiently navigate within the geomagnetic field, magnetotactic
+          bacteria (MTB) align their magnetosome organelles into chains
+        notes: Supports MamB in magnetosome; UniProtKB:W6KHH6 (mamB, Magnetosome protein
+          MamB) in Magnetospira sp. (strain QH-2) (Marine magnetic spirillum (strain
+          QH-2)) provides a verified protein exemplar.
   - node_id: membrane_invagination
     label: magnetosome membrane invagination
     node_type: BIOLOGICAL_PROCESS
@@ -335,4 +377,12 @@ curation_history:
   changes: Grounded the magnetotaxis causal-graph process node to newly minted traitmech:000176
     and moved the adjectival magnetotactic related synonym to the magnetotaxis trait;
     resolves issue 851.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:Q6NE59
+    version metadata (entry_version=87, sequence_version=1); added UniProtKB:W6KHH6
+    (mamB) protein example to node mamab_operon; added UniProtKB:W6KHH6 (mamB) protein
+    example to node mamb_protein.'
   llm_assisted: true

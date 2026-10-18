@@ -87,6 +87,24 @@ causal_graphs:
       aggregate use.
     description: Secondary transporter that expels cytoplasmic sodium ions using the
       proton electrochemical gradient.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q93F90
+      protein_label: Na(+)/H(+) antiporter NhaA
+      gene_symbol: nhaA
+      taxon_id: NCBITaxon:1890
+      taxon_label: Streptomyces antibioticus
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 71
+      sequence_version: 1
+      role: Exemplar protein (nhaA, Na(+)/H(+) antiporter NhaA) representing Na+/H+
+        antiporter in Streptomyces antibioticus for halophily preference.
+      evidence:
+      - reference: DOI:10.1093/femsre/fuy009
+        snippet: Na+/H+ antiporters
+        notes: Supports Na+/H+ antiporter in halophily preference; UniProtKB:Q93F90
+          (nhaA, Na(+)/H(+) antiporter NhaA) in Streptomyces antibioticus provides
+          a verified protein exemplar.
   - node_id: proton_electrochemical_gradient
     label: proton electrochemical gradient
     node_type: CHEMICAL
@@ -117,6 +135,25 @@ causal_graphs:
       aggregate use.
     description: Membrane channels acting as safety valves that open during osmotic
       downshock.
+    protein_examples:
+    - uniprot_id: UniProtKB:T0DVE4
+      protein_label: Small-conductance mechanosensitive channel
+      gene_symbol: mscS
+      taxon_id: NCBITaxon:1355530
+      taxon_label: Helicobacter pylori (strain UM084)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 40
+      sequence_version: 1
+      role: Exemplar protein (mscS, Small-conductance mechanosensitive channel) representing
+        mechanosensitive channels in Helicobacter pylori (strain UM084) for halophily
+        preference.
+      evidence:
+      - reference: DOI:10.3390/microorganisms12081738
+        snippet: mechanosensitive channels, which serve as safety valves
+        notes: Supports mechanosensitive channels in halophily preference; UniProtKB:T0DVE4
+          (mscS, Small-conductance mechanosensitive channel) in Helicobacter pylori
+          (strain UM084) provides a verified protein exemplar.
   - node_id: solute_efflux
     label: rapid solute efflux
     node_type: BIOLOGICAL_PROCESS
@@ -398,4 +435,11 @@ curation_history:
     comparison and exact snippet remain on non_halophilic. No sodium-free or universal
     species-wide growth claim is introduced. Other examples, identity, definition,
     hierarchy, graph, evidence and prior history are unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q93F90 (nhaA)
+    protein example to node na_h_antiporter; added UniProtKB:T0DVE4 (mscS) protein
+    example to node mechanosensitive_channels.'
   llm_assisted: true

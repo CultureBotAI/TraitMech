@@ -91,6 +91,27 @@ causal_graphs:
       for this aggregate use.
     description: Potassium uptake transporters whose activity responds to osmotic
       signaling.
+    protein_examples:
+    - uniprot_id: UniProtKB:P96589
+      protein_label: Potassium transporter KimA
+      gene_symbol: kimA
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
+      entry_status: REVIEWED
+      proteome_id: UP000001570
+      retrieved_on: '2026-10-17'
+      entry_version: 124
+      sequence_version: 1
+      role: Exemplar protein (kimA, Potassium transporter KimA) representing K+ uptake
+        systems (Trk/Ktr/Kup/KimA) in Bacillus subtilis (strain 168) for NaCl optimum
+        low.
+      evidence:
+      - reference: DOI:10.1128/mmbr.00181-23
+        snippet: potassium and compatible solute transport are vital for bacteria
+          to survive changes in external osmolality
+        notes: Supports K+ uptake systems (Trk/Ktr/Kup/KimA) in NaCl optimum low;
+          UniProtKB:P96589 (kimA, Potassium transporter KimA) in Bacillus subtilis
+          (strain 168) provides a verified protein exemplar.
   - node_id: opua_opuc_transport
     label: OpuA/OpuC compatible-solute transporters
     node_type: GENE_OR_PROTEIN
@@ -99,6 +120,30 @@ causal_graphs:
       a quantitative measurement graph; no exact semantic family term was established
       for this aggregate use.
     description: ABC-type importers of compatible solutes such as glycine betaine.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q9KIF7
+      protein_label: Glycine betaine transport ATP-binding protein OpuAA
+      gene_symbol: opuAA
+      taxon_id: NCBITaxon:272623
+      taxon_label: Lactococcus lactis subsp. lactis (strain IL1403) (Streptococcus
+        lactis)
+      entry_status: REVIEWED
+      proteome_id: UP000002196
+      retrieved_on: '2026-10-17'
+      entry_version: 140
+      sequence_version: 1
+      role: Exemplar protein (opuAA, Glycine betaine transport ATP-binding protein
+        OpuAA) representing OpuA/OpuC compatible-solute transporters in Lactococcus
+        lactis subsp. lactis (strain IL1403) (Streptococcus lactis) for NaCl optimum
+        low.
+      evidence:
+      - reference: DOI:10.1128/mmbr.00181-23
+        snippet: potassium and compatible solute transport are vital for bacteria
+          to survive changes in external osmolality
+        notes: Supports OpuA/OpuC compatible-solute transporters in NaCl optimum low;
+          UniProtKB:Q9KIF7 (opuAA, Glycine betaine transport ATP-binding protein OpuAA)
+          in Lactococcus lactis subsp. lactis (strain IL1403) (Streptococcus lactis)
+          provides a verified protein exemplar.
   edges:
   - subject: low_ambient_nacl
     predicate: imposes
@@ -254,4 +299,11 @@ curation_history:
     canonical example(s): Sphingomonas oligoaromativorans (NCBITaxon:575322; DOI:10.1099/ijs.0.052894-0).
     The note retains the measured value or scopes broad-class examples to the cited
     branch; no paid research was used.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P96589 (kimA)
+    protein example to node k_uptake_systems; added UniProtKB:Q9KIF7 (opuAA) protein
+    example to node opua_opuc_transport.'
   llm_assisted: true

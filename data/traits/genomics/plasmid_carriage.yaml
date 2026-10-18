@@ -61,6 +61,27 @@ causal_graphs:
       established for this aggregate use.
     description: Selfish genetic module mediating plasmid addiction / post-segregational
       killing.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q06253
+      protein_label: Antitoxin phd
+      gene_symbol: phd
+      taxon_id: NCBITaxon:2886926
+      taxon_label: Escherichia phage P1 (Bacteriophage P1)
+      entry_status: REVIEWED
+      proteome_id: UP000008091
+      retrieved_on: '2026-10-17'
+      entry_version: 114
+      sequence_version: 1
+      role: Exemplar protein (phd, Antitoxin phd) representing toxin-antitoxin system
+        in Escherichia phage P1 (Bacteriophage P1) for plasmid carriage.
+      evidence:
+      - reference: DOI:10.1128/MMBR.00020-10
+        snippet: Few genes, e.g., T4CPs, relaxases, and VirB4, are at the core of
+          plasmid conjugation, and together with accessory genes, they have evolved
+          into specific systems adapted to specific physiological and ecological contexts.
+        notes: Supports toxin-antitoxin system in plasmid carriage; UniProtKB:Q06253
+          (phd, Antitoxin phd) in Escherichia phage P1 (Bacteriophage P1) provides
+          a verified protein exemplar.
   - node_id: plasmid_vertical_inheritance
     label: plasmid vertical inheritance
     node_type: BIOLOGICAL_PROCESS
@@ -73,6 +94,26 @@ causal_graphs:
       a nonmechanistic genomics classification; no exact semantic family term was
       established for this aggregate use.
     description: Plasmid-borne methyltransferase shielding plasmid DNA from restriction.
+    protein_examples:
+    - uniprot_id: UniProtKB:P21311
+      protein_label: Retron Ec67 DNA adenine methylase
+      gene_symbol: dam
+      taxon_id: NCBITaxon:562
+      taxon_label: Escherichia coli
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 105
+      sequence_version: 1
+      role: Exemplar protein (dam, Retron Ec67 DNA adenine methylase) representing
+        plasmid-encoded methylase in Escherichia coli for plasmid carriage.
+      evidence:
+      - reference: DOI:10.1128/MMBR.00020-10
+        snippet: Few genes, e.g., T4CPs, relaxases, and VirB4, are at the core of
+          plasmid conjugation, and together with accessory genes, they have evolved
+          into specific systems adapted to specific physiological and ecological contexts.
+        notes: Supports plasmid-encoded methylase in plasmid carriage; UniProtKB:P21311
+          (dam, Retron Ec67 DNA adenine methylase) in Escherichia coli provides a
+          verified protein exemplar.
   - node_id: restriction_of_plasmid_dna
     label: restriction of incoming plasmid DNA
     node_type: BIOLOGICAL_PROCESS
@@ -87,6 +128,26 @@ causal_graphs:
       established for this aggregate use.
     description: Plasmid-encoded proteins that inhibit host restriction-modification
       defence; their encoding genes remain record-level metadata rather than nodes.
+    protein_examples:
+    - uniprot_id: UniProtKB:P08715
+      protein_label: Hemolysin, plasmid
+      gene_symbol: hlyA
+      taxon_id: NCBITaxon:562
+      taxon_label: Escherichia coli
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 130
+      sequence_version: 1
+      role: Exemplar protein (hlyA, Hemolysin, plasmid) representing plasmid-encoded
+        anti-restriction proteins in Escherichia coli for plasmid carriage.
+      evidence:
+      - reference: DOI:10.1128/MMBR.00020-10
+        snippet: Few genes, e.g., T4CPs, relaxases, and VirB4, are at the core of
+          plasmid conjugation, and together with accessory genes, they have evolved
+          into specific systems adapted to specific physiological and ecological contexts.
+        notes: Supports plasmid-encoded anti-restriction proteins in plasmid carriage;
+          UniProtKB:P08715 (hlyA, Hemolysin, plasmid) in Escherichia coli provides
+          a verified protein exemplar.
   - node_id: antibiotic_selective_pressure
     label: antibiotic selective pressure
     node_type: ENVIRONMENTAL_FACTOR
@@ -249,4 +310,12 @@ curation_history:
     marked 3 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (ta_system,
     plasmid_methylase, anti_restriction_proteins); added 1 node(s) and 1 edge(s) (anti_restriction_proteins);
     removed 1 node(s) and 1 edge(s) together with their evidence (anti_restriction_genes).'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q06253 (phd)
+    protein example to node ta_system; added UniProtKB:P21311 (dam) protein example
+    to node plasmid_methylase; added UniProtKB:P08715 (hlyA) protein example to node
+    anti_restriction_proteins.'
   llm_assisted: true

@@ -107,6 +107,29 @@ causal_graphs:
     - crtB
     - crtI
     - crtY
+    protein_examples:
+    - uniprot_id: UniProtKB:Q9HNE5
+      protein_label: Lycopene beta-cyclase
+      gene_symbol: crtY
+      taxon_id: NCBITaxon:64091
+      taxon_label: Halobacterium salinarum (strain ATCC 700922 / JCM 11081 / NRC-1)
+        (Halobacterium halobium)
+      entry_status: REVIEWED
+      proteome_id: UP000000554
+      retrieved_on: '2026-10-17'
+      entry_version: 88
+      sequence_version: 2
+      role: Exemplar protein (crtY, Lycopene beta-cyclase) representing CrtE/CrtB/CrtI/CrtY
+        carotenoid enzyme module in Halobacterium salinarum (strain ATCC 700922 /
+        JCM 11081 / NRC-1) (Halobacterium halobium) for pigmentation.
+      evidence:
+      - reference: DOI:10.1177/1934578X1801301240
+        snippet: such as melanin, carotenoids, pyocyanin, bacteriochlorophylls, violacein,
+          prodigiosin
+        notes: Supports CrtE/CrtB/CrtI/CrtY carotenoid enzyme module in pigmentation;
+          UniProtKB:Q9HNE5 (crtY, Lycopene beta-cyclase) in Halobacterium salinarum
+          (strain ATCC 700922 / JCM 11081 / NRC-1) (Halobacterium halobium) provides
+          a verified protein exemplar.
   - node_id: beta_carotene_biosynthesis
     label: beta-carotene biosynthesis
     node_type: PATHWAY
@@ -119,6 +142,26 @@ causal_graphs:
     label: hppD 4-hydroxyphenylpyruvate dioxygenase
     node_type: GENE_OR_PROTEIN
     description: Enzyme converting 4-hydroxyphenylpyruvate to homogentisate.
+    protein_examples:
+    - uniprot_id: UniProtKB:A0AAE7AGQ2
+      protein_label: 4-hydroxyphenylpyruvate dioxygenase
+      gene_symbol: hppD
+      taxon_id: NCBITaxon:651
+      taxon_label: Aeromonas media
+      entry_status: UNREVIEWED
+      proteome_id: UP000502657
+      retrieved_on: '2026-10-17'
+      entry_version: 9
+      sequence_version: 1
+      role: Exemplar protein (hppD, 4-hydroxyphenylpyruvate dioxygenase) representing
+        hppD 4-hydroxyphenylpyruvate dioxygenase in Aeromonas media for pigmentation.
+      evidence:
+      - reference: DOI:10.1177/1934578X1801301240
+        snippet: such as melanin, carotenoids, pyocyanin, bacteriochlorophylls, violacein,
+          prodigiosin
+        notes: Supports hppD 4-hydroxyphenylpyruvate dioxygenase in pigmentation;
+          UniProtKB:A0AAE7AGQ2 (hppD, 4-hydroxyphenylpyruvate dioxygenase) in Aeromonas
+          media provides a verified protein exemplar.
   - node_id: homogentisate
     label: homogentisate
     node_type: CHEMICAL
@@ -136,6 +179,29 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Enzyme converting homogentisate to maleylacetoacetate, preventing
       pyomelanin accumulation.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q88E47
+      protein_label: Homogentisate 1,2-dioxygenase
+      gene_symbol: hmgA
+      taxon_id: NCBITaxon:160488
+      taxon_label: Pseudomonas putida (strain ATCC 47054 / DSM 6125 / CFBP 8728 /
+        NCIMB 11950 / KT2440)
+      entry_status: REVIEWED
+      proteome_id: UP000000556
+      retrieved_on: '2026-10-17'
+      entry_version: 121
+      sequence_version: 1
+      role: Exemplar protein (hmgA, Homogentisate 1,2-dioxygenase) representing hmgA
+        homogentisate 1,2-dioxygenase in Pseudomonas putida (strain ATCC 47054 / DSM
+        6125 / CFBP 8728 / NCIMB 11950 / KT2440) for pigmentation.
+      evidence:
+      - reference: DOI:10.1177/1934578X1801301240
+        snippet: such as melanin, carotenoids, pyocyanin, bacteriochlorophylls, violacein,
+          prodigiosin
+        notes: Supports hmgA homogentisate 1,2-dioxygenase in pigmentation; UniProtKB:Q88E47
+          (hmgA, Homogentisate 1,2-dioxygenase) in Pseudomonas putida (strain ATCC
+          47054 / DSM 6125 / CFBP 8728 / NCIMB 11950 / KT2440) provides a verified
+          protein exemplar.
   edges:
   - subject: pigment_biosynthesis
     predicate: has output
@@ -370,4 +436,12 @@ curation_history:
   action: ADD_PATHWAY_CONTEXT
   changes: Added pinned PathwayMech context on reviewed causal nodes with explicit
     route and organism limitations; retained existing groundings and exact xrefs.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q9HNE5 (crtY)
+    protein example to node carotenoid_enzyme_module; added UniProtKB:A0AAE7AGQ2 (hppD)
+    protein example to node hppd_gene; added UniProtKB:Q88E47 (hmgA) protein example
+    to node hmga_gene.'
   llm_assisted: true

@@ -79,6 +79,28 @@ causal_graphs:
     - pfaD
     - pfaE
     operon: pfa
+    protein_examples:
+    - uniprot_id: UniProtKB:Q55231
+      protein_label: sn-1 oleoyl-lipid 12-desaturase
+      gene_symbol: desA
+      taxon_id: NCBITaxon:32049
+      taxon_label: Picosynechococcus sp. (strain ATCC 27264 / PCC 7002 / PR-6) (Agmenellum
+        quadruplicatum)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 127
+      sequence_version: 1
+      role: Exemplar protein (desA, sn-1 oleoyl-lipid 12-desaturase) representing
+        Pfa polyunsaturated-fatty-acid enzyme module in Picosynechococcus sp. (strain
+        ATCC 27264 / PCC 7002 / PR-6) (Agmenellum quadruplicatum) for piezophilic.
+      evidence:
+      - reference: DOI:10.3389/fmolb.2022.1058381
+        snippet: Piezophiles, microorganisms adapted to high pressure, have developed
+          key strategies to maintain the integrity of their lipid membrane
+        notes: Supports Pfa polyunsaturated-fatty-acid enzyme module in piezophilic;
+          UniProtKB:Q55231 (desA, sn-1 oleoyl-lipid 12-desaturase) in Picosynechococcus
+          sp. (strain ATCC 27264 / PCC 7002 / PR-6) (Agmenellum quadruplicatum) provides
+          a verified protein exemplar.
   - node_id: omega3_pufa
     label: omega-3 polyunsaturated fatty acids
     node_type: CHEMICAL
@@ -243,4 +265,10 @@ curation_history:
     the tranche: set graph scope piezophilic_hhp_membrane_adaptation=NONMECHANISTIC
     with scope_notes; marked 1 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (pfa_operon).'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q55231 (desA)
+    protein example to node pfa_operon.'
   llm_assisted: true

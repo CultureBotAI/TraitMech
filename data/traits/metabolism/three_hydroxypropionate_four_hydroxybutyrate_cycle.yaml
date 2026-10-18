@@ -136,7 +136,7 @@ causal_graphs:
       entry_status: UNREVIEWED
       proteome_id: UP000000242
       retrieved_on: '2026-08-24'
-      entry_version: 85
+      entry_version: 86
       sequence_version: 1
       role: Gamma carboxyltransferase component of the three-component acetyl-CoA/propionyl-CoA
         carboxylase; this accession is not the complete enzyme.
@@ -331,4 +331,10 @@ curation_history:
   changes: Scoped the M. sedula 3HP/4HB mechanism, added all three DOI-backed carboxylase
     components plus Msed_1321 as taxon-paired UniProt examples, and documented why
     the complex and historical dehydratase labels remain reviewed label-only.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:A4YGI1
+    version metadata (entry_version=86, sequence_version=1).'
   llm_assisted: true

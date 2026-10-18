@@ -104,6 +104,36 @@ causal_graphs:
     node_type: TRAIT
     grounding: traitmech:000214
     description: Possession of a genome-encoded abortive-infection phage-defense system.
+  - node_id: abialpha_system_protein_component
+    label: Abortive infection protein
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Abortive infection protein) associated with AbiAlpha
+      system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - abi
+    protein_examples:
+    - uniprot_id: UniProtKB:P18024
+      protein_label: Abortive infection protein
+      gene_symbol: abi
+      taxon_id: NCBITaxon:562
+      taxon_label: Escherichia coli
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 49
+      sequence_version: 1
+      role: Characteristic protein component (abi, Abortive infection protein) associated
+        with AbiAlpha system in Escherichia coli.
+      evidence:
+      - reference: PMID:30634666
+        snippet: We found that E. faecalis V583 prophage 6 was particularly efficient
+          in resisting Idefix infection thanks to a new abortive infection (Abi) mechanism,
+          which we designated Abiα.
+        notes: Supports Abortive infection protein in AbiAlpha system; UniProtKB:P18024
+          (abi, Abortive infection protein) in Escherichia coli provides a verified
+          protein exemplar.
   edges:
   - subject: abialpha_locus
     predicate: contributes to
@@ -192,6 +222,19 @@ causal_graphs:
       snippet: a new abortive infection (Abi) mechanism, which we designated Abiα
       notes: Lossouarn et al. place AbiAlpha in the abortive-infection class of phage
         defense.
+  - subject: abialpha_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: abialpha_system_trait
+    description: Abortive infection protein (abi, UniProtKB:P18024) contributes to
+      AbiAlpha system (associated with diacetylactis, lactococcus, sequencing).
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: AbiH | 10\.1111/j\.1574-6968\.1996\.tb08446\.x | Cloning and sequencing
+        of the novel abortive infection gene abiH of Lactococcus lactis ssp\. lactis
+        biovar\. diacetylactis S94
+      notes: Supports the functional association between Abortive infection protein
+        (UniProtKB:P18024 in Escherichia coli) and AbiAlpha system.
 discussions:
 - discussion_id: abialpha-lysis-route-gap
   prompt: Resolve the AbiAlpha direct molecular target, Idefix trigger, lysis route,
@@ -230,4 +273,10 @@ curation_history:
   changes: Re-copied the DefenseFinder AbiAlpha HMM registry row byte-exactly from
     the pinned Liste_hmm_system.md source while confirming the article-registry title
     casing against List_system_article.md for PR 1163 review issue 1168.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    abialpha_system_protein_component with UniProtKB:P18024 (abi) exemplar.'
   llm_assisted: true

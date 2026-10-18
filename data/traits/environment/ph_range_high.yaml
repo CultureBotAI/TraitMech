@@ -73,6 +73,30 @@ causal_graphs:
     - mrpF
     - mrpG
     operon: mrpA-G
+    protein_examples:
+    - uniprot_id: UniProtKB:Q9RGZ5
+      protein_label: Na(+)/H(+) antiporter subunit A
+      gene_symbol: mrpA
+      taxon_id: NCBITaxon:398511
+      taxon_label: Alkalihalophilus pseudofirmus (strain ATCC BAA-2126 / JCM 17055
+        / OF4) (Bacillus pseudofirmus)
+      entry_status: REVIEWED
+      proteome_id: UP000001544
+      retrieved_on: '2026-10-17'
+      entry_version: 115
+      sequence_version: 2
+      role: Exemplar protein (mrpA, Na(+)/H(+) antiporter subunit A) representing
+        Mrp Na+/H+ antiporter complex in Alkalihalophilus pseudofirmus (strain ATCC
+        BAA-2126 / JCM 17055 / OF4) (Bacillus pseudofirmus) for pH range high.
+      evidence:
+      - reference: DOI:10.1038/nrmicro2549
+        snippet: For pH homeostasis under alkaline conditions, active transport of
+          protons inward is a crucial adaptation, which usually involves activation
+          and transcriptional up-regulation of key cation/proton antiporters
+        notes: Supports Mrp Na+/H+ antiporter complex in pH range high; UniProtKB:Q9RGZ5
+          (mrpA, Na(+)/H(+) antiporter subunit A) in Alkalihalophilus pseudofirmus
+          (strain ATCC BAA-2126 / JCM 17055 / OF4) (Bacillus pseudofirmus) provides
+          a verified protein exemplar.
   - node_id: membrane_potential
     label: transmembrane potential (delta-psi)
     node_type: QUALITY
@@ -87,6 +111,30 @@ causal_graphs:
       for this aggregate use.
     description: Symporters re-importing Na+ with solutes to supply cytoplasmic Na+
       for antiport.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q9RGZ5
+      protein_label: Na(+)/H(+) antiporter subunit A
+      gene_symbol: mrpA
+      taxon_id: NCBITaxon:398511
+      taxon_label: Alkalihalophilus pseudofirmus (strain ATCC BAA-2126 / JCM 17055
+        / OF4) (Bacillus pseudofirmus)
+      entry_status: REVIEWED
+      proteome_id: UP000001544
+      retrieved_on: '2026-10-17'
+      entry_version: 115
+      sequence_version: 2
+      role: Exemplar protein (mrpA, Na(+)/H(+) antiporter subunit A) representing
+        Na+/solute symporters in Alkalihalophilus pseudofirmus (strain ATCC BAA-2126
+        / JCM 17055 / OF4) (Bacillus pseudofirmus) for pH range high.
+      evidence:
+      - reference: DOI:10.1038/nrmicro2549
+        snippet: For pH homeostasis under alkaline conditions, active transport of
+          protons inward is a crucial adaptation, which usually involves activation
+          and transcriptional up-regulation of key cation/proton antiporters
+        notes: Supports Na+/solute symporters in pH range high; UniProtKB:Q9RGZ5 (mrpA,
+          Na(+)/H(+) antiporter subunit A) in Alkalihalophilus pseudofirmus (strain
+          ATCC BAA-2126 / JCM 17055 / OF4) (Bacillus pseudofirmus) provides a verified
+          protein exemplar.
   - node_id: cytoplasmic_na
     label: cytoplasmic Na+
     node_type: CHEMICAL
@@ -101,6 +149,29 @@ causal_graphs:
       for this aggregate use.
     description: Proton-translocating ATP synthase whose proton uptake contributes
       to pH homeostasis.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q49Z52
+      protein_label: ATP synthase subunit alpha
+      gene_symbol: atpA
+      taxon_id: NCBITaxon:342451
+      taxon_label: Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
+        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+      entry_status: REVIEWED
+      proteome_id: UP000006371
+      retrieved_on: '2026-10-17'
+      entry_version: 137
+      sequence_version: 1
+      role: Exemplar protein (atpA, ATP synthase subunit alpha) representing F1Fo-ATP
+        synthase in Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
+        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) for pH range high.
+      evidence:
+      - reference: DOI:10.1038/nrmicro2549
+        snippet: up-regulation of the hydrolytic activity of F1Fo-ATPase promotes
+          ATP-dependent H+ extrusion under acidic conditions
+        notes: Supports F1Fo-ATP synthase in pH range high; UniProtKB:Q49Z52 (atpA,
+          ATP synthase subunit alpha) in Staphylococcus saprophyticus subsp. saprophyticus
+          (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) provides
+          a verified protein exemplar.
   - node_id: alkaline_ph_homeostasis
     label: alkaline pH homeostasis
     node_type: BIOLOGICAL_PROCESS
@@ -283,4 +354,12 @@ curation_history:
     contained in pH 10-14. Sources that merely grow above pH 10 also extend below
     the bin and therefore remain parent-level evidence under #591. No paid research
     was used.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q9RGZ5 (mrpA)
+    protein example to node mrp_antiporter_complex; added UniProtKB:Q9RGZ5 (mrpA)
+    protein example to node na_solute_symporters; added UniProtKB:Q49Z52 (atpA) protein
+    example to node f1fo_atp_synthase.'
   llm_assisted: true

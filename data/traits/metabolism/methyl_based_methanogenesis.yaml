@@ -49,3 +49,80 @@ curation_history:
     after a repository-wide duplicate review covering ignored and hidden files; the
     pinned METPO snapshot has only an obsolete Methylotrophic methanogenesis class.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph methyl_based_methanogenesis_graph
+    with GENE_OR_PROTEIN node methyl_based_methanogenesis_protein_component and UniProtKB:Q58256
+    exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: methyl_based_methanogenesis_graph
+  title: Protein component associated with methyl-based methanogenesis
+  description: Literature-backed association between Methyl-coenzyme M reductase I
+    subunit alpha (UniProtKB:Q58256) and methyl-based methanogenesis.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q58256 in Methanocaldococcus
+    jannaschii (strain ATCC 43067 / DSM 2661 / JAL-1 / JCM 10045 / NBRC 100440)) associated
+    with methyl-based methanogenesis while full multi-step mechanistic curation remains
+    future work.
+  nodes:
+  - node_id: methyl_based_methanogenesis_trait
+    label: methyl-based methanogenesis
+    node_type: TRAIT
+    grounding: traitmech:000192
+    description: A methanogenesis in which methylated compounds donate methyl groups
+      that are transferred to coenzyme M and reduced to methane.
+  - node_id: methyl_based_methanogenesis_protein_component
+    label: Methyl-coenzyme M reductase I subunit alpha
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Methyl-coenzyme M reductase I subunit alpha) associated
+      with methyl-based methanogenesis.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - mcrA
+    protein_examples:
+    - uniprot_id: UniProtKB:Q58256
+      protein_label: Methyl-coenzyme M reductase I subunit alpha
+      gene_symbol: mcrA
+      taxon_id: NCBITaxon:243232
+      taxon_label: Methanocaldococcus jannaschii (strain ATCC 43067 / DSM 2661 / JAL-1
+        / JCM 10045 / NBRC 100440)
+      entry_status: REVIEWED
+      proteome_id: UP000000805
+      retrieved_on: '2026-10-17'
+      entry_version: 147
+      sequence_version: 2
+      role: Characteristic protein component (mcrA, Methyl-coenzyme M reductase I
+        subunit alpha) associated with methyl-based methanogenesis in Methanocaldococcus
+        jannaschii (strain ATCC 43067 / DSM 2661 / JAL-1 / JCM 10045 / NBRC 100440).
+      evidence:
+      - reference: DOI:10.1128/mmbr.00024-22
+        snippet: Methyl-based methanogenesis is one of three broad categories of archaeal
+          anaerobic methanogenesis, including both the methyl dismutation (methylotrophic)
+          pathway and the methyl-reducing (also known as hydrogen-dependent methylotrophic)
+          pathway
+        notes: Supports Methyl-coenzyme M reductase I subunit alpha in methyl-based
+          methanogenesis; UniProtKB:Q58256 (mcrA, Methyl-coenzyme M reductase I subunit
+          alpha) in Methanocaldococcus jannaschii (strain ATCC 43067 / DSM 2661 /
+          JAL-1 / JCM 10045 / NBRC 100440) provides a verified protein exemplar.
+  edges:
+  - subject: methyl_based_methanogenesis_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: methyl_based_methanogenesis_trait
+    description: Methyl-coenzyme M reductase I subunit alpha (mcrA, UniProtKB:Q58256)
+      contributes to methyl-based methanogenesis (associated with methanogenesis,
+      methylotrophic, dismutation).
+    evidence:
+    - reference: DOI:10.1128/mmbr.00024-22
+      snippet: Methyl-based methanogenesis is one of three broad categories of archaeal
+        anaerobic methanogenesis, including both the methyl dismutation (methylotrophic)
+        pathway and the methyl-reducing (also known as hydrogen-dependent methylotrophic)
+        pathway
+      notes: Supports the functional association between Methyl-coenzyme M reductase
+        I subunit alpha (UniProtKB:Q58256 in Methanocaldococcus jannaschii (strain
+        ATCC 43067 / DSM 2661 / JAL-1 / JCM 10045 / NBRC 100440)) and methyl-based
+        methanogenesis.

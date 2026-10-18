@@ -86,3 +86,69 @@ curation_history:
     removed the laboratory-mutant canonical example, and retained its uniform-serine
     speed response in qualified evidence. Natural canonical exemplars remain deferred.'
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph chemokinesis_graph
+    with GENE_OR_PROTEIN node chemokinesis_protein_component and UniProtKB:B5BL97
+    exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: chemokinesis_graph
+  title: Protein component associated with chemokinesis
+  description: Literature-backed association between Polyamine aminopropyltransferase
+    (UniProtKB:B5BL97) and chemokinesis.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:B5BL97 in Salmonella
+    paratyphi A (strain AKU_12601)) associated with chemokinesis while full multi-step
+    mechanistic curation remains future work.
+  nodes:
+  - node_id: chemokinesis_trait
+    label: chemokinesis
+    node_type: TRAIT
+    grounding: traitmech:000586
+    description: A motile phenotype in which swimming speed changes in response to
+      chemical concentration, without requiring directional bias along a chemical
+      gradient.
+  - node_id: chemokinesis_protein_component
+    label: Polyamine aminopropyltransferase
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Polyamine aminopropyltransferase) associated with
+      chemokinesis.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - speE
+    protein_examples:
+    - uniprot_id: UniProtKB:B5BL97
+      protein_label: Polyamine aminopropyltransferase
+      gene_symbol: speE
+      taxon_id: NCBITaxon:554290
+      taxon_label: Salmonella paratyphi A (strain AKU_12601)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 86
+      sequence_version: 1
+      role: Characteristic protein component (speE, Polyamine aminopropyltransferase)
+        associated with chemokinesis in Salmonella paratyphi A (strain AKU_12601).
+      evidence:
+      - reference: DOI:10.1038/s41396-021-01024-7
+        snippet: Thus, we hypothesize that the metabolism of mucus substrate stimulates
+          Na+-NQR activity, which in turn enables sustained chemokinesis.
+        notes: Supports Polyamine aminopropyltransferase in chemokinesis; UniProtKB:B5BL97
+          (speE, Polyamine aminopropyltransferase) in Salmonella paratyphi A (strain
+          AKU_12601) provides a verified protein exemplar.
+  edges:
+  - subject: chemokinesis_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: chemokinesis_trait
+    description: Polyamine aminopropyltransferase (speE, UniProtKB:B5BL97) contributes
+      to chemokinesis (associated with chemokinesis, hypothesize, metabolism).
+    evidence:
+    - reference: DOI:10.1038/s41396-021-01024-7
+      snippet: Thus, we hypothesize that the metabolism of mucus substrate stimulates
+        Na+-NQR activity, which in turn enables sustained chemokinesis.
+      notes: Supports the functional association between Polyamine aminopropyltransferase
+        (UniProtKB:B5BL97 in Salmonella paratyphi A (strain AKU_12601)) and chemokinesis.

@@ -75,3 +75,75 @@ curation_history:
     and v576 block 1065300-1065399. Existing records unchanged; taxon identity, mappings
     and mechanism remain open. Timestamp records the observed UTC curation decision.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph cytoplasmic_bacterial_predation_graph
+    with GENE_OR_PROTEIN node cytoplasmic_bacterial_predation_protein_component and
+    UniProtKB:Q49ZB8 exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: cytoplasmic_bacterial_predation_graph
+  title: Protein component associated with cytoplasmic bacterial predation
+  description: Literature-backed association between Heme oxygenase (UniProtKB:Q49ZB8)
+    and cytoplasmic bacterial predation.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q49ZB8 in Staphylococcus
+    saprophyticus subsp. saprophyticus (strain ATCC 15305 / DSM 20229 / NCIMB 8711
+    / NCTC 7292 / S-41)) associated with cytoplasmic bacterial predation while full
+    multi-step mechanistic curation remains future work.
+  nodes:
+  - node_id: cytoplasmic_bacterial_predation_trait
+    label: cytoplasmic bacterial predation
+    node_type: TRAIT
+    grounding: traitmech:000700
+    description: A predatory bacterial phenotype in which a bacterium enters the cytoplasm
+      of a bacterial prey cell and grows and reproduces there by consuming and degrading
+      the prey cytoplasm.
+  - node_id: cytoplasmic_bacterial_predation_protein_component
+    label: Heme oxygenase
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Heme oxygenase) associated with cytoplasmic bacterial
+      predation.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - isdG
+    protein_examples:
+    - uniprot_id: UniProtKB:Q49ZB8
+      protein_label: Heme oxygenase
+      gene_symbol: isdG
+      taxon_id: NCBITaxon:342451
+      taxon_label: Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
+        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+      entry_status: REVIEWED
+      proteome_id: UP000006371
+      retrieved_on: '2026-10-17'
+      entry_version: 111
+      sequence_version: 1
+      role: Characteristic protein component (isdG, Heme oxygenase) associated with
+        cytoplasmic bacterial predation in Staphylococcus saprophyticus subsp. saprophyticus
+        (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41).
+      evidence:
+      - reference: DOI:10.1073/pnas.83.7.2138
+        snippet: Daptobacter penetrates both membranes of the prey cell walls and
+          reproduces in their degrading cytoplasm.
+        notes: Supports Heme oxygenase in cytoplasmic bacterial predation; UniProtKB:Q49ZB8
+          (isdG, Heme oxygenase) in Staphylococcus saprophyticus subsp. saprophyticus
+          (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) provides
+          a verified protein exemplar.
+  edges:
+  - subject: cytoplasmic_bacterial_predation_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: cytoplasmic_bacterial_predation_trait
+    description: Heme oxygenase (isdG, UniProtKB:Q49ZB8) contributes to cytoplasmic
+      bacterial predation (associated with daptobacter, penetrates, reproduces).
+    evidence:
+    - reference: DOI:10.1073/pnas.83.7.2138
+      snippet: Daptobacter penetrates both membranes of the prey cell walls and reproduces
+        in their degrading cytoplasm.
+      notes: Supports the functional association between Heme oxygenase (UniProtKB:Q49ZB8
+        in Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC 15305 /
+        DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)) and cytoplasmic bacterial predation.

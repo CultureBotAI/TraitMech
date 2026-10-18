@@ -73,6 +73,25 @@ causal_graphs:
     label: surface adhesins
     node_type: GENE_OR_PROTEIN
     description: Cell-surface proteins moved or engaged during gliding.
+    protein_examples:
+    - uniprot_id: UniProtKB:P08191
+      protein_label: Type 1 fimbrin D-mannose specific adhesin
+      gene_symbol: fimH
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 198
+      sequence_version: 2
+      role: Exemplar protein (fimH, Type 1 fimbrin D-mannose specific adhesin) representing
+        surface adhesins in Escherichia coli (strain K12) for gliding.
+      evidence:
+      - reference: DOI:10.1038/s41579-021-00626-4
+        snippet: moves adhesins along the cell surface
+        notes: Supports surface adhesins in gliding; UniProtKB:P08191 (fimH, Type
+          1 fimbrin D-mannose specific adhesin) in Escherichia coli (strain K12) provides
+          a verified protein exemplar.
   - node_id: type_ix_secretion_system
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
@@ -80,6 +99,28 @@ causal_graphs:
     label: type IX secretion system
     node_type: GENE_OR_PROTEIN
     description: Secretion-associated machinery linked to Flavobacterium gliding.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q49WP1
+      protein_label: Protoheme IX farnesyltransferase
+      gene_symbol: ctaB
+      taxon_id: NCBITaxon:342451
+      taxon_label: Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
+        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+      entry_status: REVIEWED
+      proteome_id: UP000006371
+      retrieved_on: '2026-10-17'
+      entry_version: 112
+      sequence_version: 1
+      role: Exemplar protein (ctaB, Protoheme IX farnesyltransferase) representing
+        type IX secretion system in Staphylococcus saprophyticus subsp. saprophyticus
+        (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) for gliding.
+      evidence:
+      - reference: DOI:10.1038/s41579-021-00626-4
+        snippet: proton-driven motor that powers type 9 secretion and gliding motility
+        notes: Supports type IX secretion system in gliding; UniProtKB:Q49WP1 (ctaB,
+          Protoheme IX farnesyltransferase) in Staphylococcus saprophyticus subsp.
+          saprophyticus (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 /
+          S-41) provides a verified protein exemplar.
   - node_id: proton_motive_force
     label: proton motive force
     node_type: STATE
@@ -310,4 +351,11 @@ curation_history:
     surface_adhesins, type_ix_secretion_system); added taxon-paired protein example(s)
     UniProtKB:Q1D823 on gliding_motility_machinery (NCBITaxon:246197); added canonical
     example(s) NCBITaxon:246197.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P08191 (fimH)
+    protein example to node surface_adhesins; added UniProtKB:Q49WP1 (ctaB) protein
+    example to node type_ix_secretion_system.'
   llm_assisted: true

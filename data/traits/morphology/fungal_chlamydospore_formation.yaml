@@ -133,3 +133,73 @@ curation_history:
     the primary Fusarium conidial-route counterexample and retained treatment and
     source-access limits. Preserve the initial curation event and canonical example.'
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph fungal_chlamydospore_formation_graph
+    with GENE_OR_PROTEIN node fungal_chlamydospore_formation_protein_component and
+    UniProtKB:Q5AMH6 exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: fungal_chlamydospore_formation_graph
+  title: Protein component associated with fungal chlamydospore formation
+  description: Literature-backed association between Cell wall integrity transcriptional
+    regulator CAS5 (UniProtKB:Q5AMH6) and fungal chlamydospore formation.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q5AMH6 in Candida
+    albicans (strain SC5314 / ATCC MYA-2876) (Yeast)) associated with fungal chlamydospore
+    formation while full multi-step mechanistic curation remains future work.
+  nodes:
+  - node_id: fungal_chlamydospore_formation_trait
+    label: fungal chlamydospore formation
+    node_type: TRAIT
+    grounding: traitmech:000658
+    description: A morphological phenotype in which a fungus forms enlarged, thick-walled
+      cells called chlamydospores.
+  - node_id: fungal_chlamydospore_formation_protein_component
+    label: Cell wall integrity transcriptional regulator CAS5
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Cell wall integrity transcriptional regulator
+      CAS5) associated with fungal chlamydospore formation.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - CAS5
+    protein_examples:
+    - uniprot_id: UniProtKB:Q5AMH6
+      protein_label: Cell wall integrity transcriptional regulator CAS5
+      gene_symbol: CAS5
+      taxon_id: NCBITaxon:237561
+      taxon_label: Candida albicans (strain SC5314 / ATCC MYA-2876) (Yeast)
+      entry_status: REVIEWED
+      proteome_id: UP000000559
+      retrieved_on: '2026-10-17'
+      entry_version: 135
+      sequence_version: 1
+      role: Characteristic protein component (CAS5, Cell wall integrity transcriptional
+        regulator CAS5) associated with fungal chlamydospore formation in Candida
+        albicans (strain SC5314 / ATCC MYA-2876) (Yeast).
+      evidence:
+      - reference: DOI:10.3389/fmicb.2016.01697
+        snippet: Both species produced typically high amounts of chlamydospores on
+          rice and CM agar (chlamydospore index [CI] 3).
+        notes: Supports Cell wall integrity transcriptional regulator CAS5 in fungal
+          chlamydospore formation; UniProtKB:Q5AMH6 (CAS5, Cell wall integrity transcriptional
+          regulator CAS5) in Candida albicans (strain SC5314 / ATCC MYA-2876) (Yeast)
+          provides a verified protein exemplar.
+  edges:
+  - subject: fungal_chlamydospore_formation_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: fungal_chlamydospore_formation_trait
+    description: Cell wall integrity transcriptional regulator CAS5 (CAS5, UniProtKB:Q5AMH6)
+      contributes to fungal chlamydospore formation (associated with chlamydospores,
+      chlamydospore, typically).
+    evidence:
+    - reference: DOI:10.3389/fmicb.2016.01697
+      snippet: Both species produced typically high amounts of chlamydospores on rice
+        and CM agar (chlamydospore index [CI] 3).
+      notes: Supports the functional association between Cell wall integrity transcriptional
+        regulator CAS5 (UniProtKB:Q5AMH6 in Candida albicans (strain SC5314 / ATCC
+        MYA-2876) (Yeast)) and fungal chlamydospore formation.

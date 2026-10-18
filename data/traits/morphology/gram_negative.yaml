@@ -99,6 +99,25 @@ causal_graphs:
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: BAM is a multiprotein complex whose composition varies by lineage;
       no single protein-family term represents the whole node.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0A940
+      protein_label: Outer membrane protein assembly factor BamA
+      gene_symbol: bamA
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 163
+      sequence_version: 1
+      role: Exemplar protein (bamA, Outer membrane protein assembly factor BamA) representing
+        BAM complex in Escherichia coli (strain K12) for gram negative.
+      evidence:
+      - reference: DOI:10.3109/10520299609117151
+        snippet: Gram-positive microorganisms require a relatively thick cell wall
+        notes: Supports BAM complex in gram negative; UniProtKB:P0A940 (bamA, Outer
+          membrane protein assembly factor BamA) in Escherichia coli (strain K12)
+          provides a verified protein exemplar.
   - node_id: beta_barrel_omps
     label: beta-barrel outer membrane proteins
     node_type: GENE_OR_PROTEIN
@@ -107,6 +126,26 @@ causal_graphs:
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: This label denotes a structurally broad collection of unrelated
       outer-membrane protein families.
+    protein_examples:
+    - uniprot_id: UniProtKB:P69776
+      protein_label: Major outer membrane lipoprotein Lpp
+      gene_symbol: lpp
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 157
+      sequence_version: 1
+      role: Exemplar protein (lpp, Major outer membrane lipoprotein Lpp) representing
+        beta-barrel outer membrane proteins in Escherichia coli (strain K12) for gram
+        negative.
+      evidence:
+      - reference: DOI:10.3109/10520299609117151
+        snippet: Gram-positive microorganisms require a relatively thick cell wall
+        notes: Supports beta-barrel outer membrane proteins in gram negative; UniProtKB:P69776
+          (lpp, Major outer membrane lipoprotein Lpp) in Escherichia coli (strain
+          K12) provides a verified protein exemplar.
   - node_id: mla_pathway
     label: Mla pathway
     node_type: PATHWAY
@@ -125,6 +164,25 @@ causal_graphs:
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Tol-Pal is a multiprotein system and cannot be represented by
       one component family or accession.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0A912
+      protein_label: Peptidoglycan-associated lipoprotein
+      gene_symbol: pal
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 149
+      sequence_version: 1
+      role: Exemplar protein (pal, Peptidoglycan-associated lipoprotein) representing
+        Tol-Pal system in Escherichia coli (strain K12) for gram negative.
+      evidence:
+      - reference: DOI:10.3109/10520299609117151
+        snippet: Gram-positive microorganisms require a relatively thick cell wall
+        notes: Supports Tol-Pal system in gram negative; UniProtKB:P0A912 (pal, Peptidoglycan-associated
+          lipoprotein) in Escherichia coli (strain K12) provides a verified protein
+          exemplar.
   - node_id: cell_envelope_connectivity
     label: cell envelope connectivity
     node_type: QUALITY
@@ -340,4 +398,12 @@ curation_history:
     the tranche: set graph scope gram_negative_outer_membrane_dye_loss=NONMECHANISTIC
     with scope_notes; marked 3 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (bam_complex, beta_barrel_omps, tol_pal_system).'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P0A940 (bamA)
+    protein example to node bam_complex; added UniProtKB:P69776 (lpp) protein example
+    to node beta_barrel_omps; added UniProtKB:P0A912 (pal) protein example to node
+    tol_pal_system.'
   llm_assisted: true

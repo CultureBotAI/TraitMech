@@ -73,6 +73,29 @@ causal_graphs:
     - ectC
     - ectD
     operon: ectABC/ectBACD
+    protein_examples:
+    - uniprot_id: UniProtKB:Q9ZEU6
+      protein_label: L-ectoine synthase
+      gene_symbol: ectC
+      taxon_id: NCBITaxon:290398
+      taxon_label: Chromohalobacter israelensis (strain ATCC BAA-138 / DSM 3043 /
+        CIP 106854 / NCIMB 13768 / 1H11) (Chromohalobacter salexigens)
+      entry_status: REVIEWED
+      proteome_id: UP000000239
+      retrieved_on: '2026-10-17'
+      entry_version: 130
+      sequence_version: 1
+      role: Exemplar protein (ectC, L-ectoine synthase) representing EctABC(D) ectoine-biosynthesis
+        enzyme module in Chromohalobacter israelensis (strain ATCC BAA-138 / DSM 3043
+        / CIP 106854 / NCIMB 13768 / 1H11) (Chromohalobacter salexigens) for slightly
+        halophilic.
+      evidence:
+      - reference: PMID:12501437
+        snippet: A slightly halophilic, extremely halotolerant, alkaliphilic
+        notes: Supports EctABC(D) ectoine-biosynthesis enzyme module in slightly halophilic;
+          UniProtKB:Q9ZEU6 (ectC, L-ectoine synthase) in Chromohalobacter israelensis
+          (strain ATCC BAA-138 / DSM 3043 / CIP 106854 / NCIMB 13768 / 1H11) (Chromohalobacter
+          salexigens) provides a verified protein exemplar.
   - node_id: ectoine
     label: ectoine
     node_type: CHEMICAL
@@ -339,4 +362,10 @@ curation_history:
     canonical example(s): Paraliobacillus ryukyuensis (NCBITaxon:200904; DOI:10.2323/jgam.48.269).
     The note retains the measured value or scopes broad-class examples to the cited
     branch; no paid research was used.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q9ZEU6 (ectC)
+    protein example to node ect_gene_cluster.'
   llm_assisted: true

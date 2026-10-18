@@ -83,6 +83,40 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Induction of high-affinity iron transport and siderophore production
       under iron limitation.
+  - node_id: opportunistic_pathogen_protein_component
+    label: Multidrug resistance protein MexB
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Multidrug resistance protein MexB) associated
+      with opportunistic pathogen.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - mexB
+    protein_examples:
+    - uniprot_id: UniProtKB:P52002
+      protein_label: Multidrug resistance protein MexB
+      gene_symbol: mexB
+      taxon_id: NCBITaxon:208964
+      taxon_label: Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116
+        / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)
+      entry_status: REVIEWED
+      proteome_id: UP000002438
+      retrieved_on: '2026-10-17'
+      entry_version: 149
+      sequence_version: 2
+      role: Characteristic protein component (mexB, Multidrug resistance protein MexB)
+        associated with opportunistic pathogen in Pseudomonas aeruginosa (strain ATCC
+        15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1).
+      evidence:
+      - reference: DOI:10.1016/j.tim.2012.04.005
+        snippet: An increasing number of studies now demonstrate that many opportunistic
+          pathogens (OPs) do not conform to these assumptions, with virulence factors
+          maintained instead because of advantages in non-parasitic contexts.
+        notes: Supports Multidrug resistance protein MexB in opportunistic pathogen;
+          UniProtKB:P52002 (mexB, Multidrug resistance protein MexB) in Pseudomonas
+          aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG
+          12228 / 1C / PRS 101 / PAO1) provides a verified protein exemplar.
   edges:
   - subject: compromised_host_defense
     predicate: causes
@@ -169,6 +203,21 @@ causal_graphs:
       notes: 'Sanchez-Jimenez: iron homeostasis is an exploitable in-host fitness/virulence
         determinant of opportunists.'
     predicate_id: RO:0002326
+  - subject: opportunistic_pathogen_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: opportunistic_pathogen_trait
+    description: Multidrug resistance protein MexB (mexB, UniProtKB:P52002) contributes
+      to opportunistic pathogen (associated with opportunistic, assumptions, demonstrate).
+    evidence:
+    - reference: DOI:10.1016/j.tim.2012.04.005
+      snippet: An increasing number of studies now demonstrate that many opportunistic
+        pathogens (OPs) do not conform to these assumptions, with virulence factors
+        maintained instead because of advantages in non-parasitic contexts.
+      notes: Supports the functional association between Multidrug resistance protein
+        MexB (UniProtKB:P52002 in Pseudomonas aeruginosa (strain ATCC 15692 / DSM
+        22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)) and opportunistic
+        pathogen.
 curation_history:
 - timestamp: '2026-06-02T00:00:00Z'
   curator: claude
@@ -210,4 +259,10 @@ curation_history:
     tranche of 2026-08-24/25, which shipped without a per-record event. In this record
     the tranche: set graph scope opportunistic_pathogen_context_dependent_virulence=NONMECHANISTIC
     with scope_notes.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    opportunistic_pathogen_protein_component with UniProtKB:P52002 (mexB) exemplar.'
   llm_assisted: true

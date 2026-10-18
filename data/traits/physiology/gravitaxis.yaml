@@ -87,3 +87,68 @@ curation_history:
     term. Reserved METPO:1053800 in proposal v461; documented process-grain and mechanism-grounding
     gaps without substituting a protein or asserting a universal receptor.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph gravitaxis_graph
+    with GENE_OR_PROTEIN node gravitaxis_protein_component and UniProtKB:P39914 exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: gravitaxis_graph
+  title: Protein component associated with gravitaxis
+  description: Literature-backed association between Monothiol bacilliredoxin BrxC
+    (UniProtKB:P39914) and gravitaxis.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P39914 in Bacillus
+    subtilis (strain 168)) associated with gravitaxis while full multi-step mechanistic
+    curation remains future work.
+  nodes:
+  - node_id: gravitaxis_trait
+    label: gravitaxis
+    node_type: TRAIT
+    grounding: traitmech:000584
+    description: A motile phenotype in which the direction of active swimming is biased
+      relative to gravity.
+  - node_id: gravitaxis_protein_component
+    label: Monothiol bacilliredoxin BrxC
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Monothiol bacilliredoxin BrxC) associated with
+      gravitaxis.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - brxC
+    protein_examples:
+    - uniprot_id: UniProtKB:P39914
+      protein_label: Monothiol bacilliredoxin BrxC
+      gene_symbol: brxC
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
+      entry_status: REVIEWED
+      proteome_id: UP000001570
+      retrieved_on: '2026-10-17'
+      entry_version: 128
+      sequence_version: 1
+      role: Characteristic protein component (brxC, Monothiol bacilliredoxin BrxC)
+        associated with gravitaxis in Bacillus subtilis (strain 168).
+      evidence:
+      - reference: DOI:10.1242/jeb.050666
+        snippet: the ability to swim preferentially upwards (negative gravitaxis)
+          is primarily the result of upwardly curving trajectories
+        notes: Supports Monothiol bacilliredoxin BrxC in gravitaxis; UniProtKB:P39914
+          (brxC, Monothiol bacilliredoxin BrxC) in Bacillus subtilis (strain 168)
+          provides a verified protein exemplar.
+  edges:
+  - subject: gravitaxis_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: gravitaxis_trait
+    description: Monothiol bacilliredoxin BrxC (brxC, UniProtKB:P39914) contributes
+      to gravitaxis (associated with preferentially, trajectories, gravitaxis).
+    evidence:
+    - reference: DOI:10.1242/jeb.050666
+      snippet: the ability to swim preferentially upwards (negative gravitaxis) is
+        primarily the result of upwardly curving trajectories
+      notes: Supports the functional association between Monothiol bacilliredoxin
+        BrxC (UniProtKB:P39914 in Bacillus subtilis (strain 168)) and gravitaxis.

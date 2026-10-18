@@ -96,3 +96,72 @@ curation_history:
     METPO:1056200 in v485 under released phenotype. Retained source-access and experimental-readout
     limits; external mappings and protein-resolved mechanisms remain unresolved.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph heterokaryosis_graph
+    with GENE_OR_PROTEIN node heterokaryosis_protein_component and UniProtKB:P32323
+    exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: heterokaryosis_graph
+  title: Protein component associated with heterokaryosis
+  description: Literature-backed association between A-agglutinin anchorage subunit
+    (UniProtKB:P32323) and heterokaryosis.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P32323 in Saccharomyces
+    cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)) associated with heterokaryosis
+    while full multi-step mechanistic curation remains future work.
+  nodes:
+  - node_id: heterokaryosis_trait
+    label: heterokaryosis
+    node_type: TRAIT
+    grounding: traitmech:000608
+    description: A fungal phenotype characterized by the coexistence of genetically
+      distinct nuclei within a shared cytoplasm.
+  - node_id: heterokaryosis_protein_component
+    label: A-agglutinin anchorage subunit
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (A-agglutinin anchorage subunit) associated with
+      heterokaryosis.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - AGA1
+    protein_examples:
+    - uniprot_id: UniProtKB:P32323
+      protein_label: A-agglutinin anchorage subunit
+      gene_symbol: AGA1
+      taxon_id: NCBITaxon:559292
+      taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's
+        yeast)
+      entry_status: REVIEWED
+      proteome_id: UP000002311
+      retrieved_on: '2026-10-17'
+      entry_version: 142
+      sequence_version: 1
+      role: Characteristic protein component (AGA1, A-agglutinin anchorage subunit)
+        associated with heterokaryosis in Saccharomyces cerevisiae (strain ATCC 204508
+        / S288c) (Baker's yeast).
+      evidence:
+      - reference: DOI:10.1098/rspb.2022.0971
+        snippet: Heterokaryosis is a system in which genetically distinct nuclei coexist
+          within the same cytoplasm.
+        notes: Supports A-agglutinin anchorage subunit in heterokaryosis; UniProtKB:P32323
+          (AGA1, A-agglutinin anchorage subunit) in Saccharomyces cerevisiae (strain
+          ATCC 204508 / S288c) (Baker's yeast) provides a verified protein exemplar.
+  edges:
+  - subject: heterokaryosis_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: heterokaryosis_trait
+    description: A-agglutinin anchorage subunit (AGA1, UniProtKB:P32323) contributes
+      to heterokaryosis (associated with heterokaryosis, genetically, cytoplasm).
+    evidence:
+    - reference: DOI:10.1098/rspb.2022.0971
+      snippet: Heterokaryosis is a system in which genetically distinct nuclei coexist
+        within the same cytoplasm.
+      notes: Supports the functional association between A-agglutinin anchorage subunit
+        (UniProtKB:P32323 in Saccharomyces cerevisiae (strain ATCC 204508 / S288c)
+        (Baker's yeast)) and heterokaryosis.

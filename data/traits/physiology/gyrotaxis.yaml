@@ -83,3 +83,73 @@ curation_history:
     still-water usage to the specific introduction passage and qualified the canonical
     example. Definition and hierarchy unchanged.'
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph gyrotaxis_graph
+    with GENE_OR_PROTEIN node gyrotaxis_protein_component and UniProtKB:P37894 exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: gyrotaxis_graph
+  title: Protein component associated with gyrotaxis
+  description: Literature-backed association between Non-motile and phage-resistance
+    protein (UniProtKB:P37894) and gyrotaxis.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P37894 in Caulobacter
+    vibrioides (strain ATCC 19089 / CIP 103742 / CB 15) (Caulobacter crescentus))
+    associated with gyrotaxis while full multi-step mechanistic curation remains future
+    work.
+  nodes:
+  - node_id: gyrotaxis_trait
+    label: gyrotaxis
+    node_type: TRAIT
+    grounding: traitmech:000583
+    description: A motile phenotype in which the balance of gravitational and viscous
+      torques biases an organism's swimming orientation.
+  - node_id: gyrotaxis_protein_component
+    label: Non-motile and phage-resistance protein
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Non-motile and phage-resistance protein) associated
+      with gyrotaxis.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - pleC
+    protein_examples:
+    - uniprot_id: UniProtKB:P37894
+      protein_label: Non-motile and phage-resistance protein
+      gene_symbol: pleC
+      taxon_id: NCBITaxon:190650
+      taxon_label: Caulobacter vibrioides (strain ATCC 19089 / CIP 103742 / CB 15)
+        (Caulobacter crescentus)
+      entry_status: REVIEWED
+      proteome_id: UP000001816
+      retrieved_on: '2026-10-17'
+      entry_version: 173
+      sequence_version: 2
+      role: Characteristic protein component (pleC, Non-motile and phage-resistance
+        protein) associated with gyrotaxis in Caulobacter vibrioides (strain ATCC
+        19089 / CIP 103742 / CB 15) (Caulobacter crescentus).
+      evidence:
+      - reference: DOI:10.1073/pnas.2206738119
+        snippet: The orientational response to the gravity-viscous torque balance
+          is known as gyrotaxis
+        notes: Supports Non-motile and phage-resistance protein in gyrotaxis; UniProtKB:P37894
+          (pleC, Non-motile and phage-resistance protein) in Caulobacter vibrioides
+          (strain ATCC 19089 / CIP 103742 / CB 15) (Caulobacter crescentus) provides
+          a verified protein exemplar.
+  edges:
+  - subject: gyrotaxis_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: gyrotaxis_trait
+    description: Non-motile and phage-resistance protein (pleC, UniProtKB:P37894)
+      contributes to gyrotaxis (associated with orientational, gyrotaxis, response).
+    evidence:
+    - reference: DOI:10.1073/pnas.2206738119
+      snippet: The orientational response to the gravity-viscous torque balance is
+        known as gyrotaxis
+      notes: Supports the functional association between Non-motile and phage-resistance
+        protein (UniProtKB:P37894 in Caulobacter vibrioides (strain ATCC 19089 / CIP
+        103742 / CB 15) (Caulobacter crescentus)) and gyrotaxis.

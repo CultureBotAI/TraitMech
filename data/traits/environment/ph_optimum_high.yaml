@@ -65,6 +65,30 @@ causal_graphs:
       for this aggregate use.
     description: Membrane antiporters importing H+ in exchange for Na+ to acidify
       the cytoplasm at high external pH.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q9RGZ5
+      protein_label: Na(+)/H(+) antiporter subunit A
+      gene_symbol: mrpA
+      taxon_id: NCBITaxon:398511
+      taxon_label: Alkalihalophilus pseudofirmus (strain ATCC BAA-2126 / JCM 17055
+        / OF4) (Bacillus pseudofirmus)
+      entry_status: REVIEWED
+      proteome_id: UP000001544
+      retrieved_on: '2026-10-17'
+      entry_version: 115
+      sequence_version: 2
+      role: Exemplar protein (mrpA, Na(+)/H(+) antiporter subunit A) representing
+        Na+/H+ antiporters in Alkalihalophilus pseudofirmus (strain ATCC BAA-2126
+        / JCM 17055 / OF4) (Bacillus pseudofirmus) for pH optimum high.
+      evidence:
+      - reference: DOI:10.1038/nrmicro2549
+        snippet: For pH homeostasis under alkaline conditions, active transport of
+          protons inward is a crucial adaptation, which usually involves activation
+          and transcriptional up-regulation of key cation/proton antiporters
+        notes: Supports Na+/H+ antiporters in pH optimum high; UniProtKB:Q9RGZ5 (mrpA,
+          Na(+)/H(+) antiporter subunit A) in Alkalihalophilus pseudofirmus (strain
+          ATCC BAA-2126 / JCM 17055 / OF4) (Bacillus pseudofirmus) provides a verified
+          protein exemplar.
   - node_id: alkaliphile_homeostasis
     label: alkaliphile cytoplasmic pH homeostasis
     node_type: BIOLOGICAL_PROCESS
@@ -79,6 +103,26 @@ causal_graphs:
       for this aggregate use.
     description: Monovalent cation/proton antiporter family exporting Na+ and importing
       H+.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q93F90
+      protein_label: Na(+)/H(+) antiporter NhaA
+      gene_symbol: nhaA
+      taxon_id: NCBITaxon:1890
+      taxon_label: Streptomyces antibioticus
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 71
+      sequence_version: 1
+      role: Exemplar protein (nhaA, Na(+)/H(+) antiporter NhaA) representing CPA/Nha
+        family Na+/H+ antiporters in Streptomyces antibioticus for pH optimum high.
+      evidence:
+      - reference: DOI:10.1038/nrmicro2549
+        snippet: For pH homeostasis under alkaline conditions, active transport of
+          protons inward is a crucial adaptation, which usually involves activation
+          and transcriptional up-regulation of key cation/proton antiporters
+        notes: Supports CPA/Nha family Na+/H+ antiporters in pH optimum high; UniProtKB:Q93F90
+          (nhaA, Na(+)/H(+) antiporter NhaA) in Streptomyces antibioticus provides
+          a verified protein exemplar.
   - node_id: intracellular_na
     label: intracellular Na+ concentration
     node_type: CHEMICAL
@@ -92,6 +136,28 @@ causal_graphs:
       for this aggregate use.
     description: Potassium uptake transport system aiding membrane potential and pH
       homeostasis.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q9L6L2
+      protein_label: Trk system potassium uptake protein TrkH
+      gene_symbol: trkH
+      taxon_id: NCBITaxon:99287
+      taxon_label: Salmonella typhimurium (strain LT2 / SGSC1412 / ATCC 700720)
+      entry_status: REVIEWED
+      proteome_id: UP000001014
+      retrieved_on: '2026-10-17'
+      entry_version: 117
+      sequence_version: 1
+      role: Exemplar protein (trkH, Trk system potassium uptake protein TrkH) representing
+        TrkAH K+ uptake system in Salmonella typhimurium (strain LT2 / SGSC1412 /
+        ATCC 700720) for pH optimum high.
+      evidence:
+      - reference: DOI:10.1038/nrmicro2549
+        snippet: For pH homeostasis under alkaline conditions, active transport of
+          protons inward is a crucial adaptation, which usually involves activation
+          and transcriptional up-regulation of key cation/proton antiporters
+        notes: Supports TrkAH K+ uptake system in pH optimum high; UniProtKB:Q9L6L2
+          (trkH, Trk system potassium uptake protein TrkH) in Salmonella typhimurium
+          (strain LT2 / SGSC1412 / ATCC 700720) provides a verified protein exemplar.
   - node_id: rnf_complex
     label: Rnf complex
     node_type: GENE_OR_PROTEIN
@@ -101,6 +167,31 @@ causal_graphs:
       for this aggregate use.
     description: Ferredoxin:NAD oxidoreductase that pumps Na+ to build a transmembrane
       Na+ gradient.
+    protein_examples:
+    - uniprot_id: UniProtKB:H6LC28
+      protein_label: Na(+)-translocating ferredoxin:NAD(+) oxidoreductase complex
+        subunit A
+      gene_symbol: rnfA
+      taxon_id: NCBITaxon:931626
+      taxon_label: Acetobacterium woodii (strain ATCC 29683 / DSM 1030 / JCM 2381
+        / KCTC 1655 / WB1)
+      entry_status: REVIEWED
+      proteome_id: UP000007177
+      retrieved_on: '2026-10-17'
+      entry_version: 60
+      sequence_version: 2
+      role: Exemplar protein (rnfA, Na(+)-translocating ferredoxin:NAD(+) oxidoreductase
+        complex subunit A) representing Rnf complex in Acetobacterium woodii (strain
+        ATCC 29683 / DSM 1030 / JCM 2381 / KCTC 1655 / WB1) for pH optimum high.
+      evidence:
+      - reference: DOI:10.1038/nrmicro2549
+        snippet: For pH homeostasis under alkaline conditions, active transport of
+          protons inward is a crucial adaptation, which usually involves activation
+          and transcriptional up-regulation of key cation/proton antiporters
+        notes: Supports Rnf complex in pH optimum high; UniProtKB:H6LC28 (rnfA, Na(+)-translocating
+          ferredoxin:NAD(+) oxidoreductase complex subunit A) in Acetobacterium woodii
+          (strain ATCC 29683 / DSM 1030 / JCM 2381 / KCTC 1655 / WB1) provides a verified
+          protein exemplar.
   - node_id: transmembrane_na_gradient
     label: transmembrane Na+ gradient
     node_type: BIOLOGICAL_PROCESS
@@ -114,6 +205,28 @@ causal_graphs:
       for this aggregate use.
     description: Terminal oxidases (aa3/ba3/bb3) that pump protons with differing
       efficiencies.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0ABI8
+      protein_label: Cytochrome bo(3) ubiquinol oxidase subunit 1
+      gene_symbol: cyoB
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 154
+      sequence_version: 1
+      role: Exemplar protein (cyoB, Cytochrome bo(3) ubiquinol oxidase subunit 1)
+        representing branched respiratory chain terminal oxidases in Escherichia coli
+        (strain K12) for pH optimum high.
+      evidence:
+      - reference: DOI:10.1038/nrmicro2549
+        snippet: For pH homeostasis under alkaline conditions, active transport of
+          protons inward is a crucial adaptation, which usually involves activation
+          and transcriptional up-regulation of key cation/proton antiporters
+        notes: Supports branched respiratory chain terminal oxidases in pH optimum
+          high; UniProtKB:P0ABI8 (cyoB, Cytochrome bo(3) ubiquinol oxidase subunit
+          1) in Escherichia coli (strain K12) provides a verified protein exemplar.
   - node_id: proton_motive_force
     label: proton motive force
     node_type: STATE
@@ -356,6 +469,15 @@ curation_history:
     the tranche: set graph scope ph_optimum_high_alkaliphile_setpoint=NONMECHANISTIC
     with scope_notes; marked 5 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (na_h_antiporters, cpa_nha_antiporters, trkah_k_uptake, rnf_complex, terminal_oxidases).'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q9RGZ5 (mrpA)
+    protein example to node na_h_antiporters; added UniProtKB:Q93F90 (nhaA) protein
+    example to node cpa_nha_antiporters; added UniProtKB:Q9L6L2 (trkH) protein example
+    to node trkah_k_uptake; added UniProtKB:H6LC28 (rnfA) protein example to node
+    rnf_complex (+1 more).'
   llm_assisted: true
 canonical_examples:
 - taxon_id: NCBITaxon:1463663

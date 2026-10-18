@@ -61,6 +61,29 @@ causal_graphs:
     label: flagellar basal body
     node_type: GENE_OR_PROTEIN
     description: Rotary motor complex embedded in the cell envelope.
+    protein_examples:
+    - uniprot_id: UniProtKB:P33977
+      protein_label: Flagellar basal-body protein FlbY
+      gene_symbol: flbY
+      taxon_id: NCBITaxon:190650
+      taxon_label: Caulobacter vibrioides (strain ATCC 19089 / CIP 103742 / CB 15)
+        (Caulobacter crescentus)
+      entry_status: REVIEWED
+      proteome_id: UP000001816
+      retrieved_on: '2026-10-17'
+      entry_version: 92
+      sequence_version: 2
+      role: Exemplar protein (flbY, Flagellar basal-body protein FlbY) representing
+        flagellar basal body in Caulobacter vibrioides (strain ATCC 19089 / CIP 103742
+        / CB 15) (Caulobacter crescentus) for flagellated.
+      evidence:
+      - reference: DOI:10.3390/biom11020186
+        snippet: Around 20,000 subunits of flagellin assemble to form the flagellar
+          filament
+        notes: Supports flagellar basal body in flagellated; UniProtKB:P33977 (flbY,
+          Flagellar basal-body protein FlbY) in Caulobacter vibrioides (strain ATCC
+          19089 / CIP 103742 / CB 15) (Caulobacter crescentus) provides a verified
+          protein exemplar.
   - node_id: chemotaxis_signaling
     label: chemotaxis signaling
     node_type: BIOLOGICAL_PROCESS
@@ -74,6 +97,27 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: fT3SS at the flagellar base that exports structural subunits to the
       assembly site.
+    protein_examples:
+    - uniprot_id: UniProtKB:P37617
+      protein_label: Zinc/cadmium/lead-transporting P-type ATPase
+      gene_symbol: zntA
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 213
+      sequence_version: 1
+      role: Exemplar protein (zntA, Zinc/cadmium/lead-transporting P-type ATPase)
+        representing flagellar type III secretion system in Escherichia coli (strain
+        K12) for flagellated.
+      evidence:
+      - reference: DOI:10.3390/biom11020186
+        snippet: Around 20,000 subunits of flagellin assemble to form the flagellar
+          filament
+        notes: Supports flagellar type III secretion system in flagellated; UniProtKB:P37617
+          (zntA, Zinc/cadmium/lead-transporting P-type ATPase) in Escherichia coli
+          (strain K12) provides a verified protein exemplar.
   - node_id: flagellar_structural_subunits
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
@@ -108,6 +152,26 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Cytoplasmic ATPase ring complex providing ATP hydrolysis to drive
       flagellar protein export.
+    protein_examples:
+    - uniprot_id: UniProtKB:P52612
+      protein_label: Flagellum-specific ATP synthase
+      gene_symbol: fliI
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 179
+      sequence_version: 2
+      role: Exemplar protein (fliI, Flagellum-specific ATP synthase) representing
+        FliH-FliI-FliJ ATPase complex in Escherichia coli (strain K12) for flagellated.
+      evidence:
+      - reference: DOI:10.3390/biom9070279
+        snippet: bacterial flagellum is a helical filamentous organelle responsible
+          for motility
+        notes: Supports FliH-FliI-FliJ ATPase complex in flagellated; UniProtKB:P52612
+          (fliI, Flagellum-specific ATP synthase) in Escherichia coli (strain K12)
+          provides a verified protein exemplar.
   - node_id: fld_filament_cap
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
@@ -115,6 +179,26 @@ causal_graphs:
     label: FliD filament cap
     node_type: GENE_OR_PROTEIN
     description: Pentameric cap at the filament tip that aids flagellin polymerization.
+    protein_examples:
+    - uniprot_id: UniProtKB:P24216
+      protein_label: Flagellar hook-associated protein 2
+      gene_symbol: fliD
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 168
+      sequence_version: 5
+      role: Exemplar protein (fliD, Flagellar hook-associated protein 2) representing
+        FliD filament cap in Escherichia coli (strain K12) for flagellated.
+      evidence:
+      - reference: DOI:10.3390/biom11020186
+        snippet: Around 20,000 subunits of flagellin assemble to form the flagellar
+          filament
+        notes: Supports FliD filament cap in flagellated; UniProtKB:P24216 (fliD,
+          Flagellar hook-associated protein 2) in Escherichia coli (strain K12) provides
+          a verified protein exemplar.
   - node_id: hook_filament_junction
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
@@ -123,6 +207,26 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Adapter proteins connecting hook to filament and required for filament
       polymerization.
+    protein_examples:
+    - uniprot_id: UniProtKB:P33235
+      protein_label: Flagellar hook-associated protein 1
+      gene_symbol: flgK
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 168
+      sequence_version: 3
+      role: Exemplar protein (flgK, Flagellar hook-associated protein 1) representing
+        FlgK/FlgL hook-filament junction in Escherichia coli (strain K12) for flagellated.
+      evidence:
+      - reference: DOI:10.3390/biom11020186
+        snippet: Around 20,000 subunits of flagellin assemble to form the flagellar
+          filament
+        notes: Supports FlgK/FlgL hook-filament junction in flagellated; UniProtKB:P33235
+          (flgK, Flagellar hook-associated protein 1) in Escherichia coli (strain
+          K12) provides a verified protein exemplar.
   - node_id: filament_polymerization
     label: flagellar filament polymerization
     node_type: BIOLOGICAL_PROCESS
@@ -135,6 +239,26 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Phosphorylated chemotaxis response regulator that binds the C ring
       to control rotation.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0AE67
+      protein_label: Chemotaxis protein CheY
+      gene_symbol: cheY
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 161
+      sequence_version: 2
+      role: Exemplar protein (cheY, Chemotaxis protein CheY) representing CheY-P in
+        Escherichia coli (strain K12) for flagellated.
+      evidence:
+      - reference: DOI:10.3390/biom9070279
+        snippet: bacterial flagellum is a helical filamentous organelle responsible
+          for motility
+        notes: Supports CheY-P in flagellated; UniProtKB:P0AE67 (cheY, Chemotaxis
+          protein CheY) in Escherichia coli (strain K12) provides a verified protein
+          exemplar.
   - node_id: rotational_switching
     label: flagellar rotational switching
     node_type: BIOLOGICAL_PROCESS
@@ -385,4 +509,13 @@ curation_history:
     branch because the tracked report explicitly scopes flagellated to appendage possession
     and says stator activity is not required for that structural state. No paid research
     service was called.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P33977 (flbY)
+    protein example to node flagellar_basal_body; added UniProtKB:P37617 (zntA) protein
+    example to node ft3ss_export_system; added UniProtKB:P52612 (fliI) protein example
+    to node flii_atpase_complex; added UniProtKB:P24216 (fliD) protein example to
+    node fld_filament_cap (+2 more).'
   llm_assisted: true

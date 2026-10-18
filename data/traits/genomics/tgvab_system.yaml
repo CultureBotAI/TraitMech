@@ -100,6 +100,37 @@ causal_graphs:
     grounding: traitmech:000095
     description: Possession of a methyltransferase and restriction endonuclease system
       for self/non-self DNA discrimination.
+  - node_id: tgvab_system_protein_component
+    label: Adenine-specific methyltransferase PglX
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Adenine-specific methyltransferase PglX) associated
+      with TgvAB system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - pglX
+    protein_examples:
+    - uniprot_id: UniProtKB:Q8CJM2
+      protein_label: Adenine-specific methyltransferase PglX
+      gene_symbol: pglX
+      taxon_id: NCBITaxon:100226
+      taxon_label: Streptomyces coelicolor (strain ATCC BAA-471 / A3(2) / M145)
+      entry_status: REVIEWED
+      proteome_id: UP000001973
+      retrieved_on: '2026-10-17'
+      entry_version: 102
+      sequence_version: 1
+      role: Characteristic protein component (pglX, Adenine-specific methyltransferase
+        PglX) associated with TgvAB system in Streptomyces coelicolor (strain ATCC
+        BAA-471 / A3(2) / M145).
+      evidence:
+      - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+        snippet: '| TgvAB | 10\.1128/jb\.00145-24 | Vibrio cholerae pathogenicity
+          island 2 encodes two distinct types of restriction systems |'
+        notes: Supports Adenine-specific methyltransferase PglX in TgvAB system; UniProtKB:Q8CJM2
+          (pglX, Adenine-specific methyltransferase PglX) in Streptomyces coelicolor
+          (strain ATCC BAA-471 / A3(2) / M145) provides a verified protein exemplar.
   edges:
   - subject: tgvab_locus
     predicate: enables
@@ -199,6 +230,24 @@ causal_graphs:
         modification-dependent restriction system related to the GmrSD family of type
         IV restriction enzymes
       notes: Vizzarro et al. place TgvAB among GmrSD-family type IV restriction enzymes.
+  - subject: tgvab_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: tgvab_system_trait
+    description: Adenine-specific methyltransferase PglX (pglX, UniProtKB:Q8CJM2)
+      contributes to TgvAB system (associated with trimmed, custom, einsi).
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| RM_Type_IIG__Type_IIG_1 | | RM_Type_IIG | Custom | 300 | | RM_Type_IIG__Type_IIG_2
+        | | RM_Type_IIG | Custom | 300 | | RM_Type_IIG__Type_IIG_3 | | RM_Type_IIG
+        | Custom | 300 | | RM_Type_IIG__Type_IIG_4 | | RM_Type_IIG | Custom | 300
+        | | RM_Type_IIG__Type_IIG_5 | | RM_Type_IIG | Custom | 300 | | RM_Type_IIG__Type_IIG_FAM_0.einsi_trimmed
+        | | RM_Type_IIG | Custom | 300 | | RM_Type_IIG__Type_IIG_FAM_1.einsi_trimmed
+        | | RM_Type_IIG | Custom | 300 | | RM_Type_IIG__Type_IIG_FAM_2.einsi_trimmed
+        | | RM_Type_IIG | Custom | 300 |'
+      notes: Supports the functional association between Adenine-specific methyltransferase
+        PglX (UniProtKB:Q8CJM2 in Streptomyces coelicolor (strain ATCC BAA-471 / A3(2)
+        / M145)) and TgvAB system.
 discussions:
 - discussion_id: tgvab-defensefinder-rule-gap
   prompt: Resolve TgvAB native host breadth, TgvA/TgvB biochemical roles, phage substrate
@@ -250,4 +299,10 @@ curation_history:
     METPO, history, or prior proposal record; kept the graph at two-component TgvAB/type-IV-restriction
     level because the pinned DefenseFinder HMM rows are not backed by a pinned rules
     row; the replacement placeholder is reserved in proposals/metpo_traitmech_v289.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    tgvab_system_protein_component with UniProtKB:Q8CJM2 (pglX) exemplar.'
   llm_assisted: true

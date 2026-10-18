@@ -50,3 +50,73 @@ curation_history:
     duplicate review covering ignored and hidden files; METPO has no exact gelatinase
     activity class yet.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph gelatinase_activity_graph
+    with GENE_OR_PROTEIN node gelatinase_activity_protein_component and UniProtKB:Q1ID47
+    exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: gelatinase_activity_graph
+  title: Protein component associated with gelatinase activity
+  description: Literature-backed association between Metalloprotease AprA (UniProtKB:Q1ID47)
+    and gelatinase activity.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q1ID47 in Pseudomonas
+    entomophila (strain DSM 28517 / CCUG 61470 / CECT 7985 / L48)) associated with
+    gelatinase activity while full multi-step mechanistic curation remains future
+    work.
+  nodes:
+  - node_id: gelatinase_activity_trait
+    label: gelatinase activity
+    node_type: TRAIT
+    grounding: traitmech:000136
+    description: A physiological enzyme-activity phenotype in which a cell produces
+      active gelatinase protease.
+  - node_id: gelatinase_activity_protein_component
+    label: Metalloprotease AprA
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Metalloprotease AprA) associated with gelatinase
+      activity.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - aprA
+    protein_examples:
+    - uniprot_id: UniProtKB:Q1ID47
+      protein_label: Metalloprotease AprA
+      gene_symbol: aprA
+      taxon_id: NCBITaxon:384676
+      taxon_label: Pseudomonas entomophila (strain DSM 28517 / CCUG 61470 / CECT 7985
+        / L48)
+      entry_status: REVIEWED
+      proteome_id: UP000000658
+      retrieved_on: '2026-10-17'
+      entry_version: 107
+      sequence_version: 1
+      role: Characteristic protein component (aprA, Metalloprotease AprA) associated
+        with gelatinase activity in Pseudomonas entomophila (strain DSM 28517 / CCUG
+        61470 / CECT 7985 / L48).
+      evidence:
+      - reference: DOI:10.1128/JB.01311-07
+        snippet: One of the well-studied virulence factors of Enterococcus faecalis
+          is a secreted bacterial protease, termed gelatinase
+        notes: Supports Metalloprotease AprA in gelatinase activity; UniProtKB:Q1ID47
+          (aprA, Metalloprotease AprA) in Pseudomonas entomophila (strain DSM 28517
+          / CCUG 61470 / CECT 7985 / L48) provides a verified protein exemplar.
+  edges:
+  - subject: gelatinase_activity_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: gelatinase_activity_trait
+    description: Metalloprotease AprA (aprA, UniProtKB:Q1ID47) contributes to gelatinase
+      activity (associated with enterococcus, gelatinase, virulence).
+    evidence:
+    - reference: DOI:10.1128/JB.01311-07
+      snippet: One of the well-studied virulence factors of Enterococcus faecalis
+        is a secreted bacterial protease, termed gelatinase
+      notes: Supports the functional association between Metalloprotease AprA (UniProtKB:Q1ID47
+        in Pseudomonas entomophila (strain DSM 28517 / CCUG 61470 / CECT 7985 / L48))
+        and gelatinase activity.

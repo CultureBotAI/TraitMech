@@ -99,6 +99,37 @@ causal_graphs:
     grounding: traitmech:000209
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
+  - node_id: lamassu_system_protein_component
+    label: Lamassu protein LmuB
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Lamassu protein LmuB) associated with Lamassu
+      system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - lmuB
+    protein_examples:
+    - uniprot_id: UniProtKB:P0DW44
+      protein_label: Lamassu protein LmuB
+      gene_symbol: lmuB
+      taxon_id: NCBITaxon:1761765
+      taxon_label: Bacillus sp. (strain NCIM 5461 / CCTCC AB 2011126 / NIO-1130)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 8
+      sequence_version: 1
+      role: Characteristic protein component (lmuB, Lamassu protein LmuB) associated
+        with Lamassu system in Bacillus sp. (strain NCIM 5461 / CCTCC AB 2011126 /
+        NIO-1130).
+      evidence:
+      - reference: DOI:10.1073/pnas.2519643122
+        snippet: Lamassu is a widespread antiviral system in bacteria that uses structural
+          maintenance of chromosomes-like proteins, typically associated with chromosome
+          maintenance, to detect and halt phage infection
+        notes: Supports Lamassu protein LmuB in Lamassu system; UniProtKB:P0DW44 (lmuB,
+          Lamassu protein LmuB) in Bacillus sp. (strain NCIM 5461 / CCTCC AB 2011126
+          / NIO-1130) provides a verified protein exemplar.
   edges:
   - subject: lamassu_locus
     predicate: contributes to
@@ -171,6 +202,19 @@ causal_graphs:
         682 (1.3%)
       notes: Doron et al. reported Lamassu in a table of candidate antiphage defense
         systems.
+  - subject: lamassu_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: lamassu_system_trait
+    description: Lamassu protein LmuB (lmuB, UniProtKB:P0DW44) contributes to Lamassu
+      system (associated with architecture, previously, antiphage).
+    evidence:
+    - reference: DOI:10.1073/pnas.2519643122
+      snippet: We observed loss of LmuC in a specific clade (Clade S, Fig. 1B), an
+        architecture previously called type I Lamassu shown to be antiphage
+      notes: Supports the functional association between Lamassu protein LmuB (UniProtKB:P0DW44
+        in Bacillus sp. (strain NCIM 5461 / CCTCC AB 2011126 / NIO-1130)) and Lamassu
+        system.
 discussions:
 - discussion_id: lamassu-subtype-and-effector-gap
   prompt: Resolve Lamassu subtype architecture, effector diversity, and viral-DNA
@@ -384,4 +428,10 @@ curation_history:
     discussion using DOI:10.1073/pnas.2519643122 and DOI:10.1038/s41589-025-02102-z.
     Preserved all definitions, parents, evidence, examples and prior history. Component
     absence, LmuB-length family and experimental activity remain separate claims.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    lamassu_system_protein_component with UniProtKB:P0DW44 (lmuB) exemplar.'
   llm_assisted: true

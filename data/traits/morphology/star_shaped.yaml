@@ -73,6 +73,26 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Conserved bactofilin (BacA) and M23 endopeptidase (LmdC) functional
       module.
+    protein_examples:
+    - uniprot_id: UniProtKB:P40767
+      protein_label: Peptidoglycan DL-endopeptidase CwlO
+      gene_symbol: cwlO
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
+      entry_status: REVIEWED
+      proteome_id: UP000001570
+      retrieved_on: '2026-10-17'
+      entry_version: 141
+      sequence_version: 2
+      role: Exemplar protein (cwlO, Peptidoglycan DL-endopeptidase CwlO) representing
+        BacA-LmdC morphogenesis module in Bacillus subtilis (strain 168) for star
+        shaped.
+      evidence:
+      - reference: DOI:10.1146/annurev-cellbio-101011-155745
+        snippet: MreB-directed peptidoglycan synthesis
+        notes: Supports BacA-LmdC morphogenesis module in star shaped; UniProtKB:P40767
+          (cwlO, Peptidoglycan DL-endopeptidase CwlO) in Bacillus subtilis (strain
+          168) provides a verified protein exemplar.
   - node_id: local_pg_remodeling
     label: local peptidoglycan remodeling
     node_type: BIOLOGICAL_PROCESS
@@ -97,6 +117,25 @@ causal_graphs:
     label: bactofilins
     node_type: GENE_OR_PROTEIN
     description: Bactofilin cytoskeletal scaffold proteins.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q01465
+      protein_label: Cell shape-determining protein MreB
+      gene_symbol: mreB
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
+      entry_status: REVIEWED
+      proteome_id: UP000001570
+      retrieved_on: '2026-10-17'
+      entry_version: 148
+      sequence_version: 3
+      role: Exemplar protein (mreB, Cell shape-determining protein MreB) representing
+        bactofilins in Bacillus subtilis (strain 168) for star shaped.
+      evidence:
+      - reference: DOI:10.1146/annurev-cellbio-101011-155745
+        snippet: MreB-directed peptidoglycan synthesis
+        notes: Supports bactofilins in star shaped; UniProtKB:Q01465 (mreB, Cell shape-determining
+          protein MreB) in Bacillus subtilis (strain 168) provides a verified protein
+          exemplar.
   - node_id: pbpc_prosthecate_pole
     label: PbpC localization at prosthecate pole
     node_type: CELLULAR_LOCALIZATION
@@ -109,6 +148,29 @@ causal_graphs:
     label: SpmX
     node_type: GENE_OR_PROTEIN
     description: Developmental regulator co-opted as a morphogen to position prosthecae.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q72AA0
+      protein_label: Transcriptional regulator CooA
+      gene_symbol: cooA
+      taxon_id: NCBITaxon:882
+      taxon_label: Nitratidesulfovibrio vulgaris (strain ATCC 29579 / DSM 644 / CCUG
+        34227 / NCIMB 8303 / VKM B-1760 / Hildenborough) (Desulfovibrio vulgaris)
+      entry_status: REVIEWED
+      proteome_id: UP000002194
+      retrieved_on: '2026-10-17'
+      entry_version: 137
+      sequence_version: 1
+      role: Exemplar protein (cooA, Transcriptional regulator CooA) representing SpmX
+        in Nitratidesulfovibrio vulgaris (strain ATCC 29579 / DSM 644 / CCUG 34227
+        / NCIMB 8303 / VKM B-1760 / Hildenborough) (Desulfovibrio vulgaris) for star
+        shaped.
+      evidence:
+      - reference: DOI:10.7554/eLife.86577.2
+        snippet: central role in the spatial regulation of cell wall biosynthesis
+        notes: Supports SpmX in star shaped; UniProtKB:Q72AA0 (cooA, Transcriptional
+          regulator CooA) in Nitratidesulfovibrio vulgaris (strain ATCC 29579 / DSM
+          644 / CCUG 34227 / NCIMB 8303 / VKM B-1760 / Hildenborough) (Desulfovibrio
+          vulgaris) provides a verified protein exemplar.
   edges:
   - subject: multi_site_polar_pg
     predicate: regulates
@@ -270,4 +332,12 @@ curation_history:
     declared exact synonym(s): ''stellate''. Evidence is predicate-scoped in the versioned
     ontology snapshots; OAK cross-checked direct data, and OLS4 spot-checked release
     deltas and disputed hits.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P40767 (cwlO)
+    protein example to node baca_lmdc_module; added UniProtKB:Q01465 (mreB) protein
+    example to node bactofilins; added UniProtKB:Q72AA0 (cooA) protein example to
+    node spmx.'
   llm_assisted: true

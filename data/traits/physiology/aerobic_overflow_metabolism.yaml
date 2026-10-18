@@ -110,3 +110,75 @@ curation_history:
     Retain oxygen-controlled assay context, the 25-word bound and both earlier curation
     events unchanged.'
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph aerobic_overflow_metabolism_graph
+    with GENE_OR_PROTEIN node aerobic_overflow_metabolism_protein_component and UniProtKB:P0AEC3
+    exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: aerobic_overflow_metabolism_graph
+  title: Protein component associated with aerobic overflow metabolism
+  description: Literature-backed association between Aerobic respiration control sensor
+    protein ArcB (UniProtKB:P0AEC3) and aerobic overflow metabolism.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P0AEC3 in Escherichia
+    coli (strain K12)) associated with aerobic overflow metabolism while full multi-step
+    mechanistic curation remains future work.
+  nodes:
+  - node_id: aerobic_overflow_metabolism_trait
+    label: aerobic overflow metabolism
+    node_type: TRAIT
+    grounding: traitmech:000705
+    description: A physiological phenotype in which microbial cells divert part of
+      their catabolic carbon flux to excreted, incompletely oxidized products with
+      lower ATP yield per substrate than complete respiration, despite possessing
+      respiratory capacity and sufficient oxygen for respiration.
+  - node_id: aerobic_overflow_metabolism_protein_component
+    label: Aerobic respiration control sensor protein ArcB
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Aerobic respiration control sensor protein ArcB)
+      associated with aerobic overflow metabolism.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - arcB
+    protein_examples:
+    - uniprot_id: UniProtKB:P0AEC3
+      protein_label: Aerobic respiration control sensor protein ArcB
+      gene_symbol: arcB
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 164
+      sequence_version: 1
+      role: Characteristic protein component (arcB, Aerobic respiration control sensor
+        protein ArcB) associated with aerobic overflow metabolism in Escherichia coli
+        (strain K12).
+      evidence:
+      - reference: DOI:10.1038/msb.2009.82
+        snippet: S. cerevisiae and E. coli fully oxidize glucose at low concentrations
+          and shift to overflow metabolism at high glucose concentrations.
+        notes: Supports Aerobic respiration control sensor protein ArcB in aerobic
+          overflow metabolism; UniProtKB:P0AEC3 (arcB, Aerobic respiration control
+          sensor protein ArcB) in Escherichia coli (strain K12) provides a verified
+          protein exemplar.
+  edges:
+  - subject: aerobic_overflow_metabolism_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: aerobic_overflow_metabolism_trait
+    description: Aerobic respiration control sensor protein ArcB (arcB, UniProtKB:P0AEC3)
+      contributes to aerobic overflow metabolism (associated with concentrations,
+      cerevisiae, metabolism).
+    evidence:
+    - reference: DOI:10.1038/msb.2009.82
+      snippet: S. cerevisiae and E. coli fully oxidize glucose at low concentrations
+        and shift to overflow metabolism at high glucose concentrations.
+      notes: Supports the functional association between Aerobic respiration control
+        sensor protein ArcB (UniProtKB:P0AEC3 in Escherichia coli (strain K12)) and
+        aerobic overflow metabolism.

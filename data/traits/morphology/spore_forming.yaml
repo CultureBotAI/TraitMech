@@ -76,11 +76,53 @@ causal_graphs:
     label: SpoIID
     node_type: GENE_OR_PROTEIN
     description: Morphogenetic protein required for forespore engulfment.
+    protein_examples:
+    - uniprot_id: UniProtKB:P07372
+      protein_label: Stage II sporulation protein D
+      gene_symbol: spoIID
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
+      entry_status: REVIEWED
+      proteome_id: UP000001570
+      retrieved_on: '2026-10-17'
+      entry_version: 128
+      sequence_version: 1
+      role: Exemplar protein (spoIID, Stage II sporulation protein D) representing
+        SpoIID in Bacillus subtilis (strain 168) for spore forming.
+      evidence:
+      - reference: DOI:10.1038/nrmicro2921
+        snippet: 'Three layers of the B. subtilis spore coat are observed in thin-section
+          electron microscopy: a lamellar inner coat, a more coarsely layered outer
+          coat and a recently identified layer named the crust'
+        notes: Supports SpoIID in spore forming; UniProtKB:P07372 (spoIID, Stage II
+          sporulation protein D) in Bacillus subtilis (strain 168) provides a verified
+          protein exemplar.
   - node_id: spoIIM
     label: SpoIIM
     node_type: GENE_OR_PROTEIN
     description: Morphogenetic protein required for forespore engulfment.
     grounding: InterPro:IPR002798
+    protein_examples:
+    - uniprot_id: UniProtKB:P37873
+      protein_label: Stage II sporulation protein M
+      gene_symbol: spoIIM
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
+      entry_status: REVIEWED
+      proteome_id: UP000001570
+      retrieved_on: '2026-10-17'
+      entry_version: 114
+      sequence_version: 1
+      role: Exemplar protein (spoIIM, Stage II sporulation protein M) representing
+        SpoIIM in Bacillus subtilis (strain 168) for spore forming.
+      evidence:
+      - reference: DOI:10.1038/nrmicro2921
+        snippet: 'Three layers of the B. subtilis spore coat are observed in thin-section
+          electron microscopy: a lamellar inner coat, a more coarsely layered outer
+          coat and a recently identified layer named the crust'
+        notes: Supports SpoIIM in spore forming; UniProtKB:P37873 (spoIIM, Stage II
+          sporulation protein M) in Bacillus subtilis (strain 168) provides a verified
+          protein exemplar.
   - node_id: spoIIP
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
@@ -88,6 +130,27 @@ causal_graphs:
     label: SpoIIP
     node_type: GENE_OR_PROTEIN
     description: Morphogenetic protein required for forespore engulfment.
+    protein_examples:
+    - uniprot_id: UniProtKB:P37968
+      protein_label: Stage II sporulation protein P
+      gene_symbol: spoIIP
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
+      entry_status: REVIEWED
+      proteome_id: UP000001570
+      retrieved_on: '2026-10-17'
+      entry_version: 119
+      sequence_version: 1
+      role: Exemplar protein (spoIIP, Stage II sporulation protein P) representing
+        SpoIIP in Bacillus subtilis (strain 168) for spore forming.
+      evidence:
+      - reference: DOI:10.1038/nrmicro2921
+        snippet: 'Three layers of the B. subtilis spore coat are observed in thin-section
+          electron microscopy: a lamellar inner coat, a more coarsely layered outer
+          coat and a recently identified layer named the crust'
+        notes: Supports SpoIIP in spore forming; UniProtKB:P37968 (spoIIP, Stage II
+          sporulation protein P) in Bacillus subtilis (strain 168) provides a verified
+          protein exemplar.
   - node_id: forespore_engulfment
     label: forespore engulfment
     node_type: BIOLOGICAL_PROCESS
@@ -117,7 +180,7 @@ causal_graphs:
       entry_status: REVIEWED
       proteome_id: UP000001570
       retrieved_on: '2026-08-25'
-      entry_version: 188
+      entry_version: 189
       sequence_version: 1
       role: Activated Spo0A is the B. subtilis master regulator that commits cells
         to the sporulation program.
@@ -137,6 +200,27 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Spo0A-specific phosphatases providing negative control of sporulation
       initiation.
+    protein_examples:
+    - uniprot_id: UniProtKB:P05043
+      protein_label: Aspartyl-phosphate phosphatase Spo0E
+      gene_symbol: spo0E
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
+      entry_status: REVIEWED
+      proteome_id: UP000001570
+      retrieved_on: '2026-10-17'
+      entry_version: 135
+      sequence_version: 1
+      role: Exemplar protein (spo0E, Aspartyl-phosphate phosphatase Spo0E) representing
+        Spo0E-family phosphatases in Bacillus subtilis (strain 168) for spore forming.
+      evidence:
+      - reference: DOI:10.1038/nrmicro2921
+        snippet: 'Three layers of the B. subtilis spore coat are observed in thin-section
+          electron microscopy: a lamellar inner coat, a more coarsely layered outer
+          coat and a recently identified layer named the crust'
+        notes: Supports Spo0E-family phosphatases in spore forming; UniProtKB:P05043
+          (spo0E, Aspartyl-phosphate phosphatase Spo0E) in Bacillus subtilis (strain
+          168) provides a verified protein exemplar.
   edges:
   - subject: forespore
     predicate: develops into
@@ -366,4 +450,13 @@ curation_history:
   action: CONNECT_CAUSAL_GRAPH_COMPONENTS
   changes: 'Resolved issue #183 graph fragmentation (4 components to 1) using 3 source-
     and verbatim-snippet-backed connector(s). No paid research service was called.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:P06534
+    version metadata (entry_version=189, sequence_version=1); added UniProtKB:P07372
+    (spoIID) protein example to node spoIID; added UniProtKB:P37873 (spoIIM) protein
+    example to node spoIIM; added UniProtKB:P37968 (spoIIP) protein example to node
+    spoIIP (+1 more).'
   llm_assisted: true

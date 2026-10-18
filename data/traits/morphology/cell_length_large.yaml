@@ -71,6 +71,28 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: SOS-induced cell-division inhibitor protein that blocks FtsZ assembly.
     grounding: InterPro:IPR004596
+    protein_examples:
+    - uniprot_id: UniProtKB:A7MFW4
+      protein_label: Cell division inhibitor SulA
+      gene_symbol: sulA
+      taxon_id: NCBITaxon:290339
+      taxon_label: Cronobacter sakazakii (strain ATCC BAA-894) (Enterobacter sakazakii)
+      entry_status: REVIEWED
+      proteome_id: UP000000260
+      retrieved_on: '2026-10-17'
+      entry_version: 91
+      sequence_version: 1
+      role: Exemplar protein (sulA, Cell division inhibitor SulA) representing SulA
+        in Cronobacter sakazakii (strain ATCC BAA-894) (Enterobacter sakazakii) for
+        cell length large.
+      evidence:
+      - reference: DOI:10.1002/advs.202203260
+        snippet: cell division inhibitor, sulA, blocks FtsZ (a master regulator of
+          bacterial cell division and responsible for the Z ring formation at mid-cell)
+          polymerization
+        notes: Supports SulA in cell length large; UniProtKB:A7MFW4 (sulA, Cell division
+          inhibitor SulA) in Cronobacter sakazakii (strain ATCC BAA-894) (Enterobacter
+          sakazakii) provides a verified protein exemplar.
   - node_id: ftsz_zring
     label: FtsZ Z-ring
     node_type: BIOLOGICAL_PROCESS
@@ -80,6 +102,29 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Bacterial tubulin homolog whose abundance is rate-limiting for division.
     grounding: InterPro:IPR000158
+    protein_examples:
+    - uniprot_id: UniProtKB:V6F5E5
+      protein_label: Cell division protein FtsZ
+      gene_symbol: ftsZ
+      taxon_id: NCBITaxon:431944
+      taxon_label: Magnetospirillum gryphiswaldense (strain DSM 6361 / JCM 21280 /
+        NBRC 15271 / MSR-1)
+      entry_status: REVIEWED
+      proteome_id: UP000018922
+      retrieved_on: '2026-10-17'
+      entry_version: 63
+      sequence_version: 1
+      role: Exemplar protein (ftsZ, Cell division protein FtsZ) representing FtsZ
+        in Magnetospirillum gryphiswaldense (strain DSM 6361 / JCM 21280 / NBRC 15271
+        / MSR-1) for cell length large.
+      evidence:
+      - reference: DOI:10.1002/advs.202203260
+        snippet: cell division inhibitor, sulA, blocks FtsZ (a master regulator of
+          bacterial cell division and responsible for the Z ring formation at mid-cell)
+          polymerization
+        notes: Supports FtsZ in cell length large; UniProtKB:V6F5E5 (ftsZ, Cell division
+          protein FtsZ) in Magnetospirillum gryphiswaldense (strain DSM 6361 / JCM
+          21280 / NBRC 15271 / MSR-1) provides a verified protein exemplar.
   - node_id: constriction_onset
     label: onset of constriction
     node_type: BIOLOGICAL_PROCESS
@@ -273,4 +318,11 @@ curation_history:
   changes: 'Addressed PR #664 adversarial review issue #696: expanded the SOS-to-SulA
     division-inhibition evidence so the snippet carries SOS-regulon expression instead
     of only naming SOS activation.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:A7MFW4 (sulA)
+    protein example to node sula_protein; added UniProtKB:V6F5E5 (ftsZ) protein example
+    to node ftsz_protein.'
   llm_assisted: true

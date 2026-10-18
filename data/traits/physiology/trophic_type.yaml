@@ -120,6 +120,38 @@ causal_graphs:
     node_type: PATHWAY
     description: Oxidation of molecular hydrogen by [NiFe]-hydrogenases as an inorganic
       electron donor (hydrogen lithotrophy).
+  - node_id: trophic_type_protein_component
+    label: Ribulose bisphosphate carboxylase
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Ribulose bisphosphate carboxylase) associated
+      with trophic type.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - cbbM
+    protein_examples:
+    - uniprot_id: UniProtKB:Q31IK3
+      protein_label: Ribulose bisphosphate carboxylase
+      gene_symbol: cbbM
+      taxon_id: NCBITaxon:317025
+      taxon_label: Hydrogenovibrio crunogenus (strain DSM 25203 / XCL-2) (Thiomicrospira
+        crunogena)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 111
+      sequence_version: 1
+      role: Characteristic protein component (cbbM, Ribulose bisphosphate carboxylase)
+        associated with trophic type in Hydrogenovibrio crunogenus (strain DSM 25203
+        / XCL-2) (Thiomicrospira crunogena).
+      evidence:
+      - reference: DOI:10.1128/AEM.00599-24
+        snippet: These terminal oxidases have high affinity for oxygen and therefore
+          are widely understood to be used under microaerobic conditions
+        notes: Supports Ribulose bisphosphate carboxylase in trophic type; UniProtKB:Q31IK3
+          (cbbM, Ribulose bisphosphate carboxylase) in Hydrogenovibrio crunogenus
+          (strain DSM 25203 / XCL-2) (Thiomicrospira crunogena) provides a verified
+          protein exemplar.
   edges:
   - subject: carbon_source_use
     predicate: causes
@@ -247,6 +279,19 @@ causal_graphs:
       notes: Hydrogenase genes link hydrogen-based lithotrophy to chemoautotrophic
         metabolism.
     predicate_id: biolink:causes
+  - subject: trophic_type_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: trophic_type_trait
+    description: Ribulose bisphosphate carboxylase (cbbM, UniProtKB:Q31IK3) contributes
+      to trophic type (associated with microaerobic, conditions, understood).
+    evidence:
+    - reference: DOI:10.1128/AEM.00599-24
+      snippet: These terminal oxidases have high affinity for oxygen and therefore
+        are widely understood to be used under microaerobic conditions
+      notes: Supports the functional association between Ribulose bisphosphate carboxylase
+        (UniProtKB:Q31IK3 in Hydrogenovibrio crunogenus (strain DSM 25203 / XCL-2)
+        (Thiomicrospira crunogena)) and trophic type.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.866871+00:00'
   curator: seed_from_metpo
@@ -305,4 +350,10 @@ curation_history:
     sp. PCC 6803 (NCBITaxon:1148; DOI:10.3390/md11082894). The note retains the measured
     value or scopes broad-class examples to the cited branch; no paid research was
     used.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    trophic_type_protein_component with UniProtKB:Q31IK3 (cbbM) exemplar.'
   llm_assisted: true

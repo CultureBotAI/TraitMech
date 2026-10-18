@@ -98,6 +98,36 @@ causal_graphs:
     grounding: traitmech:000209
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
+  - node_id: gaps2_system_protein_component
+    label: Maltoporin
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Maltoporin) associated with GAPS2 system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - lamB
+    protein_examples:
+    - uniprot_id: UniProtKB:P02943
+      protein_label: Maltoporin
+      gene_symbol: lamB
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 221
+      sequence_version: 1
+      role: Characteristic protein component (lamB, Maltoporin) associated with GAPS2
+        system in Escherichia coli (strain K12).
+      evidence:
+      - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/gaps2.md
+        snippet: The GAPS2 system is composed of a single protein. It was found in
+          Gamma-Mobile-Trio (GMT) protein containing genomic island in Vibrio, and
+          cloned into E. coli K-12 :ref{doi=10.1101/2023.03.28.534373}. The name GAPS
+          derives from the "GMT-encoded Anti-Phage System" acronym.
+        notes: Supports Maltoporin in GAPS2 system; UniProtKB:P02943 (lamB, Maltoporin)
+          in Escherichia coli (strain K12) provides a verified protein exemplar.
   edges:
   - subject: gaps2_locus
     predicate: contributes to
@@ -177,6 +207,18 @@ causal_graphs:
       snippet: "GAPS2\tGAPS2\t1\t1\tGAPS2__GAPS2\t\t\t"
       notes: The DefenseFinder rules table models GAPS2 as a single-profile system
         requiring GAPS2__GAPS2.
+  - subject: gaps2_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: gaps2_system_trait
+    description: Maltoporin (lamB, UniProtKB:P02943) contributes to GAPS2 system (associated
+      with mannheimia, composed, cp006942).
+    evidence:
+    - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/gaps2.md
+      snippet: 'The GAPS2 system in *Mannheimia sp. USDA-ARS-USMARC-1261* (GCF_000521605.1,
+        NZ_CP006942) is composed of 1 protein: GAPS2 (WP_025236539.1)'
+      notes: Supports the functional association between Maltoporin (UniProtKB:P02943
+        in Escherichia coli (strain K12)) and GAPS2 system.
 discussions:
 - discussion_id: gaps2-mechanism-gap
   prompt: Resolve GAPS2 natural host breadth, BRCT-domain activity, phage trigger
@@ -242,4 +284,10 @@ curation_history:
     validation graph, a DefenseFinder system model, and a RefSeq Mannheimia sp. example,
     but not a direct native microbial isolate exemplar with experimentally verified
     endogenous GAPS2 activity. No paid research was used.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    gaps2_system_protein_component with UniProtKB:P02943 (lamB) exemplar.'
   llm_assisted: true

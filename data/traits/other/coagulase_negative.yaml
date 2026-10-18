@@ -29,6 +29,13 @@ curation_history:
     DOI- and NCBI-backed evidence after a repository-wide duplicate review covering
     ignored and hidden files.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph coagulase_negative_graph
+    with GENE_OR_PROTEIN node coagulase_negative_protein_component and UniProtKB:Q99V45
+    exemplar.'
+  llm_assisted: true
 definition_source: DOI:10.3390/microorganisms9040830
 evidence:
 - reference: DOI:10.3390/microorganisms9040830
@@ -47,3 +54,63 @@ canonical_examples:
   note: Lee and Anjum describe S. epidermidis as a coagulase-negative Staphylococcus
     species.
   reference: https://www.ncbi.nlm.nih.gov/books/NBK563240/
+causal_graphs:
+- graph_id: coagulase_negative_graph
+  title: Protein component associated with coagulase negative
+  description: Literature-backed association between Glutamyl endopeptidase (UniProtKB:Q99V45)
+    and coagulase negative.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q99V45 in Staphylococcus
+    aureus (strain Mu50 / ATCC 700699)) associated with coagulase negative while full
+    multi-step mechanistic curation remains future work.
+  nodes:
+  - node_id: coagulase_negative_trait
+    label: coagulase negative
+    node_type: TRAIT
+    grounding: METPO:1007091
+    description: Test-outcome phenotype where the coagulase test yields a negative
+      result. The underlying enzyme-organism relation should additionally be asserted
+      via <organism> METPO:2000303 'does not show activity of' <coagulase enzyme term>
+      once a sufficiently specific enzyme term is selected.
+  - node_id: coagulase_negative_protein_component
+    label: Glutamyl endopeptidase
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Glutamyl endopeptidase) associated with coagulase
+      negative.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - sspA
+    protein_examples:
+    - uniprot_id: UniProtKB:Q99V45
+      protein_label: Glutamyl endopeptidase
+      gene_symbol: sspA
+      taxon_id: NCBITaxon:158878
+      taxon_label: Staphylococcus aureus (strain Mu50 / ATCC 700699)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 126
+      sequence_version: 1
+      role: Characteristic protein component (sspA, Glutamyl endopeptidase) associated
+        with coagulase negative in Staphylococcus aureus (strain Mu50 / ATCC 700699).
+      evidence:
+      - reference: DOI:10.3390/microorganisms9040830
+        snippet: Coagulase-negative staphylococci (CoNS) form a large group of Gram-positive
+          cocci united by their mutual lack of the virulence factor coagulase
+        notes: Supports Glutamyl endopeptidase in coagulase negative; UniProtKB:Q99V45
+          (sspA, Glutamyl endopeptidase) in Staphylococcus aureus (strain Mu50 / ATCC
+          700699) provides a verified protein exemplar.
+  edges:
+  - subject: coagulase_negative_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: coagulase_negative_trait
+    description: Glutamyl endopeptidase (sspA, UniProtKB:Q99V45) contributes to coagulase
+      negative (associated with staphylococci, coagulase, virulence).
+    evidence:
+    - reference: DOI:10.3390/microorganisms9040830
+      snippet: Coagulase-negative staphylococci (CoNS) form a large group of Gram-positive
+        cocci united by their mutual lack of the virulence factor coagulase
+      notes: Supports the functional association between Glutamyl endopeptidase (UniProtKB:Q99V45
+        in Staphylococcus aureus (strain Mu50 / ATCC 700699)) and coagulase negative.

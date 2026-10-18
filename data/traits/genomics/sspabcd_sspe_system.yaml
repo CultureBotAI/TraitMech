@@ -100,6 +100,37 @@ causal_graphs:
     grounding: traitmech:000213
     description: Possession of a genome-encoded phosphorothioate-based phage defense
       system.
+  - node_id: sspabcd_sspe_system_protein_component
+    label: Small, acid-soluble spore protein gamma-type
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Small, acid-soluble spore protein gamma-type)
+      associated with SspABCD-SspE system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - sspE
+    protein_examples:
+    - uniprot_id: UniProtKB:P07784
+      protein_label: Small, acid-soluble spore protein gamma-type
+      gene_symbol: sspE
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
+      entry_status: REVIEWED
+      proteome_id: UP000001570
+      retrieved_on: '2026-10-17'
+      entry_version: 121
+      sequence_version: 1
+      role: Characteristic protein component (sspE, Small, acid-soluble spore protein
+        gamma-type) associated with SspABCD-SspE system in Bacillus subtilis (strain
+        168).
+      evidence:
+      - reference: DOI:10.1038/s41564-020-0700-6
+        snippet: Here, we describe an unusual SspABCD-SspE PT system in Vibrio cyclitrophicus,
+          Escherichia coli and Streptomyces yokosukanensis
+        notes: Supports Small, acid-soluble spore protein gamma-type in SspABCD-SspE
+          system; UniProtKB:P07784 (sspE, Small, acid-soluble spore protein gamma-type)
+          in Bacillus subtilis (strain 168) provides a verified protein exemplar.
   edges:
   - subject: sspabcd_sspe_locus
     predicate: contributes to
@@ -187,6 +218,20 @@ causal_graphs:
       snippet: SspABCD coupled with SspE provides protection against phages
       notes: Xiong et al. place SspABCD-SspE within phosphorothioation-dependent antiphage
         defense systems.
+  - subject: sspabcd_sspe_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: sspabcd_sspe_system_trait
+    description: Small, acid-soluble spore protein gamma-type (sspE, UniProtKB:P07784)
+      contributes to SspABCD-SspE system (associated with cyclitrophicus, yokosukanensis,
+      streptomyces).
+    evidence:
+    - reference: DOI:10.1038/s41564-020-0700-6
+      snippet: Here, we describe an unusual SspABCD-SspE PT system in Vibrio cyclitrophicus,
+        Escherichia coli and Streptomyces yokosukanensis
+      notes: Supports the functional association between Small, acid-soluble spore
+        protein gamma-type (UniProtKB:P07784 in Bacillus subtilis (strain 168)) and
+        SspABCD-SspE system.
 curation_history:
 - timestamp: '2026-09-15T16:38:06Z'
   curator: codex
@@ -195,4 +240,10 @@ curation_history:
     phosphorothioate defense system parent after an ignored-and-hidden duplicate review
     found no exact live TraitMech, METPO, or prior proposal record; the replacement
     placeholder is reserved in proposals/metpo_traitmech_v99.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    sspabcd_sspe_system_protein_component with UniProtKB:P07784 (sspE) exemplar.'
   llm_assisted: true

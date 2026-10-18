@@ -117,6 +117,28 @@ causal_graphs:
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: OxyR belongs to the broad LysR regulator family, but the checked
       InterPro entries describe shared domains rather than an exact OxyR protein family.
+    protein_examples:
+    - uniprot_id: UniProtKB:A9CGX9
+      protein_label: HTH-type transcriptional regulator OxyR
+      gene_symbol: oxyR
+      taxon_id: NCBITaxon:176299
+      taxon_label: Agrobacterium fabrum (strain C58 / ATCC 33970) (Agrobacterium tumefaciens
+        (strain C58))
+      entry_status: REVIEWED
+      proteome_id: UP000000813
+      retrieved_on: '2026-10-17'
+      entry_version: 102
+      sequence_version: 1
+      role: Exemplar protein (oxyR, HTH-type transcriptional regulator OxyR) representing
+        OxyR in Agrobacterium fabrum (strain C58 / ATCC 33970) (Agrobacterium tumefaciens
+        (strain C58)) for catalase activity.
+      evidence:
+      - reference: DOI:10.1073/pnas.96.11.6161
+        snippet: In wild-type cells, OxyR is activated by hydrogen peroxide.
+        notes: Supports OxyR in catalase activity; UniProtKB:A9CGX9 (oxyR, HTH-type
+          transcriptional regulator OxyR) in Agrobacterium fabrum (strain C58 / ATCC
+          33970) (Agrobacterium tumefaciens (strain C58)) provides a verified protein
+          exemplar.
   - node_id: perr_regulator
     label: PerR
     node_type: GENE_OR_PROTEIN
@@ -135,7 +157,7 @@ causal_graphs:
       entry_status: REVIEWED
       proteome_id: UP000008816
       retrieved_on: '2026-08-23'
-      entry_version: 109
+      entry_version: 110
       sequence_version: 1
       role: Manganese-dependent peroxide-responsive repressor controlling katA and
         the wider oxidative-stress defense regulon in S. aureus.
@@ -415,4 +437,11 @@ curation_history:
     the yeast detoxification model, retaining the upstream heme context and primary-source-backed
     Ctt1 example. The link explicitly distinguishes catalase chemistry from superoxide
     dismutase and bacterial regulatory branches.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:Q2G282
+    version metadata (entry_version=110, sequence_version=1); added UniProtKB:A9CGX9
+    (oxyR) protein example to node oxyr_regulator.'
   llm_assisted: true

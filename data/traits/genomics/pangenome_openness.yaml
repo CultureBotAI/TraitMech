@@ -83,6 +83,38 @@ causal_graphs:
     node_type: QUALITY
     description: Estimated openness that may reflect artifacts rather than true HGT
       dynamics.
+  - node_id: pangenome_openness_protein_component
+    label: Protein RecA
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Protein RecA) associated with pangenome openness.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - recA
+    protein_examples:
+    - uniprot_id: UniProtKB:Q9F407
+      protein_label: Protein RecA
+      gene_symbol: recA
+      taxon_id: NCBITaxon:1078020
+      taxon_label: Mycolicibacterium thermoresistibile (strain ATCC 19527 / DSM 44167
+        / CIP 105390 / JCM 6362 / NCTC 10409 / 316) (Mycobacterium thermoresistibile)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 114
+      sequence_version: 1
+      role: Characteristic protein component (recA, Protein RecA) associated with
+        pangenome openness in Mycolicibacterium thermoresistibile (strain ATCC 19527
+        / DSM 44167 / CIP 105390 / JCM 6362 / NCTC 10409 / 316) (Mycobacterium thermoresistibile).
+      evidence:
+      - reference: DOI:10.1073/pnas.0506758102
+        snippet: Unfortunately, the sequence of a single genome does not reflect how
+          genetic variability drives pathogenesis within a bacterial species and also
+          limits genome-wide screens for vaccine candidates or for antimicrobial targets.
+        notes: Supports Protein RecA in pangenome openness; UniProtKB:Q9F407 (recA,
+          Protein RecA) in Mycolicibacterium thermoresistibile (strain ATCC 19527
+          / DSM 44167 / CIP 105390 / JCM 6362 / NCTC 10409 / 316) (Mycobacterium thermoresistibile)
+          provides a verified protein exemplar.
   edges:
   - subject: horizontal_gene_transfer
     predicate: causes
@@ -166,6 +198,21 @@ causal_graphs:
     - reference: DOI:10.1101/2022.04.23.489244
       notes: Higher rates of annotation error can lead to incorrect estimates of whether
         a pangenome is open or closed.
+  - subject: pangenome_openness_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: pangenome_openness_trait
+    description: Protein RecA (recA, UniProtKB:Q9F407) contributes to pangenome openness
+      (associated with antimicrobial, unfortunately, pathogenesis).
+    evidence:
+    - reference: DOI:10.1073/pnas.0506758102
+      snippet: Unfortunately, the sequence of a single genome does not reflect how
+        genetic variability drives pathogenesis within a bacterial species and also
+        limits genome-wide screens for vaccine candidates or for antimicrobial targets.
+      notes: Supports the functional association between Protein RecA (UniProtKB:Q9F407
+        in Mycolicibacterium thermoresistibile (strain ATCC 19527 / DSM 44167 / CIP
+        105390 / JCM 6362 / NCTC 10409 / 316) (Mycobacterium thermoresistibile)) and
+        pangenome openness.
 curation_history:
 - timestamp: '2026-06-05T00:00:00Z'
   curator: claude
@@ -204,4 +251,10 @@ curation_history:
     tranche of 2026-08-24/25, which shipped without a per-record event. In this record
     the tranche: set graph scope pangenome_openness_hgt=NONMECHANISTIC with scope_notes;
     retyped 2 node(s) (plasmid->GENETIC_ELEMENT, prophage->GENETIC_ELEMENT).'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    pangenome_openness_protein_component with UniProtKB:Q9F407 (recA) exemplar.'
   llm_assisted: true

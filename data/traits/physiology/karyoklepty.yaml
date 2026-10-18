@@ -84,3 +84,70 @@ curation_history:
     from plastid retention, intact endosymbionts and sequence transfer; deferred unresolved
     control and inheritance mechanisms.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph karyoklepty_graph
+    with GENE_OR_PROTEIN node karyoklepty_protein_component and UniProtKB:P41832 exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: karyoklepty_graph
+  title: Protein component associated with karyoklepty
+  description: Literature-backed association between Protein BNI1 (UniProtKB:P41832)
+    and karyoklepty.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P41832 in Saccharomyces
+    cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)) associated with karyoklepty
+    while full multi-step mechanistic curation remains future work.
+  nodes:
+  - node_id: karyoklepty_trait
+    label: karyoklepty
+    node_type: TRAIT
+    grounding: traitmech:000630
+    description: A physiological phenotype in which a microbial organism selectively
+      retains and uses nuclei acquired from prey.
+  - node_id: karyoklepty_protein_component
+    label: Protein BNI1
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Protein BNI1) associated with karyoklepty.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - BNI1
+    protein_examples:
+    - uniprot_id: UniProtKB:P41832
+      protein_label: Protein BNI1
+      gene_symbol: BNI1
+      taxon_id: NCBITaxon:559292
+      taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's
+        yeast)
+      entry_status: REVIEWED
+      proteome_id: UP000002311
+      retrieved_on: '2026-10-17'
+      entry_version: 224
+      sequence_version: 3
+      role: Characteristic protein component (BNI1, Protein BNI1) associated with
+        karyoklepty in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's
+        yeast).
+      evidence:
+      - reference: DOI:10.1186/s12864-015-2052-9
+        snippet: Rather, the ciliate steals the nucleus from cryptophyte prey, a process
+          described as karyoklepty
+        notes: Supports Protein BNI1 in karyoklepty; UniProtKB:P41832 (BNI1, Protein
+          BNI1) in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's
+          yeast) provides a verified protein exemplar.
+  edges:
+  - subject: karyoklepty_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: karyoklepty_trait
+    description: Protein BNI1 (BNI1, UniProtKB:P41832) contributes to karyoklepty
+      (associated with cryptophyte, karyoklepty, described).
+    evidence:
+    - reference: DOI:10.1186/s12864-015-2052-9
+      snippet: Rather, the ciliate steals the nucleus from cryptophyte prey, a process
+        described as karyoklepty
+      notes: Supports the functional association between Protein BNI1 (UniProtKB:P41832
+        in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast))
+        and karyoklepty.

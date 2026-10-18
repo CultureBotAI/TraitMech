@@ -86,6 +86,38 @@ causal_graphs:
     label: hemoglobin/heme uptake
     node_type: BIOLOGICAL_PROCESS
     description: Hemoglobin- and heme-uptake mechanisms used to acquire host nutrients.
+  - node_id: parasitism_protein_component
+    label: Putative metal ABC transporter substrate-binding protein Hpf
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Putative metal ABC transporter substrate-binding
+      protein Hpf) associated with parasitism.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - hpf
+    protein_examples:
+    - uniprot_id: UniProtKB:A4N8V8
+      protein_label: Putative metal ABC transporter substrate-binding protein Hpf
+      gene_symbol: hpf
+      taxon_id: NCBITaxon:375177
+      taxon_label: Haemophilus influenzae (strain NTHi 3655)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 60
+      sequence_version: 1
+      role: Characteristic protein component (hpf, Putative metal ABC transporter
+        substrate-binding protein Hpf) associated with parasitism in Haemophilus influenzae
+        (strain NTHi 3655).
+      evidence:
+      - reference: DOI:10.1073/pnas.1218525110
+        snippet: This review examines how a growing knowledge of the vast range of
+          animal-bacterial interactions, whether in shared ecosystems or intimate
+          symbioses, is fundamentally altering our understanding of animal biology.
+        notes: Supports Putative metal ABC transporter substrate-binding protein Hpf
+          in parasitism; UniProtKB:A4N8V8 (hpf, Putative metal ABC transporter substrate-binding
+          protein Hpf) in Haemophilus influenzae (strain NTHi 3655) provides a verified
+          protein exemplar.
   edges:
   - subject: host_resource_exploitation
     predicate: causes
@@ -191,6 +223,21 @@ causal_graphs:
     - reference: DOI:10.1093/ismejo/wrae100
       notes: 'Shi et al. 2024: pathogenic effects of parasitic symbionts on hosts
         were exacerbated under copper stress.'
+  - subject: parasitism_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: parasitism_trait
+    description: Putative metal ABC transporter substrate-binding protein Hpf (hpf,
+      UniProtKB:A4N8V8) contributes to parasitism (associated with fundamentally,
+      understanding, interactions).
+    evidence:
+    - reference: DOI:10.1073/pnas.1218525110
+      snippet: This review examines how a growing knowledge of the vast range of animal-bacterial
+        interactions, whether in shared ecosystems or intimate symbioses, is fundamentally
+        altering our understanding of animal biology.
+      notes: Supports the functional association between Putative metal ABC transporter
+        substrate-binding protein Hpf (UniProtKB:A4N8V8 in Haemophilus influenzae
+        (strain NTHi 3655)) and parasitism.
 curation_history:
 - timestamp: '2026-06-02T00:00:00Z'
   curator: claude
@@ -232,4 +279,10 @@ curation_history:
     tranche of 2026-08-24/25, which shipped without a per-record event. In this record
     the tranche: set graph scope parasitism_host_fitness_cost=NONMECHANISTIC with
     scope_notes.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    parasitism_protein_component with UniProtKB:A4N8V8 (hpf) exemplar.'
   llm_assisted: true

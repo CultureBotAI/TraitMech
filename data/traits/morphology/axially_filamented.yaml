@@ -50,6 +50,28 @@ causal_graphs:
     label: flagellar basal motor
     node_type: GENE_OR_PROTEIN
     description: Motor embedded in the cytoplasmic membrane and peptidoglycan layer.
+    protein_examples:
+    - uniprot_id: UniProtKB:P33977
+      protein_label: Flagellar basal-body protein FlbY
+      gene_symbol: flbY
+      taxon_id: NCBITaxon:190650
+      taxon_label: Caulobacter vibrioides (strain ATCC 19089 / CIP 103742 / CB 15)
+        (Caulobacter crescentus)
+      entry_status: REVIEWED
+      proteome_id: UP000001816
+      retrieved_on: '2026-10-17'
+      entry_version: 92
+      sequence_version: 2
+      role: Exemplar protein (flbY, Flagellar basal-body protein FlbY) representing
+        flagellar basal motor in Caulobacter vibrioides (strain ATCC 19089 / CIP 103742
+        / CB 15) (Caulobacter crescentus) for axially filamented.
+      evidence:
+      - reference: DOI:10.3390/biom10040550
+        snippet: connects with a basal motor
+        notes: Supports flagellar basal motor in axially filamented; UniProtKB:P33977
+          (flbY, Flagellar basal-body protein FlbY) in Caulobacter vibrioides (strain
+          ATCC 19089 / CIP 103742 / CB 15) (Caulobacter crescentus) provides a verified
+          protein exemplar.
   - node_id: periplasmic_space
     label: periplasmic space
     node_type: CELLULAR_LOCALIZATION
@@ -71,6 +93,25 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Spirochete-specific FlbB protein ring that forms around the flagellar
       rotor and scaffolds the collar.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q8FUS3
+      protein_label: Flagellar M-ring protein FliF
+      gene_symbol: fliF
+      taxon_id: NCBITaxon:204722
+      taxon_label: Brucella suis biovar 1 (strain 1330)
+      entry_status: REVIEWED
+      proteome_id: UP000007104
+      retrieved_on: '2026-10-17'
+      entry_version: 109
+      sequence_version: 1
+      role: Exemplar protein (fliF, Flagellar M-ring protein FliF) representing FlbB
+        periplasmic ring in Brucella suis biovar 1 (strain 1330) for axially filamented.
+      evidence:
+      - reference: DOI:10.3390/biom10040550
+        snippet: flagella are hidden within the periplasmic space
+        notes: Supports FlbB periplasmic ring in axially filamented; UniProtKB:Q8FUS3
+          (fliF, Flagellar M-ring protein FliF) in Brucella suis biovar 1 (strain
+          1330) provides a verified protein exemplar.
   - node_id: flagellar_rotor
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
@@ -79,6 +120,25 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Rotating core of the flagellar motor (MS/C ring) around which the
       FlbB ring forms.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q8FUS3
+      protein_label: Flagellar M-ring protein FliF
+      gene_symbol: fliF
+      taxon_id: NCBITaxon:204722
+      taxon_label: Brucella suis biovar 1 (strain 1330)
+      entry_status: REVIEWED
+      proteome_id: UP000007104
+      retrieved_on: '2026-10-17'
+      entry_version: 109
+      sequence_version: 1
+      role: Exemplar protein (fliF, Flagellar M-ring protein FliF) representing flagellar
+        rotor in Brucella suis biovar 1 (strain 1330) for axially filamented.
+      evidence:
+      - reference: DOI:10.1016/j.semcdb.2015.10.015
+        snippet: long, helical appendages known as flagella to move
+        notes: Supports flagellar rotor in axially filamented; UniProtKB:Q8FUS3 (fliF,
+          Flagellar M-ring protein FliF) in Brucella suis biovar 1 (strain 1330) provides
+          a verified protein exemplar.
   - node_id: stator_complex
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
@@ -87,6 +147,29 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Ion-powered torque-generating stator units recruited around the rotor
       for flagellar rotation.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q59066
+      protein_label: CRISPR system single-strand-specific deoxyribonuclease Cas10/Csm1
+      gene_symbol: cas10
+      taxon_id: NCBITaxon:243232
+      taxon_label: Methanocaldococcus jannaschii (strain ATCC 43067 / DSM 2661 / JAL-1
+        / JCM 10045 / NBRC 100440) (Methanococcus jannaschii)
+      entry_status: REVIEWED
+      proteome_id: UP000000805
+      retrieved_on: '2026-10-17'
+      entry_version: 115
+      sequence_version: 1
+      role: Exemplar protein (cas10, CRISPR system single-strand-specific deoxyribonuclease
+        Cas10/Csm1) representing stator complex in Methanocaldococcus jannaschii (strain
+        ATCC 43067 / DSM 2661 / JAL-1 / JCM 10045 / NBRC 100440) (Methanococcus jannaschii)
+        for axially filamented.
+      evidence:
+      - reference: DOI:10.1016/j.semcdb.2015.10.015
+        snippet: long, helical appendages known as flagella to move
+        notes: Supports stator complex in axially filamented; UniProtKB:Q59066 (cas10,
+          CRISPR system single-strand-specific deoxyribonuclease Cas10/Csm1) in Methanocaldococcus
+          jannaschii (strain ATCC 43067 / DSM 2661 / JAL-1 / JCM 10045 / NBRC 100440)
+          (Methanococcus jannaschii) provides a verified protein exemplar.
   - node_id: wavy_cell_morphology
     label: wavy / flat-wave cell morphology
     node_type: QUALITY
@@ -245,4 +328,12 @@ curation_history:
     the tranche: set graph scope axially_filamented_periplasmic_flagella=NONMECHANISTIC
     with scope_notes; marked 4 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (flagellar_basal_motor, flbb_ring, flagellar_rotor, stator_complex).'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P33977 (flbY)
+    protein example to node flagellar_basal_motor; added UniProtKB:Q8FUS3 (fliF) protein
+    example to node flbb_ring; added UniProtKB:Q8FUS3 (fliF) protein example to node
+    flagellar_rotor; added UniProtKB:Q59066 (cas10) protein example to node stator_complex.'
   llm_assisted: true

@@ -78,7 +78,7 @@ causal_graphs:
       taxon_label: Nitrosomonas europaea ATCC 19718
       entry_status: REVIEWED
       retrieved_on: '2026-08-24'
-      entry_version: 126
+      entry_version: 127
       sequence_version: 2
       role: AmoA alpha-subunit component of N. europaea ammonia monooxygenase; this
         accession maps two duplicated amoA gene copies and does not denote the whole
@@ -359,4 +359,10 @@ curation_history:
     is used where the subject is an activity, since biolink gives it the domain 'biological
     process or activity'; the METPO replacements are proposed in proposals/metpo_traitmech_v8
     and v9 and are placeholder ids until METPO mints them.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:Q04507
+    version metadata (entry_version=127, sequence_version=2).'
   llm_assisted: true

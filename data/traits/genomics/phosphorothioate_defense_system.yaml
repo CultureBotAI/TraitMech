@@ -96,6 +96,37 @@ causal_graphs:
     grounding: traitmech:000209
     description: Possession of one or more genome-encoded immune systems that inhibit
       viral infection.
+  - node_id: phosphorothioate_defense_system_protein_component
+    label: Thoeris anti-defense 1
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Thoeris anti-defense 1) associated with phosphorothioate
+      defense system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - tad1
+    protein_examples:
+    - uniprot_id: UniProtKB:P0DW61
+      protein_label: Thoeris anti-defense 1
+      gene_symbol: tad1
+      taxon_id: NCBITaxon:1392497
+      taxon_label: Clostridioides mangenotii (strain LM2)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 11
+      sequence_version: 1
+      role: Characteristic protein component (tad1, Thoeris anti-defense 1) associated
+        with phosphorothioate defense system in Clostridioides mangenotii (strain
+        LM2).
+      evidence:
+      - reference: DOI:10.1038/s41564-020-0700-6
+        snippet: We previously identified the Dnd system, which uses DndABCDE to insert
+          sulfur into the DNA backbone as a double-stranded phosphorothioate (PT)
+          modification, and DndFGH, a restriction component
+        notes: Supports Thoeris anti-defense 1 in phosphorothioate defense system;
+          UniProtKB:P0DW61 (tad1, Thoeris anti-defense 1) in Clostridioides mangenotii
+          (strain LM2) provides a verified protein exemplar.
   edges:
   - subject: phosphorothioate_modification_module
     predicate: contributes to
@@ -190,6 +221,19 @@ causal_graphs:
     - reference: DOI:10.1038/s41467-019-09390-9
       snippet: a new type of PT-based virus resistance system
       notes: Xiong et al. place DndCDEA-PbeABCD in the PT antiviral defense family.
+  - subject: phosphorothioate_defense_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: phosphorothioate_defense_system_trait
+    description: Thoeris anti-defense 1 (tad1, UniProtKB:P0DW61) contributes to phosphorothioate
+      defense system (associated with phosphorothioate, modification, restriction).
+    evidence:
+    - reference: DOI:10.1038/s41564-020-0700-6
+      snippet: We previously identified the Dnd system, which uses DndABCDE to insert
+        sulfur into the DNA backbone as a double-stranded phosphorothioate (PT) modification,
+        and DndFGH, a restriction component
+      notes: Supports the functional association between Thoeris anti-defense 1 (UniProtKB:P0DW61
+        in Clostridioides mangenotii (strain LM2)) and phosphorothioate defense system.
 discussions:
 - discussion_id: phosphorothioate-subfamily-split-gap
   prompt: Resolve archaeal phosphorothioate-based antiviral systems before minting
@@ -238,4 +282,11 @@ curation_history:
     the phosphorothioate defense system parent from bacteriophage-only Dnd/Ssp wording
     to Dnd/Ssp/Pbe viral-DNA restriction wording, and marked the phosphorothioate
     subfamily split-gap discussion resolved.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    phosphorothioate_defense_system_protein_component with UniProtKB:P0DW61 (tad1)
+    exemplar.'
   llm_assisted: true

@@ -59,6 +59,27 @@ causal_graphs:
     label: FlhF
     node_type: GENE_OR_PROTEIN
     description: SRP-type GTPase that positions and initiates polar flagellar assembly.
+    protein_examples:
+    - uniprot_id: UniProtKB:O52908
+      protein_label: Flagellar biosynthesis protein FlhF
+      gene_symbol: flhF
+      taxon_id: NCBITaxon:192222
+      taxon_label: Campylobacter jejuni subsp. jejuni serotype O:2 (strain ATCC 700819
+        / NCTC 11168)
+      entry_status: REVIEWED
+      proteome_id: UP000000799
+      retrieved_on: '2026-10-17'
+      entry_version: 144
+      sequence_version: 2
+      role: Exemplar protein (flhF, Flagellar biosynthesis protein FlhF) representing
+        FlhF in Campylobacter jejuni subsp. jejuni serotype O:2 (strain ATCC 700819
+        / NCTC 11168) for lophotrichous.
+      evidence:
+      - reference: DOI:10.1093/femsre/fuv034
+        snippet: five to six flagellar filaments distributed over the cell body
+        notes: Supports FlhF in lophotrichous; UniProtKB:O52908 (flhF, Flagellar biosynthesis
+          protein FlhF) in Campylobacter jejuni subsp. jejuni serotype O:2 (strain
+          ATCC 700819 / NCTC 11168) provides a verified protein exemplar.
   - node_id: cell_pole
     label: cell pole
     node_type: CELLULAR_LOCALIZATION
@@ -71,12 +92,50 @@ causal_graphs:
     label: FliG
     node_type: GENE_OR_PROTEIN
     description: Flagellar C-ring switch protein recruited during basal-body assembly.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0ABZ1
+      protein_label: Flagellar motor switch protein FliG
+      gene_symbol: fliG
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 133
+      sequence_version: 1
+      role: Exemplar protein (fliG, Flagellar motor switch protein FliG) representing
+        FliG in Escherichia coli (strain K12) for lophotrichous.
+      evidence:
+      - reference: DOI:10.1093/femsre/fuv034
+        snippet: five to six flagellar filaments distributed over the cell body
+        notes: Supports FliG in lophotrichous; UniProtKB:P0ABZ1 (fliG, Flagellar motor
+          switch protein FliG) in Escherichia coli (strain K12) provides a verified
+          protein exemplar.
   - node_id: flif_protein
     label: FliF
     node_type: GENE_OR_PROTEIN
     description: MS-ring protein forming the membrane base of the flagellar basal
       body.
     grounding: InterPro:IPR000067
+    protein_examples:
+    - uniprot_id: UniProtKB:Q8FUS3
+      protein_label: Flagellar M-ring protein FliF
+      gene_symbol: fliF
+      taxon_id: NCBITaxon:204722
+      taxon_label: Brucella suis biovar 1 (strain 1330)
+      entry_status: REVIEWED
+      proteome_id: UP000007104
+      retrieved_on: '2026-10-17'
+      entry_version: 109
+      sequence_version: 1
+      role: Exemplar protein (fliF, Flagellar M-ring protein FliF) representing FliF
+        in Brucella suis biovar 1 (strain 1330) for lophotrichous.
+      evidence:
+      - reference: DOI:10.1093/femsre/fuv034
+        snippet: five to six flagellar filaments distributed over the cell body
+        notes: Supports FliF in lophotrichous; UniProtKB:Q8FUS3 (fliF, Flagellar M-ring
+          protein FliF) in Brucella suis biovar 1 (strain 1330) provides a verified
+          protein exemplar.
   - node_id: fipa_protein
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
@@ -85,12 +144,53 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Membrane-localized polar landmark/licensing factor required for normal
       polar flagellar synthesis.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q56702
+      protein_label: Polar flagellin B/D
+      gene_symbol: flaB
+      taxon_id: NCBITaxon:223926
+      taxon_label: Vibrio parahaemolyticus serotype O3:K6 (strain RIMD 2210633)
+      entry_status: REVIEWED
+      proteome_id: UP000002493
+      retrieved_on: '2026-10-17'
+      entry_version: 129
+      sequence_version: 2
+      role: Exemplar protein (flaB, Polar flagellin B/D) representing FipA in Vibrio
+        parahaemolyticus serotype O3:K6 (strain RIMD 2210633) for lophotrichous.
+      evidence:
+      - reference: DOI:10.1093/femsre/fuv034
+        snippet: Bacteria differ in number and location of their flagella that appear
+          in regular patterns at the cell surface (flagellation pattern).
+        notes: Supports FipA in lophotrichous; UniProtKB:Q56702 (flaB, Polar flagellin
+          B/D) in Vibrio parahaemolyticus serotype O3:K6 (strain RIMD 2210633) provides
+          a verified protein exemplar.
   - node_id: flhg_protein
     label: FlhG
     node_type: GENE_OR_PROTEIN
     description: MinD-type ATPase that regulates flagellar number by stimulating FlhF
       GTPase activity.
     grounding: InterPro:IPR033875
+    protein_examples:
+    - uniprot_id: UniProtKB:O52908
+      protein_label: Flagellar biosynthesis protein FlhF
+      gene_symbol: flhF
+      taxon_id: NCBITaxon:192222
+      taxon_label: Campylobacter jejuni subsp. jejuni serotype O:2 (strain ATCC 700819
+        / NCTC 11168)
+      entry_status: REVIEWED
+      proteome_id: UP000000799
+      retrieved_on: '2026-10-17'
+      entry_version: 144
+      sequence_version: 2
+      role: Exemplar protein (flhF, Flagellar biosynthesis protein FlhF) representing
+        FlhG in Campylobacter jejuni subsp. jejuni serotype O:2 (strain ATCC 700819
+        / NCTC 11168) for lophotrichous.
+      evidence:
+      - reference: DOI:10.1093/femsre/fuv034
+        snippet: five to six flagellar filaments distributed over the cell body
+        notes: Supports FlhG in lophotrichous; UniProtKB:O52908 (flhF, Flagellar biosynthesis
+          protein FlhF) in Campylobacter jejuni subsp. jejuni serotype O:2 (strain
+          ATCC 700819 / NCTC 11168) provides a verified protein exemplar.
   - node_id: flagellar_number
     label: flagellar number
     node_type: QUALITY
@@ -249,4 +349,12 @@ curation_history:
     S. volutans cells, assert disjoint organism-level traits or generalize the division
     sequence to every amphitrichous taxon. The amphitrichous record, trait identity,
     definition, hierarchy and graph are unchanged; the initial repair event is preserved.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:O52908 (flhF)
+    protein example to node flhf_protein; added UniProtKB:P0ABZ1 (fliG) protein example
+    to node flig_protein; added UniProtKB:Q8FUS3 (fliF) protein example to node flif_protein;
+    added UniProtKB:Q56702 (flaB) protein example to node fipa_protein (+1 more).'
   llm_assisted: true

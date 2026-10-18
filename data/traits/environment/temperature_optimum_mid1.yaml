@@ -89,6 +89,39 @@ causal_graphs:
     node_type: CHEMICAL
     description: Iso/anteiso branched membrane fatty acids derived from BCAA precursors.
     grounding: CHEBI:35819
+  - node_id: temperature_optimum_mid1_protein_component
+    label: Chaperonin GroEL
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Chaperonin GroEL) associated with temperature
+      optimum mid1.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - groEL
+    protein_examples:
+    - uniprot_id: UniProtKB:Q49YY5
+      protein_label: Chaperonin GroEL
+      gene_symbol: groEL
+      taxon_id: NCBITaxon:342451
+      taxon_label: Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
+        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+      entry_status: REVIEWED
+      proteome_id: UP000006371
+      retrieved_on: '2026-10-17'
+      entry_version: 120
+      sequence_version: 1
+      role: Characteristic protein component (groEL, Chaperonin GroEL) associated
+        with temperature optimum mid1 in Staphylococcus saprophyticus subsp. saprophyticus
+        (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41).
+      evidence:
+      - reference: DOI:10.1007/s42770-023-01057-4
+        snippet: When the temperature drops, DesK/DesR is the two-component system
+          involved in membrane adaptation
+        notes: Supports Chaperonin GroEL in temperature optimum mid1; UniProtKB:Q49YY5
+          (groEL, Chaperonin GroEL) in Staphylococcus saprophyticus subsp. saprophyticus
+          (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) provides
+          a verified protein exemplar.
   edges:
   - subject: lower_mesophilic_environment
     predicate: engages
@@ -171,6 +204,19 @@ causal_graphs:
       notes: Membrane fluidization via chain branching is a predominant longer-term
         cold adaptation mechanism.
     predicate_id: RO:0002213
+  - subject: temperature_optimum_mid1_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: temperature_optimum_mid1_trait
+    description: Chaperonin GroEL (groEL, UniProtKB:Q49YY5) contributes to temperature
+      optimum mid1 (associated with temperature, adaptation, membrane).
+    evidence:
+    - reference: DOI:10.1007/s42770-023-01057-4
+      snippet: When the temperature drops, DesK/DesR is the two-component system involved
+        in membrane adaptation
+      notes: Supports the functional association between Chaperonin GroEL (UniProtKB:Q49YY5
+        in Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC 15305 /
+        DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)) and temperature optimum mid1.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.819857+00:00'
   curator: seed_from_metpo
@@ -254,4 +300,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (METPO:1016200×1).
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    temperature_optimum_mid1_protein_component with UniProtKB:Q49YY5 (groEL) exemplar.'
   llm_assisted: true

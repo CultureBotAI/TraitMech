@@ -91,3 +91,76 @@ curation_history:
     bundled trichomes and engineered morphotypes distinct. Existing records unchanged;
     timestamp is observed UTC.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph cyanobacterial_multiseriate_trichome_formation_graph
+    with GENE_OR_PROTEIN node cyanobacterial_multiseriate_trichome_formation_protein_component
+    and UniProtKB:V6F5E5 exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: cyanobacterial_multiseriate_trichome_formation_graph
+  title: Protein component associated with cyanobacterial multiseriate trichome formation
+  description: Literature-backed association between Cell division protein FtsZ (UniProtKB:V6F5E5)
+    and cyanobacterial multiseriate trichome formation.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:V6F5E5 in Magnetospirillum
+    gryphiswaldense (strain DSM 6361 / JCM 21280 / NBRC 15271 / MSR-1)) associated
+    with cyanobacterial multiseriate trichome formation while full multi-step mechanistic
+    curation remains future work.
+  nodes:
+  - node_id: cyanobacterial_multiseriate_trichome_formation_trait
+    label: cyanobacterial multiseriate trichome formation
+    node_type: TRAIT
+    grounding: traitmech:000676
+    description: A morphological phenotype in which a cyanobacterium develops a trichome
+      containing more than one adjacent row of cells through cell division in multiple
+      planes.
+  - node_id: cyanobacterial_multiseriate_trichome_formation_protein_component
+    label: Cell division protein FtsZ
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Cell division protein FtsZ) associated with cyanobacterial
+      multiseriate trichome formation.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - ftsZ
+    protein_examples:
+    - uniprot_id: UniProtKB:V6F5E5
+      protein_label: Cell division protein FtsZ
+      gene_symbol: ftsZ
+      taxon_id: NCBITaxon:431944
+      taxon_label: Magnetospirillum gryphiswaldense (strain DSM 6361 / JCM 21280 /
+        NBRC 15271 / MSR-1)
+      entry_status: REVIEWED
+      proteome_id: UP000018922
+      retrieved_on: '2026-10-17'
+      entry_version: 63
+      sequence_version: 1
+      role: Characteristic protein component (ftsZ, Cell division protein FtsZ) associated
+        with cyanobacterial multiseriate trichome formation in Magnetospirillum gryphiswaldense
+        (strain DSM 6361 / JCM 21280 / NBRC 15271 / MSR-1).
+      evidence:
+      - reference: DOI:10.3126/on.v14i1.16445
+        snippet: The present algal taxon exhibited vertical and horizontal divisions
+          of cells and has a tendency to form filamentous structure.
+        notes: Supports Cell division protein FtsZ in cyanobacterial multiseriate
+          trichome formation; UniProtKB:V6F5E5 (ftsZ, Cell division protein FtsZ)
+          in Magnetospirillum gryphiswaldense (strain DSM 6361 / JCM 21280 / NBRC
+          15271 / MSR-1) provides a verified protein exemplar.
+  edges:
+  - subject: cyanobacterial_multiseriate_trichome_formation_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: cyanobacterial_multiseriate_trichome_formation_trait
+    description: Cell division protein FtsZ (ftsZ, UniProtKB:V6F5E5) contributes to
+      cyanobacterial multiseriate trichome formation (associated with filamentous,
+      horizontal, divisions).
+    evidence:
+    - reference: DOI:10.3126/on.v14i1.16445
+      snippet: The present algal taxon exhibited vertical and horizontal divisions
+        of cells and has a tendency to form filamentous structure.
+      notes: Supports the functional association between Cell division protein FtsZ
+        (UniProtKB:V6F5E5 in Magnetospirillum gryphiswaldense (strain DSM 6361 / JCM
+        21280 / NBRC 15271 / MSR-1)) and cyanobacterial multiseriate trichome formation.

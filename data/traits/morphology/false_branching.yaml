@@ -106,3 +106,80 @@ curation_history:
     evidence, example, identifier, proposal block and original curation event. Added
     source-qualified terminology discussion without an unqualified exact synonym.'
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph false_branching_graph
+    with GENE_OR_PROTEIN node false_branching_protein_component and UniProtKB:Q49Y79
+    exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: false_branching_graph
+  title: Protein component associated with cyanobacterial false branching
+  description: Literature-backed association between Holliday junction branch migration
+    complex subunit RuvB (UniProtKB:Q49Y79) and cyanobacterial false branching.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q49Y79 in Staphylococcus
+    saprophyticus subsp. saprophyticus (strain ATCC 15305 / DSM 20229 / NCIMB 8711
+    / NCTC 7292 / S-41)) associated with cyanobacterial false branching while full
+    multi-step mechanistic curation remains future work.
+  nodes:
+  - node_id: false_branching_trait
+    label: cyanobacterial false branching
+    node_type: TRAIT
+    grounding: traitmech:000675
+    description: A morphological phenotype in which a filamentous cyanobacterium forms
+      an apparent branch by trichome-bundle partitioning or lateral trichome protrusion
+      without generating a branch-point cell connecting at least three neighboring
+      cells at that junction.
+  - node_id: false_branching_protein_component
+    label: Holliday junction branch migration complex subunit RuvB
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Holliday junction branch migration complex subunit
+      RuvB) associated with cyanobacterial false branching.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - ruvB
+    protein_examples:
+    - uniprot_id: UniProtKB:Q49Y79
+      protein_label: Holliday junction branch migration complex subunit RuvB
+      gene_symbol: ruvB
+      taxon_id: NCBITaxon:342451
+      taxon_label: Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
+        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+      entry_status: REVIEWED
+      proteome_id: UP000006371
+      retrieved_on: '2026-10-17'
+      entry_version: 123
+      sequence_version: 1
+      role: Characteristic protein component (ruvB, Holliday junction branch migration
+        complex subunit RuvB) associated with cyanobacterial false branching in Staphylococcus
+        saprophyticus subsp. saprophyticus (strain ATCC 15305 / DSM 20229 / NCIMB
+        8711 / NCTC 7292 / S-41).
+      evidence:
+      - reference: DOI:10.1127/algol_stud/83/1996/303
+        snippet: Two basic types of false branching (by bundle partitioning and by
+          lateral trichome protrusion)
+        notes: Supports Holliday junction branch migration complex subunit RuvB in
+          cyanobacterial false branching; UniProtKB:Q49Y79 (ruvB, Holliday junction
+          branch migration complex subunit RuvB) in Staphylococcus saprophyticus subsp.
+          saprophyticus (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 /
+          S-41) provides a verified protein exemplar.
+  edges:
+  - subject: false_branching_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: false_branching_trait
+    description: Holliday junction branch migration complex subunit RuvB (ruvB, UniProtKB:Q49Y79)
+      contributes to cyanobacterial false branching (associated with partitioning,
+      protrusion, branching).
+    evidence:
+    - reference: DOI:10.1127/algol_stud/83/1996/303
+      snippet: Two basic types of false branching (by bundle partitioning and by lateral
+        trichome protrusion)
+      notes: Supports the functional association between Holliday junction branch
+        migration complex subunit RuvB (UniProtKB:Q49Y79 in Staphylococcus saprophyticus
+        subsp. saprophyticus (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292
+        / S-41)) and cyanobacterial false branching.

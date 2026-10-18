@@ -81,3 +81,72 @@ curation_history:
     Inspected primary figures; added NCBI-resolved natural NRRL1555 exemplar and deferred
     native protein-level mechanisms and unavailable supplements.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph phototropism_graph
+    with GENE_OR_PROTEIN node phototropism_protein_component and UniProtKB:P47908
+    exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: phototropism_graph
+  title: Protein component associated with phototropism
+  description: Literature-backed association between Ribosome hibernation promotion
+    factor (UniProtKB:P47908) and phototropism.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P47908 in Picosynechococcus
+    sp. (strain ATCC 27264 / PCC 7002 / PR-6) (Agmenellum quadruplicatum)) associated
+    with phototropism while full multi-step mechanistic curation remains future work.
+  nodes:
+  - node_id: phototropism_trait
+    label: phototropism
+    node_type: TRAIT
+    grounding: traitmech:000598
+    description: A phenotype in which growth is directionally oriented or reoriented
+      toward or away from a light source in response to illumination.
+  - node_id: phototropism_protein_component
+    label: Ribosome hibernation promotion factor
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Ribosome hibernation promotion factor) associated
+      with phototropism.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - hpf
+    protein_examples:
+    - uniprot_id: UniProtKB:P47908
+      protein_label: Ribosome hibernation promotion factor
+      gene_symbol: hpf
+      taxon_id: NCBITaxon:32049
+      taxon_label: Picosynechococcus sp. (strain ATCC 27264 / PCC 7002 / PR-6) (Agmenellum
+        quadruplicatum)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 121
+      sequence_version: 2
+      role: Characteristic protein component (hpf, Ribosome hibernation promotion
+        factor) associated with phototropism in Picosynechococcus sp. (strain ATCC
+        27264 / PCC 7002 / PR-6) (Agmenellum quadruplicatum).
+      evidence:
+      - reference: DOI:10.1073/pnas.0900879106
+        snippet: Phototropism, growth toward light, shares many features in fungi
+          and plants but the molecular mechanisms remain to be fully elucidated.
+        notes: Supports Ribosome hibernation promotion factor in phototropism; UniProtKB:P47908
+          (hpf, Ribosome hibernation promotion factor) in Picosynechococcus sp. (strain
+          ATCC 27264 / PCC 7002 / PR-6) (Agmenellum quadruplicatum) provides a verified
+          protein exemplar.
+  edges:
+  - subject: phototropism_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: phototropism_trait
+    description: Ribosome hibernation promotion factor (hpf, UniProtKB:P47908) contributes
+      to phototropism (associated with phototropism, elucidated, molecular).
+    evidence:
+    - reference: DOI:10.1073/pnas.0900879106
+      snippet: Phototropism, growth toward light, shares many features in fungi and
+        plants but the molecular mechanisms remain to be fully elucidated.
+      notes: Supports the functional association between Ribosome hibernation promotion
+        factor (UniProtKB:P47908 in Picosynechococcus sp. (strain ATCC 27264 / PCC
+        7002 / PR-6) (Agmenellum quadruplicatum)) and phototropism.

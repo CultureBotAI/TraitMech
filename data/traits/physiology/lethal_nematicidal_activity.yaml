@@ -144,3 +144,73 @@ curation_history:
     retain native NOT_IN_ABSTRACT outcomes. Preserved all prior events, assay limitations,
     structured context, identity, hierarchy and other records.'
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph lethal_nematicidal_activity_graph
+    with GENE_OR_PROTEIN node lethal_nematicidal_activity_protein_component and UniProtKB:P41832
+    exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: lethal_nematicidal_activity_graph
+  title: Protein component associated with lethal nematicidal activity
+  description: Literature-backed association between Protein BNI1 (UniProtKB:P41832)
+    and lethal nematicidal activity.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P41832 in Saccharomyces
+    cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)) associated with lethal
+    nematicidal activity while full multi-step mechanistic curation remains future
+    work.
+  nodes:
+  - node_id: lethal_nematicidal_activity_trait
+    label: lethal nematicidal activity
+    node_type: TRAIT
+    grounding: traitmech:000720
+    description: A physiological capability of a microorganism to kill nematodes.
+  - node_id: lethal_nematicidal_activity_protein_component
+    label: Protein BNI1
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Protein BNI1) associated with lethal nematicidal
+      activity.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - BNI1
+    protein_examples:
+    - uniprot_id: UniProtKB:P41832
+      protein_label: Protein BNI1
+      gene_symbol: BNI1
+      taxon_id: NCBITaxon:559292
+      taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's
+        yeast)
+      entry_status: REVIEWED
+      proteome_id: UP000002311
+      retrieved_on: '2026-10-17'
+      entry_version: 224
+      sequence_version: 3
+      role: Characteristic protein component (BNI1, Protein BNI1) associated with
+        lethal nematicidal activity in Saccharomyces cerevisiae (strain ATCC 204508
+        / S288c) (Baker's yeast).
+      evidence:
+      - reference: DOI:10.1128/spectrum.02577-21
+        snippet: In this study, three secondary metabolites (SMs) with nematicidal
+          activities were isolated from in vitro cultures of P. luminescens sonorensis
+          strain Caborca
+        notes: Supports Protein BNI1 in lethal nematicidal activity; UniProtKB:P41832
+          (BNI1, Protein BNI1) in Saccharomyces cerevisiae (strain ATCC 204508 / S288c)
+          (Baker's yeast) provides a verified protein exemplar.
+  edges:
+  - subject: lethal_nematicidal_activity_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: lethal_nematicidal_activity_trait
+    description: Protein BNI1 (BNI1, UniProtKB:P41832) contributes to lethal nematicidal
+      activity (associated with luminescens, metabolites, nematicidal).
+    evidence:
+    - reference: DOI:10.1128/spectrum.02577-21
+      snippet: In this study, three secondary metabolites (SMs) with nematicidal activities
+        were isolated from in vitro cultures of P. luminescens sonorensis strain Caborca
+      notes: Supports the functional association between Protein BNI1 (UniProtKB:P41832
+        in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast))
+        and lethal nematicidal activity.

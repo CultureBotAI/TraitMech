@@ -92,6 +92,38 @@ causal_graphs:
     node_type: CHEMICAL
     description: Quaternary ammonium compatible solute.
     grounding: CHEBI:17750
+  - node_id: haloalkaliphilic_protein_component
+    label: Na(+)/H(+) antiporter subunit A
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Na(+)/H(+) antiporter subunit A) associated with
+      haloalkaliphilic.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - mrpA
+    protein_examples:
+    - uniprot_id: UniProtKB:Q9RGZ5
+      protein_label: Na(+)/H(+) antiporter subunit A
+      gene_symbol: mrpA
+      taxon_id: NCBITaxon:398511
+      taxon_label: Alkalihalophilus pseudofirmus (strain ATCC BAA-2126 / JCM 17055
+        / OF4) (Bacillus pseudofirmus)
+      entry_status: REVIEWED
+      proteome_id: UP000001544
+      retrieved_on: '2026-10-17'
+      entry_version: 115
+      sequence_version: 2
+      role: Characteristic protein component (mrpA, Na(+)/H(+) antiporter subunit
+        A) associated with haloalkaliphilic in Alkalihalophilus pseudofirmus (strain
+        ATCC BAA-2126 / JCM 17055 / OF4) (Bacillus pseudofirmus).
+      evidence:
+      - reference: PMID:17203963
+        snippet: aerobic, haloalkaliphilic archaeon Natronomonas pharaonis
+        notes: Supports Na(+)/H(+) antiporter subunit A in haloalkaliphilic; UniProtKB:Q9RGZ5
+          (mrpA, Na(+)/H(+) antiporter subunit A) in Alkalihalophilus pseudofirmus
+          (strain ATCC BAA-2126 / JCM 17055 / OF4) (Bacillus pseudofirmus) provides
+          a verified protein exemplar.
   edges:
   - subject: soda_lake_environment
     predicate: provides
@@ -198,6 +230,18 @@ causal_graphs:
     - reference: DOI:10.1038/s44185-024-00050-w
       notes: 'Review: de novo biosynthesis of glycine betaine via the choline oxidation
         pathway.'
+  - subject: haloalkaliphilic_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: haloalkaliphilic_trait
+    description: Na(+)/H(+) antiporter subunit A (mrpA, UniProtKB:Q9RGZ5) contributes
+      to haloalkaliphilic (associated with haloalkaliphilic, natronomonas, pharaonis).
+    evidence:
+    - reference: PMID:17203963
+      snippet: aerobic, haloalkaliphilic archaeon Natronomonas pharaonis
+      notes: Supports the functional association between Na(+)/H(+) antiporter subunit
+        A (UniProtKB:Q9RGZ5 in Alkalihalophilus pseudofirmus (strain ATCC BAA-2126
+        / JCM 17055 / OF4) (Bacillus pseudofirmus)) and haloalkaliphilic.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.861455+00:00'
   curator: seed_from_metpo
@@ -298,4 +342,10 @@ curation_history:
     tranche of 2026-08-24/25, which shipped without a per-record event. In this record
     the tranche: set graph scope haloalkaliphilic_salt_alkaline_adaptation=NONMECHANISTIC
     with scope_notes.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    haloalkaliphilic_protein_component with UniProtKB:Q9RGZ5 (mrpA) exemplar.'
   llm_assisted: true

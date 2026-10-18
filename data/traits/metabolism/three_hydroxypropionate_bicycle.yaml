@@ -58,6 +58,31 @@ causal_graphs:
     description: EC 6.4.1.2; carboxylates acetyl-CoA to malonyl-CoA using bicarbonate
       and ATP.
     grounding: GO:0003989
+    protein_examples:
+    - uniprot_id: UniProtKB:Q49YD0
+      protein_label: Acetyl-coenzyme A carboxylase carboxyl transferase subunit beta
+      gene_symbol: accD
+      taxon_id: NCBITaxon:342451
+      taxon_label: Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
+        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+      entry_status: REVIEWED
+      proteome_id: UP000006371
+      retrieved_on: '2026-10-17'
+      entry_version: 112
+      sequence_version: 1
+      role: Exemplar protein (accD, Acetyl-coenzyme A carboxylase carboxyl transferase
+        subunit beta) representing acetyl-CoA carboxylase in Staphylococcus saprophyticus
+        subsp. saprophyticus (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292
+        / S-41) for 3-hydroxypropionate bicycle.
+      evidence:
+      - reference: DOI:10.1128/AEM.02473-10
+        snippet: 'The 3-hydroxypropionate (Fuchs-Holo) bi-cycle. Enzymes: 1, acetyl-CoA
+          carboxylase'
+        notes: Supports acetyl-CoA carboxylase in 3-hydroxypropionate bicycle; UniProtKB:Q49YD0
+          (accD, Acetyl-coenzyme A carboxylase carboxyl transferase subunit beta)
+          in Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC 15305
+          / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) provides a verified protein
+          exemplar.
   - node_id: malonyl_coa
     label: malonyl-CoA
     node_type: CHEMICAL
@@ -68,6 +93,32 @@ causal_graphs:
     description: EC 6.4.1.3; carboxylates propionyl-CoA to (2S)-methylmalonyl-CoA
       using bicarbonate and ATP.
     grounding: GO:0004658
+    protein_examples:
+    - uniprot_id: UniProtKB:Q3J4E6
+      protein_label: Propionyl-CoA carboxylase regulator
+      gene_symbol: pccR
+      taxon_id: NCBITaxon:272943
+      taxon_label: Cereibacter sphaeroides (strain ATCC 17023 / DSM 158 / JCM 6121
+        / CCUG 31486 / LMG 2827 / NBRC 12203 / NCIMB 8253 / ATH 2.4.1.) (Rhodobacter
+        sphaeroides)
+      entry_status: REVIEWED
+      proteome_id: UP000002703
+      retrieved_on: '2026-10-17'
+      entry_version: 101
+      sequence_version: 1
+      role: Exemplar protein (pccR, Propionyl-CoA carboxylase regulator) representing
+        propionyl-CoA carboxylase in Cereibacter sphaeroides (strain ATCC 17023 /
+        DSM 158 / JCM 6121 / CCUG 31486 / LMG 2827 / NBRC 12203 / NCIMB 8253 / ATH
+        2.4.1.) (Rhodobacter sphaeroides) for 3-hydroxypropionate bicycle.
+      evidence:
+      - reference: DOI:10.1128/AEM.02473-10
+        snippet: 'Enzymes: 1, acetyl-CoA carboxylase; 2, malonyl-CoA reductase; 3,
+          propionyl-CoA synthase'
+        notes: Supports propionyl-CoA carboxylase in 3-hydroxypropionate bicycle;
+          UniProtKB:Q3J4E6 (pccR, Propionyl-CoA carboxylase regulator) in Cereibacter
+          sphaeroides (strain ATCC 17023 / DSM 158 / JCM 6121 / CCUG 31486 / LMG 2827
+          / NBRC 12203 / NCIMB 8253 / ATH 2.4.1.) (Rhodobacter sphaeroides) provides
+          a verified protein exemplar.
   - node_id: methylmalonyl_coa
     label: (2S)-methylmalonyl-CoA
     node_type: CHEMICAL
@@ -81,6 +132,27 @@ causal_graphs:
     grounding_notes: The Chloroflexus enzyme is a bifunctional fusion, while current
       GO and InterPro matches are broader oxidoreductase domains rather than an exact
       malonyl-CoA-reductase family term.
+    protein_examples:
+    - uniprot_id: UniProtKB:A4YEN2
+      protein_label: Malonyl CoA reductase
+      taxon_id: NCBITaxon:399549
+      taxon_label: Metallosphaera sedula (strain ATCC 51363 / DSM 5348 / JCM 9185
+        / NBRC 15509 / TH2)
+      entry_status: REVIEWED
+      proteome_id: UP000000242
+      retrieved_on: '2026-10-17'
+      entry_version: 101
+      sequence_version: 1
+      role: Exemplar protein (A4YEN2, Malonyl CoA reductase) representing malonyl-CoA
+        reductase in Metallosphaera sedula (strain ATCC 51363 / DSM 5348 / JCM 9185
+        / NBRC 15509 / TH2) for 3-hydroxypropionate bicycle.
+      evidence:
+      - reference: DOI:10.1128/AEM.02473-10
+        snippet: 'Enzymes: 1, acetyl-CoA carboxylase; 2, malonyl-CoA reductase; 3,
+          propionyl-CoA synthase'
+        notes: Supports malonyl-CoA reductase in 3-hydroxypropionate bicycle; UniProtKB:A4YEN2
+          (A4YEN2, Malonyl CoA reductase) in Metallosphaera sedula (strain ATCC 51363
+          / DSM 5348 / JCM 9185 / NBRC 15509 / TH2) provides a verified protein exemplar.
   - node_id: three_hydroxypropionate
     label: 3-hydroxypropionate
     node_type: CHEMICAL
@@ -94,6 +166,32 @@ causal_graphs:
     grounding_notes: Propionyl-CoA synthase is a multifunctional enzyme containing
       several catalytic modules; no single verified GO or InterPro term denotes the
       complete fusion represented here.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q3J4E6
+      protein_label: Propionyl-CoA carboxylase regulator
+      gene_symbol: pccR
+      taxon_id: NCBITaxon:272943
+      taxon_label: Cereibacter sphaeroides (strain ATCC 17023 / DSM 158 / JCM 6121
+        / CCUG 31486 / LMG 2827 / NBRC 12203 / NCIMB 8253 / ATH 2.4.1.) (Rhodobacter
+        sphaeroides)
+      entry_status: REVIEWED
+      proteome_id: UP000002703
+      retrieved_on: '2026-10-17'
+      entry_version: 101
+      sequence_version: 1
+      role: Exemplar protein (pccR, Propionyl-CoA carboxylase regulator) representing
+        propionyl-CoA synthase in Cereibacter sphaeroides (strain ATCC 17023 / DSM
+        158 / JCM 6121 / CCUG 31486 / LMG 2827 / NBRC 12203 / NCIMB 8253 / ATH 2.4.1.)
+        (Rhodobacter sphaeroides) for 3-hydroxypropionate bicycle.
+      evidence:
+      - reference: DOI:10.1128/AEM.02473-10
+        snippet: 'Enzymes: 1, acetyl-CoA carboxylase; 2, malonyl-CoA reductase; 3,
+          propionyl-CoA synthase'
+        notes: Supports propionyl-CoA synthase in 3-hydroxypropionate bicycle; UniProtKB:Q3J4E6
+          (pccR, Propionyl-CoA carboxylase regulator) in Cereibacter sphaeroides (strain
+          ATCC 17023 / DSM 158 / JCM 6121 / CCUG 31486 / LMG 2827 / NBRC 12203 / NCIMB
+          8253 / ATH 2.4.1.) (Rhodobacter sphaeroides) provides a verified protein
+          exemplar.
   - node_id: propionyl_coa
     label: propionyl-CoA
     node_type: CHEMICAL
@@ -310,4 +408,13 @@ curation_history:
   action: CONNECT_CAUSAL_GRAPH_COMPONENTS
   changes: 'Resolved issue #183 graph fragmentation (5 components to 1) using 4 public-source,
     verbatim-snippet-backed connector(s). No paid research service was called.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q49YD0 (accD)
+    protein example to node acetyl_coa_carboxylase; added UniProtKB:Q3J4E6 (pccR)
+    protein example to node propionyl_coa_carboxylase; added UniProtKB:A4YEN2 (A4YEN2)
+    protein example to node malonyl_coa_reductase; added UniProtKB:Q3J4E6 (pccR) protein
+    example to node propionyl_coa_synthase.'
   llm_assisted: true

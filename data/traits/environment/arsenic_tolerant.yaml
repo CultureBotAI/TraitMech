@@ -68,6 +68,27 @@ causal_graphs:
     gene_symbols:
     - arsB
     operon: ars
+    protein_examples:
+    - uniprot_id: UniProtKB:P45946
+      protein_label: Arsenite resistance protein ArsB
+      gene_symbol: arsB
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
+      entry_status: REVIEWED
+      proteome_id: UP000001570
+      retrieved_on: '2026-10-17'
+      entry_version: 142
+      sequence_version: 2
+      role: Exemplar protein (arsB, Arsenite resistance protein ArsB) representing
+        ArsB arsenite-efflux protein module in Bacillus subtilis (strain 168) for
+        arsenic tolerant.
+      evidence:
+      - reference: DOI:10.3389/fmicb.2018.02473
+        snippet: ArsB is an integral membrane protein able to extrude arsenite from
+          the cell cytoplasm, thus diminishing arsenite accumulation
+        notes: Supports ArsB arsenite-efflux protein module in arsenic tolerant; UniProtKB:P45946
+          (arsB, Arsenite resistance protein ArsB) in Bacillus subtilis (strain 168)
+          provides a verified protein exemplar.
   - node_id: arsenite_export
     label: arsenite transmembrane transport
     node_type: BIOLOGICAL_PROCESS
@@ -86,6 +107,24 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Trans-acting repressor that binds the ars promoter and de-represses
       upon arsenite binding.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q01256
+      protein_label: Arsenical resistance operon repressor
+      gene_symbol: arsR
+      taxon_id: NCBITaxon:1288
+      taxon_label: Staphylococcus xylosus
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 88
+      sequence_version: 1
+      role: Exemplar protein (arsR, Arsenical resistance operon repressor) representing
+        ArsR transcriptional repressor in Staphylococcus xylosus for arsenic tolerant.
+      evidence:
+      - reference: PMID:20463976
+        snippet: arsenic resistance determinants in Cupriavidus metallidurans CH34
+        notes: Supports ArsR transcriptional repressor in arsenic tolerant; UniProtKB:Q01256
+          (arsR, Arsenical resistance operon repressor) in Staphylococcus xylosus
+          provides a verified protein exemplar.
   - node_id: ars_promoter
     label: ars promoter
     node_type: GENETIC_ELEMENT
@@ -103,7 +142,7 @@ causal_graphs:
       entry_status: UNREVIEWED
       proteome_id: UP000002429
       retrieved_on: '2026-08-25'
-      entry_version: 99
+      entry_version: 100
       sequence_version: 1
       role: CH34 ArsC1 reduces intracellular arsenate to arsenite for subsequent efflux.
       evidence:
@@ -126,6 +165,26 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Integral membrane arsenite efflux pump extruding As(III) from the
       cytoplasm.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q8NW09
+      protein_label: Arsenical pump membrane protein
+      gene_symbol: arsB
+      taxon_id: NCBITaxon:196620
+      taxon_label: Staphylococcus aureus (strain MW2)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 103
+      sequence_version: 2
+      role: Exemplar protein (arsB, Arsenical pump membrane protein) representing
+        ArsB arsenite efflux permease in Staphylococcus aureus (strain MW2) for arsenic
+        tolerant.
+      evidence:
+      - reference: DOI:10.3389/fmicb.2018.02473
+        snippet: ArsB is an integral membrane protein able to extrude arsenite from
+          the cell cytoplasm, thus diminishing arsenite accumulation
+        notes: Supports ArsB arsenite efflux permease in arsenic tolerant; UniProtKB:Q8NW09
+          (arsB, Arsenical pump membrane protein) in Staphylococcus aureus (strain
+          MW2) provides a verified protein exemplar.
   - node_id: acr3_pump
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
@@ -133,6 +192,26 @@ causal_graphs:
     label: Acr3 arsenite efflux permease
     node_type: GENE_OR_PROTEIN
     description: Alternative inorganic arsenite efflux pump exporting As(III).
+    protein_examples:
+    - uniprot_id: UniProtKB:Q8NW09
+      protein_label: Arsenical pump membrane protein
+      gene_symbol: arsB
+      taxon_id: NCBITaxon:196620
+      taxon_label: Staphylococcus aureus (strain MW2)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 103
+      sequence_version: 2
+      role: Exemplar protein (arsB, Arsenical pump membrane protein) representing
+        Acr3 arsenite efflux permease in Staphylococcus aureus (strain MW2) for arsenic
+        tolerant.
+      evidence:
+      - reference: DOI:10.3389/fmicb.2018.02473
+        snippet: ArsB is an integral membrane protein able to extrude arsenite from
+          the cell cytoplasm, thus diminishing arsenite accumulation
+        notes: Supports Acr3 arsenite efflux permease in arsenic tolerant; UniProtKB:Q8NW09
+          (arsB, Arsenical pump membrane protein) in Staphylococcus aureus (strain
+          MW2) provides a verified protein exemplar.
   - node_id: arsM_methyltransferase
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
@@ -140,6 +219,32 @@ causal_graphs:
     label: ArsM arsenite S-adenosylmethionine methyltransferase
     node_type: GENE_OR_PROTEIN
     description: Enzyme methylating arsenite to volatile methylated arsenicals.
+    protein_examples:
+    - uniprot_id: UniProtKB:U2ZU49
+      protein_label: Arsenite methyltransferase
+      gene_symbol: arsM
+      taxon_id: NCBITaxon:1215092
+      taxon_label: Aquipseudomonas alcaligenes (strain ATCC 14909 / DSM 50342 / CCUG
+        1425 / JCM 20561 / NBRC 14159 / NCIMB 9945 / NCTC 10367 / 1577) (Pseudomonas
+        alcaligenes)
+      entry_status: REVIEWED
+      proteome_id: UP000016560
+      retrieved_on: '2026-10-17'
+      entry_version: 46
+      sequence_version: 1
+      role: Exemplar protein (arsM, Arsenite methyltransferase) representing ArsM
+        arsenite S-adenosylmethionine methyltransferase in Aquipseudomonas alcaligenes
+        (strain ATCC 14909 / DSM 50342 / CCUG 1425 / JCM 20561 / NBRC 14159 / NCIMB
+        9945 / NCTC 10367 / 1577) (Pseudomonas alcaligenes) for arsenic tolerant.
+      evidence:
+      - reference: DOI:10.3389/fmicb.2018.02473
+        snippet: ArsB is an integral membrane protein able to extrude arsenite from
+          the cell cytoplasm, thus diminishing arsenite accumulation
+        notes: Supports ArsM arsenite S-adenosylmethionine methyltransferase in arsenic
+          tolerant; UniProtKB:U2ZU49 (arsM, Arsenite methyltransferase) in Aquipseudomonas
+          alcaligenes (strain ATCC 14909 / DSM 50342 / CCUG 1425 / JCM 20561 / NBRC
+          14159 / NCIMB 9945 / NCTC 10367 / 1577) (Pseudomonas alcaligenes) provides
+          a verified protein exemplar.
   - node_id: arsenite_methylation
     label: arsenite methylation
     node_type: BIOLOGICAL_PROCESS
@@ -320,4 +425,13 @@ curation_history:
     added taxon-paired protein example(s) UniProtKB:Q1LRL1 on arsC_reductase (NCBITaxon:266264);
     retyped 1 node(s) (ars_promoter->GENETIC_ELEMENT); added canonical example(s)
     NCBITaxon:266264.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:Q1LRL1
+    version metadata (entry_version=100, sequence_version=1); added UniProtKB:P45946
+    (arsB) protein example to node ars_operon; added UniProtKB:Q01256 (arsR) protein
+    example to node arsR_repressor; added UniProtKB:Q8NW09 (arsB) protein example
+    to node arsB_pump (+2 more).'
   llm_assisted: true

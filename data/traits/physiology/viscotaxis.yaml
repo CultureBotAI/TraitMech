@@ -81,3 +81,68 @@ curation_history:
     deferred historical strain taxonomy, canonical examples, external equivalents
     and protein-resolved mechanisms.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph viscotaxis_graph
+    with GENE_OR_PROTEIN node viscotaxis_protein_component and UniProtKB:P39914 exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: viscotaxis_graph
+  title: Protein component associated with viscotaxis
+  description: Literature-backed association between Monothiol bacilliredoxin BrxC
+    (UniProtKB:P39914) and viscotaxis.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P39914 in Bacillus
+    subtilis (strain 168)) associated with viscotaxis while full multi-step mechanistic
+    curation remains future work.
+  nodes:
+  - node_id: viscotaxis_trait
+    label: viscotaxis
+    node_type: TRAIT
+    grounding: traitmech:000593
+    description: A motile phenotype in which active locomotion produces net migration
+      in response to a spatial gradient in surrounding fluid viscosity.
+  - node_id: viscotaxis_protein_component
+    label: Monothiol bacilliredoxin BrxC
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Monothiol bacilliredoxin BrxC) associated with
+      viscotaxis.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - brxC
+    protein_examples:
+    - uniprot_id: UniProtKB:P39914
+      protein_label: Monothiol bacilliredoxin BrxC
+      gene_symbol: brxC
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
+      entry_status: REVIEWED
+      proteome_id: UP000001570
+      retrieved_on: '2026-10-17'
+      entry_version: 128
+      sequence_version: 1
+      role: Characteristic protein component (brxC, Monothiol bacilliredoxin BrxC)
+        associated with viscotaxis in Bacillus subtilis (strain 168).
+      evidence:
+      - reference: DOI:10.1103/physrevlett.120.208002
+        snippet: suitable body shapes create viscotaxis based on a systematic asymmetry
+          of viscous forces acting on a microswimmer.
+        notes: Supports Monothiol bacilliredoxin BrxC in viscotaxis; UniProtKB:P39914
+          (brxC, Monothiol bacilliredoxin BrxC) in Bacillus subtilis (strain 168)
+          provides a verified protein exemplar.
+  edges:
+  - subject: viscotaxis_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: viscotaxis_trait
+    description: Monothiol bacilliredoxin BrxC (brxC, UniProtKB:P39914) contributes
+      to viscotaxis (associated with microswimmer, systematic, viscotaxis).
+    evidence:
+    - reference: DOI:10.1103/physrevlett.120.208002
+      snippet: suitable body shapes create viscotaxis based on a systematic asymmetry
+        of viscous forces acting on a microswimmer.
+      notes: Supports the functional association between Monothiol bacilliredoxin
+        BrxC (UniProtKB:P39914 in Bacillus subtilis (strain 168)) and viscotaxis.

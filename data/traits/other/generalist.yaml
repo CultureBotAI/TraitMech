@@ -19,6 +19,12 @@ curation_history:
     and prokaryotic niche-breadth evidence after a repository-wide duplicate review
     covering ignored and hidden files.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph generalist_graph
+    with GENE_OR_PROTEIN node generalist_protein_component and UniProtKB:B5BD11 exemplar.'
+  llm_assisted: true
 definition_source: DOI:10.1093/femsec/fiaa240
 evidence:
 - reference: DOI:10.1093/femsec/fiaa240
@@ -31,3 +37,60 @@ evidence:
     to a single environment.
   notes: The social-niche-breadth study defines generalists and specialists while
     introducing a niche-breadth score for prokaryotic genomes across environments.
+causal_graphs:
+- graph_id: generalist_graph
+  title: Protein component associated with generalist
+  description: Literature-backed association between Allantoinase (UniProtKB:B5BD11)
+    and generalist.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:B5BD11 in Salmonella
+    paratyphi A (strain AKU_12601)) associated with generalist while full multi-step
+    mechanistic curation remains future work.
+  nodes:
+  - node_id: generalist_trait
+    label: generalist
+    node_type: TRAIT
+    grounding: METPO:1005040
+    description: A phenotype describing an organism with a broad ecological niche,
+      capable of thriving across diverse environments or utilizing varied resources.
+  - node_id: generalist_protein_component
+    label: Allantoinase
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Allantoinase) associated with generalist.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - allB
+    protein_examples:
+    - uniprot_id: UniProtKB:B5BD11
+      protein_label: Allantoinase
+      gene_symbol: allB
+      taxon_id: NCBITaxon:554290
+      taxon_label: Salmonella paratyphi A (strain AKU_12601)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 83
+      sequence_version: 1
+      role: Characteristic protein component (allB, Allantoinase) associated with
+        generalist in Salmonella paratyphi A (strain AKU_12601).
+      evidence:
+      - reference: DOI:10.1093/femsec/fiaa240
+        snippet: Organisms are often categorized as generalists or specialists, corresponding
+          to broad or narrow niche requirements
+        notes: Supports Allantoinase in generalist; UniProtKB:B5BD11 (allB, Allantoinase)
+          in Salmonella paratyphi A (strain AKU_12601) provides a verified protein
+          exemplar.
+  edges:
+  - subject: generalist_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: generalist_trait
+    description: Allantoinase (allB, UniProtKB:B5BD11) contributes to generalist (associated
+      with corresponding, requirements, categorized).
+    evidence:
+    - reference: DOI:10.1093/femsec/fiaa240
+      snippet: Organisms are often categorized as generalists or specialists, corresponding
+        to broad or narrow niche requirements
+      notes: Supports the functional association between Allantoinase (UniProtKB:B5BD11
+        in Salmonella paratyphi A (strain AKU_12601)) and generalist.

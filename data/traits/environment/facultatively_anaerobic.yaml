@@ -69,6 +69,26 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Oxygen-dependent transcriptional regulator of anaerobic respiration
       genes in E. coli.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0ACS6
+      protein_label: HTH-type transcriptional regulator ZntR
+      gene_symbol: zntR
+      taxon_id: NCBITaxon:83334
+      taxon_label: Escherichia coli O157:H7
+      entry_status: REVIEWED
+      proteome_id: UP000000558
+      retrieved_on: '2026-10-17'
+      entry_version: 115
+      sequence_version: 1
+      role: Exemplar protein (zntR, HTH-type transcriptional regulator ZntR) representing
+        FNR oxygen-responsive regulator in Escherichia coli O157:H7 for facultatively
+        anaerobic.
+      evidence:
+      - reference: https://www.ncbi.nlm.nih.gov/books/NBK482349/
+        snippet: will not survive if there is more than half a percent oxygen
+        notes: Supports FNR oxygen-responsive regulator in facultatively anaerobic;
+          UniProtKB:P0ACS6 (zntR, HTH-type transcriptional regulator ZntR) in Escherichia
+          coli O157:H7 provides a verified protein exemplar.
   - node_id: arca_regulator
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
@@ -77,6 +97,26 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Two-component regulatory system that represses the aerobic respiration
       program during the aerobic-to-anaerobic transition.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0A9Q1
+      protein_label: Aerobic respiration control protein ArcA
+      gene_symbol: arcA
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 152
+      sequence_version: 1
+      role: Exemplar protein (arcA, Aerobic respiration control protein ArcA) representing
+        ArcA/ArcAB two-component regulator in Escherichia coli (strain K12) for facultatively
+        anaerobic.
+      evidence:
+      - reference: DOI:10.1007/BF00445650
+        snippet: expression of anaerobic respiration
+        notes: Supports ArcA/ArcAB two-component regulator in facultatively anaerobic;
+          UniProtKB:P0A9Q1 (arcA, Aerobic respiration control protein ArcA) in Escherichia
+          coli (strain K12) provides a verified protein exemplar.
   - node_id: alternative_electron_acceptors
     label: alternative terminal electron acceptors
     node_type: CHEMICAL
@@ -204,4 +244,11 @@ curation_history:
     the tranche: set graph scope facultative_anaerobe_oxygen_switch=NONMECHANISTIC
     with scope_notes; marked 2 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (fnr_regulator, arca_regulator).'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P0ACS6 (zntR)
+    protein example to node fnr_regulator; added UniProtKB:P0A9Q1 (arcA) protein example
+    to node arca_regulator.'
   llm_assisted: true

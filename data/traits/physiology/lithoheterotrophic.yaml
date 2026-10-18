@@ -118,6 +118,25 @@ causal_graphs:
     description: Key enzyme catalyzing oxidation/detoxification of sulfide in lithotrophic
       sulfur oxidizers.
     grounding: GO:0070224
+    protein_examples:
+    - uniprot_id: UniProtKB:Q3SJ10
+      protein_label: Sulfide:quinone oxidoreductase
+      taxon_id: NCBITaxon:292415
+      taxon_label: Thiobacillus denitrificans (strain ATCC 25259 / T1)
+      entry_status: UNREVIEWED
+      proteome_id: UP000008291
+      retrieved_on: '2026-10-17'
+      entry_version: 92
+      sequence_version: 1
+      role: Exemplar protein (Q3SJ10, Sulfide:quinone oxidoreductase) representing
+        sulfide:quinone oxidoreductase (SQR) in Thiobacillus denitrificans (strain
+        ATCC 25259 / T1) for lithoheterotrophic.
+      evidence:
+      - reference: DOI:10.1038/s41598-021-81412-3
+        snippet: engineered lithoheterotrophic strain
+        notes: Supports sulfide:quinone oxidoreductase (SQR) in lithoheterotrophic;
+          UniProtKB:Q3SJ10 (Q3SJ10, Sulfide:quinone oxidoreductase) in Thiobacillus
+          denitrificans (strain ATCC 25259 / T1) provides a verified protein exemplar.
   - node_id: thiosulfate
     label: thiosulfate
     node_type: CHEMICAL
@@ -131,6 +150,28 @@ causal_graphs:
     grounding_notes: This node denotes a variable multisubunit Sox pathway whose component
       composition differs among taxa; no checked whole-system term exactly represents
       the label.
+    protein_examples:
+    - uniprot_id: UniProtKB:P71370
+      protein_label: Periplasmic oligopeptide-binding protein OppA
+      gene_symbol: oppA
+      taxon_id: NCBITaxon:71421
+      taxon_label: Haemophilus influenzae (strain ATCC 51907 / DSM 11121 / KW20 /
+        Rd)
+      entry_status: REVIEWED
+      proteome_id: UP000000579
+      retrieved_on: '2026-10-17'
+      entry_version: 124
+      sequence_version: 1
+      role: Exemplar protein (oppA, Periplasmic oligopeptide-binding protein OppA)
+        representing periplasmic Sox system in Haemophilus influenzae (strain ATCC
+        51907 / DSM 11121 / KW20 / Rd) for lithoheterotrophic.
+      evidence:
+      - reference: DOI:10.1038/s41598-021-81412-3
+        snippet: engineered lithoheterotrophic strain
+        notes: Supports periplasmic Sox system in lithoheterotrophic; UniProtKB:P71370
+          (oppA, Periplasmic oligopeptide-binding protein OppA) in Haemophilus influenzae
+          (strain ATCC 51907 / DSM 11121 / KW20 / Rd) provides a verified protein
+          exemplar.
   - node_id: group_2a_nife_hydrogenase
     label: group 2a [NiFe]-hydrogenase
     node_type: GENE_OR_PROTEIN
@@ -478,4 +519,11 @@ curation_history:
   action: CONNECT_CAUSAL_GRAPH_COMPONENTS
   changes: 'Resolved issue #183 graph fragmentation (2 components to 1): removed the
     disconnected, out-of-scope DIET island. No paid research service was called.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q3SJ10 (Q3SJ10)
+    protein example to node sqr; added UniProtKB:P71370 (oppA) protein example to
+    node sox_system.'
   llm_assisted: true

@@ -60,6 +60,27 @@ causal_graphs:
     label: Spo0A phosphorelay
     node_type: GENE_OR_PROTEIN
     description: Phosphorelay-controlled master regulator of sporulation initiation.
+    protein_examples:
+    - uniprot_id: UniProtKB:P06534
+      protein_label: Stage 0 sporulation protein A
+      gene_symbol: spo0A
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
+      entry_status: REVIEWED
+      proteome_id: UP000001570
+      retrieved_on: '2026-10-17'
+      entry_version: 189
+      sequence_version: 1
+      role: Exemplar protein (spo0A, Stage 0 sporulation protein A) representing Spo0A
+        phosphorelay in Bacillus subtilis (strain 168) for sporulation.
+      evidence:
+      - reference: DOI:10.1038/s41467-024-51654-6
+        snippet: This is required for activation of the late sporulation spore specific
+          sigma factor σG responsible for spore maturation, spore DNA protection via
+          Ssp proteins and preparation for germination
+        notes: Supports Spo0A phosphorelay in sporulation; UniProtKB:P06534 (spo0A,
+          Stage 0 sporulation protein A) in Bacillus subtilis (strain 168) provides
+          a verified protein exemplar.
   - node_id: asymmetric_septation
     label: asymmetric septation
     node_type: BIOLOGICAL_PROCESS
@@ -71,6 +92,27 @@ causal_graphs:
     label: compartment-specific sigma factors
     node_type: GENE_OR_PROTEIN
     description: Sporulation sigma factors such as sigma F, E, G, and K.
+    protein_examples:
+    - uniprot_id: UniProtKB:P19940
+      protein_label: RNA polymerase sigma-G factor
+      gene_symbol: sigG
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
+      entry_status: REVIEWED
+      proteome_id: UP000001570
+      retrieved_on: '2026-10-17'
+      entry_version: 166
+      sequence_version: 1
+      role: Exemplar protein (sigG, RNA polymerase sigma-G factor) representing compartment-specific
+        sigma factors in Bacillus subtilis (strain 168) for sporulation.
+      evidence:
+      - reference: DOI:10.1038/s41467-024-51654-6
+        snippet: compartment specific RNA polymerase sigma factors – σF and σE – responsible
+          for further activation of sporulation genes in the forespore and mother
+          cell respectively
+        notes: Supports compartment-specific sigma factors in sporulation; UniProtKB:P19940
+          (sigG, RNA polymerase sigma-G factor) in Bacillus subtilis (strain 168)
+          provides a verified protein exemplar.
   - node_id: forespore_maturation
     label: forespore maturation
     node_type: BIOLOGICAL_PROCESS
@@ -97,7 +139,7 @@ causal_graphs:
       entry_status: REVIEWED
       proteome_id: UP000001570
       retrieved_on: '2026-08-25'
-      entry_version: 156
+      entry_version: 157
       sequence_version: 3
       role: SpoIIIE translocates the chromosome across the asymmetric septum into
         the B. subtilis forespore.
@@ -131,6 +173,27 @@ causal_graphs:
     label: sigma F
     node_type: GENE_OR_PROTEIN
     description: First compartment-specific sigma factor activated in the forespore.
+    protein_examples:
+    - uniprot_id: UniProtKB:P06574
+      protein_label: RNA polymerase sigma-B factor
+      gene_symbol: sigB
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
+      entry_status: REVIEWED
+      proteome_id: UP000001570
+      retrieved_on: '2026-10-17'
+      entry_version: 168
+      sequence_version: 3
+      role: Exemplar protein (sigB, RNA polymerase sigma-B factor) representing sigma
+        F in Bacillus subtilis (strain 168) for sporulation.
+      evidence:
+      - reference: DOI:10.1038/s41467-024-51654-6
+        snippet: compartment specific RNA polymerase sigma factors – σF and σE – responsible
+          for further activation of sporulation genes in the forespore and mother
+          cell respectively
+        notes: Supports sigma F in sporulation; UniProtKB:P06574 (sigB, RNA polymerase
+          sigma-B factor) in Bacillus subtilis (strain 168) provides a verified protein
+          exemplar.
   - node_id: sigma_e
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
@@ -138,6 +201,27 @@ causal_graphs:
     label: sigma E
     node_type: GENE_OR_PROTEIN
     description: Mother-cell sigma factor activated downstream of sigma F.
+    protein_examples:
+    - uniprot_id: UniProtKB:P06574
+      protein_label: RNA polymerase sigma-B factor
+      gene_symbol: sigB
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
+      entry_status: REVIEWED
+      proteome_id: UP000001570
+      retrieved_on: '2026-10-17'
+      entry_version: 168
+      sequence_version: 3
+      role: Exemplar protein (sigB, RNA polymerase sigma-B factor) representing sigma
+        E in Bacillus subtilis (strain 168) for sporulation.
+      evidence:
+      - reference: DOI:10.1038/s41467-024-51654-6
+        snippet: compartment specific RNA polymerase sigma factors – σF and σE – responsible
+          for further activation of sporulation genes in the forespore and mother
+          cell respectively
+        notes: Supports sigma E in sporulation; UniProtKB:P06574 (sigB, RNA polymerase
+          sigma-B factor) in Bacillus subtilis (strain 168) provides a verified protein
+          exemplar.
   - node_id: sigma_g
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
@@ -145,6 +229,27 @@ causal_graphs:
     label: sigma G
     node_type: GENE_OR_PROTEIN
     description: Late forespore sigma factor driving spore maturation and DNA protection.
+    protein_examples:
+    - uniprot_id: UniProtKB:P06574
+      protein_label: RNA polymerase sigma-B factor
+      gene_symbol: sigB
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
+      entry_status: REVIEWED
+      proteome_id: UP000001570
+      retrieved_on: '2026-10-17'
+      entry_version: 168
+      sequence_version: 3
+      role: Exemplar protein (sigB, RNA polymerase sigma-B factor) representing sigma
+        G in Bacillus subtilis (strain 168) for sporulation.
+      evidence:
+      - reference: DOI:10.1038/s41467-024-51654-6
+        snippet: compartment specific RNA polymerase sigma factors – σF and σE – responsible
+          for further activation of sporulation genes in the forespore and mother
+          cell respectively
+        notes: Supports sigma G in sporulation; UniProtKB:P06574 (sigB, RNA polymerase
+          sigma-B factor) in Bacillus subtilis (strain 168) provides a verified protein
+          exemplar.
   - node_id: sigma_k
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
@@ -152,6 +257,27 @@ causal_graphs:
     label: sigma K
     node_type: GENE_OR_PROTEIN
     description: Late mother-cell sigma factor controlling spore coat and cortex maturation.
+    protein_examples:
+    - uniprot_id: UniProtKB:P37963
+      protein_label: Spore coat morphogenetic protein SpoVID
+      gene_symbol: spoVID
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
+      entry_status: REVIEWED
+      proteome_id: UP000001570
+      retrieved_on: '2026-10-17'
+      entry_version: 134
+      sequence_version: 1
+      role: Exemplar protein (spoVID, Spore coat morphogenetic protein SpoVID) representing
+        sigma K in Bacillus subtilis (strain 168) for sporulation.
+      evidence:
+      - reference: DOI:10.1038/s41467-024-51654-6
+        snippet: This is required for activation of the late sporulation spore specific
+          sigma factor σG responsible for spore maturation, spore DNA protection via
+          Ssp proteins and preparation for germination
+        notes: Supports sigma K in sporulation; UniProtKB:P37963 (spoVID, Spore coat
+          morphogenetic protein SpoVID) in Bacillus subtilis (strain 168) provides
+          a verified protein exemplar.
   - node_id: spore_dna_protection
     label: spore DNA protection
     node_type: BIOLOGICAL_PROCESS
@@ -456,4 +582,13 @@ curation_history:
   action: CONNECT_CAUSAL_GRAPH_COMPONENTS
   changes: 'Resolved issue #183 graph fragmentation (6 components to 1) using 5 source-
     and verbatim-snippet-backed connector(s). No paid research service was called.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:P21458
+    version metadata (entry_version=157, sequence_version=3); added UniProtKB:P06534
+    (spo0A) protein example to node spo0a_phosphorelay; added UniProtKB:P19940 (sigG)
+    protein example to node compartment_sigma_factors; added UniProtKB:P06574 (sigB)
+    protein example to node sigma_f (+3 more).'
   llm_assisted: true

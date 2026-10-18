@@ -52,7 +52,7 @@ causal_graphs:
       taxon_label: Streptococcus pneumoniae R6
       entry_status: REVIEWED
       retrieved_on: '2026-08-25'
-      entry_version: 110
+      entry_version: 111
       sequence_version: 1
       role: R6 PBP2b catalyzes transpeptidation in peripheral peptidoglycan synthesis,
         contributing to ovococcal elongation and ellipsoidal geometry.
@@ -67,6 +67,25 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Morphogenetic protein coordinating septum splitting and elongation.
     grounding: InterPro:IPR007793
+    protein_examples:
+    - uniprot_id: UniProtKB:P71021
+      protein_label: Septum site-determining protein DivIVA
+      gene_symbol: divIVA
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
+      entry_status: REVIEWED
+      proteome_id: UP000001570
+      retrieved_on: '2026-10-17'
+      entry_version: 132
+      sequence_version: 1
+      role: Exemplar protein (divIVA, Septum site-determining protein DivIVA) representing
+        DivIVA in Bacillus subtilis (strain 168) for ellipsoidal.
+      evidence:
+      - reference: DOI:10.1128/mbio.01311-24
+        snippet: DivIVA controls the dynamics of septum splitting and cell elongation
+        notes: Supports DivIVA in ellipsoidal; UniProtKB:P71021 (divIVA, Septum site-determining
+          protein DivIVA) in Bacillus subtilis (strain 168) provides a verified protein
+          exemplar.
   - node_id: septal_and_peripheral_synthesis
     label: septal and peripheral peptidoglycan synthesis
     node_type: BIOLOGICAL_PROCESS
@@ -80,6 +99,26 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Inner septal PG synthesis machine including FtsZ, bPBP2x and FtsW.
     grounding: GO:1990586
+    protein_examples:
+    - uniprot_id: UniProtKB:P0ABG4
+      protein_label: Probable peptidoglycan glycosyltransferase FtsW
+      gene_symbol: ftsW
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 150
+      sequence_version: 1
+      role: Exemplar protein (ftsW, Probable peptidoglycan glycosyltransferase FtsW)
+        representing divisome (FtsZ/PBP2x/FtsW) in Escherichia coli (strain K12) for
+        ellipsoidal.
+      evidence:
+      - reference: DOI:10.1038/nrmicro3088
+        snippet: spherical cocci synthesize peptidoglycan only at the division septum
+        notes: Supports divisome (FtsZ/PBP2x/FtsW) in ellipsoidal; UniProtKB:P0ABG4
+          (ftsW, Probable peptidoglycan glycosyltransferase FtsW) in Escherichia coli
+          (strain K12) provides a verified protein exemplar.
   - node_id: septal_pg_synthesis
     label: septal peptidoglycan synthesis
     node_type: BIOLOGICAL_PROCESS
@@ -91,6 +130,26 @@ causal_graphs:
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: This aggregate denotes the pneumococcal multiprotein elongasome;
       no single protein-family term represents the complete PBP2b/RodA machinery.
+    protein_examples:
+    - uniprot_id: UniProtKB:P9WN99
+      protein_label: Peptidoglycan glycosyltransferase RodA
+      gene_symbol: rodA
+      taxon_id: NCBITaxon:83332
+      taxon_label: Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)
+      entry_status: REVIEWED
+      proteome_id: UP000001584
+      retrieved_on: '2026-10-17'
+      entry_version: 49
+      sequence_version: 1
+      role: Exemplar protein (rodA, Peptidoglycan glycosyltransferase RodA) representing
+        elongasome (PBP2b/RodA) in Mycobacterium tuberculosis (strain ATCC 25618 /
+        H37Rv) for ellipsoidal.
+      evidence:
+      - reference: DOI:10.1128/JB.00184-13
+        snippet: PBP2b is essential for peripheral peptidoglycan synthesis
+        notes: Supports elongasome (PBP2b/RodA) in ellipsoidal; UniProtKB:P9WN99 (rodA,
+          Peptidoglycan glycosyltransferase RodA) in Mycobacterium tuberculosis (strain
+          ATCC 25618 / H37Rv) provides a verified protein exemplar.
   - node_id: peripheral_pg_synthesis
     label: peripheral peptidoglycan synthesis
     node_type: BIOLOGICAL_PROCESS
@@ -322,4 +381,13 @@ curation_history:
   action: CONNECT_CAUSAL_GRAPH_COMPONENTS
   changes: 'Resolved issue #183 graph fragmentation (2 components to 1) using 1 source-
     and verbatim-snippet-backed connector(s). No paid research service was called.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:P0A3M6
+    version metadata (entry_version=111, sequence_version=1); added UniProtKB:P71021
+    (divIVA) protein example to node divIVA; added UniProtKB:P0ABG4 (ftsW) protein
+    example to node divisome; added UniProtKB:P9WN99 (rodA) protein example to node
+    elongasome.'
   llm_assisted: true

@@ -71,7 +71,7 @@ causal_graphs:
       taxon_label: Rhodospirillum rubrum
       entry_status: REVIEWED
       retrieved_on: '2026-08-24'
-      entry_version: 119
+      entry_version: 120
       sequence_version: 2
       role: L-chain component of the R. rubrum Type II photochemical reaction center;
         this accession is not presented as the complete reaction-center complex.
@@ -124,11 +124,52 @@ causal_graphs:
     description: Membrane enzyme complex that synthesizes ATP driven by proton motive
       force.
     grounding: GO:0045259
+    protein_examples:
+    - uniprot_id: UniProtKB:Q49Z52
+      protein_label: ATP synthase subunit alpha
+      gene_symbol: atpA
+      taxon_id: NCBITaxon:342451
+      taxon_label: Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
+        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+      entry_status: REVIEWED
+      proteome_id: UP000006371
+      retrieved_on: '2026-10-17'
+      entry_version: 137
+      sequence_version: 1
+      role: Exemplar protein (atpA, ATP synthase subunit alpha) representing ATP synthase
+        complex in Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
+        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) for phototrophic.
+      evidence:
+      - reference: DOI:10.1073/pnas.0611035104
+        snippet: Sinks include rotation of the flagellar motor and ATP synthesis.
+        notes: Supports ATP synthase complex in phototrophic; UniProtKB:Q49Z52 (atpA,
+          ATP synthase subunit alpha) in Staphylococcus saprophyticus subsp. saprophyticus
+          (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) provides
+          a verified protein exemplar.
   - node_id: rhodopsin
     label: rhodopsin
     node_type: GENE_OR_PROTEIN
     description: Retinal-based light-driven ion-pumping membrane protein used in retinalophototrophy.
     grounding: InterPro:IPR001425
+    protein_examples:
+    - uniprot_id: UniProtKB:P42196
+      protein_label: Sensory rhodopsin-2
+      gene_symbol: sop2
+      taxon_id: NCBITaxon:2257
+      taxon_label: Natronomonas pharaonis (Natronobacterium pharaonis)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 133
+      sequence_version: 1
+      role: Exemplar protein (sop2, Sensory rhodopsin-2) representing rhodopsin in
+        Natronomonas pharaonis (Natronobacterium pharaonis) for phototrophic.
+      evidence:
+      - reference: DOI:10.1128/jb.182.5.1200-1207.2000
+        snippet: The proteins of the photochemical components are encoded by the puf
+          operon (LHalpha, LHbeta, RC-L, and RC-M) and by puhA (RC-H)
+        notes: Supports rhodopsin in phototrophic; UniProtKB:P42196 (sop2, Sensory
+          rhodopsin-2) in Natronomonas pharaonis (Natronobacterium pharaonis) provides
+          a verified protein exemplar.
   - node_id: ion_transport
     label: ion transport across membrane
     node_type: BIOLOGICAL_PROCESS
@@ -416,4 +457,12 @@ curation_history:
   action: NARROWED_RELATED_SYNONYM
   changes: Moved the aerobic_anoxygenic_phototrophy metpo.owl source key from broad
     phototrophic to the newly minted same-scope aerobic anoxygenic phototrophy TraitRecord.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:P10717
+    version metadata (entry_version=120, sequence_version=2); added UniProtKB:Q49Z52
+    (atpA) protein example to node atp_synthase; added UniProtKB:P42196 (sop2) protein
+    example to node rhodopsin.'
   llm_assisted: true

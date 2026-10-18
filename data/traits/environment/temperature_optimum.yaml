@@ -82,6 +82,39 @@ causal_graphs:
     node_type: STATE
     description: Growth condition outside the physiological temperature range, indicated
       by non-linear Arrhenius behavior.
+  - node_id: temperature_optimum_protein_component
+    label: Chaperonin GroEL
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Chaperonin GroEL) associated with temperature
+      optimum.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - groEL
+    protein_examples:
+    - uniprot_id: UniProtKB:Q49YY5
+      protein_label: Chaperonin GroEL
+      gene_symbol: groEL
+      taxon_id: NCBITaxon:342451
+      taxon_label: Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
+        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+      entry_status: REVIEWED
+      proteome_id: UP000006371
+      retrieved_on: '2026-10-17'
+      entry_version: 120
+      sequence_version: 1
+      role: Characteristic protein component (groEL, Chaperonin GroEL) associated
+        with temperature optimum in Staphylococcus saprophyticus subsp. saprophyticus
+        (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41).
+      evidence:
+      - reference: DOI:10.1007/s42770-023-01057-4
+        snippet: When the temperature drops, DesK/DesR is the two-component system
+          involved in membrane adaptation
+        notes: Supports Chaperonin GroEL in temperature optimum; UniProtKB:Q49YY5
+          (groEL, Chaperonin GroEL) in Staphylococcus saprophyticus subsp. saprophyticus
+          (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) provides
+          a verified protein exemplar.
   edges:
   - subject: ambient_temperature
     predicate: regulates
@@ -164,6 +197,19 @@ causal_graphs:
     - reference: DOI:10.37256/amtt.5220244537
       notes: '''Arrhenius plots, with linear regions indicating physiological growth
         and deviations indicating stress''.'
+  - subject: temperature_optimum_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: temperature_optimum_trait
+    description: Chaperonin GroEL (groEL, UniProtKB:Q49YY5) contributes to temperature
+      optimum (associated with temperature, adaptation, membrane).
+    evidence:
+    - reference: DOI:10.1007/s42770-023-01057-4
+      snippet: When the temperature drops, DesK/DesR is the two-component system involved
+        in membrane adaptation
+      notes: Supports the functional association between Chaperonin GroEL (UniProtKB:Q49YY5
+        in Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC 15305 /
+        DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)) and temperature optimum.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.813650+00:00'
   curator: seed_from_metpo
@@ -268,4 +314,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (METPO:1016200×1).
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    temperature_optimum_protein_component with UniProtKB:Q49YY5 (groEL) exemplar.'
   llm_assisted: true

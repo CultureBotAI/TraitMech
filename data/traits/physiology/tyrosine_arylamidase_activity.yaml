@@ -56,3 +56,79 @@ curation_history:
     no exact tyrosine arylamidase activity class yet and the placeholder is reserved
     in proposals/metpo_traitmech_v46.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph tyrosine_arylamidase_activity_graph
+    with GENE_OR_PROTEIN node tyrosine_arylamidase_activity_protein_component and
+    UniProtKB:P0A8P8 exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: tyrosine_arylamidase_activity_graph
+  title: Protein component associated with tyrosine arylamidase activity
+  description: Literature-backed association between Tyrosine recombinase XerD (UniProtKB:P0A8P8)
+    and tyrosine arylamidase activity.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P0A8P8 in Escherichia
+    coli (strain K12)) associated with tyrosine arylamidase activity while full multi-step
+    mechanistic curation remains future work.
+  nodes:
+  - node_id: tyrosine_arylamidase_activity_trait
+    label: tyrosine arylamidase activity
+    node_type: TRAIT
+    grounding: traitmech:000169
+    description: A physiological enzyme-activity phenotype in which a cell produces
+      active tyrosine arylamidase enzymes that hydrolyze tyrosine arylamide substrates.
+  - node_id: tyrosine_arylamidase_activity_protein_component
+    label: Tyrosine recombinase XerD
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Tyrosine recombinase XerD) associated with tyrosine
+      arylamidase activity.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - xerD
+    protein_examples:
+    - uniprot_id: UniProtKB:P0A8P8
+      protein_label: Tyrosine recombinase XerD
+      gene_symbol: xerD
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 150
+      sequence_version: 1
+      role: Characteristic protein component (xerD, Tyrosine recombinase XerD) associated
+        with tyrosine arylamidase activity in Escherichia coli (strain K12).
+      evidence:
+      - reference: DOI:10.1099/ijsem.0.006017
+        snippet: 'enzymatic activities are present for: α-galactosidase, N-acetyl-β-glucosaminidase,
+          arginine arylamidase, proline arylamidase, leucyl glycine arylamidase, phenylalanine
+          arylamidase, leucine arylamidase, tyrosine arylamidase, alanine arylamidase,
+          glycine arylamidase, histidine arylamidase, glutamyl glutamic acid arylamidase,
+          serine arylamidase, valine arylamidase, cysteine arylamidase, esterase,
+          esterase lipase, alpha-chymotrypsin'
+        notes: Supports Tyrosine recombinase XerD in tyrosine arylamidase activity;
+          UniProtKB:P0A8P8 (xerD, Tyrosine recombinase XerD) in Escherichia coli (strain
+          K12) provides a verified protein exemplar.
+  edges:
+  - subject: tyrosine_arylamidase_activity_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: tyrosine_arylamidase_activity_trait
+    description: Tyrosine recombinase XerD (xerD, UniProtKB:P0A8P8) contributes to
+      tyrosine arylamidase activity (associated with glucosaminidase, galactosidase,
+      phenylalanine).
+    evidence:
+    - reference: DOI:10.1099/ijsem.0.006017
+      snippet: 'enzymatic activities are present for: α-galactosidase, N-acetyl-β-glucosaminidase,
+        arginine arylamidase, proline arylamidase, leucyl glycine arylamidase, phenylalanine
+        arylamidase, leucine arylamidase, tyrosine arylamidase, alanine arylamidase,
+        glycine arylamidase, histidine arylamidase, glutamyl glutamic acid arylamidase,
+        serine arylamidase, valine arylamidase, cysteine arylamidase, esterase, esterase
+        lipase, alpha-chymotrypsin'
+      notes: Supports the functional association between Tyrosine recombinase XerD
+        (UniProtKB:P0A8P8 in Escherichia coli (strain K12)) and tyrosine arylamidase
+        activity.

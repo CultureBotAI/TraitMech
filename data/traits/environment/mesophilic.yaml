@@ -60,6 +60,25 @@ causal_graphs:
       a broad environmental classification; no single exact family term denotes this
       aggregate use.
     description: Enzymes with peak activity in the mesophile temperature range.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0A6Z3
+      protein_label: Chaperone protein HtpG
+      gene_symbol: htpG
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 166
+      sequence_version: 1
+      role: Exemplar protein (htpG, Chaperone protein HtpG) representing mesophile
+        enzyme repertoire in Escherichia coli (strain K12) for mesophilic.
+      evidence:
+      - reference: DOI:10.1016/j.bpj.2013.06.029
+        snippet: Escherichia coli, a mesophilic bacterium
+        notes: Supports mesophile enzyme repertoire in mesophilic; UniProtKB:P0A6Z3
+          (htpG, Chaperone protein HtpG) in Escherichia coli (strain K12) provides
+          a verified protein exemplar.
   - node_id: balanced_growth
     label: balanced mesophilic growth
     node_type: BIOLOGICAL_PROCESS
@@ -87,6 +106,25 @@ causal_graphs:
       aggregate use.
     description: Major cold-shock RNA chaperone preventing inhibitory RNA secondary
       structure.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0A9X9
+      protein_label: Cold shock protein CspA
+      gene_symbol: cspA
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 146
+      sequence_version: 2
+      role: Exemplar protein (cspA, Cold shock protein CspA) representing CspA cold-shock
+        protein in Escherichia coli (strain K12) for mesophilic.
+      evidence:
+      - reference: DOI:10.4161/rna.7.6.13482
+        snippet: CspA, the main cold shock protein, and its homologs act as RNA chaperones
+        notes: Supports CspA cold-shock protein in mesophilic; UniProtKB:P0A9X9 (cspA,
+          Cold shock protein CspA) in Escherichia coli (strain K12) provides a verified
+          protein exemplar.
   - node_id: translation
     label: translation
     node_type: BIOLOGICAL_PROCESS
@@ -104,6 +142,25 @@ causal_graphs:
       a broad environmental classification; no single exact family term denotes this
       aggregate use.
     description: Alternative sigma factor controlling the bacterial heat-shock regulon.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0AGB3
+      protein_label: RNA polymerase sigma factor RpoH
+      gene_symbol: rpoH
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 151
+      sequence_version: 1
+      role: Exemplar protein (rpoH, RNA polymerase sigma factor RpoH) representing
+        sigma-32 (RpoH) in Escherichia coli (strain K12) for mesophilic.
+      evidence:
+      - reference: DOI:10.4161/rna.7.6.13482
+        snippet: CspA, the main cold shock protein, and its homologs act as RNA chaperones
+        notes: Supports sigma-32 (RpoH) in mesophilic; UniProtKB:P0AGB3 (rpoH, RNA
+          polymerase sigma factor RpoH) in Escherichia coli (strain K12) provides
+          a verified protein exemplar.
   - node_id: heat_shock_proteins
     label: heat-shock response proteins
     node_type: GENE_OR_PROTEIN
@@ -112,6 +169,25 @@ causal_graphs:
       a broad environmental classification; no single exact family term denotes this
       aggregate use.
     description: Chaperones and proteases induced to mitigate heat stress.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0A6Z3
+      protein_label: Chaperone protein HtpG
+      gene_symbol: htpG
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 166
+      sequence_version: 1
+      role: Exemplar protein (htpG, Chaperone protein HtpG) representing heat-shock
+        response proteins in Escherichia coli (strain K12) for mesophilic.
+      evidence:
+      - reference: DOI:10.1128/jb.183.18.5302-5310.2001
+        snippet: transient increase in the RpoH level observed upon heat shock
+        notes: Supports heat-shock response proteins in mesophilic; UniProtKB:P0A6Z3
+          (htpG, Chaperone protein HtpG) in Escherichia coli (strain K12) provides
+          a verified protein exemplar.
   - node_id: dnak
     label: DnaK chaperone
     node_type: GENE_OR_PROTEIN
@@ -121,6 +197,25 @@ causal_graphs:
       aggregate use.
     description: Hsp70 chaperone that sequesters sigma-32, negatively regulating its
       activity.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0A6Y8
+      protein_label: Chaperone protein DnaK
+      gene_symbol: dnaK
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 183
+      sequence_version: 2
+      role: Exemplar protein (dnaK, Chaperone protein DnaK) representing DnaK chaperone
+        in Escherichia coli (strain K12) for mesophilic.
+      evidence:
+      - reference: DOI:10.1128/mbio.02174-23
+        snippet: heat shock genes encoding chaperones, such as DnaK and GroEL
+        notes: Supports DnaK chaperone in mesophilic; UniProtKB:P0A6Y8 (dnaK, Chaperone
+          protein DnaK) in Escherichia coli (strain K12) provides a verified protein
+          exemplar.
   edges:
   - subject: moderate_temperature
     predicate: selects for
@@ -406,4 +501,13 @@ curation_history:
   changes: 'Addressed PR #664 adversarial review: replaced copied nonmechanistic bridge
     snippets with independent exact source snippets while preserving the existing
     connector edge scope.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P0A6Z3 (htpG)
+    protein example to node mesophile_enzyme_repertoire; added UniProtKB:P0A9X9 (cspA)
+    protein example to node cspa; added UniProtKB:P0AGB3 (rpoH) protein example to
+    node rpoh_sigma32; added UniProtKB:P0A6Z3 (htpG) protein example to node heat_shock_proteins
+    (+1 more).'
   llm_assisted: true

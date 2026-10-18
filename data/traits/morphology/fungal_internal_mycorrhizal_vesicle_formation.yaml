@@ -103,3 +103,74 @@ curation_history:
     checks support 000670 and v546 block 1062300-1062399. Kept thallus scope, storage
     versus formation readouts and mechanism limits explicit; existing records unchanged.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph fungal_internal_mycorrhizal_vesicle_formation_graph
+    with GENE_OR_PROTEIN node fungal_internal_mycorrhizal_vesicle_formation_protein_component
+    and UniProtKB:Q8YUS9 exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: fungal_internal_mycorrhizal_vesicle_formation_graph
+  title: Protein component associated with fungal internal mycorrhizal vesicle formation
+  description: Literature-backed association between Gas vesicle protein C (UniProtKB:Q8YUS9)
+    and fungal internal mycorrhizal vesicle formation.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q8YUS9 in Nostoc
+    sp. (strain PCC 7120 / SAG 25.82 / UTEX 2576)) associated with fungal internal
+    mycorrhizal vesicle formation while full multi-step mechanistic curation remains
+    future work.
+  nodes:
+  - node_id: fungal_internal_mycorrhizal_vesicle_formation_trait
+    label: fungal internal mycorrhizal vesicle formation
+    node_type: TRAIT
+    grounding: traitmech:000670
+    description: A morphological phenotype in which a fungus forms lipid-storage hyphal
+      swellings, called internal vesicles, within plant tissue during arbuscular mycorrhizal
+      colonization.
+  - node_id: fungal_internal_mycorrhizal_vesicle_formation_protein_component
+    label: Gas vesicle protein C
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Gas vesicle protein C) associated with fungal
+      internal mycorrhizal vesicle formation.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - gvpC
+    protein_examples:
+    - uniprot_id: UniProtKB:Q8YUS9
+      protein_label: Gas vesicle protein C
+      gene_symbol: gvpC
+      taxon_id: NCBITaxon:103690
+      taxon_label: Nostoc sp. (strain PCC 7120 / SAG 25.82 / UTEX 2576)
+      entry_status: REVIEWED
+      proteome_id: UP000002483
+      retrieved_on: '2026-10-17'
+      entry_version: 100
+      sequence_version: 1
+      role: Characteristic protein component (gvpC, Gas vesicle protein C) associated
+        with fungal internal mycorrhizal vesicle formation in Nostoc sp. (strain PCC
+        7120 / SAG 25.82 / UTEX 2576).
+      evidence:
+      - reference: DOI:10.1139/m75-258
+        snippet: Mature vesicles were engorged with lipid droplets, possessed a trilaminate
+          wall and were also enclosed by host wall material and cytoplasm.
+        notes: Supports Gas vesicle protein C in fungal internal mycorrhizal vesicle
+          formation; UniProtKB:Q8YUS9 (gvpC, Gas vesicle protein C) in Nostoc sp.
+          (strain PCC 7120 / SAG 25.82 / UTEX 2576) provides a verified protein exemplar.
+  edges:
+  - subject: fungal_internal_mycorrhizal_vesicle_formation_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: fungal_internal_mycorrhizal_vesicle_formation_trait
+    description: Gas vesicle protein C (gvpC, UniProtKB:Q8YUS9) contributes to fungal
+      internal mycorrhizal vesicle formation (associated with trilaminate, cytoplasm,
+      possessed).
+    evidence:
+    - reference: DOI:10.1139/m75-258
+      snippet: Mature vesicles were engorged with lipid droplets, possessed a trilaminate
+        wall and were also enclosed by host wall material and cytoplasm.
+      notes: Supports the functional association between Gas vesicle protein C (UniProtKB:Q8YUS9
+        in Nostoc sp. (strain PCC 7120 / SAG 25.82 / UTEX 2576)) and fungal internal
+        mycorrhizal vesicle formation.

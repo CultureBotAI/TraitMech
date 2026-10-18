@@ -115,6 +115,32 @@ causal_graphs:
     grounding: traitmech:000209
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
+  - node_id: pycsar_system_protein_component
+    label: Cytidylate cyclase
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Cytidylate cyclase) associated with Pycsar system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - pycC
+    protein_examples:
+    - uniprot_id: UniProtKB:P0DV26
+      protein_label: Cytidylate cyclase
+      gene_symbol: pycC
+      taxon_id: NCBITaxon:562
+      taxon_label: Escherichia coli
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 11
+      sequence_version: 1
+      role: Characteristic protein component (pycC, Cytidylate cyclase) associated
+        with Pycsar system in Escherichia coli.
+      evidence:
+      - reference: DOI:10.1038/s41467-024-49861-2
+        snippet: named pyrimidine cyclase system for anti-phage resistance (Pycsar)
+        notes: Supports Cytidylate cyclase in Pycsar system; UniProtKB:P0DV26 (pycC,
+          Cytidylate cyclase) in Escherichia coli provides a verified protein exemplar.
   edges:
   - subject: pycsar_locus
     predicate: contributes to
@@ -213,6 +239,18 @@ causal_graphs:
       snippet: cCMP/cUMP cyclases function as part of a family of bacterial anti-phage
         defense systems
       notes: Tal et al. support Pycsar system as a child of phage defense system.
+  - subject: pycsar_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: pycsar_system_trait
+    description: Cytidylate cyclase (pycC, UniProtKB:P0DV26) contributes to Pycsar
+      system (associated with substantial, identified, infections).
+    evidence:
+    - reference: DOI:10.1038/s41467-024-49861-2
+      snippet: a distinct zinc-finger motif of the uridylate cyclase is identified
+        to confer substantial resistance against phage infections
+      notes: Supports the functional association between Cytidylate cyclase (UniProtKB:P0DV26
+        in Escherichia coli) and Pycsar system.
 discussions:
 - discussion_id: pycsar-signal-and-effector-gap
   prompt: Resolve Pycsar cyclase clades, cyclic pyrimidine specificity, receptor-effector
@@ -237,4 +275,10 @@ curation_history:
     defense system parent after an ignored-and-hidden duplicate review found no exact
     live TraitMech, METPO, or prior proposal record; the replacement placeholder is
     reserved in proposals/metpo_traitmech_v113.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    pycsar_system_protein_component with UniProtKB:P0DV26 (pycC) exemplar.'
   llm_assisted: true

@@ -28,6 +28,13 @@ curation_history:
     provenance plus stable-URL and DOI-backed assay evidence after a repository-wide
     duplicate review covering ignored and hidden files.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph oxidase_negative_graph
+    with GENE_OR_PROTEIN node oxidase_negative_protein_component and UniProtKB:P0ABI8
+    exemplar.'
+  llm_assisted: true
 definition_source: http://purl.obolibrary.org/obo/OMP_0006084
 evidence:
 - reference: https://asm.org/protocols/oxidase-test-protocol
@@ -52,3 +59,71 @@ evidence:
   notes: The review constrains interpretation of the negative assay outcome to cytochrome
     c oxidase under the oxidase-test readout, rather than absence of every terminal
     oxidase.
+causal_graphs:
+- graph_id: oxidase_negative_graph
+  title: Protein component associated with oxidase negative
+  description: Literature-backed association between Cytochrome bo(3) ubiquinol oxidase
+    subunit 1 (UniProtKB:P0ABI8) and oxidase negative.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P0ABI8 in Escherichia
+    coli (strain K12)) associated with oxidase negative while full multi-step mechanistic
+    curation remains future work.
+  nodes:
+  - node_id: oxidase_negative_trait
+    label: oxidase negative
+    node_type: TRAIT
+    grounding: METPO:1007086
+    description: Test-outcome phenotype where the oxidase test yields a negative result.
+      The underlying enzyme-organism relation should additionally be asserted via
+      <organism> METPO:2000303 'does not show activity of' GO:0004129 'cytochrome-c
+      oxidase activity'.
+  - node_id: oxidase_negative_protein_component
+    label: Cytochrome bo(3) ubiquinol oxidase subunit 1
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Cytochrome bo(3) ubiquinol oxidase subunit 1)
+      associated with oxidase negative.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - cyoB
+    protein_examples:
+    - uniprot_id: UniProtKB:P0ABI8
+      protein_label: Cytochrome bo(3) ubiquinol oxidase subunit 1
+      gene_symbol: cyoB
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 154
+      sequence_version: 1
+      role: Characteristic protein component (cyoB, Cytochrome bo(3) ubiquinol oxidase
+        subunit 1) associated with oxidase negative in Escherichia coli (strain K12).
+      evidence:
+      - reference: DOI:10.5812/chbs-160199
+        snippet: Bacteria that are classified as oxidase-negative can be anaerobic,
+          aerobic, or facultative. A negative oxidase result indicates merely the
+          absence of cytochrome c oxidase, which is responsible for oxidizing the
+          reactant, while these organisms may utilize alternative oxidases for electron
+          transfer during respiration
+        notes: Supports Cytochrome bo(3) ubiquinol oxidase subunit 1 in oxidase negative;
+          UniProtKB:P0ABI8 (cyoB, Cytochrome bo(3) ubiquinol oxidase subunit 1) in
+          Escherichia coli (strain K12) provides a verified protein exemplar.
+  edges:
+  - subject: oxidase_negative_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: oxidase_negative_trait
+    description: Cytochrome bo(3) ubiquinol oxidase subunit 1 (cyoB, UniProtKB:P0ABI8)
+      contributes to oxidase negative (associated with alternative, facultative, respiration).
+    evidence:
+    - reference: DOI:10.5812/chbs-160199
+      snippet: Bacteria that are classified as oxidase-negative can be anaerobic,
+        aerobic, or facultative. A negative oxidase result indicates merely the absence
+        of cytochrome c oxidase, which is responsible for oxidizing the reactant,
+        while these organisms may utilize alternative oxidases for electron transfer
+        during respiration
+      notes: Supports the functional association between Cytochrome bo(3) ubiquinol
+        oxidase subunit 1 (UniProtKB:P0ABI8 in Escherichia coli (strain K12)) and
+        oxidase negative.

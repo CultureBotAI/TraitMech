@@ -67,6 +67,26 @@ causal_graphs:
     label: FNR-type oxygen-responsive regulation
     node_type: GENE_OR_PROTEIN
     description: Oxygen-sensing regulatory systems that tune respiratory metabolism.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q9LA24
+      protein_label: Fumarate and nitrate reduction regulatory protein
+      gene_symbol: fnr
+      taxon_id: NCBITaxon:622
+      taxon_label: Shigella dysenteriae
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 106
+      sequence_version: 2
+      role: Exemplar protein (fnr, Fumarate and nitrate reduction regulatory protein)
+        representing FNR-type oxygen-responsive regulation in Shigella dysenteriae
+        for facultatively aerobic.
+      evidence:
+      - reference: DOI:10.1128/JB.00389-22
+        snippet: Analysis of fumarate reductase showed that it is synthesized and
+          active under anaerobic and nanaerobic conditions
+        notes: Supports FNR-type oxygen-responsive regulation in facultatively aerobic;
+          UniProtKB:Q9LA24 (fnr, Fumarate and nitrate reduction regulatory protein)
+          in Shigella dysenteriae provides a verified protein exemplar.
   - node_id: terminal_acceptor_availability
     label: terminal electron acceptor availability
     node_type: ENVIRONMENTAL_FACTOR
@@ -84,6 +104,27 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Redox-responsive two-component regulatory system controlling aerobic
       respiration.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0AEC3
+      protein_label: Aerobic respiration control sensor protein ArcB
+      gene_symbol: arcB
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 164
+      sequence_version: 1
+      role: Exemplar protein (arcB, Aerobic respiration control sensor protein ArcB)
+        representing ArcAB two-component system in Escherichia coli (strain K12) for
+        facultatively aerobic.
+      evidence:
+      - reference: DOI:10.1128/JB.00389-22
+        snippet: The respiratory chain responsible for anaerobic respiration (NADH
+          to fumarate) involves two NADH dehydrogenases
+        notes: Supports ArcAB two-component system in facultatively aerobic; UniProtKB:P0AEC3
+          (arcB, Aerobic respiration control sensor protein ArcB) in Escherichia coli
+          (strain K12) provides a verified protein exemplar.
   - node_id: anaerobic_metabolism_genes
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
@@ -92,6 +133,26 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Protein systems for anaerobic metabolic functions activated under
       anoxia.
+    protein_examples:
+    - uniprot_id: UniProtKB:P55792
+      protein_label: 4-hydroxybutyryl-CoA dehydratase/vinylacetyl-CoA-Delta-isomerase
+      gene_symbol: abfD
+      taxon_id: NCBITaxon:33953
+      taxon_label: Clostridium aminobutyricum
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 109
+      sequence_version: 3
+      role: Exemplar protein (abfD, 4-hydroxybutyryl-CoA dehydratase/vinylacetyl-CoA-Delta-isomerase)
+        representing anaerobic metabolism protein systems in Clostridium aminobutyricum
+        for facultatively aerobic.
+      evidence:
+      - reference: DOI:10.1128/JB.00389-22
+        snippet: Analysis of fumarate reductase showed that it is synthesized and
+          active under anaerobic and nanaerobic conditions
+        notes: Supports anaerobic metabolism protein systems in facultatively aerobic;
+          UniProtKB:P55792 (abfD, 4-hydroxybutyryl-CoA dehydratase/vinylacetyl-CoA-Delta-isomerase)
+          in Clostridium aminobutyricum provides a verified protein exemplar.
   - node_id: aerobic_metabolism_genes
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
@@ -100,6 +161,25 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Protein systems for aerobic respiratory functions repressed under
       anoxia.
+    protein_examples:
+    - uniprot_id: UniProtKB:P55792
+      protein_label: 4-hydroxybutyryl-CoA dehydratase/vinylacetyl-CoA-Delta-isomerase
+      gene_symbol: abfD
+      taxon_id: NCBITaxon:33953
+      taxon_label: Clostridium aminobutyricum
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 109
+      sequence_version: 3
+      role: Exemplar protein (abfD, 4-hydroxybutyryl-CoA dehydratase/vinylacetyl-CoA-Delta-isomerase)
+        representing aerobic metabolism protein systems in Clostridium aminobutyricum
+        for facultatively aerobic.
+      evidence:
+      - reference: PMID:16142505
+        snippet: A facultative aerobic, moderately thermophilic, spore forming bacterium
+        notes: Supports aerobic metabolism protein systems in facultatively aerobic;
+          UniProtKB:P55792 (abfD, 4-hydroxybutyryl-CoA dehydratase/vinylacetyl-CoA-Delta-isomerase)
+          in Clostridium aminobutyricum provides a verified protein exemplar.
   - node_id: cytochrome_bd_oxidase
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
@@ -107,6 +187,26 @@ causal_graphs:
     label: cytochrome bd oxidase
     node_type: GENE_OR_PROTEIN
     description: High-affinity terminal oxidase that reduces oxygen at low O2 concentrations.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q2YKD6
+      protein_label: Cytochrome bd ubiquinol oxidase subunit X
+      gene_symbol: cydX
+      taxon_id: NCBITaxon:359391
+      taxon_label: Brucella abortus (strain 2308)
+      entry_status: REVIEWED
+      proteome_id: UP000002719
+      retrieved_on: '2026-10-17'
+      entry_version: 76
+      sequence_version: 2
+      role: Exemplar protein (cydX, Cytochrome bd ubiquinol oxidase subunit X) representing
+        cytochrome bd oxidase in Brucella abortus (strain 2308) for facultatively
+        aerobic.
+      evidence:
+      - reference: PMID:16142505
+        snippet: A facultative aerobic, moderately thermophilic, spore forming bacterium
+        notes: Supports cytochrome bd oxidase in facultatively aerobic; UniProtKB:Q2YKD6
+          (cydX, Cytochrome bd ubiquinol oxidase subunit X) in Brucella abortus (strain
+          2308) provides a verified protein exemplar.
   edges:
   - subject: molecular_oxygen
     predicate: enables
@@ -268,4 +368,13 @@ curation_history:
     aerobic exemplar from this record's own research artifact; preserved the source's
     historical Anoxybacillus kamchatkensis name in the note and verified NCBITaxon:265546
     and its current label against NCBI.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q9LA24 (fnr)
+    protein example to node fnr_type_regulation; added UniProtKB:P0AEC3 (arcB) protein
+    example to node arcab_system; added UniProtKB:P55792 (abfD) protein example to
+    node anaerobic_metabolism_genes; added UniProtKB:P55792 (abfD) protein example
+    to node aerobic_metabolism_genes (+1 more).'
   llm_assisted: true

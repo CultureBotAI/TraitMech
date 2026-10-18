@@ -75,7 +75,7 @@ causal_graphs:
       taxon_label: Thermotoga maritima MSB8
       entry_status: REVIEWED
       retrieved_on: '2026-08-24'
-      entry_version: 157
+      entry_version: 158
       sequence_version: 1
       role: HydA alpha component of the trimeric bifurcating hydrogenase; this accession
         is not presented as the complete HydABC complex.
@@ -217,4 +217,10 @@ curation_history:
     that claim-level provenance, so the scope defect is resolved by documenting the
     decision instead. This audit changed no causal claim or evidence field. Reviewed
     replacements: DOI:10.3390/en16083321 -> DOI:10.1128/JB.01582-08 (1 edge).'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:O52683
+    version metadata (entry_version=158, sequence_version=1).'
   llm_assisted: true

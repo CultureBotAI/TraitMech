@@ -63,7 +63,7 @@ causal_graphs:
       taxon_label: Bacillus licheniformis
       entry_status: REVIEWED
       retrieved_on: '2026-08-24'
-      entry_version: 173
+      entry_version: 174
       sequence_version: 1
       role: Secreted alpha-amylase that hydrolyzes soluble starch in the canonical
         B. licheniformis example.
@@ -96,6 +96,25 @@ causal_graphs:
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Alpha-glucosidase and glucoamylase are distinct activities and
       families; this combined label must be split before assigning an exact term.
+    protein_examples:
+    - uniprot_id: UniProtKB:P06278
+      protein_label: Alpha-amylase
+      gene_symbol: amyS
+      taxon_id: NCBITaxon:1402
+      taxon_label: Bacillus licheniformis
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 174
+      sequence_version: 1
+      role: Exemplar protein (amyS, Alpha-amylase) representing alpha-glucosidase
+        / glucoamylase in Bacillus licheniformis for starch degradation.
+      evidence:
+      - reference: DOI:10.1021/bp060057a
+        snippet: The enzymatic hydrolysis of soluble starch with an alpha-amylase
+          from Bacillus licheniformis
+        notes: Supports alpha-glucosidase / glucoamylase in starch degradation; UniProtKB:P06278
+          (amyS, Alpha-amylase) in Bacillus licheniformis provides a verified protein
+          exemplar.
   edges:
   - subject: amylase
     predicate: confers
@@ -245,4 +264,11 @@ curation_history:
     declared exact synonym(s): ''starch breakdown'', ''starch catabolism''. Evidence
     is predicate-scoped in the versioned ontology snapshots; OAK cross-checked direct
     data, and OLS4 spot-checked release deltas and disputed hits.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:P06278
+    version metadata (entry_version=174, sequence_version=1); added UniProtKB:P06278
+    (amyS) protein example to node alpha_glucosidase.'
   llm_assisted: true

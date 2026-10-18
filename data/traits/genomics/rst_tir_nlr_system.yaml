@@ -85,6 +85,38 @@ causal_graphs:
     grounding: traitmech:000209
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
+  - node_id: rst_tir_nlr_system_protein_component
+    label: Adenine-specific methyltransferase PglX
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Adenine-specific methyltransferase PglX) associated
+      with Rst TIR-NLR system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - pglX
+    protein_examples:
+    - uniprot_id: UniProtKB:Q8CJM2
+      protein_label: Adenine-specific methyltransferase PglX
+      gene_symbol: pglX
+      taxon_id: NCBITaxon:100226
+      taxon_label: Streptomyces coelicolor (strain ATCC BAA-471 / A3(2) / M145)
+      entry_status: REVIEWED
+      proteome_id: UP000001973
+      retrieved_on: '2026-10-17'
+      entry_version: 102
+      sequence_version: 1
+      role: Characteristic protein component (pglX, Adenine-specific methyltransferase
+        PglX) associated with Rst TIR-NLR system in Streptomyces coelicolor (strain
+        ATCC BAA-471 / A3(2) / M145).
+      evidence:
+      - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+        snippet: Rst_TIR-NLR | 10\.1101/2021\.01\.21\.427644 | Prophage-encoded hotspots
+          of bacterial immune systems
+        notes: Supports Adenine-specific methyltransferase PglX in Rst TIR-NLR system;
+          UniProtKB:Q8CJM2 (pglX, Adenine-specific methyltransferase PglX) in Streptomyces
+          coelicolor (strain ATCC BAA-471 / A3(2) / M145) provides a verified protein
+          exemplar.
   edges:
   - subject: rst_tir_nlr_locus
     predicate: contributes to
@@ -145,6 +177,21 @@ causal_graphs:
         of bacterial immune systems
       notes: The DefenseFinder article registry maps the named Rst_TIR-NLR system
         to the Rousset et al. preprint.
+  - subject: rst_tir_nlr_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: rst_tir_nlr_system_trait
+    description: Adenine-specific methyltransferase PglX (pglX, UniProtKB:Q8CJM2)
+      contributes to Rst TIR-NLR system (associated with custom, 1tm, 2tm).
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| Rst_2TM_1TM_TIR__Rst_1TM_TIR | Rst_2TM_1TM_TIR__Rst_1TM_TIR | Rst_2TM_1TM_TIR
+        | Custom | 20 | | Rst_2TM_1TM_TIR__Rst_2TM_TIR | Rst_2TM_1TM_TIR__Rst_2TM_TIR
+        | Rst_2TM_1TM_TIR | Custom | 20 | | Rst_2TM_1TM_TIR__Rst_TIR_tm | Rst_2TM_1TM_TIR__Rst_TIR_tm
+        | Rst_2TM_1TM_TIR | Custom | 20 |'
+      notes: Supports the functional association between Adenine-specific methyltransferase
+        PglX (UniProtKB:Q8CJM2 in Streptomyces coelicolor (strain ATCC BAA-471 / A3(2)
+        / M145)) and Rst TIR-NLR system.
 discussions:
 - discussion_id: rst-tir-nlr-mechanism-gap
   prompt: Resolve Rst_TIR-NLR natural host breadth, exact profile-to-gene correspondence,
@@ -196,4 +243,10 @@ curation_history:
     system assays and a DefenseFinder system model, but not a direct native microbial
     isolate exemplar with experimentally verified Rst_TIR-NLR activity. No paid research
     was used.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    rst_tir_nlr_system_protein_component with UniProtKB:Q8CJM2 (pglX) exemplar.'
   llm_assisted: true

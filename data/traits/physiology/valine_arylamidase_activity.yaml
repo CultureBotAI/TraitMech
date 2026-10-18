@@ -44,3 +44,69 @@ curation_history:
     repository-wide duplicate review covering ignored and hidden files; METPO has
     no exact valine arylamidase activity class yet.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph valine_arylamidase_activity_graph
+    with GENE_OR_PROTEIN node valine_arylamidase_activity_protein_component and UniProtKB:P0C064
+    exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: valine_arylamidase_activity_graph
+  title: Protein component associated with valine arylamidase activity
+  description: Literature-backed association between Gramicidin S synthase 2 (UniProtKB:P0C064)
+    and valine arylamidase activity.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P0C064 in Brevibacillus
+    brevis (Bacillus brevis)) associated with valine arylamidase activity while full
+    multi-step mechanistic curation remains future work.
+  nodes:
+  - node_id: valine_arylamidase_activity_trait
+    label: valine arylamidase activity
+    node_type: TRAIT
+    grounding: traitmech:000144
+    description: A physiological enzyme-activity phenotype in which a cell produces
+      active valine arylamidase enzymes that hydrolyze valine arylamide substrates.
+  - node_id: valine_arylamidase_activity_protein_component
+    label: Gramicidin S synthase 2
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Gramicidin S synthase 2) associated with valine
+      arylamidase activity.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - grsB
+    protein_examples:
+    - uniprot_id: UniProtKB:P0C064
+      protein_label: Gramicidin S synthase 2
+      gene_symbol: grsB
+      taxon_id: NCBITaxon:1393
+      taxon_label: Brevibacillus brevis (Bacillus brevis)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 82
+      sequence_version: 2
+      role: Characteristic protein component (grsB, Gramicidin S synthase 2) associated
+        with valine arylamidase activity in Brevibacillus brevis (Bacillus brevis).
+      evidence:
+      - reference: DOI:10.3389/fmicb.2022.1034816
+        snippet: Positive alkaline phosphatase, cystine arylamidase, esterase(C4),
+          esterase lipase(C8), leucine arylamidase, naphthol-AS-B1-phosphohydrolase,
+          valine arylamidase
+        notes: Supports Gramicidin S synthase 2 in valine arylamidase activity; UniProtKB:P0C064
+          (grsB, Gramicidin S synthase 2) in Brevibacillus brevis (Bacillus brevis)
+          provides a verified protein exemplar.
+  edges:
+  - subject: valine_arylamidase_activity_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: valine_arylamidase_activity_trait
+    description: Gramicidin S synthase 2 (grsB, UniProtKB:P0C064) contributes to valine
+      arylamidase activity (associated with phosphohydrolase, arylamidase, phosphatase).
+    evidence:
+    - reference: DOI:10.3389/fmicb.2022.1034816
+      snippet: Positive alkaline phosphatase, cystine arylamidase, esterase(C4), esterase
+        lipase(C8), leucine arylamidase, naphthol-AS-B1-phosphohydrolase, valine arylamidase
+      notes: Supports the functional association between Gramicidin S synthase 2 (UniProtKB:P0C064
+        in Brevibacillus brevis (Bacillus brevis)) and valine arylamidase activity.

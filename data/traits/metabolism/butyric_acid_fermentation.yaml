@@ -65,3 +65,75 @@ curation_history:
     files; METPO has no exact butyric acid fermentation class yet and the placeholder
     is reserved in proposals/metpo_traitmech_v56.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph butyric_acid_fermentation_graph
+    with GENE_OR_PROTEIN node butyric_acid_fermentation_protein_component and UniProtKB:Q9HVD1
+    exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: butyric_acid_fermentation_graph
+  title: Protein component associated with butyric acid fermentation
+  description: Literature-backed association between Lipid A deacylase PagL (UniProtKB:Q9HVD1)
+    and butyric acid fermentation.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q9HVD1 in Pseudomonas
+    aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228
+    / 1C / PRS 101 / PAO1)) associated with butyric acid fermentation while full multi-step
+    mechanistic curation remains future work.
+  nodes:
+  - node_id: butyric_acid_fermentation_trait
+    label: butyric acid fermentation
+    node_type: TRAIT
+    grounding: traitmech:000179
+    description: A fermentation in which anaerobic bacteria convert organic substrates
+      to butyrate as a major reduced end product while conserving energy by substrate-level
+      phosphorylation or ion-gradient generation.
+  - node_id: butyric_acid_fermentation_protein_component
+    label: Lipid A deacylase PagL
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Lipid A deacylase PagL) associated with butyric
+      acid fermentation.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - pagL
+    protein_examples:
+    - uniprot_id: UniProtKB:Q9HVD1
+      protein_label: Lipid A deacylase PagL
+      gene_symbol: pagL
+      taxon_id: NCBITaxon:208964
+      taxon_label: Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116
+        / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)
+      entry_status: REVIEWED
+      proteome_id: UP000002438
+      retrieved_on: '2026-10-17'
+      entry_version: 108
+      sequence_version: 1
+      role: Characteristic protein component (pagL, Lipid A deacylase PagL) associated
+        with butyric acid fermentation in Pseudomonas aeruginosa (strain ATCC 15692
+        / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1).
+      evidence:
+      - reference: DOI:10.1111/1751-7915.12304
+        snippet: the adapted C. tyrobutyricum strain was characterized by a high yield
+          and selectivity to butyric acid
+        notes: Supports Lipid A deacylase PagL in butyric acid fermentation; UniProtKB:Q9HVD1
+          (pagL, Lipid A deacylase PagL) in Pseudomonas aeruginosa (strain ATCC 15692
+          / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)
+          provides a verified protein exemplar.
+  edges:
+  - subject: butyric_acid_fermentation_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: butyric_acid_fermentation_trait
+    description: Lipid A deacylase PagL (pagL, UniProtKB:Q9HVD1) contributes to butyric
+      acid fermentation (associated with characterized, tyrobutyricum, selectivity).
+    evidence:
+    - reference: DOI:10.1111/1751-7915.12304
+      snippet: the adapted C. tyrobutyricum strain was characterized by a high yield
+        and selectivity to butyric acid
+      notes: Supports the functional association between Lipid A deacylase PagL (UniProtKB:Q9HVD1
+        in Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM
+        14847 / LMG 12228 / 1C / PRS 101 / PAO1)) and butyric acid fermentation.

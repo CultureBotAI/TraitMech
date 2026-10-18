@@ -58,6 +58,26 @@ causal_graphs:
       for this aggregate use.
     description: Membrane desaturase that introduces double bonds into existing acyl
       chains.
+    protein_examples:
+    - uniprot_id: UniProtKB:O34653
+      protein_label: Fatty acid desaturase
+      gene_symbol: des
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
+      entry_status: REVIEWED
+      proteome_id: UP000001570
+      retrieved_on: '2026-10-17'
+      entry_version: 130
+      sequence_version: 1
+      role: Exemplar protein (des, Fatty acid desaturase) representing acyl-lipid
+        desaturase (Des) in Bacillus subtilis (strain 168) for temperature delta mid2.
+      evidence:
+      - reference: DOI:10.1128/spectrum.03925-23
+        snippet: desaturates the fatty acyl chains, resulting in membrane fluidization
+          and concomitant decrease of bilayer thickness
+        notes: Supports acyl-lipid desaturase (Des) in temperature delta mid2; UniProtKB:O34653
+          (des, Fatty acid desaturase) in Bacillus subtilis (strain 168) provides
+          a verified protein exemplar.
   - node_id: unsaturated_fatty_acids
     label: unsaturated fatty acids
     node_type: CHEMICAL
@@ -78,6 +98,27 @@ causal_graphs:
       a quantitative measurement graph; no exact semantic family term was established
       for this aggregate use.
     description: General stress-response sigma factor controlling stress regulons.
+    protein_examples:
+    - uniprot_id: UniProtKB:P13445
+      protein_label: RNA polymerase sigma factor RpoS
+      gene_symbol: rpoS
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 208
+      sequence_version: 3
+      role: Exemplar protein (rpoS, RNA polymerase sigma factor RpoS) representing
+        RpoS sigma factor (sigma-S) in Escherichia coli (strain K12) for temperature
+        delta mid2.
+      evidence:
+      - reference: DOI:10.1128/spectrum.03925-23
+        snippet: Upon temperature decrease, the membrane rigidifies and increases
+          in thickness, resulting in activation of the kinase-dominant state of DesK
+        notes: Supports RpoS sigma factor (sigma-S) in temperature delta mid2; UniProtKB:P13445
+          (rpoS, RNA polymerase sigma factor RpoS) in Escherichia coli (strain K12)
+          provides a verified protein exemplar.
   - node_id: otsab_operon
     label: otsAB trehalose biosynthesis operon
     node_type: PATHWAY
@@ -251,4 +292,11 @@ curation_history:
   action: NORMALIZED_CAUSAL_NODE_LABELS
   changes: Normalized the homeoviscous-adaptation causal-node label before grounding
     it through proposals/metpo_traitmech_v85.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:O34653 (des)
+    protein example to node des_desaturase; added UniProtKB:P13445 (rpoS) protein
+    example to node rpos_sigma_factor.'
   llm_assisted: true

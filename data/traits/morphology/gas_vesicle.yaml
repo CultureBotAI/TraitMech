@@ -67,7 +67,7 @@ causal_graphs:
       entry_status: REVIEWED
       proteome_id: UP000001510
       retrieved_on: '2026-08-25'
-      entry_version: 76
+      entry_version: 77
       sequence_version: 1
       role: GvpA is the major structural protein forming the gas-vesicle shell in
         the matched Microcystis strain.
@@ -92,6 +92,26 @@ causal_graphs:
     label: GvpC
     node_type: GENE_OR_PROTEIN
     description: Accessory coat protein that reinforces the gas vesicle shell.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q8YUS9
+      protein_label: Gas vesicle protein C
+      gene_symbol: gvpC
+      taxon_id: NCBITaxon:103690
+      taxon_label: Nostoc sp. (strain PCC 7120 / SAG 25.82 / UTEX 2576)
+      entry_status: REVIEWED
+      proteome_id: UP000002483
+      retrieved_on: '2026-10-17'
+      entry_version: 100
+      sequence_version: 1
+      role: Exemplar protein (gvpC, Gas vesicle protein C) representing GvpC in Nostoc
+        sp. (strain PCC 7120 / SAG 25.82 / UTEX 2576) for gas vesicle.
+      evidence:
+      - reference: DOI:10.1186/s13036-024-00426-3
+        snippet: The gas vesicle (GV) is like a hollow nanoparticle consisting of
+          an internal gas and a protein shell
+        notes: Supports GvpC in gas vesicle; UniProtKB:Q8YUS9 (gvpC, Gas vesicle protein
+          C) in Nostoc sp. (strain PCC 7120 / SAG 25.82 / UTEX 2576) provides a verified
+          protein exemplar.
   - node_id: hydrophobic_inner_surface
     label: hydrophobic inner shell surface
     node_type: QUALITY
@@ -118,6 +138,29 @@ causal_graphs:
     label: GvpD
     node_type: GENE_OR_PROTEIN
     description: Regulatory protein with an inhibitory effect on gas vesicle formation.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q02229
+      protein_label: Protein GvpD
+      gene_symbol: gvpD
+      taxon_id: NCBITaxon:523841
+      taxon_label: Haloferax mediterranei (strain ATCC 33500 / DSM 1411 / JCM 8866
+        / NBRC 14739 / NCIMB 2177 / R-4) (Halobacterium mediterranei)
+      entry_status: REVIEWED
+      proteome_id: UP000006469
+      retrieved_on: '2026-10-17'
+      entry_version: 103
+      sequence_version: 1
+      role: Exemplar protein (gvpD, Protein GvpD) representing GvpD in Haloferax mediterranei
+        (strain ATCC 33500 / DSM 1411 / JCM 8866 / NBRC 14739 / NCIMB 2177 / R-4)
+        (Halobacterium mediterranei) for gas vesicle.
+      evidence:
+      - reference: DOI:10.1186/s13036-024-00426-3
+        snippet: The gas vesicle (GV) is like a hollow nanoparticle consisting of
+          an internal gas and a protein shell
+        notes: Supports GvpD in gas vesicle; UniProtKB:Q02229 (gvpD, Protein GvpD)
+          in Haloferax mediterranei (strain ATCC 33500 / DSM 1411 / JCM 8866 / NBRC
+          14739 / NCIMB 2177 / R-4) (Halobacterium mediterranei) provides a verified
+          protein exemplar.
   - node_id: gas_vesicle_formation
     label: gas vesicle formation
     node_type: BIOLOGICAL_PROCESS
@@ -338,4 +381,12 @@ curation_history:
   action: GROUND_CAUSAL_NODE_TO_NEW_TRAIT
   changes: Grounded the existing causal-graph buoyancy TRAIT node to newly minted
     traitmech:000528 cellular buoyancy.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:B0JPK6
+    version metadata (entry_version=77, sequence_version=1); added UniProtKB:Q8YUS9
+    (gvpC) protein example to node gvpc_protein; added UniProtKB:Q02229 (gvpD) protein
+    example to node gvpd_protein.'
   llm_assisted: true

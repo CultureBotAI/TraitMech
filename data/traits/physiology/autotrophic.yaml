@@ -98,7 +98,7 @@ causal_graphs:
       taxon_label: Cupriavidus necator H16
       entry_status: REVIEWED
       retrieved_on: '2026-08-24'
-      entry_version: 153
+      entry_version: 154
       sequence_version: 3
       role: Large-chain component of the plasmid-encoded RuBisCO in one of the two
         active CBB operons of C. necator H16.
@@ -141,6 +141,25 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Enzyme interconverting bicarbonate and CO2, supplying CO2 to RuBisCO.
     grounding: InterPro:IPR001765
+    protein_examples:
+    - uniprot_id: UniProtKB:Q5KW03
+      protein_label: Carbonic anhydrase
+      taxon_id: NCBITaxon:235909
+      taxon_label: Geobacillus kaustophilus (strain HTA426)
+      entry_status: REVIEWED
+      proteome_id: UP000001172
+      retrieved_on: '2026-10-17'
+      entry_version: 114
+      sequence_version: 1
+      role: Exemplar protein (Q5KW03, Carbonic anhydrase) representing carbonic anhydrase
+        in Geobacillus kaustophilus (strain HTA426) for autotrophic.
+      evidence:
+      - reference: DOI:10.1128/aem.01557-23
+        snippet: DIC transporters and carbonic anhydrase enzymes (CA) to facilitate
+          DIC fixation
+        notes: Supports carbonic anhydrase in autotrophic; UniProtKB:Q5KW03 (Q5KW03,
+          Carbonic anhydrase) in Geobacillus kaustophilus (strain HTA426) provides
+          a verified protein exemplar.
   - node_id: wood_ljungdahl_pathway
     label: Wood-Ljungdahl pathway
     node_type: PATHWAY
@@ -169,6 +188,26 @@ causal_graphs:
     grounding_notes: CODH/ACS is a multisubunit, taxon-variable complex whose CODH
       and ACS components have distinct protein families; no one protein-family term
       exactly represents this composite node.
+    protein_examples:
+    - uniprot_id: UniProtKB:P27550
+      protein_label: Acetyl-coenzyme A synthetase
+      gene_symbol: acs
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 189
+      sequence_version: 2
+      role: Exemplar protein (acs, Acetyl-coenzyme A synthetase) representing CO dehydrogenase/acetyl-CoA
+        synthase (CODH/ACS) in Escherichia coli (strain K12) for autotrophic.
+      evidence:
+      - reference: DOI:10.1128/AEM.02473-10
+        snippet: 'Enzymes: 1, acetyl-CoA carboxylase; 2, malonyl-CoA reductase; 3,
+          propionyl-CoA synthase'
+        notes: Supports CO dehydrogenase/acetyl-CoA synthase (CODH/ACS) in autotrophic;
+          UniProtKB:P27550 (acs, Acetyl-coenzyme A synthetase) in Escherichia coli
+          (strain K12) provides a verified protein exemplar.
   - node_id: molecular_hydrogen
     label: molecular hydrogen
     node_type: CHEMICAL
@@ -498,4 +537,12 @@ curation_history:
   action: ADD_PATHWAY_CONTEXT
   changes: Added pinned PathwayMech context on reviewed causal nodes with explicit
     route and organism limitations; retained existing groundings and exact xrefs.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:P42721
+    version metadata (entry_version=154, sequence_version=3); added UniProtKB:Q5KW03
+    (Q5KW03) protein example to node carbonic_anhydrase; added UniProtKB:P27550 (acs)
+    protein example to node codh_acs.'
   llm_assisted: true

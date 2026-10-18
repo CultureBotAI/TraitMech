@@ -102,6 +102,25 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Organomercury lyase cleaving C-Hg bonds of organomercurials to release
       Hg(II).
+    protein_examples:
+    - uniprot_id: UniProtKB:Q8G9P0
+      protein_label: Alkylmercury lyase
+      gene_symbol: merB
+      taxon_id: NCBITaxon:303
+      taxon_label: Pseudomonas putida (Arthrobacter siderocapsulatus)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 54
+      sequence_version: 1
+      role: Exemplar protein (merB, Alkylmercury lyase) representing MerB (organomercurial
+        lyase) in Pseudomonas putida (Arthrobacter siderocapsulatus) for mercury tolerant.
+      evidence:
+      - reference: DOI:10.1016/S0168-6445(03)00046-9
+        snippet: Bacterial resistance to inorganic and organic mercury compounds (HgR)
+          is one of the most widely observed phenotypes in eubacteria
+        notes: Supports MerB (organomercurial lyase) in mercury tolerant; UniProtKB:Q8G9P0
+          (merB, Alkylmercury lyase) in Pseudomonas putida (Arthrobacter siderocapsulatus)
+          provides a verified protein exemplar.
   - node_id: organomercurial
     label: organomercurial compound
     node_type: CHEMICAL
@@ -113,6 +132,26 @@ causal_graphs:
     label: MerR (Hg-responsive regulator)
     node_type: GENE_OR_PROTEIN
     description: Mercury-responsive transcription factor controlling mer operon induction.
+    protein_examples:
+    - uniprot_id: UniProtKB:P22874
+      protein_label: Mercuric resistance operon regulatory protein
+      gene_symbol: merR
+      taxon_id: NCBITaxon:1280
+      taxon_label: Staphylococcus aureus
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 105
+      sequence_version: 1
+      role: Exemplar protein (merR, Mercuric resistance operon regulatory protein)
+        representing MerR (Hg-responsive regulator) in Staphylococcus aureus for mercury
+        tolerant.
+      evidence:
+      - reference: DOI:10.1016/S0168-6445(03)00046-9
+        snippet: Bacterial resistance to inorganic and organic mercury compounds (HgR)
+          is one of the most widely observed phenotypes in eubacteria
+        notes: Supports MerR (Hg-responsive regulator) in mercury tolerant; UniProtKB:P22874
+          (merR, Mercuric resistance operon regulatory protein) in Staphylococcus
+          aureus provides a verified protein exemplar.
   - node_id: mer_transcription
     label: mer operon transcription
     node_type: BIOLOGICAL_PROCESS
@@ -241,4 +280,11 @@ curation_history:
     scope_notes; marked 3 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (mer_operon, merb_lyase, merr_sensor); added taxon-paired protein example(s) UniProtKB:Q1L9Z3
     on mer_operon (NCBITaxon:266264); added canonical example(s) NCBITaxon:266264.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q8G9P0 (merB)
+    protein example to node merb_lyase; added UniProtKB:P22874 (merR) protein example
+    to node merr_sensor.'
   llm_assisted: true

@@ -52,6 +52,24 @@ causal_graphs:
     label: FtsZ division ring
     node_type: GENE_OR_PROTEIN
     description: Tubulin-like division scaffold.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0A031
+      protein_label: Cell division protein FtsZ
+      gene_symbol: ftsZ
+      taxon_id: NCBITaxon:1280
+      taxon_label: Staphylococcus aureus
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 113
+      sequence_version: 1
+      role: Exemplar protein (ftsZ, Cell division protein FtsZ) representing FtsZ
+        division ring in Staphylococcus aureus for sphere shaped.
+      evidence:
+      - reference: DOI:10.1038/nrmicro1205
+        snippet: FtsZ is essential for cell division
+        notes: Supports FtsZ division ring in sphere shaped; UniProtKB:P0A031 (ftsZ,
+          Cell division protein FtsZ) in Staphylococcus aureus provides a verified
+          protein exemplar.
   - node_id: septal_peptidoglycan_synthesis
     label: septal peptidoglycan synthesis
     node_type: BIOLOGICAL_PROCESS
@@ -72,6 +90,26 @@ causal_graphs:
     label: MreB-mediated elongation machinery
     node_type: GENE_OR_PROTEIN
     description: Actin-like MreB cytoskeleton directing lateral (rod) elongation.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q01465
+      protein_label: Cell shape-determining protein MreB
+      gene_symbol: mreB
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
+      entry_status: REVIEWED
+      proteome_id: UP000001570
+      retrieved_on: '2026-10-17'
+      entry_version: 148
+      sequence_version: 3
+      role: Exemplar protein (mreB, Cell shape-determining protein MreB) representing
+        MreB-mediated elongation machinery in Bacillus subtilis (strain 168) for sphere
+        shaped.
+      evidence:
+      - reference: DOI:10.1038/nrmicro3088
+        snippet: catalysed by one type of cell wall synthesis machinery
+        notes: Supports MreB-mediated elongation machinery in sphere shaped; UniProtKB:Q01465
+          (mreB, Cell shape-determining protein MreB) in Bacillus subtilis (strain
+          168) provides a verified protein exemplar.
   - node_id: divisome_pbps
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
@@ -79,6 +117,25 @@ causal_graphs:
     label: divisome and PBPs
     node_type: GENE_OR_PROTEIN
     description: Division machinery and penicillin-binding proteins recruited to mid-cell.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0AD68
+      protein_label: Peptidoglycan D,D-transpeptidase FtsI
+      gene_symbol: ftsI
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 156
+      sequence_version: 1
+      role: Exemplar protein (ftsI, Peptidoglycan D,D-transpeptidase FtsI) representing
+        divisome and PBPs in Escherichia coli (strain K12) for sphere shaped.
+      evidence:
+      - reference: DOI:10.1038/nrmicro3088
+        snippet: spherical cocci synthesize peptidoglycan only at the division septum
+        notes: Supports divisome and PBPs in sphere shaped; UniProtKB:P0AD68 (ftsI,
+          Peptidoglycan D,D-transpeptidase FtsI) in Escherichia coli (strain K12)
+          provides a verified protein exemplar.
   - node_id: ftsZ_treadmilling
     label: FtsZ treadmilling
     node_type: BIOLOGICAL_PROCESS
@@ -92,6 +149,26 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Septally localized flippase that translocates lipid II across the
       membrane.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0ABG4
+      protein_label: Probable peptidoglycan glycosyltransferase FtsW
+      gene_symbol: ftsW
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 150
+      sequence_version: 1
+      role: Exemplar protein (ftsW, Probable peptidoglycan glycosyltransferase FtsW)
+        representing FtsW lipid II flippase in Escherichia coli (strain K12) for sphere
+        shaped.
+      evidence:
+      - reference: DOI:10.1038/nrmicro3088
+        snippet: spherical cocci synthesize peptidoglycan only at the division septum
+        notes: Supports FtsW lipid II flippase in sphere shaped; UniProtKB:P0ABG4
+          (ftsW, Probable peptidoglycan glycosyltransferase FtsW) in Escherichia coli
+          (strain K12) provides a verified protein exemplar.
   - node_id: lipid_ii
     label: lipid II
     node_type: CHEMICAL
@@ -275,4 +352,13 @@ curation_history:
     the tranche: set graph scope sphere_shaped_septal_peptidoglycan=NONMECHANISTIC
     with scope_notes; marked 4 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (ftsZ_division_ring, mreB_elongation_machinery, divisome_pbps, ftsW_flippase).'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P0A031 (ftsZ)
+    protein example to node ftsZ_division_ring; added UniProtKB:Q01465 (mreB) protein
+    example to node mreB_elongation_machinery; added UniProtKB:P0AD68 (ftsI) protein
+    example to node divisome_pbps; added UniProtKB:P0ABG4 (ftsW) protein example to
+    node ftsW_flippase.'
   llm_assisted: true

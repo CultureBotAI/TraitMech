@@ -65,6 +65,30 @@ causal_graphs:
     description: Variable gene cluster (Pig in Serratia, Red in Streptomyces) encoding
       prodiginine biosynthesis.
     operon: Pig/Red biosynthetic gene cluster
+    protein_examples:
+    - uniprot_id: UniProtKB:Q59066
+      protein_label: CRISPR system single-strand-specific deoxyribonuclease Cas10/Csm1
+      gene_symbol: cas10
+      taxon_id: NCBITaxon:243232
+      taxon_label: Methanocaldococcus jannaschii (strain ATCC 43067 / DSM 2661 / JAL-1
+        / JCM 10045 / NBRC 100440) (Methanococcus jannaschii)
+      entry_status: REVIEWED
+      proteome_id: UP000000805
+      retrieved_on: '2026-10-17'
+      entry_version: 115
+      sequence_version: 1
+      role: Exemplar protein (cas10, CRISPR system single-strand-specific deoxyribonuclease
+        Cas10/Csm1) representing Pig/Red prodiginine-biosynthesis protein module in
+        Methanocaldococcus jannaschii (strain ATCC 43067 / DSM 2661 / JAL-1 / JCM
+        10045 / NBRC 100440) (Methanococcus jannaschii) for red pigmented.
+      evidence:
+      - reference: DOI:10.1038/nrmicro1531
+        snippet: red-pigmented prodiginines
+        notes: Supports Pig/Red prodiginine-biosynthesis protein module in red pigmented;
+          UniProtKB:Q59066 (cas10, CRISPR system single-strand-specific deoxyribonuclease
+          Cas10/Csm1) in Methanocaldococcus jannaschii (strain ATCC 43067 / DSM 2661
+          / JAL-1 / JCM 10045 / NBRC 100440) (Methanococcus jannaschii) provides a
+          verified protein exemplar.
   - node_id: pigC_ligase
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
@@ -73,6 +97,24 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Key condensing enzyme/ligase encoded by pigC that links MAP and MBC
       to form prodigiosin.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q5W252
+      protein_label: Prodigiosin synthesizing transferase PigC
+      gene_symbol: pigC
+      taxon_id: NCBITaxon:615
+      taxon_label: Serratia marcescens
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 59
+      sequence_version: 1
+      role: Exemplar protein (pigC, Prodigiosin synthesizing transferase PigC) representing
+        PigC ligase in Serratia marcescens for red pigmented.
+      evidence:
+      - reference: DOI:10.1021/acs.chemrev.6b00024
+        snippet: bright red pigment prodigiosin
+        notes: Supports PigC ligase in red pigmented; UniProtKB:Q5W252 (pigC, Prodigiosin
+          synthesizing transferase PigC) in Serratia marcescens provides a verified
+          protein exemplar.
   - node_id: cpxA_cpxR_system
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
@@ -81,6 +123,25 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Sensor histidine kinase/response regulator system whose activation
       represses pig gene cluster transcription.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0AE82
+      protein_label: Sensor histidine kinase CpxA
+      gene_symbol: cpxA
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 160
+      sequence_version: 1
+      role: Exemplar protein (cpxA, Sensor histidine kinase CpxA) representing CpxA/CpxR
+        two-component system in Escherichia coli (strain K12) for red pigmented.
+      evidence:
+      - reference: DOI:10.1038/nrmicro1531
+        snippet: red-pigmented prodiginines
+        notes: Supports CpxA/CpxR two-component system in red pigmented; UniProtKB:P0AE82
+          (cpxA, Sensor histidine kinase CpxA) in Escherichia coli (strain K12) provides
+          a verified protein exemplar.
   - node_id: carotenoid_biosynthesis
     label: carotenoid biosynthesis (phytoene synthase pathway)
     node_type: PATHWAY
@@ -290,4 +351,12 @@ curation_history:
     the tranche: set graph scope red_pigmented_prodiginine_pathway=NONMECHANISTIC
     with scope_notes; marked 3 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (pig_red_gene_cluster, pigC_ligase, cpxA_cpxR_system).'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q59066 (cas10)
+    protein example to node pig_red_gene_cluster; added UniProtKB:Q5W252 (pigC) protein
+    example to node pigC_ligase; added UniProtKB:P0AE82 (cpxA) protein example to
+    node cpxA_cpxR_system.'
   llm_assisted: true

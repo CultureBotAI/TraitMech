@@ -81,6 +81,28 @@ causal_graphs:
     - ectB
     - ectC
     operon: ectABC
+    protein_examples:
+    - uniprot_id: UniProtKB:Q9ZEU6
+      protein_label: L-ectoine synthase
+      gene_symbol: ectC
+      taxon_id: NCBITaxon:290398
+      taxon_label: Chromohalobacter israelensis (strain ATCC BAA-138 / DSM 3043 /
+        CIP 106854 / NCIMB 13768 / 1H11) (Chromohalobacter salexigens)
+      entry_status: REVIEWED
+      proteome_id: UP000000239
+      retrieved_on: '2026-10-17'
+      entry_version: 130
+      sequence_version: 1
+      role: Exemplar protein (ectC, L-ectoine synthase) representing EctABC ectoine-biosynthesis
+        enzyme module in Chromohalobacter israelensis (strain ATCC BAA-138 / DSM 3043
+        / CIP 106854 / NCIMB 13768 / 1H11) (Chromohalobacter salexigens) for halotolerant.
+      evidence:
+      - reference: PMID:27621824
+        snippet: Halomonas massiliensis sp. nov., a new halotolerant bacterium
+        notes: Supports EctABC ectoine-biosynthesis enzyme module in halotolerant;
+          UniProtKB:Q9ZEU6 (ectC, L-ectoine synthase) in Chromohalobacter israelensis
+          (strain ATCC BAA-138 / DSM 3043 / CIP 106854 / NCIMB 13768 / 1H11) (Chromohalobacter
+          salexigens) provides a verified protein exemplar.
   - node_id: ectoine_biosynthesis
     label: ectoine biosynthesis
     node_type: PATHWAY
@@ -93,6 +115,28 @@ causal_graphs:
     label: betA/betB
     node_type: GENE_OR_PROTEIN
     description: Choline oxidation enzymes producing glycine betaine.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q4A0Q1
+      protein_label: Oxygen-dependent choline dehydrogenase
+      gene_symbol: betA
+      taxon_id: NCBITaxon:342451
+      taxon_label: Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
+        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+      entry_status: REVIEWED
+      proteome_id: UP000006371
+      retrieved_on: '2026-10-17'
+      entry_version: 127
+      sequence_version: 1
+      role: Exemplar protein (betA, Oxygen-dependent choline dehydrogenase) representing
+        betA/betB in Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
+        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) for halotolerant.
+      evidence:
+      - reference: PMID:27621824
+        snippet: Halomonas massiliensis sp. nov., a new halotolerant bacterium
+        notes: Supports betA/betB in halotolerant; UniProtKB:Q4A0Q1 (betA, Oxygen-dependent
+          choline dehydrogenase) in Staphylococcus saprophyticus subsp. saprophyticus
+          (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) provides
+          a verified protein exemplar.
   - node_id: glycine_betaine_biosynthesis
     label: glycine betaine biosynthesis
     node_type: BIOLOGICAL_PROCESS
@@ -349,4 +393,11 @@ curation_history:
     the tranche: set graph scope halotolerant_salt_stress_response=NONMECHANISTIC
     with scope_notes; marked 2 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (ectABC_operon, betA_betB).'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q9ZEU6 (ectC)
+    protein example to node ectABC_operon; added UniProtKB:Q4A0Q1 (betA) protein example
+    to node betA_betB.'
   llm_assisted: true

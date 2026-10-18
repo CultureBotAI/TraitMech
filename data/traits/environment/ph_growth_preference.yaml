@@ -71,6 +71,27 @@ causal_graphs:
       aggregate use.
     description: F-type ATP synthase/ATPase that translocates protons across the membrane,
       contributing to pH homeostasis.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q9R6X2
+      protein_label: Potassium-transporting ATPase potassium-binding subunit
+      gene_symbol: kdpA
+      taxon_id: NCBITaxon:29412
+      taxon_label: Anabaena sp. (strain L31)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 89
+      sequence_version: 1
+      role: Exemplar protein (kdpA, Potassium-transporting ATPase potassium-binding
+        subunit) representing proton-translocating F1F0-ATPase in Anabaena sp. (strain
+        L31) for pH growth preference.
+      evidence:
+      - reference: DOI:10.1038/nrmicro2549
+        snippet: For pH homeostasis under alkaline conditions, active transport of
+          protons inward is a crucial adaptation, which usually involves activation
+          and transcriptional up-regulation of key cation/proton antiporters
+        notes: Supports proton-translocating F1F0-ATPase in pH growth preference;
+          UniProtKB:Q9R6X2 (kdpA, Potassium-transporting ATPase potassium-binding
+          subunit) in Anabaena sp. (strain L31) provides a verified protein exemplar.
   - node_id: amino_acid_decarboxylase_systems
     label: amino-acid decarboxylase systems
     node_type: PATHWAY
@@ -95,6 +116,26 @@ causal_graphs:
       aggregate use.
     description: Decarboxylase and deaminase protein families carrying out proton-consuming
       reactions.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q93F90
+      protein_label: Na(+)/H(+) antiporter NhaA
+      gene_symbol: nhaA
+      taxon_id: NCBITaxon:1890
+      taxon_label: Streptomyces antibioticus
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 71
+      sequence_version: 1
+      role: Exemplar protein (nhaA, Na(+)/H(+) antiporter NhaA) representing proton-consuming
+        enzyme modules in Streptomyces antibioticus for pH growth preference.
+      evidence:
+      - reference: DOI:10.1038/nrmicro2549
+        snippet: For pH homeostasis under alkaline conditions, active transport of
+          protons inward is a crucial adaptation, which usually involves activation
+          and transcriptional up-regulation of key cation/proton antiporters
+        notes: Supports proton-consuming enzyme modules in pH growth preference; UniProtKB:Q93F90
+          (nhaA, Na(+)/H(+) antiporter NhaA) in Streptomyces antibioticus provides
+          a verified protein exemplar.
   - node_id: na_h_antiporter_proteins
     label: Na+/H+ antiporter proteins
     node_type: GENE_OR_PROTEIN
@@ -104,6 +145,30 @@ causal_graphs:
       aggregate use.
     description: Na+/H+ antiporter protein families (e.g. Mrp/Mnh/Nha) associated
       with pH preference.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q9RGZ5
+      protein_label: Na(+)/H(+) antiporter subunit A
+      gene_symbol: mrpA
+      taxon_id: NCBITaxon:398511
+      taxon_label: Alkalihalophilus pseudofirmus (strain ATCC BAA-2126 / JCM 17055
+        / OF4) (Bacillus pseudofirmus)
+      entry_status: REVIEWED
+      proteome_id: UP000001544
+      retrieved_on: '2026-10-17'
+      entry_version: 115
+      sequence_version: 2
+      role: Exemplar protein (mrpA, Na(+)/H(+) antiporter subunit A) representing
+        Na+/H+ antiporter proteins in Alkalihalophilus pseudofirmus (strain ATCC BAA-2126
+        / JCM 17055 / OF4) (Bacillus pseudofirmus) for pH growth preference.
+      evidence:
+      - reference: DOI:10.1038/nrmicro2549
+        snippet: For pH homeostasis under alkaline conditions, active transport of
+          protons inward is a crucial adaptation, which usually involves activation
+          and transcriptional up-regulation of key cation/proton antiporters
+        notes: Supports Na+/H+ antiporter proteins in pH growth preference; UniProtKB:Q9RGZ5
+          (mrpA, Na(+)/H(+) antiporter subunit A) in Alkalihalophilus pseudofirmus
+          (strain ATCC BAA-2126 / JCM 17055 / OF4) (Bacillus pseudofirmus) provides
+          a verified protein exemplar.
   edges:
   - subject: environmental_ph
     predicate: regulates
@@ -336,4 +401,12 @@ curation_history:
     Evansella tamaricis (NCBITaxon:2069301; DOI:10.1099/ijsem.0.002543). The note
     retains the measured value or scopes broad-class examples to the cited branch;
     no paid research was used.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q9R6X2 (kdpA)
+    protein example to node f1f0_atpase; added UniProtKB:Q93F90 (nhaA) protein example
+    to node proton_consuming_enzyme_modules; added UniProtKB:Q9RGZ5 (mrpA) protein
+    example to node na_h_antiporter_proteins.'
   llm_assisted: true

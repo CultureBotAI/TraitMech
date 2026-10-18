@@ -87,6 +87,37 @@ causal_graphs:
     node_type: CHEMICAL
     grounding: METPO:1007501
     description: Cell material formed from fixed carbon.
+  - node_id: photoferrotrophy_protein_component
+    label: Ion-translocating oxidoreductase complex subunit A
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Ion-translocating oxidoreductase complex subunit
+      A) associated with photoferrotrophy.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - rnfA
+    protein_examples:
+    - uniprot_id: UniProtKB:P0CZ13
+      protein_label: Ion-translocating oxidoreductase complex subunit A
+      gene_symbol: rnfA
+      taxon_id: NCBITaxon:1061
+      taxon_label: Rhodobacter capsulatus (Rhodopseudomonas capsulata)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 48
+      sequence_version: 1
+      role: Characteristic protein component (rnfA, Ion-translocating oxidoreductase
+        complex subunit A) associated with photoferrotrophy in Rhodobacter capsulatus
+        (Rhodopseudomonas capsulata).
+      evidence:
+      - reference: DOI:10.3389/fmicb.2014.00713
+        snippet: photoferrotrophic bacteria use light as energy and Fe(II) as an electron
+          source for carbon fixation and biomass formation
+        notes: Supports Ion-translocating oxidoreductase complex subunit A in photoferrotrophy;
+          UniProtKB:P0CZ13 (rnfA, Ion-translocating oxidoreductase complex subunit
+          A) in Rhodobacter capsulatus (Rhodopseudomonas capsulata) provides a verified
+          protein exemplar.
   edges:
   - subject: photoferrotrophy_trait
     predicate: has energy source
@@ -166,6 +197,18 @@ causal_graphs:
         source for carbon fixation and biomass formation
       notes: Supports biomass formation coupled to Fe(II)-fed photoferrotrophic metabolism.
     predicate_id: RO:0002234
+  - subject: photoferrotrophy_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: photoferrotrophy_trait
+    description: Ion-translocating oxidoreductase complex subunit A (rnfA, UniProtKB:P0CZ13)
+      contributes to photoferrotrophy (associated with phototrophic, necessary, oxidation).
+    evidence:
+    - reference: DOI:10.1128/JB.00776-06
+      snippet: that is necessary for phototrophic Fe(II) oxidation
+      notes: Supports the functional association between Ion-translocating oxidoreductase
+        complex subunit A (UniProtKB:P0CZ13 in Rhodobacter capsulatus (Rhodopseudomonas
+        capsulata)) and photoferrotrophy.
 discussions:
 - discussion_id: photoferrotrophy-xref-gap
   prompt: Resolve an exact external ontology class for photoferrotrophy before adding
@@ -189,3 +232,10 @@ discussions:
     process-level until a reviewed or audit-verifiable exact entry is available.
   posed_by: codex
   posed_date: '2026-09-14'
+curation_history:
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    photoferrotrophy_protein_component with UniProtKB:P0CZ13 (rnfA) exemplar.'
+  llm_assisted: true

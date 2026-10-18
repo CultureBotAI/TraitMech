@@ -89,6 +89,37 @@ causal_graphs:
     grounding: traitmech:000240
     description: Possession of a genome-encoded short prokaryotic Argonaute TIR-APAZ
       defense system.
+  - node_id: sparta_system_protein_component
+    label: Protein argonaute
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Protein argonaute) associated with SPARTA system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - ago
+    protein_examples:
+    - uniprot_id: UniProtKB:Q8U3D2
+      protein_label: Protein argonaute
+      gene_symbol: ago
+      taxon_id: NCBITaxon:186497
+      taxon_label: Pyrococcus furiosus (strain ATCC 43587 / DSM 3638 / JCM 8422 /
+        Vc1)
+      entry_status: REVIEWED
+      proteome_id: UP000001013
+      retrieved_on: '2026-10-17'
+      entry_version: 117
+      sequence_version: 1
+      role: Characteristic protein component (ago, Protein argonaute) associated with
+        SPARTA system in Pyrococcus furiosus (strain ATCC 43587 / DSM 3638 / JCM 8422
+        / Vc1).
+      evidence:
+      - reference: DOI:10.1016/j.cell.2022.03.012
+        snippet: short prokaryotic Argonaute and the associated TIR-APAZ (SPARTA)
+          proteins form heterodimeric complexes
+        notes: Supports Protein argonaute in SPARTA system; UniProtKB:Q8U3D2 (ago,
+          Protein argonaute) in Pyrococcus furiosus (strain ATCC 43587 / DSM 3638
+          / JCM 8422 / Vc1) provides a verified protein exemplar.
   edges:
   - subject: sparta_locus
     predicate: contributes to
@@ -167,6 +198,19 @@ causal_graphs:
       snippet: This results in the removal of plasmid-invaded cells from bacterial
         cultures
       notes: Koopal et al. support SPARTA-mediated removal of plasmid-invaded cells.
+  - subject: sparta_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: sparta_system_trait
+    description: Protein argonaute (ago, UniProtKB:Q8U3D2) contributes to SPARTA system
+      (associated with heterodimeric, argonaute, sparta).
+    evidence:
+    - reference: DOI:10.1016/j.cell.2022.03.012
+      snippet: short prokaryotic Argonaute and the associated TIR-APAZ (SPARTA) proteins
+        form heterodimeric complexes
+      notes: Supports the functional association between Protein argonaute (UniProtKB:Q8U3D2
+        in Pyrococcus furiosus (strain ATCC 43587 / DSM 3638 / JCM 8422 / Vc1)) and
+        SPARTA system.
 discussions:
 - discussion_id: sparta-native-host-and-substrate-gap
   prompt: Resolve SPARTA natural-host substrates before adding canonical examples
@@ -194,4 +238,10 @@ curation_history:
   changes: Reparented SPARTA system from the generic quality root to the newly minted
     prokaryotic Argonaute defense system parent without changing SPARTA-specific evidence
     or mechanism claims.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    sparta_system_protein_component with UniProtKB:Q8U3D2 (ago) exemplar.'
   llm_assisted: true

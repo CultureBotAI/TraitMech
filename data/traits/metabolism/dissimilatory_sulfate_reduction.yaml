@@ -64,6 +64,28 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Sulfate adenylyltransferase that activates sulfate to APS.
     grounding: GO:0004781
+    protein_examples:
+    - uniprot_id: UniProtKB:O67174
+      protein_label: 'Probable bifunctional SAT/APS kinase [Includes: Sulfate adenylyltransferase'
+      gene_symbol: sat/cysC
+      taxon_id: NCBITaxon:224324
+      taxon_label: Aquifex aeolicus (strain VF5)
+      entry_status: REVIEWED
+      proteome_id: UP000000798
+      retrieved_on: '2026-10-17'
+      entry_version: 159
+      sequence_version: 1
+      role: 'Exemplar protein (sat/cysC, Probable bifunctional SAT/APS kinase [Includes:
+        Sulfate adenylyltransferase) representing ATP sulfurylase (Sat) in Aquifex
+        aeolicus (strain VF5) for dissimilatory sulfate reduction.'
+      evidence:
+      - reference: DOI:10.3390/antiox12030767
+        snippet: Sulfate can be used as an alternative terminal electron acceptor
+          under anaerobic conditions
+        notes: 'Supports ATP sulfurylase (Sat) in dissimilatory sulfate reduction;
+          UniProtKB:O67174 (sat/cysC, Probable bifunctional SAT/APS kinase [Includes:
+          Sulfate adenylyltransferase) in Aquifex aeolicus (strain VF5) provides a
+          verified protein exemplar.'
   - node_id: aps
     label: adenosine-5′-phosphosulfate (APS)
     node_type: CHEMICAL
@@ -77,6 +99,30 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Reduces APS to sulfite.
     grounding: GO:0009973
+    protein_examples:
+    - uniprot_id: UniProtKB:Q49UL7
+      protein_label: Adenosine 5'-phosphosulfate reductase
+      gene_symbol: cysH
+      taxon_id: NCBITaxon:342451
+      taxon_label: Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
+        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+      entry_status: REVIEWED
+      proteome_id: UP000006371
+      retrieved_on: '2026-10-17'
+      entry_version: 122
+      sequence_version: 1
+      role: Exemplar protein (cysH, Adenosine 5'-phosphosulfate reductase) representing
+        APS reductase AprAB in Staphylococcus saprophyticus subsp. saprophyticus (strain
+        ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) for dissimilatory
+        sulfate reduction.
+      evidence:
+      - reference: DOI:10.3390/antiox12030767
+        snippet: Sulfate can be used as an alternative terminal electron acceptor
+          under anaerobic conditions
+        notes: Supports APS reductase AprAB in dissimilatory sulfate reduction; UniProtKB:Q49UL7
+          (cysH, Adenosine 5'-phosphosulfate reductase) in Staphylococcus saprophyticus
+          subsp. saprophyticus (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC
+          7292 / S-41) provides a verified protein exemplar.
   - node_id: dsrab_dsrc
     label: DsrAB with DsrC
     node_type: GENE_OR_PROTEIN
@@ -93,7 +139,7 @@ causal_graphs:
       taxon_label: Nitratidesulfovibrio vulgaris str. Hildenborough
       entry_status: REVIEWED
       retrieved_on: '2026-08-24'
-      entry_version: 146
+      entry_version: 147
       sequence_version: 3
       role: DsrA alpha component of the DsrAB sulfite reductase bound to DsrC; this
         accession is not presented as the complete assembly.
@@ -133,6 +179,27 @@ causal_graphs:
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: DsrMKJOP composition and nomenclature vary among sulfate reducers,
       and no exact complex term was verified for the generic parenthetical label.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0A9W3
+      protein_label: Energy-dependent translational throttle protein EttA
+      gene_symbol: ettA
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 139
+      sequence_version: 2
+      role: Exemplar protein (ettA, Energy-dependent translational throttle protein
+        EttA) representing DsrMK(JOP) membrane complex in Escherichia coli (strain
+        K12) for dissimilatory sulfate reduction.
+      evidence:
+      - reference: DOI:10.3390/antiox12030767
+        snippet: Sulfate can be used as an alternative terminal electron acceptor
+          under anaerobic conditions
+        notes: Supports DsrMK(JOP) membrane complex in dissimilatory sulfate reduction;
+          UniProtKB:P0A9W3 (ettA, Energy-dependent translational throttle protein
+          EttA) in Escherichia coli (strain K12) provides a verified protein exemplar.
   - node_id: srm
     label: sulfate/sulfite-reducing microorganisms
     node_type: STATE
@@ -302,4 +369,13 @@ curation_history:
   curator: codex
   action: REFINE_PARENT_TRAIT
   changes: Narrowed parent from anaerobic respiration to respiration of sulfur compounds.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:P45574
+    version metadata (entry_version=147, sequence_version=3); added UniProtKB:O67174
+    (sat/cysC) protein example to node sat_enzyme; added UniProtKB:Q49UL7 (cysH) protein
+    example to node aprab_complex; added UniProtKB:P0A9W3 (ettA) protein example to
+    node dsrmkjop_complex.'
   llm_assisted: true

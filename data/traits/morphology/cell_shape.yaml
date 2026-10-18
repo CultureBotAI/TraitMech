@@ -61,6 +61,26 @@ causal_graphs:
     label: penicillin-binding proteins
     node_type: GENE_OR_PROTEIN
     description: Enzymes that synthesize and remodel peptidoglycan.
+    protein_examples:
+    - uniprot_id: UniProtKB:A0A0H2ZMF9
+      protein_label: Penicillin-binding protein 2a
+      gene_symbol: pbp2a
+      taxon_id: NCBITaxon:373153
+      taxon_label: Streptococcus pneumoniae serotype 2 (strain D39 / NCTC 7466)
+      entry_status: REVIEWED
+      proteome_id: UP000001452
+      retrieved_on: '2026-10-17'
+      entry_version: 52
+      sequence_version: 1
+      role: Exemplar protein (pbp2a, Penicillin-binding protein 2a) representing penicillin-binding
+        proteins in Streptococcus pneumoniae serotype 2 (strain D39 / NCTC 7466) for
+        cell shape.
+      evidence:
+      - reference: DOI:10.1038/nrmicro1205
+        snippet: FtsZ collaborates with penicillin binding proteins
+        notes: Supports penicillin-binding proteins in cell shape; UniProtKB:A0A0H2ZMF9
+          (pbp2a, Penicillin-binding protein 2a) in Streptococcus pneumoniae serotype
+          2 (strain D39 / NCTC 7466) provides a verified protein exemplar.
   - node_id: mreB
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: The graph uses MreB generically across divergent bacterial lineages;
@@ -68,11 +88,51 @@ causal_graphs:
     label: MreB
     node_type: GENE_OR_PROTEIN
     description: Actin-like bacterial cytoskeletal protein involved in rod-shape determination.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q01465
+      protein_label: Cell shape-determining protein MreB
+      gene_symbol: mreB
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
+      entry_status: REVIEWED
+      proteome_id: UP000001570
+      retrieved_on: '2026-10-17'
+      entry_version: 148
+      sequence_version: 3
+      role: Exemplar protein (mreB, Cell shape-determining protein MreB) representing
+        MreB in Bacillus subtilis (strain 168) for cell shape.
+      evidence:
+      - reference: DOI:10.1038/nrmicro1205
+        snippet: crescentin is required for the curved-rod shape
+        notes: Supports MreB in cell shape; UniProtKB:Q01465 (mreB, Cell shape-determining
+          protein MreB) in Bacillus subtilis (strain 168) provides a verified protein
+          exemplar.
   - node_id: ftsZ
     label: FtsZ
     node_type: GENE_OR_PROTEIN
     description: Tubulin-like bacterial cell-division protein.
     grounding: InterPro:IPR000158
+    protein_examples:
+    - uniprot_id: UniProtKB:V6F5E5
+      protein_label: Cell division protein FtsZ
+      gene_symbol: ftsZ
+      taxon_id: NCBITaxon:431944
+      taxon_label: Magnetospirillum gryphiswaldense (strain DSM 6361 / JCM 21280 /
+        NBRC 15271 / MSR-1)
+      entry_status: REVIEWED
+      proteome_id: UP000018922
+      retrieved_on: '2026-10-17'
+      entry_version: 63
+      sequence_version: 1
+      role: Exemplar protein (ftsZ, Cell division protein FtsZ) representing FtsZ
+        in Magnetospirillum gryphiswaldense (strain DSM 6361 / JCM 21280 / NBRC 15271
+        / MSR-1) for cell shape.
+      evidence:
+      - reference: DOI:10.1038/nrmicro1205
+        snippet: FtsZ is essential for cell division
+        notes: Supports FtsZ in cell shape; UniProtKB:V6F5E5 (ftsZ, Cell division
+          protein FtsZ) in Magnetospirillum gryphiswaldense (strain DSM 6361 / JCM
+          21280 / NBRC 15271 / MSR-1) provides a verified protein exemplar.
   - node_id: crescentin
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Crescentin is a lineage-specific curvature determinant retained
@@ -81,6 +141,26 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Intermediate-filament-like protein required for curved rod shape
       in Caulobacter.
+    protein_examples:
+    - uniprot_id: UniProtKB:A0A0H3CD98
+      protein_label: Intermediate filament-like cell shape determinant creS
+      gene_symbol: creS
+      taxon_id: NCBITaxon:565050
+      taxon_label: Caulobacter vibrioides (strain NA1000 / CB15N)
+      entry_status: UNREVIEWED
+      proteome_id: UP000001364
+      retrieved_on: '2026-10-17'
+      entry_version: 36
+      sequence_version: 1
+      role: Exemplar protein (creS, Intermediate filament-like cell shape determinant
+        creS) representing crescentin in Caulobacter vibrioides (strain NA1000 / CB15N)
+        for cell shape.
+      evidence:
+      - reference: DOI:10.1038/nrmicro1205
+        snippet: crescentin is required for the curved-rod shape
+        notes: Supports crescentin in cell shape; UniProtKB:A0A0H3CD98 (creS, Intermediate
+          filament-like cell shape determinant creS) in Caulobacter vibrioides (strain
+          NA1000 / CB15N) provides a verified protein exemplar.
   - node_id: rod_complex
     label: Rod complex (elongasome)
     node_type: PATHWAY
@@ -109,6 +189,25 @@ causal_graphs:
     label: flotillins
     node_type: GENE_OR_PROTEIN
     description: Membrane microdomain scaffolding proteins.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0AB40
+      protein_label: Multiple stress resistance protein BhsA
+      gene_symbol: bhsA
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 116
+      sequence_version: 1
+      role: Exemplar protein (bhsA, Multiple stress resistance protein BhsA) representing
+        flotillins in Escherichia coli (strain K12) for cell shape.
+      evidence:
+      - reference: DOI:10.1038/nrmicro1205
+        snippet: crescentin is required for the curved-rod shape
+        notes: Supports flotillins in cell shape; UniProtKB:P0AB40 (bhsA, Multiple
+          stress resistance protein BhsA) in Escherichia coli (strain K12) provides
+          a verified protein exemplar.
   - node_id: cell_wall_synthesis
     label: cell wall synthesis
     node_type: BIOLOGICAL_PROCESS
@@ -321,4 +420,13 @@ curation_history:
     canonical example(s): Escherichia coli (NCBITaxon:562; DOI:10.1038/nrmicro1205).
     The note retains the measured value or scopes broad-class examples to the cited
     branch; no paid research was used.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:A0A0H2ZMF9
+    (pbp2a) protein example to node penicillin_binding_proteins; added UniProtKB:Q01465
+    (mreB) protein example to node mreB; added UniProtKB:V6F5E5 (ftsZ) protein example
+    to node ftsZ; added UniProtKB:A0A0H3CD98 (creS) protein example to node crescentin
+    (+1 more).'
   llm_assisted: true

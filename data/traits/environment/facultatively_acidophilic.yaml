@@ -70,6 +70,27 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Transport systems proposed to remove protons or exchange ions during
       acid stress.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q8ZNQ9
+      protein_label: Putative polysaccharide export protein wza
+      gene_symbol: wza
+      taxon_id: NCBITaxon:99287
+      taxon_label: Salmonella typhimurium (strain LT2 / SGSC1412 / ATCC 700720)
+      entry_status: REVIEWED
+      proteome_id: UP000001014
+      retrieved_on: '2026-10-17'
+      entry_version: 121
+      sequence_version: 1
+      role: Exemplar protein (wza, Putative polysaccharide export protein wza) representing
+        proton export pumps and antiporters in Salmonella typhimurium (strain LT2
+        / SGSC1412 / ATCC 700720) for facultatively acidophilic.
+      evidence:
+      - reference: DOI:10.3389/fmicb.2021.822229
+        snippet: proton export pumps and antiporters
+        notes: Supports proton export pumps and antiporters in facultatively acidophilic;
+          UniProtKB:Q8ZNQ9 (wza, Putative polysaccharide export protein wza) in Salmonella
+          typhimurium (strain LT2 / SGSC1412 / ATCC 700720) provides a verified protein
+          exemplar.
   - node_id: cytoplasmic_buffering
     label: cytoplasmic buffering
     node_type: BIOLOGICAL_PROCESS
@@ -111,6 +132,28 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Decarboxylase (Gad) system consuming intracellular protons during
       acid stress.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q9F5P3
+      protein_label: Glutamate decarboxylase alpha
+      gene_symbol: gadA
+      taxon_id: NCBITaxon:169963
+      taxon_label: Listeria monocytogenes serovar 1/2a (strain ATCC BAA-679 / EGD-e)
+      entry_status: REVIEWED
+      proteome_id: UP000000817
+      retrieved_on: '2026-10-17'
+      entry_version: 122
+      sequence_version: 2
+      role: Exemplar protein (gadA, Glutamate decarboxylase alpha) representing glutamate
+        decarboxylase system in Listeria monocytogenes serovar 1/2a (strain ATCC BAA-679
+        / EGD-e) for facultatively acidophilic.
+      evidence:
+      - reference: DOI:10.1038/nrmicro2549
+        snippet: For pH homeostasis under alkaline conditions, active transport of
+          protons inward is a crucial adaptation, which usually involves activation
+          and transcriptional up-regulation of key cation/proton antiporters
+        notes: Supports glutamate decarboxylase system in facultatively acidophilic;
+          UniProtKB:Q9F5P3 (gadA, Glutamate decarboxylase alpha) in Listeria monocytogenes
+          serovar 1/2a (strain ATCC BAA-679 / EGD-e) provides a verified protein exemplar.
   - node_id: intracellular_ph
     label: intracellular pH
     node_type: QUALITY
@@ -389,4 +432,11 @@ curation_history:
     canonical example(s): Paludibaculum fermentans (NCBITaxon:1473598; DOI:10.1099/ijs.0.066175-0).
     The note retains the measured value or scopes broad-class examples to the cited
     branch; no paid research was used.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q8ZNQ9 (wza)
+    protein example to node proton_export_pumps; added UniProtKB:Q9F5P3 (gadA) protein
+    example to node glutamate_decarboxylase_system.'
   llm_assisted: true

@@ -91,6 +91,26 @@ causal_graphs:
       for this aggregate use.
     description: Proton-coupled ATPase that expels or imports H+ using or generating
       PMF.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q9R6X2
+      protein_label: Potassium-transporting ATPase potassium-binding subunit
+      gene_symbol: kdpA
+      taxon_id: NCBITaxon:29412
+      taxon_label: Anabaena sp. (strain L31)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 89
+      sequence_version: 1
+      role: Exemplar protein (kdpA, Potassium-transporting ATPase potassium-binding
+        subunit) representing F1Fo-ATPase in Anabaena sp. (strain L31) for pH delta
+        low.
+      evidence:
+      - reference: DOI:10.1038/nrmicro2549
+        snippet: up-regulation of the hydrolytic activity of F1Fo-ATPase promotes
+          ATP-dependent H+ extrusion under acidic conditions
+        notes: Supports F1Fo-ATPase in pH delta low; UniProtKB:Q9R6X2 (kdpA, Potassium-transporting
+          ATPase potassium-binding subunit) in Anabaena sp. (strain L31) provides
+          a verified protein exemplar.
   edges:
   - subject: limited_ph_homeostasis
     predicate: confers
@@ -233,4 +253,10 @@ curation_history:
     canonical example(s): Paracoccus mangrovi (NCBITaxon:1715645; DOI:10.1099/ijsem.0.001993).
     The note retains the measured value or scopes broad-class examples to the cited
     branch; no paid research was used.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q9R6X2 (kdpA)
+    protein example to node f1fo_atpase.'
   llm_assisted: true

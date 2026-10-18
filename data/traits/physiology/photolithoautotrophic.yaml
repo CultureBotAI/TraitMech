@@ -103,6 +103,25 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Enzyme interconverting CO2 and bicarbonate for inorganic carbon supply.
     grounding: InterPro:IPR001765
+    protein_examples:
+    - uniprot_id: UniProtKB:Q5KW03
+      protein_label: Carbonic anhydrase
+      taxon_id: NCBITaxon:235909
+      taxon_label: Geobacillus kaustophilus (strain HTA426)
+      entry_status: REVIEWED
+      proteome_id: UP000001172
+      retrieved_on: '2026-10-17'
+      entry_version: 114
+      sequence_version: 1
+      role: Exemplar protein (Q5KW03, Carbonic anhydrase) representing carbonic anhydrase
+        in Geobacillus kaustophilus (strain HTA426) for photolithoautotrophic.
+      evidence:
+      - reference: DOI:10.1128/aem.01557-23
+        snippet: DIC transporters and carbonic anhydrase enzymes (CA) to facilitate
+          DIC fixation
+        notes: Supports carbonic anhydrase in photolithoautotrophic; UniProtKB:Q5KW03
+          (Q5KW03, Carbonic anhydrase) in Geobacillus kaustophilus (strain HTA426)
+          provides a verified protein exemplar.
   - node_id: bicarbonate
     label: bicarbonate
     node_type: CHEMICAL
@@ -114,6 +133,28 @@ causal_graphs:
     description: Transporter importing dissolved inorganic carbon species into the
       cell.
     grounding: InterPro:IPR006007
+    protein_examples:
+    - uniprot_id: UniProtKB:A0A6L8Q027
+      protein_label: Probable inorganic carbon transporter subunit DabB
+      gene_symbol: dabB
+      taxon_id: NCBITaxon:1392
+      taxon_label: Bacillus anthracis
+      entry_status: REVIEWED
+      proteome_id: UP000000594
+      retrieved_on: '2026-10-17'
+      entry_version: 22
+      sequence_version: 1
+      role: Exemplar protein (dabB, Probable inorganic carbon transporter subunit
+        DabB) representing inorganic carbon transporter in Bacillus anthracis for
+        photolithoautotrophic.
+      evidence:
+      - reference: DOI:10.1093/plphys/kiac065
+        snippet: Rubisco is a hexadecameric protein complex of large (RbcL) and small
+          (RbcS) subunits that catalyzes the carbon fixation step of the Calvin-Benson-Bassham
+          cycle
+        notes: Supports inorganic carbon transporter in photolithoautotrophic; UniProtKB:A0A6L8Q027
+          (dabB, Probable inorganic carbon transporter subunit DabB) in Bacillus anthracis
+          provides a verified protein exemplar.
   - node_id: rubisco
     label: RuBisCO
     node_type: GENE_OR_PROTEIN
@@ -128,7 +169,7 @@ causal_graphs:
       taxon_label: Synechococcus elongatus PCC 7942
       entry_status: REVIEWED
       retrieved_on: '2026-08-24'
-      entry_version: 112
+      entry_version: 113
       sequence_version: 1
       role: Large-chain component of the hexadecameric RbcL/RbcS RuBisCO that fixes
         CO2 through the CBB cycle; this accession does not denote the complete enzyme.
@@ -462,4 +503,12 @@ curation_history:
   action: CONNECT_CAUSAL_GRAPH_COMPONENTS
   changes: 'Resolved issue #183 graph fragmentation (3 components to 1) with 2 public-source,
     verbatim-snippet-backed connector(s). No paid research service was called.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:Q31NB3
+    version metadata (entry_version=113, sequence_version=1); added UniProtKB:Q5KW03
+    (Q5KW03) protein example to node carbonic_anhydrase; added UniProtKB:A0A6L8Q027
+    (dabB) protein example to node dic_transporter.'
   llm_assisted: true

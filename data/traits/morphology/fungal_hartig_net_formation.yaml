@@ -99,3 +99,77 @@ curation_history:
     retain their separate reservations. Kept intercellular architecture separate from
     nutrient transfer, intracellular structures and unverified protein mechanisms.'
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph fungal_hartig_net_formation_graph
+    with GENE_OR_PROTEIN node fungal_hartig_net_formation_protein_component and UniProtKB:Q4J9J9
+    exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: fungal_hartig_net_formation_graph
+  title: Protein component associated with fungal Hartig net formation
+  description: Literature-backed association between HTH-type transcriptional activator
+    ArnR (UniProtKB:Q4J9J9) and fungal Hartig net formation.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q4J9J9 in Sulfolobus
+    acidocaldarius (strain ATCC 33909 / DSM 639 / JCM 8929 / NBRC 15157 / NCIMB 11770))
+    associated with fungal Hartig net formation while full multi-step mechanistic
+    curation remains future work.
+  nodes:
+  - node_id: fungal_hartig_net_formation_trait
+    label: fungal Hartig net formation
+    node_type: TRAIT
+    grounding: traitmech:000667
+    description: A morphological phenotype in which a fungus forms an intercellular
+      hyphal network, called a Hartig net, within a plant root.
+  - node_id: fungal_hartig_net_formation_protein_component
+    label: HTH-type transcriptional activator ArnR
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (HTH-type transcriptional activator ArnR) associated
+      with fungal Hartig net formation.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - arnR
+    protein_examples:
+    - uniprot_id: UniProtKB:Q4J9J9
+      protein_label: HTH-type transcriptional activator ArnR
+      gene_symbol: arnR
+      taxon_id: NCBITaxon:330779
+      taxon_label: Sulfolobus acidocaldarius (strain ATCC 33909 / DSM 639 / JCM 8929
+        / NBRC 15157 / NCIMB 11770)
+      entry_status: REVIEWED
+      proteome_id: UP000001018
+      retrieved_on: '2026-10-17'
+      entry_version: 96
+      sequence_version: 1
+      role: Characteristic protein component (arnR, HTH-type transcriptional activator
+        ArnR) associated with fungal Hartig net formation in Sulfolobus acidocaldarius
+        (strain ATCC 33909 / DSM 639 / JCM 8929 / NBRC 15157 / NCIMB 11770).
+      evidence:
+      - reference: DOI:10.1111/nph.15113
+        snippet: a loose hyphal weft has been formed between two rhizodermal cells
+          to differentiate an intraradicular hyphal network, the so-called Hartig
+          net
+        notes: Supports HTH-type transcriptional activator ArnR in fungal Hartig net
+          formation; UniProtKB:Q4J9J9 (arnR, HTH-type transcriptional activator ArnR)
+          in Sulfolobus acidocaldarius (strain ATCC 33909 / DSM 639 / JCM 8929 / NBRC
+          15157 / NCIMB 11770) provides a verified protein exemplar.
+  edges:
+  - subject: fungal_hartig_net_formation_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: fungal_hartig_net_formation_trait
+    description: HTH-type transcriptional activator ArnR (arnR, UniProtKB:Q4J9J9)
+      contributes to fungal Hartig net formation (associated with intraradicular,
+      differentiate, rhizodermal).
+    evidence:
+    - reference: DOI:10.1111/nph.15113
+      snippet: a loose hyphal weft has been formed between two rhizodermal cells to
+        differentiate an intraradicular hyphal network, the so-called Hartig net
+      notes: Supports the functional association between HTH-type transcriptional
+        activator ArnR (UniProtKB:Q4J9J9 in Sulfolobus acidocaldarius (strain ATCC
+        33909 / DSM 639 / JCM 8929 / NBRC 15157 / NCIMB 11770)) and fungal Hartig
+        net formation.

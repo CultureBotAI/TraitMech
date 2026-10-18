@@ -66,3 +66,72 @@ curation_history:
     and facultative arsenate-respiration evidence without making a broader genetic-tractability
     claim.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph arsenate_respiration_graph
+    with GENE_OR_PROTEIN node arsenate_respiration_protein_component and UniProtKB:P0DW32
+    exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: arsenate_respiration_graph
+  title: Protein component associated with arsenate respiration
+  description: Literature-backed association between Arsenate respiratory reductase
+    iron-sulfur subunit ArrB (UniProtKB:P0DW32) and arsenate respiration.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P0DW32 in Chrysiogenes
+    arsenatis) associated with arsenate respiration while full multi-step mechanistic
+    curation remains future work.
+  nodes:
+  - node_id: arsenate_respiration_trait
+    label: arsenate respiration
+    node_type: TRAIT
+    grounding: traitmech:000195
+    description: An anaerobic respiration in which an organism uses arsenate as the
+      terminal electron acceptor and reduces it to arsenite for energy conservation.
+  - node_id: arsenate_respiration_protein_component
+    label: Arsenate respiratory reductase iron-sulfur subunit ArrB
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Arsenate respiratory reductase iron-sulfur subunit
+      ArrB) associated with arsenate respiration.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - arrB
+    protein_examples:
+    - uniprot_id: UniProtKB:P0DW32
+      protein_label: Arsenate respiratory reductase iron-sulfur subunit ArrB
+      gene_symbol: arrB
+      taxon_id: NCBITaxon:309797
+      taxon_label: Chrysiogenes arsenatis
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 11
+      sequence_version: 1
+      role: Characteristic protein component (arrB, Arsenate respiratory reductase
+        iron-sulfur subunit ArrB) associated with arsenate respiration in Chrysiogenes
+        arsenatis.
+      evidence:
+      - reference: DOI:10.1128/JB.01110-07
+        snippet: the Shewanella sp. strain ANA-3 arsenate respiratory reductase (ARR),
+          the key enzyme involved in this metabolism
+        notes: Supports Arsenate respiratory reductase iron-sulfur subunit ArrB in
+          arsenate respiration; UniProtKB:P0DW32 (arrB, Arsenate respiratory reductase
+          iron-sulfur subunit ArrB) in Chrysiogenes arsenatis provides a verified
+          protein exemplar.
+  edges:
+  - subject: arsenate_respiration_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: arsenate_respiration_trait
+    description: Arsenate respiratory reductase iron-sulfur subunit ArrB (arrB, UniProtKB:P0DW32)
+      contributes to arsenate respiration (associated with respiratory, metabolism,
+      shewanella).
+    evidence:
+    - reference: DOI:10.1128/JB.01110-07
+      snippet: the Shewanella sp. strain ANA-3 arsenate respiratory reductase (ARR),
+        the key enzyme involved in this metabolism
+      notes: Supports the functional association between Arsenate respiratory reductase
+        iron-sulfur subunit ArrB (UniProtKB:P0DW32 in Chrysiogenes arsenatis) and
+        arsenate respiration.

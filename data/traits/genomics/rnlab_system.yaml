@@ -108,6 +108,37 @@ causal_graphs:
     grounding: traitmech:000209
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
+  - node_id: rnlab_system_protein_component
+    label: mRNA endoribonuclease toxin LS
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (mRNA endoribonuclease toxin LS) associated with
+      RnlAB system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - rnlA
+    protein_examples:
+    - uniprot_id: UniProtKB:P52129
+      protein_label: mRNA endoribonuclease toxin LS
+      gene_symbol: rnlA
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 146
+      sequence_version: 2
+      role: Characteristic protein component (rnlA, mRNA endoribonuclease toxin LS)
+        associated with RnlAB system in Escherichia coli (strain K12).
+      evidence:
+      - reference: PMID:20980243
+        snippet: Here we show that rnlA, a structural gene of RNase LS, encodes a
+          novel toxin, and that rnlB (formally yfjO), located immediately downstream
+          of rnlA, encodes an antitoxin against RnlA.
+        notes: Supports mRNA endoribonuclease toxin LS in RnlAB system; UniProtKB:P52129
+          (rnlA, mRNA endoribonuclease toxin LS) in Escherichia coli (strain K12)
+          provides a verified protein exemplar.
   edges:
   - subject: rnlab_locus
     predicate: contributes to
@@ -175,6 +206,19 @@ causal_graphs:
       snippet: "RnlAB\tRnlAB\t2\t2\tRnlAB__RnlA, RnlAB__RnlB\t\t\t"
       notes: The DefenseFinder rules table models RnlAB as a two-profile system requiring
         the RnlAB__RnlA and RnlAB__RnlB profiles.
+  - subject: rnlab_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: rnlab_system_trait
+    description: mRNA endoribonuclease toxin LS (rnlA, UniProtKB:P52129) contributes
+      to RnlAB system (associated with respectively, chromosome, antitoxin).
+    evidence:
+    - reference: PMID:22403819
+      snippet: Predicted proteins encoded by these two ORFs were found to share a
+        weak homology with RnlA and RnlB, respectively, a toxin–antitoxin system encoded
+        on the E. coli K-12 chromosome.
+      notes: Supports the functional association between mRNA endoribonuclease toxin
+        LS (UniProtKB:P52129 in Escherichia coli (strain K12)) and RnlAB system.
 discussions:
 - discussion_id: rnlab-phage-breadth-evasion-gap
   prompt: Resolve natural RnlAB phage breadth, wild-type T4 evasion through Dmd, induction
@@ -207,4 +251,10 @@ curation_history:
     system after an ignored-and-hidden duplicate review found no exact live TraitMech,
     METPO, history, or prior proposal record; the replacement placeholder is reserved
     in proposals/metpo_traitmech_v244.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    rnlab_system_protein_component with UniProtKB:P52129 (rnlA) exemplar.'
   llm_assisted: true

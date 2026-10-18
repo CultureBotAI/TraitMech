@@ -103,3 +103,71 @@ curation_history:
     OPEN for process-mapping review. Preserved definition, evidence, example and prior
     history.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph phagocytosis_graph
+    with GENE_OR_PROTEIN node phagocytosis_protein_component and UniProtKB:P0AEZ7
+    exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: phagocytosis_graph
+  title: Protein component associated with phagocytosis
+  description: Literature-backed association between Membrane-bound lytic murein transglycosylase
+    D (UniProtKB:P0AEZ7) and phagocytosis.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P0AEZ7 in Escherichia
+    coli (strain K12)) associated with phagocytosis while full multi-step mechanistic
+    curation remains future work.
+  nodes:
+  - node_id: phagocytosis_trait
+    label: phagocytosis
+    node_type: TRAIT
+    grounding: traitmech:000627
+    description: A physiological phenotype in which a microbial cell engulfs extracellular
+      particles by enclosing them within its membrane and internalizes them into membrane-bound
+      compartments.
+  - node_id: phagocytosis_protein_component
+    label: Membrane-bound lytic murein transglycosylase D
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Membrane-bound lytic murein transglycosylase D)
+      associated with phagocytosis.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - mltD
+    protein_examples:
+    - uniprot_id: UniProtKB:P0AEZ7
+      protein_label: Membrane-bound lytic murein transglycosylase D
+      gene_symbol: mltD
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 152
+      sequence_version: 1
+      role: Characteristic protein component (mltD, Membrane-bound lytic murein transglycosylase
+        D) associated with phagocytosis in Escherichia coli (strain K12).
+      evidence:
+      - reference: DOI:10.1371/journal.pone.0095577
+        snippet: remodeling of the collar membrane to engulf the prey, and transport
+          of engulfed bacteria into the cell.
+        notes: Supports Membrane-bound lytic murein transglycosylase D in phagocytosis;
+          UniProtKB:P0AEZ7 (mltD, Membrane-bound lytic murein transglycosylase D)
+          in Escherichia coli (strain K12) provides a verified protein exemplar.
+  edges:
+  - subject: phagocytosis_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: phagocytosis_trait
+    description: Membrane-bound lytic murein transglycosylase D (mltD, UniProtKB:P0AEZ7)
+      contributes to phagocytosis (associated with remodeling, transport, bacteria).
+    evidence:
+    - reference: DOI:10.1371/journal.pone.0095577
+      snippet: remodeling of the collar membrane to engulf the prey, and transport
+        of engulfed bacteria into the cell.
+      notes: Supports the functional association between Membrane-bound lytic murein
+        transglycosylase D (UniProtKB:P0AEZ7 in Escherichia coli (strain K12)) and
+        phagocytosis.

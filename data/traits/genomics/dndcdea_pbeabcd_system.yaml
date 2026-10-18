@@ -103,6 +103,40 @@ causal_graphs:
     grounding: traitmech:000213
     description: Possession of a genome-encoded phosphorothioate-based antiviral defense
       system.
+  - node_id: dndcdea_pbeabcd_system_protein_component
+    label: tRNA modification GTPase MnmE
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (tRNA modification GTPase MnmE) associated with
+      DndCDEA-PbeABCD system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - mnmE
+    protein_examples:
+    - uniprot_id: UniProtKB:Q49UI4
+      protein_label: tRNA modification GTPase MnmE
+      gene_symbol: mnmE
+      taxon_id: NCBITaxon:342451
+      taxon_label: Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
+        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+      entry_status: REVIEWED
+      proteome_id: UP000006371
+      retrieved_on: '2026-10-17'
+      entry_version: 122
+      sequence_version: 2
+      role: Characteristic protein component (mnmE, tRNA modification GTPase MnmE)
+        associated with DndCDEA-PbeABCD system in Staphylococcus saprophyticus subsp.
+        saprophyticus (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41).
+      evidence:
+      - reference: DOI:10.1038/s41467-019-09390-9
+        snippet: a new archaeal defence system that involves DndCDEA-specific DNA
+          phosphorothioate (PT) modification and the PbeABCD-mediated halt of virus
+          propagation via inhibition of DNA replication
+        notes: Supports tRNA modification GTPase MnmE in DndCDEA-PbeABCD system; UniProtKB:Q49UI4
+          (mnmE, tRNA modification GTPase MnmE) in Staphylococcus saprophyticus subsp.
+          saprophyticus (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 /
+          S-41) provides a verified protein exemplar.
   edges:
   - subject: dndcdea_pbeabcd_locus
     predicate: contributes to
@@ -170,6 +204,21 @@ causal_graphs:
         pbeABCD gene cluster
       notes: Isaev et al. place PbeABCD in the family of PT defense systems while
         distinguishing it from DndFGH.
+  - subject: dndcdea_pbeabcd_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: dndcdea_pbeabcd_system_trait
+    description: tRNA modification GTPase MnmE (mnmE, UniProtKB:Q49UI4) contributes
+      to DndCDEA-PbeABCD system (associated with phosphorothioate, modification, propagation).
+    evidence:
+    - reference: DOI:10.1038/s41467-019-09390-9
+      snippet: a new archaeal defence system that involves DndCDEA-specific DNA phosphorothioate
+        (PT) modification and the PbeABCD-mediated halt of virus propagation via inhibition
+        of DNA replication
+      notes: Supports the functional association between tRNA modification GTPase
+        MnmE (UniProtKB:Q49UI4 in Staphylococcus saprophyticus subsp. saprophyticus
+        (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)) and DndCDEA-PbeABCD
+        system.
 curation_history:
 - timestamp: '2026-09-15T17:36:16Z'
   curator: codex
@@ -178,4 +227,10 @@ curation_history:
     the phosphorothioate defense system parent after an ignored-and-hidden duplicate
     review found no exact live TraitMech, METPO, or prior proposal record; the replacement
     placeholder is reserved in proposals/metpo_traitmech_v101.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    dndcdea_pbeabcd_system_protein_component with UniProtKB:Q49UI4 (mnmE) exemplar.'
   llm_assisted: true

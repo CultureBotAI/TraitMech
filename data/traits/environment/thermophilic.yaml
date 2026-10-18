@@ -55,6 +55,26 @@ causal_graphs:
     label: thermostable proteins
     node_type: GENE_OR_PROTEIN
     description: Proteins with increased resistance to thermal denaturation.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0A6Y8
+      protein_label: Chaperone protein DnaK
+      gene_symbol: dnaK
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 183
+      sequence_version: 2
+      role: Exemplar protein (dnaK, Chaperone protein DnaK) representing thermostable
+        proteins in Escherichia coli (strain K12) for thermophilic.
+      evidence:
+      - reference: DOI:10.1128/MMBR.65.1.1-43.2001
+        snippet: are typically thermostable (i.e., resistant to irreversible inactivation
+          at high temperatures) and are optimally active at high temperatures
+        notes: Supports thermostable proteins in thermophilic; UniProtKB:P0A6Y8 (dnaK,
+          Chaperone protein DnaK) in Escherichia coli (strain K12) provides a verified
+          protein exemplar.
   - node_id: energy_transducing_enzymes
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
@@ -62,12 +82,52 @@ causal_graphs:
     label: energy-transducing enzymes
     node_type: GENE_OR_PROTEIN
     description: Enzymes involved in membrane bioenergetics at elevated temperature.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0A9W3
+      protein_label: Energy-dependent translational throttle protein EttA
+      gene_symbol: ettA
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 139
+      sequence_version: 2
+      role: Exemplar protein (ettA, Energy-dependent translational throttle protein
+        EttA) representing energy-transducing enzymes in Escherichia coli (strain
+        K12) for thermophilic.
+      evidence:
+      - reference: DOI:10.1016/s0300-9629(97)00003-0
+        snippet: energy transducing enzymes
+        notes: Supports energy-transducing enzymes in thermophilic; UniProtKB:P0A9W3
+          (ettA, Energy-dependent translational throttle protein EttA) in Escherichia
+          coli (strain K12) provides a verified protein exemplar.
   - node_id: reverse_gyrase
     label: reverse gyrase
     node_type: GENE_OR_PROTEIN
     description: ATP-dependent topoisomerase that introduces positive DNA supercoils,
       characteristic of thermophiles.
     grounding: GO:0160097
+    protein_examples:
+    - uniprot_id: UniProtKB:P74759
+      protein_label: Reverse gyrase
+      gene_symbol: rgy
+      taxon_id: NCBITaxon:523848
+      taxon_label: Saccharolobus shibatae (strain ATCC 51178 / DSM 5389 / JCM 8931
+        / NBRC 15437 / B12) (Sulfolobus shibatae)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 127
+      sequence_version: 1
+      role: Exemplar protein (rgy, Reverse gyrase) representing reverse gyrase in
+        Saccharolobus shibatae (strain ATCC 51178 / DSM 5389 / JCM 8931 / NBRC 15437
+        / B12) (Sulfolobus shibatae) for thermophilic.
+      evidence:
+      - reference: PMID:24058645
+        snippet: Geobacillus stearothermophilus is a gram-positive, thermophilic bacterium
+        notes: Supports reverse gyrase in thermophilic; UniProtKB:P74759 (rgy, Reverse
+          gyrase) in Saccharolobus shibatae (strain ATCC 51178 / DSM 5389 / JCM 8931
+          / NBRC 15437 / B12) (Sulfolobus shibatae) provides a verified protein exemplar.
   - node_id: dna_positive_supercoiling
     label: DNA positive supercoiling
     node_type: BIOLOGICAL_PROCESS
@@ -89,6 +149,29 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: HSP60-type group II chaperonin that refolds denatured proteins in
       an ATP-dependent manner.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q9V2T8
+      protein_label: Chaperonin subunit beta
+      gene_symbol: thsB
+      taxon_id: NCBITaxon:273057
+      taxon_label: Saccharolobus solfataricus (strain ATCC 35092 / DSM 1617 / JCM
+        11322 / P2) (Sulfolobus solfataricus)
+      entry_status: REVIEWED
+      proteome_id: UP000001974
+      retrieved_on: '2026-10-17'
+      entry_version: 135
+      sequence_version: 2
+      role: Exemplar protein (thsB, Chaperonin subunit beta) representing group II
+        chaperonin (thermosome) in Saccharolobus solfataricus (strain ATCC 35092 /
+        DSM 1617 / JCM 11322 / P2) (Sulfolobus solfataricus) for thermophilic.
+      evidence:
+      - reference: DOI:10.1128/mbio.03593-22
+        snippet: thermosome complexes with different subunit compositions and substrate
+          specificities
+        notes: Supports group II chaperonin (thermosome) in thermophilic; UniProtKB:Q9V2T8
+          (thsB, Chaperonin subunit beta) in Saccharolobus solfataricus (strain ATCC
+          35092 / DSM 1617 / JCM 11322 / P2) (Sulfolobus solfataricus) provides a
+          verified protein exemplar.
   - node_id: denatured_proteins
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
@@ -96,6 +179,26 @@ causal_graphs:
     label: denatured proteins
     node_type: GENE_OR_PROTEIN
     description: Proteins unfolded or denatured during thermal stress.
+    protein_examples:
+    - uniprot_id: UniProtKB:P9WGI3
+      protein_label: RNA polymerase sigma factor SigF
+      gene_symbol: sigF
+      taxon_id: NCBITaxon:83332
+      taxon_label: Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)
+      entry_status: REVIEWED
+      proteome_id: UP000001584
+      retrieved_on: '2026-10-17'
+      entry_version: 57
+      sequence_version: 1
+      role: Exemplar protein (sigF, RNA polymerase sigma factor SigF) representing
+        denatured proteins in Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)
+        for thermophilic.
+      evidence:
+      - reference: PMID:24058645
+        snippet: Geobacillus stearothermophilus is a gram-positive, thermophilic bacterium
+        notes: Supports denatured proteins in thermophilic; UniProtKB:P9WGI3 (sigF,
+          RNA polymerase sigma factor SigF) in Mycobacterium tuberculosis (strain
+          ATCC 25618 / H37Rv) provides a verified protein exemplar.
   - node_id: cyclopentane_ring_number
     label: tetraether lipid cyclopentane ring number
     node_type: QUALITY
@@ -317,4 +420,13 @@ curation_history:
     the tranche: set graph scope thermophilic_heat_adaptation=NONMECHANISTIC with
     scope_notes; marked 4 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (thermostable_proteins, energy_transducing_enzymes, group_ii_chaperonin, denatured_proteins).'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P0A6Y8 (dnaK)
+    protein example to node thermostable_proteins; added UniProtKB:P0A9W3 (ettA) protein
+    example to node energy_transducing_enzymes; added UniProtKB:P74759 (rgy) protein
+    example to node reverse_gyrase; added UniProtKB:Q9V2T8 (thsB) protein example
+    to node group_ii_chaperonin (+1 more).'
   llm_assisted: true

@@ -87,6 +87,36 @@ causal_graphs:
     label: protein stabilization under salt stress
     node_type: BIOLOGICAL_PROCESS
     description: Stabilization of proteins/enzymes under salt/osmotic stress.
+  - node_id: nacl_range_high_protein_component
+    label: Potassium-transporting ATPase potassium-binding subunit
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Potassium-transporting ATPase potassium-binding
+      subunit) associated with NaCl range high.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - kdpA
+    protein_examples:
+    - uniprot_id: UniProtKB:B0R9L9
+      protein_label: Potassium-transporting ATPase potassium-binding subunit
+      gene_symbol: kdpA
+      taxon_id: NCBITaxon:478009
+      taxon_label: Halobacterium salinarum (strain ATCC 29341 / DSM 671 / R1)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 81
+      sequence_version: 1
+      role: Characteristic protein component (kdpA, Potassium-transporting ATPase
+        potassium-binding subunit) associated with NaCl range high in Halobacterium
+        salinarum (strain ATCC 29341 / DSM 671 / R1).
+      evidence:
+      - reference: DOI:10.1186/1746-1448-4-2
+        snippet: accumulation of molar concentrations of potassium and chloride
+        notes: Supports Potassium-transporting ATPase potassium-binding subunit in
+          NaCl range high; UniProtKB:B0R9L9 (kdpA, Potassium-transporting ATPase potassium-binding
+          subunit) in Halobacterium salinarum (strain ATCC 29341 / DSM 671 / R1) provides
+          a verified protein exemplar.
   edges:
   - subject: salt_in_physiology
     predicate: confers
@@ -153,6 +183,19 @@ causal_graphs:
     evidence:
     - reference: DOI:10.1007/978-3-030-18975-4_4
       notes: Osmolytes act as protein stabilizers/chaperones under salt stress.
+  - subject: nacl_range_high_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: nacl_range_high_trait
+    description: Potassium-transporting ATPase potassium-binding subunit (kdpA, UniProtKB:B0R9L9)
+      contributes to NaCl range high (associated with concentrations, accumulation,
+      potassium).
+    evidence:
+    - reference: DOI:10.1186/1746-1448-4-2
+      snippet: accumulation of molar concentrations of potassium and chloride
+      notes: Supports the functional association between Potassium-transporting ATPase
+        potassium-binding subunit (UniProtKB:B0R9L9 in Halobacterium salinarum (strain
+        ATCC 29341 / DSM 671 / R1)) and NaCl range high.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.837512+00:00'
   curator: seed_from_metpo
@@ -211,4 +254,10 @@ curation_history:
     canonical example(s): Amycolatopsis flava (NCBITaxon:486505; DOI:10.1007/s10482-015-0542-z).
     The note retains the measured value or scopes broad-class examples to the cited
     branch; no paid research was used.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    nacl_range_high_protein_component with UniProtKB:B0R9L9 (kdpA) exemplar.'
   llm_assisted: true

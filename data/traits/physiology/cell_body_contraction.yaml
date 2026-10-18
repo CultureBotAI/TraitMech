@@ -162,3 +162,70 @@ curation_history:
     and independent provenance/mechanism gaps. Resolved only the parent question.
     No new experiment, canonical taxon or molecular mechanism is asserted.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph cell_body_contraction_graph
+    with GENE_OR_PROTEIN node cell_body_contraction_protein_component and UniProtKB:Q07766
+    exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: cell_body_contraction_graph
+  title: Protein component associated with cell-body contraction
+  description: Literature-backed association between CRISPR-associated protein Cas5
+    (UniProtKB:Q07766) and cell-body contraction.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q07766 in Myxococcus
+    xanthus (strain DK1622)) associated with cell-body contraction while full multi-step
+    mechanistic curation remains future work.
+  nodes:
+  - node_id: cell_body_contraction_trait
+    label: cell-body contraction
+    node_type: TRAIT
+    grounding: traitmech:000728
+    description: A physiological phenotype in which a microbial cell actively shortens
+      its body by contraction of intracellular structures.
+  - node_id: cell_body_contraction_protein_component
+    label: CRISPR-associated protein Cas5
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (CRISPR-associated protein Cas5) associated with
+      cell-body contraction.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - devS
+    protein_examples:
+    - uniprot_id: UniProtKB:Q07766
+      protein_label: CRISPR-associated protein Cas5
+      gene_symbol: devS
+      taxon_id: NCBITaxon:246197
+      taxon_label: Myxococcus xanthus (strain DK1622)
+      entry_status: REVIEWED
+      proteome_id: UP000002402
+      retrieved_on: '2026-10-17'
+      entry_version: 113
+      sequence_version: 1
+      role: Characteristic protein component (devS, CRISPR-associated protein Cas5)
+        associated with cell-body contraction in Myxococcus xanthus (strain DK1622).
+      evidence:
+      - reference: DOI:10.1126/sciadv.add6550
+        snippet: Ca2+ concentrations from 10−6 to 10−2 M in the culture medium could
+          stimulate cell contraction while maintaining the viability of the cell.
+        notes: Supports CRISPR-associated protein Cas5 in cell-body contraction; UniProtKB:Q07766
+          (devS, CRISPR-associated protein Cas5) in Myxococcus xanthus (strain DK1622)
+          provides a verified protein exemplar.
+  edges:
+  - subject: cell_body_contraction_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: cell_body_contraction_trait
+    description: CRISPR-associated protein Cas5 (devS, UniProtKB:Q07766) contributes
+      to cell-body contraction (associated with concentrations, contraction, maintaining).
+    evidence:
+    - reference: DOI:10.1126/sciadv.add6550
+      snippet: Ca2+ concentrations from 10−6 to 10−2 M in the culture medium could
+        stimulate cell contraction while maintaining the viability of the cell.
+      notes: Supports the functional association between CRISPR-associated protein
+        Cas5 (UniProtKB:Q07766 in Myxococcus xanthus (strain DK1622)) and cell-body
+        contraction.

@@ -29,6 +29,13 @@ curation_history:
   changes: Reparented indole test positive below the newly curated METPO:1005010 indole
     test assay parent and marked the temporary assay-parent discussion resolved.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph indole_test_positive_graph
+    with GENE_OR_PROTEIN node indole_test_positive_protein_component and UniProtKB:P0A853
+    exemplar.'
+  llm_assisted: true
 definition_source: DOI:10.1128/AEM.02787-15
 evidence:
 - reference: DOI:10.1128/AEM.02787-15
@@ -62,3 +69,61 @@ discussions:
     parent, so this assay-outcome phenotype can use its exact source superclass instead
     of a temporary direct phenotype parent; this resolves the exact METPO assay-parent
     gap, not the broader non-assay parent question for assay-outcome phenotypes.
+causal_graphs:
+- graph_id: indole_test_positive_graph
+  title: Protein component associated with indole test positive
+  description: Literature-backed association between Tryptophanase (UniProtKB:P0A853)
+    and indole test positive.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P0A853 in Escherichia
+    coli (strain K12)) associated with indole test positive while full multi-step
+    mechanistic curation remains future work.
+  nodes:
+  - node_id: indole_test_positive_trait
+    label: indole test positive
+    node_type: TRAIT
+    grounding: METPO:1005011
+    description: A phenotype in which an organism tests positive in the indole test,
+      indicating it produces indole from tryptophan.
+  - node_id: indole_test_positive_protein_component
+    label: Tryptophanase
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Tryptophanase) associated with indole test positive.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - tnaA
+    protein_examples:
+    - uniprot_id: UniProtKB:P0A853
+      protein_label: Tryptophanase
+      gene_symbol: tnaA
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 163
+      sequence_version: 1
+      role: Characteristic protein component (tnaA, Tryptophanase) associated with
+        indole test positive in Escherichia coli (strain K12).
+      evidence:
+      - reference: DOI:10.1128/AEM.02787-15
+        snippet: enterotoxigenic Escherichia coli strain H10407 produces 3.3 ± 0.22
+          mM indole during a 24-h period in the presence of 5 mM tryptophan
+        notes: Supports Tryptophanase in indole test positive; UniProtKB:P0A853 (tnaA,
+          Tryptophanase) in Escherichia coli (strain K12) provides a verified protein
+          exemplar.
+  edges:
+  - subject: indole_test_positive_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: indole_test_positive_trait
+    description: Tryptophanase (tnaA, UniProtKB:P0A853) contributes to indole test
+      positive (associated with enterotoxigenic, escherichia, tryptophan).
+    evidence:
+    - reference: DOI:10.1128/AEM.02787-15
+      snippet: enterotoxigenic Escherichia coli strain H10407 produces 3.3 ± 0.22
+        mM indole during a 24-h period in the presence of 5 mM tryptophan
+      notes: Supports the functional association between Tryptophanase (UniProtKB:P0A853
+        in Escherichia coli (strain K12)) and indole test positive.

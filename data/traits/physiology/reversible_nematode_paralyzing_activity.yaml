@@ -81,3 +81,73 @@ curation_history:
     METPO counterpart identified in the inspected scope. Other records unchanged.
     Timestamp records observed acceptance after assessment, not the later file write.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph reversible_nematode_paralyzing_activity_graph
+    with GENE_OR_PROTEIN node reversible_nematode_paralyzing_activity_protein_component
+    and UniProtKB:P39914 exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: reversible_nematode_paralyzing_activity_graph
+  title: Protein component associated with reversible nematode-paralyzing activity
+  description: Literature-backed association between Monothiol bacilliredoxin BrxC
+    (UniProtKB:P39914) and reversible nematode-paralyzing activity.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P39914 in Bacillus
+    subtilis (strain 168)) associated with reversible nematode-paralyzing activity
+    while full multi-step mechanistic curation remains future work.
+  nodes:
+  - node_id: reversible_nematode_paralyzing_activity_trait
+    label: reversible nematode-paralyzing activity
+    node_type: TRAIT
+    grounding: traitmech:000722
+    description: A physiological capability of a microorganism to induce a loss of
+      active nematode movement that reverses after exposure to the microorganism or
+      its products ends.
+  - node_id: reversible_nematode_paralyzing_activity_protein_component
+    label: Monothiol bacilliredoxin BrxC
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Monothiol bacilliredoxin BrxC) associated with
+      reversible nematode-paralyzing activity.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - brxC
+    protein_examples:
+    - uniprot_id: UniProtKB:P39914
+      protein_label: Monothiol bacilliredoxin BrxC
+      gene_symbol: brxC
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
+      entry_status: REVIEWED
+      proteome_id: UP000001570
+      retrieved_on: '2026-10-17'
+      entry_version: 128
+      sequence_version: 1
+      role: Characteristic protein component (brxC, Monothiol bacilliredoxin BrxC)
+        associated with reversible nematode-paralyzing activity in Bacillus subtilis
+        (strain 168).
+      evidence:
+      - reference: https://journals.flvc.org/nematropica/article/view/64427
+        snippet: Bioassays revealed that filtrates of P. lilacinus and Paecilomyces
+          marquandii caused reversible paralysis of male and juvenile R. similis.
+        notes: Supports Monothiol bacilliredoxin BrxC in reversible nematode-paralyzing
+          activity; UniProtKB:P39914 (brxC, Monothiol bacilliredoxin BrxC) in Bacillus
+          subtilis (strain 168) provides a verified protein exemplar.
+  edges:
+  - subject: reversible_nematode_paralyzing_activity_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: reversible_nematode_paralyzing_activity_trait
+    description: Monothiol bacilliredoxin BrxC (brxC, UniProtKB:P39914) contributes
+      to reversible nematode-paralyzing activity (associated with paecilomyces, marquandii,
+      reversible).
+    evidence:
+    - reference: https://journals.flvc.org/nematropica/article/view/64427
+      snippet: Bioassays revealed that filtrates of P. lilacinus and Paecilomyces
+        marquandii caused reversible paralysis of male and juvenile R. similis.
+      notes: Supports the functional association between Monothiol bacilliredoxin
+        BrxC (UniProtKB:P39914 in Bacillus subtilis (strain 168)) and reversible nematode-paralyzing
+        activity.

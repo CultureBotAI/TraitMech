@@ -78,6 +78,29 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Enzyme that converts acetyl phosphate and ADP to acetate and ATP.
     grounding: GO:0008776
+    protein_examples:
+    - uniprot_id: UniProtKB:Q49YE2
+      protein_label: Acetate kinase
+      gene_symbol: ackA
+      taxon_id: NCBITaxon:342451
+      taxon_label: Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
+        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+      entry_status: REVIEWED
+      proteome_id: UP000006371
+      retrieved_on: '2026-10-17'
+      entry_version: 112
+      sequence_version: 1
+      role: Exemplar protein (ackA, Acetate kinase) representing acetate kinase in
+        Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC 15305 / DSM
+        20229 / NCIMB 8711 / NCTC 7292 / S-41) for Substrate-level phosphorylation.
+      evidence:
+      - reference: DOI:10.1042/ETLS20220092
+        snippet: acetate kinase and phosphotransacetylase (AckA-Pta), a set of reactions
+          that allows ATP production via substrate-level phosphorylation
+        notes: Supports acetate kinase in Substrate-level phosphorylation; UniProtKB:Q49YE2
+          (ackA, Acetate kinase) in Staphylococcus saprophyticus subsp. saprophyticus
+          (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) provides
+          a verified protein exemplar.
   - node_id: acetate
     label: acetate
     node_type: CHEMICAL
@@ -122,7 +145,7 @@ causal_graphs:
       entry_status: UNREVIEWED
       proteome_id: UP000000750
       retrieved_on: '2026-08-23'
-      entry_version: 146
+      entry_version: 147
       sequence_version: 1
       role: ArcC of the arginine-deiminase pathway, which catalyzes the ATP-forming
         carbamate-kinase reaction represented by this node.
@@ -389,4 +412,11 @@ curation_history:
   action: ADD_PATHWAY_CONTEXT
   changes: Added pinned PathwayMech context on reviewed causal nodes with explicit
     route and organism limitations; retained existing groundings and exact xrefs.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:Q99YT9
+    version metadata (entry_version=147, sequence_version=1); added UniProtKB:Q49YE2
+    (ackA) protein example to node acetate_kinase.'
   llm_assisted: true

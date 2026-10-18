@@ -66,6 +66,24 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Antiporter exchanging sodium ions and protons during alkaline pH
       homeostasis.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q93F90
+      protein_label: Na(+)/H(+) antiporter NhaA
+      gene_symbol: nhaA
+      taxon_id: NCBITaxon:1890
+      taxon_label: Streptomyces antibioticus
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 71
+      sequence_version: 1
+      role: Exemplar protein (nhaA, Na(+)/H(+) antiporter NhaA) representing Na+/H+
+        antiporter in Streptomyces antibioticus for obligately alkaliphilic.
+      evidence:
+      - reference: DOI:10.1128/aem.00145-24
+        snippet: transport systems that regulate intracellular Na+/K+/H+ concentration
+        notes: Supports Na+/H+ antiporter in obligately alkaliphilic; UniProtKB:Q93F90
+          (nhaA, Na(+)/H(+) antiporter NhaA) in Streptomyces antibioticus provides
+          a verified protein exemplar.
   - node_id: cytoplasmic_ph_homeostasis
     label: cytoplasmic pH homeostasis
     node_type: BIOLOGICAL_PROCESS
@@ -79,6 +97,28 @@ causal_graphs:
     label: proton-coupled ATP synthase
     node_type: GENE_OR_PROTEIN
     description: ATP synthase that remains proton-coupled in respiratory alkaliphiles.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q49Z52
+      protein_label: ATP synthase subunit alpha
+      gene_symbol: atpA
+      taxon_id: NCBITaxon:342451
+      taxon_label: Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
+        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+      entry_status: REVIEWED
+      proteome_id: UP000006371
+      retrieved_on: '2026-10-17'
+      entry_version: 137
+      sequence_version: 1
+      role: Exemplar protein (atpA, ATP synthase subunit alpha) representing proton-coupled
+        ATP synthase in Staphylococcus saprophyticus subsp. saprophyticus (strain
+        ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) for obligately alkaliphilic.
+      evidence:
+      - reference: DOI:10.1016/j.bbabio.2010.02.028
+        snippet: robust H+-coupled ATP synthesis at external pH values > 10
+        notes: Supports proton-coupled ATP synthase in obligately alkaliphilic; UniProtKB:Q49Z52
+          (atpA, ATP synthase subunit alpha) in Staphylococcus saprophyticus subsp.
+          saprophyticus (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 /
+          S-41) provides a verified protein exemplar.
   - node_id: trkah_transport_system
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
@@ -87,6 +127,29 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Potassium uptake system contributing to pH homeostasis and membrane
       potential adjustment.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q8ZKW1
+      protein_label: Low affinity potassium transport system protein Kup
+      gene_symbol: kup
+      taxon_id: NCBITaxon:99287
+      taxon_label: Salmonella typhimurium (strain LT2 / SGSC1412 / ATCC 700720)
+      entry_status: REVIEWED
+      proteome_id: UP000001014
+      retrieved_on: '2026-10-17'
+      entry_version: 105
+      sequence_version: 1
+      role: Exemplar protein (kup, Low affinity potassium transport system protein
+        Kup) representing TrkAH K+ uptake system in Salmonella typhimurium (strain
+        LT2 / SGSC1412 / ATCC 700720) for obligately alkaliphilic.
+      evidence:
+      - reference: DOI:10.1038/nrmicro2549
+        snippet: For pH homeostasis under alkaline conditions, active transport of
+          protons inward is a crucial adaptation, which usually involves activation
+          and transcriptional up-regulation of key cation/proton antiporters
+        notes: Supports TrkAH K+ uptake system in obligately alkaliphilic; UniProtKB:Q8ZKW1
+          (kup, Low affinity potassium transport system protein Kup) in Salmonella
+          typhimurium (strain LT2 / SGSC1412 / ATCC 700720) provides a verified protein
+          exemplar.
   - node_id: cation_proton_antiporter
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
@@ -95,6 +158,28 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: CPA/Mrp and Nha family antiporters regulating H+ influx and Na+ efflux
       under stress.
+    protein_examples:
+    - uniprot_id: UniProtKB:P39830
+      protein_label: Putative cation/proton antiporter YbaL
+      gene_symbol: ybaL
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 184
+      sequence_version: 2
+      role: Exemplar protein (ybaL, Putative cation/proton antiporter YbaL) representing
+        monovalent cation/proton antiporters in Escherichia coli (strain K12) for
+        obligately alkaliphilic.
+      evidence:
+      - reference: DOI:10.1038/nrmicro2549
+        snippet: For pH homeostasis under alkaline conditions, active transport of
+          protons inward is a crucial adaptation, which usually involves activation
+          and transcriptional up-regulation of key cation/proton antiporters
+        notes: Supports monovalent cation/proton antiporters in obligately alkaliphilic;
+          UniProtKB:P39830 (ybaL, Putative cation/proton antiporter YbaL) in Escherichia
+          coli (strain K12) provides a verified protein exemplar.
   - node_id: secondary_cell_wall_polymers
     label: secondary cell wall polymers / S-layer
     node_type: CELLULAR_LOCALIZATION
@@ -374,3 +459,12 @@ curation_history:
     2026-06-12; parent_traits (''METPO:1003000'',) -> (''METPO:1003002'',); synonyms
     synchronized at ontology-declared scope; grounded node obligately_alkaphilic_trait
     label synchronized'
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q93F90 (nhaA)
+    protein example to node sodium_proton_antiporter; added UniProtKB:Q49Z52 (atpA)
+    protein example to node proton_coupled_atp_synthase; added UniProtKB:Q8ZKW1 (kup)
+    protein example to node trkah_transport_system; added UniProtKB:P39830 (ybaL)
+    protein example to node cation_proton_antiporter.'
+  llm_assisted: true

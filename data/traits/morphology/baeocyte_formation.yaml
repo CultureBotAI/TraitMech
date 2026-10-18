@@ -77,3 +77,74 @@ curation_history:
     morphology distinct from resistant endospores, coenobia and inferred protein mechanisms;
     existing records unchanged.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph baeocyte_formation_graph
+    with GENE_OR_PROTEIN node baeocyte_formation_protein_component and UniProtKB:Q9RGZ5
+    exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: baeocyte_formation_graph
+  title: Protein component associated with baeocyte formation
+  description: Literature-backed association between Na(+)/H(+) antiporter subunit
+    A (UniProtKB:Q9RGZ5) and baeocyte formation.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q9RGZ5 in Alkalihalophilus
+    pseudofirmus (strain ATCC BAA-2126 / JCM 17055 / OF4) (Bacillus pseudofirmus))
+    associated with baeocyte formation while full multi-step mechanistic curation
+    remains future work.
+  nodes:
+  - node_id: baeocyte_formation_trait
+    label: baeocyte formation
+    node_type: TRAIT
+    grounding: traitmech:000672
+    description: A morphological phenotype in which a cyanobacterium forms small reproductive
+      cells called baeocytes by multiple fission within a mother cell.
+  - node_id: baeocyte_formation_protein_component
+    label: Na(+)/H(+) antiporter subunit A
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Na(+)/H(+) antiporter subunit A) associated with
+      baeocyte formation.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - mrpA
+    protein_examples:
+    - uniprot_id: UniProtKB:Q9RGZ5
+      protein_label: Na(+)/H(+) antiporter subunit A
+      gene_symbol: mrpA
+      taxon_id: NCBITaxon:398511
+      taxon_label: Alkalihalophilus pseudofirmus (strain ATCC BAA-2126 / JCM 17055
+        / OF4) (Bacillus pseudofirmus)
+      entry_status: REVIEWED
+      proteome_id: UP000001544
+      retrieved_on: '2026-10-17'
+      entry_version: 115
+      sequence_version: 2
+      role: Characteristic protein component (mrpA, Na(+)/H(+) antiporter subunit
+        A) associated with baeocyte formation in Alkalihalophilus pseudofirmus (strain
+        ATCC BAA-2126 / JCM 17055 / OF4) (Bacillus pseudofirmus).
+      evidence:
+      - reference: PMID:18365724
+        snippet: Electron microscopy of cyanobacteria Pleurocapsa sp. CALU 1126 revealed
+          that multiple fission proceeds by successive binary fissions.
+        notes: Supports Na(+)/H(+) antiporter subunit A in baeocyte formation; UniProtKB:Q9RGZ5
+          (mrpA, Na(+)/H(+) antiporter subunit A) in Alkalihalophilus pseudofirmus
+          (strain ATCC BAA-2126 / JCM 17055 / OF4) (Bacillus pseudofirmus) provides
+          a verified protein exemplar.
+  edges:
+  - subject: baeocyte_formation_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: baeocyte_formation_trait
+    description: Na(+)/H(+) antiporter subunit A (mrpA, UniProtKB:Q9RGZ5) contributes
+      to baeocyte formation (associated with cyanobacteria, pleurocapsa, microscopy).
+    evidence:
+    - reference: PMID:18365724
+      snippet: Electron microscopy of cyanobacteria Pleurocapsa sp. CALU 1126 revealed
+        that multiple fission proceeds by successive binary fissions.
+      notes: Supports the functional association between Na(+)/H(+) antiporter subunit
+        A (UniProtKB:Q9RGZ5 in Alkalihalophilus pseudofirmus (strain ATCC BAA-2126
+        / JCM 17055 / OF4) (Bacillus pseudofirmus)) and baeocyte formation.

@@ -19,6 +19,13 @@ curation_history:
     lateral-flagella evidence after a repository-wide duplicate review covering ignored
     and hidden files.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph lateral_flagellation_graph
+    with GENE_OR_PROTEIN node lateral_flagellation_protein_component and UniProtKB:O52908
+    exemplar.'
+  llm_assisted: true
 definition_source: DOI:10.1111/j.1574-6968.2006.00403.x
 evidence:
 - reference: DOI:10.1111/j.1574-6968.2006.00403.x
@@ -49,3 +56,70 @@ canonical_examples:
   note: Belas et al. describe V. parahaemolyticus as producing a polar swimming flagellum
     and lateral flagella that enable swarming on surfaces.
   reference: DOI:10.1128/jb.167.1.210-218.1986
+causal_graphs:
+- graph_id: lateral_flagellation_graph
+  title: Protein component associated with lateral flagellation
+  description: Literature-backed association between Flagellar biosynthesis protein
+    FlhF (UniProtKB:O52908) and lateral flagellation.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:O52908 in Campylobacter
+    jejuni subsp. jejuni serotype O:2 (strain ATCC 700819 / NCTC 11168)) associated
+    with lateral flagellation while full multi-step mechanistic curation remains future
+    work.
+  nodes:
+  - node_id: lateral_flagellation_trait
+    label: lateral flagellation
+    node_type: TRAIT
+    grounding: METPO:1005036
+    description: A motility phenotype in which flagella emerge from the lateral side
+      of the cell.
+  - node_id: lateral_flagellation_protein_component
+    label: Flagellar biosynthesis protein FlhF
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Flagellar biosynthesis protein FlhF) associated
+      with lateral flagellation.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - flhF
+    protein_examples:
+    - uniprot_id: UniProtKB:O52908
+      protein_label: Flagellar biosynthesis protein FlhF
+      gene_symbol: flhF
+      taxon_id: NCBITaxon:192222
+      taxon_label: Campylobacter jejuni subsp. jejuni serotype O:2 (strain ATCC 700819
+        / NCTC 11168)
+      entry_status: REVIEWED
+      proteome_id: UP000000799
+      retrieved_on: '2026-10-17'
+      entry_version: 144
+      sequence_version: 2
+      role: Characteristic protein component (flhF, Flagellar biosynthesis protein
+        FlhF) associated with lateral flagellation in Campylobacter jejuni subsp.
+        jejuni serotype O:2 (strain ATCC 700819 / NCTC 11168).
+      evidence:
+      - reference: DOI:10.1111/j.1574-6968.2006.00403.x
+        snippet: These bacteria are able to express both a constitutive polar flagellum
+          required for swimming motility and a separate lateral flagella system that
+          is induced in viscous media or on surfaces and is essential for swarming
+          motility.
+        notes: Supports Flagellar biosynthesis protein FlhF in lateral flagellation;
+          UniProtKB:O52908 (flhF, Flagellar biosynthesis protein FlhF) in Campylobacter
+          jejuni subsp. jejuni serotype O:2 (strain ATCC 700819 / NCTC 11168) provides
+          a verified protein exemplar.
+  edges:
+  - subject: lateral_flagellation_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: lateral_flagellation_trait
+    description: Flagellar biosynthesis protein FlhF (flhF, UniProtKB:O52908) contributes
+      to lateral flagellation (associated with constitutive, flagellum, bacteria).
+    evidence:
+    - reference: DOI:10.1111/j.1574-6968.2006.00403.x
+      snippet: These bacteria are able to express both a constitutive polar flagellum
+        required for swimming motility and a separate lateral flagella system that
+        is induced in viscous media or on surfaces and is essential for swarming motility.
+      notes: Supports the functional association between Flagellar biosynthesis protein
+        FlhF (UniProtKB:O52908 in Campylobacter jejuni subsp. jejuni serotype O:2
+        (strain ATCC 700819 / NCTC 11168)) and lateral flagellation.

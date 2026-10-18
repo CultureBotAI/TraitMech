@@ -56,6 +56,25 @@ causal_graphs:
     label: curvature scaffold
     node_type: GENE_OR_PROTEIN
     description: Protein scaffold or shape complex that biases cell curvature.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q01465
+      protein_label: Cell shape-determining protein MreB
+      gene_symbol: mreB
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
+      entry_status: REVIEWED
+      proteome_id: UP000001570
+      retrieved_on: '2026-10-17'
+      entry_version: 148
+      sequence_version: 3
+      role: Exemplar protein (mreB, Cell shape-determining protein MreB) representing
+        curvature scaffold in Bacillus subtilis (strain 168) for spiral shaped.
+      evidence:
+      - reference: DOI:10.1371/journal.pbio.1002565
+        snippet: scaffold-mediated delineation of an inner curvature
+        notes: Supports curvature scaffold in spiral shaped; UniProtKB:Q01465 (mreB,
+          Cell shape-determining protein MreB) in Bacillus subtilis (strain 168) provides
+          a verified protein exemplar.
   - node_id: helical_curvature
     label: helical curvature
     node_type: BIOLOGICAL_PROCESS
@@ -279,4 +298,10 @@ curation_history:
     the tranche: set graph scope spiral_shaped_curvature_mechanisms=NONMECHANISTIC
     with scope_notes; marked 1 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (curvature_scaffold).'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q01465 (mreB)
+    protein example to node curvature_scaffold.'
   llm_assisted: true

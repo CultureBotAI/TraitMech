@@ -75,6 +75,37 @@ causal_graphs:
     node_type: ENVIRONMENTAL_FACTOR
     description: Environment with low nutrient availability favoring low-regulation,
       streamlined strategies.
+  - node_id: cell_length_very_small_protein_component
+    label: Cell division protein FtsZ
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Cell division protein FtsZ) associated with cell
+      length very small.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - ftsZ
+    protein_examples:
+    - uniprot_id: UniProtKB:V6F5E5
+      protein_label: Cell division protein FtsZ
+      gene_symbol: ftsZ
+      taxon_id: NCBITaxon:431944
+      taxon_label: Magnetospirillum gryphiswaldense (strain DSM 6361 / JCM 21280 /
+        NBRC 15271 / MSR-1)
+      entry_status: REVIEWED
+      proteome_id: UP000018922
+      retrieved_on: '2026-10-17'
+      entry_version: 63
+      sequence_version: 1
+      role: Characteristic protein component (ftsZ, Cell division protein FtsZ) associated
+        with cell length very small in Magnetospirillum gryphiswaldense (strain DSM
+        6361 / JCM 21280 / NBRC 15271 / MSR-1).
+      evidence:
+      - reference: DOI:10.1038/ismej.2014.60
+        snippet: minimizes resources required for replication
+        notes: Supports Cell division protein FtsZ in cell length very small; UniProtKB:V6F5E5
+          (ftsZ, Cell division protein FtsZ) in Magnetospirillum gryphiswaldense (strain
+          DSM 6361 / JCM 21280 / NBRC 15271 / MSR-1) provides a verified protein exemplar.
   edges:
   - subject: oligotrophic_environment
     predicate: regulates
@@ -147,6 +178,18 @@ causal_graphs:
     - reference: DOI:10.1128/MMBR.00124-22
       notes: A reduction of transcriptional regulation in aquatic oligotrophic microorganisms
         enhances fitness in nutrient-poor environments.
+  - subject: cell_length_very_small_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: cell_length_very_small_trait
+    description: Cell division protein FtsZ (ftsZ, UniProtKB:V6F5E5) contributes to
+      cell length very small (associated with replication, minimizes, resources).
+    evidence:
+    - reference: DOI:10.1038/ismej.2014.60
+      snippet: minimizes resources required for replication
+      notes: Supports the functional association between Cell division protein FtsZ
+        (UniProtKB:V6F5E5 in Magnetospirillum gryphiswaldense (strain DSM 6361 / JCM
+        21280 / NBRC 15271 / MSR-1)) and cell length very small.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.919417+00:00'
   curator: seed_from_metpo
@@ -217,4 +260,10 @@ curation_history:
     canonical example(s): Flavicella sediminum (NCBITaxon:2585141; DOI:10.1099/ijsem.0.003839).
     The note retains the measured value or scopes broad-class examples to the cited
     branch; no paid research was used.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    cell_length_very_small_protein_component with UniProtKB:V6F5E5 (ftsZ) exemplar.'
   llm_assisted: true

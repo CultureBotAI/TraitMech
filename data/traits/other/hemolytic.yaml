@@ -18,6 +18,12 @@ curation_history:
     aureus hemolysis evidence after a repository-wide duplicate review covering ignored
     and hidden files.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph hemolytic_graph
+    with GENE_OR_PROTEIN node hemolytic_protein_component and UniProtKB:P08715 exemplar.'
+  llm_assisted: true
 definition_source: DOI:10.3390/toxins5061140
 evidence:
 - reference: DOI:10.3390/toxins5061140
@@ -30,3 +36,56 @@ canonical_examples:
   note: Canonical hemolytic bacterium whose culture supernatants have long been assayed
     for rabbit red-blood-cell lysis.
   reference: DOI:10.3390/toxins5061140
+causal_graphs:
+- graph_id: hemolytic_graph
+  title: Protein component associated with hemolytic
+  description: Literature-backed association between Hemolysin, plasmid (UniProtKB:P08715)
+    and hemolytic.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P08715 in Escherichia
+    coli) associated with hemolytic while full multi-step mechanistic curation remains
+    future work.
+  nodes:
+  - node_id: hemolytic_trait
+    label: hemolytic
+    node_type: TRAIT
+    grounding: METPO:1005026
+    description: A phenotype in which an organism is capable of lysing red blood cells.
+  - node_id: hemolytic_protein_component
+    label: Hemolysin, plasmid
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Hemolysin, plasmid) associated with hemolytic.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - hlyA
+    protein_examples:
+    - uniprot_id: UniProtKB:P08715
+      protein_label: Hemolysin, plasmid
+      gene_symbol: hlyA
+      taxon_id: NCBITaxon:562
+      taxon_label: Escherichia coli
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 130
+      sequence_version: 1
+      role: Characteristic protein component (hlyA, Hemolysin, plasmid) associated
+        with hemolytic in Escherichia coli.
+      evidence:
+      - reference: DOI:10.3390/toxins5061140
+        snippet: hemolysis to toxigenic substances secreted by S. aureus
+        notes: Supports Hemolysin, plasmid in hemolytic; UniProtKB:P08715 (hlyA, Hemolysin,
+          plasmid) in Escherichia coli provides a verified protein exemplar.
+  edges:
+  - subject: hemolytic_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: hemolytic_trait
+    description: Hemolysin, plasmid (hlyA, UniProtKB:P08715) contributes to hemolytic
+      (associated with substances, hemolysis, toxigenic).
+    evidence:
+    - reference: DOI:10.3390/toxins5061140
+      snippet: hemolysis to toxigenic substances secreted by S. aureus
+      notes: Supports the functional association between Hemolysin, plasmid (UniProtKB:P08715
+        in Escherichia coli) and hemolytic.

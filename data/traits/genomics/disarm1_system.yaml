@@ -95,6 +95,37 @@ causal_graphs:
     node_type: TRAIT
     grounding: traitmech:000211
     description: Possession of a genome-encoded DISARM phage-defense system.
+  - node_id: disarm1_system_protein_component
+    label: DISARM protein DrmC
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (DISARM protein DrmC) associated with DISARM1 system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - drmC
+    protein_examples:
+    - uniprot_id: UniProtKB:P0DW07
+      protein_label: DISARM protein DrmC
+      gene_symbol: drmC
+      taxon_id: NCBITaxon:766760
+      taxon_label: Bacillus paralicheniformis (strain ATCC 9945a / NCIMB 11709 / CD-2)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 12
+      sequence_version: 1
+      role: Characteristic protein component (drmC, DISARM protein DrmC) associated
+        with DISARM1 system in Bacillus paralicheniformis (strain ATCC 9945a / NCIMB
+        11709 / CD-2).
+      evidence:
+      - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+        snippet: '| DISARM__drmA | DISARM__drmA | DISARM | Custom | 90 | | DISARM__drmB
+          | DISARM__drmB | DISARM | Custom | 90 | | DISARM__drmC | DISARM__drmC |
+          DISARM | Custom | 40 | | DISARM_2__drmE | DISARM_2__drmE | DISARM_2 | Custom
+          | 90 | | DISARM_2__drmMII | DISARM_2__drmMII | DISARM_2 | Custom | 90 |'
+        notes: Supports DISARM protein DrmC in DISARM1 system; UniProtKB:P0DW07 (drmC,
+          DISARM protein DrmC) in Bacillus paralicheniformis (strain ATCC 9945a /
+          NCIMB 11709 / CD-2) provides a verified protein exemplar.
   edges:
   - subject: disarm1_locus
     predicate: contributes to
@@ -172,6 +203,21 @@ causal_graphs:
       notes: The pinned DefenseFinder rules table models DISARM_1 as a DISARM subsystem
         requiring four profiles from DISARM_1__drmD, DISARM_1__drmMI, DISARM__drmA,
         DISARM__drmB, and DISARM__drmC.
+  - subject: disarm1_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: disarm1_system_trait
+    description: DISARM protein DrmC (drmC, UniProtKB:P0DW07) contributes to DISARM1
+      system (associated with custom, disarm, drmmii).
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| DISARM__drmA | DISARM__drmA | DISARM | Custom | 90 | | DISARM__drmB
+        | DISARM__drmB | DISARM | Custom | 90 | | DISARM__drmC | DISARM__drmC | DISARM
+        | Custom | 40 | | DISARM_2__drmE | DISARM_2__drmE | DISARM_2 | Custom | 90
+        | | DISARM_2__drmMII | DISARM_2__drmMII | DISARM_2 | Custom | 90 |'
+      notes: Supports the functional association between DISARM protein DrmC (UniProtKB:P0DW07
+        in Bacillus paralicheniformis (strain ATCC 9945a / NCIMB 11709 / CD-2)) and
+        DISARM1 system.
 discussions:
 - discussion_id: disarm1-profile-activity-gap
   prompt: Resolve DISARM1 effector chemistry, exact native hosts, sensitive-phage
@@ -234,4 +280,10 @@ curation_history:
     family and the DISARM_1 model namespace but not an accession-backed native microbial
     taxon exemplar tied to DISARM_1 profiles and experimentally verified endogenous
     DISARM1 activity. No paid research was used.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    disarm1_system_protein_component with UniProtKB:P0DW07 (drmC) exemplar.'
   llm_assisted: true

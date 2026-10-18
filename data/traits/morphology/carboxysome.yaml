@@ -72,6 +72,24 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Carboxysomal enzyme dehydrating bicarbonate to CO2 near RuBisCO.
     grounding: InterPro:IPR001765
+    protein_examples:
+    - uniprot_id: UniProtKB:Q5KW03
+      protein_label: Carbonic anhydrase
+      taxon_id: NCBITaxon:235909
+      taxon_label: Geobacillus kaustophilus (strain HTA426)
+      entry_status: REVIEWED
+      proteome_id: UP000001172
+      retrieved_on: '2026-10-17'
+      entry_version: 114
+      sequence_version: 1
+      role: Exemplar protein (Q5KW03, Carbonic anhydrase) representing carbonic anhydrase
+        in Geobacillus kaustophilus (strain HTA426) for carboxysome.
+      evidence:
+      - reference: DOI:10.1128/mmbr.00061-12
+        snippet: CcmK shell proteins form the carboxysome boundary
+        notes: Supports carbonic anhydrase in carboxysome; UniProtKB:Q5KW03 (Q5KW03,
+          Carbonic anhydrase) in Geobacillus kaustophilus (strain HTA426) provides
+          a verified protein exemplar.
   - node_id: bicarbonate
     label: bicarbonate
     node_type: CHEMICAL
@@ -99,7 +117,7 @@ causal_graphs:
       entry_status: REVIEWED
       proteome_id: UP000889800
       retrieved_on: '2026-08-25'
-      entry_version: 110
+      entry_version: 111
       sequence_version: 1
       role: CcmK2 is one hexamer-forming component of the beta-carboxysome shell;
         the accession does not denote the complete shell.
@@ -266,4 +284,11 @@ curation_history:
   changes: 'Ontology exact-match review (2026-08-25): approved exact xref(s): GO:0031470.
     Evidence is predicate-scoped in the versioned ontology snapshots; OAK cross-checked
     direct data, and OLS4 spot-checked release deltas and disputed hits.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:Q03511
+    version metadata (entry_version=111, sequence_version=1); added UniProtKB:Q5KW03
+    (Q5KW03) protein example to node carbonic_anhydrase.'
   llm_assisted: true

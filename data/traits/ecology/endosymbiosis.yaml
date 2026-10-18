@@ -85,6 +85,39 @@ causal_graphs:
     node_type: STATE
     description: Obligate reliance of the reduced-genome symbiont on the host intracellular
       environment.
+  - node_id: endosymbiosis_protein_component
+    label: ATP synthase subunit alpha
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (ATP synthase subunit alpha) associated with endosymbiosis.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - atpA
+    protein_examples:
+    - uniprot_id: UniProtKB:Q49Z52
+      protein_label: ATP synthase subunit alpha
+      gene_symbol: atpA
+      taxon_id: NCBITaxon:342451
+      taxon_label: Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
+        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+      entry_status: REVIEWED
+      proteome_id: UP000006371
+      retrieved_on: '2026-10-17'
+      entry_version: 137
+      sequence_version: 1
+      role: Characteristic protein component (atpA, ATP synthase subunit alpha) associated
+        with endosymbiosis in Staphylococcus saprophyticus subsp. saprophyticus (strain
+        ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41).
+      evidence:
+      - reference: DOI:10.1038/nrmicro.2017.171
+        snippet: These dramatic lifestyle and developmental changes are underpinned
+          by large genomes and even more complex pan-genomes, which encompass the
+          whole population and are subject to rapid genetic exchange.
+        notes: Supports ATP synthase subunit alpha in endosymbiosis; UniProtKB:Q49Z52
+          (atpA, ATP synthase subunit alpha) in Staphylococcus saprophyticus subsp.
+          saprophyticus (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 /
+          S-41) provides a verified protein exemplar.
   edges:
   - subject: intracellular_localization
     predicate: confers
@@ -153,6 +186,20 @@ causal_graphs:
     - reference: DOI:10.3390/ijms25084228
       notes: 'Silva 2024: has undergone severe genome reduction leading to dependence
         on the intracellular environment.'
+  - subject: endosymbiosis_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: endosymbiosis_trait
+    description: ATP synthase subunit alpha (atpA, UniProtKB:Q49Z52) contributes to
+      endosymbiosis (associated with developmental, underpinned, population).
+    evidence:
+    - reference: DOI:10.1038/nrmicro.2017.171
+      snippet: These dramatic lifestyle and developmental changes are underpinned
+        by large genomes and even more complex pan-genomes, which encompass the whole
+        population and are subject to rapid genetic exchange.
+      notes: Supports the functional association between ATP synthase subunit alpha
+        (UniProtKB:Q49Z52 in Staphylococcus saprophyticus subsp. saprophyticus (strain
+        ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)) and endosymbiosis.
 curation_history:
 - timestamp: '2026-06-02T00:00:00Z'
   curator: claude
@@ -208,6 +255,12 @@ curation_history:
     tranche of 2026-08-24/25, which shipped without a per-record event. In this record
     the tranche: set graph scope endosymbiosis_intracellular_genome_reduction=NONMECHANISTIC
     with scope_notes.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    endosymbiosis_protein_component with UniProtKB:Q49Z52 (atpA) exemplar.'
   llm_assisted: true
 discussions:
 - discussion_id: kgscan-a6758e26f5a6

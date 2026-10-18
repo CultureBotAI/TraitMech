@@ -94,6 +94,25 @@ causal_graphs:
     label: pyruvate formate-lyase (PFL)
     node_type: GENE_OR_PROTEIN
     description: Glycyl-radical enzyme rapidly inactivated by O2.
+    protein_examples:
+    - uniprot_id: UniProtKB:P09373
+      protein_label: Formate acetyltransferase 1
+      gene_symbol: pflB
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 218
+      sequence_version: 2
+      role: Exemplar protein (pflB, Formate acetyltransferase 1) representing pyruvate
+        formate-lyase (PFL) in Escherichia coli (strain K12) for obligately anaerobic.
+      evidence:
+      - reference: https://www.ncbi.nlm.nih.gov/books/NBK482349/
+        snippet: will not survive if there is more than half a percent oxygen
+        notes: Supports pyruvate formate-lyase (PFL) in obligately anaerobic; UniProtKB:P09373
+          (pflB, Formate acetyltransferase 1) in Escherichia coli (strain K12) provides
+          a verified protein exemplar.
   - node_id: pyruvate_ferredoxin_oxidoreductase
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
@@ -101,6 +120,25 @@ causal_graphs:
     label: pyruvate:ferredoxin oxidoreductase (PFOR)
     node_type: GENE_OR_PROTEIN
     description: O2-sensitive anaerobic metalloenzyme.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q2RMD6
+      protein_label: Pyruvate:ferredoxin oxidoreductase
+      taxon_id: NCBITaxon:264732
+      taxon_label: Moorella thermoacetica (strain ATCC 39073 / JCM 9320)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 129
+      sequence_version: 1
+      role: Exemplar protein (Q2RMD6, Pyruvate:ferredoxin oxidoreductase) representing
+        pyruvate:ferredoxin oxidoreductase (PFOR) in Moorella thermoacetica (strain
+        ATCC 39073 / JCM 9320) for obligately anaerobic.
+      evidence:
+      - reference: https://www.ncbi.nlm.nih.gov/books/NBK482349/
+        snippet: will not survive if there is more than half a percent oxygen
+        notes: Supports pyruvate:ferredoxin oxidoreductase (PFOR) in obligately anaerobic;
+          UniProtKB:Q2RMD6 (Q2RMD6, Pyruvate:ferredoxin oxidoreductase) in Moorella
+          thermoacetica (strain ATCC 39073 / JCM 9320) provides a verified protein
+          exemplar.
   - node_id: fefe_hydrogenase
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
@@ -108,6 +146,27 @@ causal_graphs:
     label: '[FeFe]-hydrogenase'
     node_type: GENE_OR_PROTEIN
     description: Oxygen-sensitive low-potential redox enzyme.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q9X0Z6
+      protein_label: '[FeFe] hydrogenase maturase subunit HydE'
+      taxon_id: NCBITaxon:243274
+      taxon_label: Thermotoga maritima (strain ATCC 43589 / DSM 3109 / JCM 10099 /
+        NBRC 100826 / MSB8)
+      entry_status: REVIEWED
+      proteome_id: UP000008183
+      retrieved_on: '2026-10-17'
+      entry_version: 150
+      sequence_version: 1
+      role: Exemplar protein (Q9X0Z6, [FeFe] hydrogenase maturase subunit HydE) representing
+        [FeFe]-hydrogenase in Thermotoga maritima (strain ATCC 43589 / DSM 3109 /
+        JCM 10099 / NBRC 100826 / MSB8) for obligately anaerobic.
+      evidence:
+      - reference: https://www.ncbi.nlm.nih.gov/books/NBK482349/
+        snippet: will not survive if there is more than half a percent oxygen
+        notes: Supports [FeFe]-hydrogenase in obligately anaerobic; UniProtKB:Q9X0Z6
+          (Q9X0Z6, [FeFe] hydrogenase maturase subunit HydE) in Thermotoga maritima
+          (strain ATCC 43589 / DSM 3109 / JCM 10099 / NBRC 100826 / MSB8) provides
+          a verified protein exemplar.
   edges:
   - subject: molecular_oxygen
     predicate: inhibits
@@ -270,4 +329,12 @@ curation_history:
     the tranche: set graph scope obligate_anaerobe_oxygen_toxicity=NONMECHANISTIC
     with scope_notes; marked 3 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (pyruvate_formate_lyase, pyruvate_ferredoxin_oxidoreductase, fefe_hydrogenase).'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P09373 (pflB)
+    protein example to node pyruvate_formate_lyase; added UniProtKB:Q2RMD6 (Q2RMD6)
+    protein example to node pyruvate_ferredoxin_oxidoreductase; added UniProtKB:Q9X0Z6
+    (Q9X0Z6) protein example to node fefe_hydrogenase.'
   llm_assisted: true

@@ -79,3 +79,72 @@ curation_history:
     Preserved all definitions, parents, evidence, examples and prior history. Component
     absence, LmuB-length family and experimental activity remain separate claims.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph lamassu_type_ii_system_graph
+    with GENE_OR_PROTEIN node lamassu_type_ii_system_protein_component and UniProtKB:P0DW44
+    exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: lamassu_type_ii_system_graph
+  title: Protein component associated with Lamassu type II system
+  description: Literature-backed association between Lamassu protein LmuB (UniProtKB:P0DW44)
+    and Lamassu type II system.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P0DW44 in Bacillus
+    sp. (strain NCIM 5461 / CCTCC AB 2011126 / NIO-1130)) associated with Lamassu
+    type II system while full multi-step mechanistic curation remains future work.
+  nodes:
+  - node_id: lamassu_type_ii_system_trait
+    label: Lamassu type II system
+    node_type: TRAIT
+    grounding: traitmech:000572
+    description: A Lamassu system in which an organism possesses a locus with an additional
+      LmuC component alongside the LmuA effector module and SMC-like LmuB sensor.
+  - node_id: lamassu_type_ii_system_protein_component
+    label: Lamassu protein LmuB
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Lamassu protein LmuB) associated with Lamassu
+      type II system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - lmuB
+    protein_examples:
+    - uniprot_id: UniProtKB:P0DW44
+      protein_label: Lamassu protein LmuB
+      gene_symbol: lmuB
+      taxon_id: NCBITaxon:1761765
+      taxon_label: Bacillus sp. (strain NCIM 5461 / CCTCC AB 2011126 / NIO-1130)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 8
+      sequence_version: 1
+      role: Characteristic protein component (lmuB, Lamassu protein LmuB) associated
+        with Lamassu type II system in Bacillus sp. (strain NCIM 5461 / CCTCC AB 2011126
+        / NIO-1130).
+      evidence:
+      - reference: DOI:10.1093/nar/gkab883
+        snippet: Similarly, an additional hypothetical protein (LmuC) was identified
+          in about 10.2% of the Lamassu systems detected (371 systems) (Lamassu type
+          II).
+        notes: Supports Lamassu protein LmuB in Lamassu type II system; UniProtKB:P0DW44
+          (lmuB, Lamassu protein LmuB) in Bacillus sp. (strain NCIM 5461 / CCTCC AB
+          2011126 / NIO-1130) provides a verified protein exemplar.
+  edges:
+  - subject: lamassu_type_ii_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: lamassu_type_ii_system_trait
+    description: Lamassu protein LmuB (lmuB, UniProtKB:P0DW44) contributes to Lamassu
+      type II system (associated with additional, identified, similarly).
+    evidence:
+    - reference: DOI:10.1093/nar/gkab883
+      snippet: Similarly, an additional hypothetical protein (LmuC) was identified
+        in about 10.2% of the Lamassu systems detected (371 systems) (Lamassu type
+        II).
+      notes: Supports the functional association between Lamassu protein LmuB (UniProtKB:P0DW44
+        in Bacillus sp. (strain NCIM 5461 / CCTCC AB 2011126 / NIO-1130)) and Lamassu
+        type II system.

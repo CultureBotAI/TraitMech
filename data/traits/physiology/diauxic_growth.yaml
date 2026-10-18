@@ -113,3 +113,71 @@ curation_history:
     distinctions and provenance limits are explicit. Existing traits unchanged; timestamp
     is the observed UTC curation decision.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph diauxic_growth_graph
+    with GENE_OR_PROTEIN node diauxic_growth_protein_component and UniProtKB:Q7A225
+    exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: diauxic_growth_graph
+  title: Protein component associated with diauxic growth
+  description: Literature-backed association between Endoribonuclease HigB (UniProtKB:Q7A225)
+    and diauxic growth.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q7A225 in Proteus
+    vulgaris) associated with diauxic growth while full multi-step mechanistic curation
+    remains future work.
+  nodes:
+  - node_id: diauxic_growth_trait
+    label: diauxic growth
+    node_type: TRAIT
+    grounding: traitmech:000704
+    description: A physiological phenotype in which a microbial population exhibits
+      two successive growth phases associated with a switch from preferential use
+      of one nutrient source to use of another as the first becomes limiting.
+  - node_id: diauxic_growth_protein_component
+    label: Endoribonuclease HigB
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Endoribonuclease HigB) associated with diauxic
+      growth.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - higB
+    protein_examples:
+    - uniprot_id: UniProtKB:Q7A225
+      protein_label: Endoribonuclease HigB
+      gene_symbol: higB
+      taxon_id: NCBITaxon:585
+      taxon_label: Proteus vulgaris
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 69
+      sequence_version: 1
+      role: Characteristic protein component (higB, Endoribonuclease HigB) associated
+        with diauxic growth in Proteus vulgaris.
+      evidence:
+      - reference: DOI:10.1371/journal.pbio.1002041
+        snippet: many natural isolates of Saccharomyces cerevisiae display short or
+          nonexistent diauxic lags when grown in mixtures of glucose (preferred) and
+          galactose.
+        notes: Supports Endoribonuclease HigB in diauxic growth; UniProtKB:Q7A225
+          (higB, Endoribonuclease HigB) in Proteus vulgaris provides a verified protein
+          exemplar.
+  edges:
+  - subject: diauxic_growth_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: diauxic_growth_trait
+    description: Endoribonuclease HigB (higB, UniProtKB:Q7A225) contributes to diauxic
+      growth (associated with saccharomyces, nonexistent, cerevisiae).
+    evidence:
+    - reference: DOI:10.1371/journal.pbio.1002041
+      snippet: many natural isolates of Saccharomyces cerevisiae display short or
+        nonexistent diauxic lags when grown in mixtures of glucose (preferred) and
+        galactose.
+      notes: Supports the functional association between Endoribonuclease HigB (UniProtKB:Q7A225
+        in Proteus vulgaris) and diauxic growth.

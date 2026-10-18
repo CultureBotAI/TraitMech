@@ -97,6 +97,33 @@ causal_graphs:
     grounding: traitmech:000209
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
+  - node_id: brc22_system_protein_component
+    label: Endoribonuclease HigB
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Endoribonuclease HigB) associated with Brc22 system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - higB
+    protein_examples:
+    - uniprot_id: UniProtKB:Q7A225
+      protein_label: Endoribonuclease HigB
+      gene_symbol: higB
+      taxon_id: NCBITaxon:585
+      taxon_label: Proteus vulgaris
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 69
+      sequence_version: 1
+      role: Characteristic protein component (higB, Endoribonuclease HigB) associated
+        with Brc22 system in Proteus vulgaris.
+      evidence:
+      - reference: https://www.science.org/doi/suppl/10.1126/science.ads0915/suppl_file/science.ads0915_sm.pdf
+        snippet: attC of brc22, with a perfect GTT/AAC binding between both arms of
+          the stem
+        notes: Supports Endoribonuclease HigB in Brc22 system; UniProtKB:Q7A225 (higB,
+          Endoribonuclease HigB) in Proteus vulgaris provides a verified protein exemplar.
   edges:
   - subject: brc22_integron_cassette
     predicate: contributes to
@@ -150,6 +177,18 @@ causal_graphs:
         brc23'
       notes: Kieffer et al. include brc22 among identified BRiCs with predicted attC
         secondary structures.
+  - subject: brc22_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: brc22_system_trait
+    description: Endoribonuclease HigB (higB, UniProtKB:Q7A225) contributes to Brc22
+      system (associated with binding, perfect, brc22).
+    evidence:
+    - reference: https://www.science.org/doi/suppl/10.1126/science.ads0915/suppl_file/science.ads0915_sm.pdf
+      snippet: attC of brc22, with a perfect GTT/AAC binding between both arms of
+        the stem
+      notes: Supports the functional association between Endoribonuclease HigB (UniProtKB:Q7A225
+        in Proteus vulgaris) and Brc22 system.
 discussions:
 - discussion_id: brc22-defensefinder-model-gap
   prompt: Resolve Brc22 native host breadth, exact sensitive-phage breadth, molecular
@@ -244,4 +283,10 @@ curation_history:
     empty because the sources support heterologous gcu22/Brc22 phage-resistance assays
     but not a direct named native microbial isolate exemplar with experimentally verified
     endogenous Brc22 activity. No paid research was used.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    brc22_system_protein_component with UniProtKB:Q7A225 (higB) exemplar.'
   llm_assisted: true

@@ -94,6 +94,34 @@ causal_graphs:
     grounding: traitmech:000209
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
+  - node_id: kiwa_system_protein_component
+    label: Kiwa protein KwaB
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Kiwa protein KwaB) associated with Kiwa system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - kwaB
+    protein_examples:
+    - uniprot_id: UniProtKB:P0DW46
+      protein_label: Kiwa protein KwaB
+      gene_symbol: kwaB
+      taxon_id: NCBITaxon:1048689
+      taxon_label: Escherichia coli O55:H7 (strain RM12579 / EPEC)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 14
+      sequence_version: 1
+      role: Characteristic protein component (kwaB, Kiwa protein KwaB) associated
+        with Kiwa system in Escherichia coli O55:H7 (strain RM12579 / EPEC).
+      evidence:
+      - reference: DOI:10.1016/j.cell.2025.07.002
+        snippet: Kiwa, a widespread two-component system composed of the transmembrane
+          sensor KwaA and the DNA-binding effector KwaB
+        notes: Supports Kiwa protein KwaB in Kiwa system; UniProtKB:P0DW46 (kwaB,
+          Kiwa protein KwaB) in Escherichia coli O55:H7 (strain RM12579 / EPEC) provides
+          a verified protein exemplar.
   edges:
   - subject: kiwa_locus
     predicate: contributes to
@@ -151,6 +179,18 @@ causal_graphs:
       snippet: Our findings support a model in which Kiwa coordinates membrane-associated
         detection of phage infection
       notes: Zhang et al. support Kiwa as an antiviral phage-defense system.
+  - subject: kiwa_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: kiwa_system_trait
+    description: Kiwa protein KwaB (kwaB, UniProtKB:P0DW46) contributes to Kiwa system
+      (associated with transmembrane, widespread, composed).
+    evidence:
+    - reference: DOI:10.1016/j.cell.2025.07.002
+      snippet: Kiwa, a widespread two-component system composed of the transmembrane
+        sensor KwaA and the DNA-binding effector KwaB
+      notes: Supports the functional association between Kiwa protein KwaB (UniProtKB:P0DW46
+        in Escherichia coli O55:H7 (strain RM12579 / EPEC)) and Kiwa system.
 discussions:
 - discussion_id: kiwa-activation-and-counterdefense-gap
   prompt: Resolve Kiwa activation, phage counter-defense, and RecBCD-rescue details
@@ -172,4 +212,10 @@ curation_history:
     defense system parent after an ignored-and-hidden duplicate review found no exact
     live TraitMech, METPO, or prior proposal record; the replacement placeholder is
     reserved in proposals/metpo_traitmech_v108.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    kiwa_system_protein_component with UniProtKB:P0DW46 (kwaB) exemplar.'
   llm_assisted: true

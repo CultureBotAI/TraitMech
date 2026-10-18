@@ -84,3 +84,71 @@ curation_history:
     mutant evidence and provenance; deferred protein mechanism. Existing records unchanged.
     Timestamp is observed UTC.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph mucocyst_discharge_graph
+    with GENE_OR_PROTEIN node mucocyst_discharge_protein_component and UniProtKB:P0AE06
+    exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: mucocyst_discharge_graph
+  title: Protein component associated with mucocyst discharge
+  description: Literature-backed association between Multidrug efflux pump subunit
+    AcrA (UniProtKB:P0AE06) and mucocyst discharge.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P0AE06 in Escherichia
+    coli (strain K12)) associated with mucocyst discharge while full multi-step mechanistic
+    curation remains future work.
+  nodes:
+  - node_id: mucocyst_discharge_trait
+    label: mucocyst discharge
+    node_type: TRAIT
+    grounding: traitmech:000684
+    description: An exocytotic phenotype in which a microbial cell releases mucocyst
+      contents to the exterior through fusion of a mucocyst membrane with the plasma
+      membrane.
+  - node_id: mucocyst_discharge_protein_component
+    label: Multidrug efflux pump subunit AcrA
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Multidrug efflux pump subunit AcrA) associated
+      with mucocyst discharge.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - acrA
+    protein_examples:
+    - uniprot_id: UniProtKB:P0AE06
+      protein_label: Multidrug efflux pump subunit AcrA
+      gene_symbol: acrA
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 154
+      sequence_version: 1
+      role: Characteristic protein component (acrA, Multidrug efflux pump subunit
+        AcrA) associated with mucocyst discharge in Escherichia coli (strain K12).
+      evidence:
+      - reference: DOI:10.1371/journal.pgen.1010194
+        snippet: lysosome-related organelles called mucocysts accumulate at the cell
+          periphery where they secrete their contents in response to extracellular
+          events
+        notes: Supports Multidrug efflux pump subunit AcrA in mucocyst discharge;
+          UniProtKB:P0AE06 (acrA, Multidrug efflux pump subunit AcrA) in Escherichia
+          coli (strain K12) provides a verified protein exemplar.
+  edges:
+  - subject: mucocyst_discharge_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: mucocyst_discharge_trait
+    description: Multidrug efflux pump subunit AcrA (acrA, UniProtKB:P0AE06) contributes
+      to mucocyst discharge (associated with extracellular, accumulate, organelles).
+    evidence:
+    - reference: DOI:10.1371/journal.pgen.1010194
+      snippet: lysosome-related organelles called mucocysts accumulate at the cell
+        periphery where they secrete their contents in response to extracellular events
+      notes: Supports the functional association between Multidrug efflux pump subunit
+        AcrA (UniProtKB:P0AE06 in Escherichia coli (strain K12)) and mucocyst discharge.

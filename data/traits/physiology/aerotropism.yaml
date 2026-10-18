@@ -112,3 +112,74 @@ curation_history:
     prior histories'' evidence-authority claims for the two unread papers; earlier
     events remain unchanged. No new snippet-baseline exceptions.'
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph aerotropism_graph
+    with GENE_OR_PROTEIN node aerotropism_protein_component and UniProtKB:Q5AD13 exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: aerotropism_graph
+  title: Protein component associated with aerotropism
+  description: Literature-backed association between Filamentous growth regulator
+    15 (UniProtKB:Q5AD13) and aerotropism.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q5AD13 in Candida
+    albicans (strain SC5314 / ATCC MYA-2876) (Yeast)) associated with aerotropism
+    while full multi-step mechanistic curation remains future work.
+  nodes:
+  - node_id: aerotropism_trait
+    label: aerotropism
+    node_type: TRAIT
+    grounding: traitmech:000601
+    description: A phenotype in which polarized growth is directionally biased in
+      response to a spatial oxygen concentration gradient.
+  - node_id: aerotropism_protein_component
+    label: Filamentous growth regulator 15
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Filamentous growth regulator 15) associated with
+      aerotropism.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - FGR15
+    protein_examples:
+    - uniprot_id: UniProtKB:Q5AD13
+      protein_label: Filamentous growth regulator 15
+      gene_symbol: FGR15
+      taxon_id: NCBITaxon:237561
+      taxon_label: Candida albicans (strain SC5314 / ATCC MYA-2876) (Yeast)
+      entry_status: REVIEWED
+      proteome_id: UP000000559
+      retrieved_on: '2026-10-17'
+      entry_version: 100
+      sequence_version: 2
+      role: Characteristic protein component (FGR15, Filamentous growth regulator
+        15) associated with aerotropism in Candida albicans (strain SC5314 / ATCC
+        MYA-2876) (Yeast).
+      evidence:
+      - reference: DOI:10.1155/2012/517529
+        snippet: C. albicans responds to other external stimuli in vitro, displaying
+          aerotropism under hypoxic conditions and galvanotropism, where hyphae germinate
+          and orient towards the cathode in an applied electric field (Figure 2(c)(iii))
+          [94, 97, 98].
+        notes: Supports Filamentous growth regulator 15 in aerotropism; UniProtKB:Q5AD13
+          (FGR15, Filamentous growth regulator 15) in Candida albicans (strain SC5314
+          / ATCC MYA-2876) (Yeast) provides a verified protein exemplar.
+  edges:
+  - subject: aerotropism_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: aerotropism_trait
+    description: Filamentous growth regulator 15 (FGR15, UniProtKB:Q5AD13) contributes
+      to aerotropism (associated with galvanotropism, aerotropism, conditions).
+    evidence:
+    - reference: DOI:10.1155/2012/517529
+      snippet: C. albicans responds to other external stimuli in vitro, displaying
+        aerotropism under hypoxic conditions and galvanotropism, where hyphae germinate
+        and orient towards the cathode in an applied electric field (Figure 2(c)(iii))
+        [94, 97, 98].
+      notes: Supports the functional association between Filamentous growth regulator
+        15 (UniProtKB:Q5AD13 in Candida albicans (strain SC5314 / ATCC MYA-2876) (Yeast))
+        and aerotropism.

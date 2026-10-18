@@ -51,3 +51,67 @@ curation_history:
   changes: 'Resolved PR #894 review issue #897 by narrowing the minted record from
     citrate utilization to pathway-scoped citrate fermentation.'
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph citrate_fermentation_graph
+    with GENE_OR_PROTEIN node citrate_fermentation_protein_component and UniProtKB:P0ABH7
+    exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: citrate_fermentation_graph
+  title: Protein component associated with citrate fermentation
+  description: Literature-backed association between Citrate synthase (UniProtKB:P0ABH7)
+    and citrate fermentation.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P0ABH7 in Escherichia
+    coli (strain K12)) associated with citrate fermentation while full multi-step
+    mechanistic curation remains future work.
+  nodes:
+  - node_id: citrate_fermentation_trait
+    label: citrate fermentation
+    node_type: TRAIT
+    grounding: traitmech:000182
+    description: A fermentation in which citrate is the primary fermentable substrate.
+  - node_id: citrate_fermentation_protein_component
+    label: Citrate synthase
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Citrate synthase) associated with citrate fermentation.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - gltA
+    protein_examples:
+    - uniprot_id: UniProtKB:P0ABH7
+      protein_label: Citrate synthase
+      gene_symbol: gltA
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 141
+      sequence_version: 1
+      role: Characteristic protein component (gltA, Citrate synthase) associated with
+        citrate fermentation in Escherichia coli (strain K12).
+      evidence:
+      - reference: DOI:10.1128/JB.183.18.5248-5256.2001
+        snippet: Klebsiella pneumoniae is able to grow anaerobically with citrate
+          as a sole carbon and energy source by a fermentative pathway
+        notes: Supports Citrate synthase in citrate fermentation; UniProtKB:P0ABH7
+          (gltA, Citrate synthase) in Escherichia coli (strain K12) provides a verified
+          protein exemplar.
+  edges:
+  - subject: citrate_fermentation_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: citrate_fermentation_trait
+    description: Citrate synthase (gltA, UniProtKB:P0ABH7) contributes to citrate
+      fermentation (associated with anaerobically, fermentative, klebsiella).
+    evidence:
+    - reference: DOI:10.1128/JB.183.18.5248-5256.2001
+      snippet: Klebsiella pneumoniae is able to grow anaerobically with citrate as
+        a sole carbon and energy source by a fermentative pathway
+      notes: Supports the functional association between Citrate synthase (UniProtKB:P0ABH7
+        in Escherichia coli (strain K12)) and citrate fermentation.

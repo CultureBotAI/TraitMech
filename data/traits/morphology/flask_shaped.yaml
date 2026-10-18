@@ -87,6 +87,25 @@ causal_graphs:
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: The contextual node spans different bactofilin paralogues across
       prosthecate taxa, so no one family or instance precisely denotes it.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q01465
+      protein_label: Cell shape-determining protein MreB
+      gene_symbol: mreB
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
+      entry_status: REVIEWED
+      proteome_id: UP000001570
+      retrieved_on: '2026-10-17'
+      entry_version: 148
+      sequence_version: 3
+      role: Exemplar protein (mreB, Cell shape-determining protein MreB) representing
+        bactofilin cytoskeleton in Bacillus subtilis (strain 168) for flask shaped.
+      evidence:
+      - reference: DOI:10.1146/annurev-cellbio-101011-155745
+        snippet: MreB-directed peptidoglycan synthesis
+        notes: Supports bactofilin cytoskeleton in flask shaped; UniProtKB:Q01465
+          (mreB, Cell shape-determining protein MreB) in Bacillus subtilis (strain
+          168) provides a verified protein exemplar.
   - node_id: asymmetric_compartment_growth
     label: asymmetric compartment growth
     node_type: BIOLOGICAL_PROCESS
@@ -228,4 +247,10 @@ curation_history:
   changes: Added Planctopirus limnophila DSM 3776 as a strain-level pear/flask-shaped
     exemplar from this record's own research artifact; NCBITaxon:521674 and its current
     label were verified against NCBI.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q01465 (mreB)
+    protein example to node bactofilin_cytoskeleton.'
   llm_assisted: true

@@ -61,6 +61,25 @@ causal_graphs:
       for this aggregate use.
     description: Sodium:proton antiporters, core regulators of cytoplasmic pH across
       changing external pH.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q93F90
+      protein_label: Na(+)/H(+) antiporter NhaA
+      gene_symbol: nhaA
+      taxon_id: NCBITaxon:1890
+      taxon_label: Streptomyces antibioticus
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 71
+      sequence_version: 1
+      role: Exemplar protein (nhaA, Na(+)/H(+) antiporter NhaA) representing Na+/H+
+        antiporters in Streptomyces antibioticus for pH delta high.
+      evidence:
+      - reference: DOI:10.1093/femsre/fuad033
+        snippet: Proton-sensing ion/H+ antiporters acidify the cytoplasm by exporting
+          K+ or Na+ in exchange for protons when the internal pH gets too high
+        notes: Supports Na+/H+ antiporters in pH delta high; UniProtKB:Q93F90 (nhaA,
+          Na(+)/H(+) antiporter NhaA) in Streptomyces antibioticus provides a verified
+          protein exemplar.
   - node_id: cytoplasmic_ph_homeostasis
     label: cytoplasmic pH homeostasis
     node_type: BIOLOGICAL_PROCESS
@@ -75,6 +94,28 @@ causal_graphs:
       for this aggregate use.
     description: Electron-transport-chain proton pumps that control proton flux during
       pH stress.
+    protein_examples:
+    - uniprot_id: UniProtKB:P09152
+      protein_label: Respiratory nitrate reductase 1 alpha chain
+      gene_symbol: narG
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 228
+      sequence_version: 4
+      role: Exemplar protein (narG, Respiratory nitrate reductase 1 alpha chain) representing
+        respiratory proton-pumping enzymes in Escherichia coli (strain K12) for pH
+        delta high.
+      evidence:
+      - reference: DOI:10.1038/nrmicro2549
+        snippet: For pH homeostasis under alkaline conditions, active transport of
+          protons inward is a crucial adaptation, which usually involves activation
+          and transcriptional up-regulation of key cation/proton antiporters
+        notes: Supports respiratory proton-pumping enzymes in pH delta high; UniProtKB:P09152
+          (narG, Respiratory nitrate reductase 1 alpha chain) in Escherichia coli
+          (strain K12) provides a verified protein exemplar.
   - node_id: f0f1_atpase
     label: F0F1-ATPase
     node_type: GENE_OR_PROTEIN
@@ -84,6 +125,28 @@ causal_graphs:
       for this aggregate use.
     description: Proton-translocating ATP synthase contributing to proton extrusion/uptake
       in pH homeostasis.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q9RGZ5
+      protein_label: Na(+)/H(+) antiporter subunit A
+      gene_symbol: mrpA
+      taxon_id: NCBITaxon:398511
+      taxon_label: Alkalihalophilus pseudofirmus (strain ATCC BAA-2126 / JCM 17055
+        / OF4) (Bacillus pseudofirmus)
+      entry_status: REVIEWED
+      proteome_id: UP000001544
+      retrieved_on: '2026-10-17'
+      entry_version: 115
+      sequence_version: 2
+      role: Exemplar protein (mrpA, Na(+)/H(+) antiporter subunit A) representing
+        F0F1-ATPase in Alkalihalophilus pseudofirmus (strain ATCC BAA-2126 / JCM 17055
+        / OF4) (Bacillus pseudofirmus) for pH delta high.
+      evidence:
+      - reference: DOI:10.1093/femsre/fuad033
+        snippet: the F0F1-ATPase (fermentative bacteria), or decarboxylation pathways
+          (next paragraph) prevent the internal pH from becoming too low
+        notes: Supports F0F1-ATPase in pH delta high; UniProtKB:Q9RGZ5 (mrpA, Na(+)/H(+)
+          antiporter subunit A) in Alkalihalophilus pseudofirmus (strain ATCC BAA-2126
+          / JCM 17055 / OF4) (Bacillus pseudofirmus) provides a verified protein exemplar.
   - node_id: metabolite_decarboxylation
     label: metabolite decarboxylation pathways
     node_type: PATHWAY
@@ -333,4 +396,12 @@ curation_history:
     canonical example(s): Amycolatopsis flava (NCBITaxon:486505; DOI:10.1007/s10482-015-0542-z).
     The note retains the measured value or scopes broad-class examples to the cited
     branch; no paid research was used.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q93F90 (nhaA)
+    protein example to node na_h_antiporters; added UniProtKB:P09152 (narG) protein
+    example to node respiratory_proton_pumps; added UniProtKB:Q9RGZ5 (mrpA) protein
+    example to node f0f1_atpase.'
   llm_assisted: true

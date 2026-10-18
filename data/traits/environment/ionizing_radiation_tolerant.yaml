@@ -68,6 +68,43 @@ causal_graphs:
     node_type: QUALITY
     description: Elevated intracellular manganese-to-iron concentration ratio associated
       with antioxidant proteome protection.
+  - node_id: ionizing_radiation_tolerant_protein_component
+    label: CRISPR system single-strand-specific deoxyribonuclease Cas10/Csm1
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (CRISPR system single-strand-specific deoxyribonuclease
+      Cas10/Csm1) associated with ionizing radiation tolerant.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - cas10
+    protein_examples:
+    - uniprot_id: UniProtKB:Q59066
+      protein_label: CRISPR system single-strand-specific deoxyribonuclease Cas10/Csm1
+      gene_symbol: cas10
+      taxon_id: NCBITaxon:243232
+      taxon_label: Methanocaldococcus jannaschii (strain ATCC 43067 / DSM 2661 / JAL-1
+        / JCM 10045 / NBRC 100440) (Methanococcus jannaschii)
+      entry_status: REVIEWED
+      proteome_id: UP000000805
+      retrieved_on: '2026-10-17'
+      entry_version: 115
+      sequence_version: 1
+      role: Characteristic protein component (cas10, CRISPR system single-strand-specific
+        deoxyribonuclease Cas10/Csm1) associated with ionizing radiation tolerant
+        in Methanocaldococcus jannaschii (strain ATCC 43067 / DSM 2661 / JAL-1 / JCM
+        10045 / NBRC 100440) (Methanococcus jannaschii).
+      evidence:
+      - reference: DOI:10.3390/genes14091803
+        snippet: Deinococcus radiodurans, a Gram-positive extremophilic bacterium,
+          is a remarkable example of such an organism, showcasing an impressive resistance
+          to a wide array of stressors, including ionizing radiation, desiccation,
+          UV radiation, and oxidizing agents
+        notes: Supports CRISPR system single-strand-specific deoxyribonuclease Cas10/Csm1
+          in ionizing radiation tolerant; UniProtKB:Q59066 (cas10, CRISPR system single-strand-specific
+          deoxyribonuclease Cas10/Csm1) in Methanocaldococcus jannaschii (strain ATCC
+          43067 / DSM 2661 / JAL-1 / JCM 10045 / NBRC 100440) (Methanococcus jannaschii)
+          provides a verified protein exemplar.
   edges:
   - subject: gamma_radiation
     predicate: challenges
@@ -133,6 +170,23 @@ causal_graphs:
       notes: Elevated Mn/Fe ratio underlies Mn-antioxidant protection of the proteome
         during irradiation.
     predicate_id: RO:0002327
+  - subject: ionizing_radiation_tolerant_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: ionizing_tolerant_trait
+    description: CRISPR system single-strand-specific deoxyribonuclease Cas10/Csm1
+      (cas10, UniProtKB:Q59066) contributes to ionizing radiation tolerant (associated
+      with extremophilic, deinococcus, desiccation).
+    evidence:
+    - reference: DOI:10.3390/genes14091803
+      snippet: Deinococcus radiodurans, a Gram-positive extremophilic bacterium, is
+        a remarkable example of such an organism, showcasing an impressive resistance
+        to a wide array of stressors, including ionizing radiation, desiccation, UV
+        radiation, and oxidizing agents
+      notes: Supports the functional association between CRISPR system single-strand-specific
+        deoxyribonuclease Cas10/Csm1 (UniProtKB:Q59066 in Methanocaldococcus jannaschii
+        (strain ATCC 43067 / DSM 2661 / JAL-1 / JCM 10045 / NBRC 100440) (Methanococcus
+        jannaschii)) and ionizing radiation tolerant.
 curation_history:
 - timestamp: '2026-05-28T00:00:00Z'
   curator: claude
@@ -174,4 +228,10 @@ curation_history:
     tranche of 2026-08-24/25, which shipped without a per-record event. In this record
     the tranche: set graph scope ionizing_radiation_tolerance_dsb_repair=NONMECHANISTIC
     with scope_notes.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    ionizing_radiation_tolerant_protein_component with UniProtKB:Q59066 (cas10) exemplar.'
   llm_assisted: true

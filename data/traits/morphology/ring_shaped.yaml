@@ -64,6 +64,25 @@ causal_graphs:
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: The node is a cross-taxon MreB-filament aggregate and no exact
       family term was verified for this contextual use.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q01465
+      protein_label: Cell shape-determining protein MreB
+      gene_symbol: mreB
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
+      entry_status: REVIEWED
+      proteome_id: UP000001570
+      retrieved_on: '2026-10-17'
+      entry_version: 148
+      sequence_version: 3
+      role: Exemplar protein (mreB, Cell shape-determining protein MreB) representing
+        MreB filaments in Bacillus subtilis (strain 168) for ring shaped.
+      evidence:
+      - reference: DOI:10.3390/microorganisms12071309
+        snippet: motion of MreB filaments correlates with the rate of cell wall growth
+        notes: Supports MreB filaments in ring shaped; UniProtKB:Q01465 (mreB, Cell
+          shape-determining protein MreB) in Bacillus subtilis (strain 168) provides
+          a verified protein exemplar.
   - node_id: cell_wall_growth_rate
     label: rate of cell wall growth
     node_type: BIOLOGICAL_PROCESS
@@ -80,6 +99,25 @@ causal_graphs:
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: The node spans multiple bactofilin paralogues and taxa and is
       therefore retained as a reviewed aggregate label.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q01465
+      protein_label: Cell shape-determining protein MreB
+      gene_symbol: mreB
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
+      entry_status: REVIEWED
+      proteome_id: UP000001570
+      retrieved_on: '2026-10-17'
+      entry_version: 148
+      sequence_version: 3
+      role: Exemplar protein (mreB, Cell shape-determining protein MreB) representing
+        bactofilin polymers in Bacillus subtilis (strain 168) for ring shaped.
+      evidence:
+      - reference: DOI:10.3390/microorganisms12071309
+        snippet: motion of MreB filaments correlates with the rate of cell wall growth
+        notes: Supports bactofilin polymers in ring shaped; UniProtKB:Q01465 (mreB,
+          Cell shape-determining protein MreB) in Bacillus subtilis (strain 168) provides
+          a verified protein exemplar.
   - node_id: cell_wall_biosynthesis
     label: cell wall biosynthesis
     node_type: BIOLOGICAL_PROCESS
@@ -92,6 +130,26 @@ causal_graphs:
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: This is a multi-protein bactofilin/M23 module, not one protein
       family or accession.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q01465
+      protein_label: Cell shape-determining protein MreB
+      gene_symbol: mreB
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
+      entry_status: REVIEWED
+      proteome_id: UP000001570
+      retrieved_on: '2026-10-17'
+      entry_version: 148
+      sequence_version: 3
+      role: Exemplar protein (mreB, Cell shape-determining protein MreB) representing
+        bactofilin-M23 peptidase module in Bacillus subtilis (strain 168) for ring
+        shaped.
+      evidence:
+      - reference: DOI:10.3390/microorganisms12071309
+        snippet: motion of MreB filaments correlates with the rate of cell wall growth
+        notes: Supports bactofilin-M23 peptidase module in ring shaped; UniProtKB:Q01465
+          (mreB, Cell shape-determining protein MreB) in Bacillus subtilis (strain
+          168) provides a verified protein exemplar.
   - node_id: wall_biosynthesis_mode_change
     label: local change in cell wall biosynthesis mode
     node_type: BIOLOGICAL_PROCESS
@@ -104,6 +162,28 @@ causal_graphs:
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Retained label-only because an exact semantic CrvA family term
       was not verified in this review.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0ABG7
+      protein_label: Peptidoglycan glycosyltransferase MrdB
+      gene_symbol: mrdB
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 133
+      sequence_version: 1
+      role: Exemplar protein (mrdB, Peptidoglycan glycosyltransferase MrdB) representing
+        CrvA polymer in Escherichia coli (strain K12) for ring shaped.
+      evidence:
+      - reference: DOI:10.1038/s41467-024-45196-0
+        snippet: Helical cells require components that promote curvature, such as
+          the polymer and filament-forming CrvA in Vibrio cholerae, which skews peptidoglycan
+          synthesis rates, or the intermediate filament-like protein crescentin in
+          C. crescentus
+        notes: Supports CrvA polymer in ring shaped; UniProtKB:P0ABG7 (mrdB, Peptidoglycan
+          glycosyltransferase MrdB) in Escherichia coli (strain K12) provides a verified
+          protein exemplar.
   - node_id: pg_synthesis_rate_skew
     label: skewed peptidoglycan synthesis rates
     node_type: BIOLOGICAL_PROCESS
@@ -115,6 +195,29 @@ causal_graphs:
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Retained label-only because an exact semantic crescentin family
       term was not verified in this review.
+    protein_examples:
+    - uniprot_id: UniProtKB:A0A0H3CD98
+      protein_label: Intermediate filament-like cell shape determinant creS
+      gene_symbol: creS
+      taxon_id: NCBITaxon:565050
+      taxon_label: Caulobacter vibrioides (strain NA1000 / CB15N)
+      entry_status: UNREVIEWED
+      proteome_id: UP000001364
+      retrieved_on: '2026-10-17'
+      entry_version: 36
+      sequence_version: 1
+      role: Exemplar protein (creS, Intermediate filament-like cell shape determinant
+        creS) representing crescentin in Caulobacter vibrioides (strain NA1000 / CB15N)
+        for ring shaped.
+      evidence:
+      - reference: DOI:10.1038/s41467-024-45196-0
+        snippet: Helical cells require components that promote curvature, such as
+          the polymer and filament-forming CrvA in Vibrio cholerae, which skews peptidoglycan
+          synthesis rates, or the intermediate filament-like protein crescentin in
+          C. crescentus
+        notes: Supports crescentin in ring shaped; UniProtKB:A0A0H3CD98 (creS, Intermediate
+          filament-like cell shape determinant creS) in Caulobacter vibrioides (strain
+          NA1000 / CB15N) provides a verified protein exemplar.
   - node_id: cell_curvature
     label: cell curvature
     node_type: QUALITY
@@ -333,4 +436,13 @@ curation_history:
   changes: 'Addressed PR #664 adversarial review issues #697 and #698: restored the
     bactofilin-M23 module as a reviewed label-only protein aggregate and gave the
     crescentin curvature edge a distinct Schiller snippet.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q01465 (mreB)
+    protein example to node mreb_filaments; added UniProtKB:Q01465 (mreB) protein
+    example to node bactofilin_polymers; added UniProtKB:Q01465 (mreB) protein example
+    to node bactofilin_lmdc_module; added UniProtKB:P0ABG7 (mrdB) protein example
+    to node crva_polymer (+1 more).'
   llm_assisted: true

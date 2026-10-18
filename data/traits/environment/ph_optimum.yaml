@@ -91,6 +91,39 @@ causal_graphs:
     label: internal pH
     node_type: STATE
     description: Cytoplasmic proton activity (pH) maintained near neutrality.
+  - node_id: ph_optimum_protein_component
+    label: Na(+)/H(+) antiporter subunit A
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Na(+)/H(+) antiporter subunit A) associated with
+      pH optimum.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - mrpA
+    protein_examples:
+    - uniprot_id: UniProtKB:Q9RGZ5
+      protein_label: Na(+)/H(+) antiporter subunit A
+      gene_symbol: mrpA
+      taxon_id: NCBITaxon:398511
+      taxon_label: Alkalihalophilus pseudofirmus (strain ATCC BAA-2126 / JCM 17055
+        / OF4) (Bacillus pseudofirmus)
+      entry_status: REVIEWED
+      proteome_id: UP000001544
+      retrieved_on: '2026-10-17'
+      entry_version: 115
+      sequence_version: 2
+      role: Characteristic protein component (mrpA, Na(+)/H(+) antiporter subunit
+        A) associated with pH optimum in Alkalihalophilus pseudofirmus (strain ATCC
+        BAA-2126 / JCM 17055 / OF4) (Bacillus pseudofirmus).
+      evidence:
+      - reference: DOI:10.1093/femsre/fuad033
+        snippet: Proton-sensing ion/H+ antiporters acidify the cytoplasm by exporting
+          K+ or Na+ in exchange for protons when the internal pH gets too high
+        notes: Supports Na(+)/H(+) antiporter subunit A in pH optimum; UniProtKB:Q9RGZ5
+          (mrpA, Na(+)/H(+) antiporter subunit A) in Alkalihalophilus pseudofirmus
+          (strain ATCC BAA-2126 / JCM 17055 / OF4) (Bacillus pseudofirmus) provides
+          a verified protein exemplar.
   edges:
   - subject: external_ph
     predicate: imposes gradient of
@@ -201,6 +234,19 @@ causal_graphs:
       notes: The buffering capacity of the cytoplasm is important in absorbing pH
         fluctuations (e.g. inorganic and organic phosphates).
     predicate_id: RO:0002211
+  - subject: ph_optimum_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: ph_optimum_trait
+    description: Na(+)/H(+) antiporter subunit A (mrpA, UniProtKB:Q9RGZ5) contributes
+      to pH optimum (associated with antiporters, cytoplasm, exporting).
+    evidence:
+    - reference: DOI:10.1093/femsre/fuad033
+      snippet: Proton-sensing ion/H+ antiporters acidify the cytoplasm by exporting
+        K+ or Na+ in exchange for protons when the internal pH gets too high
+      notes: Supports the functional association between Na(+)/H(+) antiporter subunit
+        A (UniProtKB:Q9RGZ5 in Alkalihalophilus pseudofirmus (strain ATCC BAA-2126
+        / JCM 17055 / OF4) (Bacillus pseudofirmus)) and pH optimum.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.814691+00:00'
   curator: seed_from_metpo
@@ -304,4 +350,10 @@ curation_history:
     canonical example(s): Microbaculum mangrovi (NCBITaxon:3447298; DOI:10.1099/ijsem.0.006972).
     The note retains the measured value or scopes broad-class examples to the cited
     branch; no paid research was used.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    ph_optimum_protein_component with UniProtKB:Q9RGZ5 (mrpA) exemplar.'
   llm_assisted: true

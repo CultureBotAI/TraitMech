@@ -99,6 +99,38 @@ causal_graphs:
     node_type: TRAIT
     grounding: traitmech:000214
     description: Possession of a genome-encoded abortive-infection phage defense system.
+  - node_id: abiz_system_protein_component
+    label: Lysostaphin resistance protein A
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Lysostaphin resistance protein A) associated with
+      AbiZ system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - lyrA
+    protein_examples:
+    - uniprot_id: UniProtKB:Q2FVT1
+      protein_label: Lysostaphin resistance protein A
+      gene_symbol: lyrA
+      taxon_id: NCBITaxon:93061
+      taxon_label: Staphylococcus aureus (strain NCTC 8325 / PS 47)
+      entry_status: REVIEWED
+      proteome_id: UP000008816
+      retrieved_on: '2026-10-17'
+      entry_version: 90
+      sequence_version: 1
+      role: Characteristic protein component (lyrA, Lysostaphin resistance protein
+        A) associated with AbiZ system in Staphylococcus aureus (strain NCTC 8325
+        / PS 47).
+      evidence:
+      - reference: DOI:10.1128/JB.00904-06
+        snippet: The new phage resistance gene, designated abiZ, encodes an abortive
+          infection resistance which results in cell death after infection and appears
+          to limit the production of progeny phage
+        notes: Supports Lysostaphin resistance protein A in AbiZ system; UniProtKB:Q2FVT1
+          (lyrA, Lysostaphin resistance protein A) in Staphylococcus aureus (strain
+          NCTC 8325 / PS 47) provides a verified protein exemplar.
   edges:
   - subject: abiz_locus
     predicate: contributes to
@@ -158,6 +190,21 @@ causal_graphs:
       snippet: AbiZ, an abortive infection mechanism discovered and described by Durmaz
         et al. [18] as leading to premature cell lysis during phage infection
       notes: Philippe et al. place AbiZ in the abortive infection class of phage defense.
+  - subject: abiz_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: abiz_system_trait
+    description: Lysostaphin resistance protein A (lyrA, UniProtKB:Q2FVT1) contributes
+      to AbiZ system (associated with investigation, discovered, understood).
+    evidence:
+    - reference: DOI:10.1371/journal.pone.0298680
+      snippet: We focus our investigation on AbiZ, an abortive infection mechanism
+        discovered and described by Durmaz et al. [18] as leading to premature cell
+        lysis during phage infection, and one of the most understood Abi mechanisms
+        on L. lactis
+      notes: Supports the functional association between Lysostaphin resistance protein
+        A (UniProtKB:Q2FVT1 in Staphylococcus aureus (strain NCTC 8325 / PS 47)) and
+        AbiZ system.
 curation_history:
 - timestamp: '2026-09-15T20:35:00Z'
   curator: codex
@@ -174,4 +221,10 @@ curation_history:
     propagation to contributes to restricted phage propagation after local adversarial
     review issue 962 identified that the old predicate inverted the intended antiphage
     effect.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    abiz_system_protein_component with UniProtKB:Q2FVT1 (lyrA) exemplar.'
   llm_assisted: true

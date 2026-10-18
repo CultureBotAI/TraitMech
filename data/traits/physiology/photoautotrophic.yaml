@@ -85,7 +85,7 @@ causal_graphs:
       taxon_label: Synechocystis sp. PCC 6803
       entry_status: REVIEWED
       retrieved_on: '2026-08-24'
-      entry_version: 186
+      entry_version: 187
       sequence_version: 1
       role: D1 reaction-center component of photosystem II; this accession is not
         presented as the complete water-oxidizing complex.
@@ -129,6 +129,26 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Carboxylating enzyme of the Calvin-Benson cycle.
     grounding: InterPro:IPR033966
+    protein_examples:
+    - uniprot_id: UniProtKB:Q31IK3
+      protein_label: Ribulose bisphosphate carboxylase
+      gene_symbol: cbbM
+      taxon_id: NCBITaxon:317025
+      taxon_label: Hydrogenovibrio crunogenus (strain DSM 25203 / XCL-2) (Thiomicrospira
+        crunogena)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 111
+      sequence_version: 1
+      role: Exemplar protein (cbbM, Ribulose bisphosphate carboxylase) representing
+        RuBisCO in Hydrogenovibrio crunogenus (strain DSM 25203 / XCL-2) (Thiomicrospira
+        crunogena) for photoautotrophic.
+      evidence:
+      - reference: DOI:10.1128/AEM.02473-10
+        snippet: ribulose-1,5-bisphosphate carboxylase
+        notes: Supports RuBisCO in photoautotrophic; UniProtKB:Q31IK3 (cbbM, Ribulose
+          bisphosphate carboxylase) in Hydrogenovibrio crunogenus (strain DSM 25203
+          / XCL-2) (Thiomicrospira crunogena) provides a verified protein exemplar.
   - node_id: biomass
     label: biomass
     node_type: CHEMICAL
@@ -157,6 +177,26 @@ causal_graphs:
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Cyanobacterial carboxysomes recruit different carbonic-anhydrase
       families and architectures; the graph does not identify a single exact family.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q5KW03
+      protein_label: Carbonic anhydrase
+      taxon_id: NCBITaxon:235909
+      taxon_label: Geobacillus kaustophilus (strain HTA426)
+      entry_status: REVIEWED
+      proteome_id: UP000001172
+      retrieved_on: '2026-10-17'
+      entry_version: 114
+      sequence_version: 1
+      role: Exemplar protein (Q5KW03, Carbonic anhydrase) representing carboxysomal
+        carbonic anhydrase in Geobacillus kaustophilus (strain HTA426) for photoautotrophic.
+      evidence:
+      - reference: DOI:10.1111/1751-7915.14519
+        snippet: NADPH and ATP are produced from a proton gradient formed coincident
+          with the electron transfer reactions and fuel downstream processes, including
+          carbon fixation
+        notes: Supports carboxysomal carbonic anhydrase in photoautotrophic; UniProtKB:Q5KW03
+          (Q5KW03, Carbonic anhydrase) in Geobacillus kaustophilus (strain HTA426)
+          provides a verified protein exemplar.
   - node_id: bicarbonate
     label: bicarbonate
     node_type: CHEMICAL
@@ -451,4 +491,12 @@ curation_history:
     graph with three tracked, snippet-backed relations: light enables photosynthetic
     electron transport; the CCM includes the carboxysome; and the carboxysome includes
     RuBisCO. No new paid research was commissioned (#183, #426).'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:P16033
+    version metadata (entry_version=187, sequence_version=1); added UniProtKB:Q31IK3
+    (cbbM) protein example to node rubisco; added UniProtKB:Q5KW03 (Q5KW03) protein
+    example to node carboxysomal_carbonic_anhydrase.'
   llm_assisted: true

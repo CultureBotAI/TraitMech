@@ -90,6 +90,35 @@ causal_graphs:
     grounding: traitmech:000209
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
+  - node_id: tha_system_protein_component
+    label: Thoeris anti-defense 1
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Thoeris anti-defense 1) associated with Tha system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - tad1
+    protein_examples:
+    - uniprot_id: UniProtKB:P0DW61
+      protein_label: Thoeris anti-defense 1
+      gene_symbol: tad1
+      taxon_id: NCBITaxon:1392497
+      taxon_label: Clostridioides mangenotii (strain LM2)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 11
+      sequence_version: 1
+      role: Characteristic protein component (tad1, Thoeris anti-defense 1) associated
+        with Tha system in Clostridioides mangenotii (strain LM2).
+      evidence:
+      - reference: DOI:10.1038/s41564-024-01661-6
+        snippet: multiple Staphylococcus aureus prophages encode Tha (tail-activated,
+          HEPN (higher eukaryotes and prokaryotes nucleotide-binding) domain-containing
+          anti-phage system)
+        notes: Supports Thoeris anti-defense 1 in Tha system; UniProtKB:P0DW61 (tad1,
+          Thoeris anti-defense 1) in Clostridioides mangenotii (strain LM2) provides
+          a verified protein exemplar.
   edges:
   - subject: tha_locus
     predicate: contributes to
@@ -143,6 +172,19 @@ causal_graphs:
       snippet: Tha-1 is an anti-phage system that causes autoimmunity when improperly
         regulated
       notes: Rostol et al. experimentally tested the anti-phage properties of Tha-1.
+  - subject: tha_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: tha_system_trait
+    description: Thoeris anti-defense 1 (tad1, UniProtKB:P0DW61) contributes to Tha
+      system (associated with staphylococcus, prokaryotes, containing).
+    evidence:
+    - reference: DOI:10.1038/s41564-024-01661-6
+      snippet: multiple Staphylococcus aureus prophages encode Tha (tail-activated,
+        HEPN (higher eukaryotes and prokaryotes nucleotide-binding) domain-containing
+        anti-phage system)
+      notes: Supports the functional association between Thoeris anti-defense 1 (UniProtKB:P0DW61
+        in Clostridioides mangenotii (strain LM2)) and Tha system.
 discussions:
 - discussion_id: tha-variant-profile-rule-gap
   prompt: Resolve Tha variant boundaries, exact minor-tail-protein triggers, Ith inhibitor
@@ -195,4 +237,10 @@ curation_history:
     Rostol et al. report that multiple S. aureus prophages encode Tha and experimentally
     test plasmid-carried Tha-1 and Tha-2 in S. aureus RN4220 phage-challenge assays.
     No paid research was used.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    tha_system_protein_component with UniProtKB:P0DW61 (tad1) exemplar.'
   llm_assisted: true

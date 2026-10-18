@@ -82,6 +82,39 @@ causal_graphs:
     node_type: STATE
     description: Organisms growing between approximately 20 and 45 degrees C ambient
       temperature.
+  - node_id: temperature_optimum_mid2_protein_component
+    label: Chaperonin GroEL
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Chaperonin GroEL) associated with temperature
+      optimum mid2.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - groEL
+    protein_examples:
+    - uniprot_id: UniProtKB:Q49YY5
+      protein_label: Chaperonin GroEL
+      gene_symbol: groEL
+      taxon_id: NCBITaxon:342451
+      taxon_label: Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
+        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+      entry_status: REVIEWED
+      proteome_id: UP000006371
+      retrieved_on: '2026-10-17'
+      entry_version: 120
+      sequence_version: 1
+      role: Characteristic protein component (groEL, Chaperonin GroEL) associated
+        with temperature optimum mid2 in Staphylococcus saprophyticus subsp. saprophyticus
+        (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41).
+      evidence:
+      - reference: DOI:10.1128/spectrum.03925-23
+        snippet: Upon temperature decrease, the membrane rigidifies and increases
+          in thickness, resulting in activation of the kinase-dominant state of DesK
+        notes: Supports Chaperonin GroEL in temperature optimum mid2; UniProtKB:Q49YY5
+          (groEL, Chaperonin GroEL) in Staphylococcus saprophyticus subsp. saprophyticus
+          (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) provides
+          a verified protein exemplar.
   edges:
   - subject: mesophilic_environment
     predicate: engages
@@ -157,6 +190,19 @@ causal_graphs:
     - reference: DOI:10.1007/s42770-023-01057-4
       notes: Mesophiles grow between about 20 C and 45 C; 27-30 C lies inside this
         range, making mid2 a mesophile subset.
+  - subject: temperature_optimum_mid2_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: temperature_optimum_mid2_trait
+    description: Chaperonin GroEL (groEL, UniProtKB:Q49YY5) contributes to temperature
+      optimum mid2 (associated with temperature, activation, rigidifies).
+    evidence:
+    - reference: DOI:10.1128/spectrum.03925-23
+      snippet: Upon temperature decrease, the membrane rigidifies and increases in
+        thickness, resulting in activation of the kinase-dominant state of DesK
+      notes: Supports the functional association between Chaperonin GroEL (UniProtKB:Q49YY5
+        in Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC 15305 /
+        DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)) and temperature optimum mid2.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.820411+00:00'
   curator: seed_from_metpo
@@ -242,4 +288,10 @@ curation_history:
     canonical example(s): Pontibacterium sinense (NCBITaxon:2781979; DOI:10.1099/ijsem.0.006018).
     The note retains the measured value or scopes broad-class examples to the cited
     branch; no paid research was used.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    temperature_optimum_mid2_protein_component with UniProtKB:Q49YY5 (groEL) exemplar.'
   llm_assisted: true

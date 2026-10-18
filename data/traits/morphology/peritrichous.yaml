@@ -73,6 +73,38 @@ causal_graphs:
     label: swimming velocity
     node_type: CAPACITY
     description: Cell swimming speed driven by flagellar rotation.
+  - node_id: peritrichous_protein_component
+    label: Flagellar basal-body protein FlbY
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Flagellar basal-body protein FlbY) associated
+      with peritrichous.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - flbY
+    protein_examples:
+    - uniprot_id: UniProtKB:P33977
+      protein_label: Flagellar basal-body protein FlbY
+      gene_symbol: flbY
+      taxon_id: NCBITaxon:190650
+      taxon_label: Caulobacter vibrioides (strain ATCC 19089 / CIP 103742 / CB 15)
+        (Caulobacter crescentus)
+      entry_status: REVIEWED
+      proteome_id: UP000001816
+      retrieved_on: '2026-10-17'
+      entry_version: 92
+      sequence_version: 2
+      role: Characteristic protein component (flbY, Flagellar basal-body protein FlbY)
+        associated with peritrichous in Caulobacter vibrioides (strain ATCC 19089
+        / CIP 103742 / CB 15) (Caulobacter crescentus).
+      evidence:
+      - reference: DOI:10.1093/femsre/fuv034
+        snippet: five to six flagellar filaments distributed over the cell body
+        notes: Supports Flagellar basal-body protein FlbY in peritrichous; UniProtKB:P33977
+          (flbY, Flagellar basal-body protein FlbY) in Caulobacter vibrioides (strain
+          ATCC 19089 / CIP 103742 / CB 15) (Caulobacter crescentus) provides a verified
+          protein exemplar.
   edges:
   - subject: bacterial_flagellum
     predicate: defines
@@ -157,6 +189,19 @@ causal_graphs:
       notes: 'Lisevich et al. 2025: swimming velocity increases with flagellar-gene
         expression only up to ~5 flagella, above which it saturates; functional phenotype
         of multiple peritrichous flagella.'
+  - subject: peritrichous_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: peritrichous_trait
+    description: Flagellar basal-body protein FlbY (flbY, UniProtKB:P33977) contributes
+      to peritrichous (associated with flagellation, bacteria, flagella).
+    evidence:
+    - reference: DOI:10.1093/femsre/fuv034
+      snippet: Bacteria differ in number and location of their flagella that appear
+        in regular patterns at the cell surface (flagellation pattern).
+      notes: Supports the functional association between Flagellar basal-body protein
+        FlbY (UniProtKB:P33977 in Caulobacter vibrioides (strain ATCC 19089 / CIP
+        103742 / CB 15) (Caulobacter crescentus)) and peritrichous.
 curation_history:
 - timestamp: '2026-06-03T00:00:00Z'
   curator: claude
@@ -205,4 +250,10 @@ curation_history:
     tranche of 2026-08-24/25, which shipped without a per-record event. In this record
     the tranche: set graph scope peritrichous_surface_distributed_flagella=NONMECHANISTIC
     with scope_notes.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    peritrichous_protein_component with UniProtKB:P33977 (flbY) exemplar.'
   llm_assisted: true

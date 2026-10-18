@@ -84,6 +84,35 @@ causal_graphs:
     node_type: STATE
     description: Absence of a rigid peptidoglycan wall removing canonical cell-shape
       constraints.
+  - node_id: irregular_shaped_protein_component
+    label: Cell shape-determining protein MreB
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Cell shape-determining protein MreB) associated
+      with irregular shaped.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - mreB
+    protein_examples:
+    - uniprot_id: UniProtKB:Q01465
+      protein_label: Cell shape-determining protein MreB
+      gene_symbol: mreB
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
+      entry_status: REVIEWED
+      proteome_id: UP000001570
+      retrieved_on: '2026-10-17'
+      entry_version: 148
+      sequence_version: 3
+      role: Characteristic protein component (mreB, Cell shape-determining protein
+        MreB) associated with irregular shaped in Bacillus subtilis (strain 168).
+      evidence:
+      - reference: DOI:10.1146/annurev-cellbio-101011-155745
+        snippet: MreB-directed peptidoglycan synthesis
+        notes: Supports Cell shape-determining protein MreB in irregular shaped; UniProtKB:Q01465
+          (mreB, Cell shape-determining protein MreB) in Bacillus subtilis (strain
+          168) provides a verified protein exemplar.
   edges:
   - subject: reduced_wall_patterning
     predicate: enables
@@ -176,6 +205,17 @@ causal_graphs:
         of the rigid wall removes shape constraints, a general consequence of wall
         absence.
     predicate_id: METPO:2007400
+  - subject: irregular_shaped_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: irregular_shaped_trait
+    description: Cell shape-determining protein MreB (mreB, UniProtKB:Q01465) contributes
+      to irregular shaped (associated with peptidoglycan, directed, mreb).
+    evidence:
+    - reference: DOI:10.1146/annurev-cellbio-101011-155745
+      snippet: MreB-directed peptidoglycan synthesis
+      notes: Supports the functional association between Cell shape-determining protein
+        MreB (UniProtKB:Q01465 in Bacillus subtilis (strain 168)) and irregular shaped.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.898746+00:00'
   curator: seed_from_metpo
@@ -240,4 +280,10 @@ curation_history:
     canonical example(s): Corynebacterium glutamicum (NCBITaxon:1718; DOI:10.1111/j.1574-6976.2011.00298.x).
     The note retains the measured value or scopes broad-class examples to the cited
     branch; no paid research was used.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    irregular_shaped_protein_component with UniProtKB:Q01465 (mreB) exemplar.'
   llm_assisted: true

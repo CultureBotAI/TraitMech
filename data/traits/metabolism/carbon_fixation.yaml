@@ -82,6 +82,25 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Enzyme accelerating interconversion of CO2 and bicarbonate.
     grounding: InterPro:IPR001765
+    protein_examples:
+    - uniprot_id: UniProtKB:Q5KW03
+      protein_label: Carbonic anhydrase
+      taxon_id: NCBITaxon:235909
+      taxon_label: Geobacillus kaustophilus (strain HTA426)
+      entry_status: REVIEWED
+      proteome_id: UP000001172
+      retrieved_on: '2026-10-17'
+      entry_version: 114
+      sequence_version: 1
+      role: Exemplar protein (Q5KW03, Carbonic anhydrase) representing carbonic anhydrase
+        in Geobacillus kaustophilus (strain HTA426) for carbon fixation.
+      evidence:
+      - reference: DOI:10.1128/aem.01557-23
+        snippet: DIC transporters and carbonic anhydrase enzymes (CA) to facilitate
+          DIC fixation
+        notes: Supports carbonic anhydrase in carbon fixation; UniProtKB:Q5KW03 (Q5KW03,
+          Carbonic anhydrase) in Geobacillus kaustophilus (strain HTA426) provides
+          a verified protein exemplar.
   - node_id: rubisco
     label: ribulose-1,5-bisphosphate carboxylase/oxygenase (RubisCO)
     node_type: GENE_OR_PROTEIN
@@ -96,7 +115,7 @@ causal_graphs:
       taxon_label: Cupriavidus necator H16
       entry_status: REVIEWED
       retrieved_on: '2026-08-24'
-      entry_version: 153
+      entry_version: 154
       sequence_version: 3
       role: Large-chain component of the plasmid-encoded RuBisCO in one of the two
         active CBB operons of C. necator H16.
@@ -159,6 +178,27 @@ causal_graphs:
     grounding_notes: This node denotes the two-subunit AclAB ATP citrate lyase complex;
       verified family terms describe individual AclA or AclB chains rather than the
       complete complex represented here.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q8KDG2
+      protein_label: Citrate lyase, subunit2
+      taxon_id: NCBITaxon:194439
+      taxon_label: Chlorobaculum tepidum (strain ATCC 49652 / DSM 12025 / NBRC 103806
+        / TLS)
+      entry_status: UNREVIEWED
+      proteome_id: UP000001007
+      retrieved_on: '2026-10-17'
+      entry_version: 118
+      sequence_version: 1
+      role: Exemplar protein (Q8KDG2, Citrate lyase, subunit2) representing ATP citrate
+        lyase (aclAB) in Chlorobaculum tepidum (strain ATCC 49652 / DSM 12025 / NBRC
+        103806 / TLS) for carbon fixation.
+      evidence:
+      - reference: DOI:10.1186/s12934-020-01494-y
+        snippet: both CBB operons were active and contributed almost equally to the
+          carbon fixation process
+        notes: Supports ATP citrate lyase (aclAB) in carbon fixation; UniProtKB:Q8KDG2
+          (Q8KDG2, Citrate lyase, subunit2) in Chlorobaculum tepidum (strain ATCC
+          49652 / DSM 12025 / NBRC 103806 / TLS) provides a verified protein exemplar.
   edges:
   - subject: carbon_dioxide
     predicate: fixed by
@@ -395,4 +435,12 @@ curation_history:
   action: ADD_PATHWAY_CONTEXT
   changes: Added pinned PathwayMech context on reviewed causal nodes with explicit
     route and organism limitations; retained existing groundings and exact xrefs.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:P42721
+    version metadata (entry_version=154, sequence_version=3); added UniProtKB:Q5KW03
+    (Q5KW03) protein example to node carbonic_anhydrase; added UniProtKB:Q8KDG2 (Q8KDG2)
+    protein example to node atp_citrate_lyase.'
   llm_assisted: true

@@ -104,3 +104,72 @@ curation_history:
     the independent assay-comparability question OPEN and qualified the Khan Europe
     PMC URL to SRC:MED using the verified identity.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph rapid_axopodial_contraction_graph
+    with GENE_OR_PROTEIN node rapid_axopodial_contraction_protein_component and UniProtKB:Q00828
+    exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: rapid_axopodial_contraction_graph
+  title: Protein component associated with rapid axopodial contraction
+  description: Literature-backed association between Response regulator aspartate
+    phosphatase A (UniProtKB:Q00828) and rapid axopodial contraction.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q00828 in Bacillus
+    subtilis (strain 168)) associated with rapid axopodial contraction while full
+    multi-step mechanistic curation remains future work.
+  nodes:
+  - node_id: rapid_axopodial_contraction_trait
+    label: rapid axopodial contraction
+    node_type: TRAIT
+    grounding: traitmech:000682
+    description: A physiological phenotype in which a microbial cell rapidly shortens
+      its microtubule-supported axopodia in response to stimulation or prey uptake.
+  - node_id: rapid_axopodial_contraction_protein_component
+    label: Response regulator aspartate phosphatase A
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Response regulator aspartate phosphatase A) associated
+      with rapid axopodial contraction.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - rapA
+    protein_examples:
+    - uniprot_id: UniProtKB:Q00828
+      protein_label: Response regulator aspartate phosphatase A
+      gene_symbol: rapA
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
+      entry_status: REVIEWED
+      proteome_id: UP000001570
+      retrieved_on: '2026-10-17'
+      entry_version: 149
+      sequence_version: 2
+      role: Characteristic protein component (rapA, Response regulator aspartate phosphatase
+        A) associated with rapid axopodial contraction in Bacillus subtilis (strain
+        168).
+      evidence:
+      - reference: DOI:10.1111/j.1550-7408.2001.tb00187.x
+        snippet: Upon food uptake, the tubules shorten and transform into a mass of
+          small granules when rapid axopodial contraction occurs
+        notes: Supports Response regulator aspartate phosphatase A in rapid axopodial
+          contraction; UniProtKB:Q00828 (rapA, Response regulator aspartate phosphatase
+          A) in Bacillus subtilis (strain 168) provides a verified protein exemplar.
+  edges:
+  - subject: rapid_axopodial_contraction_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: rapid_axopodial_contraction_trait
+    description: Response regulator aspartate phosphatase A (rapA, UniProtKB:Q00828)
+      contributes to rapid axopodial contraction (associated with contraction, axopodial,
+      transform).
+    evidence:
+    - reference: DOI:10.1111/j.1550-7408.2001.tb00187.x
+      snippet: Upon food uptake, the tubules shorten and transform into a mass of
+        small granules when rapid axopodial contraction occurs
+      notes: Supports the functional association between Response regulator aspartate
+        phosphatase A (UniProtKB:Q00828 in Bacillus subtilis (strain 168)) and rapid
+        axopodial contraction.

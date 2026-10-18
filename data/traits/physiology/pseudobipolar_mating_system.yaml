@@ -96,3 +96,75 @@ curation_history:
     phenotype. Deferred canonical taxa, lexical mappings and native protein graphs,
     with source limitations and an allele-label discrepancy explicit.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph pseudobipolar_mating_system_graph
+    with GENE_OR_PROTEIN node pseudobipolar_mating_system_protein_component and UniProtKB:Q08955
+    exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: pseudobipolar_mating_system_graph
+  title: Protein component associated with pseudobipolar mating system
+  description: Literature-backed association between Chromosome segregation in meiosis
+    protein 4 (UniProtKB:Q08955) and pseudobipolar mating system.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q08955 in Saccharomyces
+    cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)) associated with pseudobipolar
+    mating system while full multi-step mechanistic curation remains future work.
+  nodes:
+  - node_id: pseudobipolar_mating_system_trait
+    label: pseudobipolar mating system
+    node_type: TRAIT
+    grounding: traitmech:000617
+    description: A fungal mating-system phenotype in which pheromone/receptor and
+      homeodomain compatibility loci are physically linked on the same chromosome
+      but can recombine during meiosis, generating new mating-type combinations.
+  - node_id: pseudobipolar_mating_system_protein_component
+    label: Chromosome segregation in meiosis protein 4
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Chromosome segregation in meiosis protein 4) associated
+      with pseudobipolar mating system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - CSM4
+    protein_examples:
+    - uniprot_id: UniProtKB:Q08955
+      protein_label: Chromosome segregation in meiosis protein 4
+      gene_symbol: CSM4
+      taxon_id: NCBITaxon:559292
+      taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's
+        yeast)
+      entry_status: REVIEWED
+      proteome_id: UP000002311
+      retrieved_on: '2026-10-17'
+      entry_version: 143
+      sequence_version: 1
+      role: Characteristic protein component (CSM4, Chromosome segregation in meiosis
+        protein 4) associated with pseudobipolar mating system in Saccharomyces cerevisiae
+        (strain ATCC 204508 / S288c) (Baker's yeast).
+      evidence:
+      - reference: DOI:10.1371/journal.pbio.3003417
+        snippet: In the pseudobipolar configuration, the P/R and HD loci remained
+          on the same chromosome but genetically unlinked
+        notes: Supports Chromosome segregation in meiosis protein 4 in pseudobipolar
+          mating system; UniProtKB:Q08955 (CSM4, Chromosome segregation in meiosis
+          protein 4) in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's
+          yeast) provides a verified protein exemplar.
+  edges:
+  - subject: pseudobipolar_mating_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: pseudobipolar_mating_system_trait
+    description: Chromosome segregation in meiosis protein 4 (CSM4, UniProtKB:Q08955)
+      contributes to pseudobipolar mating system (associated with configuration, pseudobipolar,
+      genetically).
+    evidence:
+    - reference: DOI:10.1371/journal.pbio.3003417
+      snippet: In the pseudobipolar configuration, the P/R and HD loci remained on
+        the same chromosome but genetically unlinked
+      notes: Supports the functional association between Chromosome segregation in
+        meiosis protein 4 (UniProtKB:Q08955 in Saccharomyces cerevisiae (strain ATCC
+        204508 / S288c) (Baker's yeast)) and pseudobipolar mating system.

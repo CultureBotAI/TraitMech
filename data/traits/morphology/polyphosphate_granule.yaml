@@ -66,7 +66,7 @@ causal_graphs:
       entry_status: UNREVIEWED
       proteome_id: UP000007947
       retrieved_on: '2026-08-25'
-      entry_version: 69
+      entry_version: 70
       sequence_version: 1
       role: The NM-1 polyphosphate kinase synthesizes the polyphosphate stored in
         intracellular granules.
@@ -84,6 +84,28 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Enzyme that degrades inorganic polyphosphate.
     grounding: GO:0004309
+    protein_examples:
+    - uniprot_id: UniProtKB:Q9ZN70
+      protein_label: Exopolyphosphatase
+      gene_symbol: ppx
+      taxon_id: NCBITaxon:208964
+      taxon_label: Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116
+        / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)
+      entry_status: REVIEWED
+      proteome_id: UP000002438
+      retrieved_on: '2026-10-17'
+      entry_version: 123
+      sequence_version: 1
+      role: Exemplar protein (ppx, Exopolyphosphatase) representing exopolyphosphatase
+        (PPX) in Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116
+        / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1) for polyphosphate granule.
+      evidence:
+      - reference: PMID:22923697
+        snippet: polyphosphate accumulation by Microlunatus phosphovorus
+        notes: Supports exopolyphosphatase (PPX) in polyphosphate granule; UniProtKB:Q9ZN70
+          (ppx, Exopolyphosphatase) in Pseudomonas aeruginosa (strain ATCC 15692 /
+          DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1) provides
+          a verified protein exemplar.
   - node_id: divalent_cations
     label: divalent cations
     node_type: CHEMICAL
@@ -204,4 +226,11 @@ curation_history:
     the tranche: set graph scope polyphosphate_granule_storage=MECHANISTIC with scope_notes;
     added taxon-paired protein example(s) UniProtKB:F5XF46 on ppk (NCBITaxon:1032480);
     added canonical example(s) NCBITaxon:1032480.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:F5XF46
+    version metadata (entry_version=70, sequence_version=1); added UniProtKB:Q9ZN70
+    (ppx) protein example to node ppx.'
   llm_assisted: true

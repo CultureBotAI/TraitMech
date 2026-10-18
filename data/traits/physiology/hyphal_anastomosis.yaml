@@ -103,3 +103,74 @@ curation_history:
     Distinguished that scored category from all fusion events and subsequent postfusion
     incompatibility. Definition and exact abstract snippet are unchanged.'
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph hyphal_anastomosis_graph
+    with GENE_OR_PROTEIN node hyphal_anastomosis_protein_component and UniProtKB:P04801
+    exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: hyphal_anastomosis_graph
+  title: Protein component associated with hyphal anastomosis
+  description: Literature-backed association between Threonine--tRNA ligase, cytoplasmic
+    (UniProtKB:P04801) and hyphal anastomosis.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P04801 in Saccharomyces
+    cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)) associated with hyphal
+    anastomosis while full multi-step mechanistic curation remains future work.
+  nodes:
+  - node_id: hyphal_anastomosis_trait
+    label: hyphal anastomosis
+    node_type: TRAIT
+    grounding: traitmech:000605
+    description: A phenotype in which vegetative fungal hyphae fuse to establish cytoplasmic
+      continuity.
+  - node_id: hyphal_anastomosis_protein_component
+    label: Threonine--tRNA ligase, cytoplasmic
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Threonine--tRNA ligase, cytoplasmic) associated
+      with hyphal anastomosis.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - THS1
+    protein_examples:
+    - uniprot_id: UniProtKB:P04801
+      protein_label: Threonine--tRNA ligase, cytoplasmic
+      gene_symbol: THS1
+      taxon_id: NCBITaxon:559292
+      taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's
+        yeast)
+      entry_status: REVIEWED
+      proteome_id: UP000002311
+      retrieved_on: '2026-10-17'
+      entry_version: 214
+      sequence_version: 2
+      role: Characteristic protein component (THS1, Threonine--tRNA ligase, cytoplasmic)
+        associated with hyphal anastomosis in Saccharomyces cerevisiae (strain ATCC
+        204508 / S288c) (Baker's yeast).
+      evidence:
+      - reference: DOI:10.1128/ec.00191-12
+        snippet: Hyphal anastomosis, or vegetative hyphal fusion, establishes the
+          interconnection of individual hyphal strands into an integrated network
+          of a fungal mycelium.
+        notes: Supports Threonine--tRNA ligase, cytoplasmic in hyphal anastomosis;
+          UniProtKB:P04801 (THS1, Threonine--tRNA ligase, cytoplasmic) in Saccharomyces
+          cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast) provides a verified
+          protein exemplar.
+  edges:
+  - subject: hyphal_anastomosis_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: hyphal_anastomosis_trait
+    description: Threonine--tRNA ligase, cytoplasmic (THS1, UniProtKB:P04801) contributes
+      to hyphal anastomosis (associated with interconnection, anastomosis, establishes).
+    evidence:
+    - reference: DOI:10.1128/ec.00191-12
+      snippet: Hyphal anastomosis, or vegetative hyphal fusion, establishes the interconnection
+        of individual hyphal strands into an integrated network of a fungal mycelium.
+      notes: Supports the functional association between Threonine--tRNA ligase, cytoplasmic
+        (UniProtKB:P04801 in Saccharomyces cerevisiae (strain ATCC 204508 / S288c)
+        (Baker's yeast)) and hyphal anastomosis.

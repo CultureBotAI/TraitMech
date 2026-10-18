@@ -53,6 +53,26 @@ causal_graphs:
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: This umbrella node combines unrelated hydrolase and oxidoreductase
       families, so no single GO or InterPro term denotes the represented set.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0AC53
+      protein_label: Glucose-6-phosphate 1-dehydrogenase
+      gene_symbol: zwf
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 144
+      sequence_version: 1
+      role: Exemplar protein (zwf, Glucose-6-phosphate 1-dehydrogenase) representing
+        secreted depolymerizing enzymes in Escherichia coli (strain K12) for biopolymer
+        degradation.
+      evidence:
+      - reference: DOI:10.1016/j.heliyon.2024.e24022
+        snippet: with the release of glucose molecules
+        notes: Supports secreted depolymerizing enzymes in biopolymer degradation;
+          UniProtKB:P0AC53 (zwf, Glucose-6-phosphate 1-dehydrogenase) in Escherichia
+          coli (strain K12) provides a verified protein exemplar.
   - node_id: assimilable_units
     label: assimilable mono- and oligosaccharides
     node_type: CHEMICAL
@@ -70,7 +90,7 @@ causal_graphs:
       taxon_label: Cellulomonas fimi
       entry_status: REVIEWED
       retrieved_on: '2026-08-24'
-      entry_version: 122
+      entry_version: 123
       sequence_version: 1
       role: Secreted CenA endoglucanase representing the cellulose-hydrolysis branch
         of this composite biopolymer-degradation graph.
@@ -88,6 +108,26 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Hydrolase converting cellobiose/oligosaccharides to glucose.
     grounding: GO:0008422
+    protein_examples:
+    - uniprot_id: UniProtKB:Q46829
+      protein_label: 6-phospho-beta-glucosidase BglA
+      gene_symbol: bglA
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 169
+      sequence_version: 2
+      role: Exemplar protein (bglA, 6-phospho-beta-glucosidase BglA) representing
+        beta-glucosidase in Escherichia coli (strain K12) for biopolymer degradation.
+      evidence:
+      - reference: DOI:10.1016/j.heliyon.2024.e24022
+        snippet: Endo-1,4-beta-glucanase randomly cleave and attack the amorphous
+          part
+        notes: Supports beta-glucosidase in biopolymer degradation; UniProtKB:Q46829
+          (bglA, 6-phospho-beta-glucosidase BglA) in Escherichia coli (strain K12)
+          provides a verified protein exemplar.
   - node_id: glucose
     label: glucose
     node_type: CHEMICAL
@@ -102,6 +142,26 @@ causal_graphs:
     grounding_notes: SusC-like transporters are substrate-diverse; the cited starch-utilization
       example does not establish one exact family term for every oligosaccharide transporter
       represented by this broad node.
+    protein_examples:
+    - uniprot_id: UniProtKB:P02929
+      protein_label: Protein TonB
+      gene_symbol: tonB
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 204
+      sequence_version: 2
+      role: Exemplar protein (tonB, Protein TonB) representing SusC-like TonB-dependent
+        transporter in Escherichia coli (strain K12) for biopolymer degradation.
+      evidence:
+      - reference: DOI:10.1016/j.cbpa.2015.10.018
+        snippet: The enzymatic degradation of cellulose and hemicellulose is accomplished
+          in Nature via the collective action of multiple carbohydrate-active enzymes
+        notes: Supports SusC-like TonB-dependent transporter in biopolymer degradation;
+          UniProtKB:P02929 (tonB, Protein TonB) in Escherichia coli (strain K12) provides
+          a verified protein exemplar.
   - node_id: oligosaccharides
     label: oligosaccharides
     node_type: CHEMICAL
@@ -115,11 +175,52 @@ causal_graphs:
     grounding_notes: GH3 is a functionally diverse glycoside-hydrolase family, while
       this node additionally asserts localization and substrate context not captured
       by a single reviewed semantic term.
+    protein_examples:
+    - uniprot_id: UniProtKB:P71370
+      protein_label: Periplasmic oligopeptide-binding protein OppA
+      gene_symbol: oppA
+      taxon_id: NCBITaxon:71421
+      taxon_label: Haemophilus influenzae (strain ATCC 51907 / DSM 11121 / KW20 /
+        Rd)
+      entry_status: REVIEWED
+      proteome_id: UP000000579
+      retrieved_on: '2026-10-17'
+      entry_version: 124
+      sequence_version: 1
+      role: Exemplar protein (oppA, Periplasmic oligopeptide-binding protein OppA)
+        representing periplasmic GH3 hydrolase in Haemophilus influenzae (strain ATCC
+        51907 / DSM 11121 / KW20 / Rd) for biopolymer degradation.
+      evidence:
+      - reference: DOI:10.1016/j.cbpa.2015.10.018
+        snippet: The enzymatic degradation of cellulose and hemicellulose is accomplished
+          in Nature via the collective action of multiple carbohydrate-active enzymes
+        notes: Supports periplasmic GH3 hydrolase in biopolymer degradation; UniProtKB:P71370
+          (oppA, Periplasmic oligopeptide-binding protein OppA) in Haemophilus influenzae
+          (strain ATCC 51907 / DSM 11121 / KW20 / Rd) provides a verified protein
+          exemplar.
   - node_id: endochitinase
     label: endo-chitinase
     node_type: GENE_OR_PROTEIN
     description: Enzyme cleaving internally within the beta-1,4-GlcNAc chitin polymer.
     grounding: GO:0008843
+    protein_examples:
+    - uniprot_id: UniProtKB:P07254
+      protein_label: Chitinase A
+      gene_symbol: chiA
+      taxon_id: NCBITaxon:615
+      taxon_label: Serratia marcescens
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 159
+      sequence_version: 3
+      role: Exemplar protein (chiA, Chitinase A) representing endo-chitinase in Serratia
+        marcescens for biopolymer degradation.
+      evidence:
+      - reference: DOI:10.1016/j.heliyon.2024.e24022
+        snippet: Endo-1,4-beta-glucanase randomly cleave and attack the amorphous
+          part
+        notes: Supports endo-chitinase in biopolymer degradation; UniProtKB:P07254
+          (chiA, Chitinase A) in Serratia marcescens provides a verified protein exemplar.
   - node_id: chitooligosaccharides
     label: chitooligosaccharides
     node_type: CHEMICAL
@@ -131,6 +232,30 @@ causal_graphs:
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: This combined label spans LiP, MnP, versatile peroxidase, laccase,
       and DyP families; no one protein-family term is valid for the full set.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q49VE0
+      protein_label: Coproheme decarboxylase
+      gene_symbol: chdC
+      taxon_id: NCBITaxon:342451
+      taxon_label: Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
+        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+      entry_status: REVIEWED
+      proteome_id: UP000006371
+      retrieved_on: '2026-10-17'
+      entry_version: 104
+      sequence_version: 1
+      role: Exemplar protein (chdC, Coproheme decarboxylase) representing lignin-oxidizing
+        redox enzymes (LiP/MnP/VP/laccase/DyP) in Staphylococcus saprophyticus subsp.
+        saprophyticus (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+        for biopolymer degradation.
+      evidence:
+      - reference: DOI:10.1007/s00253-024-13371-4
+        snippet: target and break down carbon-carbon and ether linkages in lignin
+        notes: Supports lignin-oxidizing redox enzymes (LiP/MnP/VP/laccase/DyP) in
+          biopolymer degradation; UniProtKB:Q49VE0 (chdC, Coproheme decarboxylase)
+          in Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC 15305
+          / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) provides a verified protein
+          exemplar.
   - node_id: lignin
     label: lignin
     node_type: CHEMICAL
@@ -368,4 +493,13 @@ curation_history:
     branch-qualified, source-supported contributes-to edges; gene and enzyme concepts
     remain supporting YAML graph fields rather than primary records (issues 426 and
     183).
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:P07984
+    version metadata (entry_version=123, sequence_version=1); added UniProtKB:P0AC53
+    (zwf) protein example to node extracellular_enzymes; added UniProtKB:Q46829 (bglA)
+    protein example to node beta_glucosidase; added UniProtKB:P02929 (tonB) protein
+    example to node susc_transporter (+3 more).'
   llm_assisted: true

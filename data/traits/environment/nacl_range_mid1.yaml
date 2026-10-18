@@ -82,6 +82,38 @@ causal_graphs:
     label: halotolerant and moderate halophiles
     node_type: TRAIT
     description: Organisms tolerating or requiring moderate salinity.
+  - node_id: nacl_range_mid1_protein_component
+    label: Glycine betaine/proline betaine transport system ATP-binding protein ProV
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Glycine betaine/proline betaine transport system
+      ATP-binding protein ProV) associated with NaCl range mid1.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - proV
+    protein_examples:
+    - uniprot_id: UniProtKB:P14175
+      protein_label: Glycine betaine/proline betaine transport system ATP-binding
+        protein ProV
+      gene_symbol: proV
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 204
+      sequence_version: 1
+      role: Characteristic protein component (proV, Glycine betaine/proline betaine
+        transport system ATP-binding protein ProV) associated with NaCl range mid1
+        in Escherichia coli (strain K12).
+      evidence:
+      - reference: DOI:10.1093/femsre/fuy009
+        snippet: glycine betaine uptake
+        notes: Supports Glycine betaine/proline betaine transport system ATP-binding
+          protein ProV in NaCl range mid1; UniProtKB:P14175 (proV, Glycine betaine/proline
+          betaine transport system ATP-binding protein ProV) in Escherichia coli (strain
+          K12) provides a verified protein exemplar.
   edges:
   - subject: modest_osmoadaptive_tolerance
     predicate: confers
@@ -143,6 +175,19 @@ causal_graphs:
     - reference: DOI:10.1093/FEMSRE/FUY026
       notes: halotolerant and moderate halophiles rely on excluding ions and producing
         compatible solutes such as glycine betaine
+  - subject: nacl_range_mid1_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: nacl_range_mid1_trait
+    description: Glycine betaine/proline betaine transport system ATP-binding protein
+      ProV (proV, UniProtKB:P14175) contributes to NaCl range mid1 (associated with
+      betaine, glycine, uptake).
+    evidence:
+    - reference: DOI:10.1093/femsre/fuy009
+      snippet: glycine betaine uptake
+      notes: Supports the functional association between Glycine betaine/proline betaine
+        transport system ATP-binding protein ProV (UniProtKB:P14175 in Escherichia
+        coli (strain K12)) and NaCl range mid1.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.836372+00:00'
   curator: seed_from_metpo
@@ -201,4 +246,10 @@ curation_history:
     canonical example(s): Spongorhabdus nitratireducens (NCBITaxon:2995321; DOI:10.1099/ijsem.0.007037).
     The note retains the measured value or scopes broad-class examples to the cited
     branch; no paid research was used.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    nacl_range_mid1_protein_component with UniProtKB:P14175 (proV) exemplar.'
   llm_assisted: true

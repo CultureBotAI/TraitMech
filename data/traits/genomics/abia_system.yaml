@@ -128,6 +128,38 @@ causal_graphs:
     node_type: TRAIT
     grounding: traitmech:000214
     description: Possession of a genome-encoded abortive-infection phage-defense system.
+  - node_id: abia_system_protein_component
+    label: Ribosome hibernation promotion factor
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Ribosome hibernation promotion factor) associated
+      with AbiA system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - hpf
+    protein_examples:
+    - uniprot_id: UniProtKB:A2RIX0
+      protein_label: Ribosome hibernation promotion factor
+      gene_symbol: hpf
+      taxon_id: NCBITaxon:416870
+      taxon_label: Lactococcus lactis subsp. cremoris (strain MG1363)
+      entry_status: REVIEWED
+      proteome_id: UP000000364
+      retrieved_on: '2026-10-17'
+      entry_version: 88
+      sequence_version: 1
+      role: Characteristic protein component (hpf, Ribosome hibernation promotion
+        factor) associated with AbiA system in Lactococcus lactis subsp. cremoris
+        (strain MG1363).
+      evidence:
+      - reference: PMID:9661658
+        snippet: The abiA gene encodes an abortive bacteriophage infection mechanism
+          that can protect Lactococcus species from infection by a variety of bacteriophages
+          including three unrelated phage species.
+        notes: Supports Ribosome hibernation promotion factor in AbiA system; UniProtKB:A2RIX0
+          (hpf, Ribosome hibernation promotion factor) in Lactococcus lactis subsp.
+          cremoris (strain MG1363) provides a verified protein exemplar.
   edges:
   - subject: abia_locus
     predicate: contributes to
@@ -199,6 +231,20 @@ causal_graphs:
         lactococci: variations on a theme'
       notes: The DefenseFinder article registry maps the named AbiA model namespace
         to a lactococcal abortive-infection review.
+  - subject: abia_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: abia_system_trait
+    description: Ribosome hibernation promotion factor (hpf, UniProtKB:A2RIX0) contributes
+      to AbiA system (associated with bacteriophages, bacteriophage, lactococcus).
+    evidence:
+    - reference: PMID:9661658
+      snippet: The abiA gene encodes an abortive bacteriophage infection mechanism
+        that can protect Lactococcus species from infection by a variety of bacteriophages
+        including three unrelated phage species.
+      notes: Supports the functional association between Ribosome hibernation promotion
+        factor (UniProtKB:A2RIX0 in Lactococcus lactis subsp. cremoris (strain MG1363))
+        and AbiA system.
 discussions:
 - discussion_id: abia-defensefinder-subrule-gap
   prompt: Resolve the AbiA_large and AbiA_small system boundaries, phage trigger,
@@ -261,4 +307,10 @@ curation_history:
   changes: 'Addressed PR #1218 review issues #1219 and #1220 by aligning the v221
     METPO ROBOT TSV definition with this TraitRecord and moving the AbiA dosage and
     expression evidence onto a direct AbiA locus edge.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    abia_system_protein_component with UniProtKB:A2RIX0 (hpf) exemplar.'
   llm_assisted: true

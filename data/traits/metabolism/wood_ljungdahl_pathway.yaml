@@ -75,6 +75,24 @@ causal_graphs:
     description: Enzyme reducing CO2 to formate, the first step of the WLP methyl
       branch.
     grounding: GO:0009326
+    protein_examples:
+    - uniprot_id: UniProtKB:P33160
+      protein_label: Formate dehydrogenase
+      taxon_id: NCBITaxon:33067
+      taxon_label: Pseudomonas sp. (strain 101) (Achromobacter parvulus T1)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 129
+      sequence_version: 3
+      role: Exemplar protein (P33160, Formate dehydrogenase) representing formate
+        dehydrogenase (FDH) in Pseudomonas sp. (strain 101) (Achromobacter parvulus
+        T1) for Wood-Ljungdahl pathway.
+      evidence:
+      - reference: DOI:10.3389/fbioe.2024.1395540
+        snippet: reduction of CO2 to formate catalyzed by formate dehydrogenase (FDH)
+        notes: Supports formate dehydrogenase (FDH) in Wood-Ljungdahl pathway; UniProtKB:P33160
+          (P33160, Formate dehydrogenase) in Pseudomonas sp. (strain 101) (Achromobacter
+          parvulus T1) provides a verified protein exemplar.
   - node_id: formate
     label: formate
     node_type: CHEMICAL
@@ -84,6 +102,26 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Enzyme forming formyl-THF from formate, consuming one ATP.
     grounding: GO:0004329
+    protein_examples:
+    - uniprot_id: UniProtKB:P21164
+      protein_label: Formate--tetrahydrofolate ligase
+      gene_symbol: fhs
+      taxon_id: NCBITaxon:1525
+      taxon_label: Neomoorella thermoacetica (Clostridium thermoaceticum)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 115
+      sequence_version: 1
+      role: Exemplar protein (fhs, Formate--tetrahydrofolate ligase) representing
+        formyl-THF synthetase (FTS/Fhs) in Neomoorella thermoacetica (Clostridium
+        thermoaceticum) for Wood-Ljungdahl pathway.
+      evidence:
+      - reference: DOI:10.3389/fbioe.2024.1395540
+        snippet: The second step is the reaction of formate with tetrahydrofolate
+          (THF), catalyzed by formyl-THF synthetase (FTS) and consuming one ATP
+        notes: Supports formyl-THF synthetase (FTS/Fhs) in Wood-Ljungdahl pathway;
+          UniProtKB:P21164 (fhs, Formate--tetrahydrofolate ligase) in Neomoorella
+          thermoacetica (Clostridium thermoaceticum) provides a verified protein exemplar.
   - node_id: atp
     label: ATP
     node_type: CHEMICAL
@@ -95,6 +133,26 @@ causal_graphs:
     description: Enzyme transferring the methyl group onto the corrinoid iron-sulfur
       protein.
     grounding: GO:0102036
+    protein_examples:
+    - uniprot_id: UniProtKB:O93658
+      protein_label: Trimethylamine methyltransferase MttB
+      gene_symbol: mttB
+      taxon_id: NCBITaxon:2208
+      taxon_label: Methanosarcina barkeri
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 68
+      sequence_version: 4
+      role: Exemplar protein (mttB, Trimethylamine methyltransferase MttB) representing
+        methyltransferase in Methanosarcina barkeri for Wood-Ljungdahl pathway.
+      evidence:
+      - reference: DOI:10.1016/j.bbapap.2008.08.012
+        snippet: use the reductive acetyl-CoA or Wood-Ljungdahl pathway as their main
+          mechanism for energy conservation and for synthesis of acetyl-CoA and cell
+          carbon from CO2
+        notes: Supports methyltransferase in Wood-Ljungdahl pathway; UniProtKB:O93658
+          (mttB, Trimethylamine methyltransferase MttB) in Methanosarcina barkeri
+          provides a verified protein exemplar.
   - node_id: cofesp
     label: corrinoid iron-sulfur protein (CoFeSP)
     node_type: GENE_OR_PROTEIN
@@ -103,6 +161,26 @@ causal_graphs:
     grounding_notes: CoFeSP is a multisubunit corrinoid iron-sulfur carrier; no checked
       single semantic family or complex term exactly covers the combined carrier represented
       by this node.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0DW32
+      protein_label: Arsenate respiratory reductase iron-sulfur subunit ArrB
+      gene_symbol: arrB
+      taxon_id: NCBITaxon:309797
+      taxon_label: Chrysiogenes arsenatis
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 11
+      sequence_version: 1
+      role: Exemplar protein (arrB, Arsenate respiratory reductase iron-sulfur subunit
+        ArrB) representing corrinoid iron-sulfur protein (CoFeSP) in Chrysiogenes
+        arsenatis for Wood-Ljungdahl pathway.
+      evidence:
+      - reference: DOI:10.3389/fbioe.2024.1395540
+        snippet: the methyl group of methyl-THF is transferred to a corrinoid iron-sulfur-containing
+          protein (CoFeSP) via the methyltransferase (MT)
+        notes: Supports corrinoid iron-sulfur protein (CoFeSP) in Wood-Ljungdahl pathway;
+          UniProtKB:P0DW32 (arrB, Arsenate respiratory reductase iron-sulfur subunit
+          ArrB) in Chrysiogenes arsenatis provides a verified protein exemplar.
   - node_id: acetyl_coa_synthase
     label: acetyl-CoA synthase (ACS)
     node_type: GENE_OR_PROTEIN
@@ -116,7 +194,7 @@ causal_graphs:
       taxon_label: Neomoorella thermoacetica
       entry_status: REVIEWED
       retrieved_on: '2026-08-23'
-      entry_version: 125
+      entry_version: 126
       sequence_version: 1
       role: Alpha subunit that combines CO, CoA, and the CoFeSP-borne methyl group
         to form acetyl-CoA; this accession is one component of the alpha2-beta2 CODH/ACS
@@ -386,4 +464,13 @@ curation_history:
   action: ADD_PATHWAY_CONTEXT
   changes: Added pinned PathwayMech context on reviewed causal nodes with explicit
     route and organism limitations; retained existing groundings and exact xrefs.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:P27988
+    version metadata (entry_version=126, sequence_version=1); added UniProtKB:P33160
+    (P33160) protein example to node formate_dehydrogenase; added UniProtKB:P21164
+    (fhs) protein example to node formyl_thf_synthetase; added UniProtKB:O93658 (mttB)
+    protein example to node methyltransferase (+1 more).'
   llm_assisted: true

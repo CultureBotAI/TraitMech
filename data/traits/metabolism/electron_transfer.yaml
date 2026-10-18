@@ -63,6 +63,26 @@ causal_graphs:
     grounding_notes: Redox protein is an umbrella label spanning unrelated carrier
       families and activities, so no single exact GO or InterPro term represents this
       generic node.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q9WX14
+      protein_label: Redox-sensing transcriptional repressor Rex
+      gene_symbol: rex
+      taxon_id: NCBITaxon:100226
+      taxon_label: Streptomyces coelicolor (strain ATCC BAA-471 / A3(2) / M145)
+      entry_status: REVIEWED
+      proteome_id: UP000001973
+      retrieved_on: '2026-10-17'
+      entry_version: 133
+      sequence_version: 1
+      role: Exemplar protein (rex, Redox-sensing transcriptional repressor Rex) representing
+        redox protein in Streptomyces coelicolor (strain ATCC BAA-471 / A3(2) / M145)
+        for Electron transfer.
+      evidence:
+      - reference: DOI:10.1016/j.bbabio.2008.09.008
+        snippet: electron transfer process
+        notes: Supports redox protein in Electron transfer; UniProtKB:Q9WX14 (rex,
+          Redox-sensing transcriptional repressor Rex) in Streptomyces coelicolor
+          (strain ATCC BAA-471 / A3(2) / M145) provides a verified protein exemplar.
   - node_id: cytochrome
     label: c-type cytochrome
     node_type: GENE_OR_PROTEIN
@@ -81,7 +101,7 @@ causal_graphs:
       entry_status: UNREVIEWED
       proteome_id: UP000008186
       retrieved_on: '2026-08-24'
-      entry_version: 125
+      entry_version: 126
       sequence_version: 1
       role: MtrC-family c-type cytochrome mediating extracellular electron transfer
         to Fe(III) and Mn(IV) acceptors in S. oneidensis MR-1.
@@ -117,6 +137,28 @@ causal_graphs:
     description: Proton-translocating NADH:ubiquinone oxidoreductase entry point of
       the respiratory chain.
     grounding: GO:0030964
+    protein_examples:
+    - uniprot_id: UniProtKB:P33602
+      protein_label: NADH-quinone oxidoreductase subunit G
+      gene_symbol: nuoG
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 213
+      sequence_version: 4
+      role: Exemplar protein (nuoG, NADH-quinone oxidoreductase subunit G) representing
+        NADH dehydrogenase (Complex I) in Escherichia coli (strain K12) for Electron
+        transfer.
+      evidence:
+      - reference: DOI:10.3390/ijms252413421
+        snippet: Proton-translocating NADH–ubiquinone oxidoreductase (complex I) catalyzes
+          the oxidation of NADH by ubiquinone accompanied by the transmembrane transfer
+          of four protons
+        notes: Supports NADH dehydrogenase (Complex I) in Electron transfer; UniProtKB:P33602
+          (nuoG, NADH-quinone oxidoreductase subunit G) in Escherichia coli (strain
+          K12) provides a verified protein exemplar.
   - node_id: ubiquinone
     label: ubiquinone
     node_type: CHEMICAL
@@ -137,6 +179,26 @@ causal_graphs:
     grounding_notes: The graph uses a bacterial respiratory bc1-complex label, while
       the reviewed candidate terms were either molecular-function activities or compartment-specific
       complexes rather than an exact taxon-agnostic complex.
+    protein_examples:
+    - uniprot_id: UniProtKB:P9WP37
+      protein_label: Cytochrome bc1 complex cytochrome b subunit
+      gene_symbol: qcrB
+      taxon_id: NCBITaxon:83332
+      taxon_label: Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)
+      entry_status: REVIEWED
+      proteome_id: UP000001584
+      retrieved_on: '2026-10-17'
+      entry_version: 58
+      sequence_version: 1
+      role: Exemplar protein (qcrB, Cytochrome bc1 complex cytochrome b subunit) representing
+        cytochrome bc1 complex in Mycobacterium tuberculosis (strain ATCC 25618 /
+        H37Rv) for Electron transfer.
+      evidence:
+      - reference: DOI:10.1073/pnas.2307093120
+        snippet: electrons flow to the bc1 complex and onward via cytochrome c
+        notes: Supports cytochrome bc1 complex in Electron transfer; UniProtKB:P9WP37
+          (qcrB, Cytochrome bc1 complex cytochrome b subunit) in Mycobacterium tuberculosis
+          (strain ATCC 25618 / H37Rv) provides a verified protein exemplar.
   - node_id: cytochrome_c
     label: cytochrome c
     node_type: GENE_OR_PROTEIN
@@ -145,6 +207,25 @@ causal_graphs:
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Cytochrome c is a broad protein class containing multiple families;
       this graph does not identify one exact family or chain architecture.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0ABI8
+      protein_label: Cytochrome bo(3) ubiquinol oxidase subunit 1
+      gene_symbol: cyoB
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 154
+      sequence_version: 1
+      role: Exemplar protein (cyoB, Cytochrome bo(3) ubiquinol oxidase subunit 1)
+        representing cytochrome c in Escherichia coli (strain K12) for Electron transfer.
+      evidence:
+      - reference: DOI:10.1016/j.bbabio.2008.09.008
+        snippet: electron transfer process
+        notes: Supports cytochrome c in Electron transfer; UniProtKB:P0ABI8 (cyoB,
+          Cytochrome bo(3) ubiquinol oxidase subunit 1) in Escherichia coli (strain
+          K12) provides a verified protein exemplar.
   - node_id: terminal_oxidase
     label: terminal oxidase
     node_type: GENE_OR_PROTEIN
@@ -154,6 +235,27 @@ causal_graphs:
     grounding_notes: Terminal oxidase is deliberately broad across heme-copper and
       quinol oxidase families; the cited graph does not identify one exact family
       or multisubunit complex term.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0ABI8
+      protein_label: Cytochrome bo(3) ubiquinol oxidase subunit 1
+      gene_symbol: cyoB
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 154
+      sequence_version: 1
+      role: Exemplar protein (cyoB, Cytochrome bo(3) ubiquinol oxidase subunit 1)
+        representing terminal oxidase in Escherichia coli (strain K12) for Electron
+        transfer.
+      evidence:
+      - reference: DOI:10.3390/ijms252413421
+        snippet: Ubiquinol, produced by complex I, passes those reducing equivalents
+          down the respiratory chain to the terminal acceptor—oxygen
+        notes: Supports terminal oxidase in Electron transfer; UniProtKB:P0ABI8 (cyoB,
+          Cytochrome bo(3) ubiquinol oxidase subunit 1) in Escherichia coli (strain
+          K12) provides a verified protein exemplar.
   - node_id: molecular_oxygen
     label: oxygen
     node_type: CHEMICAL
@@ -448,4 +550,13 @@ curation_history:
   action: CONNECT_CAUSAL_GRAPH_COMPONENTS
   changes: 'Resolved issue #183 graph fragmentation (4 components to 1) with 3 public-source
     connector(s). No paid research service was called.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:Q8EG34
+    version metadata (entry_version=126, sequence_version=1); added UniProtKB:Q9WX14
+    (rex) protein example to node redox_protein; added UniProtKB:P33602 (nuoG) protein
+    example to node complex_i; added UniProtKB:P9WP37 (qcrB) protein example to node
+    cytochrome_bc1 (+2 more).'
   llm_assisted: true

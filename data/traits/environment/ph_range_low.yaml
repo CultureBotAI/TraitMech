@@ -99,6 +99,27 @@ causal_graphs:
       a quantitative measurement graph; no exact semantic family term was established
       for this aggregate use.
     description: ATP-driven proton-exporting ATPase (e.g. P-type H+-ATPase).
+    protein_examples:
+    - uniprot_id: UniProtKB:Q8NW09
+      protein_label: Arsenical pump membrane protein
+      gene_symbol: arsB
+      taxon_id: NCBITaxon:196620
+      taxon_label: Staphylococcus aureus (strain MW2)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 103
+      sequence_version: 2
+      role: Exemplar protein (arsB, Arsenical pump membrane protein) representing
+        H+-ATPase proton efflux pump in Staphylococcus aureus (strain MW2) for pH
+        range low.
+      evidence:
+      - reference: DOI:10.1038/nrmicro2549
+        snippet: For pH homeostasis under alkaline conditions, active transport of
+          protons inward is a crucial adaptation, which usually involves activation
+          and transcriptional up-regulation of key cation/proton antiporters
+        notes: Supports H+-ATPase proton efflux pump in pH range low; UniProtKB:Q8NW09
+          (arsB, Arsenical pump membrane protein) in Staphylococcus aureus (strain
+          MW2) provides a verified protein exemplar.
   - node_id: cytoplasmic_protons
     label: cytoplasmic protons
     node_type: CHEMICAL
@@ -280,6 +301,12 @@ curation_history:
     the tranche: set graph scope ph_range_low_acidophile_range=NONMECHANISTIC with
     scope_notes; marked 1 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (h_atpase).'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q8NW09 (arsB)
+    protein example to node h_atpase.'
   llm_assisted: true
 canonical_examples:
 - taxon_id: NCBITaxon:920

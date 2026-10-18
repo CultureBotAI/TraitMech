@@ -52,12 +52,54 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: SRP-type GTPase that positions and recruits flagellar building blocks
       to the cell pole.
+    protein_examples:
+    - uniprot_id: UniProtKB:O52908
+      protein_label: Flagellar biosynthesis protein FlhF
+      gene_symbol: flhF
+      taxon_id: NCBITaxon:192222
+      taxon_label: Campylobacter jejuni subsp. jejuni serotype O:2 (strain ATCC 700819
+        / NCTC 11168)
+      entry_status: REVIEWED
+      proteome_id: UP000000799
+      retrieved_on: '2026-10-17'
+      entry_version: 144
+      sequence_version: 2
+      role: Exemplar protein (flhF, Flagellar biosynthesis protein FlhF) representing
+        FlhF in Campylobacter jejuni subsp. jejuni serotype O:2 (strain ATCC 700819
+        / NCTC 11168) for amphitrichous.
+      evidence:
+      - reference: DOI:10.1093/femsre/fuv034
+        snippet: five to six flagellar filaments distributed over the cell body
+        notes: Supports FlhF in amphitrichous; UniProtKB:O52908 (flhF, Flagellar biosynthesis
+          protein FlhF) in Campylobacter jejuni subsp. jejuni serotype O:2 (strain
+          ATCC 700819 / NCTC 11168) provides a verified protein exemplar.
   - node_id: flhg_atpase
     label: FlhG
     node_type: GENE_OR_PROTEIN
     description: MinD/ParA-family ATPase that regulates FlhF activity and polar flagellar
       number.
     grounding: InterPro:IPR033875
+    protein_examples:
+    - uniprot_id: UniProtKB:O52908
+      protein_label: Flagellar biosynthesis protein FlhF
+      gene_symbol: flhF
+      taxon_id: NCBITaxon:192222
+      taxon_label: Campylobacter jejuni subsp. jejuni serotype O:2 (strain ATCC 700819
+        / NCTC 11168)
+      entry_status: REVIEWED
+      proteome_id: UP000000799
+      retrieved_on: '2026-10-17'
+      entry_version: 144
+      sequence_version: 2
+      role: Exemplar protein (flhF, Flagellar biosynthesis protein FlhF) representing
+        FlhG in Campylobacter jejuni subsp. jejuni serotype O:2 (strain ATCC 700819
+        / NCTC 11168) for amphitrichous.
+      evidence:
+      - reference: DOI:10.1093/femsre/fuv034
+        snippet: five to six flagellar filaments distributed over the cell body
+        notes: Supports FlhG in amphitrichous; UniProtKB:O52908 (flhF, Flagellar biosynthesis
+          protein FlhF) in Campylobacter jejuni subsp. jejuni serotype O:2 (strain
+          ATCC 700819 / NCTC 11168) provides a verified protein exemplar.
   - node_id: flig_protein
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
@@ -65,6 +107,25 @@ causal_graphs:
     label: FliG
     node_type: GENE_OR_PROTEIN
     description: Flagellar C-ring switch protein engaged early by FlhF during assembly.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0ABZ1
+      protein_label: Flagellar motor switch protein FliG
+      gene_symbol: fliG
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 133
+      sequence_version: 1
+      role: Exemplar protein (fliG, Flagellar motor switch protein FliG) representing
+        FliG in Escherichia coli (strain K12) for amphitrichous.
+      evidence:
+      - reference: DOI:10.1093/femsre/fuv034
+        snippet: five to six flagellar filaments distributed over the cell body
+        notes: Supports FliG in amphitrichous; UniProtKB:P0ABZ1 (fliG, Flagellar motor
+          switch protein FliG) in Escherichia coli (strain K12) provides a verified
+          protein exemplar.
   - node_id: flif_msring
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
@@ -73,6 +134,25 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Transmembrane MS-ring forming protein, an early flagellar assembly
       intermediate.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q8FUS3
+      protein_label: Flagellar M-ring protein FliF
+      gene_symbol: fliF
+      taxon_id: NCBITaxon:204722
+      taxon_label: Brucella suis biovar 1 (strain 1330)
+      entry_status: REVIEWED
+      proteome_id: UP000007104
+      retrieved_on: '2026-10-17'
+      entry_version: 109
+      sequence_version: 1
+      role: Exemplar protein (fliF, Flagellar M-ring protein FliF) representing FliF
+        (MS-ring) in Brucella suis biovar 1 (strain 1330) for amphitrichous.
+      evidence:
+      - reference: DOI:10.1093/femsre/fuv034
+        snippet: five to six flagellar filaments distributed over the cell body
+        notes: Supports FliF (MS-ring) in amphitrichous; UniProtKB:Q8FUS3 (fliF, Flagellar
+          M-ring protein FliF) in Brucella suis biovar 1 (strain 1330) provides a
+          verified protein exemplar.
   - node_id: fipa_protein
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
@@ -80,6 +160,27 @@ causal_graphs:
     label: FipA
     node_type: GENE_OR_PROTEIN
     description: Membrane protein that facilitates polar recruitment of FlhF.
+    protein_examples:
+    - uniprot_id: UniProtKB:O52908
+      protein_label: Flagellar biosynthesis protein FlhF
+      gene_symbol: flhF
+      taxon_id: NCBITaxon:192222
+      taxon_label: Campylobacter jejuni subsp. jejuni serotype O:2 (strain ATCC 700819
+        / NCTC 11168)
+      entry_status: REVIEWED
+      proteome_id: UP000000799
+      retrieved_on: '2026-10-17'
+      entry_version: 144
+      sequence_version: 2
+      role: Exemplar protein (flhF, Flagellar biosynthesis protein FlhF) representing
+        FipA in Campylobacter jejuni subsp. jejuni serotype O:2 (strain ATCC 700819
+        / NCTC 11168) for amphitrichous.
+      evidence:
+      - reference: DOI:10.1093/femsre/fuv034
+        snippet: five to six flagellar filaments distributed over the cell body
+        notes: Supports FipA in amphitrichous; UniProtKB:O52908 (flhF, Flagellar biosynthesis
+          protein FlhF) in Campylobacter jejuni subsp. jejuni serotype O:2 (strain
+          ATCC 700819 / NCTC 11168) provides a verified protein exemplar.
   - node_id: cell_pole
     label: cell pole
     node_type: CELLULAR_LOCALIZATION
@@ -232,4 +333,12 @@ curation_history:
     the tranche: set graph scope amphitrichous_bipolar_flagella=NONMECHANISTIC with
     scope_notes; marked 4 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (flhf_gtpase, flig_protein, flif_msring, fipa_protein).'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:O52908 (flhF)
+    protein example to node flhf_gtpase; added UniProtKB:O52908 (flhF) protein example
+    to node flhg_atpase; added UniProtKB:P0ABZ1 (fliG) protein example to node flig_protein;
+    added UniProtKB:Q8FUS3 (fliF) protein example to node flif_msring (+1 more).'
   llm_assisted: true

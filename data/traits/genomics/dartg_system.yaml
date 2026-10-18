@@ -101,6 +101,38 @@ causal_graphs:
     grounding: traitmech:000209
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
+  - node_id: dartg_system_protein_component
+    label: DNA ADP-ribosyl transferase
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (DNA ADP-ribosyl transferase) associated with DarTG
+      system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - darT
+    protein_examples:
+    - uniprot_id: UniProtKB:P0DV56
+      protein_label: DNA ADP-ribosyl transferase
+      gene_symbol: darT
+      taxon_id: NCBITaxon:498848
+      taxon_label: Thermus aquaticus (strain ATCC BAA-2747 / Y51MC23)
+      entry_status: REVIEWED
+      proteome_id: UP000058660
+      retrieved_on: '2026-10-17'
+      entry_version: 11
+      sequence_version: 1
+      role: Characteristic protein component (darT, DNA ADP-ribosyl transferase) associated
+        with DarTG system in Thermus aquaticus (strain ATCC BAA-2747 / Y51MC23).
+      evidence:
+      - reference: DOI:10.1038/s41564-022-01153-5
+        snippet: infection with either RB69 or T5 phage, respectively, triggers release
+          of the DarT toxin, a DNA ADP-ribosyltransferase, that then modifies viral
+          DNA and prevents replication, thereby blocking the production of mature
+          virions
+        notes: Supports DNA ADP-ribosyl transferase in DarTG system; UniProtKB:P0DV56
+          (darT, DNA ADP-ribosyl transferase) in Thermus aquaticus (strain ATCC BAA-2747
+          / Y51MC23) provides a verified protein exemplar.
   edges:
   - subject: sensitive_phage_infection
     predicate: triggers
@@ -176,6 +208,20 @@ causal_graphs:
         systems that can inhibit ICP1 and discover the toxin-antitoxin system DarTG
         as a potent inhibitor.
       notes: Patel and Seed support DarTG as an anti-phage immune system.
+  - subject: dartg_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: dartg_system_trait
+    description: DNA ADP-ribosyl transferase (darT, UniProtKB:P0DV56) contributes
+      to DarTG system (associated with ribosyltransferase, respectively, replication).
+    evidence:
+    - reference: DOI:10.1038/s41564-022-01153-5
+      snippet: infection with either RB69 or T5 phage, respectively, triggers release
+        of the DarT toxin, a DNA ADP-ribosyltransferase, that then modifies viral
+        DNA and prevents replication, thereby blocking the production of mature virions
+      notes: Supports the functional association between DNA ADP-ribosyl transferase
+        (UniProtKB:P0DV56 in Thermus aquaticus (strain ATCC BAA-2747 / Y51MC23)) and
+        DarTG system.
 curation_history:
 - timestamp: '2026-09-18T14:18:08Z'
   curator: codex
@@ -183,4 +229,10 @@ curation_history:
   changes: Minted DarTG system as a DOI-backed GENOMICS TraitRecord under phage defense
     system after an ignored-and-hidden duplicate review found no exact live TraitMech,
     METPO, or prior proposal record; the replacement placeholder is reserved in proposals/metpo_traitmech_v120.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    dartg_system_protein_component with UniProtKB:P0DV56 (darT) exemplar.'
   llm_assisted: true

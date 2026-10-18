@@ -88,6 +88,41 @@ causal_graphs:
     grounding: traitmech:000209
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
+  - node_id: dionysus_system_protein_component
+    label: DNA polymerase IV
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (DNA polymerase IV) associated with Dionysus system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - dinB
+    protein_examples:
+    - uniprot_id: UniProtKB:Q49YT9
+      protein_label: DNA polymerase IV
+      gene_symbol: dinB
+      taxon_id: NCBITaxon:342451
+      taxon_label: Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
+        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+      entry_status: REVIEWED
+      proteome_id: UP000006371
+      retrieved_on: '2026-10-17'
+      entry_version: 117
+      sequence_version: 1
+      role: Characteristic protein component (dinB, DNA polymerase IV) associated
+        with Dionysus system in Staphylococcus saprophyticus subsp. saprophyticus
+        (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41).
+      evidence:
+      - reference: DOI:10.1101/2025.09.30.679545
+        snippet: 'Dionysus is named after the god associated with winemaking and the
+          celebration of life. This defense system consists of three genes encoding:
+          DinA, featuring a merozoite adhesive erythrocyte binding protein (MAEBL)
+          and a transmembrane (TM) domain; DinB, a TerB-like protein; and DinC, a
+          pore-forming toxin (PFT) with four TM domains'
+        notes: Supports DNA polymerase IV in Dionysus system; UniProtKB:Q49YT9 (dinB,
+          DNA polymerase IV) in Staphylococcus saprophyticus subsp. saprophyticus
+          (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) provides
+          a verified protein exemplar.
   edges:
   - subject: dionysus_locus
     predicate: contributes to
@@ -148,6 +183,22 @@ causal_graphs:
         the Keesman et al. modular phage-defense discovery preprint; the pinned DefenseFinder
         HMM inventory and rules table do not list Dionysus, so this row is name-to-paper
         evidence rather than model-component evidence.
+  - subject: dionysus_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: dionysus_system_trait
+    description: DNA polymerase IV (dinB, UniProtKB:Q49YT9) contributes to Dionysus
+      system (associated with transmembrane, celebration, erythrocyte).
+    evidence:
+    - reference: DOI:10.1101/2025.09.30.679545
+      snippet: 'Dionysus is named after the god associated with winemaking and the
+        celebration of life. This defense system consists of three genes encoding:
+        DinA, featuring a merozoite adhesive erythrocyte binding protein (MAEBL) and
+        a transmembrane (TM) domain; DinB, a TerB-like protein; and DinC, a pore-forming
+        toxin (PFT) with four TM domains'
+      notes: Supports the functional association between DNA polymerase IV (UniProtKB:Q49YT9
+        in Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC 15305 /
+        DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)) and Dionysus system.
 discussions:
 - discussion_id: dionysus-jumbo-phage-mechanism-gap
   prompt: Resolve Dionysus phage triggers, EPI-vesicle pore formation, and model coverage
@@ -170,4 +221,10 @@ curation_history:
     defense system after an ignored-and-hidden duplicate review found no exact live
     TraitMech, METPO, history, or prior proposal record; the replacement placeholder
     is reserved in proposals/metpo_traitmech_v207.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    dionysus_system_protein_component with UniProtKB:Q49YT9 (dinB) exemplar.'
   llm_assisted: true

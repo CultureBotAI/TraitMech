@@ -110,3 +110,73 @@ curation_history:
     and original provenance; retained the broader healthy-aging usage as an attributed
     distinction, not an exact synonym. Timestamp is the observed UTC correction decision.'
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph replicative_aging_graph
+    with GENE_OR_PROTEIN node replicative_aging_protein_component and UniProtKB:P0ACB0
+    exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: replicative_aging_graph
+  title: Protein component associated with replicative aging with functional decline
+  description: Literature-backed association between Replicative DNA helicase DnaB
+    (UniProtKB:P0ACB0) and replicative aging with functional decline.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P0ACB0 in Escherichia
+    coli (strain K12)) associated with replicative aging with functional decline while
+    full multi-step mechanistic curation remains future work.
+  nodes:
+  - node_id: replicative_aging_trait
+    label: replicative aging with functional decline
+    node_type: TRAIT
+    grounding: traitmech:000709
+    description: A physiological phenotype in which microbial cells exhibit declining
+      growth or reproductive performance, or increasing mortality risk, with increasing
+      replicative age under specified conditions.
+  - node_id: replicative_aging_protein_component
+    label: Replicative DNA helicase DnaB
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Replicative DNA helicase DnaB) associated with
+      replicative aging with functional decline.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - dnaB
+    protein_examples:
+    - uniprot_id: UniProtKB:P0ACB0
+      protein_label: Replicative DNA helicase DnaB
+      gene_symbol: dnaB
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 158
+      sequence_version: 1
+      role: Characteristic protein component (dnaB, Replicative DNA helicase DnaB)
+        associated with replicative aging with functional decline in Escherichia coli
+        (strain K12).
+      evidence:
+      - reference: DOI:10.1186/1471-2148-7-126
+        snippet: Aging refers to a decline in reproduction and survival with increasing
+          age.
+        notes: Supports Replicative DNA helicase DnaB in replicative aging with functional
+          decline; UniProtKB:P0ACB0 (dnaB, Replicative DNA helicase DnaB) in Escherichia
+          coli (strain K12) provides a verified protein exemplar.
+  edges:
+  - subject: replicative_aging_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: replicative_aging_trait
+    description: Replicative DNA helicase DnaB (dnaB, UniProtKB:P0ACB0) contributes
+      to replicative aging with functional decline (associated with reproduction,
+      increasing, survival).
+    evidence:
+    - reference: DOI:10.1186/1471-2148-7-126
+      snippet: Aging refers to a decline in reproduction and survival with increasing
+        age.
+      notes: Supports the functional association between Replicative DNA helicase
+        DnaB (UniProtKB:P0ACB0 in Escherichia coli (strain K12)) and replicative aging
+        with functional decline.

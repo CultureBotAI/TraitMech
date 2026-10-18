@@ -109,3 +109,76 @@ curation_history:
     in v525. Retained route, particle-identity and mapping limits; existing records
     are unchanged.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph extracellular_membrane_vesicle_production_graph
+    with GENE_OR_PROTEIN node extracellular_membrane_vesicle_production_protein_component
+    and UniProtKB:Q9HVD1 exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: extracellular_membrane_vesicle_production_graph
+  title: Protein component associated with extracellular membrane vesicle production
+  description: Literature-backed association between Lipid A deacylase PagL (UniProtKB:Q9HVD1)
+    and extracellular membrane vesicle production.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q9HVD1 in Pseudomonas
+    aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228
+    / 1C / PRS 101 / PAO1)) associated with extracellular membrane vesicle production
+    while full multi-step mechanistic curation remains future work.
+  nodes:
+  - node_id: extracellular_membrane_vesicle_production_trait
+    label: extracellular membrane vesicle production
+    node_type: TRAIT
+    grounding: traitmech:000649
+    description: A physiological phenotype in which microbial cells give rise to closed,
+      cell-derived lipid-membrane vesicles in the extracellular space.
+  - node_id: extracellular_membrane_vesicle_production_protein_component
+    label: Lipid A deacylase PagL
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Lipid A deacylase PagL) associated with extracellular
+      membrane vesicle production.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - pagL
+    protein_examples:
+    - uniprot_id: UniProtKB:Q9HVD1
+      protein_label: Lipid A deacylase PagL
+      gene_symbol: pagL
+      taxon_id: NCBITaxon:208964
+      taxon_label: Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116
+        / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)
+      entry_status: REVIEWED
+      proteome_id: UP000002438
+      retrieved_on: '2026-10-17'
+      entry_version: 108
+      sequence_version: 1
+      role: Characteristic protein component (pagL, Lipid A deacylase PagL) associated
+        with extracellular membrane vesicle production in Pseudomonas aeruginosa (strain
+        ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101
+        / PAO1).
+      evidence:
+      - reference: DOI:10.1038/s41467-017-00492-w
+        snippet: Through these openings, cytoplasmic membrane material protrudes into
+          the extracellular space and is released as MVs.
+        notes: Supports Lipid A deacylase PagL in extracellular membrane vesicle production;
+          UniProtKB:Q9HVD1 (pagL, Lipid A deacylase PagL) in Pseudomonas aeruginosa
+          (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C
+          / PRS 101 / PAO1) provides a verified protein exemplar.
+  edges:
+  - subject: extracellular_membrane_vesicle_production_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: extracellular_membrane_vesicle_production_trait
+    description: Lipid A deacylase PagL (pagL, UniProtKB:Q9HVD1) contributes to extracellular
+      membrane vesicle production (associated with extracellular, cytoplasmic, protrudes).
+    evidence:
+    - reference: DOI:10.1038/s41467-017-00492-w
+      snippet: Through these openings, cytoplasmic membrane material protrudes into
+        the extracellular space and is released as MVs.
+      notes: Supports the functional association between Lipid A deacylase PagL (UniProtKB:Q9HVD1
+        in Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM
+        14847 / LMG 12228 / 1C / PRS 101 / PAO1)) and extracellular membrane vesicle
+        production.

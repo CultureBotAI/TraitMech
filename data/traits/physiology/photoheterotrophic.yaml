@@ -76,7 +76,7 @@ causal_graphs:
       taxon_label: Rhodospirillum rubrum
       entry_status: REVIEWED
       retrieved_on: '2026-08-24'
-      entry_version: 119
+      entry_version: 120
       sequence_version: 2
       role: L-chain component of the R. rubrum Type II photochemical reaction center;
         this accession is not presented as the complete reaction-center complex.
@@ -127,6 +127,24 @@ causal_graphs:
     description: Retinal-binding light-driven proton pump enabling rhodopsin-based
       phototrophy.
     grounding: InterPro:IPR017402
+    protein_examples:
+    - uniprot_id: UniProtKB:Q9F7P4
+      protein_label: Green-light absorbing proteorhodopsin
+      taxon_id: NCBITaxon:133804
+      taxon_label: Gamma-proteobacterium EBAC31A08
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 98
+      sequence_version: 1
+      role: Exemplar protein (Q9F7P4, Green-light absorbing proteorhodopsin) representing
+        proteorhodopsin in Gamma-proteobacterium EBAC31A08 for photoheterotrophic.
+      evidence:
+      - reference: DOI:10.1073/pnas.0611035104
+        snippet: Light-based proton pumping by proteorhodopsin can then increase the
+          pmf
+        notes: Supports proteorhodopsin in photoheterotrophic; UniProtKB:Q9F7P4 (Q9F7P4,
+          Green-light absorbing proteorhodopsin) in Gamma-proteobacterium EBAC31A08
+          provides a verified protein exemplar.
   - node_id: nadph_anabolic
     label: NAD(P)H for anabolic metabolism
     node_type: CHEMICAL
@@ -400,4 +418,11 @@ curation_history:
   action: GROUND_CAUSAL_NODE
   changes: Grounded the aerobic anoxygenic phototrophs causal node to traitmech:000194
     after minting the same-scope aerobic anoxygenic phototrophy TraitRecord.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:P10717
+    version metadata (entry_version=120, sequence_version=2); added UniProtKB:Q9F7P4
+    (Q9F7P4) protein example to node proteorhodopsin.'
   llm_assisted: true

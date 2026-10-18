@@ -63,6 +63,28 @@ causal_graphs:
     grounding_notes: This umbrella spans unrelated PQQ-dependent and NAD-dependent
       enzyme families; the graph preserves their alternatives instead of assigning
       one family term.
+    protein_examples:
+    - uniprot_id: UniProtKB:P16027
+      protein_label: Methanol dehydrogenase [cytochrome c] subunit 1
+      gene_symbol: moxF
+      taxon_id: NCBITaxon:272630
+      taxon_label: Methylorubrum extorquens (strain ATCC 14718 / DSM 1338 / JCM 2805
+        / NCIMB 9133 / AM1)
+      entry_status: REVIEWED
+      proteome_id: UP000009081
+      retrieved_on: '2026-10-17'
+      entry_version: 180
+      sequence_version: 1
+      role: Exemplar protein (moxF, Methanol dehydrogenase [cytochrome c] subunit
+        1) representing methanol dehydrogenase in Methylorubrum extorquens (strain
+        ATCC 14718 / DSM 1338 / JCM 2805 / NCIMB 9133 / AM1) for methylotrophic.
+      evidence:
+      - reference: DOI:10.3109/10409238.2012.697865
+        snippet: Methanol is further converted to formaldehyde by methanol dehydrogenase
+        notes: Supports methanol dehydrogenase in methylotrophic; UniProtKB:P16027
+          (moxF, Methanol dehydrogenase [cytochrome c] subunit 1) in Methylorubrum
+          extorquens (strain ATCC 14718 / DSM 1338 / JCM 2805 / NCIMB 9133 / AM1)
+          provides a verified protein exemplar.
   - node_id: pqq_dependent_mdh
     label: PQQ-dependent methanol dehydrogenase
     node_type: GENE_OR_PROTEIN
@@ -70,6 +92,24 @@ causal_graphs:
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: The node combines MxaFI and XoxF lineages with different subunit
       and metal requirements, so a single protein-family term would overstate identity.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q8KP10
+      protein_label: Methanol dehydrogenase activator
+      gene_symbol: act
+      taxon_id: NCBITaxon:1471
+      taxon_label: Bacillus methanolicus
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 79
+      sequence_version: 1
+      role: Exemplar protein (act, Methanol dehydrogenase activator) representing
+        PQQ-dependent methanol dehydrogenase in Bacillus methanolicus for methylotrophic.
+      evidence:
+      - reference: DOI:10.3109/10409238.2012.697865
+        snippet: Methanol is further converted to formaldehyde by methanol dehydrogenase
+        notes: Supports PQQ-dependent methanol dehydrogenase in methylotrophic; UniProtKB:Q8KP10
+          (act, Methanol dehydrogenase activator) in Bacillus methanolicus provides
+          a verified protein exemplar.
   - node_id: periplasmic_space
     label: periplasmic space
     node_type: CELLULAR_LOCALIZATION
@@ -100,6 +140,30 @@ causal_graphs:
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: The cited comparative source supports the Hps activity but does
       not distinguish a single exact family term across all represented methylotrophs.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q8THA9
+      protein_label: 'Bifunctional enzyme Fae/Hps [Includes: 5,6,7,8-tetrahydromethanopterin
+        hydro-lyase'
+      gene_symbol: fae-hps
+      taxon_id: NCBITaxon:188937
+      taxon_label: Methanosarcina acetivorans (strain ATCC 35395 / DSM 2834 / JCM
+        12185 / C2A)
+      entry_status: REVIEWED
+      proteome_id: UP000002487
+      retrieved_on: '2026-10-17'
+      entry_version: 107
+      sequence_version: 1
+      role: 'Exemplar protein (fae-hps, Bifunctional enzyme Fae/Hps [Includes: 5,6,7,8-tetrahydromethanopterin
+        hydro-lyase) representing 3-hexulose-6-phosphate synthase (Hps) in Methanosarcina
+        acetivorans (strain ATCC 35395 / DSM 2834 / JCM 12185 / C2A) for methylotrophic.'
+      evidence:
+      - reference: DOI:10.1128/msphere.00685-24
+        snippet: Xox- and Mxa-type MDHs belong to the diverse group of pyrroloquinoline
+          quinone (PQQ)-dependent alcohol dehydrogenases
+        notes: 'Supports 3-hexulose-6-phosphate synthase (Hps) in methylotrophic;
+          UniProtKB:Q8THA9 (fae-hps, Bifunctional enzyme Fae/Hps [Includes: 5,6,7,8-tetrahydromethanopterin
+          hydro-lyase) in Methanosarcina acetivorans (strain ATCC 35395 / DSM 2834
+          / JCM 12185 / C2A) provides a verified protein exemplar.'
   - node_id: serine_glyoxylate_aminotransferase
     label: serine-glyoxylate aminotransferase (SgaA/SGT)
     node_type: GENE_OR_PROTEIN
@@ -107,6 +171,29 @@ causal_graphs:
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: SgaA/SGT is used here as a comparative functional label across
       isozymes; the graph source does not justify one exact family grounding.
+    protein_examples:
+    - uniprot_id: UniProtKB:P55819
+      protein_label: Serine--glyoxylate aminotransferase
+      gene_symbol: sgaA
+      taxon_id: NCBITaxon:272630
+      taxon_label: Methylorubrum extorquens (strain ATCC 14718 / DSM 1338 / JCM 2805
+        / NCIMB 9133 / AM1) (Methylobacterium extorquens)
+      entry_status: REVIEWED
+      proteome_id: UP000009081
+      retrieved_on: '2026-10-17'
+      entry_version: 129
+      sequence_version: 2
+      role: Exemplar protein (sgaA, Serine--glyoxylate aminotransferase) representing
+        serine-glyoxylate aminotransferase (SgaA/SGT) in Methylorubrum extorquens
+        (strain ATCC 14718 / DSM 1338 / JCM 2805 / NCIMB 9133 / AM1) (Methylobacterium
+        extorquens) for methylotrophic.
+      evidence:
+      - reference: DOI:10.3389/fbioe.2021.787791
+        snippet: serine pathway
+        notes: Supports serine-glyoxylate aminotransferase (SgaA/SGT) in methylotrophic;
+          UniProtKB:P55819 (sgaA, Serine--glyoxylate aminotransferase) in Methylorubrum
+          extorquens (strain ATCC 14718 / DSM 1338 / JCM 2805 / NCIMB 9133 / AM1)
+          (Methylobacterium extorquens) provides a verified protein exemplar.
   - node_id: hydroxypyruvate_reductase
     label: hydroxypyruvate reductase (HprA/HPR)
     node_type: GENE_OR_PROTEIN
@@ -114,6 +201,28 @@ causal_graphs:
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: HprA/HPR is an activity-level umbrella across homologous reductases;
       no exact family term was verified for every organism represented by the graph.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q59516
+      protein_label: Glycerate dehydrogenase
+      gene_symbol: hprA
+      taxon_id: NCBITaxon:272630
+      taxon_label: Methylorubrum extorquens (strain ATCC 14718 / DSM 1338 / JCM 2805
+        / NCIMB 9133 / AM1) (Methylobacterium extorquens)
+      entry_status: REVIEWED
+      proteome_id: UP000009081
+      retrieved_on: '2026-10-17'
+      entry_version: 154
+      sequence_version: 3
+      role: Exemplar protein (hprA, Glycerate dehydrogenase) representing hydroxypyruvate
+        reductase (HprA/HPR) in Methylorubrum extorquens (strain ATCC 14718 / DSM
+        1338 / JCM 2805 / NCIMB 9133 / AM1) (Methylobacterium extorquens) for methylotrophic.
+      evidence:
+      - reference: DOI:10.3109/10409238.2012.697865
+        snippet: Methanol is further converted to formaldehyde by methanol dehydrogenase
+        notes: Supports hydroxypyruvate reductase (HprA/HPR) in methylotrophic; UniProtKB:Q59516
+          (hprA, Glycerate dehydrogenase) in Methylorubrum extorquens (strain ATCC
+          14718 / DSM 1338 / JCM 2805 / NCIMB 9133 / AM1) (Methylobacterium extorquens)
+          provides a verified protein exemplar.
   - node_id: formaldehyde_dehydrogenase
     label: formaldehyde dehydrogenase (Fld/FDH)
     node_type: GENE_OR_PROTEIN
@@ -121,6 +230,25 @@ causal_graphs:
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: The label spans cofactor-distinct formaldehyde oxidation systems;
       the cited graph does not select one protein family.
+    protein_examples:
+    - uniprot_id: UniProtKB:P33160
+      protein_label: Formate dehydrogenase
+      taxon_id: NCBITaxon:33067
+      taxon_label: Pseudomonas sp. (strain 101) (Achromobacter parvulus T1)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 129
+      sequence_version: 3
+      role: Exemplar protein (P33160, Formate dehydrogenase) representing formaldehyde
+        dehydrogenase (Fld/FDH) in Pseudomonas sp. (strain 101) (Achromobacter parvulus
+        T1) for methylotrophic.
+      evidence:
+      - reference: DOI:10.3109/10409238.2012.697865
+        snippet: formate and carbon dioxide by formaldehyde and formate dehydrogenases,
+          respectively
+        notes: Supports formaldehyde dehydrogenase (Fld/FDH) in methylotrophic; UniProtKB:P33160
+          (P33160, Formate dehydrogenase) in Pseudomonas sp. (strain 101) (Achromobacter
+          parvulus T1) provides a verified protein exemplar.
   - node_id: formate
     label: formate
     node_type: CHEMICAL
@@ -130,6 +258,25 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Enzyme oxidizing formate to CO2 in the dissimilatory branch.
     grounding: GO:0009326
+    protein_examples:
+    - uniprot_id: UniProtKB:P33160
+      protein_label: Formate dehydrogenase
+      taxon_id: NCBITaxon:33067
+      taxon_label: Pseudomonas sp. (strain 101) (Achromobacter parvulus T1)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 129
+      sequence_version: 3
+      role: Exemplar protein (P33160, Formate dehydrogenase) representing formate
+        dehydrogenase (Fdh) in Pseudomonas sp. (strain 101) (Achromobacter parvulus
+        T1) for methylotrophic.
+      evidence:
+      - reference: DOI:10.3109/10409238.2012.697865
+        snippet: formate and carbon dioxide by formaldehyde and formate dehydrogenases,
+          respectively
+        notes: Supports formate dehydrogenase (Fdh) in methylotrophic; UniProtKB:P33160
+          (P33160, Formate dehydrogenase) in Pseudomonas sp. (strain 101) (Achromobacter
+          parvulus T1) provides a verified protein exemplar.
   - node_id: carbon_dioxide
     label: carbon dioxide
     node_type: CHEMICAL
@@ -151,7 +298,7 @@ causal_graphs:
       taxon_label: Methylorubrum extorquens AM1
       entry_status: REVIEWED
       retrieved_on: '2026-08-24'
-      entry_version: 179
+      entry_version: 180
       sequence_version: 1
       role: Large catalytic MxaF component of the AM1 MxaFI methanol dehydrogenase;
         this accession is not presented as the complete enzyme.
@@ -458,4 +605,13 @@ curation_history:
   action: CONNECT_CAUSAL_GRAPH_COMPONENTS
   changes: 'Resolved issue #183 graph fragmentation (4 components to 1) with 3 public-source,
     verbatim-snippet-backed connector(s). No paid research service was called.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:P16027
+    version metadata (entry_version=180, sequence_version=1); added UniProtKB:P16027
+    (moxF) protein example to node methanol_dehydrogenase; added UniProtKB:Q8KP10
+    (act) protein example to node pqq_dependent_mdh; added UniProtKB:Q8THA9 (fae-hps)
+    protein example to node hexulose_phosphate_synthase (+4 more).'
   llm_assisted: true

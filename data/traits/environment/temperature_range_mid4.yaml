@@ -122,6 +122,28 @@ causal_graphs:
       for this aggregate use.
     description: Protective heat-shock chaperone systems that refold stress-damaged
       proteins.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0A6Y8
+      protein_label: Chaperone protein DnaK
+      gene_symbol: dnaK
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 183
+      sequence_version: 2
+      role: Exemplar protein (dnaK, Chaperone protein DnaK) representing DnaK/DnaJ/GrpE
+        and GroES/GroEL chaperone systems in Escherichia coli (strain K12) for temperature
+        range mid4.
+      evidence:
+      - reference: DOI:10.1128/mbio.03105-23
+        snippet: the alternative sigma factor σ32 (RpoH) that drives the expression
+          of protective heat shock proteins (HSPs), such as the molecular chaperone
+          systems DnaK/DnaJ/GrpE and GroES/GroEL
+        notes: Supports DnaK/DnaJ/GrpE and GroES/GroEL chaperone systems in temperature
+          range mid4; UniProtKB:P0A6Y8 (dnaK, Chaperone protein DnaK) in Escherichia
+          coli (strain K12) provides a verified protein exemplar.
   - node_id: heat_stress_protection
     label: protection against heat stress
     node_type: BIOLOGICAL_PROCESS
@@ -391,4 +413,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (METPO:1016200×1).
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P0A6Y8 (dnaK)
+    protein example to node heat_shock_chaperone_systems.'
   llm_assisted: true

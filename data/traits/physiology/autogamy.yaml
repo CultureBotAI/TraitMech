@@ -149,3 +149,68 @@ curation_history:
     definition, evidence, examples and prior history. v501 carries the existing proposed
     METPO ID with this hierarchy; earlier standalone templates remain historical.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph autogamy_graph
+    with GENE_OR_PROTEIN node autogamy_protein_component and UniProtKB:B5BJ71 exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: autogamy_graph
+  title: Protein component associated with autogamy
+  description: Literature-backed association between tRNA-cytidine(32) 2-sulfurtransferase
+    (UniProtKB:B5BJ71) and autogamy.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:B5BJ71 in Salmonella
+    paratyphi A (strain AKU_12601)) associated with autogamy while full multi-step
+    mechanistic curation remains future work.
+  nodes:
+  - node_id: autogamy_trait
+    label: autogamy
+    node_type: TRAIT
+    grounding: traitmech:000622
+    description: A sexual-reproduction phenotype in which two meiotically derived
+      gametic nuclei formed within one unpaired, undivided cell fuse with each other,
+      without fusion of separate gametes.
+  - node_id: autogamy_protein_component
+    label: tRNA-cytidine(32) 2-sulfurtransferase
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (tRNA-cytidine(32) 2-sulfurtransferase) associated
+      with autogamy.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - ttcA
+    protein_examples:
+    - uniprot_id: UniProtKB:B5BJ71
+      protein_label: tRNA-cytidine(32) 2-sulfurtransferase
+      gene_symbol: ttcA
+      taxon_id: NCBITaxon:554290
+      taxon_label: Salmonella paratyphi A (strain AKU_12601)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 73
+      sequence_version: 1
+      role: Characteristic protein component (ttcA, tRNA-cytidine(32) 2-sulfurtransferase)
+        associated with autogamy in Salmonella paratyphi A (strain AKU_12601).
+      evidence:
+      - reference: DOI:10.1016/0014-4827(86)90492-1
+        snippet: Autogamy is a process of meiosis and fertilization which takes place
+          in unpaired Paramecium cells, and which is triggered by starvation.
+        notes: Supports tRNA-cytidine(32) 2-sulfurtransferase in autogamy; UniProtKB:B5BJ71
+          (ttcA, tRNA-cytidine(32) 2-sulfurtransferase) in Salmonella paratyphi A
+          (strain AKU_12601) provides a verified protein exemplar.
+  edges:
+  - subject: autogamy_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: autogamy_trait
+    description: tRNA-cytidine(32) 2-sulfurtransferase (ttcA, UniProtKB:B5BJ71) contributes
+      to autogamy (associated with fertilization, paramecium, starvation).
+    evidence:
+    - reference: DOI:10.1016/0014-4827(86)90492-1
+      snippet: Autogamy is a process of meiosis and fertilization which takes place
+        in unpaired Paramecium cells, and which is triggered by starvation.
+      notes: Supports the functional association between tRNA-cytidine(32) 2-sulfurtransferase
+        (UniProtKB:B5BJ71 in Salmonella paratyphi A (strain AKU_12601)) and autogamy.

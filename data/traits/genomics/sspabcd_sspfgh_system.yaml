@@ -98,6 +98,35 @@ causal_graphs:
     grounding: traitmech:000213
     description: Possession of a genome-encoded phosphorothioate-based phage defense
       system.
+  - node_id: sspabcd_sspfgh_system_protein_component
+    label: Agglutinin receptor
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Agglutinin receptor) associated with SspABCD-SspFGH
+      system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - sspB
+    protein_examples:
+    - uniprot_id: UniProtKB:P16952
+      protein_label: Agglutinin receptor
+      gene_symbol: sspB
+      taxon_id: NCBITaxon:1302
+      taxon_label: Streptococcus gordonii
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 128
+      sequence_version: 2
+      role: Characteristic protein component (sspB, Agglutinin receptor) associated
+        with SspABCD-SspFGH system in Streptococcus gordonii.
+      evidence:
+      - reference: DOI:10.1128/mbio.00613-21
+        snippet: new type of ssDNA PT-based SspABCD-SspFGH defense system capable
+          of providing protection against phages
+        notes: Supports Agglutinin receptor in SspABCD-SspFGH system; UniProtKB:P16952
+          (sspB, Agglutinin receptor) in Streptococcus gordonii provides a verified
+          protein exemplar.
   edges:
   - subject: sspabcd_sspfgh_locus
     predicate: contributes to
@@ -176,6 +205,18 @@ causal_graphs:
       snippet: new type of ssDNA PT-based SspABCD-SspFGH defense system
       notes: Wang et al. place SspABCD-SspFGH among single-stranded DNA phosphorothioation-based
         defense systems.
+  - subject: sspabcd_sspfgh_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: sspabcd_sspfgh_system_trait
+    description: Agglutinin receptor (sspB, UniProtKB:P16952) contributes to SspABCD-SspFGH
+      system (associated with protection, providing, against).
+    evidence:
+    - reference: DOI:10.1128/mbio.00613-21
+      snippet: new type of ssDNA PT-based SspABCD-SspFGH defense system capable of
+        providing protection against phages
+      notes: Supports the functional association between Agglutinin receptor (UniProtKB:P16952
+        in Streptococcus gordonii) and SspABCD-SspFGH system.
 curation_history:
 - timestamp: '2026-09-15T17:06:06Z'
   curator: codex
@@ -184,4 +225,10 @@ curation_history:
     the phosphorothioate defense system parent after an ignored-and-hidden duplicate
     review found no exact live TraitMech, METPO, or prior proposal record; the replacement
     placeholder is reserved in proposals/metpo_traitmech_v100.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    sspabcd_sspfgh_system_protein_component with UniProtKB:P16952 (sspB) exemplar.'
   llm_assisted: true

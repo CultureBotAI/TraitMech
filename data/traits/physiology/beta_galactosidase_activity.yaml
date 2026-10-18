@@ -48,3 +48,72 @@ curation_history:
     repository-wide duplicate review covering ignored and hidden files; METPO has
     no exact beta-galactosidase activity class yet.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph beta_galactosidase_activity_graph
+    with GENE_OR_PROTEIN node beta_galactosidase_activity_protein_component and UniProtKB:P00722
+    exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: beta_galactosidase_activity_graph
+  title: Protein component associated with beta-galactosidase activity
+  description: Literature-backed association between Beta-galactosidase (UniProtKB:P00722)
+    and beta-galactosidase activity.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P00722 in Escherichia
+    coli (strain K12)) associated with beta-galactosidase activity while full multi-step
+    mechanistic curation remains future work.
+  nodes:
+  - node_id: beta_galactosidase_activity_trait
+    label: beta-galactosidase activity
+    node_type: TRAIT
+    grounding: traitmech:000148
+    description: A physiological enzyme-activity phenotype in which a cell produces
+      active beta-galactosidase enzymes that hydrolyze lactose into glucose and galactose.
+  - node_id: beta_galactosidase_activity_protein_component
+    label: Beta-galactosidase
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Beta-galactosidase) associated with beta-galactosidase
+      activity.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - lacZ
+    protein_examples:
+    - uniprot_id: UniProtKB:P00722
+      protein_label: Beta-galactosidase
+      gene_symbol: lacZ
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 230
+      sequence_version: 2
+      role: Characteristic protein component (lacZ, Beta-galactosidase) associated
+        with beta-galactosidase activity in Escherichia coli (strain K12).
+      evidence:
+      - reference: DOI:10.3389/fmicb.2021.742300
+        snippet: β-Galactosidase (EC 3.2.1.23), also referred to as lactase, is an
+          important member of glycosyl hydrolase, which can hydrolyze O-glycosidic
+          bonds of lactose by hydrolysis reaction, resulting in the production of
+          glucose and galactose
+        notes: Supports Beta-galactosidase in beta-galactosidase activity; UniProtKB:P00722
+          (lacZ, Beta-galactosidase) in Escherichia coli (strain K12) provides a verified
+          protein exemplar.
+  edges:
+  - subject: beta_galactosidase_activity_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: beta_galactosidase_activity_trait
+    description: Beta-galactosidase (lacZ, UniProtKB:P00722) contributes to beta-galactosidase
+      activity (associated with galactosidase, glycosidic, hydrolysis).
+    evidence:
+    - reference: DOI:10.3389/fmicb.2021.742300
+      snippet: β-Galactosidase (EC 3.2.1.23), also referred to as lactase, is an important
+        member of glycosyl hydrolase, which can hydrolyze O-glycosidic bonds of lactose
+        by hydrolysis reaction, resulting in the production of glucose and galactose
+      notes: Supports the functional association between Beta-galactosidase (UniProtKB:P00722
+        in Escherichia coli (strain K12)) and beta-galactosidase activity.

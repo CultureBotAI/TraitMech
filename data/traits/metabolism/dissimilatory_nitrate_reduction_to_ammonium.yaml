@@ -75,6 +75,27 @@ causal_graphs:
     description: Membrane-bound nitrate reductase catalyzing the first DNRA step (nitrate
       to nitrite).
     grounding: GO:0009325
+    protein_examples:
+    - uniprot_id: UniProtKB:P09152
+      protein_label: Respiratory nitrate reductase 1 alpha chain
+      gene_symbol: narG
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 228
+      sequence_version: 4
+      role: Exemplar protein (narG, Respiratory nitrate reductase 1 alpha chain) representing
+        NarGHI nitrate reductase in Escherichia coli (strain K12) for dissimilatory
+        nitrate reduction to ammonium.
+      evidence:
+      - reference: DOI:10.1128/msystems.00967-23
+        snippet: the narGHI nitrate reductase cluster; NarGHI catalyzes nitrate reduction
+          to nitrite, the canonical first step of nitrate respiration.
+        notes: Supports NarGHI nitrate reductase in dissimilatory nitrate reduction
+          to ammonium; UniProtKB:P09152 (narG, Respiratory nitrate reductase 1 alpha
+          chain) in Escherichia coli (strain K12) provides a verified protein exemplar.
   - node_id: nrfa
     label: NrfA cytochrome c nitrite reductase
     node_type: GENE_OR_PROTEIN
@@ -89,7 +110,7 @@ causal_graphs:
       taxon_label: Wolinella succinogenes ATCC 29543
       entry_status: REVIEWED
       retrieved_on: '2026-08-24'
-      entry_version: 163
+      entry_version: 164
       sequence_version: 2
       role: Ammonia-forming cytochrome c nitrite reductase catalyzing the six-electron
         nitrite reduction step in W. succinogenes.
@@ -107,6 +128,28 @@ causal_graphs:
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: This node combines the NarX sensor kinase and NarL response regulator;
       an exact semantic grounding requires splitting the two components.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0AF28
+      protein_label: Nitrate/nitrite response regulator protein NarL
+      gene_symbol: narL
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 145
+      sequence_version: 1
+      role: Exemplar protein (narL, Nitrate/nitrite response regulator protein NarL)
+        representing NarX-NarL two-component system in Escherichia coli (strain K12)
+        for dissimilatory nitrate reduction to ammonium.
+      evidence:
+      - reference: DOI:10.1128/msystems.00967-23
+        snippet: the narGHI nitrate reductase cluster; NarGHI catalyzes nitrate reduction
+          to nitrite, the canonical first step of nitrate respiration.
+        notes: Supports NarX-NarL two-component system in dissimilatory nitrate reduction
+          to ammonium; UniProtKB:P0AF28 (narL, Nitrate/nitrite response regulator
+          protein NarL) in Escherichia coli (strain K12) provides a verified protein
+          exemplar.
   - node_id: fnr
     label: FNR regulator
     node_type: GENE_OR_PROTEIN
@@ -116,6 +159,27 @@ causal_graphs:
     grounding_notes: FNR-family regulators vary in sensor chemistry and target scope;
       the cited evidence does not establish an exact family term for this generic
       node.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q9LA24
+      protein_label: Fumarate and nitrate reduction regulatory protein
+      gene_symbol: fnr
+      taxon_id: NCBITaxon:622
+      taxon_label: Shigella dysenteriae
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 106
+      sequence_version: 2
+      role: Exemplar protein (fnr, Fumarate and nitrate reduction regulatory protein)
+        representing FNR regulator in Shigella dysenteriae for dissimilatory nitrate
+        reduction to ammonium.
+      evidence:
+      - reference: DOI:10.1126/science.1254070
+        snippet: Denitrification converts nitrate into nitrogenous gas and thus removes
+          fixed nitrogen from the biosphere, whereas ammonification converts nitrate
+          into ammonium
+        notes: Supports FNR regulator in dissimilatory nitrate reduction to ammonium;
+          UniProtKB:Q9LA24 (fnr, Fumarate and nitrate reduction regulatory protein)
+          in Shigella dysenteriae provides a verified protein exemplar.
   - node_id: nrf_operon
     label: nrf operon transcription
     node_type: BIOLOGICAL_PROCESS
@@ -268,4 +332,12 @@ curation_history:
   curator: codex
   action: REFINE_PARENT_TRAIT
   changes: Narrowed parent from anaerobic respiration to nitrate respiration.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:Q9S1E5
+    version metadata (entry_version=164, sequence_version=2); added UniProtKB:P09152
+    (narG) protein example to node narghi; added UniProtKB:P0AF28 (narL) protein example
+    to node narx_narl; added UniProtKB:Q9LA24 (fnr) protein example to node fnr.'
   llm_assisted: true

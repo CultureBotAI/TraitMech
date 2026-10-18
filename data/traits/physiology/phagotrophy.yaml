@@ -104,3 +104,71 @@ curation_history:
     exact record. Reserved METPO:1058100 in v504. Kept uptake, nutrient sources, carbon-source
     classification and molecular mechanisms separate; no graph inferred.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph phagotrophy_graph
+    with GENE_OR_PROTEIN node phagotrophy_protein_component and UniProtKB:G1UBD1 exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: phagotrophy_graph
+  title: Protein component associated with phagotrophy
+  description: Literature-backed association between Particulate methane monooxygenase
+    alpha subunit (UniProtKB:G1UBD1) and phagotrophy.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:G1UBD1 in Methylococcus
+    capsulatus (strain ATCC 33009 / NCIMB 11132 / Bath)) associated with phagotrophy
+    while full multi-step mechanistic curation remains future work.
+  nodes:
+  - node_id: phagotrophy_trait
+    label: phagotrophy
+    node_type: TRAIT
+    grounding: traitmech:000628
+    description: A physiological phenotype in which a microbial organism ingests particulate
+      food and assimilates nutrients derived from that food.
+  - node_id: phagotrophy_protein_component
+    label: Particulate methane monooxygenase alpha subunit
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Particulate methane monooxygenase alpha subunit)
+      associated with phagotrophy.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - pmoB1
+    protein_examples:
+    - uniprot_id: UniProtKB:G1UBD1
+      protein_label: Particulate methane monooxygenase alpha subunit
+      gene_symbol: pmoB1
+      taxon_id: NCBITaxon:243233
+      taxon_label: Methylococcus capsulatus (strain ATCC 33009 / NCIMB 11132 / Bath)
+      entry_status: REVIEWED
+      proteome_id: UP000006821
+      retrieved_on: '2026-10-17'
+      entry_version: 77
+      sequence_version: 1
+      role: Characteristic protein component (pmoB1, Particulate methane monooxygenase
+        alpha subunit) associated with phagotrophy in Methylococcus capsulatus (strain
+        ATCC 33009 / NCIMB 11132 / Bath).
+      evidence:
+      - reference: DOI:10.1038/ismej.2017.68
+        snippet: NanoSIMS and bulk IRMS isotope analyses revealed that Ochromonas
+          obtained 84-99% of its carbon and 88-95% of its nitrogen from consumed bacteria.
+        notes: Supports Particulate methane monooxygenase alpha subunit in phagotrophy;
+          UniProtKB:G1UBD1 (pmoB1, Particulate methane monooxygenase alpha subunit)
+          in Methylococcus capsulatus (strain ATCC 33009 / NCIMB 11132 / Bath) provides
+          a verified protein exemplar.
+  edges:
+  - subject: phagotrophy_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: phagotrophy_trait
+    description: Particulate methane monooxygenase alpha subunit (pmoB1, UniProtKB:G1UBD1)
+      contributes to phagotrophy (associated with ochromonas, analyses, bacteria).
+    evidence:
+    - reference: DOI:10.1038/ismej.2017.68
+      snippet: NanoSIMS and bulk IRMS isotope analyses revealed that Ochromonas obtained
+        84-99% of its carbon and 88-95% of its nitrogen from consumed bacteria.
+      notes: Supports the functional association between Particulate methane monooxygenase
+        alpha subunit (UniProtKB:G1UBD1 in Methylococcus capsulatus (strain ATCC 33009
+        / NCIMB 11132 / Bath)) and phagotrophy.

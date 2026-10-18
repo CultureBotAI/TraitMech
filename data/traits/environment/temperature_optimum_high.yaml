@@ -68,6 +68,27 @@ causal_graphs:
     description: Thermophile topoisomerase that introduces positive supercoils into
       DNA.
     grounding: GO:0160097
+    protein_examples:
+    - uniprot_id: UniProtKB:P74759
+      protein_label: Reverse gyrase
+      gene_symbol: rgy
+      taxon_id: NCBITaxon:523848
+      taxon_label: Saccharolobus shibatae (strain ATCC 51178 / DSM 5389 / JCM 8931
+        / NBRC 15437 / B12) (Sulfolobus shibatae)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 127
+      sequence_version: 1
+      role: Exemplar protein (rgy, Reverse gyrase) representing reverse gyrase in
+        Saccharolobus shibatae (strain ATCC 51178 / DSM 5389 / JCM 8931 / NBRC 15437
+        / B12) (Sulfolobus shibatae) for temperature optimum high.
+      evidence:
+      - reference: DOI:10.1016/s0300-9629(97)00003-0
+        snippet: adapted to environments of high temperature
+        notes: Supports reverse gyrase in temperature optimum high; UniProtKB:P74759
+          (rgy, Reverse gyrase) in Saccharolobus shibatae (strain ATCC 51178 / DSM
+          5389 / JCM 8931 / NBRC 15437 / B12) (Sulfolobus shibatae) provides a verified
+          protein exemplar.
   - node_id: dna_positive_supercoiling
     label: DNA positive supercoiling
     node_type: BIOLOGICAL_PROCESS
@@ -84,6 +105,25 @@ causal_graphs:
       a quantitative measurement graph; no exact semantic family term was established
       for this aggregate use.
     description: Proteins that organize the nucleoid and enhance DNA thermostability.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0ACF8
+      protein_label: DNA-binding protein H-NS
+      gene_symbol: hns
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 157
+      sequence_version: 2
+      role: Exemplar protein (hns, DNA-binding protein H-NS) representing nucleoid-associated
+        proteins in Escherichia coli (strain K12) for temperature optimum high.
+      evidence:
+      - reference: DOI:10.1264/jsme2.me23087
+        snippet: increase the melting temperature of DNA
+        notes: Supports nucleoid-associated proteins in temperature optimum high;
+          UniProtKB:P0ACF8 (hns, DNA-binding protein H-NS) in Escherichia coli (strain
+          K12) provides a verified protein exemplar.
   - node_id: genome_thermostability
     label: genome thermostability
     node_type: QUALITY
@@ -97,6 +137,25 @@ causal_graphs:
       for this aggregate use.
     description: Chaperones that bind denaturing proteins to prevent aggregation under
       heat stress.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0A6Z3
+      protein_label: Chaperone protein HtpG
+      gene_symbol: htpG
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 166
+      sequence_version: 1
+      role: Exemplar protein (htpG, Chaperone protein HtpG) representing small heat
+        shock proteins in Escherichia coli (strain K12) for temperature optimum high.
+      evidence:
+      - reference: DOI:10.1128/mbio.02174-23
+        snippet: heat shock genes encoding chaperones, such as DnaK and GroEL
+        notes: Supports small heat shock proteins in temperature optimum high; UniProtKB:P0A6Z3
+          (htpG, Chaperone protein HtpG) in Escherichia coli (strain K12) provides
+          a verified protein exemplar.
   - node_id: protein_aggregation_heat
     label: heat-induced protein aggregation
     node_type: BIOLOGICAL_PROCESS
@@ -109,6 +168,29 @@ causal_graphs:
       temperature bin; no one component family represents the full thermosome.
     description: Group II chaperonin that refolds denatured proteins in an ATP-dependent
       manner.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q9V2T8
+      protein_label: Chaperonin subunit beta
+      gene_symbol: thsB
+      taxon_id: NCBITaxon:273057
+      taxon_label: Saccharolobus solfataricus (strain ATCC 35092 / DSM 1617 / JCM
+        11322 / P2) (Sulfolobus solfataricus)
+      entry_status: REVIEWED
+      proteome_id: UP000001974
+      retrieved_on: '2026-10-17'
+      entry_version: 135
+      sequence_version: 2
+      role: Exemplar protein (thsB, Chaperonin subunit beta) representing thermosome
+        (group II chaperonin) in Saccharolobus solfataricus (strain ATCC 35092 / DSM
+        1617 / JCM 11322 / P2) (Sulfolobus solfataricus) for temperature optimum high.
+      evidence:
+      - reference: DOI:10.1128/mbio.03593-22
+        snippet: thermosome complexes with different subunit compositions and substrate
+          specificities
+        notes: Supports thermosome (group II chaperonin) in temperature optimum high;
+          UniProtKB:Q9V2T8 (thsB, Chaperonin subunit beta) in Saccharolobus solfataricus
+          (strain ATCC 35092 / DSM 1617 / JCM 11322 / P2) (Sulfolobus solfataricus)
+          provides a verified protein exemplar.
   - node_id: denatured_protein_refolding
     label: refolding of denatured proteins
     node_type: BIOLOGICAL_PROCESS
@@ -454,4 +536,13 @@ curation_history:
     provenance after evidence-weak connectors were pruned; this NONMECHANISTIC graph
     intentionally ships with 2 disconnected components until independent trait-specific
     connectors are curated.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P74759 (rgy)
+    protein example to node reverse_gyrase; added UniProtKB:P0ACF8 (hns) protein example
+    to node nucleoid_associated_proteins; added UniProtKB:P0A6Z3 (htpG) protein example
+    to node small_heat_shock_proteins; added UniProtKB:Q9V2T8 (thsB) protein example
+    to node thermosome.'
   llm_assisted: true

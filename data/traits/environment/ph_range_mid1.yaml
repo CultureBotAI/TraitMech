@@ -77,6 +77,27 @@ causal_graphs:
       for this aggregate use.
     description: Membrane antiporters (e.g. Na+/H+) whose repertoire sets external-pH
       boundaries for maintaining cytoplasmic pH ~7.
+    protein_examples:
+    - uniprot_id: UniProtKB:P39830
+      protein_label: Putative cation/proton antiporter YbaL
+      gene_symbol: ybaL
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 184
+      sequence_version: 2
+      role: Exemplar protein (ybaL, Putative cation/proton antiporter YbaL) representing
+        cation/proton antiporters in Escherichia coli (strain K12) for pH range mid1.
+      evidence:
+      - reference: DOI:10.1038/nrmicro2549
+        snippet: For pH homeostasis under alkaline conditions, active transport of
+          protons inward is a crucial adaptation, which usually involves activation
+          and transcriptional up-regulation of key cation/proton antiporters
+        notes: Supports cation/proton antiporters in pH range mid1; UniProtKB:P39830
+          (ybaL, Putative cation/proton antiporter YbaL) in Escherichia coli (strain
+          K12) provides a verified protein exemplar.
   - node_id: acid_challenge
     label: acid challenge
     node_type: ENVIRONMENTAL_FACTOR
@@ -90,6 +111,28 @@ causal_graphs:
       for this aggregate use.
     description: Respiratory chain complexes that extrude protons, upregulated under
       acid challenge.
+    protein_examples:
+    - uniprot_id: UniProtKB:P09152
+      protein_label: Respiratory nitrate reductase 1 alpha chain
+      gene_symbol: narG
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 228
+      sequence_version: 4
+      role: Exemplar protein (narG, Respiratory nitrate reductase 1 alpha chain) representing
+        respiratory proton-pumping complexes in Escherichia coli (strain K12) for
+        pH range mid1.
+      evidence:
+      - reference: DOI:10.1038/nrmicro2549
+        snippet: For pH homeostasis under alkaline conditions, active transport of
+          protons inward is a crucial adaptation, which usually involves activation
+          and transcriptional up-regulation of key cation/proton antiporters
+        notes: Supports respiratory proton-pumping complexes in pH range mid1; UniProtKB:P09152
+          (narG, Respiratory nitrate reductase 1 alpha chain) in Escherichia coli
+          (strain K12) provides a verified protein exemplar.
   - node_id: alkaline_challenge
     label: alkaline challenge
     node_type: ENVIRONMENTAL_FACTOR
@@ -259,4 +302,11 @@ curation_history:
     canonical example(s): Sphingomonas oligoaromativorans (NCBITaxon:575322; DOI:10.1099/ijs.0.052894-0).
     The note retains the measured value or scopes broad-class examples to the cited
     branch; no paid research was used.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P39830 (ybaL)
+    protein example to node cation_proton_antiporters; added UniProtKB:P09152 (narG)
+    protein example to node respiratory_proton_pumping.'
   llm_assisted: true

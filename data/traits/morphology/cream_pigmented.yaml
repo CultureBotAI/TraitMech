@@ -68,6 +68,24 @@ causal_graphs:
     - crtB
     - crtI
     operon: crt locus
+    protein_examples:
+    - uniprot_id: UniProtKB:P54977
+      protein_label: Phytoene synthase
+      gene_symbol: crtB
+      taxon_id: NCBITaxon:1911
+      taxon_label: Streptomyces griseus
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 94
+      sequence_version: 1
+      role: Exemplar protein (crtB, Phytoene synthase) representing carotenoid biosynthesis
+        enzyme module in Streptomyces griseus for cream pigmented.
+      evidence:
+      - reference: DOI:10.1146/annurev.micro.62.081307.162844
+        snippet: bacterial carotenoid pigments
+        notes: Supports carotenoid biosynthesis enzyme module in cream pigmented;
+          UniProtKB:P54977 (crtB, Phytoene synthase) in Streptomyces griseus provides
+          a verified protein exemplar.
   - node_id: carotenoid_gene_disruption
     label: carotenoid biosynthesis gene disruption
     node_type: EXPERIMENTAL_FACTOR
@@ -210,4 +228,10 @@ curation_history:
     canonical example(s): Seongchinamella unica (NCBITaxon:2547392; DOI:10.1099/ijsem.0.003914).
     The note retains the measured value or scopes broad-class examples to the cited
     branch; no paid research was used.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P54977 (crtB)
+    protein example to node carotenoid_enzyme_module.'
   llm_assisted: true

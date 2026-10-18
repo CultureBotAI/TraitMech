@@ -154,3 +154,76 @@ curation_history:
     Preserved values, discrepancy, definition, source roles, snippets and previous
     history.'
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph eukaryotic_flagellar_axoneme_internalization_graph
+    with GENE_OR_PROTEIN node eukaryotic_flagellar_axoneme_internalization_protein_component
+    and UniProtKB:P33977 exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: eukaryotic_flagellar_axoneme_internalization_graph
+  title: Protein component associated with eukaryotic flagellar axoneme internalization
+  description: Literature-backed association between Flagellar basal-body protein
+    FlbY (UniProtKB:P33977) and eukaryotic flagellar axoneme internalization.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P33977 in Caulobacter
+    vibrioides (strain ATCC 19089 / CIP 103742 / CB 15) (Caulobacter crescentus))
+    associated with eukaryotic flagellar axoneme internalization while full multi-step
+    mechanistic curation remains future work.
+  nodes:
+  - node_id: eukaryotic_flagellar_axoneme_internalization_trait
+    label: eukaryotic flagellar axoneme internalization
+    node_type: TRAIT
+    grounding: traitmech:000734
+    description: A physiological phenotype in which a microbial eukaryote internalizes
+      the intact axoneme of its own cilium or flagellum into its cell body.
+  - node_id: eukaryotic_flagellar_axoneme_internalization_protein_component
+    label: Flagellar basal-body protein FlbY
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Flagellar basal-body protein FlbY) associated
+      with eukaryotic flagellar axoneme internalization.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - flbY
+    protein_examples:
+    - uniprot_id: UniProtKB:P33977
+      protein_label: Flagellar basal-body protein FlbY
+      gene_symbol: flbY
+      taxon_id: NCBITaxon:190650
+      taxon_label: Caulobacter vibrioides (strain ATCC 19089 / CIP 103742 / CB 15)
+        (Caulobacter crescentus)
+      entry_status: REVIEWED
+      proteome_id: UP000001816
+      retrieved_on: '2026-10-17'
+      entry_version: 92
+      sequence_version: 2
+      role: Characteristic protein component (flbY, Flagellar basal-body protein FlbY)
+        associated with eukaryotic flagellar axoneme internalization in Caulobacter
+        vibrioides (strain ATCC 19089 / CIP 103742 / CB 15) (Caulobacter crescentus).
+      evidence:
+      - reference: DOI:10.1083/jcb.201701074
+        snippet: Bd zoospores retracting their flagella by coiling the entire axoneme
+          into the cell body
+        notes: Supports Flagellar basal-body protein FlbY in eukaryotic flagellar
+          axoneme internalization; UniProtKB:P33977 (flbY, Flagellar basal-body protein
+          FlbY) in Caulobacter vibrioides (strain ATCC 19089 / CIP 103742 / CB 15)
+          (Caulobacter crescentus) provides a verified protein exemplar.
+  edges:
+  - subject: eukaryotic_flagellar_axoneme_internalization_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: eukaryotic_flagellar_axoneme_internalization_trait
+    description: Flagellar basal-body protein FlbY (flbY, UniProtKB:P33977) contributes
+      to eukaryotic flagellar axoneme internalization (associated with retracting,
+      zoospores, flagella).
+    evidence:
+    - reference: DOI:10.1083/jcb.201701074
+      snippet: Bd zoospores retracting their flagella by coiling the entire axoneme
+        into the cell body
+      notes: Supports the functional association between Flagellar basal-body protein
+        FlbY (UniProtKB:P33977 in Caulobacter vibrioides (strain ATCC 19089 / CIP
+        103742 / CB 15) (Caulobacter crescentus)) and eukaryotic flagellar axoneme
+        internalization.

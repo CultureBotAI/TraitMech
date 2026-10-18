@@ -60,6 +60,25 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Bacterial actin homolog that orients peptidoglycan synthesis to maintain
       cell shape.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q01465
+      protein_label: Cell shape-determining protein MreB
+      gene_symbol: mreB
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
+      entry_status: REVIEWED
+      proteome_id: UP000001570
+      retrieved_on: '2026-10-17'
+      entry_version: 148
+      sequence_version: 3
+      role: Exemplar protein (mreB, Cell shape-determining protein MreB) representing
+        MreB in Bacillus subtilis (strain 168) for fusiform shaped.
+      evidence:
+      - reference: DOI:10.1146/annurev-cellbio-101011-155745
+        snippet: MreB-directed peptidoglycan synthesis
+        notes: Supports MreB in fusiform shaped; UniProtKB:Q01465 (mreB, Cell shape-determining
+          protein MreB) in Bacillus subtilis (strain 168) provides a verified protein
+          exemplar.
   - node_id: lateral_pg_synthesis
     label: lateral peptidoglycan synthesis
     node_type: BIOLOGICAL_PROCESS
@@ -70,6 +89,25 @@ causal_graphs:
     description: MreB-associated shape protein modulating MreB localization and elongasome
       assembly.
     grounding: InterPro:IPR023690
+    protein_examples:
+    - uniprot_id: UniProtKB:Q01465
+      protein_label: Cell shape-determining protein MreB
+      gene_symbol: mreB
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
+      entry_status: REVIEWED
+      proteome_id: UP000001570
+      retrieved_on: '2026-10-17'
+      entry_version: 148
+      sequence_version: 3
+      role: Exemplar protein (mreB, Cell shape-determining protein MreB) representing
+        RodZ in Bacillus subtilis (strain 168) for fusiform shaped.
+      evidence:
+      - reference: DOI:10.1146/annurev-cellbio-101011-155745
+        snippet: MreB-directed peptidoglycan synthesis
+        notes: Supports RodZ in fusiform shaped; UniProtKB:Q01465 (mreB, Cell shape-determining
+          protein MreB) in Bacillus subtilis (strain 168) provides a verified protein
+          exemplar.
   - node_id: mreb_localization
     label: MreB polymer localization/assembly
     node_type: BIOLOGICAL_PROCESS
@@ -86,6 +124,25 @@ causal_graphs:
     label: MreC
     node_type: GENE_OR_PROTEIN
     description: Elongasome component that activates PBP2 and RodA synthesis functions.
+    protein_examples:
+    - uniprot_id: UniProtKB:P84480
+      protein_label: Cell shape-determining protein MreC
+      gene_symbol: mreC
+      taxon_id: NCBITaxon:1422
+      taxon_label: Geobacillus stearothermophilus (Bacillus stearothermophilus)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 44
+      sequence_version: 1
+      role: Exemplar protein (mreC, Cell shape-determining protein MreC) representing
+        MreC in Geobacillus stearothermophilus (Bacillus stearothermophilus) for fusiform
+        shaped.
+      evidence:
+      - reference: DOI:10.1146/annurev-cellbio-101011-155745
+        snippet: cell shape is genetically determined
+        notes: Supports MreC in fusiform shaped; UniProtKB:P84480 (mreC, Cell shape-determining
+          protein MreC) in Geobacillus stearothermophilus (Bacillus stearothermophilus)
+          provides a verified protein exemplar.
   - node_id: pbp2
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
@@ -93,12 +150,50 @@ causal_graphs:
     label: PBP2
     node_type: GENE_OR_PROTEIN
     description: Class B PBP in the elongasome coupled to RodA for rod-like wall growth.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0ABG7
+      protein_label: Peptidoglycan glycosyltransferase MrdB
+      gene_symbol: mrdB
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 133
+      sequence_version: 1
+      role: Exemplar protein (mrdB, Peptidoglycan glycosyltransferase MrdB) representing
+        PBP2 in Escherichia coli (strain K12) for fusiform shaped.
+      evidence:
+      - reference: DOI:10.1146/annurev-cellbio-101011-155745
+        snippet: MreB-directed peptidoglycan synthesis
+        notes: Supports PBP2 in fusiform shaped; UniProtKB:P0ABG7 (mrdB, Peptidoglycan
+          glycosyltransferase MrdB) in Escherichia coli (strain K12) provides a verified
+          protein exemplar.
   - node_id: roda
     label: RodA
     node_type: GENE_OR_PROTEIN
     description: SEDS glycosyltransferase mediating lateral PG incorporation with
       PBP2.
     grounding: InterPro:IPR001182
+    protein_examples:
+    - uniprot_id: UniProtKB:P0ABG7
+      protein_label: Peptidoglycan glycosyltransferase MrdB
+      gene_symbol: mrdB
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 133
+      sequence_version: 1
+      role: Exemplar protein (mrdB, Peptidoglycan glycosyltransferase MrdB) representing
+        RodA in Escherichia coli (strain K12) for fusiform shaped.
+      evidence:
+      - reference: DOI:10.1146/annurev-cellbio-101011-155745
+        snippet: MreB-directed peptidoglycan synthesis
+        notes: Supports RodA in fusiform shaped; UniProtKB:P0ABG7 (mrdB, Peptidoglycan
+          glycosyltransferase MrdB) in Escherichia coli (strain K12) provides a verified
+          protein exemplar.
   - node_id: ftsw
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
@@ -106,6 +201,25 @@ causal_graphs:
     label: FtsW
     node_type: GENE_OR_PROTEIN
     description: SEDS divisome polymerase for septal PG incorporation.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0ABG4
+      protein_label: Probable peptidoglycan glycosyltransferase FtsW
+      gene_symbol: ftsW
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 150
+      sequence_version: 1
+      role: Exemplar protein (ftsW, Probable peptidoglycan glycosyltransferase FtsW)
+        representing FtsW in Escherichia coli (strain K12) for fusiform shaped.
+      evidence:
+      - reference: DOI:10.1146/annurev-cellbio-101011-155745
+        snippet: MreB-directed peptidoglycan synthesis
+        notes: Supports FtsW in fusiform shaped; UniProtKB:P0ABG4 (ftsW, Probable
+          peptidoglycan glycosyltransferase FtsW) in Escherichia coli (strain K12)
+          provides a verified protein exemplar.
   - node_id: septal_pg_incorporation
     label: septal peptidoglycan incorporation
     node_type: BIOLOGICAL_PROCESS
@@ -284,4 +398,12 @@ curation_history:
     the tranche: set graph scope fusiform_shaped_tapered_polar_growth=NONMECHANISTIC
     with scope_notes; marked 4 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (mreb, mrec, pbp2, ftsw).'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q01465 (mreB)
+    protein example to node mreb; added UniProtKB:Q01465 (mreB) protein example to
+    node rodz; added UniProtKB:P84480 (mreC) protein example to node mrec; added UniProtKB:P0ABG7
+    (mrdB) protein example to node pbp2 (+2 more).'
   llm_assisted: true

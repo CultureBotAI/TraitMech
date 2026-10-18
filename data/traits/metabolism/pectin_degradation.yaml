@@ -42,3 +42,68 @@ curation_history:
   changes: Proposed DOI-backed pectin degradation after a repository-wide duplicate
     review covering ignored and hidden files.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph pectin_degradation_graph
+    with GENE_OR_PROTEIN node pectin_degradation_protein_component and UniProtKB:Q9X6Z2
+    exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: pectin_degradation_graph
+  title: Protein component associated with pectin degradation
+  description: Literature-backed association between Pectate lyase A (UniProtKB:Q9X6Z2)
+    and pectin degradation.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q9X6Z2 in Paenibacillus
+    barcinonensis) associated with pectin degradation while full multi-step mechanistic
+    curation remains future work.
+  nodes:
+  - node_id: pectin_degradation_trait
+    label: pectin degradation
+    node_type: TRAIT
+    grounding: traitmech:000135
+    description: A biopolymer-degradation metabolism in which an organism depolymerizes
+      pectin into oligogalacturonides and catabolizes the released pectin breakdown
+      products using pectinolytic enzymes.
+  - node_id: pectin_degradation_protein_component
+    label: Pectate lyase A
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Pectate lyase A) associated with pectin degradation.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - pelA
+    protein_examples:
+    - uniprot_id: UniProtKB:Q9X6Z2
+      protein_label: Pectate lyase A
+      gene_symbol: pelA
+      taxon_id: NCBITaxon:198119
+      taxon_label: Paenibacillus barcinonensis
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 71
+      sequence_version: 1
+      role: Characteristic protein component (pelA, Pectate lyase A) associated with
+        pectin degradation in Paenibacillus barcinonensis.
+      evidence:
+      - reference: DOI:10.1146/annurev.micro.50.1.213
+        snippet: The extracellular degradation of the pectin leads to the formation
+          of oligogalacturonides that are catabolized through an intracellular pathway
+        notes: Supports Pectate lyase A in pectin degradation; UniProtKB:Q9X6Z2 (pelA,
+          Pectate lyase A) in Paenibacillus barcinonensis provides a verified protein
+          exemplar.
+  edges:
+  - subject: pectin_degradation_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: pectin_degradation_trait
+    description: Pectate lyase A (pelA, UniProtKB:Q9X6Z2) contributes to pectin degradation
+      (associated with oligogalacturonides, extracellular, intracellular).
+    evidence:
+    - reference: DOI:10.1146/annurev.micro.50.1.213
+      snippet: The extracellular degradation of the pectin leads to the formation
+        of oligogalacturonides that are catabolized through an intracellular pathway
+      notes: Supports the functional association between Pectate lyase A (UniProtKB:Q9X6Z2
+        in Paenibacillus barcinonensis) and pectin degradation.

@@ -98,6 +98,36 @@ causal_graphs:
     grounding: traitmech:000209
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
+  - node_id: caprel_system_protein_component
+    label: DNA-binding transcriptional dual regulator CRP
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (DNA-binding transcriptional dual regulator CRP)
+      associated with CapRel system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - crp
+    protein_examples:
+    - uniprot_id: UniProtKB:P0ACJ8
+      protein_label: DNA-binding transcriptional dual regulator CRP
+      gene_symbol: crp
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 159
+      sequence_version: 1
+      role: Characteristic protein component (crp, DNA-binding transcriptional dual
+        regulator CRP) associated with CapRel system in Escherichia coli (strain K12).
+      evidence:
+      - reference: DOI:10.1038/s41586-024-08039-y
+        snippet: directly binds and senses two completely unrelated and structurally
+          different phage proteins using the same sensor domain
+        notes: Supports DNA-binding transcriptional dual regulator CRP in CapRel system;
+          UniProtKB:P0ACJ8 (crp, DNA-binding transcriptional dual regulator CRP) in
+          Escherichia coli (strain K12) provides a verified protein exemplar.
   edges:
   - subject: caprel_locus
     predicate: contributes to
@@ -179,6 +209,19 @@ causal_graphs:
       snippet: a fused anti-phage toxin-antitoxin system
       notes: Zhang et al. place CapRelSJ46 in the anti-phage toxin-antitoxin-system
         family.
+  - subject: caprel_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: caprel_system_trait
+    description: DNA-binding transcriptional dual regulator CRP (crp, UniProtKB:P0ACJ8)
+      contributes to CapRel system (associated with structurally, completely, different).
+    evidence:
+    - reference: DOI:10.1038/s41586-024-08039-y
+      snippet: can directly bind and sense two completely unrelated and structurally
+        different proteins using the same sensory domain
+      notes: Supports the functional association between DNA-binding transcriptional
+        dual regulator CRP (UniProtKB:P0ACJ8 in Escherichia coli (strain K12)) and
+        CapRel system.
 discussions:
 - discussion_id: caprel-trigger-and-family-breadth-gap
   prompt: Resolve CapRel trigger breadth, phage escape routes, and family-specific
@@ -205,4 +248,10 @@ curation_history:
   changes: Tightened the CapRel system definition around fused CapRel locus possession
     and expanded a dangling CapRel activation snippet after late Copilot feedback
     in issue 1001.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    caprel_system_protein_component with UniProtKB:P0ACJ8 (crp) exemplar.'
   llm_assisted: true

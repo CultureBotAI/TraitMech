@@ -79,6 +79,36 @@ causal_graphs:
     grounding: traitmech:000496
     description: Possession of a genome-encoded Type IV modification-dependent restriction
       system.
+  - node_id: mspji_system_protein_component
+    label: Type IV methyl-directed restriction enzyme EcoKMrr
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Type IV methyl-directed restriction enzyme EcoKMrr)
+      associated with MspJI system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - mrr
+    protein_examples:
+    - uniprot_id: UniProtKB:P24202
+      protein_label: Type IV methyl-directed restriction enzyme EcoKMrr
+      gene_symbol: mrr
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 149
+      sequence_version: 1
+      role: Characteristic protein component (mrr, Type IV methyl-directed restriction
+        enzyme EcoKMrr) associated with MspJI system in Escherichia coli (strain K12).
+      evidence:
+      - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+        snippet: '| MspJI | 10\.1073/pnas\.1018448108 | The MspJI family of modification-dependent
+          restriction endonucleases for epigenetic studies |'
+        notes: Supports Type IV methyl-directed restriction enzyme EcoKMrr in MspJI
+          system; UniProtKB:P24202 (mrr, Type IV methyl-directed restriction enzyme
+          EcoKMrr) in Escherichia coli (strain K12) provides a verified protein exemplar.
   edges:
   - subject: mspji_family_locus
     predicate: enables
@@ -150,6 +180,21 @@ causal_graphs:
         Type IV, as distinct from the familiar modification-blocked Types I-III.
       notes: Loenen and Raleigh define the Type IV class as modification-dependent
         restriction enzymes.
+  - subject: mspji_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: mspji_system_trait
+    description: Type IV methyl-directed restriction enzyme EcoKMrr (mrr, UniProtKB:P24202)
+      contributes to MspJI system (associated with hydroxymethylcytosine, characterization,
+      application).
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: '| PvuRts1I | 10\.1093/nar/gkr607 | Comparative characterization of
+        the PvuRts1I family of restriction enzymes and their application in mapping
+        genomic 5-hydroxymethylcytosine |'
+      notes: Supports the functional association between Type IV methyl-directed restriction
+        enzyme EcoKMrr (UniProtKB:P24202 in Escherichia coli (strain K12)) and MspJI
+        system.
 discussions:
 - discussion_id: mspji-defensefinder-model-gap
   prompt: Resolve MspJI-family breadth, methylcytosine and hydroxymethylcytosine sequence-context
@@ -215,4 +260,10 @@ curation_history:
     enzymes, but not a single stable NCBITaxon strain exemplar or accession-level
     protein example for the organism-level MspJI system trait. No paid research was
     used.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    mspji_system_protein_component with UniProtKB:P24202 (mrr) exemplar.'
   llm_assisted: true

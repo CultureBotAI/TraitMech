@@ -93,3 +93,74 @@ curation_history:
     formation, generic cell death and inferred protein mechanisms; existing records
     unchanged. Timestamp is observed UTC curation time.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph necridium_formation_graph
+    with GENE_OR_PROTEIN node necridium_formation_protein_component and UniProtKB:V6F5E5
+    exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: necridium_formation_graph
+  title: Protein component associated with necridium formation
+  description: Literature-backed association between Cell division protein FtsZ (UniProtKB:V6F5E5)
+    and necridium formation.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:V6F5E5 in Magnetospirillum
+    gryphiswaldense (strain DSM 6361 / JCM 21280 / NBRC 15271 / MSR-1)) associated
+    with necridium formation while full multi-step mechanistic curation remains future
+    work.
+  nodes:
+  - node_id: necridium_formation_trait
+    label: necridium formation
+    node_type: TRAIT
+    grounding: traitmech:000674
+    description: A morphological phenotype in which a filamentous cyanobacterium forms
+      degenerating separation cells called necridia whose disintegration permits trichome
+      fragmentation.
+  - node_id: necridium_formation_protein_component
+    label: Cell division protein FtsZ
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Cell division protein FtsZ) associated with necridium
+      formation.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - ftsZ
+    protein_examples:
+    - uniprot_id: UniProtKB:V6F5E5
+      protein_label: Cell division protein FtsZ
+      gene_symbol: ftsZ
+      taxon_id: NCBITaxon:431944
+      taxon_label: Magnetospirillum gryphiswaldense (strain DSM 6361 / JCM 21280 /
+        NBRC 15271 / MSR-1)
+      entry_status: REVIEWED
+      proteome_id: UP000018922
+      retrieved_on: '2026-10-17'
+      entry_version: 63
+      sequence_version: 1
+      role: Characteristic protein component (ftsZ, Cell division protein FtsZ) associated
+        with necridium formation in Magnetospirillum gryphiswaldense (strain DSM 6361
+        / JCM 21280 / NBRC 15271 / MSR-1).
+      evidence:
+      - reference: DOI:10.1111/mmi.12506
+        snippet: Necridia formation inhibits further molecular exchange, determining
+          the fate of a branch likely to become a hormogonium.
+        notes: Supports Cell division protein FtsZ in necridium formation; UniProtKB:V6F5E5
+          (ftsZ, Cell division protein FtsZ) in Magnetospirillum gryphiswaldense (strain
+          DSM 6361 / JCM 21280 / NBRC 15271 / MSR-1) provides a verified protein exemplar.
+  edges:
+  - subject: necridium_formation_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: necridium_formation_trait
+    description: Cell division protein FtsZ (ftsZ, UniProtKB:V6F5E5) contributes to
+      necridium formation (associated with determining, hormogonium, molecular).
+    evidence:
+    - reference: DOI:10.1111/mmi.12506
+      snippet: Necridia formation inhibits further molecular exchange, determining
+        the fate of a branch likely to become a hormogonium.
+      notes: Supports the functional association between Cell division protein FtsZ
+        (UniProtKB:V6F5E5 in Magnetospirillum gryphiswaldense (strain DSM 6361 / JCM
+        21280 / NBRC 15271 / MSR-1)) and necridium formation.

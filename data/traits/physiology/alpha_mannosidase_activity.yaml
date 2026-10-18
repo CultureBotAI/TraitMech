@@ -47,3 +47,79 @@ curation_history:
     a repository-wide duplicate review covering ignored and hidden files; METPO has
     no exact alpha-mannosidase activity class yet.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph alpha_mannosidase_activity_graph
+    with GENE_OR_PROTEIN node alpha_mannosidase_activity_protein_component and UniProtKB:S0DTP6
+    exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: alpha_mannosidase_activity_graph
+  title: Protein component associated with alpha-mannosidase activity
+  description: Literature-backed association between Non-reducing polyketide synthase
+    fsr1 (UniProtKB:S0DTP6) and alpha-mannosidase activity.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:S0DTP6 in Gibberella
+    fujikuroi (strain CBS 195.34 / IMI 58289 / NRRL A-6831) (Bakanae and foot rot
+    disease fungus) (Fusarium fujikuroi)) associated with alpha-mannosidase activity
+    while full multi-step mechanistic curation remains future work.
+  nodes:
+  - node_id: alpha_mannosidase_activity_trait
+    label: alpha-mannosidase activity
+    node_type: TRAIT
+    grounding: traitmech:000150
+    description: A physiological enzyme-activity phenotype in which a cell produces
+      active alpha-mannosidase enzymes that hydrolyze terminal, non-reducing alpha-D-mannose
+      residues in alpha-D-mannosides.
+  - node_id: alpha_mannosidase_activity_protein_component
+    label: Non-reducing polyketide synthase fsr1
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Non-reducing polyketide synthase fsr1) associated
+      with alpha-mannosidase activity.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - FSR1
+    protein_examples:
+    - uniprot_id: UniProtKB:S0DTP6
+      protein_label: Non-reducing polyketide synthase fsr1
+      gene_symbol: FSR1
+      taxon_id: NCBITaxon:1279085
+      taxon_label: Gibberella fujikuroi (strain CBS 195.34 / IMI 58289 / NRRL A-6831)
+        (Bakanae and foot rot disease fungus) (Fusarium fujikuroi)
+      entry_status: REVIEWED
+      proteome_id: UP000016800
+      retrieved_on: '2026-10-17'
+      entry_version: 61
+      sequence_version: 1
+      role: Characteristic protein component (FSR1, Non-reducing polyketide synthase
+        fsr1) associated with alpha-mannosidase activity in Gibberella fujikuroi (strain
+        CBS 195.34 / IMI 58289 / NRRL A-6831) (Bakanae and foot rot disease fungus)
+        (Fusarium fujikuroi).
+      evidence:
+      - reference: DOI:10.1128/jcm.32.3.854-855.1994
+        snippet: Practically all A. haemolyticum strains (138 of 139) and the Listeria
+          monocytogenes type strain were alpha-mannosidase positive
+        notes: Supports Non-reducing polyketide synthase fsr1 in alpha-mannosidase
+          activity; UniProtKB:S0DTP6 (FSR1, Non-reducing polyketide synthase fsr1)
+          in Gibberella fujikuroi (strain CBS 195.34 / IMI 58289 / NRRL A-6831) (Bakanae
+          and foot rot disease fungus) (Fusarium fujikuroi) provides a verified protein
+          exemplar.
+  edges:
+  - subject: alpha_mannosidase_activity_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: alpha_mannosidase_activity_trait
+    description: Non-reducing polyketide synthase fsr1 (FSR1, UniProtKB:S0DTP6) contributes
+      to alpha-mannosidase activity (associated with monocytogenes, haemolyticum,
+      mannosidase).
+    evidence:
+    - reference: DOI:10.1128/jcm.32.3.854-855.1994
+      snippet: Practically all A. haemolyticum strains (138 of 139) and the Listeria
+        monocytogenes type strain were alpha-mannosidase positive
+      notes: Supports the functional association between Non-reducing polyketide synthase
+        fsr1 (UniProtKB:S0DTP6 in Gibberella fujikuroi (strain CBS 195.34 / IMI 58289
+        / NRRL A-6831) (Bakanae and foot rot disease fungus) (Fusarium fujikuroi))
+        and alpha-mannosidase activity.

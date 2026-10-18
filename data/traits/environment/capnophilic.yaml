@@ -19,6 +19,12 @@ curation_history:
     evidence after a repository-wide duplicate review covering ignored and hidden
     files.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph capnophilic_graph
+    with GENE_OR_PROTEIN node capnophilic_protein_component and UniProtKB:Q03511 exemplar.'
+  llm_assisted: true
 definition_source: DOI:10.1111/1462-2920.13092
 evidence:
 - reference: DOI:10.1111/1462-2920.13092
@@ -37,3 +43,67 @@ canonical_examples:
   note: C. jejuni NCTC 11168 was the strain background for the CanB study of the C.
     jejuni capnophilic growth phenotype.
   reference: DOI:10.1111/1462-2920.13092
+causal_graphs:
+- graph_id: capnophilic_graph
+  title: Protein component associated with capnophilic
+  description: Literature-backed association between Carboxysome shell protein CcmK2
+    (UniProtKB:Q03511) and capnophilic.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q03511 in Synechococcus
+    elongatus (strain ATCC 33912 / PCC 7942 / FACHB-805) (Anacystis nidulans R2))
+    associated with capnophilic while full multi-step mechanistic curation remains
+    future work.
+  nodes:
+  - node_id: capnophilic_trait
+    label: capnophilic
+    node_type: TRAIT
+    grounding: METPO:1005021
+    description: A phenotype describing an organism that requires elevated concentrations
+      of carbon dioxide for growth.
+  - node_id: capnophilic_protein_component
+    label: Carboxysome shell protein CcmK2
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Carboxysome shell protein CcmK2) associated with
+      capnophilic.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - ccmK2
+    protein_examples:
+    - uniprot_id: UniProtKB:Q03511
+      protein_label: Carboxysome shell protein CcmK2
+      gene_symbol: ccmK2
+      taxon_id: NCBITaxon:1140
+      taxon_label: Synechococcus elongatus (strain ATCC 33912 / PCC 7942 / FACHB-805)
+        (Anacystis nidulans R2)
+      entry_status: REVIEWED
+      proteome_id: UP000889800
+      retrieved_on: '2026-10-17'
+      entry_version: 111
+      sequence_version: 1
+      role: Characteristic protein component (ccmK2, Carboxysome shell protein CcmK2)
+        associated with capnophilic in Synechococcus elongatus (strain ATCC 33912
+        / PCC 7942 / FACHB-805) (Anacystis nidulans R2).
+      evidence:
+      - reference: DOI:10.1111/1462-2920.13092
+        snippet: Taken together, our data suggest CanB is a major contributor to the
+          capnophilic growth phenotype of C. jejuni.
+        notes: Supports Carboxysome shell protein CcmK2 in capnophilic; UniProtKB:Q03511
+          (ccmK2, Carboxysome shell protein CcmK2) in Synechococcus elongatus (strain
+          ATCC 33912 / PCC 7942 / FACHB-805) (Anacystis nidulans R2) provides a verified
+          protein exemplar.
+  edges:
+  - subject: capnophilic_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: capnophilic_trait
+    description: Carboxysome shell protein CcmK2 (ccmK2, UniProtKB:Q03511) contributes
+      to capnophilic (associated with capnophilic, contributor, together).
+    evidence:
+    - reference: DOI:10.1111/1462-2920.13092
+      snippet: Taken together, our data suggest CanB is a major contributor to the
+        capnophilic growth phenotype of C. jejuni.
+      notes: Supports the functional association between Carboxysome shell protein
+        CcmK2 (UniProtKB:Q03511 in Synechococcus elongatus (strain ATCC 33912 / PCC
+        7942 / FACHB-805) (Anacystis nidulans R2)) and capnophilic.

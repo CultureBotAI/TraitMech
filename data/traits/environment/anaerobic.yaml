@@ -75,6 +75,26 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Superoxide dismutase, catalase, and peroxidases that detoxify reactive
       oxygen species.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0ABI8
+      protein_label: Cytochrome bo(3) ubiquinol oxidase subunit 1
+      gene_symbol: cyoB
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 154
+      sequence_version: 1
+      role: Exemplar protein (cyoB, Cytochrome bo(3) ubiquinol oxidase subunit 1)
+        representing antioxidant enzymes (Sod/Cat/peroxidases) in Escherichia coli
+        (strain K12) for anaerobic.
+      evidence:
+      - reference: PMID:21413255
+        snippet: Anaerobes, on the other hand, cannot grow in the presence of oxygen
+        notes: Supports antioxidant enzymes (Sod/Cat/peroxidases) in anaerobic; UniProtKB:P0ABI8
+          (cyoB, Cytochrome bo(3) ubiquinol oxidase subunit 1) in Escherichia coli
+          (strain K12) provides a verified protein exemplar.
   - node_id: ros_detoxification
     label: ROS detoxification
     node_type: BIOLOGICAL_PROCESS
@@ -87,6 +107,24 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Terminal reductases that allow use of non-oxygen molecules as respiratory
       electron acceptors.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0DW32
+      protein_label: Arsenate respiratory reductase iron-sulfur subunit ArrB
+      gene_symbol: arrB
+      taxon_id: NCBITaxon:309797
+      taxon_label: Chrysiogenes arsenatis
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 11
+      sequence_version: 1
+      role: Exemplar protein (arrB, Arsenate respiratory reductase iron-sulfur subunit
+        ArrB) representing respiratory reductases in Chrysiogenes arsenatis for anaerobic.
+      evidence:
+      - reference: PMID:21413255
+        snippet: sulfur source
+        notes: Supports respiratory reductases in anaerobic; UniProtKB:P0DW32 (arrB,
+          Arsenate respiratory reductase iron-sulfur subunit ArrB) in Chrysiogenes
+          arsenatis provides a verified protein exemplar.
   - node_id: alternative_electron_acceptors
     label: alternative anaerobic electron acceptors
     node_type: CHEMICAL
@@ -273,4 +311,11 @@ curation_history:
   changes: 'Ontology exact-match review (2026-08-25): approved exact xref(s): PATO:0001456.
     Evidence is predicate-scoped in the versioned ontology snapshots; OAK cross-checked
     direct data, and OLS4 spot-checked release deltas and disputed hits.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P0ABI8 (cyoB)
+    protein example to node antioxidant_enzymes; added UniProtKB:P0DW32 (arrB) protein
+    example to node respiratory_reductases.'
   llm_assisted: true

@@ -61,3 +61,67 @@ curation_history:
     found no exact trait or METPO class. Reserved METPO:1053600 in proposal v459;
     deferred a protein-resolved graph rather than infer strain/protein identity.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph rheotaxis_graph
+    with GENE_OR_PROTEIN node rheotaxis_protein_component and UniProtKB:Q46865 exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: rheotaxis_graph
+  title: Protein component associated with rheotaxis
+  description: Literature-backed association between mRNA interferase toxin MqsR (UniProtKB:Q46865)
+    and rheotaxis.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q46865 in Escherichia
+    coli (strain K12)) associated with rheotaxis while full multi-step mechanistic
+    curation remains future work.
+  nodes:
+  - node_id: rheotaxis_trait
+    label: rheotaxis
+    node_type: TRAIT
+    grounding: traitmech:000582
+    description: A motile phenotype in which fluid velocity gradients bias an organism's
+      self-propelled movement.
+  - node_id: rheotaxis_protein_component
+    label: mRNA interferase toxin MqsR
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (mRNA interferase toxin MqsR) associated with rheotaxis.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - mqsR
+    protein_examples:
+    - uniprot_id: UniProtKB:Q46865
+      protein_label: mRNA interferase toxin MqsR
+      gene_symbol: mqsR
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 144
+      sequence_version: 1
+      role: Characteristic protein component (mqsR, mRNA interferase toxin MqsR) associated
+        with rheotaxis in Escherichia coli (strain K12).
+      evidence:
+      - reference: DOI:10.1016/j.bpj.2012.03.001
+        snippet: positive rheotaxis (rapid and continuous upstream motility) in wild-type
+          Escherichia coli freely swimming over a surface
+        notes: Supports mRNA interferase toxin MqsR in rheotaxis; UniProtKB:Q46865
+          (mqsR, mRNA interferase toxin MqsR) in Escherichia coli (strain K12) provides
+          a verified protein exemplar.
+  edges:
+  - subject: rheotaxis_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: rheotaxis_trait
+    description: mRNA interferase toxin MqsR (mqsR, UniProtKB:Q46865) contributes
+      to rheotaxis (associated with escherichia, continuous, rheotaxis).
+    evidence:
+    - reference: DOI:10.1016/j.bpj.2012.03.001
+      snippet: positive rheotaxis (rapid and continuous upstream motility) in wild-type
+        Escherichia coli freely swimming over a surface
+      notes: Supports the functional association between mRNA interferase toxin MqsR
+        (UniProtKB:Q46865 in Escherichia coli (strain K12)) and rheotaxis.

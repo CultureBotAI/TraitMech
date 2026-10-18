@@ -98,3 +98,71 @@ curation_history:
     in v488 under released phenotype. Deferred canonical examples, lexical mappings
     and protein-resolved graphs.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph mating_type_switching_graph
+    with GENE_OR_PROTEIN node mating_type_switching_protein_component and UniProtKB:Q5AD13
+    exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: mating_type_switching_graph
+  title: Protein component associated with mating-type switching
+  description: Literature-backed association between Filamentous growth regulator
+    15 (UniProtKB:Q5AD13) and mating-type switching.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q5AD13 in Candida
+    albicans (strain SC5314 / ATCC MYA-2876) (Yeast)) associated with mating-type
+    switching while full multi-step mechanistic curation remains future work.
+  nodes:
+  - node_id: mating_type_switching_trait
+    label: mating-type switching
+    node_type: TRAIT
+    grounding: traitmech:000611
+    description: A fungal phenotype enabling conversion from one mating type to another,
+      either reversibly or irreversibly.
+  - node_id: mating_type_switching_protein_component
+    label: Filamentous growth regulator 15
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Filamentous growth regulator 15) associated with
+      mating-type switching.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - FGR15
+    protein_examples:
+    - uniprot_id: UniProtKB:Q5AD13
+      protein_label: Filamentous growth regulator 15
+      gene_symbol: FGR15
+      taxon_id: NCBITaxon:237561
+      taxon_label: Candida albicans (strain SC5314 / ATCC MYA-2876) (Yeast)
+      entry_status: REVIEWED
+      proteome_id: UP000000559
+      retrieved_on: '2026-10-17'
+      entry_version: 100
+      sequence_version: 2
+      role: Characteristic protein component (FGR15, Filamentous growth regulator
+        15) associated with mating-type switching in Candida albicans (strain SC5314
+        / ATCC MYA-2876) (Yeast).
+      evidence:
+      - reference: DOI:10.1371/journal.pgen.1006981
+        snippet: a chromosomal looping out-based mechanism underpins irreversible
+          unidirectional mating-type alteration in filamentous fungi.
+        notes: Supports Filamentous growth regulator 15 in mating-type switching;
+          UniProtKB:Q5AD13 (FGR15, Filamentous growth regulator 15) in Candida albicans
+          (strain SC5314 / ATCC MYA-2876) (Yeast) provides a verified protein exemplar.
+  edges:
+  - subject: mating_type_switching_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: mating_type_switching_trait
+    description: Filamentous growth regulator 15 (FGR15, UniProtKB:Q5AD13) contributes
+      to mating-type switching (associated with unidirectional, irreversible, chromosomal).
+    evidence:
+    - reference: DOI:10.1371/journal.pgen.1006981
+      snippet: a chromosomal looping out-based mechanism underpins irreversible unidirectional
+        mating-type alteration in filamentous fungi.
+      notes: Supports the functional association between Filamentous growth regulator
+        15 (UniProtKB:Q5AD13 in Candida albicans (strain SC5314 / ATCC MYA-2876) (Yeast))
+        and mating-type switching.

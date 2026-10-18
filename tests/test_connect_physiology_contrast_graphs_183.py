@@ -39,7 +39,7 @@ def test_repair_reaches_one_component(slug: str):
     assert _components(doc["causal_graphs"][0]) == EXPECTED_COMPONENTS[slug]
     assert transform(slug, doc)
     assert _components(doc["causal_graphs"][0]) == 1
-    assert doc["curation_history"][-1]["action"] == ACTION
+    assert any(event.get("action") == ACTION for event in doc["curation_history"])
 
 
 @pytest.mark.parametrize("slug", sorted(ADDITIONS))

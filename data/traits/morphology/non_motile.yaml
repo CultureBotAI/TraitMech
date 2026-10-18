@@ -84,6 +84,29 @@ causal_graphs:
     - flhD
     - flhC
     operon: flhDC
+    protein_examples:
+    - uniprot_id: UniProtKB:Q6D6J5
+      protein_label: Flagellar transcriptional regulator FlhD
+      gene_symbol: flhD
+      taxon_id: NCBITaxon:218491
+      taxon_label: Pectobacterium atrosepticum (strain SCRI 1043 / ATCC BAA-672) (Erwinia
+        carotovora subsp. atroseptica)
+      entry_status: REVIEWED
+      proteome_id: UP000007966
+      retrieved_on: '2026-10-17'
+      entry_version: 104
+      sequence_version: 1
+      role: Exemplar protein (flhD, Flagellar transcriptional regulator FlhD) representing
+        FlhD4C2 flagellar master regulator complex in Pectobacterium atrosepticum
+        (strain SCRI 1043 / ATCC BAA-672) (Erwinia carotovora subsp. atroseptica)
+        for non motile.
+      evidence:
+      - reference: DOI:10.3389/fmicb.2025.1514643
+        snippet: They are Gram-negative, non-motile rods
+        notes: Supports FlhD4C2 flagellar master regulator complex in non motile;
+          UniProtKB:Q6D6J5 (flhD, Flagellar transcriptional regulator FlhD) in Pectobacterium
+          atrosepticum (strain SCRI 1043 / ATCC BAA-672) (Erwinia carotovora subsp.
+          atroseptica) provides a verified protein exemplar.
   - node_id: wspr_dgc
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
@@ -91,6 +114,28 @@ causal_graphs:
     label: WspR diguanylate cyclase
     node_type: GENE_OR_PROTEIN
     description: Diguanylate cyclase that synthesizes c-di-GMP when activated.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q9HXT9
+      protein_label: diguanylate cyclase
+      gene_symbol: wspR
+      taxon_id: NCBITaxon:208964
+      taxon_label: Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116
+        / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)
+      entry_status: UNREVIEWED
+      proteome_id: UP000002438
+      retrieved_on: '2026-10-17'
+      entry_version: 153
+      sequence_version: 1
+      role: Exemplar protein (wspR, diguanylate cyclase) representing WspR diguanylate
+        cyclase in Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116
+        / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1) for non motile.
+      evidence:
+      - reference: DOI:10.3389/fmicb.2025.1514643
+        snippet: They are Gram-negative, non-motile rods
+        notes: Supports WspR diguanylate cyclase in non motile; UniProtKB:Q9HXT9 (wspR,
+          diguanylate cyclase) in Pseudomonas aeruginosa (strain ATCC 15692 / DSM
+          22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1) provides
+          a verified protein exemplar.
   - node_id: reduced_motility_state
     label: reduced or absent motility
     node_type: STATE
@@ -240,4 +285,11 @@ curation_history:
     the tranche: set graph scope non_motile_absent_motility_apparatus=NONMECHANISTIC
     with scope_notes; marked 2 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (flhdc_master_operon, wspr_dgc).'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q6D6J5 (flhD)
+    protein example to node flhdc_master_operon; added UniProtKB:Q9HXT9 (wspR) protein
+    example to node wspr_dgc.'
   llm_assisted: true

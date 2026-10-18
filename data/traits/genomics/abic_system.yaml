@@ -113,6 +113,36 @@ causal_graphs:
     node_type: TRAIT
     grounding: traitmech:000214
     description: Possession of a genome-encoded abortive-infection phage-defense system.
+  - node_id: abic_system_protein_component
+    label: Abortive phage resistance protein AbiC
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Abortive phage resistance protein AbiC) associated
+      with AbiC system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - abiC
+    protein_examples:
+    - uniprot_id: UniProtKB:Q01457
+      protein_label: Abortive phage resistance protein AbiC
+      gene_symbol: abiC
+      taxon_id: NCBITaxon:1360
+      taxon_label: Lactococcus lactis subsp. lactis (Streptococcus lactis)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 35
+      sequence_version: 1
+      role: Characteristic protein component (abiC, Abortive phage resistance protein
+        AbiC) associated with AbiC system in Lactococcus lactis subsp. lactis (Streptococcus
+        lactis).
+      evidence:
+      - reference: PMID:1429469
+        snippet: Thus, abiC represents a second abortive system found in ME2 that
+          acts at a different point of the phage lytic cycle.
+        notes: Supports Abortive phage resistance protein AbiC in AbiC system; UniProtKB:Q01457
+          (abiC, Abortive phage resistance protein AbiC) in Lactococcus lactis subsp.
+          lactis (Streptococcus lactis) provides a verified protein exemplar.
   edges:
   - subject: abic_locus
     predicate: contributes to
@@ -194,6 +224,19 @@ causal_graphs:
     - reference: PMID:1429469
       snippet: Thus, abiC represents a second abortive system found in ME2
       notes: Durmaz et al. place abiC in the abortive-infection class of phage defense.
+  - subject: abic_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: abic_system_trait
+    description: Abortive phage resistance protein AbiC (abiC, UniProtKB:Q01457) contributes
+      to AbiC system (associated with bf00327934, specifying, infection).
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: Pif | 10\.1007/BF00327934 | Molecular analysis of F plasmid pif region
+        specifying abortive infection of T7 phage
+      notes: Supports the functional association between Abortive phage resistance
+        protein AbiC (UniProtKB:Q01457 in Lactococcus lactis subsp. lactis (Streptococcus
+        lactis)) and AbiC system.
 discussions:
 - discussion_id: abic-trigger-and-death-route-gap
   prompt: Resolve the AbiC phage trigger, AbiC molecular function, and infected-cell
@@ -217,4 +260,10 @@ curation_history:
     infection system parent after an ignored-and-hidden duplicate review found no
     exact live TraitMech, METPO, history, or prior proposal record; the replacement
     placeholder is reserved in proposals/metpo_traitmech_v197.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    abic_system_protein_component with UniProtKB:Q01457 (abiC) exemplar.'
   llm_assisted: true

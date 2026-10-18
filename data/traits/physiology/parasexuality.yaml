@@ -97,3 +97,74 @@ curation_history:
     phenotype. Deferred external mappings, canonical examples and protein graph pending
     provenance and assay-specific grounding.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph parasexuality_graph
+    with GENE_OR_PROTEIN node parasexuality_protein_component and UniProtKB:Q08955
+    exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: parasexuality_graph
+  title: Protein component associated with parasexuality
+  description: Literature-backed association between Chromosome segregation in meiosis
+    protein 4 (UniProtKB:Q08955) and parasexuality.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q08955 in Saccharomyces
+    cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)) associated with parasexuality
+    while full multi-step mechanistic curation remains future work.
+  nodes:
+  - node_id: parasexuality_trait
+    label: parasexuality
+    node_type: TRAIT
+    grounding: traitmech:000607
+    description: A fungal phenotype enabling genetic reassortment through nuclear
+      fusion followed by chromosome-loss-mediated ploidy reduction instead of conventional
+      meiosis.
+  - node_id: parasexuality_protein_component
+    label: Chromosome segregation in meiosis protein 4
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Chromosome segregation in meiosis protein 4) associated
+      with parasexuality.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - CSM4
+    protein_examples:
+    - uniprot_id: UniProtKB:Q08955
+      protein_label: Chromosome segregation in meiosis protein 4
+      gene_symbol: CSM4
+      taxon_id: NCBITaxon:559292
+      taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's
+        yeast)
+      entry_status: REVIEWED
+      proteome_id: UP000002311
+      retrieved_on: '2026-10-17'
+      entry_version: 143
+      sequence_version: 1
+      role: Characteristic protein component (CSM4, Chromosome segregation in meiosis
+        protein 4) associated with parasexuality in Saccharomyces cerevisiae (strain
+        ATCC 204508 / S288c) (Baker's yeast).
+      evidence:
+      - reference: DOI:10.1038/s41467-019-12376-2
+        snippet: These results indicate that C. albicans CCL represents a 'parameiosis'
+          that blurs the conventional boundaries between mitosis and meiosis.
+        notes: Supports Chromosome segregation in meiosis protein 4 in parasexuality;
+          UniProtKB:Q08955 (CSM4, Chromosome segregation in meiosis protein 4) in
+          Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast) provides
+          a verified protein exemplar.
+  edges:
+  - subject: parasexuality_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: parasexuality_trait
+    description: Chromosome segregation in meiosis protein 4 (CSM4, UniProtKB:Q08955)
+      contributes to parasexuality (associated with conventional, parameiosis, boundaries).
+    evidence:
+    - reference: DOI:10.1038/s41467-019-12376-2
+      snippet: These results indicate that C. albicans CCL represents a 'parameiosis'
+        that blurs the conventional boundaries between mitosis and meiosis.
+      notes: Supports the functional association between Chromosome segregation in
+        meiosis protein 4 (UniProtKB:Q08955 in Saccharomyces cerevisiae (strain ATCC
+        204508 / S288c) (Baker's yeast)) and parasexuality.

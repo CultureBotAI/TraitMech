@@ -122,3 +122,74 @@ curation_history:
     but no live exact formation trait. Reserved METPO:1061300 in v536; existing records
     unchanged and protein-level mechanism deferred.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph fungal_sclerotium_formation_graph
+    with GENE_OR_PROTEIN node fungal_sclerotium_formation_protein_component and UniProtKB:P16521
+    exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: fungal_sclerotium_formation_graph
+  title: Protein component associated with fungal sclerotium formation
+  description: Literature-backed association between Elongation factor 3A (UniProtKB:P16521)
+    and fungal sclerotium formation.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P16521 in Saccharomyces
+    cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)) associated with fungal
+    sclerotium formation while full multi-step mechanistic curation remains future
+    work.
+  nodes:
+  - node_id: fungal_sclerotium_formation_trait
+    label: fungal sclerotium formation
+    node_type: TRAIT
+    grounding: traitmech:000660
+    description: A morphological phenotype in which a fungus forms compact mycelial
+      resting bodies called sclerotia.
+  - node_id: fungal_sclerotium_formation_protein_component
+    label: Elongation factor 3A
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Elongation factor 3A) associated with fungal sclerotium
+      formation.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - YEF3
+    protein_examples:
+    - uniprot_id: UniProtKB:P16521
+      protein_label: Elongation factor 3A
+      gene_symbol: YEF3
+      taxon_id: NCBITaxon:559292
+      taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's
+        yeast)
+      entry_status: REVIEWED
+      proteome_id: UP000002311
+      retrieved_on: '2026-10-17'
+      entry_version: 244
+      sequence_version: 4
+      role: Characteristic protein component (YEF3, Elongation factor 3A) associated
+        with fungal sclerotium formation in Saccharomyces cerevisiae (strain ATCC
+        204508 / S288c) (Baker's yeast).
+      evidence:
+      - reference: DOI:10.1128/spectrum.02084-21
+        snippet: There are different types of sclerotia-like fungal structures, such
+          as the true sclerotia, the pseudosclerotia, the small sclerotia, and the
+          microsclerotia.
+        notes: Supports Elongation factor 3A in fungal sclerotium formation; UniProtKB:P16521
+          (YEF3, Elongation factor 3A) in Saccharomyces cerevisiae (strain ATCC 204508
+          / S288c) (Baker's yeast) provides a verified protein exemplar.
+  edges:
+  - subject: fungal_sclerotium_formation_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: fungal_sclerotium_formation_trait
+    description: Elongation factor 3A (YEF3, UniProtKB:P16521) contributes to fungal
+      sclerotium formation (associated with pseudosclerotia, microsclerotia, structures).
+    evidence:
+    - reference: DOI:10.1128/spectrum.02084-21
+      snippet: There are different types of sclerotia-like fungal structures, such
+        as the true sclerotia, the pseudosclerotia, the small sclerotia, and the microsclerotia.
+      notes: Supports the functional association between Elongation factor 3A (UniProtKB:P16521
+        in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast))
+        and fungal sclerotium formation.

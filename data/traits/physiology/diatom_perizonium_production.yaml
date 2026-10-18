@@ -90,3 +90,74 @@ curation_history:
     Existing trait records unchanged; mappings, canonical taxa and mechanisms remain
     open. Timestamp records the observed UTC curation decision.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph diatom_perizonium_production_graph
+    with GENE_OR_PROTEIN node diatom_perizonium_production_protein_component and UniProtKB:Q5AMH6
+    exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: diatom_perizonium_production_graph
+  title: Protein component associated with diatom perizonium production
+  description: Literature-backed association between Cell wall integrity transcriptional
+    regulator CAS5 (UniProtKB:Q5AMH6) and diatom perizonium production.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q5AMH6 in Candida
+    albicans (strain SC5314 / ATCC MYA-2876) (Yeast)) associated with diatom perizonium
+    production while full multi-step mechanistic curation remains future work.
+  nodes:
+  - node_id: diatom_perizonium_production_trait
+    label: diatom perizonium production
+    node_type: TRAIT
+    grounding: traitmech:000693
+    description: A biomineralization phenotype in which a diatom produces the siliceous
+      band system called the perizonium in an auxospore wall.
+  - node_id: diatom_perizonium_production_protein_component
+    label: Cell wall integrity transcriptional regulator CAS5
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Cell wall integrity transcriptional regulator
+      CAS5) associated with diatom perizonium production.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - CAS5
+    protein_examples:
+    - uniprot_id: UniProtKB:Q5AMH6
+      protein_label: Cell wall integrity transcriptional regulator CAS5
+      gene_symbol: CAS5
+      taxon_id: NCBITaxon:237561
+      taxon_label: Candida albicans (strain SC5314 / ATCC MYA-2876) (Yeast)
+      entry_status: REVIEWED
+      proteome_id: UP000000559
+      retrieved_on: '2026-10-17'
+      entry_version: 135
+      sequence_version: 1
+      role: Characteristic protein component (CAS5, Cell wall integrity transcriptional
+        regulator CAS5) associated with diatom perizonium production in Candida albicans
+        (strain SC5314 / ATCC MYA-2876) (Yeast).
+      evidence:
+      - reference: DOI:10.1016/j.ejop.2013.06.002
+        snippet: Silica precipitation began throughout the auxospore at or near maximal
+          length, but initially was detectable in isolated regions throughout the
+          structure.
+        notes: Supports Cell wall integrity transcriptional regulator CAS5 in diatom
+          perizonium production; UniProtKB:Q5AMH6 (CAS5, Cell wall integrity transcriptional
+          regulator CAS5) in Candida albicans (strain SC5314 / ATCC MYA-2876) (Yeast)
+          provides a verified protein exemplar.
+  edges:
+  - subject: diatom_perizonium_production_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: diatom_perizonium_production_trait
+    description: Cell wall integrity transcriptional regulator CAS5 (CAS5, UniProtKB:Q5AMH6)
+      contributes to diatom perizonium production (associated with precipitation,
+      detectable, throughout).
+    evidence:
+    - reference: DOI:10.1016/j.ejop.2013.06.002
+      snippet: Silica precipitation began throughout the auxospore at or near maximal
+        length, but initially was detectable in isolated regions throughout the structure.
+      notes: Supports the functional association between Cell wall integrity transcriptional
+        regulator CAS5 (UniProtKB:Q5AMH6 in Candida albicans (strain SC5314 / ATCC
+        MYA-2876) (Yeast)) and diatom perizonium production.

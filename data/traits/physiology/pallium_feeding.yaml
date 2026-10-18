@@ -93,3 +93,74 @@ curation_history:
     access limits and unresolved membrane topology; deferred unsupported protein mechanisms
     and sequence inference.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph pallium_feeding_graph
+    with GENE_OR_PROTEIN node pallium_feeding_protein_component and UniProtKB:G1UBD1
+    exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: pallium_feeding_graph
+  title: Protein component associated with pallium feeding
+  description: Literature-backed association between Particulate methane monooxygenase
+    alpha subunit (UniProtKB:G1UBD1) and pallium feeding.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:G1UBD1 in Methylococcus
+    capsulatus (strain ATCC 33009 / NCIMB 11132 / Bath)) associated with pallium feeding
+    while full multi-step mechanistic curation remains future work.
+  nodes:
+  - node_id: pallium_feeding_trait
+    label: pallium feeding
+    node_type: TRAIT
+    grounding: traitmech:000632
+    description: A physiological phenotype in which a microbial organism feeds by
+      enveloping all or part of particulate food in an extruded membranous pallium,
+      digesting it outside the main cell body, and taking up released nutrients.
+  - node_id: pallium_feeding_protein_component
+    label: Particulate methane monooxygenase alpha subunit
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Particulate methane monooxygenase alpha subunit)
+      associated with pallium feeding.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - pmoB1
+    protein_examples:
+    - uniprot_id: UniProtKB:G1UBD1
+      protein_label: Particulate methane monooxygenase alpha subunit
+      gene_symbol: pmoB1
+      taxon_id: NCBITaxon:243233
+      taxon_label: Methylococcus capsulatus (strain ATCC 33009 / NCIMB 11132 / Bath)
+      entry_status: REVIEWED
+      proteome_id: UP000006821
+      retrieved_on: '2026-10-17'
+      entry_version: 77
+      sequence_version: 1
+      role: Characteristic protein component (pmoB1, Particulate methane monooxygenase
+        alpha subunit) associated with pallium feeding in Methylococcus capsulatus
+        (strain ATCC 33009 / NCIMB 11132 / Bath).
+      evidence:
+      - reference: DOI:10.4319/lo.1993.38.5.0965
+        snippet: Laboratory experiments were performed to determine the growth and
+          grazing capabilities of Oblea rotunda, a pallium-feeding dinoflagellate.
+        notes: Supports Particulate methane monooxygenase alpha subunit in pallium
+          feeding; UniProtKB:G1UBD1 (pmoB1, Particulate methane monooxygenase alpha
+          subunit) in Methylococcus capsulatus (strain ATCC 33009 / NCIMB 11132 /
+          Bath) provides a verified protein exemplar.
+  edges:
+  - subject: pallium_feeding_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: pallium_feeding_trait
+    description: Particulate methane monooxygenase alpha subunit (pmoB1, UniProtKB:G1UBD1)
+      contributes to pallium feeding (associated with dinoflagellate, capabilities,
+      experiments).
+    evidence:
+    - reference: DOI:10.4319/lo.1993.38.5.0965
+      snippet: Laboratory experiments were performed to determine the growth and grazing
+        capabilities of Oblea rotunda, a pallium-feeding dinoflagellate.
+      notes: Supports the functional association between Particulate methane monooxygenase
+        alpha subunit (UniProtKB:G1UBD1 in Methylococcus capsulatus (strain ATCC 33009
+        / NCIMB 11132 / Bath)) and pallium feeding.

@@ -50,6 +50,35 @@ causal_graphs:
     node_type: TRAIT
     grounding: traitmech:000443
     description: Residence on living aerial plant surfaces.
+  - node_id: epiphytic_protein_component
+    label: Catalase
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Catalase) associated with epiphytic.
+    grounding: GO:0004096
+    gene_symbols:
+    - katE
+    protein_examples:
+    - uniprot_id: UniProtKB:P30266
+      protein_label: Catalase
+      gene_symbol: katE
+      taxon_id: NCBITaxon:398511
+      taxon_label: Alkalihalophilus pseudofirmus (strain ATCC BAA-2126 / JCM 17055
+        / OF4) (Bacillus pseudofirmus)
+      entry_status: REVIEWED
+      proteome_id: UP000001544
+      retrieved_on: '2026-10-17'
+      entry_version: 129
+      sequence_version: 3
+      role: Characteristic protein component (katE, Catalase) associated with epiphytic
+        in Alkalihalophilus pseudofirmus (strain ATCC BAA-2126 / JCM 17055 / OF4)
+        (Bacillus pseudofirmus).
+      evidence:
+      - reference: DOI:10.1186/s12915-024-01967-1
+        snippet: Epiphytic microbes are those that live for some or all of their life
+          cycle on the surface of plant leaves.
+        notes: Supports Catalase in epiphytic; UniProtKB:P30266 (katE, Catalase) in
+          Alkalihalophilus pseudofirmus (strain ATCC BAA-2126 / JCM 17055 / OF4) (Bacillus
+          pseudofirmus) provides a verified protein exemplar.
   edges:
   - subject: external_plant_surface
     predicate: enables
@@ -74,6 +103,18 @@ causal_graphs:
       snippet: Epiphytic microbes are those that live for some or all of their life
         cycle on the surface of plant leaves.
       notes: Fones et al. define epiphytic microbes by leaf-surface residence.
+  - subject: epiphytic_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: epiphytic_trait
+    description: Catalase (katE, UniProtKB:P30266) contributes to epiphytic (associated
+      with epiphytic, microbes, those).
+    evidence:
+    - reference: DOI:10.1186/s12915-024-01967-1
+      snippet: Epiphytic microbes are those that live for some
+      notes: Supports the functional association between Catalase (UniProtKB:P30266
+        in Alkalihalophilus pseudofirmus (strain ATCC BAA-2126 / JCM 17055 / OF4)
+        (Bacillus pseudofirmus)) and epiphytic.
 curation_history:
 - timestamp: '2026-09-28T20:20:16Z'
   curator: codex
@@ -88,4 +129,10 @@ curation_history:
   changes: Reviewed canonical examples for the first pass and left them empty rather
     than promoting a pathogen fitness, biocontrol, or strain-level plant-growth study
     into generic epiphytism evidence.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    epiphytic_protein_component with UniProtKB:P30266 (katE) exemplar.'
   llm_assisted: true

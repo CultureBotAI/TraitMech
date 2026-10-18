@@ -71,6 +71,27 @@ causal_graphs:
     label: FtsN
     node_type: GENE_OR_PROTEIN
     description: Divisome protein that allosterically activates septal PG synthesis.
+    protein_examples:
+    - uniprot_id: UniProtKB:B8GX61
+      protein_label: Cell division protein FtsN
+      gene_symbol: ftsN
+      taxon_id: NCBITaxon:565050
+      taxon_label: Caulobacter vibrioides (strain NA1000 / CB15N) (Caulobacter crescentus)
+      entry_status: REVIEWED
+      proteome_id: UP000001364
+      retrieved_on: '2026-10-17'
+      entry_version: 73
+      sequence_version: 1
+      role: Exemplar protein (ftsN, Cell division protein FtsN) representing FtsN
+        in Caulobacter vibrioides (strain NA1000 / CB15N) (Caulobacter crescentus)
+        for cell length small.
+      evidence:
+      - reference: DOI:10.1038/s41467-024-52217-5
+        snippet: FtsN activates sPG synthesis by switching FtsA and the FtsQLBWI complex
+          to the active state
+        notes: Supports FtsN in cell length small; UniProtKB:B8GX61 (ftsN, Cell division
+          protein FtsN) in Caulobacter vibrioides (strain NA1000 / CB15N) (Caulobacter
+          crescentus) provides a verified protein exemplar.
   - node_id: ftswi_complex
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: FtsW and FtsI are distinct components grouped as a complex; one
@@ -78,6 +99,27 @@ causal_graphs:
     label: FtsWI septal PG synthase complex
     node_type: GENE_OR_PROTEIN
     description: FtsWI (within FtsQLBWI) septal peptidoglycan synthase complex.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0ABG4
+      protein_label: Probable peptidoglycan glycosyltransferase FtsW
+      gene_symbol: ftsW
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 150
+      sequence_version: 1
+      role: Exemplar protein (ftsW, Probable peptidoglycan glycosyltransferase FtsW)
+        representing FtsWI septal PG synthase complex in Escherichia coli (strain
+        K12) for cell length small.
+      evidence:
+      - reference: DOI:10.1038/s41467-024-52217-5
+        snippet: FtsN activates sPG synthesis by switching FtsA and the FtsQLBWI complex
+          to the active state
+        notes: Supports FtsWI septal PG synthase complex in cell length small; UniProtKB:P0ABG4
+          (ftsW, Probable peptidoglycan glycosyltransferase FtsW) in Escherichia coli
+          (strain K12) provides a verified protein exemplar.
   - node_id: septal_pg_synthesis
     label: septal peptidoglycan synthesis
     node_type: BIOLOGICAL_PROCESS
@@ -93,6 +135,26 @@ causal_graphs:
     label: FtsZ proto-ring (with FtsA/ZipA)
     node_type: GENE_OR_PROTEIN
     description: FtsZ proto-ring tethered by FtsA/ZipA initiating divisome assembly.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0ABH2
+      protein_label: Cell division protein FtsA
+      gene_symbol: ftsA
+      taxon_id: NCBITaxon:83334
+      taxon_label: Escherichia coli O157:H7
+      entry_status: REVIEWED
+      proteome_id: UP000000558
+      retrieved_on: '2026-10-17'
+      entry_version: 115
+      sequence_version: 1
+      role: Exemplar protein (ftsA, Cell division protein FtsA) representing FtsZ
+        proto-ring (with FtsA/ZipA) in Escherichia coli O157:H7 for cell length small.
+      evidence:
+      - reference: DOI:10.1038/s41467-023-41487-0
+        snippet: delays the FtsZ ring formation, which in turn allows the cell to
+          grow for a longer time
+        notes: Supports FtsZ proto-ring (with FtsA/ZipA) in cell length small; UniProtKB:P0ABH2
+          (ftsA, Cell division protein FtsA) in Escherichia coli O157:H7 provides
+          a verified protein exemplar.
   - node_id: divisome_assembly
     label: divisome assembly
     node_type: BIOLOGICAL_PROCESS
@@ -299,4 +361,11 @@ curation_history:
     exact snippets to 6 FtsZ/divisome evidence items, grounded 3 residual predicates,
     and retyped FtsZ abundance as a QUALITY node. The METPO 1.3-2 micrometre length
     bin remains a nonmechanistic classification. No paid research service was called.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:B8GX61 (ftsN)
+    protein example to node ftsn; added UniProtKB:P0ABG4 (ftsW) protein example to
+    node ftswi_complex; added UniProtKB:P0ABH2 (ftsA) protein example to node ftsz_protoring.'
   llm_assisted: true

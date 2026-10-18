@@ -90,6 +90,35 @@ causal_graphs:
     grounding: traitmech:000209
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
+  - node_id: dctpdeaminase_system_protein_component
+    label: dCTP deaminase
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (dCTP deaminase) associated with dCTPdeaminase
+      system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - dcd
+    protein_examples:
+    - uniprot_id: UniProtKB:B5BF74
+      protein_label: dCTP deaminase
+      gene_symbol: dcd
+      taxon_id: NCBITaxon:554290
+      taxon_label: Salmonella paratyphi A (strain AKU_12601)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 82
+      sequence_version: 1
+      role: Characteristic protein component (dcd, dCTP deaminase) associated with
+        dCTPdeaminase system in Salmonella paratyphi A (strain AKU_12601).
+      evidence:
+      - reference: DOI:10.1101/2021.04.26.441389
+        snippet: a family of defensive dCTP deaminase proteins that, in response to
+          phage infection, convert dCTP into deoxy-uracil nucleotides
+        notes: Supports dCTP deaminase in dCTPdeaminase system; UniProtKB:B5BF74 (dcd,
+          dCTP deaminase) in Salmonella paratyphi A (strain AKU_12601) provides a
+          verified protein exemplar.
   edges:
   - subject: dctpdeaminase_locus
     predicate: contributes to
@@ -171,6 +200,18 @@ causal_graphs:
         nucleotide depletion in bacteria
       notes: DefenseFinder associates dCTPdeaminase with the Tal et al. bacterial
         antiviral nucleotide-depletion preprint.
+  - subject: dctpdeaminase_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: dctpdeaminase_system_trait
+    description: dCTP deaminase (dcd, UniProtKB:B5BF74) contributes to dCTPdeaminase
+      system (associated with nucleotides, deaminase, defensive).
+    evidence:
+    - reference: DOI:10.1101/2021.04.26.441389
+      snippet: a family of defensive dCTP deaminase proteins that, in response to
+        phage infection, convert dCTP into deoxy-uracil nucleotides
+      notes: Supports the functional association between dCTP deaminase (UniProtKB:B5BF74
+        in Salmonella paratyphi A (strain AKU_12601)) and dCTPdeaminase system.
 discussions:
 - discussion_id: dctpdeaminase-activation-profile-gap
   prompt: Resolve dCTPdeaminase activation, locus boundaries, and representative enzyme
@@ -194,4 +235,10 @@ curation_history:
     phage defense system after an ignored-and-hidden duplicate review found no exact
     live TraitMech, METPO, or prior proposal record; the replacement placeholder is
     reserved in proposals/metpo_traitmech_v151.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    dctpdeaminase_system_protein_component with UniProtKB:B5BF74 (dcd) exemplar.'
   llm_assisted: true

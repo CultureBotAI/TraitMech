@@ -24,3 +24,73 @@ curation_history:
   changes: Proposed a DOI-backed FAPROTAX metabolic capability from proposals/metpo_traitmech_v11
     after repository-wide duplicate review.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph dark_oxidation_of_sulfur_compounds_graph
+    with GENE_OR_PROTEIN node dark_oxidation_of_sulfur_compounds_protein_component
+    and UniProtKB:P47908 exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: dark_oxidation_of_sulfur_compounds_graph
+  title: Protein component associated with dark oxidation of sulfur compounds
+  description: Literature-backed association between Ribosome hibernation promotion
+    factor (UniProtKB:P47908) and dark oxidation of sulfur compounds.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P47908 in Picosynechococcus
+    sp. (strain ATCC 27264 / PCC 7002 / PR-6) (Agmenellum quadruplicatum)) associated
+    with dark oxidation of sulfur compounds while full multi-step mechanistic curation
+    remains future work.
+  nodes:
+  - node_id: dark_oxidation_of_sulfur_compounds_trait
+    label: dark oxidation of sulfur compounds
+    node_type: TRAIT
+    grounding: traitmech:000132
+    description: A sulfur oxidation in which an organism oxidizes a reduced inorganic
+      sulfur compound as an electron donor for energy conservation independently of
+      light.
+  - node_id: dark_oxidation_of_sulfur_compounds_protein_component
+    label: Ribosome hibernation promotion factor
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Ribosome hibernation promotion factor) associated
+      with dark oxidation of sulfur compounds.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - hpf
+    protein_examples:
+    - uniprot_id: UniProtKB:P47908
+      protein_label: Ribosome hibernation promotion factor
+      gene_symbol: hpf
+      taxon_id: NCBITaxon:32049
+      taxon_label: Picosynechococcus sp. (strain ATCC 27264 / PCC 7002 / PR-6) (Agmenellum
+        quadruplicatum)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 121
+      sequence_version: 2
+      role: Characteristic protein component (hpf, Ribosome hibernation promotion
+        factor) associated with dark oxidation of sulfur compounds in Picosynechococcus
+        sp. (strain ATCC 27264 / PCC 7002 / PR-6) (Agmenellum quadruplicatum).
+      evidence:
+      - reference: DOI:10.1111/1462-2920.14543
+        snippet: dark sulfide oxidation was coupled to high oxygen consumption rates
+        notes: Supports Ribosome hibernation promotion factor in dark oxidation of
+          sulfur compounds; UniProtKB:P47908 (hpf, Ribosome hibernation promotion
+          factor) in Picosynechococcus sp. (strain ATCC 27264 / PCC 7002 / PR-6) (Agmenellum
+          quadruplicatum) provides a verified protein exemplar.
+  edges:
+  - subject: dark_oxidation_of_sulfur_compounds_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: dark_oxidation_of_sulfur_compounds_trait
+    description: Ribosome hibernation promotion factor (hpf, UniProtKB:P47908) contributes
+      to dark oxidation of sulfur compounds (associated with consumption, oxidation,
+      coupled).
+    evidence:
+    - reference: DOI:10.1111/1462-2920.14543
+      snippet: dark sulfide oxidation was coupled to high oxygen consumption rates
+      notes: Supports the functional association between Ribosome hibernation promotion
+        factor (UniProtKB:P47908 in Picosynechococcus sp. (strain ATCC 27264 / PCC
+        7002 / PR-6) (Agmenellum quadruplicatum)) and dark oxidation of sulfur compounds.

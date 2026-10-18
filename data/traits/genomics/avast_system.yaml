@@ -89,6 +89,37 @@ causal_graphs:
     grounding: traitmech:000209
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
+  - node_id: avast_system_protein_component
+    label: Ferrichrome outer membrane transporter/phage receptor
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Ferrichrome outer membrane transporter/phage receptor)
+      associated with AVAST system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - fhuA
+    protein_examples:
+    - uniprot_id: UniProtKB:P06971
+      protein_label: Ferrichrome outer membrane transporter/phage receptor
+      gene_symbol: fhuA
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 229
+      sequence_version: 2
+      role: Characteristic protein component (fhuA, Ferrichrome outer membrane transporter/phage
+        receptor) associated with AVAST system in Escherichia coli (strain K12).
+      evidence:
+      - reference: DOI:10.1016/j.molcel.2026.01.004
+        snippet: Upon sensing Jumbo J phage, Avs5-1 underwent oligomerization, which
+          activated the enzymatic activity of its Sir2 effector, resulting in rapid
+          NAD + hydrolysis, disruption of phage nucleus formation, and arrest of infection
+        notes: Supports Ferrichrome outer membrane transporter/phage receptor in AVAST
+          system; UniProtKB:P06971 (fhuA, Ferrichrome outer membrane transporter/phage
+          receptor) in Escherichia coli (strain K12) provides a verified protein exemplar.
   edges:
   - subject: avast_locus
     predicate: contributes to
@@ -157,6 +188,19 @@ causal_graphs:
     - reference: DOI:10.1126/science.aba0372
       snippet: AVAST, antiviral ATPase/NTPase of the STAND superfamily
       notes: Gao et al. identified AVAST among candidate phage-defense systems.
+  - subject: avast_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: avast_system_trait
+    description: Ferrichrome outer membrane transporter/phage receptor (fhuA, UniProtKB:P06971)
+      contributes to AVAST system (associated with defense, drt3a, drt3b).
+    evidence:
+    - reference: DOI:10.1126/science.aba0372
+      snippet: the UG3 (drt3a) and UG8 (drt3b) RTs are components of the same defense
+        system (DRT type 3), with both RTs required for defense activity
+      notes: Supports the functional association between Ferrichrome outer membrane
+        transporter/phage receptor (UniProtKB:P06971 in Escherichia coli (strain K12))
+        and AVAST system.
 discussions:
 - discussion_id: avast-subtype-effector-gap
   prompt: Resolve AVAST subtype sensors, phage triggers, and effector outputs before
@@ -179,4 +223,10 @@ curation_history:
     defense system parent after an ignored-and-hidden duplicate review found no exact
     live TraitMech, METPO, or prior proposal record; the replacement placeholder is
     reserved in proposals/metpo_traitmech_v116.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    avast_system_protein_component with UniProtKB:P06971 (fhuA) exemplar.'
   llm_assisted: true

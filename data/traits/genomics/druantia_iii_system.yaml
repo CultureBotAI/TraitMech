@@ -104,6 +104,36 @@ causal_graphs:
     node_type: TRAIT
     grounding: traitmech:000234
     description: Possession of a genome-encoded Druantia phage-defense system.
+  - node_id: druantia_iii_system_protein_component
+    label: Druantia protein DruE
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Druantia protein DruE) associated with Druantia
+      III system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - druE
+    protein_examples:
+    - uniprot_id: UniProtKB:P0DW38
+      protein_label: Druantia protein DruE
+      gene_symbol: druE
+      taxon_id: NCBITaxon:1281278
+      taxon_label: Escherichia coli (strain UMEA 4076-1)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 10
+      sequence_version: 1
+      role: Characteristic protein component (druE, Druantia protein DruE) associated
+        with Druantia III system in Escherichia coli (strain UMEA 4076-1).
+      evidence:
+      - reference: DOI:10.64898/2026.05.12.724681
+        snippet: Druantia III is a late-acting defence where DruH is the likely infection
+          sensor and DruE is a helicase-nuclease effector that engages ssDNA-containing
+          replication intermediates
+        notes: Supports Druantia protein DruE in Druantia III system; UniProtKB:P0DW38
+          (druE, Druantia protein DruE) in Escherichia coli (strain UMEA 4076-1) provides
+          a verified protein exemplar.
   edges:
   - subject: druantia_iii_locus
     predicate: contributes to
@@ -163,6 +193,19 @@ causal_graphs:
       snippet: "Druantia\tDruantia_III\t2\t2"
       notes: The pinned DefenseFinder rules table places the Druantia_III subsystem
         under the Druantia system key with two mandatory matches and two genes required.
+  - subject: druantia_iii_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: druantia_iii_system_trait
+    description: Druantia protein DruE (druE, UniProtKB:P0DW38) contributes to Druantia
+      III system (associated with processing, suggesting, druantia).
+    evidence:
+    - reference: DOI:10.64898/2026.05.12.724681
+      snippet: DruE is the only component shared across Druantia subtypes, suggesting
+        that DNA processing by a DruE-like helicase-nuclease is the conserved core
+        function of Druantia
+      notes: Supports the functional association between Druantia protein DruE (UniProtKB:P0DW38
+        in Escherichia coli (strain UMEA 4076-1)) and Druantia III system.
 discussions:
 - discussion_id: druantia-iii-activity-gap
   prompt: Resolve Druantia_III phage triggers, DruH sensory chemistry, RecBCD and
@@ -230,4 +273,10 @@ curation_history:
     retaining only native Druantia III activity with modest protection against 3 of
     66 screened phages. Broader native host breadth remains unresolved, and no paid
     research was used.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    druantia_iii_system_protein_component with UniProtKB:P0DW38 (druE) exemplar.'
   llm_assisted: true

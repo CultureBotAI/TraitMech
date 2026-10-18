@@ -113,3 +113,74 @@ curation_history:
     broadened the definition to include extracellular-material adhesion, and retained
     source-specific scope and mechanism distinctions. Canonical example unchanged.'
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph palmelloid_formation_graph
+    with GENE_OR_PROTEIN node palmelloid_formation_protein_component and UniProtKB:Q31IK3
+    exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: palmelloid_formation_graph
+  title: Protein component associated with palmelloid formation
+  description: Literature-backed association between Ribulose bisphosphate carboxylase
+    (UniProtKB:Q31IK3) and palmelloid formation.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q31IK3 in Hydrogenovibrio
+    crunogenus (strain DSM 25203 / XCL-2) (Thiomicrospira crunogena)) associated with
+    palmelloid formation while full multi-step mechanistic curation remains future
+    work.
+  nodes:
+  - node_id: palmelloid_formation_trait
+    label: palmelloid formation
+    node_type: TRAIT
+    grounding: traitmech:000654
+    description: A morphological phenotype in which algal cells form nonmotile multicellular
+      groups by retention within a mother-cell wall or by adhesion through extracellular
+      gelatinous material.
+  - node_id: palmelloid_formation_protein_component
+    label: Ribulose bisphosphate carboxylase
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Ribulose bisphosphate carboxylase) associated
+      with palmelloid formation.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - cbbM
+    protein_examples:
+    - uniprot_id: UniProtKB:Q31IK3
+      protein_label: Ribulose bisphosphate carboxylase
+      gene_symbol: cbbM
+      taxon_id: NCBITaxon:317025
+      taxon_label: Hydrogenovibrio crunogenus (strain DSM 25203 / XCL-2) (Thiomicrospira
+        crunogena)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 111
+      sequence_version: 1
+      role: Characteristic protein component (cbbM, Ribulose bisphosphate carboxylase)
+        associated with palmelloid formation in Hydrogenovibrio crunogenus (strain
+        DSM 25203 / XCL-2) (Thiomicrospira crunogena).
+      evidence:
+      - reference: DOI:10.3390/ijms24098374
+        snippet: the cells continue to divide within the mother cell, i.e., they are
+          unable to separate and remain encased in a single membrane.
+        notes: Supports Ribulose bisphosphate carboxylase in palmelloid formation;
+          UniProtKB:Q31IK3 (cbbM, Ribulose bisphosphate carboxylase) in Hydrogenovibrio
+          crunogenus (strain DSM 25203 / XCL-2) (Thiomicrospira crunogena) provides
+          a verified protein exemplar.
+  edges:
+  - subject: palmelloid_formation_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: palmelloid_formation_trait
+    description: Ribulose bisphosphate carboxylase (cbbM, UniProtKB:Q31IK3) contributes
+      to palmelloid formation (associated with continue, membrane, separate).
+    evidence:
+    - reference: DOI:10.3390/ijms24098374
+      snippet: the cells continue to divide within the mother cell, i.e., they are
+        unable to separate and remain encased in a single membrane.
+      notes: Supports the functional association between Ribulose bisphosphate carboxylase
+        (UniProtKB:Q31IK3 in Hydrogenovibrio crunogenus (strain DSM 25203 / XCL-2)
+        (Thiomicrospira crunogena)) and palmelloid formation.

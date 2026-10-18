@@ -49,6 +49,28 @@ causal_graphs:
     label: Crt enzymes
     node_type: GENE_OR_PROTEIN
     description: Bacterial carotenoid biosynthetic enzymes.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q49Z16
+      protein_label: L-threonine dehydratase biosynthetic IlvA
+      gene_symbol: ilvA
+      taxon_id: NCBITaxon:342451
+      taxon_label: Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
+        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+      entry_status: REVIEWED
+      proteome_id: UP000006371
+      retrieved_on: '2026-10-17'
+      entry_version: 124
+      sequence_version: 1
+      role: Exemplar protein (ilvA, L-threonine dehydratase biosynthetic IlvA) representing
+        Crt enzymes in Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
+        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) for orange pigmented.
+      evidence:
+      - reference: DOI:10.1080/1040841X.2025.2526423
+        snippet: responsible for the red, pink, orange, and yellow pigmentation
+        notes: Supports Crt enzymes in orange pigmented; UniProtKB:Q49Z16 (ilvA, L-threonine
+          dehydratase biosynthetic IlvA) in Staphylococcus saprophyticus subsp. saprophyticus
+          (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) provides
+          a verified protein exemplar.
   - node_id: carotenoid_biosynthesis
     label: carotenoid biosynthesis
     node_type: PATHWAY
@@ -72,6 +94,28 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Lycopene cyclase converting lycopene toward beta-carotene in bacteria.
     grounding: GO:0045436
+    protein_examples:
+    - uniprot_id: UniProtKB:Q9HNE5
+      protein_label: Lycopene beta-cyclase
+      gene_symbol: crtY
+      taxon_id: NCBITaxon:64091
+      taxon_label: Halobacterium salinarum (strain ATCC 700922 / JCM 11081 / NRC-1)
+        (Halobacterium halobium)
+      entry_status: REVIEWED
+      proteome_id: UP000000554
+      retrieved_on: '2026-10-17'
+      entry_version: 88
+      sequence_version: 2
+      role: Exemplar protein (crtY, Lycopene beta-cyclase) representing lycopene beta-cyclase
+        (CrtY) in Halobacterium salinarum (strain ATCC 700922 / JCM 11081 / NRC-1)
+        (Halobacterium halobium) for orange pigmented.
+      evidence:
+      - reference: DOI:10.1080/1040841X.2025.2526423
+        snippet: responsible for the red, pink, orange, and yellow pigmentation
+        notes: Supports lycopene beta-cyclase (CrtY) in orange pigmented; UniProtKB:Q9HNE5
+          (crtY, Lycopene beta-cyclase) in Halobacterium salinarum (strain ATCC 700922
+          / JCM 11081 / NRC-1) (Halobacterium halobium) provides a verified protein
+          exemplar.
   - node_id: lycopene
     label: lycopene
     node_type: CHEMICAL
@@ -90,6 +134,25 @@ causal_graphs:
     label: beta-carotene hydroxylase (CrtZ)
     node_type: GENE_OR_PROTEIN
     description: Enzyme converting beta-carotene to zeaxanthin.
+    protein_examples:
+    - uniprot_id: UniProtKB:P54972
+      protein_label: Beta-carotene ketolase
+      gene_symbol: crtW
+      taxon_id: NCBITaxon:81397
+      taxon_label: Paracoccus sp. (strain N81106 / MBIC 01143) (Agrobacterium aurantiacum)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 66
+      sequence_version: 1
+      role: Exemplar protein (crtW, Beta-carotene ketolase) representing beta-carotene
+        hydroxylase (CrtZ) in Paracoccus sp. (strain N81106 / MBIC 01143) (Agrobacterium
+        aurantiacum) for orange pigmented.
+      evidence:
+      - reference: DOI:10.1080/1040841X.2025.2526423
+        snippet: responsible for the red, pink, orange, and yellow pigmentation
+        notes: Supports beta-carotene hydroxylase (CrtZ) in orange pigmented; UniProtKB:P54972
+          (crtW, Beta-carotene ketolase) in Paracoccus sp. (strain N81106 / MBIC 01143)
+          (Agrobacterium aurantiacum) provides a verified protein exemplar.
   - node_id: zeaxanthin
     label: zeaxanthin
     node_type: CHEMICAL
@@ -103,6 +166,25 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Ketolase producing orange/red ketocarotenoids such as canthaxanthin
       and astaxanthin.
+    protein_examples:
+    - uniprot_id: UniProtKB:P54972
+      protein_label: Beta-carotene ketolase
+      gene_symbol: crtW
+      taxon_id: NCBITaxon:81397
+      taxon_label: Paracoccus sp. (strain N81106 / MBIC 01143) (Agrobacterium aurantiacum)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 66
+      sequence_version: 1
+      role: Exemplar protein (crtW, Beta-carotene ketolase) representing carotenoid
+        ketolase (CrtW) in Paracoccus sp. (strain N81106 / MBIC 01143) (Agrobacterium
+        aurantiacum) for orange pigmented.
+      evidence:
+      - reference: DOI:10.1080/1040841X.2025.2526423
+        snippet: responsible for the red, pink, orange, and yellow pigmentation
+        notes: Supports carotenoid ketolase (CrtW) in orange pigmented; UniProtKB:P54972
+          (crtW, Beta-carotene ketolase) in Paracoccus sp. (strain N81106 / MBIC 01143)
+          (Agrobacterium aurantiacum) provides a verified protein exemplar.
   - node_id: ketocarotenoid_biosynthesis
     label: ketocarotenoid biosynthesis
     node_type: BIOLOGICAL_PROCESS
@@ -323,4 +405,13 @@ curation_history:
     the tranche: set graph scope orange_pigmented_carotenoid_accumulation=NONMECHANISTIC
     with scope_notes; marked 3 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (crt_enzymes, crt_z_hydroxylase, crt_w_ketolase).'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q49Z16 (ilvA)
+    protein example to node crt_enzymes; added UniProtKB:Q9HNE5 (crtY) protein example
+    to node crt_y_lycopene_cyclase; added UniProtKB:P54972 (crtW) protein example
+    to node crt_z_hydroxylase; added UniProtKB:P54972 (crtW) protein example to node
+    crt_w_ketolase.'
   llm_assisted: true

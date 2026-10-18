@@ -141,3 +141,74 @@ curation_history:
     no canonical taxa or causal graph. Timestamp is the observed UTC post-audit confirmation,
     not an estimated write time.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph behavioral_habituation_graph
+    with GENE_OR_PROTEIN node behavioral_habituation_protein_component and UniProtKB:P9WGI3
+    exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: behavioral_habituation_graph
+  title: Protein component associated with behavioral habituation
+  description: Literature-backed association between RNA polymerase sigma factor SigF
+    (UniProtKB:P9WGI3) and behavioral habituation.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P9WGI3 in Mycobacterium
+    tuberculosis (strain ATCC 25618 / H37Rv)) associated with behavioral habituation
+    while full multi-step mechanistic curation remains future work.
+  nodes:
+  - node_id: behavioral_habituation_trait
+    label: behavioral habituation
+    node_type: TRAIT
+    grounding: traitmech:000714
+    description: A physiological phenotype in which repeated stimulation produces
+      an experience-dependent decrease in a microbial organism's behavioral response
+      that is not attributable solely to sensory adaptation or motor fatigue.
+  - node_id: behavioral_habituation_protein_component
+    label: RNA polymerase sigma factor SigF
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (RNA polymerase sigma factor SigF) associated with
+      behavioral habituation.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - sigF
+    protein_examples:
+    - uniprot_id: UniProtKB:P9WGI3
+      protein_label: RNA polymerase sigma factor SigF
+      gene_symbol: sigF
+      taxon_id: NCBITaxon:83332
+      taxon_label: Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)
+      entry_status: REVIEWED
+      proteome_id: UP000001584
+      retrieved_on: '2026-10-17'
+      entry_version: 57
+      sequence_version: 1
+      role: Characteristic protein component (sigF, RNA polymerase sigma factor SigF)
+        associated with behavioral habituation in Mycobacterium tuberculosis (strain
+        ATCC 25618 / H37Rv).
+      evidence:
+      - reference: DOI:10.1016/j.nlm.2008.09.012
+        snippet: Habituation is defined as a behavioral response decrement that results
+          from repeated stimulation and that does not involve sensory adaptation/sensory
+          fatigue or motor fatigue.
+        notes: Supports RNA polymerase sigma factor SigF in behavioral habituation;
+          UniProtKB:P9WGI3 (sigF, RNA polymerase sigma factor SigF) in Mycobacterium
+          tuberculosis (strain ATCC 25618 / H37Rv) provides a verified protein exemplar.
+  edges:
+  - subject: behavioral_habituation_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: behavioral_habituation_trait
+    description: RNA polymerase sigma factor SigF (sigF, UniProtKB:P9WGI3) contributes
+      to behavioral habituation (associated with habituation, stimulation, adaptation).
+    evidence:
+    - reference: DOI:10.1016/j.nlm.2008.09.012
+      snippet: Habituation is defined as a behavioral response decrement that results
+        from repeated stimulation and that does not involve sensory adaptation/sensory
+        fatigue or motor fatigue.
+      notes: Supports the functional association between RNA polymerase sigma factor
+        SigF (UniProtKB:P9WGI3 in Mycobacterium tuberculosis (strain ATCC 25618 /
+        H37Rv)) and behavioral habituation.

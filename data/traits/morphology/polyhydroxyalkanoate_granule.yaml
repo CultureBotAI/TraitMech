@@ -83,7 +83,7 @@ causal_graphs:
       entry_status: REVIEWED
       proteome_id: UP000008210
       retrieved_on: '2026-08-25'
-      entry_version: 137
+      entry_version: 138
       sequence_version: 1
       role: H16 PhaC polymerizes hydroxyacyl-CoA into PHA and directly supplies polymer
         to storage granules.
@@ -103,6 +103,25 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Granule-associated protein coating and stabilizing PHB chains at
       the granule surface.
+    protein_examples:
+    - uniprot_id: UniProtKB:P73545
+      protein_label: Phasin PhaP
+      gene_symbol: phaP
+      taxon_id: NCBITaxon:1111708
+      taxon_label: Synechocystis sp. (strain ATCC 27184 / PCC 6803 / Kazusa)
+      entry_status: REVIEWED
+      proteome_id: UP000001425
+      retrieved_on: '2026-10-17'
+      entry_version: 107
+      sequence_version: 1
+      role: Exemplar protein (phaP, Phasin PhaP) representing phasin (PhaP) in Synechocystis
+        sp. (strain ATCC 27184 / PCC 6803 / Kazusa) for polyhydroxyalkanoate granule.
+      evidence:
+      - reference: DOI:10.1016/j.jbc.2024.107523
+        snippet: phaP encodes the granule-associated phasin PhaP
+        notes: Supports phasin (PhaP) in polyhydroxyalkanoate granule; UniProtKB:P73545
+          (phaP, Phasin PhaP) in Synechocystis sp. (strain ATCC 27184 / PCC 6803 /
+          Kazusa) provides a verified protein exemplar.
   - node_id: phb_granule_size_number
     label: PHB granule size and number
     node_type: QUALITY
@@ -114,6 +133,25 @@ causal_graphs:
     label: PhaR regulator
     node_type: GENE_OR_PROTEIN
     description: Transcriptional repressor that binds phaP promoters.
+    protein_examples:
+    - uniprot_id: UniProtKB:P73545
+      protein_label: Phasin PhaP
+      gene_symbol: phaP
+      taxon_id: NCBITaxon:1111708
+      taxon_label: Synechocystis sp. (strain ATCC 27184 / PCC 6803 / Kazusa)
+      entry_status: REVIEWED
+      proteome_id: UP000001425
+      retrieved_on: '2026-10-17'
+      entry_version: 107
+      sequence_version: 1
+      role: Exemplar protein (phaP, Phasin PhaP) representing PhaR regulator in Synechocystis
+        sp. (strain ATCC 27184 / PCC 6803 / Kazusa) for polyhydroxyalkanoate granule.
+      evidence:
+      - reference: DOI:10.1016/j.jbc.2024.107523
+        snippet: phaP encodes the granule-associated phasin PhaP
+        notes: Supports PhaR regulator in polyhydroxyalkanoate granule; UniProtKB:P73545
+          (phaP, Phasin PhaP) in Synechocystis sp. (strain ATCC 27184 / PCC 6803 /
+          Kazusa) provides a verified protein exemplar.
   - node_id: phap_transcription
     label: phaP transcription
     node_type: BIOLOGICAL_PROCESS
@@ -125,6 +163,26 @@ causal_graphs:
     label: PHA depolymerase (PhaZ)
     node_type: GENE_OR_PROTEIN
     description: Intracellular depolymerase cleaving PHB to 3-hydroxybutyrate.
+    protein_examples:
+    - uniprot_id: UniProtKB:P26495
+      protein_label: Poly(3-hydroxyalkanoate) depolymerase
+      gene_symbol: phaZ
+      taxon_id: NCBITaxon:301
+      taxon_label: Ectopseudomonas oleovorans (Pseudomonas oleovorans)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 79
+      sequence_version: 1
+      role: Exemplar protein (phaZ, Poly(3-hydroxyalkanoate) depolymerase) representing
+        PHA depolymerase (PhaZ) in Ectopseudomonas oleovorans (Pseudomonas oleovorans)
+        for polyhydroxyalkanoate granule.
+      evidence:
+      - reference: DOI:10.1016/j.jbc.2024.107523
+        snippet: When synthetized, PHA aggregates in an amorphous state surrounded
+          by several PHA granule-associated proteins forming the so called carbonosomes
+        notes: Supports PHA depolymerase (PhaZ) in polyhydroxyalkanoate granule; UniProtKB:P26495
+          (phaZ, Poly(3-hydroxyalkanoate) depolymerase) in Ectopseudomonas oleovorans
+          (Pseudomonas oleovorans) provides a verified protein exemplar.
   - node_id: phb_mobilization
     label: PHB mobilization
     node_type: BIOLOGICAL_PROCESS
@@ -312,4 +370,13 @@ curation_history:
   action: CONNECT_CAUSAL_GRAPH_COMPONENTS
   changes: 'Resolved issue #183 graph fragmentation (4 components to 1) using 3 source-
     and verbatim-snippet-backed connector(s). No paid research service was called.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:P23608
+    version metadata (entry_version=138, sequence_version=1); added UniProtKB:P73545
+    (phaP) protein example to node phasin_phap; added UniProtKB:P73545 (phaP) protein
+    example to node phar_regulator; added UniProtKB:P26495 (phaZ) protein example
+    to node pha_depolymerase_phaz.'
   llm_assisted: true

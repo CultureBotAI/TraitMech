@@ -60,7 +60,7 @@ causal_graphs:
       taxon_label: Streptococcus pyogenes serotype M1
       entry_status: REVIEWED
       retrieved_on: '2026-08-25'
-      entry_version: 147
+      entry_version: 148
       sequence_version: 1
       role: S. pyogenes Cas9 is the nuclease component directed by crRNA and tracrRNA
         to make sequence-specific double-strand breaks in target DNA.
@@ -81,6 +81,29 @@ causal_graphs:
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Cas1 and Cas2 are distinct protein families; this node denotes
       their adaptation complex rather than one component family.
+    protein_examples:
+    - uniprot_id: UniProtKB:G4RJY6
+      protein_label: CRISPR-associated endonuclease Cas1/endonuclease Cas2 fusion
+      gene_symbol: cas2
+      taxon_id: NCBITaxon:768679
+      taxon_label: Thermoproteus tenax (strain ATCC 35583 / DSM 2078 / JCM 9277 /
+        NBRC 100435 / Kra 1)
+      entry_status: REVIEWED
+      proteome_id: UP000002654
+      retrieved_on: '2026-10-17'
+      entry_version: 55
+      sequence_version: 1
+      role: Exemplar protein (cas2, CRISPR-associated endonuclease Cas1/endonuclease
+        Cas2 fusion) representing Cas1-Cas2 complex in Thermoproteus tenax (strain
+        ATCC 35583 / DSM 2078 / JCM 9277 / NBRC 100435 / Kra 1) for CRISPR-Cas system.
+      evidence:
+      - reference: DOI:10.1038/nsmb.2820
+        snippet: Cas1 and Cas2 from Escherichia coli form a stable complex that is
+          essential for spacer acquisition
+        notes: Supports Cas1-Cas2 complex in CRISPR-Cas system; UniProtKB:G4RJY6 (cas2,
+          CRISPR-associated endonuclease Cas1/endonuclease Cas2 fusion) in Thermoproteus
+          tenax (strain ATCC 35583 / DSM 2078 / JCM 9277 / NBRC 100435 / Kra 1) provides
+          a verified protein exemplar.
   - node_id: spacer_acquisition
     label: spacer acquisition (adaptation)
     node_type: BIOLOGICAL_PROCESS
@@ -268,4 +291,11 @@ curation_history:
   action: REFINED_PARENT_TRAITS
   changes: Reparented CRISPR-Cas system from the broad genomics parent to the newly
     minted phage defense system parent.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:Q99ZW2
+    version metadata (entry_version=148, sequence_version=1); added UniProtKB:G4RJY6
+    (cas2) protein example to node cas1_cas2_complex.'
   llm_assisted: true

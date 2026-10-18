@@ -125,3 +125,72 @@ curation_history:
     or universal protein requirement is inferred. The timestamp records observed acceptance,
     not a reconstructed acquisition time.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph eukaryotic_flagellar_autotomy_graph
+    with GENE_OR_PROTEIN node eukaryotic_flagellar_autotomy_protein_component and
+    UniProtKB:P16521 exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: eukaryotic_flagellar_autotomy_graph
+  title: Protein component associated with eukaryotic flagellar autotomy
+  description: Literature-backed association between Elongation factor 3A (UniProtKB:P16521)
+    and eukaryotic flagellar autotomy.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P16521 in Saccharomyces
+    cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)) associated with eukaryotic
+    flagellar autotomy while full multi-step mechanistic curation remains future work.
+  nodes:
+  - node_id: eukaryotic_flagellar_autotomy_trait
+    label: eukaryotic flagellar autotomy
+    node_type: TRAIT
+    grounding: traitmech:000731
+    description: A physiological phenotype in which a microbial eukaryote sheds its
+      cilia or flagella by regulated severing of their axonemes near the base.
+  - node_id: eukaryotic_flagellar_autotomy_protein_component
+    label: Elongation factor 3A
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Elongation factor 3A) associated with eukaryotic
+      flagellar autotomy.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - YEF3
+    protein_examples:
+    - uniprot_id: UniProtKB:P16521
+      protein_label: Elongation factor 3A
+      gene_symbol: YEF3
+      taxon_id: NCBITaxon:559292
+      taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's
+        yeast)
+      entry_status: REVIEWED
+      proteome_id: UP000002311
+      retrieved_on: '2026-10-17'
+      entry_version: 244
+      sequence_version: 4
+      role: Characteristic protein component (YEF3, Elongation factor 3A) associated
+        with eukaryotic flagellar autotomy in Saccharomyces cerevisiae (strain ATCC
+        204508 / S288c) (Baker's yeast).
+      evidence:
+      - reference: DOI:10.1534/g3.116.034264
+        snippet: Wild-type cells deflagellate completely in response to pH shock or
+          dibucaine, regardless of the temperature
+        notes: Supports Elongation factor 3A in eukaryotic flagellar autotomy; UniProtKB:P16521
+          (YEF3, Elongation factor 3A) in Saccharomyces cerevisiae (strain ATCC 204508
+          / S288c) (Baker's yeast) provides a verified protein exemplar.
+  edges:
+  - subject: eukaryotic_flagellar_autotomy_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: eukaryotic_flagellar_autotomy_trait
+    description: Elongation factor 3A (YEF3, UniProtKB:P16521) contributes to eukaryotic
+      flagellar autotomy (associated with deflagellate, temperature, completely).
+    evidence:
+    - reference: DOI:10.1534/g3.116.034264
+      snippet: Wild-type cells deflagellate completely in response to pH shock or
+        dibucaine, regardless of the temperature
+      notes: Supports the functional association between Elongation factor 3A (UniProtKB:P16521
+        in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast))
+        and eukaryotic flagellar autotomy.

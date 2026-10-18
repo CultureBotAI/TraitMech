@@ -129,3 +129,73 @@ curation_history:
     surface discrepancy unresolved; the verbatim snippet, formation phenotype and
     qualified canonical example remain unchanged.'
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph fungal_appressorium_formation_graph
+    with GENE_OR_PROTEIN node fungal_appressorium_formation_protein_component and
+    UniProtKB:O13759 exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: fungal_appressorium_formation_graph
+  title: Protein component associated with fungal appressorium formation
+  description: Literature-backed association between RNA-binding post-transcriptional
+    regulator csx1 (UniProtKB:O13759) and fungal appressorium formation.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:O13759 in Schizosaccharomyces
+    pombe (strain 972 / ATCC 24843) (Fission yeast)) associated with fungal appressorium
+    formation while full multi-step mechanistic curation remains future work.
+  nodes:
+  - node_id: fungal_appressorium_formation_trait
+    label: fungal appressorium formation
+    node_type: TRAIT
+    grounding: traitmech:000659
+    description: A morphological phenotype in which a fungus forms specialized surface-associated
+      penetration structures called appressoria.
+  - node_id: fungal_appressorium_formation_protein_component
+    label: RNA-binding post-transcriptional regulator csx1
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (RNA-binding post-transcriptional regulator csx1)
+      associated with fungal appressorium formation.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - csx1
+    protein_examples:
+    - uniprot_id: UniProtKB:O13759
+      protein_label: RNA-binding post-transcriptional regulator csx1
+      gene_symbol: csx1
+      taxon_id: NCBITaxon:284812
+      taxon_label: Schizosaccharomyces pombe (strain 972 / ATCC 24843) (Fission yeast)
+      entry_status: REVIEWED
+      proteome_id: UP000002485
+      retrieved_on: '2026-10-17'
+      entry_version: 152
+      sequence_version: 1
+      role: Characteristic protein component (csx1, RNA-binding post-transcriptional
+        regulator csx1) associated with fungal appressorium formation in Schizosaccharomyces
+        pombe (strain 972 / ATCC 24843) (Fission yeast).
+      evidence:
+      - reference: DOI:10.1371/journal.ppat.1002514
+        snippet: an appressorium is already developing in Guy11 strain whereas no
+          infection cell development occurs in an isogenic Δpmk1 mutant
+        notes: Supports RNA-binding post-transcriptional regulator csx1 in fungal
+          appressorium formation; UniProtKB:O13759 (csx1, RNA-binding post-transcriptional
+          regulator csx1) in Schizosaccharomyces pombe (strain 972 / ATCC 24843) (Fission
+          yeast) provides a verified protein exemplar.
+  edges:
+  - subject: fungal_appressorium_formation_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: fungal_appressorium_formation_trait
+    description: RNA-binding post-transcriptional regulator csx1 (csx1, UniProtKB:O13759)
+      contributes to fungal appressorium formation (associated with appressorium,
+      development, developing).
+    evidence:
+    - reference: DOI:10.1371/journal.ppat.1002514
+      snippet: an appressorium is already developing in Guy11 strain whereas no infection
+        cell development occurs in an isogenic Δpmk1 mutant
+      notes: Supports the functional association between RNA-binding post-transcriptional
+        regulator csx1 (UniProtKB:O13759 in Schizosaccharomyces pombe (strain 972
+        / ATCC 24843) (Fission yeast)) and fungal appressorium formation.

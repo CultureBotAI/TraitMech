@@ -81,3 +81,78 @@ curation_history:
     mechanism, provenance and source-access limits are explicit. Existing traits unchanged;
     timestamp is the observed UTC curation decision.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph cue_triggered_environmental_anticipation_graph
+    with GENE_OR_PROTEIN node cue_triggered_environmental_anticipation_protein_component
+    and UniProtKB:Q49VK4 exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: cue_triggered_environmental_anticipation_graph
+  title: Protein component associated with cue-triggered environmental anticipation
+  description: Literature-backed association between Sensor histidine kinase GraS
+    (UniProtKB:Q49VK4) and cue-triggered environmental anticipation.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q49VK4 in Staphylococcus
+    saprophyticus subsp. saprophyticus (strain ATCC 15305 / DSM 20229 / NCIMB 8711
+    / NCTC 7292 / S-41)) associated with cue-triggered environmental anticipation
+    while full multi-step mechanistic curation remains future work.
+  nodes:
+  - node_id: cue_triggered_environmental_anticipation_trait
+    label: cue-triggered environmental anticipation
+    node_type: TRAIT
+    grounding: traitmech:000707
+    description: A physiological phenotype in which exposure to an environmental cue
+      induces changes that prepare a microorganism for a distinct, temporally associated
+      environmental condition before that condition occurs.
+  - node_id: cue_triggered_environmental_anticipation_protein_component
+    label: Sensor histidine kinase GraS
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Sensor histidine kinase GraS) associated with
+      cue-triggered environmental anticipation.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - graS
+    protein_examples:
+    - uniprot_id: UniProtKB:Q49VK4
+      protein_label: Sensor histidine kinase GraS
+      gene_symbol: graS
+      taxon_id: NCBITaxon:342451
+      taxon_label: Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
+        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+      entry_status: REVIEWED
+      proteome_id: UP000006371
+      retrieved_on: '2026-10-17'
+      entry_version: 121
+      sequence_version: 2
+      role: Characteristic protein component (graS, Sensor histidine kinase GraS)
+        associated with cue-triggered environmental anticipation in Staphylococcus
+        saprophyticus subsp. saprophyticus (strain ATCC 15305 / DSM 20229 / NCIMB
+        8711 / NCTC 7292 / S-41).
+      evidence:
+      - reference: DOI:10.1038/nmicrobiol.2017.84
+        snippet: Here, we identify a metabolic adaptation that is triggered upon entry
+          into hypoxia-induced quiescence but facilitates subsequent cell cycle re-entry.
+        notes: Supports Sensor histidine kinase GraS in cue-triggered environmental
+          anticipation; UniProtKB:Q49VK4 (graS, Sensor histidine kinase GraS) in Staphylococcus
+          saprophyticus subsp. saprophyticus (strain ATCC 15305 / DSM 20229 / NCIMB
+          8711 / NCTC 7292 / S-41) provides a verified protein exemplar.
+  edges:
+  - subject: cue_triggered_environmental_anticipation_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: cue_triggered_environmental_anticipation_trait
+    description: Sensor histidine kinase GraS (graS, UniProtKB:Q49VK4) contributes
+      to cue-triggered environmental anticipation (associated with facilitates, adaptation,
+      quiescence).
+    evidence:
+    - reference: DOI:10.1038/nmicrobiol.2017.84
+      snippet: Here, we identify a metabolic adaptation that is triggered upon entry
+        into hypoxia-induced quiescence but facilitates subsequent cell cycle re-entry.
+      notes: Supports the functional association between Sensor histidine kinase GraS
+        (UniProtKB:Q49VK4 in Staphylococcus saprophyticus subsp. saprophyticus (strain
+        ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)) and cue-triggered
+        environmental anticipation.

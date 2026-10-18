@@ -104,6 +104,38 @@ causal_graphs:
     grounding: traitmech:000209
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
+  - node_id: pd_t4_4_system_protein_component
+    label: Cell death peptidase
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Cell death peptidase) associated with PD-T4-4
+      system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - lit
+    protein_examples:
+    - uniprot_id: UniProtKB:P11072
+      protein_label: Cell death peptidase
+      gene_symbol: lit
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 137
+      sequence_version: 2
+      role: Characteristic protein component (lit, Cell death peptidase) associated
+        with PD-T4-4 system in Escherichia coli (strain K12).
+      evidence:
+      - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t4-4.md
+        snippet: PD-T4-4 is a defense system composed of two proteins, a P-loop NTPase
+          and a nuclease, that is most likely protecting the bacterial population
+          through abortive infection. It was identified from an ICE in an *E. coli*
+          genome.
+        notes: Supports Cell death peptidase in PD-T4-4 system; UniProtKB:P11072 (lit,
+          Cell death peptidase) in Escherichia coli (strain K12) provides a verified
+          protein exemplar.
   edges:
   - subject: pd_t4_4_locus
     predicate: contributes to
@@ -196,6 +228,19 @@ causal_graphs:
         \t"
       notes: The DefenseFinder rules table models PD-T4-4 as a two-profile system
         requiring PD-T4-4__PD-T4-4_A and PD-T4-4__PD-T4-4_B.
+  - subject: pd_t4_4_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: pd_t4_4_system_trait
+    description: Cell death peptidase (lit, UniProtKB:P11072) contributes to PD-T4-4
+      system (associated with custom, pd, t4).
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| PD-T4-9__PD-T4-9_A | PD-T4-9__PD-T4-9_A | PD-T4-9 | Custom | 20
+        | | PD-T4-9__PD-T4-9_B | PD-T4-9__PD-T4-9_B | PD-T4-9 | Custom | 20 | | PD-T4-9__PD-T4-9_C
+        | PD-T4-9__PD-T4-9_C | PD-T4-9 | Custom | 20 |'
+      notes: Supports the functional association between Cell death peptidase (UniProtKB:P11072
+        in Escherichia coli (strain K12)) and PD-T4-4 system.
 discussions:
 - discussion_id: pd-t4-4-mechanism-gap
   prompt: Resolve PD-T4-4 natural host breadth, direct phage trigger, and effector
@@ -278,4 +323,10 @@ curation_history:
     names abortive infection as the likely PD-T4-4 population-level protection route,
     but the graph leaves that hypothesis unmodeled until direct mechanism evidence
     is available.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    pd_t4_4_system_protein_component with UniProtKB:P11072 (lit) exemplar.'
   llm_assisted: true

@@ -87,6 +87,34 @@ causal_graphs:
     node_type: TRAIT
     grounding: traitmech:000218
     description: Possession of a genome-encoded Wadjet anti-plasmid defense locus.
+  - node_id: wadjet_system_protein_component
+    label: Wadjet protein JetC
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Wadjet protein JetC) associated with Wadjet system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - jetC
+    protein_examples:
+    - uniprot_id: UniProtKB:B9IS85
+      protein_label: Wadjet protein JetC
+      gene_symbol: jetC
+      taxon_id: NCBITaxon:361100
+      taxon_label: Bacillus cereus (strain Q1)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 66
+      sequence_version: 2
+      role: Characteristic protein component (jetC, Wadjet protein JetC) associated
+        with Wadjet system in Bacillus cereus (strain Q1).
+      evidence:
+      - reference: DOI:10.1016/j.molcel.2022.09.008
+        snippet: Wadjet forms a complex similar to the bacterial condensin complex
+          MukBEF, with a novel nuclease subunit similar to a type II DNA topoisomerase
+        notes: Supports Wadjet protein JetC in Wadjet system; UniProtKB:B9IS85 (jetC,
+          Wadjet protein JetC) in Bacillus cereus (strain Q1) provides a verified
+          protein exemplar.
   edges:
   - subject: wadjet_locus
     predicate: contributes to
@@ -137,6 +165,18 @@ causal_graphs:
       snippet: MksG is a nuclease that degrades plasmid DNA
       notes: Weiss et al. support MksG nuclease activity as a Wadjet/MksBEFG plasmid-degradation
         output.
+  - subject: wadjet_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: wadjet_system_trait
+    description: Wadjet protein JetC (jetC, UniProtKB:B9IS85) contributes to Wadjet
+      system (associated with topoisomerase, condensin, nuclease).
+    evidence:
+    - reference: DOI:10.1016/j.molcel.2022.09.008
+      snippet: Wadjet forms a complex similar to the bacterial condensin complex MukBEF,
+        with a novel nuclease subunit similar to a type II DNA topoisomerase
+      notes: Supports the functional association between Wadjet protein JetC (UniProtKB:B9IS85
+        in Bacillus cereus (strain Q1)) and Wadjet system.
 discussions:
 - discussion_id: wadjet-subfamily-and-substrate-gap
   prompt: Resolve JetABCD, EptABCD, DefenseFinder Wadjet subtype boundaries, plasmid
@@ -167,4 +207,10 @@ curation_history:
   changes: Documented MksBEFG as split out in the open Wadjet subfamily and substrate
     discussion after minting traitmech:000526 for the MksBEFG system; JetABCD, EptABCD,
     and DefenseFinder Wadjet subtype boundaries remain open.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    wadjet_system_protein_component with UniProtKB:B9IS85 (jetC) exemplar.'
   llm_assisted: true

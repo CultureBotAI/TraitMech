@@ -83,3 +83,72 @@ curation_history:
     found no exact record or METPO term; reserved METPO:1053000 in v453. Kept source
     strain, heterologous assay, predicted regulation and detector thresholds distinct.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph zorya_type_iii_system_graph
+    with GENE_OR_PROTEIN node zorya_type_iii_system_protein_component and UniProtKB:A7ZI09
+    exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: zorya_type_iii_system_graph
+  title: Protein component associated with Zorya type III system
+  description: Literature-backed association between Zorya protein ZorB (UniProtKB:A7ZI09)
+    and Zorya type III system.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:A7ZI09 in Escherichia
+    coli O139:H28 (strain E24377A / ETEC)) associated with Zorya type III system while
+    full multi-step mechanistic curation remains future work.
+  nodes:
+  - node_id: zorya_type_iii_system_trait
+    label: Zorya type III system
+    node_type: TRAIT
+    grounding: traitmech:000576
+    description: A Zorya system in which an organism possesses a locus encoding ZorA
+      and ZorB together with ZorF and ZorG.
+  - node_id: zorya_type_iii_system_protein_component
+    label: Zorya protein ZorB
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Zorya protein ZorB) associated with Zorya type
+      III system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - zorB
+    protein_examples:
+    - uniprot_id: UniProtKB:A7ZI09
+      protein_label: Zorya protein ZorB
+      gene_symbol: zorB
+      taxon_id: NCBITaxon:331111
+      taxon_label: Escherichia coli O139:H28 (strain E24377A / ETEC)
+      entry_status: REVIEWED
+      proteome_id: UP000001122
+      retrieved_on: '2026-10-17'
+      entry_version: 79
+      sequence_version: 1
+      role: Characteristic protein component (zorB, Zorya protein ZorB) associated
+        with Zorya type III system in Escherichia coli O139:H28 (strain E24377A /
+        ETEC).
+      evidence:
+      - reference: DOI:10.1038/s41467-025-57397-2
+        snippet: all Zorya systems share two components, ZorA and ZorB, containing
+          domains distantly related, respectively, to the MotA and MotB subunits of
+          the bacterial flagellar motor
+        notes: Supports Zorya protein ZorB in Zorya type III system; UniProtKB:A7ZI09
+          (zorB, Zorya protein ZorB) in Escherichia coli O139:H28 (strain E24377A
+          / ETEC) provides a verified protein exemplar.
+  edges:
+  - subject: zorya_type_iii_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: zorya_type_iii_system_trait
+    description: Zorya protein ZorB (zorB, UniProtKB:A7ZI09) contributes to Zorya
+      type III system (associated with respectively, containing, distantly).
+    evidence:
+    - reference: DOI:10.1038/s41467-025-57397-2
+      snippet: all Zorya systems share two components, ZorA and ZorB, containing domains
+        distantly related, respectively, to the MotA and MotB subunits of the bacterial
+        flagellar motor
+      notes: Supports the functional association between Zorya protein ZorB (UniProtKB:A7ZI09
+        in Escherichia coli O139:H28 (strain E24377A / ETEC)) and Zorya type III system.

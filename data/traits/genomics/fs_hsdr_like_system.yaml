@@ -88,6 +88,41 @@ causal_graphs:
     grounding: traitmech:000209
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
+  - node_id: fs_hsdr_like_system_protein_component
+    label: Type I restriction enzyme SsaAORF53P endonuclease subunit
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Type I restriction enzyme SsaAORF53P endonuclease
+      subunit) associated with FS-HsdR-like system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - hsdR
+    protein_examples:
+    - uniprot_id: UniProtKB:Q4A127
+      protein_label: Type I restriction enzyme SsaAORF53P endonuclease subunit
+      gene_symbol: hsdR
+      taxon_id: NCBITaxon:342451
+      taxon_label: Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
+        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+      entry_status: REVIEWED
+      proteome_id: UP000006371
+      retrieved_on: '2026-10-17'
+      entry_version: 116
+      sequence_version: 1
+      role: Characteristic protein component (hsdR, Type I restriction enzyme SsaAORF53P
+        endonuclease subunit) associated with FS-HsdR-like system in Staphylococcus
+        saprophyticus subsp. saprophyticus (strain ATCC 15305 / DSM 20229 / NCIMB
+        8711 / NCTC 7292 / S-41).
+      evidence:
+      - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+        snippet: FS_HsdR_like | 10\.1016/j\.cell\.2022\.07\.014 | Bacteriophages benefit
+          from mobilizing pathogenicity islands encoding immune systems against competitors
+        notes: Supports Type I restriction enzyme SsaAORF53P endonuclease subunit
+          in FS-HsdR-like system; UniProtKB:Q4A127 (hsdR, Type I restriction enzyme
+          SsaAORF53P endonuclease subunit) in Staphylococcus saprophyticus subsp.
+          saprophyticus (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 /
+          S-41) provides a verified protein exemplar.
   edges:
   - subject: fs_hsdr_like_locus
     predicate: contributes to
@@ -152,6 +187,21 @@ causal_graphs:
         \ FS_HsdR_like__HdrR"
       notes: The DefenseFinder rules table models FS_HsdR_like with two mandatory
         profiles selected from three custom DUF6731, HP, and HdrR profile keys.
+  - subject: fs_hsdr_like_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: fs_hsdr_like_system_trait
+    description: Type I restriction enzyme SsaAORF53P endonuclease subunit (hsdR,
+      UniProtKB:Q4A127) contributes to FS-HsdR-like system (associated with endonuclease,
+      nucleotides, restriction).
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: '| McrBC | 10\.1093/emboj/20\.12\.3210 | The McrBC restriction endonuclease
+        assembles into a ring structure in the presence of G nucleotides |'
+      notes: Supports the functional association between Type I restriction enzyme
+        SsaAORF53P endonuclease subunit (UniProtKB:Q4A127 in Staphylococcus saprophyticus
+        subsp. saprophyticus (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292
+        / S-41)) and FS-HsdR-like system.
 discussions:
 - discussion_id: fs-hsdr-like-mechanism-gap
   prompt: Resolve FS_HsdR_like natural hosts, helper-phage triggers, DUF6731 activity,
@@ -176,4 +226,10 @@ curation_history:
     defense system after an ignored-and-hidden duplicate review found no exact live
     TraitMech, METPO, history, or prior proposal record; the replacement placeholder
     is reserved in proposals/metpo_traitmech_v227.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    fs_hsdr_like_system_protein_component with UniProtKB:Q4A127 (hsdR) exemplar.'
   llm_assisted: true

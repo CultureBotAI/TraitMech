@@ -55,6 +55,27 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Enzyme family catalyzing Mn(II) oxidation in bacteria.
     grounding: InterPro:IPR045087
+    protein_examples:
+    - uniprot_id: UniProtKB:P0ABI8
+      protein_label: Cytochrome bo(3) ubiquinol oxidase subunit 1
+      gene_symbol: cyoB
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 154
+      sequence_version: 1
+      role: Exemplar protein (cyoB, Cytochrome bo(3) ubiquinol oxidase subunit 1)
+        representing multicopper oxidase in Escherichia coli (strain K12) for manganese
+        oxidation.
+      evidence:
+      - reference: DOI:10.1016/j.tim.2005.07.009
+        snippet: the reaction might involve a unique multicopper oxidase system capable
+          of a two-electron oxidation of the substrate
+        notes: Supports multicopper oxidase in manganese oxidation; UniProtKB:P0ABI8
+          (cyoB, Cytochrome bo(3) ubiquinol oxidase subunit 1) in Escherichia coli
+          (strain K12) provides a verified protein exemplar.
   - node_id: manganese_peroxidase
     label: manganese peroxidase
     node_type: GENE_OR_PROTEIN
@@ -69,7 +90,7 @@ causal_graphs:
       taxon_label: Phanerodontia chrysosporium
       entry_status: REVIEWED
       retrieved_on: '2026-08-23'
-      entry_version: 150
+      entry_version: 151
       sequence_version: 1
       role: MnP-1 directly oxidizes Mn(II) to Mn(III); it illustrates the fungal peroxidase
         branch and is not presented as a bacterial multicopper oxidase.
@@ -292,4 +313,11 @@ curation_history:
   changes: 'Reviewed 1 organism-specific UniProtKB grounding(s): replaced 1 with taxon-agnostic
     GO/InterPro terms and retracted 0 to label-only where no exact semantic term was
     supported (docs/GROUNDING_POLICY.md).'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:Q02567
+    version metadata (entry_version=151, sequence_version=1); added UniProtKB:P0ABI8
+    (cyoB) protein example to node multicopper_oxidase.'
   llm_assisted: true

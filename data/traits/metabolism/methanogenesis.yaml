@@ -95,7 +95,7 @@ causal_graphs:
       entry_status: REVIEWED
       proteome_id: UP000000805
       retrieved_on: '2026-08-23'
-      entry_version: 146
+      entry_version: 147
       sequence_version: 2
       role: Alpha subunit of methyl-coenzyme M reductase I, the multisubunit enzyme
         catalyzing the terminal methane-forming step; this accession is not presented
@@ -452,4 +452,10 @@ curation_history:
   action: GROUND_CAUSAL_NODE
   changes: Grounded the methyl-based methanogenesis causal node to traitmech:000192
     after minting the same-scope methyl-substrate methanogenesis TraitRecord.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:Q58256
+    version metadata (entry_version=147, sequence_version=2).'
   llm_assisted: true

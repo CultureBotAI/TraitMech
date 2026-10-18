@@ -73,6 +73,30 @@ causal_graphs:
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: This is a host-plant protein family used as context in the mixed
       host-microbe graph; it is not the bacterial protein exemplar.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q4A0Q1
+      protein_label: Oxygen-dependent choline dehydrogenase
+      gene_symbol: betA
+      taxon_id: NCBITaxon:342451
+      taxon_label: Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
+        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+      entry_status: REVIEWED
+      proteome_id: UP000006371
+      retrieved_on: '2026-10-17'
+      entry_version: 127
+      sequence_version: 1
+      role: Exemplar protein (betA, Oxygen-dependent choline dehydrogenase) representing
+        leghemoglobin in Staphylococcus saprophyticus subsp. saprophyticus (strain
+        ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) for nitrogen-fixing
+        symbiosis.
+      evidence:
+      - reference: DOI:10.1038/nrmicro.2017.171
+        snippet: Rhizobia must exist in soil and compete with other members of the
+          microbiota before infecting legumes and forming N2-fixing bacteroids.
+        notes: Supports leghemoglobin in nitrogen-fixing symbiosis; UniProtKB:Q4A0Q1
+          (betA, Oxygen-dependent choline dehydrogenase) in Staphylococcus saprophyticus
+          subsp. saprophyticus (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC
+          7292 / S-41) provides a verified protein exemplar.
   - node_id: nodule_oxygen_diffusion_barrier
     label: nodule oxygen diffusion barrier
     node_type: CELLULAR_LOCALIZATION
@@ -99,7 +123,7 @@ causal_graphs:
       taxon_label: Sinorhizobium meliloti 1021
       entry_status: REVIEWED
       retrieved_on: '2026-08-25'
-      entry_version: 158
+      entry_version: 159
       sequence_version: 2
       role: NifH is the ATP-coupled electron-delivery component of the S. meliloti
         nitrogenase complex required for nitrogen fixation in nodules.
@@ -260,4 +284,11 @@ curation_history:
     marked 1 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (leghemoglobin);
     added taxon-paired protein example(s) UniProtKB:P00460 on nitrogenase_complex
     (NCBITaxon:266834); added canonical example(s) NCBITaxon:266834.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:P00460
+    version metadata (entry_version=159, sequence_version=2); added UniProtKB:Q4A0Q1
+    (betA) protein example to node leghemoglobin.'
   llm_assisted: true

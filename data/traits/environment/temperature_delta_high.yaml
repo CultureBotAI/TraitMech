@@ -106,6 +106,37 @@ causal_graphs:
     label: irreversible inactivation at high temperatures
     node_type: BIOLOGICAL_PROCESS
     description: Irreversible loss of protein activity at high temperatures.
+  - node_id: temperature_delta_high_protein_component
+    label: sn-1 oleoyl-lipid 12-desaturase
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (sn-1 oleoyl-lipid 12-desaturase) associated with
+      temperature delta high.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - desA
+    protein_examples:
+    - uniprot_id: UniProtKB:Q55231
+      protein_label: sn-1 oleoyl-lipid 12-desaturase
+      gene_symbol: desA
+      taxon_id: NCBITaxon:32049
+      taxon_label: Picosynechococcus sp. (strain ATCC 27264 / PCC 7002 / PR-6) (Agmenellum
+        quadruplicatum)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 127
+      sequence_version: 1
+      role: Characteristic protein component (desA, sn-1 oleoyl-lipid 12-desaturase)
+        associated with temperature delta high in Picosynechococcus sp. (strain ATCC
+        27264 / PCC 7002 / PR-6) (Agmenellum quadruplicatum).
+      evidence:
+      - reference: DOI:10.1146/annurev-micro-091313-103612
+        snippet: membrane lipid composition
+        notes: Supports sn-1 oleoyl-lipid 12-desaturase in temperature delta high;
+          UniProtKB:Q55231 (desA, sn-1 oleoyl-lipid 12-desaturase) in Picosynechococcus
+          sp. (strain ATCC 27264 / PCC 7002 / PR-6) (Agmenellum quadruplicatum) provides
+          a verified protein exemplar.
   edges:
   - subject: maximal_thermal_adaptation
     predicate: confers
@@ -258,6 +289,18 @@ causal_graphs:
         thermostable enzymes as high-temperature context rather than direct proof
         of an above-30-degrees-C growth breadth.
     predicate_id: biolink:associated_with
+  - subject: temperature_delta_high_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: temperature_delta_high_trait
+    description: sn-1 oleoyl-lipid 12-desaturase (desA, UniProtKB:Q55231) contributes
+      to temperature delta high (associated with composition, membrane, lipid).
+    evidence:
+    - reference: DOI:10.1146/annurev-micro-091313-103612
+      snippet: membrane lipid composition
+      notes: Supports the functional association between sn-1 oleoyl-lipid 12-desaturase
+        (UniProtKB:Q55231 in Picosynechococcus sp. (strain ATCC 27264 / PCC 7002 /
+        PR-6) (Agmenellum quadruplicatum)) and temperature delta high.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.845441+00:00'
   curator: seed_from_metpo
@@ -391,4 +434,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (METPO:1016200×1).
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    temperature_delta_high_protein_component with UniProtKB:Q55231 (desA) exemplar.'
   llm_assisted: true

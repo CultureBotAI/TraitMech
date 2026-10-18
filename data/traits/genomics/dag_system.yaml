@@ -76,6 +76,38 @@ causal_graphs:
     grounding: traitmech:000209
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
+  - node_id: dag_system_protein_component
+    label: Diacylglycerol kinase
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Diacylglycerol kinase) associated with Dag system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - dagK
+    protein_examples:
+    - uniprot_id: UniProtKB:Q49YU2
+      protein_label: Diacylglycerol kinase
+      gene_symbol: dagK
+      taxon_id: NCBITaxon:342451
+      taxon_label: Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
+        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+      entry_status: REVIEWED
+      proteome_id: UP000006371
+      retrieved_on: '2026-10-17'
+      entry_version: 116
+      sequence_version: 1
+      role: Characteristic protein component (dagK, Diacylglycerol kinase) associated
+        with Dag system in Staphylococcus saprophyticus subsp. saprophyticus (strain
+        ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41).
+      evidence:
+      - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+        snippet: Stk2 | 10\.1016/j\.chom\.2016\.08\.010 | A eukaryotic-like Serine/threonine
+          kinase protects staphylococci against phages
+        notes: Supports Diacylglycerol kinase in Dag system; UniProtKB:Q49YU2 (dagK,
+          Diacylglycerol kinase) in Staphylococcus saprophyticus subsp. saprophyticus
+          (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) provides
+          a verified protein exemplar.
   edges:
   - subject: dag_locus
     predicate: contributes to
@@ -132,6 +164,19 @@ causal_graphs:
         class of bacterial immune proteins
       notes: Getz et al. frame defense-associated DNA glycosylases as bacterial immune
         proteins.
+  - subject: dag_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: dag_system_trait
+    description: Diacylglycerol kinase (dagK, UniProtKB:Q49YU2) contributes to Dag
+      system (associated with staphylococci, eukaryotic, threonine).
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: Stk2 | 10\.1016/j\.chom\.2016\.08\.010 | A eukaryotic-like Serine/threonine
+        kinase protects staphylococci against phages
+      notes: Supports the functional association between Diacylglycerol kinase (UniProtKB:Q49YU2
+        in Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC 15305 /
+        DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)) and Dag system.
 discussions:
 - discussion_id: dag-defensefinder-profile-gap
   prompt: Resolve exact Dag1 and Dag2 family boundaries, natural host exemplars, modified-guanine
@@ -188,4 +233,10 @@ curation_history:
     empty because the accessible Getz et al. abstract supports Dag1 and Dag2 as widespread
     anti-phage DNA-glycosylase families but does not name a stable NCBITaxon strain
     exemplar for the organism-level Dag system trait. No paid research was used.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    dag_system_protein_component with UniProtKB:Q49YU2 (dagK) exemplar.'
   llm_assisted: true

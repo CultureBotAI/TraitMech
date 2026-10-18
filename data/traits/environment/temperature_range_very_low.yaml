@@ -82,6 +82,26 @@ causal_graphs:
       a quantitative measurement graph; no exact semantic family term was established
       for this aggregate use.
     description: CspA-family RNA chaperones that bind nucleic acids during cold acclimation.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0A9X9
+      protein_label: Cold shock protein CspA
+      gene_symbol: cspA
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 146
+      sequence_version: 2
+      role: Exemplar protein (cspA, Cold shock protein CspA) representing cold-shock
+        proteins (CspA-family) in Escherichia coli (strain K12) for temperature range
+        very low.
+      evidence:
+      - reference: DOI:10.4161/rna.7.6.13482
+        snippet: CspA, the main cold shock protein, and its homologs act as RNA chaperones
+        notes: Supports cold-shock proteins (CspA-family) in temperature range very
+          low; UniProtKB:P0A9X9 (cspA, Cold shock protein CspA) in Escherichia coli
+          (strain K12) provides a verified protein exemplar.
   - node_id: cold_stabilized_rna_secondary_structure
     label: cold-stabilized mRNA/RNA secondary structure
     node_type: QUALITY
@@ -94,6 +114,27 @@ causal_graphs:
       a quantitative measurement graph; no exact semantic family term was established
       for this aggregate use.
     description: Chaperone and protease systems maintaining proteostasis under cold.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0A6Y8
+      protein_label: Chaperone protein DnaK
+      gene_symbol: dnaK
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 183
+      sequence_version: 2
+      role: Exemplar protein (dnaK, Chaperone protein DnaK) representing molecular
+        chaperones (DnaK/GroEL/GroES/Clp/TF) in Escherichia coli (strain K12) for
+        temperature range very low.
+      evidence:
+      - reference: DOI:10.1007/s42770-023-01057-4
+        snippet: When the temperature drops, DesK/DesR is the two-component system
+          involved in membrane adaptation
+        notes: Supports molecular chaperones (DnaK/GroEL/GroES/Clp/TF) in temperature
+          range very low; UniProtKB:P0A6Y8 (dnaK, Chaperone protein DnaK) in Escherichia
+          coli (strain K12) provides a verified protein exemplar.
   - node_id: proteostasis_cold
     label: protein folding and proteostasis in the cold
     node_type: BIOLOGICAL_PROCESS
@@ -115,6 +156,26 @@ causal_graphs:
       a quantitative measurement graph; no exact semantic family term was established
       for this aggregate use.
     description: AFPs/IBPs that bind ice and inhibit ice-crystal growth.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0A9X9
+      protein_label: Cold shock protein CspA
+      gene_symbol: cspA
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 146
+      sequence_version: 2
+      role: Exemplar protein (cspA, Cold shock protein CspA) representing ice-binding/antifreeze
+        proteins in Escherichia coli (strain K12) for temperature range very low.
+      evidence:
+      - reference: DOI:10.3389/fmicb.2023.1197797
+        snippet: ice binding, cold shock and heat shock proteins to sustain their
+          physiological state
+        notes: Supports ice-binding/antifreeze proteins in temperature range very
+          low; UniProtKB:P0A9X9 (cspA, Cold shock protein CspA) in Escherichia coli
+          (strain K12) provides a verified protein exemplar.
   - node_id: ice_crystal_growth
     label: ice-crystal growth/recrystallization
     node_type: BIOLOGICAL_PROCESS
@@ -363,4 +424,12 @@ curation_history:
   changes: 'Addressed PR #664 adversarial review: replaced copied Ramasamy cold-adaptation
     snippets with independent exact text supporting compatible-osmolyte and ice-binding-protein
     context edges.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P0A9X9 (cspA)
+    protein example to node cold_shock_proteins; added UniProtKB:P0A6Y8 (dnaK) protein
+    example to node molecular_chaperones; added UniProtKB:P0A9X9 (cspA) protein example
+    to node ice_binding_proteins.'
   llm_assisted: true

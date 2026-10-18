@@ -79,6 +79,39 @@ causal_graphs:
     grounding: traitmech:000496
     description: Possession of a genome-encoded Type IV modification-dependent restriction
       system.
+  - node_id: ecokmcra_system_protein_component
+    label: Methyl-coenzyme M reductase I subunit alpha
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Methyl-coenzyme M reductase I subunit alpha) associated
+      with EcoKMcrA system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - mcrA
+    protein_examples:
+    - uniprot_id: UniProtKB:Q58256
+      protein_label: Methyl-coenzyme M reductase I subunit alpha
+      gene_symbol: mcrA
+      taxon_id: NCBITaxon:243232
+      taxon_label: Methanocaldococcus jannaschii (strain ATCC 43067 / DSM 2661 / JAL-1
+        / JCM 10045 / NBRC 100440)
+      entry_status: REVIEWED
+      proteome_id: UP000000805
+      retrieved_on: '2026-10-17'
+      entry_version: 147
+      sequence_version: 2
+      role: Characteristic protein component (mcrA, Methyl-coenzyme M reductase I
+        subunit alpha) associated with EcoKMcrA system in Methanocaldococcus jannaschii
+        (strain ATCC 43067 / DSM 2661 / JAL-1 / JCM 10045 / NBRC 100440).
+      evidence:
+      - reference: DOI:10.1093/nar/gky731
+        snippet: Escherichia coli McrA (EcoKMcrA) acts as a methylcytosine and hydroxymethylcytosine
+          dependent restriction endonuclease.
+        notes: Supports Methyl-coenzyme M reductase I subunit alpha in EcoKMcrA system;
+          UniProtKB:Q58256 (mcrA, Methyl-coenzyme M reductase I subunit alpha) in
+          Methanocaldococcus jannaschii (strain ATCC 43067 / DSM 2661 / JAL-1 / JCM
+          10045 / NBRC 100440) provides a verified protein exemplar.
   edges:
   - subject: ecokmcra_locus
     predicate: enables
@@ -153,6 +186,21 @@ causal_graphs:
         Type IV, as distinct from the familiar modification-blocked Types I-III.
       notes: Loenen and Raleigh define the Type IV class as modification-dependent
         restriction enzymes.
+  - subject: ecokmcra_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: ecokmcra_system_trait
+    description: Methyl-coenzyme M reductase I subunit alpha (mcrA, UniProtKB:Q58256)
+      contributes to EcoKMcrA system (associated with bacteriophage, interactions,
+      conjugative).
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: 'SpbK | 10\.1371/journal\.pgen\.1010065 | Interactions between mobile
+        genetic elements: An anti-phage gene in an integrative and conjugative element
+        protects host cells from predation by a temperate bacteriophage'
+      notes: Supports the functional association between Methyl-coenzyme M reductase
+        I subunit alpha (UniProtKB:Q58256 in Methanocaldococcus jannaschii (strain
+        ATCC 43067 / DSM 2661 / JAL-1 / JCM 10045 / NBRC 100440)) and EcoKMcrA system.
 discussions:
 - discussion_id: ecokmcra-defensefinder-model-gap
   prompt: Resolve EcoKMcrA-family breadth, methylcytosine and hydroxymethylcytosine
@@ -214,4 +262,10 @@ curation_history:
     the DefenseFinder EcoKMcrA source key, but not a single stable NCBITaxon strain
     exemplar or accession-level protein example for the organism-level EcoKMcrA system
     trait. No paid research was used.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    ecokmcra_system_protein_component with UniProtKB:Q58256 (mcrA) exemplar.'
   llm_assisted: true

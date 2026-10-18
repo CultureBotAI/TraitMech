@@ -58,6 +58,26 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Enzyme associated with detoxification of superoxide stress.
     grounding: GO:0004784
+    protein_examples:
+    - uniprot_id: UniProtKB:P0AGD3
+      protein_label: Superoxide dismutase [Fe]
+      gene_symbol: sodB
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 140
+      sequence_version: 2
+      role: Exemplar protein (sodB, Superoxide dismutase [Fe]) representing superoxide
+        dismutase in Escherichia coli (strain K12) for aerotolerant.
+      evidence:
+      - reference: PMID:38864615
+        snippet: this bacterium is relatively aerotolerant and survives limited oxygen
+          exposure
+        notes: Supports superoxide dismutase in aerotolerant; UniProtKB:P0AGD3 (sodB,
+          Superoxide dismutase [Fe]) in Escherichia coli (strain K12) provides a verified
+          protein exemplar.
   - node_id: anaerobic_growth
     label: anaerobic growth
     node_type: BIOLOGICAL_PROCESS
@@ -78,21 +98,102 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Enzyme that degrades hydrogen peroxide rapidly at higher concentrations.
     grounding: GO:0004096
+    protein_examples:
+    - uniprot_id: UniProtKB:Q9R708
+      protein_label: Catalase-peroxidase
+      gene_symbol: katG
+      taxon_id: NCBITaxon:358
+      taxon_label: Agrobacterium tumefaciens
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 101
+      sequence_version: 1
+      role: Exemplar protein (katG, Catalase-peroxidase) representing catalase in
+        Agrobacterium tumefaciens for aerotolerant.
+      evidence:
+      - reference: PMID:38864615
+        snippet: this bacterium is relatively aerotolerant and survives limited oxygen
+          exposure
+        notes: Supports catalase in aerotolerant; UniProtKB:Q9R708 (katG, Catalase-peroxidase)
+          in Agrobacterium tumefaciens provides a verified protein exemplar.
   - node_id: rubrerythrin
     label: rubrerythrin
     node_type: GENE_OR_PROTEIN
     description: Non-heme iron protein that scavenges low levels of hydrogen peroxide.
     grounding: InterPro:IPR052364
+    protein_examples:
+    - uniprot_id: UniProtKB:Q49VE0
+      protein_label: Coproheme decarboxylase
+      gene_symbol: chdC
+      taxon_id: NCBITaxon:342451
+      taxon_label: Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
+        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+      entry_status: REVIEWED
+      proteome_id: UP000006371
+      retrieved_on: '2026-10-17'
+      entry_version: 104
+      sequence_version: 1
+      role: Exemplar protein (chdC, Coproheme decarboxylase) representing rubrerythrin
+        in Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC 15305 /
+        DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) for aerotolerant.
+      evidence:
+      - reference: PMID:38864615
+        snippet: this bacterium is relatively aerotolerant and survives limited oxygen
+          exposure
+        notes: Supports rubrerythrin in aerotolerant; UniProtKB:Q49VE0 (chdC, Coproheme
+          decarboxylase) in Staphylococcus saprophyticus subsp. saprophyticus (strain
+          ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) provides a verified
+          protein exemplar.
   - node_id: nadh_peroxidase
     label: NADH peroxidase
     node_type: GENE_OR_PROTEIN
     description: Enzyme reducing hydrogen peroxide to water using NADH.
     grounding: GO:0016692
+    protein_examples:
+    - uniprot_id: UniProtKB:P0ABI8
+      protein_label: Cytochrome bo(3) ubiquinol oxidase subunit 1
+      gene_symbol: cyoB
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 154
+      sequence_version: 1
+      role: Exemplar protein (cyoB, Cytochrome bo(3) ubiquinol oxidase subunit 1)
+        representing NADH peroxidase in Escherichia coli (strain K12) for aerotolerant.
+      evidence:
+      - reference: PMID:38864615
+        snippet: this bacterium is relatively aerotolerant and survives limited oxygen
+          exposure
+        notes: Supports NADH peroxidase in aerotolerant; UniProtKB:P0ABI8 (cyoB, Cytochrome
+          bo(3) ubiquinol oxidase subunit 1) in Escherichia coli (strain K12) provides
+          a verified protein exemplar.
   - node_id: nadph_peroxidase
     label: NADPH peroxidase
     node_type: GENE_OR_PROTEIN
     description: Enzyme reducing hydrogen peroxide to water using NADPH.
     grounding: GO:0050137
+    protein_examples:
+    - uniprot_id: UniProtKB:P0ABI8
+      protein_label: Cytochrome bo(3) ubiquinol oxidase subunit 1
+      gene_symbol: cyoB
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 154
+      sequence_version: 1
+      role: Exemplar protein (cyoB, Cytochrome bo(3) ubiquinol oxidase subunit 1)
+        representing NADPH peroxidase in Escherichia coli (strain K12) for aerotolerant.
+      evidence:
+      - reference: PMID:38864615
+        snippet: this bacterium is relatively aerotolerant and survives limited oxygen
+          exposure
+        notes: Supports NADPH peroxidase in aerotolerant; UniProtKB:P0ABI8 (cyoB,
+          Cytochrome bo(3) ubiquinol oxidase subunit 1) in Escherichia coli (strain
+          K12) provides a verified protein exemplar.
   edges:
   - subject: aerotolerant_trait
     predicate: includes
@@ -275,4 +376,13 @@ curation_history:
     tranche of 2026-08-24/25, which shipped without a per-record event. In this record
     the tranche: set graph scope aerotolerant_anaerobe_ros_defense=NONMECHANISTIC
     with scope_notes.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P0AGD3 (sodB)
+    protein example to node superoxide_dismutase; added UniProtKB:Q9R708 (katG) protein
+    example to node catalase; added UniProtKB:Q49VE0 (chdC) protein example to node
+    rubrerythrin; added UniProtKB:P0ABI8 (cyoB) protein example to node nadh_peroxidase
+    (+1 more).'
   llm_assisted: true

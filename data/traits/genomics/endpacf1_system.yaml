@@ -106,6 +106,38 @@ causal_graphs:
     grounding: traitmech:000209
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
+  - node_id: endpacf1_system_protein_component
+    label: CRISPR-associated nuclease/helicase Cas3
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (CRISPR-associated nuclease/helicase Cas3) associated
+      with ENDPaCF1 system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - cas3
+    protein_examples:
+    - uniprot_id: UniProtKB:F2XG53
+      protein_label: CRISPR-associated nuclease/helicase Cas3
+      gene_symbol: cas3
+      taxon_id: NCBITaxon:1308
+      taxon_label: Streptococcus thermophilus
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 65
+      sequence_version: 1
+      role: Characteristic protein component (cas3, CRISPR-associated nuclease/helicase
+        Cas3) associated with ENDPaCF1 system in Streptococcus thermophilus.
+      evidence:
+      - reference: DOI:10.1101/2025.03.31.646159
+        snippet: Here, we employed the CRISPR-based Cascade-Cas3 system to delete
+          defense islands in a Pseudomonas aeruginosa clinical isolate to identify
+          mechanisms of lytic phage antagonism. Deletion of one island in a cystic
+          fibrosis-derived clinical isolate sensitized the strain to phages from the
+          Pbunavirus family, which are commonly used as therapeutics.
+        notes: Supports CRISPR-associated nuclease/helicase Cas3 in ENDPaCF1 system;
+          UniProtKB:F2XG53 (cas3, CRISPR-associated nuclease/helicase Cas3) in Streptococcus
+          thermophilus provides a verified protein exemplar.
   edges:
   - subject: endpacf1_locus
     predicate: enables
@@ -191,6 +223,21 @@ causal_graphs:
         defense systems targeting multiple hypermodified phage genomes | '
       notes: The pinned DefenseFinder article registry maps the ENDPaCF1 source key
         to the Yee et al. bioRxiv preprint.
+  - subject: endpacf1_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: endpacf1_system_trait
+    description: CRISPR-associated nuclease/helicase Cas3 (cas3, UniProtKB:F2XG53)
+      contributes to ENDPaCF1 system (associated with therapeutics, pseudomonas, aeruginosa).
+    evidence:
+    - reference: DOI:10.1101/2025.03.31.646159
+      snippet: Here, we employed the CRISPR-based Cascade-Cas3 system to delete defense
+        islands in a Pseudomonas aeruginosa clinical isolate to identify mechanisms
+        of lytic phage antagonism. Deletion of one island in a cystic fibrosis-derived
+        clinical isolate sensitized the strain to phages from the Pbunavirus family,
+        which are commonly used as therapeutics.
+      notes: Supports the functional association between CRISPR-associated nuclease/helicase
+        Cas3 (UniProtKB:F2XG53 in Streptococcus thermophilus) and ENDPaCF1 system.
 discussions:
 - discussion_id: endpacf1-host-modification-and-model-gap
   prompt: Resolve ENDPaCF1 Pseudomonas host breadth, complete phage-DNA hypermodification
@@ -274,4 +321,10 @@ curation_history:
     removed the unsupported direct hypermodified-phage-DNA-sensing to modification-dependent-phage-DNA-cleavage
     causal edge, and included the discussions block in the repository CREATE history
     sections.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    endpacf1_system_protein_component with UniProtKB:F2XG53 (cas3) exemplar.'
   llm_assisted: true

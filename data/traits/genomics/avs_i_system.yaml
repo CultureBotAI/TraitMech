@@ -92,6 +92,36 @@ causal_graphs:
     node_type: TRAIT
     grounding: traitmech:000239
     description: Possession of a genome-encoded AVAST phage-defense system.
+  - node_id: avs_i_system_protein_component
+    label: Ferrichrome outer membrane transporter/phage receptor
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Ferrichrome outer membrane transporter/phage receptor)
+      associated with Avs I system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - fhuA
+    protein_examples:
+    - uniprot_id: UniProtKB:P06971
+      protein_label: Ferrichrome outer membrane transporter/phage receptor
+      gene_symbol: fhuA
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 229
+      sequence_version: 2
+      role: Characteristic protein component (fhuA, Ferrichrome outer membrane transporter/phage
+        receptor) associated with Avs I system in Escherichia coli (strain K12).
+      evidence:
+      - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+        snippet: '| SNIPE | 10\.1038/s41586-026-10207-1 | A membrane-bound nuclease
+          directly cleaves phage DNA during genome injection |'
+        notes: Supports Ferrichrome outer membrane transporter/phage receptor in Avs
+          I system; UniProtKB:P06971 (fhuA, Ferrichrome outer membrane transporter/phage
+          receptor) in Escherichia coli (strain K12) provides a verified protein exemplar.
   edges:
   - subject: avs_i_locus
     predicate: contributes to
@@ -160,6 +190,19 @@ causal_graphs:
       snippet: "Avs\tAvs_I\t2\t2\tAvs_I__Avs1A, Avs_I__Avs1B, Avs_I__Avs1C\t\t\t"
       notes: The pinned DefenseFinder rules table models Avs_I as an Avs subsystem
         with Avs1A, Avs1B, and Avs1C profiles.
+  - subject: avs_i_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: avs_i_system_trait
+    description: Ferrichrome outer membrane transporter/phage receptor (fhuA, UniProtKB:P06971)
+      contributes to Avs I system (associated with injection, directly, membrane).
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: '| SNIPE | 10\.1038/s41586-026-10207-1 | A membrane-bound nuclease
+        directly cleaves phage DNA during genome injection |'
+      notes: Supports the functional association between Ferrichrome outer membrane
+        transporter/phage receptor (UniProtKB:P06971 in Escherichia coli (strain K12))
+        and Avs I system.
 discussions:
 - discussion_id: avs-i-component-and-effector-gap
   prompt: Resolve Avs1A, Avs1B, and Avs1C component roles, direct effector chemistry,
@@ -224,4 +267,10 @@ curation_history:
     model namespace and Avs1 phage-protein-recognition activity but not an accession-backed
     native microbial taxon exemplar with experimentally verified endogenous Avs I
     activity. No paid research was used.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    avs_i_system_protein_component with UniProtKB:P06971 (fhuA) exemplar.'
   llm_assisted: true

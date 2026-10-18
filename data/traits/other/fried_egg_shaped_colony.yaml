@@ -25,6 +25,13 @@ curation_history:
     evidence after a repository-wide duplicate review covering ignored and hidden
     files.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph fried_egg_shaped_colony_graph
+    with GENE_OR_PROTEIN node fried_egg_shaped_colony_protein_component and UniProtKB:Q01465
+    exemplar.'
+  llm_assisted: true
 definition_source: http://purl.obolibrary.org/obo/MICRO_0000349
 evidence:
 - reference: DOI:10.1371/journal.pone.0068373
@@ -32,3 +39,64 @@ evidence:
     center surrounded by a large translucent peripheral area.
   notes: Bertin et al. describe the opaque-center, translucent-periphery colony appearance
     that underlies the MICRO-derived fried-egg colony definition.
+causal_graphs:
+- graph_id: fried_egg_shaped_colony_graph
+  title: Protein component associated with fried-egg-shaped colony
+  description: Literature-backed association between Cell shape-determining protein
+    MreB (UniProtKB:Q01465) and fried-egg-shaped colony.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q01465 in Bacillus
+    subtilis (strain 168)) associated with fried-egg-shaped colony while full multi-step
+    mechanistic curation remains future work.
+  nodes:
+  - node_id: fried_egg_shaped_colony_trait
+    label: fried-egg-shaped colony
+    node_type: TRAIT
+    grounding: METPO:1007069
+    description: A colony shape that has a raised opaque centre and a translucent
+      peripheral zone, resembling a fried egg.
+  - node_id: fried_egg_shaped_colony_protein_component
+    label: Cell shape-determining protein MreB
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Cell shape-determining protein MreB) associated
+      with fried-egg-shaped colony.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - mreB
+    protein_examples:
+    - uniprot_id: UniProtKB:Q01465
+      protein_label: Cell shape-determining protein MreB
+      gene_symbol: mreB
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
+      entry_status: REVIEWED
+      proteome_id: UP000001570
+      retrieved_on: '2026-10-17'
+      entry_version: 148
+      sequence_version: 3
+      role: Characteristic protein component (mreB, Cell shape-determining protein
+        MreB) associated with fried-egg-shaped colony in Bacillus subtilis (strain
+        168).
+      evidence:
+      - reference: DOI:10.1371/journal.pone.0068373
+        snippet: TR colonies showed the typical “fried egg” appearance, with a small
+          opaque center surrounded by a large translucent peripheral area.
+        notes: Supports Cell shape-determining protein MreB in fried-egg-shaped colony;
+          UniProtKB:Q01465 (mreB, Cell shape-determining protein MreB) in Bacillus
+          subtilis (strain 168) provides a verified protein exemplar.
+  edges:
+  - subject: fried_egg_shaped_colony_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: fried_egg_shaped_colony_trait
+    description: Cell shape-determining protein MreB (mreB, UniProtKB:Q01465) contributes
+      to fried-egg-shaped colony (associated with translucent, appearance, peripheral).
+    evidence:
+    - reference: DOI:10.1371/journal.pone.0068373
+      snippet: TR colonies showed the typical “fried egg” appearance, with a small
+        opaque center surrounded by a large translucent peripheral area.
+      notes: Supports the functional association between Cell shape-determining protein
+        MreB (UniProtKB:Q01465 in Bacillus subtilis (strain 168)) and fried-egg-shaped
+        colony.

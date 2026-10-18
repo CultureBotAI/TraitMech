@@ -97,7 +97,7 @@ causal_graphs:
       entry_status: UNREVIEWED
       proteome_id: UP000001007
       retrieved_on: '2026-08-24'
-      entry_version: 117
+      entry_version: 118
       sequence_version: 1
       role: Subunit 1 component of the C. tepidum ATP citrate lyase; this accession
         is not presented as the complete AclAB enzyme.
@@ -114,7 +114,7 @@ causal_graphs:
       entry_status: UNREVIEWED
       proteome_id: UP000001007
       retrieved_on: '2026-08-24'
-      entry_version: 117
+      entry_version: 118
       sequence_version: 1
       role: Subunit 2 component of the C. tepidum ATP citrate lyase; this accession
         is not presented as the complete AclAB enzyme.
@@ -133,12 +133,52 @@ causal_graphs:
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: This combined route node intentionally denotes two distinct enzymes;
       a single protein-family grounding would incorrectly collapse CCS and CCL.
+    protein_examples:
+    - uniprot_id: UniProtKB:P29906
+      protein_label: Biotin--[acetyl-CoA-carboxylase] ligase
+      gene_symbol: birA
+      taxon_id: NCBITaxon:266
+      taxon_label: Paracoccus denitrificans
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 94
+      sequence_version: 1
+      role: Exemplar protein (birA, Biotin--[acetyl-CoA-carboxylase] ligase) representing
+        citryl-CoA synthetase/lyase route in Paracoccus denitrificans for reductive
+        tricarboxylic acid cycle.
+      evidence:
+      - reference: DOI:10.1128/AEM.02473-10
+        snippet: 'The 3-hydroxypropionate (Fuchs-Holo) bi-cycle. Enzymes: 1, acetyl-CoA
+          carboxylase'
+        notes: Supports citryl-CoA synthetase/lyase route in reductive tricarboxylic
+          acid cycle; UniProtKB:P29906 (birA, Biotin--[acetyl-CoA-carboxylase] ligase)
+          in Paracoccus denitrificans provides a verified protein exemplar.
   - node_id: pfor
     label: pyruvate:ferredoxin oxidoreductase (PFOR)
     node_type: GENE_OR_PROTEIN
     description: Key rTCA enzyme (EC 1.2.7.1) catalyzing reductive carboxylation of
       acetyl-CoA to pyruvate.
     grounding: GO:0019164
+    protein_examples:
+    - uniprot_id: UniProtKB:Q2RMD6
+      protein_label: Pyruvate:ferredoxin oxidoreductase
+      taxon_id: NCBITaxon:264732
+      taxon_label: Moorella thermoacetica (strain ATCC 39073 / JCM 9320)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 129
+      sequence_version: 1
+      role: Exemplar protein (Q2RMD6, Pyruvate:ferredoxin oxidoreductase) representing
+        pyruvate:ferredoxin oxidoreductase (PFOR) in Moorella thermoacetica (strain
+        ATCC 39073 / JCM 9320) for reductive tricarboxylic acid cycle.
+      evidence:
+      - reference: DOI:10.1128/AEM.02473-10
+        snippet: the second autotrophic CO2 fixation cycle (the reductive citric acid
+          cycle) had been discovered
+        notes: Supports pyruvate:ferredoxin oxidoreductase (PFOR) in reductive tricarboxylic
+          acid cycle; UniProtKB:Q2RMD6 (Q2RMD6, Pyruvate:ferredoxin oxidoreductase)
+          in Moorella thermoacetica (strain ATCC 39073 / JCM 9320) provides a verified
+          protein exemplar.
   - node_id: ogor
     label: 2-oxoglutarate:ferredoxin oxidoreductase (OGOR/KOR)
     node_type: GENE_OR_PROTEIN
@@ -148,6 +188,31 @@ causal_graphs:
     grounding_notes: The node combines OGOR/KOR enzyme forms and two EC assignments,
       often realized by multi-subunit complexes; no single verified family term covers
       that full scope.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q57724
+      protein_label: 2-oxoglutarate synthase subunit KorA
+      gene_symbol: korA
+      taxon_id: NCBITaxon:243232
+      taxon_label: Methanocaldococcus jannaschii (strain ATCC 43067 / DSM 2661 / JAL-1
+        / JCM 10045 / NBRC 100440) (Methanococcus jannaschii)
+      entry_status: REVIEWED
+      proteome_id: UP000000805
+      retrieved_on: '2026-10-17'
+      entry_version: 118
+      sequence_version: 1
+      role: Exemplar protein (korA, 2-oxoglutarate synthase subunit KorA) representing
+        2-oxoglutarate:ferredoxin oxidoreductase (OGOR/KOR) in Methanocaldococcus
+        jannaschii (strain ATCC 43067 / DSM 2661 / JAL-1 / JCM 10045 / NBRC 100440)
+        (Methanococcus jannaschii) for reductive tricarboxylic acid cycle.
+      evidence:
+      - reference: DOI:10.1128/AEM.02473-10
+        snippet: the second autotrophic CO2 fixation cycle (the reductive citric acid
+          cycle) had been discovered
+        notes: Supports 2-oxoglutarate:ferredoxin oxidoreductase (OGOR/KOR) in reductive
+          tricarboxylic acid cycle; UniProtKB:Q57724 (korA, 2-oxoglutarate synthase
+          subunit KorA) in Methanocaldococcus jannaschii (strain ATCC 43067 / DSM
+          2661 / JAL-1 / JCM 10045 / NBRC 100440) (Methanococcus jannaschii) provides
+          a verified protein exemplar.
   - node_id: reduced_ferredoxin
     label: reduced ferredoxin
     node_type: CHEMICAL
@@ -299,4 +364,13 @@ curation_history:
     TCA cycle''. Evidence is predicate-scoped in the versioned ontology snapshots;
     OAK cross-checked direct data, and OLS4 spot-checked release deltas and disputed
     hits.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:Q8KDG1
+    version metadata (entry_version=118, sequence_version=1); refreshed UniProtKB:Q8KDG2
+    version metadata (entry_version=118, sequence_version=1); added UniProtKB:P29906
+    (birA) protein example to node citryl_coa_synthetase_lyase; added UniProtKB:Q2RMD6
+    (Q2RMD6) protein example to node pfor (+1 more).'
   llm_assisted: true

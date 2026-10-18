@@ -69,7 +69,7 @@ causal_graphs:
       taxon_label: Cupriavidus necator H16
       entry_status: REVIEWED
       retrieved_on: '2026-08-24'
-      entry_version: 153
+      entry_version: 154
       sequence_version: 3
       role: Large-chain component of the plasmid-encoded RuBisCO in one of the two
         active CBB operons of C. necator H16.
@@ -112,6 +112,26 @@ causal_graphs:
     description: Carbonic anhydrase within the carboxysome that converts HCO3- to
       CO2 to supply RuBisCO.
     grounding: GO:0004089
+    protein_examples:
+    - uniprot_id: UniProtKB:Q5KW03
+      protein_label: Carbonic anhydrase
+      taxon_id: NCBITaxon:235909
+      taxon_label: Geobacillus kaustophilus (strain HTA426)
+      entry_status: REVIEWED
+      proteome_id: UP000001172
+      retrieved_on: '2026-10-17'
+      entry_version: 114
+      sequence_version: 1
+      role: Exemplar protein (Q5KW03, Carbonic anhydrase) representing carboxysomal
+        carbonic anhydrase in Geobacillus kaustophilus (strain HTA426) for Calvin-Benson-Bassham
+        cycle.
+      evidence:
+      - reference: DOI:10.1128/JB.00442-15
+        snippet: cbb operons that specify enzymes of the Calvin-Bassham-Benson (CBB)
+          pathway
+        notes: Supports carboxysomal carbonic anhydrase in Calvin-Benson-Bassham cycle;
+          UniProtKB:Q5KW03 (Q5KW03, Carbonic anhydrase) in Geobacillus kaustophilus
+          (strain HTA426) provides a verified protein exemplar.
   - node_id: cbbr
     label: CbbR transcriptional regulator
     node_type: GENE_OR_PROTEIN
@@ -121,6 +141,29 @@ causal_graphs:
     grounding_notes: CbbR is a mechanism-specific LysR regulator label; a generic
       LysR-family term would be broader than the protein role supported by the cited
       cbb-operon evidence.
+    protein_examples:
+    - uniprot_id: UniProtKB:P58332
+      protein_label: HTH-type transcriptional regulator CbbR
+      gene_symbol: cbbR
+      taxon_id: NCBITaxon:266834
+      taxon_label: Rhizobium meliloti (strain 1021) (Ensifer meliloti) (Sinorhizobium
+        meliloti)
+      entry_status: REVIEWED
+      proteome_id: UP000001976
+      retrieved_on: '2026-10-17'
+      entry_version: 128
+      sequence_version: 1
+      role: Exemplar protein (cbbR, HTH-type transcriptional regulator CbbR) representing
+        CbbR transcriptional regulator in Rhizobium meliloti (strain 1021) (Ensifer
+        meliloti) (Sinorhizobium meliloti) for Calvin-Benson-Bassham cycle.
+      evidence:
+      - reference: DOI:10.1128/JB.00442-15
+        snippet: cbb operons that specify enzymes of the Calvin-Bassham-Benson (CBB)
+          pathway
+        notes: Supports CbbR transcriptional regulator in Calvin-Benson-Bassham cycle;
+          UniProtKB:P58332 (cbbR, HTH-type transcriptional regulator CbbR) in Rhizobium
+          meliloti (strain 1021) (Ensifer meliloti) (Sinorhizobium meliloti) provides
+          a verified protein exemplar.
   - node_id: cbb_operon
     label: cbb operon transcription
     node_type: BIOLOGICAL_PROCESS
@@ -131,6 +174,26 @@ causal_graphs:
     description: Non-vectorial cytosolic carbonic anhydrase whose activity can dissipate
       the CO2-concentrating mechanism.
     grounding: GO:0004089
+    protein_examples:
+    - uniprot_id: UniProtKB:Q5KW03
+      protein_label: Carbonic anhydrase
+      taxon_id: NCBITaxon:235909
+      taxon_label: Geobacillus kaustophilus (strain HTA426)
+      entry_status: REVIEWED
+      proteome_id: UP000001172
+      retrieved_on: '2026-10-17'
+      entry_version: 114
+      sequence_version: 1
+      role: Exemplar protein (Q5KW03, Carbonic anhydrase) representing cytoplasmic
+        carbonic anhydrase in Geobacillus kaustophilus (strain HTA426) for Calvin-Benson-Bassham
+        cycle.
+      evidence:
+      - reference: DOI:10.1128/JB.00442-15
+        snippet: cbb operons that specify enzymes of the Calvin-Bassham-Benson (CBB)
+          pathway
+        notes: Supports cytoplasmic carbonic anhydrase in Calvin-Benson-Bassham cycle;
+          UniProtKB:Q5KW03 (Q5KW03, Carbonic anhydrase) in Geobacillus kaustophilus
+          (strain HTA426) provides a verified protein exemplar.
   - node_id: co2_leakage
     label: CO2 leakage
     node_type: BIOLOGICAL_PROCESS
@@ -319,4 +382,13 @@ curation_history:
   action: CONNECT_CAUSAL_GRAPH_COMPONENTS
   changes: 'Resolved issue #183 graph fragmentation (3 components to 1) using 2 public-source,
     verbatim-snippet-backed connector(s). No paid research service was called.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:P42721
+    version metadata (entry_version=154, sequence_version=3); added UniProtKB:Q5KW03
+    (Q5KW03) protein example to node carboxysomal_ca; added UniProtKB:P58332 (cbbR)
+    protein example to node cbbr; added UniProtKB:Q5KW03 (Q5KW03) protein example
+    to node cytoplasmic_ca.'
   llm_assisted: true

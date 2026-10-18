@@ -79,12 +79,58 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Light-driven enzyme that directly reverses cyclobutane pyrimidine
       dimers.
+    protein_examples:
+    - uniprot_id: UniProtKB:A9CJC9
+      protein_label: Deoxyribodipyrimidine photo-lyase
+      gene_symbol: phrA
+      taxon_id: NCBITaxon:176299
+      taxon_label: Agrobacterium fabrum (strain C58 / ATCC 33970) (Agrobacterium tumefaciens
+        (strain C58))
+      entry_status: REVIEWED
+      proteome_id: UP000000813
+      retrieved_on: '2026-10-17'
+      entry_version: 89
+      sequence_version: 1
+      role: Exemplar protein (phrA, Deoxyribodipyrimidine photo-lyase) representing
+        CPD photolyase in Agrobacterium fabrum (strain C58 / ATCC 33970) (Agrobacterium
+        tumefaciens (strain C58)) for UV radiation tolerant.
+      evidence:
+      - reference: DOI:10.3390/genes14091803
+        snippet: Deinococcus radiodurans, a Gram-positive extremophilic bacterium,
+          is a remarkable example of such an organism, showcasing an impressive resistance
+          to a wide array of stressors, including ionizing radiation, desiccation,
+          UV radiation, and oxidizing agents
+        notes: Supports CPD photolyase in UV radiation tolerant; UniProtKB:A9CJC9
+          (phrA, Deoxyribodipyrimidine photo-lyase) in Agrobacterium fabrum (strain
+          C58 / ATCC 33970) (Agrobacterium tumefaciens (strain C58)) provides a verified
+          protein exemplar.
   - node_id: catalase
     label: catalase
     node_type: GENE_OR_PROTEIN
     description: Antioxidant enzyme detoxifying reactive oxygen species generated
       by UV.
     grounding: GO:0004096
+    protein_examples:
+    - uniprot_id: UniProtKB:Q9R708
+      protein_label: Catalase-peroxidase
+      gene_symbol: katG
+      taxon_id: NCBITaxon:358
+      taxon_label: Agrobacterium tumefaciens
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 101
+      sequence_version: 1
+      role: Exemplar protein (katG, Catalase-peroxidase) representing catalase in
+        Agrobacterium tumefaciens for UV radiation tolerant.
+      evidence:
+      - reference: DOI:10.3390/genes14091803
+        snippet: Deinococcus radiodurans, a Gram-positive extremophilic bacterium,
+          is a remarkable example of such an organism, showcasing an impressive resistance
+          to a wide array of stressors, including ionizing radiation, desiccation,
+          UV radiation, and oxidizing agents
+        notes: Supports catalase in UV radiation tolerant; UniProtKB:Q9R708 (katG,
+          Catalase-peroxidase) in Agrobacterium tumefaciens provides a verified protein
+          exemplar.
   - node_id: reactive_oxygen_species
     label: reactive oxygen species
     node_type: CHEMICAL
@@ -249,4 +295,11 @@ curation_history:
     the tranche: set graph scope uv_tolerance_excision_repair=NONMECHANISTIC with
     scope_notes; marked 1 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (cpd_photolyase).'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:A9CJC9 (phrA)
+    protein example to node cpd_photolyase; added UniProtKB:Q9R708 (katG) protein
+    example to node catalase.'
   llm_assisted: true

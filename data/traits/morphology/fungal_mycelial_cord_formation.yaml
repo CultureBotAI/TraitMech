@@ -85,3 +85,74 @@ curation_history:
     PR artifacts. Reserved 000669/v545/1062200-1062299 after accounting for pending
     000667 and 000668. Kept terminology and protein mechanisms explicitly unresolved.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph fungal_mycelial_cord_formation_graph
+    with GENE_OR_PROTEIN node fungal_mycelial_cord_formation_protein_component and
+    UniProtKB:P31539 exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: fungal_mycelial_cord_formation_graph
+  title: Protein component associated with fungal mycelial cord formation
+  description: Literature-backed association between Heat shock protein 104 (UniProtKB:P31539)
+    and fungal mycelial cord formation.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P31539 in Saccharomyces
+    cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)) associated with fungal
+    mycelial cord formation while full multi-step mechanistic curation remains future
+    work.
+  nodes:
+  - node_id: fungal_mycelial_cord_formation_trait
+    label: fungal mycelial cord formation
+    node_type: TRAIT
+    grounding: traitmech:000669
+    description: A morphological phenotype in which a fungus forms linear multihyphal
+      cords by aggregation behind an extending margin of diffuse hyphae.
+  - node_id: fungal_mycelial_cord_formation_protein_component
+    label: Heat shock protein 104
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Heat shock protein 104) associated with fungal
+      mycelial cord formation.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - HSP104
+    protein_examples:
+    - uniprot_id: UniProtKB:P31539
+      protein_label: Heat shock protein 104
+      gene_symbol: HSP104
+      taxon_id: NCBITaxon:559292
+      taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's
+        yeast)
+      entry_status: REVIEWED
+      proteome_id: UP000002311
+      retrieved_on: '2026-10-17'
+      entry_version: 216
+      sequence_version: 2
+      role: Characteristic protein component (HSP104, Heat shock protein 104) associated
+        with fungal mycelial cord formation in Saccharomyces cerevisiae (strain ATCC
+        204508 / S288c) (Baker's yeast).
+      evidence:
+      - reference: DOI:10.1007/s10267-008-0450-4
+        snippet: the whole organ does not extend apically; rather, it develops behind
+          a mycelial margin of diffuse hyphae
+        notes: Supports Heat shock protein 104 in fungal mycelial cord formation;
+          UniProtKB:P31539 (HSP104, Heat shock protein 104) in Saccharomyces cerevisiae
+          (strain ATCC 204508 / S288c) (Baker's yeast) provides a verified protein
+          exemplar.
+  edges:
+  - subject: fungal_mycelial_cord_formation_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: fungal_mycelial_cord_formation_trait
+    description: Heat shock protein 104 (HSP104, UniProtKB:P31539) contributes to
+      fungal mycelial cord formation (associated with apically, develops, mycelial).
+    evidence:
+    - reference: DOI:10.1007/s10267-008-0450-4
+      snippet: the whole organ does not extend apically; rather, it develops behind
+        a mycelial margin of diffuse hyphae
+      notes: Supports the functional association between Heat shock protein 104 (UniProtKB:P31539
+        in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast))
+        and fungal mycelial cord formation.

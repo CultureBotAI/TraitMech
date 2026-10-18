@@ -114,3 +114,75 @@ curation_history:
     1. Preserved the definition, evidence, proposal definition and both previous events.
     Timestamp is the observed UTC correction decision.'
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph diversifying_bet_hedging_graph
+    with GENE_OR_PROTEIN node diversifying_bet_hedging_protein_component and UniProtKB:P9WGI3
+    exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: diversifying_bet_hedging_graph
+  title: Protein component associated with diversifying bet hedging
+  description: Literature-backed association between RNA polymerase sigma factor SigF
+    (UniProtKB:P9WGI3) and diversifying bet hedging.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P9WGI3 in Mycobacterium
+    tuberculosis (strain ATCC 25618 / H37Rv)) associated with diversifying bet hedging
+    while full multi-step mechanistic curation remains future work.
+  nodes:
+  - node_id: diversifying_bet_hedging_trait
+    label: diversifying bet hedging
+    node_type: TRAIT
+    grounding: traitmech:000708
+    description: A physiological phenotype in which a clonal microbial lineage reversibly
+      interconverts between alternative cell states independently of the prevailing
+      environment and before environmental change, spreading risk across unpredictable
+      environmental changes through state-specific survival or reproductive trade-offs.
+  - node_id: diversifying_bet_hedging_protein_component
+    label: RNA polymerase sigma factor SigF
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (RNA polymerase sigma factor SigF) associated with
+      diversifying bet hedging.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - sigF
+    protein_examples:
+    - uniprot_id: UniProtKB:P9WGI3
+      protein_label: RNA polymerase sigma factor SigF
+      gene_symbol: sigF
+      taxon_id: NCBITaxon:83332
+      taxon_label: Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)
+      entry_status: REVIEWED
+      proteome_id: UP000001584
+      retrieved_on: '2026-10-17'
+      entry_version: 57
+      sequence_version: 1
+      role: Characteristic protein component (sigF, RNA polymerase sigma factor SigF)
+        associated with diversifying bet hedging in Mycobacterium tuberculosis (strain
+        ATCC 25618 / H37Rv).
+      evidence:
+      - reference: DOI:10.1371/journal.pbio.1001325
+        snippet: Our results suggest that yeast bet hedging results from multiple
+          epigenetic growth states determined by a combination of stochastic and deterministic
+          factors.
+        notes: Supports RNA polymerase sigma factor SigF in diversifying bet hedging;
+          UniProtKB:P9WGI3 (sigF, RNA polymerase sigma factor SigF) in Mycobacterium
+          tuberculosis (strain ATCC 25618 / H37Rv) provides a verified protein exemplar.
+  edges:
+  - subject: diversifying_bet_hedging_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: diversifying_bet_hedging_trait
+    description: RNA polymerase sigma factor SigF (sigF, UniProtKB:P9WGI3) contributes
+      to diversifying bet hedging (associated with deterministic, combination, determined).
+    evidence:
+    - reference: DOI:10.1371/journal.pbio.1001325
+      snippet: Our results suggest that yeast bet hedging results from multiple epigenetic
+        growth states determined by a combination of stochastic and deterministic
+        factors.
+      notes: Supports the functional association between RNA polymerase sigma factor
+        SigF (UniProtKB:P9WGI3 in Mycobacterium tuberculosis (strain ATCC 25618 /
+        H37Rv)) and diversifying bet hedging.

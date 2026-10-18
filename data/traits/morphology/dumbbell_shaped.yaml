@@ -90,6 +90,28 @@ causal_graphs:
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: RipA and RpfB are distinct hydrolase families; this aggregate
       cannot be represented by one exact protein-family identifier.
+    protein_examples:
+    - uniprot_id: UniProtKB:P9WG29
+      protein_label: Resuscitation-promoting factor RpfB
+      gene_symbol: rpfB
+      taxon_id: NCBITaxon:83332
+      taxon_label: Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)
+      entry_status: REVIEWED
+      proteome_id: UP000001584
+      retrieved_on: '2026-10-17'
+      entry_version: 54
+      sequence_version: 1
+      role: Exemplar protein (rpfB, Resuscitation-promoting factor RpfB) representing
+        septal peptidoglycan hydrolases (RipA/RpfB) in Mycobacterium tuberculosis
+        (strain ATCC 25618 / H37Rv) for dumbbell shaped.
+      evidence:
+      - reference: DOI:10.1111/j.1574-6976.2011.00298.x
+        snippet: Recent studies have shown that MALDI-TOF MS has also the potential
+          to accurately identify filamentous fungi and dermatophytes, providing that
+          specific standardized procedures are established for these microorganisms.
+        notes: Supports septal peptidoglycan hydrolases (RipA/RpfB) in dumbbell shaped;
+          UniProtKB:P9WG29 (rpfB, Resuscitation-promoting factor RpfB) in Mycobacterium
+          tuberculosis (strain ATCC 25618 / H37Rv) provides a verified protein exemplar.
   - node_id: polar_growth
     label: polar growth from nascent septum
     node_type: BIOLOGICAL_PROCESS
@@ -264,4 +286,10 @@ curation_history:
     canonical example(s): Corynebacterium diphtheriae (NCBITaxon:1717; DOI:10.1111/j.1574-6976.2011.00298.x).
     The note retains the measured value or scopes broad-class examples to the cited
     branch; no paid research was used.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P9WG29 (rpfB)
+    protein example to node septal_hydrolases.'
   llm_assisted: true

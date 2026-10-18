@@ -112,6 +112,37 @@ causal_graphs:
     node_type: STATE
     description: Community-level soil microbial context spanning oligotrophy, growth
       potential, motility, dormancy/sporulation, and genomic life-history axes.
+  - node_id: soil_dwelling_protein_component
+    label: Stage 0 sporulation protein A
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Stage 0 sporulation protein A) associated with
+      soil-dwelling.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - spo0A
+    protein_examples:
+    - uniprot_id: UniProtKB:P06534
+      protein_label: Stage 0 sporulation protein A
+      gene_symbol: spo0A
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
+      entry_status: REVIEWED
+      proteome_id: UP000001570
+      retrieved_on: '2026-10-17'
+      entry_version: 189
+      sequence_version: 1
+      role: Characteristic protein component (spo0A, Stage 0 sporulation protein A)
+        associated with soil-dwelling in Bacillus subtilis (strain 168).
+      evidence:
+      - reference: DOI:10.1038/s41564-023-01465-0
+        snippet: Random forest analyses show that soil pH, C:N ratio and precipitation
+          patterns together drive the dominant life history strategy of soil bacterial
+          communities and their biogeographic distribution
+        notes: Supports Stage 0 sporulation protein A in soil-dwelling; UniProtKB:P06534
+          (spo0A, Stage 0 sporulation protein A) in Bacillus subtilis (strain 168)
+          provides a verified protein exemplar.
   edges:
   - subject: soil_dwelling_trait
     predicate: contributes to
@@ -275,6 +306,18 @@ causal_graphs:
       notes: Verified against the Fierer review; the claim is habitat-level and does
         not assert a universal molecular mechanism for all soil microbes.
     predicate_id: biolink:associated_with
+  - subject: soil_dwelling_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: soil_dwelling_trait
+    description: Stage 0 sporulation protein A (spo0A, UniProtKB:P06534) contributes
+      to soil-dwelling (associated with sequestration, maintenance, fertility).
+    evidence:
+    - reference: DOI:10.1038/nrmicro.2017.87
+      snippet: crucial roles in nutrient cycling, the maintenance of soil fertility
+        and soil carbon sequestration
+      notes: Supports the functional association between Stage 0 sporulation protein
+        A (UniProtKB:P06534 in Bacillus subtilis (strain 168)) and soil-dwelling.
 curation_history:
 - timestamp: '2026-06-02T00:00:00Z'
   curator: claude
@@ -370,4 +413,10 @@ curation_history:
   changes: 'Addressed PR #664 adversarial review issue #696: weakened the soil-habitat
     connector to an ecological association and requoted it with exact Fierer soil-diversity
     support.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    soil_dwelling_protein_component with UniProtKB:P06534 (spo0A) exemplar.'
   llm_assisted: true

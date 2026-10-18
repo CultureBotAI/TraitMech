@@ -66,6 +66,28 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Transmembrane chemoreceptor that senses root exudate compounds and
       initiates chemotactic signaling.
+    protein_examples:
+    - uniprot_id: UniProtKB:P07330
+      protein_label: Protein-glutamate methylesterase/protein-glutamine glutaminase
+      gene_symbol: cheB
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 189
+      sequence_version: 3
+      role: Exemplar protein (cheB, Protein-glutamate methylesterase/protein-glutamine
+        glutaminase) representing methyl-accepting chemotaxis protein (MCP) in Escherichia
+        coli (strain K12) for rhizosphere association.
+      evidence:
+      - reference: DOI:10.1038/nrmicro.2017.87
+        snippet: crucial roles in nutrient cycling, the maintenance of soil fertility
+          and soil carbon sequestration
+        notes: Supports methyl-accepting chemotaxis protein (MCP) in rhizosphere association;
+          UniProtKB:P07330 (cheB, Protein-glutamate methylesterase/protein-glutamine
+          glutaminase) in Escherichia coli (strain K12) provides a verified protein
+          exemplar.
   - node_id: che_signaling
     label: CheA/CheW/CheY chemotaxis signaling
     node_type: PATHWAY
@@ -207,4 +229,10 @@ curation_history:
     tranche of 2026-08-24/25, which shipped without a per-record event. In this record
     the tranche: set graph scope rhizosphere_root_exudate=NONMECHANISTIC with scope_notes;
     marked 1 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (mcp_chemoreceptor).'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P07330 (cheB)
+    protein example to node mcp_chemoreceptor.'
   llm_assisted: true

@@ -112,6 +112,37 @@ causal_graphs:
     grounding: traitmech:000213
     description: Possession of a genome-encoded phosphorothioate-based phage defense
       system.
+  - node_id: dnd_system_protein_component
+    label: Putative DNA relaxase NicK
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Putative DNA relaxase NicK) associated with Dnd
+      system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - nicK
+    protein_examples:
+    - uniprot_id: UniProtKB:P96635
+      protein_label: Putative DNA relaxase NicK
+      gene_symbol: nicK
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
+      entry_status: REVIEWED
+      proteome_id: UP000001570
+      retrieved_on: '2026-10-17'
+      entry_version: 113
+      sequence_version: 1
+      role: Characteristic protein component (nicK, Putative DNA relaxase NicK) associated
+        with Dnd system in Bacillus subtilis (strain 168).
+      evidence:
+      - reference: DOI:10.1038/s41564-020-0700-6
+        snippet: We previously identified the Dnd system, which uses DndABCDE to insert
+          sulfur into the DNA backbone as a double-stranded phosphorothioate (PT)
+          modification, and DndFGH, a restriction component
+        notes: Supports Putative DNA relaxase NicK in Dnd system; UniProtKB:P96635
+          (nicK, Putative DNA relaxase NicK) in Bacillus subtilis (strain 168) provides
+          a verified protein exemplar.
   edges:
   - subject: dnd_restriction_modification_locus
     predicate: contributes to
@@ -195,6 +226,20 @@ causal_graphs:
         and DndFGH, a restriction component
       notes: Xiong et al. place Dnd within phosphorothioation-dependent restriction
         systems.
+  - subject: dnd_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: dnd_system_trait
+    description: Putative DNA relaxase NicK (nicK, UniProtKB:P96635) contributes to
+      Dnd system (associated with conformational, macromolecular, translocation).
+    evidence:
+    - reference: DOI:10.1128/mbio.00933-23
+      snippet: In the presence of exogenous DNA that lacks PT, the macromolecular
+        machine consisting of DndF, DndG, and DndH undergoes conformational changes
+        to perform DNA binding, translocation, and DNA nicking activities and scavenge
+        the foreign DNA
+      notes: Supports the functional association between Putative DNA relaxase NicK
+        (UniProtKB:P96635 in Bacillus subtilis (strain 168)) and Dnd system.
 curation_history:
 - timestamp: '2026-09-15T16:03:58Z'
   curator: codex
@@ -203,4 +248,10 @@ curation_history:
     defense system parent after an ignored-and-hidden duplicate review found no exact
     live TraitMech, METPO, or prior proposal record; the replacement placeholder is
     reserved in proposals/metpo_traitmech_v98.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    dnd_system_protein_component with UniProtKB:P96635 (nicK) exemplar.'
   llm_assisted: true

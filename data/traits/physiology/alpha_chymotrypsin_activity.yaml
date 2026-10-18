@@ -71,3 +71,83 @@ curation_history:
     organismal phenotype instead of over-specifying production of the named vertebrate
     enzyme (#820).
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph alpha_chymotrypsin_activity_graph
+    with GENE_OR_PROTEIN node alpha_chymotrypsin_activity_protein_component and UniProtKB:P0ABD5
+    exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: alpha_chymotrypsin_activity_graph
+  title: Protein component associated with alpha-chymotrypsin activity
+  description: Literature-backed association between Acetyl-coenzyme A carboxylase
+    carboxyl transferase subunit alpha (UniProtKB:P0ABD5) and alpha-chymotrypsin activity.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P0ABD5 in Escherichia
+    coli (strain K12)) associated with alpha-chymotrypsin activity while full multi-step
+    mechanistic curation remains future work.
+  nodes:
+  - node_id: alpha_chymotrypsin_activity_trait
+    label: alpha-chymotrypsin activity
+    node_type: TRAIT
+    grounding: traitmech:000159
+    description: A physiological enzyme-activity phenotype in which a cell exhibits
+      chymotrypsin-like serine endopeptidase activity, preferentially cleaving peptide
+      bonds on the carboxyl side of tyrosine, tryptophan, phenylalanine, or leucine
+      residues.
+  - node_id: alpha_chymotrypsin_activity_protein_component
+    label: Acetyl-coenzyme A carboxylase carboxyl transferase subunit alpha
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Acetyl-coenzyme A carboxylase carboxyl transferase
+      subunit alpha) associated with alpha-chymotrypsin activity.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - accA
+    protein_examples:
+    - uniprot_id: UniProtKB:P0ABD5
+      protein_label: Acetyl-coenzyme A carboxylase carboxyl transferase subunit alpha
+      gene_symbol: accA
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 162
+      sequence_version: 2
+      role: Characteristic protein component (accA, Acetyl-coenzyme A carboxylase
+        carboxyl transferase subunit alpha) associated with alpha-chymotrypsin activity
+        in Escherichia coli (strain K12).
+      evidence:
+      - reference: DOI:10.1099/ijsem.0.006017
+        snippet: 'enzymatic activities are present for: α-galactosidase, N-acetyl-β-glucosaminidase,
+          arginine arylamidase, proline arylamidase, leucyl glycine arylamidase, phenylalanine
+          arylamidase, leucine arylamidase, tyrosine arylamidase, alanine arylamidase,
+          glycine arylamidase, histidine arylamidase, glutamyl glutamic acid arylamidase,
+          serine arylamidase, valine arylamidase, cysteine arylamidase, esterase,
+          esterase lipase, alpha-chymotrypsin'
+        notes: Supports Acetyl-coenzyme A carboxylase carboxyl transferase subunit
+          alpha in alpha-chymotrypsin activity; UniProtKB:P0ABD5 (accA, Acetyl-coenzyme
+          A carboxylase carboxyl transferase subunit alpha) in Escherichia coli (strain
+          K12) provides a verified protein exemplar.
+  edges:
+  - subject: alpha_chymotrypsin_activity_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: alpha_chymotrypsin_activity_trait
+    description: Acetyl-coenzyme A carboxylase carboxyl transferase subunit alpha
+      (accA, UniProtKB:P0ABD5) contributes to alpha-chymotrypsin activity (associated
+      with glucosaminidase, galactosidase, phenylalanine).
+    evidence:
+    - reference: DOI:10.1099/ijsem.0.006017
+      snippet: 'enzymatic activities are present for: α-galactosidase, N-acetyl-β-glucosaminidase,
+        arginine arylamidase, proline arylamidase, leucyl glycine arylamidase, phenylalanine
+        arylamidase, leucine arylamidase, tyrosine arylamidase, alanine arylamidase,
+        glycine arylamidase, histidine arylamidase, glutamyl glutamic acid arylamidase,
+        serine arylamidase, valine arylamidase, cysteine arylamidase, esterase, esterase
+        lipase, alpha-chymotrypsin'
+      notes: Supports the functional association between Acetyl-coenzyme A carboxylase
+        carboxyl transferase subunit alpha (UniProtKB:P0ABD5 in Escherichia coli (strain
+        K12)) and alpha-chymotrypsin activity.

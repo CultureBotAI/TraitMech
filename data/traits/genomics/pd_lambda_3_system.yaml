@@ -103,6 +103,36 @@ causal_graphs:
     grounding: traitmech:000209
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
+  - node_id: pd_lambda_3_system_protein_component
+    label: Maltoporin
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Maltoporin) associated with PD-Lambda-3 system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - lamB
+    protein_examples:
+    - uniprot_id: UniProtKB:P02943
+      protein_label: Maltoporin
+      gene_symbol: lamB
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 221
+      sequence_version: 1
+      role: Characteristic protein component (lamB, Maltoporin) associated with PD-Lambda-3
+        system in Escherichia coli (strain K12).
+      evidence:
+      - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-lambda-3.md
+        snippet: The PD-Lambda-3 system in *Enterobacter sp. CRENT-193* (GCF_002787395.1,
+          NZ_CP024812) is composed of 2 proteins PD-Lambda-3_A (WP_001542736.1) PD-Lambda-3_B
+          (WP_039268887.1)
+        notes: Supports Maltoporin in PD-Lambda-3 system; UniProtKB:P02943 (lamB,
+          Maltoporin) in Escherichia coli (strain K12) provides a verified protein
+          exemplar.
   edges:
   - subject: pd_lambda_3_locus
     predicate: contributes to
@@ -184,6 +214,19 @@ causal_graphs:
         \t\t"
       notes: The DefenseFinder rules table models PD-Lambda-3 as a two-profile system
         requiring PD-Lambda-3__PD-Lambda-3_A and PD-Lambda-3__PD-Lambda-3_B.
+  - subject: pd_lambda_3_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: pd_lambda_3_system_trait
+    description: Maltoporin (lamB, UniProtKB:P02943) contributes to PD-Lambda-3 system
+      (associated with enterobacter, composed, cp024812).
+    evidence:
+    - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-lambda-3.md
+      snippet: The PD-Lambda-3 system in *Enterobacter sp. CRENT-193* (GCF_002787395.1,
+        NZ_CP024812) is composed of 2 proteins PD-Lambda-3_A (WP_001542736.1) PD-Lambda-3_B
+        (WP_039268887.1)
+      notes: Supports the functional association between Maltoporin (UniProtKB:P02943
+        in Escherichia coli (strain K12)) and PD-Lambda-3 system.
 discussions:
 - discussion_id: pd-lambda-3-mechanism-gap
   prompt: Resolve PD-Lambda-3 natural host breadth, direct phage trigger, effector
@@ -256,4 +299,10 @@ curation_history:
     graph, a DefenseFinder system model, and a RefSeq Enterobacter sp. example, but
     not a direct native microbial isolate exemplar with experimentally verified endogenous
     PD-Lambda-3 activity. No paid research was used.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    pd_lambda_3_system_protein_component with UniProtKB:P02943 (lamB) exemplar.'
   llm_assisted: true

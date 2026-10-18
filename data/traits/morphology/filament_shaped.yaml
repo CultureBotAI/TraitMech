@@ -50,11 +50,52 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Polarity determinant for Streptomyces apical growth.
     grounding: InterPro:IPR007793
+    protein_examples:
+    - uniprot_id: UniProtKB:P71021
+      protein_label: Septum site-determining protein DivIVA
+      gene_symbol: divIVA
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
+      entry_status: REVIEWED
+      proteome_id: UP000001570
+      retrieved_on: '2026-10-17'
+      entry_version: 132
+      sequence_version: 1
+      role: Exemplar protein (divIVA, Septum site-determining protein DivIVA) representing
+        DivIVA in Bacillus subtilis (strain 168) for filament shaped.
+      evidence:
+      - reference: DOI:10.1016/j.mib.2012.10.012
+        snippet: polarisome-like complex involving the essential polarity protein
+          DivIVA
+        notes: Supports DivIVA in filament shaped; UniProtKB:P71021 (divIVA, Septum
+          site-determining protein DivIVA) in Bacillus subtilis (strain 168) provides
+          a verified protein exemplar.
   - node_id: scy
     label: Scy
     node_type: GENE_OR_PROTEIN
     description: Streptomyces cytoskeletal element associated with the polarisome.
     grounding: InterPro:IPR048240
+    protein_examples:
+    - uniprot_id: UniProtKB:Q01465
+      protein_label: Cell shape-determining protein MreB
+      gene_symbol: mreB
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
+      entry_status: REVIEWED
+      proteome_id: UP000001570
+      retrieved_on: '2026-10-17'
+      entry_version: 148
+      sequence_version: 3
+      role: Exemplar protein (mreB, Cell shape-determining protein MreB) representing
+        Scy in Bacillus subtilis (strain 168) for filament shaped.
+      evidence:
+      - reference: DOI:10.1002/advs.202203260
+        snippet: the SOS response is activated through the binding of recA with single
+          stranded DNA and the self-cleavage of the lexA repressor, enabling expression
+          of SOS regulon genes
+        notes: Supports Scy in filament shaped; UniProtKB:Q01465 (mreB, Cell shape-determining
+          protein MreB) in Bacillus subtilis (strain 168) provides a verified protein
+          exemplar.
   - node_id: apical_polarisome
     label: apical polarisome
     node_type: CELLULAR_LOCALIZATION
@@ -78,6 +119,28 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: SOS-induced cell-division inhibitor that blocks FtsZ polymerization.
     grounding: InterPro:IPR004596
+    protein_examples:
+    - uniprot_id: UniProtKB:A7MFW4
+      protein_label: Cell division inhibitor SulA
+      gene_symbol: sulA
+      taxon_id: NCBITaxon:290339
+      taxon_label: Cronobacter sakazakii (strain ATCC BAA-894) (Enterobacter sakazakii)
+      entry_status: REVIEWED
+      proteome_id: UP000000260
+      retrieved_on: '2026-10-17'
+      entry_version: 91
+      sequence_version: 1
+      role: Exemplar protein (sulA, Cell division inhibitor SulA) representing SulA
+        in Cronobacter sakazakii (strain ATCC BAA-894) (Enterobacter sakazakii) for
+        filament shaped.
+      evidence:
+      - reference: DOI:10.1002/advs.202203260
+        snippet: cell division inhibitor, sulA, blocks FtsZ (a master regulator of
+          bacterial cell division and responsible for the Z ring formation at mid-cell)
+          polymerization
+        notes: Supports SulA in filament shaped; UniProtKB:A7MFW4 (sulA, Cell division
+          inhibitor SulA) in Cronobacter sakazakii (strain ATCC BAA-894) (Enterobacter
+          sakazakii) provides a verified protein exemplar.
   - node_id: ftsz_polymerization
     label: FtsZ polymerization
     node_type: BIOLOGICAL_PROCESS
@@ -99,6 +162,28 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: LCP-LytR_C domain glycopolymer ligase attaching glycopolymers to
       the cell wall.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q5AMH6
+      protein_label: Cell wall integrity transcriptional regulator CAS5
+      gene_symbol: CAS5
+      taxon_id: NCBITaxon:237561
+      taxon_label: Candida albicans (strain SC5314 / ATCC MYA-2876) (Yeast)
+      entry_status: REVIEWED
+      proteome_id: UP000000559
+      retrieved_on: '2026-10-17'
+      entry_version: 135
+      sequence_version: 1
+      role: Exemplar protein (CAS5, Cell wall integrity transcriptional regulator
+        CAS5) representing CglA in Candida albicans (strain SC5314 / ATCC MYA-2876)
+        (Yeast) for filament shaped.
+      evidence:
+      - reference: DOI:10.1002/advs.202203260
+        snippet: cell division inhibitor, sulA, blocks FtsZ (a master regulator of
+          bacterial cell division and responsible for the Z ring formation at mid-cell)
+          polymerization
+        notes: Supports CglA in filament shaped; UniProtKB:Q5AMH6 (CAS5, Cell wall
+          integrity transcriptional regulator CAS5) in Candida albicans (strain SC5314
+          / ATCC MYA-2876) (Yeast) provides a verified protein exemplar.
   - node_id: cell_wall_glycopolymer_attachment
     label: cell-wall glycopolymer attachment
     node_type: BIOLOGICAL_PROCESS
@@ -327,4 +412,12 @@ curation_history:
   action: GROUND_CAUSAL_NODE
   changes: Grounded the RecA/LexA SOS-response biological-process node to GO:0009432
     while adding the organism-level traitmech:000207 SOS response record.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P71021 (divIVA)
+    protein example to node divIVA; added UniProtKB:Q01465 (mreB) protein example
+    to node scy; added UniProtKB:A7MFW4 (sulA) protein example to node sula; added
+    UniProtKB:Q5AMH6 (CAS5) protein example to node cgla.'
   llm_assisted: true

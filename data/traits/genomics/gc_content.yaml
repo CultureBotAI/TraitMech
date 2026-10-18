@@ -102,6 +102,36 @@ causal_graphs:
     description: Error-prone DNA synthesis past lesions by specialized polymerases,
       causally linked to increased genomic GC.
     grounding: GO:0042276
+  - node_id: gc_content_protein_component
+    label: Chromosomal replication initiator protein DnaA
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Chromosomal replication initiator protein DnaA)
+      associated with GC content.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - dnaA
+    protein_examples:
+    - uniprot_id: UniProtKB:P05648
+      protein_label: Chromosomal replication initiator protein DnaA
+      gene_symbol: dnaA
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
+      entry_status: REVIEWED
+      proteome_id: UP000001570
+      retrieved_on: '2026-10-17'
+      entry_version: 178
+      sequence_version: 1
+      role: Characteristic protein component (dnaA, Chromosomal replication initiator
+        protein DnaA) associated with GC content in Bacillus subtilis (strain 168).
+      evidence:
+      - reference: DOI:10.1128/spectrum.02145-22
+        snippet: ancient adaptations transformed the DRR system, producing mutational
+          biases that shaped GC-content evolution
+        notes: Supports Chromosomal replication initiator protein DnaA in GC content;
+          UniProtKB:P05648 (dnaA, Chromosomal replication initiator protein DnaA)
+          in Bacillus subtilis (strain 168) provides a verified protein exemplar.
   edges:
   - subject: genomic_dna
     predicate: carries
@@ -226,6 +256,17 @@ causal_graphs:
       notes: Direction explicit in comparative study; complements existing mutation-bias
         drivers.
     predicate_id: RO:0002213
+  - subject: gc_content_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: gc_content_trait
+    description: Chromosomal replication initiator protein DnaA (dnaA, UniProtKB:P05648)
+      contributes to GC content (associated with escherichia, coli).
+    evidence:
+    - reference: PMID:9278503
+      snippet: Escherichia coli K-12
+      notes: Supports the functional association between Chromosomal replication initiator
+        protein DnaA (UniProtKB:P05648 in Bacillus subtilis (strain 168)) and GC content.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.811180+00:00'
   curator: seed_from_metpo
@@ -290,4 +331,10 @@ curation_history:
     canonical example(s): Escherichia coli (NCBITaxon:562; PMID:9278503). The note
     retains the measured value or scopes broad-class examples to the cited branch;
     no paid research was used.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    gc_content_protein_component with UniProtKB:P05648 (dnaA) exemplar.'
   llm_assisted: true

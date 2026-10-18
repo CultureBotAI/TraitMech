@@ -61,6 +61,28 @@ causal_graphs:
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: A competence pilus is a multisubunit assembly whose major and
       minor pilins differ among taxa; the graph does not designate one component.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q9JVW4
+      protein_label: Type IV pilus biogenesis and competence protein PilQ
+      gene_symbol: pilQ
+      taxon_id: NCBITaxon:122587
+      taxon_label: Neisseria meningitidis serogroup A / serotype 4A (strain DSM 15465
+        / Z2491)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 113
+      sequence_version: 1
+      role: Exemplar protein (pilQ, Type IV pilus biogenesis and competence protein
+        PilQ) representing type IV competence pilus in Neisseria meningitidis serogroup
+        A / serotype 4A (strain DSM 15465 / Z2491) for natural competence.
+      evidence:
+      - reference: DOI:10.1038/s41564-018-0174-y
+        snippet: retraction of DNA-bound type IV competence pili initiates the process
+          of DNA uptake
+        notes: Supports type IV competence pilus in natural competence; UniProtKB:Q9JVW4
+          (pilQ, Type IV pilus biogenesis and competence protein PilQ) in Neisseria
+          meningitidis serogroup A / serotype 4A (strain DSM 15465 / Z2491) provides
+          a verified protein exemplar.
   - node_id: pilus_retraction
     label: competence pilus retraction
     node_type: BIOLOGICAL_PROCESS
@@ -75,6 +97,26 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Inner-membrane channel required for DNA uptake into the cytoplasm.
     grounding: InterPro:IPR052159
+    protein_examples:
+    - uniprot_id: UniProtKB:P39695
+      protein_label: ComE operon protein 3
+      gene_symbol: comEC
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
+      entry_status: REVIEWED
+      proteome_id: UP000001570
+      retrieved_on: '2026-10-17'
+      entry_version: 148
+      sequence_version: 2
+      role: Exemplar protein (comEC, ComE operon protein 3) representing ComEC in
+        Bacillus subtilis (strain 168) for natural competence.
+      evidence:
+      - reference: DOI:10.1038/s41564-018-0174-y
+        snippet: retraction of DNA-bound type IV competence pili initiates the process
+          of DNA uptake
+        notes: Supports ComEC in natural competence; UniProtKB:P39695 (comEC, ComE
+          operon protein 3) in Bacillus subtilis (strain 168) provides a verified
+          protein exemplar.
   - node_id: comea
     label: ComEA
     node_type: GENE_OR_PROTEIN
@@ -84,6 +126,26 @@ causal_graphs:
     grounding_notes: ComEA proteins have lineage-dependent domain architectures; the
       available helix-hairpin-helix term denotes only a shared DNA-binding motif,
       not the complete competence receptor.
+    protein_examples:
+    - uniprot_id: UniProtKB:P39694
+      protein_label: ComE operon protein 1
+      gene_symbol: comEA
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
+      entry_status: REVIEWED
+      proteome_id: UP000001570
+      retrieved_on: '2026-10-17'
+      entry_version: 147
+      sequence_version: 1
+      role: Exemplar protein (comEA, ComE operon protein 1) representing ComEA in
+        Bacillus subtilis (strain 168) for natural competence.
+      evidence:
+      - reference: DOI:10.1038/s41564-018-0174-y
+        snippet: retraction of DNA-bound type IV competence pili initiates the process
+          of DNA uptake
+        notes: Supports ComEA in natural competence; UniProtKB:P39694 (comEA, ComE
+          operon protein 1) in Bacillus subtilis (strain 168) provides a verified
+          protein exemplar.
   - node_id: periplasm
     label: periplasm
     node_type: CELLULAR_LOCALIZATION
@@ -98,6 +160,26 @@ causal_graphs:
     grounding_notes: The graph identifies the functional DprA ortholog class, but
       no exact current InterPro or GO term for the complete taxon-agnostic protein
       was verified during this review.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q8DPI7
+      protein_label: DNA processing protein DprA
+      gene_symbol: dprA
+      taxon_id: NCBITaxon:171101
+      taxon_label: Streptococcus pneumoniae (strain ATCC BAA-255 / R6)
+      entry_status: REVIEWED
+      proteome_id: UP000000586
+      retrieved_on: '2026-10-17'
+      entry_version: 104
+      sequence_version: 2
+      role: Exemplar protein (dprA, DNA processing protein DprA) representing DprA
+        in Streptococcus pneumoniae (strain ATCC BAA-255 / R6) for natural competence.
+      evidence:
+      - reference: DOI:10.1038/s41564-018-0174-y
+        snippet: retraction of DNA-bound type IV competence pili initiates the process
+          of DNA uptake
+        notes: Supports DprA in natural competence; UniProtKB:Q8DPI7 (dprA, DNA processing
+          protein DprA) in Streptococcus pneumoniae (strain ATCC BAA-255 / R6) provides
+          a verified protein exemplar.
   - node_id: reca
     label: RecA
     node_type: GENE_OR_PROTEIN
@@ -113,7 +195,7 @@ causal_graphs:
       entry_status: REVIEWED
       proteome_id: UP000000586
       retrieved_on: '2026-08-24'
-      entry_version: 116
+      entry_version: 117
       sequence_version: 1
       role: Competence-induced RecA protects transforming single-stranded DNA and
         catalyzes its homologous integration in pneumococcal strain R6.
@@ -294,4 +376,13 @@ curation_history:
   action: CONNECT_CAUSAL_GRAPH_COMPONENTS
   changes: 'Resolved issue #183 graph fragmentation (4 components to 1) with 3 public-source,
     verbatim-snippet-backed connector(s). No paid research service was called.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:P0A452
+    version metadata (entry_version=117, sequence_version=1); added UniProtKB:Q9JVW4
+    (pilQ) protein example to node competence_pilus; added UniProtKB:P39695 (comEC)
+    protein example to node comec; added UniProtKB:P39694 (comEA) protein example
+    to node comea (+1 more).'
   llm_assisted: true

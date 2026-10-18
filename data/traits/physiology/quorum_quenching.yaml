@@ -92,3 +92,71 @@ curation_history:
     mappings, canonical taxa and source-specific mechanisms remain open. Timestamp
     records the observed UTC curation decision.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph quorum_quenching_graph
+    with GENE_OR_PROTEIN node quorum_quenching_protein_component and UniProtKB:G2JHL6
+    exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: quorum_quenching_graph
+  title: Protein component associated with quorum quenching
+  description: Literature-backed association between Quorum-quenching protein AidA
+    (UniProtKB:G2JHL6) and quorum quenching.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:G2JHL6 in Acinetobacter
+    baumannii (strain MDR-ZJ06)) associated with quorum quenching while full multi-step
+    mechanistic curation remains future work.
+  nodes:
+  - node_id: quorum_quenching_trait
+    label: quorum quenching
+    node_type: TRAIT
+    grounding: traitmech:000694
+    description: A physiological capability of a microorganism to interfere with quorum-sensing
+      communication.
+  - node_id: quorum_quenching_protein_component
+    label: Quorum-quenching protein AidA
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Quorum-quenching protein AidA) associated with
+      quorum quenching.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - aidA
+    protein_examples:
+    - uniprot_id: UniProtKB:G2JHL6
+      protein_label: Quorum-quenching protein AidA
+      gene_symbol: aidA
+      taxon_id: NCBITaxon:497978
+      taxon_label: Acinetobacter baumannii (strain MDR-ZJ06)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 56
+      sequence_version: 1
+      role: Characteristic protein component (aidA, Quorum-quenching protein AidA)
+        associated with quorum quenching in Acinetobacter baumannii (strain MDR-ZJ06).
+      evidence:
+      - reference: DOI:10.1126/scitranslmed.aat8329
+        snippet: clinical isolates of different coagulase-negative staphylococci (CoNS)
+          species residing on normal skin produced autoinducing peptides that inhibited
+          the S. aureus agr system
+        notes: Supports Quorum-quenching protein AidA in quorum quenching; UniProtKB:G2JHL6
+          (aidA, Quorum-quenching protein AidA) in Acinetobacter baumannii (strain
+          MDR-ZJ06) provides a verified protein exemplar.
+  edges:
+  - subject: quorum_quenching_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: quorum_quenching_trait
+    description: Quorum-quenching protein AidA (aidA, UniProtKB:G2JHL6) contributes
+      to quorum quenching (associated with staphylococci, autoinducing, coagulase).
+    evidence:
+    - reference: DOI:10.1126/scitranslmed.aat8329
+      snippet: clinical isolates of different coagulase-negative staphylococci (CoNS)
+        species residing on normal skin produced autoinducing peptides that inhibited
+        the S. aureus agr system
+      notes: Supports the functional association between Quorum-quenching protein
+        AidA (UniProtKB:G2JHL6 in Acinetobacter baumannii (strain MDR-ZJ06)) and quorum
+        quenching.

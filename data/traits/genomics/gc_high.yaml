@@ -86,6 +86,33 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Selection and GC-biased gene conversion that counteract AT mutation
       bias and resist GC decline.
+  - node_id: gc_high_protein_component
+    label: Endonuclease 8
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Endonuclease 8) associated with GC high.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - nei
+    protein_examples:
+    - uniprot_id: UniProtKB:B5BC82
+      protein_label: Endonuclease 8
+      gene_symbol: nei
+      taxon_id: NCBITaxon:554290
+      taxon_label: Salmonella paratyphi A (strain AKU_12601)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 89
+      sequence_version: 1
+      role: Characteristic protein component (nei, Endonuclease 8) associated with
+        GC high in Salmonella paratyphi A (strain AKU_12601).
+      evidence:
+      - reference: DOI:10.1186/1471-2148-10-374
+        snippet: GC-biased gene conversion
+        notes: Supports Endonuclease 8 in GC high; UniProtKB:B5BC82 (nei, Endonuclease
+          8) in Salmonella paratyphi A (strain AKU_12601) provides a verified protein
+          exemplar.
   edges:
   - subject: at_mutation_bias
     predicate: confers
@@ -172,6 +199,17 @@ causal_graphs:
     - reference: DOI:10.63635/mrj.v1i4.188
       notes: Purifying selection and biased gene conversion can counteract AT bias
         (pages 3-5).
+  - subject: gc_high_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: gc_high_trait
+    description: Endonuclease 8 (nei, UniProtKB:B5BC82) contributes to GC high (associated
+      with conversion, biased, gc).
+    evidence:
+    - reference: DOI:10.1186/1471-2148-10-374
+      snippet: GC-biased gene conversion
+      notes: Supports the functional association between Endonuclease 8 (UniProtKB:B5BC82
+        in Salmonella paratyphi A (strain AKU_12601)) and GC high.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.818260+00:00'
   curator: seed_from_metpo
@@ -230,4 +268,10 @@ curation_history:
     canonical example(s): Mycoplasmoides genitalium G37 (NCBITaxon:243273; DOI:10.1126/science.270.5235.397).
     The note retains the measured value or scopes broad-class examples to the cited
     branch; no paid research was used.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    gc_high_protein_component with UniProtKB:B5BC82 (nei) exemplar.'
   llm_assisted: true

@@ -58,6 +58,25 @@ causal_graphs:
     - phzF
     - phzG
     operon: phzA-G
+    protein_examples:
+    - uniprot_id: UniProtKB:Q51787
+      protein_label: Phenazine biosynthesis protein PhzA
+      gene_symbol: phzA
+      taxon_id: NCBITaxon:294
+      taxon_label: Pseudomonas fluorescens
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 63
+      sequence_version: 1
+      role: Exemplar protein (phzA, Phenazine biosynthesis protein PhzA) representing
+        PhzA-G phenazine-biosynthesis enzyme modules in Pseudomonas fluorescens for
+        green pigmented.
+      evidence:
+      - reference: DOI:10.1186/s12934-023-02122-1
+        snippet: phenazine synthesis operons including phzA1, phzA2, phzS, and phzM
+        notes: Supports PhzA-G phenazine-biosynthesis enzyme modules in green pigmented;
+          UniProtKB:Q51787 (phzA, Phenazine biosynthesis protein PhzA) in Pseudomonas
+          fluorescens provides a verified protein exemplar.
   - node_id: phenazine_biosynthesis
     label: phenazine biosynthesis
     node_type: PATHWAY
@@ -102,6 +121,30 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Nonribosomal peptide synthetases assembling the pyoverdine peptide
       backbone.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q9K1N8
+      protein_label: 'Peptide methionine sulfoxide reductase MsrA/MsrB [Includes:
+        Thioredoxin; Peptide methionine sulfoxide reductase MsrA'
+      gene_symbol: msrAB
+      taxon_id: NCBITaxon:122586
+      taxon_label: Neisseria meningitidis serogroup B (strain ATCC BAA-335 / MC58)
+      entry_status: REVIEWED
+      proteome_id: UP000000425
+      retrieved_on: '2026-10-17'
+      entry_version: 150
+      sequence_version: 1
+      role: 'Exemplar protein (msrAB, Peptide methionine sulfoxide reductase MsrA/MsrB
+        [Includes: Thioredoxin; Peptide methionine sulfoxide reductase MsrA) representing
+        pyoverdine NRPS enzymes (PvdL/PvdI/PvdJ/PvdD) in Neisseria meningitidis serogroup
+        B (strain ATCC BAA-335 / MC58) for green pigmented.'
+      evidence:
+      - reference: DOI:10.1186/s12934-023-02122-1
+        snippet: lead to the green colorization of the culture plate
+        notes: 'Supports pyoverdine NRPS enzymes (PvdL/PvdI/PvdJ/PvdD) in green pigmented;
+          UniProtKB:Q9K1N8 (msrAB, Peptide methionine sulfoxide reductase MsrA/MsrB
+          [Includes: Thioredoxin; Peptide methionine sulfoxide reductase MsrA) in
+          Neisseria meningitidis serogroup B (strain ATCC BAA-335 / MC58) provides
+          a verified protein exemplar.'
   - node_id: iron_limitation
     label: iron-deficient conditions
     node_type: ENVIRONMENTAL_FACTOR
@@ -320,4 +363,11 @@ curation_history:
     the tranche: set graph scope green_pigmented_pyocyanin_phenazine=NONMECHANISTIC
     with scope_notes; marked 2 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (phz_operons, pvd_nrps).'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q51787 (phzA)
+    protein example to node phz_operons; added UniProtKB:Q9K1N8 (msrAB) protein example
+    to node pvd_nrps.'
   llm_assisted: true

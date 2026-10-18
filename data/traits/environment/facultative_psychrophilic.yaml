@@ -61,6 +61,26 @@ causal_graphs:
     label: cold-shock proteins
     node_type: GENE_OR_PROTEIN
     description: Proteins involved in cold shock and cold acclimation responses.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q8XA87
+      protein_label: ATP-dependent RNA helicase DeaD
+      gene_symbol: deaD
+      taxon_id: NCBITaxon:83334
+      taxon_label: Escherichia coli O157:H7
+      entry_status: REVIEWED
+      proteome_id: UP000000558
+      retrieved_on: '2026-10-17'
+      entry_version: 144
+      sequence_version: 3
+      role: Exemplar protein (deaD, ATP-dependent RNA helicase DeaD) representing
+        cold-shock proteins in Escherichia coli O157:H7 for facultative psychrophilic.
+      evidence:
+      - reference: DOI:10.3389/fmicb.2023.1197797
+        snippet: ice binding, cold shock and heat shock proteins to sustain their
+          physiological state
+        notes: Supports cold-shock proteins in facultative psychrophilic; UniProtKB:Q8XA87
+          (deaD, ATP-dependent RNA helicase DeaD) in Escherichia coli O157:H7 provides
+          a verified protein exemplar.
   - node_id: two_component_system
     label: two-component signaling system
     node_type: BIOLOGICAL_PROCESS
@@ -72,6 +92,25 @@ causal_graphs:
     description: Enzyme introducing double bonds into membrane acyl chains, increasing
       unsaturation in cold.
     grounding: InterPro:IPR012171
+    protein_examples:
+    - uniprot_id: UniProtKB:O34653
+      protein_label: Fatty acid desaturase
+      gene_symbol: des
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
+      entry_status: REVIEWED
+      proteome_id: UP000001570
+      retrieved_on: '2026-10-17'
+      entry_version: 130
+      sequence_version: 1
+      role: Exemplar protein (des, Fatty acid desaturase) representing fatty acid
+        desaturase in Bacillus subtilis (strain 168) for facultative psychrophilic.
+      evidence:
+      - reference: DOI:10.1146/annurev-micro-091313-103612
+        snippet: incorporation of proportionally more unsaturated fatty acids
+        notes: Supports fatty acid desaturase in facultative psychrophilic; UniProtKB:O34653
+          (des, Fatty acid desaturase) in Bacillus subtilis (strain 168) provides
+          a verified protein exemplar.
   - node_id: exopolysaccharides
     label: extracellular polymeric substances (EPS)
     node_type: CHEMICAL
@@ -317,6 +356,13 @@ curation_history:
     the tranche: set graph scope facultative_psychrophilic_cold_tolerance=NONMECHANISTIC
     with scope_notes; marked 1 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (cold_shock_proteins).'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q8XA87 (deaD)
+    protein example to node cold_shock_proteins; added UniProtKB:O34653 (des) protein
+    example to node fatty_acid_desaturase.'
   llm_assisted: true
 canonical_examples:
 - taxon_id: NCBITaxon:334543

@@ -77,7 +77,7 @@ causal_graphs:
       taxon_label: Cereibacter sphaeroides
       entry_status: REVIEWED
       retrieved_on: '2026-08-24'
-      entry_version: 108
+      entry_version: 109
       sequence_version: 2
       role: M-chain component of the type II photosynthetic reaction center; this
         accession is not presented as the complete reaction-center complex.
@@ -213,4 +213,10 @@ curation_history:
   changes: Corrected the canonical C. sphaeroides branch from a Type I center to the
     PufM component of a type II reaction center, added InterPro grounding and a DOI-backed
     taxon-matched UniProt example, and documented the graph's composite scope.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:P0C0Y9
+    version metadata (entry_version=109, sequence_version=2).'
   llm_assisted: true

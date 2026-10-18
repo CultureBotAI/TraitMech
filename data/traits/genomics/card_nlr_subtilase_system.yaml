@@ -84,6 +84,35 @@ causal_graphs:
     node_type: TRAIT
     grounding: traitmech:000337
     description: Possession of a genome-encoded CARD-NLR phage-defense system.
+  - node_id: card_nlr_subtilase_system_protein_component
+    label: Thoeris anti-defense 1
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Thoeris anti-defense 1) associated with CARD-NLR
+      subtilase system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - tad1
+    protein_examples:
+    - uniprot_id: UniProtKB:P0DW61
+      protein_label: Thoeris anti-defense 1
+      gene_symbol: tad1
+      taxon_id: NCBITaxon:1392497
+      taxon_label: Clostridioides mangenotii (strain LM2)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 11
+      sequence_version: 1
+      role: Characteristic protein component (tad1, Thoeris anti-defense 1) associated
+        with CARD-NLR subtilase system in Clostridioides mangenotii (strain LM2).
+      evidence:
+      - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+        snippet: '| CARD_NLR | 10\.1101/2023\.05\.28\.542683 | CARD-like domains mediate
+          anti-phage defense in bacterial gasdermin systems |'
+        notes: Supports Thoeris anti-defense 1 in CARD-NLR subtilase system; UniProtKB:P0DW61
+          (tad1, Thoeris anti-defense 1) in Clostridioides mangenotii (strain LM2)
+          provides a verified protein exemplar.
   edges:
   - subject: card_nlr_subtilase_locus
     predicate: contributes to
@@ -133,6 +162,18 @@ causal_graphs:
       snippet: "CARD_NLR\tCARD_NLR_Subtilase\t1\t3\tCARD_NLR__Subtilase_long_new"
       notes: The pinned DefenseFinder rules table places the CARD_NLR_Subtilase subsystem
         under the CARD_NLR system key and requires CARD_NLR__Subtilase_long_new.
+  - subject: card_nlr_subtilase_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: card_nlr_subtilase_system_trait
+    description: Thoeris anti-defense 1 (tad1, UniProtKB:P0DW61) contributes to CARD-NLR
+      subtilase system (associated with gasdermin, defense, mediate).
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: CARD_NLR | 10\.1101/2023\.05\.28\.542683 | CARD-like domains mediate
+        anti-phage defense in bacterial gasdermin systems
+      notes: Supports the functional association between Thoeris anti-defense 1 (UniProtKB:P0DW61
+        in Clostridioides mangenotii (strain LM2)) and CARD-NLR subtilase system.
 discussions:
 - discussion_id: card-nlr-subtilase-activity-gap
   prompt: Resolve the CARD_NLR_Subtilase phage triggers, native hosts, CARD_NLR__Subtilase_long_new
@@ -195,4 +236,10 @@ curation_history:
     anti-phage defense and the CARD_NLR_Subtilase rule row but not an accession-backed
     native microbial taxon exemplar tied to CARD_NLR_Subtilase profiles and experimentally
     verified endogenous CARD-NLR subtilase activity. No paid research was used.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    card_nlr_subtilase_system_protein_component with UniProtKB:P0DW61 (tad1) exemplar.'
   llm_assisted: true

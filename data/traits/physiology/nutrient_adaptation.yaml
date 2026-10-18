@@ -87,6 +87,36 @@ causal_graphs:
     label: maximum growth potential
     node_type: CAPACITY
     description: Maximum potential growth rate of an organism or community.
+  - node_id: nutrient_adaptation_protein_component
+    label: DNA-binding transcriptional dual regulator CRP
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (DNA-binding transcriptional dual regulator CRP)
+      associated with nutrient adaptation.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - crp
+    protein_examples:
+    - uniprot_id: UniProtKB:P0ACJ8
+      protein_label: DNA-binding transcriptional dual regulator CRP
+      gene_symbol: crp
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 159
+      sequence_version: 1
+      role: Characteristic protein component (crp, DNA-binding transcriptional dual
+        regulator CRP) associated with nutrient adaptation in Escherichia coli (strain
+        K12).
+      evidence:
+      - reference: DOI:10.1073/pnas.0903507106
+        snippet: high (copiotrophic) or low (oligotrophic) nutrient concentrations
+        notes: Supports DNA-binding transcriptional dual regulator CRP in nutrient
+          adaptation; UniProtKB:P0ACJ8 (crp, DNA-binding transcriptional dual regulator
+          CRP) in Escherichia coli (strain K12) provides a verified protein exemplar.
   edges:
   - subject: ambient_nutrient_concentration
     predicate: causes
@@ -167,6 +197,19 @@ causal_graphs:
     - reference: DOI:10.1038/s41564-023-01465-0
       notes: Secondary life-history dimension correlated with ribosomal gene copy
         number; positive correlation between potential growth and rrn copy number.
+  - subject: nutrient_adaptation_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: nutrient_adaptation_trait
+    description: DNA-binding transcriptional dual regulator CRP (crp, UniProtKB:P0ACJ8)
+      contributes to nutrient adaptation (associated with concentrations, oligotrophic,
+      nutrient).
+    evidence:
+    - reference: DOI:10.1073/pnas.0903507106
+      snippet: low (oligotrophic) nutrient concentrations
+      notes: Supports the functional association between DNA-binding transcriptional
+        dual regulator CRP (UniProtKB:P0ACJ8 in Escherichia coli (strain K12)) and
+        nutrient adaptation.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.909957+00:00'
   curator: seed_from_metpo
@@ -240,4 +283,10 @@ curation_history:
   changes: Added Candidatus Pelagibacter ubique HTCC1062 as a directly characterized
     nutrient-adaptation example from DOI:10.1038/s41586-024-07924-w; verified the
     current strain taxon and label through NCBI Taxonomy.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    nutrient_adaptation_protein_component with UniProtKB:P0ACJ8 (crp) exemplar.'
   llm_assisted: true

@@ -99,3 +99,72 @@ curation_history:
     record. Reserved METPO:1060300 in v526. Deferred unresolved strain/protein grounding;
     existing records are unchanged.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph contact_dependent_outer_membrane_exchange_graph
+    with GENE_OR_PROTEIN node contact_dependent_outer_membrane_exchange_protein_component
+    and UniProtKB:P46024 exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: contact_dependent_outer_membrane_exchange_graph
+  title: Protein component associated with contact-dependent outer membrane exchange
+  description: Literature-backed association between Outer membrane protein assembly
+    factor BamA (UniProtKB:P46024) and contact-dependent outer membrane exchange.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P46024 in Haemophilus
+    influenzae) associated with contact-dependent outer membrane exchange while full
+    multi-step mechanistic curation remains future work.
+  nodes:
+  - node_id: contact_dependent_outer_membrane_exchange_trait
+    label: contact-dependent outer membrane exchange
+    node_type: TRAIT
+    grounding: traitmech:000650
+    description: A physiological phenotype in which microbial cells exchange outer-membrane
+      lipids and proteins with other cells through direct intercellular contact.
+  - node_id: contact_dependent_outer_membrane_exchange_protein_component
+    label: Outer membrane protein assembly factor BamA
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Outer membrane protein assembly factor BamA) associated
+      with contact-dependent outer membrane exchange.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - bamA
+    protein_examples:
+    - uniprot_id: UniProtKB:P46024
+      protein_label: Outer membrane protein assembly factor BamA
+      gene_symbol: bamA
+      taxon_id: NCBITaxon:727
+      taxon_label: Haemophilus influenzae
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 107
+      sequence_version: 1
+      role: Characteristic protein component (bamA, Outer membrane protein assembly
+        factor BamA) associated with contact-dependent outer membrane exchange in
+        Haemophilus influenzae.
+      evidence:
+      - reference: DOI:10.1128/jb.00850-13
+        snippet: Thus, genetic and environmental conditions that promote OMT production
+          are incongruent with OM exchange.
+        notes: Supports Outer membrane protein assembly factor BamA in contact-dependent
+          outer membrane exchange; UniProtKB:P46024 (bamA, Outer membrane protein
+          assembly factor BamA) in Haemophilus influenzae provides a verified protein
+          exemplar.
+  edges:
+  - subject: contact_dependent_outer_membrane_exchange_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: contact_dependent_outer_membrane_exchange_trait
+    description: Outer membrane protein assembly factor BamA (bamA, UniProtKB:P46024)
+      contributes to contact-dependent outer membrane exchange (associated with environmental,
+      incongruent, conditions).
+    evidence:
+    - reference: DOI:10.1128/jb.00850-13
+      snippet: Thus, genetic and environmental conditions that promote OMT production
+        are incongruent with OM exchange.
+      notes: Supports the functional association between Outer membrane protein assembly
+        factor BamA (UniProtKB:P46024 in Haemophilus influenzae) and contact-dependent
+        outer membrane exchange.

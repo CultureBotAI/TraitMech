@@ -59,6 +59,28 @@ causal_graphs:
       established for this aggregate use.
     description: Conjugation enzyme that nicks and unwinds DNA at oriT and covalently
       attaches to the 5-prime end.
+    protein_examples:
+    - uniprot_id: UniProtKB:P96635
+      protein_label: Putative DNA relaxase NicK
+      gene_symbol: nicK
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
+      entry_status: REVIEWED
+      proteome_id: UP000001570
+      retrieved_on: '2026-10-17'
+      entry_version: 113
+      sequence_version: 1
+      role: Exemplar protein (nicK, Putative DNA relaxase NicK) representing relaxase
+        in Bacillus subtilis (strain 168) for mobile genetic element.
+      evidence:
+      - reference: DOI:10.1093/nar/gkad644
+        snippet: The term ‘genomic island’ encompasses diverse types of mobile genetic
+          elements that exhibit various structures and gene contents, including prophages,
+          transposons, integrated plasmids, integrative and mobilizable elements (IMEs),
+          and integrative and conjugative elements (ICEs)
+        notes: Supports relaxase in mobile genetic element; UniProtKB:P96635 (nicK,
+          Putative DNA relaxase NicK) in Bacillus subtilis (strain 168) provides a
+          verified protein exemplar.
   - node_id: orit
     label: origin of transfer (oriT)
     node_type: CELLULAR_LOCALIZATION
@@ -73,12 +95,57 @@ causal_graphs:
       established for this aggregate use.
     description: VirD4/TraD-like ATPase that recruits the relaxase-DNA substrate to
       the T4SS.
+    protein_examples:
+    - uniprot_id: UniProtKB:P13464
+      protein_label: Type IV secretion system-coupling protein VirD4
+      gene_symbol: virD4
+      taxon_id: NCBITaxon:359
+      taxon_label: Rhizobium rhizogenes (Agrobacterium rhizogenes)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 100
+      sequence_version: 1
+      role: Exemplar protein (virD4, Type IV secretion system-coupling protein VirD4)
+        representing type IV coupling protein in Rhizobium rhizogenes (Agrobacterium
+        rhizogenes) for mobile genetic element.
+      evidence:
+      - reference: DOI:10.1093/nar/gkad644
+        snippet: The term ‘genomic island’ encompasses diverse types of mobile genetic
+          elements that exhibit various structures and gene contents, including prophages,
+          transposons, integrated plasmids, integrative and mobilizable elements (IMEs),
+          and integrative and conjugative elements (ICEs)
+        notes: Supports type IV coupling protein in mobile genetic element; UniProtKB:P13464
+          (virD4, Type IV secretion system-coupling protein VirD4) in Rhizobium rhizogenes
+          (Agrobacterium rhizogenes) provides a verified protein exemplar.
   - node_id: t4ss
     label: type IV secretion system
     node_type: GENE_OR_PROTEIN
     description: VirB4/VirD4-containing macromolecular machine that mediates conjugative
       DNA transfer.
     grounding: GO:0043684
+    protein_examples:
+    - uniprot_id: UniProtKB:Q2YIT8
+      protein_label: Type IV secretion system ATPase VirB4
+      gene_symbol: virB4
+      taxon_id: NCBITaxon:359391
+      taxon_label: Brucella abortus (strain 2308)
+      entry_status: REVIEWED
+      proteome_id: UP000002719
+      retrieved_on: '2026-10-17'
+      entry_version: 84
+      sequence_version: 1
+      role: Exemplar protein (virB4, Type IV secretion system ATPase VirB4) representing
+        type IV secretion system in Brucella abortus (strain 2308) for mobile genetic
+        element.
+      evidence:
+      - reference: DOI:10.1093/nar/gkad644
+        snippet: The term ‘genomic island’ encompasses diverse types of mobile genetic
+          elements that exhibit various structures and gene contents, including prophages,
+          transposons, integrated plasmids, integrative and mobilizable elements (IMEs),
+          and integrative and conjugative elements (ICEs)
+        notes: Supports type IV secretion system in mobile genetic element; UniProtKB:Q2YIT8
+          (virB4, Type IV secretion system ATPase VirB4) in Brucella abortus (strain
+          2308) provides a verified protein exemplar.
   - node_id: conjugative_dna_transfer
     label: conjugative DNA transfer
     node_type: BIOLOGICAL_PROCESS
@@ -92,6 +159,28 @@ causal_graphs:
       established for this aggregate use.
     description: Recombinase plus recombination directionality factor that mediate
       ICE/IME excision.
+    protein_examples:
+    - uniprot_id: UniProtKB:O31490
+      protein_label: ICEBs1 excisionase
+      gene_symbol: xis
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
+      entry_status: REVIEWED
+      proteome_id: UP000001570
+      retrieved_on: '2026-10-17'
+      entry_version: 87
+      sequence_version: 1
+      role: Exemplar protein (xis, ICEBs1 excisionase) representing integrase and
+        excisionase in Bacillus subtilis (strain 168) for mobile genetic element.
+      evidence:
+      - reference: DOI:10.1093/nar/gkad644
+        snippet: The term ‘genomic island’ encompasses diverse types of mobile genetic
+          elements that exhibit various structures and gene contents, including prophages,
+          transposons, integrated plasmids, integrative and mobilizable elements (IMEs),
+          and integrative and conjugative elements (ICEs)
+        notes: Supports integrase and excisionase in mobile genetic element; UniProtKB:O31490
+          (xis, ICEBs1 excisionase) in Bacillus subtilis (strain 168) provides a verified
+          protein exemplar.
   - node_id: ice_excision
     label: ICE excision and circularization
     node_type: BIOLOGICAL_PROCESS
@@ -106,6 +195,28 @@ causal_graphs:
       established for this aggregate use.
     description: Site-specific recombinase that captures and excises gene cassettes
       at attI/attC sites.
+    protein_examples:
+    - uniprot_id: UniProtKB:P24218
+      protein_label: Prophage integrase IntD
+      gene_symbol: intD
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 154
+      sequence_version: 1
+      role: Exemplar protein (intD, Prophage integrase IntD) representing integron
+        integrase (IntI) in Escherichia coli (strain K12) for mobile genetic element.
+      evidence:
+      - reference: DOI:10.1093/nar/gkad644
+        snippet: The term ‘genomic island’ encompasses diverse types of mobile genetic
+          elements that exhibit various structures and gene contents, including prophages,
+          transposons, integrated plasmids, integrative and mobilizable elements (IMEs),
+          and integrative and conjugative elements (ICEs)
+        notes: Supports integron integrase (IntI) in mobile genetic element; UniProtKB:P24218
+          (intD, Prophage integrase IntD) in Escherichia coli (strain K12) provides
+          a verified protein exemplar.
   - node_id: cassette_recombination
     label: attI/attC cassette recombination
     node_type: BIOLOGICAL_PROCESS
@@ -314,4 +425,13 @@ curation_history:
     the tranche: set graph scope mge_horizontal_gene_transfer=NONMECHANISTIC with
     scope_notes; marked 4 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (relaxase, coupling_protein, integrase_excisionase, integron_integrase).'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P96635 (nicK)
+    protein example to node relaxase; added UniProtKB:P13464 (virD4) protein example
+    to node coupling_protein; added UniProtKB:Q2YIT8 (virB4) protein example to node
+    t4ss; added UniProtKB:O31490 (xis) protein example to node integrase_excisionase
+    (+1 more).'
   llm_assisted: true

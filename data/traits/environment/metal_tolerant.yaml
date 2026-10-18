@@ -63,6 +63,26 @@ causal_graphs:
       aggregate use.
     description: RND-family CBA pumps, P-type ATPases, and cation diffusion facilitators
       exporting metals.
+    protein_examples:
+    - uniprot_id: UniProtKB:B5BJI1
+      protein_label: Cation-efflux pump FieF
+      gene_symbol: fieF
+      taxon_id: NCBITaxon:554290
+      taxon_label: Salmonella paratyphi A (strain AKU_12601)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 86
+      sequence_version: 1
+      role: Exemplar protein (fieF, Cation-efflux pump FieF) representing metal efflux
+        pump in Salmonella paratyphi A (strain AKU_12601) for metal tolerant.
+      evidence:
+      - reference: PMID:12829273
+        snippet: CBA efflux pumps driven by proteins of the resistance-nodulation-cell
+          division superfamily, P-type ATPases, cation diffusion facilitator and chromate
+          proteins
+        notes: Supports metal efflux pump in metal tolerant; UniProtKB:B5BJI1 (fieF,
+          Cation-efflux pump FieF) in Salmonella paratyphi A (strain AKU_12601) provides
+          a verified protein exemplar.
   - node_id: metal_ion_export
     label: metal ion transmembrane export
     node_type: BIOLOGICAL_PROCESS
@@ -84,6 +104,27 @@ causal_graphs:
       a broad environmental classification; no single exact family term denotes this
       aggregate use.
     description: Cytoplasmic reductase converting arsenate to arsenite prior to extrusion.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0AB96
+      protein_label: Arsenate reductase
+      gene_symbol: arsC
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 127
+      sequence_version: 1
+      role: Exemplar protein (arsC, Arsenate reductase) representing ArsC arsenate
+        reductase in Escherichia coli (strain K12) for metal tolerant.
+      evidence:
+      - reference: DOI:10.3389/fmicb.2020.00047
+        snippet: This metallophilic strain BS1, harbors numerous gene clusters encoding
+          metal-resistance determinants enabling detoxification of transition metal
+          ions and complexes
+        notes: Supports ArsC arsenate reductase in metal tolerant; UniProtKB:P0AB96
+          (arsC, Arsenate reductase) in Escherichia coli (strain K12) provides a verified
+          protein exemplar.
   - node_id: ars_detoxification_proteins
     label: Ars detoxification protein module
     node_type: GENE_OR_PROTEIN
@@ -97,6 +138,28 @@ causal_graphs:
     - arsB
     - acr3
     operon: ars
+    protein_examples:
+    - uniprot_id: UniProtKB:P45946
+      protein_label: Arsenite resistance protein ArsB
+      gene_symbol: arsB
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
+      entry_status: REVIEWED
+      proteome_id: UP000001570
+      retrieved_on: '2026-10-17'
+      entry_version: 142
+      sequence_version: 2
+      role: Exemplar protein (arsB, Arsenite resistance protein ArsB) representing
+        Ars detoxification protein module in Bacillus subtilis (strain 168) for metal
+        tolerant.
+      evidence:
+      - reference: DOI:10.3389/fmicb.2020.00047
+        snippet: This metallophilic strain BS1, harbors numerous gene clusters encoding
+          metal-resistance determinants enabling detoxification of transition metal
+          ions and complexes
+        notes: Supports Ars detoxification protein module in metal tolerant; UniProtKB:P45946
+          (arsB, Arsenite resistance protein ArsB) in Bacillus subtilis (strain 168)
+          provides a verified protein exemplar.
   - node_id: arsenic_tolerance
     label: arsenic tolerance
     node_type: TRAIT
@@ -248,4 +311,12 @@ curation_history:
     (efflux_pump, arsc_reductase, ars_detoxification_proteins); added 1 node(s) and
     1 edge(s) (ars_detoxification_proteins); removed 1 node(s) and 1 edge(s) together
     with their evidence (ars_operon).'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:B5BJI1 (fieF)
+    protein example to node efflux_pump; added UniProtKB:P0AB96 (arsC) protein example
+    to node arsc_reductase; added UniProtKB:P45946 (arsB) protein example to node
+    ars_detoxification_proteins.'
   llm_assisted: true

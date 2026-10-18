@@ -74,6 +74,26 @@ causal_graphs:
       a quantitative measurement graph; no exact semantic family term was established
       for this aggregate use.
     description: Membrane-bound histidine kinase that senses membrane order/thickness.
+    protein_examples:
+    - uniprot_id: UniProtKB:O34757
+      protein_label: Sensor histidine kinase DesK
+      gene_symbol: desK
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
+      entry_status: REVIEWED
+      proteome_id: UP000001570
+      retrieved_on: '2026-10-17'
+      entry_version: 158
+      sequence_version: 1
+      role: Exemplar protein (desK, Sensor histidine kinase DesK) representing DesK
+        in Bacillus subtilis (strain 168) for temperature range mid3.
+      evidence:
+      - reference: DOI:10.1128/spectrum.03925-23
+        snippet: Upon temperature decrease, the membrane rigidifies and increases
+          in thickness, resulting in activation of the kinase-dominant state of DesK
+        notes: Supports DesK in temperature range mid3; UniProtKB:O34757 (desK, Sensor
+          histidine kinase DesK) in Bacillus subtilis (strain 168) provides a verified
+          protein exemplar.
   - node_id: phospho_desr
     label: phosphorylated DesR
     node_type: STATE
@@ -87,6 +107,26 @@ causal_graphs:
       for this aggregate use.
     description: Fatty-acid desaturase that introduces double bonds to fluidize the
       membrane.
+    protein_examples:
+    - uniprot_id: UniProtKB:O34653
+      protein_label: Fatty acid desaturase
+      gene_symbol: des
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
+      entry_status: REVIEWED
+      proteome_id: UP000001570
+      retrieved_on: '2026-10-17'
+      entry_version: 130
+      sequence_version: 1
+      role: Exemplar protein (des, Fatty acid desaturase) representing des (acyl-lipid
+        desaturase) in Bacillus subtilis (strain 168) for temperature range mid3.
+      evidence:
+      - reference: DOI:10.1128/spectrum.03925-23
+        snippet: desaturates the fatty acyl chains, resulting in membrane fluidization
+          and concomitant decrease of bilayer thickness
+        notes: Supports des (acyl-lipid desaturase) in temperature range mid3; UniProtKB:O34653
+          (des, Fatty acid desaturase) in Bacillus subtilis (strain 168) provides
+          a verified protein exemplar.
   - node_id: membrane_fatty_acyl_chains
     label: membrane fatty acyl chains
     node_type: CHEMICAL
@@ -359,4 +399,11 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (METPO:1016200×1).
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:O34757 (desK)
+    protein example to node desk; added UniProtKB:O34653 (des) protein example to
+    node des_gene.'
   llm_assisted: true

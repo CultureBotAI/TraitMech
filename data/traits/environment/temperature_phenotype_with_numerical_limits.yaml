@@ -96,6 +96,26 @@ causal_graphs:
       a quantitative measurement graph; no exact semantic family term was established
       for this aggregate use.
     description: Proteins with structural adaptations conferring activity at low temperature.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q8XA87
+      protein_label: ATP-dependent RNA helicase DeaD
+      gene_symbol: deaD
+      taxon_id: NCBITaxon:83334
+      taxon_label: Escherichia coli O157:H7
+      entry_status: REVIEWED
+      proteome_id: UP000000558
+      retrieved_on: '2026-10-17'
+      entry_version: 144
+      sequence_version: 3
+      role: Exemplar protein (deaD, ATP-dependent RNA helicase DeaD) representing
+        cold-adapted enzymes in Escherichia coli O157:H7 for temperature phenotype
+        with numerical limits.
+      evidence:
+      - reference: DOI:10.1016/s0300-9629(97)00003-0
+        snippet: adapted to environments of high temperature
+        notes: Supports cold-adapted enzymes in temperature phenotype with numerical
+          limits; UniProtKB:Q8XA87 (deaD, ATP-dependent RNA helicase DeaD) in Escherichia
+          coli O157:H7 provides a verified protein exemplar.
   - node_id: high_catalytic_efficiency_low_temp
     label: high catalytic efficiency at low temperature
     node_type: MOLECULAR_FUNCTION
@@ -242,4 +262,10 @@ curation_history:
     canonical example(s): Thermoanaerobacter kivui (NCBITaxon:2325; DOI:10.3389/fmicb.2023.1265216).
     The note retains the measured value or scopes broad-class examples to the cited
     branch; no paid research was used.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q8XA87 (deaD)
+    protein example to node cold_adapted_enzymes.'
   llm_assisted: true

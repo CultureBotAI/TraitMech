@@ -85,6 +85,38 @@ causal_graphs:
     grounding: traitmech:000209
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
+  - node_id: ophion_system_protein_component
+    label: Thoeris anti-defense 1
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Thoeris anti-defense 1) associated with Ophion
+      system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - tad1
+    protein_examples:
+    - uniprot_id: UniProtKB:P0DW61
+      protein_label: Thoeris anti-defense 1
+      gene_symbol: tad1
+      taxon_id: NCBITaxon:1392497
+      taxon_label: Clostridioides mangenotii (strain LM2)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 11
+      sequence_version: 1
+      role: Characteristic protein component (tad1, Thoeris anti-defense 1) associated
+        with Ophion system in Clostridioides mangenotii (strain LM2).
+      evidence:
+      - reference: DOI:10.1101/2025.09.30.679545
+        snippet: 'From over 500 candidate defense systems, we selected nine for experimental
+          testing and validated three: Dionysus, a TerB-encoding system that disrupts
+          early phage infection vesicle formation by Jumbo phages; Ophion, a Radical
+          SAM-containing system that prevents the formation of the Jumbo phage nucleus;
+          and Ambrosia, a tightly regulated RM-like system.'
+        notes: Supports Thoeris anti-defense 1 in Ophion system; UniProtKB:P0DW61
+          (tad1, Thoeris anti-defense 1) in Clostridioides mangenotii (strain LM2)
+          provides a verified protein exemplar.
   edges:
   - subject: ophion_locus
     predicate: contributes to
@@ -141,6 +173,19 @@ causal_graphs:
         Keesman et al. modular phage-defense discovery preprint; the pinned DefenseFinder
         HMM inventory and rules table do not list Ophion, so this row is name-to-paper
         evidence rather than model-component evidence.
+  - subject: ophion_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: ophion_system_trait
+    description: Thoeris anti-defense 1 (tad1, UniProtKB:P0DW61) contributes to Ophion
+      system (associated with completely, functional, abolishes).
+    evidence:
+    - reference: DOI:10.1101/2025.09.30.679545
+      snippet: Each protein is required for anti-phage activity, since mutating conserved
+        residues in any of the predicted functional domains completely abolishes Ambrosia
+        defense activity
+      notes: Supports the functional association between Thoeris anti-defense 1 (UniProtKB:P0DW61
+        in Clostridioides mangenotii (strain LM2)) and Ophion system.
 discussions:
 - discussion_id: ophion-jumbo-phage-mechanism-gap
   prompt: Resolve Ophion phage triggers, nucleotide-modification products, and model
@@ -171,4 +216,10 @@ curation_history:
   changes: Tightened the Ophion conserved-residue evidence note after the PR 1183
     adversarial review filed issue 1184, narrowing the claim to essential OpnA Radical
     SAM and OpnC phosphoribosyl-transferase domains plus partial OpnB PHP dependence.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    ophion_system_protein_component with UniProtKB:P0DW61 (tad1) exemplar.'
   llm_assisted: true

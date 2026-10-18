@@ -84,6 +84,27 @@ causal_graphs:
     - rpoE
     - dnaK
     - groEL
+    protein_examples:
+    - uniprot_id: UniProtKB:P0AGB3
+      protein_label: RNA polymerase sigma factor RpoH
+      gene_symbol: rpoH
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 151
+      sequence_version: 1
+      role: Exemplar protein (rpoH, RNA polymerase sigma factor RpoH) representing
+        heat-shock response proteins (RpoH, RpoE, DnaK, GroEL) in Escherichia coli
+        (strain K12) for piezotolerant.
+      evidence:
+      - reference: DOI:10.3389/fmolb.2022.1058381
+        snippet: Piezophiles, microorganisms adapted to high pressure, have developed
+          key strategies to maintain the integrity of their lipid membrane
+        notes: Supports heat-shock response proteins (RpoH, RpoE, DnaK, GroEL) in
+          piezotolerant; UniProtKB:P0AGB3 (rpoH, RNA polymerase sigma factor RpoH)
+          in Escherichia coli (strain K12) provides a verified protein exemplar.
   - node_id: piezolyte_accumulation
     label: piezolyte accumulation
     node_type: BIOLOGICAL_PROCESS
@@ -220,4 +241,10 @@ curation_history:
     the tranche: set graph scope piezotolerance_pressure_range=NONMECHANISTIC with
     scope_notes; marked 1 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (heat_shock_genes).'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P0AGB3 (rpoH)
+    protein example to node heat_shock_genes.'
   llm_assisted: true

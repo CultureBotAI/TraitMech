@@ -86,6 +86,34 @@ causal_graphs:
     node_type: TRAIT
     grounding: traitmech:000214
     description: Possession of a genome-encoded abortive-infection phage defense system.
+  - node_id: abiq_system_protein_component
+    label: Endoribonuclease AbiQ
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Endoribonuclease AbiQ) associated with AbiQ system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - abiQ
+    protein_examples:
+    - uniprot_id: UniProtKB:Q9ZJ19
+      protein_label: Endoribonuclease AbiQ
+      gene_symbol: abiQ
+      taxon_id: NCBITaxon:1360
+      taxon_label: Lactococcus lactis subsp. lactis (Streptococcus lactis)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 51
+      sequence_version: 1
+      role: Characteristic protein component (abiQ, Endoribonuclease AbiQ) associated
+        with AbiQ system in Lactococcus lactis subsp. lactis (Streptococcus lactis).
+      evidence:
+      - reference: DOI:10.1128/AEM.64.12.4748-4756.1998
+        snippet: the system encoded by pSRQ900 was classified as an abortive infection
+          mechanism and was named AbiQ
+        notes: Supports Endoribonuclease AbiQ in AbiQ system; UniProtKB:Q9ZJ19 (abiQ,
+          Endoribonuclease AbiQ) in Lactococcus lactis subsp. lactis (Streptococcus
+          lactis) provides a verified protein exemplar.
   edges:
   - subject: abiq_locus
     predicate: contributes to
@@ -143,6 +171,17 @@ causal_graphs:
       snippet: the system encoded by pSRQ900 was classified as an abortive infection
         mechanism and was named AbiQ
       notes: Emond et al. place AbiQ in the abortive infection class of phage defense.
+  - subject: abiq_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: abiq_system_trait
+    description: Endoribonuclease AbiQ (abiQ, UniProtKB:Q9ZJ19) contributes to AbiQ
+      system (associated with transcripts, additional, observed).
+    evidence:
+    - reference: DOI:10.1128/JB.00296-13
+      snippet: In the presence of AbiQ, additional small transcripts were observed
+      notes: Supports the functional association between Endoribonuclease AbiQ (UniProtKB:Q9ZJ19
+        in Lactococcus lactis subsp. lactis (Streptococcus lactis)) and AbiQ system.
 curation_history:
 - timestamp: '2026-09-15T18:45:00Z'
   curator: codex
@@ -151,4 +190,10 @@ curation_history:
     infection system parent after an ignored-and-hidden duplicate review found no
     exact live TraitMech, METPO, or prior proposal record; the replacement placeholder
     is reserved in proposals/metpo_traitmech_v102.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    abiq_system_protein_component with UniProtKB:Q9ZJ19 (abiQ) exemplar.'
   llm_assisted: true

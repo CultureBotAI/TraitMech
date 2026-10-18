@@ -75,6 +75,35 @@ causal_graphs:
     node_type: TRAIT
     grounding: traitmech:000409
     description: Possession of a genome-encoded Gao-Her phage-defense system.
+  - node_id: gao_her_sir_system_protein_component
+    label: tRNA-cytidine(32) 2-sulfurtransferase
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (tRNA-cytidine(32) 2-sulfurtransferase) associated
+      with Gao-Her-SIR system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - ttcA
+    protein_examples:
+    - uniprot_id: UniProtKB:B5BJ71
+      protein_label: tRNA-cytidine(32) 2-sulfurtransferase
+      gene_symbol: ttcA
+      taxon_id: NCBITaxon:554290
+      taxon_label: Salmonella paratyphi A (strain AKU_12601)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 73
+      sequence_version: 1
+      role: Characteristic protein component (ttcA, tRNA-cytidine(32) 2-sulfurtransferase)
+        associated with Gao-Her-SIR system in Salmonella paratyphi A (strain AKU_12601).
+      evidence:
+      - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+        snippet: '| Gao_Her_SIR__HerA_SIR2 | Gao_Her_SIR__HerA_SIR2 | Gao_Her_SIR
+          | Custom | 43 |'
+        notes: Supports tRNA-cytidine(32) 2-sulfurtransferase in Gao-Her-SIR system;
+          UniProtKB:B5BJ71 (ttcA, tRNA-cytidine(32) 2-sulfurtransferase) in Salmonella
+          paratyphi A (strain AKU_12601) provides a verified protein exemplar.
   edges:
   - subject: gao_her_sir_locus
     predicate: contributes to
@@ -134,6 +163,19 @@ causal_graphs:
       snippet: "Gao_Her\tGao_Her_SIR\t2\t2\tGao_Her_SIR__HerA_SIR2, Gao_Her_SIR__SIR2"
       notes: The DefenseFinder rules table models Gao_Her_SIR as a two-profile Gao_Her
         subsystem requiring Gao_Her_SIR__HerA_SIR2 and Gao_Her_SIR__SIR2.
+  - subject: gao_her_sir_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: gao_her_sir_system_trait
+    description: tRNA-cytidine(32) 2-sulfurtransferase (ttcA, UniProtKB:B5BJ71) contributes
+      to Gao-Her-SIR system (associated with custom, hera, duf).
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| Gao_Her_DUF__HerA_DUF | Gao_Her_DUF__HerA_DUF | Gao_Her_DUF | Custom
+        | 20 |'
+      notes: Supports the functional association between tRNA-cytidine(32) 2-sulfurtransferase
+        (UniProtKB:B5BJ71 in Salmonella paratyphi A (strain AKU_12601)) and Gao-Her-SIR
+        system.
 discussions:
 - discussion_id: gao-her-sir-mechanism-gap
   prompt: Resolve Gao_Her_SIR natural hosts, HerA_SIR2/SIR2 component functions, phage
@@ -169,4 +211,10 @@ curation_history:
   action: EDIT
   changes: Removed the redundant Gao-Her-to-phage subclass edge from the child graph;
     the Gao-Her parent record now carries that edge.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    gao_her_sir_system_protein_component with UniProtKB:B5BJ71 (ttcA) exemplar.'
   llm_assisted: true

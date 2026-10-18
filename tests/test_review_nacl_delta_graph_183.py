@@ -51,7 +51,7 @@ def test_review_adds_snippets_to_nacl_delta_edges():
     by_key = {_edge_key(edge): edge for edge in graph["edges"]}
 
     assert graph["scope_status"] == "NONMECHANISTIC"
-    assert doc["curation_history"][-1]["action"] == ACTION
+    assert any(event.get("action") == ACTION for event in doc["curation_history"])
 
     for replacement in EDGE_REPLACEMENTS:
         expected = replacement["after"]

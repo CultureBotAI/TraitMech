@@ -128,6 +128,39 @@ causal_graphs:
     grounding: traitmech:000209
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
+  - node_id: ds_7_system_protein_component
+    label: Cell death peptidase
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Cell death peptidase) associated with DS-7 system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - lit
+    protein_examples:
+    - uniprot_id: UniProtKB:P11072
+      protein_label: Cell death peptidase
+      gene_symbol: lit
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 137
+      sequence_version: 2
+      role: Characteristic protein component (lit, Cell death peptidase) associated
+        with DS-7 system in Escherichia coli (strain K12).
+      evidence:
+      - reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S6.xlsx
+        snippet: NTTI NZ_QOYB01000018.1 GCF_003333785.1 + True False True True DefensePredictor
+          hits 32107 36002 thymidylate synthase, adenylate kinase, putative DNA base
+          hypermodification protein, TIR domain-containing protein, hypothetical protein
+          WP_087900468.1, WP_087900469.1, WP_087900470.1, WP_072044445.1, WP_047174762.1
+          8.47705415994386 4.820281565605036 True True Predicted novel defense gene
+          DS-4
+        notes: Supports Cell death peptidase in DS-7 system; UniProtKB:P11072 (lit,
+          Cell death peptidase) in Escherichia coli (strain K12) provides a verified
+          protein exemplar.
   edges:
   - subject: ds_7_locus
     predicate: contributes to
@@ -223,6 +256,22 @@ causal_graphs:
       notes: The pinned DefenseFinder article registry maps the DS-7 source key to
         the preprint DOI for the DeWeirdt et al. DefensePredictor study, which has
         since been published in Science.
+  - subject: ds_7_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: ds_7_system_trait
+    description: Cell death peptidase (lit, UniProtKB:P11072) contributes to DS-7
+      system (associated with hypermodification, defensepredictor, qoyb01000018).
+    evidence:
+    - reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S6.xlsx
+      snippet: NTTI NZ_QOYB01000018.1 GCF_003333785.1 + True False True True DefensePredictor
+        hits 32107 36002 thymidylate synthase, adenylate kinase, putative DNA base
+        hypermodification protein, TIR domain-containing protein, hypothetical protein
+        WP_087900468.1, WP_087900469.1, WP_087900470.1, WP_072044445.1, WP_047174762.1
+        8.47705415994386 4.820281565605036 True True Predicted novel defense gene
+        DS-4
+      notes: Supports the functional association between Cell death peptidase (UniProtKB:P11072
+        in Escherichia coli (strain K12)) and DS-7 system.
 discussions:
 - discussion_id: ds-7-defensefinder-model-gap
   prompt: Resolve DS-7 native host breadth, exact single-component activity, DS-7
@@ -335,4 +384,10 @@ curation_history:
     et al. support cloned SVIR plaquing assays in E. coli MG1655 plus a DefenseFinder
     DS-7 model, but not a direct named native microbial isolate exemplar with experimentally
     verified endogenous DS-7 activity. No paid research was used.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    ds_7_system_protein_component with UniProtKB:P11072 (lit) exemplar.'
   llm_assisted: true

@@ -67,6 +67,35 @@ causal_graphs:
     grounding: traitmech:000209
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
+  - node_id: ogmios_system_protein_component
+    label: Thoeris anti-defense 1
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Thoeris anti-defense 1) associated with Ogmios
+      system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - tad1
+    protein_examples:
+    - uniprot_id: UniProtKB:P0DW61
+      protein_label: Thoeris anti-defense 1
+      gene_symbol: tad1
+      taxon_id: NCBITaxon:1392497
+      taxon_label: Clostridioides mangenotii (strain LM2)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 11
+      sequence_version: 1
+      role: Characteristic protein component (tad1, Thoeris anti-defense 1) associated
+        with Ogmios system in Clostridioides mangenotii (strain LM2).
+      evidence:
+      - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+        snippet: PD-Lambda-2 | 10\.1101/2022\.05\.12\.491691 | Mapping the landscape
+          of anti-phage defense mechanisms in the E\. coli pangenome
+        notes: Supports Thoeris anti-defense 1 in Ogmios system; UniProtKB:P0DW61
+          (tad1, Thoeris anti-defense 1) in Clostridioides mangenotii (strain LM2)
+          provides a verified protein exemplar.
   edges:
   - subject: ogmios_locus
     predicate: contributes to
@@ -107,6 +136,18 @@ causal_graphs:
         as biobanks of bacterial antiphage defense systems
       notes: DefenseFinder associates Ogmios with the Darracq et al. bacterial antiphage-system
         paper.
+  - subject: ogmios_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: ogmios_system_trait
+    description: Thoeris anti-defense 1 (tad1, UniProtKB:P0DW61) contributes to Ogmios
+      system (associated with landscape, pangenome, defense).
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: PD-Lambda-2 | 10\.1101/2022\.05\.12\.491691 | Mapping the landscape
+        of anti-phage defense mechanisms in the E\. coli pangenome
+      notes: Supports the functional association between Thoeris anti-defense 1 (UniProtKB:P0DW61
+        in Clostridioides mangenotii (strain LM2)) and Ogmios system.
 discussions:
 - discussion_id: ogmios-mechanism-gap
   prompt: Resolve Ogmios phage triggers and effector outputs before minting narrower
@@ -128,4 +169,10 @@ curation_history:
   changes: Minted Ogmios system as a DOI-backed GENOMICS TraitRecord under phage defense
     system after an ignored-and-hidden duplicate review found no exact live TraitMech,
     METPO, or prior proposal record; the replacement placeholder is reserved in proposals/metpo_traitmech_v163.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    ogmios_system_protein_component with UniProtKB:P0DW61 (tad1) exemplar.'
   llm_assisted: true

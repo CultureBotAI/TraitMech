@@ -19,6 +19,13 @@ curation_history:
     ammonia- and nitrite-oxidation evidence after a repository-wide duplicate review
     covering ignored and hidden files.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph nitrification_graph
+    with GENE_OR_PROTEIN node nitrification_protein_component and UniProtKB:B5BJZ8
+    exemplar.'
+  llm_assisted: true
 definition_source: DOI:10.3389/fmicb.2020.01900
 evidence:
 - reference: DOI:10.3389/fmicb.2020.01900
@@ -37,3 +44,60 @@ discussions:
     nitrification trait and is not exact enough for TraitRecord xrefs.
   posed_by: codex
   posed_date: '2026-09-11'
+causal_graphs:
+- graph_id: nitrification_graph
+  title: Protein component associated with nitrification
+  description: Literature-backed association between Cytochrome c-552 (UniProtKB:B5BJZ8)
+    and nitrification.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:B5BJZ8 in Salmonella
+    paratyphi A (strain AKU_12601)) associated with nitrification while full multi-step
+    mechanistic curation remains future work.
+  nodes:
+  - node_id: nitrification_trait
+    label: nitrification
+    node_type: TRAIT
+    grounding: METPO:1005001
+    description: A biological process in which ammonia is oxidized to nitrite (ammonia
+      oxidation) and nitrite is oxidized to nitrate (nitrite oxidation), in two steps.
+  - node_id: nitrification_protein_component
+    label: Cytochrome c-552
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Cytochrome c-552) associated with nitrification.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - nrfA
+    protein_examples:
+    - uniprot_id: UniProtKB:B5BJZ8
+      protein_label: Cytochrome c-552
+      gene_symbol: nrfA
+      taxon_id: NCBITaxon:554290
+      taxon_label: Salmonella paratyphi A (strain AKU_12601)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 82
+      sequence_version: 1
+      role: Characteristic protein component (nrfA, Cytochrome c-552) associated with
+        nitrification in Salmonella paratyphi A (strain AKU_12601).
+      evidence:
+      - reference: DOI:10.3389/fmicb.2020.01900
+        snippet: nitrification proceeds as a two-step process, involving the oxidation
+          of ammonia to nitrite and the oxidation of nitrite to nitrate
+        notes: Supports Cytochrome c-552 in nitrification; UniProtKB:B5BJZ8 (nrfA,
+          Cytochrome c-552) in Salmonella paratyphi A (strain AKU_12601) provides
+          a verified protein exemplar.
+  edges:
+  - subject: nitrification_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: nitrification_trait
+    description: Cytochrome c-552 (nrfA, UniProtKB:B5BJZ8) contributes to nitrification
+      (associated with nitrification, involving, oxidation).
+    evidence:
+    - reference: DOI:10.3389/fmicb.2020.01900
+      snippet: nitrification proceeds as a two-step process, involving the oxidation
+        of ammonia to nitrite and the oxidation of nitrite to nitrate
+      notes: Supports the functional association between Cytochrome c-552 (UniProtKB:B5BJZ8
+        in Salmonella paratyphi A (strain AKU_12601)) and nitrification.

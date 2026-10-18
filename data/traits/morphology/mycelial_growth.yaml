@@ -60,6 +60,26 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: DivIVA-organized polarisome complex marking and driving hyphal tip
       growth.
+    protein_examples:
+    - uniprot_id: UniProtKB:P71021
+      protein_label: Septum site-determining protein DivIVA
+      gene_symbol: divIVA
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
+      entry_status: REVIEWED
+      proteome_id: UP000001570
+      retrieved_on: '2026-10-17'
+      entry_version: 132
+      sequence_version: 1
+      role: Exemplar protein (divIVA, Septum site-determining protein DivIVA) representing
+        DivIVA polarisome in Bacillus subtilis (strain 168) for mycelial growth.
+      evidence:
+      - reference: DOI:10.1093/femsml/uqad020
+        snippet: external osmotic upshifts by increasing the cellular concentration
+          of cations (e.g. K+) and compatible solutes
+        notes: Supports DivIVA polarisome in mycelial growth; UniProtKB:P71021 (divIVA,
+          Septum site-determining protein DivIVA) in Bacillus subtilis (strain 168)
+          provides a verified protein exemplar.
   - node_id: polarisome_splitting
     label: polarisome splitting
     node_type: BIOLOGICAL_PROCESS
@@ -77,6 +97,30 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: LCP-family ligase attaching wall teichoic acids/glycopolymers to
       peptidoglycan.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q49VI3
+      protein_label: Teichoic acids export ATP-binding protein TagH
+      gene_symbol: tagH
+      taxon_id: NCBITaxon:342451
+      taxon_label: Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
+        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+      entry_status: REVIEWED
+      proteome_id: UP000006371
+      retrieved_on: '2026-10-17'
+      entry_version: 132
+      sequence_version: 1
+      role: Exemplar protein (tagH, Teichoic acids export ATP-binding protein TagH)
+        representing CglA glycopolymer ligase in Staphylococcus saprophyticus subsp.
+        saprophyticus (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+        for mycelial growth.
+      evidence:
+      - reference: DOI:10.1093/femsml/uqad020
+        snippet: external osmotic upshifts by increasing the cellular concentration
+          of cations (e.g. K+) and compatible solutes
+        notes: Supports CglA glycopolymer ligase in mycelial growth; UniProtKB:Q49VI3
+          (tagH, Teichoic acids export ATP-binding protein TagH) in Staphylococcus
+          saprophyticus subsp. saprophyticus (strain ATCC 15305 / DSM 20229 / NCIMB
+          8711 / NCTC 7292 / S-41) provides a verified protein exemplar.
   - node_id: wta_attachment
     label: wall teichoic acid attachment to peptidoglycan
     node_type: BIOLOGICAL_PROCESS
@@ -100,6 +144,28 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Ladder-like arrays of multiple FtsZ rings along sporogenic aerial
       hyphae.
+    protein_examples:
+    - uniprot_id: UniProtKB:V6F5E5
+      protein_label: Cell division protein FtsZ
+      gene_symbol: ftsZ
+      taxon_id: NCBITaxon:431944
+      taxon_label: Magnetospirillum gryphiswaldense (strain DSM 6361 / JCM 21280 /
+        NBRC 15271 / MSR-1)
+      entry_status: REVIEWED
+      proteome_id: UP000018922
+      retrieved_on: '2026-10-17'
+      entry_version: 63
+      sequence_version: 1
+      role: Exemplar protein (ftsZ, Cell division protein FtsZ) representing FtsZ
+        Z-ladder arrays in Magnetospirillum gryphiswaldense (strain DSM 6361 / JCM
+        21280 / NBRC 15271 / MSR-1) for mycelial growth.
+      evidence:
+      - reference: DOI:10.1093/femsml/uqad020
+        snippet: external osmotic upshifts by increasing the cellular concentration
+          of cations (e.g. K+) and compatible solutes
+        notes: Supports FtsZ Z-ladder arrays in mycelial growth; UniProtKB:V6F5E5
+          (ftsZ, Cell division protein FtsZ) in Magnetospirillum gryphiswaldense (strain
+          DSM 6361 / JCM 21280 / NBRC 15271 / MSR-1) provides a verified protein exemplar.
   - node_id: sporulation_septation
     label: sporulation septation and spore-chain formation
     node_type: BIOLOGICAL_PROCESS
@@ -113,6 +179,26 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Surfactant SapB and hydrophobic chaplin/rodlin sheath proteins aiding
       aerial escape.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0A8Q3
+      protein_label: Fumarate reductase subunit D
+      gene_symbol: frdD
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 133
+      sequence_version: 1
+      role: Exemplar protein (frdD, Fumarate reductase subunit D) representing SapB
+        / chaplins / rodlins in Escherichia coli (strain K12) for mycelial growth.
+      evidence:
+      - reference: DOI:10.1093/femsml/uqad020
+        snippet: external osmotic upshifts by increasing the cellular concentration
+          of cations (e.g. K+) and compatible solutes
+        notes: Supports SapB / chaplins / rodlins in mycelial growth; UniProtKB:P0A8Q3
+          (frdD, Fumarate reductase subunit D) in Escherichia coli (strain K12) provides
+          a verified protein exemplar.
   edges:
   - subject: hyphal_extension
     predicate: confers
@@ -241,4 +327,12 @@ curation_history:
     the tranche: set graph scope mycelial_branching_hyphal_growth=NONMECHANISTIC with
     scope_notes; marked 4 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (divIVA_polarisome, cglA_ligase, ftsz_z_ladders, sapB_chaplins_rodlins).'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P71021 (divIVA)
+    protein example to node divIVA_polarisome; added UniProtKB:Q49VI3 (tagH) protein
+    example to node cglA_ligase; added UniProtKB:V6F5E5 (ftsZ) protein example to
+    node ftsz_z_ladders; added UniProtKB:P0A8Q3 (frdD) protein example to node sapB_chaplins_rodlins.'
   llm_assisted: true

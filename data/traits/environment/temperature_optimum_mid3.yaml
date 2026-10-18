@@ -96,6 +96,27 @@ causal_graphs:
       a quantitative measurement graph; no exact semantic family term was established
       for this aggregate use.
     description: DnaK/DnaJ, GroEL/GroES, ClpB, HtpG chaperone system.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0A6Z3
+      protein_label: Chaperone protein HtpG
+      gene_symbol: htpG
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 166
+      sequence_version: 1
+      role: Exemplar protein (htpG, Chaperone protein HtpG) representing molecular
+        chaperone network in Escherichia coli (strain K12) for temperature optimum
+        mid3.
+      evidence:
+      - reference: DOI:10.1128/spectrum.03925-23
+        snippet: Upon temperature decrease, the membrane rigidifies and increases
+          in thickness, resulting in activation of the kinase-dominant state of DesK
+        notes: Supports molecular chaperone network in temperature optimum mid3; UniProtKB:P0A6Z3
+          (htpG, Chaperone protein HtpG) in Escherichia coli (strain K12) provides
+          a verified protein exemplar.
   - node_id: proteostasis
     label: proteostasis
     node_type: BIOLOGICAL_PROCESS
@@ -250,4 +271,10 @@ curation_history:
   action: GROUND_CAUSAL_NODES
   changes: Grounded 1 causal-node grounding field(s) via mappings/node_grounding.tsv
     (METPO:1016200×1).
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P0A6Z3 (htpG)
+    protein example to node chaperone_network.'
   llm_assisted: true

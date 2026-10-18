@@ -80,6 +80,25 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Elongasome directing organized circumferential peptidoglycan insertion
       that constrains cell width.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0ABG7
+      protein_label: Peptidoglycan glycosyltransferase MrdB
+      gene_symbol: mrdB
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 133
+      sequence_version: 1
+      role: Exemplar protein (mrdB, Peptidoglycan glycosyltransferase MrdB) representing
+        Rod complex in Escherichia coli (strain K12) for cell width very small.
+      evidence:
+      - reference: DOI:10.1146/annurev-cellbio-101011-155745
+        snippet: MreB-directed peptidoglycan synthesis
+        notes: Supports Rod complex in cell width very small; UniProtKB:P0ABG7 (mrdB,
+          Peptidoglycan glycosyltransferase MrdB) in Escherichia coli (strain K12)
+          provides a verified protein exemplar.
   - node_id: apbp_proteins
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: This umbrella combines multiple class-A penicillin-binding proteins,
@@ -88,6 +107,26 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: aPBPs mediating isotropic peptidoglycan insertion that enlarges the
       cell cylinder.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0AD68
+      protein_label: Peptidoglycan D,D-transpeptidase FtsI
+      gene_symbol: ftsI
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 156
+      sequence_version: 1
+      role: Exemplar protein (ftsI, Peptidoglycan D,D-transpeptidase FtsI) representing
+        class A penicillin-binding proteins in Escherichia coli (strain K12) for cell
+        width very small.
+      evidence:
+      - reference: DOI:10.1146/annurev-cellbio-101011-155745
+        snippet: MreB-directed peptidoglycan synthesis
+        notes: Supports class A penicillin-binding proteins in cell width very small;
+          UniProtKB:P0AD68 (ftsI, Peptidoglycan D,D-transpeptidase FtsI) in Escherichia
+          coli (strain K12) provides a verified protein exemplar.
   edges:
   - subject: oligotrophic_environment
     predicate: regulates
@@ -237,4 +276,11 @@ curation_history:
     canonical example(s): Spirochaeta dissipatitropha (NCBITaxon:324679; DOI:10.1099/ijs.0.65862-0).
     The note retains the measured value or scopes broad-class examples to the cited
     branch; no paid research was used.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P0ABG7 (mrdB)
+    protein example to node rod_complex; added UniProtKB:P0AD68 (ftsI) protein example
+    to node apbp_proteins.'
   llm_assisted: true

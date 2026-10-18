@@ -47,3 +47,77 @@ curation_history:
     a repository-wide duplicate review covering ignored and hidden files; METPO has
     no exact lysine decarboxylase activity class yet.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph lysine_decarboxylase_activity_graph
+    with GENE_OR_PROTEIN node lysine_decarboxylase_activity_protein_component and
+    UniProtKB:P0A9H3 exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: lysine_decarboxylase_activity_graph
+  title: Protein component associated with lysine decarboxylase activity
+  description: Literature-backed association between Inducible lysine decarboxylase
+    (UniProtKB:P0A9H3) and lysine decarboxylase activity.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P0A9H3 in Escherichia
+    coli (strain K12)) associated with lysine decarboxylase activity while full multi-step
+    mechanistic curation remains future work.
+  nodes:
+  - node_id: lysine_decarboxylase_activity_trait
+    label: lysine decarboxylase activity
+    node_type: TRAIT
+    grounding: traitmech:000153
+    description: A physiological enzyme-activity phenotype in which a cell produces
+      active lysine decarboxylase enzymes that decarboxylate L-lysine to cadaverine
+      and carbon dioxide.
+  - node_id: lysine_decarboxylase_activity_protein_component
+    label: Inducible lysine decarboxylase
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Inducible lysine decarboxylase) associated with
+      lysine decarboxylase activity.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - cadA
+    protein_examples:
+    - uniprot_id: UniProtKB:P0A9H3
+      protein_label: Inducible lysine decarboxylase
+      gene_symbol: cadA
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 145
+      sequence_version: 1
+      role: Characteristic protein component (cadA, Inducible lysine decarboxylase)
+        associated with lysine decarboxylase activity in Escherichia coli (strain
+        K12).
+      evidence:
+      - reference: DOI:10.1128/jb.01306-06
+        snippet: Unexpectedly, the tolerance of P(i)-starved cells to fermentation
+          acids was markedly increased as a result of the activity of the inducible
+          CadBA lysine-dependent acid resistance system that consumes one proton and
+          produces the diamine cadaverine.
+        notes: Supports Inducible lysine decarboxylase in lysine decarboxylase activity;
+          UniProtKB:P0A9H3 (cadA, Inducible lysine decarboxylase) in Escherichia coli
+          (strain K12) provides a verified protein exemplar.
+  edges:
+  - subject: lysine_decarboxylase_activity_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: lysine_decarboxylase_activity_trait
+    description: Inducible lysine decarboxylase (cadA, UniProtKB:P0A9H3) contributes
+      to lysine decarboxylase activity (associated with fermentation, unexpectedly,
+      cadaverine).
+    evidence:
+    - reference: DOI:10.1128/jb.01306-06
+      snippet: Unexpectedly, the tolerance of P(i)-starved cells to fermentation acids
+        was markedly increased as a result of the activity of the inducible CadBA
+        lysine-dependent acid resistance system that consumes one proton and produces
+        the diamine cadaverine.
+      notes: Supports the functional association between Inducible lysine decarboxylase
+        (UniProtKB:P0A9H3 in Escherichia coli (strain K12)) and lysine decarboxylase
+        activity.

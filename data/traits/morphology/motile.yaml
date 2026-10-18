@@ -64,11 +64,52 @@ causal_graphs:
     label: flagellar motor
     node_type: GENE_OR_PROTEIN
     description: Rotary motor that turns bacterial flagella.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0ABZ1
+      protein_label: Flagellar motor switch protein FliG
+      gene_symbol: fliG
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 133
+      sequence_version: 1
+      role: Exemplar protein (fliG, Flagellar motor switch protein FliG) representing
+        flagellar motor in Escherichia coli (strain K12) for motile.
+      evidence:
+      - reference: DOI:10.3389/fmicb.2021.659464
+        snippet: ion motive force powering the bacterial flagellar motor
+        notes: Supports flagellar motor in motile; UniProtKB:P0ABZ1 (fliG, Flagellar
+          motor switch protein FliG) in Escherichia coli (strain K12) provides a verified
+          protein exemplar.
   - node_id: type_iv_pilus
     label: type IV pilus
     node_type: GENE_OR_PROTEIN
     description: Pilus machinery that extends, adheres, and retracts.
     grounding: GO:0044096
+    protein_examples:
+    - uniprot_id: UniProtKB:P24559
+      protein_label: Type IV pilus retraction ATPase PilT
+      gene_symbol: pilT
+      taxon_id: NCBITaxon:208964
+      taxon_label: Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116
+        / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)
+      entry_status: REVIEWED
+      proteome_id: UP000002438
+      retrieved_on: '2026-10-17'
+      entry_version: 148
+      sequence_version: 1
+      role: Exemplar protein (pilT, Type IV pilus retraction ATPase PilT) representing
+        type IV pilus in Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP
+        104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1) for motile.
+      evidence:
+      - reference: DOI:10.1038/s41579-019-0195-4
+        snippet: Cycles of pilus extension, binding and retraction
+        notes: Supports type IV pilus in motile; UniProtKB:P24559 (pilT, Type IV pilus
+          retraction ATPase PilT) in Pseudomonas aeruginosa (strain ATCC 15692 / DSM
+          22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1) provides
+          a verified protein exemplar.
   - node_id: chemotaxis_signaling
     label: chemotaxis signaling
     node_type: BIOLOGICAL_PROCESS
@@ -82,6 +123,26 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Membrane-embedded stator complex of the flagellar motor that conducts
       ions.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0AF06
+      protein_label: Motility protein B
+      gene_symbol: motB
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 131
+      sequence_version: 1
+      role: Exemplar protein (motB, Motility protein B) representing MotA-MotB stator
+        complex in Escherichia coli (strain K12) for motile.
+      evidence:
+      - reference: DOI:10.3390/biom9070279
+        snippet: bacterial flagellum is a helical filamentous organelle responsible
+          for motility
+        notes: Supports MotA-MotB stator complex in motile; UniProtKB:P0AF06 (motB,
+          Motility protein B) in Escherichia coli (strain K12) provides a verified
+          protein exemplar.
   - node_id: stator_proton_channel
     label: transmembrane H+ channel activity
     node_type: MOLECULAR_FUNCTION
@@ -100,6 +161,25 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: C-ring rotor protein that electrostatically interacts with the stator
       to generate torque.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0ABZ1
+      protein_label: Flagellar motor switch protein FliG
+      gene_symbol: fliG
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 133
+      sequence_version: 1
+      role: Exemplar protein (fliG, Flagellar motor switch protein FliG) representing
+        FliG rotor protein in Escherichia coli (strain K12) for motile.
+      evidence:
+      - reference: DOI:10.3389/fmicb.2021.659464
+        snippet: ion motive force powering the bacterial flagellar motor
+        notes: Supports FliG rotor protein in motile; UniProtKB:P0ABZ1 (fliG, Flagellar
+          motor switch protein FliG) in Escherichia coli (strain K12) provides a verified
+          protein exemplar.
   - node_id: chea_kinase
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
@@ -107,6 +187,25 @@ causal_graphs:
     label: CheA histidine kinase
     node_type: GENE_OR_PROTEIN
     description: Autophosphorylating chemotaxis histidine kinase.
+    protein_examples:
+    - uniprot_id: UniProtKB:P07363
+      protein_label: Chemotaxis protein CheA
+      gene_symbol: cheA
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 214
+      sequence_version: 3
+      role: Exemplar protein (cheA, Chemotaxis protein CheA) representing CheA histidine
+        kinase in Escherichia coli (strain K12) for motile.
+      evidence:
+      - reference: DOI:10.1073/pnas.1000935107
+        snippet: Chemotaxis signaling protein CheY binds to the rotor protein FliN
+        notes: Supports CheA histidine kinase in motile; UniProtKB:P07363 (cheA, Chemotaxis
+          protein CheA) in Escherichia coli (strain K12) provides a verified protein
+          exemplar.
   - node_id: chey_response_regulator
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
@@ -120,7 +219,7 @@ causal_graphs:
       entry_status: REVIEWED
       proteome_id: UP000000625
       retrieved_on: '2026-08-25'
-      entry_version: 160
+      entry_version: 161
       sequence_version: 2
       role: Phosphorylated CheY binds the E. coli flagellar switch and changes motor
         rotation during swimming.
@@ -141,6 +240,25 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Switch complex (FliM/FliN/FliG) that controls direction of motor
       rotation.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0ABZ1
+      protein_label: Flagellar motor switch protein FliG
+      gene_symbol: fliG
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 133
+      sequence_version: 1
+      role: Exemplar protein (fliG, Flagellar motor switch protein FliG) representing
+        flagellar C-ring switch complex in Escherichia coli (strain K12) for motile.
+      evidence:
+      - reference: DOI:10.3389/fmicb.2021.659464
+        snippet: ion motive force powering the bacterial flagellar motor
+        notes: Supports flagellar C-ring switch complex in motile; UniProtKB:P0ABZ1
+          (fliG, Flagellar motor switch protein FliG) in Escherichia coli (strain
+          K12) provides a verified protein exemplar.
   - node_id: pilb_atpase
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
@@ -148,6 +266,28 @@ causal_graphs:
     label: PilB extension ATPase
     node_type: GENE_OR_PROTEIN
     description: ATPase that powers type IV pilus extension/assembly.
+    protein_examples:
+    - uniprot_id: UniProtKB:P22608
+      protein_label: Type IV pilus assembly ATPase PilB
+      gene_symbol: pilB
+      taxon_id: NCBITaxon:208964
+      taxon_label: Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116
+        / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)
+      entry_status: REVIEWED
+      proteome_id: UP000002438
+      retrieved_on: '2026-10-17'
+      entry_version: 151
+      sequence_version: 2
+      role: Exemplar protein (pilB, Type IV pilus assembly ATPase PilB) representing
+        PilB extension ATPase in Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644
+        / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1) for motile.
+      evidence:
+      - reference: DOI:10.1038/s41579-019-0195-4
+        snippet: Cycles of pilus extension, binding and retraction
+        notes: Supports PilB extension ATPase in motile; UniProtKB:P22608 (pilB, Type
+          IV pilus assembly ATPase PilB) in Pseudomonas aeruginosa (strain ATCC 15692
+          / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)
+          provides a verified protein exemplar.
   - node_id: pilt_atpase
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
@@ -155,6 +295,28 @@ causal_graphs:
     label: PilT retraction ATPase
     node_type: GENE_OR_PROTEIN
     description: ATPase that powers type IV pilus retraction/disassembly.
+    protein_examples:
+    - uniprot_id: UniProtKB:P24559
+      protein_label: Type IV pilus retraction ATPase PilT
+      gene_symbol: pilT
+      taxon_id: NCBITaxon:208964
+      taxon_label: Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116
+        / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)
+      entry_status: REVIEWED
+      proteome_id: UP000002438
+      retrieved_on: '2026-10-17'
+      entry_version: 148
+      sequence_version: 1
+      role: Exemplar protein (pilT, Type IV pilus retraction ATPase PilT) representing
+        PilT retraction ATPase in Pseudomonas aeruginosa (strain ATCC 15692 / DSM
+        22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1) for motile.
+      evidence:
+      - reference: DOI:10.1038/s41579-019-0195-4
+        snippet: Cycles of pilus extension, binding and retraction
+        notes: Supports PilT retraction ATPase in motile; UniProtKB:P24559 (pilT,
+          Type IV pilus retraction ATPase PilT) in Pseudomonas aeruginosa (strain
+          ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101
+          / PAO1) provides a verified protein exemplar.
   - node_id: t4p_extension
     label: type IV pilus extension
     node_type: BIOLOGICAL_PROCESS
@@ -512,4 +674,13 @@ curation_history:
     flagellar_c_ring, pilb_atpase, pilt_atpase); added taxon-paired protein example(s)
     UniProtKB:P0AE67 on chey_response_regulator (NCBITaxon:83333); added canonical
     example(s) NCBITaxon:83333.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:P0AE67
+    version metadata (entry_version=161, sequence_version=2); added UniProtKB:P0ABZ1
+    (fliG) protein example to node flagellar_motor; added UniProtKB:P24559 (pilT)
+    protein example to node type_iv_pilus; added UniProtKB:P0AF06 (motB) protein example
+    to node motab_stator (+5 more).'
   llm_assisted: true

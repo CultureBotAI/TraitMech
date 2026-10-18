@@ -107,3 +107,70 @@ curation_history:
     are not reused. Naming controversy, strain provenance and mechanism gaps remain
     explicit. Existing traits unchanged; timestamp is the observed UTC curation decision.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph expansion_driven_sliding_motility_graph
+    with GENE_OR_PROTEIN node expansion_driven_sliding_motility_protein_component
+    and UniProtKB:P0A988 exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: expansion_driven_sliding_motility_graph
+  title: Protein component associated with expansion-driven sliding motility
+  description: Literature-backed association between Beta sliding clamp (UniProtKB:P0A988)
+    and expansion-driven sliding motility.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P0A988 in Escherichia
+    coli (strain K12)) associated with expansion-driven sliding motility while full
+    multi-step mechanistic curation remains future work.
+  nodes:
+  - node_id: expansion_driven_sliding_motility_trait
+    label: expansion-driven sliding motility
+    node_type: TRAIT
+    grounding: traitmech:000703
+    description: A phenotype in which a microbial population spreads across a supporting
+      surface through passive displacement of cells by expansive forces generated
+      within the colony, without active locomotory propulsion of the displaced cells.
+  - node_id: expansion_driven_sliding_motility_protein_component
+    label: Beta sliding clamp
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Beta sliding clamp) associated with expansion-driven
+      sliding motility.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - dnaN
+    protein_examples:
+    - uniprot_id: UniProtKB:P0A988
+      protein_label: Beta sliding clamp
+      gene_symbol: dnaN
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 164
+      sequence_version: 1
+      role: Characteristic protein component (dnaN, Beta sliding clamp) associated
+        with expansion-driven sliding motility in Escherichia coli (strain K12).
+      evidence:
+      - reference: DOI:10.1111/1758-2229.70214
+        snippet: Passive sliding motility allows Mycobacterium smegmatis to spread
+          over soft agar surfaces.
+        notes: Supports Beta sliding clamp in expansion-driven sliding motility; UniProtKB:P0A988
+          (dnaN, Beta sliding clamp) in Escherichia coli (strain K12) provides a verified
+          protein exemplar.
+  edges:
+  - subject: expansion_driven_sliding_motility_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: expansion_driven_sliding_motility_trait
+    description: Beta sliding clamp (dnaN, UniProtKB:P0A988) contributes to expansion-driven
+      sliding motility (associated with mycobacterium, smegmatis, motility).
+    evidence:
+    - reference: DOI:10.1111/1758-2229.70214
+      snippet: Passive sliding motility allows Mycobacterium smegmatis to spread over
+        soft agar surfaces.
+      notes: Supports the functional association between Beta sliding clamp (UniProtKB:P0A988
+        in Escherichia coli (strain K12)) and expansion-driven sliding motility.

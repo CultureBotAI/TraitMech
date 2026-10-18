@@ -59,6 +59,26 @@ causal_graphs:
     label: terminal respiratory oxidases
     node_type: GENE_OR_PROTEIN
     description: Oxygen-reducing terminal oxidase complexes.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0ABI8
+      protein_label: Cytochrome bo(3) ubiquinol oxidase subunit 1
+      gene_symbol: cyoB
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 154
+      sequence_version: 1
+      role: Exemplar protein (cyoB, Cytochrome bo(3) ubiquinol oxidase subunit 1)
+        representing terminal respiratory oxidases in Escherichia coli (strain K12)
+        for obligately aerobic.
+      evidence:
+      - reference: DOI:10.1016/j.celrep.2023.112444
+        snippet: terminal oxidases transfer electrons from the ETC to O2
+        notes: Supports terminal respiratory oxidases in obligately aerobic; UniProtKB:P0ABI8
+          (cyoB, Cytochrome bo(3) ubiquinol oxidase subunit 1) in Escherichia coli
+          (strain K12) provides a verified protein exemplar.
   - node_id: proton_motive_force
     label: proton motive force
     node_type: STATE
@@ -99,6 +119,23 @@ causal_graphs:
     label: Fe-S cluster enzymes
     node_type: GENE_OR_PROTEIN
     description: Enzymes with exposed iron-sulfur clusters vulnerable to ROS.
+    protein_examples:
+    - uniprot_id: UniProtKB:P29166
+      protein_label: Iron hydrogenase 1
+      taxon_id: NCBITaxon:1501
+      taxon_label: Clostridium pasteurianum
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 159
+      sequence_version: 1
+      role: Exemplar protein (P29166, Iron hydrogenase 1) representing Fe-S cluster
+        enzymes in Clostridium pasteurianum for obligately aerobic.
+      evidence:
+      - reference: https://www.ncbi.nlm.nih.gov/books/NBK482349/
+        snippet: will not survive if there is more than half a percent oxygen
+        notes: Supports Fe-S cluster enzymes in obligately aerobic; UniProtKB:P29166
+          (P29166, Iron hydrogenase 1) in Clostridium pasteurianum provides a verified
+          protein exemplar.
   edges:
   - subject: obligate_aerobic_trait
     predicate: depends on
@@ -322,4 +359,11 @@ curation_history:
     the tranche: set graph scope obligate_aerobe_oxygen_respiration=NONMECHANISTIC
     with scope_notes; marked 2 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (terminal_oxidases, fe_s_cluster_enzymes).'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P0ABI8 (cyoB)
+    protein example to node terminal_oxidases; added UniProtKB:P29166 (P29166) protein
+    example to node fe_s_cluster_enzymes.'
   llm_assisted: true

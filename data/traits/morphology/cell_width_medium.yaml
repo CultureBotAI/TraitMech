@@ -60,6 +60,26 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Elongasome SEDS-bPBP synthase pair (RodA with PBP2) driving lateral
       peptidoglycan synthesis.
+    protein_examples:
+    - uniprot_id: UniProtKB:P9WN99
+      protein_label: Peptidoglycan glycosyltransferase RodA
+      gene_symbol: rodA
+      taxon_id: NCBITaxon:83332
+      taxon_label: Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)
+      entry_status: REVIEWED
+      proteome_id: UP000001584
+      retrieved_on: '2026-10-17'
+      entry_version: 49
+      sequence_version: 1
+      role: Exemplar protein (rodA, Peptidoglycan glycosyltransferase RodA) representing
+        RodA-PBP2 complex in Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)
+        for cell width medium.
+      evidence:
+      - reference: DOI:10.1038/nrmicro3088
+        snippet: spherical cocci synthesize peptidoglycan only at the division septum
+        notes: Supports RodA-PBP2 complex in cell width medium; UniProtKB:P9WN99 (rodA,
+          Peptidoglycan glycosyltransferase RodA) in Mycobacterium tuberculosis (strain
+          ATCC 25618 / H37Rv) provides a verified protein exemplar.
   - node_id: pg_polymerization_crosslinking
     label: peptidoglycan polymerization and crosslinking
     node_type: BIOLOGICAL_PROCESS
@@ -72,6 +92,25 @@ causal_graphs:
     label: MreC
     node_type: GENE_OR_PROTEIN
     description: Membrane-associated Rod-complex protein that activates PBP2.
+    protein_examples:
+    - uniprot_id: UniProtKB:P84480
+      protein_label: Cell shape-determining protein MreC
+      gene_symbol: mreC
+      taxon_id: NCBITaxon:1422
+      taxon_label: Geobacillus stearothermophilus (Bacillus stearothermophilus)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 44
+      sequence_version: 1
+      role: Exemplar protein (mreC, Cell shape-determining protein MreC) representing
+        MreC in Geobacillus stearothermophilus (Bacillus stearothermophilus) for cell
+        width medium.
+      evidence:
+      - reference: DOI:10.1146/annurev-cellbio-101011-155745
+        snippet: cell shape is genetically determined
+        notes: Supports MreC in cell width medium; UniProtKB:P84480 (mreC, Cell shape-determining
+          protein MreC) in Geobacillus stearothermophilus (Bacillus stearothermophilus)
+          provides a verified protein exemplar.
   - node_id: pbp2_protein
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: The contextual source supports the PBP2 label, but an exact semantic
@@ -80,6 +119,25 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Bifunctional class B penicillin-binding protein (transpeptidase)
       of the elongasome.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0AD65
+      protein_label: Peptidoglycan D,D-transpeptidase MrdA
+      gene_symbol: mrdA
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 145
+      sequence_version: 1
+      role: Exemplar protein (mrdA, Peptidoglycan D,D-transpeptidase MrdA) representing
+        PBP2 in Escherichia coli (strain K12) for cell width medium.
+      evidence:
+      - reference: DOI:10.1038/nrmicro3088
+        snippet: spherical cocci synthesize peptidoglycan only at the division septum
+        notes: Supports PBP2 in cell width medium; UniProtKB:P0AD65 (mrdA, Peptidoglycan
+          D,D-transpeptidase MrdA) in Escherichia coli (strain K12) provides a verified
+          protein exemplar.
   - node_id: mred_protein
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: The contextual source supports the MreD label, but an exact semantic
@@ -88,6 +146,24 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Rod-complex membrane protein that modulates PBP2 activity in balance
       with MreC.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0ABH6
+      protein_label: Rod shape-determining protein MreD
+      gene_symbol: mreD
+      taxon_id: NCBITaxon:83334
+      taxon_label: Escherichia coli O157:H7
+      entry_status: REVIEWED
+      proteome_id: UP000000558
+      retrieved_on: '2026-10-17'
+      entry_version: 104
+      sequence_version: 1
+      role: Exemplar protein (mreD, Rod shape-determining protein MreD) representing
+        MreD in Escherichia coli O157:H7 for cell width medium.
+      evidence:
+      - reference: DOI:10.1038/nrmicro3088
+        snippet: rod-shape is maintained
+        notes: Supports MreD in cell width medium; UniProtKB:P0ABH6 (mreD, Rod shape-determining
+          protein MreD) in Escherichia coli O157:H7 provides a verified protein exemplar.
   - node_id: apbp_proteins
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: This umbrella combines multiple class-A penicillin-binding proteins,
@@ -96,6 +172,26 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Bifunctional glycosyltransferase/transpeptidase peptidoglycan synthases
       that influence cell diameter.
+    protein_examples:
+    - uniprot_id: UniProtKB:P02919
+      protein_label: Penicillin-binding protein 1B
+      gene_symbol: mrcB
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 235
+      sequence_version: 2
+      role: Exemplar protein (mrcB, Penicillin-binding protein 1B) representing class
+        A penicillin-binding proteins (aPBPs) in Escherichia coli (strain K12) for
+        cell width medium.
+      evidence:
+      - reference: DOI:10.1038/nrmicro3088
+        snippet: spherical cocci synthesize peptidoglycan only at the division septum
+        notes: Supports class A penicillin-binding proteins (aPBPs) in cell width
+          medium; UniProtKB:P02919 (mrcB, Penicillin-binding protein 1B) in Escherichia
+          coli (strain K12) provides a verified protein exemplar.
   edges:
   - subject: standard_growth_conditions
     predicate: enables
@@ -273,4 +369,13 @@ curation_history:
     canonical example(s): Ruixingdingia sedimenti (NCBITaxon:3073604; DOI:10.1099/ijsem.0.006350).
     The note retains the measured value or scopes broad-class examples to the cited
     branch; no paid research was used.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P9WN99 (rodA)
+    protein example to node roda_pbp2_complex; added UniProtKB:P84480 (mreC) protein
+    example to node mrec_protein; added UniProtKB:P0AD65 (mrdA) protein example to
+    node pbp2_protein; added UniProtKB:P0ABH6 (mreD) protein example to node mred_protein
+    (+1 more).'
   llm_assisted: true

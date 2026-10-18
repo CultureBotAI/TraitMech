@@ -65,6 +65,25 @@ causal_graphs:
       for this aggregate use.
     description: RNA chaperone induced upon cold shock that promotes single-stranded
       RNA states.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0A9X9
+      protein_label: Cold shock protein CspA
+      gene_symbol: cspA
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 146
+      sequence_version: 2
+      role: Exemplar protein (cspA, Cold shock protein CspA) representing CspA cold-shock
+        protein in Escherichia coli (strain K12) for temperature delta very low.
+      evidence:
+      - reference: DOI:10.1046/j.1365-2958.1999.01541.x
+        snippet: CspA, the major cold shock protein, binds RNA with low sequence specificity
+        notes: Supports CspA cold-shock protein in temperature delta very low; UniProtKB:P0A9X9
+          (cspA, Cold shock protein CspA) in Escherichia coli (strain K12) provides
+          a verified protein exemplar.
   - node_id: csda_helicase
     label: CsdA DEAD-box RNA helicase
     node_type: GENE_OR_PROTEIN
@@ -74,6 +93,28 @@ causal_graphs:
       for this aggregate use.
     description: DEAD-box RNA helicase that assists ribosomes and RNA remodeling at
       low temperature.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q8XA87
+      protein_label: ATP-dependent RNA helicase DeaD
+      gene_symbol: deaD
+      taxon_id: NCBITaxon:83334
+      taxon_label: Escherichia coli O157:H7
+      entry_status: REVIEWED
+      proteome_id: UP000000558
+      retrieved_on: '2026-10-17'
+      entry_version: 144
+      sequence_version: 3
+      role: Exemplar protein (deaD, ATP-dependent RNA helicase DeaD) representing
+        CsdA DEAD-box RNA helicase in Escherichia coli O157:H7 for temperature delta
+        very low.
+      evidence:
+      - reference: DOI:10.1046/j.1365-2958.1999.01541.x
+        snippet: proposed function as an RNA chaperone to prevent the formation of
+          secondary structures in RNA molecules, thus facilitating translation at
+          low temperature
+        notes: Supports CsdA DEAD-box RNA helicase in temperature delta very low;
+          UniProtKB:Q8XA87 (deaD, ATP-dependent RNA helicase DeaD) in Escherichia
+          coli O157:H7 provides a verified protein exemplar.
   - node_id: large_ribosomal_subunit_biogenesis
     label: 50S ribosomal subunit biogenesis
     node_type: BIOLOGICAL_PROCESS
@@ -333,4 +374,11 @@ curation_history:
     unsupported membrane phase-transition temperature branch, requoted the cold RNA
     connector with exact Phadtare and Inouye wording, and replaced generic Springer
     endpoint notes with the specific Siliakus et al. full-text endpoint.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P0A9X9 (cspA)
+    protein example to node cspa_protein; added UniProtKB:Q8XA87 (deaD) protein example
+    to node csda_helicase.'
   llm_assisted: true

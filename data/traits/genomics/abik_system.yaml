@@ -98,6 +98,32 @@ causal_graphs:
     node_type: TRAIT
     grounding: traitmech:000214
     description: Possession of a genome-encoded abortive-infection phage defense system.
+  - node_id: abik_system_protein_component
+    label: Retron Mx162 reverse transcriptase
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Retron Mx162 reverse transcriptase) associated
+      with AbiK system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    protein_examples:
+    - uniprot_id: UniProtKB:P23072
+      protein_label: Retron Mx162 reverse transcriptase
+      taxon_id: NCBITaxon:34
+      taxon_label: Myxococcus xanthus
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 74
+      sequence_version: 1
+      role: Characteristic protein component (P23072, Retron Mx162 reverse transcriptase)
+        associated with AbiK system in Myxococcus xanthus.
+      evidence:
+      - reference: DOI:10.1128/JB.187.11.3721-3730.2005
+        snippet: the antiphage activity depends on the level of expression of the
+          abiK gene and on the presence of a reverse transcriptase (RT) motif in AbiK
+        notes: Supports Retron Mx162 reverse transcriptase in AbiK system; UniProtKB:P23072
+          (P23072, Retron Mx162 reverse transcriptase) in Myxococcus xanthus provides
+          a verified protein exemplar.
   edges:
   - subject: abik_locus
     predicate: contributes to
@@ -169,6 +195,18 @@ causal_graphs:
       snippet: AbiK, which is required for abortive phage infection in the Gram-positive
         bacterium Lactococcus lactis
       notes: Wang et al. place AbiK in the abortive infection class of phage defense.
+  - subject: abik_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: abik_system_trait
+    description: Retron Mx162 reverse transcriptase (P23072, UniProtKB:P23072) contributes
+      to AbiK system (associated with polymerizes, transferase, properties).
+    evidence:
+    - reference: DOI:10.1093/nar/gkr397
+      snippet: AbiK does not exhibit the properties expected for an RT, but polymerizes
+        long DNAs of ‘random’ sequence, analogous to a terminal transferase
+      notes: Supports the functional association between Retron Mx162 reverse transcriptase
+        (UniProtKB:P23072 in Myxococcus xanthus) and AbiK system.
 curation_history:
 - timestamp: '2026-09-15T21:30:00Z'
   curator: codex
@@ -177,4 +215,10 @@ curation_history:
     infection system parent after an ignored-and-hidden duplicate review found no
     exact live TraitMech, METPO, or prior proposal record; the replacement placeholder
     is reserved in proposals/metpo_traitmech_v106.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    abik_system_protein_component with UniProtKB:P23072 (P23072) exemplar.'
   llm_assisted: true

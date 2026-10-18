@@ -101,3 +101,71 @@ curation_history:
     from whole-prey engulfment, free-particle uptake and sequence interpretation;
     retained hierarchy and mechanism gaps.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph myzocytosis_graph
+    with GENE_OR_PROTEIN node myzocytosis_protein_component and UniProtKB:A0A0H3C3S1
+    exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: myzocytosis_graph
+  title: Protein component associated with myzocytosis
+  description: Literature-backed association between FtsZ-localized protein C (UniProtKB:A0A0H3C3S1)
+    and myzocytosis.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:A0A0H3C3S1 in
+    Caulobacter vibrioides (strain NA1000 / CB15N) (Caulobacter crescentus)) associated
+    with myzocytosis while full multi-step mechanistic curation remains future work.
+  nodes:
+  - node_id: myzocytosis_trait
+    label: myzocytosis
+    node_type: TRAIT
+    grounding: traitmech:000631
+    description: A physiological phenotype in which a microbial organism feeds by
+      aspirating prey cell contents through a localized feeding connection rather
+      than engulfing the prey whole.
+  - node_id: myzocytosis_protein_component
+    label: FtsZ-localized protein C
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (FtsZ-localized protein C) associated with myzocytosis.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - fzlC
+    protein_examples:
+    - uniprot_id: UniProtKB:A0A0H3C3S1
+      protein_label: FtsZ-localized protein C
+      gene_symbol: fzlC
+      taxon_id: NCBITaxon:565050
+      taxon_label: Caulobacter vibrioides (strain NA1000 / CB15N) (Caulobacter crescentus)
+      entry_status: REVIEWED
+      proteome_id: UP000001364
+      retrieved_on: '2026-10-17'
+      entry_version: 29
+      sequence_version: 1
+      role: Characteristic protein component (fzlC, FtsZ-localized protein C) associated
+        with myzocytosis in Caulobacter vibrioides (strain NA1000 / CB15N) (Caulobacter
+        crescentus).
+      evidence:
+      - reference: DOI:10.3390/microorganisms11081945
+        snippet: Colpodella sp. (ATCC 50594) obtain nutrients by preying on Parabodo
+          caudatus using myzocytosis.
+        notes: Supports FtsZ-localized protein C in myzocytosis; UniProtKB:A0A0H3C3S1
+          (fzlC, FtsZ-localized protein C) in Caulobacter vibrioides (strain NA1000
+          / CB15N) (Caulobacter crescentus) provides a verified protein exemplar.
+  edges:
+  - subject: myzocytosis_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: myzocytosis_trait
+    description: FtsZ-localized protein C (fzlC, UniProtKB:A0A0H3C3S1) contributes
+      to myzocytosis (associated with myzocytosis, colpodella, nutrients).
+    evidence:
+    - reference: DOI:10.3390/microorganisms11081945
+      snippet: Colpodella sp. (ATCC 50594) obtain nutrients by preying on Parabodo
+        caudatus using myzocytosis.
+      notes: Supports the functional association between FtsZ-localized protein C
+        (UniProtKB:A0A0H3C3S1 in Caulobacter vibrioides (strain NA1000 / CB15N) (Caulobacter
+        crescentus)) and myzocytosis.

@@ -96,7 +96,7 @@ causal_graphs:
       taxon_label: Acidithiobacillus ferrooxidans
       entry_status: REVIEWED
       retrieved_on: '2026-08-24'
-      entry_version: 57
+      entry_version: 58
       sequence_version: 1
       role: Large-chain component of form I RuBisCO in the A. ferrooxidans CBB pathway;
         this accession is not presented as the complete L8S8 enzyme.
@@ -112,6 +112,25 @@ causal_graphs:
     description: Enzyme interconverting CO2 and bicarbonate to facilitate dissolved
       inorganic carbon fixation.
     grounding: InterPro:IPR001765
+    protein_examples:
+    - uniprot_id: UniProtKB:Q5KW03
+      protein_label: Carbonic anhydrase
+      taxon_id: NCBITaxon:235909
+      taxon_label: Geobacillus kaustophilus (strain HTA426)
+      entry_status: REVIEWED
+      proteome_id: UP000001172
+      retrieved_on: '2026-10-17'
+      entry_version: 114
+      sequence_version: 1
+      role: Exemplar protein (Q5KW03, Carbonic anhydrase) representing carbonic anhydrase
+        in Geobacillus kaustophilus (strain HTA426) for chemolithoautotrophic.
+      evidence:
+      - reference: DOI:10.1128/aem.01557-23
+        snippet: DIC transporters and carbonic anhydrase enzymes (CA) to facilitate
+          DIC fixation
+        notes: Supports carbonic anhydrase in chemolithoautotrophic; UniProtKB:Q5KW03
+          (Q5KW03, Carbonic anhydrase) in Geobacillus kaustophilus (strain HTA426)
+          provides a verified protein exemplar.
   - node_id: dic_transporter
     label: dissolved inorganic carbon transporter
     node_type: GENE_OR_PROTEIN
@@ -120,6 +139,28 @@ causal_graphs:
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: This functional node spans unrelated CO2 and bicarbonate uptake
       systems; the cited graph does not resolve one exact transporter family or complex.
+    protein_examples:
+    - uniprot_id: UniProtKB:A0A6L8Q027
+      protein_label: Probable inorganic carbon transporter subunit DabB
+      gene_symbol: dabB
+      taxon_id: NCBITaxon:1392
+      taxon_label: Bacillus anthracis
+      entry_status: REVIEWED
+      proteome_id: UP000000594
+      retrieved_on: '2026-10-17'
+      entry_version: 22
+      sequence_version: 1
+      role: Exemplar protein (dabB, Probable inorganic carbon transporter subunit
+        DabB) representing dissolved inorganic carbon transporter in Bacillus anthracis
+        for chemolithoautotrophic.
+      evidence:
+      - reference: DOI:10.1128/AEM.02473-10
+        snippet: the assimilation of CO2 (oxidation state of +4) into cellular carbon
+          (average oxidation state of 0, as in carbohydrates) requires four reducing
+          equivalents.
+        notes: Supports dissolved inorganic carbon transporter in chemolithoautotrophic;
+          UniProtKB:A0A6L8Q027 (dabB, Probable inorganic carbon transporter subunit
+          DabB) in Bacillus anthracis provides a verified protein exemplar.
   - node_id: dissolved_inorganic_carbon
     label: dissolved inorganic carbon
     node_type: CHEMICAL
@@ -416,4 +457,12 @@ curation_history:
   changes: Marked the graph mechanistic, reviewed the broad dissolved-inorganic-carbon
     transporter node as label-only, replaced the canonical web citation with its DOI,
     and added the reviewed A. ferrooxidans cbbL1 large-chain example.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:P0C916
+    version metadata (entry_version=58, sequence_version=1); added UniProtKB:Q5KW03
+    (Q5KW03) protein example to node carbonic_anhydrase; added UniProtKB:A0A6L8Q027
+    (dabB) protein example to node dic_transporter.'
   llm_assisted: true

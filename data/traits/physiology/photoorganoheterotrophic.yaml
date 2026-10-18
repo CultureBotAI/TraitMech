@@ -75,7 +75,7 @@ causal_graphs:
       taxon_label: Rhodospirillum rubrum
       entry_status: REVIEWED
       retrieved_on: '2026-08-24'
-      entry_version: 119
+      entry_version: 120
       sequence_version: 2
       role: L-chain component of the R. rubrum Type II photochemical reaction center;
         this accession is not presented as the complete reaction-center complex.
@@ -118,6 +118,27 @@ causal_graphs:
     grounding_notes: This is a multisubunit Fe-S reaction-center class with lineage-specific
       core and peripheral components; no single protein-family term denotes the whole
       complex.
+    protein_examples:
+    - uniprot_id: UniProtKB:P51758
+      protein_label: Photosynthetic reaction center cytochrome c subunit
+      gene_symbol: pufC
+      taxon_id: NCBITaxon:983917
+      taxon_label: Rubrivivax gelatinosus (strain NBRC 100245 / IL144)
+      entry_status: REVIEWED
+      proteome_id: UP000007883
+      retrieved_on: '2026-10-17'
+      entry_version: 124
+      sequence_version: 2
+      role: Exemplar protein (pufC, Photosynthetic reaction center cytochrome c subunit)
+        representing Type I reaction center in Rubrivivax gelatinosus (strain NBRC
+        100245 / IL144) for photoorganoheterotrophic.
+      evidence:
+      - reference: DOI:10.1128/AEM.01747-12
+        snippet: Aerobic anoxygenic phototrophs contain photosynthetic reaction centers
+          composed of bacteriochlorophyll
+        notes: Supports Type I reaction center in photoorganoheterotrophic; UniProtKB:P51758
+          (pufC, Photosynthetic reaction center cytochrome c subunit) in Rubrivivax
+          gelatinosus (strain NBRC 100245 / IL144) provides a verified protein exemplar.
   - node_id: fe_s_electron_transfer
     label: electron transfer to Fe-S acceptors
     node_type: BIOLOGICAL_PROCESS
@@ -401,4 +422,11 @@ curation_history:
   action: CONNECT_CAUSAL_GRAPH_COMPONENTS
   changes: 'Resolved issue #183 graph fragmentation (3 components to 1) with 2 public-source,
     verbatim-snippet-backed connector(s). No paid research service was called.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:P10717
+    version metadata (entry_version=120, sequence_version=2); added UniProtKB:P51758
+    (pufC) protein example to node type_i_reaction_center.'
   llm_assisted: true

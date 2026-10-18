@@ -66,11 +66,54 @@ causal_graphs:
     description: Methyl-accepting chemotaxis protein that binds attractant/repellent
       ligands.
     grounding: InterPro:IPR004090
+    protein_examples:
+    - uniprot_id: UniProtKB:P07330
+      protein_label: Protein-glutamate methylesterase/protein-glutamine glutaminase
+      gene_symbol: cheB
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 189
+      sequence_version: 3
+      role: Exemplar protein (cheB, Protein-glutamate methylesterase/protein-glutamine
+        glutaminase) representing chemoreceptor (MCP) in Escherichia coli (strain
+        K12) for chemotaxis.
+      evidence:
+      - reference: DOI:10.1016/j.tim.2022.10.007
+        snippet: The chemoreceptor nanoarray complexes with the cytosolic histidine
+          kinase chemotaxis protein A (CheA) and regulates its autophosphorylation
+          based on chemoreceptor ligand occupancy
+        notes: Supports chemoreceptor (MCP) in chemotaxis; UniProtKB:P07330 (cheB,
+          Protein-glutamate methylesterase/protein-glutamine glutaminase) in Escherichia
+          coli (strain K12) provides a verified protein exemplar.
   - node_id: chea_kinase
     label: CheA histidine kinase
     node_type: GENE_OR_PROTEIN
     description: Histidine autokinase whose activity is modulated by chemoreceptors.
     grounding: InterPro:IPR051315
+    protein_examples:
+    - uniprot_id: UniProtKB:P07363
+      protein_label: Chemotaxis protein CheA
+      gene_symbol: cheA
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 214
+      sequence_version: 3
+      role: Exemplar protein (cheA, Chemotaxis protein CheA) representing CheA histidine
+        kinase in Escherichia coli (strain K12) for chemotaxis.
+      evidence:
+      - reference: DOI:10.1016/j.tim.2022.10.007
+        snippet: The chemoreceptor nanoarray complexes with the cytosolic histidine
+          kinase chemotaxis protein A (CheA) and regulates its autophosphorylation
+          based on chemoreceptor ligand occupancy
+        notes: Supports CheA histidine kinase in chemotaxis; UniProtKB:P07363 (cheA,
+          Chemotaxis protein CheA) in Escherichia coli (strain K12) provides a verified
+          protein exemplar.
   - node_id: chea_autophosphorylation
     label: CheA autophosphorylation
     node_type: MOLECULAR_FUNCTION
@@ -92,7 +135,7 @@ causal_graphs:
       entry_status: REVIEWED
       proteome_id: UP000000625
       retrieved_on: '2026-08-24'
-      entry_version: 160
+      entry_version: 161
       sequence_version: 2
       role: Phosphorylated CheY binds the E. coli flagellar switch and raises the
         probability of clockwise motor rotation.
@@ -107,22 +150,107 @@ causal_graphs:
     description: Phospho-regulated methylesterase that demethylates chemoreceptors
       during adaptation.
     grounding: InterPro:IPR000673
+    protein_examples:
+    - uniprot_id: UniProtKB:P07330
+      protein_label: Protein-glutamate methylesterase/protein-glutamine glutaminase
+      gene_symbol: cheB
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 189
+      sequence_version: 3
+      role: Exemplar protein (cheB, Protein-glutamate methylesterase/protein-glutamine
+        glutaminase) representing CheB methylesterase in Escherichia coli (strain
+        K12) for chemotaxis.
+      evidence:
+      - reference: DOI:10.1016/j.tim.2022.10.007
+        snippet: The chemoreceptor nanoarray complexes with the cytosolic histidine
+          kinase chemotaxis protein A (CheA) and regulates its autophosphorylation
+          based on chemoreceptor ligand occupancy
+        notes: Supports CheB methylesterase in chemotaxis; UniProtKB:P07330 (cheB,
+          Protein-glutamate methylesterase/protein-glutamine glutaminase) in Escherichia
+          coli (strain K12) provides a verified protein exemplar.
   - node_id: cher
     label: CheR methyltransferase
     node_type: GENE_OR_PROTEIN
     description: Methyltransferase that methylates chemoreceptors during adaptation.
     grounding: InterPro:IPR000780
+    protein_examples:
+    - uniprot_id: UniProtKB:P07364
+      protein_label: Chemotaxis protein methyltransferase
+      gene_symbol: cheR
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 166
+      sequence_version: 2
+      role: Exemplar protein (cheR, Chemotaxis protein methyltransferase) representing
+        CheR methyltransferase in Escherichia coli (strain K12) for chemotaxis.
+      evidence:
+      - reference: DOI:10.1016/j.tim.2022.10.007
+        snippet: The chemoreceptor nanoarray complexes with the cytosolic histidine
+          kinase chemotaxis protein A (CheA) and regulates its autophosphorylation
+          based on chemoreceptor ligand occupancy
+        notes: Supports CheR methyltransferase in chemotaxis; UniProtKB:P07364 (cheR,
+          Chemotaxis protein methyltransferase) in Escherichia coli (strain K12) provides
+          a verified protein exemplar.
   - node_id: chez
     label: CheZ phosphatase
     node_type: GENE_OR_PROTEIN
     description: Phosphatase that dephosphorylates CheY-P to reset signaling.
     grounding: InterPro:IPR007439
+    protein_examples:
+    - uniprot_id: UniProtKB:P0A9H9
+      protein_label: Protein phosphatase CheZ
+      gene_symbol: cheZ
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 134
+      sequence_version: 1
+      role: Exemplar protein (cheZ, Protein phosphatase CheZ) representing CheZ phosphatase
+        in Escherichia coli (strain K12) for chemotaxis.
+      evidence:
+      - reference: DOI:10.1016/j.tim.2022.10.007
+        snippet: The chemoreceptor nanoarray complexes with the cytosolic histidine
+          kinase chemotaxis protein A (CheA) and regulates its autophosphorylation
+          based on chemoreceptor ligand occupancy
+        notes: Supports CheZ phosphatase in chemotaxis; UniProtKB:P0A9H9 (cheZ, Protein
+          phosphatase CheZ) in Escherichia coli (strain K12) provides a verified protein
+          exemplar.
   - node_id: chew
     label: CheW coupling protein
     node_type: GENE_OR_PROTEIN
     description: Adaptor/scaffold coupling CheA to chemoreceptors in the core signaling
       unit.
     grounding: InterPro:IPR039315
+    protein_examples:
+    - uniprot_id: UniProtKB:P0A964
+      protein_label: Chemotaxis protein CheW
+      gene_symbol: cheW
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 133
+      sequence_version: 1
+      role: Exemplar protein (cheW, Chemotaxis protein CheW) representing CheW coupling
+        protein in Escherichia coli (strain K12) for chemotaxis.
+      evidence:
+      - reference: DOI:10.1016/j.tim.2022.10.007
+        snippet: The chemoreceptor nanoarray complexes with the cytosolic histidine
+          kinase chemotaxis protein A (CheA) and regulates its autophosphorylation
+          based on chemoreceptor ligand occupancy
+        notes: Supports CheW coupling protein in chemotaxis; UniProtKB:P0A964 (cheW,
+          Chemotaxis protein CheW) in Escherichia coli (strain K12) provides a verified
+          protein exemplar.
   - node_id: cw_flagellar_rotation
     label: clockwise flagellar rotation
     node_type: BIOLOGICAL_PROCESS
@@ -294,4 +422,13 @@ curation_history:
   action: CONNECT_CAUSAL_GRAPH_COMPONENTS
   changes: 'Resolved issue #183 graph fragmentation (2 components to 1) with one public-source,
     verbatim-snippet-backed connector. No paid research service was called.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:P0AE67
+    version metadata (entry_version=161, sequence_version=2); added UniProtKB:P07330
+    (cheB) protein example to node chemoreceptor_mcp; added UniProtKB:P07363 (cheA)
+    protein example to node chea_kinase; added UniProtKB:P07330 (cheB) protein example
+    to node cheb (+3 more).'
   llm_assisted: true

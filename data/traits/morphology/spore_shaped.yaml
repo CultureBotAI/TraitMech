@@ -84,7 +84,7 @@ causal_graphs:
       taxon_label: Bacillus subtilis 168
       entry_status: REVIEWED
       retrieved_on: '2026-08-25'
-      entry_version: 134
+      entry_version: 135
       sequence_version: 1
       role: SpoIVA hydrolyzes ATP and self-assembles into the basement layer that
         supports deposition of the Bacillus spore coat.
@@ -98,6 +98,26 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Morphogenetic protein required for spore coat encasement.
     grounding: InterPro:IPR012609
+    protein_examples:
+    - uniprot_id: UniProtKB:P37963
+      protein_label: Spore coat morphogenetic protein SpoVID
+      gene_symbol: spoVID
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
+      entry_status: REVIEWED
+      proteome_id: UP000001570
+      retrieved_on: '2026-10-17'
+      entry_version: 134
+      sequence_version: 1
+      role: Exemplar protein (spoVID, Spore coat morphogenetic protein SpoVID) representing
+        SpoVM in Bacillus subtilis (strain 168) for spore shaped.
+      evidence:
+      - reference: DOI:10.1038/nrmicro2921
+        snippet: SpoVM and SpoVID are crucial for the transition from a single cap
+          to a full spherical shell that encases the spore
+        notes: Supports SpoVM in spore shaped; UniProtKB:P37963 (spoVID, Spore coat
+          morphogenetic protein SpoVID) in Bacillus subtilis (strain 168) provides
+          a verified protein exemplar.
   - node_id: spovid_protein
     label: SpoVID
     node_type: GENE_OR_PROTEIN
@@ -105,6 +125,27 @@ causal_graphs:
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Retained label-only because no exact semantic SpoVID family identifier
       was verified in this review.
+    protein_examples:
+    - uniprot_id: UniProtKB:P37963
+      protein_label: Spore coat morphogenetic protein SpoVID
+      gene_symbol: spoVID
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
+      entry_status: REVIEWED
+      proteome_id: UP000001570
+      retrieved_on: '2026-10-17'
+      entry_version: 134
+      sequence_version: 1
+      role: Exemplar protein (spoVID, Spore coat morphogenetic protein SpoVID) representing
+        SpoVID in Bacillus subtilis (strain 168) for spore shaped.
+      evidence:
+      - reference: DOI:10.1038/nrmicro2921
+        snippet: 'Three layers of the B. subtilis spore coat are observed in thin-section
+          electron microscopy: a lamellar inner coat, a more coarsely layered outer
+          coat and a recently identified layer named the crust'
+        notes: Supports SpoVID in spore shaped; UniProtKB:P37963 (spoVID, Spore coat
+          morphogenetic protein SpoVID) in Bacillus subtilis (strain 168) provides
+          a verified protein exemplar.
   - node_id: spore_encasement
     label: spore encasement
     node_type: BIOLOGICAL_PROCESS
@@ -115,6 +156,27 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Morphogenetic protein required for outer coat assembly.
     grounding: InterPro:IPR018901
+    protein_examples:
+    - uniprot_id: UniProtKB:P14016
+      protein_label: Spore coat morphogenetic protein CotE
+      gene_symbol: cotE
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
+      entry_status: REVIEWED
+      proteome_id: UP000001570
+      retrieved_on: '2026-10-17'
+      entry_version: 128
+      sequence_version: 1
+      role: Exemplar protein (cotE, Spore coat morphogenetic protein CotE) representing
+        CotE in Bacillus subtilis (strain 168) for spore shaped.
+      evidence:
+      - reference: DOI:10.1038/nrmicro2921
+        snippet: 'Three layers of the B. subtilis spore coat are observed in thin-section
+          electron microscopy: a lamellar inner coat, a more coarsely layered outer
+          coat and a recently identified layer named the crust'
+        notes: Supports CotE in spore shaped; UniProtKB:P14016 (cotE, Spore coat morphogenetic
+          protein CotE) in Bacillus subtilis (strain 168) provides a verified protein
+          exemplar.
   - node_id: outer_coat
     label: outer coat
     node_type: CELLULAR_LOCALIZATION
@@ -126,6 +188,27 @@ causal_graphs:
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Retained label-only because no exact semantic SafA family identifier
       was verified in this review.
+    protein_examples:
+    - uniprot_id: UniProtKB:O32062
+      protein_label: Spore coat morphogenetic protein SafA
+      gene_symbol: safA
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
+      entry_status: REVIEWED
+      proteome_id: UP000001570
+      retrieved_on: '2026-10-17'
+      entry_version: 126
+      sequence_version: 1
+      role: Exemplar protein (safA, Spore coat morphogenetic protein SafA) representing
+        SafA in Bacillus subtilis (strain 168) for spore shaped.
+      evidence:
+      - reference: DOI:10.1038/nrmicro2921
+        snippet: 'Three layers of the B. subtilis spore coat are observed in thin-section
+          electron microscopy: a lamellar inner coat, a more coarsely layered outer
+          coat and a recently identified layer named the crust'
+        notes: Supports SafA in spore shaped; UniProtKB:O32062 (safA, Spore coat morphogenetic
+          protein SafA) in Bacillus subtilis (strain 168) provides a verified protein
+          exemplar.
   - node_id: inner_coat
     label: inner coat
     node_type: CELLULAR_LOCALIZATION
@@ -367,4 +450,13 @@ curation_history:
   action: CONNECT_CAUSAL_GRAPH_COMPONENTS
   changes: 'Resolved issue #183 graph fragmentation (5 components to 1) using 4 source-
     and verbatim-snippet-backed connector(s). No paid research service was called.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:P35149
+    version metadata (entry_version=135, sequence_version=1); added UniProtKB:P37963
+    (spoVID) protein example to node spovm_protein; added UniProtKB:P37963 (spoVID)
+    protein example to node spovid_protein; added UniProtKB:P14016 (cotE) protein
+    example to node cote_protein (+1 more).'
   llm_assisted: true

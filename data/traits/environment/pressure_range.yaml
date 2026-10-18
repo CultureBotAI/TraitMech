@@ -79,6 +79,38 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Accumulation of compatible solutes (betaine, glutamate, beta-hydroxybutyrate)
       acting as piezolytes.
+  - node_id: pressure_range_protein_component
+    label: sn-1 oleoyl-lipid 12-desaturase
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (sn-1 oleoyl-lipid 12-desaturase) associated with
+      pressure range.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - desA
+    protein_examples:
+    - uniprot_id: UniProtKB:Q55231
+      protein_label: sn-1 oleoyl-lipid 12-desaturase
+      gene_symbol: desA
+      taxon_id: NCBITaxon:32049
+      taxon_label: Picosynechococcus sp. (strain ATCC 27264 / PCC 7002 / PR-6) (Agmenellum
+        quadruplicatum)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 127
+      sequence_version: 1
+      role: Characteristic protein component (desA, sn-1 oleoyl-lipid 12-desaturase)
+        associated with pressure range in Picosynechococcus sp. (strain ATCC 27264
+        / PCC 7002 / PR-6) (Agmenellum quadruplicatum).
+      evidence:
+      - reference: DOI:10.3389/fmolb.2022.1058381
+        snippet: Piezophiles, microorganisms adapted to high pressure, have developed
+          key strategies to maintain the integrity of their lipid membrane
+        notes: Supports sn-1 oleoyl-lipid 12-desaturase in pressure range; UniProtKB:Q55231
+          (desA, sn-1 oleoyl-lipid 12-desaturase) in Picosynechococcus sp. (strain
+          ATCC 27264 / PCC 7002 / PR-6) (Agmenellum quadruplicatum) provides a verified
+          protein exemplar.
   edges:
   - subject: hydrostatic_pressure
     predicate: defines
@@ -146,6 +178,19 @@ causal_graphs:
     - reference: DOI:10.3390/microorganisms11071629
       notes: Compatible solutes (glutamate, betaine, beta-hydroxybutyrate) act by
         preferential hydration, displacing protein-bound water.
+  - subject: pressure_range_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: pressure_range_trait
+    description: sn-1 oleoyl-lipid 12-desaturase (desA, UniProtKB:Q55231) contributes
+      to pressure range (associated with microorganisms, piezophiles, strategies).
+    evidence:
+    - reference: DOI:10.3389/fmolb.2022.1058381
+      snippet: Piezophiles, microorganisms adapted to high pressure, have developed
+        key strategies to maintain the integrity of their lipid membrane
+      notes: Supports the functional association between sn-1 oleoyl-lipid 12-desaturase
+        (UniProtKB:Q55231 in Picosynechococcus sp. (strain ATCC 27264 / PCC 7002 /
+        PR-6) (Agmenellum quadruplicatum)) and pressure range.
 curation_history:
 - timestamp: '2026-05-28T00:00:00Z'
   curator: claude
@@ -215,4 +260,10 @@ curation_history:
     canonical example(s): Colwellia marinimaniae (NCBITaxon:1513592; DOI:10.1099/ijsem.0.001671).
     The note retains the measured value or scopes broad-class examples to the cited
     branch; no paid research was used.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    pressure_range_protein_component with UniProtKB:Q55231 (desA) exemplar.'
   llm_assisted: true

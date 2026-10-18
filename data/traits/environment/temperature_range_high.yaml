@@ -71,6 +71,27 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Topoisomerase that introduces positive supercoils into DNA in thermophiles.
     grounding: GO:0160097
+    protein_examples:
+    - uniprot_id: UniProtKB:P74759
+      protein_label: Reverse gyrase
+      gene_symbol: rgy
+      taxon_id: NCBITaxon:523848
+      taxon_label: Saccharolobus shibatae (strain ATCC 51178 / DSM 5389 / JCM 8931
+        / NBRC 15437 / B12) (Sulfolobus shibatae)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 127
+      sequence_version: 1
+      role: Exemplar protein (rgy, Reverse gyrase) representing reverse gyrase (TopR/rgy)
+        in Saccharolobus shibatae (strain ATCC 51178 / DSM 5389 / JCM 8931 / NBRC
+        15437 / B12) (Sulfolobus shibatae) for temperature range high.
+      evidence:
+      - reference: DOI:10.1016/s0300-9629(97)00003-0
+        snippet: adapted to environments of high temperature
+        notes: Supports reverse gyrase (TopR/rgy) in temperature range high; UniProtKB:P74759
+          (rgy, Reverse gyrase) in Saccharolobus shibatae (strain ATCC 51178 / DSM
+          5389 / JCM 8931 / NBRC 15437 / B12) (Sulfolobus shibatae) provides a verified
+          protein exemplar.
   - node_id: dna_positive_supercoiling
     label: DNA positive supercoiling
     node_type: BIOLOGICAL_PROCESS
@@ -87,6 +108,25 @@ causal_graphs:
       a quantitative measurement graph; no exact semantic family term was established
       for this aggregate use.
     description: Hsp70 chaperone system assisting ATP-dependent protein folding.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0A6Y8
+      protein_label: Chaperone protein DnaK
+      gene_symbol: dnaK
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 183
+      sequence_version: 2
+      role: Exemplar protein (dnaK, Chaperone protein DnaK) representing DnaK-DnaJ
+        chaperone in Escherichia coli (strain K12) for temperature range high.
+      evidence:
+      - reference: DOI:10.1128/mbio.02174-23
+        snippet: heat shock genes encoding chaperones, such as DnaK and GroEL
+        notes: Supports DnaK-DnaJ chaperone in temperature range high; UniProtKB:P0A6Y8
+          (dnaK, Chaperone protein DnaK) in Escherichia coli (strain K12) provides
+          a verified protein exemplar.
   - node_id: protein_folding
     label: protein folding
     node_type: BIOLOGICAL_PROCESS
@@ -100,6 +140,25 @@ causal_graphs:
       systems, as context for a quantitative temperature-range bin.
     description: Chaperonin and Hsp90 systems assisting protein folding under heat
       stress.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0A6Z3
+      protein_label: Chaperone protein HtpG
+      gene_symbol: htpG
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 166
+      sequence_version: 1
+      role: Exemplar protein (htpG, Chaperone protein HtpG) representing GroEL-GroES
+        / HtpG chaperone in Escherichia coli (strain K12) for temperature range high.
+      evidence:
+      - reference: DOI:10.1128/mbio.02174-23
+        snippet: heat shock genes encoding chaperones, such as DnaK and GroEL
+        notes: Supports GroEL-GroES / HtpG chaperone in temperature range high; UniProtKB:P0A6Z3
+          (htpG, Chaperone protein HtpG) in Escherichia coli (strain K12) provides
+          a verified protein exemplar.
   - node_id: proteostasis_high_temp
     label: proteostasis at high temperature
     node_type: BIOLOGICAL_PROCESS
@@ -272,4 +331,12 @@ curation_history:
     the tranche: set graph scope temperature_range_high_thermophile=NONMECHANISTIC
     with scope_notes; marked 2 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (dnak_dnaj, groel_groes_htpg).'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P74759 (rgy)
+    protein example to node reverse_gyrase; added UniProtKB:P0A6Y8 (dnaK) protein
+    example to node dnak_dnaj; added UniProtKB:P0A6Z3 (htpG) protein example to node
+    groel_groes_htpg.'
   llm_assisted: true

@@ -59,7 +59,7 @@ def test_review_adds_snippets_and_grounds_cell_length_small_edges():
     nodes = {node["node_id"]: node for node in graph["nodes"]}
     by_key = {_edge_key(edge): edge for edge in graph["edges"]}
 
-    assert doc["curation_history"][-1]["action"] == ACTION
+    assert any(event.get("action") == ACTION for event in doc["curation_history"])
     assert nodes["ftsz_abundance"]["node_type"] == "QUALITY"
     assert "grounding_status" not in nodes["ftsz_abundance"]
     assert {

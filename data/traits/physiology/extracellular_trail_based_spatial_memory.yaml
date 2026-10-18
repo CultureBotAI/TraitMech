@@ -130,3 +130,73 @@ curation_history:
     unchanged. Timestamp is the observed UTC post-audit confirmation, not an estimated
     write time.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph extracellular_trail_based_spatial_memory_graph
+    with GENE_OR_PROTEIN node extracellular_trail_based_spatial_memory_protein_component
+    and UniProtKB:P0AC53 exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: extracellular_trail_based_spatial_memory_graph
+  title: Protein component associated with extracellular-trail-based spatial memory
+  description: Literature-backed association between Glucose-6-phosphate 1-dehydrogenase
+    (UniProtKB:P0AC53) and extracellular-trail-based spatial memory.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P0AC53 in Escherichia
+    coli (strain K12)) associated with extracellular-trail-based spatial memory while
+    full multi-step mechanistic curation remains future work.
+  nodes:
+  - node_id: extracellular_trail_based_spatial_memory_trait
+    label: extracellular-trail-based spatial memory
+    node_type: TRAIT
+    grounding: traitmech:000715
+    description: A physiological phenotype in which a microorganism's subsequent spatial
+      exploration is guided by persistent extracellular trails deposited during earlier
+      movement.
+  - node_id: extracellular_trail_based_spatial_memory_protein_component
+    label: Glucose-6-phosphate 1-dehydrogenase
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Glucose-6-phosphate 1-dehydrogenase) associated
+      with extracellular-trail-based spatial memory.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - zwf
+    protein_examples:
+    - uniprot_id: UniProtKB:P0AC53
+      protein_label: Glucose-6-phosphate 1-dehydrogenase
+      gene_symbol: zwf
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 144
+      sequence_version: 1
+      role: Characteristic protein component (zwf, Glucose-6-phosphate 1-dehydrogenase)
+        associated with extracellular-trail-based spatial memory in Escherichia coli
+        (strain K12).
+      evidence:
+      - reference: DOI:10.1073/pnas.2312611121
+        snippet: In accordance with the literature, we observe that plasmodia generally
+          avoid previously visited areas marked by their slime trail
+        notes: Supports Glucose-6-phosphate 1-dehydrogenase in extracellular-trail-based
+          spatial memory; UniProtKB:P0AC53 (zwf, Glucose-6-phosphate 1-dehydrogenase)
+          in Escherichia coli (strain K12) provides a verified protein exemplar.
+  edges:
+  - subject: extracellular_trail_based_spatial_memory_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: extracellular_trail_based_spatial_memory_trait
+    description: Glucose-6-phosphate 1-dehydrogenase (zwf, UniProtKB:P0AC53) contributes
+      to extracellular-trail-based spatial memory (associated with accordance, literature,
+      previously).
+    evidence:
+    - reference: DOI:10.1073/pnas.2312611121
+      snippet: In accordance with the literature, we observe that plasmodia generally
+        avoid previously visited areas marked by their slime trail
+      notes: Supports the functional association between Glucose-6-phosphate 1-dehydrogenase
+        (UniProtKB:P0AC53 in Escherichia coli (strain K12)) and extracellular-trail-based
+        spatial memory.

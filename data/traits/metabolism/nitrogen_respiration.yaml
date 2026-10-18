@@ -24,3 +24,73 @@ curation_history:
   changes: Proposed a DOI-backed FAPROTAX metabolic capability from proposals/metpo_traitmech_v11
     after repository-wide duplicate review.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph nitrogen_respiration_graph
+    with GENE_OR_PROTEIN node nitrogen_respiration_protein_component and UniProtKB:P0CZ13
+    exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: nitrogen_respiration_graph
+  title: Protein component associated with nitrogen respiration
+  description: Literature-backed association between Ion-translocating oxidoreductase
+    complex subunit A (UniProtKB:P0CZ13) and nitrogen respiration.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P0CZ13 in Rhodobacter
+    capsulatus (Rhodopseudomonas capsulata)) associated with nitrogen respiration
+    while full multi-step mechanistic curation remains future work.
+  nodes:
+  - node_id: nitrogen_respiration_trait
+    label: nitrogen respiration
+    node_type: TRAIT
+    grounding: traitmech:000121
+    description: An anaerobic respiration in which an organism conserves energy by
+      transferring electrons to an oxidized nitrogen compound as the terminal electron
+      acceptor.
+  - node_id: nitrogen_respiration_protein_component
+    label: Ion-translocating oxidoreductase complex subunit A
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Ion-translocating oxidoreductase complex subunit
+      A) associated with nitrogen respiration.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - rnfA
+    protein_examples:
+    - uniprot_id: UniProtKB:P0CZ13
+      protein_label: Ion-translocating oxidoreductase complex subunit A
+      gene_symbol: rnfA
+      taxon_id: NCBITaxon:1061
+      taxon_label: Rhodobacter capsulatus (Rhodopseudomonas capsulata)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 48
+      sequence_version: 1
+      role: Characteristic protein component (rnfA, Ion-translocating oxidoreductase
+        complex subunit A) associated with nitrogen respiration in Rhodobacter capsulatus
+        (Rhodopseudomonas capsulata).
+      evidence:
+      - reference: DOI:10.1128/mmbr.61.4.533-616.1997
+        snippet: unexpected relationships among denitrification enzymes and respiratory
+          oxygen reductases
+        notes: Supports Ion-translocating oxidoreductase complex subunit A in nitrogen
+          respiration; UniProtKB:P0CZ13 (rnfA, Ion-translocating oxidoreductase complex
+          subunit A) in Rhodobacter capsulatus (Rhodopseudomonas capsulata) provides
+          a verified protein exemplar.
+  edges:
+  - subject: nitrogen_respiration_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: nitrogen_respiration_trait
+    description: Ion-translocating oxidoreductase complex subunit A (rnfA, UniProtKB:P0CZ13)
+      contributes to nitrogen respiration (associated with denitrification, relationships,
+      respiratory).
+    evidence:
+    - reference: DOI:10.1128/mmbr.61.4.533-616.1997
+      snippet: unexpected relationships among denitrification enzymes and respiratory
+        oxygen reductases
+      notes: Supports the functional association between Ion-translocating oxidoreductase
+        complex subunit A (UniProtKB:P0CZ13 in Rhodobacter capsulatus (Rhodopseudomonas
+        capsulata)) and nitrogen respiration.

@@ -48,6 +48,26 @@ causal_graphs:
     label: CrvA
     node_type: GENE_OR_PROTEIN
     description: Periplasmic polymer-forming curvature determinant in Vibrio.
+    protein_examples:
+    - uniprot_id: UniProtKB:A0A0H3CD98
+      protein_label: Intermediate filament-like cell shape determinant creS
+      gene_symbol: creS
+      taxon_id: NCBITaxon:565050
+      taxon_label: Caulobacter vibrioides (strain NA1000 / CB15N)
+      entry_status: UNREVIEWED
+      proteome_id: UP000001364
+      retrieved_on: '2026-10-17'
+      entry_version: 36
+      sequence_version: 1
+      role: Exemplar protein (creS, Intermediate filament-like cell shape determinant
+        creS) representing CrvA in Caulobacter vibrioides (strain NA1000 / CB15N)
+        for vibrio shaped.
+      evidence:
+      - reference: DOI:10.1016/j.cell.2016.12.019
+        snippet: CrvA self-assembles into filaments at the inner face
+        notes: Supports CrvA in vibrio shaped; UniProtKB:A0A0H3CD98 (creS, Intermediate
+          filament-like cell shape determinant creS) in Caulobacter vibrioides (strain
+          NA1000 / CB15N) provides a verified protein exemplar.
   - node_id: periplasmic_filament
     label: periplasmic filament
     node_type: CELLULAR_LOCALIZATION
@@ -68,6 +88,26 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Periplasmic curvature determinant that co-assembles with CrvA into
       the inner-curve filament.
+    protein_examples:
+    - uniprot_id: UniProtKB:A0A0H3CD98
+      protein_label: Intermediate filament-like cell shape determinant creS
+      gene_symbol: creS
+      taxon_id: NCBITaxon:565050
+      taxon_label: Caulobacter vibrioides (strain NA1000 / CB15N)
+      entry_status: UNREVIEWED
+      proteome_id: UP000001364
+      retrieved_on: '2026-10-17'
+      entry_version: 36
+      sequence_version: 1
+      role: Exemplar protein (creS, Intermediate filament-like cell shape determinant
+        creS) representing CrvB in Caulobacter vibrioides (strain NA1000 / CB15N)
+        for vibrio shaped.
+      evidence:
+      - reference: DOI:10.1016/j.cell.2016.12.019
+        snippet: V. cholerae has a characteristic curved rod morphology
+        notes: Supports CrvB in vibrio shaped; UniProtKB:A0A0H3CD98 (creS, Intermediate
+          filament-like cell shape determinant creS) in Caulobacter vibrioides (strain
+          NA1000 / CB15N) provides a verified protein exemplar.
   - node_id: vadR_srna
     label: VadR sRNA
     node_type: RNA
@@ -84,6 +124,25 @@ causal_graphs:
     label: VxrAB two-component system
     node_type: GENE_OR_PROTEIN
     description: Two-component signaling system that activates vadR transcription.
+    protein_examples:
+    - uniprot_id: UniProtKB:B5BJ71
+      protein_label: tRNA-cytidine(32) 2-sulfurtransferase
+      gene_symbol: ttcA
+      taxon_id: NCBITaxon:554290
+      taxon_label: Salmonella paratyphi A (strain AKU_12601)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 73
+      sequence_version: 1
+      role: Exemplar protein (ttcA, tRNA-cytidine(32) 2-sulfurtransferase) representing
+        VxrAB two-component system in Salmonella paratyphi A (strain AKU_12601) for
+        vibrio shaped.
+      evidence:
+      - reference: DOI:10.1016/j.cell.2016.12.019
+        snippet: V. cholerae has a characteristic curved rod morphology
+        notes: Supports VxrAB two-component system in vibrio shaped; UniProtKB:B5BJ71
+          (ttcA, tRNA-cytidine(32) 2-sulfurtransferase) in Salmonella paratyphi A
+          (strain AKU_12601) provides a verified protein exemplar.
   - node_id: cyclic_di_gmp
     label: cyclic di-GMP
     node_type: CHEMICAL
@@ -250,4 +309,11 @@ curation_history:
     the tranche: set graph scope vibrio_shaped_crvA_curvature=NONMECHANISTIC with
     scope_notes; marked 3 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (crvA, crvB, vxrAB_tcs); retyped 2 node(s) (vadR_srna->RNA, crvA_mrna->RNA).'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:A0A0H3CD98
+    (creS) protein example to node crvA; added UniProtKB:A0A0H3CD98 (creS) protein
+    example to node crvB; added UniProtKB:B5BJ71 (ttcA) protein example to node vxrAB_tcs.'
   llm_assisted: true

@@ -54,6 +54,26 @@ causal_graphs:
     label: PcsB hydrolase system
     node_type: GENE_OR_PROTEIN
     description: Pneumococcal cell-separation factor involved in cross-wall splitting.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q8DMY4
+      protein_label: Peptidoglycan hydrolase PcsB
+      gene_symbol: pcsB
+      taxon_id: NCBITaxon:171101
+      taxon_label: Streptococcus pneumoniae (strain ATCC BAA-255 / R6)
+      entry_status: REVIEWED
+      proteome_id: UP000000586
+      retrieved_on: '2026-10-17'
+      entry_version: 98
+      sequence_version: 1
+      role: Exemplar protein (pcsB, Peptidoglycan hydrolase PcsB) representing PcsB
+        hydrolase system in Streptococcus pneumoniae (strain ATCC BAA-255 / R6) for
+        diplococcus shaped.
+      evidence:
+      - reference: DOI:10.1016/j.cub.2021.04.041
+        snippet: peptidoglycan assembly during the cell cycle
+        notes: Supports PcsB hydrolase system in diplococcus shaped; UniProtKB:Q8DMY4
+          (pcsB, Peptidoglycan hydrolase PcsB) in Streptococcus pneumoniae (strain
+          ATCC BAA-255 / R6) provides a verified protein exemplar.
   - node_id: daughter_cell_pair
     label: daughter-cell pair
     node_type: BIOLOGICAL_PROCESS
@@ -66,6 +86,26 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Cell-separation peptidoglycan hydrolase/autolysin dedicated to cleaving
       the septal cross-wall (e.g., LytB, AtlA, AmiC).
+    protein_examples:
+    - uniprot_id: UniProtKB:P0ABG7
+      protein_label: Peptidoglycan glycosyltransferase MrdB
+      gene_symbol: mrdB
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 133
+      sequence_version: 1
+      role: Exemplar protein (mrdB, Peptidoglycan glycosyltransferase MrdB) representing
+        septal peptidoglycan hydrolase in Escherichia coli (strain K12) for diplococcus
+        shaped.
+      evidence:
+      - reference: DOI:10.1016/j.cub.2021.04.041
+        snippet: peptidoglycan assembly during the cell cycle
+        notes: Supports septal peptidoglycan hydrolase in diplococcus shaped; UniProtKB:P0ABG7
+          (mrdB, Peptidoglycan glycosyltransferase MrdB) in Escherichia coli (strain
+          K12) provides a verified protein exemplar.
   - node_id: septum_cleavage
     label: septum cleavage
     node_type: BIOLOGICAL_PROCESS
@@ -88,6 +128,27 @@ causal_graphs:
     label: LytR/LCP teichoic acid ligase
     node_type: GENE_OR_PROTEIN
     description: LCP-family enzyme that anchors wall teichoic acid precursor to peptidoglycan.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q02115
+      protein_label: Polyisoprenyl-teichoic acid--peptidoglycan teichoic acid transferase
+        TagU
+      gene_symbol: tagU
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
+      entry_status: REVIEWED
+      proteome_id: UP000001570
+      retrieved_on: '2026-10-17'
+      entry_version: 150
+      sequence_version: 1
+      role: Exemplar protein (tagU, Polyisoprenyl-teichoic acid--peptidoglycan teichoic
+        acid transferase TagU) representing LytR/LCP teichoic acid ligase in Bacillus
+        subtilis (strain 168) for diplococcus shaped.
+      evidence:
+      - reference: DOI:10.1016/j.cub.2021.04.041
+        snippet: peptidoglycan assembly during the cell cycle
+        notes: Supports LytR/LCP teichoic acid ligase in diplococcus shaped; UniProtKB:Q02115
+          (tagU, Polyisoprenyl-teichoic acid--peptidoglycan teichoic acid transferase
+          TagU) in Bacillus subtilis (strain 168) provides a verified protein exemplar.
   - node_id: daughter_cell_separation
     label: daughter cell separation
     node_type: BIOLOGICAL_PROCESS
@@ -252,4 +313,12 @@ curation_history:
     the tranche: set graph scope diplococcus_shaped_septal_separation=NONMECHANISTIC
     with scope_notes; marked 3 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (pcsB_hydrolase_system, separation_pg_hydrolase, lytr_lcp_enzyme).'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q8DMY4 (pcsB)
+    protein example to node pcsB_hydrolase_system; added UniProtKB:P0ABG7 (mrdB) protein
+    example to node separation_pg_hydrolase; added UniProtKB:Q02115 (tagU) protein
+    example to node lytr_lcp_enzyme.'
   llm_assisted: true

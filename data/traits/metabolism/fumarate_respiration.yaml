@@ -59,3 +59,73 @@ curation_history:
     local METPO snapshot has only obsolete Fumarate respiration and the replacement
     placeholder is reserved in proposals/metpo_traitmech_v73.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph fumarate_respiration_graph
+    with GENE_OR_PROTEIN node fumarate_respiration_protein_component and UniProtKB:P0AEC3
+    exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: fumarate_respiration_graph
+  title: Protein component associated with fumarate respiration
+  description: Literature-backed association between Aerobic respiration control sensor
+    protein ArcB (UniProtKB:P0AEC3) and fumarate respiration.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P0AEC3 in Escherichia
+    coli (strain K12)) associated with fumarate respiration while full multi-step
+    mechanistic curation remains future work.
+  nodes:
+  - node_id: fumarate_respiration_trait
+    label: fumarate respiration
+    node_type: TRAIT
+    grounding: traitmech:000196
+    description: An anaerobic respiration in which an organism uses fumarate as the
+      terminal electron acceptor and reduces it to succinate for energy conservation.
+  - node_id: fumarate_respiration_protein_component
+    label: Aerobic respiration control sensor protein ArcB
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Aerobic respiration control sensor protein ArcB)
+      associated with fumarate respiration.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - arcB
+    protein_examples:
+    - uniprot_id: UniProtKB:P0AEC3
+      protein_label: Aerobic respiration control sensor protein ArcB
+      gene_symbol: arcB
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 164
+      sequence_version: 1
+      role: Characteristic protein component (arcB, Aerobic respiration control sensor
+        protein ArcB) associated with fumarate respiration in Escherichia coli (strain
+        K12).
+      evidence:
+      - reference: DOI:10.1128/JB.00389-22
+        snippet: The respiratory chain responsible for anaerobic respiration (NADH
+          to fumarate) involves two NADH dehydrogenases
+        notes: Supports Aerobic respiration control sensor protein ArcB in fumarate
+          respiration; UniProtKB:P0AEC3 (arcB, Aerobic respiration control sensor
+          protein ArcB) in Escherichia coli (strain K12) provides a verified protein
+          exemplar.
+  edges:
+  - subject: fumarate_respiration_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: fumarate_respiration_trait
+    description: Aerobic respiration control sensor protein ArcB (arcB, UniProtKB:P0AEC3)
+      contributes to fumarate respiration (associated with dehydrogenases, respiration,
+      respiratory).
+    evidence:
+    - reference: DOI:10.1128/JB.00389-22
+      snippet: The respiratory chain responsible for anaerobic respiration (NADH to
+        fumarate) involves two NADH dehydrogenases
+      notes: Supports the functional association between Aerobic respiration control
+        sensor protein ArcB (UniProtKB:P0AEC3 in Escherichia coli (strain K12)) and
+        fumarate respiration.

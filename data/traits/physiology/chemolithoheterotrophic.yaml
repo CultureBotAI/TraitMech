@@ -130,6 +130,28 @@ causal_graphs:
     grounding_notes: This aggregate node spans unrelated amino-acid, carboxylate,
       TRAP, ABC, and other uptake systems; the cited comparative study does not identify
       one transporter family that represents the whole label.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q49XI8
+      protein_label: Phosphate import ATP-binding protein PstB
+      gene_symbol: pstB
+      taxon_id: NCBITaxon:342451
+      taxon_label: Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
+        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+      entry_status: REVIEWED
+      proteome_id: UP000006371
+      retrieved_on: '2026-10-17'
+      entry_version: 133
+      sequence_version: 1
+      role: Exemplar protein (pstB, Phosphate import ATP-binding protein PstB) representing
+        organic carbon import system in Staphylococcus saprophyticus subsp. saprophyticus
+        (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) for chemolithoheterotrophic.
+      evidence:
+      - reference: DOI:10.1016/B978-012373944-5.00083-3
+        snippet: organic compounds as the primary sources of carbon and energy
+        notes: Supports organic carbon import system in chemolithoheterotrophic; UniProtKB:Q49XI8
+          (pstB, Phosphate import ATP-binding protein PstB) in Staphylococcus saprophyticus
+          subsp. saprophyticus (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC
+          7292 / S-41) provides a verified protein exemplar.
   - node_id: group_2a_nife_hydrogenase
     label: group 2a [NiFe]-hydrogenase
     node_type: GENE_OR_PROTEIN
@@ -469,4 +491,10 @@ curation_history:
   action: CONNECT_CAUSAL_GRAPH_COMPONENTS
   changes: 'Resolved issue #183 graph fragmentation (3 components to 1): added 2 public-source
     connector(s). No paid research service was called.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q49XI8 (pstB)
+    protein example to node organic_carbon_importer.'
   llm_assisted: true

@@ -97,6 +97,36 @@ causal_graphs:
     grounding: traitmech:000209
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
+  - node_id: thoeris_system_protein_component
+    label: NAD(+) hydrolase ThsA
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (NAD(+) hydrolase ThsA) associated with Thoeris
+      system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - thsA
+    protein_examples:
+    - uniprot_id: UniProtKB:J8G6Z1
+      protein_label: NAD(+) hydrolase ThsA
+      gene_symbol: thsA
+      taxon_id: NCBITaxon:1053222
+      taxon_label: Bacillus cereus (strain MSX-D12)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 46
+      sequence_version: 2
+      role: Characteristic protein component (thsA, NAD(+) hydrolase ThsA) associated
+        with Thoeris system in Bacillus cereus (strain MSX-D12).
+      evidence:
+      - reference: DOI:10.1038/s41586-021-04098-7
+        snippet: This molecular signal activates a second protein, ThsA, which then
+          depletes the cell of the essential molecule nicotinamide adenine dinucleotide
+          (NAD)
+        notes: Supports NAD(+) hydrolase ThsA in Thoeris system; UniProtKB:J8G6Z1
+          (thsA, NAD(+) hydrolase ThsA) in Bacillus cereus (strain MSX-D12) provides
+          a verified protein exemplar.
   edges:
   - subject: thoeris_locus
     predicate: contributes to
@@ -164,6 +194,18 @@ causal_graphs:
     - reference: DOI:10.1038/s41586-021-04098-7
       snippet: bacterial anti-phage defence system called Thoeris
       notes: Ofir et al. place Thoeris in the bacterial antiphage-defense-system family.
+  - subject: thoeris_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: thoeris_system_trait
+    description: NAD(+) hydrolase ThsA (thsA, UniProtKB:J8G6Z1) contributes to Thoeris
+      system (associated with antiphage, analysis, cleavage).
+    evidence:
+    - reference: DOI:10.1038/s41467-020-16703-w
+      snippet: Mutation analysis suggests that NAD+ cleavage is linked to the antiphage
+        function of Thoeris
+      notes: Supports the functional association between NAD(+) hydrolase ThsA (UniProtKB:J8G6Z1
+        in Bacillus cereus (strain MSX-D12)) and Thoeris system.
 discussions:
 - discussion_id: thoeris-family-signal-and-trigger-gap
   prompt: Resolve Thoeris family architecture, signal chemistry, and phage triggering
@@ -185,4 +227,10 @@ curation_history:
     defense system parent after an ignored-and-hidden duplicate review found no exact
     live TraitMech, METPO, or prior proposal record; the replacement placeholder is
     reserved in proposals/metpo_traitmech_v93.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    thoeris_system_protein_component with UniProtKB:J8G6Z1 (thsA) exemplar.'
   llm_assisted: true

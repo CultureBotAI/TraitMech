@@ -45,6 +45,26 @@ causal_graphs:
     label: Csd shape proteins
     node_type: GENE_OR_PROTEIN
     description: H. pylori Csd1-Csd3 peptidoglycan endopeptidase homologs.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0ABG7
+      protein_label: Peptidoglycan glycosyltransferase MrdB
+      gene_symbol: mrdB
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 133
+      sequence_version: 1
+      role: Exemplar protein (mrdB, Peptidoglycan glycosyltransferase MrdB) representing
+        Csd shape proteins in Escherichia coli (strain K12) for helical shaped.
+      evidence:
+      - reference: DOI:10.1016/j.cell.2010.03.046
+        snippet: relaxes peptidoglycan crosslinking, enabling helical cell curvature
+          and twist
+        notes: Supports Csd shape proteins in helical shaped; UniProtKB:P0ABG7 (mrdB,
+          Peptidoglycan glycosyltransferase MrdB) in Escherichia coli (strain K12)
+          provides a verified protein exemplar.
   - node_id: ccmA
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
@@ -52,6 +72,29 @@ causal_graphs:
     label: CcmA
     node_type: GENE_OR_PROTEIN
     description: Bactofilin-like protein implicated in H. pylori helical shape.
+    protein_examples:
+    - uniprot_id: UniProtKB:P45032
+      protein_label: Cytochrome c biogenesis ATP-binding export protein CcmA
+      gene_symbol: ccmA
+      taxon_id: NCBITaxon:71421
+      taxon_label: Haemophilus influenzae (strain ATCC 51907 / DSM 11121 / KW20 /
+        Rd)
+      entry_status: REVIEWED
+      proteome_id: UP000000579
+      retrieved_on: '2026-10-17'
+      entry_version: 154
+      sequence_version: 1
+      role: Exemplar protein (ccmA, Cytochrome c biogenesis ATP-binding export protein
+        CcmA) representing CcmA in Haemophilus influenzae (strain ATCC 51907 / DSM
+        11121 / KW20 / Rd) for helical shaped.
+      evidence:
+      - reference: DOI:10.1016/j.cell.2010.03.046
+        snippet: relaxes peptidoglycan crosslinking, enabling helical cell curvature
+          and twist
+        notes: Supports CcmA in helical shaped; UniProtKB:P45032 (ccmA, Cytochrome
+          c biogenesis ATP-binding export protein CcmA) in Haemophilus influenzae
+          (strain ATCC 51907 / DSM 11121 / KW20 / Rd) provides a verified protein
+          exemplar.
   - node_id: peptidoglycan_crosslink_relaxation
     label: peptidoglycan crosslink relaxation
     node_type: BIOLOGICAL_PROCESS
@@ -247,4 +290,11 @@ curation_history:
     the tranche: set graph scope helical_shaped_pg_relaxation=NONMECHANISTIC with
     scope_notes; marked 2 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (csd_shape_proteins, ccmA).'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P0ABG7 (mrdB)
+    protein example to node csd_shape_proteins; added UniProtKB:P45032 (ccmA) protein
+    example to node ccmA.'
   llm_assisted: true

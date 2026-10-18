@@ -81,3 +81,74 @@ curation_history:
     and phagocytosis parents without asserting unverified mappings or a molecular
     mechanism.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph endocytosis_graph
+    with GENE_OR_PROTEIN node endocytosis_protein_component and UniProtKB:Q02115 exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: endocytosis_graph
+  title: Protein component associated with endocytosis
+  description: Literature-backed association between Polyisoprenyl-teichoic acid--peptidoglycan
+    teichoic acid transferase TagU (UniProtKB:Q02115) and endocytosis.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q02115 in Bacillus
+    subtilis (strain 168)) associated with endocytosis while full multi-step mechanistic
+    curation remains future work.
+  nodes:
+  - node_id: endocytosis_trait
+    label: endocytosis
+    node_type: TRAIT
+    grounding: traitmech:000636
+    description: A physiological phenotype in which a microbial cell takes up extracellular
+      material or plasma-membrane components into intracellular membrane-bound compartments
+      by remodeling and internalizing its plasma membrane.
+  - node_id: endocytosis_protein_component
+    label: Polyisoprenyl-teichoic acid--peptidoglycan teichoic acid transferase TagU
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Polyisoprenyl-teichoic acid--peptidoglycan teichoic
+      acid transferase TagU) associated with endocytosis.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - tagU
+    protein_examples:
+    - uniprot_id: UniProtKB:Q02115
+      protein_label: Polyisoprenyl-teichoic acid--peptidoglycan teichoic acid transferase
+        TagU
+      gene_symbol: tagU
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
+      entry_status: REVIEWED
+      proteome_id: UP000001570
+      retrieved_on: '2026-10-17'
+      entry_version: 150
+      sequence_version: 1
+      role: Characteristic protein component (tagU, Polyisoprenyl-teichoic acid--peptidoglycan
+        teichoic acid transferase TagU) associated with endocytosis in Bacillus subtilis
+        (strain 168).
+      evidence:
+      - reference: DOI:10.1083/jcb.128.5.779
+        snippet: After an additional 20-40 min, the PM and cytoplasmic punctate staining
+          disappeared concomitant with staining of the vacuolar membrane.
+        notes: Supports Polyisoprenyl-teichoic acid--peptidoglycan teichoic acid transferase
+          TagU in endocytosis; UniProtKB:Q02115 (tagU, Polyisoprenyl-teichoic acid--peptidoglycan
+          teichoic acid transferase TagU) in Bacillus subtilis (strain 168) provides
+          a verified protein exemplar.
+  edges:
+  - subject: endocytosis_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: endocytosis_trait
+    description: Polyisoprenyl-teichoic acid--peptidoglycan teichoic acid transferase
+      TagU (tagU, UniProtKB:Q02115) contributes to endocytosis (associated with concomitant,
+      cytoplasmic, disappeared).
+    evidence:
+    - reference: DOI:10.1083/jcb.128.5.779
+      snippet: After an additional 20-40 min, the PM and cytoplasmic punctate staining
+        disappeared concomitant with staining of the vacuolar membrane.
+      notes: Supports the functional association between Polyisoprenyl-teichoic acid--peptidoglycan
+        teichoic acid transferase TagU (UniProtKB:Q02115 in Bacillus subtilis (strain
+        168)) and endocytosis.

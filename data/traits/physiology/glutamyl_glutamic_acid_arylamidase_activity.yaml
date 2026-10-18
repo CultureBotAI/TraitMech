@@ -57,3 +57,87 @@ curation_history:
     has no exact glutamyl glutamic acid arylamidase activity class yet and the placeholder
     is reserved in proposals/metpo_traitmech_v50.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph glutamyl_glutamic_acid_arylamidase_activity_graph
+    with GENE_OR_PROTEIN node glutamyl_glutamic_acid_arylamidase_activity_protein_component
+    and UniProtKB:Q49WW5 exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: glutamyl_glutamic_acid_arylamidase_activity_graph
+  title: Protein component associated with glutamyl glutamic acid arylamidase activity
+  description: Literature-backed association between UDP-N-acetylmuramoylalanine--D-glutamate
+    ligase (UniProtKB:Q49WW5) and glutamyl glutamic acid arylamidase activity.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q49WW5 in Staphylococcus
+    saprophyticus subsp. saprophyticus (strain ATCC 15305 / DSM 20229 / NCIMB 8711
+    / NCTC 7292 / S-41)) associated with glutamyl glutamic acid arylamidase activity
+    while full multi-step mechanistic curation remains future work.
+  nodes:
+  - node_id: glutamyl_glutamic_acid_arylamidase_activity_trait
+    label: glutamyl glutamic acid arylamidase activity
+    node_type: TRAIT
+    grounding: traitmech:000173
+    description: A physiological enzyme-activity phenotype in which a cell produces
+      active glutamyl glutamic acid arylamidase enzymes that hydrolyze glutamyl-glutamic-acid
+      arylamide substrates.
+  - node_id: glutamyl_glutamic_acid_arylamidase_activity_protein_component
+    label: UDP-N-acetylmuramoylalanine--D-glutamate ligase
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (UDP-N-acetylmuramoylalanine--D-glutamate ligase)
+      associated with glutamyl glutamic acid arylamidase activity.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - murD
+    protein_examples:
+    - uniprot_id: UniProtKB:Q49WW5
+      protein_label: UDP-N-acetylmuramoylalanine--D-glutamate ligase
+      gene_symbol: murD
+      taxon_id: NCBITaxon:342451
+      taxon_label: Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
+        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+      entry_status: REVIEWED
+      proteome_id: UP000006371
+      retrieved_on: '2026-10-17'
+      entry_version: 123
+      sequence_version: 1
+      role: Characteristic protein component (murD, UDP-N-acetylmuramoylalanine--D-glutamate
+        ligase) associated with glutamyl glutamic acid arylamidase activity in Staphylococcus
+        saprophyticus subsp. saprophyticus (strain ATCC 15305 / DSM 20229 / NCIMB
+        8711 / NCTC 7292 / S-41).
+      evidence:
+      - reference: DOI:10.1099/ijsem.0.006017
+        snippet: 'enzymatic activities are present for: α-galactosidase, N-acetyl-β-glucosaminidase,
+          arginine arylamidase, proline arylamidase, leucyl glycine arylamidase, phenylalanine
+          arylamidase, leucine arylamidase, tyrosine arylamidase, alanine arylamidase,
+          glycine arylamidase, histidine arylamidase, glutamyl glutamic acid arylamidase,
+          serine arylamidase, valine arylamidase, cysteine arylamidase, esterase,
+          esterase lipase, alpha-chymotrypsin'
+        notes: Supports UDP-N-acetylmuramoylalanine--D-glutamate ligase in glutamyl
+          glutamic acid arylamidase activity; UniProtKB:Q49WW5 (murD, UDP-N-acetylmuramoylalanine--D-glutamate
+          ligase) in Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
+          15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) provides a verified protein
+          exemplar.
+  edges:
+  - subject: glutamyl_glutamic_acid_arylamidase_activity_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: glutamyl_glutamic_acid_arylamidase_activity_trait
+    description: UDP-N-acetylmuramoylalanine--D-glutamate ligase (murD, UniProtKB:Q49WW5)
+      contributes to glutamyl glutamic acid arylamidase activity (associated with
+      glucosaminidase, galactosidase, phenylalanine).
+    evidence:
+    - reference: DOI:10.1099/ijsem.0.006017
+      snippet: 'enzymatic activities are present for: α-galactosidase, N-acetyl-β-glucosaminidase,
+        arginine arylamidase, proline arylamidase, leucyl glycine arylamidase, phenylalanine
+        arylamidase, leucine arylamidase, tyrosine arylamidase, alanine arylamidase,
+        glycine arylamidase, histidine arylamidase, glutamyl glutamic acid arylamidase,
+        serine arylamidase, valine arylamidase, cysteine arylamidase, esterase, esterase
+        lipase, alpha-chymotrypsin'
+      notes: Supports the functional association between UDP-N-acetylmuramoylalanine--D-glutamate
+        ligase (UniProtKB:Q49WW5 in Staphylococcus saprophyticus subsp. saprophyticus
+        (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)) and glutamyl
+        glutamic acid arylamidase activity.

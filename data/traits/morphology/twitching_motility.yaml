@@ -64,6 +64,31 @@ causal_graphs:
     label: PilB extension ATPase
     node_type: GENE_OR_PROTEIN
     description: Cytoplasmic motor ATPase that powers type IV pilus filament extension.
+    protein_examples:
+    - uniprot_id: UniProtKB:P22608
+      protein_label: Type IV pilus assembly ATPase PilB
+      gene_symbol: pilB
+      taxon_id: NCBITaxon:208964
+      taxon_label: Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116
+        / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)
+      entry_status: REVIEWED
+      proteome_id: UP000002438
+      retrieved_on: '2026-10-17'
+      entry_version: 151
+      sequence_version: 2
+      role: Exemplar protein (pilB, Type IV pilus assembly ATPase PilB) representing
+        PilB extension ATPase in Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644
+        / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1) for twitching
+        motility.
+      evidence:
+      - reference: DOI:10.1038/s41467-024-53638-y
+        snippet: PilC is the inner membrane platform protein that coordinates with
+          ATPase motors to drive assembly and disassembly of major pilin subunits
+          into the extending and retracting pilus, respectively
+        notes: Supports PilB extension ATPase in twitching motility; UniProtKB:P22608
+          (pilB, Type IV pilus assembly ATPase PilB) in Pseudomonas aeruginosa (strain
+          ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101
+          / PAO1) provides a verified protein exemplar.
   - node_id: pilt_retraction_atpase
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
@@ -77,7 +102,7 @@ causal_graphs:
       entry_status: REVIEWED
       proteome_id: UP000002438
       retrieved_on: '2026-08-25'
-      entry_version: 147
+      entry_version: 148
       sequence_version: 1
       role: PAO1 PilT powers type-IV-pilus retraction that pulls the cell across a
         surface.
@@ -106,6 +131,28 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Outer-membrane secretin channel through which the pilus filament
       is exposed to the cell surface.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q5FAD2
+      protein_label: Type IV pilus biogenesis and competence protein PilQ
+      gene_symbol: pilQ
+      taxon_id: NCBITaxon:242231
+      taxon_label: Neisseria gonorrhoeae (strain ATCC 700825 / FA 1090)
+      entry_status: REVIEWED
+      proteome_id: UP000000535
+      retrieved_on: '2026-10-17'
+      entry_version: 100
+      sequence_version: 1
+      role: Exemplar protein (pilQ, Type IV pilus biogenesis and competence protein
+        PilQ) representing PilQ secretin in Neisseria gonorrhoeae (strain ATCC 700825
+        / FA 1090) for twitching motility.
+      evidence:
+      - reference: DOI:10.1128/jb.00359-24
+        snippet: The pilus is extruded through the periplasm, guided by the cylindrical
+          alignment subcomplex, and finally through a gated secretin pore in the outer
+          membrane
+        notes: Supports PilQ secretin in twitching motility; UniProtKB:Q5FAD2 (pilQ,
+          Type IV pilus biogenesis and competence protein PilQ) in Neisseria gonorrhoeae
+          (strain ATCC 700825 / FA 1090) provides a verified protein exemplar.
   - node_id: pilus_filament_surface_exposure
     label: type IV pilus surface exposure
     node_type: BIOLOGICAL_PROCESS
@@ -274,4 +321,12 @@ curation_history:
   action: CONNECT_CAUSAL_GRAPH_COMPONENTS
   changes: 'Resolved issue #183 graph fragmentation (4 components to 1) using 3 source-
     and verbatim-snippet-backed connector(s). No paid research service was called.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:P24559
+    version metadata (entry_version=148, sequence_version=1); added UniProtKB:P22608
+    (pilB) protein example to node pilb_extension_atpase; added UniProtKB:Q5FAD2 (pilQ)
+    protein example to node pilq_secretin.'
   llm_assisted: true

@@ -71,6 +71,36 @@ causal_graphs:
     grounding: traitmech:000209
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
+  - node_id: fs_hp_system_protein_component
+    label: Phage infection protein
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Phage infection protein) associated with FS-HP
+      system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - pip
+    protein_examples:
+    - uniprot_id: UniProtKB:P49022
+      protein_label: Phage infection protein
+      gene_symbol: pip
+      taxon_id: NCBITaxon:1360
+      taxon_label: Lactococcus lactis subsp. lactis (Streptococcus lactis)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 85
+      sequence_version: 1
+      role: Characteristic protein component (pip, Phage infection protein) associated
+        with FS-HP system in Lactococcus lactis subsp. lactis (Streptococcus lactis).
+      evidence:
+      - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+        snippet: FS_HP_SDH_sah | 10\.1016/j\.cell\.2022\.07\.014 | Bacteriophages
+          benefit from mobilizing pathogenicity islands encoding immune systems against
+          competitors
+        notes: Supports Phage infection protein in FS-HP system; UniProtKB:P49022
+          (pip, Phage infection protein) in Lactococcus lactis subsp. lactis (Streptococcus
+          lactis) provides a verified protein exemplar.
   edges:
   - subject: fs_hp_locus
     predicate: contributes to
@@ -125,6 +155,18 @@ causal_graphs:
       snippet: "FS_HP\tFS_HP\t1\t1\tFS_HP__HP"
       notes: The DefenseFinder rules table models FS_HP as a single-profile system
         requiring the FS_HP__HP profile.
+  - subject: fs_hp_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: fs_hp_system_trait
+    description: Phage infection protein (pip, UniProtKB:P49022) contributes to FS-HP
+      system (associated with bacteriophages, pathogenicity, competitors).
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: FS_HP_SDH_sah | 10\.1016/j\.cell\.2022\.07\.014 | Bacteriophages benefit
+        from mobilizing pathogenicity islands encoding immune systems against competitors
+      notes: Supports the functional association between Phage infection protein (UniProtKB:P49022
+        in Lactococcus lactis subsp. lactis (Streptococcus lactis)) and FS-HP system.
 discussions:
 - discussion_id: fs-hp-mechanism-gap
   prompt: Resolve FS_HP natural hosts, helper-phage triggers, HP component identity,
@@ -147,4 +189,10 @@ curation_history:
     system after an ignored-and-hidden duplicate review found no exact live TraitMech,
     METPO, history, or prior proposal record; the replacement placeholder is reserved
     in proposals/metpo_traitmech_v225.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    fs_hp_system_protein_component with UniProtKB:P49022 (pip) exemplar.'
   llm_assisted: true

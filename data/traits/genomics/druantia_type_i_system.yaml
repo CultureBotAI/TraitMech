@@ -83,3 +83,70 @@ curation_history:
     exact record or METPO term; reserved METPO:1053200 in v455. No type-III mechanism
     or raw detector threshold defines this class.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph druantia_type_i_system_graph
+    with GENE_OR_PROTEIN node druantia_type_i_system_protein_component and UniProtKB:P0DW38
+    exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: druantia_type_i_system_graph
+  title: Protein component associated with Druantia type I system
+  description: Literature-backed association between Druantia protein DruE (UniProtKB:P0DW38)
+    and Druantia type I system.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P0DW38 in Escherichia
+    coli (strain UMEA 4076-1)) associated with Druantia type I system while full multi-step
+    mechanistic curation remains future work.
+  nodes:
+  - node_id: druantia_type_i_system_trait
+    label: Druantia type I system
+    node_type: TRAIT
+    grounding: traitmech:000578
+    description: A Druantia system in which an organism possesses a locus encoding
+      DruE together with DruB, DruC and DruD, with or without DruA.
+  - node_id: druantia_type_i_system_protein_component
+    label: Druantia protein DruE
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Druantia protein DruE) associated with Druantia
+      type I system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - druE
+    protein_examples:
+    - uniprot_id: UniProtKB:P0DW38
+      protein_label: Druantia protein DruE
+      gene_symbol: druE
+      taxon_id: NCBITaxon:1281278
+      taxon_label: Escherichia coli (strain UMEA 4076-1)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 10
+      sequence_version: 1
+      role: Characteristic protein component (druE, Druantia protein DruE) associated
+        with Druantia type I system in Escherichia coli (strain UMEA 4076-1).
+      evidence:
+      - reference: DOI:10.1126/science.aar4120
+        snippet: Druantia DruABCDE (type I) DruMFGE (type II) DruHE (III) pfam14236,
+          pfam00270, pfam00271, pfam09369, COG1205, pfam00145, COG0270 Helicase, methylase
+          1,342 1,321 (2.6%)
+        notes: Supports Druantia protein DruE in Druantia type I system; UniProtKB:P0DW38
+          (druE, Druantia protein DruE) in Escherichia coli (strain UMEA 4076-1) provides
+          a verified protein exemplar.
+  edges:
+  - subject: druantia_type_i_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: druantia_type_i_system_trait
+    description: Druantia protein DruE (druE, UniProtKB:P0DW38) contributes to Druantia
+      type I system (associated with methylase, pfam00145, pfam00270).
+    evidence:
+    - reference: DOI:10.1126/science.aar4120
+      snippet: Druantia DruABCDE (type I) DruMFGE (type II) DruHE (III) pfam14236,
+        pfam00270, pfam00271, pfam09369, COG1205, pfam00145, COG0270 Helicase, methylase
+        1,342 1,321 (2.6%)
+      notes: Supports the functional association between Druantia protein DruE (UniProtKB:P0DW38
+        in Escherichia coli (strain UMEA 4076-1)) and Druantia type I system.

@@ -24,3 +24,67 @@ curation_history:
   changes: Proposed a DOI-backed FAPROTAX metabolic capability from proposals/metpo_traitmech_v11
     after repository-wide duplicate review.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph nitrite_respiration_graph
+    with GENE_OR_PROTEIN node nitrite_respiration_protein_component and UniProtKB:B5BJZ8
+    exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: nitrite_respiration_graph
+  title: Protein component associated with nitrite respiration
+  description: Literature-backed association between Cytochrome c-552 (UniProtKB:B5BJZ8)
+    and nitrite respiration.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:B5BJZ8 in Salmonella
+    paratyphi A (strain AKU_12601)) associated with nitrite respiration while full
+    multi-step mechanistic curation remains future work.
+  nodes:
+  - node_id: nitrite_respiration_trait
+    label: nitrite respiration
+    node_type: TRAIT
+    grounding: traitmech:000123
+    description: A nitrogen respiration in which nitrite is the terminal electron
+      acceptor.
+  - node_id: nitrite_respiration_protein_component
+    label: Cytochrome c-552
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Cytochrome c-552) associated with nitrite respiration.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - nrfA
+    protein_examples:
+    - uniprot_id: UniProtKB:B5BJZ8
+      protein_label: Cytochrome c-552
+      gene_symbol: nrfA
+      taxon_id: NCBITaxon:554290
+      taxon_label: Salmonella paratyphi A (strain AKU_12601)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 82
+      sequence_version: 1
+      role: Characteristic protein component (nrfA, Cytochrome c-552) associated with
+        nitrite respiration in Salmonella paratyphi A (strain AKU_12601).
+      evidence:
+      - reference: DOI:10.1074/jbc.M709090200
+        snippet: Cytochrome c nitrite reductase (NrfA) from Escherichia coli has a
+          well established role in the respiratory reduction of nitrite to ammonium
+        notes: Supports Cytochrome c-552 in nitrite respiration; UniProtKB:B5BJZ8
+          (nrfA, Cytochrome c-552) in Salmonella paratyphi A (strain AKU_12601) provides
+          a verified protein exemplar.
+  edges:
+  - subject: nitrite_respiration_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: nitrite_respiration_trait
+    description: Cytochrome c-552 (nrfA, UniProtKB:B5BJZ8) contributes to nitrite
+      respiration (associated with escherichia, established, respiratory).
+    evidence:
+    - reference: DOI:10.1074/jbc.M709090200
+      snippet: Cytochrome c nitrite reductase (NrfA) from Escherichia coli has a well
+        established role in the respiratory reduction of nitrite to ammonium
+      notes: Supports the functional association between Cytochrome c-552 (UniProtKB:B5BJZ8
+        in Salmonella paratyphi A (strain AKU_12601)) and nitrite respiration.

@@ -41,6 +41,9 @@ def _before() -> dict:
     graph["nodes"] = [
         copy.deepcopy(after_nodes_by_id.get(node["node_id"], node)) for node in graph["nodes"]
     ]
+    for node in graph["nodes"]:
+        if node.get("node_id") == "bactofilin_lmdc_module":
+            node.pop("protein_examples", None)
     graph["edges"] = [
         copy.deepcopy(after_edges_by_key.get(_edge_key(edge), edge)) for edge in graph["edges"]
     ]

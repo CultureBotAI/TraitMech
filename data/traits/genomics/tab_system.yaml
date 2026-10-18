@@ -80,6 +80,35 @@ causal_graphs:
     grounding: traitmech:000209
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
+  - node_id: tab_system_protein_component
+    label: Cell death peptidase
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Cell death peptidase) associated with Tab system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - lit
+    protein_examples:
+    - uniprot_id: UniProtKB:P11072
+      protein_label: Cell death peptidase
+      gene_symbol: lit
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 137
+      sequence_version: 2
+      role: Characteristic protein component (lit, Cell death peptidase) associated
+        with Tab system in Escherichia coli (strain K12).
+      evidence:
+      - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+        snippet: 'Lit | 10\.1186/1743-422X-7-360 | Post-transcriptional control by
+          bacteriophage T4: mRNA decay and inhibition of translation initiation'
+        notes: Supports Cell death peptidase in Tab system; UniProtKB:P11072 (lit,
+          Cell death peptidase) in Escherichia coli (strain K12) provides a verified
+          protein exemplar.
   edges:
   - subject: tab_locus
     predicate: enables
@@ -137,6 +166,18 @@ causal_graphs:
         pathway of invading phages
       notes: Patel et al. place Tab in anti-phage defence by virion assembly pathway
         interference.
+  - subject: tab_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: tab_system_trait
+    description: Cell death peptidase (lit, UniProtKB:P11072) contributes to Tab system
+      (associated with bacteriophage, altruistic, tolerance).
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: 'RexAB | 10\.1101/gad\.6\.3\.497 | The Rex system of bacteriophage
+        lambda: tolerance and altruistic cell death'
+      notes: Supports the functional association between Cell death peptidase (UniProtKB:P11072
+        in Escherichia coli (strain K12)) and Tab system.
 discussions:
 - discussion_id: tab-defensefinder-model-gap
   prompt: Resolve Tab host breadth, sensitive-phage breadth, counter-defence specificity,
@@ -183,4 +224,10 @@ curation_history:
     virion-assembly-inhibition level because the pinned DefenseFinder article row
     is not backed by pinned HMM or rules rows; the replacement placeholder is reserved
     in proposals/metpo_traitmech_v290.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    tab_system_protein_component with UniProtKB:P11072 (lit) exemplar.'
   llm_assisted: true

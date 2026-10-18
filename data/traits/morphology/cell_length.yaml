@@ -55,6 +55,27 @@ causal_graphs:
     label: FtsZ ring (divisome)
     node_type: GENE_OR_PROTEIN
     description: Tubulin-like FtsZ-based contractile ring that organizes division.
+    protein_examples:
+    - uniprot_id: UniProtKB:V6F5E5
+      protein_label: Cell division protein FtsZ
+      gene_symbol: ftsZ
+      taxon_id: NCBITaxon:431944
+      taxon_label: Magnetospirillum gryphiswaldense (strain DSM 6361 / JCM 21280 /
+        NBRC 15271 / MSR-1)
+      entry_status: REVIEWED
+      proteome_id: UP000018922
+      retrieved_on: '2026-10-17'
+      entry_version: 63
+      sequence_version: 1
+      role: Exemplar protein (ftsZ, Cell division protein FtsZ) representing FtsZ
+        ring (divisome) in Magnetospirillum gryphiswaldense (strain DSM 6361 / JCM
+        21280 / NBRC 15271 / MSR-1) for cell length.
+      evidence:
+      - reference: DOI:10.1038/s41579-023-00942-x
+        snippet: FtsZ, to localize and organize the cell division machinery, the divisome
+        notes: Supports FtsZ ring (divisome) in cell length; UniProtKB:V6F5E5 (ftsZ,
+          Cell division protein FtsZ) in Magnetospirillum gryphiswaldense (strain
+          DSM 6361 / JCM 21280 / NBRC 15271 / MSR-1) provides a verified protein exemplar.
   - node_id: division_site_placement
     label: division-site placement
     node_type: BIOLOGICAL_PROCESS
@@ -71,6 +92,26 @@ causal_graphs:
     label: Rod complex (elongasome)
     node_type: GENE_OR_PROTEIN
     description: MreB/RodA/PBP2-based multiprotein complex driving cell elongation.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q01465
+      protein_label: Cell shape-determining protein MreB
+      gene_symbol: mreB
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
+      entry_status: REVIEWED
+      proteome_id: UP000001570
+      retrieved_on: '2026-10-17'
+      entry_version: 148
+      sequence_version: 3
+      role: Exemplar protein (mreB, Cell shape-determining protein MreB) representing
+        Rod complex (elongasome) in Bacillus subtilis (strain 168) for cell length.
+      evidence:
+      - reference: DOI:10.1038/s42003-024-07279-y
+        snippet: Min or nucleoid occlusion systems for positioning FtsZ at mid cell
+          division sites
+        notes: Supports Rod complex (elongasome) in cell length; UniProtKB:Q01465
+          (mreB, Cell shape-determining protein MreB) in Bacillus subtilis (strain
+          168) provides a verified protein exemplar.
   - node_id: sidewall_pg_synthesis
     label: sidewall peptidoglycan synthesis
     node_type: BIOLOGICAL_PROCESS
@@ -82,6 +123,25 @@ causal_graphs:
     label: FtsA and ZipA (proto-ring tethers)
     node_type: GENE_OR_PROTEIN
     description: Membrane tethers that attach FtsZ to the membrane forming the proto-ring.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0ABH2
+      protein_label: Cell division protein FtsA
+      gene_symbol: ftsA
+      taxon_id: NCBITaxon:83334
+      taxon_label: Escherichia coli O157:H7
+      entry_status: REVIEWED
+      proteome_id: UP000000558
+      retrieved_on: '2026-10-17'
+      entry_version: 115
+      sequence_version: 1
+      role: Exemplar protein (ftsA, Cell division protein FtsA) representing FtsA
+        and ZipA (proto-ring tethers) in Escherichia coli O157:H7 for cell length.
+      evidence:
+      - reference: DOI:10.1038/nrmicro2671
+        snippet: FtsZ ring at the future division site
+        notes: Supports FtsA and ZipA (proto-ring tethers) in cell length; UniProtKB:P0ABH2
+          (ftsA, Cell division protein FtsA) in Escherichia coli O157:H7 provides
+          a verified protein exemplar.
   - node_id: ftswi_septal_synthase
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: FtsW and FtsI are distinct components grouped as a septal synthase
@@ -89,6 +149,27 @@ causal_graphs:
     label: FtsWI septal PG synthase
     node_type: GENE_OR_PROTEIN
     description: FtsW/FtsI complex that drives septal peptidoglycan synthesis.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0ABG4
+      protein_label: Probable peptidoglycan glycosyltransferase FtsW
+      gene_symbol: ftsW
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 150
+      sequence_version: 1
+      role: Exemplar protein (ftsW, Probable peptidoglycan glycosyltransferase FtsW)
+        representing FtsWI septal PG synthase in Escherichia coli (strain K12) for
+        cell length.
+      evidence:
+      - reference: DOI:10.1038/s42003-024-07279-y
+        snippet: Min or nucleoid occlusion systems for positioning FtsZ at mid cell
+          division sites
+        notes: Supports FtsWI septal PG synthase in cell length; UniProtKB:P0ABG4
+          (ftsW, Probable peptidoglycan glycosyltransferase FtsW) in Escherichia coli
+          (strain K12) provides a verified protein exemplar.
   - node_id: septum_synthesis
     label: septum synthesis
     node_type: BIOLOGICAL_PROCESS
@@ -267,4 +348,12 @@ curation_history:
     canonical example(s): Escherichia coli (NCBITaxon:562; DOI:10.1016/j.cell.2014.11.022).
     The note retains the measured value or scopes broad-class examples to the cited
     branch; no paid research was used.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:V6F5E5 (ftsZ)
+    protein example to node ftsz_ring; added UniProtKB:Q01465 (mreB) protein example
+    to node elongasome; added UniProtKB:P0ABH2 (ftsA) protein example to node ftsa_zipa;
+    added UniProtKB:P0ABG4 (ftsW) protein example to node ftswi_septal_synthase.'
   llm_assisted: true

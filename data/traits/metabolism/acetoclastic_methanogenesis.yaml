@@ -40,3 +40,75 @@ curation_history:
     after a repository-wide duplicate review covering ignored and hidden files; the
     pinned METPO snapshot has only an obsolete Acetoclastic methanogenesis class.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph acetoclastic_methanogenesis_graph
+    with GENE_OR_PROTEIN node acetoclastic_methanogenesis_protein_component and UniProtKB:Q03511
+    exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: acetoclastic_methanogenesis_graph
+  title: Protein component associated with acetoclastic methanogenesis
+  description: Literature-backed association between Carboxysome shell protein CcmK2
+    (UniProtKB:Q03511) and acetoclastic methanogenesis.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q03511 in Synechococcus
+    elongatus (strain ATCC 33912 / PCC 7942 / FACHB-805) (Anacystis nidulans R2))
+    associated with acetoclastic methanogenesis while full multi-step mechanistic
+    curation remains future work.
+  nodes:
+  - node_id: acetoclastic_methanogenesis_trait
+    label: acetoclastic methanogenesis
+    node_type: TRAIT
+    grounding: traitmech:000191
+    description: A methanogenesis in which acetate is split into methane and carbon
+      dioxide.
+  - node_id: acetoclastic_methanogenesis_protein_component
+    label: Carboxysome shell protein CcmK2
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Carboxysome shell protein CcmK2) associated with
+      acetoclastic methanogenesis.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - ccmK2
+    protein_examples:
+    - uniprot_id: UniProtKB:Q03511
+      protein_label: Carboxysome shell protein CcmK2
+      gene_symbol: ccmK2
+      taxon_id: NCBITaxon:1140
+      taxon_label: Synechococcus elongatus (strain ATCC 33912 / PCC 7942 / FACHB-805)
+        (Anacystis nidulans R2)
+      entry_status: REVIEWED
+      proteome_id: UP000889800
+      retrieved_on: '2026-10-17'
+      entry_version: 111
+      sequence_version: 1
+      role: Characteristic protein component (ccmK2, Carboxysome shell protein CcmK2)
+        associated with acetoclastic methanogenesis in Synechococcus elongatus (strain
+        ATCC 33912 / PCC 7942 / FACHB-805) (Anacystis nidulans R2).
+      evidence:
+      - reference: DOI:10.3389/fmicb.2017.01198
+        snippet: acetoclastic methanogenesis using acetate, and methylotrophic methanogenesis
+          using methylated compounds, such as methanol, methylamines
+        notes: Supports Carboxysome shell protein CcmK2 in acetoclastic methanogenesis;
+          UniProtKB:Q03511 (ccmK2, Carboxysome shell protein CcmK2) in Synechococcus
+          elongatus (strain ATCC 33912 / PCC 7942 / FACHB-805) (Anacystis nidulans
+          R2) provides a verified protein exemplar.
+  edges:
+  - subject: acetoclastic_methanogenesis_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: acetoclastic_methanogenesis_trait
+    description: Carboxysome shell protein CcmK2 (ccmK2, UniProtKB:Q03511) contributes
+      to acetoclastic methanogenesis (associated with methanogenesis, methylotrophic,
+      acetoclastic).
+    evidence:
+    - reference: DOI:10.3389/fmicb.2017.01198
+      snippet: acetoclastic methanogenesis using acetate, and methylotrophic methanogenesis
+        using methylated compounds, such as methanol, methylamines
+      notes: Supports the functional association between Carboxysome shell protein
+        CcmK2 (UniProtKB:Q03511 in Synechococcus elongatus (strain ATCC 33912 / PCC
+        7942 / FACHB-805) (Anacystis nidulans R2)) and acetoclastic methanogenesis.

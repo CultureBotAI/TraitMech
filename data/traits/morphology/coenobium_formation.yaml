@@ -84,3 +84,69 @@ curation_history:
     and structured METPO review found no exact record. Reserved METPO:1060800 in v531;
     existing records unchanged.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph coenobium_formation_graph
+    with GENE_OR_PROTEIN node coenobium_formation_protein_component and UniProtKB:Q7A225
+    exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: coenobium_formation_graph
+  title: Protein component associated with coenobium formation
+  description: Literature-backed association between Endoribonuclease HigB (UniProtKB:Q7A225)
+    and coenobium formation.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q7A225 in Proteus
+    vulgaris) associated with coenobium formation while full multi-step mechanistic
+    curation remains future work.
+  nodes:
+  - node_id: coenobium_formation_trait
+    label: coenobium formation
+    node_type: TRAIT
+    grounding: traitmech:000655
+    description: A morphological phenotype in which an alga forms clonal multicellular
+      colonies whose cell complement is established during colony formation, with
+      subsequent colony growth by cell enlargement rather than addition of cells.
+  - node_id: coenobium_formation_protein_component
+    label: Endoribonuclease HigB
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Endoribonuclease HigB) associated with coenobium
+      formation.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - higB
+    protein_examples:
+    - uniprot_id: UniProtKB:Q7A225
+      protein_label: Endoribonuclease HigB
+      gene_symbol: higB
+      taxon_id: NCBITaxon:585
+      taxon_label: Proteus vulgaris
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 69
+      sequence_version: 1
+      role: Characteristic protein component (higB, Endoribonuclease HigB) associated
+        with coenobium formation in Proteus vulgaris.
+      evidence:
+      - reference: DOI:10.1242/jcs.212233
+        snippet: progeny were unicellular in three species and multicellular (joined
+          in a sheet-like coenobium) in two.
+        notes: Supports Endoribonuclease HigB in coenobium formation; UniProtKB:Q7A225
+          (higB, Endoribonuclease HigB) in Proteus vulgaris provides a verified protein
+          exemplar.
+  edges:
+  - subject: coenobium_formation_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: coenobium_formation_trait
+    description: Endoribonuclease HigB (higB, UniProtKB:Q7A225) contributes to coenobium
+      formation (associated with multicellular, unicellular, coenobium).
+    evidence:
+    - reference: DOI:10.1242/jcs.212233
+      snippet: progeny were unicellular in three species and multicellular (joined
+        in a sheet-like coenobium) in two.
+      notes: Supports the functional association between Endoribonuclease HigB (UniProtKB:Q7A225
+        in Proteus vulgaris) and coenobium formation.

@@ -76,6 +76,36 @@ causal_graphs:
     node_type: TRAIT
     grounding: traitmech:000239
     description: Possession of a genome-encoded AVAST phage-defense system.
+  - node_id: avs_v_system_protein_component
+    label: Phage infection protein
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Phage infection protein) associated with Avs V
+      system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - pip
+    protein_examples:
+    - uniprot_id: UniProtKB:P49022
+      protein_label: Phage infection protein
+      gene_symbol: pip
+      taxon_id: NCBITaxon:1360
+      taxon_label: Lactococcus lactis subsp. lactis (Streptococcus lactis)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 85
+      sequence_version: 1
+      role: Characteristic protein component (pip, Phage infection protein) associated
+        with Avs V system in Lactococcus lactis subsp. lactis (Streptococcus lactis).
+      evidence:
+      - reference: DOI:10.1016/j.molcel.2026.01.004
+        snippet: Upon sensing Jumbo J phage, Avs5-1 underwent oligomerization, which
+          activated the enzymatic activity of its Sir2 effector, resulting in rapid
+          NAD + hydrolysis, disruption of phage nucleus formation, and arrest of infection
+        notes: Supports Phage infection protein in Avs V system; UniProtKB:P49022
+          (pip, Phage infection protein) in Lactococcus lactis subsp. lactis (Streptococcus
+          lactis) provides a verified protein exemplar.
   edges:
   - subject: avs_v_locus
     predicate: contributes to
@@ -136,6 +166,19 @@ causal_graphs:
       snippet: "Avs\tAvs_V\t1\t1\tAvs_V__Avs5A\t\t\t"
       notes: The pinned DefenseFinder rules table models Avs_V as an Avs subsystem
         with an Avs5A profile.
+  - subject: avs_v_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: avs_v_system_trait
+    description: Phage infection protein (pip, UniProtKB:P49022) contributes to Avs
+      V system (associated with oligomerization, disruption, hydrolysis).
+    evidence:
+    - reference: DOI:10.1016/j.molcel.2026.01.004
+      snippet: Upon sensing Jumbo J phage, Avs5-1 underwent oligomerization, which
+        activated the enzymatic activity of its Sir2 effector, resulting in rapid
+        NAD + hydrolysis, disruption of phage nucleus formation, and arrest of infection
+      notes: Supports the functional association between Phage infection protein (UniProtKB:P49022
+        in Lactococcus lactis subsp. lactis (Streptococcus lactis)) and Avs V system.
 discussions:
 - discussion_id: avs-v-component-and-host-gap
   prompt: Resolve the Avs5A component role, exact JADA trigger breadth, native host
@@ -190,4 +233,10 @@ curation_history:
     Avs5 type V AVAST immunity and the Avs_V model namespace but not an accession-backed
     native microbial taxon exemplar tied to Avs_V__Avs5A and experimentally verified
     endogenous Avs V activity. No paid research was used.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    avs_v_system_protein_component with UniProtKB:P49022 (pip) exemplar.'
   llm_assisted: true

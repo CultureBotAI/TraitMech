@@ -110,6 +110,39 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Accumulation of compatible solutes (e.g., glycine betaine) that counteract
       hyperosmotic stress.
+  - node_id: growth_range_phenotype_with_numerical_limits_protein_component
+    label: Na(+)/H(+) antiporter subunit A
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Na(+)/H(+) antiporter subunit A) associated with
+      growth range phenotype with numerical limits.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - mrpA
+    protein_examples:
+    - uniprot_id: UniProtKB:Q9RGZ5
+      protein_label: Na(+)/H(+) antiporter subunit A
+      gene_symbol: mrpA
+      taxon_id: NCBITaxon:398511
+      taxon_label: Alkalihalophilus pseudofirmus (strain ATCC BAA-2126 / JCM 17055
+        / OF4) (Bacillus pseudofirmus)
+      entry_status: REVIEWED
+      proteome_id: UP000001544
+      retrieved_on: '2026-10-17'
+      entry_version: 115
+      sequence_version: 2
+      role: Characteristic protein component (mrpA, Na(+)/H(+) antiporter subunit
+        A) associated with growth range phenotype with numerical limits in Alkalihalophilus
+        pseudofirmus (strain ATCC BAA-2126 / JCM 17055 / OF4) (Bacillus pseudofirmus).
+      evidence:
+      - reference: DOI:10.1093/femsre/fuad033
+        snippet: Proton-sensing ion/H+ antiporters acidify the cytoplasm by exporting
+          K+ or Na+ in exchange for protons when the internal pH gets too high
+        notes: Supports Na(+)/H(+) antiporter subunit A in growth range phenotype
+          with numerical limits; UniProtKB:Q9RGZ5 (mrpA, Na(+)/H(+) antiporter subunit
+          A) in Alkalihalophilus pseudofirmus (strain ATCC BAA-2126 / JCM 17055 /
+          OF4) (Bacillus pseudofirmus) provides a verified protein exemplar.
   edges:
   - subject: numerical_environmental_axis
     predicate: defines
@@ -231,6 +264,21 @@ causal_graphs:
       notes: Compatible-solute accumulation offsets hyperosmotic stress, broadening
         the salinity growth range.
     predicate_id: RO:0002326
+  - subject: growth_range_phenotype_with_numerical_limits_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: growth_range_phenotype_trait
+    description: Na(+)/H(+) antiporter subunit A (mrpA, UniProtKB:Q9RGZ5) contributes
+      to growth range phenotype with numerical limits (associated with antiporters,
+      cytoplasm, exporting).
+    evidence:
+    - reference: DOI:10.1093/femsre/fuad033
+      snippet: Proton-sensing ion/H+ antiporters acidify the cytoplasm by exporting
+        K+ or Na+ in exchange for protons when the internal pH gets too high
+      notes: Supports the functional association between Na(+)/H(+) antiporter subunit
+        A (UniProtKB:Q9RGZ5 in Alkalihalophilus pseudofirmus (strain ATCC BAA-2126
+        / JCM 17055 / OF4) (Bacillus pseudofirmus)) and growth range phenotype with
+        numerical limits.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.847733+00:00'
   curator: seed_from_metpo
@@ -306,4 +354,11 @@ curation_history:
     canonical example(s): Natranaerobius thermophilus (NCBITaxon:375929; DOI:10.1128/aem.00145-24).
     The note retains the measured value or scopes broad-class examples to the cited
     branch; no paid research was used.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    growth_range_phenotype_with_numerical_limits_protein_component with UniProtKB:Q9RGZ5
+    (mrpA) exemplar.'
   llm_assisted: true

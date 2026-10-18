@@ -92,6 +92,35 @@ causal_graphs:
     grounding: traitmech:000209
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
+  - node_id: hna_system_protein_component
+    label: Abortive infection protein
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Abortive infection protein) associated with Hna
+      system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - abi
+    protein_examples:
+    - uniprot_id: UniProtKB:P18024
+      protein_label: Abortive infection protein
+      gene_symbol: abi
+      taxon_id: NCBITaxon:562
+      taxon_label: Escherichia coli
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 49
+      sequence_version: 1
+      role: Characteristic protein component (abi, Abortive infection protein) associated
+        with Hna system in Escherichia coli.
+      evidence:
+      - reference: DOI:10.1038/s41467-026-73157-2
+        snippet: Hna is a broadly distributed anti-phage immune system that confers
+          resistance against diverse phage by eliciting an abortive infection response
+        notes: Supports Abortive infection protein in Hna system; UniProtKB:P18024
+          (abi, Abortive infection protein) in Escherichia coli provides a verified
+          protein exemplar.
   edges:
   - subject: hna_locus
     predicate: contributes to
@@ -155,6 +184,18 @@ causal_graphs:
     - reference: DOI:10.1038/s41467-026-73157-2
       snippet: Hna is a broadly distributed anti-phage immune system
       notes: Hooper et al. place Hna in the anti-phage immune-system family.
+  - subject: hna_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: hna_system_trait
+    description: Abortive infection protein (abi, UniProtKB:P18024) contributes to
+      Hna system (associated with distributed, resistance, eliciting).
+    evidence:
+    - reference: DOI:10.1038/s41467-026-73157-2
+      snippet: Hna is a broadly distributed anti-phage immune system that confers
+        resistance against diverse phage by eliciting an abortive infection response
+      notes: Supports the functional association between Abortive infection protein
+        (UniProtKB:P18024 in Escherichia coli) and Hna system.
 discussions:
 - discussion_id: hna-trigger-and-family-breadth-gap
   prompt: Resolve Hna trigger breadth, phage escape routes, and family architecture
@@ -176,4 +217,10 @@ curation_history:
     defense system parent after an ignored-and-hidden duplicate review found no exact
     live TraitMech, METPO, or prior proposal record; the replacement placeholder is
     reserved in proposals/metpo_traitmech_v118.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    hna_system_protein_component with UniProtKB:P18024 (abi) exemplar.'
   llm_assisted: true

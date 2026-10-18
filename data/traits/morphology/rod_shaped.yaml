@@ -50,6 +50,25 @@ causal_graphs:
     label: MreB
     node_type: GENE_OR_PROTEIN
     description: Actin-like protein involved in rod-shape maintenance.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q01465
+      protein_label: Cell shape-determining protein MreB
+      gene_symbol: mreB
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
+      entry_status: REVIEWED
+      proteome_id: UP000001570
+      retrieved_on: '2026-10-17'
+      entry_version: 148
+      sequence_version: 3
+      role: Exemplar protein (mreB, Cell shape-determining protein MreB) representing
+        MreB in Bacillus subtilis (strain 168) for rod shaped.
+      evidence:
+      - reference: DOI:10.1038/nrmicro1205
+        snippet: crescentin is required for the curved-rod shape
+        notes: Supports MreB in rod shaped; UniProtKB:Q01465 (mreB, Cell shape-determining
+          protein MreB) in Bacillus subtilis (strain 168) provides a verified protein
+          exemplar.
   - node_id: rod_complex
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
@@ -58,6 +77,25 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Cell-wall elongation machinery associated with MreB in rod-shaped
       bacteria.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q01465
+      protein_label: Cell shape-determining protein MreB
+      gene_symbol: mreB
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
+      entry_status: REVIEWED
+      proteome_id: UP000001570
+      retrieved_on: '2026-10-17'
+      entry_version: 148
+      sequence_version: 3
+      role: Exemplar protein (mreB, Cell shape-determining protein MreB) representing
+        Rod complex in Bacillus subtilis (strain 168) for rod shaped.
+      evidence:
+      - reference: DOI:10.1038/nrmicro1205
+        snippet: crescentin is required for the curved-rod shape
+        notes: Supports Rod complex in rod shaped; UniProtKB:Q01465 (mreB, Cell shape-determining
+          protein MreB) in Bacillus subtilis (strain 168) provides a verified protein
+          exemplar.
   - node_id: peptidoglycan_synthesis
     label: peptidoglycan synthesis
     node_type: BIOLOGICAL_PROCESS
@@ -72,6 +110,25 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Division-ring protein coordinating septal growth.
     grounding: InterPro:IPR000158
+    protein_examples:
+    - uniprot_id: UniProtKB:P0A9A6
+      protein_label: Cell division protein FtsZ
+      gene_symbol: ftsZ
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 162
+      sequence_version: 1
+      role: Exemplar protein (ftsZ, Cell division protein FtsZ) representing FtsZ
+        in Escherichia coli (strain K12) for rod shaped.
+      evidence:
+      - reference: DOI:10.1038/nrmicro1205
+        snippet: FtsZ is essential for cell division
+        notes: Supports FtsZ in rod shaped; UniProtKB:P0A9A6 (ftsZ, Cell division
+          protein FtsZ) in Escherichia coli (strain K12) provides a verified protein
+          exemplar.
   - node_id: rodA_pbp2_complex
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
@@ -80,6 +137,25 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Elongation synthase complex (RodA glycosyltransferase + PBP2 transpeptidase)
       of the Rod system.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0ABG7
+      protein_label: Peptidoglycan glycosyltransferase MrdB
+      gene_symbol: mrdB
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 133
+      sequence_version: 1
+      role: Exemplar protein (mrdB, Peptidoglycan glycosyltransferase MrdB) representing
+        RodA-PBP2 complex in Escherichia coli (strain K12) for rod shaped.
+      evidence:
+      - reference: PMID:7575501
+        snippet: why E. coli is rod-shaped
+        notes: Supports RodA-PBP2 complex in rod shaped; UniProtKB:P0ABG7 (mrdB, Peptidoglycan
+          glycosyltransferase MrdB) in Escherichia coli (strain K12) provides a verified
+          protein exemplar.
   - node_id: pbp2_structural_opening
     label: PBP2 structural opening
     node_type: MOLECULAR_FUNCTION
@@ -102,6 +178,25 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Periplasmic Rod-system component that activates PBP2 by promoting
       its open conformation.
+    protein_examples:
+    - uniprot_id: UniProtKB:P84480
+      protein_label: Cell shape-determining protein MreC
+      gene_symbol: mreC
+      taxon_id: NCBITaxon:1422
+      taxon_label: Geobacillus stearothermophilus (Bacillus stearothermophilus)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 44
+      sequence_version: 1
+      role: Exemplar protein (mreC, Cell shape-determining protein MreC) representing
+        MreC in Geobacillus stearothermophilus (Bacillus stearothermophilus) for rod
+        shaped.
+      evidence:
+      - reference: DOI:10.1038/nrmicro1205
+        snippet: crescentin is required for the curved-rod shape
+        notes: Supports MreC in rod shaped; UniProtKB:P84480 (mreC, Cell shape-determining
+          protein MreC) in Geobacillus stearothermophilus (Bacillus stearothermophilus)
+          provides a verified protein exemplar.
   - node_id: elongasome_processivity
     label: elongasome processivity
     node_type: BIOLOGICAL_PROCESS
@@ -366,4 +461,12 @@ curation_history:
     the tranche: set graph scope rod_shaped_mreB_peptidoglycan=NONMECHANISTIC with
     scope_notes; marked 4 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (mreB, rod_complex, rodA_pbp2_complex, mreC).'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q01465 (mreB)
+    protein example to node mreB; added UniProtKB:Q01465 (mreB) protein example to
+    node rod_complex; added UniProtKB:P0A9A6 (ftsZ) protein example to node ftsZ;
+    added UniProtKB:P0ABG7 (mrdB) protein example to node rodA_pbp2_complex (+1 more).'
   llm_assisted: true

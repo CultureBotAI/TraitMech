@@ -76,3 +76,73 @@ curation_history:
     direction scope, source discrepancies and pending hierarchy; deferred canonical
     strains and accession-level causal mechanisms.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph ph_tropism_graph
+    with GENE_OR_PROTEIN node ph_tropism_protein_component and UniProtKB:Q9RGZ5 exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: ph_tropism_graph
+  title: Protein component associated with pH tropism
+  description: Literature-backed association between Na(+)/H(+) antiporter subunit
+    A (UniProtKB:Q9RGZ5) and pH tropism.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q9RGZ5 in Alkalihalophilus
+    pseudofirmus (strain ATCC BAA-2126 / JCM 17055 / OF4) (Bacillus pseudofirmus))
+    associated with pH tropism while full multi-step mechanistic curation remains
+    future work.
+  nodes:
+  - node_id: ph_tropism_trait
+    label: pH tropism
+    node_type: TRAIT
+    grounding: traitmech:000602
+    description: A phenotype in which polarized growth is directionally biased in
+      response to a spatial gradient of external pH.
+  - node_id: ph_tropism_protein_component
+    label: Na(+)/H(+) antiporter subunit A
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Na(+)/H(+) antiporter subunit A) associated with
+      pH tropism.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - mrpA
+    protein_examples:
+    - uniprot_id: UniProtKB:Q9RGZ5
+      protein_label: Na(+)/H(+) antiporter subunit A
+      gene_symbol: mrpA
+      taxon_id: NCBITaxon:398511
+      taxon_label: Alkalihalophilus pseudofirmus (strain ATCC BAA-2126 / JCM 17055
+        / OF4) (Bacillus pseudofirmus)
+      entry_status: REVIEWED
+      proteome_id: UP000001544
+      retrieved_on: '2026-10-17'
+      entry_version: 115
+      sequence_version: 2
+      role: Characteristic protein component (mrpA, Na(+)/H(+) antiporter subunit
+        A) associated with pH tropism in Alkalihalophilus pseudofirmus (strain ATCC
+        BAA-2126 / JCM 17055 / OF4) (Bacillus pseudofirmus).
+      evidence:
+      - reference: DOI:10.1128/mbio.00285-23
+        snippet: F. oxysporum hyphae exposed to a pH gradient displayed robust tropism
+          toward acid.
+        notes: Supports Na(+)/H(+) antiporter subunit A in pH tropism; UniProtKB:Q9RGZ5
+          (mrpA, Na(+)/H(+) antiporter subunit A) in Alkalihalophilus pseudofirmus
+          (strain ATCC BAA-2126 / JCM 17055 / OF4) (Bacillus pseudofirmus) provides
+          a verified protein exemplar.
+  edges:
+  - subject: ph_tropism_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: ph_tropism_trait
+    description: Na(+)/H(+) antiporter subunit A (mrpA, UniProtKB:Q9RGZ5) contributes
+      to pH tropism (associated with displayed, oxysporum, gradient).
+    evidence:
+    - reference: DOI:10.1128/mbio.00285-23
+      snippet: F. oxysporum hyphae exposed to a pH gradient displayed robust tropism
+        toward acid.
+      notes: Supports the functional association between Na(+)/H(+) antiporter subunit
+        A (UniProtKB:Q9RGZ5 in Alkalihalophilus pseudofirmus (strain ATCC BAA-2126
+        / JCM 17055 / OF4) (Bacillus pseudofirmus)) and pH tropism.

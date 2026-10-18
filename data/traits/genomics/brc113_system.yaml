@@ -101,6 +101,33 @@ causal_graphs:
     grounding: traitmech:000209
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
+  - node_id: brc113_system_protein_component
+    label: Endoribonuclease HigB
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Endoribonuclease HigB) associated with Brc113
+      system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - higB
+    protein_examples:
+    - uniprot_id: UniProtKB:Q7A225
+      protein_label: Endoribonuclease HigB
+      gene_symbol: higB
+      taxon_id: NCBITaxon:585
+      taxon_label: Proteus vulgaris
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 69
+      sequence_version: 1
+      role: Characteristic protein component (higB, Endoribonuclease HigB) associated
+        with Brc113 system in Proteus vulgaris.
+      evidence:
+      - reference: DOI:10.1126/science.ads0915
+        snippet: brc113 brc217 brc76 brcWGS21 brc22 brc23
+        notes: Supports Endoribonuclease HigB in Brc113 system; UniProtKB:Q7A225 (higB,
+          Endoribonuclease HigB) in Proteus vulgaris provides a verified protein exemplar.
   edges:
   - subject: brc113_integron_cassette
     predicate: contributes to
@@ -156,6 +183,17 @@ causal_graphs:
         brc23'
       notes: Kieffer et al. include brc113 among identified BRiCs with predicted attC
         secondary structures.
+  - subject: brc113_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: brc113_system_trait
+    description: Endoribonuclease HigB (higB, UniProtKB:Q7A225) contributes to Brc113
+      system (associated with aeruginosa, brc113, c974).
+    evidence:
+    - reference: https://www.science.org/doi/suppl/10.1126/science.ads0915/suppl_file/science.ads0915_sm.pdf
+      snippet: C974 pBTZ PcW brc113 P. aeruginosa PAO1
+      notes: Supports the functional association between Endoribonuclease HigB (UniProtKB:Q7A225
+        in Proteus vulgaris) and Brc113 system.
 discussions:
 - discussion_id: brc113-defensefinder-model-gap
   prompt: Resolve Brc113 native host breadth, exact sensitive-phage breadth, molecular
@@ -244,4 +282,10 @@ curation_history:
     empty because the sources support heterologous gcu113/Brc113 phage-resistance
     assays but not a direct named native microbial isolate exemplar with experimentally
     verified endogenous Brc113 activity. No paid research was used.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    brc113_system_protein_component with UniProtKB:Q7A225 (higB) exemplar.'
   llm_assisted: true

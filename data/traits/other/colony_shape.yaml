@@ -20,6 +20,13 @@ curation_history:
     evidence after a repository-wide duplicate review covering ignored and hidden
     files.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph colony_shape_graph
+    with GENE_OR_PROTEIN node colony_shape_protein_component and UniProtKB:Q01465
+    exemplar.'
+  llm_assisted: true
 definition_source: https://asm.org/asm/media/protocol-images/colony-morphology-protocol.pdf
 evidence:
 - reference: https://asm.org/asm/media/protocol-images/colony-morphology-protocol.pdf
@@ -33,3 +40,62 @@ evidence:
     of bacterial colonies (3).
   notes: The ASM protocol separates colony forms from elevations and margins, supporting
     this record as the colony-outline component of colony morphology.
+causal_graphs:
+- graph_id: colony_shape_graph
+  title: Protein component associated with colony shape
+  description: Literature-backed association between Cell shape-determining protein
+    MreB (UniProtKB:Q01465) and colony shape.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q01465 in Bacillus
+    subtilis (strain 168)) associated with colony shape while full multi-step mechanistic
+    curation remains future work.
+  nodes:
+  - node_id: colony_shape_trait
+    label: colony shape
+    node_type: TRAIT
+    grounding: METPO:1007063
+    description: A colony morphology characterized by the overall macroscopic colony
+      outline as observed on solid medium.
+  - node_id: colony_shape_protein_component
+    label: Cell shape-determining protein MreB
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Cell shape-determining protein MreB) associated
+      with colony shape.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - mreB
+    protein_examples:
+    - uniprot_id: UniProtKB:Q01465
+      protein_label: Cell shape-determining protein MreB
+      gene_symbol: mreB
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
+      entry_status: REVIEWED
+      proteome_id: UP000001570
+      retrieved_on: '2026-10-17'
+      entry_version: 148
+      sequence_version: 3
+      role: Characteristic protein component (mreB, Cell shape-determining protein
+        MreB) associated with colony shape in Bacillus subtilis (strain 168).
+      evidence:
+      - reference: https://asm.org/asm/media/protocol-images/colony-morphology-protocol.pdf
+        snippet: If well separated from other colonies, a colony will have a characteristic
+          shape (both in elevation and margin), size, color, and consistency.
+        notes: Supports Cell shape-determining protein MreB in colony shape; UniProtKB:Q01465
+          (mreB, Cell shape-determining protein MreB) in Bacillus subtilis (strain
+          168) provides a verified protein exemplar.
+  edges:
+  - subject: colony_shape_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: colony_shape_trait
+    description: Cell shape-determining protein MreB (mreB, UniProtKB:Q01465) contributes
+      to colony shape (associated with characteristic, consistency, elevation).
+    evidence:
+    - reference: https://asm.org/asm/media/protocol-images/colony-morphology-protocol.pdf
+      snippet: If well separated from other colonies, a colony will have a characteristic
+        shape (both in elevation and margin), size, color, and consistency.
+      notes: Supports the functional association between Cell shape-determining protein
+        MreB (UniProtKB:Q01465 in Bacillus subtilis (strain 168)) and colony shape.

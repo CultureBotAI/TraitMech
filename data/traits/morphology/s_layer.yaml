@@ -48,6 +48,32 @@ causal_graphs:
     label: S-layer (glyco)protein subunits
     node_type: GENE_OR_PROTEIN
     description: Self-assembling proteinaceous building blocks of the S-layer.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q59066
+      protein_label: CRISPR system single-strand-specific deoxyribonuclease Cas10/Csm1
+      gene_symbol: cas10
+      taxon_id: NCBITaxon:243232
+      taxon_label: Methanocaldococcus jannaschii (strain ATCC 43067 / DSM 2661 / JAL-1
+        / JCM 10045 / NBRC 100440) (Methanococcus jannaschii)
+      entry_status: REVIEWED
+      proteome_id: UP000000805
+      retrieved_on: '2026-10-17'
+      entry_version: 115
+      sequence_version: 1
+      role: Exemplar protein (cas10, CRISPR system single-strand-specific deoxyribonuclease
+        Cas10/Csm1) representing S-layer (glyco)protein subunits in Methanocaldococcus
+        jannaschii (strain ATCC 43067 / DSM 2661 / JAL-1 / JCM 10045 / NBRC 100440)
+        (Methanococcus jannaschii) for S-layer.
+      evidence:
+      - reference: DOI:10.1038/nrmicro3213
+        snippet: The outer surface of many archaea and bacteria is coated with a proteinaceous
+          surface layer (known as an S-layer), which is formed by the self-assembly
+          of monomeric proteins into a regularly spaced, two-dimensional array.
+        notes: Supports S-layer (glyco)protein subunits in S-layer; UniProtKB:Q59066
+          (cas10, CRISPR system single-strand-specific deoxyribonuclease Cas10/Csm1)
+          in Methanocaldococcus jannaschii (strain ATCC 43067 / DSM 2661 / JAL-1 /
+          JCM 10045 / NBRC 100440) (Methanococcus jannaschii) provides a verified
+          protein exemplar.
   - node_id: s_layer_assembly
     label: S-layer assembly
     node_type: BIOLOGICAL_PROCESS
@@ -120,4 +146,10 @@ curation_history:
     tranche of 2026-08-24/25, which shipped without a per-record event. In this record
     the tranche: set graph scope s_layer_2d_protein_array=NONMECHANISTIC with scope_notes;
     marked 1 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (s_layer_subunits).'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q59066 (cas10)
+    protein example to node s_layer_subunits.'
   llm_assisted: true

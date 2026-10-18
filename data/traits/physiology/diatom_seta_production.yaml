@@ -82,3 +82,73 @@ curation_history:
     records unchanged; mappings, canonical taxa and mechanisms remain open. Timestamp
     records the observed UTC curation decision.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph diatom_seta_production_graph
+    with GENE_OR_PROTEIN node diatom_seta_production_protein_component and UniProtKB:Q5AMH6
+    exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: diatom_seta_production_graph
+  title: Protein component associated with diatom seta production
+  description: Literature-backed association between Cell wall integrity transcriptional
+    regulator CAS5 (UniProtKB:Q5AMH6) and diatom seta production.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q5AMH6 in Candida
+    albicans (strain SC5314 / ATCC MYA-2876) (Yeast)) associated with diatom seta
+    production while full multi-step mechanistic curation remains future work.
+  nodes:
+  - node_id: diatom_seta_production_trait
+    label: diatom seta production
+    node_type: TRAIT
+    grounding: traitmech:000692
+    description: A biomineralization phenotype in which a diatom forms siliceous whisker-like
+      cell-wall extensions called setae.
+  - node_id: diatom_seta_production_protein_component
+    label: Cell wall integrity transcriptional regulator CAS5
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Cell wall integrity transcriptional regulator
+      CAS5) associated with diatom seta production.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - CAS5
+    protein_examples:
+    - uniprot_id: UniProtKB:Q5AMH6
+      protein_label: Cell wall integrity transcriptional regulator CAS5
+      gene_symbol: CAS5
+      taxon_id: NCBITaxon:237561
+      taxon_label: Candida albicans (strain SC5314 / ATCC MYA-2876) (Yeast)
+      entry_status: REVIEWED
+      proteome_id: UP000000559
+      retrieved_on: '2026-10-17'
+      entry_version: 135
+      sequence_version: 1
+      role: Characteristic protein component (CAS5, Cell wall integrity transcriptional
+        regulator CAS5) associated with diatom seta production in Candida albicans
+        (strain SC5314 / ATCC MYA-2876) (Yeast).
+      evidence:
+      - reference: DOI:10.1038/s41467-021-24944-6
+        snippet: A striking example for such long elements are whisker-like extensions,
+          called setae, which characterize the genus Chaetoceros
+        notes: Supports Cell wall integrity transcriptional regulator CAS5 in diatom
+          seta production; UniProtKB:Q5AMH6 (CAS5, Cell wall integrity transcriptional
+          regulator CAS5) in Candida albicans (strain SC5314 / ATCC MYA-2876) (Yeast)
+          provides a verified protein exemplar.
+  edges:
+  - subject: diatom_seta_production_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: diatom_seta_production_trait
+    description: Cell wall integrity transcriptional regulator CAS5 (CAS5, UniProtKB:Q5AMH6)
+      contributes to diatom seta production (associated with characterize, chaetoceros,
+      extensions).
+    evidence:
+    - reference: DOI:10.1038/s41467-021-24944-6
+      snippet: A striking example for such long elements are whisker-like extensions,
+        called setae, which characterize the genus Chaetoceros
+      notes: Supports the functional association between Cell wall integrity transcriptional
+        regulator CAS5 (UniProtKB:Q5AMH6 in Candida albicans (strain SC5314 / ATCC
+        MYA-2876) (Yeast)) and diatom seta production.

@@ -88,7 +88,7 @@ causal_graphs:
       entry_status: UNREVIEWED
       proteome_id: UP000008186
       retrieved_on: '2026-08-24'
-      entry_version: 125
+      entry_version: 126
       sequence_version: 1
       role: Cell-surface MtrC component of the MtrCAB conduit; this accession is not
         presented as the complete three-component complex.
@@ -260,4 +260,10 @@ curation_history:
   action: CONNECT_CAUSAL_GRAPH_COMPONENTS
   changes: 'Resolved issue #183 graph fragmentation (3 components to 1) with 2 public-source
     connector(s). No paid research service was called.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:Q8EG34
+    version metadata (entry_version=126, sequence_version=1).'
   llm_assisted: true

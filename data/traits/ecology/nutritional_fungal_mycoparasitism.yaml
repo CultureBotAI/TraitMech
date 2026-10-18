@@ -100,3 +100,68 @@ curation_history:
     taxa or causal graph inferred; previous records unchanged. Timestamp is observed
     post-audit acceptance, not an estimated write time.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph nutritional_fungal_mycoparasitism_graph
+    with GENE_OR_PROTEIN node nutritional_fungal_mycoparasitism_protein_component
+    and UniProtKB:Q7A225 exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: nutritional_fungal_mycoparasitism_graph
+  title: Protein component associated with nutritional fungal mycoparasitism
+  description: Literature-backed association between Endoribonuclease HigB (UniProtKB:Q7A225)
+    and nutritional fungal mycoparasitism.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q7A225 in Proteus
+    vulgaris) associated with nutritional fungal mycoparasitism while full multi-step
+    mechanistic curation remains future work.
+  nodes:
+  - node_id: nutritional_fungal_mycoparasitism_trait
+    label: nutritional fungal mycoparasitism
+    node_type: TRAIT
+    grounding: traitmech:000717
+    description: An ecological phenotype in which a fungus obtains nutrients at the
+      expense of another fungus, either from the living host or after killing it.
+  - node_id: nutritional_fungal_mycoparasitism_protein_component
+    label: Endoribonuclease HigB
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Endoribonuclease HigB) associated with nutritional
+      fungal mycoparasitism.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - higB
+    protein_examples:
+    - uniprot_id: UniProtKB:Q7A225
+      protein_label: Endoribonuclease HigB
+      gene_symbol: higB
+      taxon_id: NCBITaxon:585
+      taxon_label: Proteus vulgaris
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 69
+      sequence_version: 1
+      role: Characteristic protein component (higB, Endoribonuclease HigB) associated
+        with nutritional fungal mycoparasitism in Proteus vulgaris.
+      evidence:
+      - reference: DOI:10.1139/b95-389
+        snippet: The term mycoparasitism applies strictly to those relationships in
+          which one living fungus acts as a nutrient source for another
+        notes: Supports Endoribonuclease HigB in nutritional fungal mycoparasitism;
+          UniProtKB:Q7A225 (higB, Endoribonuclease HigB) in Proteus vulgaris provides
+          a verified protein exemplar.
+  edges:
+  - subject: nutritional_fungal_mycoparasitism_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: nutritional_fungal_mycoparasitism_trait
+    description: Endoribonuclease HigB (higB, UniProtKB:Q7A225) contributes to nutritional
+      fungal mycoparasitism (associated with mycoparasitism, relationships, nutrient).
+    evidence:
+    - reference: DOI:10.1139/b95-389
+      snippet: The term mycoparasitism applies strictly to those relationships in
+        which one living fungus acts as a nutrient source for another
+      notes: Supports the functional association between Endoribonuclease HigB (UniProtKB:Q7A225
+        in Proteus vulgaris) and nutritional fungal mycoparasitism.

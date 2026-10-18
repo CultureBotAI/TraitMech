@@ -98,6 +98,26 @@ causal_graphs:
     grounding_notes: Sox denotes a variable pathway assembled from multiple distinct
       protein families and complexes; no one protein-family term represents the complete
       generic system used by this graph.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q9AGP3
+      protein_label: Sarcosine oxidase subunit beta
+      gene_symbol: soxB
+      taxon_id: NCBITaxon:1667
+      taxon_label: Arthrobacter sp
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 66
+      sequence_version: 1
+      role: Exemplar protein (soxB, Sarcosine oxidase subunit beta) representing Sox
+        multienzyme system in Arthrobacter sp for lithotrophic.
+      evidence:
+      - reference: DOI:10.3390/microorganisms11061436
+        snippet: The Sox multienzyme complex, first described using the model organism
+          Paracoccus panthotrophus, is widespread in photo- and chemotrophic sulfur-oxidizing
+          bacteria and appears to be the most prominent sulfur oxidation system
+        notes: Supports Sox multienzyme system in lithotrophic; UniProtKB:Q9AGP3 (soxB,
+          Sarcosine oxidase subunit beta) in Arthrobacter sp provides a verified protein
+          exemplar.
   - node_id: sulfite
     label: sulfite
     node_type: CHEMICAL
@@ -109,6 +129,29 @@ causal_graphs:
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: SoeABC is a multisubunit membrane complex; the graph and cited
       review do not isolate one subunit family as the generic node.
+    protein_examples:
+    - uniprot_id: UniProtKB:D3RNN8
+      protein_label: Sulfite dehydrogenase subunit A
+      gene_symbol: soeA
+      taxon_id: NCBITaxon:572477
+      taxon_label: Allochromatium vinosum (strain ATCC 17899 / DSM 180 / NBRC 103801
+        / NCIMB 10441 / D) (Chromatium vinosum)
+      entry_status: REVIEWED
+      proteome_id: UP000001441
+      retrieved_on: '2026-10-17'
+      entry_version: 77
+      sequence_version: 1
+      role: Exemplar protein (soeA, Sulfite dehydrogenase subunit A) representing
+        SoeABC sulfite dehydrogenase in Allochromatium vinosum (strain ATCC 17899
+        / DSM 180 / NBRC 103801 / NCIMB 10441 / D) (Chromatium vinosum) for lithotrophic.
+      evidence:
+      - reference: DOI:10.3390/microorganisms11061436
+        snippet: sulfite, which is subsequently oxidized by the activity of the membrane-bound
+          protein SoeABC (sulfite dehydrogenase) to sulfate
+        notes: Supports SoeABC sulfite dehydrogenase in lithotrophic; UniProtKB:D3RNN8
+          (soeA, Sulfite dehydrogenase subunit A) in Allochromatium vinosum (strain
+          ATCC 17899 / DSM 180 / NBRC 103801 / NCIMB 10441 / D) (Chromatium vinosum)
+          provides a verified protein exemplar.
   - node_id: ammonia
     label: ammonia
     node_type: CHEMICAL
@@ -127,7 +170,7 @@ causal_graphs:
       taxon_label: Nitrosomonas europaea ATCC 19718
       entry_status: REVIEWED
       retrieved_on: '2026-08-24'
-      entry_version: 126
+      entry_version: 127
       sequence_version: 2
       role: AmoA alpha-subunit component of the N. europaea ammonia monooxygenase;
         the accession maps two duplicated amoA gene copies and is not the whole enzyme
@@ -148,6 +191,26 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Enzyme oxidizing hydroxylamine during ammonia oxidation (EC 1.7.2.6).
     grounding: GO:0033740
+    protein_examples:
+    - uniprot_id: UniProtKB:Q1PX48
+      protein_label: Hydroxylamine oxidoreductase
+      gene_symbol: hao
+      taxon_id: NCBITaxon:174633
+      taxon_label: Kuenenia stuttgartiensis
+      entry_status: REVIEWED
+      proteome_id: UP000221734
+      retrieved_on: '2026-10-17'
+      entry_version: 86
+      sequence_version: 1
+      role: Exemplar protein (hao, Hydroxylamine oxidoreductase) representing hydroxylamine
+        oxidoreductase (HAO) in Kuenenia stuttgartiensis for lithotrophic.
+      evidence:
+      - reference: DOI:10.1128/jb.185.9.2759-2773.2003
+        snippet: Electrons from hydroxylamine oxidation flow through cytochrome c554
+          and cytochrome cm552 into the electron transport chain at the level of ubiquinone
+        notes: Supports hydroxylamine oxidoreductase (HAO) in lithotrophic; UniProtKB:Q1PX48
+          (hao, Hydroxylamine oxidoreductase) in Kuenenia stuttgartiensis provides
+          a verified protein exemplar.
   - node_id: nitrite
     label: nitrite
     node_type: CHEMICAL
@@ -161,6 +224,26 @@ causal_graphs:
     grounding_notes: NXR is a multisubunit molybdoenzyme whose architecture and component
       families vary across nitrite oxidizers; this generic node does not identify
       a single exact subunit or whole-complex term.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0AF28
+      protein_label: Nitrate/nitrite response regulator protein NarL
+      gene_symbol: narL
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 145
+      sequence_version: 1
+      role: Exemplar protein (narL, Nitrate/nitrite response regulator protein NarL)
+        representing nitrite oxidoreductase (NXR) in Escherichia coli (strain K12)
+        for lithotrophic.
+      evidence:
+      - reference: DOI:10.1111/j.1574-6976.2009.00187.x
+        snippet: lithotrophic sulfur oxidation
+        notes: Supports nitrite oxidoreductase (NXR) in lithotrophic; UniProtKB:P0AF28
+          (narL, Nitrate/nitrite response regulator protein NarL) in Escherichia coli
+          (strain K12) provides a verified protein exemplar.
   - node_id: molecular_oxygen
     label: molecular oxygen
     node_type: CHEMICAL
@@ -477,4 +560,13 @@ curation_history:
     relations. Sox and SoeABC now join the sulfur-oxidation branch to electron transport;
     the explicitly bacterial AMO-HAO branch now joins ammonia, hydroxylamine, nitrite,
     NXR, and electron transport. No new paid research was commissioned (#183, #426).'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:Q04507
+    version metadata (entry_version=127, sequence_version=2); added UniProtKB:Q9AGP3
+    (soxB) protein example to node sox_multienzyme_system; added UniProtKB:D3RNN8
+    (soeA) protein example to node soeabc_sulfite_dehydrogenase; added UniProtKB:Q1PX48
+    (hao) protein example to node hydroxylamine_oxidoreductase (+1 more).'
   llm_assisted: true

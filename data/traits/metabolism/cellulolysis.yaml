@@ -51,6 +51,26 @@ causal_graphs:
     grounding_notes: This system-level node combines multiple catalytic families and
       free-enzyme versus cellulosomal architectures, so no single protein-family term
       denotes it.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0C2S2
+      protein_label: Endoglucanase A
+      gene_symbol: celA
+      taxon_id: NCBITaxon:1515
+      taxon_label: Acetivibrio thermocellus (Hungateiclostridium thermocellum) (Clostridium
+        thermocellum)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 35
+      sequence_version: 1
+      role: Exemplar protein (celA, Endoglucanase A) representing cellulase systems
+        in Acetivibrio thermocellus (Hungateiclostridium thermocellum) (Clostridium
+        thermocellum) for cellulolysis.
+      evidence:
+      - reference: DOI:10.1128/MMBR.66.3.506-577.2002
+        snippet: complexed cellulase systems
+        notes: Supports cellulase systems in cellulolysis; UniProtKB:P0C2S2 (celA,
+          Endoglucanase A) in Acetivibrio thermocellus (Hungateiclostridium thermocellum)
+          (Clostridium thermocellum) provides a verified protein exemplar.
   - node_id: glucose
     label: glucose
     node_type: CHEMICAL
@@ -66,6 +86,27 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Cellulase that cleaves internal bonds of cellulose chains.
     grounding: GO:0008810
+    protein_examples:
+    - uniprot_id: UniProtKB:P0C2S2
+      protein_label: Endoglucanase A
+      gene_symbol: celA
+      taxon_id: NCBITaxon:1515
+      taxon_label: Acetivibrio thermocellus (Hungateiclostridium thermocellum) (Clostridium
+        thermocellum)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 35
+      sequence_version: 1
+      role: Exemplar protein (celA, Endoglucanase A) representing endoglucanase in
+        Acetivibrio thermocellus (Hungateiclostridium thermocellum) (Clostridium thermocellum)
+        for cellulolysis.
+      evidence:
+      - reference: DOI:10.1016/j.cbpa.2015.10.018
+        snippet: The enzymatic degradation of cellulose and hemicellulose is accomplished
+          in Nature via the collective action of multiple carbohydrate-active enzymes
+        notes: Supports endoglucanase in cellulolysis; UniProtKB:P0C2S2 (celA, Endoglucanase
+          A) in Acetivibrio thermocellus (Hungateiclostridium thermocellum) (Clostridium
+          thermocellum) provides a verified protein exemplar.
   - node_id: cellobiohydrolase
     label: cellobiohydrolase / exoglucanase
     node_type: GENE_OR_PROTEIN
@@ -79,7 +120,7 @@ causal_graphs:
       taxon_label: Acetivibrio thermocellus
       entry_status: REVIEWED
       retrieved_on: '2026-08-24'
-      entry_version: 80
+      entry_version: 81
       sequence_version: 1
       role: Catalytic CelS component of the A. thermocellus cellulosome; this accession
         denotes the cellobiohydrolase component, not the complete cellulosome.
@@ -94,6 +135,26 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Enzyme hydrolyzing cellobiose to glucose.
     grounding: GO:0008422
+    protein_examples:
+    - uniprot_id: UniProtKB:Q46829
+      protein_label: 6-phospho-beta-glucosidase BglA
+      gene_symbol: bglA
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 169
+      sequence_version: 2
+      role: Exemplar protein (bglA, 6-phospho-beta-glucosidase BglA) representing
+        beta-glucosidase in Escherichia coli (strain K12) for cellulolysis.
+      evidence:
+      - reference: DOI:10.1093/jambio/lxac002
+        snippet: Complete degradation of cellulose to glucose requires concerted action
+          of cellobiohydrolases, endoglucanases and beta-glucosidases.
+        notes: Supports beta-glucosidase in cellulolysis; UniProtKB:Q46829 (bglA,
+          6-phospho-beta-glucosidase BglA) in Escherichia coli (strain K12) provides
+          a verified protein exemplar.
   - node_id: cellobiose
     label: cellobiose
     node_type: CHEMICAL
@@ -104,6 +165,25 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Multienzyme complex built on scaffoldins for cellulose degradation.
     grounding: GO:0043263
+    protein_examples:
+    - uniprot_id: UniProtKB:P0C2S5
+      protein_label: Cellulose 1,4-beta-cellobiosidase (reducing end) CelS
+      gene_symbol: celS
+      taxon_id: NCBITaxon:1515
+      taxon_label: Acetivibrio thermocellus
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 81
+      sequence_version: 1
+      role: Exemplar protein (celS, Cellulose 1,4-beta-cellobiosidase (reducing end)
+        CelS) representing cellulosome in Acetivibrio thermocellus for cellulolysis.
+      evidence:
+      - reference: DOI:10.1093/jambio/lxac002
+        snippet: Complete degradation of cellulose to glucose requires concerted action
+          of cellobiohydrolases, endoglucanases and beta-glucosidases.
+        notes: Supports cellulosome in cellulolysis; UniProtKB:P0C2S5 (celS, Cellulose
+          1,4-beta-cellobiosidase (reducing end) CelS) in Acetivibrio thermocellus
+          provides a verified protein exemplar.
   - node_id: scaffoldin
     label: scaffoldin
     node_type: GENE_OR_PROTEIN
@@ -112,16 +192,88 @@ causal_graphs:
     grounding_notes: Scaffoldins are modular proteins with varying cohesin, carbohydrate-binding,
       dockerin, and anchoring architectures; verified terms describe their modules
       rather than the complete scaffoldin class.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q06851
+      protein_label: Cellulosomal-scaffolding protein A
+      gene_symbol: cipA
+      taxon_id: NCBITaxon:203119
+      taxon_label: Acetivibrio thermocellus (strain ATCC 27405 / DSM 1237 / JCM 9322
+        / NBRC 103400 / NCIMB 10682 / NRRL B-4536 / VPI 7372) (Clostridium thermocellum)
+      entry_status: REVIEWED
+      proteome_id: UP000002145
+      retrieved_on: '2026-10-17'
+      entry_version: 178
+      sequence_version: 2
+      role: Exemplar protein (cipA, Cellulosomal-scaffolding protein A) representing
+        scaffoldin in Acetivibrio thermocellus (strain ATCC 27405 / DSM 1237 / JCM
+        9322 / NBRC 103400 / NCIMB 10682 / NRRL B-4536 / VPI 7372) (Clostridium thermocellum)
+        for cellulolysis.
+      evidence:
+      - reference: DOI:10.1016/j.cbpa.2015.10.018
+        snippet: The enzymatic degradation of cellulose and hemicellulose is accomplished
+          in Nature via the collective action of multiple carbohydrate-active enzymes
+        notes: Supports scaffoldin in cellulolysis; UniProtKB:Q06851 (cipA, Cellulosomal-scaffolding
+          protein A) in Acetivibrio thermocellus (strain ATCC 27405 / DSM 1237 / JCM
+          9322 / NBRC 103400 / NCIMB 10682 / NRRL B-4536 / VPI 7372) (Clostridium
+          thermocellum) provides a verified protein exemplar.
   - node_id: cohesin_domain
     label: cohesin domain
     node_type: GENE_OR_PROTEIN
     description: Scaffoldin module that binds dockerin domains.
     grounding: InterPro:IPR002102
+    protein_examples:
+    - uniprot_id: UniProtKB:Q06851
+      protein_label: Cellulosomal-scaffolding protein A
+      gene_symbol: cipA
+      taxon_id: NCBITaxon:203119
+      taxon_label: Acetivibrio thermocellus (strain ATCC 27405 / DSM 1237 / JCM 9322
+        / NBRC 103400 / NCIMB 10682 / NRRL B-4536 / VPI 7372) (Clostridium thermocellum)
+      entry_status: REVIEWED
+      proteome_id: UP000002145
+      retrieved_on: '2026-10-17'
+      entry_version: 178
+      sequence_version: 2
+      role: Exemplar protein (cipA, Cellulosomal-scaffolding protein A) representing
+        cohesin domain in Acetivibrio thermocellus (strain ATCC 27405 / DSM 1237 /
+        JCM 9322 / NBRC 103400 / NCIMB 10682 / NRRL B-4536 / VPI 7372) (Clostridium
+        thermocellum) for cellulolysis.
+      evidence:
+      - reference: DOI:10.1016/j.cbpa.2015.10.018
+        snippet: The enzymatic degradation of cellulose and hemicellulose is accomplished
+          in Nature via the collective action of multiple carbohydrate-active enzymes
+        notes: Supports cohesin domain in cellulolysis; UniProtKB:Q06851 (cipA, Cellulosomal-scaffolding
+          protein A) in Acetivibrio thermocellus (strain ATCC 27405 / DSM 1237 / JCM
+          9322 / NBRC 103400 / NCIMB 10682 / NRRL B-4536 / VPI 7372) (Clostridium
+          thermocellum) provides a verified protein exemplar.
   - node_id: dockerin_domain
     label: dockerin domain
     node_type: GENE_OR_PROTEIN
     description: Enzyme-borne module that binds scaffoldin cohesin domains.
     grounding: InterPro:IPR002105
+    protein_examples:
+    - uniprot_id: UniProtKB:Q06851
+      protein_label: Cellulosomal-scaffolding protein A
+      gene_symbol: cipA
+      taxon_id: NCBITaxon:203119
+      taxon_label: Acetivibrio thermocellus (strain ATCC 27405 / DSM 1237 / JCM 9322
+        / NBRC 103400 / NCIMB 10682 / NRRL B-4536 / VPI 7372) (Clostridium thermocellum)
+      entry_status: REVIEWED
+      proteome_id: UP000002145
+      retrieved_on: '2026-10-17'
+      entry_version: 178
+      sequence_version: 2
+      role: Exemplar protein (cipA, Cellulosomal-scaffolding protein A) representing
+        dockerin domain in Acetivibrio thermocellus (strain ATCC 27405 / DSM 1237
+        / JCM 9322 / NBRC 103400 / NCIMB 10682 / NRRL B-4536 / VPI 7372) (Clostridium
+        thermocellum) for cellulolysis.
+      evidence:
+      - reference: DOI:10.1016/j.cbpa.2015.10.018
+        snippet: The enzymatic degradation of cellulose and hemicellulose is accomplished
+          in Nature via the collective action of multiple carbohydrate-active enzymes
+        notes: Supports dockerin domain in cellulolysis; UniProtKB:Q06851 (cipA, Cellulosomal-scaffolding
+          protein A) in Acetivibrio thermocellus (strain ATCC 27405 / DSM 1237 / JCM
+          9322 / NBRC 103400 / NCIMB 10682 / NRRL B-4536 / VPI 7372) (Clostridium
+          thermocellum) provides a verified protein exemplar.
   - node_id: ccr
     label: carbon catabolite repression
     node_type: BIOLOGICAL_PROCESS
@@ -415,4 +567,13 @@ curation_history:
   changes: Scoped the cellulase-system graph, added a DOI-backed A. thermocellus CelS
     example, grounded cellulase activities and cohesin/dockerin modules, and documented
     the remaining system-level labels as reviewed label-only.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:P0C2S5
+    version metadata (entry_version=81, sequence_version=1); added UniProtKB:P0C2S2
+    (celA) protein example to node cellulase; added UniProtKB:P0C2S2 (celA) protein
+    example to node endoglucanase; added UniProtKB:Q46829 (bglA) protein example to
+    node beta_glucosidase (+4 more).'
   llm_assisted: true

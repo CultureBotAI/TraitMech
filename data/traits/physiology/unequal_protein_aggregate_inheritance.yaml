@@ -146,3 +146,76 @@ curation_history:
     assessment; appended the correction and updated the proposal sources. Timestamp
     is the observed UTC correction decision.'
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph unequal_protein_aggregate_inheritance_graph
+    with GENE_OR_PROTEIN node unequal_protein_aggregate_inheritance_protein_component
+    and UniProtKB:P00549 exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: unequal_protein_aggregate_inheritance_graph
+  title: Protein component associated with unequal protein aggregate inheritance at
+    cell division
+  description: Literature-backed association between Pyruvate kinase 1 (UniProtKB:P00549)
+    and unequal protein aggregate inheritance at cell division.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P00549 in Saccharomyces
+    cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)) associated with unequal
+    protein aggregate inheritance at cell division while full multi-step mechanistic
+    curation remains future work.
+  nodes:
+  - node_id: unequal_protein_aggregate_inheritance_trait
+    label: unequal protein aggregate inheritance at cell division
+    node_type: TRAIT
+    grounding: traitmech:000711
+    description: A physiological phenotype in which microbial cell division recurrently
+      yields sibling cells with unequal numbers or amounts of inherited protein aggregates.
+  - node_id: unequal_protein_aggregate_inheritance_protein_component
+    label: Pyruvate kinase 1
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Pyruvate kinase 1) associated with unequal protein
+      aggregate inheritance at cell division.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - CDC19
+    protein_examples:
+    - uniprot_id: UniProtKB:P00549
+      protein_label: Pyruvate kinase 1
+      gene_symbol: CDC19
+      taxon_id: NCBITaxon:559292
+      taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's
+        yeast)
+      entry_status: REVIEWED
+      proteome_id: UP000002311
+      retrieved_on: '2026-10-17'
+      entry_version: 238
+      sequence_version: 2
+      role: Characteristic protein component (CDC19, Pyruvate kinase 1) associated
+        with unequal protein aggregate inheritance at cell division in Saccharomyces
+        cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast).
+      evidence:
+      - reference: DOI:10.1371/journal.pbio.2003853
+        snippet: the polarly deposited PA was subjected to limited disaggregation
+          and therefore became asymmetrically inherited for a large number of generations
+        notes: Supports Pyruvate kinase 1 in unequal protein aggregate inheritance
+          at cell division; UniProtKB:P00549 (CDC19, Pyruvate kinase 1) in Saccharomyces
+          cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast) provides a verified
+          protein exemplar.
+  edges:
+  - subject: unequal_protein_aggregate_inheritance_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: unequal_protein_aggregate_inheritance_trait
+    description: Pyruvate kinase 1 (CDC19, UniProtKB:P00549) contributes to unequal
+      protein aggregate inheritance at cell division (associated with asymmetrically,
+      disaggregation, generations).
+    evidence:
+    - reference: DOI:10.1371/journal.pbio.2003853
+      snippet: the polarly deposited PA was subjected to limited disaggregation and
+        therefore became asymmetrically inherited for a large number of generations
+      notes: Supports the functional association between Pyruvate kinase 1 (UniProtKB:P00549
+        in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast))
+        and unequal protein aggregate inheritance at cell division.

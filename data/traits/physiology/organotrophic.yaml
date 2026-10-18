@@ -95,6 +95,27 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Respiratory enzyme complex extracting electrons from NADH.
     grounding: GO:0030964
+    protein_examples:
+    - uniprot_id: UniProtKB:P33602
+      protein_label: NADH-quinone oxidoreductase subunit G
+      gene_symbol: nuoG
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 213
+      sequence_version: 4
+      role: Exemplar protein (nuoG, NADH-quinone oxidoreductase subunit G) representing
+        NADH dehydrogenase (Complex I) in Escherichia coli (strain K12) for organotrophic.
+      evidence:
+      - reference: DOI:10.7554/eLife.21598
+        snippet: the potential energy of the proton motive force into rotation of
+          the central stalk that drives conformational changes in the F1 catalytic
+          sites
+        notes: Supports NADH dehydrogenase (Complex I) in organotrophic; UniProtKB:P33602
+          (nuoG, NADH-quinone oxidoreductase subunit G) in Escherichia coli (strain
+          K12) provides a verified protein exemplar.
   - node_id: organic_carbon_availability
     label: organic carbon availability
     node_type: ENVIRONMENTAL_FACTOR
@@ -112,7 +133,7 @@ causal_graphs:
       taxon_label: Escherichia coli K-12
       entry_status: REVIEWED
       retrieved_on: '2026-08-24'
-      entry_version: 155
+      entry_version: 156
       sequence_version: 2
       role: Beta component of the E. coli F1 catalytic head; this accession is not
         presented as the complete F1Fo complex.
@@ -354,4 +375,11 @@ curation_history:
     with scope_notes; added taxon-paired protein example(s) UniProtKB:P0ABB4 on atp_synthase
     (NCBITaxon:83333); regrounded 1 node(s) (nadh_dehydrogenase: none->GO:0030964);
     added 1 node(s) and 1 edge(s) (atp_synthase); added canonical example(s) NCBITaxon:83333.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:P0ABB4
+    version metadata (entry_version=156, sequence_version=2); added UniProtKB:P33602
+    (nuoG) protein example to node nadh_dehydrogenase.'
   llm_assisted: true

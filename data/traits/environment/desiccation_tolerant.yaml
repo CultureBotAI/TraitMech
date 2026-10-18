@@ -105,6 +105,32 @@ causal_graphs:
     label: desiccation-related intrinsically disordered proteins
     node_type: GENE_OR_PROTEIN
     description: IDPs (e.g. LEA/CAHS) that protect cellular components during drying.
+    protein_examples:
+    - uniprot_id: UniProtKB:P42443
+      protein_label: Protein RecA
+      gene_symbol: recA
+      taxon_id: NCBITaxon:243230
+      taxon_label: Deinococcus radiodurans (strain ATCC 13939 / DSM 20539 / JCM 16871
+        / CCUG 27074 / LMG 4051 / NBRC 15346 / NCIMB 9279 / VKM B-1422 / R1)
+      entry_status: REVIEWED
+      proteome_id: UP000002524
+      retrieved_on: '2026-10-17'
+      entry_version: 162
+      sequence_version: 2
+      role: Exemplar protein (recA, Protein RecA) representing desiccation-related
+        intrinsically disordered proteins in Deinococcus radiodurans (strain ATCC
+        13939 / DSM 20539 / JCM 16871 / CCUG 27074 / LMG 4051 / NBRC 15346 / NCIMB
+        9279 / VKM B-1422 / R1) for desiccation tolerant.
+      evidence:
+      - reference: DOI:10.3390/genes14091803
+        snippet: Deinococcus radiodurans, a Gram-positive extremophilic bacterium,
+          is a remarkable example of such an organism, showcasing an impressive resistance
+          to a wide array of stressors, including ionizing radiation, desiccation,
+          UV radiation, and oxidizing agents
+        notes: Supports desiccation-related intrinsically disordered proteins in desiccation
+          tolerant; UniProtKB:P42443 (recA, Protein RecA) in Deinococcus radiodurans
+          (strain ATCC 13939 / DSM 20539 / JCM 16871 / CCUG 27074 / LMG 4051 / NBRC
+          15346 / NCIMB 9279 / VKM B-1422 / R1) provides a verified protein exemplar.
   edges:
   - subject: water_loss
     predicate: causes
@@ -258,4 +284,10 @@ curation_history:
     the tranche: set graph scope desiccation_anhydrobiosis_repair=NONMECHANISTIC with
     scope_notes; marked 1 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (desiccation_idps).'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P42443 (recA)
+    protein example to node desiccation_idps.'
   llm_assisted: true

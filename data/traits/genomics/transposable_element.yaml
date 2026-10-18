@@ -61,6 +61,26 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: DDE-family enzyme encoded by the element that catalyzes its movement.
     grounding: GO:0004803
+    protein_examples:
+    - uniprot_id: UniProtKB:Q46087
+      protein_label: Transposase
+      gene_symbol: nmoT
+      taxon_id: NCBITaxon:83263
+      taxon_label: Aminobacter aminovorans (Chelatobacter heintzii)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 64
+      sequence_version: 1
+      role: Exemplar protein (nmoT, Transposase) representing transposase in Aminobacter
+        aminovorans (Chelatobacter heintzii) for transposable element.
+      evidence:
+      - reference: DOI:10.1111/1574-6976.12067
+        snippet: This is used to illustrate the growing recognition that the boundaries
+          between different types of mobile element are becoming increasingly difficult
+          to define as more are being identified.
+        notes: Supports transposase in transposable element; UniProtKB:Q46087 (nmoT,
+          Transposase) in Aminobacter aminovorans (Chelatobacter heintzii) provides
+          a verified protein exemplar.
   - node_id: te_insertion
     label: transposable element insertion
     node_type: BIOLOGICAL_PROCESS
@@ -189,4 +209,10 @@ curation_history:
     tranche of 2026-08-24/25, which shipped without a per-record event. In this record
     the tranche: set graph scope te_transposition_rearrangement=NONMECHANISTIC with
     scope_notes.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q46087 (nmoT)
+    protein example to node transposase.'
   llm_assisted: true

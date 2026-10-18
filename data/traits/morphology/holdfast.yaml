@@ -54,3 +54,68 @@ curation_history:
     review covering ignored and hidden files; live METPO has no active exact holdfast
     class and the placeholder is reserved in proposals/metpo_traitmech_v61.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph holdfast_graph
+    with GENE_OR_PROTEIN node holdfast_protein_component and UniProtKB:Q56702 exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: holdfast_graph
+  title: Protein component associated with holdfast
+  description: Literature-backed association between Polar flagellin B/D (UniProtKB:Q56702)
+    and holdfast.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q56702 in Vibrio
+    parahaemolyticus serotype O3:K6 (strain RIMD 2210633)) associated with holdfast
+    while full multi-step mechanistic curation remains future work.
+  nodes:
+  - node_id: holdfast_trait
+    label: holdfast
+    node_type: TRAIT
+    grounding: traitmech:000184
+    description: A morphology trait in which a bacterial cell produces a localized
+      polar adhesive matrix called a holdfast that mediates permanent attachment to
+      surfaces.
+  - node_id: holdfast_protein_component
+    label: Polar flagellin B/D
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Polar flagellin B/D) associated with holdfast.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - flaB
+    protein_examples:
+    - uniprot_id: UniProtKB:Q56702
+      protein_label: Polar flagellin B/D
+      gene_symbol: flaB
+      taxon_id: NCBITaxon:223926
+      taxon_label: Vibrio parahaemolyticus serotype O3:K6 (strain RIMD 2210633)
+      entry_status: REVIEWED
+      proteome_id: UP000002493
+      retrieved_on: '2026-10-17'
+      entry_version: 129
+      sequence_version: 2
+      role: Characteristic protein component (flaB, Polar flagellin B/D) associated
+        with holdfast in Vibrio parahaemolyticus serotype O3:K6 (strain RIMD 2210633).
+      evidence:
+      - reference: DOI:10.1128/jb.00273-22
+        snippet: Species of the Caulobacterales produce a specialized polar adhesin,
+          holdfast, which is required for permanent attachment to surfaces.
+        notes: Supports Polar flagellin B/D in holdfast; UniProtKB:Q56702 (flaB, Polar
+          flagellin B/D) in Vibrio parahaemolyticus serotype O3:K6 (strain RIMD 2210633)
+          provides a verified protein exemplar.
+  edges:
+  - subject: holdfast_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: holdfast_trait
+    description: Polar flagellin B/D (flaB, UniProtKB:Q56702) contributes to holdfast
+      (associated with caulobacterales, specialized, attachment).
+    evidence:
+    - reference: DOI:10.1128/jb.00273-22
+      snippet: Species of the Caulobacterales produce a specialized polar adhesin,
+        holdfast, which is required for permanent attachment to surfaces.
+      notes: Supports the functional association between Polar flagellin B/D (UniProtKB:Q56702
+        in Vibrio parahaemolyticus serotype O3:K6 (strain RIMD 2210633)) and holdfast.

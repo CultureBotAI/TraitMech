@@ -91,6 +91,36 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Two-component signal transduction triggered by changes in the liquid-crystalline
       membrane state at low temperature.
+  - node_id: temperature_range_protein_component
+    label: Chaperone protein DnaK
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Chaperone protein DnaK) associated with temperature
+      range.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - dnaK
+    protein_examples:
+    - uniprot_id: UniProtKB:P0A6Y8
+      protein_label: Chaperone protein DnaK
+      gene_symbol: dnaK
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 183
+      sequence_version: 2
+      role: Characteristic protein component (dnaK, Chaperone protein DnaK) associated
+        with temperature range in Escherichia coli (strain K12).
+      evidence:
+      - reference: DOI:10.1007/s42770-023-01057-4
+        snippet: When the temperature drops, DesK/DesR is the two-component system
+          involved in membrane adaptation
+        notes: Supports Chaperone protein DnaK in temperature range; UniProtKB:P0A6Y8
+          (dnaK, Chaperone protein DnaK) in Escherichia coli (strain K12) provides
+          a verified protein exemplar.
   edges:
   - subject: ambient_temperature
     predicate: defines
@@ -208,6 +238,18 @@ causal_graphs:
         activate two-component signal transduction; generic edge linking membrane
         state to regulatory response.
     predicate_id: RO:0002213
+  - subject: temperature_range_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: temperature_range_trait
+    description: Chaperone protein DnaK (dnaK, UniProtKB:P0A6Y8) contributes to temperature
+      range (associated with temperature, adaptation, membrane).
+    evidence:
+    - reference: DOI:10.1007/s42770-023-01057-4
+      snippet: When the temperature drops, DesK/DesR is the two-component system involved
+        in membrane adaptation
+      notes: Supports the functional association between Chaperone protein DnaK (UniProtKB:P0A6Y8
+        in Escherichia coli (strain K12)) and temperature range.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.814231+00:00'
   curator: seed_from_metpo
@@ -277,4 +319,10 @@ curation_history:
     canonical example(s): Lederbergia graminis (NCBITaxon:735518; DOI:10.1099/ijs.0.023820-0).
     The note retains the measured value or scopes broad-class examples to the cited
     branch; no paid research was used.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    temperature_range_protein_component with UniProtKB:P0A6Y8 (dnaK) exemplar.'
   llm_assisted: true

@@ -56,6 +56,28 @@ causal_graphs:
     grounding_notes: This umbrella node spans unrelated molybdenum- and NiFe-containing
       CODH classes; one family or activity term would collapse the graph's explicit
       branch distinction.
+    protein_examples:
+    - uniprot_id: UniProtKB:O28429
+      protein_label: Carbon monoxide dehydrogenase
+      gene_symbol: cooS
+      taxon_id: NCBITaxon:224325
+      taxon_label: Archaeoglobus fulgidus (strain ATCC 49558 / DSM 4304 / JCM 9628
+        / NBRC 100126 / VC-16)
+      entry_status: REVIEWED
+      proteome_id: UP000002199
+      retrieved_on: '2026-10-17'
+      entry_version: 123
+      sequence_version: 1
+      role: Exemplar protein (cooS, Carbon monoxide dehydrogenase) representing carbon
+        monoxide dehydrogenase in Archaeoglobus fulgidus (strain ATCC 49558 / DSM
+        4304 / JCM 9628 / NBRC 100126 / VC-16) for carboxydotrophic.
+      evidence:
+      - reference: DOI:10.1038/nrmicro1595
+        snippet: Carbon monoxide (CO) supports the growth and metabolism
+        notes: Supports carbon monoxide dehydrogenase in carboxydotrophic; UniProtKB:O28429
+          (cooS, Carbon monoxide dehydrogenase) in Archaeoglobus fulgidus (strain
+          ATCC 49558 / DSM 4304 / JCM 9628 / NBRC 100126 / VC-16) provides a verified
+          protein exemplar.
   - node_id: molybdenum_hydroxylase
     label: molybdenum hydroxylase
     node_type: GENE_OR_PROTEIN
@@ -68,6 +90,29 @@ causal_graphs:
     - coxM
     - coxL
     operon: coxSML
+    protein_examples:
+    - uniprot_id: UniProtKB:Q49ZI7
+      protein_label: Probable molybdenum cofactor guanylyltransferase
+      gene_symbol: mobA
+      taxon_id: NCBITaxon:342451
+      taxon_label: Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
+        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+      entry_status: REVIEWED
+      proteome_id: UP000006371
+      retrieved_on: '2026-10-17'
+      entry_version: 107
+      sequence_version: 1
+      role: Exemplar protein (mobA, Probable molybdenum cofactor guanylyltransferase)
+        representing molybdenum hydroxylase in Staphylococcus saprophyticus subsp.
+        saprophyticus (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+        for carboxydotrophic.
+      evidence:
+      - reference: DOI:10.1038/nrmicro1595
+        snippet: use a molybdenum hydroxylase
+        notes: Supports molybdenum hydroxylase in carboxydotrophic; UniProtKB:Q49ZI7
+          (mobA, Probable molybdenum cofactor guanylyltransferase) in Staphylococcus
+          saprophyticus subsp. saprophyticus (strain ATCC 15305 / DSM 20229 / NCIMB
+          8711 / NCTC 7292 / S-41) provides a verified protein exemplar.
   - node_id: carbon_dioxide
     label: carbon dioxide
     node_type: CHEMICAL
@@ -85,6 +130,26 @@ causal_graphs:
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: The cited source establishes a CO-insensitive respiratory branch
       but does not identify an exact terminal-oxidase family or complex.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0ABI8
+      protein_label: Cytochrome bo(3) ubiquinol oxidase subunit 1
+      gene_symbol: cyoB
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 154
+      sequence_version: 1
+      role: Exemplar protein (cyoB, Cytochrome bo(3) ubiquinol oxidase subunit 1)
+        representing CO-insensitive terminal oxidase in Escherichia coli (strain K12)
+        for carboxydotrophic.
+      evidence:
+      - reference: DOI:10.1111/j.1574-6968.1986.tb01858.x
+        snippet: CO-insensitive terminal oxidase
+        notes: Supports CO-insensitive terminal oxidase in carboxydotrophic; UniProtKB:P0ABI8
+          (cyoB, Cytochrome bo(3) ubiquinol oxidase subunit 1) in Escherichia coli
+          (strain K12) provides a verified protein exemplar.
   - node_id: proton_motive_force
     label: proton motive force
     node_type: STATE
@@ -123,6 +188,7 @@ causal_graphs:
         snippet: two-electron oxidation of CO to form CO2
         notes: Purified R. rubrum CODH directly catalyzed the reaction represented
           by the graph.
+      entry_version: 134
   - node_id: oxygen_sensitivity
     label: oxygen sensitivity
     node_type: QUALITY
@@ -139,6 +205,30 @@ causal_graphs:
     grounding_notes: CooA is experimentally exact in R. rubrum, but current UniProtKB
       P72322 is unreviewed and lacks a qualifying reference proteome, while available
       InterPro terms cover only broader CRP/FNR domains rather than CooA.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q72AA0
+      protein_label: Transcriptional regulator CooA
+      gene_symbol: cooA
+      taxon_id: NCBITaxon:882
+      taxon_label: Nitratidesulfovibrio vulgaris (strain ATCC 29579 / DSM 644 / CCUG
+        34227 / NCIMB 8303 / VKM B-1760 / Hildenborough) (Desulfovibrio vulgaris)
+      entry_status: REVIEWED
+      proteome_id: UP000002194
+      retrieved_on: '2026-10-17'
+      entry_version: 137
+      sequence_version: 1
+      role: Exemplar protein (cooA, Transcriptional regulator CooA) representing CooA
+        in Nitratidesulfovibrio vulgaris (strain ATCC 29579 / DSM 644 / CCUG 34227
+        / NCIMB 8303 / VKM B-1760 / Hildenborough) (Desulfovibrio vulgaris) for carboxydotrophic.
+      evidence:
+      - reference: DOI:10.1128/jb.00332-22
+        snippet: CO binding to Fe(II) heme in the regulatory domain allosterically
+          activates CooA to bind promoter sites upstream of the coo operon and recruit
+          RNA polymerase (RNAP) for transcription of downstream genes
+        notes: Supports CooA in carboxydotrophic; UniProtKB:Q72AA0 (cooA, Transcriptional
+          regulator CooA) in Nitratidesulfovibrio vulgaris (strain ATCC 29579 / DSM
+          644 / CCUG 34227 / NCIMB 8303 / VKM B-1760 / Hildenborough) (Desulfovibrio
+          vulgaris) provides a verified protein exemplar.
   - node_id: rcom_regulator
     label: RcoM
     node_type: GENE_OR_PROTEIN
@@ -147,11 +237,58 @@ causal_graphs:
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Available ontology families cover broader heme sensor or DNA-binding
       domains and do not exactly identify the RcoM regulator represented here.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q2RNI6
+      protein_label: CO-responsive transcriptional regulator RcoM
+      gene_symbol: rcoM
+      taxon_id: NCBITaxon:269796
+      taxon_label: Rhodospirillum rubrum (strain ATCC 11170 / ATH 1.1.1 / DSM 467
+        / LMG 4362 / NCIMB 8255 / S1)
+      entry_status: REVIEWED
+      proteome_id: UP000001929
+      retrieved_on: '2026-10-17'
+      entry_version: 90
+      sequence_version: 1
+      role: Exemplar protein (rcoM, CO-responsive transcriptional regulator RcoM)
+        representing RcoM in Rhodospirillum rubrum (strain ATCC 11170 / ATH 1.1.1
+        / DSM 467 / LMG 4362 / NCIMB 8255 / S1) for carboxydotrophic.
+      evidence:
+      - reference: DOI:10.1128/jb.00332-22
+        snippet: CO binding to Fe(II) heme in the regulatory domain allosterically
+          activates CooA to bind promoter sites upstream of the coo operon and recruit
+          RNA polymerase (RNAP) for transcription of downstream genes
+        notes: Supports RcoM in carboxydotrophic; UniProtKB:Q2RNI6 (rcoM, CO-responsive
+          transcriptional regulator RcoM) in Rhodospirillum rubrum (strain ATCC 11170
+          / ATH 1.1.1 / DSM 467 / LMG 4362 / NCIMB 8255 / S1) provides a verified
+          protein exemplar.
   - node_id: atp_synthase
     label: ATP synthase
     node_type: GENE_OR_PROTEIN
     description: Membrane complex synthesizing ATP from an ion motive force.
     grounding: GO:0045259
+    protein_examples:
+    - uniprot_id: UniProtKB:Q49Z52
+      protein_label: ATP synthase subunit alpha
+      gene_symbol: atpA
+      taxon_id: NCBITaxon:342451
+      taxon_label: Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
+        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+      entry_status: REVIEWED
+      proteome_id: UP000006371
+      retrieved_on: '2026-10-17'
+      entry_version: 137
+      sequence_version: 1
+      role: Exemplar protein (atpA, ATP synthase subunit alpha) representing ATP synthase
+        in Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC 15305 /
+        DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) for carboxydotrophic.
+      evidence:
+      - reference: DOI:10.1186/s40643-023-00705-9
+        snippet: The reduction of those electron acceptors causes the formation of
+          an ion motive force, which leads to the synthesis of ATP
+        notes: Supports ATP synthase in carboxydotrophic; UniProtKB:Q49Z52 (atpA,
+          ATP synthase subunit alpha) in Staphylococcus saprophyticus subsp. saprophyticus
+          (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) provides
+          a verified protein exemplar.
   - node_id: molecular_oxygen
     label: dioxygen
     node_type: CHEMICAL
@@ -479,4 +616,13 @@ curation_history:
   action: CONNECT_CAUSAL_GRAPH_COMPONENTS
   changes: 'Resolved issue #183 graph fragmentation (2 components to 1) with 1 public-source,
     verbatim-snippet-backed connector(s). No paid research service was called.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:P31896
+    version metadata (entry_version=134, sequence_version=1); added UniProtKB:O28429
+    (cooS) protein example to node carbon_monoxide_dehydrogenase; added UniProtKB:Q49ZI7
+    (mobA) protein example to node molybdenum_hydroxylase; added UniProtKB:P0ABI8
+    (cyoB) protein example to node co_insensitive_terminal_oxidase (+3 more).'
   llm_assisted: true

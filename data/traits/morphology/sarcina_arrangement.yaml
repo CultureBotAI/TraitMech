@@ -54,6 +54,27 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Tubulin-like division protein that polymerizes at the division site.
     grounding: InterPro:IPR000158
+    protein_examples:
+    - uniprot_id: UniProtKB:V6F5E5
+      protein_label: Cell division protein FtsZ
+      gene_symbol: ftsZ
+      taxon_id: NCBITaxon:431944
+      taxon_label: Magnetospirillum gryphiswaldense (strain DSM 6361 / JCM 21280 /
+        NBRC 15271 / MSR-1)
+      entry_status: REVIEWED
+      proteome_id: UP000018922
+      retrieved_on: '2026-10-17'
+      entry_version: 63
+      sequence_version: 1
+      role: Exemplar protein (ftsZ, Cell division protein FtsZ) representing FtsZ
+        in Magnetospirillum gryphiswaldense (strain DSM 6361 / JCM 21280 / NBRC 15271
+        / MSR-1) for sarcina arrangement.
+      evidence:
+      - reference: DOI:10.1038/ncomms4842
+        snippet: Separation of daughter cells during bacterial cell division
+        notes: Supports FtsZ in sarcina arrangement; UniProtKB:V6F5E5 (ftsZ, Cell
+          division protein FtsZ) in Magnetospirillum gryphiswaldense (strain DSM 6361
+          / JCM 21280 / NBRC 15271 / MSR-1) provides a verified protein exemplar.
   - node_id: z_ring
     label: Z ring
     node_type: CELLULAR_LOCALIZATION
@@ -63,6 +84,25 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Actin-like protein tethering the Z ring to the cytoplasmic membrane.
     grounding: InterPro:IPR020823
+    protein_examples:
+    - uniprot_id: UniProtKB:P0ABH2
+      protein_label: Cell division protein FtsA
+      gene_symbol: ftsA
+      taxon_id: NCBITaxon:83334
+      taxon_label: Escherichia coli O157:H7
+      entry_status: REVIEWED
+      proteome_id: UP000000558
+      retrieved_on: '2026-10-17'
+      entry_version: 115
+      sequence_version: 1
+      role: Exemplar protein (ftsA, Cell division protein FtsA) representing FtsA
+        in Escherichia coli O157:H7 for sarcina arrangement.
+      evidence:
+      - reference: DOI:10.1038/ncomms4842
+        snippet: Separation of daughter cells during bacterial cell division
+        notes: Supports FtsA in sarcina arrangement; UniProtKB:P0ABH2 (ftsA, Cell
+          division protein FtsA) in Escherichia coli O157:H7 provides a verified protein
+          exemplar.
   - node_id: cytoplasmic_membrane
     label: cytoplasmic membrane
     node_type: CELLULAR_LOCALIZATION
@@ -79,6 +119,26 @@ causal_graphs:
     label: peptidoglycan synthetases and hydrolases
     node_type: GENE_OR_PROTEIN
     description: Enzymes that synthesize and degrade peptidoglycan during division.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0ABG7
+      protein_label: Peptidoglycan glycosyltransferase MrdB
+      gene_symbol: mrdB
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 133
+      sequence_version: 1
+      role: Exemplar protein (mrdB, Peptidoglycan glycosyltransferase MrdB) representing
+        peptidoglycan synthetases and hydrolases in Escherichia coli (strain K12)
+        for sarcina arrangement.
+      evidence:
+      - reference: DOI:10.1038/ncomms4842
+        snippet: Separation of daughter cells during bacterial cell division
+        notes: Supports peptidoglycan synthetases and hydrolases in sarcina arrangement;
+          UniProtKB:P0ABG7 (mrdB, Peptidoglycan glycosyltransferase MrdB) in Escherichia
+          coli (strain K12) provides a verified protein exemplar.
   - node_id: cell_wall_synthesis_division_site
     label: cell wall synthesis at division site
     node_type: BIOLOGICAL_PROCESS
@@ -96,6 +156,25 @@ causal_graphs:
     label: peptidoglycan hydrolases
     node_type: GENE_OR_PROTEIN
     description: Enzymes that cleave peptidoglycan bonds to enable daughter-cell separation.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0ABG7
+      protein_label: Peptidoglycan glycosyltransferase MrdB
+      gene_symbol: mrdB
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 133
+      sequence_version: 1
+      role: Exemplar protein (mrdB, Peptidoglycan glycosyltransferase MrdB) representing
+        peptidoglycan hydrolases in Escherichia coli (strain K12) for sarcina arrangement.
+      evidence:
+      - reference: DOI:10.1038/ncomms4842
+        snippet: Separation of daughter cells during bacterial cell division
+        notes: Supports peptidoglycan hydrolases in sarcina arrangement; UniProtKB:P0ABG7
+          (mrdB, Peptidoglycan glycosyltransferase MrdB) in Escherichia coli (strain
+          K12) provides a verified protein exemplar.
   - node_id: peripheral_pg_bridge
     label: peripheral peptidoglycan bridge
     node_type: CELLULAR_LOCALIZATION
@@ -249,4 +328,12 @@ curation_history:
     the tranche: set graph scope sarcina_three_plane_division_packet=NONMECHANISTIC
     with scope_notes; marked 2 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (pg_synthetases_hydrolases, pg_hydrolases).'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:V6F5E5 (ftsZ)
+    protein example to node ftsz_protein; added UniProtKB:P0ABH2 (ftsA) protein example
+    to node ftsa_protein; added UniProtKB:P0ABG7 (mrdB) protein example to node pg_synthetases_hydrolases;
+    added UniProtKB:P0ABG7 (mrdB) protein example to node pg_hydrolases.'
   llm_assisted: true

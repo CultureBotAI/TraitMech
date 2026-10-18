@@ -56,3 +56,70 @@ curation_history:
     has only an obsolete Complete ammonia oxidation class in the local snapshot and
     the replacement placeholder is reserved in proposals/metpo_traitmech_v64.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph complete_ammonia_oxidation_graph
+    with GENE_OR_PROTEIN node complete_ammonia_oxidation_protein_component and UniProtKB:B5BJZ8
+    exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: complete_ammonia_oxidation_graph
+  title: Protein component associated with complete ammonia oxidation
+  description: Literature-backed association between Cytochrome c-552 (UniProtKB:B5BJZ8)
+    and complete ammonia oxidation.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:B5BJZ8 in Salmonella
+    paratyphi A (strain AKU_12601)) associated with complete ammonia oxidation while
+    full multi-step mechanistic curation remains future work.
+  nodes:
+  - node_id: complete_ammonia_oxidation_trait
+    label: complete ammonia oxidation
+    node_type: TRAIT
+    grounding: traitmech:000187
+    description: A nitrification metabolism in which a single organism oxidizes ammonia
+      via nitrite to nitrate.
+  - node_id: complete_ammonia_oxidation_protein_component
+    label: Cytochrome c-552
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Cytochrome c-552) associated with complete ammonia
+      oxidation.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - nrfA
+    protein_examples:
+    - uniprot_id: UniProtKB:B5BJZ8
+      protein_label: Cytochrome c-552
+      gene_symbol: nrfA
+      taxon_id: NCBITaxon:554290
+      taxon_label: Salmonella paratyphi A (strain AKU_12601)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 82
+      sequence_version: 1
+      role: Characteristic protein component (nrfA, Cytochrome c-552) associated with
+        complete ammonia oxidation in Salmonella paratyphi A (strain AKU_12601).
+      evidence:
+      - reference: DOI:10.1128/aem.01698-23
+        snippet: The dominance of Nitrospira sp. BO4 could be explained by the ability
+          of comammox to generate more energy through the complete oxidation of ammonia
+          to nitrate
+        notes: Supports Cytochrome c-552 in complete ammonia oxidation; UniProtKB:B5BJZ8
+          (nrfA, Cytochrome c-552) in Salmonella paratyphi A (strain AKU_12601) provides
+          a verified protein exemplar.
+  edges:
+  - subject: complete_ammonia_oxidation_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: complete_ammonia_oxidation_trait
+    description: Cytochrome c-552 (nrfA, UniProtKB:B5BJZ8) contributes to complete
+      ammonia oxidation (associated with nitrospira, dominance, explained).
+    evidence:
+    - reference: DOI:10.1128/aem.01698-23
+      snippet: The dominance of Nitrospira sp. BO4 could be explained by the ability
+        of comammox to generate more energy through the complete oxidation of ammonia
+        to nitrate
+      notes: Supports the functional association between Cytochrome c-552 (UniProtKB:B5BJZ8
+        in Salmonella paratyphi A (strain AKU_12601)) and complete ammonia oxidation.

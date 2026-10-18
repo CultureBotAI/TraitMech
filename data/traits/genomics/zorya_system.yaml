@@ -99,6 +99,36 @@ causal_graphs:
     grounding: traitmech:000209
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
+  - node_id: zorya_system_protein_component
+    label: Zorya protein ZorA
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Zorya protein ZorA) associated with Zorya system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - zorA
+    protein_examples:
+    - uniprot_id: UniProtKB:A7ZI10
+      protein_label: Zorya protein ZorA
+      gene_symbol: zorA
+      taxon_id: NCBITaxon:331111
+      taxon_label: Escherichia coli O139:H28 (strain E24377A / ETEC)
+      entry_status: REVIEWED
+      proteome_id: UP000001122
+      retrieved_on: '2026-10-17'
+      entry_version: 69
+      sequence_version: 2
+      role: Characteristic protein component (zorA, Zorya protein ZorA) associated
+        with Zorya system in Escherichia coli O139:H28 (strain E24377A / ETEC).
+      evidence:
+      - reference: DOI:10.1038/s41467-025-57397-2
+        snippet: all Zorya systems share two components, ZorA and ZorB, containing
+          domains distantly related, respectively, to the MotA and MotB subunits of
+          the bacterial flagellar motor
+        notes: Supports Zorya protein ZorA in Zorya system; UniProtKB:A7ZI10 (zorA,
+          Zorya protein ZorA) in Escherichia coli O139:H28 (strain E24377A / ETEC)
+          provides a verified protein exemplar.
   edges:
   - subject: zorya_locus
     predicate: contributes to
@@ -172,6 +202,19 @@ causal_graphs:
     - reference: DOI:10.1038/s41467-025-57397-2
       snippet: The Zorya phage defense system was first discovered in 2018
       notes: Mariano et al. place Zorya in the phage-defense-system family.
+  - subject: zorya_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: zorya_system_trait
+    description: Zorya protein ZorA (zorA, UniProtKB:A7ZI10) contributes to Zorya
+      system (associated with collection, marcescens, protection).
+    evidence:
+    - reference: DOI:10.1038/s41467-025-57397-2
+      snippet: We observed that homologs of Zorya I from Serratia marcescens ATCC
+        274 and Zorya II from E. coli ATCC 8739 provide protection against several
+        phages from the Durham collection
+      notes: Supports the functional association between Zorya protein ZorA (UniProtKB:A7ZI10
+        in Escherichia coli O139:H28 (strain E24377A / ETEC)) and Zorya system.
 discussions:
 - discussion_id: zorya-subtype-effector-and-trigger-gap
   prompt: Resolve Zorya subtype effectors, ion usage, and phage triggers before minting
@@ -222,4 +265,10 @@ curation_history:
   changes: Linked traitmech:000576 using DOI:10.1093/nar/gkab883 and DOI:10.1038/s41467-025-57397-2.
     Kept the family definition, hierarchy, graph, evidence and example unchanged;
     type-III component functions remain open rather than inheriting type-I/II chemistry.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    zorya_system_protein_component with UniProtKB:A7ZI10 (zorA) exemplar.'
   llm_assisted: true

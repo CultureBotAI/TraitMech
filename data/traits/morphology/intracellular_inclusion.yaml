@@ -85,6 +85,30 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Enzyme catalyzing polyphosphate synthesis.
     grounding: GO:0008976
+    protein_examples:
+    - uniprot_id: UniProtKB:Q4A040
+      protein_label: Polyphosphate kinase
+      gene_symbol: ppk
+      taxon_id: NCBITaxon:342451
+      taxon_label: Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
+        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+      entry_status: REVIEWED
+      proteome_id: UP000006371
+      retrieved_on: '2026-10-17'
+      entry_version: 114
+      sequence_version: 1
+      role: Exemplar protein (ppk, Polyphosphate kinase) representing polyphosphate
+        kinase (Ppk) in Staphylococcus saprophyticus subsp. saprophyticus (strain
+        ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) for intracellular
+        inclusion.
+      evidence:
+      - reference: DOI:10.1111/mmi.15330
+        snippet: others synthesizing iron sulfide greigite (Fe3S4), and some capable
+          of producing both, depending on their environmental conditions
+        notes: Supports polyphosphate kinase (Ppk) in intracellular inclusion; UniProtKB:Q4A040
+          (ppk, Polyphosphate kinase) in Staphylococcus saprophyticus subsp. saprophyticus
+          (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) provides
+          a verified protein exemplar.
   - node_id: polyphosphate_granule
     label: polyphosphate granule
     node_type: CELLULAR_LOCALIZATION
@@ -101,6 +125,29 @@ causal_graphs:
     - gvpC
     - gvpN
     operon: gvp
+    protein_examples:
+    - uniprot_id: UniProtKB:P08958
+      protein_label: Gas vesicle protein A1
+      gene_symbol: gvpA
+      taxon_id: NCBITaxon:64091
+      taxon_label: Halobacterium salinarum (strain ATCC 700922 / JCM 11081 / NRC-1)
+        (Halobacterium halobium)
+      entry_status: REVIEWED
+      proteome_id: UP000000554
+      retrieved_on: '2026-10-17'
+      entry_version: 139
+      sequence_version: 3
+      role: Exemplar protein (gvpA, Gas vesicle protein A1) representing gas vesicle
+        structural and assembly proteins in Halobacterium salinarum (strain ATCC 700922
+        / JCM 11081 / NRC-1) (Halobacterium halobium) for intracellular inclusion.
+      evidence:
+      - reference: DOI:10.1186/s13036-024-00426-3
+        snippet: The gas vesicle (GV) is like a hollow nanoparticle consisting of
+          an internal gas and a protein shell
+        notes: Supports gas vesicle structural and assembly proteins in intracellular
+          inclusion; UniProtKB:P08958 (gvpA, Gas vesicle protein A1) in Halobacterium
+          salinarum (strain ATCC 700922 / JCM 11081 / NRC-1) (Halobacterium halobium)
+          provides a verified protein exemplar.
   - node_id: gas_vesicle
     label: gas vesicle
     node_type: ORGANELLE
@@ -118,6 +165,29 @@ causal_graphs:
     label: encapsulated metabolic enzymes
     node_type: GENE_OR_PROTEIN
     description: Enzymes/pathway segment sequestered within a microcompartment shell.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q03511
+      protein_label: Carboxysome shell protein CcmK2
+      gene_symbol: ccmK2
+      taxon_id: NCBITaxon:1140
+      taxon_label: Synechococcus elongatus (strain ATCC 33912 / PCC 7942 / FACHB-805)
+        (Anacystis nidulans R2)
+      entry_status: REVIEWED
+      proteome_id: UP000889800
+      retrieved_on: '2026-10-17'
+      entry_version: 111
+      sequence_version: 1
+      role: Exemplar protein (ccmK2, Carboxysome shell protein CcmK2) representing
+        encapsulated metabolic enzymes in Synechococcus elongatus (strain ATCC 33912
+        / PCC 7942 / FACHB-805) (Anacystis nidulans R2) for intracellular inclusion.
+      evidence:
+      - reference: DOI:10.1186/s13036-024-00426-3
+        snippet: The gas vesicle (GV) is like a hollow nanoparticle consisting of
+          an internal gas and a protein shell
+        notes: Supports encapsulated metabolic enzymes in intracellular inclusion;
+          UniProtKB:Q03511 (ccmK2, Carboxysome shell protein CcmK2) in Synechococcus
+          elongatus (strain ATCC 33912 / PCC 7942 / FACHB-805) (Anacystis nidulans
+          R2) provides a verified protein exemplar.
   - node_id: sulfide_oxidation
     label: sulfide oxidation
     node_type: BIOLOGICAL_PROCESS
@@ -324,4 +394,12 @@ curation_history:
   action: GROUND_CAUSAL_NODE_TO_NEW_TRAIT
   changes: Grounded the existing causal-graph buoyancy TRAIT node to newly minted
     traitmech:000528 cellular buoyancy.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q4A040 (ppk)
+    protein example to node polyphosphate_kinase; added UniProtKB:P08958 (gvpA) protein
+    example to node gas_vesicle_proteins; added UniProtKB:Q03511 (ccmK2) protein example
+    to node bmc_metabolic_cargo.'
   llm_assisted: true

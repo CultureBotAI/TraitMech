@@ -56,6 +56,27 @@ causal_graphs:
     description: Flavoenzyme that oxidizes sulfide, initiating intracellular sulfur
       oxidation.
     grounding: GO:0070224
+    protein_examples:
+    - uniprot_id: UniProtKB:Q3SJ10
+      protein_label: Sulfide:quinone oxidoreductase
+      taxon_id: NCBITaxon:292415
+      taxon_label: Thiobacillus denitrificans (strain ATCC 25259 / T1)
+      entry_status: UNREVIEWED
+      proteome_id: UP000008291
+      retrieved_on: '2026-10-17'
+      entry_version: 92
+      sequence_version: 1
+      role: Exemplar protein (Q3SJ10, Sulfide:quinone oxidoreductase) representing
+        sulfide:quinone oxidoreductase (SQR) in Thiobacillus denitrificans (strain
+        ATCC 25259 / T1) for sulfur globule.
+      evidence:
+      - reference: PMID:35653932
+        snippet: 'Heterotrophic bacteria and human mitochondria often use sulfide:
+          quinone oxidoreductase (SQR) and persulfide dioxygenase (PDO) to oxidize
+          sulfide to sulfite and thiosulfate.'
+        notes: Supports sulfide:quinone oxidoreductase (SQR) in sulfur globule; UniProtKB:Q3SJ10
+          (Q3SJ10, Sulfide:quinone oxidoreductase) in Thiobacillus denitrificans (strain
+          ATCC 25259 / T1) provides a verified protein exemplar.
   - node_id: sulfane_sulfur
     label: sulfane sulfur
     node_type: CHEMICAL
@@ -71,6 +92,31 @@ causal_graphs:
     label: persulfide dioxygenase (PDO)
     node_type: GENE_OR_PROTEIN
     description: Enzyme oxidizing glutathione persulfide (GSSH) to sulfite.
+    protein_examples:
+    - uniprot_id: UniProtKB:D3RNN8
+      protein_label: Sulfite dehydrogenase subunit A
+      gene_symbol: soeA
+      taxon_id: NCBITaxon:572477
+      taxon_label: Allochromatium vinosum (strain ATCC 17899 / DSM 180 / NBRC 103801
+        / NCIMB 10441 / D) (Chromatium vinosum)
+      entry_status: REVIEWED
+      proteome_id: UP000001441
+      retrieved_on: '2026-10-17'
+      entry_version: 77
+      sequence_version: 1
+      role: Exemplar protein (soeA, Sulfite dehydrogenase subunit A) representing
+        persulfide dioxygenase (PDO) in Allochromatium vinosum (strain ATCC 17899
+        / DSM 180 / NBRC 103801 / NCIMB 10441 / D) (Chromatium vinosum) for sulfur
+        globule.
+      evidence:
+      - reference: PMID:35653932
+        snippet: 'Heterotrophic bacteria and human mitochondria often use sulfide:
+          quinone oxidoreductase (SQR) and persulfide dioxygenase (PDO) to oxidize
+          sulfide to sulfite and thiosulfate.'
+        notes: Supports persulfide dioxygenase (PDO) in sulfur globule; UniProtKB:D3RNN8
+          (soeA, Sulfite dehydrogenase subunit A) in Allochromatium vinosum (strain
+          ATCC 17899 / DSM 180 / NBRC 103801 / NCIMB 10441 / D) (Chromatium vinosum)
+          provides a verified protein exemplar.
   - node_id: sulfite
     label: sulfite
     node_type: CHEMICAL
@@ -231,4 +277,11 @@ curation_history:
     the tranche: set graph scope sulfur_globule_sulfur_oxidation_intermediate=NONMECHANISTIC
     with scope_notes; marked 1 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (persulfide_dioxygenase).'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q3SJ10 (Q3SJ10)
+    protein example to node sqr; added UniProtKB:D3RNN8 (soeA) protein example to
+    node persulfide_dioxygenase.'
   llm_assisted: true

@@ -101,3 +101,73 @@ curation_history:
     boundaries. Ignored-and-hidden searches and structured METPO review found no exact
     live record. Reserved METPO:1061000 in v533; existing records unchanged.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph fungal_conidiation_graph
+    with GENE_OR_PROTEIN node fungal_conidiation_protein_component and UniProtKB:Q5AD13
+    exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: fungal_conidiation_graph
+  title: Protein component associated with fungal conidiation
+  description: Literature-backed association between Filamentous growth regulator
+    15 (UniProtKB:Q5AD13) and fungal conidiation.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q5AD13 in Candida
+    albicans (strain SC5314 / ATCC MYA-2876) (Yeast)) associated with fungal conidiation
+    while full multi-step mechanistic curation remains future work.
+  nodes:
+  - node_id: fungal_conidiation_trait
+    label: fungal conidiation
+    node_type: TRAIT
+    grounding: traitmech:000657
+    description: A reproductive phenotype in which a fungus produces nonmotile asexual
+      propagules called conidia through outgrowth from conidiogenous cells or conversion
+      of pre-existing hyphal cells.
+  - node_id: fungal_conidiation_protein_component
+    label: Filamentous growth regulator 15
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Filamentous growth regulator 15) associated with
+      fungal conidiation.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - FGR15
+    protein_examples:
+    - uniprot_id: UniProtKB:Q5AD13
+      protein_label: Filamentous growth regulator 15
+      gene_symbol: FGR15
+      taxon_id: NCBITaxon:237561
+      taxon_label: Candida albicans (strain SC5314 / ATCC MYA-2876) (Yeast)
+      entry_status: REVIEWED
+      proteome_id: UP000000559
+      retrieved_on: '2026-10-17'
+      entry_version: 100
+      sequence_version: 2
+      role: Characteristic protein component (FGR15, Filamentous growth regulator
+        15) associated with fungal conidiation in Candida albicans (strain SC5314
+        / ATCC MYA-2876) (Yeast).
+      evidence:
+      - reference: DOI:10.2336/nishinihonhifu.40.1083
+        snippet: produce asexual, nonmotile and usually deciduous propagules (conidia)
+          by de novo growth from, or conversion of a fertile hypha (conidiogenous
+          cell).
+        notes: Supports Filamentous growth regulator 15 in fungal conidiation; UniProtKB:Q5AD13
+          (FGR15, Filamentous growth regulator 15) in Candida albicans (strain SC5314
+          / ATCC MYA-2876) (Yeast) provides a verified protein exemplar.
+  edges:
+  - subject: fungal_conidiation_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: fungal_conidiation_trait
+    description: Filamentous growth regulator 15 (FGR15, UniProtKB:Q5AD13) contributes
+      to fungal conidiation (associated with conidiogenous, conversion, propagules).
+    evidence:
+    - reference: DOI:10.2336/nishinihonhifu.40.1083
+      snippet: produce asexual, nonmotile and usually deciduous propagules (conidia)
+        by de novo growth from, or conversion of a fertile hypha (conidiogenous cell).
+      notes: Supports the functional association between Filamentous growth regulator
+        15 (UniProtKB:Q5AD13 in Candida albicans (strain SC5314 / ATCC MYA-2876) (Yeast))
+        and fungal conidiation.

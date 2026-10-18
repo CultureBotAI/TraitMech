@@ -81,3 +81,73 @@ curation_history:
     killing and serum protection out of the definition and deferred unsupported protein
     mechanisms.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph trogocytosis_graph
+    with GENE_OR_PROTEIN node trogocytosis_protein_component and UniProtKB:P32323
+    exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: trogocytosis_graph
+  title: Protein component associated with trogocytosis
+  description: Literature-backed association between A-agglutinin anchorage subunit
+    (UniProtKB:P32323) and trogocytosis.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P32323 in Saccharomyces
+    cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)) associated with trogocytosis
+    while full multi-step mechanistic curation remains future work.
+  nodes:
+  - node_id: trogocytosis_trait
+    label: trogocytosis
+    node_type: TRAIT
+    grounding: traitmech:000633
+    description: A physiological phenotype in which a microbial organism removes and
+      takes up discrete portions of another living cell during direct contact instead
+      of engulfing that cell whole.
+  - node_id: trogocytosis_protein_component
+    label: A-agglutinin anchorage subunit
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (A-agglutinin anchorage subunit) associated with
+      trogocytosis.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - AGA1
+    protein_examples:
+    - uniprot_id: UniProtKB:P32323
+      protein_label: A-agglutinin anchorage subunit
+      gene_symbol: AGA1
+      taxon_id: NCBITaxon:559292
+      taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's
+        yeast)
+      entry_status: REVIEWED
+      proteome_id: UP000002311
+      retrieved_on: '2026-10-17'
+      entry_version: 142
+      sequence_version: 1
+      role: Characteristic protein component (AGA1, A-agglutinin anchorage subunit)
+        associated with trogocytosis in Saccharomyces cerevisiae (strain ATCC 204508
+        / S288c) (Baker's yeast).
+      evidence:
+      - reference: DOI:10.1128/mBio.00068-19
+        snippet: Protection from human serum occurs only after amoebae have undergone
+          trogocytosis of live cells but not phagocytosis of dead cells.
+        notes: Supports A-agglutinin anchorage subunit in trogocytosis; UniProtKB:P32323
+          (AGA1, A-agglutinin anchorage subunit) in Saccharomyces cerevisiae (strain
+          ATCC 204508 / S288c) (Baker's yeast) provides a verified protein exemplar.
+  edges:
+  - subject: trogocytosis_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: trogocytosis_trait
+    description: A-agglutinin anchorage subunit (AGA1, UniProtKB:P32323) contributes
+      to trogocytosis (associated with phagocytosis, trogocytosis, protection).
+    evidence:
+    - reference: DOI:10.1128/mBio.00068-19
+      snippet: Protection from human serum occurs only after amoebae have undergone
+        trogocytosis of live cells but not phagocytosis of dead cells.
+      notes: Supports the functional association between A-agglutinin anchorage subunit
+        (UniProtKB:P32323 in Saccharomyces cerevisiae (strain ATCC 204508 / S288c)
+        (Baker's yeast)) and trogocytosis.

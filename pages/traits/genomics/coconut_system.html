@@ -142,10 +142,71 @@
             </ul>
           </li>
 
+          <li id="pathograph-1-edge-2">
+            <strong>Methyl-coenzyme M reductase regulatory protein C</strong>
+            <span class="edge-predicate">contributes to</span>
+            <strong>CoCoNuT system</strong>
+            <code>RO:0002326</code>
+            <p>Methyl-coenzyme M reductase regulatory protein C (mcrC, UniProtKB:P11567) contributes to CoCoNuT system (associated with coconut, custom, cnuhe).</p>
+            <ul>
+
+              <li>
+                <a href="https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md" rel="nofollow noreferrer"><code>https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md</code></a>
+                <span class="evidence-snippet">| CoCoNut-III-B__III-B_CnuHE | | CoCoNut-III-B | Custom | 750 |</span>
+                <span class="meta">Supports the functional association between Methyl-coenzyme M reductase regulatory protein C (UniProtKB:P11567 in Methanococcus voltae) and CoCoNuT system.</span>
+              </li>
+
+            </ul>
+          </li>
+
         </ul>
       </div>
 
 
+
+      <div class="protein-examples">
+        <h3>Protein and taxon examples</h3>
+        <div class="protein-example-table-wrap" role="region" tabindex="0" aria-label="CoCoNuT loci are predicted Type IV restriction systems: protein and taxon examples">
+          <table class="protein-example-table">
+            <thead>
+              <tr><th>Graph node</th><th>Protein</th><th>Taxon</th><th>UniProt status</th><th>Role and evidence</th></tr>
+            </thead>
+            <tbody>
+
+              <tr>
+                <td>Methyl-coenzyme M reductase regulatory protein C</td>
+                <td>
+
+                  <a href="https://www.uniprot.org/uniprotkb/P11567/entry" rel="nofollow noreferrer"><code>UniProtKB:P11567</code></a>
+                  <br>Methyl-coenzyme M reductase operon protein C <span class="meta">(mcrC)</span>
+                </td>
+                <td>
+
+                  <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=2188" rel="nofollow noreferrer">Methanococcus voltae</a>
+                  <br><code>NCBITaxon:2188</code>
+                </td>
+                <td>
+                  <code>REVIEWED</code><br>
+                  <span class="meta">retrieved 2026-10-17 · entry v61 · sequence v1</span>
+                </td>
+                <td>
+                  <p>Characteristic protein component (mcrC, Methyl-coenzyme M reductase operon protein C) associated with CoCoNuT system in Methanococcus voltae.</p>
+                  <ul>
+
+                    <li>
+                      <a href="https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md" rel="nofollow noreferrer"><code>https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md</code></a>
+                      <span class="evidence-snippet">| CoCoNut | 10\.7554/eLife\.94800\.3 | CoCoNuTs are a diverse subclass of Type IV restriction systems predicted to target RNA |</span>
+                      <span class="meta">Supports Methyl-coenzyme M reductase regulatory protein C in CoCoNuT system; UniProtKB:P11567 (mcrC, Methyl-coenzyme M reductase operon protein C) in Methanococcus voltae provides a verified protein exemplar.</span>
+                    </li>
+
+                  </ul>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
 
     </div>
 
@@ -326,6 +387,12 @@
           <time>2026-09-28T01:05:01Z</time> ·
           <strong>REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP</strong> · codex
           <p class="changes">Reviewed CoCoNuT system canonical_examples and left them empty because Bell et al. support computationally predicted CoCoNuT systems and DefenseFinder records CoCoNut HMM profiles, but the sources do not provide a direct native microbial isolate exemplar with experimentally verified endogenous CoCoNuT activity. No paid research was used.</p>
+        </li>
+
+        <li>
+          <time>2026-10-17T09:00:00Z</time> ·
+          <strong>CURATE_PROTEIN_TAXON_EXAMPLE</strong> · codex
+          <p class="changes">Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node coconut_system_protein_component with UniProtKB:P11567 (mcrC) exemplar.</p>
         </li>
 
       </ol>
@@ -704,7 +771,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Conservative system-level sketch linking CoCoNuT system possession to phage defense without resolving individual components or a direct molecular output.", "edges": [{"description": "CoCoNuT system possession is treated as a phage-defense-system trait.", "evidence": [{"notes": "Bell et al. frame EVE/McrB-like Type IV restriction-system diversity in the context of prokaryotic antiphage restriction.", "reference": "DOI:10.7554/eLife.94800.3", "snippet": "largely uncharacterized prokaryotic antiphage restriction systems"}, {"notes": "The pinned DefenseFinder article registry maps the CoCoNut source key to the Bell et al. versioned eLife article.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| CoCoNut | 10\\.7554/eLife\\.94800\\.3 | CoCoNuTs are a diverse subclass of Type IV restriction systems predicted to target RNA | "}], "id": "edge-1", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "coconut_system_trait", "target": "phage_defense_system"}], "evidence_rows": [{"description": "CoCoNuT system possession is treated as a phage-defense-system trait.", "edge_id": "edge-1", "evidence": [{"notes": "Bell et al. frame EVE/McrB-like Type IV restriction-system diversity in the context of prokaryotic antiphage restriction.", "reference": "DOI:10.7554/eLife.94800.3", "snippet": "largely uncharacterized prokaryotic antiphage restriction systems"}, {"notes": "The pinned DefenseFinder article registry maps the CoCoNut source key to the Bell et al. versioned eLife article.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| CoCoNut | 10\\.7554/eLife\\.94800\\.3 | CoCoNuTs are a diverse subclass of Type IV restriction systems predicted to target RNA | "}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "CoCoNuT system", "target": "phage defense system"}], "graph_id": "coconut_system_family_hierarchy", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Possession of a genome-encoded CoCoNuT Type IV restriction-system family locus.", "grounding": "traitmech:000422", "id": "coconut_system_trait", "is_orphan": false, "label": "CoCoNuT system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of one or more genome-encoded immune systems that inhibit bacteriophage infection.", "grounding": "traitmech:000209", "id": "phage_defense_system", "is_orphan": false, "label": "phage defense system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "The graph captures CoCoNuT at the named McrBC/Type IV system-family level with representative CoCoNut-I, CoCoNut-II, and CoCoNut-III DefenseFinder HMM rows. It does not assert exact profile-to-protein boundaries, direct RNA or DNA substrates, native host range, phage range, subtype boundaries, pseudo-CoCoNuT scope, CARF-regulated superoperon scope, or rule-level detection criteria.", "scope_status": "NONMECHANISTIC", "title": "CoCoNuT loci are predicted Type IV restriction systems"}];
+  var graphs = [{"description": "Conservative system-level sketch linking CoCoNuT system possession to phage defense without resolving individual components or a direct molecular output.", "edges": [{"description": "CoCoNuT system possession is treated as a phage-defense-system trait.", "evidence": [{"notes": "Bell et al. frame EVE/McrB-like Type IV restriction-system diversity in the context of prokaryotic antiphage restriction.", "reference": "DOI:10.7554/eLife.94800.3", "snippet": "largely uncharacterized prokaryotic antiphage restriction systems"}, {"notes": "The pinned DefenseFinder article registry maps the CoCoNut source key to the Bell et al. versioned eLife article.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| CoCoNut | 10\\.7554/eLife\\.94800\\.3 | CoCoNuTs are a diverse subclass of Type IV restriction systems predicted to target RNA | "}], "id": "edge-1", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "coconut_system_trait", "target": "phage_defense_system"}, {"description": "Methyl-coenzyme M reductase regulatory protein C (mcrC, UniProtKB:P11567) contributes to CoCoNuT system (associated with coconut, custom, cnuhe).", "evidence": [{"notes": "Supports the functional association between Methyl-coenzyme M reductase regulatory protein C (UniProtKB:P11567 in Methanococcus voltae) and CoCoNuT system.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| CoCoNut-III-B__III-B_CnuHE | | CoCoNut-III-B | Custom | 750 |"}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "coconut_system_protein_component", "target": "coconut_system_trait"}], "evidence_rows": [{"description": "CoCoNuT system possession is treated as a phage-defense-system trait.", "edge_id": "edge-1", "evidence": [{"notes": "Bell et al. frame EVE/McrB-like Type IV restriction-system diversity in the context of prokaryotic antiphage restriction.", "reference": "DOI:10.7554/eLife.94800.3", "snippet": "largely uncharacterized prokaryotic antiphage restriction systems"}, {"notes": "The pinned DefenseFinder article registry maps the CoCoNut source key to the Bell et al. versioned eLife article.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| CoCoNut | 10\\.7554/eLife\\.94800\\.3 | CoCoNuTs are a diverse subclass of Type IV restriction systems predicted to target RNA | "}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "CoCoNuT system", "target": "phage defense system"}, {"description": "Methyl-coenzyme M reductase regulatory protein C (mcrC, UniProtKB:P11567) contributes to CoCoNuT system (associated with coconut, custom, cnuhe).", "edge_id": "edge-2", "evidence": [{"notes": "Supports the functional association between Methyl-coenzyme M reductase regulatory protein C (UniProtKB:P11567 in Methanococcus voltae) and CoCoNuT system.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| CoCoNut-III-B__III-B_CnuHE | | CoCoNut-III-B | Custom | 750 |"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Methyl-coenzyme M reductase regulatory protein C", "target": "CoCoNuT system"}], "graph_id": "coconut_system_family_hierarchy", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Protein component (Methyl-coenzyme M reductase operon protein C) associated with CoCoNuT system.", "grounding": null, "id": "coconut_system_protein_component", "is_orphan": false, "label": "Methyl-coenzyme M reductase regulatory protein C", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 61, "evidence": [{"notes": "Supports Methyl-coenzyme M reductase regulatory protein C in CoCoNuT system; UniProtKB:P11567 (mcrC, Methyl-coenzyme M reductase operon protein C) in Methanococcus voltae provides a verified protein exemplar.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| CoCoNut | 10\\.7554/eLife\\.94800\\.3 | CoCoNuTs are a diverse subclass of Type IV restriction systems predicted to target RNA |"}], "gene_symbol": "mcrC", "protein_label": "Methyl-coenzyme M reductase operon protein C", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (mcrC, Methyl-coenzyme M reductase operon protein C) associated with CoCoNuT system in Methanococcus voltae.", "sequence_version": 1, "taxon_id": "NCBITaxon:2188", "taxon_label": "Methanococcus voltae", "uniprot_id": "UniProtKB:P11567"}], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded CoCoNuT Type IV restriction-system family locus.", "grounding": "traitmech:000422", "id": "coconut_system_trait", "is_orphan": false, "label": "CoCoNuT system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of one or more genome-encoded immune systems that inhibit bacteriophage infection.", "grounding": "traitmech:000209", "id": "phage_defense_system", "is_orphan": false, "label": "phage defense system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 61, "evidence": [{"notes": "Supports Methyl-coenzyme M reductase regulatory protein C in CoCoNuT system; UniProtKB:P11567 (mcrC, Methyl-coenzyme M reductase operon protein C) in Methanococcus voltae provides a verified protein exemplar.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| CoCoNut | 10\\.7554/eLife\\.94800\\.3 | CoCoNuTs are a diverse subclass of Type IV restriction systems predicted to target RNA |"}], "gene_symbol": "mcrC", "node_id": "coconut_system_protein_component", "node_label": "Methyl-coenzyme M reductase regulatory protein C", "protein_label": "Methyl-coenzyme M reductase operon protein C", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (mcrC, Methyl-coenzyme M reductase operon protein C) associated with CoCoNuT system in Methanococcus voltae.", "sequence_version": 1, "taxon_id": "NCBITaxon:2188", "taxon_label": "Methanococcus voltae", "uniprot_id": "UniProtKB:P11567"}], "scope_notes": "The graph captures CoCoNuT at the named McrBC/Type IV system-family level with representative CoCoNut-I, CoCoNut-II, and CoCoNut-III DefenseFinder HMM rows. It does not assert exact profile-to-protein boundaries, direct RNA or DNA substrates, native host range, phage range, subtype boundaries, pseudo-CoCoNuT scope, CARF-regulated superoperon scope, or rule-level detection criteria.", "scope_status": "NONMECHANISTIC", "title": "CoCoNuT loci are predicted Type IV restriction systems"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -727,7 +794,7 @@ function renderPathograph(containerId, data) {
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
     </div>
     <div>
-      Record as of 2026-09-28 01:08 UTC
+      Record as of 2026-10-17 09:00 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
       · embedding coverage 42.2%

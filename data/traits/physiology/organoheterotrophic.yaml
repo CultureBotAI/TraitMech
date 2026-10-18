@@ -96,12 +96,56 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Respiratory complex I oxidizing NADH and pumping protons.
     grounding: GO:0030964
+    protein_examples:
+    - uniprot_id: UniProtKB:P33602
+      protein_label: NADH-quinone oxidoreductase subunit G
+      gene_symbol: nuoG
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 213
+      sequence_version: 4
+      role: Exemplar protein (nuoG, NADH-quinone oxidoreductase subunit G) representing
+        NADH dehydrogenase (complex I) in Escherichia coli (strain K12) for organoheterotrophic.
+      evidence:
+      - reference: DOI:10.7554/eLife.21598
+        snippet: the potential energy of the proton motive force into rotation of
+          the central stalk that drives conformational changes in the F1 catalytic
+          sites
+        notes: Supports NADH dehydrogenase (complex I) in organoheterotrophic; UniProtKB:P33602
+          (nuoG, NADH-quinone oxidoreductase subunit G) in Escherichia coli (strain
+          K12) provides a verified protein exemplar.
   - node_id: cytochrome_bc1_complex
     label: cytochrome bc1 complex (complex III)
     node_type: GENE_OR_PROTEIN
     description: Respiratory complex III transferring electrons from quinol to cytochrome
       c.
     grounding: GO:0045275
+    protein_examples:
+    - uniprot_id: UniProtKB:P9WP37
+      protein_label: Cytochrome bc1 complex cytochrome b subunit
+      gene_symbol: qcrB
+      taxon_id: NCBITaxon:83332
+      taxon_label: Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)
+      entry_status: REVIEWED
+      proteome_id: UP000001584
+      retrieved_on: '2026-10-17'
+      entry_version: 58
+      sequence_version: 1
+      role: Exemplar protein (qcrB, Cytochrome bc1 complex cytochrome b subunit) representing
+        cytochrome bc1 complex (complex III) in Mycobacterium tuberculosis (strain
+        ATCC 25618 / H37Rv) for organoheterotrophic.
+      evidence:
+      - reference: DOI:10.7554/eLife.21598
+        snippet: the potential energy of the proton motive force into rotation of
+          the central stalk that drives conformational changes in the F1 catalytic
+          sites
+        notes: Supports cytochrome bc1 complex (complex III) in organoheterotrophic;
+          UniProtKB:P9WP37 (qcrB, Cytochrome bc1 complex cytochrome b subunit) in
+          Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv) provides a verified
+          protein exemplar.
   - node_id: atp_synthase
     label: ATP synthase
     node_type: GENE_OR_PROTEIN
@@ -115,7 +159,7 @@ causal_graphs:
       taxon_label: Escherichia coli K-12
       entry_status: REVIEWED
       retrieved_on: '2026-08-24'
-      entry_version: 155
+      entry_version: 156
       sequence_version: 2
       role: Beta component of the E. coli F1 catalytic head; this accession is not
         presented as the complete F1Fo complex.
@@ -374,4 +418,12 @@ curation_history:
     (NCBITaxon:83333); regrounded 2 node(s) (nadh_dehydrogenase_complex_i: none->GO:0030964,
     cytochrome_bc1_complex: none->GO:0045275); added 1 node(s) and 1 edge(s) (atp_synthase);
     added canonical example(s) NCBITaxon:83333.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:P0ABB4
+    version metadata (entry_version=156, sequence_version=2); added UniProtKB:P33602
+    (nuoG) protein example to node nadh_dehydrogenase_complex_i; added UniProtKB:P9WP37
+    (qcrB) protein example to node cytochrome_bc1_complex.'
   llm_assisted: true

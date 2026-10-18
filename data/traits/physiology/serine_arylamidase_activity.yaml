@@ -56,3 +56,78 @@ curation_history:
     no exact serine arylamidase activity class yet and the placeholder is reserved
     in proposals/metpo_traitmech_v49.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph serine_arylamidase_activity_graph
+    with GENE_OR_PROTEIN node serine_arylamidase_activity_protein_component and UniProtKB:Q99V45
+    exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: serine_arylamidase_activity_graph
+  title: Protein component associated with serine arylamidase activity
+  description: Literature-backed association between Glutamyl endopeptidase (UniProtKB:Q99V45)
+    and serine arylamidase activity.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q99V45 in Staphylococcus
+    aureus (strain Mu50 / ATCC 700699)) associated with serine arylamidase activity
+    while full multi-step mechanistic curation remains future work.
+  nodes:
+  - node_id: serine_arylamidase_activity_trait
+    label: serine arylamidase activity
+    node_type: TRAIT
+    grounding: traitmech:000172
+    description: A physiological enzyme-activity phenotype in which a cell produces
+      active serine arylamidase enzymes that hydrolyze serine arylamide substrates.
+  - node_id: serine_arylamidase_activity_protein_component
+    label: Glutamyl endopeptidase
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Glutamyl endopeptidase) associated with serine
+      arylamidase activity.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - sspA
+    protein_examples:
+    - uniprot_id: UniProtKB:Q99V45
+      protein_label: Glutamyl endopeptidase
+      gene_symbol: sspA
+      taxon_id: NCBITaxon:158878
+      taxon_label: Staphylococcus aureus (strain Mu50 / ATCC 700699)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 126
+      sequence_version: 1
+      role: Characteristic protein component (sspA, Glutamyl endopeptidase) associated
+        with serine arylamidase activity in Staphylococcus aureus (strain Mu50 / ATCC
+        700699).
+      evidence:
+      - reference: DOI:10.1099/ijsem.0.006017
+        snippet: 'enzymatic activities are present for: α-galactosidase, N-acetyl-β-glucosaminidase,
+          arginine arylamidase, proline arylamidase, leucyl glycine arylamidase, phenylalanine
+          arylamidase, leucine arylamidase, tyrosine arylamidase, alanine arylamidase,
+          glycine arylamidase, histidine arylamidase, glutamyl glutamic acid arylamidase,
+          serine arylamidase, valine arylamidase, cysteine arylamidase, esterase,
+          esterase lipase, alpha-chymotrypsin'
+        notes: Supports Glutamyl endopeptidase in serine arylamidase activity; UniProtKB:Q99V45
+          (sspA, Glutamyl endopeptidase) in Staphylococcus aureus (strain Mu50 / ATCC
+          700699) provides a verified protein exemplar.
+  edges:
+  - subject: serine_arylamidase_activity_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: serine_arylamidase_activity_trait
+    description: Glutamyl endopeptidase (sspA, UniProtKB:Q99V45) contributes to serine
+      arylamidase activity (associated with glucosaminidase, galactosidase, phenylalanine).
+    evidence:
+    - reference: DOI:10.1099/ijsem.0.006017
+      snippet: 'enzymatic activities are present for: α-galactosidase, N-acetyl-β-glucosaminidase,
+        arginine arylamidase, proline arylamidase, leucyl glycine arylamidase, phenylalanine
+        arylamidase, leucine arylamidase, tyrosine arylamidase, alanine arylamidase,
+        glycine arylamidase, histidine arylamidase, glutamyl glutamic acid arylamidase,
+        serine arylamidase, valine arylamidase, cysteine arylamidase, esterase, esterase
+        lipase, alpha-chymotrypsin'
+      notes: Supports the functional association between Glutamyl endopeptidase (UniProtKB:Q99V45
+        in Staphylococcus aureus (strain Mu50 / ATCC 700699)) and serine arylamidase
+        activity.

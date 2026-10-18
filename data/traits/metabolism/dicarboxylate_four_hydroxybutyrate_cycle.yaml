@@ -73,6 +73,26 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Reductively carboxylates acetyl-CoA to pyruvate using CO2.
     grounding: GO:0019164
+    protein_examples:
+    - uniprot_id: UniProtKB:Q2RMD6
+      protein_label: Pyruvate:ferredoxin oxidoreductase
+      taxon_id: NCBITaxon:264732
+      taxon_label: Moorella thermoacetica (strain ATCC 39073 / JCM 9320)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 129
+      sequence_version: 1
+      role: Exemplar protein (Q2RMD6, Pyruvate:ferredoxin oxidoreductase) representing
+        pyruvate synthase (pyruvate:ferredoxin oxidoreductase) in Moorella thermoacetica
+        (strain ATCC 39073 / JCM 9320) for dicarboxylate/4-hydroxybutyrate cycle.
+      evidence:
+      - reference: DOI:10.1128/AEM.02473-10
+        snippet: In the DC/HB cycle, pyruvate synthase and PEP carboxylase are the
+          two carboxylating enzymes
+        notes: Supports pyruvate synthase (pyruvate:ferredoxin oxidoreductase) in
+          dicarboxylate/4-hydroxybutyrate cycle; UniProtKB:Q2RMD6 (Q2RMD6, Pyruvate:ferredoxin
+          oxidoreductase) in Moorella thermoacetica (strain ATCC 39073 / JCM 9320)
+          provides a verified protein exemplar.
   - node_id: pep_carboxylase
     label: phosphoenolpyruvate carboxylase
     node_type: GENE_OR_PROTEIN
@@ -86,7 +106,7 @@ causal_graphs:
       entry_status: UNREVIEWED
       proteome_id: UP000000262
       retrieved_on: '2026-08-24'
-      entry_version: 70
+      entry_version: 71
       sequence_version: 1
       role: Igni_0341 PEP carboxylase assigned to the bicarbonate-fixing reaction
         of the I. hospitalis DC/4HB cycle.
@@ -127,6 +147,26 @@ causal_graphs:
     grounding_notes: Available family signatures cover domains shared with related
       HpaB/PvcC/vinylacetyl-CoA isomerase proteins rather than an exact reviewed whole-protein
       family for the historical 4-hydroxybutyryl-CoA dehydratase label.
+    protein_examples:
+    - uniprot_id: UniProtKB:P55792
+      protein_label: 4-hydroxybutyryl-CoA dehydratase/vinylacetyl-CoA-Delta-isomerase
+      gene_symbol: abfD
+      taxon_id: NCBITaxon:33953
+      taxon_label: Clostridium aminobutyricum
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 109
+      sequence_version: 3
+      role: Exemplar protein (abfD, 4-hydroxybutyryl-CoA dehydratase/vinylacetyl-CoA-Delta-isomerase)
+        representing 4-hydroxybutyryl-CoA dehydratase in Clostridium aminobutyricum
+        for dicarboxylate/4-hydroxybutyrate cycle.
+      evidence:
+      - reference: DOI:10.1128/AEM.02473-10
+        snippet: 'The 3-hydroxypropionate (Fuchs-Holo) bi-cycle. Enzymes: 1, acetyl-CoA
+          carboxylase'
+        notes: Supports 4-hydroxybutyryl-CoA dehydratase in dicarboxylate/4-hydroxybutyrate
+          cycle; UniProtKB:P55792 (abfD, 4-hydroxybutyryl-CoA dehydratase/vinylacetyl-CoA-Delta-isomerase)
+          in Clostridium aminobutyricum provides a verified protein exemplar.
   - node_id: crotonyl_coa
     label: crotonyl-CoA
     node_type: CHEMICAL
@@ -335,4 +375,12 @@ curation_history:
   action: CONNECT_CAUSAL_GRAPH_COMPONENTS
   changes: 'Resolved issue #183 graph fragmentation (2 components to 1) using 1 public-source,
     verbatim-snippet-backed connector(s). No paid research service was called.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:A8A9C2
+    version metadata (entry_version=71, sequence_version=1); added UniProtKB:Q2RMD6
+    (Q2RMD6) protein example to node pyruvate_synthase; added UniProtKB:P55792 (abfD)
+    protein example to node four_hydroxybutyryl_coa_dehydratase.'
   llm_assisted: true

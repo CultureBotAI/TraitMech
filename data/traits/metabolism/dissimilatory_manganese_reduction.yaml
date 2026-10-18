@@ -88,7 +88,7 @@ causal_graphs:
       entry_status: UNREVIEWED
       proteome_id: UP000008186
       retrieved_on: '2026-08-24'
-      entry_version: 125
+      entry_version: 126
       sequence_version: 1
       role: MtrC cell-surface component implicated in efficient Mn(IV) reduction;
         this accession is not presented as the complete MtrCAB conduit.
@@ -222,4 +222,10 @@ curation_history:
     grounding, an explicitly strain-scoped MtrC-to-Mn(IV) edge, and mechanistic scope
     notes. The unreviewed accession is retained only as an exact component from reference
     proteome UP000008186.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:Q8EG34
+    version metadata (entry_version=126, sequence_version=1).'
   llm_assisted: true

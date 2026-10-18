@@ -29,6 +29,13 @@ curation_history:
     plus stable-URL and DOI-backed assay evidence after a repository-wide duplicate
     review covering ignored and hidden files.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph catalase_test_graph
+    with GENE_OR_PROTEIN node catalase_test_protein_component and UniProtKB:Q9R708
+    exemplar.'
+  llm_assisted: true
 definition_source: http://purl.obolibrary.org/obo/OMP_0000218
 evidence:
 - reference: https://asm.org/protocols/catalase-test-protocol
@@ -40,3 +47,61 @@ evidence:
     as foam
   notes: Iwase et al. support the visible oxygen-bubble readout produced by catalase-mediated
     hydrogen-peroxide decomposition.
+causal_graphs:
+- graph_id: catalase_test_graph
+  title: Protein component associated with catalase test
+  description: Literature-backed association between Catalase-peroxidase (UniProtKB:Q9R708)
+    and catalase test.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q9R708 in Agrobacterium
+    tumefaciens) associated with catalase test while full multi-step mechanistic curation
+    remains future work.
+  nodes:
+  - node_id: catalase_test_trait
+    label: catalase test
+    node_type: TRAIT
+    grounding: METPO:1007080
+    description: A biochemical test that detects catalase enzyme activity by exposing
+      cells to hydrogen peroxide and observing for visible bubbling. The test outcome
+      (positive or negative) is captured by its child classes; this class itself does
+      not assert that the organism has catalase activity.
+  - node_id: catalase_test_protein_component
+    label: Catalase-peroxidase
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Catalase-peroxidase) associated with catalase
+      test.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - katG
+    protein_examples:
+    - uniprot_id: UniProtKB:Q9R708
+      protein_label: Catalase-peroxidase
+      gene_symbol: katG
+      taxon_id: NCBITaxon:358
+      taxon_label: Agrobacterium tumefaciens
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 101
+      sequence_version: 1
+      role: Characteristic protein component (katG, Catalase-peroxidase) associated
+        with catalase test in Agrobacterium tumefaciens.
+      evidence:
+      - reference: https://asm.org/protocols/catalase-test-protocol
+        snippet: The catalase test facilitates the detection of this enzyme in bacteria
+        notes: Supports Catalase-peroxidase in catalase test; UniProtKB:Q9R708 (katG,
+          Catalase-peroxidase) in Agrobacterium tumefaciens provides a verified protein
+          exemplar.
+  edges:
+  - subject: catalase_test_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: catalase_test_trait
+    description: Catalase-peroxidase (katG, UniProtKB:Q9R708) contributes to catalase
+      test (associated with facilitates, detection, bacteria).
+    evidence:
+    - reference: https://asm.org/protocols/catalase-test-protocol
+      snippet: The catalase test facilitates the detection of this enzyme in bacteria
+      notes: Supports the functional association between Catalase-peroxidase (UniProtKB:Q9R708
+        in Agrobacterium tumefaciens) and catalase test.

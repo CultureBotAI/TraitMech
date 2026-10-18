@@ -71,7 +71,7 @@ causal_graphs:
       taxon_label: Escherichia coli K-12
       entry_status: REVIEWED
       retrieved_on: '2026-08-24'
-      entry_version: 143
+      entry_version: 144
       sequence_version: 1
       role: E. coli K-12 peroxide-sensing OxyR regulator that activates the hydrogen-peroxide-inducible
         defense regulon represented by this branch.
@@ -87,6 +87,27 @@ causal_graphs:
     description: Global stress sigma factor controlling a stress regulon that includes
       oxidative-stress defenses.
     grounding: InterPro:IPR012761
+    protein_examples:
+    - uniprot_id: UniProtKB:P13445
+      protein_label: RNA polymerase sigma factor RpoS
+      gene_symbol: rpoS
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 208
+      sequence_version: 3
+      role: Exemplar protein (rpoS, RNA polymerase sigma factor RpoS) representing
+        RpoS (sigma-S) general stress sigma factor in Escherichia coli (strain K12)
+        for oxidative stress response.
+      evidence:
+      - reference: DOI:10.1099/mic.0.001481
+        snippet: activates the transcription of a set of genes that influence cellular
+          defence against oxidative stress
+        notes: Supports RpoS (sigma-S) general stress sigma factor in oxidative stress
+          response; UniProtKB:P13445 (rpoS, RNA polymerase sigma factor RpoS) in Escherichia
+          coli (strain K12) provides a verified protein exemplar.
   - node_id: thioredoxin_system
     label: thioredoxin system
     node_type: PATHWAY
@@ -210,4 +231,11 @@ curation_history:
   changes: 'Addressed PR #664 adversarial review issues #680 through #682: requoted
     the RpoS edge and Imlay record evidence, and replaced the generic ASM endpoint
     note with Europe PMC abstract verification.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:P0ACQ4
+    version metadata (entry_version=144, sequence_version=1); added UniProtKB:P13445
+    (rpoS) protein example to node rpos_sigma_factor.'
   llm_assisted: true

@@ -102,6 +102,35 @@ causal_graphs:
     grounding: traitmech:000209
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
+  - node_id: pd_t7_5_system_protein_component
+    label: Phage T7 exclusion protein
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Phage T7 exclusion protein) associated with PD-T7-5
+      system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - pifA
+    protein_examples:
+    - uniprot_id: UniProtKB:P96329
+      protein_label: Phage T7 exclusion protein
+      gene_symbol: pifA
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 96
+      sequence_version: 2
+      role: Characteristic protein component (pifA, Phage T7 exclusion protein) associated
+        with PD-T7-5 system in Escherichia coli (strain K12).
+      evidence:
+      - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+        snippet: PD-T7-5 | 10\.1101/2022\.05\.12\.491691 | Mapping the landscape of
+          anti-phage defense mechanisms in the E\. coli pangenome
+        notes: Supports Phage T7 exclusion protein in PD-T7-5 system; UniProtKB:P96329
+          (pifA, Phage T7 exclusion protein) in Escherichia coli (strain K12) provides
+          a verified protein exemplar.
   edges:
   - subject: pd_t7_5_locus
     predicate: contributes to
@@ -193,6 +222,18 @@ causal_graphs:
       snippet: "PD-T7-5\tPD-T7-5\t1\t1\tPD-T7-5__PD-T7-5\t\t\t"
       notes: The DefenseFinder rules table models PD-T7-5 as a single-profile system
         requiring PD-T7-5__PD-T7-5.
+  - subject: pd_t7_5_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: pd_t7_5_system_trait
+    description: Phage T7 exclusion protein (pifA, UniProtKB:P96329) contributes to
+      PD-T7-5 system (associated with landscape, pangenome, defense).
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: PD-T7-1 | 10\.1101/2022\.05\.12\.491691 | Mapping the landscape of
+        anti-phage defense mechanisms in the E\. coli pangenome
+      notes: Supports the functional association between Phage T7 exclusion protein
+        (UniProtKB:P96329 in Escherichia coli (strain K12)) and PD-T7-5 system.
 discussions:
 - discussion_id: pd-t7-5-mechanism-gap
   prompt: Resolve PD-T7-5 natural host breadth, direct phage trigger, and PD(D/E)XK
@@ -267,4 +308,10 @@ curation_history:
     graph, a DefenseFinder system model, and a RefSeq Shewanella putrefaciens example,
     but not a direct native microbial isolate exemplar with experimentally verified
     endogenous PD-T7-5 activity. No paid research was used.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    pd_t7_5_system_protein_component with UniProtKB:P96329 (pifA) exemplar.'
   llm_assisted: true

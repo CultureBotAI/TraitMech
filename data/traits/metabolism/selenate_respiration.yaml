@@ -57,3 +57,73 @@ curation_history:
     local METPO snapshot has no exact selenate respiration class and the replacement
     placeholder is reserved in proposals/metpo_traitmech_v79.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph selenate_respiration_graph
+    with GENE_OR_PROTEIN node selenate_respiration_protein_component and UniProtKB:P0AEC3
+    exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: selenate_respiration_graph
+  title: Protein component associated with selenate respiration
+  description: Literature-backed association between Aerobic respiration control sensor
+    protein ArcB (UniProtKB:P0AEC3) and selenate respiration.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P0AEC3 in Escherichia
+    coli (strain K12)) associated with selenate respiration while full multi-step
+    mechanistic curation remains future work.
+  nodes:
+  - node_id: selenate_respiration_trait
+    label: selenate respiration
+    node_type: TRAIT
+    grounding: traitmech:000202
+    description: An anaerobic respiration in which an organism uses selenate as the
+      terminal electron acceptor for energy conservation.
+  - node_id: selenate_respiration_protein_component
+    label: Aerobic respiration control sensor protein ArcB
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Aerobic respiration control sensor protein ArcB)
+      associated with selenate respiration.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - arcB
+    protein_examples:
+    - uniprot_id: UniProtKB:P0AEC3
+      protein_label: Aerobic respiration control sensor protein ArcB
+      gene_symbol: arcB
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 164
+      sequence_version: 1
+      role: Characteristic protein component (arcB, Aerobic respiration control sensor
+        protein ArcB) associated with selenate respiration in Escherichia coli (strain
+        K12).
+      evidence:
+      - reference: DOI:10.1016/j.syapm.2005.12.011
+        snippet: Here we characterize a novel selenate-respiring bacterium, strain
+          AK4OH1, isolated from an estuarine sediment enrichment culture
+        notes: Supports Aerobic respiration control sensor protein ArcB in selenate
+          respiration; UniProtKB:P0AEC3 (arcB, Aerobic respiration control sensor
+          protein ArcB) in Escherichia coli (strain K12) provides a verified protein
+          exemplar.
+  edges:
+  - subject: selenate_respiration_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: selenate_respiration_trait
+    description: Aerobic respiration control sensor protein ArcB (arcB, UniProtKB:P0AEC3)
+      contributes to selenate respiration (associated with characterize, enrichment,
+      bacterium).
+    evidence:
+    - reference: DOI:10.1016/j.syapm.2005.12.011
+      snippet: Here we characterize a novel selenate-respiring bacterium, strain AK4OH1,
+        isolated from an estuarine sediment enrichment culture
+      notes: Supports the functional association between Aerobic respiration control
+        sensor protein ArcB (UniProtKB:P0AEC3 in Escherichia coli (strain K12)) and
+        selenate respiration.

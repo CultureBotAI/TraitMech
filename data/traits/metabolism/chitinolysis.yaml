@@ -55,7 +55,7 @@ causal_graphs:
       taxon_label: Serratia marcescens
       entry_status: REVIEWED
       retrieved_on: '2026-08-24'
-      entry_version: 158
+      entry_version: 159
       sequence_version: 3
       role: Secreted GH18 ChiA component of the S. marcescens chitinolytic system.
       evidence:
@@ -91,11 +91,48 @@ causal_graphs:
     grounding_notes: The combined label conflates exo-action, processivity, and chitobiosidase
       product preference; available GO terms do not encode this complete mechanistic
       combination.
+    protein_examples:
+    - uniprot_id: UniProtKB:P07254
+      protein_label: Chitinase A
+      gene_symbol: chiA
+      taxon_id: NCBITaxon:615
+      taxon_label: Serratia marcescens
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 159
+      sequence_version: 3
+      role: Exemplar protein (chiA, Chitinase A) representing exochitinase / chitobiosidase
+        in Serratia marcescens for chitinolysis.
+      evidence:
+      - reference: DOI:10.1002/j.1460-2075.1986.tb04235.x
+        snippet: chiA and chiB, which encode distinct secreted forms of the enzyme
+          chitinase
+        notes: Supports exochitinase / chitobiosidase in chitinolysis; UniProtKB:P07254
+          (chiA, Chitinase A) in Serratia marcescens provides a verified protein exemplar.
   - node_id: n_acetylglucosaminidase
     label: beta-N-acetylglucosaminidase
     node_type: GENE_OR_PROTEIN
     description: Hydrolyzes chitooligosaccharides/chitobiose to GlcNAc monomers.
     grounding: GO:0016231
+    protein_examples:
+    - uniprot_id: UniProtKB:T1WGN1
+      protein_label: Endo-beta-N-acetylglucosaminidase EndoS2
+      gene_symbol: endoS2
+      taxon_id: NCBITaxon:301452
+      taxon_label: Streptococcus pyogenes serotype M49
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 66
+      sequence_version: 1
+      role: Exemplar protein (endoS2, Endo-beta-N-acetylglucosaminidase EndoS2) representing
+        beta-N-acetylglucosaminidase in Streptococcus pyogenes serotype M49 for chitinolysis.
+      evidence:
+      - reference: DOI:10.3389/fmicb.2013.00149
+        snippet: ChiA and ChiB are processive enzymes cleaving off disaccharides while
+          sliding along the chitin polymer
+        notes: Supports beta-N-acetylglucosaminidase in chitinolysis; UniProtKB:T1WGN1
+          (endoS2, Endo-beta-N-acetylglucosaminidase EndoS2) in Streptococcus pyogenes
+          serotype M49 provides a verified protein exemplar.
   - node_id: lpmo
     label: lytic polysaccharide monooxygenase (LPMO; AA10)
     node_type: GENE_OR_PROTEIN
@@ -112,7 +149,7 @@ causal_graphs:
       taxon_label: Serratia marcescens
       entry_status: REVIEWED
       retrieved_on: '2026-08-24'
-      entry_version: 8
+      entry_version: 9
       sequence_version: 1
       role: Chitin-active CBP21/SmLPMO10A that oxidatively opens crystalline chitin
         for the hydrolytic enzymes in the same S. marcescens system.
@@ -292,4 +329,13 @@ curation_history:
     the generic hydrolytic core and the exochitinase branch to the LPMO/chitin branch.
     The graph now has one component without adding genes or operons as primary records
     or importing downstream utilization as proof of chitinolysis. Issues 183 and 426.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:P07254
+    version metadata (entry_version=159, sequence_version=3); refreshed UniProtKB:P9WEM3
+    version metadata (entry_version=9, sequence_version=1); added UniProtKB:P07254
+    (chiA) protein example to node exochitinase; added UniProtKB:T1WGN1 (endoS2) protein
+    example to node n_acetylglucosaminidase.'
   llm_assisted: true

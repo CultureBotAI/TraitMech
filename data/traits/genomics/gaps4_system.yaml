@@ -115,6 +115,39 @@ causal_graphs:
     grounding: traitmech:000209
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
+  - node_id: gaps4_system_protein_component
+    label: Cell death peptidase
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Cell death peptidase) associated with GAPS4 system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - lit
+    protein_examples:
+    - uniprot_id: UniProtKB:P11072
+      protein_label: Cell death peptidase
+      gene_symbol: lit
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 137
+      sequence_version: 2
+      role: Characteristic protein component (lit, Cell death peptidase) associated
+        with GAPS4 system in Escherichia coli (strain K12).
+      evidence:
+      - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/gaps4.md
+        snippet: GAPS4a is a nuclease containing a domain from the PDDEXK clan (CL0236)
+          suggesting that the GAPS4 defense system is acting via DNA degradation.
+          Both genes are required for phage defense and were predicted to form a heterodimer.
+          It was shown that the system causes host DNA degradation upon infection
+          by lambda-vir only, which would suggest that GAPS4 is an abortive infection
+          system :ref{doi=10.1101/2023.03.28.534373}.
+        notes: Supports Cell death peptidase in GAPS4 system; UniProtKB:P11072 (lit,
+          Cell death peptidase) in Escherichia coli (strain K12) provides a verified
+          protein exemplar.
   edges:
   - subject: gaps4_locus
     predicate: contributes to
@@ -213,6 +246,22 @@ causal_graphs:
       snippet: "GAPS4\tGAPS4\t2\t2\tGAPS4__GAPS4a, GAPS4__GAPS4b\t\t\t"
       notes: The DefenseFinder rules table models GAPS4 as a two-profile system requiring
         GAPS4__GAPS4a and GAPS4__GAPS4b.
+  - subject: gaps4_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: gaps4_system_trait
+    description: Cell death peptidase (lit, UniProtKB:P11072) contributes to GAPS4
+      system (associated with heterodimer, containing, suggesting).
+    evidence:
+    - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/gaps4.md
+      snippet: GAPS4a is a nuclease containing a domain from the PDDEXK clan (CL0236)
+        suggesting that the GAPS4 defense system is acting via DNA degradation. Both
+        genes are required for phage defense and were predicted to form a heterodimer.
+        It was shown that the system causes host DNA degradation upon infection by
+        lambda-vir only, which would suggest that GAPS4 is an abortive infection system
+        :ref{doi=10.1101/2023.03.28.534373}.
+      notes: Supports the functional association between Cell death peptidase (UniProtKB:P11072
+        in Escherichia coli (strain K12)) and GAPS4 system.
 discussions:
 - discussion_id: gaps4-mechanism-gap
   prompt: Resolve GAPS4 natural host breadth, lambda-vir host-DNA-degradation triggers,
@@ -286,4 +335,10 @@ curation_history:
     validation graph, a DefenseFinder system model, and a RefSeq Hafnia alvei example,
     but not a direct native microbial isolate exemplar with experimentally verified
     endogenous GAPS4 activity. No paid research was used.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    gaps4_system_protein_component with UniProtKB:P11072 (lit) exemplar.'
   llm_assisted: true

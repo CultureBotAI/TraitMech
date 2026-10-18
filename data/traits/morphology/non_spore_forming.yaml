@@ -82,6 +82,25 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Rap family phosphatases that dephosphorylate Spo0F in the sporulation
       phosphorelay.
+    protein_examples:
+    - uniprot_id: UniProtKB:P06534
+      protein_label: Stage 0 sporulation protein A
+      gene_symbol: spo0A
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
+      entry_status: REVIEWED
+      proteome_id: UP000001570
+      retrieved_on: '2026-10-17'
+      entry_version: 189
+      sequence_version: 1
+      role: Exemplar protein (spo0A, Stage 0 sporulation protein A) representing Rap
+        phosphatases in Bacillus subtilis (strain 168) for non-spore forming.
+      evidence:
+      - reference: DOI:10.1146/annurev.genet.30.1.297
+        snippet: within which a spore is produced
+        notes: Supports Rap phosphatases in non-spore forming; UniProtKB:P06534 (spo0A,
+          Stage 0 sporulation protein A) in Bacillus subtilis (strain 168) provides
+          a verified protein exemplar.
   - node_id: spo0f_dephosphorylation
     label: dephosphorylation of Spo0F
     node_type: BIOLOGICAL_PROCESS
@@ -247,4 +266,10 @@ curation_history:
     the tranche: set graph scope non_spore_forming_absent_spo0a_cascade=NONMECHANISTIC
     with scope_notes; marked 1 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (rap_phosphatases); retyped 1 node(s) (absent_spo0a_gene->STATE).'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P06534 (spo0A)
+    protein example to node rap_phosphatases.'
   llm_assisted: true

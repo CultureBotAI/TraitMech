@@ -77,6 +77,36 @@ causal_graphs:
     grounding: traitmech:000209
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
+  - node_id: darna_system_protein_component
+    label: DNA-binding transcriptional dual regulator CRP
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (DNA-binding transcriptional dual regulator CRP)
+      associated with DARNA system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - crp
+    protein_examples:
+    - uniprot_id: UniProtKB:P0ACJ8
+      protein_label: DNA-binding transcriptional dual regulator CRP
+      gene_symbol: crp
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 159
+      sequence_version: 1
+      role: Characteristic protein component (crp, DNA-binding transcriptional dual
+        regulator CRP) associated with DARNA system in Escherichia coli (strain K12).
+      evidence:
+      - reference: DOI:10.64898/2026.02.22.705581
+        snippet: DARNA is activated by single-stranded DNA presented by phage SSB,
+          but not by the host SSB
+        notes: Supports DNA-binding transcriptional dual regulator CRP in DARNA system;
+          UniProtKB:P0ACJ8 (crp, DNA-binding transcriptional dual regulator CRP) in
+          Escherichia coli (strain K12) provides a verified protein exemplar.
   edges:
   - subject: phage_ssb_presented_ssdna
     predicate: triggers
@@ -131,6 +161,20 @@ causal_graphs:
         the bacterial anti-phage defense system DARNA
       notes: DefenseFinder associates DARNA with the Puteikiene et al. bacterial anti-phage
         defense-system preprint.
+  - subject: darna_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: darna_system_trait
+    description: DNA-binding transcriptional dual regulator CRP (crp, UniProtKB:P0ACJ8)
+      contributes to DARNA system (associated with recognition, endogenous, avoiding).
+    evidence:
+    - reference: DOI:10.64898/2026.02.22.705581
+      snippet: The recognition of an endogenous nucleic acid signal promoted by a
+        viral protein ensures that DARNA can detect and respond to a broad range of
+        viruses while avoiding auto-immunity
+      notes: Supports the functional association between DNA-binding transcriptional
+        dual regulator CRP (UniProtKB:P0ACJ8 in Escherichia coli (strain K12)) and
+        DARNA system.
 discussions:
 - discussion_id: darna-model-profile-gap
   prompt: Resolve DARNA component profiles and locus architecture before minting component-profile
@@ -153,4 +197,10 @@ curation_history:
   changes: Minted DARNA system as a DOI-backed GENOMICS TraitRecord under phage defense
     system after an ignored-and-hidden duplicate review found no exact live TraitMech,
     METPO, or prior proposal record; the replacement placeholder is reserved in proposals/metpo_traitmech_v150.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    darna_system_protein_component with UniProtKB:P0ACJ8 (crp) exemplar.'
   llm_assisted: true

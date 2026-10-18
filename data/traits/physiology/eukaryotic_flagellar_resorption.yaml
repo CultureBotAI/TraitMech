@@ -146,3 +146,73 @@ curation_history:
     page 11 of 12. Source XML and the typeset page were rechecked for issue #1948.
     Preserved definition, snippets, references, other evidence and prior history.'
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph eukaryotic_flagellar_resorption_graph
+    with GENE_OR_PROTEIN node eukaryotic_flagellar_resorption_protein_component and
+    UniProtKB:P16521 exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: eukaryotic_flagellar_resorption_graph
+  title: Protein component associated with eukaryotic flagellar resorption
+  description: Literature-backed association between Elongation factor 3A (UniProtKB:P16521)
+    and eukaryotic flagellar resorption.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P16521 in Saccharomyces
+    cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)) associated with eukaryotic
+    flagellar resorption while full multi-step mechanistic curation remains future
+    work.
+  nodes:
+  - node_id: eukaryotic_flagellar_resorption_trait
+    label: eukaryotic flagellar resorption
+    node_type: TRAIT
+    grounding: traitmech:000733
+    description: A physiological phenotype in which a microbial eukaryote shortens
+      previously assembled cilia or flagella through disassembly of their axonemes.
+  - node_id: eukaryotic_flagellar_resorption_protein_component
+    label: Elongation factor 3A
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Elongation factor 3A) associated with eukaryotic
+      flagellar resorption.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - YEF3
+    protein_examples:
+    - uniprot_id: UniProtKB:P16521
+      protein_label: Elongation factor 3A
+      gene_symbol: YEF3
+      taxon_id: NCBITaxon:559292
+      taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's
+        yeast)
+      entry_status: REVIEWED
+      proteome_id: UP000002311
+      retrieved_on: '2026-10-17'
+      entry_version: 244
+      sequence_version: 4
+      role: Characteristic protein component (YEF3, Elongation factor 3A) associated
+        with eukaryotic flagellar resorption in Saccharomyces cerevisiae (strain ATCC
+        204508 / S288c) (Baker's yeast).
+      evidence:
+      - reference: DOI:10.1083/jcb.100.2.457
+        snippet: Cells under resorption-inducing conditions rapidly shortened their
+          flagella
+        notes: Supports Elongation factor 3A in eukaryotic flagellar resorption; UniProtKB:P16521
+          (YEF3, Elongation factor 3A) in Saccharomyces cerevisiae (strain ATCC 204508
+          / S288c) (Baker's yeast) provides a verified protein exemplar.
+  edges:
+  - subject: eukaryotic_flagellar_resorption_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: eukaryotic_flagellar_resorption_trait
+    description: Elongation factor 3A (YEF3, UniProtKB:P16521) contributes to eukaryotic
+      flagellar resorption (associated with conditions, resorption, shortened).
+    evidence:
+    - reference: DOI:10.1083/jcb.100.2.457
+      snippet: Cells under resorption-inducing conditions rapidly shortened their
+        flagella
+      notes: Supports the functional association between Elongation factor 3A (UniProtKB:P16521
+        in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast))
+        and eukaryotic flagellar resorption.

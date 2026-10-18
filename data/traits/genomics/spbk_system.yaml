@@ -77,6 +77,34 @@ causal_graphs:
     grounding: traitmech:000325
     description: Possession of a genome-encoded SpbK abortive-infection phage-defense
       system.
+  - node_id: spbk_system_protein_component
+    label: Endoribonuclease HigB
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Endoribonuclease HigB) associated with SpbK system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - higB
+    protein_examples:
+    - uniprot_id: UniProtKB:Q7A225
+      protein_label: Endoribonuclease HigB
+      gene_symbol: higB
+      taxon_id: NCBITaxon:585
+      taxon_label: Proteus vulgaris
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 69
+      sequence_version: 1
+      role: Characteristic protein component (higB, Endoribonuclease HigB) associated
+        with SpbK system in Proteus vulgaris.
+      evidence:
+      - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+        snippet: 'SpbK | 10\.1371/journal\.pgen\.1010065 | Interactions between mobile
+          genetic elements: An anti-phage gene in an integrative and conjugative element
+          protects host cells from predation by a temperate bacteriophage'
+        notes: Supports Endoribonuclease HigB in SpbK system; UniProtKB:Q7A225 (higB,
+          Endoribonuclease HigB) in Proteus vulgaris provides a verified protein exemplar.
   edges:
   - subject: spbk_locus
     predicate: contributes to
@@ -119,6 +147,18 @@ causal_graphs:
         protects host cells from predation by a temperate bacteriophage'
       notes: The DefenseFinder article registry maps the named SpbK model namespace
         to the ICEBs1 SpbK anti-phage paper.
+  - subject: spbk_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: spbk_system_trait
+    description: Endoribonuclease HigB (higB, UniProtKB:Q7A225) contributes to SpbK
+      system (associated with expression, inhibited, viability).
+    evidence:
+    - reference: DOI:10.1371/journal.pgen.1010065
+      snippet: Co-expression of spbK and yonE inhibited host cell growth and caused
+        a drop in cell viability, even in the absence of any other ICEBs1 or SPß genes.
+      notes: Supports the functional association between Endoribonuclease HigB (UniProtKB:Q7A225
+        in Proteus vulgaris) and SpbK system.
 discussions:
 - discussion_id: spbk-mechanism-gap
   prompt: Resolve the direct SPβ YonE trigger, SpbK TIR-domain output, essential host
@@ -149,4 +189,10 @@ curation_history:
   changes: Standardized curator-written SPβ phage mentions to the canonical Greek
     beta spelling while preserving Johnson et al. evidence snippets exactly as exposed
     by the PLOS XML.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    spbk_system_protein_component with UniProtKB:Q7A225 (higB) exemplar.'
   llm_assisted: true

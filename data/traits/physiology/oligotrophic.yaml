@@ -84,6 +84,25 @@ causal_graphs:
     grounding_notes: The label spans substrate-specific binding proteins from several
       unrelated ABC, TRAP, and TTT transporter families; the cited comparative study
       does not define one exact family or complex.
+    protein_examples:
+    - uniprot_id: UniProtKB:A4N8V8
+      protein_label: Putative metal ABC transporter substrate-binding protein Hpf
+      gene_symbol: hpf
+      taxon_id: NCBITaxon:375177
+      taxon_label: Haemophilus influenzae (strain NTHi 3655)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 60
+      sequence_version: 1
+      role: Exemplar protein (hpf, Putative metal ABC transporter substrate-binding
+        protein Hpf) representing high-affinity solute-binding proteins in Haemophilus
+        influenzae (strain NTHi 3655) for oligotrophic.
+      evidence:
+      - reference: DOI:10.1073/pnas.0903507106
+        snippet: high (copiotrophic) or low (oligotrophic) nutrient concentrations
+        notes: Supports high-affinity solute-binding proteins in oligotrophic; UniProtKB:A4N8V8
+          (hpf, Putative metal ABC transporter substrate-binding protein Hpf) in Haemophilus
+          influenzae (strain NTHi 3655) provides a verified protein exemplar.
   - node_id: substrate_uptake_low_conc
     label: substrate uptake at low concentration
     node_type: BIOLOGICAL_PROCESS
@@ -304,4 +323,10 @@ curation_history:
     own description and of the cited Clifton et al. 2024 evidence. Naming the unnegated
     quantity makes `streamlined_genome decreases metabolic_redundancy` read correctly.
     The node is a leaf with one in-edge, so the rename is contained.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:A4N8V8 (hpf)
+    protein example to node high_affinity_sbp.'
   llm_assisted: true

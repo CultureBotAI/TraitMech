@@ -99,6 +99,38 @@ causal_graphs:
     grounding: traitmech:000209
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
+  - node_id: radar_system_protein_component
+    label: Adenine-specific methyltransferase PglX
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Adenine-specific methyltransferase PglX) associated
+      with RADAR system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - pglX
+    protein_examples:
+    - uniprot_id: UniProtKB:Q8CJM2
+      protein_label: Adenine-specific methyltransferase PglX
+      gene_symbol: pglX
+      taxon_id: NCBITaxon:100226
+      taxon_label: Streptomyces coelicolor (strain ATCC BAA-471 / A3(2) / M145)
+      entry_status: REVIEWED
+      proteome_id: UP000001973
+      retrieved_on: '2026-10-17'
+      entry_version: 102
+      sequence_version: 1
+      role: Characteristic protein component (pglX, Adenine-specific methyltransferase
+        PglX) associated with RADAR system in Streptomyces coelicolor (strain ATCC
+        BAA-471 / A3(2) / M145).
+      evidence:
+      - reference: DOI:10.1016/j.cell.2023.01.012
+        snippet: When heterologously expressed in E. coli MG1655, all RADAR systems
+          conferred defense against the closely related T-even phages T2, T4, and
+          T6
+        notes: Supports Adenine-specific methyltransferase PglX in RADAR system; UniProtKB:Q8CJM2
+          (pglX, Adenine-specific methyltransferase PglX) in Streptomyces coelicolor
+          (strain ATCC BAA-471 / A3(2) / M145) provides a verified protein exemplar.
   edges:
   - subject: radar_locus
     predicate: contributes to
@@ -156,6 +188,19 @@ causal_graphs:
       snippet: RADAR is a two-protein bacterial defense system that was reported to
         defend against phage
       notes: Duncan-Lowey et al. support RADAR as a bacterial phage-defense system.
+  - subject: radar_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: radar_system_trait
+    description: Adenine-specific methyltransferase PglX (pglX, UniProtKB:Q8CJM2)
+      contributes to RADAR system (associated with heterologously, conferred, expressed).
+    evidence:
+    - reference: DOI:10.1016/j.cell.2023.01.012
+      snippet: When heterologously expressed in E. coli MG1655, all RADAR systems
+        conferred defense against the closely related T-even phages T2, T4, and T6
+      notes: Supports the functional association between Adenine-specific methyltransferase
+        PglX (UniProtKB:Q8CJM2 in Streptomyces coelicolor (strain ATCC BAA-471 / A3(2)
+        / M145)) and RADAR system.
 discussions:
 - discussion_id: radar-trigger-and-substrate-gap
   prompt: Resolve RADAR phage triggers, RdrA activation, ATP-versus-RNA deamination,
@@ -187,4 +232,10 @@ curation_history:
     edge, rewiring the RADAR confers edge to adenosine-nucleotide deamination, and
     normalizing the initial per-record curation timestamp while leaving the append-only
     session history record intact.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    radar_system_protein_component with UniProtKB:Q8CJM2 (pglX) exemplar.'
   llm_assisted: true

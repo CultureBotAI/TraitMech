@@ -89,3 +89,77 @@ curation_history:
     Existing records unchanged; exact mappings and mechanism grounding remain open.
     Timestamp records the observed UTC curation decision.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph periplasmic_bacterial_predation_graph
+    with GENE_OR_PROTEIN node periplasmic_bacterial_predation_protein_component and
+    UniProtKB:P71370 exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: periplasmic_bacterial_predation_graph
+  title: Protein component associated with periplasmic bacterial predation
+  description: Literature-backed association between Periplasmic oligopeptide-binding
+    protein OppA (UniProtKB:P71370) and periplasmic bacterial predation.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P71370 in Haemophilus
+    influenzae (strain ATCC 51907 / DSM 11121 / KW20 / Rd)) associated with periplasmic
+    bacterial predation while full multi-step mechanistic curation remains future
+    work.
+  nodes:
+  - node_id: periplasmic_bacterial_predation_trait
+    label: periplasmic bacterial predation
+    node_type: TRAIT
+    grounding: traitmech:000699
+    description: A predatory bacterial phenotype in which a bacterium enters the periplasm
+      of a bacterial prey cell and grows and reproduces there using nutrients obtained
+      by killing and consuming the prey.
+  - node_id: periplasmic_bacterial_predation_protein_component
+    label: Periplasmic oligopeptide-binding protein OppA
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Periplasmic oligopeptide-binding protein OppA)
+      associated with periplasmic bacterial predation.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - oppA
+    protein_examples:
+    - uniprot_id: UniProtKB:P71370
+      protein_label: Periplasmic oligopeptide-binding protein OppA
+      gene_symbol: oppA
+      taxon_id: NCBITaxon:71421
+      taxon_label: Haemophilus influenzae (strain ATCC 51907 / DSM 11121 / KW20 /
+        Rd)
+      entry_status: REVIEWED
+      proteome_id: UP000000579
+      retrieved_on: '2026-10-17'
+      entry_version: 124
+      sequence_version: 1
+      role: Characteristic protein component (oppA, Periplasmic oligopeptide-binding
+        protein OppA) associated with periplasmic bacterial predation in Haemophilus
+        influenzae (strain ATCC 51907 / DSM 11121 / KW20 / Rd).
+      evidence:
+      - reference: DOI:10.1128/jb.96.4.1366-1381.1968
+        snippet: Although partial disruption of the cytoplasmic membrane was always
+          apparent, the parasite did not appear to actively penetrate through this
+          barrier.
+        notes: Supports Periplasmic oligopeptide-binding protein OppA in periplasmic
+          bacterial predation; UniProtKB:P71370 (oppA, Periplasmic oligopeptide-binding
+          protein OppA) in Haemophilus influenzae (strain ATCC 51907 / DSM 11121 /
+          KW20 / Rd) provides a verified protein exemplar.
+  edges:
+  - subject: periplasmic_bacterial_predation_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: periplasmic_bacterial_predation_trait
+    description: Periplasmic oligopeptide-binding protein OppA (oppA, UniProtKB:P71370)
+      contributes to periplasmic bacterial predation (associated with cytoplasmic,
+      disruption, penetrate).
+    evidence:
+    - reference: DOI:10.1128/jb.96.4.1366-1381.1968
+      snippet: Although partial disruption of the cytoplasmic membrane was always
+        apparent, the parasite did not appear to actively penetrate through this barrier.
+      notes: Supports the functional association between Periplasmic oligopeptide-binding
+        protein OppA (UniProtKB:P71370 in Haemophilus influenzae (strain ATCC 51907
+        / DSM 11121 / KW20 / Rd)) and periplasmic bacterial predation.

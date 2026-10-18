@@ -64,6 +64,28 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Rotary enzyme complex that synthesizes ATP using ion motive force.
     grounding: GO:0045259
+    protein_examples:
+    - uniprot_id: UniProtKB:Q49Z52
+      protein_label: ATP synthase subunit alpha
+      gene_symbol: atpA
+      taxon_id: NCBITaxon:342451
+      taxon_label: Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
+        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+      entry_status: REVIEWED
+      proteome_id: UP000006371
+      retrieved_on: '2026-10-17'
+      entry_version: 137
+      sequence_version: 1
+      role: Exemplar protein (atpA, ATP synthase subunit alpha) representing F1Fo
+        ATP synthase in Staphylococcus saprophyticus subsp. saprophyticus (strain
+        ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) for Oxidative phosphorylation.
+      evidence:
+      - reference: DOI:10.1007/BF01923429
+        snippet: synthesis of ATP is also driven by a proton motive force
+        notes: Supports F1Fo ATP synthase in Oxidative phosphorylation; UniProtKB:Q49Z52
+          (atpA, ATP synthase subunit alpha) in Staphylococcus saprophyticus subsp.
+          saprophyticus (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 /
+          S-41) provides a verified protein exemplar.
   - node_id: atp
     label: ATP
     node_type: CHEMICAL
@@ -78,6 +100,28 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Proton-translocating NADH:quinone oxidoreductase entry complex.
     grounding: GO:0045271
+    protein_examples:
+    - uniprot_id: UniProtKB:P33602
+      protein_label: NADH-quinone oxidoreductase subunit G
+      gene_symbol: nuoG
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 213
+      sequence_version: 4
+      role: Exemplar protein (nuoG, NADH-quinone oxidoreductase subunit G) representing
+        Complex I / NADH:quinone oxidoreductase (NDH-1) in Escherichia coli (strain
+        K12) for Oxidative phosphorylation.
+      evidence:
+      - reference: DOI:10.3390/ijms252413421
+        snippet: Proton-translocating NADH–ubiquinone oxidoreductase (complex I) catalyzes
+          the oxidation of NADH by ubiquinone accompanied by the transmembrane transfer
+          of four protons
+        notes: Supports Complex I / NADH:quinone oxidoreductase (NDH-1) in Oxidative
+          phosphorylation; UniProtKB:P33602 (nuoG, NADH-quinone oxidoreductase subunit
+          G) in Escherichia coli (strain K12) provides a verified protein exemplar.
   - node_id: succinate
     label: succinate
     node_type: CHEMICAL
@@ -87,6 +131,26 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Complex II coupling succinate oxidation to quinone reduction.
     grounding: GO:0045273
+    protein_examples:
+    - uniprot_id: UniProtKB:P0AC41
+      protein_label: Succinate dehydrogenase flavoprotein subunit
+      gene_symbol: sdhA
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 160
+      sequence_version: 1
+      role: Exemplar protein (sdhA, Succinate dehydrogenase flavoprotein subunit)
+        representing succinate dehydrogenase / Complex II in Escherichia coli (strain
+        K12) for Oxidative phosphorylation.
+      evidence:
+      - reference: DOI:10.1007/s10863-024-10041-y
+        snippet: catalyzes the two-electron reduction of quinone by succinate
+        notes: Supports succinate dehydrogenase / Complex II in Oxidative phosphorylation;
+          UniProtKB:P0AC41 (sdhA, Succinate dehydrogenase flavoprotein subunit) in
+          Escherichia coli (strain K12) provides a verified protein exemplar.
   - node_id: quinone_pool
     label: quinone pool
     node_type: CHEMICAL
@@ -120,7 +184,7 @@ causal_graphs:
       taxon_label: Paracoccus denitrificans
       entry_status: REVIEWED
       retrieved_on: '2026-08-23'
-      entry_version: 167
+      entry_version: 168
       sequence_version: 1
       role: Subunit II component of purified P. denitrificans cytochrome c oxidase;
         this accession does not represent the complete heme-copper oxidase complex.
@@ -401,4 +465,13 @@ curation_history:
     declared exact synonym(s): ''respiratory-chain phosphorylation''. Evidence is
     predicate-scoped in the versioned ontology snapshots; OAK cross-checked direct
     data, and OLS4 spot-checked release deltas and disputed hits.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:P08306
+    version metadata (entry_version=168, sequence_version=1); added UniProtKB:Q49Z52
+    (atpA) protein example to node atp_synthase; added UniProtKB:P33602 (nuoG) protein
+    example to node complex_i; added UniProtKB:P0AC41 (sdhA) protein example to node
+    succinate_dehydrogenase.'
   llm_assisted: true

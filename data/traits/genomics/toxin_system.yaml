@@ -98,6 +98,33 @@ causal_graphs:
     node_type: TRAIT
     grounding: traitmech:000214
     description: Possession of a genome-encoded abortive-infection phage defense system.
+  - node_id: toxin_system_protein_component
+    label: Endoribonuclease HigB
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Endoribonuclease HigB) associated with ToxIN system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - higB
+    protein_examples:
+    - uniprot_id: UniProtKB:Q7A225
+      protein_label: Endoribonuclease HigB
+      gene_symbol: higB
+      taxon_id: NCBITaxon:585
+      taxon_label: Proteus vulgaris
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 69
+      sequence_version: 1
+      role: Characteristic protein component (higB, Endoribonuclease HigB) associated
+        with ToxIN system in Proteus vulgaris.
+      evidence:
+      - reference: DOI:10.1128/JB.00720-09
+        snippet: this two-component Abi system operates as a novel protein-RNA toxin-antitoxin
+          (TA) system to abort phage infection in multiple gram-negative bacteria
+        notes: Supports Endoribonuclease HigB in ToxIN system; UniProtKB:Q7A225 (higB,
+          Endoribonuclease HigB) in Proteus vulgaris provides a verified protein exemplar.
   edges:
   - subject: toxin_locus
     predicate: contributes to
@@ -157,6 +184,18 @@ causal_graphs:
       snippet: Designated ToxIN, this two-component abortive infection system acts
         as a toxin-antitoxin module
       notes: Blower et al. place ToxIN in the abortive infection class of phage defense.
+  - subject: toxin_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: toxin_system_trait
+    description: Endoribonuclease HigB (higB, UniProtKB:Q7A225) contributes to ToxIN
+      system (associated with phytopathogen, atroseptica, carotovora).
+    evidence:
+    - reference: DOI:10.1073/pnas.0808832106
+      snippet: A highly effective 2-gene Abi system from the phytopathogen Erwinia
+        carotovora subspecies atroseptica, designated ToxIN, is described
+      notes: Supports the functional association between Endoribonuclease HigB (UniProtKB:Q7A225
+        in Proteus vulgaris) and ToxIN system.
 curation_history:
 - timestamp: '2026-09-15T19:25:00Z'
   curator: codex
@@ -165,4 +204,10 @@ curation_history:
     infection system parent after an ignored-and-hidden duplicate review found no
     exact live TraitMech, METPO, or prior proposal record; the replacement placeholder
     is reserved in proposals/metpo_traitmech_v103.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    toxin_system_protein_component with UniProtKB:Q7A225 (higB) exemplar.'
   llm_assisted: true

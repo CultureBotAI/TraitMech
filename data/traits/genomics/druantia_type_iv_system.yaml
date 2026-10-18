@@ -66,3 +66,68 @@ curation_history:
     below corrected family placeholder METPO:1053100. Kept computational architecture
     and component absence distinct from detector calls and measured defense.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph druantia_type_iv_system_graph
+    with GENE_OR_PROTEIN node druantia_type_iv_system_protein_component and UniProtKB:P0DW38
+    exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: druantia_type_iv_system_graph
+  title: Protein component associated with Druantia type IV system
+  description: Literature-backed association between Druantia protein DruE (UniProtKB:P0DW38)
+    and Druantia type IV system.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P0DW38 in Escherichia
+    coli (strain UMEA 4076-1)) associated with Druantia type IV system while full
+    multi-step mechanistic curation remains future work.
+  nodes:
+  - node_id: druantia_type_iv_system_trait
+    label: Druantia type IV system
+    node_type: TRAIT
+    grounding: traitmech:000577
+    description: A Druantia system in which an organism possesses a locus encoding
+      DruE and DruF together with DruL, without the type-II DruM and DruG components.
+  - node_id: druantia_type_iv_system_protein_component
+    label: Druantia protein DruE
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Druantia protein DruE) associated with Druantia
+      type IV system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - druE
+    protein_examples:
+    - uniprot_id: UniProtKB:P0DW38
+      protein_label: Druantia protein DruE
+      gene_symbol: druE
+      taxon_id: NCBITaxon:1281278
+      taxon_label: Escherichia coli (strain UMEA 4076-1)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 10
+      sequence_version: 1
+      role: Characteristic protein component (druE, Druantia protein DruE) associated
+        with Druantia type IV system in Escherichia coli (strain UMEA 4076-1).
+      evidence:
+      - reference: DOI:10.1093/nar/gkab883
+        snippet: the Druantia-like system lacks the type II requisite DruM and DruG
+          proteins, instead encoding a hypothetical protein
+        notes: Supports Druantia protein DruE in Druantia type IV system; UniProtKB:P0DW38
+          (druE, Druantia protein DruE) in Escherichia coli (strain UMEA 4076-1) provides
+          a verified protein exemplar.
+  edges:
+  - subject: druantia_type_iv_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: druantia_type_iv_system_trait
+    description: Druantia protein DruE (druE, UniProtKB:P0DW38) contributes to Druantia
+      type IV system (associated with requisite, druantia, encoding).
+    evidence:
+    - reference: DOI:10.1093/nar/gkab883
+      snippet: the Druantia-like system lacks the type II requisite DruM and DruG
+        proteins, instead encoding a hypothetical protein
+      notes: Supports the functional association between Druantia protein DruE (UniProtKB:P0DW38
+        in Escherichia coli (strain UMEA 4076-1)) and Druantia type IV system.

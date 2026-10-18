@@ -91,6 +91,32 @@ causal_graphs:
     grounding: traitmech:000209
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
+  - node_id: brc59_system_protein_component
+    label: Endoribonuclease HigB
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Endoribonuclease HigB) associated with Brc59 system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - higB
+    protein_examples:
+    - uniprot_id: UniProtKB:Q7A225
+      protein_label: Endoribonuclease HigB
+      gene_symbol: higB
+      taxon_id: NCBITaxon:585
+      taxon_label: Proteus vulgaris
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 69
+      sequence_version: 1
+      role: Characteristic protein component (higB, Endoribonuclease HigB) associated
+        with Brc59 system in Proteus vulgaris.
+      evidence:
+      - reference: DOI:10.1126/science.ads0915
+        snippet: brc59 brc128 brc135 brc142 brc167.2 brc167
+        notes: Supports Endoribonuclease HigB in Brc59 system; UniProtKB:Q7A225 (higB,
+          Endoribonuclease HigB) in Proteus vulgaris provides a verified protein exemplar.
   edges:
   - subject: brc59_integron_cassette
     predicate: contributes to
@@ -156,6 +182,17 @@ causal_graphs:
         brc167'
       notes: Kieffer et al. include brc59 among identified BRiCs with predicted attC
         secondary structures.
+  - subject: brc59_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: brc59_system_trait
+    description: Endoribonuclease HigB (higB, UniProtKB:Q7A225) contributes to Brc59
+      system (associated with pneumoniae, brc59, c810).
+    evidence:
+    - reference: https://www.science.org/doi/suppl/10.1126/science.ads0915/suppl_file/science.ads0915_sm.pdf
+      snippet: C810 pMBA brc59 K. pneumoniae KP5
+      notes: Supports the functional association between Endoribonuclease HigB (UniProtKB:Q7A225
+        in Proteus vulgaris) and Brc59 system.
 discussions:
 - discussion_id: brc59-defensefinder-model-gap
   prompt: Resolve Brc59 native host breadth, exact sensitive-phage breadth, molecular
@@ -248,4 +285,10 @@ curation_history:
     empty because the sources support heterologous brc59 phage-resistance assays but
     not a direct named native microbial isolate exemplar with experimentally verified
     endogenous Brc59 activity. No paid research was used.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    brc59_system_protein_component with UniProtKB:Q7A225 (higB) exemplar.'
   llm_assisted: true

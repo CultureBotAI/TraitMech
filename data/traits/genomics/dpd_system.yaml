@@ -91,6 +91,35 @@ causal_graphs:
     grounding: traitmech:000209
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
+  - node_id: dpd_system_protein_component
+    label: DNA-guanine transglycosylase
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (DNA-guanine transglycosylase) associated with
+      Dpd system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - dpdA
+    protein_examples:
+    - uniprot_id: UniProtKB:P0DW33
+      protein_label: DNA-guanine transglycosylase
+      gene_symbol: dpdA
+      taxon_id: NCBITaxon:115981
+      taxon_label: Salmonella montevideo
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 15
+      sequence_version: 1
+      role: Characteristic protein component (dpdA, DNA-guanine transglycosylase)
+        associated with Dpd system in Salmonella montevideo.
+      evidence:
+      - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+        snippet: Dpd Dpd 4 4 Dpd__DpdA, Dpd__DpdB, Dpd__DpdC, Dpd__DpdD, Dpd__DpdE,
+          Dpd__DpdF, Dpd__DpdG, Dpd__DpdH, Dpd__DpdI, Dpd__DpdJ, Dpd__DpdK
+        notes: Supports DNA-guanine transglycosylase in Dpd system; UniProtKB:P0DW33
+          (dpdA, DNA-guanine transglycosylase) in Salmonella montevideo provides a
+          verified protein exemplar.
   edges:
   - subject: dpd_genomic_island
     predicate: contributes to
@@ -142,6 +171,19 @@ causal_graphs:
         with 7-deazaguanine derivatives
       notes: DefenseFinder associates Dpd with the Thiaville et al. DNA-modification
         paper.
+  - subject: dpd_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: dpd_system_trait
+    description: DNA-guanine transglycosylase (dpdA, UniProtKB:P0DW33) contributes
+      to Dpd system (associated with deazaguanosine, hydrolysates, montevideo).
+    evidence:
+    - reference: DOI:10.1073/pnas.1518570113
+      snippet: 2'-deoxy-preQ0 and 2'-deoxy-7-amido-7-deazaguanosine in enzymatic hydrolysates
+        of DNA extracted from the pathogenic, Gram-negative bacteria Salmonella enterica
+        serovar Montevideo
+      notes: Supports the functional association between DNA-guanine transglycosylase
+        (UniProtKB:P0DW33 in Salmonella montevideo) and Dpd system.
 discussions:
 - discussion_id: dpd-restriction-mechanism-gap
   prompt: Resolve Dpd restriction targets, phage specificity, and DpdA-K component
@@ -164,4 +206,10 @@ curation_history:
   changes: Minted Dpd system as a DOI-backed GENOMICS TraitRecord under phage defense
     system after an ignored-and-hidden duplicate review found no exact live TraitMech,
     METPO, or prior proposal record; the replacement placeholder is reserved in proposals/metpo_traitmech_v155.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    dpd_system_protein_component with UniProtKB:P0DW33 (dpdA) exemplar.'
   llm_assisted: true

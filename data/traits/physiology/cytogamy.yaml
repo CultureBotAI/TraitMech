@@ -106,3 +106,74 @@ curation_history:
     definition, evidence, examples and prior history. v501 carries the existing proposed
     METPO ID with this hierarchy; earlier standalone templates remain historical.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph cytogamy_graph
+    with GENE_OR_PROTEIN node cytogamy_protein_component and UniProtKB:Q8F1F5 exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: cytogamy_graph
+  title: Protein component associated with cytogamy
+  description: Literature-backed association between CRISPR-associated exonuclease
+    Cas4/endonuclease Cas1 fusion (UniProtKB:Q8F1F5) and cytogamy.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q8F1F5 in Leptospira
+    interrogans serogroup Icterohaemorrhagiae serovar Lai (strain 56601)) associated
+    with cytogamy while full multi-step mechanistic curation remains future work.
+  nodes:
+  - node_id: cytogamy_trait
+    label: cytogamy
+    node_type: TRAIT
+    grounding: traitmech:000623
+    description: A sexual-reproduction phenotype in which a paired cell self-fertilizes
+      by fusion of its own gametic nuclei without exchanging gametic nuclei with its
+      partner.
+  - node_id: cytogamy_protein_component
+    label: CRISPR-associated exonuclease Cas4/endonuclease Cas1 fusion
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (CRISPR-associated exonuclease Cas4/endonuclease
+      Cas1 fusion) associated with cytogamy.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - cas4-cas1
+    protein_examples:
+    - uniprot_id: UniProtKB:Q8F1F5
+      protein_label: CRISPR-associated exonuclease Cas4/endonuclease Cas1 fusion
+      gene_symbol: cas4-cas1
+      taxon_id: NCBITaxon:189518
+      taxon_label: Leptospira interrogans serogroup Icterohaemorrhagiae serovar Lai
+        (strain 56601)
+      entry_status: REVIEWED
+      proteome_id: UP000001408
+      retrieved_on: '2026-10-17'
+      entry_version: 92
+      sequence_version: 2
+      role: Characteristic protein component (cas4-cas1, CRISPR-associated exonuclease
+        Cas4/endonuclease Cas1 fusion) associated with cytogamy in Leptospira interrogans
+        serogroup Icterohaemorrhagiae serovar Lai (strain 56601).
+      evidence:
+      - reference: DOI:10.1093/genetics/91.4.657
+        snippet: cytogamy generates exconjugant clones that derive their entire genetic
+          information from a single meiotic product of their cytoplasmic parent.
+        notes: Supports CRISPR-associated exonuclease Cas4/endonuclease Cas1 fusion
+          in cytogamy; UniProtKB:Q8F1F5 (cas4-cas1, CRISPR-associated exonuclease
+          Cas4/endonuclease Cas1 fusion) in Leptospira interrogans serogroup Icterohaemorrhagiae
+          serovar Lai (strain 56601) provides a verified protein exemplar.
+  edges:
+  - subject: cytogamy_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: cytogamy_trait
+    description: CRISPR-associated exonuclease Cas4/endonuclease Cas1 fusion (cas4-cas1,
+      UniProtKB:Q8F1F5) contributes to cytogamy (associated with cytoplasmic, exconjugant,
+      information).
+    evidence:
+    - reference: DOI:10.1093/genetics/91.4.657
+      snippet: cytogamy generates exconjugant clones that derive their entire genetic
+        information from a single meiotic product of their cytoplasmic parent.
+      notes: Supports the functional association between CRISPR-associated exonuclease
+        Cas4/endonuclease Cas1 fusion (UniProtKB:Q8F1F5 in Leptospira interrogans
+        serogroup Icterohaemorrhagiae serovar Lai (strain 56601)) and cytogamy.

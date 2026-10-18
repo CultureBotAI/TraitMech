@@ -117,3 +117,65 @@ curation_history:
     self-fertility definition. Retained phenotype parent, source attribution and open
     curator reconciliation.'
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph unisexual_reproduction_graph
+    with GENE_OR_PROTEIN node unisexual_reproduction_protein_component and UniProtKB:P29166
+    exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: unisexual_reproduction_graph
+  title: Protein component associated with unisexual reproduction
+  description: Literature-backed association between Iron hydrogenase 1 (UniProtKB:P29166)
+    and unisexual reproduction.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P29166 in Clostridium
+    pasteurianum) associated with unisexual reproduction while full multi-step mechanistic
+    curation remains future work.
+  nodes:
+  - node_id: unisexual_reproduction_trait
+    label: unisexual reproduction
+    node_type: TRAIT
+    grounding: traitmech:000613
+    description: A fungal phenotype enabling sexual or parasexual reproduction with
+      genetic contribution from only one mating type.
+  - node_id: unisexual_reproduction_protein_component
+    label: Iron hydrogenase 1
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Iron hydrogenase 1) associated with unisexual
+      reproduction.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    protein_examples:
+    - uniprot_id: UniProtKB:P29166
+      protein_label: Iron hydrogenase 1
+      taxon_id: NCBITaxon:1501
+      taxon_label: Clostridium pasteurianum
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 159
+      sequence_version: 1
+      role: Characteristic protein component (P29166, Iron hydrogenase 1) associated
+        with unisexual reproduction in Clostridium pasteurianum.
+      evidence:
+      - reference: DOI:10.1371/journal.pgen.1003688
+        snippet: Sexual reproduction involves cells of either opposite (bisexual)
+          or one (unisexual) mating type.
+        notes: Supports Iron hydrogenase 1 in unisexual reproduction; UniProtKB:P29166
+          (P29166, Iron hydrogenase 1) in Clostridium pasteurianum provides a verified
+          protein exemplar.
+  edges:
+  - subject: unisexual_reproduction_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: unisexual_reproduction_trait
+    description: Iron hydrogenase 1 (P29166, UniProtKB:P29166) contributes to unisexual
+      reproduction (associated with reproduction, unisexual, bisexual).
+    evidence:
+    - reference: DOI:10.1371/journal.pgen.1003688
+      snippet: Sexual reproduction involves cells of either opposite (bisexual) or
+        one (unisexual) mating type.
+      notes: Supports the functional association between Iron hydrogenase 1 (UniProtKB:P29166
+        in Clostridium pasteurianum) and unisexual reproduction.

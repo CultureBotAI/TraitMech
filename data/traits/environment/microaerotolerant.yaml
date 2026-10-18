@@ -55,6 +55,29 @@ causal_graphs:
     label: oxidative stress defense enzymes
     node_type: GENE_OR_PROTEIN
     description: Enzymes such as SOD, catalase, or peroxidase that mitigate ROS.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q49VE0
+      protein_label: Coproheme decarboxylase
+      gene_symbol: chdC
+      taxon_id: NCBITaxon:342451
+      taxon_label: Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
+        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+      entry_status: REVIEWED
+      proteome_id: UP000006371
+      retrieved_on: '2026-10-17'
+      entry_version: 104
+      sequence_version: 1
+      role: Exemplar protein (chdC, Coproheme decarboxylase) representing oxidative
+        stress defense enzymes in Staphylococcus saprophyticus subsp. saprophyticus
+        (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) for microaerotolerant.
+      evidence:
+      - reference: PMID:30113300
+        snippet: The novel strain stains Gram-negative and Congo-red-negative and
+          is characterized mesophilic, neutrophilic, chemoheterotrophic and microaerotolerant
+        notes: Supports oxidative stress defense enzymes in microaerotolerant; UniProtKB:Q49VE0
+          (chdC, Coproheme decarboxylase) in Staphylococcus saprophyticus subsp. saprophyticus
+          (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) provides
+          a verified protein exemplar.
   - node_id: anaerobic_growth
     label: anaerobic growth
     node_type: BIOLOGICAL_PROCESS
@@ -73,6 +96,28 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Enzyme (SOR) that reduces superoxide to hydrogen peroxide.
     grounding: GO:0050605
+    protein_examples:
+    - uniprot_id: UniProtKB:P82385
+      protein_label: Superoxide reductase
+      gene_symbol: sorA
+      taxon_id: NCBITaxon:186497
+      taxon_label: Pyrococcus furiosus (strain ATCC 43587 / DSM 3638 / JCM 8422 /
+        Vc1)
+      entry_status: REVIEWED
+      proteome_id: UP000001013
+      retrieved_on: '2026-10-17'
+      entry_version: 134
+      sequence_version: 1
+      role: Exemplar protein (sorA, Superoxide reductase) representing superoxide
+        reductase in Pyrococcus furiosus (strain ATCC 43587 / DSM 3638 / JCM 8422
+        / Vc1) for microaerotolerant.
+      evidence:
+      - reference: PMID:30113300
+        snippet: The novel strain stains Gram-negative and Congo-red-negative and
+          is characterized mesophilic, neutrophilic, chemoheterotrophic and microaerotolerant
+        notes: Supports superoxide reductase in microaerotolerant; UniProtKB:P82385
+          (sorA, Superoxide reductase) in Pyrococcus furiosus (strain ATCC 43587 /
+          DSM 3638 / JCM 8422 / Vc1) provides a verified protein exemplar.
   - node_id: hydrogen_peroxide
     label: hydrogen peroxide
     node_type: CHEMICAL
@@ -85,6 +130,27 @@ causal_graphs:
     label: rubrerythrin/peroxidase
     node_type: GENE_OR_PROTEIN
     description: Rubrerythrin and peroxidase enzymes that reduce H2O2 to water.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0ABI8
+      protein_label: Cytochrome bo(3) ubiquinol oxidase subunit 1
+      gene_symbol: cyoB
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 154
+      sequence_version: 1
+      role: Exemplar protein (cyoB, Cytochrome bo(3) ubiquinol oxidase subunit 1)
+        representing rubrerythrin/peroxidase in Escherichia coli (strain K12) for
+        microaerotolerant.
+      evidence:
+      - reference: PMID:30113300
+        snippet: The novel strain stains Gram-negative and Congo-red-negative and
+          is characterized mesophilic, neutrophilic, chemoheterotrophic and microaerotolerant
+        notes: Supports rubrerythrin/peroxidase in microaerotolerant; UniProtKB:P0ABI8
+          (cyoB, Cytochrome bo(3) ubiquinol oxidase subunit 1) in Escherichia coli
+          (strain K12) provides a verified protein exemplar.
   - node_id: reduced_electron_donors
     label: reduced electron donors (NADH)
     node_type: CHEMICAL
@@ -297,4 +363,12 @@ curation_history:
   changes: Added Simulacricoccus ruber strain MCy10636 as the explicit organism-level
     microaerotolerant example in this record's own research artifact; verified NCBITaxon:2303410
     and its current label against NCBI.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q49VE0 (chdC)
+    protein example to node oxidative_stress_defense; added UniProtKB:P82385 (sorA)
+    protein example to node superoxide_reductase; added UniProtKB:P0ABI8 (cyoB) protein
+    example to node rubrerythrin_peroxidase.'
   llm_assisted: true

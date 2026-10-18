@@ -83,6 +83,38 @@ causal_graphs:
     grounding: traitmech:000209
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
+  - node_id: clover_system_protein_component
+    label: Nucleoside triphosphatase NudI
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Nucleoside triphosphatase NudI) associated with
+      Clover system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - nudI
+    protein_examples:
+    - uniprot_id: UniProtKB:B5BCQ0
+      protein_label: Nucleoside triphosphatase NudI
+      gene_symbol: nudI
+      taxon_id: NCBITaxon:554290
+      taxon_label: Salmonella paratyphi A (strain AKU_12601)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 77
+      sequence_version: 1
+      role: Characteristic protein component (nudI, Nucleoside triphosphatase NudI)
+        associated with Clover system in Salmonella paratyphi A (strain AKU_12601).
+      evidence:
+      - reference: DOI:10.1038/s41586-026-10135-0
+        snippet: Here we identify Clover, a bacterial anti-phage defence system that
+          overcomes this trade-off by encoding a deoxynucleoside triphosphohydrolase
+          enzyme (CloA) that dynamically responds to both an activating phage cue
+          and an inhibitory nucleotide immune signal produced by a partnering regulatory
+          enzyme (CloB).
+        notes: Supports Nucleoside triphosphatase NudI in Clover system; UniProtKB:B5BCQ0
+          (nudI, Nucleoside triphosphatase NudI) in Salmonella paratyphi A (strain
+          AKU_12601) provides a verified protein exemplar.
   edges:
   - subject: clover_locus
     predicate: enables
@@ -162,6 +194,20 @@ causal_graphs:
         to the Yu and Kranzusch nucleotide-signal anti-phage-defense paper. The pinned
         HMM inventory and rules table do not list Clover, so this row is name-to-paper
         evidence rather than model-component evidence.
+  - subject: clover_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: clover_system_trait
+    description: Nucleoside triphosphatase NudI (nudI, UniProtKB:B5BCQ0) contributes
+      to Clover system (associated with bacteriophage, interactions, conjugative).
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: 'SpbK | 10\.1371/journal\.pgen\.1010065 | Interactions between mobile
+        genetic elements: An anti-phage gene in an integrative and conjugative element
+        protects host cells from predation by a temperate bacteriophage'
+      notes: Supports the functional association between Nucleoside triphosphatase
+        NudI (UniProtKB:B5BCQ0 in Salmonella paratyphi A (strain AKU_12601)) and Clover
+        system.
 discussions:
 - discussion_id: clover-defensefinder-model-gap
   prompt: Resolve Clover native host breadth, sensitive-phage breadth, profile-to-component
@@ -217,4 +263,10 @@ curation_history:
     article-registry system name, but not a direct native microbial isolate exemplar
     with experimentally verified endogenous Clover activity. No paid research was
     used.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    clover_system_protein_component with UniProtKB:B5BCQ0 (nudI) exemplar.'
   llm_assisted: true

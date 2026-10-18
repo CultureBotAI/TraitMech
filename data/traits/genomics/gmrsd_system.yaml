@@ -95,6 +95,38 @@ causal_graphs:
     grounding: traitmech:000496
     description: Possession of a genome-encoded Type IV modification-dependent restriction
       system.
+  - node_id: gmrsd_system_protein_component
+    label: Formate dehydrogenase H
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Formate dehydrogenase H) associated with GmrSD
+      system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - fdhF
+    protein_examples:
+    - uniprot_id: UniProtKB:P07658
+      protein_label: Formate dehydrogenase H
+      gene_symbol: fdhF
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 228
+      sequence_version: 2
+      role: Characteristic protein component (fdhF, Formate dehydrogenase H) associated
+        with GmrSD system in Escherichia coli (strain K12).
+      evidence:
+      - reference: DOI:10.1186/s12859-015-0773-z
+        snippet: Moreover, we found that GmrSD systems exist predominantly as a fused,
+          double-domain form rather than as a heterodimer and that their homologs
+          are often encoded in regions enriched in defense and gene mobility-related
+          elements.
+        notes: Supports Formate dehydrogenase H in GmrSD system; UniProtKB:P07658
+          (fdhF, Formate dehydrogenase H) in Escherichia coli (strain K12) provides
+          a verified protein exemplar.
   edges:
   - subject: gmrsd_locus
     predicate: enables
@@ -171,6 +203,19 @@ causal_graphs:
         Type IV, as distinct from the familiar modification-blocked Types I-III.
       notes: Loenen and Raleigh define the Type IV class as modification-dependent
         restriction enzymes.
+  - subject: gmrsd_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: gmrsd_system_trait
+    description: Formate dehydrogenase H (fdhF, UniProtKB:P07658) contributes to GmrSD
+      system (associated with predominantly, heterodimer, elements).
+    evidence:
+    - reference: DOI:10.1186/s12859-015-0773-z
+      snippet: Moreover, we found that GmrSD systems exist predominantly as a fused,
+        double-domain form rather than as a heterodimer and that their homologs are
+        often encoded in regions enriched in defense and gene mobility-related elements.
+      notes: Supports the functional association between Formate dehydrogenase H (UniProtKB:P07658
+        in Escherichia coli (strain K12)) and GmrSD system.
 discussions:
 - discussion_id: gmrsd-defensefinder-model-gap
   prompt: Resolve exact GmrS/GmrD domain activities, complete sugar-modified HMC substrate
@@ -251,4 +296,10 @@ curation_history:
     CT596 GmrSD enzyme and broader split-or-fused GmrSD family, but not a single stable
     NCBITaxon strain exemplar for the organism-level GmrSD system trait. No paid research
     was used.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    gmrsd_system_protein_component with UniProtKB:P07658 (fdhF) exemplar.'
   llm_assisted: true

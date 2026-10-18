@@ -69,6 +69,27 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Inner-membrane flippase that translocates lipid-linked capsule repeat
       units across the inner membrane in the Wzx/Wzy-dependent pathway.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0ABG4
+      protein_label: Probable peptidoglycan glycosyltransferase FtsW
+      gene_symbol: ftsW
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 150
+      sequence_version: 1
+      role: Exemplar protein (ftsW, Probable peptidoglycan glycosyltransferase FtsW)
+        representing Wzx flippase in Escherichia coli (strain K12) for capsule.
+      evidence:
+      - reference: DOI:10.1146/annurev.micro.50.1.285
+        snippet: Discussed here are the genetics and biochemistry of selected bacterial
+          capsular polysaccharides and the basis of capsule diversity but not the
+          genetics and biochemistry of LPS biosynthesis (for reviews see 100, 140).
+        notes: Supports Wzx flippase in capsule; UniProtKB:P0ABG4 (ftsW, Probable
+          peptidoglycan glycosyltransferase FtsW) in Escherichia coli (strain K12)
+          provides a verified protein exemplar.
   - node_id: lipid_linked_repeat_unit
     label: lipid-linked capsule repeat unit
     node_type: CHEMICAL
@@ -82,6 +103,25 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Polymerase that links capsule repeat units into a growing polysaccharide
       chain in the Wzx/Wzy-dependent pathway.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q58YW1
+      protein_label: O-antigen polymerase
+      gene_symbol: wzy
+      taxon_id: NCBITaxon:562
+      taxon_label: Escherichia coli
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 24
+      sequence_version: 1
+      role: Exemplar protein (wzy, O-antigen polymerase) representing Wzy polymerase
+        in Escherichia coli for capsule.
+      evidence:
+      - reference: DOI:10.1146/annurev.micro.50.1.285
+        snippet: Discussed here are the genetics and biochemistry of selected bacterial
+          capsular polysaccharides and the basis of capsule diversity but not the
+          genetics and biochemistry of LPS biosynthesis (for reviews see 100, 140).
+        notes: Supports Wzy polymerase in capsule; UniProtKB:Q58YW1 (wzy, O-antigen
+          polymerase) in Escherichia coli provides a verified protein exemplar.
   - node_id: wzb_phosphatase_cycle
     label: Wzb phosphatase cycle
     node_type: BIOLOGICAL_PROCESS
@@ -100,6 +140,27 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Outer-membrane polysaccharide export protein that translocates capsule
       polymer across the outer membrane.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0A931
+      protein_label: Putative polysaccharide export protein wza
+      gene_symbol: wza
+      taxon_id: NCBITaxon:83334
+      taxon_label: Escherichia coli O157:H7
+      entry_status: REVIEWED
+      proteome_id: UP000000558
+      retrieved_on: '2026-10-17'
+      entry_version: 110
+      sequence_version: 1
+      role: Exemplar protein (wza, Putative polysaccharide export protein wza) representing
+        Wza outer-membrane export protein in Escherichia coli O157:H7 for capsule.
+      evidence:
+      - reference: DOI:10.1146/annurev.micro.50.1.285
+        snippet: They can form an amorphous layer of extracellular polysaccharide
+          (EPS) surrounding the cell that may be further organized into a distinct
+          structure termed a capsule.
+        notes: Supports Wza outer-membrane export protein in capsule; UniProtKB:P0A931
+          (wza, Putative polysaccharide export protein wza) in Escherichia coli O157:H7
+          provides a verified protein exemplar.
   - node_id: kpsmt_abc_transporter
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
@@ -108,6 +169,30 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: ATP-binding cassette transporter that exports capsule polysaccharide
       chains across the inner membrane in the ABC-dependent pathway.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q49XI8
+      protein_label: Phosphate import ATP-binding protein PstB
+      gene_symbol: pstB
+      taxon_id: NCBITaxon:342451
+      taxon_label: Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
+        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+      entry_status: REVIEWED
+      proteome_id: UP000006371
+      retrieved_on: '2026-10-17'
+      entry_version: 133
+      sequence_version: 1
+      role: Exemplar protein (pstB, Phosphate import ATP-binding protein PstB) representing
+        KpsMT ABC transporter in Staphylococcus saprophyticus subsp. saprophyticus
+        (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) for capsule.
+      evidence:
+      - reference: DOI:10.1146/annurev.micro.50.1.285
+        snippet: Discussed here are the genetics and biochemistry of selected bacterial
+          capsular polysaccharides and the basis of capsule diversity but not the
+          genetics and biochemistry of LPS biosynthesis (for reviews see 100, 140).
+        notes: Supports KpsMT ABC transporter in capsule; UniProtKB:Q49XI8 (pstB,
+          Phosphate import ATP-binding protein PstB) in Staphylococcus saprophyticus
+          subsp. saprophyticus (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC
+          7292 / S-41) provides a verified protein exemplar.
   edges:
   - subject: capsule_assembly
     predicate: produces
@@ -278,4 +363,12 @@ curation_history:
   changes: 'Ontology exact-match review (2026-08-25): approved exact xref(s): GO:0042603.
     Evidence is predicate-scoped in the versioned ontology snapshots; OAK cross-checked
     direct data, and OLS4 spot-checked release deltas and disputed hits.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P0ABG4 (ftsW)
+    protein example to node wzx_flippase; added UniProtKB:Q58YW1 (wzy) protein example
+    to node wzy_polymerase; added UniProtKB:P0A931 (wza) protein example to node wza_export_protein;
+    added UniProtKB:Q49XI8 (pstB) protein example to node kpsmt_abc_transporter.'
   llm_assisted: true

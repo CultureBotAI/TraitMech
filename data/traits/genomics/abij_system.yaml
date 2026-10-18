@@ -100,6 +100,35 @@ causal_graphs:
     node_type: TRAIT
     grounding: traitmech:000214
     description: Possession of a genome-encoded abortive-infection phage-defense system.
+  - node_id: abij_system_protein_component
+    label: Abortive infection protein
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Abortive infection protein) associated with AbiJ
+      system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - abi
+    protein_examples:
+    - uniprot_id: UniProtKB:P18024
+      protein_label: Abortive infection protein
+      gene_symbol: abi
+      taxon_id: NCBITaxon:562
+      taxon_label: Escherichia coli
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 49
+      sequence_version: 1
+      role: Characteristic protein component (abi, Abortive infection protein) associated
+        with AbiJ system in Escherichia coli.
+      evidence:
+      - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+        snippet: 'AbiJ | 10\.1016/j\.mib\.2005\.06\.006 | Phage abortive infection
+          in lactococci: variations on a theme'
+        notes: Supports Abortive infection protein in AbiJ system; UniProtKB:P18024
+          (abi, Abortive infection protein) in Escherichia coli provides a verified
+          protein exemplar.
   edges:
   - subject: abij_locus
     predicate: contributes to
@@ -157,6 +186,19 @@ causal_graphs:
         lactococci: variations on a theme'
       notes: The DefenseFinder article registry maps the named AbiJ model namespace
         to the Chopin et al. lactococcal abortive-infection review.
+  - subject: abij_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: abij_system_trait
+    description: Abortive infection protein (abi, UniProtKB:P18024) contributes to
+      AbiJ system (associated with diacetylactis, lactococcus, sequencing).
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: AbiH | 10\.1111/j\.1574-6968\.1996\.tb08446\.x | Cloning and sequencing
+        of the novel abortive infection gene abiH of Lactococcus lactis ssp\. lactis
+        biovar\. diacetylactis S94
+      notes: Supports the functional association between Abortive infection protein
+        (UniProtKB:P18024 in Escherichia coli) and AbiJ system.
 discussions:
 - discussion_id: abij-trigger-and-effector-gap
   prompt: Resolve the AbiJ phage trigger, molecular activity, and exact AbiA escape-mutant
@@ -200,4 +242,10 @@ curation_history:
   changes: Replaced the AbiJ subclass-edge FEMS table-heading evidence with the AbiJ-specific
     table row after PR 1208 review issue 1209 found that the original snippet did
     not itself mention AbiJ.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    abij_system_protein_component with UniProtKB:P18024 (abi) exemplar.'
   llm_assisted: true

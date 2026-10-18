@@ -125,6 +125,34 @@ causal_graphs:
     node_type: TRAIT
     grounding: traitmech:000214
     description: Possession of a genome-encoded abortive-infection phage defense system.
+  - node_id: paris_system_protein_component
+    label: Antitoxin HigA
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Antitoxin HigA) associated with PARIS system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - higA
+    protein_examples:
+    - uniprot_id: UniProtKB:Q7A224
+      protein_label: Antitoxin HigA
+      gene_symbol: higA
+      taxon_id: NCBITaxon:585
+      taxon_label: Proteus vulgaris
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 96
+      sequence_version: 1
+      role: Characteristic protein component (higA, Antitoxin HigA) associated with
+        PARIS system in Proteus vulgaris.
+      evidence:
+      - reference: DOI:10.1038/s41586-024-07874-3
+        snippet: The phage antirestriction induced system (PARIS) is a defence system,
+          often encoded in viral genomes, that is composed of a 55 kDa ABC ATPase
+          (AriA) and a 35 kDa TOPRIM nuclease (AriB)
+        notes: Supports Antitoxin HigA in PARIS system; UniProtKB:Q7A224 (higA, Antitoxin
+          HigA) in Proteus vulgaris provides a verified protein exemplar.
   edges:
   - subject: paris_locus
     predicate: contributes to
@@ -217,6 +245,19 @@ causal_graphs:
       snippet: describe PARIS, an abortive infection system triggered by a phage-encoded
         anti-restriction protein
       notes: Rousset et al. explicitly describe PARIS as an abortive infection system.
+  - subject: paris_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: paris_system_trait
+    description: Antitoxin HigA (higA, UniProtKB:Q7A224) contributes to PARIS system
+      (associated with antirestriction, composed, nuclease).
+    evidence:
+    - reference: DOI:10.1038/s41586-024-07874-3
+      snippet: The phage antirestriction induced system (PARIS) is a defence system,
+        often encoded in viral genomes, that is composed of a 55 kDa ABC ATPase (AriA)
+        and a 35 kDa TOPRIM nuclease (AriB)
+      notes: Supports the functional association between Antitoxin HigA (UniProtKB:Q7A224
+        in Proteus vulgaris) and PARIS system.
 discussions:
 - discussion_id: paris-trigger-and-counterdefense-gap
   prompt: Resolve PARIS trigger specificity, AriA/AriB stoichiometry, phage T5 lysine-tRNA
@@ -247,4 +288,10 @@ curation_history:
   action: ADVERSARIAL_REVIEW_REPAIR
   changes: 'Resolved PR #976 review issue #977 by scoping the PARIS canonical example
     note to the Rousset et al. E. coli B185 evidence cited by that example.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    paris_system_protein_component with UniProtKB:Q7A224 (higA) exemplar.'
   llm_assisted: true

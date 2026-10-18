@@ -29,6 +29,12 @@ curation_history:
     DOI-backed urea-hydrolysis and pH-indicator evidence after a repository-wide duplicate
     review covering ignored and hidden files.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph urease_test_graph
+    with GENE_OR_PROTEIN node urease_test_protein_component and UniProtKB:Q4A0J5 exemplar.'
+  llm_assisted: true
 definition_source: http://purl.obolibrary.org/obo/OMP_0000222
 evidence:
 - reference: DOI:10.5812/chbs-160199
@@ -41,3 +47,70 @@ evidence:
   snippet: Both types contain a phenol red reagent that changes color with pH variations
   notes: The review describes phenol red as the pH indicator for both liquid and solid
     urease-test media.
+causal_graphs:
+- graph_id: urease_test_graph
+  title: Protein component associated with urease test
+  description: Literature-backed association between Urease subunit alpha (UniProtKB:Q4A0J5)
+    and urease test.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q4A0J5 in Staphylococcus
+    saprophyticus subsp. saprophyticus (strain ATCC 15305 / DSM 20229 / NCIMB 8711
+    / NCTC 7292 / S-41)) associated with urease test while full multi-step mechanistic
+    curation remains future work.
+  nodes:
+  - node_id: urease_test_trait
+    label: urease test
+    node_type: TRAIT
+    grounding: METPO:1007082
+    description: A biochemical test that detects urease enzyme activity by observing
+      urea hydrolysis (typically via a pH-indicator color change). The test outcome
+      (positive or negative) is captured by its child classes; this class itself does
+      not assert urease activity.
+  - node_id: urease_test_protein_component
+    label: Urease subunit alpha
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Urease subunit alpha) associated with urease test.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - ureC
+    protein_examples:
+    - uniprot_id: UniProtKB:Q4A0J5
+      protein_label: Urease subunit alpha
+      gene_symbol: ureC
+      taxon_id: NCBITaxon:342451
+      taxon_label: Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
+        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+      entry_status: REVIEWED
+      proteome_id: UP000006371
+      retrieved_on: '2026-10-17'
+      entry_version: 125
+      sequence_version: 3
+      role: Characteristic protein component (ureC, Urease subunit alpha) associated
+        with urease test in Staphylococcus saprophyticus subsp. saprophyticus (strain
+        ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41).
+      evidence:
+      - reference: DOI:10.5812/chbs-160199
+        snippet: Urea is classified as a diamide, and certain bacteria possessing
+          the enzyme urease are capable of utilizing urea to generate ammonia, carbon
+          dioxide, and water
+        notes: Supports Urease subunit alpha in urease test; UniProtKB:Q4A0J5 (ureC,
+          Urease subunit alpha) in Staphylococcus saprophyticus subsp. saprophyticus
+          (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) provides
+          a verified protein exemplar.
+  edges:
+  - subject: urease_test_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: urease_test_trait
+    description: Urease subunit alpha (ureC, UniProtKB:Q4A0J5) contributes to urease
+      test (associated with classified, possessing, utilizing).
+    evidence:
+    - reference: DOI:10.5812/chbs-160199
+      snippet: Urea is classified as a diamide, and certain bacteria possessing the
+        enzyme urease are capable of utilizing urea to generate ammonia, carbon dioxide,
+        and water
+      notes: Supports the functional association between Urease subunit alpha (UniProtKB:Q4A0J5
+        in Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC 15305 /
+        DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)) and urease test.

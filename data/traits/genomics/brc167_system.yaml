@@ -93,6 +93,33 @@ causal_graphs:
     grounding: traitmech:000209
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
+  - node_id: brc167_system_protein_component
+    label: Endoribonuclease HigB
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Endoribonuclease HigB) associated with Brc167
+      system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - higB
+    protein_examples:
+    - uniprot_id: UniProtKB:Q7A225
+      protein_label: Endoribonuclease HigB
+      gene_symbol: higB
+      taxon_id: NCBITaxon:585
+      taxon_label: Proteus vulgaris
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 69
+      sequence_version: 1
+      role: Characteristic protein component (higB, Endoribonuclease HigB) associated
+        with Brc167 system in Proteus vulgaris.
+      evidence:
+      - reference: DOI:10.1126/science.ads0915
+        snippet: brc167 L 38.3 26.3 16.8 18.5 59.8 0 25.6 21.3
+        notes: Supports Endoribonuclease HigB in Brc167 system; UniProtKB:Q7A225 (higB,
+          Endoribonuclease HigB) in Proteus vulgaris provides a verified protein exemplar.
   edges:
   - subject: brc167_integron_cassette
     predicate: contributes to
@@ -149,6 +176,17 @@ causal_graphs:
         defense systems | '
       notes: The pinned DefenseFinder article registry maps the gcu167 source key
         to the Kieffer et al. mobile-integron BRiC paper.
+  - subject: brc167_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: brc167_system_trait
+    description: Endoribonuclease HigB (higB, UniProtKB:Q7A225) contributes to Brc167
+      system (associated with brc128, brc135, brc142).
+    evidence:
+    - reference: DOI:10.1126/science.ads0915
+      snippet: brc59 brc128 brc135 brc142 brc167.2 brc167
+      notes: Supports the functional association between Endoribonuclease HigB (UniProtKB:Q7A225
+        in Proteus vulgaris) and Brc167 system.
 discussions:
 - discussion_id: brc167-defensefinder-model-gap
   prompt: Resolve Brc167 native host breadth, exact sensitive-phage breadth, molecular
@@ -234,4 +272,10 @@ curation_history:
   changes: 'Resolved PR #1521 adversarial review issue #1522 by replacing Brc167 causal-edge
     support that relied on attC row-label and construct-table fragments with exact
     low- and high-MOI Brc167 heatmap row transcriptions from Supplementary Fig. S2.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    brc167_system_protein_component with UniProtKB:Q7A225 (higB) exemplar.'
   llm_assisted: true

@@ -55,3 +55,73 @@ curation_history:
     review covering ignored and hidden files; the local METPO snapshot has no exact
     class and the replacement placeholder is reserved in proposals/metpo_traitmech_v76.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph trimethylamine_n_oxide_respiration_graph
+    with GENE_OR_PROTEIN node trimethylamine_n_oxide_respiration_protein_component
+    and UniProtKB:Q57366 exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: trimethylamine_n_oxide_respiration_graph
+  title: Protein component associated with trimethylamine N-oxide respiration
+  description: Literature-backed association between Dimethyl sulfoxide/trimethylamine
+    N-oxide reductase (UniProtKB:Q57366) and trimethylamine N-oxide respiration.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q57366 in Cereibacter
+    sphaeroides (Rhodobacter sphaeroides)) associated with trimethylamine N-oxide
+    respiration while full multi-step mechanistic curation remains future work.
+  nodes:
+  - node_id: trimethylamine_n_oxide_respiration_trait
+    label: trimethylamine N-oxide respiration
+    node_type: TRAIT
+    grounding: traitmech:000199
+    description: An anaerobic respiration in which an organism uses trimethylamine
+      N-oxide as the terminal electron acceptor and reduces it to trimethylamine for
+      energy conservation.
+  - node_id: trimethylamine_n_oxide_respiration_protein_component
+    label: Dimethyl sulfoxide/trimethylamine N-oxide reductase
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Dimethyl sulfoxide/trimethylamine N-oxide reductase)
+      associated with trimethylamine N-oxide respiration.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - dmsA
+    protein_examples:
+    - uniprot_id: UniProtKB:Q57366
+      protein_label: Dimethyl sulfoxide/trimethylamine N-oxide reductase
+      gene_symbol: dmsA
+      taxon_id: NCBITaxon:1063
+      taxon_label: Cereibacter sphaeroides (Rhodobacter sphaeroides)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 134
+      sequence_version: 1
+      role: Characteristic protein component (dmsA, Dimethyl sulfoxide/trimethylamine
+        N-oxide reductase) associated with trimethylamine N-oxide respiration in Cereibacter
+        sphaeroides (Rhodobacter sphaeroides).
+      evidence:
+      - reference: DOI:10.3389/fmicb.2024.1467153
+        snippet: switching from aerobic intracellular energy metabolism to trimethylamine
+          N-oxide respiration
+        notes: Supports Dimethyl sulfoxide/trimethylamine N-oxide reductase in trimethylamine
+          N-oxide respiration; UniProtKB:Q57366 (dmsA, Dimethyl sulfoxide/trimethylamine
+          N-oxide reductase) in Cereibacter sphaeroides (Rhodobacter sphaeroides)
+          provides a verified protein exemplar.
+  edges:
+  - subject: trimethylamine_n_oxide_respiration_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: trimethylamine_n_oxide_respiration_trait
+    description: Dimethyl sulfoxide/trimethylamine N-oxide reductase (dmsA, UniProtKB:Q57366)
+      contributes to trimethylamine N-oxide respiration (associated with trimethylamine,
+      intracellular, respiration).
+    evidence:
+    - reference: DOI:10.3389/fmicb.2024.1467153
+      snippet: switching from aerobic intracellular energy metabolism to trimethylamine
+        N-oxide respiration
+      notes: Supports the functional association between Dimethyl sulfoxide/trimethylamine
+        N-oxide reductase (UniProtKB:Q57366 in Cereibacter sphaeroides (Rhodobacter
+        sphaeroides)) and trimethylamine N-oxide respiration.

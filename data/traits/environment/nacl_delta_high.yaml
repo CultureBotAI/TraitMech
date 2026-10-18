@@ -112,6 +112,38 @@ causal_graphs:
     label: halophilic osmoadaptation strategies
     node_type: BIOLOGICAL_PROCESS
     description: Suite of osmoadaptation strategies selected for in hypersaline conditions.
+  - node_id: nacl_delta_high_protein_component
+    label: Glycine betaine/proline betaine transport system ATP-binding protein ProV
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Glycine betaine/proline betaine transport system
+      ATP-binding protein ProV) associated with NaCl delta high.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - proV
+    protein_examples:
+    - uniprot_id: UniProtKB:P14175
+      protein_label: Glycine betaine/proline betaine transport system ATP-binding
+        protein ProV
+      gene_symbol: proV
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 204
+      sequence_version: 1
+      role: Characteristic protein component (proV, Glycine betaine/proline betaine
+        transport system ATP-binding protein ProV) associated with NaCl delta high
+        in Escherichia coli (strain K12).
+      evidence:
+      - reference: DOI:10.1093/femsre/fuy009
+        snippet: glycine betaine uptake
+        notes: Supports Glycine betaine/proline betaine transport system ATP-binding
+          protein ProV in NaCl delta high; UniProtKB:P14175 (proV, Glycine betaine/proline
+          betaine transport system ATP-binding protein ProV) in Escherichia coli (strain
+          K12) provides a verified protein exemplar.
   edges:
   - subject: maximal_osmoadaptive_flexibility
     predicate: confers
@@ -240,6 +272,19 @@ causal_graphs:
       notes: The study links simultaneous ion transport and compatible-solute responses
         to bacteria inhabiting a rapidly fluctuating salinity environment.
     predicate_id: RO:0002326
+  - subject: nacl_delta_high_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: nacl_delta_high_trait
+    description: Glycine betaine/proline betaine transport system ATP-binding protein
+      ProV (proV, UniProtKB:P14175) contributes to NaCl delta high (associated with
+      betaine, glycine, uptake).
+    evidence:
+    - reference: DOI:10.1093/femsre/fuy009
+      snippet: glycine betaine uptake
+      notes: Supports the functional association between Glycine betaine/proline betaine
+        transport system ATP-binding protein ProV (UniProtKB:P14175 in Escherichia
+        coli (strain K12)) and NaCl delta high.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.842691+00:00'
   curator: seed_from_metpo
@@ -314,4 +359,10 @@ curation_history:
     extreme-euryhaline graph core (issues 426 and 183). Preserved the record as a
     measured NaCl growth-breadth bin; generic salt mechanisms do not directly establish
     the high-breadth trait, and no gene or operon was promoted to a primary entry.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    nacl_delta_high_protein_component with UniProtKB:P14175 (proV) exemplar.'
   llm_assisted: true

@@ -103,3 +103,70 @@ curation_history:
     and resolved its temporary parent discussion by definition-based inference. Preserved
     child identity, definition, evidence, examples, mechanism gaps and earlier history.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph fungal_adhesive_net_trap_formation_graph
+    with GENE_OR_PROTEIN node fungal_adhesive_net_trap_formation_protein_component
+    and UniProtKB:Q2UF72 exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: fungal_adhesive_net_trap_formation_graph
+  title: Protein component associated with fungal adhesive-net trap formation
+  description: Literature-backed association between Chitin synthase A (UniProtKB:Q2UF72)
+    and fungal adhesive-net trap formation.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q2UF72 in Aspergillus
+    oryzae (strain ATCC 42149 / RIB 40) (Yellow koji mold)) associated with fungal
+    adhesive-net trap formation while full multi-step mechanistic curation remains
+    future work.
+  nodes:
+  - node_id: fungal_adhesive_net_trap_formation_trait
+    label: fungal adhesive-net trap formation
+    node_type: TRAIT
+    grounding: traitmech:000678
+    description: A morphological phenotype in which a fungus forms three-dimensional
+      networks of interconnected hyphal loops that serve as adhesive nematode traps.
+  - node_id: fungal_adhesive_net_trap_formation_protein_component
+    label: Chitin synthase A
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Chitin synthase A) associated with fungal adhesive-net
+      trap formation.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - csmA
+    protein_examples:
+    - uniprot_id: UniProtKB:Q2UF72
+      protein_label: Chitin synthase A
+      gene_symbol: csmA
+      taxon_id: NCBITaxon:510516
+      taxon_label: Aspergillus oryzae (strain ATCC 42149 / RIB 40) (Yellow koji mold)
+      entry_status: REVIEWED
+      proteome_id: UP000006564
+      retrieved_on: '2026-10-17'
+      entry_version: 74
+      sequence_version: 1
+      role: Characteristic protein component (csmA, Chitin synthase A) associated
+        with fungal adhesive-net trap formation in Aspergillus oryzae (strain ATCC
+        42149 / RIB 40) (Yellow koji mold).
+      evidence:
+      - reference: DOI:10.1371/journal.ppat.1002179
+        snippet: A. oligospora forms adhesive networks to capture nematodes
+        notes: Supports Chitin synthase A in fungal adhesive-net trap formation; UniProtKB:Q2UF72
+          (csmA, Chitin synthase A) in Aspergillus oryzae (strain ATCC 42149 / RIB
+          40) (Yellow koji mold) provides a verified protein exemplar.
+  edges:
+  - subject: fungal_adhesive_net_trap_formation_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: fungal_adhesive_net_trap_formation_trait
+    description: Chitin synthase A (csmA, UniProtKB:Q2UF72) contributes to fungal
+      adhesive-net trap formation (associated with oligospora, nematodes, adhesive).
+    evidence:
+    - reference: DOI:10.1371/journal.ppat.1002179
+      snippet: A. oligospora forms adhesive networks to capture nematodes
+      notes: Supports the functional association between Chitin synthase A (UniProtKB:Q2UF72
+        in Aspergillus oryzae (strain ATCC 42149 / RIB 40) (Yellow koji mold)) and
+        fungal adhesive-net trap formation.

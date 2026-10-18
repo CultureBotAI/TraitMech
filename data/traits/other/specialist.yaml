@@ -27,3 +27,67 @@ curation_history:
     review covering ignored and hidden files; the local METPO snapshot has no exact
     specialist class and the replacement placeholder is reserved in proposals/metpo_traitmech_v54.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph specialist_graph
+    with GENE_OR_PROTEIN node specialist_protein_component and UniProtKB:P0AG20 exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: specialist_graph
+  title: Protein component associated with specialist
+  description: Literature-backed association between GTP pyrophosphokinase (UniProtKB:P0AG20)
+    and specialist.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P0AG20 in Escherichia
+    coli (strain K12)) associated with specialist while full multi-step mechanistic
+    curation remains future work.
+  nodes:
+  - node_id: specialist_trait
+    label: specialist
+    node_type: TRAIT
+    grounding: traitmech:000177
+    description: A phenotype describing an organism with a narrow ecological niche,
+      restricted to a limited range of environments or resources.
+  - node_id: specialist_protein_component
+    label: GTP pyrophosphokinase
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (GTP pyrophosphokinase) associated with specialist.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - relA
+    protein_examples:
+    - uniprot_id: UniProtKB:P0AG20
+      protein_label: GTP pyrophosphokinase
+      gene_symbol: relA
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 144
+      sequence_version: 1
+      role: Characteristic protein component (relA, GTP pyrophosphokinase) associated
+        with specialist in Escherichia coli (strain K12).
+      evidence:
+      - reference: DOI:10.1093/femsec/fiaa240
+        snippet: Organisms are often categorized as generalists or specialists, corresponding
+          to broad or narrow niche requirements
+        notes: Supports GTP pyrophosphokinase in specialist; UniProtKB:P0AG20 (relA,
+          GTP pyrophosphokinase) in Escherichia coli (strain K12) provides a verified
+          protein exemplar.
+  edges:
+  - subject: specialist_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: specialist_trait
+    description: GTP pyrophosphokinase (relA, UniProtKB:P0AG20) contributes to specialist
+      (associated with corresponding, requirements, categorized).
+    evidence:
+    - reference: DOI:10.1093/femsec/fiaa240
+      snippet: Organisms are often categorized as generalists or specialists, corresponding
+        to broad or narrow niche requirements
+      notes: Supports the functional association between GTP pyrophosphokinase (UniProtKB:P0AG20
+        in Escherichia coli (strain K12)) and specialist.

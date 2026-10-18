@@ -47,6 +47,25 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Actin-like bacterial cytoskeletal protein involved in cell-shape
       control.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q01465
+      protein_label: Cell shape-determining protein MreB
+      gene_symbol: mreB
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
+      entry_status: REVIEWED
+      proteome_id: UP000001570
+      retrieved_on: '2026-10-17'
+      entry_version: 148
+      sequence_version: 3
+      role: Exemplar protein (mreB, Cell shape-determining protein MreB) representing
+        MreB in Bacillus subtilis (strain 168) for coccobacillus shaped.
+      evidence:
+      - reference: DOI:10.1128/JB.187.1.54-64.2005
+        snippet: changes shape, from a rod to coccobacillus
+        notes: Supports MreB in coccobacillus shaped; UniProtKB:Q01465 (mreB, Cell
+          shape-determining protein MreB) in Bacillus subtilis (strain 168) provides
+          a verified protein exemplar.
   - node_id: peptidoglycan_synthesis
     label: peptidoglycan synthesis
     node_type: BIOLOGICAL_PROCESS
@@ -67,6 +86,25 @@ causal_graphs:
     label: RodA/PBP3 elongasome
     node_type: GENE_OR_PROTEIN
     description: SEDS/PBP pair RodA/PBP3 mediating lateral cell-wall elongation.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0ABG7
+      protein_label: Peptidoglycan glycosyltransferase MrdB
+      gene_symbol: mrdB
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 133
+      sequence_version: 1
+      role: Exemplar protein (mrdB, Peptidoglycan glycosyltransferase MrdB) representing
+        RodA/PBP3 elongasome in Escherichia coli (strain K12) for coccobacillus shaped.
+      evidence:
+      - reference: DOI:10.1128/JB.187.1.54-64.2005
+        snippet: control of the peptidoglycan synthetic complexes
+        notes: Supports RodA/PBP3 elongasome in coccobacillus shaped; UniProtKB:P0ABG7
+          (mrdB, Peptidoglycan glycosyltransferase MrdB) in Escherichia coli (strain
+          K12) provides a verified protein exemplar.
   - node_id: length_to_width_ratio
     label: cell length-to-width ratio
     node_type: QUALITY
@@ -79,6 +117,28 @@ causal_graphs:
     label: GpsB
     node_type: GENE_OR_PROTEIN
     description: Cell-cycle regulator coordinating peptidoglycan synthase localization.
+    protein_examples:
+    - uniprot_id: UniProtKB:A0AJZ3
+      protein_label: Cell cycle adapter protein GpsB
+      gene_symbol: gpsB
+      taxon_id: NCBITaxon:386043
+      taxon_label: Listeria welshimeri serovar 6b (strain ATCC 35897 / DSM 20650 /
+        CCUG 15529 / CIP 8149 / NCTC 11857 / SLCC 5334 / V8)
+      entry_status: REVIEWED
+      proteome_id: UP000000779
+      retrieved_on: '2026-10-17'
+      entry_version: 87
+      sequence_version: 1
+      role: Exemplar protein (gpsB, Cell cycle adapter protein GpsB) representing
+        GpsB in Listeria welshimeri serovar 6b (strain ATCC 35897 / DSM 20650 / CCUG
+        15529 / CIP 8149 / NCTC 11857 / SLCC 5334 / V8) for coccobacillus shaped.
+      evidence:
+      - reference: DOI:10.1128/JB.187.1.54-64.2005
+        snippet: changes shape, from a rod to coccobacillus
+        notes: Supports GpsB in coccobacillus shaped; UniProtKB:A0AJZ3 (gpsB, Cell
+          cycle adapter protein GpsB) in Listeria welshimeri serovar 6b (strain ATCC
+          35897 / DSM 20650 / CCUG 15529 / CIP 8149 / NCTC 11857 / SLCC 5334 / V8)
+          provides a verified protein exemplar.
   - node_id: pbp2_localization
     label: PBP2 localization
     node_type: CELLULAR_LOCALIZATION
@@ -92,6 +152,27 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Divisome tubulin-homolog FtsZ filament conformation affecting cell-wall
       insertion geometry.
+    protein_examples:
+    - uniprot_id: UniProtKB:V6F5E5
+      protein_label: Cell division protein FtsZ
+      gene_symbol: ftsZ
+      taxon_id: NCBITaxon:431944
+      taxon_label: Magnetospirillum gryphiswaldense (strain DSM 6361 / JCM 21280 /
+        NBRC 15271 / MSR-1)
+      entry_status: REVIEWED
+      proteome_id: UP000018922
+      retrieved_on: '2026-10-17'
+      entry_version: 63
+      sequence_version: 1
+      role: Exemplar protein (ftsZ, Cell division protein FtsZ) representing FtsZ
+        filament properties in Magnetospirillum gryphiswaldense (strain DSM 6361 /
+        JCM 21280 / NBRC 15271 / MSR-1) for coccobacillus shaped.
+      evidence:
+      - reference: DOI:10.1128/JB.187.1.54-64.2005
+        snippet: changes shape, from a rod to coccobacillus
+        notes: Supports FtsZ filament properties in coccobacillus shaped; UniProtKB:V6F5E5
+          (ftsZ, Cell division protein FtsZ) in Magnetospirillum gryphiswaldense (strain
+          DSM 6361 / JCM 21280 / NBRC 15271 / MSR-1) provides a verified protein exemplar.
   - node_id: pbp2_elongasome
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
@@ -100,6 +181,26 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Penicillin-binding protein 2, transpeptidase of the RodA-PBP2 elongasome
       supporting rod shape.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0AD65
+      protein_label: Peptidoglycan D,D-transpeptidase MrdA
+      gene_symbol: mrdA
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 145
+      sequence_version: 1
+      role: Exemplar protein (mrdA, Peptidoglycan D,D-transpeptidase MrdA) representing
+        PBP2 (elongasome transpeptidase) in Escherichia coli (strain K12) for coccobacillus
+        shaped.
+      evidence:
+      - reference: DOI:10.1128/JB.187.1.54-64.2005
+        snippet: control of the peptidoglycan synthetic complexes
+        notes: Supports PBP2 (elongasome transpeptidase) in coccobacillus shaped;
+          UniProtKB:P0AD65 (mrdA, Peptidoglycan D,D-transpeptidase MrdA) in Escherichia
+          coli (strain K12) provides a verified protein exemplar.
   edges:
   - subject: mreB
     predicate: controls
@@ -291,4 +392,13 @@ curation_history:
     the tranche: set graph scope coccobacillus_shaped_short_rod_morphogenesis=NONMECHANISTIC
     with scope_notes; marked 5 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (mreB, rodA_pbp3_elongasome, gpsB, ftsZ_filament, pbp2_elongasome).'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q01465 (mreB)
+    protein example to node mreB; added UniProtKB:P0ABG7 (mrdB) protein example to
+    node rodA_pbp3_elongasome; added UniProtKB:A0AJZ3 (gpsB) protein example to node
+    gpsB; added UniProtKB:V6F5E5 (ftsZ) protein example to node ftsZ_filament (+1
+    more).'
   llm_assisted: true

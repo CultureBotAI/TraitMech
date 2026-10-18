@@ -103,6 +103,25 @@ causal_graphs:
       for this aggregate use.
     description: Hsp70-family chaperone that binds and sequesters the heat-shock sigma
       factor RpoH.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0A6Y8
+      protein_label: Chaperone protein DnaK
+      gene_symbol: dnaK
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 183
+      sequence_version: 2
+      role: Exemplar protein (dnaK, Chaperone protein DnaK) representing DnaK chaperone
+        in Escherichia coli (strain K12) for temperature optimum mid4.
+      evidence:
+      - reference: DOI:10.1016/s0300-9629(97)00003-0
+        snippet: adapted to environments of high temperature
+        notes: Supports DnaK chaperone in temperature optimum mid4; UniProtKB:P0A6Y8
+          (dnaK, Chaperone protein DnaK) in Escherichia coli (strain K12) provides
+          a verified protein exemplar.
   - node_id: rpoh_sigma_factor
     label: RpoH (sigma-32) heat-shock sigma factor
     node_type: GENE_OR_PROTEIN
@@ -111,11 +130,50 @@ causal_graphs:
       a quantitative measurement graph; no exact semantic family term was established
       for this aggregate use.
     description: Alternative sigma factor directing the heat-shock response regulon.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0AGB3
+      protein_label: RNA polymerase sigma factor RpoH
+      gene_symbol: rpoH
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 151
+      sequence_version: 1
+      role: Exemplar protein (rpoH, RNA polymerase sigma factor RpoH) representing
+        RpoH (sigma-32) heat-shock sigma factor in Escherichia coli (strain K12) for
+        temperature optimum mid4.
+      evidence:
+      - reference: DOI:10.1016/s0300-9629(97)00003-0
+        snippet: adapted to environments of high temperature
+        notes: Supports RpoH (sigma-32) heat-shock sigma factor in temperature optimum
+          mid4; UniProtKB:P0AGB3 (rpoH, RNA polymerase sigma factor RpoH) in Escherichia
+          coli (strain K12) provides a verified protein exemplar.
   - node_id: ftsh_protease
     label: FtsH protease
     node_type: GENE_OR_PROTEIN
     description: ATP-dependent membrane protease that controls RpoH protein levels.
     grounding: InterPro:IPR005936
+    protein_examples:
+    - uniprot_id: UniProtKB:P0AAI3
+      protein_label: ATP-dependent zinc metalloprotease FtsH
+      gene_symbol: ftsH
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 155
+      sequence_version: 1
+      role: Exemplar protein (ftsH, ATP-dependent zinc metalloprotease FtsH) representing
+        FtsH protease in Escherichia coli (strain K12) for temperature optimum mid4.
+      evidence:
+      - reference: DOI:10.1016/s0300-9629(97)00003-0
+        snippet: adapted to environments of high temperature
+        notes: Supports FtsH protease in temperature optimum mid4; UniProtKB:P0AAI3
+          (ftsH, ATP-dependent zinc metalloprotease FtsH) in Escherichia coli (strain
+          K12) provides a verified protein exemplar.
   edges:
   - subject: warm_environment
     predicate: engages
@@ -300,4 +358,12 @@ curation_history:
     canonical example(s): Escherichia coli K-12 (NCBITaxon:83333; DOI:10.1128/AEM.05773-11).
     The note retains the measured value or scopes broad-class examples to the cited
     branch; no paid research was used.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P0A6Y8 (dnaK)
+    protein example to node dnak_chaperone; added UniProtKB:P0AGB3 (rpoH) protein
+    example to node rpoh_sigma_factor; added UniProtKB:P0AAI3 (ftsH) protein example
+    to node ftsh_protease.'
   llm_assisted: true

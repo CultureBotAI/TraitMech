@@ -127,6 +127,38 @@ causal_graphs:
     grounding: traitmech:000209
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
+  - node_id: gao_ape_system_protein_component
+    label: Ribonuclease Z
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Ribonuclease Z) associated with ApeA system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - rnz
+    protein_examples:
+    - uniprot_id: UniProtKB:Q49XV1
+      protein_label: Ribonuclease Z
+      gene_symbol: rnz
+      taxon_id: NCBITaxon:342451
+      taxon_label: Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
+        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+      entry_status: REVIEWED
+      proteome_id: UP000006371
+      retrieved_on: '2026-10-17'
+      entry_version: 116
+      sequence_version: 1
+      role: Characteristic protein component (rnz, Ribonuclease Z) associated with
+        ApeA system in Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
+        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41).
+      evidence:
+      - reference: DOI:10.64898/2026.01.26.701840
+        snippet: We further demonstrate that ApeA functions as an abortive infection
+          system by cleaving host tRNAs within their anticodon loops to arrest translation
+        notes: Supports Ribonuclease Z in ApeA system; UniProtKB:Q49XV1 (rnz, Ribonuclease
+          Z) in Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC 15305
+          / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) provides a verified protein
+          exemplar.
   edges:
   - subject: gao_ape_locus
     predicate: contributes to
@@ -255,6 +287,24 @@ causal_graphs:
         mediate antiviral immunity in prokaryotes
       notes: The DefenseFinder article registry maps the named Gao_Ape system to the
         Gao et al. prokaryotic antiviral-immunity paper.
+  - subject: gao_ape_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: apea_system_trait
+    description: Ribonuclease Z (rnz, UniProtKB:Q49XV1) contributes to ApeA system
+      (associated with trimmed, custom, einsi).
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| RM_Type_IIG__Type_IIG_1 | | RM_Type_IIG | Custom | 300 | | RM_Type_IIG__Type_IIG_2
+        | | RM_Type_IIG | Custom | 300 | | RM_Type_IIG__Type_IIG_3 | | RM_Type_IIG
+        | Custom | 300 | | RM_Type_IIG__Type_IIG_4 | | RM_Type_IIG | Custom | 300
+        | | RM_Type_IIG__Type_IIG_5 | | RM_Type_IIG | Custom | 300 | | RM_Type_IIG__Type_IIG_FAM_0.einsi_trimmed
+        | | RM_Type_IIG | Custom | 300 | | RM_Type_IIG__Type_IIG_FAM_1.einsi_trimmed
+        | | RM_Type_IIG | Custom | 300 | | RM_Type_IIG__Type_IIG_FAM_2.einsi_trimmed
+        | | RM_Type_IIG | Custom | 300 |'
+      notes: Supports the functional association between Ribonuclease Z (UniProtKB:Q49XV1
+        in Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC 15305 /
+        DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)) and ApeA system.
 discussions:
 - discussion_id: apea-trigger-and-homolog-scope-gap
   prompt: Resolve ApeA natural-host loci, homolog-specific DNA-phage versus RNA-phage
@@ -298,4 +348,10 @@ curation_history:
     the PR 1190 adversarial review filed issue 1191, adding the March 2026 RNA-phage
     ApeA preprint and separating Juozapaitis host-tRNA abortive infection from Drobysheva
     phage-genomic-RNA non-abortive restriction.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    gao_ape_system_protein_component with UniProtKB:Q49XV1 (rnz) exemplar.'
   llm_assisted: true

@@ -96,6 +96,34 @@ causal_graphs:
     grounding: traitmech:000209
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
+  - node_id: prrc_system_protein_component
+    label: Anticodon nuclease
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Anticodon nuclease) associated with PrrC system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - prrC
+    protein_examples:
+    - uniprot_id: UniProtKB:P17223
+      protein_label: Anticodon nuclease
+      gene_symbol: prrC
+      taxon_id: NCBITaxon:562
+      taxon_label: Escherichia coli
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 49
+      sequence_version: 1
+      role: Characteristic protein component (prrC, Anticodon nuclease) associated
+        with PrrC system in Escherichia coli.
+      evidence:
+      - reference: PMID:16790566
+        snippet: The tRNA(Lys) anticodon nuclease PrrC is associated in latent form
+          with the type Ic DNA restriction endonuclease EcoprrI and activated by a
+          phage T4-encoded inhibitor of EcoprrI.
+        notes: Supports Anticodon nuclease in PrrC system; UniProtKB:P17223 (prrC,
+          Anticodon nuclease) in Escherichia coli provides a verified protein exemplar.
   edges:
   - subject: prrc_locus
     predicate: contributes to
@@ -177,6 +205,22 @@ causal_graphs:
       notes: The DefenseFinder rules table models PrrC as a two-profile system requiring
         the PrrC__EcoprrI and PrrC__PrrC profiles, with type I restriction-modification
         components as accessory markers.
+  - subject: prrc_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: prrc_system_trait
+    description: Anticodon nuclease (prrC, UniProtKB:P17223) contributes to PrrC system
+      (associated with hydrolase, effector, nuclease).
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: Lamassu-Fam Lamassu-Hydrolase 2 2 Lamassu-Fam__LmuA_effector_Hydrolase,
+        Lamassu-Fam__LmuB_SMC_Cap4_nuclease_II Lamassu-Fam__LmuC_acc_Lipase Lamassu-Fam__LmuA_effector_Amidase,
+        Lamassu-Fam__LmuA_effector_Cap4_nuclease, Lamassu-Fam__LmuA_effector_Cap4_nuclease_II,
+        Lamassu-Fam__LmuA_effector_FMO, Lamassu-Fam__LmuA_effector_Lipase, Lamassu-Fam__LmuA_effector_Mrr,
+        Lamassu-Fam__LmuA_effector_PDDEXK, Lamassu-Fam__LmuA_effector_Protease, Lamassu-Fam__LmuA_effector_Sir2,
+        Lamassu-Fam__LmuA_effector_hypothetical
+      notes: Supports the functional association between Anticodon nuclease (UniProtKB:P17223
+        in Escherichia coli) and PrrC system.
 discussions:
 - discussion_id: prrc-mechanism-gap
   prompt: Resolve natural PrrC homolog substrate specificity, exact EcoprrI accessory
@@ -217,4 +261,10 @@ curation_history:
   changes: 'Resolved PR #1245 review issue #1249 by removing the bare EcoprrI component
     name from PrrC system related synonyms while retaining the DefenseFinder PrrC__EcoprrI
     profile name and Blanga-Kanfi evidence for EcoprrI-linked PrrC homologs.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    prrc_system_protein_component with UniProtKB:P17223 (prrC) exemplar.'
   llm_assisted: true

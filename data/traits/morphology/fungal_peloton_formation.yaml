@@ -110,3 +110,79 @@ curation_history:
     separately. Kept morphology distinct from nutrient flux and unproven formation
     mechanisms.'
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph fungal_peloton_formation_graph
+    with GENE_OR_PROTEIN node fungal_peloton_formation_protein_component and UniProtKB:Q9X4E2
+    exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: fungal_peloton_formation_graph
+  title: Protein component associated with fungal peloton formation
+  description: Literature-backed association between Integration host factor subunit
+    beta (UniProtKB:Q9X4E2) and fungal peloton formation.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q9X4E2 in Cereibacter
+    sphaeroides (strain ATCC 17023 / DSM 158 / JCM 6121 / CCUG 31486 / LMG 2827 /
+    NBRC 12203 / NCIMB 8253 / ATH 2.4.1.) (Rhodobacter sphaeroides)) associated with
+    fungal peloton formation while full multi-step mechanistic curation remains future
+    work.
+  nodes:
+  - node_id: fungal_peloton_formation_trait
+    label: fungal peloton formation
+    node_type: TRAIT
+    grounding: traitmech:000666
+    description: A morphological phenotype in which a fungus forms intracellular coiled
+      hyphal masses, called pelotons, in association with a plant host.
+  - node_id: fungal_peloton_formation_protein_component
+    label: Integration host factor subunit beta
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Integration host factor subunit beta) associated
+      with fungal peloton formation.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - ihfB
+    protein_examples:
+    - uniprot_id: UniProtKB:Q9X4E2
+      protein_label: Integration host factor subunit beta
+      gene_symbol: ihfB
+      taxon_id: NCBITaxon:272943
+      taxon_label: Cereibacter sphaeroides (strain ATCC 17023 / DSM 158 / JCM 6121
+        / CCUG 31486 / LMG 2827 / NBRC 12203 / NCIMB 8253 / ATH 2.4.1.) (Rhodobacter
+        sphaeroides)
+      entry_status: REVIEWED
+      proteome_id: UP000002703
+      retrieved_on: '2026-10-17'
+      entry_version: 127
+      sequence_version: 1
+      role: Characteristic protein component (ihfB, Integration host factor subunit
+        beta) associated with fungal peloton formation in Cereibacter sphaeroides
+        (strain ATCC 17023 / DSM 158 / JCM 6121 / CCUG 31486 / LMG 2827 / NBRC 12203
+        / NCIMB 8253 / ATH 2.4.1.) (Rhodobacter sphaeroides).
+      evidence:
+      - reference: DOI:10.1111/nph.19338
+        snippet: tightly coiled intracellular fungal hyphae (i.e. pelotons) are a
+          constant feature of OrM
+        notes: Supports Integration host factor subunit beta in fungal peloton formation;
+          UniProtKB:Q9X4E2 (ihfB, Integration host factor subunit beta) in Cereibacter
+          sphaeroides (strain ATCC 17023 / DSM 158 / JCM 6121 / CCUG 31486 / LMG 2827
+          / NBRC 12203 / NCIMB 8253 / ATH 2.4.1.) (Rhodobacter sphaeroides) provides
+          a verified protein exemplar.
+  edges:
+  - subject: fungal_peloton_formation_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: fungal_peloton_formation_trait
+    description: Integration host factor subunit beta (ihfB, UniProtKB:Q9X4E2) contributes
+      to fungal peloton formation (associated with intracellular, constant, pelotons).
+    evidence:
+    - reference: DOI:10.1111/nph.19338
+      snippet: tightly coiled intracellular fungal hyphae (i.e. pelotons) are a constant
+        feature of OrM
+      notes: Supports the functional association between Integration host factor subunit
+        beta (UniProtKB:Q9X4E2 in Cereibacter sphaeroides (strain ATCC 17023 / DSM
+        158 / JCM 6121 / CCUG 31486 / LMG 2827 / NBRC 12203 / NCIMB 8253 / ATH 2.4.1.)
+        (Rhodobacter sphaeroides)) and fungal peloton formation.

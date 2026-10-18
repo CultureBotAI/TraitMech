@@ -95,3 +95,71 @@ curation_history:
     phenotype. Deferred lexical mappings, protein mechanisms and explicitly unread
     source material.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph tetrapolar_mating_system_graph
+    with GENE_OR_PROTEIN node tetrapolar_mating_system_protein_component and UniProtKB:B5BJ71
+    exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: tetrapolar_mating_system_graph
+  title: Protein component associated with tetrapolar mating system
+  description: Literature-backed association between tRNA-cytidine(32) 2-sulfurtransferase
+    (UniProtKB:B5BJ71) and tetrapolar mating system.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:B5BJ71 in Salmonella
+    paratyphi A (strain AKU_12601)) associated with tetrapolar mating system while
+    full multi-step mechanistic curation remains future work.
+  nodes:
+  - node_id: tetrapolar_mating_system_trait
+    label: tetrapolar mating system
+    node_type: TRAIT
+    grounding: traitmech:000615
+    description: A fungal mating phenotype in which compatibility between partners
+      is governed by two independently segregating mating-type factors and requires
+      different specificities at both factors.
+  - node_id: tetrapolar_mating_system_protein_component
+    label: tRNA-cytidine(32) 2-sulfurtransferase
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (tRNA-cytidine(32) 2-sulfurtransferase) associated
+      with tetrapolar mating system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - ttcA
+    protein_examples:
+    - uniprot_id: UniProtKB:B5BJ71
+      protein_label: tRNA-cytidine(32) 2-sulfurtransferase
+      gene_symbol: ttcA
+      taxon_id: NCBITaxon:554290
+      taxon_label: Salmonella paratyphi A (strain AKU_12601)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 73
+      sequence_version: 1
+      role: Characteristic protein component (ttcA, tRNA-cytidine(32) 2-sulfurtransferase)
+        associated with tetrapolar mating system in Salmonella paratyphi A (strain
+        AKU_12601).
+      evidence:
+      - reference: DOI:10.1371/journal.pgen.1002528
+        snippet: None of these MAT recombinant progeny mated with either parent, further
+          confirming that C. amylolentus possesses a tetrapolar mating system
+        notes: Supports tRNA-cytidine(32) 2-sulfurtransferase in tetrapolar mating
+          system; UniProtKB:B5BJ71 (ttcA, tRNA-cytidine(32) 2-sulfurtransferase) in
+          Salmonella paratyphi A (strain AKU_12601) provides a verified protein exemplar.
+  edges:
+  - subject: tetrapolar_mating_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: tetrapolar_mating_system_trait
+    description: tRNA-cytidine(32) 2-sulfurtransferase (ttcA, UniProtKB:B5BJ71) contributes
+      to tetrapolar mating system (associated with amylolentus, recombinant, confirming).
+    evidence:
+    - reference: DOI:10.1371/journal.pgen.1002528
+      snippet: None of these MAT recombinant progeny mated with either parent, further
+        confirming that C. amylolentus possesses a tetrapolar mating system
+      notes: Supports the functional association between tRNA-cytidine(32) 2-sulfurtransferase
+        (UniProtKB:B5BJ71 in Salmonella paratyphi A (strain AKU_12601)) and tetrapolar
+        mating system.

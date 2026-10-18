@@ -54,6 +54,27 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Major periplasmic flagellar filament protein in Borrelia.
     grounding: InterPro:IPR001492
+    protein_examples:
+    - uniprot_id: UniProtKB:O51941
+      protein_label: Flagellar filament 35 kDa core protein
+      gene_symbol: flaB
+      taxon_id: NCBITaxon:189518
+      taxon_label: Leptospira interrogans serogroup Icterohaemorrhagiae serovar Lai
+        (strain 56601)
+      entry_status: REVIEWED
+      proteome_id: UP000001408
+      retrieved_on: '2026-10-17'
+      entry_version: 132
+      sequence_version: 2
+      role: Exemplar protein (flaB, Flagellar filament 35 kDa core protein) representing
+        FlaB in Leptospira interrogans serogroup Icterohaemorrhagiae serovar Lai (strain
+        56601) for spirochete shaped.
+      evidence:
+      - reference: DOI:10.1073/pnas.200221797
+        snippet: gene encoding the major periplasmic flagellar filament protein FlaB
+        notes: Supports FlaB in spirochete shaped; UniProtKB:O51941 (flaB, Flagellar
+          filament 35 kDa core protein) in Leptospira interrogans serogroup Icterohaemorrhagiae
+          serovar Lai (strain 56601) provides a verified protein exemplar.
   - node_id: flat_wave_morphology
     label: flat-wave morphology
     node_type: BIOLOGICAL_PROCESS
@@ -71,6 +92,26 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Periplasmic Sec-translocated protein preventing ectopic flagellar
       filament assembly in the periplasm.
+    protein_examples:
+    - uniprot_id: UniProtKB:P76297
+      protein_label: Flagellar protein FlhE
+      gene_symbol: flhE
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-17'
+      entry_version: 136
+      sequence_version: 1
+      role: Exemplar protein (flhE, Flagellar protein FlhE) representing FlhE in Escherichia
+        coli (strain K12) for spirochete shaped.
+      evidence:
+      - reference: DOI:10.1073/pnas.200221797
+        snippet: cell morphology is either a helix, a flat wave, or an irregularly
+          shaped helix
+        notes: Supports FlhE in spirochete shaped; UniProtKB:P76297 (flhE, Flagellar
+          protein FlhE) in Escherichia coli (strain K12) provides a verified protein
+          exemplar.
   - node_id: ectopic_periplasmic_filament_assembly
     label: ectopic periplasmic filament assembly
     node_type: BIOLOGICAL_PROCESS
@@ -88,6 +129,29 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Broadly conserved basal-body protein that modulates periplasmic flagellar
       filament assembly.
+    protein_examples:
+    - uniprot_id: UniProtKB:P33977
+      protein_label: Flagellar basal-body protein FlbY
+      gene_symbol: flbY
+      taxon_id: NCBITaxon:190650
+      taxon_label: Caulobacter vibrioides (strain ATCC 19089 / CIP 103742 / CB 15)
+        (Caulobacter crescentus)
+      entry_status: REVIEWED
+      proteome_id: UP000001816
+      retrieved_on: '2026-10-17'
+      entry_version: 92
+      sequence_version: 2
+      role: Exemplar protein (flbY, Flagellar basal-body protein FlbY) representing
+        FlgV in Caulobacter vibrioides (strain ATCC 19089 / CIP 103742 / CB 15) (Caulobacter
+        crescentus) for spirochete shaped.
+      evidence:
+      - reference: DOI:10.1073/pnas.200221797
+        snippet: cell morphology is either a helix, a flat wave, or an irregularly
+          shaped helix
+        notes: Supports FlgV in spirochete shaped; UniProtKB:P33977 (flbY, Flagellar
+          basal-body protein FlbY) in Caulobacter vibrioides (strain ATCC 19089 /
+          CIP 103742 / CB 15) (Caulobacter crescentus) provides a verified protein
+          exemplar.
   - node_id: cell_morphology_division
     label: cell division and morphology
     node_type: BIOLOGICAL_PROCESS
@@ -282,4 +346,11 @@ curation_history:
     the tranche: set graph scope spirochete_shaped_periplasmic_flagella=NONMECHANISTIC
     with scope_notes; marked 2 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (flhE, flgV).'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:O51941 (flaB)
+    protein example to node flaB; added UniProtKB:P76297 (flhE) protein example to
+    node flhE; added UniProtKB:P33977 (flbY) protein example to node flgV.'
   llm_assisted: true

@@ -80,6 +80,35 @@ causal_graphs:
     grounding: traitmech:000209
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
+  - node_id: sdic1_system_protein_component
+    label: Thoeris anti-defense 1
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Thoeris anti-defense 1) associated with SDIC1
+      system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - tad1
+    protein_examples:
+    - uniprot_id: UniProtKB:P0DW61
+      protein_label: Thoeris anti-defense 1
+      gene_symbol: tad1
+      taxon_id: NCBITaxon:1392497
+      taxon_label: Clostridioides mangenotii (strain LM2)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 11
+      sequence_version: 1
+      role: Characteristic protein component (tad1, Thoeris anti-defense 1) associated
+        with SDIC1 system in Clostridioides mangenotii (strain LM2).
+      evidence:
+      - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+        snippet: PD-Lambda-2 | 10\.1101/2022\.05\.12\.491691 | Mapping the landscape
+          of anti-phage defense mechanisms in the E\. coli pangenome
+        notes: Supports Thoeris anti-defense 1 in SDIC1 system; UniProtKB:P0DW61 (tad1,
+          Thoeris anti-defense 1) in Clostridioides mangenotii (strain LM2) provides
+          a verified protein exemplar.
   edges:
   - subject: sdic1_locus
     predicate: contributes to
@@ -130,6 +159,18 @@ causal_graphs:
         a widespread trend within Serratia spp
       notes: The pinned DefenseFinder article registry maps the SDIC1 source key to
         the Cummins et al. Serratia multi-conflict-island paper.
+  - subject: sdic1_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: sdic1_system_trait
+    description: Thoeris anti-defense 1 (tad1, UniProtKB:P0DW61) contributes to SDIC1
+      system (associated with landscape, pangenome, defense).
+    evidence:
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: PD-Lambda-2 | 10\.1101/2022\.05\.12\.491691 | Mapping the landscape
+        of anti-phage defense mechanisms in the E\. coli pangenome
+      notes: Supports the functional association between Thoeris anti-defense 1 (UniProtKB:P0DW61
+        in Clostridioides mangenotii (strain LM2)) and SDIC1 system.
 discussions:
 - discussion_id: sdic1-defensefinder-model-gap
   prompt: Resolve SDIC1 natural host breadth, SDIC1A/SDIC1B component functions, phage
@@ -184,4 +225,10 @@ curation_history:
     METPO, history, or prior proposal record; kept the graph at candidate-locus level
     because the pinned DefenseFinder SDIC1 HMM rows are not backed by a rules row;
     proposals/metpo_traitmech_v297 reserves the replacement placeholder.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    sdic1_system_protein_component with UniProtKB:P0DW61 (tad1) exemplar.'
   llm_assisted: true

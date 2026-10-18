@@ -95,3 +95,71 @@ curation_history:
     records unchanged; mechanism grounding and exact mappings remain open. Timestamp
     records the observed UTC curation decision.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph ixotrophy_graph
+    with GENE_OR_PROTEIN node ixotrophy_protein_component and UniProtKB:Q5AD13 exemplar.'
+  llm_assisted: true
+causal_graphs:
+- graph_id: ixotrophy_graph
+  title: Protein component associated with ixotrophy
+  description: Literature-backed association between Filamentous growth regulator
+    15 (UniProtKB:Q5AD13) and ixotrophy.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q5AD13 in Candida
+    albicans (strain SC5314 / ATCC MYA-2876) (Yeast)) associated with ixotrophy while
+    full multi-step mechanistic curation remains future work.
+  nodes:
+  - node_id: ixotrophy_trait
+    label: ixotrophy
+    node_type: TRAIT
+    grounding: traitmech:000698
+    description: A trophic-ecology phenotype in which filamentous bacteria capture
+      microbial prey on their cell surface and kill the captured cells to obtain prey-derived
+      nutrients.
+  - node_id: ixotrophy_protein_component
+    label: Filamentous growth regulator 15
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Filamentous growth regulator 15) associated with
+      ixotrophy.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - FGR15
+    protein_examples:
+    - uniprot_id: UniProtKB:Q5AD13
+      protein_label: Filamentous growth regulator 15
+      gene_symbol: FGR15
+      taxon_id: NCBITaxon:237561
+      taxon_label: Candida albicans (strain SC5314 / ATCC MYA-2876) (Yeast)
+      entry_status: REVIEWED
+      proteome_id: UP000000559
+      retrieved_on: '2026-10-17'
+      entry_version: 100
+      sequence_version: 2
+      role: Characteristic protein component (FGR15, Filamentous growth regulator
+        15) associated with ixotrophy in Candida albicans (strain SC5314 / ATCC MYA-2876)
+        (Yeast).
+      evidence:
+      - reference: DOI:10.1099/mic.0.000158
+        snippet: The ability of cells to aggregate or adhere is thought to be a significant
+          initial step in ixotrophy.
+        notes: Supports Filamentous growth regulator 15 in ixotrophy; UniProtKB:Q5AD13
+          (FGR15, Filamentous growth regulator 15) in Candida albicans (strain SC5314
+          / ATCC MYA-2876) (Yeast) provides a verified protein exemplar.
+  edges:
+  - subject: ixotrophy_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: ixotrophy_trait
+    description: Filamentous growth regulator 15 (FGR15, UniProtKB:Q5AD13) contributes
+      to ixotrophy (associated with significant, aggregate, ixotrophy).
+    evidence:
+    - reference: DOI:10.1099/mic.0.000158
+      snippet: The ability of cells to aggregate or adhere is thought to be a significant
+        initial step in ixotrophy.
+      notes: Supports the functional association between Filamentous growth regulator
+        15 (UniProtKB:Q5AD13 in Candida albicans (strain SC5314 / ATCC MYA-2876) (Yeast))
+        and ixotrophy.

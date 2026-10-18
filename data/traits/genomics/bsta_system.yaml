@@ -105,6 +105,33 @@ causal_graphs:
     node_type: TRAIT
     grounding: traitmech:000214
     description: Possession of a bacteriophage abortive-infection defense system.
+  - node_id: bsta_system_protein_component
+    label: Bottromycin D
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Bottromycin D) associated with BstA system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - bstA
+    protein_examples:
+    - uniprot_id: UniProtKB:K4JY29
+      protein_label: Bottromycin D
+      gene_symbol: bstA
+      taxon_id: NCBITaxon:1931
+      taxon_label: Streptomyces sp
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 13
+      sequence_version: 1
+      role: Characteristic protein component (bstA, Bottromycin D) associated with
+        BstA system in Streptomyces sp.
+      evidence:
+      - reference: DOI:10.1016/j.chom.2021.09.002
+        snippet: the BstA protein confers effective population-level defense against
+          exogenous phage infection via abortive infection
+        notes: Supports Bottromycin D in BstA system; UniProtKB:K4JY29 (bstA, Bottromycin
+          D) in Streptomyces sp provides a verified protein exemplar.
   edges:
   - subject: bsta_locus
     predicate: includes
@@ -190,6 +217,18 @@ causal_graphs:
     - reference: DOI:10.1016/j.chom.2021.09.002
       snippet: we propose that BstA is an abortive infection system
       notes: Owen et al. classify BstA as an abortive-infection system.
+  - subject: bsta_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: bsta_system_trait
+    description: Bottromycin D (bstA, UniProtKB:K4JY29) contributes to BstA system
+      (associated with population, effective, exogenous).
+    evidence:
+    - reference: DOI:10.1016/j.chom.2021.09.002
+      snippet: the BstA protein confers effective population-level defense against
+        exogenous phage infection via abortive infection
+      notes: Supports the functional association between Bottromycin D (UniProtKB:K4JY29
+        in Streptomyces sp) and BstA system.
 discussions:
 - discussion_id: bsta-mechanism-gap
   prompt: Resolve the direct phage trigger of BstA localization, the direct DNA-replication
@@ -235,4 +274,10 @@ curation_history:
   changes: Added an explicit BstA locus contribution edge to the aba-sensitive encoding-prophage
     DNA replication suppression node after the PR 1111 adversarial review filed issue
     1116.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    bsta_system_protein_component with UniProtKB:K4JY29 (bstA) exemplar.'
   llm_assisted: true

@@ -24,6 +24,13 @@ curation_history:
     hyperosmotic stress evidence after a repository-wide duplicate review covering
     ignored and hidden files.
   llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added causal graph osmotic_tolerance_graph
+    with GENE_OR_PROTEIN node osmotic_tolerance_protein_component and UniProtKB:T0DVE4
+    exemplar.'
+  llm_assisted: true
 definition_source: DOI:10.1128/mBio.00390-21
 evidence:
 - reference: DOI:10.1128/mBio.00390-21
@@ -31,3 +38,62 @@ evidence:
   notes: Ledermann et al. assayed Bradyrhizobium diazoefficiens USDA 110 against 400
     mM sorbitol as the hyperosmotic nonionic condition and contrasted it with NaCl,
     MgCl2, and MgSO4 ionic stresses.
+causal_graphs:
+- graph_id: osmotic_tolerance_graph
+  title: Protein component associated with osmotic tolerance
+  description: Literature-backed association between Small-conductance mechanosensitive
+    channel (UniProtKB:T0DVE4) and osmotic tolerance.
+  scope_status: NONMECHANISTIC
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:T0DVE4 in Helicobacter
+    pylori (strain UM084)) associated with osmotic tolerance while full multi-step
+    mechanistic curation remains future work.
+  nodes:
+  - node_id: osmotic_tolerance_trait
+    label: osmotic tolerance
+    node_type: TRAIT
+    grounding: METPO:1007073
+    description: A phenotype characterized by the ability to grow under high osmotic
+      pressure (non-NaCl).
+  - node_id: osmotic_tolerance_protein_component
+    label: Small-conductance mechanosensitive channel
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Small-conductance mechanosensitive channel) associated
+      with osmotic tolerance.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - mscS
+    protein_examples:
+    - uniprot_id: UniProtKB:T0DVE4
+      protein_label: Small-conductance mechanosensitive channel
+      gene_symbol: mscS
+      taxon_id: NCBITaxon:1355530
+      taxon_label: Helicobacter pylori (strain UM084)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 40
+      sequence_version: 1
+      role: Characteristic protein component (mscS, Small-conductance mechanosensitive
+        channel) associated with osmotic tolerance in Helicobacter pylori (strain
+        UM084).
+      evidence:
+      - reference: DOI:10.1128/mBio.00390-21
+        snippet: tolerance against hyperosmotic conditions (400 mM sorbitol)
+        notes: Supports Small-conductance mechanosensitive channel in osmotic tolerance;
+          UniProtKB:T0DVE4 (mscS, Small-conductance mechanosensitive channel) in Helicobacter
+          pylori (strain UM084) provides a verified protein exemplar.
+  edges:
+  - subject: osmotic_tolerance_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: osmotic_tolerance_trait
+    description: Small-conductance mechanosensitive channel (mscS, UniProtKB:T0DVE4)
+      contributes to osmotic tolerance (associated with hyperosmotic, conditions,
+      tolerance).
+    evidence:
+    - reference: DOI:10.1128/mBio.00390-21
+      snippet: tolerance against hyperosmotic conditions (400 mM sorbitol)
+      notes: Supports the functional association between Small-conductance mechanosensitive
+        channel (UniProtKB:T0DVE4 in Helicobacter pylori (strain UM084)) and osmotic
+        tolerance.

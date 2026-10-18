@@ -109,6 +109,37 @@ causal_graphs:
     node_type: TRAIT
     grounding: traitmech:000217
     description: Possession of a genome-encoded Zorya phage-defense system.
+  - node_id: zorya_type_i_system_protein_component
+    label: Zorya protein ZorA
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Zorya protein ZorA) associated with Zorya type
+      I system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - zorA
+    protein_examples:
+    - uniprot_id: UniProtKB:A7ZI10
+      protein_label: Zorya protein ZorA
+      gene_symbol: zorA
+      taxon_id: NCBITaxon:331111
+      taxon_label: Escherichia coli O139:H28 (strain E24377A / ETEC)
+      entry_status: REVIEWED
+      proteome_id: UP000001122
+      retrieved_on: '2026-10-17'
+      entry_version: 69
+      sequence_version: 2
+      role: Characteristic protein component (zorA, Zorya protein ZorA) associated
+        with Zorya type I system in Escherichia coli O139:H28 (strain E24377A / ETEC).
+      evidence:
+      - reference: DOI:10.1038/s41467-025-57397-2
+        snippet: all Zorya systems share two components, ZorA and ZorB, containing
+          domains distantly related, respectively, to the MotA and MotB subunits of
+          the bacterial flagellar motor
+        notes: Supports Zorya protein ZorA in Zorya type I system; UniProtKB:A7ZI10
+          (zorA, Zorya protein ZorA) in Escherichia coli O139:H28 (strain E24377A
+          / ETEC) provides a verified protein exemplar.
   edges:
   - subject: zorya_type_i_locus
     predicate: contributes to
@@ -188,6 +219,19 @@ causal_graphs:
       notes: The pinned DefenseFinder rules table models Zorya_TypeI as a Zorya subsystem
         with Zorya_TypeI__ZorC, Zorya_TypeI__ZorD, Zorya__ZorA, and Zorya__ZorB in
         its mandatory profile set and 3 mandatory matches / 3 genes required.
+  - subject: zorya_type_i_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: zorya_type_i_system_trait
+    description: Zorya protein ZorA (zorA, UniProtKB:A7ZI10) contributes to Zorya
+      type I system (associated with respectively, containing, distantly).
+    evidence:
+    - reference: DOI:10.1038/s41467-025-57397-2
+      snippet: all Zorya systems share two components, ZorA and ZorB, containing domains
+        distantly related, respectively, to the MotA and MotB subunits of the bacterial
+        flagellar motor
+      notes: Supports the functional association between Zorya protein ZorA (UniProtKB:A7ZI10
+        in Escherichia coli O139:H28 (strain E24377A / ETEC)) and Zorya type I system.
 discussions:
 - discussion_id: zorya-type-i-activity-gap
   prompt: Resolve Zorya_TypeI phage triggers, native host breadth, ZorC/ZorD nuclease
@@ -236,4 +280,10 @@ curation_history:
     review found no exact live TraitMech, METPO, history, or prior proposal record
     for the target local ID, placeholder METPO ID, proposal cohort, record slug, or
     human label; the replacement placeholder is reserved in proposals/metpo_traitmech_v431.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    zorya_type_i_system_protein_component with UniProtKB:A7ZI10 (zorA) exemplar.'
   llm_assisted: true

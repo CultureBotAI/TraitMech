@@ -83,6 +83,35 @@ causal_graphs:
     node_type: TRAIT
     grounding: traitmech:000214
     description: Possession of a genome-encoded abortive-infection phage-defense system.
+  - node_id: abip2_system_protein_component
+    label: Abortive infection protein
+    node_type: GENE_OR_PROTEIN
+    description: Protein component (Abortive infection protein) associated with AbiP2
+      system.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
+    gene_symbols:
+    - abi
+    protein_examples:
+    - uniprot_id: UniProtKB:P18024
+      protein_label: Abortive infection protein
+      gene_symbol: abi
+      taxon_id: NCBITaxon:562
+      taxon_label: Escherichia coli
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      entry_version: 49
+      sequence_version: 1
+      role: Characteristic protein component (abi, Abortive infection protein) associated
+        with AbiP2 system in Escherichia coli.
+      evidence:
+      - reference: DOI:10.1093/femsre/fuag009
+        snippet: further research is needed to clarify the mechanism of AbiN and if
+          it functions via abortive infection
+        notes: Supports Abortive infection protein in AbiP2 system; UniProtKB:P18024
+          (abi, Abortive infection protein) in Escherichia coli provides a verified
+          protein exemplar.
   edges:
   - subject: abip2_locus
     predicate: contributes to
@@ -134,6 +163,18 @@ causal_graphs:
         predicted RTs
       notes: The FEMS review explicitly places AbiP2 among UG/Abi reverse transcriptases
         rather than the unrelated lactococcal AbiP membrane-protein system.
+  - subject: abip2_system_protein_component
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: abip2_system_trait
+    description: Abortive infection protein (abi, UniProtKB:P18024) contributes to
+      AbiP2 system (associated with functions, infection, abortive).
+    evidence:
+    - reference: DOI:10.1093/femsre/fuag009
+      snippet: further research is needed to clarify the mechanism of AbiN and if
+        it functions via abortive infection
+      notes: Supports the functional association between Abortive infection protein
+        (UniProtKB:P18024 in Escherichia coli) and AbiP2 system.
 discussions:
 - discussion_id: abip2-ug-abi-mechanism-gap
   prompt: Resolve the AbiP2 natural locus breadth, phage trigger, protein-primed polymerase
@@ -218,4 +259,10 @@ curation_history:
   changes: 'Addressed review issues #1215 and #1216 by renaming the NONMECHANISTIC
     AbiP2 graph id to omit T5 specificity and by documenting the unresolved DefenseFinder
     article-registry row that maps AbiP2 to a 2005 lactococcal review.'
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
+    abip2_system_protein_component with UniProtKB:P18024 (abi) exemplar.'
   llm_assisted: true
