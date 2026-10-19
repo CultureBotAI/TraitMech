@@ -112,35 +112,34 @@ causal_graphs:
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
   - node_id: hailong_system_protein_component
-    label: Endoribonuclease HigB
+    label: Shedu protein SduA
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Endoribonuclease HigB) associated with Hailong
-      system.
+    description: Protein component (Shedu protein SduA) associated with Hailong system.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - higB
+    - sduA
     protein_examples:
-    - uniprot_id: UniProtKB:Q7A225
-      protein_label: Endoribonuclease HigB
-      gene_symbol: higB
-      taxon_id: NCBITaxon:585
-      taxon_label: Proteus vulgaris
+    - uniprot_id: UniProtKB:B7HFR2
+      protein_label: Shedu protein SduA
+      gene_symbol: sduA
+      taxon_id: NCBITaxon:405532
+      taxon_label: Bacillus cereus (strain B4264)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      entry_version: 69
+      entry_version: 58
       sequence_version: 1
-      role: Characteristic protein component (higB, Endoribonuclease HigB) associated
-        with Hailong system in Proteus vulgaris.
+      role: Characteristic protein component (sduA, Shedu protein SduA) associated
+        with Hailong system in Bacillus cereus (strain B4264).
       evidence:
       - reference: DOI:10.1016/j.molcel.2025.06.011
         snippet: the bacterial Hailong anti-phage system, in which constitutively
           synthesized DNA oligonucleotides inhibit a toxic ion channel-a molecular
           booby trap primed for activation by phage exonucleases
-        notes: Supports Endoribonuclease HigB in Hailong system; UniProtKB:Q7A225
-          (higB, Endoribonuclease HigB) in Proteus vulgaris provides a verified protein
-          exemplar.
+        notes: Supports Shedu protein SduA in Hailong system; UniProtKB:B7HFR2 (sduA,
+          Shedu protein SduA) in Bacillus cereus (strain B4264) provides a verified
+          protein exemplar.
   edges:
   - subject: hailong_locus
     predicate: contributes to
@@ -232,15 +231,15 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: hailong_system_trait
-    description: Endoribonuclease HigB (higB, UniProtKB:Q7A225) contributes to Hailong
-      system (associated with oligonucleotides, constitutively, exonucleases).
+    description: Shedu protein SduA (sduA, UniProtKB:B7HFR2) contributes to Hailong
+      system.
     evidence:
     - reference: DOI:10.1016/j.molcel.2025.06.011
       snippet: the bacterial Hailong anti-phage system, in which constitutively synthesized
         DNA oligonucleotides inhibit a toxic ion channel-a molecular booby trap primed
         for activation by phage exonucleases
-      notes: Supports the functional association between Endoribonuclease HigB (UniProtKB:Q7A225
-        in Proteus vulgaris) and Hailong system.
+      notes: Supports the functional association between Shedu protein SduA (UniProtKB:B7HFR2
+        in Bacillus cereus (strain B4264)) and Hailong system.
 discussions:
 - discussion_id: hailong-mechanism-and-family-breadth-gap
   prompt: Resolve Hailong ODA transfer, phage-trigger breadth, HalA ion specificity,
@@ -268,5 +267,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    hailong_system_protein_component with UniProtKB:Q7A225 (higB) exemplar.'
+    hailong_system_protein_component with UniProtKB:B7HFR2 (sduA) exemplar.'
   llm_assisted: true

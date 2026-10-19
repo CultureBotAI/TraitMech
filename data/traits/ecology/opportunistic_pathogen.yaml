@@ -31,8 +31,8 @@ causal_graphs:
   title: Opportunistic pathogenesis under compromised host defense
   scope_status: NONMECHANISTIC
   scope_notes: This broad ecological, host-relationship, habitat, or hazard classification
-    spans multiple taxa and mechanisms; contextual protein nodes do not receive token
-    UniProt examples.
+    spans multiple taxa and mechanisms; contextual protein nodes include source-backed
+    UniProtKB exemplars.
   description: Evidence-backed causal sketch linking compromised host defenses to
     context-dependent virulence in normally commensal/environmental microbes.
   nodes:
@@ -208,7 +208,7 @@ causal_graphs:
     predicate_id: RO:0002326
     object: opportunistic_pathogen_trait
     description: Multidrug resistance protein MexB (mexB, UniProtKB:P52002) contributes
-      to opportunistic pathogen (associated with opportunistic, assumptions, demonstrate).
+      to opportunistic pathogen.
     evidence:
     - reference: DOI:10.1016/j.tim.2012.04.005
       snippet: An increasing number of studies now demonstrate that many opportunistic

@@ -108,25 +108,25 @@ causal_graphs:
     description: aPBPs mediating isotropic peptidoglycan insertion that enlarges the
       cell cylinder.
     protein_examples:
-    - uniprot_id: UniProtKB:P0AD68
-      protein_label: Peptidoglycan D,D-transpeptidase FtsI
-      gene_symbol: ftsI
+    - uniprot_id: UniProtKB:P02918
+      protein_label: Penicillin-binding protein 1A
+      gene_symbol: mrcA
       taxon_id: NCBITaxon:83333
       taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
       proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 156
+      entry_version: 214
       sequence_version: 1
-      role: Exemplar protein (ftsI, Peptidoglycan D,D-transpeptidase FtsI) representing
-        class A penicillin-binding proteins in Escherichia coli (strain K12) for cell
-        width very small.
+      role: Exemplar protein (mrcA, Penicillin-binding protein 1A) representing class
+        A penicillin-binding proteins in Escherichia coli (strain K12) for cell width
+        very small.
       evidence:
-      - reference: DOI:10.1146/annurev-cellbio-101011-155745
-        snippet: MreB-directed peptidoglycan synthesis
+      - reference: DOI:10.1038/ismej.2014.60
+        snippet: minimizes resources required for replication
         notes: Supports class A penicillin-binding proteins in cell width very small;
-          UniProtKB:P0AD68 (ftsI, Peptidoglycan D,D-transpeptidase FtsI) in Escherichia
-          coli (strain K12) provides a verified protein exemplar.
+          UniProtKB:P02918 (mrcA, Penicillin-binding protein 1A) in Escherichia coli
+          (strain K12) provides a verified protein exemplar.
   edges:
   - subject: oligotrophic_environment
     predicate: regulates
@@ -281,6 +281,6 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P0ABG7 (mrdB)
-    protein example to node rod_complex; added UniProtKB:P0AD68 (ftsI) protein example
+    protein example to node rod_complex; added UniProtKB:P02918 (mrcA) protein example
     to node apbp_proteins.'
   llm_assisted: true

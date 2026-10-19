@@ -140,25 +140,26 @@ causal_graphs:
     description: ABC-type compatible-solute importers (OpuA family) bound and regulated
       by c-di-AMP.
     protein_examples:
-    - uniprot_id: UniProtKB:P77334
-      protein_label: Cyclic di-GMP phosphodiesterase PdeR
-      gene_symbol: pdeR
-      taxon_id: NCBITaxon:83333
-      taxon_label: Escherichia coli (strain K12)
+    - uniprot_id: UniProtKB:P46920
+      protein_label: Glycine betaine transport ATP-binding protein OpuAA
+      gene_symbol: opuAA
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
       entry_status: REVIEWED
-      proteome_id: UP000000625
+      proteome_id: UP000001570
       retrieved_on: '2026-10-17'
-      entry_version: 178
-      sequence_version: 1
-      role: Exemplar protein (pdeR, Cyclic di-GMP phosphodiesterase PdeR) representing
-        OpuA-like compatible-solute importers in Escherichia coli (strain K12) for
-        NaCl range.
+      entry_version: 161
+      sequence_version: 3
+      role: Exemplar protein (opuAA, Glycine betaine transport ATP-binding protein
+        OpuAA) representing OpuA-like compatible-solute importers in Bacillus subtilis
+        (strain 168) for NaCl range.
       evidence:
       - reference: DOI:10.1128/mmbr.00181-23
-        snippet: Cyclic di-AMP binds to the CBS domains of compatible solute importers
-        notes: Supports OpuA-like compatible-solute importers in NaCl range; UniProtKB:P77334
-          (pdeR, Cyclic di-GMP phosphodiesterase PdeR) in Escherichia coli (strain
-          K12) provides a verified protein exemplar.
+        snippet: potassium and compatible solute transport are vital for bacteria
+          to survive changes in external osmolality
+        notes: Supports OpuA-like compatible-solute importers in NaCl range; UniProtKB:P46920
+          (opuAA, Glycine betaine transport ATP-binding protein OpuAA) in Bacillus
+          subtilis (strain 168) provides a verified protein exemplar.
   edges:
   - subject: ambient_nacl
     predicate: defines
@@ -347,6 +348,6 @@ curation_history:
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q9L6L2 (trkH)
     protein example to node trk_ktr_k_influx; added UniProtKB:Q8ZKW1 (kup) protein
-    example to node kima_kup_k_uptake; added UniProtKB:P77334 (pdeR) protein example
+    example to node kima_kup_k_uptake; added UniProtKB:P46920 (opuAA) protein example
     to node opua_solute_importers.'
   llm_assisted: true

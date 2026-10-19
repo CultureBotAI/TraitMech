@@ -125,25 +125,24 @@ causal_graphs:
     grounding_notes: This functional label spans unrelated plasmid-encoded methyltransferase
       families.
     protein_examples:
-    - uniprot_id: UniProtKB:P08957
-      protein_label: Type I restriction enzyme EcoKI methylase subunit
-      gene_symbol: hsdM
-      taxon_id: NCBITaxon:83333
-      taxon_label: Escherichia coli (strain K12)
+    - uniprot_id: UniProtKB:P14827
+      protein_label: Type II methyltransferase M.EcaI
+      gene_symbol: ecaIM
+      taxon_id: NCBITaxon:550
+      taxon_label: Enterobacter cloacae
       entry_status: REVIEWED
-      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 190
+      entry_version: 102
       sequence_version: 1
-      role: Exemplar protein (hsdM, Type I restriction enzyme EcoKI methylase subunit)
-        representing plasmid-encoded methylase in Escherichia coli (strain K12) for
-        restriction-modification system.
+      role: Exemplar protein (ecaIM, Type II methyltransferase M.EcaI) representing
+        plasmid-encoded methylase in Enterobacter cloacae for restriction-modification
+        system.
       evidence:
       - reference: PMID:5312500
         snippet: restriction enzyme from Hemophilus influenzae
         notes: Supports plasmid-encoded methylase in restriction-modification system;
-          UniProtKB:P08957 (hsdM, Type I restriction enzyme EcoKI methylase subunit)
-          in Escherichia coli (strain K12) provides a verified protein exemplar.
+          UniProtKB:P14827 (ecaIM, Type II methyltransferase M.EcaI) in Enterobacter
+          cloacae provides a verified protein exemplar.
   - node_id: phage_mtase
     label: phage-encoded DNA methyltransferase
     node_type: GENE_OR_PROTEIN
@@ -312,7 +311,7 @@ curation_history:
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:P44413
     version metadata (entry_version=125, sequence_version=2); added UniProtKB:P21311
-    (dam) protein example to node cognate_mtase; added UniProtKB:P08957 (hsdM) protein
+    (dam) protein example to node cognate_mtase; added UniProtKB:P14827 (ecaIM) protein
     example to node plasmid_methylase; added UniProtKB:P21311 (dam) protein example
     to node phage_mtase.'
   llm_assisted: true

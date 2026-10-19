@@ -108,18 +108,18 @@ curation_history:
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph fungal_internal_mycorrhizal_vesicle_formation_graph
     with GENE_OR_PROTEIN node fungal_internal_mycorrhizal_vesicle_formation_protein_component
-    and UniProtKB:Q8YUS9 exemplar.'
+    and UniProtKB:P07560 exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: fungal_internal_mycorrhizal_vesicle_formation_graph
   title: Protein component associated with fungal internal mycorrhizal vesicle formation
-  description: Literature-backed association between Gas vesicle protein C (UniProtKB:Q8YUS9)
+  description: Literature-backed association between Ras-related protein SEC4 (UniProtKB:P07560)
     and fungal internal mycorrhizal vesicle formation.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q8YUS9 in Nostoc
-    sp. (strain PCC 7120 / SAG 25.82 / UTEX 2576)) associated with fungal internal
-    mycorrhizal vesicle formation while full multi-step mechanistic curation remains
-    future work.
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P07560 in Saccharomyces
+    cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)) associated with fungal
+    internal mycorrhizal vesicle formation while full multi-step mechanistic curation
+    remains future work.
   nodes:
   - node_id: fungal_internal_mycorrhizal_vesicle_formation_trait
     label: fungal internal mycorrhizal vesicle formation
@@ -129,48 +129,47 @@ causal_graphs:
       swellings, called internal vesicles, within plant tissue during arbuscular mycorrhizal
       colonization.
   - node_id: fungal_internal_mycorrhizal_vesicle_formation_protein_component
-    label: Gas vesicle protein C
+    label: Ras-related protein SEC4
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Gas vesicle protein C) associated with fungal
+    description: Protein component (Ras-related protein SEC4) associated with fungal
       internal mycorrhizal vesicle formation.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    grounding: InterPro:IPR027417
     gene_symbols:
-    - gvpC
+    - SEC4
     protein_examples:
-    - uniprot_id: UniProtKB:Q8YUS9
-      protein_label: Gas vesicle protein C
-      gene_symbol: gvpC
-      taxon_id: NCBITaxon:103690
-      taxon_label: Nostoc sp. (strain PCC 7120 / SAG 25.82 / UTEX 2576)
+    - uniprot_id: UniProtKB:P07560
+      protein_label: Ras-related protein SEC4
+      gene_symbol: SEC4
+      taxon_id: NCBITaxon:559292
+      taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's
+        yeast)
       entry_status: REVIEWED
-      proteome_id: UP000002483
+      proteome_id: UP000002311
       retrieved_on: '2026-10-17'
-      entry_version: 100
+      entry_version: 248
       sequence_version: 1
-      role: Characteristic protein component (gvpC, Gas vesicle protein C) associated
-        with fungal internal mycorrhizal vesicle formation in Nostoc sp. (strain PCC
-        7120 / SAG 25.82 / UTEX 2576).
+      role: Characteristic protein component (SEC4, Ras-related protein SEC4) associated
+        with fungal internal mycorrhizal vesicle formation in Saccharomyces cerevisiae
+        (strain ATCC 204508 / S288c) (Baker's yeast).
       evidence:
       - reference: DOI:10.1139/m75-258
         snippet: Mature vesicles were engorged with lipid droplets, possessed a trilaminate
           wall and were also enclosed by host wall material and cytoplasm.
-        notes: Supports Gas vesicle protein C in fungal internal mycorrhizal vesicle
-          formation; UniProtKB:Q8YUS9 (gvpC, Gas vesicle protein C) in Nostoc sp.
-          (strain PCC 7120 / SAG 25.82 / UTEX 2576) provides a verified protein exemplar.
+        notes: Supports Ras-related protein SEC4 in fungal internal mycorrhizal vesicle
+          formation; UniProtKB:P07560 (SEC4, Ras-related protein SEC4) in Saccharomyces
+          cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast) provides a verified
+          protein exemplar.
   edges:
   - subject: fungal_internal_mycorrhizal_vesicle_formation_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: fungal_internal_mycorrhizal_vesicle_formation_trait
-    description: Gas vesicle protein C (gvpC, UniProtKB:Q8YUS9) contributes to fungal
-      internal mycorrhizal vesicle formation (associated with trilaminate, cytoplasm,
-      possessed).
+    description: Ras-related protein SEC4 (SEC4, UniProtKB:P07560) contributes to
+      fungal internal mycorrhizal vesicle formation.
     evidence:
     - reference: DOI:10.1139/m75-258
       snippet: Mature vesicles were engorged with lipid droplets, possessed a trilaminate
         wall and were also enclosed by host wall material and cytoplasm.
-      notes: Supports the functional association between Gas vesicle protein C (UniProtKB:Q8YUS9
-        in Nostoc sp. (strain PCC 7120 / SAG 25.82 / UTEX 2576)) and fungal internal
-        mycorrhizal vesicle formation.
+      notes: Supports the functional association between Ras-related protein SEC4
+        (UniProtKB:P07560 in Saccharomyces cerevisiae (strain ATCC 204508 / S288c)
+        (Baker's yeast)) and fungal internal mycorrhizal vesicle formation.

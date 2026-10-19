@@ -91,16 +91,16 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph gravitaxis_graph
-    with GENE_OR_PROTEIN node gravitaxis_protein_component and UniProtKB:P39914 exemplar.'
+    with GENE_OR_PROTEIN node gravitaxis_protein_component and UniProtKB:P07363 exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: gravitaxis_graph
   title: Protein component associated with gravitaxis
-  description: Literature-backed association between Monothiol bacilliredoxin BrxC
-    (UniProtKB:P39914) and gravitaxis.
+  description: Literature-backed association between Chemotaxis protein CheA (UniProtKB:P07363)
+    and gravitaxis.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P39914 in Bacillus
-    subtilis (strain 168)) associated with gravitaxis while full multi-step mechanistic
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P07363 in Escherichia
+    coli (strain K12)) associated with gravitaxis while full multi-step mechanistic
     curation remains future work.
   nodes:
   - node_id: gravitaxis_trait
@@ -110,45 +110,43 @@ causal_graphs:
     description: A motile phenotype in which the direction of active swimming is biased
       relative to gravity.
   - node_id: gravitaxis_protein_component
-    label: Monothiol bacilliredoxin BrxC
+    label: Chemotaxis protein CheA
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Monothiol bacilliredoxin BrxC) associated with
-      gravitaxis.
+    description: Protein component (Chemotaxis protein CheA) associated with gravitaxis.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - brxC
+    - cheA
     protein_examples:
-    - uniprot_id: UniProtKB:P39914
-      protein_label: Monothiol bacilliredoxin BrxC
-      gene_symbol: brxC
-      taxon_id: NCBITaxon:224308
-      taxon_label: Bacillus subtilis (strain 168)
+    - uniprot_id: UniProtKB:P07363
+      protein_label: Chemotaxis protein CheA
+      gene_symbol: cheA
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
-      proteome_id: UP000001570
+      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 128
-      sequence_version: 1
-      role: Characteristic protein component (brxC, Monothiol bacilliredoxin BrxC)
-        associated with gravitaxis in Bacillus subtilis (strain 168).
+      entry_version: 214
+      sequence_version: 3
+      role: Characteristic protein component (cheA, Chemotaxis protein CheA) associated
+        with gravitaxis in Escherichia coli (strain K12).
       evidence:
       - reference: DOI:10.1242/jeb.050666
         snippet: the ability to swim preferentially upwards (negative gravitaxis)
           is primarily the result of upwardly curving trajectories
-        notes: Supports Monothiol bacilliredoxin BrxC in gravitaxis; UniProtKB:P39914
-          (brxC, Monothiol bacilliredoxin BrxC) in Bacillus subtilis (strain 168)
-          provides a verified protein exemplar.
+        notes: Supports Chemotaxis protein CheA in gravitaxis; UniProtKB:P07363 (cheA,
+          Chemotaxis protein CheA) in Escherichia coli (strain K12) provides a verified
+          protein exemplar.
   edges:
   - subject: gravitaxis_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: gravitaxis_trait
-    description: Monothiol bacilliredoxin BrxC (brxC, UniProtKB:P39914) contributes
-      to gravitaxis (associated with preferentially, trajectories, gravitaxis).
+    description: Chemotaxis protein CheA (cheA, UniProtKB:P07363) contributes to gravitaxis.
     evidence:
     - reference: DOI:10.1242/jeb.050666
       snippet: the ability to swim preferentially upwards (negative gravitaxis) is
         primarily the result of upwardly curving trajectories
-      notes: Supports the functional association between Monothiol bacilliredoxin
-        BrxC (UniProtKB:P39914 in Bacillus subtilis (strain 168)) and gravitaxis.
+      notes: Supports the functional association between Chemotaxis protein CheA (UniProtKB:P07363
+        in Escherichia coli (strain K12)) and gravitaxis.

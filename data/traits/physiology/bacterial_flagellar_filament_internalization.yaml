@@ -138,6 +138,13 @@ curation_history:
   llm_assisted: true
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed canonical_examples status alongside NONMECHANISTIC protein exemplar
+    graph for bacterial flagellar filament internalization; isolate-level canonical
+    example remains deferred pending explicit strain-level literature.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph bacterial_flagellar_filament_internalization_graph
     with GENE_OR_PROTEIN node bacterial_flagellar_filament_internalization_protein_component
@@ -199,8 +206,7 @@ causal_graphs:
     predicate_id: RO:0002326
     object: bacterial_flagellar_filament_internalization_trait
     description: Flagellar hook-associated protein 2 (fliD, UniProtKB:Q9ZL91) contributes
-      to bacterial flagellar filament internalization (associated with bacteriovorus,
-      extracellular, periplasmic).
+      to bacterial flagellar filament internalization.
     evidence:
     - reference: DOI:10.1063/pt.nkma.bqid
       snippet: B. bacteriovorus retracts its extracellular hook and filament into

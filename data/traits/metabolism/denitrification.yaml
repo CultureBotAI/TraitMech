@@ -92,27 +92,25 @@ causal_graphs:
     description: Cytochrome cd1 nitrite reductase reducing nitrite to nitric oxide.
     grounding: GO:0050421
     protein_examples:
-    - uniprot_id: UniProtKB:P24474
+    - uniprot_id: UniProtKB:I0HLW6
       protein_label: Nitrite reductase
       gene_symbol: nirS
-      taxon_id: NCBITaxon:208964
-      taxon_label: Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116
-        / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)
-      entry_status: REVIEWED
-      proteome_id: UP000002438
+      taxon_id: NCBITaxon:983917
+      taxon_label: Rubrivivax gelatinosus (strain NBRC 100245 / IL144)
+      entry_status: UNREVIEWED
+      proteome_id: UP000007883
       retrieved_on: '2026-10-17'
-      entry_version: 177
+      entry_version: 57
       sequence_version: 1
       role: Exemplar protein (nirS, Nitrite reductase) representing cytochrome cd1
-        nitrite reductase NirS in Pseudomonas aeruginosa (strain ATCC 15692 / DSM
-        22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1) for denitrification.
+        nitrite reductase NirS in Rubrivivax gelatinosus (strain NBRC 100245 / IL144)
+        for denitrification.
       evidence:
       - reference: DOI:10.1128/msystems.00742-23
         snippet: nitrate reductase which reduces nitrate to nitrite
         notes: Supports cytochrome cd1 nitrite reductase NirS in denitrification;
-          UniProtKB:P24474 (nirS, Nitrite reductase) in Pseudomonas aeruginosa (strain
-          ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101
-          / PAO1) provides a verified protein exemplar.
+          UniProtKB:I0HLW6 (nirS, Nitrite reductase) in Rubrivivax gelatinosus (strain
+          NBRC 100245 / IL144) provides a verified protein exemplar.
   - node_id: nitrite_reduction_to_no
     label: nitrite reduction to nitric oxide
     node_type: BIOLOGICAL_PROCESS
@@ -412,6 +410,6 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P09152 (narG)
-    protein example to node narghi; added UniProtKB:P24474 (nirS) protein example
+    protein example to node narghi; added UniProtKB:I0HLW6 (nirS) protein example
     to node nirs; added UniProtKB:Q59647 (norB) protein example to node nor.'
   llm_assisted: true

@@ -80,35 +80,33 @@ causal_graphs:
     description: Stress-induced bacterial cells with reduced or absent cell wall (e.g.,
       L-forms, CWD coccoid forms).
   - node_id: gram_variable_protein_component
-    label: Peptidoglycan glycosyltransferase MrdB
+    label: N-acetylmuramoyl-L-alanine amidase AmiA
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Peptidoglycan glycosyltransferase MrdB) associated
+    description: Protein component (N-acetylmuramoyl-L-alanine amidase AmiA) associated
       with gram variable.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    grounding: InterPro:IPR002508
     gene_symbols:
-    - mrdB
+    - amiA
     protein_examples:
-    - uniprot_id: UniProtKB:P0ABG7
-      protein_label: Peptidoglycan glycosyltransferase MrdB
-      gene_symbol: mrdB
+    - uniprot_id: UniProtKB:P36548
+      protein_label: N-acetylmuramoyl-L-alanine amidase AmiA
+      gene_symbol: amiA
       taxon_id: NCBITaxon:83333
       taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
       proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 133
+      entry_version: 168
       sequence_version: 1
-      role: Characteristic protein component (mrdB, Peptidoglycan glycosyltransferase
-        MrdB) associated with gram variable in Escherichia coli (strain K12).
+      role: Characteristic protein component (amiA, N-acetylmuramoyl-L-alanine amidase
+        AmiA) associated with gram variable in Escherichia coli (strain K12).
       evidence:
       - reference: PMID:1689718
         snippet: These gram-variable bacteria could be split into two groups on the
           basis of their staining responses.
-        notes: Supports Peptidoglycan glycosyltransferase MrdB in gram variable; UniProtKB:P0ABG7
-          (mrdB, Peptidoglycan glycosyltransferase MrdB) in Escherichia coli (strain
-          K12) provides a verified protein exemplar.
+        notes: Supports N-acetylmuramoyl-L-alanine amidase AmiA in gram variable;
+          UniProtKB:P36548 (amiA, N-acetylmuramoyl-L-alanine amidase AmiA) in Escherichia
+          coli (strain K12) provides a verified protein exemplar.
   edges:
   - subject: culture_aging
     predicate: regulates
@@ -192,14 +190,15 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: gram_variable_trait
-    description: Peptidoglycan glycosyltransferase MrdB (mrdB, UniProtKB:P0ABG7) contributes
-      to gram variable (associated with responses, bacteria, staining).
+    description: N-acetylmuramoyl-L-alanine amidase AmiA (amiA, UniProtKB:P36548)
+      contributes to gram variable.
     evidence:
     - reference: PMID:1689718
       snippet: These gram-variable bacteria could be split into two groups on the
         basis of their staining responses.
-      notes: Supports the functional association between Peptidoglycan glycosyltransferase
-        MrdB (UniProtKB:P0ABG7 in Escherichia coli (strain K12)) and gram variable.
+      notes: Supports the functional association between N-acetylmuramoyl-L-alanine
+        amidase AmiA (UniProtKB:P36548 in Escherichia coli (strain K12)) and gram
+        variable.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.903723+00:00'
   curator: seed_from_metpo
@@ -304,5 +303,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    gram_variable_protein_component with UniProtKB:P0ABG7 (mrdB) exemplar.'
+    gram_variable_protein_component with UniProtKB:P36548 (amiA) exemplar.'
   llm_assisted: true

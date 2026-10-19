@@ -132,20 +132,28 @@ curation_history:
   llm_assisted: true
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed canonical_examples status alongside NONMECHANISTIC protein exemplar
+    graph for extracellular-trail-based spatial memory; isolate-level canonical example
+    remains deferred pending explicit strain-level literature.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph extracellular_trail_based_spatial_memory_graph
     with GENE_OR_PROTEIN node extracellular_trail_based_spatial_memory_protein_component
-    and UniProtKB:P0AC53 exemplar.'
+    and UniProtKB:P04739 exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: extracellular_trail_based_spatial_memory_graph
   title: Protein component associated with extracellular-trail-based spatial memory
-  description: Literature-backed association between Glucose-6-phosphate 1-dehydrogenase
-    (UniProtKB:P0AC53) and extracellular-trail-based spatial memory.
+  description: Literature-backed association between Type IV major pilin protein PilA
+    (UniProtKB:P04739) and extracellular-trail-based spatial memory.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P0AC53 in Escherichia
-    coli (strain K12)) associated with extracellular-trail-based spatial memory while
-    full multi-step mechanistic curation remains future work.
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P04739 in Pseudomonas
+    aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228
+    / 1C / PRS 101 / PAO1)) associated with extracellular-trail-based spatial memory
+    while full multi-step mechanistic curation remains future work.
   nodes:
   - node_id: extracellular_trail_based_spatial_memory_trait
     label: extracellular-trail-based spatial memory
@@ -155,48 +163,52 @@ causal_graphs:
       exploration is guided by persistent extracellular trails deposited during earlier
       movement.
   - node_id: extracellular_trail_based_spatial_memory_protein_component
-    label: Glucose-6-phosphate 1-dehydrogenase
+    label: Type IV major pilin protein PilA
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Glucose-6-phosphate 1-dehydrogenase) associated
-      with extracellular-trail-based spatial memory.
+    description: Protein component (Type IV major pilin protein PilA) associated with
+      extracellular-trail-based spatial memory.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - zwf
+    - pilA
     protein_examples:
-    - uniprot_id: UniProtKB:P0AC53
-      protein_label: Glucose-6-phosphate 1-dehydrogenase
-      gene_symbol: zwf
-      taxon_id: NCBITaxon:83333
-      taxon_label: Escherichia coli (strain K12)
+    - uniprot_id: UniProtKB:P04739
+      protein_label: Type IV major pilin protein PilA
+      gene_symbol: pilA
+      taxon_id: NCBITaxon:208964
+      taxon_label: Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116
+        / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)
       entry_status: REVIEWED
-      proteome_id: UP000000625
+      proteome_id: UP000002438
       retrieved_on: '2026-10-17'
-      entry_version: 144
+      entry_version: 159
       sequence_version: 1
-      role: Characteristic protein component (zwf, Glucose-6-phosphate 1-dehydrogenase)
-        associated with extracellular-trail-based spatial memory in Escherichia coli
-        (strain K12).
+      role: Characteristic protein component (pilA, Type IV major pilin protein PilA)
+        associated with extracellular-trail-based spatial memory in Pseudomonas aeruginosa
+        (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C /
+        PRS 101 / PAO1).
       evidence:
       - reference: DOI:10.1073/pnas.2312611121
         snippet: In accordance with the literature, we observe that plasmodia generally
           avoid previously visited areas marked by their slime trail
-        notes: Supports Glucose-6-phosphate 1-dehydrogenase in extracellular-trail-based
-          spatial memory; UniProtKB:P0AC53 (zwf, Glucose-6-phosphate 1-dehydrogenase)
-          in Escherichia coli (strain K12) provides a verified protein exemplar.
+        notes: Supports Type IV major pilin protein PilA in extracellular-trail-based
+          spatial memory; UniProtKB:P04739 (pilA, Type IV major pilin protein PilA)
+          in Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 /
+          JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1) provides a verified protein
+          exemplar.
   edges:
   - subject: extracellular_trail_based_spatial_memory_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: extracellular_trail_based_spatial_memory_trait
-    description: Glucose-6-phosphate 1-dehydrogenase (zwf, UniProtKB:P0AC53) contributes
-      to extracellular-trail-based spatial memory (associated with accordance, literature,
-      previously).
+    description: Type IV major pilin protein PilA (pilA, UniProtKB:P04739) contributes
+      to extracellular-trail-based spatial memory.
     evidence:
     - reference: DOI:10.1073/pnas.2312611121
       snippet: In accordance with the literature, we observe that plasmodia generally
         avoid previously visited areas marked by their slime trail
-      notes: Supports the functional association between Glucose-6-phosphate 1-dehydrogenase
-        (UniProtKB:P0AC53 in Escherichia coli (strain K12)) and extracellular-trail-based
+      notes: Supports the functional association between Type IV major pilin protein
+        PilA (UniProtKB:P04739 in Pseudomonas aeruginosa (strain ATCC 15692 / DSM
+        22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)) and extracellular-trail-based
         spatial memory.

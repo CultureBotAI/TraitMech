@@ -119,19 +119,26 @@ curation_history:
   llm_assisted: true
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed canonical_examples status alongside NONMECHANISTIC protein exemplar
+    graph for fungal adhesive-column trap formation; isolate-level canonical example
+    remains deferred pending explicit strain-level literature.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph fungal_adhesive_column_trap_formation_graph
     with GENE_OR_PROTEIN node fungal_adhesive_column_trap_formation_protein_component
-    and UniProtKB:Q2UF72 exemplar.'
+    and UniProtKB:P08640 exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: fungal_adhesive_column_trap_formation_graph
   title: Protein component associated with fungal adhesive-column trap formation
-  description: Literature-backed association between Chitin synthase A (UniProtKB:Q2UF72)
+  description: Literature-backed association between Flocculation protein FLO11 (UniProtKB:P08640)
     and fungal adhesive-column trap formation.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q2UF72 in Aspergillus
-    oryzae (strain ATCC 42149 / RIB 40) (Yellow koji mold)) associated with fungal
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P08640 in Saccharomyces
+    cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)) associated with fungal
     adhesive-column trap formation while full multi-step mechanistic curation remains
     future work.
   nodes:
@@ -142,45 +149,45 @@ causal_graphs:
     description: A morphological phenotype in which a fungus forms columns of serially
       arranged hyphal cells with adhesive surfaces that serve as nematode traps.
   - node_id: fungal_adhesive_column_trap_formation_protein_component
-    label: Chitin synthase A
+    label: Flocculation protein FLO11
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Chitin synthase A) associated with fungal adhesive-column
-      trap formation.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Flocculation protein FLO11) associated with fungal
+      adhesive-column trap formation.
+    grounding: InterPro:IPR018789
     gene_symbols:
-    - csmA
+    - FLO11
     protein_examples:
-    - uniprot_id: UniProtKB:Q2UF72
-      protein_label: Chitin synthase A
-      gene_symbol: csmA
-      taxon_id: NCBITaxon:510516
-      taxon_label: Aspergillus oryzae (strain ATCC 42149 / RIB 40) (Yellow koji mold)
+    - uniprot_id: UniProtKB:P08640
+      protein_label: Flocculation protein FLO11
+      gene_symbol: FLO11
+      taxon_id: NCBITaxon:559292
+      taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's
+        yeast)
       entry_status: REVIEWED
-      proteome_id: UP000006564
+      proteome_id: UP000002311
       retrieved_on: '2026-10-17'
-      entry_version: 74
-      sequence_version: 1
-      role: Characteristic protein component (csmA, Chitin synthase A) associated
-        with fungal adhesive-column trap formation in Aspergillus oryzae (strain ATCC
-        42149 / RIB 40) (Yellow koji mold).
+      entry_version: 187
+      sequence_version: 2
+      role: Characteristic protein component (FLO11, Flocculation protein FLO11) associated
+        with fungal adhesive-column trap formation in Saccharomyces cerevisiae (strain
+        ATCC 204508 / S288c) (Baker's yeast).
       evidence:
       - reference: DOI:10.1016/j.isci.2020.101057
         snippet: Fungi with the AC device form a string of cells with adhesive surfaces
-        notes: Supports Chitin synthase A in fungal adhesive-column trap formation;
-          UniProtKB:Q2UF72 (csmA, Chitin synthase A) in Aspergillus oryzae (strain
-          ATCC 42149 / RIB 40) (Yellow koji mold) provides a verified protein exemplar.
+        notes: Supports Flocculation protein FLO11 in fungal adhesive-column trap
+          formation; UniProtKB:P08640 (FLO11, Flocculation protein FLO11) in Saccharomyces
+          cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast) provides a verified
+          protein exemplar.
   edges:
   - subject: fungal_adhesive_column_trap_formation_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: fungal_adhesive_column_trap_formation_trait
-    description: Chitin synthase A (csmA, UniProtKB:Q2UF72) contributes to fungal
-      adhesive-column trap formation (associated with adhesive, surfaces, device).
+    description: Flocculation protein FLO11 (FLO11, UniProtKB:P08640) contributes
+      to fungal adhesive-column trap formation.
     evidence:
     - reference: DOI:10.1016/j.isci.2020.101057
       snippet: Fungi with the AC device form a string of cells with adhesive surfaces
-      notes: Supports the functional association between Chitin synthase A (UniProtKB:Q2UF72
-        in Aspergillus oryzae (strain ATCC 42149 / RIB 40) (Yellow koji mold)) and
-        fungal adhesive-column trap formation.
+      notes: Supports the functional association between Flocculation protein FLO11
+        (UniProtKB:P08640 in Saccharomyces cerevisiae (strain ATCC 204508 / S288c)
+        (Baker's yeast)) and fungal adhesive-column trap formation.

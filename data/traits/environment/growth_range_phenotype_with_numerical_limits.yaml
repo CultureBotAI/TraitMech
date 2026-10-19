@@ -111,38 +111,37 @@ causal_graphs:
     description: Accumulation of compatible solutes (e.g., glycine betaine) that counteract
       hyperosmotic stress.
   - node_id: growth_range_phenotype_with_numerical_limits_protein_component
-    label: Na(+)/H(+) antiporter subunit A
+    label: Chaperone protein DnaK
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Na(+)/H(+) antiporter subunit A) associated with
-      growth range phenotype with numerical limits.
+    description: Protein component (Chaperone protein DnaK) associated with growth
+      range phenotype with numerical limits.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - mrpA
+    - dnaK
     protein_examples:
-    - uniprot_id: UniProtKB:Q9RGZ5
-      protein_label: Na(+)/H(+) antiporter subunit A
-      gene_symbol: mrpA
-      taxon_id: NCBITaxon:398511
-      taxon_label: Alkalihalophilus pseudofirmus (strain ATCC BAA-2126 / JCM 17055
-        / OF4) (Bacillus pseudofirmus)
+    - uniprot_id: UniProtKB:P0A6Y8
+      protein_label: Chaperone protein DnaK
+      gene_symbol: dnaK
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
-      proteome_id: UP000001544
+      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 115
+      entry_version: 183
       sequence_version: 2
-      role: Characteristic protein component (mrpA, Na(+)/H(+) antiporter subunit
-        A) associated with growth range phenotype with numerical limits in Alkalihalophilus
-        pseudofirmus (strain ATCC BAA-2126 / JCM 17055 / OF4) (Bacillus pseudofirmus).
+      role: Characteristic protein component (dnaK, Chaperone protein DnaK) associated
+        with growth range phenotype with numerical limits in Escherichia coli (strain
+        K12).
       evidence:
-      - reference: DOI:10.1093/femsre/fuad033
-        snippet: Proton-sensing ion/H+ antiporters acidify the cytoplasm by exporting
-          K+ or Na+ in exchange for protons when the internal pH gets too high
-        notes: Supports Na(+)/H(+) antiporter subunit A in growth range phenotype
-          with numerical limits; UniProtKB:Q9RGZ5 (mrpA, Na(+)/H(+) antiporter subunit
-          A) in Alkalihalophilus pseudofirmus (strain ATCC BAA-2126 / JCM 17055 /
-          OF4) (Bacillus pseudofirmus) provides a verified protein exemplar.
+      - reference: DOI:10.1038/nrmicro2549
+        snippet: For pH homeostasis under alkaline conditions, active transport of
+          protons inward is a crucial adaptation, which usually involves activation
+          and transcriptional up-regulation of key cation/proton antiporters
+        notes: Supports Chaperone protein DnaK in growth range phenotype with numerical
+          limits; UniProtKB:P0A6Y8 (dnaK, Chaperone protein DnaK) in Escherichia coli
+          (strain K12) provides a verified protein exemplar.
   edges:
   - subject: numerical_environmental_axis
     predicate: defines
@@ -268,17 +267,16 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: growth_range_phenotype_trait
-    description: Na(+)/H(+) antiporter subunit A (mrpA, UniProtKB:Q9RGZ5) contributes
-      to growth range phenotype with numerical limits (associated with antiporters,
-      cytoplasm, exporting).
+    description: Chaperone protein DnaK (dnaK, UniProtKB:P0A6Y8) contributes to growth
+      range phenotype with numerical limits.
     evidence:
-    - reference: DOI:10.1093/femsre/fuad033
-      snippet: Proton-sensing ion/H+ antiporters acidify the cytoplasm by exporting
-        K+ or Na+ in exchange for protons when the internal pH gets too high
-      notes: Supports the functional association between Na(+)/H(+) antiporter subunit
-        A (UniProtKB:Q9RGZ5 in Alkalihalophilus pseudofirmus (strain ATCC BAA-2126
-        / JCM 17055 / OF4) (Bacillus pseudofirmus)) and growth range phenotype with
-        numerical limits.
+    - reference: DOI:10.1038/nrmicro2549
+      snippet: For pH homeostasis under alkaline conditions, active transport of protons
+        inward is a crucial adaptation, which usually involves activation and transcriptional
+        up-regulation of key cation/proton antiporters
+      notes: Supports the functional association between Chaperone protein DnaK (UniProtKB:P0A6Y8
+        in Escherichia coli (strain K12)) and growth range phenotype with numerical
+        limits.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.847733+00:00'
   curator: seed_from_metpo
@@ -359,6 +357,6 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    growth_range_phenotype_with_numerical_limits_protein_component with UniProtKB:Q9RGZ5
-    (mrpA) exemplar.'
+    growth_range_phenotype_with_numerical_limits_protein_component with UniProtKB:P0A6Y8
+    (dnaK) exemplar.'
   llm_assisted: true

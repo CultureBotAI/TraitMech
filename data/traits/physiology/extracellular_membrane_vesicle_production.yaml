@@ -114,18 +114,17 @@ curation_history:
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph extracellular_membrane_vesicle_production_graph
     with GENE_OR_PROTEIN node extracellular_membrane_vesicle_production_protein_component
-    and UniProtKB:Q9HVD1 exemplar.'
+    and UniProtKB:P0A910 exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: extracellular_membrane_vesicle_production_graph
   title: Protein component associated with extracellular membrane vesicle production
-  description: Literature-backed association between Lipid A deacylase PagL (UniProtKB:Q9HVD1)
+  description: Literature-backed association between Outer membrane protein A (UniProtKB:P0A910)
     and extracellular membrane vesicle production.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q9HVD1 in Pseudomonas
-    aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228
-    / 1C / PRS 101 / PAO1)) associated with extracellular membrane vesicle production
-    while full multi-step mechanistic curation remains future work.
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P0A910 in Escherichia
+    coli (strain K12)) associated with extracellular membrane vesicle production while
+    full multi-step mechanistic curation remains future work.
   nodes:
   - node_id: extracellular_membrane_vesicle_production_trait
     label: extracellular membrane vesicle production
@@ -134,51 +133,47 @@ causal_graphs:
     description: A physiological phenotype in which microbial cells give rise to closed,
       cell-derived lipid-membrane vesicles in the extracellular space.
   - node_id: extracellular_membrane_vesicle_production_protein_component
-    label: Lipid A deacylase PagL
+    label: Outer membrane protein A
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Lipid A deacylase PagL) associated with extracellular
+    description: Protein component (Outer membrane protein A) associated with extracellular
       membrane vesicle production.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - pagL
+    - ompA
     protein_examples:
-    - uniprot_id: UniProtKB:Q9HVD1
-      protein_label: Lipid A deacylase PagL
-      gene_symbol: pagL
-      taxon_id: NCBITaxon:208964
-      taxon_label: Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116
-        / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)
+    - uniprot_id: UniProtKB:P0A910
+      protein_label: Outer membrane protein A
+      gene_symbol: ompA
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
-      proteome_id: UP000002438
+      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 108
+      entry_version: 162
       sequence_version: 1
-      role: Characteristic protein component (pagL, Lipid A deacylase PagL) associated
-        with extracellular membrane vesicle production in Pseudomonas aeruginosa (strain
-        ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101
-        / PAO1).
+      role: Characteristic protein component (ompA, Outer membrane protein A) associated
+        with extracellular membrane vesicle production in Escherichia coli (strain
+        K12).
       evidence:
       - reference: DOI:10.1038/s41467-017-00492-w
         snippet: Through these openings, cytoplasmic membrane material protrudes into
           the extracellular space and is released as MVs.
-        notes: Supports Lipid A deacylase PagL in extracellular membrane vesicle production;
-          UniProtKB:Q9HVD1 (pagL, Lipid A deacylase PagL) in Pseudomonas aeruginosa
-          (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C
-          / PRS 101 / PAO1) provides a verified protein exemplar.
+        notes: Supports Outer membrane protein A in extracellular membrane vesicle
+          production; UniProtKB:P0A910 (ompA, Outer membrane protein A) in Escherichia
+          coli (strain K12) provides a verified protein exemplar.
   edges:
   - subject: extracellular_membrane_vesicle_production_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: extracellular_membrane_vesicle_production_trait
-    description: Lipid A deacylase PagL (pagL, UniProtKB:Q9HVD1) contributes to extracellular
-      membrane vesicle production (associated with extracellular, cytoplasmic, protrudes).
+    description: Outer membrane protein A (ompA, UniProtKB:P0A910) contributes to
+      extracellular membrane vesicle production.
     evidence:
     - reference: DOI:10.1038/s41467-017-00492-w
       snippet: Through these openings, cytoplasmic membrane material protrudes into
         the extracellular space and is released as MVs.
-      notes: Supports the functional association between Lipid A deacylase PagL (UniProtKB:Q9HVD1
-        in Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM
-        14847 / LMG 12228 / 1C / PRS 101 / PAO1)) and extracellular membrane vesicle
-        production.
+      notes: Supports the functional association between Outer membrane protein A
+        (UniProtKB:P0A910 in Escherichia coli (strain K12)) and extracellular membrane
+        vesicle production.

@@ -84,27 +84,26 @@ causal_graphs:
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
   - node_id: clover_system_protein_component
-    label: Nucleoside triphosphatase NudI
+    label: Deoxyguanosinetriphosphate triphosphohydrolase
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Nucleoside triphosphatase NudI) associated with
-      Clover system.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Deoxyguanosinetriphosphate triphosphohydrolase)
+      associated with Clover system.
+    grounding: InterPro:IPR023293
     gene_symbols:
-    - nudI
+    - dgt
     protein_examples:
-    - uniprot_id: UniProtKB:B5BCQ0
-      protein_label: Nucleoside triphosphatase NudI
-      gene_symbol: nudI
-      taxon_id: NCBITaxon:554290
-      taxon_label: Salmonella paratyphi A (strain AKU_12601)
+    - uniprot_id: UniProtKB:P15723
+      protein_label: Deoxyguanosinetriphosphate triphosphohydrolase
+      gene_symbol: dgt
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
+      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 77
-      sequence_version: 1
-      role: Characteristic protein component (nudI, Nucleoside triphosphatase NudI)
-        associated with Clover system in Salmonella paratyphi A (strain AKU_12601).
+      entry_version: 204
+      sequence_version: 4
+      role: Characteristic protein component (dgt, Deoxyguanosinetriphosphate triphosphohydrolase)
+        associated with Clover system in Escherichia coli (strain K12).
       evidence:
       - reference: DOI:10.1038/s41586-026-10135-0
         snippet: Here we identify Clover, a bacterial anti-phage defence system that
@@ -112,9 +111,9 @@ causal_graphs:
           enzyme (CloA) that dynamically responds to both an activating phage cue
           and an inhibitory nucleotide immune signal produced by a partnering regulatory
           enzyme (CloB).
-        notes: Supports Nucleoside triphosphatase NudI in Clover system; UniProtKB:B5BCQ0
-          (nudI, Nucleoside triphosphatase NudI) in Salmonella paratyphi A (strain
-          AKU_12601) provides a verified protein exemplar.
+        notes: Supports Deoxyguanosinetriphosphate triphosphohydrolase in Clover system;
+          UniProtKB:P15723 (dgt, Deoxyguanosinetriphosphate triphosphohydrolase) in
+          Escherichia coli (strain K12) provides a verified protein exemplar.
   edges:
   - subject: clover_locus
     predicate: enables
@@ -198,16 +197,16 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: clover_system_trait
-    description: Nucleoside triphosphatase NudI (nudI, UniProtKB:B5BCQ0) contributes
-      to Clover system (associated with bacteriophage, interactions, conjugative).
+    description: Deoxyguanosinetriphosphate triphosphohydrolase (dgt, UniProtKB:P15723)
+      contributes to Clover system.
     evidence:
     - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
       snippet: 'SpbK | 10\.1371/journal\.pgen\.1010065 | Interactions between mobile
         genetic elements: An anti-phage gene in an integrative and conjugative element
         protects host cells from predation by a temperate bacteriophage'
-      notes: Supports the functional association between Nucleoside triphosphatase
-        NudI (UniProtKB:B5BCQ0 in Salmonella paratyphi A (strain AKU_12601)) and Clover
-        system.
+      notes: Supports the functional association between Deoxyguanosinetriphosphate
+        triphosphohydrolase (UniProtKB:P15723 in Escherichia coli (strain K12)) and
+        Clover system.
 discussions:
 - discussion_id: clover-defensefinder-model-gap
   prompt: Resolve Clover native host breadth, sensitive-phage breadth, profile-to-component
@@ -268,5 +267,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    clover_system_protein_component with UniProtKB:B5BCQ0 (nudI) exemplar.'
+    clover_system_protein_component with UniProtKB:P15723 (dgt) exemplar.'
   llm_assisted: true

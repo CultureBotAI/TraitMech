@@ -39,7 +39,7 @@ causal_graphs:
   scope_status: NONMECHANISTIC
   scope_notes: This record is a broad environmental or morphological classification
     spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
-    descriptor; contextual protein nodes do not receive token UniProt examples.
+    descriptor; contextual protein nodes include source-backed UniProtKB exemplars.
   nodes:
   - node_id: coccus_shaped_trait
     label: coccus shaped
@@ -118,23 +118,23 @@ causal_graphs:
       synthesis in cocci.
     grounding: GO:1990586
     protein_examples:
-    - uniprot_id: UniProtKB:P0ABG7
-      protein_label: Peptidoglycan glycosyltransferase MrdB
-      gene_symbol: mrdB
+    - uniprot_id: UniProtKB:P0AD68
+      protein_label: Peptidoglycan D,D-transpeptidase FtsI
+      gene_symbol: ftsI
       taxon_id: NCBITaxon:83333
       taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
       proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 133
+      entry_version: 156
       sequence_version: 1
-      role: Exemplar protein (mrdB, Peptidoglycan glycosyltransferase MrdB) representing
+      role: Exemplar protein (ftsI, Peptidoglycan D,D-transpeptidase FtsI) representing
         divisome complex in Escherichia coli (strain K12) for coccus shaped.
       evidence:
       - reference: DOI:10.1038/nrmicro3088
         snippet: spherical cocci synthesize peptidoglycan only at the division septum
-        notes: Supports divisome complex in coccus shaped; UniProtKB:P0ABG7 (mrdB,
-          Peptidoglycan glycosyltransferase MrdB) in Escherichia coli (strain K12)
+        notes: Supports divisome complex in coccus shaped; UniProtKB:P0AD68 (ftsI,
+          Peptidoglycan D,D-transpeptidase FtsI) in Escherichia coli (strain K12)
           provides a verified protein exemplar.
   - node_id: orthogonal_division_planes
     label: orthogonal division planes
@@ -318,6 +318,6 @@ curation_history:
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P0A031 (ftsZ)
     protein example to node ftsZ_division_ring; added UniProtKB:A0A0H2ZMF9 (pbp2a)
-    protein example to node penicillin_binding_proteins; added UniProtKB:P0ABG7 (mrdB)
+    protein example to node penicillin_binding_proteins; added UniProtKB:P0AD68 (ftsI)
     protein example to node divisome_complex.'
   llm_assisted: true

@@ -54,19 +54,18 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph lecithinase_activity_graph
-    with GENE_OR_PROTEIN node lecithinase_activity_protein_component and UniProtKB:Q9KVG8
+    with GENE_OR_PROTEIN node lecithinase_activity_protein_component and UniProtKB:Q9RF12
     exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: lecithinase_activity_graph
   title: Protein component associated with lecithinase activity
-  description: Literature-backed association between cGAMP-activated phospholipase
-    (UniProtKB:Q9KVG8) and lecithinase activity.
+  description: Literature-backed association between Phospholipase C (UniProtKB:Q9RF12)
+    and lecithinase activity.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q9KVG8 in Vibrio
-    cholerae serotype O1 (strain ATCC 39315 / El Tor Inaba N16961)) associated with
-    lecithinase activity while full multi-step mechanistic curation remains future
-    work.
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q9RF12 in Clostridium
+    perfringens) associated with lecithinase activity while full multi-step mechanistic
+    curation remains future work.
   nodes:
   - node_id: lecithinase_activity_trait
     label: lecithinase activity
@@ -75,47 +74,41 @@ causal_graphs:
     description: A physiological enzyme-activity phenotype in which a cell produces
       active lecithinases that hydrolyze lecithin or phosphatidylcholine.
   - node_id: lecithinase_activity_protein_component
-    label: cGAMP-activated phospholipase
+    label: Phospholipase C
     node_type: GENE_OR_PROTEIN
-    description: Protein component (cGAMP-activated phospholipase) associated with
-      lecithinase activity.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Phospholipase C) associated with lecithinase activity.
+    grounding: InterPro:IPR001024
     gene_symbols:
-    - capV
+    - plc
     protein_examples:
-    - uniprot_id: UniProtKB:Q9KVG8
-      protein_label: cGAMP-activated phospholipase
-      gene_symbol: capV
-      taxon_id: NCBITaxon:243277
-      taxon_label: Vibrio cholerae serotype O1 (strain ATCC 39315 / El Tor Inaba N16961)
+    - uniprot_id: UniProtKB:Q9RF12
+      protein_label: Phospholipase C
+      gene_symbol: plc
+      taxon_id: NCBITaxon:1502
+      taxon_label: Clostridium perfringens
       entry_status: REVIEWED
-      proteome_id: UP000000584
       retrieved_on: '2026-10-17'
-      entry_version: 106
+      entry_version: 125
       sequence_version: 1
-      role: Characteristic protein component (capV, cGAMP-activated phospholipase)
-        associated with lecithinase activity in Vibrio cholerae serotype O1 (strain
-        ATCC 39315 / El Tor Inaba N16961).
+      role: Characteristic protein component (plc, Phospholipase C) associated with
+        lecithinase activity in Clostridium perfringens.
       evidence:
       - reference: DOI:10.2147/IDR.S365254
         snippet: all tested isolates were positive for lecithinase reaction and showed
           opaque zone around colonies on egg yolk agar
-        notes: Supports cGAMP-activated phospholipase in lecithinase activity; UniProtKB:Q9KVG8
-          (capV, cGAMP-activated phospholipase) in Vibrio cholerae serotype O1 (strain
-          ATCC 39315 / El Tor Inaba N16961) provides a verified protein exemplar.
+        notes: Supports Phospholipase C in lecithinase activity; UniProtKB:Q9RF12
+          (plc, Phospholipase C) in Clostridium perfringens provides a verified protein
+          exemplar.
   edges:
   - subject: lecithinase_activity_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: lecithinase_activity_trait
-    description: cGAMP-activated phospholipase (capV, UniProtKB:Q9KVG8) contributes
-      to lecithinase activity (associated with lecithinase, colonies, isolates).
+    description: Phospholipase C (plc, UniProtKB:Q9RF12) contributes to lecithinase
+      activity.
     evidence:
     - reference: DOI:10.2147/IDR.S365254
       snippet: all tested isolates were positive for lecithinase reaction and showed
         opaque zone around colonies on egg yolk agar
-      notes: Supports the functional association between cGAMP-activated phospholipase
-        (UniProtKB:Q9KVG8 in Vibrio cholerae serotype O1 (strain ATCC 39315 / El Tor
-        Inaba N16961)) and lecithinase activity.
+      notes: Supports the functional association between Phospholipase C (UniProtKB:Q9RF12
+        in Clostridium perfringens) and lecithinase activity.

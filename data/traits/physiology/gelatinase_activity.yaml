@@ -112,7 +112,7 @@ causal_graphs:
     predicate_id: RO:0002326
     object: gelatinase_activity_trait
     description: Metalloprotease AprA (aprA, UniProtKB:Q1ID47) contributes to gelatinase
-      activity (associated with enterococcus, gelatinase, virulence).
+      activity.
     evidence:
     - reference: DOI:10.1128/JB.01311-07
       snippet: One of the well-studied virulence factors of Enterococcus faecalis

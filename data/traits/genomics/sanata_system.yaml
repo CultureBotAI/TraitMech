@@ -95,39 +95,35 @@ causal_graphs:
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
   - node_id: sanata_system_protein_component
-    label: Adenine-specific methyltransferase PglX
+    label: Endoribonuclease ToxN
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Adenine-specific methyltransferase PglX) associated
-      with SanaTA system.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Endoribonuclease ToxN) associated with SanaTA
+      system.
+    grounding: InterPro:IPR025911
     gene_symbols:
-    - pglX
+    - toxN
     protein_examples:
-    - uniprot_id: UniProtKB:Q8CJM2
-      protein_label: Adenine-specific methyltransferase PglX
-      gene_symbol: pglX
-      taxon_id: NCBITaxon:100226
-      taxon_label: Streptomyces coelicolor (strain ATCC BAA-471 / A3(2) / M145)
+    - uniprot_id: UniProtKB:B8X8Z0
+      protein_label: Endoribonuclease ToxN
+      gene_symbol: toxN
+      taxon_id: NCBITaxon:29471
+      taxon_label: Pectobacterium atrosepticum (Erwinia carotovora subsp. atroseptica)
       entry_status: REVIEWED
-      proteome_id: UP000001973
       retrieved_on: '2026-10-17'
-      entry_version: 102
+      entry_version: 47
       sequence_version: 1
-      role: Characteristic protein component (pglX, Adenine-specific methyltransferase
-        PglX) associated with SanaTA system in Streptomyces coelicolor (strain ATCC
-        BAA-471 / A3(2) / M145).
+      role: Characteristic protein component (toxN, Endoribonuclease ToxN) associated
+        with SanaTA system in Pectobacterium atrosepticum (Erwinia carotovora subsp.
+        atroseptica).
       evidence:
       - reference: PMID:23478446
         snippet: Since the sanaTA system provides resistance to the T7Δ4.5 mutant
           phage but not to the WT T7 phage, we hypothesized that the 4.5 gene codes
           for an anti-defense mechanism that overcomes the abortive infection imposed
           by the TA system.
-        notes: Supports Adenine-specific methyltransferase PglX in SanaTA system;
-          UniProtKB:Q8CJM2 (pglX, Adenine-specific methyltransferase PglX) in Streptomyces
-          coelicolor (strain ATCC BAA-471 / A3(2) / M145) provides a verified protein
-          exemplar.
+        notes: Supports Endoribonuclease ToxN in SanaTA system; UniProtKB:B8X8Z0 (toxN,
+          Endoribonuclease ToxN) in Pectobacterium atrosepticum (Erwinia carotovora
+          subsp. atroseptica) provides a verified protein exemplar.
   edges:
   - subject: sanata_locus
     predicate: contributes to
@@ -194,8 +190,8 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: sanata_system_trait
-    description: Adenine-specific methyltransferase PglX (pglX, UniProtKB:Q8CJM2)
-      contributes to SanaTA system (associated with trimmed, custom, einsi).
+    description: Endoribonuclease ToxN (toxN, UniProtKB:B8X8Z0) contributes to SanaTA
+      system.
     evidence:
     - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
       snippet: '| RM_Type_IIG__Type_IIG_1 | | RM_Type_IIG | Custom | 300 | | RM_Type_IIG__Type_IIG_2
@@ -205,9 +201,9 @@ causal_graphs:
         | | RM_Type_IIG | Custom | 300 | | RM_Type_IIG__Type_IIG_FAM_1.einsi_trimmed
         | | RM_Type_IIG | Custom | 300 | | RM_Type_IIG__Type_IIG_FAM_2.einsi_trimmed
         | | RM_Type_IIG | Custom | 300 |'
-      notes: Supports the functional association between Adenine-specific methyltransferase
-        PglX (UniProtKB:Q8CJM2 in Streptomyces coelicolor (strain ATCC BAA-471 / A3(2)
-        / M145)) and SanaTA system.
+      notes: Supports the functional association between Endoribonuclease ToxN (UniProtKB:B8X8Z0
+        in Pectobacterium atrosepticum (Erwinia carotovora subsp. atroseptica)) and
+        SanaTA system.
 discussions:
 - discussion_id: sanata-host-trigger-profile-gap
   prompt: Resolve SanaTA native host breadth, SanaA/SanaT molecular activities, T7
@@ -257,5 +253,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    sanata_system_protein_component with UniProtKB:Q8CJM2 (pglX) exemplar.'
+    sanata_system_protein_component with UniProtKB:B8X8Z0 (toxN) exemplar.'
   llm_assisted: true

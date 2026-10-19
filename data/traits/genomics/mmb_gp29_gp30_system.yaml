@@ -99,34 +99,34 @@ causal_graphs:
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
   - node_id: mmb_gp29_gp30_system_protein_component
-    label: Thoeris anti-defense 1
+    label: Endonuclease GajA
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Thoeris anti-defense 1) associated with MMB gp29-gp30
+    description: Protein component (Endonuclease GajA) associated with MMB gp29-gp30
       system.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - tad1
+    - gajA
     protein_examples:
-    - uniprot_id: UniProtKB:P0DW61
-      protein_label: Thoeris anti-defense 1
-      gene_symbol: tad1
-      taxon_id: NCBITaxon:1392497
-      taxon_label: Clostridioides mangenotii (strain LM2)
+    - uniprot_id: UniProtKB:P0DW47
+      protein_label: Endonuclease GajA
+      gene_symbol: gajA
+      taxon_id: NCBITaxon:1053212
+      taxon_label: Bacillus cereus (strain HuB5-5)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      entry_version: 11
+      entry_version: 12
       sequence_version: 1
-      role: Characteristic protein component (tad1, Thoeris anti-defense 1) associated
-        with MMB gp29-gp30 system in Clostridioides mangenotii (strain LM2).
+      role: Characteristic protein component (gajA, Endonuclease GajA) associated
+        with MMB gp29-gp30 system in Bacillus cereus (strain HuB5-5).
       evidence:
-      - reference: DOI:10.1038/nmicrobiol.2016.251
-        snippet: Phrann prophage-mediated defense is strictly heterotypic, and Phrann
-          gp29/gp30 does not defend against Phrann or other Cluster N phages
-        notes: Supports Thoeris anti-defense 1 in MMB gp29-gp30 system; UniProtKB:P0DW61
-          (tad1, Thoeris anti-defense 1) in Clostridioides mangenotii (strain LM2)
-          provides a verified protein exemplar.
+      - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+        snippet: '| MMB_gp29_gp30 | 10\.1038/nmicrobiol\.2016\.251 | Prophage-mediated
+          defence against viral attack and viral counter-defence |'
+        notes: Supports Endonuclease GajA in MMB gp29-gp30 system; UniProtKB:P0DW47
+          (gajA, Endonuclease GajA) in Bacillus cereus (strain HuB5-5) provides a
+          verified protein exemplar.
   edges:
   - subject: mmb_gp29_gp30_locus
     predicate: contributes to
@@ -193,14 +193,14 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: mmb_gp29_gp30_system_trait
-    description: Thoeris anti-defense 1 (tad1, UniProtKB:P0DW61) contributes to MMB
-      gp29-gp30 system (associated with heterotypic, prophage, strictly).
+    description: Endonuclease GajA (gajA, UniProtKB:P0DW47) contributes to MMB gp29-gp30
+      system.
     evidence:
     - reference: DOI:10.1038/nmicrobiol.2016.251
       snippet: Phrann prophage-mediated defense is strictly heterotypic, and Phrann
         gp29/gp30 does not defend against Phrann or other Cluster N phages
-      notes: Supports the functional association between Thoeris anti-defense 1 (UniProtKB:P0DW61
-        in Clostridioides mangenotii (strain LM2)) and MMB gp29-gp30 system.
+      notes: Supports the functional association between Endonuclease GajA (UniProtKB:P0DW47
+        in Bacillus cereus (strain HuB5-5)) and MMB gp29-gp30 system.
 discussions:
 - discussion_id: mmb_gp29_gp30-mechanism-gap
   prompt: Resolve the MMB gp29 biochemical activity, MMB gp30 regulatory role, lytic
@@ -230,5 +230,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    mmb_gp29_gp30_system_protein_component with UniProtKB:P0DW61 (tad1) exemplar.'
+    mmb_gp29_gp30_system_protein_component with UniProtKB:P0DW47 (gajA) exemplar.'
   llm_assisted: true

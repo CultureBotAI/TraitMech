@@ -43,6 +43,9 @@ def _before() -> dict:
     graph["edges"] = [
         copy.deepcopy(after_edges_by_key.get(_edge_key(edge), edge)) for edge in graph["edges"]
     ]
+    doc["curation_history"] = [
+        e for e in doc.get("curation_history", []) if e.get("action") != "CURATE_PROTEIN_TAXON_EXAMPLE"
+    ]
     return doc
 
 
@@ -59,7 +62,7 @@ def test_review_adds_snippets_and_grounds_cell_length_small_edges():
     nodes = {node["node_id"]: node for node in graph["nodes"]}
     by_key = {_edge_key(edge): edge for edge in graph["edges"]}
 
-    assert any(event.get("action") == ACTION for event in doc["curation_history"])
+    assert doc["curation_history"][-1]["action"] == ACTION
     assert nodes["ftsz_abundance"]["node_type"] == "QUALITY"
     assert "grounding_status" not in nodes["ftsz_abundance"]
     assert {

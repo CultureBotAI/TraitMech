@@ -103,40 +103,36 @@ causal_graphs:
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
   - node_id: armada_system_protein_component
-    label: Adenine-specific methyltransferase PglX
+    label: DISARM protein DrmC
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Adenine-specific methyltransferase PglX) associated
-      with ARMADA system.
+    description: Protein component (DISARM protein DrmC) associated with ARMADA system.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - pglX
+    - drmC
     protein_examples:
-    - uniprot_id: UniProtKB:Q8CJM2
-      protein_label: Adenine-specific methyltransferase PglX
-      gene_symbol: pglX
-      taxon_id: NCBITaxon:100226
-      taxon_label: Streptomyces coelicolor (strain ATCC BAA-471 / A3(2) / M145)
+    - uniprot_id: UniProtKB:P0DW07
+      protein_label: DISARM protein DrmC
+      gene_symbol: drmC
+      taxon_id: NCBITaxon:766760
+      taxon_label: Bacillus paralicheniformis (strain ATCC 9945a / NCIMB 11709 / CD-2)
       entry_status: REVIEWED
-      proteome_id: UP000001973
       retrieved_on: '2026-10-17'
-      entry_version: 102
+      entry_version: 12
       sequence_version: 1
-      role: Characteristic protein component (pglX, Adenine-specific methyltransferase
-        PglX) associated with ARMADA system in Streptomyces coelicolor (strain ATCC
-        BAA-471 / A3(2) / M145).
+      role: Characteristic protein component (drmC, DISARM protein DrmC) associated
+        with ARMADA system in Bacillus paralicheniformis (strain ATCC 9945a / NCIMB
+        11709 / CD-2).
       evidence:
-      - reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC12458937/
-        snippet: Screening 66 phages that could form plaques on the double-deletion
-          strain showed that the strain carrying only Druantia III exhibited at least
-          modest protection (<0.01 EOP or <0.5 SFC) against 3 phages, whereas the
-          strain carrying ARMADA Type II exhibited a much broader range of immunity,
-          with at least modest protection observed against 30 phages.
-        notes: Supports Adenine-specific methyltransferase PglX in ARMADA system;
-          UniProtKB:Q8CJM2 (pglX, Adenine-specific methyltransferase PglX) in Streptomyces
-          coelicolor (strain ATCC BAA-471 / A3(2) / M145) provides a verified protein
-          exemplar.
+      - reference: DOI:10.1016/j.chom.2026.05.015
+        snippet: Through comprehensive phylogenetic and structural analyses of YprA-like
+          helicases, we identify several major clades, which define distinct defense
+          systems including a broad class we call ARMADA (disARM-related antiviral
+          defense array).
+        notes: Supports DISARM protein DrmC in ARMADA system; UniProtKB:P0DW07 (drmC,
+          DISARM protein DrmC) in Bacillus paralicheniformis (strain ATCC 9945a /
+          NCIMB 11709 / CD-2) provides a verified protein exemplar.
   edges:
   - subject: armada_locus
     predicate: contributes to
@@ -199,15 +195,16 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: armada_system_trait
-    description: Adenine-specific methyltransferase PglX (pglX, UniProtKB:Q8CJM2)
-      contributes to ARMADA system (associated with separated, subclades, supported).
+    description: DISARM protein DrmC (drmC, UniProtKB:P0DW07) contributes to ARMADA
+      system.
     evidence:
     - reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC12458937/
-      snippet: The ARMADA clade splits into two well-separated, strongly supported
-        subclades which we denote Type I and Type II.
-      notes: Supports the functional association between Adenine-specific methyltransferase
-        PglX (UniProtKB:Q8CJM2 in Streptomyces coelicolor (strain ATCC BAA-471 / A3(2)
-        / M145)) and ARMADA system.
+      snippet: The two largest uncharacterized YprA-like clades encompass a distinct
+        set of related operons that, in addition to the YprA homologs, share two other
+        genes with DISARM Class I systems
+      notes: Supports the functional association between DISARM protein DrmC (UniProtKB:P0DW07
+        in Bacillus paralicheniformis (strain ATCC 9945a / NCIMB 11709 / CD-2)) and
+        ARMADA system.
 discussions:
 - discussion_id: armada-subtype-model-and-mechanism-gap
   prompt: Resolve exact ARMADA Type I and Type II boundaries, DefenseFinder HMM/rules
@@ -271,5 +268,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    armada_system_protein_component with UniProtKB:Q8CJM2 (pglX) exemplar.'
+    armada_system_protein_component with UniProtKB:P0DW07 (drmC) exemplar.'
   llm_assisted: true

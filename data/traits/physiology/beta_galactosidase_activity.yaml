@@ -109,7 +109,7 @@ causal_graphs:
     predicate_id: RO:0002326
     object: beta_galactosidase_activity_trait
     description: Beta-galactosidase (lacZ, UniProtKB:P00722) contributes to beta-galactosidase
-      activity (associated with galactosidase, glycosidic, hydrolysis).
+      activity.
     evidence:
     - reference: DOI:10.3389/fmicb.2021.742300
       snippet: β-Galactosidase (EC 3.2.1.23), also referred to as lactase, is an important

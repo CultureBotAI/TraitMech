@@ -63,9 +63,9 @@
 
     <div class="card causal-graph-card">
       <h2>Protein component associated with catalase test</h2>
-      <p class="meta">Literature-backed association between Catalase-peroxidase (UniProtKB:Q9R708) and catalase test.</p>
+      <p class="meta">Literature-backed association between Catalase (UniProtKB:P30266) and catalase test.</p>
 
-      <p class="graph-scope"><code>NONMECHANISTIC</code> · Captures a source-backed protein exemplar (UniProtKB:Q9R708 in Agrobacterium tumefaciens) associated with catalase test while full multi-step mechanistic curation remains future work.</p>
+      <p class="graph-scope"><code>NONMECHANISTIC</code> · Captures a source-backed protein exemplar (UniProtKB:P30266 in Alkalihalophilus pseudofirmus (strain ATCC BAA-2126 / JCM 17055 / OF4) (Bacillus pseudofirmus)) associated with catalase test while full multi-step mechanistic curation remains future work.</p>
 
 
       <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
@@ -84,17 +84,17 @@
         <ul>
 
           <li id="pathograph-1-edge-1">
-            <strong>Catalase-peroxidase</strong>
+            <strong>Catalase</strong>
             <span class="edge-predicate">contributes to</span>
             <strong>catalase test</strong>
             <code>RO:0002326</code>
-            <p>Catalase-peroxidase (katG, UniProtKB:Q9R708) contributes to catalase test (associated with facilitates, detection, bacteria).</p>
+            <p>Catalase (katE, UniProtKB:P30266) contributes to catalase test.</p>
             <ul>
 
               <li>
                 <a href="https://asm.org/protocols/catalase-test-protocol" rel="nofollow noreferrer"><code>https://asm.org/protocols/catalase-test-protocol</code></a>
                 <span class="evidence-snippet">The catalase test facilitates the detection of this enzyme in bacteria</span>
-                <span class="meta">Supports the functional association between Catalase-peroxidase (UniProtKB:Q9R708 in Agrobacterium tumefaciens) and catalase test.</span>
+                <span class="meta">Supports the functional association between Catalase (UniProtKB:P30266 in Alkalihalophilus pseudofirmus (strain ATCC BAA-2126 / JCM 17055 / OF4) (Bacillus pseudofirmus)) and catalase test.</span>
               </li>
 
             </ul>
@@ -115,29 +115,29 @@
             <tbody>
 
               <tr>
-                <td>Catalase-peroxidase</td>
+                <td>Catalase</td>
                 <td>
 
-                  <a href="https://www.uniprot.org/uniprotkb/Q9R708/entry" rel="nofollow noreferrer"><code>UniProtKB:Q9R708</code></a>
-                  <br>Catalase-peroxidase <span class="meta">(katG)</span>
+                  <a href="https://www.uniprot.org/uniprotkb/P30266/entry" rel="nofollow noreferrer"><code>UniProtKB:P30266</code></a>
+                  <br>Catalase <span class="meta">(katE)</span>
                 </td>
                 <td>
 
-                  <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=358" rel="nofollow noreferrer">Agrobacterium tumefaciens</a>
-                  <br><code>NCBITaxon:358</code>
+                  <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=398511" rel="nofollow noreferrer">Alkalihalophilus pseudofirmus (strain ATCC BAA-2126 / JCM 17055 / OF4) (Bacillus pseudofirmus)</a>
+                  <br><code>NCBITaxon:398511</code>
                 </td>
                 <td>
                   <code>REVIEWED</code><br>
-                  <span class="meta">retrieved 2026-10-17 · entry v101 · sequence v1</span>
+                  <span class="meta">retrieved 2026-10-17 · entry v129 · sequence v3</span>
                 </td>
                 <td>
-                  <p>Characteristic protein component (katG, Catalase-peroxidase) associated with catalase test in Agrobacterium tumefaciens.</p>
+                  <p>Characteristic protein component (katE, Catalase) associated with catalase test in Alkalihalophilus pseudofirmus (strain ATCC BAA-2126 / JCM 17055 / OF4) (Bacillus pseudofirmus).</p>
                   <ul>
 
                     <li>
                       <a href="https://asm.org/protocols/catalase-test-protocol" rel="nofollow noreferrer"><code>https://asm.org/protocols/catalase-test-protocol</code></a>
                       <span class="evidence-snippet">The catalase test facilitates the detection of this enzyme in bacteria</span>
-                      <span class="meta">Supports Catalase-peroxidase in catalase test; UniProtKB:Q9R708 (katG, Catalase-peroxidase) in Agrobacterium tumefaciens provides a verified protein exemplar.</span>
+                      <span class="meta">Supports Catalase in catalase test; UniProtKB:P30266 (katE, Catalase) in Alkalihalophilus pseudofirmus (strain ATCC BAA-2126 / JCM 17055 / OF4) (Bacillus pseudofirmus) provides a verified protein exemplar.</span>
                     </li>
 
                   </ul>
@@ -244,8 +244,14 @@
 
         <li>
           <time>2026-10-17T09:00:00Z</time> ·
+          <strong>REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP</strong> · codex
+          <p class="changes">Reviewed canonical_examples status alongside NONMECHANISTIC protein exemplar graph for catalase test; isolate-level canonical example remains deferred pending explicit strain-level literature.</p>
+        </li>
+
+        <li>
+          <time>2026-10-17T09:00:00Z</time> ·
           <strong>CURATE_PROTEIN_TAXON_EXAMPLE</strong> · codex
-          <p class="changes">Curated verified UniProtKB protein_examples: added causal graph catalase_test_graph with GENE_OR_PROTEIN node catalase_test_protein_component and UniProtKB:Q9R708 exemplar.</p>
+          <p class="changes">Curated verified UniProtKB protein_examples: added causal graph catalase_test_graph with GENE_OR_PROTEIN node catalase_test_protein_component and UniProtKB:P30266 exemplar.</p>
         </li>
 
       </ol>
@@ -624,7 +630,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Literature-backed association between Catalase-peroxidase (UniProtKB:Q9R708) and catalase test.", "edges": [{"description": "Catalase-peroxidase (katG, UniProtKB:Q9R708) contributes to catalase test (associated with facilitates, detection, bacteria).", "evidence": [{"notes": "Supports the functional association between Catalase-peroxidase (UniProtKB:Q9R708 in Agrobacterium tumefaciens) and catalase test.", "reference": "https://asm.org/protocols/catalase-test-protocol", "snippet": "The catalase test facilitates the detection of this enzyme in bacteria"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "catalase_test_protein_component", "target": "catalase_test_trait"}], "evidence_rows": [{"description": "Catalase-peroxidase (katG, UniProtKB:Q9R708) contributes to catalase test (associated with facilitates, detection, bacteria).", "edge_id": "edge-1", "evidence": [{"notes": "Supports the functional association between Catalase-peroxidase (UniProtKB:Q9R708 in Agrobacterium tumefaciens) and catalase test.", "reference": "https://asm.org/protocols/catalase-test-protocol", "snippet": "The catalase test facilitates the detection of this enzyme in bacteria"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Catalase-peroxidase", "target": "catalase test"}], "graph_id": "catalase_test_graph", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Protein component (Catalase-peroxidase) associated with catalase test.", "grounding": null, "id": "catalase_test_protein_component", "is_orphan": false, "label": "Catalase-peroxidase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 101, "evidence": [{"notes": "Supports Catalase-peroxidase in catalase test; UniProtKB:Q9R708 (katG, Catalase-peroxidase) in Agrobacterium tumefaciens provides a verified protein exemplar.", "reference": "https://asm.org/protocols/catalase-test-protocol", "snippet": "The catalase test facilitates the detection of this enzyme in bacteria"}], "gene_symbol": "katG", "protein_label": "Catalase-peroxidase", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (katG, Catalase-peroxidase) associated with catalase test in Agrobacterium tumefaciens.", "sequence_version": 1, "taxon_id": "NCBITaxon:358", "taxon_label": "Agrobacterium tumefaciens", "uniprot_id": "UniProtKB:Q9R708"}], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "A biochemical test that detects catalase enzyme activity by exposing cells to hydrogen peroxide and observing for visible bubbling. The test outcome (positive or negative) is captured by its child classes; this class itself does not assert that the organism has catalase activity.", "grounding": "METPO:1007080", "id": "catalase_test_trait", "is_orphan": false, "label": "catalase test", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 101, "evidence": [{"notes": "Supports Catalase-peroxidase in catalase test; UniProtKB:Q9R708 (katG, Catalase-peroxidase) in Agrobacterium tumefaciens provides a verified protein exemplar.", "reference": "https://asm.org/protocols/catalase-test-protocol", "snippet": "The catalase test facilitates the detection of this enzyme in bacteria"}], "gene_symbol": "katG", "node_id": "catalase_test_protein_component", "node_label": "Catalase-peroxidase", "protein_label": "Catalase-peroxidase", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (katG, Catalase-peroxidase) associated with catalase test in Agrobacterium tumefaciens.", "sequence_version": 1, "taxon_id": "NCBITaxon:358", "taxon_label": "Agrobacterium tumefaciens", "uniprot_id": "UniProtKB:Q9R708"}], "scope_notes": "Captures a source-backed protein exemplar (UniProtKB:Q9R708 in Agrobacterium tumefaciens) associated with catalase test while full multi-step mechanistic curation remains future work.", "scope_status": "NONMECHANISTIC", "title": "Protein component associated with catalase test"}];
+  var graphs = [{"description": "Literature-backed association between Catalase (UniProtKB:P30266) and catalase test.", "edges": [{"description": "Catalase (katE, UniProtKB:P30266) contributes to catalase test.", "evidence": [{"notes": "Supports the functional association between Catalase (UniProtKB:P30266 in Alkalihalophilus pseudofirmus (strain ATCC BAA-2126 / JCM 17055 / OF4) (Bacillus pseudofirmus)) and catalase test.", "reference": "https://asm.org/protocols/catalase-test-protocol", "snippet": "The catalase test facilitates the detection of this enzyme in bacteria"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "catalase_test_protein_component", "target": "catalase_test_trait"}], "evidence_rows": [{"description": "Catalase (katE, UniProtKB:P30266) contributes to catalase test.", "edge_id": "edge-1", "evidence": [{"notes": "Supports the functional association between Catalase (UniProtKB:P30266 in Alkalihalophilus pseudofirmus (strain ATCC BAA-2126 / JCM 17055 / OF4) (Bacillus pseudofirmus)) and catalase test.", "reference": "https://asm.org/protocols/catalase-test-protocol", "snippet": "The catalase test facilitates the detection of this enzyme in bacteria"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Catalase", "target": "catalase test"}], "graph_id": "catalase_test_graph", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Protein component (Catalase) associated with catalase test.", "grounding": "GO:0004096", "id": "catalase_test_protein_component", "is_orphan": false, "label": "Catalase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 129, "evidence": [{"notes": "Supports Catalase in catalase test; UniProtKB:P30266 (katE, Catalase) in Alkalihalophilus pseudofirmus (strain ATCC BAA-2126 / JCM 17055 / OF4) (Bacillus pseudofirmus) provides a verified protein exemplar.", "reference": "https://asm.org/protocols/catalase-test-protocol", "snippet": "The catalase test facilitates the detection of this enzyme in bacteria"}], "gene_symbol": "katE", "protein_label": "Catalase", "proteome_id": "UP000001544", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (katE, Catalase) associated with catalase test in Alkalihalophilus pseudofirmus (strain ATCC BAA-2126 / JCM 17055 / OF4) (Bacillus pseudofirmus).", "sequence_version": 3, "taxon_id": "NCBITaxon:398511", "taxon_label": "Alkalihalophilus pseudofirmus (strain ATCC BAA-2126 / JCM 17055 / OF4) (Bacillus pseudofirmus)", "uniprot_id": "UniProtKB:P30266"}], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "A biochemical test that detects catalase enzyme activity by exposing cells to hydrogen peroxide and observing for visible bubbling. The test outcome (positive or negative) is captured by its child classes; this class itself does not assert that the organism has catalase activity.", "grounding": "METPO:1007080", "id": "catalase_test_trait", "is_orphan": false, "label": "catalase test", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 129, "evidence": [{"notes": "Supports Catalase in catalase test; UniProtKB:P30266 (katE, Catalase) in Alkalihalophilus pseudofirmus (strain ATCC BAA-2126 / JCM 17055 / OF4) (Bacillus pseudofirmus) provides a verified protein exemplar.", "reference": "https://asm.org/protocols/catalase-test-protocol", "snippet": "The catalase test facilitates the detection of this enzyme in bacteria"}], "gene_symbol": "katE", "node_id": "catalase_test_protein_component", "node_label": "Catalase", "protein_label": "Catalase", "proteome_id": "UP000001544", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (katE, Catalase) associated with catalase test in Alkalihalophilus pseudofirmus (strain ATCC BAA-2126 / JCM 17055 / OF4) (Bacillus pseudofirmus).", "sequence_version": 3, "taxon_id": "NCBITaxon:398511", "taxon_label": "Alkalihalophilus pseudofirmus (strain ATCC BAA-2126 / JCM 17055 / OF4) (Bacillus pseudofirmus)", "uniprot_id": "UniProtKB:P30266"}], "scope_notes": "Captures a source-backed protein exemplar (UniProtKB:P30266 in Alkalihalophilus pseudofirmus (strain ATCC BAA-2126 / JCM 17055 / OF4) (Bacillus pseudofirmus)) associated with catalase test while full multi-step mechanistic curation remains future work.", "scope_status": "NONMECHANISTIC", "title": "Protein component associated with catalase test"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });

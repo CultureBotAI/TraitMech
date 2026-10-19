@@ -111,35 +111,34 @@ causal_graphs:
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
   - node_id: rst_hydrolase_3tm_system_protein_component
-    label: Phage T7 exclusion protein
+    label: Endonuclease GajA
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Phage T7 exclusion protein) associated with Rst_Hydrolase-3Tm
+    description: Protein component (Endonuclease GajA) associated with Rst_Hydrolase-3Tm
       system.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - pifA
+    - gajA
     protein_examples:
-    - uniprot_id: UniProtKB:P96329
-      protein_label: Phage T7 exclusion protein
-      gene_symbol: pifA
-      taxon_id: NCBITaxon:83333
-      taxon_label: Escherichia coli (strain K12)
+    - uniprot_id: UniProtKB:P0DW47
+      protein_label: Endonuclease GajA
+      gene_symbol: gajA
+      taxon_id: NCBITaxon:1053212
+      taxon_label: Bacillus cereus (strain HuB5-5)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      entry_version: 96
-      sequence_version: 2
-      role: Characteristic protein component (pifA, Phage T7 exclusion protein) associated
-        with Rst_Hydrolase-3Tm system in Escherichia coli (strain K12).
+      entry_version: 12
+      sequence_version: 1
+      role: Characteristic protein component (gajA, Endonuclease GajA) associated
+        with Rst_Hydrolase-3Tm system in Bacillus cereus (strain HuB5-5).
       evidence:
-      - reference: DOI:10.1016/j.chom.2022.02.018
-        snippet: 'two systems that specifically inhibit the growth of phage T7: an
-          ATP-dependent helicase associated with a DUF2290 protein and a HAD-like
-          hydrolase associated with a transmembrane protein'
-        notes: Supports Phage T7 exclusion protein in Rst_Hydrolase-3Tm system; UniProtKB:P96329
-          (pifA, Phage T7 exclusion protein) in Escherichia coli (strain K12) provides
-          a verified protein exemplar.
+      - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+        snippet: Rst_Hydrolase-3Tm | 10\.1101/2021\.01\.21\.427644 | Prophage-encoded
+          hotspots of bacterial immune systems
+        notes: Supports Endonuclease GajA in Rst_Hydrolase-3Tm system; UniProtKB:P0DW47
+          (gajA, Endonuclease GajA) in Bacillus cereus (strain HuB5-5) provides a
+          verified protein exemplar.
   edges:
   - subject: rst_hydrolase_3tm_locus
     predicate: contributes to
@@ -221,16 +220,15 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: rst_hydrolase_3tm_system_trait
-    description: Phage T7 exclusion protein (pifA, UniProtKB:P96329) contributes to
-      Rst_Hydrolase-3Tm system (associated with pectobacterium, hydrolase, versatile).
+    description: Endonuclease GajA (gajA, UniProtKB:P0DW47) contributes to Rst_Hydrolase-3Tm
+      system.
     evidence:
     - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/223cf269/content/3.defense-systems/rst_hydrolase-3tm.md
       snippet: The Rst_Hydrolase-Tm system in *Pectobacterium versatile* (GCF_003031305.1,
         NZ_CP024842) is composed of 2 proteins Hydrolase (WP_107333258.1) Hydrolase-Tm
         (WP_107333259.1)
-      notes: Supports the functional association between Phage T7 exclusion protein
-        (UniProtKB:P96329 in Escherichia coli (strain K12)) and Rst_Hydrolase-3Tm
-        system.
+      notes: Supports the functional association between Endonuclease GajA (UniProtKB:P0DW47
+        in Bacillus cereus (strain HuB5-5)) and Rst_Hydrolase-3Tm system.
 discussions:
 - discussion_id: rst-hydrolase-3tm-host-mechanism-gap
   prompt: Resolve Rst_Hydrolase-3Tm native host breadth, the Rst_Hydrolase-3Tm and
@@ -295,5 +293,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    rst_hydrolase_3tm_system_protein_component with UniProtKB:P96329 (pifA) exemplar.'
+    rst_hydrolase_3tm_system_protein_component with UniProtKB:P0DW47 (gajA) exemplar.'
   llm_assisted: true

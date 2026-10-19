@@ -55,27 +55,24 @@ causal_graphs:
     - crtN
     operon: crtOPQMN
     protein_examples:
-    - uniprot_id: UniProtKB:Q9RGZ5
-      protein_label: Na(+)/H(+) antiporter subunit A
-      gene_symbol: mrpA
-      taxon_id: NCBITaxon:398511
-      taxon_label: Alkalihalophilus pseudofirmus (strain ATCC BAA-2126 / JCM 17055
-        / OF4) (Bacillus pseudofirmus)
+    - uniprot_id: UniProtKB:Q5HCY8
+      protein_label: 4,4'-diapophytoene synthase
+      gene_symbol: crtM
+      taxon_id: NCBITaxon:93062
+      taxon_label: Staphylococcus aureus (strain COL)
       entry_status: REVIEWED
-      proteome_id: UP000001544
       retrieved_on: '2026-10-17'
-      entry_version: 115
-      sequence_version: 2
-      role: Exemplar protein (mrpA, Na(+)/H(+) antiporter subunit A) representing
-        CrtOPQMN staphyloxanthin enzyme module in Alkalihalophilus pseudofirmus (strain
-        ATCC BAA-2126 / JCM 17055 / OF4) (Bacillus pseudofirmus) for white pigmented.
+      entry_version: 110
+      sequence_version: 1
+      role: Exemplar protein (crtM, 4,4'-diapophytoene synthase) representing CrtOPQMN
+        staphyloxanthin enzyme module in Staphylococcus aureus (strain COL) for white
+        pigmented.
       evidence:
       - reference: DOI:10.2147/IDR.S49039
         snippet: white-colony phenotype actually lacked the crtOPQMN operon
         notes: Supports CrtOPQMN staphyloxanthin enzyme module in white pigmented;
-          UniProtKB:Q9RGZ5 (mrpA, Na(+)/H(+) antiporter subunit A) in Alkalihalophilus
-          pseudofirmus (strain ATCC BAA-2126 / JCM 17055 / OF4) (Bacillus pseudofirmus)
-          provides a verified protein exemplar.
+          UniProtKB:Q5HCY8 (crtM, 4,4'-diapophytoene synthase) in Staphylococcus aureus
+          (strain COL) provides a verified protein exemplar.
   - node_id: staphyloxanthin_biosynthesis
     label: staphyloxanthin biosynthesis
     node_type: BIOLOGICAL_PROCESS
@@ -394,7 +391,7 @@ curation_history:
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
-  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q9RGZ5 (mrpA)
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q5HCY8 (crtM)
     protein example to node staphyloxanthin_enzyme_module; added UniProtKB:P9WGI5
     (sigB) protein example to node sigB; added UniProtKB:Q8NVE6 (glmS) protein example
     to node glmS.'

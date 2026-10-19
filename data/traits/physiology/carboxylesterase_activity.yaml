@@ -53,18 +53,19 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph carboxylesterase_activity_graph
-    with GENE_OR_PROTEIN node carboxylesterase_activity_protein_component and UniProtKB:B5BHG7
+    with GENE_OR_PROTEIN node carboxylesterase_activity_protein_component and UniProtKB:O33407
     exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: carboxylesterase_activity_graph
   title: Protein component associated with carboxylesterase activity
-  description: Literature-backed association between Pimeloyl-[acyl-carrier protein]
-    methyl ester esterase (UniProtKB:B5BHG7) and carboxylesterase activity.
+  description: Literature-backed association between Esterase EstA (UniProtKB:O33407)
+    and carboxylesterase activity.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:B5BHG7 in Salmonella
-    paratyphi A (strain AKU_12601)) associated with carboxylesterase activity while
-    full multi-step mechanistic curation remains future work.
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:O33407 in Pseudomonas
+    aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228
+    / 1C / PRS 101 / PAO1)) associated with carboxylesterase activity while full multi-step
+    mechanistic curation remains future work.
   nodes:
   - node_id: carboxylesterase_activity_trait
     label: carboxylesterase activity
@@ -74,50 +75,49 @@ causal_graphs:
       active carboxylesterase enzymes that hydrolyze carboxylic esters to alcohols
       and carboxylates.
   - node_id: carboxylesterase_activity_protein_component
-    label: Pimeloyl-[acyl-carrier protein] methyl ester esterase
+    label: Esterase EstA
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Pimeloyl-[acyl-carrier protein] methyl ester esterase)
-      associated with carboxylesterase activity.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Esterase EstA) associated with carboxylesterase
+      activity.
+    grounding: InterPro:IPR005546
     gene_symbols:
-    - bioH
+    - estA
     protein_examples:
-    - uniprot_id: UniProtKB:B5BHG7
-      protein_label: Pimeloyl-[acyl-carrier protein] methyl ester esterase
-      gene_symbol: bioH
-      taxon_id: NCBITaxon:554290
-      taxon_label: Salmonella paratyphi A (strain AKU_12601)
+    - uniprot_id: UniProtKB:O33407
+      protein_label: Esterase EstA
+      gene_symbol: estA
+      taxon_id: NCBITaxon:208964
+      taxon_label: Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116
+        / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)
       entry_status: REVIEWED
+      proteome_id: UP000002438
       retrieved_on: '2026-10-17'
-      entry_version: 78
+      entry_version: 151
       sequence_version: 1
-      role: Characteristic protein component (bioH, Pimeloyl-[acyl-carrier protein]
-        methyl ester esterase) associated with carboxylesterase activity in Salmonella
-        paratyphi A (strain AKU_12601).
+      role: Characteristic protein component (estA, Esterase EstA) associated with
+        carboxylesterase activity in Pseudomonas aeruginosa (strain ATCC 15692 / DSM
+        22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1).
       evidence:
       - reference: DOI:10.1128/JCM.43.8.3713-3717.2005
         snippet: Alkaline phosphatase, esterase (C4), esterase lipase (C8), leucine
           arylamidase, acid phosphatase, and naphthol-AS-BI-phosphohydrolase were
           clearly positive
-        notes: Supports Pimeloyl-[acyl-carrier protein] methyl ester esterase in carboxylesterase
-          activity; UniProtKB:B5BHG7 (bioH, Pimeloyl-[acyl-carrier protein] methyl
-          ester esterase) in Salmonella paratyphi A (strain AKU_12601) provides a
-          verified protein exemplar.
+        notes: Supports Esterase EstA in carboxylesterase activity; UniProtKB:O33407
+          (estA, Esterase EstA) in Pseudomonas aeruginosa (strain ATCC 15692 / DSM
+          22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1) provides
+          a verified protein exemplar.
   edges:
   - subject: carboxylesterase_activity_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: carboxylesterase_activity_trait
-    description: Pimeloyl-[acyl-carrier protein] methyl ester esterase (bioH, UniProtKB:B5BHG7)
-      contributes to carboxylesterase activity (associated with phosphohydrolase,
-      arylamidase, phosphatase).
+    description: Esterase EstA (estA, UniProtKB:O33407) contributes to carboxylesterase
+      activity.
     evidence:
     - reference: DOI:10.1128/JCM.43.8.3713-3717.2005
       snippet: Alkaline phosphatase, esterase (C4), esterase lipase (C8), leucine
         arylamidase, acid phosphatase, and naphthol-AS-BI-phosphohydrolase were clearly
         positive
-      notes: Supports the functional association between Pimeloyl-[acyl-carrier protein]
-        methyl ester esterase (UniProtKB:B5BHG7 in Salmonella paratyphi A (strain
-        AKU_12601)) and carboxylesterase activity.
+      notes: Supports the functional association between Esterase EstA (UniProtKB:O33407
+        in Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM
+        14847 / LMG 12228 / 1C / PRS 101 / PAO1)) and carboxylesterase activity.

@@ -102,34 +102,34 @@ causal_graphs:
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
   - node_id: nixi_system_protein_component
-    label: Phage infection protein
+    label: Shedu protein SduA
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Phage infection protein) associated with NixI
-      system.
+    description: Protein component (Shedu protein SduA) associated with NixI system.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - pip
+    - sduA
     protein_examples:
-    - uniprot_id: UniProtKB:P49022
-      protein_label: Phage infection protein
-      gene_symbol: pip
-      taxon_id: NCBITaxon:1360
-      taxon_label: Lactococcus lactis subsp. lactis (Streptococcus lactis)
+    - uniprot_id: UniProtKB:B7HFR2
+      protein_label: Shedu protein SduA
+      gene_symbol: sduA
+      taxon_id: NCBITaxon:405532
+      taxon_label: Bacillus cereus (strain B4264)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      entry_version: 85
+      entry_version: 58
       sequence_version: 1
-      role: Characteristic protein component (pip, Phage infection protein) associated
-        with NixI system in Lactococcus lactis subsp. lactis (Streptococcus lactis).
+      role: Characteristic protein component (sduA, Shedu protein SduA) associated
+        with NixI system in Bacillus cereus (strain B4264).
       evidence:
       - reference: DOI:10.1093/nar/gkac002
-        snippet: Here, we characterize a PLE-encoded nuclease, NixI, that blocks phage
-          development likely by nicking ICP1’s genome as it transitions to RCR
-        notes: Supports Phage infection protein in NixI system; UniProtKB:P49022 (pip,
-          Phage infection protein) in Lactococcus lactis subsp. lactis (Streptococcus
-          lactis) provides a verified protein exemplar.
+        snippet: Together, these data show that PLE encodes a nicking endonuclease,
+          NixI, that is necessary for cleavage of ICP1’s genome in vivo and that shows
+          in vitro specificity for sequences found in ICP1’s genome
+        notes: Supports Shedu protein SduA in NixI system; UniProtKB:B7HFR2 (sduA,
+          Shedu protein SduA) in Bacillus cereus (strain B4264) provides a verified
+          protein exemplar.
   edges:
   - subject: nixi_locus
     predicate: contributes to
@@ -219,14 +219,18 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: nixi_system_trait
-    description: Phage infection protein (pip, UniProtKB:P49022) contributes to NixI
-      system (associated with bf00327934, specifying, infection).
+    description: Shedu protein SduA (sduA, UniProtKB:B7HFR2) contributes to NixI system.
     evidence:
-    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
-      snippet: Pif | 10\.1007/BF00327934 | Molecular analysis of F plasmid pif region
-        specifying abortive infection of T7 phage
-      notes: Supports the functional association between Phage infection protein (UniProtKB:P49022
-        in Lactococcus lactis subsp. lactis (Streptococcus lactis)) and NixI system.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| RM_Type_IIG__Type_IIG_1 | | RM_Type_IIG | Custom | 300 | | RM_Type_IIG__Type_IIG_2
+        | | RM_Type_IIG | Custom | 300 | | RM_Type_IIG__Type_IIG_3 | | RM_Type_IIG
+        | Custom | 300 | | RM_Type_IIG__Type_IIG_4 | | RM_Type_IIG | Custom | 300
+        | | RM_Type_IIG__Type_IIG_5 | | RM_Type_IIG | Custom | 300 | | RM_Type_IIG__Type_IIG_FAM_0.einsi_trimmed
+        | | RM_Type_IIG | Custom | 300 | | RM_Type_IIG__Type_IIG_FAM_1.einsi_trimmed
+        | | RM_Type_IIG | Custom | 300 | | RM_Type_IIG__Type_IIG_FAM_2.einsi_trimmed
+        | | RM_Type_IIG | Custom | 300 |'
+      notes: Supports the functional association between Shedu protein SduA (UniProtKB:B7HFR2
+        in Bacillus cereus (strain B4264)) and NixI system.
 discussions:
 - discussion_id: nixi-stix-and-satellite-scope-gap
   prompt: Resolve NixI satellite self-protection, optional Stix profile scope, natural-host
@@ -264,5 +268,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    nixi_system_protein_component with UniProtKB:P49022 (pip) exemplar.'
+    nixi_system_protein_component with UniProtKB:B7HFR2 (sduA) exemplar.'
   llm_assisted: true

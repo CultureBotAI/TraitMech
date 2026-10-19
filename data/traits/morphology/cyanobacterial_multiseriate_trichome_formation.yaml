@@ -96,18 +96,18 @@ curation_history:
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph cyanobacterial_multiseriate_trichome_formation_graph
     with GENE_OR_PROTEIN node cyanobacterial_multiseriate_trichome_formation_protein_component
-    and UniProtKB:V6F5E5 exemplar.'
+    and UniProtKB:P46078 exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: cyanobacterial_multiseriate_trichome_formation_graph
   title: Protein component associated with cyanobacterial multiseriate trichome formation
-  description: Literature-backed association between Cell division protein FtsZ (UniProtKB:V6F5E5)
-    and cyanobacterial multiseriate trichome formation.
+  description: Literature-backed association between Filament integrity protein FraC
+    (UniProtKB:P46078) and cyanobacterial multiseriate trichome formation.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:V6F5E5 in Magnetospirillum
-    gryphiswaldense (strain DSM 6361 / JCM 21280 / NBRC 15271 / MSR-1)) associated
-    with cyanobacterial multiseriate trichome formation while full multi-step mechanistic
-    curation remains future work.
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P46078 in Nostoc
+    sp. (strain PCC 7120 / SAG 25.82 / UTEX 2576)) associated with cyanobacterial
+    multiseriate trichome formation while full multi-step mechanistic curation remains
+    future work.
   nodes:
   - node_id: cyanobacterial_multiseriate_trichome_formation_trait
     label: cyanobacterial multiseriate trichome formation
@@ -117,50 +117,46 @@ causal_graphs:
       containing more than one adjacent row of cells through cell division in multiple
       planes.
   - node_id: cyanobacterial_multiseriate_trichome_formation_protein_component
-    label: Cell division protein FtsZ
+    label: Filament integrity protein FraC
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Cell division protein FtsZ) associated with cyanobacterial
-      multiseriate trichome formation.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Filament integrity protein FraC) associated with
+      cyanobacterial multiseriate trichome formation.
+    grounding: InterPro:IPR054663
     gene_symbols:
-    - ftsZ
+    - fraC
     protein_examples:
-    - uniprot_id: UniProtKB:V6F5E5
-      protein_label: Cell division protein FtsZ
-      gene_symbol: ftsZ
-      taxon_id: NCBITaxon:431944
-      taxon_label: Magnetospirillum gryphiswaldense (strain DSM 6361 / JCM 21280 /
-        NBRC 15271 / MSR-1)
+    - uniprot_id: UniProtKB:P46078
+      protein_label: Filament integrity protein FraC
+      gene_symbol: fraC
+      taxon_id: NCBITaxon:103690
+      taxon_label: Nostoc sp. (strain PCC 7120 / SAG 25.82 / UTEX 2576)
       entry_status: REVIEWED
-      proteome_id: UP000018922
+      proteome_id: UP000002483
       retrieved_on: '2026-10-17'
-      entry_version: 63
+      entry_version: 100
       sequence_version: 1
-      role: Characteristic protein component (ftsZ, Cell division protein FtsZ) associated
-        with cyanobacterial multiseriate trichome formation in Magnetospirillum gryphiswaldense
-        (strain DSM 6361 / JCM 21280 / NBRC 15271 / MSR-1).
+      role: Characteristic protein component (fraC, Filament integrity protein FraC)
+        associated with cyanobacterial multiseriate trichome formation in Nostoc sp.
+        (strain PCC 7120 / SAG 25.82 / UTEX 2576).
       evidence:
-      - reference: DOI:10.3126/on.v14i1.16445
-        snippet: The present algal taxon exhibited vertical and horizontal divisions
-          of cells and has a tendency to form filamentous structure.
-        notes: Supports Cell division protein FtsZ in cyanobacterial multiseriate
-          trichome formation; UniProtKB:V6F5E5 (ftsZ, Cell division protein FtsZ)
-          in Magnetospirillum gryphiswaldense (strain DSM 6361 / JCM 21280 / NBRC
-          15271 / MSR-1) provides a verified protein exemplar.
+      - reference: DOI:10.1002/2211-5463.13016
+        snippet: cells divide at a right angle to the longitudinal filament axis and
+          in planes parallel or oblique to the primary trichomes.
+        notes: Supports Filament integrity protein FraC in cyanobacterial multiseriate
+          trichome formation; UniProtKB:P46078 (fraC, Filament integrity protein FraC)
+          in Nostoc sp. (strain PCC 7120 / SAG 25.82 / UTEX 2576) provides a verified
+          protein exemplar.
   edges:
   - subject: cyanobacterial_multiseriate_trichome_formation_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: cyanobacterial_multiseriate_trichome_formation_trait
-    description: Cell division protein FtsZ (ftsZ, UniProtKB:V6F5E5) contributes to
-      cyanobacterial multiseriate trichome formation (associated with filamentous,
-      horizontal, divisions).
+    description: Filament integrity protein FraC (fraC, UniProtKB:P46078) contributes
+      to cyanobacterial multiseriate trichome formation.
     evidence:
-    - reference: DOI:10.3126/on.v14i1.16445
-      snippet: The present algal taxon exhibited vertical and horizontal divisions
-        of cells and has a tendency to form filamentous structure.
-      notes: Supports the functional association between Cell division protein FtsZ
-        (UniProtKB:V6F5E5 in Magnetospirillum gryphiswaldense (strain DSM 6361 / JCM
-        21280 / NBRC 15271 / MSR-1)) and cyanobacterial multiseriate trichome formation.
+    - reference: DOI:10.1002/2211-5463.13016
+      snippet: cells divide at a right angle to the longitudinal filament axis and
+        in planes parallel or oblique to the primary trichomes.
+      notes: Supports the functional association between Filament integrity protein
+        FraC (UniProtKB:P46078 in Nostoc sp. (strain PCC 7120 / SAG 25.82 / UTEX 2576))
+        and cyanobacterial multiseriate trichome formation.

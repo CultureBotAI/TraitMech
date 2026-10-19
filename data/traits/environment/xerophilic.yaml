@@ -41,7 +41,7 @@ causal_graphs:
   scope_status: NONMECHANISTIC
   scope_notes: This record is a broad environmental or morphological classification
     spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
-    descriptor; contextual protein nodes do not receive token UniProt examples.
+    descriptor; contextual protein nodes include source-backed UniProtKB exemplars.
   nodes:
   - node_id: xerophilic_trait
     label: xerophilic
@@ -189,7 +189,7 @@ causal_graphs:
     predicate_id: RO:0002326
     object: xerophilic_trait
     description: Trehalose-6-phosphate synthase (otsA, UniProtKB:P31677) contributes
-      to xerophilic (associated with anhydrobiosis, predominantly, metabolism).
+      to xerophilic.
     evidence:
     - reference: DOI:10.3390/microorganisms10020432
       snippet: Anhydrobiosis (gr. life without water) is predominantly described as

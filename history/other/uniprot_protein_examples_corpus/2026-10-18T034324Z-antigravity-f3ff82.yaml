@@ -1,6 +1,6 @@
 history_version: 1
 target:
-  kind: other
+  kind: report
   path: reports/graph_protein_taxon_coverage.tsv
   slug: uniprot_protein_examples_corpus
 session:
@@ -11,6 +11,14 @@ session:
     name: antigravity
     model: gemini-3-pro
     agent_tool: antigravity
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1956
+  - https://github.com/CultureBotAI/TraitMech/issues/1957
+  - https://github.com/CultureBotAI/TraitMech/issues/1958
+  - https://github.com/CultureBotAI/TraitMech/issues/1959
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/1955
 events:
 - type: EDIT
   outcome: changed
@@ -24,6 +32,8 @@ events:
     and RO:0002326 edges to 361 genomics and 56 non-genomics NONMECHANISTIC graphs that previously
     lacked protein nodes, and added NONMECHANISTIC causal graphs with GENE_OR_PROTEIN nodes
     and protein_examples to 287 biological CLASS traits that previously lacked causal_graphs
-    (excluding DO_NOT_WORK.md and administrative/upper/deprecated records). Verified with
-    validate_strict.py (0 errors) and audit_graph_protein_taxa.py --fail-on gaps (0 gaps,
-    0 errors across 1,006 graphs).'
+    (excluding DO_NOT_WORK.md and administrative/upper/deprecated records). Addressed adversarial
+    review issues #1956, #1957, #1958, and #1959 by replacing generic/mismatched protein
+    accessions with node- and trait-specific UniProt accessions, correcting negative-phenotype
+    role/description phrasing and scope_notes contradictions, regenerating reports/uniprot_grounding_audit.tsv,
+    and restoring strict #183/#444 test invariants.'

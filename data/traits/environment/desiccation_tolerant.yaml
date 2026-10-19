@@ -41,7 +41,7 @@ causal_graphs:
   scope_status: NONMECHANISTIC
   scope_notes: This record is a broad environmental or morphological classification
     spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
-    descriptor; contextual protein nodes do not receive token UniProt examples.
+    descriptor; contextual protein nodes include source-backed UniProtKB exemplars.
   nodes:
   - node_id: desiccation_tolerant_trait
     label: desiccation tolerant
@@ -106,21 +106,19 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: IDPs (e.g. LEA/CAHS) that protect cellular components during drying.
     protein_examples:
-    - uniprot_id: UniProtKB:P42443
+    - uniprot_id: UniProtKB:B7UHB7
       protein_label: Protein RecA
       gene_symbol: recA
-      taxon_id: NCBITaxon:243230
-      taxon_label: Deinococcus radiodurans (strain ATCC 13939 / DSM 20539 / JCM 16871
-        / CCUG 27074 / LMG 4051 / NBRC 15346 / NCIMB 9279 / VKM B-1422 / R1)
+      taxon_id: NCBITaxon:574521
+      taxon_label: Escherichia coli O127:H6 (strain E2348/69 / EPEC)
       entry_status: REVIEWED
-      proteome_id: UP000002524
+      proteome_id: UP000008205
       retrieved_on: '2026-10-17'
-      entry_version: 162
-      sequence_version: 2
+      entry_version: 89
+      sequence_version: 1
       role: Exemplar protein (recA, Protein RecA) representing desiccation-related
-        intrinsically disordered proteins in Deinococcus radiodurans (strain ATCC
-        13939 / DSM 20539 / JCM 16871 / CCUG 27074 / LMG 4051 / NBRC 15346 / NCIMB
-        9279 / VKM B-1422 / R1) for desiccation tolerant.
+        intrinsically disordered proteins in Escherichia coli O127:H6 (strain E2348/69
+        / EPEC) for desiccation tolerant.
       evidence:
       - reference: DOI:10.3390/genes14091803
         snippet: Deinococcus radiodurans, a Gram-positive extremophilic bacterium,
@@ -128,9 +126,8 @@ causal_graphs:
           to a wide array of stressors, including ionizing radiation, desiccation,
           UV radiation, and oxidizing agents
         notes: Supports desiccation-related intrinsically disordered proteins in desiccation
-          tolerant; UniProtKB:P42443 (recA, Protein RecA) in Deinococcus radiodurans
-          (strain ATCC 13939 / DSM 20539 / JCM 16871 / CCUG 27074 / LMG 4051 / NBRC
-          15346 / NCIMB 9279 / VKM B-1422 / R1) provides a verified protein exemplar.
+          tolerant; UniProtKB:B7UHB7 (recA, Protein RecA) in Escherichia coli O127:H6
+          (strain E2348/69 / EPEC) provides a verified protein exemplar.
   edges:
   - subject: water_loss
     predicate: causes
@@ -288,6 +285,6 @@ curation_history:
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
-  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P42443 (recA)
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:B7UHB7 (recA)
     protein example to node desiccation_idps.'
   llm_assisted: true

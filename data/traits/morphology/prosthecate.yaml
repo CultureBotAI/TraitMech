@@ -37,7 +37,7 @@ causal_graphs:
   scope_status: NONMECHANISTIC
   scope_notes: This record is a broad environmental or morphological classification
     spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
-    descriptor; contextual protein nodes do not receive token UniProt examples.
+    descriptor; contextual protein nodes include source-backed UniProtKB exemplars.
   nodes:
   - node_id: prosthecate_trait
     label: prosthecate
@@ -115,25 +115,25 @@ causal_graphs:
     description: Cytoskeletal proteins that localize to zones of active cell wall
       growth.
     protein_examples:
-    - uniprot_id: UniProtKB:Q01465
-      protein_label: Cell shape-determining protein MreB
-      gene_symbol: mreB
-      taxon_id: NCBITaxon:224308
-      taxon_label: Bacillus subtilis (strain 168)
+    - uniprot_id: UniProtKB:Q1D3H0
+      protein_label: Bactofilin BacN
+      gene_symbol: bacN
+      taxon_id: NCBITaxon:246197
+      taxon_label: Myxococcus xanthus (strain DK1622)
       entry_status: REVIEWED
-      proteome_id: UP000001570
+      proteome_id: UP000002402
       retrieved_on: '2026-10-17'
-      entry_version: 148
-      sequence_version: 3
-      role: Exemplar protein (mreB, Cell shape-determining protein MreB) representing
-        bactofilins in Bacillus subtilis (strain 168) for prosthecate.
+      entry_version: 94
+      sequence_version: 1
+      role: Exemplar protein (bacN, Bactofilin BacN) representing bactofilins in Myxococcus
+        xanthus (strain DK1622) for prosthecate.
       evidence:
       - reference: DOI:10.1111/j.1365-2958.2007.05633.x
         snippet: Understanding the mechanisms underlying the establishment of different
           bacterial cell shapes and the advantage that a particular shape imparts
           is one of the most fascinating and challenging areas of study in microbiology.
-        notes: Supports bactofilins in prosthecate; UniProtKB:Q01465 (mreB, Cell shape-determining
-          protein MreB) in Bacillus subtilis (strain 168) provides a verified protein
+        notes: Supports bactofilins in prosthecate; UniProtKB:Q1D3H0 (bacN, Bactofilin
+          BacN) in Myxococcus xanthus (strain DK1622) provides a verified protein
           exemplar.
   - node_id: cell_wall_growth_zone
     label: zone of active cell wall growth
@@ -151,28 +151,28 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Four-protein complex (StpA, StpB, StpC, StpD) forming stalk crossbands.
     protein_examples:
-    - uniprot_id: UniProtKB:V6F5E5
-      protein_label: Cell division protein FtsZ
-      gene_symbol: ftsZ
-      taxon_id: NCBITaxon:431944
-      taxon_label: Magnetospirillum gryphiswaldense (strain DSM 6361 / JCM 21280 /
-        NBRC 15271 / MSR-1)
-      entry_status: REVIEWED
-      proteome_id: UP000018922
+    - uniprot_id: UniProtKB:Q9A6C1
+      protein_label: Lysozyme
+      gene_symbol: spmX
+      taxon_id: NCBITaxon:190650
+      taxon_label: Caulobacter vibrioides (strain ATCC 19089 / CIP 103742 / CB 15)
+        (Caulobacter crescentus)
+      entry_status: UNREVIEWED
+      proteome_id: UP000001816
       retrieved_on: '2026-10-17'
-      entry_version: 63
+      entry_version: 119
       sequence_version: 1
-      role: Exemplar protein (ftsZ, Cell division protein FtsZ) representing StpABCD
-        complex in Magnetospirillum gryphiswaldense (strain DSM 6361 / JCM 21280 /
-        NBRC 15271 / MSR-1) for prosthecate.
+      role: Exemplar protein (spmX, Lysozyme) representing StpABCD complex in Caulobacter
+        vibrioides (strain ATCC 19089 / CIP 103742 / CB 15) (Caulobacter crescentus)
+        for prosthecate.
       evidence:
       - reference: DOI:10.1111/j.1365-2958.2007.05633.x
         snippet: Understanding the mechanisms underlying the establishment of different
           bacterial cell shapes and the advantage that a particular shape imparts
           is one of the most fascinating and challenging areas of study in microbiology.
-        notes: Supports StpABCD complex in prosthecate; UniProtKB:V6F5E5 (ftsZ, Cell
-          division protein FtsZ) in Magnetospirillum gryphiswaldense (strain DSM 6361
-          / JCM 21280 / NBRC 15271 / MSR-1) provides a verified protein exemplar.
+        notes: Supports StpABCD complex in prosthecate; UniProtKB:Q9A6C1 (spmX, Lysozyme)
+          in Caulobacter vibrioides (strain ATCC 19089 / CIP 103742 / CB 15) (Caulobacter
+          crescentus) provides a verified protein exemplar.
   - node_id: stalk_diffusion
     label: diffusion along stalk
     node_type: BIOLOGICAL_PROCESS
@@ -322,6 +322,6 @@ curation_history:
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q01465 (mreB)
     protein example to node mreb; added UniProtKB:P0ABG7 (mrdB) protein example to
-    node roda; added UniProtKB:Q01465 (mreB) protein example to node bactofilins;
-    added UniProtKB:V6F5E5 (ftsZ) protein example to node stpabcd_complex.'
+    node roda; added UniProtKB:Q1D3H0 (bacN) protein example to node bactofilins;
+    added UniProtKB:Q9A6C1 (spmX) protein example to node stpabcd_complex.'
   llm_assisted: true

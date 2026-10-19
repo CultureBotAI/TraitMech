@@ -81,19 +81,26 @@ curation_history:
   llm_assisted: true
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed canonical_examples status alongside NONMECHANISTIC protein exemplar
+    graph for isogamy; isolate-level canonical example remains deferred pending explicit
+    strain-level literature.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph isogamy_graph
-    with GENE_OR_PROTEIN node isogamy_protein_component and UniProtKB:B5BL97 exemplar.'
+    with GENE_OR_PROTEIN node isogamy_protein_component and UniProtKB:D6VTK4 exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: isogamy_graph
   title: Protein component associated with isogamy
-  description: Literature-backed association between Polyamine aminopropyltransferase
-    (UniProtKB:B5BL97) and isogamy.
+  description: Literature-backed association between Pheromone alpha factor receptor
+    (UniProtKB:D6VTK4) and isogamy.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:B5BL97 in Salmonella
-    paratyphi A (strain AKU_12601)) associated with isogamy while full multi-step
-    mechanistic curation remains future work.
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:D6VTK4 in Saccharomyces
+    cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)) associated with isogamy
+    while full multi-step mechanistic curation remains future work.
   nodes:
   - node_id: isogamy_trait
     label: isogamy
@@ -102,44 +109,46 @@ causal_graphs:
     description: A sexual-reproduction phenotype in which the fusing gametes are similar
       in size.
   - node_id: isogamy_protein_component
-    label: Polyamine aminopropyltransferase
+    label: Pheromone alpha factor receptor
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Polyamine aminopropyltransferase) associated with
+    description: Protein component (Pheromone alpha factor receptor) associated with
       isogamy.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    grounding: InterPro:IPR000366
     gene_symbols:
-    - speE
+    - STE2
     protein_examples:
-    - uniprot_id: UniProtKB:B5BL97
-      protein_label: Polyamine aminopropyltransferase
-      gene_symbol: speE
-      taxon_id: NCBITaxon:554290
-      taxon_label: Salmonella paratyphi A (strain AKU_12601)
+    - uniprot_id: UniProtKB:D6VTK4
+      protein_label: Pheromone alpha factor receptor
+      gene_symbol: STE2
+      taxon_id: NCBITaxon:559292
+      taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's
+        yeast)
       entry_status: REVIEWED
+      proteome_id: UP000002311
       retrieved_on: '2026-10-17'
-      entry_version: 86
-      sequence_version: 1
-      role: Characteristic protein component (speE, Polyamine aminopropyltransferase)
-        associated with isogamy in Salmonella paratyphi A (strain AKU_12601).
+      entry_version: 99
+      sequence_version: 2
+      role: Characteristic protein component (STE2, Pheromone alpha factor receptor)
+        associated with isogamy in Saccharomyces cerevisiae (strain ATCC 204508 /
+        S288c) (Baker's yeast).
       evidence:
       - reference: DOI:10.1111/evo.13427
         snippet: we explored size-speed distributions in vegetative and gamete cells
           of 10 cell lines, and clonal data from within two cell lines.
-        notes: Supports Polyamine aminopropyltransferase in isogamy; UniProtKB:B5BL97
-          (speE, Polyamine aminopropyltransferase) in Salmonella paratyphi A (strain
-          AKU_12601) provides a verified protein exemplar.
+        notes: Supports Pheromone alpha factor receptor in isogamy; UniProtKB:D6VTK4
+          (STE2, Pheromone alpha factor receptor) in Saccharomyces cerevisiae (strain
+          ATCC 204508 / S288c) (Baker's yeast) provides a verified protein exemplar.
   edges:
   - subject: isogamy_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: isogamy_trait
-    description: Polyamine aminopropyltransferase (speE, UniProtKB:B5BL97) contributes
-      to isogamy (associated with distributions, vegetative, explored).
+    description: Pheromone alpha factor receptor (STE2, UniProtKB:D6VTK4) contributes
+      to isogamy.
     evidence:
     - reference: DOI:10.1111/evo.13427
       snippet: we explored size-speed distributions in vegetative and gamete cells
         of 10 cell lines, and clonal data from within two cell lines.
-      notes: Supports the functional association between Polyamine aminopropyltransferase
-        (UniProtKB:B5BL97 in Salmonella paratyphi A (strain AKU_12601)) and isogamy.
+      notes: Supports the functional association between Pheromone alpha factor receptor
+        (UniProtKB:D6VTK4 in Saccharomyces cerevisiae (strain ATCC 204508 / S288c)
+        (Baker's yeast)) and isogamy.

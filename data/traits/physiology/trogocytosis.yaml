@@ -85,16 +85,16 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph trogocytosis_graph
-    with GENE_OR_PROTEIN node trogocytosis_protein_component and UniProtKB:P32323
+    with GENE_OR_PROTEIN node trogocytosis_protein_component and UniProtKB:P32790
     exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: trogocytosis_graph
   title: Protein component associated with trogocytosis
-  description: Literature-backed association between A-agglutinin anchorage subunit
-    (UniProtKB:P32323) and trogocytosis.
+  description: Literature-backed association between Actin cytoskeleton-regulatory
+    complex protein SLA1 (UniProtKB:P32790) and trogocytosis.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P32323 in Saccharomyces
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P32790 in Saccharomyces
     cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)) associated with trogocytosis
     while full multi-step mechanistic curation remains future work.
   nodes:
@@ -106,48 +106,47 @@ causal_graphs:
       takes up discrete portions of another living cell during direct contact instead
       of engulfing that cell whole.
   - node_id: trogocytosis_protein_component
-    label: A-agglutinin anchorage subunit
+    label: Actin cytoskeleton-regulatory complex protein SLA1
     node_type: GENE_OR_PROTEIN
-    description: Protein component (A-agglutinin anchorage subunit) associated with
-      trogocytosis.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Actin cytoskeleton-regulatory complex protein
+      SLA1) associated with trogocytosis.
+    grounding: InterPro:IPR056996
     gene_symbols:
-    - AGA1
+    - SLA1
     protein_examples:
-    - uniprot_id: UniProtKB:P32323
-      protein_label: A-agglutinin anchorage subunit
-      gene_symbol: AGA1
+    - uniprot_id: UniProtKB:P32790
+      protein_label: Actin cytoskeleton-regulatory complex protein SLA1
+      gene_symbol: SLA1
       taxon_id: NCBITaxon:559292
       taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's
         yeast)
       entry_status: REVIEWED
       proteome_id: UP000002311
       retrieved_on: '2026-10-17'
-      entry_version: 142
+      entry_version: 230
       sequence_version: 1
-      role: Characteristic protein component (AGA1, A-agglutinin anchorage subunit)
-        associated with trogocytosis in Saccharomyces cerevisiae (strain ATCC 204508
-        / S288c) (Baker's yeast).
+      role: Characteristic protein component (SLA1, Actin cytoskeleton-regulatory
+        complex protein SLA1) associated with trogocytosis in Saccharomyces cerevisiae
+        (strain ATCC 204508 / S288c) (Baker's yeast).
       evidence:
       - reference: DOI:10.1128/mBio.00068-19
         snippet: Protection from human serum occurs only after amoebae have undergone
           trogocytosis of live cells but not phagocytosis of dead cells.
-        notes: Supports A-agglutinin anchorage subunit in trogocytosis; UniProtKB:P32323
-          (AGA1, A-agglutinin anchorage subunit) in Saccharomyces cerevisiae (strain
-          ATCC 204508 / S288c) (Baker's yeast) provides a verified protein exemplar.
+        notes: Supports Actin cytoskeleton-regulatory complex protein SLA1 in trogocytosis;
+          UniProtKB:P32790 (SLA1, Actin cytoskeleton-regulatory complex protein SLA1)
+          in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)
+          provides a verified protein exemplar.
   edges:
   - subject: trogocytosis_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: trogocytosis_trait
-    description: A-agglutinin anchorage subunit (AGA1, UniProtKB:P32323) contributes
-      to trogocytosis (associated with phagocytosis, trogocytosis, protection).
+    description: Actin cytoskeleton-regulatory complex protein SLA1 (SLA1, UniProtKB:P32790)
+      contributes to trogocytosis.
     evidence:
     - reference: DOI:10.1128/mBio.00068-19
       snippet: Protection from human serum occurs only after amoebae have undergone
         trogocytosis of live cells but not phagocytosis of dead cells.
-      notes: Supports the functional association between A-agglutinin anchorage subunit
-        (UniProtKB:P32323 in Saccharomyces cerevisiae (strain ATCC 204508 / S288c)
-        (Baker's yeast)) and trogocytosis.
+      notes: Supports the functional association between Actin cytoskeleton-regulatory
+        complex protein SLA1 (UniProtKB:P32790 in Saccharomyces cerevisiae (strain
+        ATCC 204508 / S288c) (Baker's yeast)) and trogocytosis.

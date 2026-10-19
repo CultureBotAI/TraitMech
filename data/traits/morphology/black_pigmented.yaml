@@ -35,7 +35,7 @@ causal_graphs:
   scope_status: NONMECHANISTIC
   scope_notes: This record is a broad environmental or morphological classification
     spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
-    descriptor; contextual protein nodes do not receive token UniProt examples.
+    descriptor; contextual protein nodes include source-backed UniProtKB exemplars.
   nodes:
   - node_id: black_pigmented_trait
     label: black pigmented
@@ -55,25 +55,24 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Oxidative enzymes that can catalyze melanin precursor oxidation.
     protein_examples:
-    - uniprot_id: UniProtKB:P0ABI8
-      protein_label: Cytochrome bo(3) ubiquinol oxidase subunit 1
-      gene_symbol: cyoB
-      taxon_id: NCBITaxon:83333
-      taxon_label: Escherichia coli (strain K12)
+    - uniprot_id: UniProtKB:P98059
+      protein_label: Cytochrome c oxidase subunit 1
+      gene_symbol: ctaD
+      taxon_id: NCBITaxon:1061
+      taxon_label: Rhodobacter capsulatus (Rhodopseudomonas capsulata)
       entry_status: REVIEWED
-      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 154
+      entry_version: 116
       sequence_version: 1
-      role: Exemplar protein (cyoB, Cytochrome bo(3) ubiquinol oxidase subunit 1)
-        representing tyrosinase/laccase oxidases in Escherichia coli (strain K12)
-        for black pigmented.
+      role: Exemplar protein (ctaD, Cytochrome c oxidase subunit 1) representing tyrosinase/laccase
+        oxidases in Rhodobacter capsulatus (Rhodopseudomonas capsulata) for black
+        pigmented.
       evidence:
       - reference: DOI:10.1016/j.biotechadv.2021.107773
         snippet: Eumelanin and allomelanin impart black/brown color
-        notes: Supports tyrosinase/laccase oxidases in black pigmented; UniProtKB:P0ABI8
-          (cyoB, Cytochrome bo(3) ubiquinol oxidase subunit 1) in Escherichia coli
-          (strain K12) provides a verified protein exemplar.
+        notes: Supports tyrosinase/laccase oxidases in black pigmented; UniProtKB:P98059
+          (ctaD, Cytochrome c oxidase subunit 1) in Rhodobacter capsulatus (Rhodopseudomonas
+          capsulata) provides a verified protein exemplar.
   - node_id: melanin_biosynthesis
     label: melanin biosynthesis
     node_type: BIOLOGICAL_PROCESS
@@ -427,7 +426,7 @@ curation_history:
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
-  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P0ABI8 (cyoB)
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P98059 (ctaD)
     protein example to node tyrosinase_laccase_oxidases; added UniProtKB:B4ER96 (norB)
     protein example to node polyketide_synthase; added UniProtKB:A0A261GVB1 (A0A261GVB1)
     protein example to node tyrosinase; added UniProtKB:A0AAE7AGQ2 (hppD) protein

@@ -87,38 +87,34 @@ causal_graphs:
       pH defense.
     grounding: GO:0006119
   - node_id: ph_delta_protein_component
-    label: Na(+)/H(+) antiporter subunit A
+    label: Na(+)/H(+) antiporter NhaA
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Na(+)/H(+) antiporter subunit A) associated with
-      pH delta.
+    description: Protein component (Na(+)/H(+) antiporter NhaA) associated with pH
+      delta.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - mrpA
+    - nhaA
     protein_examples:
-    - uniprot_id: UniProtKB:Q9RGZ5
-      protein_label: Na(+)/H(+) antiporter subunit A
-      gene_symbol: mrpA
-      taxon_id: NCBITaxon:398511
-      taxon_label: Alkalihalophilus pseudofirmus (strain ATCC BAA-2126 / JCM 17055
-        / OF4) (Bacillus pseudofirmus)
+    - uniprot_id: UniProtKB:Q93F90
+      protein_label: Na(+)/H(+) antiporter NhaA
+      gene_symbol: nhaA
+      taxon_id: NCBITaxon:1890
+      taxon_label: Streptomyces antibioticus
       entry_status: REVIEWED
-      proteome_id: UP000001544
       retrieved_on: '2026-10-17'
-      entry_version: 115
-      sequence_version: 2
-      role: Characteristic protein component (mrpA, Na(+)/H(+) antiporter subunit
-        A) associated with pH delta in Alkalihalophilus pseudofirmus (strain ATCC
-        BAA-2126 / JCM 17055 / OF4) (Bacillus pseudofirmus).
+      entry_version: 71
+      sequence_version: 1
+      role: Characteristic protein component (nhaA, Na(+)/H(+) antiporter NhaA) associated
+        with pH delta in Streptomyces antibioticus.
       evidence:
       - reference: DOI:10.1093/femsre/fuad033
         snippet: Proton-sensing ion/H+ antiporters acidify the cytoplasm by exporting
           K+ or Na+ in exchange for protons when the internal pH gets too high
-        notes: Supports Na(+)/H(+) antiporter subunit A in pH delta; UniProtKB:Q9RGZ5
-          (mrpA, Na(+)/H(+) antiporter subunit A) in Alkalihalophilus pseudofirmus
-          (strain ATCC BAA-2126 / JCM 17055 / OF4) (Bacillus pseudofirmus) provides
-          a verified protein exemplar.
+        notes: Supports Na(+)/H(+) antiporter NhaA in pH delta; UniProtKB:Q93F90 (nhaA,
+          Na(+)/H(+) antiporter NhaA) in Streptomyces antibioticus provides a verified
+          protein exemplar.
   edges:
   - subject: ph_homeostasis_flexibility
     predicate: enables
@@ -208,15 +204,14 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: ph_delta_trait
-    description: Na(+)/H(+) antiporter subunit A (mrpA, UniProtKB:Q9RGZ5) contributes
-      to pH delta (associated with antiporters, cytoplasm, exporting).
+    description: Na(+)/H(+) antiporter NhaA (nhaA, UniProtKB:Q93F90) contributes to
+      pH delta.
     evidence:
     - reference: DOI:10.1093/femsre/fuad033
       snippet: Proton-sensing ion/H+ antiporters acidify the cytoplasm by exporting
         K+ or Na+ in exchange for protons when the internal pH gets too high
-      notes: Supports the functional association between Na(+)/H(+) antiporter subunit
-        A (UniProtKB:Q9RGZ5 in Alkalihalophilus pseudofirmus (strain ATCC BAA-2126
-        / JCM 17055 / OF4) (Bacillus pseudofirmus)) and pH delta.
+      notes: Supports the functional association between Na(+)/H(+) antiporter NhaA
+        (UniProtKB:Q93F90 in Streptomyces antibioticus) and pH delta.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.812528+00:00'
   curator: seed_from_metpo
@@ -320,5 +315,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    ph_delta_protein_component with UniProtKB:Q9RGZ5 (mrpA) exemplar.'
+    ph_delta_protein_component with UniProtKB:Q93F90 (nhaA) exemplar.'
   llm_assisted: true

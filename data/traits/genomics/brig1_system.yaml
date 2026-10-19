@@ -106,27 +106,26 @@ causal_graphs:
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
   - node_id: brig1_system_protein_component
-    label: Cell death peptidase
+    label: Endonuclease GajA
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Cell death peptidase) associated with Brig1 system.
+    description: Protein component (Endonuclease GajA) associated with Brig1 system.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - lit
+    - gajA
     protein_examples:
-    - uniprot_id: UniProtKB:P11072
-      protein_label: Cell death peptidase
-      gene_symbol: lit
-      taxon_id: NCBITaxon:83333
-      taxon_label: Escherichia coli (strain K12)
+    - uniprot_id: UniProtKB:P0DW47
+      protein_label: Endonuclease GajA
+      gene_symbol: gajA
+      taxon_id: NCBITaxon:1053212
+      taxon_label: Bacillus cereus (strain HuB5-5)
       entry_status: REVIEWED
-      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 137
-      sequence_version: 2
-      role: Characteristic protein component (lit, Cell death peptidase) associated
-        with Brig1 system in Escherichia coli (strain K12).
+      entry_version: 12
+      sequence_version: 1
+      role: Characteristic protein component (gajA, Endonuclease GajA) associated
+        with Brig1 system in Bacillus cereus (strain HuB5-5).
       evidence:
       - reference: DOI:10.1038/s41586-024-07329-9
         snippet: Following this approach, we identified Brig1, a DNA glycosylase that
@@ -134,8 +133,8 @@ causal_graphs:
           T4 genome to generate abasic sites and inhibit viral replication. Brig1
           homologues that provide immunity against T-even phages are present in multiple
           phage defence loci across distinct clades of bacteria
-        notes: Supports Cell death peptidase in Brig1 system; UniProtKB:P11072 (lit,
-          Cell death peptidase) in Escherichia coli (strain K12) provides a verified
+        notes: Supports Endonuclease GajA in Brig1 system; UniProtKB:P0DW47 (gajA,
+          Endonuclease GajA) in Bacillus cereus (strain HuB5-5) provides a verified
           protein exemplar.
   edges:
   - subject: brig1_locus
@@ -202,15 +201,14 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: brig1_system_trait
-    description: Cell death peptidase (lit, UniProtKB:P11072) contributes to Brig1
-      system (associated with hydroxymethylcytosine, bacteriophage, glycosylase).
+    description: Endonuclease GajA (gajA, UniProtKB:P0DW47) contributes to Brig1 system.
     evidence:
     - reference: DOI:10.1038/s41586-024-07329-9
       snippet: Following this approach, we identified Brig1, a DNA glycosylase that
         excises α-glucosyl-hydroxymethylcytosine nucleobases from the bacteriophage
         T4 genome to generate abasic sites and inhibit viral replication
-      notes: Supports the functional association between Cell death peptidase (UniProtKB:P11072
-        in Escherichia coli (strain K12)) and Brig1 system.
+      notes: Supports the functional association between Endonuclease GajA (UniProtKB:P0DW47
+        in Bacillus cereus (strain HuB5-5)) and Brig1 system.
 discussions:
 - discussion_id: brig1-natural-host-and-profile-gap
   prompt: Resolve natural Brig1 host taxa, broader Brig1-family specificity, and the
@@ -262,5 +260,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    brig1_system_protein_component with UniProtKB:P11072 (lit) exemplar.'
+    brig1_system_protein_component with UniProtKB:P0DW47 (gajA) exemplar.'
   llm_assisted: true

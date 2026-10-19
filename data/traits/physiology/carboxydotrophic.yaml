@@ -131,25 +131,24 @@ causal_graphs:
     grounding_notes: The cited source establishes a CO-insensitive respiratory branch
       but does not identify an exact terminal-oxidase family or complex.
     protein_examples:
-    - uniprot_id: UniProtKB:P0ABI8
-      protein_label: Cytochrome bo(3) ubiquinol oxidase subunit 1
-      gene_symbol: cyoB
-      taxon_id: NCBITaxon:83333
-      taxon_label: Escherichia coli (strain K12)
+    - uniprot_id: UniProtKB:P98059
+      protein_label: Cytochrome c oxidase subunit 1
+      gene_symbol: ctaD
+      taxon_id: NCBITaxon:1061
+      taxon_label: Rhodobacter capsulatus (Rhodopseudomonas capsulata)
       entry_status: REVIEWED
-      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 154
+      entry_version: 116
       sequence_version: 1
-      role: Exemplar protein (cyoB, Cytochrome bo(3) ubiquinol oxidase subunit 1)
-        representing CO-insensitive terminal oxidase in Escherichia coli (strain K12)
-        for carboxydotrophic.
+      role: Exemplar protein (ctaD, Cytochrome c oxidase subunit 1) representing CO-insensitive
+        terminal oxidase in Rhodobacter capsulatus (Rhodopseudomonas capsulata) for
+        carboxydotrophic.
       evidence:
       - reference: DOI:10.1111/j.1574-6968.1986.tb01858.x
         snippet: CO-insensitive terminal oxidase
-        notes: Supports CO-insensitive terminal oxidase in carboxydotrophic; UniProtKB:P0ABI8
-          (cyoB, Cytochrome bo(3) ubiquinol oxidase subunit 1) in Escherichia coli
-          (strain K12) provides a verified protein exemplar.
+        notes: Supports CO-insensitive terminal oxidase in carboxydotrophic; UniProtKB:P98059
+          (ctaD, Cytochrome c oxidase subunit 1) in Rhodobacter capsulatus (Rhodopseudomonas
+          capsulata) provides a verified protein exemplar.
   - node_id: proton_motive_force
     label: proton motive force
     node_type: STATE
@@ -267,28 +266,25 @@ causal_graphs:
     description: Membrane complex synthesizing ATP from an ion motive force.
     grounding: GO:0045259
     protein_examples:
-    - uniprot_id: UniProtKB:Q49Z52
+    - uniprot_id: UniProtKB:P0ABB0
       protein_label: ATP synthase subunit alpha
       gene_symbol: atpA
-      taxon_id: NCBITaxon:342451
-      taxon_label: Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
-        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
-      proteome_id: UP000006371
+      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 137
+      entry_version: 161
       sequence_version: 1
       role: Exemplar protein (atpA, ATP synthase subunit alpha) representing ATP synthase
-        in Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC 15305 /
-        DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) for carboxydotrophic.
+        in Escherichia coli (strain K12) for carboxydotrophic.
       evidence:
       - reference: DOI:10.1186/s40643-023-00705-9
         snippet: The reduction of those electron acceptors causes the formation of
           an ion motive force, which leads to the synthesis of ATP
-        notes: Supports ATP synthase in carboxydotrophic; UniProtKB:Q49Z52 (atpA,
-          ATP synthase subunit alpha) in Staphylococcus saprophyticus subsp. saprophyticus
-          (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) provides
-          a verified protein exemplar.
+        notes: Supports ATP synthase in carboxydotrophic; UniProtKB:P0ABB0 (atpA,
+          ATP synthase subunit alpha) in Escherichia coli (strain K12) provides a
+          verified protein exemplar.
   - node_id: molecular_oxygen
     label: dioxygen
     node_type: CHEMICAL
@@ -623,6 +619,6 @@ curation_history:
   changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:P31896
     version metadata (entry_version=134, sequence_version=1); added UniProtKB:O28429
     (cooS) protein example to node carbon_monoxide_dehydrogenase; added UniProtKB:Q49ZI7
-    (mobA) protein example to node molybdenum_hydroxylase; added UniProtKB:P0ABI8
-    (cyoB) protein example to node co_insensitive_terminal_oxidase (+3 more).'
+    (mobA) protein example to node molybdenum_hydroxylase; added UniProtKB:P98059
+    (ctaD) protein example to node co_insensitive_terminal_oxidase (+3 more).'
   llm_assisted: true

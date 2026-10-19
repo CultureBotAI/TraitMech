@@ -31,7 +31,7 @@ causal_graphs:
   scope_status: NONMECHANISTIC
   scope_notes: This record is a broad environmental or morphological classification
     spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
-    descriptor; contextual protein nodes do not receive token UniProt examples.
+    descriptor; contextual protein nodes include source-backed UniProtKB exemplars.
   nodes:
   - node_id: moderately_halophilic_trait
     label: moderately halophilic
@@ -131,25 +131,27 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: TRAP transporter importing ectoine and hydroxyectoine.
     protein_examples:
-    - uniprot_id: UniProtKB:W6KHH6
-      protein_label: Magnetosome protein MamB
-      gene_symbol: mamB
-      taxon_id: NCBITaxon:1288970
-      taxon_label: Magnetospira sp. (strain QH-2) (Marine magnetic spirillum (strain
-        QH-2))
+    - uniprot_id: UniProtKB:Q9ZEU6
+      protein_label: L-ectoine synthase
+      gene_symbol: ectC
+      taxon_id: NCBITaxon:290398
+      taxon_label: Chromohalobacter israelensis (strain ATCC BAA-138 / DSM 3043 /
+        CIP 106854 / NCIMB 13768 / 1H11) (Chromohalobacter salexigens)
       entry_status: REVIEWED
+      proteome_id: UP000000239
       retrieved_on: '2026-10-17'
-      entry_version: 55
+      entry_version: 130
       sequence_version: 1
-      role: Exemplar protein (mamB, Magnetosome protein MamB) representing TeaABC
-        TRAP transporter in Magnetospira sp. (strain QH-2) (Marine magnetic spirillum
-        (strain QH-2)) for moderately halophilic.
+      role: Exemplar protein (ectC, L-ectoine synthase) representing TeaABC TRAP transporter
+        in Chromohalobacter israelensis (strain ATCC BAA-138 / DSM 3043 / CIP 106854
+        / NCIMB 13768 / 1H11) (Chromohalobacter salexigens) for moderately halophilic.
       evidence:
       - reference: PMID:9758852
         snippet: moderately halophilic bacterium Halomonas elongata
-        notes: Supports TeaABC TRAP transporter in moderately halophilic; UniProtKB:W6KHH6
-          (mamB, Magnetosome protein MamB) in Magnetospira sp. (strain QH-2) (Marine
-          magnetic spirillum (strain QH-2)) provides a verified protein exemplar.
+        notes: Supports TeaABC TRAP transporter in moderately halophilic; UniProtKB:Q9ZEU6
+          (ectC, L-ectoine synthase) in Chromohalobacter israelensis (strain ATCC
+          BAA-138 / DSM 3043 / CIP 106854 / NCIMB 13768 / 1H11) (Chromohalobacter
+          salexigens) provides a verified protein exemplar.
   - node_id: salt_out_strategy
     label: salt-out (compatible-solute) strategy
     node_type: BIOLOGICAL_PROCESS
@@ -358,6 +360,6 @@ curation_history:
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:E1VA04 (ectD)
     protein example to node ectd; added UniProtKB:O34992 (opuCA) protein example to
-    node bcct_transporters; added UniProtKB:W6KHH6 (mamB) protein example to node
+    node bcct_transporters; added UniProtKB:Q9ZEU6 (ectC) protein example to node
     teaabc_transporter.'
   llm_assisted: true

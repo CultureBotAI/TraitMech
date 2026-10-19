@@ -180,7 +180,7 @@ causal_graphs:
     predicate_id: RO:0002326
     object: card_nlr_gasdermin_system_trait
     description: Gasdermin bGSDM (P0DV52, UniProtKB:P0DV52) contributes to CARD-NLR
-      GasderMIN system (associated with endonuclease, gasdermin, subtilase).
+      GasderMIN system.
     evidence:
     - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
       snippet: CARD_NLR CARD_NLR_Phospho 1 3 CARD_NLR__Trypsin_Phospho CARD_NLR__CARD_Protease,

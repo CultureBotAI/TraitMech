@@ -62,25 +62,24 @@ causal_graphs:
     grounding_notes: This node aggregates Caulobacter BacA/BacB and related bactofilins,
       so no single exact family term represents all components.
     protein_examples:
-    - uniprot_id: UniProtKB:A0A0H3C7V4
-      protein_label: Cell shape-determining protein MreB
-      gene_symbol: mreB
-      taxon_id: NCBITaxon:565050
-      taxon_label: Caulobacter vibrioides (strain NA1000 / CB15N)
+    - uniprot_id: UniProtKB:Q1D3H0
+      protein_label: Bactofilin BacN
+      gene_symbol: bacN
+      taxon_id: NCBITaxon:246197
+      taxon_label: Myxococcus xanthus (strain DK1622)
       entry_status: REVIEWED
-      proteome_id: UP000001364
+      proteome_id: UP000002402
       retrieved_on: '2026-10-17'
-      entry_version: 43
+      entry_version: 94
       sequence_version: 1
-      role: Exemplar protein (mreB, Cell shape-determining protein MreB) representing
-        bactofilin polymers in Caulobacter vibrioides (strain NA1000 / CB15N) for
-        tailed shaped.
+      role: Exemplar protein (bacN, Bactofilin BacN) representing bactofilin polymers
+        in Myxococcus xanthus (strain DK1622) for tailed shaped.
       evidence:
       - reference: DOI:10.1128/JB.187.2.544-553.2005
         snippet: MreB depletion leads to a stalk elongation defect
-        notes: Supports bactofilin polymers in tailed shaped; UniProtKB:A0A0H3C7V4
-          (mreB, Cell shape-determining protein MreB) in Caulobacter vibrioides (strain
-          NA1000 / CB15N) provides a verified protein exemplar.
+        notes: Supports bactofilin polymers in tailed shaped; UniProtKB:Q1D3H0 (bacN,
+          Bactofilin BacN) in Myxococcus xanthus (strain DK1622) provides a verified
+          protein exemplar.
   - node_id: stalk_base
     label: stalk base
     node_type: CELLULAR_LOCALIZATION
@@ -97,25 +96,24 @@ causal_graphs:
     grounding_notes: The source uses a functional class label in this cross-study
       graph rather than identifying one universally applicable synthase family.
     protein_examples:
-    - uniprot_id: UniProtKB:A0A0H2ZMF9
-      protein_label: Penicillin-binding protein 2a
-      gene_symbol: pbp2a
-      taxon_id: NCBITaxon:373153
-      taxon_label: Streptococcus pneumoniae serotype 2 (strain D39 / NCTC 7466)
+    - uniprot_id: UniProtKB:P0AD65
+      protein_label: Peptidoglycan D,D-transpeptidase MrdA
+      gene_symbol: mrdA
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
-      proteome_id: UP000001452
+      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 52
+      entry_version: 145
       sequence_version: 1
-      role: Exemplar protein (pbp2a, Penicillin-binding protein 2a) representing cell
-        wall synthase in Streptococcus pneumoniae serotype 2 (strain D39 / NCTC 7466)
-        for tailed shaped.
+      role: Exemplar protein (mrdA, Peptidoglycan D,D-transpeptidase MrdA) representing
+        cell wall synthase in Escherichia coli (strain K12) for tailed shaped.
       evidence:
-      - reference: DOI:10.1128/JB.187.2.544-553.2005
-        snippet: MreB depletion leads to a stalk elongation defect
-        notes: Supports cell wall synthase in tailed shaped; UniProtKB:A0A0H2ZMF9
-          (pbp2a, Penicillin-binding protein 2a) in Streptococcus pneumoniae serotype
-          2 (strain D39 / NCTC 7466) provides a verified protein exemplar.
+      - reference: DOI:10.1146/annurev-cellbio-101011-155745
+        snippet: MreB-directed peptidoglycan synthesis
+        notes: Supports cell wall synthase in tailed shaped; UniProtKB:P0AD65 (mrdA,
+          Peptidoglycan D,D-transpeptidase MrdA) in Escherichia coli (strain K12)
+          provides a verified protein exemplar.
   - node_id: mreb
     label: MreB
     node_type: GENE_OR_PROTEIN
@@ -363,8 +361,8 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:A0A0H3C7V4
-    version metadata (entry_version=43, sequence_version=1); added UniProtKB:A0A0H3C7V4
-    (mreB) protein example to node bactofilin_polymers; added UniProtKB:A0A0H2ZMF9
-    (pbp2a) protein example to node cell_wall_synthase; added UniProtKB:P0ABG7 (mrdB)
-    protein example to node roda.'
+    version metadata (entry_version=43, sequence_version=1); added UniProtKB:Q1D3H0
+    (bacN) protein example to node bactofilin_polymers; added UniProtKB:P0AD65 (mrdA)
+    protein example to node cell_wall_synthase; added UniProtKB:P0ABG7 (mrdB) protein
+    example to node roda.'
   llm_assisted: true

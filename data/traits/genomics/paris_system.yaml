@@ -126,33 +126,34 @@ causal_graphs:
     grounding: traitmech:000214
     description: Possession of a genome-encoded abortive-infection phage defense system.
   - node_id: paris_system_protein_component
-    label: Antitoxin HigA
+    label: Abortive phage resistance protein AbiC
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Antitoxin HigA) associated with PARIS system.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Abortive phage resistance protein AbiC) associated
+      with PARIS system.
+    grounding: InterPro:IPR031709
     gene_symbols:
-    - higA
+    - abiC
     protein_examples:
-    - uniprot_id: UniProtKB:Q7A224
-      protein_label: Antitoxin HigA
-      gene_symbol: higA
-      taxon_id: NCBITaxon:585
-      taxon_label: Proteus vulgaris
+    - uniprot_id: UniProtKB:Q01457
+      protein_label: Abortive phage resistance protein AbiC
+      gene_symbol: abiC
+      taxon_id: NCBITaxon:1360
+      taxon_label: Lactococcus lactis subsp. lactis (Streptococcus lactis)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      entry_version: 96
+      entry_version: 35
       sequence_version: 1
-      role: Characteristic protein component (higA, Antitoxin HigA) associated with
-        PARIS system in Proteus vulgaris.
+      role: Characteristic protein component (abiC, Abortive phage resistance protein
+        AbiC) associated with PARIS system in Lactococcus lactis subsp. lactis (Streptococcus
+        lactis).
       evidence:
-      - reference: DOI:10.1038/s41586-024-07874-3
-        snippet: The phage antirestriction induced system (PARIS) is a defence system,
-          often encoded in viral genomes, that is composed of a 55 kDa ABC ATPase
-          (AriA) and a 35 kDa TOPRIM nuclease (AriB)
-        notes: Supports Antitoxin HigA in PARIS system; UniProtKB:Q7A224 (higA, Antitoxin
-          HigA) in Proteus vulgaris provides a verified protein exemplar.
+      - reference: DOI:10.1016/j.chom.2022.02.018
+        snippet: We validate the activity of diverse systems and describe PARIS, an
+          abortive infection system triggered by a phage-encoded anti-restriction
+          protein
+        notes: Supports Abortive phage resistance protein AbiC in PARIS system; UniProtKB:Q01457
+          (abiC, Abortive phage resistance protein AbiC) in Lactococcus lactis subsp.
+          lactis (Streptococcus lactis) provides a verified protein exemplar.
   edges:
   - subject: paris_locus
     predicate: contributes to
@@ -249,15 +250,15 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: paris_system_trait
-    description: Antitoxin HigA (higA, UniProtKB:Q7A224) contributes to PARIS system
-      (associated with antirestriction, composed, nuclease).
+    description: Abortive phage resistance protein AbiC (abiC, UniProtKB:Q01457) contributes
+      to PARIS system.
     evidence:
-    - reference: DOI:10.1038/s41586-024-07874-3
-      snippet: The phage antirestriction induced system (PARIS) is a defence system,
-        often encoded in viral genomes, that is composed of a 55 kDa ABC ATPase (AriA)
-        and a 35 kDa TOPRIM nuclease (AriB)
-      notes: Supports the functional association between Antitoxin HigA (UniProtKB:Q7A224
-        in Proteus vulgaris) and PARIS system.
+    - reference: DOI:10.1016/j.chom.2022.02.018
+      snippet: We validate the activity of diverse systems and describe PARIS, an
+        abortive infection system triggered by a phage-encoded anti-restriction protein
+      notes: Supports the functional association between Abortive phage resistance
+        protein AbiC (UniProtKB:Q01457 in Lactococcus lactis subsp. lactis (Streptococcus
+        lactis)) and PARIS system.
 discussions:
 - discussion_id: paris-trigger-and-counterdefense-gap
   prompt: Resolve PARIS trigger specificity, AriA/AriB stoichiometry, phage T5 lysine-tRNA
@@ -293,5 +294,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    paris_system_protein_component with UniProtKB:Q7A224 (higA) exemplar.'
+    paris_system_protein_component with UniProtKB:Q01457 (abiC) exemplar.'
   llm_assisted: true

@@ -81,17 +81,17 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph pseudohyphal_growth_graph
-    with GENE_OR_PROTEIN node pseudohyphal_growth_protein_component and UniProtKB:Q5AD13
+    with GENE_OR_PROTEIN node pseudohyphal_growth_protein_component and UniProtKB:P08640
     exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: pseudohyphal_growth_graph
   title: Protein component associated with pseudohyphal growth
-  description: Literature-backed association between Filamentous growth regulator
-    15 (UniProtKB:Q5AD13) and pseudohyphal growth.
+  description: Literature-backed association between Flocculation protein FLO11 (UniProtKB:P08640)
+    and pseudohyphal growth.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q5AD13 in Candida
-    albicans (strain SC5314 / ATCC MYA-2876) (Yeast)) associated with pseudohyphal
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P08640 in Saccharomyces
+    cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)) associated with pseudohyphal
     growth while full multi-step mechanistic curation remains future work.
   nodes:
   - node_id: pseudohyphal_growth_trait
@@ -101,47 +101,46 @@ causal_graphs:
     description: A morphological phenotype in which elongated budding yeast cells
       remain attached in chains with constrictions at the junctions between cells.
   - node_id: pseudohyphal_growth_protein_component
-    label: Filamentous growth regulator 15
+    label: Flocculation protein FLO11
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Filamentous growth regulator 15) associated with
-      pseudohyphal growth.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Flocculation protein FLO11) associated with pseudohyphal
+      growth.
+    grounding: InterPro:IPR018789
     gene_symbols:
-    - FGR15
+    - FLO11
     protein_examples:
-    - uniprot_id: UniProtKB:Q5AD13
-      protein_label: Filamentous growth regulator 15
-      gene_symbol: FGR15
-      taxon_id: NCBITaxon:237561
-      taxon_label: Candida albicans (strain SC5314 / ATCC MYA-2876) (Yeast)
+    - uniprot_id: UniProtKB:P08640
+      protein_label: Flocculation protein FLO11
+      gene_symbol: FLO11
+      taxon_id: NCBITaxon:559292
+      taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's
+        yeast)
       entry_status: REVIEWED
-      proteome_id: UP000000559
+      proteome_id: UP000002311
       retrieved_on: '2026-10-17'
-      entry_version: 100
+      entry_version: 187
       sequence_version: 2
-      role: Characteristic protein component (FGR15, Filamentous growth regulator
-        15) associated with pseudohyphal growth in Candida albicans (strain SC5314
-        / ATCC MYA-2876) (Yeast).
+      role: Characteristic protein component (FLO11, Flocculation protein FLO11) associated
+        with pseudohyphal growth in Saccharomyces cerevisiae (strain ATCC 204508 /
+        S288c) (Baker's yeast).
       evidence:
       - reference: DOI:10.1590/S1517-83822013005000056
         snippet: pseudohyphae formed branched chains of elongated blastoconidial cells
           retaining constrictions at the septal junctions
-        notes: Supports Filamentous growth regulator 15 in pseudohyphal growth; UniProtKB:Q5AD13
-          (FGR15, Filamentous growth regulator 15) in Candida albicans (strain SC5314
-          / ATCC MYA-2876) (Yeast) provides a verified protein exemplar.
+        notes: Supports Flocculation protein FLO11 in pseudohyphal growth; UniProtKB:P08640
+          (FLO11, Flocculation protein FLO11) in Saccharomyces cerevisiae (strain
+          ATCC 204508 / S288c) (Baker's yeast) provides a verified protein exemplar.
   edges:
   - subject: pseudohyphal_growth_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: pseudohyphal_growth_trait
-    description: Filamentous growth regulator 15 (FGR15, UniProtKB:Q5AD13) contributes
-      to pseudohyphal growth (associated with blastoconidial, constrictions, pseudohyphae).
+    description: Flocculation protein FLO11 (FLO11, UniProtKB:P08640) contributes
+      to pseudohyphal growth.
     evidence:
     - reference: DOI:10.1590/S1517-83822013005000056
       snippet: pseudohyphae formed branched chains of elongated blastoconidial cells
         retaining constrictions at the septal junctions
-      notes: Supports the functional association between Filamentous growth regulator
-        15 (UniProtKB:Q5AD13 in Candida albicans (strain SC5314 / ATCC MYA-2876) (Yeast))
-        and pseudohyphal growth.
+      notes: Supports the functional association between Flocculation protein FLO11
+        (UniProtKB:P08640 in Saccharomyces cerevisiae (strain ATCC 204508 / S288c)
+        (Baker's yeast)) and pseudohyphal growth.

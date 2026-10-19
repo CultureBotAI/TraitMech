@@ -88,20 +88,27 @@ curation_history:
   llm_assisted: true
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed canonical_examples status alongside NONMECHANISTIC protein exemplar
+    graph for chemokinesis; isolate-level canonical example remains deferred pending
+    explicit strain-level literature.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph chemokinesis_graph
-    with GENE_OR_PROTEIN node chemokinesis_protein_component and UniProtKB:B5BL97
+    with GENE_OR_PROTEIN node chemokinesis_protein_component and UniProtKB:P07363
     exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: chemokinesis_graph
   title: Protein component associated with chemokinesis
-  description: Literature-backed association between Polyamine aminopropyltransferase
-    (UniProtKB:B5BL97) and chemokinesis.
+  description: Literature-backed association between Chemotaxis protein CheA (UniProtKB:P07363)
+    and chemokinesis.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:B5BL97 in Salmonella
-    paratyphi A (strain AKU_12601)) associated with chemokinesis while full multi-step
-    mechanistic curation remains future work.
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P07363 in Escherichia
+    coli (strain K12)) associated with chemokinesis while full multi-step mechanistic
+    curation remains future work.
   nodes:
   - node_id: chemokinesis_trait
     label: chemokinesis
@@ -111,44 +118,43 @@ causal_graphs:
       chemical concentration, without requiring directional bias along a chemical
       gradient.
   - node_id: chemokinesis_protein_component
-    label: Polyamine aminopropyltransferase
+    label: Chemotaxis protein CheA
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Polyamine aminopropyltransferase) associated with
-      chemokinesis.
+    description: Protein component (Chemotaxis protein CheA) associated with chemokinesis.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - speE
+    - cheA
     protein_examples:
-    - uniprot_id: UniProtKB:B5BL97
-      protein_label: Polyamine aminopropyltransferase
-      gene_symbol: speE
-      taxon_id: NCBITaxon:554290
-      taxon_label: Salmonella paratyphi A (strain AKU_12601)
+    - uniprot_id: UniProtKB:P07363
+      protein_label: Chemotaxis protein CheA
+      gene_symbol: cheA
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
+      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 86
-      sequence_version: 1
-      role: Characteristic protein component (speE, Polyamine aminopropyltransferase)
-        associated with chemokinesis in Salmonella paratyphi A (strain AKU_12601).
+      entry_version: 214
+      sequence_version: 3
+      role: Characteristic protein component (cheA, Chemotaxis protein CheA) associated
+        with chemokinesis in Escherichia coli (strain K12).
       evidence:
       - reference: DOI:10.1038/s41396-021-01024-7
         snippet: Thus, we hypothesize that the metabolism of mucus substrate stimulates
           Na+-NQR activity, which in turn enables sustained chemokinesis.
-        notes: Supports Polyamine aminopropyltransferase in chemokinesis; UniProtKB:B5BL97
-          (speE, Polyamine aminopropyltransferase) in Salmonella paratyphi A (strain
-          AKU_12601) provides a verified protein exemplar.
+        notes: Supports Chemotaxis protein CheA in chemokinesis; UniProtKB:P07363
+          (cheA, Chemotaxis protein CheA) in Escherichia coli (strain K12) provides
+          a verified protein exemplar.
   edges:
   - subject: chemokinesis_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: chemokinesis_trait
-    description: Polyamine aminopropyltransferase (speE, UniProtKB:B5BL97) contributes
-      to chemokinesis (associated with chemokinesis, hypothesize, metabolism).
+    description: Chemotaxis protein CheA (cheA, UniProtKB:P07363) contributes to chemokinesis.
     evidence:
     - reference: DOI:10.1038/s41396-021-01024-7
       snippet: Thus, we hypothesize that the metabolism of mucus substrate stimulates
         Na+-NQR activity, which in turn enables sustained chemokinesis.
-      notes: Supports the functional association between Polyamine aminopropyltransferase
-        (UniProtKB:B5BL97 in Salmonella paratyphi A (strain AKU_12601)) and chemokinesis.
+      notes: Supports the functional association between Chemotaxis protein CheA (UniProtKB:P07363
+        in Escherichia coli (strain K12)) and chemokinesis.

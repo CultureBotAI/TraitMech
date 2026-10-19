@@ -99,25 +99,30 @@ causal_graphs:
       protein families and complexes; no one protein-family term represents the complete
       generic system used by this graph.
     protein_examples:
-    - uniprot_id: UniProtKB:Q9AGP3
-      protein_label: Sarcosine oxidase subunit beta
-      gene_symbol: soxB
-      taxon_id: NCBITaxon:1667
-      taxon_label: Arthrobacter sp
+    - uniprot_id: UniProtKB:D7A6E5
+      protein_label: L-cysteine S-thiosulfotransferase subunit SoxA
+      gene_symbol: soxA
+      taxon_id: NCBITaxon:639283
+      taxon_label: Ancylobacter novellus (strain ATCC 8093 / DSM 506 / JCM 20403 /
+        CCM 1077 / IAM 12100 / NBRC 12443 / NCIMB 10456) (Starkeya novella)
       entry_status: REVIEWED
+      proteome_id: UP000006633
       retrieved_on: '2026-10-17'
-      entry_version: 66
-      sequence_version: 1
-      role: Exemplar protein (soxB, Sarcosine oxidase subunit beta) representing Sox
-        multienzyme system in Arthrobacter sp for lithotrophic.
+      entry_version: 75
+      sequence_version: 2
+      role: Exemplar protein (soxA, L-cysteine S-thiosulfotransferase subunit SoxA)
+        representing Sox multienzyme system in Ancylobacter novellus (strain ATCC
+        8093 / DSM 506 / JCM 20403 / CCM 1077 / IAM 12100 / NBRC 12443 / NCIMB 10456)
+        (Starkeya novella) for lithotrophic.
       evidence:
       - reference: DOI:10.3390/microorganisms11061436
         snippet: The Sox multienzyme complex, first described using the model organism
           Paracoccus panthotrophus, is widespread in photo- and chemotrophic sulfur-oxidizing
           bacteria and appears to be the most prominent sulfur oxidation system
-        notes: Supports Sox multienzyme system in lithotrophic; UniProtKB:Q9AGP3 (soxB,
-          Sarcosine oxidase subunit beta) in Arthrobacter sp provides a verified protein
-          exemplar.
+        notes: Supports Sox multienzyme system in lithotrophic; UniProtKB:D7A6E5 (soxA,
+          L-cysteine S-thiosulfotransferase subunit SoxA) in Ancylobacter novellus
+          (strain ATCC 8093 / DSM 506 / JCM 20403 / CCM 1077 / IAM 12100 / NBRC 12443
+          / NCIMB 10456) (Starkeya novella) provides a verified protein exemplar.
   - node_id: sulfite
     label: sulfite
     node_type: CHEMICAL
@@ -565,8 +570,8 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:Q04507
-    version metadata (entry_version=127, sequence_version=2); added UniProtKB:Q9AGP3
-    (soxB) protein example to node sox_multienzyme_system; added UniProtKB:D3RNN8
+    version metadata (entry_version=127, sequence_version=2); added UniProtKB:D7A6E5
+    (soxA) protein example to node sox_multienzyme_system; added UniProtKB:D3RNN8
     (soeA) protein example to node soeabc_sulfite_dehydrogenase; added UniProtKB:Q1PX48
     (hao) protein example to node hydroxylamine_oxidoreductase (+1 more).'
   llm_assisted: true

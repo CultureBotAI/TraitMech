@@ -21,9 +21,16 @@ curation_history:
   llm_assisted: true
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed canonical_examples status alongside NONMECHANISTIC protein exemplar
+    graph for filamentous colony; isolate-level canonical example remains deferred
+    pending explicit strain-level literature.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph filamentous_colony_graph
-    with GENE_OR_PROTEIN node filamentous_colony_protein_component and UniProtKB:Q01465
+    with GENE_OR_PROTEIN node filamentous_colony_protein_component and UniProtKB:P37653
     exemplar.'
   llm_assisted: true
 definition_source: http://purl.obolibrary.org/obo/OMP_0000088
@@ -39,12 +46,12 @@ evidence:
 causal_graphs:
 - graph_id: filamentous_colony_graph
   title: Protein component associated with filamentous colony
-  description: Literature-backed association between Cell shape-determining protein
-    MreB (UniProtKB:Q01465) and filamentous colony.
+  description: Literature-backed association between Cellulose synthase catalytic
+    subunit [UDP-forming] (UniProtKB:P37653) and filamentous colony.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q01465 in Bacillus
-    subtilis (strain 168)) associated with filamentous colony while full multi-step
-    mechanistic curation remains future work.
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P37653 in Escherichia
+    coli (strain K12)) associated with filamentous colony while full multi-step mechanistic
+    curation remains future work.
   nodes:
   - node_id: filamentous_colony_trait
     label: filamentous colony
@@ -52,28 +59,27 @@ causal_graphs:
     grounding: METPO:1007066
     description: A colony shape that has a thread-like or filamentous outline.
   - node_id: filamentous_colony_protein_component
-    label: Cell shape-determining protein MreB
+    label: Cellulose synthase catalytic subunit [UDP-forming]
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Cell shape-determining protein MreB) associated
-      with filamentous colony.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Cellulose synthase catalytic subunit [UDP-forming])
+      associated with filamentous colony.
+    grounding: InterPro:IPR062001
     gene_symbols:
-    - mreB
+    - bcsA
     protein_examples:
-    - uniprot_id: UniProtKB:Q01465
-      protein_label: Cell shape-determining protein MreB
-      gene_symbol: mreB
-      taxon_id: NCBITaxon:224308
-      taxon_label: Bacillus subtilis (strain 168)
+    - uniprot_id: UniProtKB:P37653
+      protein_label: Cellulose synthase catalytic subunit [UDP-forming]
+      gene_symbol: bcsA
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
-      proteome_id: UP000001570
+      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 148
+      entry_version: 193
       sequence_version: 3
-      role: Characteristic protein component (mreB, Cell shape-determining protein
-        MreB) associated with filamentous colony in Bacillus subtilis (strain 168).
+      role: Characteristic protein component (bcsA, Cellulose synthase catalytic subunit
+        [UDP-forming]) associated with filamentous colony in Escherichia coli (strain
+        K12).
       evidence:
       - reference: DOI:10.7759/cureus.374
         snippet: Colony morphology is one among the various characters of bacteria,
@@ -82,16 +88,16 @@ causal_graphs:
           (≤ 1 mm), small (2-3 mm), medium (4-5 mm), and large (> 5 mm) colonies),
           shape (circular, irregular, rhomboid, umbonate, umbonate, filamentous, or
           rhizoid)
-        notes: Supports Cell shape-determining protein MreB in filamentous colony;
-          UniProtKB:Q01465 (mreB, Cell shape-determining protein MreB) in Bacillus
-          subtilis (strain 168) provides a verified protein exemplar.
+        notes: Supports Cellulose synthase catalytic subunit [UDP-forming] in filamentous
+          colony; UniProtKB:P37653 (bcsA, Cellulose synthase catalytic subunit [UDP-forming])
+          in Escherichia coli (strain K12) provides a verified protein exemplar.
   edges:
   - subject: filamentous_colony_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: filamentous_colony_trait
-    description: Cell shape-determining protein MreB (mreB, UniProtKB:Q01465) contributes
-      to filamentous colony (associated with identification, instrumental, filamentous).
+    description: Cellulose synthase catalytic subunit [UDP-forming] (bcsA, UniProtKB:P37653)
+      contributes to filamentous colony.
     evidence:
     - reference: DOI:10.7759/cureus.374
       snippet: Colony morphology is one among the various characters of bacteria,
@@ -99,6 +105,6 @@ causal_graphs:
         in preliminary identification. Size (measured in millimetres - pinpoint (≤
         1 mm), small (2-3 mm), medium (4-5 mm), and large (> 5 mm) colonies), shape
         (circular, irregular, rhomboid, umbonate, umbonate, filamentous, or rhizoid)
-      notes: Supports the functional association between Cell shape-determining protein
-        MreB (UniProtKB:Q01465 in Bacillus subtilis (strain 168)) and filamentous
-        colony.
+      notes: Supports the functional association between Cellulose synthase catalytic
+        subunit [UDP-forming] (UniProtKB:P37653 in Escherichia coli (strain K12))
+        and filamentous colony.

@@ -104,8 +104,7 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: amylase_activity_trait
-    description: Alpha-amylase (amyS, UniProtKB:P06278) contributes to amylase activity
-      (associated with extracellular, bacteroides, bogh13asus).
+    description: Alpha-amylase (amyS, UniProtKB:P06278) contributes to amylase activity.
     evidence:
     - reference: DOI:10.1007/s00018-023-04812-w
       snippet: the Bacteroides ovatus (Bo) extracellular α-amylase, BoGH13ASus

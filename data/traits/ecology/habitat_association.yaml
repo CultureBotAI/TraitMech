@@ -32,8 +32,8 @@ causal_graphs:
   title: Habitat association structures microbial biogeography
   scope_status: NONMECHANISTIC
   scope_notes: This broad ecological, host-relationship, habitat, or hazard classification
-    spans multiple taxa and mechanisms; contextual protein nodes do not receive token
-    UniProt examples.
+    spans multiple taxa and mechanisms; contextual protein nodes include source-backed
+    UniProtKB exemplars.
   description: Evidence-backed causal sketch linking environmental habitat to the
     biogeographic patterning of microbial taxa.
   nodes:
@@ -86,23 +86,28 @@ causal_graphs:
     grounding_notes: This aggregate spans multiple transporter and biosynthetic protein
       families and is retained only as contextual protein information.
     protein_examples:
-    - uniprot_id: UniProtKB:P29166
-      protein_label: Iron hydrogenase 1
-      taxon_id: NCBITaxon:1501
-      taxon_label: Clostridium pasteurianum
+    - uniprot_id: UniProtKB:P14175
+      protein_label: Glycine betaine/proline betaine transport system ATP-binding
+        protein ProV
+      gene_symbol: proV
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
+      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 159
+      entry_version: 204
       sequence_version: 1
-      role: Exemplar protein (P29166, Iron hydrogenase 1) representing osmolyte transport
-        and synthesis proteins in Clostridium pasteurianum for habitat association.
+      role: Exemplar protein (proV, Glycine betaine/proline betaine transport system
+        ATP-binding protein ProV) representing osmolyte transport and synthesis proteins
+        in Escherichia coli (strain K12) for habitat association.
       evidence:
       - reference: DOI:10.1038/nrmicro.2017.87
         snippet: crucial roles in nutrient cycling, the maintenance of soil fertility
           and soil carbon sequestration
         notes: Supports osmolyte transport and synthesis proteins in habitat association;
-          UniProtKB:P29166 (P29166, Iron hydrogenase 1) in Clostridium pasteurianum
-          provides a verified protein exemplar.
+          UniProtKB:P14175 (proV, Glycine betaine/proline betaine transport system
+          ATP-binding protein ProV) in Escherichia coli (strain K12) provides a verified
+          protein exemplar.
   edges:
   - subject: habitat
     predicate: causes
@@ -228,6 +233,6 @@ curation_history:
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
-  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P29166 (P29166)
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P14175 (proV)
     protein example to node osmolyte_transport_synthesis_proteins.'
   llm_assisted: true

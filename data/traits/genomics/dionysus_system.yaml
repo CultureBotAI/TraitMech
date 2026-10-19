@@ -89,40 +89,36 @@ causal_graphs:
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
   - node_id: dionysus_system_protein_component
-    label: DNA polymerase IV
+    label: Endonuclease GajA
     node_type: GENE_OR_PROTEIN
-    description: Protein component (DNA polymerase IV) associated with Dionysus system.
+    description: Protein component (Endonuclease GajA) associated with Dionysus system.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - dinB
+    - gajA
     protein_examples:
-    - uniprot_id: UniProtKB:Q49YT9
-      protein_label: DNA polymerase IV
-      gene_symbol: dinB
-      taxon_id: NCBITaxon:342451
-      taxon_label: Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
-        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+    - uniprot_id: UniProtKB:P0DW47
+      protein_label: Endonuclease GajA
+      gene_symbol: gajA
+      taxon_id: NCBITaxon:1053212
+      taxon_label: Bacillus cereus (strain HuB5-5)
       entry_status: REVIEWED
-      proteome_id: UP000006371
       retrieved_on: '2026-10-17'
-      entry_version: 117
+      entry_version: 12
       sequence_version: 1
-      role: Characteristic protein component (dinB, DNA polymerase IV) associated
-        with Dionysus system in Staphylococcus saprophyticus subsp. saprophyticus
-        (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41).
+      role: Characteristic protein component (gajA, Endonuclease GajA) associated
+        with Dionysus system in Bacillus cereus (strain HuB5-5).
       evidence:
       - reference: DOI:10.1101/2025.09.30.679545
-        snippet: 'Dionysus is named after the god associated with winemaking and the
-          celebration of life. This defense system consists of three genes encoding:
-          DinA, featuring a merozoite adhesive erythrocyte binding protein (MAEBL)
-          and a transmembrane (TM) domain; DinB, a TerB-like protein; and DinC, a
-          pore-forming toxin (PFT) with four TM domains'
-        notes: Supports DNA polymerase IV in Dionysus system; UniProtKB:Q49YT9 (dinB,
-          DNA polymerase IV) in Staphylococcus saprophyticus subsp. saprophyticus
-          (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) provides
-          a verified protein exemplar.
+        snippet: 'From over 500 candidate defense systems, we selected nine for experimental
+          testing and validated three: Dionysus, a TerB-encoding system that disrupts
+          early phage infection vesicle formation by Jumbo phages; Ophion, a Radical
+          SAM-containing system that prevents the formation of the Jumbo phage nucleus;
+          and Ambrosia, a tightly regulated RM-like system.'
+        notes: Supports Endonuclease GajA in Dionysus system; UniProtKB:P0DW47 (gajA,
+          Endonuclease GajA) in Bacillus cereus (strain HuB5-5) provides a verified
+          protein exemplar.
   edges:
   - subject: dionysus_locus
     predicate: contributes to
@@ -187,8 +183,8 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: dionysus_system_trait
-    description: DNA polymerase IV (dinB, UniProtKB:Q49YT9) contributes to Dionysus
-      system (associated with transmembrane, celebration, erythrocyte).
+    description: Endonuclease GajA (gajA, UniProtKB:P0DW47) contributes to Dionysus
+      system.
     evidence:
     - reference: DOI:10.1101/2025.09.30.679545
       snippet: 'Dionysus is named after the god associated with winemaking and the
@@ -196,9 +192,8 @@ causal_graphs:
         DinA, featuring a merozoite adhesive erythrocyte binding protein (MAEBL) and
         a transmembrane (TM) domain; DinB, a TerB-like protein; and DinC, a pore-forming
         toxin (PFT) with four TM domains'
-      notes: Supports the functional association between DNA polymerase IV (UniProtKB:Q49YT9
-        in Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC 15305 /
-        DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)) and Dionysus system.
+      notes: Supports the functional association between Endonuclease GajA (UniProtKB:P0DW47
+        in Bacillus cereus (strain HuB5-5)) and Dionysus system.
 discussions:
 - discussion_id: dionysus-jumbo-phage-mechanism-gap
   prompt: Resolve Dionysus phage triggers, EPI-vesicle pore formation, and model coverage
@@ -226,5 +221,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    dionysus_system_protein_component with UniProtKB:Q49YT9 (dinB) exemplar.'
+    dionysus_system_protein_component with UniProtKB:P0DW47 (gajA) exemplar.'
   llm_assisted: true

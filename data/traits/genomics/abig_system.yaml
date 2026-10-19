@@ -125,35 +125,33 @@ causal_graphs:
     grounding: traitmech:000214
     description: Possession of a genome-encoded abortive-infection phage-defense system.
   - node_id: abig_system_protein_component
-    label: Abortive phage resistance protein AbiGi
+    label: Abortive phage resistance protein AbiC
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Abortive phage resistance protein AbiGi) associated
+    description: Protein component (Abortive phage resistance protein AbiC) associated
       with AbiG system.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    grounding: InterPro:IPR031709
     gene_symbols:
-    - abiGI
+    - abiC
     protein_examples:
-    - uniprot_id: UniProtKB:Q48725
-      protein_label: Abortive phage resistance protein AbiGi
-      gene_symbol: abiGI
-      taxon_id: NCBITaxon:1359
-      taxon_label: Lactococcus lactis subsp. cremoris (Streptococcus cremoris)
+    - uniprot_id: UniProtKB:Q01457
+      protein_label: Abortive phage resistance protein AbiC
+      gene_symbol: abiC
+      taxon_id: NCBITaxon:1360
+      taxon_label: Lactococcus lactis subsp. lactis (Streptococcus lactis)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      entry_version: 39
+      entry_version: 35
       sequence_version: 1
-      role: Characteristic protein component (abiGI, Abortive phage resistance protein
-        AbiGi) associated with AbiG system in Lactococcus lactis subsp. cremoris (Streptococcus
-        cremoris).
+      role: Characteristic protein component (abiC, Abortive phage resistance protein
+        AbiC) associated with AbiG system in Lactococcus lactis subsp. lactis (Streptococcus
+        lactis).
       evidence:
       - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
         snippet: 'AbiG | 10\.1016/j\.mib\.2005\.06\.006 | Phage abortive infection
           in lactococci: variations on a theme'
-        notes: Supports Abortive phage resistance protein AbiGi in AbiG system; UniProtKB:Q48725
-          (abiGI, Abortive phage resistance protein AbiGi) in Lactococcus lactis subsp.
-          cremoris (Streptococcus cremoris) provides a verified protein exemplar.
+        notes: Supports Abortive phage resistance protein AbiC in AbiG system; UniProtKB:Q01457
+          (abiC, Abortive phage resistance protein AbiC) in Lactococcus lactis subsp.
+          lactis (Streptococcus lactis) provides a verified protein exemplar.
   edges:
   - subject: abig_locus
     predicate: contributes to
@@ -235,16 +233,15 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: abig_system_trait
-    description: Abortive phage resistance protein AbiGi (abiGI, UniProtKB:Q48725)
-      contributes to AbiG system (associated with approximately, transcripts, consisting).
+    description: Abortive phage resistance protein AbiC (abiC, UniProtKB:Q01457) contributes
+      to AbiG system.
     evidence:
-    - reference: DOI:10.1128/aem.65.1.330-335.1999
-      snippet: The abiG locus (consisting of two genes, abiGi and abiGii) was examined
-        by Northern blot analysis, revealing two transcripts of approximately 2.8
-        and 1.5 kb which were homologous to the two gene-specific probes
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: 'AbiC | 10\.1016/j\.mib\.2005\.06\.006 | Phage abortive infection in
+        lactococci: variations on a theme'
       notes: Supports the functional association between Abortive phage resistance
-        protein AbiGi (UniProtKB:Q48725 in Lactococcus lactis subsp. cremoris (Streptococcus
-        cremoris)) and AbiG system.
+        protein AbiC (UniProtKB:Q01457 in Lactococcus lactis subsp. lactis (Streptococcus
+        lactis)) and AbiG system.
 discussions:
 - discussion_id: abig-primary-target-gap
   prompt: Resolve the AbiG phage trigger, AbiGi and AbiGii molecular functions, and
@@ -287,5 +284,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    abig_system_protein_component with UniProtKB:Q48725 (abiGI) exemplar.'
+    abig_system_protein_component with UniProtKB:Q01457 (abiC) exemplar.'
   llm_assisted: true

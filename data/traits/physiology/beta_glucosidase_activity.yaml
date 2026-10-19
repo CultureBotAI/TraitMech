@@ -112,8 +112,7 @@ causal_graphs:
     predicate_id: RO:0002326
     object: beta_glucosidase_activity_trait
     description: 6-phospho-beta-glucosidase BglA (bglA, UniProtKB:Q46829) contributes
-      to beta-glucosidase activity (associated with phosphohydrolase, arylamidase,
-      glucosidase).
+      to beta-glucosidase activity.
     evidence:
     - reference: DOI:10.2323/jgam.60.59
       snippet: In API ZYM, activities are positive for alkaline phosphatase, esterase

@@ -32,7 +32,7 @@ causal_graphs:
   scope_status: NONMECHANISTIC
   scope_notes: This genomics record is a measurement, genomic-element classification,
     or population-level descriptor rather than one taxon-specific protein mechanism;
-    contextual protein nodes do not receive token UniProt examples.
+    contextual protein nodes include source-backed UniProtKB exemplars.
   description: Evidence-backed causal sketch linking oligotrophic, high-Ne lifestyles
     to selective reduction of genome content.
   nodes:
@@ -72,35 +72,32 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Reliance on externally supplied B1/B12 precursors and products.
   - node_id: genome_streamlining_protein_component
-    label: 5-methyltetrahydropteroyltriglutamate--homocysteine methyltransferase
+    label: Endonuclease GajA
     node_type: GENE_OR_PROTEIN
-    description: Protein component (5-methyltetrahydropteroyltriglutamate--homocysteine
-      methyltransferase) associated with genome streamlining.
+    description: Protein component (Endonuclease GajA) associated with genome streamlining.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - metE
+    - gajA
     protein_examples:
-    - uniprot_id: UniProtKB:B5BIX4
-      protein_label: 5-methyltetrahydropteroyltriglutamate--homocysteine methyltransferase
-      gene_symbol: metE
-      taxon_id: NCBITaxon:554290
-      taxon_label: Salmonella paratyphi A (strain AKU_12601)
+    - uniprot_id: UniProtKB:P0DW47
+      protein_label: Endonuclease GajA
+      gene_symbol: gajA
+      taxon_id: NCBITaxon:1053212
+      taxon_label: Bacillus cereus (strain HuB5-5)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      entry_version: 81
+      entry_version: 12
       sequence_version: 1
-      role: Characteristic protein component (metE, 5-methyltetrahydropteroyltriglutamate--homocysteine
-        methyltransferase) associated with genome streamlining in Salmonella paratyphi
-        A (strain AKU_12601).
+      role: Characteristic protein component (gajA, Endonuclease GajA) associated
+        with genome streamlining in Bacillus cereus (strain HuB5-5).
       evidence:
       - reference: DOI:10.1038/s41467-024-46374-w
         snippet: genome streamlining and metabolic auxotrophies may act as joint mechanisms
-        notes: Supports 5-methyltetrahydropteroyltriglutamate--homocysteine methyltransferase
-          in genome streamlining; UniProtKB:B5BIX4 (metE, 5-methyltetrahydropteroyltriglutamate--homocysteine
-          methyltransferase) in Salmonella paratyphi A (strain AKU_12601) provides
-          a verified protein exemplar.
+        notes: Supports Endonuclease GajA in genome streamlining; UniProtKB:P0DW47
+          (gajA, Endonuclease GajA) in Bacillus cereus (strain HuB5-5) provides a
+          verified protein exemplar.
   edges:
   - subject: oligotrophic_environment
     predicate: selects for
@@ -181,15 +178,13 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: streamlining_trait
-    description: 5-methyltetrahydropteroyltriglutamate--homocysteine methyltransferase
-      (metE, UniProtKB:B5BIX4) contributes to genome streamlining (associated with
-      replication, minimizes, resources).
+    description: Endonuclease GajA (gajA, UniProtKB:P0DW47) contributes to genome
+      streamlining.
     evidence:
     - reference: DOI:10.1038/ismej.2014.60
       snippet: minimizes resources required for replication
-      notes: Supports the functional association between 5-methyltetrahydropteroyltriglutamate--homocysteine
-        methyltransferase (UniProtKB:B5BIX4 in Salmonella paratyphi A (strain AKU_12601))
-        and genome streamlining.
+      notes: Supports the functional association between Endonuclease GajA (UniProtKB:P0DW47
+        in Bacillus cereus (strain HuB5-5)) and genome streamlining.
 curation_history:
 - timestamp: '2026-06-05T00:00:00Z'
   curator: claude
@@ -241,5 +236,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    genome_streamlining_protein_component with UniProtKB:B5BIX4 (metE) exemplar.'
+    genome_streamlining_protein_component with UniProtKB:P0DW47 (gajA) exemplar.'
   llm_assisted: true

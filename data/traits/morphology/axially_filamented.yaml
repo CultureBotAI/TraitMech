@@ -32,7 +32,7 @@ causal_graphs:
   scope_status: NONMECHANISTIC
   scope_notes: This record is a broad environmental or morphological classification
     spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
-    descriptor; contextual protein nodes do not receive token UniProt examples.
+    descriptor; contextual protein nodes include source-backed UniProtKB exemplars.
   nodes:
   - node_id: axially_filamented_trait
     label: axially filamented
@@ -51,27 +51,24 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Motor embedded in the cytoplasmic membrane and peptidoglycan layer.
     protein_examples:
-    - uniprot_id: UniProtKB:P33977
-      protein_label: Flagellar basal-body protein FlbY
-      gene_symbol: flbY
-      taxon_id: NCBITaxon:190650
-      taxon_label: Caulobacter vibrioides (strain ATCC 19089 / CIP 103742 / CB 15)
-        (Caulobacter crescentus)
+    - uniprot_id: UniProtKB:P06974
+      protein_label: Flagellar motor switch protein FliM
+      gene_symbol: fliM
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
-      proteome_id: UP000001816
+      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 92
-      sequence_version: 2
-      role: Exemplar protein (flbY, Flagellar basal-body protein FlbY) representing
-        flagellar basal motor in Caulobacter vibrioides (strain ATCC 19089 / CIP 103742
-        / CB 15) (Caulobacter crescentus) for axially filamented.
+      entry_version: 189
+      sequence_version: 1
+      role: Exemplar protein (fliM, Flagellar motor switch protein FliM) representing
+        flagellar basal motor in Escherichia coli (strain K12) for axially filamented.
       evidence:
       - reference: DOI:10.3390/biom10040550
         snippet: connects with a basal motor
-        notes: Supports flagellar basal motor in axially filamented; UniProtKB:P33977
-          (flbY, Flagellar basal-body protein FlbY) in Caulobacter vibrioides (strain
-          ATCC 19089 / CIP 103742 / CB 15) (Caulobacter crescentus) provides a verified
-          protein exemplar.
+        notes: Supports flagellar basal motor in axially filamented; UniProtKB:P06974
+          (fliM, Flagellar motor switch protein FliM) in Escherichia coli (strain
+          K12) provides a verified protein exemplar.
   - node_id: periplasmic_space
     label: periplasmic space
     node_type: CELLULAR_LOCALIZATION
@@ -121,23 +118,23 @@ causal_graphs:
     description: Rotating core of the flagellar motor (MS/C ring) around which the
       FlbB ring forms.
     protein_examples:
-    - uniprot_id: UniProtKB:Q8FUS3
-      protein_label: Flagellar M-ring protein FliF
-      gene_symbol: fliF
-      taxon_id: NCBITaxon:204722
-      taxon_label: Brucella suis biovar 1 (strain 1330)
+    - uniprot_id: UniProtKB:P06974
+      protein_label: Flagellar motor switch protein FliM
+      gene_symbol: fliM
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
-      proteome_id: UP000007104
+      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 109
+      entry_version: 189
       sequence_version: 1
-      role: Exemplar protein (fliF, Flagellar M-ring protein FliF) representing flagellar
-        rotor in Brucella suis biovar 1 (strain 1330) for axially filamented.
+      role: Exemplar protein (fliM, Flagellar motor switch protein FliM) representing
+        flagellar rotor in Escherichia coli (strain K12) for axially filamented.
       evidence:
-      - reference: DOI:10.1016/j.semcdb.2015.10.015
-        snippet: long, helical appendages known as flagella to move
-        notes: Supports flagellar rotor in axially filamented; UniProtKB:Q8FUS3 (fliF,
-          Flagellar M-ring protein FliF) in Brucella suis biovar 1 (strain 1330) provides
+      - reference: DOI:10.3390/biom10040550
+        snippet: connects with a basal motor
+        notes: Supports flagellar rotor in axially filamented; UniProtKB:P06974 (fliM,
+          Flagellar motor switch protein FliM) in Escherichia coli (strain K12) provides
           a verified protein exemplar.
   - node_id: stator_complex
     grounding_status: REVIEWED_LABEL_ONLY
@@ -148,28 +145,23 @@ causal_graphs:
     description: Ion-powered torque-generating stator units recruited around the rotor
       for flagellar rotation.
     protein_examples:
-    - uniprot_id: UniProtKB:Q59066
-      protein_label: CRISPR system single-strand-specific deoxyribonuclease Cas10/Csm1
-      gene_symbol: cas10
-      taxon_id: NCBITaxon:243232
-      taxon_label: Methanocaldococcus jannaschii (strain ATCC 43067 / DSM 2661 / JAL-1
-        / JCM 10045 / NBRC 100440) (Methanococcus jannaschii)
+    - uniprot_id: UniProtKB:Q56331
+      protein_label: Motility protein A
+      gene_symbol: motA
+      taxon_id: NCBITaxon:162
+      taxon_label: Treponema phagedenis
       entry_status: REVIEWED
-      proteome_id: UP000000805
       retrieved_on: '2026-10-17'
-      entry_version: 115
+      entry_version: 85
       sequence_version: 1
-      role: Exemplar protein (cas10, CRISPR system single-strand-specific deoxyribonuclease
-        Cas10/Csm1) representing stator complex in Methanocaldococcus jannaschii (strain
-        ATCC 43067 / DSM 2661 / JAL-1 / JCM 10045 / NBRC 100440) (Methanococcus jannaschii)
-        for axially filamented.
+      role: Exemplar protein (motA, Motility protein A) representing stator complex
+        in Treponema phagedenis for axially filamented.
       evidence:
-      - reference: DOI:10.1016/j.semcdb.2015.10.015
-        snippet: long, helical appendages known as flagella to move
-        notes: Supports stator complex in axially filamented; UniProtKB:Q59066 (cas10,
-          CRISPR system single-strand-specific deoxyribonuclease Cas10/Csm1) in Methanocaldococcus
-          jannaschii (strain ATCC 43067 / DSM 2661 / JAL-1 / JCM 10045 / NBRC 100440)
-          (Methanococcus jannaschii) provides a verified protein exemplar.
+      - reference: DOI:10.3390/biom10040550
+        snippet: mechanics of spirochete motility
+        notes: Supports stator complex in axially filamented; UniProtKB:Q56331 (motA,
+          Motility protein A) in Treponema phagedenis provides a verified protein
+          exemplar.
   - node_id: wavy_cell_morphology
     label: wavy / flat-wave cell morphology
     node_type: QUALITY
@@ -332,8 +324,8 @@ curation_history:
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
-  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P33977 (flbY)
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P06974 (fliM)
     protein example to node flagellar_basal_motor; added UniProtKB:Q8FUS3 (fliF) protein
-    example to node flbb_ring; added UniProtKB:Q8FUS3 (fliF) protein example to node
-    flagellar_rotor; added UniProtKB:Q59066 (cas10) protein example to node stator_complex.'
+    example to node flbb_ring; added UniProtKB:P06974 (fliM) protein example to node
+    flagellar_rotor; added UniProtKB:Q56331 (motA) protein example to node stator_complex.'
   llm_assisted: true

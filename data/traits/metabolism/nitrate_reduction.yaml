@@ -26,19 +26,26 @@ curation_history:
   llm_assisted: true
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed canonical_examples status alongside NONMECHANISTIC protein exemplar
+    graph for nitrate reduction; isolate-level canonical example remains deferred
+    pending explicit strain-level literature.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph nitrate_reduction_graph
-    with GENE_OR_PROTEIN node nitrate_reduction_protein_component and UniProtKB:Q9LA24
+    with GENE_OR_PROTEIN node nitrate_reduction_protein_component and UniProtKB:P09152
     exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: nitrate_reduction_graph
   title: Protein component associated with nitrate reduction
-  description: Literature-backed association between Fumarate and nitrate reduction
-    regulatory protein (UniProtKB:Q9LA24) and nitrate reduction.
+  description: Literature-backed association between Respiratory nitrate reductase
+    1 alpha chain (UniProtKB:P09152) and nitrate reduction.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q9LA24 in Shigella
-    dysenteriae) associated with nitrate reduction while full multi-step mechanistic
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P09152 in Escherichia
+    coli (strain K12)) associated with nitrate reduction while full multi-step mechanistic
     curation remains future work.
   nodes:
   - node_id: nitrate_reduction_trait
@@ -48,43 +55,45 @@ causal_graphs:
     description: A metabolism in which an organism reduces nitrate, whether for energy
       conservation or for assimilation into biomass.
   - node_id: nitrate_reduction_protein_component
-    label: Fumarate and nitrate reduction regulatory protein
+    label: Respiratory nitrate reductase 1 alpha chain
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Fumarate and nitrate reduction regulatory protein)
-      associated with nitrate reduction.
+    description: Protein component (Respiratory nitrate reductase 1 alpha chain) associated
+      with nitrate reduction.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - fnr
+    - narG
     protein_examples:
-    - uniprot_id: UniProtKB:Q9LA24
-      protein_label: Fumarate and nitrate reduction regulatory protein
-      gene_symbol: fnr
-      taxon_id: NCBITaxon:622
-      taxon_label: Shigella dysenteriae
+    - uniprot_id: UniProtKB:P09152
+      protein_label: Respiratory nitrate reductase 1 alpha chain
+      gene_symbol: narG
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
+      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 106
-      sequence_version: 2
-      role: Characteristic protein component (fnr, Fumarate and nitrate reduction
-        regulatory protein) associated with nitrate reduction in Shigella dysenteriae.
+      entry_version: 228
+      sequence_version: 4
+      role: Characteristic protein component (narG, Respiratory nitrate reductase
+        1 alpha chain) associated with nitrate reduction in Escherichia coli (strain
+        K12).
       evidence:
       - reference: DOI:10.1128/JB.181.21.6573-6584.1999
         snippet: Nitrate reduction can be performed with three different purposes
-        notes: Supports Fumarate and nitrate reduction regulatory protein in nitrate
-          reduction; UniProtKB:Q9LA24 (fnr, Fumarate and nitrate reduction regulatory
-          protein) in Shigella dysenteriae provides a verified protein exemplar.
+        notes: Supports Respiratory nitrate reductase 1 alpha chain in nitrate reduction;
+          UniProtKB:P09152 (narG, Respiratory nitrate reductase 1 alpha chain) in
+          Escherichia coli (strain K12) provides a verified protein exemplar.
   edges:
   - subject: nitrate_reduction_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: nitrate_reduction_trait
-    description: Fumarate and nitrate reduction regulatory protein (fnr, UniProtKB:Q9LA24)
-      contributes to nitrate reduction (associated with different, performed, reduction).
+    description: Respiratory nitrate reductase 1 alpha chain (narG, UniProtKB:P09152)
+      contributes to nitrate reduction.
     evidence:
     - reference: DOI:10.1128/JB.181.21.6573-6584.1999
       snippet: Nitrate reduction can be performed with three different purposes
-      notes: Supports the functional association between Fumarate and nitrate reduction
-        regulatory protein (UniProtKB:Q9LA24 in Shigella dysenteriae) and nitrate
+      notes: Supports the functional association between Respiratory nitrate reductase
+        1 alpha chain (UniProtKB:P09152 in Escherichia coli (strain K12)) and nitrate
         reduction.

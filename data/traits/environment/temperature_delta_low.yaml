@@ -69,38 +69,35 @@ causal_graphs:
     description: Long-term membrane fluidization via iso-to-anteiso branched-chain
       fatty acid switching.
   - node_id: temperature_delta_low_protein_component
-    label: 'Bifunctional protein Aas [Includes: 2-acylglycerophosphoethanolamine acyltransferase'
+    label: Cold shock protein CspA
     node_type: GENE_OR_PROTEIN
-    description: 'Protein component (Bifunctional protein Aas [Includes: 2-acylglycerophosphoethanolamine
-      acyltransferase) associated with temperature delta low.'
+    description: Protein component (Cold shock protein CspA) associated with temperature
+      delta low.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - aas
+    - cspA
     protein_examples:
-    - uniprot_id: UniProtKB:B5BFH6
-      protein_label: 'Bifunctional protein Aas [Includes: 2-acylglycerophosphoethanolamine
-        acyltransferase'
-      gene_symbol: aas
-      taxon_id: NCBITaxon:554290
-      taxon_label: Salmonella paratyphi A (strain AKU_12601)
+    - uniprot_id: UniProtKB:P0A9X9
+      protein_label: Cold shock protein CspA
+      gene_symbol: cspA
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
+      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 79
-      sequence_version: 1
-      role: 'Characteristic protein component (aas, Bifunctional protein Aas [Includes:
-        2-acylglycerophosphoethanolamine acyltransferase) associated with temperature
-        delta low in Salmonella paratyphi A (strain AKU_12601).'
+      entry_version: 146
+      sequence_version: 2
+      role: Characteristic protein component (cspA, Cold shock protein CspA) associated
+        with temperature delta low in Escherichia coli (strain K12).
       evidence:
       - reference: DOI:10.1128/spectrum.03925-23
         snippet: Upon temperature decrease, the membrane rigidifies and increases
           in thickness, resulting in activation of the kinase-dominant state of DesK
-        notes: 'Supports Bifunctional protein Aas [Includes: 2-acylglycerophosphoethanolamine
-          acyltransferase in temperature delta low; UniProtKB:B5BFH6 (aas, Bifunctional
-          protein Aas [Includes: 2-acylglycerophosphoethanolamine acyltransferase)
-          in Salmonella paratyphi A (strain AKU_12601) provides a verified protein
-          exemplar.'
+        notes: Supports Cold shock protein CspA in temperature delta low; UniProtKB:P0A9X9
+          (cspA, Cold shock protein CspA) in Escherichia coli (strain K12) provides
+          a verified protein exemplar.
   edges:
   - subject: limited_thermal_adaptation
     predicate: confers
@@ -186,16 +183,14 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: temperature_delta_low_trait
-    description: 'Bifunctional protein Aas [Includes: 2-acylglycerophosphoethanolamine
-      acyltransferase (aas, UniProtKB:B5BFH6) contributes to temperature delta low
-      (associated with temperature, activation, rigidifies).'
+    description: Cold shock protein CspA (cspA, UniProtKB:P0A9X9) contributes to temperature
+      delta low.
     evidence:
     - reference: DOI:10.1128/spectrum.03925-23
       snippet: Upon temperature decrease, the membrane rigidifies and increases in
         thickness, resulting in activation of the kinase-dominant state of DesK
-      notes: 'Supports the functional association between Bifunctional protein Aas
-        [Includes: 2-acylglycerophosphoethanolamine acyltransferase (UniProtKB:B5BFH6
-        in Salmonella paratyphi A (strain AKU_12601)) and temperature delta low.'
+      notes: Supports the functional association between Cold shock protein CspA (UniProtKB:P0A9X9
+        in Escherichia coli (strain K12)) and temperature delta low.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.843770+00:00'
   curator: seed_from_metpo
@@ -279,5 +274,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    temperature_delta_low_protein_component with UniProtKB:B5BFH6 (aas) exemplar.'
+    temperature_delta_low_protein_component with UniProtKB:P0A9X9 (cspA) exemplar.'
   llm_assisted: true

@@ -30,8 +30,8 @@ causal_graphs:
   title: Parasitism extracts resources at the host's expense
   scope_status: NONMECHANISTIC
   scope_notes: This broad ecological, host-relationship, habitat, or hazard classification
-    spans multiple taxa and mechanisms; contextual protein nodes do not receive token
-    UniProt examples.
+    spans multiple taxa and mechanisms; contextual protein nodes include source-backed
+    UniProtKB exemplars.
   description: Evidence-backed causal sketch linking host-resource exploitation to
     reduced host fitness in chronic parasitic association.
   nodes:
@@ -87,37 +87,37 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Hemoglobin- and heme-uptake mechanisms used to acquire host nutrients.
   - node_id: parasitism_protein_component
-    label: Putative metal ABC transporter substrate-binding protein Hpf
+    label: E3 ubiquitin-protein ligase SspH2
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Putative metal ABC transporter substrate-binding
-      protein Hpf) associated with parasitism.
+    description: Protein component (E3 ubiquitin-protein ligase SspH2) associated
+      with parasitism.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - hpf
+    - sspH2
     protein_examples:
-    - uniprot_id: UniProtKB:A4N8V8
-      protein_label: Putative metal ABC transporter substrate-binding protein Hpf
-      gene_symbol: hpf
-      taxon_id: NCBITaxon:375177
-      taxon_label: Haemophilus influenzae (strain NTHi 3655)
+    - uniprot_id: UniProtKB:P0CE12
+      protein_label: E3 ubiquitin-protein ligase SspH2
+      gene_symbol: sspH2
+      taxon_id: NCBITaxon:99287
+      taxon_label: Salmonella typhimurium (strain LT2 / SGSC1412 / ATCC 700720)
       entry_status: REVIEWED
+      proteome_id: UP000001014
       retrieved_on: '2026-10-17'
-      entry_version: 60
+      entry_version: 83
       sequence_version: 1
-      role: Characteristic protein component (hpf, Putative metal ABC transporter
-        substrate-binding protein Hpf) associated with parasitism in Haemophilus influenzae
-        (strain NTHi 3655).
+      role: Characteristic protein component (sspH2, E3 ubiquitin-protein ligase SspH2)
+        associated with parasitism in Salmonella typhimurium (strain LT2 / SGSC1412
+        / ATCC 700720).
       evidence:
       - reference: DOI:10.1073/pnas.1218525110
         snippet: This review examines how a growing knowledge of the vast range of
           animal-bacterial interactions, whether in shared ecosystems or intimate
           symbioses, is fundamentally altering our understanding of animal biology.
-        notes: Supports Putative metal ABC transporter substrate-binding protein Hpf
-          in parasitism; UniProtKB:A4N8V8 (hpf, Putative metal ABC transporter substrate-binding
-          protein Hpf) in Haemophilus influenzae (strain NTHi 3655) provides a verified
-          protein exemplar.
+        notes: Supports E3 ubiquitin-protein ligase SspH2 in parasitism; UniProtKB:P0CE12
+          (sspH2, E3 ubiquitin-protein ligase SspH2) in Salmonella typhimurium (strain
+          LT2 / SGSC1412 / ATCC 700720) provides a verified protein exemplar.
   edges:
   - subject: host_resource_exploitation
     predicate: causes
@@ -227,17 +227,16 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: parasitism_trait
-    description: Putative metal ABC transporter substrate-binding protein Hpf (hpf,
-      UniProtKB:A4N8V8) contributes to parasitism (associated with fundamentally,
-      understanding, interactions).
+    description: E3 ubiquitin-protein ligase SspH2 (sspH2, UniProtKB:P0CE12) contributes
+      to parasitism.
     evidence:
     - reference: DOI:10.1073/pnas.1218525110
       snippet: This review examines how a growing knowledge of the vast range of animal-bacterial
         interactions, whether in shared ecosystems or intimate symbioses, is fundamentally
         altering our understanding of animal biology.
-      notes: Supports the functional association between Putative metal ABC transporter
-        substrate-binding protein Hpf (UniProtKB:A4N8V8 in Haemophilus influenzae
-        (strain NTHi 3655)) and parasitism.
+      notes: Supports the functional association between E3 ubiquitin-protein ligase
+        SspH2 (UniProtKB:P0CE12 in Salmonella typhimurium (strain LT2 / SGSC1412 /
+        ATCC 700720)) and parasitism.
 curation_history:
 - timestamp: '2026-06-02T00:00:00Z'
   curator: claude
@@ -284,5 +283,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    parasitism_protein_component with UniProtKB:A4N8V8 (hpf) exemplar.'
+    parasitism_protein_component with UniProtKB:P0CE12 (sspH2) exemplar.'
   llm_assisted: true

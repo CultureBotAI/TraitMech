@@ -127,6 +127,13 @@ curation_history:
   llm_assisted: true
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed canonical_examples status alongside NONMECHANISTIC protein exemplar
+    graph for bacterial polar flagellar ejection; isolate-level canonical example
+    remains deferred pending explicit strain-level literature.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph bacterial_polar_flagellar_ejection_graph
     with GENE_OR_PROTEIN node bacterial_polar_flagellar_ejection_protein_component
@@ -185,8 +192,7 @@ causal_graphs:
     predicate_id: RO:0002326
     object: bacterial_polar_flagellar_ejection_trait
     description: Flagellar motor switch protein FliG (fliG, UniProtKB:P0ABZ1) contributes
-      to bacterial polar flagellar ejection (associated with significantly, accumulation,
-      depletion).
+      to bacterial polar flagellar ejection.
     evidence:
     - reference: DOI:10.1038/s41467-026-75593-6
       snippet: Nutrient depletion significantly increases the frequency of flagellar

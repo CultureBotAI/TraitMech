@@ -81,34 +81,37 @@ causal_graphs:
     grounding: traitmech:000275
     description: Possession of a genome-encoded DdmDE anti-plasmid defense system.
   - node_id: ddmde_system_protein_component
-    label: Thoeris anti-defense 1
+    label: Protein argonaute
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Thoeris anti-defense 1) associated with DdmDE
-      system.
+    description: Protein component (Protein argonaute) associated with DdmDE system.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - tad1
+    - ago
     protein_examples:
-    - uniprot_id: UniProtKB:P0DW61
-      protein_label: Thoeris anti-defense 1
-      gene_symbol: tad1
-      taxon_id: NCBITaxon:1392497
-      taxon_label: Clostridioides mangenotii (strain LM2)
+    - uniprot_id: UniProtKB:Q8U3D2
+      protein_label: Protein argonaute
+      gene_symbol: ago
+      taxon_id: NCBITaxon:186497
+      taxon_label: Pyrococcus furiosus (strain ATCC 43587 / DSM 3638 / JCM 8422 /
+        Vc1)
       entry_status: REVIEWED
+      proteome_id: UP000001013
       retrieved_on: '2026-10-17'
-      entry_version: 11
+      entry_version: 117
       sequence_version: 1
-      role: Characteristic protein component (tad1, Thoeris anti-defense 1) associated
-        with DdmDE system in Clostridioides mangenotii (strain LM2).
+      role: Characteristic protein component (ago, Protein argonaute) associated with
+        DdmDE system in Pyrococcus furiosus (strain ATCC 43587 / DSM 3638 / JCM 8422
+        / Vc1).
       evidence:
       - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
-        snippet: PD-Lambda-2 | 10\.1101/2022\.05\.12\.491691 | Mapping the landscape
-          of anti-phage defense mechanisms in the E\. coli pangenome
-        notes: Supports Thoeris anti-defense 1 in DdmDE system; UniProtKB:P0DW61 (tad1,
-          Thoeris anti-defense 1) in Clostridioides mangenotii (strain LM2) provides
-          a verified protein exemplar.
+        snippet: '| pAgo | 10\.1186/1745-6150-4-29 | Prokaryotic homologs of Argonaute
+          proteins are predicted to function as key components of a novel system of
+          defense against mobile genetic elements |'
+        notes: Supports Protein argonaute in DdmDE system; UniProtKB:Q8U3D2 (ago,
+          Protein argonaute) in Pyrococcus furiosus (strain ATCC 43587 / DSM 3638
+          / JCM 8422 / Vc1) provides a verified protein exemplar.
   edges:
   - subject: ddmde_locus
     predicate: contributes to
@@ -159,14 +162,15 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: ddmde_system_trait
-    description: Thoeris anti-defense 1 (tad1, UniProtKB:P0DW61) contributes to DdmDE
-      system (associated with landscape, pangenome, defense).
+    description: Protein argonaute (ago, UniProtKB:Q8U3D2) contributes to DdmDE system.
     evidence:
     - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
-      snippet: PD-Lambda-2 | 10\.1101/2022\.05\.12\.491691 | Mapping the landscape
-        of anti-phage defense mechanisms in the E\. coli pangenome
-      notes: Supports the functional association between Thoeris anti-defense 1 (UniProtKB:P0DW61
-        in Clostridioides mangenotii (strain LM2)) and DdmDE system.
+      snippet: '| pAgo | 10\.1186/1745-6150-4-29 | Prokaryotic homologs of Argonaute
+        proteins are predicted to function as key components of a novel system of
+        defense against mobile genetic elements |'
+      notes: Supports the functional association between Protein argonaute (UniProtKB:Q8U3D2
+        in Pyrococcus furiosus (strain ATCC 43587 / DSM 3638 / JCM 8422 / Vc1)) and
+        DdmDE system.
 discussions:
 - discussion_id: ddmde-substrate-and-guide-source-gap
   prompt: Resolve DdmDE natural guide sources, plasmid-substrate breadth, and DdmABC
@@ -208,5 +212,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    ddmde_system_protein_component with UniProtKB:P0DW61 (tad1) exemplar.'
+    ddmde_system_protein_component with UniProtKB:Q8U3D2 (ago) exemplar.'
   llm_assisted: true

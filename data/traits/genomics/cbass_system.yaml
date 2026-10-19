@@ -191,7 +191,7 @@ causal_graphs:
     predicate_id: RO:0002326
     object: cbass_system_trait
     description: CBASS oligonucleotide cyclase CdnC (cdnC, UniProtKB:P0DX77) contributes
-      to CBASS system (associated with oligonucleotides, oligonucleotide, signalling).
+      to CBASS system.
     evidence:
     - reference: DOI:10.1038/s41564-020-0777-y
       snippet: CBASS systems are composed of an oligonucleotide cyclase, which generates

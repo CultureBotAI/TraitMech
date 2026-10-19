@@ -100,35 +100,35 @@ causal_graphs:
     grounding: METPO:1007501
     description: Cell material accumulated from supplied organic carbon.
   - node_id: aerobic_anoxygenic_phototrophy_protein_component
-    label: Reaction center protein L chain
+    label: Cytochrome b6
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Reaction center protein L chain) associated with
-      aerobic anoxygenic phototrophy.
+    description: Protein component (Cytochrome b6) associated with aerobic anoxygenic
+      phototrophy.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - pufL
+    - petB
     protein_examples:
-    - uniprot_id: UniProtKB:P10717
-      protein_label: Reaction center protein L chain
-      gene_symbol: pufL
-      taxon_id: NCBITaxon:1085
-      taxon_label: Rhodospirillum rubrum
+    - uniprot_id: UniProtKB:Q9ZGG0
+      protein_label: Cytochrome b6
+      gene_symbol: petB
+      taxon_id: NCBITaxon:28064
+      taxon_label: Heliobacterium mobile (Heliobacillus mobilis)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      entry_version: 120
-      sequence_version: 2
-      role: Characteristic protein component (pufL, Reaction center protein L chain)
-        associated with aerobic anoxygenic phototrophy in Rhodospirillum rubrum.
+      entry_version: 110
+      sequence_version: 1
+      role: Characteristic protein component (petB, Cytochrome b6) associated with
+        aerobic anoxygenic phototrophy in Heliobacterium mobile (Heliobacillus mobilis).
       evidence:
       - reference: DOI:10.1186/s40168-024-01786-0
         snippet: Aerobic anoxygenic phototrophic (AAP) bacteria are heterotrophic
           bacteria that supply their metabolism with light energy harvested by bacteriochlorophyll-a-containing
           reaction centers
-        notes: Supports Reaction center protein L chain in aerobic anoxygenic phototrophy;
-          UniProtKB:P10717 (pufL, Reaction center protein L chain) in Rhodospirillum
-          rubrum provides a verified protein exemplar.
+        notes: Supports Cytochrome b6 in aerobic anoxygenic phototrophy; UniProtKB:Q9ZGG0
+          (petB, Cytochrome b6) in Heliobacterium mobile (Heliobacillus mobilis) provides
+          a verified protein exemplar.
   edges:
   - subject: aerobic_anoxygenic_phototrophy_trait
     predicate: has energy source
@@ -189,16 +189,15 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: aerobic_anoxygenic_phototrophy_trait
-    description: Reaction center protein L chain (pufL, UniProtKB:P10717) contributes
-      to aerobic anoxygenic phototrophy (associated with bacteriochlorophyll, heterotrophic,
-      phototrophic).
+    description: Cytochrome b6 (petB, UniProtKB:Q9ZGG0) contributes to aerobic anoxygenic
+      phototrophy.
     evidence:
     - reference: DOI:10.1186/s40168-024-01786-0
       snippet: Aerobic anoxygenic phototrophic (AAP) bacteria are heterotrophic bacteria
         that supply their metabolism with light energy harvested by bacteriochlorophyll-a-containing
         reaction centers
-      notes: Supports the functional association between Reaction center protein L
-        chain (UniProtKB:P10717 in Rhodospirillum rubrum) and aerobic anoxygenic phototrophy.
+      notes: Supports the functional association between Cytochrome b6 (UniProtKB:Q9ZGG0
+        in Heliobacterium mobile (Heliobacillus mobilis)) and aerobic anoxygenic phototrophy.
 discussions:
 - discussion_id: aerobic-anoxygenic-phototrophy-xref-gap
   prompt: Resolve an exact external ontology class for aerobic anoxygenic phototrophy
@@ -224,6 +223,6 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    aerobic_anoxygenic_phototrophy_protein_component with UniProtKB:P10717 (pufL)
+    aerobic_anoxygenic_phototrophy_protein_component with UniProtKB:Q9ZGG0 (petB)
     exemplar.'
   llm_assisted: true

@@ -80,17 +80,17 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph gravikinesis_graph
-    with GENE_OR_PROTEIN node gravikinesis_protein_component and UniProtKB:B5BL97
+    with GENE_OR_PROTEIN node gravikinesis_protein_component and UniProtKB:P05434
     exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: gravikinesis_graph
   title: Protein component associated with gravikinesis
-  description: Literature-backed association between Polyamine aminopropyltransferase
-    (UniProtKB:B5BL97) and gravikinesis.
+  description: Literature-backed association between Caltractin (UniProtKB:P05434)
+    and gravikinesis.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:B5BL97 in Salmonella
-    paratyphi A (strain AKU_12601)) associated with gravikinesis while full multi-step
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P05434 in Chlamydomonas
+    reinhardtii (Chlamydomonas smithii)) associated with gravikinesis while full multi-step
     mechanistic curation remains future work.
   nodes:
   - node_id: gravikinesis_trait
@@ -100,45 +100,38 @@ causal_graphs:
     description: A motile phenotype in which the speed of active propulsion is modulated
       according to orientation relative to gravity.
   - node_id: gravikinesis_protein_component
-    label: Polyamine aminopropyltransferase
+    label: Caltractin
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Polyamine aminopropyltransferase) associated with
-      gravikinesis.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
-    gene_symbols:
-    - speE
+    description: Protein component (Caltractin) associated with gravikinesis.
+    grounding: InterPro:IPR050230
     protein_examples:
-    - uniprot_id: UniProtKB:B5BL97
-      protein_label: Polyamine aminopropyltransferase
-      gene_symbol: speE
-      taxon_id: NCBITaxon:554290
-      taxon_label: Salmonella paratyphi A (strain AKU_12601)
+    - uniprot_id: UniProtKB:P05434
+      protein_label: Caltractin
+      taxon_id: NCBITaxon:3055
+      taxon_label: Chlamydomonas reinhardtii (Chlamydomonas smithii)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      entry_version: 86
+      entry_version: 163
       sequence_version: 1
-      role: Characteristic protein component (speE, Polyamine aminopropyltransferase)
-        associated with gravikinesis in Salmonella paratyphi A (strain AKU_12601).
+      role: Characteristic protein component (P05434, Caltractin) associated with
+        gravikinesis in Chlamydomonas reinhardtii (Chlamydomonas smithii).
       evidence:
       - reference: DOI:10.1007/s001140050634
         snippet: The resulting potential-induced modulation of the speed of propulsion
           is called gravikinesis because it acts to neutralize, fully or in part,
           sedimentation.
-        notes: Supports Polyamine aminopropyltransferase in gravikinesis; UniProtKB:B5BL97
-          (speE, Polyamine aminopropyltransferase) in Salmonella paratyphi A (strain
-          AKU_12601) provides a verified protein exemplar.
+        notes: Supports Caltractin in gravikinesis; UniProtKB:P05434 (P05434, Caltractin)
+          in Chlamydomonas reinhardtii (Chlamydomonas smithii) provides a verified
+          protein exemplar.
   edges:
   - subject: gravikinesis_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: gravikinesis_trait
-    description: Polyamine aminopropyltransferase (speE, UniProtKB:B5BL97) contributes
-      to gravikinesis (associated with sedimentation, gravikinesis, modulation).
+    description: Caltractin (P05434, UniProtKB:P05434) contributes to gravikinesis.
     evidence:
     - reference: DOI:10.1007/s001140050634
       snippet: The resulting potential-induced modulation of the speed of propulsion
         is called gravikinesis because it acts to neutralize, fully or in part, sedimentation.
-      notes: Supports the functional association between Polyamine aminopropyltransferase
-        (UniProtKB:B5BL97 in Salmonella paratyphi A (strain AKU_12601)) and gravikinesis.
+      notes: Supports the functional association between Caltractin (UniProtKB:P05434
+        in Chlamydomonas reinhardtii (Chlamydomonas smithii)) and gravikinesis.

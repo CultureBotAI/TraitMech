@@ -35,7 +35,7 @@ causal_graphs:
   scope_status: NONMECHANISTIC
   scope_notes: This record is a broad environmental or morphological classification
     spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
-    descriptor; contextual protein nodes do not receive token UniProt examples.
+    descriptor; contextual protein nodes include source-backed UniProtKB exemplars.
   nodes:
   - node_id: green_pigmented_trait
     label: green pigmented
@@ -122,29 +122,28 @@ causal_graphs:
     description: Nonribosomal peptide synthetases assembling the pyoverdine peptide
       backbone.
     protein_examples:
-    - uniprot_id: UniProtKB:Q9K1N8
-      protein_label: 'Peptide methionine sulfoxide reductase MsrA/MsrB [Includes:
-        Thioredoxin; Peptide methionine sulfoxide reductase MsrA'
-      gene_symbol: msrAB
-      taxon_id: NCBITaxon:122586
-      taxon_label: Neisseria meningitidis serogroup B (strain ATCC BAA-335 / MC58)
+    - uniprot_id: UniProtKB:Q51548
+      protein_label: L-ornithine N(5)-monooxygenase
+      gene_symbol: pvdA
+      taxon_id: NCBITaxon:208964
+      taxon_label: Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116
+        / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)
       entry_status: REVIEWED
-      proteome_id: UP000000425
+      proteome_id: UP000002438
       retrieved_on: '2026-10-17'
-      entry_version: 150
-      sequence_version: 1
-      role: 'Exemplar protein (msrAB, Peptide methionine sulfoxide reductase MsrA/MsrB
-        [Includes: Thioredoxin; Peptide methionine sulfoxide reductase MsrA) representing
-        pyoverdine NRPS enzymes (PvdL/PvdI/PvdJ/PvdD) in Neisseria meningitidis serogroup
-        B (strain ATCC BAA-335 / MC58) for green pigmented.'
+      entry_version: 133
+      sequence_version: 2
+      role: Exemplar protein (pvdA, L-ornithine N(5)-monooxygenase) representing pyoverdine
+        NRPS enzymes (PvdL/PvdI/PvdJ/PvdD) in Pseudomonas aeruginosa (strain ATCC
+        15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)
+        for green pigmented.
       evidence:
       - reference: DOI:10.1186/s12934-023-02122-1
         snippet: lead to the green colorization of the culture plate
-        notes: 'Supports pyoverdine NRPS enzymes (PvdL/PvdI/PvdJ/PvdD) in green pigmented;
-          UniProtKB:Q9K1N8 (msrAB, Peptide methionine sulfoxide reductase MsrA/MsrB
-          [Includes: Thioredoxin; Peptide methionine sulfoxide reductase MsrA) in
-          Neisseria meningitidis serogroup B (strain ATCC BAA-335 / MC58) provides
-          a verified protein exemplar.'
+        notes: Supports pyoverdine NRPS enzymes (PvdL/PvdI/PvdJ/PvdD) in green pigmented;
+          UniProtKB:Q51548 (pvdA, L-ornithine N(5)-monooxygenase) in Pseudomonas aeruginosa
+          (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C
+          / PRS 101 / PAO1) provides a verified protein exemplar.
   - node_id: iron_limitation
     label: iron-deficient conditions
     node_type: ENVIRONMENTAL_FACTOR
@@ -368,6 +367,6 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q51787 (phzA)
-    protein example to node phz_operons; added UniProtKB:Q9K1N8 (msrAB) protein example
+    protein example to node phz_operons; added UniProtKB:Q51548 (pvdA) protein example
     to node pvd_nrps.'
   llm_assisted: true

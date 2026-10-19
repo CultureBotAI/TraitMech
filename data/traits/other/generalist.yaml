@@ -21,9 +21,16 @@ curation_history:
   llm_assisted: true
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed canonical_examples status alongside NONMECHANISTIC protein exemplar
+    graph for generalist; isolate-level canonical example remains deferred pending
+    explicit strain-level literature.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph generalist_graph
-    with GENE_OR_PROTEIN node generalist_protein_component and UniProtKB:B5BD11 exemplar.'
+    with GENE_OR_PROTEIN node generalist_protein_component and UniProtKB:P0ACJ8 exemplar.'
   llm_assisted: true
 definition_source: DOI:10.1093/femsec/fiaa240
 evidence:
@@ -40,12 +47,12 @@ evidence:
 causal_graphs:
 - graph_id: generalist_graph
   title: Protein component associated with generalist
-  description: Literature-backed association between Allantoinase (UniProtKB:B5BD11)
-    and generalist.
+  description: Literature-backed association between DNA-binding transcriptional dual
+    regulator CRP (UniProtKB:P0ACJ8) and generalist.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:B5BD11 in Salmonella
-    paratyphi A (strain AKU_12601)) associated with generalist while full multi-step
-    mechanistic curation remains future work.
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P0ACJ8 in Escherichia
+    coli (strain K12)) associated with generalist while full multi-step mechanistic
+    curation remains future work.
   nodes:
   - node_id: generalist_trait
     label: generalist
@@ -54,43 +61,46 @@ causal_graphs:
     description: A phenotype describing an organism with a broad ecological niche,
       capable of thriving across diverse environments or utilizing varied resources.
   - node_id: generalist_protein_component
-    label: Allantoinase
+    label: DNA-binding transcriptional dual regulator CRP
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Allantoinase) associated with generalist.
+    description: Protein component (DNA-binding transcriptional dual regulator CRP)
+      associated with generalist.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - allB
+    - crp
     protein_examples:
-    - uniprot_id: UniProtKB:B5BD11
-      protein_label: Allantoinase
-      gene_symbol: allB
-      taxon_id: NCBITaxon:554290
-      taxon_label: Salmonella paratyphi A (strain AKU_12601)
+    - uniprot_id: UniProtKB:P0ACJ8
+      protein_label: DNA-binding transcriptional dual regulator CRP
+      gene_symbol: crp
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
+      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 83
+      entry_version: 159
       sequence_version: 1
-      role: Characteristic protein component (allB, Allantoinase) associated with
-        generalist in Salmonella paratyphi A (strain AKU_12601).
+      role: Characteristic protein component (crp, DNA-binding transcriptional dual
+        regulator CRP) associated with generalist in Escherichia coli (strain K12).
       evidence:
       - reference: DOI:10.1093/femsec/fiaa240
         snippet: Organisms are often categorized as generalists or specialists, corresponding
           to broad or narrow niche requirements
-        notes: Supports Allantoinase in generalist; UniProtKB:B5BD11 (allB, Allantoinase)
-          in Salmonella paratyphi A (strain AKU_12601) provides a verified protein
-          exemplar.
+        notes: Supports DNA-binding transcriptional dual regulator CRP in generalist;
+          UniProtKB:P0ACJ8 (crp, DNA-binding transcriptional dual regulator CRP) in
+          Escherichia coli (strain K12) provides a verified protein exemplar.
   edges:
   - subject: generalist_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: generalist_trait
-    description: Allantoinase (allB, UniProtKB:B5BD11) contributes to generalist (associated
-      with corresponding, requirements, categorized).
+    description: DNA-binding transcriptional dual regulator CRP (crp, UniProtKB:P0ACJ8)
+      contributes to generalist.
     evidence:
     - reference: DOI:10.1093/femsec/fiaa240
       snippet: Organisms are often categorized as generalists or specialists, corresponding
         to broad or narrow niche requirements
-      notes: Supports the functional association between Allantoinase (UniProtKB:B5BD11
-        in Salmonella paratyphi A (strain AKU_12601)) and generalist.
+      notes: Supports the functional association between DNA-binding transcriptional
+        dual regulator CRP (UniProtKB:P0ACJ8 in Escherichia coli (strain K12)) and
+        generalist.

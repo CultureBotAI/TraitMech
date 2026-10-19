@@ -100,37 +100,34 @@ causal_graphs:
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
   - node_id: dsr_system_protein_component
-    label: Adenine-specific methyltransferase PglX
+    label: NAD(+) hydrolase ThsA
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Adenine-specific methyltransferase PglX) associated
-      with Dsr system.
+    description: Protein component (NAD(+) hydrolase ThsA) associated with Dsr system.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - pglX
+    - thsA
     protein_examples:
-    - uniprot_id: UniProtKB:Q8CJM2
-      protein_label: Adenine-specific methyltransferase PglX
-      gene_symbol: pglX
-      taxon_id: NCBITaxon:100226
-      taxon_label: Streptomyces coelicolor (strain ATCC BAA-471 / A3(2) / M145)
+    - uniprot_id: UniProtKB:P0DW59
+      protein_label: NAD(+) hydrolase ThsA
+      gene_symbol: thsA
+      taxon_id: NCBITaxon:1310692
+      taxon_label: Acinetobacter baumannii (strain 532279)
       entry_status: REVIEWED
-      proteome_id: UP000001973
       retrieved_on: '2026-10-17'
-      entry_version: 102
+      entry_version: 10
       sequence_version: 1
-      role: Characteristic protein component (pglX, Adenine-specific methyltransferase
-        PglX) associated with Dsr system in Streptomyces coelicolor (strain ATCC BAA-471
-        / A3(2) / M145).
+      role: Characteristic protein component (thsA, NAD(+) hydrolase ThsA) associated
+        with Dsr system in Acinetobacter baumannii (strain 532279).
       evidence:
       - reference: DOI:10.1038/s41564-022-01207-8
         snippet: DSR proteins degrade nicotinamide adenine dinucleotide (NAD+) during
           infection, depleting the cell of this essential molecule and aborting phage
           propagation
-        notes: Supports Adenine-specific methyltransferase PglX in Dsr system; UniProtKB:Q8CJM2
-          (pglX, Adenine-specific methyltransferase PglX) in Streptomyces coelicolor
-          (strain ATCC BAA-471 / A3(2) / M145) provides a verified protein exemplar.
+        notes: Supports NAD(+) hydrolase ThsA in Dsr system; UniProtKB:P0DW59 (thsA,
+          NAD(+) hydrolase ThsA) in Acinetobacter baumannii (strain 532279) provides
+          a verified protein exemplar.
   edges:
   - subject: dsr_locus
     predicate: contributes to
@@ -209,14 +206,18 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: dsr_system_trait
-    description: Adenine-specific methyltransferase PglX (pglX, UniProtKB:Q8CJM2)
-      contributes to Dsr system (associated with dsr2, dsr).
+    description: NAD(+) hydrolase ThsA (thsA, UniProtKB:P0DW59) contributes to Dsr
+      system.
     evidence:
-    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
-      snippet: Dsr_II__Dsr2 | Dsr_II__Dsr2 | Dsr_II
-      notes: Supports the functional association between Adenine-specific methyltransferase
-        PglX (UniProtKB:Q8CJM2 in Streptomyces coelicolor (strain ATCC BAA-471 / A3(2)
-        / M145)) and Dsr system.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: Lamassu-Fam Lamassu-Hydrolase 2 2 Lamassu-Fam__LmuA_effector_Hydrolase,
+        Lamassu-Fam__LmuB_SMC_Cap4_nuclease_II Lamassu-Fam__LmuC_acc_Lipase Lamassu-Fam__LmuA_effector_Amidase,
+        Lamassu-Fam__LmuA_effector_Cap4_nuclease, Lamassu-Fam__LmuA_effector_Cap4_nuclease_II,
+        Lamassu-Fam__LmuA_effector_FMO, Lamassu-Fam__LmuA_effector_Lipase, Lamassu-Fam__LmuA_effector_Mrr,
+        Lamassu-Fam__LmuA_effector_PDDEXK, Lamassu-Fam__LmuA_effector_Protease, Lamassu-Fam__LmuA_effector_Sir2,
+        Lamassu-Fam__LmuA_effector_hypothetical
+      notes: Supports the functional association between NAD(+) hydrolase ThsA (UniProtKB:P0DW59
+        in Acinetobacter baumannii (strain 532279)) and Dsr system.
 discussions:
 - discussion_id: dsr-sirtuin-mechanism-gap
   prompt: Map DefenseFinder Dsr_I and Dsr_II profiles onto experimentally resolved
@@ -249,5 +250,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    dsr_system_protein_component with UniProtKB:Q8CJM2 (pglX) exemplar.'
+    dsr_system_protein_component with UniProtKB:P0DW59 (thsA) exemplar.'
   llm_assisted: true

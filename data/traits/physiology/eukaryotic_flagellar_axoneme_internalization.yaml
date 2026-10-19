@@ -156,21 +156,27 @@ curation_history:
   llm_assisted: true
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed canonical_examples status alongside NONMECHANISTIC protein exemplar
+    graph for eukaryotic flagellar axoneme internalization; isolate-level canonical
+    example remains deferred pending explicit strain-level literature.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph eukaryotic_flagellar_axoneme_internalization_graph
     with GENE_OR_PROTEIN node eukaryotic_flagellar_axoneme_internalization_protein_component
-    and UniProtKB:P33977 exemplar.'
+    and UniProtKB:P05434 exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: eukaryotic_flagellar_axoneme_internalization_graph
   title: Protein component associated with eukaryotic flagellar axoneme internalization
-  description: Literature-backed association between Flagellar basal-body protein
-    FlbY (UniProtKB:P33977) and eukaryotic flagellar axoneme internalization.
+  description: Literature-backed association between Caltractin (UniProtKB:P05434)
+    and eukaryotic flagellar axoneme internalization.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P33977 in Caulobacter
-    vibrioides (strain ATCC 19089 / CIP 103742 / CB 15) (Caulobacter crescentus))
-    associated with eukaryotic flagellar axoneme internalization while full multi-step
-    mechanistic curation remains future work.
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P05434 in Chlamydomonas
+    reinhardtii (Chlamydomonas smithii)) associated with eukaryotic flagellar axoneme
+    internalization while full multi-step mechanistic curation remains future work.
   nodes:
   - node_id: eukaryotic_flagellar_axoneme_internalization_trait
     label: eukaryotic flagellar axoneme internalization
@@ -179,51 +185,41 @@ causal_graphs:
     description: A physiological phenotype in which a microbial eukaryote internalizes
       the intact axoneme of its own cilium or flagellum into its cell body.
   - node_id: eukaryotic_flagellar_axoneme_internalization_protein_component
-    label: Flagellar basal-body protein FlbY
+    label: Caltractin
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Flagellar basal-body protein FlbY) associated
-      with eukaryotic flagellar axoneme internalization.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
-    gene_symbols:
-    - flbY
+    description: Protein component (Caltractin) associated with eukaryotic flagellar
+      axoneme internalization.
+    grounding: InterPro:IPR050230
     protein_examples:
-    - uniprot_id: UniProtKB:P33977
-      protein_label: Flagellar basal-body protein FlbY
-      gene_symbol: flbY
-      taxon_id: NCBITaxon:190650
-      taxon_label: Caulobacter vibrioides (strain ATCC 19089 / CIP 103742 / CB 15)
-        (Caulobacter crescentus)
+    - uniprot_id: UniProtKB:P05434
+      protein_label: Caltractin
+      taxon_id: NCBITaxon:3055
+      taxon_label: Chlamydomonas reinhardtii (Chlamydomonas smithii)
       entry_status: REVIEWED
-      proteome_id: UP000001816
       retrieved_on: '2026-10-17'
-      entry_version: 92
-      sequence_version: 2
-      role: Characteristic protein component (flbY, Flagellar basal-body protein FlbY)
-        associated with eukaryotic flagellar axoneme internalization in Caulobacter
-        vibrioides (strain ATCC 19089 / CIP 103742 / CB 15) (Caulobacter crescentus).
+      entry_version: 163
+      sequence_version: 1
+      role: Characteristic protein component (P05434, Caltractin) associated with
+        eukaryotic flagellar axoneme internalization in Chlamydomonas reinhardtii
+        (Chlamydomonas smithii).
       evidence:
       - reference: DOI:10.1083/jcb.201701074
         snippet: Bd zoospores retracting their flagella by coiling the entire axoneme
           into the cell body
-        notes: Supports Flagellar basal-body protein FlbY in eukaryotic flagellar
-          axoneme internalization; UniProtKB:P33977 (flbY, Flagellar basal-body protein
-          FlbY) in Caulobacter vibrioides (strain ATCC 19089 / CIP 103742 / CB 15)
-          (Caulobacter crescentus) provides a verified protein exemplar.
+        notes: Supports Caltractin in eukaryotic flagellar axoneme internalization;
+          UniProtKB:P05434 (P05434, Caltractin) in Chlamydomonas reinhardtii (Chlamydomonas
+          smithii) provides a verified protein exemplar.
   edges:
   - subject: eukaryotic_flagellar_axoneme_internalization_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: eukaryotic_flagellar_axoneme_internalization_trait
-    description: Flagellar basal-body protein FlbY (flbY, UniProtKB:P33977) contributes
-      to eukaryotic flagellar axoneme internalization (associated with retracting,
-      zoospores, flagella).
+    description: Caltractin (P05434, UniProtKB:P05434) contributes to eukaryotic flagellar
+      axoneme internalization.
     evidence:
     - reference: DOI:10.1083/jcb.201701074
       snippet: Bd zoospores retracting their flagella by coiling the entire axoneme
         into the cell body
-      notes: Supports the functional association between Flagellar basal-body protein
-        FlbY (UniProtKB:P33977 in Caulobacter vibrioides (strain ATCC 19089 / CIP
-        103742 / CB 15) (Caulobacter crescentus)) and eukaryotic flagellar axoneme
-        internalization.
+      notes: Supports the functional association between Caltractin (UniProtKB:P05434
+        in Chlamydomonas reinhardtii (Chlamydomonas smithii)) and eukaryotic flagellar
+        axoneme internalization.

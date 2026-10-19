@@ -96,38 +96,34 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Consumption of cytoplasmic protons buffering internal acidification.
   - node_id: ph_delta_very_low_protein_component
-    label: Na(+)/H(+) antiporter subunit A
+    label: Na(+)/H(+) antiporter NhaA
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Na(+)/H(+) antiporter subunit A) associated with
-      pH delta very low.
+    description: Protein component (Na(+)/H(+) antiporter NhaA) associated with pH
+      delta very low.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - mrpA
+    - nhaA
     protein_examples:
-    - uniprot_id: UniProtKB:Q9RGZ5
-      protein_label: Na(+)/H(+) antiporter subunit A
-      gene_symbol: mrpA
-      taxon_id: NCBITaxon:398511
-      taxon_label: Alkalihalophilus pseudofirmus (strain ATCC BAA-2126 / JCM 17055
-        / OF4) (Bacillus pseudofirmus)
+    - uniprot_id: UniProtKB:Q93F90
+      protein_label: Na(+)/H(+) antiporter NhaA
+      gene_symbol: nhaA
+      taxon_id: NCBITaxon:1890
+      taxon_label: Streptomyces antibioticus
       entry_status: REVIEWED
-      proteome_id: UP000001544
       retrieved_on: '2026-10-17'
-      entry_version: 115
-      sequence_version: 2
-      role: Characteristic protein component (mrpA, Na(+)/H(+) antiporter subunit
-        A) associated with pH delta very low in Alkalihalophilus pseudofirmus (strain
-        ATCC BAA-2126 / JCM 17055 / OF4) (Bacillus pseudofirmus).
+      entry_version: 71
+      sequence_version: 1
+      role: Characteristic protein component (nhaA, Na(+)/H(+) antiporter NhaA) associated
+        with pH delta very low in Streptomyces antibioticus.
       evidence:
       - reference: DOI:10.1038/nrmicro2549
         snippet: For pH homeostasis under alkaline conditions, active transport of
           protons inward is a crucial adaptation, which usually involves activation
           and transcriptional up-regulation of key cation/proton antiporters
-        notes: Supports Na(+)/H(+) antiporter subunit A in pH delta very low; UniProtKB:Q9RGZ5
-          (mrpA, Na(+)/H(+) antiporter subunit A) in Alkalihalophilus pseudofirmus
-          (strain ATCC BAA-2126 / JCM 17055 / OF4) (Bacillus pseudofirmus) provides
+        notes: Supports Na(+)/H(+) antiporter NhaA in pH delta very low; UniProtKB:Q93F90
+          (nhaA, Na(+)/H(+) antiporter NhaA) in Streptomyces antibioticus provides
           a verified protein exemplar.
   edges:
   - subject: very_limited_ph_homeostasis
@@ -216,16 +212,15 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: ph_delta_very_low_trait
-    description: Na(+)/H(+) antiporter subunit A (mrpA, UniProtKB:Q9RGZ5) contributes
-      to pH delta very low (associated with transcriptional, antiporters, homeostasis).
+    description: Na(+)/H(+) antiporter NhaA (nhaA, UniProtKB:Q93F90) contributes to
+      pH delta very low.
     evidence:
     - reference: DOI:10.1038/nrmicro2549
       snippet: For pH homeostasis under alkaline conditions, active transport of protons
         inward is a crucial adaptation, which usually involves activation and transcriptional
         up-regulation of key cation/proton antiporters
-      notes: Supports the functional association between Na(+)/H(+) antiporter subunit
-        A (UniProtKB:Q9RGZ5 in Alkalihalophilus pseudofirmus (strain ATCC BAA-2126
-        / JCM 17055 / OF4) (Bacillus pseudofirmus)) and pH delta very low.
+      notes: Supports the functional association between Na(+)/H(+) antiporter NhaA
+        (UniProtKB:Q93F90 in Streptomyces antibioticus) and pH delta very low.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.838042+00:00'
   curator: seed_from_metpo
@@ -334,5 +329,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    ph_delta_very_low_protein_component with UniProtKB:Q9RGZ5 (mrpA) exemplar.'
+    ph_delta_very_low_protein_component with UniProtKB:Q93F90 (nhaA) exemplar.'
   llm_assisted: true

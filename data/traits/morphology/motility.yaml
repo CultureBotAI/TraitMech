@@ -221,27 +221,25 @@ causal_graphs:
     description: Archaeal rotary propulsion filament, the analogue of the bacterial
       flagellum.
     protein_examples:
-    - uniprot_id: UniProtKB:Q4J9J9
-      protein_label: HTH-type transcriptional activator ArnR
-      gene_symbol: arnR
-      taxon_id: NCBITaxon:330779
-      taxon_label: Sulfolobus acidocaldarius (strain ATCC 33909 / DSM 639 / JCM 8929
-        / NBRC 15157 / NCIMB 11770)
+    - uniprot_id: UniProtKB:Q9V0H5
+      protein_label: Tubulin-like protein CetZ
+      gene_symbol: cetZ
+      taxon_id: NCBITaxon:272844
+      taxon_label: Pyrococcus abyssi (strain GE5 / Orsay)
       entry_status: REVIEWED
-      proteome_id: UP000001018
+      proteome_id: UP000000810
       retrieved_on: '2026-10-17'
-      entry_version: 96
+      entry_version: 126
       sequence_version: 1
-      role: Exemplar protein (arnR, HTH-type transcriptional activator ArnR) representing
-        archaellum in Sulfolobus acidocaldarius (strain ATCC 33909 / DSM 639 / JCM
-        8929 / NBRC 15157 / NCIMB 11770) for motility.
+      role: Exemplar protein (cetZ, Tubulin-like protein CetZ) representing archaellum
+        in Pyrococcus abyssi (strain GE5 / Orsay) for motility.
       evidence:
       - reference: DOI:10.3390/biom9070279
         snippet: bacterial flagellum is a helical filamentous organelle responsible
           for motility
-        notes: Supports archaellum in motility; UniProtKB:Q4J9J9 (arnR, HTH-type transcriptional
-          activator ArnR) in Sulfolobus acidocaldarius (strain ATCC 33909 / DSM 639
-          / JCM 8929 / NBRC 15157 / NCIMB 11770) provides a verified protein exemplar.
+        notes: Supports archaellum in motility; UniProtKB:Q9V0H5 (cetZ, Tubulin-like
+          protein CetZ) in Pyrococcus abyssi (strain GE5 / Orsay) provides a verified
+          protein exemplar.
   edges:
   - subject: flagellar_motor
     predicate: confers

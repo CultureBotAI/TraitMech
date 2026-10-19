@@ -65,18 +65,18 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph butanediol_fermentation_graph
-    with GENE_OR_PROTEIN node butanediol_fermentation_protein_component and UniProtKB:P36683
+    with GENE_OR_PROTEIN node butanediol_fermentation_protein_component and UniProtKB:Q04789
     exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: butanediol_fermentation_graph
   title: Protein component associated with 2,3-butanediol fermentation
-  description: Literature-backed association between Aconitate hydratase B (UniProtKB:P36683)
+  description: Literature-backed association between Acetolactate synthase (UniProtKB:Q04789)
     and 2,3-butanediol fermentation.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P36683 in Escherichia
-    coli (strain K12)) associated with 2,3-butanediol fermentation while full multi-step
-    mechanistic curation remains future work.
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q04789 in Bacillus
+    subtilis (strain 168)) associated with 2,3-butanediol fermentation while full
+    multi-step mechanistic curation remains future work.
   nodes:
   - node_id: butanediol_fermentation_trait
     label: 2,3-butanediol fermentation
@@ -85,28 +85,26 @@ causal_graphs:
     description: A fermentation in which microorganisms convert sugars to acetoin
       and 2,3-butanediol neutral end products through the butanediol pathway.
   - node_id: butanediol_fermentation_protein_component
-    label: Aconitate hydratase B
+    label: Acetolactate synthase
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Aconitate hydratase B) associated with 2,3-butanediol
+    description: Protein component (Acetolactate synthase) associated with 2,3-butanediol
       fermentation.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    grounding: InterPro:IPR012782
     gene_symbols:
-    - acnB
+    - alsS
     protein_examples:
-    - uniprot_id: UniProtKB:P36683
-      protein_label: Aconitate hydratase B
-      gene_symbol: acnB
-      taxon_id: NCBITaxon:83333
-      taxon_label: Escherichia coli (strain K12)
+    - uniprot_id: UniProtKB:Q04789
+      protein_label: Acetolactate synthase
+      gene_symbol: alsS
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
       entry_status: REVIEWED
-      proteome_id: UP000000625
+      proteome_id: UP000001570
       retrieved_on: '2026-10-17'
-      entry_version: 207
+      entry_version: 157
       sequence_version: 3
-      role: Characteristic protein component (acnB, Aconitate hydratase B) associated
-        with 2,3-butanediol fermentation in Escherichia coli (strain K12).
+      role: Characteristic protein component (alsS, Acetolactate synthase) associated
+        with 2,3-butanediol fermentation in Bacillus subtilis (strain 168).
       evidence:
       - reference: https://asm.org/getmedia/40946f85-9357-4563-aa8a-994427efa825/Methyl-Red-and-Voges-Proskauer-Test-Protocols.pdf
         snippet: Escherichia coli and other members of the low-ratio organisms described
@@ -121,16 +119,16 @@ causal_graphs:
           via the butanediol fermentation pathway, producing only 1 mol of acid per
           mol of glucose. This pathway results in a lower degree of acidification
           of the culture medium.
-        notes: Supports Aconitate hydratase B in 2,3-butanediol fermentation; UniProtKB:P36683
-          (acnB, Aconitate hydratase B) in Escherichia coli (strain K12) provides
+        notes: Supports Acetolactate synthase in 2,3-butanediol fermentation; UniProtKB:Q04789
+          (alsS, Acetolactate synthase) in Bacillus subtilis (strain 168) provides
           a verified protein exemplar.
   edges:
   - subject: butanediol_fermentation_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: butanediol_fermentation_trait
-    description: Aconitate hydratase B (acnB, UniProtKB:P36683) contributes to 2,3-butanediol
-      fermentation (associated with acidification, enterobacter, fermentation).
+    description: Acetolactate synthase (alsS, UniProtKB:Q04789) contributes to 2,3-butanediol
+      fermentation.
     evidence:
     - reference: https://asm.org/getmedia/40946f85-9357-4563-aa8a-994427efa825/Methyl-Red-and-Voges-Proskauer-Test-Protocols.pdf
       snippet: Escherichia coli and other members of the low-ratio organisms described
@@ -144,5 +142,5 @@ causal_graphs:
         to H2 from the fermentation of glucose) ferment sugars via the butanediol
         fermentation pathway, producing only 1 mol of acid per mol of glucose. This
         pathway results in a lower degree of acidification of the culture medium.
-      notes: Supports the functional association between Aconitate hydratase B (UniProtKB:P36683
-        in Escherichia coli (strain K12)) and 2,3-butanediol fermentation.
+      notes: Supports the functional association between Acetolactate synthase (UniProtKB:Q04789
+        in Bacillus subtilis (strain 168)) and 2,3-butanediol fermentation.

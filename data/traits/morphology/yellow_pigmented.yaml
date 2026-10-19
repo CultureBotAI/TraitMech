@@ -31,7 +31,7 @@ causal_graphs:
   scope_status: NONMECHANISTIC
   scope_notes: This record is a broad environmental or morphological classification
     spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
-    descriptor; contextual protein nodes do not receive token UniProt examples.
+    descriptor; contextual protein nodes include source-backed UniProtKB exemplars.
   nodes:
   - node_id: yellow_pigmented_trait
     label: yellow pigmented
@@ -46,27 +46,22 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Bacterial carotenoid biosynthetic enzymes.
     protein_examples:
-    - uniprot_id: UniProtKB:Q49Z16
-      protein_label: L-threonine dehydratase biosynthetic IlvA
-      gene_symbol: ilvA
-      taxon_id: NCBITaxon:342451
-      taxon_label: Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
-        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+    - uniprot_id: UniProtKB:P54977
+      protein_label: Phytoene synthase
+      gene_symbol: crtB
+      taxon_id: NCBITaxon:1911
+      taxon_label: Streptomyces griseus
       entry_status: REVIEWED
-      proteome_id: UP000006371
       retrieved_on: '2026-10-17'
-      entry_version: 124
+      entry_version: 94
       sequence_version: 1
-      role: Exemplar protein (ilvA, L-threonine dehydratase biosynthetic IlvA) representing
-        Crt enzymes in Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
-        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) for yellow pigmented.
+      role: Exemplar protein (crtB, Phytoene synthase) representing Crt enzymes in
+        Streptomyces griseus for yellow pigmented.
       evidence:
       - reference: DOI:10.1080/1040841X.2025.2526423
         snippet: responsible for the red, pink, orange, and yellow pigmentation
-        notes: Supports Crt enzymes in yellow pigmented; UniProtKB:Q49Z16 (ilvA, L-threonine
-          dehydratase biosynthetic IlvA) in Staphylococcus saprophyticus subsp. saprophyticus
-          (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) provides
-          a verified protein exemplar.
+        notes: Supports Crt enzymes in yellow pigmented; UniProtKB:P54977 (crtB, Phytoene
+          synthase) in Streptomyces griseus provides a verified protein exemplar.
   - node_id: carotenoid_biosynthesis
     label: carotenoid biosynthesis
     node_type: PATHWAY
@@ -97,27 +92,23 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Geranylgeranyl diphosphate synthase converting IPP and DMAPP to GGPP.
     protein_examples:
-    - uniprot_id: UniProtKB:Q49X96
-      protein_label: tRNA dimethylallyltransferase
-      gene_symbol: miaA
-      taxon_id: NCBITaxon:342451
-      taxon_label: Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
-        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+    - uniprot_id: UniProtKB:P54977
+      protein_label: Phytoene synthase
+      gene_symbol: crtB
+      taxon_id: NCBITaxon:1911
+      taxon_label: Streptomyces griseus
       entry_status: REVIEWED
-      proteome_id: UP000006371
       retrieved_on: '2026-10-17'
-      entry_version: 117
+      entry_version: 94
       sequence_version: 1
-      role: Exemplar protein (miaA, tRNA dimethylallyltransferase) representing IdsA/CrtE
-        (GGPP synthase) in Staphylococcus saprophyticus subsp. saprophyticus (strain
-        ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) for yellow pigmented.
+      role: Exemplar protein (crtB, Phytoene synthase) representing IdsA/CrtE (GGPP
+        synthase) in Streptomyces griseus for yellow pigmented.
       evidence:
       - reference: DOI:10.1080/1040841X.2025.2526423
         snippet: responsible for the red, pink, orange, and yellow pigmentation
-        notes: Supports IdsA/CrtE (GGPP synthase) in yellow pigmented; UniProtKB:Q49X96
-          (miaA, tRNA dimethylallyltransferase) in Staphylococcus saprophyticus subsp.
-          saprophyticus (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 /
-          S-41) provides a verified protein exemplar.
+        notes: Supports IdsA/CrtE (GGPP synthase) in yellow pigmented; UniProtKB:P54977
+          (crtB, Phytoene synthase) in Streptomyces griseus provides a verified protein
+          exemplar.
   - node_id: lycopene
     label: lycopene
     node_type: CHEMICAL
@@ -131,24 +122,24 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Phytoene desaturase that produces lycopene in carotenoid biosynthesis.
     protein_examples:
-    - uniprot_id: UniProtKB:P54978
-      protein_label: Phytoene desaturase
+    - uniprot_id: UniProtKB:P22871
+      protein_label: Phytoene desaturase (lycopene-forming)
       gene_symbol: crtI
-      taxon_id: NCBITaxon:81397
-      taxon_label: Paracoccus sp. (strain N81106 / MBIC 01143) (Agrobacterium aurantiacum)
+      taxon_id: NCBITaxon:566
+      taxon_label: Pseudescherichia vulneris (Escherichia vulneris)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      entry_version: 81
-      sequence_version: 2
-      role: Exemplar protein (crtI, Phytoene desaturase) representing CrtI (phytoene
-        desaturase) in Paracoccus sp. (strain N81106 / MBIC 01143) (Agrobacterium
-        aurantiacum) for yellow pigmented.
+      entry_version: 102
+      sequence_version: 1
+      role: Exemplar protein (crtI, Phytoene desaturase (lycopene-forming)) representing
+        CrtI (phytoene desaturase) in Pseudescherichia vulneris (Escherichia vulneris)
+        for yellow pigmented.
       evidence:
       - reference: DOI:10.1080/1040841X.2025.2526423
         snippet: responsible for the red, pink, orange, and yellow pigmentation
-        notes: Supports CrtI (phytoene desaturase) in yellow pigmented; UniProtKB:P54978
-          (crtI, Phytoene desaturase) in Paracoccus sp. (strain N81106 / MBIC 01143)
-          (Agrobacterium aurantiacum) provides a verified protein exemplar.
+        notes: Supports CrtI (phytoene desaturase) in yellow pigmented; UniProtKB:P22871
+          (crtI, Phytoene desaturase (lycopene-forming)) in Pseudescherichia vulneris
+          (Escherichia vulneris) provides a verified protein exemplar.
   - node_id: lycopene_biosynthesis
     label: lycopene biosynthesis
     node_type: BIOLOGICAL_PROCESS
@@ -162,27 +153,24 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Lycopene beta-cyclase converting lycopene to beta-carotene.
     protein_examples:
-    - uniprot_id: UniProtKB:Q9HNE5
+    - uniprot_id: UniProtKB:Q01331
       protein_label: Lycopene beta-cyclase
       gene_symbol: crtY
-      taxon_id: NCBITaxon:64091
-      taxon_label: Halobacterium salinarum (strain ATCC 700922 / JCM 11081 / NRC-1)
-        (Halobacterium halobium)
+      taxon_id: NCBITaxon:566
+      taxon_label: Pseudescherichia vulneris (Escherichia vulneris)
       entry_status: REVIEWED
-      proteome_id: UP000000554
       retrieved_on: '2026-10-17'
-      entry_version: 88
-      sequence_version: 2
+      entry_version: 76
+      sequence_version: 1
       role: Exemplar protein (crtY, Lycopene beta-cyclase) representing CrtY (lycopene
-        beta-cyclase) in Halobacterium salinarum (strain ATCC 700922 / JCM 11081 /
-        NRC-1) (Halobacterium halobium) for yellow pigmented.
+        beta-cyclase) in Pseudescherichia vulneris (Escherichia vulneris) for yellow
+        pigmented.
       evidence:
       - reference: DOI:10.1080/1040841X.2025.2526423
         snippet: responsible for the red, pink, orange, and yellow pigmentation
-        notes: Supports CrtY (lycopene beta-cyclase) in yellow pigmented; UniProtKB:Q9HNE5
-          (crtY, Lycopene beta-cyclase) in Halobacterium salinarum (strain ATCC 700922
-          / JCM 11081 / NRC-1) (Halobacterium halobium) provides a verified protein
-          exemplar.
+        notes: Supports CrtY (lycopene beta-cyclase) in yellow pigmented; UniProtKB:Q01331
+          (crtY, Lycopene beta-cyclase) in Pseudescherichia vulneris (Escherichia
+          vulneris) provides a verified protein exemplar.
   - node_id: beta_carotene
     label: beta-carotene
     node_type: CHEMICAL
@@ -403,8 +391,8 @@ curation_history:
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
-  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q49Z16 (ilvA)
-    protein example to node crt_enzymes; added UniProtKB:Q49X96 (miaA) protein example
-    to node idsa_crte; added UniProtKB:P54978 (crtI) protein example to node crti;
-    added UniProtKB:Q9HNE5 (crtY) protein example to node crty.'
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P54977 (crtB)
+    protein example to node crt_enzymes; added UniProtKB:P54977 (crtB) protein example
+    to node idsa_crte; added UniProtKB:P22871 (crtI) protein example to node crti;
+    added UniProtKB:Q01331 (crtY) protein example to node crty.'
   llm_assisted: true

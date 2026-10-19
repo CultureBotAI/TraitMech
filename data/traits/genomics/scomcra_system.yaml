@@ -90,41 +90,34 @@ causal_graphs:
     description: Possession of a genome-encoded Type IV modification-dependent restriction
       system.
   - node_id: scomcra_system_protein_component
-    label: Type I restriction enzyme SsaAORF53P endonuclease subunit
+    label: DNA sulfur modification protein DndC
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Type I restriction enzyme SsaAORF53P endonuclease
-      subunit) associated with ScoMcrA system.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (DNA sulfur modification protein DndC) associated
+      with ScoMcrA system.
+    grounding: InterPro:IPR002500
     gene_symbols:
-    - hsdR
+    - dndC
     protein_examples:
-    - uniprot_id: UniProtKB:Q4A127
-      protein_label: Type I restriction enzyme SsaAORF53P endonuclease subunit
-      gene_symbol: hsdR
-      taxon_id: NCBITaxon:342451
-      taxon_label: Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
-        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
-      entry_status: REVIEWED
-      proteome_id: UP000006371
+    - uniprot_id: UniProtKB:A0A2K8SFY8
+      protein_label: DNA sulfur modification protein DndC
+      gene_symbol: dndC
+      taxon_id: NCBITaxon:1336749
+      taxon_label: Spiroplasma floricola 23-6
+      entry_status: UNREVIEWED
+      proteome_id: UP000231823
       retrieved_on: '2026-10-17'
-      entry_version: 116
+      entry_version: 20
       sequence_version: 1
-      role: Characteristic protein component (hsdR, Type I restriction enzyme SsaAORF53P
-        endonuclease subunit) associated with ScoMcrA system in Staphylococcus saprophyticus
-        subsp. saprophyticus (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292
-        / S-41).
+      role: Characteristic protein component (dndC, DNA sulfur modification protein
+        DndC) associated with ScoMcrA system in Spiroplasma floricola 23-6.
       evidence:
       - reference: DOI:10.1038/s41467-018-07093-1
         snippet: Here we present the crystal structure of the sulfur-binding domain
           (SBD) from the DNA phosphorothioation (PT)-dependent restriction endonuclease
           ScoMcrA.
-        notes: Supports Type I restriction enzyme SsaAORF53P endonuclease subunit
-          in ScoMcrA system; UniProtKB:Q4A127 (hsdR, Type I restriction enzyme SsaAORF53P
-          endonuclease subunit) in Staphylococcus saprophyticus subsp. saprophyticus
-          (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) provides
-          a verified protein exemplar.
+        notes: Supports DNA sulfur modification protein DndC in ScoMcrA system; UniProtKB:A0A2K8SFY8
+          (dndC, DNA sulfur modification protein DndC) in Spiroplasma floricola 23-6
+          provides a verified protein exemplar.
   edges:
   - subject: scomcra_family_locus
     predicate: enables
@@ -210,17 +203,14 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: scomcra_system_trait
-    description: Type I restriction enzyme SsaAORF53P endonuclease subunit (hsdR,
-      UniProtKB:Q4A127) contributes to ScoMcrA system (associated with endonuclease,
-      nucleotides, restriction).
+    description: DNA sulfur modification protein DndC (dndC, UniProtKB:A0A2K8SFY8)
+      contributes to ScoMcrA system.
     evidence:
     - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
-      snippet: '| McrBC | 10\.1093/emboj/20\.12\.3210 | The McrBC restriction endonuclease
-        assembles into a ring structure in the presence of G nucleotides |'
-      notes: Supports the functional association between Type I restriction enzyme
-        SsaAORF53P endonuclease subunit (UniProtKB:Q4A127 in Staphylococcus saprophyticus
-        subsp. saprophyticus (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292
-        / S-41)) and ScoMcrA system.
+      snippet: '| Other_Type_IV | 10\.1093/nar/gkac975 | REBASE: a database for DNA
+        restriction and modification: enzymes, genes and genomes |'
+      notes: Supports the functional association between DNA sulfur modification protein
+        DndC (UniProtKB:A0A2K8SFY8 in Spiroplasma floricola 23-6) and ScoMcrA system.
 discussions:
 - discussion_id: scomcra-defensefinder-model-gap
   prompt: Resolve ScoMcrA-family breadth, phosphorothioated-DNA sequence-context specificity
@@ -300,5 +290,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    scomcra_system_protein_component with UniProtKB:Q4A127 (hsdR) exemplar.'
+    scomcra_system_protein_component with UniProtKB:A0A2K8SFY8 (dndC) exemplar.'
   llm_assisted: true

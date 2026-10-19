@@ -90,21 +90,27 @@ curation_history:
   llm_assisted: true
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed canonical_examples status alongside NONMECHANISTIC protein exemplar
+    graph for bipolar mating system; isolate-level canonical example remains deferred
+    pending explicit strain-level literature.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph bipolar_mating_system_graph
-    with GENE_OR_PROTEIN node bipolar_mating_system_protein_component and UniProtKB:Q59066
+    with GENE_OR_PROTEIN node bipolar_mating_system_protein_component and UniProtKB:D6VTK4
     exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: bipolar_mating_system_graph
   title: Protein component associated with bipolar mating system
-  description: Literature-backed association between CRISPR system single-strand-specific
-    deoxyribonuclease Cas10/Csm1 (UniProtKB:Q59066) and bipolar mating system.
+  description: Literature-backed association between Pheromone alpha factor receptor
+    (UniProtKB:D6VTK4) and bipolar mating system.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q59066 in Methanocaldococcus
-    jannaschii (strain ATCC 43067 / DSM 2661 / JAL-1 / JCM 10045 / NBRC 100440) (Methanococcus
-    jannaschii)) associated with bipolar mating system while full multi-step mechanistic
-    curation remains future work.
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:D6VTK4 in Saccharomyces
+    cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)) associated with bipolar
+    mating system while full multi-step mechanistic curation remains future work.
   nodes:
   - node_id: bipolar_mating_system_trait
     label: bipolar mating system
@@ -113,53 +119,47 @@ causal_graphs:
     description: A fungal mating phenotype in which compatibility between partners
       is governed by a single segregating mating-type factor.
   - node_id: bipolar_mating_system_protein_component
-    label: CRISPR system single-strand-specific deoxyribonuclease Cas10/Csm1
+    label: Pheromone alpha factor receptor
     node_type: GENE_OR_PROTEIN
-    description: Protein component (CRISPR system single-strand-specific deoxyribonuclease
-      Cas10/Csm1) associated with bipolar mating system.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Pheromone alpha factor receptor) associated with
+      bipolar mating system.
+    grounding: InterPro:IPR000366
     gene_symbols:
-    - cas10
+    - STE2
     protein_examples:
-    - uniprot_id: UniProtKB:Q59066
-      protein_label: CRISPR system single-strand-specific deoxyribonuclease Cas10/Csm1
-      gene_symbol: cas10
-      taxon_id: NCBITaxon:243232
-      taxon_label: Methanocaldococcus jannaschii (strain ATCC 43067 / DSM 2661 / JAL-1
-        / JCM 10045 / NBRC 100440) (Methanococcus jannaschii)
+    - uniprot_id: UniProtKB:D6VTK4
+      protein_label: Pheromone alpha factor receptor
+      gene_symbol: STE2
+      taxon_id: NCBITaxon:559292
+      taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's
+        yeast)
       entry_status: REVIEWED
-      proteome_id: UP000000805
+      proteome_id: UP000002311
       retrieved_on: '2026-10-17'
-      entry_version: 115
-      sequence_version: 1
-      role: Characteristic protein component (cas10, CRISPR system single-strand-specific
-        deoxyribonuclease Cas10/Csm1) associated with bipolar mating system in Methanocaldococcus
-        jannaschii (strain ATCC 43067 / DSM 2661 / JAL-1 / JCM 10045 / NBRC 100440)
-        (Methanococcus jannaschii).
+      entry_version: 99
+      sequence_version: 2
+      role: Characteristic protein component (STE2, Pheromone alpha factor receptor)
+        associated with bipolar mating system in Saccharomyces cerevisiae (strain
+        ATCC 204508 / S288c) (Baker's yeast).
       evidence:
       - reference: DOI:10.1534/genetics.105.051128
         snippet: All of the 24 collections displayed a bipolar mating system with
           only two mating types among all progeny of a collection.
-        notes: Supports CRISPR system single-strand-specific deoxyribonuclease Cas10/Csm1
-          in bipolar mating system; UniProtKB:Q59066 (cas10, CRISPR system single-strand-specific
-          deoxyribonuclease Cas10/Csm1) in Methanocaldococcus jannaschii (strain ATCC
-          43067 / DSM 2661 / JAL-1 / JCM 10045 / NBRC 100440) (Methanococcus jannaschii)
-          provides a verified protein exemplar.
+        notes: Supports Pheromone alpha factor receptor in bipolar mating system;
+          UniProtKB:D6VTK4 (STE2, Pheromone alpha factor receptor) in Saccharomyces
+          cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast) provides a verified
+          protein exemplar.
   edges:
   - subject: bipolar_mating_system_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: bipolar_mating_system_trait
-    description: CRISPR system single-strand-specific deoxyribonuclease Cas10/Csm1
-      (cas10, UniProtKB:Q59066) contributes to bipolar mating system (associated with
-      collections, collection, displayed).
+    description: Pheromone alpha factor receptor (STE2, UniProtKB:D6VTK4) contributes
+      to bipolar mating system.
     evidence:
     - reference: DOI:10.1534/genetics.105.051128
       snippet: All of the 24 collections displayed a bipolar mating system with only
         two mating types among all progeny of a collection.
-      notes: Supports the functional association between CRISPR system single-strand-specific
-        deoxyribonuclease Cas10/Csm1 (UniProtKB:Q59066 in Methanocaldococcus jannaschii
-        (strain ATCC 43067 / DSM 2661 / JAL-1 / JCM 10045 / NBRC 100440) (Methanococcus
-        jannaschii)) and bipolar mating system.
+      notes: Supports the functional association between Pheromone alpha factor receptor
+        (UniProtKB:D6VTK4 in Saccharomyces cerevisiae (strain ATCC 204508 / S288c)
+        (Baker's yeast)) and bipolar mating system.

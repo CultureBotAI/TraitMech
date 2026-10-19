@@ -193,7 +193,7 @@ causal_graphs:
     predicate_id: RO:0002326
     object: drt_system_trait
     description: Retron Ec78 reverse transcriptase (ret, UniProtKB:Q46666) contributes
-      to DRT system (associated with custom, drt3a, drt3b).
+      to DRT system.
     evidence:
     - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
       snippet: '| DRT_3__drt3a | DRT_3__drt3a | DRT_3 | Custom | 150 | | DRT_3__drt3b

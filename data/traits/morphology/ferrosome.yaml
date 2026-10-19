@@ -163,7 +163,7 @@ causal_graphs:
     predicate_id: RO:0002326
     object: ferrosome_trait
     description: Magnetosome protein MamB (mamB, UniProtKB:W6KHH6) contributes to
-      ferrosome (associated with membrane, found, feza).
+      ferrosome.
     evidence:
     - reference: DOI:10.1038/s41586-023-06719-9
       snippet: We found that a membrane protein (FezA) and

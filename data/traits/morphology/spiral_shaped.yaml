@@ -38,7 +38,7 @@ causal_graphs:
   scope_status: NONMECHANISTIC
   scope_notes: This record is a broad environmental or morphological classification
     spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
-    descriptor; contextual protein nodes do not receive token UniProt examples.
+    descriptor; contextual protein nodes include source-backed UniProtKB exemplars.
   nodes:
   - node_id: spiral_shaped_trait
     label: spiral shaped
@@ -57,24 +57,24 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Protein scaffold or shape complex that biases cell curvature.
     protein_examples:
-    - uniprot_id: UniProtKB:Q01465
-      protein_label: Cell shape-determining protein MreB
-      gene_symbol: mreB
-      taxon_id: NCBITaxon:224308
-      taxon_label: Bacillus subtilis (strain 168)
+    - uniprot_id: UniProtKB:Q1D3H0
+      protein_label: Bactofilin BacN
+      gene_symbol: bacN
+      taxon_id: NCBITaxon:246197
+      taxon_label: Myxococcus xanthus (strain DK1622)
       entry_status: REVIEWED
-      proteome_id: UP000001570
+      proteome_id: UP000002402
       retrieved_on: '2026-10-17'
-      entry_version: 148
-      sequence_version: 3
-      role: Exemplar protein (mreB, Cell shape-determining protein MreB) representing
-        curvature scaffold in Bacillus subtilis (strain 168) for spiral shaped.
+      entry_version: 94
+      sequence_version: 1
+      role: Exemplar protein (bacN, Bactofilin BacN) representing curvature scaffold
+        in Myxococcus xanthus (strain DK1622) for spiral shaped.
       evidence:
       - reference: DOI:10.1371/journal.pbio.1002565
         snippet: scaffold-mediated delineation of an inner curvature
-        notes: Supports curvature scaffold in spiral shaped; UniProtKB:Q01465 (mreB,
-          Cell shape-determining protein MreB) in Bacillus subtilis (strain 168) provides
-          a verified protein exemplar.
+        notes: Supports curvature scaffold in spiral shaped; UniProtKB:Q1D3H0 (bacN,
+          Bactofilin BacN) in Myxococcus xanthus (strain DK1622) provides a verified
+          protein exemplar.
   - node_id: helical_curvature
     label: helical curvature
     node_type: BIOLOGICAL_PROCESS
@@ -302,6 +302,6 @@ curation_history:
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
-  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q01465 (mreB)
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q1D3H0 (bacN)
     protein example to node curvature_scaffold.'
   llm_assisted: true

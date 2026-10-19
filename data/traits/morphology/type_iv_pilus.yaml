@@ -112,7 +112,7 @@ causal_graphs:
     predicate_id: RO:0002326
     object: type_iv_pilus_trait
     description: Type IV pilus retraction ATPase PilT (pilT, UniProtKB:P24559) contributes
-      to type IV pilus (associated with retraction, driven, pilt).
+      to type IV pilus.
     evidence:
     - reference: DOI:10.1128/jb.00359-24
       snippet: retraction is driven by PilT

@@ -63,26 +63,24 @@ causal_graphs:
     grounding_notes: This umbrella node combines phylogenetically and catalytically
       distinct laccase, DyP, manganese-peroxidase, and lignin-peroxidase families.
     protein_examples:
-    - uniprot_id: UniProtKB:P0ABI8
-      protein_label: Cytochrome bo(3) ubiquinol oxidase subunit 1
-      gene_symbol: cyoB
-      taxon_id: NCBITaxon:83333
-      taxon_label: Escherichia coli (strain K12)
+    - uniprot_id: UniProtKB:A0A7T1FRB0
+      protein_label: Laccase
+      gene_symbol: cotA
+      taxon_id: NCBITaxon:293386
+      taxon_label: Bacillus stratosphericus
       entry_status: REVIEWED
-      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 154
+      entry_version: 12
       sequence_version: 1
-      role: Exemplar protein (cyoB, Cytochrome bo(3) ubiquinol oxidase subunit 1)
-        representing peroxidases and laccases in Escherichia coli (strain K12) for
-        lignin degradation.
+      role: Exemplar protein (cotA, Laccase) representing peroxidases and laccases
+        in Bacillus stratosphericus for lignin degradation.
       evidence:
       - reference: DOI:10.1186/s13068-024-02470-z
         snippet: LME including laccase (EC 1.10.3.2) participated in depolymerization
           of large lignin polymers
-        notes: Supports peroxidases and laccases in lignin degradation; UniProtKB:P0ABI8
-          (cyoB, Cytochrome bo(3) ubiquinol oxidase subunit 1) in Escherichia coli
-          (strain K12) provides a verified protein exemplar.
+        notes: Supports peroxidases and laccases in lignin degradation; UniProtKB:A0A7T1FRB0
+          (cotA, Laccase) in Bacillus stratosphericus provides a verified protein
+          exemplar.
   - node_id: aromatic_monomers
     label: aromatic monomers / oligomers
     node_type: CHEMICAL
@@ -119,77 +117,71 @@ causal_graphs:
       depolymerization.
     grounding: InterPro:IPR006314
     protein_examples:
-    - uniprot_id: UniProtKB:P0ABI8
-      protein_label: Cytochrome bo(3) ubiquinol oxidase subunit 1
-      gene_symbol: cyoB
-      taxon_id: NCBITaxon:83333
-      taxon_label: Escherichia coli (strain K12)
+    - uniprot_id: UniProtKB:K7N5M8
+      protein_label: Multifunctional dye peroxidase DyP2
+      gene_symbol: dyp2
+      taxon_id: NCBITaxon:385957
+      taxon_label: Amycolatopsis sp. (strain ATCC 39116 / 75iv2)
       entry_status: REVIEWED
-      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 154
-      sequence_version: 1
-      role: Exemplar protein (cyoB, Cytochrome bo(3) ubiquinol oxidase subunit 1)
-        representing DyP-type peroxidase in Escherichia coli (strain K12) for lignin
+      entry_version: 44
+      sequence_version: 2
+      role: Exemplar protein (dyp2, Multifunctional dye peroxidase DyP2) representing
+        DyP-type peroxidase in Amycolatopsis sp. (strain ATCC 39116 / 75iv2) for lignin
         degradation.
       evidence:
       - reference: DOI:10.1186/s13068-024-02470-z
         snippet: LME including laccase (EC 1.10.3.2) participated in depolymerization
           of large lignin polymers
-        notes: Supports DyP-type peroxidase in lignin degradation; UniProtKB:P0ABI8
-          (cyoB, Cytochrome bo(3) ubiquinol oxidase subunit 1) in Escherichia coli
-          (strain K12) provides a verified protein exemplar.
+        notes: Supports DyP-type peroxidase in lignin degradation; UniProtKB:K7N5M8
+          (dyp2, Multifunctional dye peroxidase DyP2) in Amycolatopsis sp. (strain
+          ATCC 39116 / 75iv2) provides a verified protein exemplar.
   - node_id: manganese_peroxidase
     label: manganese peroxidase
     node_type: GENE_OR_PROTEIN
     description: Manganese peroxidase (EC 1.11.1.13) oxidizing Mn2+ to Mn3+.
     grounding: GO:0016689
     protein_examples:
-    - uniprot_id: UniProtKB:P0ABI8
-      protein_label: Cytochrome bo(3) ubiquinol oxidase subunit 1
-      gene_symbol: cyoB
-      taxon_id: NCBITaxon:83333
-      taxon_label: Escherichia coli (strain K12)
+    - uniprot_id: UniProtKB:Q02567
+      protein_label: Manganese peroxidase 1
+      gene_symbol: MNP1
+      taxon_id: NCBITaxon:2822231
+      taxon_label: Phanerodontia chrysosporium
       entry_status: REVIEWED
-      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 154
+      entry_version: 151
       sequence_version: 1
-      role: Exemplar protein (cyoB, Cytochrome bo(3) ubiquinol oxidase subunit 1)
-        representing manganese peroxidase in Escherichia coli (strain K12) for lignin
-        degradation.
+      role: Exemplar protein (MNP1, Manganese peroxidase 1) representing manganese
+        peroxidase in Phanerodontia chrysosporium for lignin degradation.
       evidence:
       - reference: DOI:10.3390/polym16172388
         snippet: Manganese peroxidase oxidizes Mn2+ to Mn3+
-        notes: Supports manganese peroxidase in lignin degradation; UniProtKB:P0ABI8
-          (cyoB, Cytochrome bo(3) ubiquinol oxidase subunit 1) in Escherichia coli
-          (strain K12) provides a verified protein exemplar.
+        notes: Supports manganese peroxidase in lignin degradation; UniProtKB:Q02567
+          (MNP1, Manganese peroxidase 1) in Phanerodontia chrysosporium provides a
+          verified protein exemplar.
   - node_id: lignin_peroxidase
     label: lignin peroxidase
     node_type: GENE_OR_PROTEIN
     description: Lignin peroxidase (EC 1.11.1.14) cleaving lignin interunit bonds.
     grounding: GO:0016690
     protein_examples:
-    - uniprot_id: UniProtKB:P0ABI8
-      protein_label: Cytochrome bo(3) ubiquinol oxidase subunit 1
-      gene_symbol: cyoB
-      taxon_id: NCBITaxon:83333
-      taxon_label: Escherichia coli (strain K12)
+    - uniprot_id: UniProtKB:Q02567
+      protein_label: Manganese peroxidase 1
+      gene_symbol: MNP1
+      taxon_id: NCBITaxon:2822231
+      taxon_label: Phanerodontia chrysosporium
       entry_status: REVIEWED
-      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 154
+      entry_version: 151
       sequence_version: 1
-      role: Exemplar protein (cyoB, Cytochrome bo(3) ubiquinol oxidase subunit 1)
-        representing lignin peroxidase in Escherichia coli (strain K12) for lignin
-        degradation.
+      role: Exemplar protein (MNP1, Manganese peroxidase 1) representing lignin peroxidase
+        in Phanerodontia chrysosporium for lignin degradation.
       evidence:
-      - reference: DOI:10.1186/s13068-024-02470-z
-        snippet: LME including laccase (EC 1.10.3.2) participated in depolymerization
-          of large lignin polymers
-        notes: Supports lignin peroxidase in lignin degradation; UniProtKB:P0ABI8
-          (cyoB, Cytochrome bo(3) ubiquinol oxidase subunit 1) in Escherichia coli
-          (strain K12) provides a verified protein exemplar.
+      - reference: DOI:10.3390/polym16172388
+        snippet: Manganese peroxidase oxidizes Mn2+ to Mn3+
+        notes: Supports lignin peroxidase in lignin degradation; UniProtKB:Q02567
+          (MNP1, Manganese peroxidase 1) in Phanerodontia chrysosporium provides a
+          verified protein exemplar.
   - node_id: lignin_depolymerization
     label: lignin depolymerization
     node_type: BIOLOGICAL_PROCESS
@@ -420,8 +412,8 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:Q9XAL8
-    version metadata (entry_version=132, sequence_version=1); added UniProtKB:P0ABI8
-    (cyoB) protein example to node oxidative_enzymes; added UniProtKB:P0ABI8 (cyoB)
-    protein example to node dyp_peroxidase; added UniProtKB:P0ABI8 (cyoB) protein
+    version metadata (entry_version=132, sequence_version=1); added UniProtKB:A0A7T1FRB0
+    (cotA) protein example to node oxidative_enzymes; added UniProtKB:K7N5M8 (dyp2)
+    protein example to node dyp_peroxidase; added UniProtKB:Q02567 (MNP1) protein
     example to node manganese_peroxidase (+1 more).'
   llm_assisted: true

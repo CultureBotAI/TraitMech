@@ -93,19 +93,18 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph macropinocytosis_graph
-    with GENE_OR_PROTEIN node macropinocytosis_protein_component and UniProtKB:Q6NE59
+    with GENE_OR_PROTEIN node macropinocytosis_protein_component and UniProtKB:P32790
     exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: macropinocytosis_graph
   title: Protein component associated with macropinocytosis
-  description: Literature-backed association between Actin-like protein MamK (UniProtKB:Q6NE59)
-    and macropinocytosis.
+  description: Literature-backed association between Actin cytoskeleton-regulatory
+    complex protein SLA1 (UniProtKB:P32790) and macropinocytosis.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q6NE59 in Magnetospirillum
-    gryphiswaldense (strain DSM 6361 / JCM 21280 / NBRC 15271 / MSR-1)) associated
-    with macropinocytosis while full multi-step mechanistic curation remains future
-    work.
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P32790 in Saccharomyces
+    cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)) associated with macropinocytosis
+    while full multi-step mechanistic curation remains future work.
   nodes:
   - node_id: macropinocytosis_trait
     label: macropinocytosis
@@ -115,47 +114,47 @@ causal_graphs:
       bulk extracellular fluid by closing actin-driven plasma-membrane ruffles into
       large intracellular vesicles.
   - node_id: macropinocytosis_protein_component
-    label: Actin-like protein MamK
+    label: Actin cytoskeleton-regulatory complex protein SLA1
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Actin-like protein MamK) associated with macropinocytosis.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Actin cytoskeleton-regulatory complex protein
+      SLA1) associated with macropinocytosis.
+    grounding: InterPro:IPR056996
     gene_symbols:
-    - mamK
+    - SLA1
     protein_examples:
-    - uniprot_id: UniProtKB:Q6NE59
-      protein_label: Actin-like protein MamK
-      gene_symbol: mamK
-      taxon_id: NCBITaxon:431944
-      taxon_label: Magnetospirillum gryphiswaldense (strain DSM 6361 / JCM 21280 /
-        NBRC 15271 / MSR-1)
+    - uniprot_id: UniProtKB:P32790
+      protein_label: Actin cytoskeleton-regulatory complex protein SLA1
+      gene_symbol: SLA1
+      taxon_id: NCBITaxon:559292
+      taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's
+        yeast)
       entry_status: REVIEWED
-      proteome_id: UP000018922
+      proteome_id: UP000002311
       retrieved_on: '2026-10-17'
-      entry_version: 87
+      entry_version: 230
       sequence_version: 1
-      role: Characteristic protein component (mamK, Actin-like protein MamK) associated
-        with macropinocytosis in Magnetospirillum gryphiswaldense (strain DSM 6361
-        / JCM 21280 / NBRC 15271 / MSR-1).
+      role: Characteristic protein component (SLA1, Actin cytoskeleton-regulatory
+        complex protein SLA1) associated with macropinocytosis in Saccharomyces cerevisiae
+        (strain ATCC 204508 / S288c) (Baker's yeast).
       evidence:
       - reference: DOI:10.7554/eLife.04940
         snippet: These cells can also internalise bulk fluid without the guidance
           of a particle using a closely related process, macropinocytosis
-        notes: Supports Actin-like protein MamK in macropinocytosis; UniProtKB:Q6NE59
-          (mamK, Actin-like protein MamK) in Magnetospirillum gryphiswaldense (strain
-          DSM 6361 / JCM 21280 / NBRC 15271 / MSR-1) provides a verified protein exemplar.
+        notes: Supports Actin cytoskeleton-regulatory complex protein SLA1 in macropinocytosis;
+          UniProtKB:P32790 (SLA1, Actin cytoskeleton-regulatory complex protein SLA1)
+          in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)
+          provides a verified protein exemplar.
   edges:
   - subject: macropinocytosis_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: macropinocytosis_trait
-    description: Actin-like protein MamK (mamK, UniProtKB:Q6NE59) contributes to macropinocytosis
-      (associated with macropinocytosis, internalise, guidance).
+    description: Actin cytoskeleton-regulatory complex protein SLA1 (SLA1, UniProtKB:P32790)
+      contributes to macropinocytosis.
     evidence:
     - reference: DOI:10.7554/eLife.04940
       snippet: These cells can also internalise bulk fluid without the guidance of
         a particle using a closely related process, macropinocytosis
-      notes: Supports the functional association between Actin-like protein MamK (UniProtKB:Q6NE59
-        in Magnetospirillum gryphiswaldense (strain DSM 6361 / JCM 21280 / NBRC 15271
-        / MSR-1)) and macropinocytosis.
+      notes: Supports the functional association between Actin cytoskeleton-regulatory
+        complex protein SLA1 (UniProtKB:P32790 in Saccharomyces cerevisiae (strain
+        ATCC 204508 / S288c) (Baker's yeast)) and macropinocytosis.

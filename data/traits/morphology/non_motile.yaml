@@ -40,7 +40,7 @@ causal_graphs:
   scope_status: NONMECHANISTIC
   scope_notes: This record is a broad environmental or morphological classification
     spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
-    descriptor; contextual protein nodes do not receive token UniProt examples.
+    descriptor; contextual protein nodes include source-backed UniProtKB exemplars.
   nodes:
   - node_id: non_motile_trait
     label: non motile
@@ -96,10 +96,10 @@ causal_graphs:
       retrieved_on: '2026-10-17'
       entry_version: 104
       sequence_version: 1
-      role: Exemplar protein (flhD, Flagellar transcriptional regulator FlhD) representing
-        FlhD4C2 flagellar master regulator complex in Pectobacterium atrosepticum
-        (strain SCRI 1043 / ATCC BAA-672) (Erwinia carotovora subsp. atroseptica)
-        for non motile.
+      role: Reference pathway protein (flhD, Flagellar transcriptional regulator FlhD)
+        representing FlhD4C2 flagellar master regulator complex in Pectobacterium
+        atrosepticum (strain SCRI 1043 / ATCC BAA-672) (Erwinia carotovora subsp.
+        atroseptica), whose absence or lack of activity underlies non motile.
       evidence:
       - reference: DOI:10.3389/fmicb.2025.1514643
         snippet: They are Gram-negative, non-motile rods
@@ -126,9 +126,10 @@ causal_graphs:
       retrieved_on: '2026-10-17'
       entry_version: 153
       sequence_version: 1
-      role: Exemplar protein (wspR, diguanylate cyclase) representing WspR diguanylate
-        cyclase in Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116
-        / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1) for non motile.
+      role: Reference pathway protein (wspR, diguanylate cyclase) representing WspR
+        diguanylate cyclase in Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644
+        / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1), whose absence
+        or lack of activity underlies non motile.
       evidence:
       - reference: DOI:10.3389/fmicb.2025.1514643
         snippet: They are Gram-negative, non-motile rods

@@ -183,7 +183,7 @@ causal_graphs:
     predicate_id: RO:0002326
     object: cell_length_very_small_trait
     description: Cell division protein FtsZ (ftsZ, UniProtKB:V6F5E5) contributes to
-      cell length very small (associated with replication, minimizes, resources).
+      cell length very small.
     evidence:
     - reference: DOI:10.1038/ismej.2014.60
       snippet: minimizes resources required for replication

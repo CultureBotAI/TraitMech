@@ -100,26 +100,26 @@ causal_graphs:
       for this aggregate use.
     description: ATP-driven proton-exporting ATPase (e.g. P-type H+-ATPase).
     protein_examples:
-    - uniprot_id: UniProtKB:Q8NW09
-      protein_label: Arsenical pump membrane protein
-      gene_symbol: arsB
-      taxon_id: NCBITaxon:196620
-      taxon_label: Staphylococcus aureus (strain MW2)
+    - uniprot_id: UniProtKB:P02930
+      protein_label: Outer membrane protein TolC
+      gene_symbol: tolC
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
+      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 103
-      sequence_version: 2
-      role: Exemplar protein (arsB, Arsenical pump membrane protein) representing
-        H+-ATPase proton efflux pump in Staphylococcus aureus (strain MW2) for pH
-        range low.
+      entry_version: 216
+      sequence_version: 3
+      role: Exemplar protein (tolC, Outer membrane protein TolC) representing H+-ATPase
+        proton efflux pump in Escherichia coli (strain K12) for pH range low.
       evidence:
       - reference: DOI:10.1038/nrmicro2549
         snippet: For pH homeostasis under alkaline conditions, active transport of
           protons inward is a crucial adaptation, which usually involves activation
           and transcriptional up-regulation of key cation/proton antiporters
-        notes: Supports H+-ATPase proton efflux pump in pH range low; UniProtKB:Q8NW09
-          (arsB, Arsenical pump membrane protein) in Staphylococcus aureus (strain
-          MW2) provides a verified protein exemplar.
+        notes: Supports H+-ATPase proton efflux pump in pH range low; UniProtKB:P02930
+          (tolC, Outer membrane protein TolC) in Escherichia coli (strain K12) provides
+          a verified protein exemplar.
   - node_id: cytoplasmic_protons
     label: cytoplasmic protons
     node_type: CHEMICAL
@@ -305,7 +305,7 @@ curation_history:
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
-  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q8NW09 (arsB)
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P02930 (tolC)
     protein example to node h_atpase.'
   llm_assisted: true
 canonical_examples:

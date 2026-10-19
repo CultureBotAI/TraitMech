@@ -34,7 +34,7 @@ causal_graphs:
   scope_status: NONMECHANISTIC
   scope_notes: This genomics record is a measurement, genomic-element classification,
     or population-level descriptor rather than one taxon-specific protein mechanism;
-    contextual protein nodes do not receive token UniProt examples.
+    contextual protein nodes include source-backed UniProtKB exemplars.
   description: Evidence-backed causal sketch linking plasmid possession to conjugation
     and accessory-function delivery.
   nodes:
@@ -129,24 +129,28 @@ causal_graphs:
     description: Plasmid-encoded proteins that inhibit host restriction-modification
       defence; their encoding genes remain record-level metadata rather than nodes.
     protein_examples:
-    - uniprot_id: UniProtKB:P08715
-      protein_label: Hemolysin, plasmid
-      gene_symbol: hlyA
-      taxon_id: NCBITaxon:562
-      taxon_label: Escherichia coli
+    - uniprot_id: UniProtKB:O73943
+      protein_label: Homing endonuclease I-ApeII
+      gene_symbol: apeII
+      taxon_id: NCBITaxon:272557
+      taxon_label: Aeropyrum pernix (strain ATCC 700893 / DSM 11879 / JCM 9820 / NBRC
+        100138 / K1)
       entry_status: REVIEWED
+      proteome_id: UP000002518
       retrieved_on: '2026-10-17'
-      entry_version: 130
-      sequence_version: 1
-      role: Exemplar protein (hlyA, Hemolysin, plasmid) representing plasmid-encoded
-        anti-restriction proteins in Escherichia coli for plasmid carriage.
+      entry_version: 84
+      sequence_version: 2
+      role: Exemplar protein (apeII, Homing endonuclease I-ApeII) representing plasmid-encoded
+        anti-restriction proteins in Aeropyrum pernix (strain ATCC 700893 / DSM 11879
+        / JCM 9820 / NBRC 100138 / K1) for plasmid carriage.
       evidence:
       - reference: DOI:10.1128/MMBR.00020-10
         snippet: Few genes, e.g., T4CPs, relaxases, and VirB4, are at the core of
           plasmid conjugation, and together with accessory genes, they have evolved
           into specific systems adapted to specific physiological and ecological contexts.
         notes: Supports plasmid-encoded anti-restriction proteins in plasmid carriage;
-          UniProtKB:P08715 (hlyA, Hemolysin, plasmid) in Escherichia coli provides
+          UniProtKB:O73943 (apeII, Homing endonuclease I-ApeII) in Aeropyrum pernix
+          (strain ATCC 700893 / DSM 11879 / JCM 9820 / NBRC 100138 / K1) provides
           a verified protein exemplar.
   - node_id: antibiotic_selective_pressure
     label: antibiotic selective pressure
@@ -316,6 +320,6 @@ curation_history:
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q06253 (phd)
     protein example to node ta_system; added UniProtKB:P21311 (dam) protein example
-    to node plasmid_methylase; added UniProtKB:P08715 (hlyA) protein example to node
+    to node plasmid_methylase; added UniProtKB:O73943 (apeII) protein example to node
     anti_restriction_proteins.'
   llm_assisted: true

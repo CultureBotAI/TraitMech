@@ -98,19 +98,26 @@ curation_history:
   llm_assisted: true
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed canonical_examples status alongside NONMECHANISTIC protein exemplar
+    graph for swimming motility; isolate-level canonical example remains deferred
+    pending explicit strain-level literature.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph swimming_motility_graph
-    with GENE_OR_PROTEIN node swimming_motility_protein_component and UniProtKB:Q56331
+    with GENE_OR_PROTEIN node swimming_motility_protein_component and UniProtKB:P09348
     exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: swimming_motility_graph
   title: Protein component associated with swimming motility
-  description: Literature-backed association between Motility protein A (UniProtKB:Q56331)
+  description: Literature-backed association between Motility protein A (UniProtKB:P09348)
     and swimming motility.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q56331 in Treponema
-    phagedenis) associated with swimming motility while full multi-step mechanistic
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P09348 in Escherichia
+    coli (strain K12)) associated with swimming motility while full multi-step mechanistic
     curation remains future work.
   nodes:
   - node_id: swimming_motility_trait
@@ -123,40 +130,39 @@ causal_graphs:
     label: Motility protein A
     node_type: GENE_OR_PROTEIN
     description: Protein component (Motility protein A) associated with swimming motility.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    grounding: InterPro:IPR000540
     gene_symbols:
     - motA
     protein_examples:
-    - uniprot_id: UniProtKB:Q56331
+    - uniprot_id: UniProtKB:P09348
       protein_label: Motility protein A
       gene_symbol: motA
-      taxon_id: NCBITaxon:162
-      taxon_label: Treponema phagedenis
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
+      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 85
+      entry_version: 181
       sequence_version: 1
       role: Characteristic protein component (motA, Motility protein A) associated
-        with swimming motility in Treponema phagedenis.
+        with swimming motility in Escherichia coli (strain K12).
       evidence:
       - reference: DOI:10.1038/s41467-018-07802-w
         snippet: However, the free-swimming capability of the different strains did
           not correlate well to the spreading capability in soft agar.
-        notes: Supports Motility protein A in swimming motility; UniProtKB:Q56331
-          (motA, Motility protein A) in Treponema phagedenis provides a verified protein
-          exemplar.
+        notes: Supports Motility protein A in swimming motility; UniProtKB:P09348
+          (motA, Motility protein A) in Escherichia coli (strain K12) provides a verified
+          protein exemplar.
   edges:
   - subject: swimming_motility_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: swimming_motility_trait
-    description: Motility protein A (motA, UniProtKB:Q56331) contributes to swimming
-      motility (associated with capability, correlate, different).
+    description: Motility protein A (motA, UniProtKB:P09348) contributes to swimming
+      motility.
     evidence:
     - reference: DOI:10.1038/s41467-018-07802-w
       snippet: However, the free-swimming capability of the different strains did
         not correlate well to the spreading capability in soft agar.
-      notes: Supports the functional association between Motility protein A (UniProtKB:Q56331
-        in Treponema phagedenis) and swimming motility.
+      notes: Supports the functional association between Motility protein A (UniProtKB:P09348
+        in Escherichia coli (strain K12)) and swimming motility.

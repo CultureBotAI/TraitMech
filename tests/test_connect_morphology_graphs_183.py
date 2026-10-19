@@ -66,6 +66,9 @@ def _before(slug: str) -> dict:
                 "evidence": [{"reference": "DOI:10.3390/biom14121488"}],
             },
         ])
+    doc["curation_history"] = [
+        e for e in doc.get("curation_history", []) if e.get("action") != "CURATE_PROTEIN_TAXON_EXAMPLE"
+    ]
     return doc
 
 
@@ -85,7 +88,7 @@ def test_repair_reaches_one_component_with_exact_snippet_backed_edge(slug: str):
             item.get("reference") and item.get("snippet")
             for item in expected["evidence"]
         )
-    assert any(event.get("action") == ACTION for event in doc["curation_history"])
+    assert doc["curation_history"][-1]["action"] == ACTION
 
 
 def test_flagellar_motor_island_is_removed_as_out_of_scope():

@@ -55,21 +55,28 @@ curation_history:
   llm_assisted: true
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed canonical_examples status alongside NONMECHANISTIC protein exemplar
+    graph for arsenite oxidation; isolate-level canonical example remains deferred
+    pending explicit strain-level literature.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph arsenite_oxidation_graph
-    with GENE_OR_PROTEIN node arsenite_oxidation_protein_component and UniProtKB:B5BIZ0
+    with GENE_OR_PROTEIN node arsenite_oxidation_protein_component and UniProtKB:U2ZU49
     exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: arsenite_oxidation_graph
   title: Protein component associated with arsenite oxidation
-  description: 'Literature-backed association between Fatty acid oxidation complex
-    subunit alpha [Includes: Enoyl-CoA hydratase/Delta(3)-cis-Delta(2)-trans-enoyl-CoA
-    isomerase/3-hydroxybutyryl-CoA epimerase (UniProtKB:B5BIZ0) and arsenite oxidation.'
+  description: Literature-backed association between Arsenite methyltransferase (UniProtKB:U2ZU49)
+    and arsenite oxidation.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:B5BIZ0 in Salmonella
-    paratyphi A (strain AKU_12601)) associated with arsenite oxidation while full
-    multi-step mechanistic curation remains future work.
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:U2ZU49 in Aquipseudomonas
+    alcaligenes (strain ATCC 14909 / DSM 50342 / CCUG 1425 / JCM 20561 / NBRC 14159
+    / NCIMB 9945 / NCTC 10367 / 1577) (Pseudomonas alcaligenes)) associated with arsenite
+    oxidation while full multi-step mechanistic curation remains future work.
   nodes:
   - node_id: arsenite_oxidation_trait
     label: arsenite oxidation
@@ -78,57 +85,53 @@ causal_graphs:
     description: A metabolism in which an organism enzymatically oxidizes arsenite
       to arsenate as an energy-generating electron donor or detoxification substrate.
   - node_id: arsenite_oxidation_protein_component
-    label: 'Fatty acid oxidation complex subunit alpha [Includes: Enoyl-CoA hydratase/Delta(3)-cis-Delta(2)-trans-enoyl-CoA
-      isomerase/3-hydroxybutyryl-CoA epimerase'
+    label: Arsenite methyltransferase
     node_type: GENE_OR_PROTEIN
-    description: 'Protein component (Fatty acid oxidation complex subunit alpha [Includes:
-      Enoyl-CoA hydratase/Delta(3)-cis-Delta(2)-trans-enoyl-CoA isomerase/3-hydroxybutyryl-CoA
-      epimerase) associated with arsenite oxidation.'
+    description: Protein component (Arsenite methyltransferase) associated with arsenite
+      oxidation.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - fadB
+    - arsM
     protein_examples:
-    - uniprot_id: UniProtKB:B5BIZ0
-      protein_label: 'Fatty acid oxidation complex subunit alpha [Includes: Enoyl-CoA
-        hydratase/Delta(3)-cis-Delta(2)-trans-enoyl-CoA isomerase/3-hydroxybutyryl-CoA
-        epimerase'
-      gene_symbol: fadB
-      taxon_id: NCBITaxon:554290
-      taxon_label: Salmonella paratyphi A (strain AKU_12601)
+    - uniprot_id: UniProtKB:U2ZU49
+      protein_label: Arsenite methyltransferase
+      gene_symbol: arsM
+      taxon_id: NCBITaxon:1215092
+      taxon_label: Aquipseudomonas alcaligenes (strain ATCC 14909 / DSM 50342 / CCUG
+        1425 / JCM 20561 / NBRC 14159 / NCIMB 9945 / NCTC 10367 / 1577) (Pseudomonas
+        alcaligenes)
       entry_status: REVIEWED
+      proteome_id: UP000016560
       retrieved_on: '2026-10-17'
-      entry_version: 96
+      entry_version: 46
       sequence_version: 1
-      role: 'Characteristic protein component (fadB, Fatty acid oxidation complex
-        subunit alpha [Includes: Enoyl-CoA hydratase/Delta(3)-cis-Delta(2)-trans-enoyl-CoA
-        isomerase/3-hydroxybutyryl-CoA epimerase) associated with arsenite oxidation
-        in Salmonella paratyphi A (strain AKU_12601).'
+      role: Characteristic protein component (arsM, Arsenite methyltransferase) associated
+        with arsenite oxidation in Aquipseudomonas alcaligenes (strain ATCC 14909
+        / DSM 50342 / CCUG 1425 / JCM 20561 / NBRC 14159 / NCIMB 9945 / NCTC 10367
+        / 1577) (Pseudomonas alcaligenes).
       evidence:
       - reference: DOI:10.3389/fmicb.2020.569282
         snippet: The biological oxidation of arsenite [As(III)] to arsenate [As(V)]
           is considered a strategy to reduce arsenic toxicity and provide energy
-        notes: 'Supports Fatty acid oxidation complex subunit alpha [Includes: Enoyl-CoA
-          hydratase/Delta(3)-cis-Delta(2)-trans-enoyl-CoA isomerase/3-hydroxybutyryl-CoA
-          epimerase in arsenite oxidation; UniProtKB:B5BIZ0 (fadB, Fatty acid oxidation
-          complex subunit alpha [Includes: Enoyl-CoA hydratase/Delta(3)-cis-Delta(2)-trans-enoyl-CoA
-          isomerase/3-hydroxybutyryl-CoA epimerase) in Salmonella paratyphi A (strain
-          AKU_12601) provides a verified protein exemplar.'
+        notes: Supports Arsenite methyltransferase in arsenite oxidation; UniProtKB:U2ZU49
+          (arsM, Arsenite methyltransferase) in Aquipseudomonas alcaligenes (strain
+          ATCC 14909 / DSM 50342 / CCUG 1425 / JCM 20561 / NBRC 14159 / NCIMB 9945
+          / NCTC 10367 / 1577) (Pseudomonas alcaligenes) provides a verified protein
+          exemplar.
   edges:
   - subject: arsenite_oxidation_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: arsenite_oxidation_trait
-    description: 'Fatty acid oxidation complex subunit alpha [Includes: Enoyl-CoA
-      hydratase/Delta(3)-cis-Delta(2)-trans-enoyl-CoA isomerase/3-hydroxybutyryl-CoA
-      epimerase (fadB, UniProtKB:B5BIZ0) contributes to arsenite oxidation (associated
-      with biological, considered, oxidation).'
+    description: Arsenite methyltransferase (arsM, UniProtKB:U2ZU49) contributes to
+      arsenite oxidation.
     evidence:
     - reference: DOI:10.3389/fmicb.2020.569282
       snippet: The biological oxidation of arsenite [As(III)] to arsenate [As(V)]
         is considered a strategy to reduce arsenic toxicity and provide energy
-      notes: 'Supports the functional association between Fatty acid oxidation complex
-        subunit alpha [Includes: Enoyl-CoA hydratase/Delta(3)-cis-Delta(2)-trans-enoyl-CoA
-        isomerase/3-hydroxybutyryl-CoA epimerase (UniProtKB:B5BIZ0 in Salmonella paratyphi
-        A (strain AKU_12601)) and arsenite oxidation.'
+      notes: Supports the functional association between Arsenite methyltransferase
+        (UniProtKB:U2ZU49 in Aquipseudomonas alcaligenes (strain ATCC 14909 / DSM
+        50342 / CCUG 1425 / JCM 20561 / NBRC 14159 / NCIMB 9945 / NCTC 10367 / 1577)
+        (Pseudomonas alcaligenes)) and arsenite oxidation.

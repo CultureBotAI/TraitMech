@@ -95,26 +95,26 @@ causal_graphs:
       for this aggregate use.
     description: Molecular chaperones induced by thermal stress that maintain proteostasis.
     protein_examples:
-    - uniprot_id: UniProtKB:P0A6Z3
-      protein_label: Chaperone protein HtpG
-      gene_symbol: htpG
+    - uniprot_id: UniProtKB:P0C0V0
+      protein_label: Periplasmic serine endoprotease DegP
+      gene_symbol: degP
       taxon_id: NCBITaxon:83333
       taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
       proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 166
+      entry_version: 161
       sequence_version: 1
-      role: Exemplar protein (htpG, Chaperone protein HtpG) representing heat-shock
-        proteins / chaperones in Escherichia coli (strain K12) for temperature range
-        mid2.
+      role: Exemplar protein (degP, Periplasmic serine endoprotease DegP) representing
+        heat-shock proteins / chaperones in Escherichia coli (strain K12) for temperature
+        range mid2.
       evidence:
       - reference: DOI:10.1007/s42770-023-01057-4
         snippet: When the temperature drops, DesK/DesR is the two-component system
           involved in membrane adaptation
         notes: Supports heat-shock proteins / chaperones in temperature range mid2;
-          UniProtKB:P0A6Z3 (htpG, Chaperone protein HtpG) in Escherichia coli (strain
-          K12) provides a verified protein exemplar.
+          UniProtKB:P0C0V0 (degP, Periplasmic serine endoprotease DegP) in Escherichia
+          coli (strain K12) provides a verified protein exemplar.
   - node_id: protein_denaturation
     label: protein denaturation / aggregation
     node_type: BIOLOGICAL_PROCESS
@@ -292,6 +292,6 @@ curation_history:
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
-  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P0A6Z3 (htpG)
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P0C0V0 (degP)
     protein example to node heat_shock_proteins.'
   llm_assisted: true

@@ -75,9 +75,9 @@
 
     <div class="card causal-graph-card">
       <h2>Protein component associated with aggrephagy</h2>
-      <p class="meta">Literature-backed association between Vacuolar protein 8 (UniProtKB:P39968) and aggrephagy.</p>
+      <p class="meta">Literature-backed association between Autophagy-related protein 8 (UniProtKB:P38182) and aggrephagy.</p>
 
-      <p class="graph-scope"><code>NONMECHANISTIC</code> · Captures a source-backed protein exemplar (UniProtKB:P39968 in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker&#39;s yeast)) associated with aggrephagy while full multi-step mechanistic curation remains future work.</p>
+      <p class="graph-scope"><code>NONMECHANISTIC</code> · Captures a source-backed protein exemplar (UniProtKB:P38182 in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker&#39;s yeast)) associated with aggrephagy while full multi-step mechanistic curation remains future work.</p>
 
 
       <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
@@ -96,17 +96,17 @@
         <ul>
 
           <li id="pathograph-1-edge-1">
-            <strong>Vacuolar protein 8</strong>
+            <strong>Autophagy-related protein 8</strong>
             <span class="edge-predicate">contributes to</span>
             <strong>aggrephagy</strong>
             <code>RO:0002326</code>
-            <p>Vacuolar protein 8 (VAC8, UniProtKB:P39968) contributes to aggrephagy (associated with interestingly, dispensable, aggrephagy).</p>
+            <p>Autophagy-related protein 8 (ATG8, UniProtKB:P38182) contributes to aggrephagy.</p>
             <ul>
 
               <li>
                 <a href="https://doi.org/10.1080/27694127.2023.2236407" rel="nofollow noreferrer"><code>DOI:10.1080/27694127.2023.2236407</code></a>
                 <span class="evidence-snippet">Interestingly, Cue5/Tollip, a known autophagy receptor for aggrephagy, is dispensable for this inclusion body autophagy.</span>
-                <span class="meta">Supports the functional association between Vacuolar protein 8 (UniProtKB:P39968 in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker&#39;s yeast)) and aggrephagy.</span>
+                <span class="meta">Supports the functional association between Autophagy-related protein 8 (UniProtKB:P38182 in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker&#39;s yeast)) and aggrephagy.</span>
               </li>
 
             </ul>
@@ -127,11 +127,11 @@
             <tbody>
 
               <tr>
-                <td>Vacuolar protein 8</td>
+                <td>Autophagy-related protein 8</td>
                 <td>
 
-                  <a href="https://www.uniprot.org/uniprotkb/P39968/entry" rel="nofollow noreferrer"><code>UniProtKB:P39968</code></a>
-                  <br>Vacuolar protein 8 <span class="meta">(VAC8)</span>
+                  <a href="https://www.uniprot.org/uniprotkb/P38182/entry" rel="nofollow noreferrer"><code>UniProtKB:P38182</code></a>
+                  <br>Autophagy-related protein 8 <span class="meta">(ATG8)</span>
                 </td>
                 <td>
 
@@ -140,16 +140,16 @@
                 </td>
                 <td>
                   <code>REVIEWED</code><br>
-                  <span class="meta">retrieved 2026-10-17 · entry v206 · sequence v3</span>
+                  <span class="meta">retrieved 2026-10-17 · entry v212 · sequence v1</span>
                 </td>
                 <td>
-                  <p>Characteristic protein component (VAC8, Vacuolar protein 8) associated with aggrephagy in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker&#39;s yeast).</p>
+                  <p>Characteristic protein component (ATG8, Autophagy-related protein 8) associated with aggrephagy in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker&#39;s yeast).</p>
                   <ul>
 
                     <li>
                       <a href="https://doi.org/10.1080/27694127.2023.2236407" rel="nofollow noreferrer"><code>DOI:10.1080/27694127.2023.2236407</code></a>
                       <span class="evidence-snippet">Interestingly, Cue5/Tollip, a known autophagy receptor for aggrephagy, is dispensable for this inclusion body autophagy.</span>
-                      <span class="meta">Supports Vacuolar protein 8 in aggrephagy; UniProtKB:P39968 (VAC8, Vacuolar protein 8) in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker&#39;s yeast) provides a verified protein exemplar.</span>
+                      <span class="meta">Supports Autophagy-related protein 8 in aggrephagy; UniProtKB:P38182 (ATG8, Autophagy-related protein 8) in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker&#39;s yeast) provides a verified protein exemplar.</span>
                     </li>
 
                   </ul>
@@ -298,8 +298,14 @@
 
         <li>
           <time>2026-10-17T09:00:00Z</time> ·
+          <strong>REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP</strong> · codex
+          <p class="changes">Reviewed canonical_examples status alongside NONMECHANISTIC protein exemplar graph for aggrephagy; isolate-level canonical example remains deferred pending explicit strain-level literature.</p>
+        </li>
+
+        <li>
+          <time>2026-10-17T09:00:00Z</time> ·
           <strong>CURATE_PROTEIN_TAXON_EXAMPLE</strong> · codex
-          <p class="changes">Curated verified UniProtKB protein_examples: added causal graph aggrephagy_graph with GENE_OR_PROTEIN node aggrephagy_protein_component and UniProtKB:P39968 exemplar.</p>
+          <p class="changes">Curated verified UniProtKB protein_examples: added causal graph aggrephagy_graph with GENE_OR_PROTEIN node aggrephagy_protein_component and UniProtKB:P38182 exemplar.</p>
         </li>
 
       </ol>
@@ -678,7 +684,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Literature-backed association between Vacuolar protein 8 (UniProtKB:P39968) and aggrephagy.", "edges": [{"description": "Vacuolar protein 8 (VAC8, UniProtKB:P39968) contributes to aggrephagy (associated with interestingly, dispensable, aggrephagy).", "evidence": [{"notes": "Supports the functional association between Vacuolar protein 8 (UniProtKB:P39968 in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker\u0027s yeast)) and aggrephagy.", "reference": "DOI:10.1080/27694127.2023.2236407", "snippet": "Interestingly, Cue5/Tollip, a known autophagy receptor for aggrephagy, is dispensable for this inclusion body autophagy."}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "aggrephagy_protein_component", "target": "aggrephagy_trait"}], "evidence_rows": [{"description": "Vacuolar protein 8 (VAC8, UniProtKB:P39968) contributes to aggrephagy (associated with interestingly, dispensable, aggrephagy).", "edge_id": "edge-1", "evidence": [{"notes": "Supports the functional association between Vacuolar protein 8 (UniProtKB:P39968 in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker\u0027s yeast)) and aggrephagy.", "reference": "DOI:10.1080/27694127.2023.2236407", "snippet": "Interestingly, Cue5/Tollip, a known autophagy receptor for aggrephagy, is dispensable for this inclusion body autophagy."}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Vacuolar protein 8", "target": "aggrephagy"}], "graph_id": "aggrephagy_graph", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Protein component (Vacuolar protein 8) associated with aggrephagy.", "grounding": null, "id": "aggrephagy_protein_component", "is_orphan": false, "label": "Vacuolar protein 8", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 206, "evidence": [{"notes": "Supports Vacuolar protein 8 in aggrephagy; UniProtKB:P39968 (VAC8, Vacuolar protein 8) in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker\u0027s yeast) provides a verified protein exemplar.", "reference": "DOI:10.1080/27694127.2023.2236407", "snippet": "Interestingly, Cue5/Tollip, a known autophagy receptor for aggrephagy, is dispensable for this inclusion body autophagy."}], "gene_symbol": "VAC8", "protein_label": "Vacuolar protein 8", "proteome_id": "UP000002311", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (VAC8, Vacuolar protein 8) associated with aggrephagy in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker\u0027s yeast).", "sequence_version": 3, "taxon_id": "NCBITaxon:559292", "taxon_label": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker\u0027s yeast)", "uniprot_id": "UniProtKB:P39968"}], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "An autophagy phenotype in which a microbial cell selectively degrades protein aggregates through macroautophagic delivery to lysosomal or vacuolar compartments.", "grounding": "traitmech:000646", "id": "aggrephagy_trait", "is_orphan": false, "label": "aggrephagy", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 206, "evidence": [{"notes": "Supports Vacuolar protein 8 in aggrephagy; UniProtKB:P39968 (VAC8, Vacuolar protein 8) in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker\u0027s yeast) provides a verified protein exemplar.", "reference": "DOI:10.1080/27694127.2023.2236407", "snippet": "Interestingly, Cue5/Tollip, a known autophagy receptor for aggrephagy, is dispensable for this inclusion body autophagy."}], "gene_symbol": "VAC8", "node_id": "aggrephagy_protein_component", "node_label": "Vacuolar protein 8", "protein_label": "Vacuolar protein 8", "proteome_id": "UP000002311", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (VAC8, Vacuolar protein 8) associated with aggrephagy in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker\u0027s yeast).", "sequence_version": 3, "taxon_id": "NCBITaxon:559292", "taxon_label": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker\u0027s yeast)", "uniprot_id": "UniProtKB:P39968"}], "scope_notes": "Captures a source-backed protein exemplar (UniProtKB:P39968 in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker\u0027s yeast)) associated with aggrephagy while full multi-step mechanistic curation remains future work.", "scope_status": "NONMECHANISTIC", "title": "Protein component associated with aggrephagy"}];
+  var graphs = [{"description": "Literature-backed association between Autophagy-related protein 8 (UniProtKB:P38182) and aggrephagy.", "edges": [{"description": "Autophagy-related protein 8 (ATG8, UniProtKB:P38182) contributes to aggrephagy.", "evidence": [{"notes": "Supports the functional association between Autophagy-related protein 8 (UniProtKB:P38182 in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker\u0027s yeast)) and aggrephagy.", "reference": "DOI:10.1080/27694127.2023.2236407", "snippet": "Interestingly, Cue5/Tollip, a known autophagy receptor for aggrephagy, is dispensable for this inclusion body autophagy."}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "aggrephagy_protein_component", "target": "aggrephagy_trait"}], "evidence_rows": [{"description": "Autophagy-related protein 8 (ATG8, UniProtKB:P38182) contributes to aggrephagy.", "edge_id": "edge-1", "evidence": [{"notes": "Supports the functional association between Autophagy-related protein 8 (UniProtKB:P38182 in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker\u0027s yeast)) and aggrephagy.", "reference": "DOI:10.1080/27694127.2023.2236407", "snippet": "Interestingly, Cue5/Tollip, a known autophagy receptor for aggrephagy, is dispensable for this inclusion body autophagy."}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Autophagy-related protein 8", "target": "aggrephagy"}], "graph_id": "aggrephagy_graph", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Protein component (Autophagy-related protein 8) associated with aggrephagy.", "grounding": "InterPro:IPR004241", "id": "aggrephagy_protein_component", "is_orphan": false, "label": "Autophagy-related protein 8", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 212, "evidence": [{"notes": "Supports Autophagy-related protein 8 in aggrephagy; UniProtKB:P38182 (ATG8, Autophagy-related protein 8) in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker\u0027s yeast) provides a verified protein exemplar.", "reference": "DOI:10.1080/27694127.2023.2236407", "snippet": "Interestingly, Cue5/Tollip, a known autophagy receptor for aggrephagy, is dispensable for this inclusion body autophagy."}], "gene_symbol": "ATG8", "protein_label": "Autophagy-related protein 8", "proteome_id": "UP000002311", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (ATG8, Autophagy-related protein 8) associated with aggrephagy in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker\u0027s yeast).", "sequence_version": 1, "taxon_id": "NCBITaxon:559292", "taxon_label": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker\u0027s yeast)", "uniprot_id": "UniProtKB:P38182"}], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "An autophagy phenotype in which a microbial cell selectively degrades protein aggregates through macroautophagic delivery to lysosomal or vacuolar compartments.", "grounding": "traitmech:000646", "id": "aggrephagy_trait", "is_orphan": false, "label": "aggrephagy", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 212, "evidence": [{"notes": "Supports Autophagy-related protein 8 in aggrephagy; UniProtKB:P38182 (ATG8, Autophagy-related protein 8) in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker\u0027s yeast) provides a verified protein exemplar.", "reference": "DOI:10.1080/27694127.2023.2236407", "snippet": "Interestingly, Cue5/Tollip, a known autophagy receptor for aggrephagy, is dispensable for this inclusion body autophagy."}], "gene_symbol": "ATG8", "node_id": "aggrephagy_protein_component", "node_label": "Autophagy-related protein 8", "protein_label": "Autophagy-related protein 8", "proteome_id": "UP000002311", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (ATG8, Autophagy-related protein 8) associated with aggrephagy in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker\u0027s yeast).", "sequence_version": 1, "taxon_id": "NCBITaxon:559292", "taxon_label": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker\u0027s yeast)", "uniprot_id": "UniProtKB:P38182"}], "scope_notes": "Captures a source-backed protein exemplar (UniProtKB:P38182 in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker\u0027s yeast)) associated with aggrephagy while full multi-step mechanistic curation remains future work.", "scope_status": "NONMECHANISTIC", "title": "Protein component associated with aggrephagy"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });

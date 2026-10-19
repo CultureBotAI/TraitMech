@@ -105,18 +105,17 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph myzocytosis_graph
-    with GENE_OR_PROTEIN node myzocytosis_protein_component and UniProtKB:A0A0H3C3S1
-    exemplar.'
+    with GENE_OR_PROTEIN node myzocytosis_protein_component and UniProtKB:P32790 exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: myzocytosis_graph
   title: Protein component associated with myzocytosis
-  description: Literature-backed association between FtsZ-localized protein C (UniProtKB:A0A0H3C3S1)
-    and myzocytosis.
+  description: Literature-backed association between Actin cytoskeleton-regulatory
+    complex protein SLA1 (UniProtKB:P32790) and myzocytosis.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:A0A0H3C3S1 in
-    Caulobacter vibrioides (strain NA1000 / CB15N) (Caulobacter crescentus)) associated
-    with myzocytosis while full multi-step mechanistic curation remains future work.
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P32790 in Saccharomyces
+    cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)) associated with myzocytosis
+    while full multi-step mechanistic curation remains future work.
   nodes:
   - node_id: myzocytosis_trait
     label: myzocytosis
@@ -126,46 +125,47 @@ causal_graphs:
       aspirating prey cell contents through a localized feeding connection rather
       than engulfing the prey whole.
   - node_id: myzocytosis_protein_component
-    label: FtsZ-localized protein C
+    label: Actin cytoskeleton-regulatory complex protein SLA1
     node_type: GENE_OR_PROTEIN
-    description: Protein component (FtsZ-localized protein C) associated with myzocytosis.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Actin cytoskeleton-regulatory complex protein
+      SLA1) associated with myzocytosis.
+    grounding: InterPro:IPR056996
     gene_symbols:
-    - fzlC
+    - SLA1
     protein_examples:
-    - uniprot_id: UniProtKB:A0A0H3C3S1
-      protein_label: FtsZ-localized protein C
-      gene_symbol: fzlC
-      taxon_id: NCBITaxon:565050
-      taxon_label: Caulobacter vibrioides (strain NA1000 / CB15N) (Caulobacter crescentus)
+    - uniprot_id: UniProtKB:P32790
+      protein_label: Actin cytoskeleton-regulatory complex protein SLA1
+      gene_symbol: SLA1
+      taxon_id: NCBITaxon:559292
+      taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's
+        yeast)
       entry_status: REVIEWED
-      proteome_id: UP000001364
+      proteome_id: UP000002311
       retrieved_on: '2026-10-17'
-      entry_version: 29
+      entry_version: 230
       sequence_version: 1
-      role: Characteristic protein component (fzlC, FtsZ-localized protein C) associated
-        with myzocytosis in Caulobacter vibrioides (strain NA1000 / CB15N) (Caulobacter
-        crescentus).
+      role: Characteristic protein component (SLA1, Actin cytoskeleton-regulatory
+        complex protein SLA1) associated with myzocytosis in Saccharomyces cerevisiae
+        (strain ATCC 204508 / S288c) (Baker's yeast).
       evidence:
       - reference: DOI:10.3390/microorganisms11081945
         snippet: Colpodella sp. (ATCC 50594) obtain nutrients by preying on Parabodo
           caudatus using myzocytosis.
-        notes: Supports FtsZ-localized protein C in myzocytosis; UniProtKB:A0A0H3C3S1
-          (fzlC, FtsZ-localized protein C) in Caulobacter vibrioides (strain NA1000
-          / CB15N) (Caulobacter crescentus) provides a verified protein exemplar.
+        notes: Supports Actin cytoskeleton-regulatory complex protein SLA1 in myzocytosis;
+          UniProtKB:P32790 (SLA1, Actin cytoskeleton-regulatory complex protein SLA1)
+          in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)
+          provides a verified protein exemplar.
   edges:
   - subject: myzocytosis_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: myzocytosis_trait
-    description: FtsZ-localized protein C (fzlC, UniProtKB:A0A0H3C3S1) contributes
-      to myzocytosis (associated with myzocytosis, colpodella, nutrients).
+    description: Actin cytoskeleton-regulatory complex protein SLA1 (SLA1, UniProtKB:P32790)
+      contributes to myzocytosis.
     evidence:
     - reference: DOI:10.3390/microorganisms11081945
       snippet: Colpodella sp. (ATCC 50594) obtain nutrients by preying on Parabodo
         caudatus using myzocytosis.
-      notes: Supports the functional association between FtsZ-localized protein C
-        (UniProtKB:A0A0H3C3S1 in Caulobacter vibrioides (strain NA1000 / CB15N) (Caulobacter
-        crescentus)) and myzocytosis.
+      notes: Supports the functional association between Actin cytoskeleton-regulatory
+        complex protein SLA1 (UniProtKB:P32790 in Saccharomyces cerevisiae (strain
+        ATCC 204508 / S288c) (Baker's yeast)) and myzocytosis.

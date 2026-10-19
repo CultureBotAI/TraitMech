@@ -37,7 +37,7 @@ causal_graphs:
   scope_status: NONMECHANISTIC
   scope_notes: This record is a broad environmental or morphological classification
     spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
-    descriptor; contextual protein nodes do not receive token UniProt examples.
+    descriptor; contextual protein nodes include source-backed UniProtKB exemplars.
   nodes:
   - node_id: mycelial_growth_trait
     label: mycelial growth
@@ -98,29 +98,25 @@ causal_graphs:
     description: LCP-family ligase attaching wall teichoic acids/glycopolymers to
       peptidoglycan.
     protein_examples:
-    - uniprot_id: UniProtKB:Q49VI3
-      protein_label: Teichoic acids export ATP-binding protein TagH
-      gene_symbol: tagH
-      taxon_id: NCBITaxon:342451
-      taxon_label: Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
-        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+    - uniprot_id: UniProtKB:P71021
+      protein_label: Septum site-determining protein DivIVA
+      gene_symbol: divIVA
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
       entry_status: REVIEWED
-      proteome_id: UP000006371
+      proteome_id: UP000001570
       retrieved_on: '2026-10-17'
       entry_version: 132
       sequence_version: 1
-      role: Exemplar protein (tagH, Teichoic acids export ATP-binding protein TagH)
-        representing CglA glycopolymer ligase in Staphylococcus saprophyticus subsp.
-        saprophyticus (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
-        for mycelial growth.
+      role: Exemplar protein (divIVA, Septum site-determining protein DivIVA) representing
+        CglA glycopolymer ligase in Bacillus subtilis (strain 168) for mycelial growth.
       evidence:
       - reference: DOI:10.1093/femsml/uqad020
         snippet: external osmotic upshifts by increasing the cellular concentration
           of cations (e.g. K+) and compatible solutes
-        notes: Supports CglA glycopolymer ligase in mycelial growth; UniProtKB:Q49VI3
-          (tagH, Teichoic acids export ATP-binding protein TagH) in Staphylococcus
-          saprophyticus subsp. saprophyticus (strain ATCC 15305 / DSM 20229 / NCIMB
-          8711 / NCTC 7292 / S-41) provides a verified protein exemplar.
+        notes: Supports CglA glycopolymer ligase in mycelial growth; UniProtKB:P71021
+          (divIVA, Septum site-determining protein DivIVA) in Bacillus subtilis (strain
+          168) provides a verified protein exemplar.
   - node_id: wta_attachment
     label: wall teichoic acid attachment to peptidoglycan
     node_type: BIOLOGICAL_PROCESS
@@ -180,25 +176,25 @@ causal_graphs:
     description: Surfactant SapB and hydrophobic chaplin/rodlin sheath proteins aiding
       aerial escape.
     protein_examples:
-    - uniprot_id: UniProtKB:P0A8Q3
-      protein_label: Fumarate reductase subunit D
-      gene_symbol: frdD
-      taxon_id: NCBITaxon:83333
-      taxon_label: Escherichia coli (strain K12)
+    - uniprot_id: UniProtKB:P71021
+      protein_label: Septum site-determining protein DivIVA
+      gene_symbol: divIVA
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
       entry_status: REVIEWED
-      proteome_id: UP000000625
+      proteome_id: UP000001570
       retrieved_on: '2026-10-17'
-      entry_version: 133
+      entry_version: 132
       sequence_version: 1
-      role: Exemplar protein (frdD, Fumarate reductase subunit D) representing SapB
-        / chaplins / rodlins in Escherichia coli (strain K12) for mycelial growth.
+      role: Exemplar protein (divIVA, Septum site-determining protein DivIVA) representing
+        SapB / chaplins / rodlins in Bacillus subtilis (strain 168) for mycelial growth.
       evidence:
       - reference: DOI:10.1093/femsml/uqad020
         snippet: external osmotic upshifts by increasing the cellular concentration
           of cations (e.g. K+) and compatible solutes
-        notes: Supports SapB / chaplins / rodlins in mycelial growth; UniProtKB:P0A8Q3
-          (frdD, Fumarate reductase subunit D) in Escherichia coli (strain K12) provides
-          a verified protein exemplar.
+        notes: Supports SapB / chaplins / rodlins in mycelial growth; UniProtKB:P71021
+          (divIVA, Septum site-determining protein DivIVA) in Bacillus subtilis (strain
+          168) provides a verified protein exemplar.
   edges:
   - subject: hyphal_extension
     predicate: confers
@@ -332,7 +328,7 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P71021 (divIVA)
-    protein example to node divIVA_polarisome; added UniProtKB:Q49VI3 (tagH) protein
+    protein example to node divIVA_polarisome; added UniProtKB:P71021 (divIVA) protein
     example to node cglA_ligase; added UniProtKB:V6F5E5 (ftsZ) protein example to
-    node ftsz_z_ladders; added UniProtKB:P0A8Q3 (frdD) protein example to node sapB_chaplins_rodlins.'
+    node ftsz_z_ladders; added UniProtKB:P71021 (divIVA) protein example to node sapB_chaplins_rodlins.'
   llm_assisted: true

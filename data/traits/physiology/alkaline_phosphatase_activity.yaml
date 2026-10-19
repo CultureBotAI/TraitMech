@@ -50,17 +50,17 @@ curation_history:
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph alkaline_phosphatase_activity_graph
     with GENE_OR_PROTEIN node alkaline_phosphatase_activity_protein_component and
-    UniProtKB:P0DUG0 exemplar.'
+    UniProtKB:P00634 exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: alkaline_phosphatase_activity_graph
   title: Protein component associated with alkaline phosphatase activity
-  description: Literature-backed association between Alkaline phosphatase-like protein
-    BrxZ (UniProtKB:P0DUG0) and alkaline phosphatase activity.
+  description: Literature-backed association between Alkaline phosphatase (UniProtKB:P00634)
+    and alkaline phosphatase activity.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P0DUG0 in Escherichia
-    coli O9:H4 (strain HS)) associated with alkaline phosphatase activity while full
-    multi-step mechanistic curation remains future work.
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P00634 in Escherichia
+    coli (strain K12)) associated with alkaline phosphatase activity while full multi-step
+    mechanistic curation remains future work.
   nodes:
   - node_id: alkaline_phosphatase_activity_trait
     label: alkaline phosphatase activity
@@ -70,47 +70,43 @@ causal_graphs:
       active alkaline phosphatase enzymes that dephosphorylate phosphate-containing
       compounds.
   - node_id: alkaline_phosphatase_activity_protein_component
-    label: Alkaline phosphatase-like protein BrxZ
+    label: Alkaline phosphatase
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Alkaline phosphatase-like protein BrxZ) associated
-      with alkaline phosphatase activity.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Alkaline phosphatase) associated with alkaline
+      phosphatase activity.
+    grounding: InterPro:IPR001952
     gene_symbols:
-    - pglZ
+    - phoA
     protein_examples:
-    - uniprot_id: UniProtKB:P0DUG0
-      protein_label: Alkaline phosphatase-like protein BrxZ
-      gene_symbol: pglZ
-      taxon_id: NCBITaxon:331112
-      taxon_label: Escherichia coli O9:H4 (strain HS)
+    - uniprot_id: UniProtKB:P00634
+      protein_label: Alkaline phosphatase
+      gene_symbol: phoA
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
+      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 15
+      entry_version: 230
       sequence_version: 1
-      role: Characteristic protein component (pglZ, Alkaline phosphatase-like protein
-        BrxZ) associated with alkaline phosphatase activity in Escherichia coli O9:H4
-        (strain HS).
+      role: Characteristic protein component (phoA, Alkaline phosphatase) associated
+        with alkaline phosphatase activity in Escherichia coli (strain K12).
       evidence:
       - reference: DOI:10.1155/2021/8888641
         snippet: According to the API ZYM assays, all three isolates were positive
           for alkaline phosphatase, leucine aryl amidase, acid phosphatase, and naphthol_AS_BI_phosphohydrolase.
-        notes: Supports Alkaline phosphatase-like protein BrxZ in alkaline phosphatase
-          activity; UniProtKB:P0DUG0 (pglZ, Alkaline phosphatase-like protein BrxZ)
-          in Escherichia coli O9:H4 (strain HS) provides a verified protein exemplar.
+        notes: Supports Alkaline phosphatase in alkaline phosphatase activity; UniProtKB:P00634
+          (phoA, Alkaline phosphatase) in Escherichia coli (strain K12) provides a
+          verified protein exemplar.
   edges:
   - subject: alkaline_phosphatase_activity_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: alkaline_phosphatase_activity_trait
-    description: Alkaline phosphatase-like protein BrxZ (pglZ, UniProtKB:P0DUG0) contributes
-      to alkaline phosphatase activity (associated with phosphohydrolase, phosphatase,
-      according).
+    description: Alkaline phosphatase (phoA, UniProtKB:P00634) contributes to alkaline
+      phosphatase activity.
     evidence:
     - reference: DOI:10.1155/2021/8888641
       snippet: According to the API ZYM assays, all three isolates were positive for
         alkaline phosphatase, leucine aryl amidase, acid phosphatase, and naphthol_AS_BI_phosphohydrolase.
-      notes: Supports the functional association between Alkaline phosphatase-like
-        protein BrxZ (UniProtKB:P0DUG0 in Escherichia coli O9:H4 (strain HS)) and
-        alkaline phosphatase activity.
+      notes: Supports the functional association between Alkaline phosphatase (UniProtKB:P00634
+        in Escherichia coli (strain K12)) and alkaline phosphatase activity.

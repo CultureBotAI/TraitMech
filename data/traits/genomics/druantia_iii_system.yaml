@@ -105,35 +105,37 @@ causal_graphs:
     grounding: traitmech:000234
     description: Possession of a genome-encoded Druantia phage-defense system.
   - node_id: druantia_iii_system_protein_component
-    label: Druantia protein DruE
+    label: Septu protein PtuB
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Druantia protein DruE) associated with Druantia
-      III system.
+    description: Protein component (Septu protein PtuB) associated with Druantia III
+      system.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - druE
+    - ptuB
     protein_examples:
-    - uniprot_id: UniProtKB:P0DW38
-      protein_label: Druantia protein DruE
-      gene_symbol: druE
-      taxon_id: NCBITaxon:1281278
-      taxon_label: Escherichia coli (strain UMEA 4076-1)
+    - uniprot_id: UniProtKB:P0DW42
+      protein_label: Septu protein PtuB
+      gene_symbol: ptuB
+      taxon_id: NCBITaxon:1428
+      taxon_label: Bacillus thuringiensis
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      entry_version: 10
+      entry_version: 12
       sequence_version: 1
-      role: Characteristic protein component (druE, Druantia protein DruE) associated
-        with Druantia III system in Escherichia coli (strain UMEA 4076-1).
+      role: Characteristic protein component (ptuB, Septu protein PtuB) associated
+        with Druantia III system in Bacillus thuringiensis.
       evidence:
-      - reference: DOI:10.64898/2026.05.12.724681
-        snippet: Druantia III is a late-acting defence where DruH is the likely infection
-          sensor and DruE is a helicase-nuclease effector that engages ssDNA-containing
-          replication intermediates
-        notes: Supports Druantia protein DruE in Druantia III system; UniProtKB:P0DW38
-          (druE, Druantia protein DruE) in Escherichia coli (strain UMEA 4076-1) provides
-          a verified protein exemplar.
+      - reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC12458937/
+        snippet: Screening 66 phages that could form plaques on the double-deletion
+          strain showed that the strain carrying only Druantia III exhibited at least
+          modest protection (<0.01 EOP or <0.5 SFC) against 3 phages, whereas the
+          strain carrying ARMADA Type II exhibited a much broader range of immunity,
+          with at least modest protection observed against 30 phages.
+        notes: Supports Septu protein PtuB in Druantia III system; UniProtKB:P0DW42
+          (ptuB, Septu protein PtuB) in Bacillus thuringiensis provides a verified
+          protein exemplar.
   edges:
   - subject: druantia_iii_locus
     predicate: contributes to
@@ -197,15 +199,17 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: druantia_iii_system_trait
-    description: Druantia protein DruE (druE, UniProtKB:P0DW38) contributes to Druantia
-      III system (associated with processing, suggesting, druantia).
+    description: Septu protein PtuB (ptuB, UniProtKB:P0DW42) contributes to Druantia
+      III system.
     evidence:
-    - reference: DOI:10.64898/2026.05.12.724681
-      snippet: DruE is the only component shared across Druantia subtypes, suggesting
-        that DNA processing by a DruE-like helicase-nuclease is the conserved core
-        function of Druantia
-      notes: Supports the functional association between Druantia protein DruE (UniProtKB:P0DW38
-        in Escherichia coli (strain UMEA 4076-1)) and Druantia III system.
+    - reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC12458937/
+      snippet: Screening 66 phages that could form plaques on the double-deletion
+        strain showed that the strain carrying only Druantia III exhibited at least
+        modest protection (<0.01 EOP or <0.5 SFC) against 3 phages, whereas the strain
+        carrying ARMADA Type II exhibited a much broader range of immunity, with at
+        least modest protection observed against 30 phages.
+      notes: Supports the functional association between Septu protein PtuB (UniProtKB:P0DW42
+        in Bacillus thuringiensis) and Druantia III system.
 discussions:
 - discussion_id: druantia-iii-activity-gap
   prompt: Resolve Druantia_III phage triggers, DruH sensory chemistry, RecBCD and
@@ -278,5 +282,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    druantia_iii_system_protein_component with UniProtKB:P0DW38 (druE) exemplar.'
+    druantia_iii_system_protein_component with UniProtKB:P0DW42 (ptuB) exemplar.'
   llm_assisted: true

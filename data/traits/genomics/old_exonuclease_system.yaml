@@ -111,35 +111,35 @@ causal_graphs:
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
   - node_id: old_exonuclease_system_protein_component
-    label: Retron Eco8 OLD nuclease
+    label: Shedu protein SduA
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Retron Eco8 OLD nuclease) associated with Old
-      exonuclease system.
+    description: Protein component (Shedu protein SduA) associated with Old exonuclease
+      system.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - old
+    - sduA
     protein_examples:
-    - uniprot_id: UniProtKB:P0DV58
-      protein_label: Retron Eco8 OLD nuclease
-      gene_symbol: old
-      taxon_id: NCBITaxon:562
-      taxon_label: Escherichia coli
+    - uniprot_id: UniProtKB:B7HFR2
+      protein_label: Shedu protein SduA
+      gene_symbol: sduA
+      taxon_id: NCBITaxon:405532
+      taxon_label: Bacillus cereus (strain B4264)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      entry_version: 13
+      entry_version: 58
       sequence_version: 1
-      role: Characteristic protein component (old, Retron Eco8 OLD nuclease) associated
-        with Old exonuclease system in Escherichia coli.
+      role: Characteristic protein component (sduA, Shedu protein SduA) associated
+        with Old exonuclease system in Bacillus cereus (strain B4264).
       evidence:
-      - reference: DOI:10.1128/jb.177.3.497-501.1995
-        snippet: The Old protein fused to maltose-binding protein has exonuclease
-          activity on double-stranded DNA as well as nuclease activity on single-stranded
-          DNA and RNA.
-        notes: Supports Retron Eco8 OLD nuclease in Old exonuclease system; UniProtKB:P0DV58
-          (old, Retron Eco8 OLD nuclease) in Escherichia coli provides a verified
-          protein exemplar.
+      - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/old_exonuclease.md
+        snippet: The old_exonuclease is dsDNA exonuclease that digests in the 5' to
+          3' direction :ref{doi=10.1128/jb.177.3.497-501.1995}. To our knowledge,
+          other aspects of the molecular mechanisms remain unknown.
+        notes: Supports Shedu protein SduA in Old exonuclease system; UniProtKB:B7HFR2
+          (sduA, Shedu protein SduA) in Bacillus cereus (strain B4264) provides a
+          verified protein exemplar.
   edges:
   - subject: old_exonuclease_locus
     predicate: contributes to
@@ -217,15 +217,15 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: old_exonuclease_system_trait
-    description: Retron Eco8 OLD nuclease (old, UniProtKB:P0DV58) contributes to Old
-      exonuclease system (associated with exonuclease, nuclease, stranded).
+    description: Shedu protein SduA (sduA, UniProtKB:B7HFR2) contributes to Old exonuclease
+      system.
     evidence:
-    - reference: DOI:10.1128/jb.177.3.497-501.1995
-      snippet: The Old protein fused to maltose-binding protein has exonuclease activity
-        on double-stranded DNA as well as nuclease activity on single-stranded DNA
-        and RNA.
-      notes: Supports the functional association between Retron Eco8 OLD nuclease
-        (UniProtKB:P0DV58 in Escherichia coli) and Old exonuclease system.
+    - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/old_exonuclease.md
+      snippet: The old_exonuclease is dsDNA exonuclease that digests in the 5' to
+        3' direction :ref{doi=10.1128/jb.177.3.497-501.1995}. To our knowledge, other
+        aspects of the molecular mechanisms remain unknown.
+      notes: Supports the functional association between Shedu protein SduA (UniProtKB:B7HFR2
+        in Bacillus cereus (strain B4264)) and Old exonuclease system.
 discussions:
 - discussion_id: old-exonuclease-tin-trigger-mechanism-gap
   prompt: Resolve Old_exonuclease natural host breadth, Tin accessory dependence,
@@ -292,5 +292,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    old_exonuclease_system_protein_component with UniProtKB:P0DV58 (old) exemplar.'
+    old_exonuclease_system_protein_component with UniProtKB:B7HFR2 (sduA) exemplar.'
   llm_assisted: true

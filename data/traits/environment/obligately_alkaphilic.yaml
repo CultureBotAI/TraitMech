@@ -35,7 +35,7 @@ causal_graphs:
   scope_status: NONMECHANISTIC
   scope_notes: This record is a broad environmental or morphological classification
     spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
-    descriptor; contextual protein nodes do not receive token UniProt examples.
+    descriptor; contextual protein nodes include source-backed UniProtKB exemplars.
   nodes:
   - node_id: obligately_alkaphilic_trait
     label: obligately alkaliphilic
@@ -98,27 +98,24 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: ATP synthase that remains proton-coupled in respiratory alkaliphiles.
     protein_examples:
-    - uniprot_id: UniProtKB:Q49Z52
+    - uniprot_id: UniProtKB:P0ABB0
       protein_label: ATP synthase subunit alpha
       gene_symbol: atpA
-      taxon_id: NCBITaxon:342451
-      taxon_label: Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
-        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
-      proteome_id: UP000006371
+      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 137
+      entry_version: 161
       sequence_version: 1
       role: Exemplar protein (atpA, ATP synthase subunit alpha) representing proton-coupled
-        ATP synthase in Staphylococcus saprophyticus subsp. saprophyticus (strain
-        ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) for obligately alkaliphilic.
+        ATP synthase in Escherichia coli (strain K12) for obligately alkaliphilic.
       evidence:
       - reference: DOI:10.1016/j.bbabio.2010.02.028
         snippet: robust H+-coupled ATP synthesis at external pH values > 10
-        notes: Supports proton-coupled ATP synthase in obligately alkaliphilic; UniProtKB:Q49Z52
-          (atpA, ATP synthase subunit alpha) in Staphylococcus saprophyticus subsp.
-          saprophyticus (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 /
-          S-41) provides a verified protein exemplar.
+        notes: Supports proton-coupled ATP synthase in obligately alkaliphilic; UniProtKB:P0ABB0
+          (atpA, ATP synthase subunit alpha) in Escherichia coli (strain K12) provides
+          a verified protein exemplar.
   - node_id: trkah_transport_system
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
@@ -463,7 +460,7 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q93F90 (nhaA)
-    protein example to node sodium_proton_antiporter; added UniProtKB:Q49Z52 (atpA)
+    protein example to node sodium_proton_antiporter; added UniProtKB:P0ABB0 (atpA)
     protein example to node proton_coupled_atp_synthase; added UniProtKB:Q8ZKW1 (kup)
     protein example to node trkah_transport_system; added UniProtKB:P39830 (ybaL)
     protein example to node cation_proton_antiporter.'

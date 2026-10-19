@@ -38,7 +38,7 @@ causal_graphs:
   scope_status: NONMECHANISTIC
   scope_notes: This record is a broad environmental or morphological classification
     spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
-    descriptor; contextual protein nodes do not receive token UniProt examples.
+    descriptor; contextual protein nodes include source-backed UniProtKB exemplars.
   nodes:
   - node_id: extreme_hyperthermophilic_trait
     label: extreme hyperthermophilic
@@ -139,16 +139,16 @@ causal_graphs:
     description: Enzymes that introduce ring cyclizations into GDGT tetraether lipids,
       increasing membrane packing.
     protein_examples:
-    - uniprot_id: UniProtKB:P0C064
-      protein_label: Gramicidin S synthase 2
-      gene_symbol: grsB
+    - uniprot_id: UniProtKB:P0C062
+      protein_label: Gramicidin S synthase 1
+      gene_symbol: grsA
       taxon_id: NCBITaxon:1393
       taxon_label: Brevibacillus brevis (Bacillus brevis)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      entry_version: 82
-      sequence_version: 2
-      role: Exemplar protein (grsB, Gramicidin S synthase 2) representing GrsA/GrsB
+      entry_version: 89
+      sequence_version: 1
+      role: Exemplar protein (grsA, Gramicidin S synthase 1) representing GrsA/GrsB
         GDGT cyclization enzymes in Brevibacillus brevis (Bacillus brevis) for extreme
         hyperthermophilic.
       evidence:
@@ -156,7 +156,7 @@ causal_graphs:
         snippet: are typically thermostable (i.e., resistant to irreversible inactivation
           at high temperatures) and are optimally active at high temperatures
         notes: Supports GrsA/GrsB GDGT cyclization enzymes in extreme hyperthermophilic;
-          UniProtKB:P0C064 (grsB, Gramicidin S synthase 2) in Brevibacillus brevis
+          UniProtKB:P0C062 (grsA, Gramicidin S synthase 1) in Brevibacillus brevis
           (Bacillus brevis) provides a verified protein exemplar.
   - node_id: membrane_integrity_high_temp
     label: membrane integrity at high temperature
@@ -370,6 +370,6 @@ curation_history:
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P0A6Y8 (dnaK)
     protein example to node hyperthermostable_proteins; added UniProtKB:P74759 (rgy)
-    protein example to node reverse_gyrase; added UniProtKB:P0C064 (grsB) protein
+    protein example to node reverse_gyrase; added UniProtKB:P0C062 (grsA) protein
     example to node grs_cyclization_enzymes.'
   llm_assisted: true

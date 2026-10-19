@@ -120,20 +120,27 @@ curation_history:
   llm_assisted: true
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed canonical_examples status alongside NONMECHANISTIC protein exemplar
+    graph for kin discrimination; isolate-level canonical example remains deferred
+    pending explicit strain-level literature.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph kin_discrimination_graph
-    with GENE_OR_PROTEIN node kin_discrimination_protein_component and UniProtKB:B5BBT7
+    with GENE_OR_PROTEIN node kin_discrimination_protein_component and UniProtKB:Q1D3H0
     exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: kin_discrimination_graph
   title: Protein component associated with kin discrimination
-  description: Literature-backed association between Hydroxylamine reductase (UniProtKB:B5BBT7)
+  description: Literature-backed association between Bactofilin BacN (UniProtKB:Q1D3H0)
     and kin discrimination.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:B5BBT7 in Salmonella
-    paratyphi A (strain AKU_12601)) associated with kin discrimination while full
-    multi-step mechanistic curation remains future work.
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q1D3H0 in Myxococcus
+    xanthus (strain DK1622)) associated with kin discrimination while full multi-step
+    mechanistic curation remains future work.
   nodes:
   - node_id: kin_discrimination_trait
     label: kin discrimination
@@ -143,43 +150,41 @@ causal_graphs:
       with kin or exclude nonkin through differential interactions according to genetic
       similarity or relatedness.
   - node_id: kin_discrimination_protein_component
-    label: Hydroxylamine reductase
+    label: Bactofilin BacN
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Hydroxylamine reductase) associated with kin discrimination.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Bactofilin BacN) associated with kin discrimination.
+    grounding: InterPro:IPR007607
     gene_symbols:
-    - hcp
+    - bacN
     protein_examples:
-    - uniprot_id: UniProtKB:B5BBT7
-      protein_label: Hydroxylamine reductase
-      gene_symbol: hcp
-      taxon_id: NCBITaxon:554290
-      taxon_label: Salmonella paratyphi A (strain AKU_12601)
+    - uniprot_id: UniProtKB:Q1D3H0
+      protein_label: Bactofilin BacN
+      gene_symbol: bacN
+      taxon_id: NCBITaxon:246197
+      taxon_label: Myxococcus xanthus (strain DK1622)
       entry_status: REVIEWED
+      proteome_id: UP000002402
       retrieved_on: '2026-10-17'
-      entry_version: 80
+      entry_version: 94
       sequence_version: 1
-      role: Characteristic protein component (hcp, Hydroxylamine reductase) associated
-        with kin discrimination in Salmonella paratyphi A (strain AKU_12601).
+      role: Characteristic protein component (bacN, Bactofilin BacN) associated with
+        kin discrimination in Myxococcus xanthus (strain DK1622).
       evidence:
       - reference: DOI:10.1128/mBio.00723-17
         snippet: The effects of kin discrimination extend to nearby species, as the
           other subtilis clade species were treated with the same antagonism as nonkin.
-        notes: Supports Hydroxylamine reductase in kin discrimination; UniProtKB:B5BBT7
-          (hcp, Hydroxylamine reductase) in Salmonella paratyphi A (strain AKU_12601)
-          provides a verified protein exemplar.
+        notes: Supports Bactofilin BacN in kin discrimination; UniProtKB:Q1D3H0 (bacN,
+          Bactofilin BacN) in Myxococcus xanthus (strain DK1622) provides a verified
+          protein exemplar.
   edges:
   - subject: kin_discrimination_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: kin_discrimination_trait
-    description: Hydroxylamine reductase (hcp, UniProtKB:B5BBT7) contributes to kin
-      discrimination (associated with discrimination, antagonism, subtilis).
+    description: Bactofilin BacN (bacN, UniProtKB:Q1D3H0) contributes to kin discrimination.
     evidence:
     - reference: DOI:10.1128/mBio.00723-17
       snippet: The effects of kin discrimination extend to nearby species, as the
         other subtilis clade species were treated with the same antagonism as nonkin.
-      notes: Supports the functional association between Hydroxylamine reductase (UniProtKB:B5BBT7
-        in Salmonella paratyphi A (strain AKU_12601)) and kin discrimination.
+      notes: Supports the functional association between Bactofilin BacN (UniProtKB:Q1D3H0
+        in Myxococcus xanthus (strain DK1622)) and kin discrimination.

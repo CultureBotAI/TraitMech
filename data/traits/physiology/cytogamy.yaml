@@ -108,19 +108,26 @@ curation_history:
   llm_assisted: true
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed canonical_examples status alongside NONMECHANISTIC protein exemplar
+    graph for cytogamy; isolate-level canonical example remains deferred pending explicit
+    strain-level literature.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph cytogamy_graph
-    with GENE_OR_PROTEIN node cytogamy_protein_component and UniProtKB:Q8F1F5 exemplar.'
+    with GENE_OR_PROTEIN node cytogamy_protein_component and UniProtKB:D6VTK4 exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: cytogamy_graph
   title: Protein component associated with cytogamy
-  description: Literature-backed association between CRISPR-associated exonuclease
-    Cas4/endonuclease Cas1 fusion (UniProtKB:Q8F1F5) and cytogamy.
+  description: Literature-backed association between Pheromone alpha factor receptor
+    (UniProtKB:D6VTK4) and cytogamy.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q8F1F5 in Leptospira
-    interrogans serogroup Icterohaemorrhagiae serovar Lai (strain 56601)) associated
-    with cytogamy while full multi-step mechanistic curation remains future work.
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:D6VTK4 in Saccharomyces
+    cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)) associated with cytogamy
+    while full multi-step mechanistic curation remains future work.
   nodes:
   - node_id: cytogamy_trait
     label: cytogamy
@@ -130,50 +137,46 @@ causal_graphs:
       by fusion of its own gametic nuclei without exchanging gametic nuclei with its
       partner.
   - node_id: cytogamy_protein_component
-    label: CRISPR-associated exonuclease Cas4/endonuclease Cas1 fusion
+    label: Pheromone alpha factor receptor
     node_type: GENE_OR_PROTEIN
-    description: Protein component (CRISPR-associated exonuclease Cas4/endonuclease
-      Cas1 fusion) associated with cytogamy.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Pheromone alpha factor receptor) associated with
+      cytogamy.
+    grounding: InterPro:IPR000366
     gene_symbols:
-    - cas4-cas1
+    - STE2
     protein_examples:
-    - uniprot_id: UniProtKB:Q8F1F5
-      protein_label: CRISPR-associated exonuclease Cas4/endonuclease Cas1 fusion
-      gene_symbol: cas4-cas1
-      taxon_id: NCBITaxon:189518
-      taxon_label: Leptospira interrogans serogroup Icterohaemorrhagiae serovar Lai
-        (strain 56601)
+    - uniprot_id: UniProtKB:D6VTK4
+      protein_label: Pheromone alpha factor receptor
+      gene_symbol: STE2
+      taxon_id: NCBITaxon:559292
+      taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's
+        yeast)
       entry_status: REVIEWED
-      proteome_id: UP000001408
+      proteome_id: UP000002311
       retrieved_on: '2026-10-17'
-      entry_version: 92
+      entry_version: 99
       sequence_version: 2
-      role: Characteristic protein component (cas4-cas1, CRISPR-associated exonuclease
-        Cas4/endonuclease Cas1 fusion) associated with cytogamy in Leptospira interrogans
-        serogroup Icterohaemorrhagiae serovar Lai (strain 56601).
+      role: Characteristic protein component (STE2, Pheromone alpha factor receptor)
+        associated with cytogamy in Saccharomyces cerevisiae (strain ATCC 204508 /
+        S288c) (Baker's yeast).
       evidence:
       - reference: DOI:10.1093/genetics/91.4.657
         snippet: cytogamy generates exconjugant clones that derive their entire genetic
           information from a single meiotic product of their cytoplasmic parent.
-        notes: Supports CRISPR-associated exonuclease Cas4/endonuclease Cas1 fusion
-          in cytogamy; UniProtKB:Q8F1F5 (cas4-cas1, CRISPR-associated exonuclease
-          Cas4/endonuclease Cas1 fusion) in Leptospira interrogans serogroup Icterohaemorrhagiae
-          serovar Lai (strain 56601) provides a verified protein exemplar.
+        notes: Supports Pheromone alpha factor receptor in cytogamy; UniProtKB:D6VTK4
+          (STE2, Pheromone alpha factor receptor) in Saccharomyces cerevisiae (strain
+          ATCC 204508 / S288c) (Baker's yeast) provides a verified protein exemplar.
   edges:
   - subject: cytogamy_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: cytogamy_trait
-    description: CRISPR-associated exonuclease Cas4/endonuclease Cas1 fusion (cas4-cas1,
-      UniProtKB:Q8F1F5) contributes to cytogamy (associated with cytoplasmic, exconjugant,
-      information).
+    description: Pheromone alpha factor receptor (STE2, UniProtKB:D6VTK4) contributes
+      to cytogamy.
     evidence:
     - reference: DOI:10.1093/genetics/91.4.657
       snippet: cytogamy generates exconjugant clones that derive their entire genetic
         information from a single meiotic product of their cytoplasmic parent.
-      notes: Supports the functional association between CRISPR-associated exonuclease
-        Cas4/endonuclease Cas1 fusion (UniProtKB:Q8F1F5 in Leptospira interrogans
-        serogroup Icterohaemorrhagiae serovar Lai (strain 56601)) and cytogamy.
+      notes: Supports the functional association between Pheromone alpha factor receptor
+        (UniProtKB:D6VTK4 in Saccharomyces cerevisiae (strain ATCC 204508 / S288c)
+        (Baker's yeast)) and cytogamy.

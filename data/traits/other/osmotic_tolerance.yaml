@@ -26,6 +26,13 @@ curation_history:
   llm_assisted: true
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed canonical_examples status alongside NONMECHANISTIC protein exemplar
+    graph for osmotic tolerance; isolate-level canonical example remains deferred
+    pending explicit strain-level literature.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph osmotic_tolerance_graph
     with GENE_OR_PROTEIN node osmotic_tolerance_protein_component and UniProtKB:T0DVE4
@@ -89,8 +96,7 @@ causal_graphs:
     predicate_id: RO:0002326
     object: osmotic_tolerance_trait
     description: Small-conductance mechanosensitive channel (mscS, UniProtKB:T0DVE4)
-      contributes to osmotic tolerance (associated with hyperosmotic, conditions,
-      tolerance).
+      contributes to osmotic tolerance.
     evidence:
     - reference: DOI:10.1128/mBio.00390-21
       snippet: tolerance against hyperosmotic conditions (400 mM sorbitol)

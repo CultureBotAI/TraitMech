@@ -34,7 +34,7 @@ causal_graphs:
   scope_status: NONMECHANISTIC
   scope_notes: This record is a broad environmental or morphological classification
     spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
-    descriptor; contextual protein nodes do not receive token UniProt examples.
+    descriptor; contextual protein nodes include source-backed UniProtKB exemplars.
   nodes:
   - node_id: euryhaline_trait
     label: euryhaline
@@ -71,29 +71,26 @@ causal_graphs:
     description: Protein families associated with microbial salinity adaptation across
       gradients.
     protein_examples:
-    - uniprot_id: UniProtKB:Q59066
-      protein_label: CRISPR system single-strand-specific deoxyribonuclease Cas10/Csm1
-      gene_symbol: cas10
-      taxon_id: NCBITaxon:243232
-      taxon_label: Methanocaldococcus jannaschii (strain ATCC 43067 / DSM 2661 / JAL-1
-        / JCM 10045 / NBRC 100440) (Methanococcus jannaschii)
+    - uniprot_id: UniProtKB:P14175
+      protein_label: Glycine betaine/proline betaine transport system ATP-binding
+        protein ProV
+      gene_symbol: proV
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
-      proteome_id: UP000000805
+      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 115
+      entry_version: 204
       sequence_version: 1
-      role: Exemplar protein (cas10, CRISPR system single-strand-specific deoxyribonuclease
-        Cas10/Csm1) representing salinity-adaptation protein repertoire in Methanocaldococcus
-        jannaschii (strain ATCC 43067 / DSM 2661 / JAL-1 / JCM 10045 / NBRC 100440)
-        (Methanococcus jannaschii) for euryhaline.
+      role: Exemplar protein (proV, Glycine betaine/proline betaine transport system
+        ATP-binding protein ProV) representing salinity-adaptation protein repertoire
+        in Escherichia coli (strain K12) for euryhaline.
       evidence:
       - reference: DOI:10.1186/s40168-024-01817-w
         snippet: genes associated with microbial salinity adaptation
-        notes: Supports salinity-adaptation protein repertoire in euryhaline; UniProtKB:Q59066
-          (cas10, CRISPR system single-strand-specific deoxyribonuclease Cas10/Csm1)
-          in Methanocaldococcus jannaschii (strain ATCC 43067 / DSM 2661 / JAL-1 /
-          JCM 10045 / NBRC 100440) (Methanococcus jannaschii) provides a verified
-          protein exemplar.
+        notes: Supports salinity-adaptation protein repertoire in euryhaline; UniProtKB:P14175
+          (proV, Glycine betaine/proline betaine transport system ATP-binding protein
+          ProV) in Escherichia coli (strain K12) provides a verified protein exemplar.
   - node_id: choline
     label: choline
     node_type: CHEMICAL
@@ -469,7 +466,7 @@ curation_history:
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
-  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q59066 (cas10)
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P14175 (proV)
     protein example to node salinity_adaptation_genes; added UniProtKB:T0DVE4 (mscS)
     protein example to node mechanosensitive_channels; added UniProtKB:Q93F90 (nhaA)
     protein example to node na_h_antiporter.'

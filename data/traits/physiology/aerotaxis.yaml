@@ -86,15 +86,15 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph aerotaxis_graph
-    with GENE_OR_PROTEIN node aerotaxis_protein_component and UniProtKB:P17444 exemplar.'
+    with GENE_OR_PROTEIN node aerotaxis_protein_component and UniProtKB:P50466 exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: aerotaxis_graph
   title: Protein component associated with aerotaxis
-  description: Literature-backed association between Oxygen-dependent choline dehydrogenase
-    (UniProtKB:P17444) and aerotaxis.
+  description: Literature-backed association between Aerotaxis receptor (UniProtKB:P50466)
+    and aerotaxis.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P17444 in Escherichia
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P50466 in Escherichia
     coli (strain K12)) associated with aerotaxis while full multi-step mechanistic
     curation remains future work.
   nodes:
@@ -105,45 +105,40 @@ causal_graphs:
     description: A motile phenotype in which active locomotion is directionally biased
       along an oxygen concentration gradient toward preferred oxygen conditions.
   - node_id: aerotaxis_protein_component
-    label: Oxygen-dependent choline dehydrogenase
+    label: Aerotaxis receptor
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Oxygen-dependent choline dehydrogenase) associated
-      with aerotaxis.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Aerotaxis receptor) associated with aerotaxis.
+    grounding: InterPro:IPR004090
     gene_symbols:
-    - betA
+    - aer
     protein_examples:
-    - uniprot_id: UniProtKB:P17444
-      protein_label: Oxygen-dependent choline dehydrogenase
-      gene_symbol: betA
+    - uniprot_id: UniProtKB:P50466
+      protein_label: Aerotaxis receptor
+      gene_symbol: aer
       taxon_id: NCBITaxon:83333
       taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
       proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 188
+      entry_version: 185
       sequence_version: 1
-      role: Characteristic protein component (betA, Oxygen-dependent choline dehydrogenase)
-        associated with aerotaxis in Escherichia coli (strain K12).
+      role: Characteristic protein component (aer, Aerotaxis receptor) associated
+        with aerotaxis in Escherichia coli (strain K12).
       evidence:
       - reference: DOI:10.1128/jb.178.17.5199-5204.1996
         snippet: As a result of aerotaxis, the bacteria were attracted to a specific
           low concentration of oxygen (3 to 5 microM).
-        notes: Supports Oxygen-dependent choline dehydrogenase in aerotaxis; UniProtKB:P17444
-          (betA, Oxygen-dependent choline dehydrogenase) in Escherichia coli (strain
-          K12) provides a verified protein exemplar.
+        notes: Supports Aerotaxis receptor in aerotaxis; UniProtKB:P50466 (aer, Aerotaxis
+          receptor) in Escherichia coli (strain K12) provides a verified protein exemplar.
   edges:
   - subject: aerotaxis_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: aerotaxis_trait
-    description: Oxygen-dependent choline dehydrogenase (betA, UniProtKB:P17444) contributes
-      to aerotaxis (associated with concentration, aerotaxis, attracted).
+    description: Aerotaxis receptor (aer, UniProtKB:P50466) contributes to aerotaxis.
     evidence:
     - reference: DOI:10.1128/jb.178.17.5199-5204.1996
       snippet: As a result of aerotaxis, the bacteria were attracted to a specific
         low concentration of oxygen (3 to 5 microM).
-      notes: Supports the functional association between Oxygen-dependent choline
-        dehydrogenase (UniProtKB:P17444 in Escherichia coli (strain K12)) and aerotaxis.
+      notes: Supports the functional association between Aerotaxis receptor (UniProtKB:P50466
+        in Escherichia coli (strain K12)) and aerotaxis.

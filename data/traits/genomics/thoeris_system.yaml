@@ -108,25 +108,25 @@ causal_graphs:
     gene_symbols:
     - thsA
     protein_examples:
-    - uniprot_id: UniProtKB:J8G6Z1
+    - uniprot_id: UniProtKB:P0DW59
       protein_label: NAD(+) hydrolase ThsA
       gene_symbol: thsA
-      taxon_id: NCBITaxon:1053222
-      taxon_label: Bacillus cereus (strain MSX-D12)
+      taxon_id: NCBITaxon:1310692
+      taxon_label: Acinetobacter baumannii (strain 532279)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      entry_version: 46
-      sequence_version: 2
+      entry_version: 10
+      sequence_version: 1
       role: Characteristic protein component (thsA, NAD(+) hydrolase ThsA) associated
-        with Thoeris system in Bacillus cereus (strain MSX-D12).
+        with Thoeris system in Acinetobacter baumannii (strain 532279).
       evidence:
       - reference: DOI:10.1038/s41586-021-04098-7
         snippet: This molecular signal activates a second protein, ThsA, which then
           depletes the cell of the essential molecule nicotinamide adenine dinucleotide
           (NAD)
-        notes: Supports NAD(+) hydrolase ThsA in Thoeris system; UniProtKB:J8G6Z1
-          (thsA, NAD(+) hydrolase ThsA) in Bacillus cereus (strain MSX-D12) provides
-          a verified protein exemplar.
+        notes: Supports NAD(+) hydrolase ThsA in Thoeris system; UniProtKB:P0DW59
+          (thsA, NAD(+) hydrolase ThsA) in Acinetobacter baumannii (strain 532279)
+          provides a verified protein exemplar.
   edges:
   - subject: thoeris_locus
     predicate: contributes to
@@ -198,14 +198,14 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: thoeris_system_trait
-    description: NAD(+) hydrolase ThsA (thsA, UniProtKB:J8G6Z1) contributes to Thoeris
-      system (associated with antiphage, analysis, cleavage).
+    description: NAD(+) hydrolase ThsA (thsA, UniProtKB:P0DW59) contributes to Thoeris
+      system.
     evidence:
     - reference: DOI:10.1038/s41467-020-16703-w
       snippet: Mutation analysis suggests that NAD+ cleavage is linked to the antiphage
         function of Thoeris
-      notes: Supports the functional association between NAD(+) hydrolase ThsA (UniProtKB:J8G6Z1
-        in Bacillus cereus (strain MSX-D12)) and Thoeris system.
+      notes: Supports the functional association between NAD(+) hydrolase ThsA (UniProtKB:P0DW59
+        in Acinetobacter baumannii (strain 532279)) and Thoeris system.
 discussions:
 - discussion_id: thoeris-family-signal-and-trigger-gap
   prompt: Resolve Thoeris family architecture, signal chemistry, and phage triggering
@@ -232,5 +232,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    thoeris_system_protein_component with UniProtKB:J8G6Z1 (thsA) exemplar.'
+    thoeris_system_protein_component with UniProtKB:P0DW59 (thsA) exemplar.'
   llm_assisted: true

@@ -35,7 +35,7 @@ causal_graphs:
   scope_status: NONMECHANISTIC
   scope_notes: This record is a broad environmental or morphological classification
     spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
-    descriptor; contextual protein nodes do not receive token UniProt examples.
+    descriptor; contextual protein nodes include source-backed UniProtKB exemplars.
   nodes:
   - node_id: swarming_trait
     label: swarming motility
@@ -68,35 +68,33 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Outward dendritic spreading of a multicellular swarm across a surface.
   - node_id: swarming_motility_protein_component
-    label: mRNA interferase toxin MqsR
+    label: Flagellin
     node_type: GENE_OR_PROTEIN
-    description: Protein component (mRNA interferase toxin MqsR) associated with swarming
-      motility.
+    description: Protein component (Flagellin) associated with swarming motility.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - mqsR
+    - fliC
     protein_examples:
-    - uniprot_id: UniProtKB:Q46865
-      protein_label: mRNA interferase toxin MqsR
-      gene_symbol: mqsR
+    - uniprot_id: UniProtKB:P04949
+      protein_label: Flagellin
+      gene_symbol: fliC
       taxon_id: NCBITaxon:83333
       taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
       proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 144
-      sequence_version: 1
-      role: Characteristic protein component (mqsR, mRNA interferase toxin MqsR) associated
-        with swarming motility in Escherichia coli (strain K12).
+      entry_version: 183
+      sequence_version: 2
+      role: Characteristic protein component (fliC, Flagellin) associated with swarming
+        motility in Escherichia coli (strain K12).
       evidence:
       - reference: DOI:10.1038/nrmicro2405
         snippet: The focus of bacteriology is changing from planktonic to surface
           environments, and so interest in swarming motility is on the rise.
-        notes: Supports mRNA interferase toxin MqsR in swarming motility; UniProtKB:Q46865
-          (mqsR, mRNA interferase toxin MqsR) in Escherichia coli (strain K12) provides
-          a verified protein exemplar.
+        notes: Supports Flagellin in swarming motility; UniProtKB:P04949 (fliC, Flagellin)
+          in Escherichia coli (strain K12) provides a verified protein exemplar.
   edges:
   - subject: bacterial_flagellum
     predicate: confers
@@ -156,14 +154,13 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: swarming_trait
-    description: mRNA interferase toxin MqsR (mqsR, UniProtKB:Q46865) contributes
-      to swarming motility (associated with bacteriology, environments, planktonic).
+    description: Flagellin (fliC, UniProtKB:P04949) contributes to swarming motility.
     evidence:
     - reference: DOI:10.1038/nrmicro2405
       snippet: The focus of bacteriology is changing from planktonic to surface environments,
         and so interest in swarming motility is on the rise.
-      notes: Supports the functional association between mRNA interferase toxin MqsR
-        (UniProtKB:Q46865 in Escherichia coli (strain K12)) and swarming motility.
+      notes: Supports the functional association between Flagellin (UniProtKB:P04949
+        in Escherichia coli (strain K12)) and swarming motility.
 curation_history:
 - timestamp: '2026-06-03T00:00:00Z'
   curator: claude
@@ -217,5 +214,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    swarming_motility_protein_component with UniProtKB:Q46865 (mqsR) exemplar.'
+    swarming_motility_protein_component with UniProtKB:P04949 (fliC) exemplar.'
   llm_assisted: true

@@ -32,7 +32,7 @@ causal_graphs:
   scope_status: NONMECHANISTIC
   scope_notes: This genomics record is a measurement, genomic-element classification,
     or population-level descriptor rather than one taxon-specific protein mechanism;
-    contextual protein nodes do not receive token UniProt examples.
+    contextual protein nodes include source-backed UniProtKB exemplars.
   description: Evidence-backed causal sketch linking DNA replication to leading-versus-lagging
     strand compositional asymmetry that marks the replication origin and terminus.
   nodes:
@@ -78,39 +78,33 @@ causal_graphs:
     description: MutSL-dependent mismatch repair and transcription-coupled NER acting
       asymmetrically on strands.
   - node_id: gc_skew_protein_component
-    label: Transcription-repair-coupling factor
+    label: Endonuclease GajA
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Transcription-repair-coupling factor) associated
-      with GC skew.
+    description: Protein component (Endonuclease GajA) associated with GC skew.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - mfd
+    - gajA
     protein_examples:
-    - uniprot_id: UniProtKB:Q49V12
-      protein_label: Transcription-repair-coupling factor
-      gene_symbol: mfd
-      taxon_id: NCBITaxon:342451
-      taxon_label: Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
-        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+    - uniprot_id: UniProtKB:P0DW47
+      protein_label: Endonuclease GajA
+      gene_symbol: gajA
+      taxon_id: NCBITaxon:1053212
+      taxon_label: Bacillus cereus (strain HuB5-5)
       entry_status: REVIEWED
-      proteome_id: UP000006371
       retrieved_on: '2026-10-17'
-      entry_version: 139
+      entry_version: 12
       sequence_version: 1
-      role: Characteristic protein component (mfd, Transcription-repair-coupling factor)
-        associated with GC skew in Staphylococcus saprophyticus subsp. saprophyticus
-        (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41).
+      role: Characteristic protein component (gajA, Endonuclease GajA) associated
+        with GC skew in Bacillus cereus (strain HuB5-5).
       evidence:
       - reference: DOI:10.1093/oxfordjournals.molbev.a025626
         snippet: Analyses of the genomes of three prokaryotes, Escherichia coli, Bacillus
           subtilis, and Haemophilus influenzae, revealed a new type of genomic compartmentalization
           of base frequencies.
-        notes: Supports Transcription-repair-coupling factor in GC skew; UniProtKB:Q49V12
-          (mfd, Transcription-repair-coupling factor) in Staphylococcus saprophyticus
-          subsp. saprophyticus (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC
-          7292 / S-41) provides a verified protein exemplar.
+        notes: Supports Endonuclease GajA in GC skew; UniProtKB:P0DW47 (gajA, Endonuclease
+          GajA) in Bacillus cereus (strain HuB5-5) provides a verified protein exemplar.
   edges:
   - subject: dna_replication
     predicate: causes
@@ -195,16 +189,14 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: gc_skew_trait
-    description: Transcription-repair-coupling factor (mfd, UniProtKB:Q49V12) contributes
-      to GC skew (associated with compartmentalization, escherichia, frequencies).
+    description: Endonuclease GajA (gajA, UniProtKB:P0DW47) contributes to GC skew.
     evidence:
     - reference: DOI:10.1093/oxfordjournals.molbev.a025626
       snippet: Analyses of the genomes of three prokaryotes, Escherichia coli, Bacillus
         subtilis, and Haemophilus influenzae, revealed a new type of genomic compartmentalization
         of base frequencies.
-      notes: Supports the functional association between Transcription-repair-coupling
-        factor (UniProtKB:Q49V12 in Staphylococcus saprophyticus subsp. saprophyticus
-        (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)) and GC skew.
+      notes: Supports the functional association between Endonuclease GajA (UniProtKB:P0DW47
+        in Bacillus cereus (strain HuB5-5)) and GC skew.
 curation_history:
 - timestamp: '2026-06-05T00:00:00Z'
   curator: claude
@@ -251,5 +243,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    gc_skew_protein_component with UniProtKB:Q49V12 (mfd) exemplar.'
+    gc_skew_protein_component with UniProtKB:P0DW47 (gajA) exemplar.'
   llm_assisted: true

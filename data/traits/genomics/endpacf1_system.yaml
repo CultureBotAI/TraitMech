@@ -107,37 +107,36 @@ causal_graphs:
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
   - node_id: endpacf1_system_protein_component
-    label: CRISPR-associated nuclease/helicase Cas3
+    label: Type IV methyl-directed restriction enzyme EcoKMcrB subunit
     node_type: GENE_OR_PROTEIN
-    description: Protein component (CRISPR-associated nuclease/helicase Cas3) associated
-      with ENDPaCF1 system.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Type IV methyl-directed restriction enzyme EcoKMcrB
+      subunit) associated with ENDPaCF1 system.
+    grounding: InterPro:IPR003593
     gene_symbols:
-    - cas3
+    - mcrB
     protein_examples:
-    - uniprot_id: UniProtKB:F2XG53
-      protein_label: CRISPR-associated nuclease/helicase Cas3
-      gene_symbol: cas3
-      taxon_id: NCBITaxon:1308
-      taxon_label: Streptococcus thermophilus
+    - uniprot_id: UniProtKB:P15005
+      protein_label: Type IV methyl-directed restriction enzyme EcoKMcrB subunit
+      gene_symbol: mcrB
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
+      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 65
-      sequence_version: 1
-      role: Characteristic protein component (cas3, CRISPR-associated nuclease/helicase
-        Cas3) associated with ENDPaCF1 system in Streptococcus thermophilus.
+      entry_version: 197
+      sequence_version: 3
+      role: Characteristic protein component (mcrB, Type IV methyl-directed restriction
+        enzyme EcoKMcrB subunit) associated with ENDPaCF1 system in Escherichia coli
+        (strain K12).
       evidence:
       - reference: DOI:10.1101/2025.03.31.646159
-        snippet: Here, we employed the CRISPR-based Cascade-Cas3 system to delete
-          defense islands in a Pseudomonas aeruginosa clinical isolate to identify
-          mechanisms of lytic phage antagonism. Deletion of one island in a cystic
-          fibrosis-derived clinical isolate sensitized the strain to phages from the
-          Pbunavirus family, which are commonly used as therapeutics.
-        notes: Supports CRISPR-associated nuclease/helicase Cas3 in ENDPaCF1 system;
-          UniProtKB:F2XG53 (cas3, CRISPR-associated nuclease/helicase Cas3) in Streptococcus
-          thermophilus provides a verified protein exemplar.
+        snippet: ENDPaCF1 protects bacteria against phages with hypermodified DNA
+          and is surprisingly agnostic to the specific structure of the modification,
+          which is unlike typical type IV restriction endonucleases.
+        notes: Supports Type IV methyl-directed restriction enzyme EcoKMcrB subunit
+          in ENDPaCF1 system; UniProtKB:P15005 (mcrB, Type IV methyl-directed restriction
+          enzyme EcoKMcrB subunit) in Escherichia coli (strain K12) provides a verified
+          protein exemplar.
   edges:
   - subject: endpacf1_locus
     predicate: enables
@@ -227,17 +226,16 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: endpacf1_system_trait
-    description: CRISPR-associated nuclease/helicase Cas3 (cas3, UniProtKB:F2XG53)
-      contributes to ENDPaCF1 system (associated with therapeutics, pseudomonas, aeruginosa).
+    description: Type IV methyl-directed restriction enzyme EcoKMcrB subunit (mcrB,
+      UniProtKB:P15005) contributes to ENDPaCF1 system.
     evidence:
-    - reference: DOI:10.1101/2025.03.31.646159
-      snippet: Here, we employed the CRISPR-based Cascade-Cas3 system to delete defense
-        islands in a Pseudomonas aeruginosa clinical isolate to identify mechanisms
-        of lytic phage antagonism. Deletion of one island in a cystic fibrosis-derived
-        clinical isolate sensitized the strain to phages from the Pbunavirus family,
-        which are commonly used as therapeutics.
-      notes: Supports the functional association between CRISPR-associated nuclease/helicase
-        Cas3 (UniProtKB:F2XG53 in Streptococcus thermophilus) and ENDPaCF1 system.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: '| PvuRts1I | 10\.1093/nar/gkr607 | Comparative characterization of
+        the PvuRts1I family of restriction enzymes and their application in mapping
+        genomic 5-hydroxymethylcytosine |'
+      notes: Supports the functional association between Type IV methyl-directed restriction
+        enzyme EcoKMcrB subunit (UniProtKB:P15005 in Escherichia coli (strain K12))
+        and ENDPaCF1 system.
 discussions:
 - discussion_id: endpacf1-host-modification-and-model-gap
   prompt: Resolve ENDPaCF1 Pseudomonas host breadth, complete phage-DNA hypermodification
@@ -326,5 +324,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    endpacf1_system_protein_component with UniProtKB:F2XG53 (cas3) exemplar.'
+    endpacf1_system_protein_component with UniProtKB:P15005 (mcrB) exemplar.'
   llm_assisted: true

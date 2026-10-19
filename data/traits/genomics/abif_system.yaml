@@ -84,37 +84,34 @@ causal_graphs:
     grounding: traitmech:000214
     description: Possession of a genome-encoded abortive-infection phage-defense system.
   - node_id: abif_system_protein_component
-    label: Lysostaphin resistance protein A
+    label: Abortive phage resistance protein AbiC
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Lysostaphin resistance protein A) associated with
-      AbiF system.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Abortive phage resistance protein AbiC) associated
+      with AbiF system.
+    grounding: InterPro:IPR031709
     gene_symbols:
-    - lyrA
+    - abiC
     protein_examples:
-    - uniprot_id: UniProtKB:Q2FVT1
-      protein_label: Lysostaphin resistance protein A
-      gene_symbol: lyrA
-      taxon_id: NCBITaxon:93061
-      taxon_label: Staphylococcus aureus (strain NCTC 8325 / PS 47)
+    - uniprot_id: UniProtKB:Q01457
+      protein_label: Abortive phage resistance protein AbiC
+      gene_symbol: abiC
+      taxon_id: NCBITaxon:1360
+      taxon_label: Lactococcus lactis subsp. lactis (Streptococcus lactis)
       entry_status: REVIEWED
-      proteome_id: UP000008816
       retrieved_on: '2026-10-17'
-      entry_version: 90
+      entry_version: 35
       sequence_version: 1
-      role: Characteristic protein component (lyrA, Lysostaphin resistance protein
-        A) associated with AbiF system in Staphylococcus aureus (strain NCTC 8325
-        / PS 47).
+      role: Characteristic protein component (abiC, Abortive phage resistance protein
+        AbiC) associated with AbiF system in Lactococcus lactis subsp. lactis (Streptococcus
+        lactis).
       evidence:
       - reference: DOI:10.1128/AEM.61.12.4321-4328.1995
         snippet: The introduction of a frameshift mutation at the unique BglII site
           within this ORF disrupted the phage resistance phenotype, confirming that
           this ORF is responsible for the observed phage insensitivity
-        notes: Supports Lysostaphin resistance protein A in AbiF system; UniProtKB:Q2FVT1
-          (lyrA, Lysostaphin resistance protein A) in Staphylococcus aureus (strain
-          NCTC 8325 / PS 47) provides a verified protein exemplar.
+        notes: Supports Abortive phage resistance protein AbiC in AbiF system; UniProtKB:Q01457
+          (abiC, Abortive phage resistance protein AbiC) in Lactococcus lactis subsp.
+          lactis (Streptococcus lactis) provides a verified protein exemplar.
   edges:
   - subject: abif_locus
     predicate: contributes to
@@ -190,15 +187,15 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: abif_system_trait
-    description: Lysostaphin resistance protein A (lyrA, UniProtKB:Q2FVT1) contributes
-      to AbiF system (associated with periplasmic, confidence, alphafold).
+    description: Abortive phage resistance protein AbiC (abiC, UniProtKB:Q01457) contributes
+      to AbiF system.
     evidence:
-    - reference: DOI:10.1093/femsre/fuag009
-      snippet: The structure of AbiN is predicted with high confidence by AlphaFold
-        and resembles a putative periplasmic ligand-binding sensor domain protein
-      notes: Supports the functional association between Lysostaphin resistance protein
-        A (UniProtKB:Q2FVT1 in Staphylococcus aureus (strain NCTC 8325 / PS 47)) and
-        AbiF system.
+    - reference: DOI:10.1128/AEM.61.12.4321-4328.1995
+      snippet: Subcloning and deletion analysis of the recombinant plasmid pPG01 defined
+        a 2.5-kb ScaIHpaI fragment as conferring phage insensitivity
+      notes: Supports the functional association between Abortive phage resistance
+        protein AbiC (UniProtKB:Q01457 in Lactococcus lactis subsp. lactis (Streptococcus
+        lactis)) and AbiF system.
 discussions:
 - discussion_id: abif-function-and-host-breadth-gap
   prompt: Resolve the exact AbiF protein function, phage trigger, host target, AbiD/AbiD1
@@ -255,5 +252,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    abif_system_protein_component with UniProtKB:Q2FVT1 (lyrA) exemplar.'
+    abif_system_protein_component with UniProtKB:Q01457 (abiC) exemplar.'
   llm_assisted: true

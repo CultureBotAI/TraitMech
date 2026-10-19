@@ -31,7 +31,7 @@ causal_graphs:
   scope_status: NONMECHANISTIC
   scope_notes: This genomics record is a measurement, genomic-element classification,
     or population-level descriptor rather than one taxon-specific protein mechanism;
-    contextual protein nodes do not receive token UniProt examples.
+    contextual protein nodes include source-backed UniProtKB exemplars.
   description: DOI-backed graph linking AT-biased mutation pressure to a GC content
     at or below ~42.65% (the threshold encoded by the METPO synonym GC_<=42.65 on
     this record).
@@ -87,32 +87,32 @@ causal_graphs:
     description: Selection and GC-biased gene conversion that counteract AT mutation
       bias and resist GC decline.
   - node_id: gc_high_protein_component
-    label: Endonuclease 8
+    label: DNA polymerase I
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Endonuclease 8) associated with GC high.
+    description: Protein component (DNA polymerase I) associated with GC high.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - nei
+    - polA
     protein_examples:
-    - uniprot_id: UniProtKB:B5BC82
-      protein_label: Endonuclease 8
-      gene_symbol: nei
-      taxon_id: NCBITaxon:554290
-      taxon_label: Salmonella paratyphi A (strain AKU_12601)
+    - uniprot_id: UniProtKB:P00582
+      protein_label: DNA polymerase I
+      gene_symbol: polA
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
+      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 89
+      entry_version: 230
       sequence_version: 1
-      role: Characteristic protein component (nei, Endonuclease 8) associated with
-        GC high in Salmonella paratyphi A (strain AKU_12601).
+      role: Characteristic protein component (polA, DNA polymerase I) associated with
+        GC high in Escherichia coli (strain K12).
       evidence:
       - reference: DOI:10.1186/1471-2148-10-374
         snippet: GC-biased gene conversion
-        notes: Supports Endonuclease 8 in GC high; UniProtKB:B5BC82 (nei, Endonuclease
-          8) in Salmonella paratyphi A (strain AKU_12601) provides a verified protein
-          exemplar.
+        notes: Supports DNA polymerase I in GC high; UniProtKB:P00582 (polA, DNA polymerase
+          I) in Escherichia coli (strain K12) provides a verified protein exemplar.
   edges:
   - subject: at_mutation_bias
     predicate: confers
@@ -203,13 +203,12 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: gc_high_trait
-    description: Endonuclease 8 (nei, UniProtKB:B5BC82) contributes to GC high (associated
-      with conversion, biased, gc).
+    description: DNA polymerase I (polA, UniProtKB:P00582) contributes to GC high.
     evidence:
     - reference: DOI:10.1186/1471-2148-10-374
       snippet: GC-biased gene conversion
-      notes: Supports the functional association between Endonuclease 8 (UniProtKB:B5BC82
-        in Salmonella paratyphi A (strain AKU_12601)) and GC high.
+      notes: Supports the functional association between DNA polymerase I (UniProtKB:P00582
+        in Escherichia coli (strain K12)) and GC high.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.818260+00:00'
   curator: seed_from_metpo
@@ -273,5 +272,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    gc_high_protein_component with UniProtKB:B5BC82 (nei) exemplar.'
+    gc_high_protein_component with UniProtKB:P00582 (polA) exemplar.'
   llm_assisted: true

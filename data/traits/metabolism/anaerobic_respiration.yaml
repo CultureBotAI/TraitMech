@@ -90,25 +90,28 @@ causal_graphs:
       Nos enzyme families, so no single protein-family, activity, or complex term
       exactly represents it.
     protein_examples:
-    - uniprot_id: UniProtKB:P0CZ13
-      protein_label: Ion-translocating oxidoreductase complex subunit A
-      gene_symbol: rnfA
-      taxon_id: NCBITaxon:1061
-      taxon_label: Rhodobacter capsulatus (Rhodopseudomonas capsulata)
+    - uniprot_id: UniProtKB:P24474
+      protein_label: Nitrite reductase
+      gene_symbol: nirS
+      taxon_id: NCBITaxon:208964
+      taxon_label: Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116
+        / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)
       entry_status: REVIEWED
+      proteome_id: UP000002438
       retrieved_on: '2026-10-17'
-      entry_version: 48
+      entry_version: 177
       sequence_version: 1
-      role: Exemplar protein (rnfA, Ion-translocating oxidoreductase complex subunit
-        A) representing denitrification reductases in Rhodobacter capsulatus (Rhodopseudomonas
-        capsulata) for Anaerobic respiration.
+      role: Exemplar protein (nirS, Nitrite reductase) representing denitrification
+        reductases in Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP
+        104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1) for Anaerobic respiration.
       evidence:
-      - reference: DOI:10.1128/mmbr.61.4.533-616.1997
-        snippet: unexpected relationships among denitrification enzymes and respiratory
-          oxygen reductases
-        notes: Supports denitrification reductases in Anaerobic respiration; UniProtKB:P0CZ13
-          (rnfA, Ion-translocating oxidoreductase complex subunit A) in Rhodobacter
-          capsulatus (Rhodopseudomonas capsulata) provides a verified protein exemplar.
+      - reference: DOI:10.1128/msystems.00967-23
+        snippet: the narGHI nitrate reductase cluster; NarGHI catalyzes nitrate reduction
+          to nitrite, the canonical first step of nitrate respiration.
+        notes: Supports denitrification reductases in Anaerobic respiration; UniProtKB:P24474
+          (nirS, Nitrite reductase) in Pseudomonas aeruginosa (strain ATCC 15692 /
+          DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1) provides
+          a verified protein exemplar.
   - node_id: nitrate_reductase
     label: respiratory nitrate reductase (NarGHI)
     node_type: GENE_OR_PROTEIN
@@ -399,7 +402,7 @@ curation_history:
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
-  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P0CZ13 (rnfA)
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P24474 (nirS)
     protein example to node denitrification_reductases; added UniProtKB:P09152 (narG)
     protein example to node nitrate_reductase.'
   llm_assisted: true

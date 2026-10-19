@@ -103,34 +103,36 @@ causal_graphs:
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
   - node_id: pd_t7_5_system_protein_component
-    label: Phage T7 exclusion protein
+    label: Endonuclease GajA
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Phage T7 exclusion protein) associated with PD-T7-5
-      system.
+    description: Protein component (Endonuclease GajA) associated with PD-T7-5 system.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - pifA
+    - gajA
     protein_examples:
-    - uniprot_id: UniProtKB:P96329
-      protein_label: Phage T7 exclusion protein
-      gene_symbol: pifA
-      taxon_id: NCBITaxon:83333
-      taxon_label: Escherichia coli (strain K12)
+    - uniprot_id: UniProtKB:P0DW47
+      protein_label: Endonuclease GajA
+      gene_symbol: gajA
+      taxon_id: NCBITaxon:1053212
+      taxon_label: Bacillus cereus (strain HuB5-5)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      entry_version: 96
-      sequence_version: 2
-      role: Characteristic protein component (pifA, Phage T7 exclusion protein) associated
-        with PD-T7-5 system in Escherichia coli (strain K12).
+      entry_version: 12
+      sequence_version: 1
+      role: Characteristic protein component (gajA, Endonuclease GajA) associated
+        with PD-T7-5 system in Bacillus cereus (strain HuB5-5).
       evidence:
-      - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
-        snippet: PD-T7-5 | 10\.1101/2022\.05\.12\.491691 | Mapping the landscape of
-          anti-phage defense mechanisms in the E\. coli pangenome
-        notes: Supports Phage T7 exclusion protein in PD-T7-5 system; UniProtKB:P96329
-          (pifA, Phage T7 exclusion protein) in Escherichia coli (strain K12) provides
-          a verified protein exemplar.
+      - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t7-5.md
+        snippet: PD-T7-5 is a defense system composed of a single protein which was
+          discovered in :ref{doi=10.1038/s41564-022-01219-4}. Its antiphage activity
+          was assessed by heterologous expression in *E. coli* against T7 and to reduce
+          the size of lysis plaques of T3 :ref{doi=10.1038/s41564-022-01219-4}. PD-T7-5
+          contains a PD(D/E)XK nuclease domain like [PD-T7-1](/defense-systems/pd-t7-1).
+        notes: Supports Endonuclease GajA in PD-T7-5 system; UniProtKB:P0DW47 (gajA,
+          Endonuclease GajA) in Bacillus cereus (strain HuB5-5) provides a verified
+          protein exemplar.
   edges:
   - subject: pd_t7_5_locus
     predicate: contributes to
@@ -226,14 +228,14 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: pd_t7_5_system_trait
-    description: Phage T7 exclusion protein (pifA, UniProtKB:P96329) contributes to
-      PD-T7-5 system (associated with landscape, pangenome, defense).
+    description: Endonuclease GajA (gajA, UniProtKB:P0DW47) contributes to PD-T7-5
+      system.
     evidence:
-    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
-      snippet: PD-T7-1 | 10\.1101/2022\.05\.12\.491691 | Mapping the landscape of
-        anti-phage defense mechanisms in the E\. coli pangenome
-      notes: Supports the functional association between Phage T7 exclusion protein
-        (UniProtKB:P96329 in Escherichia coli (strain K12)) and PD-T7-5 system.
+    - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t7-5.md
+      snippet: 'The PD-T7-5 system in *Shewanella putrefaciens* (GCF_019599085.1,
+        NZ_CP080633) is composed of 1 protein: PD-T7-5 (WP_220590848.1)'
+      notes: Supports the functional association between Endonuclease GajA (UniProtKB:P0DW47
+        in Bacillus cereus (strain HuB5-5)) and PD-T7-5 system.
 discussions:
 - discussion_id: pd-t7-5-mechanism-gap
   prompt: Resolve PD-T7-5 natural host breadth, direct phage trigger, and PD(D/E)XK
@@ -313,5 +315,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    pd_t7_5_system_protein_component with UniProtKB:P96329 (pifA) exemplar.'
+    pd_t7_5_system_protein_component with UniProtKB:P0DW47 (gajA) exemplar.'
   llm_assisted: true

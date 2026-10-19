@@ -86,20 +86,28 @@ curation_history:
   llm_assisted: true
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed canonical_examples status alongside NONMECHANISTIC protein exemplar
+    graph for mucocyst discharge; isolate-level canonical example remains deferred
+    pending explicit strain-level literature.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph mucocyst_discharge_graph
-    with GENE_OR_PROTEIN node mucocyst_discharge_protein_component and UniProtKB:P0AE06
+    with GENE_OR_PROTEIN node mucocyst_discharge_protein_component and UniProtKB:Q9I191
     exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: mucocyst_discharge_graph
   title: Protein component associated with mucocyst discharge
-  description: Literature-backed association between Multidrug efflux pump subunit
-    AcrA (UniProtKB:P0AE06) and mucocyst discharge.
+  description: Literature-backed association between Pyoverdine export membrane fusion
+    protein PvdR (UniProtKB:Q9I191) and mucocyst discharge.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P0AE06 in Escherichia
-    coli (strain K12)) associated with mucocyst discharge while full multi-step mechanistic
-    curation remains future work.
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q9I191 in Pseudomonas
+    aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228
+    / 1C / PRS 101 / PAO1)) associated with mucocyst discharge while full multi-step
+    mechanistic curation remains future work.
   nodes:
   - node_id: mucocyst_discharge_trait
     label: mucocyst discharge
@@ -109,46 +117,51 @@ causal_graphs:
       contents to the exterior through fusion of a mucocyst membrane with the plasma
       membrane.
   - node_id: mucocyst_discharge_protein_component
-    label: Multidrug efflux pump subunit AcrA
+    label: Pyoverdine export membrane fusion protein PvdR
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Multidrug efflux pump subunit AcrA) associated
-      with mucocyst discharge.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Pyoverdine export membrane fusion protein PvdR)
+      associated with mucocyst discharge.
+    grounding: InterPro:IPR030190
     gene_symbols:
-    - acrA
+    - pvdR
     protein_examples:
-    - uniprot_id: UniProtKB:P0AE06
-      protein_label: Multidrug efflux pump subunit AcrA
-      gene_symbol: acrA
-      taxon_id: NCBITaxon:83333
-      taxon_label: Escherichia coli (strain K12)
+    - uniprot_id: UniProtKB:Q9I191
+      protein_label: Pyoverdine export membrane fusion protein PvdR
+      gene_symbol: pvdR
+      taxon_id: NCBITaxon:208964
+      taxon_label: Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116
+        / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)
       entry_status: REVIEWED
-      proteome_id: UP000000625
+      proteome_id: UP000002438
       retrieved_on: '2026-10-17'
-      entry_version: 154
+      entry_version: 130
       sequence_version: 1
-      role: Characteristic protein component (acrA, Multidrug efflux pump subunit
-        AcrA) associated with mucocyst discharge in Escherichia coli (strain K12).
+      role: Characteristic protein component (pvdR, Pyoverdine export membrane fusion
+        protein PvdR) associated with mucocyst discharge in Pseudomonas aeruginosa
+        (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C /
+        PRS 101 / PAO1).
       evidence:
       - reference: DOI:10.1371/journal.pgen.1010194
         snippet: lysosome-related organelles called mucocysts accumulate at the cell
           periphery where they secrete their contents in response to extracellular
           events
-        notes: Supports Multidrug efflux pump subunit AcrA in mucocyst discharge;
-          UniProtKB:P0AE06 (acrA, Multidrug efflux pump subunit AcrA) in Escherichia
-          coli (strain K12) provides a verified protein exemplar.
+        notes: Supports Pyoverdine export membrane fusion protein PvdR in mucocyst
+          discharge; UniProtKB:Q9I191 (pvdR, Pyoverdine export membrane fusion protein
+          PvdR) in Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116
+          / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1) provides a verified protein
+          exemplar.
   edges:
   - subject: mucocyst_discharge_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: mucocyst_discharge_trait
-    description: Multidrug efflux pump subunit AcrA (acrA, UniProtKB:P0AE06) contributes
-      to mucocyst discharge (associated with extracellular, accumulate, organelles).
+    description: Pyoverdine export membrane fusion protein PvdR (pvdR, UniProtKB:Q9I191)
+      contributes to mucocyst discharge.
     evidence:
     - reference: DOI:10.1371/journal.pgen.1010194
       snippet: lysosome-related organelles called mucocysts accumulate at the cell
         periphery where they secrete their contents in response to extracellular events
-      notes: Supports the functional association between Multidrug efflux pump subunit
-        AcrA (UniProtKB:P0AE06 in Escherichia coli (strain K12)) and mucocyst discharge.
+      notes: Supports the functional association between Pyoverdine export membrane
+        fusion protein PvdR (UniProtKB:Q9I191 in Pseudomonas aeruginosa (strain ATCC
+        15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1))
+        and mucocyst discharge.

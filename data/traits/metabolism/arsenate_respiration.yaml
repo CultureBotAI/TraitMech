@@ -126,8 +126,7 @@ causal_graphs:
     predicate_id: RO:0002326
     object: arsenate_respiration_trait
     description: Arsenate respiratory reductase iron-sulfur subunit ArrB (arrB, UniProtKB:P0DW32)
-      contributes to arsenate respiration (associated with respiratory, metabolism,
-      shewanella).
+      contributes to arsenate respiration.
     evidence:
     - reference: DOI:10.1128/JB.01110-07
       snippet: the Shewanella sp. strain ANA-3 arsenate respiratory reductase (ARR),

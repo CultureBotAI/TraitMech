@@ -81,35 +81,33 @@ causal_graphs:
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
   - node_id: fs_hepn_tm_system_protein_component
-    label: Phage infection protein
+    label: Endoribonuclease ToxN
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Phage infection protein) associated with FS-HEPN-TM
+    description: Protein component (Endoribonuclease ToxN) associated with FS-HEPN-TM
       system.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    grounding: InterPro:IPR025911
     gene_symbols:
-    - pip
+    - toxN
     protein_examples:
-    - uniprot_id: UniProtKB:P49022
-      protein_label: Phage infection protein
-      gene_symbol: pip
-      taxon_id: NCBITaxon:1360
-      taxon_label: Lactococcus lactis subsp. lactis (Streptococcus lactis)
+    - uniprot_id: UniProtKB:B8X8Z0
+      protein_label: Endoribonuclease ToxN
+      gene_symbol: toxN
+      taxon_id: NCBITaxon:29471
+      taxon_label: Pectobacterium atrosepticum (Erwinia carotovora subsp. atroseptica)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      entry_version: 85
+      entry_version: 47
       sequence_version: 1
-      role: Characteristic protein component (pip, Phage infection protein) associated
-        with FS-HEPN-TM system in Lactococcus lactis subsp. lactis (Streptococcus
-        lactis).
+      role: Characteristic protein component (toxN, Endoribonuclease ToxN) associated
+        with FS-HEPN-TM system in Pectobacterium atrosepticum (Erwinia carotovora
+        subsp. atroseptica).
       evidence:
       - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
         snippet: FS_HEPN_TM | 10\.1016/j\.cell\.2022\.07\.014 | Bacteriophages benefit
           from mobilizing pathogenicity islands encoding immune systems against competitors
-        notes: Supports Phage infection protein in FS-HEPN-TM system; UniProtKB:P49022
-          (pip, Phage infection protein) in Lactococcus lactis subsp. lactis (Streptococcus
-          lactis) provides a verified protein exemplar.
+        notes: Supports Endoribonuclease ToxN in FS-HEPN-TM system; UniProtKB:B8X8Z0
+          (toxN, Endoribonuclease ToxN) in Pectobacterium atrosepticum (Erwinia carotovora
+          subsp. atroseptica) provides a verified protein exemplar.
   edges:
   - subject: fs_hepn_tm_locus
     predicate: contributes to
@@ -172,15 +170,17 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: fs_hepn_tm_system_trait
-    description: Phage infection protein (pip, UniProtKB:P49022) contributes to FS-HEPN-TM
-      system (associated with bf00327934, specifying, infection).
+    description: Endoribonuclease ToxN (toxN, UniProtKB:B8X8Z0) contributes to FS-HEPN-TM
+      system.
     evidence:
-    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
-      snippet: Pif | 10\.1007/BF00327934 | Molecular analysis of F plasmid pif region
-        specifying abortive infection of T7 phage
-      notes: Supports the functional association between Phage infection protein (UniProtKB:P49022
-        in Lactococcus lactis subsp. lactis (Streptococcus lactis)) and FS-HEPN-TM
-        system.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| Rst_2TM_1TM_TIR__Rst_1TM_TIR | Rst_2TM_1TM_TIR__Rst_1TM_TIR | Rst_2TM_1TM_TIR
+        | Custom | 20 | | Rst_2TM_1TM_TIR__Rst_2TM_TIR | Rst_2TM_1TM_TIR__Rst_2TM_TIR
+        | Rst_2TM_1TM_TIR | Custom | 20 | | Rst_2TM_1TM_TIR__Rst_TIR_tm | Rst_2TM_1TM_TIR__Rst_TIR_tm
+        | Rst_2TM_1TM_TIR | Custom | 20 |'
+      notes: Supports the functional association between Endoribonuclease ToxN (UniProtKB:B8X8Z0
+        in Pectobacterium atrosepticum (Erwinia carotovora subsp. atroseptica)) and
+        FS-HEPN-TM system.
 discussions:
 - discussion_id: fs-hepn-tm-mechanism-gap
   prompt: Resolve FS_HEPN_TM natural hosts, helper-phage triggers, HEPN-family substrates,
@@ -209,5 +209,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    fs_hepn_tm_system_protein_component with UniProtKB:P49022 (pip) exemplar.'
+    fs_hepn_tm_system_protein_component with UniProtKB:B8X8Z0 (toxN) exemplar.'
   llm_assisted: true

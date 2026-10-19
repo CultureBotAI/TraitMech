@@ -35,7 +35,7 @@ causal_graphs:
   scope_status: NONMECHANISTIC
   scope_notes: This record is a broad environmental or morphological classification
     spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
-    descriptor; contextual protein nodes do not receive token UniProt examples.
+    descriptor; contextual protein nodes include source-backed UniProtKB exemplars.
   nodes:
   - node_id: obligate_aerobic_trait
     label: obligately aerobic
@@ -60,25 +60,24 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Oxygen-reducing terminal oxidase complexes.
     protein_examples:
-    - uniprot_id: UniProtKB:P0ABI8
-      protein_label: Cytochrome bo(3) ubiquinol oxidase subunit 1
-      gene_symbol: cyoB
-      taxon_id: NCBITaxon:83333
-      taxon_label: Escherichia coli (strain K12)
+    - uniprot_id: UniProtKB:P98059
+      protein_label: Cytochrome c oxidase subunit 1
+      gene_symbol: ctaD
+      taxon_id: NCBITaxon:1061
+      taxon_label: Rhodobacter capsulatus (Rhodopseudomonas capsulata)
       entry_status: REVIEWED
-      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 154
+      entry_version: 116
       sequence_version: 1
-      role: Exemplar protein (cyoB, Cytochrome bo(3) ubiquinol oxidase subunit 1)
-        representing terminal respiratory oxidases in Escherichia coli (strain K12)
+      role: Exemplar protein (ctaD, Cytochrome c oxidase subunit 1) representing terminal
+        respiratory oxidases in Rhodobacter capsulatus (Rhodopseudomonas capsulata)
         for obligately aerobic.
       evidence:
       - reference: DOI:10.1016/j.celrep.2023.112444
         snippet: terminal oxidases transfer electrons from the ETC to O2
-        notes: Supports terminal respiratory oxidases in obligately aerobic; UniProtKB:P0ABI8
-          (cyoB, Cytochrome bo(3) ubiquinol oxidase subunit 1) in Escherichia coli
-          (strain K12) provides a verified protein exemplar.
+        notes: Supports terminal respiratory oxidases in obligately aerobic; UniProtKB:P98059
+          (ctaD, Cytochrome c oxidase subunit 1) in Rhodobacter capsulatus (Rhodopseudomonas
+          capsulata) provides a verified protein exemplar.
   - node_id: proton_motive_force
     label: proton motive force
     node_type: STATE
@@ -120,22 +119,25 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Enzymes with exposed iron-sulfur clusters vulnerable to ROS.
     protein_examples:
-    - uniprot_id: UniProtKB:P29166
-      protein_label: Iron hydrogenase 1
-      taxon_id: NCBITaxon:1501
-      taxon_label: Clostridium pasteurianum
+    - uniprot_id: UniProtKB:P0AC41
+      protein_label: Succinate dehydrogenase flavoprotein subunit
+      gene_symbol: sdhA
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
+      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 159
+      entry_version: 160
       sequence_version: 1
-      role: Exemplar protein (P29166, Iron hydrogenase 1) representing Fe-S cluster
-        enzymes in Clostridium pasteurianum for obligately aerobic.
+      role: Exemplar protein (sdhA, Succinate dehydrogenase flavoprotein subunit)
+        representing Fe-S cluster enzymes in Escherichia coli (strain K12) for obligately
+        aerobic.
       evidence:
       - reference: https://www.ncbi.nlm.nih.gov/books/NBK482349/
         snippet: will not survive if there is more than half a percent oxygen
-        notes: Supports Fe-S cluster enzymes in obligately aerobic; UniProtKB:P29166
-          (P29166, Iron hydrogenase 1) in Clostridium pasteurianum provides a verified
-          protein exemplar.
+        notes: Supports Fe-S cluster enzymes in obligately aerobic; UniProtKB:P0AC41
+          (sdhA, Succinate dehydrogenase flavoprotein subunit) in Escherichia coli
+          (strain K12) provides a verified protein exemplar.
   edges:
   - subject: obligate_aerobic_trait
     predicate: depends on
@@ -363,7 +365,7 @@ curation_history:
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
-  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P0ABI8 (cyoB)
-    protein example to node terminal_oxidases; added UniProtKB:P29166 (P29166) protein
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P98059 (ctaD)
+    protein example to node terminal_oxidases; added UniProtKB:P0AC41 (sdhA) protein
     example to node fe_s_cluster_enzymes.'
   llm_assisted: true

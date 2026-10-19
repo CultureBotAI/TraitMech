@@ -115,24 +115,23 @@ causal_graphs:
       for this aggregate use.
     description: IBPs/AFPs that bind ice crystal surfaces and inhibit ice recrystallization.
     protein_examples:
-    - uniprot_id: UniProtKB:P0A9X9
-      protein_label: Cold shock protein CspA
-      gene_symbol: cspA
-      taxon_id: NCBITaxon:83333
-      taxon_label: Escherichia coli (strain K12)
+    - uniprot_id: UniProtKB:A5XB26
+      protein_label: Ice-binding protein
+      taxon_id: NCBITaxon:56799
+      taxon_label: Colwellia sp
       entry_status: REVIEWED
-      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 146
-      sequence_version: 2
-      role: Exemplar protein (cspA, Cold shock protein CspA) representing ice-binding/antifreeze
-        proteins in Escherichia coli (strain K12) for temperature optimum low.
+      entry_version: 33
+      sequence_version: 1
+      role: Exemplar protein (A5XB26, Ice-binding protein) representing ice-binding/antifreeze
+        proteins in Colwellia sp for temperature optimum low.
       evidence:
-      - reference: DOI:10.1038/sj.embor.7400662
-        snippet: Cold-shock proteins have also been described
+      - reference: DOI:10.1128/spectrum.03925-23
+        snippet: Upon temperature decrease, the membrane rigidifies and increases
+          in thickness, resulting in activation of the kinase-dominant state of DesK
         notes: Supports ice-binding/antifreeze proteins in temperature optimum low;
-          UniProtKB:P0A9X9 (cspA, Cold shock protein CspA) in Escherichia coli (strain
-          K12) provides a verified protein exemplar.
+          UniProtKB:A5XB26 (A5XB26, Ice-binding protein) in Colwellia sp provides
+          a verified protein exemplar.
   - node_id: ice_crystal_growth
     label: ice crystal growth
     node_type: BIOLOGICAL_PROCESS
@@ -313,7 +312,7 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P0A9X9 (cspA)
-    protein example to node cold_shock_proteins; added UniProtKB:P0A9X9 (cspA) protein
+    protein example to node cold_shock_proteins; added UniProtKB:A5XB26 (A5XB26) protein
     example to node ice_binding_proteins.'
   llm_assisted: true
 canonical_examples:

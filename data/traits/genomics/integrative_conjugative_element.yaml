@@ -84,43 +84,36 @@ causal_graphs:
     grounding: traitmech:000093
     description: Possession of a horizontally acquired chromosomal island.
   - node_id: integrative_conjugative_element_protein_component
-    label: Integration host factor subunit beta
+    label: Endonuclease GajA
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Integration host factor subunit beta) associated
-      with integrative conjugative element.
+    description: Protein component (Endonuclease GajA) associated with integrative
+      conjugative element.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - ihfB
+    - gajA
     protein_examples:
-    - uniprot_id: UniProtKB:Q9X4E2
-      protein_label: Integration host factor subunit beta
-      gene_symbol: ihfB
-      taxon_id: NCBITaxon:272943
-      taxon_label: Cereibacter sphaeroides (strain ATCC 17023 / DSM 158 / JCM 6121
-        / CCUG 31486 / LMG 2827 / NBRC 12203 / NCIMB 8253 / ATH 2.4.1.) (Rhodobacter
-        sphaeroides)
+    - uniprot_id: UniProtKB:P0DW47
+      protein_label: Endonuclease GajA
+      gene_symbol: gajA
+      taxon_id: NCBITaxon:1053212
+      taxon_label: Bacillus cereus (strain HuB5-5)
       entry_status: REVIEWED
-      proteome_id: UP000002703
       retrieved_on: '2026-10-17'
-      entry_version: 127
+      entry_version: 12
       sequence_version: 1
-      role: Characteristic protein component (ihfB, Integration host factor subunit
-        beta) associated with integrative conjugative element in Cereibacter sphaeroides
-        (strain ATCC 17023 / DSM 158 / JCM 6121 / CCUG 31486 / LMG 2827 / NBRC 12203
-        / NCIMB 8253 / ATH 2.4.1.) (Rhodobacter sphaeroides).
+      role: Characteristic protein component (gajA, Endonuclease GajA) associated
+        with integrative conjugative element in Bacillus cereus (strain HuB5-5).
       evidence:
       - reference: DOI:10.1093/nar/gkad644
         snippet: The term ‘genomic island’ encompasses diverse types of mobile genetic
           elements that exhibit various structures and gene contents, including prophages,
           transposons, integrated plasmids, integrative and mobilizable elements (IMEs),
           and integrative and conjugative elements (ICEs)
-        notes: Supports Integration host factor subunit beta in integrative conjugative
-          element; UniProtKB:Q9X4E2 (ihfB, Integration host factor subunit beta) in
-          Cereibacter sphaeroides (strain ATCC 17023 / DSM 158 / JCM 6121 / CCUG 31486
-          / LMG 2827 / NBRC 12203 / NCIMB 8253 / ATH 2.4.1.) (Rhodobacter sphaeroides)
-          provides a verified protein exemplar.
+        notes: Supports Endonuclease GajA in integrative conjugative element; UniProtKB:P0DW47
+          (gajA, Endonuclease GajA) in Bacillus cereus (strain HuB5-5) provides a
+          verified protein exemplar.
   edges:
   - subject: integrated_ice_locus
     predicate: enables
@@ -202,17 +195,14 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: integrative_conjugative_element
-    description: Integration host factor subunit beta (ihfB, UniProtKB:Q9X4E2) contributes
-      to integrative conjugative element (associated with conjugative, apparatus,
-      encoded).
+    description: Endonuclease GajA (gajA, UniProtKB:P0DW47) contributes to integrative
+      conjugative element.
     evidence:
     - reference: DOI:10.1093/nar/gkad644
       snippet: spread via the conjugative apparatus encoded by a helper ICE or conjugative
         plasmid
-      notes: Supports the functional association between Integration host factor subunit
-        beta (UniProtKB:Q9X4E2 in Cereibacter sphaeroides (strain ATCC 17023 / DSM
-        158 / JCM 6121 / CCUG 31486 / LMG 2827 / NBRC 12203 / NCIMB 8253 / ATH 2.4.1.)
-        (Rhodobacter sphaeroides)) and integrative conjugative element.
+      notes: Supports the functional association between Endonuclease GajA (UniProtKB:P0DW47
+        in Bacillus cereus (strain HuB5-5)) and integrative conjugative element.
 discussions:
 - discussion_id: ice-family-resolution-gap
   prompt: Resolve bacterial ICE subfamilies, Actinomycete ICE boundaries, integrase/relaxase/T4SS
@@ -241,6 +231,6 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    integrative_conjugative_element_protein_component with UniProtKB:Q9X4E2 (ihfB)
+    integrative_conjugative_element_protein_component with UniProtKB:P0DW47 (gajA)
     exemplar.'
   llm_assisted: true

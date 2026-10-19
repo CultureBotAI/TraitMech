@@ -75,34 +75,33 @@ causal_graphs:
     description: Possession of a genome-encoded Pif abortive-infection phage-defense
       system.
   - node_id: pif_system_protein_component
-    label: Phage T7 exclusion protein
+    label: Abortive phage resistance protein AbiC
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Phage T7 exclusion protein) associated with Pif
-      system.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Abortive phage resistance protein AbiC) associated
+      with Pif system.
+    grounding: InterPro:IPR031709
     gene_symbols:
-    - pifA
+    - abiC
     protein_examples:
-    - uniprot_id: UniProtKB:P96329
-      protein_label: Phage T7 exclusion protein
-      gene_symbol: pifA
-      taxon_id: NCBITaxon:83333
-      taxon_label: Escherichia coli (strain K12)
+    - uniprot_id: UniProtKB:Q01457
+      protein_label: Abortive phage resistance protein AbiC
+      gene_symbol: abiC
+      taxon_id: NCBITaxon:1360
+      taxon_label: Lactococcus lactis subsp. lactis (Streptococcus lactis)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      entry_version: 96
-      sequence_version: 2
-      role: Characteristic protein component (pifA, Phage T7 exclusion protein) associated
-        with Pif system in Escherichia coli (strain K12).
+      entry_version: 35
+      sequence_version: 1
+      role: Characteristic protein component (abiC, Abortive phage resistance protein
+        AbiC) associated with Pif system in Lactococcus lactis subsp. lactis (Streptococcus
+        lactis).
       evidence:
       - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
         snippet: Pif | 10\.1007/BF00327934 | Molecular analysis of F plasmid pif region
           specifying abortive infection of T7 phage
-        notes: Supports Phage T7 exclusion protein in Pif system; UniProtKB:P96329
-          (pifA, Phage T7 exclusion protein) in Escherichia coli (strain K12) provides
-          a verified protein exemplar.
+        notes: Supports Abortive phage resistance protein AbiC in Pif system; UniProtKB:Q01457
+          (abiC, Abortive phage resistance protein AbiC) in Lactococcus lactis subsp.
+          lactis (Streptococcus lactis) provides a verified protein exemplar.
   edges:
   - subject: pif_locus
     predicate: contributes to
@@ -152,14 +151,15 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: pif_system_trait
-    description: Phage T7 exclusion protein (pifA, UniProtKB:P96329) contributes to
-      Pif system (associated with landscape, pangenome, defense).
+    description: Abortive phage resistance protein AbiC (abiC, UniProtKB:Q01457) contributes
+      to Pif system.
     evidence:
     - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
-      snippet: PD-T7-1 | 10\.1101/2022\.05\.12\.491691 | Mapping the landscape of
-        anti-phage defense mechanisms in the E\. coli pangenome
-      notes: Supports the functional association between Phage T7 exclusion protein
-        (UniProtKB:P96329 in Escherichia coli (strain K12)) and Pif system.
+      snippet: 'AbiC | 10\.1016/j\.mib\.2005\.06\.006 | Phage abortive infection in
+        lactococci: variations on a theme'
+      notes: Supports the functional association between Abortive phage resistance
+        protein AbiC (UniProtKB:Q01457 in Lactococcus lactis subsp. lactis (Streptococcus
+        lactis)) and Pif system.
 discussions:
 - discussion_id: pif-output-gap
   prompt: Resolve the direct T7 trigger, PifA and PifC molecular functions, host-cell
@@ -197,5 +197,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    pif_system_protein_component with UniProtKB:P96329 (pifA) exemplar.'
+    pif_system_protein_component with UniProtKB:Q01457 (abiC) exemplar.'
   llm_assisted: true

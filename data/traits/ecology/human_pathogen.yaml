@@ -34,8 +34,8 @@ causal_graphs:
   title: Human-pathogen Homo sapiens host adaptation
   scope_status: NONMECHANISTIC
   scope_notes: This broad ecological, host-relationship, habitat, or hazard classification
-    spans multiple taxa and mechanisms; contextual protein nodes do not receive token
-    UniProt examples.
+    spans multiple taxa and mechanisms; contextual protein nodes include source-backed
+    UniProtKB exemplars.
   description: DOI-backed graph linking human-adapted virulence factors, body-temperature
     and tissue tropism, and human-specific immune evasion to the human-pathogen phenotype.
   nodes:

@@ -119,16 +119,16 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph fungal_nematophagy_graph
-    with GENE_OR_PROTEIN node fungal_nematophagy_protein_component and UniProtKB:Q12510
+    with GENE_OR_PROTEIN node fungal_nematophagy_protein_component and UniProtKB:P08640
     exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: fungal_nematophagy_graph
   title: Protein component associated with fungal nematophagy
-  description: Literature-backed association between DNA damage-binding protein CMR1
-    (UniProtKB:Q12510) and fungal nematophagy.
+  description: Literature-backed association between Flocculation protein FLO11 (UniProtKB:P08640)
+    and fungal nematophagy.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q12510 in Saccharomyces
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P08640 in Saccharomyces
     cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)) associated with fungal
     nematophagy while full multi-step mechanistic curation remains future work.
   nodes:
@@ -138,46 +138,44 @@ causal_graphs:
     grounding: traitmech:000719
     description: A nutritional phenotype in which a fungus consumes nematodes as food.
   - node_id: fungal_nematophagy_protein_component
-    label: DNA damage-binding protein CMR1
+    label: Flocculation protein FLO11
     node_type: GENE_OR_PROTEIN
-    description: Protein component (DNA damage-binding protein CMR1) associated with
-      fungal nematophagy.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Flocculation protein FLO11) associated with fungal
+      nematophagy.
+    grounding: InterPro:IPR018789
     gene_symbols:
-    - CMR1
+    - FLO11
     protein_examples:
-    - uniprot_id: UniProtKB:Q12510
-      protein_label: DNA damage-binding protein CMR1
-      gene_symbol: CMR1
+    - uniprot_id: UniProtKB:P08640
+      protein_label: Flocculation protein FLO11
+      gene_symbol: FLO11
       taxon_id: NCBITaxon:559292
       taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's
         yeast)
       entry_status: REVIEWED
       proteome_id: UP000002311
       retrieved_on: '2026-10-17'
-      entry_version: 191
-      sequence_version: 1
-      role: Characteristic protein component (CMR1, DNA damage-binding protein CMR1)
-        associated with fungal nematophagy in Saccharomyces cerevisiae (strain ATCC
-        204508 / S288c) (Baker's yeast).
+      entry_version: 187
+      sequence_version: 2
+      role: Characteristic protein component (FLO11, Flocculation protein FLO11) associated
+        with fungal nematophagy in Saccharomyces cerevisiae (strain ATCC 204508 /
+        S288c) (Baker's yeast).
       evidence:
       - reference: DOI:10.3390/f10050404
         snippet: Nematophagy implies the consumption of nematodes.
-        notes: Supports DNA damage-binding protein CMR1 in fungal nematophagy; UniProtKB:Q12510
-          (CMR1, DNA damage-binding protein CMR1) in Saccharomyces cerevisiae (strain
+        notes: Supports Flocculation protein FLO11 in fungal nematophagy; UniProtKB:P08640
+          (FLO11, Flocculation protein FLO11) in Saccharomyces cerevisiae (strain
           ATCC 204508 / S288c) (Baker's yeast) provides a verified protein exemplar.
   edges:
   - subject: fungal_nematophagy_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: fungal_nematophagy_trait
-    description: DNA damage-binding protein CMR1 (CMR1, UniProtKB:Q12510) contributes
-      to fungal nematophagy (associated with consumption, nematophagy, nematodes).
+    description: Flocculation protein FLO11 (FLO11, UniProtKB:P08640) contributes
+      to fungal nematophagy.
     evidence:
     - reference: DOI:10.3390/f10050404
       snippet: Nematophagy implies the consumption of nematodes.
-      notes: Supports the functional association between DNA damage-binding protein
-        CMR1 (UniProtKB:Q12510 in Saccharomyces cerevisiae (strain ATCC 204508 / S288c)
+      notes: Supports the functional association between Flocculation protein FLO11
+        (UniProtKB:P08640 in Saccharomyces cerevisiae (strain ATCC 204508 / S288c)
         (Baker's yeast)) and fungal nematophagy.

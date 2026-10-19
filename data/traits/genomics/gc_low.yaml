@@ -33,7 +33,7 @@ causal_graphs:
   scope_status: NONMECHANISTIC
   scope_notes: This genomics record is a measurement, genomic-element classification,
     or population-level descriptor rather than one taxon-specific protein mechanism;
-    contextual protein nodes do not receive token UniProt examples.
+    contextual protein nodes include source-backed UniProtKB exemplars.
   description: DOI-backed nonmechanistic graph connecting DNA-repair defects, mutational
     spectra, cytosine-deamination context, AT-enriching spectrum context, replication/repair
     enzyme bias, and moderate mutation bias to continuous genome-wide GC content and
@@ -80,35 +80,33 @@ causal_graphs:
     description: Nucleotide biases of DNA replication and repair enzymes contributing
       to genome base composition.
   - node_id: gc_low_protein_component
-    label: Chromosomal replication initiator protein DnaA
+    label: DNA polymerase I
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Chromosomal replication initiator protein DnaA)
-      associated with GC low.
+    description: Protein component (DNA polymerase I) associated with GC low.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - dnaA
+    - polA
     protein_examples:
-    - uniprot_id: UniProtKB:P05648
-      protein_label: Chromosomal replication initiator protein DnaA
-      gene_symbol: dnaA
-      taxon_id: NCBITaxon:224308
-      taxon_label: Bacillus subtilis (strain 168)
+    - uniprot_id: UniProtKB:P00582
+      protein_label: DNA polymerase I
+      gene_symbol: polA
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
-      proteome_id: UP000001570
+      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 178
+      entry_version: 230
       sequence_version: 1
-      role: Characteristic protein component (dnaA, Chromosomal replication initiator
-        protein DnaA) associated with GC low in Bacillus subtilis (strain 168).
+      role: Characteristic protein component (polA, DNA polymerase I) associated with
+        GC low in Escherichia coli (strain K12).
       evidence:
       - reference: DOI:10.1371/journal.pgen.1001107
         snippet: The genomic GC-content of bacteria varies dramatically, from less
           than 20% to more than 70%
-        notes: Supports Chromosomal replication initiator protein DnaA in GC low;
-          UniProtKB:P05648 (dnaA, Chromosomal replication initiator protein DnaA)
-          in Bacillus subtilis (strain 168) provides a verified protein exemplar.
+        notes: Supports DNA polymerase I in GC low; UniProtKB:P00582 (polA, DNA polymerase
+          I) in Escherichia coli (strain K12) provides a verified protein exemplar.
   edges:
   - subject: moderate_mutation_bias
     predicate: contributes to
@@ -203,13 +201,12 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: gc_low_trait
-    description: Chromosomal replication initiator protein DnaA (dnaA, UniProtKB:P05648)
-      contributes to GC low (associated with dramatically, bacteria, content).
+    description: DNA polymerase I (polA, UniProtKB:P00582) contributes to GC low.
     evidence:
     - reference: DOI:10.1371/journal.pgen.1001107
       snippet: The genomic GC-content of bacteria varies dramatically, from
-      notes: Supports the functional association between Chromosomal replication initiator
-        protein DnaA (UniProtKB:P05648 in Bacillus subtilis (strain 168)) and GC low.
+      notes: Supports the functional association between DNA polymerase I (UniProtKB:P00582
+        in Escherichia coli (strain K12)) and GC low.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.816924+00:00'
   curator: seed_from_metpo
@@ -302,5 +299,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    gc_low_protein_component with UniProtKB:P05648 (dnaA) exemplar.'
+    gc_low_protein_component with UniProtKB:P00582 (polA) exemplar.'
   llm_assisted: true

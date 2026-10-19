@@ -258,26 +258,26 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Late mother-cell sigma factor controlling spore coat and cortex maturation.
     protein_examples:
-    - uniprot_id: UniProtKB:P37963
-      protein_label: Spore coat morphogenetic protein SpoVID
-      gene_symbol: spoVID
+    - uniprot_id: UniProtKB:P12254
+      protein_label: RNA polymerase sigma-K factor
+      gene_symbol: sigK
       taxon_id: NCBITaxon:224308
       taxon_label: Bacillus subtilis (strain 168)
       entry_status: REVIEWED
       proteome_id: UP000001570
       retrieved_on: '2026-10-17'
-      entry_version: 134
-      sequence_version: 1
-      role: Exemplar protein (spoVID, Spore coat morphogenetic protein SpoVID) representing
-        sigma K in Bacillus subtilis (strain 168) for sporulation.
+      entry_version: 158
+      sequence_version: 2
+      role: Exemplar protein (sigK, RNA polymerase sigma-K factor) representing sigma
+        K in Bacillus subtilis (strain 168) for sporulation.
       evidence:
       - reference: DOI:10.1038/s41467-024-51654-6
-        snippet: This is required for activation of the late sporulation spore specific
-          sigma factor σG responsible for spore maturation, spore DNA protection via
-          Ssp proteins and preparation for germination
-        notes: Supports sigma K in sporulation; UniProtKB:P37963 (spoVID, Spore coat
-          morphogenetic protein SpoVID) in Bacillus subtilis (strain 168) provides
-          a verified protein exemplar.
+        snippet: compartment specific RNA polymerase sigma factors – σF and σE – responsible
+          for further activation of sporulation genes in the forespore and mother
+          cell respectively
+        notes: Supports sigma K in sporulation; UniProtKB:P12254 (sigK, RNA polymerase
+          sigma-K factor) in Bacillus subtilis (strain 168) provides a verified protein
+          exemplar.
   - node_id: spore_dna_protection
     label: spore DNA protection
     node_type: BIOLOGICAL_PROCESS

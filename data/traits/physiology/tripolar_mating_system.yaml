@@ -85,20 +85,27 @@ curation_history:
   llm_assisted: true
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed canonical_examples status alongside NONMECHANISTIC protein exemplar
+    graph for tripolar mating system; isolate-level canonical example remains deferred
+    pending explicit strain-level literature.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph tripolar_mating_system_graph
-    with GENE_OR_PROTEIN node tripolar_mating_system_protein_component and UniProtKB:P07658
+    with GENE_OR_PROTEIN node tripolar_mating_system_protein_component and UniProtKB:D6VTK4
     exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: tripolar_mating_system_graph
   title: Protein component associated with tripolar mating system
-  description: Literature-backed association between Formate dehydrogenase H (UniProtKB:P07658)
-    and tripolar mating system.
+  description: Literature-backed association between Pheromone alpha factor receptor
+    (UniProtKB:D6VTK4) and tripolar mating system.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P07658 in Escherichia
-    coli (strain K12)) associated with tripolar mating system while full multi-step
-    mechanistic curation remains future work.
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:D6VTK4 in Saccharomyces
+    cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)) associated with tripolar
+    mating system while full multi-step mechanistic curation remains future work.
   nodes:
   - node_id: tripolar_mating_system_trait
     label: tripolar mating system
@@ -109,45 +116,47 @@ causal_graphs:
       in one mating-type region and a partner with those determinants in two unlinked
       regions.
   - node_id: tripolar_mating_system_protein_component
-    label: Formate dehydrogenase H
+    label: Pheromone alpha factor receptor
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Formate dehydrogenase H) associated with tripolar
-      mating system.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Pheromone alpha factor receptor) associated with
+      tripolar mating system.
+    grounding: InterPro:IPR000366
     gene_symbols:
-    - fdhF
+    - STE2
     protein_examples:
-    - uniprot_id: UniProtKB:P07658
-      protein_label: Formate dehydrogenase H
-      gene_symbol: fdhF
-      taxon_id: NCBITaxon:83333
-      taxon_label: Escherichia coli (strain K12)
+    - uniprot_id: UniProtKB:D6VTK4
+      protein_label: Pheromone alpha factor receptor
+      gene_symbol: STE2
+      taxon_id: NCBITaxon:559292
+      taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's
+        yeast)
       entry_status: REVIEWED
-      proteome_id: UP000000625
+      proteome_id: UP000002311
       retrieved_on: '2026-10-17'
-      entry_version: 228
+      entry_version: 99
       sequence_version: 2
-      role: Characteristic protein component (fdhF, Formate dehydrogenase H) associated
-        with tripolar mating system in Escherichia coli (strain K12).
+      role: Characteristic protein component (STE2, Pheromone alpha factor receptor)
+        associated with tripolar mating system in Saccharomyces cerevisiae (strain
+        ATCC 204508 / S288c) (Baker's yeast).
       evidence:
       - reference: DOI:10.1128/mbio.00059-26
         snippet: the MAT-fused strains were able to successfully mate with the strains
           in which the P/R and HD are unlinked, constituting a “tripolar” mating.
-        notes: Supports Formate dehydrogenase H in tripolar mating system; UniProtKB:P07658
-          (fdhF, Formate dehydrogenase H) in Escherichia coli (strain K12) provides
-          a verified protein exemplar.
+        notes: Supports Pheromone alpha factor receptor in tripolar mating system;
+          UniProtKB:D6VTK4 (STE2, Pheromone alpha factor receptor) in Saccharomyces
+          cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast) provides a verified
+          protein exemplar.
   edges:
   - subject: tripolar_mating_system_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: tripolar_mating_system_trait
-    description: Formate dehydrogenase H (fdhF, UniProtKB:P07658) contributes to tripolar
-      mating system (associated with constituting, successfully, tripolar).
+    description: Pheromone alpha factor receptor (STE2, UniProtKB:D6VTK4) contributes
+      to tripolar mating system.
     evidence:
     - reference: DOI:10.1128/mbio.00059-26
       snippet: the MAT-fused strains were able to successfully mate with the strains
         in which the P/R and HD are unlinked, constituting a “tripolar” mating.
-      notes: Supports the functional association between Formate dehydrogenase H (UniProtKB:P07658
-        in Escherichia coli (strain K12)) and tripolar mating system.
+      notes: Supports the functional association between Pheromone alpha factor receptor
+        (UniProtKB:D6VTK4 in Saccharomyces cerevisiae (strain ATCC 204508 / S288c)
+        (Baker's yeast)) and tripolar mating system.

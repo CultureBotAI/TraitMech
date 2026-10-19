@@ -127,18 +127,19 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph fungal_rhizomorph_formation_graph
-    with GENE_OR_PROTEIN node fungal_rhizomorph_formation_protein_component and UniProtKB:Q5AD13
+    with GENE_OR_PROTEIN node fungal_rhizomorph_formation_protein_component and UniProtKB:P08640
     exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: fungal_rhizomorph_formation_graph
   title: Protein component associated with fungal rhizomorph formation
-  description: Literature-backed association between Filamentous growth regulator
-    15 (UniProtKB:Q5AD13) and fungal rhizomorph formation.
+  description: Literature-backed association between Flocculation protein FLO11 (UniProtKB:P08640)
+    and fungal rhizomorph formation.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q5AD13 in Candida
-    albicans (strain SC5314 / ATCC MYA-2876) (Yeast)) associated with fungal rhizomorph
-    formation while full multi-step mechanistic curation remains future work.
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P08640 in Saccharomyces
+    cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)) associated with fungal
+    rhizomorph formation while full multi-step mechanistic curation remains future
+    work.
   nodes:
   - node_id: fungal_rhizomorph_formation_trait
     label: fungal rhizomorph formation
@@ -147,49 +148,49 @@ causal_graphs:
     description: A morphological phenotype in which a fungus forms root-like, multihyphal
       structures through coordinated hyphal growth.
   - node_id: fungal_rhizomorph_formation_protein_component
-    label: Filamentous growth regulator 15
+    label: Flocculation protein FLO11
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Filamentous growth regulator 15) associated with
-      fungal rhizomorph formation.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Flocculation protein FLO11) associated with fungal
+      rhizomorph formation.
+    grounding: InterPro:IPR018789
     gene_symbols:
-    - FGR15
+    - FLO11
     protein_examples:
-    - uniprot_id: UniProtKB:Q5AD13
-      protein_label: Filamentous growth regulator 15
-      gene_symbol: FGR15
-      taxon_id: NCBITaxon:237561
-      taxon_label: Candida albicans (strain SC5314 / ATCC MYA-2876) (Yeast)
+    - uniprot_id: UniProtKB:P08640
+      protein_label: Flocculation protein FLO11
+      gene_symbol: FLO11
+      taxon_id: NCBITaxon:559292
+      taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's
+        yeast)
       entry_status: REVIEWED
-      proteome_id: UP000000559
+      proteome_id: UP000002311
       retrieved_on: '2026-10-17'
-      entry_version: 100
+      entry_version: 187
       sequence_version: 2
-      role: Characteristic protein component (FGR15, Filamentous growth regulator
-        15) associated with fungal rhizomorph formation in Candida albicans (strain
-        SC5314 / ATCC MYA-2876) (Yeast).
+      role: Characteristic protein component (FLO11, Flocculation protein FLO11) associated
+        with fungal rhizomorph formation in Saccharomyces cerevisiae (strain ATCC
+        204508 / S288c) (Baker's yeast).
       evidence:
       - reference: DOI:10.3114/fuse.2024.14.03
         snippet: Many rhizomorph-forming fungi occur in the litter on the forest floor
           (ground species), while other species make aerial rhizomorph networks (epiphytic
           species).
-        notes: Supports Filamentous growth regulator 15 in fungal rhizomorph formation;
-          UniProtKB:Q5AD13 (FGR15, Filamentous growth regulator 15) in Candida albicans
-          (strain SC5314 / ATCC MYA-2876) (Yeast) provides a verified protein exemplar.
+        notes: Supports Flocculation protein FLO11 in fungal rhizomorph formation;
+          UniProtKB:P08640 (FLO11, Flocculation protein FLO11) in Saccharomyces cerevisiae
+          (strain ATCC 204508 / S288c) (Baker's yeast) provides a verified protein
+          exemplar.
   edges:
   - subject: fungal_rhizomorph_formation_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: fungal_rhizomorph_formation_trait
-    description: Filamentous growth regulator 15 (FGR15, UniProtKB:Q5AD13) contributes
-      to fungal rhizomorph formation (associated with rhizomorph, epiphytic, networks).
+    description: Flocculation protein FLO11 (FLO11, UniProtKB:P08640) contributes
+      to fungal rhizomorph formation.
     evidence:
     - reference: DOI:10.3114/fuse.2024.14.03
       snippet: Many rhizomorph-forming fungi occur in the litter on the forest floor
         (ground species), while other species make aerial rhizomorph networks (epiphytic
         species).
-      notes: Supports the functional association between Filamentous growth regulator
-        15 (UniProtKB:Q5AD13 in Candida albicans (strain SC5314 / ATCC MYA-2876) (Yeast))
-        and fungal rhizomorph formation.
+      notes: Supports the functional association between Flocculation protein FLO11
+        (UniProtKB:P08640 in Saccharomyces cerevisiae (strain ATCC 204508 / S288c)
+        (Baker's yeast)) and fungal rhizomorph formation.

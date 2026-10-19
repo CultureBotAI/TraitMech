@@ -88,24 +88,24 @@ causal_graphs:
     grounding_notes: The contextual node spans different bactofilin paralogues across
       prosthecate taxa, so no one family or instance precisely denotes it.
     protein_examples:
-    - uniprot_id: UniProtKB:Q01465
-      protein_label: Cell shape-determining protein MreB
-      gene_symbol: mreB
-      taxon_id: NCBITaxon:224308
-      taxon_label: Bacillus subtilis (strain 168)
+    - uniprot_id: UniProtKB:Q1D3H0
+      protein_label: Bactofilin BacN
+      gene_symbol: bacN
+      taxon_id: NCBITaxon:246197
+      taxon_label: Myxococcus xanthus (strain DK1622)
       entry_status: REVIEWED
-      proteome_id: UP000001570
+      proteome_id: UP000002402
       retrieved_on: '2026-10-17'
-      entry_version: 148
-      sequence_version: 3
-      role: Exemplar protein (mreB, Cell shape-determining protein MreB) representing
-        bactofilin cytoskeleton in Bacillus subtilis (strain 168) for flask shaped.
+      entry_version: 94
+      sequence_version: 1
+      role: Exemplar protein (bacN, Bactofilin BacN) representing bactofilin cytoskeleton
+        in Myxococcus xanthus (strain DK1622) for flask shaped.
       evidence:
-      - reference: DOI:10.1146/annurev-cellbio-101011-155745
-        snippet: MreB-directed peptidoglycan synthesis
-        notes: Supports bactofilin cytoskeleton in flask shaped; UniProtKB:Q01465
-          (mreB, Cell shape-determining protein MreB) in Bacillus subtilis (strain
-          168) provides a verified protein exemplar.
+      - reference: DOI:10.7554/eLife.86577.2
+        snippet: central role in the spatial regulation of cell wall biosynthesis
+        notes: Supports bactofilin cytoskeleton in flask shaped; UniProtKB:Q1D3H0
+          (bacN, Bactofilin BacN) in Myxococcus xanthus (strain DK1622) provides a
+          verified protein exemplar.
   - node_id: asymmetric_compartment_growth
     label: asymmetric compartment growth
     node_type: BIOLOGICAL_PROCESS
@@ -251,6 +251,6 @@ curation_history:
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
-  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q01465 (mreB)
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q1D3H0 (bacN)
     protein example to node bactofilin_cytoskeleton.'
   llm_assisted: true

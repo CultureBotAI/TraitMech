@@ -63,9 +63,9 @@
 
     <div class="card causal-graph-card">
       <h2>Protein component associated with pectin degradation</h2>
-      <p class="meta">Literature-backed association between Pectate lyase A (UniProtKB:Q9X6Z2) and pectin degradation.</p>
+      <p class="meta">Literature-backed association between Endoglucanase A (UniProtKB:P54937) and pectin degradation.</p>
 
-      <p class="graph-scope"><code>NONMECHANISTIC</code> · Captures a source-backed protein exemplar (UniProtKB:Q9X6Z2 in Paenibacillus barcinonensis) associated with pectin degradation while full multi-step mechanistic curation remains future work.</p>
+      <p class="graph-scope"><code>NONMECHANISTIC</code> · Captures a source-backed protein exemplar (UniProtKB:P54937 in Clostridium longisporum) associated with pectin degradation while full multi-step mechanistic curation remains future work.</p>
 
 
       <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
@@ -84,17 +84,17 @@
         <ul>
 
           <li id="pathograph-1-edge-1">
-            <strong>Pectate lyase A</strong>
+            <strong>Endoglucanase A</strong>
             <span class="edge-predicate">contributes to</span>
             <strong>pectin degradation</strong>
             <code>RO:0002326</code>
-            <p>Pectate lyase A (pelA, UniProtKB:Q9X6Z2) contributes to pectin degradation (associated with oligogalacturonides, extracellular, intracellular).</p>
+            <p>Endoglucanase A (celA, UniProtKB:P54937) contributes to pectin degradation.</p>
             <ul>
 
               <li>
                 <a href="https://doi.org/10.1146/annurev.micro.50.1.213" rel="nofollow noreferrer"><code>DOI:10.1146/annurev.micro.50.1.213</code></a>
                 <span class="evidence-snippet">The extracellular degradation of the pectin leads to the formation of oligogalacturonides that are catabolized through an intracellular pathway</span>
-                <span class="meta">Supports the functional association between Pectate lyase A (UniProtKB:Q9X6Z2 in Paenibacillus barcinonensis) and pectin degradation.</span>
+                <span class="meta">Supports the functional association between Endoglucanase A (UniProtKB:P54937 in Clostridium longisporum) and pectin degradation.</span>
               </li>
 
             </ul>
@@ -115,29 +115,29 @@
             <tbody>
 
               <tr>
-                <td>Pectate lyase A</td>
+                <td>Endoglucanase A</td>
                 <td>
 
-                  <a href="https://www.uniprot.org/uniprotkb/Q9X6Z2/entry" rel="nofollow noreferrer"><code>UniProtKB:Q9X6Z2</code></a>
-                  <br>Pectate lyase A <span class="meta">(pelA)</span>
+                  <a href="https://www.uniprot.org/uniprotkb/P54937/entry" rel="nofollow noreferrer"><code>UniProtKB:P54937</code></a>
+                  <br>Endoglucanase A <span class="meta">(celA)</span>
                 </td>
                 <td>
 
-                  <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=198119" rel="nofollow noreferrer">Paenibacillus barcinonensis</a>
-                  <br><code>NCBITaxon:198119</code>
+                  <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1523" rel="nofollow noreferrer">Clostridium longisporum</a>
+                  <br><code>NCBITaxon:1523</code>
                 </td>
                 <td>
                   <code>REVIEWED</code><br>
-                  <span class="meta">retrieved 2026-10-17 · entry v71 · sequence v1</span>
+                  <span class="meta">retrieved 2026-10-17 · entry v103 · sequence v1</span>
                 </td>
                 <td>
-                  <p>Characteristic protein component (pelA, Pectate lyase A) associated with pectin degradation in Paenibacillus barcinonensis.</p>
+                  <p>Characteristic protein component (celA, Endoglucanase A) associated with pectin degradation in Clostridium longisporum.</p>
                   <ul>
 
                     <li>
                       <a href="https://doi.org/10.1146/annurev.micro.50.1.213" rel="nofollow noreferrer"><code>DOI:10.1146/annurev.micro.50.1.213</code></a>
                       <span class="evidence-snippet">The extracellular degradation of the pectin leads to the formation of oligogalacturonides that are catabolized through an intracellular pathway</span>
-                      <span class="meta">Supports Pectate lyase A in pectin degradation; UniProtKB:Q9X6Z2 (pelA, Pectate lyase A) in Paenibacillus barcinonensis provides a verified protein exemplar.</span>
+                      <span class="meta">Supports Endoglucanase A in pectin degradation; UniProtKB:P54937 (celA, Endoglucanase A) in Clostridium longisporum provides a verified protein exemplar.</span>
                     </li>
 
                   </ul>
@@ -240,8 +240,14 @@
 
         <li>
           <time>2026-10-17T09:00:00Z</time> ·
+          <strong>REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP</strong> · codex
+          <p class="changes">Reviewed canonical_examples status alongside NONMECHANISTIC protein exemplar graph for pectin degradation; isolate-level canonical example remains deferred pending explicit strain-level literature.</p>
+        </li>
+
+        <li>
+          <time>2026-10-17T09:00:00Z</time> ·
           <strong>CURATE_PROTEIN_TAXON_EXAMPLE</strong> · codex
-          <p class="changes">Curated verified UniProtKB protein_examples: added causal graph pectin_degradation_graph with GENE_OR_PROTEIN node pectin_degradation_protein_component and UniProtKB:Q9X6Z2 exemplar.</p>
+          <p class="changes">Curated verified UniProtKB protein_examples: added causal graph pectin_degradation_graph with GENE_OR_PROTEIN node pectin_degradation_protein_component and UniProtKB:P54937 exemplar.</p>
         </li>
 
       </ol>
@@ -620,7 +626,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Literature-backed association between Pectate lyase A (UniProtKB:Q9X6Z2) and pectin degradation.", "edges": [{"description": "Pectate lyase A (pelA, UniProtKB:Q9X6Z2) contributes to pectin degradation (associated with oligogalacturonides, extracellular, intracellular).", "evidence": [{"notes": "Supports the functional association between Pectate lyase A (UniProtKB:Q9X6Z2 in Paenibacillus barcinonensis) and pectin degradation.", "reference": "DOI:10.1146/annurev.micro.50.1.213", "snippet": "The extracellular degradation of the pectin leads to the formation of oligogalacturonides that are catabolized through an intracellular pathway"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "pectin_degradation_protein_component", "target": "pectin_degradation_trait"}], "evidence_rows": [{"description": "Pectate lyase A (pelA, UniProtKB:Q9X6Z2) contributes to pectin degradation (associated with oligogalacturonides, extracellular, intracellular).", "edge_id": "edge-1", "evidence": [{"notes": "Supports the functional association between Pectate lyase A (UniProtKB:Q9X6Z2 in Paenibacillus barcinonensis) and pectin degradation.", "reference": "DOI:10.1146/annurev.micro.50.1.213", "snippet": "The extracellular degradation of the pectin leads to the formation of oligogalacturonides that are catabolized through an intracellular pathway"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Pectate lyase A", "target": "pectin degradation"}], "graph_id": "pectin_degradation_graph", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Protein component (Pectate lyase A) associated with pectin degradation.", "grounding": null, "id": "pectin_degradation_protein_component", "is_orphan": false, "label": "Pectate lyase A", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 71, "evidence": [{"notes": "Supports Pectate lyase A in pectin degradation; UniProtKB:Q9X6Z2 (pelA, Pectate lyase A) in Paenibacillus barcinonensis provides a verified protein exemplar.", "reference": "DOI:10.1146/annurev.micro.50.1.213", "snippet": "The extracellular degradation of the pectin leads to the formation of oligogalacturonides that are catabolized through an intracellular pathway"}], "gene_symbol": "pelA", "protein_label": "Pectate lyase A", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (pelA, Pectate lyase A) associated with pectin degradation in Paenibacillus barcinonensis.", "sequence_version": 1, "taxon_id": "NCBITaxon:198119", "taxon_label": "Paenibacillus barcinonensis", "uniprot_id": "UniProtKB:Q9X6Z2"}], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "A biopolymer-degradation metabolism in which an organism depolymerizes pectin into oligogalacturonides and catabolizes the released pectin breakdown products using pectinolytic enzymes.", "grounding": "traitmech:000135", "id": "pectin_degradation_trait", "is_orphan": false, "label": "pectin degradation", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 71, "evidence": [{"notes": "Supports Pectate lyase A in pectin degradation; UniProtKB:Q9X6Z2 (pelA, Pectate lyase A) in Paenibacillus barcinonensis provides a verified protein exemplar.", "reference": "DOI:10.1146/annurev.micro.50.1.213", "snippet": "The extracellular degradation of the pectin leads to the formation of oligogalacturonides that are catabolized through an intracellular pathway"}], "gene_symbol": "pelA", "node_id": "pectin_degradation_protein_component", "node_label": "Pectate lyase A", "protein_label": "Pectate lyase A", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (pelA, Pectate lyase A) associated with pectin degradation in Paenibacillus barcinonensis.", "sequence_version": 1, "taxon_id": "NCBITaxon:198119", "taxon_label": "Paenibacillus barcinonensis", "uniprot_id": "UniProtKB:Q9X6Z2"}], "scope_notes": "Captures a source-backed protein exemplar (UniProtKB:Q9X6Z2 in Paenibacillus barcinonensis) associated with pectin degradation while full multi-step mechanistic curation remains future work.", "scope_status": "NONMECHANISTIC", "title": "Protein component associated with pectin degradation"}];
+  var graphs = [{"description": "Literature-backed association between Endoglucanase A (UniProtKB:P54937) and pectin degradation.", "edges": [{"description": "Endoglucanase A (celA, UniProtKB:P54937) contributes to pectin degradation.", "evidence": [{"notes": "Supports the functional association between Endoglucanase A (UniProtKB:P54937 in Clostridium longisporum) and pectin degradation.", "reference": "DOI:10.1146/annurev.micro.50.1.213", "snippet": "The extracellular degradation of the pectin leads to the formation of oligogalacturonides that are catabolized through an intracellular pathway"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "pectin_degradation_protein_component", "target": "pectin_degradation_trait"}], "evidence_rows": [{"description": "Endoglucanase A (celA, UniProtKB:P54937) contributes to pectin degradation.", "edge_id": "edge-1", "evidence": [{"notes": "Supports the functional association between Endoglucanase A (UniProtKB:P54937 in Clostridium longisporum) and pectin degradation.", "reference": "DOI:10.1146/annurev.micro.50.1.213", "snippet": "The extracellular degradation of the pectin leads to the formation of oligogalacturonides that are catabolized through an intracellular pathway"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Endoglucanase A", "target": "pectin degradation"}], "graph_id": "pectin_degradation_graph", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Protein component (Endoglucanase A) associated with pectin degradation.", "grounding": null, "id": "pectin_degradation_protein_component", "is_orphan": false, "label": "Endoglucanase A", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 103, "evidence": [{"notes": "Supports Endoglucanase A in pectin degradation; UniProtKB:P54937 (celA, Endoglucanase A) in Clostridium longisporum provides a verified protein exemplar.", "reference": "DOI:10.1146/annurev.micro.50.1.213", "snippet": "The extracellular degradation of the pectin leads to the formation of oligogalacturonides that are catabolized through an intracellular pathway"}], "gene_symbol": "celA", "protein_label": "Endoglucanase A", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (celA, Endoglucanase A) associated with pectin degradation in Clostridium longisporum.", "sequence_version": 1, "taxon_id": "NCBITaxon:1523", "taxon_label": "Clostridium longisporum", "uniprot_id": "UniProtKB:P54937"}], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "A biopolymer-degradation metabolism in which an organism depolymerizes pectin into oligogalacturonides and catabolizes the released pectin breakdown products using pectinolytic enzymes.", "grounding": "traitmech:000135", "id": "pectin_degradation_trait", "is_orphan": false, "label": "pectin degradation", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 103, "evidence": [{"notes": "Supports Endoglucanase A in pectin degradation; UniProtKB:P54937 (celA, Endoglucanase A) in Clostridium longisporum provides a verified protein exemplar.", "reference": "DOI:10.1146/annurev.micro.50.1.213", "snippet": "The extracellular degradation of the pectin leads to the formation of oligogalacturonides that are catabolized through an intracellular pathway"}], "gene_symbol": "celA", "node_id": "pectin_degradation_protein_component", "node_label": "Endoglucanase A", "protein_label": "Endoglucanase A", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (celA, Endoglucanase A) associated with pectin degradation in Clostridium longisporum.", "sequence_version": 1, "taxon_id": "NCBITaxon:1523", "taxon_label": "Clostridium longisporum", "uniprot_id": "UniProtKB:P54937"}], "scope_notes": "Captures a source-backed protein exemplar (UniProtKB:P54937 in Clostridium longisporum) associated with pectin degradation while full multi-step mechanistic curation remains future work.", "scope_status": "NONMECHANISTIC", "title": "Protein component associated with pectin degradation"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });

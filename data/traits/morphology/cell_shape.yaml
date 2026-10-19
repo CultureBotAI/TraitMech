@@ -190,24 +190,24 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Membrane microdomain scaffolding proteins.
     protein_examples:
-    - uniprot_id: UniProtKB:P0AB40
-      protein_label: Multiple stress resistance protein BhsA
-      gene_symbol: bhsA
-      taxon_id: NCBITaxon:83333
-      taxon_label: Escherichia coli (strain K12)
+    - uniprot_id: UniProtKB:Q01465
+      protein_label: Cell shape-determining protein MreB
+      gene_symbol: mreB
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
       entry_status: REVIEWED
-      proteome_id: UP000000625
+      proteome_id: UP000001570
       retrieved_on: '2026-10-17'
-      entry_version: 116
-      sequence_version: 1
-      role: Exemplar protein (bhsA, Multiple stress resistance protein BhsA) representing
-        flotillins in Escherichia coli (strain K12) for cell shape.
+      entry_version: 148
+      sequence_version: 3
+      role: Exemplar protein (mreB, Cell shape-determining protein MreB) representing
+        flotillins in Bacillus subtilis (strain 168) for cell shape.
       evidence:
       - reference: DOI:10.1038/nrmicro1205
         snippet: crescentin is required for the curved-rod shape
-        notes: Supports flotillins in cell shape; UniProtKB:P0AB40 (bhsA, Multiple
-          stress resistance protein BhsA) in Escherichia coli (strain K12) provides
-          a verified protein exemplar.
+        notes: Supports flotillins in cell shape; UniProtKB:Q01465 (mreB, Cell shape-determining
+          protein MreB) in Bacillus subtilis (strain 168) provides a verified protein
+          exemplar.
   - node_id: cell_wall_synthesis
     label: cell wall synthesis
     node_type: BIOLOGICAL_PROCESS

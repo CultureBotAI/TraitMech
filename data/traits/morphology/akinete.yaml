@@ -57,17 +57,17 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph akinete_graph
-    with GENE_OR_PROTEIN node akinete_protein_component and UniProtKB:P26901 exemplar.'
+    with GENE_OR_PROTEIN node akinete_protein_component and UniProtKB:P27709 exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: akinete_graph
   title: Protein component associated with akinete
-  description: Literature-backed association between Vegetative catalase (UniProtKB:P26901)
-    and akinete.
+  description: Literature-backed association between DNA-binding transcriptional activator
+    HetR (UniProtKB:P27709) and akinete.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P26901 in Bacillus
-    subtilis (strain 168)) associated with akinete while full multi-step mechanistic
-    curation remains future work.
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P27709 in Nostoc
+    sp. (strain PCC 7120 / SAG 25.82 / UTEX 2576)) associated with akinete while full
+    multi-step mechanistic curation remains future work.
   nodes:
   - node_id: akinete_trait
     label: akinete
@@ -77,46 +77,47 @@ causal_graphs:
       enlarged, thick-coated, spore-like dormant cells called akinetes that can germinate
       into vegetative cells.
   - node_id: akinete_protein_component
-    label: Vegetative catalase
+    label: DNA-binding transcriptional activator HetR
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Vegetative catalase) associated with akinete.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (DNA-binding transcriptional activator HetR) associated
+      with akinete.
+    grounding: InterPro:IPR040949
     gene_symbols:
-    - katA
+    - hetR
     protein_examples:
-    - uniprot_id: UniProtKB:P26901
-      protein_label: Vegetative catalase
-      gene_symbol: katA
-      taxon_id: NCBITaxon:224308
-      taxon_label: Bacillus subtilis (strain 168)
+    - uniprot_id: UniProtKB:P27709
+      protein_label: DNA-binding transcriptional activator HetR
+      gene_symbol: hetR
+      taxon_id: NCBITaxon:103690
+      taxon_label: Nostoc sp. (strain PCC 7120 / SAG 25.82 / UTEX 2576)
       entry_status: REVIEWED
-      proteome_id: UP000001570
+      proteome_id: UP000002483
       retrieved_on: '2026-10-17'
-      entry_version: 158
-      sequence_version: 5
-      role: Characteristic protein component (katA, Vegetative catalase) associated
-        with akinete in Bacillus subtilis (strain 168).
+      entry_version: 121
+      sequence_version: 3
+      role: Characteristic protein component (hetR, DNA-binding transcriptional activator
+        HetR) associated with akinete in Nostoc sp. (strain PCC 7120 / SAG 25.82 /
+        UTEX 2576).
       evidence:
-      - reference: DOI:10.1159/000517443
-        snippet: Akinetes are enveloped in a thick protective coat containing a multilayered
-          structure and are able to germinate into new vegetative cells under suitable
-          growth conditions.
-        notes: Supports Vegetative catalase in akinete; UniProtKB:P26901 (katA, Vegetative
-          catalase) in Bacillus subtilis (strain 168) provides a verified protein
-          exemplar.
+      - reference: DOI:10.3389/fmicb.2025.1677844
+        snippet: Raphidiopsis raciborskii (Nostocales) is a successful invader of
+          temperate ecosystems originating from the tropics that forms akinetes in
+          their new habitats to overcome unfavorable winter conditions.
+        notes: Supports DNA-binding transcriptional activator HetR in akinete; UniProtKB:P27709
+          (hetR, DNA-binding transcriptional activator HetR) in Nostoc sp. (strain
+          PCC 7120 / SAG 25.82 / UTEX 2576) provides a verified protein exemplar.
   edges:
   - subject: akinete_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: akinete_trait
-    description: Vegetative catalase (katA, UniProtKB:P26901) contributes to akinete
-      (associated with multilayered, conditions, containing).
+    description: DNA-binding transcriptional activator HetR (hetR, UniProtKB:P27709)
+      contributes to akinete.
     evidence:
-    - reference: DOI:10.1159/000517443
-      snippet: Akinetes are enveloped in a thick protective coat containing a multilayered
-        structure and are able to germinate into new vegetative cells under suitable
-        growth conditions.
-      notes: Supports the functional association between Vegetative catalase (UniProtKB:P26901
-        in Bacillus subtilis (strain 168)) and akinete.
+    - reference: DOI:10.3389/fmicb.2025.1677844
+      snippet: Raphidiopsis raciborskii (Nostocales) is a successful invader of temperate
+        ecosystems originating from the tropics that forms akinetes in their new habitats
+        to overcome unfavorable winter conditions.
+      notes: Supports the functional association between DNA-binding transcriptional
+        activator HetR (UniProtKB:P27709 in Nostoc sp. (strain PCC 7120 / SAG 25.82
+        / UTEX 2576)) and akinete.

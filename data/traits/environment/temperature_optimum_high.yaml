@@ -138,24 +138,25 @@ causal_graphs:
     description: Chaperones that bind denaturing proteins to prevent aggregation under
       heat stress.
     protein_examples:
-    - uniprot_id: UniProtKB:P0A6Z3
-      protein_label: Chaperone protein HtpG
-      gene_symbol: htpG
+    - uniprot_id: UniProtKB:P0C0V0
+      protein_label: Periplasmic serine endoprotease DegP
+      gene_symbol: degP
       taxon_id: NCBITaxon:83333
       taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
       proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 166
+      entry_version: 161
       sequence_version: 1
-      role: Exemplar protein (htpG, Chaperone protein HtpG) representing small heat
-        shock proteins in Escherichia coli (strain K12) for temperature optimum high.
+      role: Exemplar protein (degP, Periplasmic serine endoprotease DegP) representing
+        small heat shock proteins in Escherichia coli (strain K12) for temperature
+        optimum high.
       evidence:
       - reference: DOI:10.1128/mbio.02174-23
         snippet: heat shock genes encoding chaperones, such as DnaK and GroEL
-        notes: Supports small heat shock proteins in temperature optimum high; UniProtKB:P0A6Z3
-          (htpG, Chaperone protein HtpG) in Escherichia coli (strain K12) provides
-          a verified protein exemplar.
+        notes: Supports small heat shock proteins in temperature optimum high; UniProtKB:P0C0V0
+          (degP, Periplasmic serine endoprotease DegP) in Escherichia coli (strain
+          K12) provides a verified protein exemplar.
   - node_id: protein_aggregation_heat
     label: heat-induced protein aggregation
     node_type: BIOLOGICAL_PROCESS
@@ -542,7 +543,7 @@ curation_history:
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P74759 (rgy)
     protein example to node reverse_gyrase; added UniProtKB:P0ACF8 (hns) protein example
-    to node nucleoid_associated_proteins; added UniProtKB:P0A6Z3 (htpG) protein example
+    to node nucleoid_associated_proteins; added UniProtKB:P0C0V0 (degP) protein example
     to node small_heat_shock_proteins; added UniProtKB:Q9V2T8 (thsB) protein example
     to node thermosome.'
   llm_assisted: true

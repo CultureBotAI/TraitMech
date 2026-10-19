@@ -65,34 +65,34 @@ causal_graphs:
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
   - node_id: panchino_gp28_system_protein_component
-    label: Thoeris anti-defense 1
+    label: Endonuclease GajA
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Thoeris anti-defense 1) associated with Panchino
-      gp28 system.
+    description: Protein component (Endonuclease GajA) associated with Panchino gp28
+      system.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - tad1
+    - gajA
     protein_examples:
-    - uniprot_id: UniProtKB:P0DW61
-      protein_label: Thoeris anti-defense 1
-      gene_symbol: tad1
-      taxon_id: NCBITaxon:1392497
-      taxon_label: Clostridioides mangenotii (strain LM2)
+    - uniprot_id: UniProtKB:P0DW47
+      protein_label: Endonuclease GajA
+      gene_symbol: gajA
+      taxon_id: NCBITaxon:1053212
+      taxon_label: Bacillus cereus (strain HuB5-5)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      entry_version: 11
+      entry_version: 12
       sequence_version: 1
-      role: Characteristic protein component (tad1, Thoeris anti-defense 1) associated
-        with Panchino gp28 system in Clostridioides mangenotii (strain LM2).
+      role: Characteristic protein component (gajA, Endonuclease GajA) associated
+        with Panchino gp28 system in Bacillus cereus (strain HuB5-5).
       evidence:
-      - reference: DOI:10.1038/nmicrobiol.2016.251
-        snippet: The Panchino restriction system (gp28) is a strong candidate for
-          conferring this defense
-        notes: Supports Thoeris anti-defense 1 in Panchino gp28 system; UniProtKB:P0DW61
-          (tad1, Thoeris anti-defense 1) in Clostridioides mangenotii (strain LM2)
-          provides a verified protein exemplar.
+      - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+        snippet: '| Panchino_gp28 | 10\.1038/nmicrobiol\.2016\.251 | Prophage-mediated
+          defence against viral attack and viral counter-defence |'
+        notes: Supports Endonuclease GajA in Panchino gp28 system; UniProtKB:P0DW47
+          (gajA, Endonuclease GajA) in Bacillus cereus (strain HuB5-5) provides a
+          verified protein exemplar.
   edges:
   - subject: panchino_gp28_locus
     predicate: contributes to
@@ -144,14 +144,14 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: panchino_gp28_system_trait
-    description: Thoeris anti-defense 1 (tad1, UniProtKB:P0DW61) contributes to Panchino
-      gp28 system (associated with landscape, pangenome, defense).
+    description: Endonuclease GajA (gajA, UniProtKB:P0DW47) contributes to Panchino
+      gp28 system.
     evidence:
     - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
-      snippet: PD-Lambda-2 | 10\.1101/2022\.05\.12\.491691 | Mapping the landscape
-        of anti-phage defense mechanisms in the E\. coli pangenome
-      notes: Supports the functional association between Thoeris anti-defense 1 (UniProtKB:P0DW61
-        in Clostridioides mangenotii (strain LM2)) and Panchino gp28 system.
+      snippet: '| McrBC | 10\.1093/emboj/20\.12\.3210 | The McrBC restriction endonuclease
+        assembles into a ring structure in the presence of G nucleotides |'
+      notes: Supports the functional association between Endonuclease GajA (UniProtKB:P0DW47
+        in Bacillus cereus (strain HuB5-5)) and Panchino gp28 system.
 discussions:
 - discussion_id: panchino_gp28-mechanism-gap
   prompt: Resolve the Panchino gp28 restriction target, methylation requirements,
@@ -198,5 +198,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    panchino_gp28_system_protein_component with UniProtKB:P0DW61 (tad1) exemplar.'
+    panchino_gp28_system_protein_component with UniProtKB:P0DW47 (gajA) exemplar.'
   llm_assisted: true

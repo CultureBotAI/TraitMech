@@ -49,18 +49,18 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph leucine_arylamidase_activity_graph
-    with GENE_OR_PROTEIN node leucine_arylamidase_activity_protein_component and UniProtKB:P0C064
+    with GENE_OR_PROTEIN node leucine_arylamidase_activity_protein_component and UniProtKB:P04825
     exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: leucine_arylamidase_activity_graph
   title: Protein component associated with leucine arylamidase activity
-  description: Literature-backed association between Gramicidin S synthase 2 (UniProtKB:P0C064)
+  description: Literature-backed association between Aminopeptidase N (UniProtKB:P04825)
     and leucine arylamidase activity.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P0C064 in Brevibacillus
-    brevis (Bacillus brevis)) associated with leucine arylamidase activity while full
-    multi-step mechanistic curation remains future work.
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P04825 in Escherichia
+    coli (strain K12)) associated with leucine arylamidase activity while full multi-step
+    mechanistic curation remains future work.
   nodes:
   - node_id: leucine_arylamidase_activity_trait
     label: leucine arylamidase activity
@@ -69,44 +69,45 @@ causal_graphs:
     description: A physiological enzyme-activity phenotype in which a cell produces
       active leucine arylamidase enzymes that hydrolyze leucine arylamide substrates.
   - node_id: leucine_arylamidase_activity_protein_component
-    label: Gramicidin S synthase 2
+    label: Aminopeptidase N
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Gramicidin S synthase 2) associated with leucine
-      arylamidase activity.
+    description: Protein component (Aminopeptidase N) associated with leucine arylamidase
+      activity.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - grsB
+    - pepN
     protein_examples:
-    - uniprot_id: UniProtKB:P0C064
-      protein_label: Gramicidin S synthase 2
-      gene_symbol: grsB
-      taxon_id: NCBITaxon:1393
-      taxon_label: Brevibacillus brevis (Bacillus brevis)
+    - uniprot_id: UniProtKB:P04825
+      protein_label: Aminopeptidase N
+      gene_symbol: pepN
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
+      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 82
+      entry_version: 217
       sequence_version: 2
-      role: Characteristic protein component (grsB, Gramicidin S synthase 2) associated
-        with leucine arylamidase activity in Brevibacillus brevis (Bacillus brevis).
+      role: Characteristic protein component (pepN, Aminopeptidase N) associated with
+        leucine arylamidase activity in Escherichia coli (strain K12).
       evidence:
       - reference: DOI:10.1099/ijsem.0.002327
         snippet: enzyme detection with an API zym kit was positive for alkaline phosphatase,
           esterase, leucine arylamidase, valine arylamidase, acid phosphatase
-        notes: Supports Gramicidin S synthase 2 in leucine arylamidase activity; UniProtKB:P0C064
-          (grsB, Gramicidin S synthase 2) in Brevibacillus brevis (Bacillus brevis)
-          provides a verified protein exemplar.
+        notes: Supports Aminopeptidase N in leucine arylamidase activity; UniProtKB:P04825
+          (pepN, Aminopeptidase N) in Escherichia coli (strain K12) provides a verified
+          protein exemplar.
   edges:
   - subject: leucine_arylamidase_activity_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: leucine_arylamidase_activity_trait
-    description: Gramicidin S synthase 2 (grsB, UniProtKB:P0C064) contributes to leucine
-      arylamidase activity (associated with arylamidase, phosphatase, detection).
+    description: Aminopeptidase N (pepN, UniProtKB:P04825) contributes to leucine
+      arylamidase activity.
     evidence:
     - reference: DOI:10.1099/ijsem.0.002327
       snippet: enzyme detection with an API zym kit was positive for alkaline phosphatase,
         esterase, leucine arylamidase, valine arylamidase, acid phosphatase
-      notes: Supports the functional association between Gramicidin S synthase 2 (UniProtKB:P0C064
-        in Brevibacillus brevis (Bacillus brevis)) and leucine arylamidase activity.
+      notes: Supports the functional association between Aminopeptidase N (UniProtKB:P04825
+        in Escherichia coli (strain K12)) and leucine arylamidase activity.

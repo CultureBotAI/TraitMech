@@ -119,27 +119,24 @@ causal_graphs:
     description: Choline dehydrogenase (BetA) and betaine aldehyde dehydrogenase (BetB)
       converting choline to glycine betaine.
     protein_examples:
-    - uniprot_id: UniProtKB:Q4A0Q1
+    - uniprot_id: UniProtKB:P17444
       protein_label: Oxygen-dependent choline dehydrogenase
       gene_symbol: betA
-      taxon_id: NCBITaxon:342451
-      taxon_label: Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
-        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
-      proteome_id: UP000006371
+      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 127
+      entry_version: 188
       sequence_version: 1
       role: Exemplar protein (betA, Oxygen-dependent choline dehydrogenase) representing
-        BetA/BetB pathway in Staphylococcus saprophyticus subsp. saprophyticus (strain
-        ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) for NaCl range mid2.
+        BetA/BetB pathway in Escherichia coli (strain K12) for NaCl range mid2.
       evidence:
       - reference: DOI:10.1093/femsre/fuy009
         snippet: salt concentrations up to NaCl saturation
-        notes: Supports BetA/BetB pathway in NaCl range mid2; UniProtKB:Q4A0Q1 (betA,
-          Oxygen-dependent choline dehydrogenase) in Staphylococcus saprophyticus
-          subsp. saprophyticus (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC
-          7292 / S-41) provides a verified protein exemplar.
+        notes: Supports BetA/BetB pathway in NaCl range mid2; UniProtKB:P17444 (betA,
+          Oxygen-dependent choline dehydrogenase) in Escherichia coli (strain K12)
+          provides a verified protein exemplar.
   - node_id: glycine_betaine
     label: glycine betaine
     node_type: CHEMICAL
@@ -297,6 +294,6 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q9ZEU6 (ectC)
-    protein example to node ectABC_enzyme_module; added UniProtKB:Q4A0Q1 (betA) protein
+    protein example to node ectABC_enzyme_module; added UniProtKB:P17444 (betA) protein
     example to node betAB_pathway.'
   llm_assisted: true

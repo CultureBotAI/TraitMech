@@ -120,7 +120,7 @@ causal_graphs:
     predicate_id: RO:0002326
     object: indole_test_positive_trait
     description: Tryptophanase (tnaA, UniProtKB:P0A853) contributes to indole test
-      positive (associated with enterotoxigenic, escherichia, tryptophan).
+      positive.
     evidence:
     - reference: DOI:10.1128/AEM.02787-15
       snippet: enterotoxigenic Escherichia coli strain H10407 produces 3.3 ± 0.22

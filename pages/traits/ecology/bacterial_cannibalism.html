@@ -69,9 +69,9 @@
 
     <div class="card causal-graph-card">
       <h2>Protein component associated with bacterial cannibalism</h2>
-      <p class="meta">Literature-backed association between RNA polymerase sigma-F factor (UniProtKB:P07860) and bacterial cannibalism.</p>
+      <p class="meta">Literature-backed association between Stage 0 sporulation protein A (UniProtKB:P06534) and bacterial cannibalism.</p>
 
-      <p class="graph-scope"><code>NONMECHANISTIC</code> · Captures a source-backed protein exemplar (UniProtKB:P07860 in Bacillus subtilis (strain 168)) associated with bacterial cannibalism while full multi-step mechanistic curation remains future work.</p>
+      <p class="graph-scope"><code>NONMECHANISTIC</code> · Captures a source-backed protein exemplar (UniProtKB:P06534 in Bacillus subtilis (strain 168)) associated with bacterial cannibalism while full multi-step mechanistic curation remains future work.</p>
 
 
       <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
@@ -90,17 +90,17 @@
         <ul>
 
           <li id="pathograph-1-edge-1">
-            <strong>RNA polymerase sigma-F factor</strong>
+            <strong>Stage 0 sporulation protein A</strong>
             <span class="edge-predicate">contributes to</span>
             <strong>bacterial cannibalism</strong>
             <code>RO:0002326</code>
-            <p>RNA polymerase sigma-F factor (sigF, UniProtKB:P07860) contributes to bacterial cannibalism (associated with cannibalism, established, sporulation).</p>
+            <p>Stage 0 sporulation protein A (spo0A, UniProtKB:P06534) contributes to bacterial cannibalism.</p>
             <ul>
 
               <li>
                 <a href="https://doi.org/10.1128/mbio.00525-26" rel="nofollow noreferrer"><code>DOI:10.1128/mbio.00525-26</code></a>
                 <span class="evidence-snippet">our data challenge the established role of cannibalism-dependent killing as the mechanism behind this sporulation delay.</span>
-                <span class="meta">Supports the functional association between RNA polymerase sigma-F factor (UniProtKB:P07860 in Bacillus subtilis (strain 168)) and bacterial cannibalism.</span>
+                <span class="meta">Supports the functional association between Stage 0 sporulation protein A (UniProtKB:P06534 in Bacillus subtilis (strain 168)) and bacterial cannibalism.</span>
               </li>
 
             </ul>
@@ -121,11 +121,11 @@
             <tbody>
 
               <tr>
-                <td>RNA polymerase sigma-F factor</td>
+                <td>Stage 0 sporulation protein A</td>
                 <td>
 
-                  <a href="https://www.uniprot.org/uniprotkb/P07860/entry" rel="nofollow noreferrer"><code>UniProtKB:P07860</code></a>
-                  <br>RNA polymerase sigma-F factor <span class="meta">(sigF)</span>
+                  <a href="https://www.uniprot.org/uniprotkb/P06534/entry" rel="nofollow noreferrer"><code>UniProtKB:P06534</code></a>
+                  <br>Stage 0 sporulation protein A <span class="meta">(spo0A)</span>
                 </td>
                 <td>
 
@@ -134,16 +134,16 @@
                 </td>
                 <td>
                   <code>REVIEWED</code><br>
-                  <span class="meta">retrieved 2026-10-17 · entry v175 · sequence v1</span>
+                  <span class="meta">retrieved 2026-10-17 · entry v189 · sequence v1</span>
                 </td>
                 <td>
-                  <p>Characteristic protein component (sigF, RNA polymerase sigma-F factor) associated with bacterial cannibalism in Bacillus subtilis (strain 168).</p>
+                  <p>Characteristic protein component (spo0A, Stage 0 sporulation protein A) associated with bacterial cannibalism in Bacillus subtilis (strain 168).</p>
                   <ul>
 
                     <li>
                       <a href="https://doi.org/10.1128/mbio.00525-26" rel="nofollow noreferrer"><code>DOI:10.1128/mbio.00525-26</code></a>
                       <span class="evidence-snippet">our data challenge the established role of cannibalism-dependent killing as the mechanism behind this sporulation delay.</span>
-                      <span class="meta">Supports RNA polymerase sigma-F factor in bacterial cannibalism; UniProtKB:P07860 (sigF, RNA polymerase sigma-F factor) in Bacillus subtilis (strain 168) provides a verified protein exemplar.</span>
+                      <span class="meta">Supports Stage 0 sporulation protein A in bacterial cannibalism; UniProtKB:P06534 (spo0A, Stage 0 sporulation protein A) in Bacillus subtilis (strain 168) provides a verified protein exemplar.</span>
                     </li>
 
                   </ul>
@@ -292,8 +292,14 @@
 
         <li>
           <time>2026-10-17T09:00:00Z</time> ·
+          <strong>REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP</strong> · codex
+          <p class="changes">Reviewed canonical_examples status alongside NONMECHANISTIC protein exemplar graph for bacterial cannibalism; isolate-level canonical example remains deferred pending explicit strain-level literature.</p>
+        </li>
+
+        <li>
+          <time>2026-10-17T09:00:00Z</time> ·
           <strong>CURATE_PROTEIN_TAXON_EXAMPLE</strong> · codex
-          <p class="changes">Curated verified UniProtKB protein_examples: added causal graph bacterial_cannibalism_graph with GENE_OR_PROTEIN node bacterial_cannibalism_protein_component and UniProtKB:P07860 exemplar.</p>
+          <p class="changes">Curated verified UniProtKB protein_examples: added causal graph bacterial_cannibalism_graph with GENE_OR_PROTEIN node bacterial_cannibalism_protein_component and UniProtKB:P06534 exemplar.</p>
         </li>
 
       </ol>
@@ -672,7 +678,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Literature-backed association between RNA polymerase sigma-F factor (UniProtKB:P07860) and bacterial cannibalism.", "edges": [{"description": "RNA polymerase sigma-F factor (sigF, UniProtKB:P07860) contributes to bacterial cannibalism (associated with cannibalism, established, sporulation).", "evidence": [{"notes": "Supports the functional association between RNA polymerase sigma-F factor (UniProtKB:P07860 in Bacillus subtilis (strain 168)) and bacterial cannibalism.", "reference": "DOI:10.1128/mbio.00525-26", "snippet": "our data challenge the established role of cannibalism-dependent killing as the mechanism behind this sporulation delay."}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "bacterial_cannibalism_protein_component", "target": "bacterial_cannibalism_trait"}], "evidence_rows": [{"description": "RNA polymerase sigma-F factor (sigF, UniProtKB:P07860) contributes to bacterial cannibalism (associated with cannibalism, established, sporulation).", "edge_id": "edge-1", "evidence": [{"notes": "Supports the functional association between RNA polymerase sigma-F factor (UniProtKB:P07860 in Bacillus subtilis (strain 168)) and bacterial cannibalism.", "reference": "DOI:10.1128/mbio.00525-26", "snippet": "our data challenge the established role of cannibalism-dependent killing as the mechanism behind this sporulation delay."}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "RNA polymerase sigma-F factor", "target": "bacterial cannibalism"}], "graph_id": "bacterial_cannibalism_graph", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Protein component (RNA polymerase sigma-F factor) associated with bacterial cannibalism.", "grounding": null, "id": "bacterial_cannibalism_protein_component", "is_orphan": false, "label": "RNA polymerase sigma-F factor", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 175, "evidence": [{"notes": "Supports RNA polymerase sigma-F factor in bacterial cannibalism; UniProtKB:P07860 (sigF, RNA polymerase sigma-F factor) in Bacillus subtilis (strain 168) provides a verified protein exemplar.", "reference": "DOI:10.1128/mbio.00525-26", "snippet": "our data challenge the established role of cannibalism-dependent killing as the mechanism behind this sporulation delay."}], "gene_symbol": "sigF", "protein_label": "RNA polymerase sigma-F factor", "proteome_id": "UP000001570", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (sigF, RNA polymerase sigma-F factor) associated with bacterial cannibalism in Bacillus subtilis (strain 168).", "sequence_version": 1, "taxon_id": "NCBITaxon:224308", "taxon_label": "Bacillus subtilis (strain 168)", "uniprot_id": "UniProtKB:P07860"}], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "A predatory bacterial phenotype in which cells kill susceptible conspecific cells and obtain nutrients from the killed cells.", "grounding": "traitmech:000626", "id": "bacterial_cannibalism_trait", "is_orphan": false, "label": "bacterial cannibalism", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 175, "evidence": [{"notes": "Supports RNA polymerase sigma-F factor in bacterial cannibalism; UniProtKB:P07860 (sigF, RNA polymerase sigma-F factor) in Bacillus subtilis (strain 168) provides a verified protein exemplar.", "reference": "DOI:10.1128/mbio.00525-26", "snippet": "our data challenge the established role of cannibalism-dependent killing as the mechanism behind this sporulation delay."}], "gene_symbol": "sigF", "node_id": "bacterial_cannibalism_protein_component", "node_label": "RNA polymerase sigma-F factor", "protein_label": "RNA polymerase sigma-F factor", "proteome_id": "UP000001570", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (sigF, RNA polymerase sigma-F factor) associated with bacterial cannibalism in Bacillus subtilis (strain 168).", "sequence_version": 1, "taxon_id": "NCBITaxon:224308", "taxon_label": "Bacillus subtilis (strain 168)", "uniprot_id": "UniProtKB:P07860"}], "scope_notes": "Captures a source-backed protein exemplar (UniProtKB:P07860 in Bacillus subtilis (strain 168)) associated with bacterial cannibalism while full multi-step mechanistic curation remains future work.", "scope_status": "NONMECHANISTIC", "title": "Protein component associated with bacterial cannibalism"}];
+  var graphs = [{"description": "Literature-backed association between Stage 0 sporulation protein A (UniProtKB:P06534) and bacterial cannibalism.", "edges": [{"description": "Stage 0 sporulation protein A (spo0A, UniProtKB:P06534) contributes to bacterial cannibalism.", "evidence": [{"notes": "Supports the functional association between Stage 0 sporulation protein A (UniProtKB:P06534 in Bacillus subtilis (strain 168)) and bacterial cannibalism.", "reference": "DOI:10.1128/mbio.00525-26", "snippet": "our data challenge the established role of cannibalism-dependent killing as the mechanism behind this sporulation delay."}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "bacterial_cannibalism_protein_component", "target": "bacterial_cannibalism_trait"}], "evidence_rows": [{"description": "Stage 0 sporulation protein A (spo0A, UniProtKB:P06534) contributes to bacterial cannibalism.", "edge_id": "edge-1", "evidence": [{"notes": "Supports the functional association between Stage 0 sporulation protein A (UniProtKB:P06534 in Bacillus subtilis (strain 168)) and bacterial cannibalism.", "reference": "DOI:10.1128/mbio.00525-26", "snippet": "our data challenge the established role of cannibalism-dependent killing as the mechanism behind this sporulation delay."}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Stage 0 sporulation protein A", "target": "bacterial cannibalism"}], "graph_id": "bacterial_cannibalism_graph", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Protein component (Stage 0 sporulation protein A) associated with bacterial cannibalism.", "grounding": null, "id": "bacterial_cannibalism_protein_component", "is_orphan": false, "label": "Stage 0 sporulation protein A", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 189, "evidence": [{"notes": "Supports Stage 0 sporulation protein A in bacterial cannibalism; UniProtKB:P06534 (spo0A, Stage 0 sporulation protein A) in Bacillus subtilis (strain 168) provides a verified protein exemplar.", "reference": "DOI:10.1128/mbio.00525-26", "snippet": "our data challenge the established role of cannibalism-dependent killing as the mechanism behind this sporulation delay."}], "gene_symbol": "spo0A", "protein_label": "Stage 0 sporulation protein A", "proteome_id": "UP000001570", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (spo0A, Stage 0 sporulation protein A) associated with bacterial cannibalism in Bacillus subtilis (strain 168).", "sequence_version": 1, "taxon_id": "NCBITaxon:224308", "taxon_label": "Bacillus subtilis (strain 168)", "uniprot_id": "UniProtKB:P06534"}], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "A predatory bacterial phenotype in which cells kill susceptible conspecific cells and obtain nutrients from the killed cells.", "grounding": "traitmech:000626", "id": "bacterial_cannibalism_trait", "is_orphan": false, "label": "bacterial cannibalism", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 189, "evidence": [{"notes": "Supports Stage 0 sporulation protein A in bacterial cannibalism; UniProtKB:P06534 (spo0A, Stage 0 sporulation protein A) in Bacillus subtilis (strain 168) provides a verified protein exemplar.", "reference": "DOI:10.1128/mbio.00525-26", "snippet": "our data challenge the established role of cannibalism-dependent killing as the mechanism behind this sporulation delay."}], "gene_symbol": "spo0A", "node_id": "bacterial_cannibalism_protein_component", "node_label": "Stage 0 sporulation protein A", "protein_label": "Stage 0 sporulation protein A", "proteome_id": "UP000001570", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (spo0A, Stage 0 sporulation protein A) associated with bacterial cannibalism in Bacillus subtilis (strain 168).", "sequence_version": 1, "taxon_id": "NCBITaxon:224308", "taxon_label": "Bacillus subtilis (strain 168)", "uniprot_id": "UniProtKB:P06534"}], "scope_notes": "Captures a source-backed protein exemplar (UniProtKB:P06534 in Bacillus subtilis (strain 168)) associated with bacterial cannibalism while full multi-step mechanistic curation remains future work.", "scope_status": "NONMECHANISTIC", "title": "Protein component associated with bacterial cannibalism"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });

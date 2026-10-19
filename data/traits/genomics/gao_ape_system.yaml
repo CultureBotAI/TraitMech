@@ -128,37 +128,33 @@ causal_graphs:
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
   - node_id: gao_ape_system_protein_component
-    label: Ribonuclease Z
+    label: Endoribonuclease ToxN
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Ribonuclease Z) associated with ApeA system.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Endoribonuclease ToxN) associated with ApeA system.
+    grounding: InterPro:IPR025911
     gene_symbols:
-    - rnz
+    - toxN
     protein_examples:
-    - uniprot_id: UniProtKB:Q49XV1
-      protein_label: Ribonuclease Z
-      gene_symbol: rnz
-      taxon_id: NCBITaxon:342451
-      taxon_label: Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
-        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+    - uniprot_id: UniProtKB:B8X8Z0
+      protein_label: Endoribonuclease ToxN
+      gene_symbol: toxN
+      taxon_id: NCBITaxon:29471
+      taxon_label: Pectobacterium atrosepticum (Erwinia carotovora subsp. atroseptica)
       entry_status: REVIEWED
-      proteome_id: UP000006371
       retrieved_on: '2026-10-17'
-      entry_version: 116
+      entry_version: 47
       sequence_version: 1
-      role: Characteristic protein component (rnz, Ribonuclease Z) associated with
-        ApeA system in Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
-        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41).
+      role: Characteristic protein component (toxN, Endoribonuclease ToxN) associated
+        with ApeA system in Pectobacterium atrosepticum (Erwinia carotovora subsp.
+        atroseptica).
       evidence:
       - reference: DOI:10.64898/2026.01.26.701840
-        snippet: We further demonstrate that ApeA functions as an abortive infection
-          system by cleaving host tRNAs within their anticodon loops to arrest translation
-        notes: Supports Ribonuclease Z in ApeA system; UniProtKB:Q49XV1 (rnz, Ribonuclease
-          Z) in Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC 15305
-          / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) provides a verified protein
-          exemplar.
+        snippet: Together, these results demonstrate that Ec1ApeA exhibits endoribonuclease
+          activity targeting the tRNA anticodon loop, which is specifically activated
+          during bacteriophage infection.
+        notes: Supports Endoribonuclease ToxN in ApeA system; UniProtKB:B8X8Z0 (toxN,
+          Endoribonuclease ToxN) in Pectobacterium atrosepticum (Erwinia carotovora
+          subsp. atroseptica) provides a verified protein exemplar.
   edges:
   - subject: gao_ape_locus
     predicate: contributes to
@@ -291,8 +287,8 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: apea_system_trait
-    description: Ribonuclease Z (rnz, UniProtKB:Q49XV1) contributes to ApeA system
-      (associated with trimmed, custom, einsi).
+    description: Endoribonuclease ToxN (toxN, UniProtKB:B8X8Z0) contributes to ApeA
+      system.
     evidence:
     - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
       snippet: '| RM_Type_IIG__Type_IIG_1 | | RM_Type_IIG | Custom | 300 | | RM_Type_IIG__Type_IIG_2
@@ -302,9 +298,9 @@ causal_graphs:
         | | RM_Type_IIG | Custom | 300 | | RM_Type_IIG__Type_IIG_FAM_1.einsi_trimmed
         | | RM_Type_IIG | Custom | 300 | | RM_Type_IIG__Type_IIG_FAM_2.einsi_trimmed
         | | RM_Type_IIG | Custom | 300 |'
-      notes: Supports the functional association between Ribonuclease Z (UniProtKB:Q49XV1
-        in Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC 15305 /
-        DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)) and ApeA system.
+      notes: Supports the functional association between Endoribonuclease ToxN (UniProtKB:B8X8Z0
+        in Pectobacterium atrosepticum (Erwinia carotovora subsp. atroseptica)) and
+        ApeA system.
 discussions:
 - discussion_id: apea-trigger-and-homolog-scope-gap
   prompt: Resolve ApeA natural-host loci, homolog-specific DNA-phage versus RNA-phage
@@ -353,5 +349,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    gao_ape_system_protein_component with UniProtKB:Q49XV1 (rnz) exemplar.'
+    gao_ape_system_protein_component with UniProtKB:B8X8Z0 (toxN) exemplar.'
   llm_assisted: true

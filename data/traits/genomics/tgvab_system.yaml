@@ -101,36 +101,35 @@ causal_graphs:
     description: Possession of a methyltransferase and restriction endonuclease system
       for self/non-self DNA discrimination.
   - node_id: tgvab_system_protein_component
-    label: Adenine-specific methyltransferase PglX
+    label: Type IV methyl-directed restriction enzyme EcoKMcrB subunit
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Adenine-specific methyltransferase PglX) associated
-      with TgvAB system.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Type IV methyl-directed restriction enzyme EcoKMcrB
+      subunit) associated with TgvAB system.
+    grounding: InterPro:IPR003593
     gene_symbols:
-    - pglX
+    - mcrB
     protein_examples:
-    - uniprot_id: UniProtKB:Q8CJM2
-      protein_label: Adenine-specific methyltransferase PglX
-      gene_symbol: pglX
-      taxon_id: NCBITaxon:100226
-      taxon_label: Streptomyces coelicolor (strain ATCC BAA-471 / A3(2) / M145)
+    - uniprot_id: UniProtKB:P15005
+      protein_label: Type IV methyl-directed restriction enzyme EcoKMcrB subunit
+      gene_symbol: mcrB
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
-      proteome_id: UP000001973
+      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 102
-      sequence_version: 1
-      role: Characteristic protein component (pglX, Adenine-specific methyltransferase
-        PglX) associated with TgvAB system in Streptomyces coelicolor (strain ATCC
-        BAA-471 / A3(2) / M145).
+      entry_version: 197
+      sequence_version: 3
+      role: Characteristic protein component (mcrB, Type IV methyl-directed restriction
+        enzyme EcoKMcrB subunit) associated with TgvAB system in Escherichia coli
+        (strain K12).
       evidence:
       - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
         snippet: '| TgvAB | 10\.1128/jb\.00145-24 | Vibrio cholerae pathogenicity
           island 2 encodes two distinct types of restriction systems |'
-        notes: Supports Adenine-specific methyltransferase PglX in TgvAB system; UniProtKB:Q8CJM2
-          (pglX, Adenine-specific methyltransferase PglX) in Streptomyces coelicolor
-          (strain ATCC BAA-471 / A3(2) / M145) provides a verified protein exemplar.
+        notes: Supports Type IV methyl-directed restriction enzyme EcoKMcrB subunit
+          in TgvAB system; UniProtKB:P15005 (mcrB, Type IV methyl-directed restriction
+          enzyme EcoKMcrB subunit) in Escherichia coli (strain K12) provides a verified
+          protein exemplar.
   edges:
   - subject: tgvab_locus
     predicate: enables
@@ -234,20 +233,16 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: tgvab_system_trait
-    description: Adenine-specific methyltransferase PglX (pglX, UniProtKB:Q8CJM2)
-      contributes to TgvAB system (associated with trimmed, custom, einsi).
+    description: Type IV methyl-directed restriction enzyme EcoKMcrB subunit (mcrB,
+      UniProtKB:P15005) contributes to TgvAB system.
     evidence:
-    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
-      snippet: '| RM_Type_IIG__Type_IIG_1 | | RM_Type_IIG | Custom | 300 | | RM_Type_IIG__Type_IIG_2
-        | | RM_Type_IIG | Custom | 300 | | RM_Type_IIG__Type_IIG_3 | | RM_Type_IIG
-        | Custom | 300 | | RM_Type_IIG__Type_IIG_4 | | RM_Type_IIG | Custom | 300
-        | | RM_Type_IIG__Type_IIG_5 | | RM_Type_IIG | Custom | 300 | | RM_Type_IIG__Type_IIG_FAM_0.einsi_trimmed
-        | | RM_Type_IIG | Custom | 300 | | RM_Type_IIG__Type_IIG_FAM_1.einsi_trimmed
-        | | RM_Type_IIG | Custom | 300 | | RM_Type_IIG__Type_IIG_FAM_2.einsi_trimmed
-        | | RM_Type_IIG | Custom | 300 |'
-      notes: Supports the functional association between Adenine-specific methyltransferase
-        PglX (UniProtKB:Q8CJM2 in Streptomyces coelicolor (strain ATCC BAA-471 / A3(2)
-        / M145)) and TgvAB system.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: '| PvuRts1I | 10\.1093/nar/gkr607 | Comparative characterization of
+        the PvuRts1I family of restriction enzymes and their application in mapping
+        genomic 5-hydroxymethylcytosine |'
+      notes: Supports the functional association between Type IV methyl-directed restriction
+        enzyme EcoKMcrB subunit (UniProtKB:P15005 in Escherichia coli (strain K12))
+        and TgvAB system.
 discussions:
 - discussion_id: tgvab-defensefinder-rule-gap
   prompt: Resolve TgvAB native host breadth, TgvA/TgvB biochemical roles, phage substrate
@@ -304,5 +299,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    tgvab_system_protein_component with UniProtKB:Q8CJM2 (pglX) exemplar.'
+    tgvab_system_protein_component with UniProtKB:P15005 (mcrB) exemplar.'
   llm_assisted: true

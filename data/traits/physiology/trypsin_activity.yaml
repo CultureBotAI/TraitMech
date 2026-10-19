@@ -75,18 +75,18 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph trypsin_activity_graph
-    with GENE_OR_PROTEIN node trypsin_activity_protein_component and UniProtKB:Q99V45
+    with GENE_OR_PROTEIN node trypsin_activity_protein_component and UniProtKB:P0C0V0
     exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: trypsin_activity_graph
   title: Protein component associated with trypsin activity
-  description: Literature-backed association between Glutamyl endopeptidase (UniProtKB:Q99V45)
-    and trypsin activity.
+  description: Literature-backed association between Periplasmic serine endoprotease
+    DegP (UniProtKB:P0C0V0) and trypsin activity.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q99V45 in Staphylococcus
-    aureus (strain Mu50 / ATCC 700699)) associated with trypsin activity while full
-    multi-step mechanistic curation remains future work.
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P0C0V0 in Escherichia
+    coli (strain K12)) associated with trypsin activity while full multi-step mechanistic
+    curation remains future work.
   nodes:
   - node_id: trypsin_activity_trait
     label: trypsin activity
@@ -96,46 +96,45 @@ causal_graphs:
       trypsin-like serine endopeptidase activity, preferentially cleaving peptide
       bonds on the carboxyl side of arginine or lysine residues.
   - node_id: trypsin_activity_protein_component
-    label: Glutamyl endopeptidase
+    label: Periplasmic serine endoprotease DegP
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Glutamyl endopeptidase) associated with trypsin
-      activity.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Periplasmic serine endoprotease DegP) associated
+      with trypsin activity.
+    grounding: InterPro:IPR001478
     gene_symbols:
-    - sspA
+    - degP
     protein_examples:
-    - uniprot_id: UniProtKB:Q99V45
-      protein_label: Glutamyl endopeptidase
-      gene_symbol: sspA
-      taxon_id: NCBITaxon:158878
-      taxon_label: Staphylococcus aureus (strain Mu50 / ATCC 700699)
+    - uniprot_id: UniProtKB:P0C0V0
+      protein_label: Periplasmic serine endoprotease DegP
+      gene_symbol: degP
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
+      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 126
+      entry_version: 161
       sequence_version: 1
-      role: Characteristic protein component (sspA, Glutamyl endopeptidase) associated
-        with trypsin activity in Staphylococcus aureus (strain Mu50 / ATCC 700699).
+      role: Characteristic protein component (degP, Periplasmic serine endoprotease
+        DegP) associated with trypsin activity in Escherichia coli (strain K12).
       evidence:
       - reference: DOI:10.1371/journal.pone.0322500
         snippet: Enzyme activities of acid- and alkaline-phosphatases, esterase, esterase
           lipase, leucine arylamidase, trypsin, naphthol-AS-BI phosphohydrolase, and
           alpha-glucosidase are present when assayed with API ZYM system.
-        notes: Supports Glutamyl endopeptidase in trypsin activity; UniProtKB:Q99V45
-          (sspA, Glutamyl endopeptidase) in Staphylococcus aureus (strain Mu50 / ATCC
-          700699) provides a verified protein exemplar.
+        notes: Supports Periplasmic serine endoprotease DegP in trypsin activity;
+          UniProtKB:P0C0V0 (degP, Periplasmic serine endoprotease DegP) in Escherichia
+          coli (strain K12) provides a verified protein exemplar.
   edges:
   - subject: trypsin_activity_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: trypsin_activity_trait
-    description: Glutamyl endopeptidase (sspA, UniProtKB:Q99V45) contributes to trypsin
-      activity (associated with phosphohydrolase, phosphatases, arylamidase).
+    description: Periplasmic serine endoprotease DegP (degP, UniProtKB:P0C0V0) contributes
+      to trypsin activity.
     evidence:
     - reference: DOI:10.1371/journal.pone.0322500
       snippet: Enzyme activities of acid- and alkaline-phosphatases, esterase, esterase
         lipase, leucine arylamidase, trypsin, naphthol-AS-BI phosphohydrolase, and
         alpha-glucosidase are present when assayed with API ZYM system.
-      notes: Supports the functional association between Glutamyl endopeptidase (UniProtKB:Q99V45
-        in Staphylococcus aureus (strain Mu50 / ATCC 700699)) and trypsin activity.
+      notes: Supports the functional association between Periplasmic serine endoprotease
+        DegP (UniProtKB:P0C0V0 in Escherichia coli (strain K12)) and trypsin activity.

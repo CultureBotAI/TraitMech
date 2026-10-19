@@ -37,7 +37,7 @@ causal_graphs:
   scope_status: NONMECHANISTIC
   scope_notes: This record is an upper preference, broad tolerance, or central-range
     classification spanning multiple unrelated adaptations; contextual protein nodes
-    are retained without assigning a misleading token UniProt example.
+    are retained with source-backed UniProtKB exemplars.
   description: DOI-backed graph linking ambient molecular-oxygen availability to the
     four child oxygen-preference phenotypes (aerobic, anaerobic, microaerophilic,
     facultative) that classify how organisms use or tolerate O2.

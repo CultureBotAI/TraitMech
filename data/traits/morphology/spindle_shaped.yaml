@@ -60,34 +60,34 @@ causal_graphs:
     description: A differentiated, non-spherical cell shape produced by spatially
       patterned wall growth.
   - node_id: spindle_shaped_protein_component
-    label: Peptidoglycan glycosyltransferase MrdB
+    label: Cell shape-determining protein MreB
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Peptidoglycan glycosyltransferase MrdB) associated
+    description: Protein component (Cell shape-determining protein MreB) associated
       with spindle shaped.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - mrdB
+    - mreB
     protein_examples:
-    - uniprot_id: UniProtKB:P0ABG7
-      protein_label: Peptidoglycan glycosyltransferase MrdB
-      gene_symbol: mrdB
-      taxon_id: NCBITaxon:83333
-      taxon_label: Escherichia coli (strain K12)
+    - uniprot_id: UniProtKB:Q01465
+      protein_label: Cell shape-determining protein MreB
+      gene_symbol: mreB
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
       entry_status: REVIEWED
-      proteome_id: UP000000625
+      proteome_id: UP000001570
       retrieved_on: '2026-10-17'
-      entry_version: 133
-      sequence_version: 1
-      role: Characteristic protein component (mrdB, Peptidoglycan glycosyltransferase
-        MrdB) associated with spindle shaped in Escherichia coli (strain K12).
+      entry_version: 148
+      sequence_version: 3
+      role: Characteristic protein component (mreB, Cell shape-determining protein
+        MreB) associated with spindle shaped in Bacillus subtilis (strain 168).
       evidence:
       - reference: DOI:10.1146/annurev-cellbio-101011-155745
         snippet: MreB-directed peptidoglycan synthesis
-        notes: Supports Peptidoglycan glycosyltransferase MrdB in spindle shaped;
-          UniProtKB:P0ABG7 (mrdB, Peptidoglycan glycosyltransferase MrdB) in Escherichia
-          coli (strain K12) provides a verified protein exemplar.
+        notes: Supports Cell shape-determining protein MreB in spindle shaped; UniProtKB:Q01465
+          (mreB, Cell shape-determining protein MreB) in Bacillus subtilis (strain
+          168) provides a verified protein exemplar.
   edges:
   - subject: symmetric_polar_pg
     predicate: has output
@@ -140,13 +140,13 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: spindle_shaped_trait
-    description: Peptidoglycan glycosyltransferase MrdB (mrdB, UniProtKB:P0ABG7) contributes
-      to spindle shaped (associated with peptidoglycan, directed, mreb).
+    description: Cell shape-determining protein MreB (mreB, UniProtKB:Q01465) contributes
+      to spindle shaped.
     evidence:
     - reference: DOI:10.1146/annurev-cellbio-101011-155745
       snippet: MreB-directed peptidoglycan synthesis
-      notes: Supports the functional association between Peptidoglycan glycosyltransferase
-        MrdB (UniProtKB:P0ABG7 in Escherichia coli (strain K12)) and spindle shaped.
+      notes: Supports the functional association between Cell shape-determining protein
+        MreB (UniProtKB:Q01465 in Bacillus subtilis (strain 168)) and spindle shaped.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.899347+00:00'
   curator: seed_from_metpo
@@ -220,5 +220,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    spindle_shaped_protein_component with UniProtKB:P0ABG7 (mrdB) exemplar.'
+    spindle_shaped_protein_component with UniProtKB:Q01465 (mreB) exemplar.'
   llm_assisted: true

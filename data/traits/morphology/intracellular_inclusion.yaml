@@ -166,28 +166,28 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Enzymes/pathway segment sequestered within a microcompartment shell.
     protein_examples:
-    - uniprot_id: UniProtKB:Q03511
-      protein_label: Carboxysome shell protein CcmK2
-      gene_symbol: ccmK2
-      taxon_id: NCBITaxon:1140
-      taxon_label: Synechococcus elongatus (strain ATCC 33912 / PCC 7942 / FACHB-805)
-        (Anacystis nidulans R2)
+    - uniprot_id: UniProtKB:Q82TG6
+      protein_label: Ribulose bisphosphate carboxylase large chain
+      gene_symbol: cbbL
+      taxon_id: NCBITaxon:228410
+      taxon_label: Nitrosomonas europaea (strain ATCC 19718 / CIP 103999 / KCTC 2705
+        / NBRC 14298)
       entry_status: REVIEWED
-      proteome_id: UP000889800
+      proteome_id: UP000001416
       retrieved_on: '2026-10-17'
-      entry_version: 111
+      entry_version: 121
       sequence_version: 1
-      role: Exemplar protein (ccmK2, Carboxysome shell protein CcmK2) representing
-        encapsulated metabolic enzymes in Synechococcus elongatus (strain ATCC 33912
-        / PCC 7942 / FACHB-805) (Anacystis nidulans R2) for intracellular inclusion.
+      role: Exemplar protein (cbbL, Ribulose bisphosphate carboxylase large chain)
+        representing encapsulated metabolic enzymes in Nitrosomonas europaea (strain
+        ATCC 19718 / CIP 103999 / KCTC 2705 / NBRC 14298) for intracellular inclusion.
       evidence:
-      - reference: DOI:10.1186/s13036-024-00426-3
-        snippet: The gas vesicle (GV) is like a hollow nanoparticle consisting of
-          an internal gas and a protein shell
+      - reference: DOI:10.1111/mmi.15330
+        snippet: others synthesizing iron sulfide greigite (Fe3S4), and some capable
+          of producing both, depending on their environmental conditions
         notes: Supports encapsulated metabolic enzymes in intracellular inclusion;
-          UniProtKB:Q03511 (ccmK2, Carboxysome shell protein CcmK2) in Synechococcus
-          elongatus (strain ATCC 33912 / PCC 7942 / FACHB-805) (Anacystis nidulans
-          R2) provides a verified protein exemplar.
+          UniProtKB:Q82TG6 (cbbL, Ribulose bisphosphate carboxylase large chain) in
+          Nitrosomonas europaea (strain ATCC 19718 / CIP 103999 / KCTC 2705 / NBRC
+          14298) provides a verified protein exemplar.
   - node_id: sulfide_oxidation
     label: sulfide oxidation
     node_type: BIOLOGICAL_PROCESS
@@ -400,6 +400,6 @@ curation_history:
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q4A040 (ppk)
     protein example to node polyphosphate_kinase; added UniProtKB:P08958 (gvpA) protein
-    example to node gas_vesicle_proteins; added UniProtKB:Q03511 (ccmK2) protein example
+    example to node gas_vesicle_proteins; added UniProtKB:Q82TG6 (cbbL) protein example
     to node bmc_metabolic_cargo.'
   llm_assisted: true

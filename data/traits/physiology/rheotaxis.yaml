@@ -65,16 +65,17 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph rheotaxis_graph
-    with GENE_OR_PROTEIN node rheotaxis_protein_component and UniProtKB:Q46865 exemplar.'
+    with GENE_OR_PROTEIN node rheotaxis_protein_component and UniProtKB:P04739 exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: rheotaxis_graph
   title: Protein component associated with rheotaxis
-  description: Literature-backed association between mRNA interferase toxin MqsR (UniProtKB:Q46865)
-    and rheotaxis.
+  description: Literature-backed association between Type IV major pilin protein PilA
+    (UniProtKB:P04739) and rheotaxis.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q46865 in Escherichia
-    coli (strain K12)) associated with rheotaxis while full multi-step mechanistic
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P04739 in Pseudomonas
+    aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228
+    / 1C / PRS 101 / PAO1)) associated with rheotaxis while full multi-step mechanistic
     curation remains future work.
   nodes:
   - node_id: rheotaxis_trait
@@ -84,44 +85,49 @@ causal_graphs:
     description: A motile phenotype in which fluid velocity gradients bias an organism's
       self-propelled movement.
   - node_id: rheotaxis_protein_component
-    label: mRNA interferase toxin MqsR
+    label: Type IV major pilin protein PilA
     node_type: GENE_OR_PROTEIN
-    description: Protein component (mRNA interferase toxin MqsR) associated with rheotaxis.
+    description: Protein component (Type IV major pilin protein PilA) associated with
+      rheotaxis.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - mqsR
+    - pilA
     protein_examples:
-    - uniprot_id: UniProtKB:Q46865
-      protein_label: mRNA interferase toxin MqsR
-      gene_symbol: mqsR
-      taxon_id: NCBITaxon:83333
-      taxon_label: Escherichia coli (strain K12)
+    - uniprot_id: UniProtKB:P04739
+      protein_label: Type IV major pilin protein PilA
+      gene_symbol: pilA
+      taxon_id: NCBITaxon:208964
+      taxon_label: Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116
+        / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)
       entry_status: REVIEWED
-      proteome_id: UP000000625
+      proteome_id: UP000002438
       retrieved_on: '2026-10-17'
-      entry_version: 144
+      entry_version: 159
       sequence_version: 1
-      role: Characteristic protein component (mqsR, mRNA interferase toxin MqsR) associated
-        with rheotaxis in Escherichia coli (strain K12).
+      role: Characteristic protein component (pilA, Type IV major pilin protein PilA)
+        associated with rheotaxis in Pseudomonas aeruginosa (strain ATCC 15692 / DSM
+        22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1).
       evidence:
       - reference: DOI:10.1016/j.bpj.2012.03.001
         snippet: positive rheotaxis (rapid and continuous upstream motility) in wild-type
           Escherichia coli freely swimming over a surface
-        notes: Supports mRNA interferase toxin MqsR in rheotaxis; UniProtKB:Q46865
-          (mqsR, mRNA interferase toxin MqsR) in Escherichia coli (strain K12) provides
-          a verified protein exemplar.
+        notes: Supports Type IV major pilin protein PilA in rheotaxis; UniProtKB:P04739
+          (pilA, Type IV major pilin protein PilA) in Pseudomonas aeruginosa (strain
+          ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101
+          / PAO1) provides a verified protein exemplar.
   edges:
   - subject: rheotaxis_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: rheotaxis_trait
-    description: mRNA interferase toxin MqsR (mqsR, UniProtKB:Q46865) contributes
-      to rheotaxis (associated with escherichia, continuous, rheotaxis).
+    description: Type IV major pilin protein PilA (pilA, UniProtKB:P04739) contributes
+      to rheotaxis.
     evidence:
     - reference: DOI:10.1016/j.bpj.2012.03.001
       snippet: positive rheotaxis (rapid and continuous upstream motility) in wild-type
         Escherichia coli freely swimming over a surface
-      notes: Supports the functional association between mRNA interferase toxin MqsR
-        (UniProtKB:Q46865 in Escherichia coli (strain K12)) and rheotaxis.
+      notes: Supports the functional association between Type IV major pilin protein
+        PilA (UniProtKB:P04739 in Pseudomonas aeruginosa (strain ATCC 15692 / DSM
+        22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)) and rheotaxis.

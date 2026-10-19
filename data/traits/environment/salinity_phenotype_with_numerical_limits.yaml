@@ -107,34 +107,38 @@ causal_graphs:
     description: Available water (aw); a key abiotic constraint co-determining salinity
       limits.
   - node_id: salinity_phenotype_with_numerical_limits_protein_component
-    label: Glutamate 5-kinase
+    label: Glycine betaine/proline betaine transport system ATP-binding protein ProV
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Glutamate 5-kinase) associated with salinity phenotype
-      with numerical limits.
+    description: Protein component (Glycine betaine/proline betaine transport system
+      ATP-binding protein ProV) associated with salinity phenotype with numerical
+      limits.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - proB
+    - proV
     protein_examples:
-    - uniprot_id: UniProtKB:B5BDP8
-      protein_label: Glutamate 5-kinase
-      gene_symbol: proB
-      taxon_id: NCBITaxon:554290
-      taxon_label: Salmonella paratyphi A (strain AKU_12601)
+    - uniprot_id: UniProtKB:P14175
+      protein_label: Glycine betaine/proline betaine transport system ATP-binding
+        protein ProV
+      gene_symbol: proV
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
+      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 86
+      entry_version: 204
       sequence_version: 1
-      role: Characteristic protein component (proB, Glutamate 5-kinase) associated
-        with salinity phenotype with numerical limits in Salmonella paratyphi A (strain
-        AKU_12601).
+      role: Characteristic protein component (proV, Glycine betaine/proline betaine
+        transport system ATP-binding protein ProV) associated with salinity phenotype
+        with numerical limits in Escherichia coli (strain K12).
       evidence:
       - reference: DOI:10.1093/femsre/fuy009
-        snippet: salinity range
-        notes: Supports Glutamate 5-kinase in salinity phenotype with numerical limits;
-          UniProtKB:B5BDP8 (proB, Glutamate 5-kinase) in Salmonella paratyphi A (strain
-          AKU_12601) provides a verified protein exemplar.
+        snippet: glycine betaine uptake
+        notes: Supports Glycine betaine/proline betaine transport system ATP-binding
+          protein ProV in salinity phenotype with numerical limits; UniProtKB:P14175
+          (proV, Glycine betaine/proline betaine transport system ATP-binding protein
+          ProV) in Escherichia coli (strain K12) provides a verified protein exemplar.
   edges:
   - subject: nacl_concentration_axis
     predicate: defines
@@ -244,15 +248,15 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: salinity_phenotype_trait
-    description: Glutamate 5-kinase (proB, UniProtKB:B5BDP8) contributes to salinity
-      phenotype with numerical limits (associated with concentration, intracellular,
-      transport).
+    description: Glycine betaine/proline betaine transport system ATP-binding protein
+      ProV (proV, UniProtKB:P14175) contributes to salinity phenotype with numerical
+      limits.
     evidence:
-    - reference: DOI:10.1128/aem.00145-24
-      snippet: transport systems that regulate intracellular Na+/K+/H+ concentration
-      notes: Supports the functional association between Glutamate 5-kinase (UniProtKB:B5BDP8
-        in Salmonella paratyphi A (strain AKU_12601)) and salinity phenotype with
-        numerical limits.
+    - reference: DOI:10.1093/femsre/fuy009
+      snippet: glycine betaine uptake
+      notes: Supports the functional association between Glycine betaine/proline betaine
+        transport system ATP-binding protein ProV (UniProtKB:P14175 in Escherichia
+        coli (strain K12)) and salinity phenotype with numerical limits.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.846379+00:00'
   curator: seed_from_metpo
@@ -353,6 +357,6 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    salinity_phenotype_with_numerical_limits_protein_component with UniProtKB:B5BDP8
-    (proB) exemplar.'
+    salinity_phenotype_with_numerical_limits_protein_component with UniProtKB:P14175
+    (proV) exemplar.'
   llm_assisted: true

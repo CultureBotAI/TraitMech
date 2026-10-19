@@ -96,38 +96,33 @@ causal_graphs:
     grounding: traitmech:000214
     description: Possession of a bacteriophage abortive-infection defense system.
   - node_id: stk2_system_protein_component
-    label: Serine/threonine-protein kinase toxin HipA
+    label: Abortive phage resistance protein AbiC
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Serine/threonine-protein kinase toxin HipA) associated
+    description: Protein component (Abortive phage resistance protein AbiC) associated
       with Stk2 system.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    grounding: InterPro:IPR031709
     gene_symbols:
-    - hipA
+    - abiC
     protein_examples:
-    - uniprot_id: UniProtKB:Q8FHF4
-      protein_label: Serine/threonine-protein kinase toxin HipA
-      gene_symbol: hipA
-      taxon_id: NCBITaxon:199310
-      taxon_label: Escherichia coli O6:H1 (strain CFT073 / ATCC 700928 / UPEC)
+    - uniprot_id: UniProtKB:Q01457
+      protein_label: Abortive phage resistance protein AbiC
+      gene_symbol: abiC
+      taxon_id: NCBITaxon:1360
+      taxon_label: Lactococcus lactis subsp. lactis (Streptococcus lactis)
       entry_status: REVIEWED
-      proteome_id: UP000001410
       retrieved_on: '2026-10-17'
-      entry_version: 108
-      sequence_version: 2
-      role: Characteristic protein component (hipA, Serine/threonine-protein kinase
-        toxin HipA) associated with Stk2 system in Escherichia coli O6:H1 (strain
-        CFT073 / ATCC 700928 / UPEC).
+      entry_version: 35
+      sequence_version: 1
+      role: Characteristic protein component (abiC, Abortive phage resistance protein
+        AbiC) associated with Stk2 system in Lactococcus lactis subsp. lactis (Streptococcus
+        lactis).
       evidence:
-      - reference: DOI:10.1016/j.chom.2016.08.010
-        snippet: Here we identify Stk2, a staphylococcal serine/threonine kinase that
-          provides efficient immunity against bacteriophages by inducing abortive
-          infection
-        notes: Supports Serine/threonine-protein kinase toxin HipA in Stk2 system;
-          UniProtKB:Q8FHF4 (hipA, Serine/threonine-protein kinase toxin HipA) in Escherichia
-          coli O6:H1 (strain CFT073 / ATCC 700928 / UPEC) provides a verified protein
-          exemplar.
+      - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+        snippet: 'AbiC | 10\.1016/j\.mib\.2005\.06\.006 | Phage abortive infection
+          in lactococci: variations on a theme'
+        notes: Supports Abortive phage resistance protein AbiC in Stk2 system; UniProtKB:Q01457
+          (abiC, Abortive phage resistance protein AbiC) in Lactococcus lactis subsp.
+          lactis (Streptococcus lactis) provides a verified protein exemplar.
   edges:
   - subject: stk2_locus
     predicate: contributes to
@@ -214,16 +209,15 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: stk2_system_trait
-    description: Serine/threonine-protein kinase toxin HipA (hipA, UniProtKB:Q8FHF4)
-      contributes to Stk2 system (associated with bacteriophages, staphylococcal,
-      efficient).
+    description: Abortive phage resistance protein AbiC (abiC, UniProtKB:Q01457) contributes
+      to Stk2 system.
     evidence:
-    - reference: DOI:10.1016/j.chom.2016.08.010
-      snippet: Here we identify Stk2, a staphylococcal serine/threonine kinase that
-        provides efficient immunity against bacteriophages by inducing abortive infection
-      notes: Supports the functional association between Serine/threonine-protein
-        kinase toxin HipA (UniProtKB:Q8FHF4 in Escherichia coli O6:H1 (strain CFT073
-        / ATCC 700928 / UPEC)) and Stk2 system.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: 'AbiC | 10\.1016/j\.mib\.2005\.06\.006 | Phage abortive infection in
+        lactococci: variations on a theme'
+      notes: Supports the functional association between Abortive phage resistance
+        protein AbiC (UniProtKB:Q01457 in Lactococcus lactis subsp. lactis (Streptococcus
+        lactis)) and Stk2 system.
 discussions:
 - discussion_id: stk2-activator-and-death-target-gap
   prompt: Resolve the Stk2-activating phage protein and lethal host-phosphorylation
@@ -253,5 +247,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    stk2_system_protein_component with UniProtKB:Q8FHF4 (hipA) exemplar.'
+    stk2_system_protein_component with UniProtKB:Q01457 (abiC) exemplar.'
   llm_assisted: true

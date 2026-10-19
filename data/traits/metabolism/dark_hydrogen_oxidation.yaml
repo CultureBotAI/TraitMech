@@ -28,19 +28,26 @@ curation_history:
   llm_assisted: true
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed canonical_examples status alongside NONMECHANISTIC protein exemplar
+    graph for dark hydrogen oxidation; isolate-level canonical example remains deferred
+    pending explicit strain-level literature.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph dark_hydrogen_oxidation_graph
-    with GENE_OR_PROTEIN node dark_hydrogen_oxidation_protein_component and UniProtKB:P47908
+    with GENE_OR_PROTEIN node dark_hydrogen_oxidation_protein_component and UniProtKB:O52683
     exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: dark_hydrogen_oxidation_graph
   title: Protein component associated with dark hydrogen oxidation
-  description: Literature-backed association between Ribosome hibernation promotion
-    factor (UniProtKB:P47908) and dark hydrogen oxidation.
+  description: Literature-backed association between Bifurcating [FeFe] hydrogenase
+    alpha subunit (UniProtKB:O52683) and dark hydrogen oxidation.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P47908 in Picosynechococcus
-    sp. (strain ATCC 27264 / PCC 7002 / PR-6) (Agmenellum quadruplicatum)) associated
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:O52683 in Thermotoga
+    maritima (strain ATCC 43589 / DSM 3109 / JCM 10099 / NBRC 100826 / MSB8)) associated
     with dark hydrogen oxidation while full multi-step mechanistic curation remains
     future work.
   nodes:
@@ -51,50 +58,51 @@ causal_graphs:
     description: A metabolism in which an organism oxidizes molecular hydrogen as
       an electron donor for energy conservation independently of light.
   - node_id: dark_hydrogen_oxidation_protein_component
-    label: Ribosome hibernation promotion factor
+    label: Bifurcating [FeFe] hydrogenase alpha subunit
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Ribosome hibernation promotion factor) associated
-      with dark hydrogen oxidation.
+    description: Protein component (Bifurcating [FeFe] hydrogenase alpha subunit)
+      associated with dark hydrogen oxidation.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - hpf
+    - hydA
     protein_examples:
-    - uniprot_id: UniProtKB:P47908
-      protein_label: Ribosome hibernation promotion factor
-      gene_symbol: hpf
-      taxon_id: NCBITaxon:32049
-      taxon_label: Picosynechococcus sp. (strain ATCC 27264 / PCC 7002 / PR-6) (Agmenellum
-        quadruplicatum)
+    - uniprot_id: UniProtKB:O52683
+      protein_label: Bifurcating [FeFe] hydrogenase alpha subunit
+      gene_symbol: hydA
+      taxon_id: NCBITaxon:243274
+      taxon_label: Thermotoga maritima (strain ATCC 43589 / DSM 3109 / JCM 10099 /
+        NBRC 100826 / MSB8)
       entry_status: REVIEWED
+      proteome_id: UP000008183
       retrieved_on: '2026-10-17'
-      entry_version: 121
-      sequence_version: 2
-      role: Characteristic protein component (hpf, Ribosome hibernation promotion
-        factor) associated with dark hydrogen oxidation in Picosynechococcus sp. (strain
-        ATCC 27264 / PCC 7002 / PR-6) (Agmenellum quadruplicatum).
+      entry_version: 158
+      sequence_version: 1
+      role: Characteristic protein component (hydA, Bifurcating [FeFe] hydrogenase
+        alpha subunit) associated with dark hydrogen oxidation in Thermotoga maritima
+        (strain ATCC 43589 / DSM 3109 / JCM 10099 / NBRC 100826 / MSB8).
       evidence:
       - reference: DOI:10.3389/fmicb.2018.02873
         snippet: hydrogen-oxidizing organisms play a key role in deep-sea hydrothermal
           vent ecosystems as they can be considerably involved in light-independent
           primary biomass production
-        notes: Supports Ribosome hibernation promotion factor in dark hydrogen oxidation;
-          UniProtKB:P47908 (hpf, Ribosome hibernation promotion factor) in Picosynechococcus
-          sp. (strain ATCC 27264 / PCC 7002 / PR-6) (Agmenellum quadruplicatum) provides
-          a verified protein exemplar.
+        notes: Supports Bifurcating [FeFe] hydrogenase alpha subunit in dark hydrogen
+          oxidation; UniProtKB:O52683 (hydA, Bifurcating [FeFe] hydrogenase alpha
+          subunit) in Thermotoga maritima (strain ATCC 43589 / DSM 3109 / JCM 10099
+          / NBRC 100826 / MSB8) provides a verified protein exemplar.
   edges:
   - subject: dark_hydrogen_oxidation_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: dark_hydrogen_oxidation_trait
-    description: Ribosome hibernation promotion factor (hpf, UniProtKB:P47908) contributes
-      to dark hydrogen oxidation (associated with considerably, hydrothermal, ecosystems).
+    description: Bifurcating [FeFe] hydrogenase alpha subunit (hydA, UniProtKB:O52683)
+      contributes to dark hydrogen oxidation.
     evidence:
     - reference: DOI:10.3389/fmicb.2018.02873
       snippet: hydrogen-oxidizing organisms play a key role in deep-sea hydrothermal
         vent ecosystems as they can be considerably involved in light-independent
         primary biomass production
-      notes: Supports the functional association between Ribosome hibernation promotion
-        factor (UniProtKB:P47908 in Picosynechococcus sp. (strain ATCC 27264 / PCC
-        7002 / PR-6) (Agmenellum quadruplicatum)) and dark hydrogen oxidation.
+      notes: Supports the functional association between Bifurcating [FeFe] hydrogenase
+        alpha subunit (UniProtKB:O52683 in Thermotoga maritima (strain ATCC 43589
+        / DSM 3109 / JCM 10099 / NBRC 100826 / MSB8)) and dark hydrogen oxidation.

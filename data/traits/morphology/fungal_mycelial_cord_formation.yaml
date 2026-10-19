@@ -90,15 +90,15 @@ curation_history:
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph fungal_mycelial_cord_formation_graph
     with GENE_OR_PROTEIN node fungal_mycelial_cord_formation_protein_component and
-    UniProtKB:P31539 exemplar.'
+    UniProtKB:P08640 exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: fungal_mycelial_cord_formation_graph
   title: Protein component associated with fungal mycelial cord formation
-  description: Literature-backed association between Heat shock protein 104 (UniProtKB:P31539)
+  description: Literature-backed association between Flocculation protein FLO11 (UniProtKB:P08640)
     and fungal mycelial cord formation.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P31539 in Saccharomyces
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P08640 in Saccharomyces
     cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)) associated with fungal
     mycelial cord formation while full multi-step mechanistic curation remains future
     work.
@@ -110,36 +110,34 @@ causal_graphs:
     description: A morphological phenotype in which a fungus forms linear multihyphal
       cords by aggregation behind an extending margin of diffuse hyphae.
   - node_id: fungal_mycelial_cord_formation_protein_component
-    label: Heat shock protein 104
+    label: Flocculation protein FLO11
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Heat shock protein 104) associated with fungal
+    description: Protein component (Flocculation protein FLO11) associated with fungal
       mycelial cord formation.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    grounding: InterPro:IPR018789
     gene_symbols:
-    - HSP104
+    - FLO11
     protein_examples:
-    - uniprot_id: UniProtKB:P31539
-      protein_label: Heat shock protein 104
-      gene_symbol: HSP104
+    - uniprot_id: UniProtKB:P08640
+      protein_label: Flocculation protein FLO11
+      gene_symbol: FLO11
       taxon_id: NCBITaxon:559292
       taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's
         yeast)
       entry_status: REVIEWED
       proteome_id: UP000002311
       retrieved_on: '2026-10-17'
-      entry_version: 216
+      entry_version: 187
       sequence_version: 2
-      role: Characteristic protein component (HSP104, Heat shock protein 104) associated
+      role: Characteristic protein component (FLO11, Flocculation protein FLO11) associated
         with fungal mycelial cord formation in Saccharomyces cerevisiae (strain ATCC
         204508 / S288c) (Baker's yeast).
       evidence:
       - reference: DOI:10.1007/s10267-008-0450-4
         snippet: the whole organ does not extend apically; rather, it develops behind
           a mycelial margin of diffuse hyphae
-        notes: Supports Heat shock protein 104 in fungal mycelial cord formation;
-          UniProtKB:P31539 (HSP104, Heat shock protein 104) in Saccharomyces cerevisiae
+        notes: Supports Flocculation protein FLO11 in fungal mycelial cord formation;
+          UniProtKB:P08640 (FLO11, Flocculation protein FLO11) in Saccharomyces cerevisiae
           (strain ATCC 204508 / S288c) (Baker's yeast) provides a verified protein
           exemplar.
   edges:
@@ -147,12 +145,12 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: fungal_mycelial_cord_formation_trait
-    description: Heat shock protein 104 (HSP104, UniProtKB:P31539) contributes to
-      fungal mycelial cord formation (associated with apically, develops, mycelial).
+    description: Flocculation protein FLO11 (FLO11, UniProtKB:P08640) contributes
+      to fungal mycelial cord formation.
     evidence:
     - reference: DOI:10.1007/s10267-008-0450-4
       snippet: the whole organ does not extend apically; rather, it develops behind
         a mycelial margin of diffuse hyphae
-      notes: Supports the functional association between Heat shock protein 104 (UniProtKB:P31539
-        in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast))
-        and fungal mycelial cord formation.
+      notes: Supports the functional association between Flocculation protein FLO11
+        (UniProtKB:P08640 in Saccharomyces cerevisiae (strain ATCC 204508 / S288c)
+        (Baker's yeast)) and fungal mycelial cord formation.

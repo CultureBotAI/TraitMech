@@ -33,9 +33,16 @@ curation_history:
   llm_assisted: true
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed canonical_examples status alongside NONMECHANISTIC protein exemplar
+    graph for methyl red test; isolate-level canonical example remains deferred pending
+    explicit strain-level literature.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph methyl_red_test_graph
-    with GENE_OR_PROTEIN node methyl_red_test_protein_component and UniProtKB:P36683
+    with GENE_OR_PROTEIN node methyl_red_test_protein_component and UniProtKB:P52643
     exemplar.'
   llm_assisted: true
 definition_source: https://asm.org/getmedia/40946f85-9357-4563-aa8a-994427efa825/Methyl-Red-and-Voges-Proskauer-Test-Protocols.pdf
@@ -70,10 +77,10 @@ evidence:
 causal_graphs:
 - graph_id: methyl_red_test_graph
   title: Protein component associated with methyl red test
-  description: Literature-backed association between Aconitate hydratase B (UniProtKB:P36683)
+  description: Literature-backed association between D-lactate dehydrogenase (UniProtKB:P52643)
     and methyl red test.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P36683 in Escherichia
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P52643 in Escherichia
     coli (strain K12)) associated with methyl red test while full multi-step mechanistic
     curation remains future work.
   nodes:
@@ -84,47 +91,47 @@ causal_graphs:
     description: An assay that tests the ability of an organism to produce and maintain
       stable acid end products from glucose fermentation.
   - node_id: methyl_red_test_protein_component
-    label: Aconitate hydratase B
+    label: D-lactate dehydrogenase
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Aconitate hydratase B) associated with methyl
+    description: Protein component (D-lactate dehydrogenase) associated with methyl
       red test.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - acnB
+    - ldhA
     protein_examples:
-    - uniprot_id: UniProtKB:P36683
-      protein_label: Aconitate hydratase B
-      gene_symbol: acnB
+    - uniprot_id: UniProtKB:P52643
+      protein_label: D-lactate dehydrogenase
+      gene_symbol: ldhA
       taxon_id: NCBITaxon:83333
       taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
       proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 207
-      sequence_version: 3
-      role: Characteristic protein component (acnB, Aconitate hydratase B) associated
+      entry_version: 174
+      sequence_version: 1
+      role: Characteristic protein component (ldhA, D-lactate dehydrogenase) associated
         with methyl red test in Escherichia coli (strain K12).
       evidence:
       - reference: https://asm.org/getmedia/40946f85-9357-4563-aa8a-994427efa825/Methyl-Red-and-Voges-Proskauer-Test-Protocols.pdf
         snippet: When the culture medium turns red after addition of methyl red, because
           of a pH at or below 4.4 from the fermentation of glucose, the culture has
           a positive result for the MR test (Fig.1A).
-        notes: Supports Aconitate hydratase B in methyl red test; UniProtKB:P36683
-          (acnB, Aconitate hydratase B) in Escherichia coli (strain K12) provides
+        notes: Supports D-lactate dehydrogenase in methyl red test; UniProtKB:P52643
+          (ldhA, D-lactate dehydrogenase) in Escherichia coli (strain K12) provides
           a verified protein exemplar.
   edges:
   - subject: methyl_red_test_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: methyl_red_test_trait
-    description: Aconitate hydratase B (acnB, UniProtKB:P36683) contributes to methyl
-      red test (associated with fermentation, addition, because).
+    description: D-lactate dehydrogenase (ldhA, UniProtKB:P52643) contributes to methyl
+      red test.
     evidence:
     - reference: https://asm.org/getmedia/40946f85-9357-4563-aa8a-994427efa825/Methyl-Red-and-Voges-Proskauer-Test-Protocols.pdf
       snippet: When the culture medium turns red after addition of methyl red, because
         of a pH at or below 4.4 from the fermentation of glucose, the culture has
         a positive result for the MR test (Fig.1A).
-      notes: Supports the functional association between Aconitate hydratase B (UniProtKB:P36683
+      notes: Supports the functional association between D-lactate dehydrogenase (UniProtKB:P52643
         in Escherichia coli (strain K12)) and methyl red test.

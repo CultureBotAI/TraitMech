@@ -116,27 +116,26 @@ causal_graphs:
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
   - node_id: gaps4_system_protein_component
-    label: Cell death peptidase
+    label: Endonuclease GajA
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Cell death peptidase) associated with GAPS4 system.
+    description: Protein component (Endonuclease GajA) associated with GAPS4 system.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - lit
+    - gajA
     protein_examples:
-    - uniprot_id: UniProtKB:P11072
-      protein_label: Cell death peptidase
-      gene_symbol: lit
-      taxon_id: NCBITaxon:83333
-      taxon_label: Escherichia coli (strain K12)
+    - uniprot_id: UniProtKB:P0DW47
+      protein_label: Endonuclease GajA
+      gene_symbol: gajA
+      taxon_id: NCBITaxon:1053212
+      taxon_label: Bacillus cereus (strain HuB5-5)
       entry_status: REVIEWED
-      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 137
-      sequence_version: 2
-      role: Characteristic protein component (lit, Cell death peptidase) associated
-        with GAPS4 system in Escherichia coli (strain K12).
+      entry_version: 12
+      sequence_version: 1
+      role: Characteristic protein component (gajA, Endonuclease GajA) associated
+        with GAPS4 system in Bacillus cereus (strain HuB5-5).
       evidence:
       - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/gaps4.md
         snippet: GAPS4a is a nuclease containing a domain from the PDDEXK clan (CL0236)
@@ -145,8 +144,8 @@ causal_graphs:
           It was shown that the system causes host DNA degradation upon infection
           by lambda-vir only, which would suggest that GAPS4 is an abortive infection
           system :ref{doi=10.1101/2023.03.28.534373}.
-        notes: Supports Cell death peptidase in GAPS4 system; UniProtKB:P11072 (lit,
-          Cell death peptidase) in Escherichia coli (strain K12) provides a verified
+        notes: Supports Endonuclease GajA in GAPS4 system; UniProtKB:P0DW47 (gajA,
+          Endonuclease GajA) in Bacillus cereus (strain HuB5-5) provides a verified
           protein exemplar.
   edges:
   - subject: gaps4_locus
@@ -250,8 +249,7 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: gaps4_system_trait
-    description: Cell death peptidase (lit, UniProtKB:P11072) contributes to GAPS4
-      system (associated with heterodimer, containing, suggesting).
+    description: Endonuclease GajA (gajA, UniProtKB:P0DW47) contributes to GAPS4 system.
     evidence:
     - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/gaps4.md
       snippet: GAPS4a is a nuclease containing a domain from the PDDEXK clan (CL0236)
@@ -260,8 +258,8 @@ causal_graphs:
         It was shown that the system causes host DNA degradation upon infection by
         lambda-vir only, which would suggest that GAPS4 is an abortive infection system
         :ref{doi=10.1101/2023.03.28.534373}.
-      notes: Supports the functional association between Cell death peptidase (UniProtKB:P11072
-        in Escherichia coli (strain K12)) and GAPS4 system.
+      notes: Supports the functional association between Endonuclease GajA (UniProtKB:P0DW47
+        in Bacillus cereus (strain HuB5-5)) and GAPS4 system.
 discussions:
 - discussion_id: gaps4-mechanism-gap
   prompt: Resolve GAPS4 natural host breadth, lambda-vir host-DNA-degradation triggers,
@@ -340,5 +338,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    gaps4_system_protein_component with UniProtKB:P11072 (lit) exemplar.'
+    gaps4_system_protein_component with UniProtKB:P0DW47 (gajA) exemplar.'
   llm_assisted: true

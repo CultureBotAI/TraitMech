@@ -41,8 +41,8 @@ causal_graphs:
   title: Soil-dwelling microbes in soil life-history contexts
   scope_status: NONMECHANISTIC
   scope_notes: This broad ecological, host-relationship, habitat, or hazard classification
-    spans multiple taxa and mechanisms; contextual protein nodes do not receive token
-    UniProt examples.
+    spans multiple taxa and mechanisms; contextual protein nodes include source-backed
+    UniProtKB exemplars.
   description: Evidence-backed nonmechanistic sketch connecting soil habitat, biogeochemical
     cycling, and community-level oligotrophy, growth, motility, dormancy, and genomic
     life-history axes.
@@ -311,7 +311,7 @@ causal_graphs:
     predicate_id: RO:0002326
     object: soil_dwelling_trait
     description: Stage 0 sporulation protein A (spo0A, UniProtKB:P06534) contributes
-      to soil-dwelling (associated with sequestration, maintenance, fertility).
+      to soil-dwelling.
     evidence:
     - reference: DOI:10.1038/nrmicro.2017.87
       snippet: crucial roles in nutrient cycling, the maintenance of soil fertility

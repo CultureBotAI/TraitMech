@@ -106,32 +106,33 @@ causal_graphs:
     grounding: traitmech:000214
     description: Possession of a bacteriophage abortive-infection defense system.
   - node_id: bsta_system_protein_component
-    label: Bottromycin D
+    label: Abortive phage resistance protein AbiC
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Bottromycin D) associated with BstA system.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Abortive phage resistance protein AbiC) associated
+      with BstA system.
+    grounding: InterPro:IPR031709
     gene_symbols:
-    - bstA
+    - abiC
     protein_examples:
-    - uniprot_id: UniProtKB:K4JY29
-      protein_label: Bottromycin D
-      gene_symbol: bstA
-      taxon_id: NCBITaxon:1931
-      taxon_label: Streptomyces sp
+    - uniprot_id: UniProtKB:Q01457
+      protein_label: Abortive phage resistance protein AbiC
+      gene_symbol: abiC
+      taxon_id: NCBITaxon:1360
+      taxon_label: Lactococcus lactis subsp. lactis (Streptococcus lactis)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      entry_version: 13
+      entry_version: 35
       sequence_version: 1
-      role: Characteristic protein component (bstA, Bottromycin D) associated with
-        BstA system in Streptomyces sp.
+      role: Characteristic protein component (abiC, Abortive phage resistance protein
+        AbiC) associated with BstA system in Lactococcus lactis subsp. lactis (Streptococcus
+        lactis).
       evidence:
       - reference: DOI:10.1016/j.chom.2021.09.002
         snippet: the BstA protein confers effective population-level defense against
           exogenous phage infection via abortive infection
-        notes: Supports Bottromycin D in BstA system; UniProtKB:K4JY29 (bstA, Bottromycin
-          D) in Streptomyces sp provides a verified protein exemplar.
+        notes: Supports Abortive phage resistance protein AbiC in BstA system; UniProtKB:Q01457
+          (abiC, Abortive phage resistance protein AbiC) in Lactococcus lactis subsp.
+          lactis (Streptococcus lactis) provides a verified protein exemplar.
   edges:
   - subject: bsta_locus
     predicate: includes
@@ -221,14 +222,15 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: bsta_system_trait
-    description: Bottromycin D (bstA, UniProtKB:K4JY29) contributes to BstA system
-      (associated with population, effective, exogenous).
+    description: Abortive phage resistance protein AbiC (abiC, UniProtKB:Q01457) contributes
+      to BstA system.
     evidence:
     - reference: DOI:10.1016/j.chom.2021.09.002
       snippet: the BstA protein confers effective population-level defense against
         exogenous phage infection via abortive infection
-      notes: Supports the functional association between Bottromycin D (UniProtKB:K4JY29
-        in Streptomyces sp) and BstA system.
+      notes: Supports the functional association between Abortive phage resistance
+        protein AbiC (UniProtKB:Q01457 in Lactococcus lactis subsp. lactis (Streptococcus
+        lactis)) and BstA system.
 discussions:
 - discussion_id: bsta-mechanism-gap
   prompt: Resolve the direct phage trigger of BstA localization, the direct DNA-replication
@@ -279,5 +281,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    bsta_system_protein_component with UniProtKB:K4JY29 (bstA) exemplar.'
+    bsta_system_protein_component with UniProtKB:Q01457 (abiC) exemplar.'
   llm_assisted: true

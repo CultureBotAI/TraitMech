@@ -124,16 +124,16 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph pseudohomothallism_graph
-    with GENE_OR_PROTEIN node pseudohomothallism_protein_component and UniProtKB:Q08955
+    with GENE_OR_PROTEIN node pseudohomothallism_protein_component and UniProtKB:D6VTK4
     exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: pseudohomothallism_graph
   title: Protein component associated with pseudohomothallism
-  description: Literature-backed association between Chromosome segregation in meiosis
-    protein 4 (UniProtKB:Q08955) and pseudohomothallism.
+  description: Literature-backed association between Pheromone alpha factor receptor
+    (UniProtKB:D6VTK4) and pseudohomothallism.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q08955 in Saccharomyces
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:D6VTK4 in Saccharomyces
     cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)) associated with pseudohomothallism
     while full multi-step mechanistic curation remains future work.
   nodes:
@@ -144,52 +144,48 @@ causal_graphs:
     description: A fungal phenotype enabling a sexual spore carrying separate nuclei
       of compatible mating types to establish a self-fertile heterokaryotic culture.
   - node_id: pseudohomothallism_protein_component
-    label: Chromosome segregation in meiosis protein 4
+    label: Pheromone alpha factor receptor
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Chromosome segregation in meiosis protein 4) associated
-      with pseudohomothallism.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Pheromone alpha factor receptor) associated with
+      pseudohomothallism.
+    grounding: InterPro:IPR000366
     gene_symbols:
-    - CSM4
+    - STE2
     protein_examples:
-    - uniprot_id: UniProtKB:Q08955
-      protein_label: Chromosome segregation in meiosis protein 4
-      gene_symbol: CSM4
+    - uniprot_id: UniProtKB:D6VTK4
+      protein_label: Pheromone alpha factor receptor
+      gene_symbol: STE2
       taxon_id: NCBITaxon:559292
       taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's
         yeast)
       entry_status: REVIEWED
       proteome_id: UP000002311
       retrieved_on: '2026-10-17'
-      entry_version: 143
-      sequence_version: 1
-      role: Characteristic protein component (CSM4, Chromosome segregation in meiosis
-        protein 4) associated with pseudohomothallism in Saccharomyces cerevisiae
-        (strain ATCC 204508 / S288c) (Baker's yeast).
+      entry_version: 99
+      sequence_version: 2
+      role: Characteristic protein component (STE2, Pheromone alpha factor receptor)
+        associated with pseudohomothallism in Saccharomyces cerevisiae (strain ATCC
+        204508 / S288c) (Baker's yeast).
       evidence:
       - reference: DOI:10.5598/imafungus.2015.06.01.13
         snippet: In this mating strategy, an individual of one mating type can undergo
           a switch to the opposite mating type, either bidirectionally (reversibly)
           or unidirectionally (irreversibly).
-        notes: Supports Chromosome segregation in meiosis protein 4 in pseudohomothallism;
-          UniProtKB:Q08955 (CSM4, Chromosome segregation in meiosis protein 4) in
-          Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast) provides
-          a verified protein exemplar.
+        notes: Supports Pheromone alpha factor receptor in pseudohomothallism; UniProtKB:D6VTK4
+          (STE2, Pheromone alpha factor receptor) in Saccharomyces cerevisiae (strain
+          ATCC 204508 / S288c) (Baker's yeast) provides a verified protein exemplar.
   edges:
   - subject: pseudohomothallism_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: pseudohomothallism_trait
-    description: Chromosome segregation in meiosis protein 4 (CSM4, UniProtKB:Q08955)
-      contributes to pseudohomothallism (associated with unidirectionally, bidirectionally,
-      irreversibly).
+    description: Pheromone alpha factor receptor (STE2, UniProtKB:D6VTK4) contributes
+      to pseudohomothallism.
     evidence:
     - reference: DOI:10.5598/imafungus.2015.06.01.13
       snippet: In this mating strategy, an individual of one mating type can undergo
         a switch to the opposite mating type, either bidirectionally (reversibly)
         or unidirectionally (irreversibly).
-      notes: Supports the functional association between Chromosome segregation in
-        meiosis protein 4 (UniProtKB:Q08955 in Saccharomyces cerevisiae (strain ATCC
-        204508 / S288c) (Baker's yeast)) and pseudohomothallism.
+      notes: Supports the functional association between Pheromone alpha factor receptor
+        (UniProtKB:D6VTK4 in Saccharomyces cerevisiae (strain ATCC 204508 / S288c)
+        (Baker's yeast)) and pseudohomothallism.

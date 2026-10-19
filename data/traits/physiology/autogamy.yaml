@@ -153,17 +153,17 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph autogamy_graph
-    with GENE_OR_PROTEIN node autogamy_protein_component and UniProtKB:B5BJ71 exemplar.'
+    with GENE_OR_PROTEIN node autogamy_protein_component and UniProtKB:P23179 exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: autogamy_graph
   title: Protein component associated with autogamy
-  description: Literature-backed association between tRNA-cytidine(32) 2-sulfurtransferase
-    (UniProtKB:B5BJ71) and autogamy.
+  description: Literature-backed association between Meiosis-specific protein SPO11
+    (UniProtKB:P23179) and autogamy.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:B5BJ71 in Salmonella
-    paratyphi A (strain AKU_12601)) associated with autogamy while full multi-step
-    mechanistic curation remains future work.
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P23179 in Saccharomyces
+    cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)) associated with autogamy
+    while full multi-step mechanistic curation remains future work.
   nodes:
   - node_id: autogamy_trait
     label: autogamy
@@ -173,44 +173,46 @@ causal_graphs:
       gametic nuclei formed within one unpaired, undivided cell fuse with each other,
       without fusion of separate gametes.
   - node_id: autogamy_protein_component
-    label: tRNA-cytidine(32) 2-sulfurtransferase
+    label: Meiosis-specific protein SPO11
     node_type: GENE_OR_PROTEIN
-    description: Protein component (tRNA-cytidine(32) 2-sulfurtransferase) associated
-      with autogamy.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Meiosis-specific protein SPO11) associated with
+      autogamy.
+    grounding: InterPro:IPR002815
     gene_symbols:
-    - ttcA
+    - SPO11
     protein_examples:
-    - uniprot_id: UniProtKB:B5BJ71
-      protein_label: tRNA-cytidine(32) 2-sulfurtransferase
-      gene_symbol: ttcA
-      taxon_id: NCBITaxon:554290
-      taxon_label: Salmonella paratyphi A (strain AKU_12601)
+    - uniprot_id: UniProtKB:P23179
+      protein_label: Meiosis-specific protein SPO11
+      gene_symbol: SPO11
+      taxon_id: NCBITaxon:559292
+      taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's
+        yeast)
       entry_status: REVIEWED
+      proteome_id: UP000002311
       retrieved_on: '2026-10-17'
-      entry_version: 73
+      entry_version: 199
       sequence_version: 1
-      role: Characteristic protein component (ttcA, tRNA-cytidine(32) 2-sulfurtransferase)
-        associated with autogamy in Salmonella paratyphi A (strain AKU_12601).
+      role: Characteristic protein component (SPO11, Meiosis-specific protein SPO11)
+        associated with autogamy in Saccharomyces cerevisiae (strain ATCC 204508 /
+        S288c) (Baker's yeast).
       evidence:
       - reference: DOI:10.1016/0014-4827(86)90492-1
         snippet: Autogamy is a process of meiosis and fertilization which takes place
           in unpaired Paramecium cells, and which is triggered by starvation.
-        notes: Supports tRNA-cytidine(32) 2-sulfurtransferase in autogamy; UniProtKB:B5BJ71
-          (ttcA, tRNA-cytidine(32) 2-sulfurtransferase) in Salmonella paratyphi A
-          (strain AKU_12601) provides a verified protein exemplar.
+        notes: Supports Meiosis-specific protein SPO11 in autogamy; UniProtKB:P23179
+          (SPO11, Meiosis-specific protein SPO11) in Saccharomyces cerevisiae (strain
+          ATCC 204508 / S288c) (Baker's yeast) provides a verified protein exemplar.
   edges:
   - subject: autogamy_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: autogamy_trait
-    description: tRNA-cytidine(32) 2-sulfurtransferase (ttcA, UniProtKB:B5BJ71) contributes
-      to autogamy (associated with fertilization, paramecium, starvation).
+    description: Meiosis-specific protein SPO11 (SPO11, UniProtKB:P23179) contributes
+      to autogamy.
     evidence:
     - reference: DOI:10.1016/0014-4827(86)90492-1
       snippet: Autogamy is a process of meiosis and fertilization which takes place
         in unpaired Paramecium cells, and which is triggered by starvation.
-      notes: Supports the functional association between tRNA-cytidine(32) 2-sulfurtransferase
-        (UniProtKB:B5BJ71 in Salmonella paratyphi A (strain AKU_12601)) and autogamy.
+      notes: Supports the functional association between Meiosis-specific protein
+        SPO11 (UniProtKB:P23179 in Saccharomyces cerevisiae (strain ATCC 204508 /
+        S288c) (Baker's yeast)) and autogamy.

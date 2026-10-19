@@ -56,18 +56,17 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph lipase_activity_graph
-    with GENE_OR_PROTEIN node lipase_activity_protein_component and UniProtKB:Q49W64
+    with GENE_OR_PROTEIN node lipase_activity_protein_component and UniProtKB:P37957
     exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: lipase_activity_graph
   title: Protein component associated with lipase activity
-  description: Literature-backed association between Lipoyl synthase (UniProtKB:Q49W64)
+  description: Literature-backed association between Lipase EstA (UniProtKB:P37957)
     and lipase activity.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q49W64 in Staphylococcus
-    saprophyticus subsp. saprophyticus (strain ATCC 15305 / DSM 20229 / NCIMB 8711
-    / NCTC 7292 / S-41)) associated with lipase activity while full multi-step mechanistic
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P37957 in Bacillus
+    subtilis (strain 168)) associated with lipase activity while full multi-step mechanistic
     curation remains future work.
   nodes:
   - node_id: lipase_activity_trait
@@ -77,50 +76,42 @@ causal_graphs:
     description: A physiological enzyme-activity phenotype in which a cell produces
       active lipases that hydrolyze triglycerides at lipid-water interfaces.
   - node_id: lipase_activity_protein_component
-    label: Lipoyl synthase
+    label: Lipase EstA
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Lipoyl synthase) associated with lipase activity.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Lipase EstA) associated with lipase activity.
+    grounding: InterPro:IPR029058
     gene_symbols:
-    - lipA
+    - estA
     protein_examples:
-    - uniprot_id: UniProtKB:Q49W64
-      protein_label: Lipoyl synthase
-      gene_symbol: lipA
-      taxon_id: NCBITaxon:342451
-      taxon_label: Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
-        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+    - uniprot_id: UniProtKB:P37957
+      protein_label: Lipase EstA
+      gene_symbol: estA
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
       entry_status: REVIEWED
-      proteome_id: UP000006371
+      proteome_id: UP000001570
       retrieved_on: '2026-10-17'
-      entry_version: 117
-      sequence_version: 1
-      role: Characteristic protein component (lipA, Lipoyl synthase) associated with
-        lipase activity in Staphylococcus saprophyticus subsp. saprophyticus (strain
-        ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41).
+      entry_version: 160
+      sequence_version: 2
+      role: Characteristic protein component (estA, Lipase EstA) associated with lipase
+        activity in Bacillus subtilis (strain 168).
       evidence:
       - reference: DOI:10.1016/j.mex.2018.01.004
         snippet: to identify lipase producers. The addition of calcium and magnesium
           ions can provide an easier screening procedure for selection of lipolytic
           bacterial strains
-        notes: Supports Lipoyl synthase in lipase activity; UniProtKB:Q49W64 (lipA,
-          Lipoyl synthase) in Staphylococcus saprophyticus subsp. saprophyticus (strain
-          ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) provides a verified
-          protein exemplar.
+        notes: Supports Lipase EstA in lipase activity; UniProtKB:P37957 (estA, Lipase
+          EstA) in Bacillus subtilis (strain 168) provides a verified protein exemplar.
   edges:
   - subject: lipase_activity_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: lipase_activity_trait
-    description: Lipoyl synthase (lipA, UniProtKB:Q49W64) contributes to lipase activity
-      (associated with lipolytic, magnesium, procedure).
+    description: Lipase EstA (estA, UniProtKB:P37957) contributes to lipase activity.
     evidence:
     - reference: DOI:10.1016/j.mex.2018.01.004
       snippet: to identify lipase producers. The addition of calcium and magnesium
         ions can provide an easier screening procedure for selection of lipolytic
         bacterial strains
-      notes: Supports the functional association between Lipoyl synthase (UniProtKB:Q49W64
-        in Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC 15305 /
-        DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)) and lipase activity.
+      notes: Supports the functional association between Lipase EstA (UniProtKB:P37957
+        in Bacillus subtilis (strain 168)) and lipase activity.

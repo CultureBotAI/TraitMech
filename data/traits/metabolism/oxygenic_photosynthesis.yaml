@@ -95,26 +95,25 @@ causal_graphs:
     description: Electron transfer complex linking PSII/plastoquinol to PSI.
     grounding: GO:0009512
     protein_examples:
-    - uniprot_id: UniProtKB:Q57038
-      protein_label: Cytochrome b6
-      gene_symbol: petB
-      taxon_id: NCBITaxon:1111708
-      taxon_label: Synechocystis sp. (strain ATCC 27184 / PCC 6803 / Kazusa)
+    - uniprot_id: UniProtKB:P98059
+      protein_label: Cytochrome c oxidase subunit 1
+      gene_symbol: ctaD
+      taxon_id: NCBITaxon:1061
+      taxon_label: Rhodobacter capsulatus (Rhodopseudomonas capsulata)
       entry_status: REVIEWED
-      proteome_id: UP000001425
       retrieved_on: '2026-10-17'
-      entry_version: 166
+      entry_version: 116
       sequence_version: 1
-      role: Exemplar protein (petB, Cytochrome b6) representing cytochrome b6f complex
-        in Synechocystis sp. (strain ATCC 27184 / PCC 6803 / Kazusa) for oxygenic
+      role: Exemplar protein (ctaD, Cytochrome c oxidase subunit 1) representing cytochrome
+        b6f complex in Rhodobacter capsulatus (Rhodopseudomonas capsulata) for oxygenic
         photosynthesis.
       evidence:
       - reference: DOI:10.1111/1751-7915.14519
         snippet: Photosynthesis in cyanobacteria requires effective light harvesting
           and the transfer of high-energy electrons through two photosystems
-        notes: Supports cytochrome b6f complex in oxygenic photosynthesis; UniProtKB:Q57038
-          (petB, Cytochrome b6) in Synechocystis sp. (strain ATCC 27184 / PCC 6803
-          / Kazusa) provides a verified protein exemplar.
+        notes: Supports cytochrome b6f complex in oxygenic photosynthesis; UniProtKB:P98059
+          (ctaD, Cytochrome c oxidase subunit 1) in Rhodobacter capsulatus (Rhodopseudomonas
+          capsulata) provides a verified protein exemplar.
   - node_id: photosystem_i
     label: photosystem I
     node_type: GENE_OR_PROTEIN
@@ -452,8 +451,8 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:P16033
-    version metadata (entry_version=187, sequence_version=1); added UniProtKB:Q57038
-    (petB) protein example to node cytochrome_b6f; added UniProtKB:P74367 (psb27)
+    version metadata (entry_version=187, sequence_version=1); added UniProtKB:P98059
+    (ctaD) protein example to node cytochrome_b6f; added UniProtKB:P74367 (psb27)
     protein example to node photosystem_i; added UniProtKB:H6LC28 (rnfA) protein example
     to node ferredoxin (+1 more).'
   llm_assisted: true

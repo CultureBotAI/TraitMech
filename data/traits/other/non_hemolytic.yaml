@@ -20,6 +20,13 @@ curation_history:
   llm_assisted: true
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed canonical_examples status alongside NONMECHANISTIC protein exemplar
+    graph for non-hemolytic; isolate-level canonical example remains deferred pending
+    explicit strain-level literature.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph non_hemolytic_graph
     with GENE_OR_PROTEIN node non_hemolytic_protein_component and UniProtKB:P08715
@@ -63,7 +70,8 @@ causal_graphs:
   - node_id: non_hemolytic_protein_component
     label: Hemolysin, plasmid
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Hemolysin, plasmid) associated with non-hemolytic.
+    description: Reference pathway protein component (Hemolysin, plasmid) whose absence
+      or lack of activity characterizes non-hemolytic.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
@@ -79,8 +87,8 @@ causal_graphs:
       retrieved_on: '2026-10-17'
       entry_version: 130
       sequence_version: 1
-      role: Characteristic protein component (hlyA, Hemolysin, plasmid) associated
-        with non-hemolytic in Escherichia coli.
+      role: Reference pathway protein (hlyA, Hemolysin, plasmid) whose absence or
+        lack of activity in Escherichia coli characterizes non-hemolytic.
       evidence:
       - reference: DOI:10.14202/vetworld.2025.3622-3630
         snippet: Hemolysis testing revealed γ-hemolysis for all strains, confirming
@@ -92,8 +100,8 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: non_hemolytic_trait
-    description: Hemolysin, plasmid (hlyA, UniProtKB:P08715) contributes to non-hemolytic
-      (associated with confirming, pathogenic, properties).
+    description: Absence or inactivity of Hemolysin, plasmid (hlyA, UniProtKB:P08715)
+      in the reference pathway underlies the non-hemolytic phenotype.
     evidence:
     - reference: DOI:10.14202/vetworld.2025.3622-3630
       snippet: Hemolysis testing revealed γ-hemolysis for all strains, confirming

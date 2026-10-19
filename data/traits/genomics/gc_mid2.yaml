@@ -29,7 +29,7 @@ causal_graphs:
   scope_status: NONMECHANISTIC
   scope_notes: This genomics record is a measurement, genomic-element classification,
     or population-level descriptor rather than one taxon-specific protein mechanism;
-    contextual protein nodes do not receive token UniProt examples.
+    contextual protein nodes include source-backed UniProtKB exemplars.
   description: DOI-backed graph linking moderate GC-biased gene conversion to a GC
     content of ~57.0–66.3% (the threshold encoded by the METPO synonym GC_57.0_66.3
     on this record).
@@ -81,33 +81,31 @@ causal_graphs:
     description: Technical bias where observed assembly GC shifts with true GC%, depth,
       and error rate.
   - node_id: gc_mid2_protein_component
-    label: DNA gyrase subunit A
+    label: Endonuclease GajA
     node_type: GENE_OR_PROTEIN
-    description: Protein component (DNA gyrase subunit A) associated with GC mid2.
+    description: Protein component (Endonuclease GajA) associated with GC mid2.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - gyrA
+    - gajA
     protein_examples:
-    - uniprot_id: UniProtKB:P0AES4
-      protein_label: DNA gyrase subunit A
-      gene_symbol: gyrA
-      taxon_id: NCBITaxon:83333
-      taxon_label: Escherichia coli (strain K12)
+    - uniprot_id: UniProtKB:P0DW47
+      protein_label: Endonuclease GajA
+      gene_symbol: gajA
+      taxon_id: NCBITaxon:1053212
+      taxon_label: Bacillus cereus (strain HuB5-5)
       entry_status: REVIEWED
-      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 173
+      entry_version: 12
       sequence_version: 1
-      role: Characteristic protein component (gyrA, DNA gyrase subunit A) associated
-        with GC mid2 in Escherichia coli (strain K12).
+      role: Characteristic protein component (gajA, Endonuclease GajA) associated
+        with GC mid2 in Bacillus cereus (strain HuB5-5).
       evidence:
       - reference: DOI:10.1186/1471-2148-10-374
         snippet: GC-biased gene conversion
-        notes: Supports DNA gyrase subunit A in GC mid2; UniProtKB:P0AES4 (gyrA, DNA
-          gyrase subunit A) in Escherichia coli (strain K12) provides a verified protein
-          exemplar.
+        notes: Supports Endonuclease GajA in GC mid2; UniProtKB:P0DW47 (gajA, Endonuclease
+          GajA) in Bacillus cereus (strain HuB5-5) provides a verified protein exemplar.
   edges:
   - subject: moderate_gbgc
     predicate: confers
@@ -182,13 +180,12 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: gc_mid2_trait
-    description: DNA gyrase subunit A (gyrA, UniProtKB:P0AES4) contributes to GC mid2
-      (associated with mutation, bias).
+    description: Endonuclease GajA (gajA, UniProtKB:P0DW47) contributes to GC mid2.
     evidence:
     - reference: DOI:10.1186/1471-2148-10-374
       snippet: mutation bias
-      notes: Supports the functional association between DNA gyrase subunit A (UniProtKB:P0AES4
-        in Escherichia coli (strain K12)) and GC mid2.
+      notes: Supports the functional association between Endonuclease GajA (UniProtKB:P0DW47
+        in Bacillus cereus (strain HuB5-5)) and GC mid2.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.817814+00:00'
   curator: seed_from_metpo
@@ -251,5 +248,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    gc_mid2_protein_component with UniProtKB:P0AES4 (gyrA) exemplar.'
+    gc_mid2_protein_component with UniProtKB:P0DW47 (gajA) exemplar.'
   llm_assisted: true

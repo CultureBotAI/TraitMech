@@ -99,17 +99,17 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph ixotrophy_graph
-    with GENE_OR_PROTEIN node ixotrophy_protein_component and UniProtKB:Q5AD13 exemplar.'
+    with GENE_OR_PROTEIN node ixotrophy_protein_component and UniProtKB:Q1D823 exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: ixotrophy_graph
   title: Protein component associated with ixotrophy
-  description: Literature-backed association between Filamentous growth regulator
-    15 (UniProtKB:Q5AD13) and ixotrophy.
+  description: Literature-backed association between Adventurous-gliding motility
+    protein Z (UniProtKB:Q1D823) and ixotrophy.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q5AD13 in Candida
-    albicans (strain SC5314 / ATCC MYA-2876) (Yeast)) associated with ixotrophy while
-    full multi-step mechanistic curation remains future work.
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q1D823 in Myxococcus
+    xanthus (strain DK1622)) associated with ixotrophy while full multi-step mechanistic
+    curation remains future work.
   nodes:
   - node_id: ixotrophy_trait
     label: ixotrophy
@@ -119,47 +119,45 @@ causal_graphs:
       microbial prey on their cell surface and kill the captured cells to obtain prey-derived
       nutrients.
   - node_id: ixotrophy_protein_component
-    label: Filamentous growth regulator 15
+    label: Adventurous-gliding motility protein Z
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Filamentous growth regulator 15) associated with
-      ixotrophy.
+    description: Protein component (Adventurous-gliding motility protein Z) associated
+      with ixotrophy.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - FGR15
+    - aglZ
     protein_examples:
-    - uniprot_id: UniProtKB:Q5AD13
-      protein_label: Filamentous growth regulator 15
-      gene_symbol: FGR15
-      taxon_id: NCBITaxon:237561
-      taxon_label: Candida albicans (strain SC5314 / ATCC MYA-2876) (Yeast)
+    - uniprot_id: UniProtKB:Q1D823
+      protein_label: Adventurous-gliding motility protein Z
+      gene_symbol: aglZ
+      taxon_id: NCBITaxon:246197
+      taxon_label: Myxococcus xanthus (strain DK1622)
       entry_status: REVIEWED
-      proteome_id: UP000000559
+      proteome_id: UP000002402
       retrieved_on: '2026-10-17'
-      entry_version: 100
-      sequence_version: 2
-      role: Characteristic protein component (FGR15, Filamentous growth regulator
-        15) associated with ixotrophy in Candida albicans (strain SC5314 / ATCC MYA-2876)
-        (Yeast).
+      entry_version: 123
+      sequence_version: 1
+      role: Characteristic protein component (aglZ, Adventurous-gliding motility protein
+        Z) associated with ixotrophy in Myxococcus xanthus (strain DK1622).
       evidence:
       - reference: DOI:10.1099/mic.0.000158
         snippet: The ability of cells to aggregate or adhere is thought to be a significant
           initial step in ixotrophy.
-        notes: Supports Filamentous growth regulator 15 in ixotrophy; UniProtKB:Q5AD13
-          (FGR15, Filamentous growth regulator 15) in Candida albicans (strain SC5314
-          / ATCC MYA-2876) (Yeast) provides a verified protein exemplar.
+        notes: Supports Adventurous-gliding motility protein Z in ixotrophy; UniProtKB:Q1D823
+          (aglZ, Adventurous-gliding motility protein Z) in Myxococcus xanthus (strain
+          DK1622) provides a verified protein exemplar.
   edges:
   - subject: ixotrophy_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: ixotrophy_trait
-    description: Filamentous growth regulator 15 (FGR15, UniProtKB:Q5AD13) contributes
-      to ixotrophy (associated with significant, aggregate, ixotrophy).
+    description: Adventurous-gliding motility protein Z (aglZ, UniProtKB:Q1D823) contributes
+      to ixotrophy.
     evidence:
     - reference: DOI:10.1099/mic.0.000158
       snippet: The ability of cells to aggregate or adhere is thought to be a significant
         initial step in ixotrophy.
-      notes: Supports the functional association between Filamentous growth regulator
-        15 (UniProtKB:Q5AD13 in Candida albicans (strain SC5314 / ATCC MYA-2876) (Yeast))
-        and ixotrophy.
+      notes: Supports the functional association between Adventurous-gliding motility
+        protein Z (UniProtKB:Q1D823 in Myxococcus xanthus (strain DK1622)) and ixotrophy.

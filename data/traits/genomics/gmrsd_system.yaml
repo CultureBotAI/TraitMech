@@ -96,37 +96,36 @@ causal_graphs:
     description: Possession of a genome-encoded Type IV modification-dependent restriction
       system.
   - node_id: gmrsd_system_protein_component
-    label: Formate dehydrogenase H
+    label: Type IV methyl-directed restriction enzyme EcoKMcrB subunit
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Formate dehydrogenase H) associated with GmrSD
-      system.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Type IV methyl-directed restriction enzyme EcoKMcrB
+      subunit) associated with GmrSD system.
+    grounding: InterPro:IPR003593
     gene_symbols:
-    - fdhF
+    - mcrB
     protein_examples:
-    - uniprot_id: UniProtKB:P07658
-      protein_label: Formate dehydrogenase H
-      gene_symbol: fdhF
+    - uniprot_id: UniProtKB:P15005
+      protein_label: Type IV methyl-directed restriction enzyme EcoKMcrB subunit
+      gene_symbol: mcrB
       taxon_id: NCBITaxon:83333
       taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
       proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 228
-      sequence_version: 2
-      role: Characteristic protein component (fdhF, Formate dehydrogenase H) associated
-        with GmrSD system in Escherichia coli (strain K12).
+      entry_version: 197
+      sequence_version: 3
+      role: Characteristic protein component (mcrB, Type IV methyl-directed restriction
+        enzyme EcoKMcrB subunit) associated with GmrSD system in Escherichia coli
+        (strain K12).
       evidence:
-      - reference: DOI:10.1186/s12859-015-0773-z
-        snippet: Moreover, we found that GmrSD systems exist predominantly as a fused,
-          double-domain form rather than as a heterodimer and that their homologs
-          are often encoded in regions enriched in defense and gene mobility-related
-          elements.
-        notes: Supports Formate dehydrogenase H in GmrSD system; UniProtKB:P07658
-          (fdhF, Formate dehydrogenase H) in Escherichia coli (strain K12) provides
-          a verified protein exemplar.
+      - reference: DOI:10.1016/j.jmb.2006.11.051
+        snippet: Overall activities of the purified GmrSD enzyme are in good agreement
+          with the properties of the cloned gmr genes in vivo and suggest a restriction
+          enzyme specific for sugar modified HMC DNAs.
+        notes: Supports Type IV methyl-directed restriction enzyme EcoKMcrB subunit
+          in GmrSD system; UniProtKB:P15005 (mcrB, Type IV methyl-directed restriction
+          enzyme EcoKMcrB subunit) in Escherichia coli (strain K12) provides a verified
+          protein exemplar.
   edges:
   - subject: gmrsd_locus
     predicate: enables
@@ -207,15 +206,16 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: gmrsd_system_trait
-    description: Formate dehydrogenase H (fdhF, UniProtKB:P07658) contributes to GmrSD
-      system (associated with predominantly, heterodimer, elements).
+    description: Type IV methyl-directed restriction enzyme EcoKMcrB subunit (mcrB,
+      UniProtKB:P15005) contributes to GmrSD system.
     evidence:
-    - reference: DOI:10.1186/s12859-015-0773-z
-      snippet: Moreover, we found that GmrSD systems exist predominantly as a fused,
-        double-domain form rather than as a heterodimer and that their homologs are
-        often encoded in regions enriched in defense and gene mobility-related elements.
-      notes: Supports the functional association between Formate dehydrogenase H (UniProtKB:P07658
-        in Escherichia coli (strain K12)) and GmrSD system.
+    - reference: DOI:10.1016/j.jmb.2006.11.051
+      snippet: Overall activities of the purified GmrSD enzyme are in good agreement
+        with the properties of the cloned gmr genes in vivo and suggest a restriction
+        enzyme specific for sugar modified HMC DNAs.
+      notes: Supports the functional association between Type IV methyl-directed restriction
+        enzyme EcoKMcrB subunit (UniProtKB:P15005 in Escherichia coli (strain K12))
+        and GmrSD system.
 discussions:
 - discussion_id: gmrsd-defensefinder-model-gap
   prompt: Resolve exact GmrS/GmrD domain activities, complete sugar-modified HMC substrate
@@ -301,5 +301,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    gmrsd_system_protein_component with UniProtKB:P07658 (fdhF) exemplar.'
+    gmrsd_system_protein_component with UniProtKB:P15005 (mcrB) exemplar.'
   llm_assisted: true

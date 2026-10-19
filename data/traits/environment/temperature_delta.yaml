@@ -70,33 +70,33 @@ causal_graphs:
     description: Maintenance of membrane function supporting growth at the low-temperature
       end of the range.
   - node_id: temperature_delta_protein_component
-    label: Chaperone protein HtpG
+    label: Chaperone protein DnaK
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Chaperone protein HtpG) associated with temperature
+    description: Protein component (Chaperone protein DnaK) associated with temperature
       delta.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - htpG
+    - dnaK
     protein_examples:
-    - uniprot_id: UniProtKB:P0A6Z3
-      protein_label: Chaperone protein HtpG
-      gene_symbol: htpG
+    - uniprot_id: UniProtKB:P0A6Y8
+      protein_label: Chaperone protein DnaK
+      gene_symbol: dnaK
       taxon_id: NCBITaxon:83333
       taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
       proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 166
-      sequence_version: 1
-      role: Characteristic protein component (htpG, Chaperone protein HtpG) associated
+      entry_version: 183
+      sequence_version: 2
+      role: Characteristic protein component (dnaK, Chaperone protein DnaK) associated
         with temperature delta in Escherichia coli (strain K12).
       evidence:
       - reference: DOI:10.1016/s0300-9629(97)00003-0
         snippet: adapted to environments of high temperature
-        notes: Supports Chaperone protein HtpG in temperature delta; UniProtKB:P0A6Z3
-          (htpG, Chaperone protein HtpG) in Escherichia coli (strain K12) provides
+        notes: Supports Chaperone protein DnaK in temperature delta; UniProtKB:P0A6Y8
+          (dnaK, Chaperone protein DnaK) in Escherichia coli (strain K12) provides
           a verified protein exemplar.
   edges:
   - subject: thermal_adaptation_flexibility
@@ -172,12 +172,12 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: temperature_delta_trait
-    description: Chaperone protein HtpG (htpG, UniProtKB:P0A6Z3) contributes to temperature
-      delta (associated with physiological, performance, optimizes).
+    description: Chaperone protein DnaK (dnaK, UniProtKB:P0A6Y8) contributes to temperature
+      delta.
     evidence:
     - reference: DOI:10.1146/annurev-micro-091313-103612
       snippet: optimizes the performance of cellular physiological processes
-      notes: Supports the functional association between Chaperone protein HtpG (UniProtKB:P0A6Z3
+      notes: Supports the functional association between Chaperone protein DnaK (UniProtKB:P0A6Y8
         in Escherichia coli (strain K12)) and temperature delta.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.812991+00:00'
@@ -247,5 +247,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    temperature_delta_protein_component with UniProtKB:P0A6Z3 (htpG) exemplar.'
+    temperature_delta_protein_component with UniProtKB:P0A6Y8 (dnaK) exemplar.'
   llm_assisted: true

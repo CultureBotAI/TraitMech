@@ -116,20 +116,27 @@ curation_history:
   llm_assisted: true
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed canonical_examples status alongside NONMECHANISTIC protein exemplar
+    graph for diversifying bet hedging; isolate-level canonical example remains deferred
+    pending explicit strain-level literature.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph diversifying_bet_hedging_graph
-    with GENE_OR_PROTEIN node diversifying_bet_hedging_protein_component and UniProtKB:P9WGI3
+    with GENE_OR_PROTEIN node diversifying_bet_hedging_protein_component and UniProtKB:P06534
     exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: diversifying_bet_hedging_graph
   title: Protein component associated with diversifying bet hedging
-  description: Literature-backed association between RNA polymerase sigma factor SigF
-    (UniProtKB:P9WGI3) and diversifying bet hedging.
+  description: Literature-backed association between Stage 0 sporulation protein A
+    (UniProtKB:P06534) and diversifying bet hedging.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P9WGI3 in Mycobacterium
-    tuberculosis (strain ATCC 25618 / H37Rv)) associated with diversifying bet hedging
-    while full multi-step mechanistic curation remains future work.
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P06534 in Bacillus
+    subtilis (strain 168)) associated with diversifying bet hedging while full multi-step
+    mechanistic curation remains future work.
   nodes:
   - node_id: diversifying_bet_hedging_trait
     label: diversifying bet hedging
@@ -140,49 +147,48 @@ causal_graphs:
       environment and before environmental change, spreading risk across unpredictable
       environmental changes through state-specific survival or reproductive trade-offs.
   - node_id: diversifying_bet_hedging_protein_component
-    label: RNA polymerase sigma factor SigF
+    label: Stage 0 sporulation protein A
     node_type: GENE_OR_PROTEIN
-    description: Protein component (RNA polymerase sigma factor SigF) associated with
+    description: Protein component (Stage 0 sporulation protein A) associated with
       diversifying bet hedging.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - sigF
+    - spo0A
     protein_examples:
-    - uniprot_id: UniProtKB:P9WGI3
-      protein_label: RNA polymerase sigma factor SigF
-      gene_symbol: sigF
-      taxon_id: NCBITaxon:83332
-      taxon_label: Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)
+    - uniprot_id: UniProtKB:P06534
+      protein_label: Stage 0 sporulation protein A
+      gene_symbol: spo0A
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
       entry_status: REVIEWED
-      proteome_id: UP000001584
+      proteome_id: UP000001570
       retrieved_on: '2026-10-17'
-      entry_version: 57
+      entry_version: 189
       sequence_version: 1
-      role: Characteristic protein component (sigF, RNA polymerase sigma factor SigF)
-        associated with diversifying bet hedging in Mycobacterium tuberculosis (strain
-        ATCC 25618 / H37Rv).
+      role: Characteristic protein component (spo0A, Stage 0 sporulation protein A)
+        associated with diversifying bet hedging in Bacillus subtilis (strain 168).
       evidence:
       - reference: DOI:10.1371/journal.pbio.1001325
         snippet: Our results suggest that yeast bet hedging results from multiple
           epigenetic growth states determined by a combination of stochastic and deterministic
           factors.
-        notes: Supports RNA polymerase sigma factor SigF in diversifying bet hedging;
-          UniProtKB:P9WGI3 (sigF, RNA polymerase sigma factor SigF) in Mycobacterium
-          tuberculosis (strain ATCC 25618 / H37Rv) provides a verified protein exemplar.
+        notes: Supports Stage 0 sporulation protein A in diversifying bet hedging;
+          UniProtKB:P06534 (spo0A, Stage 0 sporulation protein A) in Bacillus subtilis
+          (strain 168) provides a verified protein exemplar.
   edges:
   - subject: diversifying_bet_hedging_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: diversifying_bet_hedging_trait
-    description: RNA polymerase sigma factor SigF (sigF, UniProtKB:P9WGI3) contributes
-      to diversifying bet hedging (associated with deterministic, combination, determined).
+    description: Stage 0 sporulation protein A (spo0A, UniProtKB:P06534) contributes
+      to diversifying bet hedging.
     evidence:
     - reference: DOI:10.1371/journal.pbio.1001325
       snippet: Our results suggest that yeast bet hedging results from multiple epigenetic
         growth states determined by a combination of stochastic and deterministic
         factors.
-      notes: Supports the functional association between RNA polymerase sigma factor
-        SigF (UniProtKB:P9WGI3 in Mycobacterium tuberculosis (strain ATCC 25618 /
-        H37Rv)) and diversifying bet hedging.
+      notes: Supports the functional association between Stage 0 sporulation protein
+        A (UniProtKB:P06534 in Bacillus subtilis (strain 168)) and diversifying bet
+        hedging.

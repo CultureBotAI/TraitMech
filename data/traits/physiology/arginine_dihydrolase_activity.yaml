@@ -78,19 +78,17 @@ curation_history:
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph arginine_dihydrolase_activity_graph
     with GENE_OR_PROTEIN node arginine_dihydrolase_activity_protein_component and
-    UniProtKB:Q4A0N0 exemplar.'
+    UniProtKB:P13981 exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: arginine_dihydrolase_activity_graph
   title: Protein component associated with arginine dihydrolase activity
-  description: 'Literature-backed association between Arginine biosynthesis bifunctional
-    protein ArgJ [Cleaved into: Arginine biosynthesis bifunctional protein ArgJ alpha
-    chain; Arginine biosynthesis bifunctional protein ArgJ beta chain] [Includes:
-    Glutamate N-acetyltransferase (UniProtKB:Q4A0N0) and arginine dihydrolase activity.'
+  description: Literature-backed association between Arginine deiminase (UniProtKB:P13981)
+    and arginine dihydrolase activity.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q4A0N0 in Staphylococcus
-    saprophyticus subsp. saprophyticus (strain ATCC 15305 / DSM 20229 / NCIMB 8711
-    / NCTC 7292 / S-41)) associated with arginine dihydrolase activity while full
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P13981 in Pseudomonas
+    aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228
+    / 1C / PRS 101 / PAO1)) associated with arginine dihydrolase activity while full
     multi-step mechanistic curation remains future work.
   nodes:
   - node_id: arginine_dihydrolase_activity_trait
@@ -100,73 +98,50 @@ causal_graphs:
     description: A physiological pathway-activity phenotype in which a cell converts
       L-arginine through the arginine deiminase pathway to generate ATP.
   - node_id: arginine_dihydrolase_activity_protein_component
-    label: 'Arginine biosynthesis bifunctional protein ArgJ [Cleaved into: Arginine
-      biosynthesis bifunctional protein ArgJ alpha chain; Arginine biosynthesis bifunctional
-      protein ArgJ beta chain] [Includes: Glutamate N-acetyltransferase'
+    label: Arginine deiminase
     node_type: GENE_OR_PROTEIN
-    description: 'Protein component (Arginine biosynthesis bifunctional protein ArgJ
-      [Cleaved into: Arginine biosynthesis bifunctional protein ArgJ alpha chain;
-      Arginine biosynthesis bifunctional protein ArgJ beta chain] [Includes: Glutamate
-      N-acetyltransferase) associated with arginine dihydrolase activity.'
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Arginine deiminase) associated with arginine dihydrolase
+      activity.
+    grounding: InterPro:IPR003876
     gene_symbols:
-    - argJ
+    - arcA
     protein_examples:
-    - uniprot_id: UniProtKB:Q4A0N0
-      protein_label: 'Arginine biosynthesis bifunctional protein ArgJ [Cleaved into:
-        Arginine biosynthesis bifunctional protein ArgJ alpha chain; Arginine biosynthesis
-        bifunctional protein ArgJ beta chain] [Includes: Glutamate N-acetyltransferase'
-      gene_symbol: argJ
-      taxon_id: NCBITaxon:342451
-      taxon_label: Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
-        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+    - uniprot_id: UniProtKB:P13981
+      protein_label: Arginine deiminase
+      gene_symbol: arcA
+      taxon_id: NCBITaxon:208964
+      taxon_label: Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116
+        / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)
       entry_status: REVIEWED
-      proteome_id: UP000006371
+      proteome_id: UP000002438
       retrieved_on: '2026-10-17'
-      entry_version: 131
-      sequence_version: 1
-      role: 'Characteristic protein component (argJ, Arginine biosynthesis bifunctional
-        protein ArgJ [Cleaved into: Arginine biosynthesis bifunctional protein ArgJ
-        alpha chain; Arginine biosynthesis bifunctional protein ArgJ beta chain] [Includes:
-        Glutamate N-acetyltransferase) associated with arginine dihydrolase activity
-        in Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC 15305 /
-        DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41).'
+      entry_version: 161
+      sequence_version: 2
+      role: Characteristic protein component (arcA, Arginine deiminase) associated
+        with arginine dihydrolase activity in Pseudomonas aeruginosa (strain ATCC
+        15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1).
       evidence:
       - reference: DOI:10.1016/j.resmic.2012.11.004
         snippet: Arginine conversion through the arginine deiminase (ADI) pathway
           is a common metabolic trait of Lactobacillus sakei which is ascribed to
           an arc operon and which inquisitively involves citrulline excretion and
           re-uptake.
-        notes: 'Supports Arginine biosynthesis bifunctional protein ArgJ [Cleaved
-          into: Arginine biosynthesis bifunctional protein ArgJ alpha chain; Arginine
-          biosynthesis bifunctional protein ArgJ beta chain] [Includes: Glutamate
-          N-acetyltransferase in arginine dihydrolase activity; UniProtKB:Q4A0N0 (argJ,
-          Arginine biosynthesis bifunctional protein ArgJ [Cleaved into: Arginine
-          biosynthesis bifunctional protein ArgJ alpha chain; Arginine biosynthesis
-          bifunctional protein ArgJ beta chain] [Includes: Glutamate N-acetyltransferase)
-          in Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC 15305
-          / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) provides a verified protein
-          exemplar.'
+        notes: Supports Arginine deiminase in arginine dihydrolase activity; UniProtKB:P13981
+          (arcA, Arginine deiminase) in Pseudomonas aeruginosa (strain ATCC 15692
+          / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)
+          provides a verified protein exemplar.
   edges:
   - subject: arginine_dihydrolase_activity_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: arginine_dihydrolase_activity_trait
-    description: 'Arginine biosynthesis bifunctional protein ArgJ [Cleaved into: Arginine
-      biosynthesis bifunctional protein ArgJ alpha chain; Arginine biosynthesis bifunctional
-      protein ArgJ beta chain] [Includes: Glutamate N-acetyltransferase (argJ, UniProtKB:Q4A0N0)
-      contributes to arginine dihydrolase activity (associated with inquisitively,
-      lactobacillus, citrulline).'
+    description: Arginine deiminase (arcA, UniProtKB:P13981) contributes to arginine
+      dihydrolase activity.
     evidence:
     - reference: DOI:10.1016/j.resmic.2012.11.004
       snippet: Arginine conversion through the arginine deiminase (ADI) pathway is
         a common metabolic trait of Lactobacillus sakei which is ascribed to an arc
         operon and which inquisitively involves citrulline excretion and re-uptake.
-      notes: 'Supports the functional association between Arginine biosynthesis bifunctional
-        protein ArgJ [Cleaved into: Arginine biosynthesis bifunctional protein ArgJ
-        alpha chain; Arginine biosynthesis bifunctional protein ArgJ beta chain] [Includes:
-        Glutamate N-acetyltransferase (UniProtKB:Q4A0N0 in Staphylococcus saprophyticus
-        subsp. saprophyticus (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292
-        / S-41)) and arginine dihydrolase activity.'
+      notes: Supports the functional association between Arginine deiminase (UniProtKB:P13981
+        in Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM
+        14847 / LMG 12228 / 1C / PRS 101 / PAO1)) and arginine dihydrolase activity.

@@ -102,6 +102,13 @@ curation_history:
   llm_assisted: true
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed canonical_examples status alongside NONMECHANISTIC protein exemplar
+    graph for biomineralization; isolate-level canonical example remains deferred
+    pending explicit strain-level literature.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph biomineralization_graph
     with GENE_OR_PROTEIN node biomineralization_protein_component and UniProtKB:Q5KW03
@@ -152,8 +159,7 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: biomineralization_trait
-    description: Carbonic anhydrase (Q5KW03, UniProtKB:Q5KW03) contributes to biomineralization
-      (associated with biomineralization, microorganisms, minerals).
+    description: Carbonic anhydrase (Q5KW03, UniProtKB:Q5KW03) contributes to biomineralization.
     evidence:
     - reference: DOI:10.1016/j.crte.2010.09.002
       snippet: Microorganisms can mediate the formation of minerals by a process called

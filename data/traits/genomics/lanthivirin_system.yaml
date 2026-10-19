@@ -79,35 +79,34 @@ causal_graphs:
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
   - node_id: lanthivirin_system_protein_component
-    label: Cell death peptidase
+    label: Endonuclease GajA
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Cell death peptidase) associated with lanthivirin
+    description: Protein component (Endonuclease GajA) associated with lanthivirin
       system.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - lit
+    - gajA
     protein_examples:
-    - uniprot_id: UniProtKB:P11072
-      protein_label: Cell death peptidase
-      gene_symbol: lit
-      taxon_id: NCBITaxon:83333
-      taxon_label: Escherichia coli (strain K12)
+    - uniprot_id: UniProtKB:P0DW47
+      protein_label: Endonuclease GajA
+      gene_symbol: gajA
+      taxon_id: NCBITaxon:1053212
+      taxon_label: Bacillus cereus (strain HuB5-5)
       entry_status: REVIEWED
-      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 137
-      sequence_version: 2
-      role: Characteristic protein component (lit, Cell death peptidase) associated
-        with lanthivirin system in Escherichia coli (strain K12).
+      entry_version: 12
+      sequence_version: 1
+      role: Characteristic protein component (gajA, Endonuclease GajA) associated
+        with lanthivirin system in Bacillus cereus (strain HuB5-5).
       evidence:
       - reference: DOI:10.1016/j.chom.2026.06.017
         snippet: We demonstrate anti-phage activity both in a native Streptomyces
           context and through heterologous expression of six distinct lanthivirin
           systems.
-        notes: Supports Cell death peptidase in lanthivirin system; UniProtKB:P11072
-          (lit, Cell death peptidase) in Escherichia coli (strain K12) provides a
+        notes: Supports Endonuclease GajA in lanthivirin system; UniProtKB:P0DW47
+          (gajA, Endonuclease GajA) in Bacillus cereus (strain HuB5-5) provides a
           verified protein exemplar.
   edges:
   - subject: lanthivirin_bgc
@@ -166,14 +165,14 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: lanthivirin_system_trait
-    description: Cell death peptidase (lit, UniProtKB:P11072) contributes to lanthivirin
-      system (associated with bacteriophage, altruistic, tolerance).
+    description: Endonuclease GajA (gajA, UniProtKB:P0DW47) contributes to lanthivirin
+      system.
     evidence:
     - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
-      snippet: 'RexAB | 10\.1101/gad\.6\.3\.497 | The Rex system of bacteriophage
-        lambda: tolerance and altruistic cell death'
-      notes: Supports the functional association between Cell death peptidase (UniProtKB:P11072
-        in Escherichia coli (strain K12)) and lanthivirin system.
+      snippet: '| McrBC | 10\.1093/emboj/20\.12\.3210 | The McrBC restriction endonuclease
+        assembles into a ring structure in the presence of G nucleotides |'
+      notes: Supports the functional association between Endonuclease GajA (UniProtKB:P0DW47
+        in Bacillus cereus (strain HuB5-5)) and lanthivirin system.
 discussions:
 - discussion_id: lanthivirin-defensefinder-model-gap
   prompt: Resolve Lanthiphage HMM-to-component coverage, rule-level detection criteria,
@@ -242,5 +241,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    lanthivirin_system_protein_component with UniProtKB:P11072 (lit) exemplar.'
+    lanthivirin_system_protein_component with UniProtKB:P0DW47 (gajA) exemplar.'
   llm_assisted: true

@@ -31,8 +31,8 @@ causal_graphs:
   title: Intracellular endosymbiosis drives extreme genome reduction
   scope_status: NONMECHANISTIC
   scope_notes: This broad ecological, host-relationship, habitat, or hazard classification
-    spans multiple taxa and mechanisms; contextual protein nodes do not receive token
-    UniProt examples.
+    spans multiple taxa and mechanisms; contextual protein nodes include source-backed
+    UniProtKB exemplars.
   description: Evidence-backed causal sketch linking intracellular host localization
     to long-term genome reduction in obligate endosymbionts.
   nodes:
@@ -86,38 +86,35 @@ causal_graphs:
     description: Obligate reliance of the reduced-genome symbiont on the host intracellular
       environment.
   - node_id: endosymbiosis_protein_component
-    label: ATP synthase subunit alpha
+    label: Chaperonin GroEL
     node_type: GENE_OR_PROTEIN
-    description: Protein component (ATP synthase subunit alpha) associated with endosymbiosis.
+    description: Protein component (Chaperonin GroEL) associated with endosymbiosis.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - atpA
+    - groEL
     protein_examples:
-    - uniprot_id: UniProtKB:Q49Z52
-      protein_label: ATP synthase subunit alpha
-      gene_symbol: atpA
-      taxon_id: NCBITaxon:342451
-      taxon_label: Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
-        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+    - uniprot_id: UniProtKB:P0A6F5
+      protein_label: Chaperonin GroEL
+      gene_symbol: groEL
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
-      proteome_id: UP000006371
+      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 137
-      sequence_version: 1
-      role: Characteristic protein component (atpA, ATP synthase subunit alpha) associated
-        with endosymbiosis in Staphylococcus saprophyticus subsp. saprophyticus (strain
-        ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41).
+      entry_version: 184
+      sequence_version: 2
+      role: Characteristic protein component (groEL, Chaperonin GroEL) associated
+        with endosymbiosis in Escherichia coli (strain K12).
       evidence:
       - reference: DOI:10.1038/nrmicro.2017.171
         snippet: These dramatic lifestyle and developmental changes are underpinned
           by large genomes and even more complex pan-genomes, which encompass the
           whole population and are subject to rapid genetic exchange.
-        notes: Supports ATP synthase subunit alpha in endosymbiosis; UniProtKB:Q49Z52
-          (atpA, ATP synthase subunit alpha) in Staphylococcus saprophyticus subsp.
-          saprophyticus (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 /
-          S-41) provides a verified protein exemplar.
+        notes: Supports Chaperonin GroEL in endosymbiosis; UniProtKB:P0A6F5 (groEL,
+          Chaperonin GroEL) in Escherichia coli (strain K12) provides a verified protein
+          exemplar.
   edges:
   - subject: intracellular_localization
     predicate: confers
@@ -190,16 +187,14 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: endosymbiosis_trait
-    description: ATP synthase subunit alpha (atpA, UniProtKB:Q49Z52) contributes to
-      endosymbiosis (associated with developmental, underpinned, population).
+    description: Chaperonin GroEL (groEL, UniProtKB:P0A6F5) contributes to endosymbiosis.
     evidence:
     - reference: DOI:10.1038/nrmicro.2017.171
       snippet: These dramatic lifestyle and developmental changes are underpinned
         by large genomes and even more complex pan-genomes, which encompass the whole
         population and are subject to rapid genetic exchange.
-      notes: Supports the functional association between ATP synthase subunit alpha
-        (UniProtKB:Q49Z52 in Staphylococcus saprophyticus subsp. saprophyticus (strain
-        ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)) and endosymbiosis.
+      notes: Supports the functional association between Chaperonin GroEL (UniProtKB:P0A6F5
+        in Escherichia coli (strain K12)) and endosymbiosis.
 curation_history:
 - timestamp: '2026-06-02T00:00:00Z'
   curator: claude
@@ -260,7 +255,7 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    endosymbiosis_protein_component with UniProtKB:Q49Z52 (atpA) exemplar.'
+    endosymbiosis_protein_component with UniProtKB:P0A6F5 (groEL) exemplar.'
   llm_assisted: true
 discussions:
 - discussion_id: kgscan-a6758e26f5a6

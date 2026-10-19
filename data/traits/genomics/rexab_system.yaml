@@ -71,35 +71,33 @@ causal_graphs:
     description: Possession of a genome-encoded RexAB abortive-infection phage-defense
       system.
   - node_id: rexab_system_protein_component
-    label: Exonuclease/helicase subunit RexA
+    label: Abortive phage resistance protein AbiC
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Exonuclease/helicase subunit RexA) associated
+    description: Protein component (Abortive phage resistance protein AbiC) associated
       with RexAB system.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    grounding: InterPro:IPR031709
     gene_symbols:
-    - rexA
+    - abiC
     protein_examples:
-    - uniprot_id: UniProtKB:Q97QP9
-      protein_label: Exonuclease/helicase subunit RexA
-      gene_symbol: rexA
-      taxon_id: NCBITaxon:170187
-      taxon_label: Streptococcus pneumoniae serotype 4 (strain ATCC BAA-334 / TIGR4)
+    - uniprot_id: UniProtKB:Q01457
+      protein_label: Abortive phage resistance protein AbiC
+      gene_symbol: abiC
+      taxon_id: NCBITaxon:1360
+      taxon_label: Lactococcus lactis subsp. lactis (Streptococcus lactis)
       entry_status: REVIEWED
-      proteome_id: UP000000585
       retrieved_on: '2026-10-17'
-      entry_version: 142
+      entry_version: 35
       sequence_version: 1
-      role: Characteristic protein component (rexA, Exonuclease/helicase subunit RexA)
-        associated with RexAB system in Streptococcus pneumoniae serotype 4 (strain
-        ATCC BAA-334 / TIGR4).
+      role: Characteristic protein component (abiC, Abortive phage resistance protein
+        AbiC) associated with RexAB system in Lactococcus lactis subsp. lactis (Streptococcus
+        lactis).
       evidence:
-      - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
-        snippet: '| RexAB__RexA | RexAB__RexA | RexAB | PF15969.7 | 25 |'
-        notes: Supports Exonuclease/helicase subunit RexA in RexAB system; UniProtKB:Q97QP9
-          (rexA, Exonuclease/helicase subunit RexA) in Streptococcus pneumoniae serotype
-          4 (strain ATCC BAA-334 / TIGR4) provides a verified protein exemplar.
+      - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+        snippet: 'AbiC | 10\.1016/j\.mib\.2005\.06\.006 | Phage abortive infection
+          in lactococci: variations on a theme'
+        notes: Supports Abortive phage resistance protein AbiC in RexAB system; UniProtKB:Q01457
+          (abiC, Abortive phage resistance protein AbiC) in Lactococcus lactis subsp.
+          lactis (Streptococcus lactis) provides a verified protein exemplar.
   edges:
   - subject: rexab_locus
     predicate: contributes to
@@ -146,18 +144,15 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: rexab_system_trait
-    description: Exonuclease/helicase subunit RexA (rexA, UniProtKB:Q97QP9) contributes
-      to RexAB system (associated with helicaseduf2290, helicase, duf2290).
+    description: Abortive phage resistance protein AbiC (abiC, UniProtKB:Q01457) contributes
+      to RexAB system.
     evidence:
-    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
-      snippet: '| Rst_HelicaseDUF2290__DUF2290 | Rst_HelicaseDUF2290__DUF2290___DUF2290
-        | Rst_HelicaseDUF2290 | PF10053.11 | 25 | | Rst_HelicaseDUF2290__DUF2290_Pers
-        | Rst_HelicaseDUF2290__DUF2290_Pers___DUF2290_Pers | Rst_HelicaseDUF2290 |
-        Custom | 20 | | Rst_HelicaseDUF2290__Helicase | Rst_HelicaseDUF2290__Helicase___Helicase
-        | Rst_HelicaseDUF2290 | Custom | 20 |'
-      notes: Supports the functional association between Exonuclease/helicase subunit
-        RexA (UniProtKB:Q97QP9 in Streptococcus pneumoniae serotype 4 (strain ATCC
-        BAA-334 / TIGR4)) and RexAB system.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: 'AbiC | 10\.1016/j\.mib\.2005\.06\.006 | Phage abortive infection in
+        lactococci: variations on a theme'
+      notes: Supports the functional association between Abortive phage resistance
+        protein AbiC (UniProtKB:Q01457 in Lactococcus lactis subsp. lactis (Streptococcus
+        lactis)) and RexAB system.
 discussions:
 - discussion_id: rexab-mechanism-gap
   prompt: Resolve the direct RexAB phage trigger, RexA and RexB molecular coupling,
@@ -196,5 +191,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    rexab_system_protein_component with UniProtKB:Q97QP9 (rexA) exemplar.'
+    rexab_system_protein_component with UniProtKB:Q01457 (abiC) exemplar.'
   llm_assisted: true

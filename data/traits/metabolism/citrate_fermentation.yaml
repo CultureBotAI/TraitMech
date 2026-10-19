@@ -55,18 +55,18 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph citrate_fermentation_graph
-    with GENE_OR_PROTEIN node citrate_fermentation_protein_component and UniProtKB:P0ABH7
+    with GENE_OR_PROTEIN node citrate_fermentation_protein_component and UniProtKB:P31602
     exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: citrate_fermentation_graph
   title: Protein component associated with citrate fermentation
-  description: Literature-backed association between Citrate synthase (UniProtKB:P0ABH7)
+  description: Literature-backed association between Citrate/sodium symporter (UniProtKB:P31602)
     and citrate fermentation.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P0ABH7 in Escherichia
-    coli (strain K12)) associated with citrate fermentation while full multi-step
-    mechanistic curation remains future work.
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P31602 in Klebsiella
+    pneumoniae) associated with citrate fermentation while full multi-step mechanistic
+    curation remains future work.
   nodes:
   - node_id: citrate_fermentation_trait
     label: citrate fermentation
@@ -74,44 +74,42 @@ causal_graphs:
     grounding: traitmech:000182
     description: A fermentation in which citrate is the primary fermentable substrate.
   - node_id: citrate_fermentation_protein_component
-    label: Citrate synthase
+    label: Citrate/sodium symporter
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Citrate synthase) associated with citrate fermentation.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Citrate/sodium symporter) associated with citrate
+      fermentation.
+    grounding: InterPro:IPR018025
     gene_symbols:
-    - gltA
+    - citS
     protein_examples:
-    - uniprot_id: UniProtKB:P0ABH7
-      protein_label: Citrate synthase
-      gene_symbol: gltA
-      taxon_id: NCBITaxon:83333
-      taxon_label: Escherichia coli (strain K12)
+    - uniprot_id: UniProtKB:P31602
+      protein_label: Citrate/sodium symporter
+      gene_symbol: citS
+      taxon_id: NCBITaxon:573
+      taxon_label: Klebsiella pneumoniae
       entry_status: REVIEWED
-      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 141
+      entry_version: 99
       sequence_version: 1
-      role: Characteristic protein component (gltA, Citrate synthase) associated with
-        citrate fermentation in Escherichia coli (strain K12).
+      role: Characteristic protein component (citS, Citrate/sodium symporter) associated
+        with citrate fermentation in Klebsiella pneumoniae.
       evidence:
       - reference: DOI:10.1128/JB.183.18.5248-5256.2001
         snippet: Klebsiella pneumoniae is able to grow anaerobically with citrate
           as a sole carbon and energy source by a fermentative pathway
-        notes: Supports Citrate synthase in citrate fermentation; UniProtKB:P0ABH7
-          (gltA, Citrate synthase) in Escherichia coli (strain K12) provides a verified
+        notes: Supports Citrate/sodium symporter in citrate fermentation; UniProtKB:P31602
+          (citS, Citrate/sodium symporter) in Klebsiella pneumoniae provides a verified
           protein exemplar.
   edges:
   - subject: citrate_fermentation_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: citrate_fermentation_trait
-    description: Citrate synthase (gltA, UniProtKB:P0ABH7) contributes to citrate
-      fermentation (associated with anaerobically, fermentative, klebsiella).
+    description: Citrate/sodium symporter (citS, UniProtKB:P31602) contributes to
+      citrate fermentation.
     evidence:
     - reference: DOI:10.1128/JB.183.18.5248-5256.2001
       snippet: Klebsiella pneumoniae is able to grow anaerobically with citrate as
         a sole carbon and energy source by a fermentative pathway
-      notes: Supports the functional association between Citrate synthase (UniProtKB:P0ABH7
-        in Escherichia coli (strain K12)) and citrate fermentation.
+      notes: Supports the functional association between Citrate/sodium symporter
+        (UniProtKB:P31602 in Klebsiella pneumoniae) and citrate fermentation.

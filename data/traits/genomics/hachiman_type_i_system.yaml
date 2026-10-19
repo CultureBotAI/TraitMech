@@ -89,17 +89,17 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph hachiman_type_i_system_graph
-    with GENE_OR_PROTEIN node hachiman_type_i_system_protein_component and UniProtKB:P0DW40
+    with GENE_OR_PROTEIN node hachiman_type_i_system_protein_component and UniProtKB:P0DW42
     exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: hachiman_type_i_system_graph
   title: Protein component associated with Hachiman type I system
-  description: Literature-backed association between Hachiman protein HamB (UniProtKB:P0DW40)
+  description: Literature-backed association between Septu protein PtuB (UniProtKB:P0DW42)
     and Hachiman type I system.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P0DW40 in Bacillus
-    cereus) associated with Hachiman type I system while full multi-step mechanistic
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P0DW42 in Bacillus
+    thuringiensis) associated with Hachiman type I system while full multi-step mechanistic
     curation remains future work.
   nodes:
   - node_id: hachiman_type_i_system_trait
@@ -109,44 +109,44 @@ causal_graphs:
     description: A Hachiman system in which an organism possesses a HamA/HamB locus
       without a HamC component.
   - node_id: hachiman_type_i_system_protein_component
-    label: Hachiman protein HamB
+    label: Septu protein PtuB
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Hachiman protein HamB) associated with Hachiman
-      type I system.
+    description: Protein component (Septu protein PtuB) associated with Hachiman type
+      I system.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - hamB
+    - ptuB
     protein_examples:
-    - uniprot_id: UniProtKB:P0DW40
-      protein_label: Hachiman protein HamB
-      gene_symbol: hamB
-      taxon_id: NCBITaxon:1396
-      taxon_label: Bacillus cereus
+    - uniprot_id: UniProtKB:P0DW42
+      protein_label: Septu protein PtuB
+      gene_symbol: ptuB
+      taxon_id: NCBITaxon:1428
+      taxon_label: Bacillus thuringiensis
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      entry_version: 11
+      entry_version: 12
       sequence_version: 1
-      role: Characteristic protein component (hamB, Hachiman protein HamB) associated
-        with Hachiman type I system in Bacillus cereus.
+      role: Characteristic protein component (ptuB, Septu protein PtuB) associated
+        with Hachiman type I system in Bacillus thuringiensis.
       evidence:
-      - reference: DOI:10.1038/s41467-025-57851-1
-        snippet: The Hachiman system is a novel prokaryotic antiphage defense system
-          comprising HamA and HamB proteins
-        notes: Supports Hachiman protein HamB in Hachiman type I system; UniProtKB:P0DW40
-          (hamB, Hachiman protein HamB) in Bacillus cereus provides a verified protein
-          exemplar.
+      - reference: DOI:10.1093/nar/gkab883
+        snippet: The putative Hma system was very widespread, present in 26 phyla,
+          surpassed only by CBASS type I, Gabija and Septu type I.
+        notes: Supports Septu protein PtuB in Hachiman type I system; UniProtKB:P0DW42
+          (ptuB, Septu protein PtuB) in Bacillus thuringiensis provides a verified
+          protein exemplar.
   edges:
   - subject: hachiman_type_i_system_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: hachiman_type_i_system_trait
-    description: Hachiman protein HamB (hamB, UniProtKB:P0DW40) contributes to Hachiman
-      type I system (associated with comprising, antiphage, hachiman).
+    description: Septu protein PtuB (ptuB, UniProtKB:P0DW42) contributes to Hachiman
+      type I system.
     evidence:
-    - reference: DOI:10.1038/s41467-025-57851-1
-      snippet: The Hachiman system is a novel prokaryotic antiphage defense system
-        comprising HamA and HamB proteins
-      notes: Supports the functional association between Hachiman protein HamB (UniProtKB:P0DW40
-        in Bacillus cereus) and Hachiman type I system.
+    - reference: DOI:10.1093/nar/gkab883
+      snippet: The putative Hma system was very widespread, present in 26 phyla, surpassed
+        only by CBASS type I, Gabija and Septu type I.
+      notes: Supports the functional association between Septu protein PtuB (UniProtKB:P0DW42
+        in Bacillus thuringiensis) and Hachiman type I system.

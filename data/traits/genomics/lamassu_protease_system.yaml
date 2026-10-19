@@ -77,28 +77,27 @@ causal_graphs:
     grounding: traitmech:000232
     description: Possession of a genome-encoded Lamassu phage-defense system.
   - node_id: lamassu_protease_system_protein_component
-    label: Lamassu protein LmuA
+    label: Septu protein PtuB
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Lamassu protein LmuA) associated with Lamassu-Protease
+    description: Protein component (Septu protein PtuB) associated with Lamassu-Protease
       system.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - lmuA
+    - ptuB
     protein_examples:
-    - uniprot_id: UniProtKB:P0DW43
-      protein_label: Lamassu protein LmuA
-      gene_symbol: lmuA
-      taxon_id: NCBITaxon:1761765
-      taxon_label: Bacillus sp. (strain NCIM 5461 / CCTCC AB 2011126 / NIO-1130)
+    - uniprot_id: UniProtKB:P0DW42
+      protein_label: Septu protein PtuB
+      gene_symbol: ptuB
+      taxon_id: NCBITaxon:1428
+      taxon_label: Bacillus thuringiensis
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      entry_version: 8
+      entry_version: 12
       sequence_version: 1
-      role: Characteristic protein component (lmuA, Lamassu protein LmuA) associated
-        with Lamassu-Protease system in Bacillus sp. (strain NCIM 5461 / CCTCC AB
-        2011126 / NIO-1130).
+      role: Characteristic protein component (ptuB, Septu protein PtuB) associated
+        with Lamassu-Protease system in Bacillus thuringiensis.
       evidence:
       - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
         snippet: Lamassu-Fam Lamassu-Hydrolase 2 2 Lamassu-Fam__LmuA_effector_Hydrolase,
@@ -107,9 +106,9 @@ causal_graphs:
           Lamassu-Fam__LmuA_effector_FMO, Lamassu-Fam__LmuA_effector_Lipase, Lamassu-Fam__LmuA_effector_Mrr,
           Lamassu-Fam__LmuA_effector_PDDEXK, Lamassu-Fam__LmuA_effector_Protease,
           Lamassu-Fam__LmuA_effector_Sir2, Lamassu-Fam__LmuA_effector_hypothetical
-        notes: Supports Lamassu protein LmuA in Lamassu-Protease system; UniProtKB:P0DW43
-          (lmuA, Lamassu protein LmuA) in Bacillus sp. (strain NCIM 5461 / CCTCC AB
-          2011126 / NIO-1130) provides a verified protein exemplar.
+        notes: Supports Septu protein PtuB in Lamassu-Protease system; UniProtKB:P0DW42
+          (ptuB, Septu protein PtuB) in Bacillus thuringiensis provides a verified
+          protein exemplar.
   edges:
   - subject: lamassu_protease_system_trait
     predicate: is a
@@ -130,8 +129,8 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: lamassu_protease_system_trait
-    description: Lamassu protein LmuA (lmuA, UniProtKB:P0DW43) contributes to Lamassu-Protease
-      system (associated with hydrolase, effector, nuclease).
+    description: Septu protein PtuB (ptuB, UniProtKB:P0DW42) contributes to Lamassu-Protease
+      system.
     evidence:
     - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
       snippet: Lamassu-Fam Lamassu-Hydrolase 2 2 Lamassu-Fam__LmuA_effector_Hydrolase,
@@ -140,9 +139,8 @@ causal_graphs:
         Lamassu-Fam__LmuA_effector_FMO, Lamassu-Fam__LmuA_effector_Lipase, Lamassu-Fam__LmuA_effector_Mrr,
         Lamassu-Fam__LmuA_effector_PDDEXK, Lamassu-Fam__LmuA_effector_Protease, Lamassu-Fam__LmuA_effector_Sir2,
         Lamassu-Fam__LmuA_effector_hypothetical
-      notes: Supports the functional association between Lamassu protein LmuA (UniProtKB:P0DW43
-        in Bacillus sp. (strain NCIM 5461 / CCTCC AB 2011126 / NIO-1130)) and Lamassu-Protease
-        system.
+      notes: Supports the functional association between Septu protein PtuB (UniProtKB:P0DW42
+        in Bacillus thuringiensis) and Lamassu-Protease system.
 discussions:
 - discussion_id: lamassu-protease-activity-gap
   prompt: Resolve Lamassu-Protease phage triggers, native hosts, protease effector
@@ -208,5 +206,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    lamassu_protease_system_protein_component with UniProtKB:P0DW43 (lmuA) exemplar.'
+    lamassu_protease_system_protein_component with UniProtKB:P0DW42 (ptuB) exemplar.'
   llm_assisted: true

@@ -29,6 +29,13 @@ curation_history:
   llm_assisted: true
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed canonical_examples status alongside NONMECHANISTIC protein exemplar
+    graph for specialist; isolate-level canonical example remains deferred pending
+    explicit strain-level literature.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph specialist_graph
     with GENE_OR_PROTEIN node specialist_protein_component and UniProtKB:P0AG20 exemplar.'
@@ -83,8 +90,7 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: specialist_trait
-    description: GTP pyrophosphokinase (relA, UniProtKB:P0AG20) contributes to specialist
-      (associated with corresponding, requirements, categorized).
+    description: GTP pyrophosphokinase (relA, UniProtKB:P0AG20) contributes to specialist.
     evidence:
     - reference: DOI:10.1093/femsec/fiaa240
       snippet: Organisms are often categorized as generalists or specialists, corresponding

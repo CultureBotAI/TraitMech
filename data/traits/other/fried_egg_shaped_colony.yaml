@@ -27,6 +27,13 @@ curation_history:
   llm_assisted: true
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed canonical_examples status alongside NONMECHANISTIC protein exemplar
+    graph for fried-egg-shaped colony; isolate-level canonical example remains deferred
+    pending explicit strain-level literature.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph fried_egg_shaped_colony_graph
     with GENE_OR_PROTEIN node fried_egg_shaped_colony_protein_component and UniProtKB:Q01465
@@ -92,7 +99,7 @@ causal_graphs:
     predicate_id: RO:0002326
     object: fried_egg_shaped_colony_trait
     description: Cell shape-determining protein MreB (mreB, UniProtKB:Q01465) contributes
-      to fried-egg-shaped colony (associated with translucent, appearance, peripheral).
+      to fried-egg-shaped colony.
     evidence:
     - reference: DOI:10.1371/journal.pone.0068373
       snippet: TR colonies showed the typical “fried egg” appearance, with a small

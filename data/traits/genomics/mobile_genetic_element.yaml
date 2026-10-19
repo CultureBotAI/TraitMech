@@ -32,7 +32,7 @@ causal_graphs:
   scope_status: NONMECHANISTIC
   scope_notes: This genomics record is a measurement, genomic-element classification,
     or population-level descriptor rather than one taxon-specific protein mechanism;
-    contextual protein nodes do not receive token UniProt examples.
+    contextual protein nodes include source-backed UniProtKB exemplars.
   description: Evidence-backed causal sketch linking MGE possession to horizontal
     gene transfer and resulting genome plasticity.
   nodes:

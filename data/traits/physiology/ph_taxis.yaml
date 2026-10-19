@@ -65,18 +65,25 @@ curation_history:
   llm_assisted: true
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed canonical_examples status alongside NONMECHANISTIC protein exemplar
+    graph for pH taxis; isolate-level canonical example remains deferred pending explicit
+    strain-level literature.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph ph_taxis_graph
-    with GENE_OR_PROTEIN node ph_taxis_protein_component and UniProtKB:Q9K2S2 exemplar.'
+    with GENE_OR_PROTEIN node ph_taxis_protein_component and UniProtKB:P02942 exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: ph_taxis_graph
   title: Protein component associated with pH taxis
-  description: Literature-backed association between Na(+)/H(+) antiporter subunit
-    A (UniProtKB:Q9K2S2) and pH taxis.
+  description: Literature-backed association between Methyl-accepting chemotaxis protein
+    I (UniProtKB:P02942) and pH taxis.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q9K2S2 in Bacillus
-    subtilis (strain 168)) associated with pH taxis while full multi-step mechanistic
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P02942 in Escherichia
+    coli (strain K12)) associated with pH taxis while full multi-step mechanistic
     curation remains future work.
   nodes:
   - node_id: ph_taxis_trait
@@ -86,47 +93,43 @@ causal_graphs:
     description: A motile phenotype in which active locomotion is directionally biased
       in response to an external pH gradient.
   - node_id: ph_taxis_protein_component
-    label: Na(+)/H(+) antiporter subunit A
+    label: Methyl-accepting chemotaxis protein I
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Na(+)/H(+) antiporter subunit A) associated with
-      pH taxis.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Methyl-accepting chemotaxis protein I) associated
+      with pH taxis.
+    grounding: InterPro:IPR035440
     gene_symbols:
-    - mrpA
+    - tsr
     protein_examples:
-    - uniprot_id: UniProtKB:Q9K2S2
-      protein_label: Na(+)/H(+) antiporter subunit A
-      gene_symbol: mrpA
-      taxon_id: NCBITaxon:224308
-      taxon_label: Bacillus subtilis (strain 168)
+    - uniprot_id: UniProtKB:P02942
+      protein_label: Methyl-accepting chemotaxis protein I
+      gene_symbol: tsr
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
-      proteome_id: UP000001570
+      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 138
+      entry_version: 209
       sequence_version: 2
-      role: Characteristic protein component (mrpA, Na(+)/H(+) antiporter subunit
-        A) associated with pH taxis in Bacillus subtilis (strain 168).
+      role: Characteristic protein component (tsr, Methyl-accepting chemotaxis protein
+        I) associated with pH taxis in Escherichia coli (strain K12).
       evidence:
-      - reference: DOI:10.1128/jb.00491-19
-        snippet: This bacterium was found to perform bidirectional taxis in response
-          to external pH gradients, enabling it to preferentially migrate to neutral
-          environments.
-        notes: Supports Na(+)/H(+) antiporter subunit A in pH taxis; UniProtKB:Q9K2S2
-          (mrpA, Na(+)/H(+) antiporter subunit A) in Bacillus subtilis (strain 168)
-          provides a verified protein exemplar.
+      - reference: DOI:10.1128/jb.188.7.2656-2665.2006
+        snippet: Bacteria in more-alkaline regions did not swim toward the acid, suggesting
+          the pH taxis is a form of negative chemotaxis.
+        notes: Supports Methyl-accepting chemotaxis protein I in pH taxis; UniProtKB:P02942
+          (tsr, Methyl-accepting chemotaxis protein I) in Escherichia coli (strain
+          K12) provides a verified protein exemplar.
   edges:
   - subject: ph_taxis_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: ph_taxis_trait
-    description: Na(+)/H(+) antiporter subunit A (mrpA, UniProtKB:Q9K2S2) contributes
-      to pH taxis (associated with preferentially, bidirectional, environments).
+    description: Methyl-accepting chemotaxis protein I (tsr, UniProtKB:P02942) contributes
+      to pH taxis.
     evidence:
-    - reference: DOI:10.1128/jb.00491-19
-      snippet: This bacterium was found to perform bidirectional taxis in response
-        to external pH gradients, enabling it to preferentially migrate to neutral
-        environments.
-      notes: Supports the functional association between Na(+)/H(+) antiporter subunit
-        A (UniProtKB:Q9K2S2 in Bacillus subtilis (strain 168)) and pH taxis.
+    - reference: DOI:10.1128/jb.188.7.2656-2665.2006
+      snippet: Bacteria in more-alkaline regions did not swim toward the acid, suggesting
+        the pH taxis is a form of negative chemotaxis.
+      notes: Supports the functional association between Methyl-accepting chemotaxis
+        protein I (UniProtKB:P02942 in Escherichia coli (strain K12)) and pH taxis.

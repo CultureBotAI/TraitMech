@@ -32,7 +32,7 @@ causal_graphs:
   scope_status: NONMECHANISTIC
   scope_notes: This record is a broad environmental or morphological classification
     spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
-    descriptor; contextual protein nodes do not receive token UniProt examples.
+    descriptor; contextual protein nodes include source-backed UniProtKB exemplars.
   nodes:
   - node_id: microaerotolerant_trait
     label: microaerotolerant
@@ -56,27 +56,24 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Enzymes such as SOD, catalase, or peroxidase that mitigate ROS.
     protein_examples:
-    - uniprot_id: UniProtKB:Q49VE0
-      protein_label: Coproheme decarboxylase
-      gene_symbol: chdC
-      taxon_id: NCBITaxon:342451
-      taxon_label: Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
-        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+    - uniprot_id: UniProtKB:P0AGD3
+      protein_label: Superoxide dismutase [Fe]
+      gene_symbol: sodB
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
-      proteome_id: UP000006371
+      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 104
-      sequence_version: 1
-      role: Exemplar protein (chdC, Coproheme decarboxylase) representing oxidative
-        stress defense enzymes in Staphylococcus saprophyticus subsp. saprophyticus
-        (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) for microaerotolerant.
+      entry_version: 140
+      sequence_version: 2
+      role: Exemplar protein (sodB, Superoxide dismutase [Fe]) representing oxidative
+        stress defense enzymes in Escherichia coli (strain K12) for microaerotolerant.
       evidence:
       - reference: PMID:30113300
         snippet: The novel strain stains Gram-negative and Congo-red-negative and
           is characterized mesophilic, neutrophilic, chemoheterotrophic and microaerotolerant
-        notes: Supports oxidative stress defense enzymes in microaerotolerant; UniProtKB:Q49VE0
-          (chdC, Coproheme decarboxylase) in Staphylococcus saprophyticus subsp. saprophyticus
-          (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) provides
+        notes: Supports oxidative stress defense enzymes in microaerotolerant; UniProtKB:P0AGD3
+          (sodB, Superoxide dismutase [Fe]) in Escherichia coli (strain K12) provides
           a verified protein exemplar.
   - node_id: anaerobic_growth
     label: anaerobic growth
@@ -131,26 +128,28 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Rubrerythrin and peroxidase enzymes that reduce H2O2 to water.
     protein_examples:
-    - uniprot_id: UniProtKB:P0ABI8
-      protein_label: Cytochrome bo(3) ubiquinol oxidase subunit 1
-      gene_symbol: cyoB
-      taxon_id: NCBITaxon:83333
-      taxon_label: Escherichia coli (strain K12)
+    - uniprot_id: UniProtKB:P24931
+      protein_label: Rubrerythrin
+      gene_symbol: rbr
+      taxon_id: NCBITaxon:882
+      taxon_label: Nitratidesulfovibrio vulgaris (strain ATCC 29579 / DSM 644 / CCUG
+        34227 / NCIMB 8303 / VKM B-1760 / Hildenborough) (Desulfovibrio vulgaris)
       entry_status: REVIEWED
-      proteome_id: UP000000625
+      proteome_id: UP000002194
       retrieved_on: '2026-10-17'
-      entry_version: 154
+      entry_version: 168
       sequence_version: 1
-      role: Exemplar protein (cyoB, Cytochrome bo(3) ubiquinol oxidase subunit 1)
-        representing rubrerythrin/peroxidase in Escherichia coli (strain K12) for
-        microaerotolerant.
+      role: Exemplar protein (rbr, Rubrerythrin) representing rubrerythrin/peroxidase
+        in Nitratidesulfovibrio vulgaris (strain ATCC 29579 / DSM 644 / CCUG 34227
+        / NCIMB 8303 / VKM B-1760 / Hildenborough) (Desulfovibrio vulgaris) for microaerotolerant.
       evidence:
       - reference: PMID:30113300
         snippet: The novel strain stains Gram-negative and Congo-red-negative and
           is characterized mesophilic, neutrophilic, chemoheterotrophic and microaerotolerant
-        notes: Supports rubrerythrin/peroxidase in microaerotolerant; UniProtKB:P0ABI8
-          (cyoB, Cytochrome bo(3) ubiquinol oxidase subunit 1) in Escherichia coli
-          (strain K12) provides a verified protein exemplar.
+        notes: Supports rubrerythrin/peroxidase in microaerotolerant; UniProtKB:P24931
+          (rbr, Rubrerythrin) in Nitratidesulfovibrio vulgaris (strain ATCC 29579
+          / DSM 644 / CCUG 34227 / NCIMB 8303 / VKM B-1760 / Hildenborough) (Desulfovibrio
+          vulgaris) provides a verified protein exemplar.
   - node_id: reduced_electron_donors
     label: reduced electron donors (NADH)
     node_type: CHEMICAL
@@ -367,8 +366,8 @@ curation_history:
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
-  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q49VE0 (chdC)
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P0AGD3 (sodB)
     protein example to node oxidative_stress_defense; added UniProtKB:P82385 (sorA)
-    protein example to node superoxide_reductase; added UniProtKB:P0ABI8 (cyoB) protein
+    protein example to node superoxide_reductase; added UniProtKB:P24931 (rbr) protein
     example to node rubrerythrin_peroxidase.'
   llm_assisted: true

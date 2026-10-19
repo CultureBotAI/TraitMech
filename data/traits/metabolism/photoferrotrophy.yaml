@@ -88,36 +88,31 @@ causal_graphs:
     grounding: METPO:1007501
     description: Cell material formed from fixed carbon.
   - node_id: photoferrotrophy_protein_component
-    label: Ion-translocating oxidoreductase complex subunit A
+    label: Rusticyanin
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Ion-translocating oxidoreductase complex subunit
-      A) associated with photoferrotrophy.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Rusticyanin) associated with photoferrotrophy.
+    grounding: InterPro:IPR000923
     gene_symbols:
-    - rnfA
+    - rus
     protein_examples:
-    - uniprot_id: UniProtKB:P0CZ13
-      protein_label: Ion-translocating oxidoreductase complex subunit A
-      gene_symbol: rnfA
-      taxon_id: NCBITaxon:1061
-      taxon_label: Rhodobacter capsulatus (Rhodopseudomonas capsulata)
+    - uniprot_id: UniProtKB:P23742
+      protein_label: Rusticyanin
+      gene_symbol: rus
+      taxon_id: NCBITaxon:920
+      taxon_label: Acidithiobacillus ferrooxidans (Thiobacillus ferrooxidans)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      entry_version: 48
-      sequence_version: 1
-      role: Characteristic protein component (rnfA, Ion-translocating oxidoreductase
-        complex subunit A) associated with photoferrotrophy in Rhodobacter capsulatus
-        (Rhodopseudomonas capsulata).
+      entry_version: 101
+      sequence_version: 2
+      role: Characteristic protein component (rus, Rusticyanin) associated with photoferrotrophy
+        in Acidithiobacillus ferrooxidans (Thiobacillus ferrooxidans).
       evidence:
       - reference: DOI:10.3389/fmicb.2014.00713
         snippet: photoferrotrophic bacteria use light as energy and Fe(II) as an electron
           source for carbon fixation and biomass formation
-        notes: Supports Ion-translocating oxidoreductase complex subunit A in photoferrotrophy;
-          UniProtKB:P0CZ13 (rnfA, Ion-translocating oxidoreductase complex subunit
-          A) in Rhodobacter capsulatus (Rhodopseudomonas capsulata) provides a verified
-          protein exemplar.
+        notes: Supports Rusticyanin in photoferrotrophy; UniProtKB:P23742 (rus, Rusticyanin)
+          in Acidithiobacillus ferrooxidans (Thiobacillus ferrooxidans) provides a
+          verified protein exemplar.
   edges:
   - subject: photoferrotrophy_trait
     predicate: has energy source
@@ -201,14 +196,12 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: photoferrotrophy_trait
-    description: Ion-translocating oxidoreductase complex subunit A (rnfA, UniProtKB:P0CZ13)
-      contributes to photoferrotrophy (associated with phototrophic, necessary, oxidation).
+    description: Rusticyanin (rus, UniProtKB:P23742) contributes to photoferrotrophy.
     evidence:
     - reference: DOI:10.1128/JB.00776-06
       snippet: that is necessary for phototrophic Fe(II) oxidation
-      notes: Supports the functional association between Ion-translocating oxidoreductase
-        complex subunit A (UniProtKB:P0CZ13 in Rhodobacter capsulatus (Rhodopseudomonas
-        capsulata)) and photoferrotrophy.
+      notes: Supports the functional association between Rusticyanin (UniProtKB:P23742
+        in Acidithiobacillus ferrooxidans (Thiobacillus ferrooxidans)) and photoferrotrophy.
 discussions:
 - discussion_id: photoferrotrophy-xref-gap
   prompt: Resolve an exact external ontology class for photoferrotrophy before adding
@@ -237,5 +230,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    photoferrotrophy_protein_component with UniProtKB:P0CZ13 (rnfA) exemplar.'
+    photoferrotrophy_protein_component with UniProtKB:P23742 (rus) exemplar.'
   llm_assisted: true

@@ -119,17 +119,17 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph pinocytosis_graph
-    with GENE_OR_PROTEIN node pinocytosis_protein_component and UniProtKB:Q02115 exemplar.'
+    with GENE_OR_PROTEIN node pinocytosis_protein_component and UniProtKB:P32790 exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: pinocytosis_graph
   title: Protein component associated with pinocytosis
-  description: Literature-backed association between Polyisoprenyl-teichoic acid--peptidoglycan
-    teichoic acid transferase TagU (UniProtKB:Q02115) and pinocytosis.
+  description: Literature-backed association between Actin cytoskeleton-regulatory
+    complex protein SLA1 (UniProtKB:P32790) and pinocytosis.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q02115 in Bacillus
-    subtilis (strain 168)) associated with pinocytosis while full multi-step mechanistic
-    curation remains future work.
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P32790 in Saccharomyces
+    cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)) associated with pinocytosis
+    while full multi-step mechanistic curation remains future work.
   nodes:
   - node_id: pinocytosis_trait
     label: pinocytosis
@@ -139,50 +139,47 @@ causal_graphs:
       surrounding extracellular fluid and dissolved material into membrane-bound compartments
       formed from its plasma membrane.
   - node_id: pinocytosis_protein_component
-    label: Polyisoprenyl-teichoic acid--peptidoglycan teichoic acid transferase TagU
+    label: Actin cytoskeleton-regulatory complex protein SLA1
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Polyisoprenyl-teichoic acid--peptidoglycan teichoic
-      acid transferase TagU) associated with pinocytosis.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Actin cytoskeleton-regulatory complex protein
+      SLA1) associated with pinocytosis.
+    grounding: InterPro:IPR056996
     gene_symbols:
-    - tagU
+    - SLA1
     protein_examples:
-    - uniprot_id: UniProtKB:Q02115
-      protein_label: Polyisoprenyl-teichoic acid--peptidoglycan teichoic acid transferase
-        TagU
-      gene_symbol: tagU
-      taxon_id: NCBITaxon:224308
-      taxon_label: Bacillus subtilis (strain 168)
+    - uniprot_id: UniProtKB:P32790
+      protein_label: Actin cytoskeleton-regulatory complex protein SLA1
+      gene_symbol: SLA1
+      taxon_id: NCBITaxon:559292
+      taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's
+        yeast)
       entry_status: REVIEWED
-      proteome_id: UP000001570
+      proteome_id: UP000002311
       retrieved_on: '2026-10-17'
-      entry_version: 150
+      entry_version: 230
       sequence_version: 1
-      role: Characteristic protein component (tagU, Polyisoprenyl-teichoic acid--peptidoglycan
-        teichoic acid transferase TagU) associated with pinocytosis in Bacillus subtilis
-        (strain 168).
+      role: Characteristic protein component (SLA1, Actin cytoskeleton-regulatory
+        complex protein SLA1) associated with pinocytosis in Saccharomyces cerevisiae
+        (strain ATCC 204508 / S288c) (Baker's yeast).
       evidence:
       - reference: DOI:10.1083/jcb.53.3.681
         snippet: HRP activity was found exclusively within membrane profiles within
           the cytoplasm, confirming the pinocytotic mode of uptake.
-        notes: Supports Polyisoprenyl-teichoic acid--peptidoglycan teichoic acid transferase
-          TagU in pinocytosis; UniProtKB:Q02115 (tagU, Polyisoprenyl-teichoic acid--peptidoglycan
-          teichoic acid transferase TagU) in Bacillus subtilis (strain 168) provides
-          a verified protein exemplar.
+        notes: Supports Actin cytoskeleton-regulatory complex protein SLA1 in pinocytosis;
+          UniProtKB:P32790 (SLA1, Actin cytoskeleton-regulatory complex protein SLA1)
+          in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)
+          provides a verified protein exemplar.
   edges:
   - subject: pinocytosis_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: pinocytosis_trait
-    description: Polyisoprenyl-teichoic acid--peptidoglycan teichoic acid transferase
-      TagU (tagU, UniProtKB:Q02115) contributes to pinocytosis (associated with exclusively,
-      pinocytotic, confirming).
+    description: Actin cytoskeleton-regulatory complex protein SLA1 (SLA1, UniProtKB:P32790)
+      contributes to pinocytosis.
     evidence:
     - reference: DOI:10.1083/jcb.53.3.681
       snippet: HRP activity was found exclusively within membrane profiles within
         the cytoplasm, confirming the pinocytotic mode of uptake.
-      notes: Supports the functional association between Polyisoprenyl-teichoic acid--peptidoglycan
-        teichoic acid transferase TagU (UniProtKB:Q02115 in Bacillus subtilis (strain
-        168)) and pinocytosis.
+      notes: Supports the functional association between Actin cytoskeleton-regulatory
+        complex protein SLA1 (UniProtKB:P32790 in Saccharomyces cerevisiae (strain
+        ATCC 204508 / S288c) (Baker's yeast)) and pinocytosis.

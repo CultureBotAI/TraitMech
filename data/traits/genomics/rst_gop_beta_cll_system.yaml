@@ -87,38 +87,36 @@ causal_graphs:
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
   - node_id: rst_gop_beta_cll_system_protein_component
-    label: Adenine-specific methyltransferase PglX
+    label: Type IV methyl-directed restriction enzyme EcoKMcrB subunit
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Adenine-specific methyltransferase PglX) associated
-      with Rst gop-beta-cII system.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Type IV methyl-directed restriction enzyme EcoKMcrB
+      subunit) associated with Rst gop-beta-cII system.
+    grounding: InterPro:IPR003593
     gene_symbols:
-    - pglX
+    - mcrB
     protein_examples:
-    - uniprot_id: UniProtKB:Q8CJM2
-      protein_label: Adenine-specific methyltransferase PglX
-      gene_symbol: pglX
-      taxon_id: NCBITaxon:100226
-      taxon_label: Streptomyces coelicolor (strain ATCC BAA-471 / A3(2) / M145)
+    - uniprot_id: UniProtKB:P15005
+      protein_label: Type IV methyl-directed restriction enzyme EcoKMcrB subunit
+      gene_symbol: mcrB
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
-      proteome_id: UP000001973
+      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 102
-      sequence_version: 1
-      role: Characteristic protein component (pglX, Adenine-specific methyltransferase
-        PglX) associated with Rst gop-beta-cII system in Streptomyces coelicolor (strain
-        ATCC BAA-471 / A3(2) / M145).
+      entry_version: 197
+      sequence_version: 3
+      role: Characteristic protein component (mcrB, Type IV methyl-directed restriction
+        enzyme EcoKMcrB subunit) associated with Rst gop-beta-cII system in Escherichia
+        coli (strain K12).
       evidence:
       - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
         snippet: '| Rst_gop_beta_cll__beta | Rst_gop_beta_cll__beta | Rst_gop_beta_cll
           | Custom | 20 | | Rst_gop_beta_cll__cll | Rst_gop_beta_cll__cll | Rst_gop_beta_cll
           | Custom | 20 | | Rst_gop_beta_cll__gop | Rst_gop_beta_cll__gop | Rst_gop_beta_cll
           | Custom | 20 |'
-        notes: Supports Adenine-specific methyltransferase PglX in Rst gop-beta-cII
-          system; UniProtKB:Q8CJM2 (pglX, Adenine-specific methyltransferase PglX)
-          in Streptomyces coelicolor (strain ATCC BAA-471 / A3(2) / M145) provides
+        notes: Supports Type IV methyl-directed restriction enzyme EcoKMcrB subunit
+          in Rst gop-beta-cII system; UniProtKB:P15005 (mcrB, Type IV methyl-directed
+          restriction enzyme EcoKMcrB subunit) in Escherichia coli (strain K12) provides
           a verified protein exemplar.
   edges:
   - subject: rst_gop_beta_cll_locus
@@ -194,9 +192,8 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: rst_gop_beta_cll_system_trait
-    description: Adenine-specific methyltransferase PglX (pglX, UniProtKB:Q8CJM2)
-      contributes to Rst gop-beta-cII system (associated with helicaseduf2290, helicase,
-      duf2290).
+    description: Type IV methyl-directed restriction enzyme EcoKMcrB subunit (mcrB,
+      UniProtKB:P15005) contributes to Rst gop-beta-cII system.
     evidence:
     - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
       snippet: '| Rst_HelicaseDUF2290__DUF2290 | Rst_HelicaseDUF2290__DUF2290___DUF2290
@@ -204,9 +201,9 @@ causal_graphs:
         | Rst_HelicaseDUF2290__DUF2290_Pers___DUF2290_Pers | Rst_HelicaseDUF2290 |
         Custom | 20 | | Rst_HelicaseDUF2290__Helicase | Rst_HelicaseDUF2290__Helicase___Helicase
         | Rst_HelicaseDUF2290 | Custom | 20 |'
-      notes: Supports the functional association between Adenine-specific methyltransferase
-        PglX (UniProtKB:Q8CJM2 in Streptomyces coelicolor (strain ATCC BAA-471 / A3(2)
-        / M145)) and Rst gop-beta-cII system.
+      notes: Supports the functional association between Type IV methyl-directed restriction
+        enzyme EcoKMcrB subunit (UniProtKB:P15005 in Escherichia coli (strain K12))
+        and Rst gop-beta-cII system.
 discussions:
 - discussion_id: rst-gop-beta-cll-mechanism-gap
   prompt: Resolve Rst_gop_beta_cll natural host breadth, exact beta and cll gene correspondence,
@@ -273,5 +270,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    rst_gop_beta_cll_system_protein_component with UniProtKB:Q8CJM2 (pglX) exemplar.'
+    rst_gop_beta_cll_system_protein_component with UniProtKB:P15005 (mcrB) exemplar.'
   llm_assisted: true

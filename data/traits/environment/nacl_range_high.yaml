@@ -188,8 +188,7 @@ causal_graphs:
     predicate_id: RO:0002326
     object: nacl_range_high_trait
     description: Potassium-transporting ATPase potassium-binding subunit (kdpA, UniProtKB:B0R9L9)
-      contributes to NaCl range high (associated with concentrations, accumulation,
-      potassium).
+      contributes to NaCl range high.
     evidence:
     - reference: DOI:10.1186/1746-1448-4-2
       snippet: accumulation of molar concentrations of potassium and chloride

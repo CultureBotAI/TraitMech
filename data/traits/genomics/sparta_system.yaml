@@ -202,8 +202,7 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: sparta_system_trait
-    description: Protein argonaute (ago, UniProtKB:Q8U3D2) contributes to SPARTA system
-      (associated with heterodimeric, argonaute, sparta).
+    description: Protein argonaute (ago, UniProtKB:Q8U3D2) contributes to SPARTA system.
     evidence:
     - reference: DOI:10.1016/j.cell.2022.03.012
       snippet: short prokaryotic Argonaute and the associated TIR-APAZ (SPARTA) proteins

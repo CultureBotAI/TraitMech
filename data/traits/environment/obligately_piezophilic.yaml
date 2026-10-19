@@ -36,7 +36,7 @@ causal_graphs:
   scope_status: NONMECHANISTIC
   scope_notes: This record is a broad environmental or morphological classification
     spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
-    descriptor; contextual protein nodes do not receive token UniProt examples.
+    descriptor; contextual protein nodes include source-backed UniProtKB exemplars.
   nodes:
   - node_id: obligate_piezophilic_trait
     label: obligately piezophilic
@@ -176,7 +176,7 @@ causal_graphs:
     predicate_id: RO:0002326
     object: obligate_piezophilic_trait
     description: Chaperone protein DnaK (dnaK, UniProtKB:P0A6Y8) contributes to obligately
-      piezophilic (associated with microorganisms, piezophiles, preference).
+      piezophilic.
     evidence:
     - reference: DOI:10.3389/fmolb.2022.1058381
       snippet: Microorganisms adapted to HHP are usually known as piezophiles, referring

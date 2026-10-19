@@ -93,34 +93,33 @@ causal_graphs:
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
   - node_id: pd_t7_3_system_protein_component
-    label: Phage T7 exclusion protein
+    label: Endonuclease GajA
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Phage T7 exclusion protein) associated with PD-T7-3
-      system.
+    description: Protein component (Endonuclease GajA) associated with PD-T7-3 system.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - pifA
+    - gajA
     protein_examples:
-    - uniprot_id: UniProtKB:P96329
-      protein_label: Phage T7 exclusion protein
-      gene_symbol: pifA
-      taxon_id: NCBITaxon:83333
-      taxon_label: Escherichia coli (strain K12)
+    - uniprot_id: UniProtKB:P0DW47
+      protein_label: Endonuclease GajA
+      gene_symbol: gajA
+      taxon_id: NCBITaxon:1053212
+      taxon_label: Bacillus cereus (strain HuB5-5)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      entry_version: 96
-      sequence_version: 2
-      role: Characteristic protein component (pifA, Phage T7 exclusion protein) associated
-        with PD-T7-3 system in Escherichia coli (strain K12).
+      entry_version: 12
+      sequence_version: 1
+      role: Characteristic protein component (gajA, Endonuclease GajA) associated
+        with PD-T7-3 system in Bacillus cereus (strain HuB5-5).
       evidence:
       - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t7-3.md
         snippet: PD-T7-3 systems were discovered to be anti-phage systems during an
           experimental screen performed on *E. coli* strains :ref{doi=10.1038/s41564-022-01219-4}
-        notes: Supports Phage T7 exclusion protein in PD-T7-3 system; UniProtKB:P96329
-          (pifA, Phage T7 exclusion protein) in Escherichia coli (strain K12) provides
-          a verified protein exemplar.
+        notes: Supports Endonuclease GajA in PD-T7-3 system; UniProtKB:P0DW47 (gajA,
+          Endonuclease GajA) in Bacillus cereus (strain HuB5-5) provides a verified
+          protein exemplar.
   edges:
   - subject: pd_t7_3_locus
     predicate: contributes to
@@ -207,14 +206,14 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: pd_t7_3_system_trait
-    description: Phage T7 exclusion protein (pifA, UniProtKB:P96329) contributes to
-      PD-T7-3 system (associated with paraglaciecola, psychrophila, composed).
+    description: Endonuclease GajA (gajA, UniProtKB:P0DW47) contributes to PD-T7-3
+      system.
     evidence:
     - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-t7-3.md
       snippet: 'The PD-T7-3 system in *Paraglaciecola psychrophila* (GCF_000347635.1,
         NC_020514) is composed of 1 protein: PD-T7-3 (WP_007636449.1)'
-      notes: Supports the functional association between Phage T7 exclusion protein
-        (UniProtKB:P96329 in Escherichia coli (strain K12)) and PD-T7-3 system.
+      notes: Supports the functional association between Endonuclease GajA (UniProtKB:P0DW47
+        in Bacillus cereus (strain HuB5-5)) and PD-T7-3 system.
 discussions:
 - discussion_id: pd-t7-3-mechanism-gap
   prompt: Resolve PD-T7-3 natural host breadth, direct phage trigger, and effector
@@ -311,5 +310,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    pd_t7_3_system_protein_component with UniProtKB:P96329 (pifA) exemplar.'
+    pd_t7_3_system_protein_component with UniProtKB:P0DW47 (gajA) exemplar.'
   llm_assisted: true

@@ -159,18 +159,18 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph druantia_system_graph
-    with GENE_OR_PROTEIN node druantia_system_protein_component and UniProtKB:P0DW38
+    with GENE_OR_PROTEIN node druantia_system_protein_component and UniProtKB:P0DW42
     exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: druantia_system_graph
   title: Protein component associated with Druantia system
-  description: Literature-backed association between Druantia protein DruE (UniProtKB:P0DW38)
+  description: Literature-backed association between Septu protein PtuB (UniProtKB:P0DW42)
     and Druantia system.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P0DW38 in Escherichia
-    coli (strain UMEA 4076-1)) associated with Druantia system while full multi-step
-    mechanistic curation remains future work.
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P0DW42 in Bacillus
+    thuringiensis) associated with Druantia system while full multi-step mechanistic
+    curation remains future work.
   nodes:
   - node_id: druantia_system_trait
     label: Druantia system
@@ -179,46 +179,45 @@ causal_graphs:
     description: A phage defense system in which an organism possesses a Druantia
       locus encoding a conserved DruE-family core and subtype-specific partner proteins.
   - node_id: druantia_system_protein_component
-    label: Druantia protein DruE
+    label: Septu protein PtuB
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Druantia protein DruE) associated with Druantia
-      system.
+    description: Protein component (Septu protein PtuB) associated with Druantia system.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - druE
+    - ptuB
     protein_examples:
-    - uniprot_id: UniProtKB:P0DW38
-      protein_label: Druantia protein DruE
-      gene_symbol: druE
-      taxon_id: NCBITaxon:1281278
-      taxon_label: Escherichia coli (strain UMEA 4076-1)
+    - uniprot_id: UniProtKB:P0DW42
+      protein_label: Septu protein PtuB
+      gene_symbol: ptuB
+      taxon_id: NCBITaxon:1428
+      taxon_label: Bacillus thuringiensis
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      entry_version: 10
+      entry_version: 12
       sequence_version: 1
-      role: Characteristic protein component (druE, Druantia protein DruE) associated
-        with Druantia system in Escherichia coli (strain UMEA 4076-1).
+      role: Characteristic protein component (ptuB, Septu protein PtuB) associated
+        with Druantia system in Bacillus thuringiensis.
       evidence:
       - reference: DOI:10.64898/2026.05.12.724681
         snippet: Druantia III is a late-acting defence where DruH is the likely infection
           sensor and DruE is a helicase-nuclease effector that engages ssDNA-containing
           replication intermediates
-        notes: Supports Druantia protein DruE in Druantia system; UniProtKB:P0DW38
-          (druE, Druantia protein DruE) in Escherichia coli (strain UMEA 4076-1) provides
-          a verified protein exemplar.
+        notes: Supports Septu protein PtuB in Druantia system; UniProtKB:P0DW42 (ptuB,
+          Septu protein PtuB) in Bacillus thuringiensis provides a verified protein
+          exemplar.
   edges:
   - subject: druantia_system_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: druantia_system_trait
-    description: Druantia protein DruE (druE, UniProtKB:P0DW38) contributes to Druantia
-      system (associated with intermediates, replication, containing).
+    description: Septu protein PtuB (ptuB, UniProtKB:P0DW42) contributes to Druantia
+      system.
     evidence:
     - reference: DOI:10.64898/2026.05.12.724681
       snippet: Druantia III is a late-acting defence where DruH is the likely infection
         sensor and DruE is a helicase-nuclease effector that engages ssDNA-containing
         replication intermediates
-      notes: Supports the functional association between Druantia protein DruE (UniProtKB:P0DW38
-        in Escherichia coli (strain UMEA 4076-1)) and Druantia system.
+      notes: Supports the functional association between Septu protein PtuB (UniProtKB:P0DW42
+        in Bacillus thuringiensis) and Druantia system.

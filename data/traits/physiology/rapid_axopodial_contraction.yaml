@@ -106,20 +106,27 @@ curation_history:
   llm_assisted: true
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed canonical_examples status alongside NONMECHANISTIC protein exemplar
+    graph for rapid axopodial contraction; isolate-level canonical example remains
+    deferred pending explicit strain-level literature.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph rapid_axopodial_contraction_graph
-    with GENE_OR_PROTEIN node rapid_axopodial_contraction_protein_component and UniProtKB:Q00828
+    with GENE_OR_PROTEIN node rapid_axopodial_contraction_protein_component and UniProtKB:P05434
     exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: rapid_axopodial_contraction_graph
   title: Protein component associated with rapid axopodial contraction
-  description: Literature-backed association between Response regulator aspartate
-    phosphatase A (UniProtKB:Q00828) and rapid axopodial contraction.
+  description: Literature-backed association between Caltractin (UniProtKB:P05434)
+    and rapid axopodial contraction.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q00828 in Bacillus
-    subtilis (strain 168)) associated with rapid axopodial contraction while full
-    multi-step mechanistic curation remains future work.
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P05434 in Chlamydomonas
+    reinhardtii (Chlamydomonas smithii)) associated with rapid axopodial contraction
+    while full multi-step mechanistic curation remains future work.
   nodes:
   - node_id: rapid_axopodial_contraction_trait
     label: rapid axopodial contraction
@@ -128,48 +135,39 @@ causal_graphs:
     description: A physiological phenotype in which a microbial cell rapidly shortens
       its microtubule-supported axopodia in response to stimulation or prey uptake.
   - node_id: rapid_axopodial_contraction_protein_component
-    label: Response regulator aspartate phosphatase A
+    label: Caltractin
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Response regulator aspartate phosphatase A) associated
-      with rapid axopodial contraction.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
-    gene_symbols:
-    - rapA
+    description: Protein component (Caltractin) associated with rapid axopodial contraction.
+    grounding: InterPro:IPR050230
     protein_examples:
-    - uniprot_id: UniProtKB:Q00828
-      protein_label: Response regulator aspartate phosphatase A
-      gene_symbol: rapA
-      taxon_id: NCBITaxon:224308
-      taxon_label: Bacillus subtilis (strain 168)
+    - uniprot_id: UniProtKB:P05434
+      protein_label: Caltractin
+      taxon_id: NCBITaxon:3055
+      taxon_label: Chlamydomonas reinhardtii (Chlamydomonas smithii)
       entry_status: REVIEWED
-      proteome_id: UP000001570
       retrieved_on: '2026-10-17'
-      entry_version: 149
-      sequence_version: 2
-      role: Characteristic protein component (rapA, Response regulator aspartate phosphatase
-        A) associated with rapid axopodial contraction in Bacillus subtilis (strain
-        168).
+      entry_version: 163
+      sequence_version: 1
+      role: Characteristic protein component (P05434, Caltractin) associated with
+        rapid axopodial contraction in Chlamydomonas reinhardtii (Chlamydomonas smithii).
       evidence:
       - reference: DOI:10.1111/j.1550-7408.2001.tb00187.x
         snippet: Upon food uptake, the tubules shorten and transform into a mass of
           small granules when rapid axopodial contraction occurs
-        notes: Supports Response regulator aspartate phosphatase A in rapid axopodial
-          contraction; UniProtKB:Q00828 (rapA, Response regulator aspartate phosphatase
-          A) in Bacillus subtilis (strain 168) provides a verified protein exemplar.
+        notes: Supports Caltractin in rapid axopodial contraction; UniProtKB:P05434
+          (P05434, Caltractin) in Chlamydomonas reinhardtii (Chlamydomonas smithii)
+          provides a verified protein exemplar.
   edges:
   - subject: rapid_axopodial_contraction_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: rapid_axopodial_contraction_trait
-    description: Response regulator aspartate phosphatase A (rapA, UniProtKB:Q00828)
-      contributes to rapid axopodial contraction (associated with contraction, axopodial,
-      transform).
+    description: Caltractin (P05434, UniProtKB:P05434) contributes to rapid axopodial
+      contraction.
     evidence:
     - reference: DOI:10.1111/j.1550-7408.2001.tb00187.x
       snippet: Upon food uptake, the tubules shorten and transform into a mass of
         small granules when rapid axopodial contraction occurs
-      notes: Supports the functional association between Response regulator aspartate
-        phosphatase A (UniProtKB:Q00828 in Bacillus subtilis (strain 168)) and rapid
-        axopodial contraction.
+      notes: Supports the functional association between Caltractin (UniProtKB:P05434
+        in Chlamydomonas reinhardtii (Chlamydomonas smithii)) and rapid axopodial
+        contraction.

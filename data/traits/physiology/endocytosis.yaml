@@ -83,19 +83,26 @@ curation_history:
   llm_assisted: true
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed canonical_examples status alongside NONMECHANISTIC protein exemplar
+    graph for endocytosis; isolate-level canonical example remains deferred pending
+    explicit strain-level literature.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph endocytosis_graph
-    with GENE_OR_PROTEIN node endocytosis_protein_component and UniProtKB:Q02115 exemplar.'
+    with GENE_OR_PROTEIN node endocytosis_protein_component and UniProtKB:P32790 exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: endocytosis_graph
   title: Protein component associated with endocytosis
-  description: Literature-backed association between Polyisoprenyl-teichoic acid--peptidoglycan
-    teichoic acid transferase TagU (UniProtKB:Q02115) and endocytosis.
+  description: Literature-backed association between Actin cytoskeleton-regulatory
+    complex protein SLA1 (UniProtKB:P32790) and endocytosis.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q02115 in Bacillus
-    subtilis (strain 168)) associated with endocytosis while full multi-step mechanistic
-    curation remains future work.
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P32790 in Saccharomyces
+    cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)) associated with endocytosis
+    while full multi-step mechanistic curation remains future work.
   nodes:
   - node_id: endocytosis_trait
     label: endocytosis
@@ -105,50 +112,47 @@ causal_graphs:
       material or plasma-membrane components into intracellular membrane-bound compartments
       by remodeling and internalizing its plasma membrane.
   - node_id: endocytosis_protein_component
-    label: Polyisoprenyl-teichoic acid--peptidoglycan teichoic acid transferase TagU
+    label: Actin cytoskeleton-regulatory complex protein SLA1
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Polyisoprenyl-teichoic acid--peptidoglycan teichoic
-      acid transferase TagU) associated with endocytosis.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Actin cytoskeleton-regulatory complex protein
+      SLA1) associated with endocytosis.
+    grounding: InterPro:IPR056996
     gene_symbols:
-    - tagU
+    - SLA1
     protein_examples:
-    - uniprot_id: UniProtKB:Q02115
-      protein_label: Polyisoprenyl-teichoic acid--peptidoglycan teichoic acid transferase
-        TagU
-      gene_symbol: tagU
-      taxon_id: NCBITaxon:224308
-      taxon_label: Bacillus subtilis (strain 168)
+    - uniprot_id: UniProtKB:P32790
+      protein_label: Actin cytoskeleton-regulatory complex protein SLA1
+      gene_symbol: SLA1
+      taxon_id: NCBITaxon:559292
+      taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's
+        yeast)
       entry_status: REVIEWED
-      proteome_id: UP000001570
+      proteome_id: UP000002311
       retrieved_on: '2026-10-17'
-      entry_version: 150
+      entry_version: 230
       sequence_version: 1
-      role: Characteristic protein component (tagU, Polyisoprenyl-teichoic acid--peptidoglycan
-        teichoic acid transferase TagU) associated with endocytosis in Bacillus subtilis
-        (strain 168).
+      role: Characteristic protein component (SLA1, Actin cytoskeleton-regulatory
+        complex protein SLA1) associated with endocytosis in Saccharomyces cerevisiae
+        (strain ATCC 204508 / S288c) (Baker's yeast).
       evidence:
       - reference: DOI:10.1083/jcb.128.5.779
         snippet: After an additional 20-40 min, the PM and cytoplasmic punctate staining
           disappeared concomitant with staining of the vacuolar membrane.
-        notes: Supports Polyisoprenyl-teichoic acid--peptidoglycan teichoic acid transferase
-          TagU in endocytosis; UniProtKB:Q02115 (tagU, Polyisoprenyl-teichoic acid--peptidoglycan
-          teichoic acid transferase TagU) in Bacillus subtilis (strain 168) provides
-          a verified protein exemplar.
+        notes: Supports Actin cytoskeleton-regulatory complex protein SLA1 in endocytosis;
+          UniProtKB:P32790 (SLA1, Actin cytoskeleton-regulatory complex protein SLA1)
+          in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)
+          provides a verified protein exemplar.
   edges:
   - subject: endocytosis_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: endocytosis_trait
-    description: Polyisoprenyl-teichoic acid--peptidoglycan teichoic acid transferase
-      TagU (tagU, UniProtKB:Q02115) contributes to endocytosis (associated with concomitant,
-      cytoplasmic, disappeared).
+    description: Actin cytoskeleton-regulatory complex protein SLA1 (SLA1, UniProtKB:P32790)
+      contributes to endocytosis.
     evidence:
     - reference: DOI:10.1083/jcb.128.5.779
       snippet: After an additional 20-40 min, the PM and cytoplasmic punctate staining
         disappeared concomitant with staining of the vacuolar membrane.
-      notes: Supports the functional association between Polyisoprenyl-teichoic acid--peptidoglycan
-        teichoic acid transferase TagU (UniProtKB:Q02115 in Bacillus subtilis (strain
-        168)) and endocytosis.
+      notes: Supports the functional association between Actin cytoskeleton-regulatory
+        complex protein SLA1 (UniProtKB:P32790 in Saccharomyces cerevisiae (strain
+        ATCC 204508 / S288c) (Baker's yeast)) and endocytosis.

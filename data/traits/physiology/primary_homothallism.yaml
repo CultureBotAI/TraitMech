@@ -124,19 +124,18 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph primary_homothallism_graph
-    with GENE_OR_PROTEIN node primary_homothallism_protein_component and UniProtKB:Q72AA0
+    with GENE_OR_PROTEIN node primary_homothallism_protein_component and UniProtKB:P09932
     exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: primary_homothallism_graph
   title: Protein component associated with primary homothallism
-  description: Literature-backed association between Transcriptional regulator CooA
-    (UniProtKB:Q72AA0) and primary homothallism.
+  description: Literature-backed association between Homothallic switching endonuclease
+    (UniProtKB:P09932) and primary homothallism.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q72AA0 in Nitratidesulfovibrio
-    vulgaris (strain ATCC 29579 / DSM 644 / CCUG 34227 / NCIMB 8303 / VKM B-1760 /
-    Hildenborough) (Desulfovibrio vulgaris)) associated with primary homothallism
-    while full multi-step mechanistic curation remains future work.
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P09932 in Saccharomyces
+    cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)) associated with primary
+    homothallism while full multi-step mechanistic curation remains future work.
   nodes:
   - node_id: primary_homothallism_trait
     label: primary homothallism
@@ -146,54 +145,49 @@ causal_graphs:
       through compatible mating-type determinants co-resident in one genome, without
       requiring mating-type switching.
   - node_id: primary_homothallism_protein_component
-    label: Transcriptional regulator CooA
+    label: Homothallic switching endonuclease
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Transcriptional regulator CooA) associated with
-      primary homothallism.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Homothallic switching endonuclease) associated
+      with primary homothallism.
+    grounding: InterPro:IPR003587
     gene_symbols:
-    - cooA
+    - HO
     protein_examples:
-    - uniprot_id: UniProtKB:Q72AA0
-      protein_label: Transcriptional regulator CooA
-      gene_symbol: cooA
-      taxon_id: NCBITaxon:882
-      taxon_label: Nitratidesulfovibrio vulgaris (strain ATCC 29579 / DSM 644 / CCUG
-        34227 / NCIMB 8303 / VKM B-1760 / Hildenborough) (Desulfovibrio vulgaris)
+    - uniprot_id: UniProtKB:P09932
+      protein_label: Homothallic switching endonuclease
+      gene_symbol: HO
+      taxon_id: NCBITaxon:559292
+      taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's
+        yeast)
       entry_status: REVIEWED
-      proteome_id: UP000002194
+      proteome_id: UP000002311
       retrieved_on: '2026-10-17'
-      entry_version: 137
-      sequence_version: 1
-      role: Characteristic protein component (cooA, Transcriptional regulator CooA)
-        associated with primary homothallism in Nitratidesulfovibrio vulgaris (strain
-        ATCC 29579 / DSM 644 / CCUG 34227 / NCIMB 8303 / VKM B-1760 / Hildenborough)
-        (Desulfovibrio vulgaris).
+      entry_version: 194
+      sequence_version: 2
+      role: Characteristic protein component (HO, Homothallic switching endonuclease)
+        associated with primary homothallism in Saccharomyces cerevisiae (strain ATCC
+        204508 / S288c) (Baker's yeast).
       evidence:
       - reference: DOI:10.5598/imafungus.2015.06.01.13
         snippet: In this mating strategy, an individual of one mating type can undergo
           a switch to the opposite mating type, either bidirectionally (reversibly)
           or unidirectionally (irreversibly).
-        notes: Supports Transcriptional regulator CooA in primary homothallism; UniProtKB:Q72AA0
-          (cooA, Transcriptional regulator CooA) in Nitratidesulfovibrio vulgaris
-          (strain ATCC 29579 / DSM 644 / CCUG 34227 / NCIMB 8303 / VKM B-1760 / Hildenborough)
-          (Desulfovibrio vulgaris) provides a verified protein exemplar.
+        notes: Supports Homothallic switching endonuclease in primary homothallism;
+          UniProtKB:P09932 (HO, Homothallic switching endonuclease) in Saccharomyces
+          cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast) provides a verified
+          protein exemplar.
   edges:
   - subject: primary_homothallism_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: primary_homothallism_trait
-    description: Transcriptional regulator CooA (cooA, UniProtKB:Q72AA0) contributes
-      to primary homothallism (associated with unidirectionally, bidirectionally,
-      irreversibly).
+    description: Homothallic switching endonuclease (HO, UniProtKB:P09932) contributes
+      to primary homothallism.
     evidence:
     - reference: DOI:10.5598/imafungus.2015.06.01.13
       snippet: In this mating strategy, an individual of one mating type can undergo
         a switch to the opposite mating type, either bidirectionally (reversibly)
         or unidirectionally (irreversibly).
-      notes: Supports the functional association between Transcriptional regulator
-        CooA (UniProtKB:Q72AA0 in Nitratidesulfovibrio vulgaris (strain ATCC 29579
-        / DSM 644 / CCUG 34227 / NCIMB 8303 / VKM B-1760 / Hildenborough) (Desulfovibrio
-        vulgaris)) and primary homothallism.
+      notes: Supports the functional association between Homothallic switching endonuclease
+        (UniProtKB:P09932 in Saccharomyces cerevisiae (strain ATCC 204508 / S288c)
+        (Baker's yeast)) and primary homothallism.

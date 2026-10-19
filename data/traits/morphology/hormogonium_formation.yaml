@@ -95,20 +95,27 @@ curation_history:
   llm_assisted: true
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed canonical_examples status alongside NONMECHANISTIC protein exemplar
+    graph for hormogonium formation; isolate-level canonical example remains deferred
+    pending explicit strain-level literature.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph hormogonium_formation_graph
-    with GENE_OR_PROTEIN node hormogonium_formation_protein_component and UniProtKB:P07860
+    with GENE_OR_PROTEIN node hormogonium_formation_protein_component and UniProtKB:P46078
     exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: hormogonium_formation_graph
   title: Protein component associated with hormogonium formation
-  description: Literature-backed association between RNA polymerase sigma-F factor
-    (UniProtKB:P07860) and hormogonium formation.
+  description: Literature-backed association between Filament integrity protein FraC
+    (UniProtKB:P46078) and hormogonium formation.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P07860 in Bacillus
-    subtilis (strain 168)) associated with hormogonium formation while full multi-step
-    mechanistic curation remains future work.
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P46078 in Nostoc
+    sp. (strain PCC 7120 / SAG 25.82 / UTEX 2576)) associated with hormogonium formation
+    while full multi-step mechanistic curation remains future work.
   nodes:
   - node_id: hormogonium_formation_trait
     label: hormogonium formation
@@ -118,45 +125,45 @@ causal_graphs:
       short, initially heterocyst-free filaments called hormogonia that are distinct
       from mature vegetative trichomes.
   - node_id: hormogonium_formation_protein_component
-    label: RNA polymerase sigma-F factor
+    label: Filament integrity protein FraC
     node_type: GENE_OR_PROTEIN
-    description: Protein component (RNA polymerase sigma-F factor) associated with
+    description: Protein component (Filament integrity protein FraC) associated with
       hormogonium formation.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    grounding: InterPro:IPR054663
     gene_symbols:
-    - sigF
+    - fraC
     protein_examples:
-    - uniprot_id: UniProtKB:P07860
-      protein_label: RNA polymerase sigma-F factor
-      gene_symbol: sigF
-      taxon_id: NCBITaxon:224308
-      taxon_label: Bacillus subtilis (strain 168)
+    - uniprot_id: UniProtKB:P46078
+      protein_label: Filament integrity protein FraC
+      gene_symbol: fraC
+      taxon_id: NCBITaxon:103690
+      taxon_label: Nostoc sp. (strain PCC 7120 / SAG 25.82 / UTEX 2576)
       entry_status: REVIEWED
-      proteome_id: UP000001570
+      proteome_id: UP000002483
       retrieved_on: '2026-10-17'
-      entry_version: 175
+      entry_version: 100
       sequence_version: 1
-      role: Characteristic protein component (sigF, RNA polymerase sigma-F factor)
-        associated with hormogonium formation in Bacillus subtilis (strain 168).
+      role: Characteristic protein component (fraC, Filament integrity protein FraC)
+        associated with hormogonium formation in Nostoc sp. (strain PCC 7120 / SAG
+        25.82 / UTEX 2576).
       evidence:
       - reference: DOI:10.1128/mSphere.00231-19
         snippet: both sigC and sigJ may be required for an early stage in hormogonium
           development, while sigF is late acting.
-        notes: Supports RNA polymerase sigma-F factor in hormogonium formation; UniProtKB:P07860
-          (sigF, RNA polymerase sigma-F factor) in Bacillus subtilis (strain 168)
-          provides a verified protein exemplar.
+        notes: Supports Filament integrity protein FraC in hormogonium formation;
+          UniProtKB:P46078 (fraC, Filament integrity protein FraC) in Nostoc sp. (strain
+          PCC 7120 / SAG 25.82 / UTEX 2576) provides a verified protein exemplar.
   edges:
   - subject: hormogonium_formation_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: hormogonium_formation_trait
-    description: RNA polymerase sigma-F factor (sigF, UniProtKB:P07860) contributes
-      to hormogonium formation (associated with development, hormogonium, acting).
+    description: Filament integrity protein FraC (fraC, UniProtKB:P46078) contributes
+      to hormogonium formation.
     evidence:
     - reference: DOI:10.1128/mSphere.00231-19
       snippet: both sigC and sigJ may be required for an early stage in hormogonium
         development, while sigF is late acting.
-      notes: Supports the functional association between RNA polymerase sigma-F factor
-        (UniProtKB:P07860 in Bacillus subtilis (strain 168)) and hormogonium formation.
+      notes: Supports the functional association between Filament integrity protein
+        FraC (UniProtKB:P46078 in Nostoc sp. (strain PCC 7120 / SAG 25.82 / UTEX 2576))
+        and hormogonium formation.

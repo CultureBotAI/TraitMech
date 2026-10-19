@@ -74,29 +74,25 @@ causal_graphs:
     grounding_notes: This is a host-plant protein family used as context in the mixed
       host-microbe graph; it is not the bacterial protein exemplar.
     protein_examples:
-    - uniprot_id: UniProtKB:Q4A0Q1
-      protein_label: Oxygen-dependent choline dehydrogenase
-      gene_symbol: betA
-      taxon_id: NCBITaxon:342451
-      taxon_label: Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
-        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+    - uniprot_id: UniProtKB:P00460
+      protein_label: Nitrogenase iron protein
+      gene_symbol: nifH
+      taxon_id: NCBITaxon:266834
+      taxon_label: Rhizobium meliloti (strain 1021)
       entry_status: REVIEWED
-      proteome_id: UP000006371
+      proteome_id: UP000001976
       retrieved_on: '2026-10-17'
-      entry_version: 127
-      sequence_version: 1
-      role: Exemplar protein (betA, Oxygen-dependent choline dehydrogenase) representing
-        leghemoglobin in Staphylococcus saprophyticus subsp. saprophyticus (strain
-        ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) for nitrogen-fixing
-        symbiosis.
+      entry_version: 159
+      sequence_version: 2
+      role: Exemplar protein (nifH, Nitrogenase iron protein) representing leghemoglobin
+        in Rhizobium meliloti (strain 1021) for nitrogen-fixing symbiosis.
       evidence:
       - reference: DOI:10.1038/nrmicro.2017.171
         snippet: Rhizobia must exist in soil and compete with other members of the
           microbiota before infecting legumes and forming N2-fixing bacteroids.
-        notes: Supports leghemoglobin in nitrogen-fixing symbiosis; UniProtKB:Q4A0Q1
-          (betA, Oxygen-dependent choline dehydrogenase) in Staphylococcus saprophyticus
-          subsp. saprophyticus (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC
-          7292 / S-41) provides a verified protein exemplar.
+        notes: Supports leghemoglobin in nitrogen-fixing symbiosis; UniProtKB:P00460
+          (nifH, Nitrogenase iron protein) in Rhizobium meliloti (strain 1021) provides
+          a verified protein exemplar.
   - node_id: nodule_oxygen_diffusion_barrier
     label: nodule oxygen diffusion barrier
     node_type: CELLULAR_LOCALIZATION
@@ -289,6 +285,6 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:P00460
-    version metadata (entry_version=159, sequence_version=2); added UniProtKB:Q4A0Q1
-    (betA) protein example to node leghemoglobin.'
+    version metadata (entry_version=159, sequence_version=2); added UniProtKB:P00460
+    (nifH) protein example to node leghemoglobin.'
   llm_assisted: true

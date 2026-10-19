@@ -53,16 +53,16 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph alpha_galactosidase_activity_graph
-    with GENE_OR_PROTEIN node alpha_galactosidase_activity_protein_component and UniProtKB:P07658
+    with GENE_OR_PROTEIN node alpha_galactosidase_activity_protein_component and UniProtKB:P06720
     exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: alpha_galactosidase_activity_graph
   title: Protein component associated with alpha-galactosidase activity
-  description: Literature-backed association between Formate dehydrogenase H (UniProtKB:P07658)
+  description: Literature-backed association between Alpha-galactosidase (UniProtKB:P06720)
     and alpha-galactosidase activity.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P07658 in Escherichia
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P06720 in Escherichia
     coli (strain K12)) associated with alpha-galactosidase activity while full multi-step
     mechanistic curation remains future work.
   nodes:
@@ -74,47 +74,45 @@ causal_graphs:
       active alpha-galactosidase enzymes that hydrolyze alpha-1,6-linked galactose
       residues in oligosaccharides and polymeric galactomannans.
   - node_id: alpha_galactosidase_activity_protein_component
-    label: Formate dehydrogenase H
+    label: Alpha-galactosidase
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Formate dehydrogenase H) associated with alpha-galactosidase
+    description: Protein component (Alpha-galactosidase) associated with alpha-galactosidase
       activity.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    grounding: InterPro:IPR053715
     gene_symbols:
-    - fdhF
+    - melA
     protein_examples:
-    - uniprot_id: UniProtKB:P07658
-      protein_label: Formate dehydrogenase H
-      gene_symbol: fdhF
+    - uniprot_id: UniProtKB:P06720
+      protein_label: Alpha-galactosidase
+      gene_symbol: melA
       taxon_id: NCBITaxon:83333
       taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
       proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 228
-      sequence_version: 2
-      role: Characteristic protein component (fdhF, Formate dehydrogenase H) associated
+      entry_version: 173
+      sequence_version: 1
+      role: Characteristic protein component (melA, Alpha-galactosidase) associated
         with alpha-galactosidase activity in Escherichia coli (strain K12).
       evidence:
       - reference: DOI:10.1128/jcm.22.3.333-335.1985
         snippet: Selenomonas sputigena was positive for α-galactosidase, β-galactosidase,
           and α-glucosidase (API ZYM strip) and for α-glucosidase, β-glucosidase,
           and α-galactosidase (API An-Ident strip).
-        notes: Supports Formate dehydrogenase H in alpha-galactosidase activity; UniProtKB:P07658
-          (fdhF, Formate dehydrogenase H) in Escherichia coli (strain K12) provides
-          a verified protein exemplar.
+        notes: Supports Alpha-galactosidase in alpha-galactosidase activity; UniProtKB:P06720
+          (melA, Alpha-galactosidase) in Escherichia coli (strain K12) provides a
+          verified protein exemplar.
   edges:
   - subject: alpha_galactosidase_activity_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: alpha_galactosidase_activity_trait
-    description: Formate dehydrogenase H (fdhF, UniProtKB:P07658) contributes to alpha-galactosidase
-      activity (associated with galactosidase, glucosidase, selenomonas).
+    description: Alpha-galactosidase (melA, UniProtKB:P06720) contributes to alpha-galactosidase
+      activity.
     evidence:
     - reference: DOI:10.1128/jcm.22.3.333-335.1985
       snippet: Selenomonas sputigena was positive for α-galactosidase, β-galactosidase,
         and α-glucosidase (API ZYM strip) and for α-glucosidase, β-glucosidase, and
         α-galactosidase (API An-Ident strip).
-      notes: Supports the functional association between Formate dehydrogenase H (UniProtKB:P07658
+      notes: Supports the functional association between Alpha-galactosidase (UniProtKB:P06720
         in Escherichia coli (strain K12)) and alpha-galactosidase activity.

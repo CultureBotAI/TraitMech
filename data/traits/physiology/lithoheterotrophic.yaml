@@ -151,27 +151,24 @@ causal_graphs:
       composition differs among taxa; no checked whole-system term exactly represents
       the label.
     protein_examples:
-    - uniprot_id: UniProtKB:P71370
-      protein_label: Periplasmic oligopeptide-binding protein OppA
-      gene_symbol: oppA
-      taxon_id: NCBITaxon:71421
-      taxon_label: Haemophilus influenzae (strain ATCC 51907 / DSM 11121 / KW20 /
-        Rd)
+    - uniprot_id: UniProtKB:Q9K4M4
+      protein_label: L-cysteine S-thiosulfotransferase subunit SoxA
+      gene_symbol: soxA
+      taxon_id: NCBITaxon:93369
+      taxon_label: Pseudaminobacter salicylatoxidans
       entry_status: REVIEWED
-      proteome_id: UP000000579
       retrieved_on: '2026-10-17'
-      entry_version: 124
-      sequence_version: 1
-      role: Exemplar protein (oppA, Periplasmic oligopeptide-binding protein OppA)
-        representing periplasmic Sox system in Haemophilus influenzae (strain ATCC
-        51907 / DSM 11121 / KW20 / Rd) for lithoheterotrophic.
+      entry_version: 77
+      sequence_version: 2
+      role: Exemplar protein (soxA, L-cysteine S-thiosulfotransferase subunit SoxA)
+        representing periplasmic Sox system in Pseudaminobacter salicylatoxidans for
+        lithoheterotrophic.
       evidence:
       - reference: DOI:10.1038/s41598-021-81412-3
         snippet: engineered lithoheterotrophic strain
-        notes: Supports periplasmic Sox system in lithoheterotrophic; UniProtKB:P71370
-          (oppA, Periplasmic oligopeptide-binding protein OppA) in Haemophilus influenzae
-          (strain ATCC 51907 / DSM 11121 / KW20 / Rd) provides a verified protein
-          exemplar.
+        notes: Supports periplasmic Sox system in lithoheterotrophic; UniProtKB:Q9K4M4
+          (soxA, L-cysteine S-thiosulfotransferase subunit SoxA) in Pseudaminobacter
+          salicylatoxidans provides a verified protein exemplar.
   - node_id: group_2a_nife_hydrogenase
     label: group 2a [NiFe]-hydrogenase
     node_type: GENE_OR_PROTEIN
@@ -524,6 +521,6 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q3SJ10 (Q3SJ10)
-    protein example to node sqr; added UniProtKB:P71370 (oppA) protein example to
+    protein example to node sqr; added UniProtKB:Q9K4M4 (soxA) protein example to
     node sox_system.'
   llm_assisted: true

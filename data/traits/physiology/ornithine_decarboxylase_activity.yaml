@@ -57,18 +57,17 @@ curation_history:
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph ornithine_decarboxylase_activity_graph
     with GENE_OR_PROTEIN node ornithine_decarboxylase_activity_protein_component and
-    UniProtKB:Q03511 exemplar.'
+    UniProtKB:P21169 exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: ornithine_decarboxylase_activity_graph
   title: Protein component associated with ornithine decarboxylase activity
-  description: Literature-backed association between Carboxysome shell protein CcmK2
-    (UniProtKB:Q03511) and ornithine decarboxylase activity.
+  description: Literature-backed association between Constitutive ornithine decarboxylase
+    (UniProtKB:P21169) and ornithine decarboxylase activity.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q03511 in Synechococcus
-    elongatus (strain ATCC 33912 / PCC 7942 / FACHB-805) (Anacystis nidulans R2))
-    associated with ornithine decarboxylase activity while full multi-step mechanistic
-    curation remains future work.
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P21169 in Escherichia
+    coli (strain K12)) associated with ornithine decarboxylase activity while full
+    multi-step mechanistic curation remains future work.
   nodes:
   - node_id: ornithine_decarboxylase_activity_trait
     label: ornithine decarboxylase activity
@@ -78,30 +77,27 @@ causal_graphs:
       active ornithine decarboxylase enzymes that decarboxylate L-ornithine to putrescine
       and carbon dioxide.
   - node_id: ornithine_decarboxylase_activity_protein_component
-    label: Carboxysome shell protein CcmK2
+    label: Constitutive ornithine decarboxylase
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Carboxysome shell protein CcmK2) associated with
-      ornithine decarboxylase activity.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Constitutive ornithine decarboxylase) associated
+      with ornithine decarboxylase activity.
+    grounding: InterPro:IPR011006
     gene_symbols:
-    - ccmK2
+    - speC
     protein_examples:
-    - uniprot_id: UniProtKB:Q03511
-      protein_label: Carboxysome shell protein CcmK2
-      gene_symbol: ccmK2
-      taxon_id: NCBITaxon:1140
-      taxon_label: Synechococcus elongatus (strain ATCC 33912 / PCC 7942 / FACHB-805)
-        (Anacystis nidulans R2)
+    - uniprot_id: UniProtKB:P21169
+      protein_label: Constitutive ornithine decarboxylase
+      gene_symbol: speC
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
-      proteome_id: UP000889800
+      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 111
-      sequence_version: 1
-      role: Characteristic protein component (ccmK2, Carboxysome shell protein CcmK2)
-        associated with ornithine decarboxylase activity in Synechococcus elongatus
-        (strain ATCC 33912 / PCC 7942 / FACHB-805) (Anacystis nidulans R2).
+      entry_version: 176
+      sequence_version: 2
+      role: Characteristic protein component (speC, Constitutive ornithine decarboxylase)
+        associated with ornithine decarboxylase activity in Escherichia coli (strain
+        K12).
       evidence:
       - reference: DOI:10.1128/jb.124.2.791-799.1975
         snippet: Several Escherichia coli K-12 mutants blocked in the synthesis of
@@ -111,18 +107,16 @@ causal_graphs:
           by an unconditional polyamine dependence; either putrescine or spermidine
           was required for normal growth. The mutational block was varified by the
           demonstration of a virtual absence of OD activity in cellular extracts.
-        notes: Supports Carboxysome shell protein CcmK2 in ornithine decarboxylase
-          activity; UniProtKB:Q03511 (ccmK2, Carboxysome shell protein CcmK2) in Synechococcus
-          elongatus (strain ATCC 33912 / PCC 7942 / FACHB-805) (Anacystis nidulans
-          R2) provides a verified protein exemplar.
+        notes: Supports Constitutive ornithine decarboxylase in ornithine decarboxylase
+          activity; UniProtKB:P21169 (speC, Constitutive ornithine decarboxylase)
+          in Escherichia coli (strain K12) provides a verified protein exemplar.
   edges:
   - subject: ornithine_decarboxylase_activity_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: ornithine_decarboxylase_activity_trait
-    description: Carboxysome shell protein CcmK2 (ccmK2, UniProtKB:Q03511) contributes
-      to ornithine decarboxylase activity (associated with characterized, decarboxylase,
-      demonstration).
+    description: Constitutive ornithine decarboxylase (speC, UniProtKB:P21169) contributes
+      to ornithine decarboxylase activity.
     evidence:
     - reference: DOI:10.1128/jb.124.2.791-799.1975
       snippet: Several Escherichia coli K-12 mutants blocked in the synthesis of ornithine
@@ -132,6 +126,6 @@ causal_graphs:
         polyamine dependence; either putrescine or spermidine was required for normal
         growth. The mutational block was varified by the demonstration of a virtual
         absence of OD activity in cellular extracts.
-      notes: Supports the functional association between Carboxysome shell protein
-        CcmK2 (UniProtKB:Q03511 in Synechococcus elongatus (strain ATCC 33912 / PCC
-        7942 / FACHB-805) (Anacystis nidulans R2)) and ornithine decarboxylase activity.
+      notes: Supports the functional association between Constitutive ornithine decarboxylase
+        (UniProtKB:P21169 in Escherichia coli (strain K12)) and ornithine decarboxylase
+        activity.

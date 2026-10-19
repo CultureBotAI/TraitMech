@@ -26,20 +26,28 @@ curation_history:
   llm_assisted: true
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed canonical_examples status alongside NONMECHANISTIC protein exemplar
+    graph for nitrite respiration; isolate-level canonical example remains deferred
+    pending explicit strain-level literature.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph nitrite_respiration_graph
-    with GENE_OR_PROTEIN node nitrite_respiration_protein_component and UniProtKB:B5BJZ8
+    with GENE_OR_PROTEIN node nitrite_respiration_protein_component and UniProtKB:P24474
     exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: nitrite_respiration_graph
   title: Protein component associated with nitrite respiration
-  description: Literature-backed association between Cytochrome c-552 (UniProtKB:B5BJZ8)
+  description: Literature-backed association between Nitrite reductase (UniProtKB:P24474)
     and nitrite respiration.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:B5BJZ8 in Salmonella
-    paratyphi A (strain AKU_12601)) associated with nitrite respiration while full
-    multi-step mechanistic curation remains future work.
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P24474 in Pseudomonas
+    aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228
+    / 1C / PRS 101 / PAO1)) associated with nitrite respiration while full multi-step
+    mechanistic curation remains future work.
   nodes:
   - node_id: nitrite_respiration_trait
     label: nitrite respiration
@@ -48,43 +56,48 @@ causal_graphs:
     description: A nitrogen respiration in which nitrite is the terminal electron
       acceptor.
   - node_id: nitrite_respiration_protein_component
-    label: Cytochrome c-552
+    label: Nitrite reductase
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Cytochrome c-552) associated with nitrite respiration.
+    description: Protein component (Nitrite reductase) associated with nitrite respiration.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - nrfA
+    - nirS
     protein_examples:
-    - uniprot_id: UniProtKB:B5BJZ8
-      protein_label: Cytochrome c-552
-      gene_symbol: nrfA
-      taxon_id: NCBITaxon:554290
-      taxon_label: Salmonella paratyphi A (strain AKU_12601)
+    - uniprot_id: UniProtKB:P24474
+      protein_label: Nitrite reductase
+      gene_symbol: nirS
+      taxon_id: NCBITaxon:208964
+      taxon_label: Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116
+        / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)
       entry_status: REVIEWED
+      proteome_id: UP000002438
       retrieved_on: '2026-10-17'
-      entry_version: 82
+      entry_version: 177
       sequence_version: 1
-      role: Characteristic protein component (nrfA, Cytochrome c-552) associated with
-        nitrite respiration in Salmonella paratyphi A (strain AKU_12601).
+      role: Characteristic protein component (nirS, Nitrite reductase) associated
+        with nitrite respiration in Pseudomonas aeruginosa (strain ATCC 15692 / DSM
+        22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1).
       evidence:
       - reference: DOI:10.1074/jbc.M709090200
         snippet: Cytochrome c nitrite reductase (NrfA) from Escherichia coli has a
           well established role in the respiratory reduction of nitrite to ammonium
-        notes: Supports Cytochrome c-552 in nitrite respiration; UniProtKB:B5BJZ8
-          (nrfA, Cytochrome c-552) in Salmonella paratyphi A (strain AKU_12601) provides
+        notes: Supports Nitrite reductase in nitrite respiration; UniProtKB:P24474
+          (nirS, Nitrite reductase) in Pseudomonas aeruginosa (strain ATCC 15692 /
+          DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1) provides
           a verified protein exemplar.
   edges:
   - subject: nitrite_respiration_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: nitrite_respiration_trait
-    description: Cytochrome c-552 (nrfA, UniProtKB:B5BJZ8) contributes to nitrite
-      respiration (associated with escherichia, established, respiratory).
+    description: Nitrite reductase (nirS, UniProtKB:P24474) contributes to nitrite
+      respiration.
     evidence:
     - reference: DOI:10.1074/jbc.M709090200
       snippet: Cytochrome c nitrite reductase (NrfA) from Escherichia coli has a well
         established role in the respiratory reduction of nitrite to ammonium
-      notes: Supports the functional association between Cytochrome c-552 (UniProtKB:B5BJZ8
-        in Salmonella paratyphi A (strain AKU_12601)) and nitrite respiration.
+      notes: Supports the functional association between Nitrite reductase (UniProtKB:P24474
+        in Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM
+        14847 / LMG 12228 / 1C / PRS 101 / PAO1)) and nitrite respiration.

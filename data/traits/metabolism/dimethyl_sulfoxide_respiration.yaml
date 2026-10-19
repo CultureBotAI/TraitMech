@@ -114,8 +114,7 @@ causal_graphs:
     predicate_id: RO:0002326
     object: dimethyl_sulfoxide_respiration_trait
     description: Dimethyl sulfoxide/trimethylamine N-oxide reductase (dmsA, UniProtKB:Q57366)
-      contributes to dimethyl sulfoxide respiration (associated with thermoacetica,
-      sulfoxide, acceptor).
+      contributes to dimethyl sulfoxide respiration.
     evidence:
     - reference: DOI:10.1111/1462-2920.15971
       snippet: M. thermoacetica can also use dimethyl sulfoxide as terminal electron

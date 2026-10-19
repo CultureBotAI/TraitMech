@@ -56,27 +56,28 @@ causal_graphs:
       no single GO or InterPro term denotes the complete generic system represented
       here.
     protein_examples:
-    - uniprot_id: UniProtKB:D3RNN8
-      protein_label: Sulfite dehydrogenase subunit A
-      gene_symbol: soeA
-      taxon_id: NCBITaxon:572477
-      taxon_label: Allochromatium vinosum (strain ATCC 17899 / DSM 180 / NBRC 103801
-        / NCIMB 10441 / D) (Chromatium vinosum)
+    - uniprot_id: UniProtKB:D7A6E5
+      protein_label: L-cysteine S-thiosulfotransferase subunit SoxA
+      gene_symbol: soxA
+      taxon_id: NCBITaxon:639283
+      taxon_label: Ancylobacter novellus (strain ATCC 8093 / DSM 506 / JCM 20403 /
+        CCM 1077 / IAM 12100 / NBRC 12443 / NCIMB 10456) (Starkeya novella)
       entry_status: REVIEWED
-      proteome_id: UP000001441
+      proteome_id: UP000006633
       retrieved_on: '2026-10-17'
-      entry_version: 77
-      sequence_version: 1
-      role: Exemplar protein (soeA, Sulfite dehydrogenase subunit A) representing
-        Sox enzyme system in Allochromatium vinosum (strain ATCC 17899 / DSM 180 /
-        NBRC 103801 / NCIMB 10441 / D) (Chromatium vinosum) for sulfur oxidation.
+      entry_version: 75
+      sequence_version: 2
+      role: Exemplar protein (soxA, L-cysteine S-thiosulfotransferase subunit SoxA)
+        representing Sox enzyme system in Ancylobacter novellus (strain ATCC 8093
+        / DSM 506 / JCM 20403 / CCM 1077 / IAM 12100 / NBRC 12443 / NCIMB 10456) (Starkeya
+        novella) for sulfur oxidation.
       evidence:
       - reference: DOI:10.1111/j.1574-6976.2009.00187.x
         snippet: lithotrophic sulfur oxidation
-        notes: Supports Sox enzyme system in sulfur oxidation; UniProtKB:D3RNN8 (soeA,
-          Sulfite dehydrogenase subunit A) in Allochromatium vinosum (strain ATCC
-          17899 / DSM 180 / NBRC 103801 / NCIMB 10441 / D) (Chromatium vinosum) provides
-          a verified protein exemplar.
+        notes: Supports Sox enzyme system in sulfur oxidation; UniProtKB:D7A6E5 (soxA,
+          L-cysteine S-thiosulfotransferase subunit SoxA) in Ancylobacter novellus
+          (strain ATCC 8093 / DSM 506 / JCM 20403 / CCM 1077 / IAM 12100 / NBRC 12443
+          / NCIMB 10456) (Starkeya novella) provides a verified protein exemplar.
   - node_id: hydrogen_sulfide
     label: hydrogen sulfide
     node_type: CHEMICAL
@@ -389,7 +390,7 @@ curation_history:
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
-  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:D3RNN8 (soeA)
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:D7A6E5 (soxA)
     protein example to node sox_system; added UniProtKB:Q9S2F4 (hpd) protein example
     to node pdo_enzyme; added UniProtKB:Q4FQB7 (tsdA) protein example to node tsda_enzyme;
     added UniProtKB:B7J3C9 (tth) protein example to node teth_enzyme.'

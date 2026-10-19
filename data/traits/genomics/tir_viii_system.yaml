@@ -82,35 +82,35 @@ causal_graphs:
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
   - node_id: tir_viii_system_protein_component
-    label: Phage infection protein
+    label: Endonuclease GajA
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Phage infection protein) associated with TIR-VIII
-      system.
+    description: Protein component (Endonuclease GajA) associated with TIR-VIII system.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - pip
+    - gajA
     protein_examples:
-    - uniprot_id: UniProtKB:P49022
-      protein_label: Phage infection protein
-      gene_symbol: pip
-      taxon_id: NCBITaxon:1360
-      taxon_label: Lactococcus lactis subsp. lactis (Streptococcus lactis)
+    - uniprot_id: UniProtKB:P0DW47
+      protein_label: Endonuclease GajA
+      gene_symbol: gajA
+      taxon_id: NCBITaxon:1053212
+      taxon_label: Bacillus cereus (strain HuB5-5)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      entry_version: 85
+      entry_version: 12
       sequence_version: 1
-      role: Characteristic protein component (pip, Phage infection protein) associated
-        with TIR-VIII system in Lactococcus lactis subsp. lactis (Streptococcus lactis).
+      role: Characteristic protein component (gajA, Endonuclease GajA) associated
+        with TIR-VIII system in Bacillus cereus (strain HuB5-5).
       evidence:
-      - reference: DOI:10.1038/s41467-024-51738-3
-        snippet: The defense activity of the TIR systems against each phage was determined
-          based on their ability to inhibit plaque formation compared to the pSEC1
-          empty vector control
-        notes: Supports Phage infection protein in TIR-VIII system; UniProtKB:P49022
-          (pip, Phage infection protein) in Lactococcus lactis subsp. lactis (Streptococcus
-          lactis) provides a verified protein exemplar.
+      - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+        snippet: '| Rst_2TM_1TM_TIR__Rst_1TM_TIR | Rst_2TM_1TM_TIR__Rst_1TM_TIR |
+          Rst_2TM_1TM_TIR | Custom | 20 | | Rst_2TM_1TM_TIR__Rst_2TM_TIR | Rst_2TM_1TM_TIR__Rst_2TM_TIR
+          | Rst_2TM_1TM_TIR | Custom | 20 | | Rst_2TM_1TM_TIR__Rst_TIR_tm | Rst_2TM_1TM_TIR__Rst_TIR_tm
+          | Rst_2TM_1TM_TIR | Custom | 20 |'
+        notes: Supports Endonuclease GajA in TIR-VIII system; UniProtKB:P0DW47 (gajA,
+          Endonuclease GajA) in Bacillus cereus (strain HuB5-5) provides a verified
+          protein exemplar.
   edges:
   - subject: tir_viii_locus
     predicate: contributes to
@@ -160,14 +160,16 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: tir_viii_system_trait
-    description: Phage infection protein (pip, UniProtKB:P49022) contributes to TIR-VIII
-      system (associated with bf00327934, specifying, infection).
+    description: Endonuclease GajA (gajA, UniProtKB:P0DW47) contributes to TIR-VIII
+      system.
     evidence:
-    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
-      snippet: Pif | 10\.1007/BF00327934 | Molecular analysis of F plasmid pif region
-        specifying abortive infection of T7 phage
-      notes: Supports the functional association between Phage infection protein (UniProtKB:P49022
-        in Lactococcus lactis subsp. lactis (Streptococcus lactis)) and TIR-VIII system.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| Rst_2TM_1TM_TIR__Rst_1TM_TIR | Rst_2TM_1TM_TIR__Rst_1TM_TIR | Rst_2TM_1TM_TIR
+        | Custom | 20 | | Rst_2TM_1TM_TIR__Rst_2TM_TIR | Rst_2TM_1TM_TIR__Rst_2TM_TIR
+        | Rst_2TM_1TM_TIR | Custom | 20 | | Rst_2TM_1TM_TIR__Rst_TIR_tm | Rst_2TM_1TM_TIR__Rst_TIR_tm
+        | Rst_2TM_1TM_TIR | Custom | 20 |'
+      notes: Supports the functional association between Endonuclease GajA (UniProtKB:P0DW47
+        in Bacillus cereus (strain HuB5-5)) and TIR-VIII system.
 discussions:
 - discussion_id: tir-viii-detection-trigger-gap
   prompt: Resolve TIR-VIII native host breadth, the TIR-VIII__TIR-VIII_A and TIR-VIII__TIR-VIII_B
@@ -231,5 +233,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    tir_viii_system_protein_component with UniProtKB:P49022 (pip) exemplar.'
+    tir_viii_system_protein_component with UniProtKB:P0DW47 (gajA) exemplar.'
   llm_assisted: true

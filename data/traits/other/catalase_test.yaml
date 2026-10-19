@@ -31,9 +31,16 @@ curation_history:
   llm_assisted: true
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed canonical_examples status alongside NONMECHANISTIC protein exemplar
+    graph for catalase test; isolate-level canonical example remains deferred pending
+    explicit strain-level literature.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph catalase_test_graph
-    with GENE_OR_PROTEIN node catalase_test_protein_component and UniProtKB:Q9R708
+    with GENE_OR_PROTEIN node catalase_test_protein_component and UniProtKB:P30266
     exemplar.'
   llm_assisted: true
 definition_source: http://purl.obolibrary.org/obo/OMP_0000218
@@ -50,12 +57,13 @@ evidence:
 causal_graphs:
 - graph_id: catalase_test_graph
   title: Protein component associated with catalase test
-  description: Literature-backed association between Catalase-peroxidase (UniProtKB:Q9R708)
-    and catalase test.
+  description: Literature-backed association between Catalase (UniProtKB:P30266) and
+    catalase test.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q9R708 in Agrobacterium
-    tumefaciens) associated with catalase test while full multi-step mechanistic curation
-    remains future work.
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P30266 in Alkalihalophilus
+    pseudofirmus (strain ATCC BAA-2126 / JCM 17055 / OF4) (Bacillus pseudofirmus))
+    associated with catalase test while full multi-step mechanistic curation remains
+    future work.
   nodes:
   - node_id: catalase_test_trait
     label: catalase test
@@ -66,42 +74,42 @@ causal_graphs:
       (positive or negative) is captured by its child classes; this class itself does
       not assert that the organism has catalase activity.
   - node_id: catalase_test_protein_component
-    label: Catalase-peroxidase
+    label: Catalase
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Catalase-peroxidase) associated with catalase
-      test.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Catalase) associated with catalase test.
+    grounding: GO:0004096
     gene_symbols:
-    - katG
+    - katE
     protein_examples:
-    - uniprot_id: UniProtKB:Q9R708
-      protein_label: Catalase-peroxidase
-      gene_symbol: katG
-      taxon_id: NCBITaxon:358
-      taxon_label: Agrobacterium tumefaciens
+    - uniprot_id: UniProtKB:P30266
+      protein_label: Catalase
+      gene_symbol: katE
+      taxon_id: NCBITaxon:398511
+      taxon_label: Alkalihalophilus pseudofirmus (strain ATCC BAA-2126 / JCM 17055
+        / OF4) (Bacillus pseudofirmus)
       entry_status: REVIEWED
+      proteome_id: UP000001544
       retrieved_on: '2026-10-17'
-      entry_version: 101
-      sequence_version: 1
-      role: Characteristic protein component (katG, Catalase-peroxidase) associated
-        with catalase test in Agrobacterium tumefaciens.
+      entry_version: 129
+      sequence_version: 3
+      role: Characteristic protein component (katE, Catalase) associated with catalase
+        test in Alkalihalophilus pseudofirmus (strain ATCC BAA-2126 / JCM 17055 /
+        OF4) (Bacillus pseudofirmus).
       evidence:
       - reference: https://asm.org/protocols/catalase-test-protocol
         snippet: The catalase test facilitates the detection of this enzyme in bacteria
-        notes: Supports Catalase-peroxidase in catalase test; UniProtKB:Q9R708 (katG,
-          Catalase-peroxidase) in Agrobacterium tumefaciens provides a verified protein
-          exemplar.
+        notes: Supports Catalase in catalase test; UniProtKB:P30266 (katE, Catalase)
+          in Alkalihalophilus pseudofirmus (strain ATCC BAA-2126 / JCM 17055 / OF4)
+          (Bacillus pseudofirmus) provides a verified protein exemplar.
   edges:
   - subject: catalase_test_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: catalase_test_trait
-    description: Catalase-peroxidase (katG, UniProtKB:Q9R708) contributes to catalase
-      test (associated with facilitates, detection, bacteria).
+    description: Catalase (katE, UniProtKB:P30266) contributes to catalase test.
     evidence:
     - reference: https://asm.org/protocols/catalase-test-protocol
       snippet: The catalase test facilitates the detection of this enzyme in bacteria
-      notes: Supports the functional association between Catalase-peroxidase (UniProtKB:Q9R708
-        in Agrobacterium tumefaciens) and catalase test.
+      notes: Supports the functional association between Catalase (UniProtKB:P30266
+        in Alkalihalophilus pseudofirmus (strain ATCC BAA-2126 / JCM 17055 / OF4)
+        (Bacillus pseudofirmus)) and catalase test.

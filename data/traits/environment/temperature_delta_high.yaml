@@ -107,35 +107,34 @@ causal_graphs:
     node_type: BIOLOGICAL_PROCESS
     description: Irreversible loss of protein activity at high temperatures.
   - node_id: temperature_delta_high_protein_component
-    label: sn-1 oleoyl-lipid 12-desaturase
+    label: Chaperone protein DnaK
     node_type: GENE_OR_PROTEIN
-    description: Protein component (sn-1 oleoyl-lipid 12-desaturase) associated with
-      temperature delta high.
+    description: Protein component (Chaperone protein DnaK) associated with temperature
+      delta high.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - desA
+    - dnaK
     protein_examples:
-    - uniprot_id: UniProtKB:Q55231
-      protein_label: sn-1 oleoyl-lipid 12-desaturase
-      gene_symbol: desA
-      taxon_id: NCBITaxon:32049
-      taxon_label: Picosynechococcus sp. (strain ATCC 27264 / PCC 7002 / PR-6) (Agmenellum
-        quadruplicatum)
+    - uniprot_id: UniProtKB:P0A6Y8
+      protein_label: Chaperone protein DnaK
+      gene_symbol: dnaK
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
+      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 127
-      sequence_version: 1
-      role: Characteristic protein component (desA, sn-1 oleoyl-lipid 12-desaturase)
-        associated with temperature delta high in Picosynechococcus sp. (strain ATCC
-        27264 / PCC 7002 / PR-6) (Agmenellum quadruplicatum).
+      entry_version: 183
+      sequence_version: 2
+      role: Characteristic protein component (dnaK, Chaperone protein DnaK) associated
+        with temperature delta high in Escherichia coli (strain K12).
       evidence:
-      - reference: DOI:10.1146/annurev-micro-091313-103612
-        snippet: membrane lipid composition
-        notes: Supports sn-1 oleoyl-lipid 12-desaturase in temperature delta high;
-          UniProtKB:Q55231 (desA, sn-1 oleoyl-lipid 12-desaturase) in Picosynechococcus
-          sp. (strain ATCC 27264 / PCC 7002 / PR-6) (Agmenellum quadruplicatum) provides
+      - reference: DOI:10.1128/MMBR.65.1.1-43.2001
+        snippet: are typically thermostable (i.e., resistant to irreversible inactivation
+          at high temperatures) and are optimally active at high temperatures
+        notes: Supports Chaperone protein DnaK in temperature delta high; UniProtKB:P0A6Y8
+          (dnaK, Chaperone protein DnaK) in Escherichia coli (strain K12) provides
           a verified protein exemplar.
   edges:
   - subject: maximal_thermal_adaptation
@@ -293,14 +292,13 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: temperature_delta_high_trait
-    description: sn-1 oleoyl-lipid 12-desaturase (desA, UniProtKB:Q55231) contributes
-      to temperature delta high (associated with composition, membrane, lipid).
+    description: Chaperone protein DnaK (dnaK, UniProtKB:P0A6Y8) contributes to temperature
+      delta high.
     evidence:
     - reference: DOI:10.1146/annurev-micro-091313-103612
-      snippet: membrane lipid composition
-      notes: Supports the functional association between sn-1 oleoyl-lipid 12-desaturase
-        (UniProtKB:Q55231 in Picosynechococcus sp. (strain ATCC 27264 / PCC 7002 /
-        PR-6) (Agmenellum quadruplicatum)) and temperature delta high.
+      snippet: optimizes the performance of cellular physiological processes
+      notes: Supports the functional association between Chaperone protein DnaK (UniProtKB:P0A6Y8
+        in Escherichia coli (strain K12)) and temperature delta high.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.845441+00:00'
   curator: seed_from_metpo
@@ -439,5 +437,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    temperature_delta_high_protein_component with UniProtKB:Q55231 (desA) exemplar.'
+    temperature_delta_high_protein_component with UniProtKB:P0A6Y8 (dnaK) exemplar.'
   llm_assisted: true

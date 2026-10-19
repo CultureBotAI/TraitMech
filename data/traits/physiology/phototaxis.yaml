@@ -98,17 +98,19 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph phototaxis_graph
-    with GENE_OR_PROTEIN node phototaxis_protein_component and UniProtKB:P47908 exemplar.'
+    with GENE_OR_PROTEIN node phototaxis_protein_component and UniProtKB:A0A0H3K1H2
+    exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: phototaxis_graph
   title: Protein component associated with phototaxis
-  description: Literature-backed association between Ribosome hibernation promotion
-    factor (UniProtKB:P47908) and phototaxis.
+  description: Literature-backed association between Methyl-accepting chemotaxis protein
+    (UniProtKB:A0A0H3K1H2) and phototaxis.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P47908 in Picosynechococcus
-    sp. (strain ATCC 27264 / PCC 7002 / PR-6) (Agmenellum quadruplicatum)) associated
-    with phototaxis while full multi-step mechanistic curation remains future work.
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:A0A0H3K1H2 in
+    Synechococcus sp. (strain ATCC 27144 / PCC 6301 / SAUG 1402/1) (Anacystis nidulans))
+    associated with phototaxis while full multi-step mechanistic curation remains
+    future work.
   nodes:
   - node_id: phototaxis_trait
     label: phototaxis
@@ -117,48 +119,47 @@ causal_graphs:
     description: A motile phenotype in which active locomotion is directionally biased
       toward or away from a light source in response to illumination.
   - node_id: phototaxis_protein_component
-    label: Ribosome hibernation promotion factor
+    label: Methyl-accepting chemotaxis protein
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Ribosome hibernation promotion factor) associated
+    description: Protein component (Methyl-accepting chemotaxis protein) associated
       with phototaxis.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    grounding: InterPro:IPR003018
     gene_symbols:
-    - hpf
+    - pixJ
     protein_examples:
-    - uniprot_id: UniProtKB:P47908
-      protein_label: Ribosome hibernation promotion factor
-      gene_symbol: hpf
-      taxon_id: NCBITaxon:32049
-      taxon_label: Picosynechococcus sp. (strain ATCC 27264 / PCC 7002 / PR-6) (Agmenellum
-        quadruplicatum)
-      entry_status: REVIEWED
+    - uniprot_id: UniProtKB:A0A0H3K1H2
+      protein_label: Methyl-accepting chemotaxis protein
+      gene_symbol: pixJ
+      taxon_id: NCBITaxon:269084
+      taxon_label: Synechococcus sp. (strain ATCC 27144 / PCC 6301 / SAUG 1402/1)
+        (Anacystis nidulans)
+      entry_status: UNREVIEWED
+      proteome_id: UP000001175
       retrieved_on: '2026-10-17'
-      entry_version: 121
-      sequence_version: 2
-      role: Characteristic protein component (hpf, Ribosome hibernation promotion
-        factor) associated with phototaxis in Picosynechococcus sp. (strain ATCC 27264
-        / PCC 7002 / PR-6) (Agmenellum quadruplicatum).
+      entry_version: 43
+      sequence_version: 1
+      role: Characteristic protein component (pixJ, Methyl-accepting chemotaxis protein)
+        associated with phototaxis in Synechococcus sp. (strain ATCC 27144 / PCC 6301
+        / SAUG 1402/1) (Anacystis nidulans).
       evidence:
       - reference: DOI:10.1093/dnares/dss024
         snippet: ‘PCC-M and PCC-P’ are strains that both exhibit the native positive
           phototaxis, whereas ‘PCC-N’ strain shows negative phototaxis.
-        notes: Supports Ribosome hibernation promotion factor in phototaxis; UniProtKB:P47908
-          (hpf, Ribosome hibernation promotion factor) in Picosynechococcus sp. (strain
-          ATCC 27264 / PCC 7002 / PR-6) (Agmenellum quadruplicatum) provides a verified
+        notes: Supports Methyl-accepting chemotaxis protein in phototaxis; UniProtKB:A0A0H3K1H2
+          (pixJ, Methyl-accepting chemotaxis protein) in Synechococcus sp. (strain
+          ATCC 27144 / PCC 6301 / SAUG 1402/1) (Anacystis nidulans) provides a verified
           protein exemplar.
   edges:
   - subject: phototaxis_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: phototaxis_trait
-    description: Ribosome hibernation promotion factor (hpf, UniProtKB:P47908) contributes
-      to phototaxis (associated with phototaxis, exhibit, strains).
+    description: Methyl-accepting chemotaxis protein (pixJ, UniProtKB:A0A0H3K1H2)
+      contributes to phototaxis.
     evidence:
     - reference: DOI:10.1093/dnares/dss024
       snippet: ‘PCC-M and PCC-P’ are strains that both exhibit the native positive
         phototaxis, whereas ‘PCC-N’ strain shows negative phototaxis.
-      notes: Supports the functional association between Ribosome hibernation promotion
-        factor (UniProtKB:P47908 in Picosynechococcus sp. (strain ATCC 27264 / PCC
-        7002 / PR-6) (Agmenellum quadruplicatum)) and phototaxis.
+      notes: Supports the functional association between Methyl-accepting chemotaxis
+        protein (UniProtKB:A0A0H3K1H2 in Synechococcus sp. (strain ATCC 27144 / PCC
+        6301 / SAUG 1402/1) (Anacystis nidulans)) and phototaxis.

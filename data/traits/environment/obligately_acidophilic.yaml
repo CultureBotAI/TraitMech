@@ -34,7 +34,7 @@ causal_graphs:
   scope_status: NONMECHANISTIC
   scope_notes: This record is a broad environmental or morphological classification
     spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
-    descriptor; contextual protein nodes do not receive token UniProt examples.
+    descriptor; contextual protein nodes include source-backed UniProtKB exemplars.
   nodes:
   - node_id: obligately_acidophilic_trait
     label: obligately acidophilic
@@ -74,25 +74,28 @@ causal_graphs:
     description: Transport systems proposed to remove protons or exchange ions during
       acid stress.
     protein_examples:
-    - uniprot_id: UniProtKB:Q8ZNQ9
-      protein_label: Putative polysaccharide export protein wza
-      gene_symbol: wza
-      taxon_id: NCBITaxon:99287
-      taxon_label: Salmonella typhimurium (strain LT2 / SGSC1412 / ATCC 700720)
+    - uniprot_id: UniProtKB:Q9I191
+      protein_label: Pyoverdine export membrane fusion protein PvdR
+      gene_symbol: pvdR
+      taxon_id: NCBITaxon:208964
+      taxon_label: Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116
+        / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)
       entry_status: REVIEWED
-      proteome_id: UP000001014
+      proteome_id: UP000002438
       retrieved_on: '2026-10-17'
-      entry_version: 121
+      entry_version: 130
       sequence_version: 1
-      role: Exemplar protein (wza, Putative polysaccharide export protein wza) representing
-        proton export pumps and antiporters in Salmonella typhimurium (strain LT2
-        / SGSC1412 / ATCC 700720) for obligately acidophilic.
+      role: Exemplar protein (pvdR, Pyoverdine export membrane fusion protein PvdR)
+        representing proton export pumps and antiporters in Pseudomonas aeruginosa
+        (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C /
+        PRS 101 / PAO1) for obligately acidophilic.
       evidence:
       - reference: DOI:10.3389/fmicb.2021.822229
         snippet: proton export pumps and antiporters
         notes: Supports proton export pumps and antiporters in obligately acidophilic;
-          UniProtKB:Q8ZNQ9 (wza, Putative polysaccharide export protein wza) in Salmonella
-          typhimurium (strain LT2 / SGSC1412 / ATCC 700720) provides a verified protein
+          UniProtKB:Q9I191 (pvdR, Pyoverdine export membrane fusion protein PvdR)
+          in Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 /
+          JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1) provides a verified protein
           exemplar.
   - node_id: k_uptake_system_kdp_kef
     grounding_status: REVIEWED_LABEL_ONLY
@@ -103,25 +106,25 @@ causal_graphs:
     description: Potassium-transporting ATPases and K+ uptake systems (kdp, kef) that
       establish an inside-positive membrane potential.
     protein_examples:
-    - uniprot_id: UniProtKB:P06971
-      protein_label: Ferrichrome outer membrane transporter/phage receptor
-      gene_symbol: fhuA
-      taxon_id: NCBITaxon:83333
-      taxon_label: Escherichia coli (strain K12)
+    - uniprot_id: UniProtKB:Q9R6X2
+      protein_label: Potassium-transporting ATPase potassium-binding subunit
+      gene_symbol: kdpA
+      taxon_id: NCBITaxon:29412
+      taxon_label: Anabaena sp. (strain L31)
       entry_status: REVIEWED
-      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 229
-      sequence_version: 2
-      role: Exemplar protein (fhuA, Ferrichrome outer membrane transporter/phage receptor)
-        representing K+ uptake system (Kdp/Kef) in Escherichia coli (strain K12) for
-        obligately acidophilic.
+      entry_version: 89
+      sequence_version: 1
+      role: Exemplar protein (kdpA, Potassium-transporting ATPase potassium-binding
+        subunit) representing K+ uptake system (Kdp/Kef) in Anabaena sp. (strain L31)
+        for obligately acidophilic.
       evidence:
-      - reference: DOI:10.3389/fmicb.2021.822229
-        snippet: proton gradient across the cytoplasmic membrane
-        notes: Supports K+ uptake system (Kdp/Kef) in obligately acidophilic; UniProtKB:P06971
-          (fhuA, Ferrichrome outer membrane transporter/phage receptor) in Escherichia
-          coli (strain K12) provides a verified protein exemplar.
+      - reference: DOI:10.1038/nrmicro2549
+        snippet: up-regulation of the hydrolytic activity of F1Fo-ATPase promotes
+          ATP-dependent H+ extrusion under acidic conditions
+        notes: Supports K+ uptake system (Kdp/Kef) in obligately acidophilic; UniProtKB:Q9R6X2
+          (kdpA, Potassium-transporting ATPase potassium-binding subunit) in Anabaena
+          sp. (strain L31) provides a verified protein exemplar.
   - node_id: p_type_proton_atpase
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
@@ -466,8 +469,8 @@ curation_history:
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
-  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q8ZNQ9 (wza)
-    protein example to node proton_export_pumps; added UniProtKB:P06971 (fhuA) protein
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q9I191 (pvdR)
+    protein example to node proton_export_pumps; added UniProtKB:Q9R6X2 (kdpA) protein
     example to node k_uptake_system_kdp_kef; added UniProtKB:Q9R6X2 (kdpA) protein
     example to node p_type_proton_atpase; added UniProtKB:P0AFA7 (nhaB) protein example
     to node na_h_antiporter (+1 more).'

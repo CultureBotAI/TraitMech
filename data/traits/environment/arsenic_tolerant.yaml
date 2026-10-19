@@ -166,25 +166,25 @@ causal_graphs:
     description: Integral membrane arsenite efflux pump extruding As(III) from the
       cytoplasm.
     protein_examples:
-    - uniprot_id: UniProtKB:Q8NW09
+    - uniprot_id: UniProtKB:Q6GFT0
       protein_label: Arsenical pump membrane protein
       gene_symbol: arsB
-      taxon_id: NCBITaxon:196620
-      taxon_label: Staphylococcus aureus (strain MW2)
+      taxon_id: NCBITaxon:282458
+      taxon_label: Staphylococcus aureus (strain MRSA252)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      entry_version: 103
+      entry_version: 99
       sequence_version: 2
       role: Exemplar protein (arsB, Arsenical pump membrane protein) representing
-        ArsB arsenite efflux permease in Staphylococcus aureus (strain MW2) for arsenic
-        tolerant.
+        ArsB arsenite efflux permease in Staphylococcus aureus (strain MRSA252) for
+        arsenic tolerant.
       evidence:
       - reference: DOI:10.3389/fmicb.2018.02473
         snippet: ArsB is an integral membrane protein able to extrude arsenite from
           the cell cytoplasm, thus diminishing arsenite accumulation
-        notes: Supports ArsB arsenite efflux permease in arsenic tolerant; UniProtKB:Q8NW09
+        notes: Supports ArsB arsenite efflux permease in arsenic tolerant; UniProtKB:Q6GFT0
           (arsB, Arsenical pump membrane protein) in Staphylococcus aureus (strain
-          MW2) provides a verified protein exemplar.
+          MRSA252) provides a verified protein exemplar.
   - node_id: acr3_pump
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
@@ -193,25 +193,30 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Alternative inorganic arsenite efflux pump exporting As(III).
     protein_examples:
-    - uniprot_id: UniProtKB:Q8NW09
-      protein_label: Arsenical pump membrane protein
-      gene_symbol: arsB
-      taxon_id: NCBITaxon:196620
-      taxon_label: Staphylococcus aureus (strain MW2)
+    - uniprot_id: UniProtKB:Q8NQC8
+      protein_label: Arsenical-resistance protein Acr3
+      gene_symbol: acr3
+      taxon_id: NCBITaxon:196627
+      taxon_label: Corynebacterium glutamicum (strain ATCC 13032 / DSM 20300 / JCM
+        1318 / BCRC 11384 / CCUG 27702 / LMG 3730 / NBRC 12168 / NCIMB 10025 / NRRL
+        B-2784 / 534)
       entry_status: REVIEWED
+      proteome_id: UP000000582
       retrieved_on: '2026-10-17'
-      entry_version: 103
+      entry_version: 122
       sequence_version: 2
-      role: Exemplar protein (arsB, Arsenical pump membrane protein) representing
-        Acr3 arsenite efflux permease in Staphylococcus aureus (strain MW2) for arsenic
-        tolerant.
+      role: Exemplar protein (acr3, Arsenical-resistance protein Acr3) representing
+        Acr3 arsenite efflux permease in Corynebacterium glutamicum (strain ATCC 13032
+        / DSM 20300 / JCM 1318 / BCRC 11384 / CCUG 27702 / LMG 3730 / NBRC 12168 /
+        NCIMB 10025 / NRRL B-2784 / 534) for arsenic tolerant.
       evidence:
-      - reference: DOI:10.3389/fmicb.2018.02473
-        snippet: ArsB is an integral membrane protein able to extrude arsenite from
-          the cell cytoplasm, thus diminishing arsenite accumulation
-        notes: Supports Acr3 arsenite efflux permease in arsenic tolerant; UniProtKB:Q8NW09
-          (arsB, Arsenical pump membrane protein) in Staphylococcus aureus (strain
-          MW2) provides a verified protein exemplar.
+      - reference: PMID:20463976
+        snippet: arsenic resistance determinants in Cupriavidus metallidurans CH34
+        notes: Supports Acr3 arsenite efflux permease in arsenic tolerant; UniProtKB:Q8NQC8
+          (acr3, Arsenical-resistance protein Acr3) in Corynebacterium glutamicum
+          (strain ATCC 13032 / DSM 20300 / JCM 1318 / BCRC 11384 / CCUG 27702 / LMG
+          3730 / NBRC 12168 / NCIMB 10025 / NRRL B-2784 / 534) provides a verified
+          protein exemplar.
   - node_id: arsM_methyltransferase
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
@@ -432,6 +437,6 @@ curation_history:
   changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:Q1LRL1
     version metadata (entry_version=100, sequence_version=1); added UniProtKB:P45946
     (arsB) protein example to node ars_operon; added UniProtKB:Q01256 (arsR) protein
-    example to node arsR_repressor; added UniProtKB:Q8NW09 (arsB) protein example
+    example to node arsR_repressor; added UniProtKB:Q6GFT0 (arsB) protein example
     to node arsB_pump (+2 more).'
   llm_assisted: true

@@ -77,17 +77,17 @@ curation_history:
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph gamma_glutamyltransferase_activity_graph
     with GENE_OR_PROTEIN node gamma_glutamyltransferase_activity_protein_component
-    and UniProtKB:B5BDP8 exemplar.'
+    and UniProtKB:P18956 exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: gamma_glutamyltransferase_activity_graph
   title: Protein component associated with gamma-glutamyltransferase activity
-  description: Literature-backed association between Glutamate 5-kinase (UniProtKB:B5BDP8)
-    and gamma-glutamyltransferase activity.
+  description: Literature-backed association between Glutathione hydrolase proenzyme
+    (UniProtKB:P18956) and gamma-glutamyltransferase activity.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:B5BDP8 in Salmonella
-    paratyphi A (strain AKU_12601)) associated with gamma-glutamyltransferase activity
-    while full multi-step mechanistic curation remains future work.
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P18956 in Escherichia
+    coli (strain K12)) associated with gamma-glutamyltransferase activity while full
+    multi-step mechanistic curation remains future work.
   nodes:
   - node_id: gamma_glutamyltransferase_activity_trait
     label: gamma-glutamyltransferase activity
@@ -98,28 +98,27 @@ causal_graphs:
       glutathione-S-conjugates, or other N-terminal L-gamma-glutamyl substrates through
       a gamma-glutamyl-enzyme intermediate.
   - node_id: gamma_glutamyltransferase_activity_protein_component
-    label: Glutamate 5-kinase
+    label: Glutathione hydrolase proenzyme
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Glutamate 5-kinase) associated with gamma-glutamyltransferase
-      activity.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Glutathione hydrolase proenzyme) associated with
+      gamma-glutamyltransferase activity.
+    grounding: InterPro:IPR051792
     gene_symbols:
-    - proB
+    - ggt
     protein_examples:
-    - uniprot_id: UniProtKB:B5BDP8
-      protein_label: Glutamate 5-kinase
-      gene_symbol: proB
-      taxon_id: NCBITaxon:554290
-      taxon_label: Salmonella paratyphi A (strain AKU_12601)
+    - uniprot_id: UniProtKB:P18956
+      protein_label: Glutathione hydrolase proenzyme
+      gene_symbol: ggt
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
+      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 86
+      entry_version: 194
       sequence_version: 1
-      role: Characteristic protein component (proB, Glutamate 5-kinase) associated
-        with gamma-glutamyltransferase activity in Salmonella paratyphi A (strain
-        AKU_12601).
+      role: Characteristic protein component (ggt, Glutathione hydrolase proenzyme)
+        associated with gamma-glutamyltransferase activity in Escherichia coli (strain
+        K12).
       evidence:
       - reference: https://iubmb.qmul.ac.uk/enzyme/EC3/4/19/13.html
         snippet: The enzyme binds its substrate by forming an initial &gamma;-glutamyl-enzyme
@@ -130,16 +129,16 @@ causal_graphs:
           isopeptide bond, respectively. The enzyme acts on glutathione, glutathione-<i>S</i>-conjugates,
           and, at a lower level, on other substrates with an N-terminal <small>L</small>-&gamma;-glutamyl
           residue.
-        notes: Supports Glutamate 5-kinase in gamma-glutamyltransferase activity;
-          UniProtKB:B5BDP8 (proB, Glutamate 5-kinase) in Salmonella paratyphi A (strain
-          AKU_12601) provides a verified protein exemplar.
+        notes: Supports Glutathione hydrolase proenzyme in gamma-glutamyltransferase
+          activity; UniProtKB:P18956 (ggt, Glutathione hydrolase proenzyme) in Escherichia
+          coli (strain K12) provides a verified protein exemplar.
   edges:
   - subject: gamma_glutamyltransferase_activity_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: gamma_glutamyltransferase_activity_trait
-    description: Glutamate 5-kinase (proB, UniProtKB:B5BDP8) contributes to gamma-glutamyltransferase
-      activity (associated with cysteinylglycine, intermediate, respectively).
+    description: Glutathione hydrolase proenzyme (ggt, UniProtKB:P18956) contributes
+      to gamma-glutamyltransferase activity.
     evidence:
     - reference: https://iubmb.qmul.ac.uk/enzyme/EC3/4/19/13.html
       snippet: The enzyme binds its substrate by forming an initial &gamma;-glutamyl-enzyme
@@ -150,6 +149,6 @@ causal_graphs:
         isopeptide bond, respectively. The enzyme acts on glutathione, glutathione-<i>S</i>-conjugates,
         and, at a lower level, on other substrates with an N-terminal <small>L</small>-&gamma;-glutamyl
         residue.
-      notes: Supports the functional association between Glutamate 5-kinase (UniProtKB:B5BDP8
-        in Salmonella paratyphi A (strain AKU_12601)) and gamma-glutamyltransferase
+      notes: Supports the functional association between Glutathione hydrolase proenzyme
+        (UniProtKB:P18956 in Escherichia coli (strain K12)) and gamma-glutamyltransferase
         activity.

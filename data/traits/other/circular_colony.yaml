@@ -25,6 +25,13 @@ curation_history:
   llm_assisted: true
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed canonical_examples status alongside NONMECHANISTIC protein exemplar
+    graph for circular colony; isolate-level canonical example remains deferred pending
+    explicit strain-level literature.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph circular_colony_graph
     with GENE_OR_PROTEIN node circular_colony_protein_component and UniProtKB:Q01465
@@ -94,7 +101,7 @@ causal_graphs:
     predicate_id: RO:0002326
     object: circular_colony_trait
     description: Cell shape-determining protein MreB (mreB, UniProtKB:Q01465) contributes
-      to circular colony (associated with characteristic, consistency, elevation).
+      to circular colony.
     evidence:
     - reference: https://asm.org/asm/media/protocol-images/colony-morphology-protocol.pdf
       snippet: If well separated from other colonies, a colony will have a characteristic

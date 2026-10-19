@@ -86,39 +86,33 @@ causal_graphs:
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
   - node_id: ig_like_schlafen_system_protein_component
-    label: Transcriptional regulator CooA
+    label: Endoribonuclease ToxN
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Transcriptional regulator CooA) associated with
-      Ig-like Schlafen system.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Endoribonuclease ToxN) associated with Ig-like
+      Schlafen system.
+    grounding: InterPro:IPR025911
     gene_symbols:
-    - cooA
+    - toxN
     protein_examples:
-    - uniprot_id: UniProtKB:Q72AA0
-      protein_label: Transcriptional regulator CooA
-      gene_symbol: cooA
-      taxon_id: NCBITaxon:882
-      taxon_label: Nitratidesulfovibrio vulgaris (strain ATCC 29579 / DSM 644 / CCUG
-        34227 / NCIMB 8303 / VKM B-1760 / Hildenborough) (Desulfovibrio vulgaris)
+    - uniprot_id: UniProtKB:B8X8Z0
+      protein_label: Endoribonuclease ToxN
+      gene_symbol: toxN
+      taxon_id: NCBITaxon:29471
+      taxon_label: Pectobacterium atrosepticum (Erwinia carotovora subsp. atroseptica)
       entry_status: REVIEWED
-      proteome_id: UP000002194
       retrieved_on: '2026-10-17'
-      entry_version: 137
+      entry_version: 47
       sequence_version: 1
-      role: Characteristic protein component (cooA, Transcriptional regulator CooA)
-        associated with Ig-like Schlafen system in Nitratidesulfovibrio vulgaris (strain
-        ATCC 29579 / DSM 644 / CCUG 34227 / NCIMB 8303 / VKM B-1760 / Hildenborough)
-        (Desulfovibrio vulgaris).
+      role: Characteristic protein component (toxN, Endoribonuclease ToxN) associated
+        with Ig-like Schlafen system in Pectobacterium atrosepticum (Erwinia carotovora
+        subsp. atroseptica).
       evidence:
       - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
         snippet: '| Shlafen_Ig-like | 10\.1038/s41564-026-02277-8 | Bacterial Schlafen
           proteins mediate phage defence |'
-        notes: Supports Transcriptional regulator CooA in Ig-like Schlafen system;
-          UniProtKB:Q72AA0 (cooA, Transcriptional regulator CooA) in Nitratidesulfovibrio
-          vulgaris (strain ATCC 29579 / DSM 644 / CCUG 34227 / NCIMB 8303 / VKM B-1760
-          / Hildenborough) (Desulfovibrio vulgaris) provides a verified protein exemplar.
+        notes: Supports Endoribonuclease ToxN in Ig-like Schlafen system; UniProtKB:B8X8Z0
+          (toxN, Endoribonuclease ToxN) in Pectobacterium atrosepticum (Erwinia carotovora
+          subsp. atroseptica) provides a verified protein exemplar.
   edges:
   - subject: ig_like_schlafen_locus
     predicate: contributes to
@@ -195,17 +189,15 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: ig_like_schlafen_system_trait
-    description: Transcriptional regulator CooA (cooA, UniProtKB:Q72AA0) contributes
-      to Ig-like Schlafen system (associated with transcriptional, bacteriophage,
-      translation).
+    description: Endoribonuclease ToxN (toxN, UniProtKB:B8X8Z0) contributes to Ig-like
+      Schlafen system.
     evidence:
     - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
-      snippet: 'PrrC | 10\.1186/1743-422X-7-360 | Post-transcriptional control by
-        bacteriophage T4: mRNA decay and inhibition of translation initiation'
-      notes: Supports the functional association between Transcriptional regulator
-        CooA (UniProtKB:Q72AA0 in Nitratidesulfovibrio vulgaris (strain ATCC 29579
-        / DSM 644 / CCUG 34227 / NCIMB 8303 / VKM B-1760 / Hildenborough) (Desulfovibrio
-        vulgaris)) and Ig-like Schlafen system.
+      snippet: '| Resolvase_KAP_NTPase | 10\.1038/s41564-026-02277-8 | Bacterial Schlafen
+        proteins mediate phage defence |'
+      notes: Supports the functional association between Endoribonuclease ToxN (UniProtKB:B8X8Z0
+        in Pectobacterium atrosepticum (Erwinia carotovora subsp. atroseptica)) and
+        Ig-like Schlafen system.
 discussions:
 - discussion_id: ig-like-schlafen-defensefinder-profile-gap
   prompt: Resolve exact pSlfn5 family boundaries, natural host exemplars, T5-like
@@ -275,5 +267,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    ig_like_schlafen_system_protein_component with UniProtKB:Q72AA0 (cooA) exemplar.'
+    ig_like_schlafen_system_protein_component with UniProtKB:B8X8Z0 (toxN) exemplar.'
   llm_assisted: true

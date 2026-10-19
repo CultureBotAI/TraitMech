@@ -33,7 +33,7 @@ causal_graphs:
   scope_status: NONMECHANISTIC
   scope_notes: This record is a broad environmental or morphological classification
     spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
-    descriptor; contextual protein nodes do not receive token UniProt examples.
+    descriptor; contextual protein nodes include source-backed UniProtKB exemplars.
   nodes:
   - node_id: fusiform_shaped_trait
     label: fusiform shaped
@@ -90,23 +90,23 @@ causal_graphs:
       assembly.
     grounding: InterPro:IPR023690
     protein_examples:
-    - uniprot_id: UniProtKB:Q01465
-      protein_label: Cell shape-determining protein MreB
-      gene_symbol: mreB
-      taxon_id: NCBITaxon:224308
-      taxon_label: Bacillus subtilis (strain 168)
+    - uniprot_id: UniProtKB:P27434
+      protein_label: Cytoskeleton protein RodZ
+      gene_symbol: rodZ
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
-      proteome_id: UP000001570
+      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 148
-      sequence_version: 3
-      role: Exemplar protein (mreB, Cell shape-determining protein MreB) representing
-        RodZ in Bacillus subtilis (strain 168) for fusiform shaped.
+      entry_version: 177
+      sequence_version: 2
+      role: Exemplar protein (rodZ, Cytoskeleton protein RodZ) representing RodZ in
+        Escherichia coli (strain K12) for fusiform shaped.
       evidence:
       - reference: DOI:10.1146/annurev-cellbio-101011-155745
         snippet: MreB-directed peptidoglycan synthesis
-        notes: Supports RodZ in fusiform shaped; UniProtKB:Q01465 (mreB, Cell shape-determining
-          protein MreB) in Bacillus subtilis (strain 168) provides a verified protein
+        notes: Supports RodZ in fusiform shaped; UniProtKB:P27434 (rodZ, Cytoskeleton
+          protein RodZ) in Escherichia coli (strain K12) provides a verified protein
           exemplar.
   - node_id: mreb_localization
     label: MreB polymer localization/assembly
@@ -151,23 +151,23 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Class B PBP in the elongasome coupled to RodA for rod-like wall growth.
     protein_examples:
-    - uniprot_id: UniProtKB:P0ABG7
-      protein_label: Peptidoglycan glycosyltransferase MrdB
-      gene_symbol: mrdB
+    - uniprot_id: UniProtKB:P0AD65
+      protein_label: Peptidoglycan D,D-transpeptidase MrdA
+      gene_symbol: mrdA
       taxon_id: NCBITaxon:83333
       taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
       proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 133
+      entry_version: 145
       sequence_version: 1
-      role: Exemplar protein (mrdB, Peptidoglycan glycosyltransferase MrdB) representing
+      role: Exemplar protein (mrdA, Peptidoglycan D,D-transpeptidase MrdA) representing
         PBP2 in Escherichia coli (strain K12) for fusiform shaped.
       evidence:
       - reference: DOI:10.1146/annurev-cellbio-101011-155745
         snippet: MreB-directed peptidoglycan synthesis
-        notes: Supports PBP2 in fusiform shaped; UniProtKB:P0ABG7 (mrdB, Peptidoglycan
-          glycosyltransferase MrdB) in Escherichia coli (strain K12) provides a verified
+        notes: Supports PBP2 in fusiform shaped; UniProtKB:P0AD65 (mrdA, Peptidoglycan
+          D,D-transpeptidase MrdA) in Escherichia coli (strain K12) provides a verified
           protein exemplar.
   - node_id: roda
     label: RodA
@@ -403,7 +403,7 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q01465 (mreB)
-    protein example to node mreb; added UniProtKB:Q01465 (mreB) protein example to
-    node rodz; added UniProtKB:P84480 (mreC) protein example to node mrec; added UniProtKB:P0ABG7
-    (mrdB) protein example to node pbp2 (+2 more).'
+    protein example to node mreb; added UniProtKB:P27434 (rodZ) protein example to
+    node rodz; added UniProtKB:P84480 (mreC) protein example to node mrec; added UniProtKB:P0AD65
+    (mrdA) protein example to node pbp2 (+2 more).'
   llm_assisted: true

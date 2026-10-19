@@ -28,7 +28,7 @@ causal_graphs:
   scope_status: NONMECHANISTIC
   scope_notes: This record is a broad environmental or morphological classification
     spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
-    descriptor; contextual protein nodes do not receive token UniProt examples.
+    descriptor; contextual protein nodes include source-backed UniProtKB exemplars.
   nodes:
   - node_id: amphitrichous_trait
     label: amphitrichous
@@ -80,26 +80,28 @@ causal_graphs:
       number.
     grounding: InterPro:IPR033875
     protein_examples:
-    - uniprot_id: UniProtKB:O52908
-      protein_label: Flagellar biosynthesis protein FlhF
-      gene_symbol: flhF
-      taxon_id: NCBITaxon:192222
-      taxon_label: Campylobacter jejuni subsp. jejuni serotype O:2 (strain ATCC 700819
-        / NCTC 11168)
+    - uniprot_id: UniProtKB:G3XD64
+      protein_label: Antiactivator FleN
+      gene_symbol: fleN
+      taxon_id: NCBITaxon:208964
+      taxon_label: Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116
+        / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)
       entry_status: REVIEWED
-      proteome_id: UP000000799
+      proteome_id: UP000002438
       retrieved_on: '2026-10-17'
-      entry_version: 144
-      sequence_version: 2
-      role: Exemplar protein (flhF, Flagellar biosynthesis protein FlhF) representing
-        FlhG in Campylobacter jejuni subsp. jejuni serotype O:2 (strain ATCC 700819
-        / NCTC 11168) for amphitrichous.
+      entry_version: 81
+      sequence_version: 1
+      role: Exemplar protein (fleN, Antiactivator FleN) representing FlhG in Pseudomonas
+        aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228
+        / 1C / PRS 101 / PAO1) for amphitrichous.
       evidence:
       - reference: DOI:10.1093/femsre/fuv034
-        snippet: five to six flagellar filaments distributed over the cell body
-        notes: Supports FlhG in amphitrichous; UniProtKB:O52908 (flhF, Flagellar biosynthesis
-          protein FlhF) in Campylobacter jejuni subsp. jejuni serotype O:2 (strain
-          ATCC 700819 / NCTC 11168) provides a verified protein exemplar.
+        snippet: Bacteria differ in number and location of their flagella that appear
+          in regular patterns at the cell surface (flagellation pattern).
+        notes: Supports FlhG in amphitrichous; UniProtKB:G3XD64 (fleN, Antiactivator
+          FleN) in Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116
+          / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1) provides a verified protein
+          exemplar.
   - node_id: flig_protein
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
@@ -338,7 +340,7 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:O52908 (flhF)
-    protein example to node flhf_gtpase; added UniProtKB:O52908 (flhF) protein example
+    protein example to node flhf_gtpase; added UniProtKB:G3XD64 (fleN) protein example
     to node flhg_atpase; added UniProtKB:P0ABZ1 (fliG) protein example to node flig_protein;
     added UniProtKB:Q8FUS3 (fliF) protein example to node flif_msring (+1 more).'
   llm_assisted: true

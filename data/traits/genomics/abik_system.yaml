@@ -99,31 +99,33 @@ causal_graphs:
     grounding: traitmech:000214
     description: Possession of a genome-encoded abortive-infection phage defense system.
   - node_id: abik_system_protein_component
-    label: Retron Mx162 reverse transcriptase
+    label: Abortive phage resistance protein AbiC
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Retron Mx162 reverse transcriptase) associated
+    description: Protein component (Abortive phage resistance protein AbiC) associated
       with AbiK system.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    grounding: InterPro:IPR031709
+    gene_symbols:
+    - abiC
     protein_examples:
-    - uniprot_id: UniProtKB:P23072
-      protein_label: Retron Mx162 reverse transcriptase
-      taxon_id: NCBITaxon:34
-      taxon_label: Myxococcus xanthus
+    - uniprot_id: UniProtKB:Q01457
+      protein_label: Abortive phage resistance protein AbiC
+      gene_symbol: abiC
+      taxon_id: NCBITaxon:1360
+      taxon_label: Lactococcus lactis subsp. lactis (Streptococcus lactis)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      entry_version: 74
+      entry_version: 35
       sequence_version: 1
-      role: Characteristic protein component (P23072, Retron Mx162 reverse transcriptase)
-        associated with AbiK system in Myxococcus xanthus.
+      role: Characteristic protein component (abiC, Abortive phage resistance protein
+        AbiC) associated with AbiK system in Lactococcus lactis subsp. lactis (Streptococcus
+        lactis).
       evidence:
-      - reference: DOI:10.1128/JB.187.11.3721-3730.2005
-        snippet: the antiphage activity depends on the level of expression of the
-          abiK gene and on the presence of a reverse transcriptase (RT) motif in AbiK
-        notes: Supports Retron Mx162 reverse transcriptase in AbiK system; UniProtKB:P23072
-          (P23072, Retron Mx162 reverse transcriptase) in Myxococcus xanthus provides
-          a verified protein exemplar.
+      - reference: DOI:10.1128/aem.63.4.1274-1283.1997
+        snippet: The phage resistance mechanism encoded on pSRQ800 is a temperature-sensitive
+          abortive infection system (Abi)
+        notes: Supports Abortive phage resistance protein AbiC in AbiK system; UniProtKB:Q01457
+          (abiC, Abortive phage resistance protein AbiC) in Lactococcus lactis subsp.
+          lactis (Streptococcus lactis) provides a verified protein exemplar.
   edges:
   - subject: abik_locus
     predicate: contributes to
@@ -199,14 +201,15 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: abik_system_trait
-    description: Retron Mx162 reverse transcriptase (P23072, UniProtKB:P23072) contributes
-      to AbiK system (associated with polymerizes, transferase, properties).
+    description: Abortive phage resistance protein AbiC (abiC, UniProtKB:Q01457) contributes
+      to AbiK system.
     evidence:
     - reference: DOI:10.1093/nar/gkr397
       snippet: AbiK does not exhibit the properties expected for an RT, but polymerizes
         long DNAs of ‘random’ sequence, analogous to a terminal transferase
-      notes: Supports the functional association between Retron Mx162 reverse transcriptase
-        (UniProtKB:P23072 in Myxococcus xanthus) and AbiK system.
+      notes: Supports the functional association between Abortive phage resistance
+        protein AbiC (UniProtKB:Q01457 in Lactococcus lactis subsp. lactis (Streptococcus
+        lactis)) and AbiK system.
 curation_history:
 - timestamp: '2026-09-15T21:30:00Z'
   curator: codex
@@ -220,5 +223,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    abik_system_protein_component with UniProtKB:P23072 (P23072) exemplar.'
+    abik_system_protein_component with UniProtKB:Q01457 (abiC) exemplar.'
   llm_assisted: true

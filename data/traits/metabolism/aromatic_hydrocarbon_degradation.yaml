@@ -27,20 +27,27 @@ curation_history:
   llm_assisted: true
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed canonical_examples status alongside NONMECHANISTIC protein exemplar
+    graph for aromatic hydrocarbon degradation; isolate-level canonical example remains
+    deferred pending explicit strain-level literature.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph aromatic_hydrocarbon_degradation_graph
     with GENE_OR_PROTEIN node aromatic_hydrocarbon_degradation_protein_component and
-    UniProtKB:A4N8V8 exemplar.'
+    UniProtKB:A0AAE7AGQ2 exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: aromatic_hydrocarbon_degradation_graph
   title: Protein component associated with aromatic hydrocarbon degradation
-  description: Literature-backed association between Putative metal ABC transporter
-    substrate-binding protein Hpf (UniProtKB:A4N8V8) and aromatic hydrocarbon degradation.
+  description: Literature-backed association between 4-hydroxyphenylpyruvate dioxygenase
+    (UniProtKB:A0AAE7AGQ2) and aromatic hydrocarbon degradation.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:A4N8V8 in Haemophilus
-    influenzae (strain NTHi 3655)) associated with aromatic hydrocarbon degradation
-    while full multi-step mechanistic curation remains future work.
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:A0AAE7AGQ2 in
+    Aeromonas media) associated with aromatic hydrocarbon degradation while full multi-step
+    mechanistic curation remains future work.
   nodes:
   - node_id: aromatic_hydrocarbon_degradation_trait
     label: aromatic hydrocarbon degradation
@@ -49,46 +56,41 @@ causal_graphs:
     description: A hydrocarbon degradation in which the substrate carries at least
       one aromatic ring.
   - node_id: aromatic_hydrocarbon_degradation_protein_component
-    label: Putative metal ABC transporter substrate-binding protein Hpf
+    label: 4-hydroxyphenylpyruvate dioxygenase
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Putative metal ABC transporter substrate-binding
-      protein Hpf) associated with aromatic hydrocarbon degradation.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (4-hydroxyphenylpyruvate dioxygenase) associated
+      with aromatic hydrocarbon degradation.
+    grounding: GO:0003868
     gene_symbols:
-    - hpf
+    - hppD
     protein_examples:
-    - uniprot_id: UniProtKB:A4N8V8
-      protein_label: Putative metal ABC transporter substrate-binding protein Hpf
-      gene_symbol: hpf
-      taxon_id: NCBITaxon:375177
-      taxon_label: Haemophilus influenzae (strain NTHi 3655)
-      entry_status: REVIEWED
+    - uniprot_id: UniProtKB:A0AAE7AGQ2
+      protein_label: 4-hydroxyphenylpyruvate dioxygenase
+      gene_symbol: hppD
+      taxon_id: NCBITaxon:651
+      taxon_label: Aeromonas media
+      entry_status: UNREVIEWED
+      proteome_id: UP000502657
       retrieved_on: '2026-10-17'
-      entry_version: 60
+      entry_version: 9
       sequence_version: 1
-      role: Characteristic protein component (hpf, Putative metal ABC transporter
-        substrate-binding protein Hpf) associated with aromatic hydrocarbon degradation
-        in Haemophilus influenzae (strain NTHi 3655).
+      role: Characteristic protein component (hppD, 4-hydroxyphenylpyruvate dioxygenase)
+        associated with aromatic hydrocarbon degradation in Aeromonas media.
       evidence:
       - reference: DOI:10.1007/BF00058836
         snippet: benzene, certain arenes, biphenyl and selected fused aromatic hydrocarbons
-        notes: Supports Putative metal ABC transporter substrate-binding protein Hpf
-          in aromatic hydrocarbon degradation; UniProtKB:A4N8V8 (hpf, Putative metal
-          ABC transporter substrate-binding protein Hpf) in Haemophilus influenzae
-          (strain NTHi 3655) provides a verified protein exemplar.
+        notes: Supports 4-hydroxyphenylpyruvate dioxygenase in aromatic hydrocarbon
+          degradation; UniProtKB:A0AAE7AGQ2 (hppD, 4-hydroxyphenylpyruvate dioxygenase)
+          in Aeromonas media provides a verified protein exemplar.
   edges:
   - subject: aromatic_hydrocarbon_degradation_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: aromatic_hydrocarbon_degradation_trait
-    description: Putative metal ABC transporter substrate-binding protein Hpf (hpf,
-      UniProtKB:A4N8V8) contributes to aromatic hydrocarbon degradation (associated
-      with hydrocarbons, aromatic, biphenyl).
+    description: 4-hydroxyphenylpyruvate dioxygenase (hppD, UniProtKB:A0AAE7AGQ2)
+      contributes to aromatic hydrocarbon degradation.
     evidence:
     - reference: DOI:10.1007/BF00058836
       snippet: benzene, certain arenes, biphenyl and selected fused aromatic hydrocarbons
-      notes: Supports the functional association between Putative metal ABC transporter
-        substrate-binding protein Hpf (UniProtKB:A4N8V8 in Haemophilus influenzae
-        (strain NTHi 3655)) and aromatic hydrocarbon degradation.
+      notes: Supports the functional association between 4-hydroxyphenylpyruvate dioxygenase
+        (UniProtKB:A0AAE7AGQ2 in Aeromonas media) and aromatic hydrocarbon degradation.

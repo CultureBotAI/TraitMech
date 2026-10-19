@@ -83,33 +83,33 @@ causal_graphs:
     grounding: traitmech:000218
     description: Possession of a genome-encoded Wadjet anti-plasmid defense locus.
   - node_id: mksbefg_system_protein_component
-    label: Wadjet protein JetC
+    label: Septu protein PtuB
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Wadjet protein JetC) associated with MksBEFG system.
+    description: Protein component (Septu protein PtuB) associated with MksBEFG system.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - jetC
+    - ptuB
     protein_examples:
-    - uniprot_id: UniProtKB:B9IS85
-      protein_label: Wadjet protein JetC
-      gene_symbol: jetC
-      taxon_id: NCBITaxon:361100
-      taxon_label: Bacillus cereus (strain Q1)
+    - uniprot_id: UniProtKB:P0DW42
+      protein_label: Septu protein PtuB
+      gene_symbol: ptuB
+      taxon_id: NCBITaxon:1428
+      taxon_label: Bacillus thuringiensis
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      entry_version: 66
-      sequence_version: 2
-      role: Characteristic protein component (jetC, Wadjet protein JetC) associated
-        with MksBEFG system in Bacillus cereus (strain Q1).
+      entry_version: 12
+      sequence_version: 1
+      role: Characteristic protein component (ptuB, Septu protein PtuB) associated
+        with MksBEFG system in Bacillus thuringiensis.
       evidence:
       - reference: DOI:10.1016/j.molcel.2022.11.015
         snippet: Wadjet systems (JetABCD/MksBEFG/EptABCD) are derivative SMC complexes
           with roles in bacterial immunity against selfish DNA
-        notes: Supports Wadjet protein JetC in MksBEFG system; UniProtKB:B9IS85 (jetC,
-          Wadjet protein JetC) in Bacillus cereus (strain Q1) provides a verified
-          protein exemplar.
+        notes: Supports Septu protein PtuB in MksBEFG system; UniProtKB:P0DW42 (ptuB,
+          Septu protein PtuB) in Bacillus thuringiensis provides a verified protein
+          exemplar.
   edges:
   - subject: mksbefg_locus
     predicate: contributes to
@@ -178,15 +178,15 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: mksbefg_system_trait
-    description: Wadjet protein JetC (jetC, UniProtKB:B9IS85) contributes to MksBEFG
-      system (associated with nonspecific, regardless, molecules).
+    description: Septu protein PtuB (ptuB, UniProtKB:P0DW42) contributes to MksBEFG
+      system.
     evidence:
     - reference: DOI:10.1016/j.molcel.2022.11.015
       snippet: Purified JetABCD complexes cleave circular DNA molecules, regardless
         of the DNA helical topology; cleavage is DNA sequence nonspecific and depends
         on the SMC ATPase
-      notes: Supports the functional association between Wadjet protein JetC (UniProtKB:B9IS85
-        in Bacillus cereus (strain Q1)) and MksBEFG system.
+      notes: Supports the functional association between Septu protein PtuB (UniProtKB:P0DW42
+        in Bacillus thuringiensis) and MksBEFG system.
 discussions:
 - discussion_id: mksbefg-activation-and-substrate-gap
   prompt: Resolve MksBEFG plasmid substrate breadth, MksBEF ATPase-to-MksG coupling,
@@ -239,5 +239,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    mksbefg_system_protein_component with UniProtKB:B9IS85 (jetC) exemplar.'
+    mksbefg_system_protein_component with UniProtKB:P0DW42 (ptuB) exemplar.'
   llm_assisted: true

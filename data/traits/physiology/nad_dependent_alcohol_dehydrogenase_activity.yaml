@@ -137,8 +137,7 @@ causal_graphs:
     predicate_id: RO:0002326
     object: nad_dependent_alcohol_dehydrogenase_activity_trait
     description: Bifunctional aldehyde-alcohol dehydrogenase AdhE (adhE, UniProtKB:P0A9Q7)
-      contributes to NAD-dependent alcohol dehydrogenase activity (associated with
-      secondary, aldehyde, reaction).
+      contributes to NAD-dependent alcohol dehydrogenase activity.
     evidence:
     - reference: https://iubmb.qmul.ac.uk/enzyme/EC1/1/1/1.html
       snippet: <b>Reaction:</b> (1) a primary alcohol + NAD<small><sup>+</sup></small>

@@ -26,21 +26,28 @@ curation_history:
   llm_assisted: true
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed canonical_examples status alongside NONMECHANISTIC protein exemplar
+    graph for dark oxidation of sulfur compounds; isolate-level canonical example
+    remains deferred pending explicit strain-level literature.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph dark_oxidation_of_sulfur_compounds_graph
     with GENE_OR_PROTEIN node dark_oxidation_of_sulfur_compounds_protein_component
-    and UniProtKB:P47908 exemplar.'
+    and UniProtKB:D7A6E5 exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: dark_oxidation_of_sulfur_compounds_graph
   title: Protein component associated with dark oxidation of sulfur compounds
-  description: Literature-backed association between Ribosome hibernation promotion
-    factor (UniProtKB:P47908) and dark oxidation of sulfur compounds.
+  description: Literature-backed association between L-cysteine S-thiosulfotransferase
+    subunit SoxA (UniProtKB:D7A6E5) and dark oxidation of sulfur compounds.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P47908 in Picosynechococcus
-    sp. (strain ATCC 27264 / PCC 7002 / PR-6) (Agmenellum quadruplicatum)) associated
-    with dark oxidation of sulfur compounds while full multi-step mechanistic curation
-    remains future work.
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:D7A6E5 in Ancylobacter
+    novellus (strain ATCC 8093 / DSM 506 / JCM 20403 / CCM 1077 / IAM 12100 / NBRC
+    12443 / NCIMB 10456) (Starkeya novella)) associated with dark oxidation of sulfur
+    compounds while full multi-step mechanistic curation remains future work.
   nodes:
   - node_id: dark_oxidation_of_sulfur_compounds_trait
     label: dark oxidation of sulfur compounds
@@ -50,47 +57,48 @@ causal_graphs:
       sulfur compound as an electron donor for energy conservation independently of
       light.
   - node_id: dark_oxidation_of_sulfur_compounds_protein_component
-    label: Ribosome hibernation promotion factor
+    label: L-cysteine S-thiosulfotransferase subunit SoxA
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Ribosome hibernation promotion factor) associated
-      with dark oxidation of sulfur compounds.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (L-cysteine S-thiosulfotransferase subunit SoxA)
+      associated with dark oxidation of sulfur compounds.
+    grounding: InterPro:IPR009056
     gene_symbols:
-    - hpf
+    - soxA
     protein_examples:
-    - uniprot_id: UniProtKB:P47908
-      protein_label: Ribosome hibernation promotion factor
-      gene_symbol: hpf
-      taxon_id: NCBITaxon:32049
-      taxon_label: Picosynechococcus sp. (strain ATCC 27264 / PCC 7002 / PR-6) (Agmenellum
-        quadruplicatum)
+    - uniprot_id: UniProtKB:D7A6E5
+      protein_label: L-cysteine S-thiosulfotransferase subunit SoxA
+      gene_symbol: soxA
+      taxon_id: NCBITaxon:639283
+      taxon_label: Ancylobacter novellus (strain ATCC 8093 / DSM 506 / JCM 20403 /
+        CCM 1077 / IAM 12100 / NBRC 12443 / NCIMB 10456) (Starkeya novella)
       entry_status: REVIEWED
+      proteome_id: UP000006633
       retrieved_on: '2026-10-17'
-      entry_version: 121
+      entry_version: 75
       sequence_version: 2
-      role: Characteristic protein component (hpf, Ribosome hibernation promotion
-        factor) associated with dark oxidation of sulfur compounds in Picosynechococcus
-        sp. (strain ATCC 27264 / PCC 7002 / PR-6) (Agmenellum quadruplicatum).
+      role: Characteristic protein component (soxA, L-cysteine S-thiosulfotransferase
+        subunit SoxA) associated with dark oxidation of sulfur compounds in Ancylobacter
+        novellus (strain ATCC 8093 / DSM 506 / JCM 20403 / CCM 1077 / IAM 12100 /
+        NBRC 12443 / NCIMB 10456) (Starkeya novella).
       evidence:
       - reference: DOI:10.1111/1462-2920.14543
         snippet: dark sulfide oxidation was coupled to high oxygen consumption rates
-        notes: Supports Ribosome hibernation promotion factor in dark oxidation of
-          sulfur compounds; UniProtKB:P47908 (hpf, Ribosome hibernation promotion
-          factor) in Picosynechococcus sp. (strain ATCC 27264 / PCC 7002 / PR-6) (Agmenellum
-          quadruplicatum) provides a verified protein exemplar.
+        notes: Supports L-cysteine S-thiosulfotransferase subunit SoxA in dark oxidation
+          of sulfur compounds; UniProtKB:D7A6E5 (soxA, L-cysteine S-thiosulfotransferase
+          subunit SoxA) in Ancylobacter novellus (strain ATCC 8093 / DSM 506 / JCM
+          20403 / CCM 1077 / IAM 12100 / NBRC 12443 / NCIMB 10456) (Starkeya novella)
+          provides a verified protein exemplar.
   edges:
   - subject: dark_oxidation_of_sulfur_compounds_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: dark_oxidation_of_sulfur_compounds_trait
-    description: Ribosome hibernation promotion factor (hpf, UniProtKB:P47908) contributes
-      to dark oxidation of sulfur compounds (associated with consumption, oxidation,
-      coupled).
+    description: L-cysteine S-thiosulfotransferase subunit SoxA (soxA, UniProtKB:D7A6E5)
+      contributes to dark oxidation of sulfur compounds.
     evidence:
     - reference: DOI:10.1111/1462-2920.14543
       snippet: dark sulfide oxidation was coupled to high oxygen consumption rates
-      notes: Supports the functional association between Ribosome hibernation promotion
-        factor (UniProtKB:P47908 in Picosynechococcus sp. (strain ATCC 27264 / PCC
-        7002 / PR-6) (Agmenellum quadruplicatum)) and dark oxidation of sulfur compounds.
+      notes: Supports the functional association between L-cysteine S-thiosulfotransferase
+        subunit SoxA (UniProtKB:D7A6E5 in Ancylobacter novellus (strain ATCC 8093
+        / DSM 506 / JCM 20403 / CCM 1077 / IAM 12100 / NBRC 12443 / NCIMB 10456) (Starkeya
+        novella)) and dark oxidation of sulfur compounds.

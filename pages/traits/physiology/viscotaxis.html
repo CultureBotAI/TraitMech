@@ -69,9 +69,9 @@
 
     <div class="card causal-graph-card">
       <h2>Protein component associated with viscotaxis</h2>
-      <p class="meta">Literature-backed association between Monothiol bacilliredoxin BrxC (UniProtKB:P39914) and viscotaxis.</p>
+      <p class="meta">Literature-backed association between Motility protein A (UniProtKB:P09348) and viscotaxis.</p>
 
-      <p class="graph-scope"><code>NONMECHANISTIC</code> · Captures a source-backed protein exemplar (UniProtKB:P39914 in Bacillus subtilis (strain 168)) associated with viscotaxis while full multi-step mechanistic curation remains future work.</p>
+      <p class="graph-scope"><code>NONMECHANISTIC</code> · Captures a source-backed protein exemplar (UniProtKB:P09348 in Escherichia coli (strain K12)) associated with viscotaxis while full multi-step mechanistic curation remains future work.</p>
 
 
       <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
@@ -90,17 +90,17 @@
         <ul>
 
           <li id="pathograph-1-edge-1">
-            <strong>Monothiol bacilliredoxin BrxC</strong>
+            <strong>Motility protein A</strong>
             <span class="edge-predicate">contributes to</span>
             <strong>viscotaxis</strong>
             <code>RO:0002326</code>
-            <p>Monothiol bacilliredoxin BrxC (brxC, UniProtKB:P39914) contributes to viscotaxis (associated with microswimmer, systematic, viscotaxis).</p>
+            <p>Motility protein A (motA, UniProtKB:P09348) contributes to viscotaxis.</p>
             <ul>
 
               <li>
                 <a href="https://doi.org/10.1103/physrevlett.120.208002" rel="nofollow noreferrer"><code>DOI:10.1103/physrevlett.120.208002</code></a>
                 <span class="evidence-snippet">suitable body shapes create viscotaxis based on a systematic asymmetry of viscous forces acting on a microswimmer.</span>
-                <span class="meta">Supports the functional association between Monothiol bacilliredoxin BrxC (UniProtKB:P39914 in Bacillus subtilis (strain 168)) and viscotaxis.</span>
+                <span class="meta">Supports the functional association between Motility protein A (UniProtKB:P09348 in Escherichia coli (strain K12)) and viscotaxis.</span>
               </li>
 
             </ul>
@@ -121,29 +121,29 @@
             <tbody>
 
               <tr>
-                <td>Monothiol bacilliredoxin BrxC</td>
+                <td>Motility protein A</td>
                 <td>
 
-                  <a href="https://www.uniprot.org/uniprotkb/P39914/entry" rel="nofollow noreferrer"><code>UniProtKB:P39914</code></a>
-                  <br>Monothiol bacilliredoxin BrxC <span class="meta">(brxC)</span>
+                  <a href="https://www.uniprot.org/uniprotkb/P09348/entry" rel="nofollow noreferrer"><code>UniProtKB:P09348</code></a>
+                  <br>Motility protein A <span class="meta">(motA)</span>
                 </td>
                 <td>
 
-                  <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=224308" rel="nofollow noreferrer">Bacillus subtilis (strain 168)</a>
-                  <br><code>NCBITaxon:224308</code>
+                  <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=83333" rel="nofollow noreferrer">Escherichia coli (strain K12)</a>
+                  <br><code>NCBITaxon:83333</code>
                 </td>
                 <td>
                   <code>REVIEWED</code><br>
-                  <span class="meta">retrieved 2026-10-17 · entry v128 · sequence v1</span>
+                  <span class="meta">retrieved 2026-10-17 · entry v181 · sequence v1</span>
                 </td>
                 <td>
-                  <p>Characteristic protein component (brxC, Monothiol bacilliredoxin BrxC) associated with viscotaxis in Bacillus subtilis (strain 168).</p>
+                  <p>Characteristic protein component (motA, Motility protein A) associated with viscotaxis in Escherichia coli (strain K12).</p>
                   <ul>
 
                     <li>
                       <a href="https://doi.org/10.1103/physrevlett.120.208002" rel="nofollow noreferrer"><code>DOI:10.1103/physrevlett.120.208002</code></a>
                       <span class="evidence-snippet">suitable body shapes create viscotaxis based on a systematic asymmetry of viscous forces acting on a microswimmer.</span>
-                      <span class="meta">Supports Monothiol bacilliredoxin BrxC in viscotaxis; UniProtKB:P39914 (brxC, Monothiol bacilliredoxin BrxC) in Bacillus subtilis (strain 168) provides a verified protein exemplar.</span>
+                      <span class="meta">Supports Motility protein A in viscotaxis; UniProtKB:P09348 (motA, Motility protein A) in Escherichia coli (strain K12) provides a verified protein exemplar.</span>
                     </li>
 
                   </ul>
@@ -292,8 +292,14 @@
 
         <li>
           <time>2026-10-17T09:00:00Z</time> ·
+          <strong>REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP</strong> · codex
+          <p class="changes">Reviewed canonical_examples status alongside NONMECHANISTIC protein exemplar graph for viscotaxis; isolate-level canonical example remains deferred pending explicit strain-level literature.</p>
+        </li>
+
+        <li>
+          <time>2026-10-17T09:00:00Z</time> ·
           <strong>CURATE_PROTEIN_TAXON_EXAMPLE</strong> · codex
-          <p class="changes">Curated verified UniProtKB protein_examples: added causal graph viscotaxis_graph with GENE_OR_PROTEIN node viscotaxis_protein_component and UniProtKB:P39914 exemplar.</p>
+          <p class="changes">Curated verified UniProtKB protein_examples: added causal graph viscotaxis_graph with GENE_OR_PROTEIN node viscotaxis_protein_component and UniProtKB:P09348 exemplar.</p>
         </li>
 
       </ol>
@@ -672,7 +678,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Literature-backed association between Monothiol bacilliredoxin BrxC (UniProtKB:P39914) and viscotaxis.", "edges": [{"description": "Monothiol bacilliredoxin BrxC (brxC, UniProtKB:P39914) contributes to viscotaxis (associated with microswimmer, systematic, viscotaxis).", "evidence": [{"notes": "Supports the functional association between Monothiol bacilliredoxin BrxC (UniProtKB:P39914 in Bacillus subtilis (strain 168)) and viscotaxis.", "reference": "DOI:10.1103/physrevlett.120.208002", "snippet": "suitable body shapes create viscotaxis based on a systematic asymmetry of viscous forces acting on a microswimmer."}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "viscotaxis_protein_component", "target": "viscotaxis_trait"}], "evidence_rows": [{"description": "Monothiol bacilliredoxin BrxC (brxC, UniProtKB:P39914) contributes to viscotaxis (associated with microswimmer, systematic, viscotaxis).", "edge_id": "edge-1", "evidence": [{"notes": "Supports the functional association between Monothiol bacilliredoxin BrxC (UniProtKB:P39914 in Bacillus subtilis (strain 168)) and viscotaxis.", "reference": "DOI:10.1103/physrevlett.120.208002", "snippet": "suitable body shapes create viscotaxis based on a systematic asymmetry of viscous forces acting on a microswimmer."}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Monothiol bacilliredoxin BrxC", "target": "viscotaxis"}], "graph_id": "viscotaxis_graph", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Protein component (Monothiol bacilliredoxin BrxC) associated with viscotaxis.", "grounding": null, "id": "viscotaxis_protein_component", "is_orphan": false, "label": "Monothiol bacilliredoxin BrxC", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 128, "evidence": [{"notes": "Supports Monothiol bacilliredoxin BrxC in viscotaxis; UniProtKB:P39914 (brxC, Monothiol bacilliredoxin BrxC) in Bacillus subtilis (strain 168) provides a verified protein exemplar.", "reference": "DOI:10.1103/physrevlett.120.208002", "snippet": "suitable body shapes create viscotaxis based on a systematic asymmetry of viscous forces acting on a microswimmer."}], "gene_symbol": "brxC", "protein_label": "Monothiol bacilliredoxin BrxC", "proteome_id": "UP000001570", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (brxC, Monothiol bacilliredoxin BrxC) associated with viscotaxis in Bacillus subtilis (strain 168).", "sequence_version": 1, "taxon_id": "NCBITaxon:224308", "taxon_label": "Bacillus subtilis (strain 168)", "uniprot_id": "UniProtKB:P39914"}], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "A motile phenotype in which active locomotion produces net migration in response to a spatial gradient in surrounding fluid viscosity.", "grounding": "traitmech:000593", "id": "viscotaxis_trait", "is_orphan": false, "label": "viscotaxis", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 128, "evidence": [{"notes": "Supports Monothiol bacilliredoxin BrxC in viscotaxis; UniProtKB:P39914 (brxC, Monothiol bacilliredoxin BrxC) in Bacillus subtilis (strain 168) provides a verified protein exemplar.", "reference": "DOI:10.1103/physrevlett.120.208002", "snippet": "suitable body shapes create viscotaxis based on a systematic asymmetry of viscous forces acting on a microswimmer."}], "gene_symbol": "brxC", "node_id": "viscotaxis_protein_component", "node_label": "Monothiol bacilliredoxin BrxC", "protein_label": "Monothiol bacilliredoxin BrxC", "proteome_id": "UP000001570", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (brxC, Monothiol bacilliredoxin BrxC) associated with viscotaxis in Bacillus subtilis (strain 168).", "sequence_version": 1, "taxon_id": "NCBITaxon:224308", "taxon_label": "Bacillus subtilis (strain 168)", "uniprot_id": "UniProtKB:P39914"}], "scope_notes": "Captures a source-backed protein exemplar (UniProtKB:P39914 in Bacillus subtilis (strain 168)) associated with viscotaxis while full multi-step mechanistic curation remains future work.", "scope_status": "NONMECHANISTIC", "title": "Protein component associated with viscotaxis"}];
+  var graphs = [{"description": "Literature-backed association between Motility protein A (UniProtKB:P09348) and viscotaxis.", "edges": [{"description": "Motility protein A (motA, UniProtKB:P09348) contributes to viscotaxis.", "evidence": [{"notes": "Supports the functional association between Motility protein A (UniProtKB:P09348 in Escherichia coli (strain K12)) and viscotaxis.", "reference": "DOI:10.1103/physrevlett.120.208002", "snippet": "suitable body shapes create viscotaxis based on a systematic asymmetry of viscous forces acting on a microswimmer."}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "viscotaxis_protein_component", "target": "viscotaxis_trait"}], "evidence_rows": [{"description": "Motility protein A (motA, UniProtKB:P09348) contributes to viscotaxis.", "edge_id": "edge-1", "evidence": [{"notes": "Supports the functional association between Motility protein A (UniProtKB:P09348 in Escherichia coli (strain K12)) and viscotaxis.", "reference": "DOI:10.1103/physrevlett.120.208002", "snippet": "suitable body shapes create viscotaxis based on a systematic asymmetry of viscous forces acting on a microswimmer."}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Motility protein A", "target": "viscotaxis"}], "graph_id": "viscotaxis_graph", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Protein component (Motility protein A) associated with viscotaxis.", "grounding": "InterPro:IPR000540", "id": "viscotaxis_protein_component", "is_orphan": false, "label": "Motility protein A", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 181, "evidence": [{"notes": "Supports Motility protein A in viscotaxis; UniProtKB:P09348 (motA, Motility protein A) in Escherichia coli (strain K12) provides a verified protein exemplar.", "reference": "DOI:10.1103/physrevlett.120.208002", "snippet": "suitable body shapes create viscotaxis based on a systematic asymmetry of viscous forces acting on a microswimmer."}], "gene_symbol": "motA", "protein_label": "Motility protein A", "proteome_id": "UP000000625", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (motA, Motility protein A) associated with viscotaxis in Escherichia coli (strain K12).", "sequence_version": 1, "taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli (strain K12)", "uniprot_id": "UniProtKB:P09348"}], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "A motile phenotype in which active locomotion produces net migration in response to a spatial gradient in surrounding fluid viscosity.", "grounding": "traitmech:000593", "id": "viscotaxis_trait", "is_orphan": false, "label": "viscotaxis", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 181, "evidence": [{"notes": "Supports Motility protein A in viscotaxis; UniProtKB:P09348 (motA, Motility protein A) in Escherichia coli (strain K12) provides a verified protein exemplar.", "reference": "DOI:10.1103/physrevlett.120.208002", "snippet": "suitable body shapes create viscotaxis based on a systematic asymmetry of viscous forces acting on a microswimmer."}], "gene_symbol": "motA", "node_id": "viscotaxis_protein_component", "node_label": "Motility protein A", "protein_label": "Motility protein A", "proteome_id": "UP000000625", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (motA, Motility protein A) associated with viscotaxis in Escherichia coli (strain K12).", "sequence_version": 1, "taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli (strain K12)", "uniprot_id": "UniProtKB:P09348"}], "scope_notes": "Captures a source-backed protein exemplar (UniProtKB:P09348 in Escherichia coli (strain K12)) associated with viscotaxis while full multi-step mechanistic curation remains future work.", "scope_status": "NONMECHANISTIC", "title": "Protein component associated with viscotaxis"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });

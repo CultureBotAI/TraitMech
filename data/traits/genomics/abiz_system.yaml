@@ -100,37 +100,34 @@ causal_graphs:
     grounding: traitmech:000214
     description: Possession of a genome-encoded abortive-infection phage defense system.
   - node_id: abiz_system_protein_component
-    label: Lysostaphin resistance protein A
+    label: Abortive phage resistance protein AbiC
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Lysostaphin resistance protein A) associated with
-      AbiZ system.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Abortive phage resistance protein AbiC) associated
+      with AbiZ system.
+    grounding: InterPro:IPR031709
     gene_symbols:
-    - lyrA
+    - abiC
     protein_examples:
-    - uniprot_id: UniProtKB:Q2FVT1
-      protein_label: Lysostaphin resistance protein A
-      gene_symbol: lyrA
-      taxon_id: NCBITaxon:93061
-      taxon_label: Staphylococcus aureus (strain NCTC 8325 / PS 47)
+    - uniprot_id: UniProtKB:Q01457
+      protein_label: Abortive phage resistance protein AbiC
+      gene_symbol: abiC
+      taxon_id: NCBITaxon:1360
+      taxon_label: Lactococcus lactis subsp. lactis (Streptococcus lactis)
       entry_status: REVIEWED
-      proteome_id: UP000008816
       retrieved_on: '2026-10-17'
-      entry_version: 90
+      entry_version: 35
       sequence_version: 1
-      role: Characteristic protein component (lyrA, Lysostaphin resistance protein
-        A) associated with AbiZ system in Staphylococcus aureus (strain NCTC 8325
-        / PS 47).
+      role: Characteristic protein component (abiC, Abortive phage resistance protein
+        AbiC) associated with AbiZ system in Lactococcus lactis subsp. lactis (Streptococcus
+        lactis).
       evidence:
       - reference: DOI:10.1128/JB.00904-06
         snippet: The new phage resistance gene, designated abiZ, encodes an abortive
           infection resistance which results in cell death after infection and appears
           to limit the production of progeny phage
-        notes: Supports Lysostaphin resistance protein A in AbiZ system; UniProtKB:Q2FVT1
-          (lyrA, Lysostaphin resistance protein A) in Staphylococcus aureus (strain
-          NCTC 8325 / PS 47) provides a verified protein exemplar.
+        notes: Supports Abortive phage resistance protein AbiC in AbiZ system; UniProtKB:Q01457
+          (abiC, Abortive phage resistance protein AbiC) in Lactococcus lactis subsp.
+          lactis (Streptococcus lactis) provides a verified protein exemplar.
   edges:
   - subject: abiz_locus
     predicate: contributes to
@@ -194,17 +191,17 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: abiz_system_trait
-    description: Lysostaphin resistance protein A (lyrA, UniProtKB:Q2FVT1) contributes
-      to AbiZ system (associated with investigation, discovered, understood).
+    description: Abortive phage resistance protein AbiC (abiC, UniProtKB:Q01457) contributes
+      to AbiZ system.
     evidence:
     - reference: DOI:10.1371/journal.pone.0298680
       snippet: We focus our investigation on AbiZ, an abortive infection mechanism
         discovered and described by Durmaz et al. [18] as leading to premature cell
         lysis during phage infection, and one of the most understood Abi mechanisms
         on L. lactis
-      notes: Supports the functional association between Lysostaphin resistance protein
-        A (UniProtKB:Q2FVT1 in Staphylococcus aureus (strain NCTC 8325 / PS 47)) and
-        AbiZ system.
+      notes: Supports the functional association between Abortive phage resistance
+        protein AbiC (UniProtKB:Q01457 in Lactococcus lactis subsp. lactis (Streptococcus
+        lactis)) and AbiZ system.
 curation_history:
 - timestamp: '2026-09-15T20:35:00Z'
   curator: codex
@@ -226,5 +223,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    abiz_system_protein_component with UniProtKB:Q2FVT1 (lyrA) exemplar.'
+    abiz_system_protein_component with UniProtKB:Q01457 (abiC) exemplar.'
   llm_assisted: true

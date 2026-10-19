@@ -100,19 +100,26 @@ curation_history:
   llm_assisted: true
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed canonical_examples status alongside NONMECHANISTIC protein exemplar
+    graph for mating-type switching; isolate-level canonical example remains deferred
+    pending explicit strain-level literature.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph mating_type_switching_graph
-    with GENE_OR_PROTEIN node mating_type_switching_protein_component and UniProtKB:Q5AD13
+    with GENE_OR_PROTEIN node mating_type_switching_protein_component and UniProtKB:P09932
     exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: mating_type_switching_graph
   title: Protein component associated with mating-type switching
-  description: Literature-backed association between Filamentous growth regulator
-    15 (UniProtKB:Q5AD13) and mating-type switching.
+  description: Literature-backed association between Homothallic switching endonuclease
+    (UniProtKB:P09932) and mating-type switching.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q5AD13 in Candida
-    albicans (strain SC5314 / ATCC MYA-2876) (Yeast)) associated with mating-type
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P09932 in Saccharomyces
+    cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)) associated with mating-type
     switching while full multi-step mechanistic curation remains future work.
   nodes:
   - node_id: mating_type_switching_trait
@@ -122,47 +129,49 @@ causal_graphs:
     description: A fungal phenotype enabling conversion from one mating type to another,
       either reversibly or irreversibly.
   - node_id: mating_type_switching_protein_component
-    label: Filamentous growth regulator 15
+    label: Homothallic switching endonuclease
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Filamentous growth regulator 15) associated with
-      mating-type switching.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Homothallic switching endonuclease) associated
+      with mating-type switching.
+    grounding: InterPro:IPR003587
     gene_symbols:
-    - FGR15
+    - HO
     protein_examples:
-    - uniprot_id: UniProtKB:Q5AD13
-      protein_label: Filamentous growth regulator 15
-      gene_symbol: FGR15
-      taxon_id: NCBITaxon:237561
-      taxon_label: Candida albicans (strain SC5314 / ATCC MYA-2876) (Yeast)
+    - uniprot_id: UniProtKB:P09932
+      protein_label: Homothallic switching endonuclease
+      gene_symbol: HO
+      taxon_id: NCBITaxon:559292
+      taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's
+        yeast)
       entry_status: REVIEWED
-      proteome_id: UP000000559
+      proteome_id: UP000002311
       retrieved_on: '2026-10-17'
-      entry_version: 100
+      entry_version: 194
       sequence_version: 2
-      role: Characteristic protein component (FGR15, Filamentous growth regulator
-        15) associated with mating-type switching in Candida albicans (strain SC5314
-        / ATCC MYA-2876) (Yeast).
+      role: Characteristic protein component (HO, Homothallic switching endonuclease)
+        associated with mating-type switching in Saccharomyces cerevisiae (strain
+        ATCC 204508 / S288c) (Baker's yeast).
       evidence:
-      - reference: DOI:10.1371/journal.pgen.1006981
-        snippet: a chromosomal looping out-based mechanism underpins irreversible
-          unidirectional mating-type alteration in filamentous fungi.
-        notes: Supports Filamentous growth regulator 15 in mating-type switching;
-          UniProtKB:Q5AD13 (FGR15, Filamentous growth regulator 15) in Candida albicans
-          (strain SC5314 / ATCC MYA-2876) (Yeast) provides a verified protein exemplar.
+      - reference: DOI:10.5598/imafungus.2015.06.01.13
+        snippet: In this mating strategy, an individual of one mating type can undergo
+          a switch to the opposite mating type, either bidirectionally (reversibly)
+          or unidirectionally (irreversibly).
+        notes: Supports Homothallic switching endonuclease in mating-type switching;
+          UniProtKB:P09932 (HO, Homothallic switching endonuclease) in Saccharomyces
+          cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast) provides a verified
+          protein exemplar.
   edges:
   - subject: mating_type_switching_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: mating_type_switching_trait
-    description: Filamentous growth regulator 15 (FGR15, UniProtKB:Q5AD13) contributes
-      to mating-type switching (associated with unidirectional, irreversible, chromosomal).
+    description: Homothallic switching endonuclease (HO, UniProtKB:P09932) contributes
+      to mating-type switching.
     evidence:
-    - reference: DOI:10.1371/journal.pgen.1006981
-      snippet: a chromosomal looping out-based mechanism underpins irreversible unidirectional
-        mating-type alteration in filamentous fungi.
-      notes: Supports the functional association between Filamentous growth regulator
-        15 (UniProtKB:Q5AD13 in Candida albicans (strain SC5314 / ATCC MYA-2876) (Yeast))
-        and mating-type switching.
+    - reference: DOI:10.5598/imafungus.2015.06.01.13
+      snippet: In this mating strategy, an individual of one mating type can undergo
+        a switch to the opposite mating type, either bidirectionally (reversibly)
+        or unidirectionally (irreversibly).
+      notes: Supports the functional association between Homothallic switching endonuclease
+        (UniProtKB:P09932 in Saccharomyces cerevisiae (strain ATCC 204508 / S288c)
+        (Baker's yeast)) and mating-type switching.

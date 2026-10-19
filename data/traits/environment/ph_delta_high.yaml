@@ -126,27 +126,25 @@ causal_graphs:
     description: Proton-translocating ATP synthase contributing to proton extrusion/uptake
       in pH homeostasis.
     protein_examples:
-    - uniprot_id: UniProtKB:Q9RGZ5
-      protein_label: Na(+)/H(+) antiporter subunit A
-      gene_symbol: mrpA
-      taxon_id: NCBITaxon:398511
-      taxon_label: Alkalihalophilus pseudofirmus (strain ATCC BAA-2126 / JCM 17055
-        / OF4) (Bacillus pseudofirmus)
+    - uniprot_id: UniProtKB:P0ABB0
+      protein_label: ATP synthase subunit alpha
+      gene_symbol: atpA
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
-      proteome_id: UP000001544
+      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 115
-      sequence_version: 2
-      role: Exemplar protein (mrpA, Na(+)/H(+) antiporter subunit A) representing
-        F0F1-ATPase in Alkalihalophilus pseudofirmus (strain ATCC BAA-2126 / JCM 17055
-        / OF4) (Bacillus pseudofirmus) for pH delta high.
+      entry_version: 161
+      sequence_version: 1
+      role: Exemplar protein (atpA, ATP synthase subunit alpha) representing F0F1-ATPase
+        in Escherichia coli (strain K12) for pH delta high.
       evidence:
       - reference: DOI:10.1093/femsre/fuad033
         snippet: the F0F1-ATPase (fermentative bacteria), or decarboxylation pathways
           (next paragraph) prevent the internal pH from becoming too low
-        notes: Supports F0F1-ATPase in pH delta high; UniProtKB:Q9RGZ5 (mrpA, Na(+)/H(+)
-          antiporter subunit A) in Alkalihalophilus pseudofirmus (strain ATCC BAA-2126
-          / JCM 17055 / OF4) (Bacillus pseudofirmus) provides a verified protein exemplar.
+        notes: Supports F0F1-ATPase in pH delta high; UniProtKB:P0ABB0 (atpA, ATP
+          synthase subunit alpha) in Escherichia coli (strain K12) provides a verified
+          protein exemplar.
   - node_id: metabolite_decarboxylation
     label: metabolite decarboxylation pathways
     node_type: PATHWAY
@@ -402,6 +400,6 @@ curation_history:
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q93F90 (nhaA)
     protein example to node na_h_antiporters; added UniProtKB:P09152 (narG) protein
-    example to node respiratory_proton_pumps; added UniProtKB:Q9RGZ5 (mrpA) protein
+    example to node respiratory_proton_pumps; added UniProtKB:P0ABB0 (atpA) protein
     example to node f0f1_atpase.'
   llm_assisted: true

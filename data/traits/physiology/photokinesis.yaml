@@ -73,20 +73,28 @@ curation_history:
   llm_assisted: true
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed canonical_examples status alongside NONMECHANISTIC protein exemplar
+    graph for photokinesis; isolate-level canonical example remains deferred pending
+    explicit strain-level literature.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph photokinesis_graph
-    with GENE_OR_PROTEIN node photokinesis_protein_component and UniProtKB:P47908
+    with GENE_OR_PROTEIN node photokinesis_protein_component and UniProtKB:A0A0H3K1H2
     exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: photokinesis_graph
   title: Protein component associated with photokinesis
-  description: Literature-backed association between Ribosome hibernation promotion
-    factor (UniProtKB:P47908) and photokinesis.
+  description: Literature-backed association between Methyl-accepting chemotaxis protein
+    (UniProtKB:A0A0H3K1H2) and photokinesis.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P47908 in Picosynechococcus
-    sp. (strain ATCC 27264 / PCC 7002 / PR-6) (Agmenellum quadruplicatum)) associated
-    with photokinesis while full multi-step mechanistic curation remains future work.
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:A0A0H3K1H2 in
+    Synechococcus sp. (strain ATCC 27144 / PCC 6301 / SAUG 1402/1) (Anacystis nidulans))
+    associated with photokinesis while full multi-step mechanistic curation remains
+    future work.
   nodes:
   - node_id: photokinesis_trait
     label: photokinesis
@@ -96,50 +104,49 @@ causal_graphs:
       in response to illumination intensity, without requiring orientation toward
       or away from the light source.
   - node_id: photokinesis_protein_component
-    label: Ribosome hibernation promotion factor
+    label: Methyl-accepting chemotaxis protein
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Ribosome hibernation promotion factor) associated
+    description: Protein component (Methyl-accepting chemotaxis protein) associated
       with photokinesis.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    grounding: InterPro:IPR003018
     gene_symbols:
-    - hpf
+    - pixJ
     protein_examples:
-    - uniprot_id: UniProtKB:P47908
-      protein_label: Ribosome hibernation promotion factor
-      gene_symbol: hpf
-      taxon_id: NCBITaxon:32049
-      taxon_label: Picosynechococcus sp. (strain ATCC 27264 / PCC 7002 / PR-6) (Agmenellum
-        quadruplicatum)
-      entry_status: REVIEWED
+    - uniprot_id: UniProtKB:A0A0H3K1H2
+      protein_label: Methyl-accepting chemotaxis protein
+      gene_symbol: pixJ
+      taxon_id: NCBITaxon:269084
+      taxon_label: Synechococcus sp. (strain ATCC 27144 / PCC 6301 / SAUG 1402/1)
+        (Anacystis nidulans)
+      entry_status: UNREVIEWED
+      proteome_id: UP000001175
       retrieved_on: '2026-10-17'
-      entry_version: 121
-      sequence_version: 2
-      role: Characteristic protein component (hpf, Ribosome hibernation promotion
-        factor) associated with photokinesis in Picosynechococcus sp. (strain ATCC
-        27264 / PCC 7002 / PR-6) (Agmenellum quadruplicatum).
+      entry_version: 43
+      sequence_version: 1
+      role: Characteristic protein component (pixJ, Methyl-accepting chemotaxis protein)
+        associated with photokinesis in Synechococcus sp. (strain ATCC 27144 / PCC
+        6301 / SAUG 1402/1) (Anacystis nidulans).
       evidence:
       - reference: DOI:10.1016/S0176-1617(00)80045-0
         snippet: Photosynthetically active continuous red light reversibly enhances
           the swimming velocity and increases or decreases the precision of gravitaxis,
           depending on its initial level.
-        notes: Supports Ribosome hibernation promotion factor in photokinesis; UniProtKB:P47908
-          (hpf, Ribosome hibernation promotion factor) in Picosynechococcus sp. (strain
-          ATCC 27264 / PCC 7002 / PR-6) (Agmenellum quadruplicatum) provides a verified
+        notes: Supports Methyl-accepting chemotaxis protein in photokinesis; UniProtKB:A0A0H3K1H2
+          (pixJ, Methyl-accepting chemotaxis protein) in Synechococcus sp. (strain
+          ATCC 27144 / PCC 6301 / SAUG 1402/1) (Anacystis nidulans) provides a verified
           protein exemplar.
   edges:
   - subject: photokinesis_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: photokinesis_trait
-    description: Ribosome hibernation promotion factor (hpf, UniProtKB:P47908) contributes
-      to photokinesis (associated with photosynthetically, continuous, gravitaxis).
+    description: Methyl-accepting chemotaxis protein (pixJ, UniProtKB:A0A0H3K1H2)
+      contributes to photokinesis.
     evidence:
     - reference: DOI:10.1016/S0176-1617(00)80045-0
       snippet: Photosynthetically active continuous red light reversibly enhances
         the swimming velocity and increases or decreases the precision of gravitaxis,
         depending on its initial level.
-      notes: Supports the functional association between Ribosome hibernation promotion
-        factor (UniProtKB:P47908 in Picosynechococcus sp. (strain ATCC 27264 / PCC
-        7002 / PR-6) (Agmenellum quadruplicatum)) and photokinesis.
+      notes: Supports the functional association between Methyl-accepting chemotaxis
+        protein (UniProtKB:A0A0H3K1H2 in Synechococcus sp. (strain ATCC 27144 / PCC
+        6301 / SAUG 1402/1) (Anacystis nidulans)) and photokinesis.

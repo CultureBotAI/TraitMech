@@ -35,7 +35,7 @@ causal_graphs:
   scope_status: NONMECHANISTIC
   scope_notes: This record is a broad environmental or morphological classification
     spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
-    descriptor; contextual protein nodes do not receive token UniProt examples.
+    descriptor; contextual protein nodes include source-backed UniProtKB exemplars.
   nodes:
   - node_id: microaerophilic_trait
     label: microaerophilic
@@ -59,25 +59,24 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Respiratory oxidase enabling oxygen use at low concentration.
     protein_examples:
-    - uniprot_id: UniProtKB:P0ABI8
-      protein_label: Cytochrome bo(3) ubiquinol oxidase subunit 1
-      gene_symbol: cyoB
-      taxon_id: NCBITaxon:83333
-      taxon_label: Escherichia coli (strain K12)
+    - uniprot_id: UniProtKB:P98059
+      protein_label: Cytochrome c oxidase subunit 1
+      gene_symbol: ctaD
+      taxon_id: NCBITaxon:1061
+      taxon_label: Rhodobacter capsulatus (Rhodopseudomonas capsulata)
       entry_status: REVIEWED
-      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 154
+      entry_version: 116
       sequence_version: 1
-      role: Exemplar protein (cyoB, Cytochrome bo(3) ubiquinol oxidase subunit 1)
-        representing high-affinity terminal oxidase in Escherichia coli (strain K12)
-        for microaerophilic.
+      role: Exemplar protein (ctaD, Cytochrome c oxidase subunit 1) representing high-affinity
+        terminal oxidase in Rhodobacter capsulatus (Rhodopseudomonas capsulata) for
+        microaerophilic.
       evidence:
       - reference: PMID:26284041
         snippet: C. jejuni is a microaerophilic, fastidious bacterium
-        notes: Supports high-affinity terminal oxidase in microaerophilic; UniProtKB:P0ABI8
-          (cyoB, Cytochrome bo(3) ubiquinol oxidase subunit 1) in Escherichia coli
-          (strain K12) provides a verified protein exemplar.
+        notes: Supports high-affinity terminal oxidase in microaerophilic; UniProtKB:P98059
+          (ctaD, Cytochrome c oxidase subunit 1) in Rhodobacter capsulatus (Rhodopseudomonas
+          capsulata) provides a verified protein exemplar.
   - node_id: cbb3_oxidase
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
@@ -86,25 +85,23 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: High-affinity cytochrome oxidase associated with microaerobic metabolism.
     protein_examples:
-    - uniprot_id: UniProtKB:P0ABI8
-      protein_label: Cytochrome bo(3) ubiquinol oxidase subunit 1
-      gene_symbol: cyoB
-      taxon_id: NCBITaxon:83333
-      taxon_label: Escherichia coli (strain K12)
+    - uniprot_id: UniProtKB:P98059
+      protein_label: Cytochrome c oxidase subunit 1
+      gene_symbol: ctaD
+      taxon_id: NCBITaxon:1061
+      taxon_label: Rhodobacter capsulatus (Rhodopseudomonas capsulata)
       entry_status: REVIEWED
-      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 154
+      entry_version: 116
       sequence_version: 1
-      role: Exemplar protein (cyoB, Cytochrome bo(3) ubiquinol oxidase subunit 1)
-        representing cytochrome cbb3 oxidase in Escherichia coli (strain K12) for
-        microaerophilic.
+      role: Exemplar protein (ctaD, Cytochrome c oxidase subunit 1) representing cytochrome
+        cbb3 oxidase in Rhodobacter capsulatus (Rhodopseudomonas capsulata) for microaerophilic.
       evidence:
       - reference: PMID:26284041
         snippet: C. jejuni is a microaerophilic, fastidious bacterium
-        notes: Supports cytochrome cbb3 oxidase in microaerophilic; UniProtKB:P0ABI8
-          (cyoB, Cytochrome bo(3) ubiquinol oxidase subunit 1) in Escherichia coli
-          (strain K12) provides a verified protein exemplar.
+        notes: Supports cytochrome cbb3 oxidase in microaerophilic; UniProtKB:P98059
+          (ctaD, Cytochrome c oxidase subunit 1) in Rhodobacter capsulatus (Rhodopseudomonas
+          capsulata) provides a verified protein exemplar.
   - node_id: cytochrome_bd_oxidase
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
@@ -427,9 +424,9 @@ curation_history:
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
-  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P0ABI8 (cyoB)
-    protein example to node high_affinity_terminal_oxidase; added UniProtKB:P0ABI8
-    (cyoB) protein example to node cbb3_oxidase; added UniProtKB:Q2YKD6 (cydX) protein
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P98059 (ctaD)
+    protein example to node high_affinity_terminal_oxidase; added UniProtKB:P98059
+    (ctaD) protein example to node cbb3_oxidase; added UniProtKB:Q2YKD6 (cydX) protein
     example to node cytochrome_bd_oxidase; added UniProtKB:Q59296 (katA) protein example
     to node catalase_kata (+2 more).'
   llm_assisted: true

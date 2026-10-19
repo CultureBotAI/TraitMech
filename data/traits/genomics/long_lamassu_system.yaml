@@ -77,18 +77,18 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph long_lamassu_system_graph
-    with GENE_OR_PROTEIN node long_lamassu_system_protein_component and UniProtKB:P0DW44
+    with GENE_OR_PROTEIN node long_lamassu_system_protein_component and UniProtKB:P0DW42
     exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: long_lamassu_system_graph
   title: Protein component associated with long Lamassu system
-  description: Literature-backed association between Lamassu protein LmuB (UniProtKB:P0DW44)
+  description: Literature-backed association between Septu protein PtuB (UniProtKB:P0DW42)
     and long Lamassu system.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P0DW44 in Bacillus
-    sp. (strain NCIM 5461 / CCTCC AB 2011126 / NIO-1130)) associated with long Lamassu
-    system while full multi-step mechanistic curation remains future work.
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P0DW42 in Bacillus
+    thuringiensis) associated with long Lamassu system while full multi-step mechanistic
+    curation remains future work.
   nodes:
   - node_id: long_lamassu_system_trait
     label: long Lamassu system
@@ -98,48 +98,46 @@ causal_graphs:
       long-LmuB family, characterized by longer coiled-coil regions in its SMC-like
       LmuB sensor than in short Lamassu systems.
   - node_id: long_lamassu_system_protein_component
-    label: Lamassu protein LmuB
+    label: Septu protein PtuB
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Lamassu protein LmuB) associated with long Lamassu
+    description: Protein component (Septu protein PtuB) associated with long Lamassu
       system.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - lmuB
+    - ptuB
     protein_examples:
-    - uniprot_id: UniProtKB:P0DW44
-      protein_label: Lamassu protein LmuB
-      gene_symbol: lmuB
-      taxon_id: NCBITaxon:1761765
-      taxon_label: Bacillus sp. (strain NCIM 5461 / CCTCC AB 2011126 / NIO-1130)
+    - uniprot_id: UniProtKB:P0DW42
+      protein_label: Septu protein PtuB
+      gene_symbol: ptuB
+      taxon_id: NCBITaxon:1428
+      taxon_label: Bacillus thuringiensis
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      entry_version: 8
+      entry_version: 12
       sequence_version: 1
-      role: Characteristic protein component (lmuB, Lamassu protein LmuB) associated
-        with long Lamassu system in Bacillus sp. (strain NCIM 5461 / CCTCC AB 2011126
-        / NIO-1130).
+      role: Characteristic protein component (ptuB, Septu protein PtuB) associated
+        with long Lamassu system in Bacillus thuringiensis.
       evidence:
       - reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC12663957.1/pnas.2519643122.sd01.xlsx
         snippet: ACCA003.0722.00003.C001 ACCA003.0722.00003.C001_02431 Lamassu__LmuB_Long
           ACCA003.0722.00003.C001 ACCA003.0722.00003.C001_02432 Lamassu__LmuC_Clade_VII
           ACCA003.0722.00003.C001 ACCA003.0722.00003.C001_02433 Lamassu__LmuA_Cap4_III
-        notes: Supports Lamassu protein LmuB in long Lamassu system; UniProtKB:P0DW44
-          (lmuB, Lamassu protein LmuB) in Bacillus sp. (strain NCIM 5461 / CCTCC AB
-          2011126 / NIO-1130) provides a verified protein exemplar.
+        notes: Supports Septu protein PtuB in long Lamassu system; UniProtKB:P0DW42
+          (ptuB, Septu protein PtuB) in Bacillus thuringiensis provides a verified
+          protein exemplar.
   edges:
   - subject: long_lamassu_system_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: long_lamassu_system_trait
-    description: Lamassu protein LmuB (lmuB, UniProtKB:P0DW44) contributes to long
-      Lamassu system (associated with acca003, lamassu, clade).
+    description: Septu protein PtuB (ptuB, UniProtKB:P0DW42) contributes to long Lamassu
+      system.
     evidence:
     - reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC12663957.1/pnas.2519643122.sd01.xlsx
       snippet: ACCA003.0722.00003.C001 ACCA003.0722.00003.C001_02431 Lamassu__LmuB_Long
         ACCA003.0722.00003.C001 ACCA003.0722.00003.C001_02432 Lamassu__LmuC_Clade_VII
         ACCA003.0722.00003.C001 ACCA003.0722.00003.C001_02433 Lamassu__LmuA_Cap4_III
-      notes: Supports the functional association between Lamassu protein LmuB (UniProtKB:P0DW44
-        in Bacillus sp. (strain NCIM 5461 / CCTCC AB 2011126 / NIO-1130)) and long
-        Lamassu system.
+      notes: Supports the functional association between Septu protein PtuB (UniProtKB:P0DW42
+        in Bacillus thuringiensis) and long Lamassu system.

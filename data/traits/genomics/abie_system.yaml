@@ -89,33 +89,33 @@ causal_graphs:
     grounding: traitmech:000214
     description: Possession of a genome-encoded abortive-infection phage defense system.
   - node_id: abie_system_protein_component
-    label: Antitoxin HigA
+    label: Abortive phage resistance protein AbiC
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Antitoxin HigA) associated with AbiE system.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Abortive phage resistance protein AbiC) associated
+      with AbiE system.
+    grounding: InterPro:IPR031709
     gene_symbols:
-    - higA
+    - abiC
     protein_examples:
-    - uniprot_id: UniProtKB:Q7A224
-      protein_label: Antitoxin HigA
-      gene_symbol: higA
-      taxon_id: NCBITaxon:585
-      taxon_label: Proteus vulgaris
+    - uniprot_id: UniProtKB:Q01457
+      protein_label: Abortive phage resistance protein AbiC
+      gene_symbol: abiC
+      taxon_id: NCBITaxon:1360
+      taxon_label: Lactococcus lactis subsp. lactis (Streptococcus lactis)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      entry_version: 96
+      entry_version: 35
       sequence_version: 1
-      role: Characteristic protein component (higA, Antitoxin HigA) associated with
-        AbiE system in Proteus vulgaris.
+      role: Characteristic protein component (abiC, Abortive phage resistance protein
+        AbiC) associated with AbiE system in Lactococcus lactis subsp. lactis (Streptococcus
+        lactis).
       evidence:
-      - reference: DOI:10.1128/AEM.61.12.4321-4328.1995
-        snippet: The mechanisms encoded by pPG01 and pCG1 in L. lactis subsp. lactis
-          MG1614 conformed to the criteria defining abortive infection and were designated
-          AbiE and AbiF, respectively
-        notes: Supports Antitoxin HigA in AbiE system; UniProtKB:Q7A224 (higA, Antitoxin
-          HigA) in Proteus vulgaris provides a verified protein exemplar.
+      - reference: DOI:10.1093/nar/gkt1419
+        snippet: We demonstrate that the AbiE phage resistance systems function as
+          novel Type IV TAs and are widespread in bacteria and archaea
+        notes: Supports Abortive phage resistance protein AbiC in AbiE system; UniProtKB:Q01457
+          (abiC, Abortive phage resistance protein AbiC) in Lactococcus lactis subsp.
+          lactis (Streptococcus lactis) provides a verified protein exemplar.
   edges:
   - subject: abie_locus
     predicate: contributes to
@@ -177,15 +177,16 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: abie_system_trait
-    description: Antitoxin HigA (higA, UniProtKB:Q7A224) contributes to AbiE system
-      (associated with replication, altruistic, population).
+    description: Abortive phage resistance protein AbiC (abiC, UniProtKB:Q01457) contributes
+      to AbiE system.
     evidence:
     - reference: DOI:10.1093/nar/gkt1419
       snippet: Bacterial abortive infection (Abi) systems are ‘altruistic’ cell death
         systems that are activated by phage infection and limit viral replication,
         thereby providing protection to the bacterial population
-      notes: Supports the functional association between Antitoxin HigA (UniProtKB:Q7A224
-        in Proteus vulgaris) and AbiE system.
+      notes: Supports the functional association between Abortive phage resistance
+        protein AbiC (UniProtKB:Q01457 in Lactococcus lactis subsp. lactis (Streptococcus
+        lactis)) and AbiE system.
 curation_history:
 - timestamp: '2026-09-15T19:46:30Z'
   curator: codex
@@ -199,5 +200,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    abie_system_protein_component with UniProtKB:Q7A224 (higA) exemplar.'
+    abie_system_protein_component with UniProtKB:Q01457 (abiC) exemplar.'
   llm_assisted: true

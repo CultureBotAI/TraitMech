@@ -68,36 +68,35 @@ causal_graphs:
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
   - node_id: hec_07_system_protein_component
-    label: mRNA interferase RelE
+    label: Endonuclease GajA
     node_type: GENE_OR_PROTEIN
-    description: Protein component (mRNA interferase RelE) associated with HEC-07
-      system.
+    description: Protein component (Endonuclease GajA) associated with HEC-07 system.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - relE
+    - gajA
     protein_examples:
-    - uniprot_id: UniProtKB:P0C078
-      protein_label: mRNA interferase RelE
-      gene_symbol: relE
-      taxon_id: NCBITaxon:623
-      taxon_label: Shigella flexneri
+    - uniprot_id: UniProtKB:P0DW47
+      protein_label: Endonuclease GajA
+      gene_symbol: gajA
+      taxon_id: NCBITaxon:1053212
+      taxon_label: Bacillus cereus (strain HuB5-5)
       entry_status: REVIEWED
-      proteome_id: UP000001006
       retrieved_on: '2026-10-17'
-      entry_version: 117
+      entry_version: 12
       sequence_version: 1
-      role: Characteristic protein component (relE, mRNA interferase RelE) associated
-        with HEC-07 system in Shigella flexneri.
+      role: Characteristic protein component (gajA, Endonuclease GajA) associated
+        with HEC-07 system in Bacillus cereus (strain HuB5-5).
       evidence:
       - reference: DOI:10.1101/2024.01.29.577857
-        snippet: RelE (HEC-07), higher eukaryotes and prokaryotes nucleotide-binding
-          (HEPN) (HEC-08) and Nedd4-BP1/YacP nuclease (NYN) (HEC-09) domain-containing
-          proteins
-        notes: Supports mRNA interferase RelE in HEC-07 system; UniProtKB:P0C078 (relE,
-          mRNA interferase RelE) in Shigella flexneri provides a verified protein
-          exemplar.
+        snippet: The candidate systems encoded diverse protein families, including
+          three ATPases associated with either a topoisomerase-primase (TOPRIM) (HEC-01),
+          nuclease-related (NERD) (HEC-02), or PilT N-terminal (PIN) (HEC-03) domain-containing
+          protein
+        notes: Supports Endonuclease GajA in HEC-07 system; UniProtKB:P0DW47 (gajA,
+          Endonuclease GajA) in Bacillus cereus (strain HuB5-5) provides a verified
+          protein exemplar.
   edges:
   - subject: hec_07_locus
     predicate: contributes to
@@ -141,16 +140,16 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: hec_07_system_trait
-    description: mRNA interferase RelE (relE, UniProtKB:P0C078) contributes to HEC-07
-      system (associated with topoisomerase, containing, candidate).
+    description: Endonuclease GajA (gajA, UniProtKB:P0DW47) contributes to HEC-07
+      system.
     evidence:
     - reference: DOI:10.1101/2024.01.29.577857
       snippet: The candidate systems encoded diverse protein families, including three
         ATPases associated with either a topoisomerase-primase (TOPRIM) (HEC-01),
         nuclease-related (NERD) (HEC-02), or PilT N-terminal (PIN) (HEC-03) domain-containing
         protein
-      notes: Supports the functional association between mRNA interferase RelE (UniProtKB:P0C078
-        in Shigella flexneri) and HEC-07 system.
+      notes: Supports the functional association between Endonuclease GajA (UniProtKB:P0DW47
+        in Bacillus cereus (strain HuB5-5)) and HEC-07 system.
 discussions:
 - discussion_id: hec-07-defensefinder-model-gap
   prompt: Resolve HEC-07 native host breadth, sensitive-phage breadth, RelE-domain
@@ -208,5 +207,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    hec_07_system_protein_component with UniProtKB:P0C078 (relE) exemplar.'
+    hec_07_system_protein_component with UniProtKB:P0DW47 (gajA) exemplar.'
   llm_assisted: true

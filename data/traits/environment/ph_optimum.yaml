@@ -92,37 +92,32 @@ causal_graphs:
     node_type: STATE
     description: Cytoplasmic proton activity (pH) maintained near neutrality.
   - node_id: ph_optimum_protein_component
-    label: Na(+)/H(+) antiporter subunit A
+    label: ATP synthase subunit alpha
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Na(+)/H(+) antiporter subunit A) associated with
-      pH optimum.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (ATP synthase subunit alpha) associated with pH
+      optimum.
+    grounding: InterPro:IPR023366
     gene_symbols:
-    - mrpA
+    - atpA
     protein_examples:
-    - uniprot_id: UniProtKB:Q9RGZ5
-      protein_label: Na(+)/H(+) antiporter subunit A
-      gene_symbol: mrpA
-      taxon_id: NCBITaxon:398511
-      taxon_label: Alkalihalophilus pseudofirmus (strain ATCC BAA-2126 / JCM 17055
-        / OF4) (Bacillus pseudofirmus)
+    - uniprot_id: UniProtKB:P0ABB0
+      protein_label: ATP synthase subunit alpha
+      gene_symbol: atpA
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
-      proteome_id: UP000001544
+      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 115
-      sequence_version: 2
-      role: Characteristic protein component (mrpA, Na(+)/H(+) antiporter subunit
-        A) associated with pH optimum in Alkalihalophilus pseudofirmus (strain ATCC
-        BAA-2126 / JCM 17055 / OF4) (Bacillus pseudofirmus).
+      entry_version: 161
+      sequence_version: 1
+      role: Characteristic protein component (atpA, ATP synthase subunit alpha) associated
+        with pH optimum in Escherichia coli (strain K12).
       evidence:
       - reference: DOI:10.1093/femsre/fuad033
-        snippet: Proton-sensing ion/H+ antiporters acidify the cytoplasm by exporting
-          K+ or Na+ in exchange for protons when the internal pH gets too high
-        notes: Supports Na(+)/H(+) antiporter subunit A in pH optimum; UniProtKB:Q9RGZ5
-          (mrpA, Na(+)/H(+) antiporter subunit A) in Alkalihalophilus pseudofirmus
-          (strain ATCC BAA-2126 / JCM 17055 / OF4) (Bacillus pseudofirmus) provides
+        snippet: stored in the form of a proton motive force, which subsequently can
+          be used by F0F1-ATP synthase to make ATP
+        notes: Supports ATP synthase subunit alpha in pH optimum; UniProtKB:P0ABB0
+          (atpA, ATP synthase subunit alpha) in Escherichia coli (strain K12) provides
           a verified protein exemplar.
   edges:
   - subject: external_ph
@@ -238,15 +233,14 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: ph_optimum_trait
-    description: Na(+)/H(+) antiporter subunit A (mrpA, UniProtKB:Q9RGZ5) contributes
-      to pH optimum (associated with antiporters, cytoplasm, exporting).
+    description: ATP synthase subunit alpha (atpA, UniProtKB:P0ABB0) contributes to
+      pH optimum.
     evidence:
     - reference: DOI:10.1093/femsre/fuad033
-      snippet: Proton-sensing ion/H+ antiporters acidify the cytoplasm by exporting
-        K+ or Na+ in exchange for protons when the internal pH gets too high
-      notes: Supports the functional association between Na(+)/H(+) antiporter subunit
-        A (UniProtKB:Q9RGZ5 in Alkalihalophilus pseudofirmus (strain ATCC BAA-2126
-        / JCM 17055 / OF4) (Bacillus pseudofirmus)) and pH optimum.
+      snippet: stored in the form of a proton motive force, which subsequently can
+        be used by F0F1-ATP synthase to make ATP
+      notes: Supports the functional association between ATP synthase subunit alpha
+        (UniProtKB:P0ABB0 in Escherichia coli (strain K12)) and pH optimum.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.814691+00:00'
   curator: seed_from_metpo
@@ -355,5 +349,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    ph_optimum_protein_component with UniProtKB:Q9RGZ5 (mrpA) exemplar.'
+    ph_optimum_protein_component with UniProtKB:P0ABB0 (atpA) exemplar.'
   llm_assisted: true

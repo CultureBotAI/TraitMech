@@ -104,39 +104,34 @@ causal_graphs:
     description: Possession of a genome-encoded phosphorothioate-based antiviral defense
       system.
   - node_id: dndcdea_pbeabcd_system_protein_component
-    label: tRNA modification GTPase MnmE
+    label: DNA sulfur modification protein DndC
     node_type: GENE_OR_PROTEIN
-    description: Protein component (tRNA modification GTPase MnmE) associated with
-      DndCDEA-PbeABCD system.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (DNA sulfur modification protein DndC) associated
+      with DndCDEA-PbeABCD system.
+    grounding: InterPro:IPR002500
     gene_symbols:
-    - mnmE
+    - dndC
     protein_examples:
-    - uniprot_id: UniProtKB:Q49UI4
-      protein_label: tRNA modification GTPase MnmE
-      gene_symbol: mnmE
-      taxon_id: NCBITaxon:342451
-      taxon_label: Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
-        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
-      entry_status: REVIEWED
-      proteome_id: UP000006371
+    - uniprot_id: UniProtKB:A0A2K8SFY8
+      protein_label: DNA sulfur modification protein DndC
+      gene_symbol: dndC
+      taxon_id: NCBITaxon:1336749
+      taxon_label: Spiroplasma floricola 23-6
+      entry_status: UNREVIEWED
+      proteome_id: UP000231823
       retrieved_on: '2026-10-17'
-      entry_version: 122
-      sequence_version: 2
-      role: Characteristic protein component (mnmE, tRNA modification GTPase MnmE)
-        associated with DndCDEA-PbeABCD system in Staphylococcus saprophyticus subsp.
-        saprophyticus (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41).
+      entry_version: 20
+      sequence_version: 1
+      role: Characteristic protein component (dndC, DNA sulfur modification protein
+        DndC) associated with DndCDEA-PbeABCD system in Spiroplasma floricola 23-6.
       evidence:
       - reference: DOI:10.1038/s41467-019-09390-9
         snippet: a new archaeal defence system that involves DndCDEA-specific DNA
           phosphorothioate (PT) modification and the PbeABCD-mediated halt of virus
           propagation via inhibition of DNA replication
-        notes: Supports tRNA modification GTPase MnmE in DndCDEA-PbeABCD system; UniProtKB:Q49UI4
-          (mnmE, tRNA modification GTPase MnmE) in Staphylococcus saprophyticus subsp.
-          saprophyticus (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 /
-          S-41) provides a verified protein exemplar.
+        notes: Supports DNA sulfur modification protein DndC in DndCDEA-PbeABCD system;
+          UniProtKB:A0A2K8SFY8 (dndC, DNA sulfur modification protein DndC) in Spiroplasma
+          floricola 23-6 provides a verified protein exemplar.
   edges:
   - subject: dndcdea_pbeabcd_locus
     predicate: contributes to
@@ -208,16 +203,15 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: dndcdea_pbeabcd_system_trait
-    description: tRNA modification GTPase MnmE (mnmE, UniProtKB:Q49UI4) contributes
-      to DndCDEA-PbeABCD system (associated with phosphorothioate, modification, propagation).
+    description: DNA sulfur modification protein DndC (dndC, UniProtKB:A0A2K8SFY8)
+      contributes to DndCDEA-PbeABCD system.
     evidence:
     - reference: DOI:10.1038/s41467-019-09390-9
       snippet: a new archaeal defence system that involves DndCDEA-specific DNA phosphorothioate
         (PT) modification and the PbeABCD-mediated halt of virus propagation via inhibition
         of DNA replication
-      notes: Supports the functional association between tRNA modification GTPase
-        MnmE (UniProtKB:Q49UI4 in Staphylococcus saprophyticus subsp. saprophyticus
-        (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)) and DndCDEA-PbeABCD
+      notes: Supports the functional association between DNA sulfur modification protein
+        DndC (UniProtKB:A0A2K8SFY8 in Spiroplasma floricola 23-6) and DndCDEA-PbeABCD
         system.
 curation_history:
 - timestamp: '2026-09-15T17:36:16Z'
@@ -232,5 +226,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    dndcdea_pbeabcd_system_protein_component with UniProtKB:Q49UI4 (mnmE) exemplar.'
+    dndcdea_pbeabcd_system_protein_component with UniProtKB:A0A2K8SFY8 (dndC) exemplar.'
   llm_assisted: true

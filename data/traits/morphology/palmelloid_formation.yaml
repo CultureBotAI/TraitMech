@@ -117,19 +117,18 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph palmelloid_formation_graph
-    with GENE_OR_PROTEIN node palmelloid_formation_protein_component and UniProtKB:Q31IK3
+    with GENE_OR_PROTEIN node palmelloid_formation_protein_component and UniProtKB:P05434
     exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: palmelloid_formation_graph
   title: Protein component associated with palmelloid formation
-  description: Literature-backed association between Ribulose bisphosphate carboxylase
-    (UniProtKB:Q31IK3) and palmelloid formation.
+  description: Literature-backed association between Caltractin (UniProtKB:P05434)
+    and palmelloid formation.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q31IK3 in Hydrogenovibrio
-    crunogenus (strain DSM 25203 / XCL-2) (Thiomicrospira crunogena)) associated with
-    palmelloid formation while full multi-step mechanistic curation remains future
-    work.
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P05434 in Chlamydomonas
+    reinhardtii (Chlamydomonas smithii)) associated with palmelloid formation while
+    full multi-step mechanistic curation remains future work.
   nodes:
   - node_id: palmelloid_formation_trait
     label: palmelloid formation
@@ -139,48 +138,37 @@ causal_graphs:
       groups by retention within a mother-cell wall or by adhesion through extracellular
       gelatinous material.
   - node_id: palmelloid_formation_protein_component
-    label: Ribulose bisphosphate carboxylase
+    label: Caltractin
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Ribulose bisphosphate carboxylase) associated
-      with palmelloid formation.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
-    gene_symbols:
-    - cbbM
+    description: Protein component (Caltractin) associated with palmelloid formation.
+    grounding: InterPro:IPR050230
     protein_examples:
-    - uniprot_id: UniProtKB:Q31IK3
-      protein_label: Ribulose bisphosphate carboxylase
-      gene_symbol: cbbM
-      taxon_id: NCBITaxon:317025
-      taxon_label: Hydrogenovibrio crunogenus (strain DSM 25203 / XCL-2) (Thiomicrospira
-        crunogena)
+    - uniprot_id: UniProtKB:P05434
+      protein_label: Caltractin
+      taxon_id: NCBITaxon:3055
+      taxon_label: Chlamydomonas reinhardtii (Chlamydomonas smithii)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      entry_version: 111
+      entry_version: 163
       sequence_version: 1
-      role: Characteristic protein component (cbbM, Ribulose bisphosphate carboxylase)
-        associated with palmelloid formation in Hydrogenovibrio crunogenus (strain
-        DSM 25203 / XCL-2) (Thiomicrospira crunogena).
+      role: Characteristic protein component (P05434, Caltractin) associated with
+        palmelloid formation in Chlamydomonas reinhardtii (Chlamydomonas smithii).
       evidence:
       - reference: DOI:10.3390/ijms24098374
         snippet: the cells continue to divide within the mother cell, i.e., they are
           unable to separate and remain encased in a single membrane.
-        notes: Supports Ribulose bisphosphate carboxylase in palmelloid formation;
-          UniProtKB:Q31IK3 (cbbM, Ribulose bisphosphate carboxylase) in Hydrogenovibrio
-          crunogenus (strain DSM 25203 / XCL-2) (Thiomicrospira crunogena) provides
+        notes: Supports Caltractin in palmelloid formation; UniProtKB:P05434 (P05434,
+          Caltractin) in Chlamydomonas reinhardtii (Chlamydomonas smithii) provides
           a verified protein exemplar.
   edges:
   - subject: palmelloid_formation_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: palmelloid_formation_trait
-    description: Ribulose bisphosphate carboxylase (cbbM, UniProtKB:Q31IK3) contributes
-      to palmelloid formation (associated with continue, membrane, separate).
+    description: Caltractin (P05434, UniProtKB:P05434) contributes to palmelloid formation.
     evidence:
     - reference: DOI:10.3390/ijms24098374
       snippet: the cells continue to divide within the mother cell, i.e., they are
         unable to separate and remain encased in a single membrane.
-      notes: Supports the functional association between Ribulose bisphosphate carboxylase
-        (UniProtKB:Q31IK3 in Hydrogenovibrio crunogenus (strain DSM 25203 / XCL-2)
-        (Thiomicrospira crunogena)) and palmelloid formation.
+      notes: Supports the functional association between Caltractin (UniProtKB:P05434
+        in Chlamydomonas reinhardtii (Chlamydomonas smithii)) and palmelloid formation.

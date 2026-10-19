@@ -40,19 +40,26 @@ curation_history:
   llm_assisted: true
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed canonical_examples status alongside NONMECHANISTIC protein exemplar
+    graph for lipolysis; isolate-level canonical example remains deferred pending
+    explicit strain-level literature.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph lipolysis_graph
-    with GENE_OR_PROTEIN node lipolysis_protein_component and UniProtKB:B5BFH6 exemplar.'
+    with GENE_OR_PROTEIN node lipolysis_protein_component and UniProtKB:P0DUB8 exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: lipolysis_graph
   title: Protein component associated with lipolysis
-  description: 'Literature-backed association between Bifunctional protein Aas [Includes:
-    2-acylglycerophosphoethanolamine acyltransferase (UniProtKB:B5BFH6) and lipolysis.'
+  description: Literature-backed association between Triacylglycerol lipase (UniProtKB:P0DUB8)
+    and lipolysis.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:B5BFH6 in Salmonella
-    paratyphi A (strain AKU_12601)) associated with lipolysis while full multi-step
-    mechanistic curation remains future work.
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P0DUB8 in Burkholderia
+    plantarii) associated with lipolysis while full multi-step mechanistic curation
+    remains future work.
   nodes:
   - node_id: lipolysis_trait
     label: lipolysis
@@ -61,49 +68,40 @@ causal_graphs:
     description: A metabolism in which a microorganism hydrolyzes triacylglycerols
       into fatty acids and glycerol through lipase-catalyzed ester cleavage.
   - node_id: lipolysis_protein_component
-    label: 'Bifunctional protein Aas [Includes: 2-acylglycerophosphoethanolamine acyltransferase'
+    label: Triacylglycerol lipase
     node_type: GENE_OR_PROTEIN
-    description: 'Protein component (Bifunctional protein Aas [Includes: 2-acylglycerophosphoethanolamine
-      acyltransferase) associated with lipolysis.'
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Triacylglycerol lipase) associated with lipolysis.
+    grounding: InterPro:IPR000073
     gene_symbols:
-    - aas
+    - lip
     protein_examples:
-    - uniprot_id: UniProtKB:B5BFH6
-      protein_label: 'Bifunctional protein Aas [Includes: 2-acylglycerophosphoethanolamine
-        acyltransferase'
-      gene_symbol: aas
-      taxon_id: NCBITaxon:554290
-      taxon_label: Salmonella paratyphi A (strain AKU_12601)
+    - uniprot_id: UniProtKB:P0DUB8
+      protein_label: Triacylglycerol lipase
+      gene_symbol: lip
+      taxon_id: NCBITaxon:41899
+      taxon_label: Burkholderia plantarii
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      entry_version: 79
+      entry_version: 17
       sequence_version: 1
-      role: 'Characteristic protein component (aas, Bifunctional protein Aas [Includes:
-        2-acylglycerophosphoethanolamine acyltransferase) associated with lipolysis
-        in Salmonella paratyphi A (strain AKU_12601).'
+      role: Characteristic protein component (lip, Triacylglycerol lipase) associated
+        with lipolysis in Burkholderia plantarii.
       evidence:
       - reference: DOI:10.1007/s00253-004-1568-8
         snippet: Lipases, triacylglycerol hydrolases, are an important group of biotechnologically
           relevant enzymes
-        notes: 'Supports Bifunctional protein Aas [Includes: 2-acylglycerophosphoethanolamine
-          acyltransferase in lipolysis; UniProtKB:B5BFH6 (aas, Bifunctional protein
-          Aas [Includes: 2-acylglycerophosphoethanolamine acyltransferase) in Salmonella
-          paratyphi A (strain AKU_12601) provides a verified protein exemplar.'
+        notes: Supports Triacylglycerol lipase in lipolysis; UniProtKB:P0DUB8 (lip,
+          Triacylglycerol lipase) in Burkholderia plantarii provides a verified protein
+          exemplar.
   edges:
   - subject: lipolysis_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: lipolysis_trait
-    description: 'Bifunctional protein Aas [Includes: 2-acylglycerophosphoethanolamine
-      acyltransferase (aas, UniProtKB:B5BFH6) contributes to lipolysis (associated
-      with biotechnologically, triacylglycerol, hydrolases).'
+    description: Triacylglycerol lipase (lip, UniProtKB:P0DUB8) contributes to lipolysis.
     evidence:
     - reference: DOI:10.1007/s00253-004-1568-8
       snippet: Lipases, triacylglycerol hydrolases, are an important group of biotechnologically
         relevant enzymes
-      notes: 'Supports the functional association between Bifunctional protein Aas
-        [Includes: 2-acylglycerophosphoethanolamine acyltransferase (UniProtKB:B5BFH6
-        in Salmonella paratyphi A (strain AKU_12601)) and lipolysis.'
+      notes: Supports the functional association between Triacylglycerol lipase (UniProtKB:P0DUB8
+        in Burkholderia plantarii) and lipolysis.

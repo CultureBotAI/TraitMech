@@ -119,20 +119,28 @@ curation_history:
   llm_assisted: true
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed canonical_examples status alongside NONMECHANISTIC protein exemplar
+    graph for fungal nematode endoparasitism; isolate-level canonical example remains
+    deferred pending explicit strain-level literature.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph fungal_nematode_endoparasitism_graph
     with GENE_OR_PROTEIN node fungal_nematode_endoparasitism_protein_component and
-    UniProtKB:Q7A225 exemplar.'
+    UniProtKB:P08640 exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: fungal_nematode_endoparasitism_graph
   title: Protein component associated with fungal nematode endoparasitism
-  description: Literature-backed association between Endoribonuclease HigB (UniProtKB:Q7A225)
+  description: Literature-backed association between Flocculation protein FLO11 (UniProtKB:P08640)
     and fungal nematode endoparasitism.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q7A225 in Proteus
-    vulgaris) associated with fungal nematode endoparasitism while full multi-step
-    mechanistic curation remains future work.
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P08640 in Saccharomyces
+    cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)) associated with fungal
+    nematode endoparasitism while full multi-step mechanistic curation remains future
+    work.
   nodes:
   - node_id: fungal_nematode_endoparasitism_trait
     label: fungal nematode endoparasitism
@@ -142,44 +150,47 @@ causal_graphs:
       to or ingested by a vermiform nematode to initiate infection and then grows
       inside the host.
   - node_id: fungal_nematode_endoparasitism_protein_component
-    label: Endoribonuclease HigB
+    label: Flocculation protein FLO11
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Endoribonuclease HigB) associated with fungal
+    description: Protein component (Flocculation protein FLO11) associated with fungal
       nematode endoparasitism.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    grounding: InterPro:IPR018789
     gene_symbols:
-    - higB
+    - FLO11
     protein_examples:
-    - uniprot_id: UniProtKB:Q7A225
-      protein_label: Endoribonuclease HigB
-      gene_symbol: higB
-      taxon_id: NCBITaxon:585
-      taxon_label: Proteus vulgaris
+    - uniprot_id: UniProtKB:P08640
+      protein_label: Flocculation protein FLO11
+      gene_symbol: FLO11
+      taxon_id: NCBITaxon:559292
+      taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's
+        yeast)
       entry_status: REVIEWED
+      proteome_id: UP000002311
       retrieved_on: '2026-10-17'
-      entry_version: 69
-      sequence_version: 1
-      role: Characteristic protein component (higB, Endoribonuclease HigB) associated
-        with fungal nematode endoparasitism in Proteus vulgaris.
+      entry_version: 187
+      sequence_version: 2
+      role: Characteristic protein component (FLO11, Flocculation protein FLO11) associated
+        with fungal nematode endoparasitism in Saccharomyces cerevisiae (strain ATCC
+        204508 / S288c) (Baker's yeast).
       evidence:
       - reference: DOI:10.3390/jof10010068
         snippet: Then, the fungal hyphae penetrate into the nematode body cavity and
           grow in the nematode body
-        notes: Supports Endoribonuclease HigB in fungal nematode endoparasitism; UniProtKB:Q7A225
-          (higB, Endoribonuclease HigB) in Proteus vulgaris provides a verified protein
+        notes: Supports Flocculation protein FLO11 in fungal nematode endoparasitism;
+          UniProtKB:P08640 (FLO11, Flocculation protein FLO11) in Saccharomyces cerevisiae
+          (strain ATCC 204508 / S288c) (Baker's yeast) provides a verified protein
           exemplar.
   edges:
   - subject: fungal_nematode_endoparasitism_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: fungal_nematode_endoparasitism_trait
-    description: Endoribonuclease HigB (higB, UniProtKB:Q7A225) contributes to fungal
-      nematode endoparasitism (associated with penetrate, nematode, cavity).
+    description: Flocculation protein FLO11 (FLO11, UniProtKB:P08640) contributes
+      to fungal nematode endoparasitism.
     evidence:
     - reference: DOI:10.3390/jof10010068
       snippet: Then, the fungal hyphae penetrate into the nematode body cavity and
         grow in the nematode body
-      notes: Supports the functional association between Endoribonuclease HigB (UniProtKB:Q7A225
-        in Proteus vulgaris) and fungal nematode endoparasitism.
+      notes: Supports the functional association between Flocculation protein FLO11
+        (UniProtKB:P08640 in Saccharomyces cerevisiae (strain ATCC 204508 / S288c)
+        (Baker's yeast)) and fungal nematode endoparasitism.

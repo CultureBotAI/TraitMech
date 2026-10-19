@@ -71,34 +71,34 @@ causal_graphs:
     description: Peptidoglycan-based cell wall layer that does not adopt the polygonal
       cell shape.
   - node_id: triangular_shaped_protein_component
-    label: Cell shape-determining protein MreB
+    label: Tubulin-like protein CetZ
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Cell shape-determining protein MreB) associated
-      with triangular shaped.
+    description: Protein component (Tubulin-like protein CetZ) associated with triangular
+      shaped.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - mreB
+    - cetZ
     protein_examples:
-    - uniprot_id: UniProtKB:Q01465
-      protein_label: Cell shape-determining protein MreB
-      gene_symbol: mreB
-      taxon_id: NCBITaxon:224308
-      taxon_label: Bacillus subtilis (strain 168)
+    - uniprot_id: UniProtKB:Q9V0H5
+      protein_label: Tubulin-like protein CetZ
+      gene_symbol: cetZ
+      taxon_id: NCBITaxon:272844
+      taxon_label: Pyrococcus abyssi (strain GE5 / Orsay)
       entry_status: REVIEWED
-      proteome_id: UP000001570
+      proteome_id: UP000000810
       retrieved_on: '2026-10-17'
-      entry_version: 148
-      sequence_version: 3
-      role: Characteristic protein component (mreB, Cell shape-determining protein
-        MreB) associated with triangular shaped in Bacillus subtilis (strain 168).
+      entry_version: 126
+      sequence_version: 1
+      role: Characteristic protein component (cetZ, Tubulin-like protein CetZ) associated
+        with triangular shaped in Pyrococcus abyssi (strain GE5 / Orsay).
       evidence:
       - reference: DOI:10.1146/annurev-cellbio-101011-155745
         snippet: MreB-directed peptidoglycan synthesis
-        notes: Supports Cell shape-determining protein MreB in triangular shaped;
-          UniProtKB:Q01465 (mreB, Cell shape-determining protein MreB) in Bacillus
-          subtilis (strain 168) provides a verified protein exemplar.
+        notes: Supports Tubulin-like protein CetZ in triangular shaped; UniProtKB:Q9V0H5
+          (cetZ, Tubulin-like protein CetZ) in Pyrococcus abyssi (strain GE5 / Orsay)
+          provides a verified protein exemplar.
   edges:
   - subject: planar_envelope_growth
     predicate: enables
@@ -168,13 +168,14 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: triangular_shaped_trait
-    description: Cell shape-determining protein MreB (mreB, UniProtKB:Q01465) contributes
-      to triangular shaped (associated with peptidoglycan, directed, mreb).
+    description: Tubulin-like protein CetZ (cetZ, UniProtKB:Q9V0H5) contributes to
+      triangular shaped.
     evidence:
     - reference: DOI:10.1146/annurev-cellbio-101011-155745
       snippet: MreB-directed peptidoglycan synthesis
-      notes: Supports the functional association between Cell shape-determining protein
-        MreB (UniProtKB:Q01465 in Bacillus subtilis (strain 168)) and triangular shaped.
+      notes: Supports the functional association between Tubulin-like protein CetZ
+        (UniProtKB:Q9V0H5 in Pyrococcus abyssi (strain GE5 / Orsay)) and triangular
+        shaped.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.901416+00:00'
   curator: seed_from_metpo
@@ -235,5 +236,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    triangular_shaped_protein_component with UniProtKB:Q01465 (mreB) exemplar.'
+    triangular_shaped_protein_component with UniProtKB:Q9V0H5 (cetZ) exemplar.'
   llm_assisted: true

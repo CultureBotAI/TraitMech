@@ -91,37 +91,36 @@ causal_graphs:
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
   - node_id: rst_duf4238_system_protein_component
-    label: Phage infection protein
+    label: Endonuclease GajA
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Phage infection protein) associated with Rst_DUF4238
+    description: Protein component (Endonuclease GajA) associated with Rst_DUF4238
       system.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - pip
+    - gajA
     protein_examples:
-    - uniprot_id: UniProtKB:P49022
-      protein_label: Phage infection protein
-      gene_symbol: pip
-      taxon_id: NCBITaxon:1360
-      taxon_label: Lactococcus lactis subsp. lactis (Streptococcus lactis)
+    - uniprot_id: UniProtKB:P0DW47
+      protein_label: Endonuclease GajA
+      gene_symbol: gajA
+      taxon_id: NCBITaxon:1053212
+      taxon_label: Bacillus cereus (strain HuB5-5)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      entry_version: 85
+      entry_version: 12
       sequence_version: 1
-      role: Characteristic protein component (pip, Phage infection protein) associated
-        with Rst_DUF4238 system in Lactococcus lactis subsp. lactis (Streptococcus
-        lactis).
+      role: Characteristic protein component (gajA, Endonuclease GajA) associated
+        with Rst_DUF4238 system in Bacillus cereus (strain HuB5-5).
       evidence:
       - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/rst_duf4238.md
         snippet: Rst_DUF4238 is a single gene system found in a screen of phage and
           phage-satellites antiviral hotspots :ref{doi=10.1016/j.chom.2022.02.018}.
           It was shown to provide *E.coli* with a strong resistance against phage
           T7.
-        notes: Supports Phage infection protein in Rst_DUF4238 system; UniProtKB:P49022
-          (pip, Phage infection protein) in Lactococcus lactis subsp. lactis (Streptococcus
-          lactis) provides a verified protein exemplar.
+        notes: Supports Endonuclease GajA in Rst_DUF4238 system; UniProtKB:P0DW47
+          (gajA, Endonuclease GajA) in Bacillus cereus (strain HuB5-5) provides a
+          verified protein exemplar.
   edges:
   - subject: rst_duf4238_locus
     predicate: contributes to
@@ -186,16 +185,13 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: rst_duf4238_system_trait
-    description: Phage infection protein (pip, UniProtKB:P49022) contributes to Rst_DUF4238
-      system (associated with completion, preventing, infection).
+    description: Endonuclease GajA (gajA, UniProtKB:P0DW47) contributes to Rst_DUF4238
+      system.
     evidence:
-    - reference: DOI:10.1016/j.chom.2022.02.018
-      snippet: Therefore, ariAB seem to halt growth in infected cells, preventing
-        the completion of the phage cycle, a typical feature of abortive infection
-        systems
-      notes: Supports the functional association between Phage infection protein (UniProtKB:P49022
-        in Lactococcus lactis subsp. lactis (Streptococcus lactis)) and Rst_DUF4238
-        system.
+    - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/rst_duf4238.md
+      snippet: 'The Rst_DUF4238 is composed of 1 protein: DUF4238.'
+      notes: Supports the functional association between Endonuclease GajA (UniProtKB:P0DW47
+        in Bacillus cereus (strain HuB5-5)) and Rst_DUF4238 system.
 discussions:
 - discussion_id: rst-duf4238-host-mechanism-gap
   prompt: Resolve Rst_DUF4238 native host breadth, accession-level DUF4238 proteins,
@@ -253,5 +249,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    rst_duf4238_system_protein_component with UniProtKB:P49022 (pip) exemplar.'
+    rst_duf4238_system_protein_component with UniProtKB:P0DW47 (gajA) exemplar.'
   llm_assisted: true

@@ -90,18 +90,18 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph lamassu_type_i_system_graph
-    with GENE_OR_PROTEIN node lamassu_type_i_system_protein_component and UniProtKB:P0DW44
+    with GENE_OR_PROTEIN node lamassu_type_i_system_protein_component and UniProtKB:P0DW42
     exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: lamassu_type_i_system_graph
   title: Protein component associated with Lamassu type I system
-  description: Literature-backed association between Lamassu protein LmuB (UniProtKB:P0DW44)
+  description: Literature-backed association between Septu protein PtuB (UniProtKB:P0DW42)
     and Lamassu type I system.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P0DW44 in Bacillus
-    sp. (strain NCIM 5461 / CCTCC AB 2011126 / NIO-1130)) associated with Lamassu
-    type I system while full multi-step mechanistic curation remains future work.
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P0DW42 in Bacillus
+    thuringiensis) associated with Lamassu type I system while full multi-step mechanistic
+    curation remains future work.
   nodes:
   - node_id: lamassu_type_i_system_trait
     label: Lamassu type I system
@@ -110,46 +110,46 @@ causal_graphs:
     description: A Lamassu system in which an organism possesses a locus encoding
       the LmuA effector and SMC-like LmuB sensor but no LmuC component.
   - node_id: lamassu_type_i_system_protein_component
-    label: Lamassu protein LmuB
+    label: Septu protein PtuB
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Lamassu protein LmuB) associated with Lamassu
-      type I system.
+    description: Protein component (Septu protein PtuB) associated with Lamassu type
+      I system.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - lmuB
+    - ptuB
     protein_examples:
-    - uniprot_id: UniProtKB:P0DW44
-      protein_label: Lamassu protein LmuB
-      gene_symbol: lmuB
-      taxon_id: NCBITaxon:1761765
-      taxon_label: Bacillus sp. (strain NCIM 5461 / CCTCC AB 2011126 / NIO-1130)
+    - uniprot_id: UniProtKB:P0DW42
+      protein_label: Septu protein PtuB
+      gene_symbol: ptuB
+      taxon_id: NCBITaxon:1428
+      taxon_label: Bacillus thuringiensis
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      entry_version: 8
+      entry_version: 12
       sequence_version: 1
-      role: Characteristic protein component (lmuB, Lamassu protein LmuB) associated
-        with Lamassu type I system in Bacillus sp. (strain NCIM 5461 / CCTCC AB 2011126
-        / NIO-1130).
+      role: Characteristic protein component (ptuB, Septu protein PtuB) associated
+        with Lamassu type I system in Bacillus thuringiensis.
       evidence:
-      - reference: https://rest.uniprot.org/uniprotkb/P0DW44.json
-        snippet: Component of antiviral defense system Lamassu type I, composed of
-          LmuA and LmuB.
-        notes: Supports Lamassu protein LmuB in Lamassu type I system; UniProtKB:P0DW44
-          (lmuB, Lamassu protein LmuB) in Bacillus sp. (strain NCIM 5461 / CCTCC AB
-          2011126 / NIO-1130) provides a verified protein exemplar.
+      - reference: DOI:10.1073/pnas.2519643122
+        snippet: Lamassu is a widespread antiviral system in bacteria that uses structural
+          maintenance of chromosomes-like proteins, typically associated with chromosome
+          maintenance, to detect and halt phage infection
+        notes: Supports Septu protein PtuB in Lamassu type I system; UniProtKB:P0DW42
+          (ptuB, Septu protein PtuB) in Bacillus thuringiensis provides a verified
+          protein exemplar.
   edges:
   - subject: lamassu_type_i_system_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: lamassu_type_i_system_trait
-    description: Lamassu protein LmuB (lmuB, UniProtKB:P0DW44) contributes to Lamassu
-      type I system (associated with antiviral, composed, defense).
+    description: Septu protein PtuB (ptuB, UniProtKB:P0DW42) contributes to Lamassu
+      type I system.
     evidence:
-    - reference: https://rest.uniprot.org/uniprotkb/P0DW44.json
-      snippet: Component of antiviral defense system Lamassu type I, composed of LmuA
-        and LmuB.
-      notes: Supports the functional association between Lamassu protein LmuB (UniProtKB:P0DW44
-        in Bacillus sp. (strain NCIM 5461 / CCTCC AB 2011126 / NIO-1130)) and Lamassu
-        type I system.
+    - reference: DOI:10.1073/pnas.2519643122
+      snippet: Lamassu is a widespread antiviral system in bacteria that uses structural
+        maintenance of chromosomes-like proteins, typically associated with chromosome
+        maintenance, to detect and halt phage infection
+      notes: Supports the functional association between Septu protein PtuB (UniProtKB:P0DW42
+        in Bacillus thuringiensis) and Lamassu type I system.

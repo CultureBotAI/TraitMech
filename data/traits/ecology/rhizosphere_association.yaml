@@ -30,8 +30,8 @@ causal_graphs:
   title: Root exudates structure the rhizosphere microbial habitat
   scope_status: NONMECHANISTIC
   scope_notes: This broad ecological, host-relationship, habitat, or hazard classification
-    spans multiple taxa and mechanisms; contextual protein nodes do not receive token
-    UniProt examples.
+    spans multiple taxa and mechanisms; contextual protein nodes include source-backed
+    UniProtKB exemplars.
   description: Evidence-backed causal sketch linking root exudates to the high-activity
     rhizosphere community.
   nodes:
@@ -67,27 +67,26 @@ causal_graphs:
     description: Transmembrane chemoreceptor that senses root exudate compounds and
       initiates chemotactic signaling.
     protein_examples:
-    - uniprot_id: UniProtKB:P07330
-      protein_label: Protein-glutamate methylesterase/protein-glutamine glutaminase
-      gene_symbol: cheB
+    - uniprot_id: UniProtKB:P07018
+      protein_label: Methyl-accepting chemotaxis protein IV
+      gene_symbol: tap
       taxon_id: NCBITaxon:83333
       taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
       proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 189
-      sequence_version: 3
-      role: Exemplar protein (cheB, Protein-glutamate methylesterase/protein-glutamine
-        glutaminase) representing methyl-accepting chemotaxis protein (MCP) in Escherichia
-        coli (strain K12) for rhizosphere association.
+      entry_version: 190
+      sequence_version: 2
+      role: Exemplar protein (tap, Methyl-accepting chemotaxis protein IV) representing
+        methyl-accepting chemotaxis protein (MCP) in Escherichia coli (strain K12)
+        for rhizosphere association.
       evidence:
       - reference: DOI:10.1038/nrmicro.2017.87
         snippet: crucial roles in nutrient cycling, the maintenance of soil fertility
           and soil carbon sequestration
         notes: Supports methyl-accepting chemotaxis protein (MCP) in rhizosphere association;
-          UniProtKB:P07330 (cheB, Protein-glutamate methylesterase/protein-glutamine
-          glutaminase) in Escherichia coli (strain K12) provides a verified protein
-          exemplar.
+          UniProtKB:P07018 (tap, Methyl-accepting chemotaxis protein IV) in Escherichia
+          coli (strain K12) provides a verified protein exemplar.
   - node_id: che_signaling
     label: CheA/CheW/CheY chemotaxis signaling
     node_type: PATHWAY
@@ -233,6 +232,6 @@ curation_history:
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
-  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P07330 (cheB)
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P07018 (tap)
     protein example to node mcp_chemoreceptor.'
   llm_assisted: true

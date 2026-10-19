@@ -97,18 +97,18 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph pallium_feeding_graph
-    with GENE_OR_PROTEIN node pallium_feeding_protein_component and UniProtKB:G1UBD1
+    with GENE_OR_PROTEIN node pallium_feeding_protein_component and UniProtKB:P32790
     exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: pallium_feeding_graph
   title: Protein component associated with pallium feeding
-  description: Literature-backed association between Particulate methane monooxygenase
-    alpha subunit (UniProtKB:G1UBD1) and pallium feeding.
+  description: Literature-backed association between Actin cytoskeleton-regulatory
+    complex protein SLA1 (UniProtKB:P32790) and pallium feeding.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:G1UBD1 in Methylococcus
-    capsulatus (strain ATCC 33009 / NCIMB 11132 / Bath)) associated with pallium feeding
-    while full multi-step mechanistic curation remains future work.
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P32790 in Saccharomyces
+    cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)) associated with pallium
+    feeding while full multi-step mechanistic curation remains future work.
   nodes:
   - node_id: pallium_feeding_trait
     label: pallium feeding
@@ -118,49 +118,47 @@ causal_graphs:
       enveloping all or part of particulate food in an extruded membranous pallium,
       digesting it outside the main cell body, and taking up released nutrients.
   - node_id: pallium_feeding_protein_component
-    label: Particulate methane monooxygenase alpha subunit
+    label: Actin cytoskeleton-regulatory complex protein SLA1
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Particulate methane monooxygenase alpha subunit)
-      associated with pallium feeding.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Actin cytoskeleton-regulatory complex protein
+      SLA1) associated with pallium feeding.
+    grounding: InterPro:IPR056996
     gene_symbols:
-    - pmoB1
+    - SLA1
     protein_examples:
-    - uniprot_id: UniProtKB:G1UBD1
-      protein_label: Particulate methane monooxygenase alpha subunit
-      gene_symbol: pmoB1
-      taxon_id: NCBITaxon:243233
-      taxon_label: Methylococcus capsulatus (strain ATCC 33009 / NCIMB 11132 / Bath)
+    - uniprot_id: UniProtKB:P32790
+      protein_label: Actin cytoskeleton-regulatory complex protein SLA1
+      gene_symbol: SLA1
+      taxon_id: NCBITaxon:559292
+      taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's
+        yeast)
       entry_status: REVIEWED
-      proteome_id: UP000006821
+      proteome_id: UP000002311
       retrieved_on: '2026-10-17'
-      entry_version: 77
+      entry_version: 230
       sequence_version: 1
-      role: Characteristic protein component (pmoB1, Particulate methane monooxygenase
-        alpha subunit) associated with pallium feeding in Methylococcus capsulatus
-        (strain ATCC 33009 / NCIMB 11132 / Bath).
+      role: Characteristic protein component (SLA1, Actin cytoskeleton-regulatory
+        complex protein SLA1) associated with pallium feeding in Saccharomyces cerevisiae
+        (strain ATCC 204508 / S288c) (Baker's yeast).
       evidence:
       - reference: DOI:10.4319/lo.1993.38.5.0965
         snippet: Laboratory experiments were performed to determine the growth and
           grazing capabilities of Oblea rotunda, a pallium-feeding dinoflagellate.
-        notes: Supports Particulate methane monooxygenase alpha subunit in pallium
-          feeding; UniProtKB:G1UBD1 (pmoB1, Particulate methane monooxygenase alpha
-          subunit) in Methylococcus capsulatus (strain ATCC 33009 / NCIMB 11132 /
-          Bath) provides a verified protein exemplar.
+        notes: Supports Actin cytoskeleton-regulatory complex protein SLA1 in pallium
+          feeding; UniProtKB:P32790 (SLA1, Actin cytoskeleton-regulatory complex protein
+          SLA1) in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's
+          yeast) provides a verified protein exemplar.
   edges:
   - subject: pallium_feeding_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: pallium_feeding_trait
-    description: Particulate methane monooxygenase alpha subunit (pmoB1, UniProtKB:G1UBD1)
-      contributes to pallium feeding (associated with dinoflagellate, capabilities,
-      experiments).
+    description: Actin cytoskeleton-regulatory complex protein SLA1 (SLA1, UniProtKB:P32790)
+      contributes to pallium feeding.
     evidence:
     - reference: DOI:10.4319/lo.1993.38.5.0965
       snippet: Laboratory experiments were performed to determine the growth and grazing
         capabilities of Oblea rotunda, a pallium-feeding dinoflagellate.
-      notes: Supports the functional association between Particulate methane monooxygenase
-        alpha subunit (UniProtKB:G1UBD1 in Methylococcus capsulatus (strain ATCC 33009
-        / NCIMB 11132 / Bath)) and pallium feeding.
+      notes: Supports the functional association between Actin cytoskeleton-regulatory
+        complex protein SLA1 (UniProtKB:P32790 in Saccharomyces cerevisiae (strain
+        ATCC 204508 / S288c) (Baker's yeast)) and pallium feeding.

@@ -89,34 +89,34 @@ causal_graphs:
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
   - node_id: abortive_infection_system_protein_component
-    label: Abortive infection protein
+    label: Abortive phage resistance protein AbiC
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Abortive infection protein) associated with abortive
-      infection system.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Abortive phage resistance protein AbiC) associated
+      with abortive infection system.
+    grounding: InterPro:IPR031709
     gene_symbols:
-    - abi
+    - abiC
     protein_examples:
-    - uniprot_id: UniProtKB:P18024
-      protein_label: Abortive infection protein
-      gene_symbol: abi
-      taxon_id: NCBITaxon:562
-      taxon_label: Escherichia coli
+    - uniprot_id: UniProtKB:Q01457
+      protein_label: Abortive phage resistance protein AbiC
+      gene_symbol: abiC
+      taxon_id: NCBITaxon:1360
+      taxon_label: Lactococcus lactis subsp. lactis (Streptococcus lactis)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      entry_version: 49
+      entry_version: 35
       sequence_version: 1
-      role: Characteristic protein component (abi, Abortive infection protein) associated
-        with abortive infection system in Escherichia coli.
+      role: Characteristic protein component (abiC, Abortive phage resistance protein
+        AbiC) associated with abortive infection system in Lactococcus lactis subsp.
+        lactis (Streptococcus lactis).
       evidence:
-      - reference: DOI:10.1093/nar/gkt1419
-        snippet: Bacterial abortive infection (Abi) systems are ‘altruistic’ cell
-          death systems that are activated by phage infection and limit viral replication,
-          thereby providing protection to the bacterial population
-        notes: Supports Abortive infection protein in abortive infection system; UniProtKB:P18024
-          (abi, Abortive infection protein) in Escherichia coli provides a verified
+      - reference: DOI:10.1146/annurev-virology-011620-040628
+        snippet: A commonly used phage resistance strategy is abortive infection (Abi),
+          in which the infected cell commits suicide before the phage can complete
+          its replication cycle
+        notes: Supports Abortive phage resistance protein AbiC in abortive infection
+          system; UniProtKB:Q01457 (abiC, Abortive phage resistance protein AbiC)
+          in Lactococcus lactis subsp. lactis (Streptococcus lactis) provides a verified
           protein exemplar.
   edges:
   - subject: phage_infection
@@ -198,14 +198,15 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: abortive_infection_system_trait
-    description: Abortive infection protein (abi, UniProtKB:P18024) contributes to
-      abortive infection system (associated with phytopathogen, atroseptica, carotovora).
+    description: Abortive phage resistance protein AbiC (abiC, UniProtKB:Q01457) contributes
+      to abortive infection system.
     evidence:
-    - reference: DOI:10.1073/pnas.0808832106
-      snippet: A highly effective 2-gene Abi system from the phytopathogen Erwinia
-        carotovora subspecies atroseptica, designated ToxIN, is described
-      notes: Supports the functional association between Abortive infection protein
-        (UniProtKB:P18024 in Escherichia coli) and abortive infection system.
+    - reference: DOI:10.1093/nar/gkt1419
+      snippet: We demonstrate that the AbiE phage resistance systems function as novel
+        Type IV TAs and are widespread in bacteria and archaea
+      notes: Supports the functional association between Abortive phage resistance
+        protein AbiC (UniProtKB:Q01457 in Lactococcus lactis subsp. lactis (Streptococcus
+        lactis)) and abortive infection system.
 discussions:
 - discussion_id: abortive-infection-subfamily-split-gap
   prompt: Resolve other abortive-infection families before minting narrower children
@@ -506,5 +507,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    abortive_infection_system_protein_component with UniProtKB:P18024 (abi) exemplar.'
+    abortive_infection_system_protein_component with UniProtKB:Q01457 (abiC) exemplar.'
   llm_assisted: true

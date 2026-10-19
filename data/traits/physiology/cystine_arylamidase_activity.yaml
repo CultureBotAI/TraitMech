@@ -53,18 +53,18 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph cystine_arylamidase_activity_graph
-    with GENE_OR_PROTEIN node cystine_arylamidase_activity_protein_component and UniProtKB:P39914
+    with GENE_OR_PROTEIN node cystine_arylamidase_activity_protein_component and UniProtKB:P04825
     exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: cystine_arylamidase_activity_graph
   title: Protein component associated with cystine arylamidase activity
-  description: Literature-backed association between Monothiol bacilliredoxin BrxC
-    (UniProtKB:P39914) and cystine arylamidase activity.
+  description: Literature-backed association between Aminopeptidase N (UniProtKB:P04825)
+    and cystine arylamidase activity.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P39914 in Bacillus
-    subtilis (strain 168)) associated with cystine arylamidase activity while full
-    multi-step mechanistic curation remains future work.
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P04825 in Escherichia
+    coli (strain K12)) associated with cystine arylamidase activity while full multi-step
+    mechanistic curation remains future work.
   nodes:
   - node_id: cystine_arylamidase_activity_trait
     label: cystine arylamidase activity
@@ -73,50 +73,47 @@ causal_graphs:
     description: A physiological enzyme-activity phenotype in which a cell produces
       active cystine arylamidase enzymes that hydrolyze cystine arylamide substrates.
   - node_id: cystine_arylamidase_activity_protein_component
-    label: Monothiol bacilliredoxin BrxC
+    label: Aminopeptidase N
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Monothiol bacilliredoxin BrxC) associated with
-      cystine arylamidase activity.
+    description: Protein component (Aminopeptidase N) associated with cystine arylamidase
+      activity.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - brxC
+    - pepN
     protein_examples:
-    - uniprot_id: UniProtKB:P39914
-      protein_label: Monothiol bacilliredoxin BrxC
-      gene_symbol: brxC
-      taxon_id: NCBITaxon:224308
-      taxon_label: Bacillus subtilis (strain 168)
+    - uniprot_id: UniProtKB:P04825
+      protein_label: Aminopeptidase N
+      gene_symbol: pepN
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
-      proteome_id: UP000001570
+      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 128
-      sequence_version: 1
-      role: Characteristic protein component (brxC, Monothiol bacilliredoxin BrxC)
-        associated with cystine arylamidase activity in Bacillus subtilis (strain
-        168).
+      entry_version: 217
+      sequence_version: 2
+      role: Characteristic protein component (pepN, Aminopeptidase N) associated with
+        cystine arylamidase activity in Escherichia coli (strain K12).
       evidence:
       - reference: DOI:10.2323/jgam.60.59
         snippet: In API ZYM, activities are positive for alkaline phosphatase, esterase
           (C4), leucine arylamidase, valine arylamidase, cystine arylamidase, acid
           phosphatase, naphthol-AS-BI-phosphohydrolase, α-glucosidase, β-glucosidase
-        notes: Supports Monothiol bacilliredoxin BrxC in cystine arylamidase activity;
-          UniProtKB:P39914 (brxC, Monothiol bacilliredoxin BrxC) in Bacillus subtilis
-          (strain 168) provides a verified protein exemplar.
+        notes: Supports Aminopeptidase N in cystine arylamidase activity; UniProtKB:P04825
+          (pepN, Aminopeptidase N) in Escherichia coli (strain K12) provides a verified
+          protein exemplar.
   edges:
   - subject: cystine_arylamidase_activity_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: cystine_arylamidase_activity_trait
-    description: Monothiol bacilliredoxin BrxC (brxC, UniProtKB:P39914) contributes
-      to cystine arylamidase activity (associated with phosphohydrolase, arylamidase,
-      glucosidase).
+    description: Aminopeptidase N (pepN, UniProtKB:P04825) contributes to cystine
+      arylamidase activity.
     evidence:
     - reference: DOI:10.2323/jgam.60.59
       snippet: In API ZYM, activities are positive for alkaline phosphatase, esterase
         (C4), leucine arylamidase, valine arylamidase, cystine arylamidase, acid phosphatase,
         naphthol-AS-BI-phosphohydrolase, α-glucosidase, β-glucosidase
-      notes: Supports the functional association between Monothiol bacilliredoxin
-        BrxC (UniProtKB:P39914 in Bacillus subtilis (strain 168)) and cystine arylamidase
-        activity.
+      notes: Supports the functional association between Aminopeptidase N (UniProtKB:P04825
+        in Escherichia coli (strain K12)) and cystine arylamidase activity.

@@ -90,39 +90,34 @@ causal_graphs:
     description: Glutamate or arginine decarboxylation that consumes intracellular
       protons and alkalinizes the cytoplasm.
   - node_id: ph_range_protein_component
-    label: Na(+)/H(+) antiporter subunit A
+    label: ATP synthase subunit alpha
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Na(+)/H(+) antiporter subunit A) associated with
-      pH range.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (ATP synthase subunit alpha) associated with pH
+      range.
+    grounding: InterPro:IPR023366
     gene_symbols:
-    - mrpA
+    - atpA
     protein_examples:
-    - uniprot_id: UniProtKB:Q9RGZ5
-      protein_label: Na(+)/H(+) antiporter subunit A
-      gene_symbol: mrpA
-      taxon_id: NCBITaxon:398511
-      taxon_label: Alkalihalophilus pseudofirmus (strain ATCC BAA-2126 / JCM 17055
-        / OF4) (Bacillus pseudofirmus)
+    - uniprot_id: UniProtKB:P0ABB0
+      protein_label: ATP synthase subunit alpha
+      gene_symbol: atpA
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
-      proteome_id: UP000001544
+      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 115
-      sequence_version: 2
-      role: Characteristic protein component (mrpA, Na(+)/H(+) antiporter subunit
-        A) associated with pH range in Alkalihalophilus pseudofirmus (strain ATCC
-        BAA-2126 / JCM 17055 / OF4) (Bacillus pseudofirmus).
+      entry_version: 161
+      sequence_version: 1
+      role: Characteristic protein component (atpA, ATP synthase subunit alpha) associated
+        with pH range in Escherichia coli (strain K12).
       evidence:
       - reference: DOI:10.1038/nrmicro2549
         snippet: For pH homeostasis under alkaline conditions, active transport of
           protons inward is a crucial adaptation, which usually involves activation
           and transcriptional up-regulation of key cation/proton antiporters
-        notes: Supports Na(+)/H(+) antiporter subunit A in pH range; UniProtKB:Q9RGZ5
-          (mrpA, Na(+)/H(+) antiporter subunit A) in Alkalihalophilus pseudofirmus
-          (strain ATCC BAA-2126 / JCM 17055 / OF4) (Bacillus pseudofirmus) provides
-          a verified protein exemplar.
+        notes: Supports ATP synthase subunit alpha in pH range; UniProtKB:P0ABB0 (atpA,
+          ATP synthase subunit alpha) in Escherichia coli (strain K12) provides a
+          verified protein exemplar.
   edges:
   - subject: external_ph
     predicate: defines
@@ -222,16 +217,15 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: ph_range_trait
-    description: Na(+)/H(+) antiporter subunit A (mrpA, UniProtKB:Q9RGZ5) contributes
-      to pH range (associated with transcriptional, antiporters, homeostasis).
+    description: ATP synthase subunit alpha (atpA, UniProtKB:P0ABB0) contributes to
+      pH range.
     evidence:
     - reference: DOI:10.1038/nrmicro2549
       snippet: For pH homeostasis under alkaline conditions, active transport of protons
         inward is a crucial adaptation, which usually involves activation and transcriptional
         up-regulation of key cation/proton antiporters
-      notes: Supports the functional association between Na(+)/H(+) antiporter subunit
-        A (UniProtKB:Q9RGZ5 in Alkalihalophilus pseudofirmus (strain ATCC BAA-2126
-        / JCM 17055 / OF4) (Bacillus pseudofirmus)) and pH range.
+      notes: Supports the functional association between ATP synthase subunit alpha
+        (UniProtKB:P0ABB0 in Escherichia coli (strain K12)) and pH range.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.815188+00:00'
   curator: seed_from_metpo
@@ -319,5 +313,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    ph_range_protein_component with UniProtKB:Q9RGZ5 (mrpA) exemplar.'
+    ph_range_protein_component with UniProtKB:P0ABB0 (atpA) exemplar.'
   llm_assisted: true

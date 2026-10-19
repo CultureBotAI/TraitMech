@@ -82,8 +82,7 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: hemolytic_trait
-    description: Hemolysin, plasmid (hlyA, UniProtKB:P08715) contributes to hemolytic
-      (associated with substances, hemolysis, toxigenic).
+    description: Hemolysin, plasmid (hlyA, UniProtKB:P08715) contributes to hemolytic.
     evidence:
     - reference: DOI:10.3390/toxins5061140
       snippet: hemolysis to toxigenic substances secreted by S. aureus

@@ -118,36 +118,35 @@ causal_graphs:
     grounding: traitmech:000214
     description: Possession of a genome-encoded abortive-infection phage-defense system.
   - node_id: abir_system_protein_component
-    label: Ribosome hibernation promotion factor
+    label: Abortive phage resistance protein AbiC
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Ribosome hibernation promotion factor) associated
+    description: Protein component (Abortive phage resistance protein AbiC) associated
       with AbiR system.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    grounding: InterPro:IPR031709
     gene_symbols:
-    - hpf
+    - abiC
     protein_examples:
-    - uniprot_id: UniProtKB:A2RIX0
-      protein_label: Ribosome hibernation promotion factor
-      gene_symbol: hpf
-      taxon_id: NCBITaxon:416870
-      taxon_label: Lactococcus lactis subsp. cremoris (strain MG1363)
+    - uniprot_id: UniProtKB:Q01457
+      protein_label: Abortive phage resistance protein AbiC
+      gene_symbol: abiC
+      taxon_id: NCBITaxon:1360
+      taxon_label: Lactococcus lactis subsp. lactis (Streptococcus lactis)
       entry_status: REVIEWED
-      proteome_id: UP000000364
       retrieved_on: '2026-10-17'
-      entry_version: 88
+      entry_version: 35
       sequence_version: 1
-      role: Characteristic protein component (hpf, Ribosome hibernation promotion
-        factor) associated with AbiR system in Lactococcus lactis subsp. cremoris
-        (strain MG1363).
+      role: Characteristic protein component (abiC, Abortive phage resistance protein
+        AbiC) associated with AbiR system in Lactococcus lactis subsp. lactis (Streptococcus
+        lactis).
       evidence:
       - reference: PMID:10831451
-        snippet: Analysis of deletion and insertion clones demonstrated that AbiR
-          was encoded by two genetic loci, separated by the LlaKR2I R/M genes
-        notes: Supports Ribosome hibernation promotion factor in AbiR system; UniProtKB:A2RIX0
-          (hpf, Ribosome hibernation promotion factor) in Lactococcus lactis subsp.
-          cremoris (strain MG1363) provides a verified protein exemplar.
+        snippet: The native lactococcal plasmid pKR223 encodes two distinct phage
+          resistance mechanisms, a restriction and modification (R/M) system designated
+          LlaKR2I and an abortive infection mechanism (Abi) which affects prolate-headed-phage
+          proliferation
+        notes: Supports Abortive phage resistance protein AbiC in AbiR system; UniProtKB:Q01457
+          (abiC, Abortive phage resistance protein AbiC) in Lactococcus lactis subsp.
+          lactis (Streptococcus lactis) provides a verified protein exemplar.
   edges:
   - subject: abir_loci
     predicate: contributes to
@@ -236,20 +235,17 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: abir_system_trait
-    description: Ribosome hibernation promotion factor (hpf, UniProtKB:A2RIX0) contributes
-      to AbiR system (associated with trimmed, custom, einsi).
+    description: Abortive phage resistance protein AbiC (abiC, UniProtKB:Q01457) contributes
+      to AbiR system.
     evidence:
-    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
-      snippet: '| RM_Type_IIG__Type_IIG_1 | | RM_Type_IIG | Custom | 300 | | RM_Type_IIG__Type_IIG_2
-        | | RM_Type_IIG | Custom | 300 | | RM_Type_IIG__Type_IIG_3 | | RM_Type_IIG
-        | Custom | 300 | | RM_Type_IIG__Type_IIG_4 | | RM_Type_IIG | Custom | 300
-        | | RM_Type_IIG__Type_IIG_5 | | RM_Type_IIG | Custom | 300 | | RM_Type_IIG__Type_IIG_FAM_0.einsi_trimmed
-        | | RM_Type_IIG | Custom | 300 | | RM_Type_IIG__Type_IIG_FAM_1.einsi_trimmed
-        | | RM_Type_IIG | Custom | 300 | | RM_Type_IIG__Type_IIG_FAM_2.einsi_trimmed
-        | | RM_Type_IIG | Custom | 300 |'
-      notes: Supports the functional association between Ribosome hibernation promotion
-        factor (UniProtKB:A2RIX0 in Lactococcus lactis subsp. cremoris (strain MG1363))
-        and AbiR system.
+    - reference: PMID:10831451
+      snippet: The native lactococcal plasmid pKR223 encodes two distinct phage resistance
+        mechanisms, a restriction and modification (R/M) system designated LlaKR2I
+        and an abortive infection mechanism (Abi) which affects prolate-headed-phage
+        proliferation
+      notes: Supports the functional association between Abortive phage resistance
+        protein AbiC (UniProtKB:Q01457 in Lactococcus lactis subsp. lactis (Streptococcus
+        lactis)) and AbiR system.
 discussions:
 - discussion_id: abir-component-activity-gap
   prompt: Resolve the AbiR phage trigger, profile-to-locus mapping, and AbiRa, AbiRb,
@@ -293,5 +289,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    abir_system_protein_component with UniProtKB:A2RIX0 (hpf) exemplar.'
+    abir_system_protein_component with UniProtKB:Q01457 (abiC) exemplar.'
   llm_assisted: true

@@ -100,24 +100,27 @@ causal_graphs:
     grounding_notes: The node spans multiple bactofilin paralogues and taxa and is
       therefore retained as a reviewed aggregate label.
     protein_examples:
-    - uniprot_id: UniProtKB:Q01465
-      protein_label: Cell shape-determining protein MreB
-      gene_symbol: mreB
-      taxon_id: NCBITaxon:224308
-      taxon_label: Bacillus subtilis (strain 168)
+    - uniprot_id: UniProtKB:Q1D3H0
+      protein_label: Bactofilin BacN
+      gene_symbol: bacN
+      taxon_id: NCBITaxon:246197
+      taxon_label: Myxococcus xanthus (strain DK1622)
       entry_status: REVIEWED
-      proteome_id: UP000001570
+      proteome_id: UP000002402
       retrieved_on: '2026-10-17'
-      entry_version: 148
-      sequence_version: 3
-      role: Exemplar protein (mreB, Cell shape-determining protein MreB) representing
-        bactofilin polymers in Bacillus subtilis (strain 168) for ring shaped.
+      entry_version: 94
+      sequence_version: 1
+      role: Exemplar protein (bacN, Bactofilin BacN) representing bactofilin polymers
+        in Myxococcus xanthus (strain DK1622) for ring shaped.
       evidence:
-      - reference: DOI:10.3390/microorganisms12071309
-        snippet: motion of MreB filaments correlates with the rate of cell wall growth
-        notes: Supports bactofilin polymers in ring shaped; UniProtKB:Q01465 (mreB,
-          Cell shape-determining protein MreB) in Bacillus subtilis (strain 168) provides
-          a verified protein exemplar.
+      - reference: DOI:10.1038/s41467-024-45196-0
+        snippet: Helical cells require components that promote curvature, such as
+          the polymer and filament-forming CrvA in Vibrio cholerae, which skews peptidoglycan
+          synthesis rates, or the intermediate filament-like protein crescentin in
+          C. crescentus
+        notes: Supports bactofilin polymers in ring shaped; UniProtKB:Q1D3H0 (bacN,
+          Bactofilin BacN) in Myxococcus xanthus (strain DK1622) provides a verified
+          protein exemplar.
   - node_id: cell_wall_biosynthesis
     label: cell wall biosynthesis
     node_type: BIOLOGICAL_PROCESS
@@ -131,25 +134,27 @@ causal_graphs:
     grounding_notes: This is a multi-protein bactofilin/M23 module, not one protein
       family or accession.
     protein_examples:
-    - uniprot_id: UniProtKB:Q01465
-      protein_label: Cell shape-determining protein MreB
-      gene_symbol: mreB
-      taxon_id: NCBITaxon:224308
-      taxon_label: Bacillus subtilis (strain 168)
+    - uniprot_id: UniProtKB:Q1D3H2
+      protein_label: Bactofilin BacP
+      gene_symbol: bacP
+      taxon_id: NCBITaxon:246197
+      taxon_label: Myxococcus xanthus (strain DK1622)
       entry_status: REVIEWED
-      proteome_id: UP000001570
+      proteome_id: UP000002402
       retrieved_on: '2026-10-17'
-      entry_version: 148
-      sequence_version: 3
-      role: Exemplar protein (mreB, Cell shape-determining protein MreB) representing
-        bactofilin-M23 peptidase module in Bacillus subtilis (strain 168) for ring
-        shaped.
+      entry_version: 93
+      sequence_version: 1
+      role: Exemplar protein (bacP, Bactofilin BacP) representing bactofilin-M23 peptidase
+        module in Myxococcus xanthus (strain DK1622) for ring shaped.
       evidence:
-      - reference: DOI:10.3390/microorganisms12071309
-        snippet: motion of MreB filaments correlates with the rate of cell wall growth
-        notes: Supports bactofilin-M23 peptidase module in ring shaped; UniProtKB:Q01465
-          (mreB, Cell shape-determining protein MreB) in Bacillus subtilis (strain
-          168) provides a verified protein exemplar.
+      - reference: DOI:10.1038/s41467-024-45196-0
+        snippet: Helical cells require components that promote curvature, such as
+          the polymer and filament-forming CrvA in Vibrio cholerae, which skews peptidoglycan
+          synthesis rates, or the intermediate filament-like protein crescentin in
+          C. crescentus
+        notes: Supports bactofilin-M23 peptidase module in ring shaped; UniProtKB:Q1D3H2
+          (bacP, Bactofilin BacP) in Myxococcus xanthus (strain DK1622) provides a
+          verified protein exemplar.
   - node_id: wall_biosynthesis_mode_change
     label: local change in cell wall biosynthesis mode
     node_type: BIOLOGICAL_PROCESS
@@ -163,17 +168,17 @@ causal_graphs:
     grounding_notes: Retained label-only because an exact semantic CrvA family term
       was not verified in this review.
     protein_examples:
-    - uniprot_id: UniProtKB:P0ABG7
-      protein_label: Peptidoglycan glycosyltransferase MrdB
-      gene_symbol: mrdB
+    - uniprot_id: UniProtKB:P0C0V0
+      protein_label: Periplasmic serine endoprotease DegP
+      gene_symbol: degP
       taxon_id: NCBITaxon:83333
       taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
       proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 133
+      entry_version: 161
       sequence_version: 1
-      role: Exemplar protein (mrdB, Peptidoglycan glycosyltransferase MrdB) representing
+      role: Exemplar protein (degP, Periplasmic serine endoprotease DegP) representing
         CrvA polymer in Escherichia coli (strain K12) for ring shaped.
       evidence:
       - reference: DOI:10.1038/s41467-024-45196-0
@@ -181,8 +186,8 @@ causal_graphs:
           the polymer and filament-forming CrvA in Vibrio cholerae, which skews peptidoglycan
           synthesis rates, or the intermediate filament-like protein crescentin in
           C. crescentus
-        notes: Supports CrvA polymer in ring shaped; UniProtKB:P0ABG7 (mrdB, Peptidoglycan
-          glycosyltransferase MrdB) in Escherichia coli (strain K12) provides a verified
+        notes: Supports CrvA polymer in ring shaped; UniProtKB:P0C0V0 (degP, Periplasmic
+          serine endoprotease DegP) in Escherichia coli (strain K12) provides a verified
           protein exemplar.
   - node_id: pg_synthesis_rate_skew
     label: skewed peptidoglycan synthesis rates
@@ -441,8 +446,8 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q01465 (mreB)
-    protein example to node mreb_filaments; added UniProtKB:Q01465 (mreB) protein
-    example to node bactofilin_polymers; added UniProtKB:Q01465 (mreB) protein example
-    to node bactofilin_lmdc_module; added UniProtKB:P0ABG7 (mrdB) protein example
+    protein example to node mreb_filaments; added UniProtKB:Q1D3H0 (bacN) protein
+    example to node bactofilin_polymers; added UniProtKB:Q1D3H2 (bacP) protein example
+    to node bactofilin_lmdc_module; added UniProtKB:P0C0V0 (degP) protein example
     to node crva_polymer (+1 more).'
   llm_assisted: true

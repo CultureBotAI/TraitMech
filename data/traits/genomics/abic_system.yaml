@@ -118,9 +118,7 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Protein component (Abortive phage resistance protein AbiC) associated
       with AbiC system.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    grounding: InterPro:IPR031709
     gene_symbols:
     - abiC
     protein_examples:
@@ -229,7 +227,7 @@ causal_graphs:
     predicate_id: RO:0002326
     object: abic_system_trait
     description: Abortive phage resistance protein AbiC (abiC, UniProtKB:Q01457) contributes
-      to AbiC system (associated with bf00327934, specifying, infection).
+      to AbiC system.
     evidence:
     - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
       snippet: Pif | 10\.1007/BF00327934 | Molecular analysis of F plasmid pif region

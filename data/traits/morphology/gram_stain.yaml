@@ -81,35 +81,35 @@ causal_graphs:
     node_type: QUALITY
     description: Retention of the crystal violet-iodine complex after Gram decolorization.
   - node_id: gram_stain_protein_component
-    label: Peptidoglycan glycosyltransferase MrdB
+    label: Penicillin-binding protein 1A
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Peptidoglycan glycosyltransferase MrdB) associated
-      with gram stain.
+    description: Protein component (Penicillin-binding protein 1A) associated with
+      gram stain.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - mrdB
+    - mrcA
     protein_examples:
-    - uniprot_id: UniProtKB:P0ABG7
-      protein_label: Peptidoglycan glycosyltransferase MrdB
-      gene_symbol: mrdB
+    - uniprot_id: UniProtKB:P02918
+      protein_label: Penicillin-binding protein 1A
+      gene_symbol: mrcA
       taxon_id: NCBITaxon:83333
       taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
       proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 133
+      entry_version: 214
       sequence_version: 1
-      role: Characteristic protein component (mrdB, Peptidoglycan glycosyltransferase
-        MrdB) associated with gram stain in Escherichia coli (strain K12).
+      role: Characteristic protein component (mrcA, Penicillin-binding protein 1A)
+        associated with gram stain in Escherichia coli (strain K12).
       evidence:
       - reference: DOI:10.1128/jb.156.2.837-845.1983
         snippet: interacts with aqueous KI-I2 during the Gram stain via a simple metathetical
           anion exchange
-        notes: Supports Peptidoglycan glycosyltransferase MrdB in gram stain; UniProtKB:P0ABG7
-          (mrdB, Peptidoglycan glycosyltransferase MrdB) in Escherichia coli (strain
-          K12) provides a verified protein exemplar.
+        notes: Supports Penicillin-binding protein 1A in gram stain; UniProtKB:P02918
+          (mrcA, Penicillin-binding protein 1A) in Escherichia coli (strain K12) provides
+          a verified protein exemplar.
   edges:
   - subject: crystal_violet
     predicate: contributes to
@@ -208,13 +208,13 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: gram_stain_trait
-    description: Peptidoglycan glycosyltransferase MrdB (mrdB, UniProtKB:P0ABG7) contributes
-      to gram stain (associated with stain, gram).
+    description: Penicillin-binding protein 1A (mrcA, UniProtKB:P02918) contributes
+      to gram stain.
     evidence:
     - reference: DOI:10.3109/10520299609117151
       snippet: mechanism of the Gram stain
-      notes: Supports the functional association between Peptidoglycan glycosyltransferase
-        MrdB (UniProtKB:P0ABG7 in Escherichia coli (strain K12)) and gram stain.
+      notes: Supports the functional association between Penicillin-binding protein
+        1A (UniProtKB:P02918 in Escherichia coli (strain K12)) and gram stain.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.901879+00:00'
   curator: seed_from_metpo
@@ -287,5 +287,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    gram_stain_protein_component with UniProtKB:P0ABG7 (mrdB) exemplar.'
+    gram_stain_protein_component with UniProtKB:P02918 (mrcA) exemplar.'
   llm_assisted: true

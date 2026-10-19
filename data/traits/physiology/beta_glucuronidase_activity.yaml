@@ -57,16 +57,16 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph beta_glucuronidase_activity_graph
-    with GENE_OR_PROTEIN node beta_glucuronidase_activity_protein_component and UniProtKB:P17444
+    with GENE_OR_PROTEIN node beta_glucuronidase_activity_protein_component and UniProtKB:P05804
     exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: beta_glucuronidase_activity_graph
   title: Protein component associated with beta-glucuronidase activity
-  description: Literature-backed association between Oxygen-dependent choline dehydrogenase
-    (UniProtKB:P17444) and beta-glucuronidase activity.
+  description: Literature-backed association between Beta-glucuronidase (UniProtKB:P05804)
+    and beta-glucuronidase activity.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P17444 in Escherichia
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P05804 in Escherichia
     coli (strain K12)) associated with beta-glucuronidase activity while full multi-step
     mechanistic curation remains future work.
   nodes:
@@ -78,47 +78,43 @@ causal_graphs:
       active beta-glucuronidase enzymes that hydrolyze beta-D-glucuronosides to D-glucuronate
       and an alcohol.
   - node_id: beta_glucuronidase_activity_protein_component
-    label: Oxygen-dependent choline dehydrogenase
+    label: Beta-glucuronidase
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Oxygen-dependent choline dehydrogenase) associated
-      with beta-glucuronidase activity.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Beta-glucuronidase) associated with beta-glucuronidase
+      activity.
+    grounding: InterPro:IPR036156
     gene_symbols:
-    - betA
+    - uidA
     protein_examples:
-    - uniprot_id: UniProtKB:P17444
-      protein_label: Oxygen-dependent choline dehydrogenase
-      gene_symbol: betA
+    - uniprot_id: UniProtKB:P05804
+      protein_label: Beta-glucuronidase
+      gene_symbol: uidA
       taxon_id: NCBITaxon:83333
       taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
       proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 188
-      sequence_version: 1
-      role: Characteristic protein component (betA, Oxygen-dependent choline dehydrogenase)
-        associated with beta-glucuronidase activity in Escherichia coli (strain K12).
+      entry_version: 191
+      sequence_version: 2
+      role: Characteristic protein component (uidA, Beta-glucuronidase) associated
+        with beta-glucuronidase activity in Escherichia coli (strain K12).
       evidence:
       - reference: DOI:10.1128/aem.50.6.1383-1387.1985
         snippet: The beta-glucuronidase produced by E. coli cleaves the MUG substrate
           to yield a fluorescent end product.
-        notes: Supports Oxygen-dependent choline dehydrogenase in beta-glucuronidase
-          activity; UniProtKB:P17444 (betA, Oxygen-dependent choline dehydrogenase)
-          in Escherichia coli (strain K12) provides a verified protein exemplar.
+        notes: Supports Beta-glucuronidase in beta-glucuronidase activity; UniProtKB:P05804
+          (uidA, Beta-glucuronidase) in Escherichia coli (strain K12) provides a verified
+          protein exemplar.
   edges:
   - subject: beta_glucuronidase_activity_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: beta_glucuronidase_activity_trait
-    description: Oxygen-dependent choline dehydrogenase (betA, UniProtKB:P17444) contributes
-      to beta-glucuronidase activity (associated with glucuronidase, fluorescent,
-      substrate).
+    description: Beta-glucuronidase (uidA, UniProtKB:P05804) contributes to beta-glucuronidase
+      activity.
     evidence:
     - reference: DOI:10.1128/aem.50.6.1383-1387.1985
       snippet: The beta-glucuronidase produced by E. coli cleaves the MUG substrate
         to yield a fluorescent end product.
-      notes: Supports the functional association between Oxygen-dependent choline
-        dehydrogenase (UniProtKB:P17444 in Escherichia coli (strain K12)) and beta-glucuronidase
-        activity.
+      notes: Supports the functional association between Beta-glucuronidase (UniProtKB:P05804
+        in Escherichia coli (strain K12)) and beta-glucuronidase activity.

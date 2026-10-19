@@ -33,7 +33,7 @@ causal_graphs:
   scope_status: NONMECHANISTIC
   scope_notes: This record is a broad environmental or morphological classification
     spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
-    descriptor; contextual protein nodes do not receive token UniProt examples.
+    descriptor; contextual protein nodes include source-backed UniProtKB exemplars.
   nodes:
   - node_id: strictly_anaerobic_trait
     label: strictly anaerobic
@@ -63,28 +63,24 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Anaerobic enzymes vulnerable to oxygen or ROS.
     protein_examples:
-    - uniprot_id: UniProtKB:Q4A0Q1
-      protein_label: Oxygen-dependent choline dehydrogenase
-      gene_symbol: betA
-      taxon_id: NCBITaxon:342451
-      taxon_label: Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
-        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+    - uniprot_id: UniProtKB:P02919
+      protein_label: Penicillin-binding protein 1B
+      gene_symbol: mrcB
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
-      proteome_id: UP000006371
+      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 127
-      sequence_version: 1
-      role: Exemplar protein (betA, Oxygen-dependent choline dehydrogenase) representing
-        oxygen-sensitive enzymes in Staphylococcus saprophyticus subsp. saprophyticus
-        (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) for strictly
-        anaerobic.
+      entry_version: 235
+      sequence_version: 2
+      role: Exemplar protein (mrcB, Penicillin-binding protein 1B) representing oxygen-sensitive
+        enzymes in Escherichia coli (strain K12) for strictly anaerobic.
       evidence:
       - reference: PMID:39189748
         snippet: Clostridioides difficile is a strict anaerobic, sporulating Firmicutes
-        notes: Supports oxygen-sensitive enzymes in strictly anaerobic; UniProtKB:Q4A0Q1
-          (betA, Oxygen-dependent choline dehydrogenase) in Staphylococcus saprophyticus
-          subsp. saprophyticus (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC
-          7292 / S-41) provides a verified protein exemplar.
+        notes: Supports oxygen-sensitive enzymes in strictly anaerobic; UniProtKB:P02919
+          (mrcB, Penicillin-binding protein 1B) in Escherichia coli (strain K12) provides
+          a verified protein exemplar.
   - node_id: iron_sulfur_cluster_enzymes
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
@@ -309,7 +305,7 @@ curation_history:
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
-  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q4A0Q1 (betA)
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P02919 (mrcB)
     protein example to node oxygen_sensitive_enzymes; added UniProtKB:P0DW32 (arrB)
     protein example to node iron_sulfur_cluster_enzymes; added UniProtKB:A0A069AMK2
     (pflE) protein example to node glycyl_radical_enzymes; added UniProtKB:Q2RMD6

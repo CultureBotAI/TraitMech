@@ -100,27 +100,24 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Secretion-associated machinery linked to Flavobacterium gliding.
     protein_examples:
-    - uniprot_id: UniProtKB:Q49WP1
-      protein_label: Protoheme IX farnesyltransferase
-      gene_symbol: ctaB
-      taxon_id: NCBITaxon:342451
-      taxon_label: Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
-        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+    - uniprot_id: UniProtKB:Q1D823
+      protein_label: Adventurous-gliding motility protein Z
+      gene_symbol: aglZ
+      taxon_id: NCBITaxon:246197
+      taxon_label: Myxococcus xanthus (strain DK1622)
       entry_status: REVIEWED
-      proteome_id: UP000006371
+      proteome_id: UP000002402
       retrieved_on: '2026-10-17'
-      entry_version: 112
+      entry_version: 123
       sequence_version: 1
-      role: Exemplar protein (ctaB, Protoheme IX farnesyltransferase) representing
-        type IX secretion system in Staphylococcus saprophyticus subsp. saprophyticus
-        (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) for gliding.
+      role: Exemplar protein (aglZ, Adventurous-gliding motility protein Z) representing
+        type IX secretion system in Myxococcus xanthus (strain DK1622) for gliding.
       evidence:
       - reference: DOI:10.1038/s41579-021-00626-4
         snippet: proton-driven motor that powers type 9 secretion and gliding motility
-        notes: Supports type IX secretion system in gliding; UniProtKB:Q49WP1 (ctaB,
-          Protoheme IX farnesyltransferase) in Staphylococcus saprophyticus subsp.
-          saprophyticus (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 /
-          S-41) provides a verified protein exemplar.
+        notes: Supports type IX secretion system in gliding; UniProtKB:Q1D823 (aglZ,
+          Adventurous-gliding motility protein Z) in Myxococcus xanthus (strain DK1622)
+          provides a verified protein exemplar.
   - node_id: proton_motive_force
     label: proton motive force
     node_type: STATE
@@ -356,6 +353,6 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P08191 (fimH)
-    protein example to node surface_adhesins; added UniProtKB:Q49WP1 (ctaB) protein
+    protein example to node surface_adhesins; added UniProtKB:Q1D823 (aglZ) protein
     example to node type_ix_secretion_system.'
   llm_assisted: true

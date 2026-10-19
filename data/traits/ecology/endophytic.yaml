@@ -50,33 +50,34 @@ causal_graphs:
     description: Residence inside living internal plant tissue without apparent host
       disease.
   - node_id: endophytic_protein_component
-    label: Flagellin
+    label: Nitrogenase iron protein
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Flagellin) associated with endophytic.
+    description: Protein component (Nitrogenase iron protein) associated with endophytic.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - fliC
+    - nifH
     protein_examples:
-    - uniprot_id: UniProtKB:P04949
-      protein_label: Flagellin
-      gene_symbol: fliC
-      taxon_id: NCBITaxon:83333
-      taxon_label: Escherichia coli (strain K12)
+    - uniprot_id: UniProtKB:P00460
+      protein_label: Nitrogenase iron protein
+      gene_symbol: nifH
+      taxon_id: NCBITaxon:266834
+      taxon_label: Rhizobium meliloti (strain 1021)
       entry_status: REVIEWED
-      proteome_id: UP000000625
+      proteome_id: UP000001976
       retrieved_on: '2026-10-17'
-      entry_version: 183
+      entry_version: 159
       sequence_version: 2
-      role: Characteristic protein component (fliC, Flagellin) associated with endophytic
-        in Escherichia coli (strain K12).
+      role: Characteristic protein component (nifH, Nitrogenase iron protein) associated
+        with endophytic in Rhizobium meliloti (strain 1021).
       evidence:
       - reference: DOI:10.3390/microorganisms5040077
         snippet: Endophytic colonization refers to the entry, growth and multiplication
           of endophyte populations within the host plant.
-        notes: Supports Flagellin in endophytic; UniProtKB:P04949 (fliC, Flagellin)
-          in Escherichia coli (strain K12) provides a verified protein exemplar.
+        notes: Supports Nitrogenase iron protein in endophytic; UniProtKB:P00460 (nifH,
+          Nitrogenase iron protein) in Rhizobium meliloti (strain 1021) provides a
+          verified protein exemplar.
   edges:
   - subject: internal_plant_tissue
     predicate: enables
@@ -105,14 +106,14 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: endophytic_trait
-    description: Flagellin (fliC, UniProtKB:P04949) contributes to endophytic (associated
-      with communities, comprising, internally).
+    description: Nitrogenase iron protein (nifH, UniProtKB:P00460) contributes to
+      endophytic.
     evidence:
     - reference: DOI:10.1128/MMBR.00050-14
       snippet: All plants are inhabited internally by diverse microbial communities
         comprising bacterial, archaeal, fungal, and protistic taxa.
-      notes: Supports the functional association between Flagellin (UniProtKB:P04949
-        in Escherichia coli (strain K12)) and endophytic.
+      notes: Supports the functional association between Nitrogenase iron protein
+        (UniProtKB:P00460 in Rhizobium meliloti (strain 1021)) and endophytic.
 curation_history:
 - timestamp: '2026-09-28T19:37:27Z'
   curator: codex
@@ -132,5 +133,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    endophytic_protein_component with UniProtKB:P04949 (fliC) exemplar.'
+    endophytic_protein_component with UniProtKB:P00460 (nifH) exemplar.'
   llm_assisted: true

@@ -27,8 +27,8 @@ causal_graphs:
   title: Plant-pathogen T3SS-effector and wall-degradation program
   scope_status: NONMECHANISTIC
   scope_notes: This broad ecological, host-relationship, habitat, or hazard classification
-    spans multiple taxa and mechanisms; contextual protein nodes do not receive token
-    UniProt examples.
+    spans multiple taxa and mechanisms; contextual protein nodes include source-backed
+    UniProtKB exemplars.
   description: DOI-backed graph linking plant-cell-wall degradation, type III secretion
     of effectors, suppression of plant immunity, and plant tissue colonization to
     the plant-pathogen phenotype.
@@ -47,27 +47,23 @@ causal_graphs:
     description: Secreted enzymes (e.g., pectinases, cellulases) degrading the plant
       cell wall.
     protein_examples:
-    - uniprot_id: UniProtKB:Q49ZB8
-      protein_label: Heme oxygenase
-      gene_symbol: isdG
-      taxon_id: NCBITaxon:342451
-      taxon_label: Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
-        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+    - uniprot_id: UniProtKB:P54937
+      protein_label: Endoglucanase A
+      gene_symbol: celA
+      taxon_id: NCBITaxon:1523
+      taxon_label: Clostridium longisporum
       entry_status: REVIEWED
-      proteome_id: UP000006371
       retrieved_on: '2026-10-17'
-      entry_version: 111
+      entry_version: 103
       sequence_version: 1
-      role: Exemplar protein (isdG, Heme oxygenase) representing plant-cell-wall-degrading
-        enzymes in Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
-        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) for plant pathogen.
+      role: Exemplar protein (celA, Endoglucanase A) representing plant-cell-wall-degrading
+        enzymes in Clostridium longisporum for plant pathogen.
       evidence:
       - reference: DOI:10.1146/annurev.micro.55.1.535
         snippet: cell-wall-degrading enzymes
-        notes: Supports plant-cell-wall-degrading enzymes in plant pathogen; UniProtKB:Q49ZB8
-          (isdG, Heme oxygenase) in Staphylococcus saprophyticus subsp. saprophyticus
-          (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) provides
-          a verified protein exemplar.
+        notes: Supports plant-cell-wall-degrading enzymes in plant pathogen; UniProtKB:P54937
+          (celA, Endoglucanase A) in Clostridium longisporum provides a verified protein
+          exemplar.
   - node_id: t3ss
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Contextual protein family or multiprotein aggregate reviewed
@@ -425,7 +421,7 @@ curation_history:
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
-  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q49ZB8 (isdG)
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P54937 (celA)
     protein example to node cwd_enzymes; added UniProtKB:Q56135 (sctB1) protein example
     to node t3ss; added UniProtKB:Q56135 (sctB1) protein example to node t3ss_effectors;
     added UniProtKB:P0CE12 (sspH2) protein example to node apoplastic_effectors.'

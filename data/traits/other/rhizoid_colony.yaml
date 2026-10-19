@@ -21,9 +21,16 @@ curation_history:
   llm_assisted: true
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed canonical_examples status alongside NONMECHANISTIC protein exemplar
+    graph for rhizoid colony; isolate-level canonical example remains deferred pending
+    explicit strain-level literature.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph rhizoid_colony_graph
-    with GENE_OR_PROTEIN node rhizoid_colony_protein_component and UniProtKB:Q01465
+    with GENE_OR_PROTEIN node rhizoid_colony_protein_component and UniProtKB:P27206
     exemplar.'
   llm_assisted: true
 definition_source: http://purl.obolibrary.org/obo/OMP_0000168
@@ -39,10 +46,10 @@ evidence:
 causal_graphs:
 - graph_id: rhizoid_colony_graph
   title: Protein component associated with rhizoid colony
-  description: Literature-backed association between Cell shape-determining protein
-    MreB (UniProtKB:Q01465) and rhizoid colony.
+  description: Literature-backed association between Surfactin synthase subunit 1
+    (UniProtKB:P27206) and rhizoid colony.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q01465 in Bacillus
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P27206 in Bacillus
     subtilis (strain 168)) associated with rhizoid colony while full multi-step mechanistic
     curation remains future work.
   nodes:
@@ -52,28 +59,26 @@ causal_graphs:
     grounding: METPO:1007068
     description: A colony shape that has a branching, root-like outline.
   - node_id: rhizoid_colony_protein_component
-    label: Cell shape-determining protein MreB
+    label: Surfactin synthase subunit 1
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Cell shape-determining protein MreB) associated
-      with rhizoid colony.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Surfactin synthase subunit 1) associated with
+      rhizoid colony.
+    grounding: InterPro:IPR010071
     gene_symbols:
-    - mreB
+    - srfAA
     protein_examples:
-    - uniprot_id: UniProtKB:Q01465
-      protein_label: Cell shape-determining protein MreB
-      gene_symbol: mreB
+    - uniprot_id: UniProtKB:P27206
+      protein_label: Surfactin synthase subunit 1
+      gene_symbol: srfAA
       taxon_id: NCBITaxon:224308
       taxon_label: Bacillus subtilis (strain 168)
       entry_status: REVIEWED
       proteome_id: UP000001570
       retrieved_on: '2026-10-17'
-      entry_version: 148
-      sequence_version: 3
-      role: Characteristic protein component (mreB, Cell shape-determining protein
-        MreB) associated with rhizoid colony in Bacillus subtilis (strain 168).
+      entry_version: 174
+      sequence_version: 4
+      role: Characteristic protein component (srfAA, Surfactin synthase subunit 1)
+        associated with rhizoid colony in Bacillus subtilis (strain 168).
       evidence:
       - reference: DOI:10.7759/cureus.374
         snippet: Colony morphology is one among the various characters of bacteria,
@@ -82,16 +87,16 @@ causal_graphs:
           (≤ 1 mm), small (2-3 mm), medium (4-5 mm), and large (> 5 mm) colonies),
           shape (circular, irregular, rhomboid, umbonate, umbonate, filamentous, or
           rhizoid)
-        notes: Supports Cell shape-determining protein MreB in rhizoid colony; UniProtKB:Q01465
-          (mreB, Cell shape-determining protein MreB) in Bacillus subtilis (strain
-          168) provides a verified protein exemplar.
+        notes: Supports Surfactin synthase subunit 1 in rhizoid colony; UniProtKB:P27206
+          (srfAA, Surfactin synthase subunit 1) in Bacillus subtilis (strain 168)
+          provides a verified protein exemplar.
   edges:
   - subject: rhizoid_colony_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: rhizoid_colony_trait
-    description: Cell shape-determining protein MreB (mreB, UniProtKB:Q01465) contributes
-      to rhizoid colony (associated with identification, instrumental, filamentous).
+    description: Surfactin synthase subunit 1 (srfAA, UniProtKB:P27206) contributes
+      to rhizoid colony.
     evidence:
     - reference: DOI:10.7759/cureus.374
       snippet: Colony morphology is one among the various characters of bacteria,
@@ -99,5 +104,5 @@ causal_graphs:
         in preliminary identification. Size (measured in millimetres - pinpoint (≤
         1 mm), small (2-3 mm), medium (4-5 mm), and large (> 5 mm) colonies), shape
         (circular, irregular, rhomboid, umbonate, umbonate, filamentous, or rhizoid)
-      notes: Supports the functional association between Cell shape-determining protein
-        MreB (UniProtKB:Q01465 in Bacillus subtilis (strain 168)) and rhizoid colony.
+      notes: Supports the functional association between Surfactin synthase subunit
+        1 (UniProtKB:P27206 in Bacillus subtilis (strain 168)) and rhizoid colony.

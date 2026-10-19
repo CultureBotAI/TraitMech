@@ -113,28 +113,28 @@ causal_graphs:
     description: ABC-type transporters that import compatible solutes like glycine
       betaine.
     protein_examples:
-    - uniprot_id: UniProtKB:Q49XI8
-      protein_label: Phosphate import ATP-binding protein PstB
-      gene_symbol: pstB
-      taxon_id: NCBITaxon:342451
-      taxon_label: Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
-        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+    - uniprot_id: UniProtKB:Q9KIF7
+      protein_label: Glycine betaine transport ATP-binding protein OpuAA
+      gene_symbol: opuAA
+      taxon_id: NCBITaxon:272623
+      taxon_label: Lactococcus lactis subsp. lactis (strain IL1403) (Streptococcus
+        lactis)
       entry_status: REVIEWED
-      proteome_id: UP000006371
+      proteome_id: UP000002196
       retrieved_on: '2026-10-17'
-      entry_version: 133
+      entry_version: 140
       sequence_version: 1
-      role: Exemplar protein (pstB, Phosphate import ATP-binding protein PstB) representing
-        OpuA/OpuC compatible-solute importers in Staphylococcus saprophyticus subsp.
-        saprophyticus (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
-        for NaCl range low.
+      role: Exemplar protein (opuAA, Glycine betaine transport ATP-binding protein
+        OpuAA) representing OpuA/OpuC compatible-solute importers in Lactococcus lactis
+        subsp. lactis (strain IL1403) (Streptococcus lactis) for NaCl range low.
       evidence:
       - reference: DOI:10.1128/mmbr.00181-23
-        snippet: Cyclic di-AMP binds to the CBS domains of compatible solute importers
-        notes: Supports OpuA/OpuC compatible-solute importers in NaCl range low; UniProtKB:Q49XI8
-          (pstB, Phosphate import ATP-binding protein PstB) in Staphylococcus saprophyticus
-          subsp. saprophyticus (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC
-          7292 / S-41) provides a verified protein exemplar.
+        snippet: potassium and compatible solute transport are vital for bacteria
+          to survive changes in external osmolality
+        notes: Supports OpuA/OpuC compatible-solute importers in NaCl range low; UniProtKB:Q9KIF7
+          (opuAA, Glycine betaine transport ATP-binding protein OpuAA) in Lactococcus
+          lactis subsp. lactis (strain IL1403) (Streptococcus lactis) provides a verified
+          protein exemplar.
   - node_id: choline_uptake
     label: choline uptake
     node_type: BIOLOGICAL_PROCESS
@@ -305,6 +305,6 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:T0DVE4 (mscS)
-    protein example to node mechanosensitive_channels; added UniProtKB:Q49XI8 (pstB)
+    protein example to node mechanosensitive_channels; added UniProtKB:Q9KIF7 (opuAA)
     protein example to node opu_solute_importers.'
   llm_assisted: true

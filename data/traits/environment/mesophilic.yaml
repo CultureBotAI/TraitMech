@@ -27,7 +27,7 @@ causal_graphs:
   scope_status: NONMECHANISTIC
   scope_notes: This record is an upper preference, broad tolerance, or central-range
     classification spanning multiple unrelated adaptations; contextual protein nodes
-    are retained without assigning a misleading token UniProt example.
+    are retained with source-backed UniProtKB exemplars.
   description: DOI-backed nonmechanistic graph connecting mesophily to moderate temperature,
     balanced growth, homoviscous membrane fluidity, and cold- and heat-shock boundary-support
     branches.
@@ -61,23 +61,23 @@ causal_graphs:
       aggregate use.
     description: Enzymes with peak activity in the mesophile temperature range.
     protein_examples:
-    - uniprot_id: UniProtKB:P0A6Z3
-      protein_label: Chaperone protein HtpG
-      gene_symbol: htpG
+    - uniprot_id: UniProtKB:P0A6Y8
+      protein_label: Chaperone protein DnaK
+      gene_symbol: dnaK
       taxon_id: NCBITaxon:83333
       taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
       proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 166
-      sequence_version: 1
-      role: Exemplar protein (htpG, Chaperone protein HtpG) representing mesophile
+      entry_version: 183
+      sequence_version: 2
+      role: Exemplar protein (dnaK, Chaperone protein DnaK) representing mesophile
         enzyme repertoire in Escherichia coli (strain K12) for mesophilic.
       evidence:
-      - reference: DOI:10.1016/j.bpj.2013.06.029
-        snippet: Escherichia coli, a mesophilic bacterium
-        notes: Supports mesophile enzyme repertoire in mesophilic; UniProtKB:P0A6Z3
-          (htpG, Chaperone protein HtpG) in Escherichia coli (strain K12) provides
+      - reference: DOI:10.1128/mbio.02174-23
+        snippet: heat shock genes encoding chaperones, such as DnaK and GroEL
+        notes: Supports mesophile enzyme repertoire in mesophilic; UniProtKB:P0A6Y8
+          (dnaK, Chaperone protein DnaK) in Escherichia coli (strain K12) provides
           a verified protein exemplar.
   - node_id: balanced_growth
     label: balanced mesophilic growth
@@ -170,24 +170,24 @@ causal_graphs:
       aggregate use.
     description: Chaperones and proteases induced to mitigate heat stress.
     protein_examples:
-    - uniprot_id: UniProtKB:P0A6Z3
-      protein_label: Chaperone protein HtpG
-      gene_symbol: htpG
+    - uniprot_id: UniProtKB:P0C0V0
+      protein_label: Periplasmic serine endoprotease DegP
+      gene_symbol: degP
       taxon_id: NCBITaxon:83333
       taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
       proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 166
+      entry_version: 161
       sequence_version: 1
-      role: Exemplar protein (htpG, Chaperone protein HtpG) representing heat-shock
-        response proteins in Escherichia coli (strain K12) for mesophilic.
+      role: Exemplar protein (degP, Periplasmic serine endoprotease DegP) representing
+        heat-shock response proteins in Escherichia coli (strain K12) for mesophilic.
       evidence:
       - reference: DOI:10.1128/jb.183.18.5302-5310.2001
         snippet: transient increase in the RpoH level observed upon heat shock
-        notes: Supports heat-shock response proteins in mesophilic; UniProtKB:P0A6Z3
-          (htpG, Chaperone protein HtpG) in Escherichia coli (strain K12) provides
-          a verified protein exemplar.
+        notes: Supports heat-shock response proteins in mesophilic; UniProtKB:P0C0V0
+          (degP, Periplasmic serine endoprotease DegP) in Escherichia coli (strain
+          K12) provides a verified protein exemplar.
   - node_id: dnak
     label: DnaK chaperone
     node_type: GENE_OR_PROTEIN
@@ -505,9 +505,9 @@ curation_history:
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
-  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P0A6Z3 (htpG)
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P0A6Y8 (dnaK)
     protein example to node mesophile_enzyme_repertoire; added UniProtKB:P0A9X9 (cspA)
     protein example to node cspa; added UniProtKB:P0AGB3 (rpoH) protein example to
-    node rpoh_sigma32; added UniProtKB:P0A6Z3 (htpG) protein example to node heat_shock_proteins
+    node rpoh_sigma32; added UniProtKB:P0C0V0 (degP) protein example to node heat_shock_proteins
     (+1 more).'
   llm_assisted: true

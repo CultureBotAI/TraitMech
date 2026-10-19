@@ -152,37 +152,35 @@ causal_graphs:
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
   - node_id: ds_6_system_protein_component
-    label: Serine/threonine-protein kinase toxin HipA
+    label: Endonuclease GajA
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Serine/threonine-protein kinase toxin HipA) associated
-      with DS-6 system.
+    description: Protein component (Endonuclease GajA) associated with DS-6 system.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - hipA
+    - gajA
     protein_examples:
-    - uniprot_id: UniProtKB:Q8FHF4
-      protein_label: Serine/threonine-protein kinase toxin HipA
-      gene_symbol: hipA
-      taxon_id: NCBITaxon:199310
-      taxon_label: Escherichia coli O6:H1 (strain CFT073 / ATCC 700928 / UPEC)
+    - uniprot_id: UniProtKB:P0DW47
+      protein_label: Endonuclease GajA
+      gene_symbol: gajA
+      taxon_id: NCBITaxon:1053212
+      taxon_label: Bacillus cereus (strain HuB5-5)
       entry_status: REVIEWED
-      proteome_id: UP000001410
       retrieved_on: '2026-10-17'
-      entry_version: 108
-      sequence_version: 2
-      role: Characteristic protein component (hipA, Serine/threonine-protein kinase
-        toxin HipA) associated with DS-6 system in Escherichia coli O6:H1 (strain
-        CFT073 / ATCC 700928 / UPEC).
+      entry_version: 12
+      sequence_version: 1
+      role: Characteristic protein component (gajA, Endonuclease GajA) associated
+        with DS-6 system in Bacillus cereus (strain HuB5-5).
       evidence:
-      - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
-        snippet: Stk2 | 10\.1016/j\.chom\.2016\.08\.010 | A eukaryotic-like Serine/threonine
-          kinase protects staphylococci against phages
-        notes: Supports Serine/threonine-protein kinase toxin HipA in DS-6 system;
-          UniProtKB:Q8FHF4 (hipA, Serine/threonine-protein kinase toxin HipA) in Escherichia
-          coli O6:H1 (strain CFT073 / ATCC 700928 / UPEC) provides a verified protein
-          exemplar.
+      - reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S6.xlsx
+        snippet: PD3A NZ_RRVF01000002.1 GCF_003886115.1 - True False True True DefensePredictor
+          hits 104144 108678 restriction endonuclease, AAA family ATPase WP_059339975.1,
+          WP_064766070.1 14.31811904122612 6.906754778648663 True True Remote defense
+          homolog DS-12
+        notes: Supports Endonuclease GajA in DS-6 system; UniProtKB:P0DW47 (gajA,
+          Endonuclease GajA) in Bacillus cereus (strain HuB5-5) provides a verified
+          protein exemplar.
   edges:
   - subject: ds_6_locus
     predicate: contributes to
@@ -287,15 +285,15 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: ds_6_system_trait
-    description: Serine/threonine-protein kinase toxin HipA (hipA, UniProtKB:Q8FHF4)
-      contributes to DS-6 system (associated with staphylococci, eukaryotic, threonine).
+    description: Endonuclease GajA (gajA, UniProtKB:P0DW47) contributes to DS-6 system.
     evidence:
-    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
-      snippet: Stk2 | 10\.1016/j\.chom\.2016\.08\.010 | A eukaryotic-like Serine/threonine
-        kinase protects staphylococci against phages
-      notes: Supports the functional association between Serine/threonine-protein
-        kinase toxin HipA (UniProtKB:Q8FHF4 in Escherichia coli O6:H1 (strain CFT073
-        / ATCC 700928 / UPEC)) and DS-6 system.
+    - reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S6.xlsx
+      snippet: PD3A NZ_RRVF01000002.1 GCF_003886115.1 - True False True True DefensePredictor
+        hits 104144 108678 restriction endonuclease, AAA family ATPase WP_059339975.1,
+        WP_064766070.1 14.31811904122612 6.906754778648663 True True Remote defense
+        homolog DS-12
+      notes: Supports the functional association between Endonuclease GajA (UniProtKB:P0DW47
+        in Bacillus cereus (strain HuB5-5)) and DS-6 system.
 discussions:
 - discussion_id: ds-6-defensefinder-model-gap
   prompt: Resolve DS-6 native host breadth, exact two-component activities, DS-6 profile-to-protein
@@ -429,5 +427,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    ds_6_system_protein_component with UniProtKB:Q8FHF4 (hipA) exemplar.'
+    ds_6_system_protein_component with UniProtKB:P0DW47 (gajA) exemplar.'
   llm_assisted: true

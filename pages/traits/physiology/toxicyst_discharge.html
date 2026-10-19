@@ -69,9 +69,9 @@
 
     <div class="card causal-graph-card">
       <h2>Protein component associated with toxicyst discharge</h2>
-      <p class="meta">Literature-backed association between DNA damage-binding protein CMR1 (UniProtKB:Q12510) and toxicyst discharge.</p>
+      <p class="meta">Literature-backed association between Autophagy-related protein 11 (UniProtKB:Q12527) and toxicyst discharge.</p>
 
-      <p class="graph-scope"><code>NONMECHANISTIC</code> · Captures a source-backed protein exemplar (UniProtKB:Q12510 in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker&#39;s yeast)) associated with toxicyst discharge while full multi-step mechanistic curation remains future work.</p>
+      <p class="graph-scope"><code>NONMECHANISTIC</code> · Captures a source-backed protein exemplar (UniProtKB:Q12527 in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker&#39;s yeast)) associated with toxicyst discharge while full multi-step mechanistic curation remains future work.</p>
 
 
       <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
@@ -90,17 +90,17 @@
         <ul>
 
           <li id="pathograph-1-edge-1">
-            <strong>DNA damage-binding protein CMR1</strong>
+            <strong>Autophagy-related protein 11</strong>
             <span class="edge-predicate">contributes to</span>
             <strong>toxicyst discharge</strong>
             <code>RO:0002326</code>
-            <p>DNA damage-binding protein CMR1 (CMR1, UniProtKB:Q12510) contributes to toxicyst discharge (associated with understanding, discharge, toxicyst).</p>
+            <p>Autophagy-related protein 11 (ATG11, UniProtKB:Q12527) contributes to toxicyst discharge.</p>
             <ul>
 
               <li>
                 <a href="https://doi.org/10.1186/s12915-024-01904-2" rel="nofollow noreferrer"><code>DOI:10.1186/s12915-024-01904-2</code></a>
                 <span class="evidence-snippet">However, our understanding of the genetic processes and specific toxins involved in toxicyst formation and discharge is still limited.</span>
-                <span class="meta">Supports the functional association between DNA damage-binding protein CMR1 (UniProtKB:Q12510 in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker&#39;s yeast)) and toxicyst discharge.</span>
+                <span class="meta">Supports the functional association between Autophagy-related protein 11 (UniProtKB:Q12527 in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker&#39;s yeast)) and toxicyst discharge.</span>
               </li>
 
             </ul>
@@ -121,11 +121,11 @@
             <tbody>
 
               <tr>
-                <td>DNA damage-binding protein CMR1</td>
+                <td>Autophagy-related protein 11</td>
                 <td>
 
-                  <a href="https://www.uniprot.org/uniprotkb/Q12510/entry" rel="nofollow noreferrer"><code>UniProtKB:Q12510</code></a>
-                  <br>DNA damage-binding protein CMR1 <span class="meta">(CMR1)</span>
+                  <a href="https://www.uniprot.org/uniprotkb/Q12527/entry" rel="nofollow noreferrer"><code>UniProtKB:Q12527</code></a>
+                  <br>Autophagy-related protein 11 <span class="meta">(ATG11)</span>
                 </td>
                 <td>
 
@@ -134,16 +134,16 @@
                 </td>
                 <td>
                   <code>REVIEWED</code><br>
-                  <span class="meta">retrieved 2026-10-17 · entry v191 · sequence v1</span>
+                  <span class="meta">retrieved 2026-10-17 · entry v175 · sequence v1</span>
                 </td>
                 <td>
-                  <p>Characteristic protein component (CMR1, DNA damage-binding protein CMR1) associated with toxicyst discharge in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker&#39;s yeast).</p>
+                  <p>Characteristic protein component (ATG11, Autophagy-related protein 11) associated with toxicyst discharge in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker&#39;s yeast).</p>
                   <ul>
 
                     <li>
                       <a href="https://doi.org/10.1186/s12915-024-01904-2" rel="nofollow noreferrer"><code>DOI:10.1186/s12915-024-01904-2</code></a>
                       <span class="evidence-snippet">However, our understanding of the genetic processes and specific toxins involved in toxicyst formation and discharge is still limited.</span>
-                      <span class="meta">Supports DNA damage-binding protein CMR1 in toxicyst discharge; UniProtKB:Q12510 (CMR1, DNA damage-binding protein CMR1) in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker&#39;s yeast) provides a verified protein exemplar.</span>
+                      <span class="meta">Supports Autophagy-related protein 11 in toxicyst discharge; UniProtKB:Q12527 (ATG11, Autophagy-related protein 11) in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker&#39;s yeast) provides a verified protein exemplar.</span>
                     </li>
 
                   </ul>
@@ -292,8 +292,14 @@
 
         <li>
           <time>2026-10-17T09:00:00Z</time> ·
+          <strong>REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP</strong> · codex
+          <p class="changes">Reviewed canonical_examples status alongside NONMECHANISTIC protein exemplar graph for toxicyst discharge; isolate-level canonical example remains deferred pending explicit strain-level literature.</p>
+        </li>
+
+        <li>
+          <time>2026-10-17T09:00:00Z</time> ·
           <strong>CURATE_PROTEIN_TAXON_EXAMPLE</strong> · codex
-          <p class="changes">Curated verified UniProtKB protein_examples: added causal graph toxicyst_discharge_graph with GENE_OR_PROTEIN node toxicyst_discharge_protein_component and UniProtKB:Q12510 exemplar.</p>
+          <p class="changes">Curated verified UniProtKB protein_examples: added causal graph toxicyst_discharge_graph with GENE_OR_PROTEIN node toxicyst_discharge_protein_component and UniProtKB:Q12527 exemplar.</p>
         </li>
 
       </ol>
@@ -672,7 +678,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Literature-backed association between DNA damage-binding protein CMR1 (UniProtKB:Q12510) and toxicyst discharge.", "edges": [{"description": "DNA damage-binding protein CMR1 (CMR1, UniProtKB:Q12510) contributes to toxicyst discharge (associated with understanding, discharge, toxicyst).", "evidence": [{"notes": "Supports the functional association between DNA damage-binding protein CMR1 (UniProtKB:Q12510 in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker\u0027s yeast)) and toxicyst discharge.", "reference": "DOI:10.1186/s12915-024-01904-2", "snippet": "However, our understanding of the genetic processes and specific toxins involved in toxicyst formation and discharge is still limited."}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "toxicyst_discharge_protein_component", "target": "toxicyst_discharge_trait"}], "evidence_rows": [{"description": "DNA damage-binding protein CMR1 (CMR1, UniProtKB:Q12510) contributes to toxicyst discharge (associated with understanding, discharge, toxicyst).", "edge_id": "edge-1", "evidence": [{"notes": "Supports the functional association between DNA damage-binding protein CMR1 (UniProtKB:Q12510 in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker\u0027s yeast)) and toxicyst discharge.", "reference": "DOI:10.1186/s12915-024-01904-2", "snippet": "However, our understanding of the genetic processes and specific toxins involved in toxicyst formation and discharge is still limited."}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "DNA damage-binding protein CMR1", "target": "toxicyst discharge"}], "graph_id": "toxicyst_discharge_graph", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Protein component (DNA damage-binding protein CMR1) associated with toxicyst discharge.", "grounding": null, "id": "toxicyst_discharge_protein_component", "is_orphan": false, "label": "DNA damage-binding protein CMR1", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 191, "evidence": [{"notes": "Supports DNA damage-binding protein CMR1 in toxicyst discharge; UniProtKB:Q12510 (CMR1, DNA damage-binding protein CMR1) in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker\u0027s yeast) provides a verified protein exemplar.", "reference": "DOI:10.1186/s12915-024-01904-2", "snippet": "However, our understanding of the genetic processes and specific toxins involved in toxicyst formation and discharge is still limited."}], "gene_symbol": "CMR1", "protein_label": "DNA damage-binding protein CMR1", "proteome_id": "UP000002311", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (CMR1, DNA damage-binding protein CMR1) associated with toxicyst discharge in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker\u0027s yeast).", "sequence_version": 1, "taxon_id": "NCBITaxon:559292", "taxon_label": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker\u0027s yeast)", "uniprot_id": "UniProtKB:Q12510"}], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "A physiological phenotype in which a microbial cell releases material from toxicysts, its offensive extrusomes, to the cell exterior.", "grounding": "traitmech:000685", "id": "toxicyst_discharge_trait", "is_orphan": false, "label": "toxicyst discharge", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 191, "evidence": [{"notes": "Supports DNA damage-binding protein CMR1 in toxicyst discharge; UniProtKB:Q12510 (CMR1, DNA damage-binding protein CMR1) in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker\u0027s yeast) provides a verified protein exemplar.", "reference": "DOI:10.1186/s12915-024-01904-2", "snippet": "However, our understanding of the genetic processes and specific toxins involved in toxicyst formation and discharge is still limited."}], "gene_symbol": "CMR1", "node_id": "toxicyst_discharge_protein_component", "node_label": "DNA damage-binding protein CMR1", "protein_label": "DNA damage-binding protein CMR1", "proteome_id": "UP000002311", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (CMR1, DNA damage-binding protein CMR1) associated with toxicyst discharge in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker\u0027s yeast).", "sequence_version": 1, "taxon_id": "NCBITaxon:559292", "taxon_label": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker\u0027s yeast)", "uniprot_id": "UniProtKB:Q12510"}], "scope_notes": "Captures a source-backed protein exemplar (UniProtKB:Q12510 in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker\u0027s yeast)) associated with toxicyst discharge while full multi-step mechanistic curation remains future work.", "scope_status": "NONMECHANISTIC", "title": "Protein component associated with toxicyst discharge"}];
+  var graphs = [{"description": "Literature-backed association between Autophagy-related protein 11 (UniProtKB:Q12527) and toxicyst discharge.", "edges": [{"description": "Autophagy-related protein 11 (ATG11, UniProtKB:Q12527) contributes to toxicyst discharge.", "evidence": [{"notes": "Supports the functional association between Autophagy-related protein 11 (UniProtKB:Q12527 in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker\u0027s yeast)) and toxicyst discharge.", "reference": "DOI:10.1186/s12915-024-01904-2", "snippet": "However, our understanding of the genetic processes and specific toxins involved in toxicyst formation and discharge is still limited."}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "toxicyst_discharge_protein_component", "target": "toxicyst_discharge_trait"}], "evidence_rows": [{"description": "Autophagy-related protein 11 (ATG11, UniProtKB:Q12527) contributes to toxicyst discharge.", "edge_id": "edge-1", "evidence": [{"notes": "Supports the functional association between Autophagy-related protein 11 (UniProtKB:Q12527 in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker\u0027s yeast)) and toxicyst discharge.", "reference": "DOI:10.1186/s12915-024-01904-2", "snippet": "However, our understanding of the genetic processes and specific toxins involved in toxicyst formation and discharge is still limited."}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Autophagy-related protein 11", "target": "toxicyst discharge"}], "graph_id": "toxicyst_discharge_graph", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Protein component (Autophagy-related protein 11) associated with toxicyst discharge.", "grounding": "InterPro:IPR040040", "id": "toxicyst_discharge_protein_component", "is_orphan": false, "label": "Autophagy-related protein 11", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 175, "evidence": [{"notes": "Supports Autophagy-related protein 11 in toxicyst discharge; UniProtKB:Q12527 (ATG11, Autophagy-related protein 11) in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker\u0027s yeast) provides a verified protein exemplar.", "reference": "DOI:10.1186/s12915-024-01904-2", "snippet": "However, our understanding of the genetic processes and specific toxins involved in toxicyst formation and discharge is still limited."}], "gene_symbol": "ATG11", "protein_label": "Autophagy-related protein 11", "proteome_id": "UP000002311", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (ATG11, Autophagy-related protein 11) associated with toxicyst discharge in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker\u0027s yeast).", "sequence_version": 1, "taxon_id": "NCBITaxon:559292", "taxon_label": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker\u0027s yeast)", "uniprot_id": "UniProtKB:Q12527"}], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "A physiological phenotype in which a microbial cell releases material from toxicysts, its offensive extrusomes, to the cell exterior.", "grounding": "traitmech:000685", "id": "toxicyst_discharge_trait", "is_orphan": false, "label": "toxicyst discharge", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 175, "evidence": [{"notes": "Supports Autophagy-related protein 11 in toxicyst discharge; UniProtKB:Q12527 (ATG11, Autophagy-related protein 11) in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker\u0027s yeast) provides a verified protein exemplar.", "reference": "DOI:10.1186/s12915-024-01904-2", "snippet": "However, our understanding of the genetic processes and specific toxins involved in toxicyst formation and discharge is still limited."}], "gene_symbol": "ATG11", "node_id": "toxicyst_discharge_protein_component", "node_label": "Autophagy-related protein 11", "protein_label": "Autophagy-related protein 11", "proteome_id": "UP000002311", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (ATG11, Autophagy-related protein 11) associated with toxicyst discharge in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker\u0027s yeast).", "sequence_version": 1, "taxon_id": "NCBITaxon:559292", "taxon_label": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker\u0027s yeast)", "uniprot_id": "UniProtKB:Q12527"}], "scope_notes": "Captures a source-backed protein exemplar (UniProtKB:Q12527 in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker\u0027s yeast)) associated with toxicyst discharge while full multi-step mechanistic curation remains future work.", "scope_status": "NONMECHANISTIC", "title": "Protein component associated with toxicyst discharge"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });

@@ -61,17 +61,16 @@ curation_history:
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph acetone_butanol_ethanol_fermentation_graph
     with GENE_OR_PROTEIN node acetone_butanol_ethanol_fermentation_protein_component
-    and UniProtKB:Q49VI3 exemplar.'
+    and UniProtKB:P0A9Q7 exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: acetone_butanol_ethanol_fermentation_graph
   title: Protein component associated with acetone-butanol-ethanol fermentation
-  description: Literature-backed association between Teichoic acids export ATP-binding
-    protein TagH (UniProtKB:Q49VI3) and acetone-butanol-ethanol fermentation.
+  description: Literature-backed association between Bifunctional aldehyde-alcohol
+    dehydrogenase AdhE (UniProtKB:P0A9Q7) and acetone-butanol-ethanol fermentation.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q49VI3 in Staphylococcus
-    saprophyticus subsp. saprophyticus (strain ATCC 15305 / DSM 20229 / NCIMB 8711
-    / NCTC 7292 / S-41)) associated with acetone-butanol-ethanol fermentation while
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P0A9Q7 in Escherichia
+    coli (strain K12)) associated with acetone-butanol-ethanol fermentation while
     full multi-step mechanistic curation remains future work.
   nodes:
   - node_id: acetone_butanol_ethanol_fermentation_trait
@@ -82,57 +81,51 @@ causal_graphs:
       sources to organic acids and then reassimilate those acids to produce acetone,
       butanol, and ethanol solvents.
   - node_id: acetone_butanol_ethanol_fermentation_protein_component
-    label: Teichoic acids export ATP-binding protein TagH
+    label: Bifunctional aldehyde-alcohol dehydrogenase AdhE
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Teichoic acids export ATP-binding protein TagH)
+    description: Protein component (Bifunctional aldehyde-alcohol dehydrogenase AdhE)
       associated with acetone-butanol-ethanol fermentation.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - tagH
+    - adhE
     protein_examples:
-    - uniprot_id: UniProtKB:Q49VI3
-      protein_label: Teichoic acids export ATP-binding protein TagH
-      gene_symbol: tagH
-      taxon_id: NCBITaxon:342451
-      taxon_label: Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
-        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+    - uniprot_id: UniProtKB:P0A9Q7
+      protein_label: Bifunctional aldehyde-alcohol dehydrogenase AdhE
+      gene_symbol: adhE
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
-      proteome_id: UP000006371
+      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 132
-      sequence_version: 1
-      role: Characteristic protein component (tagH, Teichoic acids export ATP-binding
-        protein TagH) associated with acetone-butanol-ethanol fermentation in Staphylococcus
-        saprophyticus subsp. saprophyticus (strain ATCC 15305 / DSM 20229 / NCIMB
-        8711 / NCTC 7292 / S-41).
+      entry_version: 154
+      sequence_version: 2
+      role: Characteristic protein component (adhE, Bifunctional aldehyde-alcohol
+        dehydrogenase AdhE) associated with acetone-butanol-ethanol fermentation in
+        Escherichia coli (strain K12).
       evidence:
       - reference: DOI:10.1073/pnas.1423143112
         snippet: One canonical example of such processes is acetone-butanol-ethanol
           (ABE) fermentation by Clostridium acetobutylicum, during which cells convert
           carbon sources to organic acids that are later reassimilated to produce
           solvents as a strategy for cellular survival.
-        notes: Supports Teichoic acids export ATP-binding protein TagH in acetone-butanol-ethanol
-          fermentation; UniProtKB:Q49VI3 (tagH, Teichoic acids export ATP-binding
-          protein TagH) in Staphylococcus saprophyticus subsp. saprophyticus (strain
-          ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) provides a verified
-          protein exemplar.
+        notes: Supports Bifunctional aldehyde-alcohol dehydrogenase AdhE in acetone-butanol-ethanol
+          fermentation; UniProtKB:P0A9Q7 (adhE, Bifunctional aldehyde-alcohol dehydrogenase
+          AdhE) in Escherichia coli (strain K12) provides a verified protein exemplar.
   edges:
   - subject: acetone_butanol_ethanol_fermentation_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: acetone_butanol_ethanol_fermentation_trait
-    description: Teichoic acids export ATP-binding protein TagH (tagH, UniProtKB:Q49VI3)
-      contributes to acetone-butanol-ethanol fermentation (associated with acetobutylicum,
-      reassimilated, fermentation).
+    description: Bifunctional aldehyde-alcohol dehydrogenase AdhE (adhE, UniProtKB:P0A9Q7)
+      contributes to acetone-butanol-ethanol fermentation.
     evidence:
     - reference: DOI:10.1073/pnas.1423143112
       snippet: One canonical example of such processes is acetone-butanol-ethanol
         (ABE) fermentation by Clostridium acetobutylicum, during which cells convert
         carbon sources to organic acids that are later reassimilated to produce solvents
         as a strategy for cellular survival.
-      notes: Supports the functional association between Teichoic acids export ATP-binding
-        protein TagH (UniProtKB:Q49VI3 in Staphylococcus saprophyticus subsp. saprophyticus
-        (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)) and acetone-butanol-ethanol
-        fermentation.
+      notes: Supports the functional association between Bifunctional aldehyde-alcohol
+        dehydrogenase AdhE (UniProtKB:P0A9Q7 in Escherichia coli (strain K12)) and
+        acetone-butanol-ethanol fermentation.

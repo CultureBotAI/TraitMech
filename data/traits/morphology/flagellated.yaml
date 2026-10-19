@@ -98,26 +98,25 @@ causal_graphs:
     description: fT3SS at the flagellar base that exports structural subunits to the
       assembly site.
     protein_examples:
-    - uniprot_id: UniProtKB:P37617
-      protein_label: Zinc/cadmium/lead-transporting P-type ATPase
-      gene_symbol: zntA
+    - uniprot_id: UniProtKB:P06974
+      protein_label: Flagellar motor switch protein FliM
+      gene_symbol: fliM
       taxon_id: NCBITaxon:83333
       taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
       proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 213
+      entry_version: 189
       sequence_version: 1
-      role: Exemplar protein (zntA, Zinc/cadmium/lead-transporting P-type ATPase)
-        representing flagellar type III secretion system in Escherichia coli (strain
-        K12) for flagellated.
+      role: Exemplar protein (fliM, Flagellar motor switch protein FliM) representing
+        flagellar type III secretion system in Escherichia coli (strain K12) for flagellated.
       evidence:
       - reference: DOI:10.3390/biom11020186
         snippet: Around 20,000 subunits of flagellin assemble to form the flagellar
           filament
-        notes: Supports flagellar type III secretion system in flagellated; UniProtKB:P37617
-          (zntA, Zinc/cadmium/lead-transporting P-type ATPase) in Escherichia coli
-          (strain K12) provides a verified protein exemplar.
+        notes: Supports flagellar type III secretion system in flagellated; UniProtKB:P06974
+          (fliM, Flagellar motor switch protein FliM) in Escherichia coli (strain
+          K12) provides a verified protein exemplar.
   - node_id: flagellar_structural_subunits
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
@@ -514,7 +513,7 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P33977 (flbY)
-    protein example to node flagellar_basal_body; added UniProtKB:P37617 (zntA) protein
+    protein example to node flagellar_basal_body; added UniProtKB:P06974 (fliM) protein
     example to node ft3ss_export_system; added UniProtKB:P52612 (fliI) protein example
     to node flii_atpase_complex; added UniProtKB:P24216 (fliD) protein example to
     node fld_filament_cap (+2 more).'

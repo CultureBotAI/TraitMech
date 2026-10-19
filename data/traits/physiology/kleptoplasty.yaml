@@ -113,18 +113,18 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph kleptoplasty_graph
-    with GENE_OR_PROTEIN node kleptoplasty_protein_component and UniProtKB:Q5AD13
+    with GENE_OR_PROTEIN node kleptoplasty_protein_component and UniProtKB:P05434
     exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: kleptoplasty_graph
   title: Protein component associated with kleptoplasty
-  description: Literature-backed association between Filamentous growth regulator
-    15 (UniProtKB:Q5AD13) and kleptoplasty.
+  description: Literature-backed association between Caltractin (UniProtKB:P05434)
+    and kleptoplasty.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q5AD13 in Candida
-    albicans (strain SC5314 / ATCC MYA-2876) (Yeast)) associated with kleptoplasty
-    while full multi-step mechanistic curation remains future work.
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P05434 in Chlamydomonas
+    reinhardtii (Chlamydomonas smithii)) associated with kleptoplasty while full multi-step
+    mechanistic curation remains future work.
   nodes:
   - node_id: kleptoplasty_trait
     label: kleptoplasty
@@ -134,47 +134,37 @@ causal_graphs:
       retains plastids acquired from algal prey after discarding or digesting other
       prey components.
   - node_id: kleptoplasty_protein_component
-    label: Filamentous growth regulator 15
+    label: Caltractin
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Filamentous growth regulator 15) associated with
-      kleptoplasty.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
-    gene_symbols:
-    - FGR15
+    description: Protein component (Caltractin) associated with kleptoplasty.
+    grounding: InterPro:IPR050230
     protein_examples:
-    - uniprot_id: UniProtKB:Q5AD13
-      protein_label: Filamentous growth regulator 15
-      gene_symbol: FGR15
-      taxon_id: NCBITaxon:237561
-      taxon_label: Candida albicans (strain SC5314 / ATCC MYA-2876) (Yeast)
+    - uniprot_id: UniProtKB:P05434
+      protein_label: Caltractin
+      taxon_id: NCBITaxon:3055
+      taxon_label: Chlamydomonas reinhardtii (Chlamydomonas smithii)
       entry_status: REVIEWED
-      proteome_id: UP000000559
       retrieved_on: '2026-10-17'
-      entry_version: 100
-      sequence_version: 2
-      role: Characteristic protein component (FGR15, Filamentous growth regulator
-        15) associated with kleptoplasty in Candida albicans (strain SC5314 / ATCC
-        MYA-2876) (Yeast).
+      entry_version: 163
+      sequence_version: 1
+      role: Characteristic protein component (P05434, Caltractin) associated with
+        kleptoplasty in Chlamydomonas reinhardtii (Chlamydomonas smithii).
       evidence:
       - reference: DOI:10.1038/s41598-018-28455-1
         snippet: Kleptoplasty is defined as the process in which a cell sequesters
           algal chloroplasts while discarding or digesting other algal components
-        notes: Supports Filamentous growth regulator 15 in kleptoplasty; UniProtKB:Q5AD13
-          (FGR15, Filamentous growth regulator 15) in Candida albicans (strain SC5314
-          / ATCC MYA-2876) (Yeast) provides a verified protein exemplar.
+        notes: Supports Caltractin in kleptoplasty; UniProtKB:P05434 (P05434, Caltractin)
+          in Chlamydomonas reinhardtii (Chlamydomonas smithii) provides a verified
+          protein exemplar.
   edges:
   - subject: kleptoplasty_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: kleptoplasty_trait
-    description: Filamentous growth regulator 15 (FGR15, UniProtKB:Q5AD13) contributes
-      to kleptoplasty (associated with chloroplasts, kleptoplasty, discarding).
+    description: Caltractin (P05434, UniProtKB:P05434) contributes to kleptoplasty.
     evidence:
     - reference: DOI:10.1038/s41598-018-28455-1
       snippet: Kleptoplasty is defined as the process in which a cell sequesters algal
         chloroplasts while discarding or digesting other algal components
-      notes: Supports the functional association between Filamentous growth regulator
-        15 (UniProtKB:Q5AD13 in Candida albicans (strain SC5314 / ATCC MYA-2876) (Yeast))
-        and kleptoplasty.
+      notes: Supports the functional association between Caltractin (UniProtKB:P05434
+        in Chlamydomonas reinhardtii (Chlamydomonas smithii)) and kleptoplasty.

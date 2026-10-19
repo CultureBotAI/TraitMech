@@ -56,26 +56,25 @@ causal_graphs:
     description: Enzyme family catalyzing Mn(II) oxidation in bacteria.
     grounding: InterPro:IPR045087
     protein_examples:
-    - uniprot_id: UniProtKB:P0ABI8
-      protein_label: Cytochrome bo(3) ubiquinol oxidase subunit 1
-      gene_symbol: cyoB
-      taxon_id: NCBITaxon:83333
-      taxon_label: Escherichia coli (strain K12)
+    - uniprot_id: UniProtKB:P98059
+      protein_label: Cytochrome c oxidase subunit 1
+      gene_symbol: ctaD
+      taxon_id: NCBITaxon:1061
+      taxon_label: Rhodobacter capsulatus (Rhodopseudomonas capsulata)
       entry_status: REVIEWED
-      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 154
+      entry_version: 116
       sequence_version: 1
-      role: Exemplar protein (cyoB, Cytochrome bo(3) ubiquinol oxidase subunit 1)
-        representing multicopper oxidase in Escherichia coli (strain K12) for manganese
+      role: Exemplar protein (ctaD, Cytochrome c oxidase subunit 1) representing multicopper
+        oxidase in Rhodobacter capsulatus (Rhodopseudomonas capsulata) for manganese
         oxidation.
       evidence:
       - reference: DOI:10.1016/j.tim.2005.07.009
         snippet: the reaction might involve a unique multicopper oxidase system capable
           of a two-electron oxidation of the substrate
-        notes: Supports multicopper oxidase in manganese oxidation; UniProtKB:P0ABI8
-          (cyoB, Cytochrome bo(3) ubiquinol oxidase subunit 1) in Escherichia coli
-          (strain K12) provides a verified protein exemplar.
+        notes: Supports multicopper oxidase in manganese oxidation; UniProtKB:P98059
+          (ctaD, Cytochrome c oxidase subunit 1) in Rhodobacter capsulatus (Rhodopseudomonas
+          capsulata) provides a verified protein exemplar.
   - node_id: manganese_peroxidase
     label: manganese peroxidase
     node_type: GENE_OR_PROTEIN
@@ -318,6 +317,6 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:Q02567
-    version metadata (entry_version=151, sequence_version=1); added UniProtKB:P0ABI8
-    (cyoB) protein example to node multicopper_oxidase.'
+    version metadata (entry_version=151, sequence_version=1); added UniProtKB:P98059
+    (ctaD) protein example to node multicopper_oxidase.'
   llm_assisted: true

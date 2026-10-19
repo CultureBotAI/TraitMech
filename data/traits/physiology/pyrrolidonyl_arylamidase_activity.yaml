@@ -53,17 +53,17 @@ curation_history:
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph pyrrolidonyl_arylamidase_activity_graph
     with GENE_OR_PROTEIN node pyrrolidonyl_arylamidase_activity_protein_component
-    and UniProtKB:P97224 exemplar.'
+    and UniProtKB:Q53596 exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: pyrrolidonyl_arylamidase_activity_graph
   title: Protein component associated with pyrrolidonyl arylamidase activity
-  description: Literature-backed association between Thiosulfate dehydrogenase [quinone]
-    small subunit (UniProtKB:P97224) and pyrrolidonyl arylamidase activity.
+  description: Literature-backed association between Pyrrolidone-carboxylate peptidase
+    (UniProtKB:Q53596) and pyrrolidonyl arylamidase activity.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P97224 in Acidianus
-    ambivalens (Desulfurolobus ambivalens)) associated with pyrrolidonyl arylamidase
-    activity while full multi-step mechanistic curation remains future work.
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q53596 in Staphylococcus
+    aureus) associated with pyrrolidonyl arylamidase activity while full multi-step
+    mechanistic curation remains future work.
   nodes:
   - node_id: pyrrolidonyl_arylamidase_activity_trait
     label: pyrrolidonyl arylamidase activity
@@ -73,50 +73,44 @@ causal_graphs:
       active pyrrolidonyl arylamidase enzymes that release N-terminal pyroglutamyl
       groups from peptide substrates.
   - node_id: pyrrolidonyl_arylamidase_activity_protein_component
-    label: Thiosulfate dehydrogenase [quinone] small subunit
+    label: Pyrrolidone-carboxylate peptidase
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Thiosulfate dehydrogenase [quinone] small subunit)
-      associated with pyrrolidonyl arylamidase activity.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Pyrrolidone-carboxylate peptidase) associated
+      with pyrrolidonyl arylamidase activity.
+    grounding: InterPro:IPR000816
     gene_symbols:
-    - doxA
+    - pcp
     protein_examples:
-    - uniprot_id: UniProtKB:P97224
-      protein_label: Thiosulfate dehydrogenase [quinone] small subunit
-      gene_symbol: doxA
-      taxon_id: NCBITaxon:2283
-      taxon_label: Acidianus ambivalens (Desulfurolobus ambivalens)
+    - uniprot_id: UniProtKB:Q53596
+      protein_label: Pyrrolidone-carboxylate peptidase
+      gene_symbol: pcp
+      taxon_id: NCBITaxon:1280
+      taxon_label: Staphylococcus aureus
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      entry_version: 59
+      entry_version: 107
       sequence_version: 1
-      role: Characteristic protein component (doxA, Thiosulfate dehydrogenase [quinone]
-        small subunit) associated with pyrrolidonyl arylamidase activity in Acidianus
-        ambivalens (Desulfurolobus ambivalens).
+      role: Characteristic protein component (pcp, Pyrrolidone-carboxylate peptidase)
+        associated with pyrrolidonyl arylamidase activity in Staphylococcus aureus.
       evidence:
       - reference: DOI:10.1128/JCM.37.11.3443-3447.1999
         snippet: The strains displayed acid phosphatase, alkaline phosphatase, ester
           lipase C8 (weak reaction), esterase C4 (weak reaction), leucine arylamidase,
           phosphoamidase, and pyrrolidonyl arylamidase activity.
-        notes: Supports Thiosulfate dehydrogenase [quinone] small subunit in pyrrolidonyl
-          arylamidase activity; UniProtKB:P97224 (doxA, Thiosulfate dehydrogenase
-          [quinone] small subunit) in Acidianus ambivalens (Desulfurolobus ambivalens)
-          provides a verified protein exemplar.
+        notes: Supports Pyrrolidone-carboxylate peptidase in pyrrolidonyl arylamidase
+          activity; UniProtKB:Q53596 (pcp, Pyrrolidone-carboxylate peptidase) in Staphylococcus
+          aureus provides a verified protein exemplar.
   edges:
   - subject: pyrrolidonyl_arylamidase_activity_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: pyrrolidonyl_arylamidase_activity_trait
-    description: Thiosulfate dehydrogenase [quinone] small subunit (doxA, UniProtKB:P97224)
-      contributes to pyrrolidonyl arylamidase activity (associated with phosphoamidase,
-      pyrrolidonyl, arylamidase).
+    description: Pyrrolidone-carboxylate peptidase (pcp, UniProtKB:Q53596) contributes
+      to pyrrolidonyl arylamidase activity.
     evidence:
     - reference: DOI:10.1128/JCM.37.11.3443-3447.1999
       snippet: The strains displayed acid phosphatase, alkaline phosphatase, ester
         lipase C8 (weak reaction), esterase C4 (weak reaction), leucine arylamidase,
         phosphoamidase, and pyrrolidonyl arylamidase activity.
-      notes: Supports the functional association between Thiosulfate dehydrogenase
-        [quinone] small subunit (UniProtKB:P97224 in Acidianus ambivalens (Desulfurolobus
-        ambivalens)) and pyrrolidonyl arylamidase activity.
+      notes: Supports the functional association between Pyrrolidone-carboxylate peptidase
+        (UniProtKB:Q53596 in Staphylococcus aureus) and pyrrolidonyl arylamidase activity.

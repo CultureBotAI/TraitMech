@@ -60,18 +60,18 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph chlorate_respiration_graph
-    with GENE_OR_PROTEIN node chlorate_respiration_protein_component and UniProtKB:P0AEC3
+    with GENE_OR_PROTEIN node chlorate_respiration_protein_component and UniProtKB:Q9F437
     exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: chlorate_respiration_graph
   title: Protein component associated with chlorate respiration
-  description: Literature-backed association between Aerobic respiration control sensor
-    protein ArcB (UniProtKB:P0AEC3) and chlorate respiration.
+  description: Literature-backed association between Chlorite dismutase (UniProtKB:Q9F437)
+    and chlorate respiration.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P0AEC3 in Escherichia
-    coli (strain K12)) associated with chlorate respiration while full multi-step
-    mechanistic curation remains future work.
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q9F437 in Ideonella
+    dechloratans) associated with chlorate respiration while full multi-step mechanistic
+    curation remains future work.
   nodes:
   - node_id: chlorate_respiration_trait
     label: chlorate respiration
@@ -80,49 +80,41 @@ causal_graphs:
     description: An anaerobic respiration in which an organism uses chlorate as the
       terminal electron acceptor and reduces it to chloride for energy conservation.
   - node_id: chlorate_respiration_protein_component
-    label: Aerobic respiration control sensor protein ArcB
+    label: Chlorite dismutase
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Aerobic respiration control sensor protein ArcB)
-      associated with chlorate respiration.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Chlorite dismutase) associated with chlorate respiration.
+    grounding: InterPro:IPR010644
     gene_symbols:
-    - arcB
+    - cld
     protein_examples:
-    - uniprot_id: UniProtKB:P0AEC3
-      protein_label: Aerobic respiration control sensor protein ArcB
-      gene_symbol: arcB
-      taxon_id: NCBITaxon:83333
-      taxon_label: Escherichia coli (strain K12)
+    - uniprot_id: UniProtKB:Q9F437
+      protein_label: Chlorite dismutase
+      gene_symbol: cld
+      taxon_id: NCBITaxon:36863
+      taxon_label: Ideonella dechloratans
       entry_status: REVIEWED
-      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 164
+      entry_version: 50
       sequence_version: 1
-      role: Characteristic protein component (arcB, Aerobic respiration control sensor
-        protein ArcB) associated with chlorate respiration in Escherichia coli (strain
-        K12).
+      role: Characteristic protein component (cld, Chlorite dismutase) associated
+        with chlorate respiration in Ideonella dechloratans.
       evidence:
       - reference: DOI:10.1128/AEM.69.9.5585-5592.2003
         snippet: chlorate ion as the sole electron acceptor for oxidation of organic
           matter in a previously unknown mode of respiration
-        notes: Supports Aerobic respiration control sensor protein ArcB in chlorate
-          respiration; UniProtKB:P0AEC3 (arcB, Aerobic respiration control sensor
-          protein ArcB) in Escherichia coli (strain K12) provides a verified protein
-          exemplar.
+        notes: Supports Chlorite dismutase in chlorate respiration; UniProtKB:Q9F437
+          (cld, Chlorite dismutase) in Ideonella dechloratans provides a verified
+          protein exemplar.
   edges:
   - subject: chlorate_respiration_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: chlorate_respiration_trait
-    description: Aerobic respiration control sensor protein ArcB (arcB, UniProtKB:P0AEC3)
-      contributes to chlorate respiration (associated with respiration, previously,
-      oxidation).
+    description: Chlorite dismutase (cld, UniProtKB:Q9F437) contributes to chlorate
+      respiration.
     evidence:
     - reference: DOI:10.1128/AEM.69.9.5585-5592.2003
       snippet: chlorate ion as the sole electron acceptor for oxidation of organic
         matter in a previously unknown mode of respiration
-      notes: Supports the functional association between Aerobic respiration control
-        sensor protein ArcB (UniProtKB:P0AEC3 in Escherichia coli (strain K12)) and
-        chlorate respiration.
+      notes: Supports the functional association between Chlorite dismutase (UniProtKB:Q9F437
+        in Ideonella dechloratans) and chlorate respiration.

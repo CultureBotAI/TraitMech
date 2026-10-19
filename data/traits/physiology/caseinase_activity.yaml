@@ -50,18 +50,17 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph caseinase_activity_graph
-    with GENE_OR_PROTEIN node caseinase_activity_protein_component and UniProtKB:Q49VZ2
+    with GENE_OR_PROTEIN node caseinase_activity_protein_component and UniProtKB:P04189
     exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: caseinase_activity_graph
   title: Protein component associated with caseinase activity
-  description: Literature-backed association between ATP-dependent Clp protease proteolytic
-    subunit (UniProtKB:Q49VZ2) and caseinase activity.
+  description: Literature-backed association between Subtilisin E (UniProtKB:P04189)
+    and caseinase activity.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q49VZ2 in Staphylococcus
-    saprophyticus subsp. saprophyticus (strain ATCC 15305 / DSM 20229 / NCIMB 8711
-    / NCTC 7292 / S-41)) associated with caseinase activity while full multi-step
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P04189 in Bacillus
+    subtilis (strain 168)) associated with caseinase activity while full multi-step
     mechanistic curation remains future work.
   nodes:
   - node_id: caseinase_activity_trait
@@ -71,53 +70,43 @@ causal_graphs:
     description: A physiological enzyme-activity phenotype in which a cell produces
       active caseinase proteases that hydrolyze casein.
   - node_id: caseinase_activity_protein_component
-    label: ATP-dependent Clp protease proteolytic subunit
+    label: Subtilisin E
     node_type: GENE_OR_PROTEIN
-    description: Protein component (ATP-dependent Clp protease proteolytic subunit)
-      associated with caseinase activity.
+    description: Protein component (Subtilisin E) associated with caseinase activity.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - clpP
+    - aprE
     protein_examples:
-    - uniprot_id: UniProtKB:Q49VZ2
-      protein_label: ATP-dependent Clp protease proteolytic subunit
-      gene_symbol: clpP
-      taxon_id: NCBITaxon:342451
-      taxon_label: Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
-        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+    - uniprot_id: UniProtKB:P04189
+      protein_label: Subtilisin E
+      gene_symbol: aprE
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
       entry_status: REVIEWED
-      proteome_id: UP000006371
+      proteome_id: UP000001570
       retrieved_on: '2026-10-17'
-      entry_version: 116
-      sequence_version: 1
-      role: Characteristic protein component (clpP, ATP-dependent Clp protease proteolytic
-        subunit) associated with caseinase activity in Staphylococcus saprophyticus
-        subsp. saprophyticus (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292
-        / S-41).
+      entry_version: 190
+      sequence_version: 3
+      role: Characteristic protein component (aprE, Subtilisin E) associated with
+        caseinase activity in Bacillus subtilis (strain 168).
       evidence:
       - reference: DOI:10.2174/1874285801408010025
         snippet: screened for enzyme production (caseinase, gelatinase, amylase, carboxymethyl
           cellulase, and esterase)
-        notes: Supports ATP-dependent Clp protease proteolytic subunit in caseinase
-          activity; UniProtKB:Q49VZ2 (clpP, ATP-dependent Clp protease proteolytic
-          subunit) in Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
-          15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) provides a verified protein
+        notes: Supports Subtilisin E in caseinase activity; UniProtKB:P04189 (aprE,
+          Subtilisin E) in Bacillus subtilis (strain 168) provides a verified protein
           exemplar.
   edges:
   - subject: caseinase_activity_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: caseinase_activity_trait
-    description: ATP-dependent Clp protease proteolytic subunit (clpP, UniProtKB:Q49VZ2)
-      contributes to caseinase activity (associated with carboxymethyl, gelatinase,
-      caseinase).
+    description: Subtilisin E (aprE, UniProtKB:P04189) contributes to caseinase activity.
     evidence:
     - reference: DOI:10.2174/1874285801408010025
       snippet: screened for enzyme production (caseinase, gelatinase, amylase, carboxymethyl
         cellulase, and esterase)
-      notes: Supports the functional association between ATP-dependent Clp protease
-        proteolytic subunit (UniProtKB:Q49VZ2 in Staphylococcus saprophyticus subsp.
-        saprophyticus (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41))
-        and caseinase activity.
+      notes: Supports the functional association between Subtilisin E (UniProtKB:P04189
+        in Bacillus subtilis (strain 168)) and caseinase activity.

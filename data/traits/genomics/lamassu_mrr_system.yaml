@@ -90,28 +90,27 @@ causal_graphs:
     grounding: traitmech:000232
     description: Possession of a genome-encoded Lamassu phage-defense system.
   - node_id: lamassu_mrr_system_protein_component
-    label: Lamassu protein LmuB
+    label: Type IV methyl-directed restriction enzyme EcoKMcrB subunit
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Lamassu protein LmuB) associated with Lamassu-Mrr
-      system.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Type IV methyl-directed restriction enzyme EcoKMcrB
+      subunit) associated with Lamassu-Mrr system.
+    grounding: InterPro:IPR003593
     gene_symbols:
-    - lmuB
+    - mcrB
     protein_examples:
-    - uniprot_id: UniProtKB:P0DW44
-      protein_label: Lamassu protein LmuB
-      gene_symbol: lmuB
-      taxon_id: NCBITaxon:1761765
-      taxon_label: Bacillus sp. (strain NCIM 5461 / CCTCC AB 2011126 / NIO-1130)
+    - uniprot_id: UniProtKB:P15005
+      protein_label: Type IV methyl-directed restriction enzyme EcoKMcrB subunit
+      gene_symbol: mcrB
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
+      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 8
-      sequence_version: 1
-      role: Characteristic protein component (lmuB, Lamassu protein LmuB) associated
-        with Lamassu-Mrr system in Bacillus sp. (strain NCIM 5461 / CCTCC AB 2011126
-        / NIO-1130).
+      entry_version: 197
+      sequence_version: 3
+      role: Characteristic protein component (mcrB, Type IV methyl-directed restriction
+        enzyme EcoKMcrB subunit) associated with Lamassu-Mrr system in Escherichia
+        coli (strain K12).
       evidence:
       - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
         snippet: Lamassu-Fam Lamassu-Hydrolase 2 2 Lamassu-Fam__LmuA_effector_Hydrolase,
@@ -120,9 +119,10 @@ causal_graphs:
           Lamassu-Fam__LmuA_effector_FMO, Lamassu-Fam__LmuA_effector_Lipase, Lamassu-Fam__LmuA_effector_Mrr,
           Lamassu-Fam__LmuA_effector_PDDEXK, Lamassu-Fam__LmuA_effector_Protease,
           Lamassu-Fam__LmuA_effector_Sir2, Lamassu-Fam__LmuA_effector_hypothetical
-        notes: Supports Lamassu protein LmuB in Lamassu-Mrr system; UniProtKB:P0DW44
-          (lmuB, Lamassu protein LmuB) in Bacillus sp. (strain NCIM 5461 / CCTCC AB
-          2011126 / NIO-1130) provides a verified protein exemplar.
+        notes: Supports Type IV methyl-directed restriction enzyme EcoKMcrB subunit
+          in Lamassu-Mrr system; UniProtKB:P15005 (mcrB, Type IV methyl-directed restriction
+          enzyme EcoKMcrB subunit) in Escherichia coli (strain K12) provides a verified
+          protein exemplar.
   edges:
   - subject: lamassu_mrr_system_trait
     predicate: is a
@@ -143,8 +143,8 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: lamassu_mrr_system_trait
-    description: Lamassu protein LmuB (lmuB, UniProtKB:P0DW44) contributes to Lamassu-Mrr
-      system (associated with hydrolase, effector, nuclease).
+    description: Type IV methyl-directed restriction enzyme EcoKMcrB subunit (mcrB,
+      UniProtKB:P15005) contributes to Lamassu-Mrr system.
     evidence:
     - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
       snippet: Lamassu-Fam Lamassu-Hydrolase 2 2 Lamassu-Fam__LmuA_effector_Hydrolase,
@@ -153,9 +153,9 @@ causal_graphs:
         Lamassu-Fam__LmuA_effector_FMO, Lamassu-Fam__LmuA_effector_Lipase, Lamassu-Fam__LmuA_effector_Mrr,
         Lamassu-Fam__LmuA_effector_PDDEXK, Lamassu-Fam__LmuA_effector_Protease, Lamassu-Fam__LmuA_effector_Sir2,
         Lamassu-Fam__LmuA_effector_hypothetical
-      notes: Supports the functional association between Lamassu protein LmuB (UniProtKB:P0DW44
-        in Bacillus sp. (strain NCIM 5461 / CCTCC AB 2011126 / NIO-1130)) and Lamassu-Mrr
-        system.
+      notes: Supports the functional association between Type IV methyl-directed restriction
+        enzyme EcoKMcrB subunit (UniProtKB:P15005 in Escherichia coli (strain K12))
+        and Lamassu-Mrr system.
 discussions:
 - discussion_id: lamassu-mrr-activity-gap
   prompt: Resolve Lamassu-Mrr phage triggers, native hosts, Mrr effector activity,
@@ -232,5 +232,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    lamassu_mrr_system_protein_component with UniProtKB:P0DW44 (lmuB) exemplar.'
+    lamassu_mrr_system_protein_component with UniProtKB:P15005 (mcrB) exemplar.'
   llm_assisted: true

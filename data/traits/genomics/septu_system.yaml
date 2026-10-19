@@ -99,33 +99,34 @@ causal_graphs:
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
   - node_id: septu_system_protein_component
-    label: Septu protein PtuB
+    label: Retron Ec78 reverse transcriptase
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Septu protein PtuB) associated with Septu system.
+    description: Protein component (Retron Ec78 reverse transcriptase) associated
+      with Septu system.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - ptuB
+    - ret
     protein_examples:
-    - uniprot_id: UniProtKB:P0DW42
-      protein_label: Septu protein PtuB
-      gene_symbol: ptuB
-      taxon_id: NCBITaxon:1428
-      taxon_label: Bacillus thuringiensis
+    - uniprot_id: UniProtKB:Q46666
+      protein_label: Retron Ec78 reverse transcriptase
+      gene_symbol: ret
+      taxon_id: NCBITaxon:562
+      taxon_label: Escherichia coli
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      entry_version: 12
-      sequence_version: 1
-      role: Characteristic protein component (ptuB, Septu protein PtuB) associated
-        with Septu system in Bacillus thuringiensis.
+      entry_version: 66
+      sequence_version: 2
+      role: Characteristic protein component (ret, Retron Ec78 reverse transcriptase)
+        associated with Septu system in Escherichia coli.
       evidence:
-      - reference: DOI:10.1038/s41594-023-01172-8
-        snippet: 'E. coli Septu system, an anti-phage defense system, comprises two
-          components: PtuA and PtuB'
-        notes: Supports Septu protein PtuB in Septu system; UniProtKB:P0DW42 (ptuB,
-          Septu protein PtuB) in Bacillus thuringiensis provides a verified protein
-          exemplar.
+      - reference: DOI:10.1126/science.adv3344
+        snippet: The Retron-Septu system uniquely integrates retron and Septu antiphage
+          defenses
+        notes: Supports Retron Ec78 reverse transcriptase in Septu system; UniProtKB:Q46666
+          (ret, Retron Ec78 reverse transcriptase) in Escherichia coli provides a
+          verified protein exemplar.
   edges:
   - subject: septu_locus
     predicate: contributes to
@@ -193,14 +194,14 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: septu_system_trait
-    description: Septu protein PtuB (ptuB, UniProtKB:P0DW42) contributes to Septu
-      system (associated with comprises, defense, phage).
+    description: Retron Ec78 reverse transcriptase (ret, UniProtKB:Q46666) contributes
+      to Septu system.
     evidence:
-    - reference: DOI:10.1038/s41594-023-01172-8
-      snippet: 'E. coli Septu system, an anti-phage defense system, comprises two
-        components: PtuA and PtuB'
-      notes: Supports the functional association between Septu protein PtuB (UniProtKB:P0DW42
-        in Bacillus thuringiensis) and Septu system.
+    - reference: DOI:10.1126/science.adv3344
+      snippet: The Retron-Septu system uniquely integrates retron and Septu antiphage
+        defenses
+      notes: Supports the functional association between Retron Ec78 reverse transcriptase
+        (UniProtKB:Q46666 in Escherichia coli) and Septu system.
 discussions:
 - discussion_id: septu-standalone-retron-regulation-gap
   prompt: Resolve standalone Septu activation, Retron-Septu release, and DNA-substrate
@@ -229,5 +230,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    septu_system_protein_component with UniProtKB:P0DW42 (ptuB) exemplar.'
+    septu_system_protein_component with UniProtKB:Q46666 (ret) exemplar.'
   llm_assisted: true

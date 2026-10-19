@@ -56,6 +56,9 @@ def before(slug: str) -> dict:
                 "evidence": [{"reference": "DOI:10.3390/life14050591"}],
             }
         )
+    doc["curation_history"] = [
+        e for e in doc.get("curation_history", []) if e.get("action") != "CURATE_PROTEIN_TAXON_EXAMPLE"
+    ]
     return doc
 
 
@@ -65,7 +68,7 @@ def test_repair_reaches_one_component(slug: str):
     assert _components(doc["causal_graphs"][0]) == EXPECTED_COMPONENTS[slug]
     assert transform(slug, doc)
     assert _components(doc["causal_graphs"][0]) == 1
-    assert any(event.get("action") == ACTION for event in doc["curation_history"])
+    assert doc["curation_history"][-1]["action"] == ACTION
 
 
 @pytest.mark.parametrize("slug", sorted(ADDITIONS))

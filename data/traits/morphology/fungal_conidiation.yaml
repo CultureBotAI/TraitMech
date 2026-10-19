@@ -105,18 +105,18 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph fungal_conidiation_graph
-    with GENE_OR_PROTEIN node fungal_conidiation_protein_component and UniProtKB:Q5AD13
+    with GENE_OR_PROTEIN node fungal_conidiation_protein_component and UniProtKB:P18412
     exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: fungal_conidiation_graph
   title: Protein component associated with fungal conidiation
-  description: Literature-backed association between Filamentous growth regulator
-    15 (UniProtKB:Q5AD13) and fungal conidiation.
+  description: Literature-backed association between Ty transcription activator TEC1
+    (UniProtKB:P18412) and fungal conidiation.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q5AD13 in Candida
-    albicans (strain SC5314 / ATCC MYA-2876) (Yeast)) associated with fungal conidiation
-    while full multi-step mechanistic curation remains future work.
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P18412 in Saccharomyces
+    cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)) associated with fungal
+    conidiation while full multi-step mechanistic curation remains future work.
   nodes:
   - node_id: fungal_conidiation_trait
     label: fungal conidiation
@@ -126,48 +126,47 @@ causal_graphs:
       propagules called conidia through outgrowth from conidiogenous cells or conversion
       of pre-existing hyphal cells.
   - node_id: fungal_conidiation_protein_component
-    label: Filamentous growth regulator 15
+    label: Ty transcription activator TEC1
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Filamentous growth regulator 15) associated with
+    description: Protein component (Ty transcription activator TEC1) associated with
       fungal conidiation.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    grounding: InterPro:IPR000818
     gene_symbols:
-    - FGR15
+    - TEC1
     protein_examples:
-    - uniprot_id: UniProtKB:Q5AD13
-      protein_label: Filamentous growth regulator 15
-      gene_symbol: FGR15
-      taxon_id: NCBITaxon:237561
-      taxon_label: Candida albicans (strain SC5314 / ATCC MYA-2876) (Yeast)
+    - uniprot_id: UniProtKB:P18412
+      protein_label: Ty transcription activator TEC1
+      gene_symbol: TEC1
+      taxon_id: NCBITaxon:559292
+      taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's
+        yeast)
       entry_status: REVIEWED
-      proteome_id: UP000000559
+      proteome_id: UP000002311
       retrieved_on: '2026-10-17'
-      entry_version: 100
-      sequence_version: 2
-      role: Characteristic protein component (FGR15, Filamentous growth regulator
-        15) associated with fungal conidiation in Candida albicans (strain SC5314
-        / ATCC MYA-2876) (Yeast).
+      entry_version: 202
+      sequence_version: 1
+      role: Characteristic protein component (TEC1, Ty transcription activator TEC1)
+        associated with fungal conidiation in Saccharomyces cerevisiae (strain ATCC
+        204508 / S288c) (Baker's yeast).
       evidence:
       - reference: DOI:10.2336/nishinihonhifu.40.1083
         snippet: produce asexual, nonmotile and usually deciduous propagules (conidia)
           by de novo growth from, or conversion of a fertile hypha (conidiogenous
           cell).
-        notes: Supports Filamentous growth regulator 15 in fungal conidiation; UniProtKB:Q5AD13
-          (FGR15, Filamentous growth regulator 15) in Candida albicans (strain SC5314
-          / ATCC MYA-2876) (Yeast) provides a verified protein exemplar.
+        notes: Supports Ty transcription activator TEC1 in fungal conidiation; UniProtKB:P18412
+          (TEC1, Ty transcription activator TEC1) in Saccharomyces cerevisiae (strain
+          ATCC 204508 / S288c) (Baker's yeast) provides a verified protein exemplar.
   edges:
   - subject: fungal_conidiation_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: fungal_conidiation_trait
-    description: Filamentous growth regulator 15 (FGR15, UniProtKB:Q5AD13) contributes
-      to fungal conidiation (associated with conidiogenous, conversion, propagules).
+    description: Ty transcription activator TEC1 (TEC1, UniProtKB:P18412) contributes
+      to fungal conidiation.
     evidence:
     - reference: DOI:10.2336/nishinihonhifu.40.1083
       snippet: produce asexual, nonmotile and usually deciduous propagules (conidia)
         by de novo growth from, or conversion of a fertile hypha (conidiogenous cell).
-      notes: Supports the functional association between Filamentous growth regulator
-        15 (UniProtKB:Q5AD13 in Candida albicans (strain SC5314 / ATCC MYA-2876) (Yeast))
-        and fungal conidiation.
+      notes: Supports the functional association between Ty transcription activator
+        TEC1 (UniProtKB:P18412 in Saccharomyces cerevisiae (strain ATCC 204508 / S288c)
+        (Baker's yeast)) and fungal conidiation.

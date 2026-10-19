@@ -83,20 +83,27 @@ curation_history:
   llm_assisted: true
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed canonical_examples status alongside NONMECHANISTIC protein exemplar
+    graph for reversible nematode-paralyzing activity; isolate-level canonical example
+    remains deferred pending explicit strain-level literature.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph reversible_nematode_paralyzing_activity_graph
     with GENE_OR_PROTEIN node reversible_nematode_paralyzing_activity_protein_component
-    and UniProtKB:P39914 exemplar.'
+    and UniProtKB:P07254 exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: reversible_nematode_paralyzing_activity_graph
   title: Protein component associated with reversible nematode-paralyzing activity
-  description: Literature-backed association between Monothiol bacilliredoxin BrxC
-    (UniProtKB:P39914) and reversible nematode-paralyzing activity.
+  description: Literature-backed association between Chitinase A (UniProtKB:P07254)
+    and reversible nematode-paralyzing activity.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P39914 in Bacillus
-    subtilis (strain 168)) associated with reversible nematode-paralyzing activity
-    while full multi-step mechanistic curation remains future work.
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P07254 in Serratia
+    marcescens) associated with reversible nematode-paralyzing activity while full
+    multi-step mechanistic curation remains future work.
   nodes:
   - node_id: reversible_nematode_paralyzing_activity_trait
     label: reversible nematode-paralyzing activity
@@ -106,48 +113,43 @@ causal_graphs:
       active nematode movement that reverses after exposure to the microorganism or
       its products ends.
   - node_id: reversible_nematode_paralyzing_activity_protein_component
-    label: Monothiol bacilliredoxin BrxC
+    label: Chitinase A
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Monothiol bacilliredoxin BrxC) associated with
-      reversible nematode-paralyzing activity.
+    description: Protein component (Chitinase A) associated with reversible nematode-paralyzing
+      activity.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - brxC
+    - chiA
     protein_examples:
-    - uniprot_id: UniProtKB:P39914
-      protein_label: Monothiol bacilliredoxin BrxC
-      gene_symbol: brxC
-      taxon_id: NCBITaxon:224308
-      taxon_label: Bacillus subtilis (strain 168)
+    - uniprot_id: UniProtKB:P07254
+      protein_label: Chitinase A
+      gene_symbol: chiA
+      taxon_id: NCBITaxon:615
+      taxon_label: Serratia marcescens
       entry_status: REVIEWED
-      proteome_id: UP000001570
       retrieved_on: '2026-10-17'
-      entry_version: 128
-      sequence_version: 1
-      role: Characteristic protein component (brxC, Monothiol bacilliredoxin BrxC)
-        associated with reversible nematode-paralyzing activity in Bacillus subtilis
-        (strain 168).
+      entry_version: 159
+      sequence_version: 3
+      role: Characteristic protein component (chiA, Chitinase A) associated with reversible
+        nematode-paralyzing activity in Serratia marcescens.
       evidence:
       - reference: https://journals.flvc.org/nematropica/article/view/64427
         snippet: Bioassays revealed that filtrates of P. lilacinus and Paecilomyces
           marquandii caused reversible paralysis of male and juvenile R. similis.
-        notes: Supports Monothiol bacilliredoxin BrxC in reversible nematode-paralyzing
-          activity; UniProtKB:P39914 (brxC, Monothiol bacilliredoxin BrxC) in Bacillus
-          subtilis (strain 168) provides a verified protein exemplar.
+        notes: Supports Chitinase A in reversible nematode-paralyzing activity; UniProtKB:P07254
+          (chiA, Chitinase A) in Serratia marcescens provides a verified protein exemplar.
   edges:
   - subject: reversible_nematode_paralyzing_activity_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: reversible_nematode_paralyzing_activity_trait
-    description: Monothiol bacilliredoxin BrxC (brxC, UniProtKB:P39914) contributes
-      to reversible nematode-paralyzing activity (associated with paecilomyces, marquandii,
-      reversible).
+    description: Chitinase A (chiA, UniProtKB:P07254) contributes to reversible nematode-paralyzing
+      activity.
     evidence:
     - reference: https://journals.flvc.org/nematropica/article/view/64427
       snippet: Bioassays revealed that filtrates of P. lilacinus and Paecilomyces
         marquandii caused reversible paralysis of male and juvenile R. similis.
-      notes: Supports the functional association between Monothiol bacilliredoxin
-        BrxC (UniProtKB:P39914 in Bacillus subtilis (strain 168)) and reversible nematode-paralyzing
-        activity.
+      notes: Supports the functional association between Chitinase A (UniProtKB:P07254
+        in Serratia marcescens) and reversible nematode-paralyzing activity.

@@ -90,18 +90,19 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph fungal_arbuscule_formation_graph
-    with GENE_OR_PROTEIN node fungal_arbuscule_formation_protein_component and UniProtKB:P06971
+    with GENE_OR_PROTEIN node fungal_arbuscule_formation_protein_component and UniProtKB:P08640
     exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: fungal_arbuscule_formation_graph
   title: Protein component associated with fungal arbuscule formation
-  description: Literature-backed association between Ferrichrome outer membrane transporter/phage
-    receptor (UniProtKB:P06971) and fungal arbuscule formation.
+  description: Literature-backed association between Flocculation protein FLO11 (UniProtKB:P08640)
+    and fungal arbuscule formation.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P06971 in Escherichia
-    coli (strain K12)) associated with fungal arbuscule formation while full multi-step
-    mechanistic curation remains future work.
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P08640 in Saccharomyces
+    cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)) associated with fungal
+    arbuscule formation while full multi-step mechanistic curation remains future
+    work.
   nodes:
   - node_id: fungal_arbuscule_formation_trait
     label: fungal arbuscule formation
@@ -111,49 +112,47 @@ causal_graphs:
       hyphal structures, called arbuscules, within living plant cells during arbuscular
       mycorrhizal symbiosis.
   - node_id: fungal_arbuscule_formation_protein_component
-    label: Ferrichrome outer membrane transporter/phage receptor
+    label: Flocculation protein FLO11
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Ferrichrome outer membrane transporter/phage receptor)
-      associated with fungal arbuscule formation.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Flocculation protein FLO11) associated with fungal
+      arbuscule formation.
+    grounding: InterPro:IPR018789
     gene_symbols:
-    - fhuA
+    - FLO11
     protein_examples:
-    - uniprot_id: UniProtKB:P06971
-      protein_label: Ferrichrome outer membrane transporter/phage receptor
-      gene_symbol: fhuA
-      taxon_id: NCBITaxon:83333
-      taxon_label: Escherichia coli (strain K12)
+    - uniprot_id: UniProtKB:P08640
+      protein_label: Flocculation protein FLO11
+      gene_symbol: FLO11
+      taxon_id: NCBITaxon:559292
+      taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's
+        yeast)
       entry_status: REVIEWED
-      proteome_id: UP000000625
+      proteome_id: UP000002311
       retrieved_on: '2026-10-17'
-      entry_version: 229
+      entry_version: 187
       sequence_version: 2
-      role: Characteristic protein component (fhuA, Ferrichrome outer membrane transporter/phage
-        receptor) associated with fungal arbuscule formation in Escherichia coli (strain
-        K12).
+      role: Characteristic protein component (FLO11, Flocculation protein FLO11) associated
+        with fungal arbuscule formation in Saccharomyces cerevisiae (strain ATCC 204508
+        / S288c) (Baker's yeast).
       evidence:
       - reference: DOI:10.1104/pp.109.141879
         snippet: In the arbuscular mycorrhizal symbiosis, the fungal symbiont colonizes
           root cortical cells, where it establishes differentiated hyphae called arbuscules.
-        notes: Supports Ferrichrome outer membrane transporter/phage receptor in fungal
-          arbuscule formation; UniProtKB:P06971 (fhuA, Ferrichrome outer membrane
-          transporter/phage receptor) in Escherichia coli (strain K12) provides a
-          verified protein exemplar.
+        notes: Supports Flocculation protein FLO11 in fungal arbuscule formation;
+          UniProtKB:P08640 (FLO11, Flocculation protein FLO11) in Saccharomyces cerevisiae
+          (strain ATCC 204508 / S288c) (Baker's yeast) provides a verified protein
+          exemplar.
   edges:
   - subject: fungal_arbuscule_formation_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: fungal_arbuscule_formation_trait
-    description: Ferrichrome outer membrane transporter/phage receptor (fhuA, UniProtKB:P06971)
-      contributes to fungal arbuscule formation (associated with differentiated, establishes,
-      mycorrhizal).
+    description: Flocculation protein FLO11 (FLO11, UniProtKB:P08640) contributes
+      to fungal arbuscule formation.
     evidence:
     - reference: DOI:10.1104/pp.109.141879
       snippet: In the arbuscular mycorrhizal symbiosis, the fungal symbiont colonizes
         root cortical cells, where it establishes differentiated hyphae called arbuscules.
-      notes: Supports the functional association between Ferrichrome outer membrane
-        transporter/phage receptor (UniProtKB:P06971 in Escherichia coli (strain K12))
-        and fungal arbuscule formation.
+      notes: Supports the functional association between Flocculation protein FLO11
+        (UniProtKB:P08640 in Saccharomyces cerevisiae (strain ATCC 204508 / S288c)
+        (Baker's yeast)) and fungal arbuscule formation.

@@ -67,27 +67,26 @@ causal_graphs:
       ligands.
     grounding: InterPro:IPR004090
     protein_examples:
-    - uniprot_id: UniProtKB:P07330
-      protein_label: Protein-glutamate methylesterase/protein-glutamine glutaminase
-      gene_symbol: cheB
+    - uniprot_id: UniProtKB:P02942
+      protein_label: Methyl-accepting chemotaxis protein I
+      gene_symbol: tsr
       taxon_id: NCBITaxon:83333
       taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
       proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 189
-      sequence_version: 3
-      role: Exemplar protein (cheB, Protein-glutamate methylesterase/protein-glutamine
-        glutaminase) representing chemoreceptor (MCP) in Escherichia coli (strain
-        K12) for chemotaxis.
+      entry_version: 209
+      sequence_version: 2
+      role: Exemplar protein (tsr, Methyl-accepting chemotaxis protein I) representing
+        chemoreceptor (MCP) in Escherichia coli (strain K12) for chemotaxis.
       evidence:
       - reference: DOI:10.1016/j.tim.2022.10.007
         snippet: The chemoreceptor nanoarray complexes with the cytosolic histidine
           kinase chemotaxis protein A (CheA) and regulates its autophosphorylation
           based on chemoreceptor ligand occupancy
-        notes: Supports chemoreceptor (MCP) in chemotaxis; UniProtKB:P07330 (cheB,
-          Protein-glutamate methylesterase/protein-glutamine glutaminase) in Escherichia
-          coli (strain K12) provides a verified protein exemplar.
+        notes: Supports chemoreceptor (MCP) in chemotaxis; UniProtKB:P02942 (tsr,
+          Methyl-accepting chemotaxis protein I) in Escherichia coli (strain K12)
+          provides a verified protein exemplar.
   - node_id: chea_kinase
     label: CheA histidine kinase
     node_type: GENE_OR_PROTEIN
@@ -427,8 +426,8 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:P0AE67
-    version metadata (entry_version=161, sequence_version=2); added UniProtKB:P07330
-    (cheB) protein example to node chemoreceptor_mcp; added UniProtKB:P07363 (cheA)
+    version metadata (entry_version=161, sequence_version=2); added UniProtKB:P02942
+    (tsr) protein example to node chemoreceptor_mcp; added UniProtKB:P07363 (cheA)
     protein example to node chea_kinase; added UniProtKB:P07330 (cheB) protein example
     to node cheb (+3 more).'
   llm_assisted: true

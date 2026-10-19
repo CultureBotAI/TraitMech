@@ -84,19 +84,26 @@ curation_history:
   llm_assisted: true
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed canonical_examples status alongside NONMECHANISTIC protein exemplar
+    graph for exocytosis; isolate-level canonical example remains deferred pending
+    explicit strain-level literature.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph exocytosis_graph
-    with GENE_OR_PROTEIN node exocytosis_protein_component and UniProtKB:P0AE06 exemplar.'
+    with GENE_OR_PROTEIN node exocytosis_protein_component and UniProtKB:P07560 exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: exocytosis_graph
   title: Protein component associated with exocytosis
-  description: Literature-backed association between Multidrug efflux pump subunit
-    AcrA (UniProtKB:P0AE06) and exocytosis.
+  description: Literature-backed association between Ras-related protein SEC4 (UniProtKB:P07560)
+    and exocytosis.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P0AE06 in Escherichia
-    coli (strain K12)) associated with exocytosis while full multi-step mechanistic
-    curation remains future work.
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P07560 in Saccharomyces
+    cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)) associated with exocytosis
+    while full multi-step mechanistic curation remains future work.
   nodes:
   - node_id: exocytosis_trait
     label: exocytosis
@@ -106,47 +113,47 @@ causal_graphs:
       from an intracellular membrane-bounded compartment to the cell exterior through
       a fusion pore between the compartment membrane and the plasma membrane.
   - node_id: exocytosis_protein_component
-    label: Multidrug efflux pump subunit AcrA
+    label: Ras-related protein SEC4
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Multidrug efflux pump subunit AcrA) associated
-      with exocytosis.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Ras-related protein SEC4) associated with exocytosis.
+    grounding: InterPro:IPR027417
     gene_symbols:
-    - acrA
+    - SEC4
     protein_examples:
-    - uniprot_id: UniProtKB:P0AE06
-      protein_label: Multidrug efflux pump subunit AcrA
-      gene_symbol: acrA
-      taxon_id: NCBITaxon:83333
-      taxon_label: Escherichia coli (strain K12)
+    - uniprot_id: UniProtKB:P07560
+      protein_label: Ras-related protein SEC4
+      gene_symbol: SEC4
+      taxon_id: NCBITaxon:559292
+      taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's
+        yeast)
       entry_status: REVIEWED
-      proteome_id: UP000000625
+      proteome_id: UP000002311
       retrieved_on: '2026-10-17'
-      entry_version: 154
+      entry_version: 248
       sequence_version: 1
-      role: Characteristic protein component (acrA, Multidrug efflux pump subunit
-        AcrA) associated with exocytosis in Escherichia coli (strain K12).
+      role: Characteristic protein component (SEC4, Ras-related protein SEC4) associated
+        with exocytosis in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's
+        yeast).
       evidence:
       - reference: DOI:10.1016/s0143-4160(98)90030-6
         snippet: This is a detailed characterization of a secretory mutant incapable
           of releasing secretory contents despite normal exocytotic membrane fusion
           performance.
-        notes: Supports Multidrug efflux pump subunit AcrA in exocytosis; UniProtKB:P0AE06
-          (acrA, Multidrug efflux pump subunit AcrA) in Escherichia coli (strain K12)
-          provides a verified protein exemplar.
+        notes: Supports Ras-related protein SEC4 in exocytosis; UniProtKB:P07560 (SEC4,
+          Ras-related protein SEC4) in Saccharomyces cerevisiae (strain ATCC 204508
+          / S288c) (Baker's yeast) provides a verified protein exemplar.
   edges:
   - subject: exocytosis_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: exocytosis_trait
-    description: Multidrug efflux pump subunit AcrA (acrA, UniProtKB:P0AE06) contributes
-      to exocytosis (associated with characterization, performance, exocytotic).
+    description: Ras-related protein SEC4 (SEC4, UniProtKB:P07560) contributes to
+      exocytosis.
     evidence:
     - reference: DOI:10.1016/s0143-4160(98)90030-6
       snippet: This is a detailed characterization of a secretory mutant incapable
         of releasing secretory contents despite normal exocytotic membrane fusion
         performance.
-      notes: Supports the functional association between Multidrug efflux pump subunit
-        AcrA (UniProtKB:P0AE06 in Escherichia coli (strain K12)) and exocytosis.
+      notes: Supports the functional association between Ras-related protein SEC4
+        (UniProtKB:P07560 in Saccharomyces cerevisiae (strain ATCC 204508 / S288c)
+        (Baker's yeast)) and exocytosis.

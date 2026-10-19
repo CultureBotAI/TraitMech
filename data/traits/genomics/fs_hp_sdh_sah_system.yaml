@@ -81,35 +81,35 @@ causal_graphs:
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
   - node_id: fs_hp_sdh_sah_system_protein_component
-    label: Shikimate dehydrogenase
+    label: Endonuclease GajA
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Shikimate dehydrogenase) associated with FS-HP-SDH-sah
+    description: Protein component (Endonuclease GajA) associated with FS-HP-SDH-sah
       system.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - aroE
+    - gajA
     protein_examples:
-    - uniprot_id: UniProtKB:B5BGU8
-      protein_label: Shikimate dehydrogenase
-      gene_symbol: aroE
-      taxon_id: NCBITaxon:554290
-      taxon_label: Salmonella paratyphi A (strain AKU_12601)
+    - uniprot_id: UniProtKB:P0DW47
+      protein_label: Endonuclease GajA
+      gene_symbol: gajA
+      taxon_id: NCBITaxon:1053212
+      taxon_label: Bacillus cereus (strain HuB5-5)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      entry_version: 88
+      entry_version: 12
       sequence_version: 1
-      role: Characteristic protein component (aroE, Shikimate dehydrogenase) associated
-        with FS-HP-SDH-sah system in Salmonella paratyphi A (strain AKU_12601).
+      role: Characteristic protein component (gajA, Endonuclease GajA) associated
+        with FS-HP-SDH-sah system in Bacillus cereus (strain HuB5-5).
       evidence:
       - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
         snippet: FS_HP_SDH_sah | 10\.1016/j\.cell\.2022\.07\.014 | Bacteriophages
           benefit from mobilizing pathogenicity islands encoding immune systems against
           competitors
-        notes: Supports Shikimate dehydrogenase in FS-HP-SDH-sah system; UniProtKB:B5BGU8
-          (aroE, Shikimate dehydrogenase) in Salmonella paratyphi A (strain AKU_12601)
-          provides a verified protein exemplar.
+        notes: Supports Endonuclease GajA in FS-HP-SDH-sah system; UniProtKB:P0DW47
+          (gajA, Endonuclease GajA) in Bacillus cereus (strain HuB5-5) provides a
+          verified protein exemplar.
   edges:
   - subject: fs_hp_sdh_sah_locus
     predicate: contributes to
@@ -173,14 +173,14 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: fs_hp_sdh_sah_system_trait
-    description: Shikimate dehydrogenase (aroE, UniProtKB:B5BGU8) contributes to FS-HP-SDH-sah
-      system (associated with bacteriophages, pathogenicity, competitors).
+    description: Endonuclease GajA (gajA, UniProtKB:P0DW47) contributes to FS-HP-SDH-sah
+      system.
     evidence:
     - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
       snippet: FS_HP | 10\.1016/j\.cell\.2022\.07\.014 | Bacteriophages benefit from
         mobilizing pathogenicity islands encoding immune systems against competitors
-      notes: Supports the functional association between Shikimate dehydrogenase (UniProtKB:B5BGU8
-        in Salmonella paratyphi A (strain AKU_12601)) and FS-HP-SDH-sah system.
+      notes: Supports the functional association between Endonuclease GajA (UniProtKB:P0DW47
+        in Bacillus cereus (strain HuB5-5)) and FS-HP-SDH-sah system.
 discussions:
 - discussion_id: fs-hp-sdh-sah-mechanism-gap
   prompt: Resolve FS_HP_SDH_sah natural hosts, helper-phage triggers, HP component
@@ -210,5 +210,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    fs_hp_sdh_sah_system_protein_component with UniProtKB:B5BGU8 (aroE) exemplar.'
+    fs_hp_sdh_sah_system_protein_component with UniProtKB:P0DW47 (gajA) exemplar.'
   llm_assisted: true

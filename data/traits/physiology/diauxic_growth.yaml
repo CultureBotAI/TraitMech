@@ -115,20 +115,27 @@ curation_history:
   llm_assisted: true
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed canonical_examples status alongside NONMECHANISTIC protein exemplar
+    graph for diauxic growth; isolate-level canonical example remains deferred pending
+    explicit strain-level literature.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph diauxic_growth_graph
-    with GENE_OR_PROTEIN node diauxic_growth_protein_component and UniProtKB:Q7A225
+    with GENE_OR_PROTEIN node diauxic_growth_protein_component and UniProtKB:P0ACJ8
     exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: diauxic_growth_graph
   title: Protein component associated with diauxic growth
-  description: Literature-backed association between Endoribonuclease HigB (UniProtKB:Q7A225)
-    and diauxic growth.
+  description: Literature-backed association between DNA-binding transcriptional dual
+    regulator CRP (UniProtKB:P0ACJ8) and diauxic growth.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q7A225 in Proteus
-    vulgaris) associated with diauxic growth while full multi-step mechanistic curation
-    remains future work.
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P0ACJ8 in Escherichia
+    coli (strain K12)) associated with diauxic growth while full multi-step mechanistic
+    curation remains future work.
   nodes:
   - node_id: diauxic_growth_trait
     label: diauxic growth
@@ -138,46 +145,49 @@ causal_graphs:
       two successive growth phases associated with a switch from preferential use
       of one nutrient source to use of another as the first becomes limiting.
   - node_id: diauxic_growth_protein_component
-    label: Endoribonuclease HigB
+    label: DNA-binding transcriptional dual regulator CRP
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Endoribonuclease HigB) associated with diauxic
-      growth.
+    description: Protein component (DNA-binding transcriptional dual regulator CRP)
+      associated with diauxic growth.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - higB
+    - crp
     protein_examples:
-    - uniprot_id: UniProtKB:Q7A225
-      protein_label: Endoribonuclease HigB
-      gene_symbol: higB
-      taxon_id: NCBITaxon:585
-      taxon_label: Proteus vulgaris
+    - uniprot_id: UniProtKB:P0ACJ8
+      protein_label: DNA-binding transcriptional dual regulator CRP
+      gene_symbol: crp
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
+      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 69
+      entry_version: 159
       sequence_version: 1
-      role: Characteristic protein component (higB, Endoribonuclease HigB) associated
-        with diauxic growth in Proteus vulgaris.
+      role: Characteristic protein component (crp, DNA-binding transcriptional dual
+        regulator CRP) associated with diauxic growth in Escherichia coli (strain
+        K12).
       evidence:
       - reference: DOI:10.1371/journal.pbio.1002041
         snippet: many natural isolates of Saccharomyces cerevisiae display short or
           nonexistent diauxic lags when grown in mixtures of glucose (preferred) and
           galactose.
-        notes: Supports Endoribonuclease HigB in diauxic growth; UniProtKB:Q7A225
-          (higB, Endoribonuclease HigB) in Proteus vulgaris provides a verified protein
-          exemplar.
+        notes: Supports DNA-binding transcriptional dual regulator CRP in diauxic
+          growth; UniProtKB:P0ACJ8 (crp, DNA-binding transcriptional dual regulator
+          CRP) in Escherichia coli (strain K12) provides a verified protein exemplar.
   edges:
   - subject: diauxic_growth_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: diauxic_growth_trait
-    description: Endoribonuclease HigB (higB, UniProtKB:Q7A225) contributes to diauxic
-      growth (associated with saccharomyces, nonexistent, cerevisiae).
+    description: DNA-binding transcriptional dual regulator CRP (crp, UniProtKB:P0ACJ8)
+      contributes to diauxic growth.
     evidence:
     - reference: DOI:10.1371/journal.pbio.1002041
       snippet: many natural isolates of Saccharomyces cerevisiae display short or
         nonexistent diauxic lags when grown in mixtures of glucose (preferred) and
         galactose.
-      notes: Supports the functional association between Endoribonuclease HigB (UniProtKB:Q7A225
-        in Proteus vulgaris) and diauxic growth.
+      notes: Supports the functional association between DNA-binding transcriptional
+        dual regulator CRP (UniProtKB:P0ACJ8 in Escherichia coli (strain K12)) and
+        diauxic growth.

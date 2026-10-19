@@ -32,7 +32,7 @@ causal_graphs:
   scope_status: NONMECHANISTIC
   scope_notes: This record is a broad environmental or morphological classification
     spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
-    descriptor; contextual protein nodes do not receive token UniProt examples.
+    descriptor; contextual protein nodes include source-backed UniProtKB exemplars.
   nodes:
   - node_id: red_pigmented_trait
     label: red pigmented
@@ -66,29 +66,25 @@ causal_graphs:
       prodiginine biosynthesis.
     operon: Pig/Red biosynthetic gene cluster
     protein_examples:
-    - uniprot_id: UniProtKB:Q59066
-      protein_label: CRISPR system single-strand-specific deoxyribonuclease Cas10/Csm1
-      gene_symbol: cas10
-      taxon_id: NCBITaxon:243232
-      taxon_label: Methanocaldococcus jannaschii (strain ATCC 43067 / DSM 2661 / JAL-1
-        / JCM 10045 / NBRC 100440) (Methanococcus jannaschii)
+    - uniprot_id: UniProtKB:Q5W269
+      protein_label: Prodigiosin synthesizing transferase PigC
+      gene_symbol: pigC
+      taxon_id: NCBITaxon:104623
+      taxon_label: Prodigiosinella confusarubida (Serratia sp. (strain ATCC 39006))
       entry_status: REVIEWED
-      proteome_id: UP000000805
       retrieved_on: '2026-10-17'
-      entry_version: 115
+      entry_version: 69
       sequence_version: 1
-      role: Exemplar protein (cas10, CRISPR system single-strand-specific deoxyribonuclease
-        Cas10/Csm1) representing Pig/Red prodiginine-biosynthesis protein module in
-        Methanocaldococcus jannaschii (strain ATCC 43067 / DSM 2661 / JAL-1 / JCM
-        10045 / NBRC 100440) (Methanococcus jannaschii) for red pigmented.
+      role: Exemplar protein (pigC, Prodigiosin synthesizing transferase PigC) representing
+        Pig/Red prodiginine-biosynthesis protein module in Prodigiosinella confusarubida
+        (Serratia sp. (strain ATCC 39006)) for red pigmented.
       evidence:
-      - reference: DOI:10.1038/nrmicro1531
-        snippet: red-pigmented prodiginines
+      - reference: DOI:10.1021/acs.chemrev.6b00024
+        snippet: bright red pigment prodigiosin
         notes: Supports Pig/Red prodiginine-biosynthesis protein module in red pigmented;
-          UniProtKB:Q59066 (cas10, CRISPR system single-strand-specific deoxyribonuclease
-          Cas10/Csm1) in Methanocaldococcus jannaschii (strain ATCC 43067 / DSM 2661
-          / JAL-1 / JCM 10045 / NBRC 100440) (Methanococcus jannaschii) provides a
-          verified protein exemplar.
+          UniProtKB:Q5W269 (pigC, Prodigiosin synthesizing transferase PigC) in Prodigiosinella
+          confusarubida (Serratia sp. (strain ATCC 39006)) provides a verified protein
+          exemplar.
   - node_id: pigC_ligase
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
@@ -355,7 +351,7 @@ curation_history:
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
-  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q59066 (cas10)
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q5W269 (pigC)
     protein example to node pig_red_gene_cluster; added UniProtKB:Q5W252 (pigC) protein
     example to node pigC_ligase; added UniProtKB:P0AE82 (cpxA) protein example to
     node cpxA_cpxR_system.'

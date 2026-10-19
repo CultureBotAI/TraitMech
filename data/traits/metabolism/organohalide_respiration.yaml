@@ -56,17 +56,18 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph organohalide_respiration_graph
-    with GENE_OR_PROTEIN node organohalide_respiration_protein_component and UniProtKB:P0AEC3
+    with GENE_OR_PROTEIN node organohalide_respiration_protein_component and UniProtKB:Q3ZAB8
     exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: organohalide_respiration_graph
   title: Protein component associated with organohalide respiration
-  description: Literature-backed association between Aerobic respiration control sensor
-    protein ArcB (UniProtKB:P0AEC3) and organohalide respiration.
+  description: Literature-backed association between Trichloroethene reductive dehalogenase
+    (UniProtKB:Q3ZAB8) and organohalide respiration.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P0AEC3 in Escherichia
-    coli (strain K12)) associated with organohalide respiration while full multi-step
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q3ZAB8 in Dehalococcoides
+    mccartyi (strain ATCC BAA-2266 / KCTC 15142 / 195) (Dehalococcoides ethenogenes
+    (strain 195))) associated with organohalide respiration while full multi-step
     mechanistic curation remains future work.
   nodes:
   - node_id: organohalide_respiration_trait
@@ -76,51 +77,50 @@ causal_graphs:
     description: An anaerobic respiration in which an organism uses an organohalide
       as the terminal electron acceptor for energy conservation.
   - node_id: organohalide_respiration_protein_component
-    label: Aerobic respiration control sensor protein ArcB
+    label: Trichloroethene reductive dehalogenase
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Aerobic respiration control sensor protein ArcB)
-      associated with organohalide respiration.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Trichloroethene reductive dehalogenase) associated
+      with organohalide respiration.
+    grounding: InterPro:IPR017896
     gene_symbols:
-    - arcB
+    - tceA
     protein_examples:
-    - uniprot_id: UniProtKB:P0AEC3
-      protein_label: Aerobic respiration control sensor protein ArcB
-      gene_symbol: arcB
-      taxon_id: NCBITaxon:83333
-      taxon_label: Escherichia coli (strain K12)
+    - uniprot_id: UniProtKB:Q3ZAB8
+      protein_label: Trichloroethene reductive dehalogenase
+      gene_symbol: tceA
+      taxon_id: NCBITaxon:243164
+      taxon_label: Dehalococcoides mccartyi (strain ATCC BAA-2266 / KCTC 15142 / 195)
+        (Dehalococcoides ethenogenes (strain 195))
       entry_status: REVIEWED
-      proteome_id: UP000000625
+      proteome_id: UP000008289
       retrieved_on: '2026-10-17'
-      entry_version: 164
+      entry_version: 97
       sequence_version: 1
-      role: Characteristic protein component (arcB, Aerobic respiration control sensor
-        protein ArcB) associated with organohalide respiration in Escherichia coli
-        (strain K12).
+      role: Characteristic protein component (tceA, Trichloroethene reductive dehalogenase)
+        associated with organohalide respiration in Dehalococcoides mccartyi (strain
+        ATCC BAA-2266 / KCTC 15142 / 195) (Dehalococcoides ethenogenes (strain 195)).
       evidence:
       - reference: DOI:10.1098/rstb.2012.0322
         snippet: Organohalide respiration is an anaerobic bacterial respiratory process
           that uses halogenated hydrocarbons as terminal electron acceptors during
           electron transport-based energy conservation.
-        notes: Supports Aerobic respiration control sensor protein ArcB in organohalide
-          respiration; UniProtKB:P0AEC3 (arcB, Aerobic respiration control sensor
-          protein ArcB) in Escherichia coli (strain K12) provides a verified protein
-          exemplar.
+        notes: Supports Trichloroethene reductive dehalogenase in organohalide respiration;
+          UniProtKB:Q3ZAB8 (tceA, Trichloroethene reductive dehalogenase) in Dehalococcoides
+          mccartyi (strain ATCC BAA-2266 / KCTC 15142 / 195) (Dehalococcoides ethenogenes
+          (strain 195)) provides a verified protein exemplar.
   edges:
   - subject: organohalide_respiration_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: organohalide_respiration_trait
-    description: Aerobic respiration control sensor protein ArcB (arcB, UniProtKB:P0AEC3)
-      contributes to organohalide respiration (associated with conservation, hydrocarbons,
-      organohalide).
+    description: Trichloroethene reductive dehalogenase (tceA, UniProtKB:Q3ZAB8) contributes
+      to organohalide respiration.
     evidence:
     - reference: DOI:10.1098/rstb.2012.0322
       snippet: Organohalide respiration is an anaerobic bacterial respiratory process
         that uses halogenated hydrocarbons as terminal electron acceptors during electron
         transport-based energy conservation.
-      notes: Supports the functional association between Aerobic respiration control
-        sensor protein ArcB (UniProtKB:P0AEC3 in Escherichia coli (strain K12)) and
-        organohalide respiration.
+      notes: Supports the functional association between Trichloroethene reductive
+        dehalogenase (UniProtKB:Q3ZAB8 in Dehalococcoides mccartyi (strain ATCC BAA-2266
+        / KCTC 15142 / 195) (Dehalococcoides ethenogenes (strain 195))) and organohalide
+        respiration.

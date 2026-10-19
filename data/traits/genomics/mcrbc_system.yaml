@@ -85,34 +85,35 @@ causal_graphs:
     description: Possession of a genome-encoded Type IV modification-dependent restriction
       system.
   - node_id: mcrbc_system_protein_component
-    label: Methyl-coenzyme M reductase regulatory protein C
+    label: Type IV methyl-directed restriction enzyme EcoKMcrB subunit
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Methyl-coenzyme M reductase operon protein C)
-      associated with McrBC system.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Type IV methyl-directed restriction enzyme EcoKMcrB
+      subunit) associated with McrBC system.
+    grounding: InterPro:IPR003593
     gene_symbols:
-    - mcrC
+    - mcrB
     protein_examples:
-    - uniprot_id: UniProtKB:P11567
-      protein_label: Methyl-coenzyme M reductase operon protein C
-      gene_symbol: mcrC
-      taxon_id: NCBITaxon:2188
-      taxon_label: Methanococcus voltae
+    - uniprot_id: UniProtKB:P15005
+      protein_label: Type IV methyl-directed restriction enzyme EcoKMcrB subunit
+      gene_symbol: mcrB
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
+      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 61
-      sequence_version: 1
-      role: Characteristic protein component (mcrC, Methyl-coenzyme M reductase operon
-        protein C) associated with McrBC system in Methanococcus voltae.
+      entry_version: 197
+      sequence_version: 3
+      role: Characteristic protein component (mcrB, Type IV methyl-directed restriction
+        enzyme EcoKMcrB subunit) associated with McrBC system in Escherichia coli
+        (strain K12).
       evidence:
       - reference: DOI:10.1093/emboj/20.12.3210
         snippet: McrBC from Escherichia coli K-12 is a restriction enzyme that belongs
           to the family of AAA(+) proteins and cuts DNA containing modified cytosines.
-        notes: Supports Methyl-coenzyme M reductase regulatory protein C in McrBC
-          system; UniProtKB:P11567 (mcrC, Methyl-coenzyme M reductase operon protein
-          C) in Methanococcus voltae provides a verified protein exemplar.
+        notes: Supports Type IV methyl-directed restriction enzyme EcoKMcrB subunit
+          in McrBC system; UniProtKB:P15005 (mcrB, Type IV methyl-directed restriction
+          enzyme EcoKMcrB subunit) in Escherichia coli (strain K12) provides a verified
+          protein exemplar.
   edges:
   - subject: mcrbc_locus
     predicate: contributes to
@@ -173,16 +174,16 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: mcrbc_system_trait
-    description: Methyl-coenzyme M reductase regulatory protein C (mcrC, UniProtKB:P11567)
-      contributes to McrBC system (associated with bacteriophage, interactions, conjugative).
+    description: Type IV methyl-directed restriction enzyme EcoKMcrB subunit (mcrB,
+      UniProtKB:P15005) contributes to McrBC system.
     evidence:
     - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
-      snippet: 'SpbK | 10\.1371/journal\.pgen\.1010065 | Interactions between mobile
-        genetic elements: An anti-phage gene in an integrative and conjugative element
-        protects host cells from predation by a temperate bacteriophage'
-      notes: Supports the functional association between Methyl-coenzyme M reductase
-        regulatory protein C (UniProtKB:P11567 in Methanococcus voltae) and McrBC
-        system.
+      snippet: '| PvuRts1I | 10\.1093/nar/gkr607 | Comparative characterization of
+        the PvuRts1I family of restriction enzymes and their application in mapping
+        genomic 5-hydroxymethylcytosine |'
+      notes: Supports the functional association between Type IV methyl-directed restriction
+        enzyme EcoKMcrB subunit (UniProtKB:P15005 in Escherichia coli (strain K12))
+        and McrBC system.
 discussions:
 - discussion_id: mcrbc-defensefinder-model-gap
   prompt: Resolve exact McrB/McrC component activities, complete modified-cytosine
@@ -247,5 +248,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    mcrbc_system_protein_component with UniProtKB:P11567 (mcrC) exemplar.'
+    mcrbc_system_protein_component with UniProtKB:P15005 (mcrB) exemplar.'
   llm_assisted: true

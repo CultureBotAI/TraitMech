@@ -62,34 +62,34 @@ causal_graphs:
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
   - node_id: duf262_schlafen_system_protein_component
-    label: Thoeris anti-defense 1
+    label: Shedu protein SduA
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Thoeris anti-defense 1) associated with DUF262
-      Schlafen system.
+    description: Protein component (Shedu protein SduA) associated with DUF262 Schlafen
+      system.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - tad1
+    - sduA
     protein_examples:
-    - uniprot_id: UniProtKB:P0DW61
-      protein_label: Thoeris anti-defense 1
-      gene_symbol: tad1
-      taxon_id: NCBITaxon:1392497
-      taxon_label: Clostridioides mangenotii (strain LM2)
+    - uniprot_id: UniProtKB:B7HFR2
+      protein_label: Shedu protein SduA
+      gene_symbol: sduA
+      taxon_id: NCBITaxon:405532
+      taxon_label: Bacillus cereus (strain B4264)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      entry_version: 11
+      entry_version: 58
       sequence_version: 1
-      role: Characteristic protein component (tad1, Thoeris anti-defense 1) associated
-        with DUF262 Schlafen system in Clostridioides mangenotii (strain LM2).
+      role: Characteristic protein component (sduA, Shedu protein SduA) associated
+        with DUF262 Schlafen system in Bacillus cereus (strain B4264).
       evidence:
       - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
-        snippet: PD-Lambda-2 | 10\.1101/2022\.05\.12\.491691 | Mapping the landscape
-          of anti-phage defense mechanisms in the E\. coli pangenome
-        notes: Supports Thoeris anti-defense 1 in DUF262 Schlafen system; UniProtKB:P0DW61
-          (tad1, Thoeris anti-defense 1) in Clostridioides mangenotii (strain LM2)
-          provides a verified protein exemplar.
+        snippet: '| DUF262_Shlafen | 10\.1038/s41564-026-02277-8 | Bacterial Schlafen
+          proteins mediate phage defence |'
+        notes: Supports Shedu protein SduA in DUF262 Schlafen system; UniProtKB:B7HFR2
+          (sduA, Shedu protein SduA) in Bacillus cereus (strain B4264) provides a
+          verified protein exemplar.
   edges:
   - subject: duf262_schlafen_locus
     predicate: contributes to
@@ -142,14 +142,15 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: duf262_schlafen_system_trait
-    description: Thoeris anti-defense 1 (tad1, UniProtKB:P0DW61) contributes to DUF262
-      Schlafen system (associated with landscape, pangenome, defense).
+    description: Shedu protein SduA (sduA, UniProtKB:B7HFR2) contributes to DUF262
+      Schlafen system.
     evidence:
-    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
-      snippet: PD-Lambda-2 | 10\.1101/2022\.05\.12\.491691 | Mapping the landscape
-        of anti-phage defense mechanisms in the E\. coli pangenome
-      notes: Supports the functional association between Thoeris anti-defense 1 (UniProtKB:P0DW61
-        in Clostridioides mangenotii (strain LM2)) and DUF262 Schlafen system.
+    - reference: DOI:10.1038/s41564-026-02277-8
+      snippet: Schlafen nuclease is fused to a previously unknown immunoglobulin-like
+        sensor domain and demonstrated that it recognizes tail assembly chaperones
+        of T5-like phages.
+      notes: Supports the functional association between Shedu protein SduA (UniProtKB:B7HFR2
+        in Bacillus cereus (strain B4264)) and DUF262 Schlafen system.
 discussions:
 - discussion_id: duf262-schlafen-defensefinder-profile-gap
   prompt: Resolve exact DUF262_Schlafen locus architecture, DUF262-associated domain
@@ -215,5 +216,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    duf262_schlafen_system_protein_component with UniProtKB:P0DW61 (tad1) exemplar.'
+    duf262_schlafen_system_protein_component with UniProtKB:B7HFR2 (sduA) exemplar.'
   llm_assisted: true

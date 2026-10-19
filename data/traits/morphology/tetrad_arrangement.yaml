@@ -35,7 +35,7 @@ causal_graphs:
   scope_status: NONMECHANISTIC
   scope_notes: This record is a broad environmental or morphological classification
     spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
-    descriptor; contextual protein nodes do not receive token UniProt examples.
+    descriptor; contextual protein nodes include source-backed UniProtKB exemplars.
   nodes:
   - node_id: tetrad_trait
     label: tetrad arrangement
@@ -94,24 +94,24 @@ causal_graphs:
     description: Peptidoglycan hydrolases/autolysins that cleave the septal cell wall
       to separate daughter cells.
     protein_examples:
-    - uniprot_id: UniProtKB:P0ABG7
-      protein_label: Peptidoglycan glycosyltransferase MrdB
-      gene_symbol: mrdB
+    - uniprot_id: UniProtKB:P36548
+      protein_label: N-acetylmuramoyl-L-alanine amidase AmiA
+      gene_symbol: amiA
       taxon_id: NCBITaxon:83333
       taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
       proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 133
+      entry_version: 168
       sequence_version: 1
-      role: Exemplar protein (mrdB, Peptidoglycan glycosyltransferase MrdB) representing
+      role: Exemplar protein (amiA, N-acetylmuramoyl-L-alanine amidase AmiA) representing
         cell wall hydrolases (autolysins) in Escherichia coli (strain K12) for tetrad
         arrangement.
       evidence:
       - reference: DOI:10.1038/ncomms4842
         snippet: splitting of the septal cross wall
-        notes: Supports cell wall hydrolases (autolysins) in tetrad arrangement; UniProtKB:P0ABG7
-          (mrdB, Peptidoglycan glycosyltransferase MrdB) in Escherichia coli (strain
+        notes: Supports cell wall hydrolases (autolysins) in tetrad arrangement; UniProtKB:P36548
+          (amiA, N-acetylmuramoyl-L-alanine amidase AmiA) in Escherichia coli (strain
           K12) provides a verified protein exemplar.
   - node_id: daughter_cell_splitting
     label: daughter-cell splitting
@@ -228,6 +228,6 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:V6F5E5 (ftsZ)
-    protein example to node ftsz_z_ring; added UniProtKB:P0ABG7 (mrdB) protein example
+    protein example to node ftsz_z_ring; added UniProtKB:P36548 (amiA) protein example
     to node cell_wall_hydrolases.'
   llm_assisted: true

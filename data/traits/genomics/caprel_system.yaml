@@ -99,35 +99,33 @@ causal_graphs:
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
   - node_id: caprel_system_protein_component
-    label: DNA-binding transcriptional dual regulator CRP
+    label: Endoribonuclease ToxN
     node_type: GENE_OR_PROTEIN
-    description: Protein component (DNA-binding transcriptional dual regulator CRP)
-      associated with CapRel system.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Endoribonuclease ToxN) associated with CapRel
+      system.
+    grounding: InterPro:IPR025911
     gene_symbols:
-    - crp
+    - toxN
     protein_examples:
-    - uniprot_id: UniProtKB:P0ACJ8
-      protein_label: DNA-binding transcriptional dual regulator CRP
-      gene_symbol: crp
-      taxon_id: NCBITaxon:83333
-      taxon_label: Escherichia coli (strain K12)
+    - uniprot_id: UniProtKB:B8X8Z0
+      protein_label: Endoribonuclease ToxN
+      gene_symbol: toxN
+      taxon_id: NCBITaxon:29471
+      taxon_label: Pectobacterium atrosepticum (Erwinia carotovora subsp. atroseptica)
       entry_status: REVIEWED
-      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 159
+      entry_version: 47
       sequence_version: 1
-      role: Characteristic protein component (crp, DNA-binding transcriptional dual
-        regulator CRP) associated with CapRel system in Escherichia coli (strain K12).
+      role: Characteristic protein component (toxN, Endoribonuclease ToxN) associated
+        with CapRel system in Pectobacterium atrosepticum (Erwinia carotovora subsp.
+        atroseptica).
       evidence:
       - reference: DOI:10.1038/s41586-024-08039-y
         snippet: directly binds and senses two completely unrelated and structurally
           different phage proteins using the same sensor domain
-        notes: Supports DNA-binding transcriptional dual regulator CRP in CapRel system;
-          UniProtKB:P0ACJ8 (crp, DNA-binding transcriptional dual regulator CRP) in
-          Escherichia coli (strain K12) provides a verified protein exemplar.
+        notes: Supports Endoribonuclease ToxN in CapRel system; UniProtKB:B8X8Z0 (toxN,
+          Endoribonuclease ToxN) in Pectobacterium atrosepticum (Erwinia carotovora
+          subsp. atroseptica) provides a verified protein exemplar.
   edges:
   - subject: caprel_locus
     predicate: contributes to
@@ -213,14 +211,14 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: caprel_system_trait
-    description: DNA-binding transcriptional dual regulator CRP (crp, UniProtKB:P0ACJ8)
-      contributes to CapRel system (associated with structurally, completely, different).
+    description: Endoribonuclease ToxN (toxN, UniProtKB:B8X8Z0) contributes to CapRel
+      system.
     evidence:
     - reference: DOI:10.1038/s41586-024-08039-y
       snippet: can directly bind and sense two completely unrelated and structurally
         different proteins using the same sensory domain
-      notes: Supports the functional association between DNA-binding transcriptional
-        dual regulator CRP (UniProtKB:P0ACJ8 in Escherichia coli (strain K12)) and
+      notes: Supports the functional association between Endoribonuclease ToxN (UniProtKB:B8X8Z0
+        in Pectobacterium atrosepticum (Erwinia carotovora subsp. atroseptica)) and
         CapRel system.
 discussions:
 - discussion_id: caprel-trigger-and-family-breadth-gap
@@ -253,5 +251,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    caprel_system_protein_component with UniProtKB:P0ACJ8 (crp) exemplar.'
+    caprel_system_protein_component with UniProtKB:B8X8Z0 (toxN) exemplar.'
   llm_assisted: true

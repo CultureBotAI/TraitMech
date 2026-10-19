@@ -33,7 +33,7 @@ causal_graphs:
   scope_status: NONMECHANISTIC
   scope_notes: This record is a broad environmental or morphological classification
     spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
-    descriptor; contextual protein nodes do not receive token UniProt examples.
+    descriptor; contextual protein nodes include source-backed UniProtKB exemplars.
   nodes:
   - node_id: hyperthermophilic_trait
     label: hyperthermophilic
@@ -54,25 +54,26 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Enzymes resistant to irreversible inactivation at high temperatures.
     protein_examples:
-    - uniprot_id: UniProtKB:P0A6Y8
-      protein_label: Chaperone protein DnaK
-      gene_symbol: dnaK
-      taxon_id: NCBITaxon:83333
-      taxon_label: Escherichia coli (strain K12)
+    - uniprot_id: UniProtKB:P74759
+      protein_label: Reverse gyrase
+      gene_symbol: rgy
+      taxon_id: NCBITaxon:523848
+      taxon_label: Saccharolobus shibatae (strain ATCC 51178 / DSM 5389 / JCM 8931
+        / NBRC 15437 / B12) (Sulfolobus shibatae)
       entry_status: REVIEWED
-      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 183
-      sequence_version: 2
-      role: Exemplar protein (dnaK, Chaperone protein DnaK) representing thermostable
-        enzymes in Escherichia coli (strain K12) for hyperthermophilic.
+      entry_version: 127
+      sequence_version: 1
+      role: Exemplar protein (rgy, Reverse gyrase) representing thermostable enzymes
+        in Saccharolobus shibatae (strain ATCC 51178 / DSM 5389 / JCM 8931 / NBRC
+        15437 / B12) (Sulfolobus shibatae) for hyperthermophilic.
       evidence:
-      - reference: DOI:10.1128/MMBR.65.1.1-43.2001
-        snippet: are typically thermostable (i.e., resistant to irreversible inactivation
-          at high temperatures) and are optimally active at high temperatures
-        notes: Supports thermostable enzymes in hyperthermophilic; UniProtKB:P0A6Y8
-          (dnaK, Chaperone protein DnaK) in Escherichia coli (strain K12) provides
-          a verified protein exemplar.
+      - reference: DOI:10.3389/fmicb.2021.661411
+        snippet: reverse gyrase is present in all the hyperthermophiles
+        notes: Supports thermostable enzymes in hyperthermophilic; UniProtKB:P74759
+          (rgy, Reverse gyrase) in Saccharolobus shibatae (strain ATCC 51178 / DSM
+          5389 / JCM 8931 / NBRC 15437 / B12) (Sulfolobus shibatae) provides a verified
+          protein exemplar.
   - node_id: reverse_gyrase
     label: reverse gyrase
     node_type: GENE_OR_PROTEIN
@@ -108,28 +109,26 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Protein-folding systems in hyperthermophilic archaea.
     protein_examples:
-    - uniprot_id: UniProtKB:Q59066
-      protein_label: CRISPR system single-strand-specific deoxyribonuclease Cas10/Csm1
-      gene_symbol: cas10
-      taxon_id: NCBITaxon:243232
-      taxon_label: Methanocaldococcus jannaschii (strain ATCC 43067 / DSM 2661 / JAL-1
-        / JCM 10045 / NBRC 100440) (Methanococcus jannaschii)
+    - uniprot_id: UniProtKB:P48424
+      protein_label: Thermosome subunit alpha
+      gene_symbol: thsA
+      taxon_id: NCBITaxon:273075
+      taxon_label: Thermoplasma acidophilum (strain ATCC 25905 / DSM 1728 / JCM 9062
+        / NBRC 15155 / AMRC-C165)
       entry_status: REVIEWED
-      proteome_id: UP000000805
+      proteome_id: UP000001024
       retrieved_on: '2026-10-17'
-      entry_version: 115
+      entry_version: 164
       sequence_version: 1
-      role: Exemplar protein (cas10, CRISPR system single-strand-specific deoxyribonuclease
-        Cas10/Csm1) representing archaeal molecular chaperonins in Methanocaldococcus
-        jannaschii (strain ATCC 43067 / DSM 2661 / JAL-1 / JCM 10045 / NBRC 100440)
-        (Methanococcus jannaschii) for hyperthermophilic.
+      role: Exemplar protein (thsA, Thermosome subunit alpha) representing archaeal
+        molecular chaperonins in Thermoplasma acidophilum (strain ATCC 25905 / DSM
+        1728 / JCM 9062 / NBRC 15155 / AMRC-C165) for hyperthermophilic.
       evidence:
       - reference: DOI:10.1128/MMBR.65.1.1-43.2001
         snippet: molecular mechanisms involved in protein thermostabilization
-        notes: Supports archaeal molecular chaperonins in hyperthermophilic; UniProtKB:Q59066
-          (cas10, CRISPR system single-strand-specific deoxyribonuclease Cas10/Csm1)
-          in Methanocaldococcus jannaschii (strain ATCC 43067 / DSM 2661 / JAL-1 /
-          JCM 10045 / NBRC 100440) (Methanococcus jannaschii) provides a verified
+        notes: Supports archaeal molecular chaperonins in hyperthermophilic; UniProtKB:P48424
+          (thsA, Thermosome subunit alpha) in Thermoplasma acidophilum (strain ATCC
+          25905 / DSM 1728 / JCM 9062 / NBRC 15155 / AMRC-C165) provides a verified
           protein exemplar.
   - node_id: membrane_lipid_composition
     label: membrane lipid composition
@@ -149,23 +148,26 @@ causal_graphs:
     description: Cellular proteins whose thermostability is enhanced by protective
       solutes.
     protein_examples:
-    - uniprot_id: UniProtKB:P46024
-      protein_label: Outer membrane protein assembly factor BamA
-      gene_symbol: bamA
-      taxon_id: NCBITaxon:727
-      taxon_label: Haemophilus influenzae
-      entry_status: REVIEWED
+    - uniprot_id: UniProtKB:Q4J8I0
+      protein_label: Conserved Archaeal protein
+      taxon_id: NCBITaxon:330779
+      taxon_label: Sulfolobus acidocaldarius (strain ATCC 33909 / DSM 639 / JCM 8929
+        / NBRC 15157 / NCIMB 11770)
+      entry_status: UNREVIEWED
+      proteome_id: UP000001018
       retrieved_on: '2026-10-17'
-      entry_version: 107
+      entry_version: 89
       sequence_version: 1
-      role: Exemplar protein (bamA, Outer membrane protein assembly factor BamA) representing
-        archaeal proteins in Haemophilus influenzae for hyperthermophilic.
+      role: Exemplar protein (Q4J8I0, Conserved Archaeal protein) representing archaeal
+        proteins in Sulfolobus acidocaldarius (strain ATCC 33909 / DSM 639 / JCM 8929
+        / NBRC 15157 / NCIMB 11770) for hyperthermophilic.
       evidence:
       - reference: PMID:9348040
         snippet: hyperthermophilic archaeon, Pyrococcus furiosus
-        notes: Supports archaeal proteins in hyperthermophilic; UniProtKB:P46024 (bamA,
-          Outer membrane protein assembly factor BamA) in Haemophilus influenzae provides
-          a verified protein exemplar.
+        notes: Supports archaeal proteins in hyperthermophilic; UniProtKB:Q4J8I0 (Q4J8I0,
+          Conserved Archaeal protein) in Sulfolobus acidocaldarius (strain ATCC 33909
+          / DSM 639 / JCM 8929 / NBRC 15157 / NCIMB 11770) provides a verified protein
+          exemplar.
   - node_id: dna_oxidative_damage
     label: DNA oxidative damage by hydroxyl radicals
     node_type: BIOLOGICAL_PROCESS
@@ -184,28 +186,25 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Enzyme required to form the bridging cross-link of GMGT lipids.
     protein_examples:
-    - uniprot_id: UniProtKB:Q59066
-      protein_label: CRISPR system single-strand-specific deoxyribonuclease Cas10/Csm1
-      gene_symbol: cas10
-      taxon_id: NCBITaxon:243232
-      taxon_label: Methanocaldococcus jannaschii (strain ATCC 43067 / DSM 2661 / JAL-1
-        / JCM 10045 / NBRC 100440) (Methanococcus jannaschii)
-      entry_status: REVIEWED
-      proteome_id: UP000000805
+    - uniprot_id: UniProtKB:Q4J8I0
+      protein_label: Conserved Archaeal protein
+      taxon_id: NCBITaxon:330779
+      taxon_label: Sulfolobus acidocaldarius (strain ATCC 33909 / DSM 639 / JCM 8929
+        / NBRC 15157 / NCIMB 11770)
+      entry_status: UNREVIEWED
+      proteome_id: UP000001018
       retrieved_on: '2026-10-17'
-      entry_version: 115
+      entry_version: 89
       sequence_version: 1
-      role: Exemplar protein (cas10, CRISPR system single-strand-specific deoxyribonuclease
-        Cas10/Csm1) representing Gms (GMGT synthase) in Methanocaldococcus jannaschii
-        (strain ATCC 43067 / DSM 2661 / JAL-1 / JCM 10045 / NBRC 100440) (Methanococcus
-        jannaschii) for hyperthermophilic.
+      role: Exemplar protein (Q4J8I0, Conserved Archaeal protein) representing Gms
+        (GMGT synthase) in Sulfolobus acidocaldarius (strain ATCC 33909 / DSM 639
+        / JCM 8929 / NBRC 15157 / NCIMB 11770) for hyperthermophilic.
       evidence:
       - reference: PMID:9348040
         snippet: hyperthermophilic archaeon, Pyrococcus furiosus
-        notes: Supports Gms (GMGT synthase) in hyperthermophilic; UniProtKB:Q59066
-          (cas10, CRISPR system single-strand-specific deoxyribonuclease Cas10/Csm1)
-          in Methanocaldococcus jannaschii (strain ATCC 43067 / DSM 2661 / JAL-1 /
-          JCM 10045 / NBRC 100440) (Methanococcus jannaschii) provides a verified
+        notes: Supports Gms (GMGT synthase) in hyperthermophilic; UniProtKB:Q4J8I0
+          (Q4J8I0, Conserved Archaeal protein) in Sulfolobus acidocaldarius (strain
+          ATCC 33909 / DSM 639 / JCM 8929 / NBRC 15157 / NCIMB 11770) provides a verified
           protein exemplar.
   - node_id: membrane_rigidity
     label: membrane rigidity at high temperature
@@ -440,9 +439,9 @@ curation_history:
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
-  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P0A6Y8 (dnaK)
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P74759 (rgy)
     protein example to node thermostable_enzymes; added UniProtKB:P74759 (rgy) protein
-    example to node reverse_gyrase; added UniProtKB:Q59066 (cas10) protein example
-    to node molecular_chaperonins; added UniProtKB:P46024 (bamA) protein example to
-    node archaeal_proteins (+1 more).'
+    example to node reverse_gyrase; added UniProtKB:P48424 (thsA) protein example
+    to node molecular_chaperonins; added UniProtKB:Q4J8I0 (Q4J8I0) protein example
+    to node archaeal_proteins (+1 more).'
   llm_assisted: true

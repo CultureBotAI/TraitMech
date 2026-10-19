@@ -83,18 +83,25 @@ curation_history:
   llm_assisted: true
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed canonical_examples status alongside NONMECHANISTIC protein exemplar
+    graph for viscotaxis; isolate-level canonical example remains deferred pending
+    explicit strain-level literature.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph viscotaxis_graph
-    with GENE_OR_PROTEIN node viscotaxis_protein_component and UniProtKB:P39914 exemplar.'
+    with GENE_OR_PROTEIN node viscotaxis_protein_component and UniProtKB:P09348 exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: viscotaxis_graph
   title: Protein component associated with viscotaxis
-  description: Literature-backed association between Monothiol bacilliredoxin BrxC
-    (UniProtKB:P39914) and viscotaxis.
+  description: Literature-backed association between Motility protein A (UniProtKB:P09348)
+    and viscotaxis.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P39914 in Bacillus
-    subtilis (strain 168)) associated with viscotaxis while full multi-step mechanistic
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P09348 in Escherichia
+    coli (strain K12)) associated with viscotaxis while full multi-step mechanistic
     curation remains future work.
   nodes:
   - node_id: viscotaxis_trait
@@ -104,45 +111,41 @@ causal_graphs:
     description: A motile phenotype in which active locomotion produces net migration
       in response to a spatial gradient in surrounding fluid viscosity.
   - node_id: viscotaxis_protein_component
-    label: Monothiol bacilliredoxin BrxC
+    label: Motility protein A
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Monothiol bacilliredoxin BrxC) associated with
-      viscotaxis.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Motility protein A) associated with viscotaxis.
+    grounding: InterPro:IPR000540
     gene_symbols:
-    - brxC
+    - motA
     protein_examples:
-    - uniprot_id: UniProtKB:P39914
-      protein_label: Monothiol bacilliredoxin BrxC
-      gene_symbol: brxC
-      taxon_id: NCBITaxon:224308
-      taxon_label: Bacillus subtilis (strain 168)
+    - uniprot_id: UniProtKB:P09348
+      protein_label: Motility protein A
+      gene_symbol: motA
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
-      proteome_id: UP000001570
+      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 128
+      entry_version: 181
       sequence_version: 1
-      role: Characteristic protein component (brxC, Monothiol bacilliredoxin BrxC)
-        associated with viscotaxis in Bacillus subtilis (strain 168).
+      role: Characteristic protein component (motA, Motility protein A) associated
+        with viscotaxis in Escherichia coli (strain K12).
       evidence:
       - reference: DOI:10.1103/physrevlett.120.208002
         snippet: suitable body shapes create viscotaxis based on a systematic asymmetry
           of viscous forces acting on a microswimmer.
-        notes: Supports Monothiol bacilliredoxin BrxC in viscotaxis; UniProtKB:P39914
-          (brxC, Monothiol bacilliredoxin BrxC) in Bacillus subtilis (strain 168)
-          provides a verified protein exemplar.
+        notes: Supports Motility protein A in viscotaxis; UniProtKB:P09348 (motA,
+          Motility protein A) in Escherichia coli (strain K12) provides a verified
+          protein exemplar.
   edges:
   - subject: viscotaxis_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: viscotaxis_trait
-    description: Monothiol bacilliredoxin BrxC (brxC, UniProtKB:P39914) contributes
-      to viscotaxis (associated with microswimmer, systematic, viscotaxis).
+    description: Motility protein A (motA, UniProtKB:P09348) contributes to viscotaxis.
     evidence:
     - reference: DOI:10.1103/physrevlett.120.208002
       snippet: suitable body shapes create viscotaxis based on a systematic asymmetry
         of viscous forces acting on a microswimmer.
-      notes: Supports the functional association between Monothiol bacilliredoxin
-        BrxC (UniProtKB:P39914 in Bacillus subtilis (strain 168)) and viscotaxis.
+      notes: Supports the functional association between Motility protein A (UniProtKB:P09348
+        in Escherichia coli (strain K12)) and viscotaxis.

@@ -130,28 +130,27 @@ causal_graphs:
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
   - node_id: rst_2tm_1tm_tir_system_protein_component
-    label: Multiple stress resistance protein BhsA
+    label: Endonuclease GajA
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Multiple stress resistance protein BhsA) associated
-      with Rst_2TM_1TM_TIR system.
+    description: Protein component (Endonuclease GajA) associated with Rst_2TM_1TM_TIR
+      system.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - bhsA
+    - gajA
     protein_examples:
-    - uniprot_id: UniProtKB:P0AB40
-      protein_label: Multiple stress resistance protein BhsA
-      gene_symbol: bhsA
-      taxon_id: NCBITaxon:83333
-      taxon_label: Escherichia coli (strain K12)
+    - uniprot_id: UniProtKB:P0DW47
+      protein_label: Endonuclease GajA
+      gene_symbol: gajA
+      taxon_id: NCBITaxon:1053212
+      taxon_label: Bacillus cereus (strain HuB5-5)
       entry_status: REVIEWED
-      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 116
+      entry_version: 12
       sequence_version: 1
-      role: Characteristic protein component (bhsA, Multiple stress resistance protein
-        BhsA) associated with Rst_2TM_1TM_TIR system in Escherichia coli (strain K12).
+      role: Characteristic protein component (gajA, Endonuclease GajA) associated
+        with Rst_2TM_1TM_TIR system in Bacillus cereus (strain HuB5-5).
       evidence:
       - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/rst_2tm_1tm_tir.md
         snippet: The Rst_2TM_1TM_TIR system is carried by the P2-like phage AC1 and
@@ -159,9 +158,9 @@ causal_graphs:
           system is composed of three proteins, Rst_TIR_tm, which contains a TIR (Toll/interleukin-1
           receptor) domain, Rst_1TM_TIR, which contains a transmembrane helix (TM)
           and Rst_2TM_TIR, that contains two TMs :ref{doi=10.1016/j.chom.2022.02.018}.
-        notes: Supports Multiple stress resistance protein BhsA in Rst_2TM_1TM_TIR
-          system; UniProtKB:P0AB40 (bhsA, Multiple stress resistance protein BhsA)
-          in Escherichia coli (strain K12) provides a verified protein exemplar.
+        notes: Supports Endonuclease GajA in Rst_2TM_1TM_TIR system; UniProtKB:P0DW47
+          (gajA, Endonuclease GajA) in Bacillus cereus (strain HuB5-5) provides a
+          verified protein exemplar.
   edges:
   - subject: rst_2tm_1tm_tir_locus
     predicate: contributes to
@@ -240,17 +239,15 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: rst_2tm_1tm_tir_system_trait
-    description: Multiple stress resistance protein BhsA (bhsA, UniProtKB:P0AB40)
-      contributes to Rst_2TM_1TM_TIR system (associated with escherichia, composed,
-      cp034787).
+    description: Endonuclease GajA (gajA, UniProtKB:P0DW47) contributes to Rst_2TM_1TM_TIR
+      system.
     evidence:
     - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/rst_2tm_1tm_tir.md
       snippet: The Rst_2TM_1TM_TIR system in *Escherichia coli* (GCF_004006575.1,
         NZ_CP034787) is composed of 3 proteins Rst_TIR_tm (WP_023140578.1) Rst_1TM_TIR
         (WP_001534953.1) Rst_2TM_TIR (WP_023140577.1)
-      notes: Supports the functional association between Multiple stress resistance
-        protein BhsA (UniProtKB:P0AB40 in Escherichia coli (strain K12)) and Rst_2TM_1TM_TIR
-        system.
+      notes: Supports the functional association between Endonuclease GajA (UniProtKB:P0DW47
+        in Bacillus cereus (strain HuB5-5)) and Rst_2TM_1TM_TIR system.
 discussions:
 - discussion_id: rst-2tm-1tm-tir-mechanism-gap
   prompt: Resolve Rst_2TM_1TM_TIR native host breadth, accession-level components,
@@ -324,5 +321,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    rst_2tm_1tm_tir_system_protein_component with UniProtKB:P0AB40 (bhsA) exemplar.'
+    rst_2tm_1tm_tir_system_protein_component with UniProtKB:P0DW47 (gajA) exemplar.'
   llm_assisted: true

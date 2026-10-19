@@ -106,18 +106,25 @@ curation_history:
   llm_assisted: true
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed canonical_examples status alongside NONMECHANISTIC protein exemplar
+    graph for memory of acquired stress resistance; isolate-level canonical example
+    remains deferred pending explicit strain-level literature.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph acquired_stress_resistance_memory_graph
     with GENE_OR_PROTEIN node acquired_stress_resistance_memory_protein_component
-    and UniProtKB:P0AB40 exemplar.'
+    and UniProtKB:P0A6Y8 exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: acquired_stress_resistance_memory_graph
   title: Protein component associated with memory of acquired stress resistance
-  description: Literature-backed association between Multiple stress resistance protein
-    BhsA (UniProtKB:P0AB40) and memory of acquired stress resistance.
+  description: Literature-backed association between Chaperone protein DnaK (UniProtKB:P0A6Y8)
+    and memory of acquired stress resistance.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P0AB40 in Escherichia
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P0A6Y8 in Escherichia
     coli (strain K12)) associated with memory of acquired stress resistance while
     full multi-step mechanistic curation remains future work.
   nodes:
@@ -129,48 +136,45 @@ causal_graphs:
       elevated resistance to a later stress challenge after a previous inducing stress
       has been removed, through persistence of a non-genetic state.
   - node_id: acquired_stress_resistance_memory_protein_component
-    label: Multiple stress resistance protein BhsA
+    label: Chaperone protein DnaK
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Multiple stress resistance protein BhsA) associated
-      with memory of acquired stress resistance.
+    description: Protein component (Chaperone protein DnaK) associated with memory
+      of acquired stress resistance.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - bhsA
+    - dnaK
     protein_examples:
-    - uniprot_id: UniProtKB:P0AB40
-      protein_label: Multiple stress resistance protein BhsA
-      gene_symbol: bhsA
+    - uniprot_id: UniProtKB:P0A6Y8
+      protein_label: Chaperone protein DnaK
+      gene_symbol: dnaK
       taxon_id: NCBITaxon:83333
       taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
       proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 116
-      sequence_version: 1
-      role: Characteristic protein component (bhsA, Multiple stress resistance protein
-        BhsA) associated with memory of acquired stress resistance in Escherichia
-        coli (strain K12).
+      entry_version: 183
+      sequence_version: 2
+      role: Characteristic protein component (dnaK, Chaperone protein DnaK) associated
+        with memory of acquired stress resistance in Escherichia coli (strain K12).
       evidence:
       - reference: DOI:10.1371/journal.pbio.2003853
         snippet: the cells inheriting this ancestral PA displayed a significantly
           increased heat resistance compared to their isogenic, PA-free siblings.
-        notes: Supports Multiple stress resistance protein BhsA in memory of acquired
-          stress resistance; UniProtKB:P0AB40 (bhsA, Multiple stress resistance protein
-          BhsA) in Escherichia coli (strain K12) provides a verified protein exemplar.
+        notes: Supports Chaperone protein DnaK in memory of acquired stress resistance;
+          UniProtKB:P0A6Y8 (dnaK, Chaperone protein DnaK) in Escherichia coli (strain
+          K12) provides a verified protein exemplar.
   edges:
   - subject: acquired_stress_resistance_memory_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: acquired_stress_resistance_memory_trait
-    description: Multiple stress resistance protein BhsA (bhsA, UniProtKB:P0AB40)
-      contributes to memory of acquired stress resistance (associated with significantly,
-      inheriting, resistance).
+    description: Chaperone protein DnaK (dnaK, UniProtKB:P0A6Y8) contributes to memory
+      of acquired stress resistance.
     evidence:
     - reference: DOI:10.1371/journal.pbio.2003853
       snippet: the cells inheriting this ancestral PA displayed a significantly increased
         heat resistance compared to their isogenic, PA-free siblings.
-      notes: Supports the functional association between Multiple stress resistance
-        protein BhsA (UniProtKB:P0AB40 in Escherichia coli (strain K12)) and memory
-        of acquired stress resistance.
+      notes: Supports the functional association between Chaperone protein DnaK (UniProtKB:P0A6Y8
+        in Escherichia coli (strain K12)) and memory of acquired stress resistance.

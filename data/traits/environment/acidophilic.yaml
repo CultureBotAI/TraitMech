@@ -33,7 +33,7 @@ causal_graphs:
   scope_status: NONMECHANISTIC
   scope_notes: This record is a broad environmental or morphological classification
     spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
-    descriptor; contextual protein nodes do not receive token UniProt examples.
+    descriptor; contextual protein nodes include source-backed UniProtKB exemplars.
   nodes:
   - node_id: acidophilic_trait
     label: acidophilic
@@ -72,24 +72,24 @@ causal_graphs:
     description: Proton-pumping respiratory chain complexes that actively translocate
       protons.
     protein_examples:
-    - uniprot_id: UniProtKB:P09152
-      protein_label: Respiratory nitrate reductase 1 alpha chain
-      gene_symbol: narG
+    - uniprot_id: UniProtKB:P0ABB0
+      protein_label: ATP synthase subunit alpha
+      gene_symbol: atpA
       taxon_id: NCBITaxon:83333
       taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
       proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 228
-      sequence_version: 4
-      role: Exemplar protein (narG, Respiratory nitrate reductase 1 alpha chain) representing
-        primary proton pumps in Escherichia coli (strain K12) for acidophilic.
+      entry_version: 161
+      sequence_version: 1
+      role: Exemplar protein (atpA, ATP synthase subunit alpha) representing primary
+        proton pumps in Escherichia coli (strain K12) for acidophilic.
       evidence:
       - reference: DOI:10.1038/nrmicro2549
         snippet: Primary proton pumps generate the PMF
-        notes: Supports primary proton pumps in acidophilic; UniProtKB:P09152 (narG,
-          Respiratory nitrate reductase 1 alpha chain) in Escherichia coli (strain
-          K12) provides a verified protein exemplar.
+        notes: Supports primary proton pumps in acidophilic; UniProtKB:P0ABB0 (atpA,
+          ATP synthase subunit alpha) in Escherichia coli (strain K12) provides a
+          verified protein exemplar.
   - node_id: proton_coupled_atpases
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
@@ -99,24 +99,25 @@ causal_graphs:
     description: ATP-driven primary pumps that actively transport protons across the
       membrane.
     protein_examples:
-    - uniprot_id: UniProtKB:Q93F90
-      protein_label: Na(+)/H(+) antiporter NhaA
-      gene_symbol: nhaA
-      taxon_id: NCBITaxon:1890
-      taxon_label: Streptomyces antibioticus
+    - uniprot_id: UniProtKB:P0ABB4
+      protein_label: ATP synthase subunit beta
+      gene_symbol: atpD
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
+      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 71
-      sequence_version: 1
-      role: Exemplar protein (nhaA, Na(+)/H(+) antiporter NhaA) representing proton-coupled
-        ATPases in Streptomyces antibioticus for acidophilic.
+      entry_version: 156
+      sequence_version: 2
+      role: Exemplar protein (atpD, ATP synthase subunit beta) representing proton-coupled
+        ATPases in Escherichia coli (strain K12) for acidophilic.
       evidence:
       - reference: DOI:10.1038/nrmicro2549
         snippet: For pH homeostasis under alkaline conditions, active transport of
           protons inward is a crucial adaptation, which usually involves activation
           and transcriptional up-regulation of key cation/proton antiporters
-        notes: Supports proton-coupled ATPases in acidophilic; UniProtKB:Q93F90 (nhaA,
-          Na(+)/H(+) antiporter NhaA) in Streptomyces antibioticus provides a verified
+        notes: Supports proton-coupled ATPases in acidophilic; UniProtKB:P0ABB4 (atpD,
+          ATP synthase subunit beta) in Escherichia coli (strain K12) provides a verified
           protein exemplar.
   - node_id: cation_pumping
     label: pumping K+ and Na+ into cytoplasm
@@ -337,7 +338,7 @@ curation_history:
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
-  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P09152 (narG)
-    protein example to node primary_proton_pumps; added UniProtKB:Q93F90 (nhaA) protein
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P0ABB0 (atpA)
+    protein example to node primary_proton_pumps; added UniProtKB:P0ABB4 (atpD) protein
     example to node proton_coupled_atpases.'
   llm_assisted: true

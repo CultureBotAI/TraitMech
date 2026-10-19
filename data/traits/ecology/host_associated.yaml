@@ -30,8 +30,8 @@ causal_graphs:
   title: Host association establishes persistent host microbiome membership
   scope_status: NONMECHANISTIC
   scope_notes: This broad ecological, host-relationship, habitat, or hazard classification
-    spans multiple taxa and mechanisms; contextual protein nodes do not receive token
-    UniProt examples.
+    spans multiple taxa and mechanisms; contextual protein nodes include source-backed
+    UniProtKB exemplars.
   description: Evidence-backed causal sketch linking host habitat to persistent membership
     in a host-associated microbial community.
   nodes:
@@ -60,25 +60,26 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Flagella, pili, fimbriae, and adhesins including mucus-binding proteins.
     protein_examples:
-    - uniprot_id: UniProtKB:P0ABW8
-      protein_label: CS1 fimbrial subunit A
-      gene_symbol: csoA
-      taxon_id: NCBITaxon:562
-      taxon_label: Escherichia coli
+    - uniprot_id: UniProtKB:P08191
+      protein_label: Type 1 fimbrin D-mannose specific adhesin
+      gene_symbol: fimH
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
+      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 43
-      sequence_version: 1
-      role: Exemplar protein (csoA, CS1 fimbrial subunit A) representing cell appendages
-        and adhesins in Escherichia coli for host-associated.
+      entry_version: 198
+      sequence_version: 2
+      role: Exemplar protein (fimH, Type 1 fimbrin D-mannose specific adhesin) representing
+        cell appendages and adhesins in Escherichia coli (strain K12) for host-associated.
       evidence:
       - reference: DOI:10.1073/pnas.1218525110
         snippet: This review examines how a growing knowledge of the vast range of
           animal-bacterial interactions, whether in shared ecosystems or intimate
           symbioses, is fundamentally altering our understanding of animal biology.
-        notes: Supports cell appendages and adhesins in host-associated; UniProtKB:P0ABW8
-          (csoA, CS1 fimbrial subunit A) in Escherichia coli provides a verified protein
-          exemplar.
+        notes: Supports cell appendages and adhesins in host-associated; UniProtKB:P08191
+          (fimH, Type 1 fimbrin D-mannose specific adhesin) in Escherichia coli (strain
+          K12) provides a verified protein exemplar.
   - node_id: host_surface_attachment
     label: attachment to host surfaces
     node_type: BIOLOGICAL_PROCESS
@@ -268,6 +269,6 @@ curation_history:
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
-  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P0ABW8 (csoA)
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P08191 (fimH)
     protein example to node host_surface_adhesins.'
   llm_assisted: true

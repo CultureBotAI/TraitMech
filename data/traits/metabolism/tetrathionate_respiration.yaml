@@ -59,17 +59,17 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph tetrathionate_respiration_graph
-    with GENE_OR_PROTEIN node tetrathionate_respiration_protein_component and UniProtKB:Q4FQB7
+    with GENE_OR_PROTEIN node tetrathionate_respiration_protein_component and UniProtKB:Q9Z4S6
     exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: tetrathionate_respiration_graph
   title: Protein component associated with tetrathionate respiration
-  description: Literature-backed association between Thiosulfate dehydrogenase (UniProtKB:Q4FQB7)
-    and tetrathionate respiration.
+  description: Literature-backed association between Tetrathionate reductase subunit
+    A (UniProtKB:Q9Z4S6) and tetrathionate respiration.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q4FQB7 in Psychrobacter
-    arcticus (strain DSM 17307 / VKM B-2377 / 273-4)) associated with tetrathionate
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q9Z4S6 in Salmonella
+    typhimurium (strain LT2 / SGSC1412 / ATCC 700720)) associated with tetrathionate
     respiration while full multi-step mechanistic curation remains future work.
   nodes:
   - node_id: tetrathionate_respiration_trait
@@ -79,45 +79,44 @@ causal_graphs:
     description: An anaerobic respiration in which an organism uses tetrathionate
       as the terminal electron acceptor and reduces it to thiosulfate for energy conservation.
   - node_id: tetrathionate_respiration_protein_component
-    label: Thiosulfate dehydrogenase
+    label: Tetrathionate reductase subunit A
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Thiosulfate dehydrogenase) associated with tetrathionate
-      respiration.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Tetrathionate reductase subunit A) associated
+      with tetrathionate respiration.
+    grounding: InterPro:IPR009010
     gene_symbols:
-    - tsdA
+    - ttrA
     protein_examples:
-    - uniprot_id: UniProtKB:Q4FQB7
-      protein_label: Thiosulfate dehydrogenase
-      gene_symbol: tsdA
-      taxon_id: NCBITaxon:259536
-      taxon_label: Psychrobacter arcticus (strain DSM 17307 / VKM B-2377 / 273-4)
+    - uniprot_id: UniProtKB:Q9Z4S6
+      protein_label: Tetrathionate reductase subunit A
+      gene_symbol: ttrA
+      taxon_id: NCBITaxon:99287
+      taxon_label: Salmonella typhimurium (strain LT2 / SGSC1412 / ATCC 700720)
       entry_status: REVIEWED
-      proteome_id: UP000000546
+      proteome_id: UP000001014
       retrieved_on: '2026-10-17'
-      entry_version: 116
+      entry_version: 125
       sequence_version: 1
-      role: Characteristic protein component (tsdA, Thiosulfate dehydrogenase) associated
-        with tetrathionate respiration in Psychrobacter arcticus (strain DSM 17307
-        / VKM B-2377 / 273-4).
+      role: Characteristic protein component (ttrA, Tetrathionate reductase subunit
+        A) associated with tetrathionate respiration in Salmonella typhimurium (strain
+        LT2 / SGSC1412 / ATCC 700720).
       evidence:
-      - reference: DOI:10.1128/JB.183.8.2463-2475.2001
-        snippet: Salmonella reduces tetrathionate to thiosulfate
-        notes: Supports Thiosulfate dehydrogenase in tetrathionate respiration; UniProtKB:Q4FQB7
-          (tsdA, Thiosulfate dehydrogenase) in Psychrobacter arcticus (strain DSM
-          17307 / VKM B-2377 / 273-4) provides a verified protein exemplar.
+      - reference: DOI:10.1046/j.1365-2958.1999.01345.x
+        snippet: ttrA, ttrB and ttrC are the tetrathionate reductase structural genes
+        notes: Supports Tetrathionate reductase subunit A in tetrathionate respiration;
+          UniProtKB:Q9Z4S6 (ttrA, Tetrathionate reductase subunit A) in Salmonella
+          typhimurium (strain LT2 / SGSC1412 / ATCC 700720) provides a verified protein
+          exemplar.
   edges:
   - subject: tetrathionate_respiration_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: tetrathionate_respiration_trait
-    description: Thiosulfate dehydrogenase (tsdA, UniProtKB:Q4FQB7) contributes to
-      tetrathionate respiration (associated with tetrathionate, thiosulfate, salmonella).
+    description: Tetrathionate reductase subunit A (ttrA, UniProtKB:Q9Z4S6) contributes
+      to tetrathionate respiration.
     evidence:
-    - reference: DOI:10.1128/JB.183.8.2463-2475.2001
-      snippet: Salmonella reduces tetrathionate to thiosulfate
-      notes: Supports the functional association between Thiosulfate dehydrogenase
-        (UniProtKB:Q4FQB7 in Psychrobacter arcticus (strain DSM 17307 / VKM B-2377
-        / 273-4)) and tetrathionate respiration.
+    - reference: DOI:10.1046/j.1365-2958.1999.01345.x
+      snippet: ttrA, ttrB and ttrC are the tetrathionate reductase structural genes
+      notes: Supports the functional association between Tetrathionate reductase subunit
+        A (UniProtKB:Q9Z4S6 in Salmonella typhimurium (strain LT2 / SGSC1412 / ATCC
+        700720)) and tetrathionate respiration.

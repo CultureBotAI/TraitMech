@@ -72,27 +72,28 @@ causal_graphs:
     description: SOS-induced cell-division inhibitor protein that blocks FtsZ assembly.
     grounding: InterPro:IPR004596
     protein_examples:
-    - uniprot_id: UniProtKB:A7MFW4
-      protein_label: Cell division inhibitor SulA
-      gene_symbol: sulA
-      taxon_id: NCBITaxon:290339
-      taxon_label: Cronobacter sakazakii (strain ATCC BAA-894) (Enterobacter sakazakii)
-      entry_status: REVIEWED
-      proteome_id: UP000000260
+    - uniprot_id: UniProtKB:H8YHZ0
+      protein_label: Cell division inhibitor-related protein, SulA-like protein
+      gene_symbol: sulA1
+      taxon_id: NCBITaxon:1117647
+      taxon_label: Simiduia agarivorans (strain DSM 21679 / JCM 13881 / BCRC 17597
+        / SA1)
+      entry_status: UNREVIEWED
+      proteome_id: UP000000466
       retrieved_on: '2026-10-17'
-      entry_version: 91
+      entry_version: 54
       sequence_version: 1
-      role: Exemplar protein (sulA, Cell division inhibitor SulA) representing SulA
-        in Cronobacter sakazakii (strain ATCC BAA-894) (Enterobacter sakazakii) for
-        cell length large.
+      role: Exemplar protein (sulA1, Cell division inhibitor-related protein, SulA-like
+        protein) representing SulA in Simiduia agarivorans (strain DSM 21679 / JCM
+        13881 / BCRC 17597 / SA1) for cell length large.
       evidence:
       - reference: DOI:10.1002/advs.202203260
         snippet: cell division inhibitor, sulA, blocks FtsZ (a master regulator of
           bacterial cell division and responsible for the Z ring formation at mid-cell)
           polymerization
-        notes: Supports SulA in cell length large; UniProtKB:A7MFW4 (sulA, Cell division
-          inhibitor SulA) in Cronobacter sakazakii (strain ATCC BAA-894) (Enterobacter
-          sakazakii) provides a verified protein exemplar.
+        notes: Supports SulA in cell length large; UniProtKB:H8YHZ0 (sulA1, Cell division
+          inhibitor-related protein, SulA-like protein) in Simiduia agarivorans (strain
+          DSM 21679 / JCM 13881 / BCRC 17597 / SA1) provides a verified protein exemplar.
   - node_id: ftsz_zring
     label: FtsZ Z-ring
     node_type: BIOLOGICAL_PROCESS
@@ -322,7 +323,7 @@ curation_history:
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
-  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:A7MFW4 (sulA)
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:H8YHZ0 (sulA1)
     protein example to node sula_protein; added UniProtKB:V6F5E5 (ftsZ) protein example
     to node ftsz_protein.'
   llm_assisted: true

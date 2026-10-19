@@ -103,16 +103,16 @@ curation_history:
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph fungal_auxiliary_cell_formation_graph
     with GENE_OR_PROTEIN node fungal_auxiliary_cell_formation_protein_component and
-    UniProtKB:P16521 exemplar.'
+    UniProtKB:Q2UF72 exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: fungal_auxiliary_cell_formation_graph
   title: Protein component associated with fungal auxiliary cell formation
-  description: Literature-backed association between Elongation factor 3A (UniProtKB:P16521)
+  description: Literature-backed association between Chitin synthase A (UniProtKB:Q2UF72)
     and fungal auxiliary cell formation.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P16521 in Saccharomyces
-    cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)) associated with fungal
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q2UF72 in Aspergillus
+    oryzae (strain ATCC 42149 / RIB 40) (Yellow koji mold)) associated with fungal
     auxiliary cell formation while full multi-step mechanistic curation remains future
     work.
   nodes:
@@ -124,48 +124,47 @@ causal_graphs:
       forms auxiliary cells, typically clustered hyphal swellings, on mycelium outside
       plant tissue.
   - node_id: fungal_auxiliary_cell_formation_protein_component
-    label: Elongation factor 3A
+    label: Chitin synthase A
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Elongation factor 3A) associated with fungal auxiliary
+    description: Protein component (Chitin synthase A) associated with fungal auxiliary
       cell formation.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - YEF3
+    - csmA
     protein_examples:
-    - uniprot_id: UniProtKB:P16521
-      protein_label: Elongation factor 3A
-      gene_symbol: YEF3
-      taxon_id: NCBITaxon:559292
-      taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's
-        yeast)
+    - uniprot_id: UniProtKB:Q2UF72
+      protein_label: Chitin synthase A
+      gene_symbol: csmA
+      taxon_id: NCBITaxon:510516
+      taxon_label: Aspergillus oryzae (strain ATCC 42149 / RIB 40) (Yellow koji mold)
       entry_status: REVIEWED
-      proteome_id: UP000002311
+      proteome_id: UP000006564
       retrieved_on: '2026-10-17'
-      entry_version: 244
-      sequence_version: 4
-      role: Characteristic protein component (YEF3, Elongation factor 3A) associated
-        with fungal auxiliary cell formation in Saccharomyces cerevisiae (strain ATCC
-        204508 / S288c) (Baker's yeast).
+      entry_version: 74
+      sequence_version: 1
+      role: Characteristic protein component (csmA, Chitin synthase A) associated
+        with fungal auxiliary cell formation in Aspergillus oryzae (strain ATCC 42149
+        / RIB 40) (Yellow koji mold).
       evidence:
       - reference: DOI:10.1017/S0953756203008761
         snippet: Isolated auxiliary cells were shown to exhibit hyphal re-growth,
           but not root colonization, either in situ or in vitro.
-        notes: Supports Elongation factor 3A in fungal auxiliary cell formation; UniProtKB:P16521
-          (YEF3, Elongation factor 3A) in Saccharomyces cerevisiae (strain ATCC 204508
-          / S288c) (Baker's yeast) provides a verified protein exemplar.
+        notes: Supports Chitin synthase A in fungal auxiliary cell formation; UniProtKB:Q2UF72
+          (csmA, Chitin synthase A) in Aspergillus oryzae (strain ATCC 42149 / RIB
+          40) (Yellow koji mold) provides a verified protein exemplar.
   edges:
   - subject: fungal_auxiliary_cell_formation_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: fungal_auxiliary_cell_formation_trait
-    description: Elongation factor 3A (YEF3, UniProtKB:P16521) contributes to fungal
-      auxiliary cell formation (associated with colonization, auxiliary, isolated).
+    description: Chitin synthase A (csmA, UniProtKB:Q2UF72) contributes to fungal
+      auxiliary cell formation.
     evidence:
     - reference: DOI:10.1017/S0953756203008761
       snippet: Isolated auxiliary cells were shown to exhibit hyphal re-growth, but
         not root colonization, either in situ or in vitro.
-      notes: Supports the functional association between Elongation factor 3A (UniProtKB:P16521
-        in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast))
-        and fungal auxiliary cell formation.
+      notes: Supports the functional association between Chitin synthase A (UniProtKB:Q2UF72
+        in Aspergillus oryzae (strain ATCC 42149 / RIB 40) (Yellow koji mold)) and
+        fungal auxiliary cell formation.

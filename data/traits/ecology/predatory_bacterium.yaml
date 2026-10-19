@@ -30,8 +30,8 @@ causal_graphs:
   title: Predatory bacteria kill and consume other bacteria
   scope_status: NONMECHANISTIC
   scope_notes: This broad ecological, host-relationship, habitat, or hazard classification
-    spans multiple taxa and mechanisms; contextual protein nodes do not receive token
-    UniProt examples. The invasion and bdelloplast branch illustrates B. bacteriovorus,
+    spans multiple taxa and mechanisms; contextual protein nodes include source-backed
+    UniProtKB exemplars. The invasion and bdelloplast branch illustrates B. bacteriovorus,
     not a requirement for every predatory bacterium; epibiotic bacterial predators
     feed with their cell bodies outside the prey.
   description: Evidence-backed causal sketch linking prey invasion to bacteriolytic
@@ -101,40 +101,38 @@ causal_graphs:
     description: Lysis of the spent prey cell wall and exit of newly formed predator
       progeny.
   - node_id: predatory_bacterium_protein_component
-    label: ATP-dependent Clp protease proteolytic subunit
+    label: Type IV major pilin protein PilA
     node_type: GENE_OR_PROTEIN
-    description: Protein component (ATP-dependent Clp protease proteolytic subunit)
-      associated with predatory bacterium.
+    description: Protein component (Type IV major pilin protein PilA) associated with
+      predatory bacterium.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - clpP
+    - pilA
     protein_examples:
-    - uniprot_id: UniProtKB:Q49VZ2
-      protein_label: ATP-dependent Clp protease proteolytic subunit
-      gene_symbol: clpP
-      taxon_id: NCBITaxon:342451
-      taxon_label: Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
-        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+    - uniprot_id: UniProtKB:P04739
+      protein_label: Type IV major pilin protein PilA
+      gene_symbol: pilA
+      taxon_id: NCBITaxon:208964
+      taxon_label: Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116
+        / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)
       entry_status: REVIEWED
-      proteome_id: UP000006371
+      proteome_id: UP000002438
       retrieved_on: '2026-10-17'
-      entry_version: 116
+      entry_version: 159
       sequence_version: 1
-      role: Characteristic protein component (clpP, ATP-dependent Clp protease proteolytic
-        subunit) associated with predatory bacterium in Staphylococcus saprophyticus
-        subsp. saprophyticus (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292
-        / S-41).
+      role: Characteristic protein component (pilA, Type IV major pilin protein PilA)
+        associated with predatory bacterium in Pseudomonas aeruginosa (strain ATCC
+        15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1).
       evidence:
       - reference: DOI:10.1038/s41467-024-47412-3
         snippet: swim rapidly to another Gram-negative bacterial prey surface and
           then attach to it
-        notes: Supports ATP-dependent Clp protease proteolytic subunit in predatory
-          bacterium; UniProtKB:Q49VZ2 (clpP, ATP-dependent Clp protease proteolytic
-          subunit) in Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
-          15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) provides a verified protein
-          exemplar.
+        notes: Supports Type IV major pilin protein PilA in predatory bacterium; UniProtKB:P04739
+          (pilA, Type IV major pilin protein PilA) in Pseudomonas aeruginosa (strain
+          ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101
+          / PAO1) provides a verified protein exemplar.
   edges:
   - subject: predatory_trait
     predicate: enables
@@ -259,16 +257,15 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: predatory_trait
-    description: ATP-dependent Clp protease proteolytic subunit (clpP, UniProtKB:Q49VZ2)
-      contributes to predatory bacterium (associated with internalized, periplasm,
-      filament).
+    description: Type IV major pilin protein PilA (pilA, UniProtKB:P04739) contributes
+      to predatory bacterium.
     evidence:
     - reference: DOI:10.1038/s41564-023-01401-2
       snippet: most or all of the filament was internalized to the periplasm
-      notes: Supports the functional association between ATP-dependent Clp protease
-        proteolytic subunit (UniProtKB:Q49VZ2 in Staphylococcus saprophyticus subsp.
-        saprophyticus (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41))
-        and predatory bacterium.
+      notes: Supports the functional association between Type IV major pilin protein
+        PilA (UniProtKB:P04739 in Pseudomonas aeruginosa (strain ATCC 15692 / DSM
+        22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)) and predatory
+        bacterium.
 curation_history:
 - timestamp: '2026-06-02T00:00:00Z'
   curator: claude
@@ -328,5 +325,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    predatory_bacterium_protein_component with UniProtKB:Q49VZ2 (clpP) exemplar.'
+    predatory_bacterium_protein_component with UniProtKB:P04739 (pilA) exemplar.'
   llm_assisted: true

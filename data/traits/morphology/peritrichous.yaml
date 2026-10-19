@@ -29,7 +29,7 @@ causal_graphs:
   scope_status: NONMECHANISTIC
   scope_notes: This record is a broad environmental or morphological classification
     spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
-    descriptor; contextual protein nodes do not receive token UniProt examples.
+    descriptor; contextual protein nodes include source-backed UniProtKB exemplars.
   nodes:
   - node_id: peritrichous_trait
     label: peritrichous
@@ -74,37 +74,33 @@ causal_graphs:
     node_type: CAPACITY
     description: Cell swimming speed driven by flagellar rotation.
   - node_id: peritrichous_protein_component
-    label: Flagellar basal-body protein FlbY
+    label: Flagellin
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Flagellar basal-body protein FlbY) associated
-      with peritrichous.
+    description: Protein component (Flagellin) associated with peritrichous.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - flbY
+    - fliC
     protein_examples:
-    - uniprot_id: UniProtKB:P33977
-      protein_label: Flagellar basal-body protein FlbY
-      gene_symbol: flbY
-      taxon_id: NCBITaxon:190650
-      taxon_label: Caulobacter vibrioides (strain ATCC 19089 / CIP 103742 / CB 15)
-        (Caulobacter crescentus)
+    - uniprot_id: UniProtKB:P04949
+      protein_label: Flagellin
+      gene_symbol: fliC
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
-      proteome_id: UP000001816
+      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 92
+      entry_version: 183
       sequence_version: 2
-      role: Characteristic protein component (flbY, Flagellar basal-body protein FlbY)
-        associated with peritrichous in Caulobacter vibrioides (strain ATCC 19089
-        / CIP 103742 / CB 15) (Caulobacter crescentus).
+      role: Characteristic protein component (fliC, Flagellin) associated with peritrichous
+        in Escherichia coli (strain K12).
       evidence:
       - reference: DOI:10.1093/femsre/fuv034
-        snippet: five to six flagellar filaments distributed over the cell body
-        notes: Supports Flagellar basal-body protein FlbY in peritrichous; UniProtKB:P33977
-          (flbY, Flagellar basal-body protein FlbY) in Caulobacter vibrioides (strain
-          ATCC 19089 / CIP 103742 / CB 15) (Caulobacter crescentus) provides a verified
-          protein exemplar.
+        snippet: Bacteria differ in number and location of their flagella that appear
+          in regular patterns at the cell surface (flagellation pattern).
+        notes: Supports Flagellin in peritrichous; UniProtKB:P04949 (fliC, Flagellin)
+          in Escherichia coli (strain K12) provides a verified protein exemplar.
   edges:
   - subject: bacterial_flagellum
     predicate: defines
@@ -193,15 +189,13 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: peritrichous_trait
-    description: Flagellar basal-body protein FlbY (flbY, UniProtKB:P33977) contributes
-      to peritrichous (associated with flagellation, bacteria, flagella).
+    description: Flagellin (fliC, UniProtKB:P04949) contributes to peritrichous.
     evidence:
     - reference: DOI:10.1093/femsre/fuv034
       snippet: Bacteria differ in number and location of their flagella that appear
         in regular patterns at the cell surface (flagellation pattern).
-      notes: Supports the functional association between Flagellar basal-body protein
-        FlbY (UniProtKB:P33977 in Caulobacter vibrioides (strain ATCC 19089 / CIP
-        103742 / CB 15) (Caulobacter crescentus)) and peritrichous.
+      notes: Supports the functional association between Flagellin (UniProtKB:P04949
+        in Escherichia coli (strain K12)) and peritrichous.
 curation_history:
 - timestamp: '2026-06-03T00:00:00Z'
   curator: claude
@@ -255,5 +249,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    peritrichous_protein_component with UniProtKB:P33977 (flbY) exemplar.'
+    peritrichous_protein_component with UniProtKB:P04949 (fliC) exemplar.'
   llm_assisted: true

@@ -27,6 +27,13 @@ curation_history:
   llm_assisted: true
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed canonical_examples status alongside NONMECHANISTIC protein exemplar
+    graph for indole test; isolate-level canonical example remains deferred pending
+    explicit strain-level literature.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph indole_test_graph
     with GENE_OR_PROTEIN node indole_test_protein_component and UniProtKB:P0A853 exemplar.'
@@ -93,8 +100,7 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: indole_test_trait
-    description: Tryptophanase (tnaA, UniProtKB:P0A853) contributes to indole test
-      (associated with requirement, performing, sufficient).
+    description: Tryptophanase (tnaA, UniProtKB:P0A853) contributes to indole test.
     evidence:
     - reference: https://asm.org/protocols/indole-test-protocol
       snippet: The chief requirement for culturing an organism prior to performing

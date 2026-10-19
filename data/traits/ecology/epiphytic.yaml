@@ -51,34 +51,37 @@ causal_graphs:
     grounding: traitmech:000443
     description: Residence on living aerial plant surfaces.
   - node_id: epiphytic_protein_component
-    label: Catalase
+    label: GDP-mannose 6-dehydrogenase
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Catalase) associated with epiphytic.
-    grounding: GO:0004096
+    description: Protein component (GDP-mannose 6-dehydrogenase) associated with epiphytic.
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - katE
+    - algD
     protein_examples:
-    - uniprot_id: UniProtKB:P30266
-      protein_label: Catalase
-      gene_symbol: katE
-      taxon_id: NCBITaxon:398511
-      taxon_label: Alkalihalophilus pseudofirmus (strain ATCC BAA-2126 / JCM 17055
-        / OF4) (Bacillus pseudofirmus)
+    - uniprot_id: UniProtKB:P11759
+      protein_label: GDP-mannose 6-dehydrogenase
+      gene_symbol: algD
+      taxon_id: NCBITaxon:208964
+      taxon_label: Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116
+        / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)
       entry_status: REVIEWED
-      proteome_id: UP000001544
+      proteome_id: UP000002438
       retrieved_on: '2026-10-17'
-      entry_version: 129
-      sequence_version: 3
-      role: Characteristic protein component (katE, Catalase) associated with epiphytic
-        in Alkalihalophilus pseudofirmus (strain ATCC BAA-2126 / JCM 17055 / OF4)
-        (Bacillus pseudofirmus).
+      entry_version: 192
+      sequence_version: 2
+      role: Characteristic protein component (algD, GDP-mannose 6-dehydrogenase) associated
+        with epiphytic in Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 /
+        CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1).
       evidence:
       - reference: DOI:10.1186/s12915-024-01967-1
         snippet: Epiphytic microbes are those that live for some or all of their life
           cycle on the surface of plant leaves.
-        notes: Supports Catalase in epiphytic; UniProtKB:P30266 (katE, Catalase) in
-          Alkalihalophilus pseudofirmus (strain ATCC BAA-2126 / JCM 17055 / OF4) (Bacillus
-          pseudofirmus) provides a verified protein exemplar.
+        notes: Supports GDP-mannose 6-dehydrogenase in epiphytic; UniProtKB:P11759
+          (algD, GDP-mannose 6-dehydrogenase) in Pseudomonas aeruginosa (strain ATCC
+          15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 /
+          PAO1) provides a verified protein exemplar.
   edges:
   - subject: external_plant_surface
     predicate: enables
@@ -107,14 +110,14 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: epiphytic_trait
-    description: Catalase (katE, UniProtKB:P30266) contributes to epiphytic (associated
-      with epiphytic, microbes, those).
+    description: GDP-mannose 6-dehydrogenase (algD, UniProtKB:P11759) contributes
+      to epiphytic.
     evidence:
     - reference: DOI:10.1186/s12915-024-01967-1
       snippet: Epiphytic microbes are those that live for some
-      notes: Supports the functional association between Catalase (UniProtKB:P30266
-        in Alkalihalophilus pseudofirmus (strain ATCC BAA-2126 / JCM 17055 / OF4)
-        (Bacillus pseudofirmus)) and epiphytic.
+      notes: Supports the functional association between GDP-mannose 6-dehydrogenase
+        (UniProtKB:P11759 in Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644
+        / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)) and epiphytic.
 curation_history:
 - timestamp: '2026-09-28T20:20:16Z'
   curator: codex
@@ -134,5 +137,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    epiphytic_protein_component with UniProtKB:P30266 (katE) exemplar.'
+    epiphytic_protein_component with UniProtKB:P11759 (algD) exemplar.'
   llm_assisted: true

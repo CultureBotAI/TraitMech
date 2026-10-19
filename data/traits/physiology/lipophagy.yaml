@@ -88,17 +88,24 @@ curation_history:
   llm_assisted: true
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed canonical_examples status alongside NONMECHANISTIC protein exemplar
+    graph for lipophagy; isolate-level canonical example remains deferred pending
+    explicit strain-level literature.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph lipophagy_graph
-    with GENE_OR_PROTEIN node lipophagy_protein_component and UniProtKB:P39968 exemplar.'
+    with GENE_OR_PROTEIN node lipophagy_protein_component and UniProtKB:P38182 exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: lipophagy_graph
   title: Protein component associated with lipophagy
-  description: Literature-backed association between Vacuolar protein 8 (UniProtKB:P39968)
+  description: Literature-backed association between Autophagy-related protein 8 (UniProtKB:P38182)
     and lipophagy.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P39968 in Saccharomyces
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P38182 in Saccharomyces
     cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)) associated with lipophagy
     while full multi-step mechanistic curation remains future work.
   nodes:
@@ -109,47 +116,45 @@ causal_graphs:
     description: An autophagy phenotype in which a microbial cell degrades its lipid
       droplets by delivering them to lysosomal or vacuolar compartments.
   - node_id: lipophagy_protein_component
-    label: Vacuolar protein 8
+    label: Autophagy-related protein 8
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Vacuolar protein 8) associated with lipophagy.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Autophagy-related protein 8) associated with lipophagy.
+    grounding: InterPro:IPR004241
     gene_symbols:
-    - VAC8
+    - ATG8
     protein_examples:
-    - uniprot_id: UniProtKB:P39968
-      protein_label: Vacuolar protein 8
-      gene_symbol: VAC8
+    - uniprot_id: UniProtKB:P38182
+      protein_label: Autophagy-related protein 8
+      gene_symbol: ATG8
       taxon_id: NCBITaxon:559292
       taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's
         yeast)
       entry_status: REVIEWED
       proteome_id: UP000002311
       retrieved_on: '2026-10-17'
-      entry_version: 206
-      sequence_version: 3
-      role: Characteristic protein component (VAC8, Vacuolar protein 8) associated
+      entry_version: 212
+      sequence_version: 1
+      role: Characteristic protein component (ATG8, Autophagy-related protein 8) associated
         with lipophagy in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's
         yeast).
       evidence:
-      - reference: DOI:10.1016/j.devcel.2024.01.014
-        snippet: Upon nutrient exhaustion, cells consume LDs via gradual lipolysis
-          or via lipophagy, the en bloc uptake of LDs into the vacuole.
-        notes: Supports Vacuolar protein 8 in lipophagy; UniProtKB:P39968 (VAC8, Vacuolar
-          protein 8) in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's
-          yeast) provides a verified protein exemplar.
+      - reference: DOI:10.1080/15548627.2024.2325297
+        snippet: We find that the degradation of LD surface proteins relies on autophagy
+          and can occur independently of lipophagy.
+        notes: Supports Autophagy-related protein 8 in lipophagy; UniProtKB:P38182
+          (ATG8, Autophagy-related protein 8) in Saccharomyces cerevisiae (strain
+          ATCC 204508 / S288c) (Baker's yeast) provides a verified protein exemplar.
   edges:
   - subject: lipophagy_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: lipophagy_trait
-    description: Vacuolar protein 8 (VAC8, UniProtKB:P39968) contributes to lipophagy
-      (associated with exhaustion, lipolysis, lipophagy).
+    description: Autophagy-related protein 8 (ATG8, UniProtKB:P38182) contributes
+      to lipophagy.
     evidence:
-    - reference: DOI:10.1016/j.devcel.2024.01.014
-      snippet: Upon nutrient exhaustion, cells consume LDs via gradual lipolysis or
-        via lipophagy, the en bloc uptake of LDs into the vacuole.
-      notes: Supports the functional association between Vacuolar protein 8 (UniProtKB:P39968
-        in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast))
-        and lipophagy.
+    - reference: DOI:10.1080/15548627.2024.2325297
+      snippet: We find that the degradation of LD surface proteins relies on autophagy
+        and can occur independently of lipophagy.
+      notes: Supports the functional association between Autophagy-related protein
+        8 (UniProtKB:P38182 in Saccharomyces cerevisiae (strain ATCC 204508 / S288c)
+        (Baker's yeast)) and lipophagy.

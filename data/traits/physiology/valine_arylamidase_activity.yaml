@@ -48,18 +48,18 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph valine_arylamidase_activity_graph
-    with GENE_OR_PROTEIN node valine_arylamidase_activity_protein_component and UniProtKB:P0C064
+    with GENE_OR_PROTEIN node valine_arylamidase_activity_protein_component and UniProtKB:P04825
     exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: valine_arylamidase_activity_graph
   title: Protein component associated with valine arylamidase activity
-  description: Literature-backed association between Gramicidin S synthase 2 (UniProtKB:P0C064)
+  description: Literature-backed association between Aminopeptidase N (UniProtKB:P04825)
     and valine arylamidase activity.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P0C064 in Brevibacillus
-    brevis (Bacillus brevis)) associated with valine arylamidase activity while full
-    multi-step mechanistic curation remains future work.
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P04825 in Escherichia
+    coli (strain K12)) associated with valine arylamidase activity while full multi-step
+    mechanistic curation remains future work.
   nodes:
   - node_id: valine_arylamidase_activity_trait
     label: valine arylamidase activity
@@ -68,45 +68,46 @@ causal_graphs:
     description: A physiological enzyme-activity phenotype in which a cell produces
       active valine arylamidase enzymes that hydrolyze valine arylamide substrates.
   - node_id: valine_arylamidase_activity_protein_component
-    label: Gramicidin S synthase 2
+    label: Aminopeptidase N
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Gramicidin S synthase 2) associated with valine
-      arylamidase activity.
+    description: Protein component (Aminopeptidase N) associated with valine arylamidase
+      activity.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - grsB
+    - pepN
     protein_examples:
-    - uniprot_id: UniProtKB:P0C064
-      protein_label: Gramicidin S synthase 2
-      gene_symbol: grsB
-      taxon_id: NCBITaxon:1393
-      taxon_label: Brevibacillus brevis (Bacillus brevis)
+    - uniprot_id: UniProtKB:P04825
+      protein_label: Aminopeptidase N
+      gene_symbol: pepN
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
+      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 82
+      entry_version: 217
       sequence_version: 2
-      role: Characteristic protein component (grsB, Gramicidin S synthase 2) associated
-        with valine arylamidase activity in Brevibacillus brevis (Bacillus brevis).
+      role: Characteristic protein component (pepN, Aminopeptidase N) associated with
+        valine arylamidase activity in Escherichia coli (strain K12).
       evidence:
       - reference: DOI:10.3389/fmicb.2022.1034816
         snippet: Positive alkaline phosphatase, cystine arylamidase, esterase(C4),
           esterase lipase(C8), leucine arylamidase, naphthol-AS-B1-phosphohydrolase,
           valine arylamidase
-        notes: Supports Gramicidin S synthase 2 in valine arylamidase activity; UniProtKB:P0C064
-          (grsB, Gramicidin S synthase 2) in Brevibacillus brevis (Bacillus brevis)
-          provides a verified protein exemplar.
+        notes: Supports Aminopeptidase N in valine arylamidase activity; UniProtKB:P04825
+          (pepN, Aminopeptidase N) in Escherichia coli (strain K12) provides a verified
+          protein exemplar.
   edges:
   - subject: valine_arylamidase_activity_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: valine_arylamidase_activity_trait
-    description: Gramicidin S synthase 2 (grsB, UniProtKB:P0C064) contributes to valine
-      arylamidase activity (associated with phosphohydrolase, arylamidase, phosphatase).
+    description: Aminopeptidase N (pepN, UniProtKB:P04825) contributes to valine arylamidase
+      activity.
     evidence:
     - reference: DOI:10.3389/fmicb.2022.1034816
       snippet: Positive alkaline phosphatase, cystine arylamidase, esterase(C4), esterase
         lipase(C8), leucine arylamidase, naphthol-AS-B1-phosphohydrolase, valine arylamidase
-      notes: Supports the functional association between Gramicidin S synthase 2 (UniProtKB:P0C064
-        in Brevibacillus brevis (Bacillus brevis)) and valine arylamidase activity.
+      notes: Supports the functional association between Aminopeptidase N (UniProtKB:P04825
+        in Escherichia coli (strain K12)) and valine arylamidase activity.

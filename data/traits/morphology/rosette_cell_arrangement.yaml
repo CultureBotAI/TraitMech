@@ -90,19 +90,19 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph rosette_cell_arrangement_graph
-    with GENE_OR_PROTEIN node rosette_cell_arrangement_protein_component and UniProtKB:Q31IK3
+    with GENE_OR_PROTEIN node rosette_cell_arrangement_protein_component and UniProtKB:Q45977
     exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: rosette_cell_arrangement_graph
   title: Protein component associated with rosette cell arrangement
-  description: Literature-backed association between Ribulose bisphosphate carboxylase
-    (UniProtKB:Q31IK3) and rosette cell arrangement.
+  description: Literature-backed association between Holdfast attachment protein D
+    (UniProtKB:Q45977) and rosette cell arrangement.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q31IK3 in Hydrogenovibrio
-    crunogenus (strain DSM 25203 / XCL-2) (Thiomicrospira crunogena)) associated with
-    rosette cell arrangement while full multi-step mechanistic curation remains future
-    work.
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q45977 in Caulobacter
+    vibrioides (strain ATCC 19089 / CIP 103742 / CB 15) (Caulobacter crescentus))
+    associated with rosette cell arrangement while full multi-step mechanistic curation
+    remains future work.
   nodes:
   - node_id: rosette_cell_arrangement_trait
     label: rosette cell arrangement
@@ -112,48 +112,47 @@ causal_graphs:
       organized around a shared central region, with corresponding cell poles directed
       inward.
   - node_id: rosette_cell_arrangement_protein_component
-    label: Ribulose bisphosphate carboxylase
+    label: Holdfast attachment protein D
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Ribulose bisphosphate carboxylase) associated
-      with rosette cell arrangement.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Holdfast attachment protein D) associated with
+      rosette cell arrangement.
+    grounding: InterPro:IPR049860
     gene_symbols:
-    - cbbM
+    - hfaD
     protein_examples:
-    - uniprot_id: UniProtKB:Q31IK3
-      protein_label: Ribulose bisphosphate carboxylase
-      gene_symbol: cbbM
-      taxon_id: NCBITaxon:317025
-      taxon_label: Hydrogenovibrio crunogenus (strain DSM 25203 / XCL-2) (Thiomicrospira
-        crunogena)
+    - uniprot_id: UniProtKB:Q45977
+      protein_label: Holdfast attachment protein D
+      gene_symbol: hfaD
+      taxon_id: NCBITaxon:190650
+      taxon_label: Caulobacter vibrioides (strain ATCC 19089 / CIP 103742 / CB 15)
+        (Caulobacter crescentus)
       entry_status: REVIEWED
+      proteome_id: UP000001816
       retrieved_on: '2026-10-17'
-      entry_version: 111
-      sequence_version: 1
-      role: Characteristic protein component (cbbM, Ribulose bisphosphate carboxylase)
-        associated with rosette cell arrangement in Hydrogenovibrio crunogenus (strain
-        DSM 25203 / XCL-2) (Thiomicrospira crunogena).
+      entry_version: 79
+      sequence_version: 2
+      role: Characteristic protein component (hfaD, Holdfast attachment protein D)
+        associated with rosette cell arrangement in Caulobacter vibrioides (strain
+        ATCC 19089 / CIP 103742 / CB 15) (Caulobacter crescentus).
       evidence:
       - reference: DOI:10.7554/eLife.41482
         snippet: all cells are oriented with their basal poles toward the rosette
           center and their apical flagella extending out from the rosette surface
-        notes: Supports Ribulose bisphosphate carboxylase in rosette cell arrangement;
-          UniProtKB:Q31IK3 (cbbM, Ribulose bisphosphate carboxylase) in Hydrogenovibrio
-          crunogenus (strain DSM 25203 / XCL-2) (Thiomicrospira crunogena) provides
+        notes: Supports Holdfast attachment protein D in rosette cell arrangement;
+          UniProtKB:Q45977 (hfaD, Holdfast attachment protein D) in Caulobacter vibrioides
+          (strain ATCC 19089 / CIP 103742 / CB 15) (Caulobacter crescentus) provides
           a verified protein exemplar.
   edges:
   - subject: rosette_cell_arrangement_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: rosette_cell_arrangement_trait
-    description: Ribulose bisphosphate carboxylase (cbbM, UniProtKB:Q31IK3) contributes
-      to rosette cell arrangement (associated with extending, flagella, oriented).
+    description: Holdfast attachment protein D (hfaD, UniProtKB:Q45977) contributes
+      to rosette cell arrangement.
     evidence:
     - reference: DOI:10.7554/eLife.41482
       snippet: all cells are oriented with their basal poles toward the rosette center
         and their apical flagella extending out from the rosette surface
-      notes: Supports the functional association between Ribulose bisphosphate carboxylase
-        (UniProtKB:Q31IK3 in Hydrogenovibrio crunogenus (strain DSM 25203 / XCL-2)
-        (Thiomicrospira crunogena)) and rosette cell arrangement.
+      notes: Supports the functional association between Holdfast attachment protein
+        D (UniProtKB:Q45977 in Caulobacter vibrioides (strain ATCC 19089 / CIP 103742
+        / CB 15) (Caulobacter crescentus)) and rosette cell arrangement.

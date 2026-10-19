@@ -92,20 +92,27 @@ curation_history:
   llm_assisted: true
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed canonical_examples status alongside NONMECHANISTIC protein exemplar
+    graph for kinetocyst discharge; isolate-level canonical example remains deferred
+    pending explicit strain-level literature.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph kinetocyst_discharge_graph
-    with GENE_OR_PROTEIN node kinetocyst_discharge_protein_component and UniProtKB:Q5AD13
+    with GENE_OR_PROTEIN node kinetocyst_discharge_protein_component and UniProtKB:P25343
     exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: kinetocyst_discharge_graph
   title: Protein component associated with kinetocyst discharge
-  description: Literature-backed association between Filamentous growth regulator
-    15 (UniProtKB:Q5AD13) and kinetocyst discharge.
+  description: Literature-backed association between Reduced viability upon starvation
+    protein 161 (UniProtKB:P25343) and kinetocyst discharge.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q5AD13 in Candida
-    albicans (strain SC5314 / ATCC MYA-2876) (Yeast)) associated with kinetocyst discharge
-    while full multi-step mechanistic curation remains future work.
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P25343 in Saccharomyces
+    cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)) associated with kinetocyst
+    discharge while full multi-step mechanistic curation remains future work.
   nodes:
   - node_id: kinetocyst_discharge_trait
     label: kinetocyst discharge
@@ -114,47 +121,47 @@ causal_graphs:
     description: A physiological phenotype in which a microbial cell releases material
       from kinetocysts to the cell exterior.
   - node_id: kinetocyst_discharge_protein_component
-    label: Filamentous growth regulator 15
+    label: Reduced viability upon starvation protein 161
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Filamentous growth regulator 15) associated with
-      kinetocyst discharge.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Reduced viability upon starvation protein 161)
+      associated with kinetocyst discharge.
+    grounding: InterPro:IPR027267
     gene_symbols:
-    - FGR15
+    - RVS161
     protein_examples:
-    - uniprot_id: UniProtKB:Q5AD13
-      protein_label: Filamentous growth regulator 15
-      gene_symbol: FGR15
-      taxon_id: NCBITaxon:237561
-      taxon_label: Candida albicans (strain SC5314 / ATCC MYA-2876) (Yeast)
+    - uniprot_id: UniProtKB:P25343
+      protein_label: Reduced viability upon starvation protein 161
+      gene_symbol: RVS161
+      taxon_id: NCBITaxon:559292
+      taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's
+        yeast)
       entry_status: REVIEWED
-      proteome_id: UP000000559
+      proteome_id: UP000002311
       retrieved_on: '2026-10-17'
-      entry_version: 100
-      sequence_version: 2
-      role: Characteristic protein component (FGR15, Filamentous growth regulator
-        15) associated with kinetocyst discharge in Candida albicans (strain SC5314
-        / ATCC MYA-2876) (Yeast).
+      entry_version: 191
+      sequence_version: 1
+      role: Characteristic protein component (RVS161, Reduced viability upon starvation
+        protein 161) associated with kinetocyst discharge in Saccharomyces cerevisiae
+        (strain ATCC 204508 / S288c) (Baker's yeast).
       evidence:
       - reference: https://protistology.jp/journal/congress_ab/53th_kobe/Abstract%20Book%20Kobe2020
         snippet: In this study, we used Tetrahymena thermophila as food and examined
           the process of food capturing and kinetocyst discharge by electron microscopy.
-        notes: Supports Filamentous growth regulator 15 in kinetocyst discharge; UniProtKB:Q5AD13
-          (FGR15, Filamentous growth regulator 15) in Candida albicans (strain SC5314
-          / ATCC MYA-2876) (Yeast) provides a verified protein exemplar.
+        notes: Supports Reduced viability upon starvation protein 161 in kinetocyst
+          discharge; UniProtKB:P25343 (RVS161, Reduced viability upon starvation protein
+          161) in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)
+          provides a verified protein exemplar.
   edges:
   - subject: kinetocyst_discharge_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: kinetocyst_discharge_trait
-    description: Filamentous growth regulator 15 (FGR15, UniProtKB:Q5AD13) contributes
-      to kinetocyst discharge (associated with tetrahymena, thermophila, kinetocyst).
+    description: Reduced viability upon starvation protein 161 (RVS161, UniProtKB:P25343)
+      contributes to kinetocyst discharge.
     evidence:
     - reference: https://protistology.jp/journal/congress_ab/53th_kobe/Abstract%20Book%20Kobe2020
       snippet: In this study, we used Tetrahymena thermophila as food and examined
         the process of food capturing and kinetocyst discharge by electron microscopy.
-      notes: Supports the functional association between Filamentous growth regulator
-        15 (UniProtKB:Q5AD13 in Candida albicans (strain SC5314 / ATCC MYA-2876) (Yeast))
-        and kinetocyst discharge.
+      notes: Supports the functional association between Reduced viability upon starvation
+        protein 161 (UniProtKB:P25343 in Saccharomyces cerevisiae (strain ATCC 204508
+        / S288c) (Baker's yeast)) and kinetocyst discharge.

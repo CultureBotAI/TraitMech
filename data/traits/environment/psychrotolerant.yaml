@@ -33,7 +33,7 @@ causal_graphs:
   scope_status: NONMECHANISTIC
   scope_notes: This record is a broad environmental or morphological classification
     spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
-    descriptor; contextual protein nodes do not receive token UniProt examples.
+    descriptor; contextual protein nodes include source-backed UniProtKB exemplars.
   nodes:
   - node_id: psychrotolerant_trait
     label: psychrotolerant
@@ -202,8 +202,7 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: psychrotolerant_trait
-    description: Cold shock protein CspA (cspA, UniProtKB:P0A9X9) contributes to psychrotolerant
-      (associated with temperature, activation, rigidifies).
+    description: Cold shock protein CspA (cspA, UniProtKB:P0A9X9) contributes to psychrotolerant.
     evidence:
     - reference: DOI:10.1128/spectrum.03925-23
       snippet: Upon temperature decrease, the membrane rigidifies and increases in

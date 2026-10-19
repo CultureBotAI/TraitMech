@@ -91,28 +91,27 @@ causal_graphs:
     grounding: traitmech:000232
     description: Possession of a genome-encoded Lamassu phage-defense system.
   - node_id: lamassu_fmo_system_protein_component
-    label: Lamassu protein LmuB
+    label: Septu protein PtuB
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Lamassu protein LmuB) associated with Lamassu-FMO
+    description: Protein component (Septu protein PtuB) associated with Lamassu-FMO
       system.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - lmuB
+    - ptuB
     protein_examples:
-    - uniprot_id: UniProtKB:P0DW44
-      protein_label: Lamassu protein LmuB
-      gene_symbol: lmuB
-      taxon_id: NCBITaxon:1761765
-      taxon_label: Bacillus sp. (strain NCIM 5461 / CCTCC AB 2011126 / NIO-1130)
+    - uniprot_id: UniProtKB:P0DW42
+      protein_label: Septu protein PtuB
+      gene_symbol: ptuB
+      taxon_id: NCBITaxon:1428
+      taxon_label: Bacillus thuringiensis
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      entry_version: 8
+      entry_version: 12
       sequence_version: 1
-      role: Characteristic protein component (lmuB, Lamassu protein LmuB) associated
-        with Lamassu-FMO system in Bacillus sp. (strain NCIM 5461 / CCTCC AB 2011126
-        / NIO-1130).
+      role: Characteristic protein component (ptuB, Septu protein PtuB) associated
+        with Lamassu-FMO system in Bacillus thuringiensis.
       evidence:
       - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
         snippet: Lamassu-Fam Lamassu-Hydrolase 2 2 Lamassu-Fam__LmuA_effector_Hydrolase,
@@ -121,9 +120,9 @@ causal_graphs:
           Lamassu-Fam__LmuA_effector_FMO, Lamassu-Fam__LmuA_effector_Lipase, Lamassu-Fam__LmuA_effector_Mrr,
           Lamassu-Fam__LmuA_effector_PDDEXK, Lamassu-Fam__LmuA_effector_Protease,
           Lamassu-Fam__LmuA_effector_Sir2, Lamassu-Fam__LmuA_effector_hypothetical
-        notes: Supports Lamassu protein LmuB in Lamassu-FMO system; UniProtKB:P0DW44
-          (lmuB, Lamassu protein LmuB) in Bacillus sp. (strain NCIM 5461 / CCTCC AB
-          2011126 / NIO-1130) provides a verified protein exemplar.
+        notes: Supports Septu protein PtuB in Lamassu-FMO system; UniProtKB:P0DW42
+          (ptuB, Septu protein PtuB) in Bacillus thuringiensis provides a verified
+          protein exemplar.
   edges:
   - subject: lamassu_fmo_system_trait
     predicate: is a
@@ -144,8 +143,8 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: lamassu_fmo_system_trait
-    description: Lamassu protein LmuB (lmuB, UniProtKB:P0DW44) contributes to Lamassu-FMO
-      system (associated with hydrolase, effector, nuclease).
+    description: Septu protein PtuB (ptuB, UniProtKB:P0DW42) contributes to Lamassu-FMO
+      system.
     evidence:
     - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
       snippet: Lamassu-Fam Lamassu-Hydrolase 2 2 Lamassu-Fam__LmuA_effector_Hydrolase,
@@ -154,9 +153,8 @@ causal_graphs:
         Lamassu-Fam__LmuA_effector_FMO, Lamassu-Fam__LmuA_effector_Lipase, Lamassu-Fam__LmuA_effector_Mrr,
         Lamassu-Fam__LmuA_effector_PDDEXK, Lamassu-Fam__LmuA_effector_Protease, Lamassu-Fam__LmuA_effector_Sir2,
         Lamassu-Fam__LmuA_effector_hypothetical
-      notes: Supports the functional association between Lamassu protein LmuB (UniProtKB:P0DW44
-        in Bacillus sp. (strain NCIM 5461 / CCTCC AB 2011126 / NIO-1130)) and Lamassu-FMO
-        system.
+      notes: Supports the functional association between Septu protein PtuB (UniProtKB:P0DW42
+        in Bacillus thuringiensis) and Lamassu-FMO system.
 discussions:
 - discussion_id: lamassu-fmo-activity-gap
   prompt: Resolve Lamassu-FMO phage triggers, native hosts, FMO effector meaning,
@@ -232,5 +230,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    lamassu_fmo_system_protein_component with UniProtKB:P0DW44 (lmuB) exemplar.'
+    lamassu_fmo_system_protein_component with UniProtKB:P0DW42 (ptuB) exemplar.'
   llm_assisted: true

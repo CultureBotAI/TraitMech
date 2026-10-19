@@ -80,38 +80,37 @@ causal_graphs:
     description: Stabilization of proteins by compatible solutes via preferential
       hydration.
   - node_id: pressure_optimum_protein_component
-    label: Oxygen-dependent choline dehydrogenase
+    label: sn-1 oleoyl-lipid 12-desaturase
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Oxygen-dependent choline dehydrogenase) associated
-      with pressure optimum.
+    description: Protein component (sn-1 oleoyl-lipid 12-desaturase) associated with
+      pressure optimum.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - betA
+    - desA
     protein_examples:
-    - uniprot_id: UniProtKB:Q4A0Q1
-      protein_label: Oxygen-dependent choline dehydrogenase
-      gene_symbol: betA
-      taxon_id: NCBITaxon:342451
-      taxon_label: Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
-        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+    - uniprot_id: UniProtKB:Q55231
+      protein_label: sn-1 oleoyl-lipid 12-desaturase
+      gene_symbol: desA
+      taxon_id: NCBITaxon:32049
+      taxon_label: Picosynechococcus sp. (strain ATCC 27264 / PCC 7002 / PR-6) (Agmenellum
+        quadruplicatum)
       entry_status: REVIEWED
-      proteome_id: UP000006371
       retrieved_on: '2026-10-17'
       entry_version: 127
       sequence_version: 1
-      role: Characteristic protein component (betA, Oxygen-dependent choline dehydrogenase)
-        associated with pressure optimum in Staphylococcus saprophyticus subsp. saprophyticus
-        (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41).
+      role: Characteristic protein component (desA, sn-1 oleoyl-lipid 12-desaturase)
+        associated with pressure optimum in Picosynechococcus sp. (strain ATCC 27264
+        / PCC 7002 / PR-6) (Agmenellum quadruplicatum).
       evidence:
       - reference: DOI:10.3389/fmolb.2022.1058381
         snippet: Piezophiles, microorganisms adapted to high pressure, have developed
           key strategies to maintain the integrity of their lipid membrane
-        notes: Supports Oxygen-dependent choline dehydrogenase in pressure optimum;
-          UniProtKB:Q4A0Q1 (betA, Oxygen-dependent choline dehydrogenase) in Staphylococcus
-          saprophyticus subsp. saprophyticus (strain ATCC 15305 / DSM 20229 / NCIMB
-          8711 / NCTC 7292 / S-41) provides a verified protein exemplar.
+        notes: Supports sn-1 oleoyl-lipid 12-desaturase in pressure optimum; UniProtKB:Q55231
+          (desA, sn-1 oleoyl-lipid 12-desaturase) in Picosynechococcus sp. (strain
+          ATCC 27264 / PCC 7002 / PR-6) (Agmenellum quadruplicatum) provides a verified
+          protein exemplar.
   edges:
   - subject: hydrostatic_pressure
     predicate: defines
@@ -185,16 +184,15 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: pressure_optimum_trait
-    description: Oxygen-dependent choline dehydrogenase (betA, UniProtKB:Q4A0Q1) contributes
-      to pressure optimum (associated with microorganisms, piezophiles, strategies).
+    description: sn-1 oleoyl-lipid 12-desaturase (desA, UniProtKB:Q55231) contributes
+      to pressure optimum.
     evidence:
     - reference: DOI:10.3389/fmolb.2022.1058381
       snippet: Piezophiles, microorganisms adapted to high pressure, have developed
         key strategies to maintain the integrity of their lipid membrane
-      notes: Supports the functional association between Oxygen-dependent choline
-        dehydrogenase (UniProtKB:Q4A0Q1 in Staphylococcus saprophyticus subsp. saprophyticus
-        (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)) and pressure
-        optimum.
+      notes: Supports the functional association between sn-1 oleoyl-lipid 12-desaturase
+        (UniProtKB:Q55231 in Picosynechococcus sp. (strain ATCC 27264 / PCC 7002 /
+        PR-6) (Agmenellum quadruplicatum)) and pressure optimum.
 curation_history:
 - timestamp: '2026-05-28T00:00:00Z'
   curator: claude
@@ -293,5 +291,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    pressure_optimum_protein_component with UniProtKB:Q4A0Q1 (betA) exemplar.'
+    pressure_optimum_protein_component with UniProtKB:Q55231 (desA) exemplar.'
   llm_assisted: true

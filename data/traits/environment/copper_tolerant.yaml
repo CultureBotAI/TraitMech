@@ -63,17 +63,17 @@ causal_graphs:
     description: ATPase- and RND-driven pumps removing copper from the cytoplasm or
       periplasm.
     protein_examples:
-    - uniprot_id: UniProtKB:P36649
-      protein_label: Multicopper oxidase CueO
-      gene_symbol: cueO
+    - uniprot_id: UniProtKB:Q59385
+      protein_label: Copper-exporting P-type ATPase
+      gene_symbol: copA
       taxon_id: NCBITaxon:83333
       taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
       proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 193
-      sequence_version: 2
-      role: Exemplar protein (cueO, Multicopper oxidase CueO) representing copper
+      entry_version: 202
+      sequence_version: 4
+      role: Exemplar protein (copA, Copper-exporting P-type ATPase) representing copper
         efflux systems (cue/cus/pco/cop) in Escherichia coli (strain K12) for copper
         tolerant.
       evidence:
@@ -81,8 +81,8 @@ causal_graphs:
         snippet: ATPase-driven copper efflux seems to be the main mechanism responsible
           for cytoplasmic copper detoxification in until now studied bacteria
         notes: Supports copper efflux systems (cue/cus/pco/cop) in copper tolerant;
-          UniProtKB:P36649 (cueO, Multicopper oxidase CueO) in Escherichia coli (strain
-          K12) provides a verified protein exemplar.
+          UniProtKB:Q59385 (copA, Copper-exporting P-type ATPase) in Escherichia coli
+          (strain K12) provides a verified protein exemplar.
   - node_id: copper_transport
     label: copper ion transmembrane transport
     node_type: BIOLOGICAL_PROCESS
@@ -231,6 +231,6 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:Q1LBE6
-    version metadata (entry_version=100, sequence_version=1); added UniProtKB:P36649
-    (cueO) protein example to node copper_efflux_system.'
+    version metadata (entry_version=100, sequence_version=1); added UniProtKB:Q59385
+    (copA) protein example to node copper_efflux_system.'
   llm_assisted: true

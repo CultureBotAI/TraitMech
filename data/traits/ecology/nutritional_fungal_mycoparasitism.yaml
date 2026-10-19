@@ -102,20 +102,28 @@ curation_history:
   llm_assisted: true
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed canonical_examples status alongside NONMECHANISTIC protein exemplar
+    graph for nutritional fungal mycoparasitism; isolate-level canonical example remains
+    deferred pending explicit strain-level literature.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph nutritional_fungal_mycoparasitism_graph
     with GENE_OR_PROTEIN node nutritional_fungal_mycoparasitism_protein_component
-    and UniProtKB:Q7A225 exemplar.'
+    and UniProtKB:Q2UF72 exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: nutritional_fungal_mycoparasitism_graph
   title: Protein component associated with nutritional fungal mycoparasitism
-  description: Literature-backed association between Endoribonuclease HigB (UniProtKB:Q7A225)
+  description: Literature-backed association between Chitin synthase A (UniProtKB:Q2UF72)
     and nutritional fungal mycoparasitism.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q7A225 in Proteus
-    vulgaris) associated with nutritional fungal mycoparasitism while full multi-step
-    mechanistic curation remains future work.
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q2UF72 in Aspergillus
+    oryzae (strain ATCC 42149 / RIB 40) (Yellow koji mold)) associated with nutritional
+    fungal mycoparasitism while full multi-step mechanistic curation remains future
+    work.
   nodes:
   - node_id: nutritional_fungal_mycoparasitism_trait
     label: nutritional fungal mycoparasitism
@@ -124,44 +132,47 @@ causal_graphs:
     description: An ecological phenotype in which a fungus obtains nutrients at the
       expense of another fungus, either from the living host or after killing it.
   - node_id: nutritional_fungal_mycoparasitism_protein_component
-    label: Endoribonuclease HigB
+    label: Chitin synthase A
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Endoribonuclease HigB) associated with nutritional
+    description: Protein component (Chitin synthase A) associated with nutritional
       fungal mycoparasitism.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - higB
+    - csmA
     protein_examples:
-    - uniprot_id: UniProtKB:Q7A225
-      protein_label: Endoribonuclease HigB
-      gene_symbol: higB
-      taxon_id: NCBITaxon:585
-      taxon_label: Proteus vulgaris
+    - uniprot_id: UniProtKB:Q2UF72
+      protein_label: Chitin synthase A
+      gene_symbol: csmA
+      taxon_id: NCBITaxon:510516
+      taxon_label: Aspergillus oryzae (strain ATCC 42149 / RIB 40) (Yellow koji mold)
       entry_status: REVIEWED
+      proteome_id: UP000006564
       retrieved_on: '2026-10-17'
-      entry_version: 69
+      entry_version: 74
       sequence_version: 1
-      role: Characteristic protein component (higB, Endoribonuclease HigB) associated
-        with nutritional fungal mycoparasitism in Proteus vulgaris.
+      role: Characteristic protein component (csmA, Chitin synthase A) associated
+        with nutritional fungal mycoparasitism in Aspergillus oryzae (strain ATCC
+        42149 / RIB 40) (Yellow koji mold).
       evidence:
       - reference: DOI:10.1139/b95-389
         snippet: The term mycoparasitism applies strictly to those relationships in
           which one living fungus acts as a nutrient source for another
-        notes: Supports Endoribonuclease HigB in nutritional fungal mycoparasitism;
-          UniProtKB:Q7A225 (higB, Endoribonuclease HigB) in Proteus vulgaris provides
-          a verified protein exemplar.
+        notes: Supports Chitin synthase A in nutritional fungal mycoparasitism; UniProtKB:Q2UF72
+          (csmA, Chitin synthase A) in Aspergillus oryzae (strain ATCC 42149 / RIB
+          40) (Yellow koji mold) provides a verified protein exemplar.
   edges:
   - subject: nutritional_fungal_mycoparasitism_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: nutritional_fungal_mycoparasitism_trait
-    description: Endoribonuclease HigB (higB, UniProtKB:Q7A225) contributes to nutritional
-      fungal mycoparasitism (associated with mycoparasitism, relationships, nutrient).
+    description: Chitin synthase A (csmA, UniProtKB:Q2UF72) contributes to nutritional
+      fungal mycoparasitism.
     evidence:
     - reference: DOI:10.1139/b95-389
       snippet: The term mycoparasitism applies strictly to those relationships in
         which one living fungus acts as a nutrient source for another
-      notes: Supports the functional association between Endoribonuclease HigB (UniProtKB:Q7A225
-        in Proteus vulgaris) and nutritional fungal mycoparasitism.
+      notes: Supports the functional association between Chitin synthase A (UniProtKB:Q2UF72
+        in Aspergillus oryzae (strain ATCC 42149 / RIB 40) (Yellow koji mold)) and
+        nutritional fungal mycoparasitism.

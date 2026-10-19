@@ -39,7 +39,7 @@ causal_graphs:
   scope_status: NONMECHANISTIC
   scope_notes: This record is a broad environmental or morphological classification
     spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
-    descriptor; contextual protein nodes do not receive token UniProt examples.
+    descriptor; contextual protein nodes include source-backed UniProtKB exemplars.
   nodes:
   - node_id: non_spore_forming_trait
     label: non-spore forming
@@ -83,24 +83,25 @@ causal_graphs:
     description: Rap family phosphatases that dephosphorylate Spo0F in the sporulation
       phosphorelay.
     protein_examples:
-    - uniprot_id: UniProtKB:P06534
-      protein_label: Stage 0 sporulation protein A
-      gene_symbol: spo0A
+    - uniprot_id: UniProtKB:Q00828
+      protein_label: Response regulator aspartate phosphatase A
+      gene_symbol: rapA
       taxon_id: NCBITaxon:224308
       taxon_label: Bacillus subtilis (strain 168)
       entry_status: REVIEWED
       proteome_id: UP000001570
       retrieved_on: '2026-10-17'
-      entry_version: 189
-      sequence_version: 1
-      role: Exemplar protein (spo0A, Stage 0 sporulation protein A) representing Rap
-        phosphatases in Bacillus subtilis (strain 168) for non-spore forming.
+      entry_version: 149
+      sequence_version: 2
+      role: Reference pathway protein (rapA, Response regulator aspartate phosphatase
+        A) representing Rap phosphatases in Bacillus subtilis (strain 168), whose
+        absence or lack of activity underlies non-spore forming.
       evidence:
       - reference: DOI:10.1146/annurev.genet.30.1.297
         snippet: within which a spore is produced
-        notes: Supports Rap phosphatases in non-spore forming; UniProtKB:P06534 (spo0A,
-          Stage 0 sporulation protein A) in Bacillus subtilis (strain 168) provides
-          a verified protein exemplar.
+        notes: Supports Rap phosphatases in non-spore forming; UniProtKB:Q00828 (rapA,
+          Response regulator aspartate phosphatase A) in Bacillus subtilis (strain
+          168) provides a verified protein exemplar.
   - node_id: spo0f_dephosphorylation
     label: dephosphorylation of Spo0F
     node_type: BIOLOGICAL_PROCESS
@@ -270,6 +271,6 @@ curation_history:
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
-  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P06534 (spo0A)
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q00828 (rapA)
     protein example to node rap_phosphatases.'
   llm_assisted: true

@@ -164,20 +164,27 @@ curation_history:
   llm_assisted: true
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed canonical_examples status alongside NONMECHANISTIC protein exemplar
+    graph for cell-body contraction; isolate-level canonical example remains deferred
+    pending explicit strain-level literature.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph cell_body_contraction_graph
-    with GENE_OR_PROTEIN node cell_body_contraction_protein_component and UniProtKB:Q07766
+    with GENE_OR_PROTEIN node cell_body_contraction_protein_component and UniProtKB:P05434
     exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: cell_body_contraction_graph
   title: Protein component associated with cell-body contraction
-  description: Literature-backed association between CRISPR-associated protein Cas5
-    (UniProtKB:Q07766) and cell-body contraction.
+  description: Literature-backed association between Caltractin (UniProtKB:P05434)
+    and cell-body contraction.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q07766 in Myxococcus
-    xanthus (strain DK1622)) associated with cell-body contraction while full multi-step
-    mechanistic curation remains future work.
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P05434 in Chlamydomonas
+    reinhardtii (Chlamydomonas smithii)) associated with cell-body contraction while
+    full multi-step mechanistic curation remains future work.
   nodes:
   - node_id: cell_body_contraction_trait
     label: cell-body contraction
@@ -186,46 +193,37 @@ causal_graphs:
     description: A physiological phenotype in which a microbial cell actively shortens
       its body by contraction of intracellular structures.
   - node_id: cell_body_contraction_protein_component
-    label: CRISPR-associated protein Cas5
+    label: Caltractin
     node_type: GENE_OR_PROTEIN
-    description: Protein component (CRISPR-associated protein Cas5) associated with
-      cell-body contraction.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
-    gene_symbols:
-    - devS
+    description: Protein component (Caltractin) associated with cell-body contraction.
+    grounding: InterPro:IPR050230
     protein_examples:
-    - uniprot_id: UniProtKB:Q07766
-      protein_label: CRISPR-associated protein Cas5
-      gene_symbol: devS
-      taxon_id: NCBITaxon:246197
-      taxon_label: Myxococcus xanthus (strain DK1622)
+    - uniprot_id: UniProtKB:P05434
+      protein_label: Caltractin
+      taxon_id: NCBITaxon:3055
+      taxon_label: Chlamydomonas reinhardtii (Chlamydomonas smithii)
       entry_status: REVIEWED
-      proteome_id: UP000002402
       retrieved_on: '2026-10-17'
-      entry_version: 113
+      entry_version: 163
       sequence_version: 1
-      role: Characteristic protein component (devS, CRISPR-associated protein Cas5)
-        associated with cell-body contraction in Myxococcus xanthus (strain DK1622).
+      role: Characteristic protein component (P05434, Caltractin) associated with
+        cell-body contraction in Chlamydomonas reinhardtii (Chlamydomonas smithii).
       evidence:
       - reference: DOI:10.1126/sciadv.add6550
         snippet: Ca2+ concentrations from 10−6 to 10−2 M in the culture medium could
           stimulate cell contraction while maintaining the viability of the cell.
-        notes: Supports CRISPR-associated protein Cas5 in cell-body contraction; UniProtKB:Q07766
-          (devS, CRISPR-associated protein Cas5) in Myxococcus xanthus (strain DK1622)
-          provides a verified protein exemplar.
+        notes: Supports Caltractin in cell-body contraction; UniProtKB:P05434 (P05434,
+          Caltractin) in Chlamydomonas reinhardtii (Chlamydomonas smithii) provides
+          a verified protein exemplar.
   edges:
   - subject: cell_body_contraction_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: cell_body_contraction_trait
-    description: CRISPR-associated protein Cas5 (devS, UniProtKB:Q07766) contributes
-      to cell-body contraction (associated with concentrations, contraction, maintaining).
+    description: Caltractin (P05434, UniProtKB:P05434) contributes to cell-body contraction.
     evidence:
     - reference: DOI:10.1126/sciadv.add6550
       snippet: Ca2+ concentrations from 10−6 to 10−2 M in the culture medium could
         stimulate cell contraction while maintaining the viability of the cell.
-      notes: Supports the functional association between CRISPR-associated protein
-        Cas5 (UniProtKB:Q07766 in Myxococcus xanthus (strain DK1622)) and cell-body
-        contraction.
+      notes: Supports the functional association between Caltractin (UniProtKB:P05434
+        in Chlamydomonas reinhardtii (Chlamydomonas smithii)) and cell-body contraction.

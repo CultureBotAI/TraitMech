@@ -30,7 +30,7 @@ causal_graphs:
   scope_status: NONMECHANISTIC
   scope_notes: This record is a broad environmental or morphological classification
     spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
-    descriptor; contextual protein nodes do not receive token UniProt examples.
+    descriptor; contextual protein nodes include source-backed UniProtKB exemplars.
   nodes:
   - node_id: bacillus_shaped_trait
     label: bacillus shaped
@@ -181,25 +181,25 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Class A PBPs (aPBPs), a family of peptidoglycan synthases.
     protein_examples:
-    - uniprot_id: UniProtKB:P0AD68
-      protein_label: Peptidoglycan D,D-transpeptidase FtsI
-      gene_symbol: ftsI
+    - uniprot_id: UniProtKB:P02918
+      protein_label: Penicillin-binding protein 1A
+      gene_symbol: mrcA
       taxon_id: NCBITaxon:83333
       taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
       proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 156
+      entry_version: 214
       sequence_version: 1
-      role: Exemplar protein (ftsI, Peptidoglycan D,D-transpeptidase FtsI) representing
-        class A penicillin-binding proteins in Escherichia coli (strain K12) for bacillus
+      role: Exemplar protein (mrcA, Penicillin-binding protein 1A) representing class
+        A penicillin-binding proteins in Escherichia coli (strain K12) for bacillus
         shaped.
       evidence:
       - reference: DOI:10.1038/nrmicro1205
         snippet: FtsZ collaborates with penicillin binding proteins
-        notes: Supports class A penicillin-binding proteins in bacillus shaped; UniProtKB:P0AD68
-          (ftsI, Peptidoglycan D,D-transpeptidase FtsI) in Escherichia coli (strain
-          K12) provides a verified protein exemplar.
+        notes: Supports class A penicillin-binding proteins in bacillus shaped; UniProtKB:P02918
+          (mrcA, Penicillin-binding protein 1A) in Escherichia coli (strain K12) provides
+          a verified protein exemplar.
   - node_id: rodZ
     label: RodZ
     node_type: GENE_OR_PROTEIN

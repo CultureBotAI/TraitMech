@@ -76,34 +76,34 @@ causal_graphs:
     grounding: traitmech:000409
     description: Possession of a genome-encoded Gao-Her phage-defense system.
   - node_id: gao_her_duf_system_protein_component
-    label: tRNA-cytidine(32) 2-sulfurtransferase
+    label: Endonuclease GajA
     node_type: GENE_OR_PROTEIN
-    description: Protein component (tRNA-cytidine(32) 2-sulfurtransferase) associated
-      with Gao-Her-DUF system.
+    description: Protein component (Endonuclease GajA) associated with Gao-Her-DUF
+      system.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - ttcA
+    - gajA
     protein_examples:
-    - uniprot_id: UniProtKB:B5BJ71
-      protein_label: tRNA-cytidine(32) 2-sulfurtransferase
-      gene_symbol: ttcA
-      taxon_id: NCBITaxon:554290
-      taxon_label: Salmonella paratyphi A (strain AKU_12601)
+    - uniprot_id: UniProtKB:P0DW47
+      protein_label: Endonuclease GajA
+      gene_symbol: gajA
+      taxon_id: NCBITaxon:1053212
+      taxon_label: Bacillus cereus (strain HuB5-5)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      entry_version: 73
+      entry_version: 12
       sequence_version: 1
-      role: Characteristic protein component (ttcA, tRNA-cytidine(32) 2-sulfurtransferase)
-        associated with Gao-Her-DUF system in Salmonella paratyphi A (strain AKU_12601).
+      role: Characteristic protein component (gajA, Endonuclease GajA) associated
+        with Gao-Her-DUF system in Bacillus cereus (strain HuB5-5).
       evidence:
       - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
         snippet: '| Gao_Her_DUF__HerA_DUF | Gao_Her_DUF__HerA_DUF | Gao_Her_DUF |
           Custom | 20 |'
-        notes: Supports tRNA-cytidine(32) 2-sulfurtransferase in Gao-Her-DUF system;
-          UniProtKB:B5BJ71 (ttcA, tRNA-cytidine(32) 2-sulfurtransferase) in Salmonella
-          paratyphi A (strain AKU_12601) provides a verified protein exemplar.
+        notes: Supports Endonuclease GajA in Gao-Her-DUF system; UniProtKB:P0DW47
+          (gajA, Endonuclease GajA) in Bacillus cereus (strain HuB5-5) provides a
+          verified protein exemplar.
   edges:
   - subject: gao_her_duf_locus
     predicate: contributes to
@@ -166,15 +166,14 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: gao_her_duf_system_trait
-    description: tRNA-cytidine(32) 2-sulfurtransferase (ttcA, UniProtKB:B5BJ71) contributes
-      to Gao-Her-DUF system (associated with custom, hera, sir2).
+    description: Endonuclease GajA (gajA, UniProtKB:P0DW47) contributes to Gao-Her-DUF
+      system.
     evidence:
     - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
       snippet: '| Gao_Her_SIR__HerA_SIR2 | Gao_Her_SIR__HerA_SIR2 | Gao_Her_SIR |
         Custom | 43 |'
-      notes: Supports the functional association between tRNA-cytidine(32) 2-sulfurtransferase
-        (UniProtKB:B5BJ71 in Salmonella paratyphi A (strain AKU_12601)) and Gao-Her-DUF
-        system.
+      notes: Supports the functional association between Endonuclease GajA (UniProtKB:P0DW47
+        in Bacillus cereus (strain HuB5-5)) and Gao-Her-DUF system.
 discussions:
 - discussion_id: gao-her-duf-mechanism-gap
   prompt: Resolve Gao_Her_DUF natural hosts, DUF4297/HerA_DUF component functions,
@@ -215,5 +214,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    gao_her_duf_system_protein_component with UniProtKB:B5BJ71 (ttcA) exemplar.'
+    gao_her_duf_system_protein_component with UniProtKB:P0DW47 (gajA) exemplar.'
   llm_assisted: true

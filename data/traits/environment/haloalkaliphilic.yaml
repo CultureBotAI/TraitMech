@@ -29,7 +29,7 @@ causal_graphs:
   scope_status: NONMECHANISTIC
   scope_notes: This record is a broad environmental or morphological classification
     spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
-    descriptor; contextual protein nodes do not receive token UniProt examples.
+    descriptor; contextual protein nodes include source-backed UniProtKB exemplars.
   nodes:
   - node_id: haloalkaliphilic_trait
     label: haloalkaliphilic
@@ -235,7 +235,7 @@ causal_graphs:
     predicate_id: RO:0002326
     object: haloalkaliphilic_trait
     description: Na(+)/H(+) antiporter subunit A (mrpA, UniProtKB:Q9RGZ5) contributes
-      to haloalkaliphilic (associated with haloalkaliphilic, natronomonas, pharaonis).
+      to haloalkaliphilic.
     evidence:
     - reference: PMID:17203963
       snippet: aerobic, haloalkaliphilic archaeon Natronomonas pharaonis

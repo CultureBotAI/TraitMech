@@ -145,35 +145,33 @@ causal_graphs:
     grounding: traitmech:000214
     description: Possession of a genome-encoded abortive-infection phage-defense system.
   - node_id: cmdtac_system_protein_component
-    label: Abortive infection protein
+    label: Abortive phage resistance protein AbiC
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Abortive infection protein) associated with CmdTAC
-      system.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Abortive phage resistance protein AbiC) associated
+      with CmdTAC system.
+    grounding: InterPro:IPR031709
     gene_symbols:
-    - abi
+    - abiC
     protein_examples:
-    - uniprot_id: UniProtKB:P18024
-      protein_label: Abortive infection protein
-      gene_symbol: abi
-      taxon_id: NCBITaxon:562
-      taxon_label: Escherichia coli
+    - uniprot_id: UniProtKB:Q01457
+      protein_label: Abortive phage resistance protein AbiC
+      gene_symbol: abiC
+      taxon_id: NCBITaxon:1360
+      taxon_label: Lactococcus lactis subsp. lactis (Streptococcus lactis)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      entry_version: 49
+      entry_version: 35
       sequence_version: 1
-      role: Characteristic protein component (abi, Abortive infection protein) associated
-        with CmdTAC system in Escherichia coli.
+      role: Characteristic protein component (abiC, Abortive phage resistance protein
+        AbiC) associated with CmdTAC system in Lactococcus lactis subsp. lactis (Streptococcus
+        lactis).
       evidence:
       - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
-        snippet: AbiH | 10\.1111/j\.1574-6968\.1996\.tb08446\.x | Cloning and sequencing
-          of the novel abortive infection gene abiH of Lactococcus lactis ssp\. lactis
-          biovar\. diacetylactis S94
-        notes: Supports Abortive infection protein in CmdTAC system; UniProtKB:P18024
-          (abi, Abortive infection protein) in Escherichia coli provides a verified
-          protein exemplar.
+        snippet: 'AbiC | 10\.1016/j\.mib\.2005\.06\.006 | Phage abortive infection
+          in lactococci: variations on a theme'
+        notes: Supports Abortive phage resistance protein AbiC in CmdTAC system; UniProtKB:Q01457
+          (abiC, Abortive phage resistance protein AbiC) in Lactococcus lactis subsp.
+          lactis (Streptococcus lactis) provides a verified protein exemplar.
   edges:
   - subject: cmdtac_locus
     predicate: contributes to
@@ -246,15 +244,15 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: cmdtac_system_trait
-    description: Abortive infection protein (abi, UniProtKB:P18024) contributes to
-      CmdTAC system (associated with diacetylactis, lactococcus, sequencing).
+    description: Abortive phage resistance protein AbiC (abiC, UniProtKB:Q01457) contributes
+      to CmdTAC system.
     evidence:
     - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
-      snippet: AbiH | 10\.1111/j\.1574-6968\.1996\.tb08446\.x | Cloning and sequencing
-        of the novel abortive infection gene abiH of Lactococcus lactis ssp\. lactis
-        biovar\. diacetylactis S94
-      notes: Supports the functional association between Abortive infection protein
-        (UniProtKB:P18024 in Escherichia coli) and CmdTAC system.
+      snippet: 'AbiC | 10\.1016/j\.mib\.2005\.06\.006 | Phage abortive infection in
+        lactococci: variations on a theme'
+      notes: Supports the functional association between Abortive phage resistance
+        protein AbiC (UniProtKB:Q01457 in Lactococcus lactis subsp. lactis (Streptococcus
+        lactis)) and CmdTAC system.
 discussions:
 - discussion_id: cmdtac-family-and-model-coverage-gap
   prompt: Resolve CmdTAC family breadth and phage escape routes before minting narrower
@@ -335,5 +333,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    cmdtac_system_protein_component with UniProtKB:P18024 (abi) exemplar.'
+    cmdtac_system_protein_component with UniProtKB:Q01457 (abiC) exemplar.'
   llm_assisted: true

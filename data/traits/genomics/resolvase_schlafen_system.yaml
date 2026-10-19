@@ -62,36 +62,34 @@ causal_graphs:
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
   - node_id: resolvase_schlafen_system_protein_component
-    label: Crossover junction endodeoxyribonuclease RuvC
+    label: Shedu protein SduA
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Crossover junction endodeoxyribonuclease RuvC)
-      associated with Resolvase Schlafen system.
+    description: Protein component (Shedu protein SduA) associated with Resolvase
+      Schlafen system.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - ruvC
+    - sduA
     protein_examples:
-    - uniprot_id: UniProtKB:P0A814
-      protein_label: Crossover junction endodeoxyribonuclease RuvC
-      gene_symbol: ruvC
-      taxon_id: NCBITaxon:83333
-      taxon_label: Escherichia coli (strain K12)
+    - uniprot_id: UniProtKB:B7HFR2
+      protein_label: Shedu protein SduA
+      gene_symbol: sduA
+      taxon_id: NCBITaxon:405532
+      taxon_label: Bacillus cereus (strain B4264)
       entry_status: REVIEWED
-      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 141
-      sequence_version: 2
-      role: Characteristic protein component (ruvC, Crossover junction endodeoxyribonuclease
-        RuvC) associated with Resolvase Schlafen system in Escherichia coli (strain
-        K12).
+      entry_version: 58
+      sequence_version: 1
+      role: Characteristic protein component (sduA, Shedu protein SduA) associated
+        with Resolvase Schlafen system in Bacillus cereus (strain B4264).
       evidence:
       - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
         snippet: '| Resolvase_KAP_NTPase | 10\.1038/s41564-026-02277-8 | Bacterial
           Schlafen proteins mediate phage defence |'
-        notes: Supports Crossover junction endodeoxyribonuclease RuvC in Resolvase
-          Schlafen system; UniProtKB:P0A814 (ruvC, Crossover junction endodeoxyribonuclease
-          RuvC) in Escherichia coli (strain K12) provides a verified protein exemplar.
+        notes: Supports Shedu protein SduA in Resolvase Schlafen system; UniProtKB:B7HFR2
+          (sduA, Shedu protein SduA) in Bacillus cereus (strain B4264) provides a
+          verified protein exemplar.
   edges:
   - subject: resolvase_schlafen_locus
     predicate: contributes to
@@ -144,16 +142,14 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: resolvase_schlafen_system_trait
-    description: Crossover junction endodeoxyribonuclease RuvC (ruvC, UniProtKB:P0A814)
-      contributes to Resolvase Schlafen system (associated with resolvase, schlafen,
-      defence).
+    description: Shedu protein SduA (sduA, UniProtKB:B7HFR2) contributes to Resolvase
+      Schlafen system.
     evidence:
     - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
       snippet: '| Resolvase_KAP_NTPase | 10\.1038/s41564-026-02277-8 | Bacterial Schlafen
         proteins mediate phage defence |'
-      notes: Supports the functional association between Crossover junction endodeoxyribonuclease
-        RuvC (UniProtKB:P0A814 in Escherichia coli (strain K12)) and Resolvase Schlafen
-        system.
+      notes: Supports the functional association between Shedu protein SduA (UniProtKB:B7HFR2
+        in Bacillus cereus (strain B4264)) and Resolvase Schlafen system.
 discussions:
 - discussion_id: resolvase-schlafen-defensefinder-profile-gap
   prompt: Resolve exact Resolvase_Schlafen locus architecture, resolvase-associated
@@ -220,5 +216,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    resolvase_schlafen_system_protein_component with UniProtKB:P0A814 (ruvC) exemplar.'
+    resolvase_schlafen_system_protein_component with UniProtKB:B7HFR2 (sduA) exemplar.'
   llm_assisted: true

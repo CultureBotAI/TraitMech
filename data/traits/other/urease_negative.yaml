@@ -30,6 +30,13 @@ curation_history:
   llm_assisted: true
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed canonical_examples status alongside NONMECHANISTIC protein exemplar
+    graph for urease negative; isolate-level canonical example remains deferred pending
+    explicit strain-level literature.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph urease_negative_graph
     with GENE_OR_PROTEIN node urease_negative_protein_component and UniProtKB:Q4A0J5
@@ -68,7 +75,8 @@ causal_graphs:
   - node_id: urease_negative_protein_component
     label: Urease subunit alpha
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Urease subunit alpha) associated with urease negative.
+    description: Reference pathway protein component (Urease subunit alpha) whose
+      absence or lack of activity characterizes urease negative.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
@@ -86,9 +94,10 @@ causal_graphs:
       retrieved_on: '2026-10-17'
       entry_version: 125
       sequence_version: 3
-      role: Characteristic protein component (ureC, Urease subunit alpha) associated
-        with urease negative in Staphylococcus saprophyticus subsp. saprophyticus
-        (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41).
+      role: Reference pathway protein (ureC, Urease subunit alpha) whose absence or
+        lack of activity in Staphylococcus saprophyticus subsp. saprophyticus (strain
+        ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) characterizes urease
+        negative.
       evidence:
       - reference: DOI:10.5812/chbs-160199
         snippet: Urea is classified as a diamide, and certain bacteria possessing
@@ -103,8 +112,8 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: urease_negative_trait
-    description: Urease subunit alpha (ureC, UniProtKB:Q4A0J5) contributes to urease
-      negative (associated with classified, possessing, utilizing).
+    description: Absence or inactivity of Urease subunit alpha (ureC, UniProtKB:Q4A0J5)
+      in the reference pathway underlies the urease negative phenotype.
     evidence:
     - reference: DOI:10.5812/chbs-160199
       snippet: Urea is classified as a diamide, and certain bacteria possessing the

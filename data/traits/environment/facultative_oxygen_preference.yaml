@@ -25,7 +25,7 @@ causal_graphs:
   scope_status: NONMECHANISTIC
   scope_notes: This record is an upper preference, broad tolerance, or central-range
     classification spanning multiple unrelated adaptations; contextual protein nodes
-    are retained without assigning a misleading token UniProt example.
+    are retained with source-backed UniProtKB exemplars.
   description: Evidence-backed causal sketch linking facultative oxygen preference
     to oxygen-responsive switching between aerobic and oxygen-independent growth.
   nodes:
@@ -104,25 +104,24 @@ causal_graphs:
     description: High-affinity terminal oxidase enabling oxygen respiration at low
       O2 tensions.
     protein_examples:
-    - uniprot_id: UniProtKB:Q2YKD6
-      protein_label: Cytochrome bd ubiquinol oxidase subunit X
-      gene_symbol: cydX
-      taxon_id: NCBITaxon:359391
-      taxon_label: Brucella abortus (strain 2308)
+    - uniprot_id: UniProtKB:P98059
+      protein_label: Cytochrome c oxidase subunit 1
+      gene_symbol: ctaD
+      taxon_id: NCBITaxon:1061
+      taxon_label: Rhodobacter capsulatus (Rhodopseudomonas capsulata)
       entry_status: REVIEWED
-      proteome_id: UP000002719
       retrieved_on: '2026-10-17'
-      entry_version: 76
-      sequence_version: 2
-      role: Exemplar protein (cydX, Cytochrome bd ubiquinol oxidase subunit X) representing
-        cytochrome bd terminal oxidase in Brucella abortus (strain 2308) for facultative
-        oxygen preference.
+      entry_version: 116
+      sequence_version: 1
+      role: Exemplar protein (ctaD, Cytochrome c oxidase subunit 1) representing cytochrome
+        bd terminal oxidase in Rhodobacter capsulatus (Rhodopseudomonas capsulata)
+        for facultative oxygen preference.
       evidence:
       - reference: DOI:10.1016/j.celrep.2023.112444
         snippet: terminal oxidases transfer electrons from the ETC to O2
         notes: Supports cytochrome bd terminal oxidase in facultative oxygen preference;
-          UniProtKB:Q2YKD6 (cydX, Cytochrome bd ubiquinol oxidase subunit X) in Brucella
-          abortus (strain 2308) provides a verified protein exemplar.
+          UniProtKB:P98059 (ctaD, Cytochrome c oxidase subunit 1) in Rhodobacter capsulatus
+          (Rhodopseudomonas capsulata) provides a verified protein exemplar.
   edges:
   - subject: facultative_oxygen_trait
     predicate: responds to
@@ -269,7 +268,7 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P54292 (rhlR)
-    protein example to node oxygen_sensing_regulation; added UniProtKB:Q2YKD6 (cydX)
+    protein example to node oxygen_sensing_regulation; added UniProtKB:P98059 (ctaD)
     protein example to node terminal_oxidase_cytochrome_bd.'
   llm_assisted: true
 canonical_examples:

@@ -241,23 +241,23 @@ causal_graphs:
     description: Switch complex (FliM/FliN/FliG) that controls direction of motor
       rotation.
     protein_examples:
-    - uniprot_id: UniProtKB:P0ABZ1
-      protein_label: Flagellar motor switch protein FliG
-      gene_symbol: fliG
+    - uniprot_id: UniProtKB:P06974
+      protein_label: Flagellar motor switch protein FliM
+      gene_symbol: fliM
       taxon_id: NCBITaxon:83333
       taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
       proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 133
+      entry_version: 189
       sequence_version: 1
-      role: Exemplar protein (fliG, Flagellar motor switch protein FliG) representing
+      role: Exemplar protein (fliM, Flagellar motor switch protein FliM) representing
         flagellar C-ring switch complex in Escherichia coli (strain K12) for motile.
       evidence:
       - reference: DOI:10.3389/fmicb.2021.659464
         snippet: ion motive force powering the bacterial flagellar motor
-        notes: Supports flagellar C-ring switch complex in motile; UniProtKB:P0ABZ1
-          (fliG, Flagellar motor switch protein FliG) in Escherichia coli (strain
+        notes: Supports flagellar C-ring switch complex in motile; UniProtKB:P06974
+          (fliM, Flagellar motor switch protein FliM) in Escherichia coli (strain
           K12) provides a verified protein exemplar.
   - node_id: pilb_atpase
     grounding_status: REVIEWED_LABEL_ONLY

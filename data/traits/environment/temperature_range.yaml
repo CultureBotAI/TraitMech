@@ -243,7 +243,7 @@ causal_graphs:
     predicate_id: RO:0002326
     object: temperature_range_trait
     description: Chaperone protein DnaK (dnaK, UniProtKB:P0A6Y8) contributes to temperature
-      range (associated with temperature, adaptation, membrane).
+      range.
     evidence:
     - reference: DOI:10.1007/s42770-023-01057-4
       snippet: When the temperature drops, DesK/DesR is the two-component system involved

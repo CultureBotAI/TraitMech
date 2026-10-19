@@ -32,7 +32,7 @@ causal_graphs:
   scope_status: NONMECHANISTIC
   scope_notes: This genomics record is a measurement, genomic-element classification,
     or population-level descriptor rather than one taxon-specific protein mechanism;
-    contextual protein nodes do not receive token UniProt examples.
+    contextual protein nodes include source-backed UniProtKB exemplars.
   description: Evidence-backed causal sketch linking HGT and ecological breadth to
     open versus closed pangenome structure.
   nodes:
@@ -202,8 +202,7 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: pangenome_openness_trait
-    description: Protein RecA (recA, UniProtKB:Q9F407) contributes to pangenome openness
-      (associated with antimicrobial, unfortunately, pathogenesis).
+    description: Protein RecA (recA, UniProtKB:Q9F407) contributes to pangenome openness.
     evidence:
     - reference: DOI:10.1073/pnas.0506758102
       snippet: Unfortunately, the sequence of a single genome does not reflect how

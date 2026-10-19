@@ -51,6 +51,13 @@ curation_history:
   llm_assisted: true
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed canonical_examples status alongside NONMECHANISTIC protein exemplar
+    graph for methyl-based methanogenesis; isolate-level canonical example remains
+    deferred pending explicit strain-level literature.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph methyl_based_methanogenesis_graph
     with GENE_OR_PROTEIN node methyl_based_methanogenesis_protein_component and UniProtKB:Q58256
@@ -114,8 +121,7 @@ causal_graphs:
     predicate_id: RO:0002326
     object: methyl_based_methanogenesis_trait
     description: Methyl-coenzyme M reductase I subunit alpha (mcrA, UniProtKB:Q58256)
-      contributes to methyl-based methanogenesis (associated with methanogenesis,
-      methylotrophic, dismutation).
+      contributes to methyl-based methanogenesis.
     evidence:
     - reference: DOI:10.1128/mmbr.00024-22
       snippet: Methyl-based methanogenesis is one of three broad categories of archaeal

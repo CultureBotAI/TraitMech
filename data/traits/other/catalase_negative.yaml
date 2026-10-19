@@ -39,7 +39,7 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph catalase_negative_graph
-    with GENE_OR_PROTEIN node catalase_negative_protein_component and UniProtKB:Q9R708
+    with GENE_OR_PROTEIN node catalase_negative_protein_component and UniProtKB:P30266
     exemplar.'
   llm_assisted: true
 definition_source: DOI:10.1038/srep03081
@@ -74,12 +74,13 @@ discussions:
 causal_graphs:
 - graph_id: catalase_negative_graph
   title: Protein component associated with catalase negative
-  description: Literature-backed association between Catalase-peroxidase (UniProtKB:Q9R708)
-    and catalase negative.
+  description: Literature-backed association between Catalase (UniProtKB:P30266) and
+    catalase negative.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q9R708 in Agrobacterium
-    tumefaciens) associated with catalase negative while full multi-step mechanistic
-    curation remains future work.
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P30266 in Alkalihalophilus
+    pseudofirmus (strain ATCC BAA-2126 / JCM 17055 / OF4) (Bacillus pseudofirmus))
+    associated with catalase negative while full multi-step mechanistic curation remains
+    future work.
   nodes:
   - node_id: catalase_negative_trait
     label: catalase negative
@@ -90,44 +91,46 @@ causal_graphs:
       additionally be asserted via <organism> METPO:2000303 'does not show activity
       of' GO:0004096 'catalase activity'.
   - node_id: catalase_negative_protein_component
-    label: Catalase-peroxidase
+    label: Catalase
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Catalase-peroxidase) associated with catalase
-      negative.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Reference pathway protein component (Catalase) whose absence or lack
+      of activity characterizes catalase negative.
+    grounding: GO:0004096
     gene_symbols:
-    - katG
+    - katE
     protein_examples:
-    - uniprot_id: UniProtKB:Q9R708
-      protein_label: Catalase-peroxidase
-      gene_symbol: katG
-      taxon_id: NCBITaxon:358
-      taxon_label: Agrobacterium tumefaciens
+    - uniprot_id: UniProtKB:P30266
+      protein_label: Catalase
+      gene_symbol: katE
+      taxon_id: NCBITaxon:398511
+      taxon_label: Alkalihalophilus pseudofirmus (strain ATCC BAA-2126 / JCM 17055
+        / OF4) (Bacillus pseudofirmus)
       entry_status: REVIEWED
+      proteome_id: UP000001544
       retrieved_on: '2026-10-17'
-      entry_version: 101
-      sequence_version: 1
-      role: Characteristic protein component (katG, Catalase-peroxidase) associated
-        with catalase negative in Agrobacterium tumefaciens.
+      entry_version: 129
+      sequence_version: 3
+      role: Reference pathway protein (katE, Catalase) whose absence or lack of activity
+        in Alkalihalophilus pseudofirmus (strain ATCC BAA-2126 / JCM 17055 / OF4)
+        (Bacillus pseudofirmus) characterizes catalase negative.
       evidence:
       - reference: DOI:10.1128/iai.72.8.4512-4520.2004
         snippet: E. faecium is catalase negative, and the major mechanism to scavenge
           hydrogen peroxide is NADH peroxidase
-        notes: Supports Catalase-peroxidase in catalase negative; UniProtKB:Q9R708
-          (katG, Catalase-peroxidase) in Agrobacterium tumefaciens provides a verified
-          protein exemplar.
+        notes: Supports Catalase in catalase negative; UniProtKB:P30266 (katE, Catalase)
+          in Alkalihalophilus pseudofirmus (strain ATCC BAA-2126 / JCM 17055 / OF4)
+          (Bacillus pseudofirmus) provides a verified protein exemplar.
   edges:
   - subject: catalase_negative_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: catalase_negative_trait
-    description: Catalase-peroxidase (katG, UniProtKB:Q9R708) contributes to catalase
-      negative (associated with peroxidase, catalase, hydrogen).
+    description: Absence or inactivity of Catalase (katE, UniProtKB:P30266) in the
+      reference pathway underlies the catalase negative phenotype.
     evidence:
     - reference: DOI:10.1128/iai.72.8.4512-4520.2004
       snippet: E. faecium is catalase negative, and the major mechanism to scavenge
         hydrogen peroxide is NADH peroxidase
-      notes: Supports the functional association between Catalase-peroxidase (UniProtKB:Q9R708
-        in Agrobacterium tumefaciens) and catalase negative.
+      notes: Supports the functional association between Catalase (UniProtKB:P30266
+        in Alkalihalophilus pseudofirmus (strain ATCC BAA-2126 / JCM 17055 / OF4)
+        (Bacillus pseudofirmus)) and catalase negative.

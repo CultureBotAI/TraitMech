@@ -87,28 +87,27 @@ causal_graphs:
     grounding: traitmech:000232
     description: Possession of a genome-encoded Lamassu phage-defense system.
   - node_id: lamassu_sir2_system_protein_component
-    label: Lamassu protein LmuB
+    label: NAD(+) hydrolase ThsA
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Lamassu protein LmuB) associated with Lamassu-Sir2
+    description: Protein component (NAD(+) hydrolase ThsA) associated with Lamassu-Sir2
       system.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - lmuB
+    - thsA
     protein_examples:
-    - uniprot_id: UniProtKB:P0DW44
-      protein_label: Lamassu protein LmuB
-      gene_symbol: lmuB
-      taxon_id: NCBITaxon:1761765
-      taxon_label: Bacillus sp. (strain NCIM 5461 / CCTCC AB 2011126 / NIO-1130)
+    - uniprot_id: UniProtKB:P0DW59
+      protein_label: NAD(+) hydrolase ThsA
+      gene_symbol: thsA
+      taxon_id: NCBITaxon:1310692
+      taxon_label: Acinetobacter baumannii (strain 532279)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      entry_version: 8
+      entry_version: 10
       sequence_version: 1
-      role: Characteristic protein component (lmuB, Lamassu protein LmuB) associated
-        with Lamassu-Sir2 system in Bacillus sp. (strain NCIM 5461 / CCTCC AB 2011126
-        / NIO-1130).
+      role: Characteristic protein component (thsA, NAD(+) hydrolase ThsA) associated
+        with Lamassu-Sir2 system in Acinetobacter baumannii (strain 532279).
       evidence:
       - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
         snippet: Lamassu-Fam Lamassu-Hydrolase 2 2 Lamassu-Fam__LmuA_effector_Hydrolase,
@@ -117,9 +116,9 @@ causal_graphs:
           Lamassu-Fam__LmuA_effector_FMO, Lamassu-Fam__LmuA_effector_Lipase, Lamassu-Fam__LmuA_effector_Mrr,
           Lamassu-Fam__LmuA_effector_PDDEXK, Lamassu-Fam__LmuA_effector_Protease,
           Lamassu-Fam__LmuA_effector_Sir2, Lamassu-Fam__LmuA_effector_hypothetical
-        notes: Supports Lamassu protein LmuB in Lamassu-Sir2 system; UniProtKB:P0DW44
-          (lmuB, Lamassu protein LmuB) in Bacillus sp. (strain NCIM 5461 / CCTCC AB
-          2011126 / NIO-1130) provides a verified protein exemplar.
+        notes: Supports NAD(+) hydrolase ThsA in Lamassu-Sir2 system; UniProtKB:P0DW59
+          (thsA, NAD(+) hydrolase ThsA) in Acinetobacter baumannii (strain 532279)
+          provides a verified protein exemplar.
   edges:
   - subject: lamassu_sir2_system_trait
     predicate: is a
@@ -140,8 +139,8 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: lamassu_sir2_system_trait
-    description: Lamassu protein LmuB (lmuB, UniProtKB:P0DW44) contributes to Lamassu-Sir2
-      system (associated with hydrolase, effector, nuclease).
+    description: NAD(+) hydrolase ThsA (thsA, UniProtKB:P0DW59) contributes to Lamassu-Sir2
+      system.
     evidence:
     - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
       snippet: Lamassu-Fam Lamassu-Hydrolase 2 2 Lamassu-Fam__LmuA_effector_Hydrolase,
@@ -150,9 +149,8 @@ causal_graphs:
         Lamassu-Fam__LmuA_effector_FMO, Lamassu-Fam__LmuA_effector_Lipase, Lamassu-Fam__LmuA_effector_Mrr,
         Lamassu-Fam__LmuA_effector_PDDEXK, Lamassu-Fam__LmuA_effector_Protease, Lamassu-Fam__LmuA_effector_Sir2,
         Lamassu-Fam__LmuA_effector_hypothetical
-      notes: Supports the functional association between Lamassu protein LmuB (UniProtKB:P0DW44
-        in Bacillus sp. (strain NCIM 5461 / CCTCC AB 2011126 / NIO-1130)) and Lamassu-Sir2
-        system.
+      notes: Supports the functional association between NAD(+) hydrolase ThsA (UniProtKB:P0DW59
+        in Acinetobacter baumannii (strain 532279)) and Lamassu-Sir2 system.
 discussions:
 - discussion_id: lamassu-sir2-activity-gap
   prompt: Resolve Lamassu-Sir2 phage triggers, native hosts, Sir2 effector activity,
@@ -237,5 +235,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    lamassu_sir2_system_protein_component with UniProtKB:P0DW44 (lmuB) exemplar.'
+    lamassu_sir2_system_protein_component with UniProtKB:P0DW59 (thsA) exemplar.'
   llm_assisted: true

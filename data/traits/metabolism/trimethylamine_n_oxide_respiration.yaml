@@ -116,8 +116,7 @@ causal_graphs:
     predicate_id: RO:0002326
     object: trimethylamine_n_oxide_respiration_trait
     description: Dimethyl sulfoxide/trimethylamine N-oxide reductase (dmsA, UniProtKB:Q57366)
-      contributes to trimethylamine N-oxide respiration (associated with trimethylamine,
-      intracellular, respiration).
+      contributes to trimethylamine N-oxide respiration.
     evidence:
     - reference: DOI:10.3389/fmicb.2024.1467153
       snippet: switching from aerobic intracellular energy metabolism to trimethylamine

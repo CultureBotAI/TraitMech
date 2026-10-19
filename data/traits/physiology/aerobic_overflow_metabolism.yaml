@@ -112,6 +112,13 @@ curation_history:
   llm_assisted: true
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed canonical_examples status alongside NONMECHANISTIC protein exemplar
+    graph for aerobic overflow metabolism; isolate-level canonical example remains
+    deferred pending explicit strain-level literature.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph aerobic_overflow_metabolism_graph
     with GENE_OR_PROTEIN node aerobic_overflow_metabolism_protein_component and UniProtKB:P0AEC3
@@ -173,8 +180,7 @@ causal_graphs:
     predicate_id: RO:0002326
     object: aerobic_overflow_metabolism_trait
     description: Aerobic respiration control sensor protein ArcB (arcB, UniProtKB:P0AEC3)
-      contributes to aerobic overflow metabolism (associated with concentrations,
-      cerevisiae, metabolism).
+      contributes to aerobic overflow metabolism.
     evidence:
     - reference: DOI:10.1038/msb.2009.82
       snippet: S. cerevisiae and E. coli fully oxidize glucose at low concentrations

@@ -37,8 +37,8 @@ causal_graphs:
     and counterstain uptake.
   scope_status: NONMECHANISTIC
   scope_notes: Gram-negative is an envelope/staining classification rather than one
-    inherited protein mechanism. Contextual envelope complexes are retained without
-    assigning a token UniProt example.
+    inherited protein mechanism. Contextual envelope complexes are retained with source-backed
+    UniProtKB exemplars.
   nodes:
   - node_id: gram_negative_trait
     label: gram negative
@@ -110,8 +110,9 @@ causal_graphs:
       retrieved_on: '2026-10-17'
       entry_version: 163
       sequence_version: 1
-      role: Exemplar protein (bamA, Outer membrane protein assembly factor BamA) representing
-        BAM complex in Escherichia coli (strain K12) for gram negative.
+      role: Reference pathway protein (bamA, Outer membrane protein assembly factor
+        BamA) representing BAM complex in Escherichia coli (strain K12), whose absence
+        or lack of activity underlies gram negative.
       evidence:
       - reference: DOI:10.3109/10520299609117151
         snippet: Gram-positive microorganisms require a relatively thick cell wall
@@ -127,25 +128,25 @@ causal_graphs:
     grounding_notes: This label denotes a structurally broad collection of unrelated
       outer-membrane protein families.
     protein_examples:
-    - uniprot_id: UniProtKB:P69776
-      protein_label: Major outer membrane lipoprotein Lpp
-      gene_symbol: lpp
+    - uniprot_id: UniProtKB:P06129
+      protein_label: Vitamin B12 transporter BtuB
+      gene_symbol: btuB
       taxon_id: NCBITaxon:83333
       taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
       proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 157
-      sequence_version: 1
-      role: Exemplar protein (lpp, Major outer membrane lipoprotein Lpp) representing
-        beta-barrel outer membrane proteins in Escherichia coli (strain K12) for gram
-        negative.
+      entry_version: 213
+      sequence_version: 2
+      role: Reference pathway protein (btuB, Vitamin B12 transporter BtuB) representing
+        beta-barrel outer membrane proteins in Escherichia coli (strain K12), whose
+        absence or lack of activity underlies gram negative.
       evidence:
       - reference: DOI:10.3109/10520299609117151
         snippet: Gram-positive microorganisms require a relatively thick cell wall
-        notes: Supports beta-barrel outer membrane proteins in gram negative; UniProtKB:P69776
-          (lpp, Major outer membrane lipoprotein Lpp) in Escherichia coli (strain
-          K12) provides a verified protein exemplar.
+        notes: Supports beta-barrel outer membrane proteins in gram negative; UniProtKB:P06129
+          (btuB, Vitamin B12 transporter BtuB) in Escherichia coli (strain K12) provides
+          a verified protein exemplar.
   - node_id: mla_pathway
     label: Mla pathway
     node_type: PATHWAY
@@ -175,8 +176,9 @@ causal_graphs:
       retrieved_on: '2026-10-17'
       entry_version: 149
       sequence_version: 1
-      role: Exemplar protein (pal, Peptidoglycan-associated lipoprotein) representing
-        Tol-Pal system in Escherichia coli (strain K12) for gram negative.
+      role: Reference pathway protein (pal, Peptidoglycan-associated lipoprotein)
+        representing Tol-Pal system in Escherichia coli (strain K12), whose absence
+        or lack of activity underlies gram negative.
       evidence:
       - reference: DOI:10.3109/10520299609117151
         snippet: Gram-positive microorganisms require a relatively thick cell wall
@@ -403,7 +405,7 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P0A940 (bamA)
-    protein example to node bam_complex; added UniProtKB:P69776 (lpp) protein example
+    protein example to node bam_complex; added UniProtKB:P06129 (btuB) protein example
     to node beta_barrel_omps; added UniProtKB:P0A912 (pal) protein example to node
     tol_pal_system.'
   llm_assisted: true

@@ -113,27 +113,28 @@ causal_graphs:
       nitrogen-, iron-, and other donor-oxidizing enzyme families; the graph does
       not specify one exact family.
     protein_examples:
-    - uniprot_id: UniProtKB:Q02115
-      protein_label: Polyisoprenyl-teichoic acid--peptidoglycan teichoic acid transferase
-        TagU
-      gene_symbol: tagU
-      taxon_id: NCBITaxon:224308
-      taxon_label: Bacillus subtilis (strain 168)
+    - uniprot_id: UniProtKB:O52683
+      protein_label: Bifurcating [FeFe] hydrogenase alpha subunit
+      gene_symbol: hydA
+      taxon_id: NCBITaxon:243274
+      taxon_label: Thermotoga maritima (strain ATCC 43589 / DSM 3109 / JCM 10099 /
+        NBRC 100826 / MSB8)
       entry_status: REVIEWED
-      proteome_id: UP000001570
+      proteome_id: UP000008183
       retrieved_on: '2026-10-17'
-      entry_version: 150
+      entry_version: 158
       sequence_version: 1
-      role: Exemplar protein (tagU, Polyisoprenyl-teichoic acid--peptidoglycan teichoic
-        acid transferase TagU) representing membrane-bound (de)hydrogenase in Bacillus
-        subtilis (strain 168) for lithoautotrophic.
+      role: Exemplar protein (hydA, Bifurcating [FeFe] hydrogenase alpha subunit)
+        representing membrane-bound (de)hydrogenase in Thermotoga maritima (strain
+        ATCC 43589 / DSM 3109 / JCM 10099 / NBRC 100826 / MSB8) for lithoautotrophic.
       evidence:
       - reference: DOI:10.1128/aem.00748-24
         snippet: Membrane-bound (de-)hydrogenases couple the oxidation reaction to
           the reduction of a universal quinone
-        notes: Supports membrane-bound (de)hydrogenase in lithoautotrophic; UniProtKB:Q02115
-          (tagU, Polyisoprenyl-teichoic acid--peptidoglycan teichoic acid transferase
-          TagU) in Bacillus subtilis (strain 168) provides a verified protein exemplar.
+        notes: Supports membrane-bound (de)hydrogenase in lithoautotrophic; UniProtKB:O52683
+          (hydA, Bifurcating [FeFe] hydrogenase alpha subunit) in Thermotoga maritima
+          (strain ATCC 43589 / DSM 3109 / JCM 10099 / NBRC 100826 / MSB8) provides
+          a verified protein exemplar.
   - node_id: electron_transport_chain
     label: electron transport chain
     node_type: PATHWAY
@@ -526,8 +527,8 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:Q82TG6
-    version metadata (entry_version=121, sequence_version=1); added UniProtKB:Q02115
-    (tagU) protein example to node membrane_dehydrogenase; added UniProtKB:P33602
+    version metadata (entry_version=121, sequence_version=1); added UniProtKB:O52683
+    (hydA) protein example to node membrane_dehydrogenase; added UniProtKB:P33602
     (nuoG) protein example to node cytbc1_nadh_dehydrogenase; added UniProtKB:Q5KW03
     (Q5KW03) protein example to node dic_acquisition_toolkit.'
   llm_assisted: true

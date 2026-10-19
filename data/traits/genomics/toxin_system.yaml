@@ -99,32 +99,34 @@ causal_graphs:
     grounding: traitmech:000214
     description: Possession of a genome-encoded abortive-infection phage defense system.
   - node_id: toxin_system_protein_component
-    label: Endoribonuclease HigB
+    label: Abortive phage resistance protein AbiC
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Endoribonuclease HigB) associated with ToxIN system.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Abortive phage resistance protein AbiC) associated
+      with ToxIN system.
+    grounding: InterPro:IPR031709
     gene_symbols:
-    - higB
+    - abiC
     protein_examples:
-    - uniprot_id: UniProtKB:Q7A225
-      protein_label: Endoribonuclease HigB
-      gene_symbol: higB
-      taxon_id: NCBITaxon:585
-      taxon_label: Proteus vulgaris
+    - uniprot_id: UniProtKB:Q01457
+      protein_label: Abortive phage resistance protein AbiC
+      gene_symbol: abiC
+      taxon_id: NCBITaxon:1360
+      taxon_label: Lactococcus lactis subsp. lactis (Streptococcus lactis)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      entry_version: 69
+      entry_version: 35
       sequence_version: 1
-      role: Characteristic protein component (higB, Endoribonuclease HigB) associated
-        with ToxIN system in Proteus vulgaris.
+      role: Characteristic protein component (abiC, Abortive phage resistance protein
+        AbiC) associated with ToxIN system in Lactococcus lactis subsp. lactis (Streptococcus
+        lactis).
       evidence:
-      - reference: DOI:10.1128/JB.00720-09
-        snippet: this two-component Abi system operates as a novel protein-RNA toxin-antitoxin
-          (TA) system to abort phage infection in multiple gram-negative bacteria
-        notes: Supports Endoribonuclease HigB in ToxIN system; UniProtKB:Q7A225 (higB,
-          Endoribonuclease HigB) in Proteus vulgaris provides a verified protein exemplar.
+      - reference: DOI:10.1073/pnas.0808832106
+        snippet: Resistance strategies include the abortive infection (Abi) systems,
+          which promote cell death and limit phage replication within a bacterial
+          population
+        notes: Supports Abortive phage resistance protein AbiC in ToxIN system; UniProtKB:Q01457
+          (abiC, Abortive phage resistance protein AbiC) in Lactococcus lactis subsp.
+          lactis (Streptococcus lactis) provides a verified protein exemplar.
   edges:
   - subject: toxin_locus
     predicate: contributes to
@@ -188,14 +190,15 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: toxin_system_trait
-    description: Endoribonuclease HigB (higB, UniProtKB:Q7A225) contributes to ToxIN
-      system (associated with phytopathogen, atroseptica, carotovora).
+    description: Abortive phage resistance protein AbiC (abiC, UniProtKB:Q01457) contributes
+      to ToxIN system.
     evidence:
     - reference: DOI:10.1073/pnas.0808832106
-      snippet: A highly effective 2-gene Abi system from the phytopathogen Erwinia
-        carotovora subspecies atroseptica, designated ToxIN, is described
-      notes: Supports the functional association between Endoribonuclease HigB (UniProtKB:Q7A225
-        in Proteus vulgaris) and ToxIN system.
+      snippet: Resistance strategies include the abortive infection (Abi) systems,
+        which promote cell death and limit phage replication within a bacterial population
+      notes: Supports the functional association between Abortive phage resistance
+        protein AbiC (UniProtKB:Q01457 in Lactococcus lactis subsp. lactis (Streptococcus
+        lactis)) and ToxIN system.
 curation_history:
 - timestamp: '2026-09-15T19:25:00Z'
   curator: codex
@@ -209,5 +212,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    toxin_system_protein_component with UniProtKB:Q7A225 (higB) exemplar.'
+    toxin_system_protein_component with UniProtKB:Q01457 (abiC) exemplar.'
   llm_assisted: true

@@ -103,26 +103,24 @@ causal_graphs:
     description: Potassium:proton antiporters regulating bacterial internal pH.
     grounding: GO:0015386
     protein_examples:
-    - uniprot_id: UniProtKB:P96589
-      protein_label: Potassium transporter KimA
-      gene_symbol: kimA
-      taxon_id: NCBITaxon:224308
-      taxon_label: Bacillus subtilis (strain 168)
+    - uniprot_id: UniProtKB:Q93F90
+      protein_label: Na(+)/H(+) antiporter NhaA
+      gene_symbol: nhaA
+      taxon_id: NCBITaxon:1890
+      taxon_label: Streptomyces antibioticus
       entry_status: REVIEWED
-      proteome_id: UP000001570
       retrieved_on: '2026-10-17'
-      entry_version: 124
+      entry_version: 71
       sequence_version: 1
-      role: Exemplar protein (kimA, Potassium transporter KimA) representing K+/H+
-        antiporters in Bacillus subtilis (strain 168) for pH optimum mid2.
+      role: Exemplar protein (nhaA, Na(+)/H(+) antiporter NhaA) representing K+/H+
+        antiporters in Streptomyces antibioticus for pH optimum mid2.
       evidence:
-      - reference: DOI:10.1038/nrmicro2549
-        snippet: For pH homeostasis under alkaline conditions, active transport of
-          protons inward is a crucial adaptation, which usually involves activation
-          and transcriptional up-regulation of key cation/proton antiporters
-        notes: Supports K+/H+ antiporters in pH optimum mid2; UniProtKB:P96589 (kimA,
-          Potassium transporter KimA) in Bacillus subtilis (strain 168) provides a
-          verified protein exemplar.
+      - reference: DOI:10.1093/femsre/fuad033
+        snippet: Proton-sensing ion/H+ antiporters acidify the cytoplasm by exporting
+          K+ or Na+ in exchange for protons when the internal pH gets too high
+        notes: Supports K+/H+ antiporters in pH optimum mid2; UniProtKB:Q93F90 (nhaA,
+          Na(+)/H(+) antiporter NhaA) in Streptomyces antibioticus provides a verified
+          protein exemplar.
   - node_id: respiratory_proton_pumping
     label: proton-pumping respiratory chain components
     node_type: PATHWAY
@@ -145,28 +143,25 @@ causal_graphs:
       a quantitative pH bin; no one component family represents the whole complex.
     description: Proton-transporting ATP synthase complex that makes ATP from PMF.
     protein_examples:
-    - uniprot_id: UniProtKB:Q49Z52
+    - uniprot_id: UniProtKB:P0ABB0
       protein_label: ATP synthase subunit alpha
       gene_symbol: atpA
-      taxon_id: NCBITaxon:342451
-      taxon_label: Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
-        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
-      proteome_id: UP000006371
+      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 137
+      entry_version: 161
       sequence_version: 1
       role: Exemplar protein (atpA, ATP synthase subunit alpha) representing F0F1-ATP
-        synthase in Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
-        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) for pH optimum mid2.
+        synthase in Escherichia coli (strain K12) for pH optimum mid2.
       evidence:
       - reference: DOI:10.1093/femsre/fuad033
         snippet: stored in the form of a proton motive force, which subsequently can
           be used by F0F1-ATP synthase to make ATP
-        notes: Supports F0F1-ATP synthase in pH optimum mid2; UniProtKB:Q49Z52 (atpA,
-          ATP synthase subunit alpha) in Staphylococcus saprophyticus subsp. saprophyticus
-          (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) provides
-          a verified protein exemplar.
+        notes: Supports F0F1-ATP synthase in pH optimum mid2; UniProtKB:P0ABB0 (atpA,
+          ATP synthase subunit alpha) in Escherichia coli (strain K12) provides a
+          verified protein exemplar.
   edges:
   - subject: slightly_alkaline_external_ph
     predicate: engages
@@ -362,7 +357,7 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q93F90 (nhaA)
-    protein example to node na_h_antiporters; added UniProtKB:P96589 (kimA) protein
-    example to node k_h_antiporters; added UniProtKB:Q49Z52 (atpA) protein example
+    protein example to node na_h_antiporters; added UniProtKB:Q93F90 (nhaA) protein
+    example to node k_h_antiporters; added UniProtKB:P0ABB0 (atpA) protein example
     to node f0f1_atp_synthase.'
   llm_assisted: true

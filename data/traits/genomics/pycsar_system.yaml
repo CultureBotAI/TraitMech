@@ -116,31 +116,33 @@ causal_graphs:
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
   - node_id: pycsar_system_protein_component
-    label: Cytidylate cyclase
+    label: CBASS oligonucleotide cyclase CdnC
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Cytidylate cyclase) associated with Pycsar system.
+    description: Protein component (CBASS oligonucleotide cyclase CdnC) associated
+      with Pycsar system.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - pycC
+    - cdnC
     protein_examples:
-    - uniprot_id: UniProtKB:P0DV26
-      protein_label: Cytidylate cyclase
-      gene_symbol: pycC
+    - uniprot_id: UniProtKB:P0DX77
+      protein_label: CBASS oligonucleotide cyclase CdnC
+      gene_symbol: cdnC
       taxon_id: NCBITaxon:562
       taxon_label: Escherichia coli
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      entry_version: 11
+      entry_version: 10
       sequence_version: 1
-      role: Characteristic protein component (pycC, Cytidylate cyclase) associated
-        with Pycsar system in Escherichia coli.
+      role: Characteristic protein component (cdnC, CBASS oligonucleotide cyclase
+        CdnC) associated with Pycsar system in Escherichia coli.
       evidence:
       - reference: DOI:10.1038/s41467-024-49861-2
         snippet: named pyrimidine cyclase system for anti-phage resistance (Pycsar)
-        notes: Supports Cytidylate cyclase in Pycsar system; UniProtKB:P0DV26 (pycC,
-          Cytidylate cyclase) in Escherichia coli provides a verified protein exemplar.
+        notes: Supports CBASS oligonucleotide cyclase CdnC in Pycsar system; UniProtKB:P0DX77
+          (cdnC, CBASS oligonucleotide cyclase CdnC) in Escherichia coli provides
+          a verified protein exemplar.
   edges:
   - subject: pycsar_locus
     predicate: contributes to
@@ -243,14 +245,14 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: pycsar_system_trait
-    description: Cytidylate cyclase (pycC, UniProtKB:P0DV26) contributes to Pycsar
-      system (associated with substantial, identified, infections).
+    description: CBASS oligonucleotide cyclase CdnC (cdnC, UniProtKB:P0DX77) contributes
+      to Pycsar system.
     evidence:
     - reference: DOI:10.1038/s41467-024-49861-2
       snippet: a distinct zinc-finger motif of the uridylate cyclase is identified
         to confer substantial resistance against phage infections
-      notes: Supports the functional association between Cytidylate cyclase (UniProtKB:P0DV26
-        in Escherichia coli) and Pycsar system.
+      notes: Supports the functional association between CBASS oligonucleotide cyclase
+        CdnC (UniProtKB:P0DX77 in Escherichia coli) and Pycsar system.
 discussions:
 - discussion_id: pycsar-signal-and-effector-gap
   prompt: Resolve Pycsar cyclase clades, cyclic pyrimidine specificity, receptor-effector
@@ -280,5 +282,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    pycsar_system_protein_component with UniProtKB:P0DV26 (pycC) exemplar.'
+    pycsar_system_protein_component with UniProtKB:P0DX77 (cdnC) exemplar.'
   llm_assisted: true

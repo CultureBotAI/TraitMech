@@ -92,20 +92,27 @@ curation_history:
   llm_assisted: true
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed canonical_examples status alongside NONMECHANISTIC protein exemplar
+    graph for siliceous scale production; isolate-level canonical example remains
+    deferred pending explicit strain-level literature.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph siliceous_scale_production_graph
-    with GENE_OR_PROTEIN node siliceous_scale_production_protein_component and UniProtKB:Q12510
+    with GENE_OR_PROTEIN node siliceous_scale_production_protein_component and UniProtKB:B8LDT2
     exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: siliceous_scale_production_graph
   title: Protein component associated with siliceous scale production
-  description: Literature-backed association between DNA damage-binding protein CMR1
-    (UniProtKB:Q12510) and siliceous scale production.
+  description: Literature-backed association between Silaffin (UniProtKB:B8LDT2) and
+    siliceous scale production.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q12510 in Saccharomyces
-    cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)) associated with siliceous
-    scale production while full multi-step mechanistic curation remains future work.
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:B8LDT2 in Thalassiosira
+    pseudonana (Marine diatom)) associated with siliceous scale production while full
+    multi-step mechanistic curation remains future work.
   nodes:
   - node_id: siliceous_scale_production_trait
     label: siliceous scale production
@@ -114,47 +121,39 @@ causal_graphs:
     description: A physiological phenotype in which a microbial cell produces siliceous
       scales.
   - node_id: siliceous_scale_production_protein_component
-    label: DNA damage-binding protein CMR1
+    label: Silaffin
     node_type: GENE_OR_PROTEIN
-    description: Protein component (DNA damage-binding protein CMR1) associated with
-      siliceous scale production.
+    description: Protein component (Silaffin) associated with siliceous scale production.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
-    gene_symbols:
-    - CMR1
     protein_examples:
-    - uniprot_id: UniProtKB:Q12510
-      protein_label: DNA damage-binding protein CMR1
-      gene_symbol: CMR1
-      taxon_id: NCBITaxon:559292
-      taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's
-        yeast)
-      entry_status: REVIEWED
-      proteome_id: UP000002311
+    - uniprot_id: UniProtKB:B8LDT2
+      protein_label: Silaffin
+      taxon_id: NCBITaxon:35128
+      taxon_label: Thalassiosira pseudonana (Marine diatom)
+      entry_status: UNREVIEWED
+      proteome_id: UP000001449
       retrieved_on: '2026-10-17'
-      entry_version: 191
+      entry_version: 47
       sequence_version: 1
-      role: Characteristic protein component (CMR1, DNA damage-binding protein CMR1)
-        associated with siliceous scale production in Saccharomyces cerevisiae (strain
-        ATCC 204508 / S288c) (Baker's yeast).
+      role: Characteristic protein component (B8LDT2, Silaffin) associated with siliceous
+        scale production in Thalassiosira pseudonana (Marine diatom).
       evidence:
       - reference: DOI:10.1016/j.protis.2016.05.002
         snippet: Scales were formed one by one in silica deposition vesicles (SDVs)
-        notes: Supports DNA damage-binding protein CMR1 in siliceous scale production;
-          UniProtKB:Q12510 (CMR1, DNA damage-binding protein CMR1) in Saccharomyces
-          cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast) provides a verified
+        notes: Supports Silaffin in siliceous scale production; UniProtKB:B8LDT2 (B8LDT2,
+          Silaffin) in Thalassiosira pseudonana (Marine diatom) provides a verified
           protein exemplar.
   edges:
   - subject: siliceous_scale_production_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: siliceous_scale_production_trait
-    description: DNA damage-binding protein CMR1 (CMR1, UniProtKB:Q12510) contributes
-      to siliceous scale production (associated with deposition, vesicles, formed).
+    description: Silaffin (B8LDT2, UniProtKB:B8LDT2) contributes to siliceous scale
+      production.
     evidence:
     - reference: DOI:10.1016/j.protis.2016.05.002
       snippet: Scales were formed one by one in silica deposition vesicles (SDVs)
-      notes: Supports the functional association between DNA damage-binding protein
-        CMR1 (UniProtKB:Q12510 in Saccharomyces cerevisiae (strain ATCC 204508 / S288c)
-        (Baker's yeast)) and siliceous scale production.
+      notes: Supports the functional association between Silaffin (UniProtKB:B8LDT2
+        in Thalassiosira pseudonana (Marine diatom)) and siliceous scale production.

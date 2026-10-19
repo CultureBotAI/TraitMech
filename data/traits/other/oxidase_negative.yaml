@@ -30,9 +30,16 @@ curation_history:
   llm_assisted: true
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed canonical_examples status alongside NONMECHANISTIC protein exemplar
+    graph for oxidase negative; isolate-level canonical example remains deferred pending
+    explicit strain-level literature.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph oxidase_negative_graph
-    with GENE_OR_PROTEIN node oxidase_negative_protein_component and UniProtKB:P0ABI8
+    with GENE_OR_PROTEIN node oxidase_negative_protein_component and UniProtKB:P98059
     exemplar.'
   llm_assisted: true
 definition_source: http://purl.obolibrary.org/obo/OMP_0006084
@@ -62,12 +69,12 @@ evidence:
 causal_graphs:
 - graph_id: oxidase_negative_graph
   title: Protein component associated with oxidase negative
-  description: Literature-backed association between Cytochrome bo(3) ubiquinol oxidase
-    subunit 1 (UniProtKB:P0ABI8) and oxidase negative.
+  description: Literature-backed association between Cytochrome c oxidase subunit
+    1 (UniProtKB:P98059) and oxidase negative.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P0ABI8 in Escherichia
-    coli (strain K12)) associated with oxidase negative while full multi-step mechanistic
-    curation remains future work.
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P98059 in Rhodobacter
+    capsulatus (Rhodopseudomonas capsulata)) associated with oxidase negative while
+    full multi-step mechanistic curation remains future work.
   nodes:
   - node_id: oxidase_negative_trait
     label: oxidase negative
@@ -78,28 +85,26 @@ causal_graphs:
       <organism> METPO:2000303 'does not show activity of' GO:0004129 'cytochrome-c
       oxidase activity'.
   - node_id: oxidase_negative_protein_component
-    label: Cytochrome bo(3) ubiquinol oxidase subunit 1
+    label: Cytochrome c oxidase subunit 1
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Cytochrome bo(3) ubiquinol oxidase subunit 1)
-      associated with oxidase negative.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Reference pathway protein component (Cytochrome c oxidase subunit
+      1) whose absence or lack of activity characterizes oxidase negative.
+    grounding: InterPro:IPR023616
     gene_symbols:
-    - cyoB
+    - ctaD
     protein_examples:
-    - uniprot_id: UniProtKB:P0ABI8
-      protein_label: Cytochrome bo(3) ubiquinol oxidase subunit 1
-      gene_symbol: cyoB
-      taxon_id: NCBITaxon:83333
-      taxon_label: Escherichia coli (strain K12)
+    - uniprot_id: UniProtKB:P98059
+      protein_label: Cytochrome c oxidase subunit 1
+      gene_symbol: ctaD
+      taxon_id: NCBITaxon:1061
+      taxon_label: Rhodobacter capsulatus (Rhodopseudomonas capsulata)
       entry_status: REVIEWED
-      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 154
+      entry_version: 116
       sequence_version: 1
-      role: Characteristic protein component (cyoB, Cytochrome bo(3) ubiquinol oxidase
-        subunit 1) associated with oxidase negative in Escherichia coli (strain K12).
+      role: Reference pathway protein (ctaD, Cytochrome c oxidase subunit 1) whose
+        absence or lack of activity in Rhodobacter capsulatus (Rhodopseudomonas capsulata)
+        characterizes oxidase negative.
       evidence:
       - reference: DOI:10.5812/chbs-160199
         snippet: Bacteria that are classified as oxidase-negative can be anaerobic,
@@ -107,16 +112,16 @@ causal_graphs:
           absence of cytochrome c oxidase, which is responsible for oxidizing the
           reactant, while these organisms may utilize alternative oxidases for electron
           transfer during respiration
-        notes: Supports Cytochrome bo(3) ubiquinol oxidase subunit 1 in oxidase negative;
-          UniProtKB:P0ABI8 (cyoB, Cytochrome bo(3) ubiquinol oxidase subunit 1) in
-          Escherichia coli (strain K12) provides a verified protein exemplar.
+        notes: Supports Cytochrome c oxidase subunit 1 in oxidase negative; UniProtKB:P98059
+          (ctaD, Cytochrome c oxidase subunit 1) in Rhodobacter capsulatus (Rhodopseudomonas
+          capsulata) provides a verified protein exemplar.
   edges:
   - subject: oxidase_negative_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: oxidase_negative_trait
-    description: Cytochrome bo(3) ubiquinol oxidase subunit 1 (cyoB, UniProtKB:P0ABI8)
-      contributes to oxidase negative (associated with alternative, facultative, respiration).
+    description: Absence or inactivity of Cytochrome c oxidase subunit 1 (ctaD, UniProtKB:P98059)
+      in the reference pathway underlies the oxidase negative phenotype.
     evidence:
     - reference: DOI:10.5812/chbs-160199
       snippet: Bacteria that are classified as oxidase-negative can be anaerobic,
@@ -124,6 +129,6 @@ causal_graphs:
         of cytochrome c oxidase, which is responsible for oxidizing the reactant,
         while these organisms may utilize alternative oxidases for electron transfer
         during respiration
-      notes: Supports the functional association between Cytochrome bo(3) ubiquinol
-        oxidase subunit 1 (UniProtKB:P0ABI8 in Escherichia coli (strain K12)) and
-        oxidase negative.
+      notes: Supports the functional association between Cytochrome c oxidase subunit
+        1 (UniProtKB:P98059 in Rhodobacter capsulatus (Rhodopseudomonas capsulata))
+        and oxidase negative.

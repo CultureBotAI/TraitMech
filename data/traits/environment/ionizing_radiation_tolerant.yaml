@@ -38,7 +38,7 @@ causal_graphs:
   scope_status: NONMECHANISTIC
   scope_notes: This record is a broad environmental or morphological classification
     spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
-    descriptor; contextual protein nodes do not receive token UniProt examples.
+    descriptor; contextual protein nodes include source-backed UniProtKB exemplars.
   nodes:
   - node_id: ionizing_tolerant_trait
     label: ionizing radiation tolerant
@@ -69,42 +69,40 @@ causal_graphs:
     description: Elevated intracellular manganese-to-iron concentration ratio associated
       with antioxidant proteome protection.
   - node_id: ionizing_radiation_tolerant_protein_component
-    label: CRISPR system single-strand-specific deoxyribonuclease Cas10/Csm1
+    label: Protein RecA
     node_type: GENE_OR_PROTEIN
-    description: Protein component (CRISPR system single-strand-specific deoxyribonuclease
-      Cas10/Csm1) associated with ionizing radiation tolerant.
+    description: Protein component (Protein RecA) associated with ionizing radiation
+      tolerant.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - cas10
+    - recA
     protein_examples:
-    - uniprot_id: UniProtKB:Q59066
-      protein_label: CRISPR system single-strand-specific deoxyribonuclease Cas10/Csm1
-      gene_symbol: cas10
-      taxon_id: NCBITaxon:243232
-      taxon_label: Methanocaldococcus jannaschii (strain ATCC 43067 / DSM 2661 / JAL-1
-        / JCM 10045 / NBRC 100440) (Methanococcus jannaschii)
+    - uniprot_id: UniProtKB:Q9F407
+      protein_label: Protein RecA
+      gene_symbol: recA
+      taxon_id: NCBITaxon:1078020
+      taxon_label: Mycolicibacterium thermoresistibile (strain ATCC 19527 / DSM 44167
+        / CIP 105390 / JCM 6362 / NCTC 10409 / 316) (Mycobacterium thermoresistibile)
       entry_status: REVIEWED
-      proteome_id: UP000000805
       retrieved_on: '2026-10-17'
-      entry_version: 115
+      entry_version: 114
       sequence_version: 1
-      role: Characteristic protein component (cas10, CRISPR system single-strand-specific
-        deoxyribonuclease Cas10/Csm1) associated with ionizing radiation tolerant
-        in Methanocaldococcus jannaschii (strain ATCC 43067 / DSM 2661 / JAL-1 / JCM
-        10045 / NBRC 100440) (Methanococcus jannaschii).
+      role: Characteristic protein component (recA, Protein RecA) associated with
+        ionizing radiation tolerant in Mycolicibacterium thermoresistibile (strain
+        ATCC 19527 / DSM 44167 / CIP 105390 / JCM 6362 / NCTC 10409 / 316) (Mycobacterium
+        thermoresistibile).
       evidence:
       - reference: DOI:10.3390/genes14091803
         snippet: Deinococcus radiodurans, a Gram-positive extremophilic bacterium,
           is a remarkable example of such an organism, showcasing an impressive resistance
           to a wide array of stressors, including ionizing radiation, desiccation,
           UV radiation, and oxidizing agents
-        notes: Supports CRISPR system single-strand-specific deoxyribonuclease Cas10/Csm1
-          in ionizing radiation tolerant; UniProtKB:Q59066 (cas10, CRISPR system single-strand-specific
-          deoxyribonuclease Cas10/Csm1) in Methanocaldococcus jannaschii (strain ATCC
-          43067 / DSM 2661 / JAL-1 / JCM 10045 / NBRC 100440) (Methanococcus jannaschii)
-          provides a verified protein exemplar.
+        notes: Supports Protein RecA in ionizing radiation tolerant; UniProtKB:Q9F407
+          (recA, Protein RecA) in Mycolicibacterium thermoresistibile (strain ATCC
+          19527 / DSM 44167 / CIP 105390 / JCM 6362 / NCTC 10409 / 316) (Mycobacterium
+          thermoresistibile) provides a verified protein exemplar.
   edges:
   - subject: gamma_radiation
     predicate: challenges
@@ -174,19 +172,18 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: ionizing_tolerant_trait
-    description: CRISPR system single-strand-specific deoxyribonuclease Cas10/Csm1
-      (cas10, UniProtKB:Q59066) contributes to ionizing radiation tolerant (associated
-      with extremophilic, deinococcus, desiccation).
+    description: Protein RecA (recA, UniProtKB:Q9F407) contributes to ionizing radiation
+      tolerant.
     evidence:
     - reference: DOI:10.3390/genes14091803
       snippet: Deinococcus radiodurans, a Gram-positive extremophilic bacterium, is
         a remarkable example of such an organism, showcasing an impressive resistance
         to a wide array of stressors, including ionizing radiation, desiccation, UV
         radiation, and oxidizing agents
-      notes: Supports the functional association between CRISPR system single-strand-specific
-        deoxyribonuclease Cas10/Csm1 (UniProtKB:Q59066 in Methanocaldococcus jannaschii
-        (strain ATCC 43067 / DSM 2661 / JAL-1 / JCM 10045 / NBRC 100440) (Methanococcus
-        jannaschii)) and ionizing radiation tolerant.
+      notes: Supports the functional association between Protein RecA (UniProtKB:Q9F407
+        in Mycolicibacterium thermoresistibile (strain ATCC 19527 / DSM 44167 / CIP
+        105390 / JCM 6362 / NCTC 10409 / 316) (Mycobacterium thermoresistibile)) and
+        ionizing radiation tolerant.
 curation_history:
 - timestamp: '2026-05-28T00:00:00Z'
   curator: claude
@@ -233,5 +230,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    ionizing_radiation_tolerant_protein_component with UniProtKB:Q59066 (cas10) exemplar.'
+    ionizing_radiation_tolerant_protein_component with UniProtKB:Q9F407 (recA) exemplar.'
   llm_assisted: true

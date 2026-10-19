@@ -101,20 +101,27 @@ curation_history:
   llm_assisted: true
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed canonical_examples status alongside NONMECHANISTIC protein exemplar
+    graph for contact-dependent outer membrane exchange; isolate-level canonical example
+    remains deferred pending explicit strain-level literature.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph contact_dependent_outer_membrane_exchange_graph
     with GENE_OR_PROTEIN node contact_dependent_outer_membrane_exchange_protein_component
-    and UniProtKB:P46024 exemplar.'
+    and UniProtKB:Q1D3H0 exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: contact_dependent_outer_membrane_exchange_graph
   title: Protein component associated with contact-dependent outer membrane exchange
-  description: Literature-backed association between Outer membrane protein assembly
-    factor BamA (UniProtKB:P46024) and contact-dependent outer membrane exchange.
+  description: Literature-backed association between Bactofilin BacN (UniProtKB:Q1D3H0)
+    and contact-dependent outer membrane exchange.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P46024 in Haemophilus
-    influenzae) associated with contact-dependent outer membrane exchange while full
-    multi-step mechanistic curation remains future work.
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q1D3H0 in Myxococcus
+    xanthus (strain DK1622)) associated with contact-dependent outer membrane exchange
+    while full multi-step mechanistic curation remains future work.
   nodes:
   - node_id: contact_dependent_outer_membrane_exchange_trait
     label: contact-dependent outer membrane exchange
@@ -123,48 +130,44 @@ causal_graphs:
     description: A physiological phenotype in which microbial cells exchange outer-membrane
       lipids and proteins with other cells through direct intercellular contact.
   - node_id: contact_dependent_outer_membrane_exchange_protein_component
-    label: Outer membrane protein assembly factor BamA
+    label: Bactofilin BacN
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Outer membrane protein assembly factor BamA) associated
-      with contact-dependent outer membrane exchange.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Bactofilin BacN) associated with contact-dependent
+      outer membrane exchange.
+    grounding: InterPro:IPR007607
     gene_symbols:
-    - bamA
+    - bacN
     protein_examples:
-    - uniprot_id: UniProtKB:P46024
-      protein_label: Outer membrane protein assembly factor BamA
-      gene_symbol: bamA
-      taxon_id: NCBITaxon:727
-      taxon_label: Haemophilus influenzae
+    - uniprot_id: UniProtKB:Q1D3H0
+      protein_label: Bactofilin BacN
+      gene_symbol: bacN
+      taxon_id: NCBITaxon:246197
+      taxon_label: Myxococcus xanthus (strain DK1622)
       entry_status: REVIEWED
+      proteome_id: UP000002402
       retrieved_on: '2026-10-17'
-      entry_version: 107
+      entry_version: 94
       sequence_version: 1
-      role: Characteristic protein component (bamA, Outer membrane protein assembly
-        factor BamA) associated with contact-dependent outer membrane exchange in
-        Haemophilus influenzae.
+      role: Characteristic protein component (bacN, Bactofilin BacN) associated with
+        contact-dependent outer membrane exchange in Myxococcus xanthus (strain DK1622).
       evidence:
       - reference: DOI:10.1128/jb.00850-13
         snippet: Thus, genetic and environmental conditions that promote OMT production
           are incongruent with OM exchange.
-        notes: Supports Outer membrane protein assembly factor BamA in contact-dependent
-          outer membrane exchange; UniProtKB:P46024 (bamA, Outer membrane protein
-          assembly factor BamA) in Haemophilus influenzae provides a verified protein
-          exemplar.
+        notes: Supports Bactofilin BacN in contact-dependent outer membrane exchange;
+          UniProtKB:Q1D3H0 (bacN, Bactofilin BacN) in Myxococcus xanthus (strain DK1622)
+          provides a verified protein exemplar.
   edges:
   - subject: contact_dependent_outer_membrane_exchange_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: contact_dependent_outer_membrane_exchange_trait
-    description: Outer membrane protein assembly factor BamA (bamA, UniProtKB:P46024)
-      contributes to contact-dependent outer membrane exchange (associated with environmental,
-      incongruent, conditions).
+    description: Bactofilin BacN (bacN, UniProtKB:Q1D3H0) contributes to contact-dependent
+      outer membrane exchange.
     evidence:
     - reference: DOI:10.1128/jb.00850-13
       snippet: Thus, genetic and environmental conditions that promote OMT production
         are incongruent with OM exchange.
-      notes: Supports the functional association between Outer membrane protein assembly
-        factor BamA (UniProtKB:P46024 in Haemophilus influenzae) and contact-dependent
-        outer membrane exchange.
+      notes: Supports the functional association between Bactofilin BacN (UniProtKB:Q1D3H0
+        in Myxococcus xanthus (strain DK1622)) and contact-dependent outer membrane
+        exchange.

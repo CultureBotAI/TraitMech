@@ -68,28 +68,25 @@ causal_graphs:
       for this aggregate use.
     description: F-type ATP synthase/ATPase functioning as a proton pump.
     protein_examples:
-    - uniprot_id: UniProtKB:Q49Z52
-      protein_label: ATP synthase subunit alpha
-      gene_symbol: atpA
-      taxon_id: NCBITaxon:342451
-      taxon_label: Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
-        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+    - uniprot_id: UniProtKB:P0ABB4
+      protein_label: ATP synthase subunit beta
+      gene_symbol: atpD
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
-      proteome_id: UP000006371
+      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 137
-      sequence_version: 1
-      role: Exemplar protein (atpA, ATP synthase subunit alpha) representing F0F1-ATPase
-        in Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC 15305 /
-        DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) for pH optimum mid1.
+      entry_version: 156
+      sequence_version: 2
+      role: Exemplar protein (atpD, ATP synthase subunit beta) representing F0F1-ATPase
+        in Escherichia coli (strain K12) for pH optimum mid1.
       evidence:
       - reference: DOI:10.1038/nrmicro2549
         snippet: up-regulation of the hydrolytic activity of F1Fo-ATPase promotes
           ATP-dependent H+ extrusion under acidic conditions
-        notes: Supports F0F1-ATPase in pH optimum mid1; UniProtKB:Q49Z52 (atpA, ATP
-          synthase subunit alpha) in Staphylococcus saprophyticus subsp. saprophyticus
-          (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) provides
-          a verified protein exemplar.
+        notes: Supports F0F1-ATPase in pH optimum mid1; UniProtKB:P0ABB4 (atpD, ATP
+          synthase subunit beta) in Escherichia coli (strain K12) provides a verified
+          protein exemplar.
   - node_id: proton
     label: proton (H+)
     node_type: CHEMICAL
@@ -297,6 +294,6 @@ curation_history:
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
-  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q49Z52 (atpA)
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P0ABB4 (atpD)
     protein example to node f0f1_atpase.'
   llm_assisted: true

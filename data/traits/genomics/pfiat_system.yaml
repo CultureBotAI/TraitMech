@@ -90,35 +90,32 @@ causal_graphs:
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
   - node_id: pfiat_system_protein_component
-    label: Putative prophage capsid protein XkdG
+    label: Endoribonuclease ToxN
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Putative prophage capsid protein XkdG) associated
-      with PfiAT system.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Endoribonuclease ToxN) associated with PfiAT system.
+    grounding: InterPro:IPR025911
     gene_symbols:
-    - xkdG
+    - toxN
     protein_examples:
-    - uniprot_id: UniProtKB:P54327
-      protein_label: Putative prophage capsid protein XkdG
-      gene_symbol: xkdG
-      taxon_id: NCBITaxon:224308
-      taxon_label: Bacillus subtilis (strain 168)
+    - uniprot_id: UniProtKB:B8X8Z0
+      protein_label: Endoribonuclease ToxN
+      gene_symbol: toxN
+      taxon_id: NCBITaxon:29471
+      taxon_label: Pectobacterium atrosepticum (Erwinia carotovora subsp. atroseptica)
       entry_status: REVIEWED
-      proteome_id: UP000001570
       retrieved_on: '2026-10-17'
-      entry_version: 111
+      entry_version: 47
       sequence_version: 1
-      role: Characteristic protein component (xkdG, Putative prophage capsid protein
-        XkdG) associated with PfiAT system in Bacillus subtilis (strain 168).
+      role: Characteristic protein component (toxN, Endoribonuclease ToxN) associated
+        with PfiAT system in Pectobacterium atrosepticum (Erwinia carotovora subsp.
+        atroseptica).
       evidence:
       - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
         snippet: PfiAT | 10\.1111/1751-7915\.13570 | Prophage encoding toxin/antitoxin
           system PfiT/PfiA inhibits Pf4 production in Pseudomonas aeruginosa
-        notes: Supports Putative prophage capsid protein XkdG in PfiAT system; UniProtKB:P54327
-          (xkdG, Putative prophage capsid protein XkdG) in Bacillus subtilis (strain
-          168) provides a verified protein exemplar.
+        notes: Supports Endoribonuclease ToxN in PfiAT system; UniProtKB:B8X8Z0 (toxN,
+          Endoribonuclease ToxN) in Pectobacterium atrosepticum (Erwinia carotovora
+          subsp. atroseptica) provides a verified protein exemplar.
   edges:
   - subject: pfiat_locus
     predicate: contributes to
@@ -187,15 +184,20 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: pfiat_system_trait
-    description: Putative prophage capsid protein XkdG (xkdG, UniProtKB:P54327) contributes
-      to PfiAT system (associated with nmicrobiol, prophage, against).
+    description: Endoribonuclease ToxN (toxN, UniProtKB:B8X8Z0) contributes to PfiAT
+      system.
     evidence:
-    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
-      snippet: '| Phrann_gp29_gp30 | 10\.1038/nmicrobiol\.2016\.251 | Prophage-mediated
-        defence against viral attack and viral counter-defence |'
-      notes: Supports the functional association between Putative prophage capsid
-        protein XkdG (UniProtKB:P54327 in Bacillus subtilis (strain 168)) and PfiAT
-        system.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| RM_Type_IIG__Type_IIG_1 | | RM_Type_IIG | Custom | 300 | | RM_Type_IIG__Type_IIG_2
+        | | RM_Type_IIG | Custom | 300 | | RM_Type_IIG__Type_IIG_3 | | RM_Type_IIG
+        | Custom | 300 | | RM_Type_IIG__Type_IIG_4 | | RM_Type_IIG | Custom | 300
+        | | RM_Type_IIG__Type_IIG_5 | | RM_Type_IIG | Custom | 300 | | RM_Type_IIG__Type_IIG_FAM_0.einsi_trimmed
+        | | RM_Type_IIG | Custom | 300 | | RM_Type_IIG__Type_IIG_FAM_1.einsi_trimmed
+        | | RM_Type_IIG | Custom | 300 | | RM_Type_IIG__Type_IIG_FAM_2.einsi_trimmed
+        | | RM_Type_IIG | Custom | 300 |'
+      notes: Supports the functional association between Endoribonuclease ToxN (UniProtKB:B8X8Z0
+        in Pectobacterium atrosepticum (Erwinia carotovora subsp. atroseptica)) and
+        PfiAT system.
 discussions:
 - discussion_id: pfiat-mechanism-gap
   prompt: Resolve natural PfiAT host breadth, the PfiT cellular target in Pseudomonas,
@@ -240,5 +242,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    pfiat_system_protein_component with UniProtKB:P54327 (xkdG) exemplar.'
+    pfiat_system_protein_component with UniProtKB:B8X8Z0 (toxN) exemplar.'
   llm_assisted: true

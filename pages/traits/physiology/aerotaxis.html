@@ -69,9 +69,9 @@
 
     <div class="card causal-graph-card">
       <h2>Protein component associated with aerotaxis</h2>
-      <p class="meta">Literature-backed association between Oxygen-dependent choline dehydrogenase (UniProtKB:P17444) and aerotaxis.</p>
+      <p class="meta">Literature-backed association between Aerotaxis receptor (UniProtKB:P50466) and aerotaxis.</p>
 
-      <p class="graph-scope"><code>NONMECHANISTIC</code> · Captures a source-backed protein exemplar (UniProtKB:P17444 in Escherichia coli (strain K12)) associated with aerotaxis while full multi-step mechanistic curation remains future work.</p>
+      <p class="graph-scope"><code>NONMECHANISTIC</code> · Captures a source-backed protein exemplar (UniProtKB:P50466 in Escherichia coli (strain K12)) associated with aerotaxis while full multi-step mechanistic curation remains future work.</p>
 
 
       <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
@@ -90,17 +90,17 @@
         <ul>
 
           <li id="pathograph-1-edge-1">
-            <strong>Oxygen-dependent choline dehydrogenase</strong>
+            <strong>Aerotaxis receptor</strong>
             <span class="edge-predicate">contributes to</span>
             <strong>aerotaxis</strong>
             <code>RO:0002326</code>
-            <p>Oxygen-dependent choline dehydrogenase (betA, UniProtKB:P17444) contributes to aerotaxis (associated with concentration, aerotaxis, attracted).</p>
+            <p>Aerotaxis receptor (aer, UniProtKB:P50466) contributes to aerotaxis.</p>
             <ul>
 
               <li>
                 <a href="https://doi.org/10.1128/jb.178.17.5199-5204.1996" rel="nofollow noreferrer"><code>DOI:10.1128/jb.178.17.5199-5204.1996</code></a>
                 <span class="evidence-snippet">As a result of aerotaxis, the bacteria were attracted to a specific low concentration of oxygen (3 to 5 microM).</span>
-                <span class="meta">Supports the functional association between Oxygen-dependent choline dehydrogenase (UniProtKB:P17444 in Escherichia coli (strain K12)) and aerotaxis.</span>
+                <span class="meta">Supports the functional association between Aerotaxis receptor (UniProtKB:P50466 in Escherichia coli (strain K12)) and aerotaxis.</span>
               </li>
 
             </ul>
@@ -121,11 +121,11 @@
             <tbody>
 
               <tr>
-                <td>Oxygen-dependent choline dehydrogenase</td>
+                <td>Aerotaxis receptor</td>
                 <td>
 
-                  <a href="https://www.uniprot.org/uniprotkb/P17444/entry" rel="nofollow noreferrer"><code>UniProtKB:P17444</code></a>
-                  <br>Oxygen-dependent choline dehydrogenase <span class="meta">(betA)</span>
+                  <a href="https://www.uniprot.org/uniprotkb/P50466/entry" rel="nofollow noreferrer"><code>UniProtKB:P50466</code></a>
+                  <br>Aerotaxis receptor <span class="meta">(aer)</span>
                 </td>
                 <td>
 
@@ -134,16 +134,16 @@
                 </td>
                 <td>
                   <code>REVIEWED</code><br>
-                  <span class="meta">retrieved 2026-10-17 · entry v188 · sequence v1</span>
+                  <span class="meta">retrieved 2026-10-17 · entry v185 · sequence v1</span>
                 </td>
                 <td>
-                  <p>Characteristic protein component (betA, Oxygen-dependent choline dehydrogenase) associated with aerotaxis in Escherichia coli (strain K12).</p>
+                  <p>Characteristic protein component (aer, Aerotaxis receptor) associated with aerotaxis in Escherichia coli (strain K12).</p>
                   <ul>
 
                     <li>
                       <a href="https://doi.org/10.1128/jb.178.17.5199-5204.1996" rel="nofollow noreferrer"><code>DOI:10.1128/jb.178.17.5199-5204.1996</code></a>
                       <span class="evidence-snippet">As a result of aerotaxis, the bacteria were attracted to a specific low concentration of oxygen (3 to 5 microM).</span>
-                      <span class="meta">Supports Oxygen-dependent choline dehydrogenase in aerotaxis; UniProtKB:P17444 (betA, Oxygen-dependent choline dehydrogenase) in Escherichia coli (strain K12) provides a verified protein exemplar.</span>
+                      <span class="meta">Supports Aerotaxis receptor in aerotaxis; UniProtKB:P50466 (aer, Aerotaxis receptor) in Escherichia coli (strain K12) provides a verified protein exemplar.</span>
                     </li>
 
                   </ul>
@@ -318,7 +318,7 @@
         <li>
           <time>2026-10-17T09:00:00Z</time> ·
           <strong>CURATE_PROTEIN_TAXON_EXAMPLE</strong> · codex
-          <p class="changes">Curated verified UniProtKB protein_examples: added causal graph aerotaxis_graph with GENE_OR_PROTEIN node aerotaxis_protein_component and UniProtKB:P17444 exemplar.</p>
+          <p class="changes">Curated verified UniProtKB protein_examples: added causal graph aerotaxis_graph with GENE_OR_PROTEIN node aerotaxis_protein_component and UniProtKB:P50466 exemplar.</p>
         </li>
 
       </ol>
@@ -697,7 +697,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Literature-backed association between Oxygen-dependent choline dehydrogenase (UniProtKB:P17444) and aerotaxis.", "edges": [{"description": "Oxygen-dependent choline dehydrogenase (betA, UniProtKB:P17444) contributes to aerotaxis (associated with concentration, aerotaxis, attracted).", "evidence": [{"notes": "Supports the functional association between Oxygen-dependent choline dehydrogenase (UniProtKB:P17444 in Escherichia coli (strain K12)) and aerotaxis.", "reference": "DOI:10.1128/jb.178.17.5199-5204.1996", "snippet": "As a result of aerotaxis, the bacteria were attracted to a specific low concentration of oxygen (3 to 5 microM)."}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "aerotaxis_protein_component", "target": "aerotaxis_trait"}], "evidence_rows": [{"description": "Oxygen-dependent choline dehydrogenase (betA, UniProtKB:P17444) contributes to aerotaxis (associated with concentration, aerotaxis, attracted).", "edge_id": "edge-1", "evidence": [{"notes": "Supports the functional association between Oxygen-dependent choline dehydrogenase (UniProtKB:P17444 in Escherichia coli (strain K12)) and aerotaxis.", "reference": "DOI:10.1128/jb.178.17.5199-5204.1996", "snippet": "As a result of aerotaxis, the bacteria were attracted to a specific low concentration of oxygen (3 to 5 microM)."}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Oxygen-dependent choline dehydrogenase", "target": "aerotaxis"}], "graph_id": "aerotaxis_graph", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Protein component (Oxygen-dependent choline dehydrogenase) associated with aerotaxis.", "grounding": null, "id": "aerotaxis_protein_component", "is_orphan": false, "label": "Oxygen-dependent choline dehydrogenase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 188, "evidence": [{"notes": "Supports Oxygen-dependent choline dehydrogenase in aerotaxis; UniProtKB:P17444 (betA, Oxygen-dependent choline dehydrogenase) in Escherichia coli (strain K12) provides a verified protein exemplar.", "reference": "DOI:10.1128/jb.178.17.5199-5204.1996", "snippet": "As a result of aerotaxis, the bacteria were attracted to a specific low concentration of oxygen (3 to 5 microM)."}], "gene_symbol": "betA", "protein_label": "Oxygen-dependent choline dehydrogenase", "proteome_id": "UP000000625", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (betA, Oxygen-dependent choline dehydrogenase) associated with aerotaxis in Escherichia coli (strain K12).", "sequence_version": 1, "taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli (strain K12)", "uniprot_id": "UniProtKB:P17444"}], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "A motile phenotype in which active locomotion is directionally biased along an oxygen concentration gradient toward preferred oxygen conditions.", "grounding": "traitmech:000589", "id": "aerotaxis_trait", "is_orphan": false, "label": "aerotaxis", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 188, "evidence": [{"notes": "Supports Oxygen-dependent choline dehydrogenase in aerotaxis; UniProtKB:P17444 (betA, Oxygen-dependent choline dehydrogenase) in Escherichia coli (strain K12) provides a verified protein exemplar.", "reference": "DOI:10.1128/jb.178.17.5199-5204.1996", "snippet": "As a result of aerotaxis, the bacteria were attracted to a specific low concentration of oxygen (3 to 5 microM)."}], "gene_symbol": "betA", "node_id": "aerotaxis_protein_component", "node_label": "Oxygen-dependent choline dehydrogenase", "protein_label": "Oxygen-dependent choline dehydrogenase", "proteome_id": "UP000000625", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (betA, Oxygen-dependent choline dehydrogenase) associated with aerotaxis in Escherichia coli (strain K12).", "sequence_version": 1, "taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli (strain K12)", "uniprot_id": "UniProtKB:P17444"}], "scope_notes": "Captures a source-backed protein exemplar (UniProtKB:P17444 in Escherichia coli (strain K12)) associated with aerotaxis while full multi-step mechanistic curation remains future work.", "scope_status": "NONMECHANISTIC", "title": "Protein component associated with aerotaxis"}];
+  var graphs = [{"description": "Literature-backed association between Aerotaxis receptor (UniProtKB:P50466) and aerotaxis.", "edges": [{"description": "Aerotaxis receptor (aer, UniProtKB:P50466) contributes to aerotaxis.", "evidence": [{"notes": "Supports the functional association between Aerotaxis receptor (UniProtKB:P50466 in Escherichia coli (strain K12)) and aerotaxis.", "reference": "DOI:10.1128/jb.178.17.5199-5204.1996", "snippet": "As a result of aerotaxis, the bacteria were attracted to a specific low concentration of oxygen (3 to 5 microM)."}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "aerotaxis_protein_component", "target": "aerotaxis_trait"}], "evidence_rows": [{"description": "Aerotaxis receptor (aer, UniProtKB:P50466) contributes to aerotaxis.", "edge_id": "edge-1", "evidence": [{"notes": "Supports the functional association between Aerotaxis receptor (UniProtKB:P50466 in Escherichia coli (strain K12)) and aerotaxis.", "reference": "DOI:10.1128/jb.178.17.5199-5204.1996", "snippet": "As a result of aerotaxis, the bacteria were attracted to a specific low concentration of oxygen (3 to 5 microM)."}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Aerotaxis receptor", "target": "aerotaxis"}], "graph_id": "aerotaxis_graph", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Protein component (Aerotaxis receptor) associated with aerotaxis.", "grounding": "InterPro:IPR004090", "id": "aerotaxis_protein_component", "is_orphan": false, "label": "Aerotaxis receptor", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 185, "evidence": [{"notes": "Supports Aerotaxis receptor in aerotaxis; UniProtKB:P50466 (aer, Aerotaxis receptor) in Escherichia coli (strain K12) provides a verified protein exemplar.", "reference": "DOI:10.1128/jb.178.17.5199-5204.1996", "snippet": "As a result of aerotaxis, the bacteria were attracted to a specific low concentration of oxygen (3 to 5 microM)."}], "gene_symbol": "aer", "protein_label": "Aerotaxis receptor", "proteome_id": "UP000000625", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (aer, Aerotaxis receptor) associated with aerotaxis in Escherichia coli (strain K12).", "sequence_version": 1, "taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli (strain K12)", "uniprot_id": "UniProtKB:P50466"}], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "A motile phenotype in which active locomotion is directionally biased along an oxygen concentration gradient toward preferred oxygen conditions.", "grounding": "traitmech:000589", "id": "aerotaxis_trait", "is_orphan": false, "label": "aerotaxis", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 185, "evidence": [{"notes": "Supports Aerotaxis receptor in aerotaxis; UniProtKB:P50466 (aer, Aerotaxis receptor) in Escherichia coli (strain K12) provides a verified protein exemplar.", "reference": "DOI:10.1128/jb.178.17.5199-5204.1996", "snippet": "As a result of aerotaxis, the bacteria were attracted to a specific low concentration of oxygen (3 to 5 microM)."}], "gene_symbol": "aer", "node_id": "aerotaxis_protein_component", "node_label": "Aerotaxis receptor", "protein_label": "Aerotaxis receptor", "proteome_id": "UP000000625", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (aer, Aerotaxis receptor) associated with aerotaxis in Escherichia coli (strain K12).", "sequence_version": 1, "taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli (strain K12)", "uniprot_id": "UniProtKB:P50466"}], "scope_notes": "Captures a source-backed protein exemplar (UniProtKB:P50466 in Escherichia coli (strain K12)) associated with aerotaxis while full multi-step mechanistic curation remains future work.", "scope_status": "NONMECHANISTIC", "title": "Protein component associated with aerotaxis"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });

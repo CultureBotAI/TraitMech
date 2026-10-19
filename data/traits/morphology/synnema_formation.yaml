@@ -93,18 +93,18 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph synnema_formation_graph
-    with GENE_OR_PROTEIN node synnema_formation_protein_component and UniProtKB:Q31IK3
+    with GENE_OR_PROTEIN node synnema_formation_protein_component and UniProtKB:P08640
     exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: synnema_formation_graph
   title: Protein component associated with synnema formation
-  description: Literature-backed association between Ribulose bisphosphate carboxylase
-    (UniProtKB:Q31IK3) and synnema formation.
+  description: Literature-backed association between Flocculation protein FLO11 (UniProtKB:P08640)
+    and synnema formation.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q31IK3 in Hydrogenovibrio
-    crunogenus (strain DSM 25203 / XCL-2) (Thiomicrospira crunogena)) associated with
-    synnema formation while full multi-step mechanistic curation remains future work.
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P08640 in Saccharomyces
+    cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)) associated with synnema
+    formation while full multi-step mechanistic curation remains future work.
   nodes:
   - node_id: synnema_formation_trait
     label: synnema formation
@@ -114,48 +114,46 @@ causal_graphs:
       erect, stalk-like asexual reproductive structure, with conidiogenous elements
       borne from the stalk in its fertile form.
   - node_id: synnema_formation_protein_component
-    label: Ribulose bisphosphate carboxylase
+    label: Flocculation protein FLO11
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Ribulose bisphosphate carboxylase) associated
-      with synnema formation.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Flocculation protein FLO11) associated with synnema
+      formation.
+    grounding: InterPro:IPR018789
     gene_symbols:
-    - cbbM
+    - FLO11
     protein_examples:
-    - uniprot_id: UniProtKB:Q31IK3
-      protein_label: Ribulose bisphosphate carboxylase
-      gene_symbol: cbbM
-      taxon_id: NCBITaxon:317025
-      taxon_label: Hydrogenovibrio crunogenus (strain DSM 25203 / XCL-2) (Thiomicrospira
-        crunogena)
+    - uniprot_id: UniProtKB:P08640
+      protein_label: Flocculation protein FLO11
+      gene_symbol: FLO11
+      taxon_id: NCBITaxon:559292
+      taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's
+        yeast)
       entry_status: REVIEWED
+      proteome_id: UP000002311
       retrieved_on: '2026-10-17'
-      entry_version: 111
-      sequence_version: 1
-      role: Characteristic protein component (cbbM, Ribulose bisphosphate carboxylase)
-        associated with synnema formation in Hydrogenovibrio crunogenus (strain DSM
-        25203 / XCL-2) (Thiomicrospira crunogena).
+      entry_version: 187
+      sequence_version: 2
+      role: Characteristic protein component (FLO11, Flocculation protein FLO11) associated
+        with synnema formation in Saccharomyces cerevisiae (strain ATCC 204508 / S288c)
+        (Baker's yeast).
       evidence:
       - reference: DOI:10.3390/ijms21186660
         snippet: deletion of the brlA gene blocked conidiation but not the formation
           of synnemata formed by aggregation of hyphal mycelia.
-        notes: Supports Ribulose bisphosphate carboxylase in synnema formation; UniProtKB:Q31IK3
-          (cbbM, Ribulose bisphosphate carboxylase) in Hydrogenovibrio crunogenus
-          (strain DSM 25203 / XCL-2) (Thiomicrospira crunogena) provides a verified
-          protein exemplar.
+        notes: Supports Flocculation protein FLO11 in synnema formation; UniProtKB:P08640
+          (FLO11, Flocculation protein FLO11) in Saccharomyces cerevisiae (strain
+          ATCC 204508 / S288c) (Baker's yeast) provides a verified protein exemplar.
   edges:
   - subject: synnema_formation_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: synnema_formation_trait
-    description: Ribulose bisphosphate carboxylase (cbbM, UniProtKB:Q31IK3) contributes
-      to synnema formation (associated with aggregation, conidiation, synnemata).
+    description: Flocculation protein FLO11 (FLO11, UniProtKB:P08640) contributes
+      to synnema formation.
     evidence:
     - reference: DOI:10.3390/ijms21186660
       snippet: deletion of the brlA gene blocked conidiation but not the formation
         of synnemata formed by aggregation of hyphal mycelia.
-      notes: Supports the functional association between Ribulose bisphosphate carboxylase
-        (UniProtKB:Q31IK3 in Hydrogenovibrio crunogenus (strain DSM 25203 / XCL-2)
-        (Thiomicrospira crunogena)) and synnema formation.
+      notes: Supports the functional association between Flocculation protein FLO11
+        (UniProtKB:P08640 in Saccharomyces cerevisiae (strain ATCC 204508 / S288c)
+        (Baker's yeast)) and synnema formation.

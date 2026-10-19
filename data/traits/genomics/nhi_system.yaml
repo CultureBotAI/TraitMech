@@ -101,33 +101,34 @@ causal_graphs:
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
   - node_id: nhi_system_protein_component
-    label: Thoeris anti-defense 1
+    label: Septu protein PtuB
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Thoeris anti-defense 1) associated with Nhi system.
+    description: Protein component (Septu protein PtuB) associated with Nhi system.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - tad1
+    - ptuB
     protein_examples:
-    - uniprot_id: UniProtKB:P0DW61
-      protein_label: Thoeris anti-defense 1
-      gene_symbol: tad1
-      taxon_id: NCBITaxon:1392497
-      taxon_label: Clostridioides mangenotii (strain LM2)
+    - uniprot_id: UniProtKB:P0DW42
+      protein_label: Septu protein PtuB
+      gene_symbol: ptuB
+      taxon_id: NCBITaxon:1428
+      taxon_label: Bacillus thuringiensis
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      entry_version: 11
+      entry_version: 12
       sequence_version: 1
-      role: Characteristic protein component (tad1, Thoeris anti-defense 1) associated
-        with Nhi system in Clostridioides mangenotii (strain LM2).
+      role: Characteristic protein component (ptuB, Septu protein PtuB) associated
+        with Nhi system in Bacillus thuringiensis.
       evidence:
-      - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
-        snippet: PD-Lambda-2 | 10\.1101/2022\.05\.12\.491691 | Mapping the landscape
-          of anti-phage defense mechanisms in the E\. coli pangenome
-        notes: Supports Thoeris anti-defense 1 in Nhi system; UniProtKB:P0DW61 (tad1,
-          Thoeris anti-defense 1) in Clostridioides mangenotii (strain LM2) provides
-          a verified protein exemplar.
+      - reference: DOI:10.1016/j.chom.2022.03.001
+        snippet: Here, we describe a unique mode of nucleic acid immunity mediated
+          by a single enzyme with nuclease and helicase activities, herein referred
+          to as Nhi (nuclease-helicase immunity)
+        notes: Supports Septu protein PtuB in Nhi system; UniProtKB:P0DW42 (ptuB,
+          Septu protein PtuB) in Bacillus thuringiensis provides a verified protein
+          exemplar.
   edges:
   - subject: nhi_locus
     predicate: contributes to
@@ -214,14 +215,13 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: nhi_system_trait
-    description: Thoeris anti-defense 1 (tad1, UniProtKB:P0DW61) contributes to Nhi
-      system (associated with landscape, pangenome, defense).
+    description: Septu protein PtuB (ptuB, UniProtKB:P0DW42) contributes to Nhi system.
     evidence:
-    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
-      snippet: PD-Lambda-2 | 10\.1101/2022\.05\.12\.491691 | Mapping the landscape
-        of anti-phage defense mechanisms in the E\. coli pangenome
-      notes: Supports the functional association between Thoeris anti-defense 1 (UniProtKB:P0DW61
-        in Clostridioides mangenotii (strain LM2)) and Nhi system.
+    - reference: DOI:10.1016/j.chom.2022.03.001
+      snippet: Nhi homologs are distributed in diverse bacteria and exhibit functional
+        conservation
+      notes: Supports the functional association between Septu protein PtuB (UniProtKB:P0DW42
+        in Bacillus thuringiensis) and Nhi system.
 discussions:
 - discussion_id: nhi-trigger-and-substrate-gap
   prompt: Resolve the Nhi phage trigger, exact replication-intermediate substrate,
@@ -252,5 +252,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    nhi_system_protein_component with UniProtKB:P0DW61 (tad1) exemplar.'
+    nhi_system_protein_component with UniProtKB:P0DW42 (ptuB) exemplar.'
   llm_assisted: true

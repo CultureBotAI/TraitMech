@@ -90,6 +90,13 @@ curation_history:
   llm_assisted: true
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed canonical_examples status alongside NONMECHANISTIC protein exemplar
+    graph for nematode egg-hatching stimulatory activity; isolate-level canonical
+    example remains deferred pending explicit strain-level literature.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph nematode_egg_hatching_stimulatory_activity_graph
     with GENE_OR_PROTEIN node nematode_egg_hatching_stimulatory_activity_protein_component
@@ -147,7 +154,7 @@ causal_graphs:
     predicate_id: RO:0002326
     object: nematode_egg_hatching_stimulatory_activity_trait
     description: Chitinase A (chiA, UniProtKB:P07254) contributes to nematode egg-hatching
-      stimulatory activity (associated with variability, noticeable, incubated).
+      stimulatory activity.
     evidence:
     - reference: DOI:10.1186/s13071-015-0986-z
       snippet: When incubated with Gram-positive bacteria, only T. muris eggs showed

@@ -92,25 +92,27 @@ causal_graphs:
     grounding_notes: Opp, DtpT, and Dpp are distinct transporter architectures and
       the node intentionally combines them as alternative uptake systems.
     protein_examples:
-    - uniprot_id: UniProtKB:P06971
-      protein_label: Ferrichrome outer membrane transporter/phage receptor
-      gene_symbol: fhuA
-      taxon_id: NCBITaxon:83333
-      taxon_label: Escherichia coli (strain K12)
+    - uniprot_id: UniProtKB:P71370
+      protein_label: Periplasmic oligopeptide-binding protein OppA
+      gene_symbol: oppA
+      taxon_id: NCBITaxon:71421
+      taxon_label: Haemophilus influenzae (strain ATCC 51907 / DSM 11121 / KW20 /
+        Rd)
       entry_status: REVIEWED
-      proteome_id: UP000000625
+      proteome_id: UP000000579
       retrieved_on: '2026-10-17'
-      entry_version: 229
-      sequence_version: 2
-      role: Exemplar protein (fhuA, Ferrichrome outer membrane transporter/phage receptor)
-        representing peptide transport systems (Opp/DtpT/Dpp) in Escherichia coli
-        (strain K12) for proteolysis.
+      entry_version: 124
+      sequence_version: 1
+      role: Exemplar protein (oppA, Periplasmic oligopeptide-binding protein OppA)
+        representing peptide transport systems (Opp/DtpT/Dpp) in Haemophilus influenzae
+        (strain ATCC 51907 / DSM 11121 / KW20 / Rd) for proteolysis.
       evidence:
       - reference: DOI:10.1128/jb.158.2.411-418.1984
         snippet: a fivefold increase in serine protease activity was observed
-        notes: Supports peptide transport systems (Opp/DtpT/Dpp) in proteolysis; UniProtKB:P06971
-          (fhuA, Ferrichrome outer membrane transporter/phage receptor) in Escherichia
-          coli (strain K12) provides a verified protein exemplar.
+        notes: Supports peptide transport systems (Opp/DtpT/Dpp) in proteolysis; UniProtKB:P71370
+          (oppA, Periplasmic oligopeptide-binding protein OppA) in Haemophilus influenzae
+          (strain ATCC 51907 / DSM 11121 / KW20 / Rd) provides a verified protein
+          exemplar.
   - node_id: intracellular_peptidases
     label: intracellular peptidases
     node_type: GENE_OR_PROTEIN
@@ -120,23 +122,23 @@ causal_graphs:
     grounding_notes: The node denotes an organism-dependent set of intracellular exo-
       and endopeptidases rather than one protein family or exact activity.
     protein_examples:
-    - uniprot_id: UniProtKB:P04957
-      protein_label: Beta-glucanase
-      gene_symbol: bglS
-      taxon_id: NCBITaxon:224308
-      taxon_label: Bacillus subtilis (strain 168)
+    - uniprot_id: UniProtKB:P04825
+      protein_label: Aminopeptidase N
+      gene_symbol: pepN
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
-      proteome_id: UP000001570
+      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 161
+      entry_version: 217
       sequence_version: 2
-      role: Exemplar protein (bglS, Beta-glucanase) representing intracellular peptidases
-        in Bacillus subtilis (strain 168) for proteolysis.
+      role: Exemplar protein (pepN, Aminopeptidase N) representing intracellular peptidases
+        in Escherichia coli (strain K12) for proteolysis.
       evidence:
       - reference: DOI:10.1128/jb.158.2.411-418.1984
         snippet: a fivefold increase in serine protease activity was observed
-        notes: Supports intracellular peptidases in proteolysis; UniProtKB:P04957
-          (bglS, Beta-glucanase) in Bacillus subtilis (strain 168) provides a verified
+        notes: Supports intracellular peptidases in proteolysis; UniProtKB:P04825
+          (pepN, Aminopeptidase N) in Escherichia coli (strain K12) provides a verified
           protein exemplar.
   - node_id: large_proteins
     label: large extracellular proteins
@@ -281,7 +283,7 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:P04189
-    version metadata (entry_version=190, sequence_version=3); added UniProtKB:P06971
-    (fhuA) protein example to node peptide_transport_systems; added UniProtKB:P04957
-    (bglS) protein example to node intracellular_peptidases.'
+    version metadata (entry_version=190, sequence_version=3); added UniProtKB:P71370
+    (oppA) protein example to node peptide_transport_systems; added UniProtKB:P04825
+    (pepN) protein example to node intracellular_peptidases.'
   llm_assisted: true

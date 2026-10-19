@@ -30,8 +30,8 @@ causal_graphs:
   title: Animal-pathogen metazoan host adaptation
   scope_status: NONMECHANISTIC
   scope_notes: This broad ecological, host-relationship, habitat, or hazard classification
-    spans multiple taxa and mechanisms; contextual protein nodes do not receive token
-    UniProt examples.
+    spans multiple taxa and mechanisms; contextual protein nodes include source-backed
+    UniProtKB exemplars.
   description: DOI-backed graph linking metazoan-adapted virulence factors, immune-evasion
     strategies, and animal-tissue colonization to the animal-pathogen phenotype.
   nodes:

@@ -38,8 +38,8 @@ causal_graphs:
   title: Saprotrophy decomposes dead organic matter and drives nutrient cycling
   scope_status: NONMECHANISTIC
   scope_notes: This broad ecological, host-relationship, habitat, or hazard classification
-    spans multiple taxa and mechanisms; contextual protein nodes do not receive token
-    UniProt examples.
+    spans multiple taxa and mechanisms; contextual protein nodes include source-backed
+    UniProtKB exemplars.
   description: Evidence-backed causal sketch linking decomposer activity on dead organic
     matter to carbon and nutrient cycling.
   nodes:
@@ -66,25 +66,25 @@ causal_graphs:
     description: Secreted hydrolytic/oxidative enzymes acting outside the cell on
       organic matter.
     protein_examples:
-    - uniprot_id: UniProtKB:P0AC53
-      protein_label: Glucose-6-phosphate 1-dehydrogenase
-      gene_symbol: zwf
-      taxon_id: NCBITaxon:83333
-      taxon_label: Escherichia coli (strain K12)
+    - uniprot_id: UniProtKB:P04189
+      protein_label: Subtilisin E
+      gene_symbol: aprE
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
       entry_status: REVIEWED
-      proteome_id: UP000000625
+      proteome_id: UP000001570
       retrieved_on: '2026-10-17'
-      entry_version: 144
-      sequence_version: 1
-      role: Exemplar protein (zwf, Glucose-6-phosphate 1-dehydrogenase) representing
-        extracellular exoenzymes in Escherichia coli (strain K12) for saprotrophy.
+      entry_version: 190
+      sequence_version: 3
+      role: Exemplar protein (aprE, Subtilisin E) representing extracellular exoenzymes
+        in Bacillus subtilis (strain 168) for saprotrophy.
       evidence:
       - reference: DOI:10.1093/ismejo/wrae073
         snippet: products released by extracellular reactions of exoenzymes produced
           by another group
-        notes: Supports extracellular exoenzymes in saprotrophy; UniProtKB:P0AC53
-          (zwf, Glucose-6-phosphate 1-dehydrogenase) in Escherichia coli (strain K12)
-          provides a verified protein exemplar.
+        notes: Supports extracellular exoenzymes in saprotrophy; UniProtKB:P04189
+          (aprE, Subtilisin E) in Bacillus subtilis (strain 168) provides a verified
+          protein exemplar.
   - node_id: soluble_organic_compounds
     label: soluble organic compounds
     node_type: CHEMICAL
@@ -98,28 +98,25 @@ causal_graphs:
     description: Cellobiohydrolases, endoglucanases, and beta-glucosidases acting
       in concert.
     protein_examples:
-    - uniprot_id: UniProtKB:Q4A0Q1
-      protein_label: Oxygen-dependent choline dehydrogenase
-      gene_symbol: betA
-      taxon_id: NCBITaxon:342451
-      taxon_label: Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
-        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+    - uniprot_id: UniProtKB:P0C2S5
+      protein_label: Cellulose 1,4-beta-cellobiosidase (reducing end) CelS
+      gene_symbol: celS
+      taxon_id: NCBITaxon:1515
+      taxon_label: Acetivibrio thermocellus
       entry_status: REVIEWED
-      proteome_id: UP000006371
       retrieved_on: '2026-10-17'
-      entry_version: 127
+      entry_version: 81
       sequence_version: 1
-      role: Exemplar protein (betA, Oxygen-dependent choline dehydrogenase) representing
-        cellulolytic enzyme system in Staphylococcus saprophyticus subsp. saprophyticus
-        (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) for saprotrophy.
+      role: Exemplar protein (celS, Cellulose 1,4-beta-cellobiosidase (reducing end)
+        CelS) representing cellulolytic enzyme system in Acetivibrio thermocellus
+        for saprotrophy.
       evidence:
       - reference: DOI:10.1093/jambio/lxac002
         snippet: Complete degradation of cellulose to glucose requires concerted action
           of cellobiohydrolases, endoglucanases and beta-glucosidases.
-        notes: Supports cellulolytic enzyme system in saprotrophy; UniProtKB:Q4A0Q1
-          (betA, Oxygen-dependent choline dehydrogenase) in Staphylococcus saprophyticus
-          subsp. saprophyticus (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC
-          7292 / S-41) provides a verified protein exemplar.
+        notes: Supports cellulolytic enzyme system in saprotrophy; UniProtKB:P0C2S5
+          (celS, Cellulose 1,4-beta-cellobiosidase (reducing end) CelS) in Acetivibrio
+          thermocellus provides a verified protein exemplar.
   - node_id: cellulose
     label: cellulose
     node_type: CHEMICAL
@@ -138,24 +135,23 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Enzymes acting on glycosidic bonds of plant cell-wall polysaccharides.
     protein_examples:
-    - uniprot_id: UniProtKB:P39914
-      protein_label: Monothiol bacilliredoxin BrxC
-      gene_symbol: brxC
-      taxon_id: NCBITaxon:224308
-      taxon_label: Bacillus subtilis (strain 168)
+    - uniprot_id: UniProtKB:P23556
+      protein_label: Endo-1,4-beta-xylanase A
+      gene_symbol: xynA
+      taxon_id: NCBITaxon:44001
+      taxon_label: Caldicellulosiruptor saccharolyticus
       entry_status: REVIEWED
-      proteome_id: UP000001570
       retrieved_on: '2026-10-17'
-      entry_version: 128
+      entry_version: 102
       sequence_version: 1
-      role: Exemplar protein (brxC, Monothiol bacilliredoxin BrxC) representing carbohydrate-active
-        enzymes (CAZymes) in Bacillus subtilis (strain 168) for saprotrophy.
+      role: Exemplar protein (xynA, Endo-1,4-beta-xylanase A) representing carbohydrate-active
+        enzymes (CAZymes) in Caldicellulosiruptor saccharolyticus for saprotrophy.
       evidence:
       - reference: DOI:10.1016/j.cbpa.2015.10.018
         snippet: The enzymatic degradation of cellulose and hemicellulose is accomplished
           in Nature via the collective action of multiple carbohydrate-active enzymes
-        notes: Supports carbohydrate-active enzymes (CAZymes) in saprotrophy; UniProtKB:P39914
-          (brxC, Monothiol bacilliredoxin BrxC) in Bacillus subtilis (strain 168)
+        notes: Supports carbohydrate-active enzymes (CAZymes) in saprotrophy; UniProtKB:P23556
+          (xynA, Endo-1,4-beta-xylanase A) in Caldicellulosiruptor saccharolyticus
           provides a verified protein exemplar.
   - node_id: hemicellulose
     label: hemicellulose
@@ -196,26 +192,24 @@ causal_graphs:
     description: H2O2-dependent fungal ligninolytic peroxidase.
     grounding: GO:0016689
     protein_examples:
-    - uniprot_id: UniProtKB:P0ABI8
-      protein_label: Cytochrome bo(3) ubiquinol oxidase subunit 1
-      gene_symbol: cyoB
-      taxon_id: NCBITaxon:83333
-      taxon_label: Escherichia coli (strain K12)
+    - uniprot_id: UniProtKB:Q02567
+      protein_label: Manganese peroxidase 1
+      gene_symbol: MNP1
+      taxon_id: NCBITaxon:2822231
+      taxon_label: Phanerodontia chrysosporium
       entry_status: REVIEWED
-      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 154
+      entry_version: 151
       sequence_version: 1
-      role: Exemplar protein (cyoB, Cytochrome bo(3) ubiquinol oxidase subunit 1)
-        representing manganese peroxidase (MnP) in Escherichia coli (strain K12) for
-        saprotrophy.
+      role: Exemplar protein (MNP1, Manganese peroxidase 1) representing manganese
+        peroxidase (MnP) in Phanerodontia chrysosporium for saprotrophy.
       evidence:
       - reference: DOI:10.1093/jambio/lxac002
         snippet: manganese peroxidases (MnP), lignin peroxidases (LiP) catalyzing
           a variety of oxidative reactions
-        notes: Supports manganese peroxidase (MnP) in saprotrophy; UniProtKB:P0ABI8
-          (cyoB, Cytochrome bo(3) ubiquinol oxidase subunit 1) in Escherichia coli
-          (strain K12) provides a verified protein exemplar.
+        notes: Supports manganese peroxidase (MnP) in saprotrophy; UniProtKB:Q02567
+          (MNP1, Manganese peroxidase 1) in Phanerodontia chrysosporium provides a
+          verified protein exemplar.
   - node_id: lignocellulolytic_gene_expression
     label: lignocellulolytic gene expression
     node_type: BIOLOGICAL_PROCESS
@@ -426,9 +420,9 @@ curation_history:
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
-  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P0AC53 (zwf)
-    protein example to node extracellular_exoenzymes; added UniProtKB:Q4A0Q1 (betA)
-    protein example to node cellulolytic_enzymes; added UniProtKB:P39914 (brxC) protein
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P04189 (aprE)
+    protein example to node extracellular_exoenzymes; added UniProtKB:P0C2S5 (celS)
+    protein example to node cellulolytic_enzymes; added UniProtKB:P23556 (xynA) protein
     example to node cazymes; added UniProtKB:A0A7T1FRB0 (cotA) protein example to
     node laccase (+1 more).'
   llm_assisted: true

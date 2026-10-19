@@ -81,28 +81,24 @@ causal_graphs:
     grounding_notes: The node denotes taxon-variable S-layer subunits rather than
       one exact protein family.
     protein_examples:
-    - uniprot_id: UniProtKB:Q06851
-      protein_label: Cellulosomal-scaffolding protein A
-      gene_symbol: cipA
-      taxon_id: NCBITaxon:203119
-      taxon_label: Acetivibrio thermocellus (strain ATCC 27405 / DSM 1237 / JCM 9322
-        / NBRC 103400 / NCIMB 10682 / NRRL B-4536 / VPI 7372) (Clostridium thermocellum)
+    - uniprot_id: UniProtKB:Q5XAY2
+      protein_label: Arginine deiminase
+      gene_symbol: arcA
+      taxon_id: NCBITaxon:286636
+      taxon_label: Streptococcus pyogenes serotype M6 (strain ATCC BAA-946 / MGAS10394)
       entry_status: REVIEWED
-      proteome_id: UP000002145
       retrieved_on: '2026-10-17'
-      entry_version: 178
-      sequence_version: 2
-      role: Exemplar protein (cipA, Cellulosomal-scaffolding protein A) representing
-        S-layer proteins in Acetivibrio thermocellus (strain ATCC 27405 / DSM 1237
-        / JCM 9322 / NBRC 103400 / NCIMB 10682 / NRRL B-4536 / VPI 7372) (Clostridium
-        thermocellum) for square shaped.
+      entry_version: 105
+      sequence_version: 3
+      role: Exemplar protein (arcA, Arginine deiminase) representing S-layer proteins
+        in Streptococcus pyogenes serotype M6 (strain ATCC BAA-946 / MGAS10394) for
+        square shaped.
       evidence:
       - reference: DOI:10.1099/ijs.0.65431-0
         snippet: flat square or disc-shaped cells
-        notes: Supports S-layer proteins in square shaped; UniProtKB:Q06851 (cipA,
-          Cellulosomal-scaffolding protein A) in Acetivibrio thermocellus (strain
-          ATCC 27405 / DSM 1237 / JCM 9322 / NBRC 103400 / NCIMB 10682 / NRRL B-4536
-          / VPI 7372) (Clostridium thermocellum) provides a verified protein exemplar.
+        notes: Supports S-layer proteins in square shaped; UniProtKB:Q5XAY2 (arcA,
+          Arginine deiminase) in Streptococcus pyogenes serotype M6 (strain ATCC BAA-946
+          / MGAS10394) provides a verified protein exemplar.
   - node_id: cell_shape_size_defect
     label: cell shape and size defect
     node_type: STATE
@@ -236,6 +232,6 @@ curation_history:
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
-  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q06851 (cipA)
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q5XAY2 (arcA)
     protein example to node slayer_proteins.'
   llm_assisted: true

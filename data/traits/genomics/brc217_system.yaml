@@ -98,32 +98,32 @@ causal_graphs:
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
   - node_id: brc217_system_protein_component
-    label: Endoribonuclease HigB
+    label: Endonuclease GajA
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Endoribonuclease HigB) associated with Brc217
-      system.
+    description: Protein component (Endonuclease GajA) associated with Brc217 system.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - higB
+    - gajA
     protein_examples:
-    - uniprot_id: UniProtKB:Q7A225
-      protein_label: Endoribonuclease HigB
-      gene_symbol: higB
-      taxon_id: NCBITaxon:585
-      taxon_label: Proteus vulgaris
+    - uniprot_id: UniProtKB:P0DW47
+      protein_label: Endonuclease GajA
+      gene_symbol: gajA
+      taxon_id: NCBITaxon:1053212
+      taxon_label: Bacillus cereus (strain HuB5-5)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      entry_version: 69
+      entry_version: 12
       sequence_version: 1
-      role: Characteristic protein component (higB, Endoribonuclease HigB) associated
-        with Brc217 system in Proteus vulgaris.
+      role: Characteristic protein component (gajA, Endonuclease GajA) associated
+        with Brc217 system in Bacillus cereus (strain HuB5-5).
       evidence:
       - reference: DOI:10.1126/science.ads0915
         snippet: brc113 brc217 brc76 brcWGS21 brc22 brc23
-        notes: Supports Endoribonuclease HigB in Brc217 system; UniProtKB:Q7A225 (higB,
-          Endoribonuclease HigB) in Proteus vulgaris provides a verified protein exemplar.
+        notes: Supports Endonuclease GajA in Brc217 system; UniProtKB:P0DW47 (gajA,
+          Endonuclease GajA) in Bacillus cereus (strain HuB5-5) provides a verified
+          protein exemplar.
   edges:
   - subject: brc217_integron_cassette
     predicate: contributes to
@@ -193,13 +193,13 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: brc217_system_trait
-    description: Endoribonuclease HigB (higB, UniProtKB:Q7A225) contributes to Brc217
-      system (associated with pneumoniae, brc217, c940).
+    description: Endonuclease GajA (gajA, UniProtKB:P0DW47) contributes to Brc217
+      system.
     evidence:
     - reference: DOI:10.1126/science.ads0915
       snippet: C940 pMBA brc217 K. pneumoniae KP5
-      notes: Supports the functional association between Endoribonuclease HigB (UniProtKB:Q7A225
-        in Proteus vulgaris) and Brc217 system.
+      notes: Supports the functional association between Endonuclease GajA (UniProtKB:P0DW47
+        in Bacillus cereus (strain HuB5-5)) and Brc217 system.
 discussions:
 - discussion_id: brc217-defensefinder-model-gap
   prompt: Resolve Brc217 native host breadth, exact sensitive-phage breadth, molecular
@@ -288,5 +288,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    brc217_system_protein_component with UniProtKB:Q7A225 (higB) exemplar.'
+    brc217_system_protein_component with UniProtKB:P0DW47 (gajA) exemplar.'
   llm_assisted: true

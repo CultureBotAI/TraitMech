@@ -88,36 +88,36 @@ causal_graphs:
     description: Central metabolic network whose key metabolite levels are buffered
       across a wide temperature range.
   - node_id: delta_phenotype_with_numerical_limits_protein_component
-    label: sn-1 oleoyl-lipid 12-desaturase
+    label: Chaperone protein DnaK
     node_type: GENE_OR_PROTEIN
-    description: Protein component (sn-1 oleoyl-lipid 12-desaturase) associated with
-      delta phenotype with numerical limits.
+    description: Protein component (Chaperone protein DnaK) associated with delta
+      phenotype with numerical limits.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - desA
+    - dnaK
     protein_examples:
-    - uniprot_id: UniProtKB:Q55231
-      protein_label: sn-1 oleoyl-lipid 12-desaturase
-      gene_symbol: desA
-      taxon_id: NCBITaxon:32049
-      taxon_label: Picosynechococcus sp. (strain ATCC 27264 / PCC 7002 / PR-6) (Agmenellum
-        quadruplicatum)
+    - uniprot_id: UniProtKB:P0A6Y8
+      protein_label: Chaperone protein DnaK
+      gene_symbol: dnaK
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
+      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 127
-      sequence_version: 1
-      role: Characteristic protein component (desA, sn-1 oleoyl-lipid 12-desaturase)
-        associated with delta phenotype with numerical limits in Picosynechococcus
-        sp. (strain ATCC 27264 / PCC 7002 / PR-6) (Agmenellum quadruplicatum).
+      entry_version: 183
+      sequence_version: 2
+      role: Characteristic protein component (dnaK, Chaperone protein DnaK) associated
+        with delta phenotype with numerical limits in Escherichia coli (strain K12).
       evidence:
-      - reference: DOI:10.1016/s0300-9629(97)00003-0
-        snippet: changes in the membrane lipid composition
-        notes: Supports sn-1 oleoyl-lipid 12-desaturase in delta phenotype with numerical
-          limits; UniProtKB:Q55231 (desA, sn-1 oleoyl-lipid 12-desaturase) in Picosynechococcus
-          sp. (strain ATCC 27264 / PCC 7002 / PR-6) (Agmenellum quadruplicatum) provides
-          a verified protein exemplar.
+      - reference: DOI:10.1038/nrmicro2549
+        snippet: For pH homeostasis under alkaline conditions, active transport of
+          protons inward is a crucial adaptation, which usually involves activation
+          and transcriptional up-regulation of key cation/proton antiporters
+        notes: Supports Chaperone protein DnaK in delta phenotype with numerical limits;
+          UniProtKB:P0A6Y8 (dnaK, Chaperone protein DnaK) in Escherichia coli (strain
+          K12) provides a verified protein exemplar.
   edges:
   - subject: numerical_environmental_axis
     predicate: defines
@@ -211,15 +211,15 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: delta_phenotype_trait
-    description: sn-1 oleoyl-lipid 12-desaturase (desA, UniProtKB:Q55231) contributes
-      to delta phenotype with numerical limits (associated with composition, membrane,
-      changes).
+    description: Chaperone protein DnaK (dnaK, UniProtKB:P0A6Y8) contributes to delta
+      phenotype with numerical limits.
     evidence:
-    - reference: DOI:10.1016/s0300-9629(97)00003-0
-      snippet: changes in the membrane lipid composition
-      notes: Supports the functional association between sn-1 oleoyl-lipid 12-desaturase
-        (UniProtKB:Q55231 in Picosynechococcus sp. (strain ATCC 27264 / PCC 7002 /
-        PR-6) (Agmenellum quadruplicatum)) and delta phenotype with numerical limits.
+    - reference: DOI:10.1038/nrmicro2549
+      snippet: For pH homeostasis under alkaline conditions, active transport of protons
+        inward is a crucial adaptation, which usually involves activation and transcriptional
+        up-regulation of key cation/proton antiporters
+      notes: Supports the functional association between Chaperone protein DnaK (UniProtKB:P0A6Y8
+        in Escherichia coli (strain K12)) and delta phenotype with numerical limits.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.847283+00:00'
   curator: seed_from_metpo
@@ -291,6 +291,6 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    delta_phenotype_with_numerical_limits_protein_component with UniProtKB:Q55231
-    (desA) exemplar.'
+    delta_phenotype_with_numerical_limits_protein_component with UniProtKB:P0A6Y8
+    (dnaK) exemplar.'
   llm_assisted: true

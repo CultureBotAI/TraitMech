@@ -58,20 +58,18 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph siderophore_production_graph
-    with GENE_OR_PROTEIN node siderophore_production_protein_component and UniProtKB:Q8EG34
+    with GENE_OR_PROTEIN node siderophore_production_protein_component and UniProtKB:P0ADI4
     exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: siderophore_production_graph
   title: Protein component associated with siderophore production
-  description: Literature-backed association between Extracellular iron oxide respiratory
-    system surface decaheme cytochrome c component MtrC (UniProtKB:Q8EG34) and siderophore
-    production.
+  description: Literature-backed association between Enterobactin synthase component
+    B (UniProtKB:P0ADI4) and siderophore production.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q8EG34 in Shewanella
-    oneidensis (strain ATCC 700550 / JCM 31522 / CIP 106686 / LMG 19005 / NCIMB 14063
-    / MR-1)) associated with siderophore production while full multi-step mechanistic
-    curation remains future work.
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P0ADI4 in Escherichia
+    coli (strain K12)) associated with siderophore production while full multi-step
+    mechanistic curation remains future work.
   nodes:
   - node_id: siderophore_production_trait
     label: siderophore production
@@ -80,56 +78,43 @@ causal_graphs:
     description: A physiological trait in which bacteria biosynthesize and release
       siderophores that scavenge extracellular iron for uptake.
   - node_id: siderophore_production_protein_component
-    label: Extracellular iron oxide respiratory system surface decaheme cytochrome
-      c component MtrC
+    label: Enterobactin synthase component B
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Extracellular iron oxide respiratory system surface
-      decaheme cytochrome c component MtrC) associated with siderophore production.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Enterobactin synthase component B) associated
+      with siderophore production.
+    grounding: InterPro:IPR036736
     gene_symbols:
-    - mtrC
+    - entB
     protein_examples:
-    - uniprot_id: UniProtKB:Q8EG34
-      protein_label: Extracellular iron oxide respiratory system surface decaheme
-        cytochrome c component MtrC
-      gene_symbol: mtrC
-      taxon_id: NCBITaxon:211586
-      taxon_label: Shewanella oneidensis (strain ATCC 700550 / JCM 31522 / CIP 106686
-        / LMG 19005 / NCIMB 14063 / MR-1)
-      entry_status: UNREVIEWED
-      proteome_id: UP000008186
+    - uniprot_id: UniProtKB:P0ADI4
+      protein_label: Enterobactin synthase component B
+      gene_symbol: entB
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 126
+      entry_version: 146
       sequence_version: 1
-      role: Characteristic protein component (mtrC, Extracellular iron oxide respiratory
-        system surface decaheme cytochrome c component MtrC) associated with siderophore
-        production in Shewanella oneidensis (strain ATCC 700550 / JCM 31522 / CIP
-        106686 / LMG 19005 / NCIMB 14063 / MR-1).
+      role: Characteristic protein component (entB, Enterobactin synthase component
+        B) associated with siderophore production in Escherichia coli (strain K12).
       evidence:
-      - reference: DOI:10.15698/mic2018.10.649
-        snippet: Pyoverdines are fluorescent siderophores of pseudomonads that play
-          important roles for growth under iron-limiting conditions.
-        notes: Supports Extracellular iron oxide respiratory system surface decaheme
-          cytochrome c component MtrC in siderophore production; UniProtKB:Q8EG34
-          (mtrC, Extracellular iron oxide respiratory system surface decaheme cytochrome
-          c component MtrC) in Shewanella oneidensis (strain ATCC 700550 / JCM 31522
-          / CIP 106686 / LMG 19005 / NCIMB 14063 / MR-1) provides a verified protein
-          exemplar.
+      - reference: DOI:10.1073/pnas.0908760106
+        snippet: The siderophore pyoverdine (PVD) is a primary virulence factor of
+          the human pathogenic bacterium Pseudomonas aeruginosa
+        notes: Supports Enterobactin synthase component B in siderophore production;
+          UniProtKB:P0ADI4 (entB, Enterobactin synthase component B) in Escherichia
+          coli (strain K12) provides a verified protein exemplar.
   edges:
   - subject: siderophore_production_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: siderophore_production_trait
-    description: Extracellular iron oxide respiratory system surface decaheme cytochrome
-      c component MtrC (mtrC, UniProtKB:Q8EG34) contributes to siderophore production
-      (associated with pseudomonads, siderophores, fluorescent).
+    description: Enterobactin synthase component B (entB, UniProtKB:P0ADI4) contributes
+      to siderophore production.
     evidence:
-    - reference: DOI:10.15698/mic2018.10.649
-      snippet: Pyoverdines are fluorescent siderophores of pseudomonads that play
-        important roles for growth under iron-limiting conditions.
-      notes: Supports the functional association between Extracellular iron oxide
-        respiratory system surface decaheme cytochrome c component MtrC (UniProtKB:Q8EG34
-        in Shewanella oneidensis (strain ATCC 700550 / JCM 31522 / CIP 106686 / LMG
-        19005 / NCIMB 14063 / MR-1)) and siderophore production.
+    - reference: DOI:10.1073/pnas.0908760106
+      snippet: The siderophore pyoverdine (PVD) is a primary virulence factor of the
+        human pathogenic bacterium Pseudomonas aeruginosa
+      notes: Supports the functional association between Enterobactin synthase component
+        B (UniProtKB:P0ADI4 in Escherichia coli (strain K12)) and siderophore production.

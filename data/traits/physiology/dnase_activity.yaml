@@ -52,18 +52,18 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph dnase_activity_graph
-    with GENE_OR_PROTEIN node dnase_activity_protein_component and UniProtKB:Q97QP9
+    with GENE_OR_PROTEIN node dnase_activity_protein_component and UniProtKB:Q99VJ0
     exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: dnase_activity_graph
   title: Protein component associated with DNase activity
-  description: Literature-backed association between Exonuclease/helicase subunit
-    RexA (UniProtKB:Q97QP9) and DNase activity.
+  description: Literature-backed association between Thermonuclease (UniProtKB:Q99VJ0)
+    and DNase activity.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q97QP9 in Streptococcus
-    pneumoniae serotype 4 (strain ATCC BAA-334 / TIGR4)) associated with DNase activity
-    while full multi-step mechanistic curation remains future work.
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q99VJ0 in Staphylococcus
+    aureus (strain Mu50 / ATCC 700699)) associated with DNase activity while full
+    multi-step mechanistic curation remains future work.
   nodes:
   - node_id: dnase_activity_trait
     label: DNase activity
@@ -72,47 +72,40 @@ causal_graphs:
     description: A physiological enzyme-activity phenotype in which a cell produces
       active DNase enzymes that hydrolyze DNA.
   - node_id: dnase_activity_protein_component
-    label: Exonuclease/helicase subunit RexA
+    label: Thermonuclease
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Exonuclease/helicase subunit RexA) associated
-      with DNase activity.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Thermonuclease) associated with DNase activity.
+    grounding: InterPro:IPR035437
     gene_symbols:
-    - rexA
+    - nuc
     protein_examples:
-    - uniprot_id: UniProtKB:Q97QP9
-      protein_label: Exonuclease/helicase subunit RexA
-      gene_symbol: rexA
-      taxon_id: NCBITaxon:170187
-      taxon_label: Streptococcus pneumoniae serotype 4 (strain ATCC BAA-334 / TIGR4)
+    - uniprot_id: UniProtKB:Q99VJ0
+      protein_label: Thermonuclease
+      gene_symbol: nuc
+      taxon_id: NCBITaxon:158878
+      taxon_label: Staphylococcus aureus (strain Mu50 / ATCC 700699)
       entry_status: REVIEWED
-      proteome_id: UP000000585
       retrieved_on: '2026-10-17'
-      entry_version: 142
+      entry_version: 116
       sequence_version: 1
-      role: Characteristic protein component (rexA, Exonuclease/helicase subunit RexA)
-        associated with DNase activity in Streptococcus pneumoniae serotype 4 (strain
-        ATCC BAA-334 / TIGR4).
+      role: Characteristic protein component (nuc, Thermonuclease) associated with
+        DNase activity in Staphylococcus aureus (strain Mu50 / ATCC 700699).
       evidence:
       - reference: DOI:10.3389/fmicb.2019.00969
         snippet: unexpected and widespread presence of DNase secretion in bacteria
           in general and in MGP more specifically
-        notes: Supports Exonuclease/helicase subunit RexA in DNase activity; UniProtKB:Q97QP9
-          (rexA, Exonuclease/helicase subunit RexA) in Streptococcus pneumoniae serotype
-          4 (strain ATCC BAA-334 / TIGR4) provides a verified protein exemplar.
+        notes: Supports Thermonuclease in DNase activity; UniProtKB:Q99VJ0 (nuc, Thermonuclease)
+          in Staphylococcus aureus (strain Mu50 / ATCC 700699) provides a verified
+          protein exemplar.
   edges:
   - subject: dnase_activity_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: dnase_activity_trait
-    description: Exonuclease/helicase subunit RexA (rexA, UniProtKB:Q97QP9) contributes
-      to DNase activity (associated with specifically, unexpected, widespread).
+    description: Thermonuclease (nuc, UniProtKB:Q99VJ0) contributes to DNase activity.
     evidence:
     - reference: DOI:10.3389/fmicb.2019.00969
       snippet: unexpected and widespread presence of DNase secretion in bacteria in
         general and in MGP more specifically
-      notes: Supports the functional association between Exonuclease/helicase subunit
-        RexA (UniProtKB:Q97QP9 in Streptococcus pneumoniae serotype 4 (strain ATCC
-        BAA-334 / TIGR4)) and DNase activity.
+      notes: Supports the functional association between Thermonuclease (UniProtKB:Q99VJ0
+        in Staphylococcus aureus (strain Mu50 / ATCC 700699)) and DNase activity.

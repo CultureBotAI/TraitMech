@@ -74,17 +74,18 @@ curation_history:
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph prolyl_aminopeptidase_activity_graph
     with GENE_OR_PROTEIN node prolyl_aminopeptidase_activity_protein_component and
-    UniProtKB:B5BKS6 exemplar.'
+    UniProtKB:Q890D8 exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: prolyl_aminopeptidase_activity_graph
   title: Protein component associated with prolyl aminopeptidase activity
-  description: Literature-backed association between Probable cytosol aminopeptidase
-    (UniProtKB:B5BKS6) and prolyl aminopeptidase activity.
+  description: Literature-backed association between Proline iminopeptidase (UniProtKB:Q890D8)
+    and prolyl aminopeptidase activity.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:B5BKS6 in Salmonella
-    paratyphi A (strain AKU_12601)) associated with prolyl aminopeptidase activity
-    while full multi-step mechanistic curation remains future work.
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q890D8 in Lactiplantibacillus
+    plantarum (strain ATCC BAA-793 / NCIMB 8826 / WCFS1) (Lactobacillus plantarum))
+    associated with prolyl aminopeptidase activity while full multi-step mechanistic
+    curation remains future work.
   nodes:
   - node_id: prolyl_aminopeptidase_activity_trait
     label: prolyl aminopeptidase activity
@@ -94,55 +95,49 @@ causal_graphs:
       active prolyl aminopeptidases that release N-terminal proline residues from
       peptides.
   - node_id: prolyl_aminopeptidase_activity_protein_component
-    label: Probable cytosol aminopeptidase
+    label: Proline iminopeptidase
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Probable cytosol aminopeptidase) associated with
-      prolyl aminopeptidase activity.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Proline iminopeptidase) associated with prolyl
+      aminopeptidase activity.
+    grounding: InterPro:IPR000073
     gene_symbols:
-    - pepA
+    - pip
     protein_examples:
-    - uniprot_id: UniProtKB:B5BKS6
-      protein_label: Probable cytosol aminopeptidase
-      gene_symbol: pepA
-      taxon_id: NCBITaxon:554290
-      taxon_label: Salmonella paratyphi A (strain AKU_12601)
+    - uniprot_id: UniProtKB:Q890D8
+      protein_label: Proline iminopeptidase
+      gene_symbol: pip
+      taxon_id: NCBITaxon:220668
+      taxon_label: Lactiplantibacillus plantarum (strain ATCC BAA-793 / NCIMB 8826
+        / WCFS1) (Lactobacillus plantarum)
       entry_status: REVIEWED
+      proteome_id: UP000000432
       retrieved_on: '2026-10-17'
-      entry_version: 76
-      sequence_version: 1
-      role: Characteristic protein component (pepA, Probable cytosol aminopeptidase)
-        associated with prolyl aminopeptidase activity in Salmonella paratyphi A (strain
-        AKU_12601).
+      entry_version: 109
+      sequence_version: 2
+      role: Characteristic protein component (pip, Proline iminopeptidase) associated
+        with prolyl aminopeptidase activity in Lactiplantibacillus plantarum (strain
+        ATCC BAA-793 / NCIMB 8826 / WCFS1) (Lactobacillus plantarum).
       evidence:
-      - reference: DOI:10.1099/ijsem.0.006017
-        snippet: 'enzymatic activities are present for: α-galactosidase, N-acetyl-β-glucosaminidase,
-          arginine arylamidase, proline arylamidase, leucyl glycine arylamidase, phenylalanine
-          arylamidase, leucine arylamidase, tyrosine arylamidase, alanine arylamidase,
-          glycine arylamidase, histidine arylamidase, glutamyl glutamic acid arylamidase,
-          serine arylamidase, valine arylamidase, cysteine arylamidase, esterase,
-          esterase lipase, alpha-chymotrypsin'
-        notes: Supports Probable cytosol aminopeptidase in prolyl aminopeptidase activity;
-          UniProtKB:B5BKS6 (pepA, Probable cytosol aminopeptidase) in Salmonella paratyphi
-          A (strain AKU_12601) provides a verified protein exemplar.
+      - reference: DOI:10.1111/j.1365-2958.1993.tb01249.x
+        snippet: Proline iminopeptidase (Pip) is a hydrolase elaborated by virtually
+          all strains of Neisseria gonorrhoeae that selectively removes N-terminal
+          proline residues from peptides.
+        notes: Supports Proline iminopeptidase in prolyl aminopeptidase activity;
+          UniProtKB:Q890D8 (pip, Proline iminopeptidase) in Lactiplantibacillus plantarum
+          (strain ATCC BAA-793 / NCIMB 8826 / WCFS1) (Lactobacillus plantarum) provides
+          a verified protein exemplar.
   edges:
   - subject: prolyl_aminopeptidase_activity_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: prolyl_aminopeptidase_activity_trait
-    description: Probable cytosol aminopeptidase (pepA, UniProtKB:B5BKS6) contributes
-      to prolyl aminopeptidase activity (associated with glucosaminidase, galactosidase,
-      phenylalanine).
+    description: Proline iminopeptidase (pip, UniProtKB:Q890D8) contributes to prolyl
+      aminopeptidase activity.
     evidence:
-    - reference: DOI:10.1099/ijsem.0.006017
-      snippet: 'enzymatic activities are present for: α-galactosidase, N-acetyl-β-glucosaminidase,
-        arginine arylamidase, proline arylamidase, leucyl glycine arylamidase, phenylalanine
-        arylamidase, leucine arylamidase, tyrosine arylamidase, alanine arylamidase,
-        glycine arylamidase, histidine arylamidase, glutamyl glutamic acid arylamidase,
-        serine arylamidase, valine arylamidase, cysteine arylamidase, esterase, esterase
-        lipase, alpha-chymotrypsin'
-      notes: Supports the functional association between Probable cytosol aminopeptidase
-        (UniProtKB:B5BKS6 in Salmonella paratyphi A (strain AKU_12601)) and prolyl
-        aminopeptidase activity.
+    - reference: DOI:10.1111/j.1365-2958.1993.tb01249.x
+      snippet: Proline iminopeptidase (Pip) is a hydrolase elaborated by virtually
+        all strains of Neisseria gonorrhoeae that selectively removes N-terminal proline
+        residues from peptides.
+      notes: Supports the functional association between Proline iminopeptidase (UniProtKB:Q890D8
+        in Lactiplantibacillus plantarum (strain ATCC BAA-793 / NCIMB 8826 / WCFS1)
+        (Lactobacillus plantarum)) and prolyl aminopeptidase activity.

@@ -60,18 +60,19 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph complete_ammonia_oxidation_graph
-    with GENE_OR_PROTEIN node complete_ammonia_oxidation_protein_component and UniProtKB:B5BJZ8
+    with GENE_OR_PROTEIN node complete_ammonia_oxidation_protein_component and UniProtKB:Q04507
     exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: complete_ammonia_oxidation_graph
   title: Protein component associated with complete ammonia oxidation
-  description: Literature-backed association between Cytochrome c-552 (UniProtKB:B5BJZ8)
-    and complete ammonia oxidation.
+  description: Literature-backed association between Ammonia monooxygenase alpha subunit
+    (UniProtKB:Q04507) and complete ammonia oxidation.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:B5BJZ8 in Salmonella
-    paratyphi A (strain AKU_12601)) associated with complete ammonia oxidation while
-    full multi-step mechanistic curation remains future work.
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q04507 in Nitrosomonas
+    europaea (strain ATCC 19718 / CIP 103999 / KCTC 2705 / NBRC 14298)) associated
+    with complete ammonia oxidation while full multi-step mechanistic curation remains
+    future work.
   nodes:
   - node_id: complete_ammonia_oxidation_trait
     label: complete ammonia oxidation
@@ -80,46 +81,49 @@ causal_graphs:
     description: A nitrification metabolism in which a single organism oxidizes ammonia
       via nitrite to nitrate.
   - node_id: complete_ammonia_oxidation_protein_component
-    label: Cytochrome c-552
+    label: Ammonia monooxygenase alpha subunit
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Cytochrome c-552) associated with complete ammonia
-      oxidation.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Ammonia monooxygenase alpha subunit) associated
+      with complete ammonia oxidation.
+    grounding: InterPro:IPR037001
     gene_symbols:
-    - nrfA
+    - amoA1
     protein_examples:
-    - uniprot_id: UniProtKB:B5BJZ8
-      protein_label: Cytochrome c-552
-      gene_symbol: nrfA
-      taxon_id: NCBITaxon:554290
-      taxon_label: Salmonella paratyphi A (strain AKU_12601)
+    - uniprot_id: UniProtKB:Q04507
+      protein_label: Ammonia monooxygenase alpha subunit
+      gene_symbol: amoA1
+      taxon_id: NCBITaxon:228410
+      taxon_label: Nitrosomonas europaea (strain ATCC 19718 / CIP 103999 / KCTC 2705
+        / NBRC 14298)
       entry_status: REVIEWED
+      proteome_id: UP000001416
       retrieved_on: '2026-10-17'
-      entry_version: 82
-      sequence_version: 1
-      role: Characteristic protein component (nrfA, Cytochrome c-552) associated with
-        complete ammonia oxidation in Salmonella paratyphi A (strain AKU_12601).
+      entry_version: 127
+      sequence_version: 2
+      role: Characteristic protein component (amoA1, Ammonia monooxygenase alpha subunit)
+        associated with complete ammonia oxidation in Nitrosomonas europaea (strain
+        ATCC 19718 / CIP 103999 / KCTC 2705 / NBRC 14298).
       evidence:
       - reference: DOI:10.1128/aem.01698-23
         snippet: The dominance of Nitrospira sp. BO4 could be explained by the ability
           of comammox to generate more energy through the complete oxidation of ammonia
           to nitrate
-        notes: Supports Cytochrome c-552 in complete ammonia oxidation; UniProtKB:B5BJZ8
-          (nrfA, Cytochrome c-552) in Salmonella paratyphi A (strain AKU_12601) provides
+        notes: Supports Ammonia monooxygenase alpha subunit in complete ammonia oxidation;
+          UniProtKB:Q04507 (amoA1, Ammonia monooxygenase alpha subunit) in Nitrosomonas
+          europaea (strain ATCC 19718 / CIP 103999 / KCTC 2705 / NBRC 14298) provides
           a verified protein exemplar.
   edges:
   - subject: complete_ammonia_oxidation_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: complete_ammonia_oxidation_trait
-    description: Cytochrome c-552 (nrfA, UniProtKB:B5BJZ8) contributes to complete
-      ammonia oxidation (associated with nitrospira, dominance, explained).
+    description: Ammonia monooxygenase alpha subunit (amoA1, UniProtKB:Q04507) contributes
+      to complete ammonia oxidation.
     evidence:
     - reference: DOI:10.1128/aem.01698-23
       snippet: The dominance of Nitrospira sp. BO4 could be explained by the ability
         of comammox to generate more energy through the complete oxidation of ammonia
         to nitrate
-      notes: Supports the functional association between Cytochrome c-552 (UniProtKB:B5BJZ8
-        in Salmonella paratyphi A (strain AKU_12601)) and complete ammonia oxidation.
+      notes: Supports the functional association between Ammonia monooxygenase alpha
+        subunit (UniProtKB:Q04507 in Nitrosomonas europaea (strain ATCC 19718 / CIP
+        103999 / KCTC 2705 / NBRC 14298)) and complete ammonia oxidation.

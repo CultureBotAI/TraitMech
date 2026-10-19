@@ -86,27 +86,26 @@ causal_graphs:
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
   - node_id: ophion_system_protein_component
-    label: Thoeris anti-defense 1
+    label: Endonuclease GajA
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Thoeris anti-defense 1) associated with Ophion
-      system.
+    description: Protein component (Endonuclease GajA) associated with Ophion system.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - tad1
+    - gajA
     protein_examples:
-    - uniprot_id: UniProtKB:P0DW61
-      protein_label: Thoeris anti-defense 1
-      gene_symbol: tad1
-      taxon_id: NCBITaxon:1392497
-      taxon_label: Clostridioides mangenotii (strain LM2)
+    - uniprot_id: UniProtKB:P0DW47
+      protein_label: Endonuclease GajA
+      gene_symbol: gajA
+      taxon_id: NCBITaxon:1053212
+      taxon_label: Bacillus cereus (strain HuB5-5)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      entry_version: 11
+      entry_version: 12
       sequence_version: 1
-      role: Characteristic protein component (tad1, Thoeris anti-defense 1) associated
-        with Ophion system in Clostridioides mangenotii (strain LM2).
+      role: Characteristic protein component (gajA, Endonuclease GajA) associated
+        with Ophion system in Bacillus cereus (strain HuB5-5).
       evidence:
       - reference: DOI:10.1101/2025.09.30.679545
         snippet: 'From over 500 candidate defense systems, we selected nine for experimental
@@ -114,9 +113,9 @@ causal_graphs:
           early phage infection vesicle formation by Jumbo phages; Ophion, a Radical
           SAM-containing system that prevents the formation of the Jumbo phage nucleus;
           and Ambrosia, a tightly regulated RM-like system.'
-        notes: Supports Thoeris anti-defense 1 in Ophion system; UniProtKB:P0DW61
-          (tad1, Thoeris anti-defense 1) in Clostridioides mangenotii (strain LM2)
-          provides a verified protein exemplar.
+        notes: Supports Endonuclease GajA in Ophion system; UniProtKB:P0DW47 (gajA,
+          Endonuclease GajA) in Bacillus cereus (strain HuB5-5) provides a verified
+          protein exemplar.
   edges:
   - subject: ophion_locus
     predicate: contributes to
@@ -177,15 +176,17 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: ophion_system_trait
-    description: Thoeris anti-defense 1 (tad1, UniProtKB:P0DW61) contributes to Ophion
-      system (associated with completely, functional, abolishes).
+    description: Endonuclease GajA (gajA, UniProtKB:P0DW47) contributes to Ophion
+      system.
     evidence:
     - reference: DOI:10.1101/2025.09.30.679545
-      snippet: Each protein is required for anti-phage activity, since mutating conserved
-        residues in any of the predicted functional domains completely abolishes Ambrosia
-        defense activity
-      notes: Supports the functional association between Thoeris anti-defense 1 (UniProtKB:P0DW61
-        in Clostridioides mangenotii (strain LM2)) and Ophion system.
+      snippet: The five genes of Ambrosia encode a HipB-like XRE transcriptional regulator
+        (AbrR), a RM type II-associated N6 adenine-specific DNA methylase (MTase,
+        AbrA), a sensor histidine kinase/heat-shock-protein(HSP)90-like ATPase (HATPase,
+        AbrB), a response regulator (REC, AbrC), and an RM type IV HNH endonuclease
+        (AbrD)
+      notes: Supports the functional association between Endonuclease GajA (UniProtKB:P0DW47
+        in Bacillus cereus (strain HuB5-5)) and Ophion system.
 discussions:
 - discussion_id: ophion-jumbo-phage-mechanism-gap
   prompt: Resolve Ophion phage triggers, nucleotide-modification products, and model
@@ -221,5 +222,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    ophion_system_protein_component with UniProtKB:P0DW61 (tad1) exemplar.'
+    ophion_system_protein_component with UniProtKB:P0DW47 (gajA) exemplar.'
   llm_assisted: true

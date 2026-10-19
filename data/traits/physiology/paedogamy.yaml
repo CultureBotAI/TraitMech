@@ -106,15 +106,15 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph paedogamy_graph
-    with GENE_OR_PROTEIN node paedogamy_protein_component and UniProtKB:P00549 exemplar.'
+    with GENE_OR_PROTEIN node paedogamy_protein_component and UniProtKB:D6VTK4 exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: paedogamy_graph
   title: Protein component associated with paedogamy
-  description: Literature-backed association between Pyruvate kinase 1 (UniProtKB:P00549)
-    and paedogamy.
+  description: Literature-backed association between Pheromone alpha factor receptor
+    (UniProtKB:D6VTK4) and paedogamy.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P00549 in Saccharomyces
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:D6VTK4 in Saccharomyces
     cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)) associated with paedogamy
     while full multi-step mechanistic curation remains future work.
   nodes:
@@ -125,47 +125,46 @@ causal_graphs:
     description: A sexual-reproduction phenotype in which two gametes produced by
       division within a single gametangium fuse with each other.
   - node_id: paedogamy_protein_component
-    label: Pyruvate kinase 1
+    label: Pheromone alpha factor receptor
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Pyruvate kinase 1) associated with paedogamy.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Pheromone alpha factor receptor) associated with
+      paedogamy.
+    grounding: InterPro:IPR000366
     gene_symbols:
-    - CDC19
+    - STE2
     protein_examples:
-    - uniprot_id: UniProtKB:P00549
-      protein_label: Pyruvate kinase 1
-      gene_symbol: CDC19
+    - uniprot_id: UniProtKB:D6VTK4
+      protein_label: Pheromone alpha factor receptor
+      gene_symbol: STE2
       taxon_id: NCBITaxon:559292
       taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's
         yeast)
       entry_status: REVIEWED
       proteome_id: UP000002311
       retrieved_on: '2026-10-17'
-      entry_version: 238
+      entry_version: 99
       sequence_version: 2
-      role: Characteristic protein component (CDC19, Pyruvate kinase 1) associated
-        with paedogamy in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's
-        yeast).
+      role: Characteristic protein component (STE2, Pheromone alpha factor receptor)
+        associated with paedogamy in Saccharomyces cerevisiae (strain ATCC 204508
+        / S288c) (Baker's yeast).
       evidence:
       - reference: DOI:10.1080/0269249X.2013.791344
         snippet: Autogamy is a fusion of two gametic (haploid) nuclei within an undivided
           cell
-        notes: Supports Pyruvate kinase 1 in paedogamy; UniProtKB:P00549 (CDC19, Pyruvate
-          kinase 1) in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's
-          yeast) provides a verified protein exemplar.
+        notes: Supports Pheromone alpha factor receptor in paedogamy; UniProtKB:D6VTK4
+          (STE2, Pheromone alpha factor receptor) in Saccharomyces cerevisiae (strain
+          ATCC 204508 / S288c) (Baker's yeast) provides a verified protein exemplar.
   edges:
   - subject: paedogamy_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: paedogamy_trait
-    description: Pyruvate kinase 1 (CDC19, UniProtKB:P00549) contributes to paedogamy
-      (associated with undivided, autogamy, gametic).
+    description: Pheromone alpha factor receptor (STE2, UniProtKB:D6VTK4) contributes
+      to paedogamy.
     evidence:
     - reference: DOI:10.1080/0269249X.2013.791344
       snippet: Autogamy is a fusion of two gametic (haploid) nuclei within an undivided
         cell
-      notes: Supports the functional association between Pyruvate kinase 1 (UniProtKB:P00549
-        in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast))
-        and paedogamy.
+      notes: Supports the functional association between Pheromone alpha factor receptor
+        (UniProtKB:D6VTK4 in Saccharomyces cerevisiae (strain ATCC 204508 / S288c)
+        (Baker's yeast)) and paedogamy.

@@ -99,18 +99,25 @@ curation_history:
   llm_assisted: true
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed canonical_examples status alongside NONMECHANISTIC protein exemplar
+    graph for parasexuality; isolate-level canonical example remains deferred pending
+    explicit strain-level literature.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph parasexuality_graph
-    with GENE_OR_PROTEIN node parasexuality_protein_component and UniProtKB:Q08955
+    with GENE_OR_PROTEIN node parasexuality_protein_component and UniProtKB:P25454
     exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: parasexuality_graph
   title: Protein component associated with parasexuality
-  description: Literature-backed association between Chromosome segregation in meiosis
-    protein 4 (UniProtKB:Q08955) and parasexuality.
+  description: Literature-backed association between DNA repair protein RAD51 (UniProtKB:P25454)
+    and parasexuality.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q08955 in Saccharomyces
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P25454 in Saccharomyces
     cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)) associated with parasexuality
     while full multi-step mechanistic curation remains future work.
   nodes:
@@ -122,49 +129,45 @@ causal_graphs:
       fusion followed by chromosome-loss-mediated ploidy reduction instead of conventional
       meiosis.
   - node_id: parasexuality_protein_component
-    label: Chromosome segregation in meiosis protein 4
+    label: DNA repair protein RAD51
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Chromosome segregation in meiosis protein 4) associated
-      with parasexuality.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (DNA repair protein RAD51) associated with parasexuality.
+    grounding: InterPro:IPR003593
     gene_symbols:
-    - CSM4
+    - RAD51
     protein_examples:
-    - uniprot_id: UniProtKB:Q08955
-      protein_label: Chromosome segregation in meiosis protein 4
-      gene_symbol: CSM4
+    - uniprot_id: UniProtKB:P25454
+      protein_label: DNA repair protein RAD51
+      gene_symbol: RAD51
       taxon_id: NCBITaxon:559292
       taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's
         yeast)
       entry_status: REVIEWED
       proteome_id: UP000002311
       retrieved_on: '2026-10-17'
-      entry_version: 143
+      entry_version: 217
       sequence_version: 1
-      role: Characteristic protein component (CSM4, Chromosome segregation in meiosis
-        protein 4) associated with parasexuality in Saccharomyces cerevisiae (strain
-        ATCC 204508 / S288c) (Baker's yeast).
+      role: Characteristic protein component (RAD51, DNA repair protein RAD51) associated
+        with parasexuality in Saccharomyces cerevisiae (strain ATCC 204508 / S288c)
+        (Baker's yeast).
       evidence:
-      - reference: DOI:10.1038/s41467-019-12376-2
-        snippet: These results indicate that C. albicans CCL represents a 'parameiosis'
-          that blurs the conventional boundaries between mitosis and meiosis.
-        notes: Supports Chromosome segregation in meiosis protein 4 in parasexuality;
-          UniProtKB:Q08955 (CSM4, Chromosome segregation in meiosis protein 4) in
-          Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast) provides
-          a verified protein exemplar.
+      - reference: DOI:10.1093/emboj/cdg235
+        snippet: Thus, an efficient parasexual cycle can be performed in C.albicans,
+          one that leads to the reassortment of genetic material in this organism.
+        notes: Supports DNA repair protein RAD51 in parasexuality; UniProtKB:P25454
+          (RAD51, DNA repair protein RAD51) in Saccharomyces cerevisiae (strain ATCC
+          204508 / S288c) (Baker's yeast) provides a verified protein exemplar.
   edges:
   - subject: parasexuality_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: parasexuality_trait
-    description: Chromosome segregation in meiosis protein 4 (CSM4, UniProtKB:Q08955)
-      contributes to parasexuality (associated with conventional, parameiosis, boundaries).
+    description: DNA repair protein RAD51 (RAD51, UniProtKB:P25454) contributes to
+      parasexuality.
     evidence:
-    - reference: DOI:10.1038/s41467-019-12376-2
-      snippet: These results indicate that C. albicans CCL represents a 'parameiosis'
-        that blurs the conventional boundaries between mitosis and meiosis.
-      notes: Supports the functional association between Chromosome segregation in
-        meiosis protein 4 (UniProtKB:Q08955 in Saccharomyces cerevisiae (strain ATCC
-        204508 / S288c) (Baker's yeast)) and parasexuality.
+    - reference: DOI:10.1093/emboj/cdg235
+      snippet: Thus, an efficient parasexual cycle can be performed in C.albicans,
+        one that leads to the reassortment of genetic material in this organism.
+      notes: Supports the functional association between DNA repair protein RAD51
+        (UniProtKB:P25454 in Saccharomyces cerevisiae (strain ATCC 204508 / S288c)
+        (Baker's yeast)) and parasexuality.

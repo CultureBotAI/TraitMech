@@ -108,34 +108,32 @@ causal_graphs:
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
   - node_id: mazef_system_protein_component
-    label: Abortive infection protein
+    label: Endoribonuclease ToxN
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Abortive infection protein) associated with MazEF
-      system.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Endoribonuclease ToxN) associated with MazEF system.
+    grounding: InterPro:IPR025911
     gene_symbols:
-    - abi
+    - toxN
     protein_examples:
-    - uniprot_id: UniProtKB:P18024
-      protein_label: Abortive infection protein
-      gene_symbol: abi
-      taxon_id: NCBITaxon:562
-      taxon_label: Escherichia coli
+    - uniprot_id: UniProtKB:B8X8Z0
+      protein_label: Endoribonuclease ToxN
+      gene_symbol: toxN
+      taxon_id: NCBITaxon:29471
+      taxon_label: Pectobacterium atrosepticum (Erwinia carotovora subsp. atroseptica)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      entry_version: 49
+      entry_version: 47
       sequence_version: 1
-      role: Characteristic protein component (abi, Abortive infection protein) associated
-        with MazEF system in Escherichia coli.
+      role: Characteristic protein component (toxN, Endoribonuclease ToxN) associated
+        with MazEF system in Pectobacterium atrosepticum (Erwinia carotovora subsp.
+        atroseptica).
       evidence:
-      - reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC12151602/
-        snippet: direct interference, rather than abortive infection, plays the predominant
-          role in the case of MazEF
-        notes: Supports Abortive infection protein in MazEF system; UniProtKB:P18024
-          (abi, Abortive infection protein) in Escherichia coli provides a verified
-          protein exemplar.
+      - reference: PMID:40494395
+        snippet: the native presence of mazEF moderately reduced population susceptibility
+          and increased the survival of individual E. coli cells
+        notes: Supports Endoribonuclease ToxN in MazEF system; UniProtKB:B8X8Z0 (toxN,
+          Endoribonuclease ToxN) in Pectobacterium atrosepticum (Erwinia carotovora
+          subsp. atroseptica) provides a verified protein exemplar.
   edges:
   - subject: mazef_locus
     predicate: contributes to
@@ -183,14 +181,15 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: mazef_system_trait
-    description: Abortive infection protein (abi, UniProtKB:P18024) contributes to
-      MazEF system (associated with interference, predominant, infection).
+    description: Endoribonuclease ToxN (toxN, UniProtKB:B8X8Z0) contributes to MazEF
+      system.
     evidence:
-    - reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC12151602/
-      snippet: direct interference, rather than abortive infection, plays the predominant
-        role in the case of MazEF
-      notes: Supports the functional association between Abortive infection protein
-        (UniProtKB:P18024 in Escherichia coli) and MazEF system.
+    - reference: PMID:40494395
+      snippet: the native presence of mazEF moderately reduced population susceptibility
+        and increased the survival of individual E. coli cells
+      notes: Supports the functional association between Endoribonuclease ToxN (UniProtKB:B8X8Z0
+        in Pectobacterium atrosepticum (Erwinia carotovora subsp. atroseptica)) and
+        MazEF system.
 discussions:
 - discussion_id: mazef-activation-breadth-gap
   prompt: Resolve MazEF activation, direct MazF RNA targets, and RNA- versus DNA-phage
@@ -218,5 +217,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    mazef_system_protein_component with UniProtKB:P18024 (abi) exemplar.'
+    mazef_system_protein_component with UniProtKB:B8X8Z0 (toxN) exemplar.'
   llm_assisted: true

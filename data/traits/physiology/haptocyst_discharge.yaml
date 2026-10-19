@@ -78,18 +78,25 @@ curation_history:
   llm_assisted: true
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed canonical_examples status alongside NONMECHANISTIC protein exemplar
+    graph for haptocyst discharge; isolate-level canonical example remains deferred
+    pending explicit strain-level literature.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph haptocyst_discharge_graph
-    with GENE_OR_PROTEIN node haptocyst_discharge_protein_component and UniProtKB:P32323
+    with GENE_OR_PROTEIN node haptocyst_discharge_protein_component and UniProtKB:P07560
     exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: haptocyst_discharge_graph
   title: Protein component associated with haptocyst discharge
-  description: Literature-backed association between A-agglutinin anchorage subunit
-    (UniProtKB:P32323) and haptocyst discharge.
+  description: Literature-backed association between Ras-related protein SEC4 (UniProtKB:P07560)
+    and haptocyst discharge.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P32323 in Saccharomyces
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P07560 in Saccharomyces
     cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)) associated with haptocyst
     discharge while full multi-step mechanistic curation remains future work.
   nodes:
@@ -100,50 +107,48 @@ causal_graphs:
     description: A physiological phenotype in which a microbial cell releases material
       from haptocysts to the cell exterior.
   - node_id: haptocyst_discharge_protein_component
-    label: A-agglutinin anchorage subunit
+    label: Ras-related protein SEC4
     node_type: GENE_OR_PROTEIN
-    description: Protein component (A-agglutinin anchorage subunit) associated with
-      haptocyst discharge.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Ras-related protein SEC4) associated with haptocyst
+      discharge.
+    grounding: InterPro:IPR027417
     gene_symbols:
-    - AGA1
+    - SEC4
     protein_examples:
-    - uniprot_id: UniProtKB:P32323
-      protein_label: A-agglutinin anchorage subunit
-      gene_symbol: AGA1
+    - uniprot_id: UniProtKB:P07560
+      protein_label: Ras-related protein SEC4
+      gene_symbol: SEC4
       taxon_id: NCBITaxon:559292
       taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's
         yeast)
       entry_status: REVIEWED
       proteome_id: UP000002311
       retrieved_on: '2026-10-17'
-      entry_version: 142
+      entry_version: 248
       sequence_version: 1
-      role: Characteristic protein component (AGA1, A-agglutinin anchorage subunit)
-        associated with haptocyst discharge in Saccharomyces cerevisiae (strain ATCC
-        204508 / S288c) (Baker's yeast).
+      role: Characteristic protein component (SEC4, Ras-related protein SEC4) associated
+        with haptocyst discharge in Saccharomyces cerevisiae (strain ATCC 204508 /
+        S288c) (Baker's yeast).
       evidence:
       - reference: DOI:10.1515/znc-1984-7-821
         snippet: The fine structure of haptocysts, characteristic organelles of most
           suctorians, is described during the resting state and the discharge after
           contact with the prey.
-        notes: Supports A-agglutinin anchorage subunit in haptocyst discharge; UniProtKB:P32323
-          (AGA1, A-agglutinin anchorage subunit) in Saccharomyces cerevisiae (strain
-          ATCC 204508 / S288c) (Baker's yeast) provides a verified protein exemplar.
+        notes: Supports Ras-related protein SEC4 in haptocyst discharge; UniProtKB:P07560
+          (SEC4, Ras-related protein SEC4) in Saccharomyces cerevisiae (strain ATCC
+          204508 / S288c) (Baker's yeast) provides a verified protein exemplar.
   edges:
   - subject: haptocyst_discharge_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: haptocyst_discharge_trait
-    description: A-agglutinin anchorage subunit (AGA1, UniProtKB:P32323) contributes
-      to haptocyst discharge (associated with characteristic, haptocysts, organelles).
+    description: Ras-related protein SEC4 (SEC4, UniProtKB:P07560) contributes to
+      haptocyst discharge.
     evidence:
     - reference: DOI:10.1515/znc-1984-7-821
       snippet: The fine structure of haptocysts, characteristic organelles of most
         suctorians, is described during the resting state and the discharge after
         contact with the prey.
-      notes: Supports the functional association between A-agglutinin anchorage subunit
-        (UniProtKB:P32323 in Saccharomyces cerevisiae (strain ATCC 204508 / S288c)
+      notes: Supports the functional association between Ras-related protein SEC4
+        (UniProtKB:P07560 in Saccharomyces cerevisiae (strain ATCC 204508 / S288c)
         (Baker's yeast)) and haptocyst discharge.

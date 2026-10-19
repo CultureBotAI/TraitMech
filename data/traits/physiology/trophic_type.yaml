@@ -121,37 +121,38 @@ causal_graphs:
     description: Oxidation of molecular hydrogen by [NiFe]-hydrogenases as an inorganic
       electron donor (hydrogen lithotrophy).
   - node_id: trophic_type_protein_component
-    label: Ribulose bisphosphate carboxylase
+    label: Ribulose bisphosphate carboxylase large chain
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Ribulose bisphosphate carboxylase) associated
-      with trophic type.
+    description: Protein component (Ribulose bisphosphate carboxylase large chain)
+      associated with trophic type.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - cbbM
+    - cbbL
     protein_examples:
-    - uniprot_id: UniProtKB:Q31IK3
-      protein_label: Ribulose bisphosphate carboxylase
-      gene_symbol: cbbM
-      taxon_id: NCBITaxon:317025
-      taxon_label: Hydrogenovibrio crunogenus (strain DSM 25203 / XCL-2) (Thiomicrospira
-        crunogena)
+    - uniprot_id: UniProtKB:Q82TG6
+      protein_label: Ribulose bisphosphate carboxylase large chain
+      gene_symbol: cbbL
+      taxon_id: NCBITaxon:228410
+      taxon_label: Nitrosomonas europaea (strain ATCC 19718 / CIP 103999 / KCTC 2705
+        / NBRC 14298)
       entry_status: REVIEWED
+      proteome_id: UP000001416
       retrieved_on: '2026-10-17'
-      entry_version: 111
+      entry_version: 121
       sequence_version: 1
-      role: Characteristic protein component (cbbM, Ribulose bisphosphate carboxylase)
-        associated with trophic type in Hydrogenovibrio crunogenus (strain DSM 25203
-        / XCL-2) (Thiomicrospira crunogena).
+      role: Characteristic protein component (cbbL, Ribulose bisphosphate carboxylase
+        large chain) associated with trophic type in Nitrosomonas europaea (strain
+        ATCC 19718 / CIP 103999 / KCTC 2705 / NBRC 14298).
       evidence:
       - reference: DOI:10.1128/AEM.00599-24
         snippet: These terminal oxidases have high affinity for oxygen and therefore
           are widely understood to be used under microaerobic conditions
-        notes: Supports Ribulose bisphosphate carboxylase in trophic type; UniProtKB:Q31IK3
-          (cbbM, Ribulose bisphosphate carboxylase) in Hydrogenovibrio crunogenus
-          (strain DSM 25203 / XCL-2) (Thiomicrospira crunogena) provides a verified
-          protein exemplar.
+        notes: Supports Ribulose bisphosphate carboxylase large chain in trophic type;
+          UniProtKB:Q82TG6 (cbbL, Ribulose bisphosphate carboxylase large chain) in
+          Nitrosomonas europaea (strain ATCC 19718 / CIP 103999 / KCTC 2705 / NBRC
+          14298) provides a verified protein exemplar.
   edges:
   - subject: carbon_source_use
     predicate: causes
@@ -283,15 +284,15 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: trophic_type_trait
-    description: Ribulose bisphosphate carboxylase (cbbM, UniProtKB:Q31IK3) contributes
-      to trophic type (associated with microaerobic, conditions, understood).
+    description: Ribulose bisphosphate carboxylase large chain (cbbL, UniProtKB:Q82TG6)
+      contributes to trophic type.
     evidence:
     - reference: DOI:10.1128/AEM.00599-24
       snippet: These terminal oxidases have high affinity for oxygen and therefore
         are widely understood to be used under microaerobic conditions
       notes: Supports the functional association between Ribulose bisphosphate carboxylase
-        (UniProtKB:Q31IK3 in Hydrogenovibrio crunogenus (strain DSM 25203 / XCL-2)
-        (Thiomicrospira crunogena)) and trophic type.
+        large chain (UniProtKB:Q82TG6 in Nitrosomonas europaea (strain ATCC 19718
+        / CIP 103999 / KCTC 2705 / NBRC 14298)) and trophic type.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.866871+00:00'
   curator: seed_from_metpo
@@ -355,5 +356,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    trophic_type_protein_component with UniProtKB:Q31IK3 (cbbM) exemplar.'
+    trophic_type_protein_component with UniProtKB:Q82TG6 (cbbL) exemplar.'
   llm_assisted: true

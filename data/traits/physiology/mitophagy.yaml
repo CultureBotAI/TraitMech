@@ -102,17 +102,24 @@ curation_history:
   llm_assisted: true
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed canonical_examples status alongside NONMECHANISTIC protein exemplar
+    graph for mitophagy; isolate-level canonical example remains deferred pending
+    explicit strain-level literature.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph mitophagy_graph
-    with GENE_OR_PROTEIN node mitophagy_protein_component and UniProtKB:P39968 exemplar.'
+    with GENE_OR_PROTEIN node mitophagy_protein_component and UniProtKB:P40458 exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: mitophagy_graph
   title: Protein component associated with mitophagy
-  description: Literature-backed association between Vacuolar protein 8 (UniProtKB:P39968)
-    and mitophagy.
+  description: Literature-backed association between Autophagy-related protein 32
+    (UniProtKB:P40458) and mitophagy.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P39968 in Saccharomyces
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P40458 in Saccharomyces
     cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)) associated with mitophagy
     while full multi-step mechanistic curation remains future work.
   nodes:
@@ -123,47 +130,46 @@ causal_graphs:
     description: An autophagy phenotype in which a microbial cell selectively degrades
       its mitochondria by delivering them to lysosomal or vacuolar compartments.
   - node_id: mitophagy_protein_component
-    label: Vacuolar protein 8
+    label: Autophagy-related protein 32
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Vacuolar protein 8) associated with mitophagy.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Autophagy-related protein 32) associated with
+      mitophagy.
+    grounding: InterPro:IPR063962
     gene_symbols:
-    - VAC8
+    - ATG32
     protein_examples:
-    - uniprot_id: UniProtKB:P39968
-      protein_label: Vacuolar protein 8
-      gene_symbol: VAC8
+    - uniprot_id: UniProtKB:P40458
+      protein_label: Autophagy-related protein 32
+      gene_symbol: ATG32
       taxon_id: NCBITaxon:559292
       taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's
         yeast)
       entry_status: REVIEWED
       proteome_id: UP000002311
       retrieved_on: '2026-10-17'
-      entry_version: 206
-      sequence_version: 3
-      role: Characteristic protein component (VAC8, Vacuolar protein 8) associated
-        with mitophagy in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's
-        yeast).
+      entry_version: 160
+      sequence_version: 1
+      role: Characteristic protein component (ATG32, Autophagy-related protein 32)
+        associated with mitophagy in Saccharomyces cerevisiae (strain ATCC 204508
+        / S288c) (Baker's yeast).
       evidence:
       - reference: DOI:10.1016/j.devcel.2009.06.013
         snippet: We propose that Atg32 acts as a mitophagy-specific receptor and regulates
           selective degradation of mitochondria.
-        notes: Supports Vacuolar protein 8 in mitophagy; UniProtKB:P39968 (VAC8, Vacuolar
-          protein 8) in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's
-          yeast) provides a verified protein exemplar.
+        notes: Supports Autophagy-related protein 32 in mitophagy; UniProtKB:P40458
+          (ATG32, Autophagy-related protein 32) in Saccharomyces cerevisiae (strain
+          ATCC 204508 / S288c) (Baker's yeast) provides a verified protein exemplar.
   edges:
   - subject: mitophagy_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: mitophagy_trait
-    description: Vacuolar protein 8 (VAC8, UniProtKB:P39968) contributes to mitophagy
-      (associated with mitochondria, mitophagy, regulates).
+    description: Autophagy-related protein 32 (ATG32, UniProtKB:P40458) contributes
+      to mitophagy.
     evidence:
-    - reference: DOI:10.1016/j.devcel.2009.06.013
-      snippet: We propose that Atg32 acts as a mitophagy-specific receptor and regulates
-        selective degradation of mitochondria.
-      notes: Supports the functional association between Vacuolar protein 8 (UniProtKB:P39968
-        in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast))
-        and mitophagy.
+    - reference: DOI:10.4161/auto.4034
+      snippet: The observation of mitochondria degradation showed that both a selective
+        process and a nonselective process of mitochondria autophagy occurred successively.
+      notes: Supports the functional association between Autophagy-related protein
+        32 (UniProtKB:P40458 in Saccharomyces cerevisiae (strain ATCC 204508 / S288c)
+        (Baker's yeast)) and mitophagy.

@@ -80,36 +80,35 @@ causal_graphs:
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
   - node_id: gaps1_system_protein_component
-    label: Putative prophage capsid protein XkdG
+    label: Endonuclease GajA
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Putative prophage capsid protein XkdG) associated
-      with GAPS1 system.
+    description: Protein component (Endonuclease GajA) associated with GAPS1 system.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - xkdG
+    - gajA
     protein_examples:
-    - uniprot_id: UniProtKB:P54327
-      protein_label: Putative prophage capsid protein XkdG
-      gene_symbol: xkdG
-      taxon_id: NCBITaxon:224308
-      taxon_label: Bacillus subtilis (strain 168)
+    - uniprot_id: UniProtKB:P0DW47
+      protein_label: Endonuclease GajA
+      gene_symbol: gajA
+      taxon_id: NCBITaxon:1053212
+      taxon_label: Bacillus cereus (strain HuB5-5)
       entry_status: REVIEWED
-      proteome_id: UP000001570
       retrieved_on: '2026-10-17'
-      entry_version: 111
+      entry_version: 12
       sequence_version: 1
-      role: Characteristic protein component (xkdG, Putative prophage capsid protein
-        XkdG) associated with GAPS1 system in Bacillus subtilis (strain 168).
+      role: Characteristic protein component (gajA, Endonuclease GajA) associated
+        with GAPS1 system in Bacillus cereus (strain HuB5-5).
       evidence:
-      - reference: DOI:10.1038/s41564-024-01840-5
-        snippet: We reveal four anti-phage defence systems encoded within GMT islands
-          and further characterize one system, GAPS1, showing it is triggered by a
-          phage capsid protein to induce cell dormancy
-        notes: Supports Putative prophage capsid protein XkdG in GAPS1 system; UniProtKB:P54327
-          (xkdG, Putative prophage capsid protein XkdG) in Bacillus subtilis (strain
-          168) provides a verified protein exemplar.
+      - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+        snippet: CARD_NLR CARD_NLR_GasderMIN 1 3 GasderMIN__bGSDM CARD_NLR__CARD_Protease,
+          CARD_NLR__NLR_new, CARD_NLR__Trypsin CARD_NLR__Endonuclease, CARD_NLR__Endonuclease_new,
+          CARD_NLR__Phospho, CARD_NLR__Phospho_Trypsin, CARD_NLR__Subtilase, CARD_NLR__Subtilase_long_new,
+          CARD_NLR__Subtilase_small_new, CARD_NLR__Trypsin_Phospho, CARD_NLR__Trypsine_Endonuclease_new
+        notes: Supports Endonuclease GajA in GAPS1 system; UniProtKB:P0DW47 (gajA,
+          Endonuclease GajA) in Bacillus cereus (strain HuB5-5) provides a verified
+          protein exemplar.
   edges:
   - subject: gaps1_locus
     predicate: contributes to
@@ -168,15 +167,15 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: gaps1_system_trait
-    description: Putative prophage capsid protein XkdG (xkdG, UniProtKB:P54327) contributes
-      to GAPS1 system (associated with pseudomonas, aeruginosa, antitoxin).
+    description: Endonuclease GajA (gajA, UniProtKB:P0DW47) contributes to GAPS1 system.
     evidence:
-    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
-      snippet: PfiAT | 10\.1111/1751-7915\.13570 | Prophage encoding toxin/antitoxin
-        system PfiT/PfiA inhibits Pf4 production in Pseudomonas aeruginosa
-      notes: Supports the functional association between Putative prophage capsid
-        protein XkdG (UniProtKB:P54327 in Bacillus subtilis (strain 168)) and GAPS1
-        system.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
+      snippet: CARD_NLR CARD_NLR_GasderMIN 1 3 GasderMIN__bGSDM CARD_NLR__CARD_Protease,
+        CARD_NLR__NLR_new, CARD_NLR__Trypsin CARD_NLR__Endonuclease, CARD_NLR__Endonuclease_new,
+        CARD_NLR__Phospho, CARD_NLR__Phospho_Trypsin, CARD_NLR__Subtilase, CARD_NLR__Subtilase_long_new,
+        CARD_NLR__Subtilase_small_new, CARD_NLR__Trypsin_Phospho, CARD_NLR__Trypsine_Endonuclease_new
+      notes: Supports the functional association between Endonuclease GajA (UniProtKB:P0DW47
+        in Bacillus cereus (strain HuB5-5)) and GAPS1 system.
 discussions:
 - discussion_id: gaps1-trigger-sibling-gap
   prompt: Resolve GAPS1 component activity and natural-host exemplars before minting
@@ -235,5 +234,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    gaps1_system_protein_component with UniProtKB:P54327 (xkdG) exemplar.'
+    gaps1_system_protein_component with UniProtKB:P0DW47 (gajA) exemplar.'
   llm_assisted: true

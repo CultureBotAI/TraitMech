@@ -112,7 +112,8 @@ causal_graphs:
   - node_id: indole_test_negative_protein_component
     label: Tryptophanase
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Tryptophanase) associated with indole test negative.
+    description: Reference pathway protein component (Tryptophanase) whose absence
+      or lack of activity characterizes indole test negative.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
@@ -129,8 +130,8 @@ causal_graphs:
       retrieved_on: '2026-10-17'
       entry_version: 163
       sequence_version: 1
-      role: Characteristic protein component (tnaA, Tryptophanase) associated with
-        indole test negative in Escherichia coli (strain K12).
+      role: Reference pathway protein (tnaA, Tryptophanase) whose absence or lack
+        of activity in Escherichia coli (strain K12) characterizes indole test negative.
       evidence:
       - reference: DOI:10.1128/AEM.02787-15
         snippet: enterotoxigenic Escherichia coli strain H10407 produces 3.3 ± 0.22
@@ -143,8 +144,8 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: indole_test_negative_trait
-    description: Tryptophanase (tnaA, UniProtKB:P0A853) contributes to indole test
-      negative (associated with enterotoxigenic, escherichia, tryptophan).
+    description: Absence or inactivity of Tryptophanase (tnaA, UniProtKB:P0A853) in
+      the reference pathway underlies the indole test negative phenotype.
     evidence:
     - reference: DOI:10.1128/AEM.02787-15
       snippet: enterotoxigenic Escherichia coli strain H10407 produces 3.3 ± 0.22

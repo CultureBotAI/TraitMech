@@ -129,21 +129,27 @@ curation_history:
   llm_assisted: true
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed canonical_examples status alongside NONMECHANISTIC protein exemplar
+    graph for enhanced transcriptional reactivation memory; isolate-level canonical
+    example remains deferred pending explicit strain-level literature.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph enhanced_transcriptional_reactivation_memory_graph
     with GENE_OR_PROTEIN node enhanced_transcriptional_reactivation_memory_protein_component
-    and UniProtKB:Q12510 exemplar.'
+    and UniProtKB:B5BC50 exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: enhanced_transcriptional_reactivation_memory_graph
   title: Protein component associated with enhanced transcriptional reactivation memory
-  description: Literature-backed association between DNA damage-binding protein CMR1
-    (UniProtKB:Q12510) and enhanced transcriptional reactivation memory.
+  description: Literature-backed association between Galactokinase (UniProtKB:B5BC50)
+    and enhanced transcriptional reactivation memory.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q12510 in Saccharomyces
-    cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)) associated with enhanced
-    transcriptional reactivation memory while full multi-step mechanistic curation
-    remains future work.
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:B5BC50 in Salmonella
+    paratyphi A (strain AKU_12601)) associated with enhanced transcriptional reactivation
+    memory while full multi-step mechanistic curation remains future work.
   nodes:
   - node_id: enhanced_transcriptional_reactivation_memory_trait
     label: enhanced transcriptional reactivation memory
@@ -153,48 +159,44 @@ causal_graphs:
       a non-genetic state from prior inducing conditions that enhances the rate or
       magnitude of later transcriptional activation after intervening repression.
   - node_id: enhanced_transcriptional_reactivation_memory_protein_component
-    label: DNA damage-binding protein CMR1
+    label: Galactokinase
     node_type: GENE_OR_PROTEIN
-    description: Protein component (DNA damage-binding protein CMR1) associated with
-      enhanced transcriptional reactivation memory.
+    description: Protein component (Galactokinase) associated with enhanced transcriptional
+      reactivation memory.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - CMR1
+    - galK
     protein_examples:
-    - uniprot_id: UniProtKB:Q12510
-      protein_label: DNA damage-binding protein CMR1
-      gene_symbol: CMR1
-      taxon_id: NCBITaxon:559292
-      taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's
-        yeast)
+    - uniprot_id: UniProtKB:B5BC50
+      protein_label: Galactokinase
+      gene_symbol: galK
+      taxon_id: NCBITaxon:554290
+      taxon_label: Salmonella paratyphi A (strain AKU_12601)
       entry_status: REVIEWED
-      proteome_id: UP000002311
       retrieved_on: '2026-10-17'
-      entry_version: 191
+      entry_version: 84
       sequence_version: 1
-      role: Characteristic protein component (CMR1, DNA damage-binding protein CMR1)
-        associated with enhanced transcriptional reactivation memory in Saccharomyces
-        cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast).
+      role: Characteristic protein component (galK, Galactokinase) associated with
+        enhanced transcriptional reactivation memory in Salmonella paratyphi A (strain
+        AKU_12601).
       evidence:
       - reference: DOI:10.7554/eLife.77646
         snippet: Upon Anchor Away of Opi1, reactivation was faster than activation
-        notes: Supports DNA damage-binding protein CMR1 in enhanced transcriptional
-          reactivation memory; UniProtKB:Q12510 (CMR1, DNA damage-binding protein
-          CMR1) in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's
-          yeast) provides a verified protein exemplar.
+        notes: Supports Galactokinase in enhanced transcriptional reactivation memory;
+          UniProtKB:B5BC50 (galK, Galactokinase) in Salmonella paratyphi A (strain
+          AKU_12601) provides a verified protein exemplar.
   edges:
   - subject: enhanced_transcriptional_reactivation_memory_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: enhanced_transcriptional_reactivation_memory_trait
-    description: DNA damage-binding protein CMR1 (CMR1, UniProtKB:Q12510) contributes
-      to enhanced transcriptional reactivation memory (associated with reactivation,
-      activation, anchor).
+    description: Galactokinase (galK, UniProtKB:B5BC50) contributes to enhanced transcriptional
+      reactivation memory.
     evidence:
     - reference: DOI:10.7554/eLife.77646
       snippet: Upon Anchor Away of Opi1, reactivation was faster than activation
-      notes: Supports the functional association between DNA damage-binding protein
-        CMR1 (UniProtKB:Q12510 in Saccharomyces cerevisiae (strain ATCC 204508 / S288c)
-        (Baker's yeast)) and enhanced transcriptional reactivation memory.
+      notes: Supports the functional association between Galactokinase (UniProtKB:B5BC50
+        in Salmonella paratyphi A (strain AKU_12601)) and enhanced transcriptional
+        reactivation memory.

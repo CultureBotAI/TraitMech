@@ -84,34 +84,33 @@ causal_graphs:
     grounding: traitmech:000214
     description: Possession of a genome-encoded abortive-infection phage-defense system.
   - node_id: abip2_system_protein_component
-    label: Abortive infection protein
+    label: Abortive phage resistance protein AbiC
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Abortive infection protein) associated with AbiP2
-      system.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Abortive phage resistance protein AbiC) associated
+      with AbiP2 system.
+    grounding: InterPro:IPR031709
     gene_symbols:
-    - abi
+    - abiC
     protein_examples:
-    - uniprot_id: UniProtKB:P18024
-      protein_label: Abortive infection protein
-      gene_symbol: abi
-      taxon_id: NCBITaxon:562
-      taxon_label: Escherichia coli
+    - uniprot_id: UniProtKB:Q01457
+      protein_label: Abortive phage resistance protein AbiC
+      gene_symbol: abiC
+      taxon_id: NCBITaxon:1360
+      taxon_label: Lactococcus lactis subsp. lactis (Streptococcus lactis)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      entry_version: 49
+      entry_version: 35
       sequence_version: 1
-      role: Characteristic protein component (abi, Abortive infection protein) associated
-        with AbiP2 system in Escherichia coli.
+      role: Characteristic protein component (abiC, Abortive phage resistance protein
+        AbiC) associated with AbiP2 system in Lactococcus lactis subsp. lactis (Streptococcus
+        lactis).
       evidence:
       - reference: DOI:10.1093/femsre/fuag009
         snippet: further research is needed to clarify the mechanism of AbiN and if
           it functions via abortive infection
-        notes: Supports Abortive infection protein in AbiP2 system; UniProtKB:P18024
-          (abi, Abortive infection protein) in Escherichia coli provides a verified
-          protein exemplar.
+        notes: Supports Abortive phage resistance protein AbiC in AbiP2 system; UniProtKB:Q01457
+          (abiC, Abortive phage resistance protein AbiC) in Lactococcus lactis subsp.
+          lactis (Streptococcus lactis) provides a verified protein exemplar.
   edges:
   - subject: abip2_locus
     predicate: contributes to
@@ -167,14 +166,15 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: abip2_system_trait
-    description: Abortive infection protein (abi, UniProtKB:P18024) contributes to
-      AbiP2 system (associated with functions, infection, abortive).
+    description: Abortive phage resistance protein AbiC (abiC, UniProtKB:Q01457) contributes
+      to AbiP2 system.
     evidence:
     - reference: DOI:10.1093/femsre/fuag009
       snippet: further research is needed to clarify the mechanism of AbiN and if
         it functions via abortive infection
-      notes: Supports the functional association between Abortive infection protein
-        (UniProtKB:P18024 in Escherichia coli) and AbiP2 system.
+      notes: Supports the functional association between Abortive phage resistance
+        protein AbiC (UniProtKB:Q01457 in Lactococcus lactis subsp. lactis (Streptococcus
+        lactis)) and AbiP2 system.
 discussions:
 - discussion_id: abip2-ug-abi-mechanism-gap
   prompt: Resolve the AbiP2 natural locus breadth, phage trigger, protein-primed polymerase
@@ -264,5 +264,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    abip2_system_protein_component with UniProtKB:P18024 (abi) exemplar.'
+    abip2_system_protein_component with UniProtKB:Q01457 (abiC) exemplar.'
   llm_assisted: true

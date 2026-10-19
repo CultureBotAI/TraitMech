@@ -110,8 +110,7 @@ causal_graphs:
     predicate_id: RO:0002326
     object: lysine_decarboxylase_activity_trait
     description: Inducible lysine decarboxylase (cadA, UniProtKB:P0A9H3) contributes
-      to lysine decarboxylase activity (associated with fermentation, unexpectedly,
-      cadaverine).
+      to lysine decarboxylase activity.
     evidence:
     - reference: DOI:10.1128/jb.01306-06
       snippet: Unexpectedly, the tolerance of P(i)-starved cells to fermentation acids

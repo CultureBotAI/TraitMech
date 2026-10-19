@@ -83,37 +83,34 @@ causal_graphs:
     description: Paired methyltransferase and restriction-endonuclease system for
       self/non-self DNA discrimination.
   - node_id: phage_defense_system_protein_component
-    label: Adenine-specific methyltransferase PglX
+    label: Endonuclease GajA
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Adenine-specific methyltransferase PglX) associated
-      with phage defense system.
+    description: Protein component (Endonuclease GajA) associated with phage defense
+      system.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - pglX
+    - gajA
     protein_examples:
-    - uniprot_id: UniProtKB:Q8CJM2
-      protein_label: Adenine-specific methyltransferase PglX
-      gene_symbol: pglX
-      taxon_id: NCBITaxon:100226
-      taxon_label: Streptomyces coelicolor (strain ATCC BAA-471 / A3(2) / M145)
+    - uniprot_id: UniProtKB:P0DW47
+      protein_label: Endonuclease GajA
+      gene_symbol: gajA
+      taxon_id: NCBITaxon:1053212
+      taxon_label: Bacillus cereus (strain HuB5-5)
       entry_status: REVIEWED
-      proteome_id: UP000001973
       retrieved_on: '2026-10-17'
-      entry_version: 102
+      entry_version: 12
       sequence_version: 1
-      role: Characteristic protein component (pglX, Adenine-specific methyltransferase
-        PglX) associated with phage defense system in Streptomyces coelicolor (strain
-        ATCC BAA-471 / A3(2) / M145).
+      role: Characteristic protein component (gajA, Endonuclease GajA) associated
+        with phage defense system in Bacillus cereus (strain HuB5-5).
       evidence:
       - reference: DOI:10.1038/s41586-019-1894-8
         snippet: Here we review the spectrum of anti-phage systems and highlight their
           evasion by bacteriophages
-        notes: Supports Adenine-specific methyltransferase PglX in phage defense system;
-          UniProtKB:Q8CJM2 (pglX, Adenine-specific methyltransferase PglX) in Streptomyces
-          coelicolor (strain ATCC BAA-471 / A3(2) / M145) provides a verified protein
-          exemplar.
+        notes: Supports Endonuclease GajA in phage defense system; UniProtKB:P0DW47
+          (gajA, Endonuclease GajA) in Bacillus cereus (strain HuB5-5) provides a
+          verified protein exemplar.
   edges:
   - subject: bacteriophage_pressure
     predicate: selects for
@@ -151,16 +148,14 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: phage_defense_system_trait
-    description: Adenine-specific methyltransferase PglX (pglX, UniProtKB:Q8CJM2)
-      contributes to phage defense system (associated with bacteriophages, highlight,
-      spectrum).
+    description: Endonuclease GajA (gajA, UniProtKB:P0DW47) contributes to phage defense
+      system.
     evidence:
     - reference: DOI:10.1038/s41586-019-1894-8
       snippet: Here we review the spectrum of anti-phage systems and highlight their
         evasion by bacteriophages
-      notes: Supports the functional association between Adenine-specific methyltransferase
-        PglX (UniProtKB:Q8CJM2 in Streptomyces coelicolor (strain ATCC BAA-471 / A3(2)
-        / M145)) and phage defense system.
+      notes: Supports the functional association between Endonuclease GajA (UniProtKB:P0DW47
+        in Bacillus cereus (strain HuB5-5)) and phage defense system.
 discussions:
 - discussion_id: phage-defense-system-xref-gap
   prompt: Resolve exact ontology xrefs for organism-level phage defense system possession
@@ -185,5 +180,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    phage_defense_system_protein_component with UniProtKB:Q8CJM2 (pglX) exemplar.'
+    phage_defense_system_protein_component with UniProtKB:P0DW47 (gajA) exemplar.'
   llm_assisted: true

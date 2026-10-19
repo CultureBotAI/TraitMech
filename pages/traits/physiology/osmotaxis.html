@@ -69,9 +69,9 @@
 
     <div class="card causal-graph-card">
       <h2>Protein component associated with osmotaxis</h2>
-      <p class="meta">Literature-backed association between Protein-glutamate methylesterase/protein-glutamine glutaminase (UniProtKB:P07330) and osmotaxis.</p>
+      <p class="meta">Literature-backed association between Methyl-accepting chemotaxis protein II (UniProtKB:P07017) and osmotaxis.</p>
 
-      <p class="graph-scope"><code>NONMECHANISTIC</code> · Captures a source-backed protein exemplar (UniProtKB:P07330 in Escherichia coli (strain K12)) associated with osmotaxis while full multi-step mechanistic curation remains future work.</p>
+      <p class="graph-scope"><code>NONMECHANISTIC</code> · Captures a source-backed protein exemplar (UniProtKB:P07017 in Escherichia coli (strain K12)) associated with osmotaxis while full multi-step mechanistic curation remains future work.</p>
 
 
       <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
@@ -90,17 +90,17 @@
         <ul>
 
           <li id="pathograph-1-edge-1">
-            <strong>Protein-glutamate methylesterase/protein-glutamine glutaminase</strong>
+            <strong>Methyl-accepting chemotaxis protein II</strong>
             <span class="edge-predicate">contributes to</span>
             <strong>osmotaxis</strong>
             <code>RO:0002326</code>
-            <p>Protein-glutamate methylesterase/protein-glutamine glutaminase (cheB, UniProtKB:P07330) contributes to osmotaxis (associated with concentrations, promastigotes, substances).</p>
+            <p>Methyl-accepting chemotaxis protein II (tar, UniProtKB:P07017) contributes to osmotaxis.</p>
             <ul>
 
               <li>
                 <a href="https://doi.org/10.1016/s0014-4894(03)00031-6" rel="nofollow noreferrer"><code>DOI:10.1016/s0014-4894(03)00031-6</code></a>
                 <span class="evidence-snippet">We find that promastigotes move towards concentrations of all substances tested and that this taxis requires the presence of an osmotic gradient.</span>
-                <span class="meta">Supports the functional association between Protein-glutamate methylesterase/protein-glutamine glutaminase (UniProtKB:P07330 in Escherichia coli (strain K12)) and osmotaxis.</span>
+                <span class="meta">Supports the functional association between Methyl-accepting chemotaxis protein II (UniProtKB:P07017 in Escherichia coli (strain K12)) and osmotaxis.</span>
               </li>
 
             </ul>
@@ -121,11 +121,11 @@
             <tbody>
 
               <tr>
-                <td>Protein-glutamate methylesterase/protein-glutamine glutaminase</td>
+                <td>Methyl-accepting chemotaxis protein II</td>
                 <td>
 
-                  <a href="https://www.uniprot.org/uniprotkb/P07330/entry" rel="nofollow noreferrer"><code>UniProtKB:P07330</code></a>
-                  <br>Protein-glutamate methylesterase/protein-glutamine glutaminase <span class="meta">(cheB)</span>
+                  <a href="https://www.uniprot.org/uniprotkb/P07017/entry" rel="nofollow noreferrer"><code>UniProtKB:P07017</code></a>
+                  <br>Methyl-accepting chemotaxis protein II <span class="meta">(tar)</span>
                 </td>
                 <td>
 
@@ -134,16 +134,16 @@
                 </td>
                 <td>
                   <code>REVIEWED</code><br>
-                  <span class="meta">retrieved 2026-10-17 · entry v189 · sequence v3</span>
+                  <span class="meta">retrieved 2026-10-17 · entry v208 · sequence v2</span>
                 </td>
                 <td>
-                  <p>Characteristic protein component (cheB, Protein-glutamate methylesterase/protein-glutamine glutaminase) associated with osmotaxis in Escherichia coli (strain K12).</p>
+                  <p>Characteristic protein component (tar, Methyl-accepting chemotaxis protein II) associated with osmotaxis in Escherichia coli (strain K12).</p>
                   <ul>
 
                     <li>
                       <a href="https://doi.org/10.1016/s0014-4894(03)00031-6" rel="nofollow noreferrer"><code>DOI:10.1016/s0014-4894(03)00031-6</code></a>
                       <span class="evidence-snippet">We find that promastigotes move towards concentrations of all substances tested and that this taxis requires the presence of an osmotic gradient.</span>
-                      <span class="meta">Supports Protein-glutamate methylesterase/protein-glutamine glutaminase in osmotaxis; UniProtKB:P07330 (cheB, Protein-glutamate methylesterase/protein-glutamine glutaminase) in Escherichia coli (strain K12) provides a verified protein exemplar.</span>
+                      <span class="meta">Supports Methyl-accepting chemotaxis protein II in osmotaxis; UniProtKB:P07017 (tar, Methyl-accepting chemotaxis protein II) in Escherichia coli (strain K12) provides a verified protein exemplar.</span>
                     </li>
 
                   </ul>
@@ -292,8 +292,14 @@
 
         <li>
           <time>2026-10-17T09:00:00Z</time> ·
+          <strong>REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP</strong> · codex
+          <p class="changes">Reviewed canonical_examples status alongside NONMECHANISTIC protein exemplar graph for osmotaxis; isolate-level canonical example remains deferred pending explicit strain-level literature.</p>
+        </li>
+
+        <li>
+          <time>2026-10-17T09:00:00Z</time> ·
           <strong>CURATE_PROTEIN_TAXON_EXAMPLE</strong> · codex
-          <p class="changes">Curated verified UniProtKB protein_examples: added causal graph osmotaxis_graph with GENE_OR_PROTEIN node osmotaxis_protein_component and UniProtKB:P07330 exemplar.</p>
+          <p class="changes">Curated verified UniProtKB protein_examples: added causal graph osmotaxis_graph with GENE_OR_PROTEIN node osmotaxis_protein_component and UniProtKB:P07017 exemplar.</p>
         </li>
 
       </ol>
@@ -672,7 +678,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Literature-backed association between Protein-glutamate methylesterase/protein-glutamine glutaminase (UniProtKB:P07330) and osmotaxis.", "edges": [{"description": "Protein-glutamate methylesterase/protein-glutamine glutaminase (cheB, UniProtKB:P07330) contributes to osmotaxis (associated with concentrations, promastigotes, substances).", "evidence": [{"notes": "Supports the functional association between Protein-glutamate methylesterase/protein-glutamine glutaminase (UniProtKB:P07330 in Escherichia coli (strain K12)) and osmotaxis.", "reference": "DOI:10.1016/s0014-4894(03)00031-6", "snippet": "We find that promastigotes move towards concentrations of all substances tested and that this taxis requires the presence of an osmotic gradient."}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "osmotaxis_protein_component", "target": "osmotaxis_trait"}], "evidence_rows": [{"description": "Protein-glutamate methylesterase/protein-glutamine glutaminase (cheB, UniProtKB:P07330) contributes to osmotaxis (associated with concentrations, promastigotes, substances).", "edge_id": "edge-1", "evidence": [{"notes": "Supports the functional association between Protein-glutamate methylesterase/protein-glutamine glutaminase (UniProtKB:P07330 in Escherichia coli (strain K12)) and osmotaxis.", "reference": "DOI:10.1016/s0014-4894(03)00031-6", "snippet": "We find that promastigotes move towards concentrations of all substances tested and that this taxis requires the presence of an osmotic gradient."}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Protein-glutamate methylesterase/protein-glutamine glutaminase", "target": "osmotaxis"}], "graph_id": "osmotaxis_graph", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Protein component (Protein-glutamate methylesterase/protein-glutamine glutaminase) associated with osmotaxis.", "grounding": null, "id": "osmotaxis_protein_component", "is_orphan": false, "label": "Protein-glutamate methylesterase/protein-glutamine glutaminase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 189, "evidence": [{"notes": "Supports Protein-glutamate methylesterase/protein-glutamine glutaminase in osmotaxis; UniProtKB:P07330 (cheB, Protein-glutamate methylesterase/protein-glutamine glutaminase) in Escherichia coli (strain K12) provides a verified protein exemplar.", "reference": "DOI:10.1016/s0014-4894(03)00031-6", "snippet": "We find that promastigotes move towards concentrations of all substances tested and that this taxis requires the presence of an osmotic gradient."}], "gene_symbol": "cheB", "protein_label": "Protein-glutamate methylesterase/protein-glutamine glutaminase", "proteome_id": "UP000000625", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (cheB, Protein-glutamate methylesterase/protein-glutamine glutaminase) associated with osmotaxis in Escherichia coli (strain K12).", "sequence_version": 3, "taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli (strain K12)", "uniprot_id": "UniProtKB:P07330"}], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "A motile phenotype in which active locomotion produces net migration in response to a spatial gradient in external osmotic conditions.", "grounding": "traitmech:000592", "id": "osmotaxis_trait", "is_orphan": false, "label": "osmotaxis", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 189, "evidence": [{"notes": "Supports Protein-glutamate methylesterase/protein-glutamine glutaminase in osmotaxis; UniProtKB:P07330 (cheB, Protein-glutamate methylesterase/protein-glutamine glutaminase) in Escherichia coli (strain K12) provides a verified protein exemplar.", "reference": "DOI:10.1016/s0014-4894(03)00031-6", "snippet": "We find that promastigotes move towards concentrations of all substances tested and that this taxis requires the presence of an osmotic gradient."}], "gene_symbol": "cheB", "node_id": "osmotaxis_protein_component", "node_label": "Protein-glutamate methylesterase/protein-glutamine glutaminase", "protein_label": "Protein-glutamate methylesterase/protein-glutamine glutaminase", "proteome_id": "UP000000625", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (cheB, Protein-glutamate methylesterase/protein-glutamine glutaminase) associated with osmotaxis in Escherichia coli (strain K12).", "sequence_version": 3, "taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli (strain K12)", "uniprot_id": "UniProtKB:P07330"}], "scope_notes": "Captures a source-backed protein exemplar (UniProtKB:P07330 in Escherichia coli (strain K12)) associated with osmotaxis while full multi-step mechanistic curation remains future work.", "scope_status": "NONMECHANISTIC", "title": "Protein component associated with osmotaxis"}];
+  var graphs = [{"description": "Literature-backed association between Methyl-accepting chemotaxis protein II (UniProtKB:P07017) and osmotaxis.", "edges": [{"description": "Methyl-accepting chemotaxis protein II (tar, UniProtKB:P07017) contributes to osmotaxis.", "evidence": [{"notes": "Supports the functional association between Methyl-accepting chemotaxis protein II (UniProtKB:P07017 in Escherichia coli (strain K12)) and osmotaxis.", "reference": "DOI:10.1016/s0014-4894(03)00031-6", "snippet": "We find that promastigotes move towards concentrations of all substances tested and that this taxis requires the presence of an osmotic gradient."}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "osmotaxis_protein_component", "target": "osmotaxis_trait"}], "evidence_rows": [{"description": "Methyl-accepting chemotaxis protein II (tar, UniProtKB:P07017) contributes to osmotaxis.", "edge_id": "edge-1", "evidence": [{"notes": "Supports the functional association between Methyl-accepting chemotaxis protein II (UniProtKB:P07017 in Escherichia coli (strain K12)) and osmotaxis.", "reference": "DOI:10.1016/s0014-4894(03)00031-6", "snippet": "We find that promastigotes move towards concentrations of all substances tested and that this taxis requires the presence of an osmotic gradient."}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Methyl-accepting chemotaxis protein II", "target": "osmotaxis"}], "graph_id": "osmotaxis_graph", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Protein component (Methyl-accepting chemotaxis protein II) associated with osmotaxis.", "grounding": null, "id": "osmotaxis_protein_component", "is_orphan": false, "label": "Methyl-accepting chemotaxis protein II", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 208, "evidence": [{"notes": "Supports Methyl-accepting chemotaxis protein II in osmotaxis; UniProtKB:P07017 (tar, Methyl-accepting chemotaxis protein II) in Escherichia coli (strain K12) provides a verified protein exemplar.", "reference": "DOI:10.1016/s0014-4894(03)00031-6", "snippet": "We find that promastigotes move towards concentrations of all substances tested and that this taxis requires the presence of an osmotic gradient."}], "gene_symbol": "tar", "protein_label": "Methyl-accepting chemotaxis protein II", "proteome_id": "UP000000625", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (tar, Methyl-accepting chemotaxis protein II) associated with osmotaxis in Escherichia coli (strain K12).", "sequence_version": 2, "taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli (strain K12)", "uniprot_id": "UniProtKB:P07017"}], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "A motile phenotype in which active locomotion produces net migration in response to a spatial gradient in external osmotic conditions.", "grounding": "traitmech:000592", "id": "osmotaxis_trait", "is_orphan": false, "label": "osmotaxis", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 208, "evidence": [{"notes": "Supports Methyl-accepting chemotaxis protein II in osmotaxis; UniProtKB:P07017 (tar, Methyl-accepting chemotaxis protein II) in Escherichia coli (strain K12) provides a verified protein exemplar.", "reference": "DOI:10.1016/s0014-4894(03)00031-6", "snippet": "We find that promastigotes move towards concentrations of all substances tested and that this taxis requires the presence of an osmotic gradient."}], "gene_symbol": "tar", "node_id": "osmotaxis_protein_component", "node_label": "Methyl-accepting chemotaxis protein II", "protein_label": "Methyl-accepting chemotaxis protein II", "proteome_id": "UP000000625", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (tar, Methyl-accepting chemotaxis protein II) associated with osmotaxis in Escherichia coli (strain K12).", "sequence_version": 2, "taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli (strain K12)", "uniprot_id": "UniProtKB:P07017"}], "scope_notes": "Captures a source-backed protein exemplar (UniProtKB:P07017 in Escherichia coli (strain K12)) associated with osmotaxis while full multi-step mechanistic curation remains future work.", "scope_status": "NONMECHANISTIC", "title": "Protein component associated with osmotaxis"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });

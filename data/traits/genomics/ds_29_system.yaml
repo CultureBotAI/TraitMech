@@ -102,27 +102,25 @@ causal_graphs:
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
   - node_id: ds_29_system_protein_component
-    label: Cell death peptidase
+    label: Endoribonuclease ToxN
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Cell death peptidase) associated with DS-29 system.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Endoribonuclease ToxN) associated with DS-29 system.
+    grounding: InterPro:IPR025911
     gene_symbols:
-    - lit
+    - toxN
     protein_examples:
-    - uniprot_id: UniProtKB:P11072
-      protein_label: Cell death peptidase
-      gene_symbol: lit
-      taxon_id: NCBITaxon:83333
-      taxon_label: Escherichia coli (strain K12)
+    - uniprot_id: UniProtKB:B8X8Z0
+      protein_label: Endoribonuclease ToxN
+      gene_symbol: toxN
+      taxon_id: NCBITaxon:29471
+      taxon_label: Pectobacterium atrosepticum (Erwinia carotovora subsp. atroseptica)
       entry_status: REVIEWED
-      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 137
-      sequence_version: 2
-      role: Characteristic protein component (lit, Cell death peptidase) associated
-        with DS-29 system in Escherichia coli (strain K12).
+      entry_version: 47
+      sequence_version: 1
+      role: Characteristic protein component (toxN, Endoribonuclease ToxN) associated
+        with DS-29 system in Pectobacterium atrosepticum (Erwinia carotovora subsp.
+        atroseptica).
       evidence:
       - reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S6.xlsx
         snippet: NTTI NZ_QOYB01000018.1 GCF_003333785.1 + True False True True DefensePredictor
@@ -131,9 +129,9 @@ causal_graphs:
           WP_087900468.1, WP_087900469.1, WP_087900470.1, WP_072044445.1, WP_047174762.1
           8.47705415994386 4.820281565605036 True True Predicted novel defense gene
           DS-4
-        notes: Supports Cell death peptidase in DS-29 system; UniProtKB:P11072 (lit,
-          Cell death peptidase) in Escherichia coli (strain K12) provides a verified
-          protein exemplar.
+        notes: Supports Endoribonuclease ToxN in DS-29 system; UniProtKB:B8X8Z0 (toxN,
+          Endoribonuclease ToxN) in Pectobacterium atrosepticum (Erwinia carotovora
+          subsp. atroseptica) provides a verified protein exemplar.
   edges:
   - subject: ds_29_locus
     predicate: contributes to
@@ -225,8 +223,8 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: ds_29_system_trait
-    description: Cell death peptidase (lit, UniProtKB:P11072) contributes to DS-29
-      system (associated with hypermodification, defensepredictor, qoyb01000018).
+    description: Endoribonuclease ToxN (toxN, UniProtKB:B8X8Z0) contributes to DS-29
+      system.
     evidence:
     - reference: https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S6.xlsx
       snippet: NTTI NZ_QOYB01000018.1 GCF_003333785.1 + True False True True DefensePredictor
@@ -235,8 +233,9 @@ causal_graphs:
         WP_087900468.1, WP_087900469.1, WP_087900470.1, WP_072044445.1, WP_047174762.1
         8.47705415994386 4.820281565605036 True True Predicted novel defense gene
         DS-4
-      notes: Supports the functional association between Cell death peptidase (UniProtKB:P11072
-        in Escherichia coli (strain K12)) and DS-29 system.
+      notes: Supports the functional association between Endoribonuclease ToxN (UniProtKB:B8X8Z0
+        in Pectobacterium atrosepticum (Erwinia carotovora subsp. atroseptica)) and
+        DS-29 system.
 discussions:
 - discussion_id: ds-29-defensefinder-model-gap
   prompt: Resolve DS-29 native host breadth, exact single-component activity, profile-to-protein
@@ -319,5 +318,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    ds_29_system_protein_component with UniProtKB:P11072 (lit) exemplar.'
+    ds_29_system_protein_component with UniProtKB:B8X8Z0 (toxN) exemplar.'
   llm_assisted: true

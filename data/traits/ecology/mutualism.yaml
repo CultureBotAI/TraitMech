@@ -34,8 +34,8 @@ causal_graphs:
   title: Mutualism delivers reciprocal benefit to host and microbe
   scope_status: NONMECHANISTIC
   scope_notes: This broad ecological, host-relationship, habitat, or hazard classification
-    spans multiple taxa and mechanisms; contextual protein nodes do not receive token
-    UniProt examples.
+    spans multiple taxa and mechanisms; contextual protein nodes include source-backed
+    UniProtKB exemplars.
   description: Evidence-backed causal sketch linking nutrient/service exchange to
     reciprocal-benefit symbiosis.
   nodes:
@@ -85,38 +85,35 @@ causal_graphs:
     node_type: STATE
     description: Context-dependent interaction state ranging from mutualistic to antagonistic.
   - node_id: mutualism_protein_component
-    label: Chaperonin GroEL
+    label: Nitrogenase iron protein
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Chaperonin GroEL) associated with mutualism.
+    description: Protein component (Nitrogenase iron protein) associated with mutualism.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - groEL
+    - nifH
     protein_examples:
-    - uniprot_id: UniProtKB:Q49YY5
-      protein_label: Chaperonin GroEL
-      gene_symbol: groEL
-      taxon_id: NCBITaxon:342451
-      taxon_label: Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
-        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+    - uniprot_id: UniProtKB:P00460
+      protein_label: Nitrogenase iron protein
+      gene_symbol: nifH
+      taxon_id: NCBITaxon:266834
+      taxon_label: Rhizobium meliloti (strain 1021)
       entry_status: REVIEWED
-      proteome_id: UP000006371
+      proteome_id: UP000001976
       retrieved_on: '2026-10-17'
-      entry_version: 120
-      sequence_version: 1
-      role: Characteristic protein component (groEL, Chaperonin GroEL) associated
-        with mutualism in Staphylococcus saprophyticus subsp. saprophyticus (strain
-        ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41).
+      entry_version: 159
+      sequence_version: 2
+      role: Characteristic protein component (nifH, Nitrogenase iron protein) associated
+        with mutualism in Rhizobium meliloti (strain 1021).
       evidence:
       - reference: DOI:10.1073/pnas.1218525110
         snippet: This review examines how a growing knowledge of the vast range of
           animal-bacterial interactions, whether in shared ecosystems or intimate
           symbioses, is fundamentally altering our understanding of animal biology.
-        notes: Supports Chaperonin GroEL in mutualism; UniProtKB:Q49YY5 (groEL, Chaperonin
-          GroEL) in Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
-          15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) provides a verified protein
-          exemplar.
+        notes: Supports Nitrogenase iron protein in mutualism; UniProtKB:P00460 (nifH,
+          Nitrogenase iron protein) in Rhizobium meliloti (strain 1021) provides a
+          verified protein exemplar.
   edges:
   - subject: nutrient_exchange
     predicate: causes
@@ -191,16 +188,15 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: mutualism_trait
-    description: Chaperonin GroEL (groEL, UniProtKB:Q49YY5) contributes to mutualism
-      (associated with fundamentally, understanding, interactions).
+    description: Nitrogenase iron protein (nifH, UniProtKB:P00460) contributes to
+      mutualism.
     evidence:
     - reference: DOI:10.1073/pnas.1218525110
       snippet: This review examines how a growing knowledge of the vast range of animal-bacterial
         interactions, whether in shared ecosystems or intimate symbioses, is fundamentally
         altering our understanding of animal biology.
-      notes: Supports the functional association between Chaperonin GroEL (UniProtKB:Q49YY5
-        in Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC 15305 /
-        DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)) and mutualism.
+      notes: Supports the functional association between Nitrogenase iron protein
+        (UniProtKB:P00460 in Rhizobium meliloti (strain 1021)) and mutualism.
 curation_history:
 - timestamp: '2026-06-02T00:00:00Z'
   curator: claude
@@ -246,5 +242,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    mutualism_protein_component with UniProtKB:Q49YY5 (groEL) exemplar.'
+    mutualism_protein_component with UniProtKB:P00460 (nifH) exemplar.'
   llm_assisted: true

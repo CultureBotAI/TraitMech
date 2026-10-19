@@ -94,20 +94,27 @@ curation_history:
   llm_assisted: true
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed canonical_examples status alongside NONMECHANISTIC protein exemplar
+    graph for lethal algicidal activity; isolate-level canonical example remains deferred
+    pending explicit strain-level literature.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph lethal_algicidal_activity_graph
-    with GENE_OR_PROTEIN node lethal_algicidal_activity_protein_component and UniProtKB:P41832
+    with GENE_OR_PROTEIN node lethal_algicidal_activity_protein_component and UniProtKB:Q5W269
     exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: lethal_algicidal_activity_graph
   title: Protein component associated with lethal algicidal activity
-  description: Literature-backed association between Protein BNI1 (UniProtKB:P41832)
-    and lethal algicidal activity.
+  description: Literature-backed association between Prodigiosin synthesizing transferase
+    PigC (UniProtKB:Q5W269) and lethal algicidal activity.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P41832 in Saccharomyces
-    cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)) associated with lethal
-    algicidal activity while full multi-step mechanistic curation remains future work.
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q5W269 in Prodigiosinella
+    confusarubida (Serratia sp. (strain ATCC 39006))) associated with lethal algicidal
+    activity while full multi-step mechanistic curation remains future work.
   nodes:
   - node_id: lethal_algicidal_activity_trait
     label: lethal algicidal activity
@@ -116,48 +123,45 @@ causal_graphs:
     description: A physiological capability of a microorganism to kill cells of eukaryotic
       algae or cyanobacteria.
   - node_id: lethal_algicidal_activity_protein_component
-    label: Protein BNI1
+    label: Prodigiosin synthesizing transferase PigC
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Protein BNI1) associated with lethal algicidal
-      activity.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Prodigiosin synthesizing transferase PigC) associated
+      with lethal algicidal activity.
+    grounding: InterPro:IPR013815
     gene_symbols:
-    - BNI1
+    - pigC
     protein_examples:
-    - uniprot_id: UniProtKB:P41832
-      protein_label: Protein BNI1
-      gene_symbol: BNI1
-      taxon_id: NCBITaxon:559292
-      taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's
-        yeast)
+    - uniprot_id: UniProtKB:Q5W269
+      protein_label: Prodigiosin synthesizing transferase PigC
+      gene_symbol: pigC
+      taxon_id: NCBITaxon:104623
+      taxon_label: Prodigiosinella confusarubida (Serratia sp. (strain ATCC 39006))
       entry_status: REVIEWED
-      proteome_id: UP000002311
       retrieved_on: '2026-10-17'
-      entry_version: 224
-      sequence_version: 3
-      role: Characteristic protein component (BNI1, Protein BNI1) associated with
-        lethal algicidal activity in Saccharomyces cerevisiae (strain ATCC 204508
-        / S288c) (Baker's yeast).
+      entry_version: 69
+      sequence_version: 1
+      role: Characteristic protein component (pigC, Prodigiosin synthesizing transferase
+        PigC) associated with lethal algicidal activity in Prodigiosinella confusarubida
+        (Serratia sp. (strain ATCC 39006)).
       evidence:
       - reference: DOI:10.1128/AEM.66.10.4334-4339.2000
         snippet: The marine bacterium Pseudoalteromonas sp. strain A28 was able to
           kill the diatom Skeletonema costatum strain NIES-324.
-        notes: Supports Protein BNI1 in lethal algicidal activity; UniProtKB:P41832
-          (BNI1, Protein BNI1) in Saccharomyces cerevisiae (strain ATCC 204508 / S288c)
-          (Baker's yeast) provides a verified protein exemplar.
+        notes: Supports Prodigiosin synthesizing transferase PigC in lethal algicidal
+          activity; UniProtKB:Q5W269 (pigC, Prodigiosin synthesizing transferase PigC)
+          in Prodigiosinella confusarubida (Serratia sp. (strain ATCC 39006)) provides
+          a verified protein exemplar.
   edges:
   - subject: lethal_algicidal_activity_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: lethal_algicidal_activity_trait
-    description: Protein BNI1 (BNI1, UniProtKB:P41832) contributes to lethal algicidal
-      activity (associated with pseudoalteromonas, skeletonema, bacterium).
+    description: Prodigiosin synthesizing transferase PigC (pigC, UniProtKB:Q5W269)
+      contributes to lethal algicidal activity.
     evidence:
     - reference: DOI:10.1128/AEM.66.10.4334-4339.2000
       snippet: The marine bacterium Pseudoalteromonas sp. strain A28 was able to kill
         the diatom Skeletonema costatum strain NIES-324.
-      notes: Supports the functional association between Protein BNI1 (UniProtKB:P41832
-        in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast))
-        and lethal algicidal activity.
+      notes: Supports the functional association between Prodigiosin synthesizing
+        transferase PigC (UniProtKB:Q5W269 in Prodigiosinella confusarubida (Serratia
+        sp. (strain ATCC 39006))) and lethal algicidal activity.

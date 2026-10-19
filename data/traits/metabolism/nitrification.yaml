@@ -21,9 +21,16 @@ curation_history:
   llm_assisted: true
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed canonical_examples status alongside NONMECHANISTIC protein exemplar
+    graph for nitrification; isolate-level canonical example remains deferred pending
+    explicit strain-level literature.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph nitrification_graph
-    with GENE_OR_PROTEIN node nitrification_protein_component and UniProtKB:B5BJZ8
+    with GENE_OR_PROTEIN node nitrification_protein_component and UniProtKB:Q04507
     exemplar.'
   llm_assisted: true
 definition_source: DOI:10.3389/fmicb.2020.01900
@@ -47,12 +54,12 @@ discussions:
 causal_graphs:
 - graph_id: nitrification_graph
   title: Protein component associated with nitrification
-  description: Literature-backed association between Cytochrome c-552 (UniProtKB:B5BJZ8)
-    and nitrification.
+  description: Literature-backed association between Ammonia monooxygenase alpha subunit
+    (UniProtKB:Q04507) and nitrification.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:B5BJZ8 in Salmonella
-    paratyphi A (strain AKU_12601)) associated with nitrification while full multi-step
-    mechanistic curation remains future work.
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q04507 in Nitrosomonas
+    europaea (strain ATCC 19718 / CIP 103999 / KCTC 2705 / NBRC 14298)) associated
+    with nitrification while full multi-step mechanistic curation remains future work.
   nodes:
   - node_id: nitrification_trait
     label: nitrification
@@ -61,43 +68,47 @@ causal_graphs:
     description: A biological process in which ammonia is oxidized to nitrite (ammonia
       oxidation) and nitrite is oxidized to nitrate (nitrite oxidation), in two steps.
   - node_id: nitrification_protein_component
-    label: Cytochrome c-552
+    label: Ammonia monooxygenase alpha subunit
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Cytochrome c-552) associated with nitrification.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Ammonia monooxygenase alpha subunit) associated
+      with nitrification.
+    grounding: InterPro:IPR037001
     gene_symbols:
-    - nrfA
+    - amoA1
     protein_examples:
-    - uniprot_id: UniProtKB:B5BJZ8
-      protein_label: Cytochrome c-552
-      gene_symbol: nrfA
-      taxon_id: NCBITaxon:554290
-      taxon_label: Salmonella paratyphi A (strain AKU_12601)
+    - uniprot_id: UniProtKB:Q04507
+      protein_label: Ammonia monooxygenase alpha subunit
+      gene_symbol: amoA1
+      taxon_id: NCBITaxon:228410
+      taxon_label: Nitrosomonas europaea (strain ATCC 19718 / CIP 103999 / KCTC 2705
+        / NBRC 14298)
       entry_status: REVIEWED
+      proteome_id: UP000001416
       retrieved_on: '2026-10-17'
-      entry_version: 82
-      sequence_version: 1
-      role: Characteristic protein component (nrfA, Cytochrome c-552) associated with
-        nitrification in Salmonella paratyphi A (strain AKU_12601).
+      entry_version: 127
+      sequence_version: 2
+      role: Characteristic protein component (amoA1, Ammonia monooxygenase alpha subunit)
+        associated with nitrification in Nitrosomonas europaea (strain ATCC 19718
+        / CIP 103999 / KCTC 2705 / NBRC 14298).
       evidence:
       - reference: DOI:10.3389/fmicb.2020.01900
         snippet: nitrification proceeds as a two-step process, involving the oxidation
           of ammonia to nitrite and the oxidation of nitrite to nitrate
-        notes: Supports Cytochrome c-552 in nitrification; UniProtKB:B5BJZ8 (nrfA,
-          Cytochrome c-552) in Salmonella paratyphi A (strain AKU_12601) provides
-          a verified protein exemplar.
+        notes: Supports Ammonia monooxygenase alpha subunit in nitrification; UniProtKB:Q04507
+          (amoA1, Ammonia monooxygenase alpha subunit) in Nitrosomonas europaea (strain
+          ATCC 19718 / CIP 103999 / KCTC 2705 / NBRC 14298) provides a verified protein
+          exemplar.
   edges:
   - subject: nitrification_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: nitrification_trait
-    description: Cytochrome c-552 (nrfA, UniProtKB:B5BJZ8) contributes to nitrification
-      (associated with nitrification, involving, oxidation).
+    description: Ammonia monooxygenase alpha subunit (amoA1, UniProtKB:Q04507) contributes
+      to nitrification.
     evidence:
     - reference: DOI:10.3389/fmicb.2020.01900
       snippet: nitrification proceeds as a two-step process, involving the oxidation
         of ammonia to nitrite and the oxidation of nitrite to nitrate
-      notes: Supports the functional association between Cytochrome c-552 (UniProtKB:B5BJZ8
-        in Salmonella paratyphi A (strain AKU_12601)) and nitrification.
+      notes: Supports the functional association between Ammonia monooxygenase alpha
+        subunit (UniProtKB:Q04507 in Nitrosomonas europaea (strain ATCC 19718 / CIP
+        103999 / KCTC 2705 / NBRC 14298)) and nitrification.

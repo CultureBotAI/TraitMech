@@ -100,7 +100,7 @@ causal_graphs:
     predicate_id: RO:0002326
     object: coagulase_activity_trait
     description: Glutamyl endopeptidase (sspA, UniProtKB:P0C1U8) contributes to coagulase
-      activity (associated with staphylococcus, polypeptide, prothrombin).
+      activity.
     evidence:
     - reference: DOI:10.1371/journal.ppat.1001036
       snippet: Clinical isolates of the human pathogen Staphylococcus aureus secrete

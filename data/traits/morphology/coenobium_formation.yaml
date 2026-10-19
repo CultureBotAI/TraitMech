@@ -88,18 +88,18 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph coenobium_formation_graph
-    with GENE_OR_PROTEIN node coenobium_formation_protein_component and UniProtKB:Q7A225
+    with GENE_OR_PROTEIN node coenobium_formation_protein_component and UniProtKB:P05434
     exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: coenobium_formation_graph
   title: Protein component associated with coenobium formation
-  description: Literature-backed association between Endoribonuclease HigB (UniProtKB:Q7A225)
+  description: Literature-backed association between Caltractin (UniProtKB:P05434)
     and coenobium formation.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q7A225 in Proteus
-    vulgaris) associated with coenobium formation while full multi-step mechanistic
-    curation remains future work.
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P05434 in Chlamydomonas
+    reinhardtii (Chlamydomonas smithii)) associated with coenobium formation while
+    full multi-step mechanistic curation remains future work.
   nodes:
   - node_id: coenobium_formation_trait
     label: coenobium formation
@@ -109,44 +109,37 @@ causal_graphs:
       colonies whose cell complement is established during colony formation, with
       subsequent colony growth by cell enlargement rather than addition of cells.
   - node_id: coenobium_formation_protein_component
-    label: Endoribonuclease HigB
+    label: Caltractin
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Endoribonuclease HigB) associated with coenobium
-      formation.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
-    gene_symbols:
-    - higB
+    description: Protein component (Caltractin) associated with coenobium formation.
+    grounding: InterPro:IPR050230
     protein_examples:
-    - uniprot_id: UniProtKB:Q7A225
-      protein_label: Endoribonuclease HigB
-      gene_symbol: higB
-      taxon_id: NCBITaxon:585
-      taxon_label: Proteus vulgaris
+    - uniprot_id: UniProtKB:P05434
+      protein_label: Caltractin
+      taxon_id: NCBITaxon:3055
+      taxon_label: Chlamydomonas reinhardtii (Chlamydomonas smithii)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      entry_version: 69
+      entry_version: 163
       sequence_version: 1
-      role: Characteristic protein component (higB, Endoribonuclease HigB) associated
-        with coenobium formation in Proteus vulgaris.
+      role: Characteristic protein component (P05434, Caltractin) associated with
+        coenobium formation in Chlamydomonas reinhardtii (Chlamydomonas smithii).
       evidence:
       - reference: DOI:10.1242/jcs.212233
         snippet: progeny were unicellular in three species and multicellular (joined
           in a sheet-like coenobium) in two.
-        notes: Supports Endoribonuclease HigB in coenobium formation; UniProtKB:Q7A225
-          (higB, Endoribonuclease HigB) in Proteus vulgaris provides a verified protein
-          exemplar.
+        notes: Supports Caltractin in coenobium formation; UniProtKB:P05434 (P05434,
+          Caltractin) in Chlamydomonas reinhardtii (Chlamydomonas smithii) provides
+          a verified protein exemplar.
   edges:
   - subject: coenobium_formation_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: coenobium_formation_trait
-    description: Endoribonuclease HigB (higB, UniProtKB:Q7A225) contributes to coenobium
-      formation (associated with multicellular, unicellular, coenobium).
+    description: Caltractin (P05434, UniProtKB:P05434) contributes to coenobium formation.
     evidence:
     - reference: DOI:10.1242/jcs.212233
       snippet: progeny were unicellular in three species and multicellular (joined
         in a sheet-like coenobium) in two.
-      notes: Supports the functional association between Endoribonuclease HigB (UniProtKB:Q7A225
-        in Proteus vulgaris) and coenobium formation.
+      notes: Supports the functional association between Caltractin (UniProtKB:P05434
+        in Chlamydomonas reinhardtii (Chlamydomonas smithii)) and coenobium formation.

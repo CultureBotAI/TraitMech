@@ -94,6 +94,13 @@ curation_history:
   llm_assisted: true
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed canonical_examples status alongside NONMECHANISTIC protein exemplar
+    graph for quorum quenching; isolate-level canonical example remains deferred pending
+    explicit strain-level literature.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph quorum_quenching_graph
     with GENE_OR_PROTEIN node quorum_quenching_protein_component and UniProtKB:G2JHL6
@@ -151,7 +158,7 @@ causal_graphs:
     predicate_id: RO:0002326
     object: quorum_quenching_trait
     description: Quorum-quenching protein AidA (aidA, UniProtKB:G2JHL6) contributes
-      to quorum quenching (associated with staphylococci, autoinducing, coagulase).
+      to quorum quenching.
     evidence:
     - reference: DOI:10.1126/scitranslmed.aat8329
       snippet: clinical isolates of different coagulase-negative staphylococci (CoNS)

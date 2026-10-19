@@ -113,17 +113,17 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph homothallism_graph
-    with GENE_OR_PROTEIN node homothallism_protein_component and UniProtKB:Q5AD13
+    with GENE_OR_PROTEIN node homothallism_protein_component and UniProtKB:P09932
     exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: homothallism_graph
   title: Protein component associated with homothallism
-  description: Literature-backed association between Filamentous growth regulator
-    15 (UniProtKB:Q5AD13) and homothallism.
+  description: Literature-backed association between Homothallic switching endonuclease
+    (UniProtKB:P09932) and homothallism.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q5AD13 in Candida
-    albicans (strain SC5314 / ATCC MYA-2876) (Yeast)) associated with homothallism
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P09932 in Saccharomyces
+    cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)) associated with homothallism
     while full multi-step mechanistic curation remains future work.
   nodes:
   - node_id: homothallism_trait
@@ -133,49 +133,48 @@ causal_graphs:
     description: A fungal phenotype enabling a culture founded from a single spore
       to reproduce sexually in isolation from a mating partner.
   - node_id: homothallism_protein_component
-    label: Filamentous growth regulator 15
+    label: Homothallic switching endonuclease
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Filamentous growth regulator 15) associated with
-      homothallism.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Homothallic switching endonuclease) associated
+      with homothallism.
+    grounding: InterPro:IPR003587
     gene_symbols:
-    - FGR15
+    - HO
     protein_examples:
-    - uniprot_id: UniProtKB:Q5AD13
-      protein_label: Filamentous growth regulator 15
-      gene_symbol: FGR15
-      taxon_id: NCBITaxon:237561
-      taxon_label: Candida albicans (strain SC5314 / ATCC MYA-2876) (Yeast)
+    - uniprot_id: UniProtKB:P09932
+      protein_label: Homothallic switching endonuclease
+      gene_symbol: HO
+      taxon_id: NCBITaxon:559292
+      taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's
+        yeast)
       entry_status: REVIEWED
-      proteome_id: UP000000559
+      proteome_id: UP000002311
       retrieved_on: '2026-10-17'
-      entry_version: 100
+      entry_version: 194
       sequence_version: 2
-      role: Characteristic protein component (FGR15, Filamentous growth regulator
-        15) associated with homothallism in Candida albicans (strain SC5314 / ATCC
-        MYA-2876) (Yeast).
+      role: Characteristic protein component (HO, Homothallic switching endonuclease)
+        associated with homothallism in Saccharomyces cerevisiae (strain ATCC 204508
+        / S288c) (Baker's yeast).
       evidence:
       - reference: DOI:10.1371/journal.pgen.1006981
         snippet: The filamentous fungus Chromocrea spinulosa (Trichoderma spinulosum)
           exhibits both self-fertile (homothallic) and self-sterile (heterothallic)
           sexual reproductive behavior.
-        notes: Supports Filamentous growth regulator 15 in homothallism; UniProtKB:Q5AD13
-          (FGR15, Filamentous growth regulator 15) in Candida albicans (strain SC5314
-          / ATCC MYA-2876) (Yeast) provides a verified protein exemplar.
+        notes: Supports Homothallic switching endonuclease in homothallism; UniProtKB:P09932
+          (HO, Homothallic switching endonuclease) in Saccharomyces cerevisiae (strain
+          ATCC 204508 / S288c) (Baker's yeast) provides a verified protein exemplar.
   edges:
   - subject: homothallism_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: homothallism_trait
-    description: Filamentous growth regulator 15 (FGR15, UniProtKB:Q5AD13) contributes
-      to homothallism (associated with heterothallic, reproductive, filamentous).
+    description: Homothallic switching endonuclease (HO, UniProtKB:P09932) contributes
+      to homothallism.
     evidence:
     - reference: DOI:10.1371/journal.pgen.1006981
       snippet: The filamentous fungus Chromocrea spinulosa (Trichoderma spinulosum)
         exhibits both self-fertile (homothallic) and self-sterile (heterothallic)
         sexual reproductive behavior.
-      notes: Supports the functional association between Filamentous growth regulator
-        15 (UniProtKB:Q5AD13 in Candida albicans (strain SC5314 / ATCC MYA-2876) (Yeast))
-        and homothallism.
+      notes: Supports the functional association between Homothallic switching endonuclease
+        (UniProtKB:P09932 in Saccharomyces cerevisiae (strain ATCC 204508 / S288c)
+        (Baker's yeast)) and homothallism.

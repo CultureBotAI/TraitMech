@@ -108,28 +108,24 @@ causal_graphs:
     - crtI
     - crtY
     protein_examples:
-    - uniprot_id: UniProtKB:Q9HNE5
-      protein_label: Lycopene beta-cyclase
-      gene_symbol: crtY
-      taxon_id: NCBITaxon:64091
-      taxon_label: Halobacterium salinarum (strain ATCC 700922 / JCM 11081 / NRC-1)
-        (Halobacterium halobium)
+    - uniprot_id: UniProtKB:P54981
+      protein_label: Phytoene dehydrogenase
+      gene_symbol: crtI
+      taxon_id: NCBITaxon:1911
+      taxon_label: Streptomyces griseus
       entry_status: REVIEWED
-      proteome_id: UP000000554
       retrieved_on: '2026-10-17'
-      entry_version: 88
-      sequence_version: 2
-      role: Exemplar protein (crtY, Lycopene beta-cyclase) representing CrtE/CrtB/CrtI/CrtY
-        carotenoid enzyme module in Halobacterium salinarum (strain ATCC 700922 /
-        JCM 11081 / NRC-1) (Halobacterium halobium) for pigmentation.
+      entry_version: 93
+      sequence_version: 1
+      role: Exemplar protein (crtI, Phytoene dehydrogenase) representing CrtE/CrtB/CrtI/CrtY
+        carotenoid enzyme module in Streptomyces griseus for pigmentation.
       evidence:
       - reference: DOI:10.1177/1934578X1801301240
         snippet: such as melanin, carotenoids, pyocyanin, bacteriochlorophylls, violacein,
           prodigiosin
         notes: Supports CrtE/CrtB/CrtI/CrtY carotenoid enzyme module in pigmentation;
-          UniProtKB:Q9HNE5 (crtY, Lycopene beta-cyclase) in Halobacterium salinarum
-          (strain ATCC 700922 / JCM 11081 / NRC-1) (Halobacterium halobium) provides
-          a verified protein exemplar.
+          UniProtKB:P54981 (crtI, Phytoene dehydrogenase) in Streptomyces griseus
+          provides a verified protein exemplar.
   - node_id: beta_carotene_biosynthesis
     label: beta-carotene biosynthesis
     node_type: PATHWAY
@@ -440,7 +436,7 @@ curation_history:
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
-  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q9HNE5 (crtY)
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P54981 (crtI)
     protein example to node carotenoid_enzyme_module; added UniProtKB:A0AAE7AGQ2 (hppD)
     protein example to node hppd_gene; added UniProtKB:Q88E47 (hmgA) protein example
     to node hmga_gene.'

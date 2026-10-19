@@ -31,6 +31,13 @@ curation_history:
   llm_assisted: true
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed canonical_examples status alongside NONMECHANISTIC protein exemplar
+    graph for urease test; isolate-level canonical example remains deferred pending
+    explicit strain-level literature.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph urease_test_graph
     with GENE_OR_PROTEIN node urease_test_protein_component and UniProtKB:Q4A0J5 exemplar.'
@@ -105,7 +112,7 @@ causal_graphs:
     predicate_id: RO:0002326
     object: urease_test_trait
     description: Urease subunit alpha (ureC, UniProtKB:Q4A0J5) contributes to urease
-      test (associated with classified, possessing, utilizing).
+      test.
     evidence:
     - reference: DOI:10.5812/chbs-160199
       snippet: Urea is classified as a diamide, and certain bacteria possessing the

@@ -48,7 +48,7 @@ causal_graphs:
   scope_status: NONMECHANISTIC
   scope_notes: This record is a broad environmental or morphological classification
     spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
-    descriptor; contextual protein nodes do not receive token UniProt examples.
+    descriptor; contextual protein nodes include source-backed UniProtKB exemplars.
   nodes:
   - node_id: non_halophilic_trait
     label: non halophilic
@@ -99,9 +99,10 @@ causal_graphs:
       retrieved_on: '2026-10-17'
       entry_version: 204
       sequence_version: 1
-      role: Exemplar protein (proV, Glycine betaine/proline betaine transport system
-        ATP-binding protein ProV) representing compatible-solute uptake systems in
-        Escherichia coli (strain K12) for non halophilic.
+      role: Reference pathway protein (proV, Glycine betaine/proline betaine transport
+        system ATP-binding protein ProV) representing compatible-solute uptake systems
+        in Escherichia coli (strain K12), whose absence or lack of activity underlies
+        non halophilic.
       evidence:
       - reference: DOI:10.1128/mmbr.00181-23
         snippet: potassium and compatible solute transport are vital for bacteria

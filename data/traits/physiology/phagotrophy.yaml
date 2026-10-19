@@ -108,16 +108,16 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph phagotrophy_graph
-    with GENE_OR_PROTEIN node phagotrophy_protein_component and UniProtKB:G1UBD1 exemplar.'
+    with GENE_OR_PROTEIN node phagotrophy_protein_component and UniProtKB:P32790 exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: phagotrophy_graph
   title: Protein component associated with phagotrophy
-  description: Literature-backed association between Particulate methane monooxygenase
-    alpha subunit (UniProtKB:G1UBD1) and phagotrophy.
+  description: Literature-backed association between Actin cytoskeleton-regulatory
+    complex protein SLA1 (UniProtKB:P32790) and phagotrophy.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:G1UBD1 in Methylococcus
-    capsulatus (strain ATCC 33009 / NCIMB 11132 / Bath)) associated with phagotrophy
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P32790 in Saccharomyces
+    cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)) associated with phagotrophy
     while full multi-step mechanistic curation remains future work.
   nodes:
   - node_id: phagotrophy_trait
@@ -127,48 +127,47 @@ causal_graphs:
     description: A physiological phenotype in which a microbial organism ingests particulate
       food and assimilates nutrients derived from that food.
   - node_id: phagotrophy_protein_component
-    label: Particulate methane monooxygenase alpha subunit
+    label: Actin cytoskeleton-regulatory complex protein SLA1
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Particulate methane monooxygenase alpha subunit)
-      associated with phagotrophy.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Actin cytoskeleton-regulatory complex protein
+      SLA1) associated with phagotrophy.
+    grounding: InterPro:IPR056996
     gene_symbols:
-    - pmoB1
+    - SLA1
     protein_examples:
-    - uniprot_id: UniProtKB:G1UBD1
-      protein_label: Particulate methane monooxygenase alpha subunit
-      gene_symbol: pmoB1
-      taxon_id: NCBITaxon:243233
-      taxon_label: Methylococcus capsulatus (strain ATCC 33009 / NCIMB 11132 / Bath)
+    - uniprot_id: UniProtKB:P32790
+      protein_label: Actin cytoskeleton-regulatory complex protein SLA1
+      gene_symbol: SLA1
+      taxon_id: NCBITaxon:559292
+      taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's
+        yeast)
       entry_status: REVIEWED
-      proteome_id: UP000006821
+      proteome_id: UP000002311
       retrieved_on: '2026-10-17'
-      entry_version: 77
+      entry_version: 230
       sequence_version: 1
-      role: Characteristic protein component (pmoB1, Particulate methane monooxygenase
-        alpha subunit) associated with phagotrophy in Methylococcus capsulatus (strain
-        ATCC 33009 / NCIMB 11132 / Bath).
+      role: Characteristic protein component (SLA1, Actin cytoskeleton-regulatory
+        complex protein SLA1) associated with phagotrophy in Saccharomyces cerevisiae
+        (strain ATCC 204508 / S288c) (Baker's yeast).
       evidence:
       - reference: DOI:10.1038/ismej.2017.68
         snippet: NanoSIMS and bulk IRMS isotope analyses revealed that Ochromonas
           obtained 84-99% of its carbon and 88-95% of its nitrogen from consumed bacteria.
-        notes: Supports Particulate methane monooxygenase alpha subunit in phagotrophy;
-          UniProtKB:G1UBD1 (pmoB1, Particulate methane monooxygenase alpha subunit)
-          in Methylococcus capsulatus (strain ATCC 33009 / NCIMB 11132 / Bath) provides
-          a verified protein exemplar.
+        notes: Supports Actin cytoskeleton-regulatory complex protein SLA1 in phagotrophy;
+          UniProtKB:P32790 (SLA1, Actin cytoskeleton-regulatory complex protein SLA1)
+          in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)
+          provides a verified protein exemplar.
   edges:
   - subject: phagotrophy_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: phagotrophy_trait
-    description: Particulate methane monooxygenase alpha subunit (pmoB1, UniProtKB:G1UBD1)
-      contributes to phagotrophy (associated with ochromonas, analyses, bacteria).
+    description: Actin cytoskeleton-regulatory complex protein SLA1 (SLA1, UniProtKB:P32790)
+      contributes to phagotrophy.
     evidence:
     - reference: DOI:10.1038/ismej.2017.68
       snippet: NanoSIMS and bulk IRMS isotope analyses revealed that Ochromonas obtained
         84-99% of its carbon and 88-95% of its nitrogen from consumed bacteria.
-      notes: Supports the functional association between Particulate methane monooxygenase
-        alpha subunit (UniProtKB:G1UBD1 in Methylococcus capsulatus (strain ATCC 33009
-        / NCIMB 11132 / Bath)) and phagotrophy.
+      notes: Supports the functional association between Actin cytoskeleton-regulatory
+        complex protein SLA1 (UniProtKB:P32790 in Saccharomyces cerevisiae (strain
+        ATCC 204508 / S288c) (Baker's yeast)) and phagotrophy.

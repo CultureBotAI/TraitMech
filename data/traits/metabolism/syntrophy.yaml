@@ -144,24 +144,29 @@ causal_graphs:
       families and multisubunit architectures; this cross-taxon node does not identify
       one exact complex or family.
     protein_examples:
-    - uniprot_id: UniProtKB:P16431
-      protein_label: Formate hydrogenlyase subunit 5
-      gene_symbol: hycE
-      taxon_id: NCBITaxon:83333
-      taxon_label: Escherichia coli (strain K12)
+    - uniprot_id: UniProtKB:O52683
+      protein_label: Bifurcating [FeFe] hydrogenase alpha subunit
+      gene_symbol: hydA
+      taxon_id: NCBITaxon:243274
+      taxon_label: Thermotoga maritima (strain ATCC 43589 / DSM 3109 / JCM 10099 /
+        NBRC 100826 / MSB8)
       entry_status: REVIEWED
-      proteome_id: UP000000625
+      proteome_id: UP000008183
       retrieved_on: '2026-10-17'
-      entry_version: 188
+      entry_version: 158
       sequence_version: 1
-      role: Exemplar protein (hycE, Formate hydrogenlyase subunit 5) representing
-        hydrogenase complex in Escherichia coli (strain K12) for Syntrophy.
+      role: Exemplar protein (hydA, Bifurcating [FeFe] hydrogenase alpha subunit)
+        representing hydrogenase complex in Thermotoga maritima (strain ATCC 43589
+        / DSM 3109 / JCM 10099 / NBRC 100826 / MSB8) for Syntrophy.
       evidence:
-      - reference: DOI:10.1038/nrmicro2166
-        snippet: Hydrogen and formate are key components
-        notes: Supports hydrogenase complex in Syntrophy; UniProtKB:P16431 (hycE,
-          Formate hydrogenlyase subunit 5) in Escherichia coli (strain K12) provides
-          a verified protein exemplar.
+      - reference: DOI:10.3389/fmicb.2016.00236
+        snippet: Direct interspecies electron transfer (DIET) has been recognized
+          as an alternative to interspecies H2 transfer as a mechanism for syntrophic
+          growth
+        notes: Supports hydrogenase complex in Syntrophy; UniProtKB:O52683 (hydA,
+          Bifurcating [FeFe] hydrogenase alpha subunit) in Thermotoga maritima (strain
+          ATCC 43589 / DSM 3109 / JCM 10099 / NBRC 100826 / MSB8) provides a verified
+          protein exemplar.
   - node_id: direct_interspecies_electron_transfer
     label: direct interspecies electron transfer
     node_type: BIOLOGICAL_PROCESS
@@ -184,25 +189,32 @@ causal_graphs:
     grounding_notes: Multiheme c-type cytochromes comprise many non-equivalent families,
       and this broad DIET claim does not resolve a taxon-specific protein family.
     protein_examples:
-    - uniprot_id: UniProtKB:P46024
-      protein_label: Outer membrane protein assembly factor BamA
-      gene_symbol: bamA
-      taxon_id: NCBITaxon:727
-      taxon_label: Haemophilus influenzae
-      entry_status: REVIEWED
+    - uniprot_id: UniProtKB:Q8EG34
+      protein_label: Extracellular iron oxide respiratory system surface decaheme
+        cytochrome c component MtrC
+      gene_symbol: mtrC
+      taxon_id: NCBITaxon:211586
+      taxon_label: Shewanella oneidensis (strain ATCC 700550 / JCM 31522 / CIP 106686
+        / LMG 19005 / NCIMB 14063 / MR-1)
+      entry_status: UNREVIEWED
+      proteome_id: UP000008186
       retrieved_on: '2026-10-17'
-      entry_version: 107
+      entry_version: 126
       sequence_version: 1
-      role: Exemplar protein (bamA, Outer membrane protein assembly factor BamA) representing
-        multiheme c-type cytochromes in Haemophilus influenzae for Syntrophy.
+      role: Exemplar protein (mtrC, Extracellular iron oxide respiratory system surface
+        decaheme cytochrome c component MtrC) representing multiheme c-type cytochromes
+        in Shewanella oneidensis (strain ATCC 700550 / JCM 31522 / CIP 106686 / LMG
+        19005 / NCIMB 14063 / MR-1) for Syntrophy.
       evidence:
       - reference: DOI:10.3389/fmicb.2016.00236
         snippet: Direct interspecies electron transfer (DIET) has been recognized
           as an alternative to interspecies H2 transfer as a mechanism for syntrophic
           growth
-        notes: Supports multiheme c-type cytochromes in Syntrophy; UniProtKB:P46024
-          (bamA, Outer membrane protein assembly factor BamA) in Haemophilus influenzae
-          provides a verified protein exemplar.
+        notes: Supports multiheme c-type cytochromes in Syntrophy; UniProtKB:Q8EG34
+          (mtrC, Extracellular iron oxide respiratory system surface decaheme cytochrome
+          c component MtrC) in Shewanella oneidensis (strain ATCC 700550 / JCM 31522
+          / CIP 106686 / LMG 19005 / NCIMB 14063 / MR-1) provides a verified protein
+          exemplar.
   edges:
   - subject: syntrophy_trait
     predicate: requires partner interaction
@@ -431,7 +443,7 @@ curation_history:
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:Q0AVM4
     version metadata (entry_version=95, sequence_version=1); added UniProtKB:P07658
-    (fdhF) protein example to node formate_dehydrogenase_complex; added UniProtKB:P16431
-    (hycE) protein example to node hydrogenase_complex; added UniProtKB:P46024 (bamA)
+    (fdhF) protein example to node formate_dehydrogenase_complex; added UniProtKB:O52683
+    (hydA) protein example to node hydrogenase_complex; added UniProtKB:Q8EG34 (mtrC)
     protein example to node multiheme_cytochromes.'
   llm_assisted: true

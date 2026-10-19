@@ -130,25 +130,25 @@ causal_graphs:
       for this aggregate use.
     description: Ice-binding proteins that depress freezing point via thermal hysteresis.
     protein_examples:
-    - uniprot_id: UniProtKB:P0A9X9
-      protein_label: Cold shock protein CspA
-      gene_symbol: cspA
-      taxon_id: NCBITaxon:83333
-      taxon_label: Escherichia coli (strain K12)
+    - uniprot_id: UniProtKB:Q086E4
+      protein_label: Ice-binding protein 1
+      taxon_id: NCBITaxon:318167
+      taxon_label: Shewanella frigidimarina (strain NCIMB 400)
       entry_status: REVIEWED
-      proteome_id: UP000000625
+      proteome_id: UP000000684
       retrieved_on: '2026-10-17'
-      entry_version: 146
-      sequence_version: 2
-      role: Exemplar protein (cspA, Cold shock protein CspA) representing antifreeze
-        / ice-binding proteins in Escherichia coli (strain K12) for temperature optimum
-        very low.
+      entry_version: 79
+      sequence_version: 1
+      role: Exemplar protein (Q086E4, Ice-binding protein 1) representing antifreeze
+        / ice-binding proteins in Shewanella frigidimarina (strain NCIMB 400) for
+        temperature optimum very low.
       evidence:
-      - reference: DOI:10.4161/rna.7.6.13482
-        snippet: CspA, the main cold shock protein, and its homologs act as RNA chaperones
+      - reference: DOI:10.1007/s42770-023-01057-4
+        snippet: When the temperature drops, DesK/DesR is the two-component system
+          involved in membrane adaptation
         notes: Supports antifreeze / ice-binding proteins in temperature optimum very
-          low; UniProtKB:P0A9X9 (cspA, Cold shock protein CspA) in Escherichia coli
-          (strain K12) provides a verified protein exemplar.
+          low; UniProtKB:Q086E4 (Q086E4, Ice-binding protein 1) in Shewanella frigidimarina
+          (strain NCIMB 400) provides a verified protein exemplar.
   - node_id: thermal_hysteresis
     label: thermal hysteresis / lowered freezing point
     node_type: BIOLOGICAL_PROCESS
@@ -462,6 +462,6 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q8XA87 (deaD)
-    protein example to node cold_shock_proteins; added UniProtKB:P0A9X9 (cspA) protein
+    protein example to node cold_shock_proteins; added UniProtKB:Q086E4 (Q086E4) protein
     example to node antifreeze_proteins.'
   llm_assisted: true

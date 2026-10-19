@@ -75,8 +75,8 @@ causal_graphs:
   - node_id: coagulase_negative_protein_component
     label: Glutamyl endopeptidase
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Glutamyl endopeptidase) associated with coagulase
-      negative.
+    description: Reference pathway protein component (Glutamyl endopeptidase) whose
+      absence or lack of activity characterizes coagulase negative.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
@@ -92,8 +92,9 @@ causal_graphs:
       retrieved_on: '2026-10-17'
       entry_version: 126
       sequence_version: 1
-      role: Characteristic protein component (sspA, Glutamyl endopeptidase) associated
-        with coagulase negative in Staphylococcus aureus (strain Mu50 / ATCC 700699).
+      role: Reference pathway protein (sspA, Glutamyl endopeptidase) whose absence
+        or lack of activity in Staphylococcus aureus (strain Mu50 / ATCC 700699) characterizes
+        coagulase negative.
       evidence:
       - reference: DOI:10.3390/microorganisms9040830
         snippet: Coagulase-negative staphylococci (CoNS) form a large group of Gram-positive
@@ -106,8 +107,8 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: coagulase_negative_trait
-    description: Glutamyl endopeptidase (sspA, UniProtKB:Q99V45) contributes to coagulase
-      negative (associated with staphylococci, coagulase, virulence).
+    description: Absence or inactivity of Glutamyl endopeptidase (sspA, UniProtKB:Q99V45)
+      in the reference pathway underlies the coagulase negative phenotype.
     evidence:
     - reference: DOI:10.3390/microorganisms9040830
       snippet: Coagulase-negative staphylococci (CoNS) form a large group of Gram-positive

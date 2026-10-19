@@ -100,18 +100,19 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph fungal_root_mantle_formation_graph
-    with GENE_OR_PROTEIN node fungal_root_mantle_formation_protein_component and UniProtKB:O13759
+    with GENE_OR_PROTEIN node fungal_root_mantle_formation_protein_component and UniProtKB:P08640
     exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: fungal_root_mantle_formation_graph
   title: Protein component associated with fungal root mantle formation
-  description: Literature-backed association between RNA-binding post-transcriptional
-    regulator csx1 (UniProtKB:O13759) and fungal root mantle formation.
+  description: Literature-backed association between Flocculation protein FLO11 (UniProtKB:P08640)
+    and fungal root mantle formation.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:O13759 in Schizosaccharomyces
-    pombe (strain 972 / ATCC 24843) (Fission yeast)) associated with fungal root mantle
-    formation while full multi-step mechanistic curation remains future work.
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P08640 in Saccharomyces
+    cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)) associated with fungal
+    root mantle formation while full multi-step mechanistic curation remains future
+    work.
   nodes:
   - node_id: fungal_root_mantle_formation_trait
     label: fungal root mantle formation
@@ -120,49 +121,47 @@ causal_graphs:
     description: A morphological phenotype in which a fungus forms an external sheath
       of aggregated hyphae, called a mantle, around a plant root.
   - node_id: fungal_root_mantle_formation_protein_component
-    label: RNA-binding post-transcriptional regulator csx1
+    label: Flocculation protein FLO11
     node_type: GENE_OR_PROTEIN
-    description: Protein component (RNA-binding post-transcriptional regulator csx1)
-      associated with fungal root mantle formation.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Flocculation protein FLO11) associated with fungal
+      root mantle formation.
+    grounding: InterPro:IPR018789
     gene_symbols:
-    - csx1
+    - FLO11
     protein_examples:
-    - uniprot_id: UniProtKB:O13759
-      protein_label: RNA-binding post-transcriptional regulator csx1
-      gene_symbol: csx1
-      taxon_id: NCBITaxon:284812
-      taxon_label: Schizosaccharomyces pombe (strain 972 / ATCC 24843) (Fission yeast)
+    - uniprot_id: UniProtKB:P08640
+      protein_label: Flocculation protein FLO11
+      gene_symbol: FLO11
+      taxon_id: NCBITaxon:559292
+      taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's
+        yeast)
       entry_status: REVIEWED
-      proteome_id: UP000002485
+      proteome_id: UP000002311
       retrieved_on: '2026-10-17'
-      entry_version: 152
-      sequence_version: 1
-      role: Characteristic protein component (csx1, RNA-binding post-transcriptional
-        regulator csx1) associated with fungal root mantle formation in Schizosaccharomyces
-        pombe (strain 972 / ATCC 24843) (Fission yeast).
+      entry_version: 187
+      sequence_version: 2
+      role: Characteristic protein component (FLO11, Flocculation protein FLO11) associated
+        with fungal root mantle formation in Saccharomyces cerevisiae (strain ATCC
+        204508 / S288c) (Baker's yeast).
       evidence:
-      - reference: DOI:10.3390/microorganisms9122612
-        snippet: Three weeks post-inoculation, fungal hyphae formed a thinner but
-          denser mantle.
-        notes: Supports RNA-binding post-transcriptional regulator csx1 in fungal
-          root mantle formation; UniProtKB:O13759 (csx1, RNA-binding post-transcriptional
-          regulator csx1) in Schizosaccharomyces pombe (strain 972 / ATCC 24843) (Fission
-          yeast) provides a verified protein exemplar.
+      - reference: DOI:10.1128/AEM.01991-15
+        snippet: the fungus initially grows around the roots to form a mass of mycelium
+          called the fungal mantle.
+        notes: Supports Flocculation protein FLO11 in fungal root mantle formation;
+          UniProtKB:P08640 (FLO11, Flocculation protein FLO11) in Saccharomyces cerevisiae
+          (strain ATCC 204508 / S288c) (Baker's yeast) provides a verified protein
+          exemplar.
   edges:
   - subject: fungal_root_mantle_formation_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: fungal_root_mantle_formation_trait
-    description: RNA-binding post-transcriptional regulator csx1 (csx1, UniProtKB:O13759)
-      contributes to fungal root mantle formation (associated with inoculation, thinner,
-      denser).
+    description: Flocculation protein FLO11 (FLO11, UniProtKB:P08640) contributes
+      to fungal root mantle formation.
     evidence:
-    - reference: DOI:10.3390/microorganisms9122612
-      snippet: Three weeks post-inoculation, fungal hyphae formed a thinner but denser
-        mantle.
-      notes: Supports the functional association between RNA-binding post-transcriptional
-        regulator csx1 (UniProtKB:O13759 in Schizosaccharomyces pombe (strain 972
-        / ATCC 24843) (Fission yeast)) and fungal root mantle formation.
+    - reference: DOI:10.1128/AEM.01991-15
+      snippet: the fungus initially grows around the roots to form a mass of mycelium
+        called the fungal mantle.
+      notes: Supports the functional association between Flocculation protein FLO11
+        (UniProtKB:P08640 in Saccharomyces cerevisiae (strain ATCC 204508 / S288c)
+        (Baker's yeast)) and fungal root mantle formation.

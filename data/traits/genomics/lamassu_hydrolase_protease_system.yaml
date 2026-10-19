@@ -120,18 +120,17 @@ curation_history:
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph lamassu_hydrolase_protease_system_graph
     with GENE_OR_PROTEIN node lamassu_hydrolase_protease_system_protein_component
-    and UniProtKB:P0DW44 exemplar.'
+    and UniProtKB:P0DW42 exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: lamassu_hydrolase_protease_system_graph
   title: Protein component associated with Lamassu Hydrolase-Protease system
-  description: Literature-backed association between Lamassu protein LmuB (UniProtKB:P0DW44)
+  description: Literature-backed association between Septu protein PtuB (UniProtKB:P0DW42)
     and Lamassu Hydrolase-Protease system.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P0DW44 in Bacillus
-    sp. (strain NCIM 5461 / CCTCC AB 2011126 / NIO-1130)) associated with Lamassu
-    Hydrolase-Protease system while full multi-step mechanistic curation remains future
-    work.
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P0DW42 in Bacillus
+    thuringiensis) associated with Lamassu Hydrolase-Protease system while full multi-step
+    mechanistic curation remains future work.
   nodes:
   - node_id: lamassu_hydrolase_protease_system_trait
     label: Lamassu Hydrolase-Protease system
@@ -141,28 +140,27 @@ causal_graphs:
       a protease-domain LmuA effector together with a hydrolase-like protein, an SMC-like
       LmuB sensor, and LmuC.
   - node_id: lamassu_hydrolase_protease_system_protein_component
-    label: Lamassu protein LmuB
+    label: Septu protein PtuB
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Lamassu protein LmuB) associated with Lamassu
-      Hydrolase-Protease system.
+    description: Protein component (Septu protein PtuB) associated with Lamassu Hydrolase-Protease
+      system.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - lmuB
+    - ptuB
     protein_examples:
-    - uniprot_id: UniProtKB:P0DW44
-      protein_label: Lamassu protein LmuB
-      gene_symbol: lmuB
-      taxon_id: NCBITaxon:1761765
-      taxon_label: Bacillus sp. (strain NCIM 5461 / CCTCC AB 2011126 / NIO-1130)
+    - uniprot_id: UniProtKB:P0DW42
+      protein_label: Septu protein PtuB
+      gene_symbol: ptuB
+      taxon_id: NCBITaxon:1428
+      taxon_label: Bacillus thuringiensis
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      entry_version: 8
+      entry_version: 12
       sequence_version: 1
-      role: Characteristic protein component (lmuB, Lamassu protein LmuB) associated
-        with Lamassu Hydrolase-Protease system in Bacillus sp. (strain NCIM 5461 /
-        CCTCC AB 2011126 / NIO-1130).
+      role: Characteristic protein component (ptuB, Septu protein PtuB) associated
+        with Lamassu Hydrolase-Protease system in Bacillus thuringiensis.
       evidence:
       - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
         snippet: Lamassu-Fam Lamassu-Hydrolase 2 2 Lamassu-Fam__LmuA_effector_Hydrolase,
@@ -171,16 +169,16 @@ causal_graphs:
           Lamassu-Fam__LmuA_effector_FMO, Lamassu-Fam__LmuA_effector_Lipase, Lamassu-Fam__LmuA_effector_Mrr,
           Lamassu-Fam__LmuA_effector_PDDEXK, Lamassu-Fam__LmuA_effector_Protease,
           Lamassu-Fam__LmuA_effector_Sir2, Lamassu-Fam__LmuA_effector_hypothetical
-        notes: Supports Lamassu protein LmuB in Lamassu Hydrolase-Protease system;
-          UniProtKB:P0DW44 (lmuB, Lamassu protein LmuB) in Bacillus sp. (strain NCIM
-          5461 / CCTCC AB 2011126 / NIO-1130) provides a verified protein exemplar.
+        notes: Supports Septu protein PtuB in Lamassu Hydrolase-Protease system; UniProtKB:P0DW42
+          (ptuB, Septu protein PtuB) in Bacillus thuringiensis provides a verified
+          protein exemplar.
   edges:
   - subject: lamassu_hydrolase_protease_system_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: lamassu_hydrolase_protease_system_trait
-    description: Lamassu protein LmuB (lmuB, UniProtKB:P0DW44) contributes to Lamassu
-      Hydrolase-Protease system (associated with hydrolase, effector, nuclease).
+    description: Septu protein PtuB (ptuB, UniProtKB:P0DW42) contributes to Lamassu
+      Hydrolase-Protease system.
     evidence:
     - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
       snippet: Lamassu-Fam Lamassu-Hydrolase 2 2 Lamassu-Fam__LmuA_effector_Hydrolase,
@@ -189,6 +187,5 @@ causal_graphs:
         Lamassu-Fam__LmuA_effector_FMO, Lamassu-Fam__LmuA_effector_Lipase, Lamassu-Fam__LmuA_effector_Mrr,
         Lamassu-Fam__LmuA_effector_PDDEXK, Lamassu-Fam__LmuA_effector_Protease, Lamassu-Fam__LmuA_effector_Sir2,
         Lamassu-Fam__LmuA_effector_hypothetical
-      notes: Supports the functional association between Lamassu protein LmuB (UniProtKB:P0DW44
-        in Bacillus sp. (strain NCIM 5461 / CCTCC AB 2011126 / NIO-1130)) and Lamassu
-        Hydrolase-Protease system.
+      notes: Supports the functional association between Septu protein PtuB (UniProtKB:P0DW42
+        in Bacillus thuringiensis) and Lamassu Hydrolase-Protease system.

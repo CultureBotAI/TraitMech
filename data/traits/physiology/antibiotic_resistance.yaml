@@ -86,25 +86,25 @@ causal_graphs:
       resistance-associated loss or modification events, so no single family term
       exactly represents the node.
     protein_examples:
-    - uniprot_id: UniProtKB:P02943
-      protein_label: Maltoporin
-      gene_symbol: lamB
+    - uniprot_id: UniProtKB:P06996
+      protein_label: Outer membrane porin C
+      gene_symbol: ompC
       taxon_id: NCBITaxon:83333
       taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
       proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 221
+      entry_version: 206
       sequence_version: 1
-      role: Exemplar protein (lamB, Maltoporin) representing outer membrane porin
-        in Escherichia coli (strain K12) for antibiotic resistance.
+      role: Exemplar protein (ompC, Outer membrane porin C) representing outer membrane
+        porin in Escherichia coli (strain K12) for antibiotic resistance.
       evidence:
       - reference: DOI:10.1128/mbio.02665-19
         snippet: increased methylation of G748 in 23S rRNA and thereby conferring
           resistance to this antibiotic
-        notes: Supports outer membrane porin in antibiotic resistance; UniProtKB:P02943
-          (lamB, Maltoporin) in Escherichia coli (strain K12) provides a verified
-          protein exemplar.
+        notes: Supports outer membrane porin in antibiotic resistance; UniProtKB:P06996
+          (ompC, Outer membrane porin C) in Escherichia coli (strain K12) provides
+          a verified protein exemplar.
   - node_id: antibiotic_influx
     label: antibiotic influx
     node_type: BIOLOGICAL_PROCESS
@@ -394,7 +394,7 @@ curation_history:
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:P00807
     version metadata (entry_version=172, sequence_version=1); added UniProtKB:P9WJW9
-    (jefA) protein example to node efflux_pump; added UniProtKB:P02943 (lamB) protein
+    (jefA) protein example to node efflux_pump; added UniProtKB:P06996 (ompC) protein
     example to node outer_membrane_porin; added UniProtKB:P0AES6 (gyrB) protein example
     to node qrdr_mutation.'
   llm_assisted: true

@@ -135,19 +135,18 @@ curation_history:
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph microbial_haustorium_formation_graph
     with GENE_OR_PROTEIN node microbial_haustorium_formation_protein_component and
-    UniProtKB:Q9X4E2 exemplar.'
+    UniProtKB:P13574 exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: microbial_haustorium_formation_graph
   title: Protein component associated with microbial haustorium formation
-  description: Literature-backed association between Integration host factor subunit
-    beta (UniProtKB:Q9X4E2) and microbial haustorium formation.
+  description: Literature-backed association between Protein STE12 (UniProtKB:P13574)
+    and microbial haustorium formation.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q9X4E2 in Cereibacter
-    sphaeroides (strain ATCC 17023 / DSM 158 / JCM 6121 / CCUG 31486 / LMG 2827 /
-    NBRC 12203 / NCIMB 8253 / ATH 2.4.1.) (Rhodobacter sphaeroides)) associated with
-    microbial haustorium formation while full multi-step mechanistic curation remains
-    future work.
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P13574 in Saccharomyces
+    cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)) associated with microbial
+    haustorium formation while full multi-step mechanistic curation remains future
+    work.
   nodes:
   - node_id: microbial_haustorium_formation_trait
     label: microbial haustorium formation
@@ -157,54 +156,46 @@ causal_graphs:
       hyphal outgrowths, called haustoria, that establish intimate interfaces with
       living host cells.
   - node_id: microbial_haustorium_formation_protein_component
-    label: Integration host factor subunit beta
+    label: Protein STE12
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Integration host factor subunit beta) associated
-      with microbial haustorium formation.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Protein STE12) associated with microbial haustorium
+      formation.
+    grounding: InterPro:IPR003120
     gene_symbols:
-    - ihfB
+    - STE12
     protein_examples:
-    - uniprot_id: UniProtKB:Q9X4E2
-      protein_label: Integration host factor subunit beta
-      gene_symbol: ihfB
-      taxon_id: NCBITaxon:272943
-      taxon_label: Cereibacter sphaeroides (strain ATCC 17023 / DSM 158 / JCM 6121
-        / CCUG 31486 / LMG 2827 / NBRC 12203 / NCIMB 8253 / ATH 2.4.1.) (Rhodobacter
-        sphaeroides)
+    - uniprot_id: UniProtKB:P13574
+      protein_label: Protein STE12
+      gene_symbol: STE12
+      taxon_id: NCBITaxon:559292
+      taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's
+        yeast)
       entry_status: REVIEWED
-      proteome_id: UP000002703
+      proteome_id: UP000002311
       retrieved_on: '2026-10-17'
-      entry_version: 127
+      entry_version: 205
       sequence_version: 1
-      role: Characteristic protein component (ihfB, Integration host factor subunit
-        beta) associated with microbial haustorium formation in Cereibacter sphaeroides
-        (strain ATCC 17023 / DSM 158 / JCM 6121 / CCUG 31486 / LMG 2827 / NBRC 12203
-        / NCIMB 8253 / ATH 2.4.1.) (Rhodobacter sphaeroides).
+      role: Characteristic protein component (STE12, Protein STE12) associated with
+        microbial haustorium formation in Saccharomyces cerevisiae (strain ATCC 204508
+        / S288c) (Baker's yeast).
       evidence:
       - reference: DOI:10.1016/j.fgb.2014.08.006
         snippet: The haustorium is separated from the extrahaustorial membrane (em)
           by the extrahaustorial matrix (emx).
-        notes: Supports Integration host factor subunit beta in microbial haustorium
-          formation; UniProtKB:Q9X4E2 (ihfB, Integration host factor subunit beta)
-          in Cereibacter sphaeroides (strain ATCC 17023 / DSM 158 / JCM 6121 / CCUG
-          31486 / LMG 2827 / NBRC 12203 / NCIMB 8253 / ATH 2.4.1.) (Rhodobacter sphaeroides)
-          provides a verified protein exemplar.
+        notes: Supports Protein STE12 in microbial haustorium formation; UniProtKB:P13574
+          (STE12, Protein STE12) in Saccharomyces cerevisiae (strain ATCC 204508 /
+          S288c) (Baker's yeast) provides a verified protein exemplar.
   edges:
   - subject: microbial_haustorium_formation_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: microbial_haustorium_formation_trait
-    description: Integration host factor subunit beta (ihfB, UniProtKB:Q9X4E2) contributes
-      to microbial haustorium formation (associated with extrahaustorial, haustorium,
-      separated).
+    description: Protein STE12 (STE12, UniProtKB:P13574) contributes to microbial
+      haustorium formation.
     evidence:
     - reference: DOI:10.1016/j.fgb.2014.08.006
       snippet: The haustorium is separated from the extrahaustorial membrane (em)
         by the extrahaustorial matrix (emx).
-      notes: Supports the functional association between Integration host factor subunit
-        beta (UniProtKB:Q9X4E2 in Cereibacter sphaeroides (strain ATCC 17023 / DSM
-        158 / JCM 6121 / CCUG 31486 / LMG 2827 / NBRC 12203 / NCIMB 8253 / ATH 2.4.1.)
-        (Rhodobacter sphaeroides)) and microbial haustorium formation.
+      notes: Supports the functional association between Protein STE12 (UniProtKB:P13574
+        in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast))
+        and microbial haustorium formation.

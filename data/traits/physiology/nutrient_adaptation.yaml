@@ -202,8 +202,7 @@ causal_graphs:
     predicate_id: RO:0002326
     object: nutrient_adaptation_trait
     description: DNA-binding transcriptional dual regulator CRP (crp, UniProtKB:P0ACJ8)
-      contributes to nutrient adaptation (associated with concentrations, oligotrophic,
-      nutrient).
+      contributes to nutrient adaptation.
     evidence:
     - reference: DOI:10.1073/pnas.0903507106
       snippet: low (oligotrophic) nutrient concentrations

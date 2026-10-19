@@ -109,36 +109,32 @@ causal_graphs:
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
   - node_id: rnlab_system_protein_component
-    label: mRNA endoribonuclease toxin LS
+    label: Endoribonuclease ToxN
     node_type: GENE_OR_PROTEIN
-    description: Protein component (mRNA endoribonuclease toxin LS) associated with
-      RnlAB system.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Endoribonuclease ToxN) associated with RnlAB system.
+    grounding: InterPro:IPR025911
     gene_symbols:
-    - rnlA
+    - toxN
     protein_examples:
-    - uniprot_id: UniProtKB:P52129
-      protein_label: mRNA endoribonuclease toxin LS
-      gene_symbol: rnlA
-      taxon_id: NCBITaxon:83333
-      taxon_label: Escherichia coli (strain K12)
+    - uniprot_id: UniProtKB:B8X8Z0
+      protein_label: Endoribonuclease ToxN
+      gene_symbol: toxN
+      taxon_id: NCBITaxon:29471
+      taxon_label: Pectobacterium atrosepticum (Erwinia carotovora subsp. atroseptica)
       entry_status: REVIEWED
-      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 146
-      sequence_version: 2
-      role: Characteristic protein component (rnlA, mRNA endoribonuclease toxin LS)
-        associated with RnlAB system in Escherichia coli (strain K12).
+      entry_version: 47
+      sequence_version: 1
+      role: Characteristic protein component (toxN, Endoribonuclease ToxN) associated
+        with RnlAB system in Pectobacterium atrosepticum (Erwinia carotovora subsp.
+        atroseptica).
       evidence:
-      - reference: PMID:20980243
-        snippet: Here we show that rnlA, a structural gene of RNase LS, encodes a
-          novel toxin, and that rnlB (formally yfjO), located immediately downstream
-          of rnlA, encodes an antitoxin against RnlA.
-        notes: Supports mRNA endoribonuclease toxin LS in RnlAB system; UniProtKB:P52129
-          (rnlA, mRNA endoribonuclease toxin LS) in Escherichia coli (strain K12)
-          provides a verified protein exemplar.
+      - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+        snippet: RnlAB | 10\.1534/genetics\.110\.121798 | Escherichia coli rnlA and
+          rnlB compose a novel toxin-antitoxin system
+        notes: Supports Endoribonuclease ToxN in RnlAB system; UniProtKB:B8X8Z0 (toxN,
+          Endoribonuclease ToxN) in Pectobacterium atrosepticum (Erwinia carotovora
+          subsp. atroseptica) provides a verified protein exemplar.
   edges:
   - subject: rnlab_locus
     predicate: contributes to
@@ -210,15 +206,20 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: rnlab_system_trait
-    description: mRNA endoribonuclease toxin LS (rnlA, UniProtKB:P52129) contributes
-      to RnlAB system (associated with respectively, chromosome, antitoxin).
+    description: Endoribonuclease ToxN (toxN, UniProtKB:B8X8Z0) contributes to RnlAB
+      system.
     evidence:
-    - reference: PMID:22403819
-      snippet: Predicted proteins encoded by these two ORFs were found to share a
-        weak homology with RnlA and RnlB, respectively, a toxin–antitoxin system encoded
-        on the E. coli K-12 chromosome.
-      notes: Supports the functional association between mRNA endoribonuclease toxin
-        LS (UniProtKB:P52129 in Escherichia coli (strain K12)) and RnlAB system.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| RM_Type_IIG__Type_IIG_1 | | RM_Type_IIG | Custom | 300 | | RM_Type_IIG__Type_IIG_2
+        | | RM_Type_IIG | Custom | 300 | | RM_Type_IIG__Type_IIG_3 | | RM_Type_IIG
+        | Custom | 300 | | RM_Type_IIG__Type_IIG_4 | | RM_Type_IIG | Custom | 300
+        | | RM_Type_IIG__Type_IIG_5 | | RM_Type_IIG | Custom | 300 | | RM_Type_IIG__Type_IIG_FAM_0.einsi_trimmed
+        | | RM_Type_IIG | Custom | 300 | | RM_Type_IIG__Type_IIG_FAM_1.einsi_trimmed
+        | | RM_Type_IIG | Custom | 300 | | RM_Type_IIG__Type_IIG_FAM_2.einsi_trimmed
+        | | RM_Type_IIG | Custom | 300 |'
+      notes: Supports the functional association between Endoribonuclease ToxN (UniProtKB:B8X8Z0
+        in Pectobacterium atrosepticum (Erwinia carotovora subsp. atroseptica)) and
+        RnlAB system.
 discussions:
 - discussion_id: rnlab-phage-breadth-evasion-gap
   prompt: Resolve natural RnlAB phage breadth, wild-type T4 evasion through Dmd, induction
@@ -256,5 +257,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    rnlab_system_protein_component with UniProtKB:P52129 (rnlA) exemplar.'
+    rnlab_system_protein_component with UniProtKB:B8X8Z0 (toxN) exemplar.'
   llm_assisted: true

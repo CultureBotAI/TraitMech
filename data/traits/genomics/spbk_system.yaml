@@ -78,33 +78,33 @@ causal_graphs:
     description: Possession of a genome-encoded SpbK abortive-infection phage-defense
       system.
   - node_id: spbk_system_protein_component
-    label: Endoribonuclease HigB
+    label: Abortive phage resistance protein AbiC
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Endoribonuclease HigB) associated with SpbK system.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Abortive phage resistance protein AbiC) associated
+      with SpbK system.
+    grounding: InterPro:IPR031709
     gene_symbols:
-    - higB
+    - abiC
     protein_examples:
-    - uniprot_id: UniProtKB:Q7A225
-      protein_label: Endoribonuclease HigB
-      gene_symbol: higB
-      taxon_id: NCBITaxon:585
-      taxon_label: Proteus vulgaris
+    - uniprot_id: UniProtKB:Q01457
+      protein_label: Abortive phage resistance protein AbiC
+      gene_symbol: abiC
+      taxon_id: NCBITaxon:1360
+      taxon_label: Lactococcus lactis subsp. lactis (Streptococcus lactis)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      entry_version: 69
+      entry_version: 35
       sequence_version: 1
-      role: Characteristic protein component (higB, Endoribonuclease HigB) associated
-        with SpbK system in Proteus vulgaris.
+      role: Characteristic protein component (abiC, Abortive phage resistance protein
+        AbiC) associated with SpbK system in Lactococcus lactis subsp. lactis (Streptococcus
+        lactis).
       evidence:
       - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
-        snippet: 'SpbK | 10\.1371/journal\.pgen\.1010065 | Interactions between mobile
-          genetic elements: An anti-phage gene in an integrative and conjugative element
-          protects host cells from predation by a temperate bacteriophage'
-        notes: Supports Endoribonuclease HigB in SpbK system; UniProtKB:Q7A225 (higB,
-          Endoribonuclease HigB) in Proteus vulgaris provides a verified protein exemplar.
+        snippet: 'AbiC | 10\.1016/j\.mib\.2005\.06\.006 | Phage abortive infection
+          in lactococci: variations on a theme'
+        notes: Supports Abortive phage resistance protein AbiC in SpbK system; UniProtKB:Q01457
+          (abiC, Abortive phage resistance protein AbiC) in Lactococcus lactis subsp.
+          lactis (Streptococcus lactis) provides a verified protein exemplar.
   edges:
   - subject: spbk_locus
     predicate: contributes to
@@ -151,14 +151,15 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: spbk_system_trait
-    description: Endoribonuclease HigB (higB, UniProtKB:Q7A225) contributes to SpbK
-      system (associated with expression, inhibited, viability).
+    description: Abortive phage resistance protein AbiC (abiC, UniProtKB:Q01457) contributes
+      to SpbK system.
     evidence:
-    - reference: DOI:10.1371/journal.pgen.1010065
-      snippet: Co-expression of spbK and yonE inhibited host cell growth and caused
-        a drop in cell viability, even in the absence of any other ICEBs1 or SPß genes.
-      notes: Supports the functional association between Endoribonuclease HigB (UniProtKB:Q7A225
-        in Proteus vulgaris) and SpbK system.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: 'AbiC | 10\.1016/j\.mib\.2005\.06\.006 | Phage abortive infection in
+        lactococci: variations on a theme'
+      notes: Supports the functional association between Abortive phage resistance
+        protein AbiC (UniProtKB:Q01457 in Lactococcus lactis subsp. lactis (Streptococcus
+        lactis)) and SpbK system.
 discussions:
 - discussion_id: spbk-mechanism-gap
   prompt: Resolve the direct SPβ YonE trigger, SpbK TIR-domain output, essential host
@@ -194,5 +195,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    spbk_system_protein_component with UniProtKB:Q7A225 (higB) exemplar.'
+    spbk_system_protein_component with UniProtKB:Q01457 (abiC) exemplar.'
   llm_assisted: true

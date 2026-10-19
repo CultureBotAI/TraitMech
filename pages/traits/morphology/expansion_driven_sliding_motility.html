@@ -63,9 +63,9 @@
 
     <div class="card causal-graph-card">
       <h2>Protein component associated with expansion-driven sliding motility</h2>
-      <p class="meta">Literature-backed association between Beta sliding clamp (UniProtKB:P0A988) and expansion-driven sliding motility.</p>
+      <p class="meta">Literature-backed association between Surfactin synthase subunit 1 (UniProtKB:P27206) and expansion-driven sliding motility.</p>
 
-      <p class="graph-scope"><code>NONMECHANISTIC</code> · Captures a source-backed protein exemplar (UniProtKB:P0A988 in Escherichia coli (strain K12)) associated with expansion-driven sliding motility while full multi-step mechanistic curation remains future work.</p>
+      <p class="graph-scope"><code>NONMECHANISTIC</code> · Captures a source-backed protein exemplar (UniProtKB:P27206 in Bacillus subtilis (strain 168)) associated with expansion-driven sliding motility while full multi-step mechanistic curation remains future work.</p>
 
 
       <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
@@ -84,17 +84,17 @@
         <ul>
 
           <li id="pathograph-1-edge-1">
-            <strong>Beta sliding clamp</strong>
+            <strong>Surfactin synthase subunit 1</strong>
             <span class="edge-predicate">contributes to</span>
             <strong>expansion-driven sliding motility</strong>
             <code>RO:0002326</code>
-            <p>Beta sliding clamp (dnaN, UniProtKB:P0A988) contributes to expansion-driven sliding motility (associated with mycobacterium, smegmatis, motility).</p>
+            <p>Surfactin synthase subunit 1 (srfAA, UniProtKB:P27206) contributes to expansion-driven sliding motility.</p>
             <ul>
 
               <li>
                 <a href="https://doi.org/10.1111/1758-2229.70214" rel="nofollow noreferrer"><code>DOI:10.1111/1758-2229.70214</code></a>
                 <span class="evidence-snippet">Passive sliding motility allows Mycobacterium smegmatis to spread over soft agar surfaces.</span>
-                <span class="meta">Supports the functional association between Beta sliding clamp (UniProtKB:P0A988 in Escherichia coli (strain K12)) and expansion-driven sliding motility.</span>
+                <span class="meta">Supports the functional association between Surfactin synthase subunit 1 (UniProtKB:P27206 in Bacillus subtilis (strain 168)) and expansion-driven sliding motility.</span>
               </li>
 
             </ul>
@@ -115,29 +115,29 @@
             <tbody>
 
               <tr>
-                <td>Beta sliding clamp</td>
+                <td>Surfactin synthase subunit 1</td>
                 <td>
 
-                  <a href="https://www.uniprot.org/uniprotkb/P0A988/entry" rel="nofollow noreferrer"><code>UniProtKB:P0A988</code></a>
-                  <br>Beta sliding clamp <span class="meta">(dnaN)</span>
+                  <a href="https://www.uniprot.org/uniprotkb/P27206/entry" rel="nofollow noreferrer"><code>UniProtKB:P27206</code></a>
+                  <br>Surfactin synthase subunit 1 <span class="meta">(srfAA)</span>
                 </td>
                 <td>
 
-                  <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=83333" rel="nofollow noreferrer">Escherichia coli (strain K12)</a>
-                  <br><code>NCBITaxon:83333</code>
+                  <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=224308" rel="nofollow noreferrer">Bacillus subtilis (strain 168)</a>
+                  <br><code>NCBITaxon:224308</code>
                 </td>
                 <td>
                   <code>REVIEWED</code><br>
-                  <span class="meta">retrieved 2026-10-17 · entry v164 · sequence v1</span>
+                  <span class="meta">retrieved 2026-10-17 · entry v174 · sequence v4</span>
                 </td>
                 <td>
-                  <p>Characteristic protein component (dnaN, Beta sliding clamp) associated with expansion-driven sliding motility in Escherichia coli (strain K12).</p>
+                  <p>Characteristic protein component (srfAA, Surfactin synthase subunit 1) associated with expansion-driven sliding motility in Bacillus subtilis (strain 168).</p>
                   <ul>
 
                     <li>
                       <a href="https://doi.org/10.1111/1758-2229.70214" rel="nofollow noreferrer"><code>DOI:10.1111/1758-2229.70214</code></a>
                       <span class="evidence-snippet">Passive sliding motility allows Mycobacterium smegmatis to spread over soft agar surfaces.</span>
-                      <span class="meta">Supports Beta sliding clamp in expansion-driven sliding motility; UniProtKB:P0A988 (dnaN, Beta sliding clamp) in Escherichia coli (strain K12) provides a verified protein exemplar.</span>
+                      <span class="meta">Supports Surfactin synthase subunit 1 in expansion-driven sliding motility; UniProtKB:P27206 (srfAA, Surfactin synthase subunit 1) in Bacillus subtilis (strain 168) provides a verified protein exemplar.</span>
                     </li>
 
                   </ul>
@@ -335,8 +335,14 @@
 
         <li>
           <time>2026-10-17T09:00:00Z</time> ·
+          <strong>REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP</strong> · codex
+          <p class="changes">Reviewed canonical_examples status alongside NONMECHANISTIC protein exemplar graph for expansion-driven sliding motility; isolate-level canonical example remains deferred pending explicit strain-level literature.</p>
+        </li>
+
+        <li>
+          <time>2026-10-17T09:00:00Z</time> ·
           <strong>CURATE_PROTEIN_TAXON_EXAMPLE</strong> · codex
-          <p class="changes">Curated verified UniProtKB protein_examples: added causal graph expansion_driven_sliding_motility_graph with GENE_OR_PROTEIN node expansion_driven_sliding_motility_protein_component and UniProtKB:P0A988 exemplar.</p>
+          <p class="changes">Curated verified UniProtKB protein_examples: added causal graph expansion_driven_sliding_motility_graph with GENE_OR_PROTEIN node expansion_driven_sliding_motility_protein_component and UniProtKB:P27206 exemplar.</p>
         </li>
 
       </ol>
@@ -715,7 +721,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Literature-backed association between Beta sliding clamp (UniProtKB:P0A988) and expansion-driven sliding motility.", "edges": [{"description": "Beta sliding clamp (dnaN, UniProtKB:P0A988) contributes to expansion-driven sliding motility (associated with mycobacterium, smegmatis, motility).", "evidence": [{"notes": "Supports the functional association between Beta sliding clamp (UniProtKB:P0A988 in Escherichia coli (strain K12)) and expansion-driven sliding motility.", "reference": "DOI:10.1111/1758-2229.70214", "snippet": "Passive sliding motility allows Mycobacterium smegmatis to spread over soft agar surfaces."}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "expansion_driven_sliding_motility_protein_component", "target": "expansion_driven_sliding_motility_trait"}], "evidence_rows": [{"description": "Beta sliding clamp (dnaN, UniProtKB:P0A988) contributes to expansion-driven sliding motility (associated with mycobacterium, smegmatis, motility).", "edge_id": "edge-1", "evidence": [{"notes": "Supports the functional association between Beta sliding clamp (UniProtKB:P0A988 in Escherichia coli (strain K12)) and expansion-driven sliding motility.", "reference": "DOI:10.1111/1758-2229.70214", "snippet": "Passive sliding motility allows Mycobacterium smegmatis to spread over soft agar surfaces."}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Beta sliding clamp", "target": "expansion-driven sliding motility"}], "graph_id": "expansion_driven_sliding_motility_graph", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Protein component (Beta sliding clamp) associated with expansion-driven sliding motility.", "grounding": null, "id": "expansion_driven_sliding_motility_protein_component", "is_orphan": false, "label": "Beta sliding clamp", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 164, "evidence": [{"notes": "Supports Beta sliding clamp in expansion-driven sliding motility; UniProtKB:P0A988 (dnaN, Beta sliding clamp) in Escherichia coli (strain K12) provides a verified protein exemplar.", "reference": "DOI:10.1111/1758-2229.70214", "snippet": "Passive sliding motility allows Mycobacterium smegmatis to spread over soft agar surfaces."}], "gene_symbol": "dnaN", "protein_label": "Beta sliding clamp", "proteome_id": "UP000000625", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (dnaN, Beta sliding clamp) associated with expansion-driven sliding motility in Escherichia coli (strain K12).", "sequence_version": 1, "taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli (strain K12)", "uniprot_id": "UniProtKB:P0A988"}], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "A phenotype in which a microbial population spreads across a supporting surface through passive displacement of cells by expansive forces generated within the colony, without active locomotory propulsion of the displaced cells.", "grounding": "traitmech:000703", "id": "expansion_driven_sliding_motility_trait", "is_orphan": false, "label": "expansion-driven sliding motility", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 164, "evidence": [{"notes": "Supports Beta sliding clamp in expansion-driven sliding motility; UniProtKB:P0A988 (dnaN, Beta sliding clamp) in Escherichia coli (strain K12) provides a verified protein exemplar.", "reference": "DOI:10.1111/1758-2229.70214", "snippet": "Passive sliding motility allows Mycobacterium smegmatis to spread over soft agar surfaces."}], "gene_symbol": "dnaN", "node_id": "expansion_driven_sliding_motility_protein_component", "node_label": "Beta sliding clamp", "protein_label": "Beta sliding clamp", "proteome_id": "UP000000625", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (dnaN, Beta sliding clamp) associated with expansion-driven sliding motility in Escherichia coli (strain K12).", "sequence_version": 1, "taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli (strain K12)", "uniprot_id": "UniProtKB:P0A988"}], "scope_notes": "Captures a source-backed protein exemplar (UniProtKB:P0A988 in Escherichia coli (strain K12)) associated with expansion-driven sliding motility while full multi-step mechanistic curation remains future work.", "scope_status": "NONMECHANISTIC", "title": "Protein component associated with expansion-driven sliding motility"}];
+  var graphs = [{"description": "Literature-backed association between Surfactin synthase subunit 1 (UniProtKB:P27206) and expansion-driven sliding motility.", "edges": [{"description": "Surfactin synthase subunit 1 (srfAA, UniProtKB:P27206) contributes to expansion-driven sliding motility.", "evidence": [{"notes": "Supports the functional association between Surfactin synthase subunit 1 (UniProtKB:P27206 in Bacillus subtilis (strain 168)) and expansion-driven sliding motility.", "reference": "DOI:10.1111/1758-2229.70214", "snippet": "Passive sliding motility allows Mycobacterium smegmatis to spread over soft agar surfaces."}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "expansion_driven_sliding_motility_protein_component", "target": "expansion_driven_sliding_motility_trait"}], "evidence_rows": [{"description": "Surfactin synthase subunit 1 (srfAA, UniProtKB:P27206) contributes to expansion-driven sliding motility.", "edge_id": "edge-1", "evidence": [{"notes": "Supports the functional association between Surfactin synthase subunit 1 (UniProtKB:P27206 in Bacillus subtilis (strain 168)) and expansion-driven sliding motility.", "reference": "DOI:10.1111/1758-2229.70214", "snippet": "Passive sliding motility allows Mycobacterium smegmatis to spread over soft agar surfaces."}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Surfactin synthase subunit 1", "target": "expansion-driven sliding motility"}], "graph_id": "expansion_driven_sliding_motility_graph", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Protein component (Surfactin synthase subunit 1) associated with expansion-driven sliding motility.", "grounding": "InterPro:IPR010071", "id": "expansion_driven_sliding_motility_protein_component", "is_orphan": false, "label": "Surfactin synthase subunit 1", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 174, "evidence": [{"notes": "Supports Surfactin synthase subunit 1 in expansion-driven sliding motility; UniProtKB:P27206 (srfAA, Surfactin synthase subunit 1) in Bacillus subtilis (strain 168) provides a verified protein exemplar.", "reference": "DOI:10.1111/1758-2229.70214", "snippet": "Passive sliding motility allows Mycobacterium smegmatis to spread over soft agar surfaces."}], "gene_symbol": "srfAA", "protein_label": "Surfactin synthase subunit 1", "proteome_id": "UP000001570", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (srfAA, Surfactin synthase subunit 1) associated with expansion-driven sliding motility in Bacillus subtilis (strain 168).", "sequence_version": 4, "taxon_id": "NCBITaxon:224308", "taxon_label": "Bacillus subtilis (strain 168)", "uniprot_id": "UniProtKB:P27206"}], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "A phenotype in which a microbial population spreads across a supporting surface through passive displacement of cells by expansive forces generated within the colony, without active locomotory propulsion of the displaced cells.", "grounding": "traitmech:000703", "id": "expansion_driven_sliding_motility_trait", "is_orphan": false, "label": "expansion-driven sliding motility", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 174, "evidence": [{"notes": "Supports Surfactin synthase subunit 1 in expansion-driven sliding motility; UniProtKB:P27206 (srfAA, Surfactin synthase subunit 1) in Bacillus subtilis (strain 168) provides a verified protein exemplar.", "reference": "DOI:10.1111/1758-2229.70214", "snippet": "Passive sliding motility allows Mycobacterium smegmatis to spread over soft agar surfaces."}], "gene_symbol": "srfAA", "node_id": "expansion_driven_sliding_motility_protein_component", "node_label": "Surfactin synthase subunit 1", "protein_label": "Surfactin synthase subunit 1", "proteome_id": "UP000001570", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (srfAA, Surfactin synthase subunit 1) associated with expansion-driven sliding motility in Bacillus subtilis (strain 168).", "sequence_version": 4, "taxon_id": "NCBITaxon:224308", "taxon_label": "Bacillus subtilis (strain 168)", "uniprot_id": "UniProtKB:P27206"}], "scope_notes": "Captures a source-backed protein exemplar (UniProtKB:P27206 in Bacillus subtilis (strain 168)) associated with expansion-driven sliding motility while full multi-step mechanistic curation remains future work.", "scope_status": "NONMECHANISTIC", "title": "Protein component associated with expansion-driven sliding motility"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });

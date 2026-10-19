@@ -83,41 +83,36 @@ causal_graphs:
     description: Possession of a genome-encoded Type IV modification-dependent restriction
       system.
   - node_id: pvurts1i_system_protein_component
-    label: Type I restriction enzyme SsaAORF53P endonuclease subunit
+    label: Type IV methyl-directed restriction enzyme EcoKMcrB subunit
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Type I restriction enzyme SsaAORF53P endonuclease
+    description: Protein component (Type IV methyl-directed restriction enzyme EcoKMcrB
       subunit) associated with PvuRts1I system.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    grounding: InterPro:IPR003593
     gene_symbols:
-    - hsdR
+    - mcrB
     protein_examples:
-    - uniprot_id: UniProtKB:Q4A127
-      protein_label: Type I restriction enzyme SsaAORF53P endonuclease subunit
-      gene_symbol: hsdR
-      taxon_id: NCBITaxon:342451
-      taxon_label: Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
-        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+    - uniprot_id: UniProtKB:P15005
+      protein_label: Type IV methyl-directed restriction enzyme EcoKMcrB subunit
+      gene_symbol: mcrB
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
-      proteome_id: UP000006371
+      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 116
-      sequence_version: 1
-      role: Characteristic protein component (hsdR, Type I restriction enzyme SsaAORF53P
-        endonuclease subunit) associated with PvuRts1I system in Staphylococcus saprophyticus
-        subsp. saprophyticus (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292
-        / S-41).
+      entry_version: 197
+      sequence_version: 3
+      role: Characteristic protein component (mcrB, Type IV methyl-directed restriction
+        enzyme EcoKMcrB subunit) associated with PvuRts1I system in Escherichia coli
+        (strain K12).
       evidence:
       - reference: DOI:10.1093/nar/gkr607
         snippet: PvuRts1I is a modification-dependent restriction endonuclease that
           recognizes 5-hydroxymethylcytosine (5hmC) as well as 5-glucosylhydroxymethylcytosine
           (5ghmC) in double-stranded DNA.
-        notes: Supports Type I restriction enzyme SsaAORF53P endonuclease subunit
-          in PvuRts1I system; UniProtKB:Q4A127 (hsdR, Type I restriction enzyme SsaAORF53P
-          endonuclease subunit) in Staphylococcus saprophyticus subsp. saprophyticus
-          (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) provides
-          a verified protein exemplar.
+        notes: Supports Type IV methyl-directed restriction enzyme EcoKMcrB subunit
+          in PvuRts1I system; UniProtKB:P15005 (mcrB, Type IV methyl-directed restriction
+          enzyme EcoKMcrB subunit) in Escherichia coli (strain K12) provides a verified
+          protein exemplar.
   edges:
   - subject: pvurts1i_family_locus
     predicate: enables
@@ -194,17 +189,16 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: pvurts1i_system_trait
-    description: Type I restriction enzyme SsaAORF53P endonuclease subunit (hsdR,
-      UniProtKB:Q4A127) contributes to PvuRts1I system (associated with endonuclease,
-      nucleotides, restriction).
+    description: Type IV methyl-directed restriction enzyme EcoKMcrB subunit (mcrB,
+      UniProtKB:P15005) contributes to PvuRts1I system.
     evidence:
     - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
-      snippet: '| McrBC | 10\.1093/emboj/20\.12\.3210 | The McrBC restriction endonuclease
-        assembles into a ring structure in the presence of G nucleotides |'
-      notes: Supports the functional association between Type I restriction enzyme
-        SsaAORF53P endonuclease subunit (UniProtKB:Q4A127 in Staphylococcus saprophyticus
-        subsp. saprophyticus (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292
-        / S-41)) and PvuRts1I system.
+      snippet: '| GmrSD_RM_Type_IV | 10\.1016/j\.jmb\.2006\.11\.051 | A type IV modification
+        dependent restriction nuclease that targets glucosylated hydroxymethyl cytosine
+        modified DNAs |'
+      notes: Supports the functional association between Type IV methyl-directed restriction
+        enzyme EcoKMcrB subunit (UniProtKB:P15005 in Escherichia coli (strain K12))
+        and PvuRts1I system.
 discussions:
 - discussion_id: pvurts1i-defensefinder-model-gap
   prompt: Resolve PvuRts1I-family breadth, 5hmC and 5ghmC target selectivity across
@@ -281,5 +275,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    pvurts1i_system_protein_component with UniProtKB:Q4A127 (hsdR) exemplar.'
+    pvurts1i_system_protein_component with UniProtKB:P15005 (mcrB) exemplar.'
   llm_assisted: true

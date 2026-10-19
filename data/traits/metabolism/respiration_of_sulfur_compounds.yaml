@@ -26,20 +26,28 @@ curation_history:
   llm_assisted: true
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed canonical_examples status alongside NONMECHANISTIC protein exemplar
+    graph for respiration of sulfur compounds; isolate-level canonical example remains
+    deferred pending explicit strain-level literature.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph respiration_of_sulfur_compounds_graph
     with GENE_OR_PROTEIN node respiration_of_sulfur_compounds_protein_component and
-    UniProtKB:P0AEC3 exemplar.'
+    UniProtKB:Q59109 exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: respiration_of_sulfur_compounds_graph
   title: Protein component associated with respiration of sulfur compounds
-  description: Literature-backed association between Aerobic respiration control sensor
-    protein ArcB (UniProtKB:P0AEC3) and respiration of sulfur compounds.
+  description: Literature-backed association between Sulfite reductase, dissimilatory-type
+    subunit alpha (UniProtKB:Q59109) and respiration of sulfur compounds.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P0AEC3 in Escherichia
-    coli (strain K12)) associated with respiration of sulfur compounds while full
-    multi-step mechanistic curation remains future work.
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q59109 in Archaeoglobus
+    fulgidus (strain ATCC 49558 / DSM 4304 / JCM 9628 / NBRC 100126 / VC-16)) associated
+    with respiration of sulfur compounds while full multi-step mechanistic curation
+    remains future work.
   nodes:
   - node_id: respiration_of_sulfur_compounds_trait
     label: respiration of sulfur compounds
@@ -49,47 +57,47 @@ causal_graphs:
       transferring electrons to an inorganic sulfur compound as the terminal electron
       acceptor.
   - node_id: respiration_of_sulfur_compounds_protein_component
-    label: Aerobic respiration control sensor protein ArcB
+    label: Sulfite reductase, dissimilatory-type subunit alpha
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Aerobic respiration control sensor protein ArcB)
-      associated with respiration of sulfur compounds.
+    description: Protein component (Sulfite reductase, dissimilatory-type subunit
+      alpha) associated with respiration of sulfur compounds.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - arcB
+    - dsrA
     protein_examples:
-    - uniprot_id: UniProtKB:P0AEC3
-      protein_label: Aerobic respiration control sensor protein ArcB
-      gene_symbol: arcB
-      taxon_id: NCBITaxon:83333
-      taxon_label: Escherichia coli (strain K12)
+    - uniprot_id: UniProtKB:Q59109
+      protein_label: Sulfite reductase, dissimilatory-type subunit alpha
+      gene_symbol: dsrA
+      taxon_id: NCBITaxon:224325
+      taxon_label: Archaeoglobus fulgidus (strain ATCC 49558 / DSM 4304 / JCM 9628
+        / NBRC 100126 / VC-16)
       entry_status: REVIEWED
-      proteome_id: UP000000625
+      proteome_id: UP000002199
       retrieved_on: '2026-10-17'
-      entry_version: 164
-      sequence_version: 1
-      role: Characteristic protein component (arcB, Aerobic respiration control sensor
-        protein ArcB) associated with respiration of sulfur compounds in Escherichia
-        coli (strain K12).
+      entry_version: 141
+      sequence_version: 2
+      role: Characteristic protein component (dsrA, Sulfite reductase, dissimilatory-type
+        subunit alpha) associated with respiration of sulfur compounds in Archaeoglobus
+        fulgidus (strain ATCC 49558 / DSM 4304 / JCM 9628 / NBRC 100126 / VC-16).
       evidence:
       - reference: DOI:10.3389/fmicb.2023.1108245
         snippet: sulfate, sulfur, or thiosulfate respiration
-        notes: Supports Aerobic respiration control sensor protein ArcB in respiration
-          of sulfur compounds; UniProtKB:P0AEC3 (arcB, Aerobic respiration control
-          sensor protein ArcB) in Escherichia coli (strain K12) provides a verified
-          protein exemplar.
+        notes: Supports Sulfite reductase, dissimilatory-type subunit alpha in respiration
+          of sulfur compounds; UniProtKB:Q59109 (dsrA, Sulfite reductase, dissimilatory-type
+          subunit alpha) in Archaeoglobus fulgidus (strain ATCC 49558 / DSM 4304 /
+          JCM 9628 / NBRC 100126 / VC-16) provides a verified protein exemplar.
   edges:
   - subject: respiration_of_sulfur_compounds_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: respiration_of_sulfur_compounds_trait
-    description: Aerobic respiration control sensor protein ArcB (arcB, UniProtKB:P0AEC3)
-      contributes to respiration of sulfur compounds (associated with respiration,
-      thiosulfate, sulfate).
+    description: Sulfite reductase, dissimilatory-type subunit alpha (dsrA, UniProtKB:Q59109)
+      contributes to respiration of sulfur compounds.
     evidence:
     - reference: DOI:10.3389/fmicb.2023.1108245
       snippet: sulfate, sulfur, or thiosulfate respiration
-      notes: Supports the functional association between Aerobic respiration control
-        sensor protein ArcB (UniProtKB:P0AEC3 in Escherichia coli (strain K12)) and
-        respiration of sulfur compounds.
+      notes: Supports the functional association between Sulfite reductase, dissimilatory-type
+        subunit alpha (UniProtKB:Q59109 in Archaeoglobus fulgidus (strain ATCC 49558
+        / DSM 4304 / JCM 9628 / NBRC 100126 / VC-16)) and respiration of sulfur compounds.

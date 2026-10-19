@@ -123,20 +123,27 @@ curation_history:
   llm_assisted: true
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed canonical_examples status alongside NONMECHANISTIC protein exemplar
+    graph for stalk contraction; isolate-level canonical example remains deferred
+    pending explicit strain-level literature.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph stalk_contraction_graph
-    with GENE_OR_PROTEIN node stalk_contraction_protein_component and UniProtKB:P0C2S5
+    with GENE_OR_PROTEIN node stalk_contraction_protein_component and UniProtKB:P05434
     exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: stalk_contraction_graph
   title: Protein component associated with stalk contraction
-  description: Literature-backed association between Cellulose 1,4-beta-cellobiosidase
-    (reducing end) CelS (UniProtKB:P0C2S5) and stalk contraction.
+  description: Literature-backed association between Caltractin (UniProtKB:P05434)
+    and stalk contraction.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P0C2S5 in Acetivibrio
-    thermocellus) associated with stalk contraction while full multi-step mechanistic
-    curation remains future work.
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P05434 in Chlamydomonas
+    reinhardtii (Chlamydomonas smithii)) associated with stalk contraction while full
+    multi-step mechanistic curation remains future work.
   nodes:
   - node_id: stalk_contraction_trait
     label: stalk contraction
@@ -145,45 +152,37 @@ causal_graphs:
     description: A physiological phenotype in which a microbial cell actively reduces
       the end-to-end extension of its stalk.
   - node_id: stalk_contraction_protein_component
-    label: Cellulose 1,4-beta-cellobiosidase (reducing end) CelS
+    label: Caltractin
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Cellulose 1,4-beta-cellobiosidase (reducing end)
-      CelS) associated with stalk contraction.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
-    gene_symbols:
-    - celS
+    description: Protein component (Caltractin) associated with stalk contraction.
+    grounding: InterPro:IPR050230
     protein_examples:
-    - uniprot_id: UniProtKB:P0C2S5
-      protein_label: Cellulose 1,4-beta-cellobiosidase (reducing end) CelS
-      gene_symbol: celS
-      taxon_id: NCBITaxon:1515
-      taxon_label: Acetivibrio thermocellus
+    - uniprot_id: UniProtKB:P05434
+      protein_label: Caltractin
+      taxon_id: NCBITaxon:3055
+      taxon_label: Chlamydomonas reinhardtii (Chlamydomonas smithii)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      entry_version: 81
+      entry_version: 163
       sequence_version: 1
-      role: Characteristic protein component (celS, Cellulose 1,4-beta-cellobiosidase
-        (reducing end) CelS) associated with stalk contraction in Acetivibrio thermocellus.
+      role: Characteristic protein component (P05434, Caltractin) associated with
+        stalk contraction in Chlamydomonas reinhardtii (Chlamydomonas smithii).
       evidence:
       - reference: DOI:10.1016/j.bpj.2012.07.038
         snippet: The stalk contraction was stalled more as the fluid viscosity and/or
           flow rate increased.
-        notes: Supports Cellulose 1,4-beta-cellobiosidase (reducing end) CelS in stalk
-          contraction; UniProtKB:P0C2S5 (celS, Cellulose 1,4-beta-cellobiosidase (reducing
-          end) CelS) in Acetivibrio thermocellus provides a verified protein exemplar.
+        notes: Supports Caltractin in stalk contraction; UniProtKB:P05434 (P05434,
+          Caltractin) in Chlamydomonas reinhardtii (Chlamydomonas smithii) provides
+          a verified protein exemplar.
   edges:
   - subject: stalk_contraction_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: stalk_contraction_trait
-    description: Cellulose 1,4-beta-cellobiosidase (reducing end) CelS (celS, UniProtKB:P0C2S5)
-      contributes to stalk contraction (associated with contraction, increased, viscosity).
+    description: Caltractin (P05434, UniProtKB:P05434) contributes to stalk contraction.
     evidence:
     - reference: DOI:10.1016/j.bpj.2012.07.038
       snippet: The stalk contraction was stalled more as the fluid viscosity and/or
         flow rate increased.
-      notes: Supports the functional association between Cellulose 1,4-beta-cellobiosidase
-        (reducing end) CelS (UniProtKB:P0C2S5 in Acetivibrio thermocellus) and stalk
-        contraction.
+      notes: Supports the functional association between Caltractin (UniProtKB:P05434
+        in Chlamydomonas reinhardtii (Chlamydomonas smithii)) and stalk contraction.

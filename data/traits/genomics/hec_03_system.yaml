@@ -79,40 +79,35 @@ causal_graphs:
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
   - node_id: hec_03_system_protein_component
-    label: Type IV pilus retraction ATPase PilT
+    label: Septu protein PtuB
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Type IV pilus retraction ATPase PilT) associated
-      with HEC-03 system.
+    description: Protein component (Septu protein PtuB) associated with HEC-03 system.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - pilT
+    - ptuB
     protein_examples:
-    - uniprot_id: UniProtKB:P24559
-      protein_label: Type IV pilus retraction ATPase PilT
-      gene_symbol: pilT
-      taxon_id: NCBITaxon:208964
-      taxon_label: Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116
-        / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)
+    - uniprot_id: UniProtKB:P0DW42
+      protein_label: Septu protein PtuB
+      gene_symbol: ptuB
+      taxon_id: NCBITaxon:1428
+      taxon_label: Bacillus thuringiensis
       entry_status: REVIEWED
-      proteome_id: UP000002438
       retrieved_on: '2026-10-17'
-      entry_version: 148
+      entry_version: 12
       sequence_version: 1
-      role: Characteristic protein component (pilT, Type IV pilus retraction ATPase
-        PilT) associated with HEC-03 system in Pseudomonas aeruginosa (strain ATCC
-        15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1).
+      role: Characteristic protein component (ptuB, Septu protein PtuB) associated
+        with HEC-03 system in Bacillus thuringiensis.
       evidence:
       - reference: DOI:10.1101/2024.01.29.577857
         snippet: The candidate systems encoded diverse protein families, including
           three ATPases associated with either a topoisomerase-primase (TOPRIM) (HEC-01),
           nuclease-related (NERD) (HEC-02), or PilT N-terminal (PIN) (HEC-03) domain-containing
           protein
-        notes: Supports Type IV pilus retraction ATPase PilT in HEC-03 system; UniProtKB:P24559
-          (pilT, Type IV pilus retraction ATPase PilT) in Pseudomonas aeruginosa (strain
-          ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101
-          / PAO1) provides a verified protein exemplar.
+        notes: Supports Septu protein PtuB in HEC-03 system; UniProtKB:P0DW42 (ptuB,
+          Septu protein PtuB) in Bacillus thuringiensis provides a verified protein
+          exemplar.
   edges:
   - subject: hec_03_locus
     predicate: contributes to
@@ -173,16 +168,15 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: hec_03_system_trait
-    description: Type IV pilus retraction ATPase PilT (pilT, UniProtKB:P24559) contributes
-      to HEC-03 system (associated with demonstrated, mutation, nuclease).
+    description: Septu protein PtuB (ptuB, UniProtKB:P0DW42) contributes to HEC-03
+      system.
     evidence:
     - reference: DOI:10.1101/2024.01.29.577857
-      snippet: For HEC-04, mutation of key active site residues in either the ABC
-        ATPase or nuclease domains demonstrated their essential roles in defence
-      notes: Supports the functional association between Type IV pilus retraction
-        ATPase PilT (UniProtKB:P24559 in Pseudomonas aeruginosa (strain ATCC 15692
-        / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)) and
-        HEC-03 system.
+      snippet: RelE (HEC-07), higher eukaryotes and prokaryotes nucleotide-binding
+        (HEPN) (HEC-08) and Nedd4-BP1/YacP nuclease (NYN) (HEC-09) domain-containing
+        proteins
+      notes: Supports the functional association between Septu protein PtuB (UniProtKB:P0DW42
+        in Bacillus thuringiensis) and HEC-03 system.
 discussions:
 - discussion_id: hec-03-defensefinder-model-gap
   prompt: Resolve HEC-03 native host breadth, exact HEC-03A/HEC-03B component functions,
@@ -252,5 +246,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    hec_03_system_protein_component with UniProtKB:P24559 (pilT) exemplar.'
+    hec_03_system_protein_component with UniProtKB:P0DW42 (ptuB) exemplar.'
   llm_assisted: true

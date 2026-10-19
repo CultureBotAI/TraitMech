@@ -77,21 +77,28 @@ curation_history:
   llm_assisted: true
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed canonical_examples status alongside NONMECHANISTIC protein exemplar
+    graph for cytoplasmic bacterial predation; isolate-level canonical example remains
+    deferred pending explicit strain-level literature.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph cytoplasmic_bacterial_predation_graph
     with GENE_OR_PROTEIN node cytoplasmic_bacterial_predation_protein_component and
-    UniProtKB:Q49ZB8 exemplar.'
+    UniProtKB:P04739 exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: cytoplasmic_bacterial_predation_graph
   title: Protein component associated with cytoplasmic bacterial predation
-  description: Literature-backed association between Heme oxygenase (UniProtKB:Q49ZB8)
-    and cytoplasmic bacterial predation.
+  description: Literature-backed association between Type IV major pilin protein PilA
+    (UniProtKB:P04739) and cytoplasmic bacterial predation.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q49ZB8 in Staphylococcus
-    saprophyticus subsp. saprophyticus (strain ATCC 15305 / DSM 20229 / NCIMB 8711
-    / NCTC 7292 / S-41)) associated with cytoplasmic bacterial predation while full
-    multi-step mechanistic curation remains future work.
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P04739 in Pseudomonas
+    aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228
+    / 1C / PRS 101 / PAO1)) associated with cytoplasmic bacterial predation while
+    full multi-step mechanistic curation remains future work.
   nodes:
   - node_id: cytoplasmic_bacterial_predation_trait
     label: cytoplasmic bacterial predation
@@ -101,49 +108,51 @@ causal_graphs:
       of a bacterial prey cell and grows and reproduces there by consuming and degrading
       the prey cytoplasm.
   - node_id: cytoplasmic_bacterial_predation_protein_component
-    label: Heme oxygenase
+    label: Type IV major pilin protein PilA
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Heme oxygenase) associated with cytoplasmic bacterial
-      predation.
+    description: Protein component (Type IV major pilin protein PilA) associated with
+      cytoplasmic bacterial predation.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - isdG
+    - pilA
     protein_examples:
-    - uniprot_id: UniProtKB:Q49ZB8
-      protein_label: Heme oxygenase
-      gene_symbol: isdG
-      taxon_id: NCBITaxon:342451
-      taxon_label: Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
-        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+    - uniprot_id: UniProtKB:P04739
+      protein_label: Type IV major pilin protein PilA
+      gene_symbol: pilA
+      taxon_id: NCBITaxon:208964
+      taxon_label: Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116
+        / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)
       entry_status: REVIEWED
-      proteome_id: UP000006371
+      proteome_id: UP000002438
       retrieved_on: '2026-10-17'
-      entry_version: 111
+      entry_version: 159
       sequence_version: 1
-      role: Characteristic protein component (isdG, Heme oxygenase) associated with
-        cytoplasmic bacterial predation in Staphylococcus saprophyticus subsp. saprophyticus
-        (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41).
+      role: Characteristic protein component (pilA, Type IV major pilin protein PilA)
+        associated with cytoplasmic bacterial predation in Pseudomonas aeruginosa
+        (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C /
+        PRS 101 / PAO1).
       evidence:
       - reference: DOI:10.1073/pnas.83.7.2138
         snippet: Daptobacter penetrates both membranes of the prey cell walls and
           reproduces in their degrading cytoplasm.
-        notes: Supports Heme oxygenase in cytoplasmic bacterial predation; UniProtKB:Q49ZB8
-          (isdG, Heme oxygenase) in Staphylococcus saprophyticus subsp. saprophyticus
-          (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) provides
-          a verified protein exemplar.
+        notes: Supports Type IV major pilin protein PilA in cytoplasmic bacterial
+          predation; UniProtKB:P04739 (pilA, Type IV major pilin protein PilA) in
+          Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM
+          14847 / LMG 12228 / 1C / PRS 101 / PAO1) provides a verified protein exemplar.
   edges:
   - subject: cytoplasmic_bacterial_predation_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: cytoplasmic_bacterial_predation_trait
-    description: Heme oxygenase (isdG, UniProtKB:Q49ZB8) contributes to cytoplasmic
-      bacterial predation (associated with daptobacter, penetrates, reproduces).
+    description: Type IV major pilin protein PilA (pilA, UniProtKB:P04739) contributes
+      to cytoplasmic bacterial predation.
     evidence:
     - reference: DOI:10.1073/pnas.83.7.2138
       snippet: Daptobacter penetrates both membranes of the prey cell walls and reproduces
         in their degrading cytoplasm.
-      notes: Supports the functional association between Heme oxygenase (UniProtKB:Q49ZB8
-        in Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC 15305 /
-        DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)) and cytoplasmic bacterial predation.
+      notes: Supports the functional association between Type IV major pilin protein
+        PilA (UniProtKB:P04739 in Pseudomonas aeruginosa (strain ATCC 15692 / DSM
+        22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)) and cytoplasmic
+        bacterial predation.

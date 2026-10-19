@@ -46,7 +46,7 @@ causal_graphs:
   scope_status: NONMECHANISTIC
   scope_notes: This record is a broad environmental or morphological classification
     spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
-    descriptor; contextual protein nodes do not receive token UniProt examples.
+    descriptor; contextual protein nodes include source-backed UniProtKB exemplars.
   nodes:
   - node_id: star_shaped_trait
     label: star shaped
@@ -74,25 +74,24 @@ causal_graphs:
     description: Conserved bactofilin (BacA) and M23 endopeptidase (LmdC) functional
       module.
     protein_examples:
-    - uniprot_id: UniProtKB:P40767
-      protein_label: Peptidoglycan DL-endopeptidase CwlO
-      gene_symbol: cwlO
-      taxon_id: NCBITaxon:224308
-      taxon_label: Bacillus subtilis (strain 168)
+    - uniprot_id: UniProtKB:Q1D3H0
+      protein_label: Bactofilin BacN
+      gene_symbol: bacN
+      taxon_id: NCBITaxon:246197
+      taxon_label: Myxococcus xanthus (strain DK1622)
       entry_status: REVIEWED
-      proteome_id: UP000001570
+      proteome_id: UP000002402
       retrieved_on: '2026-10-17'
-      entry_version: 141
-      sequence_version: 2
-      role: Exemplar protein (cwlO, Peptidoglycan DL-endopeptidase CwlO) representing
-        BacA-LmdC morphogenesis module in Bacillus subtilis (strain 168) for star
-        shaped.
+      entry_version: 94
+      sequence_version: 1
+      role: Exemplar protein (bacN, Bactofilin BacN) representing BacA-LmdC morphogenesis
+        module in Myxococcus xanthus (strain DK1622) for star shaped.
       evidence:
-      - reference: DOI:10.1146/annurev-cellbio-101011-155745
-        snippet: MreB-directed peptidoglycan synthesis
-        notes: Supports BacA-LmdC morphogenesis module in star shaped; UniProtKB:P40767
-          (cwlO, Peptidoglycan DL-endopeptidase CwlO) in Bacillus subtilis (strain
-          168) provides a verified protein exemplar.
+      - reference: DOI:10.7554/eLife.86577.2
+        snippet: central role in the spatial regulation of cell wall biosynthesis
+        notes: Supports BacA-LmdC morphogenesis module in star shaped; UniProtKB:Q1D3H0
+          (bacN, Bactofilin BacN) in Myxococcus xanthus (strain DK1622) provides a
+          verified protein exemplar.
   - node_id: local_pg_remodeling
     label: local peptidoglycan remodeling
     node_type: BIOLOGICAL_PROCESS
@@ -118,23 +117,23 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Bactofilin cytoskeletal scaffold proteins.
     protein_examples:
-    - uniprot_id: UniProtKB:Q01465
-      protein_label: Cell shape-determining protein MreB
-      gene_symbol: mreB
-      taxon_id: NCBITaxon:224308
-      taxon_label: Bacillus subtilis (strain 168)
+    - uniprot_id: UniProtKB:Q1D3H2
+      protein_label: Bactofilin BacP
+      gene_symbol: bacP
+      taxon_id: NCBITaxon:246197
+      taxon_label: Myxococcus xanthus (strain DK1622)
       entry_status: REVIEWED
-      proteome_id: UP000001570
+      proteome_id: UP000002402
       retrieved_on: '2026-10-17'
-      entry_version: 148
-      sequence_version: 3
-      role: Exemplar protein (mreB, Cell shape-determining protein MreB) representing
-        bactofilins in Bacillus subtilis (strain 168) for star shaped.
+      entry_version: 93
+      sequence_version: 1
+      role: Exemplar protein (bacP, Bactofilin BacP) representing bactofilins in Myxococcus
+        xanthus (strain DK1622) for star shaped.
       evidence:
-      - reference: DOI:10.1146/annurev-cellbio-101011-155745
-        snippet: MreB-directed peptidoglycan synthesis
-        notes: Supports bactofilins in star shaped; UniProtKB:Q01465 (mreB, Cell shape-determining
-          protein MreB) in Bacillus subtilis (strain 168) provides a verified protein
+      - reference: DOI:10.7554/eLife.86577.2
+        snippet: central role in the spatial regulation of cell wall biosynthesis
+        notes: Supports bactofilins in star shaped; UniProtKB:Q1D3H2 (bacP, Bactofilin
+          BacP) in Myxococcus xanthus (strain DK1622) provides a verified protein
           exemplar.
   - node_id: pbpc_prosthecate_pole
     label: PbpC localization at prosthecate pole
@@ -149,28 +148,26 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Developmental regulator co-opted as a morphogen to position prosthecae.
     protein_examples:
-    - uniprot_id: UniProtKB:Q72AA0
-      protein_label: Transcriptional regulator CooA
-      gene_symbol: cooA
-      taxon_id: NCBITaxon:882
-      taxon_label: Nitratidesulfovibrio vulgaris (strain ATCC 29579 / DSM 644 / CCUG
-        34227 / NCIMB 8303 / VKM B-1760 / Hildenborough) (Desulfovibrio vulgaris)
-      entry_status: REVIEWED
-      proteome_id: UP000002194
+    - uniprot_id: UniProtKB:Q9A6C1
+      protein_label: Lysozyme
+      gene_symbol: spmX
+      taxon_id: NCBITaxon:190650
+      taxon_label: Caulobacter vibrioides (strain ATCC 19089 / CIP 103742 / CB 15)
+        (Caulobacter crescentus)
+      entry_status: UNREVIEWED
+      proteome_id: UP000001816
       retrieved_on: '2026-10-17'
-      entry_version: 137
+      entry_version: 119
       sequence_version: 1
-      role: Exemplar protein (cooA, Transcriptional regulator CooA) representing SpmX
-        in Nitratidesulfovibrio vulgaris (strain ATCC 29579 / DSM 644 / CCUG 34227
-        / NCIMB 8303 / VKM B-1760 / Hildenborough) (Desulfovibrio vulgaris) for star
+      role: Exemplar protein (spmX, Lysozyme) representing SpmX in Caulobacter vibrioides
+        (strain ATCC 19089 / CIP 103742 / CB 15) (Caulobacter crescentus) for star
         shaped.
       evidence:
       - reference: DOI:10.7554/eLife.86577.2
         snippet: central role in the spatial regulation of cell wall biosynthesis
-        notes: Supports SpmX in star shaped; UniProtKB:Q72AA0 (cooA, Transcriptional
-          regulator CooA) in Nitratidesulfovibrio vulgaris (strain ATCC 29579 / DSM
-          644 / CCUG 34227 / NCIMB 8303 / VKM B-1760 / Hildenborough) (Desulfovibrio
-          vulgaris) provides a verified protein exemplar.
+        notes: Supports SpmX in star shaped; UniProtKB:Q9A6C1 (spmX, Lysozyme) in
+          Caulobacter vibrioides (strain ATCC 19089 / CIP 103742 / CB 15) (Caulobacter
+          crescentus) provides a verified protein exemplar.
   edges:
   - subject: multi_site_polar_pg
     predicate: regulates
@@ -336,8 +333,8 @@ curation_history:
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
-  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P40767 (cwlO)
-    protein example to node baca_lmdc_module; added UniProtKB:Q01465 (mreB) protein
-    example to node bactofilins; added UniProtKB:Q72AA0 (cooA) protein example to
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q1D3H0 (bacN)
+    protein example to node baca_lmdc_module; added UniProtKB:Q1D3H2 (bacP) protein
+    example to node bactofilins; added UniProtKB:Q9A6C1 (spmX) protein example to
     node spmx.'
   llm_assisted: true

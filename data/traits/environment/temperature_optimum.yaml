@@ -83,37 +83,34 @@ causal_graphs:
     description: Growth condition outside the physiological temperature range, indicated
       by non-linear Arrhenius behavior.
   - node_id: temperature_optimum_protein_component
-    label: Chaperonin GroEL
+    label: Chaperone protein DnaK
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Chaperonin GroEL) associated with temperature
+    description: Protein component (Chaperone protein DnaK) associated with temperature
       optimum.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - groEL
+    - dnaK
     protein_examples:
-    - uniprot_id: UniProtKB:Q49YY5
-      protein_label: Chaperonin GroEL
-      gene_symbol: groEL
-      taxon_id: NCBITaxon:342451
-      taxon_label: Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
-        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+    - uniprot_id: UniProtKB:P0A6Y8
+      protein_label: Chaperone protein DnaK
+      gene_symbol: dnaK
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
-      proteome_id: UP000006371
+      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 120
-      sequence_version: 1
-      role: Characteristic protein component (groEL, Chaperonin GroEL) associated
-        with temperature optimum in Staphylococcus saprophyticus subsp. saprophyticus
-        (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41).
+      entry_version: 183
+      sequence_version: 2
+      role: Characteristic protein component (dnaK, Chaperone protein DnaK) associated
+        with temperature optimum in Escherichia coli (strain K12).
       evidence:
       - reference: DOI:10.1007/s42770-023-01057-4
         snippet: When the temperature drops, DesK/DesR is the two-component system
           involved in membrane adaptation
-        notes: Supports Chaperonin GroEL in temperature optimum; UniProtKB:Q49YY5
-          (groEL, Chaperonin GroEL) in Staphylococcus saprophyticus subsp. saprophyticus
-          (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) provides
+        notes: Supports Chaperone protein DnaK in temperature optimum; UniProtKB:P0A6Y8
+          (dnaK, Chaperone protein DnaK) in Escherichia coli (strain K12) provides
           a verified protein exemplar.
   edges:
   - subject: ambient_temperature
@@ -201,15 +198,14 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: temperature_optimum_trait
-    description: Chaperonin GroEL (groEL, UniProtKB:Q49YY5) contributes to temperature
-      optimum (associated with temperature, adaptation, membrane).
+    description: Chaperone protein DnaK (dnaK, UniProtKB:P0A6Y8) contributes to temperature
+      optimum.
     evidence:
     - reference: DOI:10.1007/s42770-023-01057-4
       snippet: When the temperature drops, DesK/DesR is the two-component system involved
         in membrane adaptation
-      notes: Supports the functional association between Chaperonin GroEL (UniProtKB:Q49YY5
-        in Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC 15305 /
-        DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)) and temperature optimum.
+      notes: Supports the functional association between Chaperone protein DnaK (UniProtKB:P0A6Y8
+        in Escherichia coli (strain K12)) and temperature optimum.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.813650+00:00'
   curator: seed_from_metpo
@@ -319,5 +315,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    temperature_optimum_protein_component with UniProtKB:Q49YY5 (groEL) exemplar.'
+    temperature_optimum_protein_component with UniProtKB:P0A6Y8 (dnaK) exemplar.'
   llm_assisted: true

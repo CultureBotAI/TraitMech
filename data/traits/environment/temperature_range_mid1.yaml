@@ -101,32 +101,34 @@ causal_graphs:
     node_type: QUALITY
     description: DNA topological state acting as a thermosensor that reprograms transcription.
   - node_id: temperature_range_mid1_protein_component
-    label: Fatty acid desaturase
+    label: Cold shock protein CspA
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Fatty acid desaturase) associated with temperature
+    description: Protein component (Cold shock protein CspA) associated with temperature
       range mid1.
-    grounding: InterPro:IPR012171
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Organism-specific protein component exemplified via protein_examples;
+      no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - des
+    - cspA
     protein_examples:
-    - uniprot_id: UniProtKB:O34653
-      protein_label: Fatty acid desaturase
-      gene_symbol: des
-      taxon_id: NCBITaxon:224308
-      taxon_label: Bacillus subtilis (strain 168)
+    - uniprot_id: UniProtKB:P0A9X9
+      protein_label: Cold shock protein CspA
+      gene_symbol: cspA
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
-      proteome_id: UP000001570
+      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 130
-      sequence_version: 1
-      role: Characteristic protein component (des, Fatty acid desaturase) associated
-        with temperature range mid1 in Bacillus subtilis (strain 168).
+      entry_version: 146
+      sequence_version: 2
+      role: Characteristic protein component (cspA, Cold shock protein CspA) associated
+        with temperature range mid1 in Escherichia coli (strain K12).
       evidence:
       - reference: DOI:10.1128/spectrum.03925-23
         snippet: Upon temperature decrease, the membrane rigidifies and increases
           in thickness, resulting in activation of the kinase-dominant state of DesK
-        notes: Supports Fatty acid desaturase in temperature range mid1; UniProtKB:O34653
-          (des, Fatty acid desaturase) in Bacillus subtilis (strain 168) provides
+        notes: Supports Cold shock protein CspA in temperature range mid1; UniProtKB:P0A9X9
+          (cspA, Cold shock protein CspA) in Escherichia coli (strain K12) provides
           a verified protein exemplar.
   edges:
   - subject: lower_mesophile_adaptation
@@ -210,14 +212,14 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: temperature_range_mid1_trait
-    description: Fatty acid desaturase (des, UniProtKB:O34653) contributes to temperature
-      range mid1 (associated with temperature, activation, rigidifies).
+    description: Cold shock protein CspA (cspA, UniProtKB:P0A9X9) contributes to temperature
+      range mid1.
     evidence:
     - reference: DOI:10.1128/spectrum.03925-23
       snippet: Upon temperature decrease, the membrane rigidifies and increases in
         thickness, resulting in activation of the kinase-dominant state of DesK
-      notes: Supports the functional association between Fatty acid desaturase (UniProtKB:O34653
-        in Bacillus subtilis (strain 168)) and temperature range mid1.
+      notes: Supports the functional association between Cold shock protein CspA (UniProtKB:P0A9X9
+        in Escherichia coli (strain K12)) and temperature range mid1.
 curation_history:
 - timestamp: '2026-05-05T01:35:46.823745+00:00'
   curator: seed_from_metpo
@@ -298,5 +300,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    temperature_range_mid1_protein_component with UniProtKB:O34653 (des) exemplar.'
+    temperature_range_mid1_protein_component with UniProtKB:P0A9X9 (cspA) exemplar.'
   llm_assisted: true

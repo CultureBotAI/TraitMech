@@ -119,20 +119,27 @@ curation_history:
   llm_assisted: true
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed canonical_examples status alongside NONMECHANISTIC protein exemplar
+    graph for unisexual reproduction; isolate-level canonical example remains deferred
+    pending explicit strain-level literature.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph unisexual_reproduction_graph
-    with GENE_OR_PROTEIN node unisexual_reproduction_protein_component and UniProtKB:P29166
+    with GENE_OR_PROTEIN node unisexual_reproduction_protein_component and UniProtKB:P23179
     exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: unisexual_reproduction_graph
   title: Protein component associated with unisexual reproduction
-  description: Literature-backed association between Iron hydrogenase 1 (UniProtKB:P29166)
-    and unisexual reproduction.
+  description: Literature-backed association between Meiosis-specific protein SPO11
+    (UniProtKB:P23179) and unisexual reproduction.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P29166 in Clostridium
-    pasteurianum) associated with unisexual reproduction while full multi-step mechanistic
-    curation remains future work.
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P23179 in Saccharomyces
+    cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)) associated with unisexual
+    reproduction while full multi-step mechanistic curation remains future work.
   nodes:
   - node_id: unisexual_reproduction_trait
     label: unisexual reproduction
@@ -141,41 +148,47 @@ causal_graphs:
     description: A fungal phenotype enabling sexual or parasexual reproduction with
       genetic contribution from only one mating type.
   - node_id: unisexual_reproduction_protein_component
-    label: Iron hydrogenase 1
+    label: Meiosis-specific protein SPO11
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Iron hydrogenase 1) associated with unisexual
-      reproduction.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Meiosis-specific protein SPO11) associated with
+      unisexual reproduction.
+    grounding: InterPro:IPR002815
+    gene_symbols:
+    - SPO11
     protein_examples:
-    - uniprot_id: UniProtKB:P29166
-      protein_label: Iron hydrogenase 1
-      taxon_id: NCBITaxon:1501
-      taxon_label: Clostridium pasteurianum
+    - uniprot_id: UniProtKB:P23179
+      protein_label: Meiosis-specific protein SPO11
+      gene_symbol: SPO11
+      taxon_id: NCBITaxon:559292
+      taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's
+        yeast)
       entry_status: REVIEWED
+      proteome_id: UP000002311
       retrieved_on: '2026-10-17'
-      entry_version: 159
+      entry_version: 199
       sequence_version: 1
-      role: Characteristic protein component (P29166, Iron hydrogenase 1) associated
-        with unisexual reproduction in Clostridium pasteurianum.
+      role: Characteristic protein component (SPO11, Meiosis-specific protein SPO11)
+        associated with unisexual reproduction in Saccharomyces cerevisiae (strain
+        ATCC 204508 / S288c) (Baker's yeast).
       evidence:
       - reference: DOI:10.1371/journal.pgen.1003688
         snippet: Sexual reproduction involves cells of either opposite (bisexual)
           or one (unisexual) mating type.
-        notes: Supports Iron hydrogenase 1 in unisexual reproduction; UniProtKB:P29166
-          (P29166, Iron hydrogenase 1) in Clostridium pasteurianum provides a verified
+        notes: Supports Meiosis-specific protein SPO11 in unisexual reproduction;
+          UniProtKB:P23179 (SPO11, Meiosis-specific protein SPO11) in Saccharomyces
+          cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast) provides a verified
           protein exemplar.
   edges:
   - subject: unisexual_reproduction_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: unisexual_reproduction_trait
-    description: Iron hydrogenase 1 (P29166, UniProtKB:P29166) contributes to unisexual
-      reproduction (associated with reproduction, unisexual, bisexual).
+    description: Meiosis-specific protein SPO11 (SPO11, UniProtKB:P23179) contributes
+      to unisexual reproduction.
     evidence:
     - reference: DOI:10.1371/journal.pgen.1003688
       snippet: Sexual reproduction involves cells of either opposite (bisexual) or
         one (unisexual) mating type.
-      notes: Supports the functional association between Iron hydrogenase 1 (UniProtKB:P29166
-        in Clostridium pasteurianum) and unisexual reproduction.
+      notes: Supports the functional association between Meiosis-specific protein
+        SPO11 (UniProtKB:P23179 in Saccharomyces cerevisiae (strain ATCC 204508 /
+        S288c) (Baker's yeast)) and unisexual reproduction.

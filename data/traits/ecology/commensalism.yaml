@@ -29,8 +29,8 @@ causal_graphs:
   title: Commensalism benefits microbe without affecting host fitness
   scope_status: NONMECHANISTIC
   scope_notes: This broad ecological, host-relationship, habitat, or hazard classification
-    spans multiple taxa and mechanisms; contextual protein nodes do not receive token
-    UniProt examples.
+    spans multiple taxa and mechanisms; contextual protein nodes include source-backed
+    UniProtKB exemplars.
   description: Evidence-backed causal sketch linking host colonization to microbial
     benefit while host fitness is essentially neutral.
   nodes:
@@ -56,29 +56,28 @@ causal_graphs:
     description: Host mucosal antibody that can promote commensal colonization of
       the mucus layer.
     protein_examples:
-    - uniprot_id: UniProtKB:Q49VU2
-      protein_label: Peptidase T
-      gene_symbol: pepT
-      taxon_id: NCBITaxon:342451
-      taxon_label: Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
-        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+    - uniprot_id: UniProtKB:P44969
+      protein_label: Immunoglobulin A1 protease autotransporter
+      gene_symbol: iga
+      taxon_id: NCBITaxon:71421
+      taxon_label: Haemophilus influenzae (strain ATCC 51907 / DSM 11121 / KW20 /
+        Rd)
       entry_status: REVIEWED
-      proteome_id: UP000006371
+      proteome_id: UP000000579
       retrieved_on: '2026-10-17'
-      entry_version: 124
+      entry_version: 158
       sequence_version: 1
-      role: Exemplar protein (pepT, Peptidase T) representing secretory IgA in Staphylococcus
-        saprophyticus subsp. saprophyticus (strain ATCC 15305 / DSM 20229 / NCIMB
-        8711 / NCTC 7292 / S-41) for commensalism.
+      role: Exemplar protein (iga, Immunoglobulin A1 protease autotransporter) representing
+        secretory IgA in Haemophilus influenzae (strain ATCC 51907 / DSM 11121 / KW20
+        / Rd) for commensalism.
       evidence:
       - reference: DOI:10.1073/pnas.1218525110
         snippet: This review examines how a growing knowledge of the vast range of
           animal-bacterial interactions, whether in shared ecosystems or intimate
           symbioses, is fundamentally altering our understanding of animal biology.
-        notes: Supports secretory IgA in commensalism; UniProtKB:Q49VU2 (pepT, Peptidase
-          T) in Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC 15305
-          / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) provides a verified protein
-          exemplar.
+        notes: Supports secretory IgA in commensalism; UniProtKB:P44969 (iga, Immunoglobulin
+          A1 protease autotransporter) in Haemophilus influenzae (strain ATCC 51907
+          / DSM 11121 / KW20 / Rd) provides a verified protein exemplar.
   - node_id: mucus_layer
     label: host mucus / mucins
     node_type: ENVIRONMENTAL_FACTOR
@@ -92,26 +91,29 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Microbial adhesins mediating attachment to host mucin glycans.
     protein_examples:
-    - uniprot_id: UniProtKB:P08191
-      protein_label: Type 1 fimbrin D-mannose specific adhesin
-      gene_symbol: fimH
-      taxon_id: NCBITaxon:83333
-      taxon_label: Escherichia coli (strain K12)
+    - uniprot_id: UniProtKB:Q8A1G2
+      protein_label: Starch-binding protein SusD
+      gene_symbol: susD
+      taxon_id: NCBITaxon:226186
+      taxon_label: Bacteroides thetaiotaomicron (strain ATCC 29148 / DSM 2079 / JCM
+        5827 / CCUG 10774 / NCTC 10582 / VPI-5482 / E50)
       entry_status: REVIEWED
-      proteome_id: UP000000625
+      proteome_id: UP000001414
       retrieved_on: '2026-10-17'
-      entry_version: 198
-      sequence_version: 2
-      role: Exemplar protein (fimH, Type 1 fimbrin D-mannose specific adhesin) representing
-        bacterial glycan-binding proteins in Escherichia coli (strain K12) for commensalism.
+      entry_version: 119
+      sequence_version: 1
+      role: Exemplar protein (susD, Starch-binding protein SusD) representing bacterial
+        glycan-binding proteins in Bacteroides thetaiotaomicron (strain ATCC 29148
+        / DSM 2079 / JCM 5827 / CCUG 10774 / NCTC 10582 / VPI-5482 / E50) for commensalism.
       evidence:
       - reference: DOI:10.1073/pnas.1218525110
         snippet: This review examines how a growing knowledge of the vast range of
           animal-bacterial interactions, whether in shared ecosystems or intimate
           symbioses, is fundamentally altering our understanding of animal biology.
-        notes: Supports bacterial glycan-binding proteins in commensalism; UniProtKB:P08191
-          (fimH, Type 1 fimbrin D-mannose specific adhesin) in Escherichia coli (strain
-          K12) provides a verified protein exemplar.
+        notes: Supports bacterial glycan-binding proteins in commensalism; UniProtKB:Q8A1G2
+          (susD, Starch-binding protein SusD) in Bacteroides thetaiotaomicron (strain
+          ATCC 29148 / DSM 2079 / JCM 5827 / CCUG 10774 / NCTC 10582 / VPI-5482 /
+          E50) provides a verified protein exemplar.
   - node_id: mucin_attachment
     label: attachment to mucin
     node_type: BIOLOGICAL_PROCESS
@@ -292,8 +294,8 @@ curation_history:
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
-  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q49VU2 (pepT)
-    protein example to node secretory_iga; added UniProtKB:P08191 (fimH) protein example
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P44969 (iga)
+    protein example to node secretory_iga; added UniProtKB:Q8A1G2 (susD) protein example
     to node glycan_binding_proteins.'
   llm_assisted: true
 discussions:

@@ -98,18 +98,25 @@ curation_history:
   llm_assisted: true
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed canonical_examples status alongside NONMECHANISTIC protein exemplar
+    graph for pseudobipolar mating system; isolate-level canonical example remains
+    deferred pending explicit strain-level literature.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph pseudobipolar_mating_system_graph
-    with GENE_OR_PROTEIN node pseudobipolar_mating_system_protein_component and UniProtKB:Q08955
+    with GENE_OR_PROTEIN node pseudobipolar_mating_system_protein_component and UniProtKB:D6VTK4
     exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: pseudobipolar_mating_system_graph
   title: Protein component associated with pseudobipolar mating system
-  description: Literature-backed association between Chromosome segregation in meiosis
-    protein 4 (UniProtKB:Q08955) and pseudobipolar mating system.
+  description: Literature-backed association between Pheromone alpha factor receptor
+    (UniProtKB:D6VTK4) and pseudobipolar mating system.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q08955 in Saccharomyces
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:D6VTK4 in Saccharomyces
     cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)) associated with pseudobipolar
     mating system while full multi-step mechanistic curation remains future work.
   nodes:
@@ -121,50 +128,47 @@ causal_graphs:
       homeodomain compatibility loci are physically linked on the same chromosome
       but can recombine during meiosis, generating new mating-type combinations.
   - node_id: pseudobipolar_mating_system_protein_component
-    label: Chromosome segregation in meiosis protein 4
+    label: Pheromone alpha factor receptor
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Chromosome segregation in meiosis protein 4) associated
-      with pseudobipolar mating system.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Pheromone alpha factor receptor) associated with
+      pseudobipolar mating system.
+    grounding: InterPro:IPR000366
     gene_symbols:
-    - CSM4
+    - STE2
     protein_examples:
-    - uniprot_id: UniProtKB:Q08955
-      protein_label: Chromosome segregation in meiosis protein 4
-      gene_symbol: CSM4
+    - uniprot_id: UniProtKB:D6VTK4
+      protein_label: Pheromone alpha factor receptor
+      gene_symbol: STE2
       taxon_id: NCBITaxon:559292
       taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's
         yeast)
       entry_status: REVIEWED
       proteome_id: UP000002311
       retrieved_on: '2026-10-17'
-      entry_version: 143
-      sequence_version: 1
-      role: Characteristic protein component (CSM4, Chromosome segregation in meiosis
-        protein 4) associated with pseudobipolar mating system in Saccharomyces cerevisiae
-        (strain ATCC 204508 / S288c) (Baker's yeast).
+      entry_version: 99
+      sequence_version: 2
+      role: Characteristic protein component (STE2, Pheromone alpha factor receptor)
+        associated with pseudobipolar mating system in Saccharomyces cerevisiae (strain
+        ATCC 204508 / S288c) (Baker's yeast).
       evidence:
       - reference: DOI:10.1371/journal.pbio.3003417
         snippet: In the pseudobipolar configuration, the P/R and HD loci remained
           on the same chromosome but genetically unlinked
-        notes: Supports Chromosome segregation in meiosis protein 4 in pseudobipolar
-          mating system; UniProtKB:Q08955 (CSM4, Chromosome segregation in meiosis
-          protein 4) in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's
-          yeast) provides a verified protein exemplar.
+        notes: Supports Pheromone alpha factor receptor in pseudobipolar mating system;
+          UniProtKB:D6VTK4 (STE2, Pheromone alpha factor receptor) in Saccharomyces
+          cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast) provides a verified
+          protein exemplar.
   edges:
   - subject: pseudobipolar_mating_system_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: pseudobipolar_mating_system_trait
-    description: Chromosome segregation in meiosis protein 4 (CSM4, UniProtKB:Q08955)
-      contributes to pseudobipolar mating system (associated with configuration, pseudobipolar,
-      genetically).
+    description: Pheromone alpha factor receptor (STE2, UniProtKB:D6VTK4) contributes
+      to pseudobipolar mating system.
     evidence:
     - reference: DOI:10.1371/journal.pbio.3003417
       snippet: In the pseudobipolar configuration, the P/R and HD loci remained on
         the same chromosome but genetically unlinked
-      notes: Supports the functional association between Chromosome segregation in
-        meiosis protein 4 (UniProtKB:Q08955 in Saccharomyces cerevisiae (strain ATCC
-        204508 / S288c) (Baker's yeast)) and pseudobipolar mating system.
+      notes: Supports the functional association between Pheromone alpha factor receptor
+        (UniProtKB:D6VTK4 in Saccharomyces cerevisiae (strain ATCC 204508 / S288c)
+        (Baker's yeast)) and pseudobipolar mating system.

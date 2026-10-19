@@ -114,25 +114,25 @@ causal_graphs:
     description: Proton-translocating ATP synthase/ATPase that can extrude protons
       under acid stress.
     protein_examples:
-    - uniprot_id: UniProtKB:Q9R6X2
-      protein_label: Potassium-transporting ATPase potassium-binding subunit
-      gene_symbol: kdpA
-      taxon_id: NCBITaxon:29412
-      taxon_label: Anabaena sp. (strain L31)
+    - uniprot_id: UniProtKB:P0ABB4
+      protein_label: ATP synthase subunit beta
+      gene_symbol: atpD
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
+      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 89
-      sequence_version: 1
-      role: Exemplar protein (kdpA, Potassium-transporting ATPase potassium-binding
-        subunit) representing F0F1-ATPase in Anabaena sp. (strain L31) for pH delta
-        mid3.
+      entry_version: 156
+      sequence_version: 2
+      role: Exemplar protein (atpD, ATP synthase subunit beta) representing F0F1-ATPase
+        in Escherichia coli (strain K12) for pH delta mid3.
       evidence:
       - reference: DOI:10.1093/femsre/fuad033
         snippet: the F0F1-ATPase (fermentative bacteria), or decarboxylation pathways
           (next paragraph) prevent the internal pH from becoming too low
-        notes: Supports F0F1-ATPase in pH delta mid3; UniProtKB:Q9R6X2 (kdpA, Potassium-transporting
-          ATPase potassium-binding subunit) in Anabaena sp. (strain L31) provides
-          a verified protein exemplar.
+        notes: Supports F0F1-ATPase in pH delta mid3; UniProtKB:P0ABB4 (atpD, ATP
+          synthase subunit beta) in Escherichia coli (strain K12) provides a verified
+          protein exemplar.
   - node_id: phosphate_buffering
     label: cytoplasmic phosphate buffering
     node_type: BIOLOGICAL_PROCESS
@@ -456,6 +456,6 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P09152 (narG)
-    protein example to node proton_pumping_respiratory_complexes; added UniProtKB:Q9R6X2
-    (kdpA) protein example to node f0f1_atpase.'
+    protein example to node proton_pumping_respiratory_complexes; added UniProtKB:P0ABB4
+    (atpD) protein example to node f0f1_atpase.'
   llm_assisted: true

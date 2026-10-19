@@ -95,33 +95,34 @@ causal_graphs:
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
   - node_id: kiwa_system_protein_component
-    label: Kiwa protein KwaB
+    label: Endonuclease GajA
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Kiwa protein KwaB) associated with Kiwa system.
+    description: Protein component (Endonuclease GajA) associated with Kiwa system.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - kwaB
+    - gajA
     protein_examples:
-    - uniprot_id: UniProtKB:P0DW46
-      protein_label: Kiwa protein KwaB
-      gene_symbol: kwaB
-      taxon_id: NCBITaxon:1048689
-      taxon_label: Escherichia coli O55:H7 (strain RM12579 / EPEC)
+    - uniprot_id: UniProtKB:P0DW47
+      protein_label: Endonuclease GajA
+      gene_symbol: gajA
+      taxon_id: NCBITaxon:1053212
+      taxon_label: Bacillus cereus (strain HuB5-5)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      entry_version: 14
+      entry_version: 12
       sequence_version: 1
-      role: Characteristic protein component (kwaB, Kiwa protein KwaB) associated
-        with Kiwa system in Escherichia coli O55:H7 (strain RM12579 / EPEC).
+      role: Characteristic protein component (gajA, Endonuclease GajA) associated
+        with Kiwa system in Bacillus cereus (strain HuB5-5).
       evidence:
       - reference: DOI:10.1016/j.cell.2025.07.002
-        snippet: Kiwa, a widespread two-component system composed of the transmembrane
-          sensor KwaA and the DNA-binding effector KwaB
-        notes: Supports Kiwa protein KwaB in Kiwa system; UniProtKB:P0DW46 (kwaB,
-          Kiwa protein KwaB) in Escherichia coli O55:H7 (strain RM12579 / EPEC) provides
-          a verified protein exemplar.
+        snippet: Kiwa coordinates membrane-associated detection of phage infection
+          with downstream DNA binding by its effector, forming a spatially coordinated
+          antiviral mechanism
+        notes: Supports Endonuclease GajA in Kiwa system; UniProtKB:P0DW47 (gajA,
+          Endonuclease GajA) in Bacillus cereus (strain HuB5-5) provides a verified
+          protein exemplar.
   edges:
   - subject: kiwa_locus
     predicate: contributes to
@@ -183,14 +184,14 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: kiwa_system_trait
-    description: Kiwa protein KwaB (kwaB, UniProtKB:P0DW46) contributes to Kiwa system
-      (associated with transmembrane, widespread, composed).
+    description: Endonuclease GajA (gajA, UniProtKB:P0DW47) contributes to Kiwa system.
     evidence:
     - reference: DOI:10.1016/j.cell.2025.07.002
-      snippet: Kiwa, a widespread two-component system composed of the transmembrane
-        sensor KwaA and the DNA-binding effector KwaB
-      notes: Supports the functional association between Kiwa protein KwaB (UniProtKB:P0DW46
-        in Escherichia coli O55:H7 (strain RM12579 / EPEC)) and Kiwa system.
+      snippet: Kiwa coordinates membrane-associated detection of phage infection with
+        downstream DNA binding by its effector, forming a spatially coordinated antiviral
+        mechanism
+      notes: Supports the functional association between Endonuclease GajA (UniProtKB:P0DW47
+        in Bacillus cereus (strain HuB5-5)) and Kiwa system.
 discussions:
 - discussion_id: kiwa-activation-and-counterdefense-gap
   prompt: Resolve Kiwa activation, phage counter-defense, and RecBCD-rescue details
@@ -217,5 +218,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    kiwa_system_protein_component with UniProtKB:P0DW46 (kwaB) exemplar.'
+    kiwa_system_protein_component with UniProtKB:P0DW47 (gajA) exemplar.'
   llm_assisted: true

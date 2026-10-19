@@ -41,7 +41,7 @@ causal_graphs:
   scope_status: NONMECHANISTIC
   scope_notes: This record is a broad environmental or morphological classification
     spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
-    descriptor; contextual protein nodes do not receive token UniProt examples.
+    descriptor; contextual protein nodes include source-backed UniProtKB exemplars.
   nodes:
   - node_id: aerobic_trait
     label: aerobic
@@ -104,24 +104,23 @@ causal_graphs:
     description: Respiratory quinol/cytochrome oxidases that reduce O2 to water as
       the final ETC step.
     protein_examples:
-    - uniprot_id: UniProtKB:P0ABI8
-      protein_label: Cytochrome bo(3) ubiquinol oxidase subunit 1
-      gene_symbol: cyoB
-      taxon_id: NCBITaxon:83333
-      taxon_label: Escherichia coli (strain K12)
+    - uniprot_id: UniProtKB:P98059
+      protein_label: Cytochrome c oxidase subunit 1
+      gene_symbol: ctaD
+      taxon_id: NCBITaxon:1061
+      taxon_label: Rhodobacter capsulatus (Rhodopseudomonas capsulata)
       entry_status: REVIEWED
-      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 154
+      entry_version: 116
       sequence_version: 1
-      role: Exemplar protein (cyoB, Cytochrome bo(3) ubiquinol oxidase subunit 1)
-        representing terminal oxidases in Escherichia coli (strain K12) for aerobic.
+      role: Exemplar protein (ctaD, Cytochrome c oxidase subunit 1) representing terminal
+        oxidases in Rhodobacter capsulatus (Rhodopseudomonas capsulata) for aerobic.
       evidence:
       - reference: DOI:10.1016/j.celrep.2023.112444
         snippet: terminal oxidases transfer electrons from the ETC to O2
-        notes: Supports terminal oxidases in aerobic; UniProtKB:P0ABI8 (cyoB, Cytochrome
-          bo(3) ubiquinol oxidase subunit 1) in Escherichia coli (strain K12) provides
-          a verified protein exemplar.
+        notes: Supports terminal oxidases in aerobic; UniProtKB:P98059 (ctaD, Cytochrome
+          c oxidase subunit 1) in Rhodobacter capsulatus (Rhodopseudomonas capsulata)
+          provides a verified protein exemplar.
   - node_id: proton_motive_force
     label: proton motive force
     node_type: STATE
@@ -149,27 +148,24 @@ causal_graphs:
     description: Superoxide dismutases, catalases and peroxidases that detoxify reactive
       oxygen species.
     protein_examples:
-    - uniprot_id: UniProtKB:Q4A0Q1
-      protein_label: Oxygen-dependent choline dehydrogenase
-      gene_symbol: betA
-      taxon_id: NCBITaxon:342451
-      taxon_label: Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
-        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+    - uniprot_id: UniProtKB:P00448
+      protein_label: Superoxide dismutase [Mn]
+      gene_symbol: sodA
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
-      proteome_id: UP000006371
+      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 127
-      sequence_version: 1
-      role: Exemplar protein (betA, Oxygen-dependent choline dehydrogenase) representing
-        ROS-scavenging enzymes in Staphylococcus saprophyticus subsp. saprophyticus
-        (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) for aerobic.
+      entry_version: 211
+      sequence_version: 2
+      role: Exemplar protein (sodA, Superoxide dismutase [Mn]) representing ROS-scavenging
+        enzymes in Escherichia coli (strain K12) for aerobic.
       evidence:
-      - reference: DOI:10.1038/s41579-021-00583-y
-        snippet: vulnerable to direct poisoning by molecular oxygen and ROS
-        notes: Supports ROS-scavenging enzymes in aerobic; UniProtKB:Q4A0Q1 (betA,
-          Oxygen-dependent choline dehydrogenase) in Staphylococcus saprophyticus
-          subsp. saprophyticus (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC
-          7292 / S-41) provides a verified protein exemplar.
+      - reference: PMID:21183663
+        snippet: Bacillus subtilis is an aerobic spore-forming Gram-positive bacterium
+        notes: Supports ROS-scavenging enzymes in aerobic; UniProtKB:P00448 (sodA,
+          Superoxide dismutase [Mn]) in Escherichia coli (strain K12) provides a verified
+          protein exemplar.
   edges:
   - subject: aerobic_trait
     predicate: depends on
@@ -402,7 +398,7 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P0A9P0 (lpdA)
-    protein example to node substrate_dehydrogenases; added UniProtKB:P0ABI8 (cyoB)
-    protein example to node terminal_oxidases; added UniProtKB:Q4A0Q1 (betA) protein
+    protein example to node substrate_dehydrogenases; added UniProtKB:P98059 (ctaD)
+    protein example to node terminal_oxidases; added UniProtKB:P00448 (sodA) protein
     example to node ros_scavenging_enzymes.'
   llm_assisted: true

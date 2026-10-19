@@ -99,34 +99,34 @@ causal_graphs:
     description: Possession of a genome-encoded phosphorothioate-based phage defense
       system.
   - node_id: sspabcd_sspfgh_system_protein_component
-    label: Agglutinin receptor
+    label: DNA sulfur modification protein DndC
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Agglutinin receptor) associated with SspABCD-SspFGH
-      system.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (DNA sulfur modification protein DndC) associated
+      with SspABCD-SspFGH system.
+    grounding: InterPro:IPR002500
     gene_symbols:
-    - sspB
+    - dndC
     protein_examples:
-    - uniprot_id: UniProtKB:P16952
-      protein_label: Agglutinin receptor
-      gene_symbol: sspB
-      taxon_id: NCBITaxon:1302
-      taxon_label: Streptococcus gordonii
-      entry_status: REVIEWED
+    - uniprot_id: UniProtKB:A0A2K8SFY8
+      protein_label: DNA sulfur modification protein DndC
+      gene_symbol: dndC
+      taxon_id: NCBITaxon:1336749
+      taxon_label: Spiroplasma floricola 23-6
+      entry_status: UNREVIEWED
+      proteome_id: UP000231823
       retrieved_on: '2026-10-17'
-      entry_version: 128
-      sequence_version: 2
-      role: Characteristic protein component (sspB, Agglutinin receptor) associated
-        with SspABCD-SspFGH system in Streptococcus gordonii.
+      entry_version: 20
+      sequence_version: 1
+      role: Characteristic protein component (dndC, DNA sulfur modification protein
+        DndC) associated with SspABCD-SspFGH system in Spiroplasma floricola 23-6.
       evidence:
-      - reference: DOI:10.1128/mbio.00613-21
-        snippet: new type of ssDNA PT-based SspABCD-SspFGH defense system capable
-          of providing protection against phages
-        notes: Supports Agglutinin receptor in SspABCD-SspFGH system; UniProtKB:P16952
-          (sspB, Agglutinin receptor) in Streptococcus gordonii provides a verified
-          protein exemplar.
+      - reference: DOI:10.1038/s41564-020-0700-6
+        snippet: We previously identified the Dnd system, which uses DndABCDE to insert
+          sulfur into the DNA backbone as a double-stranded phosphorothioate (PT)
+          modification, and DndFGH, a restriction component
+        notes: Supports DNA sulfur modification protein DndC in SspABCD-SspFGH system;
+          UniProtKB:A0A2K8SFY8 (dndC, DNA sulfur modification protein DndC) in Spiroplasma
+          floricola 23-6 provides a verified protein exemplar.
   edges:
   - subject: sspabcd_sspfgh_locus
     predicate: contributes to
@@ -209,14 +209,16 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: sspabcd_sspfgh_system_trait
-    description: Agglutinin receptor (sspB, UniProtKB:P16952) contributes to SspABCD-SspFGH
-      system (associated with protection, providing, against).
+    description: DNA sulfur modification protein DndC (dndC, UniProtKB:A0A2K8SFY8)
+      contributes to SspABCD-SspFGH system.
     evidence:
-    - reference: DOI:10.1128/mbio.00613-21
-      snippet: new type of ssDNA PT-based SspABCD-SspFGH defense system capable of
-        providing protection against phages
-      notes: Supports the functional association between Agglutinin receptor (UniProtKB:P16952
-        in Streptococcus gordonii) and SspABCD-SspFGH system.
+    - reference: DOI:10.1038/s41564-020-0700-6
+      snippet: We previously identified the Dnd system, which uses DndABCDE to insert
+        sulfur into the DNA backbone as a double-stranded phosphorothioate (PT) modification,
+        and DndFGH, a restriction component
+      notes: Supports the functional association between DNA sulfur modification protein
+        DndC (UniProtKB:A0A2K8SFY8 in Spiroplasma floricola 23-6) and SspABCD-SspFGH
+        system.
 curation_history:
 - timestamp: '2026-09-15T17:06:06Z'
   curator: codex
@@ -230,5 +232,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    sspabcd_sspfgh_system_protein_component with UniProtKB:P16952 (sspB) exemplar.'
+    sspabcd_sspfgh_system_protein_component with UniProtKB:A0A2K8SFY8 (dndC) exemplar.'
   llm_assisted: true

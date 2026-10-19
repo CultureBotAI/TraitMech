@@ -37,8 +37,8 @@ causal_graphs:
   title: Pathogenic-to-host virulence-factor program
   scope_status: NONMECHANISTIC
   scope_notes: This broad ecological, host-relationship, habitat, or hazard classification
-    spans multiple taxa and mechanisms; contextual protein nodes do not receive token
-    UniProt examples.
+    spans multiple taxa and mechanisms; contextual protein nodes include source-backed
+    UniProtKB exemplars.
   description: DOI-backed graph linking encoded virulence factors, secretion-based
     effector delivery, host colonization, and host damage to the pathogenic-to-host
     phenotype.

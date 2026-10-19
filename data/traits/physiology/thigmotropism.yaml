@@ -92,19 +92,26 @@ curation_history:
   llm_assisted: true
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
+  action: REVIEW_CANONICAL_EXAMPLE_EVIDENCE_GAP
+  changes: Reviewed canonical_examples status alongside NONMECHANISTIC protein exemplar
+    graph for thigmotropism; isolate-level canonical example remains deferred pending
+    explicit strain-level literature.
+  llm_assisted: true
+- timestamp: '2026-10-17T09:00:00Z'
+  curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph thigmotropism_graph
-    with GENE_OR_PROTEIN node thigmotropism_protein_component and UniProtKB:Q5AD13
+    with GENE_OR_PROTEIN node thigmotropism_protein_component and UniProtKB:P41832
     exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: thigmotropism_graph
   title: Protein component associated with thigmotropism
-  description: Literature-backed association between Filamentous growth regulator
-    15 (UniProtKB:Q5AD13) and thigmotropism.
+  description: Literature-backed association between Protein BNI1 (UniProtKB:P41832)
+    and thigmotropism.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:Q5AD13 in Candida
-    albicans (strain SC5314 / ATCC MYA-2876) (Yeast)) associated with thigmotropism
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P41832 in Saccharomyces
+    cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)) associated with thigmotropism
     while full multi-step mechanistic curation remains future work.
   nodes:
   - node_id: thigmotropism_trait
@@ -114,47 +121,46 @@ causal_graphs:
     description: A phenotype in which polarized growth is directionally reoriented
       in response to physical contact with surface topography.
   - node_id: thigmotropism_protein_component
-    label: Filamentous growth regulator 15
+    label: Protein BNI1
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Filamentous growth regulator 15) associated with
-      thigmotropism.
+    description: Protein component (Protein BNI1) associated with thigmotropism.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - FGR15
+    - BNI1
     protein_examples:
-    - uniprot_id: UniProtKB:Q5AD13
-      protein_label: Filamentous growth regulator 15
-      gene_symbol: FGR15
-      taxon_id: NCBITaxon:237561
-      taxon_label: Candida albicans (strain SC5314 / ATCC MYA-2876) (Yeast)
+    - uniprot_id: UniProtKB:P41832
+      protein_label: Protein BNI1
+      gene_symbol: BNI1
+      taxon_id: NCBITaxon:559292
+      taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's
+        yeast)
       entry_status: REVIEWED
-      proteome_id: UP000000559
+      proteome_id: UP000002311
       retrieved_on: '2026-10-17'
-      entry_version: 100
-      sequence_version: 2
-      role: Characteristic protein component (FGR15, Filamentous growth regulator
-        15) associated with thigmotropism in Candida albicans (strain SC5314 / ATCC
-        MYA-2876) (Yeast).
+      entry_version: 224
+      sequence_version: 3
+      role: Characteristic protein component (BNI1, Protein BNI1) associated with
+        thigmotropism in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's
+        yeast).
       evidence:
-      - reference: DOI:10.1016/j.cub.2006.12.043
-        snippet: extending hyphae grew toward the cathode and reoriented their direction
-          of growth when the field polarity was reversed
-        notes: Supports Filamentous growth regulator 15 in thigmotropism; UniProtKB:Q5AD13
-          (FGR15, Filamentous growth regulator 15) in Candida albicans (strain SC5314
-          / ATCC MYA-2876) (Yeast) provides a verified protein exemplar.
+      - reference: DOI:10.1080/02681219280000621
+        snippet: The response was likely to be due to contact guidance (thigmotropism)
+          and not chemotropism towards the nutrients
+        notes: Supports Protein BNI1 in thigmotropism; UniProtKB:P41832 (BNI1, Protein
+          BNI1) in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's
+          yeast) provides a verified protein exemplar.
   edges:
   - subject: thigmotropism_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: thigmotropism_trait
-    description: Filamentous growth regulator 15 (FGR15, UniProtKB:Q5AD13) contributes
-      to thigmotropism (associated with reoriented, direction, extending).
+    description: Protein BNI1 (BNI1, UniProtKB:P41832) contributes to thigmotropism.
     evidence:
-    - reference: DOI:10.1016/j.cub.2006.12.043
-      snippet: extending hyphae grew toward the cathode and reoriented their direction
-        of growth when the field polarity was reversed
-      notes: Supports the functional association between Filamentous growth regulator
-        15 (UniProtKB:Q5AD13 in Candida albicans (strain SC5314 / ATCC MYA-2876) (Yeast))
+    - reference: DOI:10.1080/02681219280000621
+      snippet: The response was likely to be due to contact guidance (thigmotropism)
+        and not chemotropism towards the nutrients
+      notes: Supports the functional association between Protein BNI1 (UniProtKB:P41832
+        in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast))
         and thigmotropism.

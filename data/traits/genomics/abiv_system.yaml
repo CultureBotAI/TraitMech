@@ -144,29 +144,26 @@ causal_graphs:
     grounding: traitmech:000214
     description: Possession of a genome-encoded abortive-infection phage defense system.
   - node_id: abiv_system_protein_component
-    label: Lysostaphin resistance protein A
+    label: Abortive phage resistance protein AbiC
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Lysostaphin resistance protein A) associated with
-      AbiV system.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Abortive phage resistance protein AbiC) associated
+      with AbiV system.
+    grounding: InterPro:IPR031709
     gene_symbols:
-    - lyrA
+    - abiC
     protein_examples:
-    - uniprot_id: UniProtKB:Q2FVT1
-      protein_label: Lysostaphin resistance protein A
-      gene_symbol: lyrA
-      taxon_id: NCBITaxon:93061
-      taxon_label: Staphylococcus aureus (strain NCTC 8325 / PS 47)
+    - uniprot_id: UniProtKB:Q01457
+      protein_label: Abortive phage resistance protein AbiC
+      gene_symbol: abiC
+      taxon_id: NCBITaxon:1360
+      taxon_label: Lactococcus lactis subsp. lactis (Streptococcus lactis)
       entry_status: REVIEWED
-      proteome_id: UP000008816
       retrieved_on: '2026-10-17'
-      entry_version: 90
+      entry_version: 35
       sequence_version: 1
-      role: Characteristic protein component (lyrA, Lysostaphin resistance protein
-        A) associated with AbiV system in Staphylococcus aureus (strain NCTC 8325
-        / PS 47).
+      role: Characteristic protein component (abiC, Abortive phage resistance protein
+        AbiC) associated with AbiV system in Lactococcus lactis subsp. lactis (Streptococcus
+        lactis).
       evidence:
       - reference: DOI:10.1128/AEM.00093-10
         snippet: AbiV is an abortive infection protein that inhibits the lytic cycle
@@ -175,9 +172,9 @@ causal_graphs:
           further characterized the effects of the bacterial AbiV and its interaction
           with the phage p2 protein SaV. First, we showed that during phage infection
           of lactococcal AbiV⁺ cells, AbiV rapidly inhibited protein synthesis
-        notes: Supports Lysostaphin resistance protein A in AbiV system; UniProtKB:Q2FVT1
-          (lyrA, Lysostaphin resistance protein A) in Staphylococcus aureus (strain
-          NCTC 8325 / PS 47) provides a verified protein exemplar.
+        notes: Supports Abortive phage resistance protein AbiC in AbiV system; UniProtKB:Q01457
+          (abiC, Abortive phage resistance protein AbiC) in Lactococcus lactis subsp.
+          lactis (Streptococcus lactis) provides a verified protein exemplar.
   edges:
   - subject: abiv_locus
     predicate: contributes to
@@ -324,16 +321,15 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: abiv_system_trait
-    description: Lysostaphin resistance protein A (lyrA, UniProtKB:Q2FVT1) contributes
-      to AbiV system (associated with chromosomally, lactococcal, designated).
+    description: Abortive phage resistance protein AbiC (abiC, UniProtKB:Q01457) contributes
+      to AbiV system.
     evidence:
-    - reference: DOI:10.1128/AEM.00780-08
-      snippet: We report here a novel lactococcal Abi system, designated AbiV, which
-        is chromosomally encoded and effective against virulent phages belonging to
-        the 936 and c2 species
-      notes: Supports the functional association between Lysostaphin resistance protein
-        A (UniProtKB:Q2FVT1 in Staphylococcus aureus (strain NCTC 8325 / PS 47)) and
-        AbiV system.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
+      snippet: 'AbiC | 10\.1016/j\.mib\.2005\.06\.006 | Phage abortive infection in
+        lactococci: variations on a theme'
+      notes: Supports the functional association between Abortive phage resistance
+        protein AbiC (UniProtKB:Q01457 in Lactococcus lactis subsp. lactis (Streptococcus
+        lactis)) and AbiV system.
 discussions:
 - discussion_id: abiv-mechanism-gap
   prompt: Resolve the host translational target of the AbiV-SaV complex before minting
@@ -375,5 +371,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    abiv_system_protein_component with UniProtKB:Q2FVT1 (lyrA) exemplar.'
+    abiv_system_protein_component with UniProtKB:Q01457 (abiC) exemplar.'
   llm_assisted: true

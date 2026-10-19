@@ -107,28 +107,26 @@ causal_graphs:
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
   - node_id: pd_t2_1_system_protein_component
-    label: Cell death peptidase
+    label: Endonuclease GajA
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Cell death peptidase) associated with PD-T2-1
-      system.
+    description: Protein component (Endonuclease GajA) associated with PD-T2-1 system.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - lit
+    - gajA
     protein_examples:
-    - uniprot_id: UniProtKB:P11072
-      protein_label: Cell death peptidase
-      gene_symbol: lit
-      taxon_id: NCBITaxon:83333
-      taxon_label: Escherichia coli (strain K12)
+    - uniprot_id: UniProtKB:P0DW47
+      protein_label: Endonuclease GajA
+      gene_symbol: gajA
+      taxon_id: NCBITaxon:1053212
+      taxon_label: Bacillus cereus (strain HuB5-5)
       entry_status: REVIEWED
-      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 137
-      sequence_version: 2
-      role: Characteristic protein component (lit, Cell death peptidase) associated
-        with PD-T2-1 system in Escherichia coli (strain K12).
+      entry_version: 12
+      sequence_version: 1
+      role: Characteristic protein component (gajA, Endonuclease GajA) associated
+        with PD-T2-1 system in Bacillus cereus (strain HuB5-5).
       evidence:
       - reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC12875140/
         snippet: Operon structure of phage defense against T2 system 1 (PD-T2–1).
@@ -136,8 +134,8 @@ causal_graphs:
           indicated with triangles. A predicted transmembrane domain (TM) for PD-T2–1A,
           accession numbers, and the length of each protein in amino acids (aa) are
           shown.
-        notes: Supports Cell death peptidase in PD-T2-1 system; UniProtKB:P11072 (lit,
-          Cell death peptidase) in Escherichia coli (strain K12) provides a verified
+        notes: Supports Endonuclease GajA in PD-T2-1 system; UniProtKB:P0DW47 (gajA,
+          Endonuclease GajA) in Bacillus cereus (strain HuB5-5) provides a verified
           protein exemplar.
   edges:
   - subject: pd_t2_1_locus
@@ -188,16 +186,16 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: pd_t2_1_system_trait
-    description: Cell death peptidase (lit, UniProtKB:P11072) contributes to PD-T2-1
-      system (associated with transmembrane, expressing, identified).
+    description: Endonuclease GajA (gajA, UniProtKB:P0DW47) contributes to PD-T2-1
+      system.
     evidence:
     - reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC12875140/
       snippet: Operon structure of phage defense against T2 system 1 (PD-T2–1). Transposon
         insertions identified in mutant ECOR03 expressing T7 gp17 are indicated with
         triangles. A predicted transmembrane domain (TM) for PD-T2–1A, accession numbers,
         and the length of each protein in amino acids (aa) are shown.
-      notes: Supports the functional association between Cell death peptidase (UniProtKB:P11072
-        in Escherichia coli (strain K12)) and PD-T2-1 system.
+      notes: Supports the functional association between Endonuclease GajA (UniProtKB:P0DW47
+        in Bacillus cereus (strain HuB5-5)) and PD-T2-1 system.
 discussions:
 - discussion_id: pd-t2-1-mechanism-and-model-coverage-gap
   prompt: Resolve the PD-T2-1 direct sensor, effector output, native host breadth,
@@ -258,5 +256,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    pd_t2_1_system_protein_component with UniProtKB:P11072 (lit) exemplar.'
+    pd_t2_1_system_protein_component with UniProtKB:P0DW47 (gajA) exemplar.'
   llm_assisted: true

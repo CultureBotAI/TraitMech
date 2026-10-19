@@ -245,7 +245,7 @@ causal_graphs:
     predicate_id: RO:0002326
     object: gram_positive_trait
     description: Teichoic acids export ATP-binding protein TagH (tagH, UniProtKB:Q49VI3)
-      contributes to gram positive (associated with metathetical, interacts, exchange).
+      contributes to gram positive.
     evidence:
     - reference: DOI:10.1128/jb.156.2.837-845.1983
       snippet: interacts with aqueous KI-I2 during the Gram stain via a simple metathetical

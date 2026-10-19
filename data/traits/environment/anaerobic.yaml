@@ -41,7 +41,7 @@ causal_graphs:
   scope_status: NONMECHANISTIC
   scope_notes: This record is a broad environmental or morphological classification
     spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
-    descriptor; contextual protein nodes do not receive token UniProt examples.
+    descriptor; contextual protein nodes include source-backed UniProtKB exemplars.
   nodes:
   - node_id: anaerobic_trait
     label: anaerobic
@@ -76,25 +76,24 @@ causal_graphs:
     description: Superoxide dismutase, catalase, and peroxidases that detoxify reactive
       oxygen species.
     protein_examples:
-    - uniprot_id: UniProtKB:P0ABI8
-      protein_label: Cytochrome bo(3) ubiquinol oxidase subunit 1
-      gene_symbol: cyoB
+    - uniprot_id: UniProtKB:P0AGD3
+      protein_label: Superoxide dismutase [Fe]
+      gene_symbol: sodB
       taxon_id: NCBITaxon:83333
       taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
       proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 154
-      sequence_version: 1
-      role: Exemplar protein (cyoB, Cytochrome bo(3) ubiquinol oxidase subunit 1)
-        representing antioxidant enzymes (Sod/Cat/peroxidases) in Escherichia coli
-        (strain K12) for anaerobic.
+      entry_version: 140
+      sequence_version: 2
+      role: Exemplar protein (sodB, Superoxide dismutase [Fe]) representing antioxidant
+        enzymes (Sod/Cat/peroxidases) in Escherichia coli (strain K12) for anaerobic.
       evidence:
       - reference: PMID:21413255
         snippet: Anaerobes, on the other hand, cannot grow in the presence of oxygen
-        notes: Supports antioxidant enzymes (Sod/Cat/peroxidases) in anaerobic; UniProtKB:P0ABI8
-          (cyoB, Cytochrome bo(3) ubiquinol oxidase subunit 1) in Escherichia coli
-          (strain K12) provides a verified protein exemplar.
+        notes: Supports antioxidant enzymes (Sod/Cat/peroxidases) in anaerobic; UniProtKB:P0AGD3
+          (sodB, Superoxide dismutase [Fe]) in Escherichia coli (strain K12) provides
+          a verified protein exemplar.
   - node_id: ros_detoxification
     label: ROS detoxification
     node_type: BIOLOGICAL_PROCESS
@@ -315,7 +314,7 @@ curation_history:
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
-  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P0ABI8 (cyoB)
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P0AGD3 (sodB)
     protein example to node antioxidant_enzymes; added UniProtKB:P0DW32 (arrB) protein
     example to node respiratory_reductases.'
   llm_assisted: true

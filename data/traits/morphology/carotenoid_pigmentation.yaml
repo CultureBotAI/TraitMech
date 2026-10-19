@@ -31,7 +31,7 @@ causal_graphs:
   scope_status: NONMECHANISTIC
   scope_notes: This record is a broad environmental or morphological classification
     spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement
-    descriptor; contextual protein nodes do not receive token UniProt examples.
+    descriptor; contextual protein nodes include source-backed UniProtKB exemplars.
   nodes:
   - node_id: carotenoid_pigmentation_trait
     label: carotenoid pigmentation
@@ -50,27 +50,22 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Bacterial carotenoid biosynthetic enzymes encoded by crt genes.
     protein_examples:
-    - uniprot_id: UniProtKB:Q49Z16
-      protein_label: L-threonine dehydratase biosynthetic IlvA
-      gene_symbol: ilvA
-      taxon_id: NCBITaxon:342451
-      taxon_label: Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
-        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+    - uniprot_id: UniProtKB:P54977
+      protein_label: Phytoene synthase
+      gene_symbol: crtB
+      taxon_id: NCBITaxon:1911
+      taxon_label: Streptomyces griseus
       entry_status: REVIEWED
-      proteome_id: UP000006371
       retrieved_on: '2026-10-17'
-      entry_version: 124
+      entry_version: 94
       sequence_version: 1
-      role: Exemplar protein (ilvA, L-threonine dehydratase biosynthetic IlvA) representing
-        Crt enzymes in Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
-        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) for carotenoid pigmentation.
+      role: Exemplar protein (crtB, Phytoene synthase) representing Crt enzymes in
+        Streptomyces griseus for carotenoid pigmentation.
       evidence:
       - reference: DOI:10.1080/1040841X.2025.2526423
         snippet: responsible for the red, pink, orange, and yellow pigmentation
-        notes: Supports Crt enzymes in carotenoid pigmentation; UniProtKB:Q49Z16 (ilvA,
-          L-threonine dehydratase biosynthetic IlvA) in Staphylococcus saprophyticus
-          subsp. saprophyticus (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC
-          7292 / S-41) provides a verified protein exemplar.
+        notes: Supports Crt enzymes in carotenoid pigmentation; UniProtKB:P54977 (crtB,
+          Phytoene synthase) in Streptomyces griseus provides a verified protein exemplar.
   - node_id: carotenoid_biosynthesis
     label: carotenoid biosynthesis
     node_type: PATHWAY
@@ -119,24 +114,24 @@ causal_graphs:
     description: CrtI-type enzyme desaturating phytoene toward lycopene.
     grounding: InterPro:IPR014102
     protein_examples:
-    - uniprot_id: UniProtKB:P54978
-      protein_label: Phytoene desaturase
+    - uniprot_id: UniProtKB:P22871
+      protein_label: Phytoene desaturase (lycopene-forming)
       gene_symbol: crtI
-      taxon_id: NCBITaxon:81397
-      taxon_label: Paracoccus sp. (strain N81106 / MBIC 01143) (Agrobacterium aurantiacum)
+      taxon_id: NCBITaxon:566
+      taxon_label: Pseudescherichia vulneris (Escherichia vulneris)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      entry_version: 81
-      sequence_version: 2
-      role: Exemplar protein (crtI, Phytoene desaturase) representing phytoene desaturase
-        in Paracoccus sp. (strain N81106 / MBIC 01143) (Agrobacterium aurantiacum)
-        for carotenoid pigmentation.
+      entry_version: 102
+      sequence_version: 1
+      role: Exemplar protein (crtI, Phytoene desaturase (lycopene-forming)) representing
+        phytoene desaturase in Pseudescherichia vulneris (Escherichia vulneris) for
+        carotenoid pigmentation.
       evidence:
       - reference: DOI:10.1080/1040841X.2025.2526423
         snippet: responsible for the red, pink, orange, and yellow pigmentation
-        notes: Supports phytoene desaturase in carotenoid pigmentation; UniProtKB:P54978
-          (crtI, Phytoene desaturase) in Paracoccus sp. (strain N81106 / MBIC 01143)
-          (Agrobacterium aurantiacum) provides a verified protein exemplar.
+        notes: Supports phytoene desaturase in carotenoid pigmentation; UniProtKB:P22871
+          (crtI, Phytoene desaturase (lycopene-forming)) in Pseudescherichia vulneris
+          (Escherichia vulneris) provides a verified protein exemplar.
   - node_id: lycopene
     label: lycopene
     node_type: CHEMICAL
@@ -150,27 +145,23 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: CrtY-type enzymes cyclizing lycopene into cyclic carotenes.
     protein_examples:
-    - uniprot_id: UniProtKB:Q9HNE5
+    - uniprot_id: UniProtKB:Q01331
       protein_label: Lycopene beta-cyclase
       gene_symbol: crtY
-      taxon_id: NCBITaxon:64091
-      taxon_label: Halobacterium salinarum (strain ATCC 700922 / JCM 11081 / NRC-1)
-        (Halobacterium halobium)
+      taxon_id: NCBITaxon:566
+      taxon_label: Pseudescherichia vulneris (Escherichia vulneris)
       entry_status: REVIEWED
-      proteome_id: UP000000554
       retrieved_on: '2026-10-17'
-      entry_version: 88
-      sequence_version: 2
+      entry_version: 76
+      sequence_version: 1
       role: Exemplar protein (crtY, Lycopene beta-cyclase) representing lycopene cyclases
-        in Halobacterium salinarum (strain ATCC 700922 / JCM 11081 / NRC-1) (Halobacterium
-        halobium) for carotenoid pigmentation.
+        in Pseudescherichia vulneris (Escherichia vulneris) for carotenoid pigmentation.
       evidence:
       - reference: DOI:10.1080/1040841X.2025.2526423
         snippet: responsible for the red, pink, orange, and yellow pigmentation
-        notes: Supports lycopene cyclases in carotenoid pigmentation; UniProtKB:Q9HNE5
-          (crtY, Lycopene beta-cyclase) in Halobacterium salinarum (strain ATCC 700922
-          / JCM 11081 / NRC-1) (Halobacterium halobium) provides a verified protein
-          exemplar.
+        notes: Supports lycopene cyclases in carotenoid pigmentation; UniProtKB:Q01331
+          (crtY, Lycopene beta-cyclase) in Pseudescherichia vulneris (Escherichia
+          vulneris) provides a verified protein exemplar.
   - node_id: cyclic_carotenes
     label: cyclic carotenes
     node_type: CHEMICAL
@@ -400,8 +391,8 @@ curation_history:
 - timestamp: '2026-10-17T09:00:00Z'
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
-  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:Q49Z16 (ilvA)
+  changes: 'Curated verified UniProtKB protein_examples: added UniProtKB:P54977 (crtB)
     protein example to node crt_enzymes; added UniProtKB:P54977 (crtB) protein example
-    to node phytoene_synthase; added UniProtKB:P54978 (crtI) protein example to node
-    phytoene_desaturase; added UniProtKB:Q9HNE5 (crtY) protein example to node lycopene_cyclases.'
+    to node phytoene_synthase; added UniProtKB:P22871 (crtI) protein example to node
+    phytoene_desaturase; added UniProtKB:Q01331 (crtY) protein example to node lycopene_cyclases.'
   llm_assisted: true

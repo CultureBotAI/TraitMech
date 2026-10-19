@@ -101,27 +101,24 @@ causal_graphs:
     description: Enzyme complex that uses proton motive force to synthesize ATP.
     grounding: GO:0045259
     protein_examples:
-    - uniprot_id: UniProtKB:Q49Z52
+    - uniprot_id: UniProtKB:P0ABB0
       protein_label: ATP synthase subunit alpha
       gene_symbol: atpA
-      taxon_id: NCBITaxon:342451
-      taxon_label: Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC
-        15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41)
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
-      proteome_id: UP000006371
+      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 137
+      entry_version: 161
       sequence_version: 1
       role: Exemplar protein (atpA, ATP synthase subunit alpha) representing ATP synthase
-        in Staphylococcus saprophyticus subsp. saprophyticus (strain ATCC 15305 /
-        DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) for Aerobic respiration.
+        in Escherichia coli (strain K12) for Aerobic respiration.
       evidence:
       - reference: DOI:10.1016/j.bbabio.2008.09.008
         snippet: gradient across a coupling membrane that drives ATP synthesis
-        notes: Supports ATP synthase in Aerobic respiration; UniProtKB:Q49Z52 (atpA,
-          ATP synthase subunit alpha) in Staphylococcus saprophyticus subsp. saprophyticus
-          (strain ATCC 15305 / DSM 20229 / NCIMB 8711 / NCTC 7292 / S-41) provides
-          a verified protein exemplar.
+        notes: Supports ATP synthase in Aerobic respiration; UniProtKB:P0ABB0 (atpA,
+          ATP synthase subunit alpha) in Escherichia coli (strain K12) provides a
+          verified protein exemplar.
   - node_id: atp
     label: ATP
     node_type: CHEMICAL
@@ -316,6 +313,6 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: refreshed UniProtKB:P08306
-    version metadata (entry_version=168, sequence_version=1); added UniProtKB:Q49Z52
+    version metadata (entry_version=168, sequence_version=1); added UniProtKB:P0ABB0
     (atpA) protein example to node atp_synthase.'
   llm_assisted: true

@@ -107,18 +107,18 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added causal graph phagocytosis_graph
-    with GENE_OR_PROTEIN node phagocytosis_protein_component and UniProtKB:P0AEZ7
+    with GENE_OR_PROTEIN node phagocytosis_protein_component and UniProtKB:P32790
     exemplar.'
   llm_assisted: true
 causal_graphs:
 - graph_id: phagocytosis_graph
   title: Protein component associated with phagocytosis
-  description: Literature-backed association between Membrane-bound lytic murein transglycosylase
-    D (UniProtKB:P0AEZ7) and phagocytosis.
+  description: Literature-backed association between Actin cytoskeleton-regulatory
+    complex protein SLA1 (UniProtKB:P32790) and phagocytosis.
   scope_status: NONMECHANISTIC
-  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P0AEZ7 in Escherichia
-    coli (strain K12)) associated with phagocytosis while full multi-step mechanistic
-    curation remains future work.
+  scope_notes: Captures a source-backed protein exemplar (UniProtKB:P32790 in Saccharomyces
+    cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)) associated with phagocytosis
+    while full multi-step mechanistic curation remains future work.
   nodes:
   - node_id: phagocytosis_trait
     label: phagocytosis
@@ -128,46 +128,47 @@ causal_graphs:
       particles by enclosing them within its membrane and internalizes them into membrane-bound
       compartments.
   - node_id: phagocytosis_protein_component
-    label: Membrane-bound lytic murein transglycosylase D
+    label: Actin cytoskeleton-regulatory complex protein SLA1
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Membrane-bound lytic murein transglycosylase D)
-      associated with phagocytosis.
-    grounding_status: REVIEWED_LABEL_ONLY
-    grounding_notes: Organism-specific protein component exemplified via protein_examples;
-      no single non-duplicate family CURIE assigned.
+    description: Protein component (Actin cytoskeleton-regulatory complex protein
+      SLA1) associated with phagocytosis.
+    grounding: InterPro:IPR056996
     gene_symbols:
-    - mltD
+    - SLA1
     protein_examples:
-    - uniprot_id: UniProtKB:P0AEZ7
-      protein_label: Membrane-bound lytic murein transglycosylase D
-      gene_symbol: mltD
-      taxon_id: NCBITaxon:83333
-      taxon_label: Escherichia coli (strain K12)
+    - uniprot_id: UniProtKB:P32790
+      protein_label: Actin cytoskeleton-regulatory complex protein SLA1
+      gene_symbol: SLA1
+      taxon_id: NCBITaxon:559292
+      taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's
+        yeast)
       entry_status: REVIEWED
-      proteome_id: UP000000625
+      proteome_id: UP000002311
       retrieved_on: '2026-10-17'
-      entry_version: 152
+      entry_version: 230
       sequence_version: 1
-      role: Characteristic protein component (mltD, Membrane-bound lytic murein transglycosylase
-        D) associated with phagocytosis in Escherichia coli (strain K12).
+      role: Characteristic protein component (SLA1, Actin cytoskeleton-regulatory
+        complex protein SLA1) associated with phagocytosis in Saccharomyces cerevisiae
+        (strain ATCC 204508 / S288c) (Baker's yeast).
       evidence:
-      - reference: DOI:10.1371/journal.pone.0095577
-        snippet: remodeling of the collar membrane to engulf the prey, and transport
-          of engulfed bacteria into the cell.
-        notes: Supports Membrane-bound lytic murein transglycosylase D in phagocytosis;
-          UniProtKB:P0AEZ7 (mltD, Membrane-bound lytic murein transglycosylase D)
-          in Escherichia coli (strain K12) provides a verified protein exemplar.
+      - reference: DOI:10.1111/nph.20388
+        snippet: We found cells ingested proxy (up to 2 μm diameter) and natural (bacteria
+          and cyanobacteria) prey particles
+        notes: Supports Actin cytoskeleton-regulatory complex protein SLA1 in phagocytosis;
+          UniProtKB:P32790 (SLA1, Actin cytoskeleton-regulatory complex protein SLA1)
+          in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)
+          provides a verified protein exemplar.
   edges:
   - subject: phagocytosis_protein_component
     predicate: contributes to
     predicate_id: RO:0002326
     object: phagocytosis_trait
-    description: Membrane-bound lytic murein transglycosylase D (mltD, UniProtKB:P0AEZ7)
-      contributes to phagocytosis (associated with remodeling, transport, bacteria).
+    description: Actin cytoskeleton-regulatory complex protein SLA1 (SLA1, UniProtKB:P32790)
+      contributes to phagocytosis.
     evidence:
-    - reference: DOI:10.1371/journal.pone.0095577
-      snippet: remodeling of the collar membrane to engulf the prey, and transport
-        of engulfed bacteria into the cell.
-      notes: Supports the functional association between Membrane-bound lytic murein
-        transglycosylase D (UniProtKB:P0AEZ7 in Escherichia coli (strain K12)) and
-        phagocytosis.
+    - reference: DOI:10.1111/nph.20388
+      snippet: We found cells ingested proxy (up to 2 μm diameter) and natural (bacteria
+        and cyanobacteria) prey particles
+      notes: Supports the functional association between Actin cytoskeleton-regulatory
+        complex protein SLA1 (UniProtKB:P32790 in Saccharomyces cerevisiae (strain
+        ATCC 204508 / S288c) (Baker's yeast)) and phagocytosis.

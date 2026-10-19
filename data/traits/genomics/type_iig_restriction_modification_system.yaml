@@ -114,37 +114,35 @@ causal_graphs:
     description: Possession of a methyltransferase and restriction endonuclease system
       for self/non-self DNA discrimination.
   - node_id: type_iig_restriction_modification_system_protein_component
-    label: Adenine-specific methyltransferase PglX
+    label: DISARM protein DrmC
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Adenine-specific methyltransferase PglX) associated
-      with type IIG restriction-modification system.
+    description: Protein component (DISARM protein DrmC) associated with type IIG
+      restriction-modification system.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - pglX
+    - drmC
     protein_examples:
-    - uniprot_id: UniProtKB:Q8CJM2
-      protein_label: Adenine-specific methyltransferase PglX
-      gene_symbol: pglX
-      taxon_id: NCBITaxon:100226
-      taxon_label: Streptomyces coelicolor (strain ATCC BAA-471 / A3(2) / M145)
+    - uniprot_id: UniProtKB:P0DW07
+      protein_label: DISARM protein DrmC
+      gene_symbol: drmC
+      taxon_id: NCBITaxon:766760
+      taxon_label: Bacillus paralicheniformis (strain ATCC 9945a / NCIMB 11709 / CD-2)
       entry_status: REVIEWED
-      proteome_id: UP000001973
       retrieved_on: '2026-10-17'
-      entry_version: 102
+      entry_version: 12
       sequence_version: 1
-      role: Characteristic protein component (pglX, Adenine-specific methyltransferase
-        PglX) associated with type IIG restriction-modification system in Streptomyces
-        coelicolor (strain ATCC BAA-471 / A3(2) / M145).
+      role: Characteristic protein component (drmC, DISARM protein DrmC) associated
+        with type IIG restriction-modification system in Bacillus paralicheniformis
+        (strain ATCC 9945a / NCIMB 11709 / CD-2).
       evidence:
       - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
         snippet: 'RM_Type_IIG | 10\.1093/nar/gkac975 | REBASE: a database for DNA
           restriction and modification: enzymes, genes and genomes'
-        notes: Supports Adenine-specific methyltransferase PglX in type IIG restriction-modification
-          system; UniProtKB:Q8CJM2 (pglX, Adenine-specific methyltransferase PglX)
-          in Streptomyces coelicolor (strain ATCC BAA-471 / A3(2) / M145) provides
-          a verified protein exemplar.
+        notes: Supports DISARM protein DrmC in type IIG restriction-modification system;
+          UniProtKB:P0DW07 (drmC, DISARM protein DrmC) in Bacillus paralicheniformis
+          (strain ATCC 9945a / NCIMB 11709 / CD-2) provides a verified protein exemplar.
   edges:
   - subject: type_iig_rm_locus
     predicate: enables
@@ -243,17 +241,17 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: type_iig_restriction_modification_system_trait
-    description: Adenine-specific methyltransferase PglX (pglX, UniProtKB:Q8CJM2)
-      contributes to type IIG restriction-modification system (associated with hydroxymethyl,
-      glucosylated, modification).
+    description: DISARM protein DrmC (drmC, UniProtKB:P0DW07) contributes to type
+      IIG restriction-modification system.
     evidence:
-    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
-      snippet: '| GmrSD_RM_Type_IV | 10\.1016/j\.jmb\.2006\.11\.051 | A type IV modification
-        dependent restriction nuclease that targets glucosylated hydroxymethyl cytosine
-        modified DNAs |'
-      notes: Supports the functional association between Adenine-specific methyltransferase
-        PglX (UniProtKB:Q8CJM2 in Streptomyces coelicolor (strain ATCC BAA-471 / A3(2)
-        / M145)) and type IIG restriction-modification system.
+    - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
+      snippet: '| DISARM__drmA | DISARM__drmA | DISARM | Custom | 90 | | DISARM__drmB
+        | DISARM__drmB | DISARM | Custom | 90 | | DISARM__drmC | DISARM__drmC | DISARM
+        | Custom | 40 | | DISARM_2__drmE | DISARM_2__drmE | DISARM_2 | Custom | 90
+        | | DISARM_2__drmMII | DISARM_2__drmMII | DISARM_2 | Custom | 90 |'
+      notes: Supports the functional association between DISARM protein DrmC (UniProtKB:P0DW07
+        in Bacillus paralicheniformis (strain ATCC 9945a / NCIMB 11709 / CD-2)) and
+        type IIG restriction-modification system.
 discussions:
 - discussion_id: type-iig-rm-profile-interpretation-gap
   prompt: Resolve the accession-level relationships between DefenseFinder RM_Type_IIG
@@ -343,6 +341,6 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    type_iig_restriction_modification_system_protein_component with UniProtKB:Q8CJM2
-    (pglX) exemplar.'
+    type_iig_restriction_modification_system_protein_component with UniProtKB:P0DW07
+    (drmC) exemplar.'
   llm_assisted: true

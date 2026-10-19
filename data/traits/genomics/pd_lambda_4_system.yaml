@@ -101,34 +101,34 @@ causal_graphs:
     description: Possession of one or more genome-encoded immune systems that inhibit
       bacteriophage infection.
   - node_id: pd_lambda_4_system_protein_component
-    label: Maltoporin
+    label: Endonuclease GajA
     node_type: GENE_OR_PROTEIN
-    description: Protein component (Maltoporin) associated with PD-Lambda-4 system.
+    description: Protein component (Endonuclease GajA) associated with PD-Lambda-4
+      system.
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Organism-specific protein component exemplified via protein_examples;
       no single non-duplicate family CURIE assigned.
     gene_symbols:
-    - lamB
+    - gajA
     protein_examples:
-    - uniprot_id: UniProtKB:P02943
-      protein_label: Maltoporin
-      gene_symbol: lamB
-      taxon_id: NCBITaxon:83333
-      taxon_label: Escherichia coli (strain K12)
+    - uniprot_id: UniProtKB:P0DW47
+      protein_label: Endonuclease GajA
+      gene_symbol: gajA
+      taxon_id: NCBITaxon:1053212
+      taxon_label: Bacillus cereus (strain HuB5-5)
       entry_status: REVIEWED
-      proteome_id: UP000000625
       retrieved_on: '2026-10-17'
-      entry_version: 221
+      entry_version: 12
       sequence_version: 1
-      role: Characteristic protein component (lamB, Maltoporin) associated with PD-Lambda-4
-        system in Escherichia coli (strain K12).
+      role: Characteristic protein component (gajA, Endonuclease GajA) associated
+        with PD-Lambda-4 system in Bacillus cereus (strain HuB5-5).
       evidence:
       - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-lambda-4.md
         snippet: The PD-Lambda-4 system in *Serratia sp. LS-1* (GCF_003719595.1, NZ_CP033504)
           is composed of 2 proteins PD-Lambda-4_B (WP_123061920.1) PD-Lambda-4_A (WP_123061921.1)
-        notes: Supports Maltoporin in PD-Lambda-4 system; UniProtKB:P02943 (lamB,
-          Maltoporin) in Escherichia coli (strain K12) provides a verified protein
-          exemplar.
+        notes: Supports Endonuclease GajA in PD-Lambda-4 system; UniProtKB:P0DW47
+          (gajA, Endonuclease GajA) in Bacillus cereus (strain HuB5-5) provides a
+          verified protein exemplar.
   edges:
   - subject: pd_lambda_4_locus
     predicate: contributes to
@@ -219,14 +219,14 @@ causal_graphs:
     predicate: contributes to
     predicate_id: RO:0002326
     object: pd_lambda_4_system_trait
-    description: Maltoporin (lamB, UniProtKB:P02943) contributes to PD-Lambda-4 system
-      (associated with composed, cp033504, serratia).
+    description: Endonuclease GajA (gajA, UniProtKB:P0DW47) contributes to PD-Lambda-4
+      system.
     evidence:
     - reference: https://gitlab.pasteur.fr/mdm-lab/wiki/-/raw/ee7647d8/content/3.defense-systems/pd-lambda-4.md
       snippet: The PD-Lambda-4 system in *Serratia sp. LS-1* (GCF_003719595.1, NZ_CP033504)
         is composed of 2 proteins PD-Lambda-4_B (WP_123061920.1) PD-Lambda-4_A (WP_123061921.1)
-      notes: Supports the functional association between Maltoporin (UniProtKB:P02943
-        in Escherichia coli (strain K12)) and PD-Lambda-4 system.
+      notes: Supports the functional association between Endonuclease GajA (UniProtKB:P0DW47
+        in Bacillus cereus (strain HuB5-5)) and PD-Lambda-4 system.
 discussions:
 - discussion_id: pd-lambda-4-mechanism-gap
   prompt: Resolve PD-Lambda-4 natural host breadth, direct phage trigger, effector
@@ -302,5 +302,5 @@ curation_history:
   curator: codex
   action: CURATE_PROTEIN_TAXON_EXAMPLE
   changes: 'Curated verified UniProtKB protein_examples: added GENE_OR_PROTEIN node
-    pd_lambda_4_system_protein_component with UniProtKB:P02943 (lamB) exemplar.'
+    pd_lambda_4_system_protein_component with UniProtKB:P0DW47 (gajA) exemplar.'
   llm_assisted: true
