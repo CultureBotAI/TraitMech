@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/genomics.html">GENOMICS</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/genomics.html">GENOMICS</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>BREX system</h1>
     <p class="curie"><code>traitmech:000210</code> · CLASS · PROPOSED</p>
 
@@ -103,8 +114,10 @@
 
           <li id="pathograph-1-edge-1">
             <strong>BREX locus</strong>
+
             <span class="edge-predicate">encodes</span>
             <strong>PglX adenine methyltransferase</strong>
+            <a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR047939/" rel="nofollow noreferrer"><code>InterPro:IPR047939</code></a>
 
             <p>Type I BREX loci encode PglX adenine methyltransferases.</p>
             <ul>
@@ -120,9 +133,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>PglX adenine methyltransferase</strong>
+            <a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR047939/" rel="nofollow noreferrer"><code>InterPro:IPR047939</code></a>
             <span class="edge-predicate">contributes to</span>
             <strong>BREX host DNA methylation</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>PglX methyltransferase activity methylates BREX recognition motifs in host DNA.</p>
             <ul>
 
@@ -137,9 +152,11 @@
 
           <li id="pathograph-1-edge-3">
             <strong>BREX host DNA methylation</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>BREX self/non-self discrimination</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>Host DNA methylation guides BREX self/non-self discrimination.</p>
             <ul>
 
@@ -154,9 +171,11 @@
 
           <li id="pathograph-1-edge-4">
             <strong>BREX self/non-self discrimination</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>BREX system</strong>
-            <code>METPO:2007700</code>
+            <code>traitmech:000210</code>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>Methylation-guided self/non-self discrimination realizes the BREX defense trait.</p>
             <ul>
 
@@ -171,9 +190,11 @@
 
           <li id="pathograph-1-edge-5">
             <strong>BREX self/non-self discrimination</strong>
+
             <span class="edge-predicate">mitigates</span>
             <strong>phage DNA replication</strong>
-            <code>METPO:2007407</code>
+
+            <a href="https://w3id.org/metpo/2007407" rel="nofollow noreferrer"><code>METPO:2007407</code></a>
             <p>BREX methylation-guided discrimination blocks replication of unmethylated phage DNA.</p>
             <ul>
 
@@ -188,8 +209,10 @@
 
           <li id="pathograph-1-edge-6">
             <strong>BREX system</strong>
+            <code>traitmech:000210</code>
             <span class="edge-predicate">is a</span>
             <strong>phage defense system</strong>
+            <code>traitmech:000209</code>
             <code>rdfs:subClassOf</code>
             <p>BREX possession is a methylation-based phage-defense system.</p>
             <ul>
@@ -306,11 +329,75 @@
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
 
-      <p class="no-match">No kg-microbe node embedding matched this record
-        in the 2026-04-25 deepwalk.</p>
+      <p class="match-method">Matched <strong>1</strong>
+        kg-microbe node
+        via <em>parent_proxy</em>.</p>
+      <ul class="kgm-nodes">
+
+        <li><code>METPO:1000188</code> <span class="dim-preview">[-0.956, -1.962, -3.148, +1.274, …]</span></li>
+
+      </ul>
+      <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
 
     </div>
 
+
+    <div class="card">
+      <h2>Nearest neighbors in embedding space</h2>
+      <p class="meta">Top-8 cosine-similar METPO traits
+        from the 2026-04-25 deepwalk (512-D).</p>
+      <ul class="nn-list">
+
+        <li>
+          <span class="nn-cat">upper</span>
+          <a href="../../traits/upper/quality.html">quality</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/jukab_system.html">JukAB system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/integrative_conjugative_element.html">integrative conjugative element</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/ig_like_schlafen_system.html">Ig-like Schlafen system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hypnos_system.html">Hypnos system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hna_system.html">Hna system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hma_system.html">Hma system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hesat_system.html">Hesat system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+      </ul>
+    </div>
 
 
 
@@ -436,6 +523,11 @@
     </dl>
   </div>
 
+
+  <div class="card rail-kgm">
+    <h2>kg-microbe</h2>
+    <p class="meta">1 matching node (parent_proxy)</p>
+  </div>
 
 </aside>
 </div>
@@ -769,7 +861,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking a BREX locus to host-DNA methylation, self/non-self discrimination, and blocked phage-DNA replication.", "edges": [{"description": "Type I BREX loci encode PglX adenine methyltransferases.", "evidence": [{"notes": "The complete L. casei Zhang type I BREX cassette contains the pglX locus encoding PglX.", "reference": "DOI:10.1128/AEM.01001-19", "snippet": "identified a complete cassette of a classic type I BREX system"}], "id": "edge-1", "is_orphan": false, "predicate": "encodes", "predicate_id": null, "source": "brex_locus", "target": "pglx_methyltransferase"}, {"description": "PglX methyltransferase activity methylates BREX recognition motifs in host DNA.", "evidence": [{"notes": "Hui et al. showed that pglX disruption removed m6A methylation at the recognition motif in L. casei Zhang.", "reference": "DOI:10.1128/AEM.01001-19", "snippet": "this work confirmed that the L. casei Zhang pglX gene product is a functional adenine MTase"}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "pglx_methyltransferase", "target": "host_dna_methylation"}, {"description": "Host DNA methylation guides BREX self/non-self discrimination.", "evidence": [{"notes": "Goldfarb et al. established methylation as the self/non-self mark for the characterized BREX system.", "reference": "DOI:10.15252/embj.201489455", "snippet": "methylation on non-palindromic TAGGAG motifs in the bacterial genome guides self/non-self discrimination"}], "id": "edge-3", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "host_dna_methylation", "target": "self_nonself_discrimination"}, {"description": "Methylation-guided self/non-self discrimination realizes the BREX defense trait.", "evidence": [{"notes": "Goldfarb et al. established methylation-based self/non-self discrimination as essential to BREX defense.", "reference": "DOI:10.15252/embj.201489455", "snippet": "is essential for the defensive function of the BREX system"}], "id": "edge-4", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "self_nonself_discrimination", "target": "brex_system_trait"}, {"description": "BREX methylation-guided discrimination blocks replication of unmethylated phage DNA.", "evidence": [{"notes": "The edge records the observed post-adsorption replication block; the exact biochemical coupling remains a molecular knowledge gap.", "reference": "DOI:10.15252/embj.201489455", "snippet": "allows phage adsorption but blocks phage DNA replication"}], "id": "edge-5", "is_orphan": false, "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "self_nonself_discrimination", "target": "phage_dna_replication"}, {"description": "BREX possession is a methylation-based phage-defense system.", "evidence": [{"notes": "Goldfarb et al. place BREX in the phage defense system family.", "reference": "DOI:10.15252/embj.201489455", "snippet": "We denote this novel defense system BREX (Bacteriophage Exclusion)"}], "id": "edge-6", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "brex_system_trait", "target": "phage_defense_system"}], "evidence_rows": [{"description": "Type I BREX loci encode PglX adenine methyltransferases.", "edge_id": "edge-1", "evidence": [{"notes": "The complete L. casei Zhang type I BREX cassette contains the pglX locus encoding PglX.", "reference": "DOI:10.1128/AEM.01001-19", "snippet": "identified a complete cassette of a classic type I BREX system"}], "predicate": "encodes", "predicate_id": null, "source": "BREX locus", "target": "PglX adenine methyltransferase"}, {"description": "PglX methyltransferase activity methylates BREX recognition motifs in host DNA.", "edge_id": "edge-2", "evidence": [{"notes": "Hui et al. showed that pglX disruption removed m6A methylation at the recognition motif in L. casei Zhang.", "reference": "DOI:10.1128/AEM.01001-19", "snippet": "this work confirmed that the L. casei Zhang pglX gene product is a functional adenine MTase"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "PglX adenine methyltransferase", "target": "BREX host DNA methylation"}, {"description": "Host DNA methylation guides BREX self/non-self discrimination.", "edge_id": "edge-3", "evidence": [{"notes": "Goldfarb et al. established methylation as the self/non-self mark for the characterized BREX system.", "reference": "DOI:10.15252/embj.201489455", "snippet": "methylation on non-palindromic TAGGAG motifs in the bacterial genome guides self/non-self discrimination"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "BREX host DNA methylation", "target": "BREX self/non-self discrimination"}, {"description": "Methylation-guided self/non-self discrimination realizes the BREX defense trait.", "edge_id": "edge-4", "evidence": [{"notes": "Goldfarb et al. established methylation-based self/non-self discrimination as essential to BREX defense.", "reference": "DOI:10.15252/embj.201489455", "snippet": "is essential for the defensive function of the BREX system"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "BREX self/non-self discrimination", "target": "BREX system"}, {"description": "BREX methylation-guided discrimination blocks replication of unmethylated phage DNA.", "edge_id": "edge-5", "evidence": [{"notes": "The edge records the observed post-adsorption replication block; the exact biochemical coupling remains a molecular knowledge gap.", "reference": "DOI:10.15252/embj.201489455", "snippet": "allows phage adsorption but blocks phage DNA replication"}], "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "BREX self/non-self discrimination", "target": "phage DNA replication"}, {"description": "BREX possession is a methylation-based phage-defense system.", "edge_id": "edge-6", "evidence": [{"notes": "Goldfarb et al. place BREX in the phage defense system family.", "reference": "DOI:10.15252/embj.201489455", "snippet": "We denote this novel defense system BREX (Bacteriophage Exclusion)"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "BREX system", "target": "phage defense system"}], "graph_id": "brex_methylation_antiphage_defense", "issues": [], "nodes": [{"color": "#f3f4f6", "description": "Multi-gene bacteriophage-exclusion cassette encoding the BREX defense system.", "grounding": null, "id": "brex_locus", "is_orphan": false, "label": "BREX locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded bacteriophage exclusion defense system.", "grounding": "traitmech:000210", "id": "brex_system_trait", "is_orphan": false, "label": "BREX system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Methylation of host DNA at BREX recognition motifs.", "grounding": null, "id": "host_dna_methylation", "is_orphan": false, "label": "BREX host DNA methylation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Adenine-specific DNA methyltransferase component of type I BREX systems.", "grounding": "InterPro:IPR047939", "id": "pglx_methyltransferase", "is_orphan": false, "label": "PglX adenine methyltransferase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 19, "evidence": [{"notes": "Hui et al. experimentally disrupted L. casei Zhang pglX; UniProt verifies the reviewed PglX accession.", "reference": "DOI:10.1128/AEM.01001-19", "snippet": "this work confirmed that the L. casei Zhang pglX gene product is a functional adenine MTase that is an essential component of a type I BREX system"}], "gene_symbol": "pglX", "protein_label": "Adenine-specific methyltransferase PglX", "retrieved_on": "2026-09-15", "role": "L. casei Zhang PglX methylates BREX recognition motifs as the type I BREX adenine methyltransferase.", "sequence_version": 1, "taxon_id": "NCBITaxon:498216", "taxon_label": "Lacticaseibacillus casei str. Zhang", "uniprot_id": "UniProtKB:P0DQP1"}], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of one or more genome-encoded immune systems that inhibit bacteriophage infection.", "grounding": "traitmech:000209", "id": "phage_defense_system", "is_orphan": false, "label": "phage defense system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Replication of invading bacteriophage DNA after host cell entry.", "grounding": null, "id": "phage_dna_replication", "is_orphan": false, "label": "phage DNA replication", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Methylation-guided discrimination of host DNA from unmodified invading phage DNA.", "grounding": null, "id": "self_nonself_discrimination", "is_orphan": false, "label": "BREX self/non-self discrimination", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 19, "evidence": [{"notes": "Hui et al. experimentally disrupted L. casei Zhang pglX; UniProt verifies the reviewed PglX accession.", "reference": "DOI:10.1128/AEM.01001-19", "snippet": "this work confirmed that the L. casei Zhang pglX gene product is a functional adenine MTase that is an essential component of a type I BREX system"}], "gene_symbol": "pglX", "node_id": "pglx_methyltransferase", "node_label": "PglX adenine methyltransferase", "protein_label": "Adenine-specific methyltransferase PglX", "retrieved_on": "2026-09-15", "role": "L. casei Zhang PglX methylates BREX recognition motifs as the type I BREX adenine methyltransferase.", "sequence_version": 1, "taxon_id": "NCBITaxon:498216", "taxon_label": "Lacticaseibacillus casei str. Zhang", "uniprot_id": "UniProtKB:P0DQP1"}], "scope_notes": "The graph captures Goldfarb et al.\u0027s experimentally supported host-methylation and post-adsorption phage-replication block without asserting that the molecular coupling between marked host DNA and blocked phage DNA is fully resolved.", "scope_status": "MECHANISTIC", "title": "BREX methylation guides antiphage discrimination"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking a BREX locus to host-DNA methylation, self/non-self discrimination, and blocked phage-DNA replication.", "edges": [{"description": "Type I BREX loci encode PglX adenine methyltransferases.", "evidence": [{"notes": "The complete L. casei Zhang type I BREX cassette contains the pglX locus encoding PglX.", "reference": "DOI:10.1128/AEM.01001-19", "snippet": "identified a complete cassette of a classic type I BREX system"}], "id": "edge-1", "is_orphan": false, "predicate": "encodes", "predicate_id": null, "source": "brex_locus", "target": "pglx_methyltransferase"}, {"description": "PglX methyltransferase activity methylates BREX recognition motifs in host DNA.", "evidence": [{"notes": "Hui et al. showed that pglX disruption removed m6A methylation at the recognition motif in L. casei Zhang.", "reference": "DOI:10.1128/AEM.01001-19", "snippet": "this work confirmed that the L. casei Zhang pglX gene product is a functional adenine MTase"}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "pglx_methyltransferase", "target": "host_dna_methylation"}, {"description": "Host DNA methylation guides BREX self/non-self discrimination.", "evidence": [{"notes": "Goldfarb et al. established methylation as the self/non-self mark for the characterized BREX system.", "reference": "DOI:10.15252/embj.201489455", "snippet": "methylation on non-palindromic TAGGAG motifs in the bacterial genome guides self/non-self discrimination"}], "id": "edge-3", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "host_dna_methylation", "target": "self_nonself_discrimination"}, {"description": "Methylation-guided self/non-self discrimination realizes the BREX defense trait.", "evidence": [{"notes": "Goldfarb et al. established methylation-based self/non-self discrimination as essential to BREX defense.", "reference": "DOI:10.15252/embj.201489455", "snippet": "is essential for the defensive function of the BREX system"}], "id": "edge-4", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "self_nonself_discrimination", "target": "brex_system_trait"}, {"description": "BREX methylation-guided discrimination blocks replication of unmethylated phage DNA.", "evidence": [{"notes": "The edge records the observed post-adsorption replication block; the exact biochemical coupling remains a molecular knowledge gap.", "reference": "DOI:10.15252/embj.201489455", "snippet": "allows phage adsorption but blocks phage DNA replication"}], "id": "edge-5", "is_orphan": false, "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "self_nonself_discrimination", "target": "phage_dna_replication"}, {"description": "BREX possession is a methylation-based phage-defense system.", "evidence": [{"notes": "Goldfarb et al. place BREX in the phage defense system family.", "reference": "DOI:10.15252/embj.201489455", "snippet": "We denote this novel defense system BREX (Bacteriophage Exclusion)"}], "id": "edge-6", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "brex_system_trait", "target": "phage_defense_system"}], "evidence_rows": [{"description": "Type I BREX loci encode PglX adenine methyltransferases.", "edge_id": "edge-1", "evidence": [{"notes": "The complete L. casei Zhang type I BREX cassette contains the pglX locus encoding PglX.", "reference": "DOI:10.1128/AEM.01001-19", "snippet": "identified a complete cassette of a classic type I BREX system"}], "predicate": "encodes", "predicate_id": null, "source": "BREX locus", "source_grounding": null, "target": "PglX adenine methyltransferase", "target_grounding": "InterPro:IPR047939"}, {"description": "PglX methyltransferase activity methylates BREX recognition motifs in host DNA.", "edge_id": "edge-2", "evidence": [{"notes": "Hui et al. showed that pglX disruption removed m6A methylation at the recognition motif in L. casei Zhang.", "reference": "DOI:10.1128/AEM.01001-19", "snippet": "this work confirmed that the L. casei Zhang pglX gene product is a functional adenine MTase"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "PglX adenine methyltransferase", "source_grounding": "InterPro:IPR047939", "target": "BREX host DNA methylation", "target_grounding": null}, {"description": "Host DNA methylation guides BREX self/non-self discrimination.", "edge_id": "edge-3", "evidence": [{"notes": "Goldfarb et al. established methylation as the self/non-self mark for the characterized BREX system.", "reference": "DOI:10.15252/embj.201489455", "snippet": "methylation on non-palindromic TAGGAG motifs in the bacterial genome guides self/non-self discrimination"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "BREX host DNA methylation", "source_grounding": null, "target": "BREX self/non-self discrimination", "target_grounding": null}, {"description": "Methylation-guided self/non-self discrimination realizes the BREX defense trait.", "edge_id": "edge-4", "evidence": [{"notes": "Goldfarb et al. established methylation-based self/non-self discrimination as essential to BREX defense.", "reference": "DOI:10.15252/embj.201489455", "snippet": "is essential for the defensive function of the BREX system"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "BREX self/non-self discrimination", "source_grounding": null, "target": "BREX system", "target_grounding": "traitmech:000210"}, {"description": "BREX methylation-guided discrimination blocks replication of unmethylated phage DNA.", "edge_id": "edge-5", "evidence": [{"notes": "The edge records the observed post-adsorption replication block; the exact biochemical coupling remains a molecular knowledge gap.", "reference": "DOI:10.15252/embj.201489455", "snippet": "allows phage adsorption but blocks phage DNA replication"}], "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "BREX self/non-self discrimination", "source_grounding": null, "target": "phage DNA replication", "target_grounding": null}, {"description": "BREX possession is a methylation-based phage-defense system.", "edge_id": "edge-6", "evidence": [{"notes": "Goldfarb et al. place BREX in the phage defense system family.", "reference": "DOI:10.15252/embj.201489455", "snippet": "We denote this novel defense system BREX (Bacteriophage Exclusion)"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "BREX system", "source_grounding": "traitmech:000210", "target": "phage defense system", "target_grounding": "traitmech:000209"}], "graph_id": "brex_methylation_antiphage_defense", "issues": [], "nodes": [{"color": "#f3f4f6", "description": "Multi-gene bacteriophage-exclusion cassette encoding the BREX defense system.", "grounding": null, "id": "brex_locus", "is_orphan": false, "label": "BREX locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded bacteriophage exclusion defense system.", "grounding": "traitmech:000210", "id": "brex_system_trait", "is_orphan": false, "label": "BREX system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Methylation of host DNA at BREX recognition motifs.", "grounding": null, "id": "host_dna_methylation", "is_orphan": false, "label": "BREX host DNA methylation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Adenine-specific DNA methyltransferase component of type I BREX systems.", "grounding": "InterPro:IPR047939", "id": "pglx_methyltransferase", "is_orphan": false, "label": "PglX adenine methyltransferase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 19, "evidence": [{"notes": "Hui et al. experimentally disrupted L. casei Zhang pglX; UniProt verifies the reviewed PglX accession.", "reference": "DOI:10.1128/AEM.01001-19", "snippet": "this work confirmed that the L. casei Zhang pglX gene product is a functional adenine MTase that is an essential component of a type I BREX system"}], "gene_symbol": "pglX", "protein_label": "Adenine-specific methyltransferase PglX", "retrieved_on": "2026-09-15", "role": "L. casei Zhang PglX methylates BREX recognition motifs as the type I BREX adenine methyltransferase.", "sequence_version": 1, "taxon_id": "NCBITaxon:498216", "taxon_label": "Lacticaseibacillus casei str. Zhang", "uniprot_id": "UniProtKB:P0DQP1"}], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of one or more genome-encoded immune systems that inhibit bacteriophage infection.", "grounding": "traitmech:000209", "id": "phage_defense_system", "is_orphan": false, "label": "phage defense system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Replication of invading bacteriophage DNA after host cell entry.", "grounding": null, "id": "phage_dna_replication", "is_orphan": false, "label": "phage DNA replication", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Methylation-guided discrimination of host DNA from unmodified invading phage DNA.", "grounding": null, "id": "self_nonself_discrimination", "is_orphan": false, "label": "BREX self/non-self discrimination", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 19, "evidence": [{"notes": "Hui et al. experimentally disrupted L. casei Zhang pglX; UniProt verifies the reviewed PglX accession.", "reference": "DOI:10.1128/AEM.01001-19", "snippet": "this work confirmed that the L. casei Zhang pglX gene product is a functional adenine MTase that is an essential component of a type I BREX system"}], "gene_symbol": "pglX", "node_id": "pglx_methyltransferase", "node_label": "PglX adenine methyltransferase", "protein_label": "Adenine-specific methyltransferase PglX", "retrieved_on": "2026-09-15", "role": "L. casei Zhang PglX methylates BREX recognition motifs as the type I BREX adenine methyltransferase.", "sequence_version": 1, "taxon_id": "NCBITaxon:498216", "taxon_label": "Lacticaseibacillus casei str. Zhang", "uniprot_id": "UniProtKB:P0DQP1"}], "scope_notes": "The graph captures Goldfarb et al.\u0027s experimentally supported host-methylation and post-adsorption phage-replication block without asserting that the molecular coupling between marked host DNA and blocked phage DNA is fully resolved.", "scope_status": "MECHANISTIC", "title": "BREX methylation guides antiphage discrimination"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -789,13 +881,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-09-15 08:46 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

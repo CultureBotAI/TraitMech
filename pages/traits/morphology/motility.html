@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/morphology.html">MORPHOLOGY</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/morphology.html">MORPHOLOGY</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>motility</h1>
     <p class="curie"><code>METPO:1000701</code> · CLASS · REVIEWED</p>
 
@@ -79,9 +90,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>flagellar motor</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>motility</strong>
-            <code>METPO:2007700</code>
+            <a href="https://w3id.org/metpo/1000701" rel="nofollow noreferrer"><code>METPO:1000701</code></a>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>Rotary flagellar motors enable bacterial swimming and related motility modes.</p>
             <ul>
 
@@ -96,9 +109,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>type IV pilus</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0044096" rel="nofollow noreferrer"><code>GO:0044096</code></a>
             <span class="edge-predicate">confers</span>
             <strong>motility</strong>
-            <code>METPO:2007700</code>
+            <a href="https://w3id.org/metpo/1000701" rel="nofollow noreferrer"><code>METPO:1000701</code></a>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>Type IV pili enable twitching motility through extension, adhesion, and retraction.</p>
             <ul>
 
@@ -113,9 +128,11 @@
 
           <li id="pathograph-1-edge-3">
             <strong>gliding motility machinery</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>motility</strong>
-            <code>METPO:2007700</code>
+            <a href="https://w3id.org/metpo/1000701" rel="nofollow noreferrer"><code>METPO:1000701</code></a>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>Gliding machinery allows surface movement without external flagella.</p>
             <ul>
 
@@ -130,9 +147,11 @@
 
           <li id="pathograph-1-edge-4">
             <strong>ion motive force</strong>
+
             <span class="edge-predicate">powers</span>
             <strong>flagellar motor</strong>
-            <code>METPO:2007900</code>
+
+            <a href="https://w3id.org/metpo/2007900" rel="nofollow noreferrer"><code>METPO:2007900</code></a>
             <p>Ion motive force powers rotation of many bacterial flagellar motors.</p>
             <ul>
 
@@ -147,9 +166,11 @@
 
           <li id="pathograph-1-edge-5">
             <strong>chemotaxis signaling</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0006935" rel="nofollow noreferrer"><code>GO:0006935</code></a>
             <span class="edge-predicate">regulates</span>
             <strong>motility</strong>
-            <code>RO:0002211</code>
+            <a href="https://w3id.org/metpo/1000701" rel="nofollow noreferrer"><code>METPO:1000701</code></a>
+            <a href="http://purl.obolibrary.org/obo/RO_0002211" rel="nofollow noreferrer"><code>RO:0002211</code></a>
             <p>Chemotaxis signaling regulates the direction and pattern of bacterial movement.</p>
             <ul>
 
@@ -164,8 +185,10 @@
 
           <li id="pathograph-1-edge-6">
             <strong>type IV pilus</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0044096" rel="nofollow noreferrer"><code>GO:0044096</code></a>
             <span class="edge-predicate">drives</span>
             <strong>twitching motility</strong>
+
 
             <p>Type IV pili power twitching, a form of bacterial surface translocation.</p>
             <ul>
@@ -181,8 +204,10 @@
 
           <li id="pathograph-1-edge-7">
             <strong>PilB extension ATPase</strong>
+
             <span class="edge-predicate">drives extension of</span>
             <strong>type IV pilus</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0044096" rel="nofollow noreferrer"><code>GO:0044096</code></a>
 
             <p>PilB ATPase drives extension of the type IV pilus.</p>
             <ul>
@@ -198,8 +223,10 @@
 
           <li id="pathograph-1-edge-8">
             <strong>PilT retraction ATPase</strong>
+
             <span class="edge-predicate">drives retraction of</span>
             <strong>type IV pilus</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0044096" rel="nofollow noreferrer"><code>GO:0044096</code></a>
 
             <p>PilT ATPase drives retraction of the type IV pilus.</p>
             <ul>
@@ -215,9 +242,11 @@
 
           <li id="pathograph-1-edge-9">
             <strong>type IV pilus retraction</strong>
+
             <span class="edge-predicate">generates</span>
             <strong>twitching motility</strong>
-            <code>biolink:produces</code>
+
+            <a href="https://w3id.org/biolink/vocab/produces" rel="nofollow noreferrer"><code>biolink:produces</code></a>
             <p>Type IV pilus retraction generates the pulling forces underlying twitching motility.</p>
             <ul>
 
@@ -232,9 +261,11 @@
 
           <li id="pathograph-1-edge-10">
             <strong>cyclic di-GMP</strong>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:49537" rel="nofollow noreferrer"><code>CHEBI:49537</code></a>
             <span class="edge-predicate">inhibits</span>
             <strong>motility</strong>
-            <code>RO:0002212</code>
+            <a href="https://w3id.org/metpo/1000701" rel="nofollow noreferrer"><code>METPO:1000701</code></a>
+            <a href="http://purl.obolibrary.org/obo/RO_0002212" rel="nofollow noreferrer"><code>RO:0002212</code></a>
             <p>Cyclic di-GMP inhibits motility; lowering c-di-GMP relieves this inhibition.</p>
             <ul>
 
@@ -249,9 +280,11 @@
 
           <li id="pathograph-1-edge-11">
             <strong>archaellum</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>motility</strong>
-            <code>METPO:2007700</code>
+            <a href="https://w3id.org/metpo/1000701" rel="nofollow noreferrer"><code>METPO:1000701</code></a>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>The archaellum enables swimming motility in archaea, analogous to the bacterial flagellum.</p>
             <ul>
 
@@ -546,50 +579,50 @@
       <ul class="nn-list">
 
         <li>
+          <span class="nn-cat">other</span>
+          <a href="../../traits/other/generalist.html">generalist</a>
+          <span class="sim">0.856</span>
+        </li>
+
+        <li>
           <span class="nn-cat">morphology</span>
           <a href="../../traits/morphology/sporulation.html">sporulation</a>
           <span class="sim">0.840</span>
         </li>
 
         <li>
-          <span class="nn-cat">upper</span>
-          <a href="../../traits/upper/phenotype.html">phenotype</a>
-          <span class="sim">0.839</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/copper_tolerant.html">copper tolerant</a>
-          <span class="sim">0.839</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/desiccation_tolerant.html">desiccation tolerant</a>
-          <span class="sim">0.839</span>
-        </li>
-
-        <li>
           <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/mycelial_growth.html">mycelial growth</a>
+          <a href="../../traits/morphology/magnetosome.html">magnetosome</a>
           <span class="sim">0.839</span>
         </li>
 
         <li>
           <span class="nn-cat">physiology</span>
-          <a href="../../traits/physiology/persister_cell_formation.html">persister cell formation</a>
+          <a href="../../traits/physiology/autophagy.html">autophagy</a>
           <span class="sim">0.839</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/ionizing_radiation_tolerant.html">ionizing radiation tolerant</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/autophagic_glycogen_degradation.html">autophagic glycogen degradation</a>
           <span class="sim">0.839</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/mercury_tolerant.html">mercury tolerant</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/automixis.html">automixis</a>
+          <span class="sim">0.839</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/autogamy.html">autogamy</a>
+          <span class="sim">0.839</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/arginine_dihydrolase_activity.html">arginine dihydrolase activity</a>
           <span class="sim">0.839</span>
         </li>
 
@@ -1218,7 +1251,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking motility to flagella, type IV pili, gliding systems, chemotaxis, and energy transduction.", "edges": [{"description": "Rotary flagellar motors enable bacterial swimming and related motility modes.", "evidence": [{"notes": "Review summarizes flagellar machinery as a major bacterial motility mechanism.", "reference": "DOI:10.1038/s41579-021-00626-4", "snippet": "allow bacteria to move around"}], "id": "edge-1", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "flagellar_motor", "target": "motility_trait"}, {"description": "Type IV pili enable twitching motility through extension, adhesion, and retraction.", "evidence": [{"notes": "Supports type IV pili as motility appendages.", "reference": "DOI:10.1038/s41579-019-0195-4", "snippet": "Cycles of pilus extension, binding and retraction"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "type_iv_pilus", "target": "motility_trait"}, {"description": "Gliding machinery allows surface movement without external flagella.", "evidence": [{"notes": "Supports gliding as an active bacterial movement mechanism.", "reference": "DOI:10.1146/annurev.micro.55.1.49", "snippet": "move actively over surfaces"}], "id": "edge-3", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "gliding_motility_machinery", "target": "motility_trait"}, {"description": "Ion motive force powers rotation of many bacterial flagellar motors.", "evidence": [{"notes": "Supports ion motive force powering the bacterial flagellar motor.", "reference": "DOI:10.3389/fmicb.2021.659464", "snippet": "relationship between the IMF and the functioning"}], "id": "edge-4", "is_orphan": false, "predicate": "powers", "predicate_id": "METPO:2007900", "source": "ion_motive_force", "target": "flagellar_motor"}, {"description": "Chemotaxis signaling regulates the direction and pattern of bacterial movement.", "evidence": [{"notes": "Supports chemotaxis control of flagella-driven motility.", "reference": "DOI:10.3390/biom9070279", "snippet": "chemotactic signaling pathways regulate the direction"}], "id": "edge-5", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "chemotaxis_signaling", "target": "motility_trait"}, {"description": "Type IV pili power twitching, a form of bacterial surface translocation.", "evidence": [{"notes": "Twitching motility is a form of bacterial surface translocation powered by the type IV pilus (T4P).", "reference": "DOI:10.1128/msphere.00390-24"}], "id": "edge-6", "is_orphan": false, "predicate": "drives", "predicate_id": null, "source": "type_iv_pilus", "target": "twitching_motility"}, {"description": "PilB ATPase drives extension of the type IV pilus.", "evidence": [{"notes": "PilB is the homohexameric extension ATPase of the type IV pilus.", "reference": "DOI:10.1128/jb.00359-24"}], "id": "edge-7", "is_orphan": false, "predicate": "drives extension of", "predicate_id": null, "source": "pilb_extension_atpase", "target": "type_iv_pilus"}, {"description": "PilT ATPase drives retraction of the type IV pilus.", "evidence": [{"notes": "Retraction is carried out by the antagonistic ATPase PilT.", "reference": "DOI:10.1128/jb.00359-24"}], "id": "edge-8", "is_orphan": false, "predicate": "drives retraction of", "predicate_id": null, "source": "pilt_retraction_atpase", "target": "type_iv_pilus"}, {"description": "Type IV pilus retraction generates the pulling forces underlying twitching motility.", "evidence": [{"notes": "T4P retraction generates the pulling forces underlying twitching motility.", "reference": "DOI:10.1128/jb.00442-23"}], "id": "edge-9", "is_orphan": false, "predicate": "generates", "predicate_id": "biolink:produces", "source": "t4p_retraction", "target": "twitching_motility"}, {"description": "Cyclic di-GMP inhibits motility; lowering c-di-GMP relieves this inhibition.", "evidence": [{"notes": "Lower c-di-GMP relieves its inhibition on motility (generic c-di-GMP -\u003e motility edge).", "reference": "DOI:10.1038/s42003-024-07392-y"}], "id": "edge-10", "is_orphan": false, "predicate": "inhibits", "predicate_id": "RO:0002212", "source": "c_di_gmp", "target": "motility_trait"}, {"description": "The archaellum enables swimming motility in archaea, analogous to the bacterial flagellum.", "evidence": [{"notes": "The archaellum enables cell motility in archaea.", "reference": "DOI:10.1038/s41467-024-50277-1"}], "id": "edge-11", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "archaellum", "target": "motility_trait"}], "evidence_rows": [{"description": "Rotary flagellar motors enable bacterial swimming and related motility modes.", "edge_id": "edge-1", "evidence": [{"notes": "Review summarizes flagellar machinery as a major bacterial motility mechanism.", "reference": "DOI:10.1038/s41579-021-00626-4", "snippet": "allow bacteria to move around"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "flagellar motor", "target": "motility"}, {"description": "Type IV pili enable twitching motility through extension, adhesion, and retraction.", "edge_id": "edge-2", "evidence": [{"notes": "Supports type IV pili as motility appendages.", "reference": "DOI:10.1038/s41579-019-0195-4", "snippet": "Cycles of pilus extension, binding and retraction"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "type IV pilus", "target": "motility"}, {"description": "Gliding machinery allows surface movement without external flagella.", "edge_id": "edge-3", "evidence": [{"notes": "Supports gliding as an active bacterial movement mechanism.", "reference": "DOI:10.1146/annurev.micro.55.1.49", "snippet": "move actively over surfaces"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "gliding motility machinery", "target": "motility"}, {"description": "Ion motive force powers rotation of many bacterial flagellar motors.", "edge_id": "edge-4", "evidence": [{"notes": "Supports ion motive force powering the bacterial flagellar motor.", "reference": "DOI:10.3389/fmicb.2021.659464", "snippet": "relationship between the IMF and the functioning"}], "predicate": "powers", "predicate_id": "METPO:2007900", "source": "ion motive force", "target": "flagellar motor"}, {"description": "Chemotaxis signaling regulates the direction and pattern of bacterial movement.", "edge_id": "edge-5", "evidence": [{"notes": "Supports chemotaxis control of flagella-driven motility.", "reference": "DOI:10.3390/biom9070279", "snippet": "chemotactic signaling pathways regulate the direction"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "chemotaxis signaling", "target": "motility"}, {"description": "Type IV pili power twitching, a form of bacterial surface translocation.", "edge_id": "edge-6", "evidence": [{"notes": "Twitching motility is a form of bacterial surface translocation powered by the type IV pilus (T4P).", "reference": "DOI:10.1128/msphere.00390-24"}], "predicate": "drives", "predicate_id": null, "source": "type IV pilus", "target": "twitching motility"}, {"description": "PilB ATPase drives extension of the type IV pilus.", "edge_id": "edge-7", "evidence": [{"notes": "PilB is the homohexameric extension ATPase of the type IV pilus.", "reference": "DOI:10.1128/jb.00359-24"}], "predicate": "drives extension of", "predicate_id": null, "source": "PilB extension ATPase", "target": "type IV pilus"}, {"description": "PilT ATPase drives retraction of the type IV pilus.", "edge_id": "edge-8", "evidence": [{"notes": "Retraction is carried out by the antagonistic ATPase PilT.", "reference": "DOI:10.1128/jb.00359-24"}], "predicate": "drives retraction of", "predicate_id": null, "source": "PilT retraction ATPase", "target": "type IV pilus"}, {"description": "Type IV pilus retraction generates the pulling forces underlying twitching motility.", "edge_id": "edge-9", "evidence": [{"notes": "T4P retraction generates the pulling forces underlying twitching motility.", "reference": "DOI:10.1128/jb.00442-23"}], "predicate": "generates", "predicate_id": "biolink:produces", "source": "type IV pilus retraction", "target": "twitching motility"}, {"description": "Cyclic di-GMP inhibits motility; lowering c-di-GMP relieves this inhibition.", "edge_id": "edge-10", "evidence": [{"notes": "Lower c-di-GMP relieves its inhibition on motility (generic c-di-GMP -\u003e motility edge).", "reference": "DOI:10.1038/s42003-024-07392-y"}], "predicate": "inhibits", "predicate_id": "RO:0002212", "source": "cyclic di-GMP", "target": "motility"}, {"description": "The archaellum enables swimming motility in archaea, analogous to the bacterial flagellum.", "edge_id": "edge-11", "evidence": [{"notes": "The archaellum enables cell motility in archaea.", "reference": "DOI:10.1038/s41467-024-50277-1"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "archaellum", "target": "motility"}], "graph_id": "motility_locomotion_machinery", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Archaeal rotary propulsion filament, the analogue of the bacterial flagellum.", "grounding": null, "id": "archaellum", "is_orphan": false, "label": "archaellum", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 126, "evidence": [{"notes": "Supports archaellum in motility; UniProtKB:Q9V0H5 (cetZ, Tubulin-like protein CetZ) in Pyrococcus abyssi (strain GE5 / Orsay) provides a verified protein exemplar.", "reference": "DOI:10.3390/biom9070279", "snippet": "bacterial flagellum is a helical filamentous organelle responsible for motility"}], "gene_symbol": "cetZ", "protein_label": "Tubulin-like protein CetZ", "proteome_id": "UP000000810", "retrieved_on": "2026-10-17", "role": "Exemplar protein (cetZ, Tubulin-like protein CetZ) representing archaellum in Pyrococcus abyssi (strain GE5 / Orsay) for motility.", "sequence_version": 1, "taxon_id": "NCBITaxon:272844", "taxon_label": "Pyrococcus abyssi (strain GE5 / Orsay)", "uniprot_id": "UniProtKB:Q9V0H5"}], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Second messenger that inversely regulates motility and biofilm formation.", "grounding": "CHEBI:49537", "id": "c_di_gmp", "is_orphan": false, "label": "cyclic di-GMP", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Signal transduction that changes motility direction in response to environmental cues.", "grounding": "GO:0006935", "id": "chemotaxis_signaling", "is_orphan": false, "label": "chemotaxis signaling", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Rotary motor that powers flagellar swimming or swarming.", "grounding": null, "id": "flagellar_motor", "is_orphan": false, "label": "flagellar motor", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 140, "evidence": [{"notes": "Supports flagellar motor in motility; UniProtKB:Q9WZE6 (fliM, Flagellar motor switch protein FliM) in Thermotoga maritima (strain ATCC 43589 / DSM 3109 / JCM 10099 / NBRC 100826 / MSB8) provides a verified protein exemplar.", "reference": "DOI:10.1038/s41579-021-00626-4", "snippet": "proton-driven motor that powers type 9 secretion and gliding motility"}], "gene_symbol": "fliM", "protein_label": "Flagellar motor switch protein FliM", "proteome_id": "UP000008183", "retrieved_on": "2026-10-17", "role": "Exemplar protein (fliM, Flagellar motor switch protein FliM) representing flagellar motor in Thermotoga maritima (strain ATCC 43589 / DSM 3109 / JCM 10099 / NBRC 100826 / MSB8) for motility.", "sequence_version": 1, "taxon_id": "NCBITaxon:243274", "taxon_label": "Thermotoga maritima (strain ATCC 43589 / DSM 3109 / JCM 10099 / NBRC 100826 / MSB8)", "uniprot_id": "UniProtKB:Q9WZE6"}], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Cell-envelope motors and adhesins that move bacteria over surfaces without flagella.", "grounding": null, "id": "gliding_motility_machinery", "is_orphan": false, "label": "gliding motility machinery", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 123, "evidence": [{"notes": "Supports gliding motility machinery in motility; UniProtKB:Q1D823 (aglZ, Adventurous-gliding motility protein Z) in Myxococcus xanthus (strain DK1622) provides a verified protein exemplar.", "reference": "DOI:10.1038/s41579-021-00626-4", "snippet": "proton-driven motor that powers type 9 secretion and gliding motility"}], "gene_symbol": "aglZ", "protein_label": "Adventurous-gliding motility protein Z", "proteome_id": "UP000002402", "retrieved_on": "2026-10-17", "role": "Exemplar protein (aglZ, Adventurous-gliding motility protein Z) representing gliding motility machinery in Myxococcus xanthus (strain DK1622) for motility.", "sequence_version": 1, "taxon_id": "NCBITaxon:246197", "taxon_label": "Myxococcus xanthus (strain DK1622)", "uniprot_id": "UniProtKB:Q1D823"}], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Electrochemical ion gradient used to power motility motors.", "grounding": null, "id": "ion_motive_force", "is_orphan": false, "label": "ion motive force", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Independent movement through the environment.", "grounding": "METPO:1000701", "id": "motility_trait", "is_orphan": false, "label": "motility", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Homohexameric ATPase that drives type IV pilus extension.", "grounding": null, "id": "pilb_extension_atpase", "is_orphan": false, "label": "PilB extension ATPase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 113, "evidence": [{"notes": "Supports PilB extension ATPase in motility; UniProtKB:Q6FF45 (pilB, Type IV pilus assembly ATPase PilB) in Acinetobacter baylyi (strain ATCC 33305 / BD413 / ADP1) provides a verified protein exemplar.", "reference": "DOI:10.1038/s41579-019-0195-4", "snippet": "Cycles of pilus extension, binding and retraction"}], "gene_symbol": "pilB", "protein_label": "Type IV pilus assembly ATPase PilB", "proteome_id": "UP000000430", "retrieved_on": "2026-10-17", "role": "Exemplar protein (pilB, Type IV pilus assembly ATPase PilB) representing PilB extension ATPase in Acinetobacter baylyi (strain ATCC 33305 / BD413 / ADP1) for motility.", "sequence_version": 1, "taxon_id": "NCBITaxon:62977", "taxon_label": "Acinetobacter baylyi (strain ATCC 33305 / BD413 / ADP1)", "uniprot_id": "UniProtKB:Q6FF45"}], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Antagonistic ATPase that drives type IV pilus retraction.", "grounding": null, "id": "pilt_retraction_atpase", "is_orphan": false, "label": "PilT retraction ATPase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 148, "evidence": [{"notes": "Supports PilT retraction ATPase in motility; UniProtKB:P24559 (pilT, Type IV pilus retraction ATPase PilT) in Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1) provides a verified protein exemplar.", "reference": "DOI:10.1038/s41579-019-0195-4", "snippet": "Cycles of pilus extension, binding and retraction"}], "gene_symbol": "pilT", "protein_label": "Type IV pilus retraction ATPase PilT", "proteome_id": "UP000002438", "retrieved_on": "2026-10-17", "role": "Exemplar protein (pilT, Type IV pilus retraction ATPase PilT) representing PilT retraction ATPase in Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1) for motility.", "sequence_version": 1, "taxon_id": "NCBITaxon:208964", "taxon_label": "Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)", "uniprot_id": "UniProtKB:P24559"}], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Retraction of type IV pili that generates pulling forces.", "grounding": null, "id": "t4p_retraction", "is_orphan": false, "label": "type IV pilus retraction", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Form of bacterial surface translocation powered by type IV pili.", "grounding": null, "id": "twitching_motility", "is_orphan": false, "label": "twitching motility", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Dynamic pilus that powers twitching and related surface motility.", "grounding": "GO:0044096", "id": "type_iv_pilus", "is_orphan": false, "label": "type IV pilus", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 113, "evidence": [{"notes": "Supports type IV pilus in motility; UniProtKB:Q9JVW4 (pilQ, Type IV pilus biogenesis and competence protein PilQ) in Neisseria meningitidis serogroup A / serotype 4A (strain DSM 15465 / Z2491) provides a verified protein exemplar.", "reference": "DOI:10.1128/jb.00359-24", "snippet": "The pilus is extruded through the periplasm, guided by the cylindrical alignment subcomplex, and finally through a gated secretin pore in the outer membrane"}], "gene_symbol": "pilQ", "protein_label": "Type IV pilus biogenesis and competence protein PilQ", "retrieved_on": "2026-10-17", "role": "Exemplar protein (pilQ, Type IV pilus biogenesis and competence protein PilQ) representing type IV pilus in Neisseria meningitidis serogroup A / serotype 4A (strain DSM 15465 / Z2491) for motility.", "sequence_version": 1, "taxon_id": "NCBITaxon:122587", "taxon_label": "Neisseria meningitidis serogroup A / serotype 4A (strain DSM 15465 / Z2491)", "uniprot_id": "UniProtKB:Q9JVW4"}], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 140, "evidence": [{"notes": "Supports flagellar motor in motility; UniProtKB:Q9WZE6 (fliM, Flagellar motor switch protein FliM) in Thermotoga maritima (strain ATCC 43589 / DSM 3109 / JCM 10099 / NBRC 100826 / MSB8) provides a verified protein exemplar.", "reference": "DOI:10.1038/s41579-021-00626-4", "snippet": "proton-driven motor that powers type 9 secretion and gliding motility"}], "gene_symbol": "fliM", "node_id": "flagellar_motor", "node_label": "flagellar motor", "protein_label": "Flagellar motor switch protein FliM", "proteome_id": "UP000008183", "retrieved_on": "2026-10-17", "role": "Exemplar protein (fliM, Flagellar motor switch protein FliM) representing flagellar motor in Thermotoga maritima (strain ATCC 43589 / DSM 3109 / JCM 10099 / NBRC 100826 / MSB8) for motility.", "sequence_version": 1, "taxon_id": "NCBITaxon:243274", "taxon_label": "Thermotoga maritima (strain ATCC 43589 / DSM 3109 / JCM 10099 / NBRC 100826 / MSB8)", "uniprot_id": "UniProtKB:Q9WZE6"}, {"entry_status": "REVIEWED", "entry_version": 113, "evidence": [{"notes": "Supports type IV pilus in motility; UniProtKB:Q9JVW4 (pilQ, Type IV pilus biogenesis and competence protein PilQ) in Neisseria meningitidis serogroup A / serotype 4A (strain DSM 15465 / Z2491) provides a verified protein exemplar.", "reference": "DOI:10.1128/jb.00359-24", "snippet": "The pilus is extruded through the periplasm, guided by the cylindrical alignment subcomplex, and finally through a gated secretin pore in the outer membrane"}], "gene_symbol": "pilQ", "node_id": "type_iv_pilus", "node_label": "type IV pilus", "protein_label": "Type IV pilus biogenesis and competence protein PilQ", "retrieved_on": "2026-10-17", "role": "Exemplar protein (pilQ, Type IV pilus biogenesis and competence protein PilQ) representing type IV pilus in Neisseria meningitidis serogroup A / serotype 4A (strain DSM 15465 / Z2491) for motility.", "sequence_version": 1, "taxon_id": "NCBITaxon:122587", "taxon_label": "Neisseria meningitidis serogroup A / serotype 4A (strain DSM 15465 / Z2491)", "uniprot_id": "UniProtKB:Q9JVW4"}, {"entry_status": "REVIEWED", "entry_version": 123, "evidence": [{"notes": "Supports gliding motility machinery in motility; UniProtKB:Q1D823 (aglZ, Adventurous-gliding motility protein Z) in Myxococcus xanthus (strain DK1622) provides a verified protein exemplar.", "reference": "DOI:10.1038/s41579-021-00626-4", "snippet": "proton-driven motor that powers type 9 secretion and gliding motility"}], "gene_symbol": "aglZ", "node_id": "gliding_motility_machinery", "node_label": "gliding motility machinery", "protein_label": "Adventurous-gliding motility protein Z", "proteome_id": "UP000002402", "retrieved_on": "2026-10-17", "role": "Exemplar protein (aglZ, Adventurous-gliding motility protein Z) representing gliding motility machinery in Myxococcus xanthus (strain DK1622) for motility.", "sequence_version": 1, "taxon_id": "NCBITaxon:246197", "taxon_label": "Myxococcus xanthus (strain DK1622)", "uniprot_id": "UniProtKB:Q1D823"}, {"entry_status": "REVIEWED", "entry_version": 113, "evidence": [{"notes": "Supports PilB extension ATPase in motility; UniProtKB:Q6FF45 (pilB, Type IV pilus assembly ATPase PilB) in Acinetobacter baylyi (strain ATCC 33305 / BD413 / ADP1) provides a verified protein exemplar.", "reference": "DOI:10.1038/s41579-019-0195-4", "snippet": "Cycles of pilus extension, binding and retraction"}], "gene_symbol": "pilB", "node_id": "pilb_extension_atpase", "node_label": "PilB extension ATPase", "protein_label": "Type IV pilus assembly ATPase PilB", "proteome_id": "UP000000430", "retrieved_on": "2026-10-17", "role": "Exemplar protein (pilB, Type IV pilus assembly ATPase PilB) representing PilB extension ATPase in Acinetobacter baylyi (strain ATCC 33305 / BD413 / ADP1) for motility.", "sequence_version": 1, "taxon_id": "NCBITaxon:62977", "taxon_label": "Acinetobacter baylyi (strain ATCC 33305 / BD413 / ADP1)", "uniprot_id": "UniProtKB:Q6FF45"}, {"entry_status": "REVIEWED", "entry_version": 148, "evidence": [{"notes": "Supports PilT retraction ATPase in motility; UniProtKB:P24559 (pilT, Type IV pilus retraction ATPase PilT) in Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1) provides a verified protein exemplar.", "reference": "DOI:10.1038/s41579-019-0195-4", "snippet": "Cycles of pilus extension, binding and retraction"}], "gene_symbol": "pilT", "node_id": "pilt_retraction_atpase", "node_label": "PilT retraction ATPase", "protein_label": "Type IV pilus retraction ATPase PilT", "proteome_id": "UP000002438", "retrieved_on": "2026-10-17", "role": "Exemplar protein (pilT, Type IV pilus retraction ATPase PilT) representing PilT retraction ATPase in Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1) for motility.", "sequence_version": 1, "taxon_id": "NCBITaxon:208964", "taxon_label": "Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)", "uniprot_id": "UniProtKB:P24559"}, {"entry_status": "REVIEWED", "entry_version": 126, "evidence": [{"notes": "Supports archaellum in motility; UniProtKB:Q9V0H5 (cetZ, Tubulin-like protein CetZ) in Pyrococcus abyssi (strain GE5 / Orsay) provides a verified protein exemplar.", "reference": "DOI:10.3390/biom9070279", "snippet": "bacterial flagellum is a helical filamentous organelle responsible for motility"}], "gene_symbol": "cetZ", "node_id": "archaellum", "node_label": "archaellum", "protein_label": "Tubulin-like protein CetZ", "proteome_id": "UP000000810", "retrieved_on": "2026-10-17", "role": "Exemplar protein (cetZ, Tubulin-like protein CetZ) representing archaellum in Pyrococcus abyssi (strain GE5 / Orsay) for motility.", "sequence_version": 1, "taxon_id": "NCBITaxon:272844", "taxon_label": "Pyrococcus abyssi (strain GE5 / Orsay)", "uniprot_id": "UniProtKB:Q9V0H5"}], "scope_notes": "Motility is an upper phenotype class spanning flagellar, gliding, twitching, and archaellar mechanisms. The graph catalogs alternatives rather than asserting one mechanism shared by every motile organism.", "scope_status": "NONMECHANISTIC", "title": "Bacterial motility machinery"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking motility to flagella, type IV pili, gliding systems, chemotaxis, and energy transduction.", "edges": [{"description": "Rotary flagellar motors enable bacterial swimming and related motility modes.", "evidence": [{"notes": "Review summarizes flagellar machinery as a major bacterial motility mechanism.", "reference": "DOI:10.1038/s41579-021-00626-4", "snippet": "allow bacteria to move around"}], "id": "edge-1", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "flagellar_motor", "target": "motility_trait"}, {"description": "Type IV pili enable twitching motility through extension, adhesion, and retraction.", "evidence": [{"notes": "Supports type IV pili as motility appendages.", "reference": "DOI:10.1038/s41579-019-0195-4", "snippet": "Cycles of pilus extension, binding and retraction"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "type_iv_pilus", "target": "motility_trait"}, {"description": "Gliding machinery allows surface movement without external flagella.", "evidence": [{"notes": "Supports gliding as an active bacterial movement mechanism.", "reference": "DOI:10.1146/annurev.micro.55.1.49", "snippet": "move actively over surfaces"}], "id": "edge-3", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "gliding_motility_machinery", "target": "motility_trait"}, {"description": "Ion motive force powers rotation of many bacterial flagellar motors.", "evidence": [{"notes": "Supports ion motive force powering the bacterial flagellar motor.", "reference": "DOI:10.3389/fmicb.2021.659464", "snippet": "relationship between the IMF and the functioning"}], "id": "edge-4", "is_orphan": false, "predicate": "powers", "predicate_id": "METPO:2007900", "source": "ion_motive_force", "target": "flagellar_motor"}, {"description": "Chemotaxis signaling regulates the direction and pattern of bacterial movement.", "evidence": [{"notes": "Supports chemotaxis control of flagella-driven motility.", "reference": "DOI:10.3390/biom9070279", "snippet": "chemotactic signaling pathways regulate the direction"}], "id": "edge-5", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "chemotaxis_signaling", "target": "motility_trait"}, {"description": "Type IV pili power twitching, a form of bacterial surface translocation.", "evidence": [{"notes": "Twitching motility is a form of bacterial surface translocation powered by the type IV pilus (T4P).", "reference": "DOI:10.1128/msphere.00390-24"}], "id": "edge-6", "is_orphan": false, "predicate": "drives", "predicate_id": null, "source": "type_iv_pilus", "target": "twitching_motility"}, {"description": "PilB ATPase drives extension of the type IV pilus.", "evidence": [{"notes": "PilB is the homohexameric extension ATPase of the type IV pilus.", "reference": "DOI:10.1128/jb.00359-24"}], "id": "edge-7", "is_orphan": false, "predicate": "drives extension of", "predicate_id": null, "source": "pilb_extension_atpase", "target": "type_iv_pilus"}, {"description": "PilT ATPase drives retraction of the type IV pilus.", "evidence": [{"notes": "Retraction is carried out by the antagonistic ATPase PilT.", "reference": "DOI:10.1128/jb.00359-24"}], "id": "edge-8", "is_orphan": false, "predicate": "drives retraction of", "predicate_id": null, "source": "pilt_retraction_atpase", "target": "type_iv_pilus"}, {"description": "Type IV pilus retraction generates the pulling forces underlying twitching motility.", "evidence": [{"notes": "T4P retraction generates the pulling forces underlying twitching motility.", "reference": "DOI:10.1128/jb.00442-23"}], "id": "edge-9", "is_orphan": false, "predicate": "generates", "predicate_id": "biolink:produces", "source": "t4p_retraction", "target": "twitching_motility"}, {"description": "Cyclic di-GMP inhibits motility; lowering c-di-GMP relieves this inhibition.", "evidence": [{"notes": "Lower c-di-GMP relieves its inhibition on motility (generic c-di-GMP -\u003e motility edge).", "reference": "DOI:10.1038/s42003-024-07392-y"}], "id": "edge-10", "is_orphan": false, "predicate": "inhibits", "predicate_id": "RO:0002212", "source": "c_di_gmp", "target": "motility_trait"}, {"description": "The archaellum enables swimming motility in archaea, analogous to the bacterial flagellum.", "evidence": [{"notes": "The archaellum enables cell motility in archaea.", "reference": "DOI:10.1038/s41467-024-50277-1"}], "id": "edge-11", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "archaellum", "target": "motility_trait"}], "evidence_rows": [{"description": "Rotary flagellar motors enable bacterial swimming and related motility modes.", "edge_id": "edge-1", "evidence": [{"notes": "Review summarizes flagellar machinery as a major bacterial motility mechanism.", "reference": "DOI:10.1038/s41579-021-00626-4", "snippet": "allow bacteria to move around"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "flagellar motor", "source_grounding": null, "target": "motility", "target_grounding": "METPO:1000701"}, {"description": "Type IV pili enable twitching motility through extension, adhesion, and retraction.", "edge_id": "edge-2", "evidence": [{"notes": "Supports type IV pili as motility appendages.", "reference": "DOI:10.1038/s41579-019-0195-4", "snippet": "Cycles of pilus extension, binding and retraction"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "type IV pilus", "source_grounding": "GO:0044096", "target": "motility", "target_grounding": "METPO:1000701"}, {"description": "Gliding machinery allows surface movement without external flagella.", "edge_id": "edge-3", "evidence": [{"notes": "Supports gliding as an active bacterial movement mechanism.", "reference": "DOI:10.1146/annurev.micro.55.1.49", "snippet": "move actively over surfaces"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "gliding motility machinery", "source_grounding": null, "target": "motility", "target_grounding": "METPO:1000701"}, {"description": "Ion motive force powers rotation of many bacterial flagellar motors.", "edge_id": "edge-4", "evidence": [{"notes": "Supports ion motive force powering the bacterial flagellar motor.", "reference": "DOI:10.3389/fmicb.2021.659464", "snippet": "relationship between the IMF and the functioning"}], "predicate": "powers", "predicate_id": "METPO:2007900", "source": "ion motive force", "source_grounding": null, "target": "flagellar motor", "target_grounding": null}, {"description": "Chemotaxis signaling regulates the direction and pattern of bacterial movement.", "edge_id": "edge-5", "evidence": [{"notes": "Supports chemotaxis control of flagella-driven motility.", "reference": "DOI:10.3390/biom9070279", "snippet": "chemotactic signaling pathways regulate the direction"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "chemotaxis signaling", "source_grounding": "GO:0006935", "target": "motility", "target_grounding": "METPO:1000701"}, {"description": "Type IV pili power twitching, a form of bacterial surface translocation.", "edge_id": "edge-6", "evidence": [{"notes": "Twitching motility is a form of bacterial surface translocation powered by the type IV pilus (T4P).", "reference": "DOI:10.1128/msphere.00390-24"}], "predicate": "drives", "predicate_id": null, "source": "type IV pilus", "source_grounding": "GO:0044096", "target": "twitching motility", "target_grounding": null}, {"description": "PilB ATPase drives extension of the type IV pilus.", "edge_id": "edge-7", "evidence": [{"notes": "PilB is the homohexameric extension ATPase of the type IV pilus.", "reference": "DOI:10.1128/jb.00359-24"}], "predicate": "drives extension of", "predicate_id": null, "source": "PilB extension ATPase", "source_grounding": null, "target": "type IV pilus", "target_grounding": "GO:0044096"}, {"description": "PilT ATPase drives retraction of the type IV pilus.", "edge_id": "edge-8", "evidence": [{"notes": "Retraction is carried out by the antagonistic ATPase PilT.", "reference": "DOI:10.1128/jb.00359-24"}], "predicate": "drives retraction of", "predicate_id": null, "source": "PilT retraction ATPase", "source_grounding": null, "target": "type IV pilus", "target_grounding": "GO:0044096"}, {"description": "Type IV pilus retraction generates the pulling forces underlying twitching motility.", "edge_id": "edge-9", "evidence": [{"notes": "T4P retraction generates the pulling forces underlying twitching motility.", "reference": "DOI:10.1128/jb.00442-23"}], "predicate": "generates", "predicate_id": "biolink:produces", "source": "type IV pilus retraction", "source_grounding": null, "target": "twitching motility", "target_grounding": null}, {"description": "Cyclic di-GMP inhibits motility; lowering c-di-GMP relieves this inhibition.", "edge_id": "edge-10", "evidence": [{"notes": "Lower c-di-GMP relieves its inhibition on motility (generic c-di-GMP -\u003e motility edge).", "reference": "DOI:10.1038/s42003-024-07392-y"}], "predicate": "inhibits", "predicate_id": "RO:0002212", "source": "cyclic di-GMP", "source_grounding": "CHEBI:49537", "target": "motility", "target_grounding": "METPO:1000701"}, {"description": "The archaellum enables swimming motility in archaea, analogous to the bacterial flagellum.", "edge_id": "edge-11", "evidence": [{"notes": "The archaellum enables cell motility in archaea.", "reference": "DOI:10.1038/s41467-024-50277-1"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "archaellum", "source_grounding": null, "target": "motility", "target_grounding": "METPO:1000701"}], "graph_id": "motility_locomotion_machinery", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Archaeal rotary propulsion filament, the analogue of the bacterial flagellum.", "grounding": null, "id": "archaellum", "is_orphan": false, "label": "archaellum", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Second messenger that inversely regulates motility and biofilm formation.", "grounding": "CHEBI:49537", "id": "c_di_gmp", "is_orphan": false, "label": "cyclic di-GMP", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Signal transduction that changes motility direction in response to environmental cues.", "grounding": "GO:0006935", "id": "chemotaxis_signaling", "is_orphan": false, "label": "chemotaxis signaling", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Rotary motor that powers flagellar swimming or swarming.", "grounding": null, "id": "flagellar_motor", "is_orphan": false, "label": "flagellar motor", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Cell-envelope motors and adhesins that move bacteria over surfaces without flagella.", "grounding": null, "id": "gliding_motility_machinery", "is_orphan": false, "label": "gliding motility machinery", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Electrochemical ion gradient used to power motility motors.", "grounding": null, "id": "ion_motive_force", "is_orphan": false, "label": "ion motive force", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Independent movement through the environment.", "grounding": "METPO:1000701", "id": "motility_trait", "is_orphan": false, "label": "motility", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Homohexameric ATPase that drives type IV pilus extension.", "grounding": null, "id": "pilb_extension_atpase", "is_orphan": false, "label": "PilB extension ATPase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Antagonistic ATPase that drives type IV pilus retraction.", "grounding": null, "id": "pilt_retraction_atpase", "is_orphan": false, "label": "PilT retraction ATPase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Retraction of type IV pili that generates pulling forces.", "grounding": null, "id": "t4p_retraction", "is_orphan": false, "label": "type IV pilus retraction", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Form of bacterial surface translocation powered by type IV pili.", "grounding": null, "id": "twitching_motility", "is_orphan": false, "label": "twitching motility", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Dynamic pilus that powers twitching and related surface motility.", "grounding": "GO:0044096", "id": "type_iv_pilus", "is_orphan": false, "label": "type IV pilus", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "Motility is an upper phenotype class spanning flagellar, gliding, twitching, and archaellar mechanisms. The graph catalogs alternatives rather than asserting one mechanism shared by every motile organism.", "scope_status": "NONMECHANISTIC", "title": "Bacterial motility machinery"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -1238,13 +1271,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-10-17 09:00 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/genomics.html">GENOMICS</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/genomics.html">GENOMICS</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>DS-25 system</h1>
     <p class="curie"><code>traitmech:000473</code> · CLASS · PROPOSED</p>
 
@@ -109,9 +120,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>DS-25 locus</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>DS-25 system</strong>
-            <code>RO:0002326</code>
+            <code>traitmech:000473</code>
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>DefenseFinder links the DS-25 source key to the DefensePredictor preprint and represents DS-25 in the HMM inventory with DS-25A and DS-25B custom profiles.</p>
             <ul>
 
@@ -138,8 +151,10 @@
 
           <li id="pathograph-1-edge-2">
             <strong>DS-25 system</strong>
+            <code>traitmech:000473</code>
             <span class="edge-predicate">is a</span>
             <strong>phage defense system</strong>
+            <code>traitmech:000209</code>
             <code>rdfs:subClassOf</code>
             <p>DS-25 system possession is a phage-defense-system trait.</p>
             <ul>
@@ -281,11 +296,75 @@
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
 
-      <p class="no-match">No kg-microbe node embedding matched this record
-        in the 2026-04-25 deepwalk.</p>
+      <p class="match-method">Matched <strong>1</strong>
+        kg-microbe node
+        via <em>parent_proxy</em>.</p>
+      <ul class="kgm-nodes">
+
+        <li><code>METPO:1000188</code> <span class="dim-preview">[-0.956, -1.962, -3.148, +1.274, …]</span></li>
+
+      </ul>
+      <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
 
     </div>
 
+
+    <div class="card">
+      <h2>Nearest neighbors in embedding space</h2>
+      <p class="meta">Top-8 cosine-similar METPO traits
+        from the 2026-04-25 deepwalk (512-D).</p>
+      <ul class="nn-list">
+
+        <li>
+          <span class="nn-cat">upper</span>
+          <a href="../../traits/upper/quality.html">quality</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/lamassu_cap4_nuclease_system.html">Lamassu-Cap4 nuclease system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/lamassu_amidase_system.html">Lamassu-Amidase system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/kongming_system.html">Kongming system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/kiwa_system.html">Kiwa system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/kamadhenu_system.html">Kamadhenu system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/jukab_system.html">JukAB system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/integrative_conjugative_element.html">integrative conjugative element</a>
+          <span class="sim">1.000</span>
+        </li>
+
+      </ul>
+    </div>
 
 
 
@@ -451,6 +530,11 @@
     </dl>
   </div>
 
+
+  <div class="card rail-kgm">
+    <h2>kg-microbe</h2>
+    <p class="meta">1 matching node (parent_proxy)</p>
+  </div>
 
 </aside>
 </div>
@@ -784,7 +868,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Conservative system-level sketch linking the DS-25 DefensePredictor-discovered system key to DS-25 system possession and the broader phage-defense-system trait without resolving DS-25 component function or a phage activity readout.", "edges": [{"description": "DefenseFinder links the DS-25 source key to the DefensePredictor preprint and represents DS-25 in the HMM inventory with DS-25A and DS-25B custom profiles.", "evidence": [{"notes": "The pinned DefenseFinder article registry maps the DS-25 source key to the DeWeirdt et al. DefensePredictor preprint.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| DS-25 | 10\\.1101/2025\\.01\\.08\\.631726 | DefensePredictor: A machine learning model to discover novel prokaryotic immune systems | "}, {"notes": "The pinned DefenseFinder HMM inventory records DS-25__DS-25A as a custom DS-25 profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| DS-25__DS-25A                                    |                                                  | DS-25                  | Custom                  | 80     |"}, {"notes": "The pinned DefenseFinder HMM inventory records DS-25__DS-25B as a custom DS-25 profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| DS-25__DS-25B                                    |                                                  | DS-25                  | Custom                  | 40     |"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "ds_25_locus", "target": "ds_25_system_trait"}, {"description": "DS-25 system possession is a phage-defense-system trait.", "evidence": [{"notes": "DeWeirdt et al. name validated TUs as DefensePredictor discovered Systems.", "reference": "DOI:10.1101/2025.01.08.631726", "snippet": "We refer to these validated TUs as DefensePredictor discovered Systems (DSs), with genes in multi-gene TUs denoted by an alphabetical suffix, e.g., DS-8A is the first gene of DS-8."}, {"notes": "The pinned DefenseFinder article registry maps the DS-25 source key to the DeWeirdt et al. DefensePredictor preprint.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| DS-25 | 10\\.1101/2025\\.01\\.08\\.631726 | DefensePredictor: A machine learning model to discover novel prokaryotic immune systems | "}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "ds_25_system_trait", "target": "phage_defense_system"}, {"description": "Endonuclease GajA (gajA, UniProtKB:P0DW47) contributes to DS-25 system.", "evidence": [{"notes": "Supports the functional association between Endonuclease GajA (UniProtKB:P0DW47 in Bacillus cereus (strain HuB5-5)) and DS-25 system.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| McrBC | 10\\.1093/emboj/20\\.12\\.3210 | The McrBC restriction endonuclease assembles into a ring structure in the presence of G nucleotides |"}], "id": "edge-3", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "ds_25_system_protein_component", "target": "ds_25_system_trait"}], "evidence_rows": [{"description": "DefenseFinder links the DS-25 source key to the DefensePredictor preprint and represents DS-25 in the HMM inventory with DS-25A and DS-25B custom profiles.", "edge_id": "edge-1", "evidence": [{"notes": "The pinned DefenseFinder article registry maps the DS-25 source key to the DeWeirdt et al. DefensePredictor preprint.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| DS-25 | 10\\.1101/2025\\.01\\.08\\.631726 | DefensePredictor: A machine learning model to discover novel prokaryotic immune systems | "}, {"notes": "The pinned DefenseFinder HMM inventory records DS-25__DS-25A as a custom DS-25 profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| DS-25__DS-25A                                    |                                                  | DS-25                  | Custom                  | 80     |"}, {"notes": "The pinned DefenseFinder HMM inventory records DS-25__DS-25B as a custom DS-25 profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| DS-25__DS-25B                                    |                                                  | DS-25                  | Custom                  | 40     |"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "DS-25 locus", "target": "DS-25 system"}, {"description": "DS-25 system possession is a phage-defense-system trait.", "edge_id": "edge-2", "evidence": [{"notes": "DeWeirdt et al. name validated TUs as DefensePredictor discovered Systems.", "reference": "DOI:10.1101/2025.01.08.631726", "snippet": "We refer to these validated TUs as DefensePredictor discovered Systems (DSs), with genes in multi-gene TUs denoted by an alphabetical suffix, e.g., DS-8A is the first gene of DS-8."}, {"notes": "The pinned DefenseFinder article registry maps the DS-25 source key to the DeWeirdt et al. DefensePredictor preprint.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| DS-25 | 10\\.1101/2025\\.01\\.08\\.631726 | DefensePredictor: A machine learning model to discover novel prokaryotic immune systems | "}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "DS-25 system", "target": "phage defense system"}, {"description": "Endonuclease GajA (gajA, UniProtKB:P0DW47) contributes to DS-25 system.", "edge_id": "edge-3", "evidence": [{"notes": "Supports the functional association between Endonuclease GajA (UniProtKB:P0DW47 in Bacillus cereus (strain HuB5-5)) and DS-25 system.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| McrBC | 10\\.1093/emboj/20\\.12\\.3210 | The McrBC restriction endonuclease assembles into a ring structure in the presence of G nucleotides |"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Endonuclease GajA", "target": "DS-25 system"}], "graph_id": "ds_25_locus_profile_model", "issues": [], "nodes": [{"color": "#f3f4f6", "description": "A DefensePredictor-discovered system 25 locus represented in the pinned DefenseFinder HMM inventory by DS-25A and DS-25B custom profiles.", "grounding": null, "id": "ds_25_locus", "is_orphan": false, "label": "DS-25 locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Protein component (Endonuclease GajA) associated with DS-25 system.", "grounding": null, "id": "ds_25_system_protein_component", "is_orphan": false, "label": "Endonuclease GajA", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 12, "evidence": [{"notes": "Supports Endonuclease GajA in DS-25 system; UniProtKB:P0DW47 (gajA, Endonuclease GajA) in Bacillus cereus (strain HuB5-5) provides a verified protein exemplar.", "reference": "DOI:10.1101/2025.01.08.631726", "snippet": "We refer to these validated TUs as DefensePredictor discovered Systems (DSs), with genes in multi-gene TUs denoted by an alphabetical suffix, e.g., DS-8A is the first gene of DS-8."}], "gene_symbol": "gajA", "protein_label": "Endonuclease GajA", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (gajA, Endonuclease GajA) associated with DS-25 system in Bacillus cereus (strain HuB5-5).", "sequence_version": 1, "taxon_id": "NCBITaxon:1053212", "taxon_label": "Bacillus cereus (strain HuB5-5)", "uniprot_id": "UniProtKB:P0DW47"}], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded DS-25 phage-defense system.", "grounding": "traitmech:000473", "id": "ds_25_system_trait", "is_orphan": false, "label": "DS-25 system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of one or more genome-encoded immune systems that inhibit bacteriophage infection.", "grounding": "traitmech:000209", "id": "phage_defense_system", "is_orphan": false, "label": "phage defense system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 12, "evidence": [{"notes": "Supports Endonuclease GajA in DS-25 system; UniProtKB:P0DW47 (gajA, Endonuclease GajA) in Bacillus cereus (strain HuB5-5) provides a verified protein exemplar.", "reference": "DOI:10.1101/2025.01.08.631726", "snippet": "We refer to these validated TUs as DefensePredictor discovered Systems (DSs), with genes in multi-gene TUs denoted by an alphabetical suffix, e.g., DS-8A is the first gene of DS-8."}], "gene_symbol": "gajA", "node_id": "ds_25_system_protein_component", "node_label": "Endonuclease GajA", "protein_label": "Endonuclease GajA", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (gajA, Endonuclease GajA) associated with DS-25 system in Bacillus cereus (strain HuB5-5).", "sequence_version": 1, "taxon_id": "NCBITaxon:1053212", "taxon_label": "Bacillus cereus (strain HuB5-5)", "uniprot_id": "UniProtKB:P0DW47"}], "scope_notes": "The graph captures DS-25 as a DefensePredictor-discovered system with DS-25A and DS-25B custom HMM rows in the pinned DefenseFinder HMM inventory. It does not assert the preprint working identifier, preprint Table S5/S6 rows, final Science supplement rows, native host breadth, profile-to-protein correspondence, DS-25A or DS-25B molecular activity, exact phage target breadth, or DefenseFinder rule-level detection criteria.", "scope_status": "NONMECHANISTIC", "title": "DS-25 locus profile model"}];
+  var graphs = [{"description": "Conservative system-level sketch linking the DS-25 DefensePredictor-discovered system key to DS-25 system possession and the broader phage-defense-system trait without resolving DS-25 component function or a phage activity readout.", "edges": [{"description": "DefenseFinder links the DS-25 source key to the DefensePredictor preprint and represents DS-25 in the HMM inventory with DS-25A and DS-25B custom profiles.", "evidence": [{"notes": "The pinned DefenseFinder article registry maps the DS-25 source key to the DeWeirdt et al. DefensePredictor preprint.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| DS-25 | 10\\.1101/2025\\.01\\.08\\.631726 | DefensePredictor: A machine learning model to discover novel prokaryotic immune systems | "}, {"notes": "The pinned DefenseFinder HMM inventory records DS-25__DS-25A as a custom DS-25 profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| DS-25__DS-25A                                    |                                                  | DS-25                  | Custom                  | 80     |"}, {"notes": "The pinned DefenseFinder HMM inventory records DS-25__DS-25B as a custom DS-25 profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| DS-25__DS-25B                                    |                                                  | DS-25                  | Custom                  | 40     |"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "ds_25_locus", "target": "ds_25_system_trait"}, {"description": "DS-25 system possession is a phage-defense-system trait.", "evidence": [{"notes": "DeWeirdt et al. name validated TUs as DefensePredictor discovered Systems.", "reference": "DOI:10.1101/2025.01.08.631726", "snippet": "We refer to these validated TUs as DefensePredictor discovered Systems (DSs), with genes in multi-gene TUs denoted by an alphabetical suffix, e.g., DS-8A is the first gene of DS-8."}, {"notes": "The pinned DefenseFinder article registry maps the DS-25 source key to the DeWeirdt et al. DefensePredictor preprint.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| DS-25 | 10\\.1101/2025\\.01\\.08\\.631726 | DefensePredictor: A machine learning model to discover novel prokaryotic immune systems | "}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "ds_25_system_trait", "target": "phage_defense_system"}], "evidence_rows": [{"description": "DefenseFinder links the DS-25 source key to the DefensePredictor preprint and represents DS-25 in the HMM inventory with DS-25A and DS-25B custom profiles.", "edge_id": "edge-1", "evidence": [{"notes": "The pinned DefenseFinder article registry maps the DS-25 source key to the DeWeirdt et al. DefensePredictor preprint.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| DS-25 | 10\\.1101/2025\\.01\\.08\\.631726 | DefensePredictor: A machine learning model to discover novel prokaryotic immune systems | "}, {"notes": "The pinned DefenseFinder HMM inventory records DS-25__DS-25A as a custom DS-25 profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| DS-25__DS-25A                                    |                                                  | DS-25                  | Custom                  | 80     |"}, {"notes": "The pinned DefenseFinder HMM inventory records DS-25__DS-25B as a custom DS-25 profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| DS-25__DS-25B                                    |                                                  | DS-25                  | Custom                  | 40     |"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "DS-25 locus", "source_grounding": null, "target": "DS-25 system", "target_grounding": "traitmech:000473"}, {"description": "DS-25 system possession is a phage-defense-system trait.", "edge_id": "edge-2", "evidence": [{"notes": "DeWeirdt et al. name validated TUs as DefensePredictor discovered Systems.", "reference": "DOI:10.1101/2025.01.08.631726", "snippet": "We refer to these validated TUs as DefensePredictor discovered Systems (DSs), with genes in multi-gene TUs denoted by an alphabetical suffix, e.g., DS-8A is the first gene of DS-8."}, {"notes": "The pinned DefenseFinder article registry maps the DS-25 source key to the DeWeirdt et al. DefensePredictor preprint.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| DS-25 | 10\\.1101/2025\\.01\\.08\\.631726 | DefensePredictor: A machine learning model to discover novel prokaryotic immune systems | "}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "DS-25 system", "source_grounding": "traitmech:000473", "target": "phage defense system", "target_grounding": "traitmech:000209"}], "graph_id": "ds_25_locus_profile_model", "issues": [], "nodes": [{"color": "#f3f4f6", "description": "A DefensePredictor-discovered system 25 locus represented in the pinned DefenseFinder HMM inventory by DS-25A and DS-25B custom profiles.", "grounding": null, "id": "ds_25_locus", "is_orphan": false, "label": "DS-25 locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded DS-25 phage-defense system.", "grounding": "traitmech:000473", "id": "ds_25_system_trait", "is_orphan": false, "label": "DS-25 system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of one or more genome-encoded immune systems that inhibit bacteriophage infection.", "grounding": "traitmech:000209", "id": "phage_defense_system", "is_orphan": false, "label": "phage defense system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "The graph captures DS-25 as a DefensePredictor-discovered system with DS-25A and DS-25B custom HMM rows in the pinned DefenseFinder HMM inventory. It does not assert the preprint working identifier, preprint Table S5/S6 rows, final Science supplement rows, native host breadth, profile-to-protein correspondence, DS-25A or DS-25B molecular activity, exact phage target breadth, or DefenseFinder rule-level detection criteria.", "scope_status": "NONMECHANISTIC", "title": "DS-25 locus profile model"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -804,13 +888,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-10-17 09:00 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

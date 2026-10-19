@@ -13,7 +13,12 @@
     <nav>
       <a href="../index.html">Home</a>
       <a href="../browse.html">Browse</a>
+      <a href="../map.html">Text map</a>
+      <a href="../sequence-map.html">Sequence map (pLM)</a>
       <a href="../umap.html">Embedding space</a>
+      <a href="../graph.html">Graph layout</a>
+      <a href="../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -26,10 +31,37 @@
   <h1>Environment <span class="meta">(122)</span></h1>
 </header>
 
+<div class="browse-layout">
+<aside id="facet-sidebar" class="facet-sidebar" aria-label="Filter traits">
+  <h2>Filter records</h2>
+  <div class="facet-group">
+    <div class="facet-group-title">Category</div>
+    <div class="facet-options">
+      <button type="button" class="facet-btn active" data-facet="category" data-val=""><span>All categories</span><span class="facet-count">122</span></button>
+
+      <button type="button" class="facet-btn" data-facet="category" data-val="ENVIRONMENT"><span>ENVIRONMENT</span><span class="facet-count">122</span></button>
+
+    </div>
+  </div>
+  <div class="facet-group">
+    <div class="facet-group-title">Term kind</div>
+    <div class="facet-options">
+      <button type="button" class="facet-btn active" data-facet="kind" data-val=""><span>All kinds</span><span class="facet-count">122</span></button>
+
+
+      <button type="button" class="facet-btn" data-facet="kind" data-val="CLASS"><span>CLASS</span><span class="facet-count">122</span></button>
+
+
+    </div>
+  </div>
+  <button type="button" id="facet-clear-btn" class="facet-clear">Clear all filters</button>
+</aside>
+<div class="browse-main">
 <form id="record-filters" class="record-filters" hidden>
-  <div><label for="record-query">Search records</label><input id="record-query" type="search" placeholder="Label, identifier, definition…"></div>
+  <div class="record-query-wrap"><label for="record-query">Search records</label><input id="record-query" type="search" placeholder="Search by label, METPO CURIE, synonym, or definition…"></div>
   <div><label for="record-category">Category</label><select id="record-category"><option value="">All categories</option><option value="ENVIRONMENT">ENVIRONMENT</option></select></div>
   <div><label for="record-kind">Kind</label><select id="record-kind"><option value="">All kinds</option><option value="CLASS">CLASS</option></select></div>
+  <div><label for="record-sort">Sort by</label><select id="record-sort" name="sort"><option value="label-asc">Label (A–Z)</option><option value="label-desc">Label (Z–A)</option><option value="id-asc">Identifier (A–Z)</option><option value="category">Category</option><option value="kind">Kind</option><option value="kgm-desc">kg-microbe nodes (high–low)</option><option value="synonyms-desc">Synonyms (high–low)</option></select></div>
   <button type="reset">Clear filters</button>
 </form>
 <p id="record-count" role="status" aria-live="polite">122 records</p>
@@ -90,7 +122,7 @@
 
 <tr data-category="ENVIRONMENT" data-kind="CLASS" data-synonyms=""><td><a href="../traits/environment/cadmium_tolerant.html">cadmium tolerant</a><p class="record-definition">A metal tolerance in which an organism grows in the presence of elevated cadmium (Cd2+) concentrations, typically via cation-efflux resistance systems such as the czc determinant.</p></td><td><code>traitmech:000013</code></td><td>ENVIRONMENT</td><td>CLASS</td><td>1</td><td>0</td></tr>
 
-<tr data-category="ENVIRONMENT" data-kind="CLASS" data-synonyms=""><td><a href="../traits/environment/capnophilic.html">capnophilic</a><p class="record-definition">A phenotype describing an organism that requires elevated concentrations of carbon dioxide for growth.</p></td><td><code>METPO:1005021</code></td><td>ENVIRONMENT</td><td>CLASS</td><td>0</td><td>0</td></tr>
+<tr data-category="ENVIRONMENT" data-kind="CLASS" data-synonyms=""><td><a href="../traits/environment/capnophilic.html">capnophilic</a><p class="record-definition">A phenotype describing an organism that requires elevated concentrations of carbon dioxide for growth.</p></td><td><code>METPO:1005021</code></td><td>ENVIRONMENT</td><td>CLASS</td><td>1</td><td>0</td></tr>
 
 <tr data-category="ENVIRONMENT" data-kind="CLASS" data-synonyms=""><td><a href="../traits/environment/cobalt_tolerant.html">cobalt tolerant</a><p class="record-definition">A metal tolerance in which an organism grows in the presence of elevated cobalt (Co2+) concentrations, typically via cation-efflux resistance systems such as the czc and cnr determinants.</p></td><td><code>traitmech:000015</code></td><td>ENVIRONMENT</td><td>CLASS</td><td>1</td><td>0</td></tr>
 
@@ -287,6 +319,8 @@
 </tbody>
 </table>
 </div>
+</div>
+</div>
 <script src="../assets/record-browser.js" defer></script>
 
 </main>
@@ -301,13 +335,20 @@
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Corpus as of 2026-10-17 09:00 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

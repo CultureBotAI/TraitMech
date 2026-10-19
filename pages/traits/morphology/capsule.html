@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/morphology.html">MORPHOLOGY</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/morphology.html">MORPHOLOGY</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>capsule</h1>
     <p class="curie"><code>traitmech:000063</code> · CLASS · REVIEWED</p>
 
@@ -85,9 +96,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>capsular polysaccharide assembly</strong>
+
             <span class="edge-predicate">produces</span>
             <strong>capsular polysaccharide</strong>
-            <code>biolink:produces</code>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:3379" rel="nofollow noreferrer"><code>CHEBI:3379</code></a>
+            <a href="https://w3id.org/biolink/vocab/produces" rel="nofollow noreferrer"><code>biolink:produces</code></a>
             <p>Capsule biosynthesis synthesizes and exports the high-MW capsular polysaccharide.</p>
             <ul>
 
@@ -102,9 +115,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>capsular polysaccharide assembly</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>capsule</strong>
-            <code>METPO:2007700</code>
+            <code>traitmech:000063</code>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>Surface assembly of capsule polymers realizes the capsulated phenotype.</p>
             <ul>
 
@@ -119,9 +134,11 @@
 
           <li id="pathograph-1-edge-3">
             <strong>capsule</strong>
+            <code>traitmech:000063</code>
             <span class="edge-predicate">contributes to</span>
             <strong>host immune evasion</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>The capsule masks surface antigens and reduces phagocytic uptake.</p>
             <ul>
 
@@ -136,8 +153,10 @@
 
           <li id="pathograph-1-edge-4">
             <strong>Wzx flippase</strong>
+
             <span class="edge-predicate">flips</span>
             <strong>lipid-linked capsule repeat unit</strong>
+
 
             <p>Wzx flippase turns the completed lipid-linked repeat unit outward across the inner membrane.</p>
             <ul>
@@ -153,8 +172,10 @@
 
           <li id="pathograph-1-edge-5">
             <strong>Wzy polymerase</strong>
+
             <span class="edge-predicate">polymerizes</span>
             <strong>capsular polysaccharide</strong>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:3379" rel="nofollow noreferrer"><code>CHEBI:3379</code></a>
 
             <p>Wzy polymerase attaches the growing chain to new repeat units, building the capsular polysaccharide.</p>
             <ul>
@@ -170,8 +191,10 @@
 
           <li id="pathograph-1-edge-6">
             <strong>Wzb phosphatase cycle</strong>
+
             <span class="edge-predicate">required for</span>
             <strong>Wzc-regulated capsule assembly</strong>
+
 
             <p>The Wzb-catalyzed phosphorylation cycle of Wzc is a crucial step for capsule assembly.</p>
             <ul>
@@ -187,9 +210,11 @@
 
           <li id="pathograph-1-edge-7">
             <strong>Wza outer-membrane export protein</strong>
+
             <span class="edge-predicate">exports</span>
             <strong>capsular polysaccharide</strong>
-            <code>METPO:2007804</code>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:3379" rel="nofollow noreferrer"><code>CHEBI:3379</code></a>
+            <a href="https://w3id.org/metpo/2007804" rel="nofollow noreferrer"><code>METPO:2007804</code></a>
             <p>Wza translocates the assembled capsule polymer across the outer membrane.</p>
             <ul>
 
@@ -204,9 +229,11 @@
 
           <li id="pathograph-1-edge-8">
             <strong>KpsMT ABC transporter</strong>
+
             <span class="edge-predicate">exports</span>
             <strong>capsular polysaccharide</strong>
-            <code>METPO:2007804</code>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:3379" rel="nofollow noreferrer"><code>CHEBI:3379</code></a>
+            <a href="https://w3id.org/metpo/2007804" rel="nofollow noreferrer"><code>METPO:2007804</code></a>
             <p>The KpsMT ABC transporter exports capsule polysaccharide chains across the inner membrane in the ABC-dependent pathway.</p>
             <ul>
 
@@ -411,7 +438,7 @@
     <div class="card">
       <h2>Cross-references</h2>
       <ul class="xrefs">
-        <li><code>GO:0042603</code></li>
+        <li><a href="https://amigo.geneontology.org/amigo/term/GO:0042603" rel="nofollow noreferrer"><code>GO:0042603</code></a></li>
       </ul>
     </div>
 
@@ -439,50 +466,50 @@
       <ul class="nn-list">
 
         <li>
-          <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/polyhydroxyalkanoate_granule.html">polyhydroxyalkanoate granule</a>
-          <span class="sim">1.000</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/cobalt_tolerant.html">cobalt tolerant</a>
-          <span class="sim">1.000</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/copper_tolerant.html">copper tolerant</a>
-          <span class="sim">1.000</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/desiccation_tolerant.html">desiccation tolerant</a>
-          <span class="sim">1.000</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/piezotolerant.html">piezotolerant</a>
-          <span class="sim">1.000</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/gas_vesicle.html">gas vesicle</a>
-          <span class="sim">1.000</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/uv_radiation_tolerant.html">UV radiation tolerant</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/cytogamy.html">cytogamy</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">physiology</span>
-          <a href="../../traits/physiology/quorum_sensing.html">quorum sensing</a>
+          <a href="../../traits/physiology/coccolith_production.html">coccolith production</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/coagulase_activity.html">coagulase activity</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/chemotropism.html">chemotropism</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/chemotaxis.html">chemotaxis</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/cellular_rejuvenation.html">functional cellular rejuvenation</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/cellular_contraction.html">cell body or cytoplasmic projection contraction</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/cold_shock_response.html">cold shock response</a>
           <span class="sim">1.000</span>
         </li>
 
@@ -1060,7 +1087,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking capsular polysaccharide biosynthesis to a surface polysaccharide layer that mediates adhesion, desiccation resistance, and immune evasion.", "edges": [{"description": "Capsule biosynthesis synthesizes and exports the high-MW capsular polysaccharide.", "evidence": [{"notes": "Whitfield reviews biosynthesis, export, and surface assembly of the capsular polysaccharide polymer.", "reference": "DOI:10.1146/annurev.biochem.75.103004.142545"}], "id": "edge-1", "is_orphan": false, "predicate": "produces", "predicate_id": "biolink:produces", "source": "capsule_assembly", "target": "capsular_polysaccharide"}, {"description": "Surface assembly of capsule polymers realizes the capsulated phenotype.", "evidence": [{"notes": "Whitfield reviews biosynthesis and assembly of capsular polysaccharides.", "reference": "DOI:10.1146/annurev.biochem.75.103004.142545"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "capsule_assembly", "target": "capsule_trait"}, {"description": "The capsule masks surface antigens and reduces phagocytic uptake.", "evidence": [{"notes": "Roberts frames capsular polysaccharide as an immune-evasion and adhesion structure.", "reference": "DOI:10.1146/annurev.micro.50.1.285"}], "id": "edge-3", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "capsule_trait", "target": "immune_evasion"}, {"description": "Wzx flippase turns the completed lipid-linked repeat unit outward across the inner membrane.", "evidence": [{"notes": "\"the complete repeat unit is turned outward by the Wzx flip enzyme\"; general Wzx/Wzy capsule biosynthesis, not taxon-specific.", "reference": "DOI:10.1038/s41522-024-00497-6"}], "id": "edge-4", "is_orphan": false, "predicate": "flips", "predicate_id": null, "source": "wzx_flippase", "target": "lipid_linked_repeat_unit"}, {"description": "Wzy polymerase attaches the growing chain to new repeat units, building the capsular polysaccharide.", "evidence": [{"notes": "\"the Wzy polymerase attaches the growing polymer chain to the newly formed repeat unit\"; general Wzx/Wzy pathway.", "reference": "DOI:10.1038/s41522-024-00497-6"}], "id": "edge-5", "is_orphan": false, "predicate": "polymerizes", "predicate_id": null, "source": "wzy_polymerase", "target": "capsular_polysaccharide"}, {"description": "The Wzb-catalyzed phosphorylation cycle of Wzc is a crucial step for capsule assembly.", "evidence": [{"notes": "\"The phosphorylation cycle of Wzc, catalyzed by Wzb, is a crucial step.\"; general capsule biosynthesis.", "reference": "DOI:10.1038/s41522-024-00497-6"}], "id": "edge-6", "is_orphan": false, "predicate": "required for", "predicate_id": null, "source": "wzb_phosphatase_cycle", "target": "wzc_capsule_assembly"}, {"description": "Wza translocates the assembled capsule polymer across the outer membrane.", "evidence": [{"notes": "\"The polymer translocates across the outer membrane via Wza\"; Wzx/Wzy-dependent pathway, broad mechanistic statement.", "reference": "DOI:10.1038/s41522-024-00497-6"}], "id": "edge-7", "is_orphan": false, "predicate": "exports", "predicate_id": "METPO:2007804", "source": "wza_export_protein", "target": "capsular_polysaccharide"}, {"description": "The KpsMT ABC transporter exports capsule polysaccharide chains across the inner membrane in the ABC-dependent pathway.", "evidence": [{"notes": "\"the ABC transporter (KpsMT) plays a pivotal role in exporting these chains\"; general ABC-dependent capsule export.", "reference": "DOI:10.1038/s41522-024-00497-6"}], "id": "edge-8", "is_orphan": false, "predicate": "exports", "predicate_id": "METPO:2007804", "source": "kpsmt_abc_transporter", "target": "capsular_polysaccharide"}], "evidence_rows": [{"description": "Capsule biosynthesis synthesizes and exports the high-MW capsular polysaccharide.", "edge_id": "edge-1", "evidence": [{"notes": "Whitfield reviews biosynthesis, export, and surface assembly of the capsular polysaccharide polymer.", "reference": "DOI:10.1146/annurev.biochem.75.103004.142545"}], "predicate": "produces", "predicate_id": "biolink:produces", "source": "capsular polysaccharide assembly", "target": "capsular polysaccharide"}, {"description": "Surface assembly of capsule polymers realizes the capsulated phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Whitfield reviews biosynthesis and assembly of capsular polysaccharides.", "reference": "DOI:10.1146/annurev.biochem.75.103004.142545"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "capsular polysaccharide assembly", "target": "capsule"}, {"description": "The capsule masks surface antigens and reduces phagocytic uptake.", "edge_id": "edge-3", "evidence": [{"notes": "Roberts frames capsular polysaccharide as an immune-evasion and adhesion structure.", "reference": "DOI:10.1146/annurev.micro.50.1.285"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "capsule", "target": "host immune evasion"}, {"description": "Wzx flippase turns the completed lipid-linked repeat unit outward across the inner membrane.", "edge_id": "edge-4", "evidence": [{"notes": "\"the complete repeat unit is turned outward by the Wzx flip enzyme\"; general Wzx/Wzy capsule biosynthesis, not taxon-specific.", "reference": "DOI:10.1038/s41522-024-00497-6"}], "predicate": "flips", "predicate_id": null, "source": "Wzx flippase", "target": "lipid-linked capsule repeat unit"}, {"description": "Wzy polymerase attaches the growing chain to new repeat units, building the capsular polysaccharide.", "edge_id": "edge-5", "evidence": [{"notes": "\"the Wzy polymerase attaches the growing polymer chain to the newly formed repeat unit\"; general Wzx/Wzy pathway.", "reference": "DOI:10.1038/s41522-024-00497-6"}], "predicate": "polymerizes", "predicate_id": null, "source": "Wzy polymerase", "target": "capsular polysaccharide"}, {"description": "The Wzb-catalyzed phosphorylation cycle of Wzc is a crucial step for capsule assembly.", "edge_id": "edge-6", "evidence": [{"notes": "\"The phosphorylation cycle of Wzc, catalyzed by Wzb, is a crucial step.\"; general capsule biosynthesis.", "reference": "DOI:10.1038/s41522-024-00497-6"}], "predicate": "required for", "predicate_id": null, "source": "Wzb phosphatase cycle", "target": "Wzc-regulated capsule assembly"}, {"description": "Wza translocates the assembled capsule polymer across the outer membrane.", "edge_id": "edge-7", "evidence": [{"notes": "\"The polymer translocates across the outer membrane via Wza\"; Wzx/Wzy-dependent pathway, broad mechanistic statement.", "reference": "DOI:10.1038/s41522-024-00497-6"}], "predicate": "exports", "predicate_id": "METPO:2007804", "source": "Wza outer-membrane export protein", "target": "capsular polysaccharide"}, {"description": "The KpsMT ABC transporter exports capsule polysaccharide chains across the inner membrane in the ABC-dependent pathway.", "edge_id": "edge-8", "evidence": [{"notes": "\"the ABC transporter (KpsMT) plays a pivotal role in exporting these chains\"; general ABC-dependent capsule export.", "reference": "DOI:10.1038/s41522-024-00497-6"}], "predicate": "exports", "predicate_id": "METPO:2007804", "source": "KpsMT ABC transporter", "target": "capsular polysaccharide"}], "graph_id": "capsule_polysaccharide_protection", "issues": [], "nodes": [{"color": "#fef3c7", "description": "High-MW (often acidic) polysaccharide attached external to the cell envelope.", "grounding": "CHEBI:3379", "id": "capsular_polysaccharide", "is_orphan": false, "label": "capsular polysaccharide", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Synthesis, export, and surface assembly of capsule polymers.", "grounding": null, "id": "capsule_assembly", "is_orphan": false, "label": "capsular polysaccharide assembly", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a well-organized external polysaccharide layer.", "grounding": "traitmech:000063", "id": "capsule_trait", "is_orphan": false, "label": "capsule", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Reduced recognition and clearance by host innate immunity.", "grounding": null, "id": "immune_evasion", "is_orphan": false, "label": "host immune evasion", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "ATP-binding cassette transporter that exports capsule polysaccharide chains across the inner membrane in the ABC-dependent pathway.", "grounding": null, "id": "kpsmt_abc_transporter", "is_orphan": false, "label": "KpsMT ABC transporter", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 121, "evidence": [{"notes": "Supports KpsMT ABC transporter in capsule; UniProtKB:Q8ZNQ9 (wza, Putative polysaccharide export protein wza) in Salmonella typhimurium (strain LT2 / SGSC1412 / ATCC 700720) provides a verified protein exemplar.", "reference": "DOI:10.1146/annurev.micro.50.1.285", "snippet": "They can form an amorphous layer of extracellular polysaccharide (EPS) surrounding the cell that may be further organized into a distinct structure termed a capsule."}], "gene_symbol": "wza", "protein_label": "Putative polysaccharide export protein wza", "proteome_id": "UP000001014", "retrieved_on": "2026-10-17", "role": "Exemplar protein (wza, Putative polysaccharide export protein wza) representing KpsMT ABC transporter in Salmonella typhimurium (strain LT2 / SGSC1412 / ATCC 700720) for capsule.", "sequence_version": 1, "taxon_id": "NCBITaxon:99287", "taxon_label": "Salmonella typhimurium (strain LT2 / SGSC1412 / ATCC 700720)", "uniprot_id": "UniProtKB:Q8ZNQ9"}], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Undecaprenyl-linked oligosaccharide repeat unit assembled on the cytoplasmic face of the inner membrane.", "grounding": null, "id": "lipid_linked_repeat_unit", "is_orphan": false, "label": "lipid-linked capsule repeat unit", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Outer-membrane polysaccharide export protein that translocates capsule polymer across the outer membrane.", "grounding": null, "id": "wza_export_protein", "is_orphan": false, "label": "Wza outer-membrane export protein", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 110, "evidence": [{"notes": "Supports Wza outer-membrane export protein in capsule; UniProtKB:P0A931 (wza, Putative polysaccharide export protein wza) in Escherichia coli O157:H7 provides a verified protein exemplar.", "reference": "DOI:10.1146/annurev.micro.50.1.285", "snippet": "They can form an amorphous layer of extracellular polysaccharide (EPS) surrounding the cell that may be further organized into a distinct structure termed a capsule."}], "gene_symbol": "wza", "protein_label": "Putative polysaccharide export protein wza", "proteome_id": "UP000000558", "retrieved_on": "2026-10-17", "role": "Exemplar protein (wza, Putative polysaccharide export protein wza) representing Wza outer-membrane export protein in Escherichia coli O157:H7 for capsule.", "sequence_version": 1, "taxon_id": "NCBITaxon:83334", "taxon_label": "Escherichia coli O157:H7", "uniprot_id": "UniProtKB:P0A931"}], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Wzb-catalyzed phosphorylation/dephosphorylation cycle of the Wzc tyrosine autokinase regulating capsule assembly.", "grounding": null, "id": "wzb_phosphatase_cycle", "is_orphan": false, "label": "Wzb phosphatase cycle", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Capsule polymerization and export controlled by the Wzc polysaccharide copolymerase/tyrosine autokinase.", "grounding": null, "id": "wzc_capsule_assembly", "is_orphan": false, "label": "Wzc-regulated capsule assembly", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Inner-membrane flippase that translocates lipid-linked capsule repeat units across the inner membrane in the Wzx/Wzy-dependent pathway.", "grounding": null, "id": "wzx_flippase", "is_orphan": false, "label": "Wzx flippase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 121, "evidence": [{"notes": "Supports Wzx flippase in capsule; UniProtKB:Q8ZNQ9 (wza, Putative polysaccharide export protein wza) in Salmonella typhimurium (strain LT2 / SGSC1412 / ATCC 700720) provides a verified protein exemplar.", "reference": "DOI:10.1146/annurev.micro.50.1.285", "snippet": "They can form an amorphous layer of extracellular polysaccharide (EPS) surrounding the cell that may be further organized into a distinct structure termed a capsule."}], "gene_symbol": "wza", "protein_label": "Putative polysaccharide export protein wza", "proteome_id": "UP000001014", "retrieved_on": "2026-10-17", "role": "Exemplar protein (wza, Putative polysaccharide export protein wza) representing Wzx flippase in Salmonella typhimurium (strain LT2 / SGSC1412 / ATCC 700720) for capsule.", "sequence_version": 1, "taxon_id": "NCBITaxon:99287", "taxon_label": "Salmonella typhimurium (strain LT2 / SGSC1412 / ATCC 700720)", "uniprot_id": "UniProtKB:Q8ZNQ9"}], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Polymerase that links capsule repeat units into a growing polysaccharide chain in the Wzx/Wzy-dependent pathway.", "grounding": null, "id": "wzy_polymerase", "is_orphan": false, "label": "Wzy polymerase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 24, "evidence": [{"notes": "Supports Wzy polymerase in capsule; UniProtKB:Q58YW1 (wzy, O-antigen polymerase) in Escherichia coli provides a verified protein exemplar.", "reference": "DOI:10.1146/annurev.micro.50.1.285", "snippet": "Discussed here are the genetics and biochemistry of selected bacterial capsular polysaccharides and the basis of capsule diversity but not the genetics and biochemistry of LPS biosynthesis (for reviews see 100, 140)."}], "gene_symbol": "wzy", "protein_label": "O-antigen polymerase", "retrieved_on": "2026-10-17", "role": "Exemplar protein (wzy, O-antigen polymerase) representing Wzy polymerase in Escherichia coli for capsule.", "sequence_version": 1, "taxon_id": "NCBITaxon:562", "taxon_label": "Escherichia coli", "uniprot_id": "UniProtKB:Q58YW1"}], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 121, "evidence": [{"notes": "Supports Wzx flippase in capsule; UniProtKB:Q8ZNQ9 (wza, Putative polysaccharide export protein wza) in Salmonella typhimurium (strain LT2 / SGSC1412 / ATCC 700720) provides a verified protein exemplar.", "reference": "DOI:10.1146/annurev.micro.50.1.285", "snippet": "They can form an amorphous layer of extracellular polysaccharide (EPS) surrounding the cell that may be further organized into a distinct structure termed a capsule."}], "gene_symbol": "wza", "node_id": "wzx_flippase", "node_label": "Wzx flippase", "protein_label": "Putative polysaccharide export protein wza", "proteome_id": "UP000001014", "retrieved_on": "2026-10-17", "role": "Exemplar protein (wza, Putative polysaccharide export protein wza) representing Wzx flippase in Salmonella typhimurium (strain LT2 / SGSC1412 / ATCC 700720) for capsule.", "sequence_version": 1, "taxon_id": "NCBITaxon:99287", "taxon_label": "Salmonella typhimurium (strain LT2 / SGSC1412 / ATCC 700720)", "uniprot_id": "UniProtKB:Q8ZNQ9"}, {"entry_status": "REVIEWED", "entry_version": 24, "evidence": [{"notes": "Supports Wzy polymerase in capsule; UniProtKB:Q58YW1 (wzy, O-antigen polymerase) in Escherichia coli provides a verified protein exemplar.", "reference": "DOI:10.1146/annurev.micro.50.1.285", "snippet": "Discussed here are the genetics and biochemistry of selected bacterial capsular polysaccharides and the basis of capsule diversity but not the genetics and biochemistry of LPS biosynthesis (for reviews see 100, 140)."}], "gene_symbol": "wzy", "node_id": "wzy_polymerase", "node_label": "Wzy polymerase", "protein_label": "O-antigen polymerase", "retrieved_on": "2026-10-17", "role": "Exemplar protein (wzy, O-antigen polymerase) representing Wzy polymerase in Escherichia coli for capsule.", "sequence_version": 1, "taxon_id": "NCBITaxon:562", "taxon_label": "Escherichia coli", "uniprot_id": "UniProtKB:Q58YW1"}, {"entry_status": "REVIEWED", "entry_version": 110, "evidence": [{"notes": "Supports Wza outer-membrane export protein in capsule; UniProtKB:P0A931 (wza, Putative polysaccharide export protein wza) in Escherichia coli O157:H7 provides a verified protein exemplar.", "reference": "DOI:10.1146/annurev.micro.50.1.285", "snippet": "They can form an amorphous layer of extracellular polysaccharide (EPS) surrounding the cell that may be further organized into a distinct structure termed a capsule."}], "gene_symbol": "wza", "node_id": "wza_export_protein", "node_label": "Wza outer-membrane export protein", "protein_label": "Putative polysaccharide export protein wza", "proteome_id": "UP000000558", "retrieved_on": "2026-10-17", "role": "Exemplar protein (wza, Putative polysaccharide export protein wza) representing Wza outer-membrane export protein in Escherichia coli O157:H7 for capsule.", "sequence_version": 1, "taxon_id": "NCBITaxon:83334", "taxon_label": "Escherichia coli O157:H7", "uniprot_id": "UniProtKB:P0A931"}, {"entry_status": "REVIEWED", "entry_version": 121, "evidence": [{"notes": "Supports KpsMT ABC transporter in capsule; UniProtKB:Q8ZNQ9 (wza, Putative polysaccharide export protein wza) in Salmonella typhimurium (strain LT2 / SGSC1412 / ATCC 700720) provides a verified protein exemplar.", "reference": "DOI:10.1146/annurev.micro.50.1.285", "snippet": "They can form an amorphous layer of extracellular polysaccharide (EPS) surrounding the cell that may be further organized into a distinct structure termed a capsule."}], "gene_symbol": "wza", "node_id": "kpsmt_abc_transporter", "node_label": "KpsMT ABC transporter", "protein_label": "Putative polysaccharide export protein wza", "proteome_id": "UP000001014", "retrieved_on": "2026-10-17", "role": "Exemplar protein (wza, Putative polysaccharide export protein wza) representing KpsMT ABC transporter in Salmonella typhimurium (strain LT2 / SGSC1412 / ATCC 700720) for capsule.", "sequence_version": 1, "taxon_id": "NCBITaxon:99287", "taxon_label": "Salmonella typhimurium (strain LT2 / SGSC1412 / ATCC 700720)", "uniprot_id": "UniProtKB:Q8ZNQ9"}], "scope_notes": "This record is a broad environmental or morphological classification spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement descriptor; contextual protein nodes include source-backed UniProtKB exemplars.", "scope_status": "NONMECHANISTIC", "title": "Capsule polysaccharide layer mediates adhesion and immune evasion"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking capsular polysaccharide biosynthesis to a surface polysaccharide layer that mediates adhesion, desiccation resistance, and immune evasion.", "edges": [{"description": "Capsule biosynthesis synthesizes and exports the high-MW capsular polysaccharide.", "evidence": [{"notes": "Whitfield reviews biosynthesis, export, and surface assembly of the capsular polysaccharide polymer.", "reference": "DOI:10.1146/annurev.biochem.75.103004.142545"}], "id": "edge-1", "is_orphan": false, "predicate": "produces", "predicate_id": "biolink:produces", "source": "capsule_assembly", "target": "capsular_polysaccharide"}, {"description": "Surface assembly of capsule polymers realizes the capsulated phenotype.", "evidence": [{"notes": "Whitfield reviews biosynthesis and assembly of capsular polysaccharides.", "reference": "DOI:10.1146/annurev.biochem.75.103004.142545"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "capsule_assembly", "target": "capsule_trait"}, {"description": "The capsule masks surface antigens and reduces phagocytic uptake.", "evidence": [{"notes": "Roberts frames capsular polysaccharide as an immune-evasion and adhesion structure.", "reference": "DOI:10.1146/annurev.micro.50.1.285"}], "id": "edge-3", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "capsule_trait", "target": "immune_evasion"}, {"description": "Wzx flippase turns the completed lipid-linked repeat unit outward across the inner membrane.", "evidence": [{"notes": "\"the complete repeat unit is turned outward by the Wzx flip enzyme\"; general Wzx/Wzy capsule biosynthesis, not taxon-specific.", "reference": "DOI:10.1038/s41522-024-00497-6"}], "id": "edge-4", "is_orphan": false, "predicate": "flips", "predicate_id": null, "source": "wzx_flippase", "target": "lipid_linked_repeat_unit"}, {"description": "Wzy polymerase attaches the growing chain to new repeat units, building the capsular polysaccharide.", "evidence": [{"notes": "\"the Wzy polymerase attaches the growing polymer chain to the newly formed repeat unit\"; general Wzx/Wzy pathway.", "reference": "DOI:10.1038/s41522-024-00497-6"}], "id": "edge-5", "is_orphan": false, "predicate": "polymerizes", "predicate_id": null, "source": "wzy_polymerase", "target": "capsular_polysaccharide"}, {"description": "The Wzb-catalyzed phosphorylation cycle of Wzc is a crucial step for capsule assembly.", "evidence": [{"notes": "\"The phosphorylation cycle of Wzc, catalyzed by Wzb, is a crucial step.\"; general capsule biosynthesis.", "reference": "DOI:10.1038/s41522-024-00497-6"}], "id": "edge-6", "is_orphan": false, "predicate": "required for", "predicate_id": null, "source": "wzb_phosphatase_cycle", "target": "wzc_capsule_assembly"}, {"description": "Wza translocates the assembled capsule polymer across the outer membrane.", "evidence": [{"notes": "\"The polymer translocates across the outer membrane via Wza\"; Wzx/Wzy-dependent pathway, broad mechanistic statement.", "reference": "DOI:10.1038/s41522-024-00497-6"}], "id": "edge-7", "is_orphan": false, "predicate": "exports", "predicate_id": "METPO:2007804", "source": "wza_export_protein", "target": "capsular_polysaccharide"}, {"description": "The KpsMT ABC transporter exports capsule polysaccharide chains across the inner membrane in the ABC-dependent pathway.", "evidence": [{"notes": "\"the ABC transporter (KpsMT) plays a pivotal role in exporting these chains\"; general ABC-dependent capsule export.", "reference": "DOI:10.1038/s41522-024-00497-6"}], "id": "edge-8", "is_orphan": false, "predicate": "exports", "predicate_id": "METPO:2007804", "source": "kpsmt_abc_transporter", "target": "capsular_polysaccharide"}], "evidence_rows": [{"description": "Capsule biosynthesis synthesizes and exports the high-MW capsular polysaccharide.", "edge_id": "edge-1", "evidence": [{"notes": "Whitfield reviews biosynthesis, export, and surface assembly of the capsular polysaccharide polymer.", "reference": "DOI:10.1146/annurev.biochem.75.103004.142545"}], "predicate": "produces", "predicate_id": "biolink:produces", "source": "capsular polysaccharide assembly", "source_grounding": null, "target": "capsular polysaccharide", "target_grounding": "CHEBI:3379"}, {"description": "Surface assembly of capsule polymers realizes the capsulated phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Whitfield reviews biosynthesis and assembly of capsular polysaccharides.", "reference": "DOI:10.1146/annurev.biochem.75.103004.142545"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "capsular polysaccharide assembly", "source_grounding": null, "target": "capsule", "target_grounding": "traitmech:000063"}, {"description": "The capsule masks surface antigens and reduces phagocytic uptake.", "edge_id": "edge-3", "evidence": [{"notes": "Roberts frames capsular polysaccharide as an immune-evasion and adhesion structure.", "reference": "DOI:10.1146/annurev.micro.50.1.285"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "capsule", "source_grounding": "traitmech:000063", "target": "host immune evasion", "target_grounding": null}, {"description": "Wzx flippase turns the completed lipid-linked repeat unit outward across the inner membrane.", "edge_id": "edge-4", "evidence": [{"notes": "\"the complete repeat unit is turned outward by the Wzx flip enzyme\"; general Wzx/Wzy capsule biosynthesis, not taxon-specific.", "reference": "DOI:10.1038/s41522-024-00497-6"}], "predicate": "flips", "predicate_id": null, "source": "Wzx flippase", "source_grounding": null, "target": "lipid-linked capsule repeat unit", "target_grounding": null}, {"description": "Wzy polymerase attaches the growing chain to new repeat units, building the capsular polysaccharide.", "edge_id": "edge-5", "evidence": [{"notes": "\"the Wzy polymerase attaches the growing polymer chain to the newly formed repeat unit\"; general Wzx/Wzy pathway.", "reference": "DOI:10.1038/s41522-024-00497-6"}], "predicate": "polymerizes", "predicate_id": null, "source": "Wzy polymerase", "source_grounding": null, "target": "capsular polysaccharide", "target_grounding": "CHEBI:3379"}, {"description": "The Wzb-catalyzed phosphorylation cycle of Wzc is a crucial step for capsule assembly.", "edge_id": "edge-6", "evidence": [{"notes": "\"The phosphorylation cycle of Wzc, catalyzed by Wzb, is a crucial step.\"; general capsule biosynthesis.", "reference": "DOI:10.1038/s41522-024-00497-6"}], "predicate": "required for", "predicate_id": null, "source": "Wzb phosphatase cycle", "source_grounding": null, "target": "Wzc-regulated capsule assembly", "target_grounding": null}, {"description": "Wza translocates the assembled capsule polymer across the outer membrane.", "edge_id": "edge-7", "evidence": [{"notes": "\"The polymer translocates across the outer membrane via Wza\"; Wzx/Wzy-dependent pathway, broad mechanistic statement.", "reference": "DOI:10.1038/s41522-024-00497-6"}], "predicate": "exports", "predicate_id": "METPO:2007804", "source": "Wza outer-membrane export protein", "source_grounding": null, "target": "capsular polysaccharide", "target_grounding": "CHEBI:3379"}, {"description": "The KpsMT ABC transporter exports capsule polysaccharide chains across the inner membrane in the ABC-dependent pathway.", "edge_id": "edge-8", "evidence": [{"notes": "\"the ABC transporter (KpsMT) plays a pivotal role in exporting these chains\"; general ABC-dependent capsule export.", "reference": "DOI:10.1038/s41522-024-00497-6"}], "predicate": "exports", "predicate_id": "METPO:2007804", "source": "KpsMT ABC transporter", "source_grounding": null, "target": "capsular polysaccharide", "target_grounding": "CHEBI:3379"}], "graph_id": "capsule_polysaccharide_protection", "issues": [], "nodes": [{"color": "#fef3c7", "description": "High-MW (often acidic) polysaccharide attached external to the cell envelope.", "grounding": "CHEBI:3379", "id": "capsular_polysaccharide", "is_orphan": false, "label": "capsular polysaccharide", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Synthesis, export, and surface assembly of capsule polymers.", "grounding": null, "id": "capsule_assembly", "is_orphan": false, "label": "capsular polysaccharide assembly", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a well-organized external polysaccharide layer.", "grounding": "traitmech:000063", "id": "capsule_trait", "is_orphan": false, "label": "capsule", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Reduced recognition and clearance by host innate immunity.", "grounding": null, "id": "immune_evasion", "is_orphan": false, "label": "host immune evasion", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "ATP-binding cassette transporter that exports capsule polysaccharide chains across the inner membrane in the ABC-dependent pathway.", "grounding": null, "id": "kpsmt_abc_transporter", "is_orphan": false, "label": "KpsMT ABC transporter", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Undecaprenyl-linked oligosaccharide repeat unit assembled on the cytoplasmic face of the inner membrane.", "grounding": null, "id": "lipid_linked_repeat_unit", "is_orphan": false, "label": "lipid-linked capsule repeat unit", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Outer-membrane polysaccharide export protein that translocates capsule polymer across the outer membrane.", "grounding": null, "id": "wza_export_protein", "is_orphan": false, "label": "Wza outer-membrane export protein", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Wzb-catalyzed phosphorylation/dephosphorylation cycle of the Wzc tyrosine autokinase regulating capsule assembly.", "grounding": null, "id": "wzb_phosphatase_cycle", "is_orphan": false, "label": "Wzb phosphatase cycle", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Capsule polymerization and export controlled by the Wzc polysaccharide copolymerase/tyrosine autokinase.", "grounding": null, "id": "wzc_capsule_assembly", "is_orphan": false, "label": "Wzc-regulated capsule assembly", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Inner-membrane flippase that translocates lipid-linked capsule repeat units across the inner membrane in the Wzx/Wzy-dependent pathway.", "grounding": null, "id": "wzx_flippase", "is_orphan": false, "label": "Wzx flippase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Polymerase that links capsule repeat units into a growing polysaccharide chain in the Wzx/Wzy-dependent pathway.", "grounding": null, "id": "wzy_polymerase", "is_orphan": false, "label": "Wzy polymerase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This record is a broad environmental or morphological classification spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement descriptor; contextual protein nodes do not receive token UniProt examples.", "scope_status": "NONMECHANISTIC", "title": "Capsule polysaccharide layer mediates adhesion and immune evasion"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -1080,13 +1107,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-10-17 09:00 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

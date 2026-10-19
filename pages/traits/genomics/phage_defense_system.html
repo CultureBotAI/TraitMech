@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/genomics.html">GENOMICS</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/genomics.html">GENOMICS</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>phage defense system</h1>
     <p class="curie"><code>traitmech:000209</code> · CLASS · PROPOSED</p>
 
@@ -103,9 +114,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>bacteriophage pressure</strong>
+
             <span class="edge-predicate">selects for</span>
             <strong>phage defense system</strong>
-            <code>METPO:2007401</code>
+            <code>traitmech:000209</code>
+            <a href="https://w3id.org/metpo/2007401" rel="nofollow noreferrer"><code>METPO:2007401</code></a>
             <p>Virus-host arms races select for microbial antiviral defense mechanisms.</p>
             <ul>
 
@@ -120,8 +133,10 @@
 
           <li id="pathograph-1-edge-2">
             <strong>CRISPR-Cas system</strong>
+            <code>traitmech:000094</code>
             <span class="edge-predicate">is a</span>
             <strong>phage defense system</strong>
+            <code>traitmech:000209</code>
             <code>rdfs:subClassOf</code>
             <p>CRISPR-Cas possession is an adaptive phage-defense system.</p>
             <ul>
@@ -137,8 +152,10 @@
 
           <li id="pathograph-1-edge-3">
             <strong>restriction-modification system</strong>
+            <code>traitmech:000095</code>
             <span class="edge-predicate">is a</span>
             <strong>phage defense system</strong>
+            <code>traitmech:000209</code>
             <code>rdfs:subClassOf</code>
             <p>Restriction-modification possession is an innate phage-defense system.</p>
             <ul>
@@ -805,11 +822,75 @@
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
 
-      <p class="no-match">No kg-microbe node embedding matched this record
-        in the 2026-04-25 deepwalk.</p>
+      <p class="match-method">Matched <strong>1</strong>
+        kg-microbe node
+        via <em>parent_proxy</em>.</p>
+      <ul class="kgm-nodes">
+
+        <li><code>METPO:1000188</code> <span class="dim-preview">[-0.956, -1.962, -3.148, +1.274, …]</span></li>
+
+      </ul>
+      <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
 
     </div>
 
+
+    <div class="card">
+      <h2>Nearest neighbors in embedding space</h2>
+      <p class="meta">Top-8 cosine-similar METPO traits
+        from the 2026-04-25 deepwalk (512-D).</p>
+      <ul class="nn-list">
+
+        <li>
+          <span class="nn-cat">upper</span>
+          <a href="../../traits/upper/quality.html">quality</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hna_system.html">Hna system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hma_system.html">Hma system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hesat_system.html">Hesat system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_08_system.html">HEC-08 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_07_system.html">HEC-07 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_06_system.html">HEC-06 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_05_system.html">HEC-05 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+      </ul>
+    </div>
 
 
 
@@ -941,6 +1022,11 @@
     </dl>
   </div>
 
+
+  <div class="card rail-kgm">
+    <h2>kg-microbe</h2>
+    <p class="meta">1 matching node (parent_proxy)</p>
+  </div>
 
 </aside>
 </div>
@@ -1274,7 +1360,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed ontology sketch linking phage pressure to the umbrella phage-defense-system trait and its reviewed CRISPR-Cas and restriction-modification children.", "edges": [{"description": "Virus-host arms races select for microbial antiviral defense mechanisms.", "evidence": [{"notes": "Bernheim and Sorek frame bacteriophages and bacterial hosts as engaged in an evolutionary arms race.", "reference": "DOI:10.1038/s41579-019-0278-2", "snippet": "constant arms race leading to the evolution of antiviral defence mechanisms"}], "id": "edge-1", "is_orphan": false, "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "bacteriophage_pressure", "target": "phage_defense_system_trait"}, {"description": "CRISPR-Cas possession is an adaptive phage-defense system.", "evidence": [{"notes": "The Science article summary for Doron et al. places CRISPR systems among the recognized microbial defense arsenals.", "reference": "DOI:10.1126/science.aar4120", "snippet": "well-known defense arsenals such as restriction-modification and CRISPR systems"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "crispr_cas_system", "target": "phage_defense_system_trait"}, {"description": "Restriction-modification possession is an innate phage-defense system.", "evidence": [{"notes": "The Science article summary for Doron et al. places restriction-modification systems among the recognized microbial defense arsenals.", "reference": "DOI:10.1126/science.aar4120", "snippet": "well-known defense arsenals such as restriction-modification and CRISPR systems"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "restriction_modification_system", "target": "phage_defense_system_trait"}, {"description": "Endonuclease GajA (gajA, UniProtKB:P0DW47) contributes to phage defense system.", "evidence": [{"notes": "Supports the functional association between Endonuclease GajA (UniProtKB:P0DW47 in Bacillus cereus (strain HuB5-5)) and phage defense system.", "reference": "DOI:10.1038/s41586-019-1894-8", "snippet": "Here we review the spectrum of anti-phage systems and highlight their evasion by bacteriophages"}], "id": "edge-4", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "phage_defense_system_protein_component", "target": "phage_defense_system_trait"}], "evidence_rows": [{"description": "Virus-host arms races select for microbial antiviral defense mechanisms.", "edge_id": "edge-1", "evidence": [{"notes": "Bernheim and Sorek frame bacteriophages and bacterial hosts as engaged in an evolutionary arms race.", "reference": "DOI:10.1038/s41579-019-0278-2", "snippet": "constant arms race leading to the evolution of antiviral defence mechanisms"}], "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "bacteriophage pressure", "target": "phage defense system"}, {"description": "CRISPR-Cas possession is an adaptive phage-defense system.", "edge_id": "edge-2", "evidence": [{"notes": "The Science article summary for Doron et al. places CRISPR systems among the recognized microbial defense arsenals.", "reference": "DOI:10.1126/science.aar4120", "snippet": "well-known defense arsenals such as restriction-modification and CRISPR systems"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "CRISPR-Cas system", "target": "phage defense system"}, {"description": "Restriction-modification possession is an innate phage-defense system.", "edge_id": "edge-3", "evidence": [{"notes": "The Science article summary for Doron et al. places restriction-modification systems among the recognized microbial defense arsenals.", "reference": "DOI:10.1126/science.aar4120", "snippet": "well-known defense arsenals such as restriction-modification and CRISPR systems"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "restriction-modification system", "target": "phage defense system"}, {"description": "Endonuclease GajA (gajA, UniProtKB:P0DW47) contributes to phage defense system.", "edge_id": "edge-4", "evidence": [{"notes": "Supports the functional association between Endonuclease GajA (UniProtKB:P0DW47 in Bacillus cereus (strain HuB5-5)) and phage defense system.", "reference": "DOI:10.1038/s41586-019-1894-8", "snippet": "Here we review the spectrum of anti-phage systems and highlight their evasion by bacteriophages"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Endonuclease GajA", "target": "phage defense system"}], "graph_id": "phage_defense_system_hierarchy", "issues": [], "nodes": [{"color": "#dcfce7", "description": "Selective pressure imposed by bacteriophage infection.", "grounding": null, "id": "bacteriophage_pressure", "is_orphan": false, "label": "bacteriophage pressure", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Adaptive immune system using CRISPR arrays and Cas proteins to recognize invading nucleic acids.", "grounding": "traitmech:000094", "id": "crispr_cas_system", "is_orphan": false, "label": "CRISPR-Cas system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Protein component (Endonuclease GajA) associated with phage defense system.", "grounding": null, "id": "phage_defense_system_protein_component", "is_orphan": false, "label": "Endonuclease GajA", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 12, "evidence": [{"notes": "Supports Endonuclease GajA in phage defense system; UniProtKB:P0DW47 (gajA, Endonuclease GajA) in Bacillus cereus (strain HuB5-5) provides a verified protein exemplar.", "reference": "DOI:10.1038/s41586-019-1894-8", "snippet": "Here we review the spectrum of anti-phage systems and highlight their evasion by bacteriophages"}], "gene_symbol": "gajA", "protein_label": "Endonuclease GajA", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (gajA, Endonuclease GajA) associated with phage defense system in Bacillus cereus (strain HuB5-5).", "sequence_version": 1, "taxon_id": "NCBITaxon:1053212", "taxon_label": "Bacillus cereus (strain HuB5-5)", "uniprot_id": "UniProtKB:P0DW47"}], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of one or more genome-encoded immune systems that inhibit bacteriophage infection.", "grounding": "traitmech:000209", "id": "phage_defense_system_trait", "is_orphan": false, "label": "phage defense system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Paired methyltransferase and restriction-endonuclease system for self/non-self DNA discrimination.", "grounding": "traitmech:000095", "id": "restriction_modification_system", "is_orphan": false, "label": "restriction-modification system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 12, "evidence": [{"notes": "Supports Endonuclease GajA in phage defense system; UniProtKB:P0DW47 (gajA, Endonuclease GajA) in Bacillus cereus (strain HuB5-5) provides a verified protein exemplar.", "reference": "DOI:10.1038/s41586-019-1894-8", "snippet": "Here we review the spectrum of anti-phage systems and highlight their evasion by bacteriophages"}], "gene_symbol": "gajA", "node_id": "phage_defense_system_protein_component", "node_label": "Endonuclease GajA", "protein_label": "Endonuclease GajA", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (gajA, Endonuclease GajA) associated with phage defense system in Bacillus cereus (strain HuB5-5).", "sequence_version": 1, "taxon_id": "NCBITaxon:1053212", "taxon_label": "Bacillus cereus (strain HuB5-5)", "uniprot_id": "UniProtKB:P0DW47"}], "scope_notes": "This parent trait groups independently reviewed genome-level anti-phage defense systems without claiming that CRISPR-Cas, restriction-modification, BREX, DISARM, abortive infection, or other defense families share one universal molecular mechanism.", "scope_status": "NONMECHANISTIC", "title": "Antiphage defense systems resist viral challenge"}];
+  var graphs = [{"description": "Evidence-backed ontology sketch linking phage pressure to the umbrella phage-defense-system trait and its reviewed CRISPR-Cas and restriction-modification children.", "edges": [{"description": "Virus-host arms races select for microbial antiviral defense mechanisms.", "evidence": [{"notes": "Bernheim and Sorek frame bacteriophages and bacterial hosts as engaged in an evolutionary arms race.", "reference": "DOI:10.1038/s41579-019-0278-2", "snippet": "constant arms race leading to the evolution of antiviral defence mechanisms"}], "id": "edge-1", "is_orphan": false, "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "bacteriophage_pressure", "target": "phage_defense_system_trait"}, {"description": "CRISPR-Cas possession is an adaptive phage-defense system.", "evidence": [{"notes": "The Science article summary for Doron et al. places CRISPR systems among the recognized microbial defense arsenals.", "reference": "DOI:10.1126/science.aar4120", "snippet": "well-known defense arsenals such as restriction-modification and CRISPR systems"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "crispr_cas_system", "target": "phage_defense_system_trait"}, {"description": "Restriction-modification possession is an innate phage-defense system.", "evidence": [{"notes": "The Science article summary for Doron et al. places restriction-modification systems among the recognized microbial defense arsenals.", "reference": "DOI:10.1126/science.aar4120", "snippet": "well-known defense arsenals such as restriction-modification and CRISPR systems"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "restriction_modification_system", "target": "phage_defense_system_trait"}], "evidence_rows": [{"description": "Virus-host arms races select for microbial antiviral defense mechanisms.", "edge_id": "edge-1", "evidence": [{"notes": "Bernheim and Sorek frame bacteriophages and bacterial hosts as engaged in an evolutionary arms race.", "reference": "DOI:10.1038/s41579-019-0278-2", "snippet": "constant arms race leading to the evolution of antiviral defence mechanisms"}], "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "bacteriophage pressure", "source_grounding": null, "target": "phage defense system", "target_grounding": "traitmech:000209"}, {"description": "CRISPR-Cas possession is an adaptive phage-defense system.", "edge_id": "edge-2", "evidence": [{"notes": "The Science article summary for Doron et al. places CRISPR systems among the recognized microbial defense arsenals.", "reference": "DOI:10.1126/science.aar4120", "snippet": "well-known defense arsenals such as restriction-modification and CRISPR systems"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "CRISPR-Cas system", "source_grounding": "traitmech:000094", "target": "phage defense system", "target_grounding": "traitmech:000209"}, {"description": "Restriction-modification possession is an innate phage-defense system.", "edge_id": "edge-3", "evidence": [{"notes": "The Science article summary for Doron et al. places restriction-modification systems among the recognized microbial defense arsenals.", "reference": "DOI:10.1126/science.aar4120", "snippet": "well-known defense arsenals such as restriction-modification and CRISPR systems"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "restriction-modification system", "source_grounding": "traitmech:000095", "target": "phage defense system", "target_grounding": "traitmech:000209"}], "graph_id": "phage_defense_system_hierarchy", "issues": [], "nodes": [{"color": "#dcfce7", "description": "Selective pressure imposed by bacteriophage infection.", "grounding": null, "id": "bacteriophage_pressure", "is_orphan": false, "label": "bacteriophage pressure", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Adaptive immune system using CRISPR arrays and Cas proteins to recognize invading nucleic acids.", "grounding": "traitmech:000094", "id": "crispr_cas_system", "is_orphan": false, "label": "CRISPR-Cas system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of one or more genome-encoded immune systems that inhibit bacteriophage infection.", "grounding": "traitmech:000209", "id": "phage_defense_system_trait", "is_orphan": false, "label": "phage defense system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Paired methyltransferase and restriction-endonuclease system for self/non-self DNA discrimination.", "grounding": "traitmech:000095", "id": "restriction_modification_system", "is_orphan": false, "label": "restriction-modification system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This parent trait groups independently reviewed genome-level anti-phage defense systems without claiming that CRISPR-Cas, restriction-modification, BREX, DISARM, abortive infection, or other defense families share one universal molecular mechanism.", "scope_status": "NONMECHANISTIC", "title": "Antiphage defense systems resist viral challenge"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -1294,13 +1380,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-10-17 09:00 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

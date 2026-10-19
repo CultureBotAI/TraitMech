@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/morphology.html">MORPHOLOGY</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/morphology.html">MORPHOLOGY</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>gram variable</h1>
     <p class="curie"><code>METPO:1000700</code> · CLASS · REVIEWED</p>
 
@@ -79,9 +90,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>culture aging</strong>
+
             <span class="edge-predicate">regulates</span>
             <strong>peptidoglycan thinning</strong>
-            <code>RO:0002211</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002211" rel="nofollow noreferrer"><code>RO:0002211</code></a>
             <p>Aging cultures undergo cell-wall thinning via autolysis.</p>
             <ul>
 
@@ -96,9 +109,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>peptidoglycan thinning</strong>
+
             <span class="edge-predicate">causes</span>
             <strong>crystal-violet retention loss</strong>
-            <code>biolink:causes</code>
+
+            <a href="https://w3id.org/biolink/vocab/causes" rel="nofollow noreferrer"><code>biolink:causes</code></a>
             <p>Thinned peptidoglycan no longer retains the gram-stain dye.</p>
             <ul>
 
@@ -113,9 +128,11 @@
 
           <li id="pathograph-1-edge-3">
             <strong>crystal-violet retention loss</strong>
+
             <span class="edge-predicate">has output</span>
             <strong>mixed-population gram staining</strong>
-            <code>RO:0002234</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002234" rel="nofollow noreferrer"><code>RO:0002234</code></a>
             <p>Subpopulations with reduced dye retention appear gram-negative alongside intact gram-positive cells.</p>
             <ul>
 
@@ -130,9 +147,11 @@
 
           <li id="pathograph-1-edge-4">
             <strong>mixed-population gram staining</strong>
+
             <span class="edge-predicate">manifests as</span>
             <strong>gram variable</strong>
-            <code>METPO:2007400</code>
+            <a href="https://w3id.org/metpo/1000700" rel="nofollow noreferrer"><code>METPO:1000700</code></a>
+            <a href="https://w3id.org/metpo/2007400" rel="nofollow noreferrer"><code>METPO:2007400</code></a>
             <p>Mixed staining manifests the gram-variable trait.</p>
             <ul>
 
@@ -147,8 +166,10 @@
 
           <li id="pathograph-1-edge-5">
             <strong>thin peptidoglycan layer</strong>
+
             <span class="edge-predicate">results in</span>
             <strong>gram-negative staining</strong>
+
 
             <p>A thin peptidoglycan layer can yield a gram-negative staining result even in monoderm bacteria.</p>
             <ul>
@@ -164,9 +185,11 @@
 
           <li id="pathograph-1-edge-6">
             <strong>thin peptidoglycan layer</strong>
+
             <span class="edge-predicate">decreases</span>
             <strong>CV-iodide complex retention</strong>
-            <code>RO:0002212</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002212" rel="nofollow noreferrer"><code>RO:0002212</code></a>
             <p>A thin peptidoglycan layer reduces retention of the crystal-violet-iodide complex, the core staining-chemistry determinant.</p>
             <ul>
 
@@ -181,9 +204,11 @@
 
           <li id="pathograph-1-edge-7">
             <strong>CV-iodide complex retention</strong>
+
             <span class="edge-predicate">regulates</span>
             <strong>crystal-violet retention loss</strong>
-            <code>RO:0002211</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002211" rel="nofollow noreferrer"><code>RO:0002211</code></a>
             <p>Reduced CV-iodide complex retention drives loss of crystal-violet retention.</p>
             <ul>
 
@@ -198,9 +223,11 @@
 
           <li id="pathograph-1-edge-8">
             <strong>cell wall-deficient forms</strong>
+
             <span class="edge-predicate">produces</span>
             <strong>mixed-population gram staining</strong>
-            <code>METPO:2007800</code>
+
+            <a href="https://w3id.org/metpo/2007800" rel="nofollow noreferrer"><code>METPO:2007800</code></a>
             <p>Stress-induced cell wall-deficient forms can produce mixed gram reactions within a single culture.</p>
             <ul>
 
@@ -357,45 +384,45 @@
         </li>
 
         <li>
-          <span class="nn-cat">physiology</span>
-          <a href="../../traits/physiology/bioluminescence.html">bioluminescence</a>
-          <span class="sim">0.754</span>
+          <span class="nn-cat">other</span>
+          <a href="../../traits/other/indole_test_positive.html">indole test positive</a>
+          <span class="sim">0.802</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/pressure_delta.html">pressure delta</a>
-          <span class="sim">0.754</span>
+          <span class="nn-cat">other</span>
+          <a href="../../traits/other/indole_test_negative.html">indole test negative</a>
+          <span class="sim">0.799</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/piezotolerant.html">piezotolerant</a>
-          <span class="sim">0.754</span>
+          <span class="nn-cat">other</span>
+          <a href="../../traits/other/voges_proskauer_test.html">Voges-Proskauer test</a>
+          <span class="sim">0.794</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/piezophilic.html">piezophilic</a>
-          <span class="sim">0.754</span>
+          <span class="nn-cat">other</span>
+          <a href="../../traits/other/voges_proskauer_test_positive.html">Voges-Proskauer test positive</a>
+          <span class="sim">0.791</span>
         </li>
 
         <li>
-          <span class="nn-cat">physiology</span>
-          <a href="../../traits/physiology/antibiotic_resistance.html">antibiotic resistance</a>
-          <span class="sim">0.754</span>
+          <span class="nn-cat">other</span>
+          <a href="../../traits/other/indole_test.html">indole test</a>
+          <span class="sim">0.790</span>
         </li>
 
         <li>
-          <span class="nn-cat">physiology</span>
-          <a href="../../traits/physiology/catalase_activity.html">catalase activity</a>
-          <span class="sim">0.754</span>
+          <span class="nn-cat">other</span>
+          <a href="../../traits/other/methyl_red_test.html">methyl red test</a>
+          <span class="sim">0.790</span>
         </li>
 
         <li>
-          <span class="nn-cat">physiology</span>
-          <a href="../../traits/physiology/chemotaxis.html">chemotaxis</a>
-          <span class="sim">0.754</span>
+          <span class="nn-cat">other</span>
+          <a href="../../traits/other/voges_proskauer_test_negative.html">Voges-Proskauer test negative</a>
+          <span class="sim">0.789</span>
         </li>
 
       </ul>
@@ -987,7 +1014,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking culture-age-dependent peptidoglycan thinning and autolysis to inconsistent gram-staining within a single bacterial population.", "edges": [{"description": "Aging cultures undergo cell-wall thinning via autolysis.", "evidence": [{"notes": "Supports autolysis-driven peptidoglycan thinning in aging cultures.", "reference": "DOI:10.1128/CMR.00043-07", "snippet": "autolysis"}], "id": "edge-1", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "culture_aging", "target": "peptidoglycan_thinning"}, {"description": "Thinned peptidoglycan no longer retains the gram-stain dye.", "evidence": [{"notes": "Supports peptidoglycan thickness as the determinant of crystal-violet retention in the gram-stain protocol.", "reference": "DOI:10.1128/CMR.00043-07", "snippet": "crystal violet"}], "id": "edge-2", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "peptidoglycan_thinning", "target": "crystal_violet_retention_loss"}, {"description": "Subpopulations with reduced dye retention appear gram-negative alongside intact gram-positive cells.", "evidence": [{"notes": "Supports differential decolorization producing mixed staining within a single culture.", "reference": "DOI:10.1128/CMR.00043-07", "snippet": "decolorization"}], "id": "edge-3", "is_orphan": false, "predicate": "has output", "predicate_id": "RO:0002234", "source": "crystal_violet_retention_loss", "target": "mixed_staining"}, {"description": "Mixed staining manifests the gram-variable trait.", "evidence": [{"notes": "Supports the Gram-variable phenotype as the trait endpoint of heterogeneous staining.", "reference": "DOI:10.1128/CMR.00043-07", "snippet": "Gram-variable"}], "id": "edge-4", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "mixed_staining", "target": "gram_variable_trait"}, {"description": "A thin peptidoglycan layer can yield a gram-negative staining result even in monoderm bacteria.", "evidence": [{"notes": "certain bacteria can stain Gram-negative despite having a monoderm cell wall structure", "reference": "DOI:10.1128/spectrum.00732-24"}], "id": "edge-5", "is_orphan": false, "predicate": "results in", "predicate_id": null, "source": "thin_peptidoglycan_layer", "target": "gram_negative_staining"}, {"description": "A thin peptidoglycan layer reduces retention of the crystal-violet-iodide complex, the core staining-chemistry determinant.", "evidence": [{"notes": "to retain the CV-iodide complex, resulting in the loss of the CV", "reference": "DOI:10.1128/spectrum.00732-24"}], "id": "edge-6", "is_orphan": false, "predicate": "decreases", "predicate_id": "RO:0002212", "source": "thin_peptidoglycan_layer", "target": "cv_iodide_complex_retention"}, {"description": "Reduced CV-iodide complex retention drives loss of crystal-violet retention.", "evidence": [{"notes": "Reduced CV-iodide complex retention underlies the loss of crystal violet during decolorization.", "reference": "DOI:10.1128/spectrum.00732-24"}], "id": "edge-7", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "cv_iodide_complex_retention", "target": "crystal_violet_retention_loss"}, {"description": "Stress-induced cell wall-deficient forms can produce mixed gram reactions within a single culture.", "evidence": [{"notes": "mechanisms that can produce cell-wall alterations or loss that would lead to mixed Gram reactions in a single culture", "reference": "DOI:10.1101/2023.11.16.566987"}], "id": "edge-8", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2007800", "source": "cell_wall_deficient_forms", "target": "mixed_staining"}, {"description": "N-acetylmuramoyl-L-alanine amidase AmiA (amiA, UniProtKB:P36548) contributes to gram variable.", "evidence": [{"notes": "Supports the functional association between N-acetylmuramoyl-L-alanine amidase AmiA (UniProtKB:P36548 in Escherichia coli (strain K12)) and gram variable.", "reference": "PMID:1689718", "snippet": "These gram-variable bacteria could be split into two groups on the basis of their staining responses."}], "id": "edge-9", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "gram_variable_protein_component", "target": "gram_variable_trait"}], "evidence_rows": [{"description": "Aging cultures undergo cell-wall thinning via autolysis.", "edge_id": "edge-1", "evidence": [{"notes": "Supports autolysis-driven peptidoglycan thinning in aging cultures.", "reference": "DOI:10.1128/CMR.00043-07", "snippet": "autolysis"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "culture aging", "target": "peptidoglycan thinning"}, {"description": "Thinned peptidoglycan no longer retains the gram-stain dye.", "edge_id": "edge-2", "evidence": [{"notes": "Supports peptidoglycan thickness as the determinant of crystal-violet retention in the gram-stain protocol.", "reference": "DOI:10.1128/CMR.00043-07", "snippet": "crystal violet"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "peptidoglycan thinning", "target": "crystal-violet retention loss"}, {"description": "Subpopulations with reduced dye retention appear gram-negative alongside intact gram-positive cells.", "edge_id": "edge-3", "evidence": [{"notes": "Supports differential decolorization producing mixed staining within a single culture.", "reference": "DOI:10.1128/CMR.00043-07", "snippet": "decolorization"}], "predicate": "has output", "predicate_id": "RO:0002234", "source": "crystal-violet retention loss", "target": "mixed-population gram staining"}, {"description": "Mixed staining manifests the gram-variable trait.", "edge_id": "edge-4", "evidence": [{"notes": "Supports the Gram-variable phenotype as the trait endpoint of heterogeneous staining.", "reference": "DOI:10.1128/CMR.00043-07", "snippet": "Gram-variable"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "mixed-population gram staining", "target": "gram variable"}, {"description": "A thin peptidoglycan layer can yield a gram-negative staining result even in monoderm bacteria.", "edge_id": "edge-5", "evidence": [{"notes": "certain bacteria can stain Gram-negative despite having a monoderm cell wall structure", "reference": "DOI:10.1128/spectrum.00732-24"}], "predicate": "results in", "predicate_id": null, "source": "thin peptidoglycan layer", "target": "gram-negative staining"}, {"description": "A thin peptidoglycan layer reduces retention of the crystal-violet-iodide complex, the core staining-chemistry determinant.", "edge_id": "edge-6", "evidence": [{"notes": "to retain the CV-iodide complex, resulting in the loss of the CV", "reference": "DOI:10.1128/spectrum.00732-24"}], "predicate": "decreases", "predicate_id": "RO:0002212", "source": "thin peptidoglycan layer", "target": "CV-iodide complex retention"}, {"description": "Reduced CV-iodide complex retention drives loss of crystal-violet retention.", "edge_id": "edge-7", "evidence": [{"notes": "Reduced CV-iodide complex retention underlies the loss of crystal violet during decolorization.", "reference": "DOI:10.1128/spectrum.00732-24"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "CV-iodide complex retention", "target": "crystal-violet retention loss"}, {"description": "Stress-induced cell wall-deficient forms can produce mixed gram reactions within a single culture.", "edge_id": "edge-8", "evidence": [{"notes": "mechanisms that can produce cell-wall alterations or loss that would lead to mixed Gram reactions in a single culture", "reference": "DOI:10.1101/2023.11.16.566987"}], "predicate": "produces", "predicate_id": "METPO:2007800", "source": "cell wall-deficient forms", "target": "mixed-population gram staining"}, {"description": "N-acetylmuramoyl-L-alanine amidase AmiA (amiA, UniProtKB:P36548) contributes to gram variable.", "edge_id": "edge-9", "evidence": [{"notes": "Supports the functional association between N-acetylmuramoyl-L-alanine amidase AmiA (UniProtKB:P36548 in Escherichia coli (strain K12)) and gram variable.", "reference": "PMID:1689718", "snippet": "These gram-variable bacteria could be split into two groups on the basis of their staining responses."}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "N-acetylmuramoyl-L-alanine amidase AmiA", "target": "gram variable"}], "graph_id": "gram_variable_wall_thinning", "issues": [], "nodes": [{"color": "#f3f4f6", "description": "Stress-induced bacterial cells with reduced or absent cell wall (e.g., L-forms, CWD coccoid forms).", "grounding": null, "id": "cell_wall_deficient_forms", "is_orphan": false, "label": "cell wall-deficient forms", "node_type": "STATE", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Loss of the thick PG layer required to retain the gram-stain dye.", "grounding": null, "id": "crystal_violet_retention_loss", "is_orphan": false, "label": "crystal-violet retention loss", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Stationary-phase or post-exponential growth conditions promoting cell-wall remodeling.", "grounding": null, "id": "culture_aging", "is_orphan": false, "label": "culture aging", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Trapping of the crystal-violet-iodide complex within the peptidoglycan layer during gram staining.", "grounding": null, "id": "cv_iodide_complex_retention", "is_orphan": false, "label": "CV-iodide complex retention", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Loss of crystal violet and counterstain uptake giving a gram-negative appearance.", "grounding": null, "id": "gram_negative_staining", "is_orphan": false, "label": "gram-negative staining", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Protein component (N-acetylmuramoyl-L-alanine amidase AmiA) associated with gram variable.", "grounding": "InterPro:IPR002508", "id": "gram_variable_protein_component", "is_orphan": false, "label": "N-acetylmuramoyl-L-alanine amidase AmiA", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 168, "evidence": [{"notes": "Supports N-acetylmuramoyl-L-alanine amidase AmiA in gram variable; UniProtKB:P36548 (amiA, N-acetylmuramoyl-L-alanine amidase AmiA) in Escherichia coli (strain K12) provides a verified protein exemplar.", "reference": "PMID:1689718", "snippet": "These gram-variable bacteria could be split into two groups on the basis of their staining responses."}], "gene_symbol": "amiA", "protein_label": "N-acetylmuramoyl-L-alanine amidase AmiA", "proteome_id": "UP000000625", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (amiA, N-acetylmuramoyl-L-alanine amidase AmiA) associated with gram variable in Escherichia coli (strain K12).", "sequence_version": 1, "taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli (strain K12)", "uniprot_id": "UniProtKB:P36548"}], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Mixed gram-positive and gram-negative staining within a single culture.", "grounding": "METPO:1000700", "id": "gram_variable_trait", "is_orphan": false, "label": "gram variable", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Co-existence of gram-positive and gram-negative-staining cells in the same culture.", "grounding": null, "id": "mixed_staining", "is_orphan": false, "label": "mixed-population gram staining", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Cell-wall degradation or thinning due to autolysis or stress.", "grounding": null, "id": "peptidoglycan_thinning", "is_orphan": false, "label": "peptidoglycan thinning", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ede9fe", "description": "A reduced-thickness peptidoglycan sacculus, as in some monoderm bacteria.", "grounding": null, "id": "thin_peptidoglycan_layer", "is_orphan": false, "label": "thin peptidoglycan layer", "node_type": "CELLULAR_LOCALIZATION", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 168, "evidence": [{"notes": "Supports N-acetylmuramoyl-L-alanine amidase AmiA in gram variable; UniProtKB:P36548 (amiA, N-acetylmuramoyl-L-alanine amidase AmiA) in Escherichia coli (strain K12) provides a verified protein exemplar.", "reference": "PMID:1689718", "snippet": "These gram-variable bacteria could be split into two groups on the basis of their staining responses."}], "gene_symbol": "amiA", "node_id": "gram_variable_protein_component", "node_label": "N-acetylmuramoyl-L-alanine amidase AmiA", "protein_label": "N-acetylmuramoyl-L-alanine amidase AmiA", "proteome_id": "UP000000625", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (amiA, N-acetylmuramoyl-L-alanine amidase AmiA) associated with gram variable in Escherichia coli (strain K12).", "sequence_version": 1, "taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli (strain K12)", "uniprot_id": "UniProtKB:P36548"}], "scope_notes": "Gram variability is a culture-state staining outcome rather than a stable protein-mediated trait; no token protein example is appropriate.", "scope_status": "NONMECHANISTIC", "title": "Gram-variable peptidoglycan thinning"}];
+  var graphs = [{"description": "DOI-backed graph linking culture-age-dependent peptidoglycan thinning and autolysis to inconsistent gram-staining within a single bacterial population.", "edges": [{"description": "Aging cultures undergo cell-wall thinning via autolysis.", "evidence": [{"notes": "Supports autolysis-driven peptidoglycan thinning in aging cultures.", "reference": "DOI:10.1128/CMR.00043-07", "snippet": "autolysis"}], "id": "edge-1", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "culture_aging", "target": "peptidoglycan_thinning"}, {"description": "Thinned peptidoglycan no longer retains the gram-stain dye.", "evidence": [{"notes": "Supports peptidoglycan thickness as the determinant of crystal-violet retention in the gram-stain protocol.", "reference": "DOI:10.1128/CMR.00043-07", "snippet": "crystal violet"}], "id": "edge-2", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "peptidoglycan_thinning", "target": "crystal_violet_retention_loss"}, {"description": "Subpopulations with reduced dye retention appear gram-negative alongside intact gram-positive cells.", "evidence": [{"notes": "Supports differential decolorization producing mixed staining within a single culture.", "reference": "DOI:10.1128/CMR.00043-07", "snippet": "decolorization"}], "id": "edge-3", "is_orphan": false, "predicate": "has output", "predicate_id": "RO:0002234", "source": "crystal_violet_retention_loss", "target": "mixed_staining"}, {"description": "Mixed staining manifests the gram-variable trait.", "evidence": [{"notes": "Supports the Gram-variable phenotype as the trait endpoint of heterogeneous staining.", "reference": "DOI:10.1128/CMR.00043-07", "snippet": "Gram-variable"}], "id": "edge-4", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "mixed_staining", "target": "gram_variable_trait"}, {"description": "A thin peptidoglycan layer can yield a gram-negative staining result even in monoderm bacteria.", "evidence": [{"notes": "certain bacteria can stain Gram-negative despite having a monoderm cell wall structure", "reference": "DOI:10.1128/spectrum.00732-24"}], "id": "edge-5", "is_orphan": false, "predicate": "results in", "predicate_id": null, "source": "thin_peptidoglycan_layer", "target": "gram_negative_staining"}, {"description": "A thin peptidoglycan layer reduces retention of the crystal-violet-iodide complex, the core staining-chemistry determinant.", "evidence": [{"notes": "to retain the CV-iodide complex, resulting in the loss of the CV", "reference": "DOI:10.1128/spectrum.00732-24"}], "id": "edge-6", "is_orphan": false, "predicate": "decreases", "predicate_id": "RO:0002212", "source": "thin_peptidoglycan_layer", "target": "cv_iodide_complex_retention"}, {"description": "Reduced CV-iodide complex retention drives loss of crystal-violet retention.", "evidence": [{"notes": "Reduced CV-iodide complex retention underlies the loss of crystal violet during decolorization.", "reference": "DOI:10.1128/spectrum.00732-24"}], "id": "edge-7", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "cv_iodide_complex_retention", "target": "crystal_violet_retention_loss"}, {"description": "Stress-induced cell wall-deficient forms can produce mixed gram reactions within a single culture.", "evidence": [{"notes": "mechanisms that can produce cell-wall alterations or loss that would lead to mixed Gram reactions in a single culture", "reference": "DOI:10.1101/2023.11.16.566987"}], "id": "edge-8", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2007800", "source": "cell_wall_deficient_forms", "target": "mixed_staining"}], "evidence_rows": [{"description": "Aging cultures undergo cell-wall thinning via autolysis.", "edge_id": "edge-1", "evidence": [{"notes": "Supports autolysis-driven peptidoglycan thinning in aging cultures.", "reference": "DOI:10.1128/CMR.00043-07", "snippet": "autolysis"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "culture aging", "source_grounding": null, "target": "peptidoglycan thinning", "target_grounding": null}, {"description": "Thinned peptidoglycan no longer retains the gram-stain dye.", "edge_id": "edge-2", "evidence": [{"notes": "Supports peptidoglycan thickness as the determinant of crystal-violet retention in the gram-stain protocol.", "reference": "DOI:10.1128/CMR.00043-07", "snippet": "crystal violet"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "peptidoglycan thinning", "source_grounding": null, "target": "crystal-violet retention loss", "target_grounding": null}, {"description": "Subpopulations with reduced dye retention appear gram-negative alongside intact gram-positive cells.", "edge_id": "edge-3", "evidence": [{"notes": "Supports differential decolorization producing mixed staining within a single culture.", "reference": "DOI:10.1128/CMR.00043-07", "snippet": "decolorization"}], "predicate": "has output", "predicate_id": "RO:0002234", "source": "crystal-violet retention loss", "source_grounding": null, "target": "mixed-population gram staining", "target_grounding": null}, {"description": "Mixed staining manifests the gram-variable trait.", "edge_id": "edge-4", "evidence": [{"notes": "Supports the Gram-variable phenotype as the trait endpoint of heterogeneous staining.", "reference": "DOI:10.1128/CMR.00043-07", "snippet": "Gram-variable"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "mixed-population gram staining", "source_grounding": null, "target": "gram variable", "target_grounding": "METPO:1000700"}, {"description": "A thin peptidoglycan layer can yield a gram-negative staining result even in monoderm bacteria.", "edge_id": "edge-5", "evidence": [{"notes": "certain bacteria can stain Gram-negative despite having a monoderm cell wall structure", "reference": "DOI:10.1128/spectrum.00732-24"}], "predicate": "results in", "predicate_id": null, "source": "thin peptidoglycan layer", "source_grounding": null, "target": "gram-negative staining", "target_grounding": null}, {"description": "A thin peptidoglycan layer reduces retention of the crystal-violet-iodide complex, the core staining-chemistry determinant.", "edge_id": "edge-6", "evidence": [{"notes": "to retain the CV-iodide complex, resulting in the loss of the CV", "reference": "DOI:10.1128/spectrum.00732-24"}], "predicate": "decreases", "predicate_id": "RO:0002212", "source": "thin peptidoglycan layer", "source_grounding": null, "target": "CV-iodide complex retention", "target_grounding": null}, {"description": "Reduced CV-iodide complex retention drives loss of crystal-violet retention.", "edge_id": "edge-7", "evidence": [{"notes": "Reduced CV-iodide complex retention underlies the loss of crystal violet during decolorization.", "reference": "DOI:10.1128/spectrum.00732-24"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "CV-iodide complex retention", "source_grounding": null, "target": "crystal-violet retention loss", "target_grounding": null}, {"description": "Stress-induced cell wall-deficient forms can produce mixed gram reactions within a single culture.", "edge_id": "edge-8", "evidence": [{"notes": "mechanisms that can produce cell-wall alterations or loss that would lead to mixed Gram reactions in a single culture", "reference": "DOI:10.1101/2023.11.16.566987"}], "predicate": "produces", "predicate_id": "METPO:2007800", "source": "cell wall-deficient forms", "source_grounding": null, "target": "mixed-population gram staining", "target_grounding": null}], "graph_id": "gram_variable_wall_thinning", "issues": [], "nodes": [{"color": "#f3f4f6", "description": "Stress-induced bacterial cells with reduced or absent cell wall (e.g., L-forms, CWD coccoid forms).", "grounding": null, "id": "cell_wall_deficient_forms", "is_orphan": false, "label": "cell wall-deficient forms", "node_type": "STATE", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Loss of the thick PG layer required to retain the gram-stain dye.", "grounding": null, "id": "crystal_violet_retention_loss", "is_orphan": false, "label": "crystal-violet retention loss", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Stationary-phase or post-exponential growth conditions promoting cell-wall remodeling.", "grounding": null, "id": "culture_aging", "is_orphan": false, "label": "culture aging", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Trapping of the crystal-violet-iodide complex within the peptidoglycan layer during gram staining.", "grounding": null, "id": "cv_iodide_complex_retention", "is_orphan": false, "label": "CV-iodide complex retention", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Loss of crystal violet and counterstain uptake giving a gram-negative appearance.", "grounding": null, "id": "gram_negative_staining", "is_orphan": false, "label": "gram-negative staining", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Mixed gram-positive and gram-negative staining within a single culture.", "grounding": "METPO:1000700", "id": "gram_variable_trait", "is_orphan": false, "label": "gram variable", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Co-existence of gram-positive and gram-negative-staining cells in the same culture.", "grounding": null, "id": "mixed_staining", "is_orphan": false, "label": "mixed-population gram staining", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Cell-wall degradation or thinning due to autolysis or stress.", "grounding": null, "id": "peptidoglycan_thinning", "is_orphan": false, "label": "peptidoglycan thinning", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ede9fe", "description": "A reduced-thickness peptidoglycan sacculus, as in some monoderm bacteria.", "grounding": null, "id": "thin_peptidoglycan_layer", "is_orphan": false, "label": "thin peptidoglycan layer", "node_type": "CELLULAR_LOCALIZATION", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "Gram variability is a culture-state staining outcome rather than a stable protein-mediated trait; no token protein example is appropriate.", "scope_status": "NONMECHANISTIC", "title": "Gram-variable peptidoglycan thinning"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -1007,13 +1034,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-10-17 09:00 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

@@ -459,12 +459,17 @@ migrate-metpo-2026-06-12 *args:
 finalize-metpo-2026-06-12-review *args:
     uv run python scripts/finalize_metpo_2026_06_12_review.py {{args}}
 
-# Build slim deepwalk subset + METPO ↔ kg-microbe-node match table from the
-# local kg-microbe deepwalk artifact. Reads
-# ../kg-microbe-projects/taxa_media/DeepWalkSkipGramEnsmallen_*.tsv.gz
-# (latest available) and ../kg-microbe/mappings/canonical/metpo_alias_mappings.tsv.
+# Build all TraitMech embedding artifacts:
+# 1. KG DeepWalk subset + METPO <-> kg-microbe match table + PaCMAP 2D projection + top-10 nearest neighbors
+# 2. KG DeepWalk sfdp force-directed layout (trait_graph.json)
+# 3. Full-corpus BGE text embeddings + PaCMAP 2D projection (corpus_map.json)
+# 4. ESM-2 pLM sequence embedding map (sequence_map.json)
 build-embeddings:
-    uv run python scripts/build_embedding_index.py
+    uv run --with pacmap --with scikit-learn python scripts/build_embedding_index.py
+    uv run --with scikit-learn python scripts/build_embedding_index.py --method sfdp --umap-out data/embeddings/trait_graph.json --skip-vendor
+    uv run --with sentence-transformers --with torch python scripts/embed_records.py
+    uv run --with pacmap --with numpy python scripts/embed_map.py
+    uv run --with pacmap --with torch --with transformers --with numpy python scripts/build_sequence_map.py
 
 # Render per-trait HTML pages + category indexes + landing into pages/.
 gen-pages *args:

@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/morphology.html">MORPHOLOGY</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/morphology.html">MORPHOLOGY</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>gram stain</h1>
     <p class="curie"><code>METPO:1000697</code> · CLASS · REVIEWED</p>
 
@@ -79,9 +90,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>crystal violet</strong>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:41688" rel="nofollow noreferrer"><code>CHEBI:41688</code></a>
             <span class="edge-predicate">contributes to</span>
             <strong>crystal violet-iodine complex</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>Crystal violet contributes the dye cation to the insoluble crystal violet-iodide precipitate formed during the Gram stain.</p>
             <ul>
 
@@ -96,9 +109,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>peptidoglycan cell wall</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0009274" rel="nofollow noreferrer"><code>GO:0009274</code></a>
             <span class="edge-predicate">contributes to</span>
             <strong>crystal violet-iodine retention</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>Peptidoglycan wall architecture determines whether the dye complex remains after decolorization.</p>
             <ul>
 
@@ -113,9 +128,11 @@
 
           <li id="pathograph-1-edge-3">
             <strong>alcohol decolorization</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>gram stain</strong>
-            <code>RO:0002326</code>
+            <a href="https://w3id.org/metpo/1000697" rel="nofollow noreferrer"><code>METPO:1000697</code></a>
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>Decolorization contributes to the differential Gram reaction by damaging Gram-negative cell surfaces and causing dye-complex loss.</p>
             <ul>
 
@@ -130,9 +147,11 @@
 
           <li id="pathograph-1-edge-4">
             <strong>outer membrane</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0019867" rel="nofollow noreferrer"><code>GO:0019867</code></a>
             <span class="edge-predicate">regulates</span>
             <strong>gram stain</strong>
-            <code>RO:0002211</code>
+            <a href="https://w3id.org/metpo/1000697" rel="nofollow noreferrer"><code>METPO:1000697</code></a>
+            <a href="http://purl.obolibrary.org/obo/RO_0002211" rel="nofollow noreferrer"><code>RO:0002211</code></a>
             <p>The Gram-negative outer membrane contributes to dye loss and counterstain appearance.</p>
             <ul>
 
@@ -147,9 +166,11 @@
 
           <li id="pathograph-1-edge-5">
             <strong>peptidoglycan cell wall</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0009274" rel="nofollow noreferrer"><code>GO:0009274</code></a>
             <span class="edge-predicate">causes</span>
             <strong>gram stain</strong>
-            <code>biolink:causes</code>
+            <a href="https://w3id.org/metpo/1000697" rel="nofollow noreferrer"><code>METPO:1000697</code></a>
+            <a href="https://w3id.org/biolink/vocab/causes" rel="nofollow noreferrer"><code>biolink:causes</code></a>
             <p>Peptidoglycan wall structure is the major structural determinant of differential Gram-stain retention.</p>
             <ul>
 
@@ -164,9 +185,11 @@
 
           <li id="pathograph-1-edge-6">
             <strong>iodine mordant</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>crystal violet-iodine complex</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>The iodide mordant supplies the bulky anion that reacts with crystal violet to form the dye-iodide precipitate.</p>
             <ul>
 
@@ -181,9 +204,11 @@
 
           <li id="pathograph-1-edge-7">
             <strong>crystal violet-iodine complex</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>crystal violet-iodine retention</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>The insoluble crystal violet-iodine complex is the retained dye precipitate that initiates the Gram reaction.</p>
             <ul>
 
@@ -198,9 +223,11 @@
 
           <li id="pathograph-1-edge-8">
             <strong>crystal violet-iodine retention</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>gram stain</strong>
-            <code>METPO:2007700</code>
+            <a href="https://w3id.org/metpo/1000697" rel="nofollow noreferrer"><code>METPO:1000697</code></a>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>Differential retention of the dye-iodine complex is the proximal assay state for the Gram stain phenotype.</p>
             <ul>
 
@@ -372,45 +399,45 @@
         </li>
 
         <li>
-          <span class="nn-cat">upper</span>
-          <a href="../../traits/upper/phenotype.html">phenotype</a>
-          <span class="sim">0.763</span>
+          <span class="nn-cat">other</span>
+          <a href="../../traits/other/indole_test_positive.html">indole test positive</a>
+          <span class="sim">0.803</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/ionizing_radiation_tolerant.html">ionizing radiation tolerant</a>
-          <span class="sim">0.763</span>
+          <span class="nn-cat">other</span>
+          <a href="../../traits/other/indole_test_negative.html">indole test negative</a>
+          <span class="sim">0.801</span>
         </li>
 
         <li>
-          <span class="nn-cat">physiology</span>
-          <a href="../../traits/physiology/persister_cell_formation.html">persister cell formation</a>
-          <span class="sim">0.763</span>
+          <span class="nn-cat">other</span>
+          <a href="../../traits/other/indole_test.html">indole test</a>
+          <span class="sim">0.797</span>
         </li>
 
         <li>
-          <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/sulfur_globule.html">sulfur globule</a>
-          <span class="sim">0.763</span>
+          <span class="nn-cat">other</span>
+          <a href="../../traits/other/voges_proskauer_test.html">Voges-Proskauer test</a>
+          <span class="sim">0.795</span>
         </li>
 
         <li>
-          <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/s_layer.html">S-layer</a>
-          <span class="sim">0.763</span>
+          <span class="nn-cat">other</span>
+          <a href="../../traits/other/methyl_red_test.html">methyl red test</a>
+          <span class="sim">0.792</span>
         </li>
 
         <li>
-          <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/prosthecate.html">prosthecate</a>
-          <span class="sim">0.763</span>
+          <span class="nn-cat">other</span>
+          <a href="../../traits/other/voges_proskauer_test_positive.html">Voges-Proskauer test positive</a>
+          <span class="sim">0.786</span>
         </li>
 
         <li>
-          <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/polyphosphate_granule.html">polyphosphate granule</a>
-          <span class="sim">0.763</span>
+          <span class="nn-cat">other</span>
+          <a href="../../traits/other/methyl_red_test_positive.html">methyl red test positive</a>
+          <span class="sim">0.785</span>
         </li>
 
       </ul>
@@ -993,7 +1020,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking Gram stain phenotype to crystal violet-iodine complex formation, peptidoglycan architecture, outer membrane loss during decolorization, and counterstaining.", "edges": [{"description": "Crystal violet contributes the dye cation to the insoluble crystal violet-iodide precipitate formed during the Gram stain.", "evidence": [{"notes": "Verified against the open Davies et al. abstract; crystal violet reacts with the iodide mordant during Gram staining to form the insoluble dye-iodide precipitate.", "reference": "DOI:10.1128/jb.156.2.837-845.1983", "snippet": "interacts with aqueous KI-I2 during the Gram stain via a simple metathetical anion exchange"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "crystal_violet", "target": "crystal_violet_iodine_complex"}, {"description": "Peptidoglycan wall architecture determines whether the dye complex remains after decolorization.", "evidence": [{"notes": "Verified against the public Popescu and Doyle abstract; the Gram-positive cell wall is the structural determinant for retaining the dye-iodine complex.", "reference": "DOI:10.3109/10520299609117151", "snippet": "Gram-positive microorganisms require a relatively thick cell wall"}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "peptidoglycan_cell_wall", "target": "crystal_violet_iodine_retention"}, {"description": "Decolorization contributes to the differential Gram reaction by damaging Gram-negative cell surfaces and causing dye-complex loss.", "evidence": [{"notes": "Verified against the public Popescu and Doyle abstract; decolorization is retained as an assay step contributing to the broad Gram stain phenotype rather than asserted as complete outer-membrane removal.", "reference": "DOI:10.3109/10520299609117151", "snippet": "staining procedures damage the cell surface resulting in loss of dye complexes"}], "id": "edge-3", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "alcohol_decolorization", "target": "gram_stain_trait"}, {"description": "The Gram-negative outer membrane contributes to dye loss and counterstain appearance.", "evidence": [{"notes": "Supports the outer membrane as a defining Gram-negative envelope feature.", "reference": "DOI:10.1038/s41579-019-0201-x", "snippet": "defining feature of the Gram-negative cell envelope"}], "id": "edge-4", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "outer_membrane", "target": "gram_stain_trait"}, {"description": "Peptidoglycan wall structure is the major structural determinant of differential Gram-stain retention.", "evidence": [{"notes": "Verified against the public Popescu and Doyle abstract; the review ties the Gram reaction to the cell wall rather than chemistry of intracellular constituents.", "reference": "DOI:10.3109/10520299609117151", "snippet": "Gram-stainability is a function of the cell wall"}], "id": "edge-5", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "peptidoglycan_cell_wall", "target": "gram_stain_trait"}, {"description": "The iodide mordant supplies the bulky anion that reacts with crystal violet to form the dye-iodide precipitate.", "evidence": [{"notes": "Verified against the open Davies et al. abstract; the iodide anion and crystal-violet cation react stoichiometrically in the Gram stain.", "reference": "DOI:10.1128/jb.156.2.837-845.1983", "snippet": "apparent 1:1 stoichiometry between anion (I-) and cation"}], "id": "edge-6", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "iodine_mordant", "target": "crystal_violet_iodine_complex"}, {"description": "The insoluble crystal violet-iodine complex is the retained dye precipitate that initiates the Gram reaction.", "evidence": [{"notes": "Verified against the open Davies et al. abstract; the crystal violet-iodide precipitate forms inside both Gram-positive and Gram-negative bacteria before the differential decolorization step.", "reference": "DOI:10.1128/jb.156.2.837-845.1983", "snippet": "same precipitate which forms in the cellular substance of bacteria"}], "id": "edge-7", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "crystal_violet_iodine_complex", "target": "crystal_violet_iodine_retention"}, {"description": "Differential retention of the dye-iodine complex is the proximal assay state for the Gram stain phenotype.", "evidence": [{"notes": "Verified against the public Popescu and Doyle abstract; the review frames dye retention as the proximal state in the Gram-stain assay.", "reference": "DOI:10.3109/10520299609117151", "snippet": "irrespective of composition, to retain the dye"}], "id": "edge-8", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "crystal_violet_iodine_retention", "target": "gram_stain_trait"}, {"description": "Penicillin-binding protein 1A (mrcA, UniProtKB:P02918) contributes to gram stain.", "evidence": [{"notes": "Supports the functional association between Penicillin-binding protein 1A (UniProtKB:P02918 in Escherichia coli (strain K12)) and gram stain.", "reference": "DOI:10.3109/10520299609117151", "snippet": "mechanism of the Gram stain"}], "id": "edge-9", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "gram_stain_protein_component", "target": "gram_stain_trait"}], "evidence_rows": [{"description": "Crystal violet contributes the dye cation to the insoluble crystal violet-iodide precipitate formed during the Gram stain.", "edge_id": "edge-1", "evidence": [{"notes": "Verified against the open Davies et al. abstract; crystal violet reacts with the iodide mordant during Gram staining to form the insoluble dye-iodide precipitate.", "reference": "DOI:10.1128/jb.156.2.837-845.1983", "snippet": "interacts with aqueous KI-I2 during the Gram stain via a simple metathetical anion exchange"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "crystal violet", "target": "crystal violet-iodine complex"}, {"description": "Peptidoglycan wall architecture determines whether the dye complex remains after decolorization.", "edge_id": "edge-2", "evidence": [{"notes": "Verified against the public Popescu and Doyle abstract; the Gram-positive cell wall is the structural determinant for retaining the dye-iodine complex.", "reference": "DOI:10.3109/10520299609117151", "snippet": "Gram-positive microorganisms require a relatively thick cell wall"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "peptidoglycan cell wall", "target": "crystal violet-iodine retention"}, {"description": "Decolorization contributes to the differential Gram reaction by damaging Gram-negative cell surfaces and causing dye-complex loss.", "edge_id": "edge-3", "evidence": [{"notes": "Verified against the public Popescu and Doyle abstract; decolorization is retained as an assay step contributing to the broad Gram stain phenotype rather than asserted as complete outer-membrane removal.", "reference": "DOI:10.3109/10520299609117151", "snippet": "staining procedures damage the cell surface resulting in loss of dye complexes"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "alcohol decolorization", "target": "gram stain"}, {"description": "The Gram-negative outer membrane contributes to dye loss and counterstain appearance.", "edge_id": "edge-4", "evidence": [{"notes": "Supports the outer membrane as a defining Gram-negative envelope feature.", "reference": "DOI:10.1038/s41579-019-0201-x", "snippet": "defining feature of the Gram-negative cell envelope"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "outer membrane", "target": "gram stain"}, {"description": "Peptidoglycan wall structure is the major structural determinant of differential Gram-stain retention.", "edge_id": "edge-5", "evidence": [{"notes": "Verified against the public Popescu and Doyle abstract; the review ties the Gram reaction to the cell wall rather than chemistry of intracellular constituents.", "reference": "DOI:10.3109/10520299609117151", "snippet": "Gram-stainability is a function of the cell wall"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "peptidoglycan cell wall", "target": "gram stain"}, {"description": "The iodide mordant supplies the bulky anion that reacts with crystal violet to form the dye-iodide precipitate.", "edge_id": "edge-6", "evidence": [{"notes": "Verified against the open Davies et al. abstract; the iodide anion and crystal-violet cation react stoichiometrically in the Gram stain.", "reference": "DOI:10.1128/jb.156.2.837-845.1983", "snippet": "apparent 1:1 stoichiometry between anion (I-) and cation"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "iodine mordant", "target": "crystal violet-iodine complex"}, {"description": "The insoluble crystal violet-iodine complex is the retained dye precipitate that initiates the Gram reaction.", "edge_id": "edge-7", "evidence": [{"notes": "Verified against the open Davies et al. abstract; the crystal violet-iodide precipitate forms inside both Gram-positive and Gram-negative bacteria before the differential decolorization step.", "reference": "DOI:10.1128/jb.156.2.837-845.1983", "snippet": "same precipitate which forms in the cellular substance of bacteria"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "crystal violet-iodine complex", "target": "crystal violet-iodine retention"}, {"description": "Differential retention of the dye-iodine complex is the proximal assay state for the Gram stain phenotype.", "edge_id": "edge-8", "evidence": [{"notes": "Verified against the public Popescu and Doyle abstract; the review frames dye retention as the proximal state in the Gram-stain assay.", "reference": "DOI:10.3109/10520299609117151", "snippet": "irrespective of composition, to retain the dye"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "crystal violet-iodine retention", "target": "gram stain"}, {"description": "Penicillin-binding protein 1A (mrcA, UniProtKB:P02918) contributes to gram stain.", "edge_id": "edge-9", "evidence": [{"notes": "Supports the functional association between Penicillin-binding protein 1A (UniProtKB:P02918 in Escherichia coli (strain K12)) and gram stain.", "reference": "DOI:10.3109/10520299609117151", "snippet": "mechanism of the Gram stain"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Penicillin-binding protein 1A", "target": "gram stain"}], "graph_id": "gram_stain_cell_envelope_retention", "issues": [], "nodes": [{"color": "#ccfbf1", "description": "Decolorization step that differentiates Gram-positive and Gram-negative staining.", "grounding": null, "id": "alcohol_decolorization", "is_orphan": false, "label": "alcohol decolorization", "node_type": "EXPERIMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Primary dye used in the Gram staining procedure.", "grounding": "CHEBI:41688", "id": "crystal_violet", "is_orphan": false, "label": "crystal violet", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Dye complex retained or removed during Gram staining.", "grounding": null, "id": "crystal_violet_iodine_complex", "is_orphan": false, "label": "crystal violet-iodine complex", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Retention of the crystal violet-iodine complex after Gram decolorization.", "grounding": null, "id": "crystal_violet_iodine_retention", "is_orphan": false, "label": "crystal violet-iodine retention", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Protein component (Penicillin-binding protein 1A) associated with gram stain.", "grounding": null, "id": "gram_stain_protein_component", "is_orphan": false, "label": "Penicillin-binding protein 1A", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 214, "evidence": [{"notes": "Supports Penicillin-binding protein 1A in gram stain; UniProtKB:P02918 (mrcA, Penicillin-binding protein 1A) in Escherichia coli (strain K12) provides a verified protein exemplar.", "reference": "DOI:10.1128/jb.156.2.837-845.1983", "snippet": "interacts with aqueous KI-I2 during the Gram stain via a simple metathetical anion exchange"}], "gene_symbol": "mrcA", "protein_label": "Penicillin-binding protein 1A", "proteome_id": "UP000000625", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (mrcA, Penicillin-binding protein 1A) associated with gram stain in Escherichia coli (strain K12).", "sequence_version": 1, "taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli (strain K12)", "uniprot_id": "UniProtKB:P02918"}], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Differential staining phenotype based on retention of crystal violet dye.", "grounding": "METPO:1000697", "id": "gram_stain_trait", "is_orphan": false, "label": "gram stain", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Iodine solution that forms a dye-iodine complex with crystal violet.", "grounding": null, "id": "iodine_mordant", "is_orphan": false, "label": "iodine mordant", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ede9fe", "description": "Gram-negative cell-envelope membrane disrupted during decolorization.", "grounding": "GO:0019867", "id": "outer_membrane", "is_orphan": false, "label": "outer membrane", "node_type": "CELLULAR_LOCALIZATION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ede9fe", "description": "Cell-wall polymer layer influencing stain retention.", "grounding": "GO:0009274", "id": "peptidoglycan_cell_wall", "is_orphan": false, "label": "peptidoglycan cell wall", "node_type": "CELLULAR_LOCALIZATION", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 214, "evidence": [{"notes": "Supports Penicillin-binding protein 1A in gram stain; UniProtKB:P02918 (mrcA, Penicillin-binding protein 1A) in Escherichia coli (strain K12) provides a verified protein exemplar.", "reference": "DOI:10.1128/jb.156.2.837-845.1983", "snippet": "interacts with aqueous KI-I2 during the Gram stain via a simple metathetical anion exchange"}], "gene_symbol": "mrcA", "node_id": "gram_stain_protein_component", "node_label": "Penicillin-binding protein 1A", "protein_label": "Penicillin-binding protein 1A", "proteome_id": "UP000000625", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (mrcA, Penicillin-binding protein 1A) associated with gram stain in Escherichia coli (strain K12).", "sequence_version": 1, "taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli (strain K12)", "uniprot_id": "UniProtKB:P02918"}], "scope_notes": "This record describes a differential staining assay and envelope-level classification, for which one inherited protein example would be misleading.", "scope_status": "NONMECHANISTIC", "title": "Gram stain cell-envelope retention mechanism"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking Gram stain phenotype to crystal violet-iodine complex formation, peptidoglycan architecture, outer membrane loss during decolorization, and counterstaining.", "edges": [{"description": "Crystal violet contributes the dye cation to the insoluble crystal violet-iodide precipitate formed during the Gram stain.", "evidence": [{"notes": "Verified against the open Davies et al. abstract; crystal violet reacts with the iodide mordant during Gram staining to form the insoluble dye-iodide precipitate.", "reference": "DOI:10.1128/jb.156.2.837-845.1983", "snippet": "interacts with aqueous KI-I2 during the Gram stain via a simple metathetical anion exchange"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "crystal_violet", "target": "crystal_violet_iodine_complex"}, {"description": "Peptidoglycan wall architecture determines whether the dye complex remains after decolorization.", "evidence": [{"notes": "Verified against the public Popescu and Doyle abstract; the Gram-positive cell wall is the structural determinant for retaining the dye-iodine complex.", "reference": "DOI:10.3109/10520299609117151", "snippet": "Gram-positive microorganisms require a relatively thick cell wall"}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "peptidoglycan_cell_wall", "target": "crystal_violet_iodine_retention"}, {"description": "Decolorization contributes to the differential Gram reaction by damaging Gram-negative cell surfaces and causing dye-complex loss.", "evidence": [{"notes": "Verified against the public Popescu and Doyle abstract; decolorization is retained as an assay step contributing to the broad Gram stain phenotype rather than asserted as complete outer-membrane removal.", "reference": "DOI:10.3109/10520299609117151", "snippet": "staining procedures damage the cell surface resulting in loss of dye complexes"}], "id": "edge-3", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "alcohol_decolorization", "target": "gram_stain_trait"}, {"description": "The Gram-negative outer membrane contributes to dye loss and counterstain appearance.", "evidence": [{"notes": "Supports the outer membrane as a defining Gram-negative envelope feature.", "reference": "DOI:10.1038/s41579-019-0201-x", "snippet": "defining feature of the Gram-negative cell envelope"}], "id": "edge-4", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "outer_membrane", "target": "gram_stain_trait"}, {"description": "Peptidoglycan wall structure is the major structural determinant of differential Gram-stain retention.", "evidence": [{"notes": "Verified against the public Popescu and Doyle abstract; the review ties the Gram reaction to the cell wall rather than chemistry of intracellular constituents.", "reference": "DOI:10.3109/10520299609117151", "snippet": "Gram-stainability is a function of the cell wall"}], "id": "edge-5", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "peptidoglycan_cell_wall", "target": "gram_stain_trait"}, {"description": "The iodide mordant supplies the bulky anion that reacts with crystal violet to form the dye-iodide precipitate.", "evidence": [{"notes": "Verified against the open Davies et al. abstract; the iodide anion and crystal-violet cation react stoichiometrically in the Gram stain.", "reference": "DOI:10.1128/jb.156.2.837-845.1983", "snippet": "apparent 1:1 stoichiometry between anion (I-) and cation"}], "id": "edge-6", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "iodine_mordant", "target": "crystal_violet_iodine_complex"}, {"description": "The insoluble crystal violet-iodine complex is the retained dye precipitate that initiates the Gram reaction.", "evidence": [{"notes": "Verified against the open Davies et al. abstract; the crystal violet-iodide precipitate forms inside both Gram-positive and Gram-negative bacteria before the differential decolorization step.", "reference": "DOI:10.1128/jb.156.2.837-845.1983", "snippet": "same precipitate which forms in the cellular substance of bacteria"}], "id": "edge-7", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "crystal_violet_iodine_complex", "target": "crystal_violet_iodine_retention"}, {"description": "Differential retention of the dye-iodine complex is the proximal assay state for the Gram stain phenotype.", "evidence": [{"notes": "Verified against the public Popescu and Doyle abstract; the review frames dye retention as the proximal state in the Gram-stain assay.", "reference": "DOI:10.3109/10520299609117151", "snippet": "irrespective of composition, to retain the dye"}], "id": "edge-8", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "crystal_violet_iodine_retention", "target": "gram_stain_trait"}], "evidence_rows": [{"description": "Crystal violet contributes the dye cation to the insoluble crystal violet-iodide precipitate formed during the Gram stain.", "edge_id": "edge-1", "evidence": [{"notes": "Verified against the open Davies et al. abstract; crystal violet reacts with the iodide mordant during Gram staining to form the insoluble dye-iodide precipitate.", "reference": "DOI:10.1128/jb.156.2.837-845.1983", "snippet": "interacts with aqueous KI-I2 during the Gram stain via a simple metathetical anion exchange"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "crystal violet", "source_grounding": "CHEBI:41688", "target": "crystal violet-iodine complex", "target_grounding": null}, {"description": "Peptidoglycan wall architecture determines whether the dye complex remains after decolorization.", "edge_id": "edge-2", "evidence": [{"notes": "Verified against the public Popescu and Doyle abstract; the Gram-positive cell wall is the structural determinant for retaining the dye-iodine complex.", "reference": "DOI:10.3109/10520299609117151", "snippet": "Gram-positive microorganisms require a relatively thick cell wall"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "peptidoglycan cell wall", "source_grounding": "GO:0009274", "target": "crystal violet-iodine retention", "target_grounding": null}, {"description": "Decolorization contributes to the differential Gram reaction by damaging Gram-negative cell surfaces and causing dye-complex loss.", "edge_id": "edge-3", "evidence": [{"notes": "Verified against the public Popescu and Doyle abstract; decolorization is retained as an assay step contributing to the broad Gram stain phenotype rather than asserted as complete outer-membrane removal.", "reference": "DOI:10.3109/10520299609117151", "snippet": "staining procedures damage the cell surface resulting in loss of dye complexes"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "alcohol decolorization", "source_grounding": null, "target": "gram stain", "target_grounding": "METPO:1000697"}, {"description": "The Gram-negative outer membrane contributes to dye loss and counterstain appearance.", "edge_id": "edge-4", "evidence": [{"notes": "Supports the outer membrane as a defining Gram-negative envelope feature.", "reference": "DOI:10.1038/s41579-019-0201-x", "snippet": "defining feature of the Gram-negative cell envelope"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "outer membrane", "source_grounding": "GO:0019867", "target": "gram stain", "target_grounding": "METPO:1000697"}, {"description": "Peptidoglycan wall structure is the major structural determinant of differential Gram-stain retention.", "edge_id": "edge-5", "evidence": [{"notes": "Verified against the public Popescu and Doyle abstract; the review ties the Gram reaction to the cell wall rather than chemistry of intracellular constituents.", "reference": "DOI:10.3109/10520299609117151", "snippet": "Gram-stainability is a function of the cell wall"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "peptidoglycan cell wall", "source_grounding": "GO:0009274", "target": "gram stain", "target_grounding": "METPO:1000697"}, {"description": "The iodide mordant supplies the bulky anion that reacts with crystal violet to form the dye-iodide precipitate.", "edge_id": "edge-6", "evidence": [{"notes": "Verified against the open Davies et al. abstract; the iodide anion and crystal-violet cation react stoichiometrically in the Gram stain.", "reference": "DOI:10.1128/jb.156.2.837-845.1983", "snippet": "apparent 1:1 stoichiometry between anion (I-) and cation"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "iodine mordant", "source_grounding": null, "target": "crystal violet-iodine complex", "target_grounding": null}, {"description": "The insoluble crystal violet-iodine complex is the retained dye precipitate that initiates the Gram reaction.", "edge_id": "edge-7", "evidence": [{"notes": "Verified against the open Davies et al. abstract; the crystal violet-iodide precipitate forms inside both Gram-positive and Gram-negative bacteria before the differential decolorization step.", "reference": "DOI:10.1128/jb.156.2.837-845.1983", "snippet": "same precipitate which forms in the cellular substance of bacteria"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "crystal violet-iodine complex", "source_grounding": null, "target": "crystal violet-iodine retention", "target_grounding": null}, {"description": "Differential retention of the dye-iodine complex is the proximal assay state for the Gram stain phenotype.", "edge_id": "edge-8", "evidence": [{"notes": "Verified against the public Popescu and Doyle abstract; the review frames dye retention as the proximal state in the Gram-stain assay.", "reference": "DOI:10.3109/10520299609117151", "snippet": "irrespective of composition, to retain the dye"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "crystal violet-iodine retention", "source_grounding": null, "target": "gram stain", "target_grounding": "METPO:1000697"}], "graph_id": "gram_stain_cell_envelope_retention", "issues": [], "nodes": [{"color": "#ccfbf1", "description": "Decolorization step that differentiates Gram-positive and Gram-negative staining.", "grounding": null, "id": "alcohol_decolorization", "is_orphan": false, "label": "alcohol decolorization", "node_type": "EXPERIMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Primary dye used in the Gram staining procedure.", "grounding": "CHEBI:41688", "id": "crystal_violet", "is_orphan": false, "label": "crystal violet", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Dye complex retained or removed during Gram staining.", "grounding": null, "id": "crystal_violet_iodine_complex", "is_orphan": false, "label": "crystal violet-iodine complex", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Retention of the crystal violet-iodine complex after Gram decolorization.", "grounding": null, "id": "crystal_violet_iodine_retention", "is_orphan": false, "label": "crystal violet-iodine retention", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Differential staining phenotype based on retention of crystal violet dye.", "grounding": "METPO:1000697", "id": "gram_stain_trait", "is_orphan": false, "label": "gram stain", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Iodine solution that forms a dye-iodine complex with crystal violet.", "grounding": null, "id": "iodine_mordant", "is_orphan": false, "label": "iodine mordant", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ede9fe", "description": "Gram-negative cell-envelope membrane disrupted during decolorization.", "grounding": "GO:0019867", "id": "outer_membrane", "is_orphan": false, "label": "outer membrane", "node_type": "CELLULAR_LOCALIZATION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ede9fe", "description": "Cell-wall polymer layer influencing stain retention.", "grounding": "GO:0009274", "id": "peptidoglycan_cell_wall", "is_orphan": false, "label": "peptidoglycan cell wall", "node_type": "CELLULAR_LOCALIZATION", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This record describes a differential staining assay and envelope-level classification, for which one inherited protein example would be misleading.", "scope_status": "NONMECHANISTIC", "title": "Gram stain cell-envelope retention mechanism"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -1013,13 +1040,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-10-17 09:00 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/environment.html">ENVIRONMENT</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/environment.html">ENVIRONMENT</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>NaCl range high</h1>
     <p class="curie"><code>METPO:1000472</code> · CLASS · REVIEWED</p>
 
@@ -85,9 +96,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>salt-in physiology</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>NaCl range high</strong>
-            <code>METPO:2007700</code>
+            <a href="https://w3id.org/metpo/1000472" rel="nofollow noreferrer"><code>METPO:1000472</code></a>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>Salt-in physiology yields a growth range extending above 8% NaCl.</p>
             <ul>
 
@@ -102,8 +115,10 @@
 
           <li id="pathograph-1-edge-2">
             <strong>NaCl range high</strong>
+            <a href="https://w3id.org/metpo/1000472" rel="nofollow noreferrer"><code>METPO:1000472</code></a>
             <span class="edge-predicate">is a</span>
             <strong>NaCl range</strong>
+            <a href="https://w3id.org/metpo/1000334" rel="nofollow noreferrer"><code>METPO:1000334</code></a>
             <code>rdfs:subClassOf</code>
             <p>NaCl range high is a quantitative bin of the NaCl-range phenotype.</p>
             <ul>
@@ -119,8 +134,10 @@
 
           <li id="pathograph-1-edge-3">
             <strong>high external NaCl / hypersaline brine</strong>
+
             <span class="edge-predicate">induces</span>
             <strong>intracellular K+</strong>
+
 
             <p>High external NaCl induces molar intracellular K+ accumulation (salt-in strategy).</p>
             <ul>
@@ -136,8 +153,10 @@
 
           <li id="pathograph-1-edge-4">
             <strong>salt-in physiology</strong>
+
             <span class="edge-predicate">results in</span>
             <strong>acidic proteome</strong>
+
 
             <p>Salt-in physiology drives proteome acidification via enrichment in acidic amino acids.</p>
             <ul>
@@ -153,9 +172,11 @@
 
           <li id="pathograph-1-edge-5">
             <strong>acidic amino acid enrichment (Asp/Glu)</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>protein function at very high ionic strength</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>Asp/Glu enrichment produces negatively charged surfaces enabling protein function at high ionic strength.</p>
             <ul>
 
@@ -170,9 +191,11 @@
 
           <li id="pathograph-1-edge-6">
             <strong>salt-in physiology</strong>
+
             <span class="edge-predicate">depends on</span>
             <strong>intracellular K+</strong>
-            <code>RO:0002502</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002502" rel="nofollow noreferrer"><code>RO:0002502</code></a>
             <p>Salt-in extreme-halophile physiology depends on high intracellular K+ (proteins misfold below ~2.2 M).</p>
             <ul>
 
@@ -187,8 +210,10 @@
 
           <li id="pathograph-1-edge-7">
             <strong>intracellular compatible solutes</strong>
+
             <span class="edge-predicate">stabilizes</span>
             <strong>protein stabilization under salt stress</strong>
+
 
             <p>Intracellular compatible solutes stabilize proteins/enzymes under salt stress.</p>
             <ul>
@@ -933,7 +958,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking salt-in physiology to NaCl growth ranges extending above 8% (w/v).", "edges": [{"description": "Salt-in physiology yields a growth range extending above 8% NaCl.", "evidence": [{"notes": "Supports salt-in physiology as the basis of extreme-halophile growth ranges.", "reference": "DOI:10.1186/1746-1448-4-2", "snippet": "KCl accumulating Halobacterium salinarum"}], "id": "edge-1", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "salt_in_physiology", "target": "nacl_range_high_trait"}, {"description": "NaCl range high is a quantitative bin of the NaCl-range phenotype.", "evidence": [{"notes": "Supports the \u003e8% range as a value within the NaCl-range distribution.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "nacl_range_high_trait", "target": "nacl_range"}, {"description": "High external NaCl induces molar intracellular K+ accumulation (salt-in strategy).", "evidence": [{"notes": "Canonical salt-in strategy accumulates molar cytoplasmic K+ (up to 4M) in hypersaline systems.", "reference": "DOI:10.1038/s41559-024-02505-6"}], "id": "edge-3", "is_orphan": false, "predicate": "induces", "predicate_id": null, "source": "high_external_nacl", "target": "intracellular_potassium"}, {"description": "Salt-in physiology drives proteome acidification via enrichment in acidic amino acids.", "evidence": [{"notes": "K+ accumulation accompanied by proteome acidification through Glu/Asp enrichment.", "reference": "DOI:10.1038/s41559-024-02505-6"}], "id": "edge-4", "is_orphan": false, "predicate": "results in", "predicate_id": null, "source": "salt_in_physiology", "target": "acidic_proteome"}, {"description": "Asp/Glu enrichment produces negatively charged surfaces enabling protein function at high ionic strength.", "evidence": [{"notes": "Salt-in proteins more hydrophilic and enriched in acidic residues, enabling functionality at very high ionic strength.", "reference": "DOI:10.1093/femsre/fuy026"}], "id": "edge-5", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "acidic_amino_acid_enrichment", "target": "protein_function_high_ionic"}, {"description": "Salt-in extreme-halophile physiology depends on high intracellular K+ (proteins misfold below ~2.2 M).", "evidence": [{"notes": "Cellular vitality of salt-in organisms dependent on high intracellular K+; proteins misfold when K+ falls below ~2.2 M.", "reference": "DOI:10.1093/femsre/fuy026"}], "id": "edge-6", "is_orphan": false, "predicate": "depends on", "predicate_id": "RO:0002502", "source": "salt_in_physiology", "target": "intracellular_potassium"}, {"description": "Intracellular compatible solutes stabilize proteins/enzymes under salt stress.", "evidence": [{"notes": "Osmolytes act as protein stabilizers/chaperones under salt stress.", "reference": "DOI:10.1007/978-3-030-18975-4_4"}], "id": "edge-7", "is_orphan": false, "predicate": "stabilizes", "predicate_id": null, "source": "compatible_solutes", "target": "protein_stabilization"}, {"description": "Potassium-transporting ATPase potassium-binding subunit (kdpA, UniProtKB:B0R9L9) contributes to NaCl range high.", "evidence": [{"notes": "Supports the functional association between Potassium-transporting ATPase potassium-binding subunit (UniProtKB:B0R9L9 in Halobacterium salinarum (strain ATCC 29341 / DSM 671 / R1)) and NaCl range high.", "reference": "DOI:10.1186/1746-1448-4-2", "snippet": "accumulation of molar concentrations of potassium and chloride"}], "id": "edge-8", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "nacl_range_high_protein_component", "target": "nacl_range_high_trait"}], "evidence_rows": [{"description": "Salt-in physiology yields a growth range extending above 8% NaCl.", "edge_id": "edge-1", "evidence": [{"notes": "Supports salt-in physiology as the basis of extreme-halophile growth ranges.", "reference": "DOI:10.1186/1746-1448-4-2", "snippet": "KCl accumulating Halobacterium salinarum"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "salt-in physiology", "target": "NaCl range high"}, {"description": "NaCl range high is a quantitative bin of the NaCl-range phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the \u003e8% range as a value within the NaCl-range distribution.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "NaCl range high", "target": "NaCl range"}, {"description": "High external NaCl induces molar intracellular K+ accumulation (salt-in strategy).", "edge_id": "edge-3", "evidence": [{"notes": "Canonical salt-in strategy accumulates molar cytoplasmic K+ (up to 4M) in hypersaline systems.", "reference": "DOI:10.1038/s41559-024-02505-6"}], "predicate": "induces", "predicate_id": null, "source": "high external NaCl / hypersaline brine", "target": "intracellular K+"}, {"description": "Salt-in physiology drives proteome acidification via enrichment in acidic amino acids.", "edge_id": "edge-4", "evidence": [{"notes": "K+ accumulation accompanied by proteome acidification through Glu/Asp enrichment.", "reference": "DOI:10.1038/s41559-024-02505-6"}], "predicate": "results in", "predicate_id": null, "source": "salt-in physiology", "target": "acidic proteome"}, {"description": "Asp/Glu enrichment produces negatively charged surfaces enabling protein function at high ionic strength.", "edge_id": "edge-5", "evidence": [{"notes": "Salt-in proteins more hydrophilic and enriched in acidic residues, enabling functionality at very high ionic strength.", "reference": "DOI:10.1093/femsre/fuy026"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "acidic amino acid enrichment (Asp/Glu)", "target": "protein function at very high ionic strength"}, {"description": "Salt-in extreme-halophile physiology depends on high intracellular K+ (proteins misfold below ~2.2 M).", "edge_id": "edge-6", "evidence": [{"notes": "Cellular vitality of salt-in organisms dependent on high intracellular K+; proteins misfold when K+ falls below ~2.2 M.", "reference": "DOI:10.1093/femsre/fuy026"}], "predicate": "depends on", "predicate_id": "RO:0002502", "source": "salt-in physiology", "target": "intracellular K+"}, {"description": "Intracellular compatible solutes stabilize proteins/enzymes under salt stress.", "edge_id": "edge-7", "evidence": [{"notes": "Osmolytes act as protein stabilizers/chaperones under salt stress.", "reference": "DOI:10.1007/978-3-030-18975-4_4"}], "predicate": "stabilizes", "predicate_id": null, "source": "intracellular compatible solutes", "target": "protein stabilization under salt stress"}, {"description": "Potassium-transporting ATPase potassium-binding subunit (kdpA, UniProtKB:B0R9L9) contributes to NaCl range high.", "edge_id": "edge-8", "evidence": [{"notes": "Supports the functional association between Potassium-transporting ATPase potassium-binding subunit (UniProtKB:B0R9L9 in Halobacterium salinarum (strain ATCC 29341 / DSM 671 / R1)) and NaCl range high.", "reference": "DOI:10.1186/1746-1448-4-2", "snippet": "accumulation of molar concentrations of potassium and chloride"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Potassium-transporting ATPase potassium-binding subunit", "target": "NaCl range high"}], "graph_id": "nacl_range_high_extreme_halophile", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Enrichment of aspartate and glutamate residues in intracellular proteins.", "grounding": null, "id": "acidic_amino_acid_enrichment", "is_orphan": false, "label": "acidic amino acid enrichment (Asp/Glu)", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Proteome enriched in acidic amino acids (Glu/Asp) giving negatively charged surfaces.", "grounding": null, "id": "acidic_proteome", "is_orphan": false, "label": "acidic proteome", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Organic osmolytes accumulated intracellularly to balance osmotic stress.", "grounding": null, "id": "compatible_solutes", "is_orphan": false, "label": "intracellular compatible solutes", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "High extracellular NaCl concentration characteristic of hypersaline brines.", "grounding": null, "id": "high_external_nacl", "is_orphan": false, "label": "high external NaCl / hypersaline brine", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "High intracellular potassium(1+) accumulated by the salt-in strategy.", "grounding": null, "id": "intracellular_potassium", "is_orphan": false, "label": "intracellular K+", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Span of NaCl concentrations supporting growth.", "grounding": "METPO:1000334", "id": "nacl_range", "is_orphan": false, "label": "NaCl range", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Protein component (Potassium-transporting ATPase potassium-binding subunit) associated with NaCl range high.", "grounding": null, "id": "nacl_range_high_protein_component", "is_orphan": false, "label": "Potassium-transporting ATPase potassium-binding subunit", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 81, "evidence": [{"notes": "Supports Potassium-transporting ATPase potassium-binding subunit in NaCl range high; UniProtKB:B0R9L9 (kdpA, Potassium-transporting ATPase potassium-binding subunit) in Halobacterium salinarum (strain ATCC 29341 / DSM 671 / R1) provides a verified protein exemplar.", "reference": "DOI:10.1186/1746-1448-4-2", "snippet": "accumulation of molar concentrations of potassium and chloride"}], "gene_symbol": "kdpA", "protein_label": "Potassium-transporting ATPase potassium-binding subunit", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (kdpA, Potassium-transporting ATPase potassium-binding subunit) associated with NaCl range high in Halobacterium salinarum (strain ATCC 29341 / DSM 671 / R1).", "sequence_version": 1, "taxon_id": "NCBITaxon:478009", "taxon_label": "Halobacterium salinarum (strain ATCC 29341 / DSM 671 / R1)", "uniprot_id": "UniProtKB:B0R9L9"}], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "NaCl growth-supporting range extending above ~8% w/v.", "grounding": "METPO:1000472", "id": "nacl_range_high_trait", "is_orphan": false, "label": "NaCl range high", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#cffafe", "description": "Maintenance of protein functionality under molar intracellular ionic strength.", "grounding": null, "id": "protein_function_high_ionic", "is_orphan": false, "label": "protein function at very high ionic strength", "node_type": "MOLECULAR_FUNCTION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Stabilization of proteins/enzymes under salt/osmotic stress.", "grounding": null, "id": "protein_stabilization", "is_orphan": false, "label": "protein stabilization under salt stress", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Intracellular ion-accumulation strategy enabling growth at hypersaline NaCl.", "grounding": null, "id": "salt_in_physiology", "is_orphan": false, "label": "salt-in physiology", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 81, "evidence": [{"notes": "Supports Potassium-transporting ATPase potassium-binding subunit in NaCl range high; UniProtKB:B0R9L9 (kdpA, Potassium-transporting ATPase potassium-binding subunit) in Halobacterium salinarum (strain ATCC 29341 / DSM 671 / R1) provides a verified protein exemplar.", "reference": "DOI:10.1186/1746-1448-4-2", "snippet": "accumulation of molar concentrations of potassium and chloride"}], "gene_symbol": "kdpA", "node_id": "nacl_range_high_protein_component", "node_label": "Potassium-transporting ATPase potassium-binding subunit", "protein_label": "Potassium-transporting ATPase potassium-binding subunit", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (kdpA, Potassium-transporting ATPase potassium-binding subunit) associated with NaCl range high in Halobacterium salinarum (strain ATCC 29341 / DSM 671 / R1).", "sequence_version": 1, "taxon_id": "NCBITaxon:478009", "taxon_label": "Halobacterium salinarum (strain ATCC 29341 / DSM 671 / R1)", "uniprot_id": "UniProtKB:B0R9L9"}], "scope_notes": "This record is a quantitative measurement, interval, or bin in the environmental phenotype hierarchy; a token protein example would misrepresent the measured value as one inherited molecular mechanism.", "scope_status": "NONMECHANISTIC", "title": "NaCl-range-high extreme-halophile range"}];
+  var graphs = [{"description": "DOI-backed graph linking salt-in physiology to NaCl growth ranges extending above 8% (w/v).", "edges": [{"description": "Salt-in physiology yields a growth range extending above 8% NaCl.", "evidence": [{"notes": "Supports salt-in physiology as the basis of extreme-halophile growth ranges.", "reference": "DOI:10.1186/1746-1448-4-2", "snippet": "KCl accumulating Halobacterium salinarum"}], "id": "edge-1", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "salt_in_physiology", "target": "nacl_range_high_trait"}, {"description": "NaCl range high is a quantitative bin of the NaCl-range phenotype.", "evidence": [{"notes": "Supports the \u003e8% range as a value within the NaCl-range distribution.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "id": "edge-2", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "nacl_range_high_trait", "target": "nacl_range"}, {"description": "High external NaCl induces molar intracellular K+ accumulation (salt-in strategy).", "evidence": [{"notes": "Canonical salt-in strategy accumulates molar cytoplasmic K+ (up to 4M) in hypersaline systems.", "reference": "DOI:10.1038/s41559-024-02505-6"}], "id": "edge-3", "is_orphan": false, "predicate": "induces", "predicate_id": null, "source": "high_external_nacl", "target": "intracellular_potassium"}, {"description": "Salt-in physiology drives proteome acidification via enrichment in acidic amino acids.", "evidence": [{"notes": "K+ accumulation accompanied by proteome acidification through Glu/Asp enrichment.", "reference": "DOI:10.1038/s41559-024-02505-6"}], "id": "edge-4", "is_orphan": false, "predicate": "results in", "predicate_id": null, "source": "salt_in_physiology", "target": "acidic_proteome"}, {"description": "Asp/Glu enrichment produces negatively charged surfaces enabling protein function at high ionic strength.", "evidence": [{"notes": "Salt-in proteins more hydrophilic and enriched in acidic residues, enabling functionality at very high ionic strength.", "reference": "DOI:10.1093/femsre/fuy026"}], "id": "edge-5", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "acidic_amino_acid_enrichment", "target": "protein_function_high_ionic"}, {"description": "Salt-in extreme-halophile physiology depends on high intracellular K+ (proteins misfold below ~2.2 M).", "evidence": [{"notes": "Cellular vitality of salt-in organisms dependent on high intracellular K+; proteins misfold when K+ falls below ~2.2 M.", "reference": "DOI:10.1093/femsre/fuy026"}], "id": "edge-6", "is_orphan": false, "predicate": "depends on", "predicate_id": "RO:0002502", "source": "salt_in_physiology", "target": "intracellular_potassium"}, {"description": "Intracellular compatible solutes stabilize proteins/enzymes under salt stress.", "evidence": [{"notes": "Osmolytes act as protein stabilizers/chaperones under salt stress.", "reference": "DOI:10.1007/978-3-030-18975-4_4"}], "id": "edge-7", "is_orphan": false, "predicate": "stabilizes", "predicate_id": null, "source": "compatible_solutes", "target": "protein_stabilization"}], "evidence_rows": [{"description": "Salt-in physiology yields a growth range extending above 8% NaCl.", "edge_id": "edge-1", "evidence": [{"notes": "Supports salt-in physiology as the basis of extreme-halophile growth ranges.", "reference": "DOI:10.1186/1746-1448-4-2", "snippet": "KCl accumulating Halobacterium salinarum"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "salt-in physiology", "source_grounding": null, "target": "NaCl range high", "target_grounding": "METPO:1000472"}, {"description": "NaCl range high is a quantitative bin of the NaCl-range phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the \u003e8% range as a value within the NaCl-range distribution.", "reference": "DOI:10.1093/femsre/fuy009", "snippet": "salinity range"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "NaCl range high", "source_grounding": "METPO:1000472", "target": "NaCl range", "target_grounding": "METPO:1000334"}, {"description": "High external NaCl induces molar intracellular K+ accumulation (salt-in strategy).", "edge_id": "edge-3", "evidence": [{"notes": "Canonical salt-in strategy accumulates molar cytoplasmic K+ (up to 4M) in hypersaline systems.", "reference": "DOI:10.1038/s41559-024-02505-6"}], "predicate": "induces", "predicate_id": null, "source": "high external NaCl / hypersaline brine", "source_grounding": null, "target": "intracellular K+", "target_grounding": null}, {"description": "Salt-in physiology drives proteome acidification via enrichment in acidic amino acids.", "edge_id": "edge-4", "evidence": [{"notes": "K+ accumulation accompanied by proteome acidification through Glu/Asp enrichment.", "reference": "DOI:10.1038/s41559-024-02505-6"}], "predicate": "results in", "predicate_id": null, "source": "salt-in physiology", "source_grounding": null, "target": "acidic proteome", "target_grounding": null}, {"description": "Asp/Glu enrichment produces negatively charged surfaces enabling protein function at high ionic strength.", "edge_id": "edge-5", "evidence": [{"notes": "Salt-in proteins more hydrophilic and enriched in acidic residues, enabling functionality at very high ionic strength.", "reference": "DOI:10.1093/femsre/fuy026"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "acidic amino acid enrichment (Asp/Glu)", "source_grounding": null, "target": "protein function at very high ionic strength", "target_grounding": null}, {"description": "Salt-in extreme-halophile physiology depends on high intracellular K+ (proteins misfold below ~2.2 M).", "edge_id": "edge-6", "evidence": [{"notes": "Cellular vitality of salt-in organisms dependent on high intracellular K+; proteins misfold when K+ falls below ~2.2 M.", "reference": "DOI:10.1093/femsre/fuy026"}], "predicate": "depends on", "predicate_id": "RO:0002502", "source": "salt-in physiology", "source_grounding": null, "target": "intracellular K+", "target_grounding": null}, {"description": "Intracellular compatible solutes stabilize proteins/enzymes under salt stress.", "edge_id": "edge-7", "evidence": [{"notes": "Osmolytes act as protein stabilizers/chaperones under salt stress.", "reference": "DOI:10.1007/978-3-030-18975-4_4"}], "predicate": "stabilizes", "predicate_id": null, "source": "intracellular compatible solutes", "source_grounding": null, "target": "protein stabilization under salt stress", "target_grounding": null}], "graph_id": "nacl_range_high_extreme_halophile", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Enrichment of aspartate and glutamate residues in intracellular proteins.", "grounding": null, "id": "acidic_amino_acid_enrichment", "is_orphan": false, "label": "acidic amino acid enrichment (Asp/Glu)", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Proteome enriched in acidic amino acids (Glu/Asp) giving negatively charged surfaces.", "grounding": null, "id": "acidic_proteome", "is_orphan": false, "label": "acidic proteome", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Organic osmolytes accumulated intracellularly to balance osmotic stress.", "grounding": null, "id": "compatible_solutes", "is_orphan": false, "label": "intracellular compatible solutes", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "High extracellular NaCl concentration characteristic of hypersaline brines.", "grounding": null, "id": "high_external_nacl", "is_orphan": false, "label": "high external NaCl / hypersaline brine", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "High intracellular potassium(1+) accumulated by the salt-in strategy.", "grounding": null, "id": "intracellular_potassium", "is_orphan": false, "label": "intracellular K+", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Span of NaCl concentrations supporting growth.", "grounding": "METPO:1000334", "id": "nacl_range", "is_orphan": false, "label": "NaCl range", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "NaCl growth-supporting range extending above ~8% w/v.", "grounding": "METPO:1000472", "id": "nacl_range_high_trait", "is_orphan": false, "label": "NaCl range high", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#cffafe", "description": "Maintenance of protein functionality under molar intracellular ionic strength.", "grounding": null, "id": "protein_function_high_ionic", "is_orphan": false, "label": "protein function at very high ionic strength", "node_type": "MOLECULAR_FUNCTION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Stabilization of proteins/enzymes under salt/osmotic stress.", "grounding": null, "id": "protein_stabilization", "is_orphan": false, "label": "protein stabilization under salt stress", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Intracellular ion-accumulation strategy enabling growth at hypersaline NaCl.", "grounding": null, "id": "salt_in_physiology", "is_orphan": false, "label": "salt-in physiology", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This record is a quantitative measurement, interval, or bin in the environmental phenotype hierarchy; a token protein example would misrepresent the measured value as one inherited molecular mechanism.", "scope_status": "NONMECHANISTIC", "title": "NaCl-range-high extreme-halophile range"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -953,13 +978,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-10-17 09:00 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

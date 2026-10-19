@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/metabolism.html">METABOLISM</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/metabolism.html">METABOLISM</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>carbon fixation</h1>
     <p class="curie"><code>traitmech:000019</code> · CLASS · REVIEWED</p>
 
@@ -85,9 +96,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>carbon dioxide</strong>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:16526" rel="nofollow noreferrer"><code>CHEBI:16526</code></a>
             <span class="edge-predicate">fixed by</span>
             <strong>carbon fixation</strong>
-            <code>METPO:2007404</code>
+            <code>traitmech:000019</code>
+            <a href="https://w3id.org/metpo/2007404" rel="nofollow noreferrer"><code>METPO:2007404</code></a>
             <p>CO2 is the substrate fixed by autotrophic carbon-fixation pathways.</p>
             <ul>
 
@@ -102,9 +115,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>carbon fixation</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0015977" rel="nofollow noreferrer"><code>GO:0015977</code></a>
             <span class="edge-predicate">confers</span>
             <strong>carbon fixation</strong>
-            <code>METPO:2007700</code>
+            <code>traitmech:000019</code>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>The autotrophic carbon-fixation process realizes the trait.</p>
             <ul>
 
@@ -119,8 +134,10 @@
 
           <li id="pathograph-1-edge-3">
             <strong>carbonic anhydrase</strong>
+            <a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR001765/" rel="nofollow noreferrer"><code>InterPro:IPR001765</code></a>
             <span class="edge-predicate">accelerates interconversion of</span>
             <strong>carbon dioxide</strong>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:16526" rel="nofollow noreferrer"><code>CHEBI:16526</code></a>
 
             <p>Carbonic anhydrase speeds interconversion of CO2 and bicarbonate, bridging DIC supply to demand.</p>
             <ul>
@@ -136,8 +153,10 @@
 
           <li id="pathograph-1-edge-4">
             <strong>ribulose-1,5-bisphosphate carboxylase/oxygenase (RubisCO)</strong>
+            <a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR033966/" rel="nofollow noreferrer"><code>InterPro:IPR033966</code></a>
             <span class="edge-predicate">uses substrate</span>
             <strong>carbon dioxide</strong>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:16526" rel="nofollow noreferrer"><code>CHEBI:16526</code></a>
 
             <p>RubisCO fixes CO2 as its carboxylation substrate in CBB-associated fixation.</p>
             <ul>
@@ -153,9 +172,11 @@
 
           <li id="pathograph-1-edge-5">
             <strong>Calvin-Benson-Bassham cycle</strong>
+
             <span class="edge-predicate">consumes</span>
             <strong>ATP</strong>
-            <code>biolink:consumes</code>
+
+            <a href="https://w3id.org/biolink/vocab/consumes" rel="nofollow noreferrer"><code>biolink:consumes</code></a>
             <p>CBB carbon fixation consumes ATP (nine ATP per three CO2 fixed to one GAP).</p>
             <ul>
 
@@ -170,9 +191,11 @@
 
           <li id="pathograph-1-edge-6">
             <strong>Calvin-Benson-Bassham cycle</strong>
+
             <span class="edge-predicate">consumes</span>
             <strong>NADPH</strong>
-            <code>biolink:consumes</code>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:16474" rel="nofollow noreferrer"><code>CHEBI:16474</code></a>
+            <a href="https://w3id.org/biolink/vocab/consumes" rel="nofollow noreferrer"><code>biolink:consumes</code></a>
             <p>CBB carbon fixation consumes NADPH (six NADPH per three CO2 fixed).</p>
             <ul>
 
@@ -187,8 +210,10 @@
 
           <li id="pathograph-1-edge-7">
             <strong>reverse (reductive) tricarboxylic acid cycle</strong>
+
             <span class="edge-predicate">requires</span>
             <strong>reduced ferredoxin</strong>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:17513" rel="nofollow noreferrer"><code>CHEBI:17513</code></a>
 
             <p>The reverse TCA carbon-fixation cycle requires reduced ferredoxin as a cofactor.</p>
             <ul>
@@ -204,8 +229,10 @@
 
           <li id="pathograph-1-edge-8">
             <strong>3-hydroxypropionate/4-hydroxybutyrate cycle</strong>
+
             <span class="edge-predicate">requires</span>
             <strong>NADPH</strong>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:16474" rel="nofollow noreferrer"><code>CHEBI:16474</code></a>
 
             <p>The 3HP/4HB carbon-fixation cycle requires NADPH and ATP.</p>
             <ul>
@@ -221,8 +248,10 @@
 
           <li id="pathograph-1-edge-9">
             <strong>Wood-Ljungdahl pathway</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0030634" rel="nofollow noreferrer"><code>GO:0030634</code></a>
             <span class="edge-predicate">fixes CO2 to produce</span>
             <strong>acetyl-CoA</strong>
+
 
             <p>The Wood-Ljungdahl pathway fixes CO2 to produce acetyl-CoA.</p>
             <ul>
@@ -238,9 +267,11 @@
 
           <li id="pathograph-1-edge-10">
             <strong>ATP citrate lyase (aclAB)</strong>
+
             <span class="edge-predicate">enables</span>
             <strong>reverse (reductive) tricarboxylic acid cycle</strong>
-            <code>RO:0002327</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002327" rel="nofollow noreferrer"><code>RO:0002327</code></a>
             <p>ATP citrate lyase (aclAB) is a key enzyme enabling the reverse TCA carbon-fixation cycle.</p>
             <ul>
 
@@ -255,9 +286,11 @@
 
           <li id="pathograph-1-edge-11">
             <strong>carbonic anhydrase</strong>
+            <a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR001765/" rel="nofollow noreferrer"><code>InterPro:IPR001765</code></a>
             <span class="edge-predicate">produces</span>
             <strong>bicarbonate</strong>
-            <code>METPO:2007800</code>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:17544" rel="nofollow noreferrer"><code>CHEBI:17544</code></a>
+            <a href="https://w3id.org/metpo/2007800" rel="nofollow noreferrer"><code>METPO:2007800</code></a>
             <p>Carbonic anhydrase interconverts CO2 and bicarbonate, supplying inorganic carbon to fixation.</p>
             <ul>
 
@@ -272,9 +305,11 @@
 
           <li id="pathograph-1-edge-12">
             <strong>Calvin-Benson-Bassham cycle</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>carbon fixation</strong>
-            <code>RO:0002326</code>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0015977" rel="nofollow noreferrer"><code>GO:0015977</code></a>
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>The Calvin-Benson cycle is an autotrophic carbon-dioxide-fixation mechanism.</p>
             <ul>
 
@@ -289,9 +324,11 @@
 
           <li id="pathograph-1-edge-13">
             <strong>reverse (reductive) tricarboxylic acid cycle</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>carbon fixation</strong>
-            <code>RO:0002326</code>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0015977" rel="nofollow noreferrer"><code>GO:0015977</code></a>
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>The reductive TCA cycle is an autotrophic carbon-dioxide-fixation route.</p>
             <ul>
 
@@ -306,9 +343,11 @@
 
           <li id="pathograph-1-edge-14">
             <strong>Wood-Ljungdahl pathway</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0030634" rel="nofollow noreferrer"><code>GO:0030634</code></a>
             <span class="edge-predicate">contributes to</span>
             <strong>carbon fixation</strong>
-            <code>RO:0002326</code>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0015977" rel="nofollow noreferrer"><code>GO:0015977</code></a>
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>The Wood-Ljungdahl pathway fixes carbon dioxide into acetyl-CoA.</p>
             <ul>
 
@@ -523,7 +562,7 @@
     <div class="card">
       <h2>Cross-references</h2>
       <ul class="xrefs">
-        <li><code>GO:0015977</code></li>
+        <li><a href="https://amigo.geneontology.org/amigo/term/GO:0015977" rel="nofollow noreferrer"><code>GO:0015977</code></a></li>
       </ul>
     </div>
 
@@ -552,49 +591,49 @@
 
         <li>
           <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/manganese_oxidation.html">manganese oxidation</a>
+          <a href="../../traits/metabolism/chitinolysis.html">chitinolysis</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/sulfur_oxidation.html">sulfur oxidation</a>
+          <a href="../../traits/metabolism/cellulolysis.html">cellulolysis</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/starch_degradation.html">starch degradation</a>
+          <a href="../../traits/metabolism/nitrate_reduction.html">nitrate reduction</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/reductive_tca_cycle.html">reductive tricarboxylic acid cycle</a>
+          <a href="../../traits/metabolism/wood_ljungdahl_pathway.html">Wood-Ljungdahl pathway</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/proteorhodopsin_phototrophy.html">proteorhodopsin phototrophy</a>
+          <a href="../../traits/metabolism/xylan_degradation.html">xylan degradation</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/proteolysis.html">proteolysis</a>
+          <a href="../../traits/metabolism/dark_hydrogen_oxidation.html">dark hydrogen oxidation</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/phototrophy.html">phototrophy</a>
+          <a href="../../traits/metabolism/dark_oxidation_of_sulfur_compounds.html">dark oxidation of sulfur compounds</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/photosynthesis.html">photosynthesis</a>
+          <a href="../../traits/metabolism/methanol_oxidation.html">methanol oxidation</a>
           <span class="sim">1.000</span>
         </li>
 
@@ -1214,7 +1253,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking inorganic CO2 to organic carbon via six recognized autotrophic carbon-fixation pathways.", "edges": [{"description": "CO2 is the substrate fixed by autotrophic carbon-fixation pathways.", "evidence": [{"notes": "Berg reviews the distribution of autotrophic CO2-fixation pathways.", "reference": "DOI:10.1128/AEM.02473-10"}], "id": "edge-1", "is_orphan": false, "predicate": "fixed by", "predicate_id": "METPO:2007404", "source": "carbon_dioxide", "target": "carbon_fixation_trait"}, {"description": "The autotrophic carbon-fixation process realizes the trait.", "evidence": [{"notes": "H\u00fcgler \u0026 Sievert support multiple autotrophic carbon-fixation pathways operating among ocean microorganisms.", "reference": "DOI:10.1146/annurev-marine-120709-142712"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "carbon_fixation_process", "target": "carbon_fixation_trait"}, {"description": "Carbonic anhydrase speeds interconversion of CO2 and bicarbonate, bridging DIC supply to demand.", "evidence": [{"notes": "Scott 2024: CA activity speeds the interconversion of CO2 and HCO3-.", "reference": "DOI:10.1128/aem.01557-23"}], "id": "edge-3", "is_orphan": false, "predicate": "accelerates interconversion of", "predicate_id": null, "source": "carbonic_anhydrase", "target": "carbon_dioxide"}, {"description": "RubisCO fixes CO2 as its carboxylation substrate in CBB-associated fixation.", "evidence": [{"notes": "Scott 2024: RubisCO substrate is CO2; applies broadly to CBB-associated fixation.", "reference": "DOI:10.1128/aem.01557-23"}], "id": "edge-4", "is_orphan": false, "predicate": "uses substrate", "predicate_id": null, "source": "rubisco", "target": "carbon_dioxide"}, {"description": "CBB carbon fixation consumes ATP (nine ATP per three CO2 fixed to one GAP).", "evidence": [{"notes": "Bahrle 2023: three CO2 to one GAP at the cost of nine ATP and six NADPH.", "reference": "DOI:10.1186/s40643-023-00705-9"}], "id": "edge-5", "is_orphan": false, "predicate": "consumes", "predicate_id": "biolink:consumes", "source": "cbb_cycle", "target": "atp"}, {"description": "CBB carbon fixation consumes NADPH (six NADPH per three CO2 fixed).", "evidence": [{"notes": "Bahrle 2023: three CO2 to one GAP at the cost of nine ATP and six NADPH.", "reference": "DOI:10.1186/s40643-023-00705-9"}], "id": "edge-6", "is_orphan": false, "predicate": "consumes", "predicate_id": "biolink:consumes", "source": "cbb_cycle", "target": "nadph"}, {"description": "The reverse TCA carbon-fixation cycle requires reduced ferredoxin as a cofactor.", "evidence": [{"notes": "Kang 2023: rTCA cycle cofactors include NAD(P)H, ATP, Fdred, FADH.", "reference": "DOI:10.4014/jmb.2306.06005"}], "id": "edge-7", "is_orphan": false, "predicate": "requires", "predicate_id": null, "source": "rtca_cycle", "target": "reduced_ferredoxin"}, {"description": "The 3HP/4HB carbon-fixation cycle requires NADPH and ATP.", "evidence": [{"notes": "Kang 2023: 3-HP/4-HB cycle NADPH and ATP required.", "reference": "DOI:10.4014/jmb.2306.06005"}], "id": "edge-8", "is_orphan": false, "predicate": "requires", "predicate_id": null, "source": "hp_hb_cycle", "target": "nadph"}, {"description": "The Wood-Ljungdahl pathway fixes CO2 to produce acetyl-CoA.", "evidence": [{"notes": "Kurt 2023: WLP is employed for CO2 fixation and acetyl-CoA production.", "reference": "DOI:10.3390/bioengineering10121357"}], "id": "edge-9", "is_orphan": false, "predicate": "fixes CO2 to produce", "predicate_id": null, "source": "wood_ljungdahl_pathway", "target": "acetyl_coa"}, {"description": "ATP citrate lyase (aclAB) is a key enzyme enabling the reverse TCA carbon-fixation cycle.", "evidence": [{"notes": "Mitchell 2024: aclAB ATP citrate lyase is one of four key enzymes to run the TCA cycle in reverse.", "reference": "DOI:10.1038/s41564-024-01704-y"}], "id": "edge-10", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "atp_citrate_lyase", "target": "rtca_cycle"}, {"description": "Carbonic anhydrase interconverts CO2 and bicarbonate, supplying inorganic carbon to fixation.", "evidence": [{"notes": "Connecting edge wiring the enrichment node into the graph.", "reference": "DOI:10.1128/AEM.02473-10"}], "id": "edge-11", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2007800", "source": "carbonic_anhydrase", "target": "bicarbonate"}, {"description": "The Calvin-Benson cycle is an autotrophic carbon-dioxide-fixation mechanism.", "evidence": [{"notes": "Verified against the free public article text.", "reference": "DOI:10.1128/AEM.02473-10", "snippet": "The reductive pentose phosphate cycle is the quantitatively most important mechanism of autotrophic CO2 fixation in nature."}], "id": "edge-12", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "cbb_cycle", "target": "carbon_fixation_process"}, {"description": "The reductive TCA cycle is an autotrophic carbon-dioxide-fixation route.", "evidence": [{"notes": "Verified against the free public article text.", "reference": "DOI:10.1128/AEM.02473-10", "snippet": "the second autotrophic CO2 fixation cycle (the reductive citric acid cycle) had been discovered"}], "id": "edge-13", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "rtca_cycle", "target": "carbon_fixation_process"}, {"description": "The Wood-Ljungdahl pathway fixes carbon dioxide into acetyl-CoA.", "evidence": [{"notes": "Verified against the free public article text.", "reference": "DOI:10.1128/AEM.02473-10", "snippet": "The Wood-Ljungdahl pathway is a noncyclic pathway that results in the fixation of two CO2 molecules to form acetyl-CoA"}], "id": "edge-14", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "wood_ljungdahl_pathway", "target": "carbon_fixation_process"}], "evidence_rows": [{"description": "CO2 is the substrate fixed by autotrophic carbon-fixation pathways.", "edge_id": "edge-1", "evidence": [{"notes": "Berg reviews the distribution of autotrophic CO2-fixation pathways.", "reference": "DOI:10.1128/AEM.02473-10"}], "predicate": "fixed by", "predicate_id": "METPO:2007404", "source": "carbon dioxide", "target": "carbon fixation"}, {"description": "The autotrophic carbon-fixation process realizes the trait.", "edge_id": "edge-2", "evidence": [{"notes": "H\u00fcgler \u0026 Sievert support multiple autotrophic carbon-fixation pathways operating among ocean microorganisms.", "reference": "DOI:10.1146/annurev-marine-120709-142712"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "carbon fixation", "target": "carbon fixation"}, {"description": "Carbonic anhydrase speeds interconversion of CO2 and bicarbonate, bridging DIC supply to demand.", "edge_id": "edge-3", "evidence": [{"notes": "Scott 2024: CA activity speeds the interconversion of CO2 and HCO3-.", "reference": "DOI:10.1128/aem.01557-23"}], "predicate": "accelerates interconversion of", "predicate_id": null, "source": "carbonic anhydrase", "target": "carbon dioxide"}, {"description": "RubisCO fixes CO2 as its carboxylation substrate in CBB-associated fixation.", "edge_id": "edge-4", "evidence": [{"notes": "Scott 2024: RubisCO substrate is CO2; applies broadly to CBB-associated fixation.", "reference": "DOI:10.1128/aem.01557-23"}], "predicate": "uses substrate", "predicate_id": null, "source": "ribulose-1,5-bisphosphate carboxylase/oxygenase (RubisCO)", "target": "carbon dioxide"}, {"description": "CBB carbon fixation consumes ATP (nine ATP per three CO2 fixed to one GAP).", "edge_id": "edge-5", "evidence": [{"notes": "Bahrle 2023: three CO2 to one GAP at the cost of nine ATP and six NADPH.", "reference": "DOI:10.1186/s40643-023-00705-9"}], "predicate": "consumes", "predicate_id": "biolink:consumes", "source": "Calvin-Benson-Bassham cycle", "target": "ATP"}, {"description": "CBB carbon fixation consumes NADPH (six NADPH per three CO2 fixed).", "edge_id": "edge-6", "evidence": [{"notes": "Bahrle 2023: three CO2 to one GAP at the cost of nine ATP and six NADPH.", "reference": "DOI:10.1186/s40643-023-00705-9"}], "predicate": "consumes", "predicate_id": "biolink:consumes", "source": "Calvin-Benson-Bassham cycle", "target": "NADPH"}, {"description": "The reverse TCA carbon-fixation cycle requires reduced ferredoxin as a cofactor.", "edge_id": "edge-7", "evidence": [{"notes": "Kang 2023: rTCA cycle cofactors include NAD(P)H, ATP, Fdred, FADH.", "reference": "DOI:10.4014/jmb.2306.06005"}], "predicate": "requires", "predicate_id": null, "source": "reverse (reductive) tricarboxylic acid cycle", "target": "reduced ferredoxin"}, {"description": "The 3HP/4HB carbon-fixation cycle requires NADPH and ATP.", "edge_id": "edge-8", "evidence": [{"notes": "Kang 2023: 3-HP/4-HB cycle NADPH and ATP required.", "reference": "DOI:10.4014/jmb.2306.06005"}], "predicate": "requires", "predicate_id": null, "source": "3-hydroxypropionate/4-hydroxybutyrate cycle", "target": "NADPH"}, {"description": "The Wood-Ljungdahl pathway fixes CO2 to produce acetyl-CoA.", "edge_id": "edge-9", "evidence": [{"notes": "Kurt 2023: WLP is employed for CO2 fixation and acetyl-CoA production.", "reference": "DOI:10.3390/bioengineering10121357"}], "predicate": "fixes CO2 to produce", "predicate_id": null, "source": "Wood-Ljungdahl pathway", "target": "acetyl-CoA"}, {"description": "ATP citrate lyase (aclAB) is a key enzyme enabling the reverse TCA carbon-fixation cycle.", "edge_id": "edge-10", "evidence": [{"notes": "Mitchell 2024: aclAB ATP citrate lyase is one of four key enzymes to run the TCA cycle in reverse.", "reference": "DOI:10.1038/s41564-024-01704-y"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "ATP citrate lyase (aclAB)", "target": "reverse (reductive) tricarboxylic acid cycle"}, {"description": "Carbonic anhydrase interconverts CO2 and bicarbonate, supplying inorganic carbon to fixation.", "edge_id": "edge-11", "evidence": [{"notes": "Connecting edge wiring the enrichment node into the graph.", "reference": "DOI:10.1128/AEM.02473-10"}], "predicate": "produces", "predicate_id": "METPO:2007800", "source": "carbonic anhydrase", "target": "bicarbonate"}, {"description": "The Calvin-Benson cycle is an autotrophic carbon-dioxide-fixation mechanism.", "edge_id": "edge-12", "evidence": [{"notes": "Verified against the free public article text.", "reference": "DOI:10.1128/AEM.02473-10", "snippet": "The reductive pentose phosphate cycle is the quantitatively most important mechanism of autotrophic CO2 fixation in nature."}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Calvin-Benson-Bassham cycle", "target": "carbon fixation"}, {"description": "The reductive TCA cycle is an autotrophic carbon-dioxide-fixation route.", "edge_id": "edge-13", "evidence": [{"notes": "Verified against the free public article text.", "reference": "DOI:10.1128/AEM.02473-10", "snippet": "the second autotrophic CO2 fixation cycle (the reductive citric acid cycle) had been discovered"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "reverse (reductive) tricarboxylic acid cycle", "target": "carbon fixation"}, {"description": "The Wood-Ljungdahl pathway fixes carbon dioxide into acetyl-CoA.", "edge_id": "edge-14", "evidence": [{"notes": "Verified against the free public article text.", "reference": "DOI:10.1128/AEM.02473-10", "snippet": "The Wood-Ljungdahl pathway is a noncyclic pathway that results in the fixation of two CO2 molecules to form acetyl-CoA"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Wood-Ljungdahl pathway", "target": "carbon fixation"}], "graph_id": "carbon_fixation_co2_assimilation", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Product of CO2 fixation via the Wood-Ljungdahl pathway.", "grounding": null, "id": "acetyl_coa", "is_orphan": false, "label": "acetyl-CoA", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Energy cofactor consumed by carbon-fixation pathways.", "grounding": null, "id": "atp", "is_orphan": false, "label": "ATP", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Key marker enzyme enabling the reverse TCA carbon-fixation cycle.", "grounding": null, "id": "atp_citrate_lyase", "is_orphan": false, "label": "ATP citrate lyase (aclAB)", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "UNREVIEWED", "entry_version": 118, "evidence": [{"notes": "Supports ATP citrate lyase (aclAB) in carbon fixation; UniProtKB:Q8KDG2 (Q8KDG2, Citrate lyase, subunit2) in Chlorobaculum tepidum (strain ATCC 49652 / DSM 12025 / NBRC 103806 / TLS) provides a verified protein exemplar.", "reference": "DOI:10.1186/s12934-020-01494-y", "snippet": "both CBB operons were active and contributed almost equally to the carbon fixation process"}], "protein_label": "Citrate lyase, subunit2", "proteome_id": "UP000001007", "retrieved_on": "2026-10-17", "role": "Exemplar protein (Q8KDG2, Citrate lyase, subunit2) representing ATP citrate lyase (aclAB) in Chlorobaculum tepidum (strain ATCC 49652 / DSM 12025 / NBRC 103806 / TLS) for carbon fixation.", "sequence_version": 1, "taxon_id": "NCBITaxon:194439", "taxon_label": "Chlorobaculum tepidum (strain ATCC 49652 / DSM 12025 / NBRC 103806 / TLS)", "uniprot_id": "UniProtKB:Q8KDG2"}], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Dissolved inorganic carbon species; substrate/intermediate in carbon fixation.", "grounding": "CHEBI:17544", "id": "bicarbonate", "is_orphan": false, "label": "bicarbonate", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Inorganic carbon substrate fixed into biomass.", "grounding": "CHEBI:16526", "id": "carbon_dioxide", "is_orphan": false, "label": "carbon dioxide", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Conversion of inorganic CO2/bicarbonate into organic compounds.", "grounding": "GO:0015977", "id": "carbon_fixation_process", "is_orphan": false, "label": "carbon fixation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Assimilation of inorganic carbon into organic compounds (autotrophy).", "grounding": "traitmech:000019", "id": "carbon_fixation_trait", "is_orphan": false, "label": "carbon fixation", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Enzyme accelerating interconversion of CO2 and bicarbonate.", "grounding": "InterPro:IPR001765", "id": "carbonic_anhydrase", "is_orphan": false, "label": "carbonic anhydrase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 114, "evidence": [{"notes": "Supports carbonic anhydrase in carbon fixation; UniProtKB:Q5KW03 (Q5KW03, Carbonic anhydrase) in Geobacillus kaustophilus (strain HTA426) provides a verified protein exemplar.", "reference": "DOI:10.1128/aem.01557-23", "snippet": "DIC transporters and carbonic anhydrase enzymes (CA) to facilitate DIC fixation"}], "protein_label": "Carbonic anhydrase", "proteome_id": "UP000001172", "retrieved_on": "2026-10-17", "role": "Exemplar protein (Q5KW03, Carbonic anhydrase) representing carbonic anhydrase in Geobacillus kaustophilus (strain HTA426) for carbon fixation.", "sequence_version": 1, "taxon_id": "NCBITaxon:235909", "taxon_label": "Geobacillus kaustophilus (strain HTA426)", "uniprot_id": "UniProtKB:Q5KW03"}], "related_records": [], "xrefs": []}, {"color": "#e0e7ff", "description": "Canonical autotrophic carbon-fixation pathway.", "grounding": null, "id": "cbb_cycle", "is_orphan": false, "label": "Calvin-Benson-Bassham cycle", "node_type": "PATHWAY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#e0e7ff", "description": "Autotrophic carbon-fixation pathway in some archaea.", "grounding": null, "id": "hp_hb_cycle", "is_orphan": false, "label": "3-hydroxypropionate/4-hydroxybutyrate cycle", "node_type": "PATHWAY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Reducing-equivalent cofactor consumed by carbon-fixation pathways.", "grounding": "CHEBI:16474", "id": "nadph", "is_orphan": false, "label": "NADPH", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Low-potential electron carrier required by the reverse TCA cycle.", "grounding": "CHEBI:17513", "id": "reduced_ferredoxin", "is_orphan": false, "label": "reduced ferredoxin", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#e0e7ff", "description": "Reductive TCA autotrophic carbon-fixation pathway.", "grounding": null, "id": "rtca_cycle", "is_orphan": false, "label": "reverse (reductive) tricarboxylic acid cycle", "node_type": "PATHWAY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Carboxylating enzyme of the Calvin-Benson-Bassham cycle that fixes CO2.", "grounding": "InterPro:IPR033966", "id": "rubisco", "is_orphan": false, "label": "ribulose-1,5-bisphosphate carboxylase/oxygenase (RubisCO)", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 154, "evidence": [{"notes": "The strain-level perturbation study supports activity of both H16 CBB operons; UniProtKB P42721 identifies the reviewed plasmid cbbL2 large chain in that strain.", "reference": "DOI:10.1186/s12934-020-01494-y", "snippet": "both CBB operons were active and contributed almost equally to the carbon fixation process"}], "gene_symbol": "cbbL2", "protein_label": "Ribulose bisphosphate carboxylase large chain, plasmid", "retrieved_on": "2026-08-24", "role": "Large-chain component of the plasmid-encoded RuBisCO in one of the two active CBB operons of C. necator H16.", "sequence_version": 3, "taxon_id": "NCBITaxon:381666", "taxon_label": "Cupriavidus necator H16", "uniprot_id": "UniProtKB:P42721"}], "related_records": [], "xrefs": []}, {"color": "#e0e7ff", "description": "Reductive acetyl-CoA autotrophic carbon-fixation pathway.", "grounding": "GO:0030634", "id": "wood_ljungdahl_pathway", "is_orphan": false, "label": "Wood-Ljungdahl pathway", "node_type": "PATHWAY", "protein_examples": [], "related_records": [{"basis": "PathwayMech context: Acetogenesis in Acetobacterium woodii (NCBITaxon:33952). The shared reductive acetyl-CoA route combines methyl and carbonyl branches for acetogenesis; the bacterial exemplar does not establish archaeal variants. No exact equivalence or transfer of organism scope is asserted.", "corpus": "PathwayMech", "identifier": "WikiPathways:WP5019", "relation": "PATHWAY_CONTEXT", "source_version": "aa305727458c44ab05614901334540e2c87a9f3a"}], "xrefs": []}], "pathway_context_rows": [{"basis": "PathwayMech context: Acetogenesis in Acetobacterium woodii (NCBITaxon:33952). The shared reductive acetyl-CoA route combines methyl and carbonyl branches for acetogenesis; the bacterial exemplar does not establish archaeal variants. No exact equivalence or transfer of organism scope is asserted.", "corpus": "PathwayMech", "identifier": "WikiPathways:WP5019", "node_label": "Wood-Ljungdahl pathway", "relation": "PATHWAY_CONTEXT", "source_version": "aa305727458c44ab05614901334540e2c87a9f3a", "url": "https://culturebotai.github.io/PathwayMech/pages/records/WikiPathways_WP5019.html"}], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 114, "evidence": [{"notes": "Supports carbonic anhydrase in carbon fixation; UniProtKB:Q5KW03 (Q5KW03, Carbonic anhydrase) in Geobacillus kaustophilus (strain HTA426) provides a verified protein exemplar.", "reference": "DOI:10.1128/aem.01557-23", "snippet": "DIC transporters and carbonic anhydrase enzymes (CA) to facilitate DIC fixation"}], "node_id": "carbonic_anhydrase", "node_label": "carbonic anhydrase", "protein_label": "Carbonic anhydrase", "proteome_id": "UP000001172", "retrieved_on": "2026-10-17", "role": "Exemplar protein (Q5KW03, Carbonic anhydrase) representing carbonic anhydrase in Geobacillus kaustophilus (strain HTA426) for carbon fixation.", "sequence_version": 1, "taxon_id": "NCBITaxon:235909", "taxon_label": "Geobacillus kaustophilus (strain HTA426)", "uniprot_id": "UniProtKB:Q5KW03"}, {"entry_status": "REVIEWED", "entry_version": 154, "evidence": [{"notes": "The strain-level perturbation study supports activity of both H16 CBB operons; UniProtKB P42721 identifies the reviewed plasmid cbbL2 large chain in that strain.", "reference": "DOI:10.1186/s12934-020-01494-y", "snippet": "both CBB operons were active and contributed almost equally to the carbon fixation process"}], "gene_symbol": "cbbL2", "node_id": "rubisco", "node_label": "ribulose-1,5-bisphosphate carboxylase/oxygenase (RubisCO)", "protein_label": "Ribulose bisphosphate carboxylase large chain, plasmid", "retrieved_on": "2026-08-24", "role": "Large-chain component of the plasmid-encoded RuBisCO in one of the two active CBB operons of C. necator H16.", "sequence_version": 3, "taxon_id": "NCBITaxon:381666", "taxon_label": "Cupriavidus necator H16", "uniprot_id": "UniProtKB:P42721"}, {"entry_status": "UNREVIEWED", "entry_version": 118, "evidence": [{"notes": "Supports ATP citrate lyase (aclAB) in carbon fixation; UniProtKB:Q8KDG2 (Q8KDG2, Citrate lyase, subunit2) in Chlorobaculum tepidum (strain ATCC 49652 / DSM 12025 / NBRC 103806 / TLS) provides a verified protein exemplar.", "reference": "DOI:10.1186/s12934-020-01494-y", "snippet": "both CBB operons were active and contributed almost equally to the carbon fixation process"}], "node_id": "atp_citrate_lyase", "node_label": "ATP citrate lyase (aclAB)", "protein_label": "Citrate lyase, subunit2", "proteome_id": "UP000001007", "retrieved_on": "2026-10-17", "role": "Exemplar protein (Q8KDG2, Citrate lyase, subunit2) representing ATP citrate lyase (aclAB) in Chlorobaculum tepidum (strain ATCC 49652 / DSM 12025 / NBRC 103806 / TLS) for carbon fixation.", "sequence_version": 1, "taxon_id": "NCBITaxon:194439", "taxon_label": "Chlorobaculum tepidum (strain ATCC 49652 / DSM 12025 / NBRC 103806 / TLS)", "uniprot_id": "UniProtKB:Q8KDG2"}], "scope_notes": "This composite graph spans multiple independent carbon-fixation pathways. The C. necator H16 RuBisCO example supports the CBB branch only; the rTCA, 3HP/4HB, and Wood-Ljungdahl branches require different pathway-specific proteins.", "scope_status": "MECHANISTIC", "title": "Autotrophic carbon fixation assimilates CO2 into organic carbon"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking inorganic CO2 to organic carbon via six recognized autotrophic carbon-fixation pathways.", "edges": [{"description": "CO2 is the substrate fixed by autotrophic carbon-fixation pathways.", "evidence": [{"notes": "Berg reviews the distribution of autotrophic CO2-fixation pathways.", "reference": "DOI:10.1128/AEM.02473-10"}], "id": "edge-1", "is_orphan": false, "predicate": "fixed by", "predicate_id": "METPO:2007404", "source": "carbon_dioxide", "target": "carbon_fixation_trait"}, {"description": "The autotrophic carbon-fixation process realizes the trait.", "evidence": [{"notes": "H\u00fcgler \u0026 Sievert support multiple autotrophic carbon-fixation pathways operating among ocean microorganisms.", "reference": "DOI:10.1146/annurev-marine-120709-142712"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "carbon_fixation_process", "target": "carbon_fixation_trait"}, {"description": "Carbonic anhydrase speeds interconversion of CO2 and bicarbonate, bridging DIC supply to demand.", "evidence": [{"notes": "Scott 2024: CA activity speeds the interconversion of CO2 and HCO3-.", "reference": "DOI:10.1128/aem.01557-23"}], "id": "edge-3", "is_orphan": false, "predicate": "accelerates interconversion of", "predicate_id": null, "source": "carbonic_anhydrase", "target": "carbon_dioxide"}, {"description": "RubisCO fixes CO2 as its carboxylation substrate in CBB-associated fixation.", "evidence": [{"notes": "Scott 2024: RubisCO substrate is CO2; applies broadly to CBB-associated fixation.", "reference": "DOI:10.1128/aem.01557-23"}], "id": "edge-4", "is_orphan": false, "predicate": "uses substrate", "predicate_id": null, "source": "rubisco", "target": "carbon_dioxide"}, {"description": "CBB carbon fixation consumes ATP (nine ATP per three CO2 fixed to one GAP).", "evidence": [{"notes": "Bahrle 2023: three CO2 to one GAP at the cost of nine ATP and six NADPH.", "reference": "DOI:10.1186/s40643-023-00705-9"}], "id": "edge-5", "is_orphan": false, "predicate": "consumes", "predicate_id": "biolink:consumes", "source": "cbb_cycle", "target": "atp"}, {"description": "CBB carbon fixation consumes NADPH (six NADPH per three CO2 fixed).", "evidence": [{"notes": "Bahrle 2023: three CO2 to one GAP at the cost of nine ATP and six NADPH.", "reference": "DOI:10.1186/s40643-023-00705-9"}], "id": "edge-6", "is_orphan": false, "predicate": "consumes", "predicate_id": "biolink:consumes", "source": "cbb_cycle", "target": "nadph"}, {"description": "The reverse TCA carbon-fixation cycle requires reduced ferredoxin as a cofactor.", "evidence": [{"notes": "Kang 2023: rTCA cycle cofactors include NAD(P)H, ATP, Fdred, FADH.", "reference": "DOI:10.4014/jmb.2306.06005"}], "id": "edge-7", "is_orphan": false, "predicate": "requires", "predicate_id": null, "source": "rtca_cycle", "target": "reduced_ferredoxin"}, {"description": "The 3HP/4HB carbon-fixation cycle requires NADPH and ATP.", "evidence": [{"notes": "Kang 2023: 3-HP/4-HB cycle NADPH and ATP required.", "reference": "DOI:10.4014/jmb.2306.06005"}], "id": "edge-8", "is_orphan": false, "predicate": "requires", "predicate_id": null, "source": "hp_hb_cycle", "target": "nadph"}, {"description": "The Wood-Ljungdahl pathway fixes CO2 to produce acetyl-CoA.", "evidence": [{"notes": "Kurt 2023: WLP is employed for CO2 fixation and acetyl-CoA production.", "reference": "DOI:10.3390/bioengineering10121357"}], "id": "edge-9", "is_orphan": false, "predicate": "fixes CO2 to produce", "predicate_id": null, "source": "wood_ljungdahl_pathway", "target": "acetyl_coa"}, {"description": "ATP citrate lyase (aclAB) is a key enzyme enabling the reverse TCA carbon-fixation cycle.", "evidence": [{"notes": "Mitchell 2024: aclAB ATP citrate lyase is one of four key enzymes to run the TCA cycle in reverse.", "reference": "DOI:10.1038/s41564-024-01704-y"}], "id": "edge-10", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "atp_citrate_lyase", "target": "rtca_cycle"}, {"description": "Carbonic anhydrase interconverts CO2 and bicarbonate, supplying inorganic carbon to fixation.", "evidence": [{"notes": "Connecting edge wiring the enrichment node into the graph.", "reference": "DOI:10.1128/AEM.02473-10"}], "id": "edge-11", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2007800", "source": "carbonic_anhydrase", "target": "bicarbonate"}, {"description": "The Calvin-Benson cycle is an autotrophic carbon-dioxide-fixation mechanism.", "evidence": [{"notes": "Verified against the free public article text.", "reference": "DOI:10.1128/AEM.02473-10", "snippet": "The reductive pentose phosphate cycle is the quantitatively most important mechanism of autotrophic CO2 fixation in nature."}], "id": "edge-12", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "cbb_cycle", "target": "carbon_fixation_process"}, {"description": "The reductive TCA cycle is an autotrophic carbon-dioxide-fixation route.", "evidence": [{"notes": "Verified against the free public article text.", "reference": "DOI:10.1128/AEM.02473-10", "snippet": "the second autotrophic CO2 fixation cycle (the reductive citric acid cycle) had been discovered"}], "id": "edge-13", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "rtca_cycle", "target": "carbon_fixation_process"}, {"description": "The Wood-Ljungdahl pathway fixes carbon dioxide into acetyl-CoA.", "evidence": [{"notes": "Verified against the free public article text.", "reference": "DOI:10.1128/AEM.02473-10", "snippet": "The Wood-Ljungdahl pathway is a noncyclic pathway that results in the fixation of two CO2 molecules to form acetyl-CoA"}], "id": "edge-14", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "wood_ljungdahl_pathway", "target": "carbon_fixation_process"}], "evidence_rows": [{"description": "CO2 is the substrate fixed by autotrophic carbon-fixation pathways.", "edge_id": "edge-1", "evidence": [{"notes": "Berg reviews the distribution of autotrophic CO2-fixation pathways.", "reference": "DOI:10.1128/AEM.02473-10"}], "predicate": "fixed by", "predicate_id": "METPO:2007404", "source": "carbon dioxide", "source_grounding": "CHEBI:16526", "target": "carbon fixation", "target_grounding": "traitmech:000019"}, {"description": "The autotrophic carbon-fixation process realizes the trait.", "edge_id": "edge-2", "evidence": [{"notes": "H\u00fcgler \u0026 Sievert support multiple autotrophic carbon-fixation pathways operating among ocean microorganisms.", "reference": "DOI:10.1146/annurev-marine-120709-142712"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "carbon fixation", "source_grounding": "GO:0015977", "target": "carbon fixation", "target_grounding": "traitmech:000019"}, {"description": "Carbonic anhydrase speeds interconversion of CO2 and bicarbonate, bridging DIC supply to demand.", "edge_id": "edge-3", "evidence": [{"notes": "Scott 2024: CA activity speeds the interconversion of CO2 and HCO3-.", "reference": "DOI:10.1128/aem.01557-23"}], "predicate": "accelerates interconversion of", "predicate_id": null, "source": "carbonic anhydrase", "source_grounding": "InterPro:IPR001765", "target": "carbon dioxide", "target_grounding": "CHEBI:16526"}, {"description": "RubisCO fixes CO2 as its carboxylation substrate in CBB-associated fixation.", "edge_id": "edge-4", "evidence": [{"notes": "Scott 2024: RubisCO substrate is CO2; applies broadly to CBB-associated fixation.", "reference": "DOI:10.1128/aem.01557-23"}], "predicate": "uses substrate", "predicate_id": null, "source": "ribulose-1,5-bisphosphate carboxylase/oxygenase (RubisCO)", "source_grounding": "InterPro:IPR033966", "target": "carbon dioxide", "target_grounding": "CHEBI:16526"}, {"description": "CBB carbon fixation consumes ATP (nine ATP per three CO2 fixed to one GAP).", "edge_id": "edge-5", "evidence": [{"notes": "Bahrle 2023: three CO2 to one GAP at the cost of nine ATP and six NADPH.", "reference": "DOI:10.1186/s40643-023-00705-9"}], "predicate": "consumes", "predicate_id": "biolink:consumes", "source": "Calvin-Benson-Bassham cycle", "source_grounding": null, "target": "ATP", "target_grounding": null}, {"description": "CBB carbon fixation consumes NADPH (six NADPH per three CO2 fixed).", "edge_id": "edge-6", "evidence": [{"notes": "Bahrle 2023: three CO2 to one GAP at the cost of nine ATP and six NADPH.", "reference": "DOI:10.1186/s40643-023-00705-9"}], "predicate": "consumes", "predicate_id": "biolink:consumes", "source": "Calvin-Benson-Bassham cycle", "source_grounding": null, "target": "NADPH", "target_grounding": "CHEBI:16474"}, {"description": "The reverse TCA carbon-fixation cycle requires reduced ferredoxin as a cofactor.", "edge_id": "edge-7", "evidence": [{"notes": "Kang 2023: rTCA cycle cofactors include NAD(P)H, ATP, Fdred, FADH.", "reference": "DOI:10.4014/jmb.2306.06005"}], "predicate": "requires", "predicate_id": null, "source": "reverse (reductive) tricarboxylic acid cycle", "source_grounding": null, "target": "reduced ferredoxin", "target_grounding": "CHEBI:17513"}, {"description": "The 3HP/4HB carbon-fixation cycle requires NADPH and ATP.", "edge_id": "edge-8", "evidence": [{"notes": "Kang 2023: 3-HP/4-HB cycle NADPH and ATP required.", "reference": "DOI:10.4014/jmb.2306.06005"}], "predicate": "requires", "predicate_id": null, "source": "3-hydroxypropionate/4-hydroxybutyrate cycle", "source_grounding": null, "target": "NADPH", "target_grounding": "CHEBI:16474"}, {"description": "The Wood-Ljungdahl pathway fixes CO2 to produce acetyl-CoA.", "edge_id": "edge-9", "evidence": [{"notes": "Kurt 2023: WLP is employed for CO2 fixation and acetyl-CoA production.", "reference": "DOI:10.3390/bioengineering10121357"}], "predicate": "fixes CO2 to produce", "predicate_id": null, "source": "Wood-Ljungdahl pathway", "source_grounding": "GO:0030634", "target": "acetyl-CoA", "target_grounding": null}, {"description": "ATP citrate lyase (aclAB) is a key enzyme enabling the reverse TCA carbon-fixation cycle.", "edge_id": "edge-10", "evidence": [{"notes": "Mitchell 2024: aclAB ATP citrate lyase is one of four key enzymes to run the TCA cycle in reverse.", "reference": "DOI:10.1038/s41564-024-01704-y"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "ATP citrate lyase (aclAB)", "source_grounding": null, "target": "reverse (reductive) tricarboxylic acid cycle", "target_grounding": null}, {"description": "Carbonic anhydrase interconverts CO2 and bicarbonate, supplying inorganic carbon to fixation.", "edge_id": "edge-11", "evidence": [{"notes": "Connecting edge wiring the enrichment node into the graph.", "reference": "DOI:10.1128/AEM.02473-10"}], "predicate": "produces", "predicate_id": "METPO:2007800", "source": "carbonic anhydrase", "source_grounding": "InterPro:IPR001765", "target": "bicarbonate", "target_grounding": "CHEBI:17544"}, {"description": "The Calvin-Benson cycle is an autotrophic carbon-dioxide-fixation mechanism.", "edge_id": "edge-12", "evidence": [{"notes": "Verified against the free public article text.", "reference": "DOI:10.1128/AEM.02473-10", "snippet": "The reductive pentose phosphate cycle is the quantitatively most important mechanism of autotrophic CO2 fixation in nature."}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Calvin-Benson-Bassham cycle", "source_grounding": null, "target": "carbon fixation", "target_grounding": "GO:0015977"}, {"description": "The reductive TCA cycle is an autotrophic carbon-dioxide-fixation route.", "edge_id": "edge-13", "evidence": [{"notes": "Verified against the free public article text.", "reference": "DOI:10.1128/AEM.02473-10", "snippet": "the second autotrophic CO2 fixation cycle (the reductive citric acid cycle) had been discovered"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "reverse (reductive) tricarboxylic acid cycle", "source_grounding": null, "target": "carbon fixation", "target_grounding": "GO:0015977"}, {"description": "The Wood-Ljungdahl pathway fixes carbon dioxide into acetyl-CoA.", "edge_id": "edge-14", "evidence": [{"notes": "Verified against the free public article text.", "reference": "DOI:10.1128/AEM.02473-10", "snippet": "The Wood-Ljungdahl pathway is a noncyclic pathway that results in the fixation of two CO2 molecules to form acetyl-CoA"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Wood-Ljungdahl pathway", "source_grounding": "GO:0030634", "target": "carbon fixation", "target_grounding": "GO:0015977"}], "graph_id": "carbon_fixation_co2_assimilation", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Product of CO2 fixation via the Wood-Ljungdahl pathway.", "grounding": null, "id": "acetyl_coa", "is_orphan": false, "label": "acetyl-CoA", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Energy cofactor consumed by carbon-fixation pathways.", "grounding": null, "id": "atp", "is_orphan": false, "label": "ATP", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Key marker enzyme enabling the reverse TCA carbon-fixation cycle.", "grounding": null, "id": "atp_citrate_lyase", "is_orphan": false, "label": "ATP citrate lyase (aclAB)", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Dissolved inorganic carbon species; substrate/intermediate in carbon fixation.", "grounding": "CHEBI:17544", "id": "bicarbonate", "is_orphan": false, "label": "bicarbonate", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Inorganic carbon substrate fixed into biomass.", "grounding": "CHEBI:16526", "id": "carbon_dioxide", "is_orphan": false, "label": "carbon dioxide", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Conversion of inorganic CO2/bicarbonate into organic compounds.", "grounding": "GO:0015977", "id": "carbon_fixation_process", "is_orphan": false, "label": "carbon fixation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Assimilation of inorganic carbon into organic compounds (autotrophy).", "grounding": "traitmech:000019", "id": "carbon_fixation_trait", "is_orphan": false, "label": "carbon fixation", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Enzyme accelerating interconversion of CO2 and bicarbonate.", "grounding": "InterPro:IPR001765", "id": "carbonic_anhydrase", "is_orphan": false, "label": "carbonic anhydrase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#e0e7ff", "description": "Canonical autotrophic carbon-fixation pathway.", "grounding": null, "id": "cbb_cycle", "is_orphan": false, "label": "Calvin-Benson-Bassham cycle", "node_type": "PATHWAY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#e0e7ff", "description": "Autotrophic carbon-fixation pathway in some archaea.", "grounding": null, "id": "hp_hb_cycle", "is_orphan": false, "label": "3-hydroxypropionate/4-hydroxybutyrate cycle", "node_type": "PATHWAY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Reducing-equivalent cofactor consumed by carbon-fixation pathways.", "grounding": "CHEBI:16474", "id": "nadph", "is_orphan": false, "label": "NADPH", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Low-potential electron carrier required by the reverse TCA cycle.", "grounding": "CHEBI:17513", "id": "reduced_ferredoxin", "is_orphan": false, "label": "reduced ferredoxin", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#e0e7ff", "description": "Reductive TCA autotrophic carbon-fixation pathway.", "grounding": null, "id": "rtca_cycle", "is_orphan": false, "label": "reverse (reductive) tricarboxylic acid cycle", "node_type": "PATHWAY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Carboxylating enzyme of the Calvin-Benson-Bassham cycle that fixes CO2.", "grounding": "InterPro:IPR033966", "id": "rubisco", "is_orphan": false, "label": "ribulose-1,5-bisphosphate carboxylase/oxygenase (RubisCO)", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 153, "evidence": [{"notes": "The strain-level perturbation study supports activity of both H16 CBB operons; UniProtKB P42721 identifies the reviewed plasmid cbbL2 large chain in that strain.", "reference": "DOI:10.1186/s12934-020-01494-y", "snippet": "both CBB operons were active and contributed almost equally to the carbon fixation process"}], "gene_symbol": "cbbL2", "protein_label": "Ribulose bisphosphate carboxylase large chain, plasmid", "retrieved_on": "2026-08-24", "role": "Large-chain component of the plasmid-encoded RuBisCO in one of the two active CBB operons of C. necator H16.", "sequence_version": 3, "taxon_id": "NCBITaxon:381666", "taxon_label": "Cupriavidus necator H16", "uniprot_id": "UniProtKB:P42721"}], "related_records": [], "xrefs": []}, {"color": "#e0e7ff", "description": "Reductive acetyl-CoA autotrophic carbon-fixation pathway.", "grounding": "GO:0030634", "id": "wood_ljungdahl_pathway", "is_orphan": false, "label": "Wood-Ljungdahl pathway", "node_type": "PATHWAY", "protein_examples": [], "related_records": [{"basis": "PathwayMech context: Acetogenesis in Acetobacterium woodii (NCBITaxon:33952). The shared reductive acetyl-CoA route combines methyl and carbonyl branches for acetogenesis; the bacterial exemplar does not establish archaeal variants. No exact equivalence or transfer of organism scope is asserted.", "corpus": "PathwayMech", "identifier": "WikiPathways:WP5019", "relation": "PATHWAY_CONTEXT", "source_version": "aa305727458c44ab05614901334540e2c87a9f3a"}], "xrefs": []}], "pathway_context_rows": [{"basis": "PathwayMech context: Acetogenesis in Acetobacterium woodii (NCBITaxon:33952). The shared reductive acetyl-CoA route combines methyl and carbonyl branches for acetogenesis; the bacterial exemplar does not establish archaeal variants. No exact equivalence or transfer of organism scope is asserted.", "corpus": "PathwayMech", "identifier": "WikiPathways:WP5019", "node_label": "Wood-Ljungdahl pathway", "relation": "PATHWAY_CONTEXT", "source_version": "aa305727458c44ab05614901334540e2c87a9f3a", "url": "https://culturebotai.github.io/PathwayMech/pages/records/WikiPathways_WP5019.html"}], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 153, "evidence": [{"notes": "The strain-level perturbation study supports activity of both H16 CBB operons; UniProtKB P42721 identifies the reviewed plasmid cbbL2 large chain in that strain.", "reference": "DOI:10.1186/s12934-020-01494-y", "snippet": "both CBB operons were active and contributed almost equally to the carbon fixation process"}], "gene_symbol": "cbbL2", "node_id": "rubisco", "node_label": "ribulose-1,5-bisphosphate carboxylase/oxygenase (RubisCO)", "protein_label": "Ribulose bisphosphate carboxylase large chain, plasmid", "retrieved_on": "2026-08-24", "role": "Large-chain component of the plasmid-encoded RuBisCO in one of the two active CBB operons of C. necator H16.", "sequence_version": 3, "taxon_id": "NCBITaxon:381666", "taxon_label": "Cupriavidus necator H16", "uniprot_id": "UniProtKB:P42721"}], "scope_notes": "This composite graph spans multiple independent carbon-fixation pathways. The C. necator H16 RuBisCO example supports the CBB branch only; the rTCA, 3HP/4HB, and Wood-Ljungdahl branches require different pathway-specific proteins.", "scope_status": "MECHANISTIC", "title": "Autotrophic carbon fixation assimilates CO2 into organic carbon"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -1234,13 +1273,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-10-17 09:00 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

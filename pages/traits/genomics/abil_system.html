@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/genomics.html">GENOMICS</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/genomics.html">GENOMICS</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>AbiL system</h1>
     <p class="curie"><code>traitmech:000340</code> · CLASS · PROPOSED</p>
 
@@ -115,9 +126,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>AbiL locus</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>restricted phage propagation</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>The DefenseFinder AbiL namespace is modeled as a two-profile AbiL__AbiLi plus AbiL__AbiLii system, and AbiL is a confirmed lactococcal Abi-like system.</p>
             <ul>
 
@@ -150,9 +163,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>restricted phage propagation</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>AbiL system</strong>
-            <code>METPO:2007700</code>
+            <code>traitmech:000340</code>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>Restriction of phage propagation realizes the AbiL abortive-infection system possession trait.</p>
             <ul>
 
@@ -173,8 +188,10 @@
 
           <li id="pathograph-1-edge-3">
             <strong>AbiL system</strong>
+            <code>traitmech:000340</code>
             <span class="edge-predicate">is a</span>
             <strong>abortive infection system</strong>
+            <code>traitmech:000214</code>
             <code>rdfs:subClassOf</code>
             <p>AbiL system possession is an abortive-infection-system trait.</p>
             <ul>
@@ -316,11 +333,75 @@
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
 
-      <p class="no-match">No kg-microbe node embedding matched this record
-        in the 2026-04-25 deepwalk.</p>
+      <p class="match-method">Matched <strong>1</strong>
+        kg-microbe node
+        via <em>parent_proxy</em>.</p>
+      <ul class="kgm-nodes">
+
+        <li><code>METPO:1000188</code> <span class="dim-preview">[-0.956, -1.962, -3.148, +1.274, …]</span></li>
+
+      </ul>
+      <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
 
     </div>
 
+
+    <div class="card">
+      <h2>Nearest neighbors in embedding space</h2>
+      <p class="meta">Top-8 cosine-similar METPO traits
+        from the 2026-04-25 deepwalk (512-D).</p>
+      <ul class="nn-list">
+
+        <li>
+          <span class="nn-cat">upper</span>
+          <a href="../../traits/upper/quality.html">quality</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/jukab_system.html">JukAB system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/integrative_conjugative_element.html">integrative conjugative element</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/ig_like_schlafen_system.html">Ig-like Schlafen system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hypnos_system.html">Hypnos system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hna_system.html">Hna system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hma_system.html">Hma system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hesat_system.html">Hesat system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+      </ul>
+    </div>
 
 
 
@@ -459,6 +540,11 @@
     </dl>
   </div>
 
+
+  <div class="card rail-kgm">
+    <h2>kg-microbe</h2>
+    <p class="meta">1 matching node (parent_proxy)</p>
+  </div>
 
 </aside>
 </div>
@@ -792,7 +878,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Conservative system-level sketch linking possession of a DefenseFinder AbiL locus to restricted bacteriophage propagation without asserting the unresolved phage trigger, AbiLi or AbiLii molecular activity, or AbiL-to-PARIS mechanistic correspondence.", "edges": [{"description": "The DefenseFinder AbiL namespace is modeled as a two-profile AbiL__AbiLi plus AbiL__AbiLii system, and AbiL is a confirmed lactococcal Abi-like system.", "evidence": [{"notes": "The DefenseFinder rules table models AbiL as a two-component system requiring the AbiL__AbiLi and AbiL__AbiLii profiles.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "AbiL\tAbiL\t2\t2\tAbiL__AbiLi, AbiL__AbiLii\t\t\t"}, {"notes": "The DefenseFinder HMM inventory records AbiL__AbiLi under the AbiL model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| AbiL__AbiLi                                      | AbiL__AbiLi                                      | AbiL                   | Custom                  | 20     |"}, {"notes": "The DefenseFinder HMM inventory records AbiL__AbiLii under the AbiL model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| AbiL__AbiLii                                     | AbiL__AbiLii                                     | AbiL                   | Custom                  | 20     |"}, {"notes": "The FEMS review counts AbiL among the confirmed two-component lactococcal Abi-like systems.", "reference": "DOI:10.1093/femsre/fuag009", "snippet": "13 are two-component systems (AbiD, AbiD1, AbiD-like, AbiE, AbiF, AbiG, AbiL, AbiQ, AbiT, AbiV, PARIS, type I CBASS, Septu"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "abil_locus", "target": "restricted_phage_propagation"}, {"description": "Restriction of phage propagation realizes the AbiL abortive-infection system possession trait.", "evidence": [{"notes": "Crossref metadata verifies the Deng et al. 1999 AbiL primary paper title and DOI.", "reference": "DOI:10.1016/S0168-1656(98)00175-8", "snippet": "Genetic organization and functional analysis of a novel phage abortive infection system, AbiL, from Lactococcus lactis"}, {"notes": "The FEMS review counts AbiL among the confirmed two-component lactococcal Abi-like systems.", "reference": "DOI:10.1093/femsre/fuag009", "snippet": "13 are two-component systems (AbiD, AbiD1, AbiD-like, AbiE, AbiF, AbiG, AbiL, AbiQ, AbiT, AbiV, PARIS, type I CBASS, Septu"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "restricted_phage_propagation", "target": "abil_system_trait"}, {"description": "AbiL system possession is an abortive-infection-system trait.", "evidence": [{"notes": "Crossref metadata verifies the Deng et al. 1999 AbiL primary paper title and DOI.", "reference": "DOI:10.1016/S0168-1656(98)00175-8", "snippet": "Genetic organization and functional analysis of a novel phage abortive infection system, AbiL, from Lactococcus lactis"}, {"notes": "The DefenseFinder article registry maps the named AbiL model namespace to the Chopin et al. lactococcal abortive-infection review.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "AbiL | 10\\.1016/j\\.mib\\.2005\\.06\\.006 | Phage abortive infection in lactococci: variations on a theme"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "abil_system_trait", "target": "abortive_infection_system_trait"}, {"description": "Abortive phage resistance protein AbiC (abiC, UniProtKB:Q01457) contributes to AbiL system.", "evidence": [{"notes": "Supports the functional association between Abortive phage resistance protein AbiC (UniProtKB:Q01457 in Lactococcus lactis subsp. lactis (Streptococcus lactis)) and AbiL system.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "AbiC | 10\\.1016/j\\.mib\\.2005\\.06\\.006 | Phage abortive infection in lactococci: variations on a theme"}], "id": "edge-4", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "abil_system_protein_component", "target": "abil_system_trait"}], "evidence_rows": [{"description": "The DefenseFinder AbiL namespace is modeled as a two-profile AbiL__AbiLi plus AbiL__AbiLii system, and AbiL is a confirmed lactococcal Abi-like system.", "edge_id": "edge-1", "evidence": [{"notes": "The DefenseFinder rules table models AbiL as a two-component system requiring the AbiL__AbiLi and AbiL__AbiLii profiles.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "AbiL\tAbiL\t2\t2\tAbiL__AbiLi, AbiL__AbiLii\t\t\t"}, {"notes": "The DefenseFinder HMM inventory records AbiL__AbiLi under the AbiL model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| AbiL__AbiLi                                      | AbiL__AbiLi                                      | AbiL                   | Custom                  | 20     |"}, {"notes": "The DefenseFinder HMM inventory records AbiL__AbiLii under the AbiL model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| AbiL__AbiLii                                     | AbiL__AbiLii                                     | AbiL                   | Custom                  | 20     |"}, {"notes": "The FEMS review counts AbiL among the confirmed two-component lactococcal Abi-like systems.", "reference": "DOI:10.1093/femsre/fuag009", "snippet": "13 are two-component systems (AbiD, AbiD1, AbiD-like, AbiE, AbiF, AbiG, AbiL, AbiQ, AbiT, AbiV, PARIS, type I CBASS, Septu"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "AbiL locus", "target": "restricted phage propagation"}, {"description": "Restriction of phage propagation realizes the AbiL abortive-infection system possession trait.", "edge_id": "edge-2", "evidence": [{"notes": "Crossref metadata verifies the Deng et al. 1999 AbiL primary paper title and DOI.", "reference": "DOI:10.1016/S0168-1656(98)00175-8", "snippet": "Genetic organization and functional analysis of a novel phage abortive infection system, AbiL, from Lactococcus lactis"}, {"notes": "The FEMS review counts AbiL among the confirmed two-component lactococcal Abi-like systems.", "reference": "DOI:10.1093/femsre/fuag009", "snippet": "13 are two-component systems (AbiD, AbiD1, AbiD-like, AbiE, AbiF, AbiG, AbiL, AbiQ, AbiT, AbiV, PARIS, type I CBASS, Septu"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "restricted phage propagation", "target": "AbiL system"}, {"description": "AbiL system possession is an abortive-infection-system trait.", "edge_id": "edge-3", "evidence": [{"notes": "Crossref metadata verifies the Deng et al. 1999 AbiL primary paper title and DOI.", "reference": "DOI:10.1016/S0168-1656(98)00175-8", "snippet": "Genetic organization and functional analysis of a novel phage abortive infection system, AbiL, from Lactococcus lactis"}, {"notes": "The DefenseFinder article registry maps the named AbiL model namespace to the Chopin et al. lactococcal abortive-infection review.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "AbiL | 10\\.1016/j\\.mib\\.2005\\.06\\.006 | Phage abortive infection in lactococci: variations on a theme"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "AbiL system", "target": "abortive infection system"}, {"description": "Abortive phage resistance protein AbiC (abiC, UniProtKB:Q01457) contributes to AbiL system.", "edge_id": "edge-4", "evidence": [{"notes": "Supports the functional association between Abortive phage resistance protein AbiC (UniProtKB:Q01457 in Lactococcus lactis subsp. lactis (Streptococcus lactis)) and AbiL system.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "AbiC | 10\\.1016/j\\.mib\\.2005\\.06\\.006 | Phage abortive infection in lactococci: variations on a theme"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Abortive phage resistance protein AbiC", "target": "AbiL system"}], "graph_id": "abil_locus_restricts_lactococcal_phage", "issues": [], "nodes": [{"color": "#f3f4f6", "description": "An AbiL-family abortive-infection locus represented by the DefenseFinder AbiL__AbiLi and AbiL__AbiLii profiles.", "grounding": null, "id": "abil_locus", "is_orphan": false, "label": "AbiL locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Protein component (Abortive phage resistance protein AbiC) associated with AbiL system.", "grounding": "InterPro:IPR031709", "id": "abil_system_protein_component", "is_orphan": false, "label": "Abortive phage resistance protein AbiC", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 35, "evidence": [{"notes": "Supports Abortive phage resistance protein AbiC in AbiL system; UniProtKB:Q01457 (abiC, Abortive phage resistance protein AbiC) in Lactococcus lactis subsp. lactis (Streptococcus lactis) provides a verified protein exemplar.", "reference": "DOI:10.1016/S0168-1656(98)00175-8", "snippet": "Genetic organization and functional analysis of a novel phage abortive infection system, AbiL, from Lactococcus lactis"}], "gene_symbol": "abiC", "protein_label": "Abortive phage resistance protein AbiC", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (abiC, Abortive phage resistance protein AbiC) associated with AbiL system in Lactococcus lactis subsp. lactis (Streptococcus lactis).", "sequence_version": 1, "taxon_id": "NCBITaxon:1360", "taxon_label": "Lactococcus lactis subsp. lactis (Streptococcus lactis)", "uniprot_id": "UniProtKB:Q01457"}], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded AbiL abortive-infection phage-defense system.", "grounding": "traitmech:000340", "id": "abil_system_trait", "is_orphan": false, "label": "AbiL system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded abortive-infection phage-defense system.", "grounding": "traitmech:000214", "id": "abortive_infection_system_trait", "is_orphan": false, "label": "abortive infection system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Reduced bacteriophage propagation in cells carrying an AbiL-family abortive-infection system.", "grounding": null, "id": "restricted_phage_propagation", "is_orphan": false, "label": "restricted phage propagation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 35, "evidence": [{"notes": "Supports Abortive phage resistance protein AbiC in AbiL system; UniProtKB:Q01457 (abiC, Abortive phage resistance protein AbiC) in Lactococcus lactis subsp. lactis (Streptococcus lactis) provides a verified protein exemplar.", "reference": "DOI:10.1016/S0168-1656(98)00175-8", "snippet": "Genetic organization and functional analysis of a novel phage abortive infection system, AbiL, from Lactococcus lactis"}], "gene_symbol": "abiC", "node_id": "abil_system_protein_component", "node_label": "Abortive phage resistance protein AbiC", "protein_label": "Abortive phage resistance protein AbiC", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (abiC, Abortive phage resistance protein AbiC) associated with AbiL system in Lactococcus lactis subsp. lactis (Streptococcus lactis).", "sequence_version": 1, "taxon_id": "NCBITaxon:1360", "taxon_label": "Lactococcus lactis subsp. lactis (Streptococcus lactis)", "uniprot_id": "UniProtKB:Q01457"}], "scope_notes": "The graph captures AbiL as a named lactococcal abortive-infection system with DefenseFinder AbiL__AbiLi and AbiL__AbiLii HMM profiles while leaving its direct phage trigger, the exact AbiLi and AbiLii activities, the relationship between the mandatory and suffixed HMM rows, and the similarity of its route to PARIS unresolved.", "scope_status": "NONMECHANISTIC", "title": "AbiL loci confer abortive-infection phage defense"}];
+  var graphs = [{"description": "Conservative system-level sketch linking possession of a DefenseFinder AbiL locus to restricted bacteriophage propagation without asserting the unresolved phage trigger, AbiLi or AbiLii molecular activity, or AbiL-to-PARIS mechanistic correspondence.", "edges": [{"description": "The DefenseFinder AbiL namespace is modeled as a two-profile AbiL__AbiLi plus AbiL__AbiLii system, and AbiL is a confirmed lactococcal Abi-like system.", "evidence": [{"notes": "The DefenseFinder rules table models AbiL as a two-component system requiring the AbiL__AbiLi and AbiL__AbiLii profiles.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "AbiL\tAbiL\t2\t2\tAbiL__AbiLi, AbiL__AbiLii\t\t\t"}, {"notes": "The DefenseFinder HMM inventory records AbiL__AbiLi under the AbiL model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| AbiL__AbiLi                                      | AbiL__AbiLi                                      | AbiL                   | Custom                  | 20     |"}, {"notes": "The DefenseFinder HMM inventory records AbiL__AbiLii under the AbiL model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| AbiL__AbiLii                                     | AbiL__AbiLii                                     | AbiL                   | Custom                  | 20     |"}, {"notes": "The FEMS review counts AbiL among the confirmed two-component lactococcal Abi-like systems.", "reference": "DOI:10.1093/femsre/fuag009", "snippet": "13 are two-component systems (AbiD, AbiD1, AbiD-like, AbiE, AbiF, AbiG, AbiL, AbiQ, AbiT, AbiV, PARIS, type I CBASS, Septu"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "abil_locus", "target": "restricted_phage_propagation"}, {"description": "Restriction of phage propagation realizes the AbiL abortive-infection system possession trait.", "evidence": [{"notes": "Crossref metadata verifies the Deng et al. 1999 AbiL primary paper title and DOI.", "reference": "DOI:10.1016/S0168-1656(98)00175-8", "snippet": "Genetic organization and functional analysis of a novel phage abortive infection system, AbiL, from Lactococcus lactis"}, {"notes": "The FEMS review counts AbiL among the confirmed two-component lactococcal Abi-like systems.", "reference": "DOI:10.1093/femsre/fuag009", "snippet": "13 are two-component systems (AbiD, AbiD1, AbiD-like, AbiE, AbiF, AbiG, AbiL, AbiQ, AbiT, AbiV, PARIS, type I CBASS, Septu"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "restricted_phage_propagation", "target": "abil_system_trait"}, {"description": "AbiL system possession is an abortive-infection-system trait.", "evidence": [{"notes": "Crossref metadata verifies the Deng et al. 1999 AbiL primary paper title and DOI.", "reference": "DOI:10.1016/S0168-1656(98)00175-8", "snippet": "Genetic organization and functional analysis of a novel phage abortive infection system, AbiL, from Lactococcus lactis"}, {"notes": "The DefenseFinder article registry maps the named AbiL model namespace to the Chopin et al. lactococcal abortive-infection review.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "AbiL | 10\\.1016/j\\.mib\\.2005\\.06\\.006 | Phage abortive infection in lactococci: variations on a theme"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "abil_system_trait", "target": "abortive_infection_system_trait"}], "evidence_rows": [{"description": "The DefenseFinder AbiL namespace is modeled as a two-profile AbiL__AbiLi plus AbiL__AbiLii system, and AbiL is a confirmed lactococcal Abi-like system.", "edge_id": "edge-1", "evidence": [{"notes": "The DefenseFinder rules table models AbiL as a two-component system requiring the AbiL__AbiLi and AbiL__AbiLii profiles.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "AbiL\tAbiL\t2\t2\tAbiL__AbiLi, AbiL__AbiLii\t\t\t"}, {"notes": "The DefenseFinder HMM inventory records AbiL__AbiLi under the AbiL model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| AbiL__AbiLi                                      | AbiL__AbiLi                                      | AbiL                   | Custom                  | 20     |"}, {"notes": "The DefenseFinder HMM inventory records AbiL__AbiLii under the AbiL model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| AbiL__AbiLii                                     | AbiL__AbiLii                                     | AbiL                   | Custom                  | 20     |"}, {"notes": "The FEMS review counts AbiL among the confirmed two-component lactococcal Abi-like systems.", "reference": "DOI:10.1093/femsre/fuag009", "snippet": "13 are two-component systems (AbiD, AbiD1, AbiD-like, AbiE, AbiF, AbiG, AbiL, AbiQ, AbiT, AbiV, PARIS, type I CBASS, Septu"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "AbiL locus", "source_grounding": null, "target": "restricted phage propagation", "target_grounding": null}, {"description": "Restriction of phage propagation realizes the AbiL abortive-infection system possession trait.", "edge_id": "edge-2", "evidence": [{"notes": "Crossref metadata verifies the Deng et al. 1999 AbiL primary paper title and DOI.", "reference": "DOI:10.1016/S0168-1656(98)00175-8", "snippet": "Genetic organization and functional analysis of a novel phage abortive infection system, AbiL, from Lactococcus lactis"}, {"notes": "The FEMS review counts AbiL among the confirmed two-component lactococcal Abi-like systems.", "reference": "DOI:10.1093/femsre/fuag009", "snippet": "13 are two-component systems (AbiD, AbiD1, AbiD-like, AbiE, AbiF, AbiG, AbiL, AbiQ, AbiT, AbiV, PARIS, type I CBASS, Septu"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "restricted phage propagation", "source_grounding": null, "target": "AbiL system", "target_grounding": "traitmech:000340"}, {"description": "AbiL system possession is an abortive-infection-system trait.", "edge_id": "edge-3", "evidence": [{"notes": "Crossref metadata verifies the Deng et al. 1999 AbiL primary paper title and DOI.", "reference": "DOI:10.1016/S0168-1656(98)00175-8", "snippet": "Genetic organization and functional analysis of a novel phage abortive infection system, AbiL, from Lactococcus lactis"}, {"notes": "The DefenseFinder article registry maps the named AbiL model namespace to the Chopin et al. lactococcal abortive-infection review.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "AbiL | 10\\.1016/j\\.mib\\.2005\\.06\\.006 | Phage abortive infection in lactococci: variations on a theme"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "AbiL system", "source_grounding": "traitmech:000340", "target": "abortive infection system", "target_grounding": "traitmech:000214"}], "graph_id": "abil_locus_restricts_lactococcal_phage", "issues": [], "nodes": [{"color": "#f3f4f6", "description": "An AbiL-family abortive-infection locus represented by the DefenseFinder AbiL__AbiLi and AbiL__AbiLii profiles.", "grounding": null, "id": "abil_locus", "is_orphan": false, "label": "AbiL locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded AbiL abortive-infection phage-defense system.", "grounding": "traitmech:000340", "id": "abil_system_trait", "is_orphan": false, "label": "AbiL system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded abortive-infection phage-defense system.", "grounding": "traitmech:000214", "id": "abortive_infection_system_trait", "is_orphan": false, "label": "abortive infection system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Reduced bacteriophage propagation in cells carrying an AbiL-family abortive-infection system.", "grounding": null, "id": "restricted_phage_propagation", "is_orphan": false, "label": "restricted phage propagation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "The graph captures AbiL as a named lactococcal abortive-infection system with DefenseFinder AbiL__AbiLi and AbiL__AbiLii HMM profiles while leaving its direct phage trigger, the exact AbiLi and AbiLii activities, the relationship between the mandatory and suffixed HMM rows, and the similarity of its route to PARIS unresolved.", "scope_status": "NONMECHANISTIC", "title": "AbiL loci confer abortive-infection phage defense"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -812,13 +898,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-10-17 09:00 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

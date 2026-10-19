@@ -1,7 +1,34 @@
+<div class="browse-layout">
+<aside id="facet-sidebar" class="facet-sidebar" aria-label="Filter traits">
+  <h2>Filter records</h2>
+  <div class="facet-group">
+    <div class="facet-group-title">Category</div>
+    <div class="facet-options">
+      <button type="button" class="facet-btn active" data-facet="category" data-val=""><span>All categories</span><span class="facet-count">{{ records|length }}</span></button>
+      {% for value in records|map(attribute='category')|unique|sort %}
+      <button type="button" class="facet-btn" data-facet="category" data-val="{{ value }}"><span>{{ value|replace('_', ' ') }}</span><span class="facet-count">{{ records|selectattr('category', 'equalto', value)|list|length }}</span></button>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="facet-group">
+    <div class="facet-group-title">Term kind</div>
+    <div class="facet-options">
+      <button type="button" class="facet-btn active" data-facet="kind" data-val=""><span>All kinds</span><span class="facet-count">{{ records|length }}</span></button>
+      {% for value in records|map(attribute='kind')|select|unique|sort %}
+      {% if value %}
+      <button type="button" class="facet-btn" data-facet="kind" data-val="{{ value }}"><span>{{ value|replace('_', ' ') }}</span><span class="facet-count">{{ records|selectattr('kind', 'equalto', value)|list|length }}</span></button>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+  <button type="button" id="facet-clear-btn" class="facet-clear">Clear all filters</button>
+</aside>
+<div class="browse-main">
 <form id="record-filters" class="record-filters" hidden>
-  <div><label for="record-query">Search records</label><input id="record-query" type="search" placeholder="Label, identifier, definition…"></div>
+  <div class="record-query-wrap"><label for="record-query">Search records</label><input id="record-query" type="search" placeholder="Search by label, METPO CURIE, synonym, or definition…"></div>
   <div><label for="record-category">Category</label><select id="record-category"><option value="">All categories</option>{% for value in records|map(attribute='category')|unique|sort %}<option value="{{ value }}">{{ value }}</option>{% endfor %}</select></div>
   <div><label for="record-kind">Kind</label><select id="record-kind"><option value="">All kinds</option>{% for value in records|map(attribute='kind')|select|unique|sort %}{% if value %}<option value="{{ value }}">{{ value }}</option>{% endif %}{% endfor %}</select></div>
+  <div><label for="record-sort">Sort by</label><select id="record-sort" name="sort"><option value="label-asc">Label (A–Z)</option><option value="label-desc">Label (Z–A)</option><option value="id-asc">Identifier (A–Z)</option><option value="category">Category</option><option value="kind">Kind</option><option value="kgm-desc">kg-microbe nodes (high–low)</option><option value="synonyms-desc">Synonyms (high–low)</option></select></div>
   <button type="reset">Clear filters</button>
 </form>
 <p id="record-count" role="status" aria-live="polite">{{ records|length }} records</p>
@@ -16,5 +43,7 @@
 {% endfor %}
 </tbody>
 </table>
+</div>
+</div>
 </div>
 <script src="{{ root }}assets/record-browser.js" defer></script>

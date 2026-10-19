@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/genomics.html">GENOMICS</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/genomics.html">GENOMICS</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>plasmid carriage</h1>
     <p class="curie"><code>traitmech:000090</code> · CLASS · REVIEWED</p>
 
@@ -85,9 +96,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>plasmid carriage</strong>
+            <code>traitmech:000090</code>
             <span class="edge-predicate">enables</span>
             <strong>conjugation</strong>
-            <code>RO:0002327</code>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0009291" rel="nofollow noreferrer"><code>GO:0009291</code></a>
+            <a href="http://purl.obolibrary.org/obo/RO_0002327" rel="nofollow noreferrer"><code>RO:0002327</code></a>
             <p>Conjugative plasmids encode the machinery for cell-to-cell transfer.</p>
             <ul>
 
@@ -102,9 +115,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>plasmid carriage</strong>
+            <code>traitmech:000090</code>
             <span class="edge-predicate">contributes to</span>
             <strong>accessory function</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>Plasmids carry accessory genes that extend host phenotype.</p>
             <ul>
 
@@ -119,8 +134,10 @@
 
           <li id="pathograph-1-edge-3">
             <strong>toxin-antitoxin system</strong>
+
             <span class="edge-predicate">stabilizes</span>
             <strong>plasmid vertical inheritance</strong>
+
 
             <p>Toxin-antitoxin systems increase vertical stability of their replicons.</p>
             <ul>
@@ -136,8 +153,10 @@
 
           <li id="pathograph-1-edge-4">
             <strong>plasmid-encoded methylase</strong>
+
             <span class="edge-predicate">protects against</span>
             <strong>restriction of incoming plasmid DNA</strong>
+
 
             <p>Plasmid-encoded methylases protect plasmid DNA from host restriction.</p>
             <ul>
@@ -153,8 +172,10 @@
 
           <li id="pathograph-1-edge-5">
             <strong>plasmid-encoded anti-restriction proteins</strong>
+
             <span class="edge-predicate">protects against</span>
             <strong>restriction of incoming plasmid DNA</strong>
+
 
             <p>Plasmid-encoded anti-restriction proteins counter multiple RM system types.</p>
             <ul>
@@ -170,8 +191,10 @@
 
           <li id="pathograph-1-edge-6">
             <strong>antibiotic selective pressure</strong>
+
             <span class="edge-predicate">promotes retention of</span>
             <strong>plasmid carriage</strong>
+            <code>traitmech:000090</code>
 
             <p>Without selection plasmids tend to be lost; antibiotic pressure promotes retention.</p>
             <ul>
@@ -187,8 +210,10 @@
 
           <li id="pathograph-1-edge-7">
             <strong>plasmid carriage</strong>
+            <code>traitmech:000090</code>
             <span class="edge-predicate">imposes</span>
             <strong>plasmid fitness cost</strong>
+
 
             <p>Plasmid carriage imposes a fitness cost from additional material and energy consumption.</p>
             <ul>
@@ -204,9 +229,11 @@
 
           <li id="pathograph-1-edge-8">
             <strong>compensatory mutation</strong>
+
             <span class="edge-predicate">decreases</span>
             <strong>plasmid fitness cost</strong>
-            <code>RO:0002212</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002212" rel="nofollow noreferrer"><code>RO:0002212</code></a>
             <p>Compensatory evolution of chromosomes and plasmids counteracts plasmid fitness cost.</p>
             <ul>
 
@@ -407,43 +434,43 @@
 
         <li>
           <span class="nn-cat">genomics</span>
-          <a href="../../traits/genomics/codon_usage_bias.html">codon usage bias</a>
+          <a href="../../traits/genomics/hna_system.html">Hna system</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">genomics</span>
-          <a href="../../traits/genomics/crispr_cas_system.html">CRISPR-Cas system</a>
+          <a href="../../traits/genomics/hma_system.html">Hma system</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">genomics</span>
-          <a href="../../traits/genomics/gc_skew.html">GC skew</a>
+          <a href="../../traits/genomics/hesat_system.html">Hesat system</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">genomics</span>
-          <a href="../../traits/genomics/genome_size.html">genome size</a>
+          <a href="../../traits/genomics/hec_08_system.html">HEC-08 system</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">genomics</span>
-          <a href="../../traits/genomics/genome_streamlining.html">genome streamlining</a>
+          <a href="../../traits/genomics/hec_07_system.html">HEC-07 system</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">genomics</span>
-          <a href="../../traits/genomics/genomic_island.html">genomic island</a>
+          <a href="../../traits/genomics/hec_06_system.html">HEC-06 system</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">genomics</span>
-          <a href="../../traits/genomics/mobile_genetic_element.html">mobile genetic element</a>
+          <a href="../../traits/genomics/hec_05_system.html">HEC-05 system</a>
           <span class="sim">1.000</span>
         </li>
 
@@ -1012,7 +1039,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking plasmid possession to conjugation and accessory-function delivery.", "edges": [{"description": "Conjugative plasmids encode the machinery for cell-to-cell transfer.", "evidence": [{"notes": "Smillie et al. classify conjugative and mobilizable plasmids.", "reference": "DOI:10.1128/MMBR.00020-10"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "plasmid_carriage_trait", "target": "conjugation"}, {"description": "Plasmids carry accessory genes that extend host phenotype.", "evidence": [{"notes": "Frost et al. include plasmids among the principal MGEs delivering accessory functions.", "reference": "DOI:10.1038/nrmicro1235"}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "plasmid_carriage_trait", "target": "accessory_function"}, {"description": "Toxin-antitoxin systems increase vertical stability of their replicons.", "evidence": [{"notes": "TA systems are small selfish genetic modules that increase vertical stability of their replicons.", "reference": "DOI:10.1093/nar/gkae018"}], "id": "edge-3", "is_orphan": false, "predicate": "stabilizes", "predicate_id": null, "source": "ta_system", "target": "plasmid_vertical_inheritance"}, {"description": "Plasmid-encoded methylases protect plasmid DNA from host restriction.", "evidence": [{"notes": "plasmid-encoded methylases that protect plasmids from restriction.", "reference": "DOI:10.1093/nar/gkae896"}], "id": "edge-4", "is_orphan": false, "predicate": "protects against", "predicate_id": null, "source": "plasmid_methylase", "target": "restriction_of_plasmid_dna"}, {"description": "Plasmid-encoded anti-restriction proteins counter multiple RM system types.", "evidence": [{"notes": "plasmid-encoded anti-restriction proteins that protect against multiple RM types.", "reference": "DOI:10.1093/nar/gkae896"}], "id": "edge-5", "is_orphan": false, "predicate": "protects against", "predicate_id": null, "source": "anti_restriction_proteins", "target": "restriction_of_plasmid_dna"}, {"description": "Without selection plasmids tend to be lost; antibiotic pressure promotes retention.", "evidence": [{"notes": "without selection plasmids tend to be lost, whereas antibiotic (or metal) selective pressure promotes retention.", "reference": "DOI:10.1080/22221751.2024.2352432"}], "id": "edge-6", "is_orphan": false, "predicate": "promotes retention of", "predicate_id": null, "source": "antibiotic_selective_pressure", "target": "plasmid_carriage_trait"}, {"description": "Plasmid carriage imposes a fitness cost from additional material and energy consumption.", "evidence": [{"notes": "Plasmid carriage imposes fitness costs (additional material and energy consumption).", "reference": "DOI:10.1080/22221751.2024.2352432"}], "id": "edge-7", "is_orphan": false, "predicate": "imposes", "predicate_id": null, "source": "plasmid_carriage_trait", "target": "fitness_cost"}, {"description": "Compensatory evolution of chromosomes and plasmids counteracts plasmid fitness cost.", "evidence": [{"notes": "Compensatory evolution of chromosomes and plasmids counteracts the plasmid fitness cost.", "reference": "DOI:10.1002/ece3.70121"}], "id": "edge-8", "is_orphan": false, "predicate": "decreases", "predicate_id": "RO:0002212", "source": "compensatory_mutation", "target": "fitness_cost"}], "evidence_rows": [{"description": "Conjugative plasmids encode the machinery for cell-to-cell transfer.", "edge_id": "edge-1", "evidence": [{"notes": "Smillie et al. classify conjugative and mobilizable plasmids.", "reference": "DOI:10.1128/MMBR.00020-10"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "plasmid carriage", "target": "conjugation"}, {"description": "Plasmids carry accessory genes that extend host phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Frost et al. include plasmids among the principal MGEs delivering accessory functions.", "reference": "DOI:10.1038/nrmicro1235"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "plasmid carriage", "target": "accessory function"}, {"description": "Toxin-antitoxin systems increase vertical stability of their replicons.", "edge_id": "edge-3", "evidence": [{"notes": "TA systems are small selfish genetic modules that increase vertical stability of their replicons.", "reference": "DOI:10.1093/nar/gkae018"}], "predicate": "stabilizes", "predicate_id": null, "source": "toxin-antitoxin system", "target": "plasmid vertical inheritance"}, {"description": "Plasmid-encoded methylases protect plasmid DNA from host restriction.", "edge_id": "edge-4", "evidence": [{"notes": "plasmid-encoded methylases that protect plasmids from restriction.", "reference": "DOI:10.1093/nar/gkae896"}], "predicate": "protects against", "predicate_id": null, "source": "plasmid-encoded methylase", "target": "restriction of incoming plasmid DNA"}, {"description": "Plasmid-encoded anti-restriction proteins counter multiple RM system types.", "edge_id": "edge-5", "evidence": [{"notes": "plasmid-encoded anti-restriction proteins that protect against multiple RM types.", "reference": "DOI:10.1093/nar/gkae896"}], "predicate": "protects against", "predicate_id": null, "source": "plasmid-encoded anti-restriction proteins", "target": "restriction of incoming plasmid DNA"}, {"description": "Without selection plasmids tend to be lost; antibiotic pressure promotes retention.", "edge_id": "edge-6", "evidence": [{"notes": "without selection plasmids tend to be lost, whereas antibiotic (or metal) selective pressure promotes retention.", "reference": "DOI:10.1080/22221751.2024.2352432"}], "predicate": "promotes retention of", "predicate_id": null, "source": "antibiotic selective pressure", "target": "plasmid carriage"}, {"description": "Plasmid carriage imposes a fitness cost from additional material and energy consumption.", "edge_id": "edge-7", "evidence": [{"notes": "Plasmid carriage imposes fitness costs (additional material and energy consumption).", "reference": "DOI:10.1080/22221751.2024.2352432"}], "predicate": "imposes", "predicate_id": null, "source": "plasmid carriage", "target": "plasmid fitness cost"}, {"description": "Compensatory evolution of chromosomes and plasmids counteracts plasmid fitness cost.", "edge_id": "edge-8", "evidence": [{"notes": "Compensatory evolution of chromosomes and plasmids counteracts the plasmid fitness cost.", "reference": "DOI:10.1002/ece3.70121"}], "predicate": "decreases", "predicate_id": "RO:0002212", "source": "compensatory mutation", "target": "plasmid fitness cost"}], "graph_id": "plasmid_conjugation_hgt", "issues": [], "nodes": [{"color": "#f3f4f6", "description": "Plasmid-encoded resistance, virulence, or metabolic capability.", "grounding": null, "id": "accessory_function", "is_orphan": false, "label": "accessory function", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Plasmid-encoded proteins that inhibit host restriction-modification defence; their encoding genes remain record-level metadata rather than nodes.", "grounding": null, "id": "anti_restriction_proteins", "is_orphan": false, "label": "plasmid-encoded anti-restriction proteins", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 84, "evidence": [{"notes": "Supports plasmid-encoded anti-restriction proteins in plasmid carriage; UniProtKB:O73943 (apeII, Homing endonuclease I-ApeII) in Aeropyrum pernix (strain ATCC 700893 / DSM 11879 / JCM 9820 / NBRC 100138 / K1) provides a verified protein exemplar.", "reference": "DOI:10.1128/MMBR.00020-10", "snippet": "Few genes, e.g., T4CPs, relaxases, and VirB4, are at the core of plasmid conjugation, and together with accessory genes, they have evolved into specific systems adapted to specific physiological and ecological contexts."}], "gene_symbol": "apeII", "protein_label": "Homing endonuclease I-ApeII", "proteome_id": "UP000002518", "retrieved_on": "2026-10-17", "role": "Exemplar protein (apeII, Homing endonuclease I-ApeII) representing plasmid-encoded anti-restriction proteins in Aeropyrum pernix (strain ATCC 700893 / DSM 11879 / JCM 9820 / NBRC 100138 / K1) for plasmid carriage.", "sequence_version": 2, "taxon_id": "NCBITaxon:272557", "taxon_label": "Aeropyrum pernix (strain ATCC 700893 / DSM 11879 / JCM 9820 / NBRC 100138 / K1)", "uniprot_id": "UniProtKB:O73943"}], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Antibiotic exposure selecting for retention of resistance plasmids.", "grounding": null, "id": "antibiotic_selective_pressure", "is_orphan": false, "label": "antibiotic selective pressure", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Chromosomal or plasmid mutation that ameliorates plasmid-imposed fitness cost.", "grounding": null, "id": "compensatory_mutation", "is_orphan": false, "label": "compensatory mutation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Cell-to-cell transfer of genetic material via direct contact.", "grounding": "GO:0009291", "id": "conjugation", "is_orphan": false, "label": "conjugation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Reduced host fitness from additional material and energy consumption of plasmid carriage.", "grounding": null, "id": "fitness_cost", "is_orphan": false, "label": "plasmid fitness cost", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of extrachromosomal plasmid replicons.", "grounding": "traitmech:000090", "id": "plasmid_carriage_trait", "is_orphan": false, "label": "plasmid carriage", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Plasmid-borne methyltransferase shielding plasmid DNA from restriction.", "grounding": null, "id": "plasmid_methylase", "is_orphan": false, "label": "plasmid-encoded methylase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 105, "evidence": [{"notes": "Supports plasmid-encoded methylase in plasmid carriage; UniProtKB:P21311 (dam, Retron Ec67 DNA adenine methylase) in Escherichia coli provides a verified protein exemplar.", "reference": "DOI:10.1128/MMBR.00020-10", "snippet": "Few genes, e.g., T4CPs, relaxases, and VirB4, are at the core of plasmid conjugation, and together with accessory genes, they have evolved into specific systems adapted to specific physiological and ecological contexts."}], "gene_symbol": "dam", "protein_label": "Retron Ec67 DNA adenine methylase", "retrieved_on": "2026-10-17", "role": "Exemplar protein (dam, Retron Ec67 DNA adenine methylase) representing plasmid-encoded methylase in Escherichia coli for plasmid carriage.", "sequence_version": 1, "taxon_id": "NCBITaxon:562", "taxon_label": "Escherichia coli", "uniprot_id": "UniProtKB:P21311"}], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Stable transmission of a plasmid to daughter cells across generations.", "grounding": null, "id": "plasmid_vertical_inheritance", "is_orphan": false, "label": "plasmid vertical inheritance", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Cleavage of unmethylated incoming plasmid DNA by restriction-modification systems.", "grounding": null, "id": "restriction_of_plasmid_dna", "is_orphan": false, "label": "restriction of incoming plasmid DNA", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Selfish genetic module mediating plasmid addiction / post-segregational killing.", "grounding": null, "id": "ta_system", "is_orphan": false, "label": "toxin-antitoxin system", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 114, "evidence": [{"notes": "Supports toxin-antitoxin system in plasmid carriage; UniProtKB:Q06253 (phd, Antitoxin phd) in Escherichia phage P1 (Bacteriophage P1) provides a verified protein exemplar.", "reference": "DOI:10.1128/MMBR.00020-10", "snippet": "Few genes, e.g., T4CPs, relaxases, and VirB4, are at the core of plasmid conjugation, and together with accessory genes, they have evolved into specific systems adapted to specific physiological and ecological contexts."}], "gene_symbol": "phd", "protein_label": "Antitoxin phd", "proteome_id": "UP000008091", "retrieved_on": "2026-10-17", "role": "Exemplar protein (phd, Antitoxin phd) representing toxin-antitoxin system in Escherichia phage P1 (Bacteriophage P1) for plasmid carriage.", "sequence_version": 1, "taxon_id": "NCBITaxon:2886926", "taxon_label": "Escherichia phage P1 (Bacteriophage P1)", "uniprot_id": "UniProtKB:Q06253"}], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 114, "evidence": [{"notes": "Supports toxin-antitoxin system in plasmid carriage; UniProtKB:Q06253 (phd, Antitoxin phd) in Escherichia phage P1 (Bacteriophage P1) provides a verified protein exemplar.", "reference": "DOI:10.1128/MMBR.00020-10", "snippet": "Few genes, e.g., T4CPs, relaxases, and VirB4, are at the core of plasmid conjugation, and together with accessory genes, they have evolved into specific systems adapted to specific physiological and ecological contexts."}], "gene_symbol": "phd", "node_id": "ta_system", "node_label": "toxin-antitoxin system", "protein_label": "Antitoxin phd", "proteome_id": "UP000008091", "retrieved_on": "2026-10-17", "role": "Exemplar protein (phd, Antitoxin phd) representing toxin-antitoxin system in Escherichia phage P1 (Bacteriophage P1) for plasmid carriage.", "sequence_version": 1, "taxon_id": "NCBITaxon:2886926", "taxon_label": "Escherichia phage P1 (Bacteriophage P1)", "uniprot_id": "UniProtKB:Q06253"}, {"entry_status": "REVIEWED", "entry_version": 105, "evidence": [{"notes": "Supports plasmid-encoded methylase in plasmid carriage; UniProtKB:P21311 (dam, Retron Ec67 DNA adenine methylase) in Escherichia coli provides a verified protein exemplar.", "reference": "DOI:10.1128/MMBR.00020-10", "snippet": "Few genes, e.g., T4CPs, relaxases, and VirB4, are at the core of plasmid conjugation, and together with accessory genes, they have evolved into specific systems adapted to specific physiological and ecological contexts."}], "gene_symbol": "dam", "node_id": "plasmid_methylase", "node_label": "plasmid-encoded methylase", "protein_label": "Retron Ec67 DNA adenine methylase", "retrieved_on": "2026-10-17", "role": "Exemplar protein (dam, Retron Ec67 DNA adenine methylase) representing plasmid-encoded methylase in Escherichia coli for plasmid carriage.", "sequence_version": 1, "taxon_id": "NCBITaxon:562", "taxon_label": "Escherichia coli", "uniprot_id": "UniProtKB:P21311"}, {"entry_status": "REVIEWED", "entry_version": 84, "evidence": [{"notes": "Supports plasmid-encoded anti-restriction proteins in plasmid carriage; UniProtKB:O73943 (apeII, Homing endonuclease I-ApeII) in Aeropyrum pernix (strain ATCC 700893 / DSM 11879 / JCM 9820 / NBRC 100138 / K1) provides a verified protein exemplar.", "reference": "DOI:10.1128/MMBR.00020-10", "snippet": "Few genes, e.g., T4CPs, relaxases, and VirB4, are at the core of plasmid conjugation, and together with accessory genes, they have evolved into specific systems adapted to specific physiological and ecological contexts."}], "gene_symbol": "apeII", "node_id": "anti_restriction_proteins", "node_label": "plasmid-encoded anti-restriction proteins", "protein_label": "Homing endonuclease I-ApeII", "proteome_id": "UP000002518", "retrieved_on": "2026-10-17", "role": "Exemplar protein (apeII, Homing endonuclease I-ApeII) representing plasmid-encoded anti-restriction proteins in Aeropyrum pernix (strain ATCC 700893 / DSM 11879 / JCM 9820 / NBRC 100138 / K1) for plasmid carriage.", "sequence_version": 2, "taxon_id": "NCBITaxon:272557", "taxon_label": "Aeropyrum pernix (strain ATCC 700893 / DSM 11879 / JCM 9820 / NBRC 100138 / K1)", "uniprot_id": "UniProtKB:O73943"}], "scope_notes": "This genomics record is a measurement, genomic-element classification, or population-level descriptor rather than one taxon-specific protein mechanism; contextual protein nodes include source-backed UniProtKB exemplars.", "scope_status": "NONMECHANISTIC", "title": "Plasmid carriage drives conjugative horizontal gene transfer"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking plasmid possession to conjugation and accessory-function delivery.", "edges": [{"description": "Conjugative plasmids encode the machinery for cell-to-cell transfer.", "evidence": [{"notes": "Smillie et al. classify conjugative and mobilizable plasmids.", "reference": "DOI:10.1128/MMBR.00020-10"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "plasmid_carriage_trait", "target": "conjugation"}, {"description": "Plasmids carry accessory genes that extend host phenotype.", "evidence": [{"notes": "Frost et al. include plasmids among the principal MGEs delivering accessory functions.", "reference": "DOI:10.1038/nrmicro1235"}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "plasmid_carriage_trait", "target": "accessory_function"}, {"description": "Toxin-antitoxin systems increase vertical stability of their replicons.", "evidence": [{"notes": "TA systems are small selfish genetic modules that increase vertical stability of their replicons.", "reference": "DOI:10.1093/nar/gkae018"}], "id": "edge-3", "is_orphan": false, "predicate": "stabilizes", "predicate_id": null, "source": "ta_system", "target": "plasmid_vertical_inheritance"}, {"description": "Plasmid-encoded methylases protect plasmid DNA from host restriction.", "evidence": [{"notes": "plasmid-encoded methylases that protect plasmids from restriction.", "reference": "DOI:10.1093/nar/gkae896"}], "id": "edge-4", "is_orphan": false, "predicate": "protects against", "predicate_id": null, "source": "plasmid_methylase", "target": "restriction_of_plasmid_dna"}, {"description": "Plasmid-encoded anti-restriction proteins counter multiple RM system types.", "evidence": [{"notes": "plasmid-encoded anti-restriction proteins that protect against multiple RM types.", "reference": "DOI:10.1093/nar/gkae896"}], "id": "edge-5", "is_orphan": false, "predicate": "protects against", "predicate_id": null, "source": "anti_restriction_proteins", "target": "restriction_of_plasmid_dna"}, {"description": "Without selection plasmids tend to be lost; antibiotic pressure promotes retention.", "evidence": [{"notes": "without selection plasmids tend to be lost, whereas antibiotic (or metal) selective pressure promotes retention.", "reference": "DOI:10.1080/22221751.2024.2352432"}], "id": "edge-6", "is_orphan": false, "predicate": "promotes retention of", "predicate_id": null, "source": "antibiotic_selective_pressure", "target": "plasmid_carriage_trait"}, {"description": "Plasmid carriage imposes a fitness cost from additional material and energy consumption.", "evidence": [{"notes": "Plasmid carriage imposes fitness costs (additional material and energy consumption).", "reference": "DOI:10.1080/22221751.2024.2352432"}], "id": "edge-7", "is_orphan": false, "predicate": "imposes", "predicate_id": null, "source": "plasmid_carriage_trait", "target": "fitness_cost"}, {"description": "Compensatory evolution of chromosomes and plasmids counteracts plasmid fitness cost.", "evidence": [{"notes": "Compensatory evolution of chromosomes and plasmids counteracts the plasmid fitness cost.", "reference": "DOI:10.1002/ece3.70121"}], "id": "edge-8", "is_orphan": false, "predicate": "decreases", "predicate_id": "RO:0002212", "source": "compensatory_mutation", "target": "fitness_cost"}], "evidence_rows": [{"description": "Conjugative plasmids encode the machinery for cell-to-cell transfer.", "edge_id": "edge-1", "evidence": [{"notes": "Smillie et al. classify conjugative and mobilizable plasmids.", "reference": "DOI:10.1128/MMBR.00020-10"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "plasmid carriage", "source_grounding": "traitmech:000090", "target": "conjugation", "target_grounding": "GO:0009291"}, {"description": "Plasmids carry accessory genes that extend host phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Frost et al. include plasmids among the principal MGEs delivering accessory functions.", "reference": "DOI:10.1038/nrmicro1235"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "plasmid carriage", "source_grounding": "traitmech:000090", "target": "accessory function", "target_grounding": null}, {"description": "Toxin-antitoxin systems increase vertical stability of their replicons.", "edge_id": "edge-3", "evidence": [{"notes": "TA systems are small selfish genetic modules that increase vertical stability of their replicons.", "reference": "DOI:10.1093/nar/gkae018"}], "predicate": "stabilizes", "predicate_id": null, "source": "toxin-antitoxin system", "source_grounding": null, "target": "plasmid vertical inheritance", "target_grounding": null}, {"description": "Plasmid-encoded methylases protect plasmid DNA from host restriction.", "edge_id": "edge-4", "evidence": [{"notes": "plasmid-encoded methylases that protect plasmids from restriction.", "reference": "DOI:10.1093/nar/gkae896"}], "predicate": "protects against", "predicate_id": null, "source": "plasmid-encoded methylase", "source_grounding": null, "target": "restriction of incoming plasmid DNA", "target_grounding": null}, {"description": "Plasmid-encoded anti-restriction proteins counter multiple RM system types.", "edge_id": "edge-5", "evidence": [{"notes": "plasmid-encoded anti-restriction proteins that protect against multiple RM types.", "reference": "DOI:10.1093/nar/gkae896"}], "predicate": "protects against", "predicate_id": null, "source": "plasmid-encoded anti-restriction proteins", "source_grounding": null, "target": "restriction of incoming plasmid DNA", "target_grounding": null}, {"description": "Without selection plasmids tend to be lost; antibiotic pressure promotes retention.", "edge_id": "edge-6", "evidence": [{"notes": "without selection plasmids tend to be lost, whereas antibiotic (or metal) selective pressure promotes retention.", "reference": "DOI:10.1080/22221751.2024.2352432"}], "predicate": "promotes retention of", "predicate_id": null, "source": "antibiotic selective pressure", "source_grounding": null, "target": "plasmid carriage", "target_grounding": "traitmech:000090"}, {"description": "Plasmid carriage imposes a fitness cost from additional material and energy consumption.", "edge_id": "edge-7", "evidence": [{"notes": "Plasmid carriage imposes fitness costs (additional material and energy consumption).", "reference": "DOI:10.1080/22221751.2024.2352432"}], "predicate": "imposes", "predicate_id": null, "source": "plasmid carriage", "source_grounding": "traitmech:000090", "target": "plasmid fitness cost", "target_grounding": null}, {"description": "Compensatory evolution of chromosomes and plasmids counteracts plasmid fitness cost.", "edge_id": "edge-8", "evidence": [{"notes": "Compensatory evolution of chromosomes and plasmids counteracts the plasmid fitness cost.", "reference": "DOI:10.1002/ece3.70121"}], "predicate": "decreases", "predicate_id": "RO:0002212", "source": "compensatory mutation", "source_grounding": null, "target": "plasmid fitness cost", "target_grounding": null}], "graph_id": "plasmid_conjugation_hgt", "issues": [], "nodes": [{"color": "#f3f4f6", "description": "Plasmid-encoded resistance, virulence, or metabolic capability.", "grounding": null, "id": "accessory_function", "is_orphan": false, "label": "accessory function", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Plasmid-encoded proteins that inhibit host restriction-modification defence; their encoding genes remain record-level metadata rather than nodes.", "grounding": null, "id": "anti_restriction_proteins", "is_orphan": false, "label": "plasmid-encoded anti-restriction proteins", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Antibiotic exposure selecting for retention of resistance plasmids.", "grounding": null, "id": "antibiotic_selective_pressure", "is_orphan": false, "label": "antibiotic selective pressure", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Chromosomal or plasmid mutation that ameliorates plasmid-imposed fitness cost.", "grounding": null, "id": "compensatory_mutation", "is_orphan": false, "label": "compensatory mutation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Cell-to-cell transfer of genetic material via direct contact.", "grounding": "GO:0009291", "id": "conjugation", "is_orphan": false, "label": "conjugation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Reduced host fitness from additional material and energy consumption of plasmid carriage.", "grounding": null, "id": "fitness_cost", "is_orphan": false, "label": "plasmid fitness cost", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of extrachromosomal plasmid replicons.", "grounding": "traitmech:000090", "id": "plasmid_carriage_trait", "is_orphan": false, "label": "plasmid carriage", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Plasmid-borne methyltransferase shielding plasmid DNA from restriction.", "grounding": null, "id": "plasmid_methylase", "is_orphan": false, "label": "plasmid-encoded methylase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Stable transmission of a plasmid to daughter cells across generations.", "grounding": null, "id": "plasmid_vertical_inheritance", "is_orphan": false, "label": "plasmid vertical inheritance", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Cleavage of unmethylated incoming plasmid DNA by restriction-modification systems.", "grounding": null, "id": "restriction_of_plasmid_dna", "is_orphan": false, "label": "restriction of incoming plasmid DNA", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Selfish genetic module mediating plasmid addiction / post-segregational killing.", "grounding": null, "id": "ta_system", "is_orphan": false, "label": "toxin-antitoxin system", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This genomics record is a measurement, genomic-element classification, or population-level descriptor rather than one taxon-specific protein mechanism; contextual protein nodes do not receive token UniProt examples.", "scope_status": "NONMECHANISTIC", "title": "Plasmid carriage drives conjugative horizontal gene transfer"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -1032,13 +1059,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-10-17 09:00 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

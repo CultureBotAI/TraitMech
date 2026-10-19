@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/morphology.html">MORPHOLOGY</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/morphology.html">MORPHOLOGY</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>monotrichous</h1>
     <p class="curie"><code>traitmech:000057</code> · CLASS · REVIEWED</p>
 
@@ -85,9 +96,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>bacterial-type flagellum</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0009288" rel="nofollow noreferrer"><code>GO:0009288</code></a>
             <span class="edge-predicate">defines</span>
             <strong>monotrichous</strong>
-            <code>METPO:2007500</code>
+            <code>traitmech:000057</code>
+            <a href="https://w3id.org/metpo/2007500" rel="nofollow noreferrer"><code>METPO:2007500</code></a>
             <p>A single polar flagellum defines the monotrichous arrangement.</p>
             <ul>
 
@@ -102,9 +115,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>monotrichous</strong>
+            <code>traitmech:000057</code>
             <span class="edge-predicate">associated with</span>
             <strong>polar single-flagellum placement</strong>
-            <code>biolink:associated_with</code>
+
+            <a href="https://w3id.org/biolink/vocab/associated_with" rel="nofollow noreferrer"><code>biolink:associated_with</code></a>
             <p>The monotrichous pattern places one flagellum at one pole.</p>
             <ul>
 
@@ -119,8 +134,10 @@
 
           <li id="pathograph-1-edge-3">
             <strong>FlhF</strong>
+
             <span class="edge-predicate">promotes localization of</span>
             <strong>polar localization of flagellum</strong>
+
 
             <p>FlhF promotes targeting of flagella to the cell pole; deleting flhF causes mislocalization to nonpolar sites.</p>
             <ul>
@@ -136,8 +153,10 @@
 
           <li id="pathograph-1-edge-4">
             <strong>FlhG</strong>
+            <a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR033875/" rel="nofollow noreferrer"><code>InterPro:IPR033875</code></a>
             <span class="edge-predicate">regulates number of</span>
             <strong>flagellum number per cell</strong>
+
 
             <p>FlhG regulates the number of flagella per cell; its loss in single-flagellum bacteria often causes hyperflagellation.</p>
             <ul>
@@ -153,8 +172,10 @@
 
           <li id="pathograph-1-edge-5">
             <strong>FlhF</strong>
+
             <span class="edge-predicate">binds</span>
             <strong>FliG</strong>
+
 
             <p>The FlhF B-domain FliG-Interaction Domain (FID) binds FliG.</p>
             <ul>
@@ -170,8 +191,10 @@
 
           <li id="pathograph-1-edge-6">
             <strong>FliG</strong>
+
             <span class="edge-predicate">recruits</span>
             <strong>FliF MS-ring protein</strong>
+
 
             <p>FlhF-bound FliG engages the MS-ring protein FliF, recruiting a FliF-FliG complex to the pole.</p>
             <ul>
@@ -187,8 +210,10 @@
 
           <li id="pathograph-1-edge-7">
             <strong>FlhF</strong>
+
             <span class="edge-predicate">hinders interaction of</span>
             <strong>FliM/FliN C-ring partners</strong>
+
 
             <p>FlhF-bound FliG can still engage FliF but is prevented from interacting with C-ring partners FliM/FliN.</p>
             <ul>
@@ -204,8 +229,10 @@
 
           <li id="pathograph-1-edge-8">
             <strong>FlhG</strong>
+            <a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR033875/" rel="nofollow noreferrer"><code>InterPro:IPR033875</code></a>
             <span class="edge-predicate">stimulates GTPase activity of</span>
             <strong>FlhF</strong>
+
 
             <p>FlhG stimulates FlhF GTPase activity, modulating FlhF control over FliG interactions.</p>
             <ul>
@@ -452,19 +479,7 @@
 
         <li>
           <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/amphitrichous.html">amphitrichous</a>
-          <span class="sim">1.000</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/lophotrichous.html">lophotrichous</a>
-          <span class="sim">1.000</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/peritrichous.html">peritrichous</a>
+          <a href="../../traits/morphology/flagellated.html">flagellated</a>
           <span class="sim">1.000</span>
         </li>
 
@@ -476,26 +491,38 @@
 
         <li>
           <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/flagellated.html">flagellated</a>
+          <a href="../../traits/morphology/polytrichous_flagellation.html">polytrichous flagellation</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/ph_range_mid2.html">pH range mid2</a>
-          <span class="sim">0.443</span>
+          <span class="nn-cat">morphology</span>
+          <a href="../../traits/morphology/amphitrichous.html">amphitrichous</a>
+          <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/ph_range_mid1.html">pH range mid1</a>
-          <span class="sim">0.437</span>
+          <span class="nn-cat">morphology</span>
+          <a href="../../traits/morphology/peritrichous.html">peritrichous</a>
+          <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/ph_range_mid3.html">pH range mid3</a>
-          <span class="sim">0.433</span>
+          <span class="nn-cat">morphology</span>
+          <a href="../../traits/morphology/lophotrichous.html">lophotrichous</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">morphology</span>
+          <a href="../../traits/morphology/lateral_flagellation.html">lateral flagellation</a>
+          <span class="sim">0.764</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">morphology</span>
+          <a href="../../traits/morphology/subpolar_flagellation.html">subpolar flagellation</a>
+          <span class="sim">0.743</span>
         </li>
 
       </ul>
@@ -1051,7 +1078,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking a single polar bacterial flagellum to monotrichous flagellation.", "edges": [{"description": "A single polar flagellum defines the monotrichous arrangement.", "evidence": [{"notes": "Schuhmacher et al. describe single-flagellum (monotrichous) polar flagellation.", "reference": "DOI:10.1093/femsre/fuv034"}], "id": "edge-1", "is_orphan": false, "predicate": "defines", "predicate_id": "METPO:2007500", "source": "bacterial_flagellum", "target": "monotrichous_trait"}, {"description": "The monotrichous pattern places one flagellum at one pole.", "evidence": [{"notes": "Flagellum review supports a single helical flagellar filament as a locomotory organelle.", "reference": "DOI:10.3390/biom9070279"}], "id": "edge-2", "is_orphan": false, "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "monotrichous_trait", "target": "polar_placement"}, {"description": "FlhF promotes targeting of flagella to the cell pole; deleting flhF causes mislocalization to nonpolar sites.", "evidence": [{"notes": "FlhF and FlhG control the location and number of flagella in many polar-flagellated bacteria; deleting flhF caused hypoflagellation and mislocalization of flagella to nonpolar sites.", "reference": "DOI:10.1128/jb.00110-23"}], "id": "edge-3", "is_orphan": false, "predicate": "promotes localization of", "predicate_id": null, "source": "flhf_gtpase", "target": "polar_flagellum_localization"}, {"description": "FlhG regulates the number of flagella per cell; its loss in single-flagellum bacteria often causes hyperflagellation.", "evidence": [{"notes": "FlhF and FlhG control the location and number of flagella respectively; deleting flhG in bacteria with a single polar flagellum often results in hyperflagellation.", "reference": "DOI:10.1128/jb.00110-23"}], "id": "edge-4", "is_orphan": false, "predicate": "regulates number of", "predicate_id": null, "source": "flhg_atpase", "target": "flagellum_number"}, {"description": "The FlhF B-domain FliG-Interaction Domain (FID) binds FliG.", "evidence": [{"notes": "The FlhF B-domain contains an N-terminal FliG Interaction Domain (FID); the N-terminal ~60 aa of the B-domain are necessary and sufficient for FliG binding.", "reference": "DOI:10.1038/s41467-024-50274-4"}], "id": "edge-5", "is_orphan": false, "predicate": "binds", "predicate_id": null, "source": "flhf_gtpase", "target": "flig_protein"}, {"description": "FlhF-bound FliG engages the MS-ring protein FliF, recruiting a FliF-FliG complex to the pole.", "evidence": [{"notes": "FlhF-bound FliG then engages the MS-ring protein FliF, effectively recruiting a FliF-FliG complex to the pole.", "reference": "DOI:10.1038/s41467-024-50274-4"}], "id": "edge-6", "is_orphan": false, "predicate": "recruits", "predicate_id": null, "source": "flig_protein", "target": "flif_msring"}, {"description": "FlhF-bound FliG can still engage FliF but is prevented from interacting with C-ring partners FliM/FliN.", "evidence": [{"notes": "FlhF-bound FliG can still engage the cytoplasmic domain of FliF but is prevented from interacting with C-ring partners FliM/FliN.", "reference": "DOI:10.1038/s41467-024-50274-4"}], "id": "edge-7", "is_orphan": false, "predicate": "hinders interaction of", "predicate_id": null, "source": "flhf_gtpase", "target": "flim_flin"}, {"description": "FlhG stimulates FlhF GTPase activity, modulating FlhF control over FliG interactions.", "evidence": [{"notes": "FlhG\u0027s modulation of FlhF controls FliG\u0027s interaction with FliM/FliN; FlhG stimulates FlhF GTPase activity.", "reference": "DOI:10.1038/s41467-024-50274-4"}], "id": "edge-8", "is_orphan": false, "predicate": "stimulates GTPase activity of", "predicate_id": null, "source": "flhg_atpase", "target": "flhf_gtpase"}], "evidence_rows": [{"description": "A single polar flagellum defines the monotrichous arrangement.", "edge_id": "edge-1", "evidence": [{"notes": "Schuhmacher et al. describe single-flagellum (monotrichous) polar flagellation.", "reference": "DOI:10.1093/femsre/fuv034"}], "predicate": "defines", "predicate_id": "METPO:2007500", "source": "bacterial-type flagellum", "target": "monotrichous"}, {"description": "The monotrichous pattern places one flagellum at one pole.", "edge_id": "edge-2", "evidence": [{"notes": "Flagellum review supports a single helical flagellar filament as a locomotory organelle.", "reference": "DOI:10.3390/biom9070279"}], "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "monotrichous", "target": "polar single-flagellum placement"}, {"description": "FlhF promotes targeting of flagella to the cell pole; deleting flhF causes mislocalization to nonpolar sites.", "edge_id": "edge-3", "evidence": [{"notes": "FlhF and FlhG control the location and number of flagella in many polar-flagellated bacteria; deleting flhF caused hypoflagellation and mislocalization of flagella to nonpolar sites.", "reference": "DOI:10.1128/jb.00110-23"}], "predicate": "promotes localization of", "predicate_id": null, "source": "FlhF", "target": "polar localization of flagellum"}, {"description": "FlhG regulates the number of flagella per cell; its loss in single-flagellum bacteria often causes hyperflagellation.", "edge_id": "edge-4", "evidence": [{"notes": "FlhF and FlhG control the location and number of flagella respectively; deleting flhG in bacteria with a single polar flagellum often results in hyperflagellation.", "reference": "DOI:10.1128/jb.00110-23"}], "predicate": "regulates number of", "predicate_id": null, "source": "FlhG", "target": "flagellum number per cell"}, {"description": "The FlhF B-domain FliG-Interaction Domain (FID) binds FliG.", "edge_id": "edge-5", "evidence": [{"notes": "The FlhF B-domain contains an N-terminal FliG Interaction Domain (FID); the N-terminal ~60 aa of the B-domain are necessary and sufficient for FliG binding.", "reference": "DOI:10.1038/s41467-024-50274-4"}], "predicate": "binds", "predicate_id": null, "source": "FlhF", "target": "FliG"}, {"description": "FlhF-bound FliG engages the MS-ring protein FliF, recruiting a FliF-FliG complex to the pole.", "edge_id": "edge-6", "evidence": [{"notes": "FlhF-bound FliG then engages the MS-ring protein FliF, effectively recruiting a FliF-FliG complex to the pole.", "reference": "DOI:10.1038/s41467-024-50274-4"}], "predicate": "recruits", "predicate_id": null, "source": "FliG", "target": "FliF MS-ring protein"}, {"description": "FlhF-bound FliG can still engage FliF but is prevented from interacting with C-ring partners FliM/FliN.", "edge_id": "edge-7", "evidence": [{"notes": "FlhF-bound FliG can still engage the cytoplasmic domain of FliF but is prevented from interacting with C-ring partners FliM/FliN.", "reference": "DOI:10.1038/s41467-024-50274-4"}], "predicate": "hinders interaction of", "predicate_id": null, "source": "FlhF", "target": "FliM/FliN C-ring partners"}, {"description": "FlhG stimulates FlhF GTPase activity, modulating FlhF control over FliG interactions.", "edge_id": "edge-8", "evidence": [{"notes": "FlhG\u0027s modulation of FlhF controls FliG\u0027s interaction with FliM/FliN; FlhG stimulates FlhF GTPase activity.", "reference": "DOI:10.1038/s41467-024-50274-4"}], "predicate": "stimulates GTPase activity of", "predicate_id": null, "source": "FlhG", "target": "FlhF"}], "graph_id": "monotrichous_single_polar_flagellum", "issues": [], "nodes": [{"color": "#ede9fe", "description": "Helical proteinaceous locomotory organelle.", "grounding": "GO:0009288", "id": "bacterial_flagellum", "is_orphan": false, "label": "bacterial-type flagellum", "node_type": "CELLULAR_LOCALIZATION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "The count of flagella per cell.", "grounding": null, "id": "flagellum_number", "is_orphan": false, "label": "flagellum number per cell", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "SRP-type GTPase that targets and anchors flagellar assembly to the cell pole.", "grounding": null, "id": "flhf_gtpase", "is_orphan": false, "label": "FlhF", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 144, "evidence": [{"notes": "Supports FlhF in monotrichous; UniProtKB:O52908 (flhF, Flagellar biosynthesis protein FlhF) in Campylobacter jejuni subsp. jejuni serotype O:2 (strain ATCC 700819 / NCTC 11168) provides a verified protein exemplar.", "reference": "DOI:10.1093/femsre/fuv034", "snippet": "five to six flagellar filaments distributed over the cell body"}], "gene_symbol": "flhF", "protein_label": "Flagellar biosynthesis protein FlhF", "proteome_id": "UP000000799", "retrieved_on": "2026-10-17", "role": "Exemplar protein (flhF, Flagellar biosynthesis protein FlhF) representing FlhF in Campylobacter jejuni subsp. jejuni serotype O:2 (strain ATCC 700819 / NCTC 11168) for monotrichous.", "sequence_version": 2, "taxon_id": "NCBITaxon:192222", "taxon_label": "Campylobacter jejuni subsp. jejuni serotype O:2 (strain ATCC 700819 / NCTC 11168)", "uniprot_id": "UniProtKB:O52908"}], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "MinD/ParA-family ATPase that regulates flagellum number and modulates FlhF.", "grounding": "InterPro:IPR033875", "id": "flhg_atpase", "is_orphan": false, "label": "FlhG", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 81, "evidence": [{"notes": "Supports FlhG in monotrichous; UniProtKB:G3XD64 (fleN, Antiactivator FleN) in Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1) provides a verified protein exemplar.", "reference": "DOI:10.1093/femsre/fuv034", "snippet": "Bacteria differ in number and location of their flagella that appear in regular patterns at the cell surface (flagellation pattern)."}], "gene_symbol": "fleN", "protein_label": "Antiactivator FleN", "proteome_id": "UP000002438", "retrieved_on": "2026-10-17", "role": "Exemplar protein (fleN, Antiactivator FleN) representing FlhG in Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1) for monotrichous.", "sequence_version": 1, "taxon_id": "NCBITaxon:208964", "taxon_label": "Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)", "uniprot_id": "UniProtKB:G3XD64"}], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "MS-ring protein forming the membrane-embedded base of the flagellar basal body.", "grounding": null, "id": "flif_msring", "is_orphan": false, "label": "FliF MS-ring protein", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 109, "evidence": [{"notes": "Supports FliF MS-ring protein in monotrichous; UniProtKB:Q8FUS3 (fliF, Flagellar M-ring protein FliF) in Brucella suis biovar 1 (strain 1330) provides a verified protein exemplar.", "reference": "DOI:10.1093/femsre/fuv034", "snippet": "five to six flagellar filaments distributed over the cell body"}], "gene_symbol": "fliF", "protein_label": "Flagellar M-ring protein FliF", "proteome_id": "UP000007104", "retrieved_on": "2026-10-17", "role": "Exemplar protein (fliF, Flagellar M-ring protein FliF) representing FliF MS-ring protein in Brucella suis biovar 1 (strain 1330) for monotrichous.", "sequence_version": 1, "taxon_id": "NCBITaxon:204722", "taxon_label": "Brucella suis biovar 1 (strain 1330)", "uniprot_id": "UniProtKB:Q8FUS3"}], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "C-ring switch protein that bridges the MS-ring to motor and chemotaxis components.", "grounding": null, "id": "flig_protein", "is_orphan": false, "label": "FliG", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 133, "evidence": [{"notes": "Supports FliG in monotrichous; UniProtKB:P0ABZ1 (fliG, Flagellar motor switch protein FliG) in Escherichia coli (strain K12) provides a verified protein exemplar.", "reference": "DOI:10.1093/femsre/fuv034", "snippet": "five to six flagellar filaments distributed over the cell body"}], "gene_symbol": "fliG", "protein_label": "Flagellar motor switch protein FliG", "proteome_id": "UP000000625", "retrieved_on": "2026-10-17", "role": "Exemplar protein (fliG, Flagellar motor switch protein FliG) representing FliG in Escherichia coli (strain K12) for monotrichous.", "sequence_version": 1, "taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli (strain K12)", "uniprot_id": "UniProtKB:P0ABZ1"}], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "C-ring switch-complex proteins that interact with FliG in the cytoplasmic ring.", "grounding": null, "id": "flim_flin", "is_orphan": false, "label": "FliM/FliN C-ring partners", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 189, "evidence": [{"notes": "Supports FliM/FliN C-ring partners in monotrichous; UniProtKB:P06974 (fliM, Flagellar motor switch protein FliM) in Escherichia coli (strain K12) provides a verified protein exemplar.", "reference": "DOI:10.1093/femsre/fuv034", "snippet": "five to six flagellar filaments distributed over the cell body"}], "gene_symbol": "fliM", "protein_label": "Flagellar motor switch protein FliM", "proteome_id": "UP000000625", "retrieved_on": "2026-10-17", "role": "Exemplar protein (fliM, Flagellar motor switch protein FliM) representing FliM/FliN C-ring partners in Escherichia coli (strain K12) for monotrichous.", "sequence_version": 1, "taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli (strain K12)", "uniprot_id": "UniProtKB:P06974"}], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Single flagellum, typically polar.", "grounding": "traitmech:000057", "id": "monotrichous_trait", "is_orphan": false, "label": "monotrichous", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Targeting and confinement of flagellar assembly to one cell pole.", "grounding": null, "id": "polar_flagellum_localization", "is_orphan": false, "label": "polar localization of flagellum", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Single flagellum positioned at one cell pole.", "grounding": null, "id": "polar_placement", "is_orphan": false, "label": "polar single-flagellum placement", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 144, "evidence": [{"notes": "Supports FlhF in monotrichous; UniProtKB:O52908 (flhF, Flagellar biosynthesis protein FlhF) in Campylobacter jejuni subsp. jejuni serotype O:2 (strain ATCC 700819 / NCTC 11168) provides a verified protein exemplar.", "reference": "DOI:10.1093/femsre/fuv034", "snippet": "five to six flagellar filaments distributed over the cell body"}], "gene_symbol": "flhF", "node_id": "flhf_gtpase", "node_label": "FlhF", "protein_label": "Flagellar biosynthesis protein FlhF", "proteome_id": "UP000000799", "retrieved_on": "2026-10-17", "role": "Exemplar protein (flhF, Flagellar biosynthesis protein FlhF) representing FlhF in Campylobacter jejuni subsp. jejuni serotype O:2 (strain ATCC 700819 / NCTC 11168) for monotrichous.", "sequence_version": 2, "taxon_id": "NCBITaxon:192222", "taxon_label": "Campylobacter jejuni subsp. jejuni serotype O:2 (strain ATCC 700819 / NCTC 11168)", "uniprot_id": "UniProtKB:O52908"}, {"entry_status": "REVIEWED", "entry_version": 81, "evidence": [{"notes": "Supports FlhG in monotrichous; UniProtKB:G3XD64 (fleN, Antiactivator FleN) in Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1) provides a verified protein exemplar.", "reference": "DOI:10.1093/femsre/fuv034", "snippet": "Bacteria differ in number and location of their flagella that appear in regular patterns at the cell surface (flagellation pattern)."}], "gene_symbol": "fleN", "node_id": "flhg_atpase", "node_label": "FlhG", "protein_label": "Antiactivator FleN", "proteome_id": "UP000002438", "retrieved_on": "2026-10-17", "role": "Exemplar protein (fleN, Antiactivator FleN) representing FlhG in Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1) for monotrichous.", "sequence_version": 1, "taxon_id": "NCBITaxon:208964", "taxon_label": "Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)", "uniprot_id": "UniProtKB:G3XD64"}, {"entry_status": "REVIEWED", "entry_version": 133, "evidence": [{"notes": "Supports FliG in monotrichous; UniProtKB:P0ABZ1 (fliG, Flagellar motor switch protein FliG) in Escherichia coli (strain K12) provides a verified protein exemplar.", "reference": "DOI:10.1093/femsre/fuv034", "snippet": "five to six flagellar filaments distributed over the cell body"}], "gene_symbol": "fliG", "node_id": "flig_protein", "node_label": "FliG", "protein_label": "Flagellar motor switch protein FliG", "proteome_id": "UP000000625", "retrieved_on": "2026-10-17", "role": "Exemplar protein (fliG, Flagellar motor switch protein FliG) representing FliG in Escherichia coli (strain K12) for monotrichous.", "sequence_version": 1, "taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli (strain K12)", "uniprot_id": "UniProtKB:P0ABZ1"}, {"entry_status": "REVIEWED", "entry_version": 109, "evidence": [{"notes": "Supports FliF MS-ring protein in monotrichous; UniProtKB:Q8FUS3 (fliF, Flagellar M-ring protein FliF) in Brucella suis biovar 1 (strain 1330) provides a verified protein exemplar.", "reference": "DOI:10.1093/femsre/fuv034", "snippet": "five to six flagellar filaments distributed over the cell body"}], "gene_symbol": "fliF", "node_id": "flif_msring", "node_label": "FliF MS-ring protein", "protein_label": "Flagellar M-ring protein FliF", "proteome_id": "UP000007104", "retrieved_on": "2026-10-17", "role": "Exemplar protein (fliF, Flagellar M-ring protein FliF) representing FliF MS-ring protein in Brucella suis biovar 1 (strain 1330) for monotrichous.", "sequence_version": 1, "taxon_id": "NCBITaxon:204722", "taxon_label": "Brucella suis biovar 1 (strain 1330)", "uniprot_id": "UniProtKB:Q8FUS3"}, {"entry_status": "REVIEWED", "entry_version": 189, "evidence": [{"notes": "Supports FliM/FliN C-ring partners in monotrichous; UniProtKB:P06974 (fliM, Flagellar motor switch protein FliM) in Escherichia coli (strain K12) provides a verified protein exemplar.", "reference": "DOI:10.1093/femsre/fuv034", "snippet": "five to six flagellar filaments distributed over the cell body"}], "gene_symbol": "fliM", "node_id": "flim_flin", "node_label": "FliM/FliN C-ring partners", "protein_label": "Flagellar motor switch protein FliM", "proteome_id": "UP000000625", "retrieved_on": "2026-10-17", "role": "Exemplar protein (fliM, Flagellar motor switch protein FliM) representing FliM/FliN C-ring partners in Escherichia coli (strain K12) for monotrichous.", "sequence_version": 1, "taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli (strain K12)", "uniprot_id": "UniProtKB:P06974"}], "scope_notes": "This record is a broad environmental or morphological classification spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement descriptor; contextual protein nodes include source-backed UniProtKB exemplars.", "scope_status": "NONMECHANISTIC", "title": "Monotrichous flagellation \u2014 single polar flagellum"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking a single polar bacterial flagellum to monotrichous flagellation.", "edges": [{"description": "A single polar flagellum defines the monotrichous arrangement.", "evidence": [{"notes": "Schuhmacher et al. describe single-flagellum (monotrichous) polar flagellation.", "reference": "DOI:10.1093/femsre/fuv034"}], "id": "edge-1", "is_orphan": false, "predicate": "defines", "predicate_id": "METPO:2007500", "source": "bacterial_flagellum", "target": "monotrichous_trait"}, {"description": "The monotrichous pattern places one flagellum at one pole.", "evidence": [{"notes": "Flagellum review supports a single helical flagellar filament as a locomotory organelle.", "reference": "DOI:10.3390/biom9070279"}], "id": "edge-2", "is_orphan": false, "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "monotrichous_trait", "target": "polar_placement"}, {"description": "FlhF promotes targeting of flagella to the cell pole; deleting flhF causes mislocalization to nonpolar sites.", "evidence": [{"notes": "FlhF and FlhG control the location and number of flagella in many polar-flagellated bacteria; deleting flhF caused hypoflagellation and mislocalization of flagella to nonpolar sites.", "reference": "DOI:10.1128/jb.00110-23"}], "id": "edge-3", "is_orphan": false, "predicate": "promotes localization of", "predicate_id": null, "source": "flhf_gtpase", "target": "polar_flagellum_localization"}, {"description": "FlhG regulates the number of flagella per cell; its loss in single-flagellum bacteria often causes hyperflagellation.", "evidence": [{"notes": "FlhF and FlhG control the location and number of flagella respectively; deleting flhG in bacteria with a single polar flagellum often results in hyperflagellation.", "reference": "DOI:10.1128/jb.00110-23"}], "id": "edge-4", "is_orphan": false, "predicate": "regulates number of", "predicate_id": null, "source": "flhg_atpase", "target": "flagellum_number"}, {"description": "The FlhF B-domain FliG-Interaction Domain (FID) binds FliG.", "evidence": [{"notes": "The FlhF B-domain contains an N-terminal FliG Interaction Domain (FID); the N-terminal ~60 aa of the B-domain are necessary and sufficient for FliG binding.", "reference": "DOI:10.1038/s41467-024-50274-4"}], "id": "edge-5", "is_orphan": false, "predicate": "binds", "predicate_id": null, "source": "flhf_gtpase", "target": "flig_protein"}, {"description": "FlhF-bound FliG engages the MS-ring protein FliF, recruiting a FliF-FliG complex to the pole.", "evidence": [{"notes": "FlhF-bound FliG then engages the MS-ring protein FliF, effectively recruiting a FliF-FliG complex to the pole.", "reference": "DOI:10.1038/s41467-024-50274-4"}], "id": "edge-6", "is_orphan": false, "predicate": "recruits", "predicate_id": null, "source": "flig_protein", "target": "flif_msring"}, {"description": "FlhF-bound FliG can still engage FliF but is prevented from interacting with C-ring partners FliM/FliN.", "evidence": [{"notes": "FlhF-bound FliG can still engage the cytoplasmic domain of FliF but is prevented from interacting with C-ring partners FliM/FliN.", "reference": "DOI:10.1038/s41467-024-50274-4"}], "id": "edge-7", "is_orphan": false, "predicate": "hinders interaction of", "predicate_id": null, "source": "flhf_gtpase", "target": "flim_flin"}, {"description": "FlhG stimulates FlhF GTPase activity, modulating FlhF control over FliG interactions.", "evidence": [{"notes": "FlhG\u0027s modulation of FlhF controls FliG\u0027s interaction with FliM/FliN; FlhG stimulates FlhF GTPase activity.", "reference": "DOI:10.1038/s41467-024-50274-4"}], "id": "edge-8", "is_orphan": false, "predicate": "stimulates GTPase activity of", "predicate_id": null, "source": "flhg_atpase", "target": "flhf_gtpase"}], "evidence_rows": [{"description": "A single polar flagellum defines the monotrichous arrangement.", "edge_id": "edge-1", "evidence": [{"notes": "Schuhmacher et al. describe single-flagellum (monotrichous) polar flagellation.", "reference": "DOI:10.1093/femsre/fuv034"}], "predicate": "defines", "predicate_id": "METPO:2007500", "source": "bacterial-type flagellum", "source_grounding": "GO:0009288", "target": "monotrichous", "target_grounding": "traitmech:000057"}, {"description": "The monotrichous pattern places one flagellum at one pole.", "edge_id": "edge-2", "evidence": [{"notes": "Flagellum review supports a single helical flagellar filament as a locomotory organelle.", "reference": "DOI:10.3390/biom9070279"}], "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "monotrichous", "source_grounding": "traitmech:000057", "target": "polar single-flagellum placement", "target_grounding": null}, {"description": "FlhF promotes targeting of flagella to the cell pole; deleting flhF causes mislocalization to nonpolar sites.", "edge_id": "edge-3", "evidence": [{"notes": "FlhF and FlhG control the location and number of flagella in many polar-flagellated bacteria; deleting flhF caused hypoflagellation and mislocalization of flagella to nonpolar sites.", "reference": "DOI:10.1128/jb.00110-23"}], "predicate": "promotes localization of", "predicate_id": null, "source": "FlhF", "source_grounding": null, "target": "polar localization of flagellum", "target_grounding": null}, {"description": "FlhG regulates the number of flagella per cell; its loss in single-flagellum bacteria often causes hyperflagellation.", "edge_id": "edge-4", "evidence": [{"notes": "FlhF and FlhG control the location and number of flagella respectively; deleting flhG in bacteria with a single polar flagellum often results in hyperflagellation.", "reference": "DOI:10.1128/jb.00110-23"}], "predicate": "regulates number of", "predicate_id": null, "source": "FlhG", "source_grounding": "InterPro:IPR033875", "target": "flagellum number per cell", "target_grounding": null}, {"description": "The FlhF B-domain FliG-Interaction Domain (FID) binds FliG.", "edge_id": "edge-5", "evidence": [{"notes": "The FlhF B-domain contains an N-terminal FliG Interaction Domain (FID); the N-terminal ~60 aa of the B-domain are necessary and sufficient for FliG binding.", "reference": "DOI:10.1038/s41467-024-50274-4"}], "predicate": "binds", "predicate_id": null, "source": "FlhF", "source_grounding": null, "target": "FliG", "target_grounding": null}, {"description": "FlhF-bound FliG engages the MS-ring protein FliF, recruiting a FliF-FliG complex to the pole.", "edge_id": "edge-6", "evidence": [{"notes": "FlhF-bound FliG then engages the MS-ring protein FliF, effectively recruiting a FliF-FliG complex to the pole.", "reference": "DOI:10.1038/s41467-024-50274-4"}], "predicate": "recruits", "predicate_id": null, "source": "FliG", "source_grounding": null, "target": "FliF MS-ring protein", "target_grounding": null}, {"description": "FlhF-bound FliG can still engage FliF but is prevented from interacting with C-ring partners FliM/FliN.", "edge_id": "edge-7", "evidence": [{"notes": "FlhF-bound FliG can still engage the cytoplasmic domain of FliF but is prevented from interacting with C-ring partners FliM/FliN.", "reference": "DOI:10.1038/s41467-024-50274-4"}], "predicate": "hinders interaction of", "predicate_id": null, "source": "FlhF", "source_grounding": null, "target": "FliM/FliN C-ring partners", "target_grounding": null}, {"description": "FlhG stimulates FlhF GTPase activity, modulating FlhF control over FliG interactions.", "edge_id": "edge-8", "evidence": [{"notes": "FlhG\u0027s modulation of FlhF controls FliG\u0027s interaction with FliM/FliN; FlhG stimulates FlhF GTPase activity.", "reference": "DOI:10.1038/s41467-024-50274-4"}], "predicate": "stimulates GTPase activity of", "predicate_id": null, "source": "FlhG", "source_grounding": "InterPro:IPR033875", "target": "FlhF", "target_grounding": null}], "graph_id": "monotrichous_single_polar_flagellum", "issues": [], "nodes": [{"color": "#ede9fe", "description": "Helical proteinaceous locomotory organelle.", "grounding": "GO:0009288", "id": "bacterial_flagellum", "is_orphan": false, "label": "bacterial-type flagellum", "node_type": "CELLULAR_LOCALIZATION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "The count of flagella per cell.", "grounding": null, "id": "flagellum_number", "is_orphan": false, "label": "flagellum number per cell", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "SRP-type GTPase that targets and anchors flagellar assembly to the cell pole.", "grounding": null, "id": "flhf_gtpase", "is_orphan": false, "label": "FlhF", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "MinD/ParA-family ATPase that regulates flagellum number and modulates FlhF.", "grounding": "InterPro:IPR033875", "id": "flhg_atpase", "is_orphan": false, "label": "FlhG", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "MS-ring protein forming the membrane-embedded base of the flagellar basal body.", "grounding": null, "id": "flif_msring", "is_orphan": false, "label": "FliF MS-ring protein", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "C-ring switch protein that bridges the MS-ring to motor and chemotaxis components.", "grounding": null, "id": "flig_protein", "is_orphan": false, "label": "FliG", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "C-ring switch-complex proteins that interact with FliG in the cytoplasmic ring.", "grounding": null, "id": "flim_flin", "is_orphan": false, "label": "FliM/FliN C-ring partners", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Single flagellum, typically polar.", "grounding": "traitmech:000057", "id": "monotrichous_trait", "is_orphan": false, "label": "monotrichous", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Targeting and confinement of flagellar assembly to one cell pole.", "grounding": null, "id": "polar_flagellum_localization", "is_orphan": false, "label": "polar localization of flagellum", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Single flagellum positioned at one cell pole.", "grounding": null, "id": "polar_placement", "is_orphan": false, "label": "polar single-flagellum placement", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This record is a broad environmental or morphological classification spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement descriptor; contextual protein nodes do not receive token UniProt examples.", "scope_status": "NONMECHANISTIC", "title": "Monotrichous flagellation \u2014 single polar flagellum"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -1071,13 +1098,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-10-17 09:00 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

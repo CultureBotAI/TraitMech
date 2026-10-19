@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/genomics.html">GENOMICS</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/genomics.html">GENOMICS</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>FS-HEPN-TM system</h1>
     <p class="curie"><code>traitmech:000347</code> · CLASS · PROPOSED</p>
 
@@ -109,9 +120,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>FS_HEPN_TM locus</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>PICI-encoded mobile-element defense</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>DefenseFinder maps FS_HEPN_TM to the Fillol-Salom et al. PICI-encoded immunity study and models it as a two-profile system requiring HEPN-family and transmembrane profiles.</p>
             <ul>
 
@@ -150,9 +163,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>PICI-encoded mobile-element defense</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>FS-HEPN-TM system</strong>
-            <code>METPO:2007700</code>
+            <code>traitmech:000347</code>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>FS_HEPN_TM-associated mobile-element defense realizes the FS-HEPN-TM system trait.</p>
             <ul>
 
@@ -167,8 +182,10 @@
 
           <li id="pathograph-1-edge-3">
             <strong>FS-HEPN-TM system</strong>
+            <code>traitmech:000347</code>
             <span class="edge-predicate">is a</span>
             <strong>phage defense system</strong>
+            <code>traitmech:000209</code>
             <code>rdfs:subClassOf</code>
             <p>FS-HEPN-TM system possession is a phage-defense-system trait.</p>
             <ul>
@@ -310,11 +327,75 @@
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
 
-      <p class="no-match">No kg-microbe node embedding matched this record
-        in the 2026-04-25 deepwalk.</p>
+      <p class="match-method">Matched <strong>1</strong>
+        kg-microbe node
+        via <em>parent_proxy</em>.</p>
+      <ul class="kgm-nodes">
+
+        <li><code>METPO:1000188</code> <span class="dim-preview">[-0.956, -1.962, -3.148, +1.274, …]</span></li>
+
+      </ul>
+      <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
 
     </div>
 
+
+    <div class="card">
+      <h2>Nearest neighbors in embedding space</h2>
+      <p class="meta">Top-8 cosine-similar METPO traits
+        from the 2026-04-25 deepwalk (512-D).</p>
+      <ul class="nn-list">
+
+        <li>
+          <span class="nn-cat">upper</span>
+          <a href="../../traits/upper/quality.html">quality</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/mqsrac_system.html">MqsRAC system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/mokosh_system.html">Mokosh system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/mok_hok_sok_system.html">Mok-Hok-Sok system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/mobile_genetic_element.html">mobile genetic element</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/mmb_gp29_gp30_system.html">MMB gp29-gp30 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/mksbefg_system.html">MksBEFG system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/metis_system.html">Metis system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+      </ul>
+    </div>
 
 
 
@@ -420,6 +501,11 @@
     </dl>
   </div>
 
+
+  <div class="card rail-kgm">
+    <h2>kg-microbe</h2>
+    <p class="meta">1 matching node (parent_proxy)</p>
+  </div>
 
 </aside>
 </div>
@@ -753,7 +839,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Conservative system-level sketch linking possession of an FS_HEPN_TM locus to broad mobile-element defense without asserting the unresolved phage trigger or molecular output.", "edges": [{"description": "DefenseFinder maps FS_HEPN_TM to the Fillol-Salom et al. PICI-encoded immunity study and models it as a two-profile system requiring HEPN-family and transmembrane profiles.", "evidence": [{"notes": "Fillol-Salom et al. support PICI loci as carriers of phage and mobile-element defense mechanisms.", "reference": "PMID:35985290", "snippet": "the phage-inducible chromosomal islands (PICIs), carry an impressive arsenal of defense mechanisms"}, {"notes": "The DefenseFinder article registry maps the named FS_HEPN_TM system to the Fillol-Salom et al. PICI defense-system paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "FS_HEPN_TM | 10\\.1016/j\\.cell\\.2022\\.07\\.014 | Bacteriophages benefit from mobilizing pathogenicity islands encoding immune systems against competitors"}, {"notes": "The DefenseFinder rules table models FS_HEPN_TM as a two-profile system requiring the FS_HEPN_TM__HEPN and FS_HEPN_TM__TM profiles.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "FS_HEPN_TM\tFS_HEPN_TM\t2\t2\tFS_HEPN_TM__HEPN, FS_HEPN_TM__TM"}, {"notes": "The DefenseFinder HMM inventory records FS_HEPN_TM__HEPN under FS_HEPN_TM.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| FS_HEPN_TM__HEPN                                 | FS_HEPN_TM__HEPN                                 | FS_HEPN_TM             | PF05168.15              | 20     |"}, {"notes": "The DefenseFinder HMM inventory records FS_HEPN_TM__TM under FS_HEPN_TM.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| FS_HEPN_TM__TM                                   | FS_HEPN_TM__TM                                   | FS_HEPN_TM             | Custom                  | 20     |"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "fs_hepn_tm_locus", "target": "pici_encoded_mobile_element_defense"}, {"description": "FS_HEPN_TM-associated mobile-element defense realizes the FS-HEPN-TM system trait.", "evidence": [{"notes": "Fillol-Salom et al. support PICI-encoded defense systems as broad mobile-element immunity determinants.", "reference": "PMID:35985290", "snippet": "These defense systems provide broad immunity, blocking not only phage reproduction, but also plasmid and non-cognate PICI transfer."}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "pici_encoded_mobile_element_defense", "target": "fs_hepn_tm_system_trait"}, {"description": "FS-HEPN-TM system possession is a phage-defense-system trait.", "evidence": [{"notes": "The DefenseFinder article registry maps the named FS_HEPN_TM system to the Fillol-Salom et al. PICI defense-system paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "FS_HEPN_TM | 10\\.1016/j\\.cell\\.2022\\.07\\.014 | Bacteriophages benefit from mobilizing pathogenicity islands encoding immune systems against competitors"}, {"notes": "The DefenseFinder rules table models FS_HEPN_TM as a two-profile system requiring the FS_HEPN_TM__HEPN and FS_HEPN_TM__TM profiles.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "FS_HEPN_TM\tFS_HEPN_TM\t2\t2\tFS_HEPN_TM__HEPN, FS_HEPN_TM__TM"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "fs_hepn_tm_system_trait", "target": "phage_defense_system"}, {"description": "Endoribonuclease ToxN (toxN, UniProtKB:B8X8Z0) contributes to FS-HEPN-TM system.", "evidence": [{"notes": "Supports the functional association between Endoribonuclease ToxN (UniProtKB:B8X8Z0 in Pectobacterium atrosepticum (Erwinia carotovora subsp. atroseptica)) and FS-HEPN-TM system.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Rst_2TM_1TM_TIR__Rst_1TM_TIR | Rst_2TM_1TM_TIR__Rst_1TM_TIR | Rst_2TM_1TM_TIR | Custom | 20 | | Rst_2TM_1TM_TIR__Rst_2TM_TIR | Rst_2TM_1TM_TIR__Rst_2TM_TIR | Rst_2TM_1TM_TIR | Custom | 20 | | Rst_2TM_1TM_TIR__Rst_TIR_tm | Rst_2TM_1TM_TIR__Rst_TIR_tm | Rst_2TM_1TM_TIR | Custom | 20 |"}], "id": "edge-4", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "fs_hepn_tm_system_protein_component", "target": "fs_hepn_tm_system_trait"}], "evidence_rows": [{"description": "DefenseFinder maps FS_HEPN_TM to the Fillol-Salom et al. PICI-encoded immunity study and models it as a two-profile system requiring HEPN-family and transmembrane profiles.", "edge_id": "edge-1", "evidence": [{"notes": "Fillol-Salom et al. support PICI loci as carriers of phage and mobile-element defense mechanisms.", "reference": "PMID:35985290", "snippet": "the phage-inducible chromosomal islands (PICIs), carry an impressive arsenal of defense mechanisms"}, {"notes": "The DefenseFinder article registry maps the named FS_HEPN_TM system to the Fillol-Salom et al. PICI defense-system paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "FS_HEPN_TM | 10\\.1016/j\\.cell\\.2022\\.07\\.014 | Bacteriophages benefit from mobilizing pathogenicity islands encoding immune systems against competitors"}, {"notes": "The DefenseFinder rules table models FS_HEPN_TM as a two-profile system requiring the FS_HEPN_TM__HEPN and FS_HEPN_TM__TM profiles.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "FS_HEPN_TM\tFS_HEPN_TM\t2\t2\tFS_HEPN_TM__HEPN, FS_HEPN_TM__TM"}, {"notes": "The DefenseFinder HMM inventory records FS_HEPN_TM__HEPN under FS_HEPN_TM.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| FS_HEPN_TM__HEPN                                 | FS_HEPN_TM__HEPN                                 | FS_HEPN_TM             | PF05168.15              | 20     |"}, {"notes": "The DefenseFinder HMM inventory records FS_HEPN_TM__TM under FS_HEPN_TM.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| FS_HEPN_TM__TM                                   | FS_HEPN_TM__TM                                   | FS_HEPN_TM             | Custom                  | 20     |"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "FS_HEPN_TM locus", "target": "PICI-encoded mobile-element defense"}, {"description": "FS_HEPN_TM-associated mobile-element defense realizes the FS-HEPN-TM system trait.", "edge_id": "edge-2", "evidence": [{"notes": "Fillol-Salom et al. support PICI-encoded defense systems as broad mobile-element immunity determinants.", "reference": "PMID:35985290", "snippet": "These defense systems provide broad immunity, blocking not only phage reproduction, but also plasmid and non-cognate PICI transfer."}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "PICI-encoded mobile-element defense", "target": "FS-HEPN-TM system"}, {"description": "FS-HEPN-TM system possession is a phage-defense-system trait.", "edge_id": "edge-3", "evidence": [{"notes": "The DefenseFinder article registry maps the named FS_HEPN_TM system to the Fillol-Salom et al. PICI defense-system paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "FS_HEPN_TM | 10\\.1016/j\\.cell\\.2022\\.07\\.014 | Bacteriophages benefit from mobilizing pathogenicity islands encoding immune systems against competitors"}, {"notes": "The DefenseFinder rules table models FS_HEPN_TM as a two-profile system requiring the FS_HEPN_TM__HEPN and FS_HEPN_TM__TM profiles.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "FS_HEPN_TM\tFS_HEPN_TM\t2\t2\tFS_HEPN_TM__HEPN, FS_HEPN_TM__TM"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "FS-HEPN-TM system", "target": "phage defense system"}, {"description": "Endoribonuclease ToxN (toxN, UniProtKB:B8X8Z0) contributes to FS-HEPN-TM system.", "edge_id": "edge-4", "evidence": [{"notes": "Supports the functional association between Endoribonuclease ToxN (UniProtKB:B8X8Z0 in Pectobacterium atrosepticum (Erwinia carotovora subsp. atroseptica)) and FS-HEPN-TM system.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Rst_2TM_1TM_TIR__Rst_1TM_TIR | Rst_2TM_1TM_TIR__Rst_1TM_TIR | Rst_2TM_1TM_TIR | Custom | 20 | | Rst_2TM_1TM_TIR__Rst_2TM_TIR | Rst_2TM_1TM_TIR__Rst_2TM_TIR | Rst_2TM_1TM_TIR | Custom | 20 | | Rst_2TM_1TM_TIR__Rst_TIR_tm | Rst_2TM_1TM_TIR__Rst_TIR_tm | Rst_2TM_1TM_TIR | Custom | 20 |"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Endoribonuclease ToxN", "target": "FS-HEPN-TM system"}], "graph_id": "fs_hepn_tm_locus_restricts_phage", "issues": [], "nodes": [{"color": "#f3f4f6", "description": "A DefenseFinder FS_HEPN_TM phage-defense locus represented by HEPN-family and transmembrane profiles.", "grounding": null, "id": "fs_hepn_tm_locus", "is_orphan": false, "label": "FS_HEPN_TM locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Protein component (Endoribonuclease ToxN) associated with FS-HEPN-TM system.", "grounding": "InterPro:IPR025911", "id": "fs_hepn_tm_system_protein_component", "is_orphan": false, "label": "Endoribonuclease ToxN", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 47, "evidence": [{"notes": "Supports Endoribonuclease ToxN in FS-HEPN-TM system; UniProtKB:B8X8Z0 (toxN, Endoribonuclease ToxN) in Pectobacterium atrosepticum (Erwinia carotovora subsp. atroseptica) provides a verified protein exemplar.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "FS_HEPN_TM | 10\\.1016/j\\.cell\\.2022\\.07\\.014 | Bacteriophages benefit from mobilizing pathogenicity islands encoding immune systems against competitors"}], "gene_symbol": "toxN", "protein_label": "Endoribonuclease ToxN", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (toxN, Endoribonuclease ToxN) associated with FS-HEPN-TM system in Pectobacterium atrosepticum (Erwinia carotovora subsp. atroseptica).", "sequence_version": 1, "taxon_id": "NCBITaxon:29471", "taxon_label": "Pectobacterium atrosepticum (Erwinia carotovora subsp. atroseptica)", "uniprot_id": "UniProtKB:B8X8Z0"}], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded FS-HEPN-TM phage-defense system.", "grounding": "traitmech:000347", "id": "fs_hepn_tm_system_trait", "is_orphan": false, "label": "FS-HEPN-TM system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of one or more genome-encoded immune systems that inhibit bacteriophage infection.", "grounding": "traitmech:000209", "id": "phage_defense_system", "is_orphan": false, "label": "phage defense system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Defense by phage-inducible chromosomal island loci against phage reproduction, plasmid transfer, or non-cognate PICI transfer.", "grounding": null, "id": "pici_encoded_mobile_element_defense", "is_orphan": false, "label": "PICI-encoded mobile-element defense", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 47, "evidence": [{"notes": "Supports Endoribonuclease ToxN in FS-HEPN-TM system; UniProtKB:B8X8Z0 (toxN, Endoribonuclease ToxN) in Pectobacterium atrosepticum (Erwinia carotovora subsp. atroseptica) provides a verified protein exemplar.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "FS_HEPN_TM | 10\\.1016/j\\.cell\\.2022\\.07\\.014 | Bacteriophages benefit from mobilizing pathogenicity islands encoding immune systems against competitors"}], "gene_symbol": "toxN", "node_id": "fs_hepn_tm_system_protein_component", "node_label": "Endoribonuclease ToxN", "protein_label": "Endoribonuclease ToxN", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (toxN, Endoribonuclease ToxN) associated with FS-HEPN-TM system in Pectobacterium atrosepticum (Erwinia carotovora subsp. atroseptica).", "sequence_version": 1, "taxon_id": "NCBITaxon:29471", "taxon_label": "Pectobacterium atrosepticum (Erwinia carotovora subsp. atroseptica)", "uniprot_id": "UniProtKB:B8X8Z0"}], "scope_notes": "The graph captures FS-HEPN-TM as a named DefenseFinder two-profile system in the Fillol-Salom PICI defense family while leaving its natural host breadth, helper-phage trigger, HEPN-family substrate, and transmembrane partner function unresolved.", "scope_status": "NONMECHANISTIC", "title": "FS-HEPN-TM loci confer bacterial phage defense"}];
+  var graphs = [{"description": "Conservative system-level sketch linking possession of an FS_HEPN_TM locus to broad mobile-element defense without asserting the unresolved phage trigger or molecular output.", "edges": [{"description": "DefenseFinder maps FS_HEPN_TM to the Fillol-Salom et al. PICI-encoded immunity study and models it as a two-profile system requiring HEPN-family and transmembrane profiles.", "evidence": [{"notes": "Fillol-Salom et al. support PICI loci as carriers of phage and mobile-element defense mechanisms.", "reference": "PMID:35985290", "snippet": "the phage-inducible chromosomal islands (PICIs), carry an impressive arsenal of defense mechanisms"}, {"notes": "The DefenseFinder article registry maps the named FS_HEPN_TM system to the Fillol-Salom et al. PICI defense-system paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "FS_HEPN_TM | 10\\.1016/j\\.cell\\.2022\\.07\\.014 | Bacteriophages benefit from mobilizing pathogenicity islands encoding immune systems against competitors"}, {"notes": "The DefenseFinder rules table models FS_HEPN_TM as a two-profile system requiring the FS_HEPN_TM__HEPN and FS_HEPN_TM__TM profiles.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "FS_HEPN_TM\tFS_HEPN_TM\t2\t2\tFS_HEPN_TM__HEPN, FS_HEPN_TM__TM"}, {"notes": "The DefenseFinder HMM inventory records FS_HEPN_TM__HEPN under FS_HEPN_TM.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| FS_HEPN_TM__HEPN                                 | FS_HEPN_TM__HEPN                                 | FS_HEPN_TM             | PF05168.15              | 20     |"}, {"notes": "The DefenseFinder HMM inventory records FS_HEPN_TM__TM under FS_HEPN_TM.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| FS_HEPN_TM__TM                                   | FS_HEPN_TM__TM                                   | FS_HEPN_TM             | Custom                  | 20     |"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "fs_hepn_tm_locus", "target": "pici_encoded_mobile_element_defense"}, {"description": "FS_HEPN_TM-associated mobile-element defense realizes the FS-HEPN-TM system trait.", "evidence": [{"notes": "Fillol-Salom et al. support PICI-encoded defense systems as broad mobile-element immunity determinants.", "reference": "PMID:35985290", "snippet": "These defense systems provide broad immunity, blocking not only phage reproduction, but also plasmid and non-cognate PICI transfer."}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "pici_encoded_mobile_element_defense", "target": "fs_hepn_tm_system_trait"}, {"description": "FS-HEPN-TM system possession is a phage-defense-system trait.", "evidence": [{"notes": "The DefenseFinder article registry maps the named FS_HEPN_TM system to the Fillol-Salom et al. PICI defense-system paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "FS_HEPN_TM | 10\\.1016/j\\.cell\\.2022\\.07\\.014 | Bacteriophages benefit from mobilizing pathogenicity islands encoding immune systems against competitors"}, {"notes": "The DefenseFinder rules table models FS_HEPN_TM as a two-profile system requiring the FS_HEPN_TM__HEPN and FS_HEPN_TM__TM profiles.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "FS_HEPN_TM\tFS_HEPN_TM\t2\t2\tFS_HEPN_TM__HEPN, FS_HEPN_TM__TM"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "fs_hepn_tm_system_trait", "target": "phage_defense_system"}], "evidence_rows": [{"description": "DefenseFinder maps FS_HEPN_TM to the Fillol-Salom et al. PICI-encoded immunity study and models it as a two-profile system requiring HEPN-family and transmembrane profiles.", "edge_id": "edge-1", "evidence": [{"notes": "Fillol-Salom et al. support PICI loci as carriers of phage and mobile-element defense mechanisms.", "reference": "PMID:35985290", "snippet": "the phage-inducible chromosomal islands (PICIs), carry an impressive arsenal of defense mechanisms"}, {"notes": "The DefenseFinder article registry maps the named FS_HEPN_TM system to the Fillol-Salom et al. PICI defense-system paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "FS_HEPN_TM | 10\\.1016/j\\.cell\\.2022\\.07\\.014 | Bacteriophages benefit from mobilizing pathogenicity islands encoding immune systems against competitors"}, {"notes": "The DefenseFinder rules table models FS_HEPN_TM as a two-profile system requiring the FS_HEPN_TM__HEPN and FS_HEPN_TM__TM profiles.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "FS_HEPN_TM\tFS_HEPN_TM\t2\t2\tFS_HEPN_TM__HEPN, FS_HEPN_TM__TM"}, {"notes": "The DefenseFinder HMM inventory records FS_HEPN_TM__HEPN under FS_HEPN_TM.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| FS_HEPN_TM__HEPN                                 | FS_HEPN_TM__HEPN                                 | FS_HEPN_TM             | PF05168.15              | 20     |"}, {"notes": "The DefenseFinder HMM inventory records FS_HEPN_TM__TM under FS_HEPN_TM.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| FS_HEPN_TM__TM                                   | FS_HEPN_TM__TM                                   | FS_HEPN_TM             | Custom                  | 20     |"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "FS_HEPN_TM locus", "source_grounding": null, "target": "PICI-encoded mobile-element defense", "target_grounding": null}, {"description": "FS_HEPN_TM-associated mobile-element defense realizes the FS-HEPN-TM system trait.", "edge_id": "edge-2", "evidence": [{"notes": "Fillol-Salom et al. support PICI-encoded defense systems as broad mobile-element immunity determinants.", "reference": "PMID:35985290", "snippet": "These defense systems provide broad immunity, blocking not only phage reproduction, but also plasmid and non-cognate PICI transfer."}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "PICI-encoded mobile-element defense", "source_grounding": null, "target": "FS-HEPN-TM system", "target_grounding": "traitmech:000347"}, {"description": "FS-HEPN-TM system possession is a phage-defense-system trait.", "edge_id": "edge-3", "evidence": [{"notes": "The DefenseFinder article registry maps the named FS_HEPN_TM system to the Fillol-Salom et al. PICI defense-system paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "FS_HEPN_TM | 10\\.1016/j\\.cell\\.2022\\.07\\.014 | Bacteriophages benefit from mobilizing pathogenicity islands encoding immune systems against competitors"}, {"notes": "The DefenseFinder rules table models FS_HEPN_TM as a two-profile system requiring the FS_HEPN_TM__HEPN and FS_HEPN_TM__TM profiles.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "FS_HEPN_TM\tFS_HEPN_TM\t2\t2\tFS_HEPN_TM__HEPN, FS_HEPN_TM__TM"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "FS-HEPN-TM system", "source_grounding": "traitmech:000347", "target": "phage defense system", "target_grounding": "traitmech:000209"}], "graph_id": "fs_hepn_tm_locus_restricts_phage", "issues": [], "nodes": [{"color": "#f3f4f6", "description": "A DefenseFinder FS_HEPN_TM phage-defense locus represented by HEPN-family and transmembrane profiles.", "grounding": null, "id": "fs_hepn_tm_locus", "is_orphan": false, "label": "FS_HEPN_TM locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded FS-HEPN-TM phage-defense system.", "grounding": "traitmech:000347", "id": "fs_hepn_tm_system_trait", "is_orphan": false, "label": "FS-HEPN-TM system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of one or more genome-encoded immune systems that inhibit bacteriophage infection.", "grounding": "traitmech:000209", "id": "phage_defense_system", "is_orphan": false, "label": "phage defense system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Defense by phage-inducible chromosomal island loci against phage reproduction, plasmid transfer, or non-cognate PICI transfer.", "grounding": null, "id": "pici_encoded_mobile_element_defense", "is_orphan": false, "label": "PICI-encoded mobile-element defense", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "The graph captures FS-HEPN-TM as a named DefenseFinder two-profile system in the Fillol-Salom PICI defense family while leaving its natural host breadth, helper-phage trigger, HEPN-family substrate, and transmembrane partner function unresolved.", "scope_status": "NONMECHANISTIC", "title": "FS-HEPN-TM loci confer bacterial phage defense"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -773,13 +859,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-10-17 09:00 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/metabolism.html">METABOLISM</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/metabolism.html">METABOLISM</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>iron oxidation</h1>
     <p class="curie"><code>traitmech:000107</code> · CLASS · REVIEWED</p>
 
@@ -85,9 +96,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>iron oxidation</strong>
+            <code>traitmech:000107</code>
             <span class="edge-predicate">oxidizes</span>
             <strong>ferrous iron</strong>
-            <code>METPO:2007803</code>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:29033" rel="nofollow noreferrer"><code>CHEBI:29033</code></a>
+            <a href="https://w3id.org/metpo/2007803" rel="nofollow noreferrer"><code>METPO:2007803</code></a>
             <p>Iron oxidizers oxidize ferrous iron as an electron donor.</p>
             <ul>
 
@@ -102,9 +115,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>iron oxidation</strong>
+            <code>traitmech:000107</code>
             <span class="edge-predicate">produces</span>
             <strong>ferric iron</strong>
-            <code>METPO:2007800</code>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:29034" rel="nofollow noreferrer"><code>CHEBI:29034</code></a>
+            <a href="https://w3id.org/metpo/2007800" rel="nofollow noreferrer"><code>METPO:2007800</code></a>
             <p>Ferrous-iron oxidation yields ferric iron.</p>
             <ul>
 
@@ -119,9 +134,11 @@
 
           <li id="pathograph-1-edge-3">
             <strong>Cyc2</strong>
+
             <span class="edge-predicate">oxidizes</span>
             <strong>ferrous iron</strong>
-            <code>METPO:2007803</code>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:29033" rel="nofollow noreferrer"><code>CHEBI:29033</code></a>
+            <a href="https://w3id.org/metpo/2007803" rel="nofollow noreferrer"><code>METPO:2007803</code></a>
             <p>The outer-membrane cytochrome Cyc2 extracts electrons from extracellular Fe(II).</p>
             <ul>
 
@@ -136,8 +153,10 @@
 
           <li id="pathograph-1-edge-4">
             <strong>cbb3-type terminal oxidase</strong>
+
             <span class="edge-predicate">supports growth in</span>
             <strong>microaerobic conditions</strong>
+
 
             <p>High-O2-affinity cbb3 oxidase enables FeOB growth under microaerobic conditions.</p>
             <ul>
@@ -153,8 +172,10 @@
 
           <li id="pathograph-1-edge-5">
             <strong>cytochrome bd-type terminal oxidase</strong>
+
             <span class="edge-predicate">supports growth in</span>
             <strong>low-oxygen organic-rich niche</strong>
+
 
             <p>High-O2-affinity cytochrome bd oxidase supports FeOB growth in low-oxygen, organic-rich niches.</p>
             <ul>
@@ -170,9 +191,11 @@
 
           <li id="pathograph-1-edge-6">
             <strong>nitrite and nitric oxide</strong>
+
             <span class="edge-predicate">negatively regulates</span>
             <strong>enzymatic iron oxidation</strong>
-            <code>RO:0002212</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002212" rel="nofollow noreferrer"><code>RO:0002212</code></a>
             <p>Nitrite and NO bind hemes inhibiting cytochromes and abiotically oxidize Fe(II), competing with enzymatic iron oxidation.</p>
             <ul>
 
@@ -187,9 +210,11 @@
 
           <li id="pathograph-1-edge-7">
             <strong>multiheme c-type cytochromes</strong>
+
             <span class="edge-predicate">enables</span>
             <strong>extracellular electron transfer</strong>
-            <code>RO:0002327</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002327" rel="nofollow noreferrer"><code>RO:0002327</code></a>
             <p>FeOB multiheme cytochromes conduct electrons across long distances and broad redox potentials, enabling extracellular electron transfer.</p>
             <ul>
 
@@ -204,9 +229,11 @@
 
           <li id="pathograph-1-edge-8">
             <strong>cbb3-type terminal oxidase</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>iron oxidation</strong>
-            <code>RO:0002326</code>
+            <code>traitmech:000107</code>
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>High-affinity terminal oxidation supports iron-oxidizer respiration in microaerobic niches.</p>
             <ul>
 
@@ -221,8 +248,10 @@
 
           <li id="pathograph-1-edge-9">
             <strong>low-oxygen organic-rich niche</strong>
+
             <span class="edge-predicate">example of</span>
             <strong>microaerobic conditions</strong>
+
             <code>rdfs:subClassOf</code>
             <p>A low-oxygen, organic-rich setting is a specific microaerobic condition.</p>
             <ul>
@@ -238,9 +267,11 @@
 
           <li id="pathograph-1-edge-10">
             <strong>enzymatic iron oxidation</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>iron oxidation</strong>
-            <code>RO:0002326</code>
+            <code>traitmech:000107</code>
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>Enzymatic Fe(II) oxidation realizes the biological iron-oxidation capacity.</p>
             <ul>
 
@@ -255,9 +286,11 @@
 
           <li id="pathograph-1-edge-11">
             <strong>extracellular electron transfer</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>iron oxidation</strong>
-            <code>RO:0002326</code>
+            <code>traitmech:000107</code>
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>Extracellular electron uptake extends iron oxidation across mineral substrates.</p>
             <ul>
 
@@ -491,13 +524,25 @@
 
         <li>
           <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/manganese_oxidation.html">manganese oxidation</a>
+          <a href="../../traits/metabolism/sulfur_oxidation.html">sulfur oxidation</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/sulfur_oxidation.html">sulfur oxidation</a>
+          <a href="../../traits/metabolism/dark_hydrogen_oxidation.html">dark hydrogen oxidation</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">metabolism</span>
+          <a href="../../traits/metabolism/dark_oxidation_of_sulfur_compounds.html">dark oxidation of sulfur compounds</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">metabolism</span>
+          <a href="../../traits/metabolism/dicarboxylate_four_hydroxybutyrate_cycle.html">dicarboxylate/4-hydroxybutyrate cycle</a>
           <span class="sim">1.000</span>
         </li>
 
@@ -509,31 +554,19 @@
 
         <li>
           <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/reductive_tca_cycle.html">reductive tricarboxylic acid cycle</a>
+          <a href="../../traits/metabolism/hydrocarbon_degradation.html">hydrocarbon degradation</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/proteorhodopsin_phototrophy.html">proteorhodopsin phototrophy</a>
+          <a href="../../traits/metabolism/lignin_degradation.html">lignin degradation</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/proteolysis.html">proteolysis</a>
-          <span class="sim">1.000</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/phototrophy.html">phototrophy</a>
-          <span class="sim">1.000</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/photosynthesis.html">photosynthesis</a>
+          <a href="../../traits/metabolism/lipolysis.html">lipolysis</a>
           <span class="sim">1.000</span>
         </li>
 
@@ -1105,7 +1138,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking the iron-oxidation trait to oxidation of ferrous iron to ferric iron for energy conservation.", "edges": [{"description": "Iron oxidizers oxidize ferrous iron as an electron donor.", "evidence": [{"notes": "Emerson et al. review iron-oxidizing bacteria that use Fe(II) for energy.", "reference": "DOI:10.1146/annurev.micro.112408.134208"}], "id": "edge-1", "is_orphan": false, "predicate": "oxidizes", "predicate_id": "METPO:2007803", "source": "iron_oxidation_trait", "target": "ferrous_iron"}, {"description": "Ferrous-iron oxidation yields ferric iron.", "evidence": [{"notes": "Hedrich et al. describe Fe(II) to Fe(III) oxidation by iron-oxidizing proteobacteria.", "reference": "DOI:10.1099/mic.0.045344-0"}], "id": "edge-2", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2007800", "source": "iron_oxidation_trait", "target": "ferric_iron"}, {"description": "The outer-membrane cytochrome Cyc2 extracts electrons from extracellular Fe(II).", "evidence": [{"notes": "\"electrons are initially extracted from extracellular Fe(II) by the outer membrane cytochrome c Cyc2\"; Cyc2 also validated in neutrophiles.", "reference": "DOI:10.1128/mSystems.00720-23"}], "id": "edge-3", "is_orphan": false, "predicate": "oxidizes", "predicate_id": "METPO:2007803", "source": "cyc2", "target": "ferrous_iron"}, {"description": "High-O2-affinity cbb3 oxidase enables FeOB growth under microaerobic conditions.", "evidence": [{"notes": "\"These terminal oxidases have high affinity for oxygen and therefore are widely understood to be used under microaerobic conditions\"; consistent with FeOB ecology.", "reference": "DOI:10.1128/AEM.00599-24"}], "id": "edge-4", "is_orphan": false, "predicate": "supports growth in", "predicate_id": null, "source": "cbb3_oxidase", "target": "microaerobic_conditions"}, {"description": "High-O2-affinity cytochrome bd oxidase supports FeOB growth in low-oxygen, organic-rich niches.", "evidence": [{"notes": "\"cytochrome bd-type oxidases have a high affinity for oxygen ... can be more highly expressed ... under low-oxygen, organic-rich conditions\".", "reference": "DOI:10.1128/mSystems.00038-23"}], "id": "edge-5", "is_orphan": false, "predicate": "supports growth in", "predicate_id": null, "source": "bd_oxidase", "target": "low_oxygen_organic_rich"}, {"description": "Nitrite and NO bind hemes inhibiting cytochromes and abiotically oxidize Fe(II), competing with enzymatic iron oxidation.", "evidence": [{"notes": "\"they bind to hemes, inhibiting the activity of cytochromes, and also directly oxidize Fe(II), thus competing with enzymatic iron oxidation\".", "reference": "DOI:10.1128/mSystems.00038-23"}], "id": "edge-6", "is_orphan": false, "predicate": "negatively regulates", "predicate_id": "RO:0002212", "source": "nitrite_no", "target": "enzymatic_iron_oxidation"}, {"description": "FeOB multiheme cytochromes conduct electrons across long distances and broad redox potentials, enabling extracellular electron transfer.", "evidence": [{"notes": "\"MHCs efficiently conduct electrons across longer distances and function across a wide range of redox potentials ... which can expand the range of usable iron substrates\".", "reference": "DOI:10.1128/mSystems.00038-23"}], "id": "edge-7", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "multiheme_cytochromes", "target": "extracellular_electron_transfer"}, {"description": "High-affinity terminal oxidation supports iron-oxidizer respiration in microaerobic niches.", "evidence": [{"notes": "Verified against the free public article text.", "reference": "DOI:10.1128/AEM.00599-24", "snippet": "These terminal oxidases have high affinity for oxygen and therefore are widely understood to be used under microaerobic conditions"}], "id": "edge-8", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "cbb3_oxidase", "target": "iron_oxidation_trait"}, {"description": "A low-oxygen, organic-rich setting is a specific microaerobic condition.", "evidence": [{"notes": "Verified against the free public article text.", "reference": "DOI:10.1128/mSystems.00038-23", "snippet": "bd-type oxidases have a high affinity for oxygen, and recent studies show they can be more highly expressed than cbb3-type oxidases under low-oxygen, organic-rich conditions"}], "id": "edge-9", "is_orphan": false, "predicate": "example of", "predicate_id": "rdfs:subClassOf", "source": "low_oxygen_organic_rich", "target": "microaerobic_conditions"}, {"description": "Enzymatic Fe(II) oxidation realizes the biological iron-oxidation capacity.", "evidence": [{"notes": "Verified against the free public article text.", "reference": "DOI:10.1128/mSystems.00038-23", "snippet": "they bind to hemes, inhibiting the activity of cytochromes, and also directly oxidize Fe(II), thus competing with enzymatic iron oxidation"}], "id": "edge-10", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "enzymatic_iron_oxidation", "target": "iron_oxidation_trait"}, {"description": "Extracellular electron uptake extends iron oxidation across mineral substrates.", "evidence": [{"notes": "Verified against the free public article text.", "reference": "DOI:10.1128/mSystems.00038-23", "snippet": "multiheme cytochromes (MHCs) in Gallionellaceae FeOB, which may facilitate extracellular electron uptake and the oxidation of different iron substrates"}], "id": "edge-11", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "extracellular_electron_transfer", "target": "iron_oxidation_trait"}], "evidence_rows": [{"description": "Iron oxidizers oxidize ferrous iron as an electron donor.", "edge_id": "edge-1", "evidence": [{"notes": "Emerson et al. review iron-oxidizing bacteria that use Fe(II) for energy.", "reference": "DOI:10.1146/annurev.micro.112408.134208"}], "predicate": "oxidizes", "predicate_id": "METPO:2007803", "source": "iron oxidation", "target": "ferrous iron"}, {"description": "Ferrous-iron oxidation yields ferric iron.", "edge_id": "edge-2", "evidence": [{"notes": "Hedrich et al. describe Fe(II) to Fe(III) oxidation by iron-oxidizing proteobacteria.", "reference": "DOI:10.1099/mic.0.045344-0"}], "predicate": "produces", "predicate_id": "METPO:2007800", "source": "iron oxidation", "target": "ferric iron"}, {"description": "The outer-membrane cytochrome Cyc2 extracts electrons from extracellular Fe(II).", "edge_id": "edge-3", "evidence": [{"notes": "\"electrons are initially extracted from extracellular Fe(II) by the outer membrane cytochrome c Cyc2\"; Cyc2 also validated in neutrophiles.", "reference": "DOI:10.1128/mSystems.00720-23"}], "predicate": "oxidizes", "predicate_id": "METPO:2007803", "source": "Cyc2", "target": "ferrous iron"}, {"description": "High-O2-affinity cbb3 oxidase enables FeOB growth under microaerobic conditions.", "edge_id": "edge-4", "evidence": [{"notes": "\"These terminal oxidases have high affinity for oxygen and therefore are widely understood to be used under microaerobic conditions\"; consistent with FeOB ecology.", "reference": "DOI:10.1128/AEM.00599-24"}], "predicate": "supports growth in", "predicate_id": null, "source": "cbb3-type terminal oxidase", "target": "microaerobic conditions"}, {"description": "High-O2-affinity cytochrome bd oxidase supports FeOB growth in low-oxygen, organic-rich niches.", "edge_id": "edge-5", "evidence": [{"notes": "\"cytochrome bd-type oxidases have a high affinity for oxygen ... can be more highly expressed ... under low-oxygen, organic-rich conditions\".", "reference": "DOI:10.1128/mSystems.00038-23"}], "predicate": "supports growth in", "predicate_id": null, "source": "cytochrome bd-type terminal oxidase", "target": "low-oxygen organic-rich niche"}, {"description": "Nitrite and NO bind hemes inhibiting cytochromes and abiotically oxidize Fe(II), competing with enzymatic iron oxidation.", "edge_id": "edge-6", "evidence": [{"notes": "\"they bind to hemes, inhibiting the activity of cytochromes, and also directly oxidize Fe(II), thus competing with enzymatic iron oxidation\".", "reference": "DOI:10.1128/mSystems.00038-23"}], "predicate": "negatively regulates", "predicate_id": "RO:0002212", "source": "nitrite and nitric oxide", "target": "enzymatic iron oxidation"}, {"description": "FeOB multiheme cytochromes conduct electrons across long distances and broad redox potentials, enabling extracellular electron transfer.", "edge_id": "edge-7", "evidence": [{"notes": "\"MHCs efficiently conduct electrons across longer distances and function across a wide range of redox potentials ... which can expand the range of usable iron substrates\".", "reference": "DOI:10.1128/mSystems.00038-23"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "multiheme c-type cytochromes", "target": "extracellular electron transfer"}, {"description": "High-affinity terminal oxidation supports iron-oxidizer respiration in microaerobic niches.", "edge_id": "edge-8", "evidence": [{"notes": "Verified against the free public article text.", "reference": "DOI:10.1128/AEM.00599-24", "snippet": "These terminal oxidases have high affinity for oxygen and therefore are widely understood to be used under microaerobic conditions"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "cbb3-type terminal oxidase", "target": "iron oxidation"}, {"description": "A low-oxygen, organic-rich setting is a specific microaerobic condition.", "edge_id": "edge-9", "evidence": [{"notes": "Verified against the free public article text.", "reference": "DOI:10.1128/mSystems.00038-23", "snippet": "bd-type oxidases have a high affinity for oxygen, and recent studies show they can be more highly expressed than cbb3-type oxidases under low-oxygen, organic-rich conditions"}], "predicate": "example of", "predicate_id": "rdfs:subClassOf", "source": "low-oxygen organic-rich niche", "target": "microaerobic conditions"}, {"description": "Enzymatic Fe(II) oxidation realizes the biological iron-oxidation capacity.", "edge_id": "edge-10", "evidence": [{"notes": "Verified against the free public article text.", "reference": "DOI:10.1128/mSystems.00038-23", "snippet": "they bind to hemes, inhibiting the activity of cytochromes, and also directly oxidize Fe(II), thus competing with enzymatic iron oxidation"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "enzymatic iron oxidation", "target": "iron oxidation"}, {"description": "Extracellular electron uptake extends iron oxidation across mineral substrates.", "edge_id": "edge-11", "evidence": [{"notes": "Verified against the free public article text.", "reference": "DOI:10.1128/mSystems.00038-23", "snippet": "multiheme cytochromes (MHCs) in Gallionellaceae FeOB, which may facilitate extracellular electron uptake and the oxidation of different iron substrates"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "extracellular electron transfer", "target": "iron oxidation"}], "graph_id": "iron_oxidation_ferrous_to_ferric", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "High-oxygen-affinity terminal oxidase used by FeOB.", "grounding": null, "id": "bd_oxidase", "is_orphan": false, "label": "cytochrome bd-type terminal oxidase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 116, "evidence": [{"notes": "Supports cytochrome bd-type terminal oxidase in iron oxidation; UniProtKB:P98059 (ctaD, Cytochrome c oxidase subunit 1) in Rhodobacter capsulatus (Rhodopseudomonas capsulata) provides a verified protein exemplar.", "reference": "DOI:10.1128/mSystems.00038-23", "snippet": "multiheme cytochromes (MHCs) in Gallionellaceae FeOB, which may facilitate extracellular electron uptake and the oxidation of different iron substrates"}], "gene_symbol": "ctaD", "protein_label": "Cytochrome c oxidase subunit 1", "retrieved_on": "2026-10-17", "role": "Exemplar protein (ctaD, Cytochrome c oxidase subunit 1) representing cytochrome bd-type terminal oxidase in Rhodobacter capsulatus (Rhodopseudomonas capsulata) for iron oxidation.", "sequence_version": 1, "taxon_id": "NCBITaxon:1061", "taxon_label": "Rhodobacter capsulatus (Rhodopseudomonas capsulata)", "uniprot_id": "UniProtKB:P98059"}], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "High-oxygen-affinity terminal oxidase used by FeOB.", "grounding": null, "id": "cbb3_oxidase", "is_orphan": false, "label": "cbb3-type terminal oxidase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 116, "evidence": [{"notes": "Supports cbb3-type terminal oxidase in iron oxidation; UniProtKB:P98059 (ctaD, Cytochrome c oxidase subunit 1) in Rhodobacter capsulatus (Rhodopseudomonas capsulata) provides a verified protein exemplar.", "reference": "DOI:10.1128/mSystems.00038-23", "snippet": "multiheme cytochromes (MHCs) in Gallionellaceae FeOB, which may facilitate extracellular electron uptake and the oxidation of different iron substrates"}], "gene_symbol": "ctaD", "protein_label": "Cytochrome c oxidase subunit 1", "retrieved_on": "2026-10-17", "role": "Exemplar protein (ctaD, Cytochrome c oxidase subunit 1) representing cbb3-type terminal oxidase in Rhodobacter capsulatus (Rhodopseudomonas capsulata) for iron oxidation.", "sequence_version": 1, "taxon_id": "NCBITaxon:1061", "taxon_label": "Rhodobacter capsulatus (Rhodopseudomonas capsulata)", "uniprot_id": "UniProtKB:P98059"}], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Outer-membrane cytochrome c that extracts electrons from extracellular Fe(II); the central iron oxidase across many FeOB.", "grounding": null, "id": "cyc2", "is_orphan": false, "label": "Cyc2", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "UNREVIEWED", "entry_version": 60, "evidence": [{"notes": "The primary biochemical study reports iron-oxidase activity and electron transfer through Cyc2 in the isolated trans-envelope supercomplex; UniProtKB B7JAQ7 is the strain\u0027s cyc2 reference-proteome entry.", "reference": "DOI:10.1074/jbc.M802496200", "snippet": "outer membrane-bound cytochrome c Cyc2 was purified"}], "gene_symbol": "cyc2", "protein_label": "Cytochrome c", "proteome_id": "UP000001362", "retrieved_on": "2026-08-24", "role": "Outer-membrane Cyc2 component of the iron-oxidizing/O2-reducing supercomplex in A. ferrooxidans ATCC 23270.", "sequence_version": 1, "taxon_id": "NCBITaxon:243159", "taxon_label": "Acidithiobacillus ferrooxidans ATCC 23270", "uniprot_id": "UniProtKB:B7JAQ7"}], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Biological Fe(II) oxidation catalyzed by cytochromes.", "grounding": null, "id": "enzymatic_iron_oxidation", "is_orphan": false, "label": "enzymatic iron oxidation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Electron transfer across minerals and long distances, expanding usable iron substrates.", "grounding": null, "id": "extracellular_electron_transfer", "is_orphan": false, "label": "extracellular electron transfer", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Fe(3+) oxidized product.", "grounding": "CHEBI:29034", "id": "ferric_iron", "is_orphan": false, "label": "ferric iron", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Fe(2+) electron-donor substrate.", "grounding": "CHEBI:29033", "id": "ferrous_iron", "is_orphan": false, "label": "ferrous iron", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Capacity to oxidize Fe(II) to Fe(III) for energy.", "grounding": "traitmech:000107", "id": "iron_oxidation_trait", "is_orphan": false, "label": "iron oxidation", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Low-O2, organic-rich environmental niche.", "grounding": null, "id": "low_oxygen_organic_rich", "is_orphan": false, "label": "low-oxygen organic-rich niche", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Low-oxygen environmental niche favored by FeOB.", "grounding": null, "id": "microaerobic_conditions", "is_orphan": false, "label": "microaerobic conditions", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "FeOB-enriched multiheme cytochromes conducting electrons across long distances and wide redox-potential ranges.", "grounding": null, "id": "multiheme_cytochromes", "is_orphan": false, "label": "multiheme c-type cytochromes", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "UNREVIEWED", "entry_version": 126, "evidence": [{"notes": "Supports multiheme c-type cytochromes in iron oxidation; UniProtKB:Q8EG34 (mtrC, Extracellular iron oxide respiratory system surface decaheme cytochrome c component MtrC) in Shewanella oneidensis (strain ATCC 700550 / JCM 31522 / CIP 106686 / LMG 19005 / NCIMB 14063 / MR-1) provides a verified protein exemplar.", "reference": "DOI:10.1128/mSystems.00038-23", "snippet": "multiheme cytochromes (MHCs) in Gallionellaceae FeOB, which may facilitate extracellular electron uptake and the oxidation of different iron substrates"}], "gene_symbol": "mtrC", "protein_label": "Extracellular iron oxide respiratory system surface decaheme cytochrome c component MtrC", "proteome_id": "UP000008186", "retrieved_on": "2026-10-17", "role": "Exemplar protein (mtrC, Extracellular iron oxide respiratory system surface decaheme cytochrome c component MtrC) representing multiheme c-type cytochromes in Shewanella oneidensis (strain ATCC 700550 / JCM 31522 / CIP 106686 / LMG 19005 / NCIMB 14063 / MR-1) for iron oxidation.", "sequence_version": 1, "taxon_id": "NCBITaxon:211586", "taxon_label": "Shewanella oneidensis (strain ATCC 700550 / JCM 31522 / CIP 106686 / LMG 19005 / NCIMB 14063 / MR-1)", "uniprot_id": "UniProtKB:Q8EG34"}], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Reactive nitrogen species that bind hemes and abiotically oxidize Fe(II).", "grounding": null, "id": "nitrite_no", "is_orphan": false, "label": "nitrite and nitric oxide", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "UNREVIEWED", "entry_version": 60, "evidence": [{"notes": "The primary biochemical study reports iron-oxidase activity and electron transfer through Cyc2 in the isolated trans-envelope supercomplex; UniProtKB B7JAQ7 is the strain\u0027s cyc2 reference-proteome entry.", "reference": "DOI:10.1074/jbc.M802496200", "snippet": "outer membrane-bound cytochrome c Cyc2 was purified"}], "gene_symbol": "cyc2", "node_id": "cyc2", "node_label": "Cyc2", "protein_label": "Cytochrome c", "proteome_id": "UP000001362", "retrieved_on": "2026-08-24", "role": "Outer-membrane Cyc2 component of the iron-oxidizing/O2-reducing supercomplex in A. ferrooxidans ATCC 23270.", "sequence_version": 1, "taxon_id": "NCBITaxon:243159", "taxon_label": "Acidithiobacillus ferrooxidans ATCC 23270", "uniprot_id": "UniProtKB:B7JAQ7"}, {"entry_status": "REVIEWED", "entry_version": 116, "evidence": [{"notes": "Supports cbb3-type terminal oxidase in iron oxidation; UniProtKB:P98059 (ctaD, Cytochrome c oxidase subunit 1) in Rhodobacter capsulatus (Rhodopseudomonas capsulata) provides a verified protein exemplar.", "reference": "DOI:10.1128/mSystems.00038-23", "snippet": "multiheme cytochromes (MHCs) in Gallionellaceae FeOB, which may facilitate extracellular electron uptake and the oxidation of different iron substrates"}], "gene_symbol": "ctaD", "node_id": "cbb3_oxidase", "node_label": "cbb3-type terminal oxidase", "protein_label": "Cytochrome c oxidase subunit 1", "retrieved_on": "2026-10-17", "role": "Exemplar protein (ctaD, Cytochrome c oxidase subunit 1) representing cbb3-type terminal oxidase in Rhodobacter capsulatus (Rhodopseudomonas capsulata) for iron oxidation.", "sequence_version": 1, "taxon_id": "NCBITaxon:1061", "taxon_label": "Rhodobacter capsulatus (Rhodopseudomonas capsulata)", "uniprot_id": "UniProtKB:P98059"}, {"entry_status": "REVIEWED", "entry_version": 116, "evidence": [{"notes": "Supports cytochrome bd-type terminal oxidase in iron oxidation; UniProtKB:P98059 (ctaD, Cytochrome c oxidase subunit 1) in Rhodobacter capsulatus (Rhodopseudomonas capsulata) provides a verified protein exemplar.", "reference": "DOI:10.1128/mSystems.00038-23", "snippet": "multiheme cytochromes (MHCs) in Gallionellaceae FeOB, which may facilitate extracellular electron uptake and the oxidation of different iron substrates"}], "gene_symbol": "ctaD", "node_id": "bd_oxidase", "node_label": "cytochrome bd-type terminal oxidase", "protein_label": "Cytochrome c oxidase subunit 1", "retrieved_on": "2026-10-17", "role": "Exemplar protein (ctaD, Cytochrome c oxidase subunit 1) representing cytochrome bd-type terminal oxidase in Rhodobacter capsulatus (Rhodopseudomonas capsulata) for iron oxidation.", "sequence_version": 1, "taxon_id": "NCBITaxon:1061", "taxon_label": "Rhodobacter capsulatus (Rhodopseudomonas capsulata)", "uniprot_id": "UniProtKB:P98059"}, {"entry_status": "UNREVIEWED", "entry_version": 126, "evidence": [{"notes": "Supports multiheme c-type cytochromes in iron oxidation; UniProtKB:Q8EG34 (mtrC, Extracellular iron oxide respiratory system surface decaheme cytochrome c component MtrC) in Shewanella oneidensis (strain ATCC 700550 / JCM 31522 / CIP 106686 / LMG 19005 / NCIMB 14063 / MR-1) provides a verified protein exemplar.", "reference": "DOI:10.1128/mSystems.00038-23", "snippet": "multiheme cytochromes (MHCs) in Gallionellaceae FeOB, which may facilitate extracellular electron uptake and the oxidation of different iron substrates"}], "gene_symbol": "mtrC", "node_id": "multiheme_cytochromes", "node_label": "multiheme c-type cytochromes", "protein_label": "Extracellular iron oxide respiratory system surface decaheme cytochrome c component MtrC", "proteome_id": "UP000008186", "retrieved_on": "2026-10-17", "role": "Exemplar protein (mtrC, Extracellular iron oxide respiratory system surface decaheme cytochrome c component MtrC) representing multiheme c-type cytochromes in Shewanella oneidensis (strain ATCC 700550 / JCM 31522 / CIP 106686 / LMG 19005 / NCIMB 14063 / MR-1) for iron oxidation.", "sequence_version": 1, "taxon_id": "NCBITaxon:211586", "taxon_label": "Shewanella oneidensis (strain ATCC 700550 / JCM 31522 / CIP 106686 / LMG 19005 / NCIMB 14063 / MR-1)", "uniprot_id": "UniProtKB:Q8EG34"}], "scope_notes": "This is a cross-taxon iron-oxidation graph. The A. ferrooxidans Cyc2 example supports the acidophilic Cyc2 branch; cbb3, bd, and multiheme proteins represent lineage- and condition-specific alternatives and are not universal markers.", "scope_status": "MECHANISTIC", "title": "Ferrous iron oxidation for energy"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking the iron-oxidation trait to oxidation of ferrous iron to ferric iron for energy conservation.", "edges": [{"description": "Iron oxidizers oxidize ferrous iron as an electron donor.", "evidence": [{"notes": "Emerson et al. review iron-oxidizing bacteria that use Fe(II) for energy.", "reference": "DOI:10.1146/annurev.micro.112408.134208"}], "id": "edge-1", "is_orphan": false, "predicate": "oxidizes", "predicate_id": "METPO:2007803", "source": "iron_oxidation_trait", "target": "ferrous_iron"}, {"description": "Ferrous-iron oxidation yields ferric iron.", "evidence": [{"notes": "Hedrich et al. describe Fe(II) to Fe(III) oxidation by iron-oxidizing proteobacteria.", "reference": "DOI:10.1099/mic.0.045344-0"}], "id": "edge-2", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2007800", "source": "iron_oxidation_trait", "target": "ferric_iron"}, {"description": "The outer-membrane cytochrome Cyc2 extracts electrons from extracellular Fe(II).", "evidence": [{"notes": "\"electrons are initially extracted from extracellular Fe(II) by the outer membrane cytochrome c Cyc2\"; Cyc2 also validated in neutrophiles.", "reference": "DOI:10.1128/mSystems.00720-23"}], "id": "edge-3", "is_orphan": false, "predicate": "oxidizes", "predicate_id": "METPO:2007803", "source": "cyc2", "target": "ferrous_iron"}, {"description": "High-O2-affinity cbb3 oxidase enables FeOB growth under microaerobic conditions.", "evidence": [{"notes": "\"These terminal oxidases have high affinity for oxygen and therefore are widely understood to be used under microaerobic conditions\"; consistent with FeOB ecology.", "reference": "DOI:10.1128/AEM.00599-24"}], "id": "edge-4", "is_orphan": false, "predicate": "supports growth in", "predicate_id": null, "source": "cbb3_oxidase", "target": "microaerobic_conditions"}, {"description": "High-O2-affinity cytochrome bd oxidase supports FeOB growth in low-oxygen, organic-rich niches.", "evidence": [{"notes": "\"cytochrome bd-type oxidases have a high affinity for oxygen ... can be more highly expressed ... under low-oxygen, organic-rich conditions\".", "reference": "DOI:10.1128/mSystems.00038-23"}], "id": "edge-5", "is_orphan": false, "predicate": "supports growth in", "predicate_id": null, "source": "bd_oxidase", "target": "low_oxygen_organic_rich"}, {"description": "Nitrite and NO bind hemes inhibiting cytochromes and abiotically oxidize Fe(II), competing with enzymatic iron oxidation.", "evidence": [{"notes": "\"they bind to hemes, inhibiting the activity of cytochromes, and also directly oxidize Fe(II), thus competing with enzymatic iron oxidation\".", "reference": "DOI:10.1128/mSystems.00038-23"}], "id": "edge-6", "is_orphan": false, "predicate": "negatively regulates", "predicate_id": "RO:0002212", "source": "nitrite_no", "target": "enzymatic_iron_oxidation"}, {"description": "FeOB multiheme cytochromes conduct electrons across long distances and broad redox potentials, enabling extracellular electron transfer.", "evidence": [{"notes": "\"MHCs efficiently conduct electrons across longer distances and function across a wide range of redox potentials ... which can expand the range of usable iron substrates\".", "reference": "DOI:10.1128/mSystems.00038-23"}], "id": "edge-7", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "multiheme_cytochromes", "target": "extracellular_electron_transfer"}, {"description": "High-affinity terminal oxidation supports iron-oxidizer respiration in microaerobic niches.", "evidence": [{"notes": "Verified against the free public article text.", "reference": "DOI:10.1128/AEM.00599-24", "snippet": "These terminal oxidases have high affinity for oxygen and therefore are widely understood to be used under microaerobic conditions"}], "id": "edge-8", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "cbb3_oxidase", "target": "iron_oxidation_trait"}, {"description": "A low-oxygen, organic-rich setting is a specific microaerobic condition.", "evidence": [{"notes": "Verified against the free public article text.", "reference": "DOI:10.1128/mSystems.00038-23", "snippet": "bd-type oxidases have a high affinity for oxygen, and recent studies show they can be more highly expressed than cbb3-type oxidases under low-oxygen, organic-rich conditions"}], "id": "edge-9", "is_orphan": false, "predicate": "example of", "predicate_id": "rdfs:subClassOf", "source": "low_oxygen_organic_rich", "target": "microaerobic_conditions"}, {"description": "Enzymatic Fe(II) oxidation realizes the biological iron-oxidation capacity.", "evidence": [{"notes": "Verified against the free public article text.", "reference": "DOI:10.1128/mSystems.00038-23", "snippet": "they bind to hemes, inhibiting the activity of cytochromes, and also directly oxidize Fe(II), thus competing with enzymatic iron oxidation"}], "id": "edge-10", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "enzymatic_iron_oxidation", "target": "iron_oxidation_trait"}, {"description": "Extracellular electron uptake extends iron oxidation across mineral substrates.", "evidence": [{"notes": "Verified against the free public article text.", "reference": "DOI:10.1128/mSystems.00038-23", "snippet": "multiheme cytochromes (MHCs) in Gallionellaceae FeOB, which may facilitate extracellular electron uptake and the oxidation of different iron substrates"}], "id": "edge-11", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "extracellular_electron_transfer", "target": "iron_oxidation_trait"}], "evidence_rows": [{"description": "Iron oxidizers oxidize ferrous iron as an electron donor.", "edge_id": "edge-1", "evidence": [{"notes": "Emerson et al. review iron-oxidizing bacteria that use Fe(II) for energy.", "reference": "DOI:10.1146/annurev.micro.112408.134208"}], "predicate": "oxidizes", "predicate_id": "METPO:2007803", "source": "iron oxidation", "source_grounding": "traitmech:000107", "target": "ferrous iron", "target_grounding": "CHEBI:29033"}, {"description": "Ferrous-iron oxidation yields ferric iron.", "edge_id": "edge-2", "evidence": [{"notes": "Hedrich et al. describe Fe(II) to Fe(III) oxidation by iron-oxidizing proteobacteria.", "reference": "DOI:10.1099/mic.0.045344-0"}], "predicate": "produces", "predicate_id": "METPO:2007800", "source": "iron oxidation", "source_grounding": "traitmech:000107", "target": "ferric iron", "target_grounding": "CHEBI:29034"}, {"description": "The outer-membrane cytochrome Cyc2 extracts electrons from extracellular Fe(II).", "edge_id": "edge-3", "evidence": [{"notes": "\"electrons are initially extracted from extracellular Fe(II) by the outer membrane cytochrome c Cyc2\"; Cyc2 also validated in neutrophiles.", "reference": "DOI:10.1128/mSystems.00720-23"}], "predicate": "oxidizes", "predicate_id": "METPO:2007803", "source": "Cyc2", "source_grounding": null, "target": "ferrous iron", "target_grounding": "CHEBI:29033"}, {"description": "High-O2-affinity cbb3 oxidase enables FeOB growth under microaerobic conditions.", "edge_id": "edge-4", "evidence": [{"notes": "\"These terminal oxidases have high affinity for oxygen and therefore are widely understood to be used under microaerobic conditions\"; consistent with FeOB ecology.", "reference": "DOI:10.1128/AEM.00599-24"}], "predicate": "supports growth in", "predicate_id": null, "source": "cbb3-type terminal oxidase", "source_grounding": null, "target": "microaerobic conditions", "target_grounding": null}, {"description": "High-O2-affinity cytochrome bd oxidase supports FeOB growth in low-oxygen, organic-rich niches.", "edge_id": "edge-5", "evidence": [{"notes": "\"cytochrome bd-type oxidases have a high affinity for oxygen ... can be more highly expressed ... under low-oxygen, organic-rich conditions\".", "reference": "DOI:10.1128/mSystems.00038-23"}], "predicate": "supports growth in", "predicate_id": null, "source": "cytochrome bd-type terminal oxidase", "source_grounding": null, "target": "low-oxygen organic-rich niche", "target_grounding": null}, {"description": "Nitrite and NO bind hemes inhibiting cytochromes and abiotically oxidize Fe(II), competing with enzymatic iron oxidation.", "edge_id": "edge-6", "evidence": [{"notes": "\"they bind to hemes, inhibiting the activity of cytochromes, and also directly oxidize Fe(II), thus competing with enzymatic iron oxidation\".", "reference": "DOI:10.1128/mSystems.00038-23"}], "predicate": "negatively regulates", "predicate_id": "RO:0002212", "source": "nitrite and nitric oxide", "source_grounding": null, "target": "enzymatic iron oxidation", "target_grounding": null}, {"description": "FeOB multiheme cytochromes conduct electrons across long distances and broad redox potentials, enabling extracellular electron transfer.", "edge_id": "edge-7", "evidence": [{"notes": "\"MHCs efficiently conduct electrons across longer distances and function across a wide range of redox potentials ... which can expand the range of usable iron substrates\".", "reference": "DOI:10.1128/mSystems.00038-23"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "multiheme c-type cytochromes", "source_grounding": null, "target": "extracellular electron transfer", "target_grounding": null}, {"description": "High-affinity terminal oxidation supports iron-oxidizer respiration in microaerobic niches.", "edge_id": "edge-8", "evidence": [{"notes": "Verified against the free public article text.", "reference": "DOI:10.1128/AEM.00599-24", "snippet": "These terminal oxidases have high affinity for oxygen and therefore are widely understood to be used under microaerobic conditions"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "cbb3-type terminal oxidase", "source_grounding": null, "target": "iron oxidation", "target_grounding": "traitmech:000107"}, {"description": "A low-oxygen, organic-rich setting is a specific microaerobic condition.", "edge_id": "edge-9", "evidence": [{"notes": "Verified against the free public article text.", "reference": "DOI:10.1128/mSystems.00038-23", "snippet": "bd-type oxidases have a high affinity for oxygen, and recent studies show they can be more highly expressed than cbb3-type oxidases under low-oxygen, organic-rich conditions"}], "predicate": "example of", "predicate_id": "rdfs:subClassOf", "source": "low-oxygen organic-rich niche", "source_grounding": null, "target": "microaerobic conditions", "target_grounding": null}, {"description": "Enzymatic Fe(II) oxidation realizes the biological iron-oxidation capacity.", "edge_id": "edge-10", "evidence": [{"notes": "Verified against the free public article text.", "reference": "DOI:10.1128/mSystems.00038-23", "snippet": "they bind to hemes, inhibiting the activity of cytochromes, and also directly oxidize Fe(II), thus competing with enzymatic iron oxidation"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "enzymatic iron oxidation", "source_grounding": null, "target": "iron oxidation", "target_grounding": "traitmech:000107"}, {"description": "Extracellular electron uptake extends iron oxidation across mineral substrates.", "edge_id": "edge-11", "evidence": [{"notes": "Verified against the free public article text.", "reference": "DOI:10.1128/mSystems.00038-23", "snippet": "multiheme cytochromes (MHCs) in Gallionellaceae FeOB, which may facilitate extracellular electron uptake and the oxidation of different iron substrates"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "extracellular electron transfer", "source_grounding": null, "target": "iron oxidation", "target_grounding": "traitmech:000107"}], "graph_id": "iron_oxidation_ferrous_to_ferric", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "High-oxygen-affinity terminal oxidase used by FeOB.", "grounding": null, "id": "bd_oxidase", "is_orphan": false, "label": "cytochrome bd-type terminal oxidase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "High-oxygen-affinity terminal oxidase used by FeOB.", "grounding": null, "id": "cbb3_oxidase", "is_orphan": false, "label": "cbb3-type terminal oxidase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Outer-membrane cytochrome c that extracts electrons from extracellular Fe(II); the central iron oxidase across many FeOB.", "grounding": null, "id": "cyc2", "is_orphan": false, "label": "Cyc2", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "UNREVIEWED", "entry_version": 60, "evidence": [{"notes": "The primary biochemical study reports iron-oxidase activity and electron transfer through Cyc2 in the isolated trans-envelope supercomplex; UniProtKB B7JAQ7 is the strain\u0027s cyc2 reference-proteome entry.", "reference": "DOI:10.1074/jbc.M802496200", "snippet": "outer membrane-bound cytochrome c Cyc2 was purified"}], "gene_symbol": "cyc2", "protein_label": "Cytochrome c", "proteome_id": "UP000001362", "retrieved_on": "2026-08-24", "role": "Outer-membrane Cyc2 component of the iron-oxidizing/O2-reducing supercomplex in A. ferrooxidans ATCC 23270.", "sequence_version": 1, "taxon_id": "NCBITaxon:243159", "taxon_label": "Acidithiobacillus ferrooxidans ATCC 23270", "uniprot_id": "UniProtKB:B7JAQ7"}], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Biological Fe(II) oxidation catalyzed by cytochromes.", "grounding": null, "id": "enzymatic_iron_oxidation", "is_orphan": false, "label": "enzymatic iron oxidation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Electron transfer across minerals and long distances, expanding usable iron substrates.", "grounding": null, "id": "extracellular_electron_transfer", "is_orphan": false, "label": "extracellular electron transfer", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Fe(3+) oxidized product.", "grounding": "CHEBI:29034", "id": "ferric_iron", "is_orphan": false, "label": "ferric iron", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Fe(2+) electron-donor substrate.", "grounding": "CHEBI:29033", "id": "ferrous_iron", "is_orphan": false, "label": "ferrous iron", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Capacity to oxidize Fe(II) to Fe(III) for energy.", "grounding": "traitmech:000107", "id": "iron_oxidation_trait", "is_orphan": false, "label": "iron oxidation", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Low-O2, organic-rich environmental niche.", "grounding": null, "id": "low_oxygen_organic_rich", "is_orphan": false, "label": "low-oxygen organic-rich niche", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Low-oxygen environmental niche favored by FeOB.", "grounding": null, "id": "microaerobic_conditions", "is_orphan": false, "label": "microaerobic conditions", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "FeOB-enriched multiheme cytochromes conducting electrons across long distances and wide redox-potential ranges.", "grounding": null, "id": "multiheme_cytochromes", "is_orphan": false, "label": "multiheme c-type cytochromes", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Reactive nitrogen species that bind hemes and abiotically oxidize Fe(II).", "grounding": null, "id": "nitrite_no", "is_orphan": false, "label": "nitrite and nitric oxide", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "UNREVIEWED", "entry_version": 60, "evidence": [{"notes": "The primary biochemical study reports iron-oxidase activity and electron transfer through Cyc2 in the isolated trans-envelope supercomplex; UniProtKB B7JAQ7 is the strain\u0027s cyc2 reference-proteome entry.", "reference": "DOI:10.1074/jbc.M802496200", "snippet": "outer membrane-bound cytochrome c Cyc2 was purified"}], "gene_symbol": "cyc2", "node_id": "cyc2", "node_label": "Cyc2", "protein_label": "Cytochrome c", "proteome_id": "UP000001362", "retrieved_on": "2026-08-24", "role": "Outer-membrane Cyc2 component of the iron-oxidizing/O2-reducing supercomplex in A. ferrooxidans ATCC 23270.", "sequence_version": 1, "taxon_id": "NCBITaxon:243159", "taxon_label": "Acidithiobacillus ferrooxidans ATCC 23270", "uniprot_id": "UniProtKB:B7JAQ7"}], "scope_notes": "This is a cross-taxon iron-oxidation graph. The A. ferrooxidans Cyc2 example supports the acidophilic Cyc2 branch; cbb3, bd, and multiheme proteins represent lineage- and condition-specific alternatives and are not universal markers.", "scope_status": "MECHANISTIC", "title": "Ferrous iron oxidation for energy"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -1125,13 +1158,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-10-17 09:00 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

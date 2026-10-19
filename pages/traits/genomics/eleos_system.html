@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/genomics.html">GENOMICS</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/genomics.html">GENOMICS</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>Eleos system</h1>
     <p class="curie"><code>traitmech:000250</code> · CLASS · PROPOSED</p>
 
@@ -127,9 +138,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>Eleos locus</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>restricted phage propagation</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>DefenseFinder maps Eleos to a bacterial anti-phage-system discovery preprint and represents Eleos loci through LeoA, LeoB, LeoBC, and LeoC component profiles.</p>
             <ul>
 
@@ -156,9 +169,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>restricted phage propagation</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>Eleos system</strong>
-            <code>METPO:2007700</code>
+            <code>traitmech:000250</code>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>Eleos-mediated phage restriction realizes the Eleos system trait.</p>
             <ul>
 
@@ -179,8 +194,10 @@
 
           <li id="pathograph-1-edge-3">
             <strong>Eleos system</strong>
+            <code>traitmech:000250</code>
             <span class="edge-predicate">is a</span>
             <strong>phage defense system</strong>
+            <code>traitmech:000209</code>
             <code>rdfs:subClassOf</code>
             <p>Eleos system possession is a phage-defense-system trait.</p>
             <ul>
@@ -312,11 +329,75 @@
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
 
-      <p class="no-match">No kg-microbe node embedding matched this record
-        in the 2026-04-25 deepwalk.</p>
+      <p class="match-method">Matched <strong>1</strong>
+        kg-microbe node
+        via <em>parent_proxy</em>.</p>
+      <ul class="kgm-nodes">
+
+        <li><code>METPO:1000188</code> <span class="dim-preview">[-0.956, -1.962, -3.148, +1.274, …]</span></li>
+
+      </ul>
+      <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
 
     </div>
 
+
+    <div class="card">
+      <h2>Nearest neighbors in embedding space</h2>
+      <p class="meta">Top-8 cosine-similar METPO traits
+        from the 2026-04-25 deepwalk (512-D).</p>
+      <ul class="nn-list">
+
+        <li>
+          <span class="nn-cat">upper</span>
+          <a href="../../traits/upper/quality.html">quality</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/mqsrac_system.html">MqsRAC system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/mokosh_system.html">Mokosh system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/mok_hok_sok_system.html">Mok-Hok-Sok system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/mobile_genetic_element.html">mobile genetic element</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/mmb_gp29_gp30_system.html">MMB gp29-gp30 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/mksbefg_system.html">MksBEFG system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/metis_system.html">Metis system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+      </ul>
+    </div>
 
 
 
@@ -422,6 +503,11 @@
     </dl>
   </div>
 
+
+  <div class="card rail-kgm">
+    <h2>kg-microbe</h2>
+    <p class="meta">1 matching node (parent_proxy)</p>
+  </div>
 
 </aside>
 </div>
@@ -755,7 +841,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Conservative system-level sketch linking possession of an Eleos locus to restricted bacteriophage propagation without asserting the unresolved phage trigger or molecular output.", "edges": [{"description": "DefenseFinder maps Eleos to a bacterial anti-phage-system discovery preprint and represents Eleos loci through LeoA, LeoB, LeoBC, and LeoC component profiles.", "evidence": [{"notes": "Millman et al. describe the anti-phage discovery cohort that the DefenseFinder Eleos registry row maps to the Eleos system.", "reference": "DOI:10.1016/j.chom.2022.09.017", "snippet": "discovery of 21 defense systems that protect bacteria from phages"}, {"notes": "The DefenseFinder registry maps Eleos itself to the Millman et al. bacterial antiphage-system discovery preprint.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "Eleos | 10\\.1101/2022\\.05\\.11\\.491447 | An expanding arsenal of immune systems that protect bacteria from phages"}, {"notes": "The DefenseFinder rules table supports LeoA, LeoB, LeoBC, and LeoC as Eleos system profile choices.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Eleos\tEleos\t2\t2\tEleos__LeoA, Eleos__LeoB, Eleos__LeoBC, Eleos__LeoC"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "eleos_locus", "target": "restricted_phage_propagation"}, {"description": "Eleos-mediated phage restriction realizes the Eleos system trait.", "evidence": [{"notes": "Millman et al. place the Eleos discovery cohort in the set of bacterial systems that protect against phages.", "reference": "DOI:10.1016/j.chom.2022.09.017", "snippet": "discovery of 21 defense systems that protect bacteria from phages"}, {"notes": "DefenseFinder records Eleos as a named system from the Millman et al. antiphage discovery preprint.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "Eleos | 10\\.1101/2022\\.05\\.11\\.491447 | An expanding arsenal of immune systems that protect bacteria from phages"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "restricted_phage_propagation", "target": "eleos_system_trait"}, {"description": "Eleos system possession is a phage-defense-system trait.", "evidence": [{"notes": "DefenseFinder associates Eleos with the Millman et al. bacterial antiphage-system discovery paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "An expanding arsenal of immune systems that protect bacteria from phages"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "eleos_system_trait", "target": "phage_defense_system"}, {"description": "Endonuclease GajA (gajA, UniProtKB:P0DW47) contributes to Eleos system.", "evidence": [{"notes": "Supports the functional association between Endonuclease GajA (UniProtKB:P0DW47 in Bacillus cereus (strain HuB5-5)) and Eleos system.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "CARD_NLR CARD_NLR_GasderMIN 1 3 GasderMIN__bGSDM CARD_NLR__CARD_Protease, CARD_NLR__NLR_new, CARD_NLR__Trypsin CARD_NLR__Endonuclease, CARD_NLR__Endonuclease_new, CARD_NLR__Phospho, CARD_NLR__Phospho_Trypsin, CARD_NLR__Subtilase, CARD_NLR__Subtilase_long_new, CARD_NLR__Subtilase_small_new, CARD_NLR__Trypsin_Phospho, CARD_NLR__Trypsine_Endonuclease_new"}], "id": "edge-4", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "eleos_system_protein_component", "target": "eleos_system_trait"}], "evidence_rows": [{"description": "DefenseFinder maps Eleos to a bacterial anti-phage-system discovery preprint and represents Eleos loci through LeoA, LeoB, LeoBC, and LeoC component profiles.", "edge_id": "edge-1", "evidence": [{"notes": "Millman et al. describe the anti-phage discovery cohort that the DefenseFinder Eleos registry row maps to the Eleos system.", "reference": "DOI:10.1016/j.chom.2022.09.017", "snippet": "discovery of 21 defense systems that protect bacteria from phages"}, {"notes": "The DefenseFinder registry maps Eleos itself to the Millman et al. bacterial antiphage-system discovery preprint.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "Eleos | 10\\.1101/2022\\.05\\.11\\.491447 | An expanding arsenal of immune systems that protect bacteria from phages"}, {"notes": "The DefenseFinder rules table supports LeoA, LeoB, LeoBC, and LeoC as Eleos system profile choices.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Eleos\tEleos\t2\t2\tEleos__LeoA, Eleos__LeoB, Eleos__LeoBC, Eleos__LeoC"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Eleos locus", "target": "restricted phage propagation"}, {"description": "Eleos-mediated phage restriction realizes the Eleos system trait.", "edge_id": "edge-2", "evidence": [{"notes": "Millman et al. place the Eleos discovery cohort in the set of bacterial systems that protect against phages.", "reference": "DOI:10.1016/j.chom.2022.09.017", "snippet": "discovery of 21 defense systems that protect bacteria from phages"}, {"notes": "DefenseFinder records Eleos as a named system from the Millman et al. antiphage discovery preprint.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "Eleos | 10\\.1101/2022\\.05\\.11\\.491447 | An expanding arsenal of immune systems that protect bacteria from phages"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "restricted phage propagation", "target": "Eleos system"}, {"description": "Eleos system possession is a phage-defense-system trait.", "edge_id": "edge-3", "evidence": [{"notes": "DefenseFinder associates Eleos with the Millman et al. bacterial antiphage-system discovery paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "An expanding arsenal of immune systems that protect bacteria from phages"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "Eleos system", "target": "phage defense system"}, {"description": "Endonuclease GajA (gajA, UniProtKB:P0DW47) contributes to Eleos system.", "edge_id": "edge-4", "evidence": [{"notes": "Supports the functional association between Endonuclease GajA (UniProtKB:P0DW47 in Bacillus cereus (strain HuB5-5)) and Eleos system.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "CARD_NLR CARD_NLR_GasderMIN 1 3 GasderMIN__bGSDM CARD_NLR__CARD_Protease, CARD_NLR__NLR_new, CARD_NLR__Trypsin CARD_NLR__Endonuclease, CARD_NLR__Endonuclease_new, CARD_NLR__Phospho, CARD_NLR__Phospho_Trypsin, CARD_NLR__Subtilase, CARD_NLR__Subtilase_long_new, CARD_NLR__Subtilase_small_new, CARD_NLR__Trypsin_Phospho, CARD_NLR__Trypsine_Endonuclease_new"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Endonuclease GajA", "target": "Eleos system"}], "graph_id": "eleos_locus_restricts_phage", "issues": [], "nodes": [{"color": "#f3f4f6", "description": "An Eleos anti-phage defense locus satisfying a two-profile DefenseFinder rule over LeoA, LeoB, LeoBC, and LeoC profiles.", "grounding": null, "id": "eleos_locus", "is_orphan": false, "label": "Eleos locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Protein component (Endonuclease GajA) associated with Eleos system.", "grounding": null, "id": "eleos_system_protein_component", "is_orphan": false, "label": "Endonuclease GajA", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 12, "evidence": [{"notes": "Supports Endonuclease GajA in Eleos system; UniProtKB:P0DW47 (gajA, Endonuclease GajA) in Bacillus cereus (strain HuB5-5) provides a verified protein exemplar.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "CARD_NLR CARD_NLR_GasderMIN 1 3 GasderMIN__bGSDM CARD_NLR__CARD_Protease, CARD_NLR__NLR_new, CARD_NLR__Trypsin CARD_NLR__Endonuclease, CARD_NLR__Endonuclease_new, CARD_NLR__Phospho, CARD_NLR__Phospho_Trypsin, CARD_NLR__Subtilase, CARD_NLR__Subtilase_long_new, CARD_NLR__Subtilase_small_new, CARD_NLR__Trypsin_Phospho, CARD_NLR__Trypsine_Endonuclease_new"}], "gene_symbol": "gajA", "protein_label": "Endonuclease GajA", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (gajA, Endonuclease GajA) associated with Eleos system in Bacillus cereus (strain HuB5-5).", "sequence_version": 1, "taxon_id": "NCBITaxon:1053212", "taxon_label": "Bacillus cereus (strain HuB5-5)", "uniprot_id": "UniProtKB:P0DW47"}], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded Eleos phage-defense system.", "grounding": "traitmech:000250", "id": "eleos_system_trait", "is_orphan": false, "label": "Eleos system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of one or more genome-encoded immune systems that inhibit bacteriophage infection.", "grounding": "traitmech:000209", "id": "phage_defense_system", "is_orphan": false, "label": "phage defense system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Reduced propagation of bacteriophage in cells carrying the Eleos system.", "grounding": null, "id": "restricted_phage_propagation", "is_orphan": false, "label": "restricted phage propagation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 12, "evidence": [{"notes": "Supports Endonuclease GajA in Eleos system; UniProtKB:P0DW47 (gajA, Endonuclease GajA) in Bacillus cereus (strain HuB5-5) provides a verified protein exemplar.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "CARD_NLR CARD_NLR_GasderMIN 1 3 GasderMIN__bGSDM CARD_NLR__CARD_Protease, CARD_NLR__NLR_new, CARD_NLR__Trypsin CARD_NLR__Endonuclease, CARD_NLR__Endonuclease_new, CARD_NLR__Phospho, CARD_NLR__Phospho_Trypsin, CARD_NLR__Subtilase, CARD_NLR__Subtilase_long_new, CARD_NLR__Subtilase_small_new, CARD_NLR__Trypsin_Phospho, CARD_NLR__Trypsine_Endonuclease_new"}], "gene_symbol": "gajA", "node_id": "eleos_system_protein_component", "node_label": "Endonuclease GajA", "protein_label": "Endonuclease GajA", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (gajA, Endonuclease GajA) associated with Eleos system in Bacillus cereus (strain HuB5-5).", "sequence_version": 1, "taxon_id": "NCBITaxon:1053212", "taxon_label": "Bacillus cereus (strain HuB5-5)", "uniprot_id": "UniProtKB:P0DW47"}], "scope_notes": "The graph captures Eleos as a named anti-phage system with DefenseFinder LeoA, LeoB, LeoBC, and LeoC profiles while leaving its phage trigger, molecular substrate, antiviral effector output, and subtype breadth unresolved.", "scope_status": "NONMECHANISTIC", "title": "Eleos loci confer bacterial phage defense"}];
+  var graphs = [{"description": "Conservative system-level sketch linking possession of an Eleos locus to restricted bacteriophage propagation without asserting the unresolved phage trigger or molecular output.", "edges": [{"description": "DefenseFinder maps Eleos to a bacterial anti-phage-system discovery preprint and represents Eleos loci through LeoA, LeoB, LeoBC, and LeoC component profiles.", "evidence": [{"notes": "Millman et al. describe the anti-phage discovery cohort that the DefenseFinder Eleos registry row maps to the Eleos system.", "reference": "DOI:10.1016/j.chom.2022.09.017", "snippet": "discovery of 21 defense systems that protect bacteria from phages"}, {"notes": "The DefenseFinder registry maps Eleos itself to the Millman et al. bacterial antiphage-system discovery preprint.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "Eleos | 10\\.1101/2022\\.05\\.11\\.491447 | An expanding arsenal of immune systems that protect bacteria from phages"}, {"notes": "The DefenseFinder rules table supports LeoA, LeoB, LeoBC, and LeoC as Eleos system profile choices.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Eleos\tEleos\t2\t2\tEleos__LeoA, Eleos__LeoB, Eleos__LeoBC, Eleos__LeoC"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "eleos_locus", "target": "restricted_phage_propagation"}, {"description": "Eleos-mediated phage restriction realizes the Eleos system trait.", "evidence": [{"notes": "Millman et al. place the Eleos discovery cohort in the set of bacterial systems that protect against phages.", "reference": "DOI:10.1016/j.chom.2022.09.017", "snippet": "discovery of 21 defense systems that protect bacteria from phages"}, {"notes": "DefenseFinder records Eleos as a named system from the Millman et al. antiphage discovery preprint.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "Eleos | 10\\.1101/2022\\.05\\.11\\.491447 | An expanding arsenal of immune systems that protect bacteria from phages"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "restricted_phage_propagation", "target": "eleos_system_trait"}, {"description": "Eleos system possession is a phage-defense-system trait.", "evidence": [{"notes": "DefenseFinder associates Eleos with the Millman et al. bacterial antiphage-system discovery paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "An expanding arsenal of immune systems that protect bacteria from phages"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "eleos_system_trait", "target": "phage_defense_system"}], "evidence_rows": [{"description": "DefenseFinder maps Eleos to a bacterial anti-phage-system discovery preprint and represents Eleos loci through LeoA, LeoB, LeoBC, and LeoC component profiles.", "edge_id": "edge-1", "evidence": [{"notes": "Millman et al. describe the anti-phage discovery cohort that the DefenseFinder Eleos registry row maps to the Eleos system.", "reference": "DOI:10.1016/j.chom.2022.09.017", "snippet": "discovery of 21 defense systems that protect bacteria from phages"}, {"notes": "The DefenseFinder registry maps Eleos itself to the Millman et al. bacterial antiphage-system discovery preprint.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "Eleos | 10\\.1101/2022\\.05\\.11\\.491447 | An expanding arsenal of immune systems that protect bacteria from phages"}, {"notes": "The DefenseFinder rules table supports LeoA, LeoB, LeoBC, and LeoC as Eleos system profile choices.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Eleos\tEleos\t2\t2\tEleos__LeoA, Eleos__LeoB, Eleos__LeoBC, Eleos__LeoC"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Eleos locus", "source_grounding": null, "target": "restricted phage propagation", "target_grounding": null}, {"description": "Eleos-mediated phage restriction realizes the Eleos system trait.", "edge_id": "edge-2", "evidence": [{"notes": "Millman et al. place the Eleos discovery cohort in the set of bacterial systems that protect against phages.", "reference": "DOI:10.1016/j.chom.2022.09.017", "snippet": "discovery of 21 defense systems that protect bacteria from phages"}, {"notes": "DefenseFinder records Eleos as a named system from the Millman et al. antiphage discovery preprint.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "Eleos | 10\\.1101/2022\\.05\\.11\\.491447 | An expanding arsenal of immune systems that protect bacteria from phages"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "restricted phage propagation", "source_grounding": null, "target": "Eleos system", "target_grounding": "traitmech:000250"}, {"description": "Eleos system possession is a phage-defense-system trait.", "edge_id": "edge-3", "evidence": [{"notes": "DefenseFinder associates Eleos with the Millman et al. bacterial antiphage-system discovery paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "An expanding arsenal of immune systems that protect bacteria from phages"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "Eleos system", "source_grounding": "traitmech:000250", "target": "phage defense system", "target_grounding": "traitmech:000209"}], "graph_id": "eleos_locus_restricts_phage", "issues": [], "nodes": [{"color": "#f3f4f6", "description": "An Eleos anti-phage defense locus satisfying a two-profile DefenseFinder rule over LeoA, LeoB, LeoBC, and LeoC profiles.", "grounding": null, "id": "eleos_locus", "is_orphan": false, "label": "Eleos locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded Eleos phage-defense system.", "grounding": "traitmech:000250", "id": "eleos_system_trait", "is_orphan": false, "label": "Eleos system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of one or more genome-encoded immune systems that inhibit bacteriophage infection.", "grounding": "traitmech:000209", "id": "phage_defense_system", "is_orphan": false, "label": "phage defense system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Reduced propagation of bacteriophage in cells carrying the Eleos system.", "grounding": null, "id": "restricted_phage_propagation", "is_orphan": false, "label": "restricted phage propagation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "The graph captures Eleos as a named anti-phage system with DefenseFinder LeoA, LeoB, LeoBC, and LeoC profiles while leaving its phage trigger, molecular substrate, antiviral effector output, and subtype breadth unresolved.", "scope_status": "NONMECHANISTIC", "title": "Eleos loci confer bacterial phage defense"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -775,13 +861,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-10-17 09:00 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

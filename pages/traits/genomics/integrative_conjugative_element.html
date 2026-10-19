@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/genomics.html">GENOMICS</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/genomics.html">GENOMICS</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>integrative conjugative element</h1>
     <p class="curie"><code>traitmech:000410</code> · CLASS · PROPOSED</p>
 
@@ -85,9 +96,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>integrated ICE locus</strong>
+
             <span class="edge-predicate">enables</span>
             <strong>ICE excision and circularization</strong>
-            <code>RO:0002327</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002327" rel="nofollow noreferrer"><code>RO:0002327</code></a>
             <p>Upon induction, an integrated ICE excises from the chromosome and forms a circular dsDNA intermediate.</p>
             <ul>
 
@@ -102,9 +115,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>ICE excision and circularization</strong>
+
             <span class="edge-predicate">enables</span>
             <strong>oriT processing</strong>
-            <code>RO:0002327</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002327" rel="nofollow noreferrer"><code>RO:0002327</code></a>
             <p>The circular ICE is processed at oriT to generate the linear ssDNA-protein transfer complex.</p>
             <ul>
 
@@ -119,9 +134,11 @@
 
           <li id="pathograph-1-edge-3">
             <strong>oriT processing</strong>
+
             <span class="edge-predicate">enables</span>
             <strong>conjugation</strong>
-            <code>RO:0002327</code>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0009291" rel="nofollow noreferrer"><code>GO:0009291</code></a>
+            <a href="http://purl.obolibrary.org/obo/RO_0002327" rel="nofollow noreferrer"><code>RO:0002327</code></a>
             <p>The mating machinery transports the processed transfer DNA into a recipient cell.</p>
             <ul>
 
@@ -136,9 +153,11 @@
 
           <li id="pathograph-1-edge-4">
             <strong>conjugation</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0009291" rel="nofollow noreferrer"><code>GO:0009291</code></a>
             <span class="edge-predicate">enables</span>
             <strong>ICE integration</strong>
-            <code>RO:0002327</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002327" rel="nofollow noreferrer"><code>RO:0002327</code></a>
             <p>Transferred ICE DNA recircularizes and becomes a double-stranded integration substrate in the recipient.</p>
             <ul>
 
@@ -153,9 +172,11 @@
 
           <li id="pathograph-1-edge-5">
             <strong>ICE integration</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>integrative conjugative element</strong>
-            <code>METPO:2007700</code>
+            <code>traitmech:000410</code>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>Recipient-chromosome integration completes possession of an integrated conjugative element.</p>
             <ul>
 
@@ -170,8 +191,10 @@
 
           <li id="pathograph-1-edge-6">
             <strong>integrative conjugative element</strong>
+            <code>traitmech:000410</code>
             <span class="edge-predicate">is a</span>
             <strong>genomic island</strong>
+            <code>traitmech:000093</code>
             <code>rdfs:subClassOf</code>
             <p>Integrative-conjugative-element possession is a genomic-island possession trait.</p>
             <ul>
@@ -303,11 +326,75 @@
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
 
-      <p class="no-match">No kg-microbe node embedding matched this record
-        in the 2026-04-25 deepwalk.</p>
+      <p class="match-method">Matched <strong>1</strong>
+        kg-microbe node
+        via <em>parent_proxy</em>.</p>
+      <ul class="kgm-nodes">
+
+        <li><code>METPO:1000188</code> <span class="dim-preview">[-0.956, -1.962, -3.148, +1.274, …]</span></li>
+
+      </ul>
+      <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
 
     </div>
 
+
+    <div class="card">
+      <h2>Nearest neighbors in embedding space</h2>
+      <p class="meta">Top-8 cosine-similar METPO traits
+        from the 2026-04-25 deepwalk (512-D).</p>
+      <ul class="nn-list">
+
+        <li>
+          <span class="nn-cat">upper</span>
+          <a href="../../traits/upper/quality.html">quality</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hna_system.html">Hna system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hma_system.html">Hma system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hesat_system.html">Hesat system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_08_system.html">HEC-08 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_07_system.html">HEC-07 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_06_system.html">HEC-06 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_05_system.html">HEC-05 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+      </ul>
+    </div>
 
 
 
@@ -453,6 +540,11 @@
     </dl>
   </div>
 
+
+  <div class="card rail-kgm">
+    <h2>kg-microbe</h2>
+    <p class="meta">1 matching node (parent_proxy)</p>
+  </div>
 
 </aside>
 </div>
@@ -786,7 +878,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Conservative ICE life-cycle sketch linking an integrated ICE locus to circularization, oriT processing, T4SS-mediated conjugative transfer, recipient integration, and the genomic-island possession trait.", "edges": [{"description": "Upon induction, an integrated ICE excises from the chromosome and forms a circular dsDNA intermediate.", "evidence": [{"notes": "Johnson and Grossman summarize induction-linked ICE excision and circular double-stranded DNA intermediate formation.", "reference": "DOI:10.1146/annurev-genet-112414-055018", "snippet": "When ICE gene expression is induced, by specific cellular conditions or perhaps stochastically, the ICE excises from the chromosome and forms a circular dsDNA molecule"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "integrated_ice_locus", "target": "ice_excision_circularization"}, {"description": "The circular ICE is processed at oriT to generate the linear ssDNA-protein transfer complex.", "evidence": [{"notes": "Johnson and Grossman describe oriT recognition and ICE DNA processing that produces the linear transfer-DNA complex.", "reference": "DOI:10.1146/annurev-genet-112414-055018", "snippet": "Other host and ICE-encoded proteins recognize the origin of transfer (oriT) and process the ICE DNA to generate a linear ssDNA-protein complex"}], "id": "edge-2", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "ice_excision_circularization", "target": "orit_processing"}, {"description": "The mating machinery transports the processed transfer DNA into a recipient cell.", "evidence": [{"notes": "The Johnson and Grossman life-cycle summary places mating-machinery transport after transfer-DNA generation.", "reference": "DOI:10.1146/annurev-genet-112414-055018", "snippet": "The mating machinery pumps the T-DNA into the recipient"}], "id": "edge-3", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "orit_processing", "target": "conjugation"}, {"description": "Transferred ICE DNA recircularizes and becomes a double-stranded integration substrate in the recipient.", "evidence": [{"notes": "Johnson and Grossman\u0027s ICE life-cycle figure caption states that the circular double-stranded ICE reintegrates in donor and recipient cells.", "reference": "DOI:10.1146/annurev-genet-112414-055018", "snippet": "In both the donor and recipient, the circular dsDNA ICE integrates into the host chromosome."}], "id": "edge-4", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "conjugation", "target": "ice_integration"}, {"description": "Recipient-chromosome integration completes possession of an integrated conjugative element.", "evidence": [{"notes": "Johnson and Grossman define integrative and conjugative elements as host-integrated mobile genetic elements that encode a functional type IV secretion conjugation system.", "reference": "DOI:10.1146/annurev-genet-112414-055018", "snippet": "There are two defining features of ICEs: (a) They are found integrated in a host genome; and (b) they encode a functional conjugation system, a type IV secretion system"}], "id": "edge-5", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "ice_integration", "target": "integrative_conjugative_element"}, {"description": "Integrative-conjugative-element possession is a genomic-island possession trait.", "evidence": [{"notes": "Bioteau et al. place integrative and conjugative elements among the mobile-genetic-element subclasses encompassed by genomic islands.", "reference": "DOI:10.1093/nar/gkad644", "snippet": "The term \u2018genomic island\u2019 encompasses diverse types of mobile genetic elements that exhibit various structures and gene contents, including prophages, transposons, integrated plasmids, integrative and mobilizable elements (IMEs), and integrative and conjugative elements (ICEs)"}], "id": "edge-6", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "integrative_conjugative_element", "target": "genomic_island"}, {"description": "Endonuclease GajA (gajA, UniProtKB:P0DW47) contributes to integrative conjugative element.", "evidence": [{"notes": "Supports the functional association between Endonuclease GajA (UniProtKB:P0DW47 in Bacillus cereus (strain HuB5-5)) and integrative conjugative element.", "reference": "DOI:10.1093/nar/gkad644", "snippet": "spread via the conjugative apparatus encoded by a helper ICE or conjugative plasmid"}], "id": "edge-7", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "integrative_conjugative_element_protein_component", "target": "integrative_conjugative_element"}], "evidence_rows": [{"description": "Upon induction, an integrated ICE excises from the chromosome and forms a circular dsDNA intermediate.", "edge_id": "edge-1", "evidence": [{"notes": "Johnson and Grossman summarize induction-linked ICE excision and circular double-stranded DNA intermediate formation.", "reference": "DOI:10.1146/annurev-genet-112414-055018", "snippet": "When ICE gene expression is induced, by specific cellular conditions or perhaps stochastically, the ICE excises from the chromosome and forms a circular dsDNA molecule"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "integrated ICE locus", "target": "ICE excision and circularization"}, {"description": "The circular ICE is processed at oriT to generate the linear ssDNA-protein transfer complex.", "edge_id": "edge-2", "evidence": [{"notes": "Johnson and Grossman describe oriT recognition and ICE DNA processing that produces the linear transfer-DNA complex.", "reference": "DOI:10.1146/annurev-genet-112414-055018", "snippet": "Other host and ICE-encoded proteins recognize the origin of transfer (oriT) and process the ICE DNA to generate a linear ssDNA-protein complex"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "ICE excision and circularization", "target": "oriT processing"}, {"description": "The mating machinery transports the processed transfer DNA into a recipient cell.", "edge_id": "edge-3", "evidence": [{"notes": "The Johnson and Grossman life-cycle summary places mating-machinery transport after transfer-DNA generation.", "reference": "DOI:10.1146/annurev-genet-112414-055018", "snippet": "The mating machinery pumps the T-DNA into the recipient"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "oriT processing", "target": "conjugation"}, {"description": "Transferred ICE DNA recircularizes and becomes a double-stranded integration substrate in the recipient.", "edge_id": "edge-4", "evidence": [{"notes": "Johnson and Grossman\u0027s ICE life-cycle figure caption states that the circular double-stranded ICE reintegrates in donor and recipient cells.", "reference": "DOI:10.1146/annurev-genet-112414-055018", "snippet": "In both the donor and recipient, the circular dsDNA ICE integrates into the host chromosome."}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "conjugation", "target": "ICE integration"}, {"description": "Recipient-chromosome integration completes possession of an integrated conjugative element.", "edge_id": "edge-5", "evidence": [{"notes": "Johnson and Grossman define integrative and conjugative elements as host-integrated mobile genetic elements that encode a functional type IV secretion conjugation system.", "reference": "DOI:10.1146/annurev-genet-112414-055018", "snippet": "There are two defining features of ICEs: (a) They are found integrated in a host genome; and (b) they encode a functional conjugation system, a type IV secretion system"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "ICE integration", "target": "integrative conjugative element"}, {"description": "Integrative-conjugative-element possession is a genomic-island possession trait.", "edge_id": "edge-6", "evidence": [{"notes": "Bioteau et al. place integrative and conjugative elements among the mobile-genetic-element subclasses encompassed by genomic islands.", "reference": "DOI:10.1093/nar/gkad644", "snippet": "The term \u2018genomic island\u2019 encompasses diverse types of mobile genetic elements that exhibit various structures and gene contents, including prophages, transposons, integrated plasmids, integrative and mobilizable elements (IMEs), and integrative and conjugative elements (ICEs)"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "integrative conjugative element", "target": "genomic island"}, {"description": "Endonuclease GajA (gajA, UniProtKB:P0DW47) contributes to integrative conjugative element.", "edge_id": "edge-7", "evidence": [{"notes": "Supports the functional association between Endonuclease GajA (UniProtKB:P0DW47 in Bacillus cereus (strain HuB5-5)) and integrative conjugative element.", "reference": "DOI:10.1093/nar/gkad644", "snippet": "spread via the conjugative apparatus encoded by a helper ICE or conjugative plasmid"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Endonuclease GajA", "target": "integrative conjugative element"}], "graph_id": "ice_excision_conjugation_integration", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Contact-dependent transfer of ICE DNA into a recipient cell through the conjugation machinery.", "grounding": "GO:0009291", "id": "conjugation", "is_orphan": false, "label": "conjugation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a horizontally acquired chromosomal island.", "grounding": "traitmech:000093", "id": "genomic_island", "is_orphan": false, "label": "genomic island", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Induction-associated excision of an integrated ICE to a circular double-stranded DNA intermediate.", "grounding": null, "id": "ice_excision_circularization", "is_orphan": false, "label": "ICE excision and circularization", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Recombination of circular ICE DNA into the recipient host chromosome.", "grounding": null, "id": "ice_integration", "is_orphan": false, "label": "ICE integration", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "An integrative and conjugative element integrated into a host replicon.", "grounding": null, "id": "integrated_ice_locus", "is_orphan": false, "label": "integrated ICE locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded integrative and conjugative element.", "grounding": "traitmech:000410", "id": "integrative_conjugative_element", "is_orphan": false, "label": "integrative conjugative element", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Protein component (Endonuclease GajA) associated with integrative conjugative element.", "grounding": null, "id": "integrative_conjugative_element_protein_component", "is_orphan": false, "label": "Endonuclease GajA", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 12, "evidence": [{"notes": "Supports Endonuclease GajA in integrative conjugative element; UniProtKB:P0DW47 (gajA, Endonuclease GajA) in Bacillus cereus (strain HuB5-5) provides a verified protein exemplar.", "reference": "DOI:10.1093/nar/gkad644", "snippet": "The term \u2018genomic island\u2019 encompasses diverse types of mobile genetic elements that exhibit various structures and gene contents, including prophages, transposons, integrated plasmids, integrative and mobilizable elements (IMEs), and integrative and conjugative elements (ICEs)"}], "gene_symbol": "gajA", "protein_label": "Endonuclease GajA", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (gajA, Endonuclease GajA) associated with integrative conjugative element in Bacillus cereus (strain HuB5-5).", "sequence_version": 1, "taxon_id": "NCBITaxon:1053212", "taxon_label": "Bacillus cereus (strain HuB5-5)", "uniprot_id": "UniProtKB:P0DW47"}], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Processing at the ICE origin of transfer to generate the linear transfer-DNA complex.", "grounding": null, "id": "orit_processing", "is_orphan": false, "label": "oriT processing", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 12, "evidence": [{"notes": "Supports Endonuclease GajA in integrative conjugative element; UniProtKB:P0DW47 (gajA, Endonuclease GajA) in Bacillus cereus (strain HuB5-5) provides a verified protein exemplar.", "reference": "DOI:10.1093/nar/gkad644", "snippet": "The term \u2018genomic island\u2019 encompasses diverse types of mobile genetic elements that exhibit various structures and gene contents, including prophages, transposons, integrated plasmids, integrative and mobilizable elements (IMEs), and integrative and conjugative elements (ICEs)"}], "gene_symbol": "gajA", "node_id": "integrative_conjugative_element_protein_component", "node_label": "Endonuclease GajA", "protein_label": "Endonuclease GajA", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (gajA, Endonuclease GajA) associated with integrative conjugative element in Bacillus cereus (strain HuB5-5).", "sequence_version": 1, "taxon_id": "NCBITaxon:1053212", "taxon_label": "Bacillus cereus (strain HuB5-5)", "uniprot_id": "UniProtKB:P0DW47"}], "scope_notes": "This genomics graph summarizes the shared ICE life cycle at the mobile-element level. It does not assert exact protein-family groundings for heterogeneous ICE integrases, relaxases, type IV coupling proteins, or T4SS subunits.", "scope_status": "NONMECHANISTIC", "title": "ICEs excise, transfer by conjugation, and reintegrate"}];
+  var graphs = [{"description": "Conservative ICE life-cycle sketch linking an integrated ICE locus to circularization, oriT processing, T4SS-mediated conjugative transfer, recipient integration, and the genomic-island possession trait.", "edges": [{"description": "Upon induction, an integrated ICE excises from the chromosome and forms a circular dsDNA intermediate.", "evidence": [{"notes": "Johnson and Grossman summarize induction-linked ICE excision and circular double-stranded DNA intermediate formation.", "reference": "DOI:10.1146/annurev-genet-112414-055018", "snippet": "When ICE gene expression is induced, by specific cellular conditions or perhaps stochastically, the ICE excises from the chromosome and forms a circular dsDNA molecule"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "integrated_ice_locus", "target": "ice_excision_circularization"}, {"description": "The circular ICE is processed at oriT to generate the linear ssDNA-protein transfer complex.", "evidence": [{"notes": "Johnson and Grossman describe oriT recognition and ICE DNA processing that produces the linear transfer-DNA complex.", "reference": "DOI:10.1146/annurev-genet-112414-055018", "snippet": "Other host and ICE-encoded proteins recognize the origin of transfer (oriT) and process the ICE DNA to generate a linear ssDNA-protein complex"}], "id": "edge-2", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "ice_excision_circularization", "target": "orit_processing"}, {"description": "The mating machinery transports the processed transfer DNA into a recipient cell.", "evidence": [{"notes": "The Johnson and Grossman life-cycle summary places mating-machinery transport after transfer-DNA generation.", "reference": "DOI:10.1146/annurev-genet-112414-055018", "snippet": "The mating machinery pumps the T-DNA into the recipient"}], "id": "edge-3", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "orit_processing", "target": "conjugation"}, {"description": "Transferred ICE DNA recircularizes and becomes a double-stranded integration substrate in the recipient.", "evidence": [{"notes": "Johnson and Grossman\u0027s ICE life-cycle figure caption states that the circular double-stranded ICE reintegrates in donor and recipient cells.", "reference": "DOI:10.1146/annurev-genet-112414-055018", "snippet": "In both the donor and recipient, the circular dsDNA ICE integrates into the host chromosome."}], "id": "edge-4", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "conjugation", "target": "ice_integration"}, {"description": "Recipient-chromosome integration completes possession of an integrated conjugative element.", "evidence": [{"notes": "Johnson and Grossman define integrative and conjugative elements as host-integrated mobile genetic elements that encode a functional type IV secretion conjugation system.", "reference": "DOI:10.1146/annurev-genet-112414-055018", "snippet": "There are two defining features of ICEs: (a) They are found integrated in a host genome; and (b) they encode a functional conjugation system, a type IV secretion system"}], "id": "edge-5", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "ice_integration", "target": "integrative_conjugative_element"}, {"description": "Integrative-conjugative-element possession is a genomic-island possession trait.", "evidence": [{"notes": "Bioteau et al. place integrative and conjugative elements among the mobile-genetic-element subclasses encompassed by genomic islands.", "reference": "DOI:10.1093/nar/gkad644", "snippet": "The term \u2018genomic island\u2019 encompasses diverse types of mobile genetic elements that exhibit various structures and gene contents, including prophages, transposons, integrated plasmids, integrative and mobilizable elements (IMEs), and integrative and conjugative elements (ICEs)"}], "id": "edge-6", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "integrative_conjugative_element", "target": "genomic_island"}], "evidence_rows": [{"description": "Upon induction, an integrated ICE excises from the chromosome and forms a circular dsDNA intermediate.", "edge_id": "edge-1", "evidence": [{"notes": "Johnson and Grossman summarize induction-linked ICE excision and circular double-stranded DNA intermediate formation.", "reference": "DOI:10.1146/annurev-genet-112414-055018", "snippet": "When ICE gene expression is induced, by specific cellular conditions or perhaps stochastically, the ICE excises from the chromosome and forms a circular dsDNA molecule"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "integrated ICE locus", "source_grounding": null, "target": "ICE excision and circularization", "target_grounding": null}, {"description": "The circular ICE is processed at oriT to generate the linear ssDNA-protein transfer complex.", "edge_id": "edge-2", "evidence": [{"notes": "Johnson and Grossman describe oriT recognition and ICE DNA processing that produces the linear transfer-DNA complex.", "reference": "DOI:10.1146/annurev-genet-112414-055018", "snippet": "Other host and ICE-encoded proteins recognize the origin of transfer (oriT) and process the ICE DNA to generate a linear ssDNA-protein complex"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "ICE excision and circularization", "source_grounding": null, "target": "oriT processing", "target_grounding": null}, {"description": "The mating machinery transports the processed transfer DNA into a recipient cell.", "edge_id": "edge-3", "evidence": [{"notes": "The Johnson and Grossman life-cycle summary places mating-machinery transport after transfer-DNA generation.", "reference": "DOI:10.1146/annurev-genet-112414-055018", "snippet": "The mating machinery pumps the T-DNA into the recipient"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "oriT processing", "source_grounding": null, "target": "conjugation", "target_grounding": "GO:0009291"}, {"description": "Transferred ICE DNA recircularizes and becomes a double-stranded integration substrate in the recipient.", "edge_id": "edge-4", "evidence": [{"notes": "Johnson and Grossman\u0027s ICE life-cycle figure caption states that the circular double-stranded ICE reintegrates in donor and recipient cells.", "reference": "DOI:10.1146/annurev-genet-112414-055018", "snippet": "In both the donor and recipient, the circular dsDNA ICE integrates into the host chromosome."}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "conjugation", "source_grounding": "GO:0009291", "target": "ICE integration", "target_grounding": null}, {"description": "Recipient-chromosome integration completes possession of an integrated conjugative element.", "edge_id": "edge-5", "evidence": [{"notes": "Johnson and Grossman define integrative and conjugative elements as host-integrated mobile genetic elements that encode a functional type IV secretion conjugation system.", "reference": "DOI:10.1146/annurev-genet-112414-055018", "snippet": "There are two defining features of ICEs: (a) They are found integrated in a host genome; and (b) they encode a functional conjugation system, a type IV secretion system"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "ICE integration", "source_grounding": null, "target": "integrative conjugative element", "target_grounding": "traitmech:000410"}, {"description": "Integrative-conjugative-element possession is a genomic-island possession trait.", "edge_id": "edge-6", "evidence": [{"notes": "Bioteau et al. place integrative and conjugative elements among the mobile-genetic-element subclasses encompassed by genomic islands.", "reference": "DOI:10.1093/nar/gkad644", "snippet": "The term \u2018genomic island\u2019 encompasses diverse types of mobile genetic elements that exhibit various structures and gene contents, including prophages, transposons, integrated plasmids, integrative and mobilizable elements (IMEs), and integrative and conjugative elements (ICEs)"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "integrative conjugative element", "source_grounding": "traitmech:000410", "target": "genomic island", "target_grounding": "traitmech:000093"}], "graph_id": "ice_excision_conjugation_integration", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Contact-dependent transfer of ICE DNA into a recipient cell through the conjugation machinery.", "grounding": "GO:0009291", "id": "conjugation", "is_orphan": false, "label": "conjugation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a horizontally acquired chromosomal island.", "grounding": "traitmech:000093", "id": "genomic_island", "is_orphan": false, "label": "genomic island", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Induction-associated excision of an integrated ICE to a circular double-stranded DNA intermediate.", "grounding": null, "id": "ice_excision_circularization", "is_orphan": false, "label": "ICE excision and circularization", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Recombination of circular ICE DNA into the recipient host chromosome.", "grounding": null, "id": "ice_integration", "is_orphan": false, "label": "ICE integration", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "An integrative and conjugative element integrated into a host replicon.", "grounding": null, "id": "integrated_ice_locus", "is_orphan": false, "label": "integrated ICE locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded integrative and conjugative element.", "grounding": "traitmech:000410", "id": "integrative_conjugative_element", "is_orphan": false, "label": "integrative conjugative element", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Processing at the ICE origin of transfer to generate the linear transfer-DNA complex.", "grounding": null, "id": "orit_processing", "is_orphan": false, "label": "oriT processing", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This genomics graph summarizes the shared ICE life cycle at the mobile-element level. It does not assert exact protein-family groundings for heterogeneous ICE integrases, relaxases, type IV coupling proteins, or T4SS subunits.", "scope_status": "NONMECHANISTIC", "title": "ICEs excise, transfer by conjugation, and reintegrate"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -806,13 +898,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-10-17 09:00 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

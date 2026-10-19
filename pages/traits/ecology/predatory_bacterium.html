@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/ecology.html">ECOLOGY</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/ecology.html">ECOLOGY</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>predatory bacterium</h1>
     <p class="curie"><code>traitmech:000054</code> · CLASS · REVIEWED</p>
 
@@ -85,9 +96,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>predatory bacterium</strong>
+            <code>traitmech:000054</code>
             <span class="edge-predicate">enables</span>
             <strong>bacteriolytic killing</strong>
-            <code>RO:0002327</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002327" rel="nofollow noreferrer"><code>RO:0002327</code></a>
             <p>B. bacteriovorus invades and digests bacterial prey for nutrients.</p>
             <ul>
 
@@ -102,9 +115,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>bacteriolytic killing</strong>
+
             <span class="edge-predicate">consumes</span>
             <strong>prey bacterium</strong>
-            <code>biolink:consumes</code>
+
+            <a href="https://w3id.org/biolink/vocab/consumes" rel="nofollow noreferrer"><code>biolink:consumes</code></a>
             <p>Killed prey cells provide nutrients to the predator.</p>
             <ul>
 
@@ -119,9 +134,11 @@
 
           <li id="pathograph-1-edge-3">
             <strong>B. bacteriovorus type IV pilus</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0044096" rel="nofollow noreferrer"><code>GO:0044096</code></a>
             <span class="edge-predicate">contributes to</span>
             <strong>B. bacteriovorus prey attachment</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>Type IV pili mediate B. bacteriovorus attachment to prey before invasion.</p>
             <ul>
 
@@ -136,9 +153,11 @@
 
           <li id="pathograph-1-edge-4">
             <strong>prey bacterium</strong>
+
             <span class="edge-predicate">participates in</span>
             <strong>B. bacteriovorus prey attachment</strong>
-            <code>biolink:participates_in</code>
+
+            <a href="https://w3id.org/biolink/vocab/participates_in" rel="nofollow noreferrer"><code>biolink:participates_in</code></a>
             <p>The living Gram-negative prey cell is the target participant in B. bacteriovorus attachment.</p>
             <ul>
 
@@ -153,9 +172,11 @@
 
           <li id="pathograph-1-edge-5">
             <strong>B. bacteriovorus prey attachment</strong>
+
             <span class="edge-predicate">precedes</span>
             <strong>B. bacteriovorus prey invasion</strong>
-            <code>biolink:precedes</code>
+
+            <a href="https://w3id.org/biolink/vocab/precedes" rel="nofollow noreferrer"><code>biolink:precedes</code></a>
             <p>B. bacteriovorus first attaches to prey and begins invasion only after prey assessment.</p>
             <ul>
 
@@ -170,9 +191,11 @@
 
           <li id="pathograph-1-edge-6">
             <strong>prey attachment/invasion complex (portal)</strong>
+
             <span class="edge-predicate">participates in</span>
             <strong>B. bacteriovorus prey invasion</strong>
-            <code>biolink:participates_in</code>
+
+            <a href="https://w3id.org/biolink/vocab/participates_in" rel="nofollow noreferrer"><code>biolink:participates_in</code></a>
             <p>The flexible portal lines the prey entry hole and seals the outer membrane around B. bacteriovorus during invasion.</p>
             <ul>
 
@@ -187,9 +210,11 @@
 
           <li id="pathograph-1-edge-7">
             <strong>prey cell-wall modification enzymes</strong>
+
             <span class="edge-predicate">participates in</span>
             <strong>B. bacteriovorus prey invasion</strong>
-            <code>biolink:participates_in</code>
+
+            <a href="https://w3id.org/biolink/vocab/participates_in" rel="nofollow noreferrer"><code>biolink:participates_in</code></a>
             <p>Enzymatic modification of the prey cell wall permits entry into the periplasm and formation of the bdelloplast.</p>
             <ul>
 
@@ -204,8 +229,10 @@
 
           <li id="pathograph-1-edge-8">
             <strong>prey attachment/invasion complex (portal)</strong>
+
             <span class="edge-predicate">seals</span>
             <strong>prey peptidoglycan entry pore / bdelloplast pore</strong>
+
 
             <p>A flexible portal lines the prey peptidoglycan hole and seals the entry pore to form a bdelloplast.</p>
             <ul>
@@ -221,9 +248,11 @@
 
           <li id="pathograph-1-edge-9">
             <strong>prey cell-wall modification enzymes</strong>
+
             <span class="edge-predicate">causes</span>
             <strong>bdelloplast</strong>
-            <code>biolink:causes</code>
+
+            <a href="https://w3id.org/biolink/vocab/causes" rel="nofollow noreferrer"><code>biolink:causes</code></a>
             <p>Predator modification of the prey cell wall rounds the killed prey into a bdelloplast.</p>
             <ul>
 
@@ -238,8 +267,10 @@
 
           <li id="pathograph-1-edge-10">
             <strong>bdelloplast</strong>
+
             <span class="edge-predicate">provides environment for</span>
             <strong>intraperiplasmic growth / predator replication</strong>
+
 
             <p>The sealed bdelloplast houses a live predator that grows and replicates inside the prey periplasm.</p>
             <ul>
@@ -255,9 +286,11 @@
 
           <li id="pathograph-1-edge-11">
             <strong>exit-associated lytic activity</strong>
+
             <span class="edge-predicate">causes</span>
             <strong>prey cell-wall lysis and progeny release</strong>
-            <code>biolink:causes</code>
+
+            <a href="https://w3id.org/biolink/vocab/causes" rel="nofollow noreferrer"><code>biolink:causes</code></a>
             <p>After septation, lytic activity breaks the prey cell wall so progeny lyse and exit.</p>
             <ul>
 
@@ -272,9 +305,11 @@
 
           <li id="pathograph-1-edge-12">
             <strong>intraperiplasmic growth / predator replication</strong>
+
             <span class="edge-predicate">precedes</span>
             <strong>prey cell-wall lysis and progeny release</strong>
-            <code>biolink:precedes</code>
+
+            <a href="https://w3id.org/biolink/vocab/precedes" rel="nofollow noreferrer"><code>biolink:precedes</code></a>
             <p>Growth and synchronous division inside the bdelloplast occur before progeny lyse the prey wall and exit.</p>
             <ul>
 
@@ -442,50 +477,50 @@
       <ul class="nn-list">
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/cadmium_tolerant.html">cadmium tolerant</a>
+          <span class="nn-cat">ecology</span>
+          <a href="../../traits/ecology/soil_dwelling.html">soil-dwelling</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/sulfur_globule.html">sulfur globule</a>
+          <span class="nn-cat">ecology</span>
+          <a href="../../traits/ecology/saprotrophy.html">saprotrophy</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/cobalt_tolerant.html">cobalt tolerant</a>
+          <span class="nn-cat">ecology</span>
+          <a href="../../traits/ecology/rhizosphere_association.html">rhizosphere association</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/copper_tolerant.html">copper tolerant</a>
-          <span class="sim">1.000</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/desiccation_tolerant.html">desiccation tolerant</a>
+          <span class="nn-cat">ecology</span>
+          <a href="../../traits/ecology/periplasmic_bacterial_predation.html">periplasmic bacterial predation</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/piezophilic.html">piezophilic</a>
+          <a href="../../traits/environment/arsenic_tolerant.html">arsenic tolerant</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/obligately_piezophilic.html">obligately piezophilic</a>
+          <span class="nn-cat">ecology</span>
+          <a href="../../traits/ecology/symbiosis.html">symbiosis</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/gas_vesicle.html">gas vesicle</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/er_phagy.html">ER-phagy</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/extracellular_membrane_vesicle_production.html">extracellular membrane vesicle production</a>
           <span class="sim">1.000</span>
         </li>
 
@@ -1048,7 +1083,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking prey invasion to bacteriolytic killing and predator nutrient acquisition.", "edges": [{"description": "B. bacteriovorus invades and digests bacterial prey for nutrients.", "evidence": [{"notes": "Sockett describes Bdellovibrio invasion and digestion of prey bacteria.", "reference": "DOI:10.1146/annurev.micro.091208.073346"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "predatory_trait", "target": "prey_killing"}, {"description": "Killed prey cells provide nutrients to the predator.", "evidence": [{"notes": "P\u00e9rez et al. survey predatory bacteria and their prey-killing strategies.", "reference": "DOI:10.1111/1462-2920.13171"}], "id": "edge-2", "is_orphan": false, "predicate": "consumes", "predicate_id": "biolink:consumes", "source": "prey_killing", "target": "prey_bacterium"}, {"description": "Type IV pili mediate B. bacteriovorus attachment to prey before invasion.", "evidence": [{"notes": "Kaplan et al. directly imaged T4aP extending from B. bacteriovorus to the prey outer membrane; this branch is taxon-specific.", "reference": "DOI:10.1038/s41564-023-01401-2", "snippet": "attachment is mediated by type IV pili (T4P)"}], "id": "edge-3", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "b_bacteriovorus_type_iv_pilus", "target": "prey_attachment"}, {"description": "The living Gram-negative prey cell is the target participant in B. bacteriovorus attachment.", "evidence": [{"notes": "Tyson et al. describe attachment to the prey surface as the first physical predator-prey interaction before invasion.", "reference": "DOI:10.1038/s41467-024-47412-3", "snippet": "swim rapidly to another Gram-negative bacterial prey surface and then attach to it"}], "id": "edge-4", "is_orphan": false, "predicate": "participates in", "predicate_id": "biolink:participates_in", "source": "prey_bacterium", "target": "prey_attachment"}, {"description": "B. bacteriovorus first attaches to prey and begins invasion only after prey assessment.", "evidence": [{"notes": "Kaplan et al. place attachment and prey assessment before invasion in the endoperiplasmic predation cycle.", "reference": "DOI:10.1038/s41564-023-01401-2", "snippet": "After assessment of prey quality, the process of invasion begins"}], "id": "edge-5", "is_orphan": false, "predicate": "precedes", "predicate_id": "biolink:precedes", "source": "prey_attachment", "target": "prey_invasion"}, {"description": "The flexible portal lines the prey entry hole and seals the outer membrane around B. bacteriovorus during invasion.", "evidence": [{"notes": "Cryo-electron tomography directly localized the portal at the entry hole during predator invasion.", "reference": "DOI:10.1038/s41564-023-01401-2", "snippet": "flexible portal structure lining a hole in the prey peptidoglycan"}], "id": "edge-6", "is_orphan": false, "predicate": "participates in", "predicate_id": "biolink:participates_in", "source": "invasion_portal", "target": "prey_invasion"}, {"description": "Enzymatic modification of the prey cell wall permits entry into the periplasm and formation of the bdelloplast.", "evidence": [{"notes": "Kaplan et al. describe localized prey-wall modification at the predator-prey contact point as part of invasion.", "reference": "DOI:10.1038/s41564-023-01401-2", "snippet": "Prey invasion involves enzymatic modification of the prey cell wall"}], "id": "edge-7", "is_orphan": false, "predicate": "participates in", "predicate_id": "biolink:participates_in", "source": "prey_cell_wall_modification", "target": "prey_invasion"}, {"description": "A flexible portal lines the prey peptidoglycan hole and seals the entry pore to form a bdelloplast.", "evidence": [{"notes": "Cryo-ET: a flexible portal lines the hole during entry and the entry pore is sealed to form a bdelloplast.", "reference": "DOI:10.1038/s41564-023-01401-2"}], "id": "edge-8", "is_orphan": false, "predicate": "seals", "predicate_id": null, "source": "invasion_portal", "target": "prey_entry_pore"}, {"description": "Predator modification of the prey cell wall rounds the killed prey into a bdelloplast.", "evidence": [{"notes": "During invasion the predator modifies the prey cell wall, rounding the killed prey into a bdelloplast.", "reference": "DOI:10.1038/s41467-024-47412-3"}], "id": "edge-9", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "prey_cell_wall_modification", "target": "bdelloplast"}, {"description": "The sealed bdelloplast houses a live predator that grows and replicates inside the prey periplasm.", "evidence": [{"notes": "The sealed bdelloplast contains a live predator that grows and replicates inside the prey periplasm.", "reference": "DOI:10.1038/s41564-023-01401-2"}], "id": "edge-10", "is_orphan": false, "predicate": "provides environment for", "predicate_id": null, "source": "bdelloplast", "target": "intraperiplasmic_growth"}, {"description": "After septation, lytic activity breaks the prey cell wall so progeny lyse and exit.", "evidence": [{"notes": "After synchronous septation, progeny lyse the prey cell wall and exit.", "reference": "DOI:10.1038/s41564-023-01401-2"}], "id": "edge-11", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "exit_lytic_activity", "target": "progeny_release"}, {"description": "Growth and synchronous division inside the bdelloplast occur before progeny lyse the prey wall and exit.", "evidence": [{"notes": "Kaplan et al. place progeny exit after consumption, intraperiplasmic growth, and synchronous septation.", "reference": "DOI:10.1038/s41564-023-01401-2", "snippet": "progeny cells reset to the attack phase, lyse the prey cell wall"}], "id": "edge-12", "is_orphan": false, "predicate": "precedes", "predicate_id": "biolink:precedes", "source": "intraperiplasmic_growth", "target": "progeny_release"}, {"description": "Type IV major pilin protein PilA (pilA, UniProtKB:P04739) contributes to predatory bacterium.", "evidence": [{"notes": "Supports the functional association between Type IV major pilin protein PilA (UniProtKB:P04739 in Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)) and predatory bacterium.", "reference": "DOI:10.1038/s41564-023-01401-2", "snippet": "most or all of the filament was internalized to the periplasm"}], "id": "edge-13", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "predatory_bacterium_protein_component", "target": "predatory_trait"}], "evidence_rows": [{"description": "B. bacteriovorus invades and digests bacterial prey for nutrients.", "edge_id": "edge-1", "evidence": [{"notes": "Sockett describes Bdellovibrio invasion and digestion of prey bacteria.", "reference": "DOI:10.1146/annurev.micro.091208.073346"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "predatory bacterium", "target": "bacteriolytic killing"}, {"description": "Killed prey cells provide nutrients to the predator.", "edge_id": "edge-2", "evidence": [{"notes": "P\u00e9rez et al. survey predatory bacteria and their prey-killing strategies.", "reference": "DOI:10.1111/1462-2920.13171"}], "predicate": "consumes", "predicate_id": "biolink:consumes", "source": "bacteriolytic killing", "target": "prey bacterium"}, {"description": "Type IV pili mediate B. bacteriovorus attachment to prey before invasion.", "edge_id": "edge-3", "evidence": [{"notes": "Kaplan et al. directly imaged T4aP extending from B. bacteriovorus to the prey outer membrane; this branch is taxon-specific.", "reference": "DOI:10.1038/s41564-023-01401-2", "snippet": "attachment is mediated by type IV pili (T4P)"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "B. bacteriovorus type IV pilus", "target": "B. bacteriovorus prey attachment"}, {"description": "The living Gram-negative prey cell is the target participant in B. bacteriovorus attachment.", "edge_id": "edge-4", "evidence": [{"notes": "Tyson et al. describe attachment to the prey surface as the first physical predator-prey interaction before invasion.", "reference": "DOI:10.1038/s41467-024-47412-3", "snippet": "swim rapidly to another Gram-negative bacterial prey surface and then attach to it"}], "predicate": "participates in", "predicate_id": "biolink:participates_in", "source": "prey bacterium", "target": "B. bacteriovorus prey attachment"}, {"description": "B. bacteriovorus first attaches to prey and begins invasion only after prey assessment.", "edge_id": "edge-5", "evidence": [{"notes": "Kaplan et al. place attachment and prey assessment before invasion in the endoperiplasmic predation cycle.", "reference": "DOI:10.1038/s41564-023-01401-2", "snippet": "After assessment of prey quality, the process of invasion begins"}], "predicate": "precedes", "predicate_id": "biolink:precedes", "source": "B. bacteriovorus prey attachment", "target": "B. bacteriovorus prey invasion"}, {"description": "The flexible portal lines the prey entry hole and seals the outer membrane around B. bacteriovorus during invasion.", "edge_id": "edge-6", "evidence": [{"notes": "Cryo-electron tomography directly localized the portal at the entry hole during predator invasion.", "reference": "DOI:10.1038/s41564-023-01401-2", "snippet": "flexible portal structure lining a hole in the prey peptidoglycan"}], "predicate": "participates in", "predicate_id": "biolink:participates_in", "source": "prey attachment/invasion complex (portal)", "target": "B. bacteriovorus prey invasion"}, {"description": "Enzymatic modification of the prey cell wall permits entry into the periplasm and formation of the bdelloplast.", "edge_id": "edge-7", "evidence": [{"notes": "Kaplan et al. describe localized prey-wall modification at the predator-prey contact point as part of invasion.", "reference": "DOI:10.1038/s41564-023-01401-2", "snippet": "Prey invasion involves enzymatic modification of the prey cell wall"}], "predicate": "participates in", "predicate_id": "biolink:participates_in", "source": "prey cell-wall modification enzymes", "target": "B. bacteriovorus prey invasion"}, {"description": "A flexible portal lines the prey peptidoglycan hole and seals the entry pore to form a bdelloplast.", "edge_id": "edge-8", "evidence": [{"notes": "Cryo-ET: a flexible portal lines the hole during entry and the entry pore is sealed to form a bdelloplast.", "reference": "DOI:10.1038/s41564-023-01401-2"}], "predicate": "seals", "predicate_id": null, "source": "prey attachment/invasion complex (portal)", "target": "prey peptidoglycan entry pore / bdelloplast pore"}, {"description": "Predator modification of the prey cell wall rounds the killed prey into a bdelloplast.", "edge_id": "edge-9", "evidence": [{"notes": "During invasion the predator modifies the prey cell wall, rounding the killed prey into a bdelloplast.", "reference": "DOI:10.1038/s41467-024-47412-3"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "prey cell-wall modification enzymes", "target": "bdelloplast"}, {"description": "The sealed bdelloplast houses a live predator that grows and replicates inside the prey periplasm.", "edge_id": "edge-10", "evidence": [{"notes": "The sealed bdelloplast contains a live predator that grows and replicates inside the prey periplasm.", "reference": "DOI:10.1038/s41564-023-01401-2"}], "predicate": "provides environment for", "predicate_id": null, "source": "bdelloplast", "target": "intraperiplasmic growth / predator replication"}, {"description": "After septation, lytic activity breaks the prey cell wall so progeny lyse and exit.", "edge_id": "edge-11", "evidence": [{"notes": "After synchronous septation, progeny lyse the prey cell wall and exit.", "reference": "DOI:10.1038/s41564-023-01401-2"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "exit-associated lytic activity", "target": "prey cell-wall lysis and progeny release"}, {"description": "Growth and synchronous division inside the bdelloplast occur before progeny lyse the prey wall and exit.", "edge_id": "edge-12", "evidence": [{"notes": "Kaplan et al. place progeny exit after consumption, intraperiplasmic growth, and synchronous septation.", "reference": "DOI:10.1038/s41564-023-01401-2", "snippet": "progeny cells reset to the attack phase, lyse the prey cell wall"}], "predicate": "precedes", "predicate_id": "biolink:precedes", "source": "intraperiplasmic growth / predator replication", "target": "prey cell-wall lysis and progeny release"}, {"description": "Type IV major pilin protein PilA (pilA, UniProtKB:P04739) contributes to predatory bacterium.", "edge_id": "edge-13", "evidence": [{"notes": "Supports the functional association between Type IV major pilin protein PilA (UniProtKB:P04739 in Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)) and predatory bacterium.", "reference": "DOI:10.1038/s41564-023-01401-2", "snippet": "most or all of the filament was internalized to the periplasm"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Type IV major pilin protein PilA", "target": "predatory bacterium"}], "graph_id": "predatory_bacterium_prey_killing", "issues": [], "nodes": [{"color": "#ede9fe", "description": "Type IV pilus at the invasive pole that mediates B. bacteriovorus attachment to prey.", "grounding": "GO:0044096", "id": "b_bacteriovorus_type_iv_pilus", "is_orphan": false, "label": "B. bacteriovorus type IV pilus", "node_type": "CELLULAR_LOCALIZATION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ede9fe", "description": "Rounded, sealed killed-prey cell within which the predator grows and replicates.", "grounding": null, "id": "bdelloplast", "is_orphan": false, "label": "bdelloplast", "node_type": "CELLULAR_LOCALIZATION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#cffafe", "description": "Lytic activity that breaks down the prey cell wall to release predator progeny.", "grounding": null, "id": "exit_lytic_activity", "is_orphan": false, "label": "exit-associated lytic activity", "node_type": "MOLECULAR_FUNCTION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Growth and replication of the predator inside the prey periplasm (bdelloplast).", "grounding": null, "id": "intraperiplasmic_growth", "is_orphan": false, "label": "intraperiplasmic growth / predator replication", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ede9fe", "description": "Flexible portal complex lining the prey peptidoglycan entry hole during predator invasion.", "grounding": null, "id": "invasion_portal", "is_orphan": false, "label": "prey attachment/invasion complex (portal)", "node_type": "CELLULAR_LOCALIZATION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Protein component (Type IV major pilin protein PilA) associated with predatory bacterium.", "grounding": null, "id": "predatory_bacterium_protein_component", "is_orphan": false, "label": "Type IV major pilin protein PilA", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 159, "evidence": [{"notes": "Supports Type IV major pilin protein PilA in predatory bacterium; UniProtKB:P04739 (pilA, Type IV major pilin protein PilA) in Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1) provides a verified protein exemplar.", "reference": "DOI:10.1038/s41467-024-47412-3", "snippet": "swim rapidly to another Gram-negative bacterial prey surface and then attach to it"}], "gene_symbol": "pilA", "protein_label": "Type IV major pilin protein PilA", "proteome_id": "UP000002438", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (pilA, Type IV major pilin protein PilA) associated with predatory bacterium in Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1).", "sequence_version": 1, "taxon_id": "NCBITaxon:208964", "taxon_label": "Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)", "uniprot_id": "UniProtKB:P04739"}], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Bacterial lifestyle of killing and consuming other bacteria.", "grounding": "traitmech:000054", "id": "predatory_trait", "is_orphan": false, "label": "predatory bacterium", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Attachment of B. bacteriovorus to the surface of a Gram-negative prey bacterium before invasion.", "grounding": null, "id": "prey_attachment", "is_orphan": false, "label": "B. bacteriovorus prey attachment", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Target bacterial cell of the predatory attack.", "grounding": null, "id": "prey_bacterium", "is_orphan": false, "label": "prey bacterium", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#cffafe", "description": "Predator enzymes that modify the prey cell wall during invasion.", "grounding": null, "id": "prey_cell_wall_modification", "is_orphan": false, "label": "prey cell-wall modification enzymes", "node_type": "MOLECULAR_FUNCTION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ede9fe", "description": "Hole in the prey peptidoglycan through which the predator enters; sealed to form the bdelloplast.", "grounding": null, "id": "prey_entry_pore", "is_orphan": false, "label": "prey peptidoglycan entry pore / bdelloplast pore", "node_type": "CELLULAR_LOCALIZATION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Entry of B. bacteriovorus through the prey envelope into the prey periplasm.", "grounding": null, "id": "prey_invasion", "is_orphan": false, "label": "B. bacteriovorus prey invasion", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Lysis or digestion of prey bacterial cells.", "grounding": null, "id": "prey_killing", "is_orphan": false, "label": "bacteriolytic killing", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Lysis of the spent prey cell wall and exit of newly formed predator progeny.", "grounding": null, "id": "progeny_release", "is_orphan": false, "label": "prey cell-wall lysis and progeny release", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 159, "evidence": [{"notes": "Supports Type IV major pilin protein PilA in predatory bacterium; UniProtKB:P04739 (pilA, Type IV major pilin protein PilA) in Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1) provides a verified protein exemplar.", "reference": "DOI:10.1038/s41467-024-47412-3", "snippet": "swim rapidly to another Gram-negative bacterial prey surface and then attach to it"}], "gene_symbol": "pilA", "node_id": "predatory_bacterium_protein_component", "node_label": "Type IV major pilin protein PilA", "protein_label": "Type IV major pilin protein PilA", "proteome_id": "UP000002438", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (pilA, Type IV major pilin protein PilA) associated with predatory bacterium in Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1).", "sequence_version": 1, "taxon_id": "NCBITaxon:208964", "taxon_label": "Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)", "uniprot_id": "UniProtKB:P04739"}], "scope_notes": "This broad ecological, host-relationship, habitat, or hazard classification spans multiple taxa and mechanisms; contextual protein nodes include source-backed UniProtKB exemplars. The invasion and bdelloplast branch illustrates B. bacteriovorus, not a requirement for every predatory bacterium; epibiotic bacterial predators feed with their cell bodies outside the prey.", "scope_status": "NONMECHANISTIC", "title": "Predatory bacteria kill and consume other bacteria"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking prey invasion to bacteriolytic killing and predator nutrient acquisition.", "edges": [{"description": "B. bacteriovorus invades and digests bacterial prey for nutrients.", "evidence": [{"notes": "Sockett describes Bdellovibrio invasion and digestion of prey bacteria.", "reference": "DOI:10.1146/annurev.micro.091208.073346"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "predatory_trait", "target": "prey_killing"}, {"description": "Killed prey cells provide nutrients to the predator.", "evidence": [{"notes": "P\u00e9rez et al. survey predatory bacteria and their prey-killing strategies.", "reference": "DOI:10.1111/1462-2920.13171"}], "id": "edge-2", "is_orphan": false, "predicate": "consumes", "predicate_id": "biolink:consumes", "source": "prey_killing", "target": "prey_bacterium"}, {"description": "Type IV pili mediate B. bacteriovorus attachment to prey before invasion.", "evidence": [{"notes": "Kaplan et al. directly imaged T4aP extending from B. bacteriovorus to the prey outer membrane; this branch is taxon-specific.", "reference": "DOI:10.1038/s41564-023-01401-2", "snippet": "attachment is mediated by type IV pili (T4P)"}], "id": "edge-3", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "b_bacteriovorus_type_iv_pilus", "target": "prey_attachment"}, {"description": "The living Gram-negative prey cell is the target participant in B. bacteriovorus attachment.", "evidence": [{"notes": "Tyson et al. describe attachment to the prey surface as the first physical predator-prey interaction before invasion.", "reference": "DOI:10.1038/s41467-024-47412-3", "snippet": "swim rapidly to another Gram-negative bacterial prey surface and then attach to it"}], "id": "edge-4", "is_orphan": false, "predicate": "participates in", "predicate_id": "biolink:participates_in", "source": "prey_bacterium", "target": "prey_attachment"}, {"description": "B. bacteriovorus first attaches to prey and begins invasion only after prey assessment.", "evidence": [{"notes": "Kaplan et al. place attachment and prey assessment before invasion in the endoperiplasmic predation cycle.", "reference": "DOI:10.1038/s41564-023-01401-2", "snippet": "After assessment of prey quality, the process of invasion begins"}], "id": "edge-5", "is_orphan": false, "predicate": "precedes", "predicate_id": "biolink:precedes", "source": "prey_attachment", "target": "prey_invasion"}, {"description": "The flexible portal lines the prey entry hole and seals the outer membrane around B. bacteriovorus during invasion.", "evidence": [{"notes": "Cryo-electron tomography directly localized the portal at the entry hole during predator invasion.", "reference": "DOI:10.1038/s41564-023-01401-2", "snippet": "flexible portal structure lining a hole in the prey peptidoglycan"}], "id": "edge-6", "is_orphan": false, "predicate": "participates in", "predicate_id": "biolink:participates_in", "source": "invasion_portal", "target": "prey_invasion"}, {"description": "Enzymatic modification of the prey cell wall permits entry into the periplasm and formation of the bdelloplast.", "evidence": [{"notes": "Kaplan et al. describe localized prey-wall modification at the predator-prey contact point as part of invasion.", "reference": "DOI:10.1038/s41564-023-01401-2", "snippet": "Prey invasion involves enzymatic modification of the prey cell wall"}], "id": "edge-7", "is_orphan": false, "predicate": "participates in", "predicate_id": "biolink:participates_in", "source": "prey_cell_wall_modification", "target": "prey_invasion"}, {"description": "A flexible portal lines the prey peptidoglycan hole and seals the entry pore to form a bdelloplast.", "evidence": [{"notes": "Cryo-ET: a flexible portal lines the hole during entry and the entry pore is sealed to form a bdelloplast.", "reference": "DOI:10.1038/s41564-023-01401-2"}], "id": "edge-8", "is_orphan": false, "predicate": "seals", "predicate_id": null, "source": "invasion_portal", "target": "prey_entry_pore"}, {"description": "Predator modification of the prey cell wall rounds the killed prey into a bdelloplast.", "evidence": [{"notes": "During invasion the predator modifies the prey cell wall, rounding the killed prey into a bdelloplast.", "reference": "DOI:10.1038/s41467-024-47412-3"}], "id": "edge-9", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "prey_cell_wall_modification", "target": "bdelloplast"}, {"description": "The sealed bdelloplast houses a live predator that grows and replicates inside the prey periplasm.", "evidence": [{"notes": "The sealed bdelloplast contains a live predator that grows and replicates inside the prey periplasm.", "reference": "DOI:10.1038/s41564-023-01401-2"}], "id": "edge-10", "is_orphan": false, "predicate": "provides environment for", "predicate_id": null, "source": "bdelloplast", "target": "intraperiplasmic_growth"}, {"description": "After septation, lytic activity breaks the prey cell wall so progeny lyse and exit.", "evidence": [{"notes": "After synchronous septation, progeny lyse the prey cell wall and exit.", "reference": "DOI:10.1038/s41564-023-01401-2"}], "id": "edge-11", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "exit_lytic_activity", "target": "progeny_release"}, {"description": "Growth and synchronous division inside the bdelloplast occur before progeny lyse the prey wall and exit.", "evidence": [{"notes": "Kaplan et al. place progeny exit after consumption, intraperiplasmic growth, and synchronous septation.", "reference": "DOI:10.1038/s41564-023-01401-2", "snippet": "progeny cells reset to the attack phase, lyse the prey cell wall"}], "id": "edge-12", "is_orphan": false, "predicate": "precedes", "predicate_id": "biolink:precedes", "source": "intraperiplasmic_growth", "target": "progeny_release"}], "evidence_rows": [{"description": "B. bacteriovorus invades and digests bacterial prey for nutrients.", "edge_id": "edge-1", "evidence": [{"notes": "Sockett describes Bdellovibrio invasion and digestion of prey bacteria.", "reference": "DOI:10.1146/annurev.micro.091208.073346"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "predatory bacterium", "source_grounding": "traitmech:000054", "target": "bacteriolytic killing", "target_grounding": null}, {"description": "Killed prey cells provide nutrients to the predator.", "edge_id": "edge-2", "evidence": [{"notes": "P\u00e9rez et al. survey predatory bacteria and their prey-killing strategies.", "reference": "DOI:10.1111/1462-2920.13171"}], "predicate": "consumes", "predicate_id": "biolink:consumes", "source": "bacteriolytic killing", "source_grounding": null, "target": "prey bacterium", "target_grounding": null}, {"description": "Type IV pili mediate B. bacteriovorus attachment to prey before invasion.", "edge_id": "edge-3", "evidence": [{"notes": "Kaplan et al. directly imaged T4aP extending from B. bacteriovorus to the prey outer membrane; this branch is taxon-specific.", "reference": "DOI:10.1038/s41564-023-01401-2", "snippet": "attachment is mediated by type IV pili (T4P)"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "B. bacteriovorus type IV pilus", "source_grounding": "GO:0044096", "target": "B. bacteriovorus prey attachment", "target_grounding": null}, {"description": "The living Gram-negative prey cell is the target participant in B. bacteriovorus attachment.", "edge_id": "edge-4", "evidence": [{"notes": "Tyson et al. describe attachment to the prey surface as the first physical predator-prey interaction before invasion.", "reference": "DOI:10.1038/s41467-024-47412-3", "snippet": "swim rapidly to another Gram-negative bacterial prey surface and then attach to it"}], "predicate": "participates in", "predicate_id": "biolink:participates_in", "source": "prey bacterium", "source_grounding": null, "target": "B. bacteriovorus prey attachment", "target_grounding": null}, {"description": "B. bacteriovorus first attaches to prey and begins invasion only after prey assessment.", "edge_id": "edge-5", "evidence": [{"notes": "Kaplan et al. place attachment and prey assessment before invasion in the endoperiplasmic predation cycle.", "reference": "DOI:10.1038/s41564-023-01401-2", "snippet": "After assessment of prey quality, the process of invasion begins"}], "predicate": "precedes", "predicate_id": "biolink:precedes", "source": "B. bacteriovorus prey attachment", "source_grounding": null, "target": "B. bacteriovorus prey invasion", "target_grounding": null}, {"description": "The flexible portal lines the prey entry hole and seals the outer membrane around B. bacteriovorus during invasion.", "edge_id": "edge-6", "evidence": [{"notes": "Cryo-electron tomography directly localized the portal at the entry hole during predator invasion.", "reference": "DOI:10.1038/s41564-023-01401-2", "snippet": "flexible portal structure lining a hole in the prey peptidoglycan"}], "predicate": "participates in", "predicate_id": "biolink:participates_in", "source": "prey attachment/invasion complex (portal)", "source_grounding": null, "target": "B. bacteriovorus prey invasion", "target_grounding": null}, {"description": "Enzymatic modification of the prey cell wall permits entry into the periplasm and formation of the bdelloplast.", "edge_id": "edge-7", "evidence": [{"notes": "Kaplan et al. describe localized prey-wall modification at the predator-prey contact point as part of invasion.", "reference": "DOI:10.1038/s41564-023-01401-2", "snippet": "Prey invasion involves enzymatic modification of the prey cell wall"}], "predicate": "participates in", "predicate_id": "biolink:participates_in", "source": "prey cell-wall modification enzymes", "source_grounding": null, "target": "B. bacteriovorus prey invasion", "target_grounding": null}, {"description": "A flexible portal lines the prey peptidoglycan hole and seals the entry pore to form a bdelloplast.", "edge_id": "edge-8", "evidence": [{"notes": "Cryo-ET: a flexible portal lines the hole during entry and the entry pore is sealed to form a bdelloplast.", "reference": "DOI:10.1038/s41564-023-01401-2"}], "predicate": "seals", "predicate_id": null, "source": "prey attachment/invasion complex (portal)", "source_grounding": null, "target": "prey peptidoglycan entry pore / bdelloplast pore", "target_grounding": null}, {"description": "Predator modification of the prey cell wall rounds the killed prey into a bdelloplast.", "edge_id": "edge-9", "evidence": [{"notes": "During invasion the predator modifies the prey cell wall, rounding the killed prey into a bdelloplast.", "reference": "DOI:10.1038/s41467-024-47412-3"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "prey cell-wall modification enzymes", "source_grounding": null, "target": "bdelloplast", "target_grounding": null}, {"description": "The sealed bdelloplast houses a live predator that grows and replicates inside the prey periplasm.", "edge_id": "edge-10", "evidence": [{"notes": "The sealed bdelloplast contains a live predator that grows and replicates inside the prey periplasm.", "reference": "DOI:10.1038/s41564-023-01401-2"}], "predicate": "provides environment for", "predicate_id": null, "source": "bdelloplast", "source_grounding": null, "target": "intraperiplasmic growth / predator replication", "target_grounding": null}, {"description": "After septation, lytic activity breaks the prey cell wall so progeny lyse and exit.", "edge_id": "edge-11", "evidence": [{"notes": "After synchronous septation, progeny lyse the prey cell wall and exit.", "reference": "DOI:10.1038/s41564-023-01401-2"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "exit-associated lytic activity", "source_grounding": null, "target": "prey cell-wall lysis and progeny release", "target_grounding": null}, {"description": "Growth and synchronous division inside the bdelloplast occur before progeny lyse the prey wall and exit.", "edge_id": "edge-12", "evidence": [{"notes": "Kaplan et al. place progeny exit after consumption, intraperiplasmic growth, and synchronous septation.", "reference": "DOI:10.1038/s41564-023-01401-2", "snippet": "progeny cells reset to the attack phase, lyse the prey cell wall"}], "predicate": "precedes", "predicate_id": "biolink:precedes", "source": "intraperiplasmic growth / predator replication", "source_grounding": null, "target": "prey cell-wall lysis and progeny release", "target_grounding": null}], "graph_id": "predatory_bacterium_prey_killing", "issues": [], "nodes": [{"color": "#ede9fe", "description": "Type IV pilus at the invasive pole that mediates B. bacteriovorus attachment to prey.", "grounding": "GO:0044096", "id": "b_bacteriovorus_type_iv_pilus", "is_orphan": false, "label": "B. bacteriovorus type IV pilus", "node_type": "CELLULAR_LOCALIZATION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ede9fe", "description": "Rounded, sealed killed-prey cell within which the predator grows and replicates.", "grounding": null, "id": "bdelloplast", "is_orphan": false, "label": "bdelloplast", "node_type": "CELLULAR_LOCALIZATION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#cffafe", "description": "Lytic activity that breaks down the prey cell wall to release predator progeny.", "grounding": null, "id": "exit_lytic_activity", "is_orphan": false, "label": "exit-associated lytic activity", "node_type": "MOLECULAR_FUNCTION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Growth and replication of the predator inside the prey periplasm (bdelloplast).", "grounding": null, "id": "intraperiplasmic_growth", "is_orphan": false, "label": "intraperiplasmic growth / predator replication", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ede9fe", "description": "Flexible portal complex lining the prey peptidoglycan entry hole during predator invasion.", "grounding": null, "id": "invasion_portal", "is_orphan": false, "label": "prey attachment/invasion complex (portal)", "node_type": "CELLULAR_LOCALIZATION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Bacterial lifestyle of killing and consuming other bacteria.", "grounding": "traitmech:000054", "id": "predatory_trait", "is_orphan": false, "label": "predatory bacterium", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Attachment of B. bacteriovorus to the surface of a Gram-negative prey bacterium before invasion.", "grounding": null, "id": "prey_attachment", "is_orphan": false, "label": "B. bacteriovorus prey attachment", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Target bacterial cell of the predatory attack.", "grounding": null, "id": "prey_bacterium", "is_orphan": false, "label": "prey bacterium", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#cffafe", "description": "Predator enzymes that modify the prey cell wall during invasion.", "grounding": null, "id": "prey_cell_wall_modification", "is_orphan": false, "label": "prey cell-wall modification enzymes", "node_type": "MOLECULAR_FUNCTION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ede9fe", "description": "Hole in the prey peptidoglycan through which the predator enters; sealed to form the bdelloplast.", "grounding": null, "id": "prey_entry_pore", "is_orphan": false, "label": "prey peptidoglycan entry pore / bdelloplast pore", "node_type": "CELLULAR_LOCALIZATION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Entry of B. bacteriovorus through the prey envelope into the prey periplasm.", "grounding": null, "id": "prey_invasion", "is_orphan": false, "label": "B. bacteriovorus prey invasion", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Lysis or digestion of prey bacterial cells.", "grounding": null, "id": "prey_killing", "is_orphan": false, "label": "bacteriolytic killing", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Lysis of the spent prey cell wall and exit of newly formed predator progeny.", "grounding": null, "id": "progeny_release", "is_orphan": false, "label": "prey cell-wall lysis and progeny release", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This broad ecological, host-relationship, habitat, or hazard classification spans multiple taxa and mechanisms; contextual protein nodes do not receive token UniProt examples. The invasion and bdelloplast branch illustrates B. bacteriovorus, not a requirement for every predatory bacterium; epibiotic bacterial predators feed with their cell bodies outside the prey.", "scope_status": "NONMECHANISTIC", "title": "Predatory bacteria kill and consume other bacteria"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -1068,13 +1103,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-10-17 09:00 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

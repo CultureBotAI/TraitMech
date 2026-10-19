@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/genomics.html">GENOMICS</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/genomics.html">GENOMICS</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>Bil system</h1>
     <p class="curie"><code>traitmech:000369</code> · CLASS · PROPOSED</p>
 
@@ -109,9 +120,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>Bil locus</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>Bil ubiquitin-like conjugation</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>Bil loci encode a bacterial antiphage system based on ubiquitin-like conjugation, and DefenseFinder links Bil to an antiphage-system discovery preprint.</p>
             <ul>
 
@@ -138,9 +151,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>Bil ubiquitin-like conjugation</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>central tail fibre obstruction</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>The Bil system can obstruct the phage central tail fibre by covalently attaching a ubiquitin-like protein.</p>
             <ul>
 
@@ -155,9 +170,11 @@
 
           <li id="pathograph-1-edge-3">
             <strong>central tail fibre obstruction</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>impaired phage infectivity</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>Central-tail-fibre obstruction by the Bil system impairs phage-particle infectivity.</p>
             <ul>
 
@@ -178,9 +195,11 @@
 
           <li id="pathograph-1-edge-4">
             <strong>impaired phage infectivity</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>Bil system</strong>
-            <code>METPO:2007700</code>
+            <code>traitmech:000369</code>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>Bil-mediated impairment of phage infectivity realizes the Bil system trait.</p>
             <ul>
 
@@ -195,8 +214,10 @@
 
           <li id="pathograph-1-edge-5">
             <strong>Bil system</strong>
+            <code>traitmech:000369</code>
             <span class="edge-predicate">is a</span>
             <strong>phage defense system</strong>
+            <code>traitmech:000209</code>
             <code>rdfs:subClassOf</code>
             <p>Bil system possession is a phage-defense-system trait.</p>
             <ul>
@@ -336,11 +357,75 @@
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
 
-      <p class="no-match">No kg-microbe node embedding matched this record
-        in the 2026-04-25 deepwalk.</p>
+      <p class="match-method">Matched <strong>1</strong>
+        kg-microbe node
+        via <em>parent_proxy</em>.</p>
+      <ul class="kgm-nodes">
+
+        <li><code>METPO:1000188</code> <span class="dim-preview">[-0.956, -1.962, -3.148, +1.274, …]</span></li>
+
+      </ul>
+      <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
 
     </div>
 
+
+    <div class="card">
+      <h2>Nearest neighbors in embedding space</h2>
+      <p class="meta">Top-8 cosine-similar METPO traits
+        from the 2026-04-25 deepwalk (512-D).</p>
+      <ul class="nn-list">
+
+        <li>
+          <span class="nn-cat">upper</span>
+          <a href="../../traits/upper/quality.html">quality</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/jukab_system.html">JukAB system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/integrative_conjugative_element.html">integrative conjugative element</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/ig_like_schlafen_system.html">Ig-like Schlafen system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hypnos_system.html">Hypnos system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hna_system.html">Hna system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hma_system.html">Hma system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hesat_system.html">Hesat system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+      </ul>
+    </div>
 
 
 
@@ -464,6 +549,11 @@
     </dl>
   </div>
 
+
+  <div class="card rail-kgm">
+    <h2>kg-microbe</h2>
+    <p class="meta">1 matching node (parent_proxy)</p>
+  </div>
 
 </aside>
 </div>
@@ -797,7 +887,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Conservative system-level sketch linking possession of a Bil ubiquitin-like conjugation locus to central-tail-fibre obstruction and impaired phage infectivity without asserting the exact DefenseFinder profile or rule set for Bil.", "edges": [{"description": "Bil loci encode a bacterial antiphage system based on ubiquitin-like conjugation, and DefenseFinder links Bil to an antiphage-system discovery preprint.", "evidence": [{"notes": "Hor et al. identify Bil as a ubiquitin-like conjugation antiphage defense system.", "reference": "DOI:10.1038/s41586-024-07616-5", "snippet": "Bil antiphage defence system"}, {"notes": "Millman et al. published the discovery cohort that DefenseFinder maps to its Bil article-registry row.", "reference": "DOI:10.1016/j.chom.2022.09.017", "snippet": "An expanded arsenal of immune systems that protect bacteria from phages"}, {"notes": "The DefenseFinder article registry maps the named Bil system to the Millman et al. antiphage-system discovery preprint.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "Bil | 10\\.1101/2022\\.05\\.11\\.491447 | An expanding arsenal of immune systems that protect bacteria from phages"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "bil_locus", "target": "bil_ubiquitin_like_conjugation"}, {"description": "The Bil system can obstruct the phage central tail fibre by covalently attaching a ubiquitin-like protein.", "evidence": [{"notes": "Hor et al. show that the Bil system obstructs the phage central tail fibre with a covalently attached ubiquitin-like protein.", "reference": "DOI:10.1038/s41586-024-07616-5", "snippet": "phage central tail fibre is obstructed by the covalently attached ubiquitin-like protein"}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "bil_ubiquitin_like_conjugation", "target": "central_tail_fibre_obstruction"}, {"description": "Central-tail-fibre obstruction by the Bil system impairs phage-particle infectivity.", "evidence": [{"notes": "Hor et al. show that the Bil system obstructs the phage central tail fibre with a covalently attached ubiquitin-like protein.", "reference": "DOI:10.1038/s41586-024-07616-5", "snippet": "phage central tail fibre is obstructed by the covalently attached ubiquitin-like protein"}, {"notes": "Hor et al. connect Bil-dependent particle production to reduced phage infectivity.", "reference": "DOI:10.1038/s41586-024-07616-5", "snippet": "These phages show severely impaired infectivity"}], "id": "edge-3", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "central_tail_fibre_obstruction", "target": "impaired_phage_infectivity"}, {"description": "Bil-mediated impairment of phage infectivity realizes the Bil system trait.", "evidence": [{"notes": "Hor et al. connect Bil-dependent particle production to reduced phage infectivity.", "reference": "DOI:10.1038/s41586-024-07616-5", "snippet": "These phages show severely impaired infectivity"}], "id": "edge-4", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "impaired_phage_infectivity", "target": "bil_system_trait"}, {"description": "Bil system possession is a phage-defense-system trait.", "evidence": [{"notes": "Hor et al. identify Bil as a ubiquitin-like conjugation antiphage defense system.", "reference": "DOI:10.1038/s41586-024-07616-5", "snippet": "Bil antiphage defence system"}, {"notes": "The DefenseFinder article registry maps the named Bil system to the Millman et al. antiphage-system discovery preprint.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "Bil | 10\\.1101/2022\\.05\\.11\\.491447 | An expanding arsenal of immune systems that protect bacteria from phages"}], "id": "edge-5", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "bil_system_trait", "target": "phage_defense_system"}, {"description": "Endonuclease GajA (gajA, UniProtKB:P0DW47) contributes to Bil system.", "evidence": [{"notes": "Supports the functional association between Endonuclease GajA (UniProtKB:P0DW47 in Bacillus cereus (strain HuB5-5)) and Bil system.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| McrBC | 10\\.1093/emboj/20\\.12\\.3210 | The McrBC restriction endonuclease assembles into a ring structure in the presence of G nucleotides |"}], "id": "edge-6", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "bil_system_protein_component", "target": "bil_system_trait"}], "evidence_rows": [{"description": "Bil loci encode a bacterial antiphage system based on ubiquitin-like conjugation, and DefenseFinder links Bil to an antiphage-system discovery preprint.", "edge_id": "edge-1", "evidence": [{"notes": "Hor et al. identify Bil as a ubiquitin-like conjugation antiphage defense system.", "reference": "DOI:10.1038/s41586-024-07616-5", "snippet": "Bil antiphage defence system"}, {"notes": "Millman et al. published the discovery cohort that DefenseFinder maps to its Bil article-registry row.", "reference": "DOI:10.1016/j.chom.2022.09.017", "snippet": "An expanded arsenal of immune systems that protect bacteria from phages"}, {"notes": "The DefenseFinder article registry maps the named Bil system to the Millman et al. antiphage-system discovery preprint.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "Bil | 10\\.1101/2022\\.05\\.11\\.491447 | An expanding arsenal of immune systems that protect bacteria from phages"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Bil locus", "target": "Bil ubiquitin-like conjugation"}, {"description": "The Bil system can obstruct the phage central tail fibre by covalently attaching a ubiquitin-like protein.", "edge_id": "edge-2", "evidence": [{"notes": "Hor et al. show that the Bil system obstructs the phage central tail fibre with a covalently attached ubiquitin-like protein.", "reference": "DOI:10.1038/s41586-024-07616-5", "snippet": "phage central tail fibre is obstructed by the covalently attached ubiquitin-like protein"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Bil ubiquitin-like conjugation", "target": "central tail fibre obstruction"}, {"description": "Central-tail-fibre obstruction by the Bil system impairs phage-particle infectivity.", "edge_id": "edge-3", "evidence": [{"notes": "Hor et al. show that the Bil system obstructs the phage central tail fibre with a covalently attached ubiquitin-like protein.", "reference": "DOI:10.1038/s41586-024-07616-5", "snippet": "phage central tail fibre is obstructed by the covalently attached ubiquitin-like protein"}, {"notes": "Hor et al. connect Bil-dependent particle production to reduced phage infectivity.", "reference": "DOI:10.1038/s41586-024-07616-5", "snippet": "These phages show severely impaired infectivity"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "central tail fibre obstruction", "target": "impaired phage infectivity"}, {"description": "Bil-mediated impairment of phage infectivity realizes the Bil system trait.", "edge_id": "edge-4", "evidence": [{"notes": "Hor et al. connect Bil-dependent particle production to reduced phage infectivity.", "reference": "DOI:10.1038/s41586-024-07616-5", "snippet": "These phages show severely impaired infectivity"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "impaired phage infectivity", "target": "Bil system"}, {"description": "Bil system possession is a phage-defense-system trait.", "edge_id": "edge-5", "evidence": [{"notes": "Hor et al. identify Bil as a ubiquitin-like conjugation antiphage defense system.", "reference": "DOI:10.1038/s41586-024-07616-5", "snippet": "Bil antiphage defence system"}, {"notes": "The DefenseFinder article registry maps the named Bil system to the Millman et al. antiphage-system discovery preprint.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "Bil | 10\\.1101/2022\\.05\\.11\\.491447 | An expanding arsenal of immune systems that protect bacteria from phages"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "Bil system", "target": "phage defense system"}, {"description": "Endonuclease GajA (gajA, UniProtKB:P0DW47) contributes to Bil system.", "edge_id": "edge-6", "evidence": [{"notes": "Supports the functional association between Endonuclease GajA (UniProtKB:P0DW47 in Bacillus cereus (strain HuB5-5)) and Bil system.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| McrBC | 10\\.1093/emboj/20\\.12\\.3210 | The McrBC restriction endonuclease assembles into a ring structure in the presence of G nucleotides |"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Endonuclease GajA", "target": "Bil system"}], "graph_id": "bil_locus_impairs_phage_assembly", "issues": [], "nodes": [{"color": "#f3f4f6", "description": "A bacterial Bil ubiquitin-like conjugation locus that encodes an antiphage defense system.", "grounding": null, "id": "bil_locus", "is_orphan": false, "label": "Bil locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Protein component (Endonuclease GajA) associated with Bil system.", "grounding": null, "id": "bil_system_protein_component", "is_orphan": false, "label": "Endonuclease GajA", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 12, "evidence": [{"notes": "Supports Endonuclease GajA in Bil system; UniProtKB:P0DW47 (gajA, Endonuclease GajA) in Bacillus cereus (strain HuB5-5) provides a verified protein exemplar.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| McrBC | 10\\.1093/emboj/20\\.12\\.3210 | The McrBC restriction endonuclease assembles into a ring structure in the presence of G nucleotides |"}], "gene_symbol": "gajA", "protein_label": "Endonuclease GajA", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (gajA, Endonuclease GajA) associated with Bil system in Bacillus cereus (strain HuB5-5).", "sequence_version": 1, "taxon_id": "NCBITaxon:1053212", "taxon_label": "Bacillus cereus (strain HuB5-5)", "uniprot_id": "UniProtKB:P0DW47"}], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded Bil phage-defense system.", "grounding": "traitmech:000369", "id": "bil_system_trait", "is_orphan": false, "label": "Bil system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Covalent attachment of a Bil ubiquitin-like protein during phage infection.", "grounding": null, "id": "bil_ubiquitin_like_conjugation", "is_orphan": false, "label": "Bil ubiquitin-like conjugation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Obstruction of a bacteriophage central tail fibre by a covalently attached ubiquitin-like protein.", "grounding": null, "id": "central_tail_fibre_obstruction", "is_orphan": false, "label": "central tail fibre obstruction", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Reduced infectivity of phage particles released from cells encoding the Bil defense system.", "grounding": null, "id": "impaired_phage_infectivity", "is_orphan": false, "label": "impaired phage infectivity", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of one or more genome-encoded immune systems that inhibit bacteriophage infection.", "grounding": "traitmech:000209", "id": "phage_defense_system", "is_orphan": false, "label": "phage defense system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 12, "evidence": [{"notes": "Supports Endonuclease GajA in Bil system; UniProtKB:P0DW47 (gajA, Endonuclease GajA) in Bacillus cereus (strain HuB5-5) provides a verified protein exemplar.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| McrBC | 10\\.1093/emboj/20\\.12\\.3210 | The McrBC restriction endonuclease assembles into a ring structure in the presence of G nucleotides |"}], "gene_symbol": "gajA", "node_id": "bil_system_protein_component", "node_label": "Endonuclease GajA", "protein_label": "Endonuclease GajA", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (gajA, Endonuclease GajA) associated with Bil system in Bacillus cereus (strain HuB5-5).", "sequence_version": 1, "taxon_id": "NCBITaxon:1053212", "taxon_label": "Bacillus cereus (strain HuB5-5)", "uniprot_id": "UniProtKB:P0DW47"}], "scope_notes": "The graph captures Bil as a named phage-defense system whose ubiquitin-like protein is covalently attached to the phage central tail fibre while leaving the exact Bil component composition, target-phage breadth, receptor-recognition consequences, and DefenseFinder model profiles unresolved.", "scope_status": "NONMECHANISTIC", "title": "Bil loci impair bacteriophage infectivity"}];
+  var graphs = [{"description": "Conservative system-level sketch linking possession of a Bil ubiquitin-like conjugation locus to central-tail-fibre obstruction and impaired phage infectivity without asserting the exact DefenseFinder profile or rule set for Bil.", "edges": [{"description": "Bil loci encode a bacterial antiphage system based on ubiquitin-like conjugation, and DefenseFinder links Bil to an antiphage-system discovery preprint.", "evidence": [{"notes": "Hor et al. identify Bil as a ubiquitin-like conjugation antiphage defense system.", "reference": "DOI:10.1038/s41586-024-07616-5", "snippet": "Bil antiphage defence system"}, {"notes": "Millman et al. published the discovery cohort that DefenseFinder maps to its Bil article-registry row.", "reference": "DOI:10.1016/j.chom.2022.09.017", "snippet": "An expanded arsenal of immune systems that protect bacteria from phages"}, {"notes": "The DefenseFinder article registry maps the named Bil system to the Millman et al. antiphage-system discovery preprint.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "Bil | 10\\.1101/2022\\.05\\.11\\.491447 | An expanding arsenal of immune systems that protect bacteria from phages"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "bil_locus", "target": "bil_ubiquitin_like_conjugation"}, {"description": "The Bil system can obstruct the phage central tail fibre by covalently attaching a ubiquitin-like protein.", "evidence": [{"notes": "Hor et al. show that the Bil system obstructs the phage central tail fibre with a covalently attached ubiquitin-like protein.", "reference": "DOI:10.1038/s41586-024-07616-5", "snippet": "phage central tail fibre is obstructed by the covalently attached ubiquitin-like protein"}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "bil_ubiquitin_like_conjugation", "target": "central_tail_fibre_obstruction"}, {"description": "Central-tail-fibre obstruction by the Bil system impairs phage-particle infectivity.", "evidence": [{"notes": "Hor et al. show that the Bil system obstructs the phage central tail fibre with a covalently attached ubiquitin-like protein.", "reference": "DOI:10.1038/s41586-024-07616-5", "snippet": "phage central tail fibre is obstructed by the covalently attached ubiquitin-like protein"}, {"notes": "Hor et al. connect Bil-dependent particle production to reduced phage infectivity.", "reference": "DOI:10.1038/s41586-024-07616-5", "snippet": "These phages show severely impaired infectivity"}], "id": "edge-3", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "central_tail_fibre_obstruction", "target": "impaired_phage_infectivity"}, {"description": "Bil-mediated impairment of phage infectivity realizes the Bil system trait.", "evidence": [{"notes": "Hor et al. connect Bil-dependent particle production to reduced phage infectivity.", "reference": "DOI:10.1038/s41586-024-07616-5", "snippet": "These phages show severely impaired infectivity"}], "id": "edge-4", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "impaired_phage_infectivity", "target": "bil_system_trait"}, {"description": "Bil system possession is a phage-defense-system trait.", "evidence": [{"notes": "Hor et al. identify Bil as a ubiquitin-like conjugation antiphage defense system.", "reference": "DOI:10.1038/s41586-024-07616-5", "snippet": "Bil antiphage defence system"}, {"notes": "The DefenseFinder article registry maps the named Bil system to the Millman et al. antiphage-system discovery preprint.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "Bil | 10\\.1101/2022\\.05\\.11\\.491447 | An expanding arsenal of immune systems that protect bacteria from phages"}], "id": "edge-5", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "bil_system_trait", "target": "phage_defense_system"}], "evidence_rows": [{"description": "Bil loci encode a bacterial antiphage system based on ubiquitin-like conjugation, and DefenseFinder links Bil to an antiphage-system discovery preprint.", "edge_id": "edge-1", "evidence": [{"notes": "Hor et al. identify Bil as a ubiquitin-like conjugation antiphage defense system.", "reference": "DOI:10.1038/s41586-024-07616-5", "snippet": "Bil antiphage defence system"}, {"notes": "Millman et al. published the discovery cohort that DefenseFinder maps to its Bil article-registry row.", "reference": "DOI:10.1016/j.chom.2022.09.017", "snippet": "An expanded arsenal of immune systems that protect bacteria from phages"}, {"notes": "The DefenseFinder article registry maps the named Bil system to the Millman et al. antiphage-system discovery preprint.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "Bil | 10\\.1101/2022\\.05\\.11\\.491447 | An expanding arsenal of immune systems that protect bacteria from phages"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Bil locus", "source_grounding": null, "target": "Bil ubiquitin-like conjugation", "target_grounding": null}, {"description": "The Bil system can obstruct the phage central tail fibre by covalently attaching a ubiquitin-like protein.", "edge_id": "edge-2", "evidence": [{"notes": "Hor et al. show that the Bil system obstructs the phage central tail fibre with a covalently attached ubiquitin-like protein.", "reference": "DOI:10.1038/s41586-024-07616-5", "snippet": "phage central tail fibre is obstructed by the covalently attached ubiquitin-like protein"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Bil ubiquitin-like conjugation", "source_grounding": null, "target": "central tail fibre obstruction", "target_grounding": null}, {"description": "Central-tail-fibre obstruction by the Bil system impairs phage-particle infectivity.", "edge_id": "edge-3", "evidence": [{"notes": "Hor et al. show that the Bil system obstructs the phage central tail fibre with a covalently attached ubiquitin-like protein.", "reference": "DOI:10.1038/s41586-024-07616-5", "snippet": "phage central tail fibre is obstructed by the covalently attached ubiquitin-like protein"}, {"notes": "Hor et al. connect Bil-dependent particle production to reduced phage infectivity.", "reference": "DOI:10.1038/s41586-024-07616-5", "snippet": "These phages show severely impaired infectivity"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "central tail fibre obstruction", "source_grounding": null, "target": "impaired phage infectivity", "target_grounding": null}, {"description": "Bil-mediated impairment of phage infectivity realizes the Bil system trait.", "edge_id": "edge-4", "evidence": [{"notes": "Hor et al. connect Bil-dependent particle production to reduced phage infectivity.", "reference": "DOI:10.1038/s41586-024-07616-5", "snippet": "These phages show severely impaired infectivity"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "impaired phage infectivity", "source_grounding": null, "target": "Bil system", "target_grounding": "traitmech:000369"}, {"description": "Bil system possession is a phage-defense-system trait.", "edge_id": "edge-5", "evidence": [{"notes": "Hor et al. identify Bil as a ubiquitin-like conjugation antiphage defense system.", "reference": "DOI:10.1038/s41586-024-07616-5", "snippet": "Bil antiphage defence system"}, {"notes": "The DefenseFinder article registry maps the named Bil system to the Millman et al. antiphage-system discovery preprint.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "Bil | 10\\.1101/2022\\.05\\.11\\.491447 | An expanding arsenal of immune systems that protect bacteria from phages"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "Bil system", "source_grounding": "traitmech:000369", "target": "phage defense system", "target_grounding": "traitmech:000209"}], "graph_id": "bil_locus_impairs_phage_assembly", "issues": [], "nodes": [{"color": "#f3f4f6", "description": "A bacterial Bil ubiquitin-like conjugation locus that encodes an antiphage defense system.", "grounding": null, "id": "bil_locus", "is_orphan": false, "label": "Bil locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded Bil phage-defense system.", "grounding": "traitmech:000369", "id": "bil_system_trait", "is_orphan": false, "label": "Bil system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Covalent attachment of a Bil ubiquitin-like protein during phage infection.", "grounding": null, "id": "bil_ubiquitin_like_conjugation", "is_orphan": false, "label": "Bil ubiquitin-like conjugation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Obstruction of a bacteriophage central tail fibre by a covalently attached ubiquitin-like protein.", "grounding": null, "id": "central_tail_fibre_obstruction", "is_orphan": false, "label": "central tail fibre obstruction", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Reduced infectivity of phage particles released from cells encoding the Bil defense system.", "grounding": null, "id": "impaired_phage_infectivity", "is_orphan": false, "label": "impaired phage infectivity", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of one or more genome-encoded immune systems that inhibit bacteriophage infection.", "grounding": "traitmech:000209", "id": "phage_defense_system", "is_orphan": false, "label": "phage defense system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "The graph captures Bil as a named phage-defense system whose ubiquitin-like protein is covalently attached to the phage central tail fibre while leaving the exact Bil component composition, target-phage breadth, receptor-recognition consequences, and DefenseFinder model profiles unresolved.", "scope_status": "NONMECHANISTIC", "title": "Bil loci impair bacteriophage infectivity"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -817,13 +907,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-10-17 09:00 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

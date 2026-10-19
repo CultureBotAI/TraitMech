@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/environment.html">ENVIRONMENT</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/environment.html">ENVIRONMENT</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>facultatively acidophilic</h1>
     <p class="curie"><code>METPO:1003007</code> · CLASS · REVIEWED</p>
 
@@ -79,9 +90,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>acidic external pH</strong>
+            <a href="http://purl.obolibrary.org/obo/PATO_0001429" rel="nofollow noreferrer"><code>PATO:0001429</code></a>
             <span class="edge-predicate">selects for</span>
             <strong>facultatively acidophilic</strong>
-            <code>METPO:2007401</code>
+            <a href="https://w3id.org/metpo/1003007" rel="nofollow noreferrer"><code>METPO:1003007</code></a>
+            <a href="https://w3id.org/metpo/2007401" rel="nofollow noreferrer"><code>METPO:2007401</code></a>
             <p>Acidic pH selects for acidophilic growth capacity.</p>
             <ul>
 
@@ -96,8 +109,10 @@
 
           <li id="pathograph-1-edge-2">
             <strong>near-neutral external pH</strong>
+            <a href="http://purl.obolibrary.org/obo/PATO_0001428" rel="nofollow noreferrer"><code>PATO:0001428</code></a>
             <span class="edge-predicate">is compatible with</span>
             <strong>facultatively acidophilic</strong>
+            <a href="https://w3id.org/metpo/1003007" rel="nofollow noreferrer"><code>METPO:1003007</code></a>
 
             <p>Facultatively acidophilic growth can extend into near-neutral pH.</p>
             <ul>
@@ -113,9 +128,11 @@
 
           <li id="pathograph-1-edge-3">
             <strong>acidic external pH</strong>
+            <a href="http://purl.obolibrary.org/obo/PATO_0001429" rel="nofollow noreferrer"><code>PATO:0001429</code></a>
             <span class="edge-predicate">increases gradient of</span>
             <strong>proton</strong>
-            <code>METPO:2007601</code>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:15378" rel="nofollow noreferrer"><code>CHEBI:15378</code></a>
+            <a href="https://w3id.org/metpo/2007601" rel="nofollow noreferrer"><code>METPO:2007601</code></a>
             <p>Acidic pH imposes an external-to-internal proton gradient.</p>
             <ul>
 
@@ -130,9 +147,11 @@
 
           <li id="pathograph-1-edge-4">
             <strong>proton export pumps and antiporters</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>cytoplasmic pH homeostasis</strong>
-            <code>RO:0002326</code>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0051453" rel="nofollow noreferrer"><code>GO:0051453</code></a>
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>Proton export and antiport systems contribute to acid-stress homeostasis.</p>
             <ul>
 
@@ -147,9 +166,11 @@
 
           <li id="pathograph-1-edge-5">
             <strong>cytoplasmic buffering</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>cytoplasmic pH homeostasis</strong>
-            <code>RO:0002326</code>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0051453" rel="nofollow noreferrer"><code>GO:0051453</code></a>
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>Buffering and proton-consuming reactions reduce cytoplasmic acidification.</p>
             <ul>
 
@@ -164,9 +185,11 @@
 
           <li id="pathograph-1-edge-6">
             <strong>cytoplasmic pH homeostasis</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0051453" rel="nofollow noreferrer"><code>GO:0051453</code></a>
             <span class="edge-predicate">confers</span>
             <strong>facultatively acidophilic</strong>
-            <code>METPO:2007700</code>
+            <a href="https://w3id.org/metpo/1003007" rel="nofollow noreferrer"><code>METPO:1003007</code></a>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>Growth across acidic and near-neutral pH requires intracellular pH control.</p>
             <ul>
 
@@ -181,8 +204,10 @@
 
           <li id="pathograph-1-edge-7">
             <strong>acidic external pH</strong>
+            <a href="http://purl.obolibrary.org/obo/PATO_0001429" rel="nofollow noreferrer"><code>PATO:0001429</code></a>
             <span class="edge-predicate">necessitates maintenance of</span>
             <strong>near-neutral cytoplasm</strong>
+
 
             <p>Acidophilic growth requires preserving near-neutral cytoplasm against a steep proton gradient.</p>
             <ul>
@@ -198,9 +223,11 @@
 
           <li id="pathograph-1-edge-8">
             <strong>potassium ion</strong>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:29103" rel="nofollow noreferrer"><code>CHEBI:29103</code></a>
             <span class="edge-predicate">generates</span>
             <strong>inside-positive (reversed) membrane potential</strong>
-            <code>biolink:produces</code>
+
+            <a href="https://w3id.org/biolink/vocab/produces" rel="nofollow noreferrer"><code>biolink:produces</code></a>
             <p>Intracellular K+ accumulation generates an inside-positive potential that opposes proton influx.</p>
             <ul>
 
@@ -215,9 +242,11 @@
 
           <li id="pathograph-1-edge-9">
             <strong>inside-positive (reversed) membrane potential</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>cytoplasmic pH homeostasis</strong>
-            <code>RO:0002326</code>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0051453" rel="nofollow noreferrer"><code>GO:0051453</code></a>
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>An inside-positive membrane potential is a first-line defense reducing proton entry, supporting pH homeostasis.</p>
             <ul>
 
@@ -232,9 +261,11 @@
 
           <li id="pathograph-1-edge-10">
             <strong>hopanoid biosynthetic process</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0019746" rel="nofollow noreferrer"><code>GO:0019746</code></a>
             <span class="edge-predicate">decreases</span>
             <strong>membrane proton permeability</strong>
-            <code>RO:0002212</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002212" rel="nofollow noreferrer"><code>RO:0002212</code></a>
             <p>Hopanoids stiffen the membrane and reduce proton permeability under low pH.</p>
             <ul>
 
@@ -249,9 +280,11 @@
 
           <li id="pathograph-1-edge-11">
             <strong>rigid impermeable membrane</strong>
+
             <span class="edge-predicate">limits</span>
             <strong>proton</strong>
-            <code>RO:0002212</code>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:15378" rel="nofollow noreferrer"><code>CHEBI:15378</code></a>
+            <a href="http://purl.obolibrary.org/obo/RO_0002212" rel="nofollow noreferrer"><code>RO:0002212</code></a>
             <p>A rigid, impermeable membrane acts as a barrier limiting proton entry into the cell.</p>
             <ul>
 
@@ -266,8 +299,10 @@
 
           <li id="pathograph-1-edge-12">
             <strong>proton export pumps and antiporters</strong>
+
             <span class="edge-predicate">expels</span>
             <strong>proton</strong>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:15378" rel="nofollow noreferrer"><code>CHEBI:15378</code></a>
 
             <p>Proton export pumps and antiporters directly remove protons that enter the cytoplasm.</p>
             <ul>
@@ -283,9 +318,11 @@
 
           <li id="pathograph-1-edge-13">
             <strong>glutamate decarboxylase system</strong>
+
             <span class="edge-predicate">consumes</span>
             <strong>proton</strong>
-            <code>biolink:consumes</code>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:15378" rel="nofollow noreferrer"><code>CHEBI:15378</code></a>
+            <a href="https://w3id.org/biolink/vocab/consumes" rel="nofollow noreferrer"><code>biolink:consumes</code></a>
             <p>Glutamate decarboxylation consumes intracellular protons as a second-line acid resistance route.</p>
             <ul>
 
@@ -300,8 +337,10 @@
 
           <li id="pathograph-1-edge-14">
             <strong>cytoplasmic buffering</strong>
+
             <span class="edge-predicate">stabilizes</span>
             <strong>intracellular pH</strong>
+
 
             <p>Cytoplasmic buffering dampens pH fluctuations to stabilize intracellular pH.</p>
             <ul>
@@ -467,7 +506,7 @@
 
         <li>
           <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/obligately_alkaphilic.html">obligately alkaphilic</a>
+          <a href="../../traits/environment/obligately_alkaphilic.html">obligately alkaliphilic</a>
           <span class="sim">0.982</span>
         </li>
 
@@ -479,13 +518,13 @@
 
         <li>
           <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/alkaphilic.html">alkaphilic</a>
+          <a href="../../traits/environment/alkaphilic.html">alkaliphilic</a>
           <span class="sim">0.980</span>
         </li>
 
         <li>
           <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/facultatively_alkaphilic.html">facultatively alkaphilic</a>
+          <a href="../../traits/environment/facultatively_alkaphilic.html">facultatively alkaliphilic</a>
           <span class="sim">0.979</span>
         </li>
 
@@ -1123,7 +1162,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking facultative acidophily to acidic growth, near-neutral growth capacity, and inducible pH homeostasis.", "edges": [{"description": "Acidic pH selects for acidophilic growth capacity.", "evidence": [{"notes": "Supports acidophilic classification by acidic growth optimum.", "reference": "DOI:10.3389/fmicb.2021.822229", "snippet": "acidic optimal growth pH"}], "id": "edge-1", "is_orphan": false, "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "acidic_external_ph", "target": "facultatively_acidophilic_trait"}, {"description": "Facultatively acidophilic growth can extend into near-neutral pH.", "evidence": [{"notes": "Species-level evidence supports acidic-to-near-neutral growth range; this edge is qualified rather than generalized to all taxa.", "reference": "DOI:10.1099/ijs.0.066175-0", "snippet": "capable of growth at pH 4.0-7.2"}], "id": "edge-2", "is_orphan": false, "predicate": "is compatible with", "predicate_id": null, "source": "near_neutral_external_ph", "target": "facultatively_acidophilic_trait"}, {"description": "Acidic pH imposes an external-to-internal proton gradient.", "evidence": [{"notes": "Supports proton-gradient stress during low-pH growth.", "reference": "DOI:10.3389/fmicb.2021.822229", "snippet": "external to internal proton gradient"}], "id": "edge-3", "is_orphan": false, "predicate": "increases gradient of", "predicate_id": "METPO:2007601", "source": "acidic_external_ph", "target": "proton"}, {"description": "Proton export and antiport systems contribute to acid-stress homeostasis.", "evidence": [{"notes": "Supports transporter-mediated pH homeostasis mechanisms.", "reference": "DOI:10.3389/fmicb.2021.822229", "snippet": "proton export pumps and antiporters"}], "id": "edge-4", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "proton_export_pumps", "target": "cytoplasmic_ph_homeostasis"}, {"description": "Buffering and proton-consuming reactions reduce cytoplasmic acidification.", "evidence": [{"notes": "Supports buffering as a proposed acid resistance mechanism.", "reference": "DOI:10.3389/fmicb.2021.822229", "snippet": "cytoplasmic buffering"}], "id": "edge-5", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "cytoplasmic_buffering", "target": "cytoplasmic_ph_homeostasis"}, {"description": "Growth across acidic and near-neutral pH requires intracellular pH control.", "evidence": [{"notes": "Supports cytoplasmic pH homeostasis for growth outside the preferred cytoplasmic pH range.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "robust mechanisms for cytoplasmic pH homeostasis"}], "id": "edge-6", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "cytoplasmic_ph_homeostasis", "target": "facultatively_acidophilic_trait"}, {"description": "Acidophilic growth requires preserving near-neutral cytoplasm against a steep proton gradient.", "evidence": [{"notes": "maintain a near-neutral cytoplasm despite an external-to-internal proton gradient up to 10^5-fold.", "reference": "DOI:10.3389/fmicb.2021.822229"}], "id": "edge-7", "is_orphan": false, "predicate": "necessitates maintenance of", "predicate_id": null, "source": "acidic_external_ph", "target": "near_neutral_cytoplasm"}, {"description": "Intracellular K+ accumulation generates an inside-positive potential that opposes proton influx.", "evidence": [{"notes": "internal positive membrane potential thought to be generated by potassium ions.", "reference": "DOI:10.3389/fmicb.2021.822229"}], "id": "edge-8", "is_orphan": false, "predicate": "generates", "predicate_id": "biolink:produces", "source": "potassium_ion", "target": "reversed_membrane_potential"}, {"description": "An inside-positive membrane potential is a first-line defense reducing proton entry, supporting pH homeostasis.", "evidence": [{"notes": "Inside-positive potential generated by K+ opposes proton influx as a first-line defense.", "reference": "DOI:10.3389/fmicb.2021.822229"}], "id": "edge-9", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "reversed_membrane_potential", "target": "cytoplasmic_ph_homeostasis"}, {"description": "Hopanoids stiffen the membrane and reduce proton permeability under low pH.", "evidence": [{"notes": "membrane alterations via inclusion of hopanoids linked to acidophilic lifestyle.", "reference": "DOI:10.3389/fmicb.2021.822229"}], "id": "edge-10", "is_orphan": false, "predicate": "decreases", "predicate_id": "RO:0002212", "source": "hopanoid_biosynthesis", "target": "proton_permeability"}, {"description": "A rigid, impermeable membrane acts as a barrier limiting proton entry into the cell.", "evidence": [{"notes": "acidophiles use a rigid and impermeable membrane that resists proton entry.", "reference": "DOI:10.3389/fmicb.2023.1149903"}], "id": "edge-11", "is_orphan": false, "predicate": "limits", "predicate_id": "RO:0002212", "source": "impermeable_membrane", "target": "proton"}, {"description": "Proton export pumps and antiporters directly remove protons that enter the cytoplasm.", "evidence": [{"notes": "proton export pumps and antiporters listed among mechanisms maintaining pH homeostasis.", "reference": "DOI:10.3389/fmicb.2021.822229"}], "id": "edge-12", "is_orphan": false, "predicate": "expels", "predicate_id": null, "source": "proton_export_pumps", "target": "proton"}, {"description": "Glutamate decarboxylation consumes intracellular protons as a second-line acid resistance route.", "evidence": [{"notes": "proton consuming reactions such as glutamate decarboxylase; gadABC among acid-adaptation genes.", "reference": "DOI:10.3389/fmicb.2021.822229"}], "id": "edge-13", "is_orphan": false, "predicate": "consumes", "predicate_id": "biolink:consumes", "source": "glutamate_decarboxylase_system", "target": "proton"}, {"description": "Cytoplasmic buffering dampens pH fluctuations to stabilize intracellular pH.", "evidence": [{"notes": "shared mechanisms include cytoplasmic buffering that stabilizes intracellular pH.", "reference": "DOI:10.3389/fmicb.2023.1149903"}], "id": "edge-14", "is_orphan": false, "predicate": "stabilizes", "predicate_id": null, "source": "cytoplasmic_buffering", "target": "intracellular_ph"}], "evidence_rows": [{"description": "Acidic pH selects for acidophilic growth capacity.", "edge_id": "edge-1", "evidence": [{"notes": "Supports acidophilic classification by acidic growth optimum.", "reference": "DOI:10.3389/fmicb.2021.822229", "snippet": "acidic optimal growth pH"}], "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "acidic external pH", "target": "facultatively acidophilic"}, {"description": "Facultatively acidophilic growth can extend into near-neutral pH.", "edge_id": "edge-2", "evidence": [{"notes": "Species-level evidence supports acidic-to-near-neutral growth range; this edge is qualified rather than generalized to all taxa.", "reference": "DOI:10.1099/ijs.0.066175-0", "snippet": "capable of growth at pH 4.0-7.2"}], "predicate": "is compatible with", "predicate_id": null, "source": "near-neutral external pH", "target": "facultatively acidophilic"}, {"description": "Acidic pH imposes an external-to-internal proton gradient.", "edge_id": "edge-3", "evidence": [{"notes": "Supports proton-gradient stress during low-pH growth.", "reference": "DOI:10.3389/fmicb.2021.822229", "snippet": "external to internal proton gradient"}], "predicate": "increases gradient of", "predicate_id": "METPO:2007601", "source": "acidic external pH", "target": "proton"}, {"description": "Proton export and antiport systems contribute to acid-stress homeostasis.", "edge_id": "edge-4", "evidence": [{"notes": "Supports transporter-mediated pH homeostasis mechanisms.", "reference": "DOI:10.3389/fmicb.2021.822229", "snippet": "proton export pumps and antiporters"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "proton export pumps and antiporters", "target": "cytoplasmic pH homeostasis"}, {"description": "Buffering and proton-consuming reactions reduce cytoplasmic acidification.", "edge_id": "edge-5", "evidence": [{"notes": "Supports buffering as a proposed acid resistance mechanism.", "reference": "DOI:10.3389/fmicb.2021.822229", "snippet": "cytoplasmic buffering"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "cytoplasmic buffering", "target": "cytoplasmic pH homeostasis"}, {"description": "Growth across acidic and near-neutral pH requires intracellular pH control.", "edge_id": "edge-6", "evidence": [{"notes": "Supports cytoplasmic pH homeostasis for growth outside the preferred cytoplasmic pH range.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "robust mechanisms for cytoplasmic pH homeostasis"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "cytoplasmic pH homeostasis", "target": "facultatively acidophilic"}, {"description": "Acidophilic growth requires preserving near-neutral cytoplasm against a steep proton gradient.", "edge_id": "edge-7", "evidence": [{"notes": "maintain a near-neutral cytoplasm despite an external-to-internal proton gradient up to 10^5-fold.", "reference": "DOI:10.3389/fmicb.2021.822229"}], "predicate": "necessitates maintenance of", "predicate_id": null, "source": "acidic external pH", "target": "near-neutral cytoplasm"}, {"description": "Intracellular K+ accumulation generates an inside-positive potential that opposes proton influx.", "edge_id": "edge-8", "evidence": [{"notes": "internal positive membrane potential thought to be generated by potassium ions.", "reference": "DOI:10.3389/fmicb.2021.822229"}], "predicate": "generates", "predicate_id": "biolink:produces", "source": "potassium ion", "target": "inside-positive (reversed) membrane potential"}, {"description": "An inside-positive membrane potential is a first-line defense reducing proton entry, supporting pH homeostasis.", "edge_id": "edge-9", "evidence": [{"notes": "Inside-positive potential generated by K+ opposes proton influx as a first-line defense.", "reference": "DOI:10.3389/fmicb.2021.822229"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "inside-positive (reversed) membrane potential", "target": "cytoplasmic pH homeostasis"}, {"description": "Hopanoids stiffen the membrane and reduce proton permeability under low pH.", "edge_id": "edge-10", "evidence": [{"notes": "membrane alterations via inclusion of hopanoids linked to acidophilic lifestyle.", "reference": "DOI:10.3389/fmicb.2021.822229"}], "predicate": "decreases", "predicate_id": "RO:0002212", "source": "hopanoid biosynthetic process", "target": "membrane proton permeability"}, {"description": "A rigid, impermeable membrane acts as a barrier limiting proton entry into the cell.", "edge_id": "edge-11", "evidence": [{"notes": "acidophiles use a rigid and impermeable membrane that resists proton entry.", "reference": "DOI:10.3389/fmicb.2023.1149903"}], "predicate": "limits", "predicate_id": "RO:0002212", "source": "rigid impermeable membrane", "target": "proton"}, {"description": "Proton export pumps and antiporters directly remove protons that enter the cytoplasm.", "edge_id": "edge-12", "evidence": [{"notes": "proton export pumps and antiporters listed among mechanisms maintaining pH homeostasis.", "reference": "DOI:10.3389/fmicb.2021.822229"}], "predicate": "expels", "predicate_id": null, "source": "proton export pumps and antiporters", "target": "proton"}, {"description": "Glutamate decarboxylation consumes intracellular protons as a second-line acid resistance route.", "edge_id": "edge-13", "evidence": [{"notes": "proton consuming reactions such as glutamate decarboxylase; gadABC among acid-adaptation genes.", "reference": "DOI:10.3389/fmicb.2021.822229"}], "predicate": "consumes", "predicate_id": "biolink:consumes", "source": "glutamate decarboxylase system", "target": "proton"}, {"description": "Cytoplasmic buffering dampens pH fluctuations to stabilize intracellular pH.", "edge_id": "edge-14", "evidence": [{"notes": "shared mechanisms include cytoplasmic buffering that stabilizes intracellular pH.", "reference": "DOI:10.3389/fmicb.2023.1149903"}], "predicate": "stabilizes", "predicate_id": null, "source": "cytoplasmic buffering", "target": "intracellular pH"}], "graph_id": "facultatively_acidophilic_ph_homeostasis", "issues": [], "nodes": [{"color": "#dcfce7", "description": "External pH below neutral that supports acidophilic growth.", "grounding": "PATO:0001429", "id": "acidic_external_ph", "is_orphan": false, "label": "acidic external pH", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Cellular buffering and proton-consuming reactions that mitigate acidification.", "grounding": null, "id": "cytoplasmic_buffering", "is_orphan": false, "label": "cytoplasmic buffering", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Maintenance of intracellular pH across acidic and near-neutral environments.", "grounding": "GO:0051453", "id": "cytoplasmic_ph_homeostasis", "is_orphan": false, "label": "cytoplasmic pH homeostasis", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Optimal growth occurs under acidic conditions while near-neutral growth remains possible.", "grounding": "METPO:1003007", "id": "facultatively_acidophilic_trait", "is_orphan": false, "label": "facultatively acidophilic", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Decarboxylase (Gad) system consuming intracellular protons during acid stress.", "grounding": null, "id": "glutamate_decarboxylase_system", "is_orphan": false, "label": "glutamate decarboxylase system", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 122, "evidence": [{"notes": "Supports glutamate decarboxylase system in facultatively acidophilic; UniProtKB:Q9F5P3 (gadA, Glutamate decarboxylase alpha) in Listeria monocytogenes serovar 1/2a (strain ATCC BAA-679 / EGD-e) provides a verified protein exemplar.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "For pH homeostasis under alkaline conditions, active transport of protons inward is a crucial adaptation, which usually involves activation and transcriptional up-regulation of key cation/proton antiporters"}], "gene_symbol": "gadA", "protein_label": "Glutamate decarboxylase alpha", "proteome_id": "UP000000817", "retrieved_on": "2026-10-17", "role": "Exemplar protein (gadA, Glutamate decarboxylase alpha) representing glutamate decarboxylase system in Listeria monocytogenes serovar 1/2a (strain ATCC BAA-679 / EGD-e) for facultatively acidophilic.", "sequence_version": 2, "taxon_id": "NCBITaxon:169963", "taxon_label": "Listeria monocytogenes serovar 1/2a (strain ATCC BAA-679 / EGD-e)", "uniprot_id": "UniProtKB:Q9F5P3"}], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Synthesis of hopanoids that rigidify the membrane against proton influx.", "grounding": "GO:0019746", "id": "hopanoid_biosynthesis", "is_orphan": false, "label": "hopanoid biosynthetic process", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ede9fe", "description": "A rigid, low-permeability membrane that acts as a barrier to proton entry.", "grounding": null, "id": "impermeable_membrane", "is_orphan": false, "label": "rigid impermeable membrane", "node_type": "CELLULAR_LOCALIZATION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Cytoplasmic pH value stabilized by buffering and homeostatic systems.", "grounding": null, "id": "intracellular_ph", "is_orphan": false, "label": "intracellular pH", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Cytoplasmic pH maintained near neutrality despite low external pH.", "grounding": null, "id": "near_neutral_cytoplasm", "is_orphan": false, "label": "near-neutral cytoplasm", "node_type": "STATE", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "External pH near neutrality that facultative acidophiles can tolerate or grow in.", "grounding": "PATO:0001428", "id": "near_neutral_external_ph", "is_orphan": false, "label": "near-neutral external pH", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Intracellular cation accumulated to oppose proton influx.", "grounding": "CHEBI:29103", "id": "potassium_ion", "is_orphan": false, "label": "potassium ion", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Hydrogen ion contributing to low-pH stress.", "grounding": "CHEBI:15378", "id": "proton", "is_orphan": false, "label": "proton", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Transport systems proposed to remove protons or exchange ions during acid stress.", "grounding": null, "id": "proton_export_pumps", "is_orphan": false, "label": "proton export pumps and antiporters", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 130, "evidence": [{"notes": "Supports proton export pumps and antiporters in facultatively acidophilic; UniProtKB:Q9I191 (pvdR, Pyoverdine export membrane fusion protein PvdR) in Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1) provides a verified protein exemplar.", "reference": "DOI:10.3389/fmicb.2021.822229", "snippet": "proton export pumps and antiporters"}], "gene_symbol": "pvdR", "protein_label": "Pyoverdine export membrane fusion protein PvdR", "proteome_id": "UP000002438", "retrieved_on": "2026-10-17", "role": "Exemplar protein (pvdR, Pyoverdine export membrane fusion protein PvdR) representing proton export pumps and antiporters in Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1) for facultatively acidophilic.", "sequence_version": 1, "taxon_id": "NCBITaxon:208964", "taxon_label": "Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)", "uniprot_id": "UniProtKB:Q9I191"}], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Permeability of the cell membrane to protons.", "grounding": null, "id": "proton_permeability", "is_orphan": false, "label": "membrane proton permeability", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Reversed (inside-positive) transmembrane potential opposing proton entry.", "grounding": null, "id": "reversed_membrane_potential", "is_orphan": false, "label": "inside-positive (reversed) membrane potential", "node_type": "STATE", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 130, "evidence": [{"notes": "Supports proton export pumps and antiporters in facultatively acidophilic; UniProtKB:Q9I191 (pvdR, Pyoverdine export membrane fusion protein PvdR) in Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1) provides a verified protein exemplar.", "reference": "DOI:10.3389/fmicb.2021.822229", "snippet": "proton export pumps and antiporters"}], "gene_symbol": "pvdR", "node_id": "proton_export_pumps", "node_label": "proton export pumps and antiporters", "protein_label": "Pyoverdine export membrane fusion protein PvdR", "proteome_id": "UP000002438", "retrieved_on": "2026-10-17", "role": "Exemplar protein (pvdR, Pyoverdine export membrane fusion protein PvdR) representing proton export pumps and antiporters in Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1) for facultatively acidophilic.", "sequence_version": 1, "taxon_id": "NCBITaxon:208964", "taxon_label": "Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)", "uniprot_id": "UniProtKB:Q9I191"}, {"entry_status": "REVIEWED", "entry_version": 122, "evidence": [{"notes": "Supports glutamate decarboxylase system in facultatively acidophilic; UniProtKB:Q9F5P3 (gadA, Glutamate decarboxylase alpha) in Listeria monocytogenes serovar 1/2a (strain ATCC BAA-679 / EGD-e) provides a verified protein exemplar.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "For pH homeostasis under alkaline conditions, active transport of protons inward is a crucial adaptation, which usually involves activation and transcriptional up-regulation of key cation/proton antiporters"}], "gene_symbol": "gadA", "node_id": "glutamate_decarboxylase_system", "node_label": "glutamate decarboxylase system", "protein_label": "Glutamate decarboxylase alpha", "proteome_id": "UP000000817", "retrieved_on": "2026-10-17", "role": "Exemplar protein (gadA, Glutamate decarboxylase alpha) representing glutamate decarboxylase system in Listeria monocytogenes serovar 1/2a (strain ATCC BAA-679 / EGD-e) for facultatively acidophilic.", "sequence_version": 2, "taxon_id": "NCBITaxon:169963", "taxon_label": "Listeria monocytogenes serovar 1/2a (strain ATCC BAA-679 / EGD-e)", "uniprot_id": "UniProtKB:Q9F5P3"}], "scope_notes": "This record is a broad environmental or morphological classification spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement descriptor; contextual protein nodes include source-backed UniProtKB exemplars.", "scope_status": "NONMECHANISTIC", "title": "Facultative acidophily pH homeostasis mechanism"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking facultative acidophily to acidic growth, near-neutral growth capacity, and inducible pH homeostasis.", "edges": [{"description": "Acidic pH selects for acidophilic growth capacity.", "evidence": [{"notes": "Supports acidophilic classification by acidic growth optimum.", "reference": "DOI:10.3389/fmicb.2021.822229", "snippet": "acidic optimal growth pH"}], "id": "edge-1", "is_orphan": false, "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "acidic_external_ph", "target": "facultatively_acidophilic_trait"}, {"description": "Facultatively acidophilic growth can extend into near-neutral pH.", "evidence": [{"notes": "Species-level evidence supports acidic-to-near-neutral growth range; this edge is qualified rather than generalized to all taxa.", "reference": "DOI:10.1099/ijs.0.066175-0", "snippet": "capable of growth at pH 4.0-7.2"}], "id": "edge-2", "is_orphan": false, "predicate": "is compatible with", "predicate_id": null, "source": "near_neutral_external_ph", "target": "facultatively_acidophilic_trait"}, {"description": "Acidic pH imposes an external-to-internal proton gradient.", "evidence": [{"notes": "Supports proton-gradient stress during low-pH growth.", "reference": "DOI:10.3389/fmicb.2021.822229", "snippet": "external to internal proton gradient"}], "id": "edge-3", "is_orphan": false, "predicate": "increases gradient of", "predicate_id": "METPO:2007601", "source": "acidic_external_ph", "target": "proton"}, {"description": "Proton export and antiport systems contribute to acid-stress homeostasis.", "evidence": [{"notes": "Supports transporter-mediated pH homeostasis mechanisms.", "reference": "DOI:10.3389/fmicb.2021.822229", "snippet": "proton export pumps and antiporters"}], "id": "edge-4", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "proton_export_pumps", "target": "cytoplasmic_ph_homeostasis"}, {"description": "Buffering and proton-consuming reactions reduce cytoplasmic acidification.", "evidence": [{"notes": "Supports buffering as a proposed acid resistance mechanism.", "reference": "DOI:10.3389/fmicb.2021.822229", "snippet": "cytoplasmic buffering"}], "id": "edge-5", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "cytoplasmic_buffering", "target": "cytoplasmic_ph_homeostasis"}, {"description": "Growth across acidic and near-neutral pH requires intracellular pH control.", "evidence": [{"notes": "Supports cytoplasmic pH homeostasis for growth outside the preferred cytoplasmic pH range.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "robust mechanisms for cytoplasmic pH homeostasis"}], "id": "edge-6", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "cytoplasmic_ph_homeostasis", "target": "facultatively_acidophilic_trait"}, {"description": "Acidophilic growth requires preserving near-neutral cytoplasm against a steep proton gradient.", "evidence": [{"notes": "maintain a near-neutral cytoplasm despite an external-to-internal proton gradient up to 10^5-fold.", "reference": "DOI:10.3389/fmicb.2021.822229"}], "id": "edge-7", "is_orphan": false, "predicate": "necessitates maintenance of", "predicate_id": null, "source": "acidic_external_ph", "target": "near_neutral_cytoplasm"}, {"description": "Intracellular K+ accumulation generates an inside-positive potential that opposes proton influx.", "evidence": [{"notes": "internal positive membrane potential thought to be generated by potassium ions.", "reference": "DOI:10.3389/fmicb.2021.822229"}], "id": "edge-8", "is_orphan": false, "predicate": "generates", "predicate_id": "biolink:produces", "source": "potassium_ion", "target": "reversed_membrane_potential"}, {"description": "An inside-positive membrane potential is a first-line defense reducing proton entry, supporting pH homeostasis.", "evidence": [{"notes": "Inside-positive potential generated by K+ opposes proton influx as a first-line defense.", "reference": "DOI:10.3389/fmicb.2021.822229"}], "id": "edge-9", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "reversed_membrane_potential", "target": "cytoplasmic_ph_homeostasis"}, {"description": "Hopanoids stiffen the membrane and reduce proton permeability under low pH.", "evidence": [{"notes": "membrane alterations via inclusion of hopanoids linked to acidophilic lifestyle.", "reference": "DOI:10.3389/fmicb.2021.822229"}], "id": "edge-10", "is_orphan": false, "predicate": "decreases", "predicate_id": "RO:0002212", "source": "hopanoid_biosynthesis", "target": "proton_permeability"}, {"description": "A rigid, impermeable membrane acts as a barrier limiting proton entry into the cell.", "evidence": [{"notes": "acidophiles use a rigid and impermeable membrane that resists proton entry.", "reference": "DOI:10.3389/fmicb.2023.1149903"}], "id": "edge-11", "is_orphan": false, "predicate": "limits", "predicate_id": "RO:0002212", "source": "impermeable_membrane", "target": "proton"}, {"description": "Proton export pumps and antiporters directly remove protons that enter the cytoplasm.", "evidence": [{"notes": "proton export pumps and antiporters listed among mechanisms maintaining pH homeostasis.", "reference": "DOI:10.3389/fmicb.2021.822229"}], "id": "edge-12", "is_orphan": false, "predicate": "expels", "predicate_id": null, "source": "proton_export_pumps", "target": "proton"}, {"description": "Glutamate decarboxylation consumes intracellular protons as a second-line acid resistance route.", "evidence": [{"notes": "proton consuming reactions such as glutamate decarboxylase; gadABC among acid-adaptation genes.", "reference": "DOI:10.3389/fmicb.2021.822229"}], "id": "edge-13", "is_orphan": false, "predicate": "consumes", "predicate_id": "biolink:consumes", "source": "glutamate_decarboxylase_system", "target": "proton"}, {"description": "Cytoplasmic buffering dampens pH fluctuations to stabilize intracellular pH.", "evidence": [{"notes": "shared mechanisms include cytoplasmic buffering that stabilizes intracellular pH.", "reference": "DOI:10.3389/fmicb.2023.1149903"}], "id": "edge-14", "is_orphan": false, "predicate": "stabilizes", "predicate_id": null, "source": "cytoplasmic_buffering", "target": "intracellular_ph"}], "evidence_rows": [{"description": "Acidic pH selects for acidophilic growth capacity.", "edge_id": "edge-1", "evidence": [{"notes": "Supports acidophilic classification by acidic growth optimum.", "reference": "DOI:10.3389/fmicb.2021.822229", "snippet": "acidic optimal growth pH"}], "predicate": "selects for", "predicate_id": "METPO:2007401", "source": "acidic external pH", "source_grounding": "PATO:0001429", "target": "facultatively acidophilic", "target_grounding": "METPO:1003007"}, {"description": "Facultatively acidophilic growth can extend into near-neutral pH.", "edge_id": "edge-2", "evidence": [{"notes": "Species-level evidence supports acidic-to-near-neutral growth range; this edge is qualified rather than generalized to all taxa.", "reference": "DOI:10.1099/ijs.0.066175-0", "snippet": "capable of growth at pH 4.0-7.2"}], "predicate": "is compatible with", "predicate_id": null, "source": "near-neutral external pH", "source_grounding": "PATO:0001428", "target": "facultatively acidophilic", "target_grounding": "METPO:1003007"}, {"description": "Acidic pH imposes an external-to-internal proton gradient.", "edge_id": "edge-3", "evidence": [{"notes": "Supports proton-gradient stress during low-pH growth.", "reference": "DOI:10.3389/fmicb.2021.822229", "snippet": "external to internal proton gradient"}], "predicate": "increases gradient of", "predicate_id": "METPO:2007601", "source": "acidic external pH", "source_grounding": "PATO:0001429", "target": "proton", "target_grounding": "CHEBI:15378"}, {"description": "Proton export and antiport systems contribute to acid-stress homeostasis.", "edge_id": "edge-4", "evidence": [{"notes": "Supports transporter-mediated pH homeostasis mechanisms.", "reference": "DOI:10.3389/fmicb.2021.822229", "snippet": "proton export pumps and antiporters"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "proton export pumps and antiporters", "source_grounding": null, "target": "cytoplasmic pH homeostasis", "target_grounding": "GO:0051453"}, {"description": "Buffering and proton-consuming reactions reduce cytoplasmic acidification.", "edge_id": "edge-5", "evidence": [{"notes": "Supports buffering as a proposed acid resistance mechanism.", "reference": "DOI:10.3389/fmicb.2021.822229", "snippet": "cytoplasmic buffering"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "cytoplasmic buffering", "source_grounding": null, "target": "cytoplasmic pH homeostasis", "target_grounding": "GO:0051453"}, {"description": "Growth across acidic and near-neutral pH requires intracellular pH control.", "edge_id": "edge-6", "evidence": [{"notes": "Supports cytoplasmic pH homeostasis for growth outside the preferred cytoplasmic pH range.", "reference": "DOI:10.1038/nrmicro2549", "snippet": "robust mechanisms for cytoplasmic pH homeostasis"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "cytoplasmic pH homeostasis", "source_grounding": "GO:0051453", "target": "facultatively acidophilic", "target_grounding": "METPO:1003007"}, {"description": "Acidophilic growth requires preserving near-neutral cytoplasm against a steep proton gradient.", "edge_id": "edge-7", "evidence": [{"notes": "maintain a near-neutral cytoplasm despite an external-to-internal proton gradient up to 10^5-fold.", "reference": "DOI:10.3389/fmicb.2021.822229"}], "predicate": "necessitates maintenance of", "predicate_id": null, "source": "acidic external pH", "source_grounding": "PATO:0001429", "target": "near-neutral cytoplasm", "target_grounding": null}, {"description": "Intracellular K+ accumulation generates an inside-positive potential that opposes proton influx.", "edge_id": "edge-8", "evidence": [{"notes": "internal positive membrane potential thought to be generated by potassium ions.", "reference": "DOI:10.3389/fmicb.2021.822229"}], "predicate": "generates", "predicate_id": "biolink:produces", "source": "potassium ion", "source_grounding": "CHEBI:29103", "target": "inside-positive (reversed) membrane potential", "target_grounding": null}, {"description": "An inside-positive membrane potential is a first-line defense reducing proton entry, supporting pH homeostasis.", "edge_id": "edge-9", "evidence": [{"notes": "Inside-positive potential generated by K+ opposes proton influx as a first-line defense.", "reference": "DOI:10.3389/fmicb.2021.822229"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "inside-positive (reversed) membrane potential", "source_grounding": null, "target": "cytoplasmic pH homeostasis", "target_grounding": "GO:0051453"}, {"description": "Hopanoids stiffen the membrane and reduce proton permeability under low pH.", "edge_id": "edge-10", "evidence": [{"notes": "membrane alterations via inclusion of hopanoids linked to acidophilic lifestyle.", "reference": "DOI:10.3389/fmicb.2021.822229"}], "predicate": "decreases", "predicate_id": "RO:0002212", "source": "hopanoid biosynthetic process", "source_grounding": "GO:0019746", "target": "membrane proton permeability", "target_grounding": null}, {"description": "A rigid, impermeable membrane acts as a barrier limiting proton entry into the cell.", "edge_id": "edge-11", "evidence": [{"notes": "acidophiles use a rigid and impermeable membrane that resists proton entry.", "reference": "DOI:10.3389/fmicb.2023.1149903"}], "predicate": "limits", "predicate_id": "RO:0002212", "source": "rigid impermeable membrane", "source_grounding": null, "target": "proton", "target_grounding": "CHEBI:15378"}, {"description": "Proton export pumps and antiporters directly remove protons that enter the cytoplasm.", "edge_id": "edge-12", "evidence": [{"notes": "proton export pumps and antiporters listed among mechanisms maintaining pH homeostasis.", "reference": "DOI:10.3389/fmicb.2021.822229"}], "predicate": "expels", "predicate_id": null, "source": "proton export pumps and antiporters", "source_grounding": null, "target": "proton", "target_grounding": "CHEBI:15378"}, {"description": "Glutamate decarboxylation consumes intracellular protons as a second-line acid resistance route.", "edge_id": "edge-13", "evidence": [{"notes": "proton consuming reactions such as glutamate decarboxylase; gadABC among acid-adaptation genes.", "reference": "DOI:10.3389/fmicb.2021.822229"}], "predicate": "consumes", "predicate_id": "biolink:consumes", "source": "glutamate decarboxylase system", "source_grounding": null, "target": "proton", "target_grounding": "CHEBI:15378"}, {"description": "Cytoplasmic buffering dampens pH fluctuations to stabilize intracellular pH.", "edge_id": "edge-14", "evidence": [{"notes": "shared mechanisms include cytoplasmic buffering that stabilizes intracellular pH.", "reference": "DOI:10.3389/fmicb.2023.1149903"}], "predicate": "stabilizes", "predicate_id": null, "source": "cytoplasmic buffering", "source_grounding": null, "target": "intracellular pH", "target_grounding": null}], "graph_id": "facultatively_acidophilic_ph_homeostasis", "issues": [], "nodes": [{"color": "#dcfce7", "description": "External pH below neutral that supports acidophilic growth.", "grounding": "PATO:0001429", "id": "acidic_external_ph", "is_orphan": false, "label": "acidic external pH", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Cellular buffering and proton-consuming reactions that mitigate acidification.", "grounding": null, "id": "cytoplasmic_buffering", "is_orphan": false, "label": "cytoplasmic buffering", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Maintenance of intracellular pH across acidic and near-neutral environments.", "grounding": "GO:0051453", "id": "cytoplasmic_ph_homeostasis", "is_orphan": false, "label": "cytoplasmic pH homeostasis", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Optimal growth occurs under acidic conditions while near-neutral growth remains possible.", "grounding": "METPO:1003007", "id": "facultatively_acidophilic_trait", "is_orphan": false, "label": "facultatively acidophilic", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Decarboxylase (Gad) system consuming intracellular protons during acid stress.", "grounding": null, "id": "glutamate_decarboxylase_system", "is_orphan": false, "label": "glutamate decarboxylase system", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Synthesis of hopanoids that rigidify the membrane against proton influx.", "grounding": "GO:0019746", "id": "hopanoid_biosynthesis", "is_orphan": false, "label": "hopanoid biosynthetic process", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ede9fe", "description": "A rigid, low-permeability membrane that acts as a barrier to proton entry.", "grounding": null, "id": "impermeable_membrane", "is_orphan": false, "label": "rigid impermeable membrane", "node_type": "CELLULAR_LOCALIZATION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Cytoplasmic pH value stabilized by buffering and homeostatic systems.", "grounding": null, "id": "intracellular_ph", "is_orphan": false, "label": "intracellular pH", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Cytoplasmic pH maintained near neutrality despite low external pH.", "grounding": null, "id": "near_neutral_cytoplasm", "is_orphan": false, "label": "near-neutral cytoplasm", "node_type": "STATE", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "External pH near neutrality that facultative acidophiles can tolerate or grow in.", "grounding": "PATO:0001428", "id": "near_neutral_external_ph", "is_orphan": false, "label": "near-neutral external pH", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Intracellular cation accumulated to oppose proton influx.", "grounding": "CHEBI:29103", "id": "potassium_ion", "is_orphan": false, "label": "potassium ion", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Hydrogen ion contributing to low-pH stress.", "grounding": "CHEBI:15378", "id": "proton", "is_orphan": false, "label": "proton", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Transport systems proposed to remove protons or exchange ions during acid stress.", "grounding": null, "id": "proton_export_pumps", "is_orphan": false, "label": "proton export pumps and antiporters", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Permeability of the cell membrane to protons.", "grounding": null, "id": "proton_permeability", "is_orphan": false, "label": "membrane proton permeability", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Reversed (inside-positive) transmembrane potential opposing proton entry.", "grounding": null, "id": "reversed_membrane_potential", "is_orphan": false, "label": "inside-positive (reversed) membrane potential", "node_type": "STATE", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This record is a broad environmental or morphological classification spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement descriptor; contextual protein nodes do not receive token UniProt examples.", "scope_status": "NONMECHANISTIC", "title": "Facultative acidophily pH homeostasis mechanism"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -1143,13 +1182,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-10-17 09:00 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

@@ -13,7 +13,12 @@
     <nav>
       <a href="../index.html">Home</a>
       <a href="../browse.html">Browse</a>
+      <a href="../map.html">Text map</a>
+      <a href="../sequence-map.html">Sequence map (pLM)</a>
       <a href="../umap.html">Embedding space</a>
+      <a href="../graph.html">Graph layout</a>
+      <a href="../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -26,10 +31,37 @@
   <h1>Ecology <span class="meta">(40)</span></h1>
 </header>
 
+<div class="browse-layout">
+<aside id="facet-sidebar" class="facet-sidebar" aria-label="Filter traits">
+  <h2>Filter records</h2>
+  <div class="facet-group">
+    <div class="facet-group-title">Category</div>
+    <div class="facet-options">
+      <button type="button" class="facet-btn active" data-facet="category" data-val=""><span>All categories</span><span class="facet-count">40</span></button>
+
+      <button type="button" class="facet-btn" data-facet="category" data-val="ECOLOGY"><span>ECOLOGY</span><span class="facet-count">40</span></button>
+
+    </div>
+  </div>
+  <div class="facet-group">
+    <div class="facet-group-title">Term kind</div>
+    <div class="facet-options">
+      <button type="button" class="facet-btn active" data-facet="kind" data-val=""><span>All kinds</span><span class="facet-count">40</span></button>
+
+
+      <button type="button" class="facet-btn" data-facet="kind" data-val="CLASS"><span>CLASS</span><span class="facet-count">40</span></button>
+
+
+    </div>
+  </div>
+  <button type="button" id="facet-clear-btn" class="facet-clear">Clear all filters</button>
+</aside>
+<div class="browse-main">
 <form id="record-filters" class="record-filters" hidden>
-  <div><label for="record-query">Search records</label><input id="record-query" type="search" placeholder="Label, identifier, definition…"></div>
+  <div class="record-query-wrap"><label for="record-query">Search records</label><input id="record-query" type="search" placeholder="Search by label, METPO CURIE, synonym, or definition…"></div>
   <div><label for="record-category">Category</label><select id="record-category"><option value="">All categories</option><option value="ECOLOGY">ECOLOGY</option></select></div>
   <div><label for="record-kind">Kind</label><select id="record-kind"><option value="">All kinds</option><option value="CLASS">CLASS</option></select></div>
+  <div><label for="record-sort">Sort by</label><select id="record-sort" name="sort"><option value="label-asc">Label (A–Z)</option><option value="label-desc">Label (Z–A)</option><option value="id-asc">Identifier (A–Z)</option><option value="category">Category</option><option value="kind">Kind</option><option value="kgm-desc">kg-microbe nodes (high–low)</option><option value="synonyms-desc">Synonyms (high–low)</option></select></div>
   <button type="reset">Clear filters</button>
 </form>
 <p id="record-count" role="status" aria-live="polite">40 records</p>
@@ -42,9 +74,9 @@
 
 <tr data-category="ECOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/ecology/animal_pathogen.html">animal pathogen</a><p class="record-definition">A pathogen that infects organisms in the kingdom Metazoa.</p></td><td><code>METPO:1004002</code></td><td>ECOLOGY</td><td>CLASS</td><td>1</td><td>0</td></tr>
 
-<tr data-category="ECOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/ecology/bacterial_cannibalism.html">bacterial cannibalism</a><p class="record-definition">A predatory bacterial phenotype in which cells kill susceptible conspecific cells and obtain nutrients from the killed cells.</p></td><td><code>traitmech:000626</code></td><td>ECOLOGY</td><td>CLASS</td><td>0</td><td>0</td></tr>
+<tr data-category="ECOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/ecology/bacterial_cannibalism.html">bacterial cannibalism</a><p class="record-definition">A predatory bacterial phenotype in which cells kill susceptible conspecific cells and obtain nutrients from the killed cells.</p></td><td><code>traitmech:000626</code></td><td>ECOLOGY</td><td>CLASS</td><td>1</td><td>0</td></tr>
 
-<tr data-category="ECOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/ecology/bacterial_mycophagy.html">bacterial mycophagy</a><p class="record-definition">A trophic-ecology phenotype in which a bacterium actively obtains nutrients from living fungi or oomycetes and uses them for its own growth.</p></td><td><code>traitmech:000696</code></td><td>ECOLOGY</td><td>CLASS</td><td>0</td><td>0</td></tr>
+<tr data-category="ECOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/ecology/bacterial_mycophagy.html">bacterial mycophagy</a><p class="record-definition">A trophic-ecology phenotype in which a bacterium actively obtains nutrients from living fungi or oomycetes and uses them for its own growth.</p></td><td><code>traitmech:000696</code></td><td>ECOLOGY</td><td>CLASS</td><td>1</td><td>0</td></tr>
 
 <tr data-category="ECOLOGY" data-kind="CLASS" data-synonyms="biofilm-forming"><td><a href="../traits/ecology/biofilm_formation.html">biofilm formation</a><p class="record-definition">An ecological lifestyle in which cells form surface-attached, matrix-enclosed multicellular communities (biofilms) held together by extracellular polymeric substances — a widespread mode of microbial life.</p></td><td><code>traitmech:000053</code></td><td>ECOLOGY</td><td>CLASS</td><td>1</td><td>1</td></tr>
 
@@ -60,27 +92,27 @@
 
 <tr data-category="ECOLOGY" data-kind="CLASS" data-synonyms="5"><td><a href="../traits/ecology/biosafety_level_5.html">biosafety level 5</a><p class="record-definition">A biosafety level that is proposed as a classification beyond BSL-4 for hypothetical biological agents requiring enhanced containment.</p></td><td><code>METPO:1001106</code></td><td>ECOLOGY</td><td>CLASS</td><td>1</td><td>1</td></tr>
 
-<tr data-category="ECOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/ecology/collective_bacterial_predation.html">collective bacterial predation</a><p class="record-definition">A predatory bacterial phenotype in which cells act in coordinated multicellular groups to kill bacterial prey and obtain nutrients from the killed cells.</p></td><td><code>traitmech:000701</code></td><td>ECOLOGY</td><td>CLASS</td><td>0</td><td>0</td></tr>
+<tr data-category="ECOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/ecology/collective_bacterial_predation.html">collective bacterial predation</a><p class="record-definition">A predatory bacterial phenotype in which cells act in coordinated multicellular groups to kill bacterial prey and obtain nutrients from the killed cells.</p></td><td><code>traitmech:000701</code></td><td>ECOLOGY</td><td>CLASS</td><td>1</td><td>0</td></tr>
 
 <tr data-category="ECOLOGY" data-kind="CLASS" data-synonyms="commensal"><td><a href="../traits/ecology/commensalism.html">commensalism</a><p class="record-definition">A symbiosis in which the microorganism benefits from the association (e.g. resources, shelter, transport) while the host&#39;s fitness remains essentially unaffected.</p></td><td><code>traitmech:000042</code></td><td>ECOLOGY</td><td>CLASS</td><td>1</td><td>1</td></tr>
 
-<tr data-category="ECOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/ecology/cytoplasmic_bacterial_predation.html">cytoplasmic bacterial predation</a><p class="record-definition">A predatory bacterial phenotype in which a bacterium enters the cytoplasm of a bacterial prey cell and grows and reproduces there by consuming and degrading the prey cytoplasm.</p></td><td><code>traitmech:000700</code></td><td>ECOLOGY</td><td>CLASS</td><td>0</td><td>0</td></tr>
+<tr data-category="ECOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/ecology/cytoplasmic_bacterial_predation.html">cytoplasmic bacterial predation</a><p class="record-definition">A predatory bacterial phenotype in which a bacterium enters the cytoplasm of a bacterial prey cell and grows and reproduces there by consuming and degrading the prey cytoplasm.</p></td><td><code>traitmech:000700</code></td><td>ECOLOGY</td><td>CLASS</td><td>1</td><td>0</td></tr>
 
-<tr data-category="ECOLOGY" data-kind="CLASS" data-synonyms="endophyte endophytism"><td><a href="../traits/ecology/endophytic.html">endophytic</a><p class="record-definition">A host-associated trait in which a microbe resides within living internal plant tissues without causing apparent disease in the host.</p></td><td><code>traitmech:000442</code></td><td>ECOLOGY</td><td>CLASS</td><td>0</td><td>2</td></tr>
+<tr data-category="ECOLOGY" data-kind="CLASS" data-synonyms="endophyte endophytism"><td><a href="../traits/ecology/endophytic.html">endophytic</a><p class="record-definition">A host-associated trait in which a microbe resides within living internal plant tissues without causing apparent disease in the host.</p></td><td><code>traitmech:000442</code></td><td>ECOLOGY</td><td>CLASS</td><td>1</td><td>2</td></tr>
 
 <tr data-category="ECOLOGY" data-kind="CLASS" data-synonyms="endosymbiont"><td><a href="../traits/ecology/endosymbiosis.html">endosymbiosis</a><p class="record-definition">A symbiosis in which the microorganism lives inside the cells or tissues of its host. Obligate intracellular endosymbionts (e.g. of insects) frequently undergo extreme genome reduction.</p></td><td><code>traitmech:000045</code></td><td>ECOLOGY</td><td>CLASS</td><td>1</td><td>1</td></tr>
 
-<tr data-category="ECOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/ecology/epibiotic_bacterial_predation.html">epibiotic bacterial predation</a><p class="record-definition">A predatory bacterial phenotype in which a bacterium kills and obtains nutrients from bacterial prey while attached and growing externally, without its cell body entering the prey cell.</p></td><td><code>traitmech:000697</code></td><td>ECOLOGY</td><td>CLASS</td><td>0</td><td>0</td></tr>
+<tr data-category="ECOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/ecology/epibiotic_bacterial_predation.html">epibiotic bacterial predation</a><p class="record-definition">A predatory bacterial phenotype in which a bacterium kills and obtains nutrients from bacterial prey while attached and growing externally, without its cell body entering the prey cell.</p></td><td><code>traitmech:000697</code></td><td>ECOLOGY</td><td>CLASS</td><td>1</td><td>0</td></tr>
 
-<tr data-category="ECOLOGY" data-kind="CLASS" data-synonyms="epiphyte phyllosphere association"><td><a href="../traits/ecology/epiphytic.html">epiphytic</a><p class="record-definition">A host-associated trait in which a microbe resides on living aerial plant surfaces.</p></td><td><code>traitmech:000443</code></td><td>ECOLOGY</td><td>CLASS</td><td>0</td><td>2</td></tr>
+<tr data-category="ECOLOGY" data-kind="CLASS" data-synonyms="epiphyte phyllosphere association"><td><a href="../traits/ecology/epiphytic.html">epiphytic</a><p class="record-definition">A host-associated trait in which a microbe resides on living aerial plant surfaces.</p></td><td><code>traitmech:000443</code></td><td>ECOLOGY</td><td>CLASS</td><td>1</td><td>2</td></tr>
 
 <tr data-category="ECOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/ecology/free_living.html">free-living</a><p class="record-definition">A habitat association in which an organism lives independently in the environment, not obligately associated with a host.</p></td><td><code>traitmech:000048</code></td><td>ECOLOGY</td><td>CLASS</td><td>1</td><td>0</td></tr>
 
-<tr data-category="ECOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/ecology/fungal_nematode_egg_parasitism.html">fungal nematode egg parasitism</a><p class="record-definition">An animal-pathogenic phenotype in which a fungus infects nematode eggs by penetrating their eggshells and colonizing their interiors.</p></td><td><code>traitmech:000726</code></td><td>ECOLOGY</td><td>CLASS</td><td>0</td><td>0</td></tr>
+<tr data-category="ECOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/ecology/fungal_nematode_egg_parasitism.html">fungal nematode egg parasitism</a><p class="record-definition">An animal-pathogenic phenotype in which a fungus infects nematode eggs by penetrating their eggshells and colonizing their interiors.</p></td><td><code>traitmech:000726</code></td><td>ECOLOGY</td><td>CLASS</td><td>1</td><td>0</td></tr>
 
-<tr data-category="ECOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/ecology/fungal_nematode_endoparasitism.html">fungal nematode endoparasitism</a><p class="record-definition">An animal-pathogenic phenotype in which a fungus uses spores attached to or ingested by a vermiform nematode to initiate infection and then grows inside the host.</p></td><td><code>traitmech:000727</code></td><td>ECOLOGY</td><td>CLASS</td><td>0</td><td>0</td></tr>
+<tr data-category="ECOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/ecology/fungal_nematode_endoparasitism.html">fungal nematode endoparasitism</a><p class="record-definition">An animal-pathogenic phenotype in which a fungus uses spores attached to or ingested by a vermiform nematode to initiate infection and then grows inside the host.</p></td><td><code>traitmech:000727</code></td><td>ECOLOGY</td><td>CLASS</td><td>1</td><td>0</td></tr>
 
-<tr data-category="ECOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/ecology/fungal_nematophagy.html">fungal nematophagy</a><p class="record-definition">A nutritional phenotype in which a fungus consumes nematodes as food.</p></td><td><code>traitmech:000719</code></td><td>ECOLOGY</td><td>CLASS</td><td>0</td><td>0</td></tr>
+<tr data-category="ECOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/ecology/fungal_nematophagy.html">fungal nematophagy</a><p class="record-definition">A nutritional phenotype in which a fungus consumes nematodes as food.</p></td><td><code>traitmech:000719</code></td><td>ECOLOGY</td><td>CLASS</td><td>1</td><td>0</td></tr>
 
 <tr data-category="ECOLOGY" data-kind="CLASS" data-synonyms="intestinal"><td><a href="../traits/ecology/gut_associated.html">gut-associated</a><p class="record-definition">A host association in which an organism is a persistent member of the gastrointestinal microbiota of an animal host, often contributing to host nutrition and physiology.</p></td><td><code>traitmech:000052</code></td><td>ECOLOGY</td><td>CLASS</td><td>1</td><td>1</td></tr>
 
@@ -90,15 +122,15 @@
 
 <tr data-category="ECOLOGY" data-kind="CLASS" data-synonyms="human_pathogens_all"><td><a href="../traits/ecology/human_pathogen.html">human pathogen</a><p class="record-definition">A pathogen that infects organisms of the species Homo sapiens.</p></td><td><code>METPO:1004004</code></td><td>ECOLOGY</td><td>CLASS</td><td>1</td><td>1</td></tr>
 
-<tr data-category="ECOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/ecology/ixotrophy.html">ixotrophy</a><p class="record-definition">A trophic-ecology phenotype in which filamentous bacteria capture microbial prey on their cell surface and kill the captured cells to obtain prey-derived nutrients.</p></td><td><code>traitmech:000698</code></td><td>ECOLOGY</td><td>CLASS</td><td>0</td><td>0</td></tr>
+<tr data-category="ECOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/ecology/ixotrophy.html">ixotrophy</a><p class="record-definition">A trophic-ecology phenotype in which filamentous bacteria capture microbial prey on their cell surface and kill the captured cells to obtain prey-derived nutrients.</p></td><td><code>traitmech:000698</code></td><td>ECOLOGY</td><td>CLASS</td><td>1</td><td>0</td></tr>
 
-<tr data-category="ECOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/ecology/kin_discrimination.html">kin discrimination</a><p class="record-definition">An ecological phenotype in which microbial cells preferentially associate with kin or exclude nonkin through differential interactions according to genetic similarity or relatedness.</p></td><td><code>traitmech:000716</code></td><td>ECOLOGY</td><td>CLASS</td><td>0</td><td>0</td></tr>
+<tr data-category="ECOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/ecology/kin_discrimination.html">kin discrimination</a><p class="record-definition">An ecological phenotype in which microbial cells preferentially associate with kin or exclude nonkin through differential interactions according to genetic similarity or relatedness.</p></td><td><code>traitmech:000716</code></td><td>ECOLOGY</td><td>CLASS</td><td>1</td><td>0</td></tr>
 
 <tr data-category="ECOLOGY" data-kind="CLASS" data-synonyms="mutualist"><td><a href="../traits/ecology/mutualism.html">mutualism</a><p class="record-definition">A symbiosis in which both the microorganism and its host or partner benefit from the association, often through exchange of nutrients or services.</p></td><td><code>traitmech:000041</code></td><td>ECOLOGY</td><td>CLASS</td><td>1</td><td>1</td></tr>
 
 <tr data-category="ECOLOGY" data-kind="CLASS" data-synonyms="nitrogen-fixing symbiont root-nodule symbiosis"><td><a href="../traits/ecology/nitrogen_fixing_symbiosis.html">nitrogen-fixing symbiosis</a><p class="record-definition">A mutualistic symbiosis in which a diazotrophic bacterium fixes atmospheric N2 for a host plant — classically rhizobia in legume root nodules — in exchange for photosynthate.</p></td><td><code>traitmech:000044</code></td><td>ECOLOGY</td><td>CLASS</td><td>1</td><td>2</td></tr>
 
-<tr data-category="ECOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/ecology/nutritional_fungal_mycoparasitism.html">nutritional fungal mycoparasitism</a><p class="record-definition">An ecological phenotype in which a fungus obtains nutrients at the expense of another fungus, either from the living host or after killing it.</p></td><td><code>traitmech:000717</code></td><td>ECOLOGY</td><td>CLASS</td><td>0</td><td>0</td></tr>
+<tr data-category="ECOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/ecology/nutritional_fungal_mycoparasitism.html">nutritional fungal mycoparasitism</a><p class="record-definition">An ecological phenotype in which a fungus obtains nutrients at the expense of another fungus, either from the living host or after killing it.</p></td><td><code>traitmech:000717</code></td><td>ECOLOGY</td><td>CLASS</td><td>1</td><td>0</td></tr>
 
 <tr data-category="ECOLOGY" data-kind="CLASS" data-synonyms="opportunistic infection"><td><a href="../traits/ecology/opportunistic_pathogen.html">opportunistic pathogen</a><p class="record-definition">A host-association lifestyle in which a normally commensal or environmental microorganism causes disease only when host defenses are compromised or it reaches a normally sterile site.</p></td><td><code>traitmech:000046</code></td><td>ECOLOGY</td><td>CLASS</td><td>1</td><td>1</td></tr>
 
@@ -106,7 +138,7 @@
 
 <tr data-category="ECOLOGY" data-kind="CLASS" data-synonyms="General.keywords Safety information.risk assessment"><td><a href="../traits/ecology/pathogenic_to_host.html">pathogenic to host</a><p class="record-definition">A phenotype where a microbe is a pathogen of some host organism.</p></td><td><code>METPO:1004000</code></td><td>ECOLOGY</td><td>CLASS</td><td>1</td><td>2</td></tr>
 
-<tr data-category="ECOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/ecology/periplasmic_bacterial_predation.html">periplasmic bacterial predation</a><p class="record-definition">A predatory bacterial phenotype in which a bacterium enters the periplasm of a bacterial prey cell and grows and reproduces there using nutrients obtained by killing and consuming the prey.</p></td><td><code>traitmech:000699</code></td><td>ECOLOGY</td><td>CLASS</td><td>0</td><td>0</td></tr>
+<tr data-category="ECOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/ecology/periplasmic_bacterial_predation.html">periplasmic bacterial predation</a><p class="record-definition">A predatory bacterial phenotype in which a bacterium enters the periplasm of a bacterial prey cell and grows and reproduces there using nutrients obtained by killing and consuming the prey.</p></td><td><code>traitmech:000699</code></td><td>ECOLOGY</td><td>CLASS</td><td>1</td><td>0</td></tr>
 
 <tr data-category="ECOLOGY" data-kind="CLASS" data-synonyms=""><td><a href="../traits/ecology/plant_pathogen.html">plant pathogen</a><p class="record-definition">A pathogen that infects organisms in the kingdom Viridiplantae.</p></td><td><code>METPO:1004003</code></td><td>ECOLOGY</td><td>CLASS</td><td>1</td><td>0</td></tr>
 
@@ -123,6 +155,8 @@
 </tbody>
 </table>
 </div>
+</div>
+</div>
 <script src="../assets/record-browser.js" defer></script>
 
 </main>
@@ -137,13 +171,20 @@
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Corpus as of 2026-10-17 09:00 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

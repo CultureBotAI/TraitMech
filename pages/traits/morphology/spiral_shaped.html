@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/morphology.html">MORPHOLOGY</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/morphology.html">MORPHOLOGY</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>spiral shaped</h1>
     <p class="curie"><code>METPO:1000684</code> · CLASS · REVIEWED</p>
 
@@ -79,9 +90,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>curvature scaffold</strong>
+
             <span class="edge-predicate">regulates</span>
             <strong>peptidoglycan remodeling</strong>
-            <code>RO:0002211</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002211" rel="nofollow noreferrer"><code>RO:0002211</code></a>
             <p>Shape scaffolds or complexes bias wall remodeling to create curved and spiral forms.</p>
             <ul>
 
@@ -96,9 +109,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>peptidoglycan remodeling</strong>
+
             <span class="edge-predicate">enables</span>
             <strong>helical curvature</strong>
-            <code>RO:0002327</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002327" rel="nofollow noreferrer"><code>RO:0002327</code></a>
             <p>Peptidoglycan remodeling enables helical curvature and twist.</p>
             <ul>
 
@@ -113,9 +128,11 @@
 
           <li id="pathograph-1-edge-3">
             <strong>helical curvature</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>spiral shaped</strong>
-            <code>METPO:2007700</code>
+            <a href="https://w3id.org/metpo/1000684" rel="nofollow noreferrer"><code>METPO:1000684</code></a>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>Helical curvature produces a spiral-shaped cell body.</p>
             <ul>
 
@@ -130,9 +147,11 @@
 
           <li id="pathograph-1-edge-4">
             <strong>spiral shaped</strong>
+            <a href="https://w3id.org/metpo/1000684" rel="nofollow noreferrer"><code>METPO:1000684</code></a>
             <span class="edge-predicate">associated with</span>
             <strong>viscous motility environment</strong>
-            <code>biolink:associated_with</code>
+
+            <a href="https://w3id.org/biolink/vocab/associated_with" rel="nofollow noreferrer"><code>biolink:associated_with</code></a>
             <p>Spiral and curved morphologies can be associated with motility in viscous media.</p>
             <ul>
 
@@ -147,9 +166,11 @@
 
           <li id="pathograph-1-edge-5">
             <strong>peptidoglycan crosslinking relaxation</strong>
+
             <span class="edge-predicate">promotes</span>
             <strong>helical curvature</strong>
-            <code>RO:0002213</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002213" rel="nofollow noreferrer"><code>RO:0002213</code></a>
             <p>Relaxation of peptidoglycan crosslinking promotes helical/spiral shape.</p>
             <ul>
 
@@ -164,8 +185,10 @@
 
           <li id="pathograph-1-edge-6">
             <strong>elongasome entrapment</strong>
+
             <span class="edge-predicate">biases</span>
             <strong>biased outer-curve peptidoglycan biosynthesis</strong>
+
 
             <p>Caging/entrapment of the elongasome biases peptidoglycan insertion toward the outer curve.</p>
             <ul>
@@ -181,8 +204,10 @@
 
           <li id="pathograph-1-edge-7">
             <strong>biased outer-curve peptidoglycan biosynthesis</strong>
+
             <span class="edge-predicate">establishes</span>
             <strong>cell curvature</strong>
+
 
             <p>A zone of elevated outer-curve peptidoglycan biosynthesis distorts the wall cylinder and establishes curvature.</p>
             <ul>
@@ -198,9 +223,11 @@
 
           <li id="pathograph-1-edge-8">
             <strong>cell curvature</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>spiral shaped</strong>
-            <code>METPO:2007700</code>
+            <a href="https://w3id.org/metpo/1000684" rel="nofollow noreferrer"><code>METPO:1000684</code></a>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>Sustained cell curvature produces a spiral/helically curved cell.</p>
             <ul>
 
@@ -215,8 +242,10 @@
 
           <li id="pathograph-1-edge-9">
             <strong>periplasmic flagella</strong>
+
             <span class="edge-predicate">maintains</span>
             <strong>spiral shaped</strong>
+            <a href="https://w3id.org/metpo/1000684" rel="nofollow noreferrer"><code>METPO:1000684</code></a>
 
             <p>Periplasmic flagella serve as a cytoskeleton that maintains the spiral-shaped cell body.</p>
             <ul>
@@ -232,8 +261,10 @@
 
           <li id="pathograph-1-edge-10">
             <strong>periplasmic flagella</strong>
+
             <span class="edge-predicate">distorts</span>
             <strong>cell body</strong>
+
 
             <p>Periplasmic flagellar filaments distort and push the cell body to shape it.</p>
             <ul>
@@ -378,14 +409,26 @@
         </li>
 
         <li>
-          <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/twitching_motility.html">twitching motility</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/durotaxis.html">durotaxis</a>
           <span class="sim">0.302</span>
         </li>
 
         <li>
-          <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/swarming_motility.html">swarming motility</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/thermotaxis.html">thermotaxis</a>
+          <span class="sim">0.302</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/galvanotaxis.html">galvanotaxis</a>
+          <span class="sim">0.302</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/rheotaxis.html">rheotaxis</a>
           <span class="sim">0.302</span>
         </li>
 
@@ -397,26 +440,14 @@
 
         <li>
           <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/axially_filamented.html">axially filamented</a>
-          <span class="sim">0.296</span>
+          <a href="../../traits/morphology/twitching_motility.html">twitching motility</a>
+          <span class="sim">0.302</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/microaerophilic.html">microaerophilic</a>
-          <span class="sim">0.295</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/non_halophilic.html">non halophilic</a>
-          <span class="sim">0.268</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/non_spore_forming.html">non-spore forming</a>
-          <span class="sim">0.231</span>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/chemokinesis.html">chemokinesis</a>
+          <span class="sim">0.302</span>
         </li>
 
       </ul>
@@ -987,7 +1018,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking spiral morphology to scaffold-mediated curvature, peptidoglycan remodeling, and helical/spiral cell geometry.", "edges": [{"description": "Shape scaffolds or complexes bias wall remodeling to create curved and spiral forms.", "evidence": [{"notes": "Supports scaffold involvement in helical or spiral morphogenesis.", "reference": "DOI:10.1371/journal.pbio.1002565", "snippet": "cytoplasmic scaffolding proteins ... participate in helical morphogenesis"}], "id": "edge-1", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "curvature_scaffold", "target": "peptidoglycan_remodeling"}, {"description": "Peptidoglycan remodeling enables helical curvature and twist.", "evidence": [{"notes": "H. pylori provides a source-backed concrete mechanism for spiral-like helical morphology.", "reference": "DOI:10.1016/j.cell.2010.03.046", "snippet": "relaxes peptidoglycan crosslinking, enabling helical cell curvature and twist"}], "id": "edge-2", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "peptidoglycan_remodeling", "target": "helical_curvature"}, {"description": "Helical curvature produces a spiral-shaped cell body.", "evidence": [{"notes": "Supports helical/spiral cell shape as a recurring bacterial morphology.", "reference": "DOI:10.1371/journal.pbio.1002565", "snippet": "helical cells"}], "id": "edge-3", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "helical_curvature", "target": "spiral_shaped_trait"}, {"description": "Spiral and curved morphologies can be associated with motility in viscous media.", "evidence": [{"notes": "Functional association is broad and marked as an association, not as a universal cause of the trait.", "reference": "DOI:10.1371/journal.pbio.1002565", "snippet": "helical and curved cells appear to be optimized for motility"}], "id": "edge-4", "is_orphan": false, "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "spiral_shaped_trait", "target": "viscous_motility_environment"}, {"description": "Relaxation of peptidoglycan crosslinking promotes helical/spiral shape.", "evidence": [{"notes": "Peptidoglycan crosslinking relaxation promotes helical shape and colonization.", "reference": "DOI:10.3389/fmicb.2023.1162806"}], "id": "edge-5", "is_orphan": false, "predicate": "promotes", "predicate_id": "RO:0002213", "source": "pg_crosslink_relaxation", "target": "helical_curvature"}, {"description": "Caging/entrapment of the elongasome biases peptidoglycan insertion toward the outer curve.", "evidence": [{"notes": "Porin-PapS assemblies entrap the cell elongation machinery, biasing peptidoglycan insertion toward the outer curve.", "reference": "DOI:10.1038/s41467-024-51790-z"}], "id": "edge-6", "is_orphan": false, "predicate": "biases", "predicate_id": null, "source": "elongasome_entrapment", "target": "biased_outer_curve_pg_biosynthesis"}, {"description": "A zone of elevated outer-curve peptidoglycan biosynthesis distorts the wall cylinder and establishes curvature.", "evidence": [{"notes": "Creating a longitudinal zone of elevated peptidoglycan biosynthesis distorts the cell-wall cylinder and establishes curvature; ~15% bias suffices.", "reference": "DOI:10.1038/s41467-024-51790-z"}], "id": "edge-7", "is_orphan": false, "predicate": "establishes", "predicate_id": null, "source": "biased_outer_curve_pg_biosynthesis", "target": "cell_curvature"}, {"description": "Sustained cell curvature produces a spiral/helically curved cell.", "evidence": [{"notes": "Curvature established by biased outer-curve growth yields curved/helical cell morphology.", "reference": "DOI:10.1038/s41467-024-51790-z"}], "id": "edge-8", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "cell_curvature", "target": "spiral_shaped_trait"}, {"description": "Periplasmic flagella serve as a cytoskeleton that maintains the spiral-shaped cell body.", "evidence": [{"notes": "The periplasmic flagella serves as a cytoskeleton to maintain a spiral-shaped cell body.", "reference": "DOI:10.3390/biom14121488"}], "id": "edge-9", "is_orphan": false, "predicate": "maintains", "predicate_id": null, "source": "periplasmic_flagella", "target": "spiral_shaped_trait"}, {"description": "Periplasmic flagellar filaments distort and push the cell body to shape it.", "evidence": [{"notes": "Spirochete flagella inside the periplasm distort and push the cell body.", "reference": "DOI:10.1093/pnasnexus/pgad349"}], "id": "edge-10", "is_orphan": false, "predicate": "distorts", "predicate_id": null, "source": "periplasmic_flagella", "target": "cell_body"}], "evidence_rows": [{"description": "Shape scaffolds or complexes bias wall remodeling to create curved and spiral forms.", "edge_id": "edge-1", "evidence": [{"notes": "Supports scaffold involvement in helical or spiral morphogenesis.", "reference": "DOI:10.1371/journal.pbio.1002565", "snippet": "cytoplasmic scaffolding proteins ... participate in helical morphogenesis"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "curvature scaffold", "target": "peptidoglycan remodeling"}, {"description": "Peptidoglycan remodeling enables helical curvature and twist.", "edge_id": "edge-2", "evidence": [{"notes": "H. pylori provides a source-backed concrete mechanism for spiral-like helical morphology.", "reference": "DOI:10.1016/j.cell.2010.03.046", "snippet": "relaxes peptidoglycan crosslinking, enabling helical cell curvature and twist"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "peptidoglycan remodeling", "target": "helical curvature"}, {"description": "Helical curvature produces a spiral-shaped cell body.", "edge_id": "edge-3", "evidence": [{"notes": "Supports helical/spiral cell shape as a recurring bacterial morphology.", "reference": "DOI:10.1371/journal.pbio.1002565", "snippet": "helical cells"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "helical curvature", "target": "spiral shaped"}, {"description": "Spiral and curved morphologies can be associated with motility in viscous media.", "edge_id": "edge-4", "evidence": [{"notes": "Functional association is broad and marked as an association, not as a universal cause of the trait.", "reference": "DOI:10.1371/journal.pbio.1002565", "snippet": "helical and curved cells appear to be optimized for motility"}], "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "spiral shaped", "target": "viscous motility environment"}, {"description": "Relaxation of peptidoglycan crosslinking promotes helical/spiral shape.", "edge_id": "edge-5", "evidence": [{"notes": "Peptidoglycan crosslinking relaxation promotes helical shape and colonization.", "reference": "DOI:10.3389/fmicb.2023.1162806"}], "predicate": "promotes", "predicate_id": "RO:0002213", "source": "peptidoglycan crosslinking relaxation", "target": "helical curvature"}, {"description": "Caging/entrapment of the elongasome biases peptidoglycan insertion toward the outer curve.", "edge_id": "edge-6", "evidence": [{"notes": "Porin-PapS assemblies entrap the cell elongation machinery, biasing peptidoglycan insertion toward the outer curve.", "reference": "DOI:10.1038/s41467-024-51790-z"}], "predicate": "biases", "predicate_id": null, "source": "elongasome entrapment", "target": "biased outer-curve peptidoglycan biosynthesis"}, {"description": "A zone of elevated outer-curve peptidoglycan biosynthesis distorts the wall cylinder and establishes curvature.", "edge_id": "edge-7", "evidence": [{"notes": "Creating a longitudinal zone of elevated peptidoglycan biosynthesis distorts the cell-wall cylinder and establishes curvature; ~15% bias suffices.", "reference": "DOI:10.1038/s41467-024-51790-z"}], "predicate": "establishes", "predicate_id": null, "source": "biased outer-curve peptidoglycan biosynthesis", "target": "cell curvature"}, {"description": "Sustained cell curvature produces a spiral/helically curved cell.", "edge_id": "edge-8", "evidence": [{"notes": "Curvature established by biased outer-curve growth yields curved/helical cell morphology.", "reference": "DOI:10.1038/s41467-024-51790-z"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "cell curvature", "target": "spiral shaped"}, {"description": "Periplasmic flagella serve as a cytoskeleton that maintains the spiral-shaped cell body.", "edge_id": "edge-9", "evidence": [{"notes": "The periplasmic flagella serves as a cytoskeleton to maintain a spiral-shaped cell body.", "reference": "DOI:10.3390/biom14121488"}], "predicate": "maintains", "predicate_id": null, "source": "periplasmic flagella", "target": "spiral shaped"}, {"description": "Periplasmic flagellar filaments distort and push the cell body to shape it.", "edge_id": "edge-10", "evidence": [{"notes": "Spirochete flagella inside the periplasm distort and push the cell body.", "reference": "DOI:10.1093/pnasnexus/pgad349"}], "predicate": "distorts", "predicate_id": null, "source": "periplasmic flagella", "target": "cell body"}], "graph_id": "spiral_shaped_curvature_mechanisms", "issues": [], "nodes": [{"color": "#ecfccb", "description": "A longitudinal zone of elevated peptidoglycan insertion along the outer cell curve.", "grounding": null, "id": "biased_outer_curve_pg_biosynthesis", "is_orphan": false, "label": "biased outer-curve peptidoglycan biosynthesis", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ede9fe", "description": "The bacterial cell body (protoplasmic cylinder) whose shape is mechanically constrained.", "grounding": null, "id": "cell_body", "is_orphan": false, "label": "cell body", "node_type": "CELLULAR_LOCALIZATION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Bending of the cell-wall cylinder producing a curved or helical cell axis.", "grounding": null, "id": "cell_curvature", "is_orphan": false, "label": "cell curvature", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Protein scaffold or shape complex that biases cell curvature.", "grounding": null, "id": "curvature_scaffold", "is_orphan": false, "label": "curvature scaffold", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 94, "evidence": [{"notes": "Supports curvature scaffold in spiral shaped; UniProtKB:Q1D3H0 (bacN, Bactofilin BacN) in Myxococcus xanthus (strain DK1622) provides a verified protein exemplar.", "reference": "DOI:10.1371/journal.pbio.1002565", "snippet": "scaffold-mediated delineation of an inner curvature"}], "gene_symbol": "bacN", "protein_label": "Bactofilin BacN", "proteome_id": "UP000002402", "retrieved_on": "2026-10-17", "role": "Exemplar protein (bacN, Bactofilin BacN) representing curvature scaffold in Myxococcus xanthus (strain DK1622) for spiral shaped.", "sequence_version": 1, "taxon_id": "NCBITaxon:246197", "taxon_label": "Myxococcus xanthus (strain DK1622)", "uniprot_id": "UniProtKB:Q1D3H0"}], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Caging of the cell-elongation machinery that restricts where peptidoglycan is inserted.", "grounding": null, "id": "elongasome_entrapment", "is_orphan": false, "label": "elongasome entrapment", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Curved and twisted cell-wall geometry.", "grounding": null, "id": "helical_curvature", "is_orphan": false, "label": "helical curvature", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Local cell-wall synthesis, relaxation, or crosslink remodeling.", "grounding": null, "id": "peptidoglycan_remodeling", "is_orphan": false, "label": "peptidoglycan remodeling", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fce7f3", "description": "Endoflagella running within the periplasm of spirochetes that mechanically couple to the cell body.", "grounding": null, "id": "periplasmic_flagella", "is_orphan": false, "label": "periplasmic flagella", "node_type": "ORGANELLE", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Reduction in peptidoglycan crosslinking density that loosens the sacculus.", "grounding": null, "id": "pg_crosslink_relaxation", "is_orphan": false, "label": "peptidoglycan crosslinking relaxation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Spiral or helically curved bacterial morphology.", "grounding": "METPO:1000684", "id": "spiral_shaped_trait", "is_orphan": false, "label": "spiral shaped", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Viscous surroundings where curved or helical morphology can affect movement.", "grounding": null, "id": "viscous_motility_environment", "is_orphan": false, "label": "viscous motility environment", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 94, "evidence": [{"notes": "Supports curvature scaffold in spiral shaped; UniProtKB:Q1D3H0 (bacN, Bactofilin BacN) in Myxococcus xanthus (strain DK1622) provides a verified protein exemplar.", "reference": "DOI:10.1371/journal.pbio.1002565", "snippet": "scaffold-mediated delineation of an inner curvature"}], "gene_symbol": "bacN", "node_id": "curvature_scaffold", "node_label": "curvature scaffold", "protein_label": "Bactofilin BacN", "proteome_id": "UP000002402", "retrieved_on": "2026-10-17", "role": "Exemplar protein (bacN, Bactofilin BacN) representing curvature scaffold in Myxococcus xanthus (strain DK1622) for spiral shaped.", "sequence_version": 1, "taxon_id": "NCBITaxon:246197", "taxon_label": "Myxococcus xanthus (strain DK1622)", "uniprot_id": "UniProtKB:Q1D3H0"}], "scope_notes": "This record is a broad environmental or morphological classification spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement descriptor; contextual protein nodes include source-backed UniProtKB exemplars.", "scope_status": "NONMECHANISTIC", "title": "Spiral-shape curvature and cell-wall mechanism"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking spiral morphology to scaffold-mediated curvature, peptidoglycan remodeling, and helical/spiral cell geometry.", "edges": [{"description": "Shape scaffolds or complexes bias wall remodeling to create curved and spiral forms.", "evidence": [{"notes": "Supports scaffold involvement in helical or spiral morphogenesis.", "reference": "DOI:10.1371/journal.pbio.1002565", "snippet": "cytoplasmic scaffolding proteins ... participate in helical morphogenesis"}], "id": "edge-1", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "curvature_scaffold", "target": "peptidoglycan_remodeling"}, {"description": "Peptidoglycan remodeling enables helical curvature and twist.", "evidence": [{"notes": "H. pylori provides a source-backed concrete mechanism for spiral-like helical morphology.", "reference": "DOI:10.1016/j.cell.2010.03.046", "snippet": "relaxes peptidoglycan crosslinking, enabling helical cell curvature and twist"}], "id": "edge-2", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "peptidoglycan_remodeling", "target": "helical_curvature"}, {"description": "Helical curvature produces a spiral-shaped cell body.", "evidence": [{"notes": "Supports helical/spiral cell shape as a recurring bacterial morphology.", "reference": "DOI:10.1371/journal.pbio.1002565", "snippet": "helical cells"}], "id": "edge-3", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "helical_curvature", "target": "spiral_shaped_trait"}, {"description": "Spiral and curved morphologies can be associated with motility in viscous media.", "evidence": [{"notes": "Functional association is broad and marked as an association, not as a universal cause of the trait.", "reference": "DOI:10.1371/journal.pbio.1002565", "snippet": "helical and curved cells appear to be optimized for motility"}], "id": "edge-4", "is_orphan": false, "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "spiral_shaped_trait", "target": "viscous_motility_environment"}, {"description": "Relaxation of peptidoglycan crosslinking promotes helical/spiral shape.", "evidence": [{"notes": "Peptidoglycan crosslinking relaxation promotes helical shape and colonization.", "reference": "DOI:10.3389/fmicb.2023.1162806"}], "id": "edge-5", "is_orphan": false, "predicate": "promotes", "predicate_id": "RO:0002213", "source": "pg_crosslink_relaxation", "target": "helical_curvature"}, {"description": "Caging/entrapment of the elongasome biases peptidoglycan insertion toward the outer curve.", "evidence": [{"notes": "Porin-PapS assemblies entrap the cell elongation machinery, biasing peptidoglycan insertion toward the outer curve.", "reference": "DOI:10.1038/s41467-024-51790-z"}], "id": "edge-6", "is_orphan": false, "predicate": "biases", "predicate_id": null, "source": "elongasome_entrapment", "target": "biased_outer_curve_pg_biosynthesis"}, {"description": "A zone of elevated outer-curve peptidoglycan biosynthesis distorts the wall cylinder and establishes curvature.", "evidence": [{"notes": "Creating a longitudinal zone of elevated peptidoglycan biosynthesis distorts the cell-wall cylinder and establishes curvature; ~15% bias suffices.", "reference": "DOI:10.1038/s41467-024-51790-z"}], "id": "edge-7", "is_orphan": false, "predicate": "establishes", "predicate_id": null, "source": "biased_outer_curve_pg_biosynthesis", "target": "cell_curvature"}, {"description": "Sustained cell curvature produces a spiral/helically curved cell.", "evidence": [{"notes": "Curvature established by biased outer-curve growth yields curved/helical cell morphology.", "reference": "DOI:10.1038/s41467-024-51790-z"}], "id": "edge-8", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "cell_curvature", "target": "spiral_shaped_trait"}, {"description": "Periplasmic flagella serve as a cytoskeleton that maintains the spiral-shaped cell body.", "evidence": [{"notes": "The periplasmic flagella serves as a cytoskeleton to maintain a spiral-shaped cell body.", "reference": "DOI:10.3390/biom14121488"}], "id": "edge-9", "is_orphan": false, "predicate": "maintains", "predicate_id": null, "source": "periplasmic_flagella", "target": "spiral_shaped_trait"}, {"description": "Periplasmic flagellar filaments distort and push the cell body to shape it.", "evidence": [{"notes": "Spirochete flagella inside the periplasm distort and push the cell body.", "reference": "DOI:10.1093/pnasnexus/pgad349"}], "id": "edge-10", "is_orphan": false, "predicate": "distorts", "predicate_id": null, "source": "periplasmic_flagella", "target": "cell_body"}], "evidence_rows": [{"description": "Shape scaffolds or complexes bias wall remodeling to create curved and spiral forms.", "edge_id": "edge-1", "evidence": [{"notes": "Supports scaffold involvement in helical or spiral morphogenesis.", "reference": "DOI:10.1371/journal.pbio.1002565", "snippet": "cytoplasmic scaffolding proteins ... participate in helical morphogenesis"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "curvature scaffold", "source_grounding": null, "target": "peptidoglycan remodeling", "target_grounding": null}, {"description": "Peptidoglycan remodeling enables helical curvature and twist.", "edge_id": "edge-2", "evidence": [{"notes": "H. pylori provides a source-backed concrete mechanism for spiral-like helical morphology.", "reference": "DOI:10.1016/j.cell.2010.03.046", "snippet": "relaxes peptidoglycan crosslinking, enabling helical cell curvature and twist"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "peptidoglycan remodeling", "source_grounding": null, "target": "helical curvature", "target_grounding": null}, {"description": "Helical curvature produces a spiral-shaped cell body.", "edge_id": "edge-3", "evidence": [{"notes": "Supports helical/spiral cell shape as a recurring bacterial morphology.", "reference": "DOI:10.1371/journal.pbio.1002565", "snippet": "helical cells"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "helical curvature", "source_grounding": null, "target": "spiral shaped", "target_grounding": "METPO:1000684"}, {"description": "Spiral and curved morphologies can be associated with motility in viscous media.", "edge_id": "edge-4", "evidence": [{"notes": "Functional association is broad and marked as an association, not as a universal cause of the trait.", "reference": "DOI:10.1371/journal.pbio.1002565", "snippet": "helical and curved cells appear to be optimized for motility"}], "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "spiral shaped", "source_grounding": "METPO:1000684", "target": "viscous motility environment", "target_grounding": null}, {"description": "Relaxation of peptidoglycan crosslinking promotes helical/spiral shape.", "edge_id": "edge-5", "evidence": [{"notes": "Peptidoglycan crosslinking relaxation promotes helical shape and colonization.", "reference": "DOI:10.3389/fmicb.2023.1162806"}], "predicate": "promotes", "predicate_id": "RO:0002213", "source": "peptidoglycan crosslinking relaxation", "source_grounding": null, "target": "helical curvature", "target_grounding": null}, {"description": "Caging/entrapment of the elongasome biases peptidoglycan insertion toward the outer curve.", "edge_id": "edge-6", "evidence": [{"notes": "Porin-PapS assemblies entrap the cell elongation machinery, biasing peptidoglycan insertion toward the outer curve.", "reference": "DOI:10.1038/s41467-024-51790-z"}], "predicate": "biases", "predicate_id": null, "source": "elongasome entrapment", "source_grounding": null, "target": "biased outer-curve peptidoglycan biosynthesis", "target_grounding": null}, {"description": "A zone of elevated outer-curve peptidoglycan biosynthesis distorts the wall cylinder and establishes curvature.", "edge_id": "edge-7", "evidence": [{"notes": "Creating a longitudinal zone of elevated peptidoglycan biosynthesis distorts the cell-wall cylinder and establishes curvature; ~15% bias suffices.", "reference": "DOI:10.1038/s41467-024-51790-z"}], "predicate": "establishes", "predicate_id": null, "source": "biased outer-curve peptidoglycan biosynthesis", "source_grounding": null, "target": "cell curvature", "target_grounding": null}, {"description": "Sustained cell curvature produces a spiral/helically curved cell.", "edge_id": "edge-8", "evidence": [{"notes": "Curvature established by biased outer-curve growth yields curved/helical cell morphology.", "reference": "DOI:10.1038/s41467-024-51790-z"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "cell curvature", "source_grounding": null, "target": "spiral shaped", "target_grounding": "METPO:1000684"}, {"description": "Periplasmic flagella serve as a cytoskeleton that maintains the spiral-shaped cell body.", "edge_id": "edge-9", "evidence": [{"notes": "The periplasmic flagella serves as a cytoskeleton to maintain a spiral-shaped cell body.", "reference": "DOI:10.3390/biom14121488"}], "predicate": "maintains", "predicate_id": null, "source": "periplasmic flagella", "source_grounding": null, "target": "spiral shaped", "target_grounding": "METPO:1000684"}, {"description": "Periplasmic flagellar filaments distort and push the cell body to shape it.", "edge_id": "edge-10", "evidence": [{"notes": "Spirochete flagella inside the periplasm distort and push the cell body.", "reference": "DOI:10.1093/pnasnexus/pgad349"}], "predicate": "distorts", "predicate_id": null, "source": "periplasmic flagella", "source_grounding": null, "target": "cell body", "target_grounding": null}], "graph_id": "spiral_shaped_curvature_mechanisms", "issues": [], "nodes": [{"color": "#ecfccb", "description": "A longitudinal zone of elevated peptidoglycan insertion along the outer cell curve.", "grounding": null, "id": "biased_outer_curve_pg_biosynthesis", "is_orphan": false, "label": "biased outer-curve peptidoglycan biosynthesis", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ede9fe", "description": "The bacterial cell body (protoplasmic cylinder) whose shape is mechanically constrained.", "grounding": null, "id": "cell_body", "is_orphan": false, "label": "cell body", "node_type": "CELLULAR_LOCALIZATION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Bending of the cell-wall cylinder producing a curved or helical cell axis.", "grounding": null, "id": "cell_curvature", "is_orphan": false, "label": "cell curvature", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Protein scaffold or shape complex that biases cell curvature.", "grounding": null, "id": "curvature_scaffold", "is_orphan": false, "label": "curvature scaffold", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Caging of the cell-elongation machinery that restricts where peptidoglycan is inserted.", "grounding": null, "id": "elongasome_entrapment", "is_orphan": false, "label": "elongasome entrapment", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Curved and twisted cell-wall geometry.", "grounding": null, "id": "helical_curvature", "is_orphan": false, "label": "helical curvature", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Local cell-wall synthesis, relaxation, or crosslink remodeling.", "grounding": null, "id": "peptidoglycan_remodeling", "is_orphan": false, "label": "peptidoglycan remodeling", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fce7f3", "description": "Endoflagella running within the periplasm of spirochetes that mechanically couple to the cell body.", "grounding": null, "id": "periplasmic_flagella", "is_orphan": false, "label": "periplasmic flagella", "node_type": "ORGANELLE", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Reduction in peptidoglycan crosslinking density that loosens the sacculus.", "grounding": null, "id": "pg_crosslink_relaxation", "is_orphan": false, "label": "peptidoglycan crosslinking relaxation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Spiral or helically curved bacterial morphology.", "grounding": "METPO:1000684", "id": "spiral_shaped_trait", "is_orphan": false, "label": "spiral shaped", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Viscous surroundings where curved or helical morphology can affect movement.", "grounding": null, "id": "viscous_motility_environment", "is_orphan": false, "label": "viscous motility environment", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This record is a broad environmental or morphological classification spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement descriptor; contextual protein nodes do not receive token UniProt examples.", "scope_status": "NONMECHANISTIC", "title": "Spiral-shape curvature and cell-wall mechanism"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -1007,13 +1038,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-10-17 09:00 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

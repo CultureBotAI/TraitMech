@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/metabolism.html">METABOLISM</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/metabolism.html">METABOLISM</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>reductive tricarboxylic acid cycle</h1>
     <p class="curie"><code>traitmech:000021</code> · CLASS · REVIEWED</p>
 
@@ -85,9 +96,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>carbon dioxide</strong>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:16526" rel="nofollow noreferrer"><code>CHEBI:16526</code></a>
             <span class="edge-predicate">fixed by</span>
             <strong>reductive tricarboxylic acid cycle</strong>
-            <code>METPO:2007404</code>
+            <code>traitmech:000021</code>
+            <a href="https://w3id.org/metpo/2007404" rel="nofollow noreferrer"><code>METPO:2007404</code></a>
             <p>CO2 is fixed by the reverse TCA cycle in anaerobic autotrophs.</p>
             <ul>
 
@@ -102,9 +115,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>reductive tricarboxylic acid cycle</strong>
+            <code>traitmech:000021</code>
             <span class="edge-predicate">produces</span>
             <strong>citrate</strong>
-            <code>METPO:2007800</code>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:16947" rel="nofollow noreferrer"><code>CHEBI:16947</code></a>
+            <a href="https://w3id.org/metpo/2007800" rel="nofollow noreferrer"><code>METPO:2007800</code></a>
             <p>The reverse cycle assembles citrate from CO2.</p>
             <ul>
 
@@ -119,9 +134,11 @@
 
           <li id="pathograph-1-edge-3">
             <strong>ATP citrate lyase (aclAB)</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>reductive tricarboxylic acid cycle</strong>
-            <code>METPO:2007700</code>
+            <code>traitmech:000021</code>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>ATP citrate lyase cleaves citrate into oxaloacetate and acetyl-CoA, enabling the rTCA cycle.</p>
             <ul>
 
@@ -136,8 +153,10 @@
 
           <li id="pathograph-1-edge-4">
             <strong>citryl-CoA synthetase/lyase route</strong>
+
             <span class="edge-predicate">alternative to</span>
             <strong>ATP citrate lyase (aclAB)</strong>
+
 
             <p>The two-enzyme CCS/CCL system is an alternative route to ACL for citrate cleavage in rTCA.</p>
             <ul>
@@ -153,9 +172,11 @@
 
           <li id="pathograph-1-edge-5">
             <strong>pyruvate:ferredoxin oxidoreductase (PFOR)</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0019164" rel="nofollow noreferrer"><code>GO:0019164</code></a>
             <span class="edge-predicate">part of</span>
             <strong>reductive tricarboxylic acid cycle</strong>
-            <code>biolink:part_of</code>
+            <code>traitmech:000021</code>
+            <a href="https://w3id.org/biolink/vocab/part_of" rel="nofollow noreferrer"><code>biolink:part_of</code></a>
             <p>Pyruvate:ferredoxin oxidoreductase is a canonical key enzyme of the rTCA cycle.</p>
             <ul>
 
@@ -170,9 +191,11 @@
 
           <li id="pathograph-1-edge-6">
             <strong>2-oxoglutarate:ferredoxin oxidoreductase (OGOR/KOR)</strong>
+
             <span class="edge-predicate">part of</span>
             <strong>reductive tricarboxylic acid cycle</strong>
-            <code>biolink:part_of</code>
+            <code>traitmech:000021</code>
+            <a href="https://w3id.org/biolink/vocab/part_of" rel="nofollow noreferrer"><code>biolink:part_of</code></a>
             <p>2-oxoglutarate:ferredoxin oxidoreductase is a canonical key enzyme of the rTCA cycle.</p>
             <ul>
 
@@ -187,8 +210,10 @@
 
           <li id="pathograph-1-edge-7">
             <strong>reduced ferredoxin</strong>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:17513" rel="nofollow noreferrer"><code>CHEBI:17513</code></a>
             <span class="edge-predicate">electron donor for</span>
             <strong>pyruvate:ferredoxin oxidoreductase (PFOR)</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0019164" rel="nofollow noreferrer"><code>GO:0019164</code></a>
 
             <p>Reduced low-potential ferredoxin provides electrons to PFOR for reductive carboxylation.</p>
             <ul>
@@ -204,8 +229,10 @@
 
           <li id="pathograph-1-edge-8">
             <strong>reduced ferredoxin</strong>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:17513" rel="nofollow noreferrer"><code>CHEBI:17513</code></a>
             <span class="edge-predicate">electron donor for</span>
             <strong>2-oxoglutarate:ferredoxin oxidoreductase (OGOR/KOR)</strong>
+
 
             <p>Reduced low-potential ferredoxin provides electrons to OGOR for reductive carboxylation.</p>
             <ul>
@@ -453,7 +480,7 @@
     <div class="card">
       <h2>Cross-references</h2>
       <ul class="xrefs">
-        <li><code>GO:0019643</code></li>
+        <li><a href="https://amigo.geneontology.org/amigo/term/GO:0019643" rel="nofollow noreferrer"><code>GO:0019643</code></a></li>
       </ul>
     </div>
 
@@ -482,13 +509,25 @@
 
         <li>
           <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/lignin_degradation.html">lignin degradation</a>
+          <a href="../../traits/metabolism/sulfur_oxidation.html">sulfur oxidation</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/sulfur_oxidation.html">sulfur oxidation</a>
+          <a href="../../traits/metabolism/dark_hydrogen_oxidation.html">dark hydrogen oxidation</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">metabolism</span>
+          <a href="../../traits/metabolism/dark_oxidation_of_sulfur_compounds.html">dark oxidation of sulfur compounds</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">metabolism</span>
+          <a href="../../traits/metabolism/dicarboxylate_four_hydroxybutyrate_cycle.html">dicarboxylate/4-hydroxybutyrate cycle</a>
           <span class="sim">1.000</span>
         </li>
 
@@ -500,31 +539,19 @@
 
         <li>
           <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/proteorhodopsin_phototrophy.html">proteorhodopsin phototrophy</a>
+          <a href="../../traits/metabolism/hydrocarbon_degradation.html">hydrocarbon degradation</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/proteolysis.html">proteolysis</a>
+          <a href="../../traits/metabolism/iron_oxidation.html">iron oxidation</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/phototrophy.html">phototrophy</a>
-          <span class="sim">1.000</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/photosynthesis.html">photosynthesis</a>
-          <span class="sim">1.000</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/oxygenic_photosynthesis.html">oxygenic photosynthesis</a>
+          <a href="../../traits/metabolism/lignin_degradation.html">lignin degradation</a>
           <span class="sim">1.000</span>
         </li>
 
@@ -1093,7 +1120,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking reverse TCA cycle operation in anaerobic/microaerophilic autotrophs to CO2 fixation.", "edges": [{"description": "CO2 is fixed by the reverse TCA cycle in anaerobic autotrophs.", "evidence": [{"notes": "Berg describes the reductive citric acid cycle as functional in anaerobic/microaerophilic autotrophs.", "reference": "DOI:10.1128/AEM.02473-10"}], "id": "edge-1", "is_orphan": false, "predicate": "fixed by", "predicate_id": "METPO:2007404", "source": "carbon_dioxide", "target": "rtca_trait"}, {"description": "The reverse cycle assembles citrate from CO2.", "evidence": [{"notes": "H\u00fcgler \u0026 Sievert document the rTCA cycle in chemolithoautotrophs and green sulfur bacteria.", "reference": "DOI:10.1146/annurev-marine-120709-142712"}], "id": "edge-2", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2007800", "source": "rtca_trait", "target": "citrate"}, {"description": "ATP citrate lyase cleaves citrate into oxaloacetate and acetyl-CoA, enabling the rTCA cycle.", "evidence": [{"notes": "Citrate cleavage into oxaloacetate and acetyl-CoA can be performed by ATP-citrate lyase (ACL).", "reference": "DOI:10.1101/2022.10.25.513756"}], "id": "edge-3", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "atp_citrate_lyase", "target": "rtca_trait"}, {"description": "The two-enzyme CCS/CCL system is an alternative route to ACL for citrate cleavage in rTCA.", "evidence": [{"notes": "Citrate cleavage can be performed by either a two-enzyme system (CCS/CCL) or a single enzyme (ACL).", "reference": "DOI:10.1101/2022.10.25.513756"}], "id": "edge-4", "is_orphan": false, "predicate": "alternative to", "predicate_id": null, "source": "citryl_coa_synthetase_lyase", "target": "atp_citrate_lyase"}, {"description": "Pyruvate:ferredoxin oxidoreductase is a canonical key enzyme of the rTCA cycle.", "evidence": [{"notes": "Key enzymes of this pathway are pyruvate:ferredoxin oxidoreductase (PFOR) and 2-oxoglutarate:ferredoxin oxidoreductase (OGOR).", "reference": "DOI:10.3390/life13030627"}], "id": "edge-5", "is_orphan": false, "predicate": "part of", "predicate_id": "biolink:part_of", "source": "pfor", "target": "rtca_trait"}, {"description": "2-oxoglutarate:ferredoxin oxidoreductase is a canonical key enzyme of the rTCA cycle.", "evidence": [{"notes": "Key enzymes of this pathway are PFOR and 2-oxoglutarate:ferredoxin oxidoreductase (OGOR).", "reference": "DOI:10.3390/life13030627"}], "id": "edge-6", "is_orphan": false, "predicate": "part of", "predicate_id": "biolink:part_of", "source": "ogor", "target": "rtca_trait"}, {"description": "Reduced low-potential ferredoxin provides electrons to PFOR for reductive carboxylation.", "evidence": [{"notes": "PFOR and OGOR require a strong reduction potential; Fd6/Fd7 could be the physiological electron donors.", "reference": "DOI:10.3390/life13030627"}], "id": "edge-7", "is_orphan": false, "predicate": "electron donor for", "predicate_id": null, "source": "reduced_ferredoxin", "target": "pfor"}, {"description": "Reduced low-potential ferredoxin provides electrons to OGOR for reductive carboxylation.", "evidence": [{"notes": "Fd6 and Fd7 can physically interact and exchange electrons with both PFOR and OGOR.", "reference": "DOI:10.3390/life13030627"}], "id": "edge-8", "is_orphan": false, "predicate": "electron donor for", "predicate_id": null, "source": "reduced_ferredoxin", "target": "ogor"}], "evidence_rows": [{"description": "CO2 is fixed by the reverse TCA cycle in anaerobic autotrophs.", "edge_id": "edge-1", "evidence": [{"notes": "Berg describes the reductive citric acid cycle as functional in anaerobic/microaerophilic autotrophs.", "reference": "DOI:10.1128/AEM.02473-10"}], "predicate": "fixed by", "predicate_id": "METPO:2007404", "source": "carbon dioxide", "target": "reductive tricarboxylic acid cycle"}, {"description": "The reverse cycle assembles citrate from CO2.", "edge_id": "edge-2", "evidence": [{"notes": "H\u00fcgler \u0026 Sievert document the rTCA cycle in chemolithoautotrophs and green sulfur bacteria.", "reference": "DOI:10.1146/annurev-marine-120709-142712"}], "predicate": "produces", "predicate_id": "METPO:2007800", "source": "reductive tricarboxylic acid cycle", "target": "citrate"}, {"description": "ATP citrate lyase cleaves citrate into oxaloacetate and acetyl-CoA, enabling the rTCA cycle.", "edge_id": "edge-3", "evidence": [{"notes": "Citrate cleavage into oxaloacetate and acetyl-CoA can be performed by ATP-citrate lyase (ACL).", "reference": "DOI:10.1101/2022.10.25.513756"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "ATP citrate lyase (aclAB)", "target": "reductive tricarboxylic acid cycle"}, {"description": "The two-enzyme CCS/CCL system is an alternative route to ACL for citrate cleavage in rTCA.", "edge_id": "edge-4", "evidence": [{"notes": "Citrate cleavage can be performed by either a two-enzyme system (CCS/CCL) or a single enzyme (ACL).", "reference": "DOI:10.1101/2022.10.25.513756"}], "predicate": "alternative to", "predicate_id": null, "source": "citryl-CoA synthetase/lyase route", "target": "ATP citrate lyase (aclAB)"}, {"description": "Pyruvate:ferredoxin oxidoreductase is a canonical key enzyme of the rTCA cycle.", "edge_id": "edge-5", "evidence": [{"notes": "Key enzymes of this pathway are pyruvate:ferredoxin oxidoreductase (PFOR) and 2-oxoglutarate:ferredoxin oxidoreductase (OGOR).", "reference": "DOI:10.3390/life13030627"}], "predicate": "part of", "predicate_id": "biolink:part_of", "source": "pyruvate:ferredoxin oxidoreductase (PFOR)", "target": "reductive tricarboxylic acid cycle"}, {"description": "2-oxoglutarate:ferredoxin oxidoreductase is a canonical key enzyme of the rTCA cycle.", "edge_id": "edge-6", "evidence": [{"notes": "Key enzymes of this pathway are PFOR and 2-oxoglutarate:ferredoxin oxidoreductase (OGOR).", "reference": "DOI:10.3390/life13030627"}], "predicate": "part of", "predicate_id": "biolink:part_of", "source": "2-oxoglutarate:ferredoxin oxidoreductase (OGOR/KOR)", "target": "reductive tricarboxylic acid cycle"}, {"description": "Reduced low-potential ferredoxin provides electrons to PFOR for reductive carboxylation.", "edge_id": "edge-7", "evidence": [{"notes": "PFOR and OGOR require a strong reduction potential; Fd6/Fd7 could be the physiological electron donors.", "reference": "DOI:10.3390/life13030627"}], "predicate": "electron donor for", "predicate_id": null, "source": "reduced ferredoxin", "target": "pyruvate:ferredoxin oxidoreductase (PFOR)"}, {"description": "Reduced low-potential ferredoxin provides electrons to OGOR for reductive carboxylation.", "edge_id": "edge-8", "evidence": [{"notes": "Fd6 and Fd7 can physically interact and exchange electrons with both PFOR and OGOR.", "reference": "DOI:10.3390/life13030627"}], "predicate": "electron donor for", "predicate_id": null, "source": "reduced ferredoxin", "target": "2-oxoglutarate:ferredoxin oxidoreductase (OGOR/KOR)"}], "graph_id": "rtca_reverse_tricarboxylic_acid_co2_fixation", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Enzyme (EC 2.3.3.8) cleaving citrate into oxaloacetate and acetyl-CoA in rTCA.", "grounding": null, "id": "atp_citrate_lyase", "is_orphan": false, "label": "ATP citrate lyase (aclAB)", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "UNREVIEWED", "entry_version": 118, "evidence": [{"notes": "The primary reconstitution study shows that both C. tepidum subunits are required for activity. UniProtKB Q8KDG1 is the exact subunit 1 entry in reference proteome UP000001007.", "reference": "DOI:10.1128/JB.00523-06", "snippet": "significant ACL activity required both CLS and CLL"}], "protein_label": "Citrate lyase, subunit1", "proteome_id": "UP000001007", "retrieved_on": "2026-08-24", "role": "Subunit 1 component of the C. tepidum ATP citrate lyase; this accession is not presented as the complete AclAB enzyme.", "sequence_version": 1, "taxon_id": "NCBITaxon:194439", "taxon_label": "Chlorobaculum tepidum TLS", "uniprot_id": "UniProtKB:Q8KDG1"}, {"entry_status": "UNREVIEWED", "entry_version": 118, "evidence": [{"notes": "The primary reconstitution study shows that neither component alone represents active AclAB. UniProtKB Q8KDG2 is the exact subunit 2 entry in reference proteome UP000001007.", "reference": "DOI:10.1128/JB.00523-06", "snippet": "Neither purified recombinant subunit preparation alone possessed any enzymatic activity."}], "protein_label": "Citrate lyase, subunit2", "proteome_id": "UP000001007", "retrieved_on": "2026-08-24", "role": "Subunit 2 component of the C. tepidum ATP citrate lyase; this accession is not presented as the complete AclAB enzyme.", "sequence_version": 1, "taxon_id": "NCBITaxon:194439", "taxon_label": "Chlorobaculum tepidum TLS", "uniprot_id": "UniProtKB:Q8KDG2"}], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Inorganic carbon substrate fixed by the cycle.", "grounding": "CHEBI:16526", "id": "carbon_dioxide", "is_orphan": false, "label": "carbon dioxide", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "TCA-cycle intermediate that the reductive cycle generates from CO2.", "grounding": "CHEBI:16947", "id": "citrate", "is_orphan": false, "label": "citrate", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Two-enzyme citrate-cleavage system (CCS EC 6.2.1.18 + CCL EC 4.1.3.34) alternative to ACL.", "grounding": null, "id": "citryl_coa_synthetase_lyase", "is_orphan": false, "label": "citryl-CoA synthetase/lyase route", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 94, "evidence": [{"notes": "Supports citryl-CoA synthetase/lyase route in reductive tricarboxylic acid cycle; UniProtKB:P29906 (birA, Biotin--[acetyl-CoA-carboxylase] ligase) in Paracoccus denitrificans provides a verified protein exemplar.", "reference": "DOI:10.1128/AEM.02473-10", "snippet": "The 3-hydroxypropionate (Fuchs-Holo) bi-cycle. Enzymes: 1, acetyl-CoA carboxylase"}], "gene_symbol": "birA", "protein_label": "Biotin--[acetyl-CoA-carboxylase] ligase", "retrieved_on": "2026-10-17", "role": "Exemplar protein (birA, Biotin--[acetyl-CoA-carboxylase] ligase) representing citryl-CoA synthetase/lyase route in Paracoccus denitrificans for reductive tricarboxylic acid cycle.", "sequence_version": 1, "taxon_id": "NCBITaxon:266", "taxon_label": "Paracoccus denitrificans", "uniprot_id": "UniProtKB:P29906"}], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Key rTCA enzyme (EC 1.2.7.3/1.2.7.11) for reductive carboxylation of succinyl-CoA to 2-oxoglutarate.", "grounding": null, "id": "ogor", "is_orphan": false, "label": "2-oxoglutarate:ferredoxin oxidoreductase (OGOR/KOR)", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 118, "evidence": [{"notes": "Supports 2-oxoglutarate:ferredoxin oxidoreductase (OGOR/KOR) in reductive tricarboxylic acid cycle; UniProtKB:Q57724 (korA, 2-oxoglutarate synthase subunit KorA) in Methanocaldococcus jannaschii (strain ATCC 43067 / DSM 2661 / JAL-1 / JCM 10045 / NBRC 100440) (Methanococcus jannaschii) provides a verified protein exemplar.", "reference": "DOI:10.1128/AEM.02473-10", "snippet": "the second autotrophic CO2 fixation cycle (the reductive citric acid cycle) had been discovered"}], "gene_symbol": "korA", "protein_label": "2-oxoglutarate synthase subunit KorA", "proteome_id": "UP000000805", "retrieved_on": "2026-10-17", "role": "Exemplar protein (korA, 2-oxoglutarate synthase subunit KorA) representing 2-oxoglutarate:ferredoxin oxidoreductase (OGOR/KOR) in Methanocaldococcus jannaschii (strain ATCC 43067 / DSM 2661 / JAL-1 / JCM 10045 / NBRC 100440) (Methanococcus jannaschii) for reductive tricarboxylic acid cycle.", "sequence_version": 1, "taxon_id": "NCBITaxon:243232", "taxon_label": "Methanocaldococcus jannaschii (strain ATCC 43067 / DSM 2661 / JAL-1 / JCM 10045 / NBRC 100440) (Methanococcus jannaschii)", "uniprot_id": "UniProtKB:Q57724"}], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Key rTCA enzyme (EC 1.2.7.1) catalyzing reductive carboxylation of acetyl-CoA to pyruvate.", "grounding": "GO:0019164", "id": "pfor", "is_orphan": false, "label": "pyruvate:ferredoxin oxidoreductase (PFOR)", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 129, "evidence": [{"notes": "Supports pyruvate:ferredoxin oxidoreductase (PFOR) in reductive tricarboxylic acid cycle; UniProtKB:Q2RMD6 (Q2RMD6, Pyruvate:ferredoxin oxidoreductase) in Moorella thermoacetica (strain ATCC 39073 / JCM 9320) provides a verified protein exemplar.", "reference": "DOI:10.1128/AEM.02473-10", "snippet": "the second autotrophic CO2 fixation cycle (the reductive citric acid cycle) had been discovered"}], "protein_label": "Pyruvate:ferredoxin oxidoreductase", "retrieved_on": "2026-10-17", "role": "Exemplar protein (Q2RMD6, Pyruvate:ferredoxin oxidoreductase) representing pyruvate:ferredoxin oxidoreductase (PFOR) in Moorella thermoacetica (strain ATCC 39073 / JCM 9320) for reductive tricarboxylic acid cycle.", "sequence_version": 1, "taxon_id": "NCBITaxon:264732", "taxon_label": "Moorella thermoacetica (strain ATCC 39073 / JCM 9320)", "uniprot_id": "UniProtKB:Q2RMD6"}], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Low-potential [4Fe-4S] electron carrier serving as electron donor for PFOR and OGOR.", "grounding": "CHEBI:17513", "id": "reduced_ferredoxin", "is_orphan": false, "label": "reduced ferredoxin", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Autotrophic carbon-fixation pathway running TCA in reverse.", "grounding": "traitmech:000021", "id": "rtca_trait", "is_orphan": false, "label": "reductive tricarboxylic acid cycle", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "UNREVIEWED", "entry_version": 118, "evidence": [{"notes": "The primary reconstitution study shows that both C. tepidum subunits are required for activity. UniProtKB Q8KDG1 is the exact subunit 1 entry in reference proteome UP000001007.", "reference": "DOI:10.1128/JB.00523-06", "snippet": "significant ACL activity required both CLS and CLL"}], "node_id": "atp_citrate_lyase", "node_label": "ATP citrate lyase (aclAB)", "protein_label": "Citrate lyase, subunit1", "proteome_id": "UP000001007", "retrieved_on": "2026-08-24", "role": "Subunit 1 component of the C. tepidum ATP citrate lyase; this accession is not presented as the complete AclAB enzyme.", "sequence_version": 1, "taxon_id": "NCBITaxon:194439", "taxon_label": "Chlorobaculum tepidum TLS", "uniprot_id": "UniProtKB:Q8KDG1"}, {"entry_status": "UNREVIEWED", "entry_version": 118, "evidence": [{"notes": "The primary reconstitution study shows that neither component alone represents active AclAB. UniProtKB Q8KDG2 is the exact subunit 2 entry in reference proteome UP000001007.", "reference": "DOI:10.1128/JB.00523-06", "snippet": "Neither purified recombinant subunit preparation alone possessed any enzymatic activity."}], "node_id": "atp_citrate_lyase", "node_label": "ATP citrate lyase (aclAB)", "protein_label": "Citrate lyase, subunit2", "proteome_id": "UP000001007", "retrieved_on": "2026-08-24", "role": "Subunit 2 component of the C. tepidum ATP citrate lyase; this accession is not presented as the complete AclAB enzyme.", "sequence_version": 1, "taxon_id": "NCBITaxon:194439", "taxon_label": "Chlorobaculum tepidum TLS", "uniprot_id": "UniProtKB:Q8KDG2"}, {"entry_status": "REVIEWED", "entry_version": 94, "evidence": [{"notes": "Supports citryl-CoA synthetase/lyase route in reductive tricarboxylic acid cycle; UniProtKB:P29906 (birA, Biotin--[acetyl-CoA-carboxylase] ligase) in Paracoccus denitrificans provides a verified protein exemplar.", "reference": "DOI:10.1128/AEM.02473-10", "snippet": "The 3-hydroxypropionate (Fuchs-Holo) bi-cycle. Enzymes: 1, acetyl-CoA carboxylase"}], "gene_symbol": "birA", "node_id": "citryl_coa_synthetase_lyase", "node_label": "citryl-CoA synthetase/lyase route", "protein_label": "Biotin--[acetyl-CoA-carboxylase] ligase", "retrieved_on": "2026-10-17", "role": "Exemplar protein (birA, Biotin--[acetyl-CoA-carboxylase] ligase) representing citryl-CoA synthetase/lyase route in Paracoccus denitrificans for reductive tricarboxylic acid cycle.", "sequence_version": 1, "taxon_id": "NCBITaxon:266", "taxon_label": "Paracoccus denitrificans", "uniprot_id": "UniProtKB:P29906"}, {"entry_status": "REVIEWED", "entry_version": 129, "evidence": [{"notes": "Supports pyruvate:ferredoxin oxidoreductase (PFOR) in reductive tricarboxylic acid cycle; UniProtKB:Q2RMD6 (Q2RMD6, Pyruvate:ferredoxin oxidoreductase) in Moorella thermoacetica (strain ATCC 39073 / JCM 9320) provides a verified protein exemplar.", "reference": "DOI:10.1128/AEM.02473-10", "snippet": "the second autotrophic CO2 fixation cycle (the reductive citric acid cycle) had been discovered"}], "node_id": "pfor", "node_label": "pyruvate:ferredoxin oxidoreductase (PFOR)", "protein_label": "Pyruvate:ferredoxin oxidoreductase", "retrieved_on": "2026-10-17", "role": "Exemplar protein (Q2RMD6, Pyruvate:ferredoxin oxidoreductase) representing pyruvate:ferredoxin oxidoreductase (PFOR) in Moorella thermoacetica (strain ATCC 39073 / JCM 9320) for reductive tricarboxylic acid cycle.", "sequence_version": 1, "taxon_id": "NCBITaxon:264732", "taxon_label": "Moorella thermoacetica (strain ATCC 39073 / JCM 9320)", "uniprot_id": "UniProtKB:Q2RMD6"}, {"entry_status": "REVIEWED", "entry_version": 118, "evidence": [{"notes": "Supports 2-oxoglutarate:ferredoxin oxidoreductase (OGOR/KOR) in reductive tricarboxylic acid cycle; UniProtKB:Q57724 (korA, 2-oxoglutarate synthase subunit KorA) in Methanocaldococcus jannaschii (strain ATCC 43067 / DSM 2661 / JAL-1 / JCM 10045 / NBRC 100440) (Methanococcus jannaschii) provides a verified protein exemplar.", "reference": "DOI:10.1128/AEM.02473-10", "snippet": "the second autotrophic CO2 fixation cycle (the reductive citric acid cycle) had been discovered"}], "gene_symbol": "korA", "node_id": "ogor", "node_label": "2-oxoglutarate:ferredoxin oxidoreductase (OGOR/KOR)", "protein_label": "2-oxoglutarate synthase subunit KorA", "proteome_id": "UP000000805", "retrieved_on": "2026-10-17", "role": "Exemplar protein (korA, 2-oxoglutarate synthase subunit KorA) representing 2-oxoglutarate:ferredoxin oxidoreductase (OGOR/KOR) in Methanocaldococcus jannaschii (strain ATCC 43067 / DSM 2661 / JAL-1 / JCM 10045 / NBRC 100440) (Methanococcus jannaschii) for reductive tricarboxylic acid cycle.", "sequence_version": 1, "taxon_id": "NCBITaxon:243232", "taxon_label": "Methanocaldococcus jannaschii (strain ATCC 43067 / DSM 2661 / JAL-1 / JCM 10045 / NBRC 100440) (Methanococcus jannaschii)", "uniprot_id": "UniProtKB:Q57724"}], "scope_notes": "The graph includes alternative citrate-cleavage routes and reductive 2-oxoacid oxidoreductases. The C. tepidum TLS examples explicitly represent both components of the AclAB route and do not stand for the alternative CCS/CCL system.", "scope_status": "MECHANISTIC", "title": "Reductive TCA cycle runs the TCA cycle in reverse to fix CO2"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking reverse TCA cycle operation in anaerobic/microaerophilic autotrophs to CO2 fixation.", "edges": [{"description": "CO2 is fixed by the reverse TCA cycle in anaerobic autotrophs.", "evidence": [{"notes": "Berg describes the reductive citric acid cycle as functional in anaerobic/microaerophilic autotrophs.", "reference": "DOI:10.1128/AEM.02473-10"}], "id": "edge-1", "is_orphan": false, "predicate": "fixed by", "predicate_id": "METPO:2007404", "source": "carbon_dioxide", "target": "rtca_trait"}, {"description": "The reverse cycle assembles citrate from CO2.", "evidence": [{"notes": "H\u00fcgler \u0026 Sievert document the rTCA cycle in chemolithoautotrophs and green sulfur bacteria.", "reference": "DOI:10.1146/annurev-marine-120709-142712"}], "id": "edge-2", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2007800", "source": "rtca_trait", "target": "citrate"}, {"description": "ATP citrate lyase cleaves citrate into oxaloacetate and acetyl-CoA, enabling the rTCA cycle.", "evidence": [{"notes": "Citrate cleavage into oxaloacetate and acetyl-CoA can be performed by ATP-citrate lyase (ACL).", "reference": "DOI:10.1101/2022.10.25.513756"}], "id": "edge-3", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "atp_citrate_lyase", "target": "rtca_trait"}, {"description": "The two-enzyme CCS/CCL system is an alternative route to ACL for citrate cleavage in rTCA.", "evidence": [{"notes": "Citrate cleavage can be performed by either a two-enzyme system (CCS/CCL) or a single enzyme (ACL).", "reference": "DOI:10.1101/2022.10.25.513756"}], "id": "edge-4", "is_orphan": false, "predicate": "alternative to", "predicate_id": null, "source": "citryl_coa_synthetase_lyase", "target": "atp_citrate_lyase"}, {"description": "Pyruvate:ferredoxin oxidoreductase is a canonical key enzyme of the rTCA cycle.", "evidence": [{"notes": "Key enzymes of this pathway are pyruvate:ferredoxin oxidoreductase (PFOR) and 2-oxoglutarate:ferredoxin oxidoreductase (OGOR).", "reference": "DOI:10.3390/life13030627"}], "id": "edge-5", "is_orphan": false, "predicate": "part of", "predicate_id": "biolink:part_of", "source": "pfor", "target": "rtca_trait"}, {"description": "2-oxoglutarate:ferredoxin oxidoreductase is a canonical key enzyme of the rTCA cycle.", "evidence": [{"notes": "Key enzymes of this pathway are PFOR and 2-oxoglutarate:ferredoxin oxidoreductase (OGOR).", "reference": "DOI:10.3390/life13030627"}], "id": "edge-6", "is_orphan": false, "predicate": "part of", "predicate_id": "biolink:part_of", "source": "ogor", "target": "rtca_trait"}, {"description": "Reduced low-potential ferredoxin provides electrons to PFOR for reductive carboxylation.", "evidence": [{"notes": "PFOR and OGOR require a strong reduction potential; Fd6/Fd7 could be the physiological electron donors.", "reference": "DOI:10.3390/life13030627"}], "id": "edge-7", "is_orphan": false, "predicate": "electron donor for", "predicate_id": null, "source": "reduced_ferredoxin", "target": "pfor"}, {"description": "Reduced low-potential ferredoxin provides electrons to OGOR for reductive carboxylation.", "evidence": [{"notes": "Fd6 and Fd7 can physically interact and exchange electrons with both PFOR and OGOR.", "reference": "DOI:10.3390/life13030627"}], "id": "edge-8", "is_orphan": false, "predicate": "electron donor for", "predicate_id": null, "source": "reduced_ferredoxin", "target": "ogor"}], "evidence_rows": [{"description": "CO2 is fixed by the reverse TCA cycle in anaerobic autotrophs.", "edge_id": "edge-1", "evidence": [{"notes": "Berg describes the reductive citric acid cycle as functional in anaerobic/microaerophilic autotrophs.", "reference": "DOI:10.1128/AEM.02473-10"}], "predicate": "fixed by", "predicate_id": "METPO:2007404", "source": "carbon dioxide", "source_grounding": "CHEBI:16526", "target": "reductive tricarboxylic acid cycle", "target_grounding": "traitmech:000021"}, {"description": "The reverse cycle assembles citrate from CO2.", "edge_id": "edge-2", "evidence": [{"notes": "H\u00fcgler \u0026 Sievert document the rTCA cycle in chemolithoautotrophs and green sulfur bacteria.", "reference": "DOI:10.1146/annurev-marine-120709-142712"}], "predicate": "produces", "predicate_id": "METPO:2007800", "source": "reductive tricarboxylic acid cycle", "source_grounding": "traitmech:000021", "target": "citrate", "target_grounding": "CHEBI:16947"}, {"description": "ATP citrate lyase cleaves citrate into oxaloacetate and acetyl-CoA, enabling the rTCA cycle.", "edge_id": "edge-3", "evidence": [{"notes": "Citrate cleavage into oxaloacetate and acetyl-CoA can be performed by ATP-citrate lyase (ACL).", "reference": "DOI:10.1101/2022.10.25.513756"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "ATP citrate lyase (aclAB)", "source_grounding": null, "target": "reductive tricarboxylic acid cycle", "target_grounding": "traitmech:000021"}, {"description": "The two-enzyme CCS/CCL system is an alternative route to ACL for citrate cleavage in rTCA.", "edge_id": "edge-4", "evidence": [{"notes": "Citrate cleavage can be performed by either a two-enzyme system (CCS/CCL) or a single enzyme (ACL).", "reference": "DOI:10.1101/2022.10.25.513756"}], "predicate": "alternative to", "predicate_id": null, "source": "citryl-CoA synthetase/lyase route", "source_grounding": null, "target": "ATP citrate lyase (aclAB)", "target_grounding": null}, {"description": "Pyruvate:ferredoxin oxidoreductase is a canonical key enzyme of the rTCA cycle.", "edge_id": "edge-5", "evidence": [{"notes": "Key enzymes of this pathway are pyruvate:ferredoxin oxidoreductase (PFOR) and 2-oxoglutarate:ferredoxin oxidoreductase (OGOR).", "reference": "DOI:10.3390/life13030627"}], "predicate": "part of", "predicate_id": "biolink:part_of", "source": "pyruvate:ferredoxin oxidoreductase (PFOR)", "source_grounding": "GO:0019164", "target": "reductive tricarboxylic acid cycle", "target_grounding": "traitmech:000021"}, {"description": "2-oxoglutarate:ferredoxin oxidoreductase is a canonical key enzyme of the rTCA cycle.", "edge_id": "edge-6", "evidence": [{"notes": "Key enzymes of this pathway are PFOR and 2-oxoglutarate:ferredoxin oxidoreductase (OGOR).", "reference": "DOI:10.3390/life13030627"}], "predicate": "part of", "predicate_id": "biolink:part_of", "source": "2-oxoglutarate:ferredoxin oxidoreductase (OGOR/KOR)", "source_grounding": null, "target": "reductive tricarboxylic acid cycle", "target_grounding": "traitmech:000021"}, {"description": "Reduced low-potential ferredoxin provides electrons to PFOR for reductive carboxylation.", "edge_id": "edge-7", "evidence": [{"notes": "PFOR and OGOR require a strong reduction potential; Fd6/Fd7 could be the physiological electron donors.", "reference": "DOI:10.3390/life13030627"}], "predicate": "electron donor for", "predicate_id": null, "source": "reduced ferredoxin", "source_grounding": "CHEBI:17513", "target": "pyruvate:ferredoxin oxidoreductase (PFOR)", "target_grounding": "GO:0019164"}, {"description": "Reduced low-potential ferredoxin provides electrons to OGOR for reductive carboxylation.", "edge_id": "edge-8", "evidence": [{"notes": "Fd6 and Fd7 can physically interact and exchange electrons with both PFOR and OGOR.", "reference": "DOI:10.3390/life13030627"}], "predicate": "electron donor for", "predicate_id": null, "source": "reduced ferredoxin", "source_grounding": "CHEBI:17513", "target": "2-oxoglutarate:ferredoxin oxidoreductase (OGOR/KOR)", "target_grounding": null}], "graph_id": "rtca_reverse_tricarboxylic_acid_co2_fixation", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Enzyme (EC 2.3.3.8) cleaving citrate into oxaloacetate and acetyl-CoA in rTCA.", "grounding": null, "id": "atp_citrate_lyase", "is_orphan": false, "label": "ATP citrate lyase (aclAB)", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "UNREVIEWED", "entry_version": 117, "evidence": [{"notes": "The primary reconstitution study shows that both C. tepidum subunits are required for activity. UniProtKB Q8KDG1 is the exact subunit 1 entry in reference proteome UP000001007.", "reference": "DOI:10.1128/JB.00523-06", "snippet": "significant ACL activity required both CLS and CLL"}], "protein_label": "Citrate lyase, subunit1", "proteome_id": "UP000001007", "retrieved_on": "2026-08-24", "role": "Subunit 1 component of the C. tepidum ATP citrate lyase; this accession is not presented as the complete AclAB enzyme.", "sequence_version": 1, "taxon_id": "NCBITaxon:194439", "taxon_label": "Chlorobaculum tepidum TLS", "uniprot_id": "UniProtKB:Q8KDG1"}, {"entry_status": "UNREVIEWED", "entry_version": 117, "evidence": [{"notes": "The primary reconstitution study shows that neither component alone represents active AclAB. UniProtKB Q8KDG2 is the exact subunit 2 entry in reference proteome UP000001007.", "reference": "DOI:10.1128/JB.00523-06", "snippet": "Neither purified recombinant subunit preparation alone possessed any enzymatic activity."}], "protein_label": "Citrate lyase, subunit2", "proteome_id": "UP000001007", "retrieved_on": "2026-08-24", "role": "Subunit 2 component of the C. tepidum ATP citrate lyase; this accession is not presented as the complete AclAB enzyme.", "sequence_version": 1, "taxon_id": "NCBITaxon:194439", "taxon_label": "Chlorobaculum tepidum TLS", "uniprot_id": "UniProtKB:Q8KDG2"}], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Inorganic carbon substrate fixed by the cycle.", "grounding": "CHEBI:16526", "id": "carbon_dioxide", "is_orphan": false, "label": "carbon dioxide", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "TCA-cycle intermediate that the reductive cycle generates from CO2.", "grounding": "CHEBI:16947", "id": "citrate", "is_orphan": false, "label": "citrate", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Two-enzyme citrate-cleavage system (CCS EC 6.2.1.18 + CCL EC 4.1.3.34) alternative to ACL.", "grounding": null, "id": "citryl_coa_synthetase_lyase", "is_orphan": false, "label": "citryl-CoA synthetase/lyase route", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Key rTCA enzyme (EC 1.2.7.3/1.2.7.11) for reductive carboxylation of succinyl-CoA to 2-oxoglutarate.", "grounding": null, "id": "ogor", "is_orphan": false, "label": "2-oxoglutarate:ferredoxin oxidoreductase (OGOR/KOR)", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Key rTCA enzyme (EC 1.2.7.1) catalyzing reductive carboxylation of acetyl-CoA to pyruvate.", "grounding": "GO:0019164", "id": "pfor", "is_orphan": false, "label": "pyruvate:ferredoxin oxidoreductase (PFOR)", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Low-potential [4Fe-4S] electron carrier serving as electron donor for PFOR and OGOR.", "grounding": "CHEBI:17513", "id": "reduced_ferredoxin", "is_orphan": false, "label": "reduced ferredoxin", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Autotrophic carbon-fixation pathway running TCA in reverse.", "grounding": "traitmech:000021", "id": "rtca_trait", "is_orphan": false, "label": "reductive tricarboxylic acid cycle", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "UNREVIEWED", "entry_version": 117, "evidence": [{"notes": "The primary reconstitution study shows that both C. tepidum subunits are required for activity. UniProtKB Q8KDG1 is the exact subunit 1 entry in reference proteome UP000001007.", "reference": "DOI:10.1128/JB.00523-06", "snippet": "significant ACL activity required both CLS and CLL"}], "node_id": "atp_citrate_lyase", "node_label": "ATP citrate lyase (aclAB)", "protein_label": "Citrate lyase, subunit1", "proteome_id": "UP000001007", "retrieved_on": "2026-08-24", "role": "Subunit 1 component of the C. tepidum ATP citrate lyase; this accession is not presented as the complete AclAB enzyme.", "sequence_version": 1, "taxon_id": "NCBITaxon:194439", "taxon_label": "Chlorobaculum tepidum TLS", "uniprot_id": "UniProtKB:Q8KDG1"}, {"entry_status": "UNREVIEWED", "entry_version": 117, "evidence": [{"notes": "The primary reconstitution study shows that neither component alone represents active AclAB. UniProtKB Q8KDG2 is the exact subunit 2 entry in reference proteome UP000001007.", "reference": "DOI:10.1128/JB.00523-06", "snippet": "Neither purified recombinant subunit preparation alone possessed any enzymatic activity."}], "node_id": "atp_citrate_lyase", "node_label": "ATP citrate lyase (aclAB)", "protein_label": "Citrate lyase, subunit2", "proteome_id": "UP000001007", "retrieved_on": "2026-08-24", "role": "Subunit 2 component of the C. tepidum ATP citrate lyase; this accession is not presented as the complete AclAB enzyme.", "sequence_version": 1, "taxon_id": "NCBITaxon:194439", "taxon_label": "Chlorobaculum tepidum TLS", "uniprot_id": "UniProtKB:Q8KDG2"}], "scope_notes": "The graph includes alternative citrate-cleavage routes and reductive 2-oxoacid oxidoreductases. The C. tepidum TLS examples explicitly represent both components of the AclAB route and do not stand for the alternative CCS/CCL system.", "scope_status": "MECHANISTIC", "title": "Reductive TCA cycle runs the TCA cycle in reverse to fix CO2"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -1113,13 +1140,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-10-17 09:00 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

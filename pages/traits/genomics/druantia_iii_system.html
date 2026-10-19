@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/genomics.html">GENOMICS</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/genomics.html">GENOMICS</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>Druantia III system</h1>
     <p class="curie"><code>traitmech:000560</code> · CLASS · PROPOSED</p>
 
@@ -115,9 +126,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>Druantia III locus</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>Druantia III DruE/DruH DNA processing</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>Druantia_III loci are represented in DefenseFinder by Druantia_III__DruH and Druantia__DruE_1, and Wu et al. define complete Druantia III systems by the presence of both DruE and DruH.</p>
             <ul>
 
@@ -150,9 +163,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>Druantia III DruE/DruH DNA processing</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>Druantia III system</strong>
-            <code>METPO:2007700</code>
+            <code>traitmech:000560</code>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>The first-pass Druantia III system trait is realized by a DruE/DruH locus whose late defense uses DruE helicase-nuclease effector activity.</p>
             <ul>
 
@@ -167,8 +182,10 @@
 
           <li id="pathograph-1-edge-3">
             <strong>Druantia III system</strong>
+            <code>traitmech:000560</code>
             <span class="edge-predicate">is a</span>
             <strong>Druantia system</strong>
+            <code>traitmech:000234</code>
             <code>rdfs:subClassOf</code>
             <p>Druantia III system possession is a Druantia-system trait.</p>
             <ul>
@@ -312,11 +329,75 @@
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
 
-      <p class="no-match">No kg-microbe node embedding matched this record
-        in the 2026-04-25 deepwalk.</p>
+      <p class="match-method">Matched <strong>1</strong>
+        kg-microbe node
+        via <em>parent_proxy</em>.</p>
+      <ul class="kgm-nodes">
+
+        <li><code>METPO:1000188</code> <span class="dim-preview">[-0.956, -1.962, -3.148, +1.274, …]</span></li>
+
+      </ul>
+      <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
 
     </div>
 
+
+    <div class="card">
+      <h2>Nearest neighbors in embedding space</h2>
+      <p class="meta">Top-8 cosine-similar METPO traits
+        from the 2026-04-25 deepwalk (512-D).</p>
+      <ul class="nn-list">
+
+        <li>
+          <span class="nn-cat">upper</span>
+          <a href="../../traits/upper/quality.html">quality</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/kongming_system.html">Kongming system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/kiwa_system.html">Kiwa system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/kamadhenu_system.html">Kamadhenu system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/jukab_system.html">JukAB system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/integrative_conjugative_element.html">integrative conjugative element</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/ig_like_schlafen_system.html">Ig-like Schlafen system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hypnos_system.html">Hypnos system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+      </ul>
+    </div>
 
 
 
@@ -486,6 +567,11 @@
     </dl>
   </div>
 
+
+  <div class="card rail-kgm">
+    <h2>kg-microbe</h2>
+    <p class="meta">1 matching node (parent_proxy)</p>
+  </div>
 
 </aside>
 </div>
@@ -819,7 +905,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Conservative subtype-level sketch linking a DefenseFinder Druantia_III locus to DruE/DruH-dependent Type III Druantia DNA processing, Druantia III system possession, and its Druantia parent.", "edges": [{"description": "Druantia_III loci are represented in DefenseFinder by Druantia_III__DruH and Druantia__DruE_1, and Wu et al. define complete Druantia III systems by the presence of both DruE and DruH.", "evidence": [{"notes": "Wu et al. support Druantia III as a recurring bacterial DruE/DruH system rather than a single engineered locus.", "reference": "DOI:10.64898/2026.05.12.724681", "snippet": "we identified 6,885 bacterial genomes encoding complete Druantia III systems, defined by the presence of both DruE and DruH"}, {"notes": "The pinned DefenseFinder HMM inventory records the shared Druantia__DruE_1 custom profile listed by the Druantia_III rule row.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Druantia__DruE_1                                 | Druantia__DruE_1                                 | Druantia               | Custom                  | 20     |"}, {"notes": "The pinned DefenseFinder HMM inventory records the Druantia_III__DruH custom profile under the Druantia_III model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Druantia_III__DruH                               | Druantia_III__DruH                               | Druantia_III           | Custom                  | 20     |"}, {"notes": "The pinned DefenseFinder rules table models Druantia_III as a Druantia subsystem requiring two mandatory matches from Druantia_III__DruH and Druantia__DruE_1 and two genes overall.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Druantia\tDruantia_III\t2\t2\tDruantia_III__DruH, Druantia__DruE_1\t\t\t"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "druantia_iii_locus", "target": "druantia_iii_dna_processing"}, {"description": "The first-pass Druantia III system trait is realized by a DruE/DruH locus whose late defense uses DruE helicase-nuclease effector activity.", "evidence": [{"notes": "Wu et al. support the characterized Druantia III arrangement in which DruH likely senses infection and DruE acts as the helicase-nuclease effector.", "reference": "DOI:10.64898/2026.05.12.724681", "snippet": "Druantia III is a late-acting defence where DruH is the likely infection sensor and DruE is a helicase-nuclease effector that engages ssDNA-containing replication intermediates"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "druantia_iii_dna_processing", "target": "druantia_iii_system_trait"}, {"description": "Druantia III system possession is a Druantia-system trait.", "evidence": [{"notes": "The pinned DefenseFinder article registry maps the broad Druantia model namespace to the Doron et al. microbial pangenome antiphage-system discovery paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| Druantia | 10\\.1126/science\\.aar4120 | Systematic discovery of antiphage defense systems in the microbial pangenome | "}, {"notes": "The pinned DefenseFinder rules table places the Druantia_III subsystem under the Druantia system key with two mandatory matches and two genes required.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Druantia\tDruantia_III\t2\t2"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "druantia_iii_system_trait", "target": "druantia_system_trait"}, {"description": "Septu protein PtuB (ptuB, UniProtKB:P0DW42) contributes to Druantia III system.", "evidence": [{"notes": "Supports the functional association between Septu protein PtuB (UniProtKB:P0DW42 in Bacillus thuringiensis) and Druantia III system.", "reference": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12458937/", "snippet": "Screening 66 phages that could form plaques on the double-deletion strain showed that the strain carrying only Druantia III exhibited at least modest protection (\u003c0.01 EOP or \u003c0.5 SFC) against 3 phages, whereas the strain carrying ARMADA Type II exhibited a much broader range of immunity, with at least modest protection observed against 30 phages."}], "id": "edge-4", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "druantia_iii_system_protein_component", "target": "druantia_iii_system_trait"}], "evidence_rows": [{"description": "Druantia_III loci are represented in DefenseFinder by Druantia_III__DruH and Druantia__DruE_1, and Wu et al. define complete Druantia III systems by the presence of both DruE and DruH.", "edge_id": "edge-1", "evidence": [{"notes": "Wu et al. support Druantia III as a recurring bacterial DruE/DruH system rather than a single engineered locus.", "reference": "DOI:10.64898/2026.05.12.724681", "snippet": "we identified 6,885 bacterial genomes encoding complete Druantia III systems, defined by the presence of both DruE and DruH"}, {"notes": "The pinned DefenseFinder HMM inventory records the shared Druantia__DruE_1 custom profile listed by the Druantia_III rule row.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Druantia__DruE_1                                 | Druantia__DruE_1                                 | Druantia               | Custom                  | 20     |"}, {"notes": "The pinned DefenseFinder HMM inventory records the Druantia_III__DruH custom profile under the Druantia_III model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Druantia_III__DruH                               | Druantia_III__DruH                               | Druantia_III           | Custom                  | 20     |"}, {"notes": "The pinned DefenseFinder rules table models Druantia_III as a Druantia subsystem requiring two mandatory matches from Druantia_III__DruH and Druantia__DruE_1 and two genes overall.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Druantia\tDruantia_III\t2\t2\tDruantia_III__DruH, Druantia__DruE_1\t\t\t"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Druantia III locus", "target": "Druantia III DruE/DruH DNA processing"}, {"description": "The first-pass Druantia III system trait is realized by a DruE/DruH locus whose late defense uses DruE helicase-nuclease effector activity.", "edge_id": "edge-2", "evidence": [{"notes": "Wu et al. support the characterized Druantia III arrangement in which DruH likely senses infection and DruE acts as the helicase-nuclease effector.", "reference": "DOI:10.64898/2026.05.12.724681", "snippet": "Druantia III is a late-acting defence where DruH is the likely infection sensor and DruE is a helicase-nuclease effector that engages ssDNA-containing replication intermediates"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "Druantia III DruE/DruH DNA processing", "target": "Druantia III system"}, {"description": "Druantia III system possession is a Druantia-system trait.", "edge_id": "edge-3", "evidence": [{"notes": "The pinned DefenseFinder article registry maps the broad Druantia model namespace to the Doron et al. microbial pangenome antiphage-system discovery paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| Druantia | 10\\.1126/science\\.aar4120 | Systematic discovery of antiphage defense systems in the microbial pangenome | "}, {"notes": "The pinned DefenseFinder rules table places the Druantia_III subsystem under the Druantia system key with two mandatory matches and two genes required.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Druantia\tDruantia_III\t2\t2"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "Druantia III system", "target": "Druantia system"}, {"description": "Septu protein PtuB (ptuB, UniProtKB:P0DW42) contributes to Druantia III system.", "edge_id": "edge-4", "evidence": [{"notes": "Supports the functional association between Septu protein PtuB (UniProtKB:P0DW42 in Bacillus thuringiensis) and Druantia III system.", "reference": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12458937/", "snippet": "Screening 66 phages that could form plaques on the double-deletion strain showed that the strain carrying only Druantia III exhibited at least modest protection (\u003c0.01 EOP or \u003c0.5 SFC) against 3 phages, whereas the strain carrying ARMADA Type II exhibited a much broader range of immunity, with at least modest protection observed against 30 phages."}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Septu protein PtuB", "target": "Druantia III system"}], "graph_id": "druantia_iii_locus_subtype_defense", "issues": [], "nodes": [{"color": "#ecfccb", "description": "DruE helicase-nuclease DNA processing in a DruH-containing Type III Druantia context.", "grounding": null, "id": "druantia_iii_dna_processing", "is_orphan": false, "label": "Druantia III DruE/DruH DNA processing", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "A DefenseFinder Druantia_III subtype locus represented by Druantia_III__DruH and Druantia__DruE_1 profiles.", "grounding": null, "id": "druantia_iii_locus", "is_orphan": false, "label": "Druantia III locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Protein component (Septu protein PtuB) associated with Druantia III system.", "grounding": null, "id": "druantia_iii_system_protein_component", "is_orphan": false, "label": "Septu protein PtuB", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 12, "evidence": [{"notes": "Supports Septu protein PtuB in Druantia III system; UniProtKB:P0DW42 (ptuB, Septu protein PtuB) in Bacillus thuringiensis provides a verified protein exemplar.", "reference": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12458937/", "snippet": "Screening 66 phages that could form plaques on the double-deletion strain showed that the strain carrying only Druantia III exhibited at least modest protection (\u003c0.01 EOP or \u003c0.5 SFC) against 3 phages, whereas the strain carrying ARMADA Type II exhibited a much broader range of immunity, with at least modest protection observed against 30 phages."}], "gene_symbol": "ptuB", "protein_label": "Septu protein PtuB", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (ptuB, Septu protein PtuB) associated with Druantia III system in Bacillus thuringiensis.", "sequence_version": 1, "taxon_id": "NCBITaxon:1428", "taxon_label": "Bacillus thuringiensis", "uniprot_id": "UniProtKB:P0DW42"}], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded Druantia III phage-defense system.", "grounding": "traitmech:000560", "id": "druantia_iii_system_trait", "is_orphan": false, "label": "Druantia III system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded Druantia phage-defense system.", "grounding": "traitmech:000234", "id": "druantia_system_trait", "is_orphan": false, "label": "Druantia system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 12, "evidence": [{"notes": "Supports Septu protein PtuB in Druantia III system; UniProtKB:P0DW42 (ptuB, Septu protein PtuB) in Bacillus thuringiensis provides a verified protein exemplar.", "reference": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12458937/", "snippet": "Screening 66 phages that could form plaques on the double-deletion strain showed that the strain carrying only Druantia III exhibited at least modest protection (\u003c0.01 EOP or \u003c0.5 SFC) against 3 phages, whereas the strain carrying ARMADA Type II exhibited a much broader range of immunity, with at least modest protection observed against 30 phages."}], "gene_symbol": "ptuB", "node_id": "druantia_iii_system_protein_component", "node_label": "Septu protein PtuB", "protein_label": "Septu protein PtuB", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (ptuB, Septu protein PtuB) associated with Druantia III system in Bacillus thuringiensis.", "sequence_version": 1, "taxon_id": "NCBITaxon:1428", "taxon_label": "Bacillus thuringiensis", "uniprot_id": "UniProtKB:P0DW42"}], "scope_notes": "The graph captures the Druantia_III subtype at DefenseFinder rule-row level without resolving the exact late phage trigger, DruH sensory intermediate, RecBCD dependence, Zorya II synergy, native host breadth beyond the E. coli ATCC 8739 observation, Type I, Type II, or Type IV partner functions, or whether every DefenseFinder Druantia_III prediction is a complete experimentally active locus.", "scope_status": "NONMECHANISTIC", "title": "Druantia III loci mark a DruH-dependent Druantia subtype"}];
+  var graphs = [{"description": "Conservative subtype-level sketch linking a DefenseFinder Druantia_III locus to DruE/DruH-dependent Type III Druantia DNA processing, Druantia III system possession, and its Druantia parent.", "edges": [{"description": "Druantia_III loci are represented in DefenseFinder by Druantia_III__DruH and Druantia__DruE_1, and Wu et al. define complete Druantia III systems by the presence of both DruE and DruH.", "evidence": [{"notes": "Wu et al. support Druantia III as a recurring bacterial DruE/DruH system rather than a single engineered locus.", "reference": "DOI:10.64898/2026.05.12.724681", "snippet": "we identified 6,885 bacterial genomes encoding complete Druantia III systems, defined by the presence of both DruE and DruH"}, {"notes": "The pinned DefenseFinder HMM inventory records the shared Druantia__DruE_1 custom profile listed by the Druantia_III rule row.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Druantia__DruE_1                                 | Druantia__DruE_1                                 | Druantia               | Custom                  | 20     |"}, {"notes": "The pinned DefenseFinder HMM inventory records the Druantia_III__DruH custom profile under the Druantia_III model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Druantia_III__DruH                               | Druantia_III__DruH                               | Druantia_III           | Custom                  | 20     |"}, {"notes": "The pinned DefenseFinder rules table models Druantia_III as a Druantia subsystem requiring two mandatory matches from Druantia_III__DruH and Druantia__DruE_1 and two genes overall.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Druantia\tDruantia_III\t2\t2\tDruantia_III__DruH, Druantia__DruE_1\t\t\t"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "druantia_iii_locus", "target": "druantia_iii_dna_processing"}, {"description": "The first-pass Druantia III system trait is realized by a DruE/DruH locus whose late defense uses DruE helicase-nuclease effector activity.", "evidence": [{"notes": "Wu et al. support the characterized Druantia III arrangement in which DruH likely senses infection and DruE acts as the helicase-nuclease effector.", "reference": "DOI:10.64898/2026.05.12.724681", "snippet": "Druantia III is a late-acting defence where DruH is the likely infection sensor and DruE is a helicase-nuclease effector that engages ssDNA-containing replication intermediates"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "druantia_iii_dna_processing", "target": "druantia_iii_system_trait"}, {"description": "Druantia III system possession is a Druantia-system trait.", "evidence": [{"notes": "The pinned DefenseFinder article registry maps the broad Druantia model namespace to the Doron et al. microbial pangenome antiphage-system discovery paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| Druantia | 10\\.1126/science\\.aar4120 | Systematic discovery of antiphage defense systems in the microbial pangenome | "}, {"notes": "The pinned DefenseFinder rules table places the Druantia_III subsystem under the Druantia system key with two mandatory matches and two genes required.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Druantia\tDruantia_III\t2\t2"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "druantia_iii_system_trait", "target": "druantia_system_trait"}], "evidence_rows": [{"description": "Druantia_III loci are represented in DefenseFinder by Druantia_III__DruH and Druantia__DruE_1, and Wu et al. define complete Druantia III systems by the presence of both DruE and DruH.", "edge_id": "edge-1", "evidence": [{"notes": "Wu et al. support Druantia III as a recurring bacterial DruE/DruH system rather than a single engineered locus.", "reference": "DOI:10.64898/2026.05.12.724681", "snippet": "we identified 6,885 bacterial genomes encoding complete Druantia III systems, defined by the presence of both DruE and DruH"}, {"notes": "The pinned DefenseFinder HMM inventory records the shared Druantia__DruE_1 custom profile listed by the Druantia_III rule row.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Druantia__DruE_1                                 | Druantia__DruE_1                                 | Druantia               | Custom                  | 20     |"}, {"notes": "The pinned DefenseFinder HMM inventory records the Druantia_III__DruH custom profile under the Druantia_III model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Druantia_III__DruH                               | Druantia_III__DruH                               | Druantia_III           | Custom                  | 20     |"}, {"notes": "The pinned DefenseFinder rules table models Druantia_III as a Druantia subsystem requiring two mandatory matches from Druantia_III__DruH and Druantia__DruE_1 and two genes overall.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Druantia\tDruantia_III\t2\t2\tDruantia_III__DruH, Druantia__DruE_1\t\t\t"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Druantia III locus", "source_grounding": null, "target": "Druantia III DruE/DruH DNA processing", "target_grounding": null}, {"description": "The first-pass Druantia III system trait is realized by a DruE/DruH locus whose late defense uses DruE helicase-nuclease effector activity.", "edge_id": "edge-2", "evidence": [{"notes": "Wu et al. support the characterized Druantia III arrangement in which DruH likely senses infection and DruE acts as the helicase-nuclease effector.", "reference": "DOI:10.64898/2026.05.12.724681", "snippet": "Druantia III is a late-acting defence where DruH is the likely infection sensor and DruE is a helicase-nuclease effector that engages ssDNA-containing replication intermediates"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "Druantia III DruE/DruH DNA processing", "source_grounding": null, "target": "Druantia III system", "target_grounding": "traitmech:000560"}, {"description": "Druantia III system possession is a Druantia-system trait.", "edge_id": "edge-3", "evidence": [{"notes": "The pinned DefenseFinder article registry maps the broad Druantia model namespace to the Doron et al. microbial pangenome antiphage-system discovery paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| Druantia | 10\\.1126/science\\.aar4120 | Systematic discovery of antiphage defense systems in the microbial pangenome | "}, {"notes": "The pinned DefenseFinder rules table places the Druantia_III subsystem under the Druantia system key with two mandatory matches and two genes required.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Druantia\tDruantia_III\t2\t2"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "Druantia III system", "source_grounding": "traitmech:000560", "target": "Druantia system", "target_grounding": "traitmech:000234"}], "graph_id": "druantia_iii_locus_subtype_defense", "issues": [], "nodes": [{"color": "#ecfccb", "description": "DruE helicase-nuclease DNA processing in a DruH-containing Type III Druantia context.", "grounding": null, "id": "druantia_iii_dna_processing", "is_orphan": false, "label": "Druantia III DruE/DruH DNA processing", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "A DefenseFinder Druantia_III subtype locus represented by Druantia_III__DruH and Druantia__DruE_1 profiles.", "grounding": null, "id": "druantia_iii_locus", "is_orphan": false, "label": "Druantia III locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded Druantia III phage-defense system.", "grounding": "traitmech:000560", "id": "druantia_iii_system_trait", "is_orphan": false, "label": "Druantia III system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded Druantia phage-defense system.", "grounding": "traitmech:000234", "id": "druantia_system_trait", "is_orphan": false, "label": "Druantia system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "The graph captures the Druantia_III subtype at DefenseFinder rule-row level without resolving the exact late phage trigger, DruH sensory intermediate, RecBCD dependence, Zorya II synergy, native host breadth beyond the E. coli ATCC 8739 observation, Type I, Type II, or Type IV partner functions, or whether every DefenseFinder Druantia_III prediction is a complete experimentally active locus.", "scope_status": "NONMECHANISTIC", "title": "Druantia III loci mark a DruH-dependent Druantia subtype"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -839,13 +925,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-10-17 09:00 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

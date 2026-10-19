@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/physiology.html">PHYSIOLOGY</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/physiology.html">PHYSIOLOGY</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>cellular buoyancy</h1>
     <p class="curie"><code>traitmech:000528</code> · CLASS · PROPOSED</p>
 
@@ -91,9 +102,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>gas vesicle shell</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0033172" rel="nofollow noreferrer"><code>GO:0033172</code></a>
             <span class="edge-predicate">part of</span>
             <strong>gas vesicle</strong>
-            <code>biolink:part_of</code>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0031411" rel="nofollow noreferrer"><code>GO:0031411</code></a>
+            <a href="https://w3id.org/biolink/vocab/part_of" rel="nofollow noreferrer"><code>biolink:part_of</code></a>
             <p>The protein shell encloses the internal gas volume as part of the gas vesicle.</p>
             <ul>
 
@@ -108,9 +121,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>gas vesicle</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0031411" rel="nofollow noreferrer"><code>GO:0031411</code></a>
             <span class="edge-predicate">confers</span>
             <strong>cellular buoyancy</strong>
-            <code>METPO:2007700</code>
+            <code>traitmech:000528</code>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>Gas-filled vesicles lower effective cellular density and provide buoyancy.</p>
             <ul>
 
@@ -247,11 +262,75 @@
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
 
-      <p class="no-match">No kg-microbe node embedding matched this record
-        in the 2026-04-25 deepwalk.</p>
+      <p class="match-method">Matched <strong>1</strong>
+        kg-microbe node
+        via <em>parent_proxy</em>.</p>
+      <ul class="kgm-nodes">
+
+        <li><code>METPO:1000059</code> <span class="dim-preview">[-2.682, -2.070, -3.656, -0.652, …]</span></li>
+
+      </ul>
+      <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
 
     </div>
 
+
+    <div class="card">
+      <h2>Nearest neighbors in embedding space</h2>
+      <p class="meta">Top-8 cosine-similar METPO traits
+        from the 2026-04-25 deepwalk (512-D).</p>
+      <ul class="nn-list">
+
+        <li>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/cytogamy.html">cytogamy</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/coccolith_production.html">coccolith production</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/coagulase_activity.html">coagulase activity</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/chemotropism.html">chemotropism</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/chemotaxis.html">chemotaxis</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/cellular_rejuvenation.html">functional cellular rejuvenation</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/cellular_contraction.html">cell body or cytoplasmic projection contraction</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/cold_shock_response.html">cold shock response</a>
+          <span class="sim">1.000</span>
+        </li>
+
+      </ul>
+    </div>
 
 
 
@@ -383,6 +462,11 @@
     </dl>
   </div>
 
+
+  <div class="card rail-kgm">
+    <h2>kg-microbe</h2>
+    <p class="meta">1 matching node (parent_proxy)</p>
+  </div>
 
 </aside>
 </div>
@@ -716,7 +800,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking a proteinaceous gas-filled organelle to cellular buoyancy.", "edges": [{"description": "The protein shell encloses the internal gas volume as part of the gas vesicle.", "evidence": [{"notes": "Feng et al. describe the gas vesicle as an internal gas compartment bounded by a protein shell.", "reference": "DOI:10.1186/s13036-024-00426-3", "snippet": "The gas vesicle (GV) is like a hollow nanoparticle consisting of an internal gas and a protein shell"}], "id": "edge-1", "is_orphan": false, "predicate": "part of", "predicate_id": "biolink:part_of", "source": "gas_vesicle_shell", "target": "gas_vesicle"}, {"description": "Gas-filled vesicles lower effective cellular density and provide buoyancy.", "evidence": [{"notes": "Feng et al. review gas-vesicle physical properties that provide buoyancy for photosynthetic bacteria and halophilic archaea.", "reference": "DOI:10.1186/s13036-024-00426-3", "snippet": "can provide buoyancy for them to move up and down the water to obtain nutrients"}, {"notes": "Feng et al. describe gas vesicles giving photosynthetic bacteria buoyancy to move upward toward sufficient light.", "reference": "DOI:10.1186/s13036-024-00426-3", "snippet": "give them the buoyancy to move upward so that they can get enough light for photosynthesis"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "gas_vesicle", "target": "cellular_buoyancy_trait"}, {"description": "Gas vesicle protein C (gvpC, UniProtKB:Q8YUS9) contributes to cellular buoyancy.", "evidence": [{"notes": "Supports the functional association between Gas vesicle protein C (UniProtKB:Q8YUS9 in Nostoc sp. (strain PCC 7120 / SAG 25.82 / UTEX 2576)) and cellular buoyancy.", "reference": "DOI:10.3390/life12091455", "snippet": "Approximately 3\u201310% of the cell volume must be occupied by gas vesicles to provide buoyancy"}], "id": "edge-3", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "cellular_buoyancy_protein_component", "target": "cellular_buoyancy_trait"}], "evidence_rows": [{"description": "The protein shell encloses the internal gas volume as part of the gas vesicle.", "edge_id": "edge-1", "evidence": [{"notes": "Feng et al. describe the gas vesicle as an internal gas compartment bounded by a protein shell.", "reference": "DOI:10.1186/s13036-024-00426-3", "snippet": "The gas vesicle (GV) is like a hollow nanoparticle consisting of an internal gas and a protein shell"}], "predicate": "part of", "predicate_id": "biolink:part_of", "source": "gas vesicle shell", "target": "gas vesicle"}, {"description": "Gas-filled vesicles lower effective cellular density and provide buoyancy.", "edge_id": "edge-2", "evidence": [{"notes": "Feng et al. review gas-vesicle physical properties that provide buoyancy for photosynthetic bacteria and halophilic archaea.", "reference": "DOI:10.1186/s13036-024-00426-3", "snippet": "can provide buoyancy for them to move up and down the water to obtain nutrients"}, {"notes": "Feng et al. describe gas vesicles giving photosynthetic bacteria buoyancy to move upward toward sufficient light.", "reference": "DOI:10.1186/s13036-024-00426-3", "snippet": "give them the buoyancy to move upward so that they can get enough light for photosynthesis"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "gas vesicle", "target": "cellular buoyancy"}, {"description": "Gas vesicle protein C (gvpC, UniProtKB:Q8YUS9) contributes to cellular buoyancy.", "edge_id": "edge-3", "evidence": [{"notes": "Supports the functional association between Gas vesicle protein C (UniProtKB:Q8YUS9 in Nostoc sp. (strain PCC 7120 / SAG 25.82 / UTEX 2576)) and cellular buoyancy.", "reference": "DOI:10.3390/life12091455", "snippet": "Approximately 3\u201310% of the cell volume must be occupied by gas vesicles to provide buoyancy"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Gas vesicle protein C", "target": "cellular buoyancy"}], "graph_id": "gas_vesicles_confer_cellular_buoyancy", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Protein component (Gas vesicle protein C) associated with cellular buoyancy.", "grounding": null, "id": "cellular_buoyancy_protein_component", "is_orphan": false, "label": "Gas vesicle protein C", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 100, "evidence": [{"notes": "Supports Gas vesicle protein C in cellular buoyancy; UniProtKB:Q8YUS9 (gvpC, Gas vesicle protein C) in Nostoc sp. (strain PCC 7120 / SAG 25.82 / UTEX 2576) provides a verified protein exemplar.", "reference": "DOI:10.1186/s13036-024-00426-3", "snippet": "The gas vesicle (GV) is like a hollow nanoparticle consisting of an internal gas and a protein shell"}], "gene_symbol": "gvpC", "protein_label": "Gas vesicle protein C", "proteome_id": "UP000002483", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (gvpC, Gas vesicle protein C) associated with cellular buoyancy in Nostoc sp. (strain PCC 7120 / SAG 25.82 / UTEX 2576).", "sequence_version": 1, "taxon_id": "NCBITaxon:103690", "taxon_label": "Nostoc sp. (strain PCC 7120 / SAG 25.82 / UTEX 2576)", "uniprot_id": "UniProtKB:Q8YUS9"}], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Gas-vesicle-mediated capacity for upward flotation or water-column positioning.", "grounding": "traitmech:000528", "id": "cellular_buoyancy_trait", "is_orphan": false, "label": "cellular buoyancy", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fce7f3", "description": "Hollow gas-filled protein nanocompartment that displaces cytoplasmic volume.", "grounding": "GO:0031411", "id": "gas_vesicle", "is_orphan": false, "label": "gas vesicle", "node_type": "ORGANELLE", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ede9fe", "description": "Proteinaceous shell enclosing the gas-vesicle lumen.", "grounding": "GO:0033172", "id": "gas_vesicle_shell", "is_orphan": false, "label": "gas vesicle shell", "node_type": "CELLULAR_LOCALIZATION", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 100, "evidence": [{"notes": "Supports Gas vesicle protein C in cellular buoyancy; UniProtKB:Q8YUS9 (gvpC, Gas vesicle protein C) in Nostoc sp. (strain PCC 7120 / SAG 25.82 / UTEX 2576) provides a verified protein exemplar.", "reference": "DOI:10.1186/s13036-024-00426-3", "snippet": "The gas vesicle (GV) is like a hollow nanoparticle consisting of an internal gas and a protein shell"}], "gene_symbol": "gvpC", "node_id": "cellular_buoyancy_protein_component", "node_label": "Gas vesicle protein C", "protein_label": "Gas vesicle protein C", "proteome_id": "UP000002483", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (gvpC, Gas vesicle protein C) associated with cellular buoyancy in Nostoc sp. (strain PCC 7120 / SAG 25.82 / UTEX 2576).", "sequence_version": 1, "taxon_id": "NCBITaxon:103690", "taxon_label": "Nostoc sp. (strain PCC 7120 / SAG 25.82 / UTEX 2576)", "uniprot_id": "UniProtKB:Q8YUS9"}], "scope_notes": "The graph records the organelle-scale physical gas-vesicle branch and leaves taxon-specific Gvp protein assembly to the gas-vesicle morphology record. It does not assert that all planktonic depth regulation is gas-vesicle mediated.", "scope_status": "NONMECHANISTIC", "title": "Gas vesicles confer cellular buoyancy"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking a proteinaceous gas-filled organelle to cellular buoyancy.", "edges": [{"description": "The protein shell encloses the internal gas volume as part of the gas vesicle.", "evidence": [{"notes": "Feng et al. describe the gas vesicle as an internal gas compartment bounded by a protein shell.", "reference": "DOI:10.1186/s13036-024-00426-3", "snippet": "The gas vesicle (GV) is like a hollow nanoparticle consisting of an internal gas and a protein shell"}], "id": "edge-1", "is_orphan": false, "predicate": "part of", "predicate_id": "biolink:part_of", "source": "gas_vesicle_shell", "target": "gas_vesicle"}, {"description": "Gas-filled vesicles lower effective cellular density and provide buoyancy.", "evidence": [{"notes": "Feng et al. review gas-vesicle physical properties that provide buoyancy for photosynthetic bacteria and halophilic archaea.", "reference": "DOI:10.1186/s13036-024-00426-3", "snippet": "can provide buoyancy for them to move up and down the water to obtain nutrients"}, {"notes": "Feng et al. describe gas vesicles giving photosynthetic bacteria buoyancy to move upward toward sufficient light.", "reference": "DOI:10.1186/s13036-024-00426-3", "snippet": "give them the buoyancy to move upward so that they can get enough light for photosynthesis"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "gas_vesicle", "target": "cellular_buoyancy_trait"}], "evidence_rows": [{"description": "The protein shell encloses the internal gas volume as part of the gas vesicle.", "edge_id": "edge-1", "evidence": [{"notes": "Feng et al. describe the gas vesicle as an internal gas compartment bounded by a protein shell.", "reference": "DOI:10.1186/s13036-024-00426-3", "snippet": "The gas vesicle (GV) is like a hollow nanoparticle consisting of an internal gas and a protein shell"}], "predicate": "part of", "predicate_id": "biolink:part_of", "source": "gas vesicle shell", "source_grounding": "GO:0033172", "target": "gas vesicle", "target_grounding": "GO:0031411"}, {"description": "Gas-filled vesicles lower effective cellular density and provide buoyancy.", "edge_id": "edge-2", "evidence": [{"notes": "Feng et al. review gas-vesicle physical properties that provide buoyancy for photosynthetic bacteria and halophilic archaea.", "reference": "DOI:10.1186/s13036-024-00426-3", "snippet": "can provide buoyancy for them to move up and down the water to obtain nutrients"}, {"notes": "Feng et al. describe gas vesicles giving photosynthetic bacteria buoyancy to move upward toward sufficient light.", "reference": "DOI:10.1186/s13036-024-00426-3", "snippet": "give them the buoyancy to move upward so that they can get enough light for photosynthesis"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "gas vesicle", "source_grounding": "GO:0031411", "target": "cellular buoyancy", "target_grounding": "traitmech:000528"}], "graph_id": "gas_vesicles_confer_cellular_buoyancy", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Gas-vesicle-mediated capacity for upward flotation or water-column positioning.", "grounding": "traitmech:000528", "id": "cellular_buoyancy_trait", "is_orphan": false, "label": "cellular buoyancy", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fce7f3", "description": "Hollow gas-filled protein nanocompartment that displaces cytoplasmic volume.", "grounding": "GO:0031411", "id": "gas_vesicle", "is_orphan": false, "label": "gas vesicle", "node_type": "ORGANELLE", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ede9fe", "description": "Proteinaceous shell enclosing the gas-vesicle lumen.", "grounding": "GO:0033172", "id": "gas_vesicle_shell", "is_orphan": false, "label": "gas vesicle shell", "node_type": "CELLULAR_LOCALIZATION", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "The graph records the organelle-scale physical gas-vesicle branch and leaves taxon-specific Gvp protein assembly to the gas-vesicle morphology record. It does not assert that all planktonic depth regulation is gas-vesicle mediated.", "scope_status": "NONMECHANISTIC", "title": "Gas vesicles confer cellular buoyancy"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -736,13 +820,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-10-17 09:00 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

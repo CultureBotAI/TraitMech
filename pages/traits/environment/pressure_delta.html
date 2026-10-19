@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/environment.html">ENVIRONMENT</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/environment.html">ENVIRONMENT</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>pressure delta</h1>
     <p class="curie"><code>traitmech:000006</code> · CLASS · REVIEWED</p>
 
@@ -85,9 +96,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>hydrostatic pressure</strong>
+            <a href="http://purl.obolibrary.org/obo/PATO_0001025" rel="nofollow noreferrer"><code>PATO:0001025</code></a>
             <span class="edge-predicate">defines</span>
             <strong>pressure delta</strong>
-            <code>METPO:2007500</code>
+            <code>traitmech:000006</code>
+            <a href="https://w3id.org/metpo/2007500" rel="nofollow noreferrer"><code>METPO:2007500</code></a>
             <p>The hydrostatic-pressure axis defines the values whose max minus min yields the delta.</p>
             <ul>
 
@@ -102,9 +115,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>pressure delta</strong>
+            <code>traitmech:000006</code>
             <span class="edge-predicate">associated with</span>
             <strong>pressure-tolerance breadth</strong>
-            <code>biolink:associated_with</code>
+
+            <a href="https://w3id.org/biolink/vocab/associated_with" rel="nofollow noreferrer"><code>biolink:associated_with</code></a>
             <p>The delta encodes the breadth of pressure-tolerance flexibility.</p>
             <ul>
 
@@ -119,9 +134,11 @@
 
           <li id="pathograph-1-edge-3">
             <strong>unsaturated fatty acid production</strong>
+
             <span class="edge-predicate">enables</span>
             <strong>membrane fluidity maintenance under high pressure</strong>
-            <code>RO:0002327</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002327" rel="nofollow noreferrer"><code>RO:0002327</code></a>
             <p>Unsaturated acyl-chain production/desaturation sustains membrane fluidity under high hydrostatic pressure.</p>
             <ul>
 
@@ -142,9 +159,11 @@
 
           <li id="pathograph-1-edge-4">
             <strong>hydrostatic pressure</strong>
+            <a href="http://purl.obolibrary.org/obo/PATO_0001025" rel="nofollow noreferrer"><code>PATO:0001025</code></a>
             <span class="edge-predicate">causes</span>
             <strong>loss of membrane fluidity at high pressure</strong>
-            <code>biolink:causes</code>
+
+            <a href="https://w3id.org/biolink/vocab/causes" rel="nofollow noreferrer"><code>biolink:causes</code></a>
             <p>High hydrostatic pressure compresses membranes and reduces fluidity.</p>
             <ul>
 
@@ -159,8 +178,10 @@
 
           <li id="pathograph-1-edge-5">
             <strong>loss of membrane fluidity at high pressure</strong>
+
             <span class="edge-predicate">restricts</span>
             <strong>pressure-tolerance breadth</strong>
+
 
             <p>Loss of membrane fluidity limits growth at the upper pressure bound, narrowing the supported range.</p>
             <ul>
@@ -176,9 +197,11 @@
 
           <li id="pathograph-1-edge-6">
             <strong>hydrostatic pressure</strong>
+            <a href="http://purl.obolibrary.org/obo/PATO_0001025" rel="nofollow noreferrer"><code>PATO:0001025</code></a>
             <span class="edge-predicate">causes</span>
             <strong>pressure-induced ribosome dissociation</strong>
-            <code>biolink:causes</code>
+
+            <a href="https://w3id.org/biolink/vocab/causes" rel="nofollow noreferrer"><code>biolink:causes</code></a>
             <p>High pressure induces ribosome dissociation, suppressing translation and growth.</p>
             <ul>
 
@@ -193,8 +216,10 @@
 
           <li id="pathograph-1-edge-7">
             <strong>pressure-induced ribosome dissociation</strong>
+
             <span class="edge-predicate">restricts</span>
             <strong>pressure-tolerance breadth</strong>
+
 
             <p>Translation failure from ribosome dissociation limits the growth-supporting pressure range.</p>
             <ul>
@@ -210,9 +235,11 @@
 
           <li id="pathograph-1-edge-8">
             <strong>intracellular osmolytes / compatible solutes</strong>
+
             <span class="edge-predicate">enables</span>
             <strong>protein stabilization under pressure</strong>
-            <code>RO:0002327</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002327" rel="nofollow noreferrer"><code>RO:0002327</code></a>
             <p>Intracellular osmolytes/cosolutes reinforce protein structure under high hydrostatic pressure.</p>
             <ul>
 
@@ -227,8 +254,10 @@
 
           <li id="pathograph-1-edge-9">
             <strong>nuo NADH dehydrogenase I complex</strong>
+
             <span class="edge-predicate">supports</span>
             <strong>high-pressure respiratory energy conservation</strong>
+
 
             <p>The nuo NADH dehydrogenase I complex supports respiratory energy conservation enabling growth under high pressure.</p>
             <ul>
@@ -244,9 +273,11 @@
 
           <li id="pathograph-1-edge-10">
             <strong>minimum and maximum growth pressure bounds</strong>
+
             <span class="edge-predicate">defines</span>
             <strong>pressure delta</strong>
-            <code>METPO:2007500</code>
+            <code>traitmech:000006</code>
+            <a href="https://w3id.org/metpo/2007500" rel="nofollow noreferrer"><code>METPO:2007500</code></a>
             <p>The minimum and maximum growth-pressure limits define the breadth (max minus min) recorded by the delta.</p>
             <ul>
 
@@ -372,49 +403,49 @@
 
         <li>
           <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/cadmium_tolerant.html">cadmium tolerant</a>
-          <span class="sim">1.000</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/sulfur_globule.html">sulfur globule</a>
-          <span class="sim">1.000</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/cobalt_tolerant.html">cobalt tolerant</a>
-          <span class="sim">1.000</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/copper_tolerant.html">copper tolerant</a>
-          <span class="sim">1.000</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/desiccation_tolerant.html">desiccation tolerant</a>
-          <span class="sim">1.000</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">environment</span>
           <a href="../../traits/environment/piezophilic.html">piezophilic</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/obligately_piezophilic.html">obligately piezophilic</a>
+          <a href="../../traits/environment/pressure_range.html">pressure range</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/gas_vesicle.html">gas vesicle</a>
+          <span class="nn-cat">environment</span>
+          <a href="../../traits/environment/pressure_optimum.html">pressure optimum</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">environment</span>
+          <a href="../../traits/environment/piezotolerant.html">piezotolerant</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/chemotaxis.html">chemotaxis</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/cellular_rejuvenation.html">functional cellular rejuvenation</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/cellular_contraction.html">cell body or cytoplasmic projection contraction</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/cellular_buoyancy.html">cellular buoyancy</a>
           <span class="sim">1.000</span>
         </li>
 
@@ -956,7 +987,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed sketch linking the hydrostatic-pressure axis to the breadth (max \u2212 min) of the growth-supporting pressure range.", "edges": [{"description": "The hydrostatic-pressure axis defines the values whose max minus min yields the delta.", "evidence": [{"notes": "Pressure-adaptation review frames the breadth of the pressure-tolerance span as a derived descriptor of pressure-adaptation flexibility.", "reference": "DOI:10.3389/fmolb.2022.1058381"}], "id": "edge-1", "is_orphan": false, "predicate": "defines", "predicate_id": "METPO:2007500", "source": "hydrostatic_pressure", "target": "pressure_delta_trait"}, {"description": "The delta encodes the breadth of pressure-tolerance flexibility.", "evidence": [{"notes": "The 80-140 MPa span of Colwellia marinimaniae MTCD1 (delta = 60 MPa) illustrates the breadth this phenotype records.", "reference": "DOI:10.1099/ijsem.0.001671"}], "id": "edge-2", "is_orphan": false, "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "pressure_delta_trait", "target": "pressure_tolerance_breadth"}, {"description": "Unsaturated acyl-chain production/desaturation sustains membrane fluidity under high hydrostatic pressure.", "evidence": [{"notes": "All piezophiles encode a delta-9 acyl-phospholipid desaturase; unsaturated chains allow better adaptation to higher pressures (general HHP mechanism).", "reference": "DOI:10.1186/s12864-020-07102-y"}, {"notes": "Membrane fluidity adjustment is a core pressure-adaptation node.", "reference": "DOI:10.1021/acs.chemrev.3c00432"}], "id": "edge-3", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "unsaturated_fatty_acid_production", "target": "membrane_fluidity_maintenance"}, {"description": "High hydrostatic pressure compresses membranes and reduces fluidity.", "evidence": [{"notes": "High pressure causes loss of membrane fluidity (cross-taxa physiological mechanism).", "reference": "DOI:10.3389/fmicb.2024.1293928"}], "id": "edge-4", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "hydrostatic_pressure", "target": "membrane_fluidity_loss"}, {"description": "Loss of membrane fluidity limits growth at the upper pressure bound, narrowing the supported range.", "evidence": [{"notes": "Reduced membrane fluidity under HHP coincides with cessation of respiration/degradation, restricting the upper growth bound.", "reference": "DOI:10.1038/s43247-023-01045-4"}], "id": "edge-5", "is_orphan": false, "predicate": "restricts", "predicate_id": null, "source": "membrane_fluidity_loss", "target": "pressure_tolerance_breadth"}, {"description": "High pressure induces ribosome dissociation, suppressing translation and growth.", "evidence": [{"notes": "High pressure causes ribosome dissociation; translation/replication become dysfunctional, preventing growth and division.", "reference": "DOI:10.1038/s43247-023-01045-4"}], "id": "edge-6", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "hydrostatic_pressure", "target": "ribosome_dissociation"}, {"description": "Translation failure from ribosome dissociation limits the growth-supporting pressure range.", "evidence": [{"notes": "Ribosome dissociation preventing growth and division narrows the pressure range over which growth is sustained.", "reference": "DOI:10.1038/s43247-023-01045-4"}], "id": "edge-7", "is_orphan": false, "predicate": "restricts", "predicate_id": null, "source": "ribosome_dissociation", "target": "pressure_tolerance_breadth"}, {"description": "Intracellular osmolytes/cosolutes reinforce protein structure under high hydrostatic pressure.", "evidence": [{"notes": "Osmolytes reinforce the structure of proteins; cosolutes modulate biomolecular function under HHP (general mechanism).", "reference": "DOI:10.1021/acs.chemrev.3c00432"}], "id": "edge-8", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "compatible_solutes", "target": "protein_stabilization_under_pressure"}, {"description": "The nuo NADH dehydrogenase I complex supports respiratory energy conservation enabling growth under high pressure.", "evidence": [{"notes": "nuo dehydrogenase operons present in piezophiles; respiratory-chain composition modulates pressure tolerance, a candidate contributor to wider high-pressure growth support.", "reference": "DOI:10.1186/s12864-020-07102-y"}], "id": "edge-9", "is_orphan": false, "predicate": "supports", "predicate_id": null, "source": "nuo_complex_i", "target": "high_pressure_energy_conservation"}, {"description": "The minimum and maximum growth-pressure limits define the breadth (max minus min) recorded by the delta.", "evidence": [{"notes": "Range-bound examples (e.g., MTCD1 80-140 MPa =\u003e delta = 60 MPa) show min/max bounds defining the pressure-delta breadth descriptor.", "reference": "DOI:10.1186/s12864-020-07102-y"}], "id": "edge-10", "is_orphan": false, "predicate": "defines", "predicate_id": "METPO:2007500", "source": "min_max_growth_pressure_bounds", "target": "pressure_delta_trait"}], "evidence_rows": [{"description": "The hydrostatic-pressure axis defines the values whose max minus min yields the delta.", "edge_id": "edge-1", "evidence": [{"notes": "Pressure-adaptation review frames the breadth of the pressure-tolerance span as a derived descriptor of pressure-adaptation flexibility.", "reference": "DOI:10.3389/fmolb.2022.1058381"}], "predicate": "defines", "predicate_id": "METPO:2007500", "source": "hydrostatic pressure", "target": "pressure delta"}, {"description": "The delta encodes the breadth of pressure-tolerance flexibility.", "edge_id": "edge-2", "evidence": [{"notes": "The 80-140 MPa span of Colwellia marinimaniae MTCD1 (delta = 60 MPa) illustrates the breadth this phenotype records.", "reference": "DOI:10.1099/ijsem.0.001671"}], "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "pressure delta", "target": "pressure-tolerance breadth"}, {"description": "Unsaturated acyl-chain production/desaturation sustains membrane fluidity under high hydrostatic pressure.", "edge_id": "edge-3", "evidence": [{"notes": "All piezophiles encode a delta-9 acyl-phospholipid desaturase; unsaturated chains allow better adaptation to higher pressures (general HHP mechanism).", "reference": "DOI:10.1186/s12864-020-07102-y"}, {"notes": "Membrane fluidity adjustment is a core pressure-adaptation node.", "reference": "DOI:10.1021/acs.chemrev.3c00432"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "unsaturated fatty acid production", "target": "membrane fluidity maintenance under high pressure"}, {"description": "High hydrostatic pressure compresses membranes and reduces fluidity.", "edge_id": "edge-4", "evidence": [{"notes": "High pressure causes loss of membrane fluidity (cross-taxa physiological mechanism).", "reference": "DOI:10.3389/fmicb.2024.1293928"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "hydrostatic pressure", "target": "loss of membrane fluidity at high pressure"}, {"description": "Loss of membrane fluidity limits growth at the upper pressure bound, narrowing the supported range.", "edge_id": "edge-5", "evidence": [{"notes": "Reduced membrane fluidity under HHP coincides with cessation of respiration/degradation, restricting the upper growth bound.", "reference": "DOI:10.1038/s43247-023-01045-4"}], "predicate": "restricts", "predicate_id": null, "source": "loss of membrane fluidity at high pressure", "target": "pressure-tolerance breadth"}, {"description": "High pressure induces ribosome dissociation, suppressing translation and growth.", "edge_id": "edge-6", "evidence": [{"notes": "High pressure causes ribosome dissociation; translation/replication become dysfunctional, preventing growth and division.", "reference": "DOI:10.1038/s43247-023-01045-4"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "hydrostatic pressure", "target": "pressure-induced ribosome dissociation"}, {"description": "Translation failure from ribosome dissociation limits the growth-supporting pressure range.", "edge_id": "edge-7", "evidence": [{"notes": "Ribosome dissociation preventing growth and division narrows the pressure range over which growth is sustained.", "reference": "DOI:10.1038/s43247-023-01045-4"}], "predicate": "restricts", "predicate_id": null, "source": "pressure-induced ribosome dissociation", "target": "pressure-tolerance breadth"}, {"description": "Intracellular osmolytes/cosolutes reinforce protein structure under high hydrostatic pressure.", "edge_id": "edge-8", "evidence": [{"notes": "Osmolytes reinforce the structure of proteins; cosolutes modulate biomolecular function under HHP (general mechanism).", "reference": "DOI:10.1021/acs.chemrev.3c00432"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "intracellular osmolytes / compatible solutes", "target": "protein stabilization under pressure"}, {"description": "The nuo NADH dehydrogenase I complex supports respiratory energy conservation enabling growth under high pressure.", "edge_id": "edge-9", "evidence": [{"notes": "nuo dehydrogenase operons present in piezophiles; respiratory-chain composition modulates pressure tolerance, a candidate contributor to wider high-pressure growth support.", "reference": "DOI:10.1186/s12864-020-07102-y"}], "predicate": "supports", "predicate_id": null, "source": "nuo NADH dehydrogenase I complex", "target": "high-pressure respiratory energy conservation"}, {"description": "The minimum and maximum growth-pressure limits define the breadth (max minus min) recorded by the delta.", "edge_id": "edge-10", "evidence": [{"notes": "Range-bound examples (e.g., MTCD1 80-140 MPa =\u003e delta = 60 MPa) show min/max bounds defining the pressure-delta breadth descriptor.", "reference": "DOI:10.1186/s12864-020-07102-y"}], "predicate": "defines", "predicate_id": "METPO:2007500", "source": "minimum and maximum growth pressure bounds", "target": "pressure delta"}], "graph_id": "pressure_delta_breadth_descriptor", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Cosolutes/osmolytes that stabilize protein structure under high hydrostatic pressure.", "grounding": null, "id": "compatible_solutes", "is_orphan": false, "label": "intracellular osmolytes / compatible solutes", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Respiratory-chain energy conservation supporting growth under high hydrostatic pressure.", "grounding": null, "id": "high_pressure_energy_conservation", "is_orphan": false, "label": "high-pressure respiratory energy conservation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Ambient hydrostatic pressure imposed on the cell.", "grounding": "PATO:0001025", "id": "hydrostatic_pressure", "is_orphan": false, "label": "hydrostatic pressure", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Pressure-induced reduction of membrane fluidity that impairs membrane function.", "grounding": null, "id": "membrane_fluidity_loss", "is_orphan": false, "label": "loss of membrane fluidity at high pressure", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Maintenance of adequate membrane fluidity against pressure-induced lipid compression.", "grounding": null, "id": "membrane_fluidity_maintenance", "is_orphan": false, "label": "membrane fluidity maintenance under high pressure", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Lower and upper hydrostatic-pressure limits of growth whose difference defines the delta.", "grounding": null, "id": "min_max_growth_pressure_bounds", "is_orphan": false, "label": "minimum and maximum growth pressure bounds", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Proton-translocating NADH dehydrogenase I (Complex I) operon enriched in piezophiles.", "grounding": null, "id": "nuo_complex_i", "is_orphan": false, "label": "nuo NADH dehydrogenase I complex", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 154, "evidence": [{"notes": "Supports nuo NADH dehydrogenase I complex in pressure delta; UniProtKB:Q59516 (hprA, Glycerate dehydrogenase) in Methylorubrum extorquens (strain ATCC 14718 / DSM 1338 / JCM 2805 / NCIMB 9133 / AM1) (Methylobacterium extorquens) provides a verified protein exemplar.", "reference": "DOI:10.3389/fmolb.2022.1058381", "snippet": "Piezophiles, microorganisms adapted to high pressure, have developed key strategies to maintain the integrity of their lipid membrane"}], "gene_symbol": "hprA", "protein_label": "Glycerate dehydrogenase", "proteome_id": "UP000009081", "retrieved_on": "2026-10-17", "role": "Exemplar protein (hprA, Glycerate dehydrogenase) representing nuo NADH dehydrogenase I complex in Methylorubrum extorquens (strain ATCC 14718 / DSM 1338 / JCM 2805 / NCIMB 9133 / AM1) (Methylobacterium extorquens) for pressure delta.", "sequence_version": 3, "taxon_id": "NCBITaxon:272630", "taxon_label": "Methylorubrum extorquens (strain ATCC 14718 / DSM 1338 / JCM 2805 / NCIMB 9133 / AM1) (Methylobacterium extorquens)", "uniprot_id": "UniProtKB:Q59516"}], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Breadth (max \u2212 min) of the growth-supporting hydrostatic-pressure range.", "grounding": "traitmech:000006", "id": "pressure_delta_trait", "is_orphan": false, "label": "pressure delta", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Width of the hydrostatic-pressure interval over which growth is sustained.", "grounding": null, "id": "pressure_tolerance_breadth", "is_orphan": false, "label": "pressure-tolerance breadth", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Reinforcement of protein structure against pressure-induced perturbation.", "grounding": null, "id": "protein_stabilization_under_pressure", "is_orphan": false, "label": "protein stabilization under pressure", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "High-pressure dissociation of ribosomes suppressing translation and growth.", "grounding": null, "id": "ribosome_dissociation", "is_orphan": false, "label": "pressure-induced ribosome dissociation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Biosynthesis/desaturation generating unsaturated acyl chains that counter pressure-induced membrane ordering.", "grounding": null, "id": "unsaturated_fatty_acid_production", "is_orphan": false, "label": "unsaturated fatty acid production", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 154, "evidence": [{"notes": "Supports nuo NADH dehydrogenase I complex in pressure delta; UniProtKB:Q59516 (hprA, Glycerate dehydrogenase) in Methylorubrum extorquens (strain ATCC 14718 / DSM 1338 / JCM 2805 / NCIMB 9133 / AM1) (Methylobacterium extorquens) provides a verified protein exemplar.", "reference": "DOI:10.3389/fmolb.2022.1058381", "snippet": "Piezophiles, microorganisms adapted to high pressure, have developed key strategies to maintain the integrity of their lipid membrane"}], "gene_symbol": "hprA", "node_id": "nuo_complex_i", "node_label": "nuo NADH dehydrogenase I complex", "protein_label": "Glycerate dehydrogenase", "proteome_id": "UP000009081", "retrieved_on": "2026-10-17", "role": "Exemplar protein (hprA, Glycerate dehydrogenase) representing nuo NADH dehydrogenase I complex in Methylorubrum extorquens (strain ATCC 14718 / DSM 1338 / JCM 2805 / NCIMB 9133 / AM1) (Methylobacterium extorquens) for pressure delta.", "sequence_version": 3, "taxon_id": "NCBITaxon:272630", "taxon_label": "Methylorubrum extorquens (strain ATCC 14718 / DSM 1338 / JCM 2805 / NCIMB 9133 / AM1) (Methylobacterium extorquens)", "uniprot_id": "UniProtKB:Q59516"}], "scope_notes": "This record is a quantitative measurement, interval, or bin in the environmental phenotype hierarchy; a token protein example would misrepresent the measured value as one inherited molecular mechanism.", "scope_status": "NONMECHANISTIC", "title": "Pressure delta: breadth of the pressure-tolerance span"}];
+  var graphs = [{"description": "Evidence-backed sketch linking the hydrostatic-pressure axis to the breadth (max \u2212 min) of the growth-supporting pressure range.", "edges": [{"description": "The hydrostatic-pressure axis defines the values whose max minus min yields the delta.", "evidence": [{"notes": "Pressure-adaptation review frames the breadth of the pressure-tolerance span as a derived descriptor of pressure-adaptation flexibility.", "reference": "DOI:10.3389/fmolb.2022.1058381"}], "id": "edge-1", "is_orphan": false, "predicate": "defines", "predicate_id": "METPO:2007500", "source": "hydrostatic_pressure", "target": "pressure_delta_trait"}, {"description": "The delta encodes the breadth of pressure-tolerance flexibility.", "evidence": [{"notes": "The 80-140 MPa span of Colwellia marinimaniae MTCD1 (delta = 60 MPa) illustrates the breadth this phenotype records.", "reference": "DOI:10.1099/ijsem.0.001671"}], "id": "edge-2", "is_orphan": false, "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "pressure_delta_trait", "target": "pressure_tolerance_breadth"}, {"description": "Unsaturated acyl-chain production/desaturation sustains membrane fluidity under high hydrostatic pressure.", "evidence": [{"notes": "All piezophiles encode a delta-9 acyl-phospholipid desaturase; unsaturated chains allow better adaptation to higher pressures (general HHP mechanism).", "reference": "DOI:10.1186/s12864-020-07102-y"}, {"notes": "Membrane fluidity adjustment is a core pressure-adaptation node.", "reference": "DOI:10.1021/acs.chemrev.3c00432"}], "id": "edge-3", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "unsaturated_fatty_acid_production", "target": "membrane_fluidity_maintenance"}, {"description": "High hydrostatic pressure compresses membranes and reduces fluidity.", "evidence": [{"notes": "High pressure causes loss of membrane fluidity (cross-taxa physiological mechanism).", "reference": "DOI:10.3389/fmicb.2024.1293928"}], "id": "edge-4", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "hydrostatic_pressure", "target": "membrane_fluidity_loss"}, {"description": "Loss of membrane fluidity limits growth at the upper pressure bound, narrowing the supported range.", "evidence": [{"notes": "Reduced membrane fluidity under HHP coincides with cessation of respiration/degradation, restricting the upper growth bound.", "reference": "DOI:10.1038/s43247-023-01045-4"}], "id": "edge-5", "is_orphan": false, "predicate": "restricts", "predicate_id": null, "source": "membrane_fluidity_loss", "target": "pressure_tolerance_breadth"}, {"description": "High pressure induces ribosome dissociation, suppressing translation and growth.", "evidence": [{"notes": "High pressure causes ribosome dissociation; translation/replication become dysfunctional, preventing growth and division.", "reference": "DOI:10.1038/s43247-023-01045-4"}], "id": "edge-6", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "hydrostatic_pressure", "target": "ribosome_dissociation"}, {"description": "Translation failure from ribosome dissociation limits the growth-supporting pressure range.", "evidence": [{"notes": "Ribosome dissociation preventing growth and division narrows the pressure range over which growth is sustained.", "reference": "DOI:10.1038/s43247-023-01045-4"}], "id": "edge-7", "is_orphan": false, "predicate": "restricts", "predicate_id": null, "source": "ribosome_dissociation", "target": "pressure_tolerance_breadth"}, {"description": "Intracellular osmolytes/cosolutes reinforce protein structure under high hydrostatic pressure.", "evidence": [{"notes": "Osmolytes reinforce the structure of proteins; cosolutes modulate biomolecular function under HHP (general mechanism).", "reference": "DOI:10.1021/acs.chemrev.3c00432"}], "id": "edge-8", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "compatible_solutes", "target": "protein_stabilization_under_pressure"}, {"description": "The nuo NADH dehydrogenase I complex supports respiratory energy conservation enabling growth under high pressure.", "evidence": [{"notes": "nuo dehydrogenase operons present in piezophiles; respiratory-chain composition modulates pressure tolerance, a candidate contributor to wider high-pressure growth support.", "reference": "DOI:10.1186/s12864-020-07102-y"}], "id": "edge-9", "is_orphan": false, "predicate": "supports", "predicate_id": null, "source": "nuo_complex_i", "target": "high_pressure_energy_conservation"}, {"description": "The minimum and maximum growth-pressure limits define the breadth (max minus min) recorded by the delta.", "evidence": [{"notes": "Range-bound examples (e.g., MTCD1 80-140 MPa =\u003e delta = 60 MPa) show min/max bounds defining the pressure-delta breadth descriptor.", "reference": "DOI:10.1186/s12864-020-07102-y"}], "id": "edge-10", "is_orphan": false, "predicate": "defines", "predicate_id": "METPO:2007500", "source": "min_max_growth_pressure_bounds", "target": "pressure_delta_trait"}], "evidence_rows": [{"description": "The hydrostatic-pressure axis defines the values whose max minus min yields the delta.", "edge_id": "edge-1", "evidence": [{"notes": "Pressure-adaptation review frames the breadth of the pressure-tolerance span as a derived descriptor of pressure-adaptation flexibility.", "reference": "DOI:10.3389/fmolb.2022.1058381"}], "predicate": "defines", "predicate_id": "METPO:2007500", "source": "hydrostatic pressure", "source_grounding": "PATO:0001025", "target": "pressure delta", "target_grounding": "traitmech:000006"}, {"description": "The delta encodes the breadth of pressure-tolerance flexibility.", "edge_id": "edge-2", "evidence": [{"notes": "The 80-140 MPa span of Colwellia marinimaniae MTCD1 (delta = 60 MPa) illustrates the breadth this phenotype records.", "reference": "DOI:10.1099/ijsem.0.001671"}], "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "pressure delta", "source_grounding": "traitmech:000006", "target": "pressure-tolerance breadth", "target_grounding": null}, {"description": "Unsaturated acyl-chain production/desaturation sustains membrane fluidity under high hydrostatic pressure.", "edge_id": "edge-3", "evidence": [{"notes": "All piezophiles encode a delta-9 acyl-phospholipid desaturase; unsaturated chains allow better adaptation to higher pressures (general HHP mechanism).", "reference": "DOI:10.1186/s12864-020-07102-y"}, {"notes": "Membrane fluidity adjustment is a core pressure-adaptation node.", "reference": "DOI:10.1021/acs.chemrev.3c00432"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "unsaturated fatty acid production", "source_grounding": null, "target": "membrane fluidity maintenance under high pressure", "target_grounding": null}, {"description": "High hydrostatic pressure compresses membranes and reduces fluidity.", "edge_id": "edge-4", "evidence": [{"notes": "High pressure causes loss of membrane fluidity (cross-taxa physiological mechanism).", "reference": "DOI:10.3389/fmicb.2024.1293928"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "hydrostatic pressure", "source_grounding": "PATO:0001025", "target": "loss of membrane fluidity at high pressure", "target_grounding": null}, {"description": "Loss of membrane fluidity limits growth at the upper pressure bound, narrowing the supported range.", "edge_id": "edge-5", "evidence": [{"notes": "Reduced membrane fluidity under HHP coincides with cessation of respiration/degradation, restricting the upper growth bound.", "reference": "DOI:10.1038/s43247-023-01045-4"}], "predicate": "restricts", "predicate_id": null, "source": "loss of membrane fluidity at high pressure", "source_grounding": null, "target": "pressure-tolerance breadth", "target_grounding": null}, {"description": "High pressure induces ribosome dissociation, suppressing translation and growth.", "edge_id": "edge-6", "evidence": [{"notes": "High pressure causes ribosome dissociation; translation/replication become dysfunctional, preventing growth and division.", "reference": "DOI:10.1038/s43247-023-01045-4"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "hydrostatic pressure", "source_grounding": "PATO:0001025", "target": "pressure-induced ribosome dissociation", "target_grounding": null}, {"description": "Translation failure from ribosome dissociation limits the growth-supporting pressure range.", "edge_id": "edge-7", "evidence": [{"notes": "Ribosome dissociation preventing growth and division narrows the pressure range over which growth is sustained.", "reference": "DOI:10.1038/s43247-023-01045-4"}], "predicate": "restricts", "predicate_id": null, "source": "pressure-induced ribosome dissociation", "source_grounding": null, "target": "pressure-tolerance breadth", "target_grounding": null}, {"description": "Intracellular osmolytes/cosolutes reinforce protein structure under high hydrostatic pressure.", "edge_id": "edge-8", "evidence": [{"notes": "Osmolytes reinforce the structure of proteins; cosolutes modulate biomolecular function under HHP (general mechanism).", "reference": "DOI:10.1021/acs.chemrev.3c00432"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "intracellular osmolytes / compatible solutes", "source_grounding": null, "target": "protein stabilization under pressure", "target_grounding": null}, {"description": "The nuo NADH dehydrogenase I complex supports respiratory energy conservation enabling growth under high pressure.", "edge_id": "edge-9", "evidence": [{"notes": "nuo dehydrogenase operons present in piezophiles; respiratory-chain composition modulates pressure tolerance, a candidate contributor to wider high-pressure growth support.", "reference": "DOI:10.1186/s12864-020-07102-y"}], "predicate": "supports", "predicate_id": null, "source": "nuo NADH dehydrogenase I complex", "source_grounding": null, "target": "high-pressure respiratory energy conservation", "target_grounding": null}, {"description": "The minimum and maximum growth-pressure limits define the breadth (max minus min) recorded by the delta.", "edge_id": "edge-10", "evidence": [{"notes": "Range-bound examples (e.g., MTCD1 80-140 MPa =\u003e delta = 60 MPa) show min/max bounds defining the pressure-delta breadth descriptor.", "reference": "DOI:10.1186/s12864-020-07102-y"}], "predicate": "defines", "predicate_id": "METPO:2007500", "source": "minimum and maximum growth pressure bounds", "source_grounding": null, "target": "pressure delta", "target_grounding": "traitmech:000006"}], "graph_id": "pressure_delta_breadth_descriptor", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Cosolutes/osmolytes that stabilize protein structure under high hydrostatic pressure.", "grounding": null, "id": "compatible_solutes", "is_orphan": false, "label": "intracellular osmolytes / compatible solutes", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Respiratory-chain energy conservation supporting growth under high hydrostatic pressure.", "grounding": null, "id": "high_pressure_energy_conservation", "is_orphan": false, "label": "high-pressure respiratory energy conservation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Ambient hydrostatic pressure imposed on the cell.", "grounding": "PATO:0001025", "id": "hydrostatic_pressure", "is_orphan": false, "label": "hydrostatic pressure", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Pressure-induced reduction of membrane fluidity that impairs membrane function.", "grounding": null, "id": "membrane_fluidity_loss", "is_orphan": false, "label": "loss of membrane fluidity at high pressure", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Maintenance of adequate membrane fluidity against pressure-induced lipid compression.", "grounding": null, "id": "membrane_fluidity_maintenance", "is_orphan": false, "label": "membrane fluidity maintenance under high pressure", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Lower and upper hydrostatic-pressure limits of growth whose difference defines the delta.", "grounding": null, "id": "min_max_growth_pressure_bounds", "is_orphan": false, "label": "minimum and maximum growth pressure bounds", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Proton-translocating NADH dehydrogenase I (Complex I) operon enriched in piezophiles.", "grounding": null, "id": "nuo_complex_i", "is_orphan": false, "label": "nuo NADH dehydrogenase I complex", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Breadth (max \u2212 min) of the growth-supporting hydrostatic-pressure range.", "grounding": "traitmech:000006", "id": "pressure_delta_trait", "is_orphan": false, "label": "pressure delta", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Width of the hydrostatic-pressure interval over which growth is sustained.", "grounding": null, "id": "pressure_tolerance_breadth", "is_orphan": false, "label": "pressure-tolerance breadth", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Reinforcement of protein structure against pressure-induced perturbation.", "grounding": null, "id": "protein_stabilization_under_pressure", "is_orphan": false, "label": "protein stabilization under pressure", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "High-pressure dissociation of ribosomes suppressing translation and growth.", "grounding": null, "id": "ribosome_dissociation", "is_orphan": false, "label": "pressure-induced ribosome dissociation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Biosynthesis/desaturation generating unsaturated acyl chains that counter pressure-induced membrane ordering.", "grounding": null, "id": "unsaturated_fatty_acid_production", "is_orphan": false, "label": "unsaturated fatty acid production", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This record is a quantitative measurement, interval, or bin in the environmental phenotype hierarchy; a token protein example would misrepresent the measured value as one inherited molecular mechanism.", "scope_status": "NONMECHANISTIC", "title": "Pressure delta: breadth of the pressure-tolerance span"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -976,13 +1007,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-10-17 09:00 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

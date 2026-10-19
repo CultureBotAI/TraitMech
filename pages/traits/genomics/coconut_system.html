@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/genomics.html">GENOMICS</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/genomics.html">GENOMICS</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>CoCoNuT system</h1>
     <p class="curie"><code>traitmech:000422</code> · CLASS · PROPOSED</p>
 
@@ -121,8 +132,10 @@
 
           <li id="pathograph-1-edge-1">
             <strong>CoCoNuT system</strong>
+            <code>traitmech:000422</code>
             <span class="edge-predicate">is a</span>
             <strong>phage defense system</strong>
+            <code>traitmech:000209</code>
             <code>rdfs:subClassOf</code>
             <p>CoCoNuT system possession is treated as a phage-defense-system trait.</p>
             <ul>
@@ -268,11 +281,75 @@
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
 
-      <p class="no-match">No kg-microbe node embedding matched this record
-        in the 2026-04-25 deepwalk.</p>
+      <p class="match-method">Matched <strong>1</strong>
+        kg-microbe node
+        via <em>parent_proxy</em>.</p>
+      <ul class="kgm-nodes">
+
+        <li><code>METPO:1000188</code> <span class="dim-preview">[-0.956, -1.962, -3.148, +1.274, …]</span></li>
+
+      </ul>
+      <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
 
     </div>
 
+
+    <div class="card">
+      <h2>Nearest neighbors in embedding space</h2>
+      <p class="meta">Top-8 cosine-similar METPO traits
+        from the 2026-04-25 deepwalk (512-D).</p>
+      <ul class="nn-list">
+
+        <li>
+          <span class="nn-cat">upper</span>
+          <a href="../../traits/upper/quality.html">quality</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/jukab_system.html">JukAB system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/integrative_conjugative_element.html">integrative conjugative element</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/ig_like_schlafen_system.html">Ig-like Schlafen system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hypnos_system.html">Hypnos system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hna_system.html">Hna system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hma_system.html">Hma system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hesat_system.html">Hesat system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+      </ul>
+    </div>
 
 
 
@@ -438,6 +515,11 @@
     </dl>
   </div>
 
+
+  <div class="card rail-kgm">
+    <h2>kg-microbe</h2>
+    <p class="meta">1 matching node (parent_proxy)</p>
+  </div>
 
 </aside>
 </div>
@@ -771,7 +853,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Conservative system-level sketch linking CoCoNuT system possession to phage defense without resolving individual components or a direct molecular output.", "edges": [{"description": "CoCoNuT system possession is treated as a phage-defense-system trait.", "evidence": [{"notes": "Bell et al. frame EVE/McrB-like Type IV restriction-system diversity in the context of prokaryotic antiphage restriction.", "reference": "DOI:10.7554/eLife.94800.3", "snippet": "largely uncharacterized prokaryotic antiphage restriction systems"}, {"notes": "The pinned DefenseFinder article registry maps the CoCoNut source key to the Bell et al. versioned eLife article.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| CoCoNut | 10\\.7554/eLife\\.94800\\.3 | CoCoNuTs are a diverse subclass of Type IV restriction systems predicted to target RNA | "}], "id": "edge-1", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "coconut_system_trait", "target": "phage_defense_system"}, {"description": "Type IV methyl-directed restriction enzyme EcoKMcrB subunit (mcrB, UniProtKB:P15005) contributes to CoCoNuT system.", "evidence": [{"notes": "Supports the functional association between Type IV methyl-directed restriction enzyme EcoKMcrB subunit (UniProtKB:P15005 in Escherichia coli (strain K12)) and CoCoNuT system.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| PvuRts1I | 10\\.1093/nar/gkr607 | Comparative characterization of the PvuRts1I family of restriction enzymes and their application in mapping genomic 5-hydroxymethylcytosine |"}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "coconut_system_protein_component", "target": "coconut_system_trait"}], "evidence_rows": [{"description": "CoCoNuT system possession is treated as a phage-defense-system trait.", "edge_id": "edge-1", "evidence": [{"notes": "Bell et al. frame EVE/McrB-like Type IV restriction-system diversity in the context of prokaryotic antiphage restriction.", "reference": "DOI:10.7554/eLife.94800.3", "snippet": "largely uncharacterized prokaryotic antiphage restriction systems"}, {"notes": "The pinned DefenseFinder article registry maps the CoCoNut source key to the Bell et al. versioned eLife article.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| CoCoNut | 10\\.7554/eLife\\.94800\\.3 | CoCoNuTs are a diverse subclass of Type IV restriction systems predicted to target RNA | "}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "CoCoNuT system", "target": "phage defense system"}, {"description": "Type IV methyl-directed restriction enzyme EcoKMcrB subunit (mcrB, UniProtKB:P15005) contributes to CoCoNuT system.", "edge_id": "edge-2", "evidence": [{"notes": "Supports the functional association between Type IV methyl-directed restriction enzyme EcoKMcrB subunit (UniProtKB:P15005 in Escherichia coli (strain K12)) and CoCoNuT system.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| PvuRts1I | 10\\.1093/nar/gkr607 | Comparative characterization of the PvuRts1I family of restriction enzymes and their application in mapping genomic 5-hydroxymethylcytosine |"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Type IV methyl-directed restriction enzyme EcoKMcrB subunit", "target": "CoCoNuT system"}], "graph_id": "coconut_system_family_hierarchy", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Protein component (Type IV methyl-directed restriction enzyme EcoKMcrB subunit) associated with CoCoNuT system.", "grounding": "InterPro:IPR003593", "id": "coconut_system_protein_component", "is_orphan": false, "label": "Type IV methyl-directed restriction enzyme EcoKMcrB subunit", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 197, "evidence": [{"notes": "Supports Type IV methyl-directed restriction enzyme EcoKMcrB subunit in CoCoNuT system; UniProtKB:P15005 (mcrB, Type IV methyl-directed restriction enzyme EcoKMcrB subunit) in Escherichia coli (strain K12) provides a verified protein exemplar.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| CoCoNut | 10\\.7554/eLife\\.94800\\.3 | CoCoNuTs are a diverse subclass of Type IV restriction systems predicted to target RNA |"}], "gene_symbol": "mcrB", "protein_label": "Type IV methyl-directed restriction enzyme EcoKMcrB subunit", "proteome_id": "UP000000625", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (mcrB, Type IV methyl-directed restriction enzyme EcoKMcrB subunit) associated with CoCoNuT system in Escherichia coli (strain K12).", "sequence_version": 3, "taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli (strain K12)", "uniprot_id": "UniProtKB:P15005"}], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded CoCoNuT Type IV restriction-system family locus.", "grounding": "traitmech:000422", "id": "coconut_system_trait", "is_orphan": false, "label": "CoCoNuT system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of one or more genome-encoded immune systems that inhibit bacteriophage infection.", "grounding": "traitmech:000209", "id": "phage_defense_system", "is_orphan": false, "label": "phage defense system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 197, "evidence": [{"notes": "Supports Type IV methyl-directed restriction enzyme EcoKMcrB subunit in CoCoNuT system; UniProtKB:P15005 (mcrB, Type IV methyl-directed restriction enzyme EcoKMcrB subunit) in Escherichia coli (strain K12) provides a verified protein exemplar.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| CoCoNut | 10\\.7554/eLife\\.94800\\.3 | CoCoNuTs are a diverse subclass of Type IV restriction systems predicted to target RNA |"}], "gene_symbol": "mcrB", "node_id": "coconut_system_protein_component", "node_label": "Type IV methyl-directed restriction enzyme EcoKMcrB subunit", "protein_label": "Type IV methyl-directed restriction enzyme EcoKMcrB subunit", "proteome_id": "UP000000625", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (mcrB, Type IV methyl-directed restriction enzyme EcoKMcrB subunit) associated with CoCoNuT system in Escherichia coli (strain K12).", "sequence_version": 3, "taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli (strain K12)", "uniprot_id": "UniProtKB:P15005"}], "scope_notes": "The graph captures CoCoNuT at the named McrBC/Type IV system-family level with representative CoCoNut-I, CoCoNut-II, and CoCoNut-III DefenseFinder HMM rows. It does not assert exact profile-to-protein boundaries, direct RNA or DNA substrates, native host range, phage range, subtype boundaries, pseudo-CoCoNuT scope, CARF-regulated superoperon scope, or rule-level detection criteria.", "scope_status": "NONMECHANISTIC", "title": "CoCoNuT loci are predicted Type IV restriction systems"}];
+  var graphs = [{"description": "Conservative system-level sketch linking CoCoNuT system possession to phage defense without resolving individual components or a direct molecular output.", "edges": [{"description": "CoCoNuT system possession is treated as a phage-defense-system trait.", "evidence": [{"notes": "Bell et al. frame EVE/McrB-like Type IV restriction-system diversity in the context of prokaryotic antiphage restriction.", "reference": "DOI:10.7554/eLife.94800.3", "snippet": "largely uncharacterized prokaryotic antiphage restriction systems"}, {"notes": "The pinned DefenseFinder article registry maps the CoCoNut source key to the Bell et al. versioned eLife article.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| CoCoNut | 10\\.7554/eLife\\.94800\\.3 | CoCoNuTs are a diverse subclass of Type IV restriction systems predicted to target RNA | "}], "id": "edge-1", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "coconut_system_trait", "target": "phage_defense_system"}], "evidence_rows": [{"description": "CoCoNuT system possession is treated as a phage-defense-system trait.", "edge_id": "edge-1", "evidence": [{"notes": "Bell et al. frame EVE/McrB-like Type IV restriction-system diversity in the context of prokaryotic antiphage restriction.", "reference": "DOI:10.7554/eLife.94800.3", "snippet": "largely uncharacterized prokaryotic antiphage restriction systems"}, {"notes": "The pinned DefenseFinder article registry maps the CoCoNut source key to the Bell et al. versioned eLife article.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| CoCoNut | 10\\.7554/eLife\\.94800\\.3 | CoCoNuTs are a diverse subclass of Type IV restriction systems predicted to target RNA | "}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "CoCoNuT system", "source_grounding": "traitmech:000422", "target": "phage defense system", "target_grounding": "traitmech:000209"}], "graph_id": "coconut_system_family_hierarchy", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Possession of a genome-encoded CoCoNuT Type IV restriction-system family locus.", "grounding": "traitmech:000422", "id": "coconut_system_trait", "is_orphan": false, "label": "CoCoNuT system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of one or more genome-encoded immune systems that inhibit bacteriophage infection.", "grounding": "traitmech:000209", "id": "phage_defense_system", "is_orphan": false, "label": "phage defense system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "The graph captures CoCoNuT at the named McrBC/Type IV system-family level with representative CoCoNut-I, CoCoNut-II, and CoCoNut-III DefenseFinder HMM rows. It does not assert exact profile-to-protein boundaries, direct RNA or DNA substrates, native host range, phage range, subtype boundaries, pseudo-CoCoNuT scope, CARF-regulated superoperon scope, or rule-level detection criteria.", "scope_status": "NONMECHANISTIC", "title": "CoCoNuT loci are predicted Type IV restriction systems"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -791,13 +873,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-10-17 09:00 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

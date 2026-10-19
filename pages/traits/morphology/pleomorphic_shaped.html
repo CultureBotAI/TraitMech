@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/morphology.html">MORPHOLOGY</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/morphology.html">MORPHOLOGY</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>pleomorphic shaped</h1>
     <p class="curie"><code>METPO:1000679</code> · CLASS · REVIEWED</p>
 
@@ -85,8 +96,10 @@
 
           <li id="pathograph-1-edge-1">
             <strong>weak/absent shape-determining cytoskeleton</strong>
+
             <span class="edge-predicate">relaxes</span>
             <strong>variable cell geometry</strong>
+
 
             <p>Weak shape-determining cytoskeleton permits multiple geometries.</p>
             <ul>
@@ -102,9 +115,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>weak or absent peptidoglycan wall</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0009274" rel="nofollow noreferrer"><code>GO:0009274</code></a>
             <span class="edge-predicate">enables</span>
             <strong>variable cell geometry</strong>
-            <code>RO:0002327</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002327" rel="nofollow noreferrer"><code>RO:0002327</code></a>
             <p>Reduced or absent cell wall enables membrane-driven shape variability.</p>
             <ul>
 
@@ -119,9 +134,11 @@
 
           <li id="pathograph-1-edge-3">
             <strong>variable cell geometry</strong>
+
             <span class="edge-predicate">manifests as</span>
             <strong>pleomorphic shaped</strong>
-            <code>METPO:2007400</code>
+            <a href="https://w3id.org/metpo/1000679" rel="nofollow noreferrer"><code>METPO:1000679</code></a>
+            <a href="https://w3id.org/metpo/2007400" rel="nofollow noreferrer"><code>METPO:2007400</code></a>
             <p>Variable geometry across cells manifests pleomorphism.</p>
             <ul>
 
@@ -136,8 +153,10 @@
 
           <li id="pathograph-1-edge-4">
             <strong>inhibition of peptidoglycan precursor synthesis</strong>
+
             <span class="edge-predicate">causes transition to</span>
             <strong>L-form / wall-deficient state</strong>
+
 
             <p>Inhibition of cell-wall precursor synthesis stimulates the L-form transition.</p>
             <ul>
@@ -153,9 +172,11 @@
 
           <li id="pathograph-1-edge-5">
             <strong>L-form / wall-deficient state</strong>
+
             <span class="edge-predicate">manifests as</span>
             <strong>pleomorphic shaped</strong>
-            <code>METPO:2007400</code>
+            <a href="https://w3id.org/metpo/1000679" rel="nofollow noreferrer"><code>METPO:1000679</code></a>
+            <a href="https://w3id.org/metpo/2007400" rel="nofollow noreferrer"><code>METPO:2007400</code></a>
             <p>The wall-deficient L-form state presents as pleomorphic morphology.</p>
             <ul>
 
@@ -170,8 +191,10 @@
 
           <li id="pathograph-1-edge-6">
             <strong>excess membrane synthesis</strong>
+
             <span class="edge-predicate">drives proliferation of</span>
             <strong>L-form / wall-deficient state</strong>
+
 
             <p>Increased membrane synthesis drives proliferation of wall-free pleomorphic L-forms.</p>
             <ul>
@@ -187,9 +210,11 @@
 
           <li id="pathograph-1-edge-7">
             <strong>excess membrane synthesis</strong>
+
             <span class="edge-predicate">enables</span>
             <strong>blebbing-tubulation-scission proliferation</strong>
-            <code>RO:0002327</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002327" rel="nofollow noreferrer"><code>RO:0002327</code></a>
             <p>Increased membrane synthesis / elevated surface area-to-volume ratio enables blebbing-scission proliferation.</p>
             <ul>
 
@@ -204,8 +229,10 @@
 
           <li id="pathograph-1-edge-8">
             <strong>oxidative stress / ROS from respiratory chain</strong>
+
             <span class="edge-predicate">limits or kills</span>
             <strong>L-form / wall-deficient state</strong>
+
 
             <p>ROS-driven oxidative stress constrains survival of wall-deficient cells.</p>
             <ul>
@@ -221,9 +248,11 @@
 
           <li id="pathograph-1-edge-9">
             <strong>loss of cell wall</strong>
+
             <span class="edge-predicate">causes</span>
             <strong>pleomorphic shaped</strong>
-            <code>biolink:causes</code>
+            <a href="https://w3id.org/metpo/1000679" rel="nofollow noreferrer"><code>METPO:1000679</code></a>
+            <a href="https://w3id.org/biolink/vocab/causes" rel="nofollow noreferrer"><code>biolink:causes</code></a>
             <p>Loss of the cell wall causes spherical or pleomorphic morphology in rod-shaped bacteria.</p>
             <ul>
 
@@ -380,7 +409,25 @@
 
         <li>
           <span class="nn-cat">metabolism</span>
+          <a href="../../traits/metabolism/citrate_fermentation.html">citrate fermentation</a>
+          <span class="sim">0.350</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/fermentative_hydrogen_production.html">fermentative hydrogen production</a>
+          <span class="sim">0.350</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">metabolism</span>
+          <a href="../../traits/metabolism/butyric_acid_fermentation.html">butyric acid fermentation</a>
+          <span class="sim">0.350</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">metabolism</span>
+          <a href="../../traits/metabolism/acetone_butanol_ethanol_fermentation.html">acetone-butanol-ethanol fermentation</a>
           <span class="sim">0.350</span>
         </li>
 
@@ -388,24 +435,6 @@
           <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/lactic_acid_fermentation.html">lactic acid fermentation</a>
           <span class="sim">0.350</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/mixed_acid_fermentation.html">mixed-acid fermentation</a>
-          <span class="sim">0.350</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/propionic_acid_fermentation.html">propionic acid fermentation</a>
-          <span class="sim">0.350</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">physiology</span>
-          <a href="../../traits/physiology/chemoorganoheterotrophic.html">chemoorganoheterotrophic</a>
-          <span class="sim">0.334</span>
         </li>
 
       </ul>
@@ -946,7 +975,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking loss or weakening of cytoskeletal and cell-wall shape control to multi-morphology populations.", "edges": [{"description": "Weak shape-determining cytoskeleton permits multiple geometries.", "evidence": [{"notes": "Supports cytoskeletal loss as a driver of multi-shape populations.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "cell shape is genetically determined"}], "id": "edge-1", "is_orphan": false, "predicate": "relaxes", "predicate_id": null, "source": "weak_cytoskeleton", "target": "variable_geometry"}, {"description": "Reduced or absent cell wall enables membrane-driven shape variability.", "evidence": [{"notes": "Supports wall deficiency as a basis for L-form pleomorphism.", "reference": "DOI:10.1126/science.1170701", "snippet": "cell-wall-deficient L-forms"}], "id": "edge-2", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "weak_cell_wall", "target": "variable_geometry"}, {"description": "Variable geometry across cells manifests pleomorphism.", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "cell shape is genetically determined"}], "id": "edge-3", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "variable_geometry", "target": "pleomorphic_shaped_trait"}, {"description": "Inhibition of cell-wall precursor synthesis stimulates the L-form transition.", "evidence": [{"notes": "Repression or inhibition of cell wall precursor synthesis can stimulate the L-form transition in a wide range of bacteria.", "reference": "DOI:10.1098/rstb.2015.0494"}], "id": "edge-4", "is_orphan": false, "predicate": "causes transition to", "predicate_id": null, "source": "pg_synthesis_inhibition", "target": "lform_wall_deficient_state"}, {"description": "The wall-deficient L-form state presents as pleomorphic morphology.", "evidence": [{"notes": "Wall-deficient L-form state is characterized by pleomorphic morphology across diverse bacteria.", "reference": "DOI:10.1098/rstb.2015.0494"}], "id": "edge-5", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "lform_wall_deficient_state", "target": "pleomorphic_shaped_trait"}, {"description": "Increased membrane synthesis drives proliferation of wall-free pleomorphic L-forms.", "evidence": [{"notes": "Increasing membrane synthesis promotes the unusual form of proliferation used by L-forms, involving disorganized membrane blebbing/vesiculation.", "reference": "DOI:10.1098/rstb.2015.0494"}], "id": "edge-6", "is_orphan": false, "predicate": "drives proliferation of", "predicate_id": null, "source": "excess_membrane_synthesis", "target": "lform_wall_deficient_state"}, {"description": "Increased membrane synthesis / elevated surface area-to-volume ratio enables blebbing-scission proliferation.", "evidence": [{"notes": "Proliferation appears to require only an increased rate of membrane synthesis, producing an increased surface area-to-volume ratio.", "reference": "DOI:10.1042/bst20160435"}], "id": "edge-7", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "excess_membrane_synthesis", "target": "blebbing_scission_proliferation"}, {"description": "ROS-driven oxidative stress constrains survival of wall-deficient cells.", "evidence": [{"notes": "Reactive oxygen species are formed, causing oxidative stress and ultimately killing the wall-deficient cells.", "reference": "DOI:10.1016/j.tim.2019.07.008"}], "id": "edge-8", "is_orphan": false, "predicate": "limits or kills", "predicate_id": null, "source": "oxidative_stress_ros", "target": "lform_wall_deficient_state"}, {"description": "Loss of the cell wall causes spherical or pleomorphic morphology in rod-shaped bacteria.", "evidence": [{"notes": "Rod-shaped bacteria (e.g., E. coli, B. subtilis) exhibit spherical or pleomorphic shapes due to the lack of cell walls.", "reference": "DOI:10.3390/bioengineering11010081"}], "id": "edge-9", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "loss_of_cell_wall", "target": "pleomorphic_shaped_trait"}], "evidence_rows": [{"description": "Weak shape-determining cytoskeleton permits multiple geometries.", "edge_id": "edge-1", "evidence": [{"notes": "Supports cytoskeletal loss as a driver of multi-shape populations.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "cell shape is genetically determined"}], "predicate": "relaxes", "predicate_id": null, "source": "weak/absent shape-determining cytoskeleton", "target": "variable cell geometry"}, {"description": "Reduced or absent cell wall enables membrane-driven shape variability.", "edge_id": "edge-2", "evidence": [{"notes": "Supports wall deficiency as a basis for L-form pleomorphism.", "reference": "DOI:10.1126/science.1170701", "snippet": "cell-wall-deficient L-forms"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "weak or absent peptidoglycan wall", "target": "variable cell geometry"}, {"description": "Variable geometry across cells manifests pleomorphism.", "edge_id": "edge-3", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "cell shape is genetically determined"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "variable cell geometry", "target": "pleomorphic shaped"}, {"description": "Inhibition of cell-wall precursor synthesis stimulates the L-form transition.", "edge_id": "edge-4", "evidence": [{"notes": "Repression or inhibition of cell wall precursor synthesis can stimulate the L-form transition in a wide range of bacteria.", "reference": "DOI:10.1098/rstb.2015.0494"}], "predicate": "causes transition to", "predicate_id": null, "source": "inhibition of peptidoglycan precursor synthesis", "target": "L-form / wall-deficient state"}, {"description": "The wall-deficient L-form state presents as pleomorphic morphology.", "edge_id": "edge-5", "evidence": [{"notes": "Wall-deficient L-form state is characterized by pleomorphic morphology across diverse bacteria.", "reference": "DOI:10.1098/rstb.2015.0494"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "L-form / wall-deficient state", "target": "pleomorphic shaped"}, {"description": "Increased membrane synthesis drives proliferation of wall-free pleomorphic L-forms.", "edge_id": "edge-6", "evidence": [{"notes": "Increasing membrane synthesis promotes the unusual form of proliferation used by L-forms, involving disorganized membrane blebbing/vesiculation.", "reference": "DOI:10.1098/rstb.2015.0494"}], "predicate": "drives proliferation of", "predicate_id": null, "source": "excess membrane synthesis", "target": "L-form / wall-deficient state"}, {"description": "Increased membrane synthesis / elevated surface area-to-volume ratio enables blebbing-scission proliferation.", "edge_id": "edge-7", "evidence": [{"notes": "Proliferation appears to require only an increased rate of membrane synthesis, producing an increased surface area-to-volume ratio.", "reference": "DOI:10.1042/bst20160435"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "excess membrane synthesis", "target": "blebbing-tubulation-scission proliferation"}, {"description": "ROS-driven oxidative stress constrains survival of wall-deficient cells.", "edge_id": "edge-8", "evidence": [{"notes": "Reactive oxygen species are formed, causing oxidative stress and ultimately killing the wall-deficient cells.", "reference": "DOI:10.1016/j.tim.2019.07.008"}], "predicate": "limits or kills", "predicate_id": null, "source": "oxidative stress / ROS from respiratory chain", "target": "L-form / wall-deficient state"}, {"description": "Loss of the cell wall causes spherical or pleomorphic morphology in rod-shaped bacteria.", "edge_id": "edge-9", "evidence": [{"notes": "Rod-shaped bacteria (e.g., E. coli, B. subtilis) exhibit spherical or pleomorphic shapes due to the lack of cell walls.", "reference": "DOI:10.3390/bioengineering11010081"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "loss of cell wall", "target": "pleomorphic shaped"}], "graph_id": "pleomorphic_shaped_relaxed_shape_control", "issues": [], "nodes": [{"color": "#ecfccb", "description": "FtsZ-independent proliferation of wall-deficient cells via membrane blebbing and scission.", "grounding": null, "id": "blebbing_scission_proliferation", "is_orphan": false, "label": "blebbing-tubulation-scission proliferation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Increased membrane synthesis raising surface area-to-volume ratio.", "grounding": null, "id": "excess_membrane_synthesis", "is_orphan": false, "label": "excess membrane synthesis", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Wall-deficient cellular state with pleomorphic morphology.", "grounding": null, "id": "lform_wall_deficient_state", "is_orphan": false, "label": "L-form / wall-deficient state", "node_type": "STATE", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Loss of the peptidoglycan cell wall in walled bacteria.", "grounding": null, "id": "loss_of_cell_wall", "is_orphan": false, "label": "loss of cell wall", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Reactive oxygen species generated by respiratory chain causing oxidative stress.", "grounding": null, "id": "oxidative_stress_ros", "is_orphan": false, "label": "oxidative stress / ROS from respiratory chain", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Repression or inhibition of cell-wall precursor synthesis.", "grounding": null, "id": "pg_synthesis_inhibition", "is_orphan": false, "label": "inhibition of peptidoglycan precursor synthesis", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Population exhibiting multiple cell shapes.", "grounding": "METPO:1000679", "id": "pleomorphic_shaped_trait", "is_orphan": false, "label": "pleomorphic shaped", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Population-level variability in cell shape.", "grounding": null, "id": "variable_geometry", "is_orphan": false, "label": "variable cell geometry", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ede9fe", "description": "Cell wall reduced (L-form/Mycoplasma) or compromised.", "grounding": "GO:0009274", "id": "weak_cell_wall", "is_orphan": false, "label": "weak or absent peptidoglycan wall", "node_type": "CELLULAR_LOCALIZATION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Reduced MreB or analogous shape-determining cytoskeletal activity.", "grounding": null, "id": "weak_cytoskeleton", "is_orphan": false, "label": "weak/absent shape-determining cytoskeleton", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 148, "evidence": [{"notes": "Supports weak/absent shape-determining cytoskeleton in pleomorphic shaped; UniProtKB:Q01465 (mreB, Cell shape-determining protein MreB) in Bacillus subtilis (strain 168) provides a verified protein exemplar.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "MreB-directed peptidoglycan synthesis"}], "gene_symbol": "mreB", "protein_label": "Cell shape-determining protein MreB", "proteome_id": "UP000001570", "retrieved_on": "2026-10-17", "role": "Exemplar protein (mreB, Cell shape-determining protein MreB) representing weak/absent shape-determining cytoskeleton in Bacillus subtilis (strain 168) for pleomorphic shaped.", "sequence_version": 3, "taxon_id": "NCBITaxon:224308", "taxon_label": "Bacillus subtilis (strain 168)", "uniprot_id": "UniProtKB:Q01465"}], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 148, "evidence": [{"notes": "Supports weak/absent shape-determining cytoskeleton in pleomorphic shaped; UniProtKB:Q01465 (mreB, Cell shape-determining protein MreB) in Bacillus subtilis (strain 168) provides a verified protein exemplar.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "MreB-directed peptidoglycan synthesis"}], "gene_symbol": "mreB", "node_id": "weak_cytoskeleton", "node_label": "weak/absent shape-determining cytoskeleton", "protein_label": "Cell shape-determining protein MreB", "proteome_id": "UP000001570", "retrieved_on": "2026-10-17", "role": "Exemplar protein (mreB, Cell shape-determining protein MreB) representing weak/absent shape-determining cytoskeleton in Bacillus subtilis (strain 168) for pleomorphic shaped.", "sequence_version": 3, "taxon_id": "NCBITaxon:224308", "taxon_label": "Bacillus subtilis (strain 168)", "uniprot_id": "UniProtKB:Q01465"}], "scope_notes": "Pleomorphism groups multiple unrelated causes and cell states; the contextual cytoskeleton label is not one inherited protein mechanism and receives no token accession.", "scope_status": "NONMECHANISTIC", "title": "Pleomorphic-shape relaxed shape control"}];
+  var graphs = [{"description": "DOI-backed graph linking loss or weakening of cytoskeletal and cell-wall shape control to multi-morphology populations.", "edges": [{"description": "Weak shape-determining cytoskeleton permits multiple geometries.", "evidence": [{"notes": "Supports cytoskeletal loss as a driver of multi-shape populations.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "cell shape is genetically determined"}], "id": "edge-1", "is_orphan": false, "predicate": "relaxes", "predicate_id": null, "source": "weak_cytoskeleton", "target": "variable_geometry"}, {"description": "Reduced or absent cell wall enables membrane-driven shape variability.", "evidence": [{"notes": "Supports wall deficiency as a basis for L-form pleomorphism.", "reference": "DOI:10.1126/science.1170701", "snippet": "cell-wall-deficient L-forms"}], "id": "edge-2", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "weak_cell_wall", "target": "variable_geometry"}, {"description": "Variable geometry across cells manifests pleomorphism.", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "cell shape is genetically determined"}], "id": "edge-3", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "variable_geometry", "target": "pleomorphic_shaped_trait"}, {"description": "Inhibition of cell-wall precursor synthesis stimulates the L-form transition.", "evidence": [{"notes": "Repression or inhibition of cell wall precursor synthesis can stimulate the L-form transition in a wide range of bacteria.", "reference": "DOI:10.1098/rstb.2015.0494"}], "id": "edge-4", "is_orphan": false, "predicate": "causes transition to", "predicate_id": null, "source": "pg_synthesis_inhibition", "target": "lform_wall_deficient_state"}, {"description": "The wall-deficient L-form state presents as pleomorphic morphology.", "evidence": [{"notes": "Wall-deficient L-form state is characterized by pleomorphic morphology across diverse bacteria.", "reference": "DOI:10.1098/rstb.2015.0494"}], "id": "edge-5", "is_orphan": false, "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "lform_wall_deficient_state", "target": "pleomorphic_shaped_trait"}, {"description": "Increased membrane synthesis drives proliferation of wall-free pleomorphic L-forms.", "evidence": [{"notes": "Increasing membrane synthesis promotes the unusual form of proliferation used by L-forms, involving disorganized membrane blebbing/vesiculation.", "reference": "DOI:10.1098/rstb.2015.0494"}], "id": "edge-6", "is_orphan": false, "predicate": "drives proliferation of", "predicate_id": null, "source": "excess_membrane_synthesis", "target": "lform_wall_deficient_state"}, {"description": "Increased membrane synthesis / elevated surface area-to-volume ratio enables blebbing-scission proliferation.", "evidence": [{"notes": "Proliferation appears to require only an increased rate of membrane synthesis, producing an increased surface area-to-volume ratio.", "reference": "DOI:10.1042/bst20160435"}], "id": "edge-7", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "excess_membrane_synthesis", "target": "blebbing_scission_proliferation"}, {"description": "ROS-driven oxidative stress constrains survival of wall-deficient cells.", "evidence": [{"notes": "Reactive oxygen species are formed, causing oxidative stress and ultimately killing the wall-deficient cells.", "reference": "DOI:10.1016/j.tim.2019.07.008"}], "id": "edge-8", "is_orphan": false, "predicate": "limits or kills", "predicate_id": null, "source": "oxidative_stress_ros", "target": "lform_wall_deficient_state"}, {"description": "Loss of the cell wall causes spherical or pleomorphic morphology in rod-shaped bacteria.", "evidence": [{"notes": "Rod-shaped bacteria (e.g., E. coli, B. subtilis) exhibit spherical or pleomorphic shapes due to the lack of cell walls.", "reference": "DOI:10.3390/bioengineering11010081"}], "id": "edge-9", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "loss_of_cell_wall", "target": "pleomorphic_shaped_trait"}], "evidence_rows": [{"description": "Weak shape-determining cytoskeleton permits multiple geometries.", "edge_id": "edge-1", "evidence": [{"notes": "Supports cytoskeletal loss as a driver of multi-shape populations.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "cell shape is genetically determined"}], "predicate": "relaxes", "predicate_id": null, "source": "weak/absent shape-determining cytoskeleton", "source_grounding": null, "target": "variable cell geometry", "target_grounding": null}, {"description": "Reduced or absent cell wall enables membrane-driven shape variability.", "edge_id": "edge-2", "evidence": [{"notes": "Supports wall deficiency as a basis for L-form pleomorphism.", "reference": "DOI:10.1126/science.1170701", "snippet": "cell-wall-deficient L-forms"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "weak or absent peptidoglycan wall", "source_grounding": "GO:0009274", "target": "variable cell geometry", "target_grounding": null}, {"description": "Variable geometry across cells manifests pleomorphism.", "edge_id": "edge-3", "evidence": [{"notes": "Supports the trait endpoint.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "cell shape is genetically determined"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "variable cell geometry", "source_grounding": null, "target": "pleomorphic shaped", "target_grounding": "METPO:1000679"}, {"description": "Inhibition of cell-wall precursor synthesis stimulates the L-form transition.", "edge_id": "edge-4", "evidence": [{"notes": "Repression or inhibition of cell wall precursor synthesis can stimulate the L-form transition in a wide range of bacteria.", "reference": "DOI:10.1098/rstb.2015.0494"}], "predicate": "causes transition to", "predicate_id": null, "source": "inhibition of peptidoglycan precursor synthesis", "source_grounding": null, "target": "L-form / wall-deficient state", "target_grounding": null}, {"description": "The wall-deficient L-form state presents as pleomorphic morphology.", "edge_id": "edge-5", "evidence": [{"notes": "Wall-deficient L-form state is characterized by pleomorphic morphology across diverse bacteria.", "reference": "DOI:10.1098/rstb.2015.0494"}], "predicate": "manifests as", "predicate_id": "METPO:2007400", "source": "L-form / wall-deficient state", "source_grounding": null, "target": "pleomorphic shaped", "target_grounding": "METPO:1000679"}, {"description": "Increased membrane synthesis drives proliferation of wall-free pleomorphic L-forms.", "edge_id": "edge-6", "evidence": [{"notes": "Increasing membrane synthesis promotes the unusual form of proliferation used by L-forms, involving disorganized membrane blebbing/vesiculation.", "reference": "DOI:10.1098/rstb.2015.0494"}], "predicate": "drives proliferation of", "predicate_id": null, "source": "excess membrane synthesis", "source_grounding": null, "target": "L-form / wall-deficient state", "target_grounding": null}, {"description": "Increased membrane synthesis / elevated surface area-to-volume ratio enables blebbing-scission proliferation.", "edge_id": "edge-7", "evidence": [{"notes": "Proliferation appears to require only an increased rate of membrane synthesis, producing an increased surface area-to-volume ratio.", "reference": "DOI:10.1042/bst20160435"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "excess membrane synthesis", "source_grounding": null, "target": "blebbing-tubulation-scission proliferation", "target_grounding": null}, {"description": "ROS-driven oxidative stress constrains survival of wall-deficient cells.", "edge_id": "edge-8", "evidence": [{"notes": "Reactive oxygen species are formed, causing oxidative stress and ultimately killing the wall-deficient cells.", "reference": "DOI:10.1016/j.tim.2019.07.008"}], "predicate": "limits or kills", "predicate_id": null, "source": "oxidative stress / ROS from respiratory chain", "source_grounding": null, "target": "L-form / wall-deficient state", "target_grounding": null}, {"description": "Loss of the cell wall causes spherical or pleomorphic morphology in rod-shaped bacteria.", "edge_id": "edge-9", "evidence": [{"notes": "Rod-shaped bacteria (e.g., E. coli, B. subtilis) exhibit spherical or pleomorphic shapes due to the lack of cell walls.", "reference": "DOI:10.3390/bioengineering11010081"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "loss of cell wall", "source_grounding": null, "target": "pleomorphic shaped", "target_grounding": "METPO:1000679"}], "graph_id": "pleomorphic_shaped_relaxed_shape_control", "issues": [], "nodes": [{"color": "#ecfccb", "description": "FtsZ-independent proliferation of wall-deficient cells via membrane blebbing and scission.", "grounding": null, "id": "blebbing_scission_proliferation", "is_orphan": false, "label": "blebbing-tubulation-scission proliferation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Increased membrane synthesis raising surface area-to-volume ratio.", "grounding": null, "id": "excess_membrane_synthesis", "is_orphan": false, "label": "excess membrane synthesis", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Wall-deficient cellular state with pleomorphic morphology.", "grounding": null, "id": "lform_wall_deficient_state", "is_orphan": false, "label": "L-form / wall-deficient state", "node_type": "STATE", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Loss of the peptidoglycan cell wall in walled bacteria.", "grounding": null, "id": "loss_of_cell_wall", "is_orphan": false, "label": "loss of cell wall", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Reactive oxygen species generated by respiratory chain causing oxidative stress.", "grounding": null, "id": "oxidative_stress_ros", "is_orphan": false, "label": "oxidative stress / ROS from respiratory chain", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Repression or inhibition of cell-wall precursor synthesis.", "grounding": null, "id": "pg_synthesis_inhibition", "is_orphan": false, "label": "inhibition of peptidoglycan precursor synthesis", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Population exhibiting multiple cell shapes.", "grounding": "METPO:1000679", "id": "pleomorphic_shaped_trait", "is_orphan": false, "label": "pleomorphic shaped", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Population-level variability in cell shape.", "grounding": null, "id": "variable_geometry", "is_orphan": false, "label": "variable cell geometry", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ede9fe", "description": "Cell wall reduced (L-form/Mycoplasma) or compromised.", "grounding": "GO:0009274", "id": "weak_cell_wall", "is_orphan": false, "label": "weak or absent peptidoglycan wall", "node_type": "CELLULAR_LOCALIZATION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Reduced MreB or analogous shape-determining cytoskeletal activity.", "grounding": null, "id": "weak_cytoskeleton", "is_orphan": false, "label": "weak/absent shape-determining cytoskeleton", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "Pleomorphism groups multiple unrelated causes and cell states; the contextual cytoskeleton label is not one inherited protein mechanism and receives no token accession.", "scope_status": "NONMECHANISTIC", "title": "Pleomorphic-shape relaxed shape control"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -966,13 +995,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-10-17 09:00 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

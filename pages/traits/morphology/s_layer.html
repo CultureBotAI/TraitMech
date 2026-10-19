@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/morphology.html">MORPHOLOGY</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/morphology.html">MORPHOLOGY</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>S-layer</h1>
     <p class="curie"><code>traitmech:000064</code> · CLASS · REVIEWED</p>
 
@@ -85,9 +96,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>S-layer (glyco)protein subunits</strong>
+
             <span class="edge-predicate">enables</span>
             <strong>S-layer assembly</strong>
-            <code>RO:0002327</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002327" rel="nofollow noreferrer"><code>RO:0002327</code></a>
             <p>Self-assembling (glyco)protein subunits build the S-layer array.</p>
             <ul>
 
@@ -102,9 +115,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>S-layer assembly</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>S-layer</strong>
-            <code>METPO:2007700</code>
+            <code>traitmech:000064</code>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>Completed 2D assembly realizes the S-layer surface coating.</p>
             <ul>
 
@@ -119,8 +134,10 @@
 
           <li id="pathograph-1-edge-3">
             <strong>S-layer (glyco)protein subunits</strong>
+
             <span class="edge-predicate">self-assembles into</span>
             <strong>2D paracrystalline S-layer lattice</strong>
+
 
             <p>S-layer proteins self-assemble into a 2D paracrystalline lattice; N-terminal regions mediate self-assembly into the layer.</p>
             <ul>
@@ -255,50 +272,50 @@
       <ul class="nn-list">
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/cadmium_tolerant.html">cadmium tolerant</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/cytogamy.html">cytogamy</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">physiology</span>
-          <a href="../../traits/physiology/bioluminescence.html">bioluminescence</a>
+          <a href="../../traits/physiology/coccolith_production.html">coccolith production</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/cobalt_tolerant.html">cobalt tolerant</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/coagulase_activity.html">coagulase activity</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/copper_tolerant.html">copper tolerant</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/chemotropism.html">chemotropism</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/desiccation_tolerant.html">desiccation tolerant</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/chemotaxis.html">chemotaxis</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/piezotolerant.html">piezotolerant</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/cellular_rejuvenation.html">functional cellular rejuvenation</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/obligately_piezophilic.html">obligately piezophilic</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/cellular_contraction.html">cell body or cytoplasmic projection contraction</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/gas_vesicle.html">gas vesicle</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/cold_shock_response.html">cold shock response</a>
           <span class="sim">1.000</span>
         </li>
 
@@ -828,7 +845,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking self-assembly of (glyco)protein subunits into a regular 2D array to the S-layer surface coating.", "edges": [{"description": "Self-assembling (glyco)protein subunits build the S-layer array.", "evidence": [{"notes": "Fagan \u0026 Fairweather describe self-assembled (glyco)protein arrays forming the S-layer.", "reference": "DOI:10.1038/nrmicro3213"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "s_layer_subunits", "target": "s_layer_assembly"}, {"description": "Completed 2D assembly realizes the S-layer surface coating.", "evidence": [{"notes": "Review of assembly, architecture, and functional roles of microbial surface layers.", "reference": "DOI:10.1038/s41579-025-01258-8"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "s_layer_assembly", "target": "s_layer_trait"}, {"description": "S-layer proteins self-assemble into a 2D paracrystalline lattice; N-terminal regions mediate self-assembly into the layer.", "evidence": [{"notes": "S-layers are self-assembling, crystalline surface proteins; the N-terminal region mediates self-assembly into the layer (curation-safe at class level).", "reference": "DOI:10.1073/pnas.2401686121"}], "id": "edge-3", "is_orphan": false, "predicate": "self-assembles into", "predicate_id": null, "source": "s_layer_subunits", "target": "s_layer_2d_lattice"}], "evidence_rows": [{"description": "Self-assembling (glyco)protein subunits build the S-layer array.", "edge_id": "edge-1", "evidence": [{"notes": "Fagan \u0026 Fairweather describe self-assembled (glyco)protein arrays forming the S-layer.", "reference": "DOI:10.1038/nrmicro3213"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "S-layer (glyco)protein subunits", "target": "S-layer assembly"}, {"description": "Completed 2D assembly realizes the S-layer surface coating.", "edge_id": "edge-2", "evidence": [{"notes": "Review of assembly, architecture, and functional roles of microbial surface layers.", "reference": "DOI:10.1038/s41579-025-01258-8"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "S-layer assembly", "target": "S-layer"}, {"description": "S-layer proteins self-assemble into a 2D paracrystalline lattice; N-terminal regions mediate self-assembly into the layer.", "edge_id": "edge-3", "evidence": [{"notes": "S-layers are self-assembling, crystalline surface proteins; the N-terminal region mediates self-assembly into the layer (curation-safe at class level).", "reference": "DOI:10.1073/pnas.2401686121"}], "predicate": "self-assembles into", "predicate_id": null, "source": "S-layer (glyco)protein subunits", "target": "2D paracrystalline S-layer lattice"}], "graph_id": "s_layer_2d_protein_array", "issues": [], "nodes": [{"color": "#ede9fe", "description": "Regularly spaced two-dimensional paracrystalline lattice formed by self-assembled S-layer proteins coating the cell surface.", "grounding": null, "id": "s_layer_2d_lattice", "is_orphan": false, "label": "2D paracrystalline S-layer lattice", "node_type": "CELLULAR_LOCALIZATION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Self-assembly of S-layer subunits into a regularly spaced 2D array.", "grounding": null, "id": "s_layer_assembly", "is_orphan": false, "label": "S-layer assembly", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Self-assembling proteinaceous building blocks of the S-layer.", "grounding": null, "id": "s_layer_subunits", "is_orphan": false, "label": "S-layer (glyco)protein subunits", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 214, "evidence": [{"notes": "Supports S-layer (glyco)protein subunits in S-layer; UniProtKB:P02918 (mrcA, Penicillin-binding protein 1A) in Escherichia coli (strain K12) provides a verified protein exemplar.", "reference": "DOI:10.1038/nrmicro3213", "snippet": "The outer surface of many archaea and bacteria is coated with a proteinaceous surface layer (known as an S-layer), which is formed by the self-assembly of monomeric proteins into a regularly spaced, two-dimensional array."}], "gene_symbol": "mrcA", "protein_label": "Penicillin-binding protein 1A", "proteome_id": "UP000000625", "retrieved_on": "2026-10-17", "role": "Exemplar protein (mrcA, Penicillin-binding protein 1A) representing S-layer (glyco)protein subunits in Escherichia coli (strain K12) for S-layer.", "sequence_version": 1, "taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli (strain K12)", "uniprot_id": "UniProtKB:P02918"}], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Crystalline 2D (glyco)protein array coating the cell surface.", "grounding": "traitmech:000064", "id": "s_layer_trait", "is_orphan": false, "label": "S-layer", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 214, "evidence": [{"notes": "Supports S-layer (glyco)protein subunits in S-layer; UniProtKB:P02918 (mrcA, Penicillin-binding protein 1A) in Escherichia coli (strain K12) provides a verified protein exemplar.", "reference": "DOI:10.1038/nrmicro3213", "snippet": "The outer surface of many archaea and bacteria is coated with a proteinaceous surface layer (known as an S-layer), which is formed by the self-assembly of monomeric proteins into a regularly spaced, two-dimensional array."}], "gene_symbol": "mrcA", "node_id": "s_layer_subunits", "node_label": "S-layer (glyco)protein subunits", "protein_label": "Penicillin-binding protein 1A", "proteome_id": "UP000000625", "retrieved_on": "2026-10-17", "role": "Exemplar protein (mrcA, Penicillin-binding protein 1A) representing S-layer (glyco)protein subunits in Escherichia coli (strain K12) for S-layer.", "sequence_version": 1, "taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli (strain K12)", "uniprot_id": "UniProtKB:P02918"}], "scope_notes": "This record is a broad environmental or morphological classification spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement descriptor; contextual protein nodes include source-backed UniProtKB exemplars.", "scope_status": "NONMECHANISTIC", "title": "S-layer crystalline (glyco)protein surface array"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking self-assembly of (glyco)protein subunits into a regular 2D array to the S-layer surface coating.", "edges": [{"description": "Self-assembling (glyco)protein subunits build the S-layer array.", "evidence": [{"notes": "Fagan \u0026 Fairweather describe self-assembled (glyco)protein arrays forming the S-layer.", "reference": "DOI:10.1038/nrmicro3213"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "s_layer_subunits", "target": "s_layer_assembly"}, {"description": "Completed 2D assembly realizes the S-layer surface coating.", "evidence": [{"notes": "Review of assembly, architecture, and functional roles of microbial surface layers.", "reference": "DOI:10.1038/s41579-025-01258-8"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "s_layer_assembly", "target": "s_layer_trait"}, {"description": "S-layer proteins self-assemble into a 2D paracrystalline lattice; N-terminal regions mediate self-assembly into the layer.", "evidence": [{"notes": "S-layers are self-assembling, crystalline surface proteins; the N-terminal region mediates self-assembly into the layer (curation-safe at class level).", "reference": "DOI:10.1073/pnas.2401686121"}], "id": "edge-3", "is_orphan": false, "predicate": "self-assembles into", "predicate_id": null, "source": "s_layer_subunits", "target": "s_layer_2d_lattice"}], "evidence_rows": [{"description": "Self-assembling (glyco)protein subunits build the S-layer array.", "edge_id": "edge-1", "evidence": [{"notes": "Fagan \u0026 Fairweather describe self-assembled (glyco)protein arrays forming the S-layer.", "reference": "DOI:10.1038/nrmicro3213"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "S-layer (glyco)protein subunits", "source_grounding": null, "target": "S-layer assembly", "target_grounding": null}, {"description": "Completed 2D assembly realizes the S-layer surface coating.", "edge_id": "edge-2", "evidence": [{"notes": "Review of assembly, architecture, and functional roles of microbial surface layers.", "reference": "DOI:10.1038/s41579-025-01258-8"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "S-layer assembly", "source_grounding": null, "target": "S-layer", "target_grounding": "traitmech:000064"}, {"description": "S-layer proteins self-assemble into a 2D paracrystalline lattice; N-terminal regions mediate self-assembly into the layer.", "edge_id": "edge-3", "evidence": [{"notes": "S-layers are self-assembling, crystalline surface proteins; the N-terminal region mediates self-assembly into the layer (curation-safe at class level).", "reference": "DOI:10.1073/pnas.2401686121"}], "predicate": "self-assembles into", "predicate_id": null, "source": "S-layer (glyco)protein subunits", "source_grounding": null, "target": "2D paracrystalline S-layer lattice", "target_grounding": null}], "graph_id": "s_layer_2d_protein_array", "issues": [], "nodes": [{"color": "#ede9fe", "description": "Regularly spaced two-dimensional paracrystalline lattice formed by self-assembled S-layer proteins coating the cell surface.", "grounding": null, "id": "s_layer_2d_lattice", "is_orphan": false, "label": "2D paracrystalline S-layer lattice", "node_type": "CELLULAR_LOCALIZATION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Self-assembly of S-layer subunits into a regularly spaced 2D array.", "grounding": null, "id": "s_layer_assembly", "is_orphan": false, "label": "S-layer assembly", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Self-assembling proteinaceous building blocks of the S-layer.", "grounding": null, "id": "s_layer_subunits", "is_orphan": false, "label": "S-layer (glyco)protein subunits", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Crystalline 2D (glyco)protein array coating the cell surface.", "grounding": "traitmech:000064", "id": "s_layer_trait", "is_orphan": false, "label": "S-layer", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This record is a broad environmental or morphological classification spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement descriptor; contextual protein nodes do not receive token UniProt examples.", "scope_status": "NONMECHANISTIC", "title": "S-layer crystalline (glyco)protein surface array"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -848,13 +865,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-10-17 09:00 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/morphology.html">MORPHOLOGY</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/morphology.html">MORPHOLOGY</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>gliding</h1>
     <p class="curie"><code>METPO:1000706</code> · CLASS · REVIEWED</p>
 
@@ -79,8 +90,10 @@
 
           <li id="pathograph-1-edge-1">
             <strong>solid surface</strong>
+
             <span class="edge-predicate">enables context for</span>
             <strong>gliding</strong>
+            <a href="https://w3id.org/metpo/1000706" rel="nofollow noreferrer"><code>METPO:1000706</code></a>
 
             <p>Gliding is a mode of active bacterial movement over surfaces.</p>
             <ul>
@@ -96,9 +109,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>gliding motility machinery</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>gliding</strong>
-            <code>METPO:2007700</code>
+            <a href="https://w3id.org/metpo/1000706" rel="nofollow noreferrer"><code>METPO:1000706</code></a>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>Specialized machinery drives bacterial surface movement without flagella.</p>
             <ul>
 
@@ -113,8 +128,10 @@
 
           <li id="pathograph-1-edge-3">
             <strong>surface adhesins</strong>
+
             <span class="edge-predicate">transmit force for</span>
             <strong>gliding</strong>
+            <a href="https://w3id.org/metpo/1000706" rel="nofollow noreferrer"><code>METPO:1000706</code></a>
 
             <p>Surface adhesins couple internal motors to external substrates.</p>
             <ul>
@@ -130,9 +147,11 @@
 
           <li id="pathograph-1-edge-4">
             <strong>type IX secretion system</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>gliding motility machinery</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>Type IX secretion-associated components contribute to some gliding systems.</p>
             <ul>
 
@@ -147,9 +166,11 @@
 
           <li id="pathograph-1-edge-5">
             <strong>proton motive force</strong>
+            <a href="https://w3id.org/metpo/1007500" rel="nofollow noreferrer"><code>METPO:1007500</code></a>
             <span class="edge-predicate">powers</span>
             <strong>gliding motility machinery</strong>
-            <code>METPO:2007900</code>
+
+            <a href="https://w3id.org/metpo/2007900" rel="nofollow noreferrer"><code>METPO:2007900</code></a>
             <p>Proton motive force can power gliding motility motors.</p>
             <ul>
 
@@ -164,8 +185,10 @@
 
           <li id="pathograph-1-edge-6">
             <strong>helical conveyor track</strong>
+
             <span class="edge-predicate">guides</span>
             <strong>surface adhesins</strong>
+
 
             <p>Adhesins are translocated along an envelope-associated filamentous track during gliding.</p>
             <ul>
@@ -181,9 +204,11 @@
 
           <li id="pathograph-1-edge-7">
             <strong>surface adhesins</strong>
+
             <span class="edge-predicate">enables</span>
             <strong>substratum coupling and traction</strong>
-            <code>RO:0002327</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002327" rel="nofollow noreferrer"><code>RO:0002327</code></a>
             <p>Surface adhesins engage the substratum to generate traction.</p>
             <ul>
 
@@ -198,9 +223,11 @@
 
           <li id="pathograph-1-edge-8">
             <strong>substratum coupling and traction</strong>
+
             <span class="edge-predicate">causes</span>
             <strong>cell propulsion</strong>
-            <code>biolink:causes</code>
+
+            <a href="https://w3id.org/biolink/vocab/causes" rel="nofollow noreferrer"><code>biolink:causes</code></a>
             <p>Traction at substratum-coupled adhesins drives forward movement of the cell body.</p>
             <ul>
 
@@ -215,8 +242,10 @@
 
           <li id="pathograph-1-edge-9">
             <strong>cell propulsion</strong>
+
             <span class="edge-predicate">realizes</span>
             <strong>gliding</strong>
+            <a href="https://w3id.org/metpo/1000706" rel="nofollow noreferrer"><code>METPO:1000706</code></a>
 
             <p>Propulsion of the cell body along a surface constitutes the gliding phenotype.</p>
             <ul>
@@ -232,8 +261,10 @@
 
           <li id="pathograph-1-edge-10">
             <strong>gliding machinery gene complement</strong>
+
             <span class="edge-predicate">predicts</span>
             <strong>gliding</strong>
+            <a href="https://w3id.org/metpo/1000706" rel="nofollow noreferrer"><code>METPO:1000706</code></a>
 
             <p>Presence of the core gliding/secretion machinery gene set predicts gliding capacity from genomes.</p>
             <ul>
@@ -437,6 +468,12 @@
         </li>
 
         <li>
+          <span class="nn-cat">morphology</span>
+          <a href="../../traits/morphology/polar_flagellation.html">polar flagellation</a>
+          <span class="sim">0.219</span>
+        </li>
+
+        <li>
           <span class="nn-cat">environment</span>
           <a href="../../traits/environment/ph_range_mid3.html">pH range mid3</a>
           <span class="sim">0.215</span>
@@ -458,12 +495,6 @@
           <span class="nn-cat">morphology</span>
           <a href="../../traits/morphology/rod_shaped.html">rod shaped</a>
           <span class="sim">0.207</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/temperature_optimum_low.html">temperature optimum low</a>
-          <span class="sim">0.203</span>
         </li>
 
       </ul>
@@ -1067,7 +1098,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking gliding to solid surfaces, cell-envelope motors, surface adhesins, and type IX secretion/gliding systems.", "edges": [{"description": "Gliding is a mode of active bacterial movement over surfaces.", "evidence": [{"notes": "Supports surface movement as defining context for gliding.", "reference": "DOI:10.1146/annurev.micro.55.1.49", "snippet": "move actively over surfaces"}], "id": "edge-1", "is_orphan": false, "predicate": "enables context for", "predicate_id": null, "source": "solid_surface", "target": "gliding_trait"}, {"description": "Specialized machinery drives bacterial surface movement without flagella.", "evidence": [{"notes": "Supports gliding as a distinct motility mode.", "reference": "DOI:10.1016/j.cub.2016.12.035", "snippet": "without using flagella, pili, or other external appendages"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "gliding_motility_machinery", "target": "gliding_trait"}, {"description": "Surface adhesins couple internal motors to external substrates.", "evidence": [{"notes": "Review summarizes gliding models using moving surface adhesins.", "reference": "DOI:10.1038/s41579-021-00626-4", "snippet": "moves adhesins along the cell surface"}], "id": "edge-3", "is_orphan": false, "predicate": "transmit force for", "predicate_id": null, "source": "surface_adhesins", "target": "gliding_trait"}, {"description": "Type IX secretion-associated components contribute to some gliding systems.", "evidence": [{"notes": "Supports linkage between type IX secretion and gliding machinery.", "reference": "DOI:10.1038/s41579-021-00626-4", "snippet": "type 9 secretion and gliding motility"}], "id": "edge-4", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "type_ix_secretion_system", "target": "gliding_motility_machinery"}, {"description": "Proton motive force can power gliding motility motors.", "evidence": [{"notes": "Supports proton-driven gliding machinery in reviewed systems.", "reference": "DOI:10.1038/s41579-021-00626-4", "snippet": "proton-driven motor that powers type 9 secretion and gliding motility"}], "id": "edge-5", "is_orphan": false, "predicate": "powers", "predicate_id": "METPO:2007900", "source": "proton_motive_force", "target": "gliding_motility_machinery"}, {"description": "Adhesins are translocated along an envelope-associated filamentous track during gliding.", "evidence": [{"notes": "Filamentous multirail structures in the cell envelope are associated with the gliding machinery and SprB adhesin translocation.", "reference": "DOI:10.1038/s42003-023-04472-3"}], "id": "edge-6", "is_orphan": false, "predicate": "guides", "predicate_id": null, "source": "helical_track", "target": "surface_adhesins"}, {"description": "Surface adhesins engage the substratum to generate traction.", "evidence": [{"notes": "Surface adhesin at bacterial focal adhesions immobilizes motility complexes against the substratum to generate traction.", "reference": "DOI:10.1126/sciadv.abq0619"}], "id": "edge-7", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "surface_adhesins", "target": "substratum_coupling"}, {"description": "Traction at substratum-coupled adhesins drives forward movement of the cell body.", "evidence": [{"notes": "Proton-dependent motors power adhesin surface translocation that propels the cell during gliding.", "reference": "DOI:10.1371/journal.pbio.3001443"}], "id": "edge-8", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "substratum_coupling", "target": "cell_propulsion"}, {"description": "Propulsion of the cell body along a surface constitutes the gliding phenotype.", "evidence": [{"notes": "Adhesin surface translocation produces the smooth surface movement characteristic of gliding.", "reference": "DOI:10.1371/journal.pbio.3001443"}], "id": "edge-9", "is_orphan": false, "predicate": "realizes", "predicate_id": null, "source": "cell_propulsion", "target": "gliding_trait"}, {"description": "Presence of the core gliding/secretion machinery gene set predicts gliding capacity from genomes.", "evidence": [{"notes": "T9GPred predicts gliding motility from an 11-protein mandatory component set across Bacteroidetes genomes.", "reference": "DOI:10.1021/acsomega.3c05155"}], "id": "edge-10", "is_orphan": false, "predicate": "predicts", "predicate_id": null, "source": "gliding_gene_complement", "target": "gliding_trait"}], "evidence_rows": [{"description": "Gliding is a mode of active bacterial movement over surfaces.", "edge_id": "edge-1", "evidence": [{"notes": "Supports surface movement as defining context for gliding.", "reference": "DOI:10.1146/annurev.micro.55.1.49", "snippet": "move actively over surfaces"}], "predicate": "enables context for", "predicate_id": null, "source": "solid surface", "target": "gliding"}, {"description": "Specialized machinery drives bacterial surface movement without flagella.", "edge_id": "edge-2", "evidence": [{"notes": "Supports gliding as a distinct motility mode.", "reference": "DOI:10.1016/j.cub.2016.12.035", "snippet": "without using flagella, pili, or other external appendages"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "gliding motility machinery", "target": "gliding"}, {"description": "Surface adhesins couple internal motors to external substrates.", "edge_id": "edge-3", "evidence": [{"notes": "Review summarizes gliding models using moving surface adhesins.", "reference": "DOI:10.1038/s41579-021-00626-4", "snippet": "moves adhesins along the cell surface"}], "predicate": "transmit force for", "predicate_id": null, "source": "surface adhesins", "target": "gliding"}, {"description": "Type IX secretion-associated components contribute to some gliding systems.", "edge_id": "edge-4", "evidence": [{"notes": "Supports linkage between type IX secretion and gliding machinery.", "reference": "DOI:10.1038/s41579-021-00626-4", "snippet": "type 9 secretion and gliding motility"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "type IX secretion system", "target": "gliding motility machinery"}, {"description": "Proton motive force can power gliding motility motors.", "edge_id": "edge-5", "evidence": [{"notes": "Supports proton-driven gliding machinery in reviewed systems.", "reference": "DOI:10.1038/s41579-021-00626-4", "snippet": "proton-driven motor that powers type 9 secretion and gliding motility"}], "predicate": "powers", "predicate_id": "METPO:2007900", "source": "proton motive force", "target": "gliding motility machinery"}, {"description": "Adhesins are translocated along an envelope-associated filamentous track during gliding.", "edge_id": "edge-6", "evidence": [{"notes": "Filamentous multirail structures in the cell envelope are associated with the gliding machinery and SprB adhesin translocation.", "reference": "DOI:10.1038/s42003-023-04472-3"}], "predicate": "guides", "predicate_id": null, "source": "helical conveyor track", "target": "surface adhesins"}, {"description": "Surface adhesins engage the substratum to generate traction.", "edge_id": "edge-7", "evidence": [{"notes": "Surface adhesin at bacterial focal adhesions immobilizes motility complexes against the substratum to generate traction.", "reference": "DOI:10.1126/sciadv.abq0619"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "surface adhesins", "target": "substratum coupling and traction"}, {"description": "Traction at substratum-coupled adhesins drives forward movement of the cell body.", "edge_id": "edge-8", "evidence": [{"notes": "Proton-dependent motors power adhesin surface translocation that propels the cell during gliding.", "reference": "DOI:10.1371/journal.pbio.3001443"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "substratum coupling and traction", "target": "cell propulsion"}, {"description": "Propulsion of the cell body along a surface constitutes the gliding phenotype.", "edge_id": "edge-9", "evidence": [{"notes": "Adhesin surface translocation produces the smooth surface movement characteristic of gliding.", "reference": "DOI:10.1371/journal.pbio.3001443"}], "predicate": "realizes", "predicate_id": null, "source": "cell propulsion", "target": "gliding"}, {"description": "Presence of the core gliding/secretion machinery gene set predicts gliding capacity from genomes.", "edge_id": "edge-10", "evidence": [{"notes": "T9GPred predicts gliding motility from an 11-protein mandatory component set across Bacteroidetes genomes.", "reference": "DOI:10.1021/acsomega.3c05155"}], "predicate": "predicts", "predicate_id": null, "source": "gliding machinery gene complement", "target": "gliding"}], "graph_id": "gliding_surface_motility", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Forward, often screw-like, translocation of the cell body resulting from gliding machinery activity.", "grounding": null, "id": "cell_propulsion", "is_orphan": false, "label": "cell propulsion", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ccfbf1", "description": "Presence of the core gliding/secretion machinery gene set in a genome, used to predict gliding capacity.", "grounding": null, "id": "gliding_gene_complement", "is_orphan": false, "label": "gliding machinery gene complement", "node_type": "EXPERIMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Molecular machinery that produces surface translocation without flagella.", "grounding": null, "id": "gliding_motility_machinery", "is_orphan": false, "label": "gliding motility machinery", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 123, "evidence": [{"notes": "The cited source supports the represented protein-to-trait branch; UniProt verifies this current strain-matched protein entry.", "reference": "DOI:10.1016/j.cub.2016.12.035", "snippet": "Myxococcus glides without external motility appendages"}], "gene_symbol": "aglZ", "protein_label": "Adventurous-gliding motility protein AglZ", "proteome_id": "UP000002402", "retrieved_on": "2026-08-25", "role": "AglZ is a DK1622 gliding-motility factor anchoring the adventurous-gliding branch, not all bacterial gliding systems.", "sequence_version": 1, "taxon_id": "NCBITaxon:246197", "taxon_label": "Myxococcus xanthus DK1622", "uniprot_id": "UniProtKB:Q1D823"}], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Smooth movement along solid surfaces without flagella or pili.", "grounding": "METPO:1000706", "id": "gliding_trait", "is_orphan": false, "label": "gliding", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ede9fe", "description": "Filamentous/multirail track structure in the cell envelope along which surface adhesins are translocated during gliding.", "grounding": null, "id": "helical_track", "is_orphan": false, "label": "helical conveyor track", "node_type": "CELLULAR_LOCALIZATION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Electrochemical gradient powering some gliding motors.", "grounding": "METPO:1007500", "id": "proton_motive_force", "is_orphan": false, "label": "proton motive force", "node_type": "STATE", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Surface substrate on which gliding movement occurs.", "grounding": null, "id": "solid_surface", "is_orphan": false, "label": "solid surface", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Engagement of surface adhesins with the solid substratum to generate the traction that drives cell movement.", "grounding": null, "id": "substratum_coupling", "is_orphan": false, "label": "substratum coupling and traction", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Cell-surface proteins moved or engaged during gliding.", "grounding": null, "id": "surface_adhesins", "is_orphan": false, "label": "surface adhesins", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 198, "evidence": [{"notes": "Supports surface adhesins in gliding; UniProtKB:P08191 (fimH, Type 1 fimbrin D-mannose specific adhesin) in Escherichia coli (strain K12) provides a verified protein exemplar.", "reference": "DOI:10.1038/s41579-021-00626-4", "snippet": "moves adhesins along the cell surface"}], "gene_symbol": "fimH", "protein_label": "Type 1 fimbrin D-mannose specific adhesin", "proteome_id": "UP000000625", "retrieved_on": "2026-10-17", "role": "Exemplar protein (fimH, Type 1 fimbrin D-mannose specific adhesin) representing surface adhesins in Escherichia coli (strain K12) for gliding.", "sequence_version": 2, "taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli (strain K12)", "uniprot_id": "UniProtKB:P08191"}], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Secretion-associated machinery linked to Flavobacterium gliding.", "grounding": null, "id": "type_ix_secretion_system", "is_orphan": false, "label": "type IX secretion system", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 123, "evidence": [{"notes": "Supports type IX secretion system in gliding; UniProtKB:Q1D823 (aglZ, Adventurous-gliding motility protein Z) in Myxococcus xanthus (strain DK1622) provides a verified protein exemplar.", "reference": "DOI:10.1038/s41579-021-00626-4", "snippet": "proton-driven motor that powers type 9 secretion and gliding motility"}], "gene_symbol": "aglZ", "protein_label": "Adventurous-gliding motility protein Z", "proteome_id": "UP000002402", "retrieved_on": "2026-10-17", "role": "Exemplar protein (aglZ, Adventurous-gliding motility protein Z) representing type IX secretion system in Myxococcus xanthus (strain DK1622) for gliding.", "sequence_version": 1, "taxon_id": "NCBITaxon:246197", "taxon_label": "Myxococcus xanthus (strain DK1622)", "uniprot_id": "UniProtKB:Q1D823"}], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 123, "evidence": [{"notes": "The cited source supports the represented protein-to-trait branch; UniProt verifies this current strain-matched protein entry.", "reference": "DOI:10.1016/j.cub.2016.12.035", "snippet": "Myxococcus glides without external motility appendages"}], "gene_symbol": "aglZ", "node_id": "gliding_motility_machinery", "node_label": "gliding motility machinery", "protein_label": "Adventurous-gliding motility protein AglZ", "proteome_id": "UP000002402", "retrieved_on": "2026-08-25", "role": "AglZ is a DK1622 gliding-motility factor anchoring the adventurous-gliding branch, not all bacterial gliding systems.", "sequence_version": 1, "taxon_id": "NCBITaxon:246197", "taxon_label": "Myxococcus xanthus DK1622", "uniprot_id": "UniProtKB:Q1D823"}, {"entry_status": "REVIEWED", "entry_version": 198, "evidence": [{"notes": "Supports surface adhesins in gliding; UniProtKB:P08191 (fimH, Type 1 fimbrin D-mannose specific adhesin) in Escherichia coli (strain K12) provides a verified protein exemplar.", "reference": "DOI:10.1038/s41579-021-00626-4", "snippet": "moves adhesins along the cell surface"}], "gene_symbol": "fimH", "node_id": "surface_adhesins", "node_label": "surface adhesins", "protein_label": "Type 1 fimbrin D-mannose specific adhesin", "proteome_id": "UP000000625", "retrieved_on": "2026-10-17", "role": "Exemplar protein (fimH, Type 1 fimbrin D-mannose specific adhesin) representing surface adhesins in Escherichia coli (strain K12) for gliding.", "sequence_version": 2, "taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli (strain K12)", "uniprot_id": "UniProtKB:P08191"}, {"entry_status": "REVIEWED", "entry_version": 123, "evidence": [{"notes": "Supports type IX secretion system in gliding; UniProtKB:Q1D823 (aglZ, Adventurous-gliding motility protein Z) in Myxococcus xanthus (strain DK1622) provides a verified protein exemplar.", "reference": "DOI:10.1038/s41579-021-00626-4", "snippet": "proton-driven motor that powers type 9 secretion and gliding motility"}], "gene_symbol": "aglZ", "node_id": "type_ix_secretion_system", "node_label": "type IX secretion system", "protein_label": "Adventurous-gliding motility protein Z", "proteome_id": "UP000002402", "retrieved_on": "2026-10-17", "role": "Exemplar protein (aglZ, Adventurous-gliding motility protein Z) representing type IX secretion system in Myxococcus xanthus (strain DK1622) for gliding.", "sequence_version": 1, "taxon_id": "NCBITaxon:246197", "taxon_label": "Myxococcus xanthus (strain DK1622)", "uniprot_id": "UniProtKB:Q1D823"}], "scope_notes": "The taxon-matched protein example anchors one experimentally supported causal branch; it is not presented as a universal mechanism for every taxon or every contextual branch in this graph.", "scope_status": "MECHANISTIC", "title": "Gliding surface motility mechanism"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking gliding to solid surfaces, cell-envelope motors, surface adhesins, and type IX secretion/gliding systems.", "edges": [{"description": "Gliding is a mode of active bacterial movement over surfaces.", "evidence": [{"notes": "Supports surface movement as defining context for gliding.", "reference": "DOI:10.1146/annurev.micro.55.1.49", "snippet": "move actively over surfaces"}], "id": "edge-1", "is_orphan": false, "predicate": "enables context for", "predicate_id": null, "source": "solid_surface", "target": "gliding_trait"}, {"description": "Specialized machinery drives bacterial surface movement without flagella.", "evidence": [{"notes": "Supports gliding as a distinct motility mode.", "reference": "DOI:10.1016/j.cub.2016.12.035", "snippet": "without using flagella, pili, or other external appendages"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "gliding_motility_machinery", "target": "gliding_trait"}, {"description": "Surface adhesins couple internal motors to external substrates.", "evidence": [{"notes": "Review summarizes gliding models using moving surface adhesins.", "reference": "DOI:10.1038/s41579-021-00626-4", "snippet": "moves adhesins along the cell surface"}], "id": "edge-3", "is_orphan": false, "predicate": "transmit force for", "predicate_id": null, "source": "surface_adhesins", "target": "gliding_trait"}, {"description": "Type IX secretion-associated components contribute to some gliding systems.", "evidence": [{"notes": "Supports linkage between type IX secretion and gliding machinery.", "reference": "DOI:10.1038/s41579-021-00626-4", "snippet": "type 9 secretion and gliding motility"}], "id": "edge-4", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "type_ix_secretion_system", "target": "gliding_motility_machinery"}, {"description": "Proton motive force can power gliding motility motors.", "evidence": [{"notes": "Supports proton-driven gliding machinery in reviewed systems.", "reference": "DOI:10.1038/s41579-021-00626-4", "snippet": "proton-driven motor that powers type 9 secretion and gliding motility"}], "id": "edge-5", "is_orphan": false, "predicate": "powers", "predicate_id": "METPO:2007900", "source": "proton_motive_force", "target": "gliding_motility_machinery"}, {"description": "Adhesins are translocated along an envelope-associated filamentous track during gliding.", "evidence": [{"notes": "Filamentous multirail structures in the cell envelope are associated with the gliding machinery and SprB adhesin translocation.", "reference": "DOI:10.1038/s42003-023-04472-3"}], "id": "edge-6", "is_orphan": false, "predicate": "guides", "predicate_id": null, "source": "helical_track", "target": "surface_adhesins"}, {"description": "Surface adhesins engage the substratum to generate traction.", "evidence": [{"notes": "Surface adhesin at bacterial focal adhesions immobilizes motility complexes against the substratum to generate traction.", "reference": "DOI:10.1126/sciadv.abq0619"}], "id": "edge-7", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "surface_adhesins", "target": "substratum_coupling"}, {"description": "Traction at substratum-coupled adhesins drives forward movement of the cell body.", "evidence": [{"notes": "Proton-dependent motors power adhesin surface translocation that propels the cell during gliding.", "reference": "DOI:10.1371/journal.pbio.3001443"}], "id": "edge-8", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "substratum_coupling", "target": "cell_propulsion"}, {"description": "Propulsion of the cell body along a surface constitutes the gliding phenotype.", "evidence": [{"notes": "Adhesin surface translocation produces the smooth surface movement characteristic of gliding.", "reference": "DOI:10.1371/journal.pbio.3001443"}], "id": "edge-9", "is_orphan": false, "predicate": "realizes", "predicate_id": null, "source": "cell_propulsion", "target": "gliding_trait"}, {"description": "Presence of the core gliding/secretion machinery gene set predicts gliding capacity from genomes.", "evidence": [{"notes": "T9GPred predicts gliding motility from an 11-protein mandatory component set across Bacteroidetes genomes.", "reference": "DOI:10.1021/acsomega.3c05155"}], "id": "edge-10", "is_orphan": false, "predicate": "predicts", "predicate_id": null, "source": "gliding_gene_complement", "target": "gliding_trait"}], "evidence_rows": [{"description": "Gliding is a mode of active bacterial movement over surfaces.", "edge_id": "edge-1", "evidence": [{"notes": "Supports surface movement as defining context for gliding.", "reference": "DOI:10.1146/annurev.micro.55.1.49", "snippet": "move actively over surfaces"}], "predicate": "enables context for", "predicate_id": null, "source": "solid surface", "source_grounding": null, "target": "gliding", "target_grounding": "METPO:1000706"}, {"description": "Specialized machinery drives bacterial surface movement without flagella.", "edge_id": "edge-2", "evidence": [{"notes": "Supports gliding as a distinct motility mode.", "reference": "DOI:10.1016/j.cub.2016.12.035", "snippet": "without using flagella, pili, or other external appendages"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "gliding motility machinery", "source_grounding": null, "target": "gliding", "target_grounding": "METPO:1000706"}, {"description": "Surface adhesins couple internal motors to external substrates.", "edge_id": "edge-3", "evidence": [{"notes": "Review summarizes gliding models using moving surface adhesins.", "reference": "DOI:10.1038/s41579-021-00626-4", "snippet": "moves adhesins along the cell surface"}], "predicate": "transmit force for", "predicate_id": null, "source": "surface adhesins", "source_grounding": null, "target": "gliding", "target_grounding": "METPO:1000706"}, {"description": "Type IX secretion-associated components contribute to some gliding systems.", "edge_id": "edge-4", "evidence": [{"notes": "Supports linkage between type IX secretion and gliding machinery.", "reference": "DOI:10.1038/s41579-021-00626-4", "snippet": "type 9 secretion and gliding motility"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "type IX secretion system", "source_grounding": null, "target": "gliding motility machinery", "target_grounding": null}, {"description": "Proton motive force can power gliding motility motors.", "edge_id": "edge-5", "evidence": [{"notes": "Supports proton-driven gliding machinery in reviewed systems.", "reference": "DOI:10.1038/s41579-021-00626-4", "snippet": "proton-driven motor that powers type 9 secretion and gliding motility"}], "predicate": "powers", "predicate_id": "METPO:2007900", "source": "proton motive force", "source_grounding": "METPO:1007500", "target": "gliding motility machinery", "target_grounding": null}, {"description": "Adhesins are translocated along an envelope-associated filamentous track during gliding.", "edge_id": "edge-6", "evidence": [{"notes": "Filamentous multirail structures in the cell envelope are associated with the gliding machinery and SprB adhesin translocation.", "reference": "DOI:10.1038/s42003-023-04472-3"}], "predicate": "guides", "predicate_id": null, "source": "helical conveyor track", "source_grounding": null, "target": "surface adhesins", "target_grounding": null}, {"description": "Surface adhesins engage the substratum to generate traction.", "edge_id": "edge-7", "evidence": [{"notes": "Surface adhesin at bacterial focal adhesions immobilizes motility complexes against the substratum to generate traction.", "reference": "DOI:10.1126/sciadv.abq0619"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "surface adhesins", "source_grounding": null, "target": "substratum coupling and traction", "target_grounding": null}, {"description": "Traction at substratum-coupled adhesins drives forward movement of the cell body.", "edge_id": "edge-8", "evidence": [{"notes": "Proton-dependent motors power adhesin surface translocation that propels the cell during gliding.", "reference": "DOI:10.1371/journal.pbio.3001443"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "substratum coupling and traction", "source_grounding": null, "target": "cell propulsion", "target_grounding": null}, {"description": "Propulsion of the cell body along a surface constitutes the gliding phenotype.", "edge_id": "edge-9", "evidence": [{"notes": "Adhesin surface translocation produces the smooth surface movement characteristic of gliding.", "reference": "DOI:10.1371/journal.pbio.3001443"}], "predicate": "realizes", "predicate_id": null, "source": "cell propulsion", "source_grounding": null, "target": "gliding", "target_grounding": "METPO:1000706"}, {"description": "Presence of the core gliding/secretion machinery gene set predicts gliding capacity from genomes.", "edge_id": "edge-10", "evidence": [{"notes": "T9GPred predicts gliding motility from an 11-protein mandatory component set across Bacteroidetes genomes.", "reference": "DOI:10.1021/acsomega.3c05155"}], "predicate": "predicts", "predicate_id": null, "source": "gliding machinery gene complement", "source_grounding": null, "target": "gliding", "target_grounding": "METPO:1000706"}], "graph_id": "gliding_surface_motility", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Forward, often screw-like, translocation of the cell body resulting from gliding machinery activity.", "grounding": null, "id": "cell_propulsion", "is_orphan": false, "label": "cell propulsion", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ccfbf1", "description": "Presence of the core gliding/secretion machinery gene set in a genome, used to predict gliding capacity.", "grounding": null, "id": "gliding_gene_complement", "is_orphan": false, "label": "gliding machinery gene complement", "node_type": "EXPERIMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Molecular machinery that produces surface translocation without flagella.", "grounding": null, "id": "gliding_motility_machinery", "is_orphan": false, "label": "gliding motility machinery", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 123, "evidence": [{"notes": "The cited source supports the represented protein-to-trait branch; UniProt verifies this current strain-matched protein entry.", "reference": "DOI:10.1016/j.cub.2016.12.035", "snippet": "Myxococcus glides without external motility appendages"}], "gene_symbol": "aglZ", "protein_label": "Adventurous-gliding motility protein AglZ", "proteome_id": "UP000002402", "retrieved_on": "2026-08-25", "role": "AglZ is a DK1622 gliding-motility factor anchoring the adventurous-gliding branch, not all bacterial gliding systems.", "sequence_version": 1, "taxon_id": "NCBITaxon:246197", "taxon_label": "Myxococcus xanthus DK1622", "uniprot_id": "UniProtKB:Q1D823"}], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Smooth movement along solid surfaces without flagella or pili.", "grounding": "METPO:1000706", "id": "gliding_trait", "is_orphan": false, "label": "gliding", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ede9fe", "description": "Filamentous/multirail track structure in the cell envelope along which surface adhesins are translocated during gliding.", "grounding": null, "id": "helical_track", "is_orphan": false, "label": "helical conveyor track", "node_type": "CELLULAR_LOCALIZATION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Electrochemical gradient powering some gliding motors.", "grounding": "METPO:1007500", "id": "proton_motive_force", "is_orphan": false, "label": "proton motive force", "node_type": "STATE", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Surface substrate on which gliding movement occurs.", "grounding": null, "id": "solid_surface", "is_orphan": false, "label": "solid surface", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Engagement of surface adhesins with the solid substratum to generate the traction that drives cell movement.", "grounding": null, "id": "substratum_coupling", "is_orphan": false, "label": "substratum coupling and traction", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Cell-surface proteins moved or engaged during gliding.", "grounding": null, "id": "surface_adhesins", "is_orphan": false, "label": "surface adhesins", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Secretion-associated machinery linked to Flavobacterium gliding.", "grounding": null, "id": "type_ix_secretion_system", "is_orphan": false, "label": "type IX secretion system", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 123, "evidence": [{"notes": "The cited source supports the represented protein-to-trait branch; UniProt verifies this current strain-matched protein entry.", "reference": "DOI:10.1016/j.cub.2016.12.035", "snippet": "Myxococcus glides without external motility appendages"}], "gene_symbol": "aglZ", "node_id": "gliding_motility_machinery", "node_label": "gliding motility machinery", "protein_label": "Adventurous-gliding motility protein AglZ", "proteome_id": "UP000002402", "retrieved_on": "2026-08-25", "role": "AglZ is a DK1622 gliding-motility factor anchoring the adventurous-gliding branch, not all bacterial gliding systems.", "sequence_version": 1, "taxon_id": "NCBITaxon:246197", "taxon_label": "Myxococcus xanthus DK1622", "uniprot_id": "UniProtKB:Q1D823"}], "scope_notes": "The taxon-matched protein example anchors one experimentally supported causal branch; it is not presented as a universal mechanism for every taxon or every contextual branch in this graph.", "scope_status": "MECHANISTIC", "title": "Gliding surface motility mechanism"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -1087,13 +1118,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-10-17 09:00 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

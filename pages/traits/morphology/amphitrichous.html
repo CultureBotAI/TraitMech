@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/morphology.html">MORPHOLOGY</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/morphology.html">MORPHOLOGY</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>amphitrichous</h1>
     <p class="curie"><code>traitmech:000059</code> · CLASS · REVIEWED</p>
 
@@ -85,9 +96,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>bacterial-type flagellum</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0009288" rel="nofollow noreferrer"><code>GO:0009288</code></a>
             <span class="edge-predicate">defines</span>
             <strong>amphitrichous</strong>
-            <code>METPO:2007500</code>
+            <code>traitmech:000059</code>
+            <a href="https://w3id.org/metpo/2007500" rel="nofollow noreferrer"><code>METPO:2007500</code></a>
             <p>Flagella at both cell poles define the amphitrichous arrangement.</p>
             <ul>
 
@@ -102,9 +115,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>amphitrichous</strong>
+            <code>traitmech:000059</code>
             <span class="edge-predicate">associated with</span>
             <strong>bipolar placement</strong>
-            <code>biolink:associated_with</code>
+
+            <a href="https://w3id.org/biolink/vocab/associated_with" rel="nofollow noreferrer"><code>biolink:associated_with</code></a>
             <p>The amphitrichous pattern places flagella at both poles.</p>
             <ul>
 
@@ -119,8 +134,10 @@
 
           <li id="pathograph-1-edge-3">
             <strong>FlhF</strong>
+
             <span class="edge-predicate">binds</span>
             <strong>FliG</strong>
+
 
             <p>FlhF specifically interacts with the polar-system FliG to initiate assembly.</p>
             <ul>
@@ -136,8 +153,10 @@
 
           <li id="pathograph-1-edge-4">
             <strong>FliG</strong>
+
             <span class="edge-predicate">binds</span>
             <strong>FliF (MS-ring)</strong>
+
 
             <p>FlhF-bound FliG captures FliF, promoting MS-ring formation at the pole.</p>
             <ul>
@@ -153,9 +172,11 @@
 
           <li id="pathograph-1-edge-5">
             <strong>FlhF</strong>
+
             <span class="edge-predicate">localizes to</span>
             <strong>cell pole</strong>
-            <code>biolink:located_in</code>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0060187" rel="nofollow noreferrer"><code>GO:0060187</code></a>
+            <a href="https://w3id.org/biolink/vocab/located_in" rel="nofollow noreferrer"><code>biolink:located_in</code></a>
             <p>GTP-bound dimeric FlhF localizes to the cell pole to nucleate flagellar assembly.</p>
             <ul>
 
@@ -170,8 +191,10 @@
 
           <li id="pathograph-1-edge-6">
             <strong>FipA</strong>
+
             <span class="edge-predicate">directly interacts with</span>
             <strong>FlhF</strong>
+
 
             <p>FipA directly interacts with FlhF and facilitates its polar recruitment.</p>
             <ul>
@@ -187,9 +210,11 @@
 
           <li id="pathograph-1-edge-7">
             <strong>FipA</strong>
+
             <span class="edge-predicate">promotes</span>
             <strong>FlhF polar localization</strong>
-            <code>RO:0002213</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002213" rel="nofollow noreferrer"><code>RO:0002213</code></a>
             <p>Loss of FipA significantly decreases polar localization of FlhF.</p>
             <ul>
 
@@ -204,8 +229,10 @@
 
           <li id="pathograph-1-edge-8">
             <strong>FlhG</strong>
+            <a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR033875/" rel="nofollow noreferrer"><code>InterPro:IPR033875</code></a>
             <span class="edge-predicate">stimulates GTPase activity of</span>
             <strong>FlhF</strong>
+
 
             <p>ATP-bound FlhG dimer stimulates FlhF GTPase activity, controlling its polar dynamics.</p>
             <ul>
@@ -221,8 +248,10 @@
 
           <li id="pathograph-1-edge-9">
             <strong>FlhG</strong>
+            <a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR033875/" rel="nofollow noreferrer"><code>InterPro:IPR033875</code></a>
             <span class="edge-predicate">restricts</span>
             <strong>polar flagellar number</strong>
+
 
             <p>FlhG links flagella synthesis with transcription and restricts polar flagellar number.</p>
             <ul>
@@ -469,6 +498,24 @@
 
         <li>
           <span class="nn-cat">morphology</span>
+          <a href="../../traits/morphology/flagellated.html">flagellated</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">morphology</span>
+          <a href="../../traits/morphology/flagellar_arrangement.html">flagellar arrangement</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">morphology</span>
+          <a href="../../traits/morphology/polytrichous_flagellation.html">polytrichous flagellation</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">morphology</span>
           <a href="../../traits/morphology/monotrichous.html">monotrichous</a>
           <span class="sim">1.000</span>
         </li>
@@ -487,32 +534,14 @@
 
         <li>
           <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/flagellar_arrangement.html">flagellar arrangement</a>
-          <span class="sim">1.000</span>
+          <a href="../../traits/morphology/lateral_flagellation.html">lateral flagellation</a>
+          <span class="sim">0.764</span>
         </li>
 
         <li>
           <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/flagellated.html">flagellated</a>
-          <span class="sim">1.000</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/ph_range_mid2.html">pH range mid2</a>
-          <span class="sim">0.443</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/ph_range_mid1.html">pH range mid1</a>
-          <span class="sim">0.437</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/ph_range_mid3.html">pH range mid3</a>
-          <span class="sim">0.433</span>
+          <a href="../../traits/morphology/subpolar_flagellation.html">subpolar flagellation</a>
+          <span class="sim">0.743</span>
         </li>
 
       </ul>
@@ -1065,7 +1094,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking bacterial flagella at both poles to the amphitrichous arrangement.", "edges": [{"description": "Flagella at both cell poles define the amphitrichous arrangement.", "evidence": [{"notes": "Schuhmacher et al. describe bipolar (amphitrichous) flagellation governed by FlhF/FlhG.", "reference": "DOI:10.1093/femsre/fuv034"}], "id": "edge-1", "is_orphan": false, "predicate": "defines", "predicate_id": "METPO:2007500", "source": "bacterial_flagellum", "target": "amphitrichous_trait"}, {"description": "The amphitrichous pattern places flagella at both poles.", "evidence": [{"notes": "Flagellum review supports polar flagellar filaments as locomotory organelles.", "reference": "DOI:10.3390/biom9070279"}], "id": "edge-2", "is_orphan": false, "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "amphitrichous_trait", "target": "bipolar_placement"}, {"description": "FlhF specifically interacts with the polar-system FliG to initiate assembly.", "evidence": [{"notes": "FlhF exhibited a strong interaction with FliG and specifically interacts with FliG from the polar flagellar system.", "reference": "DOI:10.1038/s41467-024-50274-4"}], "id": "edge-3", "is_orphan": false, "predicate": "binds", "predicate_id": null, "source": "flhf_gtpase", "target": "flig_protein"}, {"description": "FlhF-bound FliG captures FliF, promoting MS-ring formation at the pole.", "evidence": [{"notes": "When bound to FlhF, FliG was able to interact with the cytoplasmic domain of the MS-ring forming protein FliF.", "reference": "DOI:10.1038/s41467-024-50274-4"}], "id": "edge-4", "is_orphan": false, "predicate": "binds", "predicate_id": null, "source": "flig_protein", "target": "flif_msring"}, {"description": "GTP-bound dimeric FlhF localizes to the cell pole to nucleate flagellar assembly.", "evidence": [{"notes": "GTP-bound dimeric FlhF localizes to the cell pole where it recruits the initial flagellar building blocks.", "reference": "DOI:10.7554/eLife.93004.3"}], "id": "edge-5", "is_orphan": false, "predicate": "localizes to", "predicate_id": "biolink:located_in", "source": "flhf_gtpase", "target": "cell_pole"}, {"description": "FipA directly interacts with FlhF and facilitates its polar recruitment.", "evidence": [{"notes": "In all three species, FipA directly interacts with FlhF and facilitates its recruitment to the membrane at the cell pole.", "reference": "DOI:10.7554/eLife.93004.3"}], "id": "edge-6", "is_orphan": false, "predicate": "directly interacts with", "predicate_id": null, "source": "fipa_protein", "target": "flhf_gtpase"}, {"description": "Loss of FipA significantly decreases polar localization of FlhF.", "evidence": [{"notes": "In the absence of FipA, polar localization of FlhF was significantly decreased in all three species.", "reference": "DOI:10.7554/eLife.93004.3"}], "id": "edge-7", "is_orphan": false, "predicate": "promotes", "predicate_id": "RO:0002213", "source": "fipa_protein", "target": "flhf_polar_localization"}, {"description": "ATP-bound FlhG dimer stimulates FlhF GTPase activity, controlling its polar dynamics.", "evidence": [{"notes": "The ATP-bound FlhG dimer can interact with the GTP-bound FlhF dimer, thereby stimulating its GTPase activity.", "reference": "DOI:10.7554/eLife.93004.3"}], "id": "edge-8", "is_orphan": false, "predicate": "stimulates GTPase activity of", "predicate_id": null, "source": "flhg_atpase", "target": "flhf_gtpase"}, {"description": "FlhG links flagella synthesis with transcription and restricts polar flagellar number.", "evidence": [{"notes": "FlhG links flagella synthesis with transcription regulation and effectively restricts the number of polar flagella that are formed.", "reference": "DOI:10.7554/eLife.93004.3"}], "id": "edge-9", "is_orphan": false, "predicate": "restricts", "predicate_id": null, "source": "flhg_atpase", "target": "polar_flagellar_number"}], "evidence_rows": [{"description": "Flagella at both cell poles define the amphitrichous arrangement.", "edge_id": "edge-1", "evidence": [{"notes": "Schuhmacher et al. describe bipolar (amphitrichous) flagellation governed by FlhF/FlhG.", "reference": "DOI:10.1093/femsre/fuv034"}], "predicate": "defines", "predicate_id": "METPO:2007500", "source": "bacterial-type flagellum", "target": "amphitrichous"}, {"description": "The amphitrichous pattern places flagella at both poles.", "edge_id": "edge-2", "evidence": [{"notes": "Flagellum review supports polar flagellar filaments as locomotory organelles.", "reference": "DOI:10.3390/biom9070279"}], "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "amphitrichous", "target": "bipolar placement"}, {"description": "FlhF specifically interacts with the polar-system FliG to initiate assembly.", "edge_id": "edge-3", "evidence": [{"notes": "FlhF exhibited a strong interaction with FliG and specifically interacts with FliG from the polar flagellar system.", "reference": "DOI:10.1038/s41467-024-50274-4"}], "predicate": "binds", "predicate_id": null, "source": "FlhF", "target": "FliG"}, {"description": "FlhF-bound FliG captures FliF, promoting MS-ring formation at the pole.", "edge_id": "edge-4", "evidence": [{"notes": "When bound to FlhF, FliG was able to interact with the cytoplasmic domain of the MS-ring forming protein FliF.", "reference": "DOI:10.1038/s41467-024-50274-4"}], "predicate": "binds", "predicate_id": null, "source": "FliG", "target": "FliF (MS-ring)"}, {"description": "GTP-bound dimeric FlhF localizes to the cell pole to nucleate flagellar assembly.", "edge_id": "edge-5", "evidence": [{"notes": "GTP-bound dimeric FlhF localizes to the cell pole where it recruits the initial flagellar building blocks.", "reference": "DOI:10.7554/eLife.93004.3"}], "predicate": "localizes to", "predicate_id": "biolink:located_in", "source": "FlhF", "target": "cell pole"}, {"description": "FipA directly interacts with FlhF and facilitates its polar recruitment.", "edge_id": "edge-6", "evidence": [{"notes": "In all three species, FipA directly interacts with FlhF and facilitates its recruitment to the membrane at the cell pole.", "reference": "DOI:10.7554/eLife.93004.3"}], "predicate": "directly interacts with", "predicate_id": null, "source": "FipA", "target": "FlhF"}, {"description": "Loss of FipA significantly decreases polar localization of FlhF.", "edge_id": "edge-7", "evidence": [{"notes": "In the absence of FipA, polar localization of FlhF was significantly decreased in all three species.", "reference": "DOI:10.7554/eLife.93004.3"}], "predicate": "promotes", "predicate_id": "RO:0002213", "source": "FipA", "target": "FlhF polar localization"}, {"description": "ATP-bound FlhG dimer stimulates FlhF GTPase activity, controlling its polar dynamics.", "edge_id": "edge-8", "evidence": [{"notes": "The ATP-bound FlhG dimer can interact with the GTP-bound FlhF dimer, thereby stimulating its GTPase activity.", "reference": "DOI:10.7554/eLife.93004.3"}], "predicate": "stimulates GTPase activity of", "predicate_id": null, "source": "FlhG", "target": "FlhF"}, {"description": "FlhG links flagella synthesis with transcription and restricts polar flagellar number.", "edge_id": "edge-9", "evidence": [{"notes": "FlhG links flagella synthesis with transcription regulation and effectively restricts the number of polar flagella that are formed.", "reference": "DOI:10.7554/eLife.93004.3"}], "predicate": "restricts", "predicate_id": null, "source": "FlhG", "target": "polar flagellar number"}], "graph_id": "amphitrichous_bipolar_flagella", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Flagella (single filaments or tufts) at both cell poles.", "grounding": "traitmech:000059", "id": "amphitrichous_trait", "is_orphan": false, "label": "amphitrichous", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ede9fe", "description": "Helical proteinaceous locomotory organelle.", "grounding": "GO:0009288", "id": "bacterial_flagellum", "is_orphan": false, "label": "bacterial-type flagellum", "node_type": "CELLULAR_LOCALIZATION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Flagella positioned at both poles of the cell.", "grounding": null, "id": "bipolar_placement", "is_orphan": false, "label": "bipolar placement", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ede9fe", "description": "Polar membrane region where flagellar assembly is nucleated.", "grounding": "GO:0060187", "id": "cell_pole", "is_orphan": false, "label": "cell pole", "node_type": "CELLULAR_LOCALIZATION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Membrane protein that facilitates polar recruitment of FlhF.", "grounding": null, "id": "fipa_protein", "is_orphan": false, "label": "FipA", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 144, "evidence": [{"notes": "Supports FipA in amphitrichous; UniProtKB:O52908 (flhF, Flagellar biosynthesis protein FlhF) in Campylobacter jejuni subsp. jejuni serotype O:2 (strain ATCC 700819 / NCTC 11168) provides a verified protein exemplar.", "reference": "DOI:10.1093/femsre/fuv034", "snippet": "five to six flagellar filaments distributed over the cell body"}], "gene_symbol": "flhF", "protein_label": "Flagellar biosynthesis protein FlhF", "proteome_id": "UP000000799", "retrieved_on": "2026-10-17", "role": "Exemplar protein (flhF, Flagellar biosynthesis protein FlhF) representing FipA in Campylobacter jejuni subsp. jejuni serotype O:2 (strain ATCC 700819 / NCTC 11168) for amphitrichous.", "sequence_version": 2, "taxon_id": "NCBITaxon:192222", "taxon_label": "Campylobacter jejuni subsp. jejuni serotype O:2 (strain ATCC 700819 / NCTC 11168)", "uniprot_id": "UniProtKB:O52908"}], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "SRP-type GTPase that positions and recruits flagellar building blocks to the cell pole.", "grounding": null, "id": "flhf_gtpase", "is_orphan": false, "label": "FlhF", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 144, "evidence": [{"notes": "Supports FlhF in amphitrichous; UniProtKB:O52908 (flhF, Flagellar biosynthesis protein FlhF) in Campylobacter jejuni subsp. jejuni serotype O:2 (strain ATCC 700819 / NCTC 11168) provides a verified protein exemplar.", "reference": "DOI:10.1093/femsre/fuv034", "snippet": "five to six flagellar filaments distributed over the cell body"}], "gene_symbol": "flhF", "protein_label": "Flagellar biosynthesis protein FlhF", "proteome_id": "UP000000799", "retrieved_on": "2026-10-17", "role": "Exemplar protein (flhF, Flagellar biosynthesis protein FlhF) representing FlhF in Campylobacter jejuni subsp. jejuni serotype O:2 (strain ATCC 700819 / NCTC 11168) for amphitrichous.", "sequence_version": 2, "taxon_id": "NCBITaxon:192222", "taxon_label": "Campylobacter jejuni subsp. jejuni serotype O:2 (strain ATCC 700819 / NCTC 11168)", "uniprot_id": "UniProtKB:O52908"}], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Recruitment and confinement of FlhF to the cell pole.", "grounding": null, "id": "flhf_polar_localization", "is_orphan": false, "label": "FlhF polar localization", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "MinD/ParA-family ATPase that regulates FlhF activity and polar flagellar number.", "grounding": "InterPro:IPR033875", "id": "flhg_atpase", "is_orphan": false, "label": "FlhG", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 81, "evidence": [{"notes": "Supports FlhG in amphitrichous; UniProtKB:G3XD64 (fleN, Antiactivator FleN) in Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1) provides a verified protein exemplar.", "reference": "DOI:10.1093/femsre/fuv034", "snippet": "Bacteria differ in number and location of their flagella that appear in regular patterns at the cell surface (flagellation pattern)."}], "gene_symbol": "fleN", "protein_label": "Antiactivator FleN", "proteome_id": "UP000002438", "retrieved_on": "2026-10-17", "role": "Exemplar protein (fleN, Antiactivator FleN) representing FlhG in Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1) for amphitrichous.", "sequence_version": 1, "taxon_id": "NCBITaxon:208964", "taxon_label": "Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)", "uniprot_id": "UniProtKB:G3XD64"}], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Transmembrane MS-ring forming protein, an early flagellar assembly intermediate.", "grounding": null, "id": "flif_msring", "is_orphan": false, "label": "FliF (MS-ring)", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 109, "evidence": [{"notes": "Supports FliF (MS-ring) in amphitrichous; UniProtKB:Q8FUS3 (fliF, Flagellar M-ring protein FliF) in Brucella suis biovar 1 (strain 1330) provides a verified protein exemplar.", "reference": "DOI:10.1093/femsre/fuv034", "snippet": "five to six flagellar filaments distributed over the cell body"}], "gene_symbol": "fliF", "protein_label": "Flagellar M-ring protein FliF", "proteome_id": "UP000007104", "retrieved_on": "2026-10-17", "role": "Exemplar protein (fliF, Flagellar M-ring protein FliF) representing FliF (MS-ring) in Brucella suis biovar 1 (strain 1330) for amphitrichous.", "sequence_version": 1, "taxon_id": "NCBITaxon:204722", "taxon_label": "Brucella suis biovar 1 (strain 1330)", "uniprot_id": "UniProtKB:Q8FUS3"}], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Flagellar C-ring switch protein engaged early by FlhF during assembly.", "grounding": null, "id": "flig_protein", "is_orphan": false, "label": "FliG", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 133, "evidence": [{"notes": "Supports FliG in amphitrichous; UniProtKB:P0ABZ1 (fliG, Flagellar motor switch protein FliG) in Escherichia coli (strain K12) provides a verified protein exemplar.", "reference": "DOI:10.1093/femsre/fuv034", "snippet": "five to six flagellar filaments distributed over the cell body"}], "gene_symbol": "fliG", "protein_label": "Flagellar motor switch protein FliG", "proteome_id": "UP000000625", "retrieved_on": "2026-10-17", "role": "Exemplar protein (fliG, Flagellar motor switch protein FliG) representing FliG in Escherichia coli (strain K12) for amphitrichous.", "sequence_version": 1, "taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli (strain K12)", "uniprot_id": "UniProtKB:P0ABZ1"}], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Number of flagella formed at the cell pole.", "grounding": null, "id": "polar_flagellar_number", "is_orphan": false, "label": "polar flagellar number", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 144, "evidence": [{"notes": "Supports FlhF in amphitrichous; UniProtKB:O52908 (flhF, Flagellar biosynthesis protein FlhF) in Campylobacter jejuni subsp. jejuni serotype O:2 (strain ATCC 700819 / NCTC 11168) provides a verified protein exemplar.", "reference": "DOI:10.1093/femsre/fuv034", "snippet": "five to six flagellar filaments distributed over the cell body"}], "gene_symbol": "flhF", "node_id": "flhf_gtpase", "node_label": "FlhF", "protein_label": "Flagellar biosynthesis protein FlhF", "proteome_id": "UP000000799", "retrieved_on": "2026-10-17", "role": "Exemplar protein (flhF, Flagellar biosynthesis protein FlhF) representing FlhF in Campylobacter jejuni subsp. jejuni serotype O:2 (strain ATCC 700819 / NCTC 11168) for amphitrichous.", "sequence_version": 2, "taxon_id": "NCBITaxon:192222", "taxon_label": "Campylobacter jejuni subsp. jejuni serotype O:2 (strain ATCC 700819 / NCTC 11168)", "uniprot_id": "UniProtKB:O52908"}, {"entry_status": "REVIEWED", "entry_version": 81, "evidence": [{"notes": "Supports FlhG in amphitrichous; UniProtKB:G3XD64 (fleN, Antiactivator FleN) in Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1) provides a verified protein exemplar.", "reference": "DOI:10.1093/femsre/fuv034", "snippet": "Bacteria differ in number and location of their flagella that appear in regular patterns at the cell surface (flagellation pattern)."}], "gene_symbol": "fleN", "node_id": "flhg_atpase", "node_label": "FlhG", "protein_label": "Antiactivator FleN", "proteome_id": "UP000002438", "retrieved_on": "2026-10-17", "role": "Exemplar protein (fleN, Antiactivator FleN) representing FlhG in Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1) for amphitrichous.", "sequence_version": 1, "taxon_id": "NCBITaxon:208964", "taxon_label": "Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)", "uniprot_id": "UniProtKB:G3XD64"}, {"entry_status": "REVIEWED", "entry_version": 133, "evidence": [{"notes": "Supports FliG in amphitrichous; UniProtKB:P0ABZ1 (fliG, Flagellar motor switch protein FliG) in Escherichia coli (strain K12) provides a verified protein exemplar.", "reference": "DOI:10.1093/femsre/fuv034", "snippet": "five to six flagellar filaments distributed over the cell body"}], "gene_symbol": "fliG", "node_id": "flig_protein", "node_label": "FliG", "protein_label": "Flagellar motor switch protein FliG", "proteome_id": "UP000000625", "retrieved_on": "2026-10-17", "role": "Exemplar protein (fliG, Flagellar motor switch protein FliG) representing FliG in Escherichia coli (strain K12) for amphitrichous.", "sequence_version": 1, "taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli (strain K12)", "uniprot_id": "UniProtKB:P0ABZ1"}, {"entry_status": "REVIEWED", "entry_version": 109, "evidence": [{"notes": "Supports FliF (MS-ring) in amphitrichous; UniProtKB:Q8FUS3 (fliF, Flagellar M-ring protein FliF) in Brucella suis biovar 1 (strain 1330) provides a verified protein exemplar.", "reference": "DOI:10.1093/femsre/fuv034", "snippet": "five to six flagellar filaments distributed over the cell body"}], "gene_symbol": "fliF", "node_id": "flif_msring", "node_label": "FliF (MS-ring)", "protein_label": "Flagellar M-ring protein FliF", "proteome_id": "UP000007104", "retrieved_on": "2026-10-17", "role": "Exemplar protein (fliF, Flagellar M-ring protein FliF) representing FliF (MS-ring) in Brucella suis biovar 1 (strain 1330) for amphitrichous.", "sequence_version": 1, "taxon_id": "NCBITaxon:204722", "taxon_label": "Brucella suis biovar 1 (strain 1330)", "uniprot_id": "UniProtKB:Q8FUS3"}, {"entry_status": "REVIEWED", "entry_version": 144, "evidence": [{"notes": "Supports FipA in amphitrichous; UniProtKB:O52908 (flhF, Flagellar biosynthesis protein FlhF) in Campylobacter jejuni subsp. jejuni serotype O:2 (strain ATCC 700819 / NCTC 11168) provides a verified protein exemplar.", "reference": "DOI:10.1093/femsre/fuv034", "snippet": "five to six flagellar filaments distributed over the cell body"}], "gene_symbol": "flhF", "node_id": "fipa_protein", "node_label": "FipA", "protein_label": "Flagellar biosynthesis protein FlhF", "proteome_id": "UP000000799", "retrieved_on": "2026-10-17", "role": "Exemplar protein (flhF, Flagellar biosynthesis protein FlhF) representing FipA in Campylobacter jejuni subsp. jejuni serotype O:2 (strain ATCC 700819 / NCTC 11168) for amphitrichous.", "sequence_version": 2, "taxon_id": "NCBITaxon:192222", "taxon_label": "Campylobacter jejuni subsp. jejuni serotype O:2 (strain ATCC 700819 / NCTC 11168)", "uniprot_id": "UniProtKB:O52908"}], "scope_notes": "This record is a broad environmental or morphological classification spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement descriptor; contextual protein nodes include source-backed UniProtKB exemplars.", "scope_status": "NONMECHANISTIC", "title": "Amphitrichous flagellation \u2014 bipolar flagella"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking bacterial flagella at both poles to the amphitrichous arrangement.", "edges": [{"description": "Flagella at both cell poles define the amphitrichous arrangement.", "evidence": [{"notes": "Schuhmacher et al. describe bipolar (amphitrichous) flagellation governed by FlhF/FlhG.", "reference": "DOI:10.1093/femsre/fuv034"}], "id": "edge-1", "is_orphan": false, "predicate": "defines", "predicate_id": "METPO:2007500", "source": "bacterial_flagellum", "target": "amphitrichous_trait"}, {"description": "The amphitrichous pattern places flagella at both poles.", "evidence": [{"notes": "Flagellum review supports polar flagellar filaments as locomotory organelles.", "reference": "DOI:10.3390/biom9070279"}], "id": "edge-2", "is_orphan": false, "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "amphitrichous_trait", "target": "bipolar_placement"}, {"description": "FlhF specifically interacts with the polar-system FliG to initiate assembly.", "evidence": [{"notes": "FlhF exhibited a strong interaction with FliG and specifically interacts with FliG from the polar flagellar system.", "reference": "DOI:10.1038/s41467-024-50274-4"}], "id": "edge-3", "is_orphan": false, "predicate": "binds", "predicate_id": null, "source": "flhf_gtpase", "target": "flig_protein"}, {"description": "FlhF-bound FliG captures FliF, promoting MS-ring formation at the pole.", "evidence": [{"notes": "When bound to FlhF, FliG was able to interact with the cytoplasmic domain of the MS-ring forming protein FliF.", "reference": "DOI:10.1038/s41467-024-50274-4"}], "id": "edge-4", "is_orphan": false, "predicate": "binds", "predicate_id": null, "source": "flig_protein", "target": "flif_msring"}, {"description": "GTP-bound dimeric FlhF localizes to the cell pole to nucleate flagellar assembly.", "evidence": [{"notes": "GTP-bound dimeric FlhF localizes to the cell pole where it recruits the initial flagellar building blocks.", "reference": "DOI:10.7554/eLife.93004.3"}], "id": "edge-5", "is_orphan": false, "predicate": "localizes to", "predicate_id": "biolink:located_in", "source": "flhf_gtpase", "target": "cell_pole"}, {"description": "FipA directly interacts with FlhF and facilitates its polar recruitment.", "evidence": [{"notes": "In all three species, FipA directly interacts with FlhF and facilitates its recruitment to the membrane at the cell pole.", "reference": "DOI:10.7554/eLife.93004.3"}], "id": "edge-6", "is_orphan": false, "predicate": "directly interacts with", "predicate_id": null, "source": "fipa_protein", "target": "flhf_gtpase"}, {"description": "Loss of FipA significantly decreases polar localization of FlhF.", "evidence": [{"notes": "In the absence of FipA, polar localization of FlhF was significantly decreased in all three species.", "reference": "DOI:10.7554/eLife.93004.3"}], "id": "edge-7", "is_orphan": false, "predicate": "promotes", "predicate_id": "RO:0002213", "source": "fipa_protein", "target": "flhf_polar_localization"}, {"description": "ATP-bound FlhG dimer stimulates FlhF GTPase activity, controlling its polar dynamics.", "evidence": [{"notes": "The ATP-bound FlhG dimer can interact with the GTP-bound FlhF dimer, thereby stimulating its GTPase activity.", "reference": "DOI:10.7554/eLife.93004.3"}], "id": "edge-8", "is_orphan": false, "predicate": "stimulates GTPase activity of", "predicate_id": null, "source": "flhg_atpase", "target": "flhf_gtpase"}, {"description": "FlhG links flagella synthesis with transcription and restricts polar flagellar number.", "evidence": [{"notes": "FlhG links flagella synthesis with transcription regulation and effectively restricts the number of polar flagella that are formed.", "reference": "DOI:10.7554/eLife.93004.3"}], "id": "edge-9", "is_orphan": false, "predicate": "restricts", "predicate_id": null, "source": "flhg_atpase", "target": "polar_flagellar_number"}], "evidence_rows": [{"description": "Flagella at both cell poles define the amphitrichous arrangement.", "edge_id": "edge-1", "evidence": [{"notes": "Schuhmacher et al. describe bipolar (amphitrichous) flagellation governed by FlhF/FlhG.", "reference": "DOI:10.1093/femsre/fuv034"}], "predicate": "defines", "predicate_id": "METPO:2007500", "source": "bacterial-type flagellum", "source_grounding": "GO:0009288", "target": "amphitrichous", "target_grounding": "traitmech:000059"}, {"description": "The amphitrichous pattern places flagella at both poles.", "edge_id": "edge-2", "evidence": [{"notes": "Flagellum review supports polar flagellar filaments as locomotory organelles.", "reference": "DOI:10.3390/biom9070279"}], "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "amphitrichous", "source_grounding": "traitmech:000059", "target": "bipolar placement", "target_grounding": null}, {"description": "FlhF specifically interacts with the polar-system FliG to initiate assembly.", "edge_id": "edge-3", "evidence": [{"notes": "FlhF exhibited a strong interaction with FliG and specifically interacts with FliG from the polar flagellar system.", "reference": "DOI:10.1038/s41467-024-50274-4"}], "predicate": "binds", "predicate_id": null, "source": "FlhF", "source_grounding": null, "target": "FliG", "target_grounding": null}, {"description": "FlhF-bound FliG captures FliF, promoting MS-ring formation at the pole.", "edge_id": "edge-4", "evidence": [{"notes": "When bound to FlhF, FliG was able to interact with the cytoplasmic domain of the MS-ring forming protein FliF.", "reference": "DOI:10.1038/s41467-024-50274-4"}], "predicate": "binds", "predicate_id": null, "source": "FliG", "source_grounding": null, "target": "FliF (MS-ring)", "target_grounding": null}, {"description": "GTP-bound dimeric FlhF localizes to the cell pole to nucleate flagellar assembly.", "edge_id": "edge-5", "evidence": [{"notes": "GTP-bound dimeric FlhF localizes to the cell pole where it recruits the initial flagellar building blocks.", "reference": "DOI:10.7554/eLife.93004.3"}], "predicate": "localizes to", "predicate_id": "biolink:located_in", "source": "FlhF", "source_grounding": null, "target": "cell pole", "target_grounding": "GO:0060187"}, {"description": "FipA directly interacts with FlhF and facilitates its polar recruitment.", "edge_id": "edge-6", "evidence": [{"notes": "In all three species, FipA directly interacts with FlhF and facilitates its recruitment to the membrane at the cell pole.", "reference": "DOI:10.7554/eLife.93004.3"}], "predicate": "directly interacts with", "predicate_id": null, "source": "FipA", "source_grounding": null, "target": "FlhF", "target_grounding": null}, {"description": "Loss of FipA significantly decreases polar localization of FlhF.", "edge_id": "edge-7", "evidence": [{"notes": "In the absence of FipA, polar localization of FlhF was significantly decreased in all three species.", "reference": "DOI:10.7554/eLife.93004.3"}], "predicate": "promotes", "predicate_id": "RO:0002213", "source": "FipA", "source_grounding": null, "target": "FlhF polar localization", "target_grounding": null}, {"description": "ATP-bound FlhG dimer stimulates FlhF GTPase activity, controlling its polar dynamics.", "edge_id": "edge-8", "evidence": [{"notes": "The ATP-bound FlhG dimer can interact with the GTP-bound FlhF dimer, thereby stimulating its GTPase activity.", "reference": "DOI:10.7554/eLife.93004.3"}], "predicate": "stimulates GTPase activity of", "predicate_id": null, "source": "FlhG", "source_grounding": "InterPro:IPR033875", "target": "FlhF", "target_grounding": null}, {"description": "FlhG links flagella synthesis with transcription and restricts polar flagellar number.", "edge_id": "edge-9", "evidence": [{"notes": "FlhG links flagella synthesis with transcription regulation and effectively restricts the number of polar flagella that are formed.", "reference": "DOI:10.7554/eLife.93004.3"}], "predicate": "restricts", "predicate_id": null, "source": "FlhG", "source_grounding": "InterPro:IPR033875", "target": "polar flagellar number", "target_grounding": null}], "graph_id": "amphitrichous_bipolar_flagella", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Flagella (single filaments or tufts) at both cell poles.", "grounding": "traitmech:000059", "id": "amphitrichous_trait", "is_orphan": false, "label": "amphitrichous", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ede9fe", "description": "Helical proteinaceous locomotory organelle.", "grounding": "GO:0009288", "id": "bacterial_flagellum", "is_orphan": false, "label": "bacterial-type flagellum", "node_type": "CELLULAR_LOCALIZATION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Flagella positioned at both poles of the cell.", "grounding": null, "id": "bipolar_placement", "is_orphan": false, "label": "bipolar placement", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ede9fe", "description": "Polar membrane region where flagellar assembly is nucleated.", "grounding": "GO:0060187", "id": "cell_pole", "is_orphan": false, "label": "cell pole", "node_type": "CELLULAR_LOCALIZATION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Membrane protein that facilitates polar recruitment of FlhF.", "grounding": null, "id": "fipa_protein", "is_orphan": false, "label": "FipA", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "SRP-type GTPase that positions and recruits flagellar building blocks to the cell pole.", "grounding": null, "id": "flhf_gtpase", "is_orphan": false, "label": "FlhF", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Recruitment and confinement of FlhF to the cell pole.", "grounding": null, "id": "flhf_polar_localization", "is_orphan": false, "label": "FlhF polar localization", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "MinD/ParA-family ATPase that regulates FlhF activity and polar flagellar number.", "grounding": "InterPro:IPR033875", "id": "flhg_atpase", "is_orphan": false, "label": "FlhG", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Transmembrane MS-ring forming protein, an early flagellar assembly intermediate.", "grounding": null, "id": "flif_msring", "is_orphan": false, "label": "FliF (MS-ring)", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Flagellar C-ring switch protein engaged early by FlhF during assembly.", "grounding": null, "id": "flig_protein", "is_orphan": false, "label": "FliG", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Number of flagella formed at the cell pole.", "grounding": null, "id": "polar_flagellar_number", "is_orphan": false, "label": "polar flagellar number", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This record is a broad environmental or morphological classification spanning multiple mechanisms, a measurement-like bin, or an absence/arrangement descriptor; contextual protein nodes do not receive token UniProt examples.", "scope_status": "NONMECHANISTIC", "title": "Amphitrichous flagellation \u2014 bipolar flagella"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -1085,13 +1114,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-10-17 09:00 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

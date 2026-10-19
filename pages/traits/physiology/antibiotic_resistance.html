@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/physiology.html">PHYSIOLOGY</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/physiology.html">PHYSIOLOGY</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>antibiotic resistance</h1>
     <p class="curie"><code>traitmech:000088</code> · CLASS · REVIEWED</p>
 
@@ -85,9 +96,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>drug efflux pump</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>antibiotic resistance</strong>
-            <code>METPO:2007700</code>
+            <code>traitmech:000088</code>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>Drug efflux is one determinant enabling resistance.</p>
             <ul>
 
@@ -102,9 +115,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>antibiotic resistance</strong>
+            <code>traitmech:000088</code>
             <span class="edge-predicate">participates in</span>
             <strong>response to antibiotic</strong>
-            <code>biolink:participates_in</code>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0046677" rel="nofollow noreferrer"><code>GO:0046677</code></a>
+            <a href="https://w3id.org/biolink/vocab/participates_in" rel="nofollow noreferrer"><code>biolink:participates_in</code></a>
             <p>Resistance is part of the cellular response to antibiotics.</p>
             <ul>
 
@@ -119,9 +134,11 @@
 
           <li id="pathograph-1-edge-3">
             <strong>drug efflux pump</strong>
+
             <span class="edge-predicate">decreases</span>
             <strong>intracellular antibiotic concentration</strong>
-            <code>RO:0002212</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002212" rel="nofollow noreferrer"><code>RO:0002212</code></a>
             <p>Efflux pump overexpression lowers intracellular antibiotic concentration, producing resistance phenotypes.</p>
             <ul>
 
@@ -136,9 +153,11 @@
 
           <li id="pathograph-1-edge-4">
             <strong>outer membrane porin</strong>
+
             <span class="edge-predicate">decreases</span>
             <strong>antibiotic influx</strong>
-            <code>RO:0002212</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002212" rel="nofollow noreferrer"><code>RO:0002212</code></a>
             <p>Porin loss/modification reduces antibiotic influx, a major resistance mechanism.</p>
             <ul>
 
@@ -153,9 +172,11 @@
 
           <li id="pathograph-1-edge-5">
             <strong>beta-lactamase</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0008800" rel="nofollow noreferrer"><code>GO:0008800</code></a>
             <span class="edge-predicate">hydrolyzes</span>
             <strong>beta-lactam antibiotic</strong>
-            <code>METPO:2007808</code>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:27933" rel="nofollow noreferrer"><code>CHEBI:27933</code></a>
+            <a href="https://w3id.org/metpo/2007808" rel="nofollow noreferrer"><code>METPO:2007808</code></a>
             <p>Beta-lactamases hydrolyze the beta-lactam ring, inactivating the drug.</p>
             <ul>
 
@@ -170,8 +191,10 @@
 
           <li id="pathograph-1-edge-6">
             <strong>QRDR mutation in DNA gyrase/topoisomerase IV</strong>
+
             <span class="edge-predicate">confers resistance to</span>
             <strong>fluoroquinolone</strong>
+
 
             <p>QRDR mutations in DNA gyrase/topoisomerase IV confer fluoroquinolone resistance (class-level edge).</p>
             <ul>
@@ -187,8 +210,10 @@
 
           <li id="pathograph-1-edge-7">
             <strong>23S rRNA methylation</strong>
+
             <span class="edge-predicate">decreases binding of</span>
             <strong>macrolide antibiotic</strong>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:25105" rel="nofollow noreferrer"><code>CHEBI:25105</code></a>
 
             <p>23S rRNA methylation modifies the ribosomal target, decreasing macrolide binding and conferring resistance.</p>
             <ul>
@@ -204,9 +229,11 @@
 
           <li id="pathograph-1-edge-8">
             <strong>antibiotic influx</strong>
+
             <span class="edge-predicate">increases</span>
             <strong>intracellular antibiotic concentration</strong>
-            <code>RO:0002213</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002213" rel="nofollow noreferrer"><code>RO:0002213</code></a>
             <p>Porin-mediated antibiotic influx raises the intracellular drug concentration available to reach bacterial targets.</p>
             <ul>
 
@@ -221,9 +248,11 @@
 
           <li id="pathograph-1-edge-9">
             <strong>beta-lactamase</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0008800" rel="nofollow noreferrer"><code>GO:0008800</code></a>
             <span class="edge-predicate">confers</span>
             <strong>antibiotic resistance</strong>
-            <code>METPO:2007700</code>
+            <code>traitmech:000088</code>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>Beta-lactamase-mediated drug hydrolysis confers resistance to beta-lactam antibiotics.</p>
             <ul>
 
@@ -238,9 +267,11 @@
 
           <li id="pathograph-1-edge-10">
             <strong>QRDR mutation in DNA gyrase/topoisomerase IV</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>antibiotic resistance</strong>
-            <code>METPO:2007700</code>
+            <code>traitmech:000088</code>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>Resistance-associated QRDR mutations alter fluoroquinolone targets and confer the antibiotic-resistance phenotype.</p>
             <ul>
 
@@ -255,9 +286,11 @@
 
           <li id="pathograph-1-edge-11">
             <strong>23S rRNA methylation</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>antibiotic resistance</strong>
-            <code>METPO:2007700</code>
+            <code>traitmech:000088</code>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>Methylation of the 23S rRNA drug-binding region confers macrolide resistance.</p>
             <ul>
 
@@ -481,50 +514,50 @@
       <ul class="nn-list">
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/cadmium_tolerant.html">cadmium tolerant</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/cytogamy.html">cytogamy</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/sulfur_globule.html">sulfur globule</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/coccolith_production.html">coccolith production</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/cobalt_tolerant.html">cobalt tolerant</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/coagulase_activity.html">coagulase activity</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/copper_tolerant.html">copper tolerant</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/chemotropism.html">chemotropism</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/desiccation_tolerant.html">desiccation tolerant</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/chemotaxis.html">chemotaxis</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/piezotolerant.html">piezotolerant</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/cellular_rejuvenation.html">functional cellular rejuvenation</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/obligately_piezophilic.html">obligately piezophilic</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/cellular_contraction.html">cell body or cytoplasmic projection contraction</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/gas_vesicle.html">gas vesicle</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/cold_shock_response.html">cold shock response</a>
           <span class="sim">1.000</span>
         </li>
 
@@ -1117,7 +1150,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking resistance determinants (efflux, target modification, drug inactivation) to growth under antibiotic exposure.", "edges": [{"description": "Drug efflux is one determinant enabling resistance.", "evidence": [{"notes": "Blair et al. review efflux among resistance mechanisms.", "reference": "DOI:10.1038/nrmicro3380"}], "id": "edge-1", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "efflux_pump", "target": "antibiotic_resistance_trait"}, {"description": "Resistance is part of the cellular response to antibiotics.", "evidence": [{"notes": "Updated review of antibiotic-resistance mechanisms.", "reference": "DOI:10.1038/s41579-022-00820-y"}], "id": "edge-2", "is_orphan": false, "predicate": "participates in", "predicate_id": "biolink:participates_in", "source": "antibiotic_resistance_trait", "target": "antibiotic_response_process"}, {"description": "Efflux pump overexpression lowers intracellular antibiotic concentration, producing resistance phenotypes.", "evidence": [{"notes": "Efflux pumps reduce intracellular antibiotic concentrations; upregulation under antibiotic exposure produces resistance phenotypes (broad across Gram-positive/negative).", "reference": "DOI:10.3390/pharmaceutics16020170"}], "id": "edge-3", "is_orphan": false, "predicate": "decreases", "predicate_id": "RO:0002212", "source": "efflux_pump", "target": "intracellular_antibiotic_concentration"}, {"description": "Porin loss/modification reduces antibiotic influx, a major resistance mechanism.", "evidence": [{"notes": "Reduced permeability/porin loss and modification of outer membrane porin channels listed as major resistance mechanisms.", "reference": "DOI:10.3390/pharmaceutics16020170"}], "id": "edge-4", "is_orphan": false, "predicate": "decreases", "predicate_id": "RO:0002212", "source": "outer_membrane_porin", "target": "antibiotic_influx"}, {"description": "Beta-lactamases hydrolyze the beta-lactam ring, inactivating the drug.", "evidence": [{"notes": "Drug hydrolysis by beta-lactamases; beta-lactamases hydrolyze the beta-lactam ring. Strong canonical mechanism.", "reference": "DOI:10.1038/s43856-024-00591-y"}], "id": "edge-5", "is_orphan": false, "predicate": "hydrolyzes", "predicate_id": "METPO:2007808", "source": "beta_lactamase", "target": "beta_lactam_antibiotic"}, {"description": "QRDR mutations in DNA gyrase/topoisomerase IV confer fluoroquinolone resistance (class-level edge).", "evidence": [{"notes": "QRDR mutations in DNA gyrase and topoisomerase IV cause quinolone/fluoroquinolone resistance.", "reference": "DOI:10.3389/fphar.2024.1444781"}], "id": "edge-6", "is_orphan": false, "predicate": "confers resistance to", "predicate_id": null, "source": "qrdr_mutation", "target": "fluoroquinolone"}, {"description": "23S rRNA methylation modifies the ribosomal target, decreasing macrolide binding and conferring resistance.", "evidence": [{"notes": "Methylation of 23S rRNA confers linezolid, chloramphenicol, clindamycin, and macrolide resistance.", "reference": "DOI:10.3389/fphar.2024.1444781"}], "id": "edge-7", "is_orphan": false, "predicate": "decreases binding of", "predicate_id": null, "source": "rrna_methylation_23s", "target": "macrolide_antibiotic"}, {"description": "Porin-mediated antibiotic influx raises the intracellular drug concentration available to reach bacterial targets.", "evidence": [{"notes": "Verified against the open PLOS ONE primary article.", "reference": "DOI:10.1371/journal.pone.0005453", "snippet": "efficient influx through porins for \u03b2-lactams to reach their target sites"}], "id": "edge-8", "is_orphan": false, "predicate": "increases", "predicate_id": "RO:0002213", "source": "antibiotic_influx", "target": "intracellular_antibiotic_concentration"}, {"description": "Beta-lactamase-mediated drug hydrolysis confers resistance to beta-lactam antibiotics.", "evidence": [{"notes": "Verified against the public Journal of Biological Chemistry primary article.", "reference": "DOI:10.1016/j.jbc.2021.100799", "snippet": "\u03b2-lactamase, which inactivates the drug by hydrolysis"}], "id": "edge-9", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "beta_lactamase", "target": "antibiotic_resistance_trait"}, {"description": "Resistance-associated QRDR mutations alter fluoroquinolone targets and confer the antibiotic-resistance phenotype.", "evidence": [{"notes": "Verified against the open primary evolution experiment.", "reference": "DOI:10.1186/s13756-020-00793-8", "snippet": "gyrA as the main mutated gene associated with conferring fluoroquinolone resistance"}], "id": "edge-10", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "qrdr_mutation", "target": "antibiotic_resistance_trait"}, {"description": "Methylation of the 23S rRNA drug-binding region confers macrolide resistance.", "evidence": [{"notes": "Verified against the open mBio primary article.", "reference": "DOI:10.1128/mbio.02665-19", "snippet": "increased methylation of G748 in 23S rRNA and thereby conferring resistance to this antibiotic"}], "id": "edge-11", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "rrna_methylation_23s", "target": "antibiotic_resistance_trait"}], "evidence_rows": [{"description": "Drug efflux is one determinant enabling resistance.", "edge_id": "edge-1", "evidence": [{"notes": "Blair et al. review efflux among resistance mechanisms.", "reference": "DOI:10.1038/nrmicro3380"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "drug efflux pump", "target": "antibiotic resistance"}, {"description": "Resistance is part of the cellular response to antibiotics.", "edge_id": "edge-2", "evidence": [{"notes": "Updated review of antibiotic-resistance mechanisms.", "reference": "DOI:10.1038/s41579-022-00820-y"}], "predicate": "participates in", "predicate_id": "biolink:participates_in", "source": "antibiotic resistance", "target": "response to antibiotic"}, {"description": "Efflux pump overexpression lowers intracellular antibiotic concentration, producing resistance phenotypes.", "edge_id": "edge-3", "evidence": [{"notes": "Efflux pumps reduce intracellular antibiotic concentrations; upregulation under antibiotic exposure produces resistance phenotypes (broad across Gram-positive/negative).", "reference": "DOI:10.3390/pharmaceutics16020170"}], "predicate": "decreases", "predicate_id": "RO:0002212", "source": "drug efflux pump", "target": "intracellular antibiotic concentration"}, {"description": "Porin loss/modification reduces antibiotic influx, a major resistance mechanism.", "edge_id": "edge-4", "evidence": [{"notes": "Reduced permeability/porin loss and modification of outer membrane porin channels listed as major resistance mechanisms.", "reference": "DOI:10.3390/pharmaceutics16020170"}], "predicate": "decreases", "predicate_id": "RO:0002212", "source": "outer membrane porin", "target": "antibiotic influx"}, {"description": "Beta-lactamases hydrolyze the beta-lactam ring, inactivating the drug.", "edge_id": "edge-5", "evidence": [{"notes": "Drug hydrolysis by beta-lactamases; beta-lactamases hydrolyze the beta-lactam ring. Strong canonical mechanism.", "reference": "DOI:10.1038/s43856-024-00591-y"}], "predicate": "hydrolyzes", "predicate_id": "METPO:2007808", "source": "beta-lactamase", "target": "beta-lactam antibiotic"}, {"description": "QRDR mutations in DNA gyrase/topoisomerase IV confer fluoroquinolone resistance (class-level edge).", "edge_id": "edge-6", "evidence": [{"notes": "QRDR mutations in DNA gyrase and topoisomerase IV cause quinolone/fluoroquinolone resistance.", "reference": "DOI:10.3389/fphar.2024.1444781"}], "predicate": "confers resistance to", "predicate_id": null, "source": "QRDR mutation in DNA gyrase/topoisomerase IV", "target": "fluoroquinolone"}, {"description": "23S rRNA methylation modifies the ribosomal target, decreasing macrolide binding and conferring resistance.", "edge_id": "edge-7", "evidence": [{"notes": "Methylation of 23S rRNA confers linezolid, chloramphenicol, clindamycin, and macrolide resistance.", "reference": "DOI:10.3389/fphar.2024.1444781"}], "predicate": "decreases binding of", "predicate_id": null, "source": "23S rRNA methylation", "target": "macrolide antibiotic"}, {"description": "Porin-mediated antibiotic influx raises the intracellular drug concentration available to reach bacterial targets.", "edge_id": "edge-8", "evidence": [{"notes": "Verified against the open PLOS ONE primary article.", "reference": "DOI:10.1371/journal.pone.0005453", "snippet": "efficient influx through porins for \u03b2-lactams to reach their target sites"}], "predicate": "increases", "predicate_id": "RO:0002213", "source": "antibiotic influx", "target": "intracellular antibiotic concentration"}, {"description": "Beta-lactamase-mediated drug hydrolysis confers resistance to beta-lactam antibiotics.", "edge_id": "edge-9", "evidence": [{"notes": "Verified against the public Journal of Biological Chemistry primary article.", "reference": "DOI:10.1016/j.jbc.2021.100799", "snippet": "\u03b2-lactamase, which inactivates the drug by hydrolysis"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "beta-lactamase", "target": "antibiotic resistance"}, {"description": "Resistance-associated QRDR mutations alter fluoroquinolone targets and confer the antibiotic-resistance phenotype.", "edge_id": "edge-10", "evidence": [{"notes": "Verified against the open primary evolution experiment.", "reference": "DOI:10.1186/s13756-020-00793-8", "snippet": "gyrA as the main mutated gene associated with conferring fluoroquinolone resistance"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "QRDR mutation in DNA gyrase/topoisomerase IV", "target": "antibiotic resistance"}, {"description": "Methylation of the 23S rRNA drug-binding region confers macrolide resistance.", "edge_id": "edge-11", "evidence": [{"notes": "Verified against the open mBio primary article.", "reference": "DOI:10.1128/mbio.02665-19", "snippet": "increased methylation of G748 in 23S rRNA and thereby conferring resistance to this antibiotic"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "23S rRNA methylation", "target": "antibiotic resistance"}], "graph_id": "antibiotic_resistance_mechanisms", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Uptake of antibiotic across the cell envelope.", "grounding": null, "id": "antibiotic_influx", "is_orphan": false, "label": "antibiotic influx", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Capacity to grow despite inhibitory antibiotic concentrations.", "grounding": "traitmech:000088", "id": "antibiotic_resistance_trait", "is_orphan": false, "label": "antibiotic resistance", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Cellular response conferring survival under antibiotic exposure.", "grounding": "GO:0046677", "id": "antibiotic_response_process", "is_orphan": false, "label": "response to antibiotic", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Antibiotic class containing a beta-lactam ring.", "grounding": "CHEBI:27933", "id": "beta_lactam_antibiotic", "is_orphan": false, "label": "beta-lactam antibiotic", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Enzyme that hydrolyzes the beta-lactam ring, inactivating beta-lactam antibiotics.", "grounding": "GO:0008800", "id": "beta_lactamase", "is_orphan": false, "label": "beta-lactamase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 172, "evidence": [{"notes": "The primary biochemical sequence study identifies the single-chain PC1 beta-lactamase represented by reviewed UniProtKB P00807.", "reference": "DOI:10.1042/bj1510197", "snippet": "The amino acid sequence of the penicillinase from Staphylococcus aureus strain PC1 was determined."}], "gene_symbol": "blaZ", "protein_label": "Beta-lactamase", "retrieved_on": "2026-08-24", "role": "Experimentally sequenced PC1 penicillinase/BlaZ that hydrolyzes beta-lactam antibiotics; it exemplifies the drug-inactivation branch rather than all antibiotic resistance in S. aureus.", "sequence_version": 1, "taxon_id": "NCBITaxon:1280", "taxon_label": "Staphylococcus aureus", "uniprot_id": "UniProtKB:P00807"}], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Transporter that expels antibiotics from the cell.", "grounding": null, "id": "efflux_pump", "is_orphan": false, "label": "drug efflux pump", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 54, "evidence": [{"notes": "Supports drug efflux pump in antibiotic resistance; UniProtKB:P9WJW9 (jefA, Drug efflux pump JefA) in Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv) provides a verified protein exemplar.", "reference": "DOI:10.1128/mbio.02665-19", "snippet": "increased methylation of G748 in 23S rRNA and thereby conferring resistance to this antibiotic"}], "gene_symbol": "jefA", "protein_label": "Drug efflux pump JefA", "proteome_id": "UP000001584", "retrieved_on": "2026-10-17", "role": "Exemplar protein (jefA, Drug efflux pump JefA) representing drug efflux pump in Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv) for antibiotic resistance.", "sequence_version": 1, "taxon_id": "NCBITaxon:83332", "taxon_label": "Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)", "uniprot_id": "UniProtKB:P9WJW9"}], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Fluoroquinolone class antibiotic targeting DNA gyrase/topoisomerase IV.", "grounding": null, "id": "fluoroquinolone", "is_orphan": false, "label": "fluoroquinolone", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Concentration of antibiotic accumulated inside the cell.", "grounding": null, "id": "intracellular_antibiotic_concentration", "is_orphan": false, "label": "intracellular antibiotic concentration", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Macrolide class antibiotic binding the 23S rRNA of the large ribosomal subunit.", "grounding": "CHEBI:25105", "id": "macrolide_antibiotic", "is_orphan": false, "label": "macrolide antibiotic", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Outer-membrane channel mediating antibiotic influx; loss/modification reduces permeability.", "grounding": null, "id": "outer_membrane_porin", "is_orphan": false, "label": "outer membrane porin", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 206, "evidence": [{"notes": "Supports outer membrane porin in antibiotic resistance; UniProtKB:P06996 (ompC, Outer membrane porin C) in Escherichia coli (strain K12) provides a verified protein exemplar.", "reference": "DOI:10.1128/mbio.02665-19", "snippet": "increased methylation of G748 in 23S rRNA and thereby conferring resistance to this antibiotic"}], "gene_symbol": "ompC", "protein_label": "Outer membrane porin C", "proteome_id": "UP000000625", "retrieved_on": "2026-10-17", "role": "Exemplar protein (ompC, Outer membrane porin C) representing outer membrane porin in Escherichia coli (strain K12) for antibiotic resistance.", "sequence_version": 1, "taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli (strain K12)", "uniprot_id": "UniProtKB:P06996"}], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Quinolone resistance-determining region mutation altering the fluoroquinolone target.", "grounding": null, "id": "qrdr_mutation", "is_orphan": false, "label": "QRDR mutation in DNA gyrase/topoisomerase IV", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 172, "evidence": [{"notes": "Supports QRDR mutation in DNA gyrase/topoisomerase IV in antibiotic resistance; UniProtKB:P0AES6 (gyrB, DNA gyrase subunit B) in Escherichia coli (strain K12) provides a verified protein exemplar.", "reference": "DOI:10.1128/mbio.02665-19", "snippet": "increased methylation of G748 in 23S rRNA and thereby conferring resistance to this antibiotic"}], "gene_symbol": "gyrB", "protein_label": "DNA gyrase subunit B", "proteome_id": "UP000000625", "retrieved_on": "2026-10-17", "role": "Exemplar protein (gyrB, DNA gyrase subunit B) representing QRDR mutation in DNA gyrase/topoisomerase IV in Escherichia coli (strain K12) for antibiotic resistance.", "sequence_version": 2, "taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli (strain K12)", "uniprot_id": "UniProtKB:P0AES6"}], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Methylation of 23S rRNA that modifies the ribosomal antibiotic-binding site.", "grounding": null, "id": "rrna_methylation_23s", "is_orphan": false, "label": "23S rRNA methylation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 54, "evidence": [{"notes": "Supports drug efflux pump in antibiotic resistance; UniProtKB:P9WJW9 (jefA, Drug efflux pump JefA) in Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv) provides a verified protein exemplar.", "reference": "DOI:10.1128/mbio.02665-19", "snippet": "increased methylation of G748 in 23S rRNA and thereby conferring resistance to this antibiotic"}], "gene_symbol": "jefA", "node_id": "efflux_pump", "node_label": "drug efflux pump", "protein_label": "Drug efflux pump JefA", "proteome_id": "UP000001584", "retrieved_on": "2026-10-17", "role": "Exemplar protein (jefA, Drug efflux pump JefA) representing drug efflux pump in Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv) for antibiotic resistance.", "sequence_version": 1, "taxon_id": "NCBITaxon:83332", "taxon_label": "Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)", "uniprot_id": "UniProtKB:P9WJW9"}, {"entry_status": "REVIEWED", "entry_version": 206, "evidence": [{"notes": "Supports outer membrane porin in antibiotic resistance; UniProtKB:P06996 (ompC, Outer membrane porin C) in Escherichia coli (strain K12) provides a verified protein exemplar.", "reference": "DOI:10.1128/mbio.02665-19", "snippet": "increased methylation of G748 in 23S rRNA and thereby conferring resistance to this antibiotic"}], "gene_symbol": "ompC", "node_id": "outer_membrane_porin", "node_label": "outer membrane porin", "protein_label": "Outer membrane porin C", "proteome_id": "UP000000625", "retrieved_on": "2026-10-17", "role": "Exemplar protein (ompC, Outer membrane porin C) representing outer membrane porin in Escherichia coli (strain K12) for antibiotic resistance.", "sequence_version": 1, "taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli (strain K12)", "uniprot_id": "UniProtKB:P06996"}, {"entry_status": "REVIEWED", "entry_version": 172, "evidence": [{"notes": "The primary biochemical sequence study identifies the single-chain PC1 beta-lactamase represented by reviewed UniProtKB P00807.", "reference": "DOI:10.1042/bj1510197", "snippet": "The amino acid sequence of the penicillinase from Staphylococcus aureus strain PC1 was determined."}], "gene_symbol": "blaZ", "node_id": "beta_lactamase", "node_label": "beta-lactamase", "protein_label": "Beta-lactamase", "retrieved_on": "2026-08-24", "role": "Experimentally sequenced PC1 penicillinase/BlaZ that hydrolyzes beta-lactam antibiotics; it exemplifies the drug-inactivation branch rather than all antibiotic resistance in S. aureus.", "sequence_version": 1, "taxon_id": "NCBITaxon:1280", "taxon_label": "Staphylococcus aureus", "uniprot_id": "UniProtKB:P00807"}, {"entry_status": "REVIEWED", "entry_version": 172, "evidence": [{"notes": "Supports QRDR mutation in DNA gyrase/topoisomerase IV in antibiotic resistance; UniProtKB:P0AES6 (gyrB, DNA gyrase subunit B) in Escherichia coli (strain K12) provides a verified protein exemplar.", "reference": "DOI:10.1128/mbio.02665-19", "snippet": "increased methylation of G748 in 23S rRNA and thereby conferring resistance to this antibiotic"}], "gene_symbol": "gyrB", "node_id": "qrdr_mutation", "node_label": "QRDR mutation in DNA gyrase/topoisomerase IV", "protein_label": "DNA gyrase subunit B", "proteome_id": "UP000000625", "retrieved_on": "2026-10-17", "role": "Exemplar protein (gyrB, DNA gyrase subunit B) representing QRDR mutation in DNA gyrase/topoisomerase IV in Escherichia coli (strain K12) for antibiotic resistance.", "sequence_version": 2, "taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli (strain K12)", "uniprot_id": "UniProtKB:P0AES6"}], "scope_notes": "This is a cross-mechanism graph, not a claim that every resistant strain carries every determinant. The S. aureus PC1 BlaZ example supports the beta-lactamase branch; efflux, porin, and QRDR branches remain antibiotic- and lineage-specific.", "scope_status": "MECHANISTIC", "title": "Mechanisms of antibiotic resistance"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking resistance determinants (efflux, target modification, drug inactivation) to growth under antibiotic exposure.", "edges": [{"description": "Drug efflux is one determinant enabling resistance.", "evidence": [{"notes": "Blair et al. review efflux among resistance mechanisms.", "reference": "DOI:10.1038/nrmicro3380"}], "id": "edge-1", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "efflux_pump", "target": "antibiotic_resistance_trait"}, {"description": "Resistance is part of the cellular response to antibiotics.", "evidence": [{"notes": "Updated review of antibiotic-resistance mechanisms.", "reference": "DOI:10.1038/s41579-022-00820-y"}], "id": "edge-2", "is_orphan": false, "predicate": "participates in", "predicate_id": "biolink:participates_in", "source": "antibiotic_resistance_trait", "target": "antibiotic_response_process"}, {"description": "Efflux pump overexpression lowers intracellular antibiotic concentration, producing resistance phenotypes.", "evidence": [{"notes": "Efflux pumps reduce intracellular antibiotic concentrations; upregulation under antibiotic exposure produces resistance phenotypes (broad across Gram-positive/negative).", "reference": "DOI:10.3390/pharmaceutics16020170"}], "id": "edge-3", "is_orphan": false, "predicate": "decreases", "predicate_id": "RO:0002212", "source": "efflux_pump", "target": "intracellular_antibiotic_concentration"}, {"description": "Porin loss/modification reduces antibiotic influx, a major resistance mechanism.", "evidence": [{"notes": "Reduced permeability/porin loss and modification of outer membrane porin channels listed as major resistance mechanisms.", "reference": "DOI:10.3390/pharmaceutics16020170"}], "id": "edge-4", "is_orphan": false, "predicate": "decreases", "predicate_id": "RO:0002212", "source": "outer_membrane_porin", "target": "antibiotic_influx"}, {"description": "Beta-lactamases hydrolyze the beta-lactam ring, inactivating the drug.", "evidence": [{"notes": "Drug hydrolysis by beta-lactamases; beta-lactamases hydrolyze the beta-lactam ring. Strong canonical mechanism.", "reference": "DOI:10.1038/s43856-024-00591-y"}], "id": "edge-5", "is_orphan": false, "predicate": "hydrolyzes", "predicate_id": "METPO:2007808", "source": "beta_lactamase", "target": "beta_lactam_antibiotic"}, {"description": "QRDR mutations in DNA gyrase/topoisomerase IV confer fluoroquinolone resistance (class-level edge).", "evidence": [{"notes": "QRDR mutations in DNA gyrase and topoisomerase IV cause quinolone/fluoroquinolone resistance.", "reference": "DOI:10.3389/fphar.2024.1444781"}], "id": "edge-6", "is_orphan": false, "predicate": "confers resistance to", "predicate_id": null, "source": "qrdr_mutation", "target": "fluoroquinolone"}, {"description": "23S rRNA methylation modifies the ribosomal target, decreasing macrolide binding and conferring resistance.", "evidence": [{"notes": "Methylation of 23S rRNA confers linezolid, chloramphenicol, clindamycin, and macrolide resistance.", "reference": "DOI:10.3389/fphar.2024.1444781"}], "id": "edge-7", "is_orphan": false, "predicate": "decreases binding of", "predicate_id": null, "source": "rrna_methylation_23s", "target": "macrolide_antibiotic"}, {"description": "Porin-mediated antibiotic influx raises the intracellular drug concentration available to reach bacterial targets.", "evidence": [{"notes": "Verified against the open PLOS ONE primary article.", "reference": "DOI:10.1371/journal.pone.0005453", "snippet": "efficient influx through porins for \u03b2-lactams to reach their target sites"}], "id": "edge-8", "is_orphan": false, "predicate": "increases", "predicate_id": "RO:0002213", "source": "antibiotic_influx", "target": "intracellular_antibiotic_concentration"}, {"description": "Beta-lactamase-mediated drug hydrolysis confers resistance to beta-lactam antibiotics.", "evidence": [{"notes": "Verified against the public Journal of Biological Chemistry primary article.", "reference": "DOI:10.1016/j.jbc.2021.100799", "snippet": "\u03b2-lactamase, which inactivates the drug by hydrolysis"}], "id": "edge-9", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "beta_lactamase", "target": "antibiotic_resistance_trait"}, {"description": "Resistance-associated QRDR mutations alter fluoroquinolone targets and confer the antibiotic-resistance phenotype.", "evidence": [{"notes": "Verified against the open primary evolution experiment.", "reference": "DOI:10.1186/s13756-020-00793-8", "snippet": "gyrA as the main mutated gene associated with conferring fluoroquinolone resistance"}], "id": "edge-10", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "qrdr_mutation", "target": "antibiotic_resistance_trait"}, {"description": "Methylation of the 23S rRNA drug-binding region confers macrolide resistance.", "evidence": [{"notes": "Verified against the open mBio primary article.", "reference": "DOI:10.1128/mbio.02665-19", "snippet": "increased methylation of G748 in 23S rRNA and thereby conferring resistance to this antibiotic"}], "id": "edge-11", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "rrna_methylation_23s", "target": "antibiotic_resistance_trait"}], "evidence_rows": [{"description": "Drug efflux is one determinant enabling resistance.", "edge_id": "edge-1", "evidence": [{"notes": "Blair et al. review efflux among resistance mechanisms.", "reference": "DOI:10.1038/nrmicro3380"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "drug efflux pump", "source_grounding": null, "target": "antibiotic resistance", "target_grounding": "traitmech:000088"}, {"description": "Resistance is part of the cellular response to antibiotics.", "edge_id": "edge-2", "evidence": [{"notes": "Updated review of antibiotic-resistance mechanisms.", "reference": "DOI:10.1038/s41579-022-00820-y"}], "predicate": "participates in", "predicate_id": "biolink:participates_in", "source": "antibiotic resistance", "source_grounding": "traitmech:000088", "target": "response to antibiotic", "target_grounding": "GO:0046677"}, {"description": "Efflux pump overexpression lowers intracellular antibiotic concentration, producing resistance phenotypes.", "edge_id": "edge-3", "evidence": [{"notes": "Efflux pumps reduce intracellular antibiotic concentrations; upregulation under antibiotic exposure produces resistance phenotypes (broad across Gram-positive/negative).", "reference": "DOI:10.3390/pharmaceutics16020170"}], "predicate": "decreases", "predicate_id": "RO:0002212", "source": "drug efflux pump", "source_grounding": null, "target": "intracellular antibiotic concentration", "target_grounding": null}, {"description": "Porin loss/modification reduces antibiotic influx, a major resistance mechanism.", "edge_id": "edge-4", "evidence": [{"notes": "Reduced permeability/porin loss and modification of outer membrane porin channels listed as major resistance mechanisms.", "reference": "DOI:10.3390/pharmaceutics16020170"}], "predicate": "decreases", "predicate_id": "RO:0002212", "source": "outer membrane porin", "source_grounding": null, "target": "antibiotic influx", "target_grounding": null}, {"description": "Beta-lactamases hydrolyze the beta-lactam ring, inactivating the drug.", "edge_id": "edge-5", "evidence": [{"notes": "Drug hydrolysis by beta-lactamases; beta-lactamases hydrolyze the beta-lactam ring. Strong canonical mechanism.", "reference": "DOI:10.1038/s43856-024-00591-y"}], "predicate": "hydrolyzes", "predicate_id": "METPO:2007808", "source": "beta-lactamase", "source_grounding": "GO:0008800", "target": "beta-lactam antibiotic", "target_grounding": "CHEBI:27933"}, {"description": "QRDR mutations in DNA gyrase/topoisomerase IV confer fluoroquinolone resistance (class-level edge).", "edge_id": "edge-6", "evidence": [{"notes": "QRDR mutations in DNA gyrase and topoisomerase IV cause quinolone/fluoroquinolone resistance.", "reference": "DOI:10.3389/fphar.2024.1444781"}], "predicate": "confers resistance to", "predicate_id": null, "source": "QRDR mutation in DNA gyrase/topoisomerase IV", "source_grounding": null, "target": "fluoroquinolone", "target_grounding": null}, {"description": "23S rRNA methylation modifies the ribosomal target, decreasing macrolide binding and conferring resistance.", "edge_id": "edge-7", "evidence": [{"notes": "Methylation of 23S rRNA confers linezolid, chloramphenicol, clindamycin, and macrolide resistance.", "reference": "DOI:10.3389/fphar.2024.1444781"}], "predicate": "decreases binding of", "predicate_id": null, "source": "23S rRNA methylation", "source_grounding": null, "target": "macrolide antibiotic", "target_grounding": "CHEBI:25105"}, {"description": "Porin-mediated antibiotic influx raises the intracellular drug concentration available to reach bacterial targets.", "edge_id": "edge-8", "evidence": [{"notes": "Verified against the open PLOS ONE primary article.", "reference": "DOI:10.1371/journal.pone.0005453", "snippet": "efficient influx through porins for \u03b2-lactams to reach their target sites"}], "predicate": "increases", "predicate_id": "RO:0002213", "source": "antibiotic influx", "source_grounding": null, "target": "intracellular antibiotic concentration", "target_grounding": null}, {"description": "Beta-lactamase-mediated drug hydrolysis confers resistance to beta-lactam antibiotics.", "edge_id": "edge-9", "evidence": [{"notes": "Verified against the public Journal of Biological Chemistry primary article.", "reference": "DOI:10.1016/j.jbc.2021.100799", "snippet": "\u03b2-lactamase, which inactivates the drug by hydrolysis"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "beta-lactamase", "source_grounding": "GO:0008800", "target": "antibiotic resistance", "target_grounding": "traitmech:000088"}, {"description": "Resistance-associated QRDR mutations alter fluoroquinolone targets and confer the antibiotic-resistance phenotype.", "edge_id": "edge-10", "evidence": [{"notes": "Verified against the open primary evolution experiment.", "reference": "DOI:10.1186/s13756-020-00793-8", "snippet": "gyrA as the main mutated gene associated with conferring fluoroquinolone resistance"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "QRDR mutation in DNA gyrase/topoisomerase IV", "source_grounding": null, "target": "antibiotic resistance", "target_grounding": "traitmech:000088"}, {"description": "Methylation of the 23S rRNA drug-binding region confers macrolide resistance.", "edge_id": "edge-11", "evidence": [{"notes": "Verified against the open mBio primary article.", "reference": "DOI:10.1128/mbio.02665-19", "snippet": "increased methylation of G748 in 23S rRNA and thereby conferring resistance to this antibiotic"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "23S rRNA methylation", "source_grounding": null, "target": "antibiotic resistance", "target_grounding": "traitmech:000088"}], "graph_id": "antibiotic_resistance_mechanisms", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Uptake of antibiotic across the cell envelope.", "grounding": null, "id": "antibiotic_influx", "is_orphan": false, "label": "antibiotic influx", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Capacity to grow despite inhibitory antibiotic concentrations.", "grounding": "traitmech:000088", "id": "antibiotic_resistance_trait", "is_orphan": false, "label": "antibiotic resistance", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Cellular response conferring survival under antibiotic exposure.", "grounding": "GO:0046677", "id": "antibiotic_response_process", "is_orphan": false, "label": "response to antibiotic", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Antibiotic class containing a beta-lactam ring.", "grounding": "CHEBI:27933", "id": "beta_lactam_antibiotic", "is_orphan": false, "label": "beta-lactam antibiotic", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Enzyme that hydrolyzes the beta-lactam ring, inactivating beta-lactam antibiotics.", "grounding": "GO:0008800", "id": "beta_lactamase", "is_orphan": false, "label": "beta-lactamase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 171, "evidence": [{"notes": "The primary biochemical sequence study identifies the single-chain PC1 beta-lactamase represented by reviewed UniProtKB P00807.", "reference": "DOI:10.1042/bj1510197", "snippet": "The amino acid sequence of the penicillinase from Staphylococcus aureus strain PC1 was determined."}], "gene_symbol": "blaZ", "protein_label": "Beta-lactamase", "retrieved_on": "2026-08-24", "role": "Experimentally sequenced PC1 penicillinase/BlaZ that hydrolyzes beta-lactam antibiotics; it exemplifies the drug-inactivation branch rather than all antibiotic resistance in S. aureus.", "sequence_version": 1, "taxon_id": "NCBITaxon:1280", "taxon_label": "Staphylococcus aureus", "uniprot_id": "UniProtKB:P00807"}], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Transporter that expels antibiotics from the cell.", "grounding": null, "id": "efflux_pump", "is_orphan": false, "label": "drug efflux pump", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Fluoroquinolone class antibiotic targeting DNA gyrase/topoisomerase IV.", "grounding": null, "id": "fluoroquinolone", "is_orphan": false, "label": "fluoroquinolone", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Concentration of antibiotic accumulated inside the cell.", "grounding": null, "id": "intracellular_antibiotic_concentration", "is_orphan": false, "label": "intracellular antibiotic concentration", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Macrolide class antibiotic binding the 23S rRNA of the large ribosomal subunit.", "grounding": "CHEBI:25105", "id": "macrolide_antibiotic", "is_orphan": false, "label": "macrolide antibiotic", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Outer-membrane channel mediating antibiotic influx; loss/modification reduces permeability.", "grounding": null, "id": "outer_membrane_porin", "is_orphan": false, "label": "outer membrane porin", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Quinolone resistance-determining region mutation altering the fluoroquinolone target.", "grounding": null, "id": "qrdr_mutation", "is_orphan": false, "label": "QRDR mutation in DNA gyrase/topoisomerase IV", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Methylation of 23S rRNA that modifies the ribosomal antibiotic-binding site.", "grounding": null, "id": "rrna_methylation_23s", "is_orphan": false, "label": "23S rRNA methylation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 171, "evidence": [{"notes": "The primary biochemical sequence study identifies the single-chain PC1 beta-lactamase represented by reviewed UniProtKB P00807.", "reference": "DOI:10.1042/bj1510197", "snippet": "The amino acid sequence of the penicillinase from Staphylococcus aureus strain PC1 was determined."}], "gene_symbol": "blaZ", "node_id": "beta_lactamase", "node_label": "beta-lactamase", "protein_label": "Beta-lactamase", "retrieved_on": "2026-08-24", "role": "Experimentally sequenced PC1 penicillinase/BlaZ that hydrolyzes beta-lactam antibiotics; it exemplifies the drug-inactivation branch rather than all antibiotic resistance in S. aureus.", "sequence_version": 1, "taxon_id": "NCBITaxon:1280", "taxon_label": "Staphylococcus aureus", "uniprot_id": "UniProtKB:P00807"}], "scope_notes": "This is a cross-mechanism graph, not a claim that every resistant strain carries every determinant. The S. aureus PC1 BlaZ example supports the beta-lactamase branch; efflux, porin, and QRDR branches remain antibiotic- and lineage-specific.", "scope_status": "MECHANISTIC", "title": "Mechanisms of antibiotic resistance"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -1137,13 +1170,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-10-17 09:00 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

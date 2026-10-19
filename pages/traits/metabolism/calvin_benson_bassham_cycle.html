@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/metabolism.html">METABOLISM</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/metabolism.html">METABOLISM</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>Calvin-Benson-Bassham cycle</h1>
     <p class="curie"><code>traitmech:000020</code> · CLASS · REVIEWED</p>
 
@@ -85,9 +96,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>RuBisCO</strong>
+            <a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR033966/" rel="nofollow noreferrer"><code>InterPro:IPR033966</code></a>
             <span class="edge-predicate">enables</span>
             <strong>Calvin-Benson cycle</strong>
-            <code>RO:0002327</code>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0019253" rel="nofollow noreferrer"><code>GO:0019253</code></a>
+            <a href="http://purl.obolibrary.org/obo/RO_0002327" rel="nofollow noreferrer"><code>RO:0002327</code></a>
             <p>RuBisCO catalyzes the CO2-fixing carboxylation step of the cycle.</p>
             <ul>
 
@@ -102,9 +115,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>Calvin-Benson cycle</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0019253" rel="nofollow noreferrer"><code>GO:0019253</code></a>
             <span class="edge-predicate">confers</span>
             <strong>Calvin-Benson-Bassham cycle</strong>
-            <code>METPO:2007700</code>
+            <code>traitmech:000020</code>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>The reductive pentose phosphate cycle realizes the trait.</p>
             <ul>
 
@@ -119,9 +134,11 @@
 
           <li id="pathograph-1-edge-3">
             <strong>carbon dioxide</strong>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:16526" rel="nofollow noreferrer"><code>CHEBI:16526</code></a>
             <span class="edge-predicate">fixed by</span>
             <strong>Calvin-Benson-Bassham cycle</strong>
-            <code>METPO:2007404</code>
+            <code>traitmech:000020</code>
+            <a href="https://w3id.org/metpo/2007404" rel="nofollow noreferrer"><code>METPO:2007404</code></a>
             <p>CO2 is the substrate fixed by the CBB cycle.</p>
             <ul>
 
@@ -136,8 +153,10 @@
 
           <li id="pathograph-1-edge-4">
             <strong>RuBisCO</strong>
+            <a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR033966/" rel="nofollow noreferrer"><code>InterPro:IPR033966</code></a>
             <span class="edge-predicate">converts</span>
             <strong>3-phospho-D-glycerate</strong>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:17794" rel="nofollow noreferrer"><code>CHEBI:17794</code></a>
 
             <p>RuBisCO catalyzes the first CBB reaction, carboxylating RuBP with CO2 to yield 3-phosphoglycerate.</p>
             <ul>
@@ -153,8 +172,10 @@
 
           <li id="pathograph-1-edge-5">
             <strong>ribulose-1,5-bisphosphate</strong>
+
             <span class="edge-predicate">substrate of</span>
             <strong>RuBisCO</strong>
+            <a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR033966/" rel="nofollow noreferrer"><code>InterPro:IPR033966</code></a>
 
             <p>RuBP is the CO2-acceptor substrate carboxylated by RuBisCO.</p>
             <ul>
@@ -170,8 +191,10 @@
 
           <li id="pathograph-1-edge-6">
             <strong>carboxysome</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0031470" rel="nofollow noreferrer"><code>GO:0031470</code></a>
             <span class="edge-predicate">contains</span>
             <strong>RuBisCO</strong>
+            <a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR033966/" rel="nofollow noreferrer"><code>InterPro:IPR033966</code></a>
 
             <p>Carboxysomes encapsulate RuBisCO as part of the CO2-concentrating mechanism.</p>
             <ul>
@@ -187,8 +210,10 @@
 
           <li id="pathograph-1-edge-7">
             <strong>carboxysome</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0031470" rel="nofollow noreferrer"><code>GO:0031470</code></a>
             <span class="edge-predicate">concentrates</span>
             <strong>carbon dioxide</strong>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:16526" rel="nofollow noreferrer"><code>CHEBI:16526</code></a>
 
             <p>Carboxysomes concentrate CO2 near RuBisCO, bridging environmental DIC supply to enzymatic demand.</p>
             <ul>
@@ -204,8 +229,10 @@
 
           <li id="pathograph-1-edge-8">
             <strong>carboxysomal carbonic anhydrase</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0004089" rel="nofollow noreferrer"><code>GO:0004089</code></a>
             <span class="edge-predicate">converts</span>
             <strong>carbon dioxide</strong>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:16526" rel="nofollow noreferrer"><code>CHEBI:16526</code></a>
 
             <p>Carboxysomal carbonic anhydrase converts HCO3- to CO2 to elevate luminal CO2 and promote RuBisCO fixation.</p>
             <ul>
@@ -221,8 +248,10 @@
 
           <li id="pathograph-1-edge-9">
             <strong>bicarbonate</strong>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:17544" rel="nofollow noreferrer"><code>CHEBI:17544</code></a>
             <span class="edge-predicate">substrate of</span>
             <strong>carboxysomal carbonic anhydrase</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0004089" rel="nofollow noreferrer"><code>GO:0004089</code></a>
 
             <p>Bicarbonate is dehydrated by carboxysomal carbonic anhydrase to supply CO2 to RuBisCO.</p>
             <ul>
@@ -238,8 +267,10 @@
 
           <li id="pathograph-1-edge-10">
             <strong>CbbR transcriptional regulator</strong>
+
             <span class="edge-predicate">activates transcription of</span>
             <strong>cbb operon transcription</strong>
+
 
             <p>CbbR is the master transcriptional activator that elevates expression of bacterial cbb CO2-fixation operons.</p>
             <ul>
@@ -255,8 +286,10 @@
 
           <li id="pathograph-1-edge-11">
             <strong>cytoplasmic carbonic anhydrase</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0004089" rel="nofollow noreferrer"><code>GO:0004089</code></a>
             <span class="edge-predicate">can cause</span>
             <strong>CO2 leakage</strong>
+
 
             <p>Cytosolic (non-vectorial) carbonic anhydrase activity can dissipate the CCM by causing CO2 leakage.</p>
             <ul>
@@ -272,9 +305,11 @@
 
           <li id="pathograph-1-edge-12">
             <strong>cbb operon transcription</strong>
+
             <span class="edge-predicate">part of</span>
             <strong>Calvin-Benson cycle</strong>
-            <code>biolink:part_of</code>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0019253" rel="nofollow noreferrer"><code>GO:0019253</code></a>
+            <a href="https://w3id.org/biolink/vocab/part_of" rel="nofollow noreferrer"><code>biolink:part_of</code></a>
             <p>The cbb operon specifies enzymes of the CBB pathway.</p>
             <ul>
 
@@ -289,9 +324,11 @@
 
           <li id="pathograph-1-edge-13">
             <strong>CO2 leakage</strong>
+
             <span class="edge-predicate">negatively regulates</span>
             <strong>Calvin-Benson cycle</strong>
-            <code>RO:0002212</code>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0019253" rel="nofollow noreferrer"><code>GO:0019253</code></a>
+            <a href="http://purl.obolibrary.org/obo/RO_0002212" rel="nofollow noreferrer"><code>RO:0002212</code></a>
             <p>CO2 leakage opposes the carboxysome concentration mechanism that supplies Rubisco for the CBB pathway.</p>
             <ul>
 
@@ -518,49 +555,49 @@
 
         <li>
           <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/manganese_oxidation.html">manganese oxidation</a>
+          <a href="../../traits/metabolism/chitinolysis.html">chitinolysis</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/sulfur_oxidation.html">sulfur oxidation</a>
+          <a href="../../traits/metabolism/cellulolysis.html">cellulolysis</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/starch_degradation.html">starch degradation</a>
+          <a href="../../traits/metabolism/nitrate_reduction.html">nitrate reduction</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/reductive_tca_cycle.html">reductive tricarboxylic acid cycle</a>
+          <a href="../../traits/metabolism/wood_ljungdahl_pathway.html">Wood-Ljungdahl pathway</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/proteorhodopsin_phototrophy.html">proteorhodopsin phototrophy</a>
+          <a href="../../traits/metabolism/xylan_degradation.html">xylan degradation</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/proteolysis.html">proteolysis</a>
+          <a href="../../traits/metabolism/dark_hydrogen_oxidation.html">dark hydrogen oxidation</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/phototrophy.html">phototrophy</a>
+          <a href="../../traits/metabolism/dark_oxidation_of_sulfur_compounds.html">dark oxidation of sulfur compounds</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/photosynthesis.html">photosynthesis</a>
+          <a href="../../traits/metabolism/methanol_oxidation.html">methanol oxidation</a>
           <span class="sim">1.000</span>
         </li>
 
@@ -1144,7 +1181,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking RuBisCO-catalyzed CO2 carboxylation of RuBP to the reductive pentose phosphate cycle.", "edges": [{"description": "RuBisCO catalyzes the CO2-fixing carboxylation step of the cycle.", "evidence": [{"notes": "Berg identifies the CBB cycle as the reference autotrophic pathway.", "reference": "DOI:10.1128/AEM.02473-10"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "rubisco", "target": "cbb_pathway"}, {"description": "The reductive pentose phosphate cycle realizes the trait.", "evidence": [{"notes": "H\u00fcgler \u0026 Sievert support the Calvin cycle as the most widespread CO2-fixation pathway.", "reference": "DOI:10.1146/annurev-marine-120709-142712"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "cbb_pathway", "target": "cbb_trait"}, {"description": "CO2 is the substrate fixed by the CBB cycle.", "evidence": [{"notes": "Berg identifies the CBB cycle as a CO2-fixing pathway.", "reference": "DOI:10.1128/AEM.02473-10"}], "id": "edge-3", "is_orphan": false, "predicate": "fixed by", "predicate_id": "METPO:2007404", "source": "carbon_dioxide", "target": "cbb_trait"}, {"description": "RuBisCO catalyzes the first CBB reaction, carboxylating RuBP with CO2 to yield 3-phosphoglycerate.", "evidence": [{"notes": "Kurkela 2024: \"RubisCo... catalyses the first CBB reaction (RuBP + CO2 -\u003e 3-PGA).\"", "reference": "DOI:10.1111/ppl.14140"}], "id": "edge-4", "is_orphan": false, "predicate": "converts", "predicate_id": null, "source": "rubisco", "target": "three_pga"}, {"description": "RuBP is the CO2-acceptor substrate carboxylated by RuBisCO.", "evidence": [{"notes": "Kurkela 2024: RuBP + CO2 -\u003e 3-PGA is the first CBB reaction catalysed by RubisCo.", "reference": "DOI:10.1111/ppl.14140"}], "id": "edge-5", "is_orphan": false, "predicate": "substrate of", "predicate_id": null, "source": "rubp", "target": "rubisco"}, {"description": "Carboxysomes encapsulate RuBisCO as part of the CO2-concentrating mechanism.", "evidence": [{"notes": "Kurkela 2024: \"carboxysomes that encapsulate RuBisCo and carbonic anhydrase.\"", "reference": "DOI:10.1111/ppl.14140"}], "id": "edge-6", "is_orphan": false, "predicate": "contains", "predicate_id": null, "source": "carboxysome", "target": "rubisco"}, {"description": "Carboxysomes concentrate CO2 near RuBisCO, bridging environmental DIC supply to enzymatic demand.", "evidence": [{"notes": "Scott 2024: \"carboxysomes... concentrate CO2 near Rubisco to bridge environmental DIC supply to enzymatic demand.\"", "reference": "DOI:10.1128/AEM.01557-23"}], "id": "edge-7", "is_orphan": false, "predicate": "concentrates", "predicate_id": null, "source": "carboxysome", "target": "carbon_dioxide"}, {"description": "Carboxysomal carbonic anhydrase converts HCO3- to CO2 to elevate luminal CO2 and promote RuBisCO fixation.", "evidence": [{"notes": "Pulsford 2024: within carboxysomes, CA converts HCO3- to CO2 to elevate luminal CO2 and promote Rubisco-catalyzed CO2 fixation.", "reference": "DOI:10.1126/sciadv.adk7283"}], "id": "edge-8", "is_orphan": false, "predicate": "converts", "predicate_id": null, "source": "carboxysomal_ca", "target": "carbon_dioxide"}, {"description": "Bicarbonate is dehydrated by carboxysomal carbonic anhydrase to supply CO2 to RuBisCO.", "evidence": [{"notes": "Pulsford 2024: carboxysomal CA converts HCO3- to CO2 to promote Rubisco-catalyzed CO2 fixation.", "reference": "DOI:10.1126/sciadv.adk7283"}], "id": "edge-9", "is_orphan": false, "predicate": "substrate of", "predicate_id": null, "source": "bicarbonate", "target": "carboxysomal_ca"}, {"description": "CbbR is the master transcriptional activator that elevates expression of bacterial cbb CO2-fixation operons.", "evidence": [{"notes": "Dangel 2015: \"CbbR, the Master Regulator for Microbial Carbon Dioxide Fixation\"; elevates expression of the cbb CO2 fixation operons. Broad evidence across bacteria.", "reference": "DOI:10.1128/JB.00442-15"}], "id": "edge-10", "is_orphan": false, "predicate": "activates transcription of", "predicate_id": null, "source": "cbbr", "target": "cbb_operon"}, {"description": "Cytosolic (non-vectorial) carbonic anhydrase activity can dissipate the CCM by causing CO2 leakage.", "evidence": [{"notes": "Scott 2024: \"cytosolic (non-vectoral) CA activity can dissipate the CCM by causing CO2 leakage.\"", "reference": "DOI:10.1128/AEM.01557-23"}], "id": "edge-11", "is_orphan": false, "predicate": "can cause", "predicate_id": null, "source": "cytoplasmic_ca", "target": "co2_leakage"}, {"description": "The cbb operon specifies enzymes of the CBB pathway.", "evidence": [{"notes": "Verified against the public PMC full text.", "reference": "DOI:10.1128/JB.00442-15", "snippet": "cbb operons that specify enzymes of the Calvin-Bassham-Benson (CBB) pathway"}], "id": "edge-12", "is_orphan": false, "predicate": "part of", "predicate_id": "biolink:part_of", "source": "cbb_operon", "target": "cbb_pathway"}, {"description": "CO2 leakage opposes the carboxysome concentration mechanism that supplies Rubisco for the CBB pathway.", "evidence": [{"notes": "Verified against the public PMC full text; the same introduction identifies Rubisco as catalyzing the first CBB-cycle step.", "reference": "DOI:10.1371/journal.pone.0007521", "snippet": "the carboxysome shell constitutes a diffusional barrier for CO2, thereby preventing leakage of this Ci species out of the microcompartment"}], "id": "edge-13", "is_orphan": false, "predicate": "negatively regulates", "predicate_id": "RO:0002212", "source": "co2_leakage", "target": "cbb_pathway"}], "evidence_rows": [{"description": "RuBisCO catalyzes the CO2-fixing carboxylation step of the cycle.", "edge_id": "edge-1", "evidence": [{"notes": "Berg identifies the CBB cycle as the reference autotrophic pathway.", "reference": "DOI:10.1128/AEM.02473-10"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "RuBisCO", "target": "Calvin-Benson cycle"}, {"description": "The reductive pentose phosphate cycle realizes the trait.", "edge_id": "edge-2", "evidence": [{"notes": "H\u00fcgler \u0026 Sievert support the Calvin cycle as the most widespread CO2-fixation pathway.", "reference": "DOI:10.1146/annurev-marine-120709-142712"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "Calvin-Benson cycle", "target": "Calvin-Benson-Bassham cycle"}, {"description": "CO2 is the substrate fixed by the CBB cycle.", "edge_id": "edge-3", "evidence": [{"notes": "Berg identifies the CBB cycle as a CO2-fixing pathway.", "reference": "DOI:10.1128/AEM.02473-10"}], "predicate": "fixed by", "predicate_id": "METPO:2007404", "source": "carbon dioxide", "target": "Calvin-Benson-Bassham cycle"}, {"description": "RuBisCO catalyzes the first CBB reaction, carboxylating RuBP with CO2 to yield 3-phosphoglycerate.", "edge_id": "edge-4", "evidence": [{"notes": "Kurkela 2024: \"RubisCo... catalyses the first CBB reaction (RuBP + CO2 -\u003e 3-PGA).\"", "reference": "DOI:10.1111/ppl.14140"}], "predicate": "converts", "predicate_id": null, "source": "RuBisCO", "target": "3-phospho-D-glycerate"}, {"description": "RuBP is the CO2-acceptor substrate carboxylated by RuBisCO.", "edge_id": "edge-5", "evidence": [{"notes": "Kurkela 2024: RuBP + CO2 -\u003e 3-PGA is the first CBB reaction catalysed by RubisCo.", "reference": "DOI:10.1111/ppl.14140"}], "predicate": "substrate of", "predicate_id": null, "source": "ribulose-1,5-bisphosphate", "target": "RuBisCO"}, {"description": "Carboxysomes encapsulate RuBisCO as part of the CO2-concentrating mechanism.", "edge_id": "edge-6", "evidence": [{"notes": "Kurkela 2024: \"carboxysomes that encapsulate RuBisCo and carbonic anhydrase.\"", "reference": "DOI:10.1111/ppl.14140"}], "predicate": "contains", "predicate_id": null, "source": "carboxysome", "target": "RuBisCO"}, {"description": "Carboxysomes concentrate CO2 near RuBisCO, bridging environmental DIC supply to enzymatic demand.", "edge_id": "edge-7", "evidence": [{"notes": "Scott 2024: \"carboxysomes... concentrate CO2 near Rubisco to bridge environmental DIC supply to enzymatic demand.\"", "reference": "DOI:10.1128/AEM.01557-23"}], "predicate": "concentrates", "predicate_id": null, "source": "carboxysome", "target": "carbon dioxide"}, {"description": "Carboxysomal carbonic anhydrase converts HCO3- to CO2 to elevate luminal CO2 and promote RuBisCO fixation.", "edge_id": "edge-8", "evidence": [{"notes": "Pulsford 2024: within carboxysomes, CA converts HCO3- to CO2 to elevate luminal CO2 and promote Rubisco-catalyzed CO2 fixation.", "reference": "DOI:10.1126/sciadv.adk7283"}], "predicate": "converts", "predicate_id": null, "source": "carboxysomal carbonic anhydrase", "target": "carbon dioxide"}, {"description": "Bicarbonate is dehydrated by carboxysomal carbonic anhydrase to supply CO2 to RuBisCO.", "edge_id": "edge-9", "evidence": [{"notes": "Pulsford 2024: carboxysomal CA converts HCO3- to CO2 to promote Rubisco-catalyzed CO2 fixation.", "reference": "DOI:10.1126/sciadv.adk7283"}], "predicate": "substrate of", "predicate_id": null, "source": "bicarbonate", "target": "carboxysomal carbonic anhydrase"}, {"description": "CbbR is the master transcriptional activator that elevates expression of bacterial cbb CO2-fixation operons.", "edge_id": "edge-10", "evidence": [{"notes": "Dangel 2015: \"CbbR, the Master Regulator for Microbial Carbon Dioxide Fixation\"; elevates expression of the cbb CO2 fixation operons. Broad evidence across bacteria.", "reference": "DOI:10.1128/JB.00442-15"}], "predicate": "activates transcription of", "predicate_id": null, "source": "CbbR transcriptional regulator", "target": "cbb operon transcription"}, {"description": "Cytosolic (non-vectorial) carbonic anhydrase activity can dissipate the CCM by causing CO2 leakage.", "edge_id": "edge-11", "evidence": [{"notes": "Scott 2024: \"cytosolic (non-vectoral) CA activity can dissipate the CCM by causing CO2 leakage.\"", "reference": "DOI:10.1128/AEM.01557-23"}], "predicate": "can cause", "predicate_id": null, "source": "cytoplasmic carbonic anhydrase", "target": "CO2 leakage"}, {"description": "The cbb operon specifies enzymes of the CBB pathway.", "edge_id": "edge-12", "evidence": [{"notes": "Verified against the public PMC full text.", "reference": "DOI:10.1128/JB.00442-15", "snippet": "cbb operons that specify enzymes of the Calvin-Bassham-Benson (CBB) pathway"}], "predicate": "part of", "predicate_id": "biolink:part_of", "source": "cbb operon transcription", "target": "Calvin-Benson cycle"}, {"description": "CO2 leakage opposes the carboxysome concentration mechanism that supplies Rubisco for the CBB pathway.", "edge_id": "edge-13", "evidence": [{"notes": "Verified against the public PMC full text; the same introduction identifies Rubisco as catalyzing the first CBB-cycle step.", "reference": "DOI:10.1371/journal.pone.0007521", "snippet": "the carboxysome shell constitutes a diffusional barrier for CO2, thereby preventing leakage of this Ci species out of the microcompartment"}], "predicate": "negatively regulates", "predicate_id": "RO:0002212", "source": "CO2 leakage", "target": "Calvin-Benson cycle"}], "graph_id": "cbb_rubisco_co2_fixation", "issues": [], "nodes": [{"color": "#fef3c7", "description": "HCO3-, inorganic carbon species converted to CO2 by carbonic anhydrase near RuBisCO.", "grounding": "CHEBI:17544", "id": "bicarbonate", "is_orphan": false, "label": "bicarbonate", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Substrate fixed by RuBisCO.", "grounding": "CHEBI:16526", "id": "carbon_dioxide", "is_orphan": false, "label": "carbon dioxide", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Carbonic anhydrase within the carboxysome that converts HCO3- to CO2 to supply RuBisCO.", "grounding": "GO:0004089", "id": "carboxysomal_ca", "is_orphan": false, "label": "carboxysomal carbonic anhydrase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 114, "evidence": [{"notes": "Supports carboxysomal carbonic anhydrase in Calvin-Benson-Bassham cycle; UniProtKB:Q5KW03 (Q5KW03, Carbonic anhydrase) in Geobacillus kaustophilus (strain HTA426) provides a verified protein exemplar.", "reference": "DOI:10.1128/JB.00442-15", "snippet": "cbb operons that specify enzymes of the Calvin-Bassham-Benson (CBB) pathway"}], "protein_label": "Carbonic anhydrase", "proteome_id": "UP000001172", "retrieved_on": "2026-10-17", "role": "Exemplar protein (Q5KW03, Carbonic anhydrase) representing carboxysomal carbonic anhydrase in Geobacillus kaustophilus (strain HTA426) for Calvin-Benson-Bassham cycle.", "sequence_version": 1, "taxon_id": "NCBITaxon:235909", "taxon_label": "Geobacillus kaustophilus (strain HTA426)", "uniprot_id": "UniProtKB:Q5KW03"}], "related_records": [], "xrefs": []}, {"color": "#fce7f3", "description": "Bacterial microcompartment that encapsulates RuBisCO and carbonic anhydrase as part of the CO2-concentrating mechanism.", "grounding": "GO:0031470", "id": "carboxysome", "is_orphan": false, "label": "carboxysome", "node_type": "ORGANELLE", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Transcription of an operon encoding CBB-cycle CO2-fixation enzymes.", "grounding": null, "id": "cbb_operon", "is_orphan": false, "label": "cbb operon transcription", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#e0e7ff", "description": "Reductive pentose phosphate (Calvin-Benson-Bassham) cycle.", "grounding": "GO:0019253", "id": "cbb_pathway", "is_orphan": false, "label": "Calvin-Benson cycle", "node_type": "PATHWAY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Reductive pentose phosphate cycle that fixes CO2.", "grounding": "traitmech:000020", "id": "cbb_trait", "is_orphan": false, "label": "Calvin-Benson-Bassham cycle", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "LysR-type master transcriptional activator of bacterial cbb CO2-fixation operons.", "grounding": null, "id": "cbbr", "is_orphan": false, "label": "CbbR transcriptional regulator", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 128, "evidence": [{"notes": "Supports CbbR transcriptional regulator in Calvin-Benson-Bassham cycle; UniProtKB:P58332 (cbbR, HTH-type transcriptional regulator CbbR) in Rhizobium meliloti (strain 1021) (Ensifer meliloti) (Sinorhizobium meliloti) provides a verified protein exemplar.", "reference": "DOI:10.1128/JB.00442-15", "snippet": "cbb operons that specify enzymes of the Calvin-Bassham-Benson (CBB) pathway"}], "gene_symbol": "cbbR", "protein_label": "HTH-type transcriptional regulator CbbR", "proteome_id": "UP000001976", "retrieved_on": "2026-10-17", "role": "Exemplar protein (cbbR, HTH-type transcriptional regulator CbbR) representing CbbR transcriptional regulator in Rhizobium meliloti (strain 1021) (Ensifer meliloti) (Sinorhizobium meliloti) for Calvin-Benson-Bassham cycle.", "sequence_version": 1, "taxon_id": "NCBITaxon:266834", "taxon_label": "Rhizobium meliloti (strain 1021) (Ensifer meliloti) (Sinorhizobium meliloti)", "uniprot_id": "UniProtKB:P58332"}], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Dissipation of concentrated CO2 from the CCM, reducing carbon-fixation efficiency.", "grounding": null, "id": "co2_leakage", "is_orphan": false, "label": "CO2 leakage", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Non-vectorial cytosolic carbonic anhydrase whose activity can dissipate the CO2-concentrating mechanism.", "grounding": "GO:0004089", "id": "cytoplasmic_ca", "is_orphan": false, "label": "cytoplasmic carbonic anhydrase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 114, "evidence": [{"notes": "Supports cytoplasmic carbonic anhydrase in Calvin-Benson-Bassham cycle; UniProtKB:Q5KW03 (Q5KW03, Carbonic anhydrase) in Geobacillus kaustophilus (strain HTA426) provides a verified protein exemplar.", "reference": "DOI:10.1128/JB.00442-15", "snippet": "cbb operons that specify enzymes of the Calvin-Bassham-Benson (CBB) pathway"}], "protein_label": "Carbonic anhydrase", "proteome_id": "UP000001172", "retrieved_on": "2026-10-17", "role": "Exemplar protein (Q5KW03, Carbonic anhydrase) representing cytoplasmic carbonic anhydrase in Geobacillus kaustophilus (strain HTA426) for Calvin-Benson-Bassham cycle.", "sequence_version": 1, "taxon_id": "NCBITaxon:235909", "taxon_label": "Geobacillus kaustophilus (strain HTA426)", "uniprot_id": "UniProtKB:Q5KW03"}], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Ribulose-1,5-bisphosphate carboxylase/oxygenase.", "grounding": "InterPro:IPR033966", "id": "rubisco", "is_orphan": false, "label": "RuBisCO", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 154, "evidence": [{"notes": "The strain-level perturbation study supports activity of both H16 CBB operons; UniProtKB P42721 identifies the reviewed plasmid cbbL2 large chain in that strain.", "reference": "DOI:10.1186/s12934-020-01494-y", "snippet": "both CBB operons were active and contributed almost equally to the carbon fixation process"}], "gene_symbol": "cbbL2", "protein_label": "Ribulose bisphosphate carboxylase large chain, plasmid", "retrieved_on": "2026-08-24", "role": "Large-chain component of the plasmid-encoded RuBisCO in one of the two active CBB operons of C. necator H16.", "sequence_version": 3, "taxon_id": "NCBITaxon:381666", "taxon_label": "Cupriavidus necator H16", "uniprot_id": "UniProtKB:P42721"}], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "CO2 acceptor substrate carboxylated by RuBisCO in the CBB cycle.", "grounding": null, "id": "rubp", "is_orphan": false, "label": "ribulose-1,5-bisphosphate", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Product of RuBisCO carboxylation of RuBP; first stable CBB intermediate.", "grounding": "CHEBI:17794", "id": "three_pga", "is_orphan": false, "label": "3-phospho-D-glycerate", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 154, "evidence": [{"notes": "The strain-level perturbation study supports activity of both H16 CBB operons; UniProtKB P42721 identifies the reviewed plasmid cbbL2 large chain in that strain.", "reference": "DOI:10.1186/s12934-020-01494-y", "snippet": "both CBB operons were active and contributed almost equally to the carbon fixation process"}], "gene_symbol": "cbbL2", "node_id": "rubisco", "node_label": "RuBisCO", "protein_label": "Ribulose bisphosphate carboxylase large chain, plasmid", "retrieved_on": "2026-08-24", "role": "Large-chain component of the plasmid-encoded RuBisCO in one of the two active CBB operons of C. necator H16.", "sequence_version": 3, "taxon_id": "NCBITaxon:381666", "taxon_label": "Cupriavidus necator H16", "uniprot_id": "UniProtKB:P42721"}, {"entry_status": "REVIEWED", "entry_version": 114, "evidence": [{"notes": "Supports carboxysomal carbonic anhydrase in Calvin-Benson-Bassham cycle; UniProtKB:Q5KW03 (Q5KW03, Carbonic anhydrase) in Geobacillus kaustophilus (strain HTA426) provides a verified protein exemplar.", "reference": "DOI:10.1128/JB.00442-15", "snippet": "cbb operons that specify enzymes of the Calvin-Bassham-Benson (CBB) pathway"}], "node_id": "carboxysomal_ca", "node_label": "carboxysomal carbonic anhydrase", "protein_label": "Carbonic anhydrase", "proteome_id": "UP000001172", "retrieved_on": "2026-10-17", "role": "Exemplar protein (Q5KW03, Carbonic anhydrase) representing carboxysomal carbonic anhydrase in Geobacillus kaustophilus (strain HTA426) for Calvin-Benson-Bassham cycle.", "sequence_version": 1, "taxon_id": "NCBITaxon:235909", "taxon_label": "Geobacillus kaustophilus (strain HTA426)", "uniprot_id": "UniProtKB:Q5KW03"}, {"entry_status": "REVIEWED", "entry_version": 128, "evidence": [{"notes": "Supports CbbR transcriptional regulator in Calvin-Benson-Bassham cycle; UniProtKB:P58332 (cbbR, HTH-type transcriptional regulator CbbR) in Rhizobium meliloti (strain 1021) (Ensifer meliloti) (Sinorhizobium meliloti) provides a verified protein exemplar.", "reference": "DOI:10.1128/JB.00442-15", "snippet": "cbb operons that specify enzymes of the Calvin-Bassham-Benson (CBB) pathway"}], "gene_symbol": "cbbR", "node_id": "cbbr", "node_label": "CbbR transcriptional regulator", "protein_label": "HTH-type transcriptional regulator CbbR", "proteome_id": "UP000001976", "retrieved_on": "2026-10-17", "role": "Exemplar protein (cbbR, HTH-type transcriptional regulator CbbR) representing CbbR transcriptional regulator in Rhizobium meliloti (strain 1021) (Ensifer meliloti) (Sinorhizobium meliloti) for Calvin-Benson-Bassham cycle.", "sequence_version": 1, "taxon_id": "NCBITaxon:266834", "taxon_label": "Rhizobium meliloti (strain 1021) (Ensifer meliloti) (Sinorhizobium meliloti)", "uniprot_id": "UniProtKB:P58332"}, {"entry_status": "REVIEWED", "entry_version": 114, "evidence": [{"notes": "Supports cytoplasmic carbonic anhydrase in Calvin-Benson-Bassham cycle; UniProtKB:Q5KW03 (Q5KW03, Carbonic anhydrase) in Geobacillus kaustophilus (strain HTA426) provides a verified protein exemplar.", "reference": "DOI:10.1128/JB.00442-15", "snippet": "cbb operons that specify enzymes of the Calvin-Bassham-Benson (CBB) pathway"}], "node_id": "cytoplasmic_ca", "node_label": "cytoplasmic carbonic anhydrase", "protein_label": "Carbonic anhydrase", "proteome_id": "UP000001172", "retrieved_on": "2026-10-17", "role": "Exemplar protein (Q5KW03, Carbonic anhydrase) representing cytoplasmic carbonic anhydrase in Geobacillus kaustophilus (strain HTA426) for Calvin-Benson-Bassham cycle.", "sequence_version": 1, "taxon_id": "NCBITaxon:235909", "taxon_label": "Geobacillus kaustophilus (strain HTA426)", "uniprot_id": "UniProtKB:Q5KW03"}], "scope_notes": "This is a composite bacterial CBB graph. The Cupriavidus example grounds the RuBisCO and cbb-regulatory branch, whereas carboxysome and carbonic-anhydrase edges describe source-backed cyanobacterial or other bacterial CO2-concentrating modules that are not asserted to occur in C. necator H16.", "scope_status": "MECHANISTIC", "title": "Calvin-Benson-Bassham cycle fixes CO2 via RuBisCO"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking RuBisCO-catalyzed CO2 carboxylation of RuBP to the reductive pentose phosphate cycle.", "edges": [{"description": "RuBisCO catalyzes the CO2-fixing carboxylation step of the cycle.", "evidence": [{"notes": "Berg identifies the CBB cycle as the reference autotrophic pathway.", "reference": "DOI:10.1128/AEM.02473-10"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "rubisco", "target": "cbb_pathway"}, {"description": "The reductive pentose phosphate cycle realizes the trait.", "evidence": [{"notes": "H\u00fcgler \u0026 Sievert support the Calvin cycle as the most widespread CO2-fixation pathway.", "reference": "DOI:10.1146/annurev-marine-120709-142712"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "cbb_pathway", "target": "cbb_trait"}, {"description": "CO2 is the substrate fixed by the CBB cycle.", "evidence": [{"notes": "Berg identifies the CBB cycle as a CO2-fixing pathway.", "reference": "DOI:10.1128/AEM.02473-10"}], "id": "edge-3", "is_orphan": false, "predicate": "fixed by", "predicate_id": "METPO:2007404", "source": "carbon_dioxide", "target": "cbb_trait"}, {"description": "RuBisCO catalyzes the first CBB reaction, carboxylating RuBP with CO2 to yield 3-phosphoglycerate.", "evidence": [{"notes": "Kurkela 2024: \"RubisCo... catalyses the first CBB reaction (RuBP + CO2 -\u003e 3-PGA).\"", "reference": "DOI:10.1111/ppl.14140"}], "id": "edge-4", "is_orphan": false, "predicate": "converts", "predicate_id": null, "source": "rubisco", "target": "three_pga"}, {"description": "RuBP is the CO2-acceptor substrate carboxylated by RuBisCO.", "evidence": [{"notes": "Kurkela 2024: RuBP + CO2 -\u003e 3-PGA is the first CBB reaction catalysed by RubisCo.", "reference": "DOI:10.1111/ppl.14140"}], "id": "edge-5", "is_orphan": false, "predicate": "substrate of", "predicate_id": null, "source": "rubp", "target": "rubisco"}, {"description": "Carboxysomes encapsulate RuBisCO as part of the CO2-concentrating mechanism.", "evidence": [{"notes": "Kurkela 2024: \"carboxysomes that encapsulate RuBisCo and carbonic anhydrase.\"", "reference": "DOI:10.1111/ppl.14140"}], "id": "edge-6", "is_orphan": false, "predicate": "contains", "predicate_id": null, "source": "carboxysome", "target": "rubisco"}, {"description": "Carboxysomes concentrate CO2 near RuBisCO, bridging environmental DIC supply to enzymatic demand.", "evidence": [{"notes": "Scott 2024: \"carboxysomes... concentrate CO2 near Rubisco to bridge environmental DIC supply to enzymatic demand.\"", "reference": "DOI:10.1128/AEM.01557-23"}], "id": "edge-7", "is_orphan": false, "predicate": "concentrates", "predicate_id": null, "source": "carboxysome", "target": "carbon_dioxide"}, {"description": "Carboxysomal carbonic anhydrase converts HCO3- to CO2 to elevate luminal CO2 and promote RuBisCO fixation.", "evidence": [{"notes": "Pulsford 2024: within carboxysomes, CA converts HCO3- to CO2 to elevate luminal CO2 and promote Rubisco-catalyzed CO2 fixation.", "reference": "DOI:10.1126/sciadv.adk7283"}], "id": "edge-8", "is_orphan": false, "predicate": "converts", "predicate_id": null, "source": "carboxysomal_ca", "target": "carbon_dioxide"}, {"description": "Bicarbonate is dehydrated by carboxysomal carbonic anhydrase to supply CO2 to RuBisCO.", "evidence": [{"notes": "Pulsford 2024: carboxysomal CA converts HCO3- to CO2 to promote Rubisco-catalyzed CO2 fixation.", "reference": "DOI:10.1126/sciadv.adk7283"}], "id": "edge-9", "is_orphan": false, "predicate": "substrate of", "predicate_id": null, "source": "bicarbonate", "target": "carboxysomal_ca"}, {"description": "CbbR is the master transcriptional activator that elevates expression of bacterial cbb CO2-fixation operons.", "evidence": [{"notes": "Dangel 2015: \"CbbR, the Master Regulator for Microbial Carbon Dioxide Fixation\"; elevates expression of the cbb CO2 fixation operons. Broad evidence across bacteria.", "reference": "DOI:10.1128/JB.00442-15"}], "id": "edge-10", "is_orphan": false, "predicate": "activates transcription of", "predicate_id": null, "source": "cbbr", "target": "cbb_operon"}, {"description": "Cytosolic (non-vectorial) carbonic anhydrase activity can dissipate the CCM by causing CO2 leakage.", "evidence": [{"notes": "Scott 2024: \"cytosolic (non-vectoral) CA activity can dissipate the CCM by causing CO2 leakage.\"", "reference": "DOI:10.1128/AEM.01557-23"}], "id": "edge-11", "is_orphan": false, "predicate": "can cause", "predicate_id": null, "source": "cytoplasmic_ca", "target": "co2_leakage"}, {"description": "The cbb operon specifies enzymes of the CBB pathway.", "evidence": [{"notes": "Verified against the public PMC full text.", "reference": "DOI:10.1128/JB.00442-15", "snippet": "cbb operons that specify enzymes of the Calvin-Bassham-Benson (CBB) pathway"}], "id": "edge-12", "is_orphan": false, "predicate": "part of", "predicate_id": "biolink:part_of", "source": "cbb_operon", "target": "cbb_pathway"}, {"description": "CO2 leakage opposes the carboxysome concentration mechanism that supplies Rubisco for the CBB pathway.", "evidence": [{"notes": "Verified against the public PMC full text; the same introduction identifies Rubisco as catalyzing the first CBB-cycle step.", "reference": "DOI:10.1371/journal.pone.0007521", "snippet": "the carboxysome shell constitutes a diffusional barrier for CO2, thereby preventing leakage of this Ci species out of the microcompartment"}], "id": "edge-13", "is_orphan": false, "predicate": "negatively regulates", "predicate_id": "RO:0002212", "source": "co2_leakage", "target": "cbb_pathway"}], "evidence_rows": [{"description": "RuBisCO catalyzes the CO2-fixing carboxylation step of the cycle.", "edge_id": "edge-1", "evidence": [{"notes": "Berg identifies the CBB cycle as the reference autotrophic pathway.", "reference": "DOI:10.1128/AEM.02473-10"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "RuBisCO", "source_grounding": "InterPro:IPR033966", "target": "Calvin-Benson cycle", "target_grounding": "GO:0019253"}, {"description": "The reductive pentose phosphate cycle realizes the trait.", "edge_id": "edge-2", "evidence": [{"notes": "H\u00fcgler \u0026 Sievert support the Calvin cycle as the most widespread CO2-fixation pathway.", "reference": "DOI:10.1146/annurev-marine-120709-142712"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "Calvin-Benson cycle", "source_grounding": "GO:0019253", "target": "Calvin-Benson-Bassham cycle", "target_grounding": "traitmech:000020"}, {"description": "CO2 is the substrate fixed by the CBB cycle.", "edge_id": "edge-3", "evidence": [{"notes": "Berg identifies the CBB cycle as a CO2-fixing pathway.", "reference": "DOI:10.1128/AEM.02473-10"}], "predicate": "fixed by", "predicate_id": "METPO:2007404", "source": "carbon dioxide", "source_grounding": "CHEBI:16526", "target": "Calvin-Benson-Bassham cycle", "target_grounding": "traitmech:000020"}, {"description": "RuBisCO catalyzes the first CBB reaction, carboxylating RuBP with CO2 to yield 3-phosphoglycerate.", "edge_id": "edge-4", "evidence": [{"notes": "Kurkela 2024: \"RubisCo... catalyses the first CBB reaction (RuBP + CO2 -\u003e 3-PGA).\"", "reference": "DOI:10.1111/ppl.14140"}], "predicate": "converts", "predicate_id": null, "source": "RuBisCO", "source_grounding": "InterPro:IPR033966", "target": "3-phospho-D-glycerate", "target_grounding": "CHEBI:17794"}, {"description": "RuBP is the CO2-acceptor substrate carboxylated by RuBisCO.", "edge_id": "edge-5", "evidence": [{"notes": "Kurkela 2024: RuBP + CO2 -\u003e 3-PGA is the first CBB reaction catalysed by RubisCo.", "reference": "DOI:10.1111/ppl.14140"}], "predicate": "substrate of", "predicate_id": null, "source": "ribulose-1,5-bisphosphate", "source_grounding": null, "target": "RuBisCO", "target_grounding": "InterPro:IPR033966"}, {"description": "Carboxysomes encapsulate RuBisCO as part of the CO2-concentrating mechanism.", "edge_id": "edge-6", "evidence": [{"notes": "Kurkela 2024: \"carboxysomes that encapsulate RuBisCo and carbonic anhydrase.\"", "reference": "DOI:10.1111/ppl.14140"}], "predicate": "contains", "predicate_id": null, "source": "carboxysome", "source_grounding": "GO:0031470", "target": "RuBisCO", "target_grounding": "InterPro:IPR033966"}, {"description": "Carboxysomes concentrate CO2 near RuBisCO, bridging environmental DIC supply to enzymatic demand.", "edge_id": "edge-7", "evidence": [{"notes": "Scott 2024: \"carboxysomes... concentrate CO2 near Rubisco to bridge environmental DIC supply to enzymatic demand.\"", "reference": "DOI:10.1128/AEM.01557-23"}], "predicate": "concentrates", "predicate_id": null, "source": "carboxysome", "source_grounding": "GO:0031470", "target": "carbon dioxide", "target_grounding": "CHEBI:16526"}, {"description": "Carboxysomal carbonic anhydrase converts HCO3- to CO2 to elevate luminal CO2 and promote RuBisCO fixation.", "edge_id": "edge-8", "evidence": [{"notes": "Pulsford 2024: within carboxysomes, CA converts HCO3- to CO2 to elevate luminal CO2 and promote Rubisco-catalyzed CO2 fixation.", "reference": "DOI:10.1126/sciadv.adk7283"}], "predicate": "converts", "predicate_id": null, "source": "carboxysomal carbonic anhydrase", "source_grounding": "GO:0004089", "target": "carbon dioxide", "target_grounding": "CHEBI:16526"}, {"description": "Bicarbonate is dehydrated by carboxysomal carbonic anhydrase to supply CO2 to RuBisCO.", "edge_id": "edge-9", "evidence": [{"notes": "Pulsford 2024: carboxysomal CA converts HCO3- to CO2 to promote Rubisco-catalyzed CO2 fixation.", "reference": "DOI:10.1126/sciadv.adk7283"}], "predicate": "substrate of", "predicate_id": null, "source": "bicarbonate", "source_grounding": "CHEBI:17544", "target": "carboxysomal carbonic anhydrase", "target_grounding": "GO:0004089"}, {"description": "CbbR is the master transcriptional activator that elevates expression of bacterial cbb CO2-fixation operons.", "edge_id": "edge-10", "evidence": [{"notes": "Dangel 2015: \"CbbR, the Master Regulator for Microbial Carbon Dioxide Fixation\"; elevates expression of the cbb CO2 fixation operons. Broad evidence across bacteria.", "reference": "DOI:10.1128/JB.00442-15"}], "predicate": "activates transcription of", "predicate_id": null, "source": "CbbR transcriptional regulator", "source_grounding": null, "target": "cbb operon transcription", "target_grounding": null}, {"description": "Cytosolic (non-vectorial) carbonic anhydrase activity can dissipate the CCM by causing CO2 leakage.", "edge_id": "edge-11", "evidence": [{"notes": "Scott 2024: \"cytosolic (non-vectoral) CA activity can dissipate the CCM by causing CO2 leakage.\"", "reference": "DOI:10.1128/AEM.01557-23"}], "predicate": "can cause", "predicate_id": null, "source": "cytoplasmic carbonic anhydrase", "source_grounding": "GO:0004089", "target": "CO2 leakage", "target_grounding": null}, {"description": "The cbb operon specifies enzymes of the CBB pathway.", "edge_id": "edge-12", "evidence": [{"notes": "Verified against the public PMC full text.", "reference": "DOI:10.1128/JB.00442-15", "snippet": "cbb operons that specify enzymes of the Calvin-Bassham-Benson (CBB) pathway"}], "predicate": "part of", "predicate_id": "biolink:part_of", "source": "cbb operon transcription", "source_grounding": null, "target": "Calvin-Benson cycle", "target_grounding": "GO:0019253"}, {"description": "CO2 leakage opposes the carboxysome concentration mechanism that supplies Rubisco for the CBB pathway.", "edge_id": "edge-13", "evidence": [{"notes": "Verified against the public PMC full text; the same introduction identifies Rubisco as catalyzing the first CBB-cycle step.", "reference": "DOI:10.1371/journal.pone.0007521", "snippet": "the carboxysome shell constitutes a diffusional barrier for CO2, thereby preventing leakage of this Ci species out of the microcompartment"}], "predicate": "negatively regulates", "predicate_id": "RO:0002212", "source": "CO2 leakage", "source_grounding": null, "target": "Calvin-Benson cycle", "target_grounding": "GO:0019253"}], "graph_id": "cbb_rubisco_co2_fixation", "issues": [], "nodes": [{"color": "#fef3c7", "description": "HCO3-, inorganic carbon species converted to CO2 by carbonic anhydrase near RuBisCO.", "grounding": "CHEBI:17544", "id": "bicarbonate", "is_orphan": false, "label": "bicarbonate", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Substrate fixed by RuBisCO.", "grounding": "CHEBI:16526", "id": "carbon_dioxide", "is_orphan": false, "label": "carbon dioxide", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Carbonic anhydrase within the carboxysome that converts HCO3- to CO2 to supply RuBisCO.", "grounding": "GO:0004089", "id": "carboxysomal_ca", "is_orphan": false, "label": "carboxysomal carbonic anhydrase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fce7f3", "description": "Bacterial microcompartment that encapsulates RuBisCO and carbonic anhydrase as part of the CO2-concentrating mechanism.", "grounding": "GO:0031470", "id": "carboxysome", "is_orphan": false, "label": "carboxysome", "node_type": "ORGANELLE", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Transcription of an operon encoding CBB-cycle CO2-fixation enzymes.", "grounding": null, "id": "cbb_operon", "is_orphan": false, "label": "cbb operon transcription", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#e0e7ff", "description": "Reductive pentose phosphate (Calvin-Benson-Bassham) cycle.", "grounding": "GO:0019253", "id": "cbb_pathway", "is_orphan": false, "label": "Calvin-Benson cycle", "node_type": "PATHWAY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Reductive pentose phosphate cycle that fixes CO2.", "grounding": "traitmech:000020", "id": "cbb_trait", "is_orphan": false, "label": "Calvin-Benson-Bassham cycle", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "LysR-type master transcriptional activator of bacterial cbb CO2-fixation operons.", "grounding": null, "id": "cbbr", "is_orphan": false, "label": "CbbR transcriptional regulator", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Dissipation of concentrated CO2 from the CCM, reducing carbon-fixation efficiency.", "grounding": null, "id": "co2_leakage", "is_orphan": false, "label": "CO2 leakage", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Non-vectorial cytosolic carbonic anhydrase whose activity can dissipate the CO2-concentrating mechanism.", "grounding": "GO:0004089", "id": "cytoplasmic_ca", "is_orphan": false, "label": "cytoplasmic carbonic anhydrase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Ribulose-1,5-bisphosphate carboxylase/oxygenase.", "grounding": "InterPro:IPR033966", "id": "rubisco", "is_orphan": false, "label": "RuBisCO", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 153, "evidence": [{"notes": "The strain-level perturbation study supports activity of both H16 CBB operons; UniProtKB P42721 identifies the reviewed plasmid cbbL2 large chain in that strain.", "reference": "DOI:10.1186/s12934-020-01494-y", "snippet": "both CBB operons were active and contributed almost equally to the carbon fixation process"}], "gene_symbol": "cbbL2", "protein_label": "Ribulose bisphosphate carboxylase large chain, plasmid", "retrieved_on": "2026-08-24", "role": "Large-chain component of the plasmid-encoded RuBisCO in one of the two active CBB operons of C. necator H16.", "sequence_version": 3, "taxon_id": "NCBITaxon:381666", "taxon_label": "Cupriavidus necator H16", "uniprot_id": "UniProtKB:P42721"}], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "CO2 acceptor substrate carboxylated by RuBisCO in the CBB cycle.", "grounding": null, "id": "rubp", "is_orphan": false, "label": "ribulose-1,5-bisphosphate", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Product of RuBisCO carboxylation of RuBP; first stable CBB intermediate.", "grounding": "CHEBI:17794", "id": "three_pga", "is_orphan": false, "label": "3-phospho-D-glycerate", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 153, "evidence": [{"notes": "The strain-level perturbation study supports activity of both H16 CBB operons; UniProtKB P42721 identifies the reviewed plasmid cbbL2 large chain in that strain.", "reference": "DOI:10.1186/s12934-020-01494-y", "snippet": "both CBB operons were active and contributed almost equally to the carbon fixation process"}], "gene_symbol": "cbbL2", "node_id": "rubisco", "node_label": "RuBisCO", "protein_label": "Ribulose bisphosphate carboxylase large chain, plasmid", "retrieved_on": "2026-08-24", "role": "Large-chain component of the plasmid-encoded RuBisCO in one of the two active CBB operons of C. necator H16.", "sequence_version": 3, "taxon_id": "NCBITaxon:381666", "taxon_label": "Cupriavidus necator H16", "uniprot_id": "UniProtKB:P42721"}], "scope_notes": "This is a composite bacterial CBB graph. The Cupriavidus example grounds the RuBisCO and cbb-regulatory branch, whereas carboxysome and carbonic-anhydrase edges describe source-backed cyanobacterial or other bacterial CO2-concentrating modules that are not asserted to occur in C. necator H16.", "scope_status": "MECHANISTIC", "title": "Calvin-Benson-Bassham cycle fixes CO2 via RuBisCO"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -1164,13 +1201,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-10-17 09:00 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

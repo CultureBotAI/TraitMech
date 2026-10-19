@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/genomics.html">GENOMICS</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/genomics.html">GENOMICS</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>Zorya system</h1>
     <p class="curie"><code>traitmech:000217</code> · CLASS · PROPOSED</p>
 
@@ -109,9 +120,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>Zorya locus</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>ZorAB ion-motor activation</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>Zorya loci encode the conserved ZorA and ZorB membrane core proteins that form the ZorAB motor.</p>
             <ul>
 
@@ -126,9 +139,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>phage invasion</strong>
+
             <span class="edge-predicate">activates</span>
             <strong>ZorAB ion-motor activation</strong>
-            <code>RO:0002213</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002213" rel="nofollow noreferrer"><code>RO:0002213</code></a>
             <p>Phage invasion activates the ZorAB ion motor after Zorya senses bacteriophage challenge.</p>
             <ul>
 
@@ -143,9 +158,11 @@
 
           <li id="pathograph-1-edge-3">
             <strong>ZorAB ion-motor activation</strong>
+
             <span class="edge-predicate">activates</span>
             <strong>Zorya effector activity</strong>
-            <code>RO:0002213</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002213" rel="nofollow noreferrer"><code>RO:0002213</code></a>
             <p>ZorAB motor activation recruits and activates subtype-specific Zorya effector proteins.</p>
             <ul>
 
@@ -166,9 +183,11 @@
 
           <li id="pathograph-1-edge-4">
             <strong>Zorya effector activity</strong>
+
             <span class="edge-predicate">mitigates</span>
             <strong>phage replication</strong>
-            <code>METPO:2007407</code>
+
+            <a href="https://w3id.org/metpo/2007407" rel="nofollow noreferrer"><code>METPO:2007407</code></a>
             <p>Zorya effector activity helps inhibit invading bacteriophages.</p>
             <ul>
 
@@ -183,9 +202,11 @@
 
           <li id="pathograph-1-edge-5">
             <strong>Zorya effector activity</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>Zorya system</strong>
-            <code>METPO:2007700</code>
+            <code>traitmech:000217</code>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>Zorya effector activity is the antiviral output that realizes the Zorya system defense phenotype.</p>
             <ul>
 
@@ -200,8 +221,10 @@
 
           <li id="pathograph-1-edge-6">
             <strong>Zorya system</strong>
+            <code>traitmech:000217</code>
             <span class="edge-predicate">is a</span>
             <strong>phage defense system</strong>
+            <code>traitmech:000209</code>
             <code>rdfs:subClassOf</code>
             <p>Zorya system possession is a phage-defense-system trait.</p>
             <ul>
@@ -348,11 +371,75 @@
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
 
-      <p class="no-match">No kg-microbe node embedding matched this record
-        in the 2026-04-25 deepwalk.</p>
+      <p class="match-method">Matched <strong>1</strong>
+        kg-microbe node
+        via <em>parent_proxy</em>.</p>
+      <ul class="kgm-nodes">
+
+        <li><code>METPO:1000188</code> <span class="dim-preview">[-0.956, -1.962, -3.148, +1.274, …]</span></li>
+
+      </ul>
+      <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
 
     </div>
 
+
+    <div class="card">
+      <h2>Nearest neighbors in embedding space</h2>
+      <p class="meta">Top-8 cosine-similar METPO traits
+        from the 2026-04-25 deepwalk (512-D).</p>
+      <ul class="nn-list">
+
+        <li>
+          <span class="nn-cat">upper</span>
+          <a href="../../traits/upper/quality.html">quality</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hna_system.html">Hna system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hma_system.html">Hma system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hesat_system.html">Hesat system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_08_system.html">HEC-08 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_07_system.html">HEC-07 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_06_system.html">HEC-06 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_05_system.html">HEC-05 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+      </ul>
+    </div>
 
 
 
@@ -520,6 +607,11 @@
     </dl>
   </div>
 
+
+  <div class="card rail-kgm">
+    <h2>kg-microbe</h2>
+    <p class="meta">1 matching node (parent_proxy)</p>
+  </div>
 
 </aside>
 </div>
@@ -853,7 +945,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed process sketch linking a Zorya locus to phage-triggered ZorAB ion-motor activation, effector recruitment, and inhibition of bacteriophage replication.", "edges": [{"description": "Zorya loci encode the conserved ZorA and ZorB membrane core proteins that form the ZorAB motor.", "evidence": [{"notes": "Mariano et al. support ZorA/ZorB as the conserved Zorya core proteins.", "reference": "DOI:10.1038/s41467-025-57397-2", "snippet": "all Zorya systems share two components, ZorA and ZorB, containing domains distantly related, respectively, to the MotA and MotB subunits of the bacterial flagellar motor"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "zorya_locus", "target": "zorab_ion_motor_activation"}, {"description": "Phage invasion activates the ZorAB ion motor after Zorya senses bacteriophage challenge.", "evidence": [{"notes": "Hu et al. support phage-invasion-dependent ZorAB activation.", "reference": "DOI:10.1038/s41586-024-08493-8", "snippet": "ZorAB operates as a proton-driven motor that becomes activated after sensing of phage invasion"}], "id": "edge-2", "is_orphan": false, "predicate": "activates", "predicate_id": "RO:0002213", "source": "phage_invasion", "target": "zorab_ion_motor_activation"}, {"description": "ZorAB motor activation recruits and activates subtype-specific Zorya effector proteins.", "evidence": [{"notes": "Hu et al. support ZorAB-mediated Type I ZorC/ZorD activation.", "reference": "DOI:10.1038/s41586-024-08493-8", "snippet": "ZorAB transfers the phage invasion signal through the ZorA cytoplasmic tail to recruit and activate the soluble ZorC and ZorD effectors"}, {"notes": "Mariano et al. support ZorAB-mediated recruitment of the Type II ZorE effector.", "reference": "DOI:10.1038/s41467-025-57397-2", "snippet": "For Zorya II, anti-phage activity requires the presence of the ZorE effector, which we show is recruited by ZorAB"}], "id": "edge-3", "is_orphan": false, "predicate": "activates", "predicate_id": "RO:0002213", "source": "zorab_ion_motor_activation", "target": "zorya_effector_activity"}, {"description": "Zorya effector activity helps inhibit invading bacteriophages.", "evidence": [{"notes": "Hu et al. support Type I ZorC/ZorD effectors as phage-DNA-degradation outputs.", "reference": "DOI:10.1038/s41586-024-08493-8", "snippet": "soluble ZorC and ZorD effectors, which facilitate the degradation of the phage DNA"}], "id": "edge-4", "is_orphan": false, "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "zorya_effector_activity", "target": "phage_replication"}, {"description": "Zorya effector activity is the antiviral output that realizes the Zorya system defense phenotype.", "evidence": [{"notes": "Mariano et al. support ZorE nickase activity as a Type II Zorya effector output.", "reference": "DOI:10.1038/s41467-025-57397-2", "snippet": "Our work reveals the molecular basis of the activity of Zorya systems and highlights the ZorE nickase as crucial for population-wide immunity in the type II system"}], "id": "edge-5", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "zorya_effector_activity", "target": "zorya_system_trait"}, {"description": "Zorya system possession is a phage-defense-system trait.", "evidence": [{"notes": "Mariano et al. place Zorya in the phage-defense-system family.", "reference": "DOI:10.1038/s41467-025-57397-2", "snippet": "The Zorya phage defense system was first discovered in 2018"}], "id": "edge-6", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "zorya_system_trait", "target": "phage_defense_system"}, {"description": "Endonuclease GajA (gajA, UniProtKB:P0DW47) contributes to Zorya system.", "evidence": [{"notes": "Supports the functional association between Endonuclease GajA (UniProtKB:P0DW47 in Bacillus cereus (strain HuB5-5)) and Zorya system.", "reference": "DOI:10.1038/s41467-025-57397-2", "snippet": "We observed that homologs of Zorya I from Serratia marcescens ATCC 274 and Zorya II from E. coli ATCC 8739 provide protection against several phages from the Durham collection"}], "id": "edge-7", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "zorya_system_protein_component", "target": "zorya_system_trait"}], "evidence_rows": [{"description": "Zorya loci encode the conserved ZorA and ZorB membrane core proteins that form the ZorAB motor.", "edge_id": "edge-1", "evidence": [{"notes": "Mariano et al. support ZorA/ZorB as the conserved Zorya core proteins.", "reference": "DOI:10.1038/s41467-025-57397-2", "snippet": "all Zorya systems share two components, ZorA and ZorB, containing domains distantly related, respectively, to the MotA and MotB subunits of the bacterial flagellar motor"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Zorya locus", "target": "ZorAB ion-motor activation"}, {"description": "Phage invasion activates the ZorAB ion motor after Zorya senses bacteriophage challenge.", "edge_id": "edge-2", "evidence": [{"notes": "Hu et al. support phage-invasion-dependent ZorAB activation.", "reference": "DOI:10.1038/s41586-024-08493-8", "snippet": "ZorAB operates as a proton-driven motor that becomes activated after sensing of phage invasion"}], "predicate": "activates", "predicate_id": "RO:0002213", "source": "phage invasion", "target": "ZorAB ion-motor activation"}, {"description": "ZorAB motor activation recruits and activates subtype-specific Zorya effector proteins.", "edge_id": "edge-3", "evidence": [{"notes": "Hu et al. support ZorAB-mediated Type I ZorC/ZorD activation.", "reference": "DOI:10.1038/s41586-024-08493-8", "snippet": "ZorAB transfers the phage invasion signal through the ZorA cytoplasmic tail to recruit and activate the soluble ZorC and ZorD effectors"}, {"notes": "Mariano et al. support ZorAB-mediated recruitment of the Type II ZorE effector.", "reference": "DOI:10.1038/s41467-025-57397-2", "snippet": "For Zorya II, anti-phage activity requires the presence of the ZorE effector, which we show is recruited by ZorAB"}], "predicate": "activates", "predicate_id": "RO:0002213", "source": "ZorAB ion-motor activation", "target": "Zorya effector activity"}, {"description": "Zorya effector activity helps inhibit invading bacteriophages.", "edge_id": "edge-4", "evidence": [{"notes": "Hu et al. support Type I ZorC/ZorD effectors as phage-DNA-degradation outputs.", "reference": "DOI:10.1038/s41586-024-08493-8", "snippet": "soluble ZorC and ZorD effectors, which facilitate the degradation of the phage DNA"}], "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "Zorya effector activity", "target": "phage replication"}, {"description": "Zorya effector activity is the antiviral output that realizes the Zorya system defense phenotype.", "edge_id": "edge-5", "evidence": [{"notes": "Mariano et al. support ZorE nickase activity as a Type II Zorya effector output.", "reference": "DOI:10.1038/s41467-025-57397-2", "snippet": "Our work reveals the molecular basis of the activity of Zorya systems and highlights the ZorE nickase as crucial for population-wide immunity in the type II system"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "Zorya effector activity", "target": "Zorya system"}, {"description": "Zorya system possession is a phage-defense-system trait.", "edge_id": "edge-6", "evidence": [{"notes": "Mariano et al. place Zorya in the phage-defense-system family.", "reference": "DOI:10.1038/s41467-025-57397-2", "snippet": "The Zorya phage defense system was first discovered in 2018"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "Zorya system", "target": "phage defense system"}, {"description": "Endonuclease GajA (gajA, UniProtKB:P0DW47) contributes to Zorya system.", "edge_id": "edge-7", "evidence": [{"notes": "Supports the functional association between Endonuclease GajA (UniProtKB:P0DW47 in Bacillus cereus (strain HuB5-5)) and Zorya system.", "reference": "DOI:10.1038/s41467-025-57397-2", "snippet": "We observed that homologs of Zorya I from Serratia marcescens ATCC 274 and Zorya II from E. coli ATCC 8739 provide protection against several phages from the Durham collection"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Endonuclease GajA", "target": "Zorya system"}], "graph_id": "zorya_zorab_effector_antiphage_defense", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Possession of one or more genome-encoded immune systems that inhibit bacteriophage infection.", "grounding": "traitmech:000209", "id": "phage_defense_system", "is_orphan": false, "label": "phage defense system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Entry of a bacteriophage and its nucleic acid into a bacterial host cell.", "grounding": null, "id": "phage_invasion", "is_orphan": false, "label": "phage invasion", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Replication of invading bacteriophage DNA after host-cell entry.", "grounding": null, "id": "phage_replication", "is_orphan": false, "label": "phage replication", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Activation of a membrane-anchored ZorA/ZorB ion-driven motor after detection of phage invasion.", "grounding": null, "id": "zorab_ion_motor_activation", "is_orphan": false, "label": "ZorAB ion-motor activation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Activity of ZorAB-coupled Zorya effector proteins such as Type I ZorC/ZorD or Type II ZorE.", "grounding": null, "id": "zorya_effector_activity", "is_orphan": false, "label": "Zorya effector activity", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "A Zorya antiphage defense locus encoding conserved ZorA/ZorB membrane core proteins and subtype-specific effector proteins.", "grounding": null, "id": "zorya_locus", "is_orphan": false, "label": "Zorya locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Protein component (Endonuclease GajA) associated with Zorya system.", "grounding": null, "id": "zorya_system_protein_component", "is_orphan": false, "label": "Endonuclease GajA", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 12, "evidence": [{"notes": "Supports Endonuclease GajA in Zorya system; UniProtKB:P0DW47 (gajA, Endonuclease GajA) in Bacillus cereus (strain HuB5-5) provides a verified protein exemplar.", "reference": "DOI:10.1038/s41467-025-57397-2", "snippet": "We observed that homologs of Zorya I from Serratia marcescens ATCC 274 and Zorya II from E. coli ATCC 8739 provide protection against several phages from the Durham collection"}], "gene_symbol": "gajA", "protein_label": "Endonuclease GajA", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (gajA, Endonuclease GajA) associated with Zorya system in Bacillus cereus (strain HuB5-5).", "sequence_version": 1, "taxon_id": "NCBITaxon:1053212", "taxon_label": "Bacillus cereus (strain HuB5-5)", "uniprot_id": "UniProtKB:P0DW47"}], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded Zorya antiphage defense locus.", "grounding": "traitmech:000217", "id": "zorya_system_trait", "is_orphan": false, "label": "Zorya system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 12, "evidence": [{"notes": "Supports Endonuclease GajA in Zorya system; UniProtKB:P0DW47 (gajA, Endonuclease GajA) in Bacillus cereus (strain HuB5-5) provides a verified protein exemplar.", "reference": "DOI:10.1038/s41467-025-57397-2", "snippet": "We observed that homologs of Zorya I from Serratia marcescens ATCC 274 and Zorya II from E. coli ATCC 8739 provide protection against several phages from the Durham collection"}], "gene_symbol": "gajA", "node_id": "zorya_system_protein_component", "node_label": "Endonuclease GajA", "protein_label": "Endonuclease GajA", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (gajA, Endonuclease GajA) associated with Zorya system in Bacillus cereus (strain HuB5-5).", "sequence_version": 1, "taxon_id": "NCBITaxon:1053212", "taxon_label": "Bacillus cereus (strain HuB5-5)", "uniprot_id": "UniProtKB:P0DW47"}], "scope_notes": "The graph captures characterized Type I ZorC/ZorD and Type II ZorE outputs without asserting one universal ZorAB-coupled effector, ion substrate, DNA target, cell-death pathway, Type III mechanism, or anti-Zorya-evasion mechanism across all Zorya loci.", "scope_status": "NONMECHANISTIC", "title": "Zorya ZorAB motors recruit antiphage effectors"}];
+  var graphs = [{"description": "Evidence-backed process sketch linking a Zorya locus to phage-triggered ZorAB ion-motor activation, effector recruitment, and inhibition of bacteriophage replication.", "edges": [{"description": "Zorya loci encode the conserved ZorA and ZorB membrane core proteins that form the ZorAB motor.", "evidence": [{"notes": "Mariano et al. support ZorA/ZorB as the conserved Zorya core proteins.", "reference": "DOI:10.1038/s41467-025-57397-2", "snippet": "all Zorya systems share two components, ZorA and ZorB, containing domains distantly related, respectively, to the MotA and MotB subunits of the bacterial flagellar motor"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "zorya_locus", "target": "zorab_ion_motor_activation"}, {"description": "Phage invasion activates the ZorAB ion motor after Zorya senses bacteriophage challenge.", "evidence": [{"notes": "Hu et al. support phage-invasion-dependent ZorAB activation.", "reference": "DOI:10.1038/s41586-024-08493-8", "snippet": "ZorAB operates as a proton-driven motor that becomes activated after sensing of phage invasion"}], "id": "edge-2", "is_orphan": false, "predicate": "activates", "predicate_id": "RO:0002213", "source": "phage_invasion", "target": "zorab_ion_motor_activation"}, {"description": "ZorAB motor activation recruits and activates subtype-specific Zorya effector proteins.", "evidence": [{"notes": "Hu et al. support ZorAB-mediated Type I ZorC/ZorD activation.", "reference": "DOI:10.1038/s41586-024-08493-8", "snippet": "ZorAB transfers the phage invasion signal through the ZorA cytoplasmic tail to recruit and activate the soluble ZorC and ZorD effectors"}, {"notes": "Mariano et al. support ZorAB-mediated recruitment of the Type II ZorE effector.", "reference": "DOI:10.1038/s41467-025-57397-2", "snippet": "For Zorya II, anti-phage activity requires the presence of the ZorE effector, which we show is recruited by ZorAB"}], "id": "edge-3", "is_orphan": false, "predicate": "activates", "predicate_id": "RO:0002213", "source": "zorab_ion_motor_activation", "target": "zorya_effector_activity"}, {"description": "Zorya effector activity helps inhibit invading bacteriophages.", "evidence": [{"notes": "Hu et al. support Type I ZorC/ZorD effectors as phage-DNA-degradation outputs.", "reference": "DOI:10.1038/s41586-024-08493-8", "snippet": "soluble ZorC and ZorD effectors, which facilitate the degradation of the phage DNA"}], "id": "edge-4", "is_orphan": false, "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "zorya_effector_activity", "target": "phage_replication"}, {"description": "Zorya effector activity is the antiviral output that realizes the Zorya system defense phenotype.", "evidence": [{"notes": "Mariano et al. support ZorE nickase activity as a Type II Zorya effector output.", "reference": "DOI:10.1038/s41467-025-57397-2", "snippet": "Our work reveals the molecular basis of the activity of Zorya systems and highlights the ZorE nickase as crucial for population-wide immunity in the type II system"}], "id": "edge-5", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "zorya_effector_activity", "target": "zorya_system_trait"}, {"description": "Zorya system possession is a phage-defense-system trait.", "evidence": [{"notes": "Mariano et al. place Zorya in the phage-defense-system family.", "reference": "DOI:10.1038/s41467-025-57397-2", "snippet": "The Zorya phage defense system was first discovered in 2018"}], "id": "edge-6", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "zorya_system_trait", "target": "phage_defense_system"}], "evidence_rows": [{"description": "Zorya loci encode the conserved ZorA and ZorB membrane core proteins that form the ZorAB motor.", "edge_id": "edge-1", "evidence": [{"notes": "Mariano et al. support ZorA/ZorB as the conserved Zorya core proteins.", "reference": "DOI:10.1038/s41467-025-57397-2", "snippet": "all Zorya systems share two components, ZorA and ZorB, containing domains distantly related, respectively, to the MotA and MotB subunits of the bacterial flagellar motor"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Zorya locus", "source_grounding": null, "target": "ZorAB ion-motor activation", "target_grounding": null}, {"description": "Phage invasion activates the ZorAB ion motor after Zorya senses bacteriophage challenge.", "edge_id": "edge-2", "evidence": [{"notes": "Hu et al. support phage-invasion-dependent ZorAB activation.", "reference": "DOI:10.1038/s41586-024-08493-8", "snippet": "ZorAB operates as a proton-driven motor that becomes activated after sensing of phage invasion"}], "predicate": "activates", "predicate_id": "RO:0002213", "source": "phage invasion", "source_grounding": null, "target": "ZorAB ion-motor activation", "target_grounding": null}, {"description": "ZorAB motor activation recruits and activates subtype-specific Zorya effector proteins.", "edge_id": "edge-3", "evidence": [{"notes": "Hu et al. support ZorAB-mediated Type I ZorC/ZorD activation.", "reference": "DOI:10.1038/s41586-024-08493-8", "snippet": "ZorAB transfers the phage invasion signal through the ZorA cytoplasmic tail to recruit and activate the soluble ZorC and ZorD effectors"}, {"notes": "Mariano et al. support ZorAB-mediated recruitment of the Type II ZorE effector.", "reference": "DOI:10.1038/s41467-025-57397-2", "snippet": "For Zorya II, anti-phage activity requires the presence of the ZorE effector, which we show is recruited by ZorAB"}], "predicate": "activates", "predicate_id": "RO:0002213", "source": "ZorAB ion-motor activation", "source_grounding": null, "target": "Zorya effector activity", "target_grounding": null}, {"description": "Zorya effector activity helps inhibit invading bacteriophages.", "edge_id": "edge-4", "evidence": [{"notes": "Hu et al. support Type I ZorC/ZorD effectors as phage-DNA-degradation outputs.", "reference": "DOI:10.1038/s41586-024-08493-8", "snippet": "soluble ZorC and ZorD effectors, which facilitate the degradation of the phage DNA"}], "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "Zorya effector activity", "source_grounding": null, "target": "phage replication", "target_grounding": null}, {"description": "Zorya effector activity is the antiviral output that realizes the Zorya system defense phenotype.", "edge_id": "edge-5", "evidence": [{"notes": "Mariano et al. support ZorE nickase activity as a Type II Zorya effector output.", "reference": "DOI:10.1038/s41467-025-57397-2", "snippet": "Our work reveals the molecular basis of the activity of Zorya systems and highlights the ZorE nickase as crucial for population-wide immunity in the type II system"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "Zorya effector activity", "source_grounding": null, "target": "Zorya system", "target_grounding": "traitmech:000217"}, {"description": "Zorya system possession is a phage-defense-system trait.", "edge_id": "edge-6", "evidence": [{"notes": "Mariano et al. place Zorya in the phage-defense-system family.", "reference": "DOI:10.1038/s41467-025-57397-2", "snippet": "The Zorya phage defense system was first discovered in 2018"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "Zorya system", "source_grounding": "traitmech:000217", "target": "phage defense system", "target_grounding": "traitmech:000209"}], "graph_id": "zorya_zorab_effector_antiphage_defense", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Possession of one or more genome-encoded immune systems that inhibit bacteriophage infection.", "grounding": "traitmech:000209", "id": "phage_defense_system", "is_orphan": false, "label": "phage defense system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Entry of a bacteriophage and its nucleic acid into a bacterial host cell.", "grounding": null, "id": "phage_invasion", "is_orphan": false, "label": "phage invasion", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Replication of invading bacteriophage DNA after host-cell entry.", "grounding": null, "id": "phage_replication", "is_orphan": false, "label": "phage replication", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Activation of a membrane-anchored ZorA/ZorB ion-driven motor after detection of phage invasion.", "grounding": null, "id": "zorab_ion_motor_activation", "is_orphan": false, "label": "ZorAB ion-motor activation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Activity of ZorAB-coupled Zorya effector proteins such as Type I ZorC/ZorD or Type II ZorE.", "grounding": null, "id": "zorya_effector_activity", "is_orphan": false, "label": "Zorya effector activity", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "A Zorya antiphage defense locus encoding conserved ZorA/ZorB membrane core proteins and subtype-specific effector proteins.", "grounding": null, "id": "zorya_locus", "is_orphan": false, "label": "Zorya locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded Zorya antiphage defense locus.", "grounding": "traitmech:000217", "id": "zorya_system_trait", "is_orphan": false, "label": "Zorya system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "The graph captures characterized Type I ZorC/ZorD and Type II ZorE outputs without asserting one universal ZorAB-coupled effector, ion substrate, DNA target, cell-death pathway, Type III mechanism, or anti-Zorya-evasion mechanism across all Zorya loci.", "scope_status": "NONMECHANISTIC", "title": "Zorya ZorAB motors recruit antiphage effectors"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -873,13 +965,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-10-17 09:00 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

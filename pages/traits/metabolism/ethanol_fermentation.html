@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/metabolism.html">METABOLISM</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/metabolism.html">METABOLISM</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>ethanol fermentation</h1>
     <p class="curie"><code>traitmech:000028</code> · CLASS · REVIEWED</p>
 
@@ -85,9 +96,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>ethanol fermentation</strong>
+            <code>traitmech:000028</code>
             <span class="edge-predicate">participates in</span>
             <strong>fermentation</strong>
-            <code>biolink:participates_in</code>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0006113" rel="nofollow noreferrer"><code>GO:0006113</code></a>
+            <a href="https://w3id.org/biolink/vocab/participates_in" rel="nofollow noreferrer"><code>biolink:participates_in</code></a>
             <p>Alcoholic fermentation is a class of fermentation metabolism.</p>
             <ul>
 
@@ -102,9 +115,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>ethanol fermentation</strong>
+            <code>traitmech:000028</code>
             <span class="edge-predicate">produces</span>
             <strong>ethanol</strong>
-            <code>METPO:2007800</code>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:16236" rel="nofollow noreferrer"><code>CHEBI:16236</code></a>
+            <a href="https://w3id.org/metpo/2007800" rel="nofollow noreferrer"><code>METPO:2007800</code></a>
             <p>Ethanol is the characteristic end product of the pathway.</p>
             <ul>
 
@@ -119,8 +134,10 @@
 
           <li id="pathograph-1-edge-3">
             <strong>pyruvate</strong>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:15361" rel="nofollow noreferrer"><code>CHEBI:15361</code></a>
             <span class="edge-predicate">is substrate for</span>
             <strong>pyruvate decarboxylase</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0004737" rel="nofollow noreferrer"><code>GO:0004737</code></a>
 
             <p>Pyruvate is decarboxylated by pyruvate decarboxylase to acetaldehyde + CO2.</p>
             <ul>
@@ -136,9 +153,11 @@
 
           <li id="pathograph-1-edge-4">
             <strong>pyruvate decarboxylase</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0004737" rel="nofollow noreferrer"><code>GO:0004737</code></a>
             <span class="edge-predicate">produces</span>
             <strong>acetaldehyde</strong>
-            <code>METPO:2007800</code>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:15343" rel="nofollow noreferrer"><code>CHEBI:15343</code></a>
+            <a href="https://w3id.org/metpo/2007800" rel="nofollow noreferrer"><code>METPO:2007800</code></a>
             <p>Pyruvate decarboxylase yields acetaldehyde from pyruvate.</p>
             <ul>
 
@@ -153,9 +172,11 @@
 
           <li id="pathograph-1-edge-5">
             <strong>pyruvate decarboxylase</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0004737" rel="nofollow noreferrer"><code>GO:0004737</code></a>
             <span class="edge-predicate">produces</span>
             <strong>carbon dioxide</strong>
-            <code>METPO:2007800</code>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:16526" rel="nofollow noreferrer"><code>CHEBI:16526</code></a>
+            <a href="https://w3id.org/metpo/2007800" rel="nofollow noreferrer"><code>METPO:2007800</code></a>
             <p>Decarboxylation of pyruvate releases CO2.</p>
             <ul>
 
@@ -170,8 +191,10 @@
 
           <li id="pathograph-1-edge-6">
             <strong>acetaldehyde</strong>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:15343" rel="nofollow noreferrer"><code>CHEBI:15343</code></a>
             <span class="edge-predicate">is substrate for</span>
             <strong>alcohol dehydrogenase</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0004022" rel="nofollow noreferrer"><code>GO:0004022</code></a>
 
             <p>Acetaldehyde is reduced to ethanol by alcohol dehydrogenase.</p>
             <ul>
@@ -187,9 +210,11 @@
 
           <li id="pathograph-1-edge-7">
             <strong>alcohol dehydrogenase</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0004022" rel="nofollow noreferrer"><code>GO:0004022</code></a>
             <span class="edge-predicate">produces</span>
             <strong>ethanol</strong>
-            <code>METPO:2007800</code>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:16236" rel="nofollow noreferrer"><code>CHEBI:16236</code></a>
+            <a href="https://w3id.org/metpo/2007800" rel="nofollow noreferrer"><code>METPO:2007800</code></a>
             <p>Alcohol dehydrogenase produces ethanol from acetaldehyde.</p>
             <ul>
 
@@ -204,9 +229,11 @@
 
           <li id="pathograph-1-edge-8">
             <strong>alcohol dehydrogenase</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0004022" rel="nofollow noreferrer"><code>GO:0004022</code></a>
             <span class="edge-predicate">consumes</span>
             <strong>NADH</strong>
-            <code>biolink:consumes</code>
+
+            <a href="https://w3id.org/biolink/vocab/consumes" rel="nofollow noreferrer"><code>biolink:consumes</code></a>
             <p>The ADH reduction step oxidizes NADH.</p>
             <ul>
 
@@ -221,9 +248,11 @@
 
           <li id="pathograph-1-edge-9">
             <strong>alcohol dehydrogenase</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0004022" rel="nofollow noreferrer"><code>GO:0004022</code></a>
             <span class="edge-predicate">produces</span>
             <strong>NAD+</strong>
-            <code>METPO:2007800</code>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:15846" rel="nofollow noreferrer"><code>CHEBI:15846</code></a>
+            <a href="https://w3id.org/metpo/2007800" rel="nofollow noreferrer"><code>METPO:2007800</code></a>
             <p>NAD+ is regenerated from NADH during ethanol formation, sustaining glycolysis.</p>
             <ul>
 
@@ -368,7 +397,7 @@
     <div class="card">
       <h2>Cross-references</h2>
       <ul class="xrefs">
-        <li><code>GO:0019655</code></li>
+        <li><a href="https://amigo.geneontology.org/amigo/term/GO:0019655" rel="nofollow noreferrer"><code>GO:0019655</code></a></li>
       </ul>
     </div>
 
@@ -397,7 +426,7 @@
 
         <li>
           <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/mixed_acid_fermentation.html">mixed-acid fermentation</a>
+          <a href="../../traits/metabolism/butanediol_fermentation.html">2,3-butanediol fermentation</a>
           <span class="sim">1.000</span>
         </li>
 
@@ -415,6 +444,12 @@
 
         <li>
           <span class="nn-cat">metabolism</span>
+          <a href="../../traits/metabolism/acetone_butanol_ethanol_fermentation.html">acetone-butanol-ethanol fermentation</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">metabolism</span>
           <a href="../../traits/metabolism/fermentation.html">Fermentation</a>
           <span class="sim">1.000</span>
         </li>
@@ -427,20 +462,14 @@
 
         <li>
           <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/respiration.html">respiration</a>
-          <span class="sim">0.644</span>
+          <a href="../../traits/metabolism/butyric_acid_fermentation.html">butyric acid fermentation</a>
+          <span class="sim">1.000</span>
         </li>
 
         <li>
           <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/anaerobic_respiration.html">Anaerobic respiration</a>
-          <span class="sim">0.600</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/anaerobic_oxidation_of_methane.html">anaerobic oxidation of methane</a>
-          <span class="sim">0.600</span>
+          <a href="../../traits/metabolism/citrate_fermentation.html">citrate fermentation</a>
+          <span class="sim">1.000</span>
         </li>
 
       </ul>
@@ -1038,7 +1067,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking pyruvate decarboxylation and NADH-driven ethanol production to NAD+ regeneration.", "edges": [{"description": "Alcoholic fermentation is a class of fermentation metabolism.", "evidence": [{"notes": "Energy-conservation review supports ethanol as an NADH-reoxidizing fermentation end product.", "reference": "DOI:10.3389/fmicb.2021.703525", "snippet": "fermentation is defined as an anaerobic bacterial redox process of an organic substrate leading to different products"}], "id": "edge-1", "is_orphan": false, "predicate": "participates in", "predicate_id": "biolink:participates_in", "source": "ethanol_fermentation_trait", "target": "fermentation_process"}, {"description": "Ethanol is the characteristic end product of the pathway.", "evidence": [{"notes": "Classical-fermentation review describes pyruvate decarboxylation and reduction to ethanol.", "reference": "DOI:10.3390/molecules31020333", "snippet": "sugars such as glucose, fructose, and sucrose are converted into ethyl alcohol (ethanol) and carbon dioxide"}], "id": "edge-2", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2007800", "source": "ethanol_fermentation_trait", "target": "ethanol"}, {"description": "Pyruvate is decarboxylated by pyruvate decarboxylase to acetaldehyde + CO2.", "evidence": [{"notes": "Pyruvate is decarboxylated to acetaldehyde by pyruvate decarboxylase (PDC), releasing CO2.", "reference": "DOI:10.5376/be.2024.14.0025", "snippet": "The decarboxylation of pyruvate to acetaldehyde is catalyzed by the enzyme pyruvate decarboxylase (PDC)"}], "id": "edge-3", "is_orphan": false, "predicate": "is substrate for", "predicate_id": null, "source": "pyruvate", "target": "pyruvate_decarboxylase"}, {"description": "Pyruvate decarboxylase yields acetaldehyde from pyruvate.", "evidence": [{"notes": "Pyruvate is decarboxylated to acetaldehyde by pyruvate decarboxylase (PDC).", "reference": "DOI:10.5376/be.2024.14.0025", "snippet": "converts pyruvate into acetaldehyde"}], "id": "edge-4", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2007800", "source": "pyruvate_decarboxylase", "target": "acetaldehyde"}, {"description": "Decarboxylation of pyruvate releases CO2.", "evidence": [{"notes": "Pyruvate is decarboxylated to acetaldehyde by pyruvate decarboxylase (PDC), releasing CO2.", "reference": "DOI:10.5376/be.2024.14.0025", "snippet": "This reaction releases one molecule of CO2"}], "id": "edge-5", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2007800", "source": "pyruvate_decarboxylase", "target": "carbon_dioxide"}, {"description": "Acetaldehyde is reduced to ethanol by alcohol dehydrogenase.", "evidence": [{"notes": "Acetaldehyde is reduced to ethanol by alcohol dehydrogenase (ADH).", "reference": "DOI:10.5376/be.2024.14.0025", "snippet": "reduction of acetaldehyde to ethanol, a reaction catalyzed by alcohol dehydrogenase (ADH)"}], "id": "edge-6", "is_orphan": false, "predicate": "is substrate for", "predicate_id": null, "source": "acetaldehyde", "target": "alcohol_dehydrogenase"}, {"description": "Alcohol dehydrogenase produces ethanol from acetaldehyde.", "evidence": [{"notes": "Acetaldehyde is reduced to ethanol by alcohol dehydrogenase (ADH).", "reference": "DOI:10.5376/be.2024.14.0025", "snippet": "The final step in ethanol fermentation involves the reduction of acetaldehyde to ethanol"}], "id": "edge-7", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2007800", "source": "alcohol_dehydrogenase", "target": "ethanol"}, {"description": "The ADH reduction step oxidizes NADH.", "evidence": [{"notes": "ADH reaction reoxidizes NADH, regenerating NAD+ to sustain glycolysis.", "reference": "DOI:10.5376/be.2024.14.0025", "snippet": "regenerates NAD+ from NADH"}], "id": "edge-8", "is_orphan": false, "predicate": "consumes", "predicate_id": "biolink:consumes", "source": "alcohol_dehydrogenase", "target": "nadh"}, {"description": "NAD+ is regenerated from NADH during ethanol formation, sustaining glycolysis.", "evidence": [{"notes": "Regenerating NAD+ from NADH to sustain glycolysis.", "reference": "DOI:10.5376/be.2024.14.0025", "snippet": "This step also regenerates NAD+ from NADH"}], "id": "edge-9", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2007800", "source": "alcohol_dehydrogenase", "target": "nad_plus"}], "evidence_rows": [{"description": "Alcoholic fermentation is a class of fermentation metabolism.", "edge_id": "edge-1", "evidence": [{"notes": "Energy-conservation review supports ethanol as an NADH-reoxidizing fermentation end product.", "reference": "DOI:10.3389/fmicb.2021.703525", "snippet": "fermentation is defined as an anaerobic bacterial redox process of an organic substrate leading to different products"}], "predicate": "participates in", "predicate_id": "biolink:participates_in", "source": "ethanol fermentation", "target": "fermentation"}, {"description": "Ethanol is the characteristic end product of the pathway.", "edge_id": "edge-2", "evidence": [{"notes": "Classical-fermentation review describes pyruvate decarboxylation and reduction to ethanol.", "reference": "DOI:10.3390/molecules31020333", "snippet": "sugars such as glucose, fructose, and sucrose are converted into ethyl alcohol (ethanol) and carbon dioxide"}], "predicate": "produces", "predicate_id": "METPO:2007800", "source": "ethanol fermentation", "target": "ethanol"}, {"description": "Pyruvate is decarboxylated by pyruvate decarboxylase to acetaldehyde + CO2.", "edge_id": "edge-3", "evidence": [{"notes": "Pyruvate is decarboxylated to acetaldehyde by pyruvate decarboxylase (PDC), releasing CO2.", "reference": "DOI:10.5376/be.2024.14.0025", "snippet": "The decarboxylation of pyruvate to acetaldehyde is catalyzed by the enzyme pyruvate decarboxylase (PDC)"}], "predicate": "is substrate for", "predicate_id": null, "source": "pyruvate", "target": "pyruvate decarboxylase"}, {"description": "Pyruvate decarboxylase yields acetaldehyde from pyruvate.", "edge_id": "edge-4", "evidence": [{"notes": "Pyruvate is decarboxylated to acetaldehyde by pyruvate decarboxylase (PDC).", "reference": "DOI:10.5376/be.2024.14.0025", "snippet": "converts pyruvate into acetaldehyde"}], "predicate": "produces", "predicate_id": "METPO:2007800", "source": "pyruvate decarboxylase", "target": "acetaldehyde"}, {"description": "Decarboxylation of pyruvate releases CO2.", "edge_id": "edge-5", "evidence": [{"notes": "Pyruvate is decarboxylated to acetaldehyde by pyruvate decarboxylase (PDC), releasing CO2.", "reference": "DOI:10.5376/be.2024.14.0025", "snippet": "This reaction releases one molecule of CO2"}], "predicate": "produces", "predicate_id": "METPO:2007800", "source": "pyruvate decarboxylase", "target": "carbon dioxide"}, {"description": "Acetaldehyde is reduced to ethanol by alcohol dehydrogenase.", "edge_id": "edge-6", "evidence": [{"notes": "Acetaldehyde is reduced to ethanol by alcohol dehydrogenase (ADH).", "reference": "DOI:10.5376/be.2024.14.0025", "snippet": "reduction of acetaldehyde to ethanol, a reaction catalyzed by alcohol dehydrogenase (ADH)"}], "predicate": "is substrate for", "predicate_id": null, "source": "acetaldehyde", "target": "alcohol dehydrogenase"}, {"description": "Alcohol dehydrogenase produces ethanol from acetaldehyde.", "edge_id": "edge-7", "evidence": [{"notes": "Acetaldehyde is reduced to ethanol by alcohol dehydrogenase (ADH).", "reference": "DOI:10.5376/be.2024.14.0025", "snippet": "The final step in ethanol fermentation involves the reduction of acetaldehyde to ethanol"}], "predicate": "produces", "predicate_id": "METPO:2007800", "source": "alcohol dehydrogenase", "target": "ethanol"}, {"description": "The ADH reduction step oxidizes NADH.", "edge_id": "edge-8", "evidence": [{"notes": "ADH reaction reoxidizes NADH, regenerating NAD+ to sustain glycolysis.", "reference": "DOI:10.5376/be.2024.14.0025", "snippet": "regenerates NAD+ from NADH"}], "predicate": "consumes", "predicate_id": "biolink:consumes", "source": "alcohol dehydrogenase", "target": "NADH"}, {"description": "NAD+ is regenerated from NADH during ethanol formation, sustaining glycolysis.", "edge_id": "edge-9", "evidence": [{"notes": "Regenerating NAD+ from NADH to sustain glycolysis.", "reference": "DOI:10.5376/be.2024.14.0025", "snippet": "This step also regenerates NAD+ from NADH"}], "predicate": "produces", "predicate_id": "METPO:2007800", "source": "alcohol dehydrogenase", "target": "NAD+"}], "graph_id": "ethanol_fermentation_pyruvate_to_ethanol", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Intermediate produced from pyruvate and reduced to ethanol.", "grounding": "CHEBI:15343", "id": "acetaldehyde", "is_orphan": false, "label": "acetaldehyde", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Enzyme (EC 1.1.1.1) reducing acetaldehyde to ethanol using NADH.", "grounding": "GO:0004022", "id": "alcohol_dehydrogenase", "is_orphan": false, "label": "alcohol dehydrogenase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 239, "evidence": [{"notes": "Supports alcohol dehydrogenase in ethanol fermentation; UniProtKB:P00330 (ADH1, Alcohol dehydrogenase 1) in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker\u0027s yeast) provides a verified protein exemplar.", "reference": "DOI:10.5376/be.2024.14.0025", "snippet": "reduction of acetaldehyde to ethanol, a reaction catalyzed by alcohol dehydrogenase (ADH)"}], "gene_symbol": "ADH1", "protein_label": "Alcohol dehydrogenase 1", "proteome_id": "UP000002311", "retrieved_on": "2026-10-17", "role": "Exemplar protein (ADH1, Alcohol dehydrogenase 1) representing alcohol dehydrogenase in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker\u0027s yeast) for ethanol fermentation.", "sequence_version": 5, "taxon_id": "NCBITaxon:559292", "taxon_label": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker\u0027s yeast)", "uniprot_id": "UniProtKB:P00330"}], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "CO2 released during pyruvate decarboxylation.", "grounding": "CHEBI:16526", "id": "carbon_dioxide", "is_orphan": false, "label": "carbon dioxide", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Reduced end product regenerating NAD+ from NADH.", "grounding": "CHEBI:16236", "id": "ethanol", "is_orphan": false, "label": "ethanol", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Alcoholic fermentation producing ethanol and CO2.", "grounding": "traitmech:000028", "id": "ethanol_fermentation_trait", "is_orphan": false, "label": "ethanol fermentation", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "ATP-yielding catabolism with organic terminal acceptors.", "grounding": "GO:0006113", "id": "fermentation_process", "is_orphan": false, "label": "fermentation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Oxidized cofactor regenerated to sustain glycolysis.", "grounding": "CHEBI:15846", "id": "nad_plus", "is_orphan": false, "label": "NAD+", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Reduced cofactor reoxidized during ethanol formation.", "grounding": null, "id": "nadh", "is_orphan": false, "label": "NADH", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Glycolytic end product decarboxylated in ethanol fermentation.", "grounding": "CHEBI:15361", "id": "pyruvate", "is_orphan": false, "label": "pyruvate", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Enzyme (EC 4.1.1.1) decarboxylating pyruvate to acetaldehyde and CO2.", "grounding": "GO:0004737", "id": "pyruvate_decarboxylase", "is_orphan": false, "label": "pyruvate decarboxylase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 174, "evidence": [{"notes": "The study used Z. mobilis ZM4 and experimentally controlled the native pdc gateway; UniProtKB P06672 verifies the protein identity and strain taxonomy.", "reference": "DOI:10.1186/s12934-024-02419-9", "snippet": "The key enzyme in the ethanol production pathway is the pyruvate decarboxylase"}], "gene_symbol": "pdc", "protein_label": "Pyruvate decarboxylase", "proteome_id": "UP000001173", "retrieved_on": "2026-08-23", "role": "Catalyzes the gateway decarboxylation of pyruvate to acetaldehyde in the ethanol-production pathway; this accession is a protein instance, not the taxon-agnostic grounding for the node.", "sequence_version": 1, "taxon_id": "NCBITaxon:264203", "taxon_label": "Zymomonas mobilis subsp. mobilis ZM4", "uniprot_id": "UniProtKB:P06672"}], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 174, "evidence": [{"notes": "The study used Z. mobilis ZM4 and experimentally controlled the native pdc gateway; UniProtKB P06672 verifies the protein identity and strain taxonomy.", "reference": "DOI:10.1186/s12934-024-02419-9", "snippet": "The key enzyme in the ethanol production pathway is the pyruvate decarboxylase"}], "gene_symbol": "pdc", "node_id": "pyruvate_decarboxylase", "node_label": "pyruvate decarboxylase", "protein_label": "Pyruvate decarboxylase", "proteome_id": "UP000001173", "retrieved_on": "2026-08-23", "role": "Catalyzes the gateway decarboxylation of pyruvate to acetaldehyde in the ethanol-production pathway; this accession is a protein instance, not the taxon-agnostic grounding for the node.", "sequence_version": 1, "taxon_id": "NCBITaxon:264203", "taxon_label": "Zymomonas mobilis subsp. mobilis ZM4", "uniprot_id": "UniProtKB:P06672"}, {"entry_status": "REVIEWED", "entry_version": 239, "evidence": [{"notes": "Supports alcohol dehydrogenase in ethanol fermentation; UniProtKB:P00330 (ADH1, Alcohol dehydrogenase 1) in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker\u0027s yeast) provides a verified protein exemplar.", "reference": "DOI:10.5376/be.2024.14.0025", "snippet": "reduction of acetaldehyde to ethanol, a reaction catalyzed by alcohol dehydrogenase (ADH)"}], "gene_symbol": "ADH1", "node_id": "alcohol_dehydrogenase", "node_label": "alcohol dehydrogenase", "protein_label": "Alcohol dehydrogenase 1", "proteome_id": "UP000002311", "retrieved_on": "2026-10-17", "role": "Exemplar protein (ADH1, Alcohol dehydrogenase 1) representing alcohol dehydrogenase in Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker\u0027s yeast) for ethanol fermentation.", "sequence_version": 5, "taxon_id": "NCBITaxon:559292", "taxon_label": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker\u0027s yeast)", "uniprot_id": "UniProtKB:P00330"}], "scope_notes": "Retains the two directly catalyzed steps from pyruvate to ethanol and their redox consequence; the protein exemplar is restricted to the PDC step demonstrated in Z. mobilis ZM4.", "scope_status": "MECHANISTIC", "title": "Ethanol (alcoholic) fermentation converts pyruvate to ethanol + CO2"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking pyruvate decarboxylation and NADH-driven ethanol production to NAD+ regeneration.", "edges": [{"description": "Alcoholic fermentation is a class of fermentation metabolism.", "evidence": [{"notes": "Energy-conservation review supports ethanol as an NADH-reoxidizing fermentation end product.", "reference": "DOI:10.3389/fmicb.2021.703525", "snippet": "fermentation is defined as an anaerobic bacterial redox process of an organic substrate leading to different products"}], "id": "edge-1", "is_orphan": false, "predicate": "participates in", "predicate_id": "biolink:participates_in", "source": "ethanol_fermentation_trait", "target": "fermentation_process"}, {"description": "Ethanol is the characteristic end product of the pathway.", "evidence": [{"notes": "Classical-fermentation review describes pyruvate decarboxylation and reduction to ethanol.", "reference": "DOI:10.3390/molecules31020333", "snippet": "sugars such as glucose, fructose, and sucrose are converted into ethyl alcohol (ethanol) and carbon dioxide"}], "id": "edge-2", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2007800", "source": "ethanol_fermentation_trait", "target": "ethanol"}, {"description": "Pyruvate is decarboxylated by pyruvate decarboxylase to acetaldehyde + CO2.", "evidence": [{"notes": "Pyruvate is decarboxylated to acetaldehyde by pyruvate decarboxylase (PDC), releasing CO2.", "reference": "DOI:10.5376/be.2024.14.0025", "snippet": "The decarboxylation of pyruvate to acetaldehyde is catalyzed by the enzyme pyruvate decarboxylase (PDC)"}], "id": "edge-3", "is_orphan": false, "predicate": "is substrate for", "predicate_id": null, "source": "pyruvate", "target": "pyruvate_decarboxylase"}, {"description": "Pyruvate decarboxylase yields acetaldehyde from pyruvate.", "evidence": [{"notes": "Pyruvate is decarboxylated to acetaldehyde by pyruvate decarboxylase (PDC).", "reference": "DOI:10.5376/be.2024.14.0025", "snippet": "converts pyruvate into acetaldehyde"}], "id": "edge-4", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2007800", "source": "pyruvate_decarboxylase", "target": "acetaldehyde"}, {"description": "Decarboxylation of pyruvate releases CO2.", "evidence": [{"notes": "Pyruvate is decarboxylated to acetaldehyde by pyruvate decarboxylase (PDC), releasing CO2.", "reference": "DOI:10.5376/be.2024.14.0025", "snippet": "This reaction releases one molecule of CO2"}], "id": "edge-5", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2007800", "source": "pyruvate_decarboxylase", "target": "carbon_dioxide"}, {"description": "Acetaldehyde is reduced to ethanol by alcohol dehydrogenase.", "evidence": [{"notes": "Acetaldehyde is reduced to ethanol by alcohol dehydrogenase (ADH).", "reference": "DOI:10.5376/be.2024.14.0025", "snippet": "reduction of acetaldehyde to ethanol, a reaction catalyzed by alcohol dehydrogenase (ADH)"}], "id": "edge-6", "is_orphan": false, "predicate": "is substrate for", "predicate_id": null, "source": "acetaldehyde", "target": "alcohol_dehydrogenase"}, {"description": "Alcohol dehydrogenase produces ethanol from acetaldehyde.", "evidence": [{"notes": "Acetaldehyde is reduced to ethanol by alcohol dehydrogenase (ADH).", "reference": "DOI:10.5376/be.2024.14.0025", "snippet": "The final step in ethanol fermentation involves the reduction of acetaldehyde to ethanol"}], "id": "edge-7", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2007800", "source": "alcohol_dehydrogenase", "target": "ethanol"}, {"description": "The ADH reduction step oxidizes NADH.", "evidence": [{"notes": "ADH reaction reoxidizes NADH, regenerating NAD+ to sustain glycolysis.", "reference": "DOI:10.5376/be.2024.14.0025", "snippet": "regenerates NAD+ from NADH"}], "id": "edge-8", "is_orphan": false, "predicate": "consumes", "predicate_id": "biolink:consumes", "source": "alcohol_dehydrogenase", "target": "nadh"}, {"description": "NAD+ is regenerated from NADH during ethanol formation, sustaining glycolysis.", "evidence": [{"notes": "Regenerating NAD+ from NADH to sustain glycolysis.", "reference": "DOI:10.5376/be.2024.14.0025", "snippet": "This step also regenerates NAD+ from NADH"}], "id": "edge-9", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2007800", "source": "alcohol_dehydrogenase", "target": "nad_plus"}], "evidence_rows": [{"description": "Alcoholic fermentation is a class of fermentation metabolism.", "edge_id": "edge-1", "evidence": [{"notes": "Energy-conservation review supports ethanol as an NADH-reoxidizing fermentation end product.", "reference": "DOI:10.3389/fmicb.2021.703525", "snippet": "fermentation is defined as an anaerobic bacterial redox process of an organic substrate leading to different products"}], "predicate": "participates in", "predicate_id": "biolink:participates_in", "source": "ethanol fermentation", "source_grounding": "traitmech:000028", "target": "fermentation", "target_grounding": "GO:0006113"}, {"description": "Ethanol is the characteristic end product of the pathway.", "edge_id": "edge-2", "evidence": [{"notes": "Classical-fermentation review describes pyruvate decarboxylation and reduction to ethanol.", "reference": "DOI:10.3390/molecules31020333", "snippet": "sugars such as glucose, fructose, and sucrose are converted into ethyl alcohol (ethanol) and carbon dioxide"}], "predicate": "produces", "predicate_id": "METPO:2007800", "source": "ethanol fermentation", "source_grounding": "traitmech:000028", "target": "ethanol", "target_grounding": "CHEBI:16236"}, {"description": "Pyruvate is decarboxylated by pyruvate decarboxylase to acetaldehyde + CO2.", "edge_id": "edge-3", "evidence": [{"notes": "Pyruvate is decarboxylated to acetaldehyde by pyruvate decarboxylase (PDC), releasing CO2.", "reference": "DOI:10.5376/be.2024.14.0025", "snippet": "The decarboxylation of pyruvate to acetaldehyde is catalyzed by the enzyme pyruvate decarboxylase (PDC)"}], "predicate": "is substrate for", "predicate_id": null, "source": "pyruvate", "source_grounding": "CHEBI:15361", "target": "pyruvate decarboxylase", "target_grounding": "GO:0004737"}, {"description": "Pyruvate decarboxylase yields acetaldehyde from pyruvate.", "edge_id": "edge-4", "evidence": [{"notes": "Pyruvate is decarboxylated to acetaldehyde by pyruvate decarboxylase (PDC).", "reference": "DOI:10.5376/be.2024.14.0025", "snippet": "converts pyruvate into acetaldehyde"}], "predicate": "produces", "predicate_id": "METPO:2007800", "source": "pyruvate decarboxylase", "source_grounding": "GO:0004737", "target": "acetaldehyde", "target_grounding": "CHEBI:15343"}, {"description": "Decarboxylation of pyruvate releases CO2.", "edge_id": "edge-5", "evidence": [{"notes": "Pyruvate is decarboxylated to acetaldehyde by pyruvate decarboxylase (PDC), releasing CO2.", "reference": "DOI:10.5376/be.2024.14.0025", "snippet": "This reaction releases one molecule of CO2"}], "predicate": "produces", "predicate_id": "METPO:2007800", "source": "pyruvate decarboxylase", "source_grounding": "GO:0004737", "target": "carbon dioxide", "target_grounding": "CHEBI:16526"}, {"description": "Acetaldehyde is reduced to ethanol by alcohol dehydrogenase.", "edge_id": "edge-6", "evidence": [{"notes": "Acetaldehyde is reduced to ethanol by alcohol dehydrogenase (ADH).", "reference": "DOI:10.5376/be.2024.14.0025", "snippet": "reduction of acetaldehyde to ethanol, a reaction catalyzed by alcohol dehydrogenase (ADH)"}], "predicate": "is substrate for", "predicate_id": null, "source": "acetaldehyde", "source_grounding": "CHEBI:15343", "target": "alcohol dehydrogenase", "target_grounding": "GO:0004022"}, {"description": "Alcohol dehydrogenase produces ethanol from acetaldehyde.", "edge_id": "edge-7", "evidence": [{"notes": "Acetaldehyde is reduced to ethanol by alcohol dehydrogenase (ADH).", "reference": "DOI:10.5376/be.2024.14.0025", "snippet": "The final step in ethanol fermentation involves the reduction of acetaldehyde to ethanol"}], "predicate": "produces", "predicate_id": "METPO:2007800", "source": "alcohol dehydrogenase", "source_grounding": "GO:0004022", "target": "ethanol", "target_grounding": "CHEBI:16236"}, {"description": "The ADH reduction step oxidizes NADH.", "edge_id": "edge-8", "evidence": [{"notes": "ADH reaction reoxidizes NADH, regenerating NAD+ to sustain glycolysis.", "reference": "DOI:10.5376/be.2024.14.0025", "snippet": "regenerates NAD+ from NADH"}], "predicate": "consumes", "predicate_id": "biolink:consumes", "source": "alcohol dehydrogenase", "source_grounding": "GO:0004022", "target": "NADH", "target_grounding": null}, {"description": "NAD+ is regenerated from NADH during ethanol formation, sustaining glycolysis.", "edge_id": "edge-9", "evidence": [{"notes": "Regenerating NAD+ from NADH to sustain glycolysis.", "reference": "DOI:10.5376/be.2024.14.0025", "snippet": "This step also regenerates NAD+ from NADH"}], "predicate": "produces", "predicate_id": "METPO:2007800", "source": "alcohol dehydrogenase", "source_grounding": "GO:0004022", "target": "NAD+", "target_grounding": "CHEBI:15846"}], "graph_id": "ethanol_fermentation_pyruvate_to_ethanol", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Intermediate produced from pyruvate and reduced to ethanol.", "grounding": "CHEBI:15343", "id": "acetaldehyde", "is_orphan": false, "label": "acetaldehyde", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Enzyme (EC 1.1.1.1) reducing acetaldehyde to ethanol using NADH.", "grounding": "GO:0004022", "id": "alcohol_dehydrogenase", "is_orphan": false, "label": "alcohol dehydrogenase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "CO2 released during pyruvate decarboxylation.", "grounding": "CHEBI:16526", "id": "carbon_dioxide", "is_orphan": false, "label": "carbon dioxide", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Reduced end product regenerating NAD+ from NADH.", "grounding": "CHEBI:16236", "id": "ethanol", "is_orphan": false, "label": "ethanol", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Alcoholic fermentation producing ethanol and CO2.", "grounding": "traitmech:000028", "id": "ethanol_fermentation_trait", "is_orphan": false, "label": "ethanol fermentation", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "ATP-yielding catabolism with organic terminal acceptors.", "grounding": "GO:0006113", "id": "fermentation_process", "is_orphan": false, "label": "fermentation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Oxidized cofactor regenerated to sustain glycolysis.", "grounding": "CHEBI:15846", "id": "nad_plus", "is_orphan": false, "label": "NAD+", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Reduced cofactor reoxidized during ethanol formation.", "grounding": null, "id": "nadh", "is_orphan": false, "label": "NADH", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Glycolytic end product decarboxylated in ethanol fermentation.", "grounding": "CHEBI:15361", "id": "pyruvate", "is_orphan": false, "label": "pyruvate", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Enzyme (EC 4.1.1.1) decarboxylating pyruvate to acetaldehyde and CO2.", "grounding": "GO:0004737", "id": "pyruvate_decarboxylase", "is_orphan": false, "label": "pyruvate decarboxylase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 173, "evidence": [{"notes": "The study used Z. mobilis ZM4 and experimentally controlled the native pdc gateway; UniProtKB P06672 verifies the protein identity and strain taxonomy.", "reference": "DOI:10.1186/s12934-024-02419-9", "snippet": "The key enzyme in the ethanol production pathway is the pyruvate decarboxylase"}], "gene_symbol": "pdc", "protein_label": "Pyruvate decarboxylase", "proteome_id": "UP000001173", "retrieved_on": "2026-08-23", "role": "Catalyzes the gateway decarboxylation of pyruvate to acetaldehyde in the ethanol-production pathway; this accession is a protein instance, not the taxon-agnostic grounding for the node.", "sequence_version": 1, "taxon_id": "NCBITaxon:264203", "taxon_label": "Zymomonas mobilis subsp. mobilis ZM4", "uniprot_id": "UniProtKB:P06672"}], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 173, "evidence": [{"notes": "The study used Z. mobilis ZM4 and experimentally controlled the native pdc gateway; UniProtKB P06672 verifies the protein identity and strain taxonomy.", "reference": "DOI:10.1186/s12934-024-02419-9", "snippet": "The key enzyme in the ethanol production pathway is the pyruvate decarboxylase"}], "gene_symbol": "pdc", "node_id": "pyruvate_decarboxylase", "node_label": "pyruvate decarboxylase", "protein_label": "Pyruvate decarboxylase", "proteome_id": "UP000001173", "retrieved_on": "2026-08-23", "role": "Catalyzes the gateway decarboxylation of pyruvate to acetaldehyde in the ethanol-production pathway; this accession is a protein instance, not the taxon-agnostic grounding for the node.", "sequence_version": 1, "taxon_id": "NCBITaxon:264203", "taxon_label": "Zymomonas mobilis subsp. mobilis ZM4", "uniprot_id": "UniProtKB:P06672"}], "scope_notes": "Retains the two directly catalyzed steps from pyruvate to ethanol and their redox consequence; the protein exemplar is restricted to the PDC step demonstrated in Z. mobilis ZM4.", "scope_status": "MECHANISTIC", "title": "Ethanol (alcoholic) fermentation converts pyruvate to ethanol + CO2"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -1058,13 +1087,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-10-17 09:00 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

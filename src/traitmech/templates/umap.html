@@ -8,9 +8,12 @@
     Hover for label, click to open the trait page.</p>
 </header>
 
+<div class="browse-layout">
+<aside class="facets facet-sidebar" id="facet-panel" aria-label="Filter points"></aside>
+<div class="browse-main">
 <section class="umap-controls">
-  <label>Search
-    <input type="search" id="search-input" disabled placeholder="label or CURIE…">
+  <label class="umap-search-label">Search
+    <input type="search" id="search-input" disabled placeholder="Search by label or CURIE…">
   </label>
   <span class="meta" id="visible-count">Loading…</span>
 </section>
@@ -19,8 +22,6 @@
 <button id="map-retry" type="button" hidden>Retry loading map</button>
 <div id="umap-plot"></div>
 <div id="umap-tooltip" class="umap-tooltip"></div>
-
-<div class="facets" id="facet-panel"></div>
 
 <details class="data-table-details">
   <summary>View data as table</summary>
@@ -32,6 +33,8 @@
     </table>
   </div>
 </details>
+</div>
+</div>
 
 <script src="{{ root }}d3.v7.min.js"></script>
 <script>
@@ -51,12 +54,15 @@ function loadMap() {
         !Number.isFinite(p.umap_x) || !Number.isFinite(p.umap_y))) {
       throw new Error("Invalid map data");
     }
-    const W = Math.min(1100, window.innerWidth - 40);
+    const plotEl = document.getElementById("umap-plot");
+    const W = Math.max(520, Math.min(820, (plotEl.clientWidth || 820) - 16));
     const H = 640;
     const margin = { top: 20, right: 20, bottom: 30, left: 30 };
 
     const svg = d3.select("#umap-plot").append("svg")
-      .attr("width", W).attr("height", H);
+      .attr("width", W).attr("height", H)
+      .attr("viewBox", "0 0 " + W + " " + H)
+      .style("width", "100%").style("height", "auto");
     const g = svg.append("g")
       .attr("transform", `translate(${margin.left},${margin.top})`);
 
@@ -67,6 +73,12 @@ function loadMap() {
 
     const cats = Array.from(new Set(points.map(d => d.category))).sort();
     const color = d3.scaleOrdinal().domain(cats).range(d3.schemeTableau10);
+
+    function esc(s) {
+      return String(s == null ? "" : s)
+        .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;").replace(/'/g, "&#39;");
+    }
 
     const tooltip = d3.select("#umap-tooltip");
 
@@ -79,7 +91,7 @@ function loadMap() {
       .style("cursor", "pointer")
       .on("mouseover", (e, d) => {
         tooltip.style("display", "block")
-          .html(`<strong>${d.label}</strong><br><span class="muted">${d.id} · ${d.category}</span>`);
+          .html(`<strong>${esc(d.label)}</strong><br><span class="muted">${esc(d.id)} · ${esc(d.category)}</span>`);
       })
       .on("mousemove", (e) => {
         tooltip.style("left", (e.pageX + 10) + "px").style("top", (e.pageY - 28) + "px");
@@ -105,7 +117,7 @@ function loadMap() {
           .text(`${cat} (${points.filter(p => p.category === cat).length})`);
       });
 
-    // --- Facet panel (below the plot): the single category filter ---
+    // --- Left-hand facet sidebar: the single category filter ---
     const activeCategories = new Set(cats);  // all checked initially
     const facetCat = d => (d.category ?? "") === "" ? "—" : d.category;
 
@@ -123,7 +135,7 @@ function loadMap() {
       Object.keys(counts).sort().forEach(v => {
         const lab = document.createElement("label");
         lab.className = "facet-opt";
-        lab.innerHTML = `<input type="checkbox" checked><span>${v}</span><span class="cnt">${counts[v].toLocaleString()}</span>`;
+        lab.innerHTML = `<input type="checkbox" checked><span>${esc(v)}</span><span class="cnt">${counts[v].toLocaleString()}</span>`;
         lab.querySelector("input").addEventListener("change", (e) => {
           if (e.target.checked) activeCategories.add(v); else activeCategories.delete(v);
           update();
@@ -140,7 +152,12 @@ function loadMap() {
 
     // Category facets and text search compose.
     function update() {
-      const q = document.getElementById("search-input").value.toLowerCase().trim();
+      const searchEl = document.getElementById("search-input");
+      const q = searchEl.value.toLowerCase().trim();
+      const url = new URL(window.location.href);
+      if (q) url.searchParams.set("q", searchEl.value.trim());
+      else url.searchParams.delete("q");
+      history.replaceState(null, "", url);
       let visible = 0;
       dots.each(function(d) {
         const pass = activeCategories.has(facetCat(d)) &&
@@ -148,21 +165,20 @@ function loadMap() {
         if (pass) visible++;
         d3.select(this)
           .style("display", activeCategories.has(facetCat(d)) ? null : "none")
+          .style("pointer-events", pass ? "auto" : "none")
           .attr("opacity", pass ? 0.78 : 0.05);
       });
       document.getElementById("visible-count").textContent = `${visible} visible`;
       const fc = document.getElementById("facet-count");
       if (fc) fc.textContent = points.filter(d => activeCategories.has(facetCat(d))).length.toLocaleString();
     }
+    const initQ = new URLSearchParams(window.location.search).get("q") || "";
+    if (initQ) document.getElementById("search-input").value = initQ;
     document.getElementById("search-input").oninput = update;
     buildFacets();
     update();
 
     // --- Data-table fallback: same points as the plot, keyboard-reachable ---
-    function esc(s) {
-      return String(s == null ? "" : s)
-        .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-    }
     function buildDataTable() {
       const tbody = document.querySelector("#data-table tbody");
       if (!tbody) return;

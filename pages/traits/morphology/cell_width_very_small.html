@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/morphology.html">MORPHOLOGY</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/morphology.html">MORPHOLOGY</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>cell width very small</h1>
     <p class="curie"><code>METPO:1000887</code> · CLASS · REVIEWED</p>
 
@@ -79,9 +90,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>oligotrophic environment</strong>
+
             <span class="edge-predicate">regulates</span>
             <strong>streamlining selection</strong>
-            <code>RO:0002211</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002211" rel="nofollow noreferrer"><code>RO:0002211</code></a>
             <p>Persistent oligotrophy selects for streamlined narrow cells.</p>
             <ul>
 
@@ -96,9 +109,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>streamlining selection</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>cell width very small</strong>
-            <code>METPO:2007700</code>
+            <a href="https://w3id.org/metpo/1000887" rel="nofollow noreferrer"><code>METPO:1000887</code></a>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>Streamlining selection produces very narrow rods.</p>
             <ul>
 
@@ -113,8 +128,10 @@
 
           <li id="pathograph-1-edge-3">
             <strong>cell width very small</strong>
+            <a href="https://w3id.org/metpo/1000887" rel="nofollow noreferrer"><code>METPO:1000887</code></a>
             <span class="edge-predicate">is a</span>
             <strong>cell width</strong>
+            <a href="https://w3id.org/metpo/1000882" rel="nofollow noreferrer"><code>METPO:1000882</code></a>
             <code>rdfs:subClassOf</code>
             <p>Very small cell width is a quantitative bin of the cell-width phenotype.</p>
             <ul>
@@ -130,9 +147,11 @@
 
           <li id="pathograph-1-edge-4">
             <strong>high surface-to-volume ratio</strong>
+
             <span class="edge-predicate">increases</span>
             <strong>nutrient uptake efficiency</strong>
-            <code>RO:0002213</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002213" rel="nofollow noreferrer"><code>RO:0002213</code></a>
             <p>High surface-to-volume ratio of narrow cells improves nutrient uptake efficiency.</p>
             <ul>
 
@@ -147,8 +166,10 @@
 
           <li id="pathograph-1-edge-5">
             <strong>small-cell bacteria</strong>
+
             <span class="edge-predicate">adapted to</span>
             <strong>oligotrophic waters</strong>
+
 
             <p>Small-cell bacteria with very narrow widths are adapted to oligotrophic waters.</p>
             <ul>
@@ -164,9 +185,11 @@
 
           <li id="pathograph-1-edge-6">
             <strong>reduced genome size</strong>
+
             <span class="edge-predicate">associated with</span>
             <strong>streamlining selection</strong>
-            <code>biolink:associated_with</code>
+
+            <a href="https://w3id.org/biolink/vocab/associated_with" rel="nofollow noreferrer"><code>biolink:associated_with</code></a>
             <p>Reduced genome size is associated with streamlining in oligotrophic lineages.</p>
             <ul>
 
@@ -181,9 +204,11 @@
 
           <li id="pathograph-1-edge-7">
             <strong>Rod complex</strong>
+
             <span class="edge-predicate">decreases</span>
             <strong>cell width</strong>
-            <code>RO:0002212</code>
+            <a href="https://w3id.org/metpo/1000882" rel="nofollow noreferrer"><code>METPO:1000882</code></a>
+            <a href="http://purl.obolibrary.org/obo/RO_0002212" rel="nofollow noreferrer"><code>RO:0002212</code></a>
             <p>Rod-complex-mediated organized circumferential PG insertion reduces cell width (rod-shaped bacteria).</p>
             <ul>
 
@@ -198,9 +223,11 @@
 
           <li id="pathograph-1-edge-8">
             <strong>class A penicillin-binding proteins</strong>
+
             <span class="edge-predicate">increases</span>
             <strong>cell width</strong>
-            <code>RO:0002213</code>
+            <a href="https://w3id.org/metpo/1000882" rel="nofollow noreferrer"><code>METPO:1000882</code></a>
+            <a href="http://purl.obolibrary.org/obo/RO_0002213" rel="nofollow noreferrer"><code>RO:0002213</code></a>
             <p>aPBP-mediated isotropic PG insertion enlarges the cell cylinder, increasing width.</p>
             <ul>
 
@@ -967,7 +994,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking nutrient streamlining to a very-narrow rod radius (\u22640.5 \u03bcm).", "edges": [{"description": "Persistent oligotrophy selects for streamlined narrow cells.", "evidence": [{"notes": "Supports oligotrophic regimes as drivers of cell-width reduction.", "reference": "DOI:10.1038/ismej.2014.60", "snippet": "small cells and genomes"}], "id": "edge-1", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "oligotrophic_environment", "target": "streamlining_selection"}, {"description": "Streamlining selection produces very narrow rods.", "evidence": [{"notes": "Supports very narrow width as an outcome of streamlining selection.", "reference": "DOI:10.1038/ismej.2014.60", "snippet": "small cells"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "streamlining_selection", "target": "cell_width_very_small_trait"}, {"description": "Very small cell width is a quantitative bin of the cell-width phenotype.", "evidence": [{"notes": "Supports very narrow width as a value within the regulated cell-width distribution.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "MreB-directed peptidoglycan synthesis"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "cell_width_very_small_trait", "target": "cell_width_trait"}, {"description": "High surface-to-volume ratio of narrow cells improves nutrient uptake efficiency.", "evidence": [{"notes": "Thanks to their high surface-to-volume ratio, small-cell bacteria absorb nutrients most efficiently.", "reference": "DOI:10.31951/2658-3518-2024-a-4-795"}], "id": "edge-4", "is_orphan": false, "predicate": "increases", "predicate_id": "RO:0002213", "source": "high_surface_to_volume_ratio", "target": "nutrient_uptake_efficiency"}, {"description": "Small-cell bacteria with very narrow widths are adapted to oligotrophic waters.", "evidence": [{"notes": "Especially important in oligotrophic water bodies with low organic matter concentrations.", "reference": "DOI:10.31951/2658-3518-2024-a-4-795"}], "id": "edge-5", "is_orphan": false, "predicate": "adapted to", "predicate_id": null, "source": "small_cell_bacteria", "target": "oligotrophic_waters"}, {"description": "Reduced genome size is associated with streamlining in oligotrophic lineages.", "evidence": [{"notes": "Many microbial cell lineages in nature share with oligotrophs the property of reduced genome size.", "reference": "DOI:10.1128/mmbr.00124-22"}], "id": "edge-6", "is_orphan": false, "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "reduced_genome_size", "target": "streamlining_selection"}, {"description": "Rod-complex-mediated organized circumferential PG insertion reduces cell width (rod-shaped bacteria).", "evidence": [{"notes": "Rod complex-mediated organized circumferential insertion of PG strands reduces cell diameter; may generalize to rod-shaped bacteria.", "reference": "DOI:10.1128/msystems.01017-21"}], "id": "edge-7", "is_orphan": false, "predicate": "decreases", "predicate_id": "RO:0002212", "source": "rod_complex", "target": "cell_width_trait"}, {"description": "aPBP-mediated isotropic PG insertion enlarges the cell cylinder, increasing width.", "evidence": [{"notes": "aPBP-mediated isotropic insertion enlarges the cell cylinder; defines opposite regulation of width.", "reference": "DOI:10.1128/msystems.01017-21"}], "id": "edge-8", "is_orphan": false, "predicate": "increases", "predicate_id": "RO:0002213", "source": "apbp_proteins", "target": "cell_width_trait"}], "evidence_rows": [{"description": "Persistent oligotrophy selects for streamlined narrow cells.", "edge_id": "edge-1", "evidence": [{"notes": "Supports oligotrophic regimes as drivers of cell-width reduction.", "reference": "DOI:10.1038/ismej.2014.60", "snippet": "small cells and genomes"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "oligotrophic environment", "target": "streamlining selection"}, {"description": "Streamlining selection produces very narrow rods.", "edge_id": "edge-2", "evidence": [{"notes": "Supports very narrow width as an outcome of streamlining selection.", "reference": "DOI:10.1038/ismej.2014.60", "snippet": "small cells"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "streamlining selection", "target": "cell width very small"}, {"description": "Very small cell width is a quantitative bin of the cell-width phenotype.", "edge_id": "edge-3", "evidence": [{"notes": "Supports very narrow width as a value within the regulated cell-width distribution.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "MreB-directed peptidoglycan synthesis"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "cell width very small", "target": "cell width"}, {"description": "High surface-to-volume ratio of narrow cells improves nutrient uptake efficiency.", "edge_id": "edge-4", "evidence": [{"notes": "Thanks to their high surface-to-volume ratio, small-cell bacteria absorb nutrients most efficiently.", "reference": "DOI:10.31951/2658-3518-2024-a-4-795"}], "predicate": "increases", "predicate_id": "RO:0002213", "source": "high surface-to-volume ratio", "target": "nutrient uptake efficiency"}, {"description": "Small-cell bacteria with very narrow widths are adapted to oligotrophic waters.", "edge_id": "edge-5", "evidence": [{"notes": "Especially important in oligotrophic water bodies with low organic matter concentrations.", "reference": "DOI:10.31951/2658-3518-2024-a-4-795"}], "predicate": "adapted to", "predicate_id": null, "source": "small-cell bacteria", "target": "oligotrophic waters"}, {"description": "Reduced genome size is associated with streamlining in oligotrophic lineages.", "edge_id": "edge-6", "evidence": [{"notes": "Many microbial cell lineages in nature share with oligotrophs the property of reduced genome size.", "reference": "DOI:10.1128/mmbr.00124-22"}], "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "reduced genome size", "target": "streamlining selection"}, {"description": "Rod-complex-mediated organized circumferential PG insertion reduces cell width (rod-shaped bacteria).", "edge_id": "edge-7", "evidence": [{"notes": "Rod complex-mediated organized circumferential insertion of PG strands reduces cell diameter; may generalize to rod-shaped bacteria.", "reference": "DOI:10.1128/msystems.01017-21"}], "predicate": "decreases", "predicate_id": "RO:0002212", "source": "Rod complex", "target": "cell width"}, {"description": "aPBP-mediated isotropic PG insertion enlarges the cell cylinder, increasing width.", "edge_id": "edge-8", "evidence": [{"notes": "aPBP-mediated isotropic insertion enlarges the cell cylinder; defines opposite regulation of width.", "reference": "DOI:10.1128/msystems.01017-21"}], "predicate": "increases", "predicate_id": "RO:0002213", "source": "class A penicillin-binding proteins", "target": "cell width"}], "graph_id": "cell_width_very_small_streamlining", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "aPBPs mediating isotropic peptidoglycan insertion that enlarges the cell cylinder.", "grounding": null, "id": "apbp_proteins", "is_orphan": false, "label": "class A penicillin-binding proteins", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 214, "evidence": [{"notes": "Supports class A penicillin-binding proteins in cell width very small; UniProtKB:P02918 (mrcA, Penicillin-binding protein 1A) in Escherichia coli (strain K12) provides a verified protein exemplar.", "reference": "DOI:10.1038/ismej.2014.60", "snippet": "minimizes resources required for replication"}], "gene_symbol": "mrcA", "protein_label": "Penicillin-binding protein 1A", "proteome_id": "UP000000625", "retrieved_on": "2026-10-17", "role": "Exemplar protein (mrcA, Penicillin-binding protein 1A) representing class A penicillin-binding proteins in Escherichia coli (strain K12) for cell width very small.", "sequence_version": 1, "taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli (strain K12)", "uniprot_id": "UniProtKB:P02918"}], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Regulated shorter cellular dimension.", "grounding": "METPO:1000882", "id": "cell_width_trait", "is_orphan": false, "label": "cell width", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Cell width at most ~0.5 \u03bcm.", "grounding": "METPO:1000887", "id": "cell_width_very_small_trait", "is_orphan": false, "label": "cell width very small", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Elevated cell surface area relative to volume, characteristic of small/narrow cells.", "grounding": null, "id": "high_surface_to_volume_ratio", "is_orphan": false, "label": "high surface-to-volume ratio", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Efficiency of nutrient acquisition from the environment.", "grounding": null, "id": "nutrient_uptake_efficiency", "is_orphan": false, "label": "nutrient uptake efficiency", "node_type": "CAPACITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Persistent low-nutrient setting that favors miniaturized cells.", "grounding": null, "id": "oligotrophic_environment", "is_orphan": false, "label": "oligotrophic environment", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Low-nutrient aquatic environments with low organic matter concentrations.", "grounding": null, "id": "oligotrophic_waters", "is_orphan": false, "label": "oligotrophic waters", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Streamlined small genome characteristic of oligotrophic lineages.", "grounding": null, "id": "reduced_genome_size", "is_orphan": false, "label": "reduced genome size", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Elongasome directing organized circumferential peptidoglycan insertion that constrains cell width.", "grounding": null, "id": "rod_complex", "is_orphan": false, "label": "Rod complex", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 133, "evidence": [{"notes": "Supports Rod complex in cell width very small; UniProtKB:P0ABG7 (mrdB, Peptidoglycan glycosyltransferase MrdB) in Escherichia coli (strain K12) provides a verified protein exemplar.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "MreB-directed peptidoglycan synthesis"}], "gene_symbol": "mrdB", "protein_label": "Peptidoglycan glycosyltransferase MrdB", "proteome_id": "UP000000625", "retrieved_on": "2026-10-17", "role": "Exemplar protein (mrdB, Peptidoglycan glycosyltransferase MrdB) representing Rod complex in Escherichia coli (strain K12) for cell width very small.", "sequence_version": 1, "taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli (strain K12)", "uniprot_id": "UniProtKB:P0ABG7"}], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Bacteria with very small cell size, including narrow widths.", "grounding": null, "id": "small_cell_bacteria", "is_orphan": false, "label": "small-cell bacteria", "node_type": "STATE", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Selection for reduced surface-to-volume ratio under chronic nutrient limitation.", "grounding": null, "id": "streamlining_selection", "is_orphan": false, "label": "streamlining selection", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 133, "evidence": [{"notes": "Supports Rod complex in cell width very small; UniProtKB:P0ABG7 (mrdB, Peptidoglycan glycosyltransferase MrdB) in Escherichia coli (strain K12) provides a verified protein exemplar.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "MreB-directed peptidoglycan synthesis"}], "gene_symbol": "mrdB", "node_id": "rod_complex", "node_label": "Rod complex", "protein_label": "Peptidoglycan glycosyltransferase MrdB", "proteome_id": "UP000000625", "retrieved_on": "2026-10-17", "role": "Exemplar protein (mrdB, Peptidoglycan glycosyltransferase MrdB) representing Rod complex in Escherichia coli (strain K12) for cell width very small.", "sequence_version": 1, "taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli (strain K12)", "uniprot_id": "UniProtKB:P0ABG7"}, {"entry_status": "REVIEWED", "entry_version": 214, "evidence": [{"notes": "Supports class A penicillin-binding proteins in cell width very small; UniProtKB:P02918 (mrcA, Penicillin-binding protein 1A) in Escherichia coli (strain K12) provides a verified protein exemplar.", "reference": "DOI:10.1038/ismej.2014.60", "snippet": "minimizes resources required for replication"}], "gene_symbol": "mrcA", "node_id": "apbp_proteins", "node_label": "class A penicillin-binding proteins", "protein_label": "Penicillin-binding protein 1A", "proteome_id": "UP000000625", "retrieved_on": "2026-10-17", "role": "Exemplar protein (mrcA, Penicillin-binding protein 1A) representing class A penicillin-binding proteins in Escherichia coli (strain K12) for cell width very small.", "sequence_version": 1, "taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli (strain K12)", "uniprot_id": "UniProtKB:P02918"}], "scope_notes": "This record is a numerical cell-width bin. Its streamlined-cell graph is contextual background rather than a universal protein-mediated mechanism.", "scope_status": "NONMECHANISTIC", "title": "Very-narrow cell width by streamlining"}];
+  var graphs = [{"description": "DOI-backed graph linking nutrient streamlining to a very-narrow rod radius (\u22640.5 \u03bcm).", "edges": [{"description": "Persistent oligotrophy selects for streamlined narrow cells.", "evidence": [{"notes": "Supports oligotrophic regimes as drivers of cell-width reduction.", "reference": "DOI:10.1038/ismej.2014.60", "snippet": "small cells and genomes"}], "id": "edge-1", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "oligotrophic_environment", "target": "streamlining_selection"}, {"description": "Streamlining selection produces very narrow rods.", "evidence": [{"notes": "Supports very narrow width as an outcome of streamlining selection.", "reference": "DOI:10.1038/ismej.2014.60", "snippet": "small cells"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "streamlining_selection", "target": "cell_width_very_small_trait"}, {"description": "Very small cell width is a quantitative bin of the cell-width phenotype.", "evidence": [{"notes": "Supports very narrow width as a value within the regulated cell-width distribution.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "MreB-directed peptidoglycan synthesis"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "cell_width_very_small_trait", "target": "cell_width_trait"}, {"description": "High surface-to-volume ratio of narrow cells improves nutrient uptake efficiency.", "evidence": [{"notes": "Thanks to their high surface-to-volume ratio, small-cell bacteria absorb nutrients most efficiently.", "reference": "DOI:10.31951/2658-3518-2024-a-4-795"}], "id": "edge-4", "is_orphan": false, "predicate": "increases", "predicate_id": "RO:0002213", "source": "high_surface_to_volume_ratio", "target": "nutrient_uptake_efficiency"}, {"description": "Small-cell bacteria with very narrow widths are adapted to oligotrophic waters.", "evidence": [{"notes": "Especially important in oligotrophic water bodies with low organic matter concentrations.", "reference": "DOI:10.31951/2658-3518-2024-a-4-795"}], "id": "edge-5", "is_orphan": false, "predicate": "adapted to", "predicate_id": null, "source": "small_cell_bacteria", "target": "oligotrophic_waters"}, {"description": "Reduced genome size is associated with streamlining in oligotrophic lineages.", "evidence": [{"notes": "Many microbial cell lineages in nature share with oligotrophs the property of reduced genome size.", "reference": "DOI:10.1128/mmbr.00124-22"}], "id": "edge-6", "is_orphan": false, "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "reduced_genome_size", "target": "streamlining_selection"}, {"description": "Rod-complex-mediated organized circumferential PG insertion reduces cell width (rod-shaped bacteria).", "evidence": [{"notes": "Rod complex-mediated organized circumferential insertion of PG strands reduces cell diameter; may generalize to rod-shaped bacteria.", "reference": "DOI:10.1128/msystems.01017-21"}], "id": "edge-7", "is_orphan": false, "predicate": "decreases", "predicate_id": "RO:0002212", "source": "rod_complex", "target": "cell_width_trait"}, {"description": "aPBP-mediated isotropic PG insertion enlarges the cell cylinder, increasing width.", "evidence": [{"notes": "aPBP-mediated isotropic insertion enlarges the cell cylinder; defines opposite regulation of width.", "reference": "DOI:10.1128/msystems.01017-21"}], "id": "edge-8", "is_orphan": false, "predicate": "increases", "predicate_id": "RO:0002213", "source": "apbp_proteins", "target": "cell_width_trait"}], "evidence_rows": [{"description": "Persistent oligotrophy selects for streamlined narrow cells.", "edge_id": "edge-1", "evidence": [{"notes": "Supports oligotrophic regimes as drivers of cell-width reduction.", "reference": "DOI:10.1038/ismej.2014.60", "snippet": "small cells and genomes"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "oligotrophic environment", "source_grounding": null, "target": "streamlining selection", "target_grounding": null}, {"description": "Streamlining selection produces very narrow rods.", "edge_id": "edge-2", "evidence": [{"notes": "Supports very narrow width as an outcome of streamlining selection.", "reference": "DOI:10.1038/ismej.2014.60", "snippet": "small cells"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "streamlining selection", "source_grounding": null, "target": "cell width very small", "target_grounding": "METPO:1000887"}, {"description": "Very small cell width is a quantitative bin of the cell-width phenotype.", "edge_id": "edge-3", "evidence": [{"notes": "Supports very narrow width as a value within the regulated cell-width distribution.", "reference": "DOI:10.1146/annurev-cellbio-101011-155745", "snippet": "MreB-directed peptidoglycan synthesis"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "cell width very small", "source_grounding": "METPO:1000887", "target": "cell width", "target_grounding": "METPO:1000882"}, {"description": "High surface-to-volume ratio of narrow cells improves nutrient uptake efficiency.", "edge_id": "edge-4", "evidence": [{"notes": "Thanks to their high surface-to-volume ratio, small-cell bacteria absorb nutrients most efficiently.", "reference": "DOI:10.31951/2658-3518-2024-a-4-795"}], "predicate": "increases", "predicate_id": "RO:0002213", "source": "high surface-to-volume ratio", "source_grounding": null, "target": "nutrient uptake efficiency", "target_grounding": null}, {"description": "Small-cell bacteria with very narrow widths are adapted to oligotrophic waters.", "edge_id": "edge-5", "evidence": [{"notes": "Especially important in oligotrophic water bodies with low organic matter concentrations.", "reference": "DOI:10.31951/2658-3518-2024-a-4-795"}], "predicate": "adapted to", "predicate_id": null, "source": "small-cell bacteria", "source_grounding": null, "target": "oligotrophic waters", "target_grounding": null}, {"description": "Reduced genome size is associated with streamlining in oligotrophic lineages.", "edge_id": "edge-6", "evidence": [{"notes": "Many microbial cell lineages in nature share with oligotrophs the property of reduced genome size.", "reference": "DOI:10.1128/mmbr.00124-22"}], "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "reduced genome size", "source_grounding": null, "target": "streamlining selection", "target_grounding": null}, {"description": "Rod-complex-mediated organized circumferential PG insertion reduces cell width (rod-shaped bacteria).", "edge_id": "edge-7", "evidence": [{"notes": "Rod complex-mediated organized circumferential insertion of PG strands reduces cell diameter; may generalize to rod-shaped bacteria.", "reference": "DOI:10.1128/msystems.01017-21"}], "predicate": "decreases", "predicate_id": "RO:0002212", "source": "Rod complex", "source_grounding": null, "target": "cell width", "target_grounding": "METPO:1000882"}, {"description": "aPBP-mediated isotropic PG insertion enlarges the cell cylinder, increasing width.", "edge_id": "edge-8", "evidence": [{"notes": "aPBP-mediated isotropic insertion enlarges the cell cylinder; defines opposite regulation of width.", "reference": "DOI:10.1128/msystems.01017-21"}], "predicate": "increases", "predicate_id": "RO:0002213", "source": "class A penicillin-binding proteins", "source_grounding": null, "target": "cell width", "target_grounding": "METPO:1000882"}], "graph_id": "cell_width_very_small_streamlining", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "aPBPs mediating isotropic peptidoglycan insertion that enlarges the cell cylinder.", "grounding": null, "id": "apbp_proteins", "is_orphan": false, "label": "class A penicillin-binding proteins", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Regulated shorter cellular dimension.", "grounding": "METPO:1000882", "id": "cell_width_trait", "is_orphan": false, "label": "cell width", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Cell width at most ~0.5 \u03bcm.", "grounding": "METPO:1000887", "id": "cell_width_very_small_trait", "is_orphan": false, "label": "cell width very small", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Elevated cell surface area relative to volume, characteristic of small/narrow cells.", "grounding": null, "id": "high_surface_to_volume_ratio", "is_orphan": false, "label": "high surface-to-volume ratio", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Efficiency of nutrient acquisition from the environment.", "grounding": null, "id": "nutrient_uptake_efficiency", "is_orphan": false, "label": "nutrient uptake efficiency", "node_type": "CAPACITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Persistent low-nutrient setting that favors miniaturized cells.", "grounding": null, "id": "oligotrophic_environment", "is_orphan": false, "label": "oligotrophic environment", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Low-nutrient aquatic environments with low organic matter concentrations.", "grounding": null, "id": "oligotrophic_waters", "is_orphan": false, "label": "oligotrophic waters", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Streamlined small genome characteristic of oligotrophic lineages.", "grounding": null, "id": "reduced_genome_size", "is_orphan": false, "label": "reduced genome size", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Elongasome directing organized circumferential peptidoglycan insertion that constrains cell width.", "grounding": null, "id": "rod_complex", "is_orphan": false, "label": "Rod complex", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Bacteria with very small cell size, including narrow widths.", "grounding": null, "id": "small_cell_bacteria", "is_orphan": false, "label": "small-cell bacteria", "node_type": "STATE", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Selection for reduced surface-to-volume ratio under chronic nutrient limitation.", "grounding": null, "id": "streamlining_selection", "is_orphan": false, "label": "streamlining selection", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This record is a numerical cell-width bin. Its streamlined-cell graph is contextual background rather than a universal protein-mediated mechanism.", "scope_status": "NONMECHANISTIC", "title": "Very-narrow cell width by streamlining"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -987,13 +1014,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-10-17 09:00 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

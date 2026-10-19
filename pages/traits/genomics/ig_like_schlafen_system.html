@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/genomics.html">GENOMICS</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/genomics.html">GENOMICS</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>Ig-like Schlafen system</h1>
     <p class="curie"><code>traitmech:000508</code> · CLASS · PROPOSED</p>
 
@@ -103,9 +114,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>Ig-like Schlafen locus</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>T5-like tail chaperone sensing</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>Ig-like Schlafen loci encode a Schlafen nuclease fused to an Ig-like sensor domain that recognizes T5-like phage tail assembly chaperones.</p>
             <ul>
 
@@ -126,9 +139,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>T5-like tail chaperone sensing</strong>
+
             <span class="edge-predicate">activates</span>
             <strong>Schlafen tRNA cleavage</strong>
-            <code>RO:0002213</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002213" rel="nofollow noreferrer"><code>RO:0002213</code></a>
             <p>Phage-triggered activation of the Ig-like Schlafen nuclease leads to bacterial and phage tRNA cleavage.</p>
             <ul>
 
@@ -149,9 +164,11 @@
 
           <li id="pathograph-1-edge-3">
             <strong>Schlafen tRNA cleavage</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>Ig-like Schlafen system</strong>
-            <code>METPO:2007700</code>
+            <code>traitmech:000508</code>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>Schlafen tRNase activity restricts T5 phage and realizes the organism-level Ig-like Schlafen system trait.</p>
             <ul>
 
@@ -172,8 +189,10 @@
 
           <li id="pathograph-1-edge-4">
             <strong>Ig-like Schlafen system</strong>
+            <code>traitmech:000508</code>
             <span class="edge-predicate">is a</span>
             <strong>phage defense system</strong>
+            <code>traitmech:000209</code>
             <code>rdfs:subClassOf</code>
             <p>Ig-like Schlafen system possession is a phage-defense-system trait.</p>
             <ul>
@@ -313,11 +332,75 @@
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
 
-      <p class="no-match">No kg-microbe node embedding matched this record
-        in the 2026-04-25 deepwalk.</p>
+      <p class="match-method">Matched <strong>1</strong>
+        kg-microbe node
+        via <em>parent_proxy</em>.</p>
+      <ul class="kgm-nodes">
+
+        <li><code>METPO:1000188</code> <span class="dim-preview">[-0.956, -1.962, -3.148, +1.274, …]</span></li>
+
+      </ul>
+      <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
 
     </div>
 
+
+    <div class="card">
+      <h2>Nearest neighbors in embedding space</h2>
+      <p class="meta">Top-8 cosine-similar METPO traits
+        from the 2026-04-25 deepwalk (512-D).</p>
+      <ul class="nn-list">
+
+        <li>
+          <span class="nn-cat">upper</span>
+          <a href="../../traits/upper/quality.html">quality</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hna_system.html">Hna system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hma_system.html">Hma system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hesat_system.html">Hesat system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_08_system.html">HEC-08 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_07_system.html">HEC-07 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_06_system.html">HEC-06 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_05_system.html">HEC-05 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+      </ul>
+    </div>
 
 
 
@@ -476,6 +559,11 @@
     </dl>
   </div>
 
+
+  <div class="card rail-kgm">
+    <h2>kg-microbe</h2>
+    <p class="meta">1 matching node (parent_proxy)</p>
+  </div>
 
 </aside>
 </div>
@@ -809,7 +897,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Conservative system-level sketch linking an Ig-like prokaryotic Schlafen locus to T5-like tail assembly chaperone sensing, Schlafen nuclease-dependent tRNA cleavage, and the Ig-like Schlafen phage-defense trait.", "edges": [{"description": "Ig-like Schlafen loci encode a Schlafen nuclease fused to an Ig-like sensor domain that recognizes T5-like phage tail assembly chaperones.", "evidence": [{"notes": "Perez Taboada et al. support Ig-like domain fusion and T5-like tail assembly chaperone recognition by an Ig-like prokaryotic Schlafen system.", "reference": "DOI:10.1038/s41564-026-02277-8", "snippet": "Schlafen nuclease is fused to a previously unknown immunoglobulin-like sensor domain and demonstrated that it recognizes tail assembly chaperones of T5-like phages."}, {"notes": "The pinned DefenseFinder article registry maps the Shlafen_Ig-like source key to the Perez Taboada et al. Schlafen phage-defense paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| Shlafen_Ig-like | 10\\.1038/s41564-026-02277-8 | Bacterial Schlafen proteins mediate phage defence | "}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "ig_like_schlafen_locus", "target": "t5_like_tail_chaperone_sensing"}, {"description": "Phage-triggered activation of the Ig-like Schlafen nuclease leads to bacterial and phage tRNA cleavage.", "evidence": [{"notes": "Perez Taboada et al. support Ig-like domain fusion and T5-like tail assembly chaperone recognition by an Ig-like prokaryotic Schlafen system.", "reference": "DOI:10.1038/s41564-026-02277-8", "snippet": "Schlafen nuclease is fused to a previously unknown immunoglobulin-like sensor domain and demonstrated that it recognizes tail assembly chaperones of T5-like phages."}, {"notes": "Perez Taboada et al. connect activation of an Ig-like RorSlfn5 nuclease to bacterial and phage tRNA cleavage and T5 burst-size reduction.", "reference": "DOI:10.1038/s41564-026-02277-8", "snippet": "Upon activation, the Schlafen nuclease cleaves both E. coli and phage-encoded tRNAs and restricts T5 phage by reducing its burst size."}], "id": "edge-2", "is_orphan": false, "predicate": "activates", "predicate_id": "RO:0002213", "source": "t5_like_tail_chaperone_sensing", "target": "schlafen_trna_cleavage"}, {"description": "Schlafen tRNase activity restricts T5 phage and realizes the organism-level Ig-like Schlafen system trait.", "evidence": [{"notes": "Perez Taboada et al. support bacterial prokaryotic Schlafen nucleases as antiviral effectors fused to phage-sensing domains.", "reference": "DOI:10.1038/s41564-026-02277-8", "snippet": "prokaryotic Schlafen nucleases are widespread antiviral effectors that protect bacteria from bacteriophages and are fused to a diverse array of phage-sensing domains."}, {"notes": "Perez Taboada et al. connect activation of an Ig-like RorSlfn5 nuclease to bacterial and phage tRNA cleavage and T5 burst-size reduction.", "reference": "DOI:10.1038/s41564-026-02277-8", "snippet": "Upon activation, the Schlafen nuclease cleaves both E. coli and phage-encoded tRNAs and restricts T5 phage by reducing its burst size."}], "id": "edge-3", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "schlafen_trna_cleavage", "target": "ig_like_schlafen_system_trait"}, {"description": "Ig-like Schlafen system possession is a phage-defense-system trait.", "evidence": [{"notes": "Perez Taboada et al. support bacterial prokaryotic Schlafen nucleases as antiviral effectors fused to phage-sensing domains.", "reference": "DOI:10.1038/s41564-026-02277-8", "snippet": "prokaryotic Schlafen nucleases are widespread antiviral effectors that protect bacteria from bacteriophages and are fused to a diverse array of phage-sensing domains."}, {"notes": "Perez Taboada et al. cloned candidate Enterobacterales Schlafen systems into E. coli and observed coliphage defense for two of them.", "reference": "DOI:10.1038/s41564-026-02277-8", "snippet": "We expressed seven Enterobacterales Schlafen systems in Escherichia coli, identifying two that confer defence against coliphages."}], "id": "edge-4", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "ig_like_schlafen_system_trait", "target": "phage_defense_system_trait"}, {"description": "Endoribonuclease ToxN (toxN, UniProtKB:B8X8Z0) contributes to Ig-like Schlafen system.", "evidence": [{"notes": "Supports the functional association between Endoribonuclease ToxN (UniProtKB:B8X8Z0 in Pectobacterium atrosepticum (Erwinia carotovora subsp. atroseptica)) and Ig-like Schlafen system.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| Resolvase_KAP_NTPase | 10\\.1038/s41564-026-02277-8 | Bacterial Schlafen proteins mediate phage defence |"}], "id": "edge-5", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "ig_like_schlafen_system_protein_component", "target": "ig_like_schlafen_system_trait"}], "evidence_rows": [{"description": "Ig-like Schlafen loci encode a Schlafen nuclease fused to an Ig-like sensor domain that recognizes T5-like phage tail assembly chaperones.", "edge_id": "edge-1", "evidence": [{"notes": "Perez Taboada et al. support Ig-like domain fusion and T5-like tail assembly chaperone recognition by an Ig-like prokaryotic Schlafen system.", "reference": "DOI:10.1038/s41564-026-02277-8", "snippet": "Schlafen nuclease is fused to a previously unknown immunoglobulin-like sensor domain and demonstrated that it recognizes tail assembly chaperones of T5-like phages."}, {"notes": "The pinned DefenseFinder article registry maps the Shlafen_Ig-like source key to the Perez Taboada et al. Schlafen phage-defense paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| Shlafen_Ig-like | 10\\.1038/s41564-026-02277-8 | Bacterial Schlafen proteins mediate phage defence | "}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Ig-like Schlafen locus", "target": "T5-like tail chaperone sensing"}, {"description": "Phage-triggered activation of the Ig-like Schlafen nuclease leads to bacterial and phage tRNA cleavage.", "edge_id": "edge-2", "evidence": [{"notes": "Perez Taboada et al. support Ig-like domain fusion and T5-like tail assembly chaperone recognition by an Ig-like prokaryotic Schlafen system.", "reference": "DOI:10.1038/s41564-026-02277-8", "snippet": "Schlafen nuclease is fused to a previously unknown immunoglobulin-like sensor domain and demonstrated that it recognizes tail assembly chaperones of T5-like phages."}, {"notes": "Perez Taboada et al. connect activation of an Ig-like RorSlfn5 nuclease to bacterial and phage tRNA cleavage and T5 burst-size reduction.", "reference": "DOI:10.1038/s41564-026-02277-8", "snippet": "Upon activation, the Schlafen nuclease cleaves both E. coli and phage-encoded tRNAs and restricts T5 phage by reducing its burst size."}], "predicate": "activates", "predicate_id": "RO:0002213", "source": "T5-like tail chaperone sensing", "target": "Schlafen tRNA cleavage"}, {"description": "Schlafen tRNase activity restricts T5 phage and realizes the organism-level Ig-like Schlafen system trait.", "edge_id": "edge-3", "evidence": [{"notes": "Perez Taboada et al. support bacterial prokaryotic Schlafen nucleases as antiviral effectors fused to phage-sensing domains.", "reference": "DOI:10.1038/s41564-026-02277-8", "snippet": "prokaryotic Schlafen nucleases are widespread antiviral effectors that protect bacteria from bacteriophages and are fused to a diverse array of phage-sensing domains."}, {"notes": "Perez Taboada et al. connect activation of an Ig-like RorSlfn5 nuclease to bacterial and phage tRNA cleavage and T5 burst-size reduction.", "reference": "DOI:10.1038/s41564-026-02277-8", "snippet": "Upon activation, the Schlafen nuclease cleaves both E. coli and phage-encoded tRNAs and restricts T5 phage by reducing its burst size."}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "Schlafen tRNA cleavage", "target": "Ig-like Schlafen system"}, {"description": "Ig-like Schlafen system possession is a phage-defense-system trait.", "edge_id": "edge-4", "evidence": [{"notes": "Perez Taboada et al. support bacterial prokaryotic Schlafen nucleases as antiviral effectors fused to phage-sensing domains.", "reference": "DOI:10.1038/s41564-026-02277-8", "snippet": "prokaryotic Schlafen nucleases are widespread antiviral effectors that protect bacteria from bacteriophages and are fused to a diverse array of phage-sensing domains."}, {"notes": "Perez Taboada et al. cloned candidate Enterobacterales Schlafen systems into E. coli and observed coliphage defense for two of them.", "reference": "DOI:10.1038/s41564-026-02277-8", "snippet": "We expressed seven Enterobacterales Schlafen systems in Escherichia coli, identifying two that confer defence against coliphages."}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "Ig-like Schlafen system", "target": "phage defense system"}, {"description": "Endoribonuclease ToxN (toxN, UniProtKB:B8X8Z0) contributes to Ig-like Schlafen system.", "edge_id": "edge-5", "evidence": [{"notes": "Supports the functional association between Endoribonuclease ToxN (UniProtKB:B8X8Z0 in Pectobacterium atrosepticum (Erwinia carotovora subsp. atroseptica)) and Ig-like Schlafen system.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| Resolvase_KAP_NTPase | 10\\.1038/s41564-026-02277-8 | Bacterial Schlafen proteins mediate phage defence |"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Endoribonuclease ToxN", "target": "Ig-like Schlafen system"}], "graph_id": "ig_like_schlafen_trna_cleavage", "issues": [], "nodes": [{"color": "#f3f4f6", "description": "A locus encoding a prokaryotic Schlafen nuclease fused to an Ig-like sensor domain.", "grounding": null, "id": "ig_like_schlafen_locus", "is_orphan": false, "label": "Ig-like Schlafen locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Protein component (Endoribonuclease ToxN) associated with Ig-like Schlafen system.", "grounding": "InterPro:IPR025911", "id": "ig_like_schlafen_system_protein_component", "is_orphan": false, "label": "Endoribonuclease ToxN", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 47, "evidence": [{"notes": "Supports Endoribonuclease ToxN in Ig-like Schlafen system; UniProtKB:B8X8Z0 (toxN, Endoribonuclease ToxN) in Pectobacterium atrosepticum (Erwinia carotovora subsp. atroseptica) provides a verified protein exemplar.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| Shlafen_Ig-like | 10\\.1038/s41564-026-02277-8 | Bacterial Schlafen proteins mediate phage defence |"}], "gene_symbol": "toxN", "protein_label": "Endoribonuclease ToxN", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (toxN, Endoribonuclease ToxN) associated with Ig-like Schlafen system in Pectobacterium atrosepticum (Erwinia carotovora subsp. atroseptica).", "sequence_version": 1, "taxon_id": "NCBITaxon:29471", "taxon_label": "Pectobacterium atrosepticum (Erwinia carotovora subsp. atroseptica)", "uniprot_id": "UniProtKB:B8X8Z0"}], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded Ig-like prokaryotic Schlafen phage-defense system.", "grounding": "traitmech:000508", "id": "ig_like_schlafen_system_trait", "is_orphan": false, "label": "Ig-like Schlafen system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of one or more genome-encoded immune systems that inhibit bacteriophage infection.", "grounding": "traitmech:000209", "id": "phage_defense_system_trait", "is_orphan": false, "label": "phage defense system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Cleavage of bacterial and phage tRNAs by an activated Schlafen nuclease.", "grounding": null, "id": "schlafen_trna_cleavage", "is_orphan": false, "label": "Schlafen tRNA cleavage", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Recognition of T5-like phage tail assembly chaperones by an Ig-like prokaryotic Schlafen sensor domain.", "grounding": null, "id": "t5_like_tail_chaperone_sensing", "is_orphan": false, "label": "T5-like tail chaperone sensing", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 47, "evidence": [{"notes": "Supports Endoribonuclease ToxN in Ig-like Schlafen system; UniProtKB:B8X8Z0 (toxN, Endoribonuclease ToxN) in Pectobacterium atrosepticum (Erwinia carotovora subsp. atroseptica) provides a verified protein exemplar.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| Shlafen_Ig-like | 10\\.1038/s41564-026-02277-8 | Bacterial Schlafen proteins mediate phage defence |"}], "gene_symbol": "toxN", "node_id": "ig_like_schlafen_system_protein_component", "node_label": "Endoribonuclease ToxN", "protein_label": "Endoribonuclease ToxN", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (toxN, Endoribonuclease ToxN) associated with Ig-like Schlafen system in Pectobacterium atrosepticum (Erwinia carotovora subsp. atroseptica).", "sequence_version": 1, "taxon_id": "NCBITaxon:29471", "taxon_label": "Pectobacterium atrosepticum (Erwinia carotovora subsp. atroseptica)", "uniprot_id": "UniProtKB:B8X8Z0"}], "scope_notes": "The graph captures the Ig-like prokaryotic Schlafen DefenseFinder article namespace at system level and deliberately defers a protein-resolved RorSlfn5 mechanism. Perez Taboada et al. support an Ig-like Schlafen nuclease system that recognizes T5-like phage tail assembly chaperones and cleaves bacterial and phage tRNAs, but exact profile boundaries, natural host exemplars, phage trigger breadth, and DefenseFinder HMM/rules profiles are unresolved.", "scope_status": "NONMECHANISTIC", "title": "Ig-like Schlafen systems cleave tRNAs after phage sensing"}];
+  var graphs = [{"description": "Conservative system-level sketch linking an Ig-like prokaryotic Schlafen locus to T5-like tail assembly chaperone sensing, Schlafen nuclease-dependent tRNA cleavage, and the Ig-like Schlafen phage-defense trait.", "edges": [{"description": "Ig-like Schlafen loci encode a Schlafen nuclease fused to an Ig-like sensor domain that recognizes T5-like phage tail assembly chaperones.", "evidence": [{"notes": "Perez Taboada et al. support Ig-like domain fusion and T5-like tail assembly chaperone recognition by an Ig-like prokaryotic Schlafen system.", "reference": "DOI:10.1038/s41564-026-02277-8", "snippet": "Schlafen nuclease is fused to a previously unknown immunoglobulin-like sensor domain and demonstrated that it recognizes tail assembly chaperones of T5-like phages."}, {"notes": "The pinned DefenseFinder article registry maps the Shlafen_Ig-like source key to the Perez Taboada et al. Schlafen phage-defense paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| Shlafen_Ig-like | 10\\.1038/s41564-026-02277-8 | Bacterial Schlafen proteins mediate phage defence | "}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "ig_like_schlafen_locus", "target": "t5_like_tail_chaperone_sensing"}, {"description": "Phage-triggered activation of the Ig-like Schlafen nuclease leads to bacterial and phage tRNA cleavage.", "evidence": [{"notes": "Perez Taboada et al. support Ig-like domain fusion and T5-like tail assembly chaperone recognition by an Ig-like prokaryotic Schlafen system.", "reference": "DOI:10.1038/s41564-026-02277-8", "snippet": "Schlafen nuclease is fused to a previously unknown immunoglobulin-like sensor domain and demonstrated that it recognizes tail assembly chaperones of T5-like phages."}, {"notes": "Perez Taboada et al. connect activation of an Ig-like RorSlfn5 nuclease to bacterial and phage tRNA cleavage and T5 burst-size reduction.", "reference": "DOI:10.1038/s41564-026-02277-8", "snippet": "Upon activation, the Schlafen nuclease cleaves both E. coli and phage-encoded tRNAs and restricts T5 phage by reducing its burst size."}], "id": "edge-2", "is_orphan": false, "predicate": "activates", "predicate_id": "RO:0002213", "source": "t5_like_tail_chaperone_sensing", "target": "schlafen_trna_cleavage"}, {"description": "Schlafen tRNase activity restricts T5 phage and realizes the organism-level Ig-like Schlafen system trait.", "evidence": [{"notes": "Perez Taboada et al. support bacterial prokaryotic Schlafen nucleases as antiviral effectors fused to phage-sensing domains.", "reference": "DOI:10.1038/s41564-026-02277-8", "snippet": "prokaryotic Schlafen nucleases are widespread antiviral effectors that protect bacteria from bacteriophages and are fused to a diverse array of phage-sensing domains."}, {"notes": "Perez Taboada et al. connect activation of an Ig-like RorSlfn5 nuclease to bacterial and phage tRNA cleavage and T5 burst-size reduction.", "reference": "DOI:10.1038/s41564-026-02277-8", "snippet": "Upon activation, the Schlafen nuclease cleaves both E. coli and phage-encoded tRNAs and restricts T5 phage by reducing its burst size."}], "id": "edge-3", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "schlafen_trna_cleavage", "target": "ig_like_schlafen_system_trait"}, {"description": "Ig-like Schlafen system possession is a phage-defense-system trait.", "evidence": [{"notes": "Perez Taboada et al. support bacterial prokaryotic Schlafen nucleases as antiviral effectors fused to phage-sensing domains.", "reference": "DOI:10.1038/s41564-026-02277-8", "snippet": "prokaryotic Schlafen nucleases are widespread antiviral effectors that protect bacteria from bacteriophages and are fused to a diverse array of phage-sensing domains."}, {"notes": "Perez Taboada et al. cloned candidate Enterobacterales Schlafen systems into E. coli and observed coliphage defense for two of them.", "reference": "DOI:10.1038/s41564-026-02277-8", "snippet": "We expressed seven Enterobacterales Schlafen systems in Escherichia coli, identifying two that confer defence against coliphages."}], "id": "edge-4", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "ig_like_schlafen_system_trait", "target": "phage_defense_system_trait"}], "evidence_rows": [{"description": "Ig-like Schlafen loci encode a Schlafen nuclease fused to an Ig-like sensor domain that recognizes T5-like phage tail assembly chaperones.", "edge_id": "edge-1", "evidence": [{"notes": "Perez Taboada et al. support Ig-like domain fusion and T5-like tail assembly chaperone recognition by an Ig-like prokaryotic Schlafen system.", "reference": "DOI:10.1038/s41564-026-02277-8", "snippet": "Schlafen nuclease is fused to a previously unknown immunoglobulin-like sensor domain and demonstrated that it recognizes tail assembly chaperones of T5-like phages."}, {"notes": "The pinned DefenseFinder article registry maps the Shlafen_Ig-like source key to the Perez Taboada et al. Schlafen phage-defense paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| Shlafen_Ig-like | 10\\.1038/s41564-026-02277-8 | Bacterial Schlafen proteins mediate phage defence | "}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Ig-like Schlafen locus", "source_grounding": null, "target": "T5-like tail chaperone sensing", "target_grounding": null}, {"description": "Phage-triggered activation of the Ig-like Schlafen nuclease leads to bacterial and phage tRNA cleavage.", "edge_id": "edge-2", "evidence": [{"notes": "Perez Taboada et al. support Ig-like domain fusion and T5-like tail assembly chaperone recognition by an Ig-like prokaryotic Schlafen system.", "reference": "DOI:10.1038/s41564-026-02277-8", "snippet": "Schlafen nuclease is fused to a previously unknown immunoglobulin-like sensor domain and demonstrated that it recognizes tail assembly chaperones of T5-like phages."}, {"notes": "Perez Taboada et al. connect activation of an Ig-like RorSlfn5 nuclease to bacterial and phage tRNA cleavage and T5 burst-size reduction.", "reference": "DOI:10.1038/s41564-026-02277-8", "snippet": "Upon activation, the Schlafen nuclease cleaves both E. coli and phage-encoded tRNAs and restricts T5 phage by reducing its burst size."}], "predicate": "activates", "predicate_id": "RO:0002213", "source": "T5-like tail chaperone sensing", "source_grounding": null, "target": "Schlafen tRNA cleavage", "target_grounding": null}, {"description": "Schlafen tRNase activity restricts T5 phage and realizes the organism-level Ig-like Schlafen system trait.", "edge_id": "edge-3", "evidence": [{"notes": "Perez Taboada et al. support bacterial prokaryotic Schlafen nucleases as antiviral effectors fused to phage-sensing domains.", "reference": "DOI:10.1038/s41564-026-02277-8", "snippet": "prokaryotic Schlafen nucleases are widespread antiviral effectors that protect bacteria from bacteriophages and are fused to a diverse array of phage-sensing domains."}, {"notes": "Perez Taboada et al. connect activation of an Ig-like RorSlfn5 nuclease to bacterial and phage tRNA cleavage and T5 burst-size reduction.", "reference": "DOI:10.1038/s41564-026-02277-8", "snippet": "Upon activation, the Schlafen nuclease cleaves both E. coli and phage-encoded tRNAs and restricts T5 phage by reducing its burst size."}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "Schlafen tRNA cleavage", "source_grounding": null, "target": "Ig-like Schlafen system", "target_grounding": "traitmech:000508"}, {"description": "Ig-like Schlafen system possession is a phage-defense-system trait.", "edge_id": "edge-4", "evidence": [{"notes": "Perez Taboada et al. support bacterial prokaryotic Schlafen nucleases as antiviral effectors fused to phage-sensing domains.", "reference": "DOI:10.1038/s41564-026-02277-8", "snippet": "prokaryotic Schlafen nucleases are widespread antiviral effectors that protect bacteria from bacteriophages and are fused to a diverse array of phage-sensing domains."}, {"notes": "Perez Taboada et al. cloned candidate Enterobacterales Schlafen systems into E. coli and observed coliphage defense for two of them.", "reference": "DOI:10.1038/s41564-026-02277-8", "snippet": "We expressed seven Enterobacterales Schlafen systems in Escherichia coli, identifying two that confer defence against coliphages."}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "Ig-like Schlafen system", "source_grounding": "traitmech:000508", "target": "phage defense system", "target_grounding": "traitmech:000209"}], "graph_id": "ig_like_schlafen_trna_cleavage", "issues": [], "nodes": [{"color": "#f3f4f6", "description": "A locus encoding a prokaryotic Schlafen nuclease fused to an Ig-like sensor domain.", "grounding": null, "id": "ig_like_schlafen_locus", "is_orphan": false, "label": "Ig-like Schlafen locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded Ig-like prokaryotic Schlafen phage-defense system.", "grounding": "traitmech:000508", "id": "ig_like_schlafen_system_trait", "is_orphan": false, "label": "Ig-like Schlafen system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of one or more genome-encoded immune systems that inhibit bacteriophage infection.", "grounding": "traitmech:000209", "id": "phage_defense_system_trait", "is_orphan": false, "label": "phage defense system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Cleavage of bacterial and phage tRNAs by an activated Schlafen nuclease.", "grounding": null, "id": "schlafen_trna_cleavage", "is_orphan": false, "label": "Schlafen tRNA cleavage", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Recognition of T5-like phage tail assembly chaperones by an Ig-like prokaryotic Schlafen sensor domain.", "grounding": null, "id": "t5_like_tail_chaperone_sensing", "is_orphan": false, "label": "T5-like tail chaperone sensing", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "The graph captures the Ig-like prokaryotic Schlafen DefenseFinder article namespace at system level and deliberately defers a protein-resolved RorSlfn5 mechanism. Perez Taboada et al. support an Ig-like Schlafen nuclease system that recognizes T5-like phage tail assembly chaperones and cleaves bacterial and phage tRNAs, but exact profile boundaries, natural host exemplars, phage trigger breadth, and DefenseFinder HMM/rules profiles are unresolved.", "scope_status": "NONMECHANISTIC", "title": "Ig-like Schlafen systems cleave tRNAs after phage sensing"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -829,13 +917,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-10-17 09:00 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

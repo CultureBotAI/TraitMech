@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/genomics.html">GENOMICS</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/genomics.html">GENOMICS</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>Rst gop-beta-cII system</h1>
     <p class="curie"><code>traitmech:000376</code> · CLASS · PROPOSED</p>
 
@@ -111,9 +122,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>Rst gop-beta-cII locus</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>lambda and P1 phage restriction</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>Rousset et al. linked gop-beta-cII to lambda and P1 phage protection, and DefenseFinder models Rst_gop_beta_cll as a three-profile system.</p>
             <ul>
 
@@ -148,9 +161,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>lambda and P1 phage restriction</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>Rst gop-beta-cII system</strong>
-            <code>METPO:2007700</code>
+            <code>traitmech:000376</code>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>Restriction of lambda and P1 phages realizes the Rst gop-beta-cII system trait.</p>
             <ul>
 
@@ -171,8 +186,10 @@
 
           <li id="pathograph-1-edge-3">
             <strong>Rst gop-beta-cII system</strong>
+            <code>traitmech:000376</code>
             <span class="edge-predicate">is a</span>
             <strong>phage defense system</strong>
+            <code>traitmech:000209</code>
             <code>rdfs:subClassOf</code>
             <p>Rst gop-beta-cII system possession is a phage-defense-system trait.</p>
             <ul>
@@ -312,11 +329,75 @@
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
 
-      <p class="no-match">No kg-microbe node embedding matched this record
-        in the 2026-04-25 deepwalk.</p>
+      <p class="match-method">Matched <strong>1</strong>
+        kg-microbe node
+        via <em>parent_proxy</em>.</p>
+      <ul class="kgm-nodes">
+
+        <li><code>METPO:1000188</code> <span class="dim-preview">[-0.956, -1.962, -3.148, +1.274, …]</span></li>
+
+      </ul>
+      <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
 
     </div>
 
+
+    <div class="card">
+      <h2>Nearest neighbors in embedding space</h2>
+      <p class="meta">Top-8 cosine-similar METPO traits
+        from the 2026-04-25 deepwalk (512-D).</p>
+      <ul class="nn-list">
+
+        <li>
+          <span class="nn-cat">upper</span>
+          <a href="../../traits/upper/quality.html">quality</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hna_system.html">Hna system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hma_system.html">Hma system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hesat_system.html">Hesat system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_08_system.html">HEC-08 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_07_system.html">HEC-07 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_06_system.html">HEC-06 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_05_system.html">HEC-05 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+      </ul>
+    </div>
 
 
 
@@ -463,6 +544,11 @@
     </dl>
   </div>
 
+
+  <div class="card rail-kgm">
+    <h2>kg-microbe</h2>
+    <p class="meta">1 matching node (parent_proxy)</p>
+  </div>
 
 </aside>
 </div>
@@ -796,7 +882,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Conservative system-level sketch linking a P4 gop-beta-cII locus to lambda and P1 phage restriction.", "edges": [{"description": "Rousset et al. linked gop-beta-cII to lambda and P1 phage protection, and DefenseFinder models Rst_gop_beta_cll as a three-profile system.", "evidence": [{"notes": "Rousset et al. describe the canonical P4 satellite gop, beta, and cII locus before testing it for anti-phage activity.", "reference": "DOI:10.1016/j.chom.2022.02.018", "snippet": "The well-characterized P4 satellite (NC_001609) carries at this position the non-essential genes gop, \u03b2, and cII, with gop and \u03b2 likely acting as a toxin-antitoxin pair"}, {"notes": "Rousset et al. cloned P4/P2 hotspot systems under native promoters and measured reproducible phage resistance against their coliphage panel.", "reference": "DOI:10.1016/j.chom.2022.02.018", "snippet": "When compared with a control vector encoding a green fluorescent protein (GFP), seven systems provided robust and reproducible resistance to at least one phage"}, {"notes": "The DefenseFinder rules table models Rst_gop_beta_cll as a three-profile system requiring beta, cll, and gop profiles.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Rst_gop_beta_cll\tRst_gop_beta_cll\t3\t3\tRst_gop_beta_cll__beta, Rst_gop_beta_cll__cll, Rst_gop_beta_cll__gop\t\t\t"}, {"notes": "The DefenseFinder HMM inventory records custom beta, cll, and gop profiles under the Rst_gop_beta_cll system namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Rst_gop_beta_cll__beta                           | Rst_gop_beta_cll__beta                           | Rst_gop_beta_cll       | Custom                  | 20     |\n| Rst_gop_beta_cll__cll                            | Rst_gop_beta_cll__cll                            | Rst_gop_beta_cll       | Custom                  | 20     |\n| Rst_gop_beta_cll__gop                            | Rst_gop_beta_cll__gop                            | Rst_gop_beta_cll       | Custom                  | 20     |"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "rst_gop_beta_cll_locus", "target": "lambda_and_p1_phage_restriction"}, {"description": "Restriction of lambda and P1 phages realizes the Rst gop-beta-cII system trait.", "evidence": [{"notes": "Rousset et al. directly identify gop-beta-cII as an anti-phage system that protects against lambda and P1.", "reference": "DOI:10.1016/j.chom.2022.02.018", "snippet": "We report that gop-\u03b2-cII forms an anti-phage system that protects against \u03bb and P1."}, {"notes": "Rousset et al. cloned P4/P2 hotspot systems under native promoters and measured reproducible phage resistance against their coliphage panel.", "reference": "DOI:10.1016/j.chom.2022.02.018", "snippet": "When compared with a control vector encoding a green fluorescent protein (GFP), seven systems provided robust and reproducible resistance to at least one phage"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "lambda_and_p1_phage_restriction", "target": "rst_gop_beta_cll_system_trait"}, {"description": "Rst gop-beta-cII system possession is a phage-defense-system trait.", "evidence": [{"notes": "Rousset et al. frame the P4-like satellite hotspot that contains gop-beta-cII as a reservoir of anti-phage systems.", "reference": "DOI:10.1016/j.chom.2022.02.018", "snippet": "P2-like phages and their parasitic P4-like satellites carry hotspots of genetic variation containing reservoirs of anti-phage systems"}, {"notes": "The DefenseFinder article registry maps the named Rst_gop_beta_cll system to the Rousset et al. preprint.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "Rst_gop_beta_cll | 10\\.1101/2021\\.01\\.21\\.427644 | Prophage-encoded hotspots of bacterial immune systems"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "rst_gop_beta_cll_system_trait", "target": "phage_defense_system"}, {"description": "Type IV methyl-directed restriction enzyme EcoKMcrB subunit (mcrB, UniProtKB:P15005) contributes to Rst gop-beta-cII system.", "evidence": [{"notes": "Supports the functional association between Type IV methyl-directed restriction enzyme EcoKMcrB subunit (UniProtKB:P15005 in Escherichia coli (strain K12)) and Rst gop-beta-cII system.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Rst_HelicaseDUF2290__DUF2290 | Rst_HelicaseDUF2290__DUF2290___DUF2290 | Rst_HelicaseDUF2290 | PF10053.11 | 25 | | Rst_HelicaseDUF2290__DUF2290_Pers | Rst_HelicaseDUF2290__DUF2290_Pers___DUF2290_Pers | Rst_HelicaseDUF2290 | Custom | 20 | | Rst_HelicaseDUF2290__Helicase | Rst_HelicaseDUF2290__Helicase___Helicase | Rst_HelicaseDUF2290 | Custom | 20 |"}], "id": "edge-4", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "rst_gop_beta_cll_system_protein_component", "target": "rst_gop_beta_cll_system_trait"}], "evidence_rows": [{"description": "Rousset et al. linked gop-beta-cII to lambda and P1 phage protection, and DefenseFinder models Rst_gop_beta_cll as a three-profile system.", "edge_id": "edge-1", "evidence": [{"notes": "Rousset et al. describe the canonical P4 satellite gop, beta, and cII locus before testing it for anti-phage activity.", "reference": "DOI:10.1016/j.chom.2022.02.018", "snippet": "The well-characterized P4 satellite (NC_001609) carries at this position the non-essential genes gop, \u03b2, and cII, with gop and \u03b2 likely acting as a toxin-antitoxin pair"}, {"notes": "Rousset et al. cloned P4/P2 hotspot systems under native promoters and measured reproducible phage resistance against their coliphage panel.", "reference": "DOI:10.1016/j.chom.2022.02.018", "snippet": "When compared with a control vector encoding a green fluorescent protein (GFP), seven systems provided robust and reproducible resistance to at least one phage"}, {"notes": "The DefenseFinder rules table models Rst_gop_beta_cll as a three-profile system requiring beta, cll, and gop profiles.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Rst_gop_beta_cll\tRst_gop_beta_cll\t3\t3\tRst_gop_beta_cll__beta, Rst_gop_beta_cll__cll, Rst_gop_beta_cll__gop\t\t\t"}, {"notes": "The DefenseFinder HMM inventory records custom beta, cll, and gop profiles under the Rst_gop_beta_cll system namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Rst_gop_beta_cll__beta                           | Rst_gop_beta_cll__beta                           | Rst_gop_beta_cll       | Custom                  | 20     |\n| Rst_gop_beta_cll__cll                            | Rst_gop_beta_cll__cll                            | Rst_gop_beta_cll       | Custom                  | 20     |\n| Rst_gop_beta_cll__gop                            | Rst_gop_beta_cll__gop                            | Rst_gop_beta_cll       | Custom                  | 20     |"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Rst gop-beta-cII locus", "target": "lambda and P1 phage restriction"}, {"description": "Restriction of lambda and P1 phages realizes the Rst gop-beta-cII system trait.", "edge_id": "edge-2", "evidence": [{"notes": "Rousset et al. directly identify gop-beta-cII as an anti-phage system that protects against lambda and P1.", "reference": "DOI:10.1016/j.chom.2022.02.018", "snippet": "We report that gop-\u03b2-cII forms an anti-phage system that protects against \u03bb and P1."}, {"notes": "Rousset et al. cloned P4/P2 hotspot systems under native promoters and measured reproducible phage resistance against their coliphage panel.", "reference": "DOI:10.1016/j.chom.2022.02.018", "snippet": "When compared with a control vector encoding a green fluorescent protein (GFP), seven systems provided robust and reproducible resistance to at least one phage"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "lambda and P1 phage restriction", "target": "Rst gop-beta-cII system"}, {"description": "Rst gop-beta-cII system possession is a phage-defense-system trait.", "edge_id": "edge-3", "evidence": [{"notes": "Rousset et al. frame the P4-like satellite hotspot that contains gop-beta-cII as a reservoir of anti-phage systems.", "reference": "DOI:10.1016/j.chom.2022.02.018", "snippet": "P2-like phages and their parasitic P4-like satellites carry hotspots of genetic variation containing reservoirs of anti-phage systems"}, {"notes": "The DefenseFinder article registry maps the named Rst_gop_beta_cll system to the Rousset et al. preprint.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "Rst_gop_beta_cll | 10\\.1101/2021\\.01\\.21\\.427644 | Prophage-encoded hotspots of bacterial immune systems"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "Rst gop-beta-cII system", "target": "phage defense system"}, {"description": "Type IV methyl-directed restriction enzyme EcoKMcrB subunit (mcrB, UniProtKB:P15005) contributes to Rst gop-beta-cII system.", "edge_id": "edge-4", "evidence": [{"notes": "Supports the functional association between Type IV methyl-directed restriction enzyme EcoKMcrB subunit (UniProtKB:P15005 in Escherichia coli (strain K12)) and Rst gop-beta-cII system.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Rst_HelicaseDUF2290__DUF2290 | Rst_HelicaseDUF2290__DUF2290___DUF2290 | Rst_HelicaseDUF2290 | PF10053.11 | 25 | | Rst_HelicaseDUF2290__DUF2290_Pers | Rst_HelicaseDUF2290__DUF2290_Pers___DUF2290_Pers | Rst_HelicaseDUF2290 | Custom | 20 | | Rst_HelicaseDUF2290__Helicase | Rst_HelicaseDUF2290__Helicase___Helicase | Rst_HelicaseDUF2290 | Custom | 20 |"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Type IV methyl-directed restriction enzyme EcoKMcrB subunit", "target": "Rst gop-beta-cII system"}], "graph_id": "rst_gop_beta_cll_locus_restricts_lambda_p1", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Restriction of bacteriophages lambda and P1 by the gop-beta-cII locus.", "grounding": null, "id": "lambda_and_p1_phage_restriction", "is_orphan": false, "label": "lambda and P1 phage restriction", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of one or more genome-encoded immune systems that inhibit bacteriophage infection.", "grounding": "traitmech:000209", "id": "phage_defense_system", "is_orphan": false, "label": "phage defense system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "A P4-like gop-beta-cII phage-defense locus represented by beta, cll, and gop DefenseFinder profiles.", "grounding": null, "id": "rst_gop_beta_cll_locus", "is_orphan": false, "label": "Rst gop-beta-cII locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Protein component (Type IV methyl-directed restriction enzyme EcoKMcrB subunit) associated with Rst gop-beta-cII system.", "grounding": "InterPro:IPR003593", "id": "rst_gop_beta_cll_system_protein_component", "is_orphan": false, "label": "Type IV methyl-directed restriction enzyme EcoKMcrB subunit", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 197, "evidence": [{"notes": "Supports Type IV methyl-directed restriction enzyme EcoKMcrB subunit in Rst gop-beta-cII system; UniProtKB:P15005 (mcrB, Type IV methyl-directed restriction enzyme EcoKMcrB subunit) in Escherichia coli (strain K12) provides a verified protein exemplar.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Rst_gop_beta_cll__beta | Rst_gop_beta_cll__beta | Rst_gop_beta_cll | Custom | 20 | | Rst_gop_beta_cll__cll | Rst_gop_beta_cll__cll | Rst_gop_beta_cll | Custom | 20 | | Rst_gop_beta_cll__gop | Rst_gop_beta_cll__gop | Rst_gop_beta_cll | Custom | 20 |"}], "gene_symbol": "mcrB", "protein_label": "Type IV methyl-directed restriction enzyme EcoKMcrB subunit", "proteome_id": "UP000000625", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (mcrB, Type IV methyl-directed restriction enzyme EcoKMcrB subunit) associated with Rst gop-beta-cII system in Escherichia coli (strain K12).", "sequence_version": 3, "taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli (strain K12)", "uniprot_id": "UniProtKB:P15005"}], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded gop-beta-cII phage-defense system.", "grounding": "traitmech:000376", "id": "rst_gop_beta_cll_system_trait", "is_orphan": false, "label": "Rst gop-beta-cII system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 197, "evidence": [{"notes": "Supports Type IV methyl-directed restriction enzyme EcoKMcrB subunit in Rst gop-beta-cII system; UniProtKB:P15005 (mcrB, Type IV methyl-directed restriction enzyme EcoKMcrB subunit) in Escherichia coli (strain K12) provides a verified protein exemplar.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Rst_gop_beta_cll__beta | Rst_gop_beta_cll__beta | Rst_gop_beta_cll | Custom | 20 | | Rst_gop_beta_cll__cll | Rst_gop_beta_cll__cll | Rst_gop_beta_cll | Custom | 20 | | Rst_gop_beta_cll__gop | Rst_gop_beta_cll__gop | Rst_gop_beta_cll | Custom | 20 |"}], "gene_symbol": "mcrB", "node_id": "rst_gop_beta_cll_system_protein_component", "node_label": "Type IV methyl-directed restriction enzyme EcoKMcrB subunit", "protein_label": "Type IV methyl-directed restriction enzyme EcoKMcrB subunit", "proteome_id": "UP000000625", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (mcrB, Type IV methyl-directed restriction enzyme EcoKMcrB subunit) associated with Rst gop-beta-cII system in Escherichia coli (strain K12).", "sequence_version": 3, "taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli (strain K12)", "uniprot_id": "UniProtKB:P15005"}], "scope_notes": "The graph captures gop-beta-cII as a named DefenseFinder three-profile phage-defense system while leaving natural host breadth, the direct phage trigger, the gop and beta toxin-antitoxin interpretation, cII activity, and profile-to-gene mapping unresolved.", "scope_status": "NONMECHANISTIC", "title": "Rst gop-beta-cII loci restrict lambda and P1 phages"}];
+  var graphs = [{"description": "Conservative system-level sketch linking a P4 gop-beta-cII locus to lambda and P1 phage restriction.", "edges": [{"description": "Rousset et al. linked gop-beta-cII to lambda and P1 phage protection, and DefenseFinder models Rst_gop_beta_cll as a three-profile system.", "evidence": [{"notes": "Rousset et al. describe the canonical P4 satellite gop, beta, and cII locus before testing it for anti-phage activity.", "reference": "DOI:10.1016/j.chom.2022.02.018", "snippet": "The well-characterized P4 satellite (NC_001609) carries at this position the non-essential genes gop, \u03b2, and cII, with gop and \u03b2 likely acting as a toxin-antitoxin pair"}, {"notes": "Rousset et al. cloned P4/P2 hotspot systems under native promoters and measured reproducible phage resistance against their coliphage panel.", "reference": "DOI:10.1016/j.chom.2022.02.018", "snippet": "When compared with a control vector encoding a green fluorescent protein (GFP), seven systems provided robust and reproducible resistance to at least one phage"}, {"notes": "The DefenseFinder rules table models Rst_gop_beta_cll as a three-profile system requiring beta, cll, and gop profiles.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Rst_gop_beta_cll\tRst_gop_beta_cll\t3\t3\tRst_gop_beta_cll__beta, Rst_gop_beta_cll__cll, Rst_gop_beta_cll__gop\t\t\t"}, {"notes": "The DefenseFinder HMM inventory records custom beta, cll, and gop profiles under the Rst_gop_beta_cll system namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Rst_gop_beta_cll__beta                           | Rst_gop_beta_cll__beta                           | Rst_gop_beta_cll       | Custom                  | 20     |\n| Rst_gop_beta_cll__cll                            | Rst_gop_beta_cll__cll                            | Rst_gop_beta_cll       | Custom                  | 20     |\n| Rst_gop_beta_cll__gop                            | Rst_gop_beta_cll__gop                            | Rst_gop_beta_cll       | Custom                  | 20     |"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "rst_gop_beta_cll_locus", "target": "lambda_and_p1_phage_restriction"}, {"description": "Restriction of lambda and P1 phages realizes the Rst gop-beta-cII system trait.", "evidence": [{"notes": "Rousset et al. directly identify gop-beta-cII as an anti-phage system that protects against lambda and P1.", "reference": "DOI:10.1016/j.chom.2022.02.018", "snippet": "We report that gop-\u03b2-cII forms an anti-phage system that protects against \u03bb and P1."}, {"notes": "Rousset et al. cloned P4/P2 hotspot systems under native promoters and measured reproducible phage resistance against their coliphage panel.", "reference": "DOI:10.1016/j.chom.2022.02.018", "snippet": "When compared with a control vector encoding a green fluorescent protein (GFP), seven systems provided robust and reproducible resistance to at least one phage"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "lambda_and_p1_phage_restriction", "target": "rst_gop_beta_cll_system_trait"}, {"description": "Rst gop-beta-cII system possession is a phage-defense-system trait.", "evidence": [{"notes": "Rousset et al. frame the P4-like satellite hotspot that contains gop-beta-cII as a reservoir of anti-phage systems.", "reference": "DOI:10.1016/j.chom.2022.02.018", "snippet": "P2-like phages and their parasitic P4-like satellites carry hotspots of genetic variation containing reservoirs of anti-phage systems"}, {"notes": "The DefenseFinder article registry maps the named Rst_gop_beta_cll system to the Rousset et al. preprint.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "Rst_gop_beta_cll | 10\\.1101/2021\\.01\\.21\\.427644 | Prophage-encoded hotspots of bacterial immune systems"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "rst_gop_beta_cll_system_trait", "target": "phage_defense_system"}], "evidence_rows": [{"description": "Rousset et al. linked gop-beta-cII to lambda and P1 phage protection, and DefenseFinder models Rst_gop_beta_cll as a three-profile system.", "edge_id": "edge-1", "evidence": [{"notes": "Rousset et al. describe the canonical P4 satellite gop, beta, and cII locus before testing it for anti-phage activity.", "reference": "DOI:10.1016/j.chom.2022.02.018", "snippet": "The well-characterized P4 satellite (NC_001609) carries at this position the non-essential genes gop, \u03b2, and cII, with gop and \u03b2 likely acting as a toxin-antitoxin pair"}, {"notes": "Rousset et al. cloned P4/P2 hotspot systems under native promoters and measured reproducible phage resistance against their coliphage panel.", "reference": "DOI:10.1016/j.chom.2022.02.018", "snippet": "When compared with a control vector encoding a green fluorescent protein (GFP), seven systems provided robust and reproducible resistance to at least one phage"}, {"notes": "The DefenseFinder rules table models Rst_gop_beta_cll as a three-profile system requiring beta, cll, and gop profiles.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Rst_gop_beta_cll\tRst_gop_beta_cll\t3\t3\tRst_gop_beta_cll__beta, Rst_gop_beta_cll__cll, Rst_gop_beta_cll__gop\t\t\t"}, {"notes": "The DefenseFinder HMM inventory records custom beta, cll, and gop profiles under the Rst_gop_beta_cll system namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Rst_gop_beta_cll__beta                           | Rst_gop_beta_cll__beta                           | Rst_gop_beta_cll       | Custom                  | 20     |\n| Rst_gop_beta_cll__cll                            | Rst_gop_beta_cll__cll                            | Rst_gop_beta_cll       | Custom                  | 20     |\n| Rst_gop_beta_cll__gop                            | Rst_gop_beta_cll__gop                            | Rst_gop_beta_cll       | Custom                  | 20     |"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Rst gop-beta-cII locus", "source_grounding": null, "target": "lambda and P1 phage restriction", "target_grounding": null}, {"description": "Restriction of lambda and P1 phages realizes the Rst gop-beta-cII system trait.", "edge_id": "edge-2", "evidence": [{"notes": "Rousset et al. directly identify gop-beta-cII as an anti-phage system that protects against lambda and P1.", "reference": "DOI:10.1016/j.chom.2022.02.018", "snippet": "We report that gop-\u03b2-cII forms an anti-phage system that protects against \u03bb and P1."}, {"notes": "Rousset et al. cloned P4/P2 hotspot systems under native promoters and measured reproducible phage resistance against their coliphage panel.", "reference": "DOI:10.1016/j.chom.2022.02.018", "snippet": "When compared with a control vector encoding a green fluorescent protein (GFP), seven systems provided robust and reproducible resistance to at least one phage"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "lambda and P1 phage restriction", "source_grounding": null, "target": "Rst gop-beta-cII system", "target_grounding": "traitmech:000376"}, {"description": "Rst gop-beta-cII system possession is a phage-defense-system trait.", "edge_id": "edge-3", "evidence": [{"notes": "Rousset et al. frame the P4-like satellite hotspot that contains gop-beta-cII as a reservoir of anti-phage systems.", "reference": "DOI:10.1016/j.chom.2022.02.018", "snippet": "P2-like phages and their parasitic P4-like satellites carry hotspots of genetic variation containing reservoirs of anti-phage systems"}, {"notes": "The DefenseFinder article registry maps the named Rst_gop_beta_cll system to the Rousset et al. preprint.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "Rst_gop_beta_cll | 10\\.1101/2021\\.01\\.21\\.427644 | Prophage-encoded hotspots of bacterial immune systems"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "Rst gop-beta-cII system", "source_grounding": "traitmech:000376", "target": "phage defense system", "target_grounding": "traitmech:000209"}], "graph_id": "rst_gop_beta_cll_locus_restricts_lambda_p1", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Restriction of bacteriophages lambda and P1 by the gop-beta-cII locus.", "grounding": null, "id": "lambda_and_p1_phage_restriction", "is_orphan": false, "label": "lambda and P1 phage restriction", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of one or more genome-encoded immune systems that inhibit bacteriophage infection.", "grounding": "traitmech:000209", "id": "phage_defense_system", "is_orphan": false, "label": "phage defense system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "A P4-like gop-beta-cII phage-defense locus represented by beta, cll, and gop DefenseFinder profiles.", "grounding": null, "id": "rst_gop_beta_cll_locus", "is_orphan": false, "label": "Rst gop-beta-cII locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded gop-beta-cII phage-defense system.", "grounding": "traitmech:000376", "id": "rst_gop_beta_cll_system_trait", "is_orphan": false, "label": "Rst gop-beta-cII system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "The graph captures gop-beta-cII as a named DefenseFinder three-profile phage-defense system while leaving natural host breadth, the direct phage trigger, the gop and beta toxin-antitoxin interpretation, cII activity, and profile-to-gene mapping unresolved.", "scope_status": "NONMECHANISTIC", "title": "Rst gop-beta-cII loci restrict lambda and P1 phages"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -816,13 +902,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-10-17 09:00 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

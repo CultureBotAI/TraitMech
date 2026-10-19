@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/genomics.html">GENOMICS</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/genomics.html">GENOMICS</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>AVAST system</h1>
     <p class="curie"><code>traitmech:000239</code> · CLASS · PROPOSED</p>
 
@@ -97,9 +108,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>AVAST locus</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>Avs STAND receptor activation</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>AVAST loci encode Avs STAND-family receptors that are activated when their cognate conserved phage protein is present.</p>
             <ul>
 
@@ -120,9 +133,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>Avs STAND receptor activation</strong>
+
             <span class="edge-predicate">activates</span>
             <strong>AVAST antiviral effector output</strong>
-            <code>RO:0002213</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002213" rel="nofollow noreferrer"><code>RO:0002213</code></a>
             <p>Detection of a phage cue activates the effector domain coupled to the cognate Avs STAND receptor.</p>
             <ul>
 
@@ -137,9 +152,11 @@
 
           <li id="pathograph-1-edge-3">
             <strong>AVAST antiviral effector output</strong>
+
             <span class="edge-predicate">mitigates</span>
             <strong>phage replication</strong>
-            <code>METPO:2007407</code>
+
+            <a href="https://w3id.org/metpo/2007407" rel="nofollow noreferrer"><code>METPO:2007407</code></a>
             <p>Subtype-specific AVAST effector activities restrict bacteriophage replication or propagation after recognition of a phage cue.</p>
             <ul>
 
@@ -160,9 +177,11 @@
 
           <li id="pathograph-1-edge-4">
             <strong>AVAST antiviral effector output</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>AVAST system</strong>
-            <code>METPO:2007700</code>
+            <code>traitmech:000239</code>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>Activated AVAST effector outputs realize the AVAST phage-defense-system trait.</p>
             <ul>
 
@@ -177,8 +196,10 @@
 
           <li id="pathograph-1-edge-5">
             <strong>AVAST system</strong>
+            <code>traitmech:000239</code>
             <span class="edge-predicate">is a</span>
             <strong>phage defense system</strong>
+            <code>traitmech:000209</code>
             <code>rdfs:subClassOf</code>
             <p>AVAST system possession is a phage-defense-system trait.</p>
             <ul>
@@ -329,11 +350,75 @@
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
 
-      <p class="no-match">No kg-microbe node embedding matched this record
-        in the 2026-04-25 deepwalk.</p>
+      <p class="match-method">Matched <strong>1</strong>
+        kg-microbe node
+        via <em>parent_proxy</em>.</p>
+      <ul class="kgm-nodes">
+
+        <li><code>METPO:1000188</code> <span class="dim-preview">[-0.956, -1.962, -3.148, +1.274, …]</span></li>
+
+      </ul>
+      <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
 
     </div>
 
+
+    <div class="card">
+      <h2>Nearest neighbors in embedding space</h2>
+      <p class="meta">Top-8 cosine-similar METPO traits
+        from the 2026-04-25 deepwalk (512-D).</p>
+      <ul class="nn-list">
+
+        <li>
+          <span class="nn-cat">upper</span>
+          <a href="../../traits/upper/quality.html">quality</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/jukab_system.html">JukAB system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/integrative_conjugative_element.html">integrative conjugative element</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/ig_like_schlafen_system.html">Ig-like Schlafen system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hypnos_system.html">Hypnos system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hna_system.html">Hna system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hma_system.html">Hma system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hesat_system.html">Hesat system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+      </ul>
+    </div>
 
 
 
@@ -465,6 +550,11 @@
     </dl>
   </div>
 
+
+  <div class="card rail-kgm">
+    <h2>kg-microbe</h2>
+    <p class="meta">1 matching node (parent_proxy)</p>
+  </div>
 
 </aside>
 </div>
@@ -798,7 +888,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed process sketch linking an AVAST locus to Avs STAND receptor activation, subtype-specific antiviral effector activity, and inhibition of bacteriophage replication.", "edges": [{"description": "AVAST loci encode Avs STAND-family receptors that are activated when their cognate conserved phage protein is present.", "evidence": [{"notes": "Gao et al. support Avs1 through Avs4 as phage-protein-sensing AVAST receptors.", "reference": "DOI:10.1126/science.abm4096", "snippet": "Avs1 to Avs3 recognize the large terminase subunit, and Avs4 recognizes the portal"}, {"notes": "Muralidharan et al. support phage-infection recognition by Avs5 receptors.", "reference": "DOI:10.1016/j.molcel.2026.01.004", "snippet": "Avs5 localizes to early infection vesicles, where it senses an essential, early-expressed phage protein named JADA"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "avast_locus", "target": "avs_stand_receptor_activation"}, {"description": "Detection of a phage cue activates the effector domain coupled to the cognate Avs STAND receptor.", "evidence": [{"notes": "Muralidharan et al. connect phage recognition to subtype-specific Avs5 Sir2-like effector activation.", "reference": "DOI:10.1016/j.molcel.2026.01.004", "snippet": "Recognition of phage infection triggers the Sir2-like effector domain of Avs5 across three Avs5 clades"}], "id": "edge-2", "is_orphan": false, "predicate": "activates", "predicate_id": "RO:0002213", "source": "avs_stand_receptor_activation", "target": "avast_effector_output"}, {"description": "Subtype-specific AVAST effector activities restrict bacteriophage replication or propagation after recognition of a phage cue.", "evidence": [{"notes": "Gao et al. support Avs effector outputs as downstream antiviral activities in Avs1 through Avs4 systems.", "reference": "DOI:10.1126/science.abm4096", "snippet": "In all four cases, target recognition led to Avs protein activation and antiviral activity"}, {"notes": "Muralidharan et al. support Avs5 Sir2-like effector activity as a jumbo-phage-restricting AVAST output.", "reference": "DOI:10.1016/j.molcel.2026.01.004", "snippet": "Upon sensing Jumbo J phage, Avs5-1 underwent oligomerization, which activated the enzymatic activity of its Sir2 effector, resulting in rapid NAD + hydrolysis, disruption of phage nucleus formation, and arrest of infection"}], "id": "edge-3", "is_orphan": false, "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "avast_effector_output", "target": "phage_replication"}, {"description": "Activated AVAST effector outputs realize the AVAST phage-defense-system trait.", "evidence": [{"notes": "Muralidharan et al. connect a characterized AVAST subtype to conserved antiphage immunity.", "reference": "DOI:10.1016/j.molcel.2026.01.004", "snippet": "AVAST type 5 (Avs5) systems, part of the signal transduction ATPases of numerous domains (STAND) superfamily, confer conserved immunity against jumbo phages"}], "id": "edge-4", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "avast_effector_output", "target": "avast_system_trait"}, {"description": "AVAST system possession is a phage-defense-system trait.", "evidence": [{"notes": "Gao et al. identified AVAST among candidate phage-defense systems.", "reference": "DOI:10.1126/science.aba0372", "snippet": "AVAST, antiviral ATPase/NTPase of the STAND superfamily"}], "id": "edge-5", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "avast_system_trait", "target": "phage_defense_system"}, {"description": "Septu protein PtuB (ptuB, UniProtKB:P0DW42) contributes to AVAST system.", "evidence": [{"notes": "Supports the functional association between Septu protein PtuB (UniProtKB:P0DW42 in Bacillus thuringiensis) and AVAST system.", "reference": "DOI:10.1126/science.aba0372", "snippet": "the UG3 (drt3a) and UG8 (drt3b) RTs are components of the same defense system (DRT type 3), with both RTs required for defense activity"}], "id": "edge-6", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "avast_system_protein_component", "target": "avast_system_trait"}], "evidence_rows": [{"description": "AVAST loci encode Avs STAND-family receptors that are activated when their cognate conserved phage protein is present.", "edge_id": "edge-1", "evidence": [{"notes": "Gao et al. support Avs1 through Avs4 as phage-protein-sensing AVAST receptors.", "reference": "DOI:10.1126/science.abm4096", "snippet": "Avs1 to Avs3 recognize the large terminase subunit, and Avs4 recognizes the portal"}, {"notes": "Muralidharan et al. support phage-infection recognition by Avs5 receptors.", "reference": "DOI:10.1016/j.molcel.2026.01.004", "snippet": "Avs5 localizes to early infection vesicles, where it senses an essential, early-expressed phage protein named JADA"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "AVAST locus", "target": "Avs STAND receptor activation"}, {"description": "Detection of a phage cue activates the effector domain coupled to the cognate Avs STAND receptor.", "edge_id": "edge-2", "evidence": [{"notes": "Muralidharan et al. connect phage recognition to subtype-specific Avs5 Sir2-like effector activation.", "reference": "DOI:10.1016/j.molcel.2026.01.004", "snippet": "Recognition of phage infection triggers the Sir2-like effector domain of Avs5 across three Avs5 clades"}], "predicate": "activates", "predicate_id": "RO:0002213", "source": "Avs STAND receptor activation", "target": "AVAST antiviral effector output"}, {"description": "Subtype-specific AVAST effector activities restrict bacteriophage replication or propagation after recognition of a phage cue.", "edge_id": "edge-3", "evidence": [{"notes": "Gao et al. support Avs effector outputs as downstream antiviral activities in Avs1 through Avs4 systems.", "reference": "DOI:10.1126/science.abm4096", "snippet": "In all four cases, target recognition led to Avs protein activation and antiviral activity"}, {"notes": "Muralidharan et al. support Avs5 Sir2-like effector activity as a jumbo-phage-restricting AVAST output.", "reference": "DOI:10.1016/j.molcel.2026.01.004", "snippet": "Upon sensing Jumbo J phage, Avs5-1 underwent oligomerization, which activated the enzymatic activity of its Sir2 effector, resulting in rapid NAD + hydrolysis, disruption of phage nucleus formation, and arrest of infection"}], "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "AVAST antiviral effector output", "target": "phage replication"}, {"description": "Activated AVAST effector outputs realize the AVAST phage-defense-system trait.", "edge_id": "edge-4", "evidence": [{"notes": "Muralidharan et al. connect a characterized AVAST subtype to conserved antiphage immunity.", "reference": "DOI:10.1016/j.molcel.2026.01.004", "snippet": "AVAST type 5 (Avs5) systems, part of the signal transduction ATPases of numerous domains (STAND) superfamily, confer conserved immunity against jumbo phages"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "AVAST antiviral effector output", "target": "AVAST system"}, {"description": "AVAST system possession is a phage-defense-system trait.", "edge_id": "edge-5", "evidence": [{"notes": "Gao et al. identified AVAST among candidate phage-defense systems.", "reference": "DOI:10.1126/science.aba0372", "snippet": "AVAST, antiviral ATPase/NTPase of the STAND superfamily"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "AVAST system", "target": "phage defense system"}, {"description": "Septu protein PtuB (ptuB, UniProtKB:P0DW42) contributes to AVAST system.", "edge_id": "edge-6", "evidence": [{"notes": "Supports the functional association between Septu protein PtuB (UniProtKB:P0DW42 in Bacillus thuringiensis) and AVAST system.", "reference": "DOI:10.1126/science.aba0372", "snippet": "the UG3 (drt3a) and UG8 (drt3b) RTs are components of the same defense system (DRT type 3), with both RTs required for defense activity"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Septu protein PtuB", "target": "AVAST system"}], "graph_id": "avast_stand_pattern_recognition_defense", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Subtype-specific nuclease, NADase, or membrane-associated antiviral activity triggered by an activated AVAST receptor.", "grounding": null, "id": "avast_effector_output", "is_orphan": false, "label": "AVAST antiviral effector output", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "A phage-defense locus encoding a STAND-superfamily antiviral ATPase/NTPase that functions as a modular Avs receptor-effector.", "grounding": null, "id": "avast_locus", "is_orphan": false, "label": "AVAST locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Protein component (Septu protein PtuB) associated with AVAST system.", "grounding": null, "id": "avast_system_protein_component", "is_orphan": false, "label": "Septu protein PtuB", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 12, "evidence": [{"notes": "Supports Septu protein PtuB in AVAST system; UniProtKB:P0DW42 (ptuB, Septu protein PtuB) in Bacillus thuringiensis provides a verified protein exemplar.", "reference": "DOI:10.1016/j.molcel.2026.01.004", "snippet": "AVAST type 5 (Avs5) systems, part of the signal transduction ATPases of numerous domains (STAND) superfamily, confer conserved immunity against jumbo phages"}], "gene_symbol": "ptuB", "protein_label": "Septu protein PtuB", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (ptuB, Septu protein PtuB) associated with AVAST system in Bacillus thuringiensis.", "sequence_version": 1, "taxon_id": "NCBITaxon:1428", "taxon_label": "Bacillus thuringiensis", "uniprot_id": "UniProtKB:P0DW42"}], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded AVAST phage-defense system.", "grounding": "traitmech:000239", "id": "avast_system_trait", "is_orphan": false, "label": "AVAST system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Activation of an Avs STAND-family receptor after detection of a conserved phage protein during bacteriophage infection.", "grounding": null, "id": "avs_stand_receptor_activation", "is_orphan": false, "label": "Avs STAND receptor activation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of one or more genome-encoded immune systems that inhibit bacteriophage infection.", "grounding": "traitmech:000209", "id": "phage_defense_system", "is_orphan": false, "label": "phage defense system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Bacteriophage genome replication and production inside an infected bacterial host.", "grounding": null, "id": "phage_replication", "is_orphan": false, "label": "phage replication", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 12, "evidence": [{"notes": "Supports Septu protein PtuB in AVAST system; UniProtKB:P0DW42 (ptuB, Septu protein PtuB) in Bacillus thuringiensis provides a verified protein exemplar.", "reference": "DOI:10.1016/j.molcel.2026.01.004", "snippet": "AVAST type 5 (Avs5) systems, part of the signal transduction ATPases of numerous domains (STAND) superfamily, confer conserved immunity against jumbo phages"}], "gene_symbol": "ptuB", "node_id": "avast_system_protein_component", "node_label": "Septu protein PtuB", "protein_label": "Septu protein PtuB", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (ptuB, Septu protein PtuB) associated with AVAST system in Bacillus thuringiensis.", "sequence_version": 1, "taxon_id": "NCBITaxon:1428", "taxon_label": "Bacillus thuringiensis", "uniprot_id": "UniProtKB:P0DW42"}], "scope_notes": "The graph stays at the AVAST-family level and does not assert that all Avs subtypes detect the same phage protein, carry the same nuclease or Sir2-like effector domain, act on the same molecular substrate, or inhibit the same class of phages.", "scope_status": "NONMECHANISTIC", "title": "AVAST STAND receptors detect phage proteins during antiphage defense"}];
+  var graphs = [{"description": "Evidence-backed process sketch linking an AVAST locus to Avs STAND receptor activation, subtype-specific antiviral effector activity, and inhibition of bacteriophage replication.", "edges": [{"description": "AVAST loci encode Avs STAND-family receptors that are activated when their cognate conserved phage protein is present.", "evidence": [{"notes": "Gao et al. support Avs1 through Avs4 as phage-protein-sensing AVAST receptors.", "reference": "DOI:10.1126/science.abm4096", "snippet": "Avs1 to Avs3 recognize the large terminase subunit, and Avs4 recognizes the portal"}, {"notes": "Muralidharan et al. support phage-infection recognition by Avs5 receptors.", "reference": "DOI:10.1016/j.molcel.2026.01.004", "snippet": "Avs5 localizes to early infection vesicles, where it senses an essential, early-expressed phage protein named JADA"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "avast_locus", "target": "avs_stand_receptor_activation"}, {"description": "Detection of a phage cue activates the effector domain coupled to the cognate Avs STAND receptor.", "evidence": [{"notes": "Muralidharan et al. connect phage recognition to subtype-specific Avs5 Sir2-like effector activation.", "reference": "DOI:10.1016/j.molcel.2026.01.004", "snippet": "Recognition of phage infection triggers the Sir2-like effector domain of Avs5 across three Avs5 clades"}], "id": "edge-2", "is_orphan": false, "predicate": "activates", "predicate_id": "RO:0002213", "source": "avs_stand_receptor_activation", "target": "avast_effector_output"}, {"description": "Subtype-specific AVAST effector activities restrict bacteriophage replication or propagation after recognition of a phage cue.", "evidence": [{"notes": "Gao et al. support Avs effector outputs as downstream antiviral activities in Avs1 through Avs4 systems.", "reference": "DOI:10.1126/science.abm4096", "snippet": "In all four cases, target recognition led to Avs protein activation and antiviral activity"}, {"notes": "Muralidharan et al. support Avs5 Sir2-like effector activity as a jumbo-phage-restricting AVAST output.", "reference": "DOI:10.1016/j.molcel.2026.01.004", "snippet": "Upon sensing Jumbo J phage, Avs5-1 underwent oligomerization, which activated the enzymatic activity of its Sir2 effector, resulting in rapid NAD + hydrolysis, disruption of phage nucleus formation, and arrest of infection"}], "id": "edge-3", "is_orphan": false, "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "avast_effector_output", "target": "phage_replication"}, {"description": "Activated AVAST effector outputs realize the AVAST phage-defense-system trait.", "evidence": [{"notes": "Muralidharan et al. connect a characterized AVAST subtype to conserved antiphage immunity.", "reference": "DOI:10.1016/j.molcel.2026.01.004", "snippet": "AVAST type 5 (Avs5) systems, part of the signal transduction ATPases of numerous domains (STAND) superfamily, confer conserved immunity against jumbo phages"}], "id": "edge-4", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "avast_effector_output", "target": "avast_system_trait"}, {"description": "AVAST system possession is a phage-defense-system trait.", "evidence": [{"notes": "Gao et al. identified AVAST among candidate phage-defense systems.", "reference": "DOI:10.1126/science.aba0372", "snippet": "AVAST, antiviral ATPase/NTPase of the STAND superfamily"}], "id": "edge-5", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "avast_system_trait", "target": "phage_defense_system"}], "evidence_rows": [{"description": "AVAST loci encode Avs STAND-family receptors that are activated when their cognate conserved phage protein is present.", "edge_id": "edge-1", "evidence": [{"notes": "Gao et al. support Avs1 through Avs4 as phage-protein-sensing AVAST receptors.", "reference": "DOI:10.1126/science.abm4096", "snippet": "Avs1 to Avs3 recognize the large terminase subunit, and Avs4 recognizes the portal"}, {"notes": "Muralidharan et al. support phage-infection recognition by Avs5 receptors.", "reference": "DOI:10.1016/j.molcel.2026.01.004", "snippet": "Avs5 localizes to early infection vesicles, where it senses an essential, early-expressed phage protein named JADA"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "AVAST locus", "source_grounding": null, "target": "Avs STAND receptor activation", "target_grounding": null}, {"description": "Detection of a phage cue activates the effector domain coupled to the cognate Avs STAND receptor.", "edge_id": "edge-2", "evidence": [{"notes": "Muralidharan et al. connect phage recognition to subtype-specific Avs5 Sir2-like effector activation.", "reference": "DOI:10.1016/j.molcel.2026.01.004", "snippet": "Recognition of phage infection triggers the Sir2-like effector domain of Avs5 across three Avs5 clades"}], "predicate": "activates", "predicate_id": "RO:0002213", "source": "Avs STAND receptor activation", "source_grounding": null, "target": "AVAST antiviral effector output", "target_grounding": null}, {"description": "Subtype-specific AVAST effector activities restrict bacteriophage replication or propagation after recognition of a phage cue.", "edge_id": "edge-3", "evidence": [{"notes": "Gao et al. support Avs effector outputs as downstream antiviral activities in Avs1 through Avs4 systems.", "reference": "DOI:10.1126/science.abm4096", "snippet": "In all four cases, target recognition led to Avs protein activation and antiviral activity"}, {"notes": "Muralidharan et al. support Avs5 Sir2-like effector activity as a jumbo-phage-restricting AVAST output.", "reference": "DOI:10.1016/j.molcel.2026.01.004", "snippet": "Upon sensing Jumbo J phage, Avs5-1 underwent oligomerization, which activated the enzymatic activity of its Sir2 effector, resulting in rapid NAD + hydrolysis, disruption of phage nucleus formation, and arrest of infection"}], "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "AVAST antiviral effector output", "source_grounding": null, "target": "phage replication", "target_grounding": null}, {"description": "Activated AVAST effector outputs realize the AVAST phage-defense-system trait.", "edge_id": "edge-4", "evidence": [{"notes": "Muralidharan et al. connect a characterized AVAST subtype to conserved antiphage immunity.", "reference": "DOI:10.1016/j.molcel.2026.01.004", "snippet": "AVAST type 5 (Avs5) systems, part of the signal transduction ATPases of numerous domains (STAND) superfamily, confer conserved immunity against jumbo phages"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "AVAST antiviral effector output", "source_grounding": null, "target": "AVAST system", "target_grounding": "traitmech:000239"}, {"description": "AVAST system possession is a phage-defense-system trait.", "edge_id": "edge-5", "evidence": [{"notes": "Gao et al. identified AVAST among candidate phage-defense systems.", "reference": "DOI:10.1126/science.aba0372", "snippet": "AVAST, antiviral ATPase/NTPase of the STAND superfamily"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "AVAST system", "source_grounding": "traitmech:000239", "target": "phage defense system", "target_grounding": "traitmech:000209"}], "graph_id": "avast_stand_pattern_recognition_defense", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Subtype-specific nuclease, NADase, or membrane-associated antiviral activity triggered by an activated AVAST receptor.", "grounding": null, "id": "avast_effector_output", "is_orphan": false, "label": "AVAST antiviral effector output", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "A phage-defense locus encoding a STAND-superfamily antiviral ATPase/NTPase that functions as a modular Avs receptor-effector.", "grounding": null, "id": "avast_locus", "is_orphan": false, "label": "AVAST locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded AVAST phage-defense system.", "grounding": "traitmech:000239", "id": "avast_system_trait", "is_orphan": false, "label": "AVAST system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Activation of an Avs STAND-family receptor after detection of a conserved phage protein during bacteriophage infection.", "grounding": null, "id": "avs_stand_receptor_activation", "is_orphan": false, "label": "Avs STAND receptor activation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of one or more genome-encoded immune systems that inhibit bacteriophage infection.", "grounding": "traitmech:000209", "id": "phage_defense_system", "is_orphan": false, "label": "phage defense system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Bacteriophage genome replication and production inside an infected bacterial host.", "grounding": null, "id": "phage_replication", "is_orphan": false, "label": "phage replication", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "The graph stays at the AVAST-family level and does not assert that all Avs subtypes detect the same phage protein, carry the same nuclease or Sir2-like effector domain, act on the same molecular substrate, or inhibit the same class of phages.", "scope_status": "NONMECHANISTIC", "title": "AVAST STAND receptors detect phage proteins during antiphage defense"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -818,13 +908,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-10-17 09:00 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

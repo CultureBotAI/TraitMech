@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/environment.html">ENVIRONMENT</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/environment.html">ENVIRONMENT</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>arsenic tolerant</h1>
     <p class="curie"><code>traitmech:000017</code> · CLASS · REVIEWED</p>
 
@@ -85,9 +96,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>arsenite(3-)</strong>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:29242" rel="nofollow noreferrer"><code>CHEBI:29242</code></a>
             <span class="edge-predicate">challenges</span>
             <strong>arsenic tolerant</strong>
-            <code>METPO:2007406</code>
+            <code>traitmech:000017</code>
+            <a href="https://w3id.org/metpo/2007406" rel="nofollow noreferrer"><code>METPO:2007406</code></a>
             <p>Cytoplasmic arsenite is the toxic challenge the trait counters.</p>
             <ul>
 
@@ -102,9 +115,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>ArsB arsenite-efflux protein module</strong>
+
             <span class="edge-predicate">enables</span>
             <strong>arsenite transmembrane transport</strong>
-            <code>RO:0002327</code>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0030001" rel="nofollow noreferrer"><code>GO:0030001</code></a>
+            <a href="http://purl.obolibrary.org/obo/RO_0002327" rel="nofollow noreferrer"><code>RO:0002327</code></a>
             <p>ArsB pumps arsenite out of the cytoplasm.</p>
             <ul>
 
@@ -119,9 +134,11 @@
 
           <li id="pathograph-1-edge-3">
             <strong>arsenite transmembrane transport</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0030001" rel="nofollow noreferrer"><code>GO:0030001</code></a>
             <span class="edge-predicate">mitigates</span>
             <strong>arsenite(3-)</strong>
-            <code>METPO:2007407</code>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:29242" rel="nofollow noreferrer"><code>CHEBI:29242</code></a>
+            <a href="https://w3id.org/metpo/2007407" rel="nofollow noreferrer"><code>METPO:2007407</code></a>
             <p>Active export depletes the cytoplasmic arsenite pool.</p>
             <ul>
 
@@ -136,8 +153,10 @@
 
           <li id="pathograph-1-edge-4">
             <strong>ArsR transcriptional repressor</strong>
+
             <span class="edge-predicate">represses</span>
             <strong>ars promoter</strong>
+
 
             <p>ArsR represses ars-operon transcription in the absence of arsenite.</p>
             <ul>
@@ -153,8 +172,10 @@
 
           <li id="pathograph-1-edge-5">
             <strong>arsenite(3-)</strong>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:29242" rel="nofollow noreferrer"><code>CHEBI:29242</code></a>
             <span class="edge-predicate">relieves repression by</span>
             <strong>ArsR transcriptional repressor</strong>
+
 
             <p>Arsenite binding changes ArsR conformation and de-represses ars transcription.</p>
             <ul>
@@ -170,9 +191,11 @@
 
           <li id="pathograph-1-edge-6">
             <strong>ArsC arsenate reductase</strong>
+
             <span class="edge-predicate">enables</span>
             <strong>arsenate reduction to arsenite</strong>
-            <code>RO:0002327</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002327" rel="nofollow noreferrer"><code>RO:0002327</code></a>
             <p>ArsC reduces intracellular arsenate to arsenite.</p>
             <ul>
 
@@ -187,9 +210,11 @@
 
           <li id="pathograph-1-edge-7">
             <strong>arsenate reduction to arsenite</strong>
+
             <span class="edge-predicate">has output</span>
             <strong>arsenite(3-)</strong>
-            <code>RO:0002234</code>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:29242" rel="nofollow noreferrer"><code>CHEBI:29242</code></a>
+            <a href="http://purl.obolibrary.org/obo/RO_0002234" rel="nofollow noreferrer"><code>RO:0002234</code></a>
             <p>Arsenate reduction yields arsenite, the substrate for efflux.</p>
             <ul>
 
@@ -204,9 +229,11 @@
 
           <li id="pathograph-1-edge-8">
             <strong>ArsB arsenite efflux permease</strong>
+
             <span class="edge-predicate">enables</span>
             <strong>arsenite transmembrane transport</strong>
-            <code>RO:0002327</code>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0030001" rel="nofollow noreferrer"><code>GO:0030001</code></a>
+            <a href="http://purl.obolibrary.org/obo/RO_0002327" rel="nofollow noreferrer"><code>RO:0002327</code></a>
             <p>ArsB is an integral membrane pump extruding arsenite from the cytoplasm.</p>
             <ul>
 
@@ -221,9 +248,11 @@
 
           <li id="pathograph-1-edge-9">
             <strong>Acr3 arsenite efflux permease</strong>
+
             <span class="edge-predicate">enables</span>
             <strong>arsenite transmembrane transport</strong>
-            <code>RO:0002327</code>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0030001" rel="nofollow noreferrer"><code>GO:0030001</code></a>
+            <a href="http://purl.obolibrary.org/obo/RO_0002327" rel="nofollow noreferrer"><code>RO:0002327</code></a>
             <p>Acr3 is an alternative inorganic arsenite efflux pump.</p>
             <ul>
 
@@ -238,9 +267,11 @@
 
           <li id="pathograph-1-edge-10">
             <strong>ArsM arsenite S-adenosylmethionine methyltransferase</strong>
+
             <span class="edge-predicate">enables</span>
             <strong>arsenite methylation</strong>
-            <code>RO:0002327</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002327" rel="nofollow noreferrer"><code>RO:0002327</code></a>
             <p>ArsM methylates arsenite to volatile methylated arsenicals.</p>
             <ul>
 
@@ -255,9 +286,11 @@
 
           <li id="pathograph-1-edge-11">
             <strong>arsenite methylation</strong>
+
             <span class="edge-predicate">mitigates</span>
             <strong>arsenite(3-)</strong>
-            <code>METPO:2007407</code>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:29242" rel="nofollow noreferrer"><code>CHEBI:29242</code></a>
+            <a href="https://w3id.org/metpo/2007407" rel="nofollow noreferrer"><code>METPO:2007407</code></a>
             <p>Methylation and volatilization depletes the cytoplasmic arsenite pool, a detoxification route.</p>
             <ul>
 
@@ -272,9 +305,11 @@
 
           <li id="pathograph-1-edge-12">
             <strong>ArsC arsenate reductase</strong>
+
             <span class="edge-predicate">reduces</span>
             <strong>arsenate(3-)</strong>
-            <code>METPO:2007802</code>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:29125" rel="nofollow noreferrer"><code>CHEBI:29125</code></a>
+            <a href="https://w3id.org/metpo/2007802" rel="nofollow noreferrer"><code>METPO:2007802</code></a>
             <p>Arsenate reductase reduces arsenate to arsenite, the form handled by efflux pumps.</p>
             <ul>
 
@@ -558,50 +593,50 @@
       <ul class="nn-list">
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/cadmium_tolerant.html">cadmium tolerant</a>
+          <span class="nn-cat">ecology</span>
+          <a href="../../traits/ecology/soil_dwelling.html">soil-dwelling</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/sulfur_globule.html">sulfur globule</a>
+          <span class="nn-cat">ecology</span>
+          <a href="../../traits/ecology/periplasmic_bacterial_predation.html">periplasmic bacterial predation</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/cobalt_tolerant.html">cobalt tolerant</a>
+          <span class="nn-cat">ecology</span>
+          <a href="../../traits/ecology/predatory_bacterium.html">predatory bacterium</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/copper_tolerant.html">copper tolerant</a>
+          <span class="nn-cat">ecology</span>
+          <a href="../../traits/ecology/symbiosis.html">symbiosis</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/desiccation_tolerant.html">desiccation tolerant</a>
+          <span class="nn-cat">ecology</span>
+          <a href="../../traits/ecology/saprotrophy.html">saprotrophy</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/piezophilic.html">piezophilic</a>
+          <span class="nn-cat">ecology</span>
+          <a href="../../traits/ecology/rhizosphere_association.html">rhizosphere association</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/obligately_piezophilic.html">obligately piezophilic</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/biomineralization.html">biomineralization</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/gas_vesicle.html">gas vesicle</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/bioluminescence.html">bioluminescence</a>
           <span class="sim">1.000</span>
         </li>
 
@@ -1185,7 +1220,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking the ars operon and ArsB pump to extrusion of cytoplasmic arsenite.", "edges": [{"description": "Cytoplasmic arsenite is the toxic challenge the trait counters.", "evidence": [{"notes": "Cupriavidus metallidurans BS1 tolerates arsenite to a MIC of 3.5 mM.", "reference": "DOI:10.3389/fmicb.2020.00047"}], "id": "edge-1", "is_orphan": false, "predicate": "challenges", "predicate_id": "METPO:2007406", "source": "arsenite", "target": "arsenic_tolerant_trait"}, {"description": "ArsB pumps arsenite out of the cytoplasm.", "evidence": [{"notes": "ArsB is an integral membrane protein extruding arsenite from the cell cytoplasm.", "reference": "DOI:10.3389/fmicb.2018.02473"}], "id": "edge-2", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "ars_operon", "target": "arsenite_export"}, {"description": "Active export depletes the cytoplasmic arsenite pool.", "evidence": [{"notes": "The ars operon is the near-ubiquitous arsenic-resistance determinant.", "reference": "DOI:10.3389/fmicb.2018.02473"}], "id": "edge-3", "is_orphan": false, "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "arsenite_export", "target": "arsenite"}, {"description": "ArsR represses ars-operon transcription in the absence of arsenite.", "evidence": [{"notes": "ArsR is a trans-acting transcriptional repressor that binds the ars promoter.", "reference": "DOI:10.3390/antibiotics12091474"}], "id": "edge-4", "is_orphan": false, "predicate": "represses", "predicate_id": null, "source": "arsR_repressor", "target": "ars_promoter"}, {"description": "Arsenite binding changes ArsR conformation and de-represses ars transcription.", "evidence": [{"notes": "Binding of As(III) to ArsR changes its conformation and relieves repression of the ars operon.", "reference": "DOI:10.3389/fmicb.2024.1494872"}], "id": "edge-5", "is_orphan": false, "predicate": "relieves repression by", "predicate_id": null, "source": "arsenite", "target": "arsR_repressor"}, {"description": "ArsC reduces intracellular arsenate to arsenite.", "evidence": [{"notes": "ArsC is an arsenate reductase that converts intracellular As(V) to As(III).", "reference": "DOI:10.3390/antibiotics12091474"}], "id": "edge-6", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "arsC_reductase", "target": "arsenate_reduction"}, {"description": "Arsenate reduction yields arsenite, the substrate for efflux.", "evidence": [{"notes": "ArsC converts intracellular As(V) to As(III), feeding the efflux route.", "reference": "DOI:10.3390/antibiotics12091474"}], "id": "edge-7", "is_orphan": false, "predicate": "has output", "predicate_id": "RO:0002234", "source": "arsenate_reduction", "target": "arsenite"}, {"description": "ArsB is an integral membrane pump extruding arsenite from the cytoplasm.", "evidence": [{"notes": "ArsB is an integral membrane arsenite efflux pump that extrudes As(OH)3/As3+ from the cytoplasm.", "reference": "DOI:10.3390/antibiotics12091474"}], "id": "edge-8", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "arsB_pump", "target": "arsenite_export"}, {"description": "Acr3 is an alternative inorganic arsenite efflux pump.", "evidence": [{"notes": "Some bacteria possess acr3, coding for an inorganic arsenite efflux pump.", "reference": "DOI:10.3390/microorganisms12010074"}], "id": "edge-9", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "acr3_pump", "target": "arsenite_export"}, {"description": "ArsM methylates arsenite to volatile methylated arsenicals.", "evidence": [{"notes": "arsM (arsenite S-adenosylmethionine methyltransferase) produces volatile methylated arsenicals.", "reference": "DOI:10.7717/peerj.18383"}], "id": "edge-10", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "arsM_methyltransferase", "target": "arsenite_methylation"}, {"description": "Methylation and volatilization depletes the cytoplasmic arsenite pool, a detoxification route.", "evidence": [{"notes": "Produced arsenite is methylated by arsM to volatile methylated arsenic, removing it from the cell.", "reference": "DOI:10.7717/peerj.18383"}], "id": "edge-11", "is_orphan": false, "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "arsenite_methylation", "target": "arsenite"}, {"description": "Arsenate reductase reduces arsenate to arsenite, the form handled by efflux pumps.", "evidence": [{"notes": "Connecting edge wiring the enrichment node into the graph.", "reference": "DOI:10.3389/fmicb.2020.00047"}], "id": "edge-12", "is_orphan": false, "predicate": "reduces", "predicate_id": "METPO:2007802", "source": "arsC_reductase", "target": "arsenate"}], "evidence_rows": [{"description": "Cytoplasmic arsenite is the toxic challenge the trait counters.", "edge_id": "edge-1", "evidence": [{"notes": "Cupriavidus metallidurans BS1 tolerates arsenite to a MIC of 3.5 mM.", "reference": "DOI:10.3389/fmicb.2020.00047"}], "predicate": "challenges", "predicate_id": "METPO:2007406", "source": "arsenite(3-)", "target": "arsenic tolerant"}, {"description": "ArsB pumps arsenite out of the cytoplasm.", "edge_id": "edge-2", "evidence": [{"notes": "ArsB is an integral membrane protein extruding arsenite from the cell cytoplasm.", "reference": "DOI:10.3389/fmicb.2018.02473"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "ArsB arsenite-efflux protein module", "target": "arsenite transmembrane transport"}, {"description": "Active export depletes the cytoplasmic arsenite pool.", "edge_id": "edge-3", "evidence": [{"notes": "The ars operon is the near-ubiquitous arsenic-resistance determinant.", "reference": "DOI:10.3389/fmicb.2018.02473"}], "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "arsenite transmembrane transport", "target": "arsenite(3-)"}, {"description": "ArsR represses ars-operon transcription in the absence of arsenite.", "edge_id": "edge-4", "evidence": [{"notes": "ArsR is a trans-acting transcriptional repressor that binds the ars promoter.", "reference": "DOI:10.3390/antibiotics12091474"}], "predicate": "represses", "predicate_id": null, "source": "ArsR transcriptional repressor", "target": "ars promoter"}, {"description": "Arsenite binding changes ArsR conformation and de-represses ars transcription.", "edge_id": "edge-5", "evidence": [{"notes": "Binding of As(III) to ArsR changes its conformation and relieves repression of the ars operon.", "reference": "DOI:10.3389/fmicb.2024.1494872"}], "predicate": "relieves repression by", "predicate_id": null, "source": "arsenite(3-)", "target": "ArsR transcriptional repressor"}, {"description": "ArsC reduces intracellular arsenate to arsenite.", "edge_id": "edge-6", "evidence": [{"notes": "ArsC is an arsenate reductase that converts intracellular As(V) to As(III).", "reference": "DOI:10.3390/antibiotics12091474"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "ArsC arsenate reductase", "target": "arsenate reduction to arsenite"}, {"description": "Arsenate reduction yields arsenite, the substrate for efflux.", "edge_id": "edge-7", "evidence": [{"notes": "ArsC converts intracellular As(V) to As(III), feeding the efflux route.", "reference": "DOI:10.3390/antibiotics12091474"}], "predicate": "has output", "predicate_id": "RO:0002234", "source": "arsenate reduction to arsenite", "target": "arsenite(3-)"}, {"description": "ArsB is an integral membrane pump extruding arsenite from the cytoplasm.", "edge_id": "edge-8", "evidence": [{"notes": "ArsB is an integral membrane arsenite efflux pump that extrudes As(OH)3/As3+ from the cytoplasm.", "reference": "DOI:10.3390/antibiotics12091474"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "ArsB arsenite efflux permease", "target": "arsenite transmembrane transport"}, {"description": "Acr3 is an alternative inorganic arsenite efflux pump.", "edge_id": "edge-9", "evidence": [{"notes": "Some bacteria possess acr3, coding for an inorganic arsenite efflux pump.", "reference": "DOI:10.3390/microorganisms12010074"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "Acr3 arsenite efflux permease", "target": "arsenite transmembrane transport"}, {"description": "ArsM methylates arsenite to volatile methylated arsenicals.", "edge_id": "edge-10", "evidence": [{"notes": "arsM (arsenite S-adenosylmethionine methyltransferase) produces volatile methylated arsenicals.", "reference": "DOI:10.7717/peerj.18383"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "ArsM arsenite S-adenosylmethionine methyltransferase", "target": "arsenite methylation"}, {"description": "Methylation and volatilization depletes the cytoplasmic arsenite pool, a detoxification route.", "edge_id": "edge-11", "evidence": [{"notes": "Produced arsenite is methylated by arsM to volatile methylated arsenic, removing it from the cell.", "reference": "DOI:10.7717/peerj.18383"}], "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "arsenite methylation", "target": "arsenite(3-)"}, {"description": "Arsenate reductase reduces arsenate to arsenite, the form handled by efflux pumps.", "edge_id": "edge-12", "evidence": [{"notes": "Connecting edge wiring the enrichment node into the graph.", "reference": "DOI:10.3389/fmicb.2020.00047"}], "predicate": "reduces", "predicate_id": "METPO:2007802", "source": "ArsC arsenate reductase", "target": "arsenate(3-)"}], "graph_id": "arsenic_tolerance_ars_efflux", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Alternative inorganic arsenite efflux pump exporting As(III).", "grounding": null, "id": "acr3_pump", "is_orphan": false, "label": "Acr3 arsenite efflux permease", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 122, "evidence": [{"notes": "Supports Acr3 arsenite efflux permease in arsenic tolerant; UniProtKB:Q8NQC8 (acr3, Arsenical-resistance protein Acr3) in Corynebacterium glutamicum (strain ATCC 13032 / DSM 20300 / JCM 1318 / BCRC 11384 / CCUG 27702 / LMG 3730 / NBRC 12168 / NCIMB 10025 / NRRL B-2784 / 534) provides a verified protein exemplar.", "reference": "PMID:20463976", "snippet": "arsenic resistance determinants in Cupriavidus metallidurans CH34"}], "gene_symbol": "acr3", "protein_label": "Arsenical-resistance protein Acr3", "proteome_id": "UP000000582", "retrieved_on": "2026-10-17", "role": "Exemplar protein (acr3, Arsenical-resistance protein Acr3) representing Acr3 arsenite efflux permease in Corynebacterium glutamicum (strain ATCC 13032 / DSM 20300 / JCM 1318 / BCRC 11384 / CCUG 27702 / LMG 3730 / NBRC 12168 / NCIMB 10025 / NRRL B-2784 / 534) for arsenic tolerant.", "sequence_version": 2, "taxon_id": "NCBITaxon:196627", "taxon_label": "Corynebacterium glutamicum (strain ATCC 13032 / DSM 20300 / JCM 1318 / BCRC 11384 / CCUG 27702 / LMG 3730 / NBRC 12168 / NCIMB 10025 / NRRL B-2784 / 534)", "uniprot_id": "UniProtKB:Q8NQC8"}], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Integral membrane arsenite efflux pump extruding As(III) from the cytoplasm.", "grounding": null, "id": "arsB_pump", "is_orphan": false, "label": "ArsB arsenite efflux permease", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 99, "evidence": [{"notes": "Supports ArsB arsenite efflux permease in arsenic tolerant; UniProtKB:Q6GFT0 (arsB, Arsenical pump membrane protein) in Staphylococcus aureus (strain MRSA252) provides a verified protein exemplar.", "reference": "DOI:10.3389/fmicb.2018.02473", "snippet": "ArsB is an integral membrane protein able to extrude arsenite from the cell cytoplasm, thus diminishing arsenite accumulation"}], "gene_symbol": "arsB", "protein_label": "Arsenical pump membrane protein", "retrieved_on": "2026-10-17", "role": "Exemplar protein (arsB, Arsenical pump membrane protein) representing ArsB arsenite efflux permease in Staphylococcus aureus (strain MRSA252) for arsenic tolerant.", "sequence_version": 2, "taxon_id": "NCBITaxon:282458", "taxon_label": "Staphylococcus aureus (strain MRSA252)", "uniprot_id": "UniProtKB:Q6GFT0"}], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Cytoplasmic arsenate reductase converting As(V) to As(III).", "grounding": null, "id": "arsC_reductase", "is_orphan": false, "label": "ArsC arsenate reductase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "UNREVIEWED", "entry_version": 100, "evidence": [{"notes": "The cited source supports the represented protein-to-trait branch; UniProt verifies this current strain-matched protein entry.", "reference": "PMID:20463976", "snippet": "arsenic resistance determinants in Cupriavidus metallidurans CH34"}], "gene_symbol": "arsC1", "protein_label": "Arsenate reductase ArsC1", "proteome_id": "UP000002429", "retrieved_on": "2026-08-25", "role": "CH34 ArsC1 reduces intracellular arsenate to arsenite for subsequent efflux.", "sequence_version": 1, "taxon_id": "NCBITaxon:266264", "taxon_label": "Cupriavidus metallidurans CH34", "uniprot_id": "UniProtKB:Q1LRL1"}], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Enzyme methylating arsenite to volatile methylated arsenicals.", "grounding": null, "id": "arsM_methyltransferase", "is_orphan": false, "label": "ArsM arsenite S-adenosylmethionine methyltransferase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 46, "evidence": [{"notes": "Supports ArsM arsenite S-adenosylmethionine methyltransferase in arsenic tolerant; UniProtKB:U2ZU49 (arsM, Arsenite methyltransferase) in Aquipseudomonas alcaligenes (strain ATCC 14909 / DSM 50342 / CCUG 1425 / JCM 20561 / NBRC 14159 / NCIMB 9945 / NCTC 10367 / 1577) (Pseudomonas alcaligenes) provides a verified protein exemplar.", "reference": "DOI:10.3389/fmicb.2018.02473", "snippet": "ArsB is an integral membrane protein able to extrude arsenite from the cell cytoplasm, thus diminishing arsenite accumulation"}], "gene_symbol": "arsM", "protein_label": "Arsenite methyltransferase", "proteome_id": "UP000016560", "retrieved_on": "2026-10-17", "role": "Exemplar protein (arsM, Arsenite methyltransferase) representing ArsM arsenite S-adenosylmethionine methyltransferase in Aquipseudomonas alcaligenes (strain ATCC 14909 / DSM 50342 / CCUG 1425 / JCM 20561 / NBRC 14159 / NCIMB 9945 / NCTC 10367 / 1577) (Pseudomonas alcaligenes) for arsenic tolerant.", "sequence_version": 1, "taxon_id": "NCBITaxon:1215092", "taxon_label": "Aquipseudomonas alcaligenes (strain ATCC 14909 / DSM 50342 / CCUG 1425 / JCM 20561 / NBRC 14159 / NCIMB 9945 / NCTC 10367 / 1577) (Pseudomonas alcaligenes)", "uniprot_id": "UniProtKB:U2ZU49"}], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Trans-acting repressor that binds the ars promoter and de-represses upon arsenite binding.", "grounding": null, "id": "arsR_repressor", "is_orphan": false, "label": "ArsR transcriptional repressor", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 88, "evidence": [{"notes": "Supports ArsR transcriptional repressor in arsenic tolerant; UniProtKB:Q01256 (arsR, Arsenical resistance operon repressor) in Staphylococcus xylosus provides a verified protein exemplar.", "reference": "PMID:20463976", "snippet": "arsenic resistance determinants in Cupriavidus metallidurans CH34"}], "gene_symbol": "arsR", "protein_label": "Arsenical resistance operon repressor", "retrieved_on": "2026-10-17", "role": "Exemplar protein (arsR, Arsenical resistance operon repressor) representing ArsR transcriptional repressor in Staphylococcus xylosus for arsenic tolerant.", "sequence_version": 1, "taxon_id": "NCBITaxon:1288", "taxon_label": "Staphylococcus xylosus", "uniprot_id": "UniProtKB:Q01256"}], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Arsenite efflux machinery encoded by the near-ubiquitous ars operon.", "grounding": null, "id": "ars_operon", "is_orphan": false, "label": "ArsB arsenite-efflux protein module", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 142, "evidence": [{"notes": "Supports ArsB arsenite-efflux protein module in arsenic tolerant; UniProtKB:P45946 (arsB, Arsenite resistance protein ArsB) in Bacillus subtilis (strain 168) provides a verified protein exemplar.", "reference": "DOI:10.3389/fmicb.2018.02473", "snippet": "ArsB is an integral membrane protein able to extrude arsenite from the cell cytoplasm, thus diminishing arsenite accumulation"}], "gene_symbol": "arsB", "protein_label": "Arsenite resistance protein ArsB", "proteome_id": "UP000001570", "retrieved_on": "2026-10-17", "role": "Exemplar protein (arsB, Arsenite resistance protein ArsB) representing ArsB arsenite-efflux protein module in Bacillus subtilis (strain 168) for arsenic tolerant.", "sequence_version": 2, "taxon_id": "NCBITaxon:224308", "taxon_label": "Bacillus subtilis (strain 168)", "uniprot_id": "UniProtKB:P45946"}], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Promoter controlling transcription of the ars operon.", "grounding": null, "id": "ars_promoter", "is_orphan": false, "label": "ars promoter", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Pentavalent arsenic species; substrate for arsenate reductase.", "grounding": "CHEBI:29125", "id": "arsenate", "is_orphan": false, "label": "arsenate(3-)", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Reduction of intracellular arsenate to arsenite prior to efflux.", "grounding": null, "id": "arsenate_reduction", "is_orphan": false, "label": "arsenate reduction to arsenite", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Capacity to grow at elevated arsenite/arsenate concentrations.", "grounding": "traitmech:000017", "id": "arsenic_tolerant_trait", "is_orphan": false, "label": "arsenic tolerant", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Toxic trivalent arsenic species accumulating in the cytoplasm.", "grounding": "CHEBI:29242", "id": "arsenite", "is_orphan": false, "label": "arsenite(3-)", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Active export of arsenite across the cytoplasmic membrane.", "grounding": "GO:0030001", "id": "arsenite_export", "is_orphan": false, "label": "arsenite transmembrane transport", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Methylation of arsenite producing volatile methylated arsenic, a detoxification route.", "grounding": null, "id": "arsenite_methylation", "is_orphan": false, "label": "arsenite methylation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 142, "evidence": [{"notes": "Supports ArsB arsenite-efflux protein module in arsenic tolerant; UniProtKB:P45946 (arsB, Arsenite resistance protein ArsB) in Bacillus subtilis (strain 168) provides a verified protein exemplar.", "reference": "DOI:10.3389/fmicb.2018.02473", "snippet": "ArsB is an integral membrane protein able to extrude arsenite from the cell cytoplasm, thus diminishing arsenite accumulation"}], "gene_symbol": "arsB", "node_id": "ars_operon", "node_label": "ArsB arsenite-efflux protein module", "protein_label": "Arsenite resistance protein ArsB", "proteome_id": "UP000001570", "retrieved_on": "2026-10-17", "role": "Exemplar protein (arsB, Arsenite resistance protein ArsB) representing ArsB arsenite-efflux protein module in Bacillus subtilis (strain 168) for arsenic tolerant.", "sequence_version": 2, "taxon_id": "NCBITaxon:224308", "taxon_label": "Bacillus subtilis (strain 168)", "uniprot_id": "UniProtKB:P45946"}, {"entry_status": "REVIEWED", "entry_version": 88, "evidence": [{"notes": "Supports ArsR transcriptional repressor in arsenic tolerant; UniProtKB:Q01256 (arsR, Arsenical resistance operon repressor) in Staphylococcus xylosus provides a verified protein exemplar.", "reference": "PMID:20463976", "snippet": "arsenic resistance determinants in Cupriavidus metallidurans CH34"}], "gene_symbol": "arsR", "node_id": "arsR_repressor", "node_label": "ArsR transcriptional repressor", "protein_label": "Arsenical resistance operon repressor", "retrieved_on": "2026-10-17", "role": "Exemplar protein (arsR, Arsenical resistance operon repressor) representing ArsR transcriptional repressor in Staphylococcus xylosus for arsenic tolerant.", "sequence_version": 1, "taxon_id": "NCBITaxon:1288", "taxon_label": "Staphylococcus xylosus", "uniprot_id": "UniProtKB:Q01256"}, {"entry_status": "UNREVIEWED", "entry_version": 100, "evidence": [{"notes": "The cited source supports the represented protein-to-trait branch; UniProt verifies this current strain-matched protein entry.", "reference": "PMID:20463976", "snippet": "arsenic resistance determinants in Cupriavidus metallidurans CH34"}], "gene_symbol": "arsC1", "node_id": "arsC_reductase", "node_label": "ArsC arsenate reductase", "protein_label": "Arsenate reductase ArsC1", "proteome_id": "UP000002429", "retrieved_on": "2026-08-25", "role": "CH34 ArsC1 reduces intracellular arsenate to arsenite for subsequent efflux.", "sequence_version": 1, "taxon_id": "NCBITaxon:266264", "taxon_label": "Cupriavidus metallidurans CH34", "uniprot_id": "UniProtKB:Q1LRL1"}, {"entry_status": "REVIEWED", "entry_version": 99, "evidence": [{"notes": "Supports ArsB arsenite efflux permease in arsenic tolerant; UniProtKB:Q6GFT0 (arsB, Arsenical pump membrane protein) in Staphylococcus aureus (strain MRSA252) provides a verified protein exemplar.", "reference": "DOI:10.3389/fmicb.2018.02473", "snippet": "ArsB is an integral membrane protein able to extrude arsenite from the cell cytoplasm, thus diminishing arsenite accumulation"}], "gene_symbol": "arsB", "node_id": "arsB_pump", "node_label": "ArsB arsenite efflux permease", "protein_label": "Arsenical pump membrane protein", "retrieved_on": "2026-10-17", "role": "Exemplar protein (arsB, Arsenical pump membrane protein) representing ArsB arsenite efflux permease in Staphylococcus aureus (strain MRSA252) for arsenic tolerant.", "sequence_version": 2, "taxon_id": "NCBITaxon:282458", "taxon_label": "Staphylococcus aureus (strain MRSA252)", "uniprot_id": "UniProtKB:Q6GFT0"}, {"entry_status": "REVIEWED", "entry_version": 122, "evidence": [{"notes": "Supports Acr3 arsenite efflux permease in arsenic tolerant; UniProtKB:Q8NQC8 (acr3, Arsenical-resistance protein Acr3) in Corynebacterium glutamicum (strain ATCC 13032 / DSM 20300 / JCM 1318 / BCRC 11384 / CCUG 27702 / LMG 3730 / NBRC 12168 / NCIMB 10025 / NRRL B-2784 / 534) provides a verified protein exemplar.", "reference": "PMID:20463976", "snippet": "arsenic resistance determinants in Cupriavidus metallidurans CH34"}], "gene_symbol": "acr3", "node_id": "acr3_pump", "node_label": "Acr3 arsenite efflux permease", "protein_label": "Arsenical-resistance protein Acr3", "proteome_id": "UP000000582", "retrieved_on": "2026-10-17", "role": "Exemplar protein (acr3, Arsenical-resistance protein Acr3) representing Acr3 arsenite efflux permease in Corynebacterium glutamicum (strain ATCC 13032 / DSM 20300 / JCM 1318 / BCRC 11384 / CCUG 27702 / LMG 3730 / NBRC 12168 / NCIMB 10025 / NRRL B-2784 / 534) for arsenic tolerant.", "sequence_version": 2, "taxon_id": "NCBITaxon:196627", "taxon_label": "Corynebacterium glutamicum (strain ATCC 13032 / DSM 20300 / JCM 1318 / BCRC 11384 / CCUG 27702 / LMG 3730 / NBRC 12168 / NCIMB 10025 / NRRL B-2784 / 534)", "uniprot_id": "UniProtKB:Q8NQC8"}, {"entry_status": "REVIEWED", "entry_version": 46, "evidence": [{"notes": "Supports ArsM arsenite S-adenosylmethionine methyltransferase in arsenic tolerant; UniProtKB:U2ZU49 (arsM, Arsenite methyltransferase) in Aquipseudomonas alcaligenes (strain ATCC 14909 / DSM 50342 / CCUG 1425 / JCM 20561 / NBRC 14159 / NCIMB 9945 / NCTC 10367 / 1577) (Pseudomonas alcaligenes) provides a verified protein exemplar.", "reference": "DOI:10.3389/fmicb.2018.02473", "snippet": "ArsB is an integral membrane protein able to extrude arsenite from the cell cytoplasm, thus diminishing arsenite accumulation"}], "gene_symbol": "arsM", "node_id": "arsM_methyltransferase", "node_label": "ArsM arsenite S-adenosylmethionine methyltransferase", "protein_label": "Arsenite methyltransferase", "proteome_id": "UP000016560", "retrieved_on": "2026-10-17", "role": "Exemplar protein (arsM, Arsenite methyltransferase) representing ArsM arsenite S-adenosylmethionine methyltransferase in Aquipseudomonas alcaligenes (strain ATCC 14909 / DSM 50342 / CCUG 1425 / JCM 20561 / NBRC 14159 / NCIMB 9945 / NCTC 10367 / 1577) (Pseudomonas alcaligenes) for arsenic tolerant.", "sequence_version": 1, "taxon_id": "NCBITaxon:1215092", "taxon_label": "Aquipseudomonas alcaligenes (strain ATCC 14909 / DSM 50342 / CCUG 1425 / JCM 20561 / NBRC 14159 / NCIMB 9945 / NCTC 10367 / 1577) (Pseudomonas alcaligenes)", "uniprot_id": "UniProtKB:U2ZU49"}], "scope_notes": "The taxon-matched protein example anchors one experimentally supported causal branch; it is not presented as a universal mechanism for every taxon or every contextual branch in this graph.", "scope_status": "MECHANISTIC", "title": "Arsenic tolerance via ars-operon arsenite efflux"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking the ars operon and ArsB pump to extrusion of cytoplasmic arsenite.", "edges": [{"description": "Cytoplasmic arsenite is the toxic challenge the trait counters.", "evidence": [{"notes": "Cupriavidus metallidurans BS1 tolerates arsenite to a MIC of 3.5 mM.", "reference": "DOI:10.3389/fmicb.2020.00047"}], "id": "edge-1", "is_orphan": false, "predicate": "challenges", "predicate_id": "METPO:2007406", "source": "arsenite", "target": "arsenic_tolerant_trait"}, {"description": "ArsB pumps arsenite out of the cytoplasm.", "evidence": [{"notes": "ArsB is an integral membrane protein extruding arsenite from the cell cytoplasm.", "reference": "DOI:10.3389/fmicb.2018.02473"}], "id": "edge-2", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "ars_operon", "target": "arsenite_export"}, {"description": "Active export depletes the cytoplasmic arsenite pool.", "evidence": [{"notes": "The ars operon is the near-ubiquitous arsenic-resistance determinant.", "reference": "DOI:10.3389/fmicb.2018.02473"}], "id": "edge-3", "is_orphan": false, "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "arsenite_export", "target": "arsenite"}, {"description": "ArsR represses ars-operon transcription in the absence of arsenite.", "evidence": [{"notes": "ArsR is a trans-acting transcriptional repressor that binds the ars promoter.", "reference": "DOI:10.3390/antibiotics12091474"}], "id": "edge-4", "is_orphan": false, "predicate": "represses", "predicate_id": null, "source": "arsR_repressor", "target": "ars_promoter"}, {"description": "Arsenite binding changes ArsR conformation and de-represses ars transcription.", "evidence": [{"notes": "Binding of As(III) to ArsR changes its conformation and relieves repression of the ars operon.", "reference": "DOI:10.3389/fmicb.2024.1494872"}], "id": "edge-5", "is_orphan": false, "predicate": "relieves repression by", "predicate_id": null, "source": "arsenite", "target": "arsR_repressor"}, {"description": "ArsC reduces intracellular arsenate to arsenite.", "evidence": [{"notes": "ArsC is an arsenate reductase that converts intracellular As(V) to As(III).", "reference": "DOI:10.3390/antibiotics12091474"}], "id": "edge-6", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "arsC_reductase", "target": "arsenate_reduction"}, {"description": "Arsenate reduction yields arsenite, the substrate for efflux.", "evidence": [{"notes": "ArsC converts intracellular As(V) to As(III), feeding the efflux route.", "reference": "DOI:10.3390/antibiotics12091474"}], "id": "edge-7", "is_orphan": false, "predicate": "has output", "predicate_id": "RO:0002234", "source": "arsenate_reduction", "target": "arsenite"}, {"description": "ArsB is an integral membrane pump extruding arsenite from the cytoplasm.", "evidence": [{"notes": "ArsB is an integral membrane arsenite efflux pump that extrudes As(OH)3/As3+ from the cytoplasm.", "reference": "DOI:10.3390/antibiotics12091474"}], "id": "edge-8", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "arsB_pump", "target": "arsenite_export"}, {"description": "Acr3 is an alternative inorganic arsenite efflux pump.", "evidence": [{"notes": "Some bacteria possess acr3, coding for an inorganic arsenite efflux pump.", "reference": "DOI:10.3390/microorganisms12010074"}], "id": "edge-9", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "acr3_pump", "target": "arsenite_export"}, {"description": "ArsM methylates arsenite to volatile methylated arsenicals.", "evidence": [{"notes": "arsM (arsenite S-adenosylmethionine methyltransferase) produces volatile methylated arsenicals.", "reference": "DOI:10.7717/peerj.18383"}], "id": "edge-10", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "arsM_methyltransferase", "target": "arsenite_methylation"}, {"description": "Methylation and volatilization depletes the cytoplasmic arsenite pool, a detoxification route.", "evidence": [{"notes": "Produced arsenite is methylated by arsM to volatile methylated arsenic, removing it from the cell.", "reference": "DOI:10.7717/peerj.18383"}], "id": "edge-11", "is_orphan": false, "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "arsenite_methylation", "target": "arsenite"}, {"description": "Arsenate reductase reduces arsenate to arsenite, the form handled by efflux pumps.", "evidence": [{"notes": "Connecting edge wiring the enrichment node into the graph.", "reference": "DOI:10.3389/fmicb.2020.00047"}], "id": "edge-12", "is_orphan": false, "predicate": "reduces", "predicate_id": "METPO:2007802", "source": "arsC_reductase", "target": "arsenate"}], "evidence_rows": [{"description": "Cytoplasmic arsenite is the toxic challenge the trait counters.", "edge_id": "edge-1", "evidence": [{"notes": "Cupriavidus metallidurans BS1 tolerates arsenite to a MIC of 3.5 mM.", "reference": "DOI:10.3389/fmicb.2020.00047"}], "predicate": "challenges", "predicate_id": "METPO:2007406", "source": "arsenite(3-)", "source_grounding": "CHEBI:29242", "target": "arsenic tolerant", "target_grounding": "traitmech:000017"}, {"description": "ArsB pumps arsenite out of the cytoplasm.", "edge_id": "edge-2", "evidence": [{"notes": "ArsB is an integral membrane protein extruding arsenite from the cell cytoplasm.", "reference": "DOI:10.3389/fmicb.2018.02473"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "ArsB arsenite-efflux protein module", "source_grounding": null, "target": "arsenite transmembrane transport", "target_grounding": "GO:0030001"}, {"description": "Active export depletes the cytoplasmic arsenite pool.", "edge_id": "edge-3", "evidence": [{"notes": "The ars operon is the near-ubiquitous arsenic-resistance determinant.", "reference": "DOI:10.3389/fmicb.2018.02473"}], "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "arsenite transmembrane transport", "source_grounding": "GO:0030001", "target": "arsenite(3-)", "target_grounding": "CHEBI:29242"}, {"description": "ArsR represses ars-operon transcription in the absence of arsenite.", "edge_id": "edge-4", "evidence": [{"notes": "ArsR is a trans-acting transcriptional repressor that binds the ars promoter.", "reference": "DOI:10.3390/antibiotics12091474"}], "predicate": "represses", "predicate_id": null, "source": "ArsR transcriptional repressor", "source_grounding": null, "target": "ars promoter", "target_grounding": null}, {"description": "Arsenite binding changes ArsR conformation and de-represses ars transcription.", "edge_id": "edge-5", "evidence": [{"notes": "Binding of As(III) to ArsR changes its conformation and relieves repression of the ars operon.", "reference": "DOI:10.3389/fmicb.2024.1494872"}], "predicate": "relieves repression by", "predicate_id": null, "source": "arsenite(3-)", "source_grounding": "CHEBI:29242", "target": "ArsR transcriptional repressor", "target_grounding": null}, {"description": "ArsC reduces intracellular arsenate to arsenite.", "edge_id": "edge-6", "evidence": [{"notes": "ArsC is an arsenate reductase that converts intracellular As(V) to As(III).", "reference": "DOI:10.3390/antibiotics12091474"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "ArsC arsenate reductase", "source_grounding": null, "target": "arsenate reduction to arsenite", "target_grounding": null}, {"description": "Arsenate reduction yields arsenite, the substrate for efflux.", "edge_id": "edge-7", "evidence": [{"notes": "ArsC converts intracellular As(V) to As(III), feeding the efflux route.", "reference": "DOI:10.3390/antibiotics12091474"}], "predicate": "has output", "predicate_id": "RO:0002234", "source": "arsenate reduction to arsenite", "source_grounding": null, "target": "arsenite(3-)", "target_grounding": "CHEBI:29242"}, {"description": "ArsB is an integral membrane pump extruding arsenite from the cytoplasm.", "edge_id": "edge-8", "evidence": [{"notes": "ArsB is an integral membrane arsenite efflux pump that extrudes As(OH)3/As3+ from the cytoplasm.", "reference": "DOI:10.3390/antibiotics12091474"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "ArsB arsenite efflux permease", "source_grounding": null, "target": "arsenite transmembrane transport", "target_grounding": "GO:0030001"}, {"description": "Acr3 is an alternative inorganic arsenite efflux pump.", "edge_id": "edge-9", "evidence": [{"notes": "Some bacteria possess acr3, coding for an inorganic arsenite efflux pump.", "reference": "DOI:10.3390/microorganisms12010074"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "Acr3 arsenite efflux permease", "source_grounding": null, "target": "arsenite transmembrane transport", "target_grounding": "GO:0030001"}, {"description": "ArsM methylates arsenite to volatile methylated arsenicals.", "edge_id": "edge-10", "evidence": [{"notes": "arsM (arsenite S-adenosylmethionine methyltransferase) produces volatile methylated arsenicals.", "reference": "DOI:10.7717/peerj.18383"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "ArsM arsenite S-adenosylmethionine methyltransferase", "source_grounding": null, "target": "arsenite methylation", "target_grounding": null}, {"description": "Methylation and volatilization depletes the cytoplasmic arsenite pool, a detoxification route.", "edge_id": "edge-11", "evidence": [{"notes": "Produced arsenite is methylated by arsM to volatile methylated arsenic, removing it from the cell.", "reference": "DOI:10.7717/peerj.18383"}], "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "arsenite methylation", "source_grounding": null, "target": "arsenite(3-)", "target_grounding": "CHEBI:29242"}, {"description": "Arsenate reductase reduces arsenate to arsenite, the form handled by efflux pumps.", "edge_id": "edge-12", "evidence": [{"notes": "Connecting edge wiring the enrichment node into the graph.", "reference": "DOI:10.3389/fmicb.2020.00047"}], "predicate": "reduces", "predicate_id": "METPO:2007802", "source": "ArsC arsenate reductase", "source_grounding": null, "target": "arsenate(3-)", "target_grounding": "CHEBI:29125"}], "graph_id": "arsenic_tolerance_ars_efflux", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Alternative inorganic arsenite efflux pump exporting As(III).", "grounding": null, "id": "acr3_pump", "is_orphan": false, "label": "Acr3 arsenite efflux permease", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Integral membrane arsenite efflux pump extruding As(III) from the cytoplasm.", "grounding": null, "id": "arsB_pump", "is_orphan": false, "label": "ArsB arsenite efflux permease", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Cytoplasmic arsenate reductase converting As(V) to As(III).", "grounding": null, "id": "arsC_reductase", "is_orphan": false, "label": "ArsC arsenate reductase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "UNREVIEWED", "entry_version": 99, "evidence": [{"notes": "The cited source supports the represented protein-to-trait branch; UniProt verifies this current strain-matched protein entry.", "reference": "PMID:20463976", "snippet": "arsenic resistance determinants in Cupriavidus metallidurans CH34"}], "gene_symbol": "arsC1", "protein_label": "Arsenate reductase ArsC1", "proteome_id": "UP000002429", "retrieved_on": "2026-08-25", "role": "CH34 ArsC1 reduces intracellular arsenate to arsenite for subsequent efflux.", "sequence_version": 1, "taxon_id": "NCBITaxon:266264", "taxon_label": "Cupriavidus metallidurans CH34", "uniprot_id": "UniProtKB:Q1LRL1"}], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Enzyme methylating arsenite to volatile methylated arsenicals.", "grounding": null, "id": "arsM_methyltransferase", "is_orphan": false, "label": "ArsM arsenite S-adenosylmethionine methyltransferase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Trans-acting repressor that binds the ars promoter and de-represses upon arsenite binding.", "grounding": null, "id": "arsR_repressor", "is_orphan": false, "label": "ArsR transcriptional repressor", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Arsenite efflux machinery encoded by the near-ubiquitous ars operon.", "grounding": null, "id": "ars_operon", "is_orphan": false, "label": "ArsB arsenite-efflux protein module", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Promoter controlling transcription of the ars operon.", "grounding": null, "id": "ars_promoter", "is_orphan": false, "label": "ars promoter", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Pentavalent arsenic species; substrate for arsenate reductase.", "grounding": "CHEBI:29125", "id": "arsenate", "is_orphan": false, "label": "arsenate(3-)", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Reduction of intracellular arsenate to arsenite prior to efflux.", "grounding": null, "id": "arsenate_reduction", "is_orphan": false, "label": "arsenate reduction to arsenite", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Capacity to grow at elevated arsenite/arsenate concentrations.", "grounding": "traitmech:000017", "id": "arsenic_tolerant_trait", "is_orphan": false, "label": "arsenic tolerant", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Toxic trivalent arsenic species accumulating in the cytoplasm.", "grounding": "CHEBI:29242", "id": "arsenite", "is_orphan": false, "label": "arsenite(3-)", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Active export of arsenite across the cytoplasmic membrane.", "grounding": "GO:0030001", "id": "arsenite_export", "is_orphan": false, "label": "arsenite transmembrane transport", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Methylation of arsenite producing volatile methylated arsenic, a detoxification route.", "grounding": null, "id": "arsenite_methylation", "is_orphan": false, "label": "arsenite methylation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "UNREVIEWED", "entry_version": 99, "evidence": [{"notes": "The cited source supports the represented protein-to-trait branch; UniProt verifies this current strain-matched protein entry.", "reference": "PMID:20463976", "snippet": "arsenic resistance determinants in Cupriavidus metallidurans CH34"}], "gene_symbol": "arsC1", "node_id": "arsC_reductase", "node_label": "ArsC arsenate reductase", "protein_label": "Arsenate reductase ArsC1", "proteome_id": "UP000002429", "retrieved_on": "2026-08-25", "role": "CH34 ArsC1 reduces intracellular arsenate to arsenite for subsequent efflux.", "sequence_version": 1, "taxon_id": "NCBITaxon:266264", "taxon_label": "Cupriavidus metallidurans CH34", "uniprot_id": "UniProtKB:Q1LRL1"}], "scope_notes": "The taxon-matched protein example anchors one experimentally supported causal branch; it is not presented as a universal mechanism for every taxon or every contextual branch in this graph.", "scope_status": "MECHANISTIC", "title": "Arsenic tolerance via ars-operon arsenite efflux"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -1205,13 +1240,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-10-17 09:00 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

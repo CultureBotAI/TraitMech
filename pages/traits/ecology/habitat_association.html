@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/ecology.html">ECOLOGY</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/ecology.html">ECOLOGY</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>habitat association</h1>
     <p class="curie"><code>traitmech:000047</code> · CLASS · REVIEWED</p>
 
@@ -85,9 +96,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>habitat</strong>
+            <a href="http://purl.obolibrary.org/obo/ENVO_01000739" rel="nofollow noreferrer"><code>ENVO:01000739</code></a>
             <span class="edge-predicate">causes</span>
             <strong>habitat association</strong>
-            <code>biolink:causes</code>
+            <code>traitmech:000047</code>
+            <a href="https://w3id.org/biolink/vocab/causes" rel="nofollow noreferrer"><code>biolink:causes</code></a>
             <p>The organism&#39;s primary habitat sets its habitat-association classification.</p>
             <ul>
 
@@ -102,9 +115,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>habitat association</strong>
+            <code>traitmech:000047</code>
             <span class="edge-predicate">associated with</span>
             <strong>biogeographic community structure</strong>
-            <code>biolink:associated_with</code>
+
+            <a href="https://w3id.org/biolink/vocab/associated_with" rel="nofollow noreferrer"><code>biolink:associated_with</code></a>
             <p>Habitat-associated taxa display environment-specific community membership.</p>
             <ul>
 
@@ -119,8 +134,10 @@
 
           <li id="pathograph-1-edge-3">
             <strong>habitat</strong>
+            <a href="http://purl.obolibrary.org/obo/ENVO_01000739" rel="nofollow noreferrer"><code>ENVO:01000739</code></a>
             <span class="edge-predicate">structures</span>
             <strong>microbial community composition</strong>
+
 
             <p>The habitat/environment selects for spatial variation in community composition.</p>
             <ul>
@@ -136,9 +153,11 @@
 
           <li id="pathograph-1-edge-4">
             <strong>environmental stress</strong>
+
             <span class="edge-predicate">increases</span>
             <strong>deterministic selection in community assembly</strong>
-            <code>RO:0002213</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002213" rel="nofollow noreferrer"><code>RO:0002213</code></a>
             <p>Higher environmental stress increases the contribution of deterministic selection to assembly.</p>
             <ul>
 
@@ -153,9 +172,11 @@
 
           <li id="pathograph-1-edge-5">
             <strong>environmental stress</strong>
+
             <span class="edge-predicate">decreases</span>
             <strong>ecological drift in community assembly</strong>
-            <code>RO:0002212</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002212" rel="nofollow noreferrer"><code>RO:0002212</code></a>
             <p>Higher environmental stress decreases the contribution of stochastic drift to assembly.</p>
             <ul>
 
@@ -170,9 +191,11 @@
 
           <li id="pathograph-1-edge-6">
             <strong>environmental stress</strong>
+
             <span class="edge-predicate">decreases</span>
             <strong>dispersal limitation in community assembly</strong>
-            <code>RO:0002212</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002212" rel="nofollow noreferrer"><code>RO:0002212</code></a>
             <p>Higher environmental stress decreases the contribution of dispersal limitation to assembly.</p>
             <ul>
 
@@ -187,8 +210,10 @@
 
           <li id="pathograph-1-edge-7">
             <strong>salinity</strong>
+
             <span class="edge-predicate">structures</span>
             <strong>microbial community composition</strong>
+
 
             <p>Salinity is a primary abiotic regulator of aquatic community composition.</p>
             <ul>
@@ -204,8 +229,10 @@
 
           <li id="pathograph-1-edge-8">
             <strong>salinity</strong>
+
             <span class="edge-predicate">enriches</span>
             <strong>osmolyte transport and synthesis proteins</strong>
+
 
             <p>Saline habitats enrich for osmolyte transport and synthesis protein systems.</p>
             <ul>
@@ -355,50 +382,50 @@
       <ul class="nn-list">
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/cadmium_tolerant.html">cadmium tolerant</a>
+          <span class="nn-cat">ecology</span>
+          <a href="../../traits/ecology/ixotrophy.html">ixotrophy</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/sulfur_globule.html">sulfur globule</a>
+          <span class="nn-cat">ecology</span>
+          <a href="../../traits/ecology/kin_discrimination.html">kin discrimination</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/cobalt_tolerant.html">cobalt tolerant</a>
+          <span class="nn-cat">ecology</span>
+          <a href="../../traits/ecology/gut_associated.html">gut-associated</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/copper_tolerant.html">copper tolerant</a>
+          <span class="nn-cat">ecology</span>
+          <a href="../../traits/ecology/fungal_nematophagy.html">fungal nematophagy</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/desiccation_tolerant.html">desiccation tolerant</a>
+          <span class="nn-cat">ecology</span>
+          <a href="../../traits/ecology/mutualism.html">mutualism</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/piezophilic.html">piezophilic</a>
+          <span class="nn-cat">ecology</span>
+          <a href="../../traits/ecology/nitrogen_fixing_symbiosis.html">nitrogen-fixing symbiosis</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/obligately_piezophilic.html">obligately piezophilic</a>
+          <span class="nn-cat">ecology</span>
+          <a href="../../traits/ecology/free_living.html">free-living</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/gas_vesicle.html">gas vesicle</a>
+          <span class="nn-cat">ecology</span>
+          <a href="../../traits/ecology/epiphytic.html">epiphytic</a>
           <span class="sim">1.000</span>
         </li>
 
@@ -940,7 +967,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking environmental habitat to the biogeographic patterning of microbial taxa.", "edges": [{"description": "The organism\u0027s primary habitat sets its habitat-association classification.", "evidence": [{"notes": "Martiny et al. show habitat as a structuring axis of microbial biogeography.", "reference": "DOI:10.1038/nrmicro1341"}], "id": "edge-1", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "habitat", "target": "habitat_association_trait"}, {"description": "Habitat-associated taxa display environment-specific community membership.", "evidence": [{"notes": "Fierer documents environment-specific community membership (e.g. the soil microbiome).", "reference": "DOI:10.1038/nrmicro.2017.87"}], "id": "edge-2", "is_orphan": false, "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "habitat_association_trait", "target": "biogeographic_structure"}, {"description": "The habitat/environment selects for spatial variation in community composition.", "evidence": [{"notes": "Free-living taxa exhibit biogeographic patterns; the environment selects for spatial variation in diversity (Martiny et al. review).", "reference": "DOI:10.1038/nrmicro1341"}], "id": "edge-3", "is_orphan": false, "predicate": "structures", "predicate_id": null, "source": "habitat", "target": "community_composition"}, {"description": "Higher environmental stress increases the contribution of deterministic selection to assembly.", "evidence": [{"notes": "Selection producing more dissimilar communities increased with stress (groundwater assembly study).", "reference": "DOI:10.1038/s41564-023-01573-x"}], "id": "edge-4", "is_orphan": false, "predicate": "increases", "predicate_id": "RO:0002213", "source": "environmental_stress", "target": "selection_assembly"}, {"description": "Higher environmental stress decreases the contribution of stochastic drift to assembly.", "evidence": [{"notes": "Drift showed negative correlation with stress; stochastic importance decreased with increasing environmental stress.", "reference": "DOI:10.1038/s41564-023-01573-x"}], "id": "edge-5", "is_orphan": false, "predicate": "decreases", "predicate_id": "RO:0002212", "source": "environmental_stress", "target": "ecological_drift"}, {"description": "Higher environmental stress decreases the contribution of dispersal limitation to assembly.", "evidence": [{"notes": "Dispersal limitation showed negative correlations with stress.", "reference": "DOI:10.1038/s41564-023-01573-x"}], "id": "edge-6", "is_orphan": false, "predicate": "decreases", "predicate_id": "RO:0002212", "source": "environmental_stress", "target": "dispersal_limitation"}, {"description": "Salinity is a primary abiotic regulator of aquatic community composition.", "evidence": [{"notes": "Lake microbiomes primarily regulated by salinity; saline vs freshwater lakes show distinct taxonomic profiles.", "reference": "DOI:10.1186/s40168-024-01979-7"}], "id": "edge-7", "is_orphan": false, "predicate": "structures", "predicate_id": null, "source": "salinity", "target": "community_composition"}, {"description": "Saline habitats enrich for osmolyte transport and synthesis protein systems.", "evidence": [{"notes": "Saline-lake microbiomes possess more genes encoding osmolyte transport and synthesis.", "reference": "DOI:10.1186/s40168-024-01979-7"}], "id": "edge-8", "is_orphan": false, "predicate": "enriches", "predicate_id": null, "source": "salinity", "target": "osmolyte_transport_synthesis_proteins"}], "evidence_rows": [{"description": "The organism\u0027s primary habitat sets its habitat-association classification.", "edge_id": "edge-1", "evidence": [{"notes": "Martiny et al. show habitat as a structuring axis of microbial biogeography.", "reference": "DOI:10.1038/nrmicro1341"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "habitat", "target": "habitat association"}, {"description": "Habitat-associated taxa display environment-specific community membership.", "edge_id": "edge-2", "evidence": [{"notes": "Fierer documents environment-specific community membership (e.g. the soil microbiome).", "reference": "DOI:10.1038/nrmicro.2017.87"}], "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "habitat association", "target": "biogeographic community structure"}, {"description": "The habitat/environment selects for spatial variation in community composition.", "edge_id": "edge-3", "evidence": [{"notes": "Free-living taxa exhibit biogeographic patterns; the environment selects for spatial variation in diversity (Martiny et al. review).", "reference": "DOI:10.1038/nrmicro1341"}], "predicate": "structures", "predicate_id": null, "source": "habitat", "target": "microbial community composition"}, {"description": "Higher environmental stress increases the contribution of deterministic selection to assembly.", "edge_id": "edge-4", "evidence": [{"notes": "Selection producing more dissimilar communities increased with stress (groundwater assembly study).", "reference": "DOI:10.1038/s41564-023-01573-x"}], "predicate": "increases", "predicate_id": "RO:0002213", "source": "environmental stress", "target": "deterministic selection in community assembly"}, {"description": "Higher environmental stress decreases the contribution of stochastic drift to assembly.", "edge_id": "edge-5", "evidence": [{"notes": "Drift showed negative correlation with stress; stochastic importance decreased with increasing environmental stress.", "reference": "DOI:10.1038/s41564-023-01573-x"}], "predicate": "decreases", "predicate_id": "RO:0002212", "source": "environmental stress", "target": "ecological drift in community assembly"}, {"description": "Higher environmental stress decreases the contribution of dispersal limitation to assembly.", "edge_id": "edge-6", "evidence": [{"notes": "Dispersal limitation showed negative correlations with stress.", "reference": "DOI:10.1038/s41564-023-01573-x"}], "predicate": "decreases", "predicate_id": "RO:0002212", "source": "environmental stress", "target": "dispersal limitation in community assembly"}, {"description": "Salinity is a primary abiotic regulator of aquatic community composition.", "edge_id": "edge-7", "evidence": [{"notes": "Lake microbiomes primarily regulated by salinity; saline vs freshwater lakes show distinct taxonomic profiles.", "reference": "DOI:10.1186/s40168-024-01979-7"}], "predicate": "structures", "predicate_id": null, "source": "salinity", "target": "microbial community composition"}, {"description": "Saline habitats enrich for osmolyte transport and synthesis protein systems.", "edge_id": "edge-8", "evidence": [{"notes": "Saline-lake microbiomes possess more genes encoding osmolyte transport and synthesis.", "reference": "DOI:10.1186/s40168-024-01979-7"}], "predicate": "enriches", "predicate_id": null, "source": "salinity", "target": "osmolyte transport and synthesis proteins"}], "graph_id": "habitat_association_biogeographic_structure", "issues": [], "nodes": [{"color": "#f3f4f6", "description": "Habitat-specific microbial community membership.", "grounding": null, "id": "biogeographic_structure", "is_orphan": false, "label": "biogeographic community structure", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Taxonomic membership and structure of a microbial community in a habitat.", "grounding": null, "id": "community_composition", "is_orphan": false, "label": "microbial community composition", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Spatial/historical process limiting taxon movement between habitats.", "grounding": null, "id": "dispersal_limitation", "is_orphan": false, "label": "dispersal limitation in community assembly", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Stochastic demographic process contributing to community turnover.", "grounding": null, "id": "ecological_drift", "is_orphan": false, "label": "ecological drift in community assembly", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Abiotic stress (e.g. pH, salinity, contaminant load) imposed by a habitat.", "grounding": null, "id": "environmental_stress", "is_orphan": false, "label": "environmental stress", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Free-living, host-associated, soil, rhizosphere, or gut habitat.", "grounding": "ENVO:01000739", "id": "habitat", "is_orphan": false, "label": "habitat", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Ecological classification of the organism\u0027s primary environment.", "grounding": "traitmech:000047", "id": "habitat_association_trait", "is_orphan": false, "label": "habitat association", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Protein systems for compatible-solute transport and synthesis that contribute to salt tolerance.", "grounding": null, "id": "osmolyte_transport_synthesis_proteins", "is_orphan": false, "label": "osmolyte transport and synthesis proteins", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 204, "evidence": [{"notes": "Supports osmolyte transport and synthesis proteins in habitat association; UniProtKB:P14175 (proV, Glycine betaine/proline betaine transport system ATP-binding protein ProV) in Escherichia coli (strain K12) provides a verified protein exemplar.", "reference": "DOI:10.1038/nrmicro.2017.87", "snippet": "crucial roles in nutrient cycling, the maintenance of soil fertility and soil carbon sequestration"}], "gene_symbol": "proV", "protein_label": "Glycine betaine/proline betaine transport system ATP-binding protein ProV", "proteome_id": "UP000000625", "retrieved_on": "2026-10-17", "role": "Exemplar protein (proV, Glycine betaine/proline betaine transport system ATP-binding protein ProV) representing osmolyte transport and synthesis proteins in Escherichia coli (strain K12) for habitat association.", "sequence_version": 1, "taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli (strain K12)", "uniprot_id": "UniProtKB:P14175"}], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Salt concentration; major abiotic filter structuring aquatic communities.", "grounding": null, "id": "salinity", "is_orphan": false, "label": "salinity", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Deterministic assembly process favoring environmentally adapted taxa.", "grounding": null, "id": "selection_assembly", "is_orphan": false, "label": "deterministic selection in community assembly", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 204, "evidence": [{"notes": "Supports osmolyte transport and synthesis proteins in habitat association; UniProtKB:P14175 (proV, Glycine betaine/proline betaine transport system ATP-binding protein ProV) in Escherichia coli (strain K12) provides a verified protein exemplar.", "reference": "DOI:10.1038/nrmicro.2017.87", "snippet": "crucial roles in nutrient cycling, the maintenance of soil fertility and soil carbon sequestration"}], "gene_symbol": "proV", "node_id": "osmolyte_transport_synthesis_proteins", "node_label": "osmolyte transport and synthesis proteins", "protein_label": "Glycine betaine/proline betaine transport system ATP-binding protein ProV", "proteome_id": "UP000000625", "retrieved_on": "2026-10-17", "role": "Exemplar protein (proV, Glycine betaine/proline betaine transport system ATP-binding protein ProV) representing osmolyte transport and synthesis proteins in Escherichia coli (strain K12) for habitat association.", "sequence_version": 1, "taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli (strain K12)", "uniprot_id": "UniProtKB:P14175"}], "scope_notes": "This broad ecological, host-relationship, habitat, or hazard classification spans multiple taxa and mechanisms; contextual protein nodes include source-backed UniProtKB exemplars.", "scope_status": "NONMECHANISTIC", "title": "Habitat association structures microbial biogeography"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking environmental habitat to the biogeographic patterning of microbial taxa.", "edges": [{"description": "The organism\u0027s primary habitat sets its habitat-association classification.", "evidence": [{"notes": "Martiny et al. show habitat as a structuring axis of microbial biogeography.", "reference": "DOI:10.1038/nrmicro1341"}], "id": "edge-1", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "habitat", "target": "habitat_association_trait"}, {"description": "Habitat-associated taxa display environment-specific community membership.", "evidence": [{"notes": "Fierer documents environment-specific community membership (e.g. the soil microbiome).", "reference": "DOI:10.1038/nrmicro.2017.87"}], "id": "edge-2", "is_orphan": false, "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "habitat_association_trait", "target": "biogeographic_structure"}, {"description": "The habitat/environment selects for spatial variation in community composition.", "evidence": [{"notes": "Free-living taxa exhibit biogeographic patterns; the environment selects for spatial variation in diversity (Martiny et al. review).", "reference": "DOI:10.1038/nrmicro1341"}], "id": "edge-3", "is_orphan": false, "predicate": "structures", "predicate_id": null, "source": "habitat", "target": "community_composition"}, {"description": "Higher environmental stress increases the contribution of deterministic selection to assembly.", "evidence": [{"notes": "Selection producing more dissimilar communities increased with stress (groundwater assembly study).", "reference": "DOI:10.1038/s41564-023-01573-x"}], "id": "edge-4", "is_orphan": false, "predicate": "increases", "predicate_id": "RO:0002213", "source": "environmental_stress", "target": "selection_assembly"}, {"description": "Higher environmental stress decreases the contribution of stochastic drift to assembly.", "evidence": [{"notes": "Drift showed negative correlation with stress; stochastic importance decreased with increasing environmental stress.", "reference": "DOI:10.1038/s41564-023-01573-x"}], "id": "edge-5", "is_orphan": false, "predicate": "decreases", "predicate_id": "RO:0002212", "source": "environmental_stress", "target": "ecological_drift"}, {"description": "Higher environmental stress decreases the contribution of dispersal limitation to assembly.", "evidence": [{"notes": "Dispersal limitation showed negative correlations with stress.", "reference": "DOI:10.1038/s41564-023-01573-x"}], "id": "edge-6", "is_orphan": false, "predicate": "decreases", "predicate_id": "RO:0002212", "source": "environmental_stress", "target": "dispersal_limitation"}, {"description": "Salinity is a primary abiotic regulator of aquatic community composition.", "evidence": [{"notes": "Lake microbiomes primarily regulated by salinity; saline vs freshwater lakes show distinct taxonomic profiles.", "reference": "DOI:10.1186/s40168-024-01979-7"}], "id": "edge-7", "is_orphan": false, "predicate": "structures", "predicate_id": null, "source": "salinity", "target": "community_composition"}, {"description": "Saline habitats enrich for osmolyte transport and synthesis protein systems.", "evidence": [{"notes": "Saline-lake microbiomes possess more genes encoding osmolyte transport and synthesis.", "reference": "DOI:10.1186/s40168-024-01979-7"}], "id": "edge-8", "is_orphan": false, "predicate": "enriches", "predicate_id": null, "source": "salinity", "target": "osmolyte_transport_synthesis_proteins"}], "evidence_rows": [{"description": "The organism\u0027s primary habitat sets its habitat-association classification.", "edge_id": "edge-1", "evidence": [{"notes": "Martiny et al. show habitat as a structuring axis of microbial biogeography.", "reference": "DOI:10.1038/nrmicro1341"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "habitat", "source_grounding": "ENVO:01000739", "target": "habitat association", "target_grounding": "traitmech:000047"}, {"description": "Habitat-associated taxa display environment-specific community membership.", "edge_id": "edge-2", "evidence": [{"notes": "Fierer documents environment-specific community membership (e.g. the soil microbiome).", "reference": "DOI:10.1038/nrmicro.2017.87"}], "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "habitat association", "source_grounding": "traitmech:000047", "target": "biogeographic community structure", "target_grounding": null}, {"description": "The habitat/environment selects for spatial variation in community composition.", "edge_id": "edge-3", "evidence": [{"notes": "Free-living taxa exhibit biogeographic patterns; the environment selects for spatial variation in diversity (Martiny et al. review).", "reference": "DOI:10.1038/nrmicro1341"}], "predicate": "structures", "predicate_id": null, "source": "habitat", "source_grounding": "ENVO:01000739", "target": "microbial community composition", "target_grounding": null}, {"description": "Higher environmental stress increases the contribution of deterministic selection to assembly.", "edge_id": "edge-4", "evidence": [{"notes": "Selection producing more dissimilar communities increased with stress (groundwater assembly study).", "reference": "DOI:10.1038/s41564-023-01573-x"}], "predicate": "increases", "predicate_id": "RO:0002213", "source": "environmental stress", "source_grounding": null, "target": "deterministic selection in community assembly", "target_grounding": null}, {"description": "Higher environmental stress decreases the contribution of stochastic drift to assembly.", "edge_id": "edge-5", "evidence": [{"notes": "Drift showed negative correlation with stress; stochastic importance decreased with increasing environmental stress.", "reference": "DOI:10.1038/s41564-023-01573-x"}], "predicate": "decreases", "predicate_id": "RO:0002212", "source": "environmental stress", "source_grounding": null, "target": "ecological drift in community assembly", "target_grounding": null}, {"description": "Higher environmental stress decreases the contribution of dispersal limitation to assembly.", "edge_id": "edge-6", "evidence": [{"notes": "Dispersal limitation showed negative correlations with stress.", "reference": "DOI:10.1038/s41564-023-01573-x"}], "predicate": "decreases", "predicate_id": "RO:0002212", "source": "environmental stress", "source_grounding": null, "target": "dispersal limitation in community assembly", "target_grounding": null}, {"description": "Salinity is a primary abiotic regulator of aquatic community composition.", "edge_id": "edge-7", "evidence": [{"notes": "Lake microbiomes primarily regulated by salinity; saline vs freshwater lakes show distinct taxonomic profiles.", "reference": "DOI:10.1186/s40168-024-01979-7"}], "predicate": "structures", "predicate_id": null, "source": "salinity", "source_grounding": null, "target": "microbial community composition", "target_grounding": null}, {"description": "Saline habitats enrich for osmolyte transport and synthesis protein systems.", "edge_id": "edge-8", "evidence": [{"notes": "Saline-lake microbiomes possess more genes encoding osmolyte transport and synthesis.", "reference": "DOI:10.1186/s40168-024-01979-7"}], "predicate": "enriches", "predicate_id": null, "source": "salinity", "source_grounding": null, "target": "osmolyte transport and synthesis proteins", "target_grounding": null}], "graph_id": "habitat_association_biogeographic_structure", "issues": [], "nodes": [{"color": "#f3f4f6", "description": "Habitat-specific microbial community membership.", "grounding": null, "id": "biogeographic_structure", "is_orphan": false, "label": "biogeographic community structure", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Taxonomic membership and structure of a microbial community in a habitat.", "grounding": null, "id": "community_composition", "is_orphan": false, "label": "microbial community composition", "node_type": "QUALITY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Spatial/historical process limiting taxon movement between habitats.", "grounding": null, "id": "dispersal_limitation", "is_orphan": false, "label": "dispersal limitation in community assembly", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Stochastic demographic process contributing to community turnover.", "grounding": null, "id": "ecological_drift", "is_orphan": false, "label": "ecological drift in community assembly", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Abiotic stress (e.g. pH, salinity, contaminant load) imposed by a habitat.", "grounding": null, "id": "environmental_stress", "is_orphan": false, "label": "environmental stress", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Free-living, host-associated, soil, rhizosphere, or gut habitat.", "grounding": "ENVO:01000739", "id": "habitat", "is_orphan": false, "label": "habitat", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Ecological classification of the organism\u0027s primary environment.", "grounding": "traitmech:000047", "id": "habitat_association_trait", "is_orphan": false, "label": "habitat association", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Protein systems for compatible-solute transport and synthesis that contribute to salt tolerance.", "grounding": null, "id": "osmolyte_transport_synthesis_proteins", "is_orphan": false, "label": "osmolyte transport and synthesis proteins", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dcfce7", "description": "Salt concentration; major abiotic filter structuring aquatic communities.", "grounding": null, "id": "salinity", "is_orphan": false, "label": "salinity", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Deterministic assembly process favoring environmentally adapted taxa.", "grounding": null, "id": "selection_assembly", "is_orphan": false, "label": "deterministic selection in community assembly", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This broad ecological, host-relationship, habitat, or hazard classification spans multiple taxa and mechanisms; contextual protein nodes do not receive token UniProt examples.", "scope_status": "NONMECHANISTIC", "title": "Habitat association structures microbial biogeography"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -960,13 +987,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-10-17 09:00 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

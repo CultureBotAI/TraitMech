@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/genomics.html">GENOMICS</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/genomics.html">GENOMICS</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>Zorya type I system</h1>
     <p class="curie"><code>traitmech:000554</code> · CLASS · PROPOSED</p>
 
@@ -122,9 +133,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>Zorya type I locus</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>Zorya type I antiphage activity</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>Zorya_TypeI loci are modeled in DefenseFinder by a rule row listing Zorya_TypeI__ZorC, Zorya_TypeI__ZorD, Zorya__ZorA, and Zorya__ZorB in its mandatory profile set with 3 mandatory matches and 3 genes required, and the characterized Zorya type I branch recruits ZorC and ZorD effectors.</p>
             <ul>
 
@@ -164,9 +177,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>Zorya type I antiphage activity</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>Zorya type I system</strong>
-            <code>METPO:2007700</code>
+            <code>traitmech:000554</code>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>The first-pass Zorya type I system trait is realized by a DefenseFinder Zorya_TypeI subtype locus.</p>
             <ul>
 
@@ -193,8 +208,10 @@
 
           <li id="pathograph-1-edge-3">
             <strong>Zorya type I system</strong>
+            <code>traitmech:000554</code>
             <span class="edge-predicate">is a</span>
             <strong>Zorya system</strong>
+            <code>traitmech:000217</code>
             <code>rdfs:subClassOf</code>
             <p>Zorya type I system possession is a Zorya-system trait.</p>
             <ul>
@@ -340,11 +357,75 @@
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
 
-      <p class="no-match">No kg-microbe node embedding matched this record
-        in the 2026-04-25 deepwalk.</p>
+      <p class="match-method">Matched <strong>1</strong>
+        kg-microbe node
+        via <em>parent_proxy</em>.</p>
+      <ul class="kgm-nodes">
+
+        <li><code>METPO:1000188</code> <span class="dim-preview">[-0.956, -1.962, -3.148, +1.274, …]</span></li>
+
+      </ul>
+      <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
 
     </div>
 
+
+    <div class="card">
+      <h2>Nearest neighbors in embedding space</h2>
+      <p class="meta">Top-8 cosine-similar METPO traits
+        from the 2026-04-25 deepwalk (512-D).</p>
+      <ul class="nn-list">
+
+        <li>
+          <span class="nn-cat">upper</span>
+          <a href="../../traits/upper/quality.html">quality</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hna_system.html">Hna system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hma_system.html">Hma system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hesat_system.html">Hesat system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_08_system.html">HEC-08 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_07_system.html">HEC-07 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_06_system.html">HEC-06 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_05_system.html">HEC-05 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+      </ul>
+    </div>
 
 
 
@@ -502,6 +583,11 @@
     </dl>
   </div>
 
+
+  <div class="card rail-kgm">
+    <h2>kg-microbe</h2>
+    <p class="meta">1 matching node (parent_proxy)</p>
+  </div>
 
 </aside>
 </div>
@@ -835,7 +921,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Conservative subtype-level sketch linking a DefenseFinder Zorya_TypeI locus to ZorC/ZorD-dependent type I antiphage activity and Zorya type I system possession.", "edges": [{"description": "Zorya_TypeI loci are modeled in DefenseFinder by a rule row listing Zorya_TypeI__ZorC, Zorya_TypeI__ZorD, Zorya__ZorA, and Zorya__ZorB in its mandatory profile set with 3 mandatory matches and 3 genes required, and the characterized Zorya type I branch recruits ZorC and ZorD effectors.", "evidence": [{"notes": "Hu et al. support ZorAB-mediated recruitment and activation of the soluble ZorC and ZorD Type I effectors.", "reference": "DOI:10.1038/s41586-024-08493-8", "snippet": "ZorAB transfers the phage invasion signal through the ZorA cytoplasmic tail to recruit and activate the soluble ZorC and ZorD effectors"}, {"notes": "The pinned DefenseFinder HMM inventory records the Zorya__ZorA custom profile listed by the Zorya_TypeI rule.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Zorya__ZorA                                      | Zorya__ZorA                                      | Zorya                  | Custom                  | 20     |"}, {"notes": "The pinned DefenseFinder HMM inventory records the Zorya__ZorB custom profile listed by the Zorya_TypeI rule.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Zorya__ZorB                                      | Zorya__ZorB                                      | Zorya                  | Custom                  | 20     |"}, {"notes": "The pinned DefenseFinder HMM inventory records Zorya_TypeI__ZorC and Zorya_TypeI__ZorD under the Zorya_TypeI model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Zorya_TypeI__ZorC                                | Zorya_TypeI__ZorC                                | Zorya_TypeI            | Custom                  | 20     |\n| Zorya_TypeI__ZorD                                | Zorya_TypeI__ZorD                                | Zorya_TypeI            | Custom                  | 20     |"}, {"notes": "The pinned DefenseFinder rules table models Zorya_TypeI as a Zorya subsystem with Zorya_TypeI__ZorC, Zorya_TypeI__ZorD, Zorya__ZorA, and Zorya__ZorB in its mandatory profile set and 3 mandatory matches / 3 genes required.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Zorya\tZorya_TypeI\t3\t3\tZorya_TypeI__ZorC, Zorya_TypeI__ZorD, Zorya__ZorA, Zorya__ZorB\t\t\t"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "zorya_type_i_locus", "target": "zorya_type_i_antiphage_activity"}, {"description": "The first-pass Zorya type I system trait is realized by a DefenseFinder Zorya_TypeI subtype locus.", "evidence": [{"notes": "Hu et al. support ZorAB-mediated recruitment and activation of the soluble ZorC and ZorD Type I effectors.", "reference": "DOI:10.1038/s41586-024-08493-8", "snippet": "ZorAB transfers the phage invasion signal through the ZorA cytoplasmic tail to recruit and activate the soluble ZorC and ZorD effectors"}, {"notes": "Hu et al. support Type I ZorC/ZorD effectors as phage-DNA degradation outputs.", "reference": "DOI:10.1038/s41586-024-08493-8", "snippet": "soluble ZorC and ZorD effectors, which facilitate the degradation of the phage DNA"}, {"notes": "Mariano et al. support experimentally validated phage protection by a Zorya I homolog set from Serratia marcescens ATCC 274.", "reference": "DOI:10.1038/s41467-025-57397-2", "snippet": "We observed that homologs of Zorya I from Serratia marcescens ATCC 274 and Zorya II from E. coli ATCC 8739 provide protection against several phages from the Durham collection"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "zorya_type_i_antiphage_activity", "target": "zorya_type_i_system_trait"}, {"description": "Zorya type I system possession is a Zorya-system trait.", "evidence": [{"notes": "The pinned DefenseFinder article registry maps the Zorya source key to the Doron et al. microbial-pangenome antiphage-system discovery paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| Zorya | 10\\.1126/science\\.aar4120 | Systematic discovery of antiphage defense systems in the microbial pangenome |"}, {"notes": "The pinned DefenseFinder rules table models Zorya_TypeI as a Zorya subsystem with Zorya_TypeI__ZorC, Zorya_TypeI__ZorD, Zorya__ZorA, and Zorya__ZorB in its mandatory profile set and 3 mandatory matches / 3 genes required.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Zorya\tZorya_TypeI\t3\t3\tZorya_TypeI__ZorC, Zorya_TypeI__ZorD, Zorya__ZorA, Zorya__ZorB\t\t\t"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "zorya_type_i_system_trait", "target": "zorya_system_trait"}, {"description": "Endonuclease GajA (gajA, UniProtKB:P0DW47) contributes to Zorya type I system.", "evidence": [{"notes": "Supports the functional association between Endonuclease GajA (UniProtKB:P0DW47 in Bacillus cereus (strain HuB5-5)) and Zorya type I system.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "CARD_NLR CARD_NLR_GasderMIN 1 3 GasderMIN__bGSDM CARD_NLR__CARD_Protease, CARD_NLR__NLR_new, CARD_NLR__Trypsin CARD_NLR__Endonuclease, CARD_NLR__Endonuclease_new, CARD_NLR__Phospho, CARD_NLR__Phospho_Trypsin, CARD_NLR__Subtilase, CARD_NLR__Subtilase_long_new, CARD_NLR__Subtilase_small_new, CARD_NLR__Trypsin_Phospho, CARD_NLR__Trypsine_Endonuclease_new"}], "id": "edge-4", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "zorya_type_i_system_protein_component", "target": "zorya_type_i_system_trait"}], "evidence_rows": [{"description": "Zorya_TypeI loci are modeled in DefenseFinder by a rule row listing Zorya_TypeI__ZorC, Zorya_TypeI__ZorD, Zorya__ZorA, and Zorya__ZorB in its mandatory profile set with 3 mandatory matches and 3 genes required, and the characterized Zorya type I branch recruits ZorC and ZorD effectors.", "edge_id": "edge-1", "evidence": [{"notes": "Hu et al. support ZorAB-mediated recruitment and activation of the soluble ZorC and ZorD Type I effectors.", "reference": "DOI:10.1038/s41586-024-08493-8", "snippet": "ZorAB transfers the phage invasion signal through the ZorA cytoplasmic tail to recruit and activate the soluble ZorC and ZorD effectors"}, {"notes": "The pinned DefenseFinder HMM inventory records the Zorya__ZorA custom profile listed by the Zorya_TypeI rule.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Zorya__ZorA                                      | Zorya__ZorA                                      | Zorya                  | Custom                  | 20     |"}, {"notes": "The pinned DefenseFinder HMM inventory records the Zorya__ZorB custom profile listed by the Zorya_TypeI rule.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Zorya__ZorB                                      | Zorya__ZorB                                      | Zorya                  | Custom                  | 20     |"}, {"notes": "The pinned DefenseFinder HMM inventory records Zorya_TypeI__ZorC and Zorya_TypeI__ZorD under the Zorya_TypeI model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Zorya_TypeI__ZorC                                | Zorya_TypeI__ZorC                                | Zorya_TypeI            | Custom                  | 20     |\n| Zorya_TypeI__ZorD                                | Zorya_TypeI__ZorD                                | Zorya_TypeI            | Custom                  | 20     |"}, {"notes": "The pinned DefenseFinder rules table models Zorya_TypeI as a Zorya subsystem with Zorya_TypeI__ZorC, Zorya_TypeI__ZorD, Zorya__ZorA, and Zorya__ZorB in its mandatory profile set and 3 mandatory matches / 3 genes required.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Zorya\tZorya_TypeI\t3\t3\tZorya_TypeI__ZorC, Zorya_TypeI__ZorD, Zorya__ZorA, Zorya__ZorB\t\t\t"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Zorya type I locus", "target": "Zorya type I antiphage activity"}, {"description": "The first-pass Zorya type I system trait is realized by a DefenseFinder Zorya_TypeI subtype locus.", "edge_id": "edge-2", "evidence": [{"notes": "Hu et al. support ZorAB-mediated recruitment and activation of the soluble ZorC and ZorD Type I effectors.", "reference": "DOI:10.1038/s41586-024-08493-8", "snippet": "ZorAB transfers the phage invasion signal through the ZorA cytoplasmic tail to recruit and activate the soluble ZorC and ZorD effectors"}, {"notes": "Hu et al. support Type I ZorC/ZorD effectors as phage-DNA degradation outputs.", "reference": "DOI:10.1038/s41586-024-08493-8", "snippet": "soluble ZorC and ZorD effectors, which facilitate the degradation of the phage DNA"}, {"notes": "Mariano et al. support experimentally validated phage protection by a Zorya I homolog set from Serratia marcescens ATCC 274.", "reference": "DOI:10.1038/s41467-025-57397-2", "snippet": "We observed that homologs of Zorya I from Serratia marcescens ATCC 274 and Zorya II from E. coli ATCC 8739 provide protection against several phages from the Durham collection"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "Zorya type I antiphage activity", "target": "Zorya type I system"}, {"description": "Zorya type I system possession is a Zorya-system trait.", "edge_id": "edge-3", "evidence": [{"notes": "The pinned DefenseFinder article registry maps the Zorya source key to the Doron et al. microbial-pangenome antiphage-system discovery paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| Zorya | 10\\.1126/science\\.aar4120 | Systematic discovery of antiphage defense systems in the microbial pangenome |"}, {"notes": "The pinned DefenseFinder rules table models Zorya_TypeI as a Zorya subsystem with Zorya_TypeI__ZorC, Zorya_TypeI__ZorD, Zorya__ZorA, and Zorya__ZorB in its mandatory profile set and 3 mandatory matches / 3 genes required.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Zorya\tZorya_TypeI\t3\t3\tZorya_TypeI__ZorC, Zorya_TypeI__ZorD, Zorya__ZorA, Zorya__ZorB\t\t\t"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "Zorya type I system", "target": "Zorya system"}, {"description": "Endonuclease GajA (gajA, UniProtKB:P0DW47) contributes to Zorya type I system.", "edge_id": "edge-4", "evidence": [{"notes": "Supports the functional association between Endonuclease GajA (UniProtKB:P0DW47 in Bacillus cereus (strain HuB5-5)) and Zorya type I system.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "CARD_NLR CARD_NLR_GasderMIN 1 3 GasderMIN__bGSDM CARD_NLR__CARD_Protease, CARD_NLR__NLR_new, CARD_NLR__Trypsin CARD_NLR__Endonuclease, CARD_NLR__Endonuclease_new, CARD_NLR__Phospho, CARD_NLR__Phospho_Trypsin, CARD_NLR__Subtilase, CARD_NLR__Subtilase_long_new, CARD_NLR__Subtilase_small_new, CARD_NLR__Trypsin_Phospho, CARD_NLR__Trypsine_Endonuclease_new"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Endonuclease GajA", "target": "Zorya type I system"}], "graph_id": "zorya_type_i_locus_subtype_defense", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Possession of a genome-encoded Zorya phage-defense system.", "grounding": "traitmech:000217", "id": "zorya_system_trait", "is_orphan": false, "label": "Zorya system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Antiphage activity of a ZorC/ZorD-dependent type I Zorya locus.", "grounding": null, "id": "zorya_type_i_antiphage_activity", "is_orphan": false, "label": "Zorya type I antiphage activity", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "A DefenseFinder Zorya_TypeI subtype locus whose rule row lists Zorya_TypeI__ZorC, Zorya_TypeI__ZorD, Zorya__ZorA, and Zorya__ZorB in its mandatory profile set with 3 mandatory matches and 3 genes required.", "grounding": null, "id": "zorya_type_i_locus", "is_orphan": false, "label": "Zorya type I locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Protein component (Endonuclease GajA) associated with Zorya type I system.", "grounding": null, "id": "zorya_type_i_system_protein_component", "is_orphan": false, "label": "Endonuclease GajA", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 12, "evidence": [{"notes": "Supports Endonuclease GajA in Zorya type I system; UniProtKB:P0DW47 (gajA, Endonuclease GajA) in Bacillus cereus (strain HuB5-5) provides a verified protein exemplar.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "CARD_NLR CARD_NLR_GasderMIN 1 3 GasderMIN__bGSDM CARD_NLR__CARD_Protease, CARD_NLR__NLR_new, CARD_NLR__Trypsin CARD_NLR__Endonuclease, CARD_NLR__Endonuclease_new, CARD_NLR__Phospho, CARD_NLR__Phospho_Trypsin, CARD_NLR__Subtilase, CARD_NLR__Subtilase_long_new, CARD_NLR__Subtilase_small_new, CARD_NLR__Trypsin_Phospho, CARD_NLR__Trypsine_Endonuclease_new"}], "gene_symbol": "gajA", "protein_label": "Endonuclease GajA", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (gajA, Endonuclease GajA) associated with Zorya type I system in Bacillus cereus (strain HuB5-5).", "sequence_version": 1, "taxon_id": "NCBITaxon:1053212", "taxon_label": "Bacillus cereus (strain HuB5-5)", "uniprot_id": "UniProtKB:P0DW47"}], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded Zorya type I phage-defense system.", "grounding": "traitmech:000554", "id": "zorya_type_i_system_trait", "is_orphan": false, "label": "Zorya type I system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 12, "evidence": [{"notes": "Supports Endonuclease GajA in Zorya type I system; UniProtKB:P0DW47 (gajA, Endonuclease GajA) in Bacillus cereus (strain HuB5-5) provides a verified protein exemplar.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "CARD_NLR CARD_NLR_GasderMIN 1 3 GasderMIN__bGSDM CARD_NLR__CARD_Protease, CARD_NLR__NLR_new, CARD_NLR__Trypsin CARD_NLR__Endonuclease, CARD_NLR__Endonuclease_new, CARD_NLR__Phospho, CARD_NLR__Phospho_Trypsin, CARD_NLR__Subtilase, CARD_NLR__Subtilase_long_new, CARD_NLR__Subtilase_small_new, CARD_NLR__Trypsin_Phospho, CARD_NLR__Trypsine_Endonuclease_new"}], "gene_symbol": "gajA", "node_id": "zorya_type_i_system_protein_component", "node_label": "Endonuclease GajA", "protein_label": "Endonuclease GajA", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (gajA, Endonuclease GajA) associated with Zorya type I system in Bacillus cereus (strain HuB5-5).", "sequence_version": 1, "taxon_id": "NCBITaxon:1053212", "taxon_label": "Bacillus cereus (strain HuB5-5)", "uniprot_id": "UniProtKB:P0DW47"}], "scope_notes": "The graph captures the Zorya_TypeI subtype at DefenseFinder rule-row level without asserting the exact phage trigger, ion substrate, ZorC/ZorD nuclease target, anti-defense escape breadth, or whether every DefenseFinder Zorya_TypeI prediction is a complete experimentally active locus.", "scope_status": "NONMECHANISTIC", "title": "Zorya type I loci mark a ZorC/ZorD-dependent Zorya subtype"}];
+  var graphs = [{"description": "Conservative subtype-level sketch linking a DefenseFinder Zorya_TypeI locus to ZorC/ZorD-dependent type I antiphage activity and Zorya type I system possession.", "edges": [{"description": "Zorya_TypeI loci are modeled in DefenseFinder by a rule row listing Zorya_TypeI__ZorC, Zorya_TypeI__ZorD, Zorya__ZorA, and Zorya__ZorB in its mandatory profile set with 3 mandatory matches and 3 genes required, and the characterized Zorya type I branch recruits ZorC and ZorD effectors.", "evidence": [{"notes": "Hu et al. support ZorAB-mediated recruitment and activation of the soluble ZorC and ZorD Type I effectors.", "reference": "DOI:10.1038/s41586-024-08493-8", "snippet": "ZorAB transfers the phage invasion signal through the ZorA cytoplasmic tail to recruit and activate the soluble ZorC and ZorD effectors"}, {"notes": "The pinned DefenseFinder HMM inventory records the Zorya__ZorA custom profile listed by the Zorya_TypeI rule.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Zorya__ZorA                                      | Zorya__ZorA                                      | Zorya                  | Custom                  | 20     |"}, {"notes": "The pinned DefenseFinder HMM inventory records the Zorya__ZorB custom profile listed by the Zorya_TypeI rule.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Zorya__ZorB                                      | Zorya__ZorB                                      | Zorya                  | Custom                  | 20     |"}, {"notes": "The pinned DefenseFinder HMM inventory records Zorya_TypeI__ZorC and Zorya_TypeI__ZorD under the Zorya_TypeI model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Zorya_TypeI__ZorC                                | Zorya_TypeI__ZorC                                | Zorya_TypeI            | Custom                  | 20     |\n| Zorya_TypeI__ZorD                                | Zorya_TypeI__ZorD                                | Zorya_TypeI            | Custom                  | 20     |"}, {"notes": "The pinned DefenseFinder rules table models Zorya_TypeI as a Zorya subsystem with Zorya_TypeI__ZorC, Zorya_TypeI__ZorD, Zorya__ZorA, and Zorya__ZorB in its mandatory profile set and 3 mandatory matches / 3 genes required.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Zorya\tZorya_TypeI\t3\t3\tZorya_TypeI__ZorC, Zorya_TypeI__ZorD, Zorya__ZorA, Zorya__ZorB\t\t\t"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "zorya_type_i_locus", "target": "zorya_type_i_antiphage_activity"}, {"description": "The first-pass Zorya type I system trait is realized by a DefenseFinder Zorya_TypeI subtype locus.", "evidence": [{"notes": "Hu et al. support ZorAB-mediated recruitment and activation of the soluble ZorC and ZorD Type I effectors.", "reference": "DOI:10.1038/s41586-024-08493-8", "snippet": "ZorAB transfers the phage invasion signal through the ZorA cytoplasmic tail to recruit and activate the soluble ZorC and ZorD effectors"}, {"notes": "Hu et al. support Type I ZorC/ZorD effectors as phage-DNA degradation outputs.", "reference": "DOI:10.1038/s41586-024-08493-8", "snippet": "soluble ZorC and ZorD effectors, which facilitate the degradation of the phage DNA"}, {"notes": "Mariano et al. support experimentally validated phage protection by a Zorya I homolog set from Serratia marcescens ATCC 274.", "reference": "DOI:10.1038/s41467-025-57397-2", "snippet": "We observed that homologs of Zorya I from Serratia marcescens ATCC 274 and Zorya II from E. coli ATCC 8739 provide protection against several phages from the Durham collection"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "zorya_type_i_antiphage_activity", "target": "zorya_type_i_system_trait"}, {"description": "Zorya type I system possession is a Zorya-system trait.", "evidence": [{"notes": "The pinned DefenseFinder article registry maps the Zorya source key to the Doron et al. microbial-pangenome antiphage-system discovery paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| Zorya | 10\\.1126/science\\.aar4120 | Systematic discovery of antiphage defense systems in the microbial pangenome |"}, {"notes": "The pinned DefenseFinder rules table models Zorya_TypeI as a Zorya subsystem with Zorya_TypeI__ZorC, Zorya_TypeI__ZorD, Zorya__ZorA, and Zorya__ZorB in its mandatory profile set and 3 mandatory matches / 3 genes required.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Zorya\tZorya_TypeI\t3\t3\tZorya_TypeI__ZorC, Zorya_TypeI__ZorD, Zorya__ZorA, Zorya__ZorB\t\t\t"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "zorya_type_i_system_trait", "target": "zorya_system_trait"}], "evidence_rows": [{"description": "Zorya_TypeI loci are modeled in DefenseFinder by a rule row listing Zorya_TypeI__ZorC, Zorya_TypeI__ZorD, Zorya__ZorA, and Zorya__ZorB in its mandatory profile set with 3 mandatory matches and 3 genes required, and the characterized Zorya type I branch recruits ZorC and ZorD effectors.", "edge_id": "edge-1", "evidence": [{"notes": "Hu et al. support ZorAB-mediated recruitment and activation of the soluble ZorC and ZorD Type I effectors.", "reference": "DOI:10.1038/s41586-024-08493-8", "snippet": "ZorAB transfers the phage invasion signal through the ZorA cytoplasmic tail to recruit and activate the soluble ZorC and ZorD effectors"}, {"notes": "The pinned DefenseFinder HMM inventory records the Zorya__ZorA custom profile listed by the Zorya_TypeI rule.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Zorya__ZorA                                      | Zorya__ZorA                                      | Zorya                  | Custom                  | 20     |"}, {"notes": "The pinned DefenseFinder HMM inventory records the Zorya__ZorB custom profile listed by the Zorya_TypeI rule.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Zorya__ZorB                                      | Zorya__ZorB                                      | Zorya                  | Custom                  | 20     |"}, {"notes": "The pinned DefenseFinder HMM inventory records Zorya_TypeI__ZorC and Zorya_TypeI__ZorD under the Zorya_TypeI model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Zorya_TypeI__ZorC                                | Zorya_TypeI__ZorC                                | Zorya_TypeI            | Custom                  | 20     |\n| Zorya_TypeI__ZorD                                | Zorya_TypeI__ZorD                                | Zorya_TypeI            | Custom                  | 20     |"}, {"notes": "The pinned DefenseFinder rules table models Zorya_TypeI as a Zorya subsystem with Zorya_TypeI__ZorC, Zorya_TypeI__ZorD, Zorya__ZorA, and Zorya__ZorB in its mandatory profile set and 3 mandatory matches / 3 genes required.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Zorya\tZorya_TypeI\t3\t3\tZorya_TypeI__ZorC, Zorya_TypeI__ZorD, Zorya__ZorA, Zorya__ZorB\t\t\t"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Zorya type I locus", "source_grounding": null, "target": "Zorya type I antiphage activity", "target_grounding": null}, {"description": "The first-pass Zorya type I system trait is realized by a DefenseFinder Zorya_TypeI subtype locus.", "edge_id": "edge-2", "evidence": [{"notes": "Hu et al. support ZorAB-mediated recruitment and activation of the soluble ZorC and ZorD Type I effectors.", "reference": "DOI:10.1038/s41586-024-08493-8", "snippet": "ZorAB transfers the phage invasion signal through the ZorA cytoplasmic tail to recruit and activate the soluble ZorC and ZorD effectors"}, {"notes": "Hu et al. support Type I ZorC/ZorD effectors as phage-DNA degradation outputs.", "reference": "DOI:10.1038/s41586-024-08493-8", "snippet": "soluble ZorC and ZorD effectors, which facilitate the degradation of the phage DNA"}, {"notes": "Mariano et al. support experimentally validated phage protection by a Zorya I homolog set from Serratia marcescens ATCC 274.", "reference": "DOI:10.1038/s41467-025-57397-2", "snippet": "We observed that homologs of Zorya I from Serratia marcescens ATCC 274 and Zorya II from E. coli ATCC 8739 provide protection against several phages from the Durham collection"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "Zorya type I antiphage activity", "source_grounding": null, "target": "Zorya type I system", "target_grounding": "traitmech:000554"}, {"description": "Zorya type I system possession is a Zorya-system trait.", "edge_id": "edge-3", "evidence": [{"notes": "The pinned DefenseFinder article registry maps the Zorya source key to the Doron et al. microbial-pangenome antiphage-system discovery paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| Zorya | 10\\.1126/science\\.aar4120 | Systematic discovery of antiphage defense systems in the microbial pangenome |"}, {"notes": "The pinned DefenseFinder rules table models Zorya_TypeI as a Zorya subsystem with Zorya_TypeI__ZorC, Zorya_TypeI__ZorD, Zorya__ZorA, and Zorya__ZorB in its mandatory profile set and 3 mandatory matches / 3 genes required.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Zorya\tZorya_TypeI\t3\t3\tZorya_TypeI__ZorC, Zorya_TypeI__ZorD, Zorya__ZorA, Zorya__ZorB\t\t\t"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "Zorya type I system", "source_grounding": "traitmech:000554", "target": "Zorya system", "target_grounding": "traitmech:000217"}], "graph_id": "zorya_type_i_locus_subtype_defense", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Possession of a genome-encoded Zorya phage-defense system.", "grounding": "traitmech:000217", "id": "zorya_system_trait", "is_orphan": false, "label": "Zorya system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Antiphage activity of a ZorC/ZorD-dependent type I Zorya locus.", "grounding": null, "id": "zorya_type_i_antiphage_activity", "is_orphan": false, "label": "Zorya type I antiphage activity", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "A DefenseFinder Zorya_TypeI subtype locus whose rule row lists Zorya_TypeI__ZorC, Zorya_TypeI__ZorD, Zorya__ZorA, and Zorya__ZorB in its mandatory profile set with 3 mandatory matches and 3 genes required.", "grounding": null, "id": "zorya_type_i_locus", "is_orphan": false, "label": "Zorya type I locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded Zorya type I phage-defense system.", "grounding": "traitmech:000554", "id": "zorya_type_i_system_trait", "is_orphan": false, "label": "Zorya type I system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "The graph captures the Zorya_TypeI subtype at DefenseFinder rule-row level without asserting the exact phage trigger, ion substrate, ZorC/ZorD nuclease target, anti-defense escape breadth, or whether every DefenseFinder Zorya_TypeI prediction is a complete experimentally active locus.", "scope_status": "NONMECHANISTIC", "title": "Zorya type I loci mark a ZorC/ZorD-dependent Zorya subtype"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -855,13 +941,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-10-17 09:00 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

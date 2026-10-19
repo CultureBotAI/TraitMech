@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/physiology.html">PHYSIOLOGY</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/physiology.html">PHYSIOLOGY</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>bioluminescence</h1>
     <p class="curie"><code>traitmech:000085</code> · CLASS · REVIEWED</p>
 
@@ -85,9 +96,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>luciferase</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0047646" rel="nofollow noreferrer"><code>GO:0047646</code></a>
             <span class="edge-predicate">enables</span>
             <strong>bioluminescence</strong>
-            <code>RO:0002327</code>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0008218" rel="nofollow noreferrer"><code>GO:0008218</code></a>
+            <a href="http://purl.obolibrary.org/obo/RO_0002327" rel="nofollow noreferrer"><code>RO:0002327</code></a>
             <p>Luciferase carries out the light-emitting reaction.</p>
             <ul>
 
@@ -102,9 +115,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>bioluminescence</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0008218" rel="nofollow noreferrer"><code>GO:0008218</code></a>
             <span class="edge-predicate">consumes</span>
             <strong>molecular oxygen</strong>
-            <code>biolink:consumes</code>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:15379" rel="nofollow noreferrer"><code>CHEBI:15379</code></a>
+            <a href="https://w3id.org/biolink/vocab/consumes" rel="nofollow noreferrer"><code>biolink:consumes</code></a>
             <p>Light emission consumes molecular oxygen.</p>
             <ul>
 
@@ -119,9 +134,11 @@
 
           <li id="pathograph-1-edge-3">
             <strong>bioluminescence</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0008218" rel="nofollow noreferrer"><code>GO:0008218</code></a>
             <span class="edge-predicate">confers</span>
             <strong>bioluminescence</strong>
-            <code>METPO:2007700</code>
+            <code>traitmech:000085</code>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>The luciferase reaction realizes the bioluminescence trait.</p>
             <ul>
 
@@ -136,9 +153,11 @@
 
           <li id="pathograph-1-edge-4">
             <strong>luciferase</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0047646" rel="nofollow noreferrer"><code>GO:0047646</code></a>
             <span class="edge-predicate">catalyzes</span>
             <strong>long-chain aldehyde</strong>
-            <code>biolink:catalyzes</code>
+
+            <a href="https://w3id.org/biolink/vocab/catalyzes" rel="nofollow noreferrer"><code>biolink:catalyzes</code></a>
             <p>Luciferase catalyzes the monooxygenation of long-chain aliphatic aldehydes.</p>
             <ul>
 
@@ -153,8 +172,10 @@
 
           <li id="pathograph-1-edge-5">
             <strong>reduced flavin mononucleotide (FMNH2)</strong>
+
             <span class="edge-predicate">is substrate for</span>
             <strong>bioluminescence</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0008218" rel="nofollow noreferrer"><code>GO:0008218</code></a>
 
             <p>FMNH2 is a required substrate consumed in the light-emitting luciferase reaction.</p>
             <ul>
@@ -170,8 +191,10 @@
 
           <li id="pathograph-1-edge-6">
             <strong>long-chain aldehyde</strong>
+
             <span class="edge-predicate">is substrate for</span>
             <strong>bioluminescence</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0008218" rel="nofollow noreferrer"><code>GO:0008218</code></a>
 
             <p>Long-chain aldehyde is a required substrate of the light-emitting reaction.</p>
             <ul>
@@ -187,8 +210,10 @@
 
           <li id="pathograph-1-edge-7">
             <strong>LuxG flavin reductase</strong>
+
             <span class="edge-predicate">converts</span>
             <strong>flavin mononucleotide (FMN)</strong>
+
 
             <p>LuxG flavin reductase reduces free FMN to FMNH2 supplying the luciferase reaction.</p>
             <ul>
@@ -204,9 +229,11 @@
 
           <li id="pathograph-1-edge-8">
             <strong>LuxG flavin reductase</strong>
+
             <span class="edge-predicate">produces</span>
             <strong>reduced flavin mononucleotide (FMNH2)</strong>
-            <code>METPO:2007800</code>
+
+            <a href="https://w3id.org/metpo/2007800" rel="nofollow noreferrer"><code>METPO:2007800</code></a>
             <p>LuxG generates the reduced flavin substrate FMNH2.</p>
             <ul>
 
@@ -221,8 +248,10 @@
 
           <li id="pathograph-1-edge-9">
             <strong>LuxCDE fatty acid reductase complex</strong>
+
             <span class="edge-predicate">supplies</span>
             <strong>long-chain aldehyde</strong>
+
 
             <p>The LuxCDE fatty acid reductase complex supplies the long-chain aldehyde substrate.</p>
             <ul>
@@ -238,8 +267,10 @@
 
           <li id="pathograph-1-edge-10">
             <strong>LuxI autoinducer synthase</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0061579" rel="nofollow noreferrer"><code>GO:0061579</code></a>
             <span class="edge-predicate">synthesizes</span>
             <strong>3-oxo-C6-HSL autoinducer</strong>
+
 
             <p>LuxI autoinducer synthase produces the 3-oxo-C6-HSL signal.</p>
             <ul>
@@ -255,8 +286,10 @@
 
           <li id="pathograph-1-edge-11">
             <strong>3-oxo-C6-HSL autoinducer</strong>
+
             <span class="edge-predicate">binds</span>
             <strong>LuxR transcription factor</strong>
+
 
             <p>The 3-oxo-C6-HSL autoinducer binds the LuxR transcription factor.</p>
             <ul>
@@ -272,8 +305,10 @@
 
           <li id="pathograph-1-edge-12">
             <strong>LuxR transcription factor</strong>
+
             <span class="edge-predicate">activates expression of</span>
             <strong>lux locus expression</strong>
+
 
             <p>Autoinducer-bound LuxR activates expression of the lux locus.</p>
             <ul>
@@ -289,9 +324,11 @@
 
           <li id="pathograph-1-edge-13">
             <strong>lux locus expression</strong>
+
             <span class="edge-predicate">has output</span>
             <strong>luciferase</strong>
-            <code>RO:0002234</code>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0047646" rel="nofollow noreferrer"><code>GO:0047646</code></a>
+            <a href="http://purl.obolibrary.org/obo/RO_0002234" rel="nofollow noreferrer"><code>RO:0002234</code></a>
             <p>Expression of the lux locus produces the luciferase light-production machinery.</p>
             <ul>
 
@@ -545,50 +582,50 @@
       <ul class="nn-list">
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/cadmium_tolerant.html">cadmium tolerant</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/cytogamy.html">cytogamy</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/sulfur_globule.html">sulfur globule</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/coccolith_production.html">coccolith production</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/cobalt_tolerant.html">cobalt tolerant</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/coagulase_activity.html">coagulase activity</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/copper_tolerant.html">copper tolerant</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/chemotropism.html">chemotropism</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/desiccation_tolerant.html">desiccation tolerant</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/chemotaxis.html">chemotaxis</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/piezotolerant.html">piezotolerant</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/cellular_rejuvenation.html">functional cellular rejuvenation</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/obligately_piezophilic.html">obligately piezophilic</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/cellular_contraction.html">cell body or cytoplasmic projection contraction</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/gas_vesicle.html">gas vesicle</a>
+          <span class="nn-cat">physiology</span>
+          <a href="../../traits/physiology/cold_shock_response.html">cold shock response</a>
           <span class="sim">1.000</span>
         </li>
 
@@ -1148,7 +1185,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking luciferase to oxygen-dependent light emission, often under quorum-sensing control.", "edges": [{"description": "Luciferase carries out the light-emitting reaction.", "evidence": [{"notes": "Brodl et al. review the bacterial luciferase mechanism.", "reference": "DOI:10.1016/j.csbj.2018.11.003"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "luciferase", "target": "bioluminescence_process"}, {"description": "Light emission consumes molecular oxygen.", "evidence": [{"notes": "Supports O2 as a luciferase co-substrate.", "reference": "DOI:10.1016/j.csbj.2018.11.003"}], "id": "edge-2", "is_orphan": false, "predicate": "consumes", "predicate_id": "biolink:consumes", "source": "bioluminescence_process", "target": "molecular_oxygen"}, {"description": "The luciferase reaction realizes the bioluminescence trait.", "evidence": [{"notes": "Waters \u0026 Bassler support quorum-sensing control of luminescence.", "reference": "DOI:10.1146/annurev.cellbio.21.012704.131001"}], "id": "edge-3", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "bioluminescence_process", "target": "bioluminescence_trait"}, {"description": "Luciferase catalyzes the monooxygenation of long-chain aliphatic aldehydes.", "evidence": [{"notes": "The heterodimeric enzyme luciferase (LuxAB) catalyzes the monooxygenation of aliphatic aldehydes to the corresponding acids.", "reference": "DOI:10.1016/j.csbj.2018.11.003"}], "id": "edge-4", "is_orphan": false, "predicate": "catalyzes", "predicate_id": "biolink:catalyzes", "source": "luciferase", "target": "long_chain_aldehyde"}, {"description": "FMNH2 is a required substrate consumed in the light-emitting luciferase reaction.", "evidence": [{"notes": "Long chain aldehydes, reduced flavin mononucleotide (FMNH2) and molecular oxygen (O2) are converted by the enzyme luciferase (LuxAB).", "reference": "DOI:10.1016/j.csbj.2018.11.003"}], "id": "edge-5", "is_orphan": false, "predicate": "is substrate for", "predicate_id": null, "source": "fmnh2", "target": "bioluminescence_process"}, {"description": "Long-chain aldehyde is a required substrate of the light-emitting reaction.", "evidence": [{"notes": "Long chain aldehydes, reduced flavin mononucleotide (FMNH2) and molecular oxygen (O2) are converted by the enzyme luciferase (LuxAB).", "reference": "DOI:10.1016/j.csbj.2018.11.003"}], "id": "edge-6", "is_orphan": false, "predicate": "is substrate for", "predicate_id": null, "source": "long_chain_aldehyde", "target": "bioluminescence_process"}, {"description": "LuxG flavin reductase reduces free FMN to FMNH2 supplying the luciferase reaction.", "evidence": [{"notes": "LuxG converts free flavin (FMN) to reduced flavin (FMNH2); LuxG is a NAD(P)H-dependent flavin reductase.", "reference": "DOI:10.1016/j.csbj.2018.11.003"}], "id": "edge-7", "is_orphan": false, "predicate": "converts", "predicate_id": null, "source": "lux_g", "target": "fmn"}, {"description": "LuxG generates the reduced flavin substrate FMNH2.", "evidence": [{"notes": "LuxG converts free flavin (FMN) to reduced flavin (FMNH2).", "reference": "DOI:10.1016/j.csbj.2018.11.003"}], "id": "edge-8", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2007800", "source": "lux_g", "target": "fmnh2"}, {"description": "The LuxCDE fatty acid reductase complex supplies the long-chain aldehyde substrate.", "evidence": [{"notes": "To supply the long-chain aldehyde substrates to the luciferase, the proteins LuxC, LuxD, and LuxE constitute a fatty acid reductase complex.", "reference": "DOI:10.1016/j.csbj.2018.11.003"}], "id": "edge-9", "is_orphan": false, "predicate": "supplies", "predicate_id": null, "source": "luxcde_complex", "target": "long_chain_aldehyde"}, {"description": "LuxI autoinducer synthase produces the 3-oxo-C6-HSL signal.", "evidence": [{"notes": "Identifying LuxI as the autoinducer synthase; the LuxI-produced 3-oxo-C6 HSL.", "reference": "DOI:10.1128/jb.00035-24"}], "id": "edge-10", "is_orphan": false, "predicate": "synthesizes", "predicate_id": null, "source": "lux_i", "target": "autoinducer_hsl"}, {"description": "The 3-oxo-C6-HSL autoinducer binds the LuxR transcription factor.", "evidence": [{"notes": "The LuxI-produced 3-oxo-C6 was shown to bind the N-terminal domain of the transcription factor LuxR.", "reference": "DOI:10.1128/jb.00035-24"}], "id": "edge-11", "is_orphan": false, "predicate": "binds", "predicate_id": null, "source": "autoinducer_hsl", "target": "lux_r"}, {"description": "Autoinducer-bound LuxR activates expression of the lux locus.", "evidence": [{"notes": "Bind the N-terminal domain of the transcription factor LuxR to activate the expression of the lux locus.", "reference": "DOI:10.1128/jb.00035-24"}], "id": "edge-12", "is_orphan": false, "predicate": "activates expression of", "predicate_id": null, "source": "lux_r", "target": "lux_locus_expression"}, {"description": "Expression of the lux locus produces the luciferase light-production machinery.", "evidence": [{"notes": "Activation of the lux locus drives expression of the light-production machinery including luciferase.", "reference": "DOI:10.1128/jb.00035-24"}], "id": "edge-13", "is_orphan": false, "predicate": "has output", "predicate_id": "RO:0002234", "source": "lux_locus_expression", "target": "luciferase"}], "evidence_rows": [{"description": "Luciferase carries out the light-emitting reaction.", "edge_id": "edge-1", "evidence": [{"notes": "Brodl et al. review the bacterial luciferase mechanism.", "reference": "DOI:10.1016/j.csbj.2018.11.003"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "luciferase", "target": "bioluminescence"}, {"description": "Light emission consumes molecular oxygen.", "edge_id": "edge-2", "evidence": [{"notes": "Supports O2 as a luciferase co-substrate.", "reference": "DOI:10.1016/j.csbj.2018.11.003"}], "predicate": "consumes", "predicate_id": "biolink:consumes", "source": "bioluminescence", "target": "molecular oxygen"}, {"description": "The luciferase reaction realizes the bioluminescence trait.", "edge_id": "edge-3", "evidence": [{"notes": "Waters \u0026 Bassler support quorum-sensing control of luminescence.", "reference": "DOI:10.1146/annurev.cellbio.21.012704.131001"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "bioluminescence", "target": "bioluminescence"}, {"description": "Luciferase catalyzes the monooxygenation of long-chain aliphatic aldehydes.", "edge_id": "edge-4", "evidence": [{"notes": "The heterodimeric enzyme luciferase (LuxAB) catalyzes the monooxygenation of aliphatic aldehydes to the corresponding acids.", "reference": "DOI:10.1016/j.csbj.2018.11.003"}], "predicate": "catalyzes", "predicate_id": "biolink:catalyzes", "source": "luciferase", "target": "long-chain aldehyde"}, {"description": "FMNH2 is a required substrate consumed in the light-emitting luciferase reaction.", "edge_id": "edge-5", "evidence": [{"notes": "Long chain aldehydes, reduced flavin mononucleotide (FMNH2) and molecular oxygen (O2) are converted by the enzyme luciferase (LuxAB).", "reference": "DOI:10.1016/j.csbj.2018.11.003"}], "predicate": "is substrate for", "predicate_id": null, "source": "reduced flavin mononucleotide (FMNH2)", "target": "bioluminescence"}, {"description": "Long-chain aldehyde is a required substrate of the light-emitting reaction.", "edge_id": "edge-6", "evidence": [{"notes": "Long chain aldehydes, reduced flavin mononucleotide (FMNH2) and molecular oxygen (O2) are converted by the enzyme luciferase (LuxAB).", "reference": "DOI:10.1016/j.csbj.2018.11.003"}], "predicate": "is substrate for", "predicate_id": null, "source": "long-chain aldehyde", "target": "bioluminescence"}, {"description": "LuxG flavin reductase reduces free FMN to FMNH2 supplying the luciferase reaction.", "edge_id": "edge-7", "evidence": [{"notes": "LuxG converts free flavin (FMN) to reduced flavin (FMNH2); LuxG is a NAD(P)H-dependent flavin reductase.", "reference": "DOI:10.1016/j.csbj.2018.11.003"}], "predicate": "converts", "predicate_id": null, "source": "LuxG flavin reductase", "target": "flavin mononucleotide (FMN)"}, {"description": "LuxG generates the reduced flavin substrate FMNH2.", "edge_id": "edge-8", "evidence": [{"notes": "LuxG converts free flavin (FMN) to reduced flavin (FMNH2).", "reference": "DOI:10.1016/j.csbj.2018.11.003"}], "predicate": "produces", "predicate_id": "METPO:2007800", "source": "LuxG flavin reductase", "target": "reduced flavin mononucleotide (FMNH2)"}, {"description": "The LuxCDE fatty acid reductase complex supplies the long-chain aldehyde substrate.", "edge_id": "edge-9", "evidence": [{"notes": "To supply the long-chain aldehyde substrates to the luciferase, the proteins LuxC, LuxD, and LuxE constitute a fatty acid reductase complex.", "reference": "DOI:10.1016/j.csbj.2018.11.003"}], "predicate": "supplies", "predicate_id": null, "source": "LuxCDE fatty acid reductase complex", "target": "long-chain aldehyde"}, {"description": "LuxI autoinducer synthase produces the 3-oxo-C6-HSL signal.", "edge_id": "edge-10", "evidence": [{"notes": "Identifying LuxI as the autoinducer synthase; the LuxI-produced 3-oxo-C6 HSL.", "reference": "DOI:10.1128/jb.00035-24"}], "predicate": "synthesizes", "predicate_id": null, "source": "LuxI autoinducer synthase", "target": "3-oxo-C6-HSL autoinducer"}, {"description": "The 3-oxo-C6-HSL autoinducer binds the LuxR transcription factor.", "edge_id": "edge-11", "evidence": [{"notes": "The LuxI-produced 3-oxo-C6 was shown to bind the N-terminal domain of the transcription factor LuxR.", "reference": "DOI:10.1128/jb.00035-24"}], "predicate": "binds", "predicate_id": null, "source": "3-oxo-C6-HSL autoinducer", "target": "LuxR transcription factor"}, {"description": "Autoinducer-bound LuxR activates expression of the lux locus.", "edge_id": "edge-12", "evidence": [{"notes": "Bind the N-terminal domain of the transcription factor LuxR to activate the expression of the lux locus.", "reference": "DOI:10.1128/jb.00035-24"}], "predicate": "activates expression of", "predicate_id": null, "source": "LuxR transcription factor", "target": "lux locus expression"}, {"description": "Expression of the lux locus produces the luciferase light-production machinery.", "edge_id": "edge-13", "evidence": [{"notes": "Activation of the lux locus drives expression of the light-production machinery including luciferase.", "reference": "DOI:10.1128/jb.00035-24"}], "predicate": "has output", "predicate_id": "RO:0002234", "source": "lux locus expression", "target": "luciferase"}], "graph_id": "bioluminescence_luciferase", "issues": [], "nodes": [{"color": "#fef3c7", "description": "LuxI-produced acyl-homoserine lactone quorum-sensing signal.", "grounding": null, "id": "autoinducer_hsl", "is_orphan": false, "label": "3-oxo-C6-HSL autoinducer", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Enzymatic emission of visible light.", "grounding": "GO:0008218", "id": "bioluminescence_process", "is_orphan": false, "label": "bioluminescence", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Capacity to emit visible light enzymatically.", "grounding": "traitmech:000085", "id": "bioluminescence_trait", "is_orphan": false, "label": "bioluminescence", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Oxidized flavin recycled in the luciferase cycle.", "grounding": null, "id": "fmn", "is_orphan": false, "label": "flavin mononucleotide (FMN)", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Reduced flavin substrate consumed by luciferase.", "grounding": null, "id": "fmnh2", "is_orphan": false, "label": "reduced flavin mononucleotide (FMNH2)", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Aliphatic aldehyde substrate (C8-C16) of the luciferase reaction.", "grounding": null, "id": "long_chain_aldehyde", "is_orphan": false, "label": "long-chain aldehyde", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Enzyme catalyzing the light-emitting reaction.", "grounding": "GO:0047646", "id": "luciferase", "is_orphan": false, "label": "luciferase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 123, "evidence": [{"notes": "Supports luciferase in bioluminescence; UniProtKB:P0ADV5 (yhbW, Luciferase-like monooxygenase) in Escherichia coli (strain K12) provides a verified protein exemplar.", "reference": "DOI:10.1146/annurev.cellbio.21.012704.131001", "snippet": "Bacteria communicate with one another using chemical signal molecules."}], "gene_symbol": "yhbW", "protein_label": "Luciferase-like monooxygenase", "proteome_id": "UP000000625", "retrieved_on": "2026-10-17", "role": "Exemplar protein (yhbW, Luciferase-like monooxygenase) representing luciferase in Escherichia coli (strain K12) for bioluminescence.", "sequence_version": 1, "taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli (strain K12)", "uniprot_id": "UniProtKB:P0ADV5"}], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "NAD(P)H-dependent flavin reductase generating FMNH2.", "grounding": null, "id": "lux_g", "is_orphan": false, "label": "LuxG flavin reductase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 77, "evidence": [{"notes": "Supports LuxG flavin reductase in bioluminescence; UniProtKB:P24273 (luxG, Probable flavin reductase) in Aliivibrio fischeri (Vibrio fischeri) provides a verified protein exemplar.", "reference": "DOI:10.1146/annurev.cellbio.21.012704.131001", "snippet": "Bacteria communicate with one another using chemical signal molecules."}], "gene_symbol": "luxG", "protein_label": "Probable flavin reductase", "retrieved_on": "2026-10-17", "role": "Exemplar protein (luxG, Probable flavin reductase) representing LuxG flavin reductase in Aliivibrio fischeri (Vibrio fischeri) for bioluminescence.", "sequence_version": 1, "taxon_id": "NCBITaxon:668", "taxon_label": "Aliivibrio fischeri (Vibrio fischeri)", "uniprot_id": "UniProtKB:P24273"}], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Synthase producing the 3-oxo-C6-HSL acyl-homoserine lactone autoinducer.", "grounding": "GO:0061579", "id": "lux_i", "is_orphan": false, "label": "LuxI autoinducer synthase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 98, "evidence": [{"notes": "The A. fischeri study identifies LuxI as the synthase for the LuxR-binding 3-oxo-C6-HSL signal; reviewed UniProtKB P12747 is the species-level LuxI entry.", "reference": "DOI:10.1128/JB.00035-24", "snippet": "LuxI as the autoinducer synthase"}], "gene_symbol": "luxI", "protein_label": "Acyl-homoserine-lactone synthase", "retrieved_on": "2026-08-24", "role": "LuxI synthesizes the 3-oxo-C6-HSL autoinducer that activates LuxR-dependent lux-locus expression in A. fischeri; it is a regulatory component, not the luciferase enzyme itself.", "sequence_version": 1, "taxon_id": "NCBITaxon:668", "taxon_label": "Aliivibrio fischeri", "uniprot_id": "UniProtKB:P12747"}], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Transcription of the lux operon producing light-production machinery.", "grounding": null, "id": "lux_locus_expression", "is_orphan": false, "label": "lux locus expression", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Autoinducer-responsive activator of the lux locus.", "grounding": null, "id": "lux_r", "is_orphan": false, "label": "LuxR transcription factor", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 124, "evidence": [{"notes": "Supports LuxR transcription factor in bioluminescence; UniProtKB:P12746 (luxR, Transcriptional activator protein LuxR) in Aliivibrio fischeri (Vibrio fischeri) provides a verified protein exemplar.", "reference": "DOI:10.1146/annurev.cellbio.21.012704.131001", "snippet": "Bacteria communicate with one another using chemical signal molecules."}], "gene_symbol": "luxR", "protein_label": "Transcriptional activator protein LuxR", "retrieved_on": "2026-10-17", "role": "Exemplar protein (luxR, Transcriptional activator protein LuxR) representing LuxR transcription factor in Aliivibrio fischeri (Vibrio fischeri) for bioluminescence.", "sequence_version": 3, "taxon_id": "NCBITaxon:668", "taxon_label": "Aliivibrio fischeri (Vibrio fischeri)", "uniprot_id": "UniProtKB:P12746"}], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "LuxC/LuxD/LuxE complex supplying long-chain aldehyde substrate.", "grounding": null, "id": "luxcde_complex", "is_orphan": false, "label": "LuxCDE fatty acid reductase complex", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 89, "evidence": [{"notes": "Supports LuxCDE fatty acid reductase complex in bioluminescence; UniProtKB:P12748 (luxC, Long-chain acyl-protein thioester reductase) in Aliivibrio fischeri (Vibrio fischeri) provides a verified protein exemplar.", "reference": "DOI:10.1146/annurev.cellbio.21.012704.131001", "snippet": "Bacteria communicate with one another using chemical signal molecules."}], "gene_symbol": "luxC", "protein_label": "Long-chain acyl-protein thioester reductase", "retrieved_on": "2026-10-17", "role": "Exemplar protein (luxC, Long-chain acyl-protein thioester reductase) representing LuxCDE fatty acid reductase complex in Aliivibrio fischeri (Vibrio fischeri) for bioluminescence.", "sequence_version": 3, "taxon_id": "NCBITaxon:668", "taxon_label": "Aliivibrio fischeri (Vibrio fischeri)", "uniprot_id": "UniProtKB:P12748"}], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Co-substrate of the luciferase reaction.", "grounding": "CHEBI:15379", "id": "molecular_oxygen", "is_orphan": false, "label": "molecular oxygen", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 123, "evidence": [{"notes": "Supports luciferase in bioluminescence; UniProtKB:P0ADV5 (yhbW, Luciferase-like monooxygenase) in Escherichia coli (strain K12) provides a verified protein exemplar.", "reference": "DOI:10.1146/annurev.cellbio.21.012704.131001", "snippet": "Bacteria communicate with one another using chemical signal molecules."}], "gene_symbol": "yhbW", "node_id": "luciferase", "node_label": "luciferase", "protein_label": "Luciferase-like monooxygenase", "proteome_id": "UP000000625", "retrieved_on": "2026-10-17", "role": "Exemplar protein (yhbW, Luciferase-like monooxygenase) representing luciferase in Escherichia coli (strain K12) for bioluminescence.", "sequence_version": 1, "taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli (strain K12)", "uniprot_id": "UniProtKB:P0ADV5"}, {"entry_status": "REVIEWED", "entry_version": 77, "evidence": [{"notes": "Supports LuxG flavin reductase in bioluminescence; UniProtKB:P24273 (luxG, Probable flavin reductase) in Aliivibrio fischeri (Vibrio fischeri) provides a verified protein exemplar.", "reference": "DOI:10.1146/annurev.cellbio.21.012704.131001", "snippet": "Bacteria communicate with one another using chemical signal molecules."}], "gene_symbol": "luxG", "node_id": "lux_g", "node_label": "LuxG flavin reductase", "protein_label": "Probable flavin reductase", "retrieved_on": "2026-10-17", "role": "Exemplar protein (luxG, Probable flavin reductase) representing LuxG flavin reductase in Aliivibrio fischeri (Vibrio fischeri) for bioluminescence.", "sequence_version": 1, "taxon_id": "NCBITaxon:668", "taxon_label": "Aliivibrio fischeri (Vibrio fischeri)", "uniprot_id": "UniProtKB:P24273"}, {"entry_status": "REVIEWED", "entry_version": 89, "evidence": [{"notes": "Supports LuxCDE fatty acid reductase complex in bioluminescence; UniProtKB:P12748 (luxC, Long-chain acyl-protein thioester reductase) in Aliivibrio fischeri (Vibrio fischeri) provides a verified protein exemplar.", "reference": "DOI:10.1146/annurev.cellbio.21.012704.131001", "snippet": "Bacteria communicate with one another using chemical signal molecules."}], "gene_symbol": "luxC", "node_id": "luxcde_complex", "node_label": "LuxCDE fatty acid reductase complex", "protein_label": "Long-chain acyl-protein thioester reductase", "retrieved_on": "2026-10-17", "role": "Exemplar protein (luxC, Long-chain acyl-protein thioester reductase) representing LuxCDE fatty acid reductase complex in Aliivibrio fischeri (Vibrio fischeri) for bioluminescence.", "sequence_version": 3, "taxon_id": "NCBITaxon:668", "taxon_label": "Aliivibrio fischeri (Vibrio fischeri)", "uniprot_id": "UniProtKB:P12748"}, {"entry_status": "REVIEWED", "entry_version": 98, "evidence": [{"notes": "The A. fischeri study identifies LuxI as the synthase for the LuxR-binding 3-oxo-C6-HSL signal; reviewed UniProtKB P12747 is the species-level LuxI entry.", "reference": "DOI:10.1128/JB.00035-24", "snippet": "LuxI as the autoinducer synthase"}], "gene_symbol": "luxI", "node_id": "lux_i", "node_label": "LuxI autoinducer synthase", "protein_label": "Acyl-homoserine-lactone synthase", "retrieved_on": "2026-08-24", "role": "LuxI synthesizes the 3-oxo-C6-HSL autoinducer that activates LuxR-dependent lux-locus expression in A. fischeri; it is a regulatory component, not the luciferase enzyme itself.", "sequence_version": 1, "taxon_id": "NCBITaxon:668", "taxon_label": "Aliivibrio fischeri", "uniprot_id": "UniProtKB:P12747"}, {"entry_status": "REVIEWED", "entry_version": 124, "evidence": [{"notes": "Supports LuxR transcription factor in bioluminescence; UniProtKB:P12746 (luxR, Transcriptional activator protein LuxR) in Aliivibrio fischeri (Vibrio fischeri) provides a verified protein exemplar.", "reference": "DOI:10.1146/annurev.cellbio.21.012704.131001", "snippet": "Bacteria communicate with one another using chemical signal molecules."}], "gene_symbol": "luxR", "node_id": "lux_r", "node_label": "LuxR transcription factor", "protein_label": "Transcriptional activator protein LuxR", "retrieved_on": "2026-10-17", "role": "Exemplar protein (luxR, Transcriptional activator protein LuxR) representing LuxR transcription factor in Aliivibrio fischeri (Vibrio fischeri) for bioluminescence.", "sequence_version": 3, "taxon_id": "NCBITaxon:668", "taxon_label": "Aliivibrio fischeri (Vibrio fischeri)", "uniprot_id": "UniProtKB:P12746"}], "scope_notes": "The graph describes the A. fischeri Lux system. LuxAB is a heterodimer, LuxCDE is a three-component fatty-acid reductase system, and LuxI/LuxR regulation is not universal to all bioluminescent organisms. The taxon-paired example anchors the LuxI quorum-sensing branch.", "scope_status": "MECHANISTIC", "title": "Luciferase-catalyzed light emission"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking luciferase to oxygen-dependent light emission, often under quorum-sensing control.", "edges": [{"description": "Luciferase carries out the light-emitting reaction.", "evidence": [{"notes": "Brodl et al. review the bacterial luciferase mechanism.", "reference": "DOI:10.1016/j.csbj.2018.11.003"}], "id": "edge-1", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "luciferase", "target": "bioluminescence_process"}, {"description": "Light emission consumes molecular oxygen.", "evidence": [{"notes": "Supports O2 as a luciferase co-substrate.", "reference": "DOI:10.1016/j.csbj.2018.11.003"}], "id": "edge-2", "is_orphan": false, "predicate": "consumes", "predicate_id": "biolink:consumes", "source": "bioluminescence_process", "target": "molecular_oxygen"}, {"description": "The luciferase reaction realizes the bioluminescence trait.", "evidence": [{"notes": "Waters \u0026 Bassler support quorum-sensing control of luminescence.", "reference": "DOI:10.1146/annurev.cellbio.21.012704.131001"}], "id": "edge-3", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "bioluminescence_process", "target": "bioluminescence_trait"}, {"description": "Luciferase catalyzes the monooxygenation of long-chain aliphatic aldehydes.", "evidence": [{"notes": "The heterodimeric enzyme luciferase (LuxAB) catalyzes the monooxygenation of aliphatic aldehydes to the corresponding acids.", "reference": "DOI:10.1016/j.csbj.2018.11.003"}], "id": "edge-4", "is_orphan": false, "predicate": "catalyzes", "predicate_id": "biolink:catalyzes", "source": "luciferase", "target": "long_chain_aldehyde"}, {"description": "FMNH2 is a required substrate consumed in the light-emitting luciferase reaction.", "evidence": [{"notes": "Long chain aldehydes, reduced flavin mononucleotide (FMNH2) and molecular oxygen (O2) are converted by the enzyme luciferase (LuxAB).", "reference": "DOI:10.1016/j.csbj.2018.11.003"}], "id": "edge-5", "is_orphan": false, "predicate": "is substrate for", "predicate_id": null, "source": "fmnh2", "target": "bioluminescence_process"}, {"description": "Long-chain aldehyde is a required substrate of the light-emitting reaction.", "evidence": [{"notes": "Long chain aldehydes, reduced flavin mononucleotide (FMNH2) and molecular oxygen (O2) are converted by the enzyme luciferase (LuxAB).", "reference": "DOI:10.1016/j.csbj.2018.11.003"}], "id": "edge-6", "is_orphan": false, "predicate": "is substrate for", "predicate_id": null, "source": "long_chain_aldehyde", "target": "bioluminescence_process"}, {"description": "LuxG flavin reductase reduces free FMN to FMNH2 supplying the luciferase reaction.", "evidence": [{"notes": "LuxG converts free flavin (FMN) to reduced flavin (FMNH2); LuxG is a NAD(P)H-dependent flavin reductase.", "reference": "DOI:10.1016/j.csbj.2018.11.003"}], "id": "edge-7", "is_orphan": false, "predicate": "converts", "predicate_id": null, "source": "lux_g", "target": "fmn"}, {"description": "LuxG generates the reduced flavin substrate FMNH2.", "evidence": [{"notes": "LuxG converts free flavin (FMN) to reduced flavin (FMNH2).", "reference": "DOI:10.1016/j.csbj.2018.11.003"}], "id": "edge-8", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2007800", "source": "lux_g", "target": "fmnh2"}, {"description": "The LuxCDE fatty acid reductase complex supplies the long-chain aldehyde substrate.", "evidence": [{"notes": "To supply the long-chain aldehyde substrates to the luciferase, the proteins LuxC, LuxD, and LuxE constitute a fatty acid reductase complex.", "reference": "DOI:10.1016/j.csbj.2018.11.003"}], "id": "edge-9", "is_orphan": false, "predicate": "supplies", "predicate_id": null, "source": "luxcde_complex", "target": "long_chain_aldehyde"}, {"description": "LuxI autoinducer synthase produces the 3-oxo-C6-HSL signal.", "evidence": [{"notes": "Identifying LuxI as the autoinducer synthase; the LuxI-produced 3-oxo-C6 HSL.", "reference": "DOI:10.1128/jb.00035-24"}], "id": "edge-10", "is_orphan": false, "predicate": "synthesizes", "predicate_id": null, "source": "lux_i", "target": "autoinducer_hsl"}, {"description": "The 3-oxo-C6-HSL autoinducer binds the LuxR transcription factor.", "evidence": [{"notes": "The LuxI-produced 3-oxo-C6 was shown to bind the N-terminal domain of the transcription factor LuxR.", "reference": "DOI:10.1128/jb.00035-24"}], "id": "edge-11", "is_orphan": false, "predicate": "binds", "predicate_id": null, "source": "autoinducer_hsl", "target": "lux_r"}, {"description": "Autoinducer-bound LuxR activates expression of the lux locus.", "evidence": [{"notes": "Bind the N-terminal domain of the transcription factor LuxR to activate the expression of the lux locus.", "reference": "DOI:10.1128/jb.00035-24"}], "id": "edge-12", "is_orphan": false, "predicate": "activates expression of", "predicate_id": null, "source": "lux_r", "target": "lux_locus_expression"}, {"description": "Expression of the lux locus produces the luciferase light-production machinery.", "evidence": [{"notes": "Activation of the lux locus drives expression of the light-production machinery including luciferase.", "reference": "DOI:10.1128/jb.00035-24"}], "id": "edge-13", "is_orphan": false, "predicate": "has output", "predicate_id": "RO:0002234", "source": "lux_locus_expression", "target": "luciferase"}], "evidence_rows": [{"description": "Luciferase carries out the light-emitting reaction.", "edge_id": "edge-1", "evidence": [{"notes": "Brodl et al. review the bacterial luciferase mechanism.", "reference": "DOI:10.1016/j.csbj.2018.11.003"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "luciferase", "source_grounding": "GO:0047646", "target": "bioluminescence", "target_grounding": "GO:0008218"}, {"description": "Light emission consumes molecular oxygen.", "edge_id": "edge-2", "evidence": [{"notes": "Supports O2 as a luciferase co-substrate.", "reference": "DOI:10.1016/j.csbj.2018.11.003"}], "predicate": "consumes", "predicate_id": "biolink:consumes", "source": "bioluminescence", "source_grounding": "GO:0008218", "target": "molecular oxygen", "target_grounding": "CHEBI:15379"}, {"description": "The luciferase reaction realizes the bioluminescence trait.", "edge_id": "edge-3", "evidence": [{"notes": "Waters \u0026 Bassler support quorum-sensing control of luminescence.", "reference": "DOI:10.1146/annurev.cellbio.21.012704.131001"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "bioluminescence", "source_grounding": "GO:0008218", "target": "bioluminescence", "target_grounding": "traitmech:000085"}, {"description": "Luciferase catalyzes the monooxygenation of long-chain aliphatic aldehydes.", "edge_id": "edge-4", "evidence": [{"notes": "The heterodimeric enzyme luciferase (LuxAB) catalyzes the monooxygenation of aliphatic aldehydes to the corresponding acids.", "reference": "DOI:10.1016/j.csbj.2018.11.003"}], "predicate": "catalyzes", "predicate_id": "biolink:catalyzes", "source": "luciferase", "source_grounding": "GO:0047646", "target": "long-chain aldehyde", "target_grounding": null}, {"description": "FMNH2 is a required substrate consumed in the light-emitting luciferase reaction.", "edge_id": "edge-5", "evidence": [{"notes": "Long chain aldehydes, reduced flavin mononucleotide (FMNH2) and molecular oxygen (O2) are converted by the enzyme luciferase (LuxAB).", "reference": "DOI:10.1016/j.csbj.2018.11.003"}], "predicate": "is substrate for", "predicate_id": null, "source": "reduced flavin mononucleotide (FMNH2)", "source_grounding": null, "target": "bioluminescence", "target_grounding": "GO:0008218"}, {"description": "Long-chain aldehyde is a required substrate of the light-emitting reaction.", "edge_id": "edge-6", "evidence": [{"notes": "Long chain aldehydes, reduced flavin mononucleotide (FMNH2) and molecular oxygen (O2) are converted by the enzyme luciferase (LuxAB).", "reference": "DOI:10.1016/j.csbj.2018.11.003"}], "predicate": "is substrate for", "predicate_id": null, "source": "long-chain aldehyde", "source_grounding": null, "target": "bioluminescence", "target_grounding": "GO:0008218"}, {"description": "LuxG flavin reductase reduces free FMN to FMNH2 supplying the luciferase reaction.", "edge_id": "edge-7", "evidence": [{"notes": "LuxG converts free flavin (FMN) to reduced flavin (FMNH2); LuxG is a NAD(P)H-dependent flavin reductase.", "reference": "DOI:10.1016/j.csbj.2018.11.003"}], "predicate": "converts", "predicate_id": null, "source": "LuxG flavin reductase", "source_grounding": null, "target": "flavin mononucleotide (FMN)", "target_grounding": null}, {"description": "LuxG generates the reduced flavin substrate FMNH2.", "edge_id": "edge-8", "evidence": [{"notes": "LuxG converts free flavin (FMN) to reduced flavin (FMNH2).", "reference": "DOI:10.1016/j.csbj.2018.11.003"}], "predicate": "produces", "predicate_id": "METPO:2007800", "source": "LuxG flavin reductase", "source_grounding": null, "target": "reduced flavin mononucleotide (FMNH2)", "target_grounding": null}, {"description": "The LuxCDE fatty acid reductase complex supplies the long-chain aldehyde substrate.", "edge_id": "edge-9", "evidence": [{"notes": "To supply the long-chain aldehyde substrates to the luciferase, the proteins LuxC, LuxD, and LuxE constitute a fatty acid reductase complex.", "reference": "DOI:10.1016/j.csbj.2018.11.003"}], "predicate": "supplies", "predicate_id": null, "source": "LuxCDE fatty acid reductase complex", "source_grounding": null, "target": "long-chain aldehyde", "target_grounding": null}, {"description": "LuxI autoinducer synthase produces the 3-oxo-C6-HSL signal.", "edge_id": "edge-10", "evidence": [{"notes": "Identifying LuxI as the autoinducer synthase; the LuxI-produced 3-oxo-C6 HSL.", "reference": "DOI:10.1128/jb.00035-24"}], "predicate": "synthesizes", "predicate_id": null, "source": "LuxI autoinducer synthase", "source_grounding": "GO:0061579", "target": "3-oxo-C6-HSL autoinducer", "target_grounding": null}, {"description": "The 3-oxo-C6-HSL autoinducer binds the LuxR transcription factor.", "edge_id": "edge-11", "evidence": [{"notes": "The LuxI-produced 3-oxo-C6 was shown to bind the N-terminal domain of the transcription factor LuxR.", "reference": "DOI:10.1128/jb.00035-24"}], "predicate": "binds", "predicate_id": null, "source": "3-oxo-C6-HSL autoinducer", "source_grounding": null, "target": "LuxR transcription factor", "target_grounding": null}, {"description": "Autoinducer-bound LuxR activates expression of the lux locus.", "edge_id": "edge-12", "evidence": [{"notes": "Bind the N-terminal domain of the transcription factor LuxR to activate the expression of the lux locus.", "reference": "DOI:10.1128/jb.00035-24"}], "predicate": "activates expression of", "predicate_id": null, "source": "LuxR transcription factor", "source_grounding": null, "target": "lux locus expression", "target_grounding": null}, {"description": "Expression of the lux locus produces the luciferase light-production machinery.", "edge_id": "edge-13", "evidence": [{"notes": "Activation of the lux locus drives expression of the light-production machinery including luciferase.", "reference": "DOI:10.1128/jb.00035-24"}], "predicate": "has output", "predicate_id": "RO:0002234", "source": "lux locus expression", "source_grounding": null, "target": "luciferase", "target_grounding": "GO:0047646"}], "graph_id": "bioluminescence_luciferase", "issues": [], "nodes": [{"color": "#fef3c7", "description": "LuxI-produced acyl-homoserine lactone quorum-sensing signal.", "grounding": null, "id": "autoinducer_hsl", "is_orphan": false, "label": "3-oxo-C6-HSL autoinducer", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Enzymatic emission of visible light.", "grounding": "GO:0008218", "id": "bioluminescence_process", "is_orphan": false, "label": "bioluminescence", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Capacity to emit visible light enzymatically.", "grounding": "traitmech:000085", "id": "bioluminescence_trait", "is_orphan": false, "label": "bioluminescence", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Oxidized flavin recycled in the luciferase cycle.", "grounding": null, "id": "fmn", "is_orphan": false, "label": "flavin mononucleotide (FMN)", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Reduced flavin substrate consumed by luciferase.", "grounding": null, "id": "fmnh2", "is_orphan": false, "label": "reduced flavin mononucleotide (FMNH2)", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Aliphatic aldehyde substrate (C8-C16) of the luciferase reaction.", "grounding": null, "id": "long_chain_aldehyde", "is_orphan": false, "label": "long-chain aldehyde", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Enzyme catalyzing the light-emitting reaction.", "grounding": "GO:0047646", "id": "luciferase", "is_orphan": false, "label": "luciferase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "NAD(P)H-dependent flavin reductase generating FMNH2.", "grounding": null, "id": "lux_g", "is_orphan": false, "label": "LuxG flavin reductase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Synthase producing the 3-oxo-C6-HSL acyl-homoserine lactone autoinducer.", "grounding": "GO:0061579", "id": "lux_i", "is_orphan": false, "label": "LuxI autoinducer synthase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 97, "evidence": [{"notes": "The A. fischeri study identifies LuxI as the synthase for the LuxR-binding 3-oxo-C6-HSL signal; reviewed UniProtKB P12747 is the species-level LuxI entry.", "reference": "DOI:10.1128/JB.00035-24", "snippet": "LuxI as the autoinducer synthase"}], "gene_symbol": "luxI", "protein_label": "Acyl-homoserine-lactone synthase", "retrieved_on": "2026-08-24", "role": "LuxI synthesizes the 3-oxo-C6-HSL autoinducer that activates LuxR-dependent lux-locus expression in A. fischeri; it is a regulatory component, not the luciferase enzyme itself.", "sequence_version": 1, "taxon_id": "NCBITaxon:668", "taxon_label": "Aliivibrio fischeri", "uniprot_id": "UniProtKB:P12747"}], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Transcription of the lux operon producing light-production machinery.", "grounding": null, "id": "lux_locus_expression", "is_orphan": false, "label": "lux locus expression", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Autoinducer-responsive activator of the lux locus.", "grounding": null, "id": "lux_r", "is_orphan": false, "label": "LuxR transcription factor", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "LuxC/LuxD/LuxE complex supplying long-chain aldehyde substrate.", "grounding": null, "id": "luxcde_complex", "is_orphan": false, "label": "LuxCDE fatty acid reductase complex", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Co-substrate of the luciferase reaction.", "grounding": "CHEBI:15379", "id": "molecular_oxygen", "is_orphan": false, "label": "molecular oxygen", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 97, "evidence": [{"notes": "The A. fischeri study identifies LuxI as the synthase for the LuxR-binding 3-oxo-C6-HSL signal; reviewed UniProtKB P12747 is the species-level LuxI entry.", "reference": "DOI:10.1128/JB.00035-24", "snippet": "LuxI as the autoinducer synthase"}], "gene_symbol": "luxI", "node_id": "lux_i", "node_label": "LuxI autoinducer synthase", "protein_label": "Acyl-homoserine-lactone synthase", "retrieved_on": "2026-08-24", "role": "LuxI synthesizes the 3-oxo-C6-HSL autoinducer that activates LuxR-dependent lux-locus expression in A. fischeri; it is a regulatory component, not the luciferase enzyme itself.", "sequence_version": 1, "taxon_id": "NCBITaxon:668", "taxon_label": "Aliivibrio fischeri", "uniprot_id": "UniProtKB:P12747"}], "scope_notes": "The graph describes the A. fischeri Lux system. LuxAB is a heterodimer, LuxCDE is a three-component fatty-acid reductase system, and LuxI/LuxR regulation is not universal to all bioluminescent organisms. The taxon-paired example anchors the LuxI quorum-sensing branch.", "scope_status": "MECHANISTIC", "title": "Luciferase-catalyzed light emission"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -1168,13 +1205,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-10-17 09:00 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

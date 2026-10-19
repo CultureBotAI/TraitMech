@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/genomics.html">GENOMICS</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/genomics.html">GENOMICS</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>AbiA system</h1>
     <p class="curie"><code>traitmech:000344</code> · CLASS · PROPOSED</p>
 
@@ -145,9 +156,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>AbiA locus</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>phage DNA replication inhibition</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>AbiA activity inhibits phage DNA replication, and DefenseFinder represents AbiA with AbiA_large and AbiA_small model subrules.</p>
             <ul>
 
@@ -186,9 +199,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>AbiA locus</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>reduced lactococcal phage propagation</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>Changing abiA dosage or expression changes Lactococcus lactis resistance to c2, p2, sk1, and phi31.</p>
             <ul>
 
@@ -203,9 +218,11 @@
 
           <li id="pathograph-1-edge-3">
             <strong>reduced lactococcal phage propagation</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>AbiA system</strong>
-            <code>METPO:2007700</code>
+            <code>traitmech:000344</code>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>AbiA-mediated reduction of lactococcal phage propagation realizes the AbiA system trait.</p>
             <ul>
 
@@ -220,8 +237,10 @@
 
           <li id="pathograph-1-edge-4">
             <strong>AbiA system</strong>
+            <code>traitmech:000344</code>
             <span class="edge-predicate">is a</span>
             <strong>abortive infection system</strong>
+            <code>traitmech:000214</code>
             <code>rdfs:subClassOf</code>
             <p>AbiA system possession is an abortive-infection-system trait.</p>
             <ul>
@@ -365,11 +384,75 @@
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
 
-      <p class="no-match">No kg-microbe node embedding matched this record
-        in the 2026-04-25 deepwalk.</p>
+      <p class="match-method">Matched <strong>1</strong>
+        kg-microbe node
+        via <em>parent_proxy</em>.</p>
+      <ul class="kgm-nodes">
+
+        <li><code>METPO:1000188</code> <span class="dim-preview">[-0.956, -1.962, -3.148, +1.274, …]</span></li>
+
+      </ul>
+      <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
 
     </div>
 
+
+    <div class="card">
+      <h2>Nearest neighbors in embedding space</h2>
+      <p class="meta">Top-8 cosine-similar METPO traits
+        from the 2026-04-25 deepwalk (512-D).</p>
+      <ul class="nn-list">
+
+        <li>
+          <span class="nn-cat">upper</span>
+          <a href="../../traits/upper/quality.html">quality</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/jukab_system.html">JukAB system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/integrative_conjugative_element.html">integrative conjugative element</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/ig_like_schlafen_system.html">Ig-like Schlafen system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hypnos_system.html">Hypnos system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hna_system.html">Hna system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hma_system.html">Hma system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hesat_system.html">Hesat system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+      </ul>
+    </div>
 
 
 
@@ -559,6 +642,11 @@
     </dl>
   </div>
 
+
+  <div class="card rail-kgm">
+    <h2>kg-microbe</h2>
+    <p class="meta">1 matching node (parent_proxy)</p>
+  </div>
 
 </aside>
 </div>
@@ -892,7 +980,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Conservative system-level sketch linking an AbiA-family locus to phage-DNA-replication inhibition, reduced lactococcal phage propagation, and AbiA-system possession without asserting the unresolved direct phage trigger or molecular target.", "edges": [{"description": "AbiA activity inhibits phage DNA replication, and DefenseFinder represents AbiA with AbiA_large and AbiA_small model subrules.", "evidence": [{"notes": "Dinsmore and Klaenhammer describe abiA as the former hsp abortive-infection determinant and connect AbiA activity to inhibition of phage DNA replication.", "reference": "PMID:16349225", "snippet": "The abiA gene (formerly hsp) encodes an abortive phage infection mechanism which inhibits phage DNA replication."}, {"notes": "The DefenseFinder rules table models one AbiA subrule as the single-profile AbiA_large subsystem.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "AbiA\tAbiA_large\t1\t1\tAbiA_large__AbiA_large"}, {"notes": "The DefenseFinder rules table models one AbiA subrule as a two-profile AbiA_small subsystem.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "AbiA\tAbiA_small\t2\t2\tAbiA_small__AbiA_SLATT, AbiA_small__AbiA_small"}, {"notes": "The DefenseFinder HMM inventory records AbiA_large__AbiA_large under the AbiA_large model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| AbiA_large__AbiA_large                           | AbiA_large__AbiA_large                           | AbiA_large             | Custom                  | 250    |"}, {"notes": "The DefenseFinder HMM inventory records AbiA_small__AbiA_small under the AbiA_small model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| AbiA_small__AbiA_small                           | AbiA_small__AbiA_small                           | AbiA_small             | Custom                  | 300    |"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "abia_locus", "target": "phage_dna_replication_inhibition"}, {"description": "Changing abiA dosage or expression changes Lactococcus lactis resistance to c2, p2, sk1, and phi31.", "evidence": [{"notes": "Dinsmore and Klaenhammer connected abiA dosage and expression to lactococcal phage resistance level.", "reference": "PMID:16349225", "snippet": "Altering the gene dosage or expression level of abiA significantly affects the phage resistance levels."}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "abia_locus", "target": "reduced_lactococcal_phage_propagation"}, {"description": "AbiA-mediated reduction of lactococcal phage propagation realizes the AbiA system trait.", "evidence": [{"notes": "Dinsmore and Klaenhammer describe the AbiA system as protecting Lactococcus from multiple phage species.", "reference": "PMID:9661658", "snippet": "can protect Lactococcus species from infection by a variety of bacteriophages including three unrelated phage species"}], "id": "edge-3", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "reduced_lactococcal_phage_propagation", "target": "abia_system_trait"}, {"description": "AbiA system possession is an abortive-infection-system trait.", "evidence": [{"notes": "Dinsmore and Klaenhammer describe abiA as the former hsp abortive-infection determinant and connect AbiA activity to inhibition of phage DNA replication.", "reference": "PMID:16349225", "snippet": "The abiA gene (formerly hsp) encodes an abortive phage infection mechanism which inhibits phage DNA replication."}, {"notes": "The DefenseFinder article registry maps the named AbiA model namespace to a lactococcal abortive-infection review.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "AbiA | 10\\.1016/j\\.mib\\.2005\\.06\\.006 | Phage abortive infection in lactococci: variations on a theme"}], "id": "edge-4", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "abia_system_trait", "target": "abortive_infection_system_trait"}, {"description": "Abortive phage resistance protein AbiC (abiC, UniProtKB:Q01457) contributes to AbiA system.", "evidence": [{"notes": "Supports the functional association between Abortive phage resistance protein AbiC (UniProtKB:Q01457 in Lactococcus lactis subsp. lactis (Streptococcus lactis)) and AbiA system.", "reference": "PMID:9661658", "snippet": "The abiA gene encodes an abortive bacteriophage infection mechanism that can protect Lactococcus species from infection by a variety of bacteriophages including three unrelated phage species."}], "id": "edge-5", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "abia_system_protein_component", "target": "abia_system_trait"}], "evidence_rows": [{"description": "AbiA activity inhibits phage DNA replication, and DefenseFinder represents AbiA with AbiA_large and AbiA_small model subrules.", "edge_id": "edge-1", "evidence": [{"notes": "Dinsmore and Klaenhammer describe abiA as the former hsp abortive-infection determinant and connect AbiA activity to inhibition of phage DNA replication.", "reference": "PMID:16349225", "snippet": "The abiA gene (formerly hsp) encodes an abortive phage infection mechanism which inhibits phage DNA replication."}, {"notes": "The DefenseFinder rules table models one AbiA subrule as the single-profile AbiA_large subsystem.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "AbiA\tAbiA_large\t1\t1\tAbiA_large__AbiA_large"}, {"notes": "The DefenseFinder rules table models one AbiA subrule as a two-profile AbiA_small subsystem.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "AbiA\tAbiA_small\t2\t2\tAbiA_small__AbiA_SLATT, AbiA_small__AbiA_small"}, {"notes": "The DefenseFinder HMM inventory records AbiA_large__AbiA_large under the AbiA_large model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| AbiA_large__AbiA_large                           | AbiA_large__AbiA_large                           | AbiA_large             | Custom                  | 250    |"}, {"notes": "The DefenseFinder HMM inventory records AbiA_small__AbiA_small under the AbiA_small model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| AbiA_small__AbiA_small                           | AbiA_small__AbiA_small                           | AbiA_small             | Custom                  | 300    |"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "AbiA locus", "target": "phage DNA replication inhibition"}, {"description": "Changing abiA dosage or expression changes Lactococcus lactis resistance to c2, p2, sk1, and phi31.", "edge_id": "edge-2", "evidence": [{"notes": "Dinsmore and Klaenhammer connected abiA dosage and expression to lactococcal phage resistance level.", "reference": "PMID:16349225", "snippet": "Altering the gene dosage or expression level of abiA significantly affects the phage resistance levels."}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "AbiA locus", "target": "reduced lactococcal phage propagation"}, {"description": "AbiA-mediated reduction of lactococcal phage propagation realizes the AbiA system trait.", "edge_id": "edge-3", "evidence": [{"notes": "Dinsmore and Klaenhammer describe the AbiA system as protecting Lactococcus from multiple phage species.", "reference": "PMID:9661658", "snippet": "can protect Lactococcus species from infection by a variety of bacteriophages including three unrelated phage species"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "reduced lactococcal phage propagation", "target": "AbiA system"}, {"description": "AbiA system possession is an abortive-infection-system trait.", "edge_id": "edge-4", "evidence": [{"notes": "Dinsmore and Klaenhammer describe abiA as the former hsp abortive-infection determinant and connect AbiA activity to inhibition of phage DNA replication.", "reference": "PMID:16349225", "snippet": "The abiA gene (formerly hsp) encodes an abortive phage infection mechanism which inhibits phage DNA replication."}, {"notes": "The DefenseFinder article registry maps the named AbiA model namespace to a lactococcal abortive-infection review.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "AbiA | 10\\.1016/j\\.mib\\.2005\\.06\\.006 | Phage abortive infection in lactococci: variations on a theme"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "AbiA system", "target": "abortive infection system"}, {"description": "Abortive phage resistance protein AbiC (abiC, UniProtKB:Q01457) contributes to AbiA system.", "edge_id": "edge-5", "evidence": [{"notes": "Supports the functional association between Abortive phage resistance protein AbiC (UniProtKB:Q01457 in Lactococcus lactis subsp. lactis (Streptococcus lactis)) and AbiA system.", "reference": "PMID:9661658", "snippet": "The abiA gene encodes an abortive bacteriophage infection mechanism that can protect Lactococcus species from infection by a variety of bacteriophages including three unrelated phage species."}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Abortive phage resistance protein AbiC", "target": "AbiA system"}], "graph_id": "abia_locus_inhibits_phage_dna_replication", "issues": [], "nodes": [{"color": "#f3f4f6", "description": "An AbiA-family abortive-infection locus represented by the DefenseFinder AbiA_large or AbiA_small subrules.", "grounding": null, "id": "abia_locus", "is_orphan": false, "label": "AbiA locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Protein component (Abortive phage resistance protein AbiC) associated with AbiA system.", "grounding": "InterPro:IPR031709", "id": "abia_system_protein_component", "is_orphan": false, "label": "Abortive phage resistance protein AbiC", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 35, "evidence": [{"notes": "Supports Abortive phage resistance protein AbiC in AbiA system; UniProtKB:Q01457 (abiC, Abortive phage resistance protein AbiC) in Lactococcus lactis subsp. lactis (Streptococcus lactis) provides a verified protein exemplar.", "reference": "PMID:9661658", "snippet": "The abiA gene encodes an abortive bacteriophage infection mechanism that can protect Lactococcus species from infection by a variety of bacteriophages including three unrelated phage species."}], "gene_symbol": "abiC", "protein_label": "Abortive phage resistance protein AbiC", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (abiC, Abortive phage resistance protein AbiC) associated with AbiA system in Lactococcus lactis subsp. lactis (Streptococcus lactis).", "sequence_version": 1, "taxon_id": "NCBITaxon:1360", "taxon_label": "Lactococcus lactis subsp. lactis (Streptococcus lactis)", "uniprot_id": "UniProtKB:Q01457"}], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded AbiA abortive-infection phage-defense system.", "grounding": "traitmech:000344", "id": "abia_system_trait", "is_orphan": false, "label": "AbiA system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded abortive-infection phage-defense system.", "grounding": "traitmech:000214", "id": "abortive_infection_system_trait", "is_orphan": false, "label": "abortive infection system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Inhibition of bacteriophage DNA replication in AbiA-containing Lactococcus lactis.", "grounding": null, "id": "phage_dna_replication_inhibition", "is_orphan": false, "label": "phage DNA replication inhibition", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Reduced propagation of lactococcal phages in cells carrying an AbiA-family abortive-infection system.", "grounding": null, "id": "reduced_lactococcal_phage_propagation", "is_orphan": false, "label": "reduced lactococcal phage propagation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 35, "evidence": [{"notes": "Supports Abortive phage resistance protein AbiC in AbiA system; UniProtKB:Q01457 (abiC, Abortive phage resistance protein AbiC) in Lactococcus lactis subsp. lactis (Streptococcus lactis) provides a verified protein exemplar.", "reference": "PMID:9661658", "snippet": "The abiA gene encodes an abortive bacteriophage infection mechanism that can protect Lactococcus species from infection by a variety of bacteriophages including three unrelated phage species."}], "gene_symbol": "abiC", "node_id": "abia_system_protein_component", "node_label": "Abortive phage resistance protein AbiC", "protein_label": "Abortive phage resistance protein AbiC", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (abiC, Abortive phage resistance protein AbiC) associated with AbiA system in Lactococcus lactis subsp. lactis (Streptococcus lactis).", "sequence_version": 1, "taxon_id": "NCBITaxon:1360", "taxon_label": "Lactococcus lactis subsp. lactis (Streptococcus lactis)", "uniprot_id": "UniProtKB:Q01457"}], "scope_notes": "The graph captures AbiA as a named DefenseFinder abortive-infection system with AbiA_large and AbiA_small subrules. It leaves the direct phage trigger, the natural boundaries of the DefenseFinder subrules, the molecular effector activity, the DNA-replication target, and phage escape routes unresolved.", "scope_status": "NONMECHANISTIC", "title": "AbiA activity inhibits lactococcal phage DNA replication"}];
+  var graphs = [{"description": "Conservative system-level sketch linking an AbiA-family locus to phage-DNA-replication inhibition, reduced lactococcal phage propagation, and AbiA-system possession without asserting the unresolved direct phage trigger or molecular target.", "edges": [{"description": "AbiA activity inhibits phage DNA replication, and DefenseFinder represents AbiA with AbiA_large and AbiA_small model subrules.", "evidence": [{"notes": "Dinsmore and Klaenhammer describe abiA as the former hsp abortive-infection determinant and connect AbiA activity to inhibition of phage DNA replication.", "reference": "PMID:16349225", "snippet": "The abiA gene (formerly hsp) encodes an abortive phage infection mechanism which inhibits phage DNA replication."}, {"notes": "The DefenseFinder rules table models one AbiA subrule as the single-profile AbiA_large subsystem.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "AbiA\tAbiA_large\t1\t1\tAbiA_large__AbiA_large"}, {"notes": "The DefenseFinder rules table models one AbiA subrule as a two-profile AbiA_small subsystem.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "AbiA\tAbiA_small\t2\t2\tAbiA_small__AbiA_SLATT, AbiA_small__AbiA_small"}, {"notes": "The DefenseFinder HMM inventory records AbiA_large__AbiA_large under the AbiA_large model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| AbiA_large__AbiA_large                           | AbiA_large__AbiA_large                           | AbiA_large             | Custom                  | 250    |"}, {"notes": "The DefenseFinder HMM inventory records AbiA_small__AbiA_small under the AbiA_small model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| AbiA_small__AbiA_small                           | AbiA_small__AbiA_small                           | AbiA_small             | Custom                  | 300    |"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "abia_locus", "target": "phage_dna_replication_inhibition"}, {"description": "Changing abiA dosage or expression changes Lactococcus lactis resistance to c2, p2, sk1, and phi31.", "evidence": [{"notes": "Dinsmore and Klaenhammer connected abiA dosage and expression to lactococcal phage resistance level.", "reference": "PMID:16349225", "snippet": "Altering the gene dosage or expression level of abiA significantly affects the phage resistance levels."}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "abia_locus", "target": "reduced_lactococcal_phage_propagation"}, {"description": "AbiA-mediated reduction of lactococcal phage propagation realizes the AbiA system trait.", "evidence": [{"notes": "Dinsmore and Klaenhammer describe the AbiA system as protecting Lactococcus from multiple phage species.", "reference": "PMID:9661658", "snippet": "can protect Lactococcus species from infection by a variety of bacteriophages including three unrelated phage species"}], "id": "edge-3", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "reduced_lactococcal_phage_propagation", "target": "abia_system_trait"}, {"description": "AbiA system possession is an abortive-infection-system trait.", "evidence": [{"notes": "Dinsmore and Klaenhammer describe abiA as the former hsp abortive-infection determinant and connect AbiA activity to inhibition of phage DNA replication.", "reference": "PMID:16349225", "snippet": "The abiA gene (formerly hsp) encodes an abortive phage infection mechanism which inhibits phage DNA replication."}, {"notes": "The DefenseFinder article registry maps the named AbiA model namespace to a lactococcal abortive-infection review.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "AbiA | 10\\.1016/j\\.mib\\.2005\\.06\\.006 | Phage abortive infection in lactococci: variations on a theme"}], "id": "edge-4", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "abia_system_trait", "target": "abortive_infection_system_trait"}], "evidence_rows": [{"description": "AbiA activity inhibits phage DNA replication, and DefenseFinder represents AbiA with AbiA_large and AbiA_small model subrules.", "edge_id": "edge-1", "evidence": [{"notes": "Dinsmore and Klaenhammer describe abiA as the former hsp abortive-infection determinant and connect AbiA activity to inhibition of phage DNA replication.", "reference": "PMID:16349225", "snippet": "The abiA gene (formerly hsp) encodes an abortive phage infection mechanism which inhibits phage DNA replication."}, {"notes": "The DefenseFinder rules table models one AbiA subrule as the single-profile AbiA_large subsystem.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "AbiA\tAbiA_large\t1\t1\tAbiA_large__AbiA_large"}, {"notes": "The DefenseFinder rules table models one AbiA subrule as a two-profile AbiA_small subsystem.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "AbiA\tAbiA_small\t2\t2\tAbiA_small__AbiA_SLATT, AbiA_small__AbiA_small"}, {"notes": "The DefenseFinder HMM inventory records AbiA_large__AbiA_large under the AbiA_large model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| AbiA_large__AbiA_large                           | AbiA_large__AbiA_large                           | AbiA_large             | Custom                  | 250    |"}, {"notes": "The DefenseFinder HMM inventory records AbiA_small__AbiA_small under the AbiA_small model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| AbiA_small__AbiA_small                           | AbiA_small__AbiA_small                           | AbiA_small             | Custom                  | 300    |"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "AbiA locus", "source_grounding": null, "target": "phage DNA replication inhibition", "target_grounding": null}, {"description": "Changing abiA dosage or expression changes Lactococcus lactis resistance to c2, p2, sk1, and phi31.", "edge_id": "edge-2", "evidence": [{"notes": "Dinsmore and Klaenhammer connected abiA dosage and expression to lactococcal phage resistance level.", "reference": "PMID:16349225", "snippet": "Altering the gene dosage or expression level of abiA significantly affects the phage resistance levels."}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "AbiA locus", "source_grounding": null, "target": "reduced lactococcal phage propagation", "target_grounding": null}, {"description": "AbiA-mediated reduction of lactococcal phage propagation realizes the AbiA system trait.", "edge_id": "edge-3", "evidence": [{"notes": "Dinsmore and Klaenhammer describe the AbiA system as protecting Lactococcus from multiple phage species.", "reference": "PMID:9661658", "snippet": "can protect Lactococcus species from infection by a variety of bacteriophages including three unrelated phage species"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "reduced lactococcal phage propagation", "source_grounding": null, "target": "AbiA system", "target_grounding": "traitmech:000344"}, {"description": "AbiA system possession is an abortive-infection-system trait.", "edge_id": "edge-4", "evidence": [{"notes": "Dinsmore and Klaenhammer describe abiA as the former hsp abortive-infection determinant and connect AbiA activity to inhibition of phage DNA replication.", "reference": "PMID:16349225", "snippet": "The abiA gene (formerly hsp) encodes an abortive phage infection mechanism which inhibits phage DNA replication."}, {"notes": "The DefenseFinder article registry maps the named AbiA model namespace to a lactococcal abortive-infection review.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "AbiA | 10\\.1016/j\\.mib\\.2005\\.06\\.006 | Phage abortive infection in lactococci: variations on a theme"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "AbiA system", "source_grounding": "traitmech:000344", "target": "abortive infection system", "target_grounding": "traitmech:000214"}], "graph_id": "abia_locus_inhibits_phage_dna_replication", "issues": [], "nodes": [{"color": "#f3f4f6", "description": "An AbiA-family abortive-infection locus represented by the DefenseFinder AbiA_large or AbiA_small subrules.", "grounding": null, "id": "abia_locus", "is_orphan": false, "label": "AbiA locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded AbiA abortive-infection phage-defense system.", "grounding": "traitmech:000344", "id": "abia_system_trait", "is_orphan": false, "label": "AbiA system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded abortive-infection phage-defense system.", "grounding": "traitmech:000214", "id": "abortive_infection_system_trait", "is_orphan": false, "label": "abortive infection system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Inhibition of bacteriophage DNA replication in AbiA-containing Lactococcus lactis.", "grounding": null, "id": "phage_dna_replication_inhibition", "is_orphan": false, "label": "phage DNA replication inhibition", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Reduced propagation of lactococcal phages in cells carrying an AbiA-family abortive-infection system.", "grounding": null, "id": "reduced_lactococcal_phage_propagation", "is_orphan": false, "label": "reduced lactococcal phage propagation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "The graph captures AbiA as a named DefenseFinder abortive-infection system with AbiA_large and AbiA_small subrules. It leaves the direct phage trigger, the natural boundaries of the DefenseFinder subrules, the molecular effector activity, the DNA-replication target, and phage escape routes unresolved.", "scope_status": "NONMECHANISTIC", "title": "AbiA activity inhibits lactococcal phage DNA replication"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -912,13 +1000,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-10-17 09:00 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

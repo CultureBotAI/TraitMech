@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/genomics.html">GENOMICS</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/genomics.html">GENOMICS</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>Dpd system</h1>
     <p class="curie"><code>traitmech:000278</code> · CLASS · PROPOSED</p>
 
@@ -115,9 +126,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>Dpd genomic island</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>7-deazaguanine DNA modification</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>The Dpd cluster installs 7-deazaguanine derivatives in DNA.</p>
             <ul>
 
@@ -138,9 +151,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>7-deazaguanine DNA modification</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>restriction-modification behavior</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>Modified Dpd DNA is associated with restriction-modification behavior in Enterobacteriaceae.</p>
             <ul>
 
@@ -155,9 +170,11 @@
 
           <li id="pathograph-1-edge-3">
             <strong>restriction-modification behavior</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>Dpd system</strong>
-            <code>METPO:2007700</code>
+            <code>traitmech:000278</code>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>DefenseFinder models Dpd as a multi-profile defense system rooted in DpdA-K DNA modification.</p>
             <ul>
 
@@ -172,8 +189,10 @@
 
           <li id="pathograph-1-edge-4">
             <strong>Dpd system</strong>
+            <code>traitmech:000278</code>
             <span class="edge-predicate">is a</span>
             <strong>phage defense system</strong>
+            <code>traitmech:000209</code>
             <code>rdfs:subClassOf</code>
             <p>Dpd system possession is a phage-defense-system trait.</p>
             <ul>
@@ -307,11 +326,75 @@
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
 
-      <p class="no-match">No kg-microbe node embedding matched this record
-        in the 2026-04-25 deepwalk.</p>
+      <p class="match-method">Matched <strong>1</strong>
+        kg-microbe node
+        via <em>parent_proxy</em>.</p>
+      <ul class="kgm-nodes">
+
+        <li><code>METPO:1000188</code> <span class="dim-preview">[-0.956, -1.962, -3.148, +1.274, …]</span></li>
+
+      </ul>
+      <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
 
     </div>
 
+
+    <div class="card">
+      <h2>Nearest neighbors in embedding space</h2>
+      <p class="meta">Top-8 cosine-similar METPO traits
+        from the 2026-04-25 deepwalk (512-D).</p>
+      <ul class="nn-list">
+
+        <li>
+          <span class="nn-cat">upper</span>
+          <a href="../../traits/upper/quality.html">quality</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/jukab_system.html">JukAB system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/integrative_conjugative_element.html">integrative conjugative element</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/ig_like_schlafen_system.html">Ig-like Schlafen system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hypnos_system.html">Hypnos system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hna_system.html">Hna system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hma_system.html">Hma system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hesat_system.html">Hesat system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+      </ul>
+    </div>
 
 
 
@@ -417,6 +500,11 @@
     </dl>
   </div>
 
+
+  <div class="card rail-kgm">
+    <h2>kg-microbe</h2>
+    <p class="meta">1 matching node (parent_proxy)</p>
+  </div>
 
 </aside>
 </div>
@@ -750,7 +838,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Conservative system-level sketch linking a Dpd genomic island to 7-deazaguanine DNA modification, a likely restriction-modification output, and the Dpd system trait.", "edges": [{"description": "The Dpd cluster installs 7-deazaguanine derivatives in DNA.", "evidence": [{"notes": "Thiaville et al. name the genes of the 7-deazapurine DNA-modification cluster as dpdA-K.", "reference": "DOI:10.1073/pnas.1518570113", "snippet": "rename the genes of the S. Montevideo cluster as dpdA-K for 7-deazapurine in DNA"}, {"notes": "DefenseFinder includes DpdA in the custom Dpd model profile inventory.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "Dpd__DpdA                                        | Dpd__DpdA                                        | Dpd"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "dpd_genomic_island", "target": "deazaguanine_dna_modification"}, {"description": "Modified Dpd DNA is associated with restriction-modification behavior in Enterobacteriaceae.", "evidence": [{"notes": "Thiaville et al. connect Dpd modification to a likely restriction-modification role without resolving the exact restriction component or substrate.", "reference": "DOI:10.1073/pnas.1518570113", "snippet": "strongly suggests a restriction-modification role for the cluster in Enterobacteriaceae"}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "deazaguanine_dna_modification", "target": "restriction_modification_behavior"}, {"description": "DefenseFinder models Dpd as a multi-profile defense system rooted in DpdA-K DNA modification.", "evidence": [{"notes": "The DefenseFinder rules table supports Dpd as a named defense-system model with DpdA-K profiles.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Dpd\tDpd\t4\t4\tDpd__DpdA, Dpd__DpdB, Dpd__DpdC, Dpd__DpdD, Dpd__DpdE, Dpd__DpdF, Dpd__DpdG, Dpd__DpdH, Dpd__DpdI, Dpd__DpdJ, Dpd__DpdK"}], "id": "edge-3", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "restriction_modification_behavior", "target": "dpd_system_trait"}, {"description": "Dpd system possession is a phage-defense-system trait.", "evidence": [{"notes": "DefenseFinder associates Dpd with the Thiaville et al. DNA-modification paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "Dpd | 10\\.1073/pnas\\.1518570113 | Novel genomic island modifies DNA with 7-deazaguanine derivatives"}], "id": "edge-4", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "dpd_system_trait", "target": "phage_defense_system"}, {"description": "Endonuclease GajA (gajA, UniProtKB:P0DW47) contributes to Dpd system.", "evidence": [{"notes": "Supports the functional association between Endonuclease GajA (UniProtKB:P0DW47 in Bacillus cereus (strain HuB5-5)) and Dpd system.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "CARD_NLR CARD_NLR_GasderMIN 1 3 GasderMIN__bGSDM CARD_NLR__CARD_Protease, CARD_NLR__NLR_new, CARD_NLR__Trypsin CARD_NLR__Endonuclease, CARD_NLR__Endonuclease_new, CARD_NLR__Phospho, CARD_NLR__Phospho_Trypsin, CARD_NLR__Subtilase, CARD_NLR__Subtilase_long_new, CARD_NLR__Subtilase_small_new, CARD_NLR__Trypsin_Phospho, CARD_NLR__Trypsine_Endonuclease_new"}], "id": "edge-5", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "dpd_system_protein_component", "target": "dpd_system_trait"}], "evidence_rows": [{"description": "The Dpd cluster installs 7-deazaguanine derivatives in DNA.", "edge_id": "edge-1", "evidence": [{"notes": "Thiaville et al. name the genes of the 7-deazapurine DNA-modification cluster as dpdA-K.", "reference": "DOI:10.1073/pnas.1518570113", "snippet": "rename the genes of the S. Montevideo cluster as dpdA-K for 7-deazapurine in DNA"}, {"notes": "DefenseFinder includes DpdA in the custom Dpd model profile inventory.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "Dpd__DpdA                                        | Dpd__DpdA                                        | Dpd"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Dpd genomic island", "target": "7-deazaguanine DNA modification"}, {"description": "Modified Dpd DNA is associated with restriction-modification behavior in Enterobacteriaceae.", "edge_id": "edge-2", "evidence": [{"notes": "Thiaville et al. connect Dpd modification to a likely restriction-modification role without resolving the exact restriction component or substrate.", "reference": "DOI:10.1073/pnas.1518570113", "snippet": "strongly suggests a restriction-modification role for the cluster in Enterobacteriaceae"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "7-deazaguanine DNA modification", "target": "restriction-modification behavior"}, {"description": "DefenseFinder models Dpd as a multi-profile defense system rooted in DpdA-K DNA modification.", "edge_id": "edge-3", "evidence": [{"notes": "The DefenseFinder rules table supports Dpd as a named defense-system model with DpdA-K profiles.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Dpd\tDpd\t4\t4\tDpd__DpdA, Dpd__DpdB, Dpd__DpdC, Dpd__DpdD, Dpd__DpdE, Dpd__DpdF, Dpd__DpdG, Dpd__DpdH, Dpd__DpdI, Dpd__DpdJ, Dpd__DpdK"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "restriction-modification behavior", "target": "Dpd system"}, {"description": "Dpd system possession is a phage-defense-system trait.", "edge_id": "edge-4", "evidence": [{"notes": "DefenseFinder associates Dpd with the Thiaville et al. DNA-modification paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "Dpd | 10\\.1073/pnas\\.1518570113 | Novel genomic island modifies DNA with 7-deazaguanine derivatives"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "Dpd system", "target": "phage defense system"}, {"description": "Endonuclease GajA (gajA, UniProtKB:P0DW47) contributes to Dpd system.", "edge_id": "edge-5", "evidence": [{"notes": "Supports the functional association between Endonuclease GajA (UniProtKB:P0DW47 in Bacillus cereus (strain HuB5-5)) and Dpd system.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "CARD_NLR CARD_NLR_GasderMIN 1 3 GasderMIN__bGSDM CARD_NLR__CARD_Protease, CARD_NLR__NLR_new, CARD_NLR__Trypsin CARD_NLR__Endonuclease, CARD_NLR__Endonuclease_new, CARD_NLR__Phospho, CARD_NLR__Phospho_Trypsin, CARD_NLR__Subtilase, CARD_NLR__Subtilase_long_new, CARD_NLR__Subtilase_small_new, CARD_NLR__Trypsin_Phospho, CARD_NLR__Trypsine_Endonuclease_new"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Endonuclease GajA", "target": "Dpd system"}], "graph_id": "dpd_dna_modification_defense", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Installation of 7-deazaguanine-derived deoxynucleosides in bacterial DNA.", "grounding": null, "id": "deazaguanine_dna_modification", "is_orphan": false, "label": "7-deazaguanine DNA modification", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "A dpdA-K 7-deazapurine DNA-modification locus represented by a multi-profile DefenseFinder Dpd model.", "grounding": null, "id": "dpd_genomic_island", "is_orphan": false, "label": "Dpd genomic island", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Protein component (Endonuclease GajA) associated with Dpd system.", "grounding": null, "id": "dpd_system_protein_component", "is_orphan": false, "label": "Endonuclease GajA", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 12, "evidence": [{"notes": "Supports Endonuclease GajA in Dpd system; UniProtKB:P0DW47 (gajA, Endonuclease GajA) in Bacillus cereus (strain HuB5-5) provides a verified protein exemplar.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "CARD_NLR CARD_NLR_GasderMIN 1 3 GasderMIN__bGSDM CARD_NLR__CARD_Protease, CARD_NLR__NLR_new, CARD_NLR__Trypsin CARD_NLR__Endonuclease, CARD_NLR__Endonuclease_new, CARD_NLR__Phospho, CARD_NLR__Phospho_Trypsin, CARD_NLR__Subtilase, CARD_NLR__Subtilase_long_new, CARD_NLR__Subtilase_small_new, CARD_NLR__Trypsin_Phospho, CARD_NLR__Trypsine_Endonuclease_new"}], "gene_symbol": "gajA", "protein_label": "Endonuclease GajA", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (gajA, Endonuclease GajA) associated with Dpd system in Bacillus cereus (strain HuB5-5).", "sequence_version": 1, "taxon_id": "NCBITaxon:1053212", "taxon_label": "Bacillus cereus (strain HuB5-5)", "uniprot_id": "UniProtKB:P0DW47"}], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded Dpd 7-deazaguanine DNA-modification defense system.", "grounding": "traitmech:000278", "id": "dpd_system_trait", "is_orphan": false, "label": "Dpd system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of one or more genome-encoded immune systems that inhibit bacteriophage infection.", "grounding": "traitmech:000209", "id": "phage_defense_system", "is_orphan": false, "label": "phage defense system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Self/non-self discrimination associated with a bacterial DNA-modification island.", "grounding": null, "id": "restriction_modification_behavior", "is_orphan": false, "label": "restriction-modification behavior", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 12, "evidence": [{"notes": "Supports Endonuclease GajA in Dpd system; UniProtKB:P0DW47 (gajA, Endonuclease GajA) in Bacillus cereus (strain HuB5-5) provides a verified protein exemplar.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "CARD_NLR CARD_NLR_GasderMIN 1 3 GasderMIN__bGSDM CARD_NLR__CARD_Protease, CARD_NLR__NLR_new, CARD_NLR__Trypsin CARD_NLR__Endonuclease, CARD_NLR__Endonuclease_new, CARD_NLR__Phospho, CARD_NLR__Phospho_Trypsin, CARD_NLR__Subtilase, CARD_NLR__Subtilase_long_new, CARD_NLR__Subtilase_small_new, CARD_NLR__Trypsin_Phospho, CARD_NLR__Trypsine_Endonuclease_new"}], "gene_symbol": "gajA", "node_id": "dpd_system_protein_component", "node_label": "Endonuclease GajA", "protein_label": "Endonuclease GajA", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (gajA, Endonuclease GajA) associated with Dpd system in Bacillus cereus (strain HuB5-5).", "sequence_version": 1, "taxon_id": "NCBITaxon:1053212", "taxon_label": "Bacillus cereus (strain HuB5-5)", "uniprot_id": "UniProtKB:P0DW47"}], "scope_notes": "The graph captures Dpd as a DNA-modification system with a DefenseFinder model while leaving its exact restriction target, modified motif, phage substrate range, DpdA-K component functions, and optional FolE/QueC/QueD/QueE profile requirements unresolved.", "scope_status": "NONMECHANISTIC", "title": "Dpd islands install 7-deazaguanine DNA modifications"}];
+  var graphs = [{"description": "Conservative system-level sketch linking a Dpd genomic island to 7-deazaguanine DNA modification, a likely restriction-modification output, and the Dpd system trait.", "edges": [{"description": "The Dpd cluster installs 7-deazaguanine derivatives in DNA.", "evidence": [{"notes": "Thiaville et al. name the genes of the 7-deazapurine DNA-modification cluster as dpdA-K.", "reference": "DOI:10.1073/pnas.1518570113", "snippet": "rename the genes of the S. Montevideo cluster as dpdA-K for 7-deazapurine in DNA"}, {"notes": "DefenseFinder includes DpdA in the custom Dpd model profile inventory.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "Dpd__DpdA                                        | Dpd__DpdA                                        | Dpd"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "dpd_genomic_island", "target": "deazaguanine_dna_modification"}, {"description": "Modified Dpd DNA is associated with restriction-modification behavior in Enterobacteriaceae.", "evidence": [{"notes": "Thiaville et al. connect Dpd modification to a likely restriction-modification role without resolving the exact restriction component or substrate.", "reference": "DOI:10.1073/pnas.1518570113", "snippet": "strongly suggests a restriction-modification role for the cluster in Enterobacteriaceae"}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "deazaguanine_dna_modification", "target": "restriction_modification_behavior"}, {"description": "DefenseFinder models Dpd as a multi-profile defense system rooted in DpdA-K DNA modification.", "evidence": [{"notes": "The DefenseFinder rules table supports Dpd as a named defense-system model with DpdA-K profiles.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Dpd\tDpd\t4\t4\tDpd__DpdA, Dpd__DpdB, Dpd__DpdC, Dpd__DpdD, Dpd__DpdE, Dpd__DpdF, Dpd__DpdG, Dpd__DpdH, Dpd__DpdI, Dpd__DpdJ, Dpd__DpdK"}], "id": "edge-3", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "restriction_modification_behavior", "target": "dpd_system_trait"}, {"description": "Dpd system possession is a phage-defense-system trait.", "evidence": [{"notes": "DefenseFinder associates Dpd with the Thiaville et al. DNA-modification paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "Dpd | 10\\.1073/pnas\\.1518570113 | Novel genomic island modifies DNA with 7-deazaguanine derivatives"}], "id": "edge-4", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "dpd_system_trait", "target": "phage_defense_system"}], "evidence_rows": [{"description": "The Dpd cluster installs 7-deazaguanine derivatives in DNA.", "edge_id": "edge-1", "evidence": [{"notes": "Thiaville et al. name the genes of the 7-deazapurine DNA-modification cluster as dpdA-K.", "reference": "DOI:10.1073/pnas.1518570113", "snippet": "rename the genes of the S. Montevideo cluster as dpdA-K for 7-deazapurine in DNA"}, {"notes": "DefenseFinder includes DpdA in the custom Dpd model profile inventory.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "Dpd__DpdA                                        | Dpd__DpdA                                        | Dpd"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Dpd genomic island", "source_grounding": null, "target": "7-deazaguanine DNA modification", "target_grounding": null}, {"description": "Modified Dpd DNA is associated with restriction-modification behavior in Enterobacteriaceae.", "edge_id": "edge-2", "evidence": [{"notes": "Thiaville et al. connect Dpd modification to a likely restriction-modification role without resolving the exact restriction component or substrate.", "reference": "DOI:10.1073/pnas.1518570113", "snippet": "strongly suggests a restriction-modification role for the cluster in Enterobacteriaceae"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "7-deazaguanine DNA modification", "source_grounding": null, "target": "restriction-modification behavior", "target_grounding": null}, {"description": "DefenseFinder models Dpd as a multi-profile defense system rooted in DpdA-K DNA modification.", "edge_id": "edge-3", "evidence": [{"notes": "The DefenseFinder rules table supports Dpd as a named defense-system model with DpdA-K profiles.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Dpd\tDpd\t4\t4\tDpd__DpdA, Dpd__DpdB, Dpd__DpdC, Dpd__DpdD, Dpd__DpdE, Dpd__DpdF, Dpd__DpdG, Dpd__DpdH, Dpd__DpdI, Dpd__DpdJ, Dpd__DpdK"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "restriction-modification behavior", "source_grounding": null, "target": "Dpd system", "target_grounding": "traitmech:000278"}, {"description": "Dpd system possession is a phage-defense-system trait.", "edge_id": "edge-4", "evidence": [{"notes": "DefenseFinder associates Dpd with the Thiaville et al. DNA-modification paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "Dpd | 10\\.1073/pnas\\.1518570113 | Novel genomic island modifies DNA with 7-deazaguanine derivatives"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "Dpd system", "source_grounding": "traitmech:000278", "target": "phage defense system", "target_grounding": "traitmech:000209"}], "graph_id": "dpd_dna_modification_defense", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Installation of 7-deazaguanine-derived deoxynucleosides in bacterial DNA.", "grounding": null, "id": "deazaguanine_dna_modification", "is_orphan": false, "label": "7-deazaguanine DNA modification", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "A dpdA-K 7-deazapurine DNA-modification locus represented by a multi-profile DefenseFinder Dpd model.", "grounding": null, "id": "dpd_genomic_island", "is_orphan": false, "label": "Dpd genomic island", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded Dpd 7-deazaguanine DNA-modification defense system.", "grounding": "traitmech:000278", "id": "dpd_system_trait", "is_orphan": false, "label": "Dpd system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of one or more genome-encoded immune systems that inhibit bacteriophage infection.", "grounding": "traitmech:000209", "id": "phage_defense_system", "is_orphan": false, "label": "phage defense system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Self/non-self discrimination associated with a bacterial DNA-modification island.", "grounding": null, "id": "restriction_modification_behavior", "is_orphan": false, "label": "restriction-modification behavior", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "The graph captures Dpd as a DNA-modification system with a DefenseFinder model while leaving its exact restriction target, modified motif, phage substrate range, DpdA-K component functions, and optional FolE/QueC/QueD/QueE profile requirements unresolved.", "scope_status": "NONMECHANISTIC", "title": "Dpd islands install 7-deazaguanine DNA modifications"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -770,13 +858,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-10-17 09:00 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/genomics.html">GENOMICS</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/genomics.html">GENOMICS</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>AbiE system</h1>
     <p class="curie"><code>traitmech:000227</code> · CLASS · PROPOSED</p>
 
@@ -109,9 +120,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>abiE locus</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>AbiE type IV toxin-antitoxin activity</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>The abiE locus encodes the defining type IV toxin-antitoxin module.</p>
             <ul>
 
@@ -126,9 +139,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>AbiE type IV toxin-antitoxin activity</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>AbiEii GTP-binding nucleotidyltransferase toxicity</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>The AbiE type IV module couples AbiEii GTP-dependent nucleotidyltransferase toxicity to AbiEi antitoxicity.</p>
             <ul>
 
@@ -143,9 +158,11 @@
 
           <li id="pathograph-1-edge-3">
             <strong>abiE locus</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>restricted phage propagation</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>The AbiE determinant contributes to abortive phage-resistance phenotypes.</p>
             <ul>
 
@@ -160,9 +177,11 @@
 
           <li id="pathograph-1-edge-4">
             <strong>restricted phage propagation</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>AbiE system</strong>
-            <code>METPO:2007700</code>
+            <code>traitmech:000227</code>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>Restriction of phage propagation realizes the AbiE abortive-infection defense trait.</p>
             <ul>
 
@@ -177,8 +196,10 @@
 
           <li id="pathograph-1-edge-5">
             <strong>AbiE system</strong>
+            <code>traitmech:000227</code>
             <span class="edge-predicate">is a</span>
             <strong>abortive infection system</strong>
+            <code>traitmech:000214</code>
             <code>rdfs:subClassOf</code>
             <p>AbiE system possession is an abortive-infection-system trait.</p>
             <ul>
@@ -301,11 +322,75 @@
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
 
-      <p class="no-match">No kg-microbe node embedding matched this record
-        in the 2026-04-25 deepwalk.</p>
+      <p class="match-method">Matched <strong>1</strong>
+        kg-microbe node
+        via <em>parent_proxy</em>.</p>
+      <ul class="kgm-nodes">
+
+        <li><code>METPO:1000188</code> <span class="dim-preview">[-0.956, -1.962, -3.148, +1.274, …]</span></li>
+
+      </ul>
+      <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
 
     </div>
 
+
+    <div class="card">
+      <h2>Nearest neighbors in embedding space</h2>
+      <p class="meta">Top-8 cosine-similar METPO traits
+        from the 2026-04-25 deepwalk (512-D).</p>
+      <ul class="nn-list">
+
+        <li>
+          <span class="nn-cat">upper</span>
+          <a href="../../traits/upper/quality.html">quality</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/jukab_system.html">JukAB system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/integrative_conjugative_element.html">integrative conjugative element</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/ig_like_schlafen_system.html">Ig-like Schlafen system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hypnos_system.html">Hypnos system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hna_system.html">Hna system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hma_system.html">Hma system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hesat_system.html">Hesat system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+      </ul>
+    </div>
 
 
 
@@ -399,6 +484,11 @@
     </dl>
   </div>
 
+
+  <div class="card rail-kgm">
+    <h2>kg-microbe</h2>
+    <p class="meta">1 matching node (parent_proxy)</p>
+  </div>
 
 </aside>
 </div>
@@ -732,7 +822,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed process sketch linking an abiE locus to type IV toxin-antitoxin activity, AbiEii GTP-dependent toxicity, restricted phage propagation, and abortive-infection system possession.", "edges": [{"description": "The abiE locus encodes the defining type IV toxin-antitoxin module.", "evidence": [{"notes": "Dy et al. show that AbiE is a bicistronic type IV toxin-antitoxin system.", "reference": "DOI:10.1093/nar/gkt1419", "snippet": "AbiE systems are encoded by bicistronic operons and function via a non-interacting (Type IV) bacteriostatic TA mechanism"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "abie_locus", "target": "abie_type_iv_toxin_antitoxin_activity"}, {"description": "The AbiE type IV module couples AbiEii GTP-dependent nucleotidyltransferase toxicity to AbiEi antitoxicity.", "evidence": [{"notes": "Dy et al. identify AbiEii as the toxin and AbiEi as its cognate antitoxin.", "reference": "DOI:10.1093/nar/gkt1419", "snippet": "AbiEii was toxic by acting as a GTP-binding NTase and was neutralized by expression of AbiEi"}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "abie_type_iv_toxin_antitoxin_activity", "target": "abieii_ntase_toxicity"}, {"description": "The AbiE determinant contributes to abortive phage-resistance phenotypes.", "evidence": [{"notes": "Garvey et al. show that the pPG01 AbiE determinant produces an abortive-infection phage-insensitivity mechanism.", "reference": "DOI:10.1128/AEM.61.12.4321-4328.1995", "snippet": "The mechanisms encoded by pPG01 and pCG1 in L. lactis subsp. lactis MG1614 conformed to the criteria defining abortive infection and were designated AbiE and AbiF, respectively"}], "id": "edge-3", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "abie_locus", "target": "restricted_phage_propagation"}, {"description": "Restriction of phage propagation realizes the AbiE abortive-infection defense trait.", "evidence": [{"notes": "Dy et al. describe AbiE systems as type IV toxin-antitoxin phage-resistance systems.", "reference": "DOI:10.1093/nar/gkt1419", "snippet": "We demonstrate that the AbiE phage resistance systems function as novel Type IV TAs and are widespread in bacteria and archaea"}], "id": "edge-4", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "restricted_phage_propagation", "target": "abie_system_trait"}, {"description": "AbiE system possession is an abortive-infection-system trait.", "evidence": [{"notes": "Garvey et al. place AbiE in the abortive infection class of phage defense.", "reference": "DOI:10.1128/AEM.61.12.4321-4328.1995", "snippet": "The mechanisms encoded by pPG01 and pCG1 in L. lactis subsp. lactis MG1614 conformed to the criteria defining abortive infection and were designated AbiE and AbiF, respectively"}], "id": "edge-5", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "abie_system_trait", "target": "abortive_infection_system_trait"}, {"description": "Abortive phage resistance protein AbiC (abiC, UniProtKB:Q01457) contributes to AbiE system.", "evidence": [{"notes": "Supports the functional association between Abortive phage resistance protein AbiC (UniProtKB:Q01457 in Lactococcus lactis subsp. lactis (Streptococcus lactis)) and AbiE system.", "reference": "DOI:10.1093/nar/gkt1419", "snippet": "Bacterial abortive infection (Abi) systems are \u2018altruistic\u2019 cell death systems that are activated by phage infection and limit viral replication, thereby providing protection to the bacterial population"}], "id": "edge-6", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "abie_system_protein_component", "target": "abie_system_trait"}], "evidence_rows": [{"description": "The abiE locus encodes the defining type IV toxin-antitoxin module.", "edge_id": "edge-1", "evidence": [{"notes": "Dy et al. show that AbiE is a bicistronic type IV toxin-antitoxin system.", "reference": "DOI:10.1093/nar/gkt1419", "snippet": "AbiE systems are encoded by bicistronic operons and function via a non-interacting (Type IV) bacteriostatic TA mechanism"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "abiE locus", "target": "AbiE type IV toxin-antitoxin activity"}, {"description": "The AbiE type IV module couples AbiEii GTP-dependent nucleotidyltransferase toxicity to AbiEi antitoxicity.", "edge_id": "edge-2", "evidence": [{"notes": "Dy et al. identify AbiEii as the toxin and AbiEi as its cognate antitoxin.", "reference": "DOI:10.1093/nar/gkt1419", "snippet": "AbiEii was toxic by acting as a GTP-binding NTase and was neutralized by expression of AbiEi"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "AbiE type IV toxin-antitoxin activity", "target": "AbiEii GTP-binding nucleotidyltransferase toxicity"}, {"description": "The AbiE determinant contributes to abortive phage-resistance phenotypes.", "edge_id": "edge-3", "evidence": [{"notes": "Garvey et al. show that the pPG01 AbiE determinant produces an abortive-infection phage-insensitivity mechanism.", "reference": "DOI:10.1128/AEM.61.12.4321-4328.1995", "snippet": "The mechanisms encoded by pPG01 and pCG1 in L. lactis subsp. lactis MG1614 conformed to the criteria defining abortive infection and were designated AbiE and AbiF, respectively"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "abiE locus", "target": "restricted phage propagation"}, {"description": "Restriction of phage propagation realizes the AbiE abortive-infection defense trait.", "edge_id": "edge-4", "evidence": [{"notes": "Dy et al. describe AbiE systems as type IV toxin-antitoxin phage-resistance systems.", "reference": "DOI:10.1093/nar/gkt1419", "snippet": "We demonstrate that the AbiE phage resistance systems function as novel Type IV TAs and are widespread in bacteria and archaea"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "restricted phage propagation", "target": "AbiE system"}, {"description": "AbiE system possession is an abortive-infection-system trait.", "edge_id": "edge-5", "evidence": [{"notes": "Garvey et al. place AbiE in the abortive infection class of phage defense.", "reference": "DOI:10.1128/AEM.61.12.4321-4328.1995", "snippet": "The mechanisms encoded by pPG01 and pCG1 in L. lactis subsp. lactis MG1614 conformed to the criteria defining abortive infection and were designated AbiE and AbiF, respectively"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "AbiE system", "target": "abortive infection system"}, {"description": "Abortive phage resistance protein AbiC (abiC, UniProtKB:Q01457) contributes to AbiE system.", "edge_id": "edge-6", "evidence": [{"notes": "Supports the functional association between Abortive phage resistance protein AbiC (UniProtKB:Q01457 in Lactococcus lactis subsp. lactis (Streptococcus lactis)) and AbiE system.", "reference": "DOI:10.1093/nar/gkt1419", "snippet": "Bacterial abortive infection (Abi) systems are \u2018altruistic\u2019 cell death systems that are activated by phage infection and limit viral replication, thereby providing protection to the bacterial population"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Abortive phage resistance protein AbiC", "target": "AbiE system"}], "graph_id": "abie_type_iv_ta_antiphage_activity", "issues": [], "nodes": [{"color": "#f3f4f6", "description": "A bicistronic type IV toxin-antitoxin abortive-infection locus encoding AbiEi and AbiEii.", "grounding": null, "id": "abie_locus", "is_orphan": false, "label": "abiE locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Protein component (Abortive phage resistance protein AbiC) associated with AbiE system.", "grounding": "InterPro:IPR031709", "id": "abie_system_protein_component", "is_orphan": false, "label": "Abortive phage resistance protein AbiC", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 35, "evidence": [{"notes": "Supports Abortive phage resistance protein AbiC in AbiE system; UniProtKB:Q01457 (abiC, Abortive phage resistance protein AbiC) in Lactococcus lactis subsp. lactis (Streptococcus lactis) provides a verified protein exemplar.", "reference": "DOI:10.1093/nar/gkt1419", "snippet": "We demonstrate that the AbiE phage resistance systems function as novel Type IV TAs and are widespread in bacteria and archaea"}], "gene_symbol": "abiC", "protein_label": "Abortive phage resistance protein AbiC", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (abiC, Abortive phage resistance protein AbiC) associated with AbiE system in Lactococcus lactis subsp. lactis (Streptococcus lactis).", "sequence_version": 1, "taxon_id": "NCBITaxon:1360", "taxon_label": "Lactococcus lactis subsp. lactis (Streptococcus lactis)", "uniprot_id": "UniProtKB:Q01457"}], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded abiE type IV toxin-antitoxin abortive-infection system.", "grounding": "traitmech:000227", "id": "abie_system_trait", "is_orphan": false, "label": "AbiE system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Non-interacting type IV toxin-antitoxin activity mediated by the AbiEi antitoxin and AbiEii toxin.", "grounding": null, "id": "abie_type_iv_toxin_antitoxin_activity", "is_orphan": false, "label": "AbiE type IV toxin-antitoxin activity", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Growth-inhibitory toxicity that depends on conserved AbiEii nucleotidyltransferase motifs and GTP binding.", "grounding": null, "id": "abieii_ntase_toxicity", "is_orphan": false, "label": "AbiEii GTP-binding nucleotidyltransferase toxicity", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded abortive-infection phage defense system.", "grounding": "traitmech:000214", "id": "abortive_infection_system_trait", "is_orphan": false, "label": "abortive infection system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Reduced completion of phage propagation in an AbiE-containing infected host cell.", "grounding": null, "id": "restricted_phage_propagation", "is_orphan": false, "label": "restricted phage propagation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 35, "evidence": [{"notes": "Supports Abortive phage resistance protein AbiC in AbiE system; UniProtKB:Q01457 (abiC, Abortive phage resistance protein AbiC) in Lactococcus lactis subsp. lactis (Streptococcus lactis) provides a verified protein exemplar.", "reference": "DOI:10.1093/nar/gkt1419", "snippet": "We demonstrate that the AbiE phage resistance systems function as novel Type IV TAs and are widespread in bacteria and archaea"}], "gene_symbol": "abiC", "node_id": "abie_system_protein_component", "node_label": "Abortive phage resistance protein AbiC", "protein_label": "Abortive phage resistance protein AbiC", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (abiC, Abortive phage resistance protein AbiC) associated with AbiE system in Lactococcus lactis subsp. lactis (Streptococcus lactis).", "sequence_version": 1, "taxon_id": "NCBITaxon:1360", "taxon_label": "Lactococcus lactis subsp. lactis (Streptococcus lactis)", "uniprot_id": "UniProtKB:Q01457"}], "scope_notes": "The graph captures AbiE at the system level without asserting a universal phage activator, the exact cellular target of AbiEii, or that every COG5340-DUF1814 pair functions in abortive infection.", "scope_status": "NONMECHANISTIC", "title": "AbiE type IV toxin-antitoxin activity supports phage resistance"}];
+  var graphs = [{"description": "Evidence-backed process sketch linking an abiE locus to type IV toxin-antitoxin activity, AbiEii GTP-dependent toxicity, restricted phage propagation, and abortive-infection system possession.", "edges": [{"description": "The abiE locus encodes the defining type IV toxin-antitoxin module.", "evidence": [{"notes": "Dy et al. show that AbiE is a bicistronic type IV toxin-antitoxin system.", "reference": "DOI:10.1093/nar/gkt1419", "snippet": "AbiE systems are encoded by bicistronic operons and function via a non-interacting (Type IV) bacteriostatic TA mechanism"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "abie_locus", "target": "abie_type_iv_toxin_antitoxin_activity"}, {"description": "The AbiE type IV module couples AbiEii GTP-dependent nucleotidyltransferase toxicity to AbiEi antitoxicity.", "evidence": [{"notes": "Dy et al. identify AbiEii as the toxin and AbiEi as its cognate antitoxin.", "reference": "DOI:10.1093/nar/gkt1419", "snippet": "AbiEii was toxic by acting as a GTP-binding NTase and was neutralized by expression of AbiEi"}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "abie_type_iv_toxin_antitoxin_activity", "target": "abieii_ntase_toxicity"}, {"description": "The AbiE determinant contributes to abortive phage-resistance phenotypes.", "evidence": [{"notes": "Garvey et al. show that the pPG01 AbiE determinant produces an abortive-infection phage-insensitivity mechanism.", "reference": "DOI:10.1128/AEM.61.12.4321-4328.1995", "snippet": "The mechanisms encoded by pPG01 and pCG1 in L. lactis subsp. lactis MG1614 conformed to the criteria defining abortive infection and were designated AbiE and AbiF, respectively"}], "id": "edge-3", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "abie_locus", "target": "restricted_phage_propagation"}, {"description": "Restriction of phage propagation realizes the AbiE abortive-infection defense trait.", "evidence": [{"notes": "Dy et al. describe AbiE systems as type IV toxin-antitoxin phage-resistance systems.", "reference": "DOI:10.1093/nar/gkt1419", "snippet": "We demonstrate that the AbiE phage resistance systems function as novel Type IV TAs and are widespread in bacteria and archaea"}], "id": "edge-4", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "restricted_phage_propagation", "target": "abie_system_trait"}, {"description": "AbiE system possession is an abortive-infection-system trait.", "evidence": [{"notes": "Garvey et al. place AbiE in the abortive infection class of phage defense.", "reference": "DOI:10.1128/AEM.61.12.4321-4328.1995", "snippet": "The mechanisms encoded by pPG01 and pCG1 in L. lactis subsp. lactis MG1614 conformed to the criteria defining abortive infection and were designated AbiE and AbiF, respectively"}], "id": "edge-5", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "abie_system_trait", "target": "abortive_infection_system_trait"}], "evidence_rows": [{"description": "The abiE locus encodes the defining type IV toxin-antitoxin module.", "edge_id": "edge-1", "evidence": [{"notes": "Dy et al. show that AbiE is a bicistronic type IV toxin-antitoxin system.", "reference": "DOI:10.1093/nar/gkt1419", "snippet": "AbiE systems are encoded by bicistronic operons and function via a non-interacting (Type IV) bacteriostatic TA mechanism"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "abiE locus", "source_grounding": null, "target": "AbiE type IV toxin-antitoxin activity", "target_grounding": null}, {"description": "The AbiE type IV module couples AbiEii GTP-dependent nucleotidyltransferase toxicity to AbiEi antitoxicity.", "edge_id": "edge-2", "evidence": [{"notes": "Dy et al. identify AbiEii as the toxin and AbiEi as its cognate antitoxin.", "reference": "DOI:10.1093/nar/gkt1419", "snippet": "AbiEii was toxic by acting as a GTP-binding NTase and was neutralized by expression of AbiEi"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "AbiE type IV toxin-antitoxin activity", "source_grounding": null, "target": "AbiEii GTP-binding nucleotidyltransferase toxicity", "target_grounding": null}, {"description": "The AbiE determinant contributes to abortive phage-resistance phenotypes.", "edge_id": "edge-3", "evidence": [{"notes": "Garvey et al. show that the pPG01 AbiE determinant produces an abortive-infection phage-insensitivity mechanism.", "reference": "DOI:10.1128/AEM.61.12.4321-4328.1995", "snippet": "The mechanisms encoded by pPG01 and pCG1 in L. lactis subsp. lactis MG1614 conformed to the criteria defining abortive infection and were designated AbiE and AbiF, respectively"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "abiE locus", "source_grounding": null, "target": "restricted phage propagation", "target_grounding": null}, {"description": "Restriction of phage propagation realizes the AbiE abortive-infection defense trait.", "edge_id": "edge-4", "evidence": [{"notes": "Dy et al. describe AbiE systems as type IV toxin-antitoxin phage-resistance systems.", "reference": "DOI:10.1093/nar/gkt1419", "snippet": "We demonstrate that the AbiE phage resistance systems function as novel Type IV TAs and are widespread in bacteria and archaea"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "restricted phage propagation", "source_grounding": null, "target": "AbiE system", "target_grounding": "traitmech:000227"}, {"description": "AbiE system possession is an abortive-infection-system trait.", "edge_id": "edge-5", "evidence": [{"notes": "Garvey et al. place AbiE in the abortive infection class of phage defense.", "reference": "DOI:10.1128/AEM.61.12.4321-4328.1995", "snippet": "The mechanisms encoded by pPG01 and pCG1 in L. lactis subsp. lactis MG1614 conformed to the criteria defining abortive infection and were designated AbiE and AbiF, respectively"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "AbiE system", "source_grounding": "traitmech:000227", "target": "abortive infection system", "target_grounding": "traitmech:000214"}], "graph_id": "abie_type_iv_ta_antiphage_activity", "issues": [], "nodes": [{"color": "#f3f4f6", "description": "A bicistronic type IV toxin-antitoxin abortive-infection locus encoding AbiEi and AbiEii.", "grounding": null, "id": "abie_locus", "is_orphan": false, "label": "abiE locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded abiE type IV toxin-antitoxin abortive-infection system.", "grounding": "traitmech:000227", "id": "abie_system_trait", "is_orphan": false, "label": "AbiE system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Non-interacting type IV toxin-antitoxin activity mediated by the AbiEi antitoxin and AbiEii toxin.", "grounding": null, "id": "abie_type_iv_toxin_antitoxin_activity", "is_orphan": false, "label": "AbiE type IV toxin-antitoxin activity", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Growth-inhibitory toxicity that depends on conserved AbiEii nucleotidyltransferase motifs and GTP binding.", "grounding": null, "id": "abieii_ntase_toxicity", "is_orphan": false, "label": "AbiEii GTP-binding nucleotidyltransferase toxicity", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded abortive-infection phage defense system.", "grounding": "traitmech:000214", "id": "abortive_infection_system_trait", "is_orphan": false, "label": "abortive infection system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Reduced completion of phage propagation in an AbiE-containing infected host cell.", "grounding": null, "id": "restricted_phage_propagation", "is_orphan": false, "label": "restricted phage propagation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "The graph captures AbiE at the system level without asserting a universal phage activator, the exact cellular target of AbiEii, or that every COG5340-DUF1814 pair functions in abortive infection.", "scope_status": "NONMECHANISTIC", "title": "AbiE type IV toxin-antitoxin activity supports phage resistance"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -752,13 +842,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-10-17 09:00 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

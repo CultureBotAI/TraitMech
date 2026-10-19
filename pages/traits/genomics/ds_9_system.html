@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/genomics.html">GENOMICS</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/genomics.html">GENOMICS</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>DS-9 system</h1>
     <p class="curie"><code>traitmech:000433</code> · CLASS · PROPOSED</p>
 
@@ -157,9 +168,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>DS-9 locus</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>reduced bacteriophage plaquing</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>The DS-9/MHAD locus contributes to reduced bacteriophage plaquing when plasmid expressed.</p>
             <ul>
 
@@ -180,9 +193,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>reduced bacteriophage plaquing</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>DS-9 system</strong>
-            <code>METPO:2007700</code>
+            <code>traitmech:000433</code>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>DS-9-mediated phage plaquing reduction realizes the DS-9 system trait.</p>
             <ul>
 
@@ -209,8 +224,10 @@
 
           <li id="pathograph-1-edge-3">
             <strong>DS-9 system</strong>
+            <code>traitmech:000433</code>
             <span class="edge-predicate">is a</span>
             <strong>phage defense system</strong>
+            <code>traitmech:000209</code>
             <code>rdfs:subClassOf</code>
             <p>DS-9 system possession is a phage-defense-system trait.</p>
             <ul>
@@ -354,11 +371,75 @@
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
 
-      <p class="no-match">No kg-microbe node embedding matched this record
-        in the 2026-04-25 deepwalk.</p>
+      <p class="match-method">Matched <strong>1</strong>
+        kg-microbe node
+        via <em>parent_proxy</em>.</p>
+      <ul class="kgm-nodes">
+
+        <li><code>METPO:1000188</code> <span class="dim-preview">[-0.956, -1.962, -3.148, +1.274, …]</span></li>
+
+      </ul>
+      <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
 
     </div>
 
+
+    <div class="card">
+      <h2>Nearest neighbors in embedding space</h2>
+      <p class="meta">Top-8 cosine-similar METPO traits
+        from the 2026-04-25 deepwalk (512-D).</p>
+      <ul class="nn-list">
+
+        <li>
+          <span class="nn-cat">upper</span>
+          <a href="../../traits/upper/quality.html">quality</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/lamassu_cap4_nuclease_system.html">Lamassu-Cap4 nuclease system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/lamassu_amidase_system.html">Lamassu-Amidase system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/kongming_system.html">Kongming system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/kiwa_system.html">Kiwa system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/kamadhenu_system.html">Kamadhenu system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/jukab_system.html">JukAB system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/integrative_conjugative_element.html">integrative conjugative element</a>
+          <span class="sim">1.000</span>
+        </li>
+
+      </ul>
+    </div>
 
 
 
@@ -580,6 +661,11 @@
     </dl>
   </div>
 
+
+  <div class="card rail-kgm">
+    <h2>kg-microbe</h2>
+    <p class="meta">1 matching node (parent_proxy)</p>
+  </div>
 
 </aside>
 </div>
@@ -913,7 +999,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Conservative system-level sketch linking the two-gene DS-9 locus to reduced bacteriophage plaquing without resolving DS-9 component functions or effector activity.", "edges": [{"description": "The DS-9/MHAD locus contributes to reduced bacteriophage plaquing when plasmid expressed.", "evidence": [{"notes": "The final Science supplementary Table S6 maps working_id MHAD to DS_name DS-9, marks the cloned transcriptional unit as defensive, and records NZ_QOWZ01000056.1 positions 6224-8706 with product accessions WP_000770925.1 and WP_000665639.1.", "reference": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S6.xlsx", "snippet": "MHAD\tNZ_QOWZ01000056.1\tGCF_003334705.1\t-\tTrue\tFalse\tFalse\tTrue\tDefensePredictor hits\t6224\t8706\tHAD-IA family hydrolase, metallophosphoesterase\tWP_000770925.1, WP_000665639.1\t4.506698206217075\t6.906754778648663\tTrue\tTrue\tPredicted novel defense gene\tDS-9"}, {"notes": "The final Science supplementary Table S7 reports an MHAD assay row with a Bas1 phage readout and a -log(EOP) value of 4.125.", "reference": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S7.xlsx", "snippet": "Bas1\t1.2\tpLAND\t24-03-08_EV_HHHD_PIN2_CRDO.png\t40000000\tMHAD\t24-03-08\t24-03-08_NYND_GHOS_MHAD_UDNG.png\t3\t3\t\t3000\t4.1249387366083\tTrue\t\t\tLB\t37"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "ds_9_locus", "target": "reduced_phage_plaquing"}, {"description": "DS-9-mediated phage plaquing reduction realizes the DS-9 system trait.", "evidence": [{"notes": "DeWeirdt et al. identify DS-9 as a two-gene metallophosphatase/HAD-phosphatase system.", "reference": "DOI:10.1126/science.adv7924", "snippet": "The system DS-9 has two genes, the first harboring a metallophosphatase domain homologous to that of DS-8, and the second a predicted haloacid dehalogenase-like (HAD) phosphatase"}, {"notes": "The final Science supplementary Table S6 maps working_id MHAD to DS_name DS-9, marks the cloned transcriptional unit as defensive, and records NZ_QOWZ01000056.1 positions 6224-8706 with product accessions WP_000770925.1 and WP_000665639.1.", "reference": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S6.xlsx", "snippet": "MHAD\tNZ_QOWZ01000056.1\tGCF_003334705.1\t-\tTrue\tFalse\tFalse\tTrue\tDefensePredictor hits\t6224\t8706\tHAD-IA family hydrolase, metallophosphoesterase\tWP_000770925.1, WP_000665639.1\t4.506698206217075\t6.906754778648663\tTrue\tTrue\tPredicted novel defense gene\tDS-9"}, {"notes": "The final Science supplementary Table S7 reports an MHAD assay row with a Bas1 phage readout and a -log(EOP) value of 4.125.", "reference": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S7.xlsx", "snippet": "Bas1\t1.2\tpLAND\t24-03-08_EV_HHHD_PIN2_CRDO.png\t40000000\tMHAD\t24-03-08\t24-03-08_NYND_GHOS_MHAD_UDNG.png\t3\t3\t\t3000\t4.1249387366083\tTrue\t\t\tLB\t37"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "reduced_phage_plaquing", "target": "ds_9_system_trait"}, {"description": "DS-9 system possession is a phage-defense-system trait.", "evidence": [{"notes": "DeWeirdt et al. validate DSs as anti-phage systems.", "reference": "DOI:10.1126/science.adv7924", "snippet": "To test for anti-phage defense, we placed each TU with its predicted native promoter region on a low-copy number plasmid in E. coli MG1655 and challenged these strains with a panel of 24 diverse E. coli phages (Fig. 3; fig. S2). In total, 42 (45% of 94) of the cloned TUs produced smaller plaque sizes or reduced the efficiency of plating (EOP) at least ten-fold relative to an empty vector control strain"}, {"notes": "The pinned DefenseFinder article registry maps the DS-9 source key to the preprint DOI for the DeWeirdt et al. DefensePredictor study, which has since been published in Science.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| DS-9 | 10\\.1101/2025\\.01\\.08\\.631726 | DefensePredictor: A machine learning model to discover novel prokaryotic immune systems | "}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "ds_9_system_trait", "target": "phage_defense_system"}, {"description": "Endonuclease GajA (gajA, UniProtKB:P0DW47) contributes to DS-9 system.", "evidence": [{"notes": "Supports the functional association between Endonuclease GajA (UniProtKB:P0DW47 in Bacillus cereus (strain HuB5-5)) and DS-9 system.", "reference": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S6.xlsx", "snippet": "PD3A NZ_RRVF01000002.1 GCF_003886115.1 - True False True True DefensePredictor hits 104144 108678 restriction endonuclease, AAA family ATPase WP_059339975.1, WP_064766070.1 14.31811904122612 6.906754778648663 True True Remote defense homolog DS-12"}], "id": "edge-4", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "ds_9_system_protein_component", "target": "ds_9_system_trait"}], "evidence_rows": [{"description": "The DS-9/MHAD locus contributes to reduced bacteriophage plaquing when plasmid expressed.", "edge_id": "edge-1", "evidence": [{"notes": "The final Science supplementary Table S6 maps working_id MHAD to DS_name DS-9, marks the cloned transcriptional unit as defensive, and records NZ_QOWZ01000056.1 positions 6224-8706 with product accessions WP_000770925.1 and WP_000665639.1.", "reference": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S6.xlsx", "snippet": "MHAD\tNZ_QOWZ01000056.1\tGCF_003334705.1\t-\tTrue\tFalse\tFalse\tTrue\tDefensePredictor hits\t6224\t8706\tHAD-IA family hydrolase, metallophosphoesterase\tWP_000770925.1, WP_000665639.1\t4.506698206217075\t6.906754778648663\tTrue\tTrue\tPredicted novel defense gene\tDS-9"}, {"notes": "The final Science supplementary Table S7 reports an MHAD assay row with a Bas1 phage readout and a -log(EOP) value of 4.125.", "reference": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S7.xlsx", "snippet": "Bas1\t1.2\tpLAND\t24-03-08_EV_HHHD_PIN2_CRDO.png\t40000000\tMHAD\t24-03-08\t24-03-08_NYND_GHOS_MHAD_UDNG.png\t3\t3\t\t3000\t4.1249387366083\tTrue\t\t\tLB\t37"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "DS-9 locus", "target": "reduced bacteriophage plaquing"}, {"description": "DS-9-mediated phage plaquing reduction realizes the DS-9 system trait.", "edge_id": "edge-2", "evidence": [{"notes": "DeWeirdt et al. identify DS-9 as a two-gene metallophosphatase/HAD-phosphatase system.", "reference": "DOI:10.1126/science.adv7924", "snippet": "The system DS-9 has two genes, the first harboring a metallophosphatase domain homologous to that of DS-8, and the second a predicted haloacid dehalogenase-like (HAD) phosphatase"}, {"notes": "The final Science supplementary Table S6 maps working_id MHAD to DS_name DS-9, marks the cloned transcriptional unit as defensive, and records NZ_QOWZ01000056.1 positions 6224-8706 with product accessions WP_000770925.1 and WP_000665639.1.", "reference": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S6.xlsx", "snippet": "MHAD\tNZ_QOWZ01000056.1\tGCF_003334705.1\t-\tTrue\tFalse\tFalse\tTrue\tDefensePredictor hits\t6224\t8706\tHAD-IA family hydrolase, metallophosphoesterase\tWP_000770925.1, WP_000665639.1\t4.506698206217075\t6.906754778648663\tTrue\tTrue\tPredicted novel defense gene\tDS-9"}, {"notes": "The final Science supplementary Table S7 reports an MHAD assay row with a Bas1 phage readout and a -log(EOP) value of 4.125.", "reference": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S7.xlsx", "snippet": "Bas1\t1.2\tpLAND\t24-03-08_EV_HHHD_PIN2_CRDO.png\t40000000\tMHAD\t24-03-08\t24-03-08_NYND_GHOS_MHAD_UDNG.png\t3\t3\t\t3000\t4.1249387366083\tTrue\t\t\tLB\t37"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "reduced bacteriophage plaquing", "target": "DS-9 system"}, {"description": "DS-9 system possession is a phage-defense-system trait.", "edge_id": "edge-3", "evidence": [{"notes": "DeWeirdt et al. validate DSs as anti-phage systems.", "reference": "DOI:10.1126/science.adv7924", "snippet": "To test for anti-phage defense, we placed each TU with its predicted native promoter region on a low-copy number plasmid in E. coli MG1655 and challenged these strains with a panel of 24 diverse E. coli phages (Fig. 3; fig. S2). In total, 42 (45% of 94) of the cloned TUs produced smaller plaque sizes or reduced the efficiency of plating (EOP) at least ten-fold relative to an empty vector control strain"}, {"notes": "The pinned DefenseFinder article registry maps the DS-9 source key to the preprint DOI for the DeWeirdt et al. DefensePredictor study, which has since been published in Science.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| DS-9 | 10\\.1101/2025\\.01\\.08\\.631726 | DefensePredictor: A machine learning model to discover novel prokaryotic immune systems | "}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "DS-9 system", "target": "phage defense system"}, {"description": "Endonuclease GajA (gajA, UniProtKB:P0DW47) contributes to DS-9 system.", "edge_id": "edge-4", "evidence": [{"notes": "Supports the functional association between Endonuclease GajA (UniProtKB:P0DW47 in Bacillus cereus (strain HuB5-5)) and DS-9 system.", "reference": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S6.xlsx", "snippet": "PD3A NZ_RRVF01000002.1 GCF_003886115.1 - True False True True DefensePredictor hits 104144 108678 restriction endonuclease, AAA family ATPase WP_059339975.1, WP_064766070.1 14.31811904122612 6.906754778648663 True True Remote defense homolog DS-12"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Endonuclease GajA", "target": "DS-9 system"}], "graph_id": "ds_9_locus_reduces_phage_plaquing", "issues": [], "nodes": [{"color": "#f3f4f6", "description": "A two-gene DefensePredictor-discovered system locus represented in the pinned DefenseFinder HMM inventory by DS-9A and DS-9B custom profiles.", "grounding": null, "id": "ds_9_locus", "is_orphan": false, "label": "DS-9 locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Protein component (Endonuclease GajA) associated with DS-9 system.", "grounding": null, "id": "ds_9_system_protein_component", "is_orphan": false, "label": "Endonuclease GajA", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 12, "evidence": [{"notes": "Supports Endonuclease GajA in DS-9 system; UniProtKB:P0DW47 (gajA, Endonuclease GajA) in Bacillus cereus (strain HuB5-5) provides a verified protein exemplar.", "reference": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S6.xlsx", "snippet": "PD3A NZ_RRVF01000002.1 GCF_003886115.1 - True False True True DefensePredictor hits 104144 108678 restriction endonuclease, AAA family ATPase WP_059339975.1, WP_064766070.1 14.31811904122612 6.906754778648663 True True Remote defense homolog DS-12"}], "gene_symbol": "gajA", "protein_label": "Endonuclease GajA", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (gajA, Endonuclease GajA) associated with DS-9 system in Bacillus cereus (strain HuB5-5).", "sequence_version": 1, "taxon_id": "NCBITaxon:1053212", "taxon_label": "Bacillus cereus (strain HuB5-5)", "uniprot_id": "UniProtKB:P0DW47"}], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded DS-9 phage-defense system.", "grounding": "traitmech:000433", "id": "ds_9_system_trait", "is_orphan": false, "label": "DS-9 system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of one or more genome-encoded immune systems that inhibit bacteriophage infection.", "grounding": "traitmech:000209", "id": "phage_defense_system", "is_orphan": false, "label": "phage defense system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Reduced efficiency of plaquing by bacteriophage Bas1 in cells carrying cloned MHAD.", "grounding": null, "id": "reduced_phage_plaquing", "is_orphan": false, "label": "reduced bacteriophage plaquing", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 12, "evidence": [{"notes": "Supports Endonuclease GajA in DS-9 system; UniProtKB:P0DW47 (gajA, Endonuclease GajA) in Bacillus cereus (strain HuB5-5) provides a verified protein exemplar.", "reference": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S6.xlsx", "snippet": "PD3A NZ_RRVF01000002.1 GCF_003886115.1 - True False True True DefensePredictor hits 104144 108678 restriction endonuclease, AAA family ATPase WP_059339975.1, WP_064766070.1 14.31811904122612 6.906754778648663 True True Remote defense homolog DS-12"}], "gene_symbol": "gajA", "node_id": "ds_9_system_protein_component", "node_label": "Endonuclease GajA", "protein_label": "Endonuclease GajA", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (gajA, Endonuclease GajA) associated with DS-9 system in Bacillus cereus (strain HuB5-5).", "sequence_version": 1, "taxon_id": "NCBITaxon:1053212", "taxon_label": "Bacillus cereus (strain HuB5-5)", "uniprot_id": "UniProtKB:P0DW47"}], "scope_notes": "The graph captures DS-9 as the validated MHAD transcriptional unit with two product accessions and with DefenseFinder DS-9A and DS-9B profile rows. It does not assert native host breadth, exact DS-9A/DS-9B profile-to-protein correspondence, the direct viral trigger or metallophosphoesterase substrate, the HAD phosphatase target, phage target breadth, or DefenseFinder rule-level detection criteria.", "scope_status": "NONMECHANISTIC", "title": "DS-9 locus reduces bacteriophage plaquing"}];
+  var graphs = [{"description": "Conservative system-level sketch linking the two-gene DS-9 locus to reduced bacteriophage plaquing without resolving DS-9 component functions or effector activity.", "edges": [{"description": "The DS-9/MHAD locus contributes to reduced bacteriophage plaquing when plasmid expressed.", "evidence": [{"notes": "The final Science supplementary Table S6 maps working_id MHAD to DS_name DS-9, marks the cloned transcriptional unit as defensive, and records NZ_QOWZ01000056.1 positions 6224-8706 with product accessions WP_000770925.1 and WP_000665639.1.", "reference": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S6.xlsx", "snippet": "MHAD\tNZ_QOWZ01000056.1\tGCF_003334705.1\t-\tTrue\tFalse\tFalse\tTrue\tDefensePredictor hits\t6224\t8706\tHAD-IA family hydrolase, metallophosphoesterase\tWP_000770925.1, WP_000665639.1\t4.506698206217075\t6.906754778648663\tTrue\tTrue\tPredicted novel defense gene\tDS-9"}, {"notes": "The final Science supplementary Table S7 reports an MHAD assay row with a Bas1 phage readout and a -log(EOP) value of 4.125.", "reference": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S7.xlsx", "snippet": "Bas1\t1.2\tpLAND\t24-03-08_EV_HHHD_PIN2_CRDO.png\t40000000\tMHAD\t24-03-08\t24-03-08_NYND_GHOS_MHAD_UDNG.png\t3\t3\t\t3000\t4.1249387366083\tTrue\t\t\tLB\t37"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "ds_9_locus", "target": "reduced_phage_plaquing"}, {"description": "DS-9-mediated phage plaquing reduction realizes the DS-9 system trait.", "evidence": [{"notes": "DeWeirdt et al. identify DS-9 as a two-gene metallophosphatase/HAD-phosphatase system.", "reference": "DOI:10.1126/science.adv7924", "snippet": "The system DS-9 has two genes, the first harboring a metallophosphatase domain homologous to that of DS-8, and the second a predicted haloacid dehalogenase-like (HAD) phosphatase"}, {"notes": "The final Science supplementary Table S6 maps working_id MHAD to DS_name DS-9, marks the cloned transcriptional unit as defensive, and records NZ_QOWZ01000056.1 positions 6224-8706 with product accessions WP_000770925.1 and WP_000665639.1.", "reference": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S6.xlsx", "snippet": "MHAD\tNZ_QOWZ01000056.1\tGCF_003334705.1\t-\tTrue\tFalse\tFalse\tTrue\tDefensePredictor hits\t6224\t8706\tHAD-IA family hydrolase, metallophosphoesterase\tWP_000770925.1, WP_000665639.1\t4.506698206217075\t6.906754778648663\tTrue\tTrue\tPredicted novel defense gene\tDS-9"}, {"notes": "The final Science supplementary Table S7 reports an MHAD assay row with a Bas1 phage readout and a -log(EOP) value of 4.125.", "reference": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S7.xlsx", "snippet": "Bas1\t1.2\tpLAND\t24-03-08_EV_HHHD_PIN2_CRDO.png\t40000000\tMHAD\t24-03-08\t24-03-08_NYND_GHOS_MHAD_UDNG.png\t3\t3\t\t3000\t4.1249387366083\tTrue\t\t\tLB\t37"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "reduced_phage_plaquing", "target": "ds_9_system_trait"}, {"description": "DS-9 system possession is a phage-defense-system trait.", "evidence": [{"notes": "DeWeirdt et al. validate DSs as anti-phage systems.", "reference": "DOI:10.1126/science.adv7924", "snippet": "To test for anti-phage defense, we placed each TU with its predicted native promoter region on a low-copy number plasmid in E. coli MG1655 and challenged these strains with a panel of 24 diverse E. coli phages (Fig. 3; fig. S2). In total, 42 (45% of 94) of the cloned TUs produced smaller plaque sizes or reduced the efficiency of plating (EOP) at least ten-fold relative to an empty vector control strain"}, {"notes": "The pinned DefenseFinder article registry maps the DS-9 source key to the preprint DOI for the DeWeirdt et al. DefensePredictor study, which has since been published in Science.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| DS-9 | 10\\.1101/2025\\.01\\.08\\.631726 | DefensePredictor: A machine learning model to discover novel prokaryotic immune systems | "}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "ds_9_system_trait", "target": "phage_defense_system"}], "evidence_rows": [{"description": "The DS-9/MHAD locus contributes to reduced bacteriophage plaquing when plasmid expressed.", "edge_id": "edge-1", "evidence": [{"notes": "The final Science supplementary Table S6 maps working_id MHAD to DS_name DS-9, marks the cloned transcriptional unit as defensive, and records NZ_QOWZ01000056.1 positions 6224-8706 with product accessions WP_000770925.1 and WP_000665639.1.", "reference": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S6.xlsx", "snippet": "MHAD\tNZ_QOWZ01000056.1\tGCF_003334705.1\t-\tTrue\tFalse\tFalse\tTrue\tDefensePredictor hits\t6224\t8706\tHAD-IA family hydrolase, metallophosphoesterase\tWP_000770925.1, WP_000665639.1\t4.506698206217075\t6.906754778648663\tTrue\tTrue\tPredicted novel defense gene\tDS-9"}, {"notes": "The final Science supplementary Table S7 reports an MHAD assay row with a Bas1 phage readout and a -log(EOP) value of 4.125.", "reference": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S7.xlsx", "snippet": "Bas1\t1.2\tpLAND\t24-03-08_EV_HHHD_PIN2_CRDO.png\t40000000\tMHAD\t24-03-08\t24-03-08_NYND_GHOS_MHAD_UDNG.png\t3\t3\t\t3000\t4.1249387366083\tTrue\t\t\tLB\t37"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "DS-9 locus", "source_grounding": null, "target": "reduced bacteriophage plaquing", "target_grounding": null}, {"description": "DS-9-mediated phage plaquing reduction realizes the DS-9 system trait.", "edge_id": "edge-2", "evidence": [{"notes": "DeWeirdt et al. identify DS-9 as a two-gene metallophosphatase/HAD-phosphatase system.", "reference": "DOI:10.1126/science.adv7924", "snippet": "The system DS-9 has two genes, the first harboring a metallophosphatase domain homologous to that of DS-8, and the second a predicted haloacid dehalogenase-like (HAD) phosphatase"}, {"notes": "The final Science supplementary Table S6 maps working_id MHAD to DS_name DS-9, marks the cloned transcriptional unit as defensive, and records NZ_QOWZ01000056.1 positions 6224-8706 with product accessions WP_000770925.1 and WP_000665639.1.", "reference": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S6.xlsx", "snippet": "MHAD\tNZ_QOWZ01000056.1\tGCF_003334705.1\t-\tTrue\tFalse\tFalse\tTrue\tDefensePredictor hits\t6224\t8706\tHAD-IA family hydrolase, metallophosphoesterase\tWP_000770925.1, WP_000665639.1\t4.506698206217075\t6.906754778648663\tTrue\tTrue\tPredicted novel defense gene\tDS-9"}, {"notes": "The final Science supplementary Table S7 reports an MHAD assay row with a Bas1 phage readout and a -log(EOP) value of 4.125.", "reference": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13092281.1/NIHMS2163519-supplement-Table_S7.xlsx", "snippet": "Bas1\t1.2\tpLAND\t24-03-08_EV_HHHD_PIN2_CRDO.png\t40000000\tMHAD\t24-03-08\t24-03-08_NYND_GHOS_MHAD_UDNG.png\t3\t3\t\t3000\t4.1249387366083\tTrue\t\t\tLB\t37"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "reduced bacteriophage plaquing", "source_grounding": null, "target": "DS-9 system", "target_grounding": "traitmech:000433"}, {"description": "DS-9 system possession is a phage-defense-system trait.", "edge_id": "edge-3", "evidence": [{"notes": "DeWeirdt et al. validate DSs as anti-phage systems.", "reference": "DOI:10.1126/science.adv7924", "snippet": "To test for anti-phage defense, we placed each TU with its predicted native promoter region on a low-copy number plasmid in E. coli MG1655 and challenged these strains with a panel of 24 diverse E. coli phages (Fig. 3; fig. S2). In total, 42 (45% of 94) of the cloned TUs produced smaller plaque sizes or reduced the efficiency of plating (EOP) at least ten-fold relative to an empty vector control strain"}, {"notes": "The pinned DefenseFinder article registry maps the DS-9 source key to the preprint DOI for the DeWeirdt et al. DefensePredictor study, which has since been published in Science.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| DS-9 | 10\\.1101/2025\\.01\\.08\\.631726 | DefensePredictor: A machine learning model to discover novel prokaryotic immune systems | "}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "DS-9 system", "source_grounding": "traitmech:000433", "target": "phage defense system", "target_grounding": "traitmech:000209"}], "graph_id": "ds_9_locus_reduces_phage_plaquing", "issues": [], "nodes": [{"color": "#f3f4f6", "description": "A two-gene DefensePredictor-discovered system locus represented in the pinned DefenseFinder HMM inventory by DS-9A and DS-9B custom profiles.", "grounding": null, "id": "ds_9_locus", "is_orphan": false, "label": "DS-9 locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded DS-9 phage-defense system.", "grounding": "traitmech:000433", "id": "ds_9_system_trait", "is_orphan": false, "label": "DS-9 system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of one or more genome-encoded immune systems that inhibit bacteriophage infection.", "grounding": "traitmech:000209", "id": "phage_defense_system", "is_orphan": false, "label": "phage defense system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Reduced efficiency of plaquing by bacteriophage Bas1 in cells carrying cloned MHAD.", "grounding": null, "id": "reduced_phage_plaquing", "is_orphan": false, "label": "reduced bacteriophage plaquing", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "The graph captures DS-9 as the validated MHAD transcriptional unit with two product accessions and with DefenseFinder DS-9A and DS-9B profile rows. It does not assert native host breadth, exact DS-9A/DS-9B profile-to-protein correspondence, the direct viral trigger or metallophosphoesterase substrate, the HAD phosphatase target, phage target breadth, or DefenseFinder rule-level detection criteria.", "scope_status": "NONMECHANISTIC", "title": "DS-9 locus reduces bacteriophage plaquing"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -933,13 +1019,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-10-17 09:00 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

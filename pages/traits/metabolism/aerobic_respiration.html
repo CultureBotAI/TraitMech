@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/metabolism.html">METABOLISM</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/metabolism.html">METABOLISM</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>Aerobic respiration</h1>
     <p class="curie"><code>METPO:1000801</code> · CLASS · REVIEWED</p>
 
@@ -85,8 +96,10 @@
 
           <li id="pathograph-1-edge-1">
             <strong>Aerobic respiration</strong>
+            <a href="https://w3id.org/metpo/1000801" rel="nofollow noreferrer"><code>METPO:1000801</code></a>
             <span class="edge-predicate">has mechanistic pathway</span>
             <strong>electron transport chain</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0022900" rel="nofollow noreferrer"><code>GO:0022900</code></a>
 
             <p>Aerobic respiration uses a membrane-bound respiratory electron transport chain.</p>
             <ul>
@@ -102,9 +115,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>cytochrome c oxidase</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0004129" rel="nofollow noreferrer"><code>GO:0004129</code></a>
             <span class="edge-predicate">reduces</span>
             <strong>molecular oxygen</strong>
-            <code>METPO:2007802</code>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:15379" rel="nofollow noreferrer"><code>CHEBI:15379</code></a>
+            <a href="https://w3id.org/metpo/2007802" rel="nofollow noreferrer"><code>METPO:2007802</code></a>
             <p>Terminal oxidase transfers electrons to molecular oxygen.</p>
             <ul>
 
@@ -119,8 +134,10 @@
 
           <li id="pathograph-1-edge-3">
             <strong>molecular oxygen</strong>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:15379" rel="nofollow noreferrer"><code>CHEBI:15379</code></a>
             <span class="edge-predicate">reduced to</span>
             <strong>water</strong>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:15377" rel="nofollow noreferrer"><code>CHEBI:15377</code></a>
 
             <p>Oxygen reduction forms water at the terminal oxidase.</p>
             <ul>
@@ -136,9 +153,11 @@
 
           <li id="pathograph-1-edge-4">
             <strong>electron transport chain</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0022900" rel="nofollow noreferrer"><code>GO:0022900</code></a>
             <span class="edge-predicate">generates</span>
             <strong>proton motive force</strong>
-            <code>biolink:produces</code>
+            <a href="https://w3id.org/metpo/1007500" rel="nofollow noreferrer"><code>METPO:1007500</code></a>
+            <a href="https://w3id.org/biolink/vocab/produces" rel="nofollow noreferrer"><code>biolink:produces</code></a>
             <p>Respiratory redox energy is conserved as an ion gradient.</p>
             <ul>
 
@@ -153,9 +172,11 @@
 
           <li id="pathograph-1-edge-5">
             <strong>proton motive force</strong>
+            <a href="https://w3id.org/metpo/1007500" rel="nofollow noreferrer"><code>METPO:1007500</code></a>
             <span class="edge-predicate">regulates</span>
             <strong>ATP synthase</strong>
-            <code>RO:0002211</code>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0045259" rel="nofollow noreferrer"><code>GO:0045259</code></a>
+            <a href="http://purl.obolibrary.org/obo/RO_0002211" rel="nofollow noreferrer"><code>RO:0002211</code></a>
             <p>The proton motive force powers ATP synthase.</p>
             <ul>
 
@@ -170,9 +191,11 @@
 
           <li id="pathograph-1-edge-6">
             <strong>ATP synthase</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0045259" rel="nofollow noreferrer"><code>GO:0045259</code></a>
             <span class="edge-predicate">produces</span>
             <strong>ATP</strong>
-            <code>METPO:2007800</code>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:30616" rel="nofollow noreferrer"><code>CHEBI:30616</code></a>
+            <a href="https://w3id.org/metpo/2007800" rel="nofollow noreferrer"><code>METPO:2007800</code></a>
             <p>ATP synthase produces ATP during oxidative phosphorylation.</p>
             <ul>
 
@@ -187,9 +210,11 @@
 
           <li id="pathograph-1-edge-7">
             <strong>cytochrome c oxidase</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0004129" rel="nofollow noreferrer"><code>GO:0004129</code></a>
             <span class="edge-predicate">part of</span>
             <strong>electron transport chain</strong>
-            <code>biolink:part_of</code>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0022900" rel="nofollow noreferrer"><code>GO:0022900</code></a>
+            <a href="https://w3id.org/biolink/vocab/part_of" rel="nofollow noreferrer"><code>biolink:part_of</code></a>
             <p>Cytochrome c oxidase is the terminal enzyme of the graph&#39;s represented aerobic respiratory-chain branch.</p>
             <ul>
 
@@ -334,7 +359,7 @@
     <div class="card">
       <h2>Cross-references</h2>
       <ul class="xrefs">
-        <li><code>GO:0009060</code></li>
+        <li><a href="https://amigo.geneontology.org/amigo/term/GO:0009060" rel="nofollow noreferrer"><code>GO:0009060</code></a></li>
       </ul>
     </div>
 
@@ -363,7 +388,25 @@
 
         <li>
           <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/anaerobic_respiration.html">Anaerobic respiration</a>
+          <a href="../../traits/metabolism/dissimilatory_nitrate_reduction_to_ammonium.html">dissimilatory nitrate reduction to ammonium</a>
+          <span class="sim">0.959</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">metabolism</span>
+          <a href="../../traits/metabolism/tetrathionate_respiration.html">tetrathionate respiration</a>
+          <span class="sim">0.959</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">metabolism</span>
+          <a href="../../traits/metabolism/thiosulfate_respiration.html">thiosulfate respiration</a>
+          <span class="sim">0.959</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">metabolism</span>
+          <a href="../../traits/metabolism/nitrogen_respiration.html">nitrogen respiration</a>
           <span class="sim">0.959</span>
         </li>
 
@@ -375,37 +418,19 @@
 
         <li>
           <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/anaerobic_oxidation_of_methane.html">anaerobic oxidation of methane</a>
+          <a href="../../traits/metabolism/nitrite_respiration.html">nitrite respiration</a>
           <span class="sim">0.959</span>
         </li>
 
         <li>
           <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/dissimilatory_nitrate_reduction_to_ammonium.html">dissimilatory nitrate reduction to ammonium</a>
+          <a href="../../traits/metabolism/trimethylamine_n_oxide_respiration.html">trimethylamine N-oxide respiration</a>
           <span class="sim">0.959</span>
         </li>
 
         <li>
           <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/dissimilatory_metal_reduction.html">dissimilatory metal reduction</a>
-          <span class="sim">0.959</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/dissimilatory_manganese_reduction.html">dissimilatory manganese reduction</a>
-          <span class="sim">0.959</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/dissimilatory_iron_reduction.html">dissimilatory iron reduction</a>
-          <span class="sim">0.959</span>
-        </li>
-
-        <li>
-          <span class="nn-cat">metabolism</span>
-          <a href="../../traits/metabolism/denitrification.html">denitrification</a>
+          <a href="../../traits/metabolism/nitrate_respiration.html">nitrate respiration</a>
           <span class="sim">0.959</span>
         </li>
 
@@ -1031,7 +1056,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "DOI-backed graph linking oxygen reduction, respiratory electron transport, proton motive force, and ATP synthesis.", "edges": [{"description": "Aerobic respiration uses a membrane-bound respiratory electron transport chain.", "evidence": [{"notes": "Review describes respiration as redox reactions catalyzed by membrane-bound electron transport chains.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "membrane-bound electron transport chain"}], "id": "edge-1", "is_orphan": false, "predicate": "has mechanistic pathway", "predicate_id": null, "source": "aerobic_respiration_trait", "target": "electron_transport_chain"}, {"description": "Terminal oxidase transfers electrons to molecular oxygen.", "evidence": [{"notes": "Supports oxygen as terminal electron acceptor for cytochrome c oxidase.", "reference": "DOI:10.1146/annurev.biophys.27.1.329", "snippet": "electron transfer from cytochrome c to molecular oxygen"}], "id": "edge-2", "is_orphan": false, "predicate": "reduces", "predicate_id": "METPO:2007802", "source": "cytochrome_c_oxidase", "target": "molecular_oxygen"}, {"description": "Oxygen reduction forms water at the terminal oxidase.", "evidence": [{"notes": "Supports water as the product of terminal oxygen reduction.", "reference": "DOI:10.1146/annurev.biophys.27.1.329", "snippet": "reducing the latter to water"}], "id": "edge-3", "is_orphan": false, "predicate": "reduced to", "predicate_id": null, "source": "molecular_oxygen", "target": "water"}, {"description": "Respiratory redox energy is conserved as an ion gradient.", "evidence": [{"notes": "Supports proton motive force generation by respiratory chains.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "generation of an electrochemical ion gradient"}], "id": "edge-4", "is_orphan": false, "predicate": "generates", "predicate_id": "biolink:produces", "source": "electron_transport_chain", "target": "proton_motive_force"}, {"description": "The proton motive force powers ATP synthase.", "evidence": [{"notes": "Supports ATP synthase use of the respiratory proton gradient.", "reference": "DOI:10.1146/annurev.biophys.27.1.329", "snippet": "employed by the F0F1-ATPase"}], "id": "edge-5", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "proton_motive_force", "target": "atp_synthase"}, {"description": "ATP synthase produces ATP during oxidative phosphorylation.", "evidence": [{"notes": "Supports ATP synthesis driven by the respiratory ion gradient.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "gradient across a coupling membrane that drives ATP synthesis"}], "id": "edge-6", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2007800", "source": "atp_synthase", "target": "atp"}, {"description": "Cytochrome c oxidase is the terminal enzyme of the graph\u0027s represented aerobic respiratory-chain branch.", "evidence": [{"notes": "Connects the documented cytochrome-c-oxidase branch to the respiratory electron-transport pathway without asserting that this oxidase family is universal across aerobes.", "reference": "DOI:10.1146/annurev.biophys.27.1.329", "snippet": "terminal enzyme of respiratory chains"}], "id": "edge-7", "is_orphan": false, "predicate": "part of", "predicate_id": "biolink:part_of", "source": "cytochrome_c_oxidase", "target": "electron_transport_chain"}], "evidence_rows": [{"description": "Aerobic respiration uses a membrane-bound respiratory electron transport chain.", "edge_id": "edge-1", "evidence": [{"notes": "Review describes respiration as redox reactions catalyzed by membrane-bound electron transport chains.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "membrane-bound electron transport chain"}], "predicate": "has mechanistic pathway", "predicate_id": null, "source": "Aerobic respiration", "target": "electron transport chain"}, {"description": "Terminal oxidase transfers electrons to molecular oxygen.", "edge_id": "edge-2", "evidence": [{"notes": "Supports oxygen as terminal electron acceptor for cytochrome c oxidase.", "reference": "DOI:10.1146/annurev.biophys.27.1.329", "snippet": "electron transfer from cytochrome c to molecular oxygen"}], "predicate": "reduces", "predicate_id": "METPO:2007802", "source": "cytochrome c oxidase", "target": "molecular oxygen"}, {"description": "Oxygen reduction forms water at the terminal oxidase.", "edge_id": "edge-3", "evidence": [{"notes": "Supports water as the product of terminal oxygen reduction.", "reference": "DOI:10.1146/annurev.biophys.27.1.329", "snippet": "reducing the latter to water"}], "predicate": "reduced to", "predicate_id": null, "source": "molecular oxygen", "target": "water"}, {"description": "Respiratory redox energy is conserved as an ion gradient.", "edge_id": "edge-4", "evidence": [{"notes": "Supports proton motive force generation by respiratory chains.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "generation of an electrochemical ion gradient"}], "predicate": "generates", "predicate_id": "biolink:produces", "source": "electron transport chain", "target": "proton motive force"}, {"description": "The proton motive force powers ATP synthase.", "edge_id": "edge-5", "evidence": [{"notes": "Supports ATP synthase use of the respiratory proton gradient.", "reference": "DOI:10.1146/annurev.biophys.27.1.329", "snippet": "employed by the F0F1-ATPase"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "proton motive force", "target": "ATP synthase"}, {"description": "ATP synthase produces ATP during oxidative phosphorylation.", "edge_id": "edge-6", "evidence": [{"notes": "Supports ATP synthesis driven by the respiratory ion gradient.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "gradient across a coupling membrane that drives ATP synthesis"}], "predicate": "produces", "predicate_id": "METPO:2007800", "source": "ATP synthase", "target": "ATP"}, {"description": "Cytochrome c oxidase is the terminal enzyme of the graph\u0027s represented aerobic respiratory-chain branch.", "edge_id": "edge-7", "evidence": [{"notes": "Connects the documented cytochrome-c-oxidase branch to the respiratory electron-transport pathway without asserting that this oxidase family is universal across aerobes.", "reference": "DOI:10.1146/annurev.biophys.27.1.329", "snippet": "terminal enzyme of respiratory chains"}], "predicate": "part of", "predicate_id": "biolink:part_of", "source": "cytochrome c oxidase", "target": "electron transport chain"}], "graph_id": "aerobic_respiration_terminal_oxidase", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Oxygen-dependent respiratory energy metabolism.", "grounding": "METPO:1000801", "id": "aerobic_respiration_trait", "is_orphan": false, "label": "Aerobic respiration", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Energy carrier produced by oxidative phosphorylation.", "grounding": "CHEBI:30616", "id": "atp", "is_orphan": false, "label": "ATP", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Enzyme complex that uses proton motive force to synthesize ATP.", "grounding": "GO:0045259", "id": "atp_synthase", "is_orphan": false, "label": "ATP synthase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 161, "evidence": [{"notes": "Supports ATP synthase in Aerobic respiration; UniProtKB:P0ABB0 (atpA, ATP synthase subunit alpha) in Escherichia coli (strain K12) provides a verified protein exemplar.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "gradient across a coupling membrane that drives ATP synthesis"}], "gene_symbol": "atpA", "protein_label": "ATP synthase subunit alpha", "proteome_id": "UP000000625", "retrieved_on": "2026-10-17", "role": "Exemplar protein (atpA, ATP synthase subunit alpha) representing ATP synthase in Escherichia coli (strain K12) for Aerobic respiration.", "sequence_version": 1, "taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli (strain K12)", "uniprot_id": "UniProtKB:P0ABB0"}], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Terminal oxidase that transfers electrons to molecular oxygen.", "grounding": "GO:0004129", "id": "cytochrome_c_oxidase", "is_orphan": false, "label": "cytochrome c oxidase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 168, "evidence": [{"notes": "The primary purification study compares P. denitrificans oxidase complexes and establishes subunit II as a component; UniProtKB P08306 verifies the reviewed protein and taxon.", "reference": "DOI:10.1016/S0005-2728(98)00092-9", "snippet": "enzyme containing polypeptides I-IV"}], "gene_symbol": "ctaC", "protein_label": "Cytochrome c oxidase subunit 2", "retrieved_on": "2026-08-23", "role": "Subunit II component of the purified P. denitrificans cytochrome c oxidase; this accession is not presented as the complete terminal-oxidase complex.", "sequence_version": 1, "taxon_id": "NCBITaxon:266", "taxon_label": "Paracoccus denitrificans", "uniprot_id": "UniProtKB:P08306"}], "related_records": [], "xrefs": []}, {"color": "#e0e7ff", "description": "Membrane-associated redox chain coupling electron flow to ion translocation.", "grounding": "GO:0022900", "id": "electron_transport_chain", "is_orphan": false, "label": "electron transport chain", "node_type": "PATHWAY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Terminal electron acceptor in aerobic respiration.", "grounding": "CHEBI:15379", "id": "molecular_oxygen", "is_orphan": false, "label": "molecular oxygen", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Electrochemical ion gradient generated across the coupling membrane.", "grounding": "METPO:1007500", "id": "proton_motive_force", "is_orphan": false, "label": "proton motive force", "node_type": "STATE", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Reduced product of oxygen reduction.", "grounding": "CHEBI:15377", "id": "water", "is_orphan": false, "label": "water", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 168, "evidence": [{"notes": "The primary purification study compares P. denitrificans oxidase complexes and establishes subunit II as a component; UniProtKB P08306 verifies the reviewed protein and taxon.", "reference": "DOI:10.1016/S0005-2728(98)00092-9", "snippet": "enzyme containing polypeptides I-IV"}], "gene_symbol": "ctaC", "node_id": "cytochrome_c_oxidase", "node_label": "cytochrome c oxidase", "protein_label": "Cytochrome c oxidase subunit 2", "retrieved_on": "2026-08-23", "role": "Subunit II component of the purified P. denitrificans cytochrome c oxidase; this accession is not presented as the complete terminal-oxidase complex.", "sequence_version": 1, "taxon_id": "NCBITaxon:266", "taxon_label": "Paracoccus denitrificans", "uniprot_id": "UniProtKB:P08306"}, {"entry_status": "REVIEWED", "entry_version": 161, "evidence": [{"notes": "Supports ATP synthase in Aerobic respiration; UniProtKB:P0ABB0 (atpA, ATP synthase subunit alpha) in Escherichia coli (strain K12) provides a verified protein exemplar.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "gradient across a coupling membrane that drives ATP synthesis"}], "gene_symbol": "atpA", "node_id": "atp_synthase", "node_label": "ATP synthase", "protein_label": "ATP synthase subunit alpha", "proteome_id": "UP000000625", "retrieved_on": "2026-10-17", "role": "Exemplar protein (atpA, ATP synthase subunit alpha) representing ATP synthase in Escherichia coli (strain K12) for Aerobic respiration.", "sequence_version": 1, "taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli (strain K12)", "uniprot_id": "UniProtKB:P0ABB0"}], "scope_notes": "Represents the cytochrome-c-oxidase branch of aerobic respiration through proton-motive-force-coupled ATP synthesis; it does not assert that this terminal oxidase family is universal across aerobes.", "scope_status": "MECHANISTIC", "title": "Aerobic respiration terminal oxidase mechanism"}];
+  var graphs = [{"description": "DOI-backed graph linking oxygen reduction, respiratory electron transport, proton motive force, and ATP synthesis.", "edges": [{"description": "Aerobic respiration uses a membrane-bound respiratory electron transport chain.", "evidence": [{"notes": "Review describes respiration as redox reactions catalyzed by membrane-bound electron transport chains.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "membrane-bound electron transport chain"}], "id": "edge-1", "is_orphan": false, "predicate": "has mechanistic pathway", "predicate_id": null, "source": "aerobic_respiration_trait", "target": "electron_transport_chain"}, {"description": "Terminal oxidase transfers electrons to molecular oxygen.", "evidence": [{"notes": "Supports oxygen as terminal electron acceptor for cytochrome c oxidase.", "reference": "DOI:10.1146/annurev.biophys.27.1.329", "snippet": "electron transfer from cytochrome c to molecular oxygen"}], "id": "edge-2", "is_orphan": false, "predicate": "reduces", "predicate_id": "METPO:2007802", "source": "cytochrome_c_oxidase", "target": "molecular_oxygen"}, {"description": "Oxygen reduction forms water at the terminal oxidase.", "evidence": [{"notes": "Supports water as the product of terminal oxygen reduction.", "reference": "DOI:10.1146/annurev.biophys.27.1.329", "snippet": "reducing the latter to water"}], "id": "edge-3", "is_orphan": false, "predicate": "reduced to", "predicate_id": null, "source": "molecular_oxygen", "target": "water"}, {"description": "Respiratory redox energy is conserved as an ion gradient.", "evidence": [{"notes": "Supports proton motive force generation by respiratory chains.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "generation of an electrochemical ion gradient"}], "id": "edge-4", "is_orphan": false, "predicate": "generates", "predicate_id": "biolink:produces", "source": "electron_transport_chain", "target": "proton_motive_force"}, {"description": "The proton motive force powers ATP synthase.", "evidence": [{"notes": "Supports ATP synthase use of the respiratory proton gradient.", "reference": "DOI:10.1146/annurev.biophys.27.1.329", "snippet": "employed by the F0F1-ATPase"}], "id": "edge-5", "is_orphan": false, "predicate": "regulates", "predicate_id": "RO:0002211", "source": "proton_motive_force", "target": "atp_synthase"}, {"description": "ATP synthase produces ATP during oxidative phosphorylation.", "evidence": [{"notes": "Supports ATP synthesis driven by the respiratory ion gradient.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "gradient across a coupling membrane that drives ATP synthesis"}], "id": "edge-6", "is_orphan": false, "predicate": "produces", "predicate_id": "METPO:2007800", "source": "atp_synthase", "target": "atp"}, {"description": "Cytochrome c oxidase is the terminal enzyme of the graph\u0027s represented aerobic respiratory-chain branch.", "evidence": [{"notes": "Connects the documented cytochrome-c-oxidase branch to the respiratory electron-transport pathway without asserting that this oxidase family is universal across aerobes.", "reference": "DOI:10.1146/annurev.biophys.27.1.329", "snippet": "terminal enzyme of respiratory chains"}], "id": "edge-7", "is_orphan": false, "predicate": "part of", "predicate_id": "biolink:part_of", "source": "cytochrome_c_oxidase", "target": "electron_transport_chain"}], "evidence_rows": [{"description": "Aerobic respiration uses a membrane-bound respiratory electron transport chain.", "edge_id": "edge-1", "evidence": [{"notes": "Review describes respiration as redox reactions catalyzed by membrane-bound electron transport chains.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "membrane-bound electron transport chain"}], "predicate": "has mechanistic pathway", "predicate_id": null, "source": "Aerobic respiration", "source_grounding": "METPO:1000801", "target": "electron transport chain", "target_grounding": "GO:0022900"}, {"description": "Terminal oxidase transfers electrons to molecular oxygen.", "edge_id": "edge-2", "evidence": [{"notes": "Supports oxygen as terminal electron acceptor for cytochrome c oxidase.", "reference": "DOI:10.1146/annurev.biophys.27.1.329", "snippet": "electron transfer from cytochrome c to molecular oxygen"}], "predicate": "reduces", "predicate_id": "METPO:2007802", "source": "cytochrome c oxidase", "source_grounding": "GO:0004129", "target": "molecular oxygen", "target_grounding": "CHEBI:15379"}, {"description": "Oxygen reduction forms water at the terminal oxidase.", "edge_id": "edge-3", "evidence": [{"notes": "Supports water as the product of terminal oxygen reduction.", "reference": "DOI:10.1146/annurev.biophys.27.1.329", "snippet": "reducing the latter to water"}], "predicate": "reduced to", "predicate_id": null, "source": "molecular oxygen", "source_grounding": "CHEBI:15379", "target": "water", "target_grounding": "CHEBI:15377"}, {"description": "Respiratory redox energy is conserved as an ion gradient.", "edge_id": "edge-4", "evidence": [{"notes": "Supports proton motive force generation by respiratory chains.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "generation of an electrochemical ion gradient"}], "predicate": "generates", "predicate_id": "biolink:produces", "source": "electron transport chain", "source_grounding": "GO:0022900", "target": "proton motive force", "target_grounding": "METPO:1007500"}, {"description": "The proton motive force powers ATP synthase.", "edge_id": "edge-5", "evidence": [{"notes": "Supports ATP synthase use of the respiratory proton gradient.", "reference": "DOI:10.1146/annurev.biophys.27.1.329", "snippet": "employed by the F0F1-ATPase"}], "predicate": "regulates", "predicate_id": "RO:0002211", "source": "proton motive force", "source_grounding": "METPO:1007500", "target": "ATP synthase", "target_grounding": "GO:0045259"}, {"description": "ATP synthase produces ATP during oxidative phosphorylation.", "edge_id": "edge-6", "evidence": [{"notes": "Supports ATP synthesis driven by the respiratory ion gradient.", "reference": "DOI:10.1016/j.bbabio.2008.09.008", "snippet": "gradient across a coupling membrane that drives ATP synthesis"}], "predicate": "produces", "predicate_id": "METPO:2007800", "source": "ATP synthase", "source_grounding": "GO:0045259", "target": "ATP", "target_grounding": "CHEBI:30616"}, {"description": "Cytochrome c oxidase is the terminal enzyme of the graph\u0027s represented aerobic respiratory-chain branch.", "edge_id": "edge-7", "evidence": [{"notes": "Connects the documented cytochrome-c-oxidase branch to the respiratory electron-transport pathway without asserting that this oxidase family is universal across aerobes.", "reference": "DOI:10.1146/annurev.biophys.27.1.329", "snippet": "terminal enzyme of respiratory chains"}], "predicate": "part of", "predicate_id": "biolink:part_of", "source": "cytochrome c oxidase", "source_grounding": "GO:0004129", "target": "electron transport chain", "target_grounding": "GO:0022900"}], "graph_id": "aerobic_respiration_terminal_oxidase", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Oxygen-dependent respiratory energy metabolism.", "grounding": "METPO:1000801", "id": "aerobic_respiration_trait", "is_orphan": false, "label": "Aerobic respiration", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Energy carrier produced by oxidative phosphorylation.", "grounding": "CHEBI:30616", "id": "atp", "is_orphan": false, "label": "ATP", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Enzyme complex that uses proton motive force to synthesize ATP.", "grounding": "GO:0045259", "id": "atp_synthase", "is_orphan": false, "label": "ATP synthase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Terminal oxidase that transfers electrons to molecular oxygen.", "grounding": "GO:0004129", "id": "cytochrome_c_oxidase", "is_orphan": false, "label": "cytochrome c oxidase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 167, "evidence": [{"notes": "The primary purification study compares P. denitrificans oxidase complexes and establishes subunit II as a component; UniProtKB P08306 verifies the reviewed protein and taxon.", "reference": "DOI:10.1016/S0005-2728(98)00092-9", "snippet": "enzyme containing polypeptides I-IV"}], "gene_symbol": "ctaC", "protein_label": "Cytochrome c oxidase subunit 2", "retrieved_on": "2026-08-23", "role": "Subunit II component of the purified P. denitrificans cytochrome c oxidase; this accession is not presented as the complete terminal-oxidase complex.", "sequence_version": 1, "taxon_id": "NCBITaxon:266", "taxon_label": "Paracoccus denitrificans", "uniprot_id": "UniProtKB:P08306"}], "related_records": [], "xrefs": []}, {"color": "#e0e7ff", "description": "Membrane-associated redox chain coupling electron flow to ion translocation.", "grounding": "GO:0022900", "id": "electron_transport_chain", "is_orphan": false, "label": "electron transport chain", "node_type": "PATHWAY", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Terminal electron acceptor in aerobic respiration.", "grounding": "CHEBI:15379", "id": "molecular_oxygen", "is_orphan": false, "label": "molecular oxygen", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Electrochemical ion gradient generated across the coupling membrane.", "grounding": "METPO:1007500", "id": "proton_motive_force", "is_orphan": false, "label": "proton motive force", "node_type": "STATE", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Reduced product of oxygen reduction.", "grounding": "CHEBI:15377", "id": "water", "is_orphan": false, "label": "water", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 167, "evidence": [{"notes": "The primary purification study compares P. denitrificans oxidase complexes and establishes subunit II as a component; UniProtKB P08306 verifies the reviewed protein and taxon.", "reference": "DOI:10.1016/S0005-2728(98)00092-9", "snippet": "enzyme containing polypeptides I-IV"}], "gene_symbol": "ctaC", "node_id": "cytochrome_c_oxidase", "node_label": "cytochrome c oxidase", "protein_label": "Cytochrome c oxidase subunit 2", "retrieved_on": "2026-08-23", "role": "Subunit II component of the purified P. denitrificans cytochrome c oxidase; this accession is not presented as the complete terminal-oxidase complex.", "sequence_version": 1, "taxon_id": "NCBITaxon:266", "taxon_label": "Paracoccus denitrificans", "uniprot_id": "UniProtKB:P08306"}], "scope_notes": "Represents the cytochrome-c-oxidase branch of aerobic respiration through proton-motive-force-coupled ATP synthesis; it does not assert that this terminal oxidase family is universal across aerobes.", "scope_status": "MECHANISTIC", "title": "Aerobic respiration terminal oxidase mechanism"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -1051,13 +1076,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-10-17 09:00 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

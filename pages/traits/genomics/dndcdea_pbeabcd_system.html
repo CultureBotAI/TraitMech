@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/genomics.html">GENOMICS</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/genomics.html">GENOMICS</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>DndCDEA-PbeABCD system</h1>
     <p class="curie"><code>traitmech:000224</code> · CLASS · PROPOSED</p>
 
@@ -121,9 +132,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>DndCDEA-PbeABCD locus</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>DndCDEA DNA phosphorothioation</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>The DndCDEA modification module installs phosphorothioate marks on archaeal host DNA.</p>
             <ul>
 
@@ -138,9 +151,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>DndCDEA-PbeABCD locus</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>PbeABCD PT-dependent virus targeting</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>DndCDEA-PbeABCD loci pair host-DNA phosphorothioation with PbeABCD antiviral activity.</p>
             <ul>
 
@@ -155,9 +170,11 @@
 
           <li id="pathograph-1-edge-3">
             <strong>DndCDEA DNA phosphorothioation</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>PbeABCD PT-dependent virus targeting</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>PbeABCD antiviral activity depends on the presence of PT marks rather than direct PbeABCD-DndCDEA protein interactions.</p>
             <ul>
 
@@ -172,9 +189,11 @@
 
           <li id="pathograph-1-edge-4">
             <strong>PbeABCD PT-dependent virus targeting</strong>
+
             <span class="edge-predicate">mitigates</span>
             <strong>viral DNA replication</strong>
-            <code>METPO:2007407</code>
+
+            <a href="https://w3id.org/metpo/2007407" rel="nofollow noreferrer"><code>METPO:2007407</code></a>
             <p>PbeABCD-dependent targeting inhibits replication of non-phosphorothioated viral DNA.</p>
             <ul>
 
@@ -189,9 +208,11 @@
 
           <li id="pathograph-1-edge-5">
             <strong>PbeABCD PT-dependent virus targeting</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>DndCDEA-PbeABCD system</strong>
-            <code>METPO:2007700</code>
+            <code>traitmech:000224</code>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>PT-dependent PbeABCD antiviral activity realizes the DndCDEA-PbeABCD defense trait.</p>
             <ul>
 
@@ -206,8 +227,10 @@
 
           <li id="pathograph-1-edge-6">
             <strong>DndCDEA-PbeABCD system</strong>
+            <code>traitmech:000224</code>
             <span class="edge-predicate">is a</span>
             <strong>phosphorothioate defense system</strong>
+            <code>traitmech:000213</code>
             <code>rdfs:subClassOf</code>
             <p>DndCDEA-PbeABCD possession is a phosphorothioate-defense-system trait.</p>
             <ul>
@@ -339,11 +362,75 @@
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
 
-      <p class="no-match">No kg-microbe node embedding matched this record
-        in the 2026-04-25 deepwalk.</p>
+      <p class="match-method">Matched <strong>1</strong>
+        kg-microbe node
+        via <em>parent_proxy</em>.</p>
+      <ul class="kgm-nodes">
+
+        <li><code>METPO:1000188</code> <span class="dim-preview">[-0.956, -1.962, -3.148, +1.274, …]</span></li>
+
+      </ul>
+      <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
 
     </div>
 
+
+    <div class="card">
+      <h2>Nearest neighbors in embedding space</h2>
+      <p class="meta">Top-8 cosine-similar METPO traits
+        from the 2026-04-25 deepwalk (512-D).</p>
+      <ul class="nn-list">
+
+        <li>
+          <span class="nn-cat">upper</span>
+          <a href="../../traits/upper/quality.html">quality</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/jukab_system.html">JukAB system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/integrative_conjugative_element.html">integrative conjugative element</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/ig_like_schlafen_system.html">Ig-like Schlafen system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hypnos_system.html">Hypnos system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hna_system.html">Hna system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hma_system.html">Hma system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hesat_system.html">Hesat system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+      </ul>
+    </div>
 
 
 
@@ -437,6 +524,11 @@
     </dl>
   </div>
 
+
+  <div class="card rail-kgm">
+    <h2>kg-microbe</h2>
+    <p class="meta">1 matching node (parent_proxy)</p>
+  </div>
 
 </aside>
 </div>
@@ -770,7 +862,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed process sketch linking a DndCDEA-PbeABCD locus to host DNA phosphorothioation, PT-dependent PbeABCD antiviral activity, and inhibited replication of non-phosphorothioated viral DNA.", "edges": [{"description": "The DndCDEA modification module installs phosphorothioate marks on archaeal host DNA.", "evidence": [{"notes": "Xiong et al. support DndCDEA-dependent host DNA phosphorothioation in the PbeABCD-coupled system.", "reference": "DOI:10.1038/s41467-019-09390-9", "snippet": "involves DndCDEA-specific DNA phosphorothioate (PT) modification"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "dndcdea_pbeabcd_locus", "target": "dndcdea_dna_phosphorothioation"}, {"description": "DndCDEA-PbeABCD loci pair host-DNA phosphorothioation with PbeABCD antiviral activity.", "evidence": [{"notes": "Xiong et al. support the paired DndCDEA modification and PbeABCD effector architecture.", "reference": "DOI:10.1038/s41467-019-09390-9", "snippet": "can defend against viral attack together with pbeABCD"}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "dndcdea_pbeabcd_locus", "target": "pbeabcd_pt_dependent_virus_targeting"}, {"description": "PbeABCD antiviral activity depends on the presence of PT marks rather than direct PbeABCD-DndCDEA protein interactions.", "evidence": [{"notes": "Xiong et al. distinguish PT-dependent PbeABCD restriction from direct modification-effector protein coupling.", "reference": "DOI:10.1038/s41467-019-09390-9", "snippet": "depending on the presence of PT modifications"}], "id": "edge-3", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "dndcdea_dna_phosphorothioation", "target": "pbeabcd_pt_dependent_virus_targeting"}, {"description": "PbeABCD-dependent targeting inhibits replication of non-phosphorothioated viral DNA.", "evidence": [{"notes": "Xiong et al. observed impaired SNJ1 genome replication in cells expressing DndCDEA-PbeABCD.", "reference": "DOI:10.1038/s41467-019-09390-9", "snippet": "the subsequent viral genome replication process is significantly inhibited"}], "id": "edge-4", "is_orphan": false, "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "pbeabcd_pt_dependent_virus_targeting", "target": "viral_dna_replication"}, {"description": "PT-dependent PbeABCD antiviral activity realizes the DndCDEA-PbeABCD defense trait.", "evidence": [{"notes": "Xiong et al. support PbeABCD-mediated restriction as the system\u0027s antiviral output.", "reference": "DOI:10.1038/s41467-019-09390-9", "snippet": "DndCDEA-PbeABCD confers resistance against invading viruses"}], "id": "edge-5", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "pbeabcd_pt_dependent_virus_targeting", "target": "dndcdea_pbeabcd_system_trait"}, {"description": "DndCDEA-PbeABCD possession is a phosphorothioate-defense-system trait.", "evidence": [{"notes": "Isaev et al. place PbeABCD in the family of PT defense systems while distinguishing it from DndFGH.", "reference": "DOI:10.1134/S0006297921030081", "snippet": "instead of the dndFGH, the restriction function is performed by the pbeABCD gene cluster"}], "id": "edge-6", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "dndcdea_pbeabcd_system_trait", "target": "phosphorothioate_defense_system_trait"}, {"description": "DNA sulfur modification protein DndC (dndC, UniProtKB:A0A2K8SFY8) contributes to DndCDEA-PbeABCD system.", "evidence": [{"notes": "Supports the functional association between DNA sulfur modification protein DndC (UniProtKB:A0A2K8SFY8 in Spiroplasma floricola 23-6) and DndCDEA-PbeABCD system.", "reference": "DOI:10.1038/s41467-019-09390-9", "snippet": "a new archaeal defence system that involves DndCDEA-specific DNA phosphorothioate (PT) modification and the PbeABCD-mediated halt of virus propagation via inhibition of DNA replication"}], "id": "edge-7", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "dndcdea_pbeabcd_system_protein_component", "target": "dndcdea_pbeabcd_system_trait"}], "evidence_rows": [{"description": "The DndCDEA modification module installs phosphorothioate marks on archaeal host DNA.", "edge_id": "edge-1", "evidence": [{"notes": "Xiong et al. support DndCDEA-dependent host DNA phosphorothioation in the PbeABCD-coupled system.", "reference": "DOI:10.1038/s41467-019-09390-9", "snippet": "involves DndCDEA-specific DNA phosphorothioate (PT) modification"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "DndCDEA-PbeABCD locus", "target": "DndCDEA DNA phosphorothioation"}, {"description": "DndCDEA-PbeABCD loci pair host-DNA phosphorothioation with PbeABCD antiviral activity.", "edge_id": "edge-2", "evidence": [{"notes": "Xiong et al. support the paired DndCDEA modification and PbeABCD effector architecture.", "reference": "DOI:10.1038/s41467-019-09390-9", "snippet": "can defend against viral attack together with pbeABCD"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "DndCDEA-PbeABCD locus", "target": "PbeABCD PT-dependent virus targeting"}, {"description": "PbeABCD antiviral activity depends on the presence of PT marks rather than direct PbeABCD-DndCDEA protein interactions.", "edge_id": "edge-3", "evidence": [{"notes": "Xiong et al. distinguish PT-dependent PbeABCD restriction from direct modification-effector protein coupling.", "reference": "DOI:10.1038/s41467-019-09390-9", "snippet": "depending on the presence of PT modifications"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "DndCDEA DNA phosphorothioation", "target": "PbeABCD PT-dependent virus targeting"}, {"description": "PbeABCD-dependent targeting inhibits replication of non-phosphorothioated viral DNA.", "edge_id": "edge-4", "evidence": [{"notes": "Xiong et al. observed impaired SNJ1 genome replication in cells expressing DndCDEA-PbeABCD.", "reference": "DOI:10.1038/s41467-019-09390-9", "snippet": "the subsequent viral genome replication process is significantly inhibited"}], "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "PbeABCD PT-dependent virus targeting", "target": "viral DNA replication"}, {"description": "PT-dependent PbeABCD antiviral activity realizes the DndCDEA-PbeABCD defense trait.", "edge_id": "edge-5", "evidence": [{"notes": "Xiong et al. support PbeABCD-mediated restriction as the system\u0027s antiviral output.", "reference": "DOI:10.1038/s41467-019-09390-9", "snippet": "DndCDEA-PbeABCD confers resistance against invading viruses"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "PbeABCD PT-dependent virus targeting", "target": "DndCDEA-PbeABCD system"}, {"description": "DndCDEA-PbeABCD possession is a phosphorothioate-defense-system trait.", "edge_id": "edge-6", "evidence": [{"notes": "Isaev et al. place PbeABCD in the family of PT defense systems while distinguishing it from DndFGH.", "reference": "DOI:10.1134/S0006297921030081", "snippet": "instead of the dndFGH, the restriction function is performed by the pbeABCD gene cluster"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "DndCDEA-PbeABCD system", "target": "phosphorothioate defense system"}, {"description": "DNA sulfur modification protein DndC (dndC, UniProtKB:A0A2K8SFY8) contributes to DndCDEA-PbeABCD system.", "edge_id": "edge-7", "evidence": [{"notes": "Supports the functional association between DNA sulfur modification protein DndC (UniProtKB:A0A2K8SFY8 in Spiroplasma floricola 23-6) and DndCDEA-PbeABCD system.", "reference": "DOI:10.1038/s41467-019-09390-9", "snippet": "a new archaeal defence system that involves DndCDEA-specific DNA phosphorothioate (PT) modification and the PbeABCD-mediated halt of virus propagation via inhibition of DNA replication"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "DNA sulfur modification protein DndC", "target": "DndCDEA-PbeABCD system"}], "graph_id": "dndcdea_pbeabcd_pt_viral_replication_inhibition", "issues": [], "nodes": [{"color": "#ecfccb", "description": "DndCDEA-mediated installation of sequence-specific phosphorothioate marks on host DNA.", "grounding": null, "id": "dndcdea_dna_phosphorothioation", "is_orphan": false, "label": "DndCDEA DNA phosphorothioation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "An archaeal phosphorothioation-dependent antiviral locus pairing DndCDEA host-DNA phosphorothioation with PbeABCD restriction activity.", "grounding": null, "id": "dndcdea_pbeabcd_locus", "is_orphan": false, "label": "DndCDEA-PbeABCD locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Protein component (DNA sulfur modification protein DndC) associated with DndCDEA-PbeABCD system.", "grounding": "InterPro:IPR002500", "id": "dndcdea_pbeabcd_system_protein_component", "is_orphan": false, "label": "DNA sulfur modification protein DndC", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "UNREVIEWED", "entry_version": 20, "evidence": [{"notes": "Supports DNA sulfur modification protein DndC in DndCDEA-PbeABCD system; UniProtKB:A0A2K8SFY8 (dndC, DNA sulfur modification protein DndC) in Spiroplasma floricola 23-6 provides a verified protein exemplar.", "reference": "DOI:10.1038/s41467-019-09390-9", "snippet": "a new archaeal defence system that involves DndCDEA-specific DNA phosphorothioate (PT) modification and the PbeABCD-mediated halt of virus propagation via inhibition of DNA replication"}], "gene_symbol": "dndC", "protein_label": "DNA sulfur modification protein DndC", "proteome_id": "UP000231823", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (dndC, DNA sulfur modification protein DndC) associated with DndCDEA-PbeABCD system in Spiroplasma floricola 23-6.", "sequence_version": 1, "taxon_id": "NCBITaxon:1336749", "taxon_label": "Spiroplasma floricola 23-6", "uniprot_id": "UniProtKB:A0A2K8SFY8"}], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded DndCDEA-PbeABCD phosphorothioation-dependent antiviral defense system.", "grounding": "traitmech:000224", "id": "dndcdea_pbeabcd_system_trait", "is_orphan": false, "label": "DndCDEA-PbeABCD system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Phosphorothioate-dependent PbeABCD antiviral activity against invading DNA that lacks host PT marks.", "grounding": null, "id": "pbeabcd_pt_dependent_virus_targeting", "is_orphan": false, "label": "PbeABCD PT-dependent virus targeting", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded phosphorothioate-based antiviral defense system.", "grounding": "traitmech:000213", "id": "phosphorothioate_defense_system_trait", "is_orphan": false, "label": "phosphorothioate defense system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Replication of invading archaeal viral DNA after host cell entry.", "grounding": null, "id": "viral_dna_replication", "is_orphan": false, "label": "viral DNA replication", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "UNREVIEWED", "entry_version": 20, "evidence": [{"notes": "Supports DNA sulfur modification protein DndC in DndCDEA-PbeABCD system; UniProtKB:A0A2K8SFY8 (dndC, DNA sulfur modification protein DndC) in Spiroplasma floricola 23-6 provides a verified protein exemplar.", "reference": "DOI:10.1038/s41467-019-09390-9", "snippet": "a new archaeal defence system that involves DndCDEA-specific DNA phosphorothioate (PT) modification and the PbeABCD-mediated halt of virus propagation via inhibition of DNA replication"}], "gene_symbol": "dndC", "node_id": "dndcdea_pbeabcd_system_protein_component", "node_label": "DNA sulfur modification protein DndC", "protein_label": "DNA sulfur modification protein DndC", "proteome_id": "UP000231823", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (dndC, DNA sulfur modification protein DndC) associated with DndCDEA-PbeABCD system in Spiroplasma floricola 23-6.", "sequence_version": 1, "taxon_id": "NCBITaxon:1336749", "taxon_label": "Spiroplasma floricola 23-6", "uniprot_id": "UniProtKB:A0A2K8SFY8"}], "scope_notes": "The graph captures DndCDEA-PbeABCD restriction at the system level without asserting one universal host taxon, PT motif outside characterized haloarchaeal systems, PbeABCD subunit cycle, direct viral DNA cleavage, or relationship to bacterial DndFGH and Ssp-family systems.", "scope_status": "NONMECHANISTIC", "title": "DndCDEA-PbeABCD systems halt archaeal viral DNA replication"}];
+  var graphs = [{"description": "Evidence-backed process sketch linking a DndCDEA-PbeABCD locus to host DNA phosphorothioation, PT-dependent PbeABCD antiviral activity, and inhibited replication of non-phosphorothioated viral DNA.", "edges": [{"description": "The DndCDEA modification module installs phosphorothioate marks on archaeal host DNA.", "evidence": [{"notes": "Xiong et al. support DndCDEA-dependent host DNA phosphorothioation in the PbeABCD-coupled system.", "reference": "DOI:10.1038/s41467-019-09390-9", "snippet": "involves DndCDEA-specific DNA phosphorothioate (PT) modification"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "dndcdea_pbeabcd_locus", "target": "dndcdea_dna_phosphorothioation"}, {"description": "DndCDEA-PbeABCD loci pair host-DNA phosphorothioation with PbeABCD antiviral activity.", "evidence": [{"notes": "Xiong et al. support the paired DndCDEA modification and PbeABCD effector architecture.", "reference": "DOI:10.1038/s41467-019-09390-9", "snippet": "can defend against viral attack together with pbeABCD"}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "dndcdea_pbeabcd_locus", "target": "pbeabcd_pt_dependent_virus_targeting"}, {"description": "PbeABCD antiviral activity depends on the presence of PT marks rather than direct PbeABCD-DndCDEA protein interactions.", "evidence": [{"notes": "Xiong et al. distinguish PT-dependent PbeABCD restriction from direct modification-effector protein coupling.", "reference": "DOI:10.1038/s41467-019-09390-9", "snippet": "depending on the presence of PT modifications"}], "id": "edge-3", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "dndcdea_dna_phosphorothioation", "target": "pbeabcd_pt_dependent_virus_targeting"}, {"description": "PbeABCD-dependent targeting inhibits replication of non-phosphorothioated viral DNA.", "evidence": [{"notes": "Xiong et al. observed impaired SNJ1 genome replication in cells expressing DndCDEA-PbeABCD.", "reference": "DOI:10.1038/s41467-019-09390-9", "snippet": "the subsequent viral genome replication process is significantly inhibited"}], "id": "edge-4", "is_orphan": false, "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "pbeabcd_pt_dependent_virus_targeting", "target": "viral_dna_replication"}, {"description": "PT-dependent PbeABCD antiviral activity realizes the DndCDEA-PbeABCD defense trait.", "evidence": [{"notes": "Xiong et al. support PbeABCD-mediated restriction as the system\u0027s antiviral output.", "reference": "DOI:10.1038/s41467-019-09390-9", "snippet": "DndCDEA-PbeABCD confers resistance against invading viruses"}], "id": "edge-5", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "pbeabcd_pt_dependent_virus_targeting", "target": "dndcdea_pbeabcd_system_trait"}, {"description": "DndCDEA-PbeABCD possession is a phosphorothioate-defense-system trait.", "evidence": [{"notes": "Isaev et al. place PbeABCD in the family of PT defense systems while distinguishing it from DndFGH.", "reference": "DOI:10.1134/S0006297921030081", "snippet": "instead of the dndFGH, the restriction function is performed by the pbeABCD gene cluster"}], "id": "edge-6", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "dndcdea_pbeabcd_system_trait", "target": "phosphorothioate_defense_system_trait"}], "evidence_rows": [{"description": "The DndCDEA modification module installs phosphorothioate marks on archaeal host DNA.", "edge_id": "edge-1", "evidence": [{"notes": "Xiong et al. support DndCDEA-dependent host DNA phosphorothioation in the PbeABCD-coupled system.", "reference": "DOI:10.1038/s41467-019-09390-9", "snippet": "involves DndCDEA-specific DNA phosphorothioate (PT) modification"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "DndCDEA-PbeABCD locus", "source_grounding": null, "target": "DndCDEA DNA phosphorothioation", "target_grounding": null}, {"description": "DndCDEA-PbeABCD loci pair host-DNA phosphorothioation with PbeABCD antiviral activity.", "edge_id": "edge-2", "evidence": [{"notes": "Xiong et al. support the paired DndCDEA modification and PbeABCD effector architecture.", "reference": "DOI:10.1038/s41467-019-09390-9", "snippet": "can defend against viral attack together with pbeABCD"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "DndCDEA-PbeABCD locus", "source_grounding": null, "target": "PbeABCD PT-dependent virus targeting", "target_grounding": null}, {"description": "PbeABCD antiviral activity depends on the presence of PT marks rather than direct PbeABCD-DndCDEA protein interactions.", "edge_id": "edge-3", "evidence": [{"notes": "Xiong et al. distinguish PT-dependent PbeABCD restriction from direct modification-effector protein coupling.", "reference": "DOI:10.1038/s41467-019-09390-9", "snippet": "depending on the presence of PT modifications"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "DndCDEA DNA phosphorothioation", "source_grounding": null, "target": "PbeABCD PT-dependent virus targeting", "target_grounding": null}, {"description": "PbeABCD-dependent targeting inhibits replication of non-phosphorothioated viral DNA.", "edge_id": "edge-4", "evidence": [{"notes": "Xiong et al. observed impaired SNJ1 genome replication in cells expressing DndCDEA-PbeABCD.", "reference": "DOI:10.1038/s41467-019-09390-9", "snippet": "the subsequent viral genome replication process is significantly inhibited"}], "predicate": "mitigates", "predicate_id": "METPO:2007407", "source": "PbeABCD PT-dependent virus targeting", "source_grounding": null, "target": "viral DNA replication", "target_grounding": null}, {"description": "PT-dependent PbeABCD antiviral activity realizes the DndCDEA-PbeABCD defense trait.", "edge_id": "edge-5", "evidence": [{"notes": "Xiong et al. support PbeABCD-mediated restriction as the system\u0027s antiviral output.", "reference": "DOI:10.1038/s41467-019-09390-9", "snippet": "DndCDEA-PbeABCD confers resistance against invading viruses"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "PbeABCD PT-dependent virus targeting", "source_grounding": null, "target": "DndCDEA-PbeABCD system", "target_grounding": "traitmech:000224"}, {"description": "DndCDEA-PbeABCD possession is a phosphorothioate-defense-system trait.", "edge_id": "edge-6", "evidence": [{"notes": "Isaev et al. place PbeABCD in the family of PT defense systems while distinguishing it from DndFGH.", "reference": "DOI:10.1134/S0006297921030081", "snippet": "instead of the dndFGH, the restriction function is performed by the pbeABCD gene cluster"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "DndCDEA-PbeABCD system", "source_grounding": "traitmech:000224", "target": "phosphorothioate defense system", "target_grounding": "traitmech:000213"}], "graph_id": "dndcdea_pbeabcd_pt_viral_replication_inhibition", "issues": [], "nodes": [{"color": "#ecfccb", "description": "DndCDEA-mediated installation of sequence-specific phosphorothioate marks on host DNA.", "grounding": null, "id": "dndcdea_dna_phosphorothioation", "is_orphan": false, "label": "DndCDEA DNA phosphorothioation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "An archaeal phosphorothioation-dependent antiviral locus pairing DndCDEA host-DNA phosphorothioation with PbeABCD restriction activity.", "grounding": null, "id": "dndcdea_pbeabcd_locus", "is_orphan": false, "label": "DndCDEA-PbeABCD locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded DndCDEA-PbeABCD phosphorothioation-dependent antiviral defense system.", "grounding": "traitmech:000224", "id": "dndcdea_pbeabcd_system_trait", "is_orphan": false, "label": "DndCDEA-PbeABCD system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Phosphorothioate-dependent PbeABCD antiviral activity against invading DNA that lacks host PT marks.", "grounding": null, "id": "pbeabcd_pt_dependent_virus_targeting", "is_orphan": false, "label": "PbeABCD PT-dependent virus targeting", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded phosphorothioate-based antiviral defense system.", "grounding": "traitmech:000213", "id": "phosphorothioate_defense_system_trait", "is_orphan": false, "label": "phosphorothioate defense system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Replication of invading archaeal viral DNA after host cell entry.", "grounding": null, "id": "viral_dna_replication", "is_orphan": false, "label": "viral DNA replication", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "The graph captures DndCDEA-PbeABCD restriction at the system level without asserting one universal host taxon, PT motif outside characterized haloarchaeal systems, PbeABCD subunit cycle, direct viral DNA cleavage, or relationship to bacterial DndFGH and Ssp-family systems.", "scope_status": "NONMECHANISTIC", "title": "DndCDEA-PbeABCD systems halt archaeal viral DNA replication"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -790,13 +882,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-10-17 09:00 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

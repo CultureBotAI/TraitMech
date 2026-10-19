@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/genomics.html">GENOMICS</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/genomics.html">GENOMICS</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>ApeA system</h1>
     <p class="curie"><code>traitmech:000334</code> · CLASS · PROPOSED</p>
 
@@ -139,9 +150,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>Gao_Ape locus</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>ApeA HEPN RNase activity</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>ApeA loci encode a HEPN-domain antiviral RNase, and DefenseFinder models Gao_Ape as a single-profile ApeA system.</p>
             <ul>
 
@@ -180,9 +193,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>ApeA HEPN RNase activity</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>tRNA anticodon-loop cleavage</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>Activated ApeA HEPN RNase cleaves host tRNAs within their anticodon loops.</p>
             <ul>
 
@@ -203,9 +218,11 @@
 
           <li id="pathograph-1-edge-3">
             <strong>tRNA anticodon-loop cleavage</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>abortive phage restriction</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>ApeA-mediated host tRNA cleavage arrests translation during abortive phage defense.</p>
             <ul>
 
@@ -220,9 +237,11 @@
 
           <li id="pathograph-1-edge-4">
             <strong>abortive phage restriction</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>ApeA system</strong>
-            <code>METPO:2007700</code>
+            <code>traitmech:000334</code>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>ApeA low-MOI protection and abortive infection realize the ApeA system possession trait.</p>
             <ul>
 
@@ -243,9 +262,11 @@
 
           <li id="pathograph-1-edge-5">
             <strong>ApeA HEPN RNase activity</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>phage genomic RNA cleavage</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>Ec1ApeA HEPN RNase activity cleaves infecting RNA-phage genomes.</p>
             <ul>
 
@@ -260,9 +281,11 @@
 
           <li id="pathograph-1-edge-6">
             <strong>phage genomic RNA cleavage</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>non-abortive RNA-phage restriction</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>ApeA-dependent cleavage of the phage genome restricts RNA-phage replication without host-cell death.</p>
             <ul>
 
@@ -283,9 +306,11 @@
 
           <li id="pathograph-1-edge-7">
             <strong>non-abortive RNA-phage restriction</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>ApeA system</strong>
-            <code>METPO:2007700</code>
+            <code>traitmech:000334</code>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>Non-abortive RNA-phage restriction realizes one ApeA system defense output.</p>
             <ul>
 
@@ -300,8 +325,10 @@
 
           <li id="pathograph-1-edge-8">
             <strong>ApeA system</strong>
+            <code>traitmech:000334</code>
             <span class="edge-predicate">is a</span>
             <strong>phage defense system</strong>
+            <code>traitmech:000209</code>
             <code>rdfs:subClassOf</code>
             <p>ApeA system possession is a phage-defense-system trait.</p>
             <ul>
@@ -435,11 +462,75 @@
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
 
-      <p class="no-match">No kg-microbe node embedding matched this record
-        in the 2026-04-25 deepwalk.</p>
+      <p class="match-method">Matched <strong>1</strong>
+        kg-microbe node
+        via <em>parent_proxy</em>.</p>
+      <ul class="kgm-nodes">
+
+        <li><code>METPO:1000188</code> <span class="dim-preview">[-0.956, -1.962, -3.148, +1.274, …]</span></li>
+
+      </ul>
+      <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
 
     </div>
 
+
+    <div class="card">
+      <h2>Nearest neighbors in embedding space</h2>
+      <p class="meta">Top-8 cosine-similar METPO traits
+        from the 2026-04-25 deepwalk (512-D).</p>
+      <ul class="nn-list">
+
+        <li>
+          <span class="nn-cat">upper</span>
+          <a href="../../traits/upper/quality.html">quality</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hypnos_system.html">Hypnos system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hna_system.html">Hna system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hma_system.html">Hma system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hesat_system.html">Hesat system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_08_system.html">HEC-08 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_07_system.html">HEC-07 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_06_system.html">HEC-06 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+      </ul>
+    </div>
 
 
 
@@ -563,6 +654,11 @@
     </dl>
   </div>
 
+
+  <div class="card rail-kgm">
+    <h2>kg-microbe</h2>
+    <p class="meta">1 matching node (parent_proxy)</p>
+  </div>
 
 </aside>
 </div>
@@ -896,7 +992,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Conservative system-level sketch linking a Gao_Ape/ApeA locus to HEPN RNase activation, host tRNA anticodon-loop cleavage during DNA-phage abortive infection, phage genomic RNA cleavage during non-abortive RNA-phage defense, and the ApeA system trait.", "edges": [{"description": "ApeA loci encode a HEPN-domain antiviral RNase, and DefenseFinder models Gao_Ape as a single-profile ApeA system.", "evidence": [{"notes": "Juozapaitis et al. connect ApeA to HEPN-domain antiviral RNase activity.", "reference": "DOI:10.64898/2026.01.26.701840", "snippet": "Here, we focus on ApeA, a HEPN-domain antiviral protein that confers immunity through cleavage of host tRNAs within their anticodon loops."}, {"notes": "HEPN active-site mutations eliminated activity in Ec1ApeA and Ec2ApeA.", "reference": "DOI:10.64898/2026.01.26.701840", "snippet": "activity of Ec1ApeA and Ec2ApeA proteins was abrogated by HEPN active site R521A and R502A mutations respectively"}, {"notes": "Drobysheva et al. support HEPN-dependent Ec1ApeA and Ps2ApeA RNA-phage defense.", "reference": "DOI:10.64898/2026.03.20.713152", "snippet": "We show that two ApeA homologs, Ec1ApeA and Ps2ApeA, protect against a variety of single-stranded RNA phages."}, {"notes": "The DefenseFinder rules table models Gao_Ape as a single-mandatory-profile system with the Gao_Ape__ApeA profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Gao_Ape\tGao_Ape\t1\t1\tGao_Ape__ApeA\t\t\t"}, {"notes": "The DefenseFinder HMM inventory records ApeA under the Gao_Ape model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Gao_Ape__ApeA                                    | Gao_Ape__ApeA                                    | Gao_Ape                | Custom                  | 18     |"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "gao_ape_locus", "target": "apea_hepn_rnase_activity"}, {"description": "Activated ApeA HEPN RNase cleaves host tRNAs within their anticodon loops.", "evidence": [{"notes": "Ec1ApeA endoribonuclease activity targets the tRNA anticodon loop during phage infection.", "reference": "DOI:10.64898/2026.01.26.701840", "snippet": "Together, these results demonstrate that Ec1ApeA exhibits endoribonuclease activity targeting the tRNA anticodon loop, which is specifically activated during bacteriophage infection."}, {"notes": "Ec2ApeA tRNA-cleavage activity can be reconstituted in vitro with deoxydinucleotide ligands.", "reference": "DOI:10.64898/2026.01.26.701840", "snippet": "In vitro ribonuclease assays showed that under our experimental conditions tRNA cleavage by wild-type Ec2ApeA was activated by dpCG"}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "apea_hepn_rnase_activity", "target": "trna_anticodon_loop_cleavage"}, {"description": "ApeA-mediated host tRNA cleavage arrests translation during abortive phage defense.", "evidence": [{"notes": "Juozapaitis et al. link ApeA tRNA anticodon-loop cleavage to translation arrest during abortive infection.", "reference": "DOI:10.64898/2026.01.26.701840", "snippet": "We further demonstrate that ApeA functions as an abortive infection system by cleaving host tRNAs within their anticodon loops to arrest translation"}], "id": "edge-3", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "trna_anticodon_loop_cleavage", "target": "abortive_phage_restriction"}, {"description": "ApeA low-MOI protection and abortive infection realize the ApeA system possession trait.", "evidence": [{"notes": "Ec1ApeA and Ec2ApeA low-MOI protection supports ApeA as an abortive infection system.", "reference": "DOI:10.64898/2026.01.26.701840", "snippet": "Both ApeA homologs confer protection at low MOI but not at high MOI, when most cells are infected"}, {"notes": "The DefenseFinder article registry maps the named Gao_Ape system to the Gao et al. prokaryotic antiviral-immunity paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "Gao_Ape | 10\\.1126/science\\.aba0372 | Diverse enzymatic activities mediate antiviral immunity in prokaryotes"}], "id": "edge-4", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "abortive_phage_restriction", "target": "apea_system_trait"}, {"description": "Ec1ApeA HEPN RNase activity cleaves infecting RNA-phage genomes.", "evidence": [{"notes": "Drobysheva et al. show that ApeA can stop RNA-phage replication by direct phage-genome cleavage.", "reference": "DOI:10.64898/2026.03.20.713152", "snippet": "results show that ApeA stops RNA phage replication by directly cleaving the phage genome."}], "id": "edge-5", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "apea_hepn_rnase_activity", "target": "phage_genomic_rna_cleavage"}, {"description": "ApeA-dependent cleavage of the phage genome restricts RNA-phage replication without host-cell death.", "evidence": [{"notes": "Direct phage-genome cleavage is the main ApeA output in the assayed RNA-phage infection model.", "reference": "DOI:10.64898/2026.03.20.713152", "snippet": "results show that ApeA stops RNA phage replication by directly cleaving the phage genome."}, {"notes": "Drobysheva et al. found no evidence for Ec1ApeA-induced cell death during RNA-phage infection.", "reference": "DOI:10.64898/2026.03.20.713152", "snippet": "In the case of infection with RNA phages, we did not see evidence for induced cell death by Ec1ApeA"}], "id": "edge-6", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "phage_genomic_rna_cleavage", "target": "non_abortive_rna_phage_restriction"}, {"description": "Non-abortive RNA-phage restriction realizes one ApeA system defense output.", "evidence": [{"notes": "Drobysheva et al. show that ApeA homologs can protect against single-stranded RNA phages.", "reference": "DOI:10.64898/2026.03.20.713152", "snippet": "We show that two ApeA homologs, Ec1ApeA and Ps2ApeA, protect against a variety of single-stranded RNA phages."}], "id": "edge-7", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "non_abortive_rna_phage_restriction", "target": "apea_system_trait"}, {"description": "ApeA system possession is a phage-defense-system trait.", "evidence": [{"notes": "The DefenseFinder article registry maps the named Gao_Ape system to the Gao et al. prokaryotic antiviral-immunity paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "Gao_Ape | 10\\.1126/science\\.aba0372 | Diverse enzymatic activities mediate antiviral immunity in prokaryotes"}], "id": "edge-8", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "apea_system_trait", "target": "phage_defense_system"}, {"description": "Endoribonuclease ToxN (toxN, UniProtKB:B8X8Z0) contributes to ApeA system.", "evidence": [{"notes": "Supports the functional association between Endoribonuclease ToxN (UniProtKB:B8X8Z0 in Pectobacterium atrosepticum (Erwinia carotovora subsp. atroseptica)) and ApeA system.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| RM_Type_IIG__Type_IIG_1 | | RM_Type_IIG | Custom | 300 | | RM_Type_IIG__Type_IIG_2 | | RM_Type_IIG | Custom | 300 | | RM_Type_IIG__Type_IIG_3 | | RM_Type_IIG | Custom | 300 | | RM_Type_IIG__Type_IIG_4 | | RM_Type_IIG | Custom | 300 | | RM_Type_IIG__Type_IIG_5 | | RM_Type_IIG | Custom | 300 | | RM_Type_IIG__Type_IIG_FAM_0.einsi_trimmed | | RM_Type_IIG | Custom | 300 | | RM_Type_IIG__Type_IIG_FAM_1.einsi_trimmed | | RM_Type_IIG | Custom | 300 | | RM_Type_IIG__Type_IIG_FAM_2.einsi_trimmed | | RM_Type_IIG | Custom | 300 |"}], "id": "edge-9", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "gao_ape_system_protein_component", "target": "apea_system_trait"}], "evidence_rows": [{"description": "ApeA loci encode a HEPN-domain antiviral RNase, and DefenseFinder models Gao_Ape as a single-profile ApeA system.", "edge_id": "edge-1", "evidence": [{"notes": "Juozapaitis et al. connect ApeA to HEPN-domain antiviral RNase activity.", "reference": "DOI:10.64898/2026.01.26.701840", "snippet": "Here, we focus on ApeA, a HEPN-domain antiviral protein that confers immunity through cleavage of host tRNAs within their anticodon loops."}, {"notes": "HEPN active-site mutations eliminated activity in Ec1ApeA and Ec2ApeA.", "reference": "DOI:10.64898/2026.01.26.701840", "snippet": "activity of Ec1ApeA and Ec2ApeA proteins was abrogated by HEPN active site R521A and R502A mutations respectively"}, {"notes": "Drobysheva et al. support HEPN-dependent Ec1ApeA and Ps2ApeA RNA-phage defense.", "reference": "DOI:10.64898/2026.03.20.713152", "snippet": "We show that two ApeA homologs, Ec1ApeA and Ps2ApeA, protect against a variety of single-stranded RNA phages."}, {"notes": "The DefenseFinder rules table models Gao_Ape as a single-mandatory-profile system with the Gao_Ape__ApeA profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Gao_Ape\tGao_Ape\t1\t1\tGao_Ape__ApeA\t\t\t"}, {"notes": "The DefenseFinder HMM inventory records ApeA under the Gao_Ape model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Gao_Ape__ApeA                                    | Gao_Ape__ApeA                                    | Gao_Ape                | Custom                  | 18     |"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Gao_Ape locus", "target": "ApeA HEPN RNase activity"}, {"description": "Activated ApeA HEPN RNase cleaves host tRNAs within their anticodon loops.", "edge_id": "edge-2", "evidence": [{"notes": "Ec1ApeA endoribonuclease activity targets the tRNA anticodon loop during phage infection.", "reference": "DOI:10.64898/2026.01.26.701840", "snippet": "Together, these results demonstrate that Ec1ApeA exhibits endoribonuclease activity targeting the tRNA anticodon loop, which is specifically activated during bacteriophage infection."}, {"notes": "Ec2ApeA tRNA-cleavage activity can be reconstituted in vitro with deoxydinucleotide ligands.", "reference": "DOI:10.64898/2026.01.26.701840", "snippet": "In vitro ribonuclease assays showed that under our experimental conditions tRNA cleavage by wild-type Ec2ApeA was activated by dpCG"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "ApeA HEPN RNase activity", "target": "tRNA anticodon-loop cleavage"}, {"description": "ApeA-mediated host tRNA cleavage arrests translation during abortive phage defense.", "edge_id": "edge-3", "evidence": [{"notes": "Juozapaitis et al. link ApeA tRNA anticodon-loop cleavage to translation arrest during abortive infection.", "reference": "DOI:10.64898/2026.01.26.701840", "snippet": "We further demonstrate that ApeA functions as an abortive infection system by cleaving host tRNAs within their anticodon loops to arrest translation"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "tRNA anticodon-loop cleavage", "target": "abortive phage restriction"}, {"description": "ApeA low-MOI protection and abortive infection realize the ApeA system possession trait.", "edge_id": "edge-4", "evidence": [{"notes": "Ec1ApeA and Ec2ApeA low-MOI protection supports ApeA as an abortive infection system.", "reference": "DOI:10.64898/2026.01.26.701840", "snippet": "Both ApeA homologs confer protection at low MOI but not at high MOI, when most cells are infected"}, {"notes": "The DefenseFinder article registry maps the named Gao_Ape system to the Gao et al. prokaryotic antiviral-immunity paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "Gao_Ape | 10\\.1126/science\\.aba0372 | Diverse enzymatic activities mediate antiviral immunity in prokaryotes"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "abortive phage restriction", "target": "ApeA system"}, {"description": "Ec1ApeA HEPN RNase activity cleaves infecting RNA-phage genomes.", "edge_id": "edge-5", "evidence": [{"notes": "Drobysheva et al. show that ApeA can stop RNA-phage replication by direct phage-genome cleavage.", "reference": "DOI:10.64898/2026.03.20.713152", "snippet": "results show that ApeA stops RNA phage replication by directly cleaving the phage genome."}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "ApeA HEPN RNase activity", "target": "phage genomic RNA cleavage"}, {"description": "ApeA-dependent cleavage of the phage genome restricts RNA-phage replication without host-cell death.", "edge_id": "edge-6", "evidence": [{"notes": "Direct phage-genome cleavage is the main ApeA output in the assayed RNA-phage infection model.", "reference": "DOI:10.64898/2026.03.20.713152", "snippet": "results show that ApeA stops RNA phage replication by directly cleaving the phage genome."}, {"notes": "Drobysheva et al. found no evidence for Ec1ApeA-induced cell death during RNA-phage infection.", "reference": "DOI:10.64898/2026.03.20.713152", "snippet": "In the case of infection with RNA phages, we did not see evidence for induced cell death by Ec1ApeA"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "phage genomic RNA cleavage", "target": "non-abortive RNA-phage restriction"}, {"description": "Non-abortive RNA-phage restriction realizes one ApeA system defense output.", "edge_id": "edge-7", "evidence": [{"notes": "Drobysheva et al. show that ApeA homologs can protect against single-stranded RNA phages.", "reference": "DOI:10.64898/2026.03.20.713152", "snippet": "We show that two ApeA homologs, Ec1ApeA and Ps2ApeA, protect against a variety of single-stranded RNA phages."}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "non-abortive RNA-phage restriction", "target": "ApeA system"}, {"description": "ApeA system possession is a phage-defense-system trait.", "edge_id": "edge-8", "evidence": [{"notes": "The DefenseFinder article registry maps the named Gao_Ape system to the Gao et al. prokaryotic antiviral-immunity paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "Gao_Ape | 10\\.1126/science\\.aba0372 | Diverse enzymatic activities mediate antiviral immunity in prokaryotes"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "ApeA system", "target": "phage defense system"}, {"description": "Endoribonuclease ToxN (toxN, UniProtKB:B8X8Z0) contributes to ApeA system.", "edge_id": "edge-9", "evidence": [{"notes": "Supports the functional association between Endoribonuclease ToxN (UniProtKB:B8X8Z0 in Pectobacterium atrosepticum (Erwinia carotovora subsp. atroseptica)) and ApeA system.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| RM_Type_IIG__Type_IIG_1 | | RM_Type_IIG | Custom | 300 | | RM_Type_IIG__Type_IIG_2 | | RM_Type_IIG | Custom | 300 | | RM_Type_IIG__Type_IIG_3 | | RM_Type_IIG | Custom | 300 | | RM_Type_IIG__Type_IIG_4 | | RM_Type_IIG | Custom | 300 | | RM_Type_IIG__Type_IIG_5 | | RM_Type_IIG | Custom | 300 | | RM_Type_IIG__Type_IIG_FAM_0.einsi_trimmed | | RM_Type_IIG | Custom | 300 | | RM_Type_IIG__Type_IIG_FAM_1.einsi_trimmed | | RM_Type_IIG | Custom | 300 | | RM_Type_IIG__Type_IIG_FAM_2.einsi_trimmed | | RM_Type_IIG | Custom | 300 |"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Endoribonuclease ToxN", "target": "ApeA system"}], "graph_id": "gao_ape_hepn_rnase_restricts_phage", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Abortive-infection defense in which ApeA-mediated translation arrest restricts bacteriophage propagation.", "grounding": null, "id": "abortive_phage_restriction", "is_orphan": false, "label": "abortive phage restriction", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#cffafe", "description": "Triggered ApeA ribonuclease activity dependent on HEPN active-site residues.", "grounding": null, "id": "apea_hepn_rnase_activity", "is_orphan": false, "label": "ApeA HEPN RNase activity", "node_type": "MOLECULAR_FUNCTION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded ApeA phage-defense system.", "grounding": "traitmech:000334", "id": "apea_system_trait", "is_orphan": false, "label": "ApeA system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "A single-component ApeA antiphage locus represented by the DefenseFinder Gao_Ape__ApeA profile.", "grounding": null, "id": "gao_ape_locus", "is_orphan": false, "label": "Gao_Ape locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Protein component (Endoribonuclease ToxN) associated with ApeA system.", "grounding": "InterPro:IPR025911", "id": "gao_ape_system_protein_component", "is_orphan": false, "label": "Endoribonuclease ToxN", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 47, "evidence": [{"notes": "Supports Endoribonuclease ToxN in ApeA system; UniProtKB:B8X8Z0 (toxN, Endoribonuclease ToxN) in Pectobacterium atrosepticum (Erwinia carotovora subsp. atroseptica) provides a verified protein exemplar.", "reference": "DOI:10.64898/2026.01.26.701840", "snippet": "Together, these results demonstrate that Ec1ApeA exhibits endoribonuclease activity targeting the tRNA anticodon loop, which is specifically activated during bacteriophage infection."}], "gene_symbol": "toxN", "protein_label": "Endoribonuclease ToxN", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (toxN, Endoribonuclease ToxN) associated with ApeA system in Pectobacterium atrosepticum (Erwinia carotovora subsp. atroseptica).", "sequence_version": 1, "taxon_id": "NCBITaxon:29471", "taxon_label": "Pectobacterium atrosepticum (Erwinia carotovora subsp. atroseptica)", "uniprot_id": "UniProtKB:B8X8Z0"}], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Restriction of single-stranded RNA-phage replication without inducing ApeA-dependent host-cell death.", "grounding": null, "id": "non_abortive_rna_phage_restriction", "is_orphan": false, "label": "non-abortive RNA-phage restriction", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of one or more genome-encoded immune systems that inhibit bacteriophage infection.", "grounding": "traitmech:000209", "id": "phage_defense_system", "is_orphan": false, "label": "phage defense system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Direct ApeA-dependent cleavage of an RNA-phage genome by activated HEPN RNase.", "grounding": null, "id": "phage_genomic_rna_cleavage", "is_orphan": false, "label": "phage genomic RNA cleavage", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Cleavage of host tRNAs within their anticodon loops by activated ApeA HEPN RNase.", "grounding": null, "id": "trna_anticodon_loop_cleavage", "is_orphan": false, "label": "tRNA anticodon-loop cleavage", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 47, "evidence": [{"notes": "Supports Endoribonuclease ToxN in ApeA system; UniProtKB:B8X8Z0 (toxN, Endoribonuclease ToxN) in Pectobacterium atrosepticum (Erwinia carotovora subsp. atroseptica) provides a verified protein exemplar.", "reference": "DOI:10.64898/2026.01.26.701840", "snippet": "Together, these results demonstrate that Ec1ApeA exhibits endoribonuclease activity targeting the tRNA anticodon loop, which is specifically activated during bacteriophage infection."}], "gene_symbol": "toxN", "node_id": "gao_ape_system_protein_component", "node_label": "Endoribonuclease ToxN", "protein_label": "Endoribonuclease ToxN", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (toxN, Endoribonuclease ToxN) associated with ApeA system in Pectobacterium atrosepticum (Erwinia carotovora subsp. atroseptica).", "sequence_version": 1, "taxon_id": "NCBITaxon:29471", "taxon_label": "Pectobacterium atrosepticum (Erwinia carotovora subsp. atroseptica)", "uniprot_id": "UniProtKB:B8X8Z0"}], "scope_notes": "The graph captures ApeA as a named DefenseFinder single-component system with alternate HEPN RNase outputs while leaving natural-host accession breadth, homolog- and phage-class-specific trigger differences, direct RNA-loop sensing by Ec1ApeA, the exact DNA-phage nuclease inputs to Ec2ApeA deoxydinucleotide signaling, and activity of additional homologs unresolved.", "scope_status": "NONMECHANISTIC", "title": "ApeA loci activate HEPN RNase antiphage outputs"}];
+  var graphs = [{"description": "Conservative system-level sketch linking a Gao_Ape/ApeA locus to HEPN RNase activation, host tRNA anticodon-loop cleavage during DNA-phage abortive infection, phage genomic RNA cleavage during non-abortive RNA-phage defense, and the ApeA system trait.", "edges": [{"description": "ApeA loci encode a HEPN-domain antiviral RNase, and DefenseFinder models Gao_Ape as a single-profile ApeA system.", "evidence": [{"notes": "Juozapaitis et al. connect ApeA to HEPN-domain antiviral RNase activity.", "reference": "DOI:10.64898/2026.01.26.701840", "snippet": "Here, we focus on ApeA, a HEPN-domain antiviral protein that confers immunity through cleavage of host tRNAs within their anticodon loops."}, {"notes": "HEPN active-site mutations eliminated activity in Ec1ApeA and Ec2ApeA.", "reference": "DOI:10.64898/2026.01.26.701840", "snippet": "activity of Ec1ApeA and Ec2ApeA proteins was abrogated by HEPN active site R521A and R502A mutations respectively"}, {"notes": "Drobysheva et al. support HEPN-dependent Ec1ApeA and Ps2ApeA RNA-phage defense.", "reference": "DOI:10.64898/2026.03.20.713152", "snippet": "We show that two ApeA homologs, Ec1ApeA and Ps2ApeA, protect against a variety of single-stranded RNA phages."}, {"notes": "The DefenseFinder rules table models Gao_Ape as a single-mandatory-profile system with the Gao_Ape__ApeA profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Gao_Ape\tGao_Ape\t1\t1\tGao_Ape__ApeA\t\t\t"}, {"notes": "The DefenseFinder HMM inventory records ApeA under the Gao_Ape model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Gao_Ape__ApeA                                    | Gao_Ape__ApeA                                    | Gao_Ape                | Custom                  | 18     |"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "gao_ape_locus", "target": "apea_hepn_rnase_activity"}, {"description": "Activated ApeA HEPN RNase cleaves host tRNAs within their anticodon loops.", "evidence": [{"notes": "Ec1ApeA endoribonuclease activity targets the tRNA anticodon loop during phage infection.", "reference": "DOI:10.64898/2026.01.26.701840", "snippet": "Together, these results demonstrate that Ec1ApeA exhibits endoribonuclease activity targeting the tRNA anticodon loop, which is specifically activated during bacteriophage infection."}, {"notes": "Ec2ApeA tRNA-cleavage activity can be reconstituted in vitro with deoxydinucleotide ligands.", "reference": "DOI:10.64898/2026.01.26.701840", "snippet": "In vitro ribonuclease assays showed that under our experimental conditions tRNA cleavage by wild-type Ec2ApeA was activated by dpCG"}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "apea_hepn_rnase_activity", "target": "trna_anticodon_loop_cleavage"}, {"description": "ApeA-mediated host tRNA cleavage arrests translation during abortive phage defense.", "evidence": [{"notes": "Juozapaitis et al. link ApeA tRNA anticodon-loop cleavage to translation arrest during abortive infection.", "reference": "DOI:10.64898/2026.01.26.701840", "snippet": "We further demonstrate that ApeA functions as an abortive infection system by cleaving host tRNAs within their anticodon loops to arrest translation"}], "id": "edge-3", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "trna_anticodon_loop_cleavage", "target": "abortive_phage_restriction"}, {"description": "ApeA low-MOI protection and abortive infection realize the ApeA system possession trait.", "evidence": [{"notes": "Ec1ApeA and Ec2ApeA low-MOI protection supports ApeA as an abortive infection system.", "reference": "DOI:10.64898/2026.01.26.701840", "snippet": "Both ApeA homologs confer protection at low MOI but not at high MOI, when most cells are infected"}, {"notes": "The DefenseFinder article registry maps the named Gao_Ape system to the Gao et al. prokaryotic antiviral-immunity paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "Gao_Ape | 10\\.1126/science\\.aba0372 | Diverse enzymatic activities mediate antiviral immunity in prokaryotes"}], "id": "edge-4", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "abortive_phage_restriction", "target": "apea_system_trait"}, {"description": "Ec1ApeA HEPN RNase activity cleaves infecting RNA-phage genomes.", "evidence": [{"notes": "Drobysheva et al. show that ApeA can stop RNA-phage replication by direct phage-genome cleavage.", "reference": "DOI:10.64898/2026.03.20.713152", "snippet": "results show that ApeA stops RNA phage replication by directly cleaving the phage genome."}], "id": "edge-5", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "apea_hepn_rnase_activity", "target": "phage_genomic_rna_cleavage"}, {"description": "ApeA-dependent cleavage of the phage genome restricts RNA-phage replication without host-cell death.", "evidence": [{"notes": "Direct phage-genome cleavage is the main ApeA output in the assayed RNA-phage infection model.", "reference": "DOI:10.64898/2026.03.20.713152", "snippet": "results show that ApeA stops RNA phage replication by directly cleaving the phage genome."}, {"notes": "Drobysheva et al. found no evidence for Ec1ApeA-induced cell death during RNA-phage infection.", "reference": "DOI:10.64898/2026.03.20.713152", "snippet": "In the case of infection with RNA phages, we did not see evidence for induced cell death by Ec1ApeA"}], "id": "edge-6", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "phage_genomic_rna_cleavage", "target": "non_abortive_rna_phage_restriction"}, {"description": "Non-abortive RNA-phage restriction realizes one ApeA system defense output.", "evidence": [{"notes": "Drobysheva et al. show that ApeA homologs can protect against single-stranded RNA phages.", "reference": "DOI:10.64898/2026.03.20.713152", "snippet": "We show that two ApeA homologs, Ec1ApeA and Ps2ApeA, protect against a variety of single-stranded RNA phages."}], "id": "edge-7", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "non_abortive_rna_phage_restriction", "target": "apea_system_trait"}, {"description": "ApeA system possession is a phage-defense-system trait.", "evidence": [{"notes": "The DefenseFinder article registry maps the named Gao_Ape system to the Gao et al. prokaryotic antiviral-immunity paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "Gao_Ape | 10\\.1126/science\\.aba0372 | Diverse enzymatic activities mediate antiviral immunity in prokaryotes"}], "id": "edge-8", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "apea_system_trait", "target": "phage_defense_system"}], "evidence_rows": [{"description": "ApeA loci encode a HEPN-domain antiviral RNase, and DefenseFinder models Gao_Ape as a single-profile ApeA system.", "edge_id": "edge-1", "evidence": [{"notes": "Juozapaitis et al. connect ApeA to HEPN-domain antiviral RNase activity.", "reference": "DOI:10.64898/2026.01.26.701840", "snippet": "Here, we focus on ApeA, a HEPN-domain antiviral protein that confers immunity through cleavage of host tRNAs within their anticodon loops."}, {"notes": "HEPN active-site mutations eliminated activity in Ec1ApeA and Ec2ApeA.", "reference": "DOI:10.64898/2026.01.26.701840", "snippet": "activity of Ec1ApeA and Ec2ApeA proteins was abrogated by HEPN active site R521A and R502A mutations respectively"}, {"notes": "Drobysheva et al. support HEPN-dependent Ec1ApeA and Ps2ApeA RNA-phage defense.", "reference": "DOI:10.64898/2026.03.20.713152", "snippet": "We show that two ApeA homologs, Ec1ApeA and Ps2ApeA, protect against a variety of single-stranded RNA phages."}, {"notes": "The DefenseFinder rules table models Gao_Ape as a single-mandatory-profile system with the Gao_Ape__ApeA profile.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Gao_Ape\tGao_Ape\t1\t1\tGao_Ape__ApeA\t\t\t"}, {"notes": "The DefenseFinder HMM inventory records ApeA under the Gao_Ape model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Gao_Ape__ApeA                                    | Gao_Ape__ApeA                                    | Gao_Ape                | Custom                  | 18     |"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Gao_Ape locus", "source_grounding": null, "target": "ApeA HEPN RNase activity", "target_grounding": null}, {"description": "Activated ApeA HEPN RNase cleaves host tRNAs within their anticodon loops.", "edge_id": "edge-2", "evidence": [{"notes": "Ec1ApeA endoribonuclease activity targets the tRNA anticodon loop during phage infection.", "reference": "DOI:10.64898/2026.01.26.701840", "snippet": "Together, these results demonstrate that Ec1ApeA exhibits endoribonuclease activity targeting the tRNA anticodon loop, which is specifically activated during bacteriophage infection."}, {"notes": "Ec2ApeA tRNA-cleavage activity can be reconstituted in vitro with deoxydinucleotide ligands.", "reference": "DOI:10.64898/2026.01.26.701840", "snippet": "In vitro ribonuclease assays showed that under our experimental conditions tRNA cleavage by wild-type Ec2ApeA was activated by dpCG"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "ApeA HEPN RNase activity", "source_grounding": null, "target": "tRNA anticodon-loop cleavage", "target_grounding": null}, {"description": "ApeA-mediated host tRNA cleavage arrests translation during abortive phage defense.", "edge_id": "edge-3", "evidence": [{"notes": "Juozapaitis et al. link ApeA tRNA anticodon-loop cleavage to translation arrest during abortive infection.", "reference": "DOI:10.64898/2026.01.26.701840", "snippet": "We further demonstrate that ApeA functions as an abortive infection system by cleaving host tRNAs within their anticodon loops to arrest translation"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "tRNA anticodon-loop cleavage", "source_grounding": null, "target": "abortive phage restriction", "target_grounding": null}, {"description": "ApeA low-MOI protection and abortive infection realize the ApeA system possession trait.", "edge_id": "edge-4", "evidence": [{"notes": "Ec1ApeA and Ec2ApeA low-MOI protection supports ApeA as an abortive infection system.", "reference": "DOI:10.64898/2026.01.26.701840", "snippet": "Both ApeA homologs confer protection at low MOI but not at high MOI, when most cells are infected"}, {"notes": "The DefenseFinder article registry maps the named Gao_Ape system to the Gao et al. prokaryotic antiviral-immunity paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "Gao_Ape | 10\\.1126/science\\.aba0372 | Diverse enzymatic activities mediate antiviral immunity in prokaryotes"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "abortive phage restriction", "source_grounding": null, "target": "ApeA system", "target_grounding": "traitmech:000334"}, {"description": "Ec1ApeA HEPN RNase activity cleaves infecting RNA-phage genomes.", "edge_id": "edge-5", "evidence": [{"notes": "Drobysheva et al. show that ApeA can stop RNA-phage replication by direct phage-genome cleavage.", "reference": "DOI:10.64898/2026.03.20.713152", "snippet": "results show that ApeA stops RNA phage replication by directly cleaving the phage genome."}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "ApeA HEPN RNase activity", "source_grounding": null, "target": "phage genomic RNA cleavage", "target_grounding": null}, {"description": "ApeA-dependent cleavage of the phage genome restricts RNA-phage replication without host-cell death.", "edge_id": "edge-6", "evidence": [{"notes": "Direct phage-genome cleavage is the main ApeA output in the assayed RNA-phage infection model.", "reference": "DOI:10.64898/2026.03.20.713152", "snippet": "results show that ApeA stops RNA phage replication by directly cleaving the phage genome."}, {"notes": "Drobysheva et al. found no evidence for Ec1ApeA-induced cell death during RNA-phage infection.", "reference": "DOI:10.64898/2026.03.20.713152", "snippet": "In the case of infection with RNA phages, we did not see evidence for induced cell death by Ec1ApeA"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "phage genomic RNA cleavage", "source_grounding": null, "target": "non-abortive RNA-phage restriction", "target_grounding": null}, {"description": "Non-abortive RNA-phage restriction realizes one ApeA system defense output.", "edge_id": "edge-7", "evidence": [{"notes": "Drobysheva et al. show that ApeA homologs can protect against single-stranded RNA phages.", "reference": "DOI:10.64898/2026.03.20.713152", "snippet": "We show that two ApeA homologs, Ec1ApeA and Ps2ApeA, protect against a variety of single-stranded RNA phages."}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "non-abortive RNA-phage restriction", "source_grounding": null, "target": "ApeA system", "target_grounding": "traitmech:000334"}, {"description": "ApeA system possession is a phage-defense-system trait.", "edge_id": "edge-8", "evidence": [{"notes": "The DefenseFinder article registry maps the named Gao_Ape system to the Gao et al. prokaryotic antiviral-immunity paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "Gao_Ape | 10\\.1126/science\\.aba0372 | Diverse enzymatic activities mediate antiviral immunity in prokaryotes"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "ApeA system", "source_grounding": "traitmech:000334", "target": "phage defense system", "target_grounding": "traitmech:000209"}], "graph_id": "gao_ape_hepn_rnase_restricts_phage", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Abortive-infection defense in which ApeA-mediated translation arrest restricts bacteriophage propagation.", "grounding": null, "id": "abortive_phage_restriction", "is_orphan": false, "label": "abortive phage restriction", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#cffafe", "description": "Triggered ApeA ribonuclease activity dependent on HEPN active-site residues.", "grounding": null, "id": "apea_hepn_rnase_activity", "is_orphan": false, "label": "ApeA HEPN RNase activity", "node_type": "MOLECULAR_FUNCTION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded ApeA phage-defense system.", "grounding": "traitmech:000334", "id": "apea_system_trait", "is_orphan": false, "label": "ApeA system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "A single-component ApeA antiphage locus represented by the DefenseFinder Gao_Ape__ApeA profile.", "grounding": null, "id": "gao_ape_locus", "is_orphan": false, "label": "Gao_Ape locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Restriction of single-stranded RNA-phage replication without inducing ApeA-dependent host-cell death.", "grounding": null, "id": "non_abortive_rna_phage_restriction", "is_orphan": false, "label": "non-abortive RNA-phage restriction", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of one or more genome-encoded immune systems that inhibit bacteriophage infection.", "grounding": "traitmech:000209", "id": "phage_defense_system", "is_orphan": false, "label": "phage defense system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Direct ApeA-dependent cleavage of an RNA-phage genome by activated HEPN RNase.", "grounding": null, "id": "phage_genomic_rna_cleavage", "is_orphan": false, "label": "phage genomic RNA cleavage", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Cleavage of host tRNAs within their anticodon loops by activated ApeA HEPN RNase.", "grounding": null, "id": "trna_anticodon_loop_cleavage", "is_orphan": false, "label": "tRNA anticodon-loop cleavage", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "The graph captures ApeA as a named DefenseFinder single-component system with alternate HEPN RNase outputs while leaving natural-host accession breadth, homolog- and phage-class-specific trigger differences, direct RNA-loop sensing by Ec1ApeA, the exact DNA-phage nuclease inputs to Ec2ApeA deoxydinucleotide signaling, and activity of additional homologs unresolved.", "scope_status": "NONMECHANISTIC", "title": "ApeA loci activate HEPN RNase antiphage outputs"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -916,13 +1012,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-10-17 09:00 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

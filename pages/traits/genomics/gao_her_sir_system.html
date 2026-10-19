@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/genomics.html">GENOMICS</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/genomics.html">GENOMICS</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>Gao-Her-SIR system</h1>
     <p class="curie"><code>traitmech:000362</code> · CLASS · PROPOSED</p>
 
@@ -103,9 +114,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>Gao_Her_SIR locus</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>Gao 2020 antiviral cassette defense</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>DefenseFinder maps the broader Gao_Her family key to the Gao et al. systematic antiphage-system discovery paper and models Gao_Her_SIR as a two-profile system requiring HerA_SIR2 and SIR2.</p>
             <ul>
 
@@ -144,9 +157,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>Gao 2020 antiviral cassette defense</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>Gao-Her-SIR system</strong>
-            <code>METPO:2007700</code>
+            <code>traitmech:000362</code>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>Gao_Her_SIR-associated antiviral cassette defense realizes the Gao-Her-SIR system trait.</p>
             <ul>
 
@@ -161,8 +176,10 @@
 
           <li id="pathograph-1-edge-3">
             <strong>Gao-Her-SIR system</strong>
+            <code>traitmech:000362</code>
             <span class="edge-predicate">is a</span>
             <strong>Gao-Her system</strong>
+            <code>traitmech:000409</code>
             <code>rdfs:subClassOf</code>
             <p>Gao-Her-SIR system possession is a Gao-Her family phage-defense-system trait.</p>
             <ul>
@@ -298,11 +315,75 @@
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
 
-      <p class="no-match">No kg-microbe node embedding matched this record
-        in the 2026-04-25 deepwalk.</p>
+      <p class="match-method">Matched <strong>1</strong>
+        kg-microbe node
+        via <em>parent_proxy</em>.</p>
+      <ul class="kgm-nodes">
+
+        <li><code>METPO:1000188</code> <span class="dim-preview">[-0.956, -1.962, -3.148, +1.274, …]</span></li>
+
+      </ul>
+      <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
 
     </div>
 
+
+    <div class="card">
+      <h2>Nearest neighbors in embedding space</h2>
+      <p class="meta">Top-8 cosine-similar METPO traits
+        from the 2026-04-25 deepwalk (512-D).</p>
+      <ul class="nn-list">
+
+        <li>
+          <span class="nn-cat">upper</span>
+          <a href="../../traits/upper/quality.html">quality</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hypnos_system.html">Hypnos system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hna_system.html">Hna system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hma_system.html">Hma system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hesat_system.html">Hesat system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_08_system.html">HEC-08 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_07_system.html">HEC-07 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hec_06_system.html">HEC-06 system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+      </ul>
+    </div>
 
 
 
@@ -426,6 +507,11 @@
     </dl>
   </div>
 
+
+  <div class="card rail-kgm">
+    <h2>kg-microbe</h2>
+    <p class="meta">1 matching node (parent_proxy)</p>
+  </div>
 
 </aside>
 </div>
@@ -759,7 +845,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Conservative system-level sketch linking possession of a Gao_Her_SIR locus to Gao et al. antiviral cassette defense without asserting the unresolved Her-SIR component activities.", "edges": [{"description": "DefenseFinder maps the broader Gao_Her family key to the Gao et al. systematic antiphage-system discovery paper and models Gao_Her_SIR as a two-profile system requiring HerA_SIR2 and SIR2.", "evidence": [{"notes": "Gao et al. support bacteriophage protection by widespread antiviral gene cassettes.", "reference": "PMID:32855333", "snippet": "By systematic defense gene prediction and heterologous reconstitution, here we discover 29 widespread antiviral gene cassettes, collectively present in 32% of all sequenced bacterial and archaeal genomes, that mediate protection against specific bacteriophages."}, {"notes": "The DefenseFinder article registry maps the broader Gao_Her family key to the Gao et al. prokaryotic antiviral-immunity paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "Gao_Her | 10\\.1126/science\\.aba0372 | Diverse enzymatic activities mediate antiviral immunity in prokaryotes"}, {"notes": "The DefenseFinder rules table models Gao_Her_SIR as a two-profile system requiring Gao_Her_SIR__HerA_SIR2 and Gao_Her_SIR__SIR2.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Gao_Her\tGao_Her_SIR\t2\t2\tGao_Her_SIR__HerA_SIR2, Gao_Her_SIR__SIR2"}, {"notes": "The DefenseFinder HMM inventory records Gao_Her_SIR__HerA_SIR2 under Gao_Her_SIR.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Gao_Her_SIR__HerA_SIR2                           | Gao_Her_SIR__HerA_SIR2                           | Gao_Her_SIR            | Custom                  | 43     |"}, {"notes": "The DefenseFinder HMM inventory records Gao_Her_SIR__SIR2 under Gao_Her_SIR.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Gao_Her_SIR__SIR2                                | Gao_Her_SIR__SIR2                                | Gao_Her_SIR            | Custom                  | 34     |"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "gao_her_sir_locus", "target": "gao_2020_antiviral_cassette_defense"}, {"description": "Gao_Her_SIR-associated antiviral cassette defense realizes the Gao-Her-SIR system trait.", "evidence": [{"notes": "Gao et al. support bacteriophage protection by widespread antiviral gene cassettes.", "reference": "PMID:32855333", "snippet": "By systematic defense gene prediction and heterologous reconstitution, here we discover 29 widespread antiviral gene cassettes, collectively present in 32% of all sequenced bacterial and archaeal genomes, that mediate protection against specific bacteriophages."}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "gao_2020_antiviral_cassette_defense", "target": "gao_her_sir_system_trait"}, {"description": "Gao-Her-SIR system possession is a Gao-Her family phage-defense-system trait.", "evidence": [{"notes": "The DefenseFinder rules table models Gao_Her_SIR as a two-profile Gao_Her subsystem requiring Gao_Her_SIR__HerA_SIR2 and Gao_Her_SIR__SIR2.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Gao_Her\tGao_Her_SIR\t2\t2\tGao_Her_SIR__HerA_SIR2, Gao_Her_SIR__SIR2"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "gao_her_sir_system_trait", "target": "gao_her_system"}, {"description": "NAD(+) hydrolase ThsA (thsA, UniProtKB:P0DW59) contributes to Gao-Her-SIR system.", "evidence": [{"notes": "Supports the functional association between NAD(+) hydrolase ThsA (UniProtKB:P0DW59 in Acinetobacter baumannii (strain 532279)) and Gao-Her-SIR system.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Gao_Her_DUF__HerA_DUF | Gao_Her_DUF__HerA_DUF | Gao_Her_DUF | Custom | 20 |"}], "id": "edge-4", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "gao_her_sir_system_protein_component", "target": "gao_her_sir_system_trait"}], "evidence_rows": [{"description": "DefenseFinder maps the broader Gao_Her family key to the Gao et al. systematic antiphage-system discovery paper and models Gao_Her_SIR as a two-profile system requiring HerA_SIR2 and SIR2.", "edge_id": "edge-1", "evidence": [{"notes": "Gao et al. support bacteriophage protection by widespread antiviral gene cassettes.", "reference": "PMID:32855333", "snippet": "By systematic defense gene prediction and heterologous reconstitution, here we discover 29 widespread antiviral gene cassettes, collectively present in 32% of all sequenced bacterial and archaeal genomes, that mediate protection against specific bacteriophages."}, {"notes": "The DefenseFinder article registry maps the broader Gao_Her family key to the Gao et al. prokaryotic antiviral-immunity paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "Gao_Her | 10\\.1126/science\\.aba0372 | Diverse enzymatic activities mediate antiviral immunity in prokaryotes"}, {"notes": "The DefenseFinder rules table models Gao_Her_SIR as a two-profile system requiring Gao_Her_SIR__HerA_SIR2 and Gao_Her_SIR__SIR2.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Gao_Her\tGao_Her_SIR\t2\t2\tGao_Her_SIR__HerA_SIR2, Gao_Her_SIR__SIR2"}, {"notes": "The DefenseFinder HMM inventory records Gao_Her_SIR__HerA_SIR2 under Gao_Her_SIR.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Gao_Her_SIR__HerA_SIR2                           | Gao_Her_SIR__HerA_SIR2                           | Gao_Her_SIR            | Custom                  | 43     |"}, {"notes": "The DefenseFinder HMM inventory records Gao_Her_SIR__SIR2 under Gao_Her_SIR.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Gao_Her_SIR__SIR2                                | Gao_Her_SIR__SIR2                                | Gao_Her_SIR            | Custom                  | 34     |"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Gao_Her_SIR locus", "target": "Gao 2020 antiviral cassette defense"}, {"description": "Gao_Her_SIR-associated antiviral cassette defense realizes the Gao-Her-SIR system trait.", "edge_id": "edge-2", "evidence": [{"notes": "Gao et al. support bacteriophage protection by widespread antiviral gene cassettes.", "reference": "PMID:32855333", "snippet": "By systematic defense gene prediction and heterologous reconstitution, here we discover 29 widespread antiviral gene cassettes, collectively present in 32% of all sequenced bacterial and archaeal genomes, that mediate protection against specific bacteriophages."}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "Gao 2020 antiviral cassette defense", "target": "Gao-Her-SIR system"}, {"description": "Gao-Her-SIR system possession is a Gao-Her family phage-defense-system trait.", "edge_id": "edge-3", "evidence": [{"notes": "The DefenseFinder rules table models Gao_Her_SIR as a two-profile Gao_Her subsystem requiring Gao_Her_SIR__HerA_SIR2 and Gao_Her_SIR__SIR2.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Gao_Her\tGao_Her_SIR\t2\t2\tGao_Her_SIR__HerA_SIR2, Gao_Her_SIR__SIR2"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "Gao-Her-SIR system", "target": "Gao-Her system"}, {"description": "NAD(+) hydrolase ThsA (thsA, UniProtKB:P0DW59) contributes to Gao-Her-SIR system.", "edge_id": "edge-4", "evidence": [{"notes": "Supports the functional association between NAD(+) hydrolase ThsA (UniProtKB:P0DW59 in Acinetobacter baumannii (strain 532279)) and Gao-Her-SIR system.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Gao_Her_DUF__HerA_DUF | Gao_Her_DUF__HerA_DUF | Gao_Her_DUF | Custom | 20 |"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "NAD(+) hydrolase ThsA", "target": "Gao-Her-SIR system"}], "graph_id": "gao_her_sir_locus_restricts_phage", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Bacteriophage protection by one of the antiviral gene cassettes described in the Gao et al. systematic defense-gene discovery campaign.", "grounding": null, "id": "gao_2020_antiviral_cassette_defense", "is_orphan": false, "label": "Gao 2020 antiviral cassette defense", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "A DefenseFinder Gao_Her_SIR phage-defense locus represented by custom HerA_SIR2 and SIR2 profiles.", "grounding": null, "id": "gao_her_sir_locus", "is_orphan": false, "label": "Gao_Her_SIR locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Protein component (NAD(+) hydrolase ThsA) associated with Gao-Her-SIR system.", "grounding": null, "id": "gao_her_sir_system_protein_component", "is_orphan": false, "label": "NAD(+) hydrolase ThsA", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 10, "evidence": [{"notes": "Supports NAD(+) hydrolase ThsA in Gao-Her-SIR system; UniProtKB:P0DW59 (thsA, NAD(+) hydrolase ThsA) in Acinetobacter baumannii (strain 532279) provides a verified protein exemplar.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Gao_Her_SIR__HerA_SIR2 | Gao_Her_SIR__HerA_SIR2 | Gao_Her_SIR | Custom | 43 |"}], "gene_symbol": "thsA", "protein_label": "NAD(+) hydrolase ThsA", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (thsA, NAD(+) hydrolase ThsA) associated with Gao-Her-SIR system in Acinetobacter baumannii (strain 532279).", "sequence_version": 1, "taxon_id": "NCBITaxon:1310692", "taxon_label": "Acinetobacter baumannii (strain 532279)", "uniprot_id": "UniProtKB:P0DW59"}], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded Gao-Her-SIR phage-defense system.", "grounding": "traitmech:000362", "id": "gao_her_sir_system_trait", "is_orphan": false, "label": "Gao-Her-SIR system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded Gao-Her phage-defense system.", "grounding": "traitmech:000409", "id": "gao_her_system", "is_orphan": false, "label": "Gao-Her system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 10, "evidence": [{"notes": "Supports NAD(+) hydrolase ThsA in Gao-Her-SIR system; UniProtKB:P0DW59 (thsA, NAD(+) hydrolase ThsA) in Acinetobacter baumannii (strain 532279) provides a verified protein exemplar.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Gao_Her_SIR__HerA_SIR2 | Gao_Her_SIR__HerA_SIR2 | Gao_Her_SIR | Custom | 43 |"}], "gene_symbol": "thsA", "node_id": "gao_her_sir_system_protein_component", "node_label": "NAD(+) hydrolase ThsA", "protein_label": "NAD(+) hydrolase ThsA", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (thsA, NAD(+) hydrolase ThsA) associated with Gao-Her-SIR system in Acinetobacter baumannii (strain 532279).", "sequence_version": 1, "taxon_id": "NCBITaxon:1310692", "taxon_label": "Acinetobacter baumannii (strain 532279)", "uniprot_id": "UniProtKB:P0DW59"}], "scope_notes": "The graph captures Gao-Her-SIR as a named DefenseFinder two-profile Gao-family system while leaving natural hosts, HerA_SIR2/SIR2 protein functions, phage triggers, and direct effector activity unresolved.", "scope_status": "NONMECHANISTIC", "title": "Gao-Her-SIR loci confer bacterial phage defense"}];
+  var graphs = [{"description": "Conservative system-level sketch linking possession of a Gao_Her_SIR locus to Gao et al. antiviral cassette defense without asserting the unresolved Her-SIR component activities.", "edges": [{"description": "DefenseFinder maps the broader Gao_Her family key to the Gao et al. systematic antiphage-system discovery paper and models Gao_Her_SIR as a two-profile system requiring HerA_SIR2 and SIR2.", "evidence": [{"notes": "Gao et al. support bacteriophage protection by widespread antiviral gene cassettes.", "reference": "PMID:32855333", "snippet": "By systematic defense gene prediction and heterologous reconstitution, here we discover 29 widespread antiviral gene cassettes, collectively present in 32% of all sequenced bacterial and archaeal genomes, that mediate protection against specific bacteriophages."}, {"notes": "The DefenseFinder article registry maps the broader Gao_Her family key to the Gao et al. prokaryotic antiviral-immunity paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "Gao_Her | 10\\.1126/science\\.aba0372 | Diverse enzymatic activities mediate antiviral immunity in prokaryotes"}, {"notes": "The DefenseFinder rules table models Gao_Her_SIR as a two-profile system requiring Gao_Her_SIR__HerA_SIR2 and Gao_Her_SIR__SIR2.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Gao_Her\tGao_Her_SIR\t2\t2\tGao_Her_SIR__HerA_SIR2, Gao_Her_SIR__SIR2"}, {"notes": "The DefenseFinder HMM inventory records Gao_Her_SIR__HerA_SIR2 under Gao_Her_SIR.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Gao_Her_SIR__HerA_SIR2                           | Gao_Her_SIR__HerA_SIR2                           | Gao_Her_SIR            | Custom                  | 43     |"}, {"notes": "The DefenseFinder HMM inventory records Gao_Her_SIR__SIR2 under Gao_Her_SIR.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Gao_Her_SIR__SIR2                                | Gao_Her_SIR__SIR2                                | Gao_Her_SIR            | Custom                  | 34     |"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "gao_her_sir_locus", "target": "gao_2020_antiviral_cassette_defense"}, {"description": "Gao_Her_SIR-associated antiviral cassette defense realizes the Gao-Her-SIR system trait.", "evidence": [{"notes": "Gao et al. support bacteriophage protection by widespread antiviral gene cassettes.", "reference": "PMID:32855333", "snippet": "By systematic defense gene prediction and heterologous reconstitution, here we discover 29 widespread antiviral gene cassettes, collectively present in 32% of all sequenced bacterial and archaeal genomes, that mediate protection against specific bacteriophages."}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "gao_2020_antiviral_cassette_defense", "target": "gao_her_sir_system_trait"}, {"description": "Gao-Her-SIR system possession is a Gao-Her family phage-defense-system trait.", "evidence": [{"notes": "The DefenseFinder rules table models Gao_Her_SIR as a two-profile Gao_Her subsystem requiring Gao_Her_SIR__HerA_SIR2 and Gao_Her_SIR__SIR2.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Gao_Her\tGao_Her_SIR\t2\t2\tGao_Her_SIR__HerA_SIR2, Gao_Her_SIR__SIR2"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "gao_her_sir_system_trait", "target": "gao_her_system"}], "evidence_rows": [{"description": "DefenseFinder maps the broader Gao_Her family key to the Gao et al. systematic antiphage-system discovery paper and models Gao_Her_SIR as a two-profile system requiring HerA_SIR2 and SIR2.", "edge_id": "edge-1", "evidence": [{"notes": "Gao et al. support bacteriophage protection by widespread antiviral gene cassettes.", "reference": "PMID:32855333", "snippet": "By systematic defense gene prediction and heterologous reconstitution, here we discover 29 widespread antiviral gene cassettes, collectively present in 32% of all sequenced bacterial and archaeal genomes, that mediate protection against specific bacteriophages."}, {"notes": "The DefenseFinder article registry maps the broader Gao_Her family key to the Gao et al. prokaryotic antiviral-immunity paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "Gao_Her | 10\\.1126/science\\.aba0372 | Diverse enzymatic activities mediate antiviral immunity in prokaryotes"}, {"notes": "The DefenseFinder rules table models Gao_Her_SIR as a two-profile system requiring Gao_Her_SIR__HerA_SIR2 and Gao_Her_SIR__SIR2.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Gao_Her\tGao_Her_SIR\t2\t2\tGao_Her_SIR__HerA_SIR2, Gao_Her_SIR__SIR2"}, {"notes": "The DefenseFinder HMM inventory records Gao_Her_SIR__HerA_SIR2 under Gao_Her_SIR.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Gao_Her_SIR__HerA_SIR2                           | Gao_Her_SIR__HerA_SIR2                           | Gao_Her_SIR            | Custom                  | 43     |"}, {"notes": "The DefenseFinder HMM inventory records Gao_Her_SIR__SIR2 under Gao_Her_SIR.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Gao_Her_SIR__SIR2                                | Gao_Her_SIR__SIR2                                | Gao_Her_SIR            | Custom                  | 34     |"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Gao_Her_SIR locus", "source_grounding": null, "target": "Gao 2020 antiviral cassette defense", "target_grounding": null}, {"description": "Gao_Her_SIR-associated antiviral cassette defense realizes the Gao-Her-SIR system trait.", "edge_id": "edge-2", "evidence": [{"notes": "Gao et al. support bacteriophage protection by widespread antiviral gene cassettes.", "reference": "PMID:32855333", "snippet": "By systematic defense gene prediction and heterologous reconstitution, here we discover 29 widespread antiviral gene cassettes, collectively present in 32% of all sequenced bacterial and archaeal genomes, that mediate protection against specific bacteriophages."}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "Gao 2020 antiviral cassette defense", "source_grounding": null, "target": "Gao-Her-SIR system", "target_grounding": "traitmech:000362"}, {"description": "Gao-Her-SIR system possession is a Gao-Her family phage-defense-system trait.", "edge_id": "edge-3", "evidence": [{"notes": "The DefenseFinder rules table models Gao_Her_SIR as a two-profile Gao_Her subsystem requiring Gao_Her_SIR__HerA_SIR2 and Gao_Her_SIR__SIR2.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Gao_Her\tGao_Her_SIR\t2\t2\tGao_Her_SIR__HerA_SIR2, Gao_Her_SIR__SIR2"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "Gao-Her-SIR system", "source_grounding": "traitmech:000362", "target": "Gao-Her system", "target_grounding": "traitmech:000409"}], "graph_id": "gao_her_sir_locus_restricts_phage", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Bacteriophage protection by one of the antiviral gene cassettes described in the Gao et al. systematic defense-gene discovery campaign.", "grounding": null, "id": "gao_2020_antiviral_cassette_defense", "is_orphan": false, "label": "Gao 2020 antiviral cassette defense", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "A DefenseFinder Gao_Her_SIR phage-defense locus represented by custom HerA_SIR2 and SIR2 profiles.", "grounding": null, "id": "gao_her_sir_locus", "is_orphan": false, "label": "Gao_Her_SIR locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded Gao-Her-SIR phage-defense system.", "grounding": "traitmech:000362", "id": "gao_her_sir_system_trait", "is_orphan": false, "label": "Gao-Her-SIR system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded Gao-Her phage-defense system.", "grounding": "traitmech:000409", "id": "gao_her_system", "is_orphan": false, "label": "Gao-Her system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "The graph captures Gao-Her-SIR as a named DefenseFinder two-profile Gao-family system while leaving natural hosts, HerA_SIR2/SIR2 protein functions, phage triggers, and direct effector activity unresolved.", "scope_status": "NONMECHANISTIC", "title": "Gao-Her-SIR loci confer bacterial phage defense"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -779,13 +865,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-10-17 09:00 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

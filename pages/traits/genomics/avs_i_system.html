@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/genomics.html">GENOMICS</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/genomics.html">GENOMICS</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>Avs I system</h1>
     <p class="curie"><code>traitmech:000534</code> · CLASS · PROPOSED</p>
 
@@ -121,9 +132,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>Avs I locus</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>Avs1 phage protein recognition</strong>
-            <code>RO:0002326</code>
+
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>Avs I loci encode Avs1 components, and Avs1 belongs to the AVAST receptors that recognize the phage large terminase subunit.</p>
             <ul>
 
@@ -156,9 +169,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>Avs1 phage protein recognition</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>Avs I system</strong>
-            <code>METPO:2007700</code>
+            <code>traitmech:000534</code>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>The first-pass Avs I system trait is realized by Avs1 target recognition and downstream antiviral activity.</p>
             <ul>
 
@@ -185,8 +200,10 @@
 
           <li id="pathograph-1-edge-3">
             <strong>Avs I system</strong>
+            <code>traitmech:000534</code>
             <span class="edge-predicate">is a</span>
             <strong>AVAST system</strong>
+            <code>traitmech:000239</code>
             <code>rdfs:subClassOf</code>
             <p>Avs I system possession is an AVAST-system trait.</p>
             <ul>
@@ -336,11 +353,75 @@
     <div class="card kg-context">
       <h2>kg-microbe context</h2>
 
-      <p class="no-match">No kg-microbe node embedding matched this record
-        in the 2026-04-25 deepwalk.</p>
+      <p class="match-method">Matched <strong>1</strong>
+        kg-microbe node
+        via <em>parent_proxy</em>.</p>
+      <ul class="kgm-nodes">
+
+        <li><code>METPO:1000188</code> <span class="dim-preview">[-0.956, -1.962, -3.148, +1.274, …]</span></li>
+
+      </ul>
+      <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
 
     </div>
 
+
+    <div class="card">
+      <h2>Nearest neighbors in embedding space</h2>
+      <p class="meta">Top-8 cosine-similar METPO traits
+        from the 2026-04-25 deepwalk (512-D).</p>
+      <ul class="nn-list">
+
+        <li>
+          <span class="nn-cat">upper</span>
+          <a href="../../traits/upper/quality.html">quality</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/jukab_system.html">JukAB system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/integrative_conjugative_element.html">integrative conjugative element</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/ig_like_schlafen_system.html">Ig-like Schlafen system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hypnos_system.html">Hypnos system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hna_system.html">Hna system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hma_system.html">Hma system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+        <li>
+          <span class="nn-cat">genomics</span>
+          <a href="../../traits/genomics/hesat_system.html">Hesat system</a>
+          <span class="sim">1.000</span>
+        </li>
+
+      </ul>
+    </div>
 
 
 
@@ -499,6 +580,11 @@
     </dl>
   </div>
 
+
+  <div class="card rail-kgm">
+    <h2>kg-microbe</h2>
+    <p class="meta">1 matching node (parent_proxy)</p>
+  </div>
 
 </aside>
 </div>
@@ -832,7 +918,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Conservative system-level sketch linking an Avs_I locus to Avs1-mediated phage protein recognition and Avs I system possession.", "edges": [{"description": "Avs I loci encode Avs1 components, and Avs1 belongs to the AVAST receptors that recognize the phage large terminase subunit.", "evidence": [{"notes": "Gao et al. support Avs1 as a phage-protein-sensing member of the AVAST receptor family.", "reference": "DOI:10.1126/science.abm4096", "snippet": "Avs1 to Avs3 recognize the large terminase subunit, and Avs4 recognizes the portal"}, {"notes": "The pinned DefenseFinder HMM inventory records Avs_I__Avs1A under the Avs_I model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Avs_I__Avs1A                                     | Avs_I__Avs1A                                     | Avs_I                  | Custom                  | 20     |"}, {"notes": "The pinned DefenseFinder HMM inventory records Avs_I__Avs1B under the Avs_I model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Avs_I__Avs1B                                     | Avs_I__Avs1B                                     | Avs_I                  | Custom                  | 100    |"}, {"notes": "The pinned DefenseFinder HMM inventory records Avs_I__Avs1C under the Avs_I model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Avs_I__Avs1C                                     | Avs_I__Avs1C                                     | Avs_I                  | Custom                  | 20     |"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "avs_i_locus", "target": "avs1_phage_protein_recognition"}, {"description": "The first-pass Avs I system trait is realized by Avs1 target recognition and downstream antiviral activity.", "evidence": [{"notes": "Gao et al. support Avs1 as a phage-protein-sensing member of the AVAST receptor family.", "reference": "DOI:10.1126/science.abm4096", "snippet": "Avs1 to Avs3 recognize the large terminase subunit, and Avs4 recognizes the portal"}, {"notes": "Gao et al. connect Avs1 through Avs4 target recognition to Avs activation and antiviral activity.", "reference": "DOI:10.1126/science.abm4096", "snippet": "In all four cases, target recognition led to Avs protein activation and antiviral activity"}, {"notes": "The pinned DefenseFinder rules table models Avs_I as an Avs subsystem with Avs1A, Avs1B, and Avs1C profiles.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Avs\tAvs_I\t2\t2\tAvs_I__Avs1A, Avs_I__Avs1B, Avs_I__Avs1C\t\t\t"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "avs1_phage_protein_recognition", "target": "avs_i_system_trait"}, {"description": "Avs I system possession is an AVAST-system trait.", "evidence": [{"notes": "Gao et al. coined AVAST as an antiviral STAND ATPase/NTPase defense-system family.", "reference": "DOI:10.1126/science.aba0372", "snippet": "AVAST, antiviral ATPase/NTPase of the STAND superfamily"}, {"notes": "The pinned DefenseFinder article registry maps the Avs source key to the Gao et al. pangenome-scale antiviral-immunity paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| Avs | 10\\.1126/science\\.aba0372 | Diverse enzymatic activities mediate antiviral immunity in prokaryotes | "}, {"notes": "The pinned DefenseFinder rules table models Avs_I as an Avs subsystem with Avs1A, Avs1B, and Avs1C profiles.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Avs\tAvs_I\t2\t2\tAvs_I__Avs1A, Avs_I__Avs1B, Avs_I__Avs1C\t\t\t"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "avs_i_system_trait", "target": "avast_system_trait"}, {"description": "Endonuclease GajA (gajA, UniProtKB:P0DW47) contributes to Avs I system.", "evidence": [{"notes": "Supports the functional association between Endonuclease GajA (UniProtKB:P0DW47 in Bacillus cereus (strain HuB5-5)) and Avs I system.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "CARD_NLR CARD_NLR_GasderMIN 1 3 GasderMIN__bGSDM CARD_NLR__CARD_Protease, CARD_NLR__NLR_new, CARD_NLR__Trypsin CARD_NLR__Endonuclease, CARD_NLR__Endonuclease_new, CARD_NLR__Phospho, CARD_NLR__Phospho_Trypsin, CARD_NLR__Subtilase, CARD_NLR__Subtilase_long_new, CARD_NLR__Subtilase_small_new, CARD_NLR__Trypsin_Phospho, CARD_NLR__Trypsine_Endonuclease_new"}], "id": "edge-4", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "avs_i_system_protein_component", "target": "avs_i_system_trait"}], "evidence_rows": [{"description": "Avs I loci encode Avs1 components, and Avs1 belongs to the AVAST receptors that recognize the phage large terminase subunit.", "edge_id": "edge-1", "evidence": [{"notes": "Gao et al. support Avs1 as a phage-protein-sensing member of the AVAST receptor family.", "reference": "DOI:10.1126/science.abm4096", "snippet": "Avs1 to Avs3 recognize the large terminase subunit, and Avs4 recognizes the portal"}, {"notes": "The pinned DefenseFinder HMM inventory records Avs_I__Avs1A under the Avs_I model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Avs_I__Avs1A                                     | Avs_I__Avs1A                                     | Avs_I                  | Custom                  | 20     |"}, {"notes": "The pinned DefenseFinder HMM inventory records Avs_I__Avs1B under the Avs_I model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Avs_I__Avs1B                                     | Avs_I__Avs1B                                     | Avs_I                  | Custom                  | 100    |"}, {"notes": "The pinned DefenseFinder HMM inventory records Avs_I__Avs1C under the Avs_I model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Avs_I__Avs1C                                     | Avs_I__Avs1C                                     | Avs_I                  | Custom                  | 20     |"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Avs I locus", "target": "Avs1 phage protein recognition"}, {"description": "The first-pass Avs I system trait is realized by Avs1 target recognition and downstream antiviral activity.", "edge_id": "edge-2", "evidence": [{"notes": "Gao et al. support Avs1 as a phage-protein-sensing member of the AVAST receptor family.", "reference": "DOI:10.1126/science.abm4096", "snippet": "Avs1 to Avs3 recognize the large terminase subunit, and Avs4 recognizes the portal"}, {"notes": "Gao et al. connect Avs1 through Avs4 target recognition to Avs activation and antiviral activity.", "reference": "DOI:10.1126/science.abm4096", "snippet": "In all four cases, target recognition led to Avs protein activation and antiviral activity"}, {"notes": "The pinned DefenseFinder rules table models Avs_I as an Avs subsystem with Avs1A, Avs1B, and Avs1C profiles.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Avs\tAvs_I\t2\t2\tAvs_I__Avs1A, Avs_I__Avs1B, Avs_I__Avs1C\t\t\t"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "Avs1 phage protein recognition", "target": "Avs I system"}, {"description": "Avs I system possession is an AVAST-system trait.", "edge_id": "edge-3", "evidence": [{"notes": "Gao et al. coined AVAST as an antiviral STAND ATPase/NTPase defense-system family.", "reference": "DOI:10.1126/science.aba0372", "snippet": "AVAST, antiviral ATPase/NTPase of the STAND superfamily"}, {"notes": "The pinned DefenseFinder article registry maps the Avs source key to the Gao et al. pangenome-scale antiviral-immunity paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| Avs | 10\\.1126/science\\.aba0372 | Diverse enzymatic activities mediate antiviral immunity in prokaryotes | "}, {"notes": "The pinned DefenseFinder rules table models Avs_I as an Avs subsystem with Avs1A, Avs1B, and Avs1C profiles.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Avs\tAvs_I\t2\t2\tAvs_I__Avs1A, Avs_I__Avs1B, Avs_I__Avs1C\t\t\t"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "Avs I system", "target": "AVAST system"}, {"description": "Endonuclease GajA (gajA, UniProtKB:P0DW47) contributes to Avs I system.", "edge_id": "edge-4", "evidence": [{"notes": "Supports the functional association between Endonuclease GajA (UniProtKB:P0DW47 in Bacillus cereus (strain HuB5-5)) and Avs I system.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "CARD_NLR CARD_NLR_GasderMIN 1 3 GasderMIN__bGSDM CARD_NLR__CARD_Protease, CARD_NLR__NLR_new, CARD_NLR__Trypsin CARD_NLR__Endonuclease, CARD_NLR__Endonuclease_new, CARD_NLR__Phospho, CARD_NLR__Phospho_Trypsin, CARD_NLR__Subtilase, CARD_NLR__Subtilase_long_new, CARD_NLR__Subtilase_small_new, CARD_NLR__Trypsin_Phospho, CARD_NLR__Trypsine_Endonuclease_new"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Endonuclease GajA", "target": "Avs I system"}], "graph_id": "avs_i_locus_phage_protein_recognition", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Possession of a genome-encoded AVAST phage-defense system.", "grounding": "traitmech:000239", "id": "avast_system_trait", "is_orphan": false, "label": "AVAST system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Recognition of an infecting phage protein by an Avs1 antiviral STAND-family receptor.", "grounding": null, "id": "avs1_phage_protein_recognition", "is_orphan": false, "label": "Avs1 phage protein recognition", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "An AVAST subtype I locus represented in DefenseFinder by Avs1A, Avs1B, and Avs1C profiles.", "grounding": null, "id": "avs_i_locus", "is_orphan": false, "label": "Avs I locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Protein component (Endonuclease GajA) associated with Avs I system.", "grounding": null, "id": "avs_i_system_protein_component", "is_orphan": false, "label": "Endonuclease GajA", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 12, "evidence": [{"notes": "Supports Endonuclease GajA in Avs I system; UniProtKB:P0DW47 (gajA, Endonuclease GajA) in Bacillus cereus (strain HuB5-5) provides a verified protein exemplar.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "CARD_NLR CARD_NLR_GasderMIN 1 3 GasderMIN__bGSDM CARD_NLR__CARD_Protease, CARD_NLR__NLR_new, CARD_NLR__Trypsin CARD_NLR__Endonuclease, CARD_NLR__Endonuclease_new, CARD_NLR__Phospho, CARD_NLR__Phospho_Trypsin, CARD_NLR__Subtilase, CARD_NLR__Subtilase_long_new, CARD_NLR__Subtilase_small_new, CARD_NLR__Trypsin_Phospho, CARD_NLR__Trypsine_Endonuclease_new"}], "gene_symbol": "gajA", "protein_label": "Endonuclease GajA", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (gajA, Endonuclease GajA) associated with Avs I system in Bacillus cereus (strain HuB5-5).", "sequence_version": 1, "taxon_id": "NCBITaxon:1053212", "taxon_label": "Bacillus cereus (strain HuB5-5)", "uniprot_id": "UniProtKB:P0DW47"}], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded Avs I phage-defense system.", "grounding": "traitmech:000534", "id": "avs_i_system_trait", "is_orphan": false, "label": "Avs I system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 12, "evidence": [{"notes": "Supports Endonuclease GajA in Avs I system; UniProtKB:P0DW47 (gajA, Endonuclease GajA) in Bacillus cereus (strain HuB5-5) provides a verified protein exemplar.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "CARD_NLR CARD_NLR_GasderMIN 1 3 GasderMIN__bGSDM CARD_NLR__CARD_Protease, CARD_NLR__NLR_new, CARD_NLR__Trypsin CARD_NLR__Endonuclease, CARD_NLR__Endonuclease_new, CARD_NLR__Phospho, CARD_NLR__Phospho_Trypsin, CARD_NLR__Subtilase, CARD_NLR__Subtilase_long_new, CARD_NLR__Subtilase_small_new, CARD_NLR__Trypsin_Phospho, CARD_NLR__Trypsine_Endonuclease_new"}], "gene_symbol": "gajA", "node_id": "avs_i_system_protein_component", "node_label": "Endonuclease GajA", "protein_label": "Endonuclease GajA", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (gajA, Endonuclease GajA) associated with Avs I system in Bacillus cereus (strain HuB5-5).", "sequence_version": 1, "taxon_id": "NCBITaxon:1053212", "taxon_label": "Bacillus cereus (strain HuB5-5)", "uniprot_id": "UniProtKB:P0DW47"}], "scope_notes": "The graph captures Avs_I at locus and Avs1 phage-protein recognition level without asserting the exact Avs1A, Avs1B, and Avs1C component roles, the direct effector activity, native host breadth, sensitive-phage breadth, or whether every DefenseFinder Avs_I prediction is a complete experimentally active Avs I locus.", "scope_status": "NONMECHANISTIC", "title": "Avs I loci support phage protein recognition"}];
+  var graphs = [{"description": "Conservative system-level sketch linking an Avs_I locus to Avs1-mediated phage protein recognition and Avs I system possession.", "edges": [{"description": "Avs I loci encode Avs1 components, and Avs1 belongs to the AVAST receptors that recognize the phage large terminase subunit.", "evidence": [{"notes": "Gao et al. support Avs1 as a phage-protein-sensing member of the AVAST receptor family.", "reference": "DOI:10.1126/science.abm4096", "snippet": "Avs1 to Avs3 recognize the large terminase subunit, and Avs4 recognizes the portal"}, {"notes": "The pinned DefenseFinder HMM inventory records Avs_I__Avs1A under the Avs_I model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Avs_I__Avs1A                                     | Avs_I__Avs1A                                     | Avs_I                  | Custom                  | 20     |"}, {"notes": "The pinned DefenseFinder HMM inventory records Avs_I__Avs1B under the Avs_I model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Avs_I__Avs1B                                     | Avs_I__Avs1B                                     | Avs_I                  | Custom                  | 100    |"}, {"notes": "The pinned DefenseFinder HMM inventory records Avs_I__Avs1C under the Avs_I model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Avs_I__Avs1C                                     | Avs_I__Avs1C                                     | Avs_I                  | Custom                  | 20     |"}], "id": "edge-1", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "avs_i_locus", "target": "avs1_phage_protein_recognition"}, {"description": "The first-pass Avs I system trait is realized by Avs1 target recognition and downstream antiviral activity.", "evidence": [{"notes": "Gao et al. support Avs1 as a phage-protein-sensing member of the AVAST receptor family.", "reference": "DOI:10.1126/science.abm4096", "snippet": "Avs1 to Avs3 recognize the large terminase subunit, and Avs4 recognizes the portal"}, {"notes": "Gao et al. connect Avs1 through Avs4 target recognition to Avs activation and antiviral activity.", "reference": "DOI:10.1126/science.abm4096", "snippet": "In all four cases, target recognition led to Avs protein activation and antiviral activity"}, {"notes": "The pinned DefenseFinder rules table models Avs_I as an Avs subsystem with Avs1A, Avs1B, and Avs1C profiles.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Avs\tAvs_I\t2\t2\tAvs_I__Avs1A, Avs_I__Avs1B, Avs_I__Avs1C\t\t\t"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "avs1_phage_protein_recognition", "target": "avs_i_system_trait"}, {"description": "Avs I system possession is an AVAST-system trait.", "evidence": [{"notes": "Gao et al. coined AVAST as an antiviral STAND ATPase/NTPase defense-system family.", "reference": "DOI:10.1126/science.aba0372", "snippet": "AVAST, antiviral ATPase/NTPase of the STAND superfamily"}, {"notes": "The pinned DefenseFinder article registry maps the Avs source key to the Gao et al. pangenome-scale antiviral-immunity paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| Avs | 10\\.1126/science\\.aba0372 | Diverse enzymatic activities mediate antiviral immunity in prokaryotes | "}, {"notes": "The pinned DefenseFinder rules table models Avs_I as an Avs subsystem with Avs1A, Avs1B, and Avs1C profiles.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Avs\tAvs_I\t2\t2\tAvs_I__Avs1A, Avs_I__Avs1B, Avs_I__Avs1C\t\t\t"}], "id": "edge-3", "is_orphan": false, "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "avs_i_system_trait", "target": "avast_system_trait"}], "evidence_rows": [{"description": "Avs I loci encode Avs1 components, and Avs1 belongs to the AVAST receptors that recognize the phage large terminase subunit.", "edge_id": "edge-1", "evidence": [{"notes": "Gao et al. support Avs1 as a phage-protein-sensing member of the AVAST receptor family.", "reference": "DOI:10.1126/science.abm4096", "snippet": "Avs1 to Avs3 recognize the large terminase subunit, and Avs4 recognizes the portal"}, {"notes": "The pinned DefenseFinder HMM inventory records Avs_I__Avs1A under the Avs_I model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Avs_I__Avs1A                                     | Avs_I__Avs1A                                     | Avs_I                  | Custom                  | 20     |"}, {"notes": "The pinned DefenseFinder HMM inventory records Avs_I__Avs1B under the Avs_I model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Avs_I__Avs1B                                     | Avs_I__Avs1B                                     | Avs_I                  | Custom                  | 100    |"}, {"notes": "The pinned DefenseFinder HMM inventory records Avs_I__Avs1C under the Avs_I model namespace.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md", "snippet": "| Avs_I__Avs1C                                     | Avs_I__Avs1C                                     | Avs_I                  | Custom                  | 20     |"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Avs I locus", "source_grounding": null, "target": "Avs1 phage protein recognition", "target_grounding": null}, {"description": "The first-pass Avs I system trait is realized by Avs1 target recognition and downstream antiviral activity.", "edge_id": "edge-2", "evidence": [{"notes": "Gao et al. support Avs1 as a phage-protein-sensing member of the AVAST receptor family.", "reference": "DOI:10.1126/science.abm4096", "snippet": "Avs1 to Avs3 recognize the large terminase subunit, and Avs4 recognizes the portal"}, {"notes": "Gao et al. connect Avs1 through Avs4 target recognition to Avs activation and antiviral activity.", "reference": "DOI:10.1126/science.abm4096", "snippet": "In all four cases, target recognition led to Avs protein activation and antiviral activity"}, {"notes": "The pinned DefenseFinder rules table models Avs_I as an Avs subsystem with Avs1A, Avs1B, and Avs1C profiles.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Avs\tAvs_I\t2\t2\tAvs_I__Avs1A, Avs_I__Avs1B, Avs_I__Avs1C\t\t\t"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "Avs1 phage protein recognition", "source_grounding": null, "target": "Avs I system", "target_grounding": "traitmech:000534"}, {"description": "Avs I system possession is an AVAST-system trait.", "edge_id": "edge-3", "evidence": [{"notes": "Gao et al. coined AVAST as an antiviral STAND ATPase/NTPase defense-system family.", "reference": "DOI:10.1126/science.aba0372", "snippet": "AVAST, antiviral ATPase/NTPase of the STAND superfamily"}, {"notes": "The pinned DefenseFinder article registry maps the Avs source key to the Gao et al. pangenome-scale antiviral-immunity paper.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md", "snippet": "| Avs | 10\\.1126/science\\.aba0372 | Diverse enzymatic activities mediate antiviral immunity in prokaryotes | "}, {"notes": "The pinned DefenseFinder rules table models Avs_I as an Avs subsystem with Avs1A, Avs1B, and Avs1C profiles.", "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv", "snippet": "Avs\tAvs_I\t2\t2\tAvs_I__Avs1A, Avs_I__Avs1B, Avs_I__Avs1C\t\t\t"}], "predicate": "is a", "predicate_id": "rdfs:subClassOf", "source": "Avs I system", "source_grounding": "traitmech:000534", "target": "AVAST system", "target_grounding": "traitmech:000239"}], "graph_id": "avs_i_locus_phage_protein_recognition", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Possession of a genome-encoded AVAST phage-defense system.", "grounding": "traitmech:000239", "id": "avast_system_trait", "is_orphan": false, "label": "AVAST system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Recognition of an infecting phage protein by an Avs1 antiviral STAND-family receptor.", "grounding": null, "id": "avs1_phage_protein_recognition", "is_orphan": false, "label": "Avs1 phage protein recognition", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "An AVAST subtype I locus represented in DefenseFinder by Avs1A, Avs1B, and Avs1C profiles.", "grounding": null, "id": "avs_i_locus", "is_orphan": false, "label": "Avs I locus", "node_type": "GENETIC_ELEMENT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Possession of a genome-encoded Avs I phage-defense system.", "grounding": "traitmech:000534", "id": "avs_i_system_trait", "is_orphan": false, "label": "Avs I system", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "The graph captures Avs_I at locus and Avs1 phage-protein recognition level without asserting the exact Avs1A, Avs1B, and Avs1C component roles, the direct effector activity, native host breadth, sensitive-phage breadth, or whether every DefenseFinder Avs_I prediction is a complete experimentally active Avs I locus.", "scope_status": "NONMECHANISTIC", "title": "Avs I loci support phage protein recognition"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -852,13 +938,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-10-17 09:00 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>

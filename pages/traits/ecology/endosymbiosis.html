@@ -13,7 +13,12 @@
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../browse.html">Browse</a>
+      <a href="../../map.html">Text map</a>
+      <a href="../../sequence-map.html">Sequence map (pLM)</a>
       <a href="../../umap.html">Embedding space</a>
+      <a href="../../graph.html">Graph layout</a>
+      <a href="../../data/traits.json">Data JSON</a>
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -24,11 +29,17 @@
 <div class="layout-2col">
 <article class="trait">
   <header class="trait-header">
-    <p class="breadcrumb">
-      <a href="../../index.html">TraitMech</a>
-      <span>›</span>
-      <a href="../../category/ecology.html">ECOLOGY</a>
-    </p>
+    <div class="page-topbar">
+      <p class="breadcrumb">
+        <a href="../../index.html">TraitMech</a>
+        <span>›</span>
+        <a href="../../category/ecology.html">ECOLOGY</a>
+      </p>
+      <form class="page-search" action="../../browse.html" method="get" role="search">
+        <input type="search" name="q" placeholder="Search all traits…" aria-label="Search all traits">
+        <button type="submit">Search</button>
+      </form>
+    </div>
     <h1>endosymbiosis</h1>
     <p class="curie"><code>traitmech:000045</code> · CLASS · REVIEWED</p>
 
@@ -85,9 +96,11 @@
 
           <li id="pathograph-1-edge-1">
             <strong>intracellular host localization</strong>
+
             <span class="edge-predicate">confers</span>
             <strong>endosymbiosis</strong>
-            <code>METPO:2007700</code>
+            <code>traitmech:000045</code>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>Sustained residence inside host cells defines endosymbiosis.</p>
             <ul>
 
@@ -102,9 +115,11 @@
 
           <li id="pathograph-1-edge-2">
             <strong>endosymbiosis</strong>
+            <code>traitmech:000045</code>
             <span class="edge-predicate">causes</span>
             <strong>reductive genome evolution</strong>
-            <code>biolink:causes</code>
+            <a href="https://w3id.org/metpo/1007721" rel="nofollow noreferrer"><code>METPO:1007721</code></a>
+            <a href="https://w3id.org/biolink/vocab/causes" rel="nofollow noreferrer"><code>biolink:causes</code></a>
             <p>Long-term intracellular life with small Ne drives extreme genome reduction in obligate endosymbionts.</p>
             <ul>
 
@@ -119,8 +134,10 @@
 
           <li id="pathograph-1-edge-3">
             <strong>confined intracellular habitat</strong>
+
             <span class="edge-predicate">drives</span>
             <strong>metabolic gene loss</strong>
+
 
             <p>Selective pressures in confined intracellular habitats drive metabolic gene loss and genome shrinkage.</p>
             <ul>
@@ -136,9 +153,11 @@
 
           <li id="pathograph-1-edge-4">
             <strong>metabolic gene loss</strong>
+
             <span class="edge-predicate">contributes to</span>
             <strong>reductive genome evolution</strong>
-            <code>RO:0002326</code>
+            <a href="https://w3id.org/metpo/1007721" rel="nofollow noreferrer"><code>METPO:1007721</code></a>
+            <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>Metabolic gene loss in confined intracellular life feeds long-term reductive genome evolution.</p>
             <ul>
 
@@ -153,9 +172,11 @@
 
           <li id="pathograph-1-edge-5">
             <strong>transmission bottleneck</strong>
+
             <span class="edge-predicate">associated with</span>
             <strong>limited recombination</strong>
-            <code>biolink:associated_with</code>
+
+            <a href="https://w3id.org/biolink/vocab/associated_with" rel="nofollow noreferrer"><code>biolink:associated_with</code></a>
             <p>Colonies originate from few ancestors, producing limited recombination in obligate endosymbionts.</p>
             <ul>
 
@@ -170,8 +191,10 @@
 
           <li id="pathograph-1-edge-6">
             <strong>host-symbiont amino-acid pathway complementarity</strong>
+
             <span class="edge-predicate">supports</span>
             <strong>nutritional compensation</strong>
+
 
             <p>Complementarity in amino-acid metabolic pathways between host and symbiont supports nutritional compensation.</p>
             <ul>
@@ -187,8 +210,10 @@
 
           <li id="pathograph-1-edge-7">
             <strong>reductive genome evolution</strong>
+            <a href="https://w3id.org/metpo/1007721" rel="nofollow noreferrer"><code>METPO:1007721</code></a>
             <span class="edge-predicate">leads to</span>
             <strong>dependence on the intracellular environment</strong>
+
 
             <p>Severe genome reduction leads to obligate dependence on the host intracellular environment.</p>
             <ul>
@@ -340,50 +365,50 @@
       <ul class="nn-list">
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/cadmium_tolerant.html">cadmium tolerant</a>
+          <span class="nn-cat">ecology</span>
+          <a href="../../traits/ecology/cytoplasmic_bacterial_predation.html">cytoplasmic bacterial predation</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/sulfur_globule.html">sulfur globule</a>
+          <span class="nn-cat">ecology</span>
+          <a href="../../traits/ecology/bacterial_cannibalism.html">bacterial cannibalism</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/cobalt_tolerant.html">cobalt tolerant</a>
+          <span class="nn-cat">ecology</span>
+          <a href="../../traits/ecology/bacterial_mycophagy.html">bacterial mycophagy</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/copper_tolerant.html">copper tolerant</a>
+          <span class="nn-cat">ecology</span>
+          <a href="../../traits/ecology/biofilm_formation.html">biofilm formation</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/desiccation_tolerant.html">desiccation tolerant</a>
+          <span class="nn-cat">ecology</span>
+          <a href="../../traits/ecology/collective_bacterial_predation.html">collective bacterial predation</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/piezophilic.html">piezophilic</a>
+          <span class="nn-cat">ecology</span>
+          <a href="../../traits/ecology/commensalism.html">commensalism</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">environment</span>
-          <a href="../../traits/environment/obligately_piezophilic.html">obligately piezophilic</a>
+          <span class="nn-cat">ecology</span>
+          <a href="../../traits/ecology/endophytic.html">endophytic</a>
           <span class="sim">1.000</span>
         </li>
 
         <li>
-          <span class="nn-cat">morphology</span>
-          <a href="../../traits/morphology/gas_vesicle.html">gas vesicle</a>
+          <span class="nn-cat">ecology</span>
+          <a href="../../traits/ecology/epibiotic_bacterial_predation.html">epibiotic bacterial predation</a>
           <span class="sim">1.000</span>
         </li>
 
@@ -996,7 +1021,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking intracellular host localization to long-term genome reduction in obligate endosymbionts.", "edges": [{"description": "Sustained residence inside host cells defines endosymbiosis.", "evidence": [{"notes": "Poole et al. describe rhizobia as plant-cell endosymbionts within root nodules.", "reference": "DOI:10.1038/nrmicro.2017.171"}], "id": "edge-1", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "intracellular_localization", "target": "endosymbiosis_trait"}, {"description": "Long-term intracellular life with small Ne drives extreme genome reduction in obligate endosymbionts.", "evidence": [{"notes": "McCutcheon \u0026 Moran review extreme genome reduction in obligate symbiotic bacteria.", "reference": "DOI:10.1038/nrmicro2670"}], "id": "edge-2", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "endosymbiosis_trait", "target": "reductive_genome_evolution"}, {"description": "Selective pressures in confined intracellular habitats drive metabolic gene loss and genome shrinkage.", "evidence": [{"notes": "Song 2024: selective pressures in confined habitats drive metabolic gene loss and genome shrinkage (free-living 2-10 Mb vs obligate endosymbionts often \u003c1.5 Mb).", "reference": "DOI:10.1093/ismejo/wrae117"}], "id": "edge-3", "is_orphan": false, "predicate": "drives", "predicate_id": null, "source": "confined_intracellular_habitat", "target": "metabolic_gene_loss"}, {"description": "Metabolic gene loss in confined intracellular life feeds long-term reductive genome evolution.", "evidence": [{"notes": "Song 2024: confined-habitat metabolic gene loss underlies genome shrinkage characteristic of obligate endosymbionts.", "reference": "DOI:10.1093/ismejo/wrae117"}], "id": "edge-4", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "metabolic_gene_loss", "target": "reductive_genome_evolution"}, {"description": "Colonies originate from few ancestors, producing limited recombination in obligate endosymbionts.", "evidence": [{"notes": "Song 2024: colonies originate from few ancestors, limited recombination.", "reference": "DOI:10.1093/ismejo/wrae117"}], "id": "edge-5", "is_orphan": false, "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "transmission_bottleneck", "target": "limited_recombination"}, {"description": "Complementarity in amino-acid metabolic pathways between host and symbiont supports nutritional compensation.", "evidence": [{"notes": "Bai 2024: a comprehensive analysis demonstrated complementarity in amino acid metabolic pathways between host and symbiont, supporting nutritional compensation.", "reference": "DOI:10.1093/ismejo/wrae052"}], "id": "edge-6", "is_orphan": false, "predicate": "supports", "predicate_id": null, "source": "host_symbiont_aa_complementarity", "target": "nutritional_compensation"}, {"description": "Severe genome reduction leads to obligate dependence on the host intracellular environment.", "evidence": [{"notes": "Silva 2024: has undergone severe genome reduction leading to dependence on the intracellular environment.", "reference": "DOI:10.3390/ijms25084228"}], "id": "edge-7", "is_orphan": false, "predicate": "leads to", "predicate_id": null, "source": "reductive_genome_evolution", "target": "intracellular_dependence"}, {"description": "Chaperonin GroEL (groEL, UniProtKB:P0A6F5) contributes to endosymbiosis.", "evidence": [{"notes": "Supports the functional association between Chaperonin GroEL (UniProtKB:P0A6F5 in Escherichia coli (strain K12)) and endosymbiosis.", "reference": "DOI:10.1038/nrmicro.2017.171", "snippet": "These dramatic lifestyle and developmental changes are underpinned by large genomes and even more complex pan-genomes, which encompass the whole population and are subject to rapid genetic exchange."}], "id": "edge-8", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "endosymbiosis_protein_component", "target": "endosymbiosis_trait"}], "evidence_rows": [{"description": "Sustained residence inside host cells defines endosymbiosis.", "edge_id": "edge-1", "evidence": [{"notes": "Poole et al. describe rhizobia as plant-cell endosymbionts within root nodules.", "reference": "DOI:10.1038/nrmicro.2017.171"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "intracellular host localization", "target": "endosymbiosis"}, {"description": "Long-term intracellular life with small Ne drives extreme genome reduction in obligate endosymbionts.", "edge_id": "edge-2", "evidence": [{"notes": "McCutcheon \u0026 Moran review extreme genome reduction in obligate symbiotic bacteria.", "reference": "DOI:10.1038/nrmicro2670"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "endosymbiosis", "target": "reductive genome evolution"}, {"description": "Selective pressures in confined intracellular habitats drive metabolic gene loss and genome shrinkage.", "edge_id": "edge-3", "evidence": [{"notes": "Song 2024: selective pressures in confined habitats drive metabolic gene loss and genome shrinkage (free-living 2-10 Mb vs obligate endosymbionts often \u003c1.5 Mb).", "reference": "DOI:10.1093/ismejo/wrae117"}], "predicate": "drives", "predicate_id": null, "source": "confined intracellular habitat", "target": "metabolic gene loss"}, {"description": "Metabolic gene loss in confined intracellular life feeds long-term reductive genome evolution.", "edge_id": "edge-4", "evidence": [{"notes": "Song 2024: confined-habitat metabolic gene loss underlies genome shrinkage characteristic of obligate endosymbionts.", "reference": "DOI:10.1093/ismejo/wrae117"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "metabolic gene loss", "target": "reductive genome evolution"}, {"description": "Colonies originate from few ancestors, producing limited recombination in obligate endosymbionts.", "edge_id": "edge-5", "evidence": [{"notes": "Song 2024: colonies originate from few ancestors, limited recombination.", "reference": "DOI:10.1093/ismejo/wrae117"}], "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "transmission bottleneck", "target": "limited recombination"}, {"description": "Complementarity in amino-acid metabolic pathways between host and symbiont supports nutritional compensation.", "edge_id": "edge-6", "evidence": [{"notes": "Bai 2024: a comprehensive analysis demonstrated complementarity in amino acid metabolic pathways between host and symbiont, supporting nutritional compensation.", "reference": "DOI:10.1093/ismejo/wrae052"}], "predicate": "supports", "predicate_id": null, "source": "host-symbiont amino-acid pathway complementarity", "target": "nutritional compensation"}, {"description": "Severe genome reduction leads to obligate dependence on the host intracellular environment.", "edge_id": "edge-7", "evidence": [{"notes": "Silva 2024: has undergone severe genome reduction leading to dependence on the intracellular environment.", "reference": "DOI:10.3390/ijms25084228"}], "predicate": "leads to", "predicate_id": null, "source": "reductive genome evolution", "target": "dependence on the intracellular environment"}, {"description": "Chaperonin GroEL (groEL, UniProtKB:P0A6F5) contributes to endosymbiosis.", "edge_id": "edge-8", "evidence": [{"notes": "Supports the functional association between Chaperonin GroEL (UniProtKB:P0A6F5 in Escherichia coli (strain K12)) and endosymbiosis.", "reference": "DOI:10.1038/nrmicro.2017.171", "snippet": "These dramatic lifestyle and developmental changes are underpinned by large genomes and even more complex pan-genomes, which encompass the whole population and are subject to rapid genetic exchange."}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "Chaperonin GroEL", "target": "endosymbiosis"}], "graph_id": "endosymbiosis_intracellular_genome_reduction", "issues": [], "nodes": [{"color": "#dcfce7", "description": "Spatially restricted, host-cell-confined niche occupied by endosymbionts.", "grounding": null, "id": "confined_intracellular_habitat", "is_orphan": false, "label": "confined intracellular habitat", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Protein component (Chaperonin GroEL) associated with endosymbiosis.", "grounding": null, "id": "endosymbiosis_protein_component", "is_orphan": false, "label": "Chaperonin GroEL", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 184, "evidence": [{"notes": "Supports Chaperonin GroEL in endosymbiosis; UniProtKB:P0A6F5 (groEL, Chaperonin GroEL) in Escherichia coli (strain K12) provides a verified protein exemplar.", "reference": "DOI:10.1038/nrmicro.2017.171", "snippet": "These dramatic lifestyle and developmental changes are underpinned by large genomes and even more complex pan-genomes, which encompass the whole population and are subject to rapid genetic exchange."}], "gene_symbol": "groEL", "protein_label": "Chaperonin GroEL", "proteome_id": "UP000000625", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (groEL, Chaperonin GroEL) associated with endosymbiosis in Escherichia coli (strain K12).", "sequence_version": 2, "taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli (strain K12)", "uniprot_id": "UniProtKB:P0A6F5"}], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Symbiosis with intracellular or intra-tissue localization.", "grounding": "traitmech:000045", "id": "endosymbiosis_trait", "is_orphan": false, "label": "endosymbiosis", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Complementarity in amino-acid metabolic pathways shared between host and endosymbiont.", "grounding": null, "id": "host_symbiont_aa_complementarity", "is_orphan": false, "label": "host-symbiont amino-acid pathway complementarity", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Obligate reliance of the reduced-genome symbiont on the host intracellular environment.", "grounding": null, "id": "intracellular_dependence", "is_orphan": false, "label": "dependence on the intracellular environment", "node_type": "STATE", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ede9fe", "description": "Persistent residence inside host cells or tissues.", "grounding": null, "id": "intracellular_localization", "is_orphan": false, "label": "intracellular host localization", "node_type": "CELLULAR_LOCALIZATION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Reduced genetic recombination resulting from colonies originating from few ancestors.", "grounding": null, "id": "limited_recombination", "is_orphan": false, "label": "limited recombination", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Loss of metabolic genes under relaxed selection in confined intracellular life.", "grounding": null, "id": "metabolic_gene_loss", "is_orphan": false, "label": "metabolic gene loss", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Provision of biosynthetic capacity (amino acids/cofactors) compensating host nutritional needs.", "grounding": null, "id": "nutritional_compensation", "is_orphan": false, "label": "nutritional compensation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Long-term loss of genomic content under relaxed selection and small effective population sizes.", "grounding": "METPO:1007721", "id": "reductive_genome_evolution", "is_orphan": false, "label": "reductive genome evolution", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Few founding cells transmitted between host generations, reducing effective population size.", "grounding": null, "id": "transmission_bottleneck", "is_orphan": false, "label": "transmission bottleneck", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 184, "evidence": [{"notes": "Supports Chaperonin GroEL in endosymbiosis; UniProtKB:P0A6F5 (groEL, Chaperonin GroEL) in Escherichia coli (strain K12) provides a verified protein exemplar.", "reference": "DOI:10.1038/nrmicro.2017.171", "snippet": "These dramatic lifestyle and developmental changes are underpinned by large genomes and even more complex pan-genomes, which encompass the whole population and are subject to rapid genetic exchange."}], "gene_symbol": "groEL", "node_id": "endosymbiosis_protein_component", "node_label": "Chaperonin GroEL", "protein_label": "Chaperonin GroEL", "proteome_id": "UP000000625", "retrieved_on": "2026-10-17", "role": "Characteristic protein component (groEL, Chaperonin GroEL) associated with endosymbiosis in Escherichia coli (strain K12).", "sequence_version": 2, "taxon_id": "NCBITaxon:83333", "taxon_label": "Escherichia coli (strain K12)", "uniprot_id": "UniProtKB:P0A6F5"}], "scope_notes": "This broad ecological, host-relationship, habitat, or hazard classification spans multiple taxa and mechanisms; contextual protein nodes include source-backed UniProtKB exemplars.", "scope_status": "NONMECHANISTIC", "title": "Intracellular endosymbiosis drives extreme genome reduction"}];
+  var graphs = [{"description": "Evidence-backed causal sketch linking intracellular host localization to long-term genome reduction in obligate endosymbionts.", "edges": [{"description": "Sustained residence inside host cells defines endosymbiosis.", "evidence": [{"notes": "Poole et al. describe rhizobia as plant-cell endosymbionts within root nodules.", "reference": "DOI:10.1038/nrmicro.2017.171"}], "id": "edge-1", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "intracellular_localization", "target": "endosymbiosis_trait"}, {"description": "Long-term intracellular life with small Ne drives extreme genome reduction in obligate endosymbionts.", "evidence": [{"notes": "McCutcheon \u0026 Moran review extreme genome reduction in obligate symbiotic bacteria.", "reference": "DOI:10.1038/nrmicro2670"}], "id": "edge-2", "is_orphan": false, "predicate": "causes", "predicate_id": "biolink:causes", "source": "endosymbiosis_trait", "target": "reductive_genome_evolution"}, {"description": "Selective pressures in confined intracellular habitats drive metabolic gene loss and genome shrinkage.", "evidence": [{"notes": "Song 2024: selective pressures in confined habitats drive metabolic gene loss and genome shrinkage (free-living 2-10 Mb vs obligate endosymbionts often \u003c1.5 Mb).", "reference": "DOI:10.1093/ismejo/wrae117"}], "id": "edge-3", "is_orphan": false, "predicate": "drives", "predicate_id": null, "source": "confined_intracellular_habitat", "target": "metabolic_gene_loss"}, {"description": "Metabolic gene loss in confined intracellular life feeds long-term reductive genome evolution.", "evidence": [{"notes": "Song 2024: confined-habitat metabolic gene loss underlies genome shrinkage characteristic of obligate endosymbionts.", "reference": "DOI:10.1093/ismejo/wrae117"}], "id": "edge-4", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "metabolic_gene_loss", "target": "reductive_genome_evolution"}, {"description": "Colonies originate from few ancestors, producing limited recombination in obligate endosymbionts.", "evidence": [{"notes": "Song 2024: colonies originate from few ancestors, limited recombination.", "reference": "DOI:10.1093/ismejo/wrae117"}], "id": "edge-5", "is_orphan": false, "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "transmission_bottleneck", "target": "limited_recombination"}, {"description": "Complementarity in amino-acid metabolic pathways between host and symbiont supports nutritional compensation.", "evidence": [{"notes": "Bai 2024: a comprehensive analysis demonstrated complementarity in amino acid metabolic pathways between host and symbiont, supporting nutritional compensation.", "reference": "DOI:10.1093/ismejo/wrae052"}], "id": "edge-6", "is_orphan": false, "predicate": "supports", "predicate_id": null, "source": "host_symbiont_aa_complementarity", "target": "nutritional_compensation"}, {"description": "Severe genome reduction leads to obligate dependence on the host intracellular environment.", "evidence": [{"notes": "Silva 2024: has undergone severe genome reduction leading to dependence on the intracellular environment.", "reference": "DOI:10.3390/ijms25084228"}], "id": "edge-7", "is_orphan": false, "predicate": "leads to", "predicate_id": null, "source": "reductive_genome_evolution", "target": "intracellular_dependence"}], "evidence_rows": [{"description": "Sustained residence inside host cells defines endosymbiosis.", "edge_id": "edge-1", "evidence": [{"notes": "Poole et al. describe rhizobia as plant-cell endosymbionts within root nodules.", "reference": "DOI:10.1038/nrmicro.2017.171"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "intracellular host localization", "source_grounding": null, "target": "endosymbiosis", "target_grounding": "traitmech:000045"}, {"description": "Long-term intracellular life with small Ne drives extreme genome reduction in obligate endosymbionts.", "edge_id": "edge-2", "evidence": [{"notes": "McCutcheon \u0026 Moran review extreme genome reduction in obligate symbiotic bacteria.", "reference": "DOI:10.1038/nrmicro2670"}], "predicate": "causes", "predicate_id": "biolink:causes", "source": "endosymbiosis", "source_grounding": "traitmech:000045", "target": "reductive genome evolution", "target_grounding": "METPO:1007721"}, {"description": "Selective pressures in confined intracellular habitats drive metabolic gene loss and genome shrinkage.", "edge_id": "edge-3", "evidence": [{"notes": "Song 2024: selective pressures in confined habitats drive metabolic gene loss and genome shrinkage (free-living 2-10 Mb vs obligate endosymbionts often \u003c1.5 Mb).", "reference": "DOI:10.1093/ismejo/wrae117"}], "predicate": "drives", "predicate_id": null, "source": "confined intracellular habitat", "source_grounding": null, "target": "metabolic gene loss", "target_grounding": null}, {"description": "Metabolic gene loss in confined intracellular life feeds long-term reductive genome evolution.", "edge_id": "edge-4", "evidence": [{"notes": "Song 2024: confined-habitat metabolic gene loss underlies genome shrinkage characteristic of obligate endosymbionts.", "reference": "DOI:10.1093/ismejo/wrae117"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "metabolic gene loss", "source_grounding": null, "target": "reductive genome evolution", "target_grounding": "METPO:1007721"}, {"description": "Colonies originate from few ancestors, producing limited recombination in obligate endosymbionts.", "edge_id": "edge-5", "evidence": [{"notes": "Song 2024: colonies originate from few ancestors, limited recombination.", "reference": "DOI:10.1093/ismejo/wrae117"}], "predicate": "associated with", "predicate_id": "biolink:associated_with", "source": "transmission bottleneck", "source_grounding": null, "target": "limited recombination", "target_grounding": null}, {"description": "Complementarity in amino-acid metabolic pathways between host and symbiont supports nutritional compensation.", "edge_id": "edge-6", "evidence": [{"notes": "Bai 2024: a comprehensive analysis demonstrated complementarity in amino acid metabolic pathways between host and symbiont, supporting nutritional compensation.", "reference": "DOI:10.1093/ismejo/wrae052"}], "predicate": "supports", "predicate_id": null, "source": "host-symbiont amino-acid pathway complementarity", "source_grounding": null, "target": "nutritional compensation", "target_grounding": null}, {"description": "Severe genome reduction leads to obligate dependence on the host intracellular environment.", "edge_id": "edge-7", "evidence": [{"notes": "Silva 2024: has undergone severe genome reduction leading to dependence on the intracellular environment.", "reference": "DOI:10.3390/ijms25084228"}], "predicate": "leads to", "predicate_id": null, "source": "reductive genome evolution", "source_grounding": "METPO:1007721", "target": "dependence on the intracellular environment", "target_grounding": null}], "graph_id": "endosymbiosis_intracellular_genome_reduction", "issues": [], "nodes": [{"color": "#dcfce7", "description": "Spatially restricted, host-cell-confined niche occupied by endosymbionts.", "grounding": null, "id": "confined_intracellular_habitat", "is_orphan": false, "label": "confined intracellular habitat", "node_type": "ENVIRONMENTAL_FACTOR", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Symbiosis with intracellular or intra-tissue localization.", "grounding": "traitmech:000045", "id": "endosymbiosis_trait", "is_orphan": false, "label": "endosymbiosis", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Complementarity in amino-acid metabolic pathways shared between host and endosymbiont.", "grounding": null, "id": "host_symbiont_aa_complementarity", "is_orphan": false, "label": "host-symbiont amino-acid pathway complementarity", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3f4f6", "description": "Obligate reliance of the reduced-genome symbiont on the host intracellular environment.", "grounding": null, "id": "intracellular_dependence", "is_orphan": false, "label": "dependence on the intracellular environment", "node_type": "STATE", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ede9fe", "description": "Persistent residence inside host cells or tissues.", "grounding": null, "id": "intracellular_localization", "is_orphan": false, "label": "intracellular host localization", "node_type": "CELLULAR_LOCALIZATION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Reduced genetic recombination resulting from colonies originating from few ancestors.", "grounding": null, "id": "limited_recombination", "is_orphan": false, "label": "limited recombination", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Loss of metabolic genes under relaxed selection in confined intracellular life.", "grounding": null, "id": "metabolic_gene_loss", "is_orphan": false, "label": "metabolic gene loss", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Provision of biosynthetic capacity (amino acids/cofactors) compensating host nutritional needs.", "grounding": null, "id": "nutritional_compensation", "is_orphan": false, "label": "nutritional compensation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Long-term loss of genomic content under relaxed selection and small effective population sizes.", "grounding": "METPO:1007721", "id": "reductive_genome_evolution", "is_orphan": false, "label": "reductive genome evolution", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Few founding cells transmitted between host generations, reducing effective population size.", "grounding": null, "id": "transmission_bottleneck", "is_orphan": false, "label": "transmission bottleneck", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "This broad ecological, host-relationship, habitat, or hazard classification spans multiple taxa and mechanisms; contextual protein nodes do not receive token UniProt examples.", "scope_status": "NONMECHANISTIC", "title": "Intracellular endosymbiosis drives extreme genome reduction"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -1016,13 +1041,20 @@ function renderPathograph(containerId, data) {
     </div>
     <div class="fam">
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
-      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+      <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
+      <a href="../../data/traits.json">traits.json</a> ·
+      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+    </div>
+    <div class="fam">
+      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
+      third-party source terms apply
     </div>
     <div>
       Record as of 2026-10-17 09:00 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
-      · embedding coverage 42.2%
+      · embedding coverage 100.0%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
   </div>
