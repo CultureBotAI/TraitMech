@@ -11,6 +11,9 @@ session:
     name: antigravity
     model: claude-opus-4-6
     agent_tool: antigravity
+links:
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/1961
 events:
 - type: CREATE
   outcome: changed
