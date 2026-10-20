@@ -1,0 +1,806 @@
+# Scientific review of bacterial cannibalism (traitmech:000626)
+
+- Review: 20261019T233249Z-bacterial-cannibalism
+- Repository: CultureBotAI/TraitMech
+- Started UTC: 2026-10-19T07:44:35Z
+- Finished UTC: 2026-10-19T23:32:49Z
+- Reviewer: codex (independent)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+One complete record assessed. The narrow killing-and-feeding definition, broader predatory parent, three cited sources and explicit contrary evidence are coherent. No new actionable defect was found. Direct nutrient transfer and broader terminology remain unresolved as already documented; no exemplar or causal graph is inferred.
+
+## Scope And Provenance
+
+The entire selected TraitRecord, its maintained writer, local proposal/history and contextual parents and related concepts.
+
+Selection: Second previously uncovered record in lexicographic path order. Initial validated inventory covered 57 of 1130 records; the preceding animal-pathogen save increased coverage to 58. This observation assesses one target only.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base f25e2af0b38a8303b13f627a9a5c33b36af4b3d2.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| traitmech:000626 | data/traits/ecology/bacterial_cannibalism.yaml | maintained | bacterial cannibalism |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused LinkML validation | passed | True | traitmech:000626 | Selected record validates; shape validation is not scientific adjudication. |
+| Focused strict closed-schema validation | passed | True | traitmech:000626 | One file scanned with no error rows. |
+| Initial source snippet verification | failed | False | traitmech:000626 | Exit 2: all three references unresolved because sandbox DNS requests failed. Superseded by successful network retry; no scientific finding follows from this failure. |
+| Focused source snippet verification with network | passed | True | traitmech:000626 | All three snippets VERIFIED against retrieved source text; precise scientific scope was assessed separately. |
+| Full-corpus structural graph audit | passed | True | traitmech:000626 | Full corpus: 74 baselined findings, zero new/blocking findings, 130 mechanistic graphs connected. Target has no causal graph; these counts do not establish a target mechanism. |
+| Full-corpus evidence snippet audit | passed | True | traitmech:000626 | Full corpus: 2419 baselined findings, zero new/blocking findings. Target quotations were separately checked with the focused recipe and manual source inspection. |
+| Full-corpus pathway context link validation | passed | True | traitmech:000626 | Full corpus: 19 links checked against the pinned PathwayMech snapshot. This target asserts no pathway link. |
+| Full-corpus repository history link validation | passed | True | traitmech:000626 | Full corpus: 1276 history records, zero invalid links. Target creation event was also inspected; link validity is not human sign-off. |
+| Initial product identifier-label validation | failed | False | traitmech:000626 | Initial full-product check failed with exit 2 during PATO/RO downloads, with 36 adapter errors and 123 no-adapter skips. Superseded by successful retry. |
+| Product validation with isolated local cache | failed | False | traitmech:000626 | Intermediate isolated-cache attempt failed with exit 2, 36 adapter errors and 123 no-adapter skips. Superseded by successful network retry. |
+| Product validation after isolated-cache download | passed | True | traitmech:000626 | Full configured product validation passed: 361 canonical matches, two synonym matches, one exception, 123 SKIPPED_NO_ADAPTER pairs. This is not focused verification of every target identifier. |
+| Structured source adapter availability | unavailable | False | traitmech:000626 | Neither command -v kg-microbe-sources nor the configured sibling culturebotai-claw directory resolved. Availability check is bounded to those locations; primary-literature fallback was used. No gene-expression or protein-level claim was added. |
+
+## Scientific And Domain Assessments
+
+### Native checklist: identity, polarity, synonyms and term kind
+
+identity: supported. Targets: traitmech:000626.
+
+The label and CLASS identifier denote one positive bacterial phenotype with explicit killing and feeding conditions. No exact synonym or xref is asserted; related developmental terms remain distinct.
+
+### Native checklist: definition source and operational scope
+
+evidence: supported. Targets: traitmech:000626.
+
+The definition is noncircular and source-backed as a deliberately narrow classical nutritional concept. It does not assign that phenotype to every toxin-positive strain; record notes preserve the distinction between interpretation and demonstrated feeding.
+
+### Native checklist: broader parent and reference identity
+
+consistency: supported. Targets: traitmech:000626.
+
+Predatory bacterium is strictly broader because it requires killing and consuming bacterial prey without restricting prey to conspecifics. Parent and discussion references resolve and retain distinct meanings.
+
+### Native checklist: category and representation
+
+consistency: supported. Targets: traitmech:000626.
+
+ECOLOGY and CLASS fit the scoped feeding interaction. No domain, range, priority or subset assertion forces a conflicting interpretation.
+
+### Native checklist: organism and protein examples
+
+completeness: supported. Targets: traitmech:000626.
+
+The intentional deferral of canonical examples is appropriate while feeding and natural-strain provenance remain unresolved. Cited laboratory backgrounds are study context and are not promoted to universal species exemplars.
+
+### Native checklist: reference identity, quotation and conflicts
+
+evidence: supported. Targets: traitmech:000626.
+
+All three DOI/PMID identities resolve and the snippets verify. The sources are primary research papers, with historical interpretation distinguished from newer counterevidence. The 2026 snippet is correctly located in IMPORTANCE; figures and supplements are not claimed as inspected by this review.
+
+### Native checklist: causal graph scope and grounding
+
+graph: supported. Targets: traitmech:000626.
+
+No graph or protein accession is asserted. Deliberate deferral avoids turning toxin names, gene presence or developmental associations into an unsupported causal mechanism. Optional graph absence is not a completeness defect.
+
+### Native checklist: discussions and datasets
+
+consistency: supported. Targets: traitmech:000626.
+
+Both open discussions are specific and actionable: reconcile narrow nutritional terminology, then resolve feeding and strain provenance before examples or mappings. They preserve related-concept distinctions and conflicting source interpretations. No dataset is asserted.
+
+### Native checklist: mapping status, curation event and audit
+
+provenance: supported. Targets: traitmech:000626.
+
+PROPOSED matches the reserved local concept and explicit unresolved questions. LLM assistance is disclosed; per-record and repository creation history agree. Deterministic checks pass after the network retry. No human sign-off or scientific status promotion is implied.
+
+## Findings
+
+No findings recorded within this review's declared scope.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| check-bacterial-validate | /private/tmp/traitmech-record-sweep.FU79Gr/bacterial-validate.log; Executed 2026-10-19T07:44:35Z through 2026-10-19T07:44:39Z; command metadata bacterial-validate.json | context_only | Selected record validates; shape validation is not scientific adjudication. |
+| check-bacterial-strict | /private/tmp/traitmech-record-sweep.FU79Gr/bacterial-strict.log; Executed 2026-10-19T07:44:36Z through 2026-10-19T07:44:42Z; command metadata bacterial-strict.json | context_only | One file scanned with no error rows. |
+| check-bacterial-snippets | /private/tmp/traitmech-record-sweep.FU79Gr/bacterial-snippets.log; Executed 2026-10-19T07:44:35Z through 2026-10-19T07:44:57Z; command metadata bacterial-snippets.json | context_only | Exit 2: all three references unresolved because sandbox DNS requests failed. Superseded by successful network retry; no scientific finding follows from this failure. |
+| check-bacterial-snippets-network | /private/tmp/traitmech-record-sweep.FU79Gr/bacterial-snippets-network.log; Executed 2026-10-19T23:28:56Z through 2026-10-19T23:29:01Z; command metadata bacterial-snippets-network.json | context_only | All three snippets VERIFIED against retrieved source text; precise scientific scope was assessed separately. |
+| check-audit-graphs | /private/tmp/traitmech-record-sweep.FU79Gr/audit-graphs.log; Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:29Z; command metadata audit-graphs.json | context_only | Full corpus: 74 baselined findings, zero new/blocking findings, 130 mechanistic graphs connected. Target has no causal graph; these counts do not establish a target mechanism. |
+| check-audit-snippets | /private/tmp/traitmech-record-sweep.FU79Gr/audit-snippets.log; Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:33Z; command metadata audit-snippets.json | context_only | Full corpus: 2419 baselined findings, zero new/blocking findings. Target quotations were separately checked with the focused recipe and manual source inspection. |
+| check-check-pathway-links | /private/tmp/traitmech-record-sweep.FU79Gr/check-pathway-links.log; Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:28Z; command metadata check-pathway-links.json | context_only | Full corpus: 19 links checked against the pinned PathwayMech snapshot. This target asserts no pathway link. |
+| check-validate-history | /private/tmp/traitmech-record-sweep.FU79Gr/validate-history.log; Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:24Z; command metadata validate-history.json | context_only | Full corpus: 1276 history records, zero invalid links. Target creation event was also inspected; link validity is not human sign-off. |
+| check-validate-products | /private/tmp/traitmech-record-sweep.FU79Gr/validate-products.log; Executed 2026-10-19T07:33:16Z through 2026-10-19T07:34:01Z; command metadata validate-products.json | context_only | Initial full-product check failed with exit 2 during PATO/RO downloads, with 36 adapter errors and 123 no-adapter skips. Superseded by successful retry. |
+| check-validate-products-retry-local | /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-local.log; Executed 2026-10-19T07:34:53Z through 2026-10-19T07:35:24Z; command metadata validate-products-retry-local.json | context_only | Intermediate isolated-cache attempt failed with exit 2, 36 adapter errors and 123 no-adapter skips. Superseded by successful network retry. |
+| check-validate-products-retry-network | /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-network.log; Executed 2026-10-19T07:35:34Z through 2026-10-19T07:36:03Z; command metadata validate-products-retry-network.json | context_only | Full configured product validation passed: 361 canonical matches, two synonym matches, one exception, 123 SKIPPED_NO_ADAPTER pairs. This is not focused verification of every target identifier. |
+| record | data/traits/ecology/bacterial_cannibalism.yaml; Entire record, including all evidence notes and both discussions | supports | PROPOSED nutritional trait; explicit classical scope, broader-developmental usage caveat, contrary 2026 evidence and deferred examples/graphs. |
+| local-identity | data/raw/metpo.owl; Captured ontology plus v5/v502 class proposals and exact target ID/label/slug searches | supports | Ignored-and-hidden-inclusive corpus searches uniquely resolve traitmech:000626. Captured METPO has no cannibali lexical hit or METPO:1057900 class; v502 reserves that identifier for this proposed concept. These bounded snapshot results do not establish live upstream absence. |
+| local-hierarchy | data/traits/ecology/predatory_bacterium.yaml; Definition/parent and three related records named in the target discussions | supports | The parent requires killing and consuming bacterial prey without a heterospecific restriction. Conspecific prey narrows that concept. Its parent METPO:1000059 is phenotype in the local record and ontology. Bacteriocin production, saprotrophy and natural competence have distinct necessary conditions, matching the target caveats. |
+| local-provenance | scripts/add_bacterial_cannibalism_trait.py; Guarded writer; v502 reservation; history/records/bacterial_cannibalism/2026-10-05T192424Z-codex-9eb8cc.yaml | supports | Writer checks parent identity, refuses divergent existing record/proposal bytes, validates before writes and requires --apply. History and per-record creation event agree on identifier, source scope, pending proposal and deferrals. Ignored-inclusive DO_NOT_WORK search found no matching target ID, label or slug. |
+| source-2003 | https://pubmed.ncbi.nlm.nih.gov/12817086/; Europe PMC core record for PMID:12817086: title, DOI and complete scientific abstract | partial | DOI:10.1126/science.1086462 resolves to Cannibalism by sporulating bacteria. The abstract explicitly interprets sibling killing as feeding on released nutrients and delaying sporulation; the target quotation matches. This supports the historical nutritional meaning, not independently established nutrient transfer or all strain-specific notes. |
+| source-2009 | https://pmc.ncbi.nlm.nih.gov/articles/PMC2983100/; NCBI BioC full text: Summary, Introduction, Discussion and strain identity; PMID:19775247 | supports | DOI:10.1111/j.1365-2958.2009.06882.x resolves to Cannibalism enhances biofilm development in Bacillus subtilis. The sibling-lysis quotation is exact. Source discusses the nutritional interpretation and matrix-producing subpopulation, identifies NCIB3610 and engineered derivatives, and does not justify treating all broader PCD phenomena as nutritional cannibalism. No procedural or protein-resolved inference is imported. |
+| source-2026 | https://pmc.ncbi.nlm.nih.gov/articles/PMC13343845.1/; Europe PMC full-text XML: Abstract, IMPORTANCE, DK1042 identity and architectural interpretation in Results/Discussion; PMID:42294941 | refutes | DOI:10.1128/mbio.00525-26 resolves to Cannibalism shapes biofilm structure and composition in Bacillus subtilis, online 2026-06-15. The exact target quotation is in IMPORTANCE. DK1042 is identified as an NCIB3610 derivative. Authors question killing as the explanation for sporulation delay and discuss architectural effects on nutrient access. The record preserves this counterevidence without presenting it as positive feeding proof. |
+
+## Limits And Additional Notes
+
+- The 2003 paper was inspected at complete scientific-abstract and bibliographic level; its full article, figures and supplements were not independently reinspected. The historical ResearchGate access claim is retained as provenance, not independently certified.
+- The 2009 article was inspected through NCBI BioC Summary, Introduction, Discussion and strain-identity text after Europe PMC full-text access failed. The 2026 article was inspected through Europe PMC abstract, Importance and relevant Results/Discussion passages. Figures, supplements and numerical analyses were not reanalyzed.
+- The record already distinguishes nutritional interpretation from directly demonstrated conspecific nutrient use. This review does not resolve the feeding gap or certify every population called cannibalistic in the literature.
+- METPO absence and reservation findings concern the captured repository snapshot and proposal tables, not the current live upstream release.
+- No structured-source runner was available on PATH or in the configured sibling culturebotai-claw location. Inspected literature supplies the evidence; expression-module membership would not establish feeding.
+- Corpus diagnostics were executed earlier against the same unchanged source base and are reused with their actual timestamps. Product validation retains 123 adapter-skipped pairs and does not verify every record identifier.
+- The review session was interrupted between initial capture/checks and later literature integration; start and finish retain the actual elapsed interval.
+- No source record, generator, proposal, history or generated page was modified. PROPOSED is preserved; this agent review is not human scientific sign-off.
+- The absent optional examples, graphs, xrefs and datasets are explicit scientifically justified deferrals, not missing required representation.
+- Future authorized curation must keep the guarded creation script and proposal assertions consistent with the maintained target; no generator was rerun.
+- All original capture hashes were preserved when five additional contextual inputs were captured before their assessment. External source snapshots are session-local and identified below by stable references and hashes.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261019T233249Z-bacterial-cannibalism
+kind: record
+repository: CultureBotAI/TraitMech
+title: Scientific review of bacterial cannibalism (traitmech:000626)
+started_at: '2026-10-19T07:44:35Z'
+finished_at: '2026-10-19T23:32:49Z'
+reviewer:
+  identity: codex
+  kind: agent
+  independence: independent
+  independence_basis: Current review session did not author or change the captured
+    trait. Supporting agents inspected sources and prepared draft observations; root
+    reviewer integrates and validates the final review. Historical Codex/Claude curation
+    events are disclosed and are not human sign-off.
+  model: GPT-6 (Codex)
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass_with_limitations
+native_verdict: Coherent proposed nutritional concept; experimental feeding and terminology
+  limits remain explicit.
+scientific_review: true
+summary: One complete record assessed. The narrow killing-and-feeding definition,
+  broader predatory parent, three cited sources and explicit contrary evidence are
+  coherent. No new actionable defect was found. Direct nutrient transfer and broader
+  terminology remain unresolved as already documented; no exemplar or causal graph
+  is inferred.
+source:
+  git_revision: f25e2af0b38a8303b13f627a9a5c33b36af4b3d2
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: da8896328a0fd6cc92f1adf0d8be8980d0ddd41f3172c7936f2c7f119b293ac1
+    role: context
+  - path: DO_NOT_WORK.md
+    sha256: 9ae0b05cc06f4ce8938801287a568d535e471d06dda5e258fcdbbed222abf712
+    role: context
+  - path: data/raw/metpo.owl
+    sha256: 8b6f8fe0510a698579e532658c8ace05da2550093365df9ca83feb0741778415
+    role: context
+  - path: data/traits/ecology/bacterial_cannibalism.yaml
+    sha256: d3e755e4acffde487bca3a004a558ae3d853436a7e975bfbce24ce9cb03bb74c
+    role: target
+  - path: data/traits/ecology/predatory_bacterium.yaml
+    sha256: adcef1a0693a766270509b039ec3d47cb2daa2f94bede513ba82959967d7366d
+    role: context
+  - path: data/traits/ecology/saprotrophy.yaml
+    sha256: 74c1e3065e0ce9dfc86b1b8725061383de4e8800dd5e7c02f48179c85fa3b6f4
+    role: context
+  - path: data/traits/physiology/bacteriocin_production.yaml
+    sha256: 0bfc1b908cf5caf01d87f66ea6bf40077a47d00442c4d753cc8fc8ad3f03f2f1
+    role: context
+  - path: data/traits/physiology/natural_competence.yaml
+    sha256: 772c83dc3be59a6ec2b6dbad97a94d3bf81759bf63ecab9a32ed2a7a170a6f4a
+    role: context
+  - path: data/traits/upper/phenotype.yaml
+    sha256: 502760fa1b7179bf4e25ab56ecb91d0b25d5f50ed5cfe44133c63a9b821cc4a4
+    role: context
+  - path: docs/CURATION_PLAYBOOK.md
+    sha256: 735e9b810471da9f7d8364e35ffe1e741edb3421480dac01727db6ea5aa65da9
+    role: context
+  - path: docs/GROUNDING_POLICY.md
+    sha256: 891678c983c2283a47c81c47950b35753981e9339d105f3bbdda92a1f5ab7f42
+    role: context
+  - path: history/records/bacterial_cannibalism/2026-10-05T192424Z-codex-9eb8cc.yaml
+    sha256: e2e52f9b58074f5362ee3028bf068efc6f3ac9c94395467715bfc5e6497e1435
+    role: context
+  - path: proposals/metpo_traitmech_v5/metpo_proposal_classes_robot.tsv
+    sha256: d4b899de7077b33f4bdc6cb8cdebf28b5a705b7a65ba3620f3113b76d8666910
+    role: context
+  - path: proposals/metpo_traitmech_v502/metpo_proposal_classes_robot.tsv
+    sha256: 06fcc701991d46fa980efadce2e23003bf53915a1a1454959c46ec9c5c869244
+    role: context
+  - path: scripts/add_bacterial_cannibalism_trait.py
+    sha256: ae3fcba7d3434bdc93f3ffa2f779aef82f25d07dae4dfc99e0b02863ccdf3f77
+    role: context
+  - path: src/traitmech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+  - path: src/traitmech/schema/traitmech.yaml
+    sha256: 46c47fc627b80ccbba1e8ab3fb6f2aee93bc2aef7aaf72fe9aadc3257f2c02dd
+    role: context
+scope:
+  description: The entire selected TraitRecord, its maintained writer, local proposal/history
+    and contextual parents and related concepts.
+  selection: Second previously uncovered record in lexicographic path order. Initial
+    validated inventory covered 57 of 1130 records; the preceding animal-pathogen
+    save increased coverage to 58. This observation assesses one target only.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - traitmech:000626
+  exclusions:
+  - target: All other corpus records
+    reason: Related records and corpus validators provide context only; no additional
+      target is adjudicated.
+targets:
+- target_id: traitmech:000626
+  path: data/traits/ecology/bacterial_cannibalism.yaml
+  label: bacterial cannibalism
+  record_class: TraitRecord
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/bacterial_cannibalism.yaml
+    role: maintained TraitRecord, guarded curation required
+  - repository: CultureBotAI/TraitMech
+    path: scripts/add_bacterial_cannibalism_trait.py
+    role: Guarded creation writer with assertions that future curation must consider
+  - repository: CultureBotAI/TraitMech
+    path: proposals/metpo_traitmech_v502/metpo_proposal_classes_robot.tsv
+    role: Local proposed class and parent reservations
+checks:
+- check_id: bacterial-validate
+  name: Focused LinkML validation
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000626
+  command: just validate data/traits/ecology/bacterial_cannibalism.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - check-bacterial-validate
+  summary: Selected record validates; shape validation is not scientific adjudication.
+- check_id: bacterial-strict
+  name: Focused strict closed-schema validation
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000626
+  command: just validate-strict data/traits/ecology/bacterial_cannibalism.yaml --out
+    /private/tmp/traitmech-record-sweep.FU79Gr/bacterial-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - check-bacterial-strict
+  summary: One file scanned with no error rows.
+- check_id: bacterial-snippets
+  name: Initial source snippet verification
+  status: failed
+  required: false
+  target_ids:
+  - traitmech:000626
+  command: just verify-snippets --record data/traits/ecology/bacterial_cannibalism.yaml
+    --out /private/tmp/traitmech-record-sweep.FU79Gr/bacterial-snippets.tsv
+  exit_code: 2
+  expected_exit_code: 0
+  evidence_ids:
+  - check-bacterial-snippets
+  summary: 'Exit 2: all three references unresolved because sandbox DNS requests failed.
+    Superseded by successful network retry; no scientific finding follows from this
+    failure.'
+- check_id: bacterial-snippets-network
+  name: Focused source snippet verification with network
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000626
+  command: just verify-snippets --record data/traits/ecology/bacterial_cannibalism.yaml
+    --out /private/tmp/traitmech-record-sweep.FU79Gr/bacterial-snippets-network.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - check-bacterial-snippets-network
+  summary: All three snippets VERIFIED against retrieved source text; precise scientific
+    scope was assessed separately.
+- check_id: audit-graphs
+  name: Full-corpus structural graph audit
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000626
+  command: just audit-graphs --out /private/tmp/traitmech-record-sweep.FU79Gr/causal_graph_audit.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - check-audit-graphs
+  summary: 'Full corpus: 74 baselined findings, zero new/blocking findings, 130 mechanistic
+    graphs connected. Target has no causal graph; these counts do not establish a
+    target mechanism.'
+  scope_note: Reused actual full-corpus result at unchanged captured Git base; only
+    new structured review files have been added since execution.
+- check_id: audit-snippets
+  name: Full-corpus evidence snippet audit
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000626
+  command: just audit-snippets --report /private/tmp/traitmech-record-sweep.FU79Gr/evidence_snippet_audit.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - check-audit-snippets
+  summary: 'Full corpus: 2419 baselined findings, zero new/blocking findings. Target
+    quotations were separately checked with the focused recipe and manual source inspection.'
+  scope_note: Reused actual full-corpus result at unchanged captured Git base; only
+    new structured review files have been added since execution.
+- check_id: check-pathway-links
+  name: Full-corpus pathway context link validation
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000626
+  command: just check-pathway-links
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - check-check-pathway-links
+  summary: 'Full corpus: 19 links checked against the pinned PathwayMech snapshot.
+    This target asserts no pathway link.'
+  scope_note: Reused actual full-corpus result at unchanged captured Git base; only
+    new structured review files have been added since execution.
+- check_id: validate-history
+  name: Full-corpus repository history link validation
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000626
+  command: just validate-history
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - check-validate-history
+  summary: 'Full corpus: 1276 history records, zero invalid links. Target creation
+    event was also inspected; link validity is not human sign-off.'
+  scope_note: Reused actual full-corpus result at unchanged captured Git base; only
+    new structured review files have been added since execution.
+- check_id: validate-products
+  name: Initial product identifier-label validation
+  status: failed
+  required: false
+  target_ids:
+  - traitmech:000626
+  command: just validate-products
+  exit_code: 2
+  expected_exit_code: 0
+  evidence_ids:
+  - check-validate-products
+  summary: Initial full-product check failed with exit 2 during PATO/RO downloads,
+    with 36 adapter errors and 123 no-adapter skips. Superseded by successful retry.
+  scope_note: Reused actual full-corpus result at unchanged captured Git base; only
+    new structured review files have been added since execution.
+- check_id: validate-products-retry-local
+  name: Product validation with isolated local cache
+  status: failed
+  required: false
+  target_ids:
+  - traitmech:000626
+  command: just validate-products
+  exit_code: 2
+  expected_exit_code: 0
+  evidence_ids:
+  - check-validate-products-retry-local
+  summary: Intermediate isolated-cache attempt failed with exit 2, 36 adapter errors
+    and 123 no-adapter skips. Superseded by successful network retry.
+  scope_note: Reused actual full-corpus result at unchanged captured Git base; only
+    new structured review files have been added since execution.
+- check_id: validate-products-retry-network
+  name: Product validation after isolated-cache download
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000626
+  command: just validate-products
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - check-validate-products-retry-network
+  summary: 'Full configured product validation passed: 361 canonical matches, two
+    synonym matches, one exception, 123 SKIPPED_NO_ADAPTER pairs. This is not focused
+    verification of every target identifier.'
+  scope_note: Reused actual full-corpus result at unchanged captured Git base; only
+    new structured review files have been added since execution.
+- check_id: structured-source-runner
+  name: Structured source adapter availability
+  status: unavailable
+  required: false
+  target_ids:
+  - traitmech:000626
+  summary: Neither command -v kg-microbe-sources nor the configured sibling culturebotai-claw
+    directory resolved. Availability check is bounded to those locations; primary-literature
+    fallback was used. No gene-expression or protein-level claim was added.
+evidence:
+- evidence_id: check-bacterial-validate
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/bacterial-validate.log
+  locator: Executed 2026-10-19T07:44:35Z through 2026-10-19T07:44:39Z; command metadata
+    bacterial-validate.json
+  accessed_at: '2026-10-19T23:32:49Z'
+  support: context_only
+  summary: Selected record validates; shape validation is not scientific adjudication.
+  snapshot_sha256: 7dbe3fbcf3633ae27d0d2042ed764117c6483714352c4c7ec6a06147415f7037
+- evidence_id: check-bacterial-strict
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/bacterial-strict.log
+  locator: Executed 2026-10-19T07:44:36Z through 2026-10-19T07:44:42Z; command metadata
+    bacterial-strict.json
+  accessed_at: '2026-10-19T23:32:49Z'
+  support: context_only
+  summary: One file scanned with no error rows.
+  snapshot_sha256: 402df8929b9335bd433e8cf4fe02f5f71f383624fb5a625f8d072af110e1cc30
+- evidence_id: check-bacterial-snippets
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/bacterial-snippets.log
+  locator: Executed 2026-10-19T07:44:35Z through 2026-10-19T07:44:57Z; command metadata
+    bacterial-snippets.json
+  accessed_at: '2026-10-19T23:32:49Z'
+  support: context_only
+  summary: 'Exit 2: all three references unresolved because sandbox DNS requests failed.
+    Superseded by successful network retry; no scientific finding follows from this
+    failure.'
+  snapshot_sha256: bbc760d0430ae58cef7ea5633a617697210a026b36c497c39774c8c3311c06e0
+- evidence_id: check-bacterial-snippets-network
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/bacterial-snippets-network.log
+  locator: Executed 2026-10-19T23:28:56Z through 2026-10-19T23:29:01Z; command metadata
+    bacterial-snippets-network.json
+  accessed_at: '2026-10-19T23:32:49Z'
+  support: context_only
+  summary: All three snippets VERIFIED against retrieved source text; precise scientific
+    scope was assessed separately.
+  snapshot_sha256: 86a1b67021f0ed5715ce6cd8f86ea1368bd796637c2171ff9b002ea948e5a2ed
+- evidence_id: check-audit-graphs
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/audit-graphs.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:29Z; command metadata
+    audit-graphs.json
+  accessed_at: '2026-10-19T23:32:49Z'
+  support: context_only
+  summary: 'Full corpus: 74 baselined findings, zero new/blocking findings, 130 mechanistic
+    graphs connected. Target has no causal graph; these counts do not establish a
+    target mechanism.'
+  snapshot_sha256: ecce27e6a8f8b8b1fc54a9a0564a27626ee33774da508665859c6d1429337f4d
+- evidence_id: check-audit-snippets
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/audit-snippets.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:33Z; command metadata
+    audit-snippets.json
+  accessed_at: '2026-10-19T23:32:49Z'
+  support: context_only
+  summary: 'Full corpus: 2419 baselined findings, zero new/blocking findings. Target
+    quotations were separately checked with the focused recipe and manual source inspection.'
+  snapshot_sha256: beafaa5c82645f5cf216142b6e0369d556202bcc72fdabbf35825fce955fd59f
+- evidence_id: check-check-pathway-links
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/check-pathway-links.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:28Z; command metadata
+    check-pathway-links.json
+  accessed_at: '2026-10-19T23:32:49Z'
+  support: context_only
+  summary: 'Full corpus: 19 links checked against the pinned PathwayMech snapshot.
+    This target asserts no pathway link.'
+  snapshot_sha256: e77729b8afd6ae02cd834e516c48dd5c72d10498802e7a1b0004eebb4831f6a0
+- evidence_id: check-validate-history
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-history.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:24Z; command metadata
+    validate-history.json
+  accessed_at: '2026-10-19T23:32:49Z'
+  support: context_only
+  summary: 'Full corpus: 1276 history records, zero invalid links. Target creation
+    event was also inspected; link validity is not human sign-off.'
+  snapshot_sha256: 1fc48f1203fbfcd27b1243e4e147afb367aebfc592b496b352201058c6ee85d2
+- evidence_id: check-validate-products
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:34:01Z; command metadata
+    validate-products.json
+  accessed_at: '2026-10-19T23:32:49Z'
+  support: context_only
+  summary: Initial full-product check failed with exit 2 during PATO/RO downloads,
+    with 36 adapter errors and 123 no-adapter skips. Superseded by successful retry.
+  snapshot_sha256: 697efcbe603c9a5e27f9726e688d1b9d9f621fa548f585d9005b5157d81dadae
+- evidence_id: check-validate-products-retry-local
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-local.log
+  locator: Executed 2026-10-19T07:34:53Z through 2026-10-19T07:35:24Z; command metadata
+    validate-products-retry-local.json
+  accessed_at: '2026-10-19T23:32:49Z'
+  support: context_only
+  summary: Intermediate isolated-cache attempt failed with exit 2, 36 adapter errors
+    and 123 no-adapter skips. Superseded by successful network retry.
+  snapshot_sha256: b636ab6978cf8b8d4cc2cc4033f1cdca399cca46dc615a26073cfe680d44ebb5
+- evidence_id: check-validate-products-retry-network
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-network.log
+  locator: Executed 2026-10-19T07:35:34Z through 2026-10-19T07:36:03Z; command metadata
+    validate-products-retry-network.json
+  accessed_at: '2026-10-19T23:32:49Z'
+  support: context_only
+  summary: 'Full configured product validation passed: 361 canonical matches, two
+    synonym matches, one exception, 123 SKIPPED_NO_ADAPTER pairs. This is not focused
+    verification of every target identifier.'
+  snapshot_sha256: 67e91252adce1d441ad6b37d6904f0cbcea703575aec8011e65e94822fa810ea
+- evidence_id: record
+  kind: record_content
+  reference: data/traits/ecology/bacterial_cannibalism.yaml
+  locator: Entire record, including all evidence notes and both discussions
+  accessed_at: '2026-10-19T23:32:49Z'
+  support: supports
+  summary: PROPOSED nutritional trait; explicit classical scope, broader-developmental
+    usage caveat, contrary 2026 evidence and deferred examples/graphs.
+  snapshot_sha256: d3e755e4acffde487bca3a004a558ae3d853436a7e975bfbce24ce9cb03bb74c
+- evidence_id: local-identity
+  kind: authority
+  reference: data/raw/metpo.owl
+  locator: Captured ontology plus v5/v502 class proposals and exact target ID/label/slug
+    searches
+  accessed_at: '2026-10-19T23:32:49Z'
+  support: supports
+  summary: Ignored-and-hidden-inclusive corpus searches uniquely resolve traitmech:000626.
+    Captured METPO has no cannibali lexical hit or METPO:1057900 class; v502 reserves
+    that identifier for this proposed concept. These bounded snapshot results do not
+    establish live upstream absence.
+- evidence_id: local-hierarchy
+  kind: record_content
+  reference: data/traits/ecology/predatory_bacterium.yaml
+  locator: Definition/parent and three related records named in the target discussions
+  accessed_at: '2026-10-19T23:32:49Z'
+  support: supports
+  summary: The parent requires killing and consuming bacterial prey without a heterospecific
+    restriction. Conspecific prey narrows that concept. Its parent METPO:1000059 is
+    phenotype in the local record and ontology. Bacteriocin production, saprotrophy
+    and natural competence have distinct necessary conditions, matching the target
+    caveats.
+- evidence_id: local-provenance
+  kind: record_content
+  reference: scripts/add_bacterial_cannibalism_trait.py
+  locator: Guarded writer; v502 reservation; history/records/bacterial_cannibalism/2026-10-05T192424Z-codex-9eb8cc.yaml
+  accessed_at: '2026-10-19T23:32:49Z'
+  support: supports
+  summary: Writer checks parent identity, refuses divergent existing record/proposal
+    bytes, validates before writes and requires --apply. History and per-record creation
+    event agree on identifier, source scope, pending proposal and deferrals. Ignored-inclusive
+    DO_NOT_WORK search found no matching target ID, label or slug.
+- evidence_id: source-2003
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/12817086/
+  locator: 'Europe PMC core record for PMID:12817086: title, DOI and complete scientific
+    abstract'
+  accessed_at: '2026-10-19T23:32:49Z'
+  support: partial
+  summary: DOI:10.1126/science.1086462 resolves to Cannibalism by sporulating bacteria.
+    The abstract explicitly interprets sibling killing as feeding on released nutrients
+    and delaying sporulation; the target quotation matches. This supports the historical
+    nutritional meaning, not independently established nutrient transfer or all strain-specific
+    notes.
+  snapshot_sha256: 8a12aa8bce52615c175d391f409182264332a447001f05637ed6defad9711488
+- evidence_id: source-2009
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC2983100/
+  locator: 'NCBI BioC full text: Summary, Introduction, Discussion and strain identity;
+    PMID:19775247'
+  accessed_at: '2026-10-19T23:32:49Z'
+  support: supports
+  summary: DOI:10.1111/j.1365-2958.2009.06882.x resolves to Cannibalism enhances biofilm
+    development in Bacillus subtilis. The sibling-lysis quotation is exact. Source
+    discusses the nutritional interpretation and matrix-producing subpopulation, identifies
+    NCIB3610 and engineered derivatives, and does not justify treating all broader
+    PCD phenomena as nutritional cannibalism. No procedural or protein-resolved inference
+    is imported.
+  snapshot_sha256: 18eb9dd2d33d884ffad84a9bdcbc946fb7604d0ae5167a0637bf9b5ae8e397a2
+- evidence_id: source-2026
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC13343845.1/
+  locator: 'Europe PMC full-text XML: Abstract, IMPORTANCE, DK1042 identity and architectural
+    interpretation in Results/Discussion; PMID:42294941'
+  accessed_at: '2026-10-19T23:32:49Z'
+  support: refutes
+  summary: DOI:10.1128/mbio.00525-26 resolves to Cannibalism shapes biofilm structure
+    and composition in Bacillus subtilis, online 2026-06-15. The exact target quotation
+    is in IMPORTANCE. DK1042 is identified as an NCIB3610 derivative. Authors question
+    killing as the explanation for sporulation delay and discuss architectural effects
+    on nutrient access. The record preserves this counterevidence without presenting
+    it as positive feeding proof.
+  snapshot_sha256: 6791e9212cb3182d193870226746903766917fc7f5110fd9613d773a617fd4ab
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: 'Native checklist: identity, polarity, synonyms and term kind'
+  outcome: supported
+  target_ids:
+  - traitmech:000626
+  evidence_ids:
+  - record
+  - local-identity
+  summary: The label and CLASS identifier denote one positive bacterial phenotype
+    with explicit killing and feeding conditions. No exact synonym or xref is asserted;
+    related developmental terms remain distinct.
+- assessment_id: definition
+  area: evidence
+  topic: 'Native checklist: definition source and operational scope'
+  outcome: supported
+  target_ids:
+  - traitmech:000626
+  evidence_ids:
+  - record
+  - source-2003
+  - source-2009
+  - source-2026
+  summary: The definition is noncircular and source-backed as a deliberately narrow
+    classical nutritional concept. It does not assign that phenotype to every toxin-positive
+    strain; record notes preserve the distinction between interpretation and demonstrated
+    feeding.
+- assessment_id: hierarchy
+  area: consistency
+  topic: 'Native checklist: broader parent and reference identity'
+  outcome: supported
+  target_ids:
+  - traitmech:000626
+  evidence_ids:
+  - local-hierarchy
+  - local-identity
+  summary: Predatory bacterium is strictly broader because it requires killing and
+    consuming bacterial prey without restricting prey to conspecifics. Parent and
+    discussion references resolve and retain distinct meanings.
+- assessment_id: category
+  area: consistency
+  topic: 'Native checklist: category and representation'
+  outcome: supported
+  target_ids:
+  - traitmech:000626
+  evidence_ids:
+  - record
+  - check-bacterial-strict
+  summary: ECOLOGY and CLASS fit the scoped feeding interaction. No domain, range,
+    priority or subset assertion forces a conflicting interpretation.
+- assessment_id: examples
+  area: completeness
+  topic: 'Native checklist: organism and protein examples'
+  outcome: supported
+  target_ids:
+  - traitmech:000626
+  evidence_ids:
+  - record
+  - source-2009
+  - source-2026
+  summary: The intentional deferral of canonical examples is appropriate while feeding
+    and natural-strain provenance remain unresolved. Cited laboratory backgrounds
+    are study context and are not promoted to universal species exemplars.
+  dimensions:
+  - name: study_context
+    value: B. subtilis NCIB3610 and engineered derivatives (2009); NCIB3610-derived
+      DK1042 (2026)
+    definition: Inspected source backgrounds, not new canonical trait examples.
+    evidence_ids:
+    - source-2009
+    - source-2026
+  - name: feeding_evidence
+    value: Unresolved direct nutrient transfer
+    definition: Record distinguishes nutritional interpretation from direct demonstration
+      and uses this limit to defer exemplars.
+    evidence_ids:
+    - record
+    - source-2003
+    - source-2026
+- assessment_id: evidence
+  area: evidence
+  topic: 'Native checklist: reference identity, quotation and conflicts'
+  outcome: supported
+  target_ids:
+  - traitmech:000626
+  evidence_ids:
+  - source-2003
+  - source-2009
+  - source-2026
+  - check-bacterial-snippets-network
+  summary: All three DOI/PMID identities resolve and the snippets verify. The sources
+    are primary research papers, with historical interpretation distinguished from
+    newer counterevidence. The 2026 snippet is correctly located in IMPORTANCE; figures
+    and supplements are not claimed as inspected by this review.
+- assessment_id: graph
+  area: graph
+  topic: 'Native checklist: causal graph scope and grounding'
+  outcome: supported
+  target_ids:
+  - traitmech:000626
+  evidence_ids:
+  - record
+  - check-audit-graphs
+  summary: No graph or protein accession is asserted. Deliberate deferral avoids turning
+    toxin names, gene presence or developmental associations into an unsupported causal
+    mechanism. Optional graph absence is not a completeness defect.
+- assessment_id: discussions
+  area: consistency
+  topic: 'Native checklist: discussions and datasets'
+  outcome: supported
+  target_ids:
+  - traitmech:000626
+  evidence_ids:
+  - record
+  - local-hierarchy
+  - source-2026
+  summary: 'Both open discussions are specific and actionable: reconcile narrow nutritional
+    terminology, then resolve feeding and strain provenance before examples or mappings.
+    They preserve related-concept distinctions and conflicting source interpretations.
+    No dataset is asserted.'
+- assessment_id: status
+  area: provenance
+  topic: 'Native checklist: mapping status, curation event and audit'
+  outcome: supported
+  target_ids:
+  - traitmech:000626
+  evidence_ids:
+  - record
+  - local-provenance
+  - check-bacterial-validate
+  - check-bacterial-strict
+  - check-validate-history
+  summary: PROPOSED matches the reserved local concept and explicit unresolved questions.
+    LLM assistance is disclosed; per-record and repository creation history agree.
+    Deterministic checks pass after the network retry. No human sign-off or scientific
+    status promotion is implied.
+findings: []
+actions: []
+limitations:
+- The 2003 paper was inspected at complete scientific-abstract and bibliographic level;
+  its full article, figures and supplements were not independently reinspected. The
+  historical ResearchGate access claim is retained as provenance, not independently
+  certified.
+- The 2009 article was inspected through NCBI BioC Summary, Introduction, Discussion
+  and strain-identity text after Europe PMC full-text access failed. The 2026 article
+  was inspected through Europe PMC abstract, Importance and relevant Results/Discussion
+  passages. Figures, supplements and numerical analyses were not reanalyzed.
+- The record already distinguishes nutritional interpretation from directly demonstrated
+  conspecific nutrient use. This review does not resolve the feeding gap or certify
+  every population called cannibalistic in the literature.
+- METPO absence and reservation findings concern the captured repository snapshot
+  and proposal tables, not the current live upstream release.
+- No structured-source runner was available on PATH or in the configured sibling culturebotai-claw
+  location. Inspected literature supplies the evidence; expression-module membership
+  would not establish feeding.
+- Corpus diagnostics were executed earlier against the same unchanged source base
+  and are reused with their actual timestamps. Product validation retains 123 adapter-skipped
+  pairs and does not verify every record identifier.
+- The review session was interrupted between initial capture/checks and later literature
+  integration; start and finish retain the actual elapsed interval.
+notes:
+- No source record, generator, proposal, history or generated page was modified. PROPOSED
+  is preserved; this agent review is not human scientific sign-off.
+- The absent optional examples, graphs, xrefs and datasets are explicit scientifically
+  justified deferrals, not missing required representation.
+- Future authorized curation must keep the guarded creation script and proposal assertions
+  consistent with the maintained target; no generator was rerun.
+- All original capture hashes were preserved when five additional contextual inputs
+  were captured before their assessment. External source snapshots are session-local
+  and identified below by stable references and hashes.
+tags:
+- record-review
+- bacterial-cannibalism
+- ecology
+- pass-with-limitations
+```
