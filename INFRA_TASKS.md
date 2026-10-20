@@ -33,13 +33,23 @@ notes below keyed by the same stable task ID.
 <!-- mech-infra-tasks:start -->
 ```yaml
 schema_version: '1.0.0'
-tasks: []
+tasks:
+  - task_id: traitmech-infra-0001
+    summary: Replace workstation-absolute paths in .claude/skills/traitmech-evolve-workflow/SKILL.md:213 so pr-sanity and qc pass on clean checkouts
+    status: resolved
+    issue_url: https://github.com/CultureBotAI/TraitMech/issues/1962
+    disposition: Resolved in PR #1961 (minimal blocker for Stage 1 bootstrap PR CI); upstream coordinator template should also emit configurable CLAW_SRC/CLAW_PYTHON and repository-relative paths.
 ```
 <!-- mech-infra-tasks:end -->
 
 ## Tasks
 
-No infrastructure tasks have been entered through this workflow yet. This empty
-bootstrap ledger is not an audit result or a claim that the repository has no
-infrastructure needs. Add evidence-backed entries as work exposes them.
+### `traitmech-infra-0001` — Replace workstation-absolute paths in `.claude/skills/traitmech-evolve-workflow/SKILL.md:213`
+- **Origin**: `mech-goal-sequence-20261019`, Cycle 1, Stage 1 (`add_records`)
+- **Issue**: https://github.com/CultureBotAI/TraitMech/issues/1962
+- **Implementation PR**: https://github.com/CultureBotAI/TraitMech/pull/1961
+- **Status**: `resolved`
+- **Observation**: The coordinator-installed `.claude/skills/traitmech-evolve-workflow/SKILL.md` embedded workstation-absolute paths on line 213, failing `scripts/pr_sanity.py` (`ABSOLUTE_REPO_PATH` and `SIBLING_ABSOLUTE_PATH`) and `just qc`.
+- **Disposition**: Replaced with configurable `CLAW_SRC` / `CLAW_PYTHON` defaults (`../culturebotai-claw/src` and `../culturebotai-claw/.venv/bin/python`) and repository-relative paths (`workflow/mech-workflow.yaml`, `workflow/parent/mech-cycle.yaml`, `workflow/parent/workflow.yaml`) in PR #1961.
+
 

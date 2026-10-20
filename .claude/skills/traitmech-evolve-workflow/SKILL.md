@@ -210,7 +210,7 @@ Run profile validation from the verified CLAW checkout, with its interpreter
 and current source on PYTHONPATH (do not assume a global console command exists):
 
 ```bash
-PYTHONPATH="/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/src" "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/python" -m kg_microbe_workflows validate --profile "/Users/marcin/Documents/VIMSS/ontology/Mechs/TraitMech/workflow/mech-workflow.yaml" --parent "/Users/marcin/Documents/VIMSS/ontology/Mechs/TraitMech/workflow/parent/mech-cycle.yaml" --schema "/Users/marcin/Documents/VIMSS/ontology/Mechs/TraitMech/workflow/parent/workflow.yaml"
+PYTHONPATH="${CLAW_SRC:-../culturebotai-claw/src}" "${CLAW_PYTHON:-../culturebotai-claw/.venv/bin/python}" -m kg_microbe_workflows validate --profile "workflow/mech-workflow.yaml" --parent "workflow/parent/mech-cycle.yaml" --schema "workflow/parent/workflow.yaml"
 ```
 
 After deployment, use the installed reviewed CLAW source path recorded in the
