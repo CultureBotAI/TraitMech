@@ -13266,6 +13266,13 @@
         "action": "ENRICHED_FROM_LITERATURE",
         "changes": "Enriched the seeded METPO capnophilic phenotype with DOI-backed elevated-carbon-dioxide evidence after a repository-wide duplicate review covering ignored and hidden files.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-21T20:01:04Z",
+        "curator": "claude",
+        "action": "CURATE_CAUSAL_GRAPH",
+        "changes": "Added NONMECHANISTIC causal_graphs entry (capnophilic_co2_canb_sketch) anchored on existing verbatim record evidence snippets.",
+        "llm_assisted": true
       }
     ],
     "definition_source": "DOI:10.1111/1462-2920.13092",
@@ -13287,6 +13294,68 @@
         "taxon_label": "Campylobacter jejuni subsp. jejuni NCTC 11168 = ATCC 700819",
         "note": "C. jejuni NCTC 11168 was the strain background for the CanB study of the C. jejuni capnophilic growth phenotype.",
         "reference": "DOI:10.1111/1462-2920.13092"
+      }
+    ],
+    "causal_graphs": [
+      {
+        "graph_id": "capnophilic_co2_canb_sketch",
+        "title": "Capnophilic elevated-CO2 requirement and CanB contribution",
+        "description": "Evidence-backed causal sketch linking the capnophilic growth phenotype to elevated environmental carbon dioxide and beta-class carbonic anhydrase CanB.",
+        "scope_status": "NONMECHANISTIC",
+        "scope_notes": "Source-backed phenotype and CanB genetic-contribution sketch from DOI:10.1111/1462-2920.13092; a reviewed strain-matched UniProtKB accession for Campylobacter jejuni CanB is not yet curated on this node.",
+        "nodes": [
+          {
+            "node_id": "capnophilic_trait",
+            "label": "capnophilic",
+            "node_type": "TRAIT",
+            "grounding": "METPO:1005021",
+            "description": "Requirement for elevated carbon dioxide concentrations for optimal microbial growth."
+          },
+          {
+            "node_id": "capnophilic_carbon_dioxide",
+            "label": "carbon dioxide",
+            "node_type": "CHEMICAL",
+            "grounding": "CHEBI:16526",
+            "description": "Elevated environmental carbon dioxide required for optimal capnophilic growth."
+          },
+          {
+            "node_id": "capnophilic_canb_carbonic_anhydrase",
+            "label": "beta-carbonic anhydrase CanB",
+            "node_type": "GENE_OR_PROTEIN",
+            "grounding": "GO:0004089",
+            "description": "Beta-class carbonic anhydrase (carbonate dehydratase activity) contributing to capnophilic growth in Campylobacter jejuni."
+          }
+        ],
+        "edges": [
+          {
+            "subject": "capnophilic_trait",
+            "predicate": "depends on",
+            "predicate_id": "RO:0002502",
+            "object": "capnophilic_carbon_dioxide",
+            "description": "Capnophilic growth depends on elevated environmental carbon dioxide concentrations.",
+            "evidence": [
+              {
+                "reference": "DOI:10.1111/1462-2920.13092",
+                "snippet": "Campylobacter jejuni, the leading cause of human bacterial gastroenteritis, requires low environmental oxygen and high carbon dioxide for optimum growth",
+                "notes": "Al-Haideri et al. establish that capnophilic Campylobacter jejuni requires high environmental carbon dioxide for optimum growth."
+              }
+            ]
+          },
+          {
+            "subject": "capnophilic_canb_carbonic_anhydrase",
+            "predicate": "contributes to",
+            "predicate_id": "RO:0002326",
+            "object": "capnophilic_trait",
+            "description": "Beta-carbonic anhydrase CanB contributes to the capnophilic growth phenotype.",
+            "evidence": [
+              {
+                "reference": "DOI:10.1111/1462-2920.13092",
+                "snippet": "Taken together, our data suggest CanB is a major contributor to the capnophilic growth phenotype of C. jejuni.",
+                "notes": "Al-Haideri et al. show that CanB is a major contributor to the capnophilic growth phenotype of C. jejuni."
+              }
+            ]
+          }
+        ]
       }
     ]
   },
@@ -141338,6 +141407,32 @@
         "action": "PROPOSED_FROM_RESEARCH",
         "changes": "Proposed a DOI-backed FAPROTAX metabolic capability from proposals/metpo_traitmech_v11 after repository-wide duplicate review.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-21T20:01:04Z",
+        "curator": "claude",
+        "action": "RECORD_MECHANISM_KNOWLEDGE_GAP",
+        "changes": "Recorded OPEN KNOWLEDGE_GAP discussion (aromatic-compound-degradation-causal-graph-source-gap) documenting the source-limited mechanism gap for causal_graphs.",
+        "llm_assisted": true
+      }
+    ],
+    "discussions": [
+      {
+        "discussion_id": "aromatic-compound-degradation-causal-graph-source-gap",
+        "prompt": "Add multi-step ring-cleavage pathway evidence (e.g. catechol or protocatechuate dioxygenase enzymes, substrates, and products) and a strain-matched canonical example before constructing causal_graphs.",
+        "kind": "KNOWLEDGE_GAP",
+        "status": "OPEN",
+        "rationale": "The current record carries a single broad FAPROTAX review snippet (DOI:10.3390/ijerph6010278) naming bacterial degradation pathways of aromatic compounds without specific enzyme or intermediate claims; constructing a multi-edge causal graph from that single 60-character phrase would require clause-splitting or unsupported edges.",
+        "posed_by": "claude",
+        "posed_date": "2026-10-21",
+        "evidence": [
+          {
+            "reference": "DOI:10.3390/ijerph6010278",
+            "supports": "PARTIAL",
+            "snippet": "bacterial degradation pathways of selected aromatic compounds",
+            "explanation": "Existing record-level evidence supports the high-level metabolic trait definition but does not provide multi-step enzymatic mechanism quotes for a connected causal graph."
+          }
+        ]
       }
     ]
   },
@@ -141374,6 +141469,32 @@
         "action": "PROPOSED_FROM_RESEARCH",
         "changes": "Proposed a DOI-backed FAPROTAX metabolic capability from proposals/metpo_traitmech_v11 after repository-wide duplicate review.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-21T20:01:04Z",
+        "curator": "claude",
+        "action": "RECORD_MECHANISM_KNOWLEDGE_GAP",
+        "changes": "Recorded OPEN KNOWLEDGE_GAP discussion (aromatic-hydrocarbon-degradation-causal-graph-source-gap) documenting the source-limited mechanism gap for causal_graphs.",
+        "llm_assisted": true
+      }
+    ],
+    "discussions": [
+      {
+        "discussion_id": "aromatic-hydrocarbon-degradation-causal-graph-source-gap",
+        "prompt": "Add primary literature evidence for aromatic-ring hydroxylation and cleavage enzymes (e.g. benzene/biphenyl dioxygenase) and a strain-matched canonical example before constructing causal_graphs.",
+        "kind": "KNOWLEDGE_GAP",
+        "status": "OPEN",
+        "rationale": "The current record carries a single substrate-list snippet (DOI:10.1007/BF00058836) enumerating benzene, arenes, biphenyl, and fused aromatic hydrocarbons without catalytic or pathway-step assertions.",
+        "posed_by": "claude",
+        "posed_date": "2026-10-21",
+        "evidence": [
+          {
+            "reference": "DOI:10.1007/BF00058836",
+            "supports": "PARTIAL",
+            "snippet": "benzene, certain arenes, biphenyl and selected fused aromatic hydrocarbons",
+            "explanation": "Existing record-level evidence supports the high-level metabolic trait definition but does not provide multi-step enzymatic mechanism quotes for a connected causal graph."
+          }
+        ]
       }
     ]
   },
@@ -144835,6 +144956,32 @@
         "action": "PROPOSED_FROM_RESEARCH",
         "changes": "Proposed a DOI-backed FAPROTAX metabolic capability from proposals/metpo_traitmech_v11 after repository-wide duplicate review.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-21T20:01:04Z",
+        "curator": "claude",
+        "action": "RECORD_MECHANISM_KNOWLEDGE_GAP",
+        "changes": "Recorded OPEN KNOWLEDGE_GAP discussion (dark-hydrogen-oxidation-causal-graph-source-gap) documenting the source-limited mechanism gap for causal_graphs.",
+        "llm_assisted": true
+      }
+    ],
+    "discussions": [
+      {
+        "discussion_id": "dark-hydrogen-oxidation-causal-graph-source-gap",
+        "prompt": "Add primary literature evidence for uptake [NiFe]-hydrogenase catalysis, terminal electron-acceptor coupling, and a strain-matched canonical example before constructing causal_graphs.",
+        "kind": "KNOWLEDGE_GAP",
+        "status": "OPEN",
+        "rationale": "The current record carries a single ecological review snippet (DOI:10.3389/fmicb.2018.02873) describing hydrothermal-vent biomass production by hydrogen-oxidizing organisms without enzyme-level or electron-transport claims.",
+        "posed_by": "claude",
+        "posed_date": "2026-10-21",
+        "evidence": [
+          {
+            "reference": "DOI:10.3389/fmicb.2018.02873",
+            "supports": "PARTIAL",
+            "snippet": "hydrogen-oxidizing organisms play a key role in deep-sea hydrothermal vent ecosystems as they can be considerably involved in light-independent primary biomass production",
+            "explanation": "Existing record-level evidence supports the high-level metabolic trait definition but does not provide multi-step enzymatic mechanism quotes for a connected causal graph."
+          }
+        ]
       }
     ]
   },
@@ -144870,6 +145017,32 @@
         "action": "PROPOSED_FROM_RESEARCH",
         "changes": "Proposed a DOI-backed FAPROTAX metabolic capability from proposals/metpo_traitmech_v11 after repository-wide duplicate review.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-21T20:01:04Z",
+        "curator": "claude",
+        "action": "RECORD_MECHANISM_KNOWLEDGE_GAP",
+        "changes": "Recorded OPEN KNOWLEDGE_GAP discussion (dark-oxidation-of-sulfur-compounds-causal-graph-source-gap) documenting the source-limited mechanism gap for causal_graphs.",
+        "llm_assisted": true
+      }
+    ],
+    "discussions": [
+      {
+        "discussion_id": "dark-oxidation-of-sulfur-compounds-causal-graph-source-gap",
+        "prompt": "Add primary literature evidence for sulfur-oxidizing enzyme complexes (e.g. Sox, Sqr, or Dsr pathways) and a strain-matched canonical example before constructing causal_graphs.",
+        "kind": "KNOWLEDGE_GAP",
+        "status": "OPEN",
+        "rationale": "The current record carries a single physiological rate snippet (DOI:10.1111/1462-2920.14543) coupling dark sulfide oxidation to oxygen consumption without enzyme or intermediate assertions.",
+        "posed_by": "claude",
+        "posed_date": "2026-10-21",
+        "evidence": [
+          {
+            "reference": "DOI:10.1111/1462-2920.14543",
+            "supports": "PARTIAL",
+            "snippet": "dark sulfide oxidation was coupled to high oxygen consumption rates",
+            "explanation": "Existing record-level evidence supports the high-level metabolic trait definition but does not provide multi-step enzymatic mechanism quotes for a connected causal graph."
+          }
+        ]
       }
     ]
   },
@@ -153145,6 +153318,32 @@
         "action": "PROPOSED_FROM_RESEARCH",
         "changes": "Proposed a DOI-backed FAPROTAX metabolic capability from proposals/metpo_traitmech_v11 after repository-wide duplicate review.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-21T20:01:04Z",
+        "curator": "claude",
+        "action": "RECORD_MECHANISM_KNOWLEDGE_GAP",
+        "changes": "Recorded OPEN KNOWLEDGE_GAP discussion (hydrocarbon-degradation-causal-graph-source-gap) documenting the source-limited mechanism gap for causal_graphs.",
+        "llm_assisted": true
+      }
+    ],
+    "discussions": [
+      {
+        "discussion_id": "hydrocarbon-degradation-causal-graph-source-gap",
+        "prompt": "Add primary literature evidence for alkane monooxygenase or anaerobic hydrocarbon-activating enzymes and a strain-matched canonical example before constructing causal_graphs.",
+        "kind": "KNOWLEDGE_GAP",
+        "status": "OPEN",
+        "rationale": "The current record carries a single high-level review snippet (DOI:10.1128/MR.54.3.305-315.1990) stating that hydrocarbons are degraded primarily by bacteria and fungi, which is insufficient to ground a multi-edge mechanism graph without inventing unsupported edges.",
+        "posed_by": "claude",
+        "posed_date": "2026-10-21",
+        "evidence": [
+          {
+            "reference": "DOI:10.1128/MR.54.3.305-315.1990",
+            "supports": "PARTIAL",
+            "snippet": "Hydrocarbons are degraded primarily by bacteria and fungi",
+            "explanation": "Existing record-level evidence supports the high-level metabolic trait definition but does not provide multi-step enzymatic mechanism quotes for a connected causal graph."
+          }
+        ]
       }
     ]
   },
@@ -153185,6 +153384,32 @@
         "action": "PROPOSED_FROM_RESEARCH",
         "changes": "Proposed a DOI-backed FAPROTAX metabolic capability from proposals/metpo_traitmech_v11 after repository-wide duplicate review.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-21T20:01:04Z",
+        "curator": "claude",
+        "action": "RECORD_MECHANISM_KNOWLEDGE_GAP",
+        "changes": "Recorded OPEN KNOWLEDGE_GAP discussion (hydrogenotrophic-methanogenesis-causal-graph-source-gap) documenting the source-limited mechanism gap for causal_graphs.",
+        "llm_assisted": true
+      }
+    ],
+    "discussions": [
+      {
+        "discussion_id": "hydrogenotrophic-methanogenesis-causal-graph-source-gap",
+        "prompt": "Add primary literature evidence for the H2/CO2 methanogenesis pathway steps (e.g. Fmd/Fwd, Mch, Mtd, Mer, Mtr, Mcr, and energy-converting hydrogenases) and a strain-matched canonical example before constructing causal_graphs.",
+        "kind": "KNOWLEDGE_GAP",
+        "status": "OPEN",
+        "rationale": "The current record carries a single 26-character phrase ('from CO2 and H2 to methane' in DOI:10.1146/annurev-micro-011720-122807); building a multi-edge graph from one short phrase would violate the snippet-diversity and anti-clause-splitting rules.",
+        "posed_by": "claude",
+        "posed_date": "2026-10-21",
+        "evidence": [
+          {
+            "reference": "DOI:10.1146/annurev-micro-011720-122807",
+            "supports": "PARTIAL",
+            "snippet": "from CO2 and H2 to methane",
+            "explanation": "Existing record-level evidence supports the high-level metabolic trait definition but does not provide multi-step enzymatic mechanism quotes for a connected causal graph."
+          }
+        ]
       }
     ]
   },
@@ -156051,6 +156276,32 @@
         "action": "PROPOSED_FROM_RESEARCH",
         "changes": "Proposed a DOI-backed FAPROTAX metabolic capability from proposals/metpo_traitmech_v11 after repository-wide duplicate review.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-21T20:01:04Z",
+        "curator": "claude",
+        "action": "RECORD_MECHANISM_KNOWLEDGE_GAP",
+        "changes": "Recorded OPEN KNOWLEDGE_GAP discussion (methanol-oxidation-causal-graph-source-gap) documenting the source-limited mechanism gap for causal_graphs.",
+        "llm_assisted": true
+      }
+    ],
+    "discussions": [
+      {
+        "discussion_id": "methanol-oxidation-causal-graph-source-gap",
+        "prompt": "Add primary literature evidence for PQQ- or NAD-dependent methanol dehydrogenase (MxaFI/XoxF/Mdh), formaldehyde oxidation, and a strain-matched canonical example before constructing causal_graphs.",
+        "kind": "KNOWLEDGE_GAP",
+        "status": "OPEN",
+        "rationale": "The current record carries a single 37-character phrase ('methanol utilization in methylotrophy' in DOI:10.3389/fbioe.2021.787791) without verbatim catalytic or electron-transfer quotes in the evidence block.",
+        "posed_by": "claude",
+        "posed_date": "2026-10-21",
+        "evidence": [
+          {
+            "reference": "DOI:10.3389/fbioe.2021.787791",
+            "supports": "PARTIAL",
+            "snippet": "methanol utilization in methylotrophy",
+            "explanation": "Existing record-level evidence supports the high-level metabolic trait definition but does not provide multi-step enzymatic mechanism quotes for a connected causal graph."
+          }
+        ]
       }
     ]
   },
@@ -156575,6 +156826,32 @@
         "action": "PROPOSED_FROM_RESEARCH",
         "changes": "Proposed a DOI-backed FAPROTAX metabolic capability from proposals/metpo_traitmech_v11 after repository-wide duplicate review.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-21T20:01:04Z",
+        "curator": "claude",
+        "action": "RECORD_MECHANISM_KNOWLEDGE_GAP",
+        "changes": "Recorded OPEN KNOWLEDGE_GAP discussion (nitrate-reduction-causal-graph-source-gap) documenting the source-limited mechanism gap for causal_graphs.",
+        "llm_assisted": true
+      }
+    ],
+    "discussions": [
+      {
+        "discussion_id": "nitrate-reduction-causal-graph-source-gap",
+        "prompt": "Add primary literature evidence distinguishing assimilatory (Nas), respiratory (Nar), and dissimilatory/periplasmic (Nap) nitrate reductase reactions and a strain-matched canonical example before constructing causal_graphs.",
+        "kind": "KNOWLEDGE_GAP",
+        "status": "OPEN",
+        "rationale": "The current record carries a single overview snippet (DOI:10.1128/JB.181.21.6573-6584.1999) noting that nitrate reduction serves three purposes, without verbatim quotes for the individual reductase branches.",
+        "posed_by": "claude",
+        "posed_date": "2026-10-21",
+        "evidence": [
+          {
+            "reference": "DOI:10.1128/JB.181.21.6573-6584.1999",
+            "supports": "PARTIAL",
+            "snippet": "Nitrate reduction can be performed with three different purposes",
+            "explanation": "Existing record-level evidence supports the high-level metabolic trait definition but does not provide multi-step enzymatic mechanism quotes for a connected causal graph."
+          }
+        ]
       }
     ]
   },
@@ -156611,6 +156888,32 @@
         "action": "PROPOSED_FROM_RESEARCH",
         "changes": "Proposed a DOI-backed FAPROTAX metabolic capability from proposals/metpo_traitmech_v11 after repository-wide duplicate review.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-21T20:01:04Z",
+        "curator": "claude",
+        "action": "RECORD_MECHANISM_KNOWLEDGE_GAP",
+        "changes": "Recorded OPEN KNOWLEDGE_GAP discussion (nitrate-respiration-causal-graph-source-gap) documenting the source-limited mechanism gap for causal_graphs.",
+        "llm_assisted": true
+      }
+    ],
+    "discussions": [
+      {
+        "discussion_id": "nitrate-respiration-causal-graph-source-gap",
+        "prompt": "Add primary literature evidence for respiratory nitrate reductase (NarGHI/NapAB), electron-transport phosphorylation, and a strain-matched canonical example before constructing causal_graphs.",
+        "kind": "KNOWLEDGE_GAP",
+        "status": "OPEN",
+        "rationale": "The current record carries a single snippet (DOI:10.1126/science.1254070) contrasting denitrification and ammonification endpoints without enzyme-level nitrate-to-nitrite respiratory mechanism quotes.",
+        "posed_by": "claude",
+        "posed_date": "2026-10-21",
+        "evidence": [
+          {
+            "reference": "DOI:10.1126/science.1254070",
+            "supports": "PARTIAL",
+            "snippet": "Denitrification converts nitrate into nitrogenous gas and thus removes fixed nitrogen from the biosphere, whereas ammonification converts nitrate into ammonium",
+            "explanation": "Existing record-level evidence supports the high-level metabolic trait definition but does not provide multi-step enzymatic mechanism quotes for a connected causal graph."
+          }
+        ]
       }
     ]
   },
@@ -156691,6 +156994,32 @@
         "action": "PROPOSED_FROM_RESEARCH",
         "changes": "Proposed a DOI-backed FAPROTAX metabolic capability from proposals/metpo_traitmech_v11 after repository-wide duplicate review.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-21T20:01:04Z",
+        "curator": "claude",
+        "action": "RECORD_MECHANISM_KNOWLEDGE_GAP",
+        "changes": "Recorded OPEN KNOWLEDGE_GAP discussion (nitrite-respiration-causal-graph-source-gap) documenting the source-limited mechanism gap for causal_graphs.",
+        "llm_assisted": true
+      }
+    ],
+    "discussions": [
+      {
+        "discussion_id": "nitrite-respiration-causal-graph-source-gap",
+        "prompt": "Add a second independent evidence snippet covering electron donation or proton-motive-force coupling alongside NrfA/NirS/NirK nitrite reduction and a strain-matched canonical example before constructing causal_graphs.",
+        "kind": "KNOWLEDGE_GAP",
+        "status": "OPEN",
+        "rationale": "The current record carries a single evidence item (DOI:10.1074/jbc.M709090200) on Escherichia coli NrfA reduction of nitrite to ammonium; a connected multi-edge graph requires at least two independent verbatim snippets so no single quote is reused or clause-split across edges.",
+        "posed_by": "claude",
+        "posed_date": "2026-10-21",
+        "evidence": [
+          {
+            "reference": "DOI:10.1074/jbc.M709090200",
+            "supports": "PARTIAL",
+            "snippet": "Cytochrome c nitrite reductase (NrfA) from Escherichia coli has a well established role in the respiratory reduction of nitrite to ammonium",
+            "explanation": "Existing record-level evidence supports the high-level metabolic trait definition but does not provide multi-step enzymatic mechanism quotes for a connected causal graph."
+          }
+        ]
       }
     ]
   },
@@ -157105,6 +157434,32 @@
         "action": "PROPOSED_FROM_RESEARCH",
         "changes": "Proposed a DOI-backed FAPROTAX metabolic capability from proposals/metpo_traitmech_v11 after repository-wide duplicate review.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-21T20:01:04Z",
+        "curator": "claude",
+        "action": "RECORD_MECHANISM_KNOWLEDGE_GAP",
+        "changes": "Recorded OPEN KNOWLEDGE_GAP discussion (nitrogen-respiration-causal-graph-source-gap) documenting the source-limited mechanism gap for causal_graphs.",
+        "llm_assisted": true
+      }
+    ],
+    "discussions": [
+      {
+        "discussion_id": "nitrogen-respiration-causal-graph-source-gap",
+        "prompt": "Add primary literature evidence for nitrogen-oxide respiratory reductases, electron-transport chains, and a strain-matched canonical example before constructing causal_graphs.",
+        "kind": "KNOWLEDGE_GAP",
+        "status": "OPEN",
+        "rationale": "The current record carries a single 38-character snippet ('N oxides as terminal electron acceptors' in DOI:10.1128/mmbr.61.4.533-616.1997), which supports the upper-level class definition but not a multi-edge mechanism graph.",
+        "posed_by": "claude",
+        "posed_date": "2026-10-21",
+        "evidence": [
+          {
+            "reference": "DOI:10.1128/mmbr.61.4.533-616.1997",
+            "supports": "PARTIAL",
+            "snippet": "N oxides as terminal electron acceptors",
+            "explanation": "Existing record-level evidence supports the high-level metabolic trait definition but does not provide multi-step enzymatic mechanism quotes for a connected causal graph."
+          }
+        ]
       }
     ]
   },
@@ -158268,6 +158623,75 @@
         "action": "PROPOSED_FROM_RESEARCH",
         "changes": "Proposed DOI-backed pectin degradation after a repository-wide duplicate review covering ignored and hidden files.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-21T20:01:04Z",
+        "curator": "claude",
+        "action": "CURATE_CAUSAL_GRAPH",
+        "changes": "Added NONMECHANISTIC causal_graphs entry (pectin_degradation_catabolic_sketch) anchored on existing verbatim record evidence snippets.",
+        "llm_assisted": true
+      }
+    ],
+    "causal_graphs": [
+      {
+        "graph_id": "pectin_degradation_catabolic_sketch",
+        "title": "Compartmentalized pectin depolymerization and oligogalacturonide catabolism",
+        "description": "Evidence-backed pathway sketch linking extracellular pectin depolymerization and oligogalacturonide formation to the pectin degradation phenotype.",
+        "scope_status": "NONMECHANISTIC",
+        "scope_notes": "Compartmentalized pathway sketch backed by DOI:10.1128/MMBR.00038-07 and DOI:10.1146/annurev.micro.50.1.213; individual pectate lyase, polygalacturonase, and intracellular catabolic enzyme nodes with strain-matched UniProtKB accessions remain to be curated.",
+        "nodes": [
+          {
+            "node_id": "pectin_degradation_trait",
+            "label": "pectin degradation",
+            "node_type": "TRAIT",
+            "grounding": "traitmech:000135",
+            "description": "Biopolymer-degradation metabolism that depolymerizes pectin and catabolizes its breakdown products."
+          },
+          {
+            "node_id": "pectin_degradation_catabolic_process",
+            "label": "pectin catabolic process",
+            "node_type": "BIOLOGICAL_PROCESS",
+            "grounding": "GO:0045490",
+            "description": "Compartmentalized extracellular depolymerization of pectin and intracellular catabolism of breakdown products."
+          },
+          {
+            "node_id": "pectin_degradation_oligogalacturonide",
+            "label": "oligogalacturonide",
+            "node_type": "CHEMICAL",
+            "grounding": "CHEBI:62958",
+            "description": "Oligogalacturonide intermediates released by extracellular pectin degradation and catabolized intracellularly."
+          }
+        ],
+        "edges": [
+          {
+            "subject": "pectin_degradation_catabolic_process",
+            "predicate": "confers",
+            "predicate_id": "METPO:2007700",
+            "object": "pectin_degradation_trait",
+            "description": "Compartmentalized catabolism of pectin and its breakdown products confers the pectin degradation trait.",
+            "evidence": [
+              {
+                "reference": "DOI:10.1128/MMBR.00038-07",
+                "snippet": "Catabolism of pectin and its breakdown products by pectinolytic bacteria occurs within distinct cellular environments",
+                "notes": "Abbott and Boraston review compartmentalized catabolism of pectin and its breakdown products by pectinolytic bacteria."
+              }
+            ]
+          },
+          {
+            "subject": "pectin_degradation_catabolic_process",
+            "predicate": "has output",
+            "predicate_id": "RO:0002234",
+            "object": "pectin_degradation_oligogalacturonide",
+            "description": "Extracellular pectin degradation produces oligogalacturonide intermediates that enter intracellular catabolism.",
+            "evidence": [
+              {
+                "reference": "DOI:10.1146/annurev.micro.50.1.213",
+                "snippet": "The extracellular degradation of the pectin leads to the formation of oligogalacturonides that are catabolized through an intracellular pathway",
+                "notes": "Hugouvieux-Cotte-Pattat et al. describe extracellular pectin degradation forming oligogalacturonides for intracellular catabolism."
+              }
+            ]
+          }
+        ]
       }
     ]
   },
@@ -161413,6 +161837,32 @@
         "action": "PROPOSED_FROM_RESEARCH",
         "changes": "Proposed a DOI-backed FAPROTAX metabolic capability from proposals/metpo_traitmech_v11 after repository-wide duplicate review.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-21T20:01:04Z",
+        "curator": "claude",
+        "action": "RECORD_MECHANISM_KNOWLEDGE_GAP",
+        "changes": "Recorded OPEN KNOWLEDGE_GAP discussion (respiration-of-sulfur-compounds-causal-graph-source-gap) documenting the source-limited mechanism gap for causal_graphs.",
+        "llm_assisted": true
+      }
+    ],
+    "discussions": [
+      {
+        "discussion_id": "respiration-of-sulfur-compounds-causal-graph-source-gap",
+        "prompt": "Add primary literature evidence for dissimilatory sulfur/sulfate/thiosulfate reductases (e.g. DsrAB, PsrABC, PhsABC) and a strain-matched canonical example before constructing causal_graphs.",
+        "kind": "KNOWLEDGE_GAP",
+        "status": "OPEN",
+        "rationale": "The current record carries a single 42-character snippet ('sulfate, sulfur, or thiosulfate respiration' in DOI:10.3389/fmicb.2023.1108245) enumerating the respiratory subclasses without enzymatic mechanism quotes.",
+        "posed_by": "claude",
+        "posed_date": "2026-10-21",
+        "evidence": [
+          {
+            "reference": "DOI:10.3389/fmicb.2023.1108245",
+            "supports": "PARTIAL",
+            "snippet": "sulfate, sulfur, or thiosulfate respiration",
+            "explanation": "Existing record-level evidence supports the high-level metabolic trait definition but does not provide multi-step enzymatic mechanism quotes for a connected causal graph."
+          }
+        ]
       }
     ]
   },
@@ -162768,6 +163218,32 @@
         "action": "PROPOSED_FROM_RESEARCH",
         "changes": "Proposed a DOI-backed FAPROTAX metabolic capability from proposals/metpo_traitmech_v11 after repository-wide duplicate review.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-21T20:01:04Z",
+        "curator": "claude",
+        "action": "RECORD_MECHANISM_KNOWLEDGE_GAP",
+        "changes": "Recorded OPEN KNOWLEDGE_GAP discussion (sulfur-respiration-causal-graph-source-gap) documenting the source-limited mechanism gap for causal_graphs.",
+        "llm_assisted": true
+      }
+    ],
+    "discussions": [
+      {
+        "discussion_id": "sulfur-respiration-causal-graph-source-gap",
+        "prompt": "Add primary literature evidence for polysulfide/elemental-sulfur reductase (PsrABC or SreABC), sulfide production, and a strain-matched canonical example before constructing causal_graphs.",
+        "kind": "KNOWLEDGE_GAP",
+        "status": "OPEN",
+        "rationale": "The current record carries a single 48-character snippet ('using sulfur as an alternative electron acceptor' in DOI:10.3389/fmicb.2023.1108245) without a second independent mechanistic quote to support a connected multi-edge graph.",
+        "posed_by": "claude",
+        "posed_date": "2026-10-21",
+        "evidence": [
+          {
+            "reference": "DOI:10.3389/fmicb.2023.1108245",
+            "supports": "PARTIAL",
+            "snippet": "using sulfur as an alternative electron acceptor",
+            "explanation": "Existing record-level evidence supports the high-level metabolic trait definition but does not provide multi-step enzymatic mechanism quotes for a connected causal graph."
+          }
+        ]
       }
     ]
   },
@@ -163339,6 +163815,32 @@
         "action": "PROPOSED_FROM_RESEARCH",
         "changes": "Proposed a DOI-backed FAPROTAX metabolic capability from proposals/metpo_traitmech_v11 after repository-wide duplicate review.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-21T20:01:04Z",
+        "curator": "claude",
+        "action": "RECORD_MECHANISM_KNOWLEDGE_GAP",
+        "changes": "Recorded OPEN KNOWLEDGE_GAP discussion (thiosulfate-respiration-causal-graph-source-gap) documenting the source-limited mechanism gap for causal_graphs.",
+        "llm_assisted": true
+      }
+    ],
+    "discussions": [
+      {
+        "discussion_id": "thiosulfate-respiration-causal-graph-source-gap",
+        "prompt": "Add primary literature evidence for thiosulfate reductase (PhsABC), sulfite/sulfide products, and a strain-matched canonical example before constructing causal_graphs.",
+        "kind": "KNOWLEDGE_GAP",
+        "status": "OPEN",
+        "rationale": "The current record carries a single 45-character snippet ('sulfur- and thiosulfate reducing type strain' in DOI:10.3389/fmicb.2023.1108245) without enzymatic or product-level quotes needed for a multi-edge causal graph.",
+        "posed_by": "claude",
+        "posed_date": "2026-10-21",
+        "evidence": [
+          {
+            "reference": "DOI:10.3389/fmicb.2023.1108245",
+            "supports": "PARTIAL",
+            "snippet": "sulfur- and thiosulfate reducing type strain",
+            "explanation": "Existing record-level evidence supports the high-level metabolic trait definition but does not provide multi-step enzymatic mechanism quotes for a connected causal graph."
+          }
+        ]
       }
     ]
   },
@@ -183610,6 +184112,13 @@
         "action": "ENRICHED_FROM_LITERATURE",
         "changes": "Enriched the seeded METPO lateral flagellation phenotype with DOI-backed lateral-flagella evidence after a repository-wide duplicate review covering ignored and hidden files.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-21T20:01:04Z",
+        "curator": "claude",
+        "action": "CURATE_CAUSAL_GRAPH",
+        "changes": "Added NONMECHANISTIC causal_graphs entry (lateral_flagellation_swarming_sketch) anchored on existing verbatim record evidence snippets.",
+        "llm_assisted": true
       }
     ],
     "definition_source": "DOI:10.1111/j.1574-6968.2006.00403.x",
@@ -183641,6 +184150,89 @@
         "taxon_label": "Vibrio parahaemolyticus",
         "note": "Belas et al. describe V. parahaemolyticus as producing a polar swimming flagellum and lateral flagella that enable swarming on surfaces.",
         "reference": "DOI:10.1128/jb.167.1.210-218.1986"
+      }
+    ],
+    "causal_graphs": [
+      {
+        "graph_id": "lateral_flagellation_swarming_sketch",
+        "title": "Inducible proton-driven lateral flagella and surface swarming",
+        "description": "Evidence-backed causal sketch linking proton-driven lateral flagella to the lateral flagellation morphology and surface swarming motility.",
+        "scope_status": "NONMECHANISTIC",
+        "scope_notes": "Organelle-and-motility phenotype sketch backed by DOI:10.1111/j.1574-6968.2006.00403.x, DOI:10.1128/jb.167.1.210-218.1986, and DOI:10.1128/jb.185.15.4508-4518.2003; LafA/LafTU protein subunits with strain-matched UniProtKB accessions remain to be curated.",
+        "nodes": [
+          {
+            "node_id": "lateral_flagellation_trait",
+            "label": "lateral flagellation",
+            "node_type": "TRAIT",
+            "grounding": "METPO:1005036",
+            "description": "Motility morphology in which flagella emerge from the lateral side of the cell."
+          },
+          {
+            "node_id": "lateral_flagellation_lateral_flagella",
+            "label": "bacterial-type flagellum",
+            "node_type": "ORGANELLE",
+            "grounding": "GO:0009288",
+            "description": "Inducible lateral flagellar organelles expressed on surfaces or in viscous media."
+          },
+          {
+            "node_id": "lateral_flagellation_swarming_motility",
+            "label": "swarming motility",
+            "node_type": "BIOLOGICAL_PROCESS",
+            "grounding": "GO:0071973",
+            "description": "Surface translocation enabled by lateral flagella."
+          },
+          {
+            "node_id": "lateral_flagellation_proton_motive_force",
+            "label": "proton motive force",
+            "node_type": "STATE",
+            "grounding": "METPO:1007500",
+            "description": "Transmembrane proton gradient that powers lateral flagellar rotation during swarming."
+          }
+        ],
+        "edges": [
+          {
+            "subject": "lateral_flagellation_lateral_flagella",
+            "predicate": "confers",
+            "predicate_id": "METPO:2007700",
+            "object": "lateral_flagellation_trait",
+            "description": "Expression of an inducible lateral flagella system confers the lateral flagellation morphology.",
+            "evidence": [
+              {
+                "reference": "DOI:10.1111/j.1574-6968.2006.00403.x",
+                "snippet": "These bacteria are able to express both a constitutive polar flagellum required for swimming motility and a separate lateral flagella system that is induced in viscous media or on surfaces and is essential for swarming motility.",
+                "notes": "Merino et al. describe the separate inducible lateral flagella system expressed in viscous media or on surfaces."
+              }
+            ]
+          },
+          {
+            "subject": "lateral_flagellation_lateral_flagella",
+            "predicate": "enables",
+            "predicate_id": "RO:0002327",
+            "object": "lateral_flagellation_swarming_motility",
+            "description": "Lateral flagella enable bacterial swarming motility across surfaces.",
+            "evidence": [
+              {
+                "reference": "DOI:10.1128/jb.167.1.210-218.1986",
+                "snippet": "The polar flagellum is responsible for motility in a liquid environment (swimming), and the lateral flagella enable the bacteria to move over surfaces (swarming).",
+                "notes": "Belas et al. show that lateral flagella enable bacteria to move over surfaces (swarming)."
+              }
+            ]
+          },
+          {
+            "subject": "lateral_flagellation_proton_motive_force",
+            "predicate": "enables",
+            "predicate_id": "RO:0002327",
+            "object": "lateral_flagellation_swarming_motility",
+            "description": "Proton-driven lateral flagellar motors power translocation over surfaces during swarming.",
+            "evidence": [
+              {
+                "reference": "DOI:10.1128/jb.185.15.4508-4518.2003",
+                "snippet": "Multiple proton-driven lateral flagella enable translocation over surfaces (i.e., swarming).",
+                "notes": "Stewart and McCarter report that multiple proton-driven lateral flagella enable surface swarming."
+              }
+            ]
+          }
+        ]
       }
     ]
   },
@@ -189414,6 +190006,13 @@
         "action": "ENRICHED_FROM_LITERATURE",
         "changes": "Enriched the seeded METPO polar flagellation phenotype with DOI-backed flagellar-arrangement evidence after a repository-wide duplicate review covering ignored and hidden files.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-21T20:01:04Z",
+        "curator": "claude",
+        "action": "CURATE_CAUSAL_GRAPH",
+        "changes": "Added NONMECHANISTIC causal_graphs entry (polar_flagellation_flhf_flhg_sketch) anchored on existing verbatim record evidence snippets.",
+        "llm_assisted": true
       }
     ],
     "definition_source": "DOI:10.1093/femsre/fuv034",
@@ -189440,6 +190039,89 @@
         "taxon_label": "Vibrio alginolyticus",
         "note": "Kojima et al. describe V. alginolyticus as a marine bacterium with a single polar flagellum.",
         "reference": "DOI:10.3390/biom10040533"
+      }
+    ],
+    "causal_graphs": [
+      {
+        "graph_id": "polar_flagellation_flhf_flhg_sketch",
+        "title": "FlhF-FlhG polar flagellar placement and liquid swimming",
+        "description": "Evidence-backed causal sketch linking antagonistic FlhF/FlhG regulation and polar flagellum placement to polar flagellation and swimming motility in liquid environments.",
+        "scope_status": "NONMECHANISTIC",
+        "scope_notes": "Morphology and FlhF/FlhG placement sketch backed by DOI:10.1093/femsre/fuv034 and DOI:10.3390/biom10040533; strain-matched UniProtKB accessions for Vibrio alginolyticus FlhF and FlhG remain to be curated.",
+        "nodes": [
+          {
+            "node_id": "polar_flagellation_trait",
+            "label": "polar flagellation",
+            "node_type": "TRAIT",
+            "grounding": "METPO:1005032",
+            "description": "Motility morphology in which one or more flagella are positioned at one or both cell poles."
+          },
+          {
+            "node_id": "polar_flagellation_polar_flagellum",
+            "label": "bacterial-type flagellum",
+            "node_type": "ORGANELLE",
+            "grounding": "GO:0009288",
+            "description": "Flagellar organelle positioned at the bacterial cell pole."
+          },
+          {
+            "node_id": "polar_flagellation_swimming_motility",
+            "label": "locomotion",
+            "node_type": "BIOLOGICAL_PROCESS",
+            "grounding": "GO:0040011",
+            "description": "Swimming locomotion in liquid environments mediated by a polar flagellum."
+          },
+          {
+            "node_id": "polar_flagellation_flhf_flhg_regulators",
+            "label": "FlhF-FlhG polar flagellar placement regulator pair",
+            "node_type": "GENE_OR_PROTEIN",
+            "grounding": "InterPro:IPR007066",
+            "description": "Antagonistic FlhF GTPase and FlhG ATPase regulators that restrict flagellar assembly to the cell pole."
+          }
+        ],
+        "edges": [
+          {
+            "subject": "polar_flagellation_polar_flagellum",
+            "predicate": "confers",
+            "predicate_id": "METPO:2007700",
+            "object": "polar_flagellation_trait",
+            "description": "Regular positioning of flagella at the cell pole defines the polar flagellation pattern.",
+            "evidence": [
+              {
+                "reference": "DOI:10.1093/femsre/fuv034",
+                "snippet": "Bacteria differ in number and location of their flagella that appear in regular patterns at the cell surface (flagellation pattern).",
+                "notes": "Schuhmacher et al. define regular cell-surface flagellar number and location as the bacterial flagellation pattern."
+              }
+            ]
+          },
+          {
+            "subject": "polar_flagellation_polar_flagellum",
+            "predicate": "enables",
+            "predicate_id": "RO:0002327",
+            "object": "polar_flagellation_swimming_motility",
+            "description": "A polar flagellum enables bacterial swimming locomotion in liquid environments.",
+            "evidence": [
+              {
+                "reference": "DOI:10.3390/biom10040533",
+                "snippet": "Some bacterial species, such as the marine bacterium Vibrio alginolyticus, have a single polar flagellum that allows it to swim in liquid environments.",
+                "notes": "Kojima et al. describe the single polar flagellum of Vibrio alginolyticus enabling swimming in liquid environments."
+              }
+            ]
+          },
+          {
+            "subject": "polar_flagellation_flhf_flhg_regulators",
+            "predicate": "contributes to",
+            "predicate_id": "RO:0002326",
+            "object": "polar_flagellation_trait",
+            "description": "Antagonistic FlhF and FlhG regulators control generation of a flagellum at the cell pole.",
+            "evidence": [
+              {
+                "reference": "DOI:10.3390/biom10040533",
+                "snippet": "Two regulators, FlhF and FlhG, function antagonistically to generate only one flagellum at the cell pole.",
+                "notes": "Kojima et al. report that FlhF and FlhG function antagonistically to generate a single flagellum at the cell pole."
+              }
+            ]
+          }
+        ]
       }
     ]
   },
@@ -190152,6 +190834,13 @@
         "action": "ENRICHED_FROM_LITERATURE",
         "changes": "Enriched the seeded METPO polytrichous flagellation phenotype with DOI-backed polytrichous-flagella evidence after a repository-wide duplicate review covering ignored and hidden files.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-21T20:01:04Z",
+        "curator": "claude",
+        "action": "CURATE_CAUSAL_GRAPH",
+        "changes": "Added NONMECHANISTIC causal_graphs entry (polytrichous_flagellation_tuft_sketch) anchored on existing verbatim record evidence snippets.",
+        "llm_assisted": true
       }
     ],
     "definition_source": "DOI:10.1128/AEM.64.10.3576-3583.1998",
@@ -190173,6 +190862,68 @@
         "taxon_label": "Thermocrinis ruber",
         "note": "Huber et al. directly observed up to three monopolar flagella per cell in the Thermocrinis ruber isolate OC 1/4.",
         "reference": "DOI:10.1128/AEM.64.10.3576-3583.1998"
+      }
+    ],
+    "causal_graphs": [
+      {
+        "graph_id": "polytrichous_flagellation_tuft_sketch",
+        "title": "Polytrichous multi-flagellar tuft arrangement and swimming motility",
+        "description": "Evidence-backed morphology sketch linking monopolar or bipolar multi-flagellar tufts to polytrichous flagellation and swimming locomotion.",
+        "scope_status": "NONMECHANISTIC",
+        "scope_notes": "Morphological arrangement sketch backed by DOI:10.1128/AEM.64.10.3576-3583.1998 and DOI:10.1128/AEM.68.12.6310-6320.2002; specific flagellar structural or placement proteins in Thermocrinis ruber are not identified in the cited electron-microscopy and motility sources.",
+        "nodes": [
+          {
+            "node_id": "polytrichous_flagellation_trait",
+            "label": "polytrichous flagellation",
+            "node_type": "TRAIT",
+            "grounding": "METPO:1007006",
+            "description": "Flagellar arrangement in which multiple flagella (a tuft) are present per cell."
+          },
+          {
+            "node_id": "polytrichous_flagellation_flagellar_tuft",
+            "label": "bacterial-type flagellum",
+            "node_type": "ORGANELLE",
+            "grounding": "GO:0009288",
+            "description": "Monopolar or bipolar tuft of multiple bacterial flagella per cell."
+          },
+          {
+            "node_id": "polytrichous_flagellation_swimming_motility",
+            "label": "locomotion",
+            "node_type": "BIOLOGICAL_PROCESS",
+            "grounding": "GO:0040011",
+            "description": "Swimming pattern driven by polytrichous flagellar tufts."
+          }
+        ],
+        "edges": [
+          {
+            "subject": "polytrichous_flagellation_flagellar_tuft",
+            "predicate": "confers",
+            "predicate_id": "METPO:2007700",
+            "object": "polytrichous_flagellation_trait",
+            "description": "Presence of multiple polar flagella per cell confers the polytrichous flagellation phenotype.",
+            "evidence": [
+              {
+                "reference": "DOI:10.1128/AEM.64.10.3576-3583.1998",
+                "snippet": "In transmission electron micrographs, isolate OC 1/4 exhibited monopolar polytrichous flagellation, with up to three flagella per cell (Fig. 4).",
+                "notes": "Huber et al. directly observe monopolar polytrichous flagellation with up to three flagella per cell in Thermocrinis ruber OC 1/4."
+              }
+            ]
+          },
+          {
+            "subject": "polytrichous_flagellation_flagellar_tuft",
+            "predicate": "enables",
+            "predicate_id": "RO:0002327",
+            "object": "polytrichous_flagellation_swimming_motility",
+            "description": "Bipolar polytrichous flagella enable rotational and translational swimming locomotion.",
+            "evidence": [
+              {
+                "reference": "DOI:10.1128/AEM.68.12.6310-6320.2002",
+                "snippet": "The cells have bipolar polytrichous flagella and exhibit a unique swimming pattern, rotating and translating along their short axis.",
+                "notes": "Thar and Kuhl connect bipolar polytrichous flagella to a distinct swimming pattern."
+              }
+            ]
+          }
+        ]
       }
     ]
   },
@@ -196274,6 +197025,13 @@
         "action": "ENRICHED_FROM_LITERATURE",
         "changes": "Enriched the seeded METPO subpolar flagellation phenotype with DOI-backed subpolar-flagella evidence after a repository-wide duplicate review covering ignored and hidden files.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-21T20:01:04Z",
+        "curator": "claude",
+        "action": "CURATE_CAUSAL_GRAPH",
+        "changes": "Added NONMECHANISTIC causal_graphs entry (subpolar_flagellation_surface_assembly_sketch) anchored on existing verbatim record evidence snippets.",
+        "llm_assisted": true
       }
     ],
     "definition_source": "DOI:10.1128/JB.01405-06",
@@ -196295,6 +197053,68 @@
         "taxon_label": "Bradyrhizobium diazoefficiens USDA 110",
         "note": "Kanbe et al. directly observed subpolar thick and thin flagella in Bradyrhizobium japonicum 110spc4, a derivative of USDA 110 now assigned by NCBI to B. diazoefficiens.",
         "reference": "DOI:10.1128/JB.01405-06"
+      }
+    ],
+    "causal_graphs": [
+      {
+        "graph_id": "subpolar_flagellation_surface_assembly_sketch",
+        "title": "Subpolar flagellar assembly and cell-surface placement",
+        "description": "Evidence-backed morphology sketch linking cell-surface assembly of subpolar flagella to the subpolar flagellation phenotype.",
+        "scope_status": "NONMECHANISTIC",
+        "scope_notes": "Morphological placement sketch backed by DOI:10.1128/JB.01405-06 and DOI:10.3390/biom10050774; strain-matched UniProtKB protein examples for the Bradyrhizobium diazoefficiens USDA 110 subpolar flagellin or placement factors remain to be curated.",
+        "nodes": [
+          {
+            "node_id": "subpolar_flagellation_trait",
+            "label": "subpolar flagellation",
+            "node_type": "TRAIT",
+            "grounding": "METPO:1005037",
+            "description": "Motility morphology in which flagella emerge from subpolar positions near the cell pole."
+          },
+          {
+            "node_id": "subpolar_flagellation_subpolar_flagellum",
+            "label": "bacterial-type flagellum",
+            "node_type": "ORGANELLE",
+            "grounding": "GO:0009288",
+            "description": "Flagellar organelle emerging at a subpolar position on the bacterial cell surface."
+          },
+          {
+            "node_id": "subpolar_flagellation_flagellum_assembly",
+            "label": "bacterial-type flagellum assembly",
+            "node_type": "BIOLOGICAL_PROCESS",
+            "grounding": "GO:0044780",
+            "description": "Assembly of a membrane-traversing subpolar flagellum on the cell surface."
+          }
+        ],
+        "edges": [
+          {
+            "subject": "subpolar_flagellation_subpolar_flagellum",
+            "predicate": "confers",
+            "predicate_id": "METPO:2007700",
+            "object": "subpolar_flagellation_trait",
+            "description": "Flagellar systems growing at subpolar positions confer the subpolar flagellation morphology.",
+            "evidence": [
+              {
+                "reference": "DOI:10.1128/JB.01405-06",
+                "snippet": "The cell has two sets of flagellar systems, one thick flagellum and a few thin flagella, uniquely growing at subpolar positions.",
+                "notes": "Kanbe et al. describe thick and thin flagellar systems uniquely growing at subpolar positions in Bradyrhizobium."
+              }
+            ]
+          },
+          {
+            "subject": "subpolar_flagellation_flagellum_assembly",
+            "predicate": "contributes to",
+            "predicate_id": "RO:0002326",
+            "object": "subpolar_flagellation_subpolar_flagellum",
+            "description": "Cell-surface flagellar assembly forms the membrane-traversing subpolar flagellum.",
+            "evidence": [
+              {
+                "reference": "DOI:10.3390/biom10050774",
+                "snippet": "Under the growth conditions commonly used in the laboratory, a single subpolar flagellum that traverses the cell membrane, is assembled on the surface.",
+                "notes": "Camarena and Dreyfus describe assembly of a single membrane-traversing subpolar flagellum on the cell surface."
+              }
+            ]
+          }
+        ]
       }
     ]
   },
@@ -198180,6 +199000,96 @@
         "action": "ADVERSARIAL_REVIEW_REPAIR",
         "changes": "Aligned the type IV pilus definition with dynamic extension and retraction evidence after Claude Code Review on PR #847.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-21T20:01:04Z",
+        "curator": "claude",
+        "action": "CURATE_CAUSAL_GRAPH",
+        "changes": "Added NONMECHANISTIC causal_graphs entry (type_iv_pilus_extension_retraction_sketch) anchored on existing verbatim record evidence snippets.",
+        "llm_assisted": true
+      }
+    ],
+    "causal_graphs": [
+      {
+        "graph_id": "type_iv_pilus_extension_retraction_sketch",
+        "title": "Type IV pilus cell-surface appendage and dynamic extension-retraction",
+        "description": "Evidence-backed morphology sketch linking cell-surface type IV pili fibers and their dynamic extension and retraction to the type IV pilus trait.",
+        "scope_status": "NONMECHANISTIC",
+        "scope_notes": "Appendage-and-dynamics sketch backed by DOI:10.1093/femsre/fuab053 and DOI:10.1042/BST20160221; PilA/PilB/PilT protein nodes with strain-matched UniProtKB accessions for Pseudomonas aeruginosa PAO1 remain to be curated.",
+        "nodes": [
+          {
+            "node_id": "type_iv_pilus_trait",
+            "label": "type IV pilus",
+            "node_type": "TRAIT",
+            "grounding": "traitmech:000175",
+            "description": "Morphology trait in which a cell produces extracellular type IV pilus filaments that dynamically extend and retract."
+          },
+          {
+            "node_id": "type_iv_pilus_appendage",
+            "label": "type IV pilus complex",
+            "node_type": "CELLULAR_LOCALIZATION",
+            "grounding": "GO:0044096",
+            "description": "Hair-like prokaryotic surface appendage composed of type IV pilin subunits."
+          },
+          {
+            "node_id": "type_iv_pilus_extension_retraction",
+            "label": "pilus-dependent motility",
+            "node_type": "BIOLOGICAL_PROCESS",
+            "grounding": "GO:0071972",
+            "description": "Dynamic extension and retraction of type IV pilus fibers."
+          },
+          {
+            "node_id": "type_iv_pilus_cell_surface",
+            "label": "cell surface",
+            "node_type": "CELLULAR_LOCALIZATION",
+            "grounding": "GO:0009986",
+            "description": "Bacterial or archaeal cell surface from which type IV pili extend."
+          }
+        ],
+        "edges": [
+          {
+            "subject": "type_iv_pilus_appendage",
+            "predicate": "confers",
+            "predicate_id": "METPO:2007700",
+            "object": "type_iv_pilus_trait",
+            "description": "Production of type IV pili appendages confers the type IV pilus morphology trait.",
+            "evidence": [
+              {
+                "reference": "DOI:10.1093/femsre/fuab053",
+                "snippet": "Bacteria and archaea rely on appendages called type IV pili (T4P)",
+                "notes": "Ellison et al. review type IV pili (T4P) as prokaryotic appendages across bacteria and archaea."
+              }
+            ]
+          },
+          {
+            "subject": "type_iv_pilus_appendage",
+            "predicate": "enables",
+            "predicate_id": "RO:0002327",
+            "object": "type_iv_pilus_extension_retraction",
+            "description": "Type IV pilus fibers dynamically extend and retract.",
+            "evidence": [
+              {
+                "reference": "DOI:10.1093/femsre/fuab053",
+                "snippet": "T4P are broadly distributed fibers that dynamically extend and retract",
+                "notes": "Ellison et al. describe T4P as broadly distributed fibers that dynamically extend and retract."
+              }
+            ]
+          },
+          {
+            "subject": "type_iv_pilus_appendage",
+            "predicate": "located in",
+            "predicate_id": "biolink:located_in",
+            "object": "type_iv_pilus_cell_surface",
+            "description": "Type IV pili are hair-like appendages localized on the bacterial cell surface.",
+            "evidence": [
+              {
+                "reference": "DOI:10.1042/BST20160221",
+                "snippet": "Type IV pili are hair-like bacterial surface appendages",
+                "notes": "Piepenbrink and Sundberg characterize type IV pili as hair-like bacterial surface appendages."
+              }
+            ]
+          }
+        ]
       }
     ]
   },
@@ -204556,6 +205466,75 @@
         "action": "ADVERSARIAL_REVIEW_REPAIR",
         "changes": "Resolved PR #899 review issue #900 by grounding bacteriocin production to GO:0030152 and removing the obsolete xref-gap TODO.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-21T20:01:04Z",
+        "curator": "claude",
+        "action": "CURATE_CAUSAL_GRAPH",
+        "changes": "Added NONMECHANISTIC causal_graphs entry (bacteriocin_production_defense_sketch) anchored on existing verbatim record evidence snippets.",
+        "llm_assisted": true
+      }
+    ],
+    "causal_graphs": [
+      {
+        "graph_id": "bacteriocin_production_defense_sketch",
+        "title": "Ribosomal bacteriocin biosynthesis and antibacterial defense",
+        "description": "Evidence-backed physiological sketch linking ribosomal bacteriocin synthesis to bacteriocin production and microbial defense against competing bacteria.",
+        "scope_status": "NONMECHANISTIC",
+        "scope_notes": "Process-level physiological sketch backed by DOI:10.3389/fmicb.2016.00461 and DOI:10.1146/annurev.micro.56.012302.161024; specific precursor-peptide and biosynthetic-machinery UniProtKB examples (such as NisA/NisB/NisC in Lactococcus lactis) remain to be curated.",
+        "nodes": [
+          {
+            "node_id": "bacteriocin_production_trait",
+            "label": "bacteriocin production",
+            "node_type": "TRAIT",
+            "grounding": "traitmech:000183",
+            "description": "Physiological trait in which bacteria synthesize antimicrobial bacteriocin peptides or proteins."
+          },
+          {
+            "node_id": "bacteriocin_production_biosynthesis",
+            "label": "bacteriocin biosynthetic process",
+            "node_type": "BIOLOGICAL_PROCESS",
+            "grounding": "GO:0030152",
+            "description": "Ribosomal synthesis of antimicrobial bacteriocin peptides by bacteria."
+          },
+          {
+            "node_id": "bacteriocin_production_antibacterial_defense",
+            "label": "defense response to bacterium",
+            "node_type": "BIOLOGICAL_PROCESS",
+            "grounding": "GO:0042742",
+            "description": "Microbial defense function killing or inhibiting competing bacteria."
+          }
+        ],
+        "edges": [
+          {
+            "subject": "bacteriocin_production_biosynthesis",
+            "predicate": "confers",
+            "predicate_id": "METPO:2007700",
+            "object": "bacteriocin_production_trait",
+            "description": "Ribosomal synthesis of antimicrobial bacteriocin peptides confers the bacteriocin production trait.",
+            "evidence": [
+              {
+                "reference": "DOI:10.3389/fmicb.2016.00461",
+                "snippet": "Bacteriocins are ribosomally synthesized antimicrobial peptides produced by bacteria, which have the ability to kill or inhibit other bacteria.",
+                "notes": "Rea et al. define bacteriocins as ribosomally synthesized antimicrobial peptides produced by bacteria."
+              }
+            ]
+          },
+          {
+            "subject": "bacteriocin_production_biosynthesis",
+            "predicate": "enables",
+            "predicate_id": "RO:0002327",
+            "object": "bacteriocin_production_antibacterial_defense",
+            "description": "Bacteriocin production functions as a microbial defense system against other bacteria.",
+            "evidence": [
+              {
+                "reference": "DOI:10.1146/annurev.micro.56.012302.161024",
+                "snippet": "the most abundant and diverse family of microbial defense systems: the bacteriocins.",
+                "notes": "Riley and Wertz characterize bacteriocins as an abundant and diverse family of microbial defense systems."
+              }
+            ]
+          }
+        ]
       }
     ]
   },
@@ -212289,6 +213268,75 @@
         "action": "SEEDED_FROM_METPO",
         "changes": "Added the active METPO coagulase activity class as a DOI-backed TraitRecord after a repository-wide duplicate review covering ignored and hidden files.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-21T20:01:04Z",
+        "curator": "claude",
+        "action": "CURATE_CAUSAL_GRAPH",
+        "changes": "Added NONMECHANISTIC causal_graphs entry (coagulase_activity_prothrombin_sketch) anchored on existing verbatim record evidence snippets.",
+        "llm_assisted": true
+      }
+    ],
+    "causal_graphs": [
+      {
+        "graph_id": "coagulase_activity_prothrombin_sketch",
+        "title": "Staphylococcal coagulase prothrombin activation and fibrinogen cleavage",
+        "description": "Evidence-backed physiological sketch linking secreted staphylocoagulases (Coa and vWbp) to non-proteolytic prothrombin activation and fibrinogen cleavage.",
+        "scope_status": "NONMECHANISTIC",
+        "scope_notes": "Mechanism sketch backed by DOI:10.1159/000333447 and DOI:10.1371/journal.ppat.1001036; a strain-specific canonical example and reviewed strain-matched UniProtKB accessions for Staphylococcus aureus Coa and vWbp remain to be curated.",
+        "nodes": [
+          {
+            "node_id": "coagulase_activity_trait",
+            "label": "coagulase activity",
+            "node_type": "TRAIT",
+            "grounding": "METPO:1007089",
+            "description": "Physiological enzyme-activity phenotype in which secreted coagulase factors activate prothrombin and clot plasma."
+          },
+          {
+            "node_id": "coagulase_activity_staphylocoagulase",
+            "label": "staphylocoagulase family protein",
+            "node_type": "GENE_OR_PROTEIN",
+            "grounding": "InterPro:IPR019553",
+            "description": "Secreted staphylococcal coagulase polypeptides (Coa and vWbp) that bind and non-proteolytically activate prothrombin."
+          },
+          {
+            "node_id": "coagulase_activity_prothrombin_activation",
+            "label": "zymogen activation",
+            "node_type": "BIOLOGICAL_PROCESS",
+            "grounding": "GO:0031638",
+            "description": "Non-proteolytic activation of host prothrombin and downstream conversion of fibrinogen to fibrin."
+          }
+        ],
+        "edges": [
+          {
+            "subject": "coagulase_activity_staphylocoagulase",
+            "predicate": "confers",
+            "predicate_id": "METPO:2007700",
+            "object": "coagulase_activity_trait",
+            "description": "Secreted staphylococcal coagulase polypeptides confer the coagulase activity phenotype.",
+            "evidence": [
+              {
+                "reference": "DOI:10.1159/000333447",
+                "snippet": "Clinical isolates of Staphylococcus aureus secrete coagulases, polypeptides that bind to and activate prothrombin",
+                "notes": "McAdow, Missiakas, and Schneewind describe secreted Staphylococcus aureus coagulases that bind to and activate prothrombin."
+              }
+            ]
+          },
+          {
+            "subject": "coagulase_activity_staphylocoagulase",
+            "predicate": "enables",
+            "predicate_id": "RO:0002327",
+            "object": "coagulase_activity_prothrombin_activation",
+            "description": "Coa and vWbp promote non-proteolytic activation of prothrombin and cleavage of fibrinogen.",
+            "evidence": [
+              {
+                "reference": "DOI:10.1371/journal.ppat.1001036",
+                "snippet": "Coa and vWbp promote the non-proteolytic activation of prothrombin and cleavage of fibrinogen",
+                "notes": "Cheng et al. demonstrate that Coa and vWbp promote non-proteolytic activation of prothrombin and cleavage of fibrinogen."
+              }
+            ]
+          }
+        ]
       }
     ]
   },
@@ -219986,6 +221034,96 @@
         "action": "EDIT_EVIDENCE",
         "changes": "Extended the Lin et al. magnetotaxis evidence snippet to the beginning of its source sentence after PR review requested stricter snippet verification; resolves issue 852.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-21T20:01:04Z",
+        "curator": "claude",
+        "action": "CURATE_CAUSAL_GRAPH",
+        "changes": "Added NONMECHANISTIC causal_graphs entry (magnetotaxis_magnetosome_navigation_sketch) anchored on existing verbatim record evidence snippets.",
+        "llm_assisted": true
+      }
+    ],
+    "causal_graphs": [
+      {
+        "graph_id": "magnetotaxis_magnetosome_navigation_sketch",
+        "title": "Magnetosome chain alignment and geomagnetic navigation",
+        "description": "Evidence-backed physiological sketch linking magnetosome chain alignment to magnetoreception and directed motility along geomagnetic field lines.",
+        "scope_status": "NONMECHANISTIC",
+        "scope_notes": "Organelle-to-behavior sketch backed by DOI:10.1128/JB.00398-20, DOI:10.1038/s41396-018-0098-9, and DOI:10.1128/mbio.01649-23; MamK/MamJ magnetoskeleton protein examples are curated on the companion `data/traits/morphology/magnetosome.yaml` organelle record rather than duplicated here without a protein node.",
+        "nodes": [
+          {
+            "node_id": "magnetotaxis_trait",
+            "label": "magnetotaxis",
+            "node_type": "TRAIT",
+            "grounding": "traitmech:000176",
+            "description": "Behavioral physiology in which magnetosome-bearing motile cells align and navigate along geomagnetic field lines."
+          },
+          {
+            "node_id": "magnetotaxis_magnetosome_organelle",
+            "label": "magnetosome",
+            "node_type": "ORGANELLE",
+            "grounding": "GO:0110143",
+            "description": "Membrane-bounded magnetic-mineral organelle aligned into intracellular chains in magnetotactic bacteria."
+          },
+          {
+            "node_id": "magnetotaxis_magnetoreception",
+            "label": "magnetoreception",
+            "node_type": "BIOLOGICAL_PROCESS",
+            "grounding": "GO:0050958",
+            "description": "Detection and alignment with Earth's geomagnetic field for cellular orientation and navigation."
+          },
+          {
+            "node_id": "magnetotaxis_directed_motility",
+            "label": "taxis",
+            "node_type": "BIOLOGICAL_PROCESS",
+            "grounding": "GO:0042330",
+            "description": "Directed microbial motility along geomagnetic field lines."
+          }
+        ],
+        "edges": [
+          {
+            "subject": "magnetotaxis_magnetosome_organelle",
+            "predicate": "enables",
+            "predicate_id": "RO:0002327",
+            "object": "magnetotaxis_magnetoreception",
+            "description": "Alignment of magnetosome organelles into chains enables geomagnetic field navigation.",
+            "evidence": [
+              {
+                "reference": "DOI:10.1128/mbio.01649-23",
+                "snippet": "To efficiently navigate within the geomagnetic field, magnetotactic bacteria (MTB) align their magnetosome organelles into chains",
+                "notes": "Awal et al. state that magnetotactic bacteria align their magnetosome organelles into chains to navigate within the geomagnetic field."
+              }
+            ]
+          },
+          {
+            "subject": "magnetotaxis_magnetoreception",
+            "predicate": "enables",
+            "predicate_id": "RO:0002327",
+            "object": "magnetotaxis_directed_motility",
+            "description": "Prokaryotic magnetoreception enables detection of Earth's magnetic field for orientation and directed navigation.",
+            "evidence": [
+              {
+                "reference": "DOI:10.1038/s41396-018-0098-9",
+                "snippet": "The origin and evolution of magnetoreception, which in diverse prokaryotes and protozoa is known as magnetotaxis and enables these microorganisms to detect Earth's magnetic field for orientation and navigation",
+                "notes": "Lin et al. describe magnetotaxis as prokaryotic magnetoreception enabling detection of Earth's magnetic field for orientation and navigation."
+              }
+            ]
+          },
+          {
+            "subject": "magnetotaxis_directed_motility",
+            "predicate": "confers",
+            "predicate_id": "METPO:2007700",
+            "object": "magnetotaxis_trait",
+            "description": "Directed motility guided by Earth's magnetic field confers the magnetotaxis phenotype.",
+            "evidence": [
+              {
+                "reference": "DOI:10.1128/JB.00398-20",
+                "snippet": "Magnetotactic bacteria are aquatic or sediment-dwelling microorganisms able to take advantage of the Earth's magnetic field for directed motility",
+                "notes": "Muller et al. define magnetotactic bacteria by their ability to use Earth's magnetic field for directed motility."
+              }
+            ]
+          }
+        ]
       }
     ]
   },

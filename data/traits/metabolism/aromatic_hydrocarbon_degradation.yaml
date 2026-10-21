@@ -25,3 +25,28 @@ curation_history:
   changes: Proposed a DOI-backed FAPROTAX metabolic capability from proposals/metpo_traitmech_v11
     after repository-wide duplicate review.
   llm_assisted: true
+- timestamp: '2026-10-21T20:01:04Z'
+  curator: claude
+  action: RECORD_MECHANISM_KNOWLEDGE_GAP
+  changes: Recorded OPEN KNOWLEDGE_GAP discussion (aromatic-hydrocarbon-degradation-causal-graph-source-gap)
+    documenting the source-limited mechanism gap for causal_graphs.
+  llm_assisted: true
+discussions:
+- discussion_id: aromatic-hydrocarbon-degradation-causal-graph-source-gap
+  prompt: Add primary literature evidence for aromatic-ring hydroxylation and cleavage
+    enzymes (e.g. benzene/biphenyl dioxygenase) and a strain-matched canonical example
+    before constructing causal_graphs.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: The current record carries a single substrate-list snippet (DOI:10.1007/BF00058836)
+    enumerating benzene, arenes, biphenyl, and fused aromatic hydrocarbons without
+    catalytic or pathway-step assertions.
+  posed_by: claude
+  posed_date: '2026-10-21'
+  evidence:
+  - reference: DOI:10.1007/BF00058836
+    supports: PARTIAL
+    snippet: benzene, certain arenes, biphenyl and selected fused aromatic hydrocarbons
+    explanation: Existing record-level evidence supports the high-level metabolic
+      trait definition but does not provide multi-step enzymatic mechanism quotes
+      for a connected causal graph.

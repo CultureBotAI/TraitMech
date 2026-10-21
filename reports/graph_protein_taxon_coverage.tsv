@@ -36,6 +36,7 @@ data/traits/environment/alkaphilic.yaml	METPO:1003002	alkaliphilic	alkaliphilic_
 data/traits/environment/anaerobic.yaml	METPO:1000603	anaerobic	anaerobic_trait_oxygen_exclusion	NONMECHANISTIC	2	0	2	2	2	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/arsenic_tolerant.yaml	traitmech:000017	arsenic tolerant	arsenic_tolerance_ars_efflux	MECHANISTIC	6	0	6	3	3	1	1	PASS	0	0	-
 data/traits/environment/cadmium_tolerant.yaml	traitmech:000013	cadmium tolerant	cadmium_tolerance_czc_efflux	MECHANISTIC	3	0	3	2	2	1	1	PASS	0	0	-
+data/traits/environment/capnophilic.yaml	METPO:1005021	capnophilic	capnophilic_co2_canb_sketch	NONMECHANISTIC	1	1	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/environment/cobalt_tolerant.yaml	traitmech:000015	cobalt tolerant	cobalt_tolerance_czc_cnr_efflux	MECHANISTIC	6	0	6	2	2	1	1	PASS	0	0	-
 data/traits/environment/copper_tolerant.yaml	traitmech:000018	copper tolerant	copper_tolerance_cop_efflux	MECHANISTIC	2	0	2	2	2	1	1	PASS	0	0	-
 data/traits/environment/delta_phenotype_with_numerical_limits.yaml	METPO:1000534	delta phenotype with numerical limits	delta_phenotype_breadth_descriptor	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
@@ -554,6 +555,7 @@ data/traits/metabolism/mixed_acid_fermentation.yaml	traitmech:000027	mixed-acid 
 data/traits/metabolism/nitrogen_fixation.yaml	traitmech:000103	nitrogen fixation	nitrogen_fixation_nitrogenase	MECHANISTIC	3	2	1	1	1	1	1	PASS	0	0	-
 data/traits/metabolism/oxidative_phosphorylation.yaml	METPO:1000803	Oxidative phosphorylation	oxidative_phosphorylation_chemiosmotic_coupling	MECHANISTIC	4	3	1	1	1	1	1	PASS	0	0	-
 data/traits/metabolism/oxygenic_photosynthesis.yaml	traitmech:000034	oxygenic photosynthesis	oxygenic_photosynthesis_water_splitting	MECHANISTIC	5	4	1	2	2	1	1	PASS	0	0	-
+data/traits/metabolism/pectin_degradation.yaml	traitmech:000135	pectin degradation	pectin_degradation_catabolic_sketch	NONMECHANISTIC	0	0	0	0	0	0	0	NONMECHANISTIC	0	0	-
 data/traits/metabolism/photoferrotrophy.yaml	traitmech:000193	photoferrotrophy	photoferrotrophy_light_feii_oxidation	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/metabolism/photosynthesis.yaml	traitmech:000038	photosynthesis	photosynthesis_chlorophyll_reaction_center	MECHANISTIC	1	1	0	3	3	1	1	PASS	0	0	-
 data/traits/metabolism/phototrophy.yaml	traitmech:000037	phototrophy	phototrophy_light_energy_capture	MECHANISTIC	2	1	1	3	3	1	1	PASS	0	0	-
@@ -617,6 +619,7 @@ data/traits/morphology/helical_shaped.yaml	METPO:1000676	helical shaped	helical_
 data/traits/morphology/heterocyst.yaml	traitmech:000073	heterocyst	heterocyst_microoxic_nitrogen_fixation	MECHANISTIC	3	0	3	1	1	1	1	PASS	0	0	-
 data/traits/morphology/intracellular_inclusion.yaml	traitmech:000066	intracellular inclusion	inclusion_compartmentalization	NONMECHANISTIC	3	1	2	3	3	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/irregular_shaped.yaml	METPO:1000691	irregular shaped	irregular_shaped_loss_of_patterning	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/morphology/lateral_flagellation.yaml	METPO:1005036	lateral flagellation	lateral_flagellation_swarming_sketch	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/lophotrichous.yaml	traitmech:000058	lophotrichous	lophotrichous_polar_tuft	NONMECHANISTIC	5	2	3	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/magnetosome.yaml	traitmech:000071	magnetosome	magnetosome_magnetotaxis	MECHANISTIC	3	0	3	1	1	1	1	PASS	0	0	-
 data/traits/morphology/monotrichous.yaml	traitmech:000057	monotrichous	monotrichous_single_polar_flagellum	NONMECHANISTIC	5	1	4	2	2	0	0	NONMECHANISTIC	0	0	-
@@ -632,8 +635,10 @@ data/traits/morphology/peritrichous.yaml	traitmech:000060	peritrichous	peritrich
 data/traits/morphology/pigmentation.yaml	METPO:1003021	pigmentation	pigmentation_biosynthetic_colorants	NONMECHANISTIC	3	0	3	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/pink_pigmented.yaml	METPO:1003027	pink pigmented	pink_pigmented_carotenoid_color	NONMECHANISTIC	3	0	3	2	2	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/pleomorphic_shaped.yaml	METPO:1000679	pleomorphic shaped	pleomorphic_shaped_relaxed_shape_control	NONMECHANISTIC	1	0	1	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/morphology/polar_flagellation.yaml	METPO:1005032	polar flagellation	polar_flagellation_flhf_flhg_sketch	NONMECHANISTIC	1	1	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/polyhydroxyalkanoate_granule.yaml	traitmech:000067	polyhydroxyalkanoate granule	pha_granule_carbon_energy_storage	MECHANISTIC	4	0	4	2	2	1	1	PASS	0	0	-
 data/traits/morphology/polyphosphate_granule.yaml	traitmech:000068	polyphosphate granule	polyphosphate_granule_storage	MECHANISTIC	2	2	0	2	2	1	1	PASS	0	0	-
+data/traits/morphology/polytrichous_flagellation.yaml	METPO:1007006	polytrichous flagellation	polytrichous_flagellation_tuft_sketch	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/prosthecate.yaml	traitmech:000065	prosthecate	prosthecate_stalk_nutrient_uptake	NONMECHANISTIC	4	1	3	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/red_pigmented.yaml	METPO:1003028	red pigmented	red_pigmented_prodiginine_pathway	NONMECHANISTIC	3	0	3	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/ring_shaped.yaml	METPO:1000680	ring shaped	ring_shaped_curved_growth_closure	NONMECHANISTIC	5	0	5	1	1	0	0	NONMECHANISTIC	0	0	-
@@ -651,18 +656,21 @@ data/traits/morphology/square_shaped.yaml	METPO:1000694	square shaped	square_sha
 data/traits/morphology/staphylococcus_arrangement.yaml	traitmech:000118	staphylococcus arrangement	staphylococcus_irregular_division_cluster	NONMECHANISTIC	3	1	2	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/star_shaped.yaml	METPO:1000685	star shaped	star_shaped_multiple_prosthecae	NONMECHANISTIC	3	0	3	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/streptococcus_arrangement.yaml	traitmech:000117	streptococcus arrangement	streptococcus_parallel_division_chain	NONMECHANISTIC	3	0	3	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/morphology/subpolar_flagellation.yaml	METPO:1005037	subpolar flagellation	subpolar_flagellation_surface_assembly_sketch	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/sulfur_globule.yaml	traitmech:000069	sulfur globule	sulfur_globule_sulfur_oxidation_intermediate	NONMECHANISTIC	2	1	1	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/swarming_motility.yaml	traitmech:000062	swarming motility	swarming_hyperflagellation_surfactant	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/tailed_shaped.yaml	METPO:1000695	tailed shaped	tailed_shaped_polar_stalk_growth	MECHANISTIC	4	2	2	1	1	1	1	PASS	0	0	-
 data/traits/morphology/tetrad_arrangement.yaml	traitmech:000119	tetrad arrangement	tetrad_two_plane_division	NONMECHANISTIC	2	0	2	2	2	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/triangular_shaped.yaml	METPO:1000696	triangular shaped	triangular_shaped_planar_polygonal_growth	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/twitching_motility.yaml	traitmech:000061	twitching motility	twitching_type_iv_pilus_retraction	MECHANISTIC	3	0	3	2	2	1	1	PASS	0	0	-
+data/traits/morphology/type_iv_pilus.yaml	traitmech:000175	type IV pilus	type_iv_pilus_extension_retraction_sketch	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/vibrio_shaped.yaml	METPO:1000686	vibrio shaped	vibrio_shaped_crvA_curvature	NONMECHANISTIC	3	0	3	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/white_pigmented.yaml	METPO:1003029	white pigmented	white_pigmented_low_chromophore	NONMECHANISTIC	3	0	3	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/yellow_pigmented.yaml	METPO:1003030	yellow pigmented	yellow_pigmented_carotenoid_color	NONMECHANISTIC	4	0	4	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/physiology/aerobic_anoxygenic_phototrophy.yaml	traitmech:000194	aerobic anoxygenic phototrophy	aerobic_anoxygenic_phototrophy_light_organic_carbon	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/physiology/antibiotic_resistance.yaml	traitmech:000088	antibiotic resistance	antibiotic_resistance_mechanisms	MECHANISTIC	4	1	3	1	1	1	1	PASS	0	0	-
 data/traits/physiology/autotrophic.yaml	METPO:1000632	autotrophic	autotrophic_inorganic_carbon_fixation	MECHANISTIC	3	2	1	3	3	1	1	PASS	0	0	-
+data/traits/physiology/bacteriocin_production.yaml	traitmech:000183	bacteriocin production	bacteriocin_production_defense_sketch	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/physiology/bioluminescence.yaml	traitmech:000085	bioluminescence	bioluminescence_luciferase	MECHANISTIC	5	2	3	1	1	1	1	PASS	0	0	-
 data/traits/physiology/carboxydotrophic.yaml	METPO:1000633	carboxydotrophic	carboxydotrophic_co_oxidation	MECHANISTIC	7	2	5	2	2	1	1	PASS	0	0	-
 data/traits/physiology/catalase_activity.yaml	traitmech:000075	catalase activity	catalase_activity_h2o2_detoxification	MECHANISTIC	3	1	2	3	3	2	1	PASS	0	0	-
@@ -677,6 +685,7 @@ data/traits/physiology/chemoorganoheterotrophic.yaml	METPO:1000640	chemoorganohe
 data/traits/physiology/chemoorganotrophic.yaml	METPO:1000663	chemoorganotrophic	chemoorganotrophic_organic_oxidation_energy	MECHANISTIC	1	1	0	3	3	1	1	PASS	0	0	-
 data/traits/physiology/chemotaxis.yaml	traitmech:000086	chemotaxis	chemotaxis_gradient_response	MECHANISTIC	7	6	1	2	2	1	1	PASS	0	0	-
 data/traits/physiology/chemotrophic.yaml	METPO:1000641	chemotrophic	chemotrophic_chemical_redox_energy	MECHANISTIC	1	1	0	1	1	1	1	PASS	0	0	-
+data/traits/physiology/coagulase_activity.yaml	METPO:1007089	coagulase activity	coagulase_activity_prothrombin_sketch	NONMECHANISTIC	1	1	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/physiology/cold_shock_response.yaml	traitmech:000206	cold shock response	cold_shock_response_rna_adaptation	MECHANISTIC	1	0	1	1	1	1	0	PASS	0	0	-
 data/traits/physiology/copiotrophic.yaml	METPO:1000642	copiotrophic	copiotrophic_high_nutrient_fast_growth	NONMECHANISTIC	2	0	2	2	2	0	0	NONMECHANISTIC	0	0	-
 data/traits/physiology/dormancy.yaml	traitmech:000080	dormancy	dormancy_seed_bank	MECHANISTIC	3	0	3	2	2	1	1	PASS	0	0	-
@@ -688,6 +697,7 @@ data/traits/physiology/hydrogenotrophic.yaml	METPO:1000646	hydrogenotrophic	hydr
 data/traits/physiology/lithoautotrophic.yaml	METPO:1000647	lithoautotrophic	lithoautotrophic_inorganic_donor_co2_fixation	MECHANISTIC	4	1	3	3	3	1	1	PASS	0	0	-
 data/traits/physiology/lithoheterotrophic.yaml	METPO:1000648	lithoheterotrophic	lithoheterotrophic_inorganic_energy_organic_carbon	MECHANISTIC	3	1	2	1	1	1	1	PASS	0	0	-
 data/traits/physiology/lithotrophic.yaml	METPO:1000649	lithotrophic	lithotrophic_inorganic_donor_energy	MECHANISTIC	5	2	3	3	3	1	1	PASS	0	0	-
+data/traits/physiology/magnetotaxis.yaml	traitmech:000176	magnetotaxis	magnetotaxis_magnetosome_navigation_sketch	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/physiology/methanotrophic.yaml	METPO:1000650	methanotrophic	methanotrophic_methane_oxidation	MECHANISTIC	4	3	1	2	2	1	1	PASS	0	0	-
 data/traits/physiology/methylotrophic.yaml	METPO:1000651	methylotrophic	methylotrophic_methanol_assimilation	MECHANISTIC	8	1	7	2	2	1	1	PASS	0	0	-
 data/traits/physiology/mixotrophic.yaml	METPO:1000652	mixotrophic	mixotrophic_dual_carbon_energy_use	MECHANISTIC	1	1	0	2	2	1	1	PASS	0	0	-

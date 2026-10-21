@@ -42,3 +42,63 @@ curation_history:
   changes: Proposed DOI-backed pectin degradation after a repository-wide duplicate
     review covering ignored and hidden files.
   llm_assisted: true
+- timestamp: '2026-10-21T20:01:04Z'
+  curator: claude
+  action: CURATE_CAUSAL_GRAPH
+  changes: Added NONMECHANISTIC causal_graphs entry (pectin_degradation_catabolic_sketch)
+    anchored on existing verbatim record evidence snippets.
+  llm_assisted: true
+causal_graphs:
+- graph_id: pectin_degradation_catabolic_sketch
+  title: Compartmentalized pectin depolymerization and oligogalacturonide catabolism
+  description: Evidence-backed pathway sketch linking extracellular pectin depolymerization
+    and oligogalacturonide formation to the pectin degradation phenotype.
+  scope_status: NONMECHANISTIC
+  scope_notes: Compartmentalized pathway sketch backed by DOI:10.1128/MMBR.00038-07
+    and DOI:10.1146/annurev.micro.50.1.213; individual pectate lyase, polygalacturonase,
+    and intracellular catabolic enzyme nodes with strain-matched UniProtKB accessions
+    remain to be curated.
+  nodes:
+  - node_id: pectin_degradation_trait
+    label: pectin degradation
+    node_type: TRAIT
+    grounding: traitmech:000135
+    description: Biopolymer-degradation metabolism that depolymerizes pectin and catabolizes
+      its breakdown products.
+  - node_id: pectin_degradation_catabolic_process
+    label: pectin catabolic process
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0045490
+    description: Compartmentalized extracellular depolymerization of pectin and intracellular
+      catabolism of breakdown products.
+  - node_id: pectin_degradation_oligogalacturonide
+    label: oligogalacturonide
+    node_type: CHEMICAL
+    grounding: CHEBI:62958
+    description: Oligogalacturonide intermediates released by extracellular pectin
+      degradation and catabolized intracellularly.
+  edges:
+  - subject: pectin_degradation_catabolic_process
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: pectin_degradation_trait
+    description: Compartmentalized catabolism of pectin and its breakdown products
+      confers the pectin degradation trait.
+    evidence:
+    - reference: DOI:10.1128/MMBR.00038-07
+      snippet: Catabolism of pectin and its breakdown products by pectinolytic bacteria
+        occurs within distinct cellular environments
+      notes: Abbott and Boraston review compartmentalized catabolism of pectin and
+        its breakdown products by pectinolytic bacteria.
+  - subject: pectin_degradation_catabolic_process
+    predicate: has output
+    predicate_id: RO:0002234
+    object: pectin_degradation_oligogalacturonide
+    description: Extracellular pectin degradation produces oligogalacturonide intermediates
+      that enter intracellular catabolism.
+    evidence:
+    - reference: DOI:10.1146/annurev.micro.50.1.213
+      snippet: The extracellular degradation of the pectin leads to the formation
+        of oligogalacturonides that are catabolized through an intracellular pathway
+      notes: Hugouvieux-Cotte-Pattat et al. describe extracellular pectin degradation
+        forming oligogalacturonides for intracellular catabolism.

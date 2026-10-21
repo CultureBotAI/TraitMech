@@ -23,6 +23,12 @@ curation_history:
     flagellar-arrangement evidence after a repository-wide duplicate review covering
     ignored and hidden files.
   llm_assisted: true
+- timestamp: '2026-10-21T20:01:04Z'
+  curator: claude
+  action: CURATE_CAUSAL_GRAPH
+  changes: Added NONMECHANISTIC causal_graphs entry (polar_flagellation_flhf_flhg_sketch)
+    anchored on existing verbatim record evidence snippets.
+  llm_assisted: true
 definition_source: DOI:10.1093/femsre/fuv034
 evidence:
 - reference: DOI:10.1093/femsre/fuv034
@@ -46,3 +52,73 @@ canonical_examples:
   note: Kojima et al. describe V. alginolyticus as a marine bacterium with a single
     polar flagellum.
   reference: DOI:10.3390/biom10040533
+causal_graphs:
+- graph_id: polar_flagellation_flhf_flhg_sketch
+  title: FlhF-FlhG polar flagellar placement and liquid swimming
+  description: Evidence-backed causal sketch linking antagonistic FlhF/FlhG regulation
+    and polar flagellum placement to polar flagellation and swimming motility in liquid
+    environments.
+  scope_status: NONMECHANISTIC
+  scope_notes: Morphology and FlhF/FlhG placement sketch backed by DOI:10.1093/femsre/fuv034
+    and DOI:10.3390/biom10040533; strain-matched UniProtKB accessions for Vibrio alginolyticus
+    FlhF and FlhG remain to be curated.
+  nodes:
+  - node_id: polar_flagellation_trait
+    label: polar flagellation
+    node_type: TRAIT
+    grounding: METPO:1005032
+    description: Motility morphology in which one or more flagella are positioned
+      at one or both cell poles.
+  - node_id: polar_flagellation_polar_flagellum
+    label: bacterial-type flagellum
+    node_type: ORGANELLE
+    grounding: GO:0009288
+    description: Flagellar organelle positioned at the bacterial cell pole.
+  - node_id: polar_flagellation_swimming_motility
+    label: locomotion
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0040011
+    description: Swimming locomotion in liquid environments mediated by a polar flagellum.
+  - node_id: polar_flagellation_flhf_flhg_regulators
+    label: FlhF-FlhG polar flagellar placement regulator pair
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR007066
+    description: Antagonistic FlhF GTPase and FlhG ATPase regulators that restrict
+      flagellar assembly to the cell pole.
+  edges:
+  - subject: polar_flagellation_polar_flagellum
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: polar_flagellation_trait
+    description: Regular positioning of flagella at the cell pole defines the polar
+      flagellation pattern.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuv034
+      snippet: Bacteria differ in number and location of their flagella that appear
+        in regular patterns at the cell surface (flagellation pattern).
+      notes: Schuhmacher et al. define regular cell-surface flagellar number and location
+        as the bacterial flagellation pattern.
+  - subject: polar_flagellation_polar_flagellum
+    predicate: enables
+    predicate_id: RO:0002327
+    object: polar_flagellation_swimming_motility
+    description: A polar flagellum enables bacterial swimming locomotion in liquid
+      environments.
+    evidence:
+    - reference: DOI:10.3390/biom10040533
+      snippet: Some bacterial species, such as the marine bacterium Vibrio alginolyticus,
+        have a single polar flagellum that allows it to swim in liquid environments.
+      notes: Kojima et al. describe the single polar flagellum of Vibrio alginolyticus
+        enabling swimming in liquid environments.
+  - subject: polar_flagellation_flhf_flhg_regulators
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: polar_flagellation_trait
+    description: Antagonistic FlhF and FlhG regulators control generation of a flagellum
+      at the cell pole.
+    evidence:
+    - reference: DOI:10.3390/biom10040533
+      snippet: Two regulators, FlhF and FlhG, function antagonistically to generate
+        only one flagellum at the cell pole.
+      notes: Kojima et al. report that FlhF and FlhG function antagonistically to
+        generate a single flagellum at the cell pole.

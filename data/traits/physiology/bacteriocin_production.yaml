@@ -46,3 +46,61 @@ curation_history:
   changes: 'Resolved PR #899 review issue #900 by grounding bacteriocin production
     to GO:0030152 and removing the obsolete xref-gap TODO.'
   llm_assisted: true
+- timestamp: '2026-10-21T20:01:04Z'
+  curator: claude
+  action: CURATE_CAUSAL_GRAPH
+  changes: Added NONMECHANISTIC causal_graphs entry (bacteriocin_production_defense_sketch)
+    anchored on existing verbatim record evidence snippets.
+  llm_assisted: true
+causal_graphs:
+- graph_id: bacteriocin_production_defense_sketch
+  title: Ribosomal bacteriocin biosynthesis and antibacterial defense
+  description: Evidence-backed physiological sketch linking ribosomal bacteriocin
+    synthesis to bacteriocin production and microbial defense against competing bacteria.
+  scope_status: NONMECHANISTIC
+  scope_notes: Process-level physiological sketch backed by DOI:10.3389/fmicb.2016.00461
+    and DOI:10.1146/annurev.micro.56.012302.161024; specific precursor-peptide and
+    biosynthetic-machinery UniProtKB examples (such as NisA/NisB/NisC in Lactococcus
+    lactis) remain to be curated.
+  nodes:
+  - node_id: bacteriocin_production_trait
+    label: bacteriocin production
+    node_type: TRAIT
+    grounding: traitmech:000183
+    description: Physiological trait in which bacteria synthesize antimicrobial bacteriocin
+      peptides or proteins.
+  - node_id: bacteriocin_production_biosynthesis
+    label: bacteriocin biosynthetic process
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0030152
+    description: Ribosomal synthesis of antimicrobial bacteriocin peptides by bacteria.
+  - node_id: bacteriocin_production_antibacterial_defense
+    label: defense response to bacterium
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0042742
+    description: Microbial defense function killing or inhibiting competing bacteria.
+  edges:
+  - subject: bacteriocin_production_biosynthesis
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: bacteriocin_production_trait
+    description: Ribosomal synthesis of antimicrobial bacteriocin peptides confers
+      the bacteriocin production trait.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2016.00461
+      snippet: Bacteriocins are ribosomally synthesized antimicrobial peptides produced
+        by bacteria, which have the ability to kill or inhibit other bacteria.
+      notes: Rea et al. define bacteriocins as ribosomally synthesized antimicrobial
+        peptides produced by bacteria.
+  - subject: bacteriocin_production_biosynthesis
+    predicate: enables
+    predicate_id: RO:0002327
+    object: bacteriocin_production_antibacterial_defense
+    description: Bacteriocin production functions as a microbial defense system against
+      other bacteria.
+    evidence:
+    - reference: DOI:10.1146/annurev.micro.56.012302.161024
+      snippet: 'the most abundant and diverse family of microbial defense systems:
+        the bacteriocins.'
+      notes: Riley and Wertz characterize bacteriocins as an abundant and diverse
+        family of microbial defense systems.

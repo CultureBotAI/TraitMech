@@ -493,6 +493,11 @@ knowledge-gap-scan *args: (_require-claw "kg_microbe_kgscan")
 curate-knowledge-gaps *args:
     uv run python scripts/curate_knowledge_gaps.py {{args}}
 
+# Replay the Stage 2 causal_graphs and source-limited knowledge-gap curation.
+# Validated dry-run by default; pass --apply to write the 24 in-scope records.
+curate-stage2-causal-graphs *args:
+    uv run python scripts/curate_stage2_causal_graphs.py {{args}}
+
 # ============== Curation history (append-only provenance) ==============
 # Records which model, using which tool, changed what, why, and under which
 # issue. ONE record per change under history/ -- per target for hand curation,

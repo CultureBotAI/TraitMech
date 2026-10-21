@@ -23,3 +23,29 @@ curation_history:
   changes: Proposed a DOI-backed FAPROTAX metabolic capability from proposals/metpo_traitmech_v11
     after repository-wide duplicate review.
   llm_assisted: true
+- timestamp: '2026-10-21T20:01:04Z'
+  curator: claude
+  action: RECORD_MECHANISM_KNOWLEDGE_GAP
+  changes: Recorded OPEN KNOWLEDGE_GAP discussion (aromatic-compound-degradation-causal-graph-source-gap)
+    documenting the source-limited mechanism gap for causal_graphs.
+  llm_assisted: true
+discussions:
+- discussion_id: aromatic-compound-degradation-causal-graph-source-gap
+  prompt: Add multi-step ring-cleavage pathway evidence (e.g. catechol or protocatechuate
+    dioxygenase enzymes, substrates, and products) and a strain-matched canonical
+    example before constructing causal_graphs.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: The current record carries a single broad FAPROTAX review snippet (DOI:10.3390/ijerph6010278)
+    naming bacterial degradation pathways of aromatic compounds without specific enzyme
+    or intermediate claims; constructing a multi-edge causal graph from that single
+    60-character phrase would require clause-splitting or unsupported edges.
+  posed_by: claude
+  posed_date: '2026-10-21'
+  evidence:
+  - reference: DOI:10.3390/ijerph6010278
+    supports: PARTIAL
+    snippet: bacterial degradation pathways of selected aromatic compounds
+    explanation: Existing record-level evidence supports the high-level metabolic
+      trait definition but does not provide multi-step enzymatic mechanism quotes
+      for a connected causal graph.

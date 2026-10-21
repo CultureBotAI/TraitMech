@@ -935,6 +935,13 @@ POST_444_CANONICAL_EXAMPLE_QUEUE = {
     "genomics/uzume_system",
     "genomics/veles_system",
     "genomics/viperin_system",
+    "environment/capnophilic",
+    "metabolism/pectin_degradation",
+    "morphology/lateral_flagellation",
+    "morphology/polar_flagellation",
+    "morphology/polytrichous_flagellation",
+    "morphology/subpolar_flagellation",
+    "physiology/coagulase_activity",
 }
 
 

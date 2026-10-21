@@ -50,3 +50,74 @@ curation_history:
   changes: 'Aligned the type IV pilus definition with dynamic extension and retraction
     evidence after Claude Code Review on PR #847.'
   llm_assisted: true
+- timestamp: '2026-10-21T20:01:04Z'
+  curator: claude
+  action: CURATE_CAUSAL_GRAPH
+  changes: Added NONMECHANISTIC causal_graphs entry (type_iv_pilus_extension_retraction_sketch)
+    anchored on existing verbatim record evidence snippets.
+  llm_assisted: true
+causal_graphs:
+- graph_id: type_iv_pilus_extension_retraction_sketch
+  title: Type IV pilus cell-surface appendage and dynamic extension-retraction
+  description: Evidence-backed morphology sketch linking cell-surface type IV pili
+    fibers and their dynamic extension and retraction to the type IV pilus trait.
+  scope_status: NONMECHANISTIC
+  scope_notes: Appendage-and-dynamics sketch backed by DOI:10.1093/femsre/fuab053
+    and DOI:10.1042/BST20160221; PilA/PilB/PilT protein nodes with strain-matched
+    UniProtKB accessions for Pseudomonas aeruginosa PAO1 remain to be curated.
+  nodes:
+  - node_id: type_iv_pilus_trait
+    label: type IV pilus
+    node_type: TRAIT
+    grounding: traitmech:000175
+    description: Morphology trait in which a cell produces extracellular type IV pilus
+      filaments that dynamically extend and retract.
+  - node_id: type_iv_pilus_appendage
+    label: type IV pilus complex
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0044096
+    description: Hair-like prokaryotic surface appendage composed of type IV pilin
+      subunits.
+  - node_id: type_iv_pilus_extension_retraction
+    label: pilus-dependent motility
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0071972
+    description: Dynamic extension and retraction of type IV pilus fibers.
+  - node_id: type_iv_pilus_cell_surface
+    label: cell surface
+    node_type: CELLULAR_LOCALIZATION
+    grounding: GO:0009986
+    description: Bacterial or archaeal cell surface from which type IV pili extend.
+  edges:
+  - subject: type_iv_pilus_appendage
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: type_iv_pilus_trait
+    description: Production of type IV pili appendages confers the type IV pilus morphology
+      trait.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuab053
+      snippet: Bacteria and archaea rely on appendages called type IV pili (T4P)
+      notes: Ellison et al. review type IV pili (T4P) as prokaryotic appendages across
+        bacteria and archaea.
+  - subject: type_iv_pilus_appendage
+    predicate: enables
+    predicate_id: RO:0002327
+    object: type_iv_pilus_extension_retraction
+    description: Type IV pilus fibers dynamically extend and retract.
+    evidence:
+    - reference: DOI:10.1093/femsre/fuab053
+      snippet: T4P are broadly distributed fibers that dynamically extend and retract
+      notes: Ellison et al. describe T4P as broadly distributed fibers that dynamically
+        extend and retract.
+  - subject: type_iv_pilus_appendage
+    predicate: located in
+    predicate_id: biolink:located_in
+    object: type_iv_pilus_cell_surface
+    description: Type IV pili are hair-like appendages localized on the bacterial
+      cell surface.
+    evidence:
+    - reference: DOI:10.1042/BST20160221
+      snippet: Type IV pili are hair-like bacterial surface appendages
+      notes: Piepenbrink and Sundberg characterize type IV pili as hair-like bacterial
+        surface appendages.
