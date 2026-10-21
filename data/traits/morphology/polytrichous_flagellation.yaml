@@ -24,6 +24,12 @@ curation_history:
     polytrichous-flagella evidence after a repository-wide duplicate review covering
     ignored and hidden files.
   llm_assisted: true
+- timestamp: '2026-10-21T21:12:25Z'
+  curator: claude
+  action: CURATE_CAUSAL_GRAPH
+  changes: Added NONMECHANISTIC causal_graphs entry (polytrichous_flagellation_tuft_sketch)
+    anchored on existing verbatim record evidence snippets.
+  llm_assisted: true
 definition_source: DOI:10.1128/AEM.64.10.3576-3583.1998
 evidence:
 - reference: DOI:10.1128/AEM.64.10.3576-3583.1998
@@ -42,3 +48,55 @@ canonical_examples:
   note: Huber et al. directly observed up to three monopolar flagella per cell in
     the Thermocrinis ruber isolate OC 1/4.
   reference: DOI:10.1128/AEM.64.10.3576-3583.1998
+causal_graphs:
+- graph_id: polytrichous_flagellation_tuft_sketch
+  title: Polytrichous multi-flagellar tuft arrangement and swimming motility
+  description: Evidence-backed morphology sketch linking monopolar or bipolar multi-flagellar
+    tufts to polytrichous flagellation and swimming locomotion.
+  scope_status: NONMECHANISTIC
+  scope_notes: Morphological arrangement sketch backed by DOI:10.1128/AEM.64.10.3576-3583.1998
+    and DOI:10.1128/AEM.68.12.6310-6320.2002; specific flagellar structural or placement
+    proteins in Thermocrinis ruber are not identified in the cited electron-microscopy
+    and motility sources.
+  nodes:
+  - node_id: polytrichous_flagellation_trait
+    label: polytrichous flagellation
+    node_type: TRAIT
+    grounding: METPO:1007006
+    description: Flagellar arrangement in which multiple flagella (a tuft) are present
+      per cell.
+  - node_id: polytrichous_flagellation_flagellar_tuft
+    label: bacterial-type flagellum
+    node_type: ORGANELLE
+    grounding: GO:0009288
+    description: Monopolar or bipolar tuft of multiple bacterial flagella per cell.
+  - node_id: polytrichous_flagellation_swimming_motility
+    label: locomotion
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0040011
+    description: Swimming pattern driven by polytrichous flagellar tufts.
+  edges:
+  - subject: polytrichous_flagellation_flagellar_tuft
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: polytrichous_flagellation_trait
+    description: Presence of multiple polar flagella per cell confers the polytrichous
+      flagellation phenotype.
+    evidence:
+    - reference: DOI:10.1128/AEM.64.10.3576-3583.1998
+      snippet: In transmission electron micrographs, isolate OC 1/4 exhibited monopolar
+        polytrichous flagellation, with up to three flagella per cell (Fig. 4).
+      notes: Huber et al. directly observe monopolar polytrichous flagellation with
+        up to three flagella per cell in Thermocrinis ruber OC 1/4.
+  - subject: polytrichous_flagellation_flagellar_tuft
+    predicate: enables
+    predicate_id: RO:0002327
+    object: polytrichous_flagellation_swimming_motility
+    description: Bipolar polytrichous flagella enable rotational and translational
+      swimming locomotion.
+    evidence:
+    - reference: DOI:10.1128/AEM.68.12.6310-6320.2002
+      snippet: The cells have bipolar polytrichous flagella and exhibit a unique swimming
+        pattern, rotating and translating along their short axis.
+      notes: Thar and Kuhl connect bipolar polytrichous flagella to a distinct swimming
+        pattern.

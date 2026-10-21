@@ -19,6 +19,12 @@ curation_history:
     lateral-flagella evidence after a repository-wide duplicate review covering ignored
     and hidden files.
   llm_assisted: true
+- timestamp: '2026-10-21T21:12:25Z'
+  curator: claude
+  action: CURATE_CAUSAL_GRAPH
+  changes: Added NONMECHANISTIC causal_graphs entry (lateral_flagellation_swarming_sketch)
+    anchored on existing verbatim record evidence snippets.
+  llm_assisted: true
 definition_source: DOI:10.1111/j.1574-6968.2006.00403.x
 evidence:
 - reference: DOI:10.1111/j.1574-6968.2006.00403.x
@@ -49,3 +55,75 @@ canonical_examples:
   note: Belas et al. describe V. parahaemolyticus as producing a polar swimming flagellum
     and lateral flagella that enable swarming on surfaces.
   reference: DOI:10.1128/jb.167.1.210-218.1986
+causal_graphs:
+- graph_id: lateral_flagellation_swarming_sketch
+  title: Inducible proton-driven lateral flagella and surface swarming
+  description: Evidence-backed causal sketch linking proton-driven lateral flagella
+    to the lateral flagellation morphology and surface swarming motility.
+  scope_status: NONMECHANISTIC
+  scope_notes: Morphological arrangement descriptor spanning multiple bacterial lineages
+    (DOI:10.1111/j.1574-6968.2006.00403.x, DOI:10.1128/jb.167.1.210-218.1986, DOI:10.1128/jb.185.15.4508-4518.2003);
+    the record's verbatim evidence quotes characterize organelle-level lateral flagellation
+    and proton-driven swarming without naming individual protein subunits.
+  nodes:
+  - node_id: lateral_flagellation_trait
+    label: lateral flagellation
+    node_type: TRAIT
+    grounding: METPO:1005036
+    description: Motility morphology in which flagella emerge from the lateral side
+      of the cell.
+  - node_id: lateral_flagellation_lateral_flagella
+    label: bacterial-type flagellum
+    node_type: ORGANELLE
+    grounding: GO:0009288
+    description: Inducible lateral flagellar organelles expressed on surfaces or in
+      viscous media.
+  - node_id: lateral_flagellation_swarming_motility
+    label: swarming motility
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0071973
+    description: Surface translocation enabled by lateral flagella.
+  - node_id: lateral_flagellation_proton_motive_force
+    label: proton motive force
+    node_type: STATE
+    grounding: METPO:1007500
+    description: Transmembrane proton gradient that powers lateral flagellar rotation
+      during swarming.
+  edges:
+  - subject: lateral_flagellation_lateral_flagella
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: lateral_flagellation_trait
+    description: Expression of an inducible lateral flagella system confers the lateral
+      flagellation morphology.
+    evidence:
+    - reference: DOI:10.1111/j.1574-6968.2006.00403.x
+      snippet: These bacteria are able to express both a constitutive polar flagellum
+        required for swimming motility and a separate lateral flagella system that
+        is induced in viscous media or on surfaces and is essential for swarming motility.
+      notes: Merino et al. describe the separate inducible lateral flagella system
+        expressed in viscous media or on surfaces.
+  - subject: lateral_flagellation_lateral_flagella
+    predicate: enables
+    predicate_id: RO:0002327
+    object: lateral_flagellation_swarming_motility
+    description: Lateral flagella enable bacterial swarming motility across surfaces.
+    evidence:
+    - reference: DOI:10.1128/jb.167.1.210-218.1986
+      snippet: The polar flagellum is responsible for motility in a liquid environment
+        (swimming), and the lateral flagella enable the bacteria to move over surfaces
+        (swarming).
+      notes: Belas et al. show that lateral flagella enable bacteria to move over
+        surfaces (swarming).
+  - subject: lateral_flagellation_proton_motive_force
+    predicate: enables
+    predicate_id: RO:0002327
+    object: lateral_flagellation_swarming_motility
+    description: Proton-driven lateral flagellar motors power translocation over surfaces
+      during swarming.
+    evidence:
+    - reference: DOI:10.1128/jb.185.15.4508-4518.2003
+      snippet: Multiple proton-driven lateral flagella enable translocation over surfaces
+        (i.e., swarming).
+      notes: Stewart and McCarter report that multiple proton-driven lateral flagella
+        enable surface swarming.

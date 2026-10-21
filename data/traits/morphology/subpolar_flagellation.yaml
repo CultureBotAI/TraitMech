@@ -19,6 +19,12 @@ curation_history:
     subpolar-flagella evidence after a repository-wide duplicate review covering ignored
     and hidden files.
   llm_assisted: true
+- timestamp: '2026-10-21T21:12:25Z'
+  curator: claude
+  action: CURATE_CAUSAL_GRAPH
+  changes: Added NONMECHANISTIC causal_graphs entry (subpolar_flagellation_surface_assembly_sketch)
+    anchored on existing verbatim record evidence snippets.
+  llm_assisted: true
 definition_source: DOI:10.1128/JB.01405-06
 evidence:
 - reference: DOI:10.1128/JB.01405-06
@@ -37,3 +43,56 @@ canonical_examples:
   note: Kanbe et al. directly observed subpolar thick and thin flagella in Bradyrhizobium
     japonicum 110spc4, a derivative of USDA 110 now assigned by NCBI to B. diazoefficiens.
   reference: DOI:10.1128/JB.01405-06
+causal_graphs:
+- graph_id: subpolar_flagellation_surface_assembly_sketch
+  title: Subpolar flagellar assembly and cell-surface placement
+  description: Evidence-backed morphology sketch linking cell-surface assembly of
+    subpolar flagella to the subpolar flagellation phenotype.
+  scope_status: NONMECHANISTIC
+  scope_notes: Morphological placement sketch backed by DOI:10.1128/JB.01405-06 and
+    DOI:10.3390/biom10050774; strain-matched UniProtKB protein examples for the Bradyrhizobium
+    diazoefficiens USDA 110 subpolar flagellin or placement factors remain to be curated.
+  nodes:
+  - node_id: subpolar_flagellation_trait
+    label: subpolar flagellation
+    node_type: TRAIT
+    grounding: METPO:1005037
+    description: Motility morphology in which flagella emerge from subpolar positions
+      near the cell pole.
+  - node_id: subpolar_flagellation_subpolar_flagellum
+    label: bacterial-type flagellum
+    node_type: ORGANELLE
+    grounding: GO:0009288
+    description: Flagellar organelle emerging at a subpolar position on the bacterial
+      cell surface.
+  - node_id: subpolar_flagellation_flagellum_assembly
+    label: bacterial-type flagellum assembly
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0044780
+    description: Assembly of a membrane-traversing subpolar flagellum on the cell
+      surface.
+  edges:
+  - subject: subpolar_flagellation_subpolar_flagellum
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: subpolar_flagellation_trait
+    description: Flagellar systems growing at subpolar positions confer the subpolar
+      flagellation morphology.
+    evidence:
+    - reference: DOI:10.1128/JB.01405-06
+      snippet: The cell has two sets of flagellar systems, one thick flagellum and
+        a few thin flagella, uniquely growing at subpolar positions.
+      notes: Kanbe et al. describe thick and thin flagellar systems uniquely growing
+        at subpolar positions in Bradyrhizobium.
+  - subject: subpolar_flagellation_flagellum_assembly
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: subpolar_flagellation_subpolar_flagellum
+    description: Cell-surface flagellar assembly forms the membrane-traversing subpolar
+      flagellum.
+    evidence:
+    - reference: DOI:10.3390/biom10050774
+      snippet: Under the growth conditions commonly used in the laboratory, a single
+        subpolar flagellum that traverses the cell membrane, is assembled on the surface.
+      notes: Camarena and Dreyfus describe assembly of a single membrane-traversing
+        subpolar flagellum on the cell surface.

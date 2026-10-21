@@ -1,0 +1,38 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/curate_stage2_causal_graphs.py
+session:
+  id: 2026-10-21T201000Z-claude-code-cfa11b
+  timestamp: '2026-10-21T20:10:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+    agent_tool: antigravity
+links:
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/1975
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1976
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - canonical_examples
+  - discussions
+  - curation_history
+  summary: Curate Stage 2 causal_graphs for 10 multi-evidence traits (5 MECHANISTIC, 5 NONMECHANISTIC)
+    and record 14 source-limited KNOWLEDGE_GAP discussions
+  details: 'Audited all 1,129 eligible TraitRecord YAMLs for Stage 2 (causal_graphs). Verified
+    718 existing eligible records with causal_graphs have 0 structural errors, 0 predicate-domain
+    errors, and 0 protein-taxon gaps. For the 24 active CLASS records in environment/, metabolism/,
+    morphology/, and physiology/ lacking both causal_graphs and an open deferral discussion:
+    added connected causal_graphs anchored on distinct verbatim record evidence snippets to
+    10 multi-evidence records — 5 MECHANISTIC graphs with taxon-matched UniProtKB protein_examples
+    (capnophilic, pectin_degradation with newly curated Dickeya dadantii 3937 canonical_examples,
+    polar_flagellation with split FlhF/FlhG nodes, bacteriocin_production, coagulase_activity)
+    and 5 NONMECHANISTIC graphs (lateral_flagellation, polytrichous_flagellation, subpolar_flagellation,
+    type_iv_pilus, magnetotaxis) — and recorded OPEN KNOWLEDGE_GAP discussions on 14 single-snippet
+    FAPROTAX metabolism records documenting the source-limited mechanism gap.'

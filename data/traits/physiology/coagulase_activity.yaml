@@ -41,3 +41,80 @@ curation_history:
   changes: Added the active METPO coagulase activity class as a DOI-backed TraitRecord
     after a repository-wide duplicate review covering ignored and hidden files.
   llm_assisted: true
+- timestamp: '2026-10-21T21:12:25Z'
+  curator: claude
+  action: CURATE_CAUSAL_GRAPH
+  changes: Added MECHANISTIC causal_graphs entry (coagulase_activity_prothrombin_mechanism)
+    anchored on existing verbatim record evidence snippets.
+  llm_assisted: true
+causal_graphs:
+- graph_id: coagulase_activity_prothrombin_mechanism
+  title: Staphylococcal coagulase prothrombin activation and fibrinogen cleavage
+  description: Evidence-backed physiological mechanism linking secreted staphylocoagulases
+    (Coa and vWbp) to non-proteolytic prothrombin activation and fibrinogen cleavage.
+  scope_status: MECHANISTIC
+  scope_notes: Protein-anchored mechanism backed by DOI:10.1159/000333447 and DOI:10.1371/journal.ppat.1001036,
+    with reviewed Staphylococcus aureus staphylocoagulase Coa (UniProtKB:P07767) curated
+    on the InterPro:IPR019553 coagulase node.
+  nodes:
+  - node_id: coagulase_activity_trait
+    label: coagulase activity
+    node_type: TRAIT
+    grounding: METPO:1007089
+    description: Physiological enzyme-activity phenotype in which secreted coagulase
+      factors activate prothrombin and clot plasma.
+  - node_id: coagulase_activity_staphylocoagulase
+    label: staphylocoagulase family protein
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR019553
+    description: Secreted staphylococcal coagulase polypeptides (Coa and vWbp) that
+      bind and non-proteolytically activate prothrombin.
+    protein_examples:
+    - uniprot_id: UniProtKB:P07767
+      entry_status: REVIEWED
+      entry_version: 82
+      sequence_version: 2
+      retrieved_on: '2026-10-21'
+      gene_symbol: coa
+      protein_label: Staphylocoagulase
+      taxon_id: NCBITaxon:1280
+      taxon_label: Staphylococcus aureus
+      role: Secreted Staphylococcus aureus coagulase (Coa) that binds and non-proteolytically
+        activates host prothrombin to cleave fibrinogen.
+      evidence:
+      - reference: DOI:10.1371/journal.ppat.1001036
+        snippet: Coa and vWbp promote the non-proteolytic activation of prothrombin
+          and cleavage of fibrinogen
+        notes: Cheng et al. demonstrate that Staphylococcus aureus Coa (UniProtKB:P07767)
+          promotes non-proteolytic activation of prothrombin and cleavage of fibrinogen.
+  - node_id: coagulase_activity_prothrombin_activation
+    label: zymogen activation
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0031638
+    description: Non-proteolytic activation of host prothrombin and downstream conversion
+      of fibrinogen to fibrin.
+  edges:
+  - subject: coagulase_activity_staphylocoagulase
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: coagulase_activity_trait
+    description: Secreted staphylococcal coagulase polypeptides confer the coagulase
+      activity phenotype.
+    evidence:
+    - reference: DOI:10.1159/000333447
+      snippet: Clinical isolates of Staphylococcus aureus secrete coagulases, polypeptides
+        that bind to and activate prothrombin
+      notes: McAdow, Missiakas, and Schneewind describe secreted Staphylococcus aureus
+        coagulases that bind to and activate prothrombin.
+  - subject: coagulase_activity_staphylocoagulase
+    predicate: enables
+    predicate_id: RO:0002327
+    object: coagulase_activity_prothrombin_activation
+    description: Coa and vWbp promote non-proteolytic activation of prothrombin and
+      cleavage of fibrinogen.
+    evidence:
+    - reference: DOI:10.1371/journal.ppat.1001036
+      snippet: Coa and vWbp promote the non-proteolytic activation of prothrombin
+        and cleavage of fibrinogen
+      notes: Cheng et al. demonstrate that Coa and vWbp promote non-proteolytic activation
+        of prothrombin and cleavage of fibrinogen.

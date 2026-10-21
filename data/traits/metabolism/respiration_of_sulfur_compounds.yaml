@@ -24,3 +24,28 @@ curation_history:
   changes: Proposed a DOI-backed FAPROTAX metabolic capability from proposals/metpo_traitmech_v11
     after repository-wide duplicate review.
   llm_assisted: true
+- timestamp: '2026-10-21T20:01:04Z'
+  curator: claude
+  action: RECORD_MECHANISM_KNOWLEDGE_GAP
+  changes: Recorded OPEN KNOWLEDGE_GAP discussion (respiration-of-sulfur-compounds-causal-graph-source-gap)
+    documenting the source-limited mechanism gap for causal_graphs.
+  llm_assisted: true
+discussions:
+- discussion_id: respiration-of-sulfur-compounds-causal-graph-source-gap
+  prompt: Add primary literature evidence for dissimilatory sulfur/sulfate/thiosulfate
+    reductases (e.g. DsrAB, PsrABC, PhsABC) and a strain-matched canonical example
+    before constructing causal_graphs.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: The current record carries a single 42-character snippet ('sulfate, sulfur,
+    or thiosulfate respiration' in DOI:10.3389/fmicb.2023.1108245) enumerating the
+    respiratory subclasses without enzymatic mechanism quotes.
+  posed_by: claude
+  posed_date: '2026-10-21'
+  evidence:
+  - reference: DOI:10.3389/fmicb.2023.1108245
+    supports: PARTIAL
+    snippet: sulfate, sulfur, or thiosulfate respiration
+    explanation: Existing record-level evidence supports the high-level metabolic
+      trait definition but does not provide multi-step enzymatic mechanism quotes
+      for a connected causal graph.

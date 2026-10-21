@@ -19,6 +19,12 @@ curation_history:
     evidence after a repository-wide duplicate review covering ignored and hidden
     files.
   llm_assisted: true
+- timestamp: '2026-10-21T21:12:24Z'
+  curator: claude
+  action: CURATE_CAUSAL_GRAPH
+  changes: Added MECHANISTIC causal_graphs entry (capnophilic_co2_canb_sketch) anchored
+    on existing verbatim record evidence snippets.
+  llm_assisted: true
 definition_source: DOI:10.1111/1462-2920.13092
 evidence:
 - reference: DOI:10.1111/1462-2920.13092
@@ -37,3 +43,78 @@ canonical_examples:
   note: C. jejuni NCTC 11168 was the strain background for the CanB study of the C.
     jejuni capnophilic growth phenotype.
   reference: DOI:10.1111/1462-2920.13092
+causal_graphs:
+- graph_id: capnophilic_co2_canb_sketch
+  title: Capnophilic elevated-CO2 requirement and CanB contribution
+  description: Evidence-backed causal mechanism linking the capnophilic growth phenotype
+    to elevated environmental carbon dioxide and beta-class carbonic anhydrase CanB.
+  scope_status: MECHANISTIC
+  scope_notes: The taxon-matched protein example anchors the Campylobacter jejuni
+    NCTC 11168 CanB (Cj0237/CynT) beta-carbonic anhydrase branch; it is not presented
+    as a universal mechanism for every capnophilic organism.
+  nodes:
+  - node_id: capnophilic_trait
+    label: capnophilic
+    node_type: TRAIT
+    grounding: METPO:1005021
+    description: Requirement for elevated carbon dioxide concentrations for optimal
+      microbial growth.
+  - node_id: capnophilic_carbon_dioxide
+    label: carbon dioxide
+    node_type: CHEMICAL
+    grounding: CHEBI:16526
+    description: Elevated environmental carbon dioxide required for optimal capnophilic
+      growth.
+  - node_id: capnophilic_canb_carbonic_anhydrase
+    label: beta-carbonic anhydrase CanB
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR001765
+    description: Beta-class carbonic anhydrase (CanB/Cj0237) contributing to capnophilic
+      growth in Campylobacter jejuni.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q0PBR7
+      protein_label: Carbonic anhydrase
+      gene_symbol: cynT
+      taxon_id: NCBITaxon:192222
+      taxon_label: Campylobacter jejuni subsp. jejuni serotype O:2 (strain ATCC 700819
+        / NCTC 11168)
+      entry_status: UNREVIEWED
+      entry_version: 98
+      sequence_version: 1
+      proteome_id: UP000000799
+      retrieved_on: '2026-10-21'
+      role: Cytoplasmic beta-carbonic anhydrase CanB (Cj0237/CynT) that is a major
+        contributor to the capnophilic growth phenotype of Campylobacter jejuni NCTC
+        11168.
+      evidence:
+      - reference: DOI:10.1111/1462-2920.13092
+        snippet: Taken together, our data suggest CanB is a major contributor to the
+          capnophilic growth phenotype of C. jejuni.
+        notes: Al-Haideri et al. establish that CanB (Cj0237, UniProtKB:Q0PBR7) is
+          a major contributor to the capnophilic growth phenotype of C. jejuni NCTC
+          11168.
+  edges:
+  - subject: capnophilic_trait
+    predicate: depends on
+    predicate_id: RO:0002502
+    object: capnophilic_carbon_dioxide
+    description: Capnophilic growth depends on elevated environmental carbon dioxide
+      concentrations.
+    evidence:
+    - reference: DOI:10.1111/1462-2920.13092
+      snippet: Campylobacter jejuni, the leading cause of human bacterial gastroenteritis,
+        requires low environmental oxygen and high carbon dioxide for optimum growth
+      notes: Al-Haideri et al. establish that capnophilic Campylobacter jejuni requires
+        high environmental carbon dioxide for optimum growth.
+  - subject: capnophilic_canb_carbonic_anhydrase
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: capnophilic_trait
+    description: Beta-carbonic anhydrase CanB contributes to the capnophilic growth
+      phenotype.
+    evidence:
+    - reference: DOI:10.1111/1462-2920.13092
+      snippet: Taken together, our data suggest CanB is a major contributor to the
+        capnophilic growth phenotype of C. jejuni.
+      notes: Al-Haideri et al. show that CanB is a major contributor to the capnophilic
+        growth phenotype of C. jejuni.

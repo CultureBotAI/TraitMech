@@ -1077,7 +1077,7 @@ window.searchData = [
   "source_id": "traitmech:000214",
   "source_file": "abortive_infection_system.yaml",
   "attaches_to": [],
-  "rationale": "ToxIN, AbiQ, AbiE, AbiF, AbiZ, AbiK, AbiT, AbiV, BstA, Stk2, AbiH, AbiG, AbiI, AbiR, AbiD, AbiB, AbiC, AbiU, AbiAlpha, Pif, RexAB, SpbK, CmdTAC, Abi2, AbiJ, AbiL, AbiN, AbiO, AbiP2, AbiA, and PD-T4-10 are split out as traitmech:000226, traitmech:000225, traitmech:000227, traitmech:000504, traitmech:000228, traitmech:000229, traitmech:000230, traitmech:000300, traitmech:000301, traitmech:000303, traitmech:000304, traitmech:000306, traitmech:000316, traitmech:000317, traitmech:000318, traitmech:000319, traitmech:000320, traitmech:000321, traitmech:000322, traitmech:000323, traitmech:000324, traitmech:000325, traitmech:000335, traitmech:000338, traitmech:000339, traitmech:000340, traitmech:000341, traitmech:000342, traitmech:000343, traitmech:000344, and traitmech:000394, respectively. Lopatina et al., Fineran et al., Dy et al., Garvey et al., Durmaz and Klaenhammer, Wang et al., Bouchard et al., Haaber et al., Owen et al., Depardieu et al., Prevots et al., O'Connor et al., Su et al., Twomey et al., McLandsborough et al., Parreira et al., Durmaz et al., Dai et al., Lossouarn et al., Cram et al., Parma et al., Johnson et al., Vassallo et al., Chopin et al., Anba et al., Deng et al., Prevots et al., Prevots and Ritzenthaler, Odegrip et al., Dinsmore and Klaenhammer, and Dinsmore et al. still support abortive infection as a genomically encoded phage defense strategy that spans mechanistically diverse toxin-antitoxin, pNP40-derived lactococcal AbiF DNA-replication-inhibition, premature-lysis, RT-related polymerase, two-component, translation-inhibition, prophage-encoded DNA-replication-inhibition, staphylococcal-kinase-triggered cell death, lactococcal AbiH phage resistance, two-gene lactococcal AbiG RNA-synthesis interference, single-ORF lactococcal AbiI burst-size reduction, two-separated-locus lactococcal AbiR DNA-replication impediment, pBF61-derived lactococcal AbiD burst-size reduction, lactococcal AbiB phage-transcript decay, lactococcal AbiC Prf infected-cell death, lactococcal AbiU phage-transcription delay, enterococcal AbiAlpha premature lysis, F-plasmid pif-region T7 abortive infection, lambda Rex two-component phage exclusion, ICEBs1 SpbK abortive SP\u03b2 defense, CmdTAC mRNA ADP-ribosyltransferase abortive infection, DefenseFinder Abi2/PF07751 Abi-like loci, single-profile lactococcal AbiJ loci, two-component lactococcal AbiL ATPase/TOPRIM-family loci, single-gene lactococcal AbiN loci, single-profile lactococcal AbiO loci, single-profile coliphage AbiP2 reverse-transcriptase-like loci, lactococcal AbiA loci represented by DefenseFinder AbiA-large and AbiA-small subrules, DefenseFinder PD-T4-10 two-profile loci, and other families. Additional narrower TraitRecords need separate review to ground each subfamily's trigger, effector, growth-arrest or cell-death mechanism, and phage escape routes.",
+  "rationale": "ToxIN, AbiQ, AbiE, AbiF, AbiZ, AbiK, AbiT, AbiV, BstA, Stk2, AbiH, AbiG, AbiI, AbiR, AbiD, AbiB, AbiC, AbiU, AbiAlpha, Pif, RexAB, SpbK, CmdTAC, Abi2, AbiJ, AbiL, AbiN, AbiO, AbiP2, AbiA, and PD-T4-10 are split out as traitmech:000226, traitmech:000225, traitmech:000227, traitmech:000504, traitmech:000228, traitmech:000229, traitmech:000230, traitmech:000300, traitmech:000301, traitmech:000303, traitmech:000304, traitmech:000306, traitmech:000316, traitmech:000317, traitmech:000318, traitmech:000319, traitmech:000320, traitmech:000321, traitmech:000322, traitmech:000323, traitmech:000324, traitmech:000325, traitmech:000335, traitmech:000338, traitmech:000339, traitmech:000340, traitmech:000341, traitmech:000342, traitmech:000343, traitmech:000344, and traitmech:000394, respectively. Lopatina et al., Fineran et al., Dy et al., Garvey et al., Durmaz and Klaenhammer, Wang et al., Bouchard et al., Haaber et al., Owen et al., Depardieu et al., Prevots et al., O'Connor et al., Su et al., Twomey et al., McLandsborough et al., Parreira et al., Durmaz et al., Dai et al., Lossouarn et al., Cram et al., Parma et al., Johnson et al., Vassallo et al., Chopin et al., Anba et al., Deng et al., Prevots et al., Prevots and Ritzenthaler, Odegrip et al., Dinsmore and Klaenhammer, and Dinsmore et al. still support abortive infection as a genomically encoded phage defense strategy that spans mechanistically diverse toxin-antitoxin, pNP40-derived lactococcal AbiF DNA-replication-inhibition, premature-lysis, RT-related polymerase, two-component, translation-inhibition, prophage-encoded DNA-replication-inhibition, staphylococcal-kinase-triggered cell death, lactococcal AbiH phage resistance, two-gene lactococcal AbiG RNA-synthesis interference, single-ORF lactococcal AbiI burst-size reduction, two-separated-locus lactococcal AbiR DNA-replication impediment, pBF61-derived lactococcal AbiD burst-size reduction, lactococcal AbiB phage-transcript decay, lactococcal AbiC Prf infected-cell death, lactococcal AbiU phage-transcription delay, enterococcal AbiAlpha premature lysis, F-plasmid pif-region T7 abortive infection, lambda Rex two-component phage exclusion, ICEBs1 SpbK abortive SPβ defense, CmdTAC mRNA ADP-ribosyltransferase abortive infection, DefenseFinder Abi2/PF07751 Abi-like loci, single-profile lactococcal AbiJ loci, two-component lactococcal AbiL ATPase/TOPRIM-family loci, single-gene lactococcal AbiN loci, single-profile lactococcal AbiO loci, single-profile coliphage AbiP2 reverse-transcriptase-like loci, lactococcal AbiA loci represented by DefenseFinder AbiA-large and AbiA-small subrules, DefenseFinder PD-T4-10 two-profile loci, and other families. Additional narrower TraitRecords need separate review to ground each subfamily's trigger, effector, growth-arrest or cell-death mechanism, and phage escape routes.",
   "num_experiments": 0,
   "num_evidence": 0,
   "evidence_refs": [],
@@ -7984,7 +7984,7 @@ window.searchData = [
  },
  {
   "discussion_id": "spbk-mechanism-gap",
-  "prompt": "Resolve the direct SP\u03b2 YonE trigger, SpbK TIR-domain output, essential host target, and broader SpbK homolog scope before minting narrower SpbK mechanism children.",
+  "prompt": "Resolve the direct SPβ YonE trigger, SpbK TIR-domain output, essential host target, and broader SpbK homolog scope before minting narrower SpbK mechanism children.",
   "kind": "KNOWLEDGE_GAP",
   "status": "OPEN",
   "is_gap": "Knowledge gap",
@@ -7994,7 +7994,7 @@ window.searchData = [
   "attaches_to": [
    "causal_graphs#spbk_locus_mediates_spb_defense"
   ],
-  "rationale": "Johnson et al. support ICEBs1 spbK as a YonE-dependent abortive infection gene that inhibits SP\u03b2 and causes cell death, and DefenseFinder maps SpbK to the SpbK__SpbK profile. The direct SpbK-YonE coupling event, TIR-domain output, essential host target, and homolog breadth remain unresolved.",
+  "rationale": "Johnson et al. support ICEBs1 spbK as a YonE-dependent abortive infection gene that inhibits SPβ and causes cell death, and DefenseFinder maps SpbK to the SpbK__SpbK profile. The direct SpbK-YonE coupling event, TIR-domain output, essential host target, and homolog breadth remain unresolved.",
   "num_experiments": 0,
   "num_evidence": 0,
   "evidence_refs": [],
@@ -9004,6 +9004,44 @@ window.searchData = [
   "page_url": "../../pages/traits/metabolism/anaerobic_ammonium_oxidation.html#anaerobic-ammonium-oxidation-xref-gap"
  },
  {
+  "discussion_id": "aromatic-compound-degradation-causal-graph-source-gap",
+  "prompt": "Add multi-step ring-cleavage pathway evidence (e.g. catechol or protocatechuate dioxygenase enzymes, substrates, and products) and a strain-matched canonical example before constructing causal_graphs.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "aromatic compound degradation",
+  "source_id": "traitmech:000130",
+  "source_file": "aromatic_compound_degradation.yaml",
+  "attaches_to": [],
+  "rationale": "The current record carries a single broad FAPROTAX review snippet (DOI:10.3390/ijerph6010278) naming bacterial degradation pathways of aromatic compounds without specific enzyme or intermediate claims; constructing a multi-edge causal graph from that single 60-character phrase would require clause-splitting or unsupported edges.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.3390/ijerph6010278"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/metabolism/aromatic_compound_degradation.html#aromatic-compound-degradation-causal-graph-source-gap"
+ },
+ {
+  "discussion_id": "aromatic-hydrocarbon-degradation-causal-graph-source-gap",
+  "prompt": "Add primary literature evidence for aromatic-ring hydroxylation and cleavage enzymes (e.g. benzene/biphenyl dioxygenase) and a strain-matched canonical example before constructing causal_graphs.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "aromatic hydrocarbon degradation",
+  "source_id": "traitmech:000129",
+  "source_file": "aromatic_hydrocarbon_degradation.yaml",
+  "attaches_to": [],
+  "rationale": "The current record carries a single substrate-list snippet (DOI:10.1007/BF00058836) enumerating benzene, arenes, biphenyl, and fused aromatic hydrocarbons without catalytic or pathway-step assertions.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.1007/BF00058836"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/metabolism/aromatic_hydrocarbon_degradation.html#aromatic-hydrocarbon-degradation-causal-graph-source-gap"
+ },
+ {
   "discussion_id": "arsenate-respiration-xref-gap",
   "prompt": "Resolve an exact external ontology class for organism-level arsenate respiration before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -9123,6 +9161,44 @@ window.searchData = [
   "page_url": "../../pages/traits/metabolism/complete_ammonia_oxidation.html#complete-ammonia-oxidation-xref-gap"
  },
  {
+  "discussion_id": "dark-hydrogen-oxidation-causal-graph-source-gap",
+  "prompt": "Add primary literature evidence for uptake [NiFe]-hydrogenase catalysis, terminal electron-acceptor coupling, and a strain-matched canonical example before constructing causal_graphs.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "dark hydrogen oxidation",
+  "source_id": "traitmech:000131",
+  "source_file": "dark_hydrogen_oxidation.yaml",
+  "attaches_to": [],
+  "rationale": "The current record carries a single ecological review snippet (DOI:10.3389/fmicb.2018.02873) describing hydrothermal-vent biomass production by hydrogen-oxidizing organisms without enzyme-level or electron-transport claims.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.3389/fmicb.2018.02873"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/metabolism/dark_hydrogen_oxidation.html#dark-hydrogen-oxidation-causal-graph-source-gap"
+ },
+ {
+  "discussion_id": "dark-oxidation-of-sulfur-compounds-causal-graph-source-gap",
+  "prompt": "Add primary literature evidence for sulfur-oxidizing enzyme complexes (e.g. Sox, Sqr, or Dsr pathways) and a strain-matched canonical example before constructing causal_graphs.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "dark oxidation of sulfur compounds",
+  "source_id": "traitmech:000132",
+  "source_file": "dark_oxidation_of_sulfur_compounds.yaml",
+  "attaches_to": [],
+  "rationale": "The current record carries a single physiological rate snippet (DOI:10.1111/1462-2920.14543) coupling dark sulfide oxidation to oxygen consumption without enzyme or intermediate assertions.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.1111/1462-2920.14543"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/metabolism/dark_oxidation_of_sulfur_compounds.html#dark-oxidation-of-sulfur-compounds-causal-graph-source-gap"
+ },
+ {
   "discussion_id": "dimethyl-sulfoxide-respiration-xref-gap",
   "prompt": "Resolve an exact external ontology class for organism-level dimethyl sulfoxide respiration before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -9155,6 +9231,44 @@ window.searchData = [
   "evidence_refs": [],
   "posed_by": "codex",
   "page_url": "../../pages/traits/metabolism/fumarate_respiration.html#fumarate-respiration-xref-gap"
+ },
+ {
+  "discussion_id": "hydrocarbon-degradation-causal-graph-source-gap",
+  "prompt": "Add primary literature evidence for alkane monooxygenase or anaerobic hydrocarbon-activating enzymes and a strain-matched canonical example before constructing causal_graphs.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "hydrocarbon degradation",
+  "source_id": "traitmech:000128",
+  "source_file": "hydrocarbon_degradation.yaml",
+  "attaches_to": [],
+  "rationale": "The current record carries a single high-level review snippet (DOI:10.1128/MR.54.3.305-315.1990) stating that hydrocarbons are degraded primarily by bacteria and fungi, which is insufficient to ground a multi-edge mechanism graph without inventing unsupported edges.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.1128/MR.54.3.305-315.1990"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/metabolism/hydrocarbon_degradation.html#hydrocarbon-degradation-causal-graph-source-gap"
+ },
+ {
+  "discussion_id": "hydrogenotrophic-methanogenesis-causal-graph-source-gap",
+  "prompt": "Add primary literature evidence for the H2/CO2 methanogenesis pathway steps (e.g. Fmd/Fwd, Mch, Mtd, Mer, Mtr, Mcr, and energy-converting hydrogenases) and a strain-matched canonical example before constructing causal_graphs.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "hydrogenotrophic methanogenesis",
+  "source_id": "traitmech:000127",
+  "source_file": "hydrogenotrophic_methanogenesis.yaml",
+  "attaches_to": [],
+  "rationale": "The current record carries a single 26-character phrase ('from CO2 and H2 to methane' in DOI:10.1146/annurev-micro-011720-122807); building a multi-edge graph from one short phrase would violate the snippet-diversity and anti-clause-splitting rules.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.1146/annurev-micro-011720-122807"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/metabolism/hydrogenotrophic_methanogenesis.html#hydrogenotrophic-methanogenesis-causal-graph-source-gap"
  },
  {
   "discussion_id": "iodate-respiration-xref-gap",
@@ -9191,6 +9305,25 @@ window.searchData = [
   "page_url": "../../pages/traits/metabolism/lipolysis.html#lipolysis-xref-gap"
  },
  {
+  "discussion_id": "methanol-oxidation-causal-graph-source-gap",
+  "prompt": "Add primary literature evidence for PQQ- or NAD-dependent methanol dehydrogenase (MxaFI/XoxF/Mdh), formaldehyde oxidation, and a strain-matched canonical example before constructing causal_graphs.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "methanol oxidation",
+  "source_id": "traitmech:000133",
+  "source_file": "methanol_oxidation.yaml",
+  "attaches_to": [],
+  "rationale": "The current record carries a single 37-character phrase ('methanol utilization in methylotrophy' in DOI:10.3389/fbioe.2021.787791) without verbatim catalytic or electron-transfer quotes in the evidence block.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.3389/fbioe.2021.787791"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/metabolism/methanol_oxidation.html#methanol-oxidation-causal-graph-source-gap"
+ },
+ {
   "discussion_id": "methyl-based-methanogenesis-xref-gap",
   "prompt": "Resolve an exact external ontology xref for methyl-substrate methanogenesis before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -9208,6 +9341,44 @@ window.searchData = [
   "page_url": "../../pages/traits/metabolism/methyl_based_methanogenesis.html#methyl-based-methanogenesis-xref-gap"
  },
  {
+  "discussion_id": "nitrate-reduction-causal-graph-source-gap",
+  "prompt": "Add primary literature evidence distinguishing assimilatory (Nas), respiratory (Nar), and dissimilatory/periplasmic (Nap) nitrate reductase reactions and a strain-matched canonical example before constructing causal_graphs.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "nitrate reduction",
+  "source_id": "traitmech:000134",
+  "source_file": "nitrate_reduction.yaml",
+  "attaches_to": [],
+  "rationale": "The current record carries a single overview snippet (DOI:10.1128/JB.181.21.6573-6584.1999) noting that nitrate reduction serves three purposes, without verbatim quotes for the individual reductase branches.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.1128/JB.181.21.6573-6584.1999"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/metabolism/nitrate_reduction.html#nitrate-reduction-causal-graph-source-gap"
+ },
+ {
+  "discussion_id": "nitrate-respiration-causal-graph-source-gap",
+  "prompt": "Add primary literature evidence for respiratory nitrate reductase (NarGHI/NapAB), electron-transport phosphorylation, and a strain-matched canonical example before constructing causal_graphs.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "nitrate respiration",
+  "source_id": "traitmech:000122",
+  "source_file": "nitrate_respiration.yaml",
+  "attaches_to": [],
+  "rationale": "The current record carries a single snippet (DOI:10.1126/science.1254070) contrasting denitrification and ammonification endpoints without enzyme-level nitrate-to-nitrite respiratory mechanism quotes.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.1126/science.1254070"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/metabolism/nitrate_respiration.html#nitrate-respiration-causal-graph-source-gap"
+ },
+ {
   "discussion_id": "nitrification-component-go-xref-gap",
   "prompt": "Resolve an exact external ontology class for the complete nitrification process before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -9223,6 +9394,44 @@ window.searchData = [
   "evidence_refs": [],
   "posed_by": "codex",
   "page_url": "../../pages/traits/metabolism/nitrification.html#nitrification-component-go-xref-gap"
+ },
+ {
+  "discussion_id": "nitrite-respiration-causal-graph-source-gap",
+  "prompt": "Add a second independent evidence snippet covering electron donation or proton-motive-force coupling alongside NrfA/NirS/NirK nitrite reduction and a strain-matched canonical example before constructing causal_graphs.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "nitrite respiration",
+  "source_id": "traitmech:000123",
+  "source_file": "nitrite_respiration.yaml",
+  "attaches_to": [],
+  "rationale": "The current record carries a single evidence item (DOI:10.1074/jbc.M709090200) on Escherichia coli NrfA reduction of nitrite to ammonium; a connected multi-edge graph requires at least two independent verbatim snippets so no single quote is reused or clause-split across edges.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.1074/jbc.M709090200"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/metabolism/nitrite_respiration.html#nitrite-respiration-causal-graph-source-gap"
+ },
+ {
+  "discussion_id": "nitrogen-respiration-causal-graph-source-gap",
+  "prompt": "Add primary literature evidence for nitrogen-oxide respiratory reductases, electron-transport chains, and a strain-matched canonical example before constructing causal_graphs.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "nitrogen respiration",
+  "source_id": "traitmech:000121",
+  "source_file": "nitrogen_respiration.yaml",
+  "attaches_to": [],
+  "rationale": "The current record carries a single 38-character snippet ('N oxides as terminal electron acceptors' in DOI:10.1128/mmbr.61.4.533-616.1997), which supports the upper-level class definition but not a multi-edge mechanism graph.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.1128/mmbr.61.4.533-616.1997"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/metabolism/nitrogen_respiration.html#nitrogen-respiration-causal-graph-source-gap"
  },
  {
   "discussion_id": "organohalide-respiration-xref-gap",
@@ -9293,6 +9502,25 @@ window.searchData = [
   "page_url": "../../pages/traits/metabolism/photoferrotrophy.html#photoferrotrophy-protein-example-gap"
  },
  {
+  "discussion_id": "respiration-of-sulfur-compounds-causal-graph-source-gap",
+  "prompt": "Add primary literature evidence for dissimilatory sulfur/sulfate/thiosulfate reductases (e.g. DsrAB, PsrABC, PhsABC) and a strain-matched canonical example before constructing causal_graphs.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "respiration of sulfur compounds",
+  "source_id": "traitmech:000124",
+  "source_file": "respiration_of_sulfur_compounds.yaml",
+  "attaches_to": [],
+  "rationale": "The current record carries a single 42-character snippet ('sulfate, sulfur, or thiosulfate respiration' in DOI:10.3389/fmicb.2023.1108245) enumerating the respiratory subclasses without enzymatic mechanism quotes.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.3389/fmicb.2023.1108245"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/metabolism/respiration_of_sulfur_compounds.html#respiration-of-sulfur-compounds-causal-graph-source-gap"
+ },
+ {
   "discussion_id": "selenate-respiration-xref-gap",
   "prompt": "Resolve an exact external ontology class for organism-level selenate respiration before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -9310,6 +9538,25 @@ window.searchData = [
   "page_url": "../../pages/traits/metabolism/selenate_respiration.html#selenate-respiration-xref-gap"
  },
  {
+  "discussion_id": "sulfur-respiration-causal-graph-source-gap",
+  "prompt": "Add primary literature evidence for polysulfide/elemental-sulfur reductase (PsrABC or SreABC), sulfide production, and a strain-matched canonical example before constructing causal_graphs.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "sulfur respiration",
+  "source_id": "traitmech:000125",
+  "source_file": "sulfur_respiration.yaml",
+  "attaches_to": [],
+  "rationale": "The current record carries a single 48-character snippet ('using sulfur as an alternative electron acceptor' in DOI:10.3389/fmicb.2023.1108245) without a second independent mechanistic quote to support a connected multi-edge graph.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.3389/fmicb.2023.1108245"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/metabolism/sulfur_respiration.html#sulfur-respiration-causal-graph-source-gap"
+ },
+ {
   "discussion_id": "tetrathionate-respiration-xref-gap",
   "prompt": "Resolve an exact external ontology class for organism-level tetrathionate respiration before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -9325,6 +9572,25 @@ window.searchData = [
   "evidence_refs": [],
   "posed_by": "codex",
   "page_url": "../../pages/traits/metabolism/tetrathionate_respiration.html#tetrathionate-respiration-xref-gap"
+ },
+ {
+  "discussion_id": "thiosulfate-respiration-causal-graph-source-gap",
+  "prompt": "Add primary literature evidence for thiosulfate reductase (PhsABC), sulfite/sulfide products, and a strain-matched canonical example before constructing causal_graphs.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "thiosulfate respiration",
+  "source_id": "traitmech:000126",
+  "source_file": "thiosulfate_respiration.yaml",
+  "attaches_to": [],
+  "rationale": "The current record carries a single 45-character snippet ('sulfur- and thiosulfate reducing type strain' in DOI:10.3389/fmicb.2023.1108245) without enzymatic or product-level quotes needed for a multi-edge causal graph.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.3389/fmicb.2023.1108245"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/metabolism/thiosulfate_respiration.html#thiosulfate-respiration-causal-graph-source-gap"
  },
  {
   "discussion_id": "trimethylamine-n-oxide-respiration-xref-gap",
@@ -15552,9 +15818,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 787,
- "total_knowledge_gaps": 482,
- "total_source_entries": 601,
+ "total_discussions": 801,
+ "total_knowledge_gaps": 496,
+ "total_source_entries": 615,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

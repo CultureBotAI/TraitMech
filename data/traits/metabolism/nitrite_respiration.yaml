@@ -24,3 +24,30 @@ curation_history:
   changes: Proposed a DOI-backed FAPROTAX metabolic capability from proposals/metpo_traitmech_v11
     after repository-wide duplicate review.
   llm_assisted: true
+- timestamp: '2026-10-21T20:01:04Z'
+  curator: claude
+  action: RECORD_MECHANISM_KNOWLEDGE_GAP
+  changes: Recorded OPEN KNOWLEDGE_GAP discussion (nitrite-respiration-causal-graph-source-gap)
+    documenting the source-limited mechanism gap for causal_graphs.
+  llm_assisted: true
+discussions:
+- discussion_id: nitrite-respiration-causal-graph-source-gap
+  prompt: Add a second independent evidence snippet covering electron donation or
+    proton-motive-force coupling alongside NrfA/NirS/NirK nitrite reduction and a
+    strain-matched canonical example before constructing causal_graphs.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  rationale: The current record carries a single evidence item (DOI:10.1074/jbc.M709090200)
+    on Escherichia coli NrfA reduction of nitrite to ammonium; a connected multi-edge
+    graph requires at least two independent verbatim snippets so no single quote is
+    reused or clause-split across edges.
+  posed_by: claude
+  posed_date: '2026-10-21'
+  evidence:
+  - reference: DOI:10.1074/jbc.M709090200
+    supports: PARTIAL
+    snippet: Cytochrome c nitrite reductase (NrfA) from Escherichia coli has a well
+      established role in the respiratory reduction of nitrite to ammonium
+    explanation: Existing record-level evidence supports the high-level metabolic
+      trait definition but does not provide multi-step enzymatic mechanism quotes
+      for a connected causal graph.

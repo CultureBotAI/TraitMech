@@ -22,8 +22,8 @@
       "LUMP_INTO_PARENT": 0,
       "CURATE_ROOT_WITH_SUBTYPES": 13,
       "ADD_CANONICAL_EXAMPLES": 102,
-      "BUILD_CAUSAL_GRAPH": 282,
-      "DEEPEN_CAUSAL_GRAPH": 386,
+      "BUILD_CAUSAL_GRAPH": 272,
+      "DEEPEN_CAUSAL_GRAPH": 396,
       "ALREADY_DEEP": 59,
       "CURATE_ROOT": 159
     }
@@ -2870,29 +2870,6 @@
       ]
     },
     {
-      "identifier": "traitmech:000135",
-      "label": "pectin degradation",
-      "category": "metabolism",
-      "slug": "pectin_degradation",
-      "score": 55.0,
-      "action": "BUILD_CAUSAL_GRAPH",
-      "edges": 0,
-      "nodes": 0,
-      "components": 0,
-      "orphans": 0,
-      "examples": 0,
-      "canonical_examples_reviewed_empty": false,
-      "children": 0,
-      "series": null,
-      "series_size": 0,
-      "series_overlap": null,
-      "researched": false,
-      "reasons": [
-        "no causal graph +25",
-        "no canonical_examples +30"
-      ]
-    },
-    {
       "identifier": "traitmech:000197",
       "label": "perchlorate respiration",
       "category": "metabolism",
@@ -5718,29 +5695,6 @@
       ]
     },
     {
-      "identifier": "METPO:1005021",
-      "label": "capnophilic",
-      "category": "environment",
-      "slug": "capnophilic",
-      "score": 28.0,
-      "action": "BUILD_CAUSAL_GRAPH",
-      "edges": 0,
-      "nodes": 0,
-      "components": 0,
-      "orphans": 0,
-      "examples": 1,
-      "canonical_examples_reviewed_empty": false,
-      "children": 0,
-      "series": null,
-      "series_size": 0,
-      "series_overlap": null,
-      "researched": false,
-      "reasons": [
-        "no causal graph +25",
-        "no synonyms +3"
-      ]
-    },
-    {
       "identifier": "traitmech:000608",
       "label": "heterokaryosis",
       "category": "genomics",
@@ -6339,29 +6293,6 @@
       ]
     },
     {
-      "identifier": "METPO:1005036",
-      "label": "lateral flagellation",
-      "category": "morphology",
-      "slug": "lateral_flagellation",
-      "score": 28.0,
-      "action": "BUILD_CAUSAL_GRAPH",
-      "edges": 0,
-      "nodes": 0,
-      "components": 0,
-      "orphans": 0,
-      "examples": 1,
-      "canonical_examples_reviewed_empty": false,
-      "children": 0,
-      "series": null,
-      "series_size": 0,
-      "series_overlap": null,
-      "researched": false,
-      "reasons": [
-        "no causal graph +25",
-        "no synonyms +3"
-      ]
-    },
-    {
       "identifier": "traitmech:000663",
       "label": "microbial haustorium formation",
       "category": "morphology",
@@ -6458,29 +6389,6 @@
       "label": "rosette cell arrangement",
       "category": "morphology",
       "slug": "rosette_cell_arrangement",
-      "score": 28.0,
-      "action": "BUILD_CAUSAL_GRAPH",
-      "edges": 0,
-      "nodes": 0,
-      "components": 0,
-      "orphans": 0,
-      "examples": 1,
-      "canonical_examples_reviewed_empty": false,
-      "children": 0,
-      "series": null,
-      "series_size": 0,
-      "series_overlap": null,
-      "researched": false,
-      "reasons": [
-        "no causal graph +25",
-        "no synonyms +3"
-      ]
-    },
-    {
-      "identifier": "METPO:1005037",
-      "label": "subpolar flagellation",
-      "category": "morphology",
-      "slug": "subpolar_flagellation",
       "score": 28.0,
       "action": "BUILD_CAUSAL_GRAPH",
       "edges": 0,
@@ -6835,29 +6743,6 @@
       "examples": 1,
       "canonical_examples_reviewed_empty": false,
       "children": 3,
-      "series": null,
-      "series_size": 0,
-      "series_overlap": null,
-      "researched": false,
-      "reasons": [
-        "no causal graph +25",
-        "no synonyms +3"
-      ]
-    },
-    {
-      "identifier": "traitmech:000183",
-      "label": "bacteriocin production",
-      "category": "physiology",
-      "slug": "bacteriocin_production",
-      "score": 28.0,
-      "action": "BUILD_CAUSAL_GRAPH",
-      "edges": 0,
-      "nodes": 0,
-      "components": 0,
-      "orphans": 0,
-      "examples": 1,
-      "canonical_examples_reviewed_empty": false,
-      "children": 0,
       "series": null,
       "series_size": 0,
       "series_overlap": null,
@@ -8200,72 +8085,6 @@
       ]
     },
     {
-      "identifier": "METPO:1005032",
-      "label": "polar flagellation",
-      "category": "morphology",
-      "slug": "polar_flagellation",
-      "score": 25.0,
-      "action": "BUILD_CAUSAL_GRAPH",
-      "edges": 0,
-      "nodes": 0,
-      "components": 0,
-      "orphans": 0,
-      "examples": 1,
-      "canonical_examples_reviewed_empty": false,
-      "children": 0,
-      "series": null,
-      "series_size": 0,
-      "series_overlap": null,
-      "researched": false,
-      "reasons": [
-        "no causal graph +25"
-      ]
-    },
-    {
-      "identifier": "METPO:1007006",
-      "label": "polytrichous flagellation",
-      "category": "morphology",
-      "slug": "polytrichous_flagellation",
-      "score": 25.0,
-      "action": "BUILD_CAUSAL_GRAPH",
-      "edges": 0,
-      "nodes": 0,
-      "components": 0,
-      "orphans": 0,
-      "examples": 1,
-      "canonical_examples_reviewed_empty": false,
-      "children": 0,
-      "series": null,
-      "series_size": 0,
-      "series_overlap": null,
-      "researched": false,
-      "reasons": [
-        "no causal graph +25"
-      ]
-    },
-    {
-      "identifier": "traitmech:000175",
-      "label": "type IV pilus",
-      "category": "morphology",
-      "slug": "type_iv_pilus",
-      "score": 25.0,
-      "action": "BUILD_CAUSAL_GRAPH",
-      "edges": 0,
-      "nodes": 0,
-      "components": 0,
-      "orphans": 0,
-      "examples": 1,
-      "canonical_examples_reviewed_empty": false,
-      "children": 0,
-      "series": null,
-      "series_size": 0,
-      "series_overlap": null,
-      "researched": false,
-      "reasons": [
-        "no causal graph +25"
-      ]
-    },
-    {
       "identifier": "METPO:1007084",
       "label": "catalase negative",
       "category": "other",
@@ -8618,28 +8437,6 @@
       ]
     },
     {
-      "identifier": "METPO:1007089",
-      "label": "coagulase activity",
-      "category": "physiology",
-      "slug": "coagulase_activity",
-      "score": 25.0,
-      "action": "BUILD_CAUSAL_GRAPH",
-      "edges": 0,
-      "nodes": 0,
-      "components": 0,
-      "orphans": 0,
-      "examples": 1,
-      "canonical_examples_reviewed_empty": false,
-      "children": 2,
-      "series": null,
-      "series_size": 0,
-      "series_overlap": null,
-      "researched": false,
-      "reasons": [
-        "no causal graph +25"
-      ]
-    },
-    {
       "identifier": "traitmech:000138",
       "label": "DNase activity",
       "category": "physiology",
@@ -8820,28 +8617,6 @@
       "label": "lipase activity",
       "category": "physiology",
       "slug": "lipase_activity",
-      "score": 25.0,
-      "action": "BUILD_CAUSAL_GRAPH",
-      "edges": 0,
-      "nodes": 0,
-      "components": 0,
-      "orphans": 0,
-      "examples": 1,
-      "canonical_examples_reviewed_empty": false,
-      "children": 0,
-      "series": null,
-      "series_size": 0,
-      "series_overlap": null,
-      "researched": false,
-      "reasons": [
-        "no causal graph +25"
-      ]
-    },
-    {
-      "identifier": "traitmech:000176",
-      "label": "magnetotaxis",
-      "category": "physiology",
-      "slug": "magnetotaxis",
       "score": 25.0,
       "action": "BUILD_CAUSAL_GRAPH",
       "edges": 0,
@@ -9055,6 +8830,29 @@
       "researched": false,
       "reasons": [
         "no causal graph +25"
+      ]
+    },
+    {
+      "identifier": "METPO:1005021",
+      "label": "capnophilic",
+      "category": "environment",
+      "slug": "capnophilic",
+      "score": 15.0,
+      "action": "DEEPEN_CAUSAL_GRAPH",
+      "edges": 2,
+      "nodes": 3,
+      "components": 1,
+      "orphans": 0,
+      "examples": 1,
+      "canonical_examples_reviewed_empty": false,
+      "children": 0,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": false,
+      "reasons": [
+        "thin graph (2 edges) +12",
+        "no synonyms +3"
       ]
     },
     {
@@ -9398,6 +9196,29 @@
       ]
     },
     {
+      "identifier": "METPO:1005036",
+      "label": "lateral flagellation",
+      "category": "morphology",
+      "slug": "lateral_flagellation",
+      "score": 15.0,
+      "action": "DEEPEN_CAUSAL_GRAPH",
+      "edges": 3,
+      "nodes": 4,
+      "components": 1,
+      "orphans": 0,
+      "examples": 1,
+      "canonical_examples_reviewed_empty": false,
+      "children": 0,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": false,
+      "reasons": [
+        "thin graph (3 edges) +12",
+        "no synonyms +3"
+      ]
+    },
+    {
       "identifier": "METPO:1000680",
       "label": "ring shaped",
       "category": "morphology",
@@ -9417,6 +9238,52 @@
       "researched": true,
       "reasons": [
         "6 components +15"
+      ]
+    },
+    {
+      "identifier": "METPO:1005037",
+      "label": "subpolar flagellation",
+      "category": "morphology",
+      "slug": "subpolar_flagellation",
+      "score": 15.0,
+      "action": "DEEPEN_CAUSAL_GRAPH",
+      "edges": 2,
+      "nodes": 3,
+      "components": 1,
+      "orphans": 0,
+      "examples": 1,
+      "canonical_examples_reviewed_empty": false,
+      "children": 0,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": false,
+      "reasons": [
+        "thin graph (2 edges) +12",
+        "no synonyms +3"
+      ]
+    },
+    {
+      "identifier": "traitmech:000183",
+      "label": "bacteriocin production",
+      "category": "physiology",
+      "slug": "bacteriocin_production",
+      "score": 15.0,
+      "action": "DEEPEN_CAUSAL_GRAPH",
+      "edges": 2,
+      "nodes": 3,
+      "components": 1,
+      "orphans": 0,
+      "examples": 1,
+      "canonical_examples_reviewed_empty": false,
+      "children": 0,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": false,
+      "reasons": [
+        "thin graph (2 edges) +12",
+        "no synonyms +3"
       ]
     },
     {
@@ -15220,6 +15087,28 @@
       ]
     },
     {
+      "identifier": "traitmech:000135",
+      "label": "pectin degradation",
+      "category": "metabolism",
+      "slug": "pectin_degradation",
+      "score": 12.0,
+      "action": "DEEPEN_CAUSAL_GRAPH",
+      "edges": 2,
+      "nodes": 3,
+      "components": 1,
+      "orphans": 0,
+      "examples": 1,
+      "canonical_examples_reviewed_empty": false,
+      "children": 0,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": false,
+      "reasons": [
+        "thin graph (2 edges) +12"
+      ]
+    },
+    {
       "identifier": "traitmech:000115",
       "label": "starch degradation",
       "category": "metabolism",
@@ -15441,6 +15330,28 @@
       ]
     },
     {
+      "identifier": "METPO:1005032",
+      "label": "polar flagellation",
+      "category": "morphology",
+      "slug": "polar_flagellation",
+      "score": 12.0,
+      "action": "DEEPEN_CAUSAL_GRAPH",
+      "edges": 3,
+      "nodes": 4,
+      "components": 1,
+      "orphans": 0,
+      "examples": 1,
+      "canonical_examples_reviewed_empty": false,
+      "children": 0,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": false,
+      "reasons": [
+        "thin graph (3 edges) +12"
+      ]
+    },
+    {
       "identifier": "traitmech:000068",
       "label": "polyphosphate granule",
       "category": "morphology",
@@ -15460,6 +15371,28 @@
       "researched": true,
       "reasons": [
         "thin graph (6 edges) +12"
+      ]
+    },
+    {
+      "identifier": "METPO:1007006",
+      "label": "polytrichous flagellation",
+      "category": "morphology",
+      "slug": "polytrichous_flagellation",
+      "score": 12.0,
+      "action": "DEEPEN_CAUSAL_GRAPH",
+      "edges": 2,
+      "nodes": 3,
+      "components": 1,
+      "orphans": 0,
+      "examples": 1,
+      "canonical_examples_reviewed_empty": false,
+      "children": 0,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": false,
+      "reasons": [
+        "thin graph (2 edges) +12"
       ]
     },
     {
@@ -15573,6 +15506,28 @@
       ]
     },
     {
+      "identifier": "traitmech:000175",
+      "label": "type IV pilus",
+      "category": "morphology",
+      "slug": "type_iv_pilus",
+      "score": 12.0,
+      "action": "DEEPEN_CAUSAL_GRAPH",
+      "edges": 3,
+      "nodes": 4,
+      "components": 1,
+      "orphans": 0,
+      "examples": 1,
+      "canonical_examples_reviewed_empty": false,
+      "children": 0,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": false,
+      "reasons": [
+        "thin graph (3 edges) +12"
+      ]
+    },
+    {
       "identifier": "traitmech:000194",
       "label": "aerobic anoxygenic phototrophy",
       "category": "physiology",
@@ -15608,6 +15563,28 @@
       "examples": 1,
       "canonical_examples_reviewed_empty": false,
       "children": 0,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": false,
+      "reasons": [
+        "thin graph (2 edges) +12"
+      ]
+    },
+    {
+      "identifier": "METPO:1007089",
+      "label": "coagulase activity",
+      "category": "physiology",
+      "slug": "coagulase_activity",
+      "score": 12.0,
+      "action": "DEEPEN_CAUSAL_GRAPH",
+      "edges": 2,
+      "nodes": 3,
+      "components": 1,
+      "orphans": 0,
+      "examples": 1,
+      "canonical_examples_reviewed_empty": false,
+      "children": 2,
       "series": null,
       "series_size": 0,
       "series_overlap": null,
@@ -15658,6 +15635,28 @@
       "researched": false,
       "reasons": [
         "thin graph (6 edges) +12"
+      ]
+    },
+    {
+      "identifier": "traitmech:000176",
+      "label": "magnetotaxis",
+      "category": "physiology",
+      "slug": "magnetotaxis",
+      "score": 12.0,
+      "action": "DEEPEN_CAUSAL_GRAPH",
+      "edges": 3,
+      "nodes": 4,
+      "components": 1,
+      "orphans": 0,
+      "examples": 1,
+      "canonical_examples_reviewed_empty": false,
+      "children": 0,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": false,
+      "reasons": [
+        "thin graph (3 edges) +12"
       ]
     },
     {
