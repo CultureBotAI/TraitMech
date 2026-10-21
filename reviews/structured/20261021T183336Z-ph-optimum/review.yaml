@@ -1,0 +1,1978 @@
+schema_version: 1.0.0
+review_id: 20261021T183336Z-ph-optimum
+kind: record
+repository: CultureBotAI/TraitMech
+title: Whole-record review of pH optimum
+started_at: '2026-10-21T18:19:28.771338Z'
+finished_at: '2026-10-21T18:33:36Z'
+reviewer:
+  identity: codex
+  kind: agent
+  independence: independent
+  independence_basis: Separate source and grounding audits, independent challenge
+    and root selected-primary reading support the disposition. Generic environmental
+    measurement, identity, literal attribution and formal roles are reviewed. Detailed
+    pathogen acid-defense, fitness, resistance and intervention mechanisms remain
+    unassessed. No scientific record was edited.
+  model: GPT-6 (Codex)
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: 'Needs curation: two majors address the operational-definition attribution
+  and grouped imported relation roles; one minor addresses bounded human acceptance.
+  Active identity, hierarchy and canonical optimum remain positive. Edge 3 and edge
+  6 interpretations remain qualified; unavailable Baker body and detailed biological
+  mechanisms are not declared false.'
+source:
+  git_revision: 8eee04a8c65609fbaff6df7c54597dcaf1b9d282
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: da8896328a0fd6cc92f1adf0d8be8980d0ddd41f3172c7936f2c7f119b293ac1
+    role: context
+  - path: .claude/skills/manage-identifiers/SKILL.md
+    sha256: a5c5aaa10943ee6d15423a5878ed2189e4e0b28a5c6e09fda80ba299ab779ebb
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: bb03efa3bbd3748ee1dccf57612a6ce8fcc861f20eb57c33eb16e3ac1dd728bd
+    role: context
+  - path: CLAUDE.md
+    sha256: 4d328127022388e1affe9b71be24bc93944a971636d0d0ea902f6511e0b405c5
+    role: context
+  - path: DO_NOT_WORK.md
+    sha256: 9ae0b05cc06f4ce8938801287a568d535e471d06dda5e258fcdbbed222abf712
+    role: context
+  - path: conf/evidence_snippet_baseline.tsv
+    sha256: cbe5c82379e796446366b292f15194d80625b928119b482a67d857a379ab31a7
+    role: context
+  - path: conf/record_review.yaml
+    sha256: 5adc6244761fb2baf8a059d81f23b0c9b32a33f9426ab84094234c3ec417269d
+    role: context
+  - path: data/raw/biolink-model.yaml
+    sha256: 4955709e1cac1d26fd657f7a0c29d6c8390f42e41f9ebfab859c82b102f2bebb
+    role: context
+  - path: data/raw/metpo.owl
+    sha256: 8b6f8fe0510a698579e532658c8ace05da2550093365df9ca83feb0741778415
+    role: context
+  - path: data/traits/environment/optimum_phenotype_with_numerical_limits.yaml
+    sha256: 85423dbaa018cc557495fec708cde21decddd7f0fc0d674f62b09c510d2309ad
+    role: context
+  - path: data/traits/environment/ph_optimum.yaml
+    sha256: 55981325e7e0e85fa5e1f52fc04cbc6de77b981783685c4bdab25e8bab26cfc4
+    role: target
+  - path: data/traits/environment/ph_phenotype_with_numerical_limits.yaml
+    sha256: 643abb9898dc920fe3aeeb0fa337c1d3a7efa6f0b540cb4ad979a3a28e0702d4
+    role: context
+  - path: data/traits/upper/phenotype.yaml
+    sha256: 502760fa1b7179bf4e25ab56ecb91d0b25d5f50ed5cfe44133c63a9b821cc4a4
+    role: context
+  - path: docs/CURATION_PLAYBOOK.md
+    sha256: 735e9b810471da9f7d8364e35ffe1e741edb3421480dac01727db6ea5aa65da9
+    role: context
+  - path: docs/GROUNDING_POLICY.md
+    sha256: 891678c983c2283a47c81c47950b35753981e9339d105f3bbdda92a1f5ab7f42
+    role: context
+  - path: docs/PATHWAY_LINKS.md
+    sha256: 800492750fb3c025dfdf7164813e7a00b3bd72dc8cc6f8e754e2aed5d7bbf414
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: cac714488cad03263ca3847737d5f70d174d40b5be677a09e0c1d9c814d9bc6a
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/infrastructure/audit_unapplied_groundings/2026-08-20T073138Z-claude-code-03fa56.yaml
+    sha256: a0e7b64647148804aabc92d9fa3d28b08d097dec3549ffcbdaa822bd844f531e
+    role: context
+  - path: history/infrastructure/disposition-typing-burndown/2026-08-08T014114Z-claude-code-5d4383.yaml
+    sha256: 8fecb441b9374b0a0f69f131afce56f86ff69c212c52f45967c2e05ccb8ee98a
+    role: context
+  - path: history/infrastructure/inconsistent-node-type/2026-08-12T000912Z-claude-code-779670.yaml
+    sha256: adb240d907348b52784c5e2f2e4b131af124877eeaaf1805c94713342763e5dd
+    role: context
+  - path: history/infrastructure/node-type-consistency/2026-08-15T014631Z-claude-code-9d7f4d.yaml
+    sha256: 21f19561c0d4769e7acc62e05e41d0d395a0f239938f00829f79f2b9c3ac2510
+    role: context
+  - path: history/infrastructure/pathway-vs-process/2026-08-16T010630Z-claude-code-192557.yaml
+    sha256: a45fff0e3ef24effb20c3b624dc14a6cab08f2094bc0f8033cd709c0cd60f012
+    role: context
+  - path: history/infrastructure/pr664-adversarial-review/2026-09-07T010300Z-codex-95db7f.yaml
+    sha256: 28816e6b57360a9e5c7d6f2fe1a51bbc4289f4de6c010b5bf87c085d10a65c14
+    role: context
+  - path: history/infrastructure/pr664-adversarial-review/2026-09-07T042400Z-codex-685abc.yaml
+    sha256: d180c2bf6c9f82ddddfdb18ec4352313b62934f54137c06179f8beb0fe9aea5f
+    role: context
+  - path: history/infrastructure/predicate-gate-audit/2026-08-16T074719Z-claude-code-84d88d.yaml
+    sha256: d1ba848e155dbd3a65905f07af5539d3d22b8873b638cc6adb48b1a0e23c0a3d
+    role: context
+  - path: history/infrastructure/process-quality-consistency/2026-08-21T073211Z-codex-174227.yaml
+    sha256: e35d99e8285d488d98584d046aa001825527609cfd62575b3b839c4a31230642
+    role: context
+  - path: history/infrastructure/protein-vs-activity/2026-08-15T202806Z-claude-code-ddcd62.yaml
+    sha256: 58f55f2617869c39eb6412455c0d838b350433ff0ad979c848be1df9bcb3fd4f
+    role: context
+  - path: history/other/canonical-examples-six/2026-08-21T065406Z-codex-a1ab82.yaml
+    sha256: 23be5f6ab519511e3e23feffa85813eec4fa3c7e6b900e77fd4a3adc0c26da0e
+    role: context
+  - path: history/records/ph_delta_mid2/2026-09-04T150000Z-codex-183.yaml
+    sha256: 7e63e01287759bd24840902179eeef44c47a919ac1e89f989882263f2c388aa9
+    role: context
+  - path: history/records/ph_delta_mid3/2026-09-04T160000Z-codex-183.yaml
+    sha256: 0165fee9ce29ac9b142fd4653e9ff768940808e03f46035dab084a27041ef697
+    role: context
+  - path: history/records/ph_delta_very_low/2026-09-04T170000Z-codex-183.yaml
+    sha256: 02c9e4f114cff888a0e47573cdda51774a6239a5e15fc726256ec53be1a32608
+    role: context
+  - path: history/records/photoheterotrophic/2026-08-31T101600Z-codex-294ab3.yaml
+    sha256: e8241095eb4a0c43425f58e05d84e77a7134deebf9eac4b51a0515b450454cb5
+    role: context
+  - path: history/records/phototrophic/2026-08-31T101604Z-codex-25485d.yaml
+    sha256: 76a7dab4cfe7aac88245009f4c8eeece928ec4e4c434f228c239bf2aa4e205b3
+    role: context
+  - path: justfile
+    sha256: 008643042a721e84f647be6beda104ae02fe616361ff9b34fc608643a7526ee2
+    role: context
+  - path: mappings/node_grounding.tsv
+    sha256: d7de9b3ab04960c4775a5bc295a945bd1a72d81467830459f4793e654f82b3d0
+    role: context
+  - path: mappings/predicate_grounding.tsv
+    sha256: 8e28c19e93aca3dc164a3befbe2612b289241de457c59f499e65936c03b7ce52
+    role: context
+  - path: mappings/trait_exact_match_review.tsv
+    sha256: 7728593d526d9a723716e5daad64beb7e1ab5c2e4221ae8d43dd9480cd02f62b
+    role: context
+  - path: mappings/uniprot_regrounding_candidates.tsv
+    sha256: c36d8e038886d137d5a1ae609240e59ce74b6aeee17ae24f21b6c4a0d7407391
+    role: context
+  - path: proposals/metpo_traitmech_v2/metpo_proposal_properties_robot.tsv
+    sha256: 4ab5ca37ff8595210254b1099563b4425ecd737ed375dc5a932b44e2ad5c332e
+    role: context
+  - path: proposals/metpo_traitmech_v2/proposal.md
+    sha256: fe0601356b120ef9babc6f90a417f860bf02aa628c46af661517f168e01bc48f
+    role: context
+  - path: proposals/metpo_traitmech_v3/metpo_proposal_classes_robot.tsv
+    sha256: 1a1cc789782cfae195c1fc81ddaf848d06d162c7434d94cceb66838de98ab6fa
+    role: context
+  - path: proposals/metpo_traitmech_v3/proposal.md
+    sha256: 37be7b2c2efe0d1598d62b8df04f08262ba74b9d8068e010df6ee48069449067
+    role: context
+  - path: proposals/metpo_traitmech_v6/metpo_proposal_properties_robot.tsv
+    sha256: ed877efe2d59f43c51898e2dc85440188711455dcc5c882af2dc1384fc38fc19
+    role: context
+  - path: proposals/metpo_traitmech_v6/proposal.md
+    sha256: aecbd48fd73712ccab57619d753b6084a7fa2fbf616f80623f63ce15b65871ae
+    role: context
+  - path: reports/metpo_2026_06_12_active_review.tsv
+    sha256: 45e9c6471475635ba1f2602cd636a119d490f5dbd8dd6ac8af1aab89a321379f
+    role: context
+  - path: reports/metpo_2026_06_12_release_delta.tsv
+    sha256: afe858d2aa0ade08322c7808d5917ff370e069ba02c2642d483342db8e9323ac
+    role: context
+  - path: reports/ontology_snapshot_manifest.tsv
+    sha256: 4a157279a8c4e3fc2afb5382a45c31961991bbd1f330f26d0061b0cfd0b4d213
+    role: context
+  - path: research/traits/environment/ph_optimum-deep-research-falcon.md
+    sha256: 6b756e567fe79929db824f9301fa0e418d8cebd836842ac1a72a070d731a9bbd
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: scripts/add_aerotaxis_trait.py
+    sha256: 569bd16e37d7e224964156b53ee67c3106dcb815d0c7d7d8a4bd8fc6c1be02fa
+    role: context
+  - path: scripts/add_butyric_acid_fermentation_trait.py
+    sha256: d207ffc5fd345eebd70397b64624886ec77c472da186316e65a0334f81f43d26
+    role: context
+  - path: scripts/add_gravitropism_trait.py
+    sha256: df2a50ede719c008e4315e15d17a750b4e373f1f0c6dc41f6fcb45f5a1cccd30
+    role: context
+  - path: scripts/add_lysine_decarboxylase_activity_trait.py
+    sha256: a8fb60bf65b804d18e299857f41ca4221f4e1f2e1221f4bf62ad9aa5fc23f092
+    role: context
+  - path: scripts/add_ph_tropism_trait.py
+    sha256: c52e1e735c802fa085194af0e2ca15761dfe52c8e5355ffdda0680ea4ea373a9
+    role: context
+  - path: scripts/add_zorya_system_trait.py
+    sha256: 327c27ac2e1cb445205ec1448907e475806046b7a3b91e4603b4605158c0fa55
+    role: context
+  - path: scripts/audit_causal_graphs.py
+    sha256: e0c26506c9de712700317284f142097e7bf69334806b8010db5d6517e905e834
+    role: context
+  - path: scripts/audit_graph_protein_taxa.py
+    sha256: d3375861829c612483b3545dd0f5e2b79872a4576b626edc08714a09fbd9a24d
+    role: context
+  - path: scripts/audit_predicate_domains.py
+    sha256: 35be8589638b8b21379f2dfd7fa7fb7d4eb422ccf71063e1e21a6bc19b767bcf
+    role: context
+  - path: scripts/audit_research_groundings.py
+    sha256: a48e12292096856bc351bbacf0a5d02f2b65141be964612940afb3e5105374b6
+    role: context
+  - path: scripts/audit_unapplied_groundings.py
+    sha256: 5afa6a602f0d7d5107adebf8b067d61bde9ea9adb267f9dfaed8a0b7cc0cc76b
+    role: context
+  - path: scripts/audit_uniprot_grounding.py
+    sha256: 91eb2165c69b3a4fcb53154dc8c835ac1070577f88065a43dfc881284d3d1052
+    role: context
+  - path: scripts/backfill_canonical_examples_444.py
+    sha256: 18ca0766789c239d693ef665e8b1d43c1209a0f414a326f1c5d890f88de7b20c
+    role: context
+  - path: scripts/connect_final_metabolism_graphs_183.py
+    sha256: db95ba7d496fa7d8ea0ce0841738be02d59298c9d30c543d8aa2f367af7a1492
+    role: context
+  - path: scripts/connect_final_physiology_graphs_183.py
+    sha256: aa71499dffffdb32af6dd2de2c64b3f719a859bdd5fa1f705d3e22e2a60d8703
+    role: context
+  - path: scripts/connect_metabolism_two_component_graphs_183.py
+    sha256: bd63272e122ce687a415f4790f1a8041065de9e91fa07430011947331b5decd4
+    role: context
+  - path: scripts/connect_morphology_graphs_183.py
+    sha256: b60e8b3215115aae20beb4d99e18e17d84d71b3d8e1afa0f3cce7b3092c7abac
+    role: context
+  - path: scripts/connect_ph_delta_mid2_graph_183.py
+    sha256: 21e16ff508b7448d6a60bf0729585a2fa1879ce9ac98562de4652689aec75d91
+    role: context
+  - path: scripts/connect_ph_delta_mid3_graph_183.py
+    sha256: cf65890b2797032dcf9d2fa7b249a47cfe710501b3b2d8f610f323c6f27366e4
+    role: context
+  - path: scripts/connect_ph_delta_very_low_graph_183.py
+    sha256: 5abcdea4fbf7793bc718406439e63203726284d2c2d3222b4bdd00d3de2b6390
+    role: context
+  - path: scripts/connect_ph_phenotype_graph_183.py
+    sha256: 7d13d108660bede28937d3f180e90c542c47869c10f34ca497f9ab6f8f5db4ba
+    role: context
+  - path: scripts/connect_phototrophy_graphs_183.py
+    sha256: afdea1c107faa1d90b7f91adef4084cda801b8b60d139067e3796ab7b92c1fdc
+    role: context
+  - path: scripts/document_evidence_reference_churn.py
+    sha256: 84f8638faa59e3909cdde0ccf2efbdf98521c8c423367fa78c139726ea545669
+    role: context
+  - path: scripts/enrich_lateral_flagellation_trait.py
+    sha256: 841e82aad335fcb81d9ba6113b36eed8b35bb9c9f7ae1132effe6e2a1bae5520
+    role: context
+  - path: scripts/finalize_metpo_2026_06_12_review.py
+    sha256: b850b386183b2d86647dada43f7f157059017dbb881f7e1fb2e220ae697d3bea
+    role: context
+  - path: scripts/ground_causal_nodes.py
+    sha256: 204ce4162544154b1752b65da2136538847ea25ced26a52f5708eadff08f5d42
+    role: context
+  - path: scripts/ground_causal_predicates.py
+    sha256: 5a788eeaabf3a56b0d82c469a3e3fe28f1d51707d9382313b9a94289be7d1381
+    role: context
+  - path: scripts/match_uniprot_to_proteins.py
+    sha256: 7e953637d4221b021995cae93c55abfd6757ac85e83b35ade02962082d5adf37
+    role: context
+  - path: scripts/migrate_disposition_typing.py
+    sha256: ebafdd145fc0729d32f3b8a45f570d97a8e001838afadd698e2b246cb8950714
+    role: context
+  - path: scripts/migrate_enables_range_edges.py
+    sha256: 3d0d1bddcaa76baef5833973e2e979e4fee1f834c67d1abcc69a8d866ecb8f32
+    role: context
+  - path: scripts/migrate_metpo_2026_06_12.py
+    sha256: 0f3945e7b8e6ddccdc9eaeed32737a2a1cf0832748af2b72a6a0195ba661188f
+    role: context
+  - path: scripts/migrate_microbe_domain_edges.py
+    sha256: 5187ccfb2897d415b243792a27afd6002c0eea4b167068639ff5be73ed583bb6
+    role: context
+  - path: scripts/migrate_name_match_groundings.py
+    sha256: 9b3ea1153839b9b260638cef95eba2d1ccc6d7b3825e7352c33cceb21bfe4dd4
+    role: context
+  - path: scripts/migrate_node_type_consistency.py
+    sha256: a3e7bc170e60f406a73e06c893d74f5253671028d3d40cc15ecf882b6684a69e
+    role: context
+  - path: scripts/migrate_pathway_vs_process.py
+    sha256: f236de7183048732e9001b7fac4367affff58d8b7a7d5c63286e6b058a4b38c2
+    role: context
+  - path: scripts/migrate_process_quality_consistency.py
+    sha256: 1a83ad3dba79ed0c958b875a6fcc4b9e562259af26da2f248d32d5cf7784f80a
+    role: context
+  - path: scripts/migrate_protein_vs_activity.py
+    sha256: 0b183248ff22d3d8aa66b35aece40c53b516684ca499cf73b7714206031dad49
+    role: context
+  - path: scripts/migrate_remaining_microbe_domain_edges.py
+    sha256: 110542d49e25007122c7c254966ad87dc3f7f054358766e933aff89e8ef0a994
+    role: context
+  - path: scripts/migrate_uniprot_instance_groundings.py
+    sha256: 07d2a5405cff5857239757e0a3791f411b1d25709a5760c1e49553eed066993d
+    role: context
+  - path: scripts/record_review.py
+    sha256: 95a4ec41e38ec47ba3578e76838c46a0adbf47e49ad3636524735d08cfcb1c4d
+    role: context
+  - path: scripts/retype_causal_nodes.py
+    sha256: c7eb961c1b04cd4b31635331003f432f889567282c4650adc4f1151f715417ab
+    role: context
+  - path: scripts/review_nacl_optimum_graph_183.py
+    sha256: 6d0de1ccb1604fb87294432692cc051e3a8a1d52e082eaff6aa1f8d3cb621ffd
+    role: context
+  - path: scripts/review_ph_delta_mid2_graph_183.py
+    sha256: a7fcd17ebe8668b31f47c78b655ba908ffd537c3422f9bb2fd1cf3a66145b6c6
+    role: context
+  - path: scripts/review_ph_delta_mid3_graph_183.py
+    sha256: 47d0d2b09f3acce565d9779443d8a5ee6784989ae34c23c6f0875f74ad4a1532
+    role: context
+  - path: scripts/review_ph_delta_very_low_graph_183.py
+    sha256: 3fb1c239de9fb1bf91a5a97696053c7d652a619dc824ce160dd1063b44aad499
+    role: context
+  - path: scripts/review_ph_phenotype_graph_183.py
+    sha256: 651b46611c5e630e4db00f8d7525378ddb3a9f552c83e7f53387d14ab95dd2e2
+    role: context
+  - path: scripts/review_ph_range_mid2_graph_183.py
+    sha256: 2788c907439099c64cbc25c50b973e5ac0d2b93bc07ff7ed89e4cddaae500bd3
+    role: context
+  - path: scripts/seed_from_metpo.py
+    sha256: 0fb9c9f7ea6a8f137eecd5c319775b511c398dba6158c81b1fbfb94210f7d851
+    role: context
+  - path: scripts/trait_priority.py
+    sha256: 96909390f0f55a76fe7161420813f072774a483797c29f96589be379c07892fb
+    role: context
+  - path: scripts/verify_metpo_proposal.py
+    sha256: f58355151f7d6a807bb50dc8b732184994b0d6145d3c57f54e29fd0bb76268b6
+    role: context
+  - path: src/traitmech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+  - path: src/traitmech/schema/traitmech.yaml
+    sha256: 46c47fc627b80ccbba1e8ab3fb6f2aee93bc2aef7aaf72fe9aadc3257f2c02dd
+    role: context
+  - path: src/traitmech/validation/write_validated.py
+    sha256: 68cfeb876a60d67fd72d5a2800cd29e41b5cf563be5a27b698398a5bb3e67231
+    role: context
+targets:
+- target_id: METPO:1000331
+  path: data/traits/environment/ph_optimum.yaml
+  label: pH optimum
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/ph_optimum.yaml
+    role: Maintained target; read-only review.
+  - repository: CultureBotAI/TraitMech
+    path: mappings/predicate_grounding.tsv
+    role: Predicate recurrence input.
+  - repository: CultureBotAI/TraitMech
+    path: mappings/node_grounding.tsv
+    role: Node grounding context.
+  record_class: TraitRecord
+scope:
+  description: One entire maintained TraitRecord. Contextual ontology, source, parent,
+    writer and history inputs are not additional review targets.
+  selection: Seventh record of batch 010 in path order. Whole-target reading and successful
+    103-input native capture precede substantive assessment. Parents, authorities,
+    writers and sixteen history leads are contextual inputs. Final source, grounding,
+    separate edge 3 reassessment, independent challenge and root adjudication are
+    bound before serialization.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - METPO:1000331
+checks:
+- check_id: audit-graphs
+  name: Full-corpus graph audit
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000331
+  command: just audit-graphs --out /private/tmp/traitmech-record-sweep.FU79Gr/causal_graph_audit.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 74 baselined findings, zero new/blocking findings; connectivity report
+    covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific
+    verification of this target.
+  evidence_ids:
+  - check-audit-graphs
+  scope_note: History validation ran in batch 003 at the same 8eee source base; batch
+    010 qualified byte comparison confirms all history, trait and common validation
+    inputs unchanged. Other commands ran at f25; the Git delta to 8eee contains only
+    seven added workflow/skill/infrastructure-history files. Original timestamps,
+    failures and skips are retained; these are reused results, not new executions
+    or certification against later ontology releases.
+- check_id: audit-snippets
+  name: Full-corpus snippet audit
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000331
+  command: just audit-snippets --report /private/tmp/traitmech-record-sweep.FU79Gr/evidence_snippet_audit.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 2419 baselined findings, zero new/blocking findings. Focused source checks
+    and manual evidence review are recorded separately.
+  evidence_ids:
+  - check-audit-snippets
+  scope_note: History validation ran in batch 003 at the same 8eee source base; batch
+    010 qualified byte comparison confirms all history, trait and common validation
+    inputs unchanged. Other commands ran at f25; the Git delta to 8eee contains only
+    seven added workflow/skill/infrastructure-history files. Original timestamps,
+    failures and skips are retained; these are reused results, not new executions
+    or certification against later ontology releases.
+- check_id: check-pathway-links
+  name: Full-corpus pathway links
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000331
+  command: just check-pathway-links
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 19 links checked against the pinned PathwayMech snapshot. Target asserts
+    no pathway context link.
+  evidence_ids:
+  - check-check-pathway-links
+  scope_note: History validation ran in batch 003 at the same 8eee source base; batch
+    010 qualified byte comparison confirms all history, trait and common validation
+    inputs unchanged. Other commands ran at f25; the Git delta to 8eee contains only
+    seven added workflow/skill/infrastructure-history files. Original timestamps,
+    failures and skips are retained; these are reused results, not new executions
+    or certification against later ontology releases.
+- check_id: validate-history
+  name: Full-corpus history integrity
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000331
+  command: just validate-history
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 1277 history records checked, zero invalid links at the 8eee source base;
+    integrity does not establish science or human acceptance.
+  evidence_ids:
+  - check-validate-history
+  scope_note: History validation ran in batch 003 at the same 8eee source base; batch
+    010 qualified byte comparison confirms all history, trait and common validation
+    inputs unchanged. Other commands ran at f25; the Git delta to 8eee contains only
+    seven added workflow/skill/infrastructure-history files. Original timestamps,
+    failures and skips are retained; these are reused results, not new executions
+    or certification against later ontology releases.
+- check_id: validate-products
+  name: Initial full-product validation
+  status: failed
+  required: false
+  target_ids:
+  - METPO:1000331
+  command: just validate-products
+  exit_code: 2
+  expected_exit_code: 0
+  summary: Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips.
+    Superseded by successful network retry.
+  evidence_ids:
+  - check-validate-products
+  scope_note: History validation ran in batch 003 at the same 8eee source base; batch
+    010 qualified byte comparison confirms all history, trait and common validation
+    inputs unchanged. Other commands ran at f25; the Git delta to 8eee contains only
+    seven added workflow/skill/infrastructure-history files. Original timestamps,
+    failures and skips are retained; these are reused results, not new executions
+    or certification against later ontology releases.
+- check_id: validate-products-retry-local
+  name: Product validation with isolated local cache
+  status: failed
+  required: false
+  target_ids:
+  - METPO:1000331
+  command: just validate-products
+  exit_code: 2
+  expected_exit_code: 0
+  summary: Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful
+    network retry.
+  evidence_ids:
+  - check-validate-products-retry-local
+  scope_note: History validation ran in batch 003 at the same 8eee source base; batch
+    010 qualified byte comparison confirms all history, trait and common validation
+    inputs unchanged. Other commands ran at f25; the Git delta to 8eee contains only
+    seven added workflow/skill/infrastructure-history files. Original timestamps,
+    failures and skips are retained; these are reused results, not new executions
+    or certification against later ontology releases.
+- check_id: validate-products-retry-network
+  name: Product validation after isolated-cache download
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000331
+  command: just validate-products
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 'Passed: 361 canonical matches, two synonym matches, one exception, 123
+    SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered.'
+  evidence_ids:
+  - check-validate-products-retry-network
+  scope_note: History validation ran in batch 003 at the same 8eee source base; batch
+    010 qualified byte comparison confirms all history, trait and common validation
+    inputs unchanged. Other commands ran at f25; the Git delta to 8eee contains only
+    seven added workflow/skill/infrastructure-history files. Original timestamps,
+    failures and skips are retained; these are reused results, not new executions
+    or certification against later ontology releases.
+- check_id: ph-optimum-validate
+  name: Focused native validation
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000331
+  command: just validate data/traits/environment/ph_optimum.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Passed at 18:19:50–18:19:52 UTC on the unchanged target.
+  evidence_ids:
+  - check-ph-optimum-validate
+- check_id: ph-optimum-strict
+  name: Focused strict validation
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000331
+  command: just validate-strict data/traits/environment/ph_optimum.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Passed at 18:19:50–18:19:52 UTC. Schema validity is distinct from imported
+    relation semantics.
+  evidence_ids:
+  - check-ph-optimum-strict
+- check_id: ph-optimum-snippets
+  name: Focused snippet verification
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000331
+  command: just verify-snippets --record data/traits/environment/ph_optimum.yaml --out
+    /private/tmp/traitmech-record-sweep-010.m7q2v9cx/ph-optimum-snippets.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 'Direct pass at 18:20:05–18:20:09 UTC: six snippets, three VERIFIED and
+    three NOT_IN_ABSTRACT. Manual checking retains three literal Krulwich phrases
+    and three Baker body-unverified phrases; no false-quotation finding follows from
+    unavailable body text.'
+  evidence_ids:
+  - check-ph-optimum-snippets
+- check_id: corpus-protein-taxa
+  name: Reused corpus protein/taxon audit
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000331
+  command: just audit-graph-protein-taxa --out /private/tmp/traitmech-record-sweep-004.f7_g5r4w/corpus-protein-taxa.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Original B4 08:55:04–08:55:10 UTC pass with unchanged inputs; no new target
+    instance audit is claimed.
+  evidence_ids:
+  - check-corpus-protein-taxa
+- check_id: batch009-qc
+  name: Reused maintained batch-nine QC
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000331
+  command: just qc
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Original B9 17:05:16–17:06:53 UTC pass with current B10 byte qualification;
+    not a new B10 final QC execution.
+  evidence_ids:
+  - check-batch009-qc
+- check_id: uniprot-applicability
+  name: Protein-instance metadata applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - METPO:1000331
+  summary: No protein classes or instances. A quantitative NONMECHANISTIC record does
+    not require a token accession.
+  evidence_ids:
+  - record
+  - policy
+  - node-edges
+evidence:
+- evidence_id: check-audit-graphs
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/audit-graphs.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:29Z; metadata audit-graphs.json
+  accessed_at: '2026-10-21T18:33:36Z'
+  support: context_only
+  summary: 74 baselined findings, zero new/blocking findings; connectivity report
+    covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific
+    verification of this target.
+  snapshot_sha256: ecce27e6a8f8b8b1fc54a9a0564a27626ee33774da508665859c6d1429337f4d
+- evidence_id: check-audit-snippets
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/audit-snippets.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:33Z; metadata audit-snippets.json
+  accessed_at: '2026-10-21T18:33:36Z'
+  support: context_only
+  summary: 2419 baselined findings, zero new/blocking findings. Focused source checks
+    and manual evidence review are recorded separately.
+  snapshot_sha256: beafaa5c82645f5cf216142b6e0369d556202bcc72fdabbf35825fce955fd59f
+- evidence_id: check-check-pathway-links
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/check-pathway-links.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:28Z; metadata check-pathway-links.json
+  accessed_at: '2026-10-21T18:33:36Z'
+  support: context_only
+  summary: 19 links checked against the pinned PathwayMech snapshot. Target asserts
+    no pathway context link.
+  snapshot_sha256: e77729b8afd6ae02cd834e516c48dd5c72d10498802e7a1b0004eebb4831f6a0
+- evidence_id: check-validate-history
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-003.4opxlhgf/validate-history.log
+  locator: Executed 2026-10-21T07:03:25Z through 2026-10-21T07:03:30Z; metadata validate-history.json
+  accessed_at: '2026-10-21T18:33:36Z'
+  support: context_only
+  summary: 1277 history records checked, zero invalid links at the 8eee source base;
+    integrity does not establish science or human acceptance.
+  snapshot_sha256: 02f94872992b2fbc3cc455c552d56a338dd449a315e02b1bf0226b68a8d2cfe3
+- evidence_id: check-validate-products
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:34:01Z; metadata validate-products.json
+  accessed_at: '2026-10-21T18:33:36Z'
+  support: context_only
+  summary: Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips.
+    Superseded by successful network retry.
+  snapshot_sha256: 697efcbe603c9a5e27f9726e688d1b9d9f621fa548f585d9005b5157d81dadae
+- evidence_id: check-validate-products-retry-local
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-local.log
+  locator: Executed 2026-10-19T07:34:53Z through 2026-10-19T07:35:24Z; metadata validate-products-retry-local.json
+  accessed_at: '2026-10-21T18:33:36Z'
+  support: context_only
+  summary: Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful
+    network retry.
+  snapshot_sha256: b636ab6978cf8b8d4cc2cc4033f1cdca399cca46dc615a26073cfe680d44ebb5
+- evidence_id: check-validate-products-retry-network
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-network.log
+  locator: Executed 2026-10-19T07:35:34Z through 2026-10-19T07:36:03Z; metadata validate-products-retry-network.json
+  accessed_at: '2026-10-21T18:33:36Z'
+  support: context_only
+  summary: 'Passed: 361 canonical matches, two synonym matches, one exception, 123
+    SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered.'
+  snapshot_sha256: 67e91252adce1d441ad6b37d6904f0cbcea703575aec8011e65e94822fa810ea
+- evidence_id: check-ph-optimum-validate
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-010.m7q2v9cx/ph-optimum-validate.log
+  locator: Executed 2026-10-21T18:19:50.819550+00:00 through 2026-10-21T18:19:52.013472+00:00;
+    metadata ph-optimum-validate.json
+  accessed_at: '2026-10-21T18:33:36Z'
+  support: context_only
+  summary: Passed at 18:19:50–18:19:52 UTC on the unchanged target.
+  snapshot_sha256: ea9f40a59473ae06e98dca61530ad7a6e86b658f2ab804adcb6b9bd369d31b02
+- evidence_id: check-ph-optimum-strict
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-010.m7q2v9cx/ph-optimum-strict.log
+  locator: Executed 2026-10-21T18:19:50.819599+00:00 through 2026-10-21T18:19:52.744103+00:00;
+    metadata ph-optimum-strict.json
+  accessed_at: '2026-10-21T18:33:36Z'
+  support: context_only
+  summary: Passed at 18:19:50–18:19:52 UTC. Schema validity is distinct from imported
+    relation semantics.
+  snapshot_sha256: 48e04a6bd5bcb46f437b432a0c8ec7c927c4671b6c804ae406714b13ecfe7cde
+- evidence_id: check-ph-optimum-snippets
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-010.m7q2v9cx/ph-optimum-snippets.log
+  locator: Executed 2026-10-21T18:20:05.495482+00:00 through 2026-10-21T18:20:09.066109+00:00;
+    metadata ph-optimum-snippets.json
+  accessed_at: '2026-10-21T18:33:36Z'
+  support: context_only
+  summary: 'Direct pass at 18:20:05–18:20:09 UTC: six snippets, three VERIFIED and
+    three NOT_IN_ABSTRACT. Manual checking retains three literal Krulwich phrases
+    and three Baker body-unverified phrases; no false-quotation finding follows from
+    unavailable body text.'
+  snapshot_sha256: 90698c3afe3f3d89be077093dce33c4525df249402cd511a93a176f9634e7ac6
+- evidence_id: check-corpus-protein-taxa
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-004.f7_g5r4w/corpus-protein-taxa.log
+  locator: Executed 2026-10-21T08:55:04Z through 2026-10-21T08:55:10Z; metadata corpus-protein-taxa.json
+  accessed_at: '2026-10-21T18:33:36Z'
+  support: context_only
+  summary: Original B4 08:55:04–08:55:10 UTC pass with unchanged inputs; no new target
+    instance audit is claimed.
+  snapshot_sha256: f5f1a6be7789f2b3e487fcbc354361f8f1f0d0d0f90a9ba59864d26ed7ac49ef
+- evidence_id: check-batch009-qc
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-009.x21w9b3v/batch009-qc.log
+  locator: Executed 2026-10-21T17:05:16Z through 2026-10-21T17:06:53Z; metadata batch009-qc.json
+  accessed_at: '2026-10-21T18:33:36Z'
+  support: context_only
+  summary: Original B9 17:05:16–17:06:53 UTC pass with current B10 byte qualification;
+    not a new B10 final QC execution.
+  snapshot_sha256: 1e73fe337dd10255851461d2d40b079ceeaf952d923b01ea8a16573963dcb05d
+- evidence_id: record
+  kind: record_content
+  reference: data/traits/environment/ph_optimum.yaml
+  locator: Entire current target
+  accessed_at: '2026-10-21T18:22:32.738302Z'
+  support: supports
+  summary: Twelve nodes, eleven edges, two components, no protein classes or instances,
+    one canonical and sixteen record events are covered.
+  snapshot_sha256: 55981325e7e0e85fa5e1f52fc04cbc6de77b981783685c4bdab25e8bab26cfc4
+- evidence_id: checklist
+  kind: authority
+  reference: .claude/skills/curate-yaml-record/references/review-checklist.md
+  locator: Captured maintained policy
+  accessed_at: '2026-10-21T18:22:32.738302Z'
+  support: supports
+  summary: Whole-record identity, definition, hierarchy, sources, graph, optional
+    fields, ownership, provenance and readiness checklist.
+  snapshot_sha256: da8896328a0fd6cc92f1adf0d8be8980d0ddd41f3172c7936f2c7f119b293ac1
+- evidence_id: policy
+  kind: authority
+  reference: docs/GROUNDING_POLICY.md
+  locator: Captured maintained policy
+  accessed_at: '2026-10-21T18:22:32.738302Z'
+  support: supports
+  summary: Preserve the actual referent and permissible functional facets; no token
+    protein or connectivity requirement.
+  snapshot_sha256: 891678c983c2283a47c81c47950b35753981e9339d105f3bbdda92a1f5ab7f42
+- evidence_id: native-types
+  kind: authority
+  reference: src/traitmech/schema/traitmech.yaml
+  locator: Captured maintained policy
+  accessed_at: '2026-10-21T18:22:32.738302Z'
+  support: supports
+  summary: Process, state, quality, capacity and activity are distinct declared facets;
+    local validity does not prove imported roles.
+  snapshot_sha256: 46c47fc627b80ccbba1e8ab3fb6f2aee93bc2aef7aaf72fe9aadc3257f2c02dd
+- evidence_id: human-policy
+  kind: authority
+  reference: docs/CURATION_PLAYBOOK.md
+  locator: Captured maintained policy
+  accessed_at: '2026-10-21T18:22:32.738302Z'
+  support: supports
+  summary: AI maintenance and REVIEWED do not identify attributable human scientific
+    acceptance.
+  snapshot_sha256: 735e9b810471da9f7d8364e35ffe1e741edb3421480dac01727db6ea5aa65da9
+- evidence_id: reuse
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-010.m7q2v9cx/common-reuse-b9-qc-supplement-qualified.json
+  locator: Qualified B10 comparison and original B9 gates
+  accessed_at: '2026-10-21T17:07:14.407314Z'
+  support: supports
+  summary: All 1,130 traits, 1,278 history files and nineteen common inputs match.
+    Original timestamps, baseline findings, historical failures/retries and adapter
+    skips remain explicit.
+  snapshot_sha256: 515c688663a8a3f68f71fb2c3467217864338204f7f5197443642a81a8ec84c0
+- evidence_id: capture
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-010.m7q2v9cx/ph-optimum-grounding-agent/final-capture-verification.json
+  locator: Derived assessment/read receipt; original primary access is separately
+    recorded
+  accessed_at: '2026-10-21T18:22:32.745901Z'
+  support: supports
+  summary: All 103 current captured input hashes match.
+  snapshot_sha256: 0135853fc90f8c32f4106f25ef8c51cc545c8888a58b45e7ce46e760fd6940ed
+- evidence_id: identity
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-010.m7q2v9cx/ph-optimum-grounding-agent/identity-assessment.json
+  locator: Derived assessment/read receipt; original primary access is separately
+    recorded
+  accessed_at: '2026-10-21T18:22:32.473783Z'
+  support: supports
+  summary: Active exact term, both parents and both explicit obsolete replacements
+    are positive. Proposed local placeholders have captured authorities.
+  snapshot_sha256: 787b3b3c2ed6f7874699f3a4ec229e9452e2e99047f9ccfae7be2201265f3a3c
+- evidence_id: node-edges
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-010.m7q2v9cx/ph-optimum-grounding-agent/node-edge-ledger.json
+  locator: Derived assessment/read receipt; original primary access is separately
+    recorded
+  accessed_at: '2026-10-21T18:22:32.472665Z'
+  support: supports
+  summary: All twelve nodes and eleven edges; firm grouped imported-role fields are
+    1/2/4/8/9/10, with edge 9 textual only and edge 6 qualified.
+  snapshot_sha256: cbb45941f4dd1127d3511760d50d8c22b2a640e406981bee36611750b4a7f70c
+- evidence_id: owners
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-010.m7q2v9cx/ph-optimum-grounding-agent/owner-provenance-assessment.json
+  locator: Derived assessment/read receipt; original primary access is separately
+    recorded
+  accessed_at: '2026-10-21T18:22:32.737477Z'
+  support: supports
+  summary: Exact maintained recurrence rows and writers, sixteen actor projections
+    and three fully read histories; bounded 256-path/67-array/zero-exact search.
+  snapshot_sha256: 5c6a7be8a356800042583272ea7da4acfd6cfa7145296f3547cf4df6f96cf971
+- evidence_id: expression
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-010.m7q2v9cx/ph-optimum-grounding-agent/expression-applicability.json
+  locator: Derived assessment/read receipt; original primary access is separately
+    recorded
+  accessed_at: '2026-10-21T18:22:32.738103Z'
+  support: supports
+  summary: No canonical/type-strain catalog match; no substitute organism or downstream
+    defense query.
+  snapshot_sha256: a51d80c38bca79f52ad41ea63a8198213023b08c06b31258023cc104916d7448
+- evidence_id: authority-reuse
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-010.m7q2v9cx/ph-optimum-grounding-agent/authority-reuse-receipts.json
+  locator: Derived assessment/read receipt; original primary access is separately
+    recorded
+  accessed_at: '2026-10-21T18:19:55.222526Z'
+  support: supports
+  summary: Original RO, GO and catalog receipt times remain distinct from current
+    copies/readings.
+  snapshot_sha256: 3579b9841d3520cb9bb4ca9731c5fb69e49e76f1d672150704302c6974e46be8
+- evidence_id: local-authority
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-010.m7q2v9cx/ph-optimum-grounding-agent/local-authority-excerpts.json
+  locator: Derived assessment/read receipt; original primary access is separately
+    recorded
+  accessed_at: '2026-10-21T18:22:32.723523Z'
+  support: supports
+  summary: Actual v2 manifests-as, v3 PMF, v6 gradient and broad Biolink endpoint
+    semantics.
+  snapshot_sha256: c817a3527ebbdff57a23478e613c53a1a3eee44d8d1511cb40e925e402908061
+- evidence_id: selected-ro
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-010.m7q2v9cx/ph-optimum-grounding-agent/selected-ro-primary-reading.json
+  locator: Derived assessment/read receipt; original primary access is separately
+    recorded
+  accessed_at: '2026-10-21T18:20:41.433852Z'
+  support: supports
+  summary: Actual primary read-only RO statements and inherited branches; database
+    hash differs from derived query hash.
+  snapshot_sha256: 4ee2c1ae9aaaa8028460538db82f09b51ba773608e9180d0729350de2ff22b03
+- evidence_id: ground-manifest
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-010.m7q2v9cx/ph-optimum-grounding-agent/evidence-manifest.json
+  locator: Derived assessment/read receipt; original primary access is separately
+    recorded
+  accessed_at: '2026-10-21T18:22:32.755582Z'
+  support: supports
+  summary: Twenty-eight frozen grounding artifacts, preserved before the separate
+    severity reassessment.
+  snapshot_sha256: 0a3c911c87a3869f8ae5421666308d247adbffb7d3f6efd0452075a03a2f924d
+- evidence_id: edge3-reassessment
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-010.m7q2v9cx/ph-optimum-grounding-agent/edge3-severity-reassessment.json
+  locator: Derived assessment/read receipt; original primary access is separately
+    recorded
+  accessed_at: '2026-10-21T18:22:44.494287Z'
+  support: supports
+  summary: 'Supersedes the original edge 3 minor candidate: the peak-growth criterion
+    can recognize the optimum condition, so this remains a qualified limitation without
+    a new node or forced representation.'
+  snapshot_sha256: e37de69327d5765e980a9df9051e33bdf6e661e6e526801bf669e4a74c2d8f9f
+- evidence_id: metpo-primary
+  kind: authority
+  reference: /private/tmp/traitmech-record-sweep-010.m7q2v9cx/repo/data/raw/metpo.owl
+  locator: METPO:1000331, direct parents 1000531/1000536, explicit obsolete predecessors
+    0000014/000014
+  accessed_at: '2026-10-21T18:19:55.215527Z'
+  support: supports
+  summary: Active pH optimum identity and hierarchy agree. Both obsolete identifiers
+    explicitly link to the current term. No numerical child boundary is imposed on
+    the parent.
+  snapshot_sha256: 8b6f8fe0510a698579e532658c8ace05da2550093365df9ca83feb0741778415
+- evidence_id: ro-primary
+  kind: authority
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/pystow/oaklib/ro.db
+  locator: RO:0002211 process/process; RO:0002213 inherits regulates; RO:0002326 inherits
+    material/process roles
+  accessed_at: '2026-10-21T18:20:41.433852Z'
+  support: supports
+  summary: Current state, quality, environmental-condition and capacity referents
+    conflict at the firm RO fields. No categorical chemical ban or formal reasoner
+    failure is inferred.
+  snapshot_sha256: 849e616c29fecd0d4a6c6dee0dc0f6f117ace7167dbfa1e0f043dc84868f83cb
+- evidence_id: biolink-primary
+  kind: authority
+  reference: /private/tmp/traitmech-record-sweep-010.m7q2v9cx/repo/data/raw/biolink-model.yaml
+  locator: produces textual description and inherited named-thing domain/range
+  accessed_at: '2026-10-21T18:22:32.723523Z'
+  support: supports
+  summary: Edge 9 uses a pathway/process subject where the textual definition describes
+    a material producer. Formal endpoints remain broad named things; no material-only
+    product range is asserted.
+  snapshot_sha256: 4955709e1cac1d26fd657f7a0c29d6c8390f42e41f9ebfab859c82b102f2bebb
+- evidence_id: live-chebi15378
+  kind: authority
+  reference: /private/tmp/traitmech-record-sweep-010.m7q2v9cx/ph-optimum-grounding-agent/chebi15378.response
+  locator: 'Official response: https://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms?iri=http://purl.obolibrary.org/obo/CHEBI_15378'
+  accessed_at: '2026-10-21T18:20:31.677594Z'
+  support: supports
+  summary: Current hydron identity or Microbaculum mangrovi species/type aliases.
+    Taxonomy metadata is separate from the published optimum measurement.
+  snapshot_sha256: 205bd2cda862b87301f72875fc96073913b932c88bf1a6d4504fb99f818d51bb
+- evidence_id: live-taxon3447298
+  kind: authority
+  reference: /private/tmp/traitmech-record-sweep-010.m7q2v9cx/ph-optimum-grounding-agent/taxon3447298.response
+  locator: 'Official response: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&id=3447298&retmode=xml'
+  accessed_at: '2026-10-21T18:20:31.318375Z'
+  support: supports
+  summary: Current hydron identity or Microbaculum mangrovi species/type aliases.
+    Taxonomy metadata is separate from the published optimum measurement.
+  snapshot_sha256: 2beb78758c0301689338c12784ba9279df62ca6821666d9eb408ec59fd921ce4
+- evidence_id: live-identity-access
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-010.m7q2v9cx/ph-optimum-grounding-agent/live-identity-access.json
+  locator: Actual access receipt array
+  accessed_at: '2026-10-21T18:20:10.362901Z'
+  support: context_only
+  summary: Initial 18:20:10 sandbox DNS failures supplied no authority response.
+  snapshot_sha256: 9c1900d7654479777dac76581544127c78aa6a7f6e9b6c032c3819be832b48da
+- evidence_id: live-identity-access-network-retry
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-010.m7q2v9cx/ph-optimum-grounding-agent/live-identity-access-network-retry.json
+  locator: Actual access receipt array
+  accessed_at: '2026-10-21T18:20:31.677594Z'
+  support: context_only
+  summary: Authorized 18:20:31 network retries succeeded. These are authority acquisitions,
+    not native validator failures.
+  snapshot_sha256: 05eb32249b53b0b4b2d80590f24f2d9afdd46bc5910e8d4fc122f72def092b2a
+- evidence_id: go-primary
+  kind: authority
+  reference: /private/tmp/traitmech-record-sweep-010.m7q2v9cx/ph-optimum-grounding-agent/go0051453.response
+  locator: Official retained GO:0051453 regulation of intracellular pH response
+  accessed_at: '2026-10-21T15:29:38.343180Z'
+  support: supports
+  summary: Biological-process identity and homeostasis-related synonyms are coherent;
+    original acquisition time retained.
+  snapshot_sha256: 52154295e213fc1d16dbb9ff32ab66f5ac905e481f64f5719101bf4fbeba6abe
+- evidence_id: meta-krulwich
+  kind: primary_source
+  reference: /private/tmp/traitmech-record-sweep-010.m7q2v9cx/ph-optimum-source-root/krulwich-metadata.json
+  locator: Europe PMC title/abstract/status surface for DOI:10.1038/nrmicro2549
+  accessed_at: '2026-10-21T18:20:05.369444Z'
+  support: supports
+  summary: Assigned bibliographic identity and returned abstract only; later selected
+    body observations are separately bound.
+  snapshot_sha256: 484784a62fbb4c9d74a1feab4df2fdfdf37d4dd0ce3fa79f714c86a07d86d29c
+- evidence_id: meta-baker
+  kind: primary_source
+  reference: /private/tmp/traitmech-record-sweep-010.m7q2v9cx/ph-optimum-source-root/baker-metadata.json
+  locator: Europe PMC title/abstract/status surface for DOI:10.1016/j.tim.2007.02.005
+  accessed_at: '2026-10-21T18:20:05.385869Z'
+  support: supports
+  summary: Assigned bibliographic identity and returned abstract only; later selected
+    body observations are separately bound.
+  snapshot_sha256: a78777bc3bb6444b32e2e8a13ab72c56d80592b97e30c9b5520c67cc040c631b
+- evidence_id: meta-poolman
+  kind: primary_source
+  reference: /private/tmp/traitmech-record-sweep-010.m7q2v9cx/ph-optimum-source-root/poolman-metadata.json
+  locator: Europe PMC title/abstract/status surface for DOI:10.1093/femsre/fuad033
+  accessed_at: '2026-10-21T18:20:05.373063Z'
+  support: supports
+  summary: Assigned bibliographic identity and returned abstract only; later selected
+    body observations are separately bound.
+  snapshot_sha256: b6bd97da470a088ef1ba8f5eef93a6513c77b3454dbd9f8e7e4ab12c492280ae
+- evidence_id: meta-canonical
+  kind: primary_source
+  reference: /private/tmp/traitmech-record-sweep-010.m7q2v9cx/ph-optimum-source-root/canonical-metadata.json
+  locator: Europe PMC title/abstract/status surface for DOI:10.1099/ijsem.0.006972
+  accessed_at: '2026-10-21T18:20:05.482140Z'
+  support: supports
+  summary: Assigned canonical abstract directly separates optimum 6.0–7.0 from growth
+    range 5.5–9.0.
+  snapshot_sha256: d60c848665350cc708665d1eb07843e7fe98f673bce5d040ef2e6100cb5678f8
+- evidence_id: body-krulwich-bioc.xml
+  kind: primary_source
+  reference: /private/tmp/traitmech-record-sweep-010.m7q2v9cx/ph-optimum-source-agent/krulwich-bioc.xml
+  locator: Retained primary text; selected reading only
+  accessed_at: '2026-10-21T07:57:33Z'
+  support: supports
+  summary: Selected generic BioC offsets 2440/3309/5466 and environmental comparison
+    at 39253; the latter distinguishes complete homeostasis from optimal external
+    growth. No whole-article or pathogen-mechanism assessment.
+  snapshot_sha256: 903213411c506c8991863c506167027a9472d4fb436d3c7e8b38e9d87f7b656f
+- evidence_id: body-homeostasis.xml
+  kind: primary_source
+  reference: /private/tmp/traitmech-record-sweep-010.m7q2v9cx/ph-optimum-source-agent/homeostasis.xml
+  locator: Retained primary text; selected reading only
+  accessed_at: '2026-10-21T10:34:34.760964Z'
+  support: supports
+  summary: 'Actual Poolman fuad033 JATS, selected body paragraphs 0/1 and first sentence
+    of 4: generic PMF, external pH and buffering. These do not define the growth optimum
+    by minimal homeostatic load.'
+  snapshot_sha256: d55dbd224dbf2723a6a8a3e24460453f558ded3e2a6d4a9043395e2cb861f012
+- evidence_id: krulwich-note-refutation
+  kind: primary_source
+  reference: /private/tmp/traitmech-record-sweep-010.m7q2v9cx/ph-optimum-source-agent/krulwich-bioc.xml
+  locator: 'BioC offset 39253: environmental comparison of complete homeostasis and
+    optimal growth'
+  accessed_at: '2026-10-21T07:57:33Z'
+  support: refutes
+  summary: The selected comparison refutes the note’s general operational equivalence.
+    It does not disprove a specific energetic-load minimum.
+  snapshot_sha256: 903213411c506c8991863c506167027a9472d4fb436d3c7e8b38e9d87f7b656f
+- evidence_id: sources
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-010.m7q2v9cx/ph-optimum-source-agent/source-assessment.json
+  locator: Derived assessment/read receipt; original primary access is separately
+    recorded
+  accessed_at: '2026-10-21T18:23:29.894405Z'
+  support: supports
+  summary: Final source counts, one operational-definition issue and positive/unknown
+    limits.
+  snapshot_sha256: 7b9a6b90bfae02ec4ccc7eb5148b6f55b741b25af552ccc381292b6a0e9e2569
+- evidence_id: source-ledger
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-010.m7q2v9cx/ph-optimum-source-agent/source-ledger.json
+  locator: Derived assessment/read receipt; original primary access is separately
+    recorded
+  accessed_at: '2026-10-21T18:23:29.891978Z'
+  support: supports
+  summary: Four exact assigned identities; metadata and selected body scope are distinct.
+  snapshot_sha256: 8be69254e20f6e4d1b93245a252089ed9b1b1f7fa5d504bb2d751614076d3954
+- evidence_id: placements
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-010.m7q2v9cx/ph-optimum-source-agent/placement-ledger.json
+  locator: Derived assessment/read receipt; original primary access is separately
+    recorded
+  accessed_at: '2026-10-21T18:23:29.892754Z'
+  support: supports
+  summary: All fifteen external source placements covered.
+  snapshot_sha256: a08d44cd25b8692deace0dd25c5bf05dac8c023c9d3335cf09e7dbae64955b3c
+- evidence_id: snippets
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-010.m7q2v9cx/ph-optimum-source-agent/snippet-ledger.json
+  locator: Derived assessment/read receipt; original primary access is separately
+    recorded
+  accessed_at: '2026-10-21T18:23:29.892645Z'
+  support: supports
+  summary: Three exact Krulwich phrases and three Baker body-unverified snippets,
+    with exact locators and no false absence claim.
+  snapshot_sha256: d57422cbc7c3acf7eab52dad7ea561a9a6fa1dcda0106f62f90bfb7ecbc48f17
+- evidence_id: node-sources
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-010.m7q2v9cx/ph-optimum-source-agent/node-source-ledger.json
+  locator: Derived assessment/read receipt; original primary access is separately
+    recorded
+  accessed_at: '2026-10-21T18:23:29.892957Z'
+  support: supports
+  summary: Every current node source facet covered, with detailed biology excluded
+    where stated.
+  snapshot_sha256: 2060da9644d172f71fee726d69f0326341695bc3aa51e4f4d5b37cb8b2cf70dd
+- evidence_id: edge-sources
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-010.m7q2v9cx/ph-optimum-source-agent/edge-source-ledger.json
+  locator: Derived assessment/read receipt; original primary access is separately
+    recorded
+  accessed_at: '2026-10-21T18:23:29.892852Z'
+  support: supports
+  summary: 'All eleven edges: generic context versus detailed biology unassessed at
+    5–9.'
+  snapshot_sha256: 4a44f77869b762822f6f8f68f80197d2484fad3ffa68ad1ca38140ae641ee338
+- evidence_id: source-status
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-010.m7q2v9cx/ph-optimum-source-agent/publication-status-ledger.json
+  locator: Derived assessment/read receipt; original primary access is separately
+    recorded
+  accessed_at: '2026-10-21T18:23:29.891880Z'
+  support: supports
+  summary: Only returned metadata notice fields; no exhaustive global notice search
+    claimed.
+  snapshot_sha256: 3682bddb1b8eedd87be027655adb680938df293cd04a4baefa04e7ad89c6e2c2
+- evidence_id: source-reading
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-010.m7q2v9cx/ph-optimum-source-agent/selected-primary-reading.json
+  locator: Derived assessment/read receipt; original primary access is separately
+    recorded
+  accessed_at: '2026-10-21T18:23:29.891258Z'
+  support: supports
+  summary: Actual selected generic passages and metadata abstracts read; no full-article
+    reading claim.
+  snapshot_sha256: eae6f711f60bfbf429f5bc8ebebffda1292218541b0f6ace970f90fd87bd6554
+- evidence_id: source-access
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-010.m7q2v9cx/ph-optimum-source-agent/access-limitations.json
+  locator: Derived assessment/read receipt; original primary access is separately
+    recorded
+  accessed_at: '2026-10-21T18:23:29.894324Z'
+  support: supports
+  summary: Baker body remains unavailable from the retained bounded attempt chain,
+    not false or nonliteral.
+  snapshot_sha256: 248b6b15c9a46d7b70753f322b919227c144dff9c64fd3f9c7f56a574fd21c1c
+- evidence_id: source-manifest
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-010.m7q2v9cx/ph-optimum-source-agent/evidence-manifest.json
+  locator: Derived assessment/read receipt; original primary access is separately
+    recorded
+  accessed_at: '2026-10-21T18:23:29.901865Z'
+  support: supports
+  summary: Twenty-five frozen source artifacts.
+  snapshot_sha256: 9e79e7b09940f2c1776660a3efb97b9480703a14aa6d1500d167e7442d90f802
+- evidence_id: body-reuse
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-010.m7q2v9cx/ph-optimum-source-agent/reuse-and-copy-receipt.json
+  locator: Derived assessment/read receipt; original primary access is separately
+    recorded
+  accessed_at: '2026-10-21T18:23:29.887325Z'
+  support: supports
+  summary: Krulwich original 07:57:33 and Poolman original 10:34:33–10:34:34 acquisition
+    remain separate from current copies/readings.
+  snapshot_sha256: bd08a8dfb701c852469560e2ab3ffad02326d5a197989752b0eaca5fa474d42a
+- evidence_id: native-checks
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-010.m7q2v9cx/ph-optimum-source-agent/native-check-context.json
+  locator: Derived assessment/read receipt; original primary access is separately
+    recorded
+  accessed_at: '2026-10-21T18:23:29.894209Z'
+  support: supports
+  summary: Actual root focused direct passes; native three verified/three abstract
+    nonmatches preserved.
+  snapshot_sha256: d4f08f62245a3175e2385f9a5ccb8bce55ba2c4d79ef0342dd3fea538e522408
+- evidence_id: canonical-source
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-010.m7q2v9cx/ph-optimum-source-agent/canonical-assessment.json
+  locator: Derived assessment/read receipt; original primary access is separately
+    recorded
+  accessed_at: '2026-10-21T18:23:29.893037Z'
+  support: supports
+  summary: FT89T actual abstract directly reports optimum interval distinct from full
+    growth range.
+  snapshot_sha256: 91ac65e6b7520f9193d1207dd4c9ec5dbcda916057f30ca99a7ed6ac054bd0e2
+- evidence_id: operational-definition
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-010.m7q2v9cx/ph-optimum-source-agent/operational-definition-assessment.json
+  locator: Derived assessment/read receipt; original primary access is separately
+    recorded
+  accessed_at: '2026-10-21T18:23:29.893135Z'
+  support: supports
+  summary: Confirmed note-level measurement conflation, with minimal-load bridge explicitly
+    unestablished rather than refuted.
+  snapshot_sha256: 77554061ed205d755ec36457f6039615e5b2e591fcb8bc6552baa4aae50c3a72
+- evidence_id: root-reading-38
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-010.m7q2v9cx/ph-optimum-source-root/whole-target-preinspect-reading.json
+  locator: Derived assessment/read receipt; original primary access is separately
+    recorded
+  accessed_at: '2026-10-21T18:18:38.996917Z'
+  support: supports
+  summary: Only the actual reading scope and chronology recorded in this root receipt;
+    no later or full-body reading inferred.
+  snapshot_sha256: fc5ca40bc13f2e89b626ae144b654fd5b979ced6ce085006646daec5a73ddf96
+- evidence_id: root-reading-39
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-010.m7q2v9cx/ph-optimum-source-root/primary-ro-reading.json
+  locator: Derived assessment/read receipt; original primary access is separately
+    recorded
+  accessed_at: '2026-10-21T18:22:15.737140Z'
+  support: supports
+  summary: Only the actual reading scope and chronology recorded in this root receipt;
+    no later or full-body reading inferred.
+  snapshot_sha256: 2df68e26ccd1fcedc6df8e80fcffa8bcc7f52da11f48f4eb04da3ca8702a8559
+- evidence_id: root-reading-40
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-010.m7q2v9cx/ph-optimum-source-root/frozen-ledger-root-reading.json
+  locator: Derived assessment/read receipt; original primary access is separately
+    recorded
+  accessed_at: '2026-10-21T18:26:49.710924Z'
+  support: supports
+  summary: Only the actual reading scope and chronology recorded in this root receipt;
+    no later or full-body reading inferred.
+  snapshot_sha256: a4ef9350881c6d5d6e480c98edbfb97aa64a387faaaba7a350303efbe6d527b0
+- evidence_id: root-reading-41
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-010.m7q2v9cx/ph-optimum-source-root/primary-owner-root-reading.json
+  locator: Derived assessment/read receipt; original primary access is separately
+    recorded
+  accessed_at: '2026-10-21T18:26:49.710924Z'
+  support: supports
+  summary: Only the actual reading scope and chronology recorded in this root receipt;
+    no later or full-body reading inferred.
+  snapshot_sha256: dbe006485ffd01d737a96e337b4da17f6718d5b96dd665e2d43263d5b62dc8d1
+- evidence_id: root-reading-42
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-010.m7q2v9cx/ph-optimum-source-root/initial-primary-root-reading.json
+  locator: Derived assessment/read receipt; original primary access is separately
+    recorded
+  accessed_at: '2026-10-21T18:20:50.184809Z'
+  support: supports
+  summary: Only the actual reading scope and chronology recorded in this root receipt;
+    no later or full-body reading inferred.
+  snapshot_sha256: 878e71ca53313f533fc890c359c5832afb7ec041a02caa8a8c68158e873eb86b
+- evidence_id: root-reading-43
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-010.m7q2v9cx/ph-optimum-source-root/additional-primary-response-reading.json
+  locator: Derived assessment/read receipt; original primary access is separately
+    recorded
+  accessed_at: '2026-10-21T18:27:28.660545Z'
+  support: supports
+  summary: Only the actual reading scope and chronology recorded in this root receipt;
+    no later or full-body reading inferred.
+  snapshot_sha256: b070be234fc4d7dfcf68cfd38db5c3793dee8841aeabf1efe956db35d82e84e4
+- evidence_id: challenge
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-010.m7q2v9cx/ph-optimum-semantic-challenge-agent/semantic-severity-challenge.json
+  locator: Final independent severity review and verified bindings
+  accessed_at: '2026-10-21T18:29:09.676319Z'
+  support: supports
+  summary: Independent disposition and qualifications; excluded biological efficacy
+    is not certified.
+  snapshot_sha256: 21486dadfc5dfdeeec8b563d83f7d42475660deaa387cebc7649ec2b40f103ab
+- evidence_id: adjudication
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-010.m7q2v9cx/ph-optimum-root-adjudication.json
+  locator: Final root adjudication and verified bindings
+  accessed_at: '2026-10-21T18:29:38.237646Z'
+  support: supports
+  summary: Final disposition governs three findings; no scientific edit or status
+    promotion is performed.
+  snapshot_sha256: 268fc7c6361df1d6b400630ad0cd937a5f4444ddefb6f749b22d3dfc70670091
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: 'Native checklist: active term, definition and hierarchy'
+  outcome: supported
+  target_ids:
+  - METPO:1000331
+  summary: Active METPO:1000331 and both direct parents agree. Both obsolete predecessors
+    explicitly link to the current term. The ordinary external growth-based definition
+    remains positive; no child-bin threshold is imposed.
+  evidence_ids:
+  - identity
+  - metpo-primary
+  - record
+- assessment_id: scope
+  area: scope
+  topic: 'Native checklist: quantitative parent and graph context'
+  outcome: supported
+  target_ids:
+  - METPO:1000331
+  summary: ENVIRONMENT, CLASS and NONMECHANISTIC fit a quantitative optimum parent.
+    Two components and zero proteins are permissible; generic context is not automatically
+    a universal mechanism claim.
+  evidence_ids:
+  - record
+  - policy
+  - checklist
+- assessment_id: canonical
+  area: evidence
+  topic: 'Native checklist: named canonical identity and optimum'
+  outcome: supported
+  target_ids:
+  - METPO:1000331
+  summary: Microbaculum mangrovi FT89T identity and type aliases agree. The actual
+    abstract directly distinguishes optimum 6.0–7.0 from full growth range 5.5–9.0;
+    retention on the parent is local bin policy.
+  evidence_ids:
+  - identity
+  - live-taxon3447298
+  - canonical-source
+  - meta-canonical
+- assessment_id: bibliography
+  area: evidence
+  topic: 'Native checklist: four works and fifteen placements'
+  outcome: supported
+  target_ids:
+  - METPO:1000331
+  summary: All four assigned identities resolve. Each of fifteen external placements
+    is assessed using its actual metadata or selected body surface and original acquisition
+    time.
+  evidence_ids:
+  - source-ledger
+  - placements
+  - source-status
+  details: "{\n  \"completed_at\": \"2026-10-21T18:23:29.894405+00:00\",\n  \"target\"\
+    : \"data/traits/environment/ph_optimum.yaml\",\n  \"target_sha256\": \"55981325e7e0e85fa5e1f52fc04cbc6de77b981783685c4bdab25e8bab26cfc4\"\
+    ,\n  \"capture\": {\n    \"path\": \"/private/tmp/traitmech-record-sweep-010.m7q2v9cx/ph-optimum.inspect.json\"\
+    ,\n    \"sha256\": \"495a0cbdda8770fee0d054c2959a8e51e113ff2093917aef1f0c8c0c2ea14466\"\
+    ,\n    \"bytes\": 20872\n  },\n  \"capture_inputs\": 103,\n  \"counts\": {\n \
+    \   \"works\": 4,\n    \"literal_reference_forms\": 4,\n    \"external_placements\"\
+    : 15,\n    \"ontology_source_placements\": 0,\n    \"nodes\": 12,\n    \"edges\"\
+    : 11,\n    \"snippets\": 6,\n    \"exact_snippets\": 3,\n    \"unverified_snippets\"\
+    : 3,\n    \"canonical_examples\": 1\n  },\n  \"source_only_findings\": [\n   \
+    \ {\n      \"severity\": \"major\",\n      \"area\": \"evidence\",\n      \"field_paths\"\
+    : [\n        \"evidence[0].notes\"\n      ],\n      \"summary\": \"The note equates\
+    \ external growth optimum with the external pH where cytoplasmic pH is best maintained,\
+    \ which the assigned review does not support as a general operational definition.\"\
+    ,\n      \"primary_locator\": \"Krulwich BioC offset 39253, paragraph distinguishing\
+    \ complete pH homeostasis from optimal external growth in the environmental alkaliphile\
+    \ example.\",\n      \"reasoning\": \"The source explicitly describes complete\
+    \ homeostasis over one external-pH range and optimal growth extending beyond it.\
+    \ Thus its brief literal phrase cannot establish the note\\u2019s claimed measurement\
+    \ equivalence. The existing growth-based record definition and the directly measured\
+    \ canonical optimum interval remain valid.\",\n      \"scope_qualifications\"\
+    : [\n        \"This is a documentary evidence-to-measurement mismatch, not a claim\
+    \ that homeostasis is biologically irrelevant to growth.\",\n        \"The graph\
+    \ description\\u2019s minimal-load bridge is unestablished in inspected scope;\
+    \ the selected counterexample does not by itself refute a specific energetic-load\
+    \ minimum.\",\n        \"The source supplies a bounded environmental example;\
+    \ no pathogen fitness mechanism or repair is assessed.\"\n      ],\n      \"suggested_action\"\
+    : \"Have the curator distinguish measured external growth optimum from mechanistic\
+    \ homeostasis context and revise or support the operational-definition attribution,\
+    \ without replacing it with an unsupported energetic criterion.\"\n    }\n  ],\n\
+    \  \"unassessed_biological_edge_indices\": [\n    5,\n    6,\n    7,\n    8,\n\
+    \    9\n  ],\n  \"summary\": \"One confirmed source-to-measurement problem is\
+    \ anchored in evidence[0].notes: the assigned review distinguishes complete cytoplasmic\
+    \ homeostasis from optimal external growth. Ordinary growth-based identity, canonical\
+    \ interval and generic environmental context remain positive. Three Krulwich snippets\
+    \ are literal; three Baker snippets remain body-unverified. Minimal homeostatic\
+    \ load is an unestablished bridge, not an independently disproven energetic claim.\"\
+    ,\n  \"qualifications\": [\n    \"A literal two- or three-word source phrase does\
+    \ not certify the adjacent operational claim.\",\n    \"No source-only finding\
+    \ is based merely on inaccessible Baker body or generic NONMECHANISTIC graph scope.\"\
+    ,\n    \"No claim that all detailed graph biology was independently validated.\"\
+    ,\n    \"Original acquisitions, current metadata, copy times and selected reading\
+    \ times are separate.\"\n  ]\n}"
+- assessment_id: snippets
+  area: evidence
+  topic: 'Native checklist: all six assigned quotations'
+  outcome: unknown
+  target_ids:
+  - METPO:1000331
+  summary: Three short Krulwich snippets are literal. Three Baker phrases remain body-unverified;
+    abstract nonmatches and prior timeout do not establish false quotation. Exact
+    short wording does not certify adjacent claims.
+  evidence_ids:
+  - snippets
+  - source-access
+  - native-checks
+  details: "{\n  \"completed_at\": \"2026-10-21T18:23:29.892645+00:00\",\n  \"counts\"\
+    : {\n    \"total\": 6,\n    \"exact_literal\": 3,\n    \"unverified_body\": 3\n\
+    \  },\n  \"snippets\": [\n    {\n      \"field_path\": \"evidence[0].snippet\"\
+    ,\n      \"reference\": \"DOI:10.1038/nrmicro2549\",\n      \"snippet\": \"cytoplasmic\
+    \ pH\",\n      \"status\": \"EXACT_LITERAL\",\n      \"basis\": {\n        \"\
+    body\": {\n          \"path\": \"/private/tmp/traitmech-record-sweep-010.m7q2v9cx/ph-optimum-source-agent/krulwich-bioc.xml\"\
+    ,\n          \"sha256\": \"903213411c506c8991863c506167027a9472d4fb436d3c7e8b38e9d87f7b656f\"\
+    ,\n          \"bytes\": 174908\n        },\n        \"BioC_offsets\": [\n    \
+    \      \"58\",\n          \"671\",\n          \"2440\",\n          \"3940\",\n\
+    \          \"4950\",\n          \"7133\",\n          \"7180\",\n          \"7328\"\
+    \n        ]\n      },\n      \"support_scope\": \"Literal wording verification\
+    \ does not establish the full adjacent claim or operational measurement equivalence.\"\
+    \n    },\n    {\n      \"field_path\": \"evidence[1].snippet\",\n      \"reference\"\
+    : \"DOI:10.1016/j.tim.2007.02.005\",\n      \"snippet\": \"proton motive force\"\
+    ,\n      \"status\": \"UNVERIFIED_BODY\",\n      \"basis\": {\n        \"metadata\"\
+    : {\n          \"path\": \"/private/tmp/traitmech-record-sweep-010.m7q2v9cx/ph-optimum-source-agent/baker-metadata.json\"\
+    ,\n          \"sha256\": \"a78777bc3bb6444b32e2e8a13ab72c56d80592b97e30c9b5520c67cc040c631b\"\
+    ,\n          \"bytes\": 4065\n        },\n        \"retained_failure_receipt\"\
+    : {\n          \"path\": \"/private/tmp/traitmech-record-sweep-010.m7q2v9cx/ph-optimum-source-agent/prior-ph-delta-additional-primary-body-accesses-root.json\"\
+    ,\n          \"sha256\": \"2b59f554309b38f437bff006507e7703ec541aca6057897b3651ae1c0af76355\"\
+    ,\n          \"bytes\": 840\n        },\n        \"qualification\": \"Phrase absent\
+    \ from indexed abstract is not proof of absence from unavailable body.\"\n   \
+    \   },\n      \"support_scope\": \"Literal wording verification does not establish\
+    \ the full adjacent claim or operational measurement equivalence.\"\n    },\n\
+    \    {\n      \"field_path\": \"causal_graphs[0].edges[0].evidence[0].snippet\"\
+    ,\n      \"reference\": \"DOI:10.1016/j.tim.2007.02.005\",\n      \"snippet\"\
+    : \"major contributor to the proton motive force\",\n      \"status\": \"UNVERIFIED_BODY\"\
+    ,\n      \"basis\": {\n        \"metadata\": {\n          \"path\": \"/private/tmp/traitmech-record-sweep-010.m7q2v9cx/ph-optimum-source-agent/baker-metadata.json\"\
+    ,\n          \"sha256\": \"a78777bc3bb6444b32e2e8a13ab72c56d80592b97e30c9b5520c67cc040c631b\"\
+    ,\n          \"bytes\": 4065\n        },\n        \"retained_failure_receipt\"\
+    : {\n          \"path\": \"/private/tmp/traitmech-record-sweep-010.m7q2v9cx/ph-optimum-source-agent/prior-ph-delta-additional-primary-body-accesses-root.json\"\
+    ,\n          \"sha256\": \"2b59f554309b38f437bff006507e7703ec541aca6057897b3651ae1c0af76355\"\
+    ,\n          \"bytes\": 840\n        },\n        \"qualification\": \"Phrase absent\
+    \ from indexed abstract is not proof of absence from unavailable body.\"\n   \
+    \   },\n      \"support_scope\": \"Literal wording verification does not establish\
+    \ the full adjacent claim or operational measurement equivalence.\"\n    },\n\
+    \    {\n      \"field_path\": \"causal_graphs[0].edges[1].evidence[0].snippet\"\
+    ,\n      \"reference\": \"DOI:10.1038/nrmicro2549\",\n      \"snippet\": \"pH\
+    \ homeostasis\",\n      \"status\": \"EXACT_LITERAL\",\n      \"basis\": {\n \
+    \       \"body\": {\n          \"path\": \"/private/tmp/traitmech-record-sweep-010.m7q2v9cx/ph-optimum-source-agent/krulwich-bioc.xml\"\
+    ,\n          \"sha256\": \"903213411c506c8991863c506167027a9472d4fb436d3c7e8b38e9d87f7b656f\"\
+    ,\n          \"bytes\": 174908\n        },\n        \"BioC_offsets\": [\n    \
+    \      \"58\",\n          \"671\",\n          \"2440\",\n          \"3309\",\n\
+    \          \"3940\",\n          \"6577\",\n          \"9102\",\n          \"9746\"\
+    \n        ]\n      },\n      \"support_scope\": \"Literal wording verification\
+    \ does not establish the full adjacent claim or operational measurement equivalence.\"\
+    \n    },\n    {\n      \"field_path\": \"causal_graphs[0].edges[2].evidence[0].snippet\"\
+    ,\n      \"reference\": \"DOI:10.1016/j.tim.2007.02.005\",\n      \"snippet\"\
+    : \"proton motive force\",\n      \"status\": \"UNVERIFIED_BODY\",\n      \"basis\"\
+    : {\n        \"metadata\": {\n          \"path\": \"/private/tmp/traitmech-record-sweep-010.m7q2v9cx/ph-optimum-source-agent/baker-metadata.json\"\
+    ,\n          \"sha256\": \"a78777bc3bb6444b32e2e8a13ab72c56d80592b97e30c9b5520c67cc040c631b\"\
+    ,\n          \"bytes\": 4065\n        },\n        \"retained_failure_receipt\"\
+    : {\n          \"path\": \"/private/tmp/traitmech-record-sweep-010.m7q2v9cx/ph-optimum-source-agent/prior-ph-delta-additional-primary-body-accesses-root.json\"\
+    ,\n          \"sha256\": \"2b59f554309b38f437bff006507e7703ec541aca6057897b3651ae1c0af76355\"\
+    ,\n          \"bytes\": 840\n        },\n        \"qualification\": \"Phrase absent\
+    \ from indexed abstract is not proof of absence from unavailable body.\"\n   \
+    \   },\n      \"support_scope\": \"Literal wording verification does not establish\
+    \ the full adjacent claim or operational measurement equivalence.\"\n    },\n\
+    \    {\n      \"field_path\": \"causal_graphs[0].edges[3].evidence[0].snippet\"\
+    ,\n      \"reference\": \"DOI:10.1038/nrmicro2549\",\n      \"snippet\": \"cytoplasmic\
+    \ pH\",\n      \"status\": \"EXACT_LITERAL\",\n      \"basis\": {\n        \"\
+    body\": {\n          \"path\": \"/private/tmp/traitmech-record-sweep-010.m7q2v9cx/ph-optimum-source-agent/krulwich-bioc.xml\"\
+    ,\n          \"sha256\": \"903213411c506c8991863c506167027a9472d4fb436d3c7e8b38e9d87f7b656f\"\
+    ,\n          \"bytes\": 174908\n        },\n        \"BioC_offsets\": [\n    \
+    \      \"58\",\n          \"671\",\n          \"2440\",\n          \"3940\",\n\
+    \          \"4950\",\n          \"7133\",\n          \"7180\",\n          \"7328\"\
+    \n        ]\n      },\n      \"support_scope\": \"Literal wording verification\
+    \ does not establish the full adjacent claim or operational measurement equivalence.\"\
+    \n    }\n  ]\n}"
+- assessment_id: operational-definition
+  area: evidence
+  topic: 'Native checklist: growth optimum versus best homeostasis'
+  outcome: concern
+  target_ids:
+  - METPO:1000331
+  summary: 'Evidence[0].notes attributes an operational equivalence that the assigned
+    review does not support generally: its environmental comparison distinguishes
+    complete homeostasis from optimal external growth. The separate minimal-load bridge
+    remains unestablished, not independently disproven.'
+  evidence_ids:
+  - operational-definition
+  - krulwich-note-refutation
+  - source-reading
+  - adjudication
+- assessment_id: node-facets
+  area: grounding
+  topic: 'Native checklist: all twelve current node referents'
+  outcome: supported
+  target_ids:
+  - METPO:1000331
+  summary: Current GO and hydron identities are coherent; PMF is a proposed state.
+    Quality and capacity referents are preserved. No missing protein, compulsory connector
+    or blanket enum replacement is inferred.
+  evidence_ids:
+  - identity
+  - node-edges
+  - node-sources
+  - native-types
+  - policy
+  - go-primary
+  details: "[\n  {\n    \"index\": 0,\n    \"field_path\": \"causal_graphs[0].nodes[0]\"\
+    ,\n    \"node\": {\n      \"node_id\": \"ph_optimum_trait\",\n      \"label\"\
+    : \"pH optimum\",\n      \"node_type\": \"TRAIT\",\n      \"grounding\": \"METPO:1000331\"\
+    ,\n      \"description\": \"External pH at which growth rate is maximal.\"\n \
+    \   },\n    \"assessment\": \"Exact active pH-optimum trait anchor. It denotes\
+    \ external conditions at peak growth, not the peak rate itself.\"\n  },\n  {\n\
+    \    \"index\": 1,\n    \"field_path\": \"causal_graphs[0].nodes[1]\",\n    \"\
+    node\": {\n      \"node_id\": \"external_ph\",\n      \"label\": \"external pH\"\
+    ,\n      \"node_type\": \"ENVIRONMENTAL_FACTOR\",\n      \"description\": \"Ambient\
+    \ proton activity (pH) imposed on the cell.\"\n    },\n    \"assessment\": \"\
+    External proton-activity condition; environmental facet is permitted. Do not assume\
+    \ that every condition denotes an executed process.\"\n  },\n  {\n    \"index\"\
+    : 2,\n    \"field_path\": \"causal_graphs[0].nodes[2]\",\n    \"node\": {\n  \
+    \    \"node_id\": \"proton\",\n      \"label\": \"proton\",\n      \"node_type\"\
+    : \"CHEMICAL\",\n      \"grounding\": \"CHEBI:15378\",\n      \"description\"\
+    : \"H+ ion whose transmembrane gradient drives the proton motive force.\"\n  \
+    \  },\n    \"assessment\": \"CHEBI15378 is active hydron with H+ synonyms and\
+    \ charge+1; proton wording is an accepted generic biochemical usage, not a wrong-identity\
+    \ finding.\"\n  },\n  {\n    \"index\": 3,\n    \"field_path\": \"causal_graphs[0].nodes[3]\"\
+    ,\n    \"node\": {\n      \"node_id\": \"cytoplasmic_ph_homeostasis\",\n     \
+    \ \"label\": \"cytoplasmic pH homeostasis\",\n      \"node_type\": \"BIOLOGICAL_PROCESS\"\
+    ,\n      \"description\": \"Maintenance of a near-neutral cytoplasmic pH against\
+    \ the external H+ gradient.\",\n      \"grounding\": \"GO:0051453\"\n    },\n\
+    \    \"assessment\": \"Homeostasis is a biological process and GO0051453 is active\
+    \ intracellular-pH regulation with homeostasis synonyms. Near-neutral scope is\
+    \ a literature question, not settled by the GO ID.\"\n  },\n  {\n    \"index\"\
+    : 4,\n    \"field_path\": \"causal_graphs[0].nodes[4]\",\n    \"node\": {\n  \
+    \    \"node_id\": \"proton_motive_force\",\n      \"label\": \"proton motive force\"\
+    ,\n      \"node_type\": \"STATE\",\n      \"description\": \"Electrochemical proton\
+    \ gradient powering ATP synthesis and transport.\",\n      \"grounding\": \"METPO:1007500\"\
+    \n    },\n    \"assessment\": \"Explicit electrochemical gradient STATE, consistent\
+    \ with native STATE and local v3 PMF definition. Not its generating process.\"\
+    \n  },\n  {\n    \"index\": 5,\n    \"field_path\": \"causal_graphs[0].nodes[5]\"\
+    ,\n    \"node\": {\n      \"node_id\": \"maximal_growth_rate\",\n      \"label\"\
+    : \"maximal growth rate\",\n      \"node_type\": \"QUALITY\",\n      \"description\"\
+    : \"Peak specific growth rate achieved at the optimal external pH.\"\n    },\n\
+    \    \"assessment\": \"Peak specific growth rate is an explicit measurable QUALITY.\
+    \ It is distinct from the external pH at which that peak occurs.\"\n  },\n  {\n\
+    \    \"index\": 6,\n    \"field_path\": \"causal_graphs[0].nodes[6]\",\n    \"\
+    node\": {\n      \"node_id\": \"atp_synthesis\",\n      \"label\": \"ATP synthesis\
+    \ by F0F1-ATP synthase\",\n      \"node_type\": \"BIOLOGICAL_PROCESS\",\n    \
+    \  \"description\": \"Synthesis of ATP driven by proton flux through the F0F1-ATP\
+    \ synthase.\"\n    },\n    \"assessment\": \"ATP synthesis is an explicit biological\
+    \ process; the enzyme in the label does not require a separate protein token or\
+    \ make the process a protein.\"\n  },\n  {\n    \"index\": 7,\n    \"field_path\"\
+    : \"causal_graphs[0].nodes[7]\",\n    \"node\": {\n      \"node_id\": \"na_h_antiporter_activity\"\
+    ,\n      \"label\": \"Na+/H+ antiporter activity\",\n      \"node_type\": \"MOLECULAR_FUNCTION\"\
+    ,\n      \"description\": \"Proton-sensing antiporter that exports Na+/K+ in exchange\
+    \ for protons to acidify the cytoplasm.\"\n    },\n    \"assessment\": \"Label/type\
+    \ specify antiporter activity, while description begins by naming an antiporter.\
+    \ Preserve this activity/material wording ambiguity; detailed biological efficacy\
+    \ unassessed.\"\n  },\n  {\n    \"index\": 8,\n    \"field_path\": \"causal_graphs[0].nodes[8]\"\
+    ,\n    \"node\": {\n      \"node_id\": \"cytoplasm_acidification\",\n      \"\
+    label\": \"cytoplasm acidification\",\n      \"node_type\": \"BIOLOGICAL_PROCESS\"\
+    ,\n      \"description\": \"Lowering of cytoplasmic pH when internal pH becomes\
+    \ too high.\"\n    },\n    \"assessment\": \"Cytoplasmic acidification is a biological\
+    \ process; documentary process referent only, not validation of detailed acid-defense\
+    \ biology.\"\n  },\n  {\n    \"index\": 9,\n    \"field_path\": \"causal_graphs[0].nodes[9]\"\
+    ,\n    \"node\": {\n      \"node_id\": \"decarboxylation_pathways\",\n      \"\
+    label\": \"metabolite decarboxylation pathways\",\n      \"node_type\": \"PATHWAY\"\
+    ,\n      \"description\": \"Proton-consuming decarboxylation reactions that contribute\
+    \ to pH homeostasis and energy conservation.\"\n    },\n    \"assessment\": \"\
+    PATHWAY label accompanied by an explicit proton-consuming reaction description.\
+    \ This is a route/reaction referent, not a material enzyme. Do not reconstruct\
+    \ steps or choose a new biological mechanism.\"\n  },\n  {\n    \"index\": 10,\n\
+    \    \"field_path\": \"causal_graphs[0].nodes[10]\",\n    \"node\": {\n      \"\
+    node_id\": \"cytoplasmic_buffering_capacity\",\n      \"label\": \"cytoplasmic\
+    \ buffering capacity\",\n      \"node_type\": \"CAPACITY\",\n      \"description\"\
+    : \"Capacity of cytoplasmic buffers (e.g. inorganic/organic phosphates) to absorb\
+    \ pH fluctuations.\"\n    },\n    \"assessment\": \"Buffering capacity is the\
+    \ reservoir/capacity sense explicitly retained by native schema and maintained\
+    \ writer, not the buffering action.\"\n  },\n  {\n    \"index\": 11,\n    \"field_path\"\
+    : \"causal_graphs[0].nodes[11]\",\n    \"node\": {\n      \"node_id\": \"internal_ph\"\
+    ,\n      \"label\": \"internal pH\",\n      \"node_type\": \"STATE\",\n      \"\
+    description\": \"Cytoplasmic proton activity (pH) maintained near neutrality.\"\
+    \n    },\n    \"assessment\": \"Internal pH is a steady-value STATE. Near-neutral\
+    \ scope is for the source auditor; state is not its maintenance process.\"\n \
+    \ }\n]"
+- assessment_id: relations
+  area: consistency
+  topic: 'Native checklist: all eleven relation meanings'
+  outcome: concern
+  target_ids:
+  - METPO:1000331
+  summary: Grouped confirmed fields are 1/2/4/8/9/10. RO constraints are formal inherited
+    roles; edge 9 is a textual Biolink producer-role issue with broad formal endpoints.
+    Edge 6 activity/material wording is qualified. Edge 3 criterion/condition interpretation
+    is a limitation after the separate reassessment.
+  evidence_ids:
+  - node-edges
+  - ro-primary
+  - biolink-primary
+  - local-authority
+  - edge3-reassessment
+  - challenge
+  details: "[\n  {\n    \"index\": 0,\n    \"field_path\": \"causal_graphs[0].edges[0]\"\
+    ,\n    \"subject\": \"external_ph\",\n    \"predicate\": \"imposes gradient of\"\
+    ,\n    \"predicate_id\": \"METPO:2007601\",\n    \"object\": \"proton\",\n   \
+    \ \"formal_status\": \"local_roles_compatible\",\n    \"assessment\": \"Local\
+    \ v6 imposes-gradient-of explicitly admits an environmental condition or bioenergetic\
+    \ process and a chemical species. Current ENV\\u2192H+ fits; no imported RO-only\
+    \ domain rule applies.\",\n    \"biological_scope\": \"Generic/documentary semantics\
+    \ only; detailed pathogen acid-defense, fitness, AMR and intervention efficacy\
+    \ remains UNASSESSED_SCOPE.\"\n  },\n  {\n    \"index\": 1,\n    \"field_path\"\
+    : \"causal_graphs[0].edges[1]\",\n    \"subject\": \"cytoplasmic_ph_homeostasis\"\
+    ,\n    \"predicate\": \"regulates\",\n    \"predicate_id\": \"RO:0002211\",\n\
+    \    \"object\": \"proton_motive_force\",\n    \"formal_status\": \"confirmed_imported_role_mismatch\"\
+    ,\n    \"assessment\": \"RO2211 has process domain/range. Homeostasis process\
+    \ subject fits, but explicit electrochemical PMF STATE object is not the process\
+    \ of establishing it.\",\n    \"biological_scope\": \"Generic/documentary semantics\
+    \ only; detailed pathogen acid-defense, fitness, AMR and intervention efficacy\
+    \ remains UNASSESSED_SCOPE.\"\n  },\n  {\n    \"index\": 2,\n    \"field_path\"\
+    : \"causal_graphs[0].edges[2]\",\n    \"subject\": \"proton_motive_force\",\n\
+    \    \"predicate\": \"promotes\",\n    \"predicate_id\": \"RO:0002213\",\n   \
+    \ \"object\": \"maximal_growth_rate\",\n    \"formal_status\": \"confirmed_imported_role_mismatch\"\
+    ,\n    \"assessment\": \"RO2213 inherits process-to-process roles from RO2211;\
+    \ current PMF STATE subject and maximal-growth-rate QUALITY object do not denote\
+    \ those processes. Maintained writer explicitly preserves the QUALITY while assigning\
+    \ this predicate.\",\n    \"biological_scope\": \"Generic/documentary semantics\
+    \ only; detailed pathogen acid-defense, fitness, AMR and intervention efficacy\
+    \ remains UNASSESSED_SCOPE.\"\n  },\n  {\n    \"index\": 3,\n    \"field_path\"\
+    : \"causal_graphs[0].edges[3]\",\n    \"subject\": \"maximal_growth_rate\",\n\
+    \    \"predicate\": \"manifests as\",\n    \"predicate_id\": \"METPO:2007400\"\
+    ,\n    \"object\": \"ph_optimum_trait\",\n    \"formal_status\": \"bounded_measurement_precision\"\
+    ,\n    \"assessment\": \"Local manifests-as has broad causal-node endpoints, so\
+    \ no hard formal domain error is claimed. However, subject is the maximum growth-rate\
+    \ value while description refers to the external pH attaining it. Keep value and\
+    \ optimizing condition distinguishable; the broader optimum trait and source measurements\
+    \ remain intact.\",\n    \"biological_scope\": \"Generic/documentary semantics\
+    \ only; detailed pathogen acid-defense, fitness, AMR and intervention efficacy\
+    \ remains UNASSESSED_SCOPE.\"\n  },\n  {\n    \"index\": 4,\n    \"field_path\"\
+    : \"causal_graphs[0].edges[4]\",\n    \"subject\": \"external_ph\",\n    \"predicate\"\
+    : \"contributes to\",\n    \"predicate_id\": \"RO:0002326\",\n    \"object\":\
+    \ \"proton_motive_force\",\n    \"formal_status\": \"confirmed_imported_role_mismatch\"\
+    ,\n    \"assessment\": \"RO2326 inherits material-subject/process-object roles\
+    \ via2216\\u21922500\\u21922595. Current object is explicit PMF STATE, a firm\
+    \ range mismatch independently of environmental-condition subject ambiguity.\"\
+    ,\n    \"biological_scope\": \"Generic/documentary semantics only; detailed pathogen\
+    \ acid-defense, fitness, AMR and intervention efficacy remains UNASSESSED_SCOPE.\"\
+    \n  },\n  {\n    \"index\": 5,\n    \"field_path\": \"causal_graphs[0].edges[5]\"\
+    ,\n    \"subject\": \"proton_motive_force\",\n    \"predicate\": \"drives\",\n\
+    \    \"predicate_id\": null,\n    \"object\": \"atp_synthesis\",\n    \"formal_status\"\
+    : \"free_predicate_context\",\n    \"assessment\": \"Free drives has no external\
+    \ identifier; no mandatory ID or imported role restriction is invented. Generic\
+    \ energetic context and detailed efficacy are separately scoped by source audit.\"\
+    ,\n    \"biological_scope\": \"Generic/documentary semantics only; detailed pathogen\
+    \ acid-defense, fitness, AMR and intervention efficacy remains UNASSESSED_SCOPE.\"\
+    \n  },\n  {\n    \"index\": 6,\n    \"field_path\": \"causal_graphs[0].edges[6]\"\
+    ,\n    \"subject\": \"na_h_antiporter_activity\",\n    \"predicate\": \"enables\"\
+    ,\n    \"predicate_id\": \"RO:0002327\",\n    \"object\": \"cytoplasm_acidification\"\
+    ,\n    \"formal_status\": \"qualified_activity_material_referent\",\n    \"assessment\"\
+    : \"RO2327 requires a material executor and process object. Activity label/type\
+    \ would not be that executor, whereas the material-sounding antiporter description\
+    \ could be. Preserve the ambiguity outside firm anchors; no mechanism repair or\
+    \ forced retype.\",\n    \"biological_scope\": \"Generic/documentary semantics\
+    \ only; detailed pathogen acid-defense, fitness, AMR and intervention efficacy\
+    \ remains UNASSESSED_SCOPE.\"\n  },\n  {\n    \"index\": 7,\n    \"field_path\"\
+    : \"causal_graphs[0].edges[7]\",\n    \"subject\": \"cytoplasm_acidification\"\
+    ,\n    \"predicate\": \"regulates\",\n    \"predicate_id\": \"RO:0002211\",\n\
+    \    \"object\": \"cytoplasmic_ph_homeostasis\",\n    \"formal_status\": \"external_roles_compatible\"\
+    ,\n    \"assessment\": \"RO2211 process-to-process endpoints fit acidification\
+    \ and homeostasis. This is formal compatibility, not verification of detailed\
+    \ acid-defense efficacy.\",\n    \"biological_scope\": \"Generic/documentary semantics\
+    \ only; detailed pathogen acid-defense, fitness, AMR and intervention efficacy\
+    \ remains UNASSESSED_SCOPE.\"\n  },\n  {\n    \"index\": 8,\n    \"field_path\"\
+    : \"causal_graphs[0].edges[8]\",\n    \"subject\": \"decarboxylation_pathways\"\
+    ,\n    \"predicate\": \"contributes to\",\n    \"predicate_id\": \"RO:0002326\"\
+    ,\n    \"object\": \"cytoplasmic_ph_homeostasis\",\n    \"formal_status\": \"\
+    confirmed_imported_role_mismatch\",\n    \"assessment\": \"RO2326 requires material\
+    \ subject. The declared pathway and explicit reaction description denote a route/process\
+    \ rather than a physical executor.\",\n    \"biological_scope\": \"Generic/documentary\
+    \ semantics only; detailed pathogen acid-defense, fitness, AMR and intervention\
+    \ efficacy remains UNASSESSED_SCOPE.\"\n  },\n  {\n    \"index\": 9,\n    \"field_path\"\
+    : \"causal_graphs[0].edges[9]\",\n    \"subject\": \"decarboxylation_pathways\"\
+    ,\n    \"predicate\": \"generates\",\n    \"predicate_id\": \"biolink:produces\"\
+    ,\n    \"object\": \"proton_motive_force\",\n    \"formal_status\": \"confirmed_textual_predicate_mismatch\"\
+    ,\n    \"assessment\": \"Biolink produces describes a material entity producing\
+    \ a product; current pathway/reaction subject is processual. This is a textual\
+    \ semantic mismatch, not a hard material-only OWL domain/range claim: inherited\
+    \ endpoints are named thing and the PMF STATE product is not independently forbidden.\"\
+    ,\n    \"biological_scope\": \"Generic/documentary semantics only; detailed pathogen\
+    \ acid-defense, fitness, AMR and intervention efficacy remains UNASSESSED_SCOPE.\"\
+    \n  },\n  {\n    \"index\": 10,\n    \"field_path\": \"causal_graphs[0].edges[10]\"\
+    ,\n    \"subject\": \"cytoplasmic_buffering_capacity\",\n    \"predicate\": \"\
+    regulates\",\n    \"predicate_id\": \"RO:0002211\",\n    \"object\": \"internal_ph\"\
+    ,\n    \"formal_status\": \"confirmed_imported_role_mismatch\",\n    \"assessment\"\
+    : \"RO2211 process-to-process roles conflict with the explicitly maintained reservoir\
+    \ CAPACITY subject and internal-pH steady STATE object. Buffering action is not\
+    \ silently substituted for capacity.\",\n    \"biological_scope\": \"Generic/documentary\
+    \ semantics only; detailed pathogen acid-defense, fitness, AMR and intervention\
+    \ efficacy remains UNASSESSED_SCOPE.\"\n  }\n]"
+- assessment_id: source-context
+  area: evidence
+  topic: 'Native checklist: generic support and detailed biology limits'
+  outcome: unknown
+  target_ids:
+  - METPO:1000331
+  summary: Generic PMF, external-pH and buffering contexts remain positive. Detailed
+    ATP-synthesis, antiporter, acidification and decarboxylation biology at edges
+    5–9 is UNASSESSED_SCOPE; no repaired pathway, target, condition or optimization
+    is supplied.
+  evidence_ids:
+  - sources
+  - edge-sources
+  - source-reading
+  - source-access
+- assessment_id: completeness
+  area: completeness
+  topic: 'Native checklist: whole record and optional fields'
+  outcome: supported
+  target_ids:
+  - METPO:1000331
+  summary: All twelve nodes, eleven edges, two components, one canonical, zero protein
+    classes/instances and sixteen record events are covered. No arbitrary completeness
+    or dataset requirement is imposed.
+  evidence_ids:
+  - record
+  - node-edges
+  - checklist
+  - policy
+- assessment_id: expression
+  area: scope
+  topic: 'Native checklist: canonical catalog applicability'
+  outcome: not_applicable
+  target_ids:
+  - METPO:1000331
+  summary: No Microbaculum mangrovi or FT89/type-alias match in the retained complete
+    20-organism/28-dataset catalog. No substitute species or downstream fitness/defense
+    query was used.
+  evidence_ids:
+  - expression
+  - authority-reuse
+- assessment_id: owners
+  area: ownership
+  topic: 'Native checklist: actual maintained recurrence surfaces'
+  outcome: supported
+  target_ids:
+  - METPO:1000331
+  summary: Process/quality migration explicitly rewrites rate-support edges to RO:0002213;
+    node-type migration preserves PMF STATE and buffering CAPACITY. Mapping rows can
+    refill empty identifiers while the grounder skips nonempty ones. Exact canonical
+    backfill is an owner; shared-node leads are not automatically owners.
+  evidence_ids:
+  - owners
+  - local-authority
+  - challenge
+  details: "{\n  \"assessed_at\": \"2026-10-21T18:22:32.737477+00:00\",\n  \"target\"\
+    : \"data/traits/environment/ph_optimum.yaml\",\n  \"counts\": {\n    \"nodes\"\
+    : 12,\n    \"edges\": 11,\n    \"components\": 2,\n    \"protein_classes\": 0,\n\
+    \    \"protein_instances\": 0,\n    \"canonical_examples\": 1,\n    \"history_events\"\
+    : 16,\n    \"ai_events\": 15,\n    \"seed_events\": 1,\n    \"captured_history_files\"\
+    : 16,\n    \"matching_files\": 256,\n    \"review_target_arrays\": 67,\n    \"\
+    exact_target_arrays\": 0\n  },\n  \"search_basis\": \"Ignored/hidden-inclusive\
+    \ target path, underscore/hyphen slug, label and both ID forms.256matchingpaths,67actualreviewarrays,zeroexact;\
+    \ all-node filename discovery finds16histories, all captured. No remote/private\
+    \ absence assertion.\",\n  \"current_record_history\": \"16events=15explicit AI-assisted\
+    \ plus seeding. All16captured history session actor projections are AI. REVIEWED\
+    \ does not itself identify accountable human acceptance.\",\n  \"whole_histories_read\"\
+    : [\n    \"history/infrastructure/process-quality-consistency/2026-08-21T073211Z-codex-174227.yaml\"\
+    ,\n    \"history/infrastructure/node-type-consistency/2026-08-15T014631Z-claude-code-9d7f4d.yaml\"\
+    ,\n    \"history/other/canonical-examples-six/2026-08-21T065406Z-codex-a1ab82.yaml\"\
+    \n  ],\n  \"reading_limit\": \"All16actor/target projections read; three histories\
+    \ listed above fully read in this target audit. Other shared-node histories and\
+    \ sibling scripts remain contextual leads, not direct target owners. Parent headers/identity\
+    \ fields read for hierarchy; no parent scientific review.\",\n  \"owners\": [\n\
+    \    {\n      \"path\": \"scripts/migrate_process_quality_consistency.py\",\n\
+    \      \"locator\": \"lines92\\u2013106,188\\u2013197\",\n      \"assessment\"\
+    : \"Explicitly retains maximal_growth_rate QUALITY, then rewrites enables to promotes/RO2213.\
+    \ This is a precise recurrence surface for edge2; do not claim the quality is\
+    \ itself mistaken.\"\n    },\n    {\n      \"path\": \"scripts/migrate_node_type_consistency.py\"\
+    ,\n      \"locator\": \"lines54\\u201368,103\\u2013112\",\n      \"assessment\"\
+    : \"Explicitly preserves PMF STATE and buffering CAPACITY; incident relations\
+    \ must be reconciled without silently changing referents.\"\n    },\n    {\n \
+    \     \"path\": \"mappings/predicate_grounding.tsv\",\n      \"locator\": \"rows10,11,24,32,63,84\"\
+    ,\n      \"assessment\": \"Ungated mappings can fill corresponding empty identifiers.\
+    \ Grounder skips existing nonempty IDs, so this does not claim automatic overwrite\
+    \ of current edges.\"\n    },\n    {\n      \"path\": \"scripts/ground_causal_predicates.py\"\
+    ,\n      \"locator\": \"lines150\\u2013180\",\n      \"assessment\": \"Actual\
+    \ existing-ID skip and type-gate application read in preceding #6 audit with identical\
+    \ captured bytes; reuse of reading context.\"\n    },\n    {\n      \"path\":\
+    \ \"scripts/backfill_canonical_examples_444.py\",\n      \"locator\": \"lines409\\\
+    u2013414\",\n      \"assessment\": \"Exact target canonical interval and parent-boundary\
+    \ template.\"\n    }\n  ],\n  \"provider_history_limit\": \"Current Falcon report\
+    \ frontmatter records2026-08-04 whereas enrichment event is2026-06-23. Current\
+    \ report is a captured research lead and cannot establish exact historical evidence\
+    \ bytes. No finding solely from chronology difference.\"\n}"
+- assessment_id: human-acceptance
+  area: provenance
+  topic: 'Native checklist: bounded local acceptance traceability'
+  outcome: concern
+  target_ids:
+  - METPO:1000331
+  summary: Ignored-inclusive search found 256 paths, 67 parsed review target arrays
+    and zero exact arrays. Sixteen record events comprise 15 AI events plus seed;
+    all sixteen captured history actor projections are AI. Three listed histories
+    were fully read, not all sixteen. No linked attributable human acceptance was
+    found within these bounds.
+  evidence_ids:
+  - owners
+  - human-policy
+  - challenge
+  - adjudication
+- assessment_id: checks
+  area: schema
+  topic: 'Native checklist: focused passes and qualified common reuse'
+  outcome: supported
+  target_ids:
+  - METPO:1000331
+  summary: Native, strict and focused snippets passed directly. All 103 inputs match.
+    Historical common/B4/B9 checks retain actual times, failures, retries, baselines
+    and skips. Separate authority DNS attempts and retries do not alter native outcomes.
+  evidence_ids:
+  - capture
+  - reuse
+  - check-ph-optimum-validate
+  - check-ph-optimum-strict
+  - check-ph-optimum-snippets
+  - live-identity-access
+  - live-identity-access-network-retry
+findings:
+- finding_id: operational-definition-attribution
+  issue_key: ph-optimum-operational-definition-attribution
+  category: evidence
+  severity: major
+  status: open
+  certainty: confirmed
+  title: The operational-definition note conflates growth optimum with best pH maintenance
+  description: Evidence[0].notes presents the external pH of best cytoplasmic pH maintenance
+    as the operational definition of growth optimum. The assigned review explicitly
+    distinguishes complete homeostasis from optimal growth in an environmental example,
+    so its literal short phrase cannot support that general equivalence. Ordinary
+    growth-based identity and canonical optimum remain positive. Minimal energetic
+    load is a separate unestablished bridge, not a refuted energetic minimum.
+  target_ids:
+  - METPO:1000331
+  field_paths:
+  - evidence[0].notes
+  evidence_ids:
+  - operational-definition
+  - krulwich-note-refutation
+  - source-reading
+  - sources
+  - challenge
+  - adjudication
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/ph_optimum.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: major
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: imported-relation-roles
+  issue_key: ph-optimum-imported-relation-roles
+  category: grounding
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Imported relation meanings conflict with current state, quality and process
+    referents
+  description: RO:0002211 and inherited RO:0002213 require process endpoints, conflicting
+    with PMF/state, peak-rate quality and buffering-capacity/internal-state referents
+    at edges 1/2/10. RO:0002326 requires a material causal subject and process object,
+    conflicting with current condition/state or pathway/process roles at 4/8. Edge
+    9 uses a pathway/process subject against Biolink produces textual material-producer
+    meaning; its formal named-thing endpoints are broad and no material-only product
+    range is claimed. Edge 6 remains qualified and edge 3 is a limitation, not extra
+    confirmed fields.
+  target_ids:
+  - METPO:1000331
+  field_paths:
+  - causal_graphs[0].edges[1]
+  - causal_graphs[0].edges[2]
+  - causal_graphs[0].edges[4]
+  - causal_graphs[0].edges[8]
+  - causal_graphs[0].edges[9]
+  - causal_graphs[0].edges[10]
+  evidence_ids:
+  - record
+  - node-edges
+  - ro-primary
+  - biolink-primary
+  - owners
+  - edge3-reassessment
+  - challenge
+  - adjudication
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/ph_optimum.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: mappings/predicate_grounding.tsv
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: scripts/ground_causal_predicates.py
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: scripts/migrate_process_quality_consistency.py
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: scripts/migrate_node_type_consistency.py
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: major
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: human-acceptance-link
+  issue_key: ph-optimum-human-acceptance-link
+  category: provenance
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Local provenance lacks a linked human acceptance decision
+  description: REVIEWED and AI maintenance establish provenance but do not identify
+    attributable human acceptance of this current record. The bounded ignored-inclusive
+    256-path/67-array/zero-exact search and sixteen AI actor projections preserve
+    positive maintenance while leaving remote/private decisions unknown.
+  target_ids:
+  - METPO:1000331
+  field_paths:
+  - mapping_status
+  - curation_history
+  evidence_ids:
+  - owners
+  - human-policy
+  - challenge
+  - adjudication
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/ph_optimum.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: minor
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+actions:
+- action_id: separate-measurement-and-context
+  description: During separately authorized curation, correct or substantiate the
+    operational-definition attribution while preserving growth-based identity and
+    the directly measured canonical interval.
+  finding_ids:
+  - operational-definition-attribution
+  target_ids:
+  - METPO:1000331
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/ph_optimum.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - Distinguish external growth optimum from best cytoplasmic maintenance. Do not
+    replace the note with an unsupported minimal-load or balanced-PMF assay criterion.
+  - Retain Baker body uncertainty and generic homeostasis context; no biological mechanism,
+    target, condition or intervention repair is prescribed.
+  - Use guarded record/repository history and applicable native, strict, evidence
+    and QC checks. Preserve this immutable review; add a successor after inputs change.
+- action_id: reconcile-imported-roles
+  description: Reconcile the six confirmed imported-role fields with their declared
+    referents during authorized curation.
+  finding_ids:
+  - imported-relation-roles
+  target_ids:
+  - METPO:1000331
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/ph_optimum.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: mappings/predicate_grounding.tsv
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: scripts/ground_causal_predicates.py
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: scripts/migrate_process_quality_consistency.py
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: scripts/migrate_node_type_consistency.py
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - Check exact RO inherited roles and Biolink textual producer meaning separately
+    from broad formal endpoints. Preserve supported state, quality, capacity and pathway
+    meanings.
+  - Review migration recurrence and mapping refill behavior, then incident relations;
+    retain edge 6 ambiguity and the separate edge 3 limitation without adding artificial
+    mechanisms or token proteins.
+  - Use guarded history and applicable native, strict, mapping and QC checks; no scientific
+    source data are modified by this review.
+- action_id: link-human-acceptance
+  description: Link existing attributable human acceptance if available, or clarify
+    native status while preserving bounded uncertainty.
+  finding_ids:
+  - human-acceptance-link
+  target_ids:
+  - METPO:1000331
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/ph_optimum.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - Retain the 256-path/67-array/zero-exact search and distinguish sixteen record
+    events from sixteen history projections and three fully read histories.
+  - Do not infer acceptance from AI work, passing checks or ontology authorship. This
+    action does not authorize contacting anyone or automatic status promotion.
+limitations:
+- Detailed biological mechanisms at edges 5–9 remain UNASSESSED_SCOPE. Identity, literal
+  wording and formal role review do not certify pathogen fitness, acid-defense, resistance,
+  intervention efficacy or optimization.
+- The confirmed source finding is confined to evidence[0].notes operational equivalence.
+  The graph description minimal-load bridge is unestablished in inspected scope; the
+  counterexample does not establish energetic load at growth optimum.
+- Three Baker phrases remain unverified because the retained body attempt was unavailable.
+  No new lead justified a repeated request; this is not evidence of false quotation
+  or false biology.
+- Edge 3 may encode the peak-growth criterion for recognizing the external optimum.
+  The separate reassessment supersedes the original minor candidate. Edge 6 activity/material
+  wording remains qualified without forced retyping.
+- Biolink produces has broad named-thing formal endpoints. Edge 9 concerns textual
+  material-producer meaning, not an invented hard material domain or material-only
+  product range.
+- Typical near-neutral context is not an all-organism numerical rule. Canonical optimum
+  6.0–7.0 is distinct from growth range 5.5–9.0 and is retained on the parent.
+- Original source/authority/catalog acquisition times remain separate from current
+  copies and reading; no full-article reading or unavailable-body hash is invented.
+- The bounded ignored-inclusive search cannot establish absence of remote/private
+  acceptance. All sixteen history actor projections were reviewed; only three listed
+  histories were fully read. Current research frontmatter does not prove exact earlier
+  enrichment bytes.
+- Two components and zero protein classes/instances are permissible. No artificial
+  connection, token accession, substitute organism or downstream defense-expression
+  query is required.
+- Focused checks passed directly. Authority DNS failures/retries are separate acquisitions;
+  historical common failures, retries, baselines and adapter skips remain explicit.
+notes:
+- 'Final disposition: two major findings, one minor, fourteen assessments and three
+  linked proposed actions.'
+- 'Coverage: 103 inputs, 28 frozen grounding artifacts plus separate edge 3 reassessment,
+  25 source artifacts, 12 nodes, 11 edges, two components, no protein classes/instances,
+  one canonical and sixteen events. Four works, fifteen placements and six snippets
+  are retained with exact source scope.'
+- Serializer is single-use and guarded. Root owns one execution, native review validation
+  and save after final pins and independent reading; no scientific record, state or
+  Git mutation is performed by preparation.
+tags:
+- record-review
+- ph-optimum
+- environment
+- needs-curation
+native_verdict: needs_curation
