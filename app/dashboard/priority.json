@@ -21,9 +21,9 @@
       "DROP_GROUPING_TERM": 0,
       "LUMP_INTO_PARENT": 0,
       "CURATE_ROOT_WITH_SUBTYPES": 13,
-      "ADD_CANONICAL_EXAMPLES": 103,
+      "ADD_CANONICAL_EXAMPLES": 102,
       "BUILD_CAUSAL_GRAPH": 272,
-      "DEEPEN_CAUSAL_GRAPH": 395,
+      "DEEPEN_CAUSAL_GRAPH": 396,
       "ALREADY_DEEP": 59,
       "CURATE_ROOT": 159
     }
@@ -5488,29 +5488,6 @@
       "researched": false,
       "reasons": [
         "thin graph (4 edges) +12",
-        "no canonical_examples +30"
-      ]
-    },
-    {
-      "identifier": "traitmech:000135",
-      "label": "pectin degradation",
-      "category": "metabolism",
-      "slug": "pectin_degradation",
-      "score": 42.0,
-      "action": "ADD_CANONICAL_EXAMPLES",
-      "edges": 2,
-      "nodes": 3,
-      "components": 1,
-      "orphans": 0,
-      "examples": 0,
-      "canonical_examples_reviewed_empty": false,
-      "children": 0,
-      "series": null,
-      "series_size": 0,
-      "series_overlap": null,
-      "researched": false,
-      "reasons": [
-        "thin graph (2 edges) +12",
         "no canonical_examples +30"
       ]
     },
@@ -15107,6 +15084,28 @@
       "researched": true,
       "reasons": [
         "thin graph (6 edges) +12"
+      ]
+    },
+    {
+      "identifier": "traitmech:000135",
+      "label": "pectin degradation",
+      "category": "metabolism",
+      "slug": "pectin_degradation",
+      "score": 12.0,
+      "action": "DEEPEN_CAUSAL_GRAPH",
+      "edges": 2,
+      "nodes": 3,
+      "components": 1,
+      "orphans": 0,
+      "examples": 1,
+      "canonical_examples_reviewed_empty": false,
+      "children": 0,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": false,
+      "reasons": [
+        "thin graph (2 edges) +12"
       ]
     },
     {

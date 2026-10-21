@@ -74,9 +74,9 @@
 
     <div class="card causal-graph-card">
       <h2>Staphylococcal coagulase prothrombin activation and fibrinogen cleavage</h2>
-      <p class="meta">Evidence-backed physiological sketch linking secreted staphylocoagulases (Coa and vWbp) to non-proteolytic prothrombin activation and fibrinogen cleavage.</p>
+      <p class="meta">Evidence-backed physiological mechanism linking secreted staphylocoagulases (Coa and vWbp) to non-proteolytic prothrombin activation and fibrinogen cleavage.</p>
 
-      <p class="graph-scope"><code>NONMECHANISTIC</code> · Mechanism sketch backed by DOI:10.1159/000333447 and DOI:10.1371/journal.ppat.1001036; a strain-specific canonical example and reviewed strain-matched UniProtKB accessions for Staphylococcus aureus Coa and vWbp remain to be curated.</p>
+      <p class="graph-scope"><code>MECHANISTIC</code> · Protein-anchored mechanism backed by DOI:10.1159/000333447 and DOI:10.1371/journal.ppat.1001036, with reviewed Staphylococcus aureus staphylocoagulase Coa (UniProtKB:P07767) curated on the InterPro:IPR019553 coagulase node.</p>
 
 
       <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
@@ -136,6 +136,50 @@
       </div>
 
 
+
+      <div class="protein-examples">
+        <h3>Protein and taxon examples</h3>
+        <div class="protein-example-table-wrap" role="region" tabindex="0" aria-label="Staphylococcal coagulase prothrombin activation and fibrinogen cleavage: protein and taxon examples">
+          <table class="protein-example-table">
+            <thead>
+              <tr><th>Graph node</th><th>Protein</th><th>Taxon</th><th>UniProt status</th><th>Role and evidence</th></tr>
+            </thead>
+            <tbody>
+
+              <tr>
+                <td>staphylocoagulase family protein</td>
+                <td>
+
+                  <a href="https://www.uniprot.org/uniprotkb/P07767/entry" rel="nofollow noreferrer"><code>UniProtKB:P07767</code></a>
+                  <br>Staphylocoagulase <span class="meta">(coa)</span>
+                </td>
+                <td>
+
+                  <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1280" rel="nofollow noreferrer">Staphylococcus aureus</a>
+                  <br><code>NCBITaxon:1280</code>
+                </td>
+                <td>
+                  <code>REVIEWED</code><br>
+                  <span class="meta">retrieved 2026-10-21 · entry v82 · sequence v2</span>
+                </td>
+                <td>
+                  <p>Secreted Staphylococcus aureus coagulase (Coa) that binds and non-proteolytically activates host prothrombin to cleave fibrinogen.</p>
+                  <ul>
+
+                    <li>
+                      <a href="https://doi.org/10.1371/journal.ppat.1001036" rel="nofollow noreferrer"><code>DOI:10.1371/journal.ppat.1001036</code></a>
+                      <span class="evidence-snippet">Coa and vWbp promote the non-proteolytic activation of prothrombin and cleavage of fibrinogen</span>
+                      <span class="meta">Cheng et al. demonstrate that Staphylococcus aureus Coa (UniProtKB:P07767) promotes non-proteolytic activation of prothrombin and cleavage of fibrinogen.</span>
+                    </li>
+
+                  </ul>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
 
     </div>
 
@@ -316,9 +360,9 @@
         </li>
 
         <li>
-          <time>2026-10-21T20:01:04Z</time> ·
+          <time>2026-10-21T21:12:25Z</time> ·
           <strong>CURATE_CAUSAL_GRAPH</strong> · claude
-          <p class="changes">Added NONMECHANISTIC causal_graphs entry (coagulase_activity_prothrombin_sketch) anchored on existing verbatim record evidence snippets.</p>
+          <p class="changes">Added MECHANISTIC causal_graphs entry (coagulase_activity_prothrombin_mechanism) anchored on existing verbatim record evidence snippets.</p>
         </li>
 
       </ol>
@@ -702,7 +746,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed physiological sketch linking secreted staphylocoagulases (Coa and vWbp) to non-proteolytic prothrombin activation and fibrinogen cleavage.", "edges": [{"description": "Secreted staphylococcal coagulase polypeptides confer the coagulase activity phenotype.", "evidence": [{"notes": "McAdow, Missiakas, and Schneewind describe secreted Staphylococcus aureus coagulases that bind to and activate prothrombin.", "reference": "DOI:10.1159/000333447", "snippet": "Clinical isolates of Staphylococcus aureus secrete coagulases, polypeptides that bind to and activate prothrombin"}], "id": "edge-1", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "coagulase_activity_staphylocoagulase", "target": "coagulase_activity_trait"}, {"description": "Coa and vWbp promote non-proteolytic activation of prothrombin and cleavage of fibrinogen.", "evidence": [{"notes": "Cheng et al. demonstrate that Coa and vWbp promote non-proteolytic activation of prothrombin and cleavage of fibrinogen.", "reference": "DOI:10.1371/journal.ppat.1001036", "snippet": "Coa and vWbp promote the non-proteolytic activation of prothrombin and cleavage of fibrinogen"}], "id": "edge-2", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "coagulase_activity_staphylocoagulase", "target": "coagulase_activity_prothrombin_activation"}], "evidence_rows": [{"description": "Secreted staphylococcal coagulase polypeptides confer the coagulase activity phenotype.", "edge_id": "edge-1", "evidence": [{"notes": "McAdow, Missiakas, and Schneewind describe secreted Staphylococcus aureus coagulases that bind to and activate prothrombin.", "reference": "DOI:10.1159/000333447", "snippet": "Clinical isolates of Staphylococcus aureus secrete coagulases, polypeptides that bind to and activate prothrombin"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "staphylocoagulase family protein", "source_grounding": "InterPro:IPR019553", "target": "coagulase activity", "target_grounding": "METPO:1007089"}, {"description": "Coa and vWbp promote non-proteolytic activation of prothrombin and cleavage of fibrinogen.", "edge_id": "edge-2", "evidence": [{"notes": "Cheng et al. demonstrate that Coa and vWbp promote non-proteolytic activation of prothrombin and cleavage of fibrinogen.", "reference": "DOI:10.1371/journal.ppat.1001036", "snippet": "Coa and vWbp promote the non-proteolytic activation of prothrombin and cleavage of fibrinogen"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "staphylocoagulase family protein", "source_grounding": "InterPro:IPR019553", "target": "zymogen activation", "target_grounding": "GO:0031638"}], "graph_id": "coagulase_activity_prothrombin_sketch", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Non-proteolytic activation of host prothrombin and downstream conversion of fibrinogen to fibrin.", "grounding": "GO:0031638", "id": "coagulase_activity_prothrombin_activation", "is_orphan": false, "label": "zymogen activation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Secreted staphylococcal coagulase polypeptides (Coa and vWbp) that bind and non-proteolytically activate prothrombin.", "grounding": "InterPro:IPR019553", "id": "coagulase_activity_staphylocoagulase", "is_orphan": false, "label": "staphylocoagulase family protein", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Physiological enzyme-activity phenotype in which secreted coagulase factors activate prothrombin and clot plasma.", "grounding": "METPO:1007089", "id": "coagulase_activity_trait", "is_orphan": false, "label": "coagulase activity", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "Mechanism sketch backed by DOI:10.1159/000333447 and DOI:10.1371/journal.ppat.1001036; a strain-specific canonical example and reviewed strain-matched UniProtKB accessions for Staphylococcus aureus Coa and vWbp remain to be curated.", "scope_status": "NONMECHANISTIC", "title": "Staphylococcal coagulase prothrombin activation and fibrinogen cleavage"}];
+  var graphs = [{"description": "Evidence-backed physiological mechanism linking secreted staphylocoagulases (Coa and vWbp) to non-proteolytic prothrombin activation and fibrinogen cleavage.", "edges": [{"description": "Secreted staphylococcal coagulase polypeptides confer the coagulase activity phenotype.", "evidence": [{"notes": "McAdow, Missiakas, and Schneewind describe secreted Staphylococcus aureus coagulases that bind to and activate prothrombin.", "reference": "DOI:10.1159/000333447", "snippet": "Clinical isolates of Staphylococcus aureus secrete coagulases, polypeptides that bind to and activate prothrombin"}], "id": "edge-1", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "coagulase_activity_staphylocoagulase", "target": "coagulase_activity_trait"}, {"description": "Coa and vWbp promote non-proteolytic activation of prothrombin and cleavage of fibrinogen.", "evidence": [{"notes": "Cheng et al. demonstrate that Coa and vWbp promote non-proteolytic activation of prothrombin and cleavage of fibrinogen.", "reference": "DOI:10.1371/journal.ppat.1001036", "snippet": "Coa and vWbp promote the non-proteolytic activation of prothrombin and cleavage of fibrinogen"}], "id": "edge-2", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "coagulase_activity_staphylocoagulase", "target": "coagulase_activity_prothrombin_activation"}], "evidence_rows": [{"description": "Secreted staphylococcal coagulase polypeptides confer the coagulase activity phenotype.", "edge_id": "edge-1", "evidence": [{"notes": "McAdow, Missiakas, and Schneewind describe secreted Staphylococcus aureus coagulases that bind to and activate prothrombin.", "reference": "DOI:10.1159/000333447", "snippet": "Clinical isolates of Staphylococcus aureus secrete coagulases, polypeptides that bind to and activate prothrombin"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "staphylocoagulase family protein", "source_grounding": "InterPro:IPR019553", "target": "coagulase activity", "target_grounding": "METPO:1007089"}, {"description": "Coa and vWbp promote non-proteolytic activation of prothrombin and cleavage of fibrinogen.", "edge_id": "edge-2", "evidence": [{"notes": "Cheng et al. demonstrate that Coa and vWbp promote non-proteolytic activation of prothrombin and cleavage of fibrinogen.", "reference": "DOI:10.1371/journal.ppat.1001036", "snippet": "Coa and vWbp promote the non-proteolytic activation of prothrombin and cleavage of fibrinogen"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "staphylocoagulase family protein", "source_grounding": "InterPro:IPR019553", "target": "zymogen activation", "target_grounding": "GO:0031638"}], "graph_id": "coagulase_activity_prothrombin_mechanism", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Non-proteolytic activation of host prothrombin and downstream conversion of fibrinogen to fibrin.", "grounding": "GO:0031638", "id": "coagulase_activity_prothrombin_activation", "is_orphan": false, "label": "zymogen activation", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Secreted staphylococcal coagulase polypeptides (Coa and vWbp) that bind and non-proteolytically activate prothrombin.", "grounding": "InterPro:IPR019553", "id": "coagulase_activity_staphylocoagulase", "is_orphan": false, "label": "staphylocoagulase family protein", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 82, "evidence": [{"notes": "Cheng et al. demonstrate that Staphylococcus aureus Coa (UniProtKB:P07767) promotes non-proteolytic activation of prothrombin and cleavage of fibrinogen.", "reference": "DOI:10.1371/journal.ppat.1001036", "snippet": "Coa and vWbp promote the non-proteolytic activation of prothrombin and cleavage of fibrinogen"}], "gene_symbol": "coa", "protein_label": "Staphylocoagulase", "retrieved_on": "2026-10-21", "role": "Secreted Staphylococcus aureus coagulase (Coa) that binds and non-proteolytically activates host prothrombin to cleave fibrinogen.", "sequence_version": 2, "taxon_id": "NCBITaxon:1280", "taxon_label": "Staphylococcus aureus", "uniprot_id": "UniProtKB:P07767"}], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Physiological enzyme-activity phenotype in which secreted coagulase factors activate prothrombin and clot plasma.", "grounding": "METPO:1007089", "id": "coagulase_activity_trait", "is_orphan": false, "label": "coagulase activity", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 82, "evidence": [{"notes": "Cheng et al. demonstrate that Staphylococcus aureus Coa (UniProtKB:P07767) promotes non-proteolytic activation of prothrombin and cleavage of fibrinogen.", "reference": "DOI:10.1371/journal.ppat.1001036", "snippet": "Coa and vWbp promote the non-proteolytic activation of prothrombin and cleavage of fibrinogen"}], "gene_symbol": "coa", "node_id": "coagulase_activity_staphylocoagulase", "node_label": "staphylocoagulase family protein", "protein_label": "Staphylocoagulase", "retrieved_on": "2026-10-21", "role": "Secreted Staphylococcus aureus coagulase (Coa) that binds and non-proteolytically activates host prothrombin to cleave fibrinogen.", "sequence_version": 2, "taxon_id": "NCBITaxon:1280", "taxon_label": "Staphylococcus aureus", "uniprot_id": "UniProtKB:P07767"}], "scope_notes": "Protein-anchored mechanism backed by DOI:10.1159/000333447 and DOI:10.1371/journal.ppat.1001036, with reviewed Staphylococcus aureus staphylocoagulase Coa (UniProtKB:P07767) curated on the InterPro:IPR019553 coagulase node.", "scope_status": "MECHANISTIC", "title": "Staphylococcal coagulase prothrombin activation and fibrinogen cleavage"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -732,7 +776,7 @@ function renderPathograph(containerId, data) {
       third-party source terms apply
     </div>
     <div>
-      Record as of 2026-10-21 20:01 UTC
+      Record as of 2026-10-21 21:12 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
       · embedding coverage 100.0%

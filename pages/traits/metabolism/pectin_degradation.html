@@ -74,9 +74,9 @@
 
     <div class="card causal-graph-card">
       <h2>Compartmentalized pectin depolymerization and oligogalacturonide catabolism</h2>
-      <p class="meta">Evidence-backed pathway sketch linking extracellular pectin depolymerization and oligogalacturonide formation to the pectin degradation phenotype.</p>
+      <p class="meta">Evidence-backed pathway linking secreted pectate lyase depolymerization of pectin and compartmentalized oligogalacturonide catabolism to the pectin degradation phenotype.</p>
 
-      <p class="graph-scope"><code>NONMECHANISTIC</code> · Compartmentalized pathway sketch backed by DOI:10.1128/MMBR.00038-07 and DOI:10.1146/annurev.micro.50.1.213; individual pectate lyase, polygalacturonase, and intracellular catabolic enzyme nodes with strain-matched UniProtKB accessions remain to be curated.</p>
+      <p class="graph-scope"><code>MECHANISTIC</code> · The taxon-matched protein example anchors the Dickeya dadantii 3937 (Erwinia chrysanthemi 3937) secreted pectate lyase PelA branch of extracellular pectin depolymerization.</p>
 
 
       <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
@@ -114,13 +114,13 @@
           </li>
 
           <li id="pathograph-1-edge-2">
+            <strong>pectate lyase</strong>
+            <a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR002022/" rel="nofollow noreferrer"><code>InterPro:IPR002022</code></a>
+            <span class="edge-predicate">enables</span>
             <strong>pectin catabolic process</strong>
             <a href="https://amigo.geneontology.org/amigo/term/GO:0045490" rel="nofollow noreferrer"><code>GO:0045490</code></a>
-            <span class="edge-predicate">has output</span>
-            <strong>oligogalacturonide</strong>
-            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:62958" rel="nofollow noreferrer"><code>CHEBI:62958</code></a>
-            <a href="http://purl.obolibrary.org/obo/RO_0002234" rel="nofollow noreferrer"><code>RO:0002234</code></a>
-            <p>Extracellular pectin degradation produces oligogalacturonide intermediates that enter intracellular catabolism.</p>
+            <a href="http://purl.obolibrary.org/obo/RO_0002327" rel="nofollow noreferrer"><code>RO:0002327</code></a>
+            <p>Secreted pectate lyase mediates extracellular pectin depolymerization to oligogalacturonides during pectin catabolism.</p>
             <ul>
 
               <li>
@@ -136,6 +136,50 @@
       </div>
 
 
+
+      <div class="protein-examples">
+        <h3>Protein and taxon examples</h3>
+        <div class="protein-example-table-wrap" role="region" tabindex="0" aria-label="Compartmentalized pectin depolymerization and oligogalacturonide catabolism: protein and taxon examples">
+          <table class="protein-example-table">
+            <thead>
+              <tr><th>Graph node</th><th>Protein</th><th>Taxon</th><th>UniProt status</th><th>Role and evidence</th></tr>
+            </thead>
+            <tbody>
+
+              <tr>
+                <td>pectate lyase</td>
+                <td>
+
+                  <a href="https://www.uniprot.org/uniprotkb/P0C1A3/entry" rel="nofollow noreferrer"><code>UniProtKB:P0C1A3</code></a>
+                  <br>Pectate lyase A <span class="meta">(pelA)</span>
+                </td>
+                <td>
+
+                  <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=198628" rel="nofollow noreferrer">Dickeya dadantii (strain 3937)</a>
+                  <br><code>NCBITaxon:198628</code>
+                </td>
+                <td>
+                  <code>REVIEWED</code><br>
+                  <span class="meta">retrieved 2026-10-21 · entry v88 · sequence v1</span>
+                </td>
+                <td>
+                  <p>Secreted pectate lyase A (PelA) in Dickeya dadantii 3937 (Erwinia chrysanthemi 3937) that cleaves extracellular pectin to oligogalacturonides during pectin catabolism.</p>
+                  <ul>
+
+                    <li>
+                      <a href="https://doi.org/10.1146/annurev.micro.50.1.213" rel="nofollow noreferrer"><code>DOI:10.1146/annurev.micro.50.1.213</code></a>
+                      <span class="evidence-snippet">The extracellular degradation of the pectin leads to the formation of oligogalacturonides that are catabolized through an intracellular pathway</span>
+                      <span class="meta">Hugouvieux-Cotte-Pattat et al. review extracellular pectin degradation to oligogalacturonides in E. chrysanthemi 3937 (Dickeya dadantii 3937), exemplified by reviewed pectate lyase PelA (UniProtKB:P0C1A3).</span>
+                    </li>
+
+                  </ul>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
 
     </div>
 
@@ -277,6 +321,31 @@
 
 
 
+    <div class="card" id="canonical-examples">
+      <h2>Canonical examples
+        <span class="meta">(1)</span></h2>
+      <p class="meta">Organisms cited as exemplars of this trait. Taxon ids are
+        NCBITaxon and link out to the NCBI record.</p>
+      <ul class="canonical-examples">
+
+        <li>
+          <em>Dickeya dadantii 3937</em>
+
+
+
+          <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=198628"
+             rel="nofollow noreferrer"><code>NCBITaxon:198628</code></a>
+
+
+
+          <a href="https://doi.org/10.1146/annurev.micro.50.1.213" rel="nofollow noreferrer"><code>DOI:10.1146/annurev.micro.50.1.213</code></a>
+
+          <span class="meta">Hugouvieux-Cotte-Pattat et al. review extracellular pectin depolymerization and intracellular oligogalacturonide catabolism in Erwinia chrysanthemi strain 3937 (now Dickeya dadantii 3937).</span>
+        </li>
+
+      </ul>
+    </div>
+
 
 
 
@@ -291,9 +360,15 @@
         </li>
 
         <li>
-          <time>2026-10-21T20:01:04Z</time> ·
+          <time>2026-10-21T21:12:25Z</time> ·
+          <strong>ADD_CANONICAL_EXAMPLES</strong> · claude
+          <p class="changes">Added source-backed canonical example Dickeya dadantii 3937 (NCBITaxon:198628; DOI:10.1146/annurev.micro.50.1.213) from existing record evidence on Erwinia chrysanthemi strain 3937.</p>
+        </li>
+
+        <li>
+          <time>2026-10-21T21:12:25Z</time> ·
           <strong>CURATE_CAUSAL_GRAPH</strong> · claude
-          <p class="changes">Added NONMECHANISTIC causal_graphs entry (pectin_degradation_catabolic_sketch) anchored on existing verbatim record evidence snippets.</p>
+          <p class="changes">Added MECHANISTIC causal_graphs entry (pectin_degradation_catabolic_sketch) anchored on existing verbatim record evidence snippets.</p>
         </li>
 
       </ol>
@@ -677,7 +752,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed pathway sketch linking extracellular pectin depolymerization and oligogalacturonide formation to the pectin degradation phenotype.", "edges": [{"description": "Compartmentalized catabolism of pectin and its breakdown products confers the pectin degradation trait.", "evidence": [{"notes": "Abbott and Boraston review compartmentalized catabolism of pectin and its breakdown products by pectinolytic bacteria.", "reference": "DOI:10.1128/MMBR.00038-07", "snippet": "Catabolism of pectin and its breakdown products by pectinolytic bacteria occurs within distinct cellular environments"}], "id": "edge-1", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "pectin_degradation_catabolic_process", "target": "pectin_degradation_trait"}, {"description": "Extracellular pectin degradation produces oligogalacturonide intermediates that enter intracellular catabolism.", "evidence": [{"notes": "Hugouvieux-Cotte-Pattat et al. describe extracellular pectin degradation forming oligogalacturonides for intracellular catabolism.", "reference": "DOI:10.1146/annurev.micro.50.1.213", "snippet": "The extracellular degradation of the pectin leads to the formation of oligogalacturonides that are catabolized through an intracellular pathway"}], "id": "edge-2", "is_orphan": false, "predicate": "has output", "predicate_id": "RO:0002234", "source": "pectin_degradation_catabolic_process", "target": "pectin_degradation_oligogalacturonide"}], "evidence_rows": [{"description": "Compartmentalized catabolism of pectin and its breakdown products confers the pectin degradation trait.", "edge_id": "edge-1", "evidence": [{"notes": "Abbott and Boraston review compartmentalized catabolism of pectin and its breakdown products by pectinolytic bacteria.", "reference": "DOI:10.1128/MMBR.00038-07", "snippet": "Catabolism of pectin and its breakdown products by pectinolytic bacteria occurs within distinct cellular environments"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "pectin catabolic process", "source_grounding": "GO:0045490", "target": "pectin degradation", "target_grounding": "traitmech:000135"}, {"description": "Extracellular pectin degradation produces oligogalacturonide intermediates that enter intracellular catabolism.", "edge_id": "edge-2", "evidence": [{"notes": "Hugouvieux-Cotte-Pattat et al. describe extracellular pectin degradation forming oligogalacturonides for intracellular catabolism.", "reference": "DOI:10.1146/annurev.micro.50.1.213", "snippet": "The extracellular degradation of the pectin leads to the formation of oligogalacturonides that are catabolized through an intracellular pathway"}], "predicate": "has output", "predicate_id": "RO:0002234", "source": "pectin catabolic process", "source_grounding": "GO:0045490", "target": "oligogalacturonide", "target_grounding": "CHEBI:62958"}], "graph_id": "pectin_degradation_catabolic_sketch", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Compartmentalized extracellular depolymerization of pectin and intracellular catabolism of breakdown products.", "grounding": "GO:0045490", "id": "pectin_degradation_catabolic_process", "is_orphan": false, "label": "pectin catabolic process", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Oligogalacturonide intermediates released by extracellular pectin degradation and catabolized intracellularly.", "grounding": "CHEBI:62958", "id": "pectin_degradation_oligogalacturonide", "is_orphan": false, "label": "oligogalacturonide", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Biopolymer-degradation metabolism that depolymerizes pectin and catabolizes its breakdown products.", "grounding": "traitmech:000135", "id": "pectin_degradation_trait", "is_orphan": false, "label": "pectin degradation", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "Compartmentalized pathway sketch backed by DOI:10.1128/MMBR.00038-07 and DOI:10.1146/annurev.micro.50.1.213; individual pectate lyase, polygalacturonase, and intracellular catabolic enzyme nodes with strain-matched UniProtKB accessions remain to be curated.", "scope_status": "NONMECHANISTIC", "title": "Compartmentalized pectin depolymerization and oligogalacturonide catabolism"}];
+  var graphs = [{"description": "Evidence-backed pathway linking secreted pectate lyase depolymerization of pectin and compartmentalized oligogalacturonide catabolism to the pectin degradation phenotype.", "edges": [{"description": "Compartmentalized catabolism of pectin and its breakdown products confers the pectin degradation trait.", "evidence": [{"notes": "Abbott and Boraston review compartmentalized catabolism of pectin and its breakdown products by pectinolytic bacteria.", "reference": "DOI:10.1128/MMBR.00038-07", "snippet": "Catabolism of pectin and its breakdown products by pectinolytic bacteria occurs within distinct cellular environments"}], "id": "edge-1", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "pectin_degradation_catabolic_process", "target": "pectin_degradation_trait"}, {"description": "Secreted pectate lyase mediates extracellular pectin depolymerization to oligogalacturonides during pectin catabolism.", "evidence": [{"notes": "Hugouvieux-Cotte-Pattat et al. describe extracellular pectin degradation forming oligogalacturonides for intracellular catabolism.", "reference": "DOI:10.1146/annurev.micro.50.1.213", "snippet": "The extracellular degradation of the pectin leads to the formation of oligogalacturonides that are catabolized through an intracellular pathway"}], "id": "edge-2", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "pectin_degradation_pectate_lyase", "target": "pectin_degradation_catabolic_process"}], "evidence_rows": [{"description": "Compartmentalized catabolism of pectin and its breakdown products confers the pectin degradation trait.", "edge_id": "edge-1", "evidence": [{"notes": "Abbott and Boraston review compartmentalized catabolism of pectin and its breakdown products by pectinolytic bacteria.", "reference": "DOI:10.1128/MMBR.00038-07", "snippet": "Catabolism of pectin and its breakdown products by pectinolytic bacteria occurs within distinct cellular environments"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "pectin catabolic process", "source_grounding": "GO:0045490", "target": "pectin degradation", "target_grounding": "traitmech:000135"}, {"description": "Secreted pectate lyase mediates extracellular pectin depolymerization to oligogalacturonides during pectin catabolism.", "edge_id": "edge-2", "evidence": [{"notes": "Hugouvieux-Cotte-Pattat et al. describe extracellular pectin degradation forming oligogalacturonides for intracellular catabolism.", "reference": "DOI:10.1146/annurev.micro.50.1.213", "snippet": "The extracellular degradation of the pectin leads to the formation of oligogalacturonides that are catabolized through an intracellular pathway"}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "pectate lyase", "source_grounding": "InterPro:IPR002022", "target": "pectin catabolic process", "target_grounding": "GO:0045490"}], "graph_id": "pectin_degradation_catabolic_sketch", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Compartmentalized extracellular depolymerization of pectin to oligogalacturonides and intracellular catabolism of breakdown products.", "grounding": "GO:0045490", "id": "pectin_degradation_catabolic_process", "is_orphan": false, "label": "pectin catabolic process", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Secreted pectate lyase (Pel) that cleaves extracellular pectin to oligogalacturonide intermediates.", "grounding": "InterPro:IPR002022", "id": "pectin_degradation_pectate_lyase", "is_orphan": false, "label": "pectate lyase", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 88, "evidence": [{"notes": "Hugouvieux-Cotte-Pattat et al. review extracellular pectin degradation to oligogalacturonides in E. chrysanthemi 3937 (Dickeya dadantii 3937), exemplified by reviewed pectate lyase PelA (UniProtKB:P0C1A3).", "reference": "DOI:10.1146/annurev.micro.50.1.213", "snippet": "The extracellular degradation of the pectin leads to the formation of oligogalacturonides that are catabolized through an intracellular pathway"}], "gene_symbol": "pelA", "protein_label": "Pectate lyase A", "proteome_id": "UP000006859", "retrieved_on": "2026-10-21", "role": "Secreted pectate lyase A (PelA) in Dickeya dadantii 3937 (Erwinia chrysanthemi 3937) that cleaves extracellular pectin to oligogalacturonides during pectin catabolism.", "sequence_version": 1, "taxon_id": "NCBITaxon:198628", "taxon_label": "Dickeya dadantii (strain 3937)", "uniprot_id": "UniProtKB:P0C1A3"}], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Biopolymer-degradation metabolism that depolymerizes pectin and catabolizes its breakdown products.", "grounding": "traitmech:000135", "id": "pectin_degradation_trait", "is_orphan": false, "label": "pectin degradation", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 88, "evidence": [{"notes": "Hugouvieux-Cotte-Pattat et al. review extracellular pectin degradation to oligogalacturonides in E. chrysanthemi 3937 (Dickeya dadantii 3937), exemplified by reviewed pectate lyase PelA (UniProtKB:P0C1A3).", "reference": "DOI:10.1146/annurev.micro.50.1.213", "snippet": "The extracellular degradation of the pectin leads to the formation of oligogalacturonides that are catabolized through an intracellular pathway"}], "gene_symbol": "pelA", "node_id": "pectin_degradation_pectate_lyase", "node_label": "pectate lyase", "protein_label": "Pectate lyase A", "proteome_id": "UP000006859", "retrieved_on": "2026-10-21", "role": "Secreted pectate lyase A (PelA) in Dickeya dadantii 3937 (Erwinia chrysanthemi 3937) that cleaves extracellular pectin to oligogalacturonides during pectin catabolism.", "sequence_version": 1, "taxon_id": "NCBITaxon:198628", "taxon_label": "Dickeya dadantii (strain 3937)", "uniprot_id": "UniProtKB:P0C1A3"}], "scope_notes": "The taxon-matched protein example anchors the Dickeya dadantii 3937 (Erwinia chrysanthemi 3937) secreted pectate lyase PelA branch of extracellular pectin depolymerization.", "scope_status": "MECHANISTIC", "title": "Compartmentalized pectin depolymerization and oligogalacturonide catabolism"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -707,7 +782,7 @@ function renderPathograph(containerId, data) {
       third-party source terms apply
     </div>
     <div>
-      Record as of 2026-10-21 20:01 UTC
+      Record as of 2026-10-21 21:12 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
       · embedding coverage 100.0%

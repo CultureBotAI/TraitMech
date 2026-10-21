@@ -58,7 +58,7 @@ curation_history:
     of its source sentence after PR review requested stricter snippet verification;
     resolves issue 852.
   llm_assisted: true
-- timestamp: '2026-10-21T20:01:04Z'
+- timestamp: '2026-10-21T21:12:25Z'
   curator: claude
   action: CURATE_CAUSAL_GRAPH
   changes: Added NONMECHANISTIC causal_graphs entry (magnetotaxis_magnetosome_navigation_sketch)

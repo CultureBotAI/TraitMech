@@ -74,9 +74,9 @@
 
     <div class="card causal-graph-card">
       <h2>Capnophilic elevated-CO2 requirement and CanB contribution</h2>
-      <p class="meta">Evidence-backed causal sketch linking the capnophilic growth phenotype to elevated environmental carbon dioxide and beta-class carbonic anhydrase CanB.</p>
+      <p class="meta">Evidence-backed causal mechanism linking the capnophilic growth phenotype to elevated environmental carbon dioxide and beta-class carbonic anhydrase CanB.</p>
 
-      <p class="graph-scope"><code>NONMECHANISTIC</code> · Source-backed phenotype and CanB genetic-contribution sketch from DOI:10.1111/1462-2920.13092; a reviewed strain-matched UniProtKB accession for Campylobacter jejuni CanB is not yet curated on this node.</p>
+      <p class="graph-scope"><code>MECHANISTIC</code> · The taxon-matched protein example anchors the Campylobacter jejuni NCTC 11168 CanB (Cj0237/CynT) beta-carbonic anhydrase branch; it is not presented as a universal mechanism for every capnophilic organism.</p>
 
 
       <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
@@ -115,7 +115,7 @@
 
           <li id="pathograph-1-edge-2">
             <strong>beta-carbonic anhydrase CanB</strong>
-            <a href="https://amigo.geneontology.org/amigo/term/GO:0004089" rel="nofollow noreferrer"><code>GO:0004089</code></a>
+            <a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR001765/" rel="nofollow noreferrer"><code>InterPro:IPR001765</code></a>
             <span class="edge-predicate">contributes to</span>
             <strong>capnophilic</strong>
             <a href="https://w3id.org/metpo/1005021" rel="nofollow noreferrer"><code>METPO:1005021</code></a>
@@ -136,6 +136,50 @@
       </div>
 
 
+
+      <div class="protein-examples">
+        <h3>Protein and taxon examples</h3>
+        <div class="protein-example-table-wrap" role="region" tabindex="0" aria-label="Capnophilic elevated-CO2 requirement and CanB contribution: protein and taxon examples">
+          <table class="protein-example-table">
+            <thead>
+              <tr><th>Graph node</th><th>Protein</th><th>Taxon</th><th>UniProt status</th><th>Role and evidence</th></tr>
+            </thead>
+            <tbody>
+
+              <tr>
+                <td>beta-carbonic anhydrase CanB</td>
+                <td>
+
+                  <a href="https://www.uniprot.org/uniprotkb/Q0PBR7/entry" rel="nofollow noreferrer"><code>UniProtKB:Q0PBR7</code></a>
+                  <br>Carbonic anhydrase <span class="meta">(cynT)</span>
+                </td>
+                <td>
+
+                  <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=192222" rel="nofollow noreferrer">Campylobacter jejuni subsp. jejuni serotype O:2 (strain ATCC 700819 / NCTC 11168)</a>
+                  <br><code>NCBITaxon:192222</code>
+                </td>
+                <td>
+                  <code>UNREVIEWED</code><br>
+                  <span class="meta">retrieved 2026-10-21 · entry v98 · sequence v1</span>
+                </td>
+                <td>
+                  <p>Cytoplasmic beta-carbonic anhydrase CanB (Cj0237/CynT) that is a major contributor to the capnophilic growth phenotype of Campylobacter jejuni NCTC 11168.</p>
+                  <ul>
+
+                    <li>
+                      <a href="https://doi.org/10.1111/1462-2920.13092" rel="nofollow noreferrer"><code>DOI:10.1111/1462-2920.13092</code></a>
+                      <span class="evidence-snippet">Taken together, our data suggest CanB is a major contributor to the capnophilic growth phenotype of C. jejuni.</span>
+                      <span class="meta">Al-Haideri et al. establish that CanB (Cj0237, UniProtKB:Q0PBR7) is a major contributor to the capnophilic growth phenotype of C. jejuni NCTC 11168.</span>
+                    </li>
+
+                  </ul>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
 
     </div>
 
@@ -300,9 +344,9 @@
         </li>
 
         <li>
-          <time>2026-10-21T20:01:04Z</time> ·
+          <time>2026-10-21T21:12:24Z</time> ·
           <strong>CURATE_CAUSAL_GRAPH</strong> · claude
-          <p class="changes">Added NONMECHANISTIC causal_graphs entry (capnophilic_co2_canb_sketch) anchored on existing verbatim record evidence snippets.</p>
+          <p class="changes">Added MECHANISTIC causal_graphs entry (capnophilic_co2_canb_sketch) anchored on existing verbatim record evidence snippets.</p>
         </li>
 
       </ol>
@@ -686,7 +730,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed causal sketch linking the capnophilic growth phenotype to elevated environmental carbon dioxide and beta-class carbonic anhydrase CanB.", "edges": [{"description": "Capnophilic growth depends on elevated environmental carbon dioxide concentrations.", "evidence": [{"notes": "Al-Haideri et al. establish that capnophilic Campylobacter jejuni requires high environmental carbon dioxide for optimum growth.", "reference": "DOI:10.1111/1462-2920.13092", "snippet": "Campylobacter jejuni, the leading cause of human bacterial gastroenteritis, requires low environmental oxygen and high carbon dioxide for optimum growth"}], "id": "edge-1", "is_orphan": false, "predicate": "depends on", "predicate_id": "RO:0002502", "source": "capnophilic_trait", "target": "capnophilic_carbon_dioxide"}, {"description": "Beta-carbonic anhydrase CanB contributes to the capnophilic growth phenotype.", "evidence": [{"notes": "Al-Haideri et al. show that CanB is a major contributor to the capnophilic growth phenotype of C. jejuni.", "reference": "DOI:10.1111/1462-2920.13092", "snippet": "Taken together, our data suggest CanB is a major contributor to the capnophilic growth phenotype of C. jejuni."}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "capnophilic_canb_carbonic_anhydrase", "target": "capnophilic_trait"}], "evidence_rows": [{"description": "Capnophilic growth depends on elevated environmental carbon dioxide concentrations.", "edge_id": "edge-1", "evidence": [{"notes": "Al-Haideri et al. establish that capnophilic Campylobacter jejuni requires high environmental carbon dioxide for optimum growth.", "reference": "DOI:10.1111/1462-2920.13092", "snippet": "Campylobacter jejuni, the leading cause of human bacterial gastroenteritis, requires low environmental oxygen and high carbon dioxide for optimum growth"}], "predicate": "depends on", "predicate_id": "RO:0002502", "source": "capnophilic", "source_grounding": "METPO:1005021", "target": "carbon dioxide", "target_grounding": "CHEBI:16526"}, {"description": "Beta-carbonic anhydrase CanB contributes to the capnophilic growth phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Al-Haideri et al. show that CanB is a major contributor to the capnophilic growth phenotype of C. jejuni.", "reference": "DOI:10.1111/1462-2920.13092", "snippet": "Taken together, our data suggest CanB is a major contributor to the capnophilic growth phenotype of C. jejuni."}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "beta-carbonic anhydrase CanB", "source_grounding": "GO:0004089", "target": "capnophilic", "target_grounding": "METPO:1005021"}], "graph_id": "capnophilic_co2_canb_sketch", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Beta-class carbonic anhydrase (carbonate dehydratase activity) contributing to capnophilic growth in Campylobacter jejuni.", "grounding": "GO:0004089", "id": "capnophilic_canb_carbonic_anhydrase", "is_orphan": false, "label": "beta-carbonic anhydrase CanB", "node_type": "GENE_OR_PROTEIN", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Elevated environmental carbon dioxide required for optimal capnophilic growth.", "grounding": "CHEBI:16526", "id": "capnophilic_carbon_dioxide", "is_orphan": false, "label": "carbon dioxide", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Requirement for elevated carbon dioxide concentrations for optimal microbial growth.", "grounding": "METPO:1005021", "id": "capnophilic_trait", "is_orphan": false, "label": "capnophilic", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "Source-backed phenotype and CanB genetic-contribution sketch from DOI:10.1111/1462-2920.13092; a reviewed strain-matched UniProtKB accession for Campylobacter jejuni CanB is not yet curated on this node.", "scope_status": "NONMECHANISTIC", "title": "Capnophilic elevated-CO2 requirement and CanB contribution"}];
+  var graphs = [{"description": "Evidence-backed causal mechanism linking the capnophilic growth phenotype to elevated environmental carbon dioxide and beta-class carbonic anhydrase CanB.", "edges": [{"description": "Capnophilic growth depends on elevated environmental carbon dioxide concentrations.", "evidence": [{"notes": "Al-Haideri et al. establish that capnophilic Campylobacter jejuni requires high environmental carbon dioxide for optimum growth.", "reference": "DOI:10.1111/1462-2920.13092", "snippet": "Campylobacter jejuni, the leading cause of human bacterial gastroenteritis, requires low environmental oxygen and high carbon dioxide for optimum growth"}], "id": "edge-1", "is_orphan": false, "predicate": "depends on", "predicate_id": "RO:0002502", "source": "capnophilic_trait", "target": "capnophilic_carbon_dioxide"}, {"description": "Beta-carbonic anhydrase CanB contributes to the capnophilic growth phenotype.", "evidence": [{"notes": "Al-Haideri et al. show that CanB is a major contributor to the capnophilic growth phenotype of C. jejuni.", "reference": "DOI:10.1111/1462-2920.13092", "snippet": "Taken together, our data suggest CanB is a major contributor to the capnophilic growth phenotype of C. jejuni."}], "id": "edge-2", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "capnophilic_canb_carbonic_anhydrase", "target": "capnophilic_trait"}], "evidence_rows": [{"description": "Capnophilic growth depends on elevated environmental carbon dioxide concentrations.", "edge_id": "edge-1", "evidence": [{"notes": "Al-Haideri et al. establish that capnophilic Campylobacter jejuni requires high environmental carbon dioxide for optimum growth.", "reference": "DOI:10.1111/1462-2920.13092", "snippet": "Campylobacter jejuni, the leading cause of human bacterial gastroenteritis, requires low environmental oxygen and high carbon dioxide for optimum growth"}], "predicate": "depends on", "predicate_id": "RO:0002502", "source": "capnophilic", "source_grounding": "METPO:1005021", "target": "carbon dioxide", "target_grounding": "CHEBI:16526"}, {"description": "Beta-carbonic anhydrase CanB contributes to the capnophilic growth phenotype.", "edge_id": "edge-2", "evidence": [{"notes": "Al-Haideri et al. show that CanB is a major contributor to the capnophilic growth phenotype of C. jejuni.", "reference": "DOI:10.1111/1462-2920.13092", "snippet": "Taken together, our data suggest CanB is a major contributor to the capnophilic growth phenotype of C. jejuni."}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "beta-carbonic anhydrase CanB", "source_grounding": "InterPro:IPR001765", "target": "capnophilic", "target_grounding": "METPO:1005021"}], "graph_id": "capnophilic_co2_canb_sketch", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Beta-class carbonic anhydrase (CanB/Cj0237) contributing to capnophilic growth in Campylobacter jejuni.", "grounding": "InterPro:IPR001765", "id": "capnophilic_canb_carbonic_anhydrase", "is_orphan": false, "label": "beta-carbonic anhydrase CanB", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "UNREVIEWED", "entry_version": 98, "evidence": [{"notes": "Al-Haideri et al. establish that CanB (Cj0237, UniProtKB:Q0PBR7) is a major contributor to the capnophilic growth phenotype of C. jejuni NCTC 11168.", "reference": "DOI:10.1111/1462-2920.13092", "snippet": "Taken together, our data suggest CanB is a major contributor to the capnophilic growth phenotype of C. jejuni."}], "gene_symbol": "cynT", "protein_label": "Carbonic anhydrase", "proteome_id": "UP000000799", "retrieved_on": "2026-10-21", "role": "Cytoplasmic beta-carbonic anhydrase CanB (Cj0237/CynT) that is a major contributor to the capnophilic growth phenotype of Campylobacter jejuni NCTC 11168.", "sequence_version": 1, "taxon_id": "NCBITaxon:192222", "taxon_label": "Campylobacter jejuni subsp. jejuni serotype O:2 (strain ATCC 700819 / NCTC 11168)", "uniprot_id": "UniProtKB:Q0PBR7"}], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Elevated environmental carbon dioxide required for optimal capnophilic growth.", "grounding": "CHEBI:16526", "id": "capnophilic_carbon_dioxide", "is_orphan": false, "label": "carbon dioxide", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Requirement for elevated carbon dioxide concentrations for optimal microbial growth.", "grounding": "METPO:1005021", "id": "capnophilic_trait", "is_orphan": false, "label": "capnophilic", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "UNREVIEWED", "entry_version": 98, "evidence": [{"notes": "Al-Haideri et al. establish that CanB (Cj0237, UniProtKB:Q0PBR7) is a major contributor to the capnophilic growth phenotype of C. jejuni NCTC 11168.", "reference": "DOI:10.1111/1462-2920.13092", "snippet": "Taken together, our data suggest CanB is a major contributor to the capnophilic growth phenotype of C. jejuni."}], "gene_symbol": "cynT", "node_id": "capnophilic_canb_carbonic_anhydrase", "node_label": "beta-carbonic anhydrase CanB", "protein_label": "Carbonic anhydrase", "proteome_id": "UP000000799", "retrieved_on": "2026-10-21", "role": "Cytoplasmic beta-carbonic anhydrase CanB (Cj0237/CynT) that is a major contributor to the capnophilic growth phenotype of Campylobacter jejuni NCTC 11168.", "sequence_version": 1, "taxon_id": "NCBITaxon:192222", "taxon_label": "Campylobacter jejuni subsp. jejuni serotype O:2 (strain ATCC 700819 / NCTC 11168)", "uniprot_id": "UniProtKB:Q0PBR7"}], "scope_notes": "The taxon-matched protein example anchors the Campylobacter jejuni NCTC 11168 CanB (Cj0237/CynT) beta-carbonic anhydrase branch; it is not presented as a universal mechanism for every capnophilic organism.", "scope_status": "MECHANISTIC", "title": "Capnophilic elevated-CO2 requirement and CanB contribution"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -716,7 +760,7 @@ function renderPathograph(containerId, data) {
       third-party source terms apply
     </div>
     <div>
-      Record as of 2026-10-21 20:01 UTC
+      Record as of 2026-10-21 21:12 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
       · embedding coverage 100.0%

@@ -79,10 +79,10 @@
 
 
     <div class="card causal-graph-card">
-      <h2>Ribosomal bacteriocin biosynthesis and antibacterial defense</h2>
-      <p class="meta">Evidence-backed physiological sketch linking ribosomal bacteriocin synthesis to bacteriocin production and microbial defense against competing bacteria.</p>
+      <h2>Ribosomal bacteriocin peptide production and antibacterial defense</h2>
+      <p class="meta">Evidence-backed physiological mechanism linking ribosomally synthesized bacteriocin peptides to the bacteriocin production trait and microbial defense against competing bacteria.</p>
 
-      <p class="graph-scope"><code>NONMECHANISTIC</code> · Process-level physiological sketch backed by DOI:10.3389/fmicb.2016.00461 and DOI:10.1146/annurev.micro.56.012302.161024; specific precursor-peptide and biosynthetic-machinery UniProtKB examples (such as NisA/NisB/NisC in Lactococcus lactis) remain to be curated.</p>
+      <p class="graph-scope"><code>MECHANISTIC</code> · Peptide-anchored mechanism backed by DOI:10.3389/fmicb.2016.00461 and DOI:10.1146/annurev.micro.56.012302.161024, with reviewed Lactococcus lactis subsp. lactis lantibiotic nisin-A (UniProtKB:P13068) curated on the InterPro:IPR006079 bacteriocin peptide node.</p>
 
 
       <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
@@ -90,7 +90,7 @@
       <div class="pathograph-container" id="pathograph-1">
         <div class="pathograph-legend" id="pathograph-1-legend"></div>
         <svg id="pathograph-1-svg" role="img">
-          <title>Ribosomal bacteriocin biosynthesis and antibacterial defense</title>
+          <title>Ribosomal bacteriocin peptide production and antibacterial defense</title>
           <desc>Interactive directed graph showing evidence-backed causal relationships for bacteriocin production.</desc>
         </svg>
         <div class="pathograph-tooltip" id="pathograph-1-tooltip"></div>
@@ -101,13 +101,13 @@
         <ul>
 
           <li id="pathograph-1-edge-1">
-            <strong>bacteriocin biosynthetic process</strong>
-            <a href="https://amigo.geneontology.org/amigo/term/GO:0030152" rel="nofollow noreferrer"><code>GO:0030152</code></a>
+            <strong>Lantibiotic type-A</strong>
+            <a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR006079/" rel="nofollow noreferrer"><code>InterPro:IPR006079</code></a>
             <span class="edge-predicate">confers</span>
             <strong>bacteriocin production</strong>
             <code>traitmech:000183</code>
             <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
-            <p>Ribosomal synthesis of antimicrobial bacteriocin peptides confers the bacteriocin production trait.</p>
+            <p>Ribosomally synthesized antimicrobial bacteriocin peptides confer the bacteriocin production trait.</p>
             <ul>
 
               <li>
@@ -120,13 +120,13 @@
           </li>
 
           <li id="pathograph-1-edge-2">
-            <strong>bacteriocin biosynthetic process</strong>
-            <a href="https://amigo.geneontology.org/amigo/term/GO:0030152" rel="nofollow noreferrer"><code>GO:0030152</code></a>
+            <strong>Lantibiotic type-A</strong>
+            <a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR006079/" rel="nofollow noreferrer"><code>InterPro:IPR006079</code></a>
             <span class="edge-predicate">enables</span>
             <strong>defense response to bacterium</strong>
             <a href="https://amigo.geneontology.org/amigo/term/GO:0042742" rel="nofollow noreferrer"><code>GO:0042742</code></a>
             <a href="http://purl.obolibrary.org/obo/RO_0002327" rel="nofollow noreferrer"><code>RO:0002327</code></a>
-            <p>Bacteriocin production functions as a microbial defense system against other bacteria.</p>
+            <p>Bacteriocin peptides function as microbial defense systems against competing bacteria.</p>
             <ul>
 
               <li>
@@ -142,6 +142,50 @@
       </div>
 
 
+
+      <div class="protein-examples">
+        <h3>Protein and taxon examples</h3>
+        <div class="protein-example-table-wrap" role="region" tabindex="0" aria-label="Ribosomal bacteriocin peptide production and antibacterial defense: protein and taxon examples">
+          <table class="protein-example-table">
+            <thead>
+              <tr><th>Graph node</th><th>Protein</th><th>Taxon</th><th>UniProt status</th><th>Role and evidence</th></tr>
+            </thead>
+            <tbody>
+
+              <tr>
+                <td>Lantibiotic type-A</td>
+                <td>
+
+                  <a href="https://www.uniprot.org/uniprotkb/P13068/entry" rel="nofollow noreferrer"><code>UniProtKB:P13068</code></a>
+                  <br>Lantibiotic nisin-A <span class="meta">(spaN)</span>
+                </td>
+                <td>
+
+                  <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1360" rel="nofollow noreferrer">Lactococcus lactis subsp. lactis</a>
+                  <br><code>NCBITaxon:1360</code>
+                </td>
+                <td>
+                  <code>REVIEWED</code><br>
+                  <span class="meta">retrieved 2026-10-21 · entry v93 · sequence v1</span>
+                </td>
+                <td>
+                  <p>Ribosomally synthesized class I lantibiotic bacteriocin peptide produced by Lactococcus lactis subsp. lactis.</p>
+                  <ul>
+
+                    <li>
+                      <a href="https://doi.org/10.3389/fmicb.2016.00461" rel="nofollow noreferrer"><code>DOI:10.3389/fmicb.2016.00461</code></a>
+                      <span class="evidence-snippet">Bacteriocins are ribosomally synthesized antimicrobial peptides produced by bacteria, which have the ability to kill or inhibit other bacteria.</span>
+                      <span class="meta">Rea et al. define bacteriocins as ribosomally synthesized antimicrobial peptides produced by bacteria, exemplified by Lactococcus lactis nisin-A (UniProtKB:P13068).</span>
+                    </li>
+
+                  </ul>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
 
     </div>
 
@@ -313,9 +357,9 @@
         </li>
 
         <li>
-          <time>2026-10-21T20:01:04Z</time> ·
+          <time>2026-10-21T21:12:25Z</time> ·
           <strong>CURATE_CAUSAL_GRAPH</strong> · claude
-          <p class="changes">Added NONMECHANISTIC causal_graphs entry (bacteriocin_production_defense_sketch) anchored on existing verbatim record evidence snippets.</p>
+          <p class="changes">Added MECHANISTIC causal_graphs entry (bacteriocin_production_defense_mechanism) anchored on existing verbatim record evidence snippets.</p>
         </li>
 
       </ol>
@@ -699,7 +743,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed physiological sketch linking ribosomal bacteriocin synthesis to bacteriocin production and microbial defense against competing bacteria.", "edges": [{"description": "Ribosomal synthesis of antimicrobial bacteriocin peptides confers the bacteriocin production trait.", "evidence": [{"notes": "Rea et al. define bacteriocins as ribosomally synthesized antimicrobial peptides produced by bacteria.", "reference": "DOI:10.3389/fmicb.2016.00461", "snippet": "Bacteriocins are ribosomally synthesized antimicrobial peptides produced by bacteria, which have the ability to kill or inhibit other bacteria."}], "id": "edge-1", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "bacteriocin_production_biosynthesis", "target": "bacteriocin_production_trait"}, {"description": "Bacteriocin production functions as a microbial defense system against other bacteria.", "evidence": [{"notes": "Riley and Wertz characterize bacteriocins as an abundant and diverse family of microbial defense systems.", "reference": "DOI:10.1146/annurev.micro.56.012302.161024", "snippet": "the most abundant and diverse family of microbial defense systems: the bacteriocins."}], "id": "edge-2", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "bacteriocin_production_biosynthesis", "target": "bacteriocin_production_antibacterial_defense"}], "evidence_rows": [{"description": "Ribosomal synthesis of antimicrobial bacteriocin peptides confers the bacteriocin production trait.", "edge_id": "edge-1", "evidence": [{"notes": "Rea et al. define bacteriocins as ribosomally synthesized antimicrobial peptides produced by bacteria.", "reference": "DOI:10.3389/fmicb.2016.00461", "snippet": "Bacteriocins are ribosomally synthesized antimicrobial peptides produced by bacteria, which have the ability to kill or inhibit other bacteria."}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "bacteriocin biosynthetic process", "source_grounding": "GO:0030152", "target": "bacteriocin production", "target_grounding": "traitmech:000183"}, {"description": "Bacteriocin production functions as a microbial defense system against other bacteria.", "edge_id": "edge-2", "evidence": [{"notes": "Riley and Wertz characterize bacteriocins as an abundant and diverse family of microbial defense systems.", "reference": "DOI:10.1146/annurev.micro.56.012302.161024", "snippet": "the most abundant and diverse family of microbial defense systems: the bacteriocins."}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "bacteriocin biosynthetic process", "source_grounding": "GO:0030152", "target": "defense response to bacterium", "target_grounding": "GO:0042742"}], "graph_id": "bacteriocin_production_defense_sketch", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Microbial defense function killing or inhibiting competing bacteria.", "grounding": "GO:0042742", "id": "bacteriocin_production_antibacterial_defense", "is_orphan": false, "label": "defense response to bacterium", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Ribosomal synthesis of antimicrobial bacteriocin peptides by bacteria.", "grounding": "GO:0030152", "id": "bacteriocin_production_biosynthesis", "is_orphan": false, "label": "bacteriocin biosynthetic process", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Physiological trait in which bacteria synthesize antimicrobial bacteriocin peptides or proteins.", "grounding": "traitmech:000183", "id": "bacteriocin_production_trait", "is_orphan": false, "label": "bacteriocin production", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "Process-level physiological sketch backed by DOI:10.3389/fmicb.2016.00461 and DOI:10.1146/annurev.micro.56.012302.161024; specific precursor-peptide and biosynthetic-machinery UniProtKB examples (such as NisA/NisB/NisC in Lactococcus lactis) remain to be curated.", "scope_status": "NONMECHANISTIC", "title": "Ribosomal bacteriocin biosynthesis and antibacterial defense"}];
+  var graphs = [{"description": "Evidence-backed physiological mechanism linking ribosomally synthesized bacteriocin peptides to the bacteriocin production trait and microbial defense against competing bacteria.", "edges": [{"description": "Ribosomally synthesized antimicrobial bacteriocin peptides confer the bacteriocin production trait.", "evidence": [{"notes": "Rea et al. define bacteriocins as ribosomally synthesized antimicrobial peptides produced by bacteria.", "reference": "DOI:10.3389/fmicb.2016.00461", "snippet": "Bacteriocins are ribosomally synthesized antimicrobial peptides produced by bacteria, which have the ability to kill or inhibit other bacteria."}], "id": "edge-1", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "bacteriocin_production_lantibiotic", "target": "bacteriocin_production_trait"}, {"description": "Bacteriocin peptides function as microbial defense systems against competing bacteria.", "evidence": [{"notes": "Riley and Wertz characterize bacteriocins as an abundant and diverse family of microbial defense systems.", "reference": "DOI:10.1146/annurev.micro.56.012302.161024", "snippet": "the most abundant and diverse family of microbial defense systems: the bacteriocins."}], "id": "edge-2", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "bacteriocin_production_lantibiotic", "target": "bacteriocin_production_antibacterial_defense"}], "evidence_rows": [{"description": "Ribosomally synthesized antimicrobial bacteriocin peptides confer the bacteriocin production trait.", "edge_id": "edge-1", "evidence": [{"notes": "Rea et al. define bacteriocins as ribosomally synthesized antimicrobial peptides produced by bacteria.", "reference": "DOI:10.3389/fmicb.2016.00461", "snippet": "Bacteriocins are ribosomally synthesized antimicrobial peptides produced by bacteria, which have the ability to kill or inhibit other bacteria."}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "Lantibiotic type-A", "source_grounding": "InterPro:IPR006079", "target": "bacteriocin production", "target_grounding": "traitmech:000183"}, {"description": "Bacteriocin peptides function as microbial defense systems against competing bacteria.", "edge_id": "edge-2", "evidence": [{"notes": "Riley and Wertz characterize bacteriocins as an abundant and diverse family of microbial defense systems.", "reference": "DOI:10.1146/annurev.micro.56.012302.161024", "snippet": "the most abundant and diverse family of microbial defense systems: the bacteriocins."}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "Lantibiotic type-A", "source_grounding": "InterPro:IPR006079", "target": "defense response to bacterium", "target_grounding": "GO:0042742"}], "graph_id": "bacteriocin_production_defense_mechanism", "issues": [], "nodes": [{"color": "#ecfccb", "description": "Microbial defense function killing or inhibiting competing bacteria.", "grounding": "GO:0042742", "id": "bacteriocin_production_antibacterial_defense", "is_orphan": false, "label": "defense response to bacterium", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Ribosomally synthesized antimicrobial bacteriocin peptide family exemplified by Lactococcus lactis nisin-A.", "grounding": "InterPro:IPR006079", "id": "bacteriocin_production_lantibiotic", "is_orphan": false, "label": "Lantibiotic type-A", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 93, "evidence": [{"notes": "Rea et al. define bacteriocins as ribosomally synthesized antimicrobial peptides produced by bacteria, exemplified by Lactococcus lactis nisin-A (UniProtKB:P13068).", "reference": "DOI:10.3389/fmicb.2016.00461", "snippet": "Bacteriocins are ribosomally synthesized antimicrobial peptides produced by bacteria, which have the ability to kill or inhibit other bacteria."}], "gene_symbol": "spaN", "protein_label": "Lantibiotic nisin-A", "retrieved_on": "2026-10-21", "role": "Ribosomally synthesized class I lantibiotic bacteriocin peptide produced by Lactococcus lactis subsp. lactis.", "sequence_version": 1, "taxon_id": "NCBITaxon:1360", "taxon_label": "Lactococcus lactis subsp. lactis", "uniprot_id": "UniProtKB:P13068"}], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Physiological trait in which bacteria synthesize antimicrobial bacteriocin peptides or proteins.", "grounding": "traitmech:000183", "id": "bacteriocin_production_trait", "is_orphan": false, "label": "bacteriocin production", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 93, "evidence": [{"notes": "Rea et al. define bacteriocins as ribosomally synthesized antimicrobial peptides produced by bacteria, exemplified by Lactococcus lactis nisin-A (UniProtKB:P13068).", "reference": "DOI:10.3389/fmicb.2016.00461", "snippet": "Bacteriocins are ribosomally synthesized antimicrobial peptides produced by bacteria, which have the ability to kill or inhibit other bacteria."}], "gene_symbol": "spaN", "node_id": "bacteriocin_production_lantibiotic", "node_label": "Lantibiotic type-A", "protein_label": "Lantibiotic nisin-A", "retrieved_on": "2026-10-21", "role": "Ribosomally synthesized class I lantibiotic bacteriocin peptide produced by Lactococcus lactis subsp. lactis.", "sequence_version": 1, "taxon_id": "NCBITaxon:1360", "taxon_label": "Lactococcus lactis subsp. lactis", "uniprot_id": "UniProtKB:P13068"}], "scope_notes": "Peptide-anchored mechanism backed by DOI:10.3389/fmicb.2016.00461 and DOI:10.1146/annurev.micro.56.012302.161024, with reviewed Lactococcus lactis subsp. lactis lantibiotic nisin-A (UniProtKB:P13068) curated on the InterPro:IPR006079 bacteriocin peptide node.", "scope_status": "MECHANISTIC", "title": "Ribosomal bacteriocin peptide production and antibacterial defense"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -729,7 +773,7 @@ function renderPathograph(containerId, data) {
       third-party source terms apply
     </div>
     <div>
-      Record as of 2026-10-21 20:01 UTC
+      Record as of 2026-10-21 21:12 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
       · embedding coverage 100.0%

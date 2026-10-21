@@ -19,7 +19,7 @@ curation_history:
     lateral-flagella evidence after a repository-wide duplicate review covering ignored
     and hidden files.
   llm_assisted: true
-- timestamp: '2026-10-21T20:01:04Z'
+- timestamp: '2026-10-21T21:12:25Z'
   curator: claude
   action: CURATE_CAUSAL_GRAPH
   changes: Added NONMECHANISTIC causal_graphs entry (lateral_flagellation_swarming_sketch)
@@ -61,9 +61,10 @@ causal_graphs:
   description: Evidence-backed causal sketch linking proton-driven lateral flagella
     to the lateral flagellation morphology and surface swarming motility.
   scope_status: NONMECHANISTIC
-  scope_notes: Organelle-and-motility phenotype sketch backed by DOI:10.1111/j.1574-6968.2006.00403.x,
-    DOI:10.1128/jb.167.1.210-218.1986, and DOI:10.1128/jb.185.15.4508-4518.2003; LafA/LafTU
-    protein subunits with strain-matched UniProtKB accessions remain to be curated.
+  scope_notes: Morphological arrangement descriptor spanning multiple bacterial lineages
+    (DOI:10.1111/j.1574-6968.2006.00403.x, DOI:10.1128/jb.167.1.210-218.1986, DOI:10.1128/jb.185.15.4508-4518.2003);
+    the record's verbatim evidence quotes characterize organelle-level lateral flagellation
+    and proton-driven swarming without naming individual protein subunits.
   nodes:
   - node_id: lateral_flagellation_trait
     label: lateral flagellation

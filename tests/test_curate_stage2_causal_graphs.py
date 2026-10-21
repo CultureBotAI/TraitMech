@@ -32,12 +32,35 @@ def test_cohort_a_and_b_disjoint_and_cover_24_records() -> None:
 
 
 def test_cohort_a_committed_records_have_valid_connected_causal_graphs() -> None:
+    expected_mechanistic = {
+        "data/traits/environment/capnophilic.yaml",
+        "data/traits/metabolism/pectin_degradation.yaml",
+        "data/traits/morphology/polar_flagellation.yaml",
+        "data/traits/physiology/bacteriocin_production.yaml",
+        "data/traits/physiology/coagulase_activity.yaml",
+    }
     for rel_path in COHORT_A_PATHS:
         path = REPO_ROOT / rel_path
         doc = yaml.safe_load(path.read_text(encoding="utf-8"))
         graphs = doc.get("causal_graphs")
         assert graphs and len(graphs) == 1, f"{rel_path}: missing causal_graphs"
         _verify_graph_invariants(rel_path, doc, graphs)
+        expected_scope = "MECHANISTIC" if rel_path in expected_mechanistic else "NONMECHANISTIC"
+        assert graphs[0]["scope_status"] == expected_scope, (
+            f"{rel_path}: expected {expected_scope}, got {graphs[0]['scope_status']}"
+        )
+        assert doc.get("canonical_examples"), f"{rel_path}: missing canonical_examples"
+
+    polar_doc = yaml.safe_load(
+        (REPO_ROOT / "data/traits/morphology/polar_flagellation.yaml").read_text(encoding="utf-8")
+    )
+    polar_nodes = {
+        n["node_id"]: n for n in polar_doc["causal_graphs"][0]["nodes"]
+    }
+    assert "polar_flagellation_flhf" in polar_nodes
+    assert "polar_flagellation_flhg" in polar_nodes
+    assert polar_nodes["polar_flagellation_flhf"]["grounding"] == "InterPro:IPR020006"
+    assert polar_nodes["polar_flagellation_flhg"]["grounding"] == "InterPro:IPR033875"
 
 
 def test_cohort_b_committed_records_have_open_knowledge_gap_discussions() -> None:

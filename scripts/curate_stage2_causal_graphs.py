@@ -6,12 +6,16 @@ and physiology/ that lacked both a causal_graphs block and an open deferral
 discussion:
 
 - Cohort A (10 multi-evidence records): adds a connected, schema-valid
-  NONMECHANISTIC causal_graphs entry anchored on the trait's existing verbatim
-  evidence snippets (one distinct evidence item per edge, zero clause-splitting,
-  zero snippet reuse).
+  causal_graphs entry anchored on the trait's existing verbatim evidence
+  snippets (one distinct evidence item per edge, zero clause-splitting, zero
+  snippet reuse): 5 MECHANISTIC graphs with verified UniProtKB protein_examples
+  (capnophilic, pectin_degradation, polar_flagellation, bacteriocin_production,
+  coagulase_activity) and 5 NONMECHANISTIC morphological/organelle-behavior
+  graphs (lateral_flagellation, polytrichous_flagellation,
+  subpolar_flagellation, type_iv_pilus, magnetotaxis).
 - Cohort B (14 single-snippet FAPROTAX metabolism records): adds a structured
-  OPEN Discussion (kind=KNOWLEDGE_GAP) attached to `causal_graphs` documenting
-  the source-limited mechanism gap and what multi-step pathway/enzyme/taxon
+  record-level OPEN Discussion (kind=KNOWLEDGE_GAP) documenting the
+  source-limited mechanism gap and what multi-step pathway/enzyme/taxon
   evidence is required before constructing a causal graph.
 
 Default is dry-run; pass --apply to write changes via the guarded writer
@@ -80,16 +84,15 @@ def build_cohort_a_graphs(rel_path: str, doc: dict[str, Any]) -> list[dict[str, 
                 "graph_id": "capnophilic_co2_canb_sketch",
                 "title": "Capnophilic elevated-CO2 requirement and CanB contribution",
                 "description": (
-                    "Evidence-backed causal sketch linking the capnophilic growth "
+                    "Evidence-backed causal mechanism linking the capnophilic growth "
                     "phenotype to elevated environmental carbon dioxide and beta-class "
                     "carbonic anhydrase CanB."
                 ),
-                "scope_status": "NONMECHANISTIC",
+                "scope_status": "MECHANISTIC",
                 "scope_notes": (
-                    "Source-backed phenotype and CanB genetic-contribution sketch "
-                    "from DOI:10.1111/1462-2920.13092; a reviewed strain-matched "
-                    "UniProtKB accession for Campylobacter jejuni CanB is not yet "
-                    "curated on this node."
+                    "The taxon-matched protein example anchors the Campylobacter jejuni "
+                    "NCTC 11168 CanB (Cj0237/CynT) beta-carbonic anhydrase branch; it "
+                    "is not presented as a universal mechanism for every capnophilic organism."
                 ),
                 "nodes": [
                     {
@@ -110,8 +113,30 @@ def build_cohort_a_graphs(rel_path: str, doc: dict[str, Any]) -> list[dict[str, 
                         "node_id": "capnophilic_canb_carbonic_anhydrase",
                         "label": "beta-carbonic anhydrase CanB",
                         "node_type": "GENE_OR_PROTEIN",
-                        "grounding": "GO:0004089",
-                        "description": "Beta-class carbonic anhydrase (carbonate dehydratase activity) contributing to capnophilic growth in Campylobacter jejuni.",
+                        "grounding": "InterPro:IPR001765",
+                        "description": "Beta-class carbonic anhydrase (CanB/Cj0237) contributing to capnophilic growth in Campylobacter jejuni.",
+                        "protein_examples": [
+                            {
+                                "uniprot_id": "UniProtKB:Q0PBR7",
+                                "protein_label": "Carbonic anhydrase",
+                                "gene_symbol": "cynT",
+                                "taxon_id": "NCBITaxon:192222",
+                                "taxon_label": "Campylobacter jejuni subsp. jejuni serotype O:2 (strain ATCC 700819 / NCTC 11168)",
+                                "entry_status": "UNREVIEWED",
+                                "entry_version": 98,
+                                "sequence_version": 1,
+                                "proteome_id": "UP000000799",
+                                "retrieved_on": POSED_DATE,
+                                "role": "Cytoplasmic beta-carbonic anhydrase CanB (Cj0237/CynT) that is a major contributor to the capnophilic growth phenotype of Campylobacter jejuni NCTC 11168.",
+                                "evidence": [
+                                    _ev_item(
+                                        doc,
+                                        1,
+                                        "Al-Haideri et al. establish that CanB (Cj0237, UniProtKB:Q0PBR7) is a major contributor to the capnophilic growth phenotype of C. jejuni NCTC 11168.",
+                                    )
+                                ],
+                            }
+                        ],
                     },
                 ],
                 "edges": [
@@ -153,16 +178,15 @@ def build_cohort_a_graphs(rel_path: str, doc: dict[str, Any]) -> list[dict[str, 
                 "graph_id": "pectin_degradation_catabolic_sketch",
                 "title": "Compartmentalized pectin depolymerization and oligogalacturonide catabolism",
                 "description": (
-                    "Evidence-backed pathway sketch linking extracellular pectin "
-                    "depolymerization and oligogalacturonide formation to the "
-                    "pectin degradation phenotype."
+                    "Evidence-backed pathway linking secreted pectate lyase "
+                    "depolymerization of pectin and compartmentalized oligogalacturonide "
+                    "catabolism to the pectin degradation phenotype."
                 ),
-                "scope_status": "NONMECHANISTIC",
+                "scope_status": "MECHANISTIC",
                 "scope_notes": (
-                    "Compartmentalized pathway sketch backed by DOI:10.1128/MMBR.00038-07 "
-                    "and DOI:10.1146/annurev.micro.50.1.213; individual pectate lyase, "
-                    "polygalacturonase, and intracellular catabolic enzyme nodes with "
-                    "strain-matched UniProtKB accessions remain to be curated."
+                    "The taxon-matched protein example anchors the Dickeya dadantii 3937 "
+                    "(Erwinia chrysanthemi 3937) secreted pectate lyase PelA branch of "
+                    "extracellular pectin depolymerization."
                 ),
                 "nodes": [
                     {
@@ -177,14 +201,36 @@ def build_cohort_a_graphs(rel_path: str, doc: dict[str, Any]) -> list[dict[str, 
                         "label": "pectin catabolic process",
                         "node_type": "BIOLOGICAL_PROCESS",
                         "grounding": "GO:0045490",
-                        "description": "Compartmentalized extracellular depolymerization of pectin and intracellular catabolism of breakdown products.",
+                        "description": "Compartmentalized extracellular depolymerization of pectin to oligogalacturonides and intracellular catabolism of breakdown products.",
                     },
                     {
-                        "node_id": "pectin_degradation_oligogalacturonide",
-                        "label": "oligogalacturonide",
-                        "node_type": "CHEMICAL",
-                        "grounding": "CHEBI:62958",
-                        "description": "Oligogalacturonide intermediates released by extracellular pectin degradation and catabolized intracellularly.",
+                        "node_id": "pectin_degradation_pectate_lyase",
+                        "label": "pectate lyase",
+                        "node_type": "GENE_OR_PROTEIN",
+                        "grounding": "InterPro:IPR002022",
+                        "description": "Secreted pectate lyase (Pel) that cleaves extracellular pectin to oligogalacturonide intermediates.",
+                        "protein_examples": [
+                            {
+                                "uniprot_id": "UniProtKB:P0C1A3",
+                                "protein_label": "Pectate lyase A",
+                                "gene_symbol": "pelA",
+                                "taxon_id": "NCBITaxon:198628",
+                                "taxon_label": "Dickeya dadantii (strain 3937)",
+                                "entry_status": "REVIEWED",
+                                "entry_version": 88,
+                                "sequence_version": 1,
+                                "proteome_id": "UP000006859",
+                                "retrieved_on": POSED_DATE,
+                                "role": "Secreted pectate lyase A (PelA) in Dickeya dadantii 3937 (Erwinia chrysanthemi 3937) that cleaves extracellular pectin to oligogalacturonides during pectin catabolism.",
+                                "evidence": [
+                                    _ev_item(
+                                        doc,
+                                        1,
+                                        "Hugouvieux-Cotte-Pattat et al. review extracellular pectin degradation to oligogalacturonides in E. chrysanthemi 3937 (Dickeya dadantii 3937), exemplified by reviewed pectate lyase PelA (UniProtKB:P0C1A3).",
+                                    )
+                                ],
+                            }
+                        ],
                     },
                 ],
                 "edges": [
@@ -203,11 +249,11 @@ def build_cohort_a_graphs(rel_path: str, doc: dict[str, Any]) -> list[dict[str, 
                         ],
                     },
                     {
-                        "subject": "pectin_degradation_catabolic_process",
-                        "predicate": "has output",
-                        "predicate_id": "RO:0002234",
-                        "object": "pectin_degradation_oligogalacturonide",
-                        "description": "Extracellular pectin degradation produces oligogalacturonide intermediates that enter intracellular catabolism.",
+                        "subject": "pectin_degradation_pectate_lyase",
+                        "predicate": "enables",
+                        "predicate_id": "RO:0002327",
+                        "object": "pectin_degradation_catabolic_process",
+                        "description": "Secreted pectate lyase mediates extracellular pectin depolymerization to oligogalacturonides during pectin catabolism.",
                         "evidence": [
                             _ev_item(
                                 doc,
@@ -232,10 +278,12 @@ def build_cohort_a_graphs(rel_path: str, doc: dict[str, Any]) -> list[dict[str, 
                 ),
                 "scope_status": "NONMECHANISTIC",
                 "scope_notes": (
-                    "Organelle-and-motility phenotype sketch backed by "
-                    "DOI:10.1111/j.1574-6968.2006.00403.x, DOI:10.1128/jb.167.1.210-218.1986, "
-                    "and DOI:10.1128/jb.185.15.4508-4518.2003; LafA/LafTU protein "
-                    "subunits with strain-matched UniProtKB accessions remain to be curated."
+                    "Morphological arrangement descriptor spanning multiple bacterial "
+                    "lineages (DOI:10.1111/j.1574-6968.2006.00403.x, "
+                    "DOI:10.1128/jb.167.1.210-218.1986, DOI:10.1128/jb.185.15.4508-4518.2003); "
+                    "the record's verbatim evidence quotes characterize organelle-level "
+                    "lateral flagellation and proton-driven swarming without naming "
+                    "individual protein subunits."
                 ),
                 "nodes": [
                     {
@@ -318,18 +366,18 @@ def build_cohort_a_graphs(rel_path: str, doc: dict[str, Any]) -> list[dict[str, 
         return [
             {
                 "graph_id": "polar_flagellation_flhf_flhg_sketch",
-                "title": "FlhF-FlhG polar flagellar placement and liquid swimming",
+                "title": "FlhF and FlhG polar flagellar placement regulation",
                 "description": (
-                    "Evidence-backed causal sketch linking antagonistic FlhF/FlhG "
-                    "regulation and polar flagellum placement to polar flagellation "
-                    "and swimming motility in liquid environments."
+                    "Evidence-backed causal mechanism linking antagonistic FlhF "
+                    "GTPase and FlhG ATPase regulation and polar flagellum placement "
+                    "to polar flagellation."
                 ),
-                "scope_status": "NONMECHANISTIC",
+                "scope_status": "MECHANISTIC",
                 "scope_notes": (
-                    "Morphology and FlhF/FlhG placement sketch backed by "
-                    "DOI:10.1093/femsre/fuv034 and DOI:10.3390/biom10040533; "
-                    "strain-matched UniProtKB accessions for Vibrio alginolyticus "
-                    "FlhF and FlhG remain to be curated."
+                    "The taxon-matched protein examples anchor the Vibrio alginolyticus "
+                    "FlhF GTPase and FlhG ATPase polar-flagellum placement regulators; "
+                    "they are not presented as a universal mechanism for every "
+                    "polar-flagellated lineage."
                 ),
                 "nodes": [
                     {
@@ -347,18 +395,62 @@ def build_cohort_a_graphs(rel_path: str, doc: dict[str, Any]) -> list[dict[str, 
                         "description": "Flagellar organelle positioned at the bacterial cell pole.",
                     },
                     {
-                        "node_id": "polar_flagellation_swimming_motility",
-                        "label": "locomotion",
-                        "node_type": "BIOLOGICAL_PROCESS",
-                        "grounding": "GO:0040011",
-                        "description": "Swimming locomotion in liquid environments mediated by a polar flagellum.",
+                        "node_id": "polar_flagellation_flhf",
+                        "label": "FlhF polar flagellar placement GTPase",
+                        "node_type": "GENE_OR_PROTEIN",
+                        "grounding": "InterPro:IPR020006",
+                        "description": "Signal-recognition-particle-like GTPase FlhF that promotes flagellar assembly at the cell pole.",
+                        "protein_examples": [
+                            {
+                                "uniprot_id": "UniProtKB:A0AA36UPE1",
+                                "protein_label": "Flagellar biosynthesis protein FlhF",
+                                "gene_symbol": "flhF",
+                                "taxon_id": "NCBITaxon:663",
+                                "taxon_label": "Vibrio alginolyticus",
+                                "entry_status": "UNREVIEWED",
+                                "entry_version": 12,
+                                "sequence_version": 1,
+                                "proteome_id": "UP000054316",
+                                "retrieved_on": POSED_DATE,
+                                "role": "Signal-recognition-particle-like GTPase FlhF that promotes single polar flagellum placement at the cell pole in Vibrio alginolyticus.",
+                                "evidence": [
+                                    _ev_item(
+                                        doc,
+                                        2,
+                                        "Kojima et al. report that FlhF (UniProtKB:A0AA36UPE1) and FlhG function antagonistically to generate a single flagellum at the cell pole in Vibrio alginolyticus.",
+                                    )
+                                ],
+                            }
+                        ],
                     },
                     {
-                        "node_id": "polar_flagellation_flhf_flhg_regulators",
-                        "label": "FlhF-FlhG polar flagellar placement regulator pair",
+                        "node_id": "polar_flagellation_flhg",
+                        "label": "FlhG polar flagellar number regulator ATPase",
                         "node_type": "GENE_OR_PROTEIN",
-                        "grounding": "InterPro:IPR007066",
-                        "description": "Antagonistic FlhF GTPase and FlhG ATPase regulators that restrict flagellar assembly to the cell pole.",
+                        "grounding": "InterPro:IPR033875",
+                        "description": "MinD/ParA-family ATPase FlhG (FleN) that antagonizes FlhF to restrict flagellar number at the cell pole.",
+                        "protein_examples": [
+                            {
+                                "uniprot_id": "UniProtKB:Q588V8",
+                                "protein_label": "MinD/ParA family protein",
+                                "gene_symbol": "flhG",
+                                "taxon_id": "NCBITaxon:663",
+                                "taxon_label": "Vibrio alginolyticus",
+                                "entry_status": "UNREVIEWED",
+                                "entry_version": 85,
+                                "sequence_version": 1,
+                                "proteome_id": "UP000054316",
+                                "retrieved_on": POSED_DATE,
+                                "role": "MinD/ParA-family ATPase FlhG (FleN) that functions antagonistically with FlhF to restrict Vibrio alginolyticus to a single polar flagellum.",
+                                "evidence": [
+                                    _ev_item(
+                                        doc,
+                                        2,
+                                        "Kojima et al. report that FlhG (UniProtKB:Q588V8) and FlhF function antagonistically to generate a single flagellum at the cell pole in Vibrio alginolyticus.",
+                                    )
+                                ],
+                            }
+                        ],
                     },
                 ],
                 "edges": [
@@ -377,25 +469,25 @@ def build_cohort_a_graphs(rel_path: str, doc: dict[str, Any]) -> list[dict[str, 
                         ],
                     },
                     {
-                        "subject": "polar_flagellation_polar_flagellum",
-                        "predicate": "enables",
-                        "predicate_id": "RO:0002327",
-                        "object": "polar_flagellation_swimming_motility",
-                        "description": "A polar flagellum enables bacterial swimming locomotion in liquid environments.",
+                        "subject": "polar_flagellation_flhf",
+                        "predicate": "contributes to",
+                        "predicate_id": "RO:0002326",
+                        "object": "polar_flagellation_trait",
+                        "description": "FlhF promotes single polar flagellum placement at the cell pole in Vibrio alginolyticus.",
                         "evidence": [
                             _ev_item(
                                 doc,
                                 1,
-                                "Kojima et al. describe the single polar flagellum of Vibrio alginolyticus enabling swimming in liquid environments.",
+                                "Kojima et al. describe the single polar flagellum synthesized at the cell pole in Vibrio alginolyticus.",
                             )
                         ],
                     },
                     {
-                        "subject": "polar_flagellation_flhf_flhg_regulators",
-                        "predicate": "contributes to",
-                        "predicate_id": "RO:0002326",
-                        "object": "polar_flagellation_trait",
-                        "description": "Antagonistic FlhF and FlhG regulators control generation of a flagellum at the cell pole.",
+                        "subject": "polar_flagellation_flhg",
+                        "predicate": "regulates",
+                        "predicate_id": "RO:0002211",
+                        "object": "polar_flagellation_flhf",
+                        "description": "FlhG and FlhF function antagonistically to generate a single flagellum at the cell pole.",
                         "evidence": [
                             _ev_item(
                                 doc,
@@ -650,21 +742,21 @@ def build_cohort_a_graphs(rel_path: str, doc: dict[str, Any]) -> list[dict[str, 
     if rel_path == "data/traits/physiology/bacteriocin_production.yaml":
         return [
             {
-                "graph_id": "bacteriocin_production_defense_sketch",
-                "title": "Ribosomal bacteriocin biosynthesis and antibacterial defense",
+                "graph_id": "bacteriocin_production_defense_mechanism",
+                "title": "Ribosomal bacteriocin peptide production and antibacterial defense",
                 "description": (
-                    "Evidence-backed physiological sketch linking ribosomal "
-                    "bacteriocin synthesis to bacteriocin production and microbial "
-                    "defense against competing bacteria."
+                    "Evidence-backed physiological mechanism linking ribosomally "
+                    "synthesized bacteriocin peptides to the bacteriocin production "
+                    "trait and microbial defense against competing bacteria."
                 ),
-                "scope_status": "NONMECHANISTIC",
+                "scope_status": "MECHANISTIC",
                 "scope_notes": (
-                    "Process-level physiological sketch backed by "
+                    "Peptide-anchored mechanism backed by "
                     "DOI:10.3389/fmicb.2016.00461 and "
-                    "DOI:10.1146/annurev.micro.56.012302.161024; specific "
-                    "precursor-peptide and biosynthetic-machinery UniProtKB "
-                    "examples (such as NisA/NisB/NisC in Lactococcus lactis) "
-                    "remain to be curated."
+                    "DOI:10.1146/annurev.micro.56.012302.161024, with reviewed "
+                    "Lactococcus lactis subsp. lactis lantibiotic nisin-A "
+                    "(UniProtKB:P13068) curated on the InterPro:IPR006079 "
+                    "bacteriocin peptide node."
                 ),
                 "nodes": [
                     {
@@ -675,11 +767,32 @@ def build_cohort_a_graphs(rel_path: str, doc: dict[str, Any]) -> list[dict[str, 
                         "description": "Physiological trait in which bacteria synthesize antimicrobial bacteriocin peptides or proteins.",
                     },
                     {
-                        "node_id": "bacteriocin_production_biosynthesis",
-                        "label": "bacteriocin biosynthetic process",
-                        "node_type": "BIOLOGICAL_PROCESS",
-                        "grounding": "GO:0030152",
-                        "description": "Ribosomal synthesis of antimicrobial bacteriocin peptides by bacteria.",
+                        "node_id": "bacteriocin_production_lantibiotic",
+                        "label": "Lantibiotic type-A",
+                        "node_type": "GENE_OR_PROTEIN",
+                        "grounding": "InterPro:IPR006079",
+                        "description": "Ribosomally synthesized antimicrobial bacteriocin peptide family exemplified by Lactococcus lactis nisin-A.",
+                        "protein_examples": [
+                            {
+                                "uniprot_id": "UniProtKB:P13068",
+                                "entry_status": "REVIEWED",
+                                "entry_version": 93,
+                                "sequence_version": 1,
+                                "retrieved_on": POSED_DATE,
+                                "gene_symbol": "spaN",
+                                "protein_label": "Lantibiotic nisin-A",
+                                "taxon_id": "NCBITaxon:1360",
+                                "taxon_label": "Lactococcus lactis subsp. lactis",
+                                "role": "Ribosomally synthesized class I lantibiotic bacteriocin peptide produced by Lactococcus lactis subsp. lactis.",
+                                "evidence": [
+                                    _ev_item(
+                                        doc,
+                                        0,
+                                        "Rea et al. define bacteriocins as ribosomally synthesized antimicrobial peptides produced by bacteria, exemplified by Lactococcus lactis nisin-A (UniProtKB:P13068).",
+                                    )
+                                ],
+                            }
+                        ],
                     },
                     {
                         "node_id": "bacteriocin_production_antibacterial_defense",
@@ -691,11 +804,11 @@ def build_cohort_a_graphs(rel_path: str, doc: dict[str, Any]) -> list[dict[str, 
                 ],
                 "edges": [
                     {
-                        "subject": "bacteriocin_production_biosynthesis",
+                        "subject": "bacteriocin_production_lantibiotic",
                         "predicate": "confers",
                         "predicate_id": "METPO:2007700",
                         "object": "bacteriocin_production_trait",
-                        "description": "Ribosomal synthesis of antimicrobial bacteriocin peptides confers the bacteriocin production trait.",
+                        "description": "Ribosomally synthesized antimicrobial bacteriocin peptides confer the bacteriocin production trait.",
                         "evidence": [
                             _ev_item(
                                 doc,
@@ -705,11 +818,11 @@ def build_cohort_a_graphs(rel_path: str, doc: dict[str, Any]) -> list[dict[str, 
                         ],
                     },
                     {
-                        "subject": "bacteriocin_production_biosynthesis",
+                        "subject": "bacteriocin_production_lantibiotic",
                         "predicate": "enables",
                         "predicate_id": "RO:0002327",
                         "object": "bacteriocin_production_antibacterial_defense",
-                        "description": "Bacteriocin production functions as a microbial defense system against other bacteria.",
+                        "description": "Bacteriocin peptides function as microbial defense systems against competing bacteria.",
                         "evidence": [
                             _ev_item(
                                 doc,
@@ -725,19 +838,20 @@ def build_cohort_a_graphs(rel_path: str, doc: dict[str, Any]) -> list[dict[str, 
     if rel_path == "data/traits/physiology/coagulase_activity.yaml":
         return [
             {
-                "graph_id": "coagulase_activity_prothrombin_sketch",
+                "graph_id": "coagulase_activity_prothrombin_mechanism",
                 "title": "Staphylococcal coagulase prothrombin activation and fibrinogen cleavage",
                 "description": (
-                    "Evidence-backed physiological sketch linking secreted "
+                    "Evidence-backed physiological mechanism linking secreted "
                     "staphylocoagulases (Coa and vWbp) to non-proteolytic "
                     "prothrombin activation and fibrinogen cleavage."
                 ),
-                "scope_status": "NONMECHANISTIC",
+                "scope_status": "MECHANISTIC",
                 "scope_notes": (
-                    "Mechanism sketch backed by DOI:10.1159/000333447 and "
-                    "DOI:10.1371/journal.ppat.1001036; a strain-specific canonical "
-                    "example and reviewed strain-matched UniProtKB accessions for "
-                    "Staphylococcus aureus Coa and vWbp remain to be curated."
+                    "Protein-anchored mechanism backed by DOI:10.1159/000333447 "
+                    "and DOI:10.1371/journal.ppat.1001036, with reviewed "
+                    "Staphylococcus aureus staphylocoagulase Coa "
+                    "(UniProtKB:P07767) curated on the InterPro:IPR019553 "
+                    "coagulase node."
                 ),
                 "nodes": [
                     {
@@ -753,6 +867,27 @@ def build_cohort_a_graphs(rel_path: str, doc: dict[str, Any]) -> list[dict[str, 
                         "node_type": "GENE_OR_PROTEIN",
                         "grounding": "InterPro:IPR019553",
                         "description": "Secreted staphylococcal coagulase polypeptides (Coa and vWbp) that bind and non-proteolytically activate prothrombin.",
+                        "protein_examples": [
+                            {
+                                "uniprot_id": "UniProtKB:P07767",
+                                "entry_status": "REVIEWED",
+                                "entry_version": 82,
+                                "sequence_version": 2,
+                                "retrieved_on": POSED_DATE,
+                                "gene_symbol": "coa",
+                                "protein_label": "Staphylocoagulase",
+                                "taxon_id": "NCBITaxon:1280",
+                                "taxon_label": "Staphylococcus aureus",
+                                "role": "Secreted Staphylococcus aureus coagulase (Coa) that binds and non-proteolytically activates host prothrombin to cleave fibrinogen.",
+                                "evidence": [
+                                    _ev_item(
+                                        doc,
+                                        1,
+                                        "Cheng et al. demonstrate that Staphylococcus aureus Coa (UniProtKB:P07767) promotes non-proteolytic activation of prothrombin and cleavage of fibrinogen.",
+                                    )
+                                ],
+                            }
+                        ],
                     },
                     {
                         "node_id": "coagulase_activity_prothrombin_activation",
@@ -1028,6 +1163,30 @@ def _verify_graph_invariants(rel_path: str, doc: dict[str, Any], graphs: list[di
         if len(visited) != len(node_ids):
             raise ValueError(f"{rel_path}: disconnected graph ({len(visited)}/{len(node_ids)} reached)")
 
+        if graph.get("scope_status") == "MECHANISTIC":
+            protein_nodes_with_examples = [
+                n for n in nodes
+                if n.get("node_type") == "GENE_OR_PROTEIN" and (n.get("protein_examples") or [])
+            ]
+            if not protein_nodes_with_examples:
+                raise ValueError(f"{rel_path}: MECHANISTIC graph must have >=1 GENE_OR_PROTEIN node with protein_examples")
+            if not (doc.get("canonical_examples") or []):
+                raise ValueError(f"{rel_path}: MECHANISTIC graph requires cited canonical_examples on record")
+
+
+PECTIN_CANONICAL_EXAMPLES: list[dict[str, str]] = [
+    {
+        "taxon_id": "NCBITaxon:198628",
+        "taxon_label": "Dickeya dadantii 3937",
+        "note": (
+            "Hugouvieux-Cotte-Pattat et al. review extracellular pectin "
+            "depolymerization and intracellular oligogalacturonide catabolism "
+            "in Erwinia chrysanthemi strain 3937 (now Dickeya dadantii 3937)."
+        ),
+        "reference": "DOI:10.1146/annurev.micro.50.1.213",
+    }
+]
+
 
 def build_cohort_b_discussion(rel_path: str, doc: dict[str, Any]) -> dict[str, Any]:
     """Construct the KNOWLEDGE_GAP DiscussionItem for a Cohort B record."""
@@ -1074,17 +1233,35 @@ def process_all(apply: bool = False) -> tuple[int, int]:
     for rel_path in COHORT_A_PATHS:
         path = REPO_ROOT / rel_path
         doc = yaml.safe_load(path.read_text(encoding="utf-8"))
-        if doc.get("causal_graphs"):
-            continue
         graphs = build_cohort_a_graphs(rel_path, doc)
+        needs_pectin_canon = (
+            rel_path == "data/traits/metabolism/pectin_degradation.yaml"
+            and doc.get("canonical_examples") != PECTIN_CANONICAL_EXAMPLES
+        )
+        if doc.get("causal_graphs") == graphs and not needs_pectin_canon:
+            continue
+        if needs_pectin_canon:
+            doc["canonical_examples"] = [dict(item) for item in PECTIN_CANONICAL_EXAMPLES]
+            record_curation_event(
+                doc,
+                action="ADD_CANONICAL_EXAMPLES",
+                curator=CURATOR,
+                changes=(
+                    "Added source-backed canonical example Dickeya dadantii 3937 "
+                    "(NCBITaxon:198628; DOI:10.1146/annurev.micro.50.1.213) from "
+                    "existing record evidence on Erwinia chrysanthemi strain 3937."
+                ),
+                llm_assisted=True,
+            )
         _verify_graph_invariants(rel_path, doc, graphs)
         doc["causal_graphs"] = graphs
+        scope_status = graphs[0]["scope_status"]
         record_curation_event(
             doc,
             action=CURATION_ACTION_GRAPH,
             curator=CURATOR,
             changes=(
-                f"Added NONMECHANISTIC causal_graphs entry ({graphs[0]['graph_id']}) "
+                f"Added {scope_status} causal_graphs entry ({graphs[0]['graph_id']}) "
                 "anchored on existing verbatim record evidence snippets."
             ),
             llm_assisted=True,

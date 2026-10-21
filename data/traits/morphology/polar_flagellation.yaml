@@ -23,10 +23,10 @@ curation_history:
     flagellar-arrangement evidence after a repository-wide duplicate review covering
     ignored and hidden files.
   llm_assisted: true
-- timestamp: '2026-10-21T20:01:04Z'
+- timestamp: '2026-10-21T21:12:25Z'
   curator: claude
   action: CURATE_CAUSAL_GRAPH
-  changes: Added NONMECHANISTIC causal_graphs entry (polar_flagellation_flhf_flhg_sketch)
+  changes: Added MECHANISTIC causal_graphs entry (polar_flagellation_flhf_flhg_sketch)
     anchored on existing verbatim record evidence snippets.
   llm_assisted: true
 definition_source: DOI:10.1093/femsre/fuv034
@@ -54,14 +54,13 @@ canonical_examples:
   reference: DOI:10.3390/biom10040533
 causal_graphs:
 - graph_id: polar_flagellation_flhf_flhg_sketch
-  title: FlhF-FlhG polar flagellar placement and liquid swimming
-  description: Evidence-backed causal sketch linking antagonistic FlhF/FlhG regulation
-    and polar flagellum placement to polar flagellation and swimming motility in liquid
-    environments.
-  scope_status: NONMECHANISTIC
-  scope_notes: Morphology and FlhF/FlhG placement sketch backed by DOI:10.1093/femsre/fuv034
-    and DOI:10.3390/biom10040533; strain-matched UniProtKB accessions for Vibrio alginolyticus
-    FlhF and FlhG remain to be curated.
+  title: FlhF and FlhG polar flagellar placement regulation
+  description: Evidence-backed causal mechanism linking antagonistic FlhF GTPase and
+    FlhG ATPase regulation and polar flagellum placement to polar flagellation.
+  scope_status: MECHANISTIC
+  scope_notes: The taxon-matched protein examples anchor the Vibrio alginolyticus
+    FlhF GTPase and FlhG ATPase polar-flagellum placement regulators; they are not
+    presented as a universal mechanism for every polar-flagellated lineage.
   nodes:
   - node_id: polar_flagellation_trait
     label: polar flagellation
@@ -74,17 +73,58 @@ causal_graphs:
     node_type: ORGANELLE
     grounding: GO:0009288
     description: Flagellar organelle positioned at the bacterial cell pole.
-  - node_id: polar_flagellation_swimming_motility
-    label: locomotion
-    node_type: BIOLOGICAL_PROCESS
-    grounding: GO:0040011
-    description: Swimming locomotion in liquid environments mediated by a polar flagellum.
-  - node_id: polar_flagellation_flhf_flhg_regulators
-    label: FlhF-FlhG polar flagellar placement regulator pair
+  - node_id: polar_flagellation_flhf
+    label: FlhF polar flagellar placement GTPase
     node_type: GENE_OR_PROTEIN
-    grounding: InterPro:IPR007066
-    description: Antagonistic FlhF GTPase and FlhG ATPase regulators that restrict
-      flagellar assembly to the cell pole.
+    grounding: InterPro:IPR020006
+    description: Signal-recognition-particle-like GTPase FlhF that promotes flagellar
+      assembly at the cell pole.
+    protein_examples:
+    - uniprot_id: UniProtKB:A0AA36UPE1
+      protein_label: Flagellar biosynthesis protein FlhF
+      gene_symbol: flhF
+      taxon_id: NCBITaxon:663
+      taxon_label: Vibrio alginolyticus
+      entry_status: UNREVIEWED
+      entry_version: 12
+      sequence_version: 1
+      proteome_id: UP000054316
+      retrieved_on: '2026-10-21'
+      role: Signal-recognition-particle-like GTPase FlhF that promotes single polar
+        flagellum placement at the cell pole in Vibrio alginolyticus.
+      evidence:
+      - reference: DOI:10.3390/biom10040533
+        snippet: Two regulators, FlhF and FlhG, function antagonistically to generate
+          only one flagellum at the cell pole.
+        notes: Kojima et al. report that FlhF (UniProtKB:A0AA36UPE1) and FlhG function
+          antagonistically to generate a single flagellum at the cell pole in Vibrio
+          alginolyticus.
+  - node_id: polar_flagellation_flhg
+    label: FlhG polar flagellar number regulator ATPase
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR033875
+    description: MinD/ParA-family ATPase FlhG (FleN) that antagonizes FlhF to restrict
+      flagellar number at the cell pole.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q588V8
+      protein_label: MinD/ParA family protein
+      gene_symbol: flhG
+      taxon_id: NCBITaxon:663
+      taxon_label: Vibrio alginolyticus
+      entry_status: UNREVIEWED
+      entry_version: 85
+      sequence_version: 1
+      proteome_id: UP000054316
+      retrieved_on: '2026-10-21'
+      role: MinD/ParA-family ATPase FlhG (FleN) that functions antagonistically with
+        FlhF to restrict Vibrio alginolyticus to a single polar flagellum.
+      evidence:
+      - reference: DOI:10.3390/biom10040533
+        snippet: Two regulators, FlhF and FlhG, function antagonistically to generate
+          only one flagellum at the cell pole.
+        notes: Kojima et al. report that FlhG (UniProtKB:Q588V8) and FlhF function
+          antagonistically to generate a single flagellum at the cell pole in Vibrio
+          alginolyticus.
   edges:
   - subject: polar_flagellation_polar_flagellum
     predicate: confers
@@ -98,23 +138,23 @@ causal_graphs:
         in regular patterns at the cell surface (flagellation pattern).
       notes: Schuhmacher et al. define regular cell-surface flagellar number and location
         as the bacterial flagellation pattern.
-  - subject: polar_flagellation_polar_flagellum
-    predicate: enables
-    predicate_id: RO:0002327
-    object: polar_flagellation_swimming_motility
-    description: A polar flagellum enables bacterial swimming locomotion in liquid
-      environments.
+  - subject: polar_flagellation_flhf
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: polar_flagellation_trait
+    description: FlhF promotes single polar flagellum placement at the cell pole in
+      Vibrio alginolyticus.
     evidence:
     - reference: DOI:10.3390/biom10040533
       snippet: Some bacterial species, such as the marine bacterium Vibrio alginolyticus,
         have a single polar flagellum that allows it to swim in liquid environments.
-      notes: Kojima et al. describe the single polar flagellum of Vibrio alginolyticus
-        enabling swimming in liquid environments.
-  - subject: polar_flagellation_flhf_flhg_regulators
-    predicate: contributes to
-    predicate_id: RO:0002326
-    object: polar_flagellation_trait
-    description: Antagonistic FlhF and FlhG regulators control generation of a flagellum
+      notes: Kojima et al. describe the single polar flagellum synthesized at the
+        cell pole in Vibrio alginolyticus.
+  - subject: polar_flagellation_flhg
+    predicate: regulates
+    predicate_id: RO:0002211
+    object: polar_flagellation_flhf
+    description: FlhG and FlhF function antagonistically to generate a single flagellum
       at the cell pole.
     evidence:
     - reference: DOI:10.3390/biom10040533
