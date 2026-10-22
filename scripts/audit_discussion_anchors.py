@@ -18,10 +18,16 @@ Defects:
                               into a section this script has never seen, and
                               failing those would punish the free-form design
                               rather than the mistake it is meant to catch.
-  MALFORMED_ANCHOR (ERROR)    Not in `<section>#<anchor>` form at all.
+  MALFORMED_ANCHOR (ERROR)    Not in `<section>#<anchor>` form, unless it names
+                              a known target section (`causal_graphs`,
+                              `ontology_mapping`, `ecological_interactions`)
+                              that is currently empty in the record (e.g. a
+                              section-level KNOWLEDGE_GAP explaining why
+                              `causal_graphs` is unpopulated).
 
 Sections are resolved by the ids they actually contain, so a record with no
-causal graphs cannot accidentally pass an anchor into one.
+causal graphs cannot accidentally pass a `<section>#<id>` anchor into one,
+while a populated section rejects a bare `<section>` anchor.
 """
 
 from __future__ import annotations
@@ -67,6 +73,14 @@ RESOLVERS = {
     "discussions": lambda doc: _ids(doc, "discussions", "discussion_id"),
 }
 
+# Target sections that may be referenced as a bare section-level anchor when
+# the section is not yet populated in the record (traitmech-infra-0002).
+EMPTY_SECTION_ANCHORS = {
+    "causal_graphs",
+    "ontology_mapping",
+    "ecological_interactions",
+}
+
 
 def anchor_rows(source: Path | Corpus = DEFAULT_TRAITS) -> list[tuple[str, str, str, str]]:
     """Return (file, discussion_id, defect, detail) for every bad anchor."""
@@ -76,7 +90,19 @@ def anchor_rows(source: Path | Corpus = DEFAULT_TRAITS) -> list[tuple[str, str, 
             did = disc.get("discussion_id", "?")
             for anchor in disc.get("attaches_to") or []:
                 if "#" not in anchor:
-                    rows.append((rel, did, "MALFORMED_ANCHOR", f"{anchor} expected <section>#<id>"))
+                    if anchor in EMPTY_SECTION_ANCHORS:
+                        if not (doc.get(anchor) or []):
+                            continue
+                        rows.append(
+                            (
+                                rel,
+                                did,
+                                "MALFORMED_ANCHOR",
+                                f"{anchor} section is populated; expected {anchor}#<id>",
+                            )
+                        )
+                    else:
+                        rows.append((rel, did, "MALFORMED_ANCHOR", f"{anchor} expected <section>#<id>"))
                     continue
                 section, _, target = anchor.partition("#")
                 resolver = RESOLVERS.get(section)

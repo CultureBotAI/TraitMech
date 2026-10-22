@@ -12,6 +12,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 from audit_uniprot_grounding import (  # noqa: E402
     FIELDS,
     audit_uses,
+    check_inventory,
     iter_nodes,
     iter_uses,
     write_report,
@@ -175,3 +176,59 @@ def test_write_report_quotes_empty_final_finding_without_changing_value(tmp_path
     with report.open(encoding="utf-8", newline="") as handle:
         round_tripped = list(csv.DictReader(handle, delimiter="\t"))
     assert round_tripped[0]["finding"] == ""
+
+
+def test_check_inventory_detects_missing_or_drifted_report_rows(tmp_path):
+    category = tmp_path / "physiology"
+    category.mkdir()
+    record = category / "catalase.yaml"
+    record.write_text(
+        "causal_graphs:\n"
+        "- graph_id: g1\n"
+        "  nodes:\n"
+        "  - node_id: p\n"
+        "    label: Protein\n"
+        "    node_type: GENE_OR_PROTEIN\n"
+        "    protein_examples:\n"
+        "    - uniprot_id: UniProtKB:P0A6Y8\n"
+        "      taxon_id: NCBITaxon:562\n"
+        "      taxon_label: Escherichia coli\n"
+        "      entry_status: REVIEWED\n"
+        "      entry_version: 180\n"
+        "      sequence_version: 1\n",
+        encoding="utf-8",
+    )
+    uses = iter_uses(iter_nodes(tmp_path))
+    rows = audit_uses(uses, delay=0, resolver=lambda _acc, _delay: _resolved())
+    report = tmp_path / "uniprot_grounding_audit.tsv"
+    write_report(rows, report)
+
+    assert check_inventory(tmp_path, report) == []
+
+    # Mutate entry_version on disk without refreshing report -> metadata mismatch
+    record.write_text(
+        record.read_text(encoding="utf-8").replace("entry_version: 180", "entry_version: 181"),
+        encoding="utf-8",
+    )
+    errors = check_inventory(tmp_path, report)
+    assert len(errors) == 1
+    assert "declared_entry_version: corpus='181' vs report='180'" in errors[0]
+
+    # Add a second protein example on disk without refreshing report -> missing from report
+    record.write_text(
+        record.read_text(encoding="utf-8")
+        + "    - uniprot_id: UniProtKB:P13029\n"
+        "      taxon_id: NCBITaxon:562\n"
+        "      taxon_label: Escherichia coli\n"
+        "      entry_status: REVIEWED\n"
+        "      entry_version: 195\n"
+        "      sequence_version: 1\n",
+        encoding="utf-8",
+    )
+    errors2 = check_inventory(tmp_path, report)
+    assert any("missing from report (1x):" in err and "P13029" in err for err in errors2)
+
+
+def test_committed_uniprot_grounding_audit_matches_corpus_inventory():
+    assert check_inventory() == []
+

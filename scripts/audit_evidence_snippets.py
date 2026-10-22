@@ -31,6 +31,11 @@ ECHOES_RESEARCH_REPORT  the snippet also appears in this trait's own research
                         the same source — but it is the signature of the lift
                         this audit exists to catch, so it asks for a check
                         against the source rather than asserting a defect.
+UNQUOTED_DEFINITION_SOURCE
+                        the record's `definition_source` (`PMID:` or `DOI:`) is
+                        absent from record-level `evidence[].reference` while
+                        already carrying a verbatim snippet on `causal_graphs`
+                        edges or another record in the corpus (#1981).
 
 Baseline ratchet: pre-existing findings are frozen in
 ``conf/evidence_snippet_baseline.tsv`` and never fail; anything new exits 1.
@@ -75,6 +80,7 @@ SEVERITY = {
     "REUSED_SNIPPET": "WARN",
     "MISSING_SNIPPET": "WARN",
     "ECHOES_RESEARCH_REPORT": "WARN",
+    "UNQUOTED_DEFINITION_SOURCE": "WARN",
 }
 
 # A snippet shorter than this cannot identify what it supports. Calibrated to
@@ -200,12 +206,36 @@ def iter_evidence(doc: dict):
                     yield f"{graph_id}:{subject}->{obj}[{j}]", item, graph_id
 
 
-def audit(check_reports: bool = True) -> list[dict[str, str]]:
+def audit(
+    check_reports: bool = True,
+    check_definition_sources: bool = False,
+) -> list[dict[str, str]]:
     findings: list[dict[str, str]] = []
+    docs: list[tuple[Path, dict]] = []
+    refs_by_record_id: dict[str, set[str]] = {}
+    refs_by_parent_id: dict[str, set[str]] = {}
     for path in sorted(aes_traits_dir().rglob("*.yaml")):
         doc = yaml.safe_load(path.read_text())
         if not isinstance(doc, dict):
             continue
+        docs.append((path, doc))
+        if check_definition_sources:
+            rec_id = _norm(str(doc.get("id") or path.stem))
+            parents = [
+                _norm(str(p)) for p in (doc.get("parent_traits") or []) if _norm(str(p))
+            ]
+            quoted: set[str] = set()
+            for _loc, item, _gid in iter_evidence(doc):
+                ref = _norm(str(item.get("reference") or ""))
+                snip = _norm(str(item.get("snippet") or ""))
+                if (ref and len(snip) >= MIN_SNIPPET_CHARS
+                        and "..." not in snip and "…" not in snip):
+                    quoted.add(ref)
+            refs_by_record_id[rec_id] = quoted
+            for parent_id in parents:
+                refs_by_parent_id.setdefault(parent_id, set()).update(quoted)
+
+    for path, doc in docs:
         rel = _safe_rel(path)
         report_text, prompt_text = (
             research_text(path.parent.name, path.stem)
@@ -213,6 +243,35 @@ def audit(check_reports: bool = True) -> list[dict[str, str]]:
         # Reuse is counted per graph, not per file: two graphs in one trait are
         # separate arguments and may legitimately lean on the same key phrase.
         per_graph: dict[str, dict[str, int]] = {}
+        if check_definition_sources:
+            record_refs = {
+                _norm(str(item.get("reference") or ""))
+                for item in (doc.get("evidence") or [])
+                if isinstance(item, dict) and _norm(str(item.get("snippet") or ""))
+            }
+            def_source = _norm(str(doc.get("definition_source") or ""))
+            rec_id = _norm(str(doc.get("id") or path.stem))
+            parents = [
+                _norm(str(p)) for p in (doc.get("parent_traits") or []) if _norm(str(p))
+            ]
+            family_quoted = set(refs_by_record_id.get(rec_id, set()))
+            for parent_id in parents:
+                family_quoted.update(refs_by_record_id.get(parent_id, set()))
+                family_quoted.update(refs_by_parent_id.get(parent_id, set()))
+            if (def_source.startswith(("PMID:", "DOI:"))
+                    and def_source in family_quoted
+                    and def_source not in record_refs):
+                findings.append({
+                    "file": rel,
+                    "locator": "definition_source",
+                    "defect": "UNQUOTED_DEFINITION_SOURCE",
+                    "severity": SEVERITY["UNQUOTED_DEFINITION_SOURCE"],
+                    "detail": (
+                        f"definition_source={def_source} is absent from record-level "
+                        "evidence[].reference despite carrying a verbatim snippet on "
+                        "causal_graphs or parent/sibling records"
+                    ),
+                })
 
         for locator, item, graph_id in iter_evidence(doc):
             reference = _norm(str(item.get("reference") or ""))
@@ -486,9 +545,16 @@ def main(argv: list[str] | None = None) -> int:
                          "any = every finding fails and the baseline is ignored")
     ap.add_argument("--no-report-check", action="store_true",
                     help="skip ECHOES_RESEARCH_REPORT (which reads research/)")
+    ap.add_argument("--check-definition-sources", action="store_true",
+                    help="also warn when definition_source (PMID:/DOI:) is quoted on "
+                         "causal_graphs or parent/sibling records but omitted from "
+                         "record-level evidence[].reference (#1981)")
     args = ap.parse_args(argv)
 
-    findings = audit(check_reports=not args.no_report_check)
+    findings = audit(
+        check_reports=not args.no_report_check,
+        check_definition_sources=args.check_definition_sources,
+    )
     write_tsv(Path(args.report), findings)
 
     if args.write_baseline:

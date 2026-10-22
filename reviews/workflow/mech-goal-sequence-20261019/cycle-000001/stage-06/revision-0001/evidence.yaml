@@ -1,0 +1,74 @@
+schema_version: '1.0'
+run_id: mech-goal-sequence-20261019
+repository: CultureBotAI/TraitMech
+cycle: 1
+stage: 6
+stage_id: infrastructure
+revision: 1
+created_at: '2026-10-22T07:35:00Z'
+source_revision: 7d4b750774051b4678d16114438ee34ed126f25c
+outcome: completed
+scope_frozen_at: '2026-10-22T07:14:11Z'
+previous_evidence:
+  path: reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-05/revision-0001/evidence.yaml
+  sha256: bed9e79eff4e5946a6f45bf38f53eca6c0397fcbe4615e47a2abc85d25fa4517
+  stage: 5
+  revision: 1
+artifacts:
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-06/revision-0001/infra_snapshot.md
+  sha256: bbf6969d714c5f2b51c5933da30429aceea259f20ebc0cf95caa73a87e99d200
+  kind: infra_snapshot
+  description: Exact supervisor-frozen INFRA_TASKS.md snapshot at 2026-10-22T07:14:11Z (sha256 bbf6969d714c5f2b51c5933da30429aceea259f20ebc0cf95caa73a87e99d200).
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-06/revision-0001/implementation_plan.md
+  sha256: 91602d4756ea2f8f844ea38034374cae4a141493a33a967b88e1aea8b561a0ea
+  kind: implementation_plan
+  description: Dependency-aware Stage 6 infrastructure implementation plan grouping traitmech-infra-0002, traitmech-infra-0003, and traitmech-infra-0004 into GitHub issues #1988 and #1981.
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-06/revision-0001/validation.md
+  sha256: 9017f72b84713ac1b4ea51423027b469e2693178b91b17aec1d8ede10a5ae232
+  kind: validation_report
+  description: Validation summary for Stage 6 infrastructure implementations across scripts/audit_discussion_anchors.py, scripts/audit_uniprot_grounding.py, scripts/audit_evidence_snippets.py, and all 12 repository validation gates.
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-06/revision-0001/stage6_coverage_full.json
+  sha256: 8f60679d90f85f115d739abebbc6582d534867a98d3d0eeee98899af4008e470
+  kind: coverage_manifest
+  description: Full Stage 6 coverage manifest accounting for all 4 INFRA_TASKS.md items (1 pre-resolved in Stage 2 PR #1975, 3 resolved in Stage 6).
+coverage:
+  total_candidates: 4
+  inspected_count: 4
+  changed_count: 3
+  unchanged_count: 1
+  skipped_count: 0
+  exhausted: true
+  stop_reason: Frozen INFRA_TASKS.md at 2026-10-22T07:14:11Z (sha256 bbf6969d714c5f2b51c5933da30429aceea259f20ebc0cf95caa73a87e99d200); all 3 pending infrastructure tasks (traitmech-infra-0002, traitmech-infra-0003, traitmech-infra-0004) implemented, unit-tested, validated, and marked resolved alongside pre-resolved traitmech-infra-0001.
+limitations:
+- All 3 pending infrastructure tasks in the supervisor-frozen INFRA_TASKS.md snapshot were resolved in Stage 6; 0 tasks remain pending, blocked, or deferred.
+findings: []
+groups: []
+carry_forward_ids: []
+infra_tasks:
+- id: traitmech-infra-0002
+  created_at: '2026-10-21T20:10:00Z'
+  source_goal: 2:causal_graphs
+  status: resolved
+  category: validator
+  summary: Empty-section anchor audit for DiscussionItem.anchors
+  details: 'Stage 2 Cohort B remediated 14 metabolism TraitRecord files where DiscussionItem.anchors pointed to emptycanonical_examples: [] or empty causal_graphs: [] sections. An automated check in scripts/audit_discussion_anchors.py could detect discussion anchors that point to empty list slots across the corpus.'
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1988
+  disposition: Resolved in Stage 6 (`scripts/audit_discussion_anchors.py`, `tests/test_audit_discussion_anchors.py`, issue #1988) by adding `EMPTY_SECTION_ANCHORS` (`canonical_examples`, `causal_graphs`) detection to `audit_record()`, flagging any `DiscussionItem` anchor targeting an empty list slot (`[]` or `None`) across the corpus (0 violations across 1,130 records).
+- id: traitmech-infra-0003
+  created_at: '2026-10-22T01:35:00Z'
+  source_goal: 3:protein_examples
+  status: resolved
+  category: validator
+  summary: Automated check for declared-vs-actual GENE_OR_PROTEIN node counts in reports/uniprot_grounding_audit.tsv
+  details: 'During Stage 3 protein_examples review, 4 TraitRecord files (genomics/chromosome_organization, metabolism/D_galacturonate_utilization, metabolism/acetate_utilization, morphology/bacterial_microcompartment) had stale declared_gene_or_protein_nodes counts in reports/uniprot_grounding_audit.tsv compared to live YAML files. Extending scripts/audit_uniprot_grounding.py or scripts/audit_derived_reports.py to assert that reports/uniprot_grounding_audit.tsv covers every live GENE_OR_PROTEIN node and matches live node counts would prevent report drift.'
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1988
+  disposition: Resolved in Stage 6 (`scripts/audit_uniprot_grounding.py`, `tests/test_audit_uniprot_grounding.py`, `justfile`, issue #1988) by adding `check_inventory()`, `declared_inventory_row()`, and `--check-inventory` to `scripts/audit_uniprot_grounding.py` and wiring `--check-inventory` into `just audit-derived-reports` (1,073 rows verified, 0 inventory discrepancies across 1,130 records).
+- id: traitmech-infra-0004
+  created_at: '2026-10-22T05:20:00Z'
+  source_goal: 5:resolve_review_findings
+  status: resolved
+  category: validator
+  summary: Automated audit for definition_source citations lacking a matching verbatim evidence snippet
+  details: 'Stage 4 record review and Stage 5 remediation resolved 4 TraitRecord files (morphology/cyanophycin_granule, environment/cadmium_tolerant, environment/cobalt_tolerant, environment/zinc_tolerant, issue #1981) where definition_source had no matching EvidenceItem.source entry with a verbatim quote. Extending scripts/audit_evidence_snippets.py with an optional warning/audit flag to report records whose definition_source lacks a matching verbatim quote in evidence[] would surface definition provenance gaps automatically during curation.'
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1981
+  disposition: Resolved in Stage 6 (`scripts/audit_evidence_snippets.py`, `tests/test_audit_evidence_snippets.py`, issue #1981) by adding `UNQUOTED_DEFINITION_SOURCE` warning and `--check-definition-sources` flag to `scripts/audit_evidence_snippets.py` to detect records whose `definition_source` lacks a matching non-placeholder verbatim `EvidenceItem.snippet` in `evidence[]`.

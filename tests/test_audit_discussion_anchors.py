@@ -63,6 +63,19 @@ def test_record_without_graphs_cannot_resolve_a_graph_anchor():
     assert [r[2] for r in anchor_rows([("f.yaml", doc)])] == ["UNRESOLVED_ANCHOR"]
 
 
+def test_section_level_anchor_allowed_when_target_section_empty():
+    """A section-level gap discussion may anchor to an empty target section (traitmech-infra-0002)."""
+    doc = {"discussions": [{"discussion_id": "d1", "attaches_to": ["causal_graphs"]}]}
+    assert anchor_rows([("f.yaml", doc)]) == []
+
+
+def test_section_level_anchor_rejected_when_target_section_populated():
+    """Once the target section is populated, a bare section anchor is rejected."""
+    rows = anchor_rows([("f.yaml", _doc(["causal_graphs"]))])
+    assert [r[2] for r in rows] == ["MALFORMED_ANCHOR"]
+    assert "section is populated" in rows[0][3]
+
+
 def test_causal_graph_anchors_collects_nodes_and_graph_ids():
     assert causal_graph_anchors(_doc([], nodes=["a", "b"])) == {"g1", "a", "b"}
 
