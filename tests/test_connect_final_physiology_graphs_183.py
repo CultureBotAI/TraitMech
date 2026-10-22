@@ -56,6 +56,11 @@ def before(slug: str) -> dict:
                 "evidence": [{"reference": "DOI:10.3390/life14050591"}],
             }
         )
+    doc["curation_history"] = [
+        event
+        for event in doc.get("curation_history", [])
+        if event.get("action") != ACTION
+    ]
     return doc
 
 
