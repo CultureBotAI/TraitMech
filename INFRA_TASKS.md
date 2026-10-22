@@ -47,6 +47,10 @@ tasks:
     summary: Add an offline structural consistency check for reports/uniprot_grounding_audit.tsv in audit-derived-reports so new protein_examples cannot land without refreshing the tracked report
     status: note
     disposition: Recorded during Cycle 1 Stage 3 (protein_examples) for Stage 6 evaluation; reports/uniprot_grounding_audit.tsv was missing 6 Stage 2 protein_examples and had 110 ENTRY_VERSION_MISMATCH rows prior to Stage 3 because audit-derived-reports stays offline and does not verify that every in-corpus protein_examples row is present in the tracked TSV.
+  - task_id: traitmech-infra-0004
+    summary: Add an optional definition_source evidence-coverage warning to scripts/audit_evidence_snippets.py when a record's definition_source is already quoted in-repo on causal_graphs or parent/sibling records but omitted from record-level evidence
+    status: note
+    disposition: Recorded during Cycle 1 Stage 4 (record_review) for Stage 6 evaluation; corpus review identified 4 records (cyanophycin_granule, cadmium_tolerant, cobalt_tolerant, zinc_tolerant) whose definition_source is already quoted verbatim in-repo (on causal_graphs edges or parent/sibling records) yet omitted from record-level evidence.
 ```
 <!-- mech-infra-tasks:end -->
 
@@ -77,5 +81,14 @@ tasks:
 - **Evidence paths**: `scripts/audit_uniprot_grounding.py`, `reports/uniprot_grounding_audit.tsv`, `justfile`, `scripts/curate_stage3_protein_examples.py`
 - **Priority**: Medium
 - **Dependencies**: None
+
+### `traitmech-infra-0004` — Add an optional `definition_source` evidence-coverage warning to `scripts/audit_evidence_snippets.py` when a record's `definition_source` is already quoted in-repo
+- **Origin**: `mech-goal-sequence-20261019`, Cycle 1, Stage 4 (`record_review`)
+- **Status**: `note`
+- **Observation**: During Stage 4 frozen-inventory review of all 1,129 eligible records, 4 records (`data/traits/morphology/cyanophycin_granule.yaml`, `data/traits/environment/cadmium_tolerant.yaml`, `data/traits/environment/cobalt_tolerant.yaml`, and `data/traits/environment/zinc_tolerant.yaml`) were found to declare a primary `definition_source` (`DOI:10.1128/AEM.01298-18` or `PMID:12829273`) that already has a verified verbatim quote in-repo (on the record's own `causal_graphs` edges or on parent/sibling records `metal_tolerant.yaml`/`mercury_tolerant.yaml`) while omitting that reference from record-level `evidence`.
+- **Desired outcome**: In Stage 6, add an advisory check in `scripts/audit_evidence_snippets.py` flagging records whose `definition_source` is absent from `evidence[].reference` whenever `definition_source` already has a verified verbatim snippet in the repository (either on `causal_graphs` edges or on sibling/parent records).
+- **Evidence paths**: `scripts/audit_evidence_snippets.py`, `reviews/structured/20261022T033000Z-stage4-corpus-record-and-cohort-review/review.yaml`, `reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-04/revision-0001/evidence.yaml`
+- **Priority**: Low
+- **Dependencies**: Stage 5 (`resolve_review_findings`) remediation of `F-DEF-SRC-CYANOPHYCIN-001`..`004`
 
 
