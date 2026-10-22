@@ -139,7 +139,7 @@ NEW_PROTEIN_EXAMPLES: dict[str, dict[str, Any]] = {
             "(Cas1/ygbT, v154) and UniProtKB:P45956 (Cas2/ygbF, v145) on "
             "cas1_cas2_complex (DOI:10.1038/nsmb.2820), updated scope_notes for "
             "component-level subunit scope, and refreshed UniProtKB:Q99ZW2 "
-            "entry_version 156 -> 157 on cas9_effector."
+            "entry_version 147 -> 148 on cas9_effector."
         ),
     },
     "data/traits/physiology/catalase_activity.yaml": {
@@ -303,8 +303,8 @@ NEW_PROTEIN_EXAMPLES: dict[str, dict[str, Any]] = {
             "(DOI:10.1128/mbio.01079-17) and UniProtKB:Q7NQP7 (CviR, v143) in "
             "C. violaceum ATCC 12472 (DOI:10.1016/j.molcel.2011.04.003) on "
             "signal_receptor, updated scope_notes, and refreshed entry_version on "
-            "UniProtKB:P12747 (145 -> 146), UniProtKB:P0CJ63 (65 -> 66), and "
-            "UniProtKB:Q9L8R8 (112 -> 114)."
+            "UniProtKB:P12747 (97 -> 98 on autoinducer_synthase) and "
+            "UniProtKB:P0CJ63 (47 -> 48 on quorum_quenching_enzyme)."
         ),
     },
     "data/traits/physiology/lithotrophic.yaml": {
@@ -359,7 +359,7 @@ NEW_PROTEIN_EXAMPLES: dict[str, dict[str, Any]] = {
             "Added reviewed N. europaea ATCC 19718 HAO protein_example "
             "UniProtKB:Q50925 (hao1, v155) on hydroxylamine_oxidoreductase "
             "(DOI:10.1128/jb.185.9.2759-2773.2003), updated scope_notes, and "
-            "refreshed UniProtKB:Q04507 entry_version 124 -> 125 on "
+            "refreshed UniProtKB:Q04507 entry_version 126 -> 127 on "
             "ammonia_monooxygenase."
         ),
     },
@@ -517,12 +517,12 @@ NEW_PROTEIN_EXAMPLES: dict[str, dict[str, Any]] = {
             "UniProtKB:P19940 (SigG, v166), and UniProtKB:P12254 (SigK, v158) across "
             "sigma_f, sigma_e, sigma_g, and sigma_k (DOI:10.1038/s41467-024-51654-6), "
             "updated scope_notes, and refreshed UniProtKB:P21458 entry_version "
-            "154 -> 155 on spoiiie_translocase."
+            "156 -> 157 on spoiiie_translocase."
         ),
     },
 }
 
-ENTRY_VERSION_REFRESHES: list[tuple[str, str, str, str, int, int]] = [('data/traits/ecology/biofilm_formation.yaml',
+ENTRY_VERSION_REFRESHES: list[tuple[str, str, str, str, int | None, int]] = [('data/traits/ecology/biofilm_formation.yaml',
   'biofilm_eps_matrix_community',
   'wspR_diguanylate_cyclase',
   'UniProtKB:Q9HXT9',
@@ -972,6 +972,12 @@ ENTRY_VERSION_REFRESHES: list[tuple[str, str, str, str, int, int]] = [('data/tra
   'UniProtKB:P12747',
   97,
   98),
+ ('data/traits/physiology/carboxydotrophic.yaml',
+  'carboxydotrophic_co_oxidation',
+  'nife_codh',
+  'UniProtKB:P31896',
+  None,
+  134),
  ('data/traits/physiology/catalase_activity.yaml',
   'catalase_activity_h2o2_detoxification',
   'perr_regulator',
@@ -1037,6 +1043,12 @@ ENTRY_VERSION_REFRESHES: list[tuple[str, str, str, str, int, int]] = [('data/tra
   'atp_synthase',
   'UniProtKB:P0ABB4',
   155,
+  156),
+ ('data/traits/physiology/hydrogenotrophic.yaml',
+  'hydrogenotrophic_hydrogen_oxidation_fixation',
+  'hydrogenase',
+  'UniProtKB:P31891',
+  None,
   156),
  ('data/traits/physiology/lithoautotrophic.yaml',
   'lithoautotrophic_inorganic_donor_co2_fixation',
@@ -1204,7 +1216,7 @@ def process_all(apply: bool = False, repo_root: Path = REPO_ROOT) -> tuple[int, 
         (new_examples_added, versions_refreshed, files_updated)
     """
     protected = _protected_paths(repo_root)
-    refreshes_by_file: dict[str, list[tuple[str, str, str, int, int]]] = {}
+    refreshes_by_file: dict[str, list[tuple[str, str, str, int | None, int]]] = {}
     for rel_path, graph_id, node_id, curie, old_v, new_v in ENTRY_VERSION_REFRESHES:
         refreshes_by_file.setdefault(rel_path, []).append(
             (graph_id, node_id, curie, old_v, new_v)
@@ -1251,7 +1263,8 @@ def process_all(apply: bool = False, repo_root: Path = REPO_ROOT) -> tuple[int, 
                 matched_pe["retrieved_on"] = RETRIEVED_ON
                 changed = True
                 versions_refreshed += 1
-            refresh_descriptions.append(f"{curie} ({old_v} -> {new_v} on {node_id})")
+            old_label = old_v if old_v is not None else "unset"
+            refresh_descriptions.append(f"{curie} ({old_label} -> {new_v} on {node_id})")
 
         # 2. Apply new verified protein_examples if this file is in NEW_PROTEIN_EXAMPLES
         if rel_path in NEW_PROTEIN_EXAMPLES:
@@ -1281,6 +1294,13 @@ def process_all(apply: bool = False, repo_root: Path = REPO_ROOT) -> tuple[int, 
                     node["protein_examples"] = desired_copy
                     changed = True
                     new_examples_added += len(desired_copy)
+
+            existing_events = [
+                ev for ev in (doc.get("curation_history") or [])
+                if ev.get("timestamp") == TIMESTAMP and ev.get("curator") == CURATOR
+            ]
+            if not existing_events or existing_events[-1].get("changes") != spec["changes_summary"]:
+                changed = True
 
             if changed:
                 record_curation_event(

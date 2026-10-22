@@ -30,9 +30,9 @@ def test_stage3_scope_excludes_do_not_work_and_matches_counts() -> None:
         for exs in spec["nodes"].values()
     )
     assert total_new_examples == 11
-    assert len(ENTRY_VERSION_REFRESHES) == 110
+    assert len(ENTRY_VERSION_REFRESHES) == 112
     all_files = {r[0] for r in ENTRY_VERSION_REFRESHES} | set(NEW_PROTEIN_EXAMPLES)
-    assert len(all_files) == 104
+    assert len(all_files) == 106
     assert "data/traits/physiology/spore_germination.yaml" not in all_files
 
 
@@ -42,6 +42,7 @@ def test_new_protein_examples_committed_and_schema_valid() -> None:
         doc = yaml.safe_load(path.read_text(encoding="utf-8"))
         assert doc["identifier"] == spec["identifier"]
         assert validate_trait(doc) == []
+        assert doc["curation_history"][-1]["changes"] == spec["changes_summary"]
         graphs = [g for g in doc.get("causal_graphs", []) if g.get("graph_id") == spec["graph_id"]]
         assert len(graphs) == 1
         graph = graphs[0]

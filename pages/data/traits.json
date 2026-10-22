@@ -69910,7 +69910,7 @@
         "timestamp": "2026-10-22T01:35:00Z",
         "curator": "claude",
         "action": "CURATE_PROTEIN_TAXON_EXAMPLE",
-        "changes": "Added reviewed E. coli K-12 subunit protein_examples UniProtKB:Q46896 (Cas1/ygbT, v154) and UniProtKB:P45956 (Cas2/ygbF, v145) on cas1_cas2_complex (DOI:10.1038/nsmb.2820), updated scope_notes for component-level subunit scope, and refreshed UniProtKB:Q99ZW2 entry_version 156 -> 157 on cas9_effector.",
+        "changes": "Added reviewed E. coli K-12 subunit protein_examples UniProtKB:Q46896 (Cas1/ygbT, v154) and UniProtKB:P45956 (Cas2/ygbF, v145) on cas1_cas2_complex (DOI:10.1038/nsmb.2820), updated scope_notes for component-level subunit scope, and refreshed UniProtKB:Q99ZW2 entry_version 147 -> 148 on cas9_effector.",
         "llm_assisted": true
       }
     ]
@@ -196536,7 +196536,7 @@
         "timestamp": "2026-10-22T01:35:00Z",
         "curator": "claude",
         "action": "CURATE_PROTEIN_TAXON_EXAMPLE",
-        "changes": "Added reviewed B. subtilis 168 sporulation sigma-factor protein_examples UniProtKB:P07860 (SigF, v175), UniProtKB:P06222 (SigE, v173), UniProtKB:P19940 (SigG, v166), and UniProtKB:P12254 (SigK, v158) across sigma_f, sigma_e, sigma_g, and sigma_k (DOI:10.1038/s41467-024-51654-6), updated scope_notes, and refreshed UniProtKB:P21458 entry_version 154 -> 155 on spoiiie_translocase.",
+        "changes": "Added reviewed B. subtilis 168 sporulation sigma-factor protein_examples UniProtKB:P07860 (SigF, v175), UniProtKB:P06222 (SigE, v173), UniProtKB:P19940 (SigG, v166), and UniProtKB:P12254 (SigK, v158) across sigma_f, sigma_e, sigma_g, and sigma_k (DOI:10.1038/s41467-024-51654-6), updated scope_notes, and refreshed UniProtKB:P21458 entry_version 156 -> 157 on spoiiie_translocase.",
         "llm_assisted": true
       }
     ]
@@ -207392,7 +207392,7 @@
                 "taxon_id": "NCBITaxon:1085",
                 "taxon_label": "Rhodospirillum rubrum",
                 "entry_status": "REVIEWED",
-                "retrieved_on": "2026-08-23",
+                "retrieved_on": "2026-10-22",
                 "sequence_version": 1,
                 "role": "NiFeS CooS enzyme catalyzing CO oxidation in the hydrogenogenic R. rubrum system; it is not used as the grounding for the umbrella CODH node.",
                 "evidence": [
@@ -207406,7 +207406,8 @@
                     "snippet": "two-electron oxidation of CO to form CO2",
                     "notes": "Purified R. rubrum CODH directly catalyzed the reaction represented by the graph."
                   }
-                ]
+                ],
+                "entry_version": 134
               }
             ]
           },
@@ -207842,6 +207843,13 @@
         "curator": "codex",
         "action": "CONNECT_CAUSAL_GRAPH_COMPONENTS",
         "changes": "Resolved issue #183 graph fragmentation (2 components to 1) with 1 public-source, verbatim-snippet-backed connector(s). No paid research service was called.",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P31896 (unset -> 134 on nife_codh).",
         "llm_assisted": true
       }
     ]
@@ -218808,7 +218816,7 @@
                 "taxon_label": "Cupriavidus necator H16",
                 "entry_status": "REVIEWED",
                 "proteome_id": "UP000008210",
-                "retrieved_on": "2026-08-23",
+                "retrieved_on": "2026-10-22",
                 "sequence_version": 4,
                 "role": "Catalytic large-subunit component of the membrane-bound NiFe uptake-hydrogenase complex; this accession does not denote the complete HoxKGZ complex.",
                 "evidence": [
@@ -218817,7 +218825,8 @@
                     "snippet": "large subunit HoxG (67.1 kDa) containing the Ni-Fe active site",
                     "notes": "The primary H16 study identifies HoxG as the catalytic large subunit of the oxygen-tolerant membrane-bound hydrogenase and traces electron transfer to the respiratory chain; UniProtKB P31891 verifies the reviewed instance."
                   }
-                ]
+                ],
+                "entry_version": 156
               }
             ]
           },
@@ -219215,6 +219224,13 @@
         "curator": "codex",
         "action": "REVIEW_EVIDENCE_REFERENCE_CHURN",
         "changes": "Offline review for issue 520 retained 4 evidence-reference replacement(s) that PR 511 made on surviving causal edges outside its stated protein-taxon scope. The pre-tranche evidence entries had references but no snippets; the retained entries supply edge-specific snippets and explanatory notes. Reverting would discard that claim-level provenance, so the scope defect is resolved by documenting the decision instead. This audit changed no causal claim or evidence field. Reviewed replacements: DOI:10.2138/gselements.16.1.39 -> DOI:10.21775/cimb.006.159 (1 edge); DOI:10.2138/gselements.16.1.39 -> DOI:10.3390/microorganisms7020053 (3 edges).",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P31891 (unset -> 156 on hydrogenase).",
         "llm_assisted": true
       }
     ]
@@ -221757,7 +221773,7 @@
         "timestamp": "2026-10-22T01:35:00Z",
         "curator": "claude",
         "action": "CURATE_PROTEIN_TAXON_EXAMPLE",
-        "changes": "Added reviewed N. europaea ATCC 19718 HAO protein_example UniProtKB:Q50925 (hao1, v155) on hydroxylamine_oxidoreductase (DOI:10.1128/jb.185.9.2759-2773.2003), updated scope_notes, and refreshed UniProtKB:Q04507 entry_version 124 -> 125 on ammonia_monooxygenase.",
+        "changes": "Added reviewed N. europaea ATCC 19718 HAO protein_example UniProtKB:Q50925 (hao1, v155) on hydroxylamine_oxidoreductase (DOI:10.1128/jb.185.9.2759-2773.2003), updated scope_notes, and refreshed UniProtKB:Q04507 entry_version 126 -> 127 on ammonia_monooxygenase.",
         "llm_assisted": true
       }
     ]
@@ -232574,7 +232590,7 @@
         "timestamp": "2026-10-22T01:35:00Z",
         "curator": "claude",
         "action": "CURATE_PROTEIN_TAXON_EXAMPLE",
-        "changes": "Added LuxR-family receptor protein_examples UniProtKB:P25084 (LasR, v177), UniProtKB:P54292 (RhlR, v151) in P. aeruginosa PAO1 (DOI:10.1128/mbio.01079-17) and UniProtKB:Q7NQP7 (CviR, v143) in C. violaceum ATCC 12472 (DOI:10.1016/j.molcel.2011.04.003) on signal_receptor, updated scope_notes, and refreshed entry_version on UniProtKB:P12747 (145 -> 146), UniProtKB:P0CJ63 (65 -> 66), and UniProtKB:Q9L8R8 (112 -> 114).",
+        "changes": "Added LuxR-family receptor protein_examples UniProtKB:P25084 (LasR, v177), UniProtKB:P54292 (RhlR, v151) in P. aeruginosa PAO1 (DOI:10.1128/mbio.01079-17) and UniProtKB:Q7NQP7 (CviR, v143) in C. violaceum ATCC 12472 (DOI:10.1016/j.molcel.2011.04.003) on signal_receptor, updated scope_notes, and refreshed entry_version on UniProtKB:P12747 (97 -> 98 on autoinducer_synthase) and UniProtKB:P0CJ63 (47 -> 48 on quorum_quenching_enzyme).",
         "llm_assisted": true
       }
     ]

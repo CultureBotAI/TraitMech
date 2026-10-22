@@ -109,7 +109,7 @@ causal_graphs:
       taxon_id: NCBITaxon:1085
       taxon_label: Rhodospirillum rubrum
       entry_status: REVIEWED
-      retrieved_on: '2026-08-23'
+      retrieved_on: '2026-10-22'
       sequence_version: 1
       role: NiFeS CooS enzyme catalyzing CO oxidation in the hydrogenogenic R. rubrum
         system; it is not used as the grounding for the umbrella CODH node.
@@ -123,6 +123,7 @@ causal_graphs:
         snippet: two-electron oxidation of CO to form CO2
         notes: Purified R. rubrum CODH directly catalyzed the reaction represented
           by the graph.
+      entry_version: 134
   - node_id: oxygen_sensitivity
     label: oxygen sensitivity
     node_type: QUALITY
@@ -479,4 +480,10 @@ curation_history:
   action: CONNECT_CAUSAL_GRAPH_COMPONENTS
   changes: 'Resolved issue #183 graph fragmentation (2 components to 1) with 1 public-source,
     verbatim-snippet-backed connector(s). No paid research service was called.'
+  llm_assisted: true
+- timestamp: '2026-10-22T01:35:00Z'
+  curator: claude
+  action: REFRESH_UNIPROT_ENTRY_VERSION
+  changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
+    UniProtKB:P31896 (unset -> 134 on nife_codh).'
   llm_assisted: true
