@@ -415,3 +415,89 @@ def test_an_unrelated_graph_is_not_borrowed_from():
     baseline = Baseline({_key(_reused(3)): 1},
                         {_magnitude_key(_reused(9, graph="other:*")): 9})
     assert len(compare([_reworded(3)], baseline)) == 1
+
+
+def test_unquoted_definition_source_flagged_when_quoted_on_edge_or_sibling(tmp_path, monkeypatch):
+    """A PMID:/DOI: definition_source omitted from record-level evidence[].reference
+    is flagged when a verbatim snippet for that source already exists on the record's
+    causal_graphs edges or parent/sibling records (#1981)."""
+    traits = _write_trait(tmp_path, monkeypatch, """
+        id: traitmech:000001
+        definition_source: DOI:10.1111/1751-7915.13849
+        evidence:
+          - reference: PMID:12345678
+            snippet: an unrelated quote that does not cite the definition source
+        causal_graphs:
+          - graph_id: g1
+            edges:
+              - subject: a
+                object: b
+                evidence:
+                  - reference: DOI:10.1111/1751-7915.13849
+                    snippet: Cyanophycin is a non-ribosomally synthesized biopolymer
+        """)
+    assert audit(check_reports=False, check_definition_sources=False) == []
+    findings = audit(check_reports=False, check_definition_sources=True)
+    assert _defects(findings) == ["UNQUOTED_DEFINITION_SOURCE"]
+    assert findings[0]["locator"] == "definition_source"
+
+    # Once the definition_source is added to record-level evidence[], the finding clears
+    (traits / "x.yaml").write_text(textwrap.dedent("""
+        id: traitmech:000001
+        definition_source: DOI:10.1111/1751-7915.13849
+        evidence:
+          - reference: DOI:10.1111/1751-7915.13849
+            snippet: Cyanophycin is a non-ribosomally synthesized biopolymer
+        causal_graphs:
+          - graph_id: g1
+            edges:
+              - subject: a
+                object: b
+                evidence:
+                  - reference: DOI:10.1111/1751-7915.13849
+                    snippet: Cyanophycin is a non-ribosomally synthesized biopolymer
+        """))
+    assert audit(check_reports=False, check_definition_sources=True) == []
+
+
+def test_unquoted_definition_source_parent_sibling_propagation_and_short_snippet_filter(
+    tmp_path, monkeypatch
+):
+    """A child trait citing a parent/sibling's quoted PMID in definition_source without
+    a valid record-level quote (or with only an elliptical/short snippet) is flagged."""
+    traits = _write_trait(tmp_path, monkeypatch, """
+        id: traitmech:000010
+        definition_source: PMID:12829273
+        evidence:
+          - reference: PMID:12829273
+            snippet: Heavy-metal resistance in prokaryotes is mediated by efflux systems
+        """)
+    (traits / "child.yaml").write_text(textwrap.dedent("""
+        id: traitmech:000011
+        parent_traits:
+          - traitmech:000010
+        definition_source: PMID:12829273
+        evidence:
+          - reference: PMID:99999999
+            snippet: An unrelated reference on a child trait without the parent quote
+        """))
+    findings = audit(check_reports=False, check_definition_sources=True)
+    assert [f["defect"] for f in findings] == ["UNQUOTED_DEFINITION_SOURCE"]
+    assert findings[0]["file"].endswith("child.yaml")
+
+    # An elliptical snippet on record-level evidence does not suppress UNQUOTED_DEFINITION_SOURCE
+    (traits / "child.yaml").write_text(textwrap.dedent("""
+        id: traitmech:000011
+        parent_traits:
+          - traitmech:000010
+        definition_source: PMID:12829273
+        evidence:
+          - reference: PMID:12829273
+            snippet: Heavy-metal resistance ... mediated by efflux systems
+        """))
+    defects = _defects(audit(check_reports=False, check_definition_sources=True))
+    assert "UNQUOTED_DEFINITION_SOURCE" in defects
+    assert "ELLIPTICAL_SNIPPET" in defects
+
+
+

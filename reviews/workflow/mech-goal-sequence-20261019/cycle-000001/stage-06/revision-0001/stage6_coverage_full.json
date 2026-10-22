@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "repository": "CultureBotAI/TraitMech",
+  "run_id": "mech-goal-sequence-20261019",
+  "cycle": 1,
+  "stage": 6,
+  "stage_key": "infrastructure",
+  "source_revision": "7d4b750774051b4678d16114438ee34ed126f25c",
+  "scope_frozen_at": "2026-10-22T07:14:11Z",
+  "infra_snapshot_path": "reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-06/revision-0001/infra_snapshot.md",
+  "infra_snapshot_sha256": "bbf6969d714c5f2b51c5933da30429aceea259f20ebc0cf95caa73a87e99d200",
+  "previous_stage5_evidence_path": "reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-05/revision-0001/evidence.yaml",
+  "previous_stage5_evidence_sha256": "bed9e79eff4e5946a6f45bf38f53eca6c0397fcbe4615e47a2abc85d25fa4517",
+  "summary": {
+    "frozen_tasks_total": 4,
+    "previously_resolved_in_cycle": 1,
+    "pending_at_stage6_freeze": 3,
+    "resolved_in_stage6": 3,
+    "deferred_in_stage6": 0,
+    "carry_forward_ids": []
+  },
+  "tasks": [
+    {
+      "task_id": "traitmech-infra-0001",
+      "origin_stage": 1,
+      "frozen_status": "resolved",
+      "final_status": "resolved",
+      "issue_url": "https://github.com/CultureBotAI/TraitMech/issues/1962",
+      "implementation_pr": "https://github.com/CultureBotAI/TraitMech/pull/1961",
+      "summary": "Replace workstation-absolute paths in .claude/skills/traitmech-evolve-workflow/SKILL.md:213 so pr-sanity and qc pass on clean checkouts",
+      "disposition": "Resolved in PR #1961 prior to Stage 6."
+    },
+    {
+      "task_id": "traitmech-infra-0002",
+      "origin_stage": 2,
+      "frozen_status": "note",
+      "final_status": "resolved",
+      "issue_url": "https://github.com/CultureBotAI/TraitMech/issues/1988",
+      "implementation_pr": "https://github.com/CultureBotAI/TraitMech/pull/1989",
+      "implementation_files": [
+        "scripts/audit_discussion_anchors.py",
+        "tests/test_audit_discussion_anchors.py"
+      ],
+      "summary": "Document or support section-level attaches_to anchors on Discussion entries when target sections (e.g. causal_graphs) are not yet populated",
+      "disposition": "Resolved in Stage 6 (PR #1989, issue #1988): added EMPTY_SECTION_ANCHORS support in scripts/audit_discussion_anchors.py and unit tests in tests/test_audit_discussion_anchors.py."
+    },
+    {
+      "task_id": "traitmech-infra-0003",
+      "origin_stage": 3,
+      "frozen_status": "note",
+      "final_status": "resolved",
+      "issue_url": "https://github.com/CultureBotAI/TraitMech/issues/1988",
+      "implementation_pr": "https://github.com/CultureBotAI/TraitMech/pull/1989",
+      "implementation_files": [
+        "scripts/audit_uniprot_grounding.py",
+        "justfile",
+        "tests/test_audit_uniprot_grounding.py"
+      ],
+      "summary": "Add an offline structural consistency check for reports/uniprot_grounding_audit.tsv in audit-derived-reports so new protein_examples cannot land without refreshing the tracked report",
+      "disposition": "Resolved in Stage 6 (PR #1989, issue #1988): added check_inventory / --check-inventory mode in scripts/audit_uniprot_grounding.py, wired it into audit-derived-reports in justfile, and added unit tests in tests/test_audit_uniprot_grounding.py."
+    },
+    {
+      "task_id": "traitmech-infra-0004",
+      "origin_stage": 4,
+      "frozen_status": "note",
+      "final_status": "resolved",
+      "issue_url": "https://github.com/CultureBotAI/TraitMech/issues/1981",
+      "implementation_pr": "https://github.com/CultureBotAI/TraitMech/pull/1989",
+      "implementation_files": [
+        "scripts/audit_evidence_snippets.py",
+        "tests/test_audit_evidence_snippets.py"
+      ],
+      "summary": "Add an optional definition_source evidence-coverage warning to scripts/audit_evidence_snippets.py when a record's definition_source is already quoted in-repo on causal_graphs or parent/sibling records but omitted from record-level evidence",
+      "disposition": "Resolved in Stage 6 (PR #1989, issue #1981, grouped with #1988): added UNQUOTED_DEFINITION_SOURCE warning and --check-definition-sources flag to scripts/audit_evidence_snippets.py and unit tests in tests/test_audit_evidence_snippets.py."
+    }
+  ]
+}

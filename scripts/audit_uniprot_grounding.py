@@ -27,10 +27,25 @@ from typing import Any, Iterable
 
 import yaml
 
-REPO = Path(__file__).resolve().parent.parent
-TRAITS = REPO / "data" / "traits"
-REPORT = REPO / "reports" / "uniprot_grounding_audit.tsv"
+REPO_ROOT = Path(__file__).resolve().parent.parent
+REPO = REPO_ROOT
+TRAITS = REPO_ROOT / "data" / "traits"
+REPORT = REPO_ROOT / "reports" / "uniprot_grounding_audit.tsv"
 API = "https://rest.uniprot.org/uniprotkb/{acc}.json"
+
+INVENTORY_FIELDS = (
+    "file",
+    "graph_id",
+    "node_id",
+    "label",
+    "usage",
+    "accession",
+    "declared_taxon_id",
+    "declared_taxon_label",
+    "declared_entry_status",
+    "declared_entry_version",
+    "declared_sequence_version",
+)
 
 FIELDS = [
     "file",
@@ -302,7 +317,150 @@ def write_report(rows: list[dict[str, Any]], out: Path = REPORT) -> None:
     out.write_text(buffer.getvalue().replace('\t\n', '\t""\n'), encoding="utf-8")
 
 
-def main() -> int:
+def declared_inventory_row(use: dict[str, Any]) -> dict[str, str]:
+    """Extract the offline-verifiable declared columns for one UniProtKB use."""
+    example = use["example"]
+    path: Path = use["path"]
+    try:
+        file_label = path.relative_to(REPO).as_posix()
+    except ValueError:
+        file_label = path.as_posix()
+    node = use["node"]
+    entry_version = example.get("entry_version")
+    sequence_version = example.get("sequence_version")
+    return {
+        "file": file_label,
+        "graph_id": str(use["graph_id"]),
+        "node_id": str(node.get("node_id", "")),
+        "label": str(node.get("label", "")),
+        "usage": str(use["usage"]),
+        "accession": str(use["accession"]),
+        "declared_taxon_id": str(example.get("taxon_id", "") or ""),
+        "declared_taxon_label": str(example.get("taxon_label", "") or ""),
+        "declared_entry_status": str(example.get("entry_status", "") or ""),
+        "declared_entry_version": "" if entry_version is None else str(entry_version),
+        "declared_sequence_version": "" if sequence_version is None else str(sequence_version),
+    }
+
+
+def _inventory_key(row: dict[str, str]) -> tuple[str, str, str, str, str]:
+    return (
+        row["file"],
+        row["graph_id"],
+        row["node_id"],
+        row["usage"],
+        row["accession"],
+    )
+
+
+def check_inventory(traits_dir: Path = TRAITS, report_path: Path = REPORT) -> list[str]:
+    """Verify offline that ``report_path`` matches all declared corpus UniProtKB uses."""
+    if not report_path.exists():
+        return [f"missing report: {report_path}"]
+
+    uses = iter_uses(iter_nodes(traits_dir))
+    expected_rows = [declared_inventory_row(use) for use in uses]
+    files_per_accession: dict[str, set[str]] = defaultdict(set)
+    for row in expected_rows:
+        files_per_accession[row["accession"]].add(row["file"])
+
+    with report_path.open(encoding="utf-8", newline="") as handle:
+        reader = csv.DictReader(handle, delimiter="\t")
+        if list(reader.fieldnames or []) != FIELDS:
+            return [f"header mismatch in {report_path}: got {reader.fieldnames}"]
+        report_rows = list(reader)
+
+    errors: list[str] = []
+    expected_by_key = Counter(_inventory_key(r) for r in expected_rows)
+    actual_by_key = Counter(
+        _inventory_key({k: str(r.get(k, "") or "") for k in INVENTORY_FIELDS})
+        for r in report_rows
+    )
+    for key, count in sorted((expected_by_key - actual_by_key).items()):
+        errors.append(
+            f"missing from report ({count}x): {key[0]}#{key[1]}:{key[2]} ({key[3]} {key[4]})"
+        )
+    for key, count in sorted((actual_by_key - expected_by_key).items()):
+        errors.append(
+            f"stale in report ({count}x): {key[0]}#{key[1]}:{key[2]} ({key[3]} {key[4]})"
+        )
+
+    actual_declared = [
+        {k: str(r.get(k, "") or "") for k in INVENTORY_FIELDS} for r in report_rows
+    ]
+    if not errors and actual_declared != expected_rows:
+        for idx, (exp, act) in enumerate(zip(expected_rows, actual_declared), start=1):
+            if exp != act:
+                diffs = [
+                    f"{k}: corpus={exp[k]!r} vs report={act[k]!r}"
+                    for k in INVENTORY_FIELDS
+                    if exp[k] != act[k]
+                ]
+                errors.append(
+                    f"row {idx} ({exp['file']}#{exp['graph_id']}:{exp['node_id']} {exp['accession']}) "
+                    f"declared metadata mismatch: {', '.join(diffs)}"
+                )
+
+    for idx, r in enumerate(report_rows, start=1):
+        finding = str(r.get("finding", "") or "")
+        if finding:
+            errors.append(
+                f"row {idx} ({r.get('file', '')}#{r.get('graph_id', '')}:{r.get('node_id', '')} "
+                f"{r.get('accession', '')}) has unresolved finding: {finding}"
+            )
+        acc = str(r.get("accession", "") or "")
+        if acc in files_per_accession:
+            expected_reuse = str(len(files_per_accession[acc]))
+            actual_reuse = str(r.get("reused_in_n_files", "") or "")
+            if actual_reuse != expected_reuse:
+                errors.append(
+                    f"row {idx} ({r.get('file', '')} {acc}) reused_in_n_files={actual_reuse!r}, "
+                    f"expected {expected_reuse!r}"
+                )
+        row_label = f"row {idx} ({r.get('file', '')}#{r.get('graph_id', '')}:{r.get('node_id', '')} {acc})"
+        if str(r.get("primary_accession_match", "") or "") != "YES" or acc != str(
+            r.get("primary_accession", "") or ""
+        ):
+            errors.append(
+                f"{row_label} primary_accession_match={r.get('primary_accession_match')!r} "
+                f"(accession={acc!r}, primary_accession={r.get('primary_accession')!r})"
+            )
+        if str(r.get("taxon_match", "") or "") != "YES" or str(
+            r.get("declared_taxon_id", "") or ""
+        ) != str(r.get("uniprot_taxon_id", "") or ""):
+            errors.append(
+                f"{row_label} taxon_match={r.get('taxon_match')!r} "
+                f"(declared_taxon_id={r.get('declared_taxon_id')!r}, uniprot_taxon_id={r.get('uniprot_taxon_id')!r})"
+            )
+        if str(r.get("entry_status_match", "") or "") != "YES" or str(
+            r.get("declared_entry_status", "") or ""
+        ) != str(r.get("status", "") or "").upper():
+            errors.append(
+                f"{row_label} entry_status_match={r.get('entry_status_match')!r} "
+                f"(declared_entry_status={r.get('declared_entry_status')!r}, status={r.get('status')!r})"
+            )
+        if str(r.get("entry_version_match", "") or "") != "YES" or str(
+            r.get("declared_entry_version", "") or ""
+        ) != str(r.get("entry_version", "") or ""):
+            errors.append(
+                f"{row_label} entry_version_match={r.get('entry_version_match')!r} "
+                f"(declared_entry_version={r.get('declared_entry_version')!r}, entry_version={r.get('entry_version')!r})"
+            )
+        seq_match = str(r.get("sequence_version_match", "") or "")
+        if seq_match not in ("YES", "N/A") or (
+            seq_match == "YES"
+            and str(r.get("declared_sequence_version", "") or "")
+            != str(r.get("sequence_version", "") or "")
+        ):
+            errors.append(
+                f"{row_label} sequence_version_match={seq_match!r} "
+                f"(declared_sequence_version={r.get('declared_sequence_version')!r}, sequence_version={r.get('sequence_version')!r})"
+            )
+
+    return errors
+
+
+def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--traits-dir", type=Path, default=TRAITS)
     parser.add_argument("--out", type=Path, default=REPORT)
@@ -312,7 +470,25 @@ def main() -> int:
         default=0.1,
         help="seconds to sleep between UniProt requests (default 0.1)",
     )
-    args = parser.parse_args()
+    parser.add_argument(
+        "--check-inventory",
+        action="store_true",
+        help=(
+            "offline structural check that --out matches all in-corpus "
+            "UniProtKB uses and has zero unresolved findings"
+        ),
+    )
+    args = parser.parse_args(argv)
+
+    if args.check_inventory:
+        errors = check_inventory(args.traits_dir, args.out)
+        if errors:
+            for err in errors:
+                print(f"ERROR: {err}", file=sys.stderr)
+            return 1
+        uses = iter_uses(iter_nodes(args.traits_dir))
+        print(f"uniprot grounding inventory OK: {len(uses)} uses match {args.out}")
+        return 0
 
     nodes = list(iter_nodes(args.traits_dir))
     uses = iter_uses(nodes)

@@ -1,0 +1,67 @@
+schema_version: 1.0.0
+repository_key: traitmech
+github_repository: CultureBotAI/TraitMech
+run_id: mech-goal-sequence-20261019
+cycle: 1
+stage: 6
+revision: 1
+outcome: completed
+summary: 'Froze INFRA_TASKS.md at the supervisor-frozen cutoff (2026-10-22T07:14:11Z,
+  sha256 bbf6969d714c5f2b51c5933da30429aceea259f20ebc0cf95caa73a87e99d200), grouped
+  the 3 pending Cycle 1 infrastructure tasks (traitmech-infra-0002, traitmech-infra-0003,
+  traitmech-infra-0004) into GitHub issues #1988 and #1981, and implemented and validated
+  all 3 tasks in PR #1989: (1) traitmech-infra-0002 (#1988): added EMPTY_SECTION_ANCHORS
+  support in scripts/audit_discussion_anchors.py and unit tests in tests/test_audit_discussion_anchors.py;
+  (2) traitmech-infra-0003 (#1988): added offline check_inventory / --check-inventory
+  mode to scripts/audit_uniprot_grounding.py, wired it into audit-derived-reports
+  in justfile against git show HEAD:reports/uniprot_grounding_audit.tsv, and added
+  unit tests in tests/test_audit_uniprot_grounding.py; (3) traitmech-infra-0004 (#1981):
+  added UNQUOTED_DEFINITION_SOURCE warning and --check-definition-sources flag to
+  scripts/audit_evidence_snippets.py and unit tests in tests/test_audit_evidence_snippets.py.
+  All 3 pending tasks are resolved and 0 tasks remain deferred or blocked.'
+source_revision: 7d4b750774051b4678d16114438ee34ed126f25c
+scope_frozen_at: '2026-10-22T07:14:11Z'
+artifacts:
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-06/revision-0001/infra_snapshot.md
+  sha256: bbf6969d714c5f2b51c5933da30429aceea259f20ebc0cf95caa73a87e99d200
+  kind: infra_snapshot
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-06/revision-0001/implementation_plan.md
+  sha256: bc9fcc10a45dbbf6a52f8b3ccbbd46467dcc7862c302f55186c564d14edeeffe
+  kind: implementation_plan
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-06/revision-0001/validation.md
+  sha256: 08ca2820ec253c6690eafb8a8c1c6dac29cb0e16c949a68b4d291dadf5559931
+  kind: validation
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-06/revision-0001/stage6_coverage_full.json
+  sha256: a1f4f6c1e2580eac774704b7286a62b96ba1afc6b73be8294216a23124f7e62c
+  kind: supporting
+findings: []
+groups: []
+carry_forward_ids: []
+infra_tasks:
+- task_id: traitmech-infra-0002
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1988
+  status: resolved
+  summary: Document or support section-level attaches_to anchors on Discussion entries when target sections (e.g. causal_graphs) are not yet populated
+  resolution_evidence:
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-06/revision-0001/implementation_plan.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-06/revision-0001/validation.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-06/revision-0001/stage6_coverage_full.json
+  disposition: Resolved in Cycle 1 Stage 6 (PR #1989, issue #1988); scripts/audit_discussion_anchors.py now supports bare section-level attaches_to anchors (e.g. causal_graphs, ontology_mapping, ecological_interactions) when the target section is empty on the record and rejects them with MALFORMED_ANCHOR once populated, covered by unit tests in tests/test_audit_discussion_anchors.py.
+- task_id: traitmech-infra-0003
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1988
+  status: resolved
+  summary: Add an offline structural consistency check for reports/uniprot_grounding_audit.tsv in audit-derived-reports so new protein_examples cannot land without refreshing the tracked report
+  resolution_evidence:
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-06/revision-0001/implementation_plan.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-06/revision-0001/validation.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-06/revision-0001/stage6_coverage_full.json
+  disposition: Resolved in Cycle 1 Stage 6 (PR #1989, issue #1988); added offline check_inventory / --check-inventory mode to scripts/audit_uniprot_grounding.py, wired it into audit-derived-reports in justfile against git show HEAD:reports/uniprot_grounding_audit.tsv, and added unit tests in tests/test_audit_uniprot_grounding.py.
+- task_id: traitmech-infra-0004
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1981
+  status: resolved
+  summary: Add an optional definition_source evidence-coverage warning to scripts/audit_evidence_snippets.py when a record's definition_source is already quoted in-repo on causal_graphs or parent/sibling records but omitted from record-level evidence
+  resolution_evidence:
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-06/revision-0001/implementation_plan.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-06/revision-0001/validation.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-06/revision-0001/stage6_coverage_full.json
+  disposition: Resolved in Cycle 1 Stage 6 (PR #1989, issue #1981, grouped with #1988); added UNQUOTED_DEFINITION_SOURCE warning to scripts/audit_evidence_snippets.py and unit tests in tests/test_audit_evidence_snippets.py to flag any PMID:/DOI: definition_source omitted from record-level evidence[].reference when a verbatim quote already exists in-corpus.
