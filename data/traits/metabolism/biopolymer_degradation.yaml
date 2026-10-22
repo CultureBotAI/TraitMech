@@ -69,8 +69,8 @@ causal_graphs:
       taxon_id: NCBITaxon:1708
       taxon_label: Cellulomonas fimi
       entry_status: REVIEWED
-      retrieved_on: '2026-08-24'
-      entry_version: 122
+      retrieved_on: '2026-10-22'
+      entry_version: 123
       sequence_version: 1
       role: Secreted CenA endoglucanase representing the cellulose-hydrolysis branch
         of this composite biopolymer-degradation graph.
@@ -368,4 +368,10 @@ curation_history:
     branch-qualified, source-supported contributes-to edges; gene and enzyme concepts
     remain supporting YAML graph fields rather than primary records (issues 426 and
     183).
+  llm_assisted: true
+- timestamp: '2026-10-22T01:35:00Z'
+  curator: claude
+  action: REFRESH_UNIPROT_ENTRY_VERSION
+  changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
+    UniProtKB:P07984 (122 -> 123 on endoglucanase).'
   llm_assisted: true

@@ -80,8 +80,8 @@ causal_graphs:
       taxon_label: Shewanella oneidensis MR-1
       entry_status: UNREVIEWED
       proteome_id: UP000008186
-      retrieved_on: '2026-08-24'
-      entry_version: 125
+      retrieved_on: '2026-10-22'
+      entry_version: 126
       sequence_version: 1
       role: MtrC-family c-type cytochrome mediating extracellular electron transfer
         to Fe(III) and Mn(IV) acceptors in S. oneidensis MR-1.
@@ -448,4 +448,10 @@ curation_history:
   action: CONNECT_CAUSAL_GRAPH_COMPONENTS
   changes: 'Resolved issue #183 graph fragmentation (4 components to 1) with 3 public-source
     connector(s). No paid research service was called.'
+  llm_assisted: true
+- timestamp: '2026-10-22T01:35:00Z'
+  curator: claude
+  action: REFRESH_UNIPROT_ENTRY_VERSION
+  changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
+    UniProtKB:Q8EG34 (125 -> 126 on cytochrome).'
   llm_assisted: true

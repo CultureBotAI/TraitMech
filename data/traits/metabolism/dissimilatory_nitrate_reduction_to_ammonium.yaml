@@ -88,8 +88,8 @@ causal_graphs:
       taxon_id: NCBITaxon:273121
       taxon_label: Wolinella succinogenes ATCC 29543
       entry_status: REVIEWED
-      retrieved_on: '2026-08-24'
-      entry_version: 163
+      retrieved_on: '2026-10-22'
+      entry_version: 164
       sequence_version: 2
       role: Ammonia-forming cytochrome c nitrite reductase catalyzing the six-electron
         nitrite reduction step in W. succinogenes.
@@ -268,4 +268,10 @@ curation_history:
   curator: codex
   action: REFINE_PARENT_TRAIT
   changes: Narrowed parent from anaerobic respiration to nitrate respiration.
+  llm_assisted: true
+- timestamp: '2026-10-22T01:35:00Z'
+  curator: claude
+  action: REFRESH_UNIPROT_ENTRY_VERSION
+  changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
+    UniProtKB:Q9S1E5 (163 -> 164 on nrfa).'
   llm_assisted: true

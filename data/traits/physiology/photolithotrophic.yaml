@@ -96,8 +96,8 @@ causal_graphs:
       taxon_id: NCBITaxon:194439
       taxon_label: Chlorobaculum tepidum TLS
       entry_status: REVIEWED
-      retrieved_on: '2026-08-24'
-      entry_version: 84
+      retrieved_on: '2026-10-22'
+      entry_version: 85
       sequence_version: 1
       role: Peripheral PscD component of the C. tepidum P840 Type I reaction center;
         this accession is not presented as the complete 12-subunit FMO-RC apparatus.
@@ -403,4 +403,10 @@ curation_history:
   action: GROUND_CAUSAL_NODE
   changes: Grounded the photoferrotrophy causal node to traitmech:000193 after minting
     the same-scope phototrophic Fe(II) oxidation TraitRecord.
+  llm_assisted: true
+- timestamp: '2026-10-22T01:35:00Z'
+  curator: claude
+  action: REFRESH_UNIPROT_ENTRY_VERSION
+  changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
+    UniProtKB:Q8KEP5 (84 -> 85 on photosynthetic_reaction_center).'
   llm_assisted: true

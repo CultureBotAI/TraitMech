@@ -86,8 +86,8 @@ causal_graphs:
       taxon_id: NCBITaxon:228410
       taxon_label: Nitrosomonas europaea ATCC 19718
       entry_status: REVIEWED
-      retrieved_on: '2026-08-24'
-      entry_version: 120
+      retrieved_on: '2026-10-22'
+      entry_version: 121
       sequence_version: 1
       role: Large subunit of the type I RuBisCO that fixes CO2 through the CBB cycle
         in N. europaea ATCC 19718; it does not denote the complete L8S8 enzyme.
@@ -458,4 +458,10 @@ curation_history:
   action: CONNECT_CAUSAL_GRAPH_COMPONENTS
   changes: 'Resolved issue #183 graph fragmentation (3 components to 1): added 2 public-source
     connector(s). No paid research service was called.'
+  llm_assisted: true
+- timestamp: '2026-10-22T01:35:00Z'
+  curator: claude
+  action: REFRESH_UNIPROT_ENTRY_VERSION
+  changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
+    UniProtKB:Q82TG6 (120 -> 121 on rubisco).'
   llm_assisted: true

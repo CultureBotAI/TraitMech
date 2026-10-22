@@ -95,8 +95,8 @@ causal_graphs:
       taxon_id: NCBITaxon:668
       taxon_label: Aliivibrio fischeri
       entry_status: REVIEWED
-      retrieved_on: '2026-08-24'
-      entry_version: 97
+      retrieved_on: '2026-10-22'
+      entry_version: 98
       sequence_version: 1
       role: LuxI synthesizes the 3-oxo-C6-HSL autoinducer that activates LuxR-dependent
         lux-locus expression in A. fischeri; it is a regulatory component, not the
@@ -313,4 +313,10 @@ curation_history:
   changes: Reviewed the Lux-system scope and every protein node, converted the canonical
     A. fischeri citation to DOI, grounded luciferase and LuxI functions, and added
     a reviewed A. fischeri LuxI protein example.
+  llm_assisted: true
+- timestamp: '2026-10-22T01:35:00Z'
+  curator: claude
+  action: REFRESH_UNIPROT_ENTRY_VERSION
+  changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
+    UniProtKB:P12747 (97 -> 98 on lux_i).'
   llm_assisted: true

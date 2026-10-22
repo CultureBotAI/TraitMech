@@ -94,8 +94,8 @@ causal_graphs:
       taxon_label: Methanocaldococcus jannaschii DSM 2661
       entry_status: REVIEWED
       proteome_id: UP000000805
-      retrieved_on: '2026-08-23'
-      entry_version: 146
+      retrieved_on: '2026-10-22'
+      entry_version: 147
       sequence_version: 2
       role: Alpha subunit of methyl-coenzyme M reductase I, the multisubunit enzyme
         catalyzing the terminal methane-forming step; this accession is not presented
@@ -452,4 +452,10 @@ curation_history:
   action: GROUND_CAUSAL_NODE
   changes: Grounded the methyl-based methanogenesis causal node to traitmech:000192
     after minting the same-scope methyl-substrate methanogenesis TraitRecord.
+  llm_assisted: true
+- timestamp: '2026-10-22T01:35:00Z'
+  curator: claude
+  action: REFRESH_UNIPROT_ENTRY_VERSION
+  changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
+    UniProtKB:Q58256 (146 -> 147 on methyl_coenzyme_m_reductase).'
   llm_assisted: true

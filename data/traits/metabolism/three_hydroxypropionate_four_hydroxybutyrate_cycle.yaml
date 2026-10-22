@@ -135,8 +135,8 @@ causal_graphs:
       taxon_label: Metallosphaera sedula DSM 5348
       entry_status: UNREVIEWED
       proteome_id: UP000000242
-      retrieved_on: '2026-08-24'
-      entry_version: 85
+      retrieved_on: '2026-10-22'
+      entry_version: 86
       sequence_version: 1
       role: Gamma carboxyltransferase component of the three-component acetyl-CoA/propionyl-CoA
         carboxylase; this accession is not the complete enzyme.
@@ -331,4 +331,10 @@ curation_history:
   changes: Scoped the M. sedula 3HP/4HB mechanism, added all three DOI-backed carboxylase
     components plus Msed_1321 as taxon-paired UniProt examples, and documented why
     the complex and historical dehydratase labels remain reviewed label-only.
+  llm_assisted: true
+- timestamp: '2026-10-22T01:35:00Z'
+  curator: claude
+  action: REFRESH_UNIPROT_ENTRY_VERSION
+  changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
+    UniProtKB:A4YGI1 (85 -> 86 on acetyl_propionyl_coa_carboxylase).'
   llm_assisted: true

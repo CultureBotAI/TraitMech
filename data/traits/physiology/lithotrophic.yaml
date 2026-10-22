@@ -46,9 +46,10 @@ causal_graphs:
     transport, proton motive force, and ATP synthesis.
   scope_status: MECHANISTIC
   scope_notes: This cross-donor graph combines hydrogen, sulfur, ammonia, and nitrite
-    oxidation. The N. europaea AmoA example anchors only the ammonia branch; Q04507
-    is an alpha-subunit component of a multisubunit ammonia monooxygenase and not
-    the complete enzyme or any other donor-oxidation system.
+    oxidation. The N. europaea ATCC 19718 AmoA (Q04507) and HAO (Q50925) examples
+    anchor only the bacterial ammonia-to-hydroxylamine-to-nitrite branch; Q04507 is
+    an alpha-subunit component of a multisubunit ammonia monooxygenase and neither
+    example represents sulfur, hydrogen, or nitrite oxidizer systems.
   nodes:
   - node_id: lithotrophic_trait
     label: lithotrophic
@@ -126,8 +127,8 @@ causal_graphs:
       taxon_id: NCBITaxon:228410
       taxon_label: Nitrosomonas europaea ATCC 19718
       entry_status: REVIEWED
-      retrieved_on: '2026-08-24'
-      entry_version: 126
+      retrieved_on: '2026-10-22'
+      entry_version: 127
       sequence_version: 2
       role: AmoA alpha-subunit component of the N. europaea ammonia monooxygenase;
         the accession maps two duplicated amoA gene copies and is not the whole enzyme
@@ -148,6 +149,27 @@ causal_graphs:
     node_type: GENE_OR_PROTEIN
     description: Enzyme oxidizing hydroxylamine during ammonia oxidation (EC 1.7.2.6).
     grounding: GO:0033740
+    protein_examples:
+    - uniprot_id: UniProtKB:Q50925
+      protein_label: Hydroxylamine oxidoreductase
+      gene_symbol: hao1
+      taxon_id: NCBITaxon:228410
+      taxon_label: Nitrosomonas europaea ATCC 19718
+      entry_status: REVIEWED
+      proteome_id: UP000001416
+      retrieved_on: '2026-10-22'
+      entry_version: 155
+      sequence_version: 2
+      role: Multiheme hydroxylamine oxidoreductase (encoded by three identical hao
+        gene copies in N. europaea ATCC 19718) that oxidizes hydroxylamine to nitrite
+        and feeds electrons into the respiratory chain via cytochrome c554.
+      evidence:
+      - reference: DOI:10.1128/jb.185.9.2759-2773.2003
+        snippet: Electrons from hydroxylamine oxidation flow through cytochrome c554
+          and cytochrome cm552 into the electron transport chain at the level of ubiquinone
+        notes: Chain et al. 2003 (complete N. europaea ATCC 19718 genome analysis)
+          describe hydroxylamine oxidation to nitrite and electron transfer into the
+          ubiquinone pool.
   - node_id: nitrite
     label: nitrite
     node_type: CHEMICAL
@@ -477,4 +499,12 @@ curation_history:
     relations. Sox and SoeABC now join the sulfur-oxidation branch to electron transport;
     the explicitly bacterial AMO-HAO branch now joins ammonia, hydroxylamine, nitrite,
     NXR, and electron transport. No new paid research was commissioned (#183, #426).'
+  llm_assisted: true
+- timestamp: '2026-10-22T01:35:00Z'
+  curator: claude
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: Added reviewed N. europaea ATCC 19718 HAO protein_example UniProtKB:Q50925
+    (hao1, v155) on hydroxylamine_oxidoreductase (DOI:10.1128/jb.185.9.2759-2773.2003),
+    updated scope_notes, and refreshed UniProtKB:Q04507 entry_version 124 -> 125 on
+    ammonia_monooxygenase.
   llm_assisted: true

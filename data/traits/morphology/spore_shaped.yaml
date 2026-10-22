@@ -83,8 +83,8 @@ causal_graphs:
       taxon_id: NCBITaxon:224308
       taxon_label: Bacillus subtilis 168
       entry_status: REVIEWED
-      retrieved_on: '2026-08-25'
-      entry_version: 134
+      retrieved_on: '2026-10-22'
+      entry_version: 135
       sequence_version: 1
       role: SpoIVA hydrolyzes ATP and self-assembles into the basement layer that
         supports deposition of the Bacillus spore coat.
@@ -367,4 +367,10 @@ curation_history:
   action: CONNECT_CAUSAL_GRAPH_COMPONENTS
   changes: 'Resolved issue #183 graph fragmentation (5 components to 1) using 4 source-
     and verbatim-snippet-backed connector(s). No paid research service was called.'
+  llm_assisted: true
+- timestamp: '2026-10-22T01:35:00Z'
+  curator: claude
+  action: REFRESH_UNIPROT_ENTRY_VERSION
+  changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
+    UniProtKB:P35149 (134 -> 135 on spoiva_protein).'
   llm_assisted: true

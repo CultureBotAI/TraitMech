@@ -123,8 +123,8 @@ causal_graphs:
       taxon_label: Candidatus Electronema aureum
       entry_status: UNREVIEWED
       proteome_id: UP000316238
-      retrieved_on: '2026-08-24'
-      entry_version: 24
+      retrieved_on: '2026-10-22'
+      entry_version: 25
       sequence_version: 1
       role: DsrA alpha component of the E. aureum DsrAB complex; this accession is
         not the complete complex and does not by itself establish pathway direction.
@@ -141,8 +141,8 @@ causal_graphs:
       taxon_label: Candidatus Electronema aureum
       entry_status: UNREVIEWED
       proteome_id: UP000316238
-      retrieved_on: '2026-08-24'
-      entry_version: 24
+      retrieved_on: '2026-10-22'
+      entry_version: 25
       sequence_version: 1
       role: DsrB beta component of the E. aureum DsrAB complex; this accession is
         not the complete complex and does not by itself establish pathway direction.
@@ -371,4 +371,11 @@ curation_history:
   changes: Scoped the cable-bacterium mechanism, added E. aureum as a DOI-backed canonical
     species, and represented both DsrAB components as taxon-paired examples while
     preserving uncertainty about pathway direction and conductive-fiber identity.
+  llm_assisted: true
+- timestamp: '2026-10-22T01:35:00Z'
+  curator: claude
+  action: REFRESH_UNIPROT_ENTRY_VERSION
+  changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
+    UniProtKB:A0A521G566 (24 -> 25 on dsrab_complex), UniProtKB:A0A521G5H7 (24 ->
+    25 on dsrab_complex).'
   llm_assisted: true

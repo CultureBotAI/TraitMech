@@ -62,8 +62,8 @@ causal_graphs:
       taxon_id: NCBITaxon:1402
       taxon_label: Bacillus licheniformis
       entry_status: REVIEWED
-      retrieved_on: '2026-08-24'
-      entry_version: 173
+      retrieved_on: '2026-10-22'
+      entry_version: 174
       sequence_version: 1
       role: Secreted alpha-amylase that hydrolyzes soluble starch in the canonical
         B. licheniformis example.
@@ -245,4 +245,10 @@ curation_history:
     declared exact synonym(s): ''starch breakdown'', ''starch catabolism''. Evidence
     is predicate-scoped in the versioned ontology snapshots; OAK cross-checked direct
     data, and OLS4 spot-checked release deltas and disputed hits.'
+  llm_assisted: true
+- timestamp: '2026-10-22T01:35:00Z'
+  curator: claude
+  action: REFRESH_UNIPROT_ENTRY_VERSION
+  changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
+    UniProtKB:P06278 (173 -> 174 on amylase).'
   llm_assisted: true

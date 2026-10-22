@@ -59,8 +59,8 @@ causal_graphs:
       taxon_id: NCBITaxon:171101
       taxon_label: Streptococcus pneumoniae R6
       entry_status: REVIEWED
-      retrieved_on: '2026-08-25'
-      entry_version: 110
+      retrieved_on: '2026-10-22'
+      entry_version: 111
       sequence_version: 1
       role: R6 PBP2b supplies the peripheral peptidoglycan transpeptidase activity
         required to maintain elongated oval pneumococcal morphology.
@@ -289,4 +289,10 @@ curation_history:
     (mapZ_ftsZ_system, mreC); added taxon-paired protein example(s) UniProtKB:P0A3M6
     on pbp2b (NCBITaxon:171101); regrounded 1 node(s) (pbp2b: none->InterPro:IPR047982);
     added canonical example(s) NCBITaxon:171101.'
+  llm_assisted: true
+- timestamp: '2026-10-22T01:35:00Z'
+  curator: claude
+  action: REFRESH_UNIPROT_ENTRY_VERSION
+  changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
+    UniProtKB:P0A3M6 (110 -> 111 on pbp2b).'
   llm_assisted: true

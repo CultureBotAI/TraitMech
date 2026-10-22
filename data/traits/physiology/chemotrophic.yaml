@@ -91,8 +91,8 @@ causal_graphs:
       taxon_id: NCBITaxon:83333
       taxon_label: Escherichia coli K-12
       entry_status: REVIEWED
-      retrieved_on: '2026-08-24'
-      entry_version: 155
+      retrieved_on: '2026-10-22'
+      entry_version: 156
       sequence_version: 2
       role: Beta component of the F1 catalytic head of the E. coli F1Fo ATP synthase;
         this accession is not presented as the complete rotary complex.
@@ -341,4 +341,10 @@ curation_history:
     added DOI-cited E. coli K-12 as the canonical strain, and paired the generic ATP
     synthase complex with reviewed AtpD component P0ABB4 without treating one subunit
     as the whole complex.
+  llm_assisted: true
+- timestamp: '2026-10-22T01:35:00Z'
+  curator: claude
+  action: REFRESH_UNIPROT_ENTRY_VERSION
+  changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
+    UniProtKB:P0ABB4 (155 -> 156 on atp_synthase).'
   llm_assisted: true

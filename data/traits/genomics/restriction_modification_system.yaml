@@ -83,8 +83,8 @@ causal_graphs:
       taxon_id: NCBITaxon:71421
       taxon_label: Haemophilus influenzae Rd KW20
       entry_status: REVIEWED
-      retrieved_on: '2026-08-25'
-      entry_version: 124
+      retrieved_on: '2026-10-22'
+      entry_version: 125
       sequence_version: 2
       role: HindII recognizes its target sequence and cleaves foreign double-stranded
         DNA as the restriction component of the HindII system.
@@ -248,4 +248,10 @@ curation_history:
   action: REFINED_PARENT_TRAITS
   changes: Reparented restriction-modification system from the broad genomics parent
     to the newly minted phage defense system parent.
+  llm_assisted: true
+- timestamp: '2026-10-22T01:35:00Z'
+  curator: claude
+  action: REFRESH_UNIPROT_ENTRY_VERSION
+  changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
+    UniProtKB:P44413 (124 -> 125 on restriction_endonuclease).'
   llm_assisted: true

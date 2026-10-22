@@ -119,8 +119,8 @@ causal_graphs:
       taxon_label: Escherichia coli K-12
       entry_status: REVIEWED
       proteome_id: UP000000625
-      retrieved_on: '2026-08-25'
-      entry_version: 160
+      retrieved_on: '2026-10-22'
+      entry_version: 161
       sequence_version: 2
       role: Phosphorylated CheY binds the E. coli flagellar switch and changes motor
         rotation during swimming.
@@ -512,4 +512,10 @@ curation_history:
     flagellar_c_ring, pilb_atpase, pilt_atpase); added taxon-paired protein example(s)
     UniProtKB:P0AE67 on chey_response_regulator (NCBITaxon:83333); added canonical
     example(s) NCBITaxon:83333.'
+  llm_assisted: true
+- timestamp: '2026-10-22T01:35:00Z'
+  curator: claude
+  action: REFRESH_UNIPROT_ENTRY_VERSION
+  changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
+    UniProtKB:P0AE67 (160 -> 161 on chey_response_regulator).'
   llm_assisted: true

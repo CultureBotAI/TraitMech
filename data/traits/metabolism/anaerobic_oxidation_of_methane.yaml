@@ -76,8 +76,8 @@ causal_graphs:
       taxon_label: Candidatus Methanoperedens nitratireducens
       entry_status: UNREVIEWED
       proteome_id: UP000218615
-      retrieved_on: '2026-08-24'
-      entry_version: 21
+      retrieved_on: '2026-10-22'
+      entry_version: 22
       sequence_version: 1
       role: McrA alpha component of methyl-coenzyme M reductase in nitrate-dependent
         reverse methanogenesis; this accession is not the complete MCR complex and
@@ -227,4 +227,10 @@ curation_history:
   changes: Scoped the composite AOM graph, converted the canonical example to its
     DOI, and added a taxon-matched Ca. M. nitroreducens mcrA example with explicit
     complex-component and directionality caveats.
+  llm_assisted: true
+- timestamp: '2026-10-22T01:35:00Z'
+  curator: claude
+  action: REFRESH_UNIPROT_ENTRY_VERSION
+  changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
+    UniProtKB:A0A284VQI9 (21 -> 22 on mcr).'
   llm_assisted: true

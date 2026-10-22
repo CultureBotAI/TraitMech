@@ -41,8 +41,9 @@ causal_graphs:
     peroxide into water and molecular oxygen.
   scope_status: MECHANISTIC
   scope_notes: Represents a monofunctional heme-catalase reaction and two alternative
-    bacterial peroxide-sensing regulators. The PerR example supports the S. aureus
-    regulatory branch and is not generalized to OxyR-using taxa.
+    bacterial peroxide-sensing regulators. The S. aureus NCTC 8325 PerR (Q2G282) and
+    E. coli K-12 OxyR (P0ACQ4) examples support their respective taxon-specific regulatory
+    branches and are not generalized across all catalase-positive taxa.
   nodes:
   - node_id: catalase_activity_trait
     label: catalase activity
@@ -117,6 +118,26 @@ causal_graphs:
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: OxyR belongs to the broad LysR regulator family, but the checked
       InterPro entries describe shared domains rather than an exact OxyR protein family.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0ACQ4
+      protein_label: DNA-binding transcriptional dual regulator OxyR
+      gene_symbol: oxyR
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli K-12
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-22'
+      entry_version: 144
+      sequence_version: 1
+      role: Peroxide-sensing transcriptional dual regulator that is directly oxidized
+        and activated by hydrogen peroxide to induce katG and peroxide-defense genes
+        in E. coli K-12; this example supports the OxyR regulatory branch only, not
+        PerR-regulated taxa.
+      evidence:
+      - reference: DOI:10.1073/pnas.96.11.6161
+        snippet: In wild-type cells, OxyR is activated by hydrogen peroxide.
+        notes: Åslund et al. 1999 characterize hydrogen peroxide activation of E.
+          coli K-12 OxyR.
   - node_id: perr_regulator
     label: PerR
     node_type: GENE_OR_PROTEIN
@@ -134,8 +155,8 @@ causal_graphs:
       taxon_label: Staphylococcus aureus NCTC 8325
       entry_status: REVIEWED
       proteome_id: UP000008816
-      retrieved_on: '2026-08-23'
-      entry_version: 109
+      retrieved_on: '2026-10-22'
+      entry_version: 110
       sequence_version: 1
       role: Manganese-dependent peroxide-responsive repressor controlling katA and
         the wider oxidative-stress defense regulon in S. aureus.
@@ -415,4 +436,11 @@ curation_history:
     the yeast detoxification model, retaining the upstream heme context and primary-source-backed
     Ctt1 example. The link explicitly distinguishes catalase chemistry from superoxide
     dismutase and bacterial regulatory branches.
+  llm_assisted: true
+- timestamp: '2026-10-22T01:35:00Z'
+  curator: claude
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: Added reviewed E. coli K-12 OxyR protein_example UniProtKB:P0ACQ4 (v144)
+    on oxyr_regulator (DOI:10.1073/pnas.96.11.6161), updated scope_notes, and refreshed
+    UniProtKB:Q2G282 entry_version 109 -> 110 on perr_regulator.
   llm_assisted: true

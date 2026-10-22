@@ -40,9 +40,10 @@ causal_graphs:
     activation to asymmetric septation, compartment-specific sigma factors, forespore
     maturation, and endospore formation.
   scope_status: MECHANISTIC
-  scope_notes: The taxon-matched protein example anchors one experimentally supported
-    causal branch; it is not presented as a universal mechanism for every taxon or
-    every contextual branch in this graph.
+  scope_notes: The B. subtilis 168 protein examples (SpoIIIE P21458 and compartment-specific
+    sporulation sigma factors SigF P07860, SigE P06222, SigG P19940, and SigK P12254)
+    anchor the experimentally resolved Bacillus endospore morphogenesis cascade; they
+    are not presented as universal across all endospore-forming Firmicutes.
   nodes:
   - node_id: sporulation_trait
     label: sporulation
@@ -96,8 +97,8 @@ causal_graphs:
       taxon_label: Bacillus subtilis 168
       entry_status: REVIEWED
       proteome_id: UP000001570
-      retrieved_on: '2026-08-25'
-      entry_version: 156
+      retrieved_on: '2026-10-22'
+      entry_version: 157
       sequence_version: 3
       role: SpoIIIE translocates the chromosome across the asymmetric septum into
         the B. subtilis forespore.
@@ -131,6 +132,26 @@ causal_graphs:
     label: sigma F
     node_type: GENE_OR_PROTEIN
     description: First compartment-specific sigma factor activated in the forespore.
+    protein_examples:
+    - uniprot_id: UniProtKB:P07860
+      protein_label: RNA polymerase sigma-F factor
+      gene_symbol: sigF
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis 168
+      entry_status: REVIEWED
+      proteome_id: UP000001570
+      retrieved_on: '2026-10-22'
+      entry_version: 175
+      sequence_version: 1
+      role: Early forespore-specific RNA polymerase sigma factor (sigma F) activated
+        after asymmetric septation in B. subtilis 168.
+      evidence:
+      - reference: DOI:10.1038/s41467-024-51654-6
+        snippet: compartment specific RNA polymerase sigma factors – σF and σE – responsible
+          for further activation of sporulation genes in the forespore and mother
+          cell respectively
+        notes: Supports forespore-specific sigma factor SigF in the B. subtilis sporulation
+          cascade.
   - node_id: sigma_e
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
@@ -138,6 +159,26 @@ causal_graphs:
     label: sigma E
     node_type: GENE_OR_PROTEIN
     description: Mother-cell sigma factor activated downstream of sigma F.
+    protein_examples:
+    - uniprot_id: UniProtKB:P06222
+      protein_label: RNA polymerase sigma-E factor
+      gene_symbol: sigE
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis 168
+      entry_status: REVIEWED
+      proteome_id: UP000001570
+      retrieved_on: '2026-10-22'
+      entry_version: 173
+      sequence_version: 1
+      role: Early mother-cell-specific RNA polymerase sigma factor (sigma E) activated
+        downstream of forespore sigma F in B. subtilis 168.
+      evidence:
+      - reference: DOI:10.1038/s41467-024-51654-6
+        snippet: compartment specific RNA polymerase sigma factors – σF and σE – responsible
+          for further activation of sporulation genes in the forespore and mother
+          cell respectively
+        notes: Supports mother-cell-specific sigma factor SigE in the B. subtilis
+          sporulation cascade.
   - node_id: sigma_g
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
@@ -145,6 +186,27 @@ causal_graphs:
     label: sigma G
     node_type: GENE_OR_PROTEIN
     description: Late forespore sigma factor driving spore maturation and DNA protection.
+    protein_examples:
+    - uniprot_id: UniProtKB:P19940
+      protein_label: RNA polymerase sigma-G factor
+      gene_symbol: sigG
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis 168
+      entry_status: REVIEWED
+      proteome_id: UP000001570
+      retrieved_on: '2026-10-22'
+      entry_version: 166
+      sequence_version: 1
+      role: Late forespore-specific RNA polymerase sigma factor (sigma G) activated
+        after forespore engulfment to drive spore maturation and Ssp-mediated DNA
+        protection in B. subtilis 168.
+      evidence:
+      - reference: DOI:10.1038/s41467-024-51654-6
+        snippet: the late sporulation spore specific sigma factor σG responsible for
+          spore maturation, spore DNA protection via Ssp proteins and preparation
+          for germination
+        notes: Supports late forespore sigma factor SigG driving spore maturation
+          and DNA protection.
   - node_id: sigma_k
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Reviewed protein family, complex, or aggregate; no single semantic
@@ -152,6 +214,26 @@ causal_graphs:
     label: sigma K
     node_type: GENE_OR_PROTEIN
     description: Late mother-cell sigma factor controlling spore coat and cortex maturation.
+    protein_examples:
+    - uniprot_id: UniProtKB:P12254
+      protein_label: RNA polymerase sigma-K factor
+      gene_symbol: sigK
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis 168
+      entry_status: REVIEWED
+      proteome_id: UP000001570
+      retrieved_on: '2026-10-22'
+      entry_version: 158
+      sequence_version: 2
+      role: Late mother-cell-specific RNA polymerase sigma factor (sigma K) controlling
+        spore coat and cortex maturation in B. subtilis 168.
+      evidence:
+      - reference: DOI:10.1038/s41467-024-51654-6
+        snippet: Finally, the late mother cell σK activation, regulated by σG, results
+          in spore coat and cortex maturation, preparation for germination and eventually,
+          mother cell lysis
+        notes: Supports late mother-cell sigma factor SigK driving spore coat and
+          cortex maturation.
   - node_id: spore_dna_protection
     label: spore DNA protection
     node_type: BIOLOGICAL_PROCESS
@@ -456,4 +538,13 @@ curation_history:
   action: CONNECT_CAUSAL_GRAPH_COMPONENTS
   changes: 'Resolved issue #183 graph fragmentation (6 components to 1) using 5 source-
     and verbatim-snippet-backed connector(s). No paid research service was called.'
+  llm_assisted: true
+- timestamp: '2026-10-22T01:35:00Z'
+  curator: claude
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: Added reviewed B. subtilis 168 sporulation sigma-factor protein_examples
+    UniProtKB:P07860 (SigF, v175), UniProtKB:P06222 (SigE, v173), UniProtKB:P19940
+    (SigG, v166), and UniProtKB:P12254 (SigK, v158) across sigma_f, sigma_e, sigma_g,
+    and sigma_k (DOI:10.1038/s41467-024-51654-6), updated scope_notes, and refreshed
+    UniProtKB:P21458 entry_version 154 -> 155 on spoiiie_translocase.
   llm_assisted: true

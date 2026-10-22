@@ -60,8 +60,8 @@ causal_graphs:
       taxon_id: NCBITaxon:133804
       taxon_label: gamma proteobacterium EBAC31A08
       entry_status: REVIEWED
-      retrieved_on: '2026-08-23'
-      entry_version: 97
+      retrieved_on: '2026-10-22'
+      entry_version: 98
       sequence_version: 1
       role: Retinal-binding light-driven proton pump that establishes the core energy-transduction
         mechanism represented in this graph.
@@ -283,4 +283,10 @@ curation_history:
     edge); DOI:10.1038/35081051 -> DOI:10.1073/pnas.0611035104 (1 edge); DOI:10.34133/2022/9782712
     -> DOI:10.1128/MMBR.69.1.51-78.2005 (1 edge); DOI:10.4014/jmb.2410.10034 -> DOI:10.1073/pnas.0611035104
     (1 edge).'
+  llm_assisted: true
+- timestamp: '2026-10-22T01:35:00Z'
+  curator: claude
+  action: REFRESH_UNIPROT_ENTRY_VERSION
+  changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
+    UniProtKB:Q9F7P4 (97 -> 98 on proteorhodopsin).'
   llm_assisted: true

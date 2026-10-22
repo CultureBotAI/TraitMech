@@ -121,8 +121,8 @@ causal_graphs:
       taxon_label: Streptococcus pyogenes serotype M1
       entry_status: UNREVIEWED
       proteome_id: UP000000750
-      retrieved_on: '2026-08-23'
-      entry_version: 146
+      retrieved_on: '2026-10-22'
+      entry_version: 147
       sequence_version: 1
       role: ArcC of the arginine-deiminase pathway, which catalyzes the ATP-forming
         carbamate-kinase reaction represented by this node.
@@ -389,4 +389,10 @@ curation_history:
   action: ADD_PATHWAY_CONTEXT
   changes: Added pinned PathwayMech context on reviewed causal nodes with explicit
     route and organism limitations; retained existing groundings and exact xrefs.
+  llm_assisted: true
+- timestamp: '2026-10-22T01:35:00Z'
+  curator: claude
+  action: REFRESH_UNIPROT_ENTRY_VERSION
+  changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
+    UniProtKB:Q99YT9 (146 -> 147 on carbamate_kinase_arginine_deiminase).'
   llm_assisted: true

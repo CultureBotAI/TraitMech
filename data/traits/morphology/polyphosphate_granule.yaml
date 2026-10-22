@@ -65,8 +65,8 @@ causal_graphs:
       taxon_label: Microlunatus phosphovorus NM-1
       entry_status: UNREVIEWED
       proteome_id: UP000007947
-      retrieved_on: '2026-08-25'
-      entry_version: 69
+      retrieved_on: '2026-10-22'
+      entry_version: 70
       sequence_version: 1
       role: The NM-1 polyphosphate kinase synthesizes the polyphosphate stored in
         intracellular granules.
@@ -204,4 +204,10 @@ curation_history:
     the tranche: set graph scope polyphosphate_granule_storage=MECHANISTIC with scope_notes;
     added taxon-paired protein example(s) UniProtKB:F5XF46 on ppk (NCBITaxon:1032480);
     added canonical example(s) NCBITaxon:1032480.'
+  llm_assisted: true
+- timestamp: '2026-10-22T01:35:00Z'
+  curator: claude
+  action: REFRESH_UNIPROT_ENTRY_VERSION
+  changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
+    UniProtKB:F5XF46 (69 -> 70 on ppk).'
   llm_assisted: true

@@ -91,8 +91,8 @@ causal_graphs:
       taxon_label: Deinococcus radiodurans R1
       entry_status: REVIEWED
       proteome_id: UP000002524
-      retrieved_on: '2026-08-25'
-      entry_version: 161
+      retrieved_on: '2026-10-22'
+      entry_version: 162
       sequence_version: 2
       role: R1 RecA mediates homologous-recombination repair of radiation-induced
         DNA double-strand breaks.
@@ -270,4 +270,10 @@ curation_history:
     scope_notes; marked 1 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (reca_protein); added taxon-paired protein example(s) UniProtKB:P42443 on reca_protein
     (NCBITaxon:243230); added canonical example(s) NCBITaxon:243230.'
+  llm_assisted: true
+- timestamp: '2026-10-22T01:35:00Z'
+  curator: claude
+  action: REFRESH_UNIPROT_ENTRY_VERSION
+  changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
+    UniProtKB:P42443 (161 -> 162 on reca_protein).'
   llm_assisted: true

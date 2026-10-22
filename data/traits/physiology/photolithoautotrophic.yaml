@@ -127,8 +127,8 @@ causal_graphs:
       taxon_id: NCBITaxon:1140
       taxon_label: Synechococcus elongatus PCC 7942
       entry_status: REVIEWED
-      retrieved_on: '2026-08-24'
-      entry_version: 112
+      retrieved_on: '2026-10-22'
+      entry_version: 113
       sequence_version: 1
       role: Large-chain component of the hexadecameric RbcL/RbcS RuBisCO that fixes
         CO2 through the CBB cycle; this accession does not denote the complete enzyme.
@@ -462,4 +462,10 @@ curation_history:
   action: CONNECT_CAUSAL_GRAPH_COMPONENTS
   changes: 'Resolved issue #183 graph fragmentation (3 components to 1) with 2 public-source,
     verbatim-snippet-backed connector(s). No paid research service was called.'
+  llm_assisted: true
+- timestamp: '2026-10-22T01:35:00Z'
+  curator: claude
+  action: REFRESH_UNIPROT_ENTRY_VERSION
+  changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
+    UniProtKB:Q31NB3 (112 -> 113 on rubisco).'
   llm_assisted: true

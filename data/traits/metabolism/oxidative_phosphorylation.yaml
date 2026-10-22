@@ -119,8 +119,8 @@ causal_graphs:
       taxon_id: NCBITaxon:266
       taxon_label: Paracoccus denitrificans
       entry_status: REVIEWED
-      retrieved_on: '2026-08-23'
-      entry_version: 167
+      retrieved_on: '2026-10-22'
+      entry_version: 168
       sequence_version: 1
       role: Subunit II component of purified P. denitrificans cytochrome c oxidase;
         this accession does not represent the complete heme-copper oxidase complex.
@@ -401,4 +401,10 @@ curation_history:
     declared exact synonym(s): ''respiratory-chain phosphorylation''. Evidence is
     predicate-scoped in the versioned ontology snapshots; OAK cross-checked direct
     data, and OLS4 spot-checked release deltas and disputed hits.'
+  llm_assisted: true
+- timestamp: '2026-10-22T01:35:00Z'
+  curator: claude
+  action: REFRESH_UNIPROT_ENTRY_VERSION
+  changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
+    UniProtKB:P08306 (167 -> 168 on heme_copper_oxidase).'
   llm_assisted: true

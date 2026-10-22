@@ -150,8 +150,8 @@ causal_graphs:
       taxon_id: NCBITaxon:272630
       taxon_label: Methylorubrum extorquens AM1
       entry_status: REVIEWED
-      retrieved_on: '2026-08-24'
-      entry_version: 179
+      retrieved_on: '2026-10-22'
+      entry_version: 180
       sequence_version: 1
       role: Large catalytic MxaF component of the AM1 MxaFI methanol dehydrogenase;
         this accession is not presented as the complete enzyme.
@@ -458,4 +458,10 @@ curation_history:
   action: CONNECT_CAUSAL_GRAPH_COMPONENTS
   changes: 'Resolved issue #183 graph fragmentation (4 components to 1) with 3 public-source,
     verbatim-snippet-backed connector(s). No paid research service was called.'
+  llm_assisted: true
+- timestamp: '2026-10-22T01:35:00Z'
+  curator: claude
+  action: REFRESH_UNIPROT_ENTRY_VERSION
+  changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
+    UniProtKB:P16027 (179 -> 180 on mxa_methanol_dehydrogenase).'
   llm_assisted: true

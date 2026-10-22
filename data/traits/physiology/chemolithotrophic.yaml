@@ -77,8 +77,8 @@ causal_graphs:
       taxon_id: NCBITaxon:228410
       taxon_label: Nitrosomonas europaea ATCC 19718
       entry_status: REVIEWED
-      retrieved_on: '2026-08-24'
-      entry_version: 126
+      retrieved_on: '2026-10-22'
+      entry_version: 127
       sequence_version: 2
       role: AmoA alpha-subunit component of the N. europaea ammonia monooxygenase;
         the accession maps two duplicated amoA gene copies and is not the whole enzyme
@@ -429,4 +429,10 @@ curation_history:
   action: CONNECT_CAUSAL_GRAPH_COMPONENTS
   changes: 'Resolved issue #183 graph fragmentation (5 components to 1): added 4 public-source
     connector(s). No paid research service was called.'
+  llm_assisted: true
+- timestamp: '2026-10-22T01:35:00Z'
+  curator: claude
+  action: REFRESH_UNIPROT_ENTRY_VERSION
+  changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
+    UniProtKB:Q04507 (126 -> 127 on ammonia_monooxygenase).'
   llm_assisted: true

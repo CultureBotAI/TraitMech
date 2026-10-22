@@ -59,8 +59,8 @@ causal_graphs:
       taxon_id: NCBITaxon:1474
       taxon_label: Sporosarcina pasteurii
       entry_status: REVIEWED
-      retrieved_on: '2026-08-24'
-      entry_version: 152
+      retrieved_on: '2026-10-22'
+      entry_version: 153
       sequence_version: 2
       role: Catalytic alpha component of the S. pasteurii UreA/UreB/UreC urease; it
         binds the binuclear nickel active site but does not alone denote the complete
@@ -78,8 +78,8 @@ causal_graphs:
       taxon_id: NCBITaxon:1474
       taxon_label: Sporosarcina pasteurii
       entry_status: REVIEWED
-      retrieved_on: '2026-08-24'
-      entry_version: 127
+      retrieved_on: '2026-10-22'
+      entry_version: 128
       sequence_version: 1
       role: Beta structural component of the S. pasteurii UreA/UreB/UreC urease; it
         is recorded explicitly so the accession is not mistaken for the complete enzyme.
@@ -95,8 +95,8 @@ causal_graphs:
       taxon_id: NCBITaxon:1474
       taxon_label: Sporosarcina pasteurii
       entry_status: REVIEWED
-      retrieved_on: '2026-08-24'
-      entry_version: 129
+      retrieved_on: '2026-10-22'
+      entry_version: 130
       sequence_version: 1
       role: Gamma structural component of the S. pasteurii UreA/UreB/UreC urease;
         it is recorded explicitly so the accession is not mistaken for the complete
@@ -332,4 +332,11 @@ curation_history:
   changes: Reviewed the urease graph scope, converted the S. pasteurii citation to
     DOI, dispositioned the multisubunit urease node, and added explicit reviewed UreC,
     UreB, and UreA component examples with structural evidence.
+  llm_assisted: true
+- timestamp: '2026-10-22T01:35:00Z'
+  curator: claude
+  action: REFRESH_UNIPROT_ENTRY_VERSION
+  changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
+    UniProtKB:P41020 (152 -> 153 on urease), UniProtKB:P41021 (127 -> 128 on urease),
+    UniProtKB:P41022 (129 -> 130 on urease).'
   llm_assisted: true

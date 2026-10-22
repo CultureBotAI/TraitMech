@@ -61,8 +61,8 @@ causal_graphs:
       taxon_label: Cupriavidus metallidurans CH34
       entry_status: REVIEWED
       proteome_id: UP000002429
-      retrieved_on: '2026-08-25'
-      entry_version: 153
+      retrieved_on: '2026-10-22'
+      entry_version: 154
       sequence_version: 3
       role: CzcA is the inner-membrane transporter component of the CH34 CzcCBA pump
         exporting cadmium, zinc, and cobalt.
@@ -220,4 +220,10 @@ curation_history:
     metallothionein_proteins, cada_ptype_atpase); added taxon-paired protein example(s)
     UniProtKB:P13511 on czc_efflux_system (NCBITaxon:266264); added canonical example(s)
     NCBITaxon:266264.'
+  llm_assisted: true
+- timestamp: '2026-10-22T01:35:00Z'
+  curator: claude
+  action: REFRESH_UNIPROT_ENTRY_VERSION
+  changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
+    UniProtKB:P13511 (153 -> 154 on czc_efflux_system).'
   llm_assisted: true
