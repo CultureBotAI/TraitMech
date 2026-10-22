@@ -82,8 +82,8 @@ causal_graphs:
       taxon_label: Cupriavidus necator H16
       entry_status: REVIEWED
       proteome_id: UP000008210
-      retrieved_on: '2026-08-25'
-      entry_version: 137
+      retrieved_on: '2026-10-22'
+      entry_version: 138
       sequence_version: 1
       role: H16 PhaC polymerizes hydroxyacyl-CoA into PHA and directly supplies polymer
         to storage granules.
@@ -312,4 +312,10 @@ curation_history:
   action: CONNECT_CAUSAL_GRAPH_COMPONENTS
   changes: 'Resolved issue #183 graph fragmentation (4 components to 1) using 3 source-
     and verbatim-snippet-backed connector(s). No paid research service was called.'
+  llm_assisted: true
+- timestamp: '2026-10-22T01:35:00Z'
+  curator: claude
+  action: REFRESH_UNIPROT_ENTRY_VERSION
+  changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
+    UniProtKB:P23608 (137 -> 138 on pha_synthase_phac).'
   llm_assisted: true

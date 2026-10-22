@@ -78,8 +78,8 @@ causal_graphs:
       taxon_label: Streptomyces coelicolor A3(2)
       entry_status: UNREVIEWED
       proteome_id: UP000001973
-      retrieved_on: '2026-08-24'
-      entry_version: 131
+      retrieved_on: '2026-10-22'
+      entry_version: 132
       sequence_version: 1
       role: SCO6712 small laccase (ScLAC) tested by a laccase-loss comparison; this
         accession denotes the laccase component, not all oxidative enzymes in the
@@ -332,4 +332,10 @@ curation_history:
   action: CONNECT_CAUSAL_GRAPH_COMPONENTS
   changes: 'Resolved issue #183 graph fragmentation (4 components to 1) with 3 public-source
     connector(s). No paid research service was called.'
+  llm_assisted: true
+- timestamp: '2026-10-22T01:35:00Z'
+  curator: claude
+  action: REFRESH_UNIPROT_ENTRY_VERSION
+  changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
+    UniProtKB:Q9XAL8 (131 -> 132 on laccase).'
   llm_assisted: true

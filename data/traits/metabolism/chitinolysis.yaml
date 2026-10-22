@@ -54,8 +54,8 @@ causal_graphs:
       taxon_id: NCBITaxon:615
       taxon_label: Serratia marcescens
       entry_status: REVIEWED
-      retrieved_on: '2026-08-24'
-      entry_version: 158
+      retrieved_on: '2026-10-22'
+      entry_version: 159
       sequence_version: 3
       role: Secreted GH18 ChiA component of the S. marcescens chitinolytic system.
       evidence:
@@ -111,8 +111,8 @@ causal_graphs:
       taxon_id: NCBITaxon:615
       taxon_label: Serratia marcescens
       entry_status: REVIEWED
-      retrieved_on: '2026-08-24'
-      entry_version: 8
+      retrieved_on: '2026-10-22'
+      entry_version: 9
       sequence_version: 1
       role: Chitin-active CBP21/SmLPMO10A that oxidatively opens crystalline chitin
         for the hydrolytic enzymes in the same S. marcescens system.
@@ -292,4 +292,10 @@ curation_history:
     the generic hydrolytic core and the exochitinase branch to the LPMO/chitin branch.
     The graph now has one component without adding genes or operons as primary records
     or importing downstream utilization as proof of chitinolysis. Issues 183 and 426.
+  llm_assisted: true
+- timestamp: '2026-10-22T01:35:00Z'
+  curator: claude
+  action: REFRESH_UNIPROT_ENTRY_VERSION
+  changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
+    UniProtKB:P07254 (158 -> 159 on chitinase), UniProtKB:P9WEM3 (8 -> 9 on lpmo).'
   llm_assisted: true

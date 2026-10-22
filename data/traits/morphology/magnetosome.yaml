@@ -61,8 +61,8 @@ causal_graphs:
       taxon_label: Magnetospirillum gryphiswaldense MSR-1
       entry_status: REVIEWED
       proteome_id: UP000018922
-      retrieved_on: '2026-08-25'
-      entry_version: 86
+      retrieved_on: '2026-10-22'
+      entry_version: 87
       sequence_version: 1
       role: MamK polymerizes into an actin-like scaffold that organizes magnetosomes
         into chains.
@@ -335,4 +335,10 @@ curation_history:
   changes: Grounded the magnetotaxis causal-graph process node to newly minted traitmech:000176
     and moved the adjectival magnetotactic related synonym to the magnetotaxis trait;
     resolves issue 851.
+  llm_assisted: true
+- timestamp: '2026-10-22T01:35:00Z'
+  curator: claude
+  action: REFRESH_UNIPROT_ENTRY_VERSION
+  changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
+    UniProtKB:Q6NE59 (86 -> 87 on mamk_protein).'
   llm_assisted: true

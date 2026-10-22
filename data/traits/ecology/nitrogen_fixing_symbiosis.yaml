@@ -98,8 +98,8 @@ causal_graphs:
       taxon_id: NCBITaxon:266834
       taxon_label: Sinorhizobium meliloti 1021
       entry_status: REVIEWED
-      retrieved_on: '2026-08-25'
-      entry_version: 158
+      retrieved_on: '2026-10-22'
+      entry_version: 159
       sequence_version: 2
       role: NifH is the ATP-coupled electron-delivery component of the S. meliloti
         nitrogenase complex required for nitrogen fixation in nodules.
@@ -260,4 +260,10 @@ curation_history:
     marked 1 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (leghemoglobin);
     added taxon-paired protein example(s) UniProtKB:P00460 on nitrogenase_complex
     (NCBITaxon:266834); added canonical example(s) NCBITaxon:266834.'
+  llm_assisted: true
+- timestamp: '2026-10-22T01:35:00Z'
+  curator: claude
+  action: REFRESH_UNIPROT_ENTRY_VERSION
+  changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
+    UniProtKB:P00460 (158 -> 159 on nitrogenase_complex).'
   llm_assisted: true

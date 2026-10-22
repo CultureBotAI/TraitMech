@@ -103,8 +103,8 @@ causal_graphs:
       taxon_id: NCBITaxon:318586
       taxon_label: Paracoccus denitrificans Pd1222
       entry_status: REVIEWED
-      retrieved_on: '2026-08-24'
-      entry_version: 98
+      retrieved_on: '2026-10-22'
+      entry_version: 99
       sequence_version: 1
       role: Large-chain component of RuBisCO used for conditional Calvin-cycle CO2
         assimilation during mixed methanol and mannitol consumption; it is not the
@@ -381,4 +381,10 @@ curation_history:
   changes: Marked the graph mechanistic, documented its alternative-module scope,
     upgraded canonical examples to DOI citations including Pd1222, and added the reviewed
     Pd1222 cbbL large-chain example for conditional mixed-substrate CO2 fixation.
+  llm_assisted: true
+- timestamp: '2026-10-22T01:35:00Z'
+  curator: claude
+  action: REFRESH_UNIPROT_ENTRY_VERSION
+  changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
+    UniProtKB:A1B2Q2 (98 -> 99 on rubisco).'
   llm_assisted: true

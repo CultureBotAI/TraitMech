@@ -96,8 +96,8 @@ causal_graphs:
       taxon_label: Chlorobaculum tepidum TLS
       entry_status: UNREVIEWED
       proteome_id: UP000001007
-      retrieved_on: '2026-08-24'
-      entry_version: 117
+      retrieved_on: '2026-10-22'
+      entry_version: 118
       sequence_version: 1
       role: Subunit 1 component of the C. tepidum ATP citrate lyase; this accession
         is not presented as the complete AclAB enzyme.
@@ -113,8 +113,8 @@ causal_graphs:
       taxon_label: Chlorobaculum tepidum TLS
       entry_status: UNREVIEWED
       proteome_id: UP000001007
-      retrieved_on: '2026-08-24'
-      entry_version: 117
+      retrieved_on: '2026-10-22'
+      entry_version: 118
       sequence_version: 1
       role: Subunit 2 component of the C. tepidum ATP citrate lyase; this accession
         is not presented as the complete AclAB enzyme.
@@ -299,4 +299,11 @@ curation_history:
     TCA cycle''. Evidence is predicate-scoped in the versioned ontology snapshots;
     OAK cross-checked direct data, and OLS4 spot-checked release deltas and disputed
     hits.'
+  llm_assisted: true
+- timestamp: '2026-10-22T01:35:00Z'
+  curator: claude
+  action: REFRESH_UNIPROT_ENTRY_VERSION
+  changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
+    UniProtKB:Q8KDG1 (117 -> 118 on atp_citrate_lyase), UniProtKB:Q8KDG2 (117 -> 118
+    on atp_citrate_lyase).'
   llm_assisted: true

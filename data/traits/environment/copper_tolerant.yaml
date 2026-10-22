@@ -84,8 +84,8 @@ causal_graphs:
       taxon_label: Cupriavidus metallidurans CH34
       entry_status: UNREVIEWED
       proteome_id: UP000002429
-      retrieved_on: '2026-08-25'
-      entry_version: 99
+      retrieved_on: '2026-10-22'
+      entry_version: 100
       sequence_version: 1
       role: CH34 CopA2 is a multicopper oxidase participating in periplasmic copper
         detoxification.
@@ -205,4 +205,10 @@ curation_history:
     marked 2 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (copper_efflux_system,
     multicopper_oxidase); added taxon-paired protein example(s) UniProtKB:Q1LBE6 on
     multicopper_oxidase (NCBITaxon:266264); added canonical example(s) NCBITaxon:266264.'
+  llm_assisted: true
+- timestamp: '2026-10-22T01:35:00Z'
+  curator: claude
+  action: REFRESH_UNIPROT_ENTRY_VERSION
+  changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
+    UniProtKB:Q1LBE6 (99 -> 100 on multicopper_oxidase).'
   llm_assisted: true

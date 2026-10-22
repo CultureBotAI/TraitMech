@@ -73,8 +73,8 @@ causal_graphs:
       taxon_label: Cupriavidus metallidurans CH34
       entry_status: UNREVIEWED
       proteome_id: UP000002429
-      retrieved_on: '2026-08-25'
-      entry_version: 135
+      retrieved_on: '2026-10-22'
+      entry_version: 136
       sequence_version: 1
       role: CH34 ZntA is a P-type ATPase that exports cytoplasmic zinc.
       evidence:
@@ -281,4 +281,10 @@ curation_history:
     znta_atpase, zntr_regulator, czccba_complex); added taxon-paired protein example(s)
     UniProtKB:Q1LEH0 on znta_atpase (NCBITaxon:266264); added canonical example(s)
     NCBITaxon:266264.'
+  llm_assisted: true
+- timestamp: '2026-10-22T01:35:00Z'
+  curator: claude
+  action: REFRESH_UNIPROT_ENTRY_VERSION
+  changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
+    UniProtKB:Q1LEH0 (135 -> 136 on znta_atpase).'
   llm_assisted: true

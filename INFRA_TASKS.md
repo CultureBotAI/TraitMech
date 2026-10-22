@@ -43,6 +43,10 @@ tasks:
     summary: Document or support section-level attaches_to anchors on Discussion entries when target sections (e.g. causal_graphs) are not yet populated
     status: note
     disposition: Recorded during Cycle 1 Stage 2 (causal_graphs) for Stage 6 evaluation; scripts/audit_discussion_anchors.py currently requires <section>#<id> where <id> resolves to an existing item, so record-level causal_graphs gap discussions must omit attaches_to.
+  - task_id: traitmech-infra-0003
+    summary: Add an offline structural consistency check for reports/uniprot_grounding_audit.tsv in audit-derived-reports so new protein_examples cannot land without refreshing the tracked report
+    status: note
+    disposition: Recorded during Cycle 1 Stage 3 (protein_examples) for Stage 6 evaluation; reports/uniprot_grounding_audit.tsv was missing 6 Stage 2 protein_examples and had 110 ENTRY_VERSION_MISMATCH rows prior to Stage 3 because audit-derived-reports stays offline and does not verify that every in-corpus protein_examples row is present in the tracked TSV.
 ```
 <!-- mech-infra-tasks:end -->
 
@@ -63,6 +67,15 @@ tasks:
 - **Desired outcome**: In Stage 6, either document the `<section>#<id>` syntax constraint directly on `Discussion.attaches_to` in `src/traitmech/schema/traitmech.yaml` (so curators omit `attaches_to` for whole-record/missing-section gaps) or allow a section-level token when `causal_graphs` is empty.
 - **Evidence paths**: `src/traitmech/schema/traitmech.yaml`, `scripts/audit_discussion_anchors.py`, `scripts/curate_stage2_causal_graphs.py`
 - **Priority**: Low
+- **Dependencies**: None
+
+### `traitmech-infra-0003` — Add an offline structural consistency check for `reports/uniprot_grounding_audit.tsv` in `audit-derived-reports`
+- **Origin**: `mech-goal-sequence-20261019`, Cycle 1, Stage 3 (`protein_examples`)
+- **Status**: `note`
+- **Observation**: `scripts/audit_uniprot_grounding.py` queries the live UniProt REST API, so `reports/uniprot_grounding_audit.tsv` is excluded from `audit-derived-reports` (which must remain offline). As a result, when Stage 2 added 6 new `protein_examples`, `reports/uniprot_grounding_audit.tsv` was not flagged as missing those 6 rows, and 110 `ENTRY_VERSION_MISMATCH` findings had accumulated in the tracked TSV. Stage 3 refreshed all 110 `entry_version` values and regenerated `reports/uniprot_grounding_audit.tsv` (163 uses, 0 findings).
+- **Desired outcome**: In Stage 6, add an offline `--check-inventory` mode to `scripts/audit_uniprot_grounding.py` (or a lightweight check in `audit-derived-reports`) verifying that the set of `(file, graph_id, node_id, accession, declared_entry_version, declared_sequence_version)` tuples in `reports/uniprot_grounding_audit.tsv` matches the working-tree `data/traits/` YAML files without making network calls.
+- **Evidence paths**: `scripts/audit_uniprot_grounding.py`, `reports/uniprot_grounding_audit.tsv`, `justfile`, `scripts/curate_stage3_protein_examples.py`
+- **Priority**: Medium
 - **Dependencies**: None
 
 

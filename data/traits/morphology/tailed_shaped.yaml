@@ -88,8 +88,8 @@ causal_graphs:
       taxon_id: NCBITaxon:565050
       taxon_label: Caulobacter vibrioides NA1000
       entry_status: REVIEWED
-      retrieved_on: '2026-08-25'
-      entry_version: 42
+      retrieved_on: '2026-10-22'
+      entry_version: 43
       sequence_version: 1
       role: Caulobacter MreB organizes elongation machinery and is required for normal
         polar stalk elongation.
@@ -299,4 +299,10 @@ curation_history:
     (bactofilin_polymers, cell_wall_synthase); added taxon-paired protein example(s)
     UniProtKB:A0A0H3C7V4 on mreb (NCBITaxon:565050); regrounded 1 node(s) (mreb: none->InterPro:IPR004753);
     added canonical example(s) NCBITaxon:565050.'
+  llm_assisted: true
+- timestamp: '2026-10-22T01:35:00Z'
+  curator: claude
+  action: REFRESH_UNIPROT_ENTRY_VERSION
+  changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
+    UniProtKB:A0A0H3C7V4 (42 -> 43 on mreb).'
   llm_assisted: true

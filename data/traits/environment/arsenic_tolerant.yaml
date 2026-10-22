@@ -102,8 +102,8 @@ causal_graphs:
       taxon_label: Cupriavidus metallidurans CH34
       entry_status: UNREVIEWED
       proteome_id: UP000002429
-      retrieved_on: '2026-08-25'
-      entry_version: 99
+      retrieved_on: '2026-10-22'
+      entry_version: 100
       sequence_version: 1
       role: CH34 ArsC1 reduces intracellular arsenate to arsenite for subsequent efflux.
       evidence:
@@ -320,4 +320,10 @@ curation_history:
     added taxon-paired protein example(s) UniProtKB:Q1LRL1 on arsC_reductase (NCBITaxon:266264);
     retyped 1 node(s) (ars_promoter->GENETIC_ELEMENT); added canonical example(s)
     NCBITaxon:266264.'
+  llm_assisted: true
+- timestamp: '2026-10-22T01:35:00Z'
+  curator: claude
+  action: REFRESH_UNIPROT_ENTRY_VERSION
+  changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
+    UniProtKB:Q1LRL1 (99 -> 100 on arsC_reductase).'
   llm_assisted: true

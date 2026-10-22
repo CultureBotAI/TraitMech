@@ -40,9 +40,10 @@ causal_graphs:
   description: Evidence-backed causal sketch linking accumulating autoinducer signals
     to coordinated population-wide gene expression.
   scope_status: MECHANISTIC
-  scope_notes: This graph is reviewed as the AHL/LuxR branch of quorum sensing plus
-    a specific AiiA lactonase interruption mechanism; it does not generalize AiiA
-    to peptide or AI-2 signaling systems.
+  scope_notes: This graph is reviewed as the AHL/LuxR branch of quorum sensing (including
+    P. aeruginosa PAO1 LasR/RhlR positive autoregulation and C. violaceum CviR receptor
+    antagonism) plus a specific B. thuringiensis AiiA lactonase interruption mechanism;
+    it does not generalize AiiA or CviR antagonism to peptide or AI-2 signaling systems.
   nodes:
   - node_id: quorum_sensing_trait
     label: quorum sensing
@@ -77,8 +78,8 @@ causal_graphs:
       taxon_id: NCBITaxon:668
       taxon_label: Aliivibrio fischeri
       entry_status: REVIEWED
-      retrieved_on: '2026-08-24'
-      entry_version: 97
+      retrieved_on: '2026-10-22'
+      entry_version: 98
       sequence_version: 1
       role: LuxI synthesizes the 3-oxo-C6-HSL autoinducer that activates the LuxR-dependent
         quorum-sensing circuit in A. fischeri.
@@ -94,6 +95,62 @@ causal_graphs:
     description: Cognate sensor protein/receptor that detects accumulated autoinducer
       and alters gene expression.
     grounding: InterPro:IPR000792
+    protein_examples:
+    - uniprot_id: UniProtKB:P25084
+      protein_label: Transcriptional activator protein LasR
+      gene_symbol: lasR
+      taxon_id: NCBITaxon:208964
+      taxon_label: Pseudomonas aeruginosa PAO1
+      entry_status: REVIEWED
+      proteome_id: UP000002438
+      retrieved_on: '2026-10-22'
+      entry_version: 177
+      sequence_version: 1
+      role: LuxR-family 3-oxo-C12-HSL receptor that positively autoregulates lasI
+        and downstream quorum-sensing genes in P. aeruginosa PAO1.
+      evidence:
+      - reference: DOI:10.1128/mbio.01079-17
+        snippet: the P. aeruginosa lasI and rhlI genes are positively autoregulated
+          by their cognate AHLs and LuxR homologs
+        notes: Supports P. aeruginosa PAO1 LasR as the cognate LuxR homolog mediating
+          positive autoregulation of lasI.
+    - uniprot_id: UniProtKB:P54292
+      protein_label: Transcriptional regulator RhlR
+      gene_symbol: rhlR
+      taxon_id: NCBITaxon:208964
+      taxon_label: Pseudomonas aeruginosa PAO1
+      entry_status: REVIEWED
+      proteome_id: UP000002438
+      retrieved_on: '2026-10-22'
+      entry_version: 151
+      sequence_version: 1
+      role: LuxR-family C4-HSL receptor that positively autoregulates rhlI and quorum-sensing
+        target genes in P. aeruginosa PAO1.
+      evidence:
+      - reference: DOI:10.1128/mbio.01079-17
+        snippet: the P. aeruginosa lasI and rhlI genes are positively autoregulated
+          by their cognate AHLs and LuxR homologs
+        notes: Supports P. aeruginosa PAO1 RhlR as the cognate LuxR homolog mediating
+          positive autoregulation of rhlI.
+    - uniprot_id: UniProtKB:Q7NQP7
+      protein_label: Transcriptional activator, LuxR/UhpA family of regulators
+      gene_symbol: cviR
+      taxon_id: NCBITaxon:243365
+      taxon_label: Chromobacterium violaceum ATCC 12472
+      entry_status: UNREVIEWED
+      proteome_id: UP000001424
+      retrieved_on: '2026-10-22'
+      entry_version: 143
+      sequence_version: 1
+      role: LuxR-family AHL receptor CviR that is competitively antagonized by small-molecule
+        quorum-sensing inhibitors occupying the native autoinducer-binding pocket
+        in C. violaceum.
+      evidence:
+      - reference: DOI:10.1016/j.molcel.2011.04.003
+        snippet: CviR from Chromobacterium violaceum is potently antagonized by molecules
+          that bind in place of the native acylated homoserine lactone autoinducer
+        notes: Chen et al. 2011 characterize small-molecule antagonism of Chromobacterium
+          violaceum CviR.
   - node_id: quorum_quenching_enzyme
     label: AiiA quorum-quenching AHL lactonase
     node_type: GENE_OR_PROTEIN
@@ -107,8 +164,8 @@ causal_graphs:
       taxon_id: NCBITaxon:29339
       taxon_label: Bacillus thuringiensis subsp. kurstaki
       entry_status: REVIEWED
-      retrieved_on: '2026-08-23'
-      entry_version: 47
+      retrieved_on: '2026-10-22'
+      entry_version: 48
       sequence_version: 1
       role: Zinc-dependent AHL lactonase that hydrolyzes N-acyl-L-homoserine lactone
         signals, thereby interrupting the AHL/LuxR signaling branch.
@@ -304,4 +361,13 @@ curation_history:
     (1 edge); DOI:10.3390/ijms25052655 -> DOI:10.1016/j.molcel.2011.04.003 (1 edge);
     DOI:10.3390/ijms25052655 -> DOI:10.1073/pnas.0504996102 (1 edge); DOI:10.3390/ijms25052655
     -> DOI:10.1128/mbio.01079-17 (1 edge).'
+  llm_assisted: true
+- timestamp: '2026-10-22T01:35:00Z'
+  curator: claude
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: Added LuxR-family receptor protein_examples UniProtKB:P25084 (LasR, v177),
+    UniProtKB:P54292 (RhlR, v151) in P. aeruginosa PAO1 (DOI:10.1128/mbio.01079-17)
+    and UniProtKB:Q7NQP7 (CviR, v143) in C. violaceum ATCC 12472 (DOI:10.1016/j.molcel.2011.04.003)
+    on signal_receptor, updated scope_notes, and refreshed entry_version on UniProtKB:P12747
+    (97 -> 98 on autoinducer_synthase) and UniProtKB:P0CJ63 (47 -> 48 on quorum_quenching_enzyme).
   llm_assisted: true

@@ -68,8 +68,8 @@ causal_graphs:
       taxon_id: NCBITaxon:2822231
       taxon_label: Phanerodontia chrysosporium
       entry_status: REVIEWED
-      retrieved_on: '2026-08-23'
-      entry_version: 150
+      retrieved_on: '2026-10-22'
+      entry_version: 151
       sequence_version: 1
       role: MnP-1 directly oxidizes Mn(II) to Mn(III); it illustrates the fungal peroxidase
         branch and is not presented as a bacterial multicopper oxidase.
@@ -292,4 +292,10 @@ curation_history:
   changes: 'Reviewed 1 organism-specific UniProtKB grounding(s): replaced 1 with taxon-agnostic
     GO/InterPro terms and retracted 0 to label-only where no exact semantic term was
     supported (docs/GROUNDING_POLICY.md).'
+  llm_assisted: true
+- timestamp: '2026-10-22T01:35:00Z'
+  curator: claude
+  action: REFRESH_UNIPROT_ENTRY_VERSION
+  changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
+    UniProtKB:Q02567 (150 -> 151 on manganese_peroxidase).'
   llm_assisted: true

@@ -37,9 +37,10 @@ causal_graphs:
   description: Evidence-backed causal sketch linking Cas-protein-mediated CRISPR machinery
     to defense against invading mobile genetic elements.
   scope_status: MECHANISTIC
-  scope_notes: The protein example anchors the experimentally resolved S. pyogenes
-    type II Cas9 interference branch. Cas1-Cas2 and RNA nodes remain distinct and
-    the Cas9 accession is not presented as an example of every CRISPR-Cas type.
+  scope_notes: The protein examples anchor the experimentally resolved S. pyogenes
+    type II Cas9 interference branch (Q99ZW2) and the E. coli K-12 type I-E Cas1-Cas2
+    adaptation complex subunits (Q46896 and P45956). RNA nodes remain distinct and
+    the subunit examples are not presented as universal across every CRISPR-Cas type.
   nodes:
   - node_id: crispr_trait
     label: CRISPR-Cas system
@@ -59,8 +60,8 @@ causal_graphs:
       taxon_id: NCBITaxon:301447
       taxon_label: Streptococcus pyogenes serotype M1
       entry_status: REVIEWED
-      retrieved_on: '2026-08-25'
-      entry_version: 147
+      retrieved_on: '2026-10-22'
+      entry_version: 148
       sequence_version: 1
       role: S. pyogenes Cas9 is the nuclease component directed by crRNA and tracrRNA
         to make sequence-specific double-strand breaks in target DNA.
@@ -81,6 +82,45 @@ causal_graphs:
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Cas1 and Cas2 are distinct protein families; this node denotes
       their adaptation complex rather than one component family.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q46896
+      protein_label: CRISPR-associated endonuclease Cas1
+      gene_symbol: ygbT
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli K-12
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-22'
+      entry_version: 154
+      sequence_version: 1
+      role: Cas1 integrase subunit of the E. coli K-12 Cas1-Cas2 adaptation complex
+        that captures and integrates new spacers; this accession represents the Cas1
+        subunit, not the complete heterohexameric complex.
+      evidence:
+      - reference: DOI:10.1038/nsmb.2820
+        snippet: Cas1 and Cas2 from Escherichia coli form a stable complex that is
+          essential for spacer acquisition
+        notes: Nuñez et al. 2014 characterize the E. coli K-12 Cas1-Cas2 adaptation
+          complex required for spacer acquisition.
+    - uniprot_id: UniProtKB:P45956
+      protein_label: CRISPR-associated endoribonuclease Cas2
+      gene_symbol: ygbF
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli K-12
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-22'
+      entry_version: 145
+      sequence_version: 2
+      role: Cas2 central dimer subunit of the E. coli K-12 Cas1-Cas2 adaptation complex
+        required for spacer acquisition; this accession represents the Cas2 subunit,
+        not the complete complex.
+      evidence:
+      - reference: DOI:10.1038/nsmb.2820
+        snippet: Cas1 and Cas2 from Escherichia coli form a stable complex that is
+          essential for spacer acquisition
+        notes: Nuñez et al. 2014 establish that E. coli K-12 Cas2 forms a stable adaptation
+          complex with Cas1 essential for spacer acquisition.
   - node_id: spacer_acquisition
     label: spacer acquisition (adaptation)
     node_type: BIOLOGICAL_PROCESS
@@ -268,4 +308,12 @@ curation_history:
   action: REFINED_PARENT_TRAITS
   changes: Reparented CRISPR-Cas system from the broad genomics parent to the newly
     minted phage defense system parent.
+  llm_assisted: true
+- timestamp: '2026-10-22T01:35:00Z'
+  curator: claude
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: Added reviewed E. coli K-12 subunit protein_examples UniProtKB:Q46896 (Cas1/ygbT,
+    v154) and UniProtKB:P45956 (Cas2/ygbF, v145) on cas1_cas2_complex (DOI:10.1038/nsmb.2820),
+    updated scope_notes for component-level subunit scope, and refreshed UniProtKB:Q99ZW2
+    entry_version 147 -> 148 on cas9_effector.
   llm_assisted: true

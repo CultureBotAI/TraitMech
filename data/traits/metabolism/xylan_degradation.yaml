@@ -72,8 +72,8 @@ causal_graphs:
       taxon_id: NCBITaxon:44001
       taxon_label: Caldicellulosiruptor saccharolyticus
       entry_status: REVIEWED
-      retrieved_on: '2026-08-24'
-      entry_version: 101
+      retrieved_on: '2026-10-22'
+      entry_version: 102
       sequence_version: 1
       role: XynA endo-xylanase representing the core hydrolytic component of the broader
         xylanase-system node.
@@ -285,4 +285,10 @@ curation_history:
   action: ADD_EXACT_SYNONYM
   changes: Added xylanolysis as an exact FAPROTAX synonym rather than minting the
     duplicate v11 candidate because GO:0045493 already grounds xylan degradation.
+  llm_assisted: true
+- timestamp: '2026-10-22T01:35:00Z'
+  curator: claude
+  action: REFRESH_UNIPROT_ENTRY_VERSION
+  changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
+    UniProtKB:P23556 (101 -> 102 on xylanase).'
   llm_assisted: true

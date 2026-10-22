@@ -1,0 +1,43 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/curate_stage3_protein_examples.py
+session:
+  id: 2026-10-22T013500Z-claude-code-30c043
+  timestamp: '2026-10-22T01:35:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+    agent_tool: antigravity
+links:
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/1977
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1978
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - curation_history
+  summary: Add 11 verified UniProtKB protein_examples across 8 GENE_OR_PROTEIN nodes in 5 MECHANISTIC
+    TraitRecords and refresh/backfill 112 entry_versions across 106 records
+  details: 'Audited all 1,130 TraitRecord YAMLs (1,129 eligible, 1 protected) and all 816 GENE_OR_PROTEIN
+    causal nodes for Stage 3 (protein_examples). Added 11 verified UniProtKB protein_examples
+    across 8 previously unexemplified GENE_OR_PROTEIN nodes in 5 MECHANISTIC records where canonical_examples
+    and snippet scope support exact strain-level UniProtKB entries: genomics/crispr_cas_system.yaml
+    (2 entries on cas1_cas2_complex: UniProtKB:Q46896 Cas1/ygbT and UniProtKB:P45956 Cas2/ygbF in Escherichia
+    coli K-12, NCBITaxon:83333), physiology/catalase_activity.yaml (1 entry on oxyr_regulator: UniProtKB:P0ACQ4
+    OxyR/oxyR in Escherichia coli K-12, NCBITaxon:83333), physiology/quorum_sensing.yaml (3 entries
+    on signal_receptor: UniProtKB:P25084 LasR/lasR and UniProtKB:P54292 RhlR/rhlR in Pseudomonas aeruginosa
+    PAO1, NCBITaxon:208964; UniProtKB:Q7NQP7 CviR/cviR in Chromobacterium violaceum ATCC 12472, NCBITaxon:243365),
+    physiology/lithotrophic.yaml (1 entry on hydroxylamine_oxidoreductase: UniProtKB:Q50925 HAO/hao1
+    in Nitrosomonas europaea ATCC 19718, NCBITaxon:228410), and morphology/sporulation.yaml (4 entries
+    across sigma_f, sigma_e, sigma_g, and sigma_k: UniProtKB:P07860 SigF/sigF, UniProtKB:P06222 SigE/sigE,
+    UniProtKB:P19940 SigG/sigG, and UniProtKB:P12254 SigK/sigK in Bacillus subtilis 168, NCBITaxon:224308).
+    Refreshed 110 stale entry_version values and backfilled 2 previously unset entry_version values
+    (UniProtKB:P31896 on nife_codh in physiology/carboxydotrophic.yaml and UniProtKB:P31891 on hydrogenase
+    in physiology/hydrogenotrophic.yaml) across 106 TraitRecord files against the live UniProtKB REST
+    API, bringing reports/uniprot_grounding_audit.tsv to 163 uses across 151 exemplified GENE_OR_PROTEIN
+    nodes (131 unique accessions) with 0 findings and 0 skipped entry_versions.'

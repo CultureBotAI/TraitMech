@@ -76,8 +76,8 @@ causal_graphs:
       taxon_label: Pseudomonas aeruginosa PAO1
       entry_status: REVIEWED
       proteome_id: UP000002438
-      retrieved_on: '2026-08-25'
-      entry_version: 147
+      retrieved_on: '2026-10-22'
+      entry_version: 148
       sequence_version: 1
       role: PAO1 PilT powers type-IV-pilus retraction that pulls the cell across a
         surface.
@@ -274,4 +274,10 @@ curation_history:
   action: CONNECT_CAUSAL_GRAPH_COMPONENTS
   changes: 'Resolved issue #183 graph fragmentation (4 components to 1) using 3 source-
     and verbatim-snippet-backed connector(s). No paid research service was called.'
+  llm_assisted: true
+- timestamp: '2026-10-22T01:35:00Z'
+  curator: claude
+  action: REFRESH_UNIPROT_ENTRY_VERSION
+  changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
+    UniProtKB:P24559 (147 -> 148 on pilt_retraction_atpase).'
   llm_assisted: true

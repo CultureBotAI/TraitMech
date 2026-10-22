@@ -95,8 +95,8 @@ causal_graphs:
       taxon_id: NCBITaxon:920
       taxon_label: Acidithiobacillus ferrooxidans
       entry_status: REVIEWED
-      retrieved_on: '2026-08-24'
-      entry_version: 57
+      retrieved_on: '2026-10-22'
+      entry_version: 58
       sequence_version: 1
       role: Large-chain component of form I RuBisCO in the A. ferrooxidans CBB pathway;
         this accession is not presented as the complete L8S8 enzyme.
@@ -416,4 +416,10 @@ curation_history:
   changes: Marked the graph mechanistic, reviewed the broad dissolved-inorganic-carbon
     transporter node as label-only, replaced the canonical web citation with its DOI,
     and added the reviewed A. ferrooxidans cbbL1 large-chain example.
+  llm_assisted: true
+- timestamp: '2026-10-22T01:35:00Z'
+  curator: claude
+  action: REFRESH_UNIPROT_ENTRY_VERSION
+  changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
+    UniProtKB:P0C916 (57 -> 58 on rubisco).'
   llm_assisted: true

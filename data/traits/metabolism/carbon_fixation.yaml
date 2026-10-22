@@ -95,8 +95,8 @@ causal_graphs:
       taxon_id: NCBITaxon:381666
       taxon_label: Cupriavidus necator H16
       entry_status: REVIEWED
-      retrieved_on: '2026-08-24'
-      entry_version: 153
+      retrieved_on: '2026-10-22'
+      entry_version: 154
       sequence_version: 3
       role: Large-chain component of the plasmid-encoded RuBisCO in one of the two
         active CBB operons of C. necator H16.
@@ -395,4 +395,10 @@ curation_history:
   action: ADD_PATHWAY_CONTEXT
   changes: Added pinned PathwayMech context on reviewed causal nodes with explicit
     route and organism limitations; retained existing groundings and exact xrefs.
+  llm_assisted: true
+- timestamp: '2026-10-22T01:35:00Z'
+  curator: claude
+  action: REFRESH_UNIPROT_ENTRY_VERSION
+  changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
+    UniProtKB:P42721 (153 -> 154 on rubisco).'
   llm_assisted: true

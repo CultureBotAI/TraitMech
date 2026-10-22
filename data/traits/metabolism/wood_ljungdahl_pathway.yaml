@@ -115,8 +115,8 @@ causal_graphs:
       taxon_id: NCBITaxon:1525
       taxon_label: Neomoorella thermoacetica
       entry_status: REVIEWED
-      retrieved_on: '2026-08-23'
-      entry_version: 125
+      retrieved_on: '2026-10-22'
+      entry_version: 126
       sequence_version: 1
       role: Alpha subunit that combines CO, CoA, and the CoFeSP-borne methyl group
         to form acetyl-CoA; this accession is one component of the alpha2-beta2 CODH/ACS
@@ -386,4 +386,10 @@ curation_history:
   action: ADD_PATHWAY_CONTEXT
   changes: Added pinned PathwayMech context on reviewed causal nodes with explicit
     route and organism limitations; retained existing groundings and exact xrefs.
+  llm_assisted: true
+- timestamp: '2026-10-22T01:35:00Z'
+  curator: claude
+  action: REFRESH_UNIPROT_ENTRY_VERSION
+  changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
+    UniProtKB:P27988 (125 -> 126 on acetyl_coa_synthase).'
   llm_assisted: true

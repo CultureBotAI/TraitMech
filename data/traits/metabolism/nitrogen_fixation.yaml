@@ -85,8 +85,8 @@ causal_graphs:
       taxon_id: NCBITaxon:354
       taxon_label: Azotobacter vinelandii
       entry_status: REVIEWED
-      retrieved_on: '2026-08-23'
-      entry_version: 167
+      retrieved_on: '2026-10-22'
+      entry_version: 168
       sequence_version: 2
       role: ATP-coupled Fe-protein component that transfers electrons to the catalytic
         MoFe protein in the A. vinelandii nitrogenase system.
@@ -325,4 +325,10 @@ curation_history:
     replacements: DOI:10.1038/nrmicro.2018.9 -> DOI:10.34133/bdr.0005 (1 edge); DOI:10.1038/nrmicro954
     -> DOI:10.34133/bdr.0005 (3 edges); DOI:10.1128/aem.00378-23 -> DOI:10.34133/bdr.0005
     (1 edge).'
+  llm_assisted: true
+- timestamp: '2026-10-22T01:35:00Z'
+  curator: claude
+  action: REFRESH_UNIPROT_ENTRY_VERSION
+  changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
+    UniProtKB:P00459 (167 -> 168 on nifh_fe_protein).'
   llm_assisted: true

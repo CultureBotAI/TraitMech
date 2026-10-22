@@ -119,8 +119,8 @@ causal_graphs:
       taxon_id: NCBITaxon:2283
       taxon_label: Acidianus ambivalens
       entry_status: REVIEWED
-      retrieved_on: '2026-08-24'
-      entry_version: 101
+      retrieved_on: '2026-10-22'
+      entry_version: 102
       sequence_version: 3
       role: Catalytic subunit forming the homo-24-mer SOR that performs oxygen-dependent
         elemental-sulfur disproportionation in A. ambivalens.
@@ -396,4 +396,10 @@ curation_history:
     added a DOI-backed reviewed A. ambivalens SOR example, and documented TetH plus
     the distinction between aerobic SOR chemistry and anaerobic disproportionating
     growth.
+  llm_assisted: true
+- timestamp: '2026-10-22T01:35:00Z'
+  curator: claude
+  action: REFRESH_UNIPROT_ENTRY_VERSION
+  changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
+    UniProtKB:P29082 (101 -> 102 on sor_sulfur_oxygenase_reductase).'
   llm_assisted: true

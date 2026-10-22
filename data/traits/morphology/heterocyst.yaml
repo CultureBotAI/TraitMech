@@ -74,8 +74,8 @@ causal_graphs:
       taxon_label: Nostoc sp. PCC 7120
       entry_status: REVIEWED
       proteome_id: UP000002483
-      retrieved_on: '2026-08-25'
-      entry_version: 120
+      retrieved_on: '2026-10-22'
+      entry_version: 121
       sequence_version: 3
       role: HetR is the master positive regulator initiating heterocyst differentiation
         in PCC 7120.
@@ -310,4 +310,10 @@ curation_history:
     branch: its primary source states that more studies are required to understand
     the regulation exerted by FurC on hetR expression (DOI:10.1371/journal.pone.0289761),
     so no directional bridge was asserted. No paid research service was called.'
+  llm_assisted: true
+- timestamp: '2026-10-22T01:35:00Z'
+  curator: claude
+  action: REFRESH_UNIPROT_ENTRY_VERSION
+  changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
+    UniProtKB:P27709 (120 -> 121 on hetr_regulator).'
   llm_assisted: true

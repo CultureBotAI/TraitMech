@@ -79,8 +79,8 @@ causal_graphs:
       taxon_label: Zymomonas mobilis subsp. mobilis ZM4
       entry_status: REVIEWED
       proteome_id: UP000001173
-      retrieved_on: '2026-08-23'
-      entry_version: 173
+      retrieved_on: '2026-10-22'
+      entry_version: 174
       sequence_version: 1
       role: Catalyzes the gateway decarboxylation of pyruvate to acetaldehyde in the
         ethanol-production pathway; this accession is a protein instance, not the
@@ -301,4 +301,10 @@ curation_history:
     declared exact synonym(s): ''glucose fermentation to ethanol''. Evidence is predicate-scoped
     in the versioned ontology snapshots; OAK cross-checked direct data, and OLS4 spot-checked
     release deltas and disputed hits.'
+  llm_assisted: true
+- timestamp: '2026-10-22T01:35:00Z'
+  curator: claude
+  action: REFRESH_UNIPROT_ENTRY_VERSION
+  changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
+    UniProtKB:P06672 (173 -> 174 on pyruvate_decarboxylase).'
   llm_assisted: true

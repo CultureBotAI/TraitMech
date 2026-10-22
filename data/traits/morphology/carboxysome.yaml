@@ -98,8 +98,8 @@ causal_graphs:
       taxon_label: Synechococcus elongatus PCC 7942
       entry_status: REVIEWED
       proteome_id: UP000889800
-      retrieved_on: '2026-08-25'
-      entry_version: 110
+      retrieved_on: '2026-10-22'
+      entry_version: 111
       sequence_version: 1
       role: CcmK2 is one hexamer-forming component of the beta-carboxysome shell;
         the accession does not denote the complete shell.
@@ -266,4 +266,10 @@ curation_history:
   changes: 'Ontology exact-match review (2026-08-25): approved exact xref(s): GO:0031470.
     Evidence is predicate-scoped in the versioned ontology snapshots; OAK cross-checked
     direct data, and OLS4 spot-checked release deltas and disputed hits.'
+  llm_assisted: true
+- timestamp: '2026-10-22T01:35:00Z'
+  curator: claude
+  action: REFRESH_UNIPROT_ENTRY_VERSION
+  changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
+    UniProtKB:Q03511 (110 -> 111 on bmc_shell_proteins).'
   llm_assisted: true

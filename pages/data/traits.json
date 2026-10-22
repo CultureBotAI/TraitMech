@@ -739,8 +739,8 @@
                 "taxon_label": "Pseudomonas aeruginosa PAO1",
                 "entry_status": "UNREVIEWED",
                 "proteome_id": "UP000002438",
-                "retrieved_on": "2026-08-25",
-                "entry_version": 152,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 153,
                 "sequence_version": 1,
                 "role": "PAO1 WspR synthesizes the c-di-GMP signal that promotes surface attachment and biofilm-associated behavior.",
                 "evidence": [
@@ -1023,6 +1023,13 @@
         "curator": "codex",
         "action": "CONNECT_CAUSAL_GRAPH_COMPONENTS",
         "changes": "Resolved issue #183 graph fragmentation (3 components to 1) using 2 snippet-backed connector(s) supported by source passages. No research service was called.",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:Q9HXT9 (152 -> 153 on wspR_diguanylate_cyclase).",
         "llm_assisted": true
       }
     ],
@@ -6478,8 +6485,8 @@
                 "taxon_id": "NCBITaxon:266834",
                 "taxon_label": "Sinorhizobium meliloti 1021",
                 "entry_status": "REVIEWED",
-                "retrieved_on": "2026-08-25",
-                "entry_version": 158,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 159,
                 "sequence_version": 2,
                 "role": "NifH is the ATP-coupled electron-delivery component of the S. meliloti nitrogenase complex required for nitrogen fixation in nodules.",
                 "evidence": [
@@ -6691,6 +6698,13 @@
         "curator": "claude",
         "action": "CURATE_PROTEIN_TAXON_EXAMPLE",
         "changes": "Backfilled provenance (review issue 517) for the codex protein-taxon review tranche of 2026-08-24/25, which shipped without a per-record event. In this record the tranche: set graph scope rhizobia_legume_n2_fixation=MECHANISTIC with scope_notes; marked 1 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (leghemoglobin); added taxon-paired protein example(s) UniProtKB:P00460 on nitrogenase_complex (NCBITaxon:266834); added canonical example(s) NCBITaxon:266834.",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P00460 (158 -> 159 on nitrogenase_complex).",
         "llm_assisted": true
       }
     ]
@@ -12686,8 +12700,8 @@
                 "taxon_label": "Cupriavidus metallidurans CH34",
                 "entry_status": "UNREVIEWED",
                 "proteome_id": "UP000002429",
-                "retrieved_on": "2026-08-25",
-                "entry_version": 99,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 100,
                 "sequence_version": 1,
                 "role": "CH34 ArsC1 reduces intracellular arsenate to arsenite for subsequent efflux.",
                 "evidence": [
@@ -12961,6 +12975,13 @@
         "action": "CURATE_PROTEIN_TAXON_EXAMPLE",
         "changes": "Backfilled provenance (review issue 517) for the codex protein-taxon review tranche of 2026-08-24/25, which shipped without a per-record event. In this record the tranche: set graph scope arsenic_tolerance_ars_efflux=MECHANISTIC with scope_notes; marked 6 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (ars_operon, arsR_repressor, arsC_reductase, arsB_pump, acr3_pump, arsM_methyltransferase); added taxon-paired protein example(s) UniProtKB:Q1LRL1 on arsC_reductase (NCBITaxon:266264); retyped 1 node(s) (ars_promoter->GENETIC_ELEMENT); added canonical example(s) NCBITaxon:266264.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:Q1LRL1 (99 -> 100 on arsC_reductase).",
+        "llm_assisted": true
       }
     ]
   },
@@ -13036,8 +13057,8 @@
                 "taxon_label": "Cupriavidus metallidurans CH34",
                 "entry_status": "REVIEWED",
                 "proteome_id": "UP000002429",
-                "retrieved_on": "2026-08-25",
-                "entry_version": 153,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 154,
                 "sequence_version": 3,
                 "role": "CzcA is the inner-membrane transporter component of the CH34 CzcCBA pump exporting cadmium, zinc, and cobalt.",
                 "evidence": [
@@ -13239,6 +13260,13 @@
         "curator": "claude",
         "action": "CURATE_PROTEIN_TAXON_EXAMPLE",
         "changes": "Backfilled provenance (review issue 517) for the codex protein-taxon review tranche of 2026-08-24/25, which shipped without a per-record event. In this record the tranche: set graph scope cadmium_tolerance_czc_efflux=MECHANISTIC with scope_notes; marked 3 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (czc_efflux_system, metallothionein_proteins, cada_ptype_atpase); added taxon-paired protein example(s) UniProtKB:P13511 on czc_efflux_system (NCBITaxon:266264); added canonical example(s) NCBITaxon:266264.",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P13511 (153 -> 154 on czc_efflux_system).",
         "llm_assisted": true
       }
     ]
@@ -13468,8 +13496,8 @@
                 "taxon_label": "Cupriavidus metallidurans CH34",
                 "entry_status": "REVIEWED",
                 "proteome_id": "UP000002429",
-                "retrieved_on": "2026-08-25",
-                "entry_version": 153,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 154,
                 "sequence_version": 3,
                 "role": "CzcA is one transporter component of the CH34 CzcCBA complex that exports cobalt, zinc, and cadmium.",
                 "evidence": [
@@ -13714,6 +13742,13 @@
         "action": "CURATE_PROTEIN_TAXON_EXAMPLE",
         "changes": "Backfilled provenance (review issue 517) for the codex protein-taxon review tranche of 2026-08-24/25, which shipped without a per-record event. In this record the tranche: set graph scope cobalt_tolerance_czc_cnr_efflux=MECHANISTIC with scope_notes; marked 6 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (cobalt_efflux_system, czcCBA_complex, czcRS_two_component, cnr_operon, dmeF_exporter, rcnA_exporter); added taxon-paired protein example(s) UniProtKB:P13511 on czcCBA_complex (NCBITaxon:266264); added canonical example(s) NCBITaxon:266264.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P13511 (153 -> 154 on czcCBA_complex).",
+        "llm_assisted": true
       }
     ]
   },
@@ -13817,8 +13852,8 @@
                 "taxon_label": "Cupriavidus metallidurans CH34",
                 "entry_status": "UNREVIEWED",
                 "proteome_id": "UP000002429",
-                "retrieved_on": "2026-08-25",
-                "entry_version": 99,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 100,
                 "sequence_version": 1,
                 "role": "CH34 CopA2 is a multicopper oxidase participating in periplasmic copper detoxification.",
                 "evidence": [
@@ -13970,6 +14005,13 @@
         "curator": "claude",
         "action": "CURATE_PROTEIN_TAXON_EXAMPLE",
         "changes": "Backfilled provenance (review issue 517) for the codex protein-taxon review tranche of 2026-08-24/25, which shipped without a per-record event. In this record the tranche: set graph scope copper_tolerance_cop_efflux=MECHANISTIC with scope_notes; marked 2 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (copper_efflux_system, multicopper_oxidase); added taxon-paired protein example(s) UniProtKB:Q1LBE6 on multicopper_oxidase (NCBITaxon:266264); added canonical example(s) NCBITaxon:266264.",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:Q1LBE6 (99 -> 100 on multicopper_oxidase).",
         "llm_assisted": true
       }
     ]
@@ -41122,8 +41164,8 @@
                 "taxon_label": "Deinococcus radiodurans R1",
                 "entry_status": "REVIEWED",
                 "proteome_id": "UP000002524",
-                "retrieved_on": "2026-08-25",
-                "entry_version": 161,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 162,
                 "sequence_version": 2,
                 "role": "R1 RecA mediates homologous-recombination repair of radiation-induced DNA double-strand breaks.",
                 "evidence": [
@@ -41351,6 +41393,13 @@
         "curator": "claude",
         "action": "CURATE_PROTEIN_TAXON_EXAMPLE",
         "changes": "Backfilled provenance (review issue 517) for the codex protein-taxon review tranche of 2026-08-24/25, which shipped without a per-record event. In this record the tranche: set graph scope radiotolerance_repair_antioxidant=MECHANISTIC with scope_notes; marked 1 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (reca_protein); added taxon-paired protein example(s) UniProtKB:P42443 on reca_protein (NCBITaxon:243230); added canonical example(s) NCBITaxon:243230.",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P42443 (161 -> 162 on reca_protein).",
         "llm_assisted": true
       }
     ]
@@ -52972,8 +53021,8 @@
                 "taxon_label": "Cupriavidus metallidurans CH34",
                 "entry_status": "UNREVIEWED",
                 "proteome_id": "UP000002429",
-                "retrieved_on": "2026-08-25",
-                "entry_version": 135,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 136,
                 "sequence_version": 1,
                 "role": "CH34 ZntA is a P-type ATPase that exports cytoplasmic zinc.",
                 "evidence": [
@@ -53251,6 +53300,13 @@
         "curator": "claude",
         "action": "CURATE_PROTEIN_TAXON_EXAMPLE",
         "changes": "Backfilled provenance (review issue 517) for the codex protein-taxon review tranche of 2026-08-24/25, which shipped without a per-record event. In this record the tranche: set graph scope zinc_tolerance_czc_efflux=MECHANISTIC with scope_notes; marked 4 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (czc_efflux_system, znta_atpase, zntr_regulator, czccba_complex); added taxon-paired protein example(s) UniProtKB:Q1LEH0 on znta_atpase (NCBITaxon:266264); added canonical example(s) NCBITaxon:266264.",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:Q1LEH0 (135 -> 136 on znta_atpase).",
         "llm_assisted": true
       }
     ]
@@ -69535,7 +69591,7 @@
         "title": "CRISPR-Cas adaptive immunity against invading nucleic acids",
         "description": "Evidence-backed causal sketch linking Cas-protein-mediated CRISPR machinery to defense against invading mobile genetic elements.",
         "scope_status": "MECHANISTIC",
-        "scope_notes": "The protein example anchors the experimentally resolved S. pyogenes type II Cas9 interference branch. Cas1-Cas2 and RNA nodes remain distinct and the Cas9 accession is not presented as an example of every CRISPR-Cas type.",
+        "scope_notes": "The protein examples anchor the experimentally resolved S. pyogenes type II Cas9 interference branch (Q99ZW2) and the E. coli K-12 type I-E Cas1-Cas2 adaptation complex subunits (Q46896 and P45956). RNA nodes remain distinct and the subunit examples are not presented as universal across every CRISPR-Cas type.",
         "nodes": [
           {
             "node_id": "crispr_trait",
@@ -69558,8 +69614,8 @@
                 "taxon_id": "NCBITaxon:301447",
                 "taxon_label": "Streptococcus pyogenes serotype M1",
                 "entry_status": "REVIEWED",
-                "retrieved_on": "2026-08-25",
-                "entry_version": 147,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 148,
                 "sequence_version": 1,
                 "role": "S. pyogenes Cas9 is the nuclease component directed by crRNA and tracrRNA to make sequence-specific double-strand breaks in target DNA.",
                 "evidence": [
@@ -69585,7 +69641,49 @@
             "node_type": "GENE_OR_PROTEIN",
             "description": "Cas1-Cas2 integrase complex that captures and integrates new spacers.",
             "grounding_status": "REVIEWED_LABEL_ONLY",
-            "grounding_notes": "Cas1 and Cas2 are distinct protein families; this node denotes their adaptation complex rather than one component family."
+            "grounding_notes": "Cas1 and Cas2 are distinct protein families; this node denotes their adaptation complex rather than one component family.",
+            "protein_examples": [
+              {
+                "uniprot_id": "UniProtKB:Q46896",
+                "protein_label": "CRISPR-associated endonuclease Cas1",
+                "gene_symbol": "ygbT",
+                "taxon_id": "NCBITaxon:83333",
+                "taxon_label": "Escherichia coli K-12",
+                "entry_status": "REVIEWED",
+                "proteome_id": "UP000000625",
+                "retrieved_on": "2026-10-22",
+                "entry_version": 154,
+                "sequence_version": 1,
+                "role": "Cas1 integrase subunit of the E. coli K-12 Cas1-Cas2 adaptation complex that captures and integrates new spacers; this accession represents the Cas1 subunit, not the complete heterohexameric complex.",
+                "evidence": [
+                  {
+                    "reference": "DOI:10.1038/nsmb.2820",
+                    "snippet": "Cas1 and Cas2 from Escherichia coli form a stable complex that is essential for spacer acquisition",
+                    "notes": "Nu\u00f1ez et al. 2014 characterize the E. coli K-12 Cas1-Cas2 adaptation complex required for spacer acquisition."
+                  }
+                ]
+              },
+              {
+                "uniprot_id": "UniProtKB:P45956",
+                "protein_label": "CRISPR-associated endoribonuclease Cas2",
+                "gene_symbol": "ygbF",
+                "taxon_id": "NCBITaxon:83333",
+                "taxon_label": "Escherichia coli K-12",
+                "entry_status": "REVIEWED",
+                "proteome_id": "UP000000625",
+                "retrieved_on": "2026-10-22",
+                "entry_version": 145,
+                "sequence_version": 2,
+                "role": "Cas2 central dimer subunit of the E. coli K-12 Cas1-Cas2 adaptation complex required for spacer acquisition; this accession represents the Cas2 subunit, not the complete complex.",
+                "evidence": [
+                  {
+                    "reference": "DOI:10.1038/nsmb.2820",
+                    "snippet": "Cas1 and Cas2 from Escherichia coli form a stable complex that is essential for spacer acquisition",
+                    "notes": "Nu\u00f1ez et al. 2014 establish that E. coli K-12 Cas2 forms a stable adaptation complex with Cas1 essential for spacer acquisition."
+                  }
+                ]
+              }
+            ]
           },
           {
             "node_id": "spacer_acquisition",
@@ -69806,6 +69904,13 @@
         "curator": "codex",
         "action": "REFINED_PARENT_TRAITS",
         "changes": "Reparented CRISPR-Cas system from the broad genomics parent to the newly minted phage defense system parent.",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "CURATE_PROTEIN_TAXON_EXAMPLE",
+        "changes": "Added reviewed E. coli K-12 subunit protein_examples UniProtKB:Q46896 (Cas1/ygbT, v154) and UniProtKB:P45956 (Cas2/ygbF, v145) on cas1_cas2_complex (DOI:10.1038/nsmb.2820), updated scope_notes for component-level subunit scope, and refreshed UniProtKB:Q99ZW2 entry_version 147 -> 148 on cas9_effector.",
         "llm_assisted": true
       }
     ]
@@ -121941,8 +122046,8 @@
                 "taxon_id": "NCBITaxon:71421",
                 "taxon_label": "Haemophilus influenzae Rd KW20",
                 "entry_status": "REVIEWED",
-                "retrieved_on": "2026-08-25",
-                "entry_version": 124,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 125,
                 "sequence_version": 2,
                 "role": "HindII recognizes its target sequence and cleaves foreign double-stranded DNA as the restriction component of the HindII system.",
                 "evidence": [
@@ -122144,6 +122249,13 @@
         "curator": "codex",
         "action": "REFINED_PARENT_TRAITS",
         "changes": "Reparented restriction-modification system from the broad genomics parent to the newly minted phage defense system parent.",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P44413 (124 -> 125 on restriction_endonuclease).",
         "llm_assisted": true
       }
     ]
@@ -139478,8 +139590,8 @@
                 "taxon_id": "NCBITaxon:1525",
                 "taxon_label": "Neomoorella thermoacetica",
                 "entry_status": "REVIEWED",
-                "retrieved_on": "2026-08-24",
-                "entry_version": 125,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 126,
                 "sequence_version": 1,
                 "role": "AcsB alpha component that combines CO, CoA, and the CoFeSP-borne methyl group to form acetyl-CoA; this accession is not the complete CODH/ACS complex.",
                 "evidence": [
@@ -139900,6 +140012,13 @@
         "action": "ADD_PATHWAY_CONTEXT",
         "changes": "Added pinned PathwayMech context on reviewed causal nodes with explicit route and organism limitations; retained existing groundings and exact xrefs.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P27988 (125 -> 126 on acetyl_coa_synthase).",
+        "llm_assisted": true
       }
     ]
   },
@@ -140056,8 +140175,8 @@
                 "taxon_id": "NCBITaxon:266",
                 "taxon_label": "Paracoccus denitrificans",
                 "entry_status": "REVIEWED",
-                "retrieved_on": "2026-08-23",
-                "entry_version": 167,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 168,
                 "sequence_version": 1,
                 "role": "Subunit II component of the purified P. denitrificans cytochrome c oxidase; this accession is not presented as the complete terminal-oxidase complex.",
                 "evidence": [
@@ -140325,6 +140444,13 @@
         "action": "CONNECT_CAUSAL_GRAPH",
         "changes": "Connected cytochrome c oxidase to the represented electron-transport-chain branch with one source-supported part-of edge, joining both graph components. The protein remains a supporting YAML graph field and the existing scope note continues to reject a universal terminal-oxidase-family claim. Addresses issues 426 and 183.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P08306 (167 -> 168 on cytochrome_c_oxidase).",
+        "llm_assisted": true
       }
     ]
   },
@@ -140480,8 +140606,8 @@
                 "taxon_label": "Candidatus Methanoperedens nitratireducens",
                 "entry_status": "UNREVIEWED",
                 "proteome_id": "UP000218615",
-                "retrieved_on": "2026-08-24",
-                "entry_version": 21,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 22,
                 "sequence_version": 1,
                 "role": "McrA alpha component of methyl-coenzyme M reductase in nitrate-dependent reverse methanogenesis; this accession is not the complete MCR complex and is not a directionality marker by itself.",
                 "evidence": [
@@ -140671,6 +140797,13 @@
         "curator": "codex",
         "action": "CURATE_PROTEIN_TAXON_EXAMPLE",
         "changes": "Scoped the composite AOM graph, converted the canonical example to its DOI, and added a taxon-matched Ca. M. nitroreducens mcrA example with explicit complex-component and directionality caveats.",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:A0A284VQI9 (21 -> 22 on mcr).",
         "llm_assisted": true
       }
     ]
@@ -141229,8 +141362,8 @@
                 "taxon_id": "NCBITaxon:1063",
                 "taxon_label": "Cereibacter sphaeroides",
                 "entry_status": "REVIEWED",
-                "retrieved_on": "2026-08-24",
-                "entry_version": 108,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 109,
                 "sequence_version": 2,
                 "role": "M-chain component of the type II photosynthetic reaction center; this accession is not presented as the complete reaction-center complex.",
                 "evidence": [
@@ -141393,6 +141526,13 @@
         "curator": "codex",
         "action": "REVIEW_GRAPH_PROTEIN_TAXON",
         "changes": "Corrected the canonical C. sphaeroides branch from a Type I center to the PufM component of a type II reaction center, added InterPro grounding and a DOI-backed taxon-matched UniProt example, and documented the graph's composite scope.",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P0C0Y9 (108 -> 109 on type_ii_reaction_center_m).",
         "llm_assisted": true
       }
     ]
@@ -141793,8 +141933,8 @@
                 "taxon_id": "NCBITaxon:1708",
                 "taxon_label": "Cellulomonas fimi",
                 "entry_status": "REVIEWED",
-                "retrieved_on": "2026-08-24",
-                "entry_version": 122,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 123,
                 "sequence_version": 1,
                 "role": "Secreted CenA endoglucanase representing the cellulose-hydrolysis branch of this composite biopolymer-degradation graph.",
                 "evidence": [
@@ -142149,6 +142289,13 @@
         "curator": "codex",
         "action": "CONNECT_CAUSAL_GRAPH",
         "changes": "Connected the cellulose-cleavage, Sus-like uptake, chitin-cleavage, and lignin-oxidation branches to the umbrella biopolymer-degradation trait with five branch-qualified, source-supported contributes-to edges; gene and enzyme concepts remain supporting YAML graph fields rather than primary records (issues 426 and 183).",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P07984 (122 -> 123 on endoglucanase).",
         "llm_assisted": true
       }
     ]
@@ -142584,8 +142731,8 @@
                 "taxon_label": "Candidatus Electronema aureum",
                 "entry_status": "UNREVIEWED",
                 "proteome_id": "UP000316238",
-                "retrieved_on": "2026-08-24",
-                "entry_version": 24,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 25,
                 "sequence_version": 1,
                 "role": "DsrA alpha component of the E. aureum DsrAB complex; this accession is not the complete complex and does not by itself establish pathway direction.",
                 "evidence": [
@@ -142604,8 +142751,8 @@
                 "taxon_label": "Candidatus Electronema aureum",
                 "entry_status": "UNREVIEWED",
                 "proteome_id": "UP000316238",
-                "retrieved_on": "2026-08-24",
-                "entry_version": 24,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 25,
                 "sequence_version": 1,
                 "role": "DsrB beta component of the E. aureum DsrAB complex; this accession is not the complete complex and does not by itself establish pathway direction.",
                 "evidence": [
@@ -142903,6 +143050,13 @@
         "action": "CURATE_PROTEIN_TAXON_EXAMPLE",
         "changes": "Scoped the cable-bacterium mechanism, added E. aureum as a DOI-backed canonical species, and represented both DsrAB components as taxon-paired examples while preserving uncertainty about pathway direction and conductive-fiber identity.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:A0A521G566 (24 -> 25 on dsrab_complex), UniProtKB:A0A521G5H7 (24 -> 25 on dsrab_complex).",
+        "llm_assisted": true
       }
     ]
   },
@@ -142989,8 +143143,8 @@
                 "taxon_id": "NCBITaxon:381666",
                 "taxon_label": "Cupriavidus necator H16",
                 "entry_status": "REVIEWED",
-                "retrieved_on": "2026-08-24",
-                "entry_version": 153,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 154,
                 "sequence_version": 3,
                 "role": "Large-chain component of the plasmid-encoded RuBisCO in one of the two active CBB operons of C. necator H16.",
                 "evidence": [
@@ -143309,6 +143463,13 @@
         "action": "CONNECT_CAUSAL_GRAPH_COMPONENTS",
         "changes": "Resolved issue #183 graph fragmentation (3 components to 1) using 2 public-source, verbatim-snippet-backed connector(s). No paid research service was called.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P42721 (153 -> 154 on rubisco).",
+        "llm_assisted": true
       }
     ]
   },
@@ -143485,8 +143646,8 @@
                 "taxon_id": "NCBITaxon:381666",
                 "taxon_label": "Cupriavidus necator H16",
                 "entry_status": "REVIEWED",
-                "retrieved_on": "2026-08-24",
-                "entry_version": 153,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 154,
                 "sequence_version": 3,
                 "role": "Large-chain component of the plasmid-encoded RuBisCO in one of the two active CBB operons of C. necator H16.",
                 "evidence": [
@@ -143864,6 +144025,13 @@
         "action": "ADD_PATHWAY_CONTEXT",
         "changes": "Added pinned PathwayMech context on reviewed causal nodes with explicit route and organism limitations; retained existing groundings and exact xrefs.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P42721 (153 -> 154 on rubisco).",
+        "llm_assisted": true
       }
     ]
   },
@@ -143966,8 +144134,8 @@
                 "taxon_id": "NCBITaxon:1515",
                 "taxon_label": "Acetivibrio thermocellus",
                 "entry_status": "REVIEWED",
-                "retrieved_on": "2026-08-24",
-                "entry_version": 80,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 81,
                 "sequence_version": 1,
                 "role": "Catalytic CelS component of the A. thermocellus cellulosome; this accession denotes the cellobiohydrolase component, not the complete cellulosome.",
                 "evidence": [
@@ -144357,6 +144525,13 @@
         "action": "CURATE_PROTEIN_TAXON_EXAMPLE",
         "changes": "Scoped the cellulase-system graph, added a DOI-backed A. thermocellus CelS example, grounded cellulase activities and cohesin/dockerin modules, and documented the remaining system-level labels as reviewed label-only.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P0C2S5 (80 -> 81 on cellobiohydrolase).",
+        "llm_assisted": true
       }
     ]
   },
@@ -144430,8 +144605,8 @@
                 "taxon_id": "NCBITaxon:615",
                 "taxon_label": "Serratia marcescens",
                 "entry_status": "REVIEWED",
-                "retrieved_on": "2026-08-24",
-                "entry_version": 158,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 159,
                 "sequence_version": 3,
                 "role": "Secreted GH18 ChiA component of the S. marcescens chitinolytic system.",
                 "evidence": [
@@ -144499,8 +144674,8 @@
                 "taxon_id": "NCBITaxon:615",
                 "taxon_label": "Serratia marcescens",
                 "entry_status": "REVIEWED",
-                "retrieved_on": "2026-08-24",
-                "entry_version": 8,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 9,
                 "sequence_version": 1,
                 "role": "Chitin-active CBP21/SmLPMO10A that oxidatively opens crystalline chitin for the hydrolytic enzymes in the same S. marcescens system.",
                 "evidence": [
@@ -144711,6 +144886,13 @@
         "curator": "codex",
         "action": "CONNECT_CAUSAL_GRAPH",
         "changes": "Added two directly supported chitinase-to-chitin substrate edges, connecting the generic hydrolytic core and the exochitinase branch to the LPMO/chitin branch. The graph now has one component without adding genes or operons as primary records or importing downstream utilization as proof of chitinolysis. Issues 183 and 426.",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P07254 (158 -> 159 on chitinase), UniProtKB:P9WEM3 (8 -> 9 on lpmo).",
         "llm_assisted": true
       }
     ]
@@ -145674,8 +145856,8 @@
                 "taxon_label": "Ignicoccus hospitalis KIN4/I",
                 "entry_status": "UNREVIEWED",
                 "proteome_id": "UP000000262",
-                "retrieved_on": "2026-08-24",
-                "entry_version": 70,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 71,
                 "sequence_version": 1,
                 "role": "Igni_0341 PEP carboxylase assigned to the bicarbonate-fixing reaction of the I. hospitalis DC/4HB cycle.",
                 "evidence": [
@@ -145995,6 +146177,13 @@
         "action": "CONNECT_CAUSAL_GRAPH_COMPONENTS",
         "changes": "Resolved issue #183 graph fragmentation (2 components to 1) using 1 public-source, verbatim-snippet-backed connector(s). No paid research service was called.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:A8A9C2 (70 -> 71 on pep_carboxylase).",
+        "llm_assisted": true
       }
     ]
   },
@@ -146258,8 +146447,8 @@
                 "taxon_id": "NCBITaxon:2283",
                 "taxon_label": "Acidianus ambivalens",
                 "entry_status": "REVIEWED",
-                "retrieved_on": "2026-08-24",
-                "entry_version": 101,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 102,
                 "sequence_version": 3,
                 "role": "Catalytic subunit forming the homo-24-mer SOR that performs oxygen-dependent elemental-sulfur disproportionation in A. ambivalens.",
                 "evidence": [
@@ -146608,6 +146797,13 @@
         "action": "CURATE_PROTEIN_TAXON_EXAMPLE",
         "changes": "Scoped the cross-taxon disproportionation graph, grounded TsdA and SOR, added a DOI-backed reviewed A. ambivalens SOR example, and documented TetH plus the distinction between aerobic SOR chemistry and anaerobic disproportionating growth.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P29082 (101 -> 102 on sor_sulfur_oxygenase_reductase).",
+        "llm_assisted": true
       }
     ]
   },
@@ -146733,8 +146929,8 @@
                 "taxon_label": "Shewanella oneidensis MR-1",
                 "entry_status": "UNREVIEWED",
                 "proteome_id": "UP000008186",
-                "retrieved_on": "2026-08-24",
-                "entry_version": 125,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 126,
                 "sequence_version": 1,
                 "role": "MtrC cell-surface component implicated in efficient Fe(III) reduction; this accession is not presented as the complete MtrCAB conduit.",
                 "evidence": [
@@ -146924,6 +147120,13 @@
         "action": "CURATE_PROTEIN_TAXON_EXAMPLE",
         "changes": "Added a DOI-backed S. oneidensis MR-1 MtrC example, an InterPro family grounding, an explicitly strain-scoped MtrC-to-Fe(III) edge, and mechanistic scope notes. The unreviewed accession is retained only as an exact component from reference proteome UP000008186.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:Q8EG34 (125 -> 126 on mtrc).",
+        "llm_assisted": true
       }
     ]
   },
@@ -147037,8 +147240,8 @@
                 "taxon_label": "Shewanella oneidensis MR-1",
                 "entry_status": "UNREVIEWED",
                 "proteome_id": "UP000008186",
-                "retrieved_on": "2026-08-24",
-                "entry_version": 125,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 126,
                 "sequence_version": 1,
                 "role": "MtrC cell-surface component implicated in efficient Mn(IV) reduction; this accession is not presented as the complete MtrCAB conduit.",
                 "evidence": [
@@ -147201,6 +147404,13 @@
         "action": "CURATE_PROTEIN_TAXON_EXAMPLE",
         "changes": "Added a DOI-backed S. oneidensis MR-1 MtrC example, an InterPro family grounding, an explicitly strain-scoped MtrC-to-Mn(IV) edge, and mechanistic scope notes. The unreviewed accession is retained only as an exact component from reference proteome UP000008186.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:Q8EG34 (125 -> 126 on mtrc).",
+        "llm_assisted": true
       }
     ]
   },
@@ -147304,8 +147514,8 @@
                 "taxon_label": "Shewanella oneidensis MR-1",
                 "entry_status": "UNREVIEWED",
                 "proteome_id": "UP000008186",
-                "retrieved_on": "2026-08-24",
-                "entry_version": 125,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 126,
                 "sequence_version": 1,
                 "role": "Cell-surface MtrC component of the MtrCAB conduit; this accession is not presented as the complete three-component complex.",
                 "evidence": [
@@ -147512,6 +147722,13 @@
         "action": "CONNECT_CAUSAL_GRAPH_COMPONENTS",
         "changes": "Resolved issue #183 graph fragmentation (3 components to 1) with 2 public-source connector(s). No paid research service was called.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:Q8EG34 (125 -> 126 on mtrcab_complex).",
+        "llm_assisted": true
       }
     ]
   },
@@ -147625,8 +147842,8 @@
                 "taxon_id": "NCBITaxon:273121",
                 "taxon_label": "Wolinella succinogenes ATCC 29543",
                 "entry_status": "REVIEWED",
-                "retrieved_on": "2026-08-24",
-                "entry_version": 163,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 164,
                 "sequence_version": 2,
                 "role": "Ammonia-forming cytochrome c nitrite reductase catalyzing the six-electron nitrite reduction step in W. succinogenes.",
                 "evidence": [
@@ -147861,6 +148078,13 @@
         "action": "REFINE_PARENT_TRAIT",
         "changes": "Narrowed parent from anaerobic respiration to nitrate respiration.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:Q9S1E5 (163 -> 164 on nrfa).",
+        "llm_assisted": true
       }
     ]
   },
@@ -147985,8 +148209,8 @@
                 "taxon_id": "NCBITaxon:882",
                 "taxon_label": "Nitratidesulfovibrio vulgaris str. Hildenborough",
                 "entry_status": "REVIEWED",
-                "retrieved_on": "2026-08-24",
-                "entry_version": 146,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 147,
                 "sequence_version": 3,
                 "role": "DsrA alpha component of the DsrAB sulfite reductase bound to DsrC; this accession is not presented as the complete assembly.",
                 "evidence": [
@@ -148247,6 +148471,13 @@
         "curator": "codex",
         "action": "REFINE_PARENT_TRAIT",
         "changes": "Narrowed parent from anaerobic respiration to respiration of sulfur compounds.",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P45574 (146 -> 147 on dsrab_dsrc).",
         "llm_assisted": true
       }
     ]
@@ -150002,8 +150233,8 @@
                 "taxon_label": "Shewanella oneidensis MR-1",
                 "entry_status": "UNREVIEWED",
                 "proteome_id": "UP000008186",
-                "retrieved_on": "2026-08-24",
-                "entry_version": 125,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 126,
                 "sequence_version": 1,
                 "role": "MtrC-family c-type cytochrome mediating extracellular electron transfer to Fe(III) and Mn(IV) acceptors in S. oneidensis MR-1.",
                 "evidence": [
@@ -150448,6 +150679,13 @@
         "action": "CONNECT_CAUSAL_GRAPH_COMPONENTS",
         "changes": "Resolved issue #183 graph fragmentation (4 components to 1) with 3 public-source connector(s). No paid research service was called.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:Q8EG34 (125 -> 126 on cytochrome).",
+        "llm_assisted": true
       }
     ]
   },
@@ -150600,8 +150838,8 @@
                 "taxon_label": "Zymomonas mobilis subsp. mobilis ZM4",
                 "entry_status": "REVIEWED",
                 "proteome_id": "UP000001173",
-                "retrieved_on": "2026-08-23",
-                "entry_version": 173,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 174,
                 "sequence_version": 1,
                 "role": "Catalyzes the gateway decarboxylation of pyruvate to acetaldehyde in the ethanol-production pathway; this accession is a protein instance, not the taxon-agnostic grounding for the node.",
                 "evidence": [
@@ -150875,6 +151113,13 @@
         "action": "ADD_EXACT_ONTOLOGY_MATCH",
         "changes": "Ontology exact-match review (2026-08-25): approved exact xref(s): GO:0019655; declared exact synonym(s): 'glucose fermentation to ethanol'. Evidence is predicate-scoped in the versioned ontology snapshots; OAK cross-checked direct data, and OLS4 spot-checked release deltas and disputed hits.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P06672 (173 -> 174 on pyruvate_decarboxylase).",
+        "llm_assisted": true
       }
     ]
   },
@@ -151055,8 +151300,8 @@
                 "taxon_label": "Clostridium acetobutylicum ATCC 824",
                 "entry_status": "UNREVIEWED",
                 "proteome_id": "UP000000814",
-                "retrieved_on": "2026-08-24",
-                "entry_version": 152,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 153,
                 "sequence_version": 1,
                 "role": "PFOR encoded by locus CA_C2229, the expressed enzyme linking pyruvate oxidation to reduced ferredoxin in fermentative C. acetobutylicum ATCC 824.",
                 "evidence": [
@@ -151422,6 +151667,13 @@
         "action": "CONNECT_CAUSAL_GRAPH_COMPONENTS",
         "changes": "Resolved issue #183 graph fragmentation (4 components to 1) with 3 public-source connector(s). No paid research service was called.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:Q97GY6 (152 -> 153 on pfor).",
+        "llm_assisted": true
       }
     ]
   },
@@ -151511,8 +151763,8 @@
                 "taxon_id": "NCBITaxon:243274",
                 "taxon_label": "Thermotoga maritima MSB8",
                 "entry_status": "REVIEWED",
-                "retrieved_on": "2026-08-24",
-                "entry_version": 157,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 158,
                 "sequence_version": 1,
                 "role": "HydA alpha component of the trimeric bifurcating hydrogenase; this accession is not presented as the complete HydABC complex.",
                 "evidence": [
@@ -151681,6 +151933,13 @@
         "curator": "codex",
         "action": "REVIEW_EVIDENCE_REFERENCE_CHURN",
         "changes": "Offline review for issue 520 retained 1 evidence-reference replacement(s) that PR 511 made on surviving causal edges outside its stated protein-taxon scope. The pre-tranche evidence entries had references but no snippets; the retained entries supply edge-specific snippets and explanatory notes. Reverting would discard that claim-level provenance, so the scope defect is resolved by documenting the decision instead. This audit changed no causal claim or evidence field. Reviewed replacements: DOI:10.3390/en16083321 -> DOI:10.1128/JB.01582-08 (1 edge).",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:O52683 (157 -> 158 on fefe_hydrogenase).",
         "llm_assisted": true
       }
     ]
@@ -152821,8 +153080,8 @@
                 "taxon_id": "NCBITaxon:1525",
                 "taxon_label": "Neomoorella thermoacetica",
                 "entry_status": "REVIEWED",
-                "retrieved_on": "2026-08-24",
-                "entry_version": 125,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 126,
                 "sequence_version": 1,
                 "role": "AcsB alpha component of CODH/ACS that forms acetyl-CoA; this accession is not presented as the complete complex.",
                 "evidence": [
@@ -153301,6 +153560,13 @@
         "curator": "codex",
         "action": "ADD_PATHWAY_CONTEXT",
         "changes": "Added pinned PathwayMech context on reviewed causal nodes with explicit route and organism limitations; retained existing groundings and exact xrefs.",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P27988 (125 -> 126 on acs_codh_complex).",
         "llm_assisted": true
       }
     ]
@@ -154527,8 +154793,8 @@
                 "taxon_label": "Streptomyces coelicolor A3(2)",
                 "entry_status": "UNREVIEWED",
                 "proteome_id": "UP000001973",
-                "retrieved_on": "2026-08-24",
-                "entry_version": 131,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 132,
                 "sequence_version": 1,
                 "role": "SCO6712 small laccase (ScLAC) tested by a laccase-loss comparison; this accession denotes the laccase component, not all oxidative enzymes in the graph.",
                 "evidence": [
@@ -154850,6 +155116,13 @@
         "action": "CONNECT_CAUSAL_GRAPH_COMPONENTS",
         "changes": "Resolved issue #183 graph fragmentation (4 components to 1) with 3 public-source connector(s). No paid research service was called.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:Q9XAL8 (131 -> 132 on laccase).",
+        "llm_assisted": true
       }
     ]
   },
@@ -154980,8 +155253,8 @@
                 "taxon_id": "NCBITaxon:2822231",
                 "taxon_label": "Phanerodontia chrysosporium",
                 "entry_status": "REVIEWED",
-                "retrieved_on": "2026-08-23",
-                "entry_version": 150,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 151,
                 "sequence_version": 1,
                 "role": "MnP-1 directly oxidizes Mn(II) to Mn(III); it illustrates the fungal peroxidase branch and is not presented as a bacterial multicopper oxidase.",
                 "evidence": [
@@ -155243,6 +155516,13 @@
         "action": "REVIEW_UNIPROT_INSTANCE_GROUNDINGS",
         "changes": "Reviewed 1 organism-specific UniProtKB grounding(s): replaced 1 with taxon-agnostic GO/InterPro terms and retracted 0 to label-only where no exact semantic term was supported (docs/GROUNDING_POLICY.md).",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:Q02567 (150 -> 151 on manganese_peroxidase).",
+        "llm_assisted": true
       }
     ]
   },
@@ -155357,8 +155637,8 @@
                 "taxon_id": "NCBITaxon:83333",
                 "taxon_label": "Escherichia coli K-12",
                 "entry_status": "REVIEWED",
-                "retrieved_on": "2026-08-24",
-                "entry_version": 155,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 156,
                 "sequence_version": 2,
                 "role": "Beta component of the F1 catalytic head of the E. coli F1Fo ATP synthase; this accession is not presented as the complete rotary complex.",
                 "evidence": [
@@ -155720,6 +156000,13 @@
         "action": "CONNECT_CAUSAL_GRAPH_COMPONENTS",
         "changes": "Resolved issue #183 graph fragmentation (4 components to 1) with 3 public-source connector(s). No paid research service was called.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P0ABB4 (155 -> 156 on atp_synthase).",
+        "llm_assisted": true
       }
     ]
   },
@@ -155847,8 +156134,8 @@
                 "taxon_label": "Methanocaldococcus jannaschii DSM 2661",
                 "entry_status": "REVIEWED",
                 "proteome_id": "UP000000805",
-                "retrieved_on": "2026-08-23",
-                "entry_version": 146,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 147,
                 "sequence_version": 2,
                 "role": "Alpha subunit of methyl-coenzyme M reductase I, the multisubunit enzyme catalyzing the terminal methane-forming step; this accession is not presented as the complete McrABG complex.",
                 "evidence": [
@@ -156260,6 +156547,13 @@
         "action": "GROUND_CAUSAL_NODE",
         "changes": "Grounded the methyl-based methanogenesis causal node to traitmech:000192 after minting the same-scope methyl-substrate methanogenesis TraitRecord.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:Q58256 (146 -> 147 on methyl_coenzyme_m_reductase).",
+        "llm_assisted": true
       }
     ]
   },
@@ -156467,8 +156761,8 @@
                 "taxon_id": "NCBITaxon:83333",
                 "taxon_label": "Escherichia coli K-12",
                 "entry_status": "REVIEWED",
-                "retrieved_on": "2026-08-24",
-                "entry_version": 217,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 218,
                 "sequence_version": 2,
                 "role": "PflB enzyme generating formate and acetyl-CoA from pyruvate during anaerobic glycolysis in E. coli.",
                 "evidence": [
@@ -156813,6 +157107,13 @@
         "action": "CONNECT_CAUSAL_GRAPH_COMPONENTS",
         "changes": "Resolved issue #183 graph fragmentation (2 components to 1) using 1 public-source, verbatim-snippet-backed connector(s). No paid research service was called.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P09373 (217 -> 218 on pyruvate_formate_lyase).",
+        "llm_assisted": true
       }
     ]
   },
@@ -157149,8 +157450,8 @@
                 "taxon_id": "NCBITaxon:354",
                 "taxon_label": "Azotobacter vinelandii",
                 "entry_status": "REVIEWED",
-                "retrieved_on": "2026-08-23",
-                "entry_version": 167,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 168,
                 "sequence_version": 2,
                 "role": "ATP-coupled Fe-protein component that transfers electrons to the catalytic MoFe protein in the A. vinelandii nitrogenase system.",
                 "evidence": [
@@ -157420,6 +157721,13 @@
         "curator": "codex",
         "action": "REVIEW_EVIDENCE_REFERENCE_CHURN",
         "changes": "Offline review for issue 520 retained 5 evidence-reference replacement(s) that PR 511 made on surviving causal edges outside its stated protein-taxon scope. The pre-tranche evidence entries had references but no snippets; the retained entries supply edge-specific snippets and explanatory notes. Reverting would discard that claim-level provenance, so the scope defect is resolved by documenting the decision instead. This audit changed no causal claim or evidence field. Reviewed replacements: DOI:10.1038/nrmicro.2018.9 -> DOI:10.34133/bdr.0005 (1 edge); DOI:10.1038/nrmicro954 -> DOI:10.34133/bdr.0005 (3 edges); DOI:10.1128/aem.00378-23 -> DOI:10.34133/bdr.0005 (1 edge).",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P00459 (167 -> 168 on nifh_fe_protein).",
         "llm_assisted": true
       }
     ]
@@ -157755,8 +158063,8 @@
                 "taxon_id": "NCBITaxon:266",
                 "taxon_label": "Paracoccus denitrificans",
                 "entry_status": "REVIEWED",
-                "retrieved_on": "2026-08-23",
-                "entry_version": 167,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 168,
                 "sequence_version": 1,
                 "role": "Subunit II component of purified P. denitrificans cytochrome c oxidase; this accession does not represent the complete heme-copper oxidase complex.",
                 "evidence": [
@@ -158098,6 +158406,13 @@
         "action": "ADD_EXACT_ONTOLOGY_MATCH",
         "changes": "Ontology exact-match review (2026-08-25): approved exact xref(s): GO:0006119; declared exact synonym(s): 'respiratory-chain phosphorylation'. Evidence is predicate-scoped in the versioned ontology snapshots; OAK cross-checked direct data, and OLS4 spot-checked release deltas and disputed hits.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P08306 (167 -> 168 on heme_copper_oxidase).",
+        "llm_assisted": true
       }
     ]
   },
@@ -158244,8 +158559,8 @@
                 "taxon_id": "NCBITaxon:1111708",
                 "taxon_label": "Synechocystis sp. PCC 6803",
                 "entry_status": "REVIEWED",
-                "retrieved_on": "2026-08-24",
-                "entry_version": 186,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 187,
                 "sequence_version": 1,
                 "role": "D1 reaction-center component of photosystem II; this accession is not presented as the complete water-oxidizing complex.",
                 "evidence": [
@@ -158586,6 +158901,13 @@
         "curator": "claude",
         "action": "GROUND_CAUSAL_PREDICATES",
         "changes": "Grounded 1 causal-edge predicate_id field(s) via mappings/predicate_grounding.tsv (METPO:2007403\u00d71).",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P16033 (186 -> 187 on photosystem_ii).",
         "llm_assisted": true
       }
     ]
@@ -159185,8 +159507,8 @@
                 "taxon_id": "NCBITaxon:1111708",
                 "taxon_label": "Synechocystis sp. PCC 6803",
                 "entry_status": "REVIEWED",
-                "retrieved_on": "2026-08-24",
-                "entry_version": 186,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 187,
                 "sequence_version": 1,
                 "role": "D1 reaction-center component of photosystem II; this accession is not presented as the complete water-oxidizing complex.",
                 "evidence": [
@@ -159421,6 +159743,13 @@
         "action": "CONNECT_CAUSAL_GRAPH_COMPONENTS",
         "changes": "Resolved issue #183 graph fragmentation (2 components to 1) using 1 public-source, verbatim-snippet-backed connector(s). No paid research service was called.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P16033 (186 -> 187 on photosystem_ii).",
+        "llm_assisted": true
       }
     ]
   },
@@ -159536,8 +159865,8 @@
                 "taxon_id": "NCBITaxon:1111708",
                 "taxon_label": "Synechocystis sp. PCC 6803",
                 "entry_status": "REVIEWED",
-                "retrieved_on": "2026-08-24",
-                "entry_version": 186,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 187,
                 "sequence_version": 1,
                 "role": "D1 reaction-center component of photosystem II in the oxygenic phototrophy branch; this accession is not the complete PSII complex.",
                 "evidence": [
@@ -159793,6 +160122,13 @@
         "action": "CONNECT_CAUSAL_GRAPH_COMPONENTS",
         "changes": "Resolved issue #183 graph fragmentation (2 components to 1) using 1 public-source, verbatim-snippet-backed connector(s). No paid research service was called.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P16033 (186 -> 187 on photosystem_ii).",
+        "llm_assisted": true
       }
     ]
   },
@@ -159999,8 +160335,8 @@
                 "taxon_id": "NCBITaxon:1752",
                 "taxon_label": "Propionibacterium freudenreichii subsp. shermanii",
                 "entry_status": "REVIEWED",
-                "retrieved_on": "2026-08-23",
-                "entry_version": 97,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 98,
                 "sequence_version": 4,
                 "role": "Forms the substrate-binding 12S component of the three-subunit transcarboxylase that couples methylmalonyl-CoA decarboxylation to pyruvate carboxylation.",
                 "evidence": [
@@ -160299,6 +160635,13 @@
         "action": "CONNECT_CAUSAL_GRAPH_COMPONENTS",
         "changes": "Resolved issue #183 graph fragmentation (4 components to 1) using 3 public-source, verbatim-snippet-backed connector(s). No paid research service was called.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:Q8GBW6 (97 -> 98 on mmc_carboxytransferase).",
+        "llm_assisted": true
       }
     ]
   },
@@ -160379,8 +160722,8 @@
                 "taxon_id": "NCBITaxon:224308",
                 "taxon_label": "Bacillus subtilis 168",
                 "entry_status": "REVIEWED",
-                "retrieved_on": "2026-08-24",
-                "entry_version": 189,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 190,
                 "sequence_version": 3,
                 "role": "Major extracellular alkaline serine protease AprE, representing one component of the broader secreted-protease node.",
                 "evidence": [
@@ -160596,6 +160939,13 @@
         "action": "CURATE_PROTEIN_TAXON_EXAMPLE",
         "changes": "Scoped the extracellular-proteolysis mechanism, added a DOI-backed B. subtilis 168 AprE example, and recorded reviewed label-only dispositions for the broad protease, peptide-transporter, and intracellular-peptidase sets.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P04189 (189 -> 190 on extracellular_protease).",
+        "llm_assisted": true
       }
     ]
   },
@@ -160669,8 +161019,8 @@
                 "taxon_id": "NCBITaxon:133804",
                 "taxon_label": "gamma proteobacterium EBAC31A08",
                 "entry_status": "REVIEWED",
-                "retrieved_on": "2026-08-23",
-                "entry_version": 97,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 98,
                 "sequence_version": 1,
                 "role": "Retinal-binding light-driven proton pump that establishes the core energy-transduction mechanism represented in this graph.",
                 "evidence": [
@@ -160914,6 +161264,13 @@
         "action": "REVIEW_EVIDENCE_REFERENCE_CHURN",
         "changes": "Offline review for issue 520 retained 4 evidence-reference replacement(s) that PR 511 made on surviving causal edges outside its stated protein-taxon scope. The pre-tranche evidence entries had references but no snippets; the retained entries supply edge-specific snippets and explanatory notes. Reverting would discard that claim-level provenance, so the scope defect is resolved by documenting the decision instead. This audit changed no causal claim or evidence field. Reviewed replacements: DOI:10.1007/s12275-024-00125-0 -> DOI:10.1073/pnas.0611035104 (1 edge); DOI:10.1038/35081051 -> DOI:10.1073/pnas.0611035104 (1 edge); DOI:10.34133/2022/9782712 -> DOI:10.1128/MMBR.69.1.51-78.2005 (1 edge); DOI:10.4014/jmb.2410.10034 -> DOI:10.1073/pnas.0611035104 (1 edge).",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:Q9F7P4 (97 -> 98 on proteorhodopsin).",
+        "llm_assisted": true
       }
     ]
   },
@@ -161092,8 +161449,8 @@
                 "taxon_label": "Chlorobaculum tepidum TLS",
                 "entry_status": "UNREVIEWED",
                 "proteome_id": "UP000001007",
-                "retrieved_on": "2026-08-24",
-                "entry_version": 117,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 118,
                 "sequence_version": 1,
                 "role": "Subunit 1 component of the C. tepidum ATP citrate lyase; this accession is not presented as the complete AclAB enzyme.",
                 "evidence": [
@@ -161111,8 +161468,8 @@
                 "taxon_label": "Chlorobaculum tepidum TLS",
                 "entry_status": "UNREVIEWED",
                 "proteome_id": "UP000001007",
-                "retrieved_on": "2026-08-24",
-                "entry_version": 117,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 118,
                 "sequence_version": 1,
                 "role": "Subunit 2 component of the C. tepidum ATP citrate lyase; this accession is not presented as the complete AclAB enzyme.",
                 "evidence": [
@@ -161324,6 +161681,13 @@
         "action": "ADD_EXACT_ONTOLOGY_MATCH",
         "changes": "Ontology exact-match review (2026-08-25): approved exact xref(s): GO:0019643; declared exact synonym(s): 'reductive carboxylate cycle', 'reductive carboxylic acid cycle', 'reductive citric acid pathway', \"reductive Kreb's cycle\", 'reductive TCA cycle'. Evidence is predicate-scoped in the versioned ontology snapshots; OAK cross-checked direct data, and OLS4 spot-checked release deltas and disputed hits.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:Q8KDG1 (117 -> 118 on atp_citrate_lyase), UniProtKB:Q8KDG2 (117 -> 118 on atp_citrate_lyase).",
+        "llm_assisted": true
       }
     ]
   },
@@ -161500,8 +161864,8 @@
                 "taxon_id": "NCBITaxon:83333",
                 "taxon_label": "Escherichia coli K-12",
                 "entry_status": "REVIEWED",
-                "retrieved_on": "2026-08-24",
-                "entry_version": 155,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 156,
                 "sequence_version": 2,
                 "role": "Beta component of the F1 catalytic head of the E. coli F1Fo ATP synthase; this accession is not presented as the complete rotary complex.",
                 "evidence": [
@@ -161861,6 +162225,13 @@
         "action": "CONNECT_CAUSAL_GRAPH_COMPONENTS",
         "changes": "Resolved issue #183 graph fragmentation (2 components to 1) using 1 public-source, verbatim-snippet-backed connector(s). No paid research service was called.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P0ABB4 (155 -> 156 on atp_synthase).",
+        "llm_assisted": true
       }
     ]
   },
@@ -162166,8 +162537,8 @@
                 "taxon_id": "NCBITaxon:1402",
                 "taxon_label": "Bacillus licheniformis",
                 "entry_status": "REVIEWED",
-                "retrieved_on": "2026-08-24",
-                "entry_version": 173,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 174,
                 "sequence_version": 1,
                 "role": "Secreted alpha-amylase that hydrolyzes soluble starch in the canonical B. licheniformis example.",
                 "evidence": [
@@ -162377,6 +162748,13 @@
         "action": "ADD_EXACT_ONTOLOGY_MATCH",
         "changes": "Ontology exact-match review (2026-08-25): approved exact xref(s): GO:0005983; declared exact synonym(s): 'starch breakdown', 'starch catabolism'. Evidence is predicate-scoped in the versioned ontology snapshots; OAK cross-checked direct data, and OLS4 spot-checked release deltas and disputed hits.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P06278 (173 -> 174 on amylase).",
+        "llm_assisted": true
       }
     ]
   },
@@ -162535,8 +162913,8 @@
                 "taxon_label": "Streptococcus pyogenes serotype M1",
                 "entry_status": "UNREVIEWED",
                 "proteome_id": "UP000000750",
-                "retrieved_on": "2026-08-23",
-                "entry_version": 146,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 147,
                 "sequence_version": 1,
                 "role": "ArcC of the arginine-deiminase pathway, which catalyzes the ATP-forming carbamate-kinase reaction represented by this node.",
                 "evidence": [
@@ -162851,6 +163229,13 @@
         "curator": "codex",
         "action": "ADD_PATHWAY_CONTEXT",
         "changes": "Added pinned PathwayMech context on reviewed causal nodes with explicit route and organism limitations; retained existing groundings and exact xrefs.",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:Q99YT9 (146 -> 147 on carbamate_kinase_arginine_deiminase).",
         "llm_assisted": true
       }
     ]
@@ -163426,8 +163811,8 @@
                 "taxon_label": "Syntrophomonas wolfei subsp. wolfei (strain DSM 2245B / Goettingen)",
                 "entry_status": "REVIEWED",
                 "proteome_id": "UP000001968",
-                "retrieved_on": "2026-08-24",
-                "entry_version": 94,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 95,
                 "sequence_version": 1,
                 "role": "One of the experimentally identified butyryl-CoA dehydrogenases active during syntrophic butyrate oxidation; this example is not a hydrogenase or a marker for every syntrophic metabolism.",
                 "evidence": [
@@ -163776,6 +164161,13 @@
         "curator": "codex",
         "action": "CONNECT_CAUSAL_GRAPH_COMPONENTS",
         "changes": "Resolved issue #183 graph fragmentation (2 components to 1) using 1 public-source, verbatim-snippet-backed connector(s). No paid research service was called.",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:Q0AVM4 (94 -> 95 on butyryl_coa_dehydrogenase).",
         "llm_assisted": true
       }
     ]
@@ -164476,8 +164868,8 @@
                 "taxon_label": "Metallosphaera sedula DSM 5348",
                 "entry_status": "UNREVIEWED",
                 "proteome_id": "UP000000242",
-                "retrieved_on": "2026-08-24",
-                "entry_version": 85,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 86,
                 "sequence_version": 1,
                 "role": "Gamma carboxyltransferase component of the three-component acetyl-CoA/propionyl-CoA carboxylase; this accession is not the complete enzyme.",
                 "evidence": [
@@ -164725,6 +165117,13 @@
         "curator": "codex",
         "action": "CURATE_PROTEIN_TAXON_EXAMPLE",
         "changes": "Scoped the M. sedula 3HP/4HB mechanism, added all three DOI-backed carboxylase components plus Msed_1321 as taxon-paired UniProt examples, and documented why the complex and historical dehydratase labels remain reviewed label-only.",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:A4YGI1 (85 -> 86 on acetyl_propionyl_coa_carboxylase).",
         "llm_assisted": true
       }
     ]
@@ -165797,8 +166196,8 @@
                 "taxon_id": "NCBITaxon:1525",
                 "taxon_label": "Neomoorella thermoacetica",
                 "entry_status": "REVIEWED",
-                "retrieved_on": "2026-08-23",
-                "entry_version": 125,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 126,
                 "sequence_version": 1,
                 "role": "Alpha subunit that combines CO, CoA, and the CoFeSP-borne methyl group to form acetyl-CoA; this accession is one component of the alpha2-beta2 CODH/ACS complex.",
                 "evidence": [
@@ -166122,6 +166521,13 @@
         "action": "ADD_PATHWAY_CONTEXT",
         "changes": "Added pinned PathwayMech context on reviewed causal nodes with explicit route and organism limitations; retained existing groundings and exact xrefs.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P27988 (125 -> 126 on acetyl_coa_synthase).",
+        "llm_assisted": true
       }
     ]
   },
@@ -166220,8 +166626,8 @@
                 "taxon_id": "NCBITaxon:44001",
                 "taxon_label": "Caldicellulosiruptor saccharolyticus",
                 "entry_status": "REVIEWED",
-                "retrieved_on": "2026-08-24",
-                "entry_version": 101,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 102,
                 "sequence_version": 1,
                 "role": "XynA endo-xylanase representing the core hydrolytic component of the broader xylanase-system node.",
                 "evidence": [
@@ -166460,6 +166866,13 @@
         "curator": "codex",
         "action": "ADD_EXACT_SYNONYM",
         "changes": "Added xylanolysis as an exact FAPROTAX synonym rather than minting the duplicate v11 candidate because GO:0045493 already grounds xylan degradation.",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P23556 (101 -> 102 on xylanase).",
         "llm_assisted": true
       }
     ]
@@ -168463,8 +168876,8 @@
                 "taxon_label": "Aeromonas media",
                 "entry_status": "UNREVIEWED",
                 "proteome_id": "UP000502657",
-                "retrieved_on": "2026-08-25",
-                "entry_version": 8,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 9,
                 "sequence_version": 1,
                 "role": "Aeromonas HppD converts 4-hydroxyphenylpyruvate to homogentisate in the pyomelanin-producing branch that generates brown pigmentation.",
                 "evidence": [
@@ -168789,6 +169202,13 @@
         "curator": "codex",
         "action": "CONNECT_CAUSAL_GRAPH_COMPONENTS",
         "changes": "Resolved issue #183 graph fragmentation (2 components to 1) using 1 source- and verbatim-snippet-backed connector(s). No paid research service was called.",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:A0AAE7AGQ2 (8 -> 9 on hppD).",
         "llm_assisted": true
       }
     ]
@@ -169247,8 +169667,8 @@
                 "taxon_label": "Synechococcus elongatus PCC 7942",
                 "entry_status": "REVIEWED",
                 "proteome_id": "UP000889800",
-                "retrieved_on": "2026-08-25",
-                "entry_version": 110,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 111,
                 "sequence_version": 1,
                 "role": "CcmK2 is one hexamer-forming component of the beta-carboxysome shell; the accession does not denote the complete shell.",
                 "evidence": [
@@ -169461,6 +169881,13 @@
         "curator": "codex",
         "action": "ADD_EXACT_ONTOLOGY_MATCH",
         "changes": "Ontology exact-match review (2026-08-25): approved exact xref(s): GO:0031470. Evidence is predicate-scoped in the versioned ontology snapshots; OAK cross-checked direct data, and OLS4 spot-checked release deltas and disputed hits.",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:Q03511 (110 -> 111 on bmc_shell_proteins).",
         "llm_assisted": true
       }
     ]
@@ -176278,8 +176705,8 @@
                 "taxon_id": "NCBITaxon:171101",
                 "taxon_label": "Streptococcus pneumoniae R6",
                 "entry_status": "REVIEWED",
-                "retrieved_on": "2026-08-25",
-                "entry_version": 110,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 111,
                 "sequence_version": 1,
                 "role": "R6 PBP2b catalyzes transpeptidation in peripheral peptidoglycan synthesis, contributing to ovococcal elongation and ellipsoidal geometry.",
                 "evidence": [
@@ -176629,6 +177056,13 @@
         "curator": "codex",
         "action": "CONNECT_CAUSAL_GRAPH_COMPONENTS",
         "changes": "Resolved issue #183 graph fragmentation (2 components to 1) using 1 source- and verbatim-snippet-backed connector(s). No paid research service was called.",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P0A3M6 (110 -> 111 on pbp2b).",
         "llm_assisted": true
       }
     ]
@@ -180187,8 +180621,8 @@
                 "taxon_label": "Microcystis aeruginosa NIES-843",
                 "entry_status": "REVIEWED",
                 "proteome_id": "UP000001510",
-                "retrieved_on": "2026-08-25",
-                "entry_version": 76,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 77,
                 "sequence_version": 1,
                 "role": "GvpA is the major structural protein forming the gas-vesicle shell in the matched Microcystis strain.",
                 "evidence": [
@@ -180519,6 +180953,13 @@
         "curator": "codex",
         "action": "GROUND_CAUSAL_NODE_TO_NEW_TRAIT",
         "changes": "Grounded the existing causal-graph buoyancy TRAIT node to newly minted traitmech:000528 cellular buoyancy.",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:B0JPK6 (76 -> 77 on gvpa_protein).",
         "llm_assisted": true
       }
     ]
@@ -183075,8 +183516,8 @@
                 "taxon_label": "Nostoc sp. PCC 7120",
                 "entry_status": "REVIEWED",
                 "proteome_id": "UP000002483",
-                "retrieved_on": "2026-08-25",
-                "entry_version": 120,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 121,
                 "sequence_version": 3,
                 "role": "HetR is the master positive regulator initiating heterocyst differentiation in PCC 7120.",
                 "evidence": [
@@ -183356,6 +183797,13 @@
         "curator": "codex",
         "action": "CONNECT_CAUSAL_GRAPH_COMPONENTS",
         "changes": "Resolved issue #183 graph fragmentation (4 components to 1) using 2 source- and verbatim-snippet-backed connector(s). Removed the isolated FurC/hetR-promoter branch: its primary source states that more studies are required to understand the regulation exerted by FurC on hetR expression (DOI:10.1371/journal.pone.0289761), so no directional bridge was asserted. No paid research service was called.",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P27709 (120 -> 121 on hetr_regulator).",
         "llm_assisted": true
       }
     ]
@@ -184665,8 +185113,8 @@
                 "taxon_label": "Magnetospirillum gryphiswaldense MSR-1",
                 "entry_status": "REVIEWED",
                 "proteome_id": "UP000018922",
-                "retrieved_on": "2026-08-25",
-                "entry_version": 86,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 87,
                 "sequence_version": 1,
                 "role": "MamK polymerizes into an actin-like scaffold that organizes magnetosomes into chains.",
                 "evidence": [
@@ -185005,6 +185453,13 @@
         "curator": "codex",
         "action": "GROUND_CAUSAL_NODES",
         "changes": "Grounded the magnetotaxis causal-graph process node to newly minted traitmech:000176 and moved the adjectival magnetotactic related synonym to the magnetotaxis trait; resolves issue 851.",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:Q6NE59 (86 -> 87 on mamk_protein).",
         "llm_assisted": true
       }
     ]
@@ -185504,8 +185959,8 @@
                 "taxon_label": "Escherichia coli K-12",
                 "entry_status": "REVIEWED",
                 "proteome_id": "UP000000625",
-                "retrieved_on": "2026-08-25",
-                "entry_version": 160,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 161,
                 "sequence_version": 2,
                 "role": "Phosphorylated CheY binds the E. coli flagellar switch and changes motor rotation during swimming.",
                 "evidence": [
@@ -185988,6 +186443,13 @@
         "curator": "claude",
         "action": "CURATE_PROTEIN_TAXON_EXAMPLE",
         "changes": "Backfilled provenance (review issue 517) for the codex protein-taxon review tranche of 2026-08-24/25, which shipped without a per-record event. In this record the tranche: set graph scope motile_energy_dependent_locomotion=MECHANISTIC with scope_notes; marked 8 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (flagellar_motor, motab_stator, flig_rotor, chea_kinase, chey_response_regulator, flagellar_c_ring, pilb_atpase, pilt_atpase); added taxon-paired protein example(s) UniProtKB:P0AE67 on chey_response_regulator (NCBITaxon:83333); added canonical example(s) NCBITaxon:83333.",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P0AE67 (160 -> 161 on chey_response_regulator).",
         "llm_assisted": true
       }
     ]
@@ -187917,8 +188379,8 @@
                 "taxon_id": "NCBITaxon:171101",
                 "taxon_label": "Streptococcus pneumoniae R6",
                 "entry_status": "REVIEWED",
-                "retrieved_on": "2026-08-25",
-                "entry_version": 110,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 111,
                 "sequence_version": 1,
                 "role": "R6 PBP2b supplies the peripheral peptidoglycan transpeptidase activity required to maintain elongated oval pneumococcal morphology.",
                 "evidence": [
@@ -188210,6 +188672,13 @@
         "action": "CURATE_PROTEIN_TAXON_EXAMPLE",
         "changes": "Backfilled provenance (review issue 517) for the codex protein-taxon review tranche of 2026-08-24/25, which shipped without a per-record event. In this record the tranche: set graph scope oval_shaped_ovococcal_pg_synthesis=MECHANISTIC with scope_notes; marked 2 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (mapZ_ftsZ_system, mreC); added taxon-paired protein example(s) UniProtKB:P0A3M6 on pbp2b (NCBITaxon:171101); regrounded 1 node(s) (pbp2b: none->InterPro:IPR047982); added canonical example(s) NCBITaxon:171101.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P0A3M6 (110 -> 111 on pbp2b).",
+        "llm_assisted": true
       }
     ]
   },
@@ -188340,8 +188809,8 @@
                 "taxon_id": "NCBITaxon:171101",
                 "taxon_label": "Streptococcus pneumoniae R6",
                 "entry_status": "REVIEWED",
-                "retrieved_on": "2026-08-25",
-                "entry_version": 110,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 111,
                 "sequence_version": 1,
                 "role": "R6 PBP2b is the transpeptidase component of the RodA-PBP2b elongasome that performs peripheral peptidoglycan synthesis.",
                 "evidence": [
@@ -188593,6 +189062,13 @@
         "curator": "claude",
         "action": "CURATE_PROTEIN_TAXON_EXAMPLE",
         "changes": "Backfilled provenance (review issue 517) for the codex protein-taxon review tranche of 2026-08-24/25, which shipped without a per-record event. In this record the tranche: set graph scope ovoid_shaped_midcell_pg_assembly=MECHANISTIC with scope_notes; marked 2 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (ftsw_pbp2x, roda_pbp2b); added taxon-paired protein example(s) UniProtKB:P0A3M6 on roda_pbp2b (NCBITaxon:171101); regrounded 1 node(s) (mapZ: none->InterPro:IPR030858); added canonical example(s) NCBITaxon:171101.",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P0A3M6 (110 -> 111 on roda_pbp2b).",
         "llm_assisted": true
       }
     ]
@@ -190335,8 +190811,8 @@
                 "taxon_label": "Cupriavidus necator H16",
                 "entry_status": "REVIEWED",
                 "proteome_id": "UP000008210",
-                "retrieved_on": "2026-08-25",
-                "entry_version": 137,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 138,
                 "sequence_version": 1,
                 "role": "H16 PhaC polymerizes hydroxyacyl-CoA into PHA and directly supplies polymer to storage granules.",
                 "evidence": [
@@ -190641,6 +191117,13 @@
         "action": "CONNECT_CAUSAL_GRAPH_COMPONENTS",
         "changes": "Resolved issue #183 graph fragmentation (4 components to 1) using 3 source- and verbatim-snippet-backed connector(s). No paid research service was called.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P23608 (137 -> 138 on pha_synthase_phac).",
+        "llm_assisted": true
       }
     ]
   },
@@ -190729,8 +191212,8 @@
                 "taxon_label": "Microlunatus phosphovorus NM-1",
                 "entry_status": "UNREVIEWED",
                 "proteome_id": "UP000007947",
-                "retrieved_on": "2026-08-25",
-                "entry_version": 69,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 70,
                 "sequence_version": 1,
                 "role": "The NM-1 polyphosphate kinase synthesizes the polyphosphate stored in intracellular granules.",
                 "evidence": [
@@ -190902,6 +191385,13 @@
         "curator": "claude",
         "action": "CURATE_PROTEIN_TAXON_EXAMPLE",
         "changes": "Backfilled provenance (review issue 517) for the codex protein-taxon review tranche of 2026-08-24/25, which shipped without a per-record event. In this record the tranche: set graph scope polyphosphate_granule_storage=MECHANISTIC with scope_notes; added taxon-paired protein example(s) UniProtKB:F5XF46 on ppk (NCBITaxon:1032480); added canonical example(s) NCBITaxon:1032480.",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:F5XF46 (69 -> 70 on ppk).",
         "llm_assisted": true
       }
     ]
@@ -194543,8 +195033,8 @@
                 "taxon_label": "Bacillus subtilis 168",
                 "entry_status": "REVIEWED",
                 "proteome_id": "UP000001570",
-                "retrieved_on": "2026-08-25",
-                "entry_version": 188,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 189,
                 "sequence_version": 1,
                 "role": "Activated Spo0A is the B. subtilis master regulator that commits cells to the sporulation program.",
                 "evidence": [
@@ -194871,6 +195361,13 @@
         "action": "CONNECT_CAUSAL_GRAPH_COMPONENTS",
         "changes": "Resolved issue #183 graph fragmentation (4 components to 1) using 3 source- and verbatim-snippet-backed connector(s). No paid research service was called.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P06534 (188 -> 189 on spo0a_phosphorylated).",
+        "llm_assisted": true
       }
     ]
   },
@@ -194985,8 +195482,8 @@
                 "taxon_id": "NCBITaxon:224308",
                 "taxon_label": "Bacillus subtilis 168",
                 "entry_status": "REVIEWED",
-                "retrieved_on": "2026-08-25",
-                "entry_version": 134,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 135,
                 "sequence_version": 1,
                 "role": "SpoIVA hydrolyzes ATP and self-assembles into the basement layer that supports deposition of the Bacillus spore coat.",
                 "evidence": [
@@ -195364,6 +195861,13 @@
         "action": "CONNECT_CAUSAL_GRAPH_COMPONENTS",
         "changes": "Resolved issue #183 graph fragmentation (5 components to 1) using 4 source- and verbatim-snippet-backed connector(s). No paid research service was called.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P35149 (134 -> 135 on spoiva_protein).",
+        "llm_assisted": true
       }
     ]
   },
@@ -195423,7 +195927,7 @@
         "title": "Sporulation Spo0A and sigma-factor morphogenesis",
         "description": "Evidence-backed causal sketch linking environmental stress and Spo0A activation to asymmetric septation, compartment-specific sigma factors, forespore maturation, and endospore formation.",
         "scope_status": "MECHANISTIC",
-        "scope_notes": "The taxon-matched protein example anchors one experimentally supported causal branch; it is not presented as a universal mechanism for every taxon or every contextual branch in this graph.",
+        "scope_notes": "The B. subtilis 168 protein examples (SpoIIIE P21458 and compartment-specific sporulation sigma factors SigF P07860, SigE P06222, SigG P19940, and SigK P12254) anchor the experimentally resolved Bacillus endospore morphogenesis cascade; they are not presented as universal across all endospore-forming Firmicutes.",
         "nodes": [
           {
             "node_id": "sporulation_trait",
@@ -195491,8 +195995,8 @@
                 "taxon_label": "Bacillus subtilis 168",
                 "entry_status": "REVIEWED",
                 "proteome_id": "UP000001570",
-                "retrieved_on": "2026-08-25",
-                "entry_version": 156,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 157,
                 "sequence_version": 3,
                 "role": "SpoIIIE translocates the chromosome across the asymmetric septum into the B. subtilis forespore.",
                 "evidence": [
@@ -195532,7 +196036,29 @@
             "grounding_notes": "Reviewed protein family, complex, or aggregate; no single semantic family identifier exactly captures this node's represented scope.",
             "label": "sigma F",
             "node_type": "GENE_OR_PROTEIN",
-            "description": "First compartment-specific sigma factor activated in the forespore."
+            "description": "First compartment-specific sigma factor activated in the forespore.",
+            "protein_examples": [
+              {
+                "uniprot_id": "UniProtKB:P07860",
+                "protein_label": "RNA polymerase sigma-F factor",
+                "gene_symbol": "sigF",
+                "taxon_id": "NCBITaxon:224308",
+                "taxon_label": "Bacillus subtilis 168",
+                "entry_status": "REVIEWED",
+                "proteome_id": "UP000001570",
+                "retrieved_on": "2026-10-22",
+                "entry_version": 175,
+                "sequence_version": 1,
+                "role": "Early forespore-specific RNA polymerase sigma factor (sigma F) activated after asymmetric septation in B. subtilis 168.",
+                "evidence": [
+                  {
+                    "reference": "DOI:10.1038/s41467-024-51654-6",
+                    "snippet": "compartment specific RNA polymerase sigma factors \u2013 \u03c3F and \u03c3E \u2013 responsible for further activation of sporulation genes in the forespore and mother cell respectively",
+                    "notes": "Supports forespore-specific sigma factor SigF in the B. subtilis sporulation cascade."
+                  }
+                ]
+              }
+            ]
           },
           {
             "node_id": "sigma_e",
@@ -195540,7 +196066,29 @@
             "grounding_notes": "Reviewed protein family, complex, or aggregate; no single semantic family identifier exactly captures this node's represented scope.",
             "label": "sigma E",
             "node_type": "GENE_OR_PROTEIN",
-            "description": "Mother-cell sigma factor activated downstream of sigma F."
+            "description": "Mother-cell sigma factor activated downstream of sigma F.",
+            "protein_examples": [
+              {
+                "uniprot_id": "UniProtKB:P06222",
+                "protein_label": "RNA polymerase sigma-E factor",
+                "gene_symbol": "sigE",
+                "taxon_id": "NCBITaxon:224308",
+                "taxon_label": "Bacillus subtilis 168",
+                "entry_status": "REVIEWED",
+                "proteome_id": "UP000001570",
+                "retrieved_on": "2026-10-22",
+                "entry_version": 173,
+                "sequence_version": 1,
+                "role": "Early mother-cell-specific RNA polymerase sigma factor (sigma E) activated downstream of forespore sigma F in B. subtilis 168.",
+                "evidence": [
+                  {
+                    "reference": "DOI:10.1038/s41467-024-51654-6",
+                    "snippet": "compartment specific RNA polymerase sigma factors \u2013 \u03c3F and \u03c3E \u2013 responsible for further activation of sporulation genes in the forespore and mother cell respectively",
+                    "notes": "Supports mother-cell-specific sigma factor SigE in the B. subtilis sporulation cascade."
+                  }
+                ]
+              }
+            ]
           },
           {
             "node_id": "sigma_g",
@@ -195548,7 +196096,29 @@
             "grounding_notes": "Reviewed protein family, complex, or aggregate; no single semantic family identifier exactly captures this node's represented scope.",
             "label": "sigma G",
             "node_type": "GENE_OR_PROTEIN",
-            "description": "Late forespore sigma factor driving spore maturation and DNA protection."
+            "description": "Late forespore sigma factor driving spore maturation and DNA protection.",
+            "protein_examples": [
+              {
+                "uniprot_id": "UniProtKB:P19940",
+                "protein_label": "RNA polymerase sigma-G factor",
+                "gene_symbol": "sigG",
+                "taxon_id": "NCBITaxon:224308",
+                "taxon_label": "Bacillus subtilis 168",
+                "entry_status": "REVIEWED",
+                "proteome_id": "UP000001570",
+                "retrieved_on": "2026-10-22",
+                "entry_version": 166,
+                "sequence_version": 1,
+                "role": "Late forespore-specific RNA polymerase sigma factor (sigma G) activated after forespore engulfment to drive spore maturation and Ssp-mediated DNA protection in B. subtilis 168.",
+                "evidence": [
+                  {
+                    "reference": "DOI:10.1038/s41467-024-51654-6",
+                    "snippet": "the late sporulation spore specific sigma factor \u03c3G responsible for spore maturation, spore DNA protection via Ssp proteins and preparation for germination",
+                    "notes": "Supports late forespore sigma factor SigG driving spore maturation and DNA protection."
+                  }
+                ]
+              }
+            ]
           },
           {
             "node_id": "sigma_k",
@@ -195556,7 +196126,29 @@
             "grounding_notes": "Reviewed protein family, complex, or aggregate; no single semantic family identifier exactly captures this node's represented scope.",
             "label": "sigma K",
             "node_type": "GENE_OR_PROTEIN",
-            "description": "Late mother-cell sigma factor controlling spore coat and cortex maturation."
+            "description": "Late mother-cell sigma factor controlling spore coat and cortex maturation.",
+            "protein_examples": [
+              {
+                "uniprot_id": "UniProtKB:P12254",
+                "protein_label": "RNA polymerase sigma-K factor",
+                "gene_symbol": "sigK",
+                "taxon_id": "NCBITaxon:224308",
+                "taxon_label": "Bacillus subtilis 168",
+                "entry_status": "REVIEWED",
+                "proteome_id": "UP000001570",
+                "retrieved_on": "2026-10-22",
+                "entry_version": 158,
+                "sequence_version": 2,
+                "role": "Late mother-cell-specific RNA polymerase sigma factor (sigma K) controlling spore coat and cortex maturation in B. subtilis 168.",
+                "evidence": [
+                  {
+                    "reference": "DOI:10.1038/s41467-024-51654-6",
+                    "snippet": "Finally, the late mother cell \u03c3K activation, regulated by \u03c3G, results in spore coat and cortex maturation, preparation for germination and eventually, mother cell lysis",
+                    "notes": "Supports late mother-cell sigma factor SigK driving spore coat and cortex maturation."
+                  }
+                ]
+              }
+            ]
           },
           {
             "node_id": "spore_dna_protection",
@@ -195938,6 +196530,13 @@
         "curator": "codex",
         "action": "CONNECT_CAUSAL_GRAPH_COMPONENTS",
         "changes": "Resolved issue #183 graph fragmentation (6 components to 1) using 5 source- and verbatim-snippet-backed connector(s). No paid research service was called.",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "CURATE_PROTEIN_TAXON_EXAMPLE",
+        "changes": "Added reviewed B. subtilis 168 sporulation sigma-factor protein_examples UniProtKB:P07860 (SigF, v175), UniProtKB:P06222 (SigE, v173), UniProtKB:P19940 (SigG, v166), and UniProtKB:P12254 (SigK, v158) across sigma_f, sigma_e, sigma_g, and sigma_k (DOI:10.1038/s41467-024-51654-6), updated scope_notes, and refreshed UniProtKB:P21458 entry_version 156 -> 157 on spoiiie_translocase.",
         "llm_assisted": true
       }
     ]
@@ -197945,8 +198544,8 @@
                 "taxon_id": "NCBITaxon:565050",
                 "taxon_label": "Caulobacter vibrioides NA1000",
                 "entry_status": "REVIEWED",
-                "retrieved_on": "2026-08-25",
-                "entry_version": 42,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 43,
                 "sequence_version": 1,
                 "role": "Caulobacter MreB organizes elongation machinery and is required for normal polar stalk elongation.",
                 "evidence": [
@@ -198210,6 +198809,13 @@
         "curator": "claude",
         "action": "CURATE_PROTEIN_TAXON_EXAMPLE",
         "changes": "Backfilled provenance (review issue 517) for the codex protein-taxon review tranche of 2026-08-24/25, which shipped without a per-record event. In this record the tranche: set graph scope tailed_shaped_polar_stalk_growth=MECHANISTIC with scope_notes; marked 2 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (bactofilin_polymers, cell_wall_synthase); added taxon-paired protein example(s) UniProtKB:A0A0H3C7V4 on mreb (NCBITaxon:565050); regrounded 1 node(s) (mreb: none->InterPro:IPR004753); added canonical example(s) NCBITaxon:565050.",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:A0A0H3C7V4 (42 -> 43 on mreb).",
         "llm_assisted": true
       }
     ]
@@ -198789,8 +199395,8 @@
                 "taxon_label": "Pseudomonas aeruginosa PAO1",
                 "entry_status": "REVIEWED",
                 "proteome_id": "UP000002438",
-                "retrieved_on": "2026-08-25",
-                "entry_version": 147,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 148,
                 "sequence_version": 1,
                 "role": "PAO1 PilT powers type-IV-pilus retraction that pulls the cell across a surface.",
                 "evidence": [
@@ -199034,6 +199640,13 @@
         "curator": "codex",
         "action": "CONNECT_CAUSAL_GRAPH_COMPONENTS",
         "changes": "Resolved issue #183 graph fragmentation (4 components to 1) using 3 source- and verbatim-snippet-backed connector(s). No paid research service was called.",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P24559 (147 -> 148 on pilt_retraction_atpase).",
         "llm_assisted": true
       }
     ]
@@ -203934,8 +204547,8 @@
                 "taxon_id": "NCBITaxon:1280",
                 "taxon_label": "Staphylococcus aureus",
                 "entry_status": "REVIEWED",
-                "retrieved_on": "2026-08-24",
-                "entry_version": 171,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 172,
                 "sequence_version": 1,
                 "role": "Experimentally sequenced PC1 penicillinase/BlaZ that hydrolyzes beta-lactam antibiotics; it exemplifies the drug-inactivation branch rather than all antibiotic resistance in S. aureus.",
                 "evidence": [
@@ -204229,6 +204842,13 @@
         "curator": "codex",
         "action": "CONNECT_CAUSAL_GRAPH_COMPONENTS",
         "changes": "Resolved issue #183 graph fragmentation (5 components to 1) with 4 public-source, verbatim-snippet-backed connector(s). No paid research service was called.",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P00807 (171 -> 172 on beta_lactamase).",
         "llm_assisted": true
       }
     ]
@@ -204828,8 +205448,8 @@
                 "taxon_id": "NCBITaxon:381666",
                 "taxon_label": "Cupriavidus necator H16",
                 "entry_status": "REVIEWED",
-                "retrieved_on": "2026-08-24",
-                "entry_version": 153,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 154,
                 "sequence_version": 3,
                 "role": "Large-chain component of the plasmid-encoded RuBisCO in one of the two active CBB operons of C. necator H16.",
                 "evidence": [
@@ -205347,6 +205967,13 @@
         "curator": "codex",
         "action": "ADD_PATHWAY_CONTEXT",
         "changes": "Added pinned PathwayMech context on reviewed causal nodes with explicit route and organism limitations; retained existing groundings and exact xrefs.",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P42721 (153 -> 154 on rubisco).",
         "llm_assisted": true
       }
     ]
@@ -206169,8 +206796,8 @@
                 "taxon_id": "NCBITaxon:668",
                 "taxon_label": "Aliivibrio fischeri",
                 "entry_status": "REVIEWED",
-                "retrieved_on": "2026-08-24",
-                "entry_version": 97,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 98,
                 "sequence_version": 1,
                 "role": "LuxI synthesizes the 3-oxo-C6-HSL autoinducer that activates LuxR-dependent lux-locus expression in A. fischeri; it is a regulatory component, not the luciferase enzyme itself.",
                 "evidence": [
@@ -206439,6 +207066,13 @@
         "curator": "codex",
         "action": "CURATE_PROTEIN_TAXON_EXAMPLE",
         "changes": "Reviewed the Lux-system scope and every protein node, converted the canonical A. fischeri citation to DOI, grounded luciferase and LuxI functions, and added a reviewed A. fischeri LuxI protein example.",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P12747 (97 -> 98 on lux_i).",
         "llm_assisted": true
       }
     ]
@@ -206758,7 +207392,7 @@
                 "taxon_id": "NCBITaxon:1085",
                 "taxon_label": "Rhodospirillum rubrum",
                 "entry_status": "REVIEWED",
-                "retrieved_on": "2026-08-23",
+                "retrieved_on": "2026-10-22",
                 "sequence_version": 1,
                 "role": "NiFeS CooS enzyme catalyzing CO oxidation in the hydrogenogenic R. rubrum system; it is not used as the grounding for the umbrella CODH node.",
                 "evidence": [
@@ -206772,7 +207406,8 @@
                     "snippet": "two-electron oxidation of CO to form CO2",
                     "notes": "Purified R. rubrum CODH directly catalyzed the reaction represented by the graph."
                   }
-                ]
+                ],
+                "entry_version": 134
               }
             ]
           },
@@ -207209,6 +207844,13 @@
         "action": "CONNECT_CAUSAL_GRAPH_COMPONENTS",
         "changes": "Resolved issue #183 graph fragmentation (2 components to 1) with 1 public-source, verbatim-snippet-backed connector(s). No paid research service was called.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P31896 (unset -> 134 on nife_codh).",
+        "llm_assisted": true
       }
     ]
   },
@@ -207384,7 +208026,7 @@
         "title": "Catalase hydrogen-peroxide detoxification",
         "description": "Evidence-backed causal sketch linking catalase to dismutation of hydrogen peroxide into water and molecular oxygen.",
         "scope_status": "MECHANISTIC",
-        "scope_notes": "Represents a monofunctional heme-catalase reaction and two alternative bacterial peroxide-sensing regulators. The PerR example supports the S. aureus regulatory branch and is not generalized to OxyR-using taxa.",
+        "scope_notes": "Represents a monofunctional heme-catalase reaction and two alternative bacterial peroxide-sensing regulators. The S. aureus NCTC 8325 PerR (Q2G282) and E. coli K-12 OxyR (P0ACQ4) examples support their respective taxon-specific regulatory branches and are not generalized across all catalase-positive taxa.",
         "nodes": [
           {
             "node_id": "catalase_activity_trait",
@@ -207465,7 +208107,29 @@
             "node_type": "GENE_OR_PROTEIN",
             "description": "Peroxide-sensing transcriptional regulator activated by hydrogen peroxide.",
             "grounding_status": "REVIEWED_LABEL_ONLY",
-            "grounding_notes": "OxyR belongs to the broad LysR regulator family, but the checked InterPro entries describe shared domains rather than an exact OxyR protein family."
+            "grounding_notes": "OxyR belongs to the broad LysR regulator family, but the checked InterPro entries describe shared domains rather than an exact OxyR protein family.",
+            "protein_examples": [
+              {
+                "uniprot_id": "UniProtKB:P0ACQ4",
+                "protein_label": "DNA-binding transcriptional dual regulator OxyR",
+                "gene_symbol": "oxyR",
+                "taxon_id": "NCBITaxon:83333",
+                "taxon_label": "Escherichia coli K-12",
+                "entry_status": "REVIEWED",
+                "proteome_id": "UP000000625",
+                "retrieved_on": "2026-10-22",
+                "entry_version": 144,
+                "sequence_version": 1,
+                "role": "Peroxide-sensing transcriptional dual regulator that is directly oxidized and activated by hydrogen peroxide to induce katG and peroxide-defense genes in E. coli K-12; this example supports the OxyR regulatory branch only, not PerR-regulated taxa.",
+                "evidence": [
+                  {
+                    "reference": "DOI:10.1073/pnas.96.11.6161",
+                    "snippet": "In wild-type cells, OxyR is activated by hydrogen peroxide.",
+                    "notes": "\u00c5slund et al. 1999 characterize hydrogen peroxide activation of E. coli K-12 OxyR."
+                  }
+                ]
+              }
+            ]
           },
           {
             "node_id": "perr_regulator",
@@ -207483,8 +208147,8 @@
                 "taxon_label": "Staphylococcus aureus NCTC 8325",
                 "entry_status": "REVIEWED",
                 "proteome_id": "UP000008816",
-                "retrieved_on": "2026-08-23",
-                "entry_version": 109,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 110,
                 "sequence_version": 1,
                 "role": "Manganese-dependent peroxide-responsive repressor controlling katA and the wider oxidative-stress defense regulon in S. aureus.",
                 "evidence": [
@@ -207793,6 +208457,13 @@
         "curator": "codex",
         "action": "ADD_PATHWAY_CONTEXT",
         "changes": "Added pinned pathway context for the Ctt1 peroxide-removal component of the yeast detoxification model, retaining the upstream heme context and primary-source-backed Ctt1 example. The link explicitly distinguishes catalase chemistry from superoxide dismutase and bacterial regulatory branches.",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "CURATE_PROTEIN_TAXON_EXAMPLE",
+        "changes": "Added reviewed E. coli K-12 OxyR protein_example UniProtKB:P0ACQ4 (v144) on oxyr_regulator (DOI:10.1073/pnas.96.11.6161), updated scope_notes, and refreshed UniProtKB:Q2G282 entry_version 109 -> 110 on perr_regulator.",
         "llm_assisted": true
       }
     ]
@@ -208280,8 +208951,8 @@
                 "taxon_id": "NCBITaxon:228410",
                 "taxon_label": "Nitrosomonas europaea ATCC 19718",
                 "entry_status": "REVIEWED",
-                "retrieved_on": "2026-08-24",
-                "entry_version": 126,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 127,
                 "sequence_version": 2,
                 "role": "AmoA alpha-subunit component of N. europaea ammonia monooxygenase; this accession maps two duplicated amoA gene copies and does not denote the whole enzyme complex.",
                 "evidence": [
@@ -208633,6 +209304,13 @@
         "action": "MIGRATE_MICROBE_DOMAIN_EDGES",
         "changes": "Re-grounded 3 causal edge(s) off microbe-domain METPO predicates (2 to has output, 1 to has carbon source), issue 301. The previous predicates are transitively rdfs:subPropertyOf METPO:2000001, whose rdfs:domain is METPO:1000525 (microbe), so a causal-graph subject entailed that the subject IS a microbe; CausalNodeTypeEnum has no organism member, so no such edge could ever satisfy the domain. Edge directions are unchanged - this pass only relabels and re-grounds. RO:0002234 (has output) is used where the subject is an activity, since biolink gives it the domain 'biological process or activity'; the METPO replacements are proposed in proposals/metpo_traitmech_v8 and v9 and are placeholder ids until METPO mints them.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:Q04507 (126 -> 127 on ammonia_monooxygenase).",
+        "llm_assisted": true
       }
     ]
   },
@@ -208749,8 +209427,8 @@
                 "taxon_id": "NCBITaxon:228410",
                 "taxon_label": "Nitrosomonas europaea ATCC 19718",
                 "entry_status": "REVIEWED",
-                "retrieved_on": "2026-08-24",
-                "entry_version": 120,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 121,
                 "sequence_version": 1,
                 "role": "Large subunit of the type I RuBisCO that fixes CO2 through the CBB cycle in ammonia-oxidizing N. europaea ATCC 19718.",
                 "evidence": [
@@ -209179,6 +209857,13 @@
         "curator": "codex",
         "action": "REVIEWED_CAUSAL_GRAPH_PROTEIN_TAXON",
         "changes": "Marked the graph mechanistic, reviewed the broad dissolved-inorganic-carbon transporter node as label-only, upgraded canonical taxa to strain-level DOI citations, and added the reviewed N. europaea ATCC 19718 RuBisCO large-chain example.",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:Q82TG6 (120 -> 121 on rubisco).",
         "llm_assisted": true
       }
     ]
@@ -209860,8 +210545,8 @@
                 "taxon_id": "NCBITaxon:920",
                 "taxon_label": "Acidithiobacillus ferrooxidans",
                 "entry_status": "REVIEWED",
-                "retrieved_on": "2026-08-24",
-                "entry_version": 57,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 58,
                 "sequence_version": 1,
                 "role": "Large-chain component of form I RuBisCO in the A. ferrooxidans CBB pathway; this accession is not presented as the complete L8S8 enzyme.",
                 "evidence": [
@@ -210246,6 +210931,13 @@
         "curator": "codex",
         "action": "REVIEWED_CAUSAL_GRAPH_PROTEIN_TAXON",
         "changes": "Marked the graph mechanistic, reviewed the broad dissolved-inorganic-carbon transporter node as label-only, replaced the canonical web citation with its DOI, and added the reviewed A. ferrooxidans cbbL1 large-chain example.",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P0C916 (57 -> 58 on rubisco).",
         "llm_assisted": true
       }
     ]
@@ -210916,8 +211608,8 @@
                 "taxon_id": "NCBITaxon:228410",
                 "taxon_label": "Nitrosomonas europaea ATCC 19718",
                 "entry_status": "REVIEWED",
-                "retrieved_on": "2026-08-24",
-                "entry_version": 126,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 127,
                 "sequence_version": 2,
                 "role": "AmoA alpha-subunit component of the N. europaea ammonia monooxygenase; the accession maps two duplicated amoA gene copies and is not the whole enzyme complex.",
                 "evidence": [
@@ -211349,6 +212041,13 @@
         "action": "CONNECT_CAUSAL_GRAPH_COMPONENTS",
         "changes": "Resolved issue #183 graph fragmentation (5 components to 1): added 4 public-source connector(s). No paid research service was called.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:Q04507 (126 -> 127 on ammonia_monooxygenase).",
+        "llm_assisted": true
       }
     ]
   },
@@ -211460,8 +212159,8 @@
                 "taxon_id": "NCBITaxon:83333",
                 "taxon_label": "Escherichia coli K-12",
                 "entry_status": "REVIEWED",
-                "retrieved_on": "2026-08-24",
-                "entry_version": 155,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 156,
                 "sequence_version": 2,
                 "role": "Beta component of the E. coli F1 catalytic head; this accession is not presented as the complete F1Fo complex.",
                 "evidence": [
@@ -211874,6 +212573,13 @@
         "action": "CONNECT_CAUSAL_GRAPH_COMPONENTS",
         "changes": "Resolved issue #183 graph fragmentation (2 components to 1) with 1 public-source, verbatim-snippet-backed connector(s). No paid research service was called.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P0ABB4 (155 -> 156 on atp_synthase).",
+        "llm_assisted": true
       }
     ]
   },
@@ -211998,8 +212704,8 @@
                 "taxon_id": "NCBITaxon:83333",
                 "taxon_label": "Escherichia coli K-12",
                 "entry_status": "REVIEWED",
-                "retrieved_on": "2026-08-24",
-                "entry_version": 155,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 156,
                 "sequence_version": 2,
                 "role": "Beta component of the E. coli F1 catalytic head; this accession is not presented as the complete F1Fo complex.",
                 "evidence": [
@@ -212452,6 +213158,13 @@
         "action": "CONNECT_CAUSAL_GRAPH_COMPONENTS",
         "changes": "Resolved issue #183 graph fragmentation (3 components to 1): added 2 public-source connector(s). No paid research service was called.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P0ABB4 (155 -> 156 on atp_synthase).",
+        "llm_assisted": true
       }
     ]
   },
@@ -212569,8 +213282,8 @@
                 "taxon_label": "Escherichia coli K-12",
                 "entry_status": "REVIEWED",
                 "proteome_id": "UP000000625",
-                "retrieved_on": "2026-08-24",
-                "entry_version": 160,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 161,
                 "sequence_version": 2,
                 "role": "Phosphorylated CheY binds the E. coli flagellar switch and raises the probability of clockwise motor rotation.",
                 "evidence": [
@@ -212829,6 +213542,13 @@
         "action": "CONNECT_CAUSAL_GRAPH_COMPONENTS",
         "changes": "Resolved issue #183 graph fragmentation (2 components to 1) with one public-source, verbatim-snippet-backed connector. No paid research service was called.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P0AE67 (160 -> 161 on chey).",
+        "llm_assisted": true
       }
     ]
   },
@@ -212951,8 +213671,8 @@
                 "taxon_id": "NCBITaxon:83333",
                 "taxon_label": "Escherichia coli K-12",
                 "entry_status": "REVIEWED",
-                "retrieved_on": "2026-08-24",
-                "entry_version": 155,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 156,
                 "sequence_version": 2,
                 "role": "Beta component of the F1 catalytic head of the E. coli F1Fo ATP synthase; this accession is not presented as the complete rotary complex.",
                 "evidence": [
@@ -213277,6 +213997,13 @@
         "curator": "codex",
         "action": "REVIEWED_CAUSAL_GRAPH_PROTEIN_TAXON",
         "changes": "Marked the respiratory chemotrophy graph mechanistic, documented its scope, added DOI-cited E. coli K-12 as the canonical strain, and paired the generic ATP synthase complex with reviewed AtpD component P0ABB4 without treating one subunit as the whole complex.",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P0ABB4 (155 -> 156 on atp_synthase).",
         "llm_assisted": true
       }
     ]
@@ -214890,8 +215617,8 @@
                 "taxon_id": "NCBITaxon:83332",
                 "taxon_label": "Mycobacterium tuberculosis H37Rv",
                 "entry_status": "REVIEWED",
-                "retrieved_on": "2026-08-24",
-                "entry_version": 53,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 54,
                 "sequence_version": 1,
                 "role": "H37Rv RpfB component of the Rpf family that contributes to recovery from dormancy; it does not denote all five paralogues.",
                 "evidence": [
@@ -215079,6 +215806,13 @@
         "curator": "codex",
         "action": "CONNECT_CAUSAL_GRAPH_COMPONENTS",
         "changes": "Resolved issue #183 graph fragmentation (2 components to 1) with one public-source, verbatim-snippet-backed connector. No paid research service was called.",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P9WG29 (53 -> 54 on rpf_proteins).",
         "llm_assisted": true
       }
     ]
@@ -217279,8 +218013,8 @@
                 "taxon_id": "NCBITaxon:83333",
                 "taxon_label": "Escherichia coli K-12",
                 "entry_status": "REVIEWED",
-                "retrieved_on": "2026-08-24",
-                "entry_version": 155,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 156,
                 "sequence_version": 2,
                 "role": "Beta component of the E. coli F1 catalytic head in respiratory ATP synthesis; it is not presented as the complete complex.",
                 "evidence": [
@@ -217577,6 +218311,13 @@
         "curator": "codex",
         "action": "ADD_PATHWAY_CONTEXT",
         "changes": "Added pinned PathwayMech context on reviewed causal nodes with explicit route and organism limitations; retained existing groundings and exact xrefs.",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P0ABB4 (155 -> 156 on atp_synthase).",
         "llm_assisted": true
       }
     ]
@@ -218075,7 +218816,7 @@
                 "taxon_label": "Cupriavidus necator H16",
                 "entry_status": "REVIEWED",
                 "proteome_id": "UP000008210",
-                "retrieved_on": "2026-08-23",
+                "retrieved_on": "2026-10-22",
                 "sequence_version": 4,
                 "role": "Catalytic large-subunit component of the membrane-bound NiFe uptake-hydrogenase complex; this accession does not denote the complete HoxKGZ complex.",
                 "evidence": [
@@ -218084,7 +218825,8 @@
                     "snippet": "large subunit HoxG (67.1 kDa) containing the Ni-Fe active site",
                     "notes": "The primary H16 study identifies HoxG as the catalytic large subunit of the oxygen-tolerant membrane-bound hydrogenase and traces electron transfer to the respiratory chain; UniProtKB P31891 verifies the reviewed instance."
                   }
-                ]
+                ],
+                "entry_version": 156
               }
             ]
           },
@@ -218482,6 +219224,13 @@
         "curator": "codex",
         "action": "REVIEW_EVIDENCE_REFERENCE_CHURN",
         "changes": "Offline review for issue 520 retained 4 evidence-reference replacement(s) that PR 511 made on surviving causal edges outside its stated protein-taxon scope. The pre-tranche evidence entries had references but no snippets; the retained entries supply edge-specific snippets and explanatory notes. Reverting would discard that claim-level provenance, so the scope defect is resolved by documenting the decision instead. This audit changed no causal claim or evidence field. Reviewed replacements: DOI:10.2138/gselements.16.1.39 -> DOI:10.21775/cimb.006.159 (1 edge); DOI:10.2138/gselements.16.1.39 -> DOI:10.3390/microorganisms7020053 (3 edges).",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P31891 (unset -> 156 on hydrogenase).",
         "llm_assisted": true
       }
     ]
@@ -219385,8 +220134,8 @@
                 "taxon_id": "NCBITaxon:228410",
                 "taxon_label": "Nitrosomonas europaea ATCC 19718",
                 "entry_status": "REVIEWED",
-                "retrieved_on": "2026-08-24",
-                "entry_version": 120,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 121,
                 "sequence_version": 1,
                 "role": "Large subunit of the type I RuBisCO that fixes CO2 through the CBB cycle in N. europaea ATCC 19718; it does not denote the complete L8S8 enzyme.",
                 "evidence": [
@@ -219813,6 +220562,13 @@
         "curator": "codex",
         "action": "CONNECT_CAUSAL_GRAPH_COMPONENTS",
         "changes": "Resolved issue #183 graph fragmentation (3 components to 1): added 2 public-source connector(s). No paid research service was called.",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:Q82TG6 (120 -> 121 on rubisco).",
         "llm_assisted": true
       }
     ]
@@ -220462,7 +221218,7 @@
         "title": "Lithotrophic inorganic-donor energy mechanism",
         "description": "DOI-backed graph linking inorganic electron donors to respiratory electron transport, proton motive force, and ATP synthesis.",
         "scope_status": "MECHANISTIC",
-        "scope_notes": "This cross-donor graph combines hydrogen, sulfur, ammonia, and nitrite oxidation. The N. europaea AmoA example anchors only the ammonia branch; Q04507 is an alpha-subunit component of a multisubunit ammonia monooxygenase and not the complete enzyme or any other donor-oxidation system.",
+        "scope_notes": "This cross-donor graph combines hydrogen, sulfur, ammonia, and nitrite oxidation. The N. europaea ATCC 19718 AmoA (Q04507) and HAO (Q50925) examples anchor only the bacterial ammonia-to-hydroxylamine-to-nitrite branch; Q04507 is an alpha-subunit component of a multisubunit ammonia monooxygenase and neither example represents sulfur, hydrogen, or nitrite oxidizer systems.",
         "nodes": [
           {
             "node_id": "lithotrophic_trait",
@@ -220562,8 +221318,8 @@
                 "taxon_id": "NCBITaxon:228410",
                 "taxon_label": "Nitrosomonas europaea ATCC 19718",
                 "entry_status": "REVIEWED",
-                "retrieved_on": "2026-08-24",
-                "entry_version": 126,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 127,
                 "sequence_version": 2,
                 "role": "AmoA alpha-subunit component of the N. europaea ammonia monooxygenase; the accession maps two duplicated amoA gene copies and is not the whole enzyme complex.",
                 "evidence": [
@@ -220588,7 +221344,29 @@
             "label": "hydroxylamine oxidoreductase (HAO)",
             "node_type": "GENE_OR_PROTEIN",
             "description": "Enzyme oxidizing hydroxylamine during ammonia oxidation (EC 1.7.2.6).",
-            "grounding": "GO:0033740"
+            "grounding": "GO:0033740",
+            "protein_examples": [
+              {
+                "uniprot_id": "UniProtKB:Q50925",
+                "protein_label": "Hydroxylamine oxidoreductase",
+                "gene_symbol": "hao1",
+                "taxon_id": "NCBITaxon:228410",
+                "taxon_label": "Nitrosomonas europaea ATCC 19718",
+                "entry_status": "REVIEWED",
+                "proteome_id": "UP000001416",
+                "retrieved_on": "2026-10-22",
+                "entry_version": 155,
+                "sequence_version": 2,
+                "role": "Multiheme hydroxylamine oxidoreductase (encoded by three identical hao gene copies in N. europaea ATCC 19718) that oxidizes hydroxylamine to nitrite and feeds electrons into the respiratory chain via cytochrome c554.",
+                "evidence": [
+                  {
+                    "reference": "DOI:10.1128/jb.185.9.2759-2773.2003",
+                    "snippet": "Electrons from hydroxylamine oxidation flow through cytochrome c554 and cytochrome cm552 into the electron transport chain at the level of ubiquinone",
+                    "notes": "Chain et al. 2003 (complete N. europaea ATCC 19718 genome analysis) describe hydroxylamine oxidation to nitrite and electron transfer into the ubiquinone pool."
+                  }
+                ]
+              }
+            ]
           },
           {
             "node_id": "nitrite",
@@ -220989,6 +221767,13 @@
         "curator": "codex",
         "action": "CONNECT_CAUSAL_GRAPH_COMPONENTS",
         "changes": "Connected the seven lithotrophic graph components with six tracked, snippet-backed relations. Sox and SoeABC now join the sulfur-oxidation branch to electron transport; the explicitly bacterial AMO-HAO branch now joins ammonia, hydroxylamine, nitrite, NXR, and electron transport. No new paid research was commissioned (#183, #426).",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "CURATE_PROTEIN_TAXON_EXAMPLE",
+        "changes": "Added reviewed N. europaea ATCC 19718 HAO protein_example UniProtKB:Q50925 (hao1, v155) on hydroxylamine_oxidoreductase (DOI:10.1128/jb.185.9.2759-2773.2003), updated scope_notes, and refreshed UniProtKB:Q04507 entry_version 126 -> 127 on ammonia_monooxygenase.",
         "llm_assisted": true
       }
     ]
@@ -221475,8 +222260,8 @@
                 "taxon_id": "NCBITaxon:243233",
                 "taxon_label": "Methylococcus capsulatus Bath",
                 "entry_status": "REVIEWED",
-                "retrieved_on": "2026-08-24",
-                "entry_version": 76,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 77,
                 "sequence_version": 1,
                 "role": "PmoB alpha component of the Bath-strain pMMO; this accession is not presented as the full PmoABC complex.",
                 "evidence": [
@@ -221861,6 +222646,13 @@
         "action": "CONNECT_CAUSAL_GRAPH_COMPONENTS",
         "changes": "Resolved issue #183 graph fragmentation (3 components to 1) with 2 public-source, verbatim-snippet-backed connector(s). No paid research service was called.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:G1UBD1 (76 -> 77 on particulate_methane_monooxygenase).",
+        "llm_assisted": true
       }
     ]
   },
@@ -222050,8 +222842,8 @@
                 "taxon_id": "NCBITaxon:272630",
                 "taxon_label": "Methylorubrum extorquens AM1",
                 "entry_status": "REVIEWED",
-                "retrieved_on": "2026-08-24",
-                "entry_version": 179,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 180,
                 "sequence_version": 1,
                 "role": "Large catalytic MxaF component of the AM1 MxaFI methanol dehydrogenase; this accession is not presented as the complete enzyme.",
                 "evidence": [
@@ -222443,6 +223235,13 @@
         "action": "CONNECT_CAUSAL_GRAPH_COMPONENTS",
         "changes": "Resolved issue #183 graph fragmentation (4 components to 1) with 3 public-source, verbatim-snippet-backed connector(s). No paid research service was called.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P16027 (179 -> 180 on mxa_methanol_dehydrogenase).",
+        "llm_assisted": true
       }
     ]
   },
@@ -222643,8 +223442,8 @@
                 "taxon_id": "NCBITaxon:318586",
                 "taxon_label": "Paracoccus denitrificans Pd1222",
                 "entry_status": "REVIEWED",
-                "retrieved_on": "2026-08-24",
-                "entry_version": 98,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 99,
                 "sequence_version": 1,
                 "role": "Large-chain component of RuBisCO used for conditional Calvin-cycle CO2 assimilation during mixed methanol and mannitol consumption; it is not the complete multisubunit enzyme.",
                 "evidence": [
@@ -222987,6 +223786,13 @@
         "curator": "codex",
         "action": "REVIEWED_CAUSAL_GRAPH_PROTEIN_TAXON",
         "changes": "Marked the graph mechanistic, documented its alternative-module scope, upgraded canonical examples to DOI citations including Pd1222, and added the reviewed Pd1222 cbbL large-chain example for conditional mixed-substrate CO2 fixation.",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:A1B2Q2 (98 -> 99 on rubisco).",
         "llm_assisted": true
       }
     ]
@@ -223390,8 +224196,8 @@
                 "taxon_label": "Streptococcus pneumoniae R6",
                 "entry_status": "REVIEWED",
                 "proteome_id": "UP000000586",
-                "retrieved_on": "2026-08-24",
-                "entry_version": 116,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 117,
                 "sequence_version": 1,
                 "role": "Competence-induced RecA protects transforming single-stranded DNA and catalyzes its homologous integration in pneumococcal strain R6.",
                 "evidence": [
@@ -223625,6 +224431,13 @@
         "curator": "codex",
         "action": "CONNECT_CAUSAL_GRAPH_COMPONENTS",
         "changes": "Resolved issue #183 graph fragmentation (4 components to 1) with 3 public-source, verbatim-snippet-backed connector(s). No paid research service was called.",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P0A452 (116 -> 117 on reca).",
         "llm_assisted": true
       }
     ]
@@ -224873,8 +225686,8 @@
                 "taxon_id": "NCBITaxon:83333",
                 "taxon_label": "Escherichia coli K-12",
                 "entry_status": "REVIEWED",
-                "retrieved_on": "2026-08-24",
-                "entry_version": 155,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 156,
                 "sequence_version": 2,
                 "role": "Beta component of the E. coli F1 catalytic head; this accession is not presented as the complete F1Fo complex.",
                 "evidence": [
@@ -225178,6 +225991,13 @@
         "action": "CURATE_PROTEIN_TAXON_EXAMPLE",
         "changes": "Backfilled provenance (review issue 517) for the codex protein-taxon review tranche of 2026-08-24/25, which shipped without a per-record event. In this record the tranche: set graph scope organoheterotrophic_organic_donor_carbon=MECHANISTIC with scope_notes; added taxon-paired protein example(s) UniProtKB:P0ABB4 on atp_synthase (NCBITaxon:83333); regrounded 2 node(s) (nadh_dehydrogenase_complex_i: none->GO:0030964, cytochrome_bc1_complex: none->GO:0045275); added 1 node(s) and 1 edge(s) (atp_synthase); added canonical example(s) NCBITaxon:83333.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P0ABB4 (155 -> 156 on atp_synthase).",
+        "llm_assisted": true
       }
     ]
   },
@@ -225332,8 +226152,8 @@
                 "taxon_id": "NCBITaxon:83333",
                 "taxon_label": "Escherichia coli K-12",
                 "entry_status": "REVIEWED",
-                "retrieved_on": "2026-08-24",
-                "entry_version": 155,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 156,
                 "sequence_version": 2,
                 "role": "Beta component of the E. coli F1 catalytic head; this accession is not presented as the complete F1Fo complex.",
                 "evidence": [
@@ -225625,6 +226445,13 @@
         "action": "CURATE_PROTEIN_TAXON_EXAMPLE",
         "changes": "Backfilled provenance (review issue 517) for the codex protein-taxon review tranche of 2026-08-24/25, which shipped without a per-record event. In this record the tranche: set graph scope organotrophic_organic_compound_oxidation=MECHANISTIC with scope_notes; added taxon-paired protein example(s) UniProtKB:P0ABB4 on atp_synthase (NCBITaxon:83333); regrounded 1 node(s) (nadh_dehydrogenase: none->GO:0030964); added 1 node(s) and 1 edge(s) (atp_synthase); added canonical example(s) NCBITaxon:83333.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P0ABB4 (155 -> 156 on atp_synthase).",
+        "llm_assisted": true
       }
     ]
   },
@@ -225837,8 +226664,8 @@
                 "taxon_id": "NCBITaxon:266",
                 "taxon_label": "Paracoccus denitrificans",
                 "entry_status": "REVIEWED",
-                "retrieved_on": "2026-08-24",
-                "entry_version": 132,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 133,
                 "sequence_version": 1,
                 "role": "Catalytic subunit I-alpha component of the Paracoccus family A cytochrome-c oxidase; it is not presented as the complete complex.",
                 "evidence": [
@@ -226108,6 +226935,13 @@
         "action": "CONNECT_CAUSAL_GRAPH_COMPONENTS",
         "changes": "Resolved issue #183 graph fragmentation (2 components to 1) with 1 public-source, verbatim-snippet-backed connector(s). No paid research service was called.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P08305 (132 -> 133 on family_a_cytochrome_c_oxidase).",
+        "llm_assisted": true
       }
     ]
   },
@@ -226192,8 +227026,8 @@
                 "taxon_id": "NCBITaxon:83333",
                 "taxon_label": "Escherichia coli K-12",
                 "entry_status": "REVIEWED",
-                "retrieved_on": "2026-08-24",
-                "entry_version": 143,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 144,
                 "sequence_version": 1,
                 "role": "E. coli K-12 peroxide-sensing OxyR regulator that activates the hydrogen-peroxide-inducible defense regulon represented by this branch.",
                 "evidence": [
@@ -226356,6 +227190,13 @@
         "curator": "codex",
         "action": "ADVERSARIAL_REVIEW_REPAIR",
         "changes": "Addressed PR #664 adversarial review issues #680 through #682: requoted the RpoS edge and Imlay record evidence, and replaced the generic ASM endpoint note with Europe PMC abstract verification.",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P0ACQ4 (143 -> 144 on oxyr_regulator).",
         "llm_assisted": true
       }
     ]
@@ -226642,8 +227483,8 @@
                 "taxon_id": "NCBITaxon:83333",
                 "taxon_label": "Escherichia coli K-12",
                 "entry_status": "REVIEWED",
-                "retrieved_on": "2026-08-24",
-                "entry_version": 176,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 177,
                 "sequence_version": 2,
                 "role": "Reviewed K-12 HipA sequence instance underlying the experimentally studied hipA7 variant and HipA-overexpression systems; the accession itself denotes the wild-type protein, not the hipA7 allele.",
                 "evidence": [
@@ -226918,6 +227759,13 @@
         "curator": "codex",
         "action": "CONNECT_CAUSAL_GRAPH_COMPONENTS",
         "changes": "Resolved issue #183 graph fragmentation (2 components to 1) with one public-source, verbatim-snippet-backed connector. No paid research service was called.",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P23874 (176 -> 177 on hipa_toxin).",
         "llm_assisted": true
       }
     ]
@@ -227390,8 +228238,8 @@
                 "taxon_id": "NCBITaxon:1111708",
                 "taxon_label": "Synechocystis sp. PCC 6803",
                 "entry_status": "REVIEWED",
-                "retrieved_on": "2026-08-24",
-                "entry_version": 186,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 187,
                 "sequence_version": 1,
                 "role": "D1 reaction-center component of photosystem II; this accession is not presented as the complete water-oxidizing complex.",
                 "evidence": [
@@ -227841,6 +228689,13 @@
         "action": "CONNECT_CAUSAL_GRAPH_COMPONENTS",
         "changes": "Connected all four components of the oxygenic cyanobacterial photoautotrophy graph with three tracked, snippet-backed relations: light enables photosynthetic electron transport; the CCM includes the carboxysome; and the carboxysome includes RuBisCO. No new paid research was commissioned (#183, #426).",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P16033 (186 -> 187 on photosystem_ii).",
+        "llm_assisted": true
       }
     ]
   },
@@ -227938,8 +228793,8 @@
                 "taxon_id": "NCBITaxon:1085",
                 "taxon_label": "Rhodospirillum rubrum",
                 "entry_status": "REVIEWED",
-                "retrieved_on": "2026-08-24",
-                "entry_version": 119,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 120,
                 "sequence_version": 2,
                 "role": "L-chain component of the R. rubrum Type II photochemical reaction center; this accession is not presented as the complete reaction-center complex.",
                 "evidence": [
@@ -228351,6 +229206,13 @@
         "action": "GROUND_CAUSAL_NODE",
         "changes": "Grounded the aerobic anoxygenic phototrophs causal node to traitmech:000194 after minting the same-scope aerobic anoxygenic phototrophy TraitRecord.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P10717 (119 -> 120 on photosynthetic_reaction_center).",
+        "llm_assisted": true
       }
     ]
   },
@@ -228576,8 +229438,8 @@
                 "taxon_id": "NCBITaxon:1140",
                 "taxon_label": "Synechococcus elongatus PCC 7942",
                 "entry_status": "REVIEWED",
-                "retrieved_on": "2026-08-24",
-                "entry_version": 112,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 113,
                 "sequence_version": 1,
                 "role": "Large-chain component of the hexadecameric RbcL/RbcS RuBisCO that fixes CO2 through the CBB cycle; this accession does not denote the complete enzyme.",
                 "evidence": [
@@ -228980,6 +229842,13 @@
         "action": "CONNECT_CAUSAL_GRAPH_COMPONENTS",
         "changes": "Resolved issue #183 graph fragmentation (3 components to 1) with 2 public-source, verbatim-snippet-backed connector(s). No paid research service was called.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:Q31NB3 (112 -> 113 on rubisco).",
+        "llm_assisted": true
       }
     ]
   },
@@ -229106,8 +229975,8 @@
                 "taxon_id": "NCBITaxon:194439",
                 "taxon_label": "Chlorobaculum tepidum TLS",
                 "entry_status": "REVIEWED",
-                "retrieved_on": "2026-08-24",
-                "entry_version": 84,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 85,
                 "sequence_version": 1,
                 "role": "Peripheral PscD component of the C. tepidum P840 Type I reaction center; this accession is not presented as the complete 12-subunit FMO-RC apparatus.",
                 "evidence": [
@@ -229491,6 +230360,13 @@
         "action": "GROUND_CAUSAL_NODE",
         "changes": "Grounded the photoferrotrophy causal node to traitmech:000193 after minting the same-scope phototrophic Fe(II) oxidation TraitRecord.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:Q8KEP5 (84 -> 85 on photosynthetic_reaction_center).",
+        "llm_assisted": true
       }
     ]
   },
@@ -229588,8 +230464,8 @@
                 "taxon_id": "NCBITaxon:1085",
                 "taxon_label": "Rhodospirillum rubrum",
                 "entry_status": "REVIEWED",
-                "retrieved_on": "2026-08-24",
-                "entry_version": 119,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 120,
                 "sequence_version": 2,
                 "role": "L-chain component of the R. rubrum Type II photochemical reaction center; this accession is not presented as the complete reaction-center complex.",
                 "evidence": [
@@ -229986,6 +230862,13 @@
         "action": "CONNECT_CAUSAL_GRAPH_COMPONENTS",
         "changes": "Resolved issue #183 graph fragmentation (3 components to 1) with 2 public-source, verbatim-snippet-backed connector(s). No paid research service was called.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P10717 (119 -> 120 on photosynthetic_reaction_center).",
+        "llm_assisted": true
       }
     ]
   },
@@ -230142,8 +231025,8 @@
                 "taxon_id": "NCBITaxon:1085",
                 "taxon_label": "Rhodospirillum rubrum",
                 "entry_status": "REVIEWED",
-                "retrieved_on": "2026-08-24",
-                "entry_version": 119,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 120,
                 "sequence_version": 2,
                 "role": "L-chain component of the R. rubrum Type II photochemical reaction center; this accession is not presented as the complete reaction-center complex.",
                 "evidence": [
@@ -230553,6 +231436,13 @@
         "curator": "codex",
         "action": "NARROWED_RELATED_SYNONYM",
         "changes": "Moved the aerobic_anoxygenic_phototrophy metpo.owl source key from broad phototrophic to the newly minted same-scope aerobic anoxygenic phototrophy TraitRecord.",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P10717 (119 -> 120 on photosynthetic_reaction_center).",
         "llm_assisted": true
       }
     ]
@@ -231343,7 +232233,7 @@
         "title": "Autoinducer-mediated quorum sensing",
         "description": "Evidence-backed causal sketch linking accumulating autoinducer signals to coordinated population-wide gene expression.",
         "scope_status": "MECHANISTIC",
-        "scope_notes": "This graph is reviewed as the AHL/LuxR branch of quorum sensing plus a specific AiiA lactonase interruption mechanism; it does not generalize AiiA to peptide or AI-2 signaling systems.",
+        "scope_notes": "This graph is reviewed as the AHL/LuxR branch of quorum sensing (including P. aeruginosa PAO1 LasR/RhlR positive autoregulation and C. violaceum CviR receptor antagonism) plus a specific B. thuringiensis AiiA lactonase interruption mechanism; it does not generalize AiiA or CviR antagonism to peptide or AI-2 signaling systems.",
         "nodes": [
           {
             "node_id": "quorum_sensing_trait",
@@ -231386,8 +232276,8 @@
                 "taxon_id": "NCBITaxon:668",
                 "taxon_label": "Aliivibrio fischeri",
                 "entry_status": "REVIEWED",
-                "retrieved_on": "2026-08-24",
-                "entry_version": 97,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 98,
                 "sequence_version": 1,
                 "role": "LuxI synthesizes the 3-oxo-C6-HSL autoinducer that activates the LuxR-dependent quorum-sensing circuit in A. fischeri.",
                 "evidence": [
@@ -231405,7 +232295,69 @@
             "label": "LuxR-family AHL receptor",
             "node_type": "GENE_OR_PROTEIN",
             "description": "Cognate sensor protein/receptor that detects accumulated autoinducer and alters gene expression.",
-            "grounding": "InterPro:IPR000792"
+            "grounding": "InterPro:IPR000792",
+            "protein_examples": [
+              {
+                "uniprot_id": "UniProtKB:P25084",
+                "protein_label": "Transcriptional activator protein LasR",
+                "gene_symbol": "lasR",
+                "taxon_id": "NCBITaxon:208964",
+                "taxon_label": "Pseudomonas aeruginosa PAO1",
+                "entry_status": "REVIEWED",
+                "proteome_id": "UP000002438",
+                "retrieved_on": "2026-10-22",
+                "entry_version": 177,
+                "sequence_version": 1,
+                "role": "LuxR-family 3-oxo-C12-HSL receptor that positively autoregulates lasI and downstream quorum-sensing genes in P. aeruginosa PAO1.",
+                "evidence": [
+                  {
+                    "reference": "DOI:10.1128/mbio.01079-17",
+                    "snippet": "the P. aeruginosa lasI and rhlI genes are positively autoregulated by their cognate AHLs and LuxR homologs",
+                    "notes": "Supports P. aeruginosa PAO1 LasR as the cognate LuxR homolog mediating positive autoregulation of lasI."
+                  }
+                ]
+              },
+              {
+                "uniprot_id": "UniProtKB:P54292",
+                "protein_label": "Transcriptional regulator RhlR",
+                "gene_symbol": "rhlR",
+                "taxon_id": "NCBITaxon:208964",
+                "taxon_label": "Pseudomonas aeruginosa PAO1",
+                "entry_status": "REVIEWED",
+                "proteome_id": "UP000002438",
+                "retrieved_on": "2026-10-22",
+                "entry_version": 151,
+                "sequence_version": 1,
+                "role": "LuxR-family C4-HSL receptor that positively autoregulates rhlI and quorum-sensing target genes in P. aeruginosa PAO1.",
+                "evidence": [
+                  {
+                    "reference": "DOI:10.1128/mbio.01079-17",
+                    "snippet": "the P. aeruginosa lasI and rhlI genes are positively autoregulated by their cognate AHLs and LuxR homologs",
+                    "notes": "Supports P. aeruginosa PAO1 RhlR as the cognate LuxR homolog mediating positive autoregulation of rhlI."
+                  }
+                ]
+              },
+              {
+                "uniprot_id": "UniProtKB:Q7NQP7",
+                "protein_label": "Transcriptional activator, LuxR/UhpA family of regulators",
+                "gene_symbol": "cviR",
+                "taxon_id": "NCBITaxon:243365",
+                "taxon_label": "Chromobacterium violaceum ATCC 12472",
+                "entry_status": "UNREVIEWED",
+                "proteome_id": "UP000001424",
+                "retrieved_on": "2026-10-22",
+                "entry_version": 143,
+                "sequence_version": 1,
+                "role": "LuxR-family AHL receptor CviR that is competitively antagonized by small-molecule quorum-sensing inhibitors occupying the native autoinducer-binding pocket in C. violaceum.",
+                "evidence": [
+                  {
+                    "reference": "DOI:10.1016/j.molcel.2011.04.003",
+                    "snippet": "CviR from Chromobacterium violaceum is potently antagonized by molecules that bind in place of the native acylated homoserine lactone autoinducer",
+                    "notes": "Chen et al. 2011 characterize small-molecule antagonism of Chromobacterium violaceum CviR."
+                  }
+                ]
+              }
+            ]
           },
           {
             "node_id": "quorum_quenching_enzyme",
@@ -231421,8 +232373,8 @@
                 "taxon_id": "NCBITaxon:29339",
                 "taxon_label": "Bacillus thuringiensis subsp. kurstaki",
                 "entry_status": "REVIEWED",
-                "retrieved_on": "2026-08-23",
-                "entry_version": 47,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 48,
                 "sequence_version": 1,
                 "role": "Zinc-dependent AHL lactonase that hydrolyzes N-acyl-L-homoserine lactone signals, thereby interrupting the AHL/LuxR signaling branch.",
                 "evidence": [
@@ -231632,6 +232584,13 @@
         "curator": "codex",
         "action": "REVIEW_EVIDENCE_REFERENCE_CHURN",
         "changes": "Offline review for issue 520 retained 5 evidence-reference replacement(s) that PR 511 made on surviving causal edges outside its stated protein-taxon scope. The pre-tranche evidence entries had references but no snippets; the retained entries supply edge-specific snippets and explanatory notes. Reverting would discard that claim-level provenance, so the scope defect is resolved by documenting the decision instead. This audit changed no causal claim or evidence field. Reviewed replacements: DOI:10.1146/annurev.cellbio.21.012704.131001 -> DOI:10.1007/s10867-010-9186-4 (1 edge); DOI:10.1146/annurev.micro.55.1.165 -> DOI:10.1007/s10867-010-9186-4 (1 edge); DOI:10.3390/ijms25052655 -> DOI:10.1016/j.molcel.2011.04.003 (1 edge); DOI:10.3390/ijms25052655 -> DOI:10.1073/pnas.0504996102 (1 edge); DOI:10.3390/ijms25052655 -> DOI:10.1128/mbio.01079-17 (1 edge).",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "CURATE_PROTEIN_TAXON_EXAMPLE",
+        "changes": "Added LuxR-family receptor protein_examples UniProtKB:P25084 (LasR, v177), UniProtKB:P54292 (RhlR, v151) in P. aeruginosa PAO1 (DOI:10.1128/mbio.01079-17) and UniProtKB:Q7NQP7 (CviR, v143) in C. violaceum ATCC 12472 (DOI:10.1016/j.molcel.2011.04.003) on signal_receptor, updated scope_notes, and refreshed entry_version on UniProtKB:P12747 (97 -> 98 on autoinducer_synthase) and UniProtKB:P0CJ63 (47 -> 48 on quorum_quenching_enzyme).",
         "llm_assisted": true
       }
     ]
@@ -232865,8 +233824,8 @@
                 "taxon_id": "NCBITaxon:83333",
                 "taxon_label": "Escherichia coli K-12",
                 "entry_status": "REVIEWED",
-                "retrieved_on": "2026-08-24",
-                "entry_version": 207,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 208,
                 "sequence_version": 3,
                 "role": "E. coli K-12 sigma-S factor directing stationary-phase and general-stress transcription; it anchors only this enterobacterial branch.",
                 "evidence": [
@@ -233092,6 +234051,13 @@
         "curator": "codex",
         "action": "REVIEWED_CAUSAL_GRAPH_PROTEIN_TAXON",
         "changes": "Marked the graph mechanistic and enterobacterial in scope, reviewed the heterogeneous RSH umbrella as label-only, grounded RpoS and Hfq to exact InterPro families, and added DOI-cited E. coli K-12 RpoS P13445.",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P13445 (207 -> 208 on rpos).",
         "llm_assisted": true
       }
     ]
@@ -234475,8 +235441,8 @@
                 "taxon_id": "NCBITaxon:1474",
                 "taxon_label": "Sporosarcina pasteurii",
                 "entry_status": "REVIEWED",
-                "retrieved_on": "2026-08-24",
-                "entry_version": 152,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 153,
                 "sequence_version": 2,
                 "role": "Catalytic alpha component of the S. pasteurii UreA/UreB/UreC urease; it binds the binuclear nickel active site but does not alone denote the complete enzyme.",
                 "evidence": [
@@ -234494,8 +235460,8 @@
                 "taxon_id": "NCBITaxon:1474",
                 "taxon_label": "Sporosarcina pasteurii",
                 "entry_status": "REVIEWED",
-                "retrieved_on": "2026-08-24",
-                "entry_version": 127,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 128,
                 "sequence_version": 1,
                 "role": "Beta structural component of the S. pasteurii UreA/UreB/UreC urease; it is recorded explicitly so the accession is not mistaken for the complete enzyme.",
                 "evidence": [
@@ -234513,8 +235479,8 @@
                 "taxon_id": "NCBITaxon:1474",
                 "taxon_label": "Sporosarcina pasteurii",
                 "entry_status": "REVIEWED",
-                "retrieved_on": "2026-08-24",
-                "entry_version": 129,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 130,
                 "sequence_version": 1,
                 "role": "Gamma structural component of the S. pasteurii UreA/UreB/UreC urease; it is recorded explicitly so the accession is not mistaken for the complete enzyme.",
                 "evidence": [
@@ -234819,6 +235785,13 @@
         "action": "CURATE_PROTEIN_TAXON_EXAMPLE",
         "changes": "Reviewed the urease graph scope, converted the S. pasteurii citation to DOI, dispositioned the multisubunit urease node, and added explicit reviewed UreC, UreB, and UreA component examples with structural evidence.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P41020 (152 -> 153 on urease), UniProtKB:P41021 (127 -> 128 on urease), UniProtKB:P41022 (129 -> 130 on urease).",
+        "llm_assisted": true
       }
     ]
   },
@@ -234976,8 +235949,8 @@
                 "taxon_id": "NCBITaxon:83333",
                 "taxon_label": "Escherichia coli K-12",
                 "entry_status": "REVIEWED",
-                "retrieved_on": "2026-08-24",
-                "entry_version": 207,
+                "retrieved_on": "2026-10-22",
+                "entry_version": 208,
                 "sequence_version": 3,
                 "role": "E. coli K-12 sigma-S factor whose loss shortens VBNC persistence and resuscitation competence under cold oligotrophic stress.",
                 "evidence": [
@@ -235194,6 +236167,13 @@
         "curator": "claude",
         "action": "CURATE_PROTEIN_TAXON_EXAMPLE",
         "changes": "Backfilled provenance (review issue 517) for the codex protein-taxon review tranche of 2026-08-24/25, which shipped without a per-record event. In this record the tranche: set graph scope vbnc_stress_induced_dormancy=MECHANISTIC with scope_notes; added taxon-paired protein example(s) UniProtKB:P13445 on rpos (NCBITaxon:83333); regrounded 1 node(s) (rpos: none->InterPro:IPR012761); added 0 node(s) and 1 edge(s); added canonical example(s) NCBITaxon:83333.",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-22T01:35:00Z",
+        "curator": "claude",
+        "action": "REFRESH_UNIPROT_ENTRY_VERSION",
+        "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P13445 (207 -> 208 on rpos).",
         "llm_assisted": true
       }
     ]

@@ -78,8 +78,8 @@ causal_graphs:
       taxon_id: NCBITaxon:1515
       taxon_label: Acetivibrio thermocellus
       entry_status: REVIEWED
-      retrieved_on: '2026-08-24'
-      entry_version: 80
+      retrieved_on: '2026-10-22'
+      entry_version: 81
       sequence_version: 1
       role: Catalytic CelS component of the A. thermocellus cellulosome; this accession
         denotes the cellobiohydrolase component, not the complete cellulosome.
@@ -415,4 +415,10 @@ curation_history:
   changes: Scoped the cellulase-system graph, added a DOI-backed A. thermocellus CelS
     example, grounded cellulase activities and cohesin/dockerin modules, and documented
     the remaining system-level labels as reviewed label-only.
+  llm_assisted: true
+- timestamp: '2026-10-22T01:35:00Z'
+  curator: claude
+  action: REFRESH_UNIPROT_ENTRY_VERSION
+  changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
+    UniProtKB:P0C2S5 (80 -> 81 on cellobiohydrolase).'
   llm_assisted: true

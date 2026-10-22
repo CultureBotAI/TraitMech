@@ -57,8 +57,8 @@ causal_graphs:
       taxon_label: Aeromonas media
       entry_status: UNREVIEWED
       proteome_id: UP000502657
-      retrieved_on: '2026-08-25'
-      entry_version: 8
+      retrieved_on: '2026-10-22'
+      entry_version: 9
       sequence_version: 1
       role: Aeromonas HppD converts 4-hydroxyphenylpyruvate to homogentisate in the
         pyomelanin-producing branch that generates brown pigmentation.
@@ -313,4 +313,10 @@ curation_history:
   action: CONNECT_CAUSAL_GRAPH_COMPONENTS
   changes: 'Resolved issue #183 graph fragmentation (2 components to 1) using 1 source-
     and verbatim-snippet-backed connector(s). No paid research service was called.'
+  llm_assisted: true
+- timestamp: '2026-10-22T01:35:00Z'
+  curator: claude
+  action: REFRESH_UNIPROT_ENTRY_VERSION
+  changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
+    UniProtKB:A0AAE7AGQ2 (8 -> 9 on hppD).'
   llm_assisted: true

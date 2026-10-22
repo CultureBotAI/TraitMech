@@ -73,8 +73,8 @@ causal_graphs:
       taxon_label: Cupriavidus metallidurans CH34
       entry_status: REVIEWED
       proteome_id: UP000002429
-      retrieved_on: '2026-08-25'
-      entry_version: 153
+      retrieved_on: '2026-10-22'
+      entry_version: 154
       sequence_version: 3
       role: CzcA is one transporter component of the CH34 CzcCBA complex that exports
         cobalt, zinc, and cadmium.
@@ -273,4 +273,10 @@ curation_history:
     (cobalt_efflux_system, czcCBA_complex, czcRS_two_component, cnr_operon, dmeF_exporter,
     rcnA_exporter); added taxon-paired protein example(s) UniProtKB:P13511 on czcCBA_complex
     (NCBITaxon:266264); added canonical example(s) NCBITaxon:266264.'
+  llm_assisted: true
+- timestamp: '2026-10-22T01:35:00Z'
+  curator: claude
+  action: REFRESH_UNIPROT_ENTRY_VERSION
+  changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
+    UniProtKB:P13511 (153 -> 154 on czcCBA_complex).'
   llm_assisted: true

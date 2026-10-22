@@ -70,8 +70,8 @@ causal_graphs:
       taxon_id: NCBITaxon:83333
       taxon_label: Escherichia coli K-12
       entry_status: REVIEWED
-      retrieved_on: '2026-08-24'
-      entry_version: 143
+      retrieved_on: '2026-10-22'
+      entry_version: 144
       sequence_version: 1
       role: E. coli K-12 peroxide-sensing OxyR regulator that activates the hydrogen-peroxide-inducible
         defense regulon represented by this branch.
@@ -210,4 +210,10 @@ curation_history:
   changes: 'Addressed PR #664 adversarial review issues #680 through #682: requoted
     the RpoS edge and Imlay record evidence, and replaced the generic ASM endpoint
     note with Europe PMC abstract verification.'
+  llm_assisted: true
+- timestamp: '2026-10-22T01:35:00Z'
+  curator: claude
+  action: REFRESH_UNIPROT_ENTRY_VERSION
+  changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
+    UniProtKB:P0ACQ4 (143 -> 144 on oxyr_regulator).'
   llm_assisted: true

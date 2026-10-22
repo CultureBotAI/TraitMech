@@ -66,8 +66,8 @@ causal_graphs:
       taxon_label: Microcystis aeruginosa NIES-843
       entry_status: REVIEWED
       proteome_id: UP000001510
-      retrieved_on: '2026-08-25'
-      entry_version: 76
+      retrieved_on: '2026-10-22'
+      entry_version: 77
       sequence_version: 1
       role: GvpA is the major structural protein forming the gas-vesicle shell in
         the matched Microcystis strain.
@@ -338,4 +338,10 @@ curation_history:
   action: GROUND_CAUSAL_NODE_TO_NEW_TRAIT
   changes: Grounded the existing causal-graph buoyancy TRAIT node to newly minted
     traitmech:000528 cellular buoyancy.
+  llm_assisted: true
+- timestamp: '2026-10-22T01:35:00Z'
+  curator: claude
+  action: REFRESH_UNIPROT_ENTRY_VERSION
+  changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
+    UniProtKB:B0JPK6 (76 -> 77 on gvpa_protein).'
   llm_assisted: true

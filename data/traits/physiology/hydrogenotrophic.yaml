@@ -64,7 +64,7 @@ causal_graphs:
       taxon_label: Cupriavidus necator H16
       entry_status: REVIEWED
       proteome_id: UP000008210
-      retrieved_on: '2026-08-23'
+      retrieved_on: '2026-10-22'
       sequence_version: 4
       role: Catalytic large-subunit component of the membrane-bound NiFe uptake-hydrogenase
         complex; this accession does not denote the complete HoxKGZ complex.
@@ -74,6 +74,7 @@ causal_graphs:
         notes: The primary H16 study identifies HoxG as the catalytic large subunit
           of the oxygen-tolerant membrane-bound hydrogenase and traces electron transfer
           to the respiratory chain; UniProtKB P31891 verifies the reviewed instance.
+      entry_version: 156
   - node_id: protons_electrons
     label: protons and electrons
     node_type: CHEMICAL
@@ -420,4 +421,10 @@ curation_history:
     decision instead. This audit changed no causal claim or evidence field. Reviewed
     replacements: DOI:10.2138/gselements.16.1.39 -> DOI:10.21775/cimb.006.159 (1 edge);
     DOI:10.2138/gselements.16.1.39 -> DOI:10.3390/microorganisms7020053 (3 edges).'
+  llm_assisted: true
+- timestamp: '2026-10-22T01:35:00Z'
+  curator: claude
+  action: REFRESH_UNIPROT_ENTRY_VERSION
+  changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
+    UniProtKB:P31891 (unset -> 156 on hydrogenase).'
   llm_assisted: true
