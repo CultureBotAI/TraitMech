@@ -18,6 +18,14 @@ evidence:
     and figures were not accessible; timing is condition-specific, not a universal
     granule property. The separate PCC 6803 mutant observations do not establish a
     universal cyanophycinase requirement.
+- reference: DOI:10.1128/AEM.01298-18
+  snippet: Cyanophycin accumulates in the form of opaque and light-scattering granules
+    in the cell
+  notes: 'Watzer and Forchhammer (2018), Introduction and Abstract, directly read
+    in publisher HTML: cyanophycin accumulates as opaque, light-scattering intracellular
+    storage granules serving as a temporary nitrogen reserve (abstract: "cyanophycin
+    can be used as a temporary nitrogen storage"). Supports the record definition
+    and definition_source.'
 canonical_examples:
 - taxon_id: NCBITaxon:43989
   taxon_label: Crocosphaera subtropica ATCC 51142
@@ -186,4 +194,11 @@ curation_history:
     was already written before the repository CREATE history timestamp 2026-10-08T04:28:08Z,
     an observed upper bound, not an exact reconstructed write time. This correction
     uses the directly observed UTC clock; biological content is unchanged.'
+  llm_assisted: true
+- timestamp: '2026-10-22T05:20:00Z'
+  curator: claude
+  action: ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE
+  changes: 'Added DOI:10.1128/AEM.01298-18 with verified verbatim snippet to record-level
+    evidence to match definition_source (Stage 5 remediation of F-DEF-SRC-CYANOPHYCIN-001
+    in group G-STAGE4-RECORD-LEVEL-DEFINITION-SOURCE, issue #1981).'
   llm_assisted: true

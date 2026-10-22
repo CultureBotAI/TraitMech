@@ -20,6 +20,13 @@ evidence:
     (1 uM) and Pb2+ (1.7 mM)
   notes: 'Organism example: Cupriavidus metallidurans BS1 tolerates cobalt to a MIC
     of 20 mM.'
+- reference: PMID:12829273
+  snippet: CBA efflux pumps driven by proteins of the resistance-nodulation-cell division
+    superfamily, P-type ATPases, cation diffusion facilitator and chromate proteins
+  notes: Nies (2003, FEMS Microbiol Rev 27:313-339) reviews prokaryotic heavy-metal
+    resistance mediated by RND-family CBA efflux pumps (including CzcCBA and CnrCBA)
+    and cation diffusion facilitators, supporting the record definition and definition_source
+    for cobalt tolerance.
 canonical_examples:
 - taxon_id: NCBITaxon:119219
   taxon_label: Cupriavidus metallidurans
@@ -279,4 +286,11 @@ curation_history:
   action: REFRESH_UNIPROT_ENTRY_VERSION
   changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
     UniProtKB:P13511 (153 -> 154 on czcCBA_complex).'
+  llm_assisted: true
+- timestamp: '2026-10-22T05:20:00Z'
+  curator: claude
+  action: ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE
+  changes: 'Added PMID:12829273 (Nies 2003) with verified verbatim snippet to record-level
+    evidence to match definition_source (Stage 5 remediation of F-DEF-SRC-COBALT-003
+    in group G-STAGE4-RECORD-LEVEL-DEFINITION-SOURCE, issue #1981).'
   llm_assisted: true
