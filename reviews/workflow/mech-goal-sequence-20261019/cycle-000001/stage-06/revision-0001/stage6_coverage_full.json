@@ -36,12 +36,13 @@
       "frozen_status": "note",
       "final_status": "resolved",
       "issue_url": "https://github.com/CultureBotAI/TraitMech/issues/1988",
+      "implementation_pr": "https://github.com/CultureBotAI/TraitMech/pull/1989",
       "implementation_files": [
         "scripts/audit_discussion_anchors.py",
         "tests/test_audit_discussion_anchors.py"
       ],
       "summary": "Document or support section-level attaches_to anchors on Discussion entries when target sections (e.g. causal_graphs) are not yet populated",
-      "disposition": "Resolved in Stage 6 (#1988): added EMPTY_SECTION_ANCHORS support in scripts/audit_discussion_anchors.py and unit tests in tests/test_audit_discussion_anchors.py."
+      "disposition": "Resolved in Stage 6 (PR #1989, issue #1988): added EMPTY_SECTION_ANCHORS support in scripts/audit_discussion_anchors.py and unit tests in tests/test_audit_discussion_anchors.py."
     },
     {
       "task_id": "traitmech-infra-0003",
@@ -49,13 +50,14 @@
       "frozen_status": "note",
       "final_status": "resolved",
       "issue_url": "https://github.com/CultureBotAI/TraitMech/issues/1988",
+      "implementation_pr": "https://github.com/CultureBotAI/TraitMech/pull/1989",
       "implementation_files": [
         "scripts/audit_uniprot_grounding.py",
         "justfile",
         "tests/test_audit_uniprot_grounding.py"
       ],
       "summary": "Add an offline structural consistency check for reports/uniprot_grounding_audit.tsv in audit-derived-reports so new protein_examples cannot land without refreshing the tracked report",
-      "disposition": "Resolved in Stage 6 (#1988): added check_inventory / --check-inventory mode in scripts/audit_uniprot_grounding.py, wired it into audit-derived-reports in justfile, and added unit tests in tests/test_audit_uniprot_grounding.py."
+      "disposition": "Resolved in Stage 6 (PR #1989, issue #1988): added check_inventory / --check-inventory mode in scripts/audit_uniprot_grounding.py, wired it into audit-derived-reports in justfile, and added unit tests in tests/test_audit_uniprot_grounding.py."
     },
     {
       "task_id": "traitmech-infra-0004",
@@ -63,12 +65,13 @@
       "frozen_status": "note",
       "final_status": "resolved",
       "issue_url": "https://github.com/CultureBotAI/TraitMech/issues/1981",
+      "implementation_pr": "https://github.com/CultureBotAI/TraitMech/pull/1989",
       "implementation_files": [
         "scripts/audit_evidence_snippets.py",
         "tests/test_audit_evidence_snippets.py"
       ],
       "summary": "Add an optional definition_source evidence-coverage warning to scripts/audit_evidence_snippets.py when a record's definition_source is already quoted in-repo on causal_graphs or parent/sibling records but omitted from record-level evidence",
-      "disposition": "Resolved in Stage 6 (#1981, grouped with #1988): added UNQUOTED_DEFINITION_SOURCE warning and --check-definition-sources flag to scripts/audit_evidence_snippets.py and unit tests in tests/test_audit_evidence_snippets.py."
+      "disposition": "Resolved in Stage 6 (PR #1989, issue #1981, grouped with #1988): added UNQUOTED_DEFINITION_SOURCE warning and --check-definition-sources flag to scripts/audit_evidence_snippets.py and unit tests in tests/test_audit_evidence_snippets.py."
     }
   ]
 }

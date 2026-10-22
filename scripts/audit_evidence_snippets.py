@@ -244,11 +244,15 @@ def audit(
         # separate arguments and may legitimately lean on the same key phrase.
         per_graph: dict[str, dict[str, int]] = {}
         if check_definition_sources:
-            record_refs = {
-                _norm(str(item.get("reference") or ""))
-                for item in (doc.get("evidence") or [])
-                if isinstance(item, dict) and _norm(str(item.get("snippet") or ""))
-            }
+            record_refs: set[str] = set()
+            for item in doc.get("evidence") or []:
+                if not isinstance(item, dict):
+                    continue
+                ref = _norm(str(item.get("reference") or ""))
+                snip = _norm(str(item.get("snippet") or ""))
+                if (ref and len(snip) >= MIN_SNIPPET_CHARS
+                        and "..." not in snip and "…" not in snip):
+                    record_refs.add(ref)
             def_source = _norm(str(doc.get("definition_source") or ""))
             rec_id = _norm(str(doc.get("id") or path.stem))
             parents = [

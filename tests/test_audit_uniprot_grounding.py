@@ -210,6 +210,14 @@ def test_check_inventory_detects_missing_or_drifted_report_rows(tmp_path):
         record.read_text(encoding="utf-8").replace("entry_version: 180", "entry_version: 181"),
         encoding="utf-8",
     )
+    # Mutate entry_version on disk AND hand-edit declared_entry_version in report without
+    # updating resolved entry_version -> intra-row entry_version_match consistency error
+    write_report([{**rows[0], "declared_entry_version": 181}], report)
+    errors_intra = check_inventory(tmp_path, report)
+    assert any("declared_entry_version='181', entry_version='180'" in err for err in errors_intra)
+
+    # Restore report to original 180 -> metadata mismatch vs corpus 181
+    write_report(rows, report)
     errors = check_inventory(tmp_path, report)
     assert len(errors) == 1
     assert "declared_entry_version: corpus='181' vs report='180'" in errors[0]

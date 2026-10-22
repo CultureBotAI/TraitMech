@@ -417,6 +417,45 @@ def check_inventory(traits_dir: Path = TRAITS, report_path: Path = REPORT) -> li
                     f"row {idx} ({r.get('file', '')} {acc}) reused_in_n_files={actual_reuse!r}, "
                     f"expected {expected_reuse!r}"
                 )
+        row_label = f"row {idx} ({r.get('file', '')}#{r.get('graph_id', '')}:{r.get('node_id', '')} {acc})"
+        if str(r.get("primary_accession_match", "") or "") != "YES" or acc != str(
+            r.get("primary_accession", "") or ""
+        ):
+            errors.append(
+                f"{row_label} primary_accession_match={r.get('primary_accession_match')!r} "
+                f"(accession={acc!r}, primary_accession={r.get('primary_accession')!r})"
+            )
+        if str(r.get("taxon_match", "") or "") != "YES" or str(
+            r.get("declared_taxon_id", "") or ""
+        ) != str(r.get("uniprot_taxon_id", "") or ""):
+            errors.append(
+                f"{row_label} taxon_match={r.get('taxon_match')!r} "
+                f"(declared_taxon_id={r.get('declared_taxon_id')!r}, uniprot_taxon_id={r.get('uniprot_taxon_id')!r})"
+            )
+        if str(r.get("entry_status_match", "") or "") != "YES" or str(
+            r.get("declared_entry_status", "") or ""
+        ) != str(r.get("status", "") or "").upper():
+            errors.append(
+                f"{row_label} entry_status_match={r.get('entry_status_match')!r} "
+                f"(declared_entry_status={r.get('declared_entry_status')!r}, status={r.get('status')!r})"
+            )
+        if str(r.get("entry_version_match", "") or "") != "YES" or str(
+            r.get("declared_entry_version", "") or ""
+        ) != str(r.get("entry_version", "") or ""):
+            errors.append(
+                f"{row_label} entry_version_match={r.get('entry_version_match')!r} "
+                f"(declared_entry_version={r.get('declared_entry_version')!r}, entry_version={r.get('entry_version')!r})"
+            )
+        seq_match = str(r.get("sequence_version_match", "") or "")
+        if seq_match not in ("YES", "N/A") or (
+            seq_match == "YES"
+            and str(r.get("declared_sequence_version", "") or "")
+            != str(r.get("sequence_version", "") or "")
+        ):
+            errors.append(
+                f"{row_label} sequence_version_match={seq_match!r} "
+                f"(declared_sequence_version={r.get('declared_sequence_version')!r}, sequence_version={r.get('sequence_version')!r})"
+            )
 
     return errors
 

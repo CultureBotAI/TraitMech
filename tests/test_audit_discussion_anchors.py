@@ -45,9 +45,9 @@ def test_unresolved_node_is_an_error():
 
 
 def test_missing_hash_is_malformed():
-    rows = anchor_rows([("f.yaml", _doc(["just_a_node_id"]))])
-    assert [r[2] for r in rows] == ["MALFORMED_ANCHOR"]
-    assert rows[0][2] in ERRORS
+    rows = anchor_rows([("f.yaml", _doc(["just_a_node_id", "causal_graphs#", "#node_1"]))])
+    assert [r[2] for r in rows] == ["MALFORMED_ANCHOR", "MALFORMED_ANCHOR", "MALFORMED_ANCHOR"]
+    assert all(r[2] in ERRORS for r in rows)
 
 
 def test_unknown_section_warns_rather_than_fails():
@@ -65,8 +65,19 @@ def test_record_without_graphs_cannot_resolve_a_graph_anchor():
 
 def test_section_level_anchor_allowed_when_target_section_empty():
     """A section-level gap discussion may anchor to an empty target section (traitmech-infra-0002)."""
-    doc = {"discussions": [{"discussion_id": "d1", "attaches_to": ["causal_graphs"]}]}
-    assert anchor_rows([("f.yaml", doc)]) == []
+    doc_omitted = {"discussions": [{"discussion_id": "d1", "attaches_to": ["causal_graphs"]}]}
+    doc_empty_lists = {
+        "causal_graphs": [],
+        "ontology_mapping": [],
+        "ecological_interactions": [],
+        "discussions": [
+            {
+                "discussion_id": "d1",
+                "attaches_to": ["causal_graphs", "ontology_mapping", "ecological_interactions"],
+            }
+        ],
+    }
+    assert anchor_rows([("f1.yaml", doc_omitted), ("f2.yaml", doc_empty_lists)]) == []
 
 
 def test_section_level_anchor_rejected_when_target_section_populated():

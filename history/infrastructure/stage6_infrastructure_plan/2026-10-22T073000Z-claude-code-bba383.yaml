@@ -11,10 +11,13 @@ session:
     model: claude-opus-4-6
     agent_tool: antigravity
 links:
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/1989
   issues:
   - https://github.com/CultureBotAI/TraitMech/issues/1962
   - https://github.com/CultureBotAI/TraitMech/issues/1981
   - https://github.com/CultureBotAI/TraitMech/issues/1988
+  - https://github.com/CultureBotAI/TraitMech/issues/1990
 events:
 - type: EDIT
   outcome: changed

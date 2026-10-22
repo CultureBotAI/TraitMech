@@ -4,6 +4,7 @@
 
 - **Repository**: `CultureBotAI/TraitMech` (`traitmech`)
 - **Run / Cycle / Stage**: `mech-goal-sequence-20261019`, Cycle `1`, Stage `6` (`infrastructure`)
+- **Implementation PR**: https://github.com/CultureBotAI/TraitMech/pull/1989
 - **Source revision (`main`)**: `7d4b750774051b4678d16114438ee34ed126f25c`
 - **Supervisor cutoff (`scope_frozen_at`)**: `2026-10-22T07:14:11Z`
 - **Frozen snapshot path**: `reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-06/revision-0001/infra_snapshot.md`
@@ -41,10 +42,10 @@ All 3 pending infrastructure notes (`traitmech-infra-0002`, `traitmech-infra-000
 
 ### 3.1 `traitmech-infra-0002` — Section-level `attaches_to` anchors on `Discussion` entries when target sections are empty
 - **Changes**:
-  - Update `scripts/audit_discussion_anchors.py` to define `EMPTY_SECTION_ANCHORS` (`{"causal_graphs": lambda doc: not (doc.get("causal_graphs") or [])}`) and allow bare `<section>` tokens in `discussions[].attaches_to` when that target section is empty on the record, while continuing to reject bare `<section>` tokens with `MALFORMED_ANCHOR` once the section is populated.
+  - Update `scripts/audit_discussion_anchors.py` to define `EMPTY_SECTION_ANCHORS` (`{"causal_graphs", "ontology_mapping", "ecological_interactions"}`) and allow bare `<section>` tokens in `discussions[].attaches_to` when that target section is empty on the record, while continuing to reject bare `<section>` tokens (as well as empty-prefix or empty-target `#` tokens) with `MALFORMED_ANCHOR` once the section is populated.
   - Add unit tests in `tests/test_audit_discussion_anchors.py` (`test_section_level_anchor_allowed_when_target_section_empty`, `test_section_level_anchor_rejected_when_target_section_populated`).
 - **Acceptance Criteria**:
-  - `uv run python scripts/audit_discussion_anchors.py` exits `0` on the live corpus (`checked_anchors=16`, `errors=0`, `warnings=0`).
+  - `uv run python scripts/audit_discussion_anchors.py` exits `0` on the live corpus (`discussion anchors: 0 error(s), 0 warning(s)`).
   - `pytest tests/test_audit_discussion_anchors.py` passes all 10 unit tests.
 
 ### 3.2 `traitmech-infra-0003` — Offline structural consistency check for `reports/uniprot_grounding_audit.tsv` in `audit-derived-reports`
@@ -61,10 +62,10 @@ All 3 pending infrastructure notes (`traitmech-infra-0002`, `traitmech-infra-000
 ### 3.3 `traitmech-infra-0004` — Advisory `UNQUOTED_DEFINITION_SOURCE` check in `scripts/audit_evidence_snippets.py`
 - **Changes**:
   - Update `scripts/audit_evidence_snippets.py` to add `UNQUOTED_DEFINITION_SOURCE` (`WARN`) and `--check-definition-sources` (`audit(check_definition_sources=True)`), flagging any record whose `definition_source` (`PMID:` or `DOI:`) is omitted from record-level `evidence[].reference` despite already carrying a verified verbatim snippet on the record's own `causal_graphs` edges or on its `parent_traits`/sibling records.
-  - Add unit test `test_unquoted_definition_source_flagged_when_quoted_on_edge_or_sibling` in `tests/test_audit_evidence_snippets.py`.
+  - Add unit tests in `tests/test_audit_evidence_snippets.py` (`test_unquoted_definition_source_flagged_when_quoted_on_edge_or_sibling`, `test_unquoted_definition_source_parent_sibling_propagation_and_short_snippet_filter`).
 - **Acceptance Criteria**:
   - `uv run python scripts/audit_evidence_snippets.py --check-definition-sources` exits `0` with `0` `UNQUOTED_DEFINITION_SOURCE` findings across the live 1,130-record corpus.
-  - `pytest tests/test_audit_evidence_snippets.py` passes all 35 unit tests.
+  - `pytest tests/test_audit_evidence_snippets.py` passes all 36 unit tests.
 
 ---
 

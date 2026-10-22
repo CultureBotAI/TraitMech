@@ -104,7 +104,10 @@ def anchor_rows(source: Path | Corpus = DEFAULT_TRAITS) -> list[tuple[str, str, 
                     else:
                         rows.append((rel, did, "MALFORMED_ANCHOR", f"{anchor} expected <section>#<id>"))
                     continue
-                section, _, target = anchor.partition("#")
+                section, sep, target = anchor.partition("#")
+                if not sep or not section or not target:
+                    rows.append((rel, did, "MALFORMED_ANCHOR", f"{anchor} expected <section>#<id>"))
+                    continue
                 resolver = RESOLVERS.get(section)
                 if resolver is None:
                     rows.append((rel, did, "UNKNOWN_ANCHOR_SECTION", f"{anchor} section={section}"))
