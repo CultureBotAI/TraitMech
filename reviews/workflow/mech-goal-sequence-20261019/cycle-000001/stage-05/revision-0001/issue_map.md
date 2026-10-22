@@ -3,10 +3,12 @@
 - **Run ID**: `mech-goal-sequence-20261019`
 - **Cycle / Stage / Revision**: Cycle `1`, Stage `5` (`resolve_review_findings`), Revision `1`
 - **Repository**: `CultureBotAI/TraitMech`
+- **Pull Request**: https://github.com/CultureBotAI/TraitMech/pull/1986
+- **Adversarial PR Review Issue**: https://github.com/CultureBotAI/TraitMech/issues/1987
 - **Base Revision (`main`)**: `c1000884f018e65f7b637db8bd395ff669f3132c`
 - **Consumed Stage 4 Workflow Evidence**: `reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-04/revision-0001/evidence.yaml` (SHA256: `f0539f25997ef12a33ac5c7d2edbedfe36d552c23471e55eb50f53e0d16014aa`)
 - **Consumed Stage 4 Native Structured Review**: `reviews/structured/20261022T033000Z-stage4-corpus-record-and-cohort-review/review.yaml` (SHA256: `254081d1c7726c4f2808b6a4ea79e7112883df3569c333958ba4a2994d52aae5`)
-- **Fresh Stage 5 Post-Remediation Structured Review**: `reviews/structured/20261022T052500Z-stage5-remediated-records-review/review.yaml` (SHA256: `d152e4bee5e42216324f86fa4295342967e24966500ee7a5e265d3eac5a948dc`)
+- **Fresh Stage 5 Post-Remediation Structured Review**: `reviews/structured/20261022T052500Z-stage5-remediated-records-review/review.yaml` (SHA256: `56e8cfef3c414786bf0d6e1512978e59307392b970e7f89b2bdc822e2d38a4da`)
 
 ## 1. Deduplication Against Live GitHub Issues
 

@@ -3,6 +3,8 @@
 - **Run ID**: `mech-goal-sequence-20261019`
 - **Cycle / Stage / Revision**: Cycle `1`, Stage `5` (`resolve_review_findings`), Revision `1`
 - **Repository**: `CultureBotAI/TraitMech`
+- **Pull Request**: https://github.com/CultureBotAI/TraitMech/pull/1986
+- **Adversarial PR Review Issue**: https://github.com/CultureBotAI/TraitMech/issues/1987
 - **Base Revision (`main`)**: `c1000884f018e65f7b637db8bd395ff669f3132c`
 - **Guarded Writer Script**: `scripts/curate_stage5_review_findings.py` (wired into `justfile` as `just curate-stage5-review-findings`)
 - **Unit Test Suite**: `tests/test_curate_stage5_review_findings.py` (`4 passed`)

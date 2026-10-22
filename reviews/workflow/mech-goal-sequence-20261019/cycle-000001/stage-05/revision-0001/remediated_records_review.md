@@ -46,7 +46,7 @@ evidence: supported. Targets: traitmech:000673, traitmech:000013, traitmech:0000
 
 All 4 records identified with open findings in Stage 4 (cyanophycin_granule.yaml, cadmium_tolerant.yaml, cobalt_tolerant.yaml, and zinc_tolerant.yaml) now carry a verified verbatim snippet for their primary definition_source directly in record-level evidence.
 
-Each of the 4 remediated records was re-inspected against .claude/skills/review-yaml-record/SKILL.md: (1) data/traits/morphology/cyanophycin_granule.yaml (traitmech:000673) now includes DOI:10.1128/AEM.01298-18 in record-level evidence[1] with verbatim quote 'Cyanophycin accumulates in the form of opaque and light-scattering granules in the cell'; (2) data/traits/environment/cadmium_tolerant.yaml (traitmech:000013), (3) data/traits/environment/cobalt_tolerant.yaml (traitmech:000015), and (4) data/traits/environment/zinc_tolerant.yaml (traitmech:000014) each now include PMID:12829273 in record-level evidence[1] with verbatim quote 'CBA efflux pumps driven by proteins of the resistance-nodulation-cell division superfamily, P-type ATPases, cation diffusion facilitator and chromate proteins'.
+Each of the 4 remediated records was re-inspected against .claude/skills/review-yaml-record/SKILL.md: (1) data/traits/morphology/cyanophycin_granule.yaml (traitmech:000673) now includes DOI:10.1128/AEM.01298-18 in record-level evidence[1] with verbatim quote 'Cyanophycin accumulates in the form of opaque and light-scattering granules in the cell'; (2) data/traits/environment/cadmium_tolerant.yaml (traitmech:000013), (3) data/traits/environment/cobalt_tolerant.yaml (traitmech:000015), and (4) data/traits/environment/zinc_tolerant.yaml (traitmech:000014) each now include PMID:12829273 in record-level evidence[2] with verbatim quote 'CBA efflux pumps driven by proteins of the resistance-nodulation-cell division superfamily, P-type ATPases, cation diffusion facilitator and chromate proteins'.
 
 ### Schema validity, curation_history provenance, and writer guardrails on remediated records
 
@@ -182,6 +182,9 @@ source:
     role: context
   - path: docs/record-reviews.md
     sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/infrastructure/curate_stage5_review_findings/2026-10-22T052000Z-claude-code-0f08c8.yaml
+    sha256: 7e283767a95c5eb699f8eacddf506adcf1fb61cc6251c97d75b323b9a747e927
     role: context
   - path: reviews/structured/20261022T033000Z-stage4-corpus-record-and-cohort-review/review.yaml
     sha256: 254081d1c7726c4f2808b6a4ea79e7112883df3569c333958ba4a2994d52aae5
@@ -427,7 +430,7 @@ assessments:
     accumulates in the form of opaque and light-scattering granules in the cell'';
     (2) data/traits/environment/cadmium_tolerant.yaml (traitmech:000013), (3) data/traits/environment/cobalt_tolerant.yaml
     (traitmech:000015), and (4) data/traits/environment/zinc_tolerant.yaml (traitmech:000014)
-    each now include PMID:12829273 in record-level evidence[1] with verbatim quote
+    each now include PMID:12829273 in record-level evidence[2] with verbatim quote
     ''CBA efflux pumps driven by proteins of the resistance-nodulation-cell division
     superfamily, P-type ATPases, cation diffusion facilitator and chromate proteins''.'
 - assessment_id: assess-remediated-schema-and-provenance
@@ -609,7 +612,14 @@ related_reviews:
   review_id: 20261022T033000Z-stage4-corpus-record-and-cohort-review
   relationship: follow_up_remediation_verification
 links:
+- https://github.com/CultureBotAI/TraitMech/pull/1986
 - https://github.com/CultureBotAI/TraitMech/issues/1981
+- https://github.com/CultureBotAI/TraitMech/issues/1982
+- https://github.com/CultureBotAI/TraitMech/issues/1983
+- https://github.com/CultureBotAI/TraitMech/issues/1984
+- https://github.com/CultureBotAI/TraitMech/issues/1985
+- https://github.com/CultureBotAI/TraitMech/issues/364
+- https://github.com/CultureBotAI/TraitMech/issues/1987
 tags:
 - stage-05
 - resolve-review-findings
