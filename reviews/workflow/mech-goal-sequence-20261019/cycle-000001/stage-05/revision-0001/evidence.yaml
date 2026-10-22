@@ -1,0 +1,235 @@
+schema_version: 1.0.0
+repository_key: traitmech
+github_repository: CultureBotAI/TraitMech
+run_id: mech-goal-sequence-20261019
+cycle: 1
+stage: 5
+revision: 1
+outcome: completed
+summary: 'Consumed all 9 carried-forward findings from Stage 4 review evidence (reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-04/revision-0001/evidence.yaml,
+  sha256 f0539f25997ef12a33ac5c7d2edbedfe36d552c23471e55eb50f53e0d16014aa), grouped them by cause and
+  repair ownership into 6 groups, deduplicated against all 140 open GitHub issues, and linked every group
+  and finding to a real GitHub issue (#1981 for resolved group G-STAGE4-RECORD-LEVEL-DEFINITION-SOURCE;
+  open issues #1982, #1983, #1984, #1985, and #364 for the 5 deferred source-limited/upstream-blocked
+  cohort groups). Implemented accepted fixes for all 4 actionable open findings (F-DEF-SRC-CYANOPHYCIN-001..004
+  on cyanophycin_granule.yaml, cadmium_tolerant.yaml, cobalt_tolerant.yaml, and zinc_tolerant.yaml) via
+  guarded writer scripts/curate_stage5_review_findings.py, regenerated pages/, preserved all immutable
+  Stage 4 review artifacts untouched, and obtained fresh structured review reviews/structured/20261022T052500Z-stage5-remediated-records-review/review.yaml
+  confirming verdict pass and 0 remaining open findings.'
+source_revision: c1000884f018e65f7b637db8bd395ff669f3132c
+scope_frozen_at: '2026-10-22T05:10:49.330238Z'
+previous_evidence:
+  path: reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-04/revision-0001/evidence.yaml
+  sha256: f0539f25997ef12a33ac5c7d2edbedfe36d552c23471e55eb50f53e0d16014aa
+artifacts:
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-05/revision-0001/issue_map.md
+  sha256: 4be250a71e9dfbd85f72a8623a59385546e61b70a40900d9a4bc14d2abb4eb4d
+  kind: issue_map
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-05/revision-0001/validation.md
+  sha256: cd36c4cde0d204ae1b38aba3ca77dbd9d8191f24bf9d115fd8d9558acdc23089
+  kind: validation
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-05/revision-0001/remediated_records_review.yaml
+  sha256: d152e4bee5e42216324f86fa4295342967e24966500ee7a5e265d3eac5a948dc
+  kind: supporting
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-05/revision-0001/remediated_records_review.md
+  sha256: 85806d28d9a943e9ea39657822865f41399c75dfeaa090dcd8a55a812038ed04
+  kind: supporting
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-05/revision-0001/stage5_coverage_full.json
+  sha256: 924ec12897ac92895d26dbcb5eb5272c3a9acd72324c8cfcde908c43102b529f
+  kind: supporting
+findings:
+- finding_id: F-DEF-SRC-CYANOPHYCIN-001
+  status: resolved
+  summary: 'cyanophycin_granule.yaml (traitmech:000673) omitted definition_source: DOI:10.1128/AEM.01298-18
+    from record-level evidence despite citing DOI:10.1128/AEM.01298-18 with verified verbatim snippets
+    on causal_graphs[0].edges[2..3].'
+  carried_from: F-DEF-SRC-CYANOPHYCIN-001
+  group_id: G-STAGE4-RECORD-LEVEL-DEFINITION-SOURCE
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1981
+  disposition: 'Resolved in Stage 5 under group G-STAGE4-RECORD-LEVEL-DEFINITION-SOURCE (#1981) via scripts/curate_stage5_review_findings.py:
+    added DOI:10.1128/AEM.01298-18 (Watzer and Forchhammer 2018) with verified verbatim snippet to record-level
+    evidence on data/traits/morphology/cyanophycin_granule.yaml and verified in reviews/structured/20261022T052500Z-stage5-remediated-records-review/review.yaml.'
+- finding_id: F-DEF-SRC-CADMIUM-002
+  status: resolved
+  summary: 'cadmium_tolerant.yaml (traitmech:000013) omitted definition_source: PMID:12829273 from record-level
+    evidence despite parent metal_tolerant.yaml and sibling mercury_tolerant.yaml citing PMID:12829273
+    (Nies 2003) with a verified verbatim snippet.'
+  carried_from: F-DEF-SRC-CADMIUM-002
+  group_id: G-STAGE4-RECORD-LEVEL-DEFINITION-SOURCE
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1981
+  disposition: 'Resolved in Stage 5 under group G-STAGE4-RECORD-LEVEL-DEFINITION-SOURCE (#1981) via scripts/curate_stage5_review_findings.py:
+    added PMID:12829273 (Nies 2003) with verified verbatim snippet to record-level evidence on data/traits/environment/cadmium_tolerant.yaml
+    and verified in reviews/structured/20261022T052500Z-stage5-remediated-records-review/review.yaml.'
+- finding_id: F-DEF-SRC-COBALT-003
+  status: resolved
+  summary: 'cobalt_tolerant.yaml (traitmech:000015) omitted definition_source: PMID:12829273 from record-level
+    evidence despite parent metal_tolerant.yaml and sibling mercury_tolerant.yaml citing PMID:12829273
+    (Nies 2003) with a verified verbatim snippet.'
+  carried_from: F-DEF-SRC-COBALT-003
+  group_id: G-STAGE4-RECORD-LEVEL-DEFINITION-SOURCE
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1981
+  disposition: 'Resolved in Stage 5 under group G-STAGE4-RECORD-LEVEL-DEFINITION-SOURCE (#1981) via scripts/curate_stage5_review_findings.py:
+    added PMID:12829273 (Nies 2003) with verified verbatim snippet to record-level evidence on data/traits/environment/cobalt_tolerant.yaml
+    and verified in reviews/structured/20261022T052500Z-stage5-remediated-records-review/review.yaml.'
+- finding_id: F-DEF-SRC-ZINC-004
+  status: resolved
+  summary: 'zinc_tolerant.yaml (traitmech:000014) omitted definition_source: PMID:12829273 from record-level
+    evidence despite parent metal_tolerant.yaml and sibling mercury_tolerant.yaml citing PMID:12829273
+    (Nies 2003) with a verified verbatim snippet.'
+  carried_from: F-DEF-SRC-ZINC-004
+  group_id: G-STAGE4-RECORD-LEVEL-DEFINITION-SOURCE
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1981
+  disposition: 'Resolved in Stage 5 under group G-STAGE4-RECORD-LEVEL-DEFINITION-SOURCE (#1981) via scripts/curate_stage5_review_findings.py:
+    added PMID:12829273 (Nies 2003) with verified verbatim snippet to record-level evidence on data/traits/environment/zinc_tolerant.yaml
+    and verified in reviews/structured/20261022T052500Z-stage5-remediated-records-review/review.yaml.'
+- finding_id: F-COHORT-CAUSAL-GRAPHS-SOURCE-LIMITED-005
+  status: deferred
+  summary: 401 of 1,129 eligible TraitRecord files lack causal_graphs due to documented source limitations
+    (379 records where open-access PubMed/PMC/EuropePMC literature lacks a multi-step causal mechanism
+    snippet, plus 22 SUPPORTING_FIELD_VOCABULARY non-mechanistic hierarchy/measurement/observation records).
+  carried_from: F-COHORT-CAUSAL-GRAPHS-SOURCE-LIMITED-005
+  group_id: G-STAGE4-CAUSAL-GRAPHS-SOURCE-LIMITED
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1982
+  disposition: 'Deferred (source-limited) under open GitHub issue #1982: every one of the 401 records
+    documents its literature limitation in an open CURATION_TODO DiscussionItem; requires full-text PDF
+    acquisition or paid deep-research approval outside Stage 5 scope.'
+- finding_id: F-COHORT-CANONICAL-EXAMPLES-SOURCE-LIMITED-006
+  status: deferred
+  summary: 552 of 1,129 eligible TraitRecord files lack canonical_examples (577 eligible records and 578
+    total records carry verified canonical_examples) because open-access abstracts do not report a verbatim
+    strain-designated or species-specific positive/negative value.
+  carried_from: F-COHORT-CANONICAL-EXAMPLES-SOURCE-LIMITED-006
+  group_id: G-STAGE4-CANONICAL-EXAMPLES-SOURCE-LIMITED
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1983
+  disposition: 'Deferred (source-limited) under open GitHub issue #1983: tracked in scripts/backfill_canonical_examples_444.py
+    (POST_444_CANONICAL_EXAMPLE_QUEUE) and record-level CURATION_TODO DiscussionItems; requires primary
+    strain characterization literature or IJSEM species descriptions.'
+- finding_id: F-COHORT-CAUSAL-GRAPH-BASELINES-007
+  status: deferred
+  summary: 85 baselined cross-record causal-graph audit warning rows (83 INCONSISTENT_NODE_TYPE, 2 DUPLICATE_GROUNDING)
+    across 72 unique eligible TraitRecord files in conf/causal_graph_audit_baseline.tsv.
+  carried_from: F-COHORT-CAUSAL-GRAPH-BASELINES-007
+  group_id: G-STAGE4-CAUSAL-GRAPH-BASELINES
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1984
+  disposition: 'Deferred under open GitHub issue #1984 (follow-up to closed #356) and conf/causal_graph_audit_baseline.tsv
+    (0 unbaselined regressions): requires coordinated cross-record ontology-role conventions without breaking
+    GENE_OR_PROTEIN protein_examples bindings.'
+- finding_id: F-COHORT-DEF-SOURCE-PAYWALLED-008
+  status: deferred
+  summary: 70 of 1,129 eligible TraitRecord files (beyond the 4 resolved definition_source findings) cite
+    a primary discovery/characterization reference in definition_source that is paywalled or has no indexed
+    PubMed/EuropePMC abstract.
+  carried_from: F-COHORT-DEF-SOURCE-PAYWALLED-008
+  group_id: G-STAGE4-DEF-SOURCE-PAYWALLED
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1985
+  disposition: 'Deferred (source-limited) under open GitHub issue #1985: requires full-text access to
+    paywalled primary characterization articles to extract verbatim definitional snippets.'
+- finding_id: F-COHORT-METPO-UPSTREAM-MINTING-009
+  status: deferred
+  summary: 734 of 1,129 eligible TraitRecord files (735 total including excluded traitmech:000083) use
+    repository-minted traitmech:NNNNNN identifiers awaiting upstream METPO term incorporation across proposals/metpo_traitmech_v1..v611.
+  carried_from: F-COHORT-METPO-UPSTREAM-MINTING-009
+  group_id: G-STAGE4-METPO-UPSTREAM-MINTING
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/364
+  disposition: 'Deferred (upstream-blocked) under open GitHub issue #364: all 734 eligible traitmech:NNNNNN
+    records (735 total) are packaged into verified ROBOT templates under proposals/metpo_traitmech_v1..v611
+    and submitted upstream in berkeleybop/metpo#535.'
+groups:
+- group_id: G-STAGE4-RECORD-LEVEL-DEFINITION-SOURCE
+  finding_ids:
+  - F-DEF-SRC-CYANOPHYCIN-001
+  - F-DEF-SRC-CADMIUM-002
+  - F-DEF-SRC-COBALT-003
+  - F-DEF-SRC-ZINC-004
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1981
+  status: resolved
+  summary: 'Cause: Four TraitRecord files (cyanophycin_granule.yaml, cadmium_tolerant.yaml, cobalt_tolerant.yaml,
+    zinc_tolerant.yaml) declared a primary definition_source (DOI:10.1128/AEM.01298-18 or PMID:12829273)
+    that already had a verified verbatim snippet in-repo (on causal_graphs edges or parent/sibling records)
+    but omitted that reference from record-level evidence. Repair owner: CultureBotAI/TraitMech (scripts/curate_stage5_review_findings.py
+    and the 4 target TraitRecord files).'
+  resolution_evidence:
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-05/revision-0001/validation.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-05/revision-0001/remediated_records_review.yaml
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-05/revision-0001/remediated_records_review.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-05/revision-0001/issue_map.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-05/revision-0001/stage5_coverage_full.json
+  disposition: 'Resolved all 4 open findings via guarded writer scripts/curate_stage5_review_findings.py,
+    validated with strict LinkML schema and snippet checks, and verified with fresh structured review
+    bundle reviews/structured/20261022T052500Z-stage5-remediated-records-review/review.yaml (verdict:
+    pass).'
+- group_id: G-STAGE4-CAUSAL-GRAPHS-SOURCE-LIMITED
+  finding_ids:
+  - F-COHORT-CAUSAL-GRAPHS-SOURCE-LIMITED-005
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1982
+  status: deferred
+  summary: 'Cause: 401 eligible TraitRecord files lack causal_graphs because 379 records cite open-access
+    abstracts without a multi-step molecular mechanism snippet and 22 records belong to non-mechanistic
+    SUPPORTING_FIELD_VOCABULARY categories. Repair owner: CultureBotAI/TraitMech full-text / deep-research
+    curation queue (data/traits/**/*.yaml).'
+  resolution_evidence:
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-05/revision-0001/issue_map.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-05/revision-0001/stage5_coverage_full.json
+  disposition: 'Deferred under open GitHub issue #1982: source-limited without full-text PDF acquisition
+    or paid deep-research approval.'
+- group_id: G-STAGE4-CANONICAL-EXAMPLES-SOURCE-LIMITED
+  finding_ids:
+  - F-COHORT-CANONICAL-EXAMPLES-SOURCE-LIMITED-006
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1983
+  status: deferred
+  summary: 'Cause: 552 eligible TraitRecord files lack canonical_examples because their currently cited
+    open abstracts are taxon-general or upper-level definitions that do not state a verbatim strain/species
+    phenotype value. Repair owner: CultureBotAI/TraitMech (scripts/backfill_canonical_examples_444.py,
+    data/traits/**/*.yaml).'
+  resolution_evidence:
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-05/revision-0001/issue_map.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-05/revision-0001/stage5_coverage_full.json
+  disposition: 'Deferred under open GitHub issue #1983: requires primary strain characterization or IJSEM
+    species description texts.'
+- group_id: G-STAGE4-CAUSAL-GRAPH-BASELINES
+  finding_ids:
+  - F-COHORT-CAUSAL-GRAPH-BASELINES-007
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1984
+  status: deferred
+  summary: 'Cause: 85 cross-record causal-graph warning rows (83 INCONSISTENT_NODE_TYPE, 2 DUPLICATE_GROUNDING)
+    across 72 unique eligible TraitRecord files remain baselined in conf/causal_graph_audit_baseline.tsv
+    where shared GO/CHEBI/METPO CURIEs play dual roles across traits. Repair owner: CultureBotAI/TraitMech
+    (conf/causal_graph_audit_baseline.tsv, scripts/audit_causal_graphs.py, data/traits/**/*.yaml).'
+  resolution_evidence:
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-05/revision-0001/issue_map.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-05/revision-0001/stage5_coverage_full.json
+  disposition: 'Deferred under open GitHub issue #1984 (follow-up to closed #356): requires coordinated
+    cross-record ontology-role harmonization without breaking GENE_OR_PROTEIN protein_examples bindings.'
+- group_id: G-STAGE4-DEF-SOURCE-PAYWALLED
+  finding_ids:
+  - F-COHORT-DEF-SOURCE-PAYWALLED-008
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1985
+  status: deferred
+  summary: 'Cause: 70 eligible TraitRecord files cite a primary discovery DOI/PMID in definition_source
+    whose full text is paywalled or lacks an open-access abstract quote in PubMed/EuropePMC, while record-level
+    evidence is backed by open DefenseFinder/review sources. Repair owner: CultureBotAI/TraitMech full-text
+    literature queue (data/traits/**/*.yaml).'
+  resolution_evidence:
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-05/revision-0001/issue_map.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-05/revision-0001/stage5_coverage_full.json
+  disposition: 'Deferred under open GitHub issue #1985: source-limited without full-text access to paywalled
+    primary discovery articles.'
+- group_id: G-STAGE4-METPO-UPSTREAM-MINTING
+  finding_ids:
+  - F-COHORT-METPO-UPSTREAM-MINTING-009
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/364
+  status: deferred
+  summary: 'Cause: 734 eligible TraitRecord files (735 total including excluded traitmech:000083) use
+    repository-minted traitmech:NNNNNN identifiers awaiting upstream METPO release incorporation. Repair
+    owner: Upstream berkeleybop/metpo#535 and CultureBotAI/TraitMech (proposals/metpo_traitmech_v1..v611).'
+  resolution_evidence:
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-05/revision-0001/issue_map.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-05/revision-0001/stage5_coverage_full.json
+  disposition: 'Deferred (upstream-blocked) under existing open GitHub issue #364 and berkeleybop/metpo#535.'
+carry_forward_ids:
+- F-COHORT-CAUSAL-GRAPHS-SOURCE-LIMITED-005
+- F-COHORT-CANONICAL-EXAMPLES-SOURCE-LIMITED-006
+- F-COHORT-CAUSAL-GRAPH-BASELINES-007
+- F-COHORT-DEF-SOURCE-PAYWALLED-008
+- F-COHORT-METPO-UPSTREAM-MINTING-009
+infra_tasks: []

@@ -1,0 +1,44 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/curate_stage5_review_findings.py
+session:
+  id: 2026-10-22T052000Z-claude-code-0f08c8
+  timestamp: '2026-10-22T05:20:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+    agent_tool: antigravity
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1981
+  - https://github.com/CultureBotAI/TraitMech/issues/1982
+  - https://github.com/CultureBotAI/TraitMech/issues/1983
+  - https://github.com/CultureBotAI/TraitMech/issues/1984
+  - https://github.com/CultureBotAI/TraitMech/issues/1985
+  - https://github.com/CultureBotAI/TraitMech/issues/364
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  - curation_history
+  summary: Resolve all 4 actionable Stage 4 open findings in group G-STAGE4-RECORD-LEVEL-DEFINITION-SOURCE
+    and map 5 deferred cohort findings to open GitHub issues
+  details: 'Executed Stage 5 (resolve_review_findings) of run mech-goal-sequence-20261019, cycle 1 consuming
+    Stage 4 review evidence (reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-04/revision-0001/evidence.yaml,
+    sha256 f0539f25997ef12a33ac5c7d2edbedfe36d552c23471e55eb50f53e0d16014aa). Grouped all 9 carried-forward
+    findings into 6 cause-and-ownership groups, deduplicated against all 140 open GitHub issues, and
+    created/reused real GitHub issues (#1981 for resolved group G-STAGE4-RECORD-LEVEL-DEFINITION-SOURCE;
+    #1982, #1983, #1984, #1985, and #364 for the 5 deferred source-limited/upstream-blocked cohort groups).
+    Remediated all 4 open findings via guarded writer scripts/curate_stage5_review_findings.py: added
+    DOI:10.1128/AEM.01298-18 (Watzer and Forchhammer 2018) with verified verbatim snippet to record-level
+    evidence on data/traits/morphology/cyanophycin_granule.yaml (F-DEF-SRC-CYANOPHYCIN-001, traitmech:000673),
+    and added PMID:12829273 (Nies 2003) with verified verbatim snippet to record-level evidence on
+    data/traits/environment/cadmium_tolerant.yaml (F-DEF-SRC-CADMIUM-002, traitmech:000013),
+    data/traits/environment/cobalt_tolerant.yaml (F-DEF-SRC-COBALT-003, traitmech:000015), and
+    data/traits/environment/zinc_tolerant.yaml (F-DEF-SRC-ZINC-004, traitmech:000014). Persisted fresh
+    structured review bundle reviews/structured/20261022T052500Z-stage5-remediated-records-review/
+    confirming 0 open findings and verdict pass across all 4 remediated records, regenerated pages/,
+    and preserved all immutable Stage 4 review artifacts untouched.'

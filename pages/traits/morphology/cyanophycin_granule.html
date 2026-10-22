@@ -49,13 +49,19 @@
 
 
   <section class="trait-evidence" id="trait-evidence" aria-labelledby="trait-evidence-heading">
-    <h2 id="trait-evidence-heading">Trait evidence <span class="meta">(1)</span></h2>
+    <h2 id="trait-evidence-heading">Trait evidence <span class="meta">(2)</span></h2>
     <ul>
 
       <li>
         <a href="https://doi.org/10.1007/s002030100281" rel="nofollow noreferrer"><code>DOI:10.1007/s002030100281</code></a>
         <blockquote>Cyanophycin granules reached a maximum after the peak of nitrogenase activity and eventually were utilized completely.</blockquote>
         <p class="meta">Li et al. (2001), publisher scientific abstract directly read at https://link.springer.com/article/10.1007/s002030100281. Electron microscopy and biochemistry identified granules in Cyanothece ATCC 51142 during nitrogen-fixing growth on a 12-hour light/12-hour dark cycle. Full text and figures were not accessible; timing is condition-specific, not a universal granule property. The separate PCC 6803 mutant observations do not establish a universal cyanophycinase requirement.</p>
+      </li>
+
+      <li>
+        <a href="https://doi.org/10.1128/AEM.01298-18" rel="nofollow noreferrer"><code>DOI:10.1128/AEM.01298-18</code></a>
+        <blockquote>Cyanophycin accumulates in the form of opaque and light-scattering granules in the cell</blockquote>
+        <p class="meta">Watzer and Forchhammer (2018), Introduction and Abstract, directly read in publisher HTML: cyanophycin accumulates as opaque, light-scattering intracellular storage granules serving as a temporary nitrogen reserve (abstract: &#34;cyanophycin can be used as a temporary nitrogen storage&#34;). Supports the record definition and definition_source.</p>
       </li>
 
     </ul>
@@ -441,6 +447,12 @@
           <time>2026-10-08T04:29:03Z</time> ·
           <strong>CORRECT_CURATION_PROVENANCE</strong> · codex
           <p class="changes">Corrected provenance for #1816 without rewriting the initial event: its 04:30:00Z timestamp was mistakenly set ahead of execution. The initial record was already written before the repository CREATE history timestamp 2026-10-08T04:28:08Z, an observed upper bound, not an exact reconstructed write time. This correction uses the directly observed UTC clock; biological content is unchanged.</p>
+        </li>
+
+        <li>
+          <time>2026-10-22T05:20:00Z</time> ·
+          <strong>ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE</strong> · claude
+          <p class="changes">Added DOI:10.1128/AEM.01298-18 with verified verbatim snippet to record-level evidence to match definition_source (Stage 5 remediation of F-DEF-SRC-CYANOPHYCIN-001 in group G-STAGE4-RECORD-LEVEL-DEFINITION-SOURCE, issue #1981).</p>
         </li>
 
       </ol>
@@ -860,7 +872,7 @@ function renderPathograph(containerId, data) {
       third-party source terms apply
     </div>
     <div>
-      Record as of 2026-10-08 04:30 UTC
+      Record as of 2026-10-22 05:20 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
       · embedding coverage 100.0%

@@ -503,6 +503,11 @@ curate-stage2-causal-graphs *args:
 curate-stage3-protein-examples *args:
     uv run python scripts/curate_stage3_protein_examples.py {{args}}
 
+# Replay the Stage 5 grouped review findings remediation (group G-STAGE4-RECORD-LEVEL-DEFINITION-SOURCE).
+# Validated dry-run by default; pass --apply to write the 4 in-scope records.
+curate-stage5-review-findings *args:
+    uv run python scripts/curate_stage5_review_findings.py {{args}}
+
 # ============== Curation history (append-only provenance) ==============
 # Records which model, using which tool, changed what, why, and under which
 # issue. ONE record per change under history/ -- per target for hand curation,
