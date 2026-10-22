@@ -1,0 +1,2479 @@
+# Whole-record review of temperature optimum mid1
+
+- Review: 20261022T011938Z-temperature-optimum-mid1
+- Repository: CultureBotAI/TraitMech
+- Started UTC: 2026-10-22T01:08:09.187966Z
+- Finished UTC: 2026-10-22T01:19:38Z
+- Reviewer: codex (independent)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+Temperature optimum mid1 needs correction of two imported process-only relations and qualification of one high-temperature source note. Human acceptance needs attribution. Active bin identity, canonical25°C optimum and all four literal snippets are supported; exact synonym equivalence and physiological bin calibration remain unresolved.
+
+## Scope And Provenance
+
+One entire maintained TraitRecord. Contextual ontology, source, parent, writer and history inputs are not additional review targets.
+
+Selection: First record in the actual B14 queue; current 257-line target and 101 captured inputs. Local review is independent of remote publication.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 508ee3089c93a36413969cd1ede7f9528a1940a4.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| METPO:1000443 | data/traits/environment/temperature_optimum_mid1.yaml | maintained | temperature optimum mid1 |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Fresh B14 corpus QC | passed | True | METPO:1000443 | Actual just qc passed: strict validation of 1130 records with 0 errors; graph audit: 74 baselined, 0 new and 0 blocking findings; 135 connected graphs and 1588 wired nodes; protein coverage: 729 graphs (134 pass, 594 NONMECHANISTIC, 0 gaps, 1 protected); snippet audit: 2419 baselined, 0 new and 0 blocking findings; 19 PathwayMech links. These are corpus diagnostics, not scientific validation of this target. |
+| Fresh B14 history integrity | passed | True | METPO:1000443 | 1278 HistoryRecord YAMLs validated, 0 invalid; current history snapshot contains 1279 files. Integrity does not establish scientific correctness or human acceptance. |
+| Fresh B14 mapping identifier/label validation | passed | True | METPO:1000443 | 361 canonical matches, 2 exact-synonym matches, 1 exception and 123 SKIPPED_NO_ADAPTER pairs. Configured scope is the two grounding mappings, not every target identifier or scientific claim. |
+| Focused Stage2 writer tests | passed | False | METPO:1000443 | Five tests passed in the explicitly selected Stage2 test file. This is not a full just test run or biological validation. |
+| Focused native validation | passed | True | METPO:1000443 | Native record validation passed; scientific interpretation is assessed separately. |
+| Focused strict validation | passed | True | METPO:1000443 | The actual validate-strict command passed. |
+| Focused network snippet check | passed | True | METPO:1000443 | All four supplied snippets were VERIFIED by the native abstract check and independently literal in the source audit. Literal occurrence does not establish adjacent numerical or causal claims. |
+| One-target native review capture | passed | True | METPO:1000443 | One current target, 101 captured inputs, exact current base and successful native inspect. |
+| Protein-instance metadata applicability | not_applicable | False | METPO:1000443 | No protein nodes or instances in this quantitative NONMECHANISTIC graph; no accession or token instance is required. |
+| Structured source-organism expression query availability | unavailable | False | METPO:1000443 | Current bounded discovery found the maintained adapter unavailable. Retained species catalog and selected primary fallback establish no exact strain or module membership result. |
+
+## Scientific And Domain Assessments
+
+### Native checklist: active class, aliases and direct parent
+
+identity: supported. Targets: METPO:1000443.
+
+Active METPO:1000443 and parent METPO:1000304 agree with the local quantitative bin. Current mesophilic alias inheritance is documentary; legacy spelling provenance and exact scientific equivalence remain qualified.
+
+### Native checklist: best-growth temperature and numerical calibration
+
+quantity: unknown. Targets: METPO:1000443.
+
+The inclusive 22–27 degree interval is explicit in local identity. Generic membrane adaptation does not establish exact cutoff calibration or sufficient whole-organism optima; a 20–45 growth interval does not prove an optimum outside this bin.
+
+### Native checklist: exact taxon and reported optimum
+
+quantity: supported. Targets: METPO:1000443.
+
+Official Rubellicoccus identity and CR14 aliases agree. The assigned abstract reports optimum 25 degrees C and growth at 20–30 degrees C; these are distinct source-specific observations, not a complete response curve.
+
+### Native checklist: five works and all placements
+
+evidence: unknown. Targets: METPO:1000443.
+
+All five identities are verified. Exact-bin numerical support and several adjacent causal statements remain unresolved. The Tolner note is a bounded nearest-evidence mismatch; the local subclass hierarchy itself is independently supported. Detailed pathogen survival, fitness, ROS-defense, AMR and intervention mechanisms remain UNASSESSED_SCOPE.
+
+### Native checklist: four snippets and evidence-note scope
+
+evidence: supported. Targets: METPO:1000443.
+
+All four snippets are literal and native VERIFIED. Literal occurrence is distinct from adjacent numerical or causal attribution; the high-temperature note remains a separate minor concern.
+
+### Native checklist: all ten current referents
+
+representation: supported. Targets: METPO:1000443.
+
+The material fatty-acid classes and fluidity quality are meaningful. Homeoviscous adaptation is process-like; adaptation versus its tuned-composition result remains a wording qualification. No extra facet or wrong-CURIE finding is inferred.
+
+{
+  "grounding": [
+    {
+      "index": 0,
+      "node_id": "temperature_optimum_mid1_trait",
+      "label": "temperature optimum mid1",
+      "node_type": "TRAIT",
+      "grounding": "METPO:1000443",
+      "outcome": "supported",
+      "assessment": "Active exact numeric optimum bin and direct parent; source synonym equivalence is separate."
+    },
+    {
+      "index": 1,
+      "node_id": "temperature_optimum",
+      "label": "temperature optimum",
+      "node_type": "TRAIT",
+      "grounding": "METPO:1000304",
+      "outcome": "supported",
+      "assessment": "Active temperature-optimum parent denotes the optimum measurement phenotype."
+    },
+    {
+      "index": 2,
+      "node_id": "lower_mesophilic_environment",
+      "label": "lower-mesophilic environment",
+      "node_type": "ENVIRONMENTAL_FACTOR",
+      "grounding": null,
+      "outcome": "supported",
+      "assessment": "Ambient habitat condition at22–27°C; not automatically a process from its enum. The outgoing lexical relation imposes no imported process domain."
+    },
+    {
+      "index": 3,
+      "node_id": "mesophile_adaptation",
+      "label": "mesophile membrane and enzyme adaptation",
+      "node_type": "BIOLOGICAL_PROCESS",
+      "grounding": null,
+      "outcome": "qualified",
+      "assessment": "Adaptation process is intended by label/type and surrounding edges; composition/repertoire tuned wording also describes its result. Preserve this qualification without a forced additional facet finding."
+    },
+    {
+      "index": 4,
+      "node_id": "unsaturated_fatty_acids",
+      "label": "unsaturated fatty acids",
+      "node_type": "CHEMICAL",
+      "grounding": "CHEBI:27208",
+      "outcome": "supported",
+      "assessment": "Material unsaturated-fatty-acid class. Current double-bond wording is a meaningful subset of the broader CHEBI definition."
+    },
+    {
+      "index": 5,
+      "node_id": "membrane_fluidity",
+      "label": "membrane fluidity",
+      "node_type": "QUALITY",
+      "grounding": "METPO:1007505",
+      "outcome": "supported",
+      "assessment": "Explicit physical membrane-fluidity quality, consistent with v3 and maintained QUALITY mapping."
+    },
+    {
+      "index": 6,
+      "node_id": "homeoviscous_adaptation",
+      "label": "homeoviscous adaptation",
+      "node_type": "BIOLOGICAL_PROCESS",
+      "grounding": "METPO:1016200",
+      "outcome": "supported",
+      "assessment": "Explicit membrane-remodeling response process, consistent with local v85 homeoviscous-adaptation class."
+    },
+    {
+      "index": 7,
+      "node_id": "low_melting_lipids",
+      "label": "low-melting membrane lipids",
+      "node_type": "CHEMICAL",
+      "grounding": null,
+      "outcome": "supported",
+      "assessment": "Material low-melting lipid grouping; no exact CURIE or protein instance is forced."
+    },
+    {
+      "index": 8,
+      "node_id": "branched_chain_amino_acids",
+      "label": "branched-chain amino acids",
+      "node_type": "CHEMICAL",
+      "grounding": null,
+      "outcome": "supported",
+      "assessment": "Material branched-chain amino acids; absence of grounding alone is not a demonstrated identity defect."
+    },
+    {
+      "index": 9,
+      "node_id": "branched_chain_fatty_acids",
+      "label": "branched-chain fatty acids",
+      "node_type": "CHEMICAL",
+      "grounding": "CHEBI:35819",
+      "outcome": "supported",
+      "assessment": "Material branched-chain fatty acids, with iso/anteiso wording a meaningful subset of CHEBI35819."
+    }
+  ],
+  "source": [
+    {
+      "index": 0,
+      "field": "causal_graphs[0].nodes[0]",
+      "node_id": "temperature_optimum_mid1_trait",
+      "label": "temperature optimum mid1",
+      "node_type": "TRAIT",
+      "outcome": "UNKNOWN",
+      "scope": "Local numeric-bin statement; external exact-cutoff calibration remains unresolved."
+    },
+    {
+      "index": 1,
+      "field": "causal_graphs[0].nodes[1]",
+      "node_id": "temperature_optimum",
+      "label": "temperature optimum",
+      "node_type": "TRAIT",
+      "outcome": "SUPPORTED_CONTEXT",
+      "scope": "Parent denotes ambient temperature supporting maximal growth; source measurements distinguish optimum from growth limits."
+    },
+    {
+      "index": 2,
+      "field": "causal_graphs[0].nodes[2]",
+      "node_id": "lower_mesophilic_environment",
+      "label": "lower-mesophilic environment",
+      "node_type": "ENVIRONMENTAL_FACTOR",
+      "outcome": "UNKNOWN",
+      "scope": "Declared 22–27 environment is the local bin; broader mesophilic habitat equivalence is not established."
+    },
+    {
+      "index": 3,
+      "field": "causal_graphs[0].nodes[3]",
+      "node_id": "mesophile_adaptation",
+      "label": "mesophile membrane and enzyme adaptation",
+      "node_type": "BIOLOGICAL_PROCESS",
+      "outcome": "UNKNOWN",
+      "scope": "Generic membrane adaptation supported; broad enzyme repertoire and exact moderate-temperature optimum sufficiency unresolved."
+    },
+    {
+      "index": 4,
+      "field": "causal_graphs[0].nodes[4]",
+      "node_id": "unsaturated_fatty_acids",
+      "label": "unsaturated fatty acids",
+      "node_type": "CHEMICAL",
+      "outcome": "SUPPORTED_CONTEXT",
+      "scope": "Unsaturated fatty acid double-bond material meaning consistent with selected generic source attribution."
+    },
+    {
+      "index": 5,
+      "field": "causal_graphs[0].nodes[5]",
+      "node_id": "membrane_fluidity",
+      "label": "membrane fluidity",
+      "node_type": "QUALITY",
+      "outcome": "SUPPORTED_CONTEXT",
+      "scope": "Physical bilayer fluidity supported in Ramón p17; does not denote the remodeling process."
+    },
+    {
+      "index": 6,
+      "field": "causal_graphs[0].nodes[6]",
+      "node_id": "homeoviscous_adaptation",
+      "label": "homeoviscous adaptation",
+      "node_type": "BIOLOGICAL_PROCESS",
+      "outcome": "QUALIFIED",
+      "scope": "Homeoviscous remodeling context supported in Mendoza abstract/Ramón p17; not proof of exact constant fluidity across every condition or a numeric optimum."
+    },
+    {
+      "index": 7,
+      "field": "causal_graphs[0].nodes[7]",
+      "node_id": "low_melting_lipids",
+      "label": "low-melting membrane lipids",
+      "node_type": "CHEMICAL",
+      "outcome": "UNKNOWN",
+      "scope": "Broad lower-melting lipid list remains nearest-RSC attribution unknown; generic Ramón physical context is separate."
+    },
+    {
+      "index": 8,
+      "field": "causal_graphs[0].nodes[8]",
+      "node_id": "branched_chain_amino_acids",
+      "label": "branched-chain amino acids",
+      "node_type": "CHEMICAL",
+      "outcome": "SUPPORTED_CONTEXT",
+      "scope": "Named valine, leucine and isoleucine precursors occur in Ramón p24."
+    },
+    {
+      "index": 9,
+      "field": "causal_graphs[0].nodes[9]",
+      "node_id": "branched_chain_fatty_acids",
+      "label": "branched-chain fatty acids",
+      "node_type": "CHEMICAL",
+      "outcome": "QUALIFIED",
+      "scope": "Iso/anteiso branched FA precursor attribution supported in Ramón p24 with organism/environment scope retained."
+    }
+  ]
+}
+
+### Native checklist: all nine current relations
+
+consistency: concern. Targets: METPO:1000443.
+
+Edges 4 and 8 assign inherited process-only RO:0002213 to material subjects and a quality object. Five lexical predicates have no imported RO constraint; broad local confers and the subclass edge are compatible. Source efficacy remains a separate question.
+
+{
+  "grounding": [
+    {
+      "index": 0,
+      "subject": "lower_mesophilic_environment",
+      "predicate": "engages",
+      "predicate_id": null,
+      "object": "mesophile_adaptation",
+      "outcome": "unknown",
+      "assessment": "Lexical engages has no imported domain/range. Generic environmental-to-adaptation support is separate from formal identity."
+    },
+    {
+      "index": 1,
+      "subject": "mesophile_adaptation",
+      "predicate": "confers",
+      "predicate_id": "METPO:2007700",
+      "object": "temperature_optimum_mid1_trait",
+      "outcome": "supported",
+      "assessment": "Local confers has broad scaffold endpoints and trait-object prose compatible with adaptation/trait referents; exact22–27°C causal calibration remains source-dependent."
+    },
+    {
+      "index": 2,
+      "subject": "temperature_optimum_mid1_trait",
+      "predicate": "is a",
+      "predicate_id": "rdfs:subClassOf",
+      "object": "temperature_optimum",
+      "outcome": "supported",
+      "assessment": "Current active bin is explicitly a subclass of its direct temperature-optimum parent; evidence-note attribution is separately audited."
+    },
+    {
+      "index": 3,
+      "subject": "mesophile_adaptation",
+      "predicate": "increases abundance of",
+      "predicate_id": null,
+      "object": "unsaturated_fatty_acids",
+      "outcome": "unknown",
+      "assessment": "Lexical increases abundance of is not RO2213 and has no invented imported role constraint. Detailed biology remains outside this formal audit."
+    },
+    {
+      "index": 4,
+      "subject": "unsaturated_fatty_acids",
+      "predicate": "increases",
+      "predicate_id": "RO:0002213",
+      "object": "membrane_fluidity",
+      "outcome": "concern",
+      "assessment": "RO2213 inherits RO2211 process/process endpoints. Current unsaturated fatty acids are material and membrane fluidity is a quality; both explicit referents conflict with the imported roles."
+    },
+    {
+      "index": 5,
+      "subject": "membrane_fluidity",
+      "predicate": "is sensed as input to",
+      "predicate_id": null,
+      "object": "homeoviscous_adaptation",
+      "outcome": "unknown",
+      "assessment": "Lexical is sensed as input to has no imported process-only subject constraint; quality-to-response wording is not automatically invalid."
+    },
+    {
+      "index": 6,
+      "subject": "homeoviscous_adaptation",
+      "predicate": "remodels toward increased",
+      "predicate_id": null,
+      "object": "low_melting_lipids",
+      "outcome": "unknown",
+      "assessment": "Lexical remodels toward increased has no imported material/process constraint. Generic source support and exact optimum calibration remain separate."
+    },
+    {
+      "index": 7,
+      "subject": "branched_chain_amino_acids",
+      "predicate": "serve as precursors for",
+      "predicate_id": null,
+      "object": "branched_chain_fatty_acids",
+      "outcome": "unknown",
+      "assessment": "Lexical serve as precursors for is not an imported RO regulation relation; current chemical/chemical referents are not an automatic role error."
+    },
+    {
+      "index": 8,
+      "subject": "branched_chain_fatty_acids",
+      "predicate": "increases",
+      "predicate_id": "RO:0002213",
+      "object": "membrane_fluidity",
+      "outcome": "concern",
+      "assessment": "RO2213 inherits process/process endpoints, while current branched-chain fatty acids and membrane fluidity are material/quality referents. Grouped with edge4; no replacement biological mechanism prescribed."
+    }
+  ],
+  "source": [
+    {
+      "index": 0,
+      "field": "causal_graphs[0].edges[0]",
+      "subject": "lower_mesophilic_environment",
+      "predicate": "engages",
+      "object": "mesophile_adaptation",
+      "references": [
+        "DOI:10.1146/annurev-micro-091313-103612"
+      ],
+      "outcome": "UNKNOWN",
+      "scope": "Mendoza abstract supports generic cooling-related membrane adaptation, not specifically the 22–27 environment or enzyme program.",
+      "formal_roles": "Separate grounding audit; not inferred from source biology."
+    },
+    {
+      "index": 1,
+      "field": "causal_graphs[0].edges[1]",
+      "subject": "mesophile_adaptation",
+      "predicate": "confers",
+      "object": "temperature_optimum_mid1_trait",
+      "references": [
+        "DOI:10.1146/annurev-micro-091313-103612"
+      ],
+      "outcome": "UNKNOWN",
+      "scope": "No inspected passage establishes that this generic adaptation is sufficient for an optimum in exactly 22–27 °C; full Mendoza body unavailable.",
+      "formal_roles": "Separate grounding audit; not inferred from source biology."
+    },
+    {
+      "index": 2,
+      "field": "causal_graphs[0].edges[2]",
+      "subject": "temperature_optimum_mid1_trait",
+      "predicate": "is a",
+      "object": "temperature_optimum",
+      "references": [
+        "DOI:10.1016/s0300-9629(97)00003-0"
+      ],
+      "outcome": "CONCERN",
+      "scope": "Subclass is locally coherent; literal Tolner quote is high-temperature context and the adjacent specific-bin attribution needs qualification.",
+      "formal_roles": "Separate grounding audit; not inferred from source biology."
+    },
+    {
+      "index": 3,
+      "field": "causal_graphs[0].edges[3]",
+      "subject": "mesophile_adaptation",
+      "predicate": "increases abundance of",
+      "object": "unsaturated_fatty_acids",
+      "references": [
+        "DOI:10.1007/s42770-023-01057-4"
+      ],
+      "outcome": "QUALIFIED",
+      "scope": "Ramón selected p37 supports the existing desaturation/fluidity attribution in B.subtilis context; this does not establish all mesophiles or their optimum.",
+      "formal_roles": "Separate grounding audit; not inferred from source biology."
+    },
+    {
+      "index": 4,
+      "field": "causal_graphs[0].edges[4]",
+      "subject": "unsaturated_fatty_acids",
+      "predicate": "increases",
+      "object": "membrane_fluidity",
+      "references": [
+        "DOI:10.1007/s42770-023-01057-4"
+      ],
+      "outcome": "QUALIFIED",
+      "scope": "Generic unsaturation/fluidity relation supported by Ramón p17/37 at physical/source-attribution scope; imported formal role assessed separately.",
+      "formal_roles": "Separate grounding audit; not inferred from source biology."
+    },
+    {
+      "index": 5,
+      "field": "causal_graphs[0].edges[5]",
+      "subject": "membrane_fluidity",
+      "predicate": "is sensed as input to",
+      "object": "homeoviscous_adaptation",
+      "references": [
+        "DOI:10.1039/d4cc03114h"
+      ],
+      "outcome": "UNKNOWN",
+      "scope": "RSC abstract supports HVA and lipid composition generally; exact proposed sensing wording was not inspected in a current body. Mendoza independently supplies generic sensing context, not a substitute nearest citation.",
+      "formal_roles": "Separate grounding audit; not inferred from source biology."
+    },
+    {
+      "index": 6,
+      "field": "causal_graphs[0].edges[6]",
+      "subject": "homeoviscous_adaptation",
+      "predicate": "remodels toward increased",
+      "object": "low_melting_lipids",
+      "references": [
+        "DOI:10.1039/d4cc03114h"
+      ],
+      "outcome": "UNKNOWN",
+      "scope": "RSC current body unavailable; exact lipid-list attribution remains unresolved. Ramón p17 provides contextual physical support without changing the assigned evidence.",
+      "formal_roles": "Separate grounding audit; not inferred from source biology."
+    },
+    {
+      "index": 7,
+      "field": "causal_graphs[0].edges[7]",
+      "subject": "branched_chain_amino_acids",
+      "predicate": "serve as precursors for",
+      "object": "branched_chain_fatty_acids",
+      "references": [
+        "DOI:10.1007/s42770-023-01057-4"
+      ],
+      "outcome": "QUALIFIED",
+      "scope": "Ramón p24 explicitly names valine/leucine/isoleucine as iso/anteiso FA precursors in its B.subtilis discussion; no universal strain transfer.",
+      "formal_roles": "Separate grounding audit; not inferred from source biology."
+    },
+    {
+      "index": 8,
+      "field": "causal_graphs[0].edges[8]",
+      "subject": "branched_chain_fatty_acids",
+      "predicate": "increases",
+      "object": "membrane_fluidity",
+      "references": [
+        "DOI:10.1007/s42770-023-01057-4"
+      ],
+      "outcome": "QUALIFIED",
+      "scope": "Ramón p24 supports anteiso branching/fluidization and describes its predominant long-term role in B.subtilis. Preserve species/environment qualification; no blanket universal predominance inferred.",
+      "formal_roles": "Separate grounding audit; not inferred from source biology."
+    }
+  ]
+}
+
+### Native checklist: maintained writers and recurrence
+
+ownership: supported. Targets: METPO:1000443.
+
+The current record and wildcard predicate mapping own the actionable relation issue; the shared grounder skips populated IDs. Exact canonical backfill is an applicable equality-guarded owner. Uncaptured alias writer and sibling migrations remain qualified context, not proven current overwriters.
+
+### Native checklist: attributable human acceptance
+
+provenance: concern. Targets: METPO:1000443.
+
+Twelve embedded events contain eleven AI events and one seed. The ignored- and hidden-inclusive search found 172 matching paths and 67 actual target arrays, none exact. Three current whole and sixteen qualified prior whole history readings do not establish attributable human acceptance of current assertions; private or remote acceptance is unknown.
+
+### Native checklist: catalog coverage and adapter availability
+
+completeness: unknown. Targets: METPO:1000443.
+
+The retained catalog covers B.subtilis and E.coli species context but no exact canonical Rubellicoccus entry. No strain or module substitution is made. Appropriate bounded generic queries were not executed because the current maintained adapter was unavailable; selected primary context is fallback.
+
+### Native checklist: graph scope and optional protein instances
+
+completeness: supported. Targets: METPO:1000443.
+
+One component, ten nodes and nine edges form a quantitative NONMECHANISTIC record. Zero protein nodes or instances do not require fabricated molecular detail or connectors. Detailed excluded biological efficacy remains unassessed.
+
+### Native checklist: actual native and fresh B14 diagnostics
+
+schema: supported. Targets: METPO:1000443.
+
+Current native capture, focused validation, strict validation and all four snippet checks passed. B14 common checks are actual fresh executions at the advanced base; historical failures, cache provenance, product skips and the omitted full test suite remain explicit. These diagnostics do not certify scientific meaning.
+
+## Findings
+
+### imported-process-roles: Imported process roles
+
+major / open / confirmed; issue key: temperature-optimum-mid1-imported-process-roles.
+
+Edges4 and8 assign RO:0002213 to material fatty-acid subjects and a membrane-fluidity quality object. RO:0002213 inherits RO:0002211 process domain and range; both actual endpoint referents conflict. The material fatty-acid and quality identities are meaningful and should not be retyped merely to satisfy this relation. Five lexical predicates have no imported process-only constraint; broad local confers and the subclass edge are compatible.
+
+### high-temperature-source-placement: High temperature source placement
+
+minor / open / confirmed; issue key: temperature-optimum-mid1-high-temperature-source-placement.
+
+The literal Tolner snippet is in an abstract passage about thermophiles adapted to high temperature, while its adjacent evidence note claims support for the specific22–27°C optimum. That nearest-evidence attribution overstates the inspected passage. The numeric-bin subclass relationship is independently supported by METPO; this concern neither refutes it nor asserts that the uninspected full paper lacks relevant discussion.
+
+### human-acceptance-link: Human acceptance link
+
+minor / open / confirmed; issue key: temperature-optimum-mid1-human-acceptance-link.
+
+Current REVIEWED status lacks attributable human acceptance of present assertions in the inspected local evidence. The ignored- and hidden-inclusive search, excluding .git and .venv, found172 matching paths and67 actual review target arrays with no exact target. Twelve embedded events comprise11 AI events and one seed; the exact current-target history is also an AI grounding event. Nineteen captured histories were assessed with explicit current versus qualified prior reading scope. Private or remote acceptance remains unknown.
+
+## Recommended Actions And Acceptance Checks
+
+### curate-imported-process-roles
+
+In separately authorized curation, reconcile these two grounded predicates with their actual material and quality referents. Review the wildcard increases mapping together with record assertions; the shared grounder skips populated IDs, so a rerun alone does not repair them. Preserve valid node identities and do not invent a biological replacement mechanism.
+
+- Demonstrate inherited domain/range compatibility for actual endpoint referents; do not assign imported RO rules to lexical relations.
+- Retain NONMECHANISTIC scope and zero proteins unless independent scientific evidence warrants a change; no token instances or connectors.
+- Run focused strict validation, relevant predicate/graph audits, full QC and required history/product gates.
+
+### curate-high-temperature-source-placement
+
+Qualify the note to distinguish literal high-temperature context from the independently supported local numeric-bin hierarchy. Attach precise numerical support only where the cited passage was inspected. Preserve the positive literal snippet and source provenance; no new organism or mechanism is requested.
+
+- The nearest-evidence note accurately describes its inspected passage and does not claim unestablished22–27°C support.
+- The independently supported hierarchy remains explicit, and any remaining body-access uncertainty is recorded.
+- Validate evidence fields, snippets, curation history and strict/QC gates after authorized curation.
+
+### curate-human-acceptance-link
+
+Link attributable human acceptance of current assertions or reconcile REVIEWED through the native status workflow in separately authorized curation. Preserve existing AI actors and history.
+
+- Accepted scope and human reviewer are attributable, or status reflects the available evidence.
+- Per-record and repository history validates and AI assistance remains explicit.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| fresh-common-completion | /private/tmp/traitmech-record-sweep-014.q8m4v2cs/new-base-diagnostic-independent-review-agent/fresh-products-completion.json; Fresh products completion plus prior diagnostic evidence; original execution intervals retained | context_only | Actual B14 checks and current input guards; setup cross-batch comparison remains false. |
+| check-new-base-qc | /private/tmp/traitmech-record-sweep-014.q8m4v2cs/new-base-qc.log; Executed 2026-10-21T23:25:15.125723+00:00 through 2026-10-21T23:26:53.864156+00:00; metadata new-base-qc.json | context_only | Actual just qc passed: strict validation of 1130 records with 0 errors; graph audit: 74 baselined, 0 new and 0 blocking findings; 135 connected graphs and 1588 wired nodes; protein coverage: 729 graphs (134 pass, 594 NONMECHANISTIC, 0 gaps, 1 protected); snippet audit: 2419 baselined, 0 new and 0 blocking findings; 19 PathwayMech links. These are corpus diagnostics, not scientific validation of this target. |
+| check-new-base-history | /private/tmp/traitmech-record-sweep-014.q8m4v2cs/new-base-history.log; Executed 2026-10-21T23:25:15.125609+00:00 through 2026-10-21T23:25:19.527774+00:00; metadata new-base-history.json | context_only | 1278 HistoryRecord YAMLs validated, 0 invalid; current history snapshot contains 1279 files. Integrity does not establish scientific correctness or human acceptance. |
+| check-new-base-products | /private/tmp/traitmech-record-sweep-014.q8m4v2cs/new-base-products.log; Executed 2026-10-21T23:29:02.243310+00:00 through 2026-10-21T23:29:27.250859+00:00; metadata new-base-products.json | context_only | 361 canonical matches, 2 exact-synonym matches, 1 exception and 123 SKIPPED_NO_ADAPTER pairs. Configured scope is the two grounding mappings, not every target identifier or scientific claim. |
+| check-new-base-stage2-tests | /private/tmp/traitmech-record-sweep-014.q8m4v2cs/new-base-stage2-tests.log; Executed 2026-10-21T23:25:19.981459+00:00 through 2026-10-21T23:25:21.660071+00:00; metadata new-base-stage2-tests.json | context_only | Five tests passed in the explicitly selected Stage2 test file. This is not a full just test run or biological validation. |
+| historical-validate-products | /private/tmp/traitmech-record-sweep.FU79Gr/validate-products.log; Historical original execution 2026-10-19T07:33:16Z through 2026-10-19T07:34:01Z | context_only | Historical products exit 2; preserved provenance only, superseded for B14 by its actual fresh products run. |
+| historical-validate-products-retry-local | /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-local.log; Historical original execution 2026-10-19T07:34:53Z through 2026-10-19T07:35:24Z | context_only | Historical products exit 2; preserved provenance only, superseded for B14 by its actual fresh products run. |
+| historical-validate-products-retry-network | /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-network.log; Historical original execution 2026-10-19T07:35:34Z through 2026-10-19T07:36:03Z | context_only | Historical products exit 0; preserved provenance only, superseded for B14 by its actual fresh products run. |
+| check-temperature-optimum-mid1-validate | /private/tmp/traitmech-record-sweep-014.q8m4v2cs/temperature-optimum-mid1-validate.log; Executed 2026-10-22T01:08:30.910768+00:00 through 2026-10-22T01:08:31.726529+00:00; metadata temperature-optimum-mid1-validate.json | context_only | Native record validation passed; scientific interpretation is assessed separately. |
+| check-temperature-optimum-mid1-strict | /private/tmp/traitmech-record-sweep-014.q8m4v2cs/temperature-optimum-mid1-strict.log; Executed 2026-10-22T01:08:30.910807+00:00 through 2026-10-22T01:08:32.285946+00:00; metadata temperature-optimum-mid1-strict.json | context_only | The actual validate-strict command passed. |
+| check-temperature-optimum-mid1-snippets-network | /private/tmp/traitmech-record-sweep-014.q8m4v2cs/temperature-optimum-mid1-snippets-network.log; Executed 2026-10-22T01:08:35.520556+00:00 through 2026-10-22T01:08:38.971261+00:00; metadata temperature-optimum-mid1-snippets-network.json | context_only | All four supplied snippets were VERIFIED by the native abstract check and independently literal in the source audit. Literal occurrence does not establish adjacent numerical or causal claims. |
+| capture | /private/tmp/traitmech-record-sweep-014.q8m4v2cs/temperature-optimum-mid1.inspect.json; Actual successful native inspect with 101 captured inputs | context_only | All current source hashes and the exact target are bound before serialization. |
+| record | data/traits/environment/temperature_optimum_mid1.yaml; Whole current record | supports | Ten nodes, nine edges, twelve embedded events, one canonical example and no protein classes or instances. |
+| local-init | /private/tmp/traitmech-record-sweep-014.q8m4v2cs/batch014-local-initialization-receipt.json; Frozen current audit or exact retained receipt; original reading scope controls interpretation | context_only | Actual local initialization and first queue target; publication remains separate. |
+| policy | docs/GROUNDING_POLICY.md; Captured maintained authority | supports | Protein family/function grounding and optional protein instances. |
+| playbook | docs/CURATION_PLAYBOOK.md; Captured maintained authority | supports | Literal source scope and attributable acceptance. |
+| schema | src/traitmech/schema/traitmech.yaml; Captured maintained authority | supports | Current facets and NONMECHANISTIC scope. |
+| predicate-mapping | mappings/predicate_grounding.tsv; Captured maintained authority | supports | Wildcard increases mapping can populate empty IDs; current populated assertions are skipped. |
+| node-mapping | mappings/node_grounding.tsv; Captured maintained authority | supports | Current label/type keys and qualified mappings. |
+| identity | /private/tmp/traitmech-record-sweep-014.q8m4v2cs/temperature-optimum-mid1-ground-agent/identity-assessment.json; Frozen current audit or exact retained receipt; original reading scope controls interpretation | context_only | Active exact bin, direct parent and qualified historical aliases. |
+| nodes-edges | /private/tmp/traitmech-record-sweep-014.q8m4v2cs/temperature-optimum-mid1-ground-agent/node-edge-grounding-ledger.json; Frozen current audit or exact retained receipt; original reading scope controls interpretation | context_only | All ten node and nine edge judgments with positive controls. |
+| owners | /private/tmp/traitmech-record-sweep-014.q8m4v2cs/temperature-optimum-mid1-ground-agent/owner-provenance-assessment.json; Frozen current audit or exact retained receipt; original reading scope controls interpretation | context_only | Populated-ID skip guards and exact canonical backfill distinguished from discovery-only leads. |
+| owner-primary | /private/tmp/traitmech-record-sweep-014.q8m4v2cs/temperature-optimum-mid1-ground-agent/owner-primary-reading.json; Frozen current audit or exact retained receipt; original reading scope controls interpretation | context_only | Actual maintained writer and migration decision windows. |
+| human-search | /private/tmp/traitmech-record-sweep-014.q8m4v2cs/temperature-optimum-mid1-ground-agent/search-and-provenance.json; Frozen current audit or exact retained receipt; original reading scope controls interpretation | context_only | 172 ignored- and hidden-inclusive matching paths, 67 actual review target arrays, zero exact target. |
+| histories | /private/tmp/traitmech-record-sweep-014.q8m4v2cs/temperature-optimum-mid1-ground-agent/history-reading-provenance.json; Frozen current audit or exact retained receipt; original reading scope controls interpretation | context_only | Three current whole histories plus sixteen qualified prior whole readings; nineteen current projections. |
+| discovery | /private/tmp/traitmech-record-sweep-014.q8m4v2cs/temperature-optimum-mid1-ground-agent/discovery-disposition.json; Frozen current audit or exact retained receipt; original reading scope controls interpretation | context_only | Seven uncaptured history leads and two scripts remain matching-line context. |
+| alias-discovery | /private/tmp/traitmech-record-sweep-014.q8m4v2cs/temperature-optimum-mid1-ground-agent/alias-writer-discovery-only.json; Frozen current audit or exact retained receipt; original reading scope controls interpretation | context_only | Additional uncaptured alias writer remains discovery-only, not a fully read current owner. |
+| expression | /private/tmp/traitmech-record-sweep-014.q8m4v2cs/temperature-optimum-mid1-ground-agent/expression-and-readiness.json; Frozen current audit or exact retained receipt; original reading scope controls interpretation | context_only | Species catalog coverage is separate from exact strain or module support; adapter unavailable. |
+| expression-discovery | /private/tmp/traitmech-record-sweep-014.q8m4v2cs/temperature-optimum-mid1-ground-agent/expression-runner-current-discovery.json; Frozen current audit or exact retained receipt; original reading scope controls interpretation | context_only | Fresh bounded PATH/project/install-root discovery, not global absence. |
+| local-authority | /private/tmp/traitmech-record-sweep-014.q8m4v2cs/temperature-optimum-mid1-ground-agent/local-authority-reading.json; Frozen current audit or exact retained receipt; original reading scope controls interpretation | context_only | Exact current v3/v8/v85, mappings and schema windows. |
+| ground-reading | /private/tmp/traitmech-record-sweep-014.q8m4v2cs/temperature-optimum-mid1-ground-agent/reading-scope-receipt.json; Frozen current audit or exact retained receipt; original reading scope controls interpretation | context_only | Actual current and qualified prior reading scopes. |
+| ground-manifest | /private/tmp/traitmech-record-sweep-014.q8m4v2cs/temperature-optimum-mid1-ground-agent/evidence-manifest.json; Frozen current audit or exact retained receipt; original reading scope controls interpretation | context_only | All 29 frozen ground artifacts verified. |
+| metpo-primary | /private/tmp/traitmech-record-sweep-014.q8m4v2cs/repo/data/raw/metpo.owl; Selected actual primary statements at the recorded reading time | supports | Active bin and parent, inclusive 22–27 Cel restriction and raw alias provenance. |
+| metpo-primary-projection | /private/tmp/traitmech-record-sweep-014.q8m4v2cs/temperature-optimum-mid1-ground-agent/metpo-authority.json; Frozen current audit or exact retained receipt; original reading scope controls interpretation | context_only | Exact primary source hash and selected statement projection. |
+| chebi-primary | /private/tmp/traitmech-record-sweep.FU79Gr/pystow/oaklib/chebi.db; Selected actual primary statements at the recorded reading time | supports | Fatty-acid classes encompass the current meaningful material referents. |
+| chebi-primary-projection | /private/tmp/traitmech-record-sweep-014.q8m4v2cs/temperature-optimum-mid1-ground-agent/selected-chebi-primary-reading.json; Frozen current audit or exact retained receipt; original reading scope controls interpretation | context_only | Exact primary source hash and selected statement projection. |
+| ro-primary | /private/tmp/traitmech-record-sweep.FU79Gr/pystow/oaklib/ro.db; Selected actual primary statements at the recorded reading time | supports | RO:0002213 inherits RO:0002211 process domain and range. |
+| ro-primary-projection | /private/tmp/traitmech-record-sweep-014.q8m4v2cs/temperature-optimum-mid1-ground-agent/selected-ro-primary-reading.json; Frozen current audit or exact retained receipt; original reading scope controls interpretation | context_only | Exact primary source hash and selected statement projection. |
+| mendoza-metadata | DOI:10.1146/annurev-micro-091313-103612; Indexed identity/status and generic abstract | supports | Generic unsaturation and sensing attribution; exact-bin sufficiency remains unknown. |
+| mendoza-publisher | DOI:10.1146/annurev-micro-091313-103612; Retained actual browser abstract export, not raw HTML | supports | Original tool-call interval retained; origin cache-fetch time is unknown. |
+| cold-metadata | DOI:10.1007/s42770-023-01057-4; Indexed identity/status and generic abstract | supports | Assigned review identity and bounded generic membrane context. |
+| cold-primary | DOI:10.1007/s42770-023-01057-4; Zero-based all HTML paragraphs 10 through classification clause, 17 generic physics, selected 24 and first two sentences of 37 | supports | Only bounded generic physics and existing B.subtilis source attribution adopted; no universal predominance or intervention efficacy. |
+| tolner-metadata | DOI:10.1016/s0300-9629(97)00003-0; Indexed title/status and opening high-temperature abstract sentences | supports | Literal high-temperature context does not supply the adjacent specific 22–27 degree optimum claim. |
+| tolner-zero-hit | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1016%2Fs0300-9629%2897%2900003-0&amp;format=json&amp;resultType=core; Original successful HTTP response with zero indexed matches | context_only | A retrieval diagnostic superseded for identity by the positive PMID and Crossref responses; not an absent-paper claim. |
+| tolner-crossref | DOI:10.1016/s0300-9629(97)00003-0; Crossref identity metadata | supports | Positive identity after the original zero-hit DOI query. |
+| tolner-author | DOI:10.1016/s0300-9629(97)00003-0; Retained author portal abstract, opening high-temperature sentences | supports | Independent abstract surface; not a full-paper absence judgment. |
+| canonical-metadata | DOI:10.1099/ijsem.0.006325; Indexed title/status and strain/growth/optimum abstract clauses | supports | CR14T reported optimum 25 degrees C, distinct from growth at 20–30 degrees C. |
+| rsc-metadata | DOI:10.1039/d4cc03114h; Indexed identity/status and abstract | supports | Generic membrane adaptation context only; current full body unavailable. |
+| current-browser | DOI:10.1099/ijsem.0.006325; Actual browser export, canonical publisher abstract lines 125–128; RSC access errors retained separately within export | partial | Canonical optimum support is positive. This export is not raw HTML; first call start was not separately instrumented and original cache-fetch times are unknown. RSC 403 responses are diagnostics, not article bodies. |
+| taxonomy | NCBITaxon:3080537; Whole retained official response; original acquisition time | supports | Rubellicoccus peritrichatus and CR14 type aliases are positive independently of phenotype support. |
+| taxonomy-copy | /private/tmp/traitmech-record-sweep-014.q8m4v2cs/temperature-optimum-mid1-ground-agent/taxonomy-reuse.json; Frozen current audit or exact retained receipt; original reading scope controls interpretation | context_only | Original official acquisition and current exact copy times remain distinct. |
+| taxonomy-reading | /private/tmp/traitmech-record-sweep-014.q8m4v2cs/temperature-optimum-mid1-ground-agent/taxonomy-identity.json; Frozen current audit or exact retained receipt; original reading scope controls interpretation | context_only | Current official identity reading; no phenotype inference from taxonomy. |
+| sources | /private/tmp/traitmech-record-sweep-014.q8m4v2cs/temperature-optimum-mid1-source-agent/source-assessment.json; Frozen current audit or exact retained receipt; original reading scope controls interpretation | context_only | Five works with overall UNKNOWN source scope and one bounded source-note finding. |
+| source-identities | /private/tmp/traitmech-record-sweep-014.q8m4v2cs/temperature-optimum-mid1-source-agent/source-identities-status.json; Frozen current audit or exact retained receipt; original reading scope controls interpretation | context_only | All assigned identities and bounded metadata notice fields. |
+| placements | /private/tmp/traitmech-record-sweep-014.q8m4v2cs/temperature-optimum-mid1-source-agent/source-placement-ledger.json; Frozen current audit or exact retained receipt; original reading scope controls interpretation | context_only | All twelve external placements and ten grounding fields accounted. |
+| snippets | /private/tmp/traitmech-record-sweep-014.q8m4v2cs/temperature-optimum-mid1-source-agent/snippet-ledger.json; Frozen current audit or exact retained receipt; original reading scope controls interpretation | context_only | All four supplied snippets literal; adjacent inference remains separate. |
+| notes | /private/tmp/traitmech-record-sweep-014.q8m4v2cs/temperature-optimum-mid1-source-agent/source-note-ledger.json; Frozen current audit or exact retained receipt; original reading scope controls interpretation | context_only | All ten evidence notes plus canonical note assessed within explicit scope. |
+| source-nodes-edges | /private/tmp/traitmech-record-sweep-014.q8m4v2cs/temperature-optimum-mid1-source-agent/node-edge-source-ledger.json; Frozen current audit or exact retained receipt; original reading scope controls interpretation | context_only | All ten nodes and nine edges with qualified physical/source attribution. |
+| classification | /private/tmp/traitmech-record-sweep-014.q8m4v2cs/temperature-optimum-mid1-source-agent/classification-assessment.json; Frozen current audit or exact retained receipt; original reading scope controls interpretation | context_only | Mesophilic exactness remains unknown; a growth interval is not an outside-bin optimum. |
+| canonical | /private/tmp/traitmech-record-sweep-014.q8m4v2cs/temperature-optimum-mid1-source-agent/canonical-assessment.json; Frozen current audit or exact retained receipt; original reading scope controls interpretation | context_only | Reported 25 degree optimum supports the bin, separately from the 20–30 growth interval. |
+| source-reading | /private/tmp/traitmech-record-sweep-014.q8m4v2cs/temperature-optimum-mid1-source-agent/primary-reading-scope.json; Frozen current audit or exact retained receipt; original reading scope controls interpretation | context_only | Selected primary passages and explicit excluded detailed mechanism scope. |
+| source-access | /private/tmp/traitmech-record-sweep-014.q8m4v2cs/temperature-optimum-mid1-source-agent/source-access-limits.json; Frozen current audit or exact retained receipt; original reading scope controls interpretation | context_only | Body access limits and prior browser observations are not substituted as current body evidence. |
+| source-reuse | /private/tmp/traitmech-record-sweep-014.q8m4v2cs/temperature-optimum-mid1-source-agent/source-reuse-receipt.json; Frozen current audit or exact retained receipt; original reading scope controls interpretation | context_only | Original acquisition, current copy and current interpretation clocks are separate. |
+| source-native | /private/tmp/traitmech-record-sweep-014.q8m4v2cs/temperature-optimum-mid1-source-agent/native-check-context.json; Frozen current audit or exact retained receipt; original reading scope controls interpretation | context_only | Four native VERIFIED fields and four manual literal matches. |
+| source-manifest | /private/tmp/traitmech-record-sweep-014.q8m4v2cs/temperature-optimum-mid1-source-agent/evidence-manifest.json; Frozen current audit or exact retained receipt; original reading scope controls interpretation | context_only | All 28 frozen source artifacts verified. |
+| root-reading | /private/tmp/traitmech-record-sweep-014.q8m4v2cs/temperature-optimum-mid1-source-root/selected-primary-reading.json; Frozen current audit or exact retained receipt; original reading scope controls interpretation | context_only | Independent bounded primary/owner readings; nineteen history projections and complete exact-target history, not nineteen current whole bodies. |
+| adjudication | /private/tmp/traitmech-record-sweep-014.q8m4v2cs/temperature-optimum-mid1-root-adjudication.json; Final root adjudication | supports | Exact finding fields, owner qualifications, actions and unresolved source scopes control serialization. |
+
+## Limits And Additional Notes
+
+- Full just test was NOT_RUN under the selected review-only diagnostic scope; only the five focused Stage2 tests are recorded. Products retains 123 no-adapter skips. Common checks establish bounded software/data integrity, not scientific support.
+- Exact22–27 causal sufficiency and exact mesophilic alias equivalence remain UNKNOWN; no outside-bin optimum is inferred from a20–45 growth-range statement.
+- Mendoza and Tolner inspected abstracts do not establish every adjacent numerical claim; no full-paper absence claim.
+- RSC current HTML/PDF403 failures are access diagnostics. Prior successful browser scope observation has no local body bytes and is not substituted as new primary reading.
+- Ramón selected B.subtilis desaturation/branching source attribution is bounded by organism/environment; no universal predominance or detailed intervention efficacy inferred.
+- Canonical25°C optimum and20–30 growth interval are distinct and source-specific; body/complete response curve not acquired.
+- Metadata notice fields only; not exhaustive publication-status clearance.
+- Original request, prior copy and present reading times remain separate; old diagnostics are not fresh B14 checks.
+- Initial broad keyword paragraph display exposed unrelated mechanism context and was truncated; only p10 classification, p17 generic physics and bounded B.subtilis existing-note attribution p24/p37 adopted. Detailed pathogenic or engineering content displayed incidentally was not adjudicated or developed.
+- Scientific exact mesophilic synonym equivalence remains UNKNOWN; no automatic finding from a broad growth-range statement. Legacy Mesophilie source version is not recovered.
+- Adaptation process versus tuned-composition result wording is qualified, without a forced extra facet finding.
+- Exact numeric-bin causal sufficiency and source-note/literal attribution are separate source-audit questions.
+- Seven uncaptured histories/two node-script leads and one separately discovered alias writer remain matching-line context, not complete-body current owners.
+- Covered B.subtilis/E.coli source species do not establish strain/module support; current structured adapter is unavailable within declared bounds.
+- B14 differs from B13; only explicitly hashed individual historical readings and retained primary responses are reused.
+- Private/remote human acceptance and detailed dangerous-pathogen mechanisms remain unassessed.
+- Exact mesophilic/Mesophilie equivalence remains UNKNOWN: a20–45°C growth range does not establish an optimum outside22–27°C.
+- Source acquisition, present copy, extraction and actual reading times are separate. Four literal matches do not validate every adjacent numerical or causal inference.
+- Root history scope is19 projections plus the complete exact-target history, not19 current whole-body readings.
+- Detailed pathogen survival, fitness, ROS-defense, AMR and intervention branches remain UNASSESSED_SCOPE.
+- Historical products failures/retry and original cache provenance remain in /private/tmp/traitmech-record-sweep-014.q8m4v2cs/new-base-diagnostic-independent-review-agent/fresh-products-completion.json. The earlier outstanding-products status is superseded by the actual fresh run; no blanket cross-batch reuse qualification is asserted.
+- Current final findings are one grouped formal-role major and two distinct source-placement/provenance minors; no numerical, alias or canonical finding is inherited from another record.
+- This serializer adopts frozen audits and root adjudication. Original acquisition times, current copy/read intervals, browser clock limits and inaccessible bodies remain explicit. No scientific record, state, Git or publication change is performed by this serializer.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261022T011938Z-temperature-optimum-mid1
+kind: record
+repository: CultureBotAI/TraitMech
+title: Whole-record review of temperature optimum mid1
+started_at: '2026-10-22T01:08:09.187966Z'
+finished_at: '2026-10-22T01:19:38Z'
+reviewer:
+  identity: codex
+  kind: agent
+  independence: independent
+  independence_basis: Separate source and grounding audits plus root primary reading
+    and final adjudication supply the scientific judgments. Serializer preparation
+    does not claim an additional whole-paper scientific review.
+  model: GPT-6 (Codex)
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: Temperature optimum mid1 needs correction of two imported process-only relations
+  and qualification of one high-temperature source note. Human acceptance needs attribution.
+  Active bin identity, canonical25°C optimum and all four literal snippets are supported;
+  exact synonym equivalence and physiological bin calibration remain unresolved.
+source:
+  git_revision: 508ee3089c93a36413969cd1ede7f9528a1940a4
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: da8896328a0fd6cc92f1adf0d8be8980d0ddd41f3172c7936f2c7f119b293ac1
+    role: context
+  - path: .claude/skills/manage-identifiers/SKILL.md
+    sha256: a5c5aaa10943ee6d15423a5878ed2189e4e0b28a5c6e09fda80ba299ab779ebb
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: bb03efa3bbd3748ee1dccf57612a6ce8fcc861f20eb57c33eb16e3ac1dd728bd
+    role: context
+  - path: CLAUDE.md
+    sha256: 4d328127022388e1affe9b71be24bc93944a971636d0d0ea902f6511e0b405c5
+    role: context
+  - path: DO_NOT_WORK.md
+    sha256: 9ae0b05cc06f4ce8938801287a568d535e471d06dda5e258fcdbbed222abf712
+    role: context
+  - path: conf/evidence_snippet_baseline.tsv
+    sha256: cbe5c82379e796446366b292f15194d80625b928119b482a67d857a379ab31a7
+    role: context
+  - path: conf/record_review.yaml
+    sha256: 5adc6244761fb2baf8a059d81f23b0c9b32a33f9426ab84094234c3ec417269d
+    role: context
+  - path: data/raw/biolink-model.yaml
+    sha256: 4955709e1cac1d26fd657f7a0c29d6c8390f42e41f9ebfab859c82b102f2bebb
+    role: context
+  - path: data/raw/metpo.owl
+    sha256: 8b6f8fe0510a698579e532658c8ace05da2550093365df9ca83feb0741778415
+    role: context
+  - path: data/traits/environment/temperature_optimum.yaml
+    sha256: e419e363fd4b2e26f2ce3f092b117fba3103e5155e6dafb95bb5ce5c76644a0d
+    role: context
+  - path: data/traits/environment/temperature_optimum_mid1.yaml
+    sha256: 4e13ab907307d4c88f5e787c45400a820c8c12a04fe311717fed3f3c6920510f
+    role: target
+  - path: docs/CURATION_PLAYBOOK.md
+    sha256: 735e9b810471da9f7d8364e35ffe1e741edb3421480dac01727db6ea5aa65da9
+    role: context
+  - path: docs/GROUNDING_POLICY.md
+    sha256: 891678c983c2283a47c81c47950b35753981e9339d105f3bbdda92a1f5ab7f42
+    role: context
+  - path: docs/PATHWAY_LINKS.md
+    sha256: 800492750fb3c025dfdf7164813e7a00b3bd72dc8cc6f8e754e2aed5d7bbf414
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: cac714488cad03263ca3847737d5f70d174d40b5be677a09e0c1d9c814d9bc6a
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/infrastructure/node-type-consistency/2026-08-15T014631Z-claude-code-9d7f4d.yaml
+    sha256: 21f19561c0d4769e7acc62e05e41d0d395a0f239938f00829f79f2b9c3ac2510
+    role: context
+  - path: history/infrastructure/pr664-adversarial-review/2026-09-07T010000Z-codex-60bca2.yaml
+    sha256: 44f328d3f4735a641a33e6f5823a043ccc87594971cfdd9b58be134f3ea70106
+    role: context
+  - path: history/other/canonical-examples-batch1/2026-08-20T074839Z-claude-code-6fb2f5.yaml
+    sha256: c938f2928f2eb41505d58c2fb72d8de01d99534d766de9af400010e8778988a4
+    role: context
+  - path: history/other/canonical-examples-six/2026-08-21T065406Z-codex-a1ab82.yaml
+    sha256: 23be5f6ab519511e3e23feffa85813eec4fa3c7e6b900e77fd4a3adc0c26da0e
+    role: context
+  - path: history/records/homeoviscous_adaptation/2026-09-15T070756Z-codex-24f768.yaml
+    sha256: e813ec0f62859a2d04d6964a082ac78eea8966e44b8224a3fe49eff8552bd778
+    role: context
+  - path: history/records/homeoviscous_adaptation/2026-09-15T071638Z-codex-eab563.yaml
+    sha256: a0aaa509360e1b845bc09a6a0c598a4e9f1a1b31c63be1907dda97293cf605cd
+    role: context
+  - path: history/records/homeoviscous_adaptation/2026-09-15T072704Z-codex-6cb554.yaml
+    sha256: f82d94646e70fd82a5d3f6939339efae8ce0fe5e80fe6f50aab994de6c409fa8
+    role: context
+  - path: history/records/mesophilic/2026-09-04T004000Z-codex-14a39b.yaml
+    sha256: cdf9710543d62277f232e633fca2dd146a1ae45dab75f957a5462929650accf0
+    role: context
+  - path: history/records/mesophilic/2026-09-04T130000Z-codex-183.yaml
+    sha256: 3690075be370a302871b86f5f37fd70776296927d7b98c58d27af10dc2d2cc31
+    role: context
+  - path: history/records/mesophilic/2026-09-06T133000Z-codex-133a5b.yaml
+    sha256: 1ae727f3ba27c1d3d05fdcdd488aa48b9369c3c4a71d3fb38521912a841ef51a
+    role: context
+  - path: history/records/temperature_optimum/2026-09-15T070759Z-codex-e0d923.yaml
+    sha256: 05e6ac08e579e45031473bc1b2ebd8089d18d639534ac5db409d705943882b86
+    role: context
+  - path: history/records/temperature_optimum_high/2026-09-04T032000Z-codex-f0b8c3.yaml
+    sha256: fea3d657cff8ef0b7a7fe783991943f1248f163f2a8ca59ddb218a4183649772
+    role: context
+  - path: history/records/temperature_optimum_high/2026-09-04T200000Z-codex-183.yaml
+    sha256: 10cd203cb37e56abd0f36721b0cdb857bd1f0c769d200d4df963028bb1ab0761
+    role: context
+  - path: history/records/temperature_optimum_high/2026-09-08T033000Z-codex-506e08.yaml
+    sha256: d7aa33a420444c86380ce26aa63c3a77950a19306f3b9bd3692bf2f5be0be999
+    role: context
+  - path: history/records/temperature_optimum_mid1/2026-09-15T070759Z-codex-35d0a7.yaml
+    sha256: c10f51ae7c1806d27cf51df19d9b2e8a601cbdae078a9cf1de8ffab49f339a53
+    role: context
+  - path: history/records/temperature_optimum_mid3/2026-09-15T070800Z-codex-44b4c3.yaml
+    sha256: 410c667e0f7988e3f8df1319c4e42326130b5ee46b34854009b8a744b67ab5e7
+    role: context
+  - path: history/records/temperature_optimum_very_low/2026-09-04T034000Z-codex-1f380e.yaml
+    sha256: 86baac0f11d45ba1989ba43c4c8a43294c652ebd6298f98cccdbb3cd9b32b198
+    role: context
+  - path: history/records/temperature_optimum_very_low/2026-09-04T210000Z-codex-183.yaml
+    sha256: d2dff988a235fc27369f305585f4e865266f3dabf23fa06670a6e30a415f2f6e
+    role: context
+  - path: history/records/temperature_optimum_very_low/2026-09-08T032500Z-codex-77dafe.yaml
+    sha256: dfa857844cb78f8fbb905a762242c0671701caf54fe35c81da0c38422142cab3
+    role: context
+  - path: justfile
+    sha256: 96c01dd8457ab2b91a6f90cb199eb99a32c649c9fba1ef0658ab407cfb009496
+    role: context
+  - path: mappings/node_grounding.tsv
+    sha256: d7de9b3ab04960c4775a5bc295a945bd1a72d81467830459f4793e654f82b3d0
+    role: context
+  - path: mappings/predicate_grounding.tsv
+    sha256: 8e28c19e93aca3dc164a3befbe2612b289241de457c59f499e65936c03b7ce52
+    role: context
+  - path: mappings/trait_exact_match_review.tsv
+    sha256: 7728593d526d9a723716e5daad64beb7e1ab5c2e4221ae8d43dd9480cd02f62b
+    role: context
+  - path: mappings/uniprot_regrounding_candidates.tsv
+    sha256: c36d8e038886d137d5a1ae609240e59ce74b6aeee17ae24f21b6c4a0d7407391
+    role: context
+  - path: proposals/metpo_traitmech_v3/metpo_proposal_classes_robot.tsv
+    sha256: 1a1cc789782cfae195c1fc81ddaf848d06d162c7434d94cceb66838de98ab6fa
+    role: context
+  - path: proposals/metpo_traitmech_v3/proposal.md
+    sha256: 37be7b2c2efe0d1598d62b8df04f08262ba74b9d8068e010df6ee48069449067
+    role: context
+  - path: proposals/metpo_traitmech_v8/metpo_proposal_properties_robot.tsv
+    sha256: 5445e86e845e0a2638292cff4586bf3858b1341d37fecf2e86cefcdbc9a046cd
+    role: context
+  - path: proposals/metpo_traitmech_v8/proposal.md
+    sha256: 119d51e7b7194890514a9e313505212bab92aeba607f7c1b8f9d9d2edeef67e7
+    role: context
+  - path: proposals/metpo_traitmech_v85/metpo_proposal_classes_robot.tsv
+    sha256: 6f32bf183eda67697a4d4c9920416473b0d09b78fab4f1d8d67140db68fb8550
+    role: context
+  - path: proposals/metpo_traitmech_v85/proposal.md
+    sha256: b41cf306750f63743bf9d7c465f3e9ad8b4ec75f19a383d64e2187331d721f05
+    role: context
+  - path: proposals/metpo_traitmech_v9/metpo_proposal_properties_robot.tsv
+    sha256: 5ae84dd1351a4bec39adf7bcd5b3a8982af2e95fbccd0b53c0efa3efbfc89b0e
+    role: context
+  - path: proposals/metpo_traitmech_v9/proposal.md
+    sha256: 85fde22f4733863188b437cfcf7552a31fea07ad1d32c0400cf493295c1e1156
+    role: context
+  - path: reports/metpo_2026_06_12_active_review.tsv
+    sha256: 45e9c6471475635ba1f2602cd636a119d490f5dbd8dd6ac8af1aab89a321379f
+    role: context
+  - path: reports/metpo_2026_06_12_release_delta.tsv
+    sha256: afe858d2aa0ade08322c7808d5917ff370e069ba02c2642d483342db8e9323ac
+    role: context
+  - path: reports/ontology_snapshot_manifest.tsv
+    sha256: 4a157279a8c4e3fc2afb5382a45c31961991bbd1f330f26d0061b0cfd0b4d213
+    role: context
+  - path: research/traits/environment/temperature_optimum_mid1-deep-research-falcon.md
+    sha256: c2f2110483e480e51bb8e32559d59470d6de1494262009273b5f36328b4cb388
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: scripts/add_homeoviscous_adaptation_trait.py
+    sha256: 1c757fd67bda18d2f4afb2fbf63d899844d416d084e2b9d53e298182ae2e4d09
+    role: context
+  - path: scripts/audit_causal_graphs.py
+    sha256: e0c26506c9de712700317284f142097e7bf69334806b8010db5d6517e905e834
+    role: context
+  - path: scripts/audit_graph_protein_taxa.py
+    sha256: d3375861829c612483b3545dd0f5e2b79872a4576b626edc08714a09fbd9a24d
+    role: context
+  - path: scripts/audit_predicate_domains.py
+    sha256: 35be8589638b8b21379f2dfd7fa7fb7d4eb422ccf71063e1e21a6bc19b767bcf
+    role: context
+  - path: scripts/audit_unapplied_groundings.py
+    sha256: 5afa6a602f0d7d5107adebf8b067d61bde9ea9adb267f9dfaed8a0b7cc0cc76b
+    role: context
+  - path: scripts/audit_uniprot_grounding.py
+    sha256: 91eb2165c69b3a4fcb53154dc8c835ac1070577f88065a43dfc881284d3d1052
+    role: context
+  - path: scripts/backfill_canonical_examples_444.py
+    sha256: 18ca0766789c239d693ef665e8b1d43c1209a0f414a326f1c5d890f88de7b20c
+    role: context
+  - path: scripts/connect_mesophilic_graph_183.py
+    sha256: 3f1fa78321d7aa98dc2fedde9784e71ed60624a94f825bf3af1674753af56f85
+    role: context
+  - path: scripts/connect_temperature_delta_high_graph_183.py
+    sha256: ccbb1e6bb0e050d2975425914d6412fb3eb5812720407e1d143fbaae5a548bb7
+    role: context
+  - path: scripts/connect_temperature_delta_very_low_graph_183.py
+    sha256: 19eb2722de2fae0c76bf4c83b5f5b13f09841b17def22cdccb86d373711bf879
+    role: context
+  - path: scripts/connect_temperature_optimum_high_graph_183.py
+    sha256: 7d2c6bee0f2af46cec82afe93b93b5a993ffb6042f953e7793b2bbc6ea713504
+    role: context
+  - path: scripts/connect_temperature_optimum_very_low_graph_183.py
+    sha256: 4749be5b5aacc87817ea013e587c41096e8a213c93dde74546f4906a0a08dc7e
+    role: context
+  - path: scripts/connect_temperature_range_mid3_graph_183.py
+    sha256: 0b72a42532f79c8efef52aaec4e60e0b58a7c8b9bc7ec288b9fa21a4c0e25656
+    role: context
+  - path: scripts/connect_temperature_range_mid4_graph_183.py
+    sha256: dd4b85888e88346adb515170c8fa37d542c7c7d9307d8a9fc63b22bdd6fb8b70
+    role: context
+  - path: scripts/connect_temperature_range_very_low_graph_183.py
+    sha256: 71755acb7ce3311fd473c8bef9a71dfed5fc6b8089b79cf33ea95cd5d1dad0a1
+    role: context
+  - path: scripts/enrich_lateral_flagellation_trait.py
+    sha256: 841e82aad335fcb81d9ba6113b36eed8b35bb9c9f7ae1132effe6e2a1bae5520
+    role: context
+  - path: scripts/finalize_metpo_2026_06_12_review.py
+    sha256: b850b386183b2d86647dada43f7f157059017dbb881f7e1fb2e220ae697d3bea
+    role: context
+  - path: scripts/ground_causal_nodes.py
+    sha256: 204ce4162544154b1752b65da2136538847ea25ced26a52f5708eadff08f5d42
+    role: context
+  - path: scripts/ground_causal_predicates.py
+    sha256: 5a788eeaabf3a56b0d82c469a3e3fe28f1d51707d9382313b9a94289be7d1381
+    role: context
+  - path: scripts/migrate_disposition_typing.py
+    sha256: ebafdd145fc0729d32f3b8a45f570d97a8e001838afadd698e2b246cb8950714
+    role: context
+  - path: scripts/migrate_enables_range_edges.py
+    sha256: 3d0d1bddcaa76baef5833973e2e979e4fee1f834c67d1abcc69a8d866ecb8f32
+    role: context
+  - path: scripts/migrate_enables_trait_edges.py
+    sha256: a5e7965ee4f6b6ba5bae3a06bced2a83cbf755f3b9b150ce6acc0cd808cb1d88
+    role: context
+  - path: scripts/migrate_metpo_2026_06_12.py
+    sha256: 0f3945e7b8e6ddccdc9eaeed32737a2a1cf0832748af2b72a6a0195ba661188f
+    role: context
+  - path: scripts/migrate_microbe_domain_edges.py
+    sha256: 5187ccfb2897d415b243792a27afd6002c0eea4b167068639ff5be73ed583bb6
+    role: context
+  - path: scripts/migrate_name_match_groundings.py
+    sha256: 9b3ea1153839b9b260638cef95eba2d1ccc6d7b3825e7352c33cceb21bfe4dd4
+    role: context
+  - path: scripts/migrate_node_type_consistency.py
+    sha256: a3e7bc170e60f406a73e06c893d74f5253671028d3d40cc15ecf882b6684a69e
+    role: context
+  - path: scripts/migrate_pathway_vs_process.py
+    sha256: f236de7183048732e9001b7fac4367affff58d8b7a7d5c63286e6b058a4b38c2
+    role: context
+  - path: scripts/migrate_process_quality_consistency.py
+    sha256: 1a83ad3dba79ed0c958b875a6fcc4b9e562259af26da2f248d32d5cf7784f80a
+    role: context
+  - path: scripts/migrate_protein_vs_activity.py
+    sha256: 0b183248ff22d3d8aa66b35aece40c53b516684ca499cf73b7714206031dad49
+    role: context
+  - path: scripts/migrate_remaining_microbe_domain_edges.py
+    sha256: 110542d49e25007122c7c254966ad87dc3f7f054358766e933aff89e8ef0a994
+    role: context
+  - path: scripts/migrate_uniprot_instance_groundings.py
+    sha256: 07d2a5405cff5857239757e0a3791f411b1d25709a5760c1e49553eed066993d
+    role: context
+  - path: scripts/normalize_homeoviscous_nodes.py
+    sha256: 9b219161570aff3ca48bf79d7fac0fe0da0a629a32ce6ca60bee9b4b9d0f4bc9
+    role: context
+  - path: scripts/record_review.py
+    sha256: 95a4ec41e38ec47ba3578e76838c46a0adbf47e49ad3636524735d08cfcb1c4d
+    role: context
+  - path: scripts/repair_pr664_adversarial_review.py
+    sha256: 5717a89bee383aa0e12aec9bf30434ccff74efcbe64684d13ef9b290b1accf96
+    role: context
+  - path: scripts/review_mesophilic_graph_183.py
+    sha256: 46f9548808936268217a5e078fc1fa64d74cc2eeb69863ab6f3bb0da21e2b59c
+    role: context
+  - path: scripts/review_obligately_piezophilic_graph_183.py
+    sha256: d8fcbbb725162212cfce96bed9800e2cf08374170b7d929a1928248178111efb
+    role: context
+  - path: scripts/review_temperature_delta_high_graph_183.py
+    sha256: dcade5d2fdf07c76e06cd5d8abca898af95a8faabf70e45a62bebf951f2ae31b
+    role: context
+  - path: scripts/review_temperature_delta_very_low_graph_183.py
+    sha256: 1ac23973b6cf54861f6ae79afefe93e39cc9382a93c73c36a8daa37b376334d0
+    role: context
+  - path: scripts/review_temperature_optimum_high_graph_183.py
+    sha256: ed7b046129400db1fa4352250d27569e0844ef837000577f1448e565a0e60576
+    role: context
+  - path: scripts/review_temperature_optimum_very_low_graph_183.py
+    sha256: 17e41b0426e6c41a43e7624799cf35db9737ef372d3aeb3ea40ac0a2dce20869
+    role: context
+  - path: scripts/review_temperature_range_mid3_graph_183.py
+    sha256: 623668a7f0f2cd487c096c2b786471fe986f64cfd5c34edad30422299f03794a
+    role: context
+  - path: scripts/review_temperature_range_mid4_graph_183.py
+    sha256: 51611a8200146f1887831e5b2a49800151dc0b112d177853c3055dd442852a5a
+    role: context
+  - path: scripts/review_temperature_range_very_low_graph_183.py
+    sha256: 4a48e54f1e448c2a4f67088cce8ecfe248f81034faf7271ab272e45e9e2541d4
+    role: context
+  - path: scripts/seed_from_metpo.py
+    sha256: 0fb9c9f7ea6a8f137eecd5c319775b511c398dba6158c81b1fbfb94210f7d851
+    role: context
+  - path: scripts/verify_metpo_proposal.py
+    sha256: f58355151f7d6a807bb50dc8b732184994b0d6145d3c57f54e29fd0bb76268b6
+    role: context
+  - path: src/traitmech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+  - path: src/traitmech/schema/traitmech.yaml
+    sha256: 46c47fc627b80ccbba1e8ab3fb6f2aee93bc2aef7aaf72fe9aadc3257f2c02dd
+    role: context
+  - path: src/traitmech/validation/write_validated.py
+    sha256: 68cfeb876a60d67fd72d5a2800cd29e41b5cf563be5a27b698398a5bb3e67231
+    role: context
+targets:
+- target_id: METPO:1000443
+  path: data/traits/environment/temperature_optimum_mid1.yaml
+  label: temperature optimum mid1
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/temperature_optimum_mid1.yaml
+    role: Maintained target; read-only review.
+  - repository: CultureBotAI/TraitMech
+    path: mappings/predicate_grounding.tsv
+    role: Maintained predicate context; recurrence assessed only after capture.
+  - repository: CultureBotAI/TraitMech
+    path: mappings/node_grounding.tsv
+    role: Maintained grounding context; recurrence assessed only after capture.
+  record_class: TraitRecord
+scope:
+  description: One entire maintained TraitRecord. Contextual ontology, source, parent,
+    writer and history inputs are not additional review targets.
+  selection: First record in the actual B14 queue; current 257-line target and 101
+    captured inputs. Local review is independent of remote publication.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - METPO:1000443
+checks:
+- check_id: new-base-qc
+  name: Fresh B14 corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000443
+  command: just qc
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 'Actual just qc passed: strict validation of 1130 records with 0 errors;
+    graph audit: 74 baselined, 0 new and 0 blocking findings; 135 connected graphs
+    and 1588 wired nodes; protein coverage: 729 graphs (134 pass, 594 NONMECHANISTIC,
+    0 gaps, 1 protected); snippet audit: 2419 baselined, 0 new and 0 blocking findings;
+    19 PathwayMech links. These are corpus diagnostics, not scientific validation
+    of this target.'
+  evidence_ids:
+  - check-new-base-qc
+  - fresh-common-completion
+  scope_note: Actual B14 execution at base 508ee3089c93a36413969cd1ede7f9528a1940a4.
+    QC children share the recorded aggregate interval; no invented child times. Current
+    source maps/cache bytes are rechecked; no prior-batch check is relabelled as fresh.
+- check_id: new-base-history
+  name: Fresh B14 history integrity
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000443
+  command: just validate-history
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 1278 HistoryRecord YAMLs validated, 0 invalid; current history snapshot
+    contains 1279 files. Integrity does not establish scientific correctness or human
+    acceptance.
+  evidence_ids:
+  - check-new-base-history
+  - fresh-common-completion
+  scope_note: Actual B14 execution at base 508ee3089c93a36413969cd1ede7f9528a1940a4.
+    QC children share the recorded aggregate interval; no invented child times. Current
+    source maps/cache bytes are rechecked; no prior-batch check is relabelled as fresh.
+- check_id: new-base-products
+  name: Fresh B14 mapping identifier/label validation
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000443
+  command: env PYSTOW_HOME=/private/tmp/traitmech-record-sweep.FU79Gr/pystow OAKLIB_HOME=/private/tmp/traitmech-record-sweep.FU79Gr/pystow/oaklib
+    SQLITE_TMPDIR=/private/tmp/traitmech-record-sweep.FU79Gr/sqlite-tmp just validate-products
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 361 canonical matches, 2 exact-synonym matches, 1 exception and 123 SKIPPED_NO_ADAPTER
+    pairs. Configured scope is the two grounding mappings, not every target identifier
+    or scientific claim.
+  evidence_ids:
+  - check-new-base-products
+  - fresh-common-completion
+  scope_note: Actual B14 execution at base 508ee3089c93a36413969cd1ede7f9528a1940a4.
+    QC children share the recorded aggregate interval; no invented child times. Current
+    source maps/cache bytes are rechecked; no prior-batch check is relabelled as fresh.
+- check_id: new-base-stage2-tests
+  name: Focused Stage2 writer tests
+  status: passed
+  required: false
+  target_ids:
+  - METPO:1000443
+  command: uv run pytest tests/test_curate_stage2_causal_graphs.py -q
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Five tests passed in the explicitly selected Stage2 test file. This is
+    not a full just test run or biological validation.
+  evidence_ids:
+  - check-new-base-stage2-tests
+  - fresh-common-completion
+  scope_note: Actual B14 execution at base 508ee3089c93a36413969cd1ede7f9528a1940a4.
+    QC children share the recorded aggregate interval; no invented child times. Current
+    source maps/cache bytes are rechecked; no prior-batch check is relabelled as fresh.
+- check_id: temperature-optimum-mid1-validate
+  name: Focused native validation
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000443
+  command: just validate data/traits/environment/temperature_optimum_mid1.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Native record validation passed; scientific interpretation is assessed
+    separately.
+  evidence_ids:
+  - check-temperature-optimum-mid1-validate
+- check_id: temperature-optimum-mid1-strict
+  name: Focused strict validation
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000443
+  command: just validate-strict data/traits/environment/temperature_optimum_mid1.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: The actual validate-strict command passed.
+  evidence_ids:
+  - check-temperature-optimum-mid1-strict
+- check_id: temperature-optimum-mid1-snippets-network
+  name: Focused network snippet check
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000443
+  command: just verify-snippets --record data/traits/environment/temperature_optimum_mid1.yaml
+    --out /private/tmp/traitmech-record-sweep-014.q8m4v2cs/temperature-optimum-mid1-snippets.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: All four supplied snippets were VERIFIED by the native abstract check and
+    independently literal in the source audit. Literal occurrence does not establish
+    adjacent numerical or causal claims.
+  evidence_ids:
+  - check-temperature-optimum-mid1-snippets-network
+- check_id: native-inspect
+  name: One-target native review capture
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000443
+  command: uv run python scripts/record_review.py inspect --targets /private/tmp/traitmech-record-sweep-014.q8m4v2cs/temperature-optimum-mid1.targets.json
+    --input .claude/skills/curate-yaml-record/references/review-checklist.md --input
+    .claude/skills/manage-identifiers/SKILL.md --input .claude/skills/review-yaml-record/SKILL.md
+    --input CLAUDE.md --input DO_NOT_WORK.md --input conf/evidence_snippet_baseline.tsv
+    --input conf/record_review.yaml --input data/raw/biolink-model.yaml --input data/raw/metpo.owl
+    --input data/traits/environment/temperature_optimum.yaml --input docs/CURATION_PLAYBOOK.md
+    --input docs/GROUNDING_POLICY.md --input docs/PATHWAY_LINKS.md --input docs/record-review-profile.md
+    --input docs/record-reviews.md --input history/infrastructure/node-type-consistency/2026-08-15T014631Z-claude-code-9d7f4d.yaml
+    --input history/infrastructure/pr664-adversarial-review/2026-09-07T010000Z-codex-60bca2.yaml
+    --input history/other/canonical-examples-batch1/2026-08-20T074839Z-claude-code-6fb2f5.yaml
+    --input history/other/canonical-examples-six/2026-08-21T065406Z-codex-a1ab82.yaml
+    --input history/records/homeoviscous_adaptation/2026-09-15T070756Z-codex-24f768.yaml
+    --input history/records/homeoviscous_adaptation/2026-09-15T071638Z-codex-eab563.yaml
+    --input history/records/homeoviscous_adaptation/2026-09-15T072704Z-codex-6cb554.yaml
+    --input history/records/mesophilic/2026-09-04T004000Z-codex-14a39b.yaml --input
+    history/records/mesophilic/2026-09-04T130000Z-codex-183.yaml --input history/records/mesophilic/2026-09-06T133000Z-codex-133a5b.yaml
+    --input history/records/temperature_optimum/2026-09-15T070759Z-codex-e0d923.yaml
+    --input history/records/temperature_optimum_high/2026-09-04T032000Z-codex-f0b8c3.yaml
+    --input history/records/temperature_optimum_high/2026-09-04T200000Z-codex-183.yaml
+    --input history/records/temperature_optimum_high/2026-09-08T033000Z-codex-506e08.yaml
+    --input history/records/temperature_optimum_mid1/2026-09-15T070759Z-codex-35d0a7.yaml
+    --input history/records/temperature_optimum_mid3/2026-09-15T070800Z-codex-44b4c3.yaml
+    --input history/records/temperature_optimum_very_low/2026-09-04T034000Z-codex-1f380e.yaml
+    --input history/records/temperature_optimum_very_low/2026-09-04T210000Z-codex-183.yaml
+    --input history/records/temperature_optimum_very_low/2026-09-08T032500Z-codex-77dafe.yaml
+    --input justfile --input mappings/node_grounding.tsv --input mappings/predicate_grounding.tsv
+    --input mappings/trait_exact_match_review.tsv --input mappings/uniprot_regrounding_candidates.tsv
+    --input proposals/metpo_traitmech_v3/metpo_proposal_classes_robot.tsv --input
+    proposals/metpo_traitmech_v3/proposal.md --input proposals/metpo_traitmech_v8/metpo_proposal_properties_robot.tsv
+    --input proposals/metpo_traitmech_v8/proposal.md --input proposals/metpo_traitmech_v85/metpo_proposal_classes_robot.tsv
+    --input proposals/metpo_traitmech_v85/proposal.md --input proposals/metpo_traitmech_v9/metpo_proposal_properties_robot.tsv
+    --input proposals/metpo_traitmech_v9/proposal.md --input reports/metpo_2026_06_12_active_review.tsv
+    --input reports/metpo_2026_06_12_release_delta.tsv --input reports/ontology_snapshot_manifest.tsv
+    --input research/traits/environment/temperature_optimum_mid1-deep-research-falcon.md
+    --input schema/record_review.yaml --input scripts/add_homeoviscous_adaptation_trait.py
+    --input scripts/audit_causal_graphs.py --input scripts/audit_graph_protein_taxa.py
+    --input scripts/audit_predicate_domains.py --input scripts/audit_unapplied_groundings.py
+    --input scripts/audit_uniprot_grounding.py --input scripts/backfill_canonical_examples_444.py
+    --input scripts/connect_mesophilic_graph_183.py --input scripts/connect_temperature_delta_high_graph_183.py
+    --input scripts/connect_temperature_delta_very_low_graph_183.py --input scripts/connect_temperature_optimum_high_graph_183.py
+    --input scripts/connect_temperature_optimum_very_low_graph_183.py --input scripts/connect_temperature_range_mid3_graph_183.py
+    --input scripts/connect_temperature_range_mid4_graph_183.py --input scripts/connect_temperature_range_very_low_graph_183.py
+    --input scripts/enrich_lateral_flagellation_trait.py --input scripts/finalize_metpo_2026_06_12_review.py
+    --input scripts/ground_causal_nodes.py --input scripts/ground_causal_predicates.py
+    --input scripts/migrate_disposition_typing.py --input scripts/migrate_enables_range_edges.py
+    --input scripts/migrate_enables_trait_edges.py --input scripts/migrate_metpo_2026_06_12.py
+    --input scripts/migrate_microbe_domain_edges.py --input scripts/migrate_name_match_groundings.py
+    --input scripts/migrate_node_type_consistency.py --input scripts/migrate_pathway_vs_process.py
+    --input scripts/migrate_process_quality_consistency.py --input scripts/migrate_protein_vs_activity.py
+    --input scripts/migrate_remaining_microbe_domain_edges.py --input scripts/migrate_uniprot_instance_groundings.py
+    --input scripts/normalize_homeoviscous_nodes.py --input scripts/record_review.py
+    --input scripts/repair_pr664_adversarial_review.py --input scripts/review_mesophilic_graph_183.py
+    --input scripts/review_obligately_piezophilic_graph_183.py --input scripts/review_temperature_delta_high_graph_183.py
+    --input scripts/review_temperature_delta_very_low_graph_183.py --input scripts/review_temperature_optimum_high_graph_183.py
+    --input scripts/review_temperature_optimum_very_low_graph_183.py --input scripts/review_temperature_range_mid3_graph_183.py
+    --input scripts/review_temperature_range_mid4_graph_183.py --input scripts/review_temperature_range_very_low_graph_183.py
+    --input scripts/seed_from_metpo.py --input scripts/verify_metpo_proposal.py --input
+    src/traitmech/schema/mech_shared.yaml --input src/traitmech/schema/traitmech.yaml
+    --input src/traitmech/validation/write_validated.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: One current target, 101 captured inputs, exact current base and successful
+    native inspect.
+  evidence_ids:
+  - capture
+- check_id: uniprot-applicability
+  name: Protein-instance metadata applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - METPO:1000443
+  summary: No protein nodes or instances in this quantitative NONMECHANISTIC graph;
+    no accession or token instance is required.
+  evidence_ids:
+  - record
+  - policy
+  - expression
+- check_id: expression-adapter-availability
+  name: Structured source-organism expression query availability
+  status: unavailable
+  required: false
+  target_ids:
+  - METPO:1000443
+  summary: Current bounded discovery found the maintained adapter unavailable. Retained
+    species catalog and selected primary fallback establish no exact strain or module
+    membership result.
+  evidence_ids:
+  - expression
+  - expression-discovery
+  - cold-primary
+evidence:
+- evidence_id: fresh-common-completion
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-014.q8m4v2cs/new-base-diagnostic-independent-review-agent/fresh-products-completion.json
+  locator: Fresh products completion plus prior diagnostic evidence; original execution
+    intervals retained
+  accessed_at: '2026-10-21T23:30:28.240498Z'
+  support: context_only
+  summary: Actual B14 checks and current input guards; setup cross-batch comparison
+    remains false.
+  snapshot_sha256: 2898fb8bd1af98aeea3a60a152fac664f547bc081632ba69aeeefe93678b6a84
+- evidence_id: check-new-base-qc
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-014.q8m4v2cs/new-base-qc.log
+  locator: Executed 2026-10-21T23:25:15.125723+00:00 through 2026-10-21T23:26:53.864156+00:00;
+    metadata new-base-qc.json
+  accessed_at: '2026-10-21T23:26:53.864156Z'
+  support: context_only
+  summary: 'Actual just qc passed: strict validation of 1130 records with 0 errors;
+    graph audit: 74 baselined, 0 new and 0 blocking findings; 135 connected graphs
+    and 1588 wired nodes; protein coverage: 729 graphs (134 pass, 594 NONMECHANISTIC,
+    0 gaps, 1 protected); snippet audit: 2419 baselined, 0 new and 0 blocking findings;
+    19 PathwayMech links. These are corpus diagnostics, not scientific validation
+    of this target.'
+  snapshot_sha256: 586016aa869497e51bc3e5bb431e4e7658cf5b489dc0577b4475cf9cd22c7947
+- evidence_id: check-new-base-history
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-014.q8m4v2cs/new-base-history.log
+  locator: Executed 2026-10-21T23:25:15.125609+00:00 through 2026-10-21T23:25:19.527774+00:00;
+    metadata new-base-history.json
+  accessed_at: '2026-10-21T23:25:19.527774Z'
+  support: context_only
+  summary: 1278 HistoryRecord YAMLs validated, 0 invalid; current history snapshot
+    contains 1279 files. Integrity does not establish scientific correctness or human
+    acceptance.
+  snapshot_sha256: 82546ec27fb7d9543d08183e9d0086bd9ca32bbd45ecb2d87ef3f5b990af81c3
+- evidence_id: check-new-base-products
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-014.q8m4v2cs/new-base-products.log
+  locator: Executed 2026-10-21T23:29:02.243310+00:00 through 2026-10-21T23:29:27.250859+00:00;
+    metadata new-base-products.json
+  accessed_at: '2026-10-21T23:29:27.250859Z'
+  support: context_only
+  summary: 361 canonical matches, 2 exact-synonym matches, 1 exception and 123 SKIPPED_NO_ADAPTER
+    pairs. Configured scope is the two grounding mappings, not every target identifier
+    or scientific claim.
+  snapshot_sha256: 060fcb191c9b0fceb7dd8ebf172d1055f794292211401b30fa4e7f4ffa819141
+- evidence_id: check-new-base-stage2-tests
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-014.q8m4v2cs/new-base-stage2-tests.log
+  locator: Executed 2026-10-21T23:25:19.981459+00:00 through 2026-10-21T23:25:21.660071+00:00;
+    metadata new-base-stage2-tests.json
+  accessed_at: '2026-10-21T23:25:21.660071Z'
+  support: context_only
+  summary: Five tests passed in the explicitly selected Stage2 test file. This is
+    not a full just test run or biological validation.
+  snapshot_sha256: 547282404c58d0e8a8e243f434252a5fc215fc1abb8c974b39e7ccdfe759398d
+- evidence_id: historical-validate-products
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products.log
+  locator: Historical original execution 2026-10-19T07:33:16Z through 2026-10-19T07:34:01Z
+  accessed_at: '2026-10-19T07:34:01Z'
+  support: context_only
+  summary: Historical products exit 2; preserved provenance only, superseded for B14
+    by its actual fresh products run.
+  snapshot_sha256: 697efcbe603c9a5e27f9726e688d1b9d9f621fa548f585d9005b5157d81dadae
+- evidence_id: historical-validate-products-retry-local
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-local.log
+  locator: Historical original execution 2026-10-19T07:34:53Z through 2026-10-19T07:35:24Z
+  accessed_at: '2026-10-19T07:35:24Z'
+  support: context_only
+  summary: Historical products exit 2; preserved provenance only, superseded for B14
+    by its actual fresh products run.
+  snapshot_sha256: b636ab6978cf8b8d4cc2cc4033f1cdca399cca46dc615a26073cfe680d44ebb5
+- evidence_id: historical-validate-products-retry-network
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-network.log
+  locator: Historical original execution 2026-10-19T07:35:34Z through 2026-10-19T07:36:03Z
+  accessed_at: '2026-10-19T07:36:03Z'
+  support: context_only
+  summary: Historical products exit 0; preserved provenance only, superseded for B14
+    by its actual fresh products run.
+  snapshot_sha256: 67e91252adce1d441ad6b37d6904f0cbcea703575aec8011e65e94822fa810ea
+- evidence_id: check-temperature-optimum-mid1-validate
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-014.q8m4v2cs/temperature-optimum-mid1-validate.log
+  locator: Executed 2026-10-22T01:08:30.910768+00:00 through 2026-10-22T01:08:31.726529+00:00;
+    metadata temperature-optimum-mid1-validate.json
+  accessed_at: '2026-10-22T01:08:31.726529Z'
+  support: context_only
+  summary: Native record validation passed; scientific interpretation is assessed
+    separately.
+  snapshot_sha256: c32e6bca6defe89fd594ab6fe7df592369e671d4227f8a8ce386bba39c189f15
+- evidence_id: check-temperature-optimum-mid1-strict
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-014.q8m4v2cs/temperature-optimum-mid1-strict.log
+  locator: Executed 2026-10-22T01:08:30.910807+00:00 through 2026-10-22T01:08:32.285946+00:00;
+    metadata temperature-optimum-mid1-strict.json
+  accessed_at: '2026-10-22T01:08:32.285946Z'
+  support: context_only
+  summary: The actual validate-strict command passed.
+  snapshot_sha256: d0a76e79a10d7af40ada30c0cdfc83cb57a23537b8e5b5f65f4b8bd043aec590
+- evidence_id: check-temperature-optimum-mid1-snippets-network
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-014.q8m4v2cs/temperature-optimum-mid1-snippets-network.log
+  locator: Executed 2026-10-22T01:08:35.520556+00:00 through 2026-10-22T01:08:38.971261+00:00;
+    metadata temperature-optimum-mid1-snippets-network.json
+  accessed_at: '2026-10-22T01:08:38.971261Z'
+  support: context_only
+  summary: All four supplied snippets were VERIFIED by the native abstract check and
+    independently literal in the source audit. Literal occurrence does not establish
+    adjacent numerical or causal claims.
+  snapshot_sha256: f5cde03d790ad5d7e649e9e978ca640e082ec80214c58aa4b40afaa63e2259b5
+- evidence_id: capture
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-014.q8m4v2cs/temperature-optimum-mid1.inspect.json
+  locator: Actual successful native inspect with 101 captured inputs
+  accessed_at: '2026-10-22T01:08:10.106291Z'
+  support: context_only
+  summary: All current source hashes and the exact target are bound before serialization.
+  snapshot_sha256: 0ac3a683a374939f1bffb5c66c9d6d5ac4a713a0d0d61ecd1de6b5e2532c90da
+- evidence_id: record
+  kind: record_content
+  reference: data/traits/environment/temperature_optimum_mid1.yaml
+  locator: Whole current record
+  accessed_at: '2026-10-22T01:08:10.106291Z'
+  support: supports
+  summary: Ten nodes, nine edges, twelve embedded events, one canonical example and
+    no protein classes or instances.
+  snapshot_sha256: 4e13ab907307d4c88f5e787c45400a820c8c12a04fe311717fed3f3c6920510f
+- evidence_id: local-init
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-014.q8m4v2cs/batch014-local-initialization-receipt.json
+  locator: Frozen current audit or exact retained receipt; original reading scope
+    controls interpretation
+  accessed_at: '2026-10-22T01:07:39.713898Z'
+  support: context_only
+  summary: Actual local initialization and first queue target; publication remains
+    separate.
+  snapshot_sha256: 3dade2205affd0bd7eea4b7d5018e8c97080db55bba3620e89cf4a4da4123fa3
+- evidence_id: policy
+  kind: authority
+  reference: docs/GROUNDING_POLICY.md
+  locator: Captured maintained authority
+  accessed_at: '2026-10-22T01:12:35.078693Z'
+  support: supports
+  summary: Protein family/function grounding and optional protein instances.
+  snapshot_sha256: 891678c983c2283a47c81c47950b35753981e9339d105f3bbdda92a1f5ab7f42
+- evidence_id: playbook
+  kind: authority
+  reference: docs/CURATION_PLAYBOOK.md
+  locator: Captured maintained authority
+  accessed_at: '2026-10-22T01:12:35.078693Z'
+  support: supports
+  summary: Literal source scope and attributable acceptance.
+  snapshot_sha256: 735e9b810471da9f7d8364e35ffe1e741edb3421480dac01727db6ea5aa65da9
+- evidence_id: schema
+  kind: authority
+  reference: src/traitmech/schema/traitmech.yaml
+  locator: Captured maintained authority
+  accessed_at: '2026-10-22T01:12:35.078693Z'
+  support: supports
+  summary: Current facets and NONMECHANISTIC scope.
+  snapshot_sha256: 46c47fc627b80ccbba1e8ab3fb6f2aee93bc2aef7aaf72fe9aadc3257f2c02dd
+- evidence_id: predicate-mapping
+  kind: authority
+  reference: mappings/predicate_grounding.tsv
+  locator: Captured maintained authority
+  accessed_at: '2026-10-22T01:12:35.078693Z'
+  support: supports
+  summary: Wildcard increases mapping can populate empty IDs; current populated assertions
+    are skipped.
+  snapshot_sha256: 8e28c19e93aca3dc164a3befbe2612b289241de457c59f499e65936c03b7ce52
+- evidence_id: node-mapping
+  kind: authority
+  reference: mappings/node_grounding.tsv
+  locator: Captured maintained authority
+  accessed_at: '2026-10-22T01:12:35.078693Z'
+  support: supports
+  summary: Current label/type keys and qualified mappings.
+  snapshot_sha256: d7de9b3ab04960c4775a5bc295a945bd1a72d81467830459f4793e654f82b3d0
+- evidence_id: identity
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-014.q8m4v2cs/temperature-optimum-mid1-ground-agent/identity-assessment.json
+  locator: Frozen current audit or exact retained receipt; original reading scope
+    controls interpretation
+  accessed_at: '2026-10-22T01:12:35.013767Z'
+  support: context_only
+  summary: Active exact bin, direct parent and qualified historical aliases.
+  snapshot_sha256: 3b17a9a3ca720971cefc74af0bdf51cb029ca452f8ee05fa072328e8bb526b14
+- evidence_id: nodes-edges
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-014.q8m4v2cs/temperature-optimum-mid1-ground-agent/node-edge-grounding-ledger.json
+  locator: Frozen current audit or exact retained receipt; original reading scope
+    controls interpretation
+  accessed_at: '2026-10-22T01:12:35.067953Z'
+  support: context_only
+  summary: All ten node and nine edge judgments with positive controls.
+  snapshot_sha256: eaaa42c26af70d074ff92a4c79ace6bbc83b90672a8390dffd8ff2de7eefd36c
+- evidence_id: owners
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-014.q8m4v2cs/temperature-optimum-mid1-ground-agent/owner-provenance-assessment.json
+  locator: Frozen current audit or exact retained receipt; original reading scope
+    controls interpretation
+  accessed_at: '2026-10-22T01:12:35.077590Z'
+  support: context_only
+  summary: Populated-ID skip guards and exact canonical backfill distinguished from
+    discovery-only leads.
+  snapshot_sha256: d08978bcc98ff598198acdb5e3287745bf22dc3f6b010836b204492400f0524a
+- evidence_id: owner-primary
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-014.q8m4v2cs/temperature-optimum-mid1-ground-agent/owner-primary-reading.json
+  locator: Frozen current audit or exact retained receipt; original reading scope
+    controls interpretation
+  accessed_at: '2026-10-22T01:12:35.014484Z'
+  support: context_only
+  summary: Actual maintained writer and migration decision windows.
+  snapshot_sha256: af79bc9ca5c442fad283a8a9902b65a179e44f7c45ab7dd866c89dcce389c26f
+- evidence_id: human-search
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-014.q8m4v2cs/temperature-optimum-mid1-ground-agent/search-and-provenance.json
+  locator: Frozen current audit or exact retained receipt; original reading scope
+    controls interpretation
+  accessed_at: '2026-10-22T01:08:43.740390Z'
+  support: context_only
+  summary: 172 ignored- and hidden-inclusive matching paths, 67 actual review target
+    arrays, zero exact target.
+  snapshot_sha256: b615e73f5efcf3c9e6d22f77bcfd453faf0a856eb793db9eb7d86b709d6dd2e7
+- evidence_id: histories
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-014.q8m4v2cs/temperature-optimum-mid1-ground-agent/history-reading-provenance.json
+  locator: Frozen current audit or exact retained receipt; original reading scope
+    controls interpretation
+  accessed_at: '2026-10-22T01:12:35.077155Z'
+  support: context_only
+  summary: Three current whole histories plus sixteen qualified prior whole readings;
+    nineteen current projections.
+  snapshot_sha256: b983bff76f18c606ef56f37f6a8c49c5058f75ba2b39814f62b2b908d672103d
+- evidence_id: discovery
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-014.q8m4v2cs/temperature-optimum-mid1-ground-agent/discovery-disposition.json
+  locator: Frozen current audit or exact retained receipt; original reading scope
+    controls interpretation
+  accessed_at: '2026-10-22T01:12:35.054489Z'
+  support: context_only
+  summary: Seven uncaptured history leads and two scripts remain matching-line context.
+  snapshot_sha256: 045fba64a53e1fd8266c212671ac284d7cb2f7e4dc56c40423946bddc779d586
+- evidence_id: alias-discovery
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-014.q8m4v2cs/temperature-optimum-mid1-ground-agent/alias-writer-discovery-only.json
+  locator: Frozen current audit or exact retained receipt; original reading scope
+    controls interpretation
+  accessed_at: '2026-10-22T01:12:35.067560Z'
+  support: context_only
+  summary: Additional uncaptured alias writer remains discovery-only, not a fully
+    read current owner.
+  snapshot_sha256: 28a8e76e36c402af7922a16e0e5c32b3c27cc06497eeafa7063e81c1350504a7
+- evidence_id: expression
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-014.q8m4v2cs/temperature-optimum-mid1-ground-agent/expression-and-readiness.json
+  locator: Frozen current audit or exact retained receipt; original reading scope
+    controls interpretation
+  accessed_at: '2026-10-22T01:12:35.078088Z'
+  support: context_only
+  summary: Species catalog coverage is separate from exact strain or module support;
+    adapter unavailable.
+  snapshot_sha256: e4e0cb6195129a7e3a54d6fd11a72a6dcedae2c01479d0ff9fc41887c7db44c3
+- evidence_id: expression-discovery
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-014.q8m4v2cs/temperature-optimum-mid1-ground-agent/expression-runner-current-discovery.json
+  locator: Frozen current audit or exact retained receipt; original reading scope
+    controls interpretation
+  accessed_at: '2026-10-22T01:11:15.938799Z'
+  support: context_only
+  summary: Fresh bounded PATH/project/install-root discovery, not global absence.
+  snapshot_sha256: a0f88668a324e9c528ff9caf68b04aeb5335553add398e351b4f33ca32217a30
+- evidence_id: local-authority
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-014.q8m4v2cs/temperature-optimum-mid1-ground-agent/local-authority-reading.json
+  locator: Frozen current audit or exact retained receipt; original reading scope
+    controls interpretation
+  accessed_at: '2026-10-22T01:12:34.968681Z'
+  support: context_only
+  summary: Exact current v3/v8/v85, mappings and schema windows.
+  snapshot_sha256: be9a20bae71736a36cdbe7b4b08a64a198886d669b04a3f2b1262f9419ad13fb
+- evidence_id: ground-reading
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-014.q8m4v2cs/temperature-optimum-mid1-ground-agent/reading-scope-receipt.json
+  locator: Frozen current audit or exact retained receipt; original reading scope
+    controls interpretation
+  accessed_at: '2026-10-22T01:12:35.079071Z'
+  support: context_only
+  summary: Actual current and qualified prior reading scopes.
+  snapshot_sha256: 83bd15aba1ee28824df740f6a69dd64d57ad6f475d4cf957cb8e58239a936b6d
+- evidence_id: ground-manifest
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-014.q8m4v2cs/temperature-optimum-mid1-ground-agent/evidence-manifest.json
+  locator: Frozen current audit or exact retained receipt; original reading scope
+    controls interpretation
+  accessed_at: '2026-10-22T01:12:35.084116Z'
+  support: context_only
+  summary: All 29 frozen ground artifacts verified.
+  snapshot_sha256: b29e6932624626bc26e7d47c4dba795aee4b7e25b6cabe809fb9caabb0cfd4e5
+- evidence_id: metpo-primary
+  kind: authority
+  reference: /private/tmp/traitmech-record-sweep-014.q8m4v2cs/repo/data/raw/metpo.owl
+  locator: Selected actual primary statements at the recorded reading time
+  accessed_at: '2026-10-22T01:08:43.566580Z'
+  support: supports
+  summary: Active bin and parent, inclusive 22–27 Cel restriction and raw alias provenance.
+  snapshot_sha256: 8b6f8fe0510a698579e532658c8ace05da2550093365df9ca83feb0741778415
+- evidence_id: metpo-primary-projection
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-014.q8m4v2cs/temperature-optimum-mid1-ground-agent/metpo-authority.json
+  locator: Frozen current audit or exact retained receipt; original reading scope
+    controls interpretation
+  accessed_at: '2026-10-22T01:08:43.566580Z'
+  support: context_only
+  summary: Exact primary source hash and selected statement projection.
+  snapshot_sha256: 353db8c99228d69c813fd05e34a01dd9f15075d709b8ff62154763cd780d9019
+- evidence_id: chebi-primary
+  kind: authority
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/pystow/oaklib/chebi.db
+  locator: Selected actual primary statements at the recorded reading time
+  accessed_at: '2026-10-22T01:08:41.748357Z'
+  support: supports
+  summary: Fatty-acid classes encompass the current meaningful material referents.
+  snapshot_sha256: 26ad4890cdcf6ee357760d815dfee8f5ba81e0873e62cb379369b04205722b0f
+- evidence_id: chebi-primary-projection
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-014.q8m4v2cs/temperature-optimum-mid1-ground-agent/selected-chebi-primary-reading.json
+  locator: Frozen current audit or exact retained receipt; original reading scope
+    controls interpretation
+  accessed_at: '2026-10-22T01:08:41.748357Z'
+  support: context_only
+  summary: Exact primary source hash and selected statement projection.
+  snapshot_sha256: a9b01fbef100c5b1876268a2e8c312cbeeeece29cb3b62497f059ca7b9f98698
+- evidence_id: ro-primary
+  kind: authority
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/pystow/oaklib/ro.db
+  locator: Selected actual primary statements at the recorded reading time
+  accessed_at: '2026-10-22T01:08:41.743284Z'
+  support: supports
+  summary: RO:0002213 inherits RO:0002211 process domain and range.
+  snapshot_sha256: 849e616c29fecd0d4a6c6dee0dc0f6f117ace7167dbfa1e0f043dc84868f83cb
+- evidence_id: ro-primary-projection
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-014.q8m4v2cs/temperature-optimum-mid1-ground-agent/selected-ro-primary-reading.json
+  locator: Frozen current audit or exact retained receipt; original reading scope
+    controls interpretation
+  accessed_at: '2026-10-22T01:08:41.743284Z'
+  support: context_only
+  summary: Exact primary source hash and selected statement projection.
+  snapshot_sha256: 3b0fa6bf07806df439cb9b34f5a8a507cffe16e5040e2a279aa50b36a8fbaf87
+- evidence_id: mendoza-metadata
+  kind: primary_source
+  reference: DOI:10.1146/annurev-micro-091313-103612
+  locator: Indexed identity/status and generic abstract
+  accessed_at: '2026-10-21T10:00:02.042457Z'
+  support: supports
+  summary: Generic unsaturation and sensing attribution; exact-bin sufficiency remains
+    unknown.
+  snapshot_sha256: 801da630644a181211f991a6f21c49b178e42a65f615c4eebd8196bc29244588
+- evidence_id: mendoza-publisher
+  kind: primary_source
+  reference: DOI:10.1146/annurev-micro-091313-103612
+  locator: Retained actual browser abstract export, not raw HTML
+  accessed_at: '2026-10-21T23:38:35Z'
+  support: supports
+  summary: Original tool-call interval retained; origin cache-fetch time is unknown.
+  snapshot_sha256: b8635235ad5e362d0b33ef4834f84eb25fe7ff6b1bd1321affb2b61cecbc66fc
+- evidence_id: cold-metadata
+  kind: primary_source
+  reference: DOI:10.1007/s42770-023-01057-4
+  locator: Indexed identity/status and generic abstract
+  accessed_at: '2026-10-21T22:07:08.865512Z'
+  support: supports
+  summary: Assigned review identity and bounded generic membrane context.
+  snapshot_sha256: da5cffab81fe0e039c6fcec8f318b2715f5604eaf8722ea6f63f944178ed447b
+- evidence_id: cold-primary
+  kind: primary_source
+  reference: DOI:10.1007/s42770-023-01057-4
+  locator: Zero-based all HTML paragraphs 10 through classification clause, 17 generic
+    physics, selected 24 and first two sentences of 37
+  accessed_at: '2026-10-21T22:07:50.938485Z'
+  support: supports
+  summary: Only bounded generic physics and existing B.subtilis source attribution
+    adopted; no universal predominance or intervention efficacy.
+  snapshot_sha256: bb09a59c07f43ff0af177f89b624c8b5d4841e513ed0d478120954a016342889
+- evidence_id: tolner-metadata
+  kind: primary_source
+  reference: DOI:10.1016/s0300-9629(97)00003-0
+  locator: Indexed title/status and opening high-temperature abstract sentences
+  accessed_at: '2026-10-21T09:29:01.331044Z'
+  support: supports
+  summary: Literal high-temperature context does not supply the adjacent specific
+    22–27 degree optimum claim.
+  snapshot_sha256: 56f69a7ce2e69822ef753fec5c43716583184e45fc1a2c0cae98aa9bdb841265
+- evidence_id: tolner-zero-hit
+  kind: validation
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1016%2Fs0300-9629%2897%2900003-0&format=json&resultType=core
+  locator: Original successful HTTP response with zero indexed matches
+  accessed_at: '2026-10-21T09:25:49.176885Z'
+  support: context_only
+  summary: A retrieval diagnostic superseded for identity by the positive PMID and
+    Crossref responses; not an absent-paper claim.
+  snapshot_sha256: 25e3cf6616503721ec087dd147e11ac038f8834891e32d704a1f67074095c9cc
+- evidence_id: tolner-crossref
+  kind: primary_source
+  reference: DOI:10.1016/s0300-9629(97)00003-0
+  locator: Crossref identity metadata
+  accessed_at: '2026-10-21T09:27:49.120434Z'
+  support: supports
+  summary: Positive identity after the original zero-hit DOI query.
+  snapshot_sha256: 6f0a5c9b3558992f0f75d1861225410727bededc63928e7a72e1762170d34349
+- evidence_id: tolner-author
+  kind: primary_source
+  reference: DOI:10.1016/s0300-9629(97)00003-0
+  locator: Retained author portal abstract, opening high-temperature sentences
+  accessed_at: '2026-10-21T09:29:00.791083Z'
+  support: supports
+  summary: Independent abstract surface; not a full-paper absence judgment.
+  snapshot_sha256: 3c475aae5c42532ff36e66a262fe2d6a9c6fc8b64aa6576d93efdc96cada4134
+- evidence_id: canonical-metadata
+  kind: primary_source
+  reference: DOI:10.1099/ijsem.0.006325
+  locator: Indexed title/status and strain/growth/optimum abstract clauses
+  accessed_at: '2026-10-21T19:12:28.927935Z'
+  support: supports
+  summary: CR14T reported optimum 25 degrees C, distinct from growth at 20–30 degrees
+    C.
+  snapshot_sha256: d52e0fc0f66a769e68258a2ce912d517d95ab3f24b6b24b101f23c3f522bdbd4
+- evidence_id: rsc-metadata
+  kind: primary_source
+  reference: DOI:10.1039/d4cc03114h
+  locator: Indexed identity/status and abstract
+  accessed_at: '2026-10-21T09:25:49.177339Z'
+  support: supports
+  summary: Generic membrane adaptation context only; current full body unavailable.
+  snapshot_sha256: b1bb82ff1dfd346c18aad66eac57ac85f67244d679cf523deaeba988cf2416e5
+- evidence_id: current-browser
+  kind: primary_source
+  reference: DOI:10.1099/ijsem.0.006325
+  locator: Actual browser export, canonical publisher abstract lines 125–128; RSC
+    access errors retained separately within export
+  accessed_at: '2026-10-22T01:09:20Z'
+  support: partial
+  summary: Canonical optimum support is positive. This export is not raw HTML; first
+    call start was not separately instrumented and original cache-fetch times are
+    unknown. RSC 403 responses are diagnostics, not article bodies.
+  snapshot_sha256: 2bee8b037201eb6fb009d6a2cd98b6c94d42faf52cf81c8ee570ccd42462f9dc
+- evidence_id: taxonomy
+  kind: authority
+  reference: NCBITaxon:3080537
+  locator: Whole retained official response; original acquisition time
+  accessed_at: '2026-10-21T19:17:03.594173Z'
+  support: supports
+  summary: Rubellicoccus peritrichatus and CR14 type aliases are positive independently
+    of phenotype support.
+  snapshot_sha256: 085775d264a021df38a3d57b0c325aa914bbda77bae6ddbd8ada508e8c263193
+- evidence_id: taxonomy-copy
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-014.q8m4v2cs/temperature-optimum-mid1-ground-agent/taxonomy-reuse.json
+  locator: Frozen current audit or exact retained receipt; original reading scope
+    controls interpretation
+  accessed_at: '2026-10-22T01:09:06.064558Z'
+  support: context_only
+  summary: Original official acquisition and current exact copy times remain distinct.
+  snapshot_sha256: f0b6caa9d51cc80be1c3e40f41bc2e8a3ecbdeab1e20cdfb3fb388dedcca4600
+- evidence_id: taxonomy-reading
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-014.q8m4v2cs/temperature-optimum-mid1-ground-agent/taxonomy-identity.json
+  locator: Frozen current audit or exact retained receipt; original reading scope
+    controls interpretation
+  accessed_at: '2026-10-22T01:12:35.013314Z'
+  support: context_only
+  summary: Current official identity reading; no phenotype inference from taxonomy.
+  snapshot_sha256: 06a90d91960fc5260a692bebe9d10c493cf107bccbdfda94bd913605b44915f9
+- evidence_id: sources
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-014.q8m4v2cs/temperature-optimum-mid1-source-agent/source-assessment.json
+  locator: Frozen current audit or exact retained receipt; original reading scope
+    controls interpretation
+  accessed_at: '2026-10-22T01:11:23.816603Z'
+  support: context_only
+  summary: Five works with overall UNKNOWN source scope and one bounded source-note
+    finding.
+  snapshot_sha256: a83603b9e9418323511e90acf541df9f33eaddf8eefbd178eee5d4371fc198b1
+- evidence_id: source-identities
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-014.q8m4v2cs/temperature-optimum-mid1-source-agent/source-identities-status.json
+  locator: Frozen current audit or exact retained receipt; original reading scope
+    controls interpretation
+  accessed_at: '2026-10-22T01:11:23.816603Z'
+  support: context_only
+  summary: All assigned identities and bounded metadata notice fields.
+  snapshot_sha256: 6e31adcd149298358a88e11af538e4e8022b442b85161ccc525aad0209ae953c
+- evidence_id: placements
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-014.q8m4v2cs/temperature-optimum-mid1-source-agent/source-placement-ledger.json
+  locator: Frozen current audit or exact retained receipt; original reading scope
+    controls interpretation
+  accessed_at: '2026-10-22T01:11:23.816603Z'
+  support: context_only
+  summary: All twelve external placements and ten grounding fields accounted.
+  snapshot_sha256: b6880a28f6c20c231cef133c28c5b45c84a38b45703fa94cc8bd17cc70d5ccb9
+- evidence_id: snippets
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-014.q8m4v2cs/temperature-optimum-mid1-source-agent/snippet-ledger.json
+  locator: Frozen current audit or exact retained receipt; original reading scope
+    controls interpretation
+  accessed_at: '2026-10-22T01:11:23.816603Z'
+  support: context_only
+  summary: All four supplied snippets literal; adjacent inference remains separate.
+  snapshot_sha256: 380012809fe2c78ffd15e50965eacce7d4a6ac3a88fc179f3248db942b60e65d
+- evidence_id: notes
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-014.q8m4v2cs/temperature-optimum-mid1-source-agent/source-note-ledger.json
+  locator: Frozen current audit or exact retained receipt; original reading scope
+    controls interpretation
+  accessed_at: '2026-10-22T01:11:23.816603Z'
+  support: context_only
+  summary: All ten evidence notes plus canonical note assessed within explicit scope.
+  snapshot_sha256: 34917e23b2de47ed2887ff8779f9c304bc9eb3655425bcc00032c13c953fcc5f
+- evidence_id: source-nodes-edges
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-014.q8m4v2cs/temperature-optimum-mid1-source-agent/node-edge-source-ledger.json
+  locator: Frozen current audit or exact retained receipt; original reading scope
+    controls interpretation
+  accessed_at: '2026-10-22T01:11:23.816603Z'
+  support: context_only
+  summary: All ten nodes and nine edges with qualified physical/source attribution.
+  snapshot_sha256: 58c71f5ef36b988a9e5f37679b06c6664168e05cad2860d1a8125277433ca86f
+- evidence_id: classification
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-014.q8m4v2cs/temperature-optimum-mid1-source-agent/classification-assessment.json
+  locator: Frozen current audit or exact retained receipt; original reading scope
+    controls interpretation
+  accessed_at: '2026-10-22T01:11:23.816603Z'
+  support: context_only
+  summary: Mesophilic exactness remains unknown; a growth interval is not an outside-bin
+    optimum.
+  snapshot_sha256: fca1ba776fb2506ab6d59e94ac6dbfc4e8f6c28223eba3dcb266457a8cf6694b
+- evidence_id: canonical
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-014.q8m4v2cs/temperature-optimum-mid1-source-agent/canonical-assessment.json
+  locator: Frozen current audit or exact retained receipt; original reading scope
+    controls interpretation
+  accessed_at: '2026-10-22T01:11:23.816603Z'
+  support: context_only
+  summary: Reported 25 degree optimum supports the bin, separately from the 20–30
+    growth interval.
+  snapshot_sha256: e348e582dcb71a16a55c4a560ddd2e4a2dd4a850cbc7f2cbf407230d62c70318
+- evidence_id: source-reading
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-014.q8m4v2cs/temperature-optimum-mid1-source-agent/primary-reading-scope.json
+  locator: Frozen current audit or exact retained receipt; original reading scope
+    controls interpretation
+  accessed_at: '2026-10-22T01:11:23.816603Z'
+  support: context_only
+  summary: Selected primary passages and explicit excluded detailed mechanism scope.
+  snapshot_sha256: 59f2a9d4467a289d8baf58be7f56084f1706aaa22a13f1576d6812e19ad71829
+- evidence_id: source-access
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-014.q8m4v2cs/temperature-optimum-mid1-source-agent/source-access-limits.json
+  locator: Frozen current audit or exact retained receipt; original reading scope
+    controls interpretation
+  accessed_at: '2026-10-22T01:11:23.816603Z'
+  support: context_only
+  summary: Body access limits and prior browser observations are not substituted as
+    current body evidence.
+  snapshot_sha256: 0d6423319a2ed50b473ef96250b5a3d858e09a6fcc7f7ff13f709674812c11d6
+- evidence_id: source-reuse
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-014.q8m4v2cs/temperature-optimum-mid1-source-agent/source-reuse-receipt.json
+  locator: Frozen current audit or exact retained receipt; original reading scope
+    controls interpretation
+  accessed_at: '2026-10-22T01:09:20.315445Z'
+  support: context_only
+  summary: Original acquisition, current copy and current interpretation clocks are
+    separate.
+  snapshot_sha256: 614566d163637948b6f6b247b350b45ba2822f394ccdf163dbe54818b23c2662
+- evidence_id: source-native
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-014.q8m4v2cs/temperature-optimum-mid1-source-agent/native-check-context.json
+  locator: Frozen current audit or exact retained receipt; original reading scope
+    controls interpretation
+  accessed_at: '2026-10-22T01:11:23.816603Z'
+  support: context_only
+  summary: Four native VERIFIED fields and four manual literal matches.
+  snapshot_sha256: 31e1d294f837375fcecd6db33d61681dc5827b5ed1fadf607b5cc7ac6aabd20d
+- evidence_id: source-manifest
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-014.q8m4v2cs/temperature-optimum-mid1-source-agent/evidence-manifest.json
+  locator: Frozen current audit or exact retained receipt; original reading scope
+    controls interpretation
+  accessed_at: '2026-10-22T01:11:23.839574Z'
+  support: context_only
+  summary: All 28 frozen source artifacts verified.
+  snapshot_sha256: b779b6ddd3ff1cba90242c2e7d2f9e647ef1c92b7b45f62aa1b2417be47e9655
+- evidence_id: root-reading
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-014.q8m4v2cs/temperature-optimum-mid1-source-root/selected-primary-reading.json
+  locator: Frozen current audit or exact retained receipt; original reading scope
+    controls interpretation
+  accessed_at: '2026-10-22T01:15:38.252935Z'
+  support: context_only
+  summary: Independent bounded primary/owner readings; nineteen history projections
+    and complete exact-target history, not nineteen current whole bodies.
+  snapshot_sha256: c4aed985b2b8b22ee39f9daba0e29c752f34a2af48e7668ab8f92c8f0d1dc482
+- evidence_id: adjudication
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-014.q8m4v2cs/temperature-optimum-mid1-root-adjudication.json
+  locator: Final root adjudication
+  accessed_at: '2026-10-22T01:15:38.252935Z'
+  support: supports
+  summary: Exact finding fields, owner qualifications, actions and unresolved source
+    scopes control serialization.
+  snapshot_sha256: 57f7237e5555120755f8ff7d905ece2e5d9ac6346c16510da0432aacd90dd5ed
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: 'Native checklist: active class, aliases and direct parent'
+  outcome: supported
+  target_ids:
+  - METPO:1000443
+  summary: Active METPO:1000443 and parent METPO:1000304 agree with the local quantitative
+    bin. Current mesophilic alias inheritance is documentary; legacy spelling provenance
+    and exact scientific equivalence remain qualified.
+  evidence_ids:
+  - identity
+  - metpo-primary
+  - classification
+  - record
+- assessment_id: definition
+  area: quantity
+  topic: 'Native checklist: best-growth temperature and numerical calibration'
+  outcome: unknown
+  target_ids:
+  - METPO:1000443
+  summary: The inclusive 22–27 degree interval is explicit in local identity. Generic
+    membrane adaptation does not establish exact cutoff calibration or sufficient
+    whole-organism optima; a 20–45 growth interval does not prove an optimum outside
+    this bin.
+  evidence_ids:
+  - sources
+  - placements
+  - classification
+  - metpo-primary
+- assessment_id: canonical
+  area: quantity
+  topic: 'Native checklist: exact taxon and reported optimum'
+  outcome: supported
+  target_ids:
+  - METPO:1000443
+  summary: Official Rubellicoccus identity and CR14 aliases agree. The assigned abstract
+    reports optimum 25 degrees C and growth at 20–30 degrees C; these are distinct
+    source-specific observations, not a complete response curve.
+  evidence_ids:
+  - canonical
+  - canonical-metadata
+  - current-browser
+  - taxonomy
+  - taxonomy-reading
+- assessment_id: source-support
+  area: evidence
+  topic: 'Native checklist: five works and all placements'
+  outcome: unknown
+  target_ids:
+  - METPO:1000443
+  summary: All five identities are verified. Exact-bin numerical support and several
+    adjacent causal statements remain unresolved. The Tolner note is a bounded nearest-evidence
+    mismatch; the local subclass hierarchy itself is independently supported. Detailed
+    pathogen survival, fitness, ROS-defense, AMR and intervention mechanisms remain
+    UNASSESSED_SCOPE.
+  evidence_ids:
+  - sources
+  - source-identities
+  - placements
+  - notes
+  - source-reading
+  - source-access
+  - tolner-metadata
+  - tolner-author
+- assessment_id: quotations
+  area: evidence
+  topic: 'Native checklist: four snippets and evidence-note scope'
+  outcome: supported
+  target_ids:
+  - METPO:1000443
+  summary: All four snippets are literal and native VERIFIED. Literal occurrence is
+    distinct from adjacent numerical or causal attribution; the high-temperature note
+    remains a separate minor concern.
+  evidence_ids:
+  - snippets
+  - source-native
+  - notes
+  - mendoza-metadata
+  - tolner-metadata
+- assessment_id: nodes
+  area: representation
+  topic: 'Native checklist: all ten current referents'
+  outcome: supported
+  target_ids:
+  - METPO:1000443
+  summary: The material fatty-acid classes and fluidity quality are meaningful. Homeoviscous
+    adaptation is process-like; adaptation versus its tuned-composition result remains
+    a wording qualification. No extra facet or wrong-CURIE finding is inferred.
+  evidence_ids:
+  - nodes-edges
+  - source-nodes-edges
+  - chebi-primary
+  - local-authority
+  - schema
+  details: "{\n  \"grounding\": [\n    {\n      \"index\": 0,\n      \"node_id\":\
+    \ \"temperature_optimum_mid1_trait\",\n      \"label\": \"temperature optimum\
+    \ mid1\",\n      \"node_type\": \"TRAIT\",\n      \"grounding\": \"METPO:1000443\"\
+    ,\n      \"outcome\": \"supported\",\n      \"assessment\": \"Active exact numeric\
+    \ optimum bin and direct parent; source synonym equivalence is separate.\"\n \
+    \   },\n    {\n      \"index\": 1,\n      \"node_id\": \"temperature_optimum\"\
+    ,\n      \"label\": \"temperature optimum\",\n      \"node_type\": \"TRAIT\",\n\
+    \      \"grounding\": \"METPO:1000304\",\n      \"outcome\": \"supported\",\n\
+    \      \"assessment\": \"Active temperature-optimum parent denotes the optimum\
+    \ measurement phenotype.\"\n    },\n    {\n      \"index\": 2,\n      \"node_id\"\
+    : \"lower_mesophilic_environment\",\n      \"label\": \"lower-mesophilic environment\"\
+    ,\n      \"node_type\": \"ENVIRONMENTAL_FACTOR\",\n      \"grounding\": null,\n\
+    \      \"outcome\": \"supported\",\n      \"assessment\": \"Ambient habitat condition\
+    \ at22–27°C; not automatically a process from its enum. The outgoing lexical relation\
+    \ imposes no imported process domain.\"\n    },\n    {\n      \"index\": 3,\n\
+    \      \"node_id\": \"mesophile_adaptation\",\n      \"label\": \"mesophile membrane\
+    \ and enzyme adaptation\",\n      \"node_type\": \"BIOLOGICAL_PROCESS\",\n   \
+    \   \"grounding\": null,\n      \"outcome\": \"qualified\",\n      \"assessment\"\
+    : \"Adaptation process is intended by label/type and surrounding edges; composition/repertoire\
+    \ tuned wording also describes its result. Preserve this qualification without\
+    \ a forced additional facet finding.\"\n    },\n    {\n      \"index\": 4,\n \
+    \     \"node_id\": \"unsaturated_fatty_acids\",\n      \"label\": \"unsaturated\
+    \ fatty acids\",\n      \"node_type\": \"CHEMICAL\",\n      \"grounding\": \"\
+    CHEBI:27208\",\n      \"outcome\": \"supported\",\n      \"assessment\": \"Material\
+    \ unsaturated-fatty-acid class. Current double-bond wording is a meaningful subset\
+    \ of the broader CHEBI definition.\"\n    },\n    {\n      \"index\": 5,\n   \
+    \   \"node_id\": \"membrane_fluidity\",\n      \"label\": \"membrane fluidity\"\
+    ,\n      \"node_type\": \"QUALITY\",\n      \"grounding\": \"METPO:1007505\",\n\
+    \      \"outcome\": \"supported\",\n      \"assessment\": \"Explicit physical\
+    \ membrane-fluidity quality, consistent with v3 and maintained QUALITY mapping.\"\
+    \n    },\n    {\n      \"index\": 6,\n      \"node_id\": \"homeoviscous_adaptation\"\
+    ,\n      \"label\": \"homeoviscous adaptation\",\n      \"node_type\": \"BIOLOGICAL_PROCESS\"\
+    ,\n      \"grounding\": \"METPO:1016200\",\n      \"outcome\": \"supported\",\n\
+    \      \"assessment\": \"Explicit membrane-remodeling response process, consistent\
+    \ with local v85 homeoviscous-adaptation class.\"\n    },\n    {\n      \"index\"\
+    : 7,\n      \"node_id\": \"low_melting_lipids\",\n      \"label\": \"low-melting\
+    \ membrane lipids\",\n      \"node_type\": \"CHEMICAL\",\n      \"grounding\"\
+    : null,\n      \"outcome\": \"supported\",\n      \"assessment\": \"Material low-melting\
+    \ lipid grouping; no exact CURIE or protein instance is forced.\"\n    },\n  \
+    \  {\n      \"index\": 8,\n      \"node_id\": \"branched_chain_amino_acids\",\n\
+    \      \"label\": \"branched-chain amino acids\",\n      \"node_type\": \"CHEMICAL\"\
+    ,\n      \"grounding\": null,\n      \"outcome\": \"supported\",\n      \"assessment\"\
+    : \"Material branched-chain amino acids; absence of grounding alone is not a demonstrated\
+    \ identity defect.\"\n    },\n    {\n      \"index\": 9,\n      \"node_id\": \"\
+    branched_chain_fatty_acids\",\n      \"label\": \"branched-chain fatty acids\"\
+    ,\n      \"node_type\": \"CHEMICAL\",\n      \"grounding\": \"CHEBI:35819\",\n\
+    \      \"outcome\": \"supported\",\n      \"assessment\": \"Material branched-chain\
+    \ fatty acids, with iso/anteiso wording a meaningful subset of CHEBI35819.\"\n\
+    \    }\n  ],\n  \"source\": [\n    {\n      \"index\": 0,\n      \"field\": \"\
+    causal_graphs[0].nodes[0]\",\n      \"node_id\": \"temperature_optimum_mid1_trait\"\
+    ,\n      \"label\": \"temperature optimum mid1\",\n      \"node_type\": \"TRAIT\"\
+    ,\n      \"outcome\": \"UNKNOWN\",\n      \"scope\": \"Local numeric-bin statement;\
+    \ external exact-cutoff calibration remains unresolved.\"\n    },\n    {\n   \
+    \   \"index\": 1,\n      \"field\": \"causal_graphs[0].nodes[1]\",\n      \"node_id\"\
+    : \"temperature_optimum\",\n      \"label\": \"temperature optimum\",\n      \"\
+    node_type\": \"TRAIT\",\n      \"outcome\": \"SUPPORTED_CONTEXT\",\n      \"scope\"\
+    : \"Parent denotes ambient temperature supporting maximal growth; source measurements\
+    \ distinguish optimum from growth limits.\"\n    },\n    {\n      \"index\": 2,\n\
+    \      \"field\": \"causal_graphs[0].nodes[2]\",\n      \"node_id\": \"lower_mesophilic_environment\"\
+    ,\n      \"label\": \"lower-mesophilic environment\",\n      \"node_type\": \"\
+    ENVIRONMENTAL_FACTOR\",\n      \"outcome\": \"UNKNOWN\",\n      \"scope\": \"\
+    Declared 22–27 environment is the local bin; broader mesophilic habitat equivalence\
+    \ is not established.\"\n    },\n    {\n      \"index\": 3,\n      \"field\":\
+    \ \"causal_graphs[0].nodes[3]\",\n      \"node_id\": \"mesophile_adaptation\"\
+    ,\n      \"label\": \"mesophile membrane and enzyme adaptation\",\n      \"node_type\"\
+    : \"BIOLOGICAL_PROCESS\",\n      \"outcome\": \"UNKNOWN\",\n      \"scope\": \"\
+    Generic membrane adaptation supported; broad enzyme repertoire and exact moderate-temperature\
+    \ optimum sufficiency unresolved.\"\n    },\n    {\n      \"index\": 4,\n    \
+    \  \"field\": \"causal_graphs[0].nodes[4]\",\n      \"node_id\": \"unsaturated_fatty_acids\"\
+    ,\n      \"label\": \"unsaturated fatty acids\",\n      \"node_type\": \"CHEMICAL\"\
+    ,\n      \"outcome\": \"SUPPORTED_CONTEXT\",\n      \"scope\": \"Unsaturated fatty\
+    \ acid double-bond material meaning consistent with selected generic source attribution.\"\
+    \n    },\n    {\n      \"index\": 5,\n      \"field\": \"causal_graphs[0].nodes[5]\"\
+    ,\n      \"node_id\": \"membrane_fluidity\",\n      \"label\": \"membrane fluidity\"\
+    ,\n      \"node_type\": \"QUALITY\",\n      \"outcome\": \"SUPPORTED_CONTEXT\"\
+    ,\n      \"scope\": \"Physical bilayer fluidity supported in Ramón p17; does not\
+    \ denote the remodeling process.\"\n    },\n    {\n      \"index\": 6,\n     \
+    \ \"field\": \"causal_graphs[0].nodes[6]\",\n      \"node_id\": \"homeoviscous_adaptation\"\
+    ,\n      \"label\": \"homeoviscous adaptation\",\n      \"node_type\": \"BIOLOGICAL_PROCESS\"\
+    ,\n      \"outcome\": \"QUALIFIED\",\n      \"scope\": \"Homeoviscous remodeling\
+    \ context supported in Mendoza abstract/Ramón p17; not proof of exact constant\
+    \ fluidity across every condition or a numeric optimum.\"\n    },\n    {\n   \
+    \   \"index\": 7,\n      \"field\": \"causal_graphs[0].nodes[7]\",\n      \"node_id\"\
+    : \"low_melting_lipids\",\n      \"label\": \"low-melting membrane lipids\",\n\
+    \      \"node_type\": \"CHEMICAL\",\n      \"outcome\": \"UNKNOWN\",\n      \"\
+    scope\": \"Broad lower-melting lipid list remains nearest-RSC attribution unknown;\
+    \ generic Ramón physical context is separate.\"\n    },\n    {\n      \"index\"\
+    : 8,\n      \"field\": \"causal_graphs[0].nodes[8]\",\n      \"node_id\": \"branched_chain_amino_acids\"\
+    ,\n      \"label\": \"branched-chain amino acids\",\n      \"node_type\": \"CHEMICAL\"\
+    ,\n      \"outcome\": \"SUPPORTED_CONTEXT\",\n      \"scope\": \"Named valine,\
+    \ leucine and isoleucine precursors occur in Ramón p24.\"\n    },\n    {\n   \
+    \   \"index\": 9,\n      \"field\": \"causal_graphs[0].nodes[9]\",\n      \"node_id\"\
+    : \"branched_chain_fatty_acids\",\n      \"label\": \"branched-chain fatty acids\"\
+    ,\n      \"node_type\": \"CHEMICAL\",\n      \"outcome\": \"QUALIFIED\",\n   \
+    \   \"scope\": \"Iso/anteiso branched FA precursor attribution supported in Ramón\
+    \ p24 with organism/environment scope retained.\"\n    }\n  ]\n}"
+- assessment_id: relations
+  area: consistency
+  topic: 'Native checklist: all nine current relations'
+  outcome: concern
+  target_ids:
+  - METPO:1000443
+  summary: Edges 4 and 8 assign inherited process-only RO:0002213 to material subjects
+    and a quality object. Five lexical predicates have no imported RO constraint;
+    broad local confers and the subclass edge are compatible. Source efficacy remains
+    a separate question.
+  evidence_ids:
+  - nodes-edges
+  - source-nodes-edges
+  - ro-primary
+  - local-authority
+  - adjudication
+  details: "{\n  \"grounding\": [\n    {\n      \"index\": 0,\n      \"subject\":\
+    \ \"lower_mesophilic_environment\",\n      \"predicate\": \"engages\",\n     \
+    \ \"predicate_id\": null,\n      \"object\": \"mesophile_adaptation\",\n     \
+    \ \"outcome\": \"unknown\",\n      \"assessment\": \"Lexical engages has no imported\
+    \ domain/range. Generic environmental-to-adaptation support is separate from formal\
+    \ identity.\"\n    },\n    {\n      \"index\": 1,\n      \"subject\": \"mesophile_adaptation\"\
+    ,\n      \"predicate\": \"confers\",\n      \"predicate_id\": \"METPO:2007700\"\
+    ,\n      \"object\": \"temperature_optimum_mid1_trait\",\n      \"outcome\": \"\
+    supported\",\n      \"assessment\": \"Local confers has broad scaffold endpoints\
+    \ and trait-object prose compatible with adaptation/trait referents; exact22–27°C\
+    \ causal calibration remains source-dependent.\"\n    },\n    {\n      \"index\"\
+    : 2,\n      \"subject\": \"temperature_optimum_mid1_trait\",\n      \"predicate\"\
+    : \"is a\",\n      \"predicate_id\": \"rdfs:subClassOf\",\n      \"object\": \"\
+    temperature_optimum\",\n      \"outcome\": \"supported\",\n      \"assessment\"\
+    : \"Current active bin is explicitly a subclass of its direct temperature-optimum\
+    \ parent; evidence-note attribution is separately audited.\"\n    },\n    {\n\
+    \      \"index\": 3,\n      \"subject\": \"mesophile_adaptation\",\n      \"predicate\"\
+    : \"increases abundance of\",\n      \"predicate_id\": null,\n      \"object\"\
+    : \"unsaturated_fatty_acids\",\n      \"outcome\": \"unknown\",\n      \"assessment\"\
+    : \"Lexical increases abundance of is not RO2213 and has no invented imported\
+    \ role constraint. Detailed biology remains outside this formal audit.\"\n   \
+    \ },\n    {\n      \"index\": 4,\n      \"subject\": \"unsaturated_fatty_acids\"\
+    ,\n      \"predicate\": \"increases\",\n      \"predicate_id\": \"RO:0002213\"\
+    ,\n      \"object\": \"membrane_fluidity\",\n      \"outcome\": \"concern\",\n\
+    \      \"assessment\": \"RO2213 inherits RO2211 process/process endpoints. Current\
+    \ unsaturated fatty acids are material and membrane fluidity is a quality; both\
+    \ explicit referents conflict with the imported roles.\"\n    },\n    {\n    \
+    \  \"index\": 5,\n      \"subject\": \"membrane_fluidity\",\n      \"predicate\"\
+    : \"is sensed as input to\",\n      \"predicate_id\": null,\n      \"object\"\
+    : \"homeoviscous_adaptation\",\n      \"outcome\": \"unknown\",\n      \"assessment\"\
+    : \"Lexical is sensed as input to has no imported process-only subject constraint;\
+    \ quality-to-response wording is not automatically invalid.\"\n    },\n    {\n\
+    \      \"index\": 6,\n      \"subject\": \"homeoviscous_adaptation\",\n      \"\
+    predicate\": \"remodels toward increased\",\n      \"predicate_id\": null,\n \
+    \     \"object\": \"low_melting_lipids\",\n      \"outcome\": \"unknown\",\n \
+    \     \"assessment\": \"Lexical remodels toward increased has no imported material/process\
+    \ constraint. Generic source support and exact optimum calibration remain separate.\"\
+    \n    },\n    {\n      \"index\": 7,\n      \"subject\": \"branched_chain_amino_acids\"\
+    ,\n      \"predicate\": \"serve as precursors for\",\n      \"predicate_id\":\
+    \ null,\n      \"object\": \"branched_chain_fatty_acids\",\n      \"outcome\"\
+    : \"unknown\",\n      \"assessment\": \"Lexical serve as precursors for is not\
+    \ an imported RO regulation relation; current chemical/chemical referents are\
+    \ not an automatic role error.\"\n    },\n    {\n      \"index\": 8,\n      \"\
+    subject\": \"branched_chain_fatty_acids\",\n      \"predicate\": \"increases\"\
+    ,\n      \"predicate_id\": \"RO:0002213\",\n      \"object\": \"membrane_fluidity\"\
+    ,\n      \"outcome\": \"concern\",\n      \"assessment\": \"RO2213 inherits process/process\
+    \ endpoints, while current branched-chain fatty acids and membrane fluidity are\
+    \ material/quality referents. Grouped with edge4; no replacement biological mechanism\
+    \ prescribed.\"\n    }\n  ],\n  \"source\": [\n    {\n      \"index\": 0,\n  \
+    \    \"field\": \"causal_graphs[0].edges[0]\",\n      \"subject\": \"lower_mesophilic_environment\"\
+    ,\n      \"predicate\": \"engages\",\n      \"object\": \"mesophile_adaptation\"\
+    ,\n      \"references\": [\n        \"DOI:10.1146/annurev-micro-091313-103612\"\
+    \n      ],\n      \"outcome\": \"UNKNOWN\",\n      \"scope\": \"Mendoza abstract\
+    \ supports generic cooling-related membrane adaptation, not specifically the 22–27\
+    \ environment or enzyme program.\",\n      \"formal_roles\": \"Separate grounding\
+    \ audit; not inferred from source biology.\"\n    },\n    {\n      \"index\":\
+    \ 1,\n      \"field\": \"causal_graphs[0].edges[1]\",\n      \"subject\": \"mesophile_adaptation\"\
+    ,\n      \"predicate\": \"confers\",\n      \"object\": \"temperature_optimum_mid1_trait\"\
+    ,\n      \"references\": [\n        \"DOI:10.1146/annurev-micro-091313-103612\"\
+    \n      ],\n      \"outcome\": \"UNKNOWN\",\n      \"scope\": \"No inspected passage\
+    \ establishes that this generic adaptation is sufficient for an optimum in exactly\
+    \ 22–27 °C; full Mendoza body unavailable.\",\n      \"formal_roles\": \"Separate\
+    \ grounding audit; not inferred from source biology.\"\n    },\n    {\n      \"\
+    index\": 2,\n      \"field\": \"causal_graphs[0].edges[2]\",\n      \"subject\"\
+    : \"temperature_optimum_mid1_trait\",\n      \"predicate\": \"is a\",\n      \"\
+    object\": \"temperature_optimum\",\n      \"references\": [\n        \"DOI:10.1016/s0300-9629(97)00003-0\"\
+    \n      ],\n      \"outcome\": \"CONCERN\",\n      \"scope\": \"Subclass is locally\
+    \ coherent; literal Tolner quote is high-temperature context and the adjacent\
+    \ specific-bin attribution needs qualification.\",\n      \"formal_roles\": \"\
+    Separate grounding audit; not inferred from source biology.\"\n    },\n    {\n\
+    \      \"index\": 3,\n      \"field\": \"causal_graphs[0].edges[3]\",\n      \"\
+    subject\": \"mesophile_adaptation\",\n      \"predicate\": \"increases abundance\
+    \ of\",\n      \"object\": \"unsaturated_fatty_acids\",\n      \"references\"\
+    : [\n        \"DOI:10.1007/s42770-023-01057-4\"\n      ],\n      \"outcome\":\
+    \ \"QUALIFIED\",\n      \"scope\": \"Ramón selected p37 supports the existing\
+    \ desaturation/fluidity attribution in B.subtilis context; this does not establish\
+    \ all mesophiles or their optimum.\",\n      \"formal_roles\": \"Separate grounding\
+    \ audit; not inferred from source biology.\"\n    },\n    {\n      \"index\":\
+    \ 4,\n      \"field\": \"causal_graphs[0].edges[4]\",\n      \"subject\": \"unsaturated_fatty_acids\"\
+    ,\n      \"predicate\": \"increases\",\n      \"object\": \"membrane_fluidity\"\
+    ,\n      \"references\": [\n        \"DOI:10.1007/s42770-023-01057-4\"\n     \
+    \ ],\n      \"outcome\": \"QUALIFIED\",\n      \"scope\": \"Generic unsaturation/fluidity\
+    \ relation supported by Ramón p17/37 at physical/source-attribution scope; imported\
+    \ formal role assessed separately.\",\n      \"formal_roles\": \"Separate grounding\
+    \ audit; not inferred from source biology.\"\n    },\n    {\n      \"index\":\
+    \ 5,\n      \"field\": \"causal_graphs[0].edges[5]\",\n      \"subject\": \"membrane_fluidity\"\
+    ,\n      \"predicate\": \"is sensed as input to\",\n      \"object\": \"homeoviscous_adaptation\"\
+    ,\n      \"references\": [\n        \"DOI:10.1039/d4cc03114h\"\n      ],\n   \
+    \   \"outcome\": \"UNKNOWN\",\n      \"scope\": \"RSC abstract supports HVA and\
+    \ lipid composition generally; exact proposed sensing wording was not inspected\
+    \ in a current body. Mendoza independently supplies generic sensing context, not\
+    \ a substitute nearest citation.\",\n      \"formal_roles\": \"Separate grounding\
+    \ audit; not inferred from source biology.\"\n    },\n    {\n      \"index\":\
+    \ 6,\n      \"field\": \"causal_graphs[0].edges[6]\",\n      \"subject\": \"homeoviscous_adaptation\"\
+    ,\n      \"predicate\": \"remodels toward increased\",\n      \"object\": \"low_melting_lipids\"\
+    ,\n      \"references\": [\n        \"DOI:10.1039/d4cc03114h\"\n      ],\n   \
+    \   \"outcome\": \"UNKNOWN\",\n      \"scope\": \"RSC current body unavailable;\
+    \ exact lipid-list attribution remains unresolved. Ramón p17 provides contextual\
+    \ physical support without changing the assigned evidence.\",\n      \"formal_roles\"\
+    : \"Separate grounding audit; not inferred from source biology.\"\n    },\n  \
+    \  {\n      \"index\": 7,\n      \"field\": \"causal_graphs[0].edges[7]\",\n \
+    \     \"subject\": \"branched_chain_amino_acids\",\n      \"predicate\": \"serve\
+    \ as precursors for\",\n      \"object\": \"branched_chain_fatty_acids\",\n  \
+    \    \"references\": [\n        \"DOI:10.1007/s42770-023-01057-4\"\n      ],\n\
+    \      \"outcome\": \"QUALIFIED\",\n      \"scope\": \"Ramón p24 explicitly names\
+    \ valine/leucine/isoleucine as iso/anteiso FA precursors in its B.subtilis discussion;\
+    \ no universal strain transfer.\",\n      \"formal_roles\": \"Separate grounding\
+    \ audit; not inferred from source biology.\"\n    },\n    {\n      \"index\":\
+    \ 8,\n      \"field\": \"causal_graphs[0].edges[8]\",\n      \"subject\": \"branched_chain_fatty_acids\"\
+    ,\n      \"predicate\": \"increases\",\n      \"object\": \"membrane_fluidity\"\
+    ,\n      \"references\": [\n        \"DOI:10.1007/s42770-023-01057-4\"\n     \
+    \ ],\n      \"outcome\": \"QUALIFIED\",\n      \"scope\": \"Ramón p24 supports\
+    \ anteiso branching/fluidization and describes its predominant long-term role\
+    \ in B.subtilis. Preserve species/environment qualification; no blanket universal\
+    \ predominance inferred.\",\n      \"formal_roles\": \"Separate grounding audit;\
+    \ not inferred from source biology.\"\n    }\n  ]\n}"
+- assessment_id: owners
+  area: ownership
+  topic: 'Native checklist: maintained writers and recurrence'
+  outcome: supported
+  target_ids:
+  - METPO:1000443
+  summary: The current record and wildcard predicate mapping own the actionable relation
+    issue; the shared grounder skips populated IDs. Exact canonical backfill is an
+    applicable equality-guarded owner. Uncaptured alias writer and sibling migrations
+    remain qualified context, not proven current overwriters.
+  evidence_ids:
+  - owners
+  - owner-primary
+  - predicate-mapping
+  - node-mapping
+  - discovery
+  - alias-discovery
+- assessment_id: provenance
+  area: provenance
+  topic: 'Native checklist: attributable human acceptance'
+  outcome: concern
+  target_ids:
+  - METPO:1000443
+  summary: Twelve embedded events contain eleven AI events and one seed. The ignored-
+    and hidden-inclusive search found 172 matching paths and 67 actual target arrays,
+    none exact. Three current whole and sixteen qualified prior whole history readings
+    do not establish attributable human acceptance of current assertions; private
+    or remote acceptance is unknown.
+  evidence_ids:
+  - human-search
+  - histories
+  - ground-reading
+  - root-reading
+  - record
+- assessment_id: expression
+  area: completeness
+  topic: 'Native checklist: catalog coverage and adapter availability'
+  outcome: unknown
+  target_ids:
+  - METPO:1000443
+  summary: The retained catalog covers B.subtilis and E.coli species context but no
+    exact canonical Rubellicoccus entry. No strain or module substitution is made.
+    Appropriate bounded generic queries were not executed because the current maintained
+    adapter was unavailable; selected primary context is fallback.
+  evidence_ids:
+  - expression
+  - expression-discovery
+  - cold-primary
+- assessment_id: readiness
+  area: completeness
+  topic: 'Native checklist: graph scope and optional protein instances'
+  outcome: supported
+  target_ids:
+  - METPO:1000443
+  summary: One component, ten nodes and nine edges form a quantitative NONMECHANISTIC
+    record. Zero protein nodes or instances do not require fabricated molecular detail
+    or connectors. Detailed excluded biological efficacy remains unassessed.
+  evidence_ids:
+  - record
+  - nodes-edges
+  - expression
+  - policy
+- assessment_id: validation
+  area: schema
+  topic: 'Native checklist: actual native and fresh B14 diagnostics'
+  outcome: supported
+  target_ids:
+  - METPO:1000443
+  summary: Current native capture, focused validation, strict validation and all four
+    snippet checks passed. B14 common checks are actual fresh executions at the advanced
+    base; historical failures, cache provenance, product skips and the omitted full
+    test suite remain explicit. These diagnostics do not certify scientific meaning.
+  evidence_ids:
+  - capture
+  - fresh-common-completion
+  - check-temperature-optimum-mid1-validate
+  - check-temperature-optimum-mid1-strict
+  - check-temperature-optimum-mid1-snippets-network
+findings:
+- finding_id: imported-process-roles
+  issue_key: temperature-optimum-mid1-imported-process-roles
+  category: representation
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Imported process roles
+  description: Edges4 and8 assign RO:0002213 to material fatty-acid subjects and a
+    membrane-fluidity quality object. RO:0002213 inherits RO:0002211 process domain
+    and range; both actual endpoint referents conflict. The material fatty-acid and
+    quality identities are meaningful and should not be retyped merely to satisfy
+    this relation. Five lexical predicates have no imported process-only constraint;
+    broad local confers and the subclass edge are compatible.
+  target_ids:
+  - METPO:1000443
+  field_paths:
+  - causal_graphs[0].edges[4].predicate_id
+  - causal_graphs[0].edges[8].predicate_id
+  evidence_ids:
+  - nodes-edges
+  - ro-primary
+  - chebi-primary
+  - owners
+  - predicate-mapping
+  - adjudication
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/temperature_optimum_mid1.yaml
+    role: Current record assertions
+  - repository: CultureBotAI/TraitMech
+    path: mappings/predicate_grounding.tsv
+    role: Conditional recurrence mapping; not an automatic current rewrite
+  - repository: CultureBotAI/TraitMech
+    path: scripts/ground_causal_predicates.py
+    role: Shared writer skips populated IDs; no ordinary rerun repair
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: major
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: high-temperature-source-placement
+  issue_key: temperature-optimum-mid1-high-temperature-source-placement
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: High temperature source placement
+  description: The literal Tolner snippet is in an abstract passage about thermophiles
+    adapted to high temperature, while its adjacent evidence note claims support for
+    the specific22–27°C optimum. That nearest-evidence attribution overstates the
+    inspected passage. The numeric-bin subclass relationship is independently supported
+    by METPO; this concern neither refutes it nor asserts that the uninspected full
+    paper lacks relevant discussion.
+  target_ids:
+  - METPO:1000443
+  field_paths:
+  - causal_graphs[0].edges[2].evidence[0].notes
+  evidence_ids:
+  - sources
+  - placements
+  - notes
+  - tolner-metadata
+  - tolner-author
+  - metpo-primary
+  - adjudication
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/temperature_optimum_mid1.yaml
+    role: Current record assertions
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: minor
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: human-acceptance-link
+  issue_key: temperature-optimum-mid1-human-acceptance-link
+  category: provenance
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Human acceptance link
+  description: Current REVIEWED status lacks attributable human acceptance of present
+    assertions in the inspected local evidence. The ignored- and hidden-inclusive
+    search, excluding .git and .venv, found172 matching paths and67 actual review
+    target arrays with no exact target. Twelve embedded events comprise11 AI events
+    and one seed; the exact current-target history is also an AI grounding event.
+    Nineteen captured histories were assessed with explicit current versus qualified
+    prior reading scope. Private or remote acceptance remains unknown.
+  target_ids:
+  - METPO:1000443
+  field_paths:
+  - mapping_status
+  - curation_history
+  evidence_ids:
+  - human-search
+  - histories
+  - ground-reading
+  - root-reading
+  - adjudication
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/temperature_optimum_mid1.yaml
+    role: Current record assertions
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: minor
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+actions:
+- action_id: curate-imported-process-roles
+  description: In separately authorized curation, reconcile these two grounded predicates
+    with their actual material and quality referents. Review the wildcard increases
+    mapping together with record assertions; the shared grounder skips populated IDs,
+    so a rerun alone does not repair them. Preserve valid node identities and do not
+    invent a biological replacement mechanism.
+  finding_ids:
+  - imported-process-roles
+  target_ids:
+  - METPO:1000443
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/temperature_optimum_mid1.yaml
+    role: Current record assertions
+  - repository: CultureBotAI/TraitMech
+    path: mappings/predicate_grounding.tsv
+    role: Conditional recurrence mapping; not an automatic current rewrite
+  - repository: CultureBotAI/TraitMech
+    path: scripts/ground_causal_predicates.py
+    role: Shared writer skips populated IDs; no ordinary rerun repair
+  acceptance_checks:
+  - Demonstrate inherited domain/range compatibility for actual endpoint referents;
+    do not assign imported RO rules to lexical relations.
+  - Retain NONMECHANISTIC scope and zero proteins unless independent scientific evidence
+    warrants a change; no token instances or connectors.
+  - Run focused strict validation, relevant predicate/graph audits, full QC and required
+    history/product gates.
+- action_id: curate-high-temperature-source-placement
+  description: Qualify the note to distinguish literal high-temperature context from
+    the independently supported local numeric-bin hierarchy. Attach precise numerical
+    support only where the cited passage was inspected. Preserve the positive literal
+    snippet and source provenance; no new organism or mechanism is requested.
+  finding_ids:
+  - high-temperature-source-placement
+  target_ids:
+  - METPO:1000443
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/temperature_optimum_mid1.yaml
+    role: Current record assertions
+  acceptance_checks:
+  - The nearest-evidence note accurately describes its inspected passage and does
+    not claim unestablished22–27°C support.
+  - The independently supported hierarchy remains explicit, and any remaining body-access
+    uncertainty is recorded.
+  - Validate evidence fields, snippets, curation history and strict/QC gates after
+    authorized curation.
+- action_id: curate-human-acceptance-link
+  description: Link attributable human acceptance of current assertions or reconcile
+    REVIEWED through the native status workflow in separately authorized curation.
+    Preserve existing AI actors and history.
+  finding_ids:
+  - human-acceptance-link
+  target_ids:
+  - METPO:1000443
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/temperature_optimum_mid1.yaml
+    role: Current record assertions
+  acceptance_checks:
+  - Accepted scope and human reviewer are attributable, or status reflects the available
+    evidence.
+  - Per-record and repository history validates and AI assistance remains explicit.
+limitations:
+- Full just test was NOT_RUN under the selected review-only diagnostic scope; only
+  the five focused Stage2 tests are recorded. Products retains 123 no-adapter skips.
+  Common checks establish bounded software/data integrity, not scientific support.
+- Exact22–27 causal sufficiency and exact mesophilic alias equivalence remain UNKNOWN;
+  no outside-bin optimum is inferred from a20–45 growth-range statement.
+- Mendoza and Tolner inspected abstracts do not establish every adjacent numerical
+  claim; no full-paper absence claim.
+- RSC current HTML/PDF403 failures are access diagnostics. Prior successful browser
+  scope observation has no local body bytes and is not substituted as new primary
+  reading.
+- Ramón selected B.subtilis desaturation/branching source attribution is bounded by
+  organism/environment; no universal predominance or detailed intervention efficacy
+  inferred.
+- Canonical25°C optimum and20–30 growth interval are distinct and source-specific;
+  body/complete response curve not acquired.
+- Metadata notice fields only; not exhaustive publication-status clearance.
+- Original request, prior copy and present reading times remain separate; old diagnostics
+  are not fresh B14 checks.
+- Initial broad keyword paragraph display exposed unrelated mechanism context and
+  was truncated; only p10 classification, p17 generic physics and bounded B.subtilis
+  existing-note attribution p24/p37 adopted. Detailed pathogenic or engineering content
+  displayed incidentally was not adjudicated or developed.
+- Scientific exact mesophilic synonym equivalence remains UNKNOWN; no automatic finding
+  from a broad growth-range statement. Legacy Mesophilie source version is not recovered.
+- Adaptation process versus tuned-composition result wording is qualified, without
+  a forced extra facet finding.
+- Exact numeric-bin causal sufficiency and source-note/literal attribution are separate
+  source-audit questions.
+- Seven uncaptured histories/two node-script leads and one separately discovered alias
+  writer remain matching-line context, not complete-body current owners.
+- Covered B.subtilis/E.coli source species do not establish strain/module support;
+  current structured adapter is unavailable within declared bounds.
+- B14 differs from B13; only explicitly hashed individual historical readings and
+  retained primary responses are reused.
+- Private/remote human acceptance and detailed dangerous-pathogen mechanisms remain
+  unassessed.
+- 'Exact mesophilic/Mesophilie equivalence remains UNKNOWN: a20–45°C growth range
+  does not establish an optimum outside22–27°C.'
+- Source acquisition, present copy, extraction and actual reading times are separate.
+  Four literal matches do not validate every adjacent numerical or causal inference.
+- Root history scope is19 projections plus the complete exact-target history, not19
+  current whole-body readings.
+- Detailed pathogen survival, fitness, ROS-defense, AMR and intervention branches
+  remain UNASSESSED_SCOPE.
+notes:
+- Historical products failures/retry and original cache provenance remain in /private/tmp/traitmech-record-sweep-014.q8m4v2cs/new-base-diagnostic-independent-review-agent/fresh-products-completion.json.
+  The earlier outstanding-products status is superseded by the actual fresh run; no
+  blanket cross-batch reuse qualification is asserted.
+- Current final findings are one grouped formal-role major and two distinct source-placement/provenance
+  minors; no numerical, alias or canonical finding is inherited from another record.
+- This serializer adopts frozen audits and root adjudication. Original acquisition
+  times, current copy/read intervals, browser clock limits and inaccessible bodies
+  remain explicit. No scientific record, state, Git or publication change is performed
+  by this serializer.
+tags:
+- record-review
+- temperature-optimum-mid1
+- environment
+- needs-curation
+```
