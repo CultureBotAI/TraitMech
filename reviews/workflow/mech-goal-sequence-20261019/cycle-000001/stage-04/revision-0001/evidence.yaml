@@ -1,0 +1,118 @@
+schema_version: 1.0.0
+repository_key: traitmech
+github_repository: CultureBotAI/TraitMech
+run_id: mech-goal-sequence-20261019
+cycle: 1
+stage: 4
+revision: 1
+outcome: completed
+summary: 'Reviewed all 1,129 eligible TraitRecord YAML files (1,130 total minus 1 DO_NOT_WORK.md exclusion:
+  data/traits/physiology/spore_germination.yaml, traitmech:000083; 395 eligible METPO: records and 734
+  eligible traitmech:NNNNNN records) across all 10 category cohorts at frozen inventory commit b096d61ed6d2c4a78042c91bd8dc516459c9cd7a
+  using repository-local review-yaml-record and review-yaml-category skills and persisted the versioned
+  structured review bundle (reviews/structured/20261022T033000Z-stage4-corpus-record-and-cohort-review/)
+  plus parent workflow evidence. Identified 4 actionable open record-level definition_source findings
+  for Stage 5 grouped remediation and 5 deferred source-limited/upstream-blocked cohort findings.'
+source_revision: b096d61ed6d2c4a78042c91bd8dc516459c9cd7a
+artifacts:
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-04/revision-0001/review_report.md
+  sha256: 2704fbd543d7cd1a5e81f763bebd72393bcb0065e542e6f00855faa2bff394ea
+  kind: review_report
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-04/revision-0001/review_findings.tsv
+  sha256: 5d0caaaa4596bb695976427c2d26fcf5e0c913a34ebd7fdcc2f161428e6f6854
+  kind: review_findings
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-04/revision-0001/frozen_inventory_coverage.json
+  sha256: f0bdc1cfc472e160a118fd612f571e7f1b7afa620993ddc1ec1b51aaab5faf23
+  kind: supporting
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-04/revision-0001/structured_review.yaml
+  sha256: 254081d1c7726c4f2808b6a4ea79e7112883df3569c333958ba4a2994d52aae5
+  kind: supporting
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-04/revision-0001/structured_review.md
+  sha256: 7bc09d2c87e476d1cf8312bc7a3177ca4c068d67ba47da8187c7ff5f3331fe04
+  kind: supporting
+findings:
+- finding_id: F-DEF-SRC-CYANOPHYCIN-001
+  status: open
+  summary: 'cyanophycin_granule.yaml (traitmech:000673) omits definition_source: DOI:10.1128/AEM.01298-18
+    from record-level evidence despite already citing DOI:10.1128/AEM.01298-18 with verified verbatim
+    snippets on causal_graphs[0].edges[2].evidence[0] and causal_graphs[0].edges[3].evidence[0].'
+  disposition: 'Carry forward to Stage 5 (resolve_review_findings) in group G-STAGE4-RECORD-LEVEL-DEFINITION-SOURCE:
+    add DOI:10.1128/AEM.01298-18 to record-level evidence in data/traits/morphology/cyanophycin_granule.yaml
+    and set definition_source: DOI:10.1128/AEM.01298-18.'
+- finding_id: F-DEF-SRC-CADMIUM-002
+  status: open
+  summary: 'cadmium_tolerant.yaml (traitmech:000013) omits definition_source: PMID:12829273 from record-level
+    evidence despite parent metal_tolerant.yaml and sibling mercury_tolerant.yaml citing PMID:12829273
+    (Nies 2003, FEMS Microbiol Rev 27:313-339) for heavy-metal resistance and CBA/P-type ATPase/CDF efflux
+    mechanisms.'
+  disposition: 'Carry forward to Stage 5 (resolve_review_findings) in group G-STAGE4-RECORD-LEVEL-DEFINITION-SOURCE:
+    add PMID:12829273 (Nies 2003) with verified verbatim snippet to record-level evidence in data/traits/environment/cadmium_tolerant.yaml
+    and set definition_source: PMID:12829273.'
+- finding_id: F-DEF-SRC-COBALT-003
+  status: open
+  summary: 'cobalt_tolerant.yaml (traitmech:000015) omits definition_source: PMID:12829273 from record-level
+    evidence despite parent metal_tolerant.yaml and sibling mercury_tolerant.yaml citing PMID:12829273
+    (Nies 2003) for heavy-metal resistance and CBA/CDF efflux mechanisms.'
+  disposition: 'Carry forward to Stage 5 (resolve_review_findings) in group G-STAGE4-RECORD-LEVEL-DEFINITION-SOURCE:
+    add PMID:12829273 (Nies 2003) with verified verbatim snippet to record-level evidence in data/traits/environment/cobalt_tolerant.yaml
+    and set definition_source: PMID:12829273.'
+- finding_id: F-DEF-SRC-ZINC-004
+  status: open
+  summary: 'zinc_tolerant.yaml (traitmech:000014) omits definition_source: PMID:12829273 from record-level
+    evidence despite parent metal_tolerant.yaml and sibling mercury_tolerant.yaml citing PMID:12829273
+    (Nies 2003) for heavy-metal resistance and CBA/P-type ATPase/CDF efflux mechanisms.'
+  disposition: 'Carry forward to Stage 5 (resolve_review_findings) in group G-STAGE4-RECORD-LEVEL-DEFINITION-SOURCE:
+    add PMID:12829273 (Nies 2003) with verified verbatim snippet to record-level evidence in data/traits/environment/zinc_tolerant.yaml
+    and set definition_source: PMID:12829273.'
+- finding_id: F-COHORT-CAUSAL-GRAPHS-SOURCE-LIMITED-005
+  status: deferred
+  summary: 401 of 1,129 eligible TraitRecord files lack causal_graphs due to documented source limitations
+    (379 records where open-access PubMed/PMC/EuropePMC literature lacks a multi-step causal mechanism
+    snippet, plus 22 SUPPORTING_FIELD_VOCABULARY non-mechanistic hierarchy/measurement/observation records).
+  disposition: 'Deferred (source-limited): every one of the 401 records already documents its exact literature
+    limitation in an open CURATION_TODO DiscussionItem; requires full-text PDF acquisition or paid deep-research
+    approval outside Stage 4/5 scope.'
+- finding_id: F-COHORT-CANONICAL-EXAMPLES-SOURCE-LIMITED-006
+  status: deferred
+  summary: 552 of 1,129 eligible TraitRecord files lack canonical_examples (577 eligible records and 578
+    total records carry verified canonical_examples) because open-access abstracts do not report a verbatim
+    strain-designated or species-specific positive/negative value.
+  disposition: 'Deferred (source-limited): tracked in scripts/backfill_canonical_examples_444.py (POST_444_CANONICAL_EXAMPLE_QUEUE)
+    and record-level CURATION_TODO DiscussionItems; requires primary strain characterization literature
+    or IJSEM species descriptions.'
+- finding_id: F-COHORT-CAUSAL-GRAPH-BASELINES-007
+  status: deferred
+  summary: 85 baselined cross-record causal-graph audit warning rows (83 INCONSISTENT_NODE_TYPE, 2 DUPLICATE_GROUNDING)
+    across 72 unique eligible TraitRecord files in conf/causal_graph_audit_baseline.tsv.
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/356
+  disposition: 'Deferred to cross-cohort ontology harmonization tracked in issue #356 and conf/causal_graph_audit_baseline.tsv
+    (0 unbaselined regressions).'
+- finding_id: F-COHORT-DEF-SOURCE-PAYWALLED-008
+  status: deferred
+  summary: 70 of 1,129 eligible TraitRecord files (beyond the 4 open actionable findings, out of 74 total
+    declaring a definition_source not repeated in record-level evidence; plus 50 records omitting definition_source)
+    cite a primary discovery/characterization reference in definition_source that is paywalled or has
+    no indexed PubMed/EuropePMC abstract (principally phage defense systems in data/traits/genomics/ backed
+    by open-access DefenseFinder/review evidence).
+  disposition: 'Deferred (source-limited): requires full-text access to paywalled primary characterization
+    articles to extract verbatim definitional snippets.'
+- finding_id: F-COHORT-METPO-UPSTREAM-MINTING-009
+  status: deferred
+  summary: 734 of 1,129 eligible TraitRecord files (735 total including excluded traitmech:000083) use
+    repository-minted traitmech:NNNNNN identifiers awaiting upstream METPO term incorporation across proposals/metpo_traitmech_v1..v611.
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/364
+  disposition: 'Deferred (upstream-blocked): all 734 eligible traitmech:NNNNNN records (735 total) are
+    already packaged into verified ROBOT templates under proposals/metpo_traitmech_v1..v611 and submitted
+    upstream in berkeleybop/metpo#535 (tracked in TraitMech issue #364).'
+groups: []
+carry_forward_ids:
+- F-DEF-SRC-CYANOPHYCIN-001
+- F-DEF-SRC-CADMIUM-002
+- F-DEF-SRC-COBALT-003
+- F-DEF-SRC-ZINC-004
+- F-COHORT-CAUSAL-GRAPHS-SOURCE-LIMITED-005
+- F-COHORT-CANONICAL-EXAMPLES-SOURCE-LIMITED-006
+- F-COHORT-CAUSAL-GRAPH-BASELINES-007
+- F-COHORT-DEF-SOURCE-PAYWALLED-008
+- F-COHORT-METPO-UPSTREAM-MINTING-009
+infra_tasks: []
