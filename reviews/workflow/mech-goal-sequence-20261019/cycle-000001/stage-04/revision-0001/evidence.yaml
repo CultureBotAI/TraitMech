@@ -7,34 +7,35 @@ stage: 4
 revision: 1
 outcome: completed
 summary: 'Reviewed all 1,129 eligible TraitRecord YAML files (1,130 total minus 1 DO_NOT_WORK.md exclusion:
-  data/traits/physiology/spore_germination.yaml) across all 10 category cohorts at frozen inventory commit
-  b096d61ed6d2c4a78042c91bd8dc516459c9cd7a using repository-local review-yaml-record and review-yaml-category
-  skills and persisted the versioned structured review bundle (reviews/structured/20261022T033000Z-stage4-corpus-record-and-cohort-review/)
+  data/traits/physiology/spore_germination.yaml, traitmech:000083; 395 eligible METPO: records and 734
+  eligible traitmech:NNNNNN records) across all 10 category cohorts at frozen inventory commit b096d61ed6d2c4a78042c91bd8dc516459c9cd7a
+  using repository-local review-yaml-record and review-yaml-category skills and persisted the versioned
+  structured review bundle (reviews/structured/20261022T033000Z-stage4-corpus-record-and-cohort-review/)
   plus parent workflow evidence. Identified 4 actionable open record-level definition_source findings
   for Stage 5 grouped remediation and 5 deferred source-limited/upstream-blocked cohort findings.'
 source_revision: b096d61ed6d2c4a78042c91bd8dc516459c9cd7a
 artifacts:
 - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-04/revision-0001/review_report.md
-  sha256: 483291d40b7e9e8f6dad9a8a6fa4534d8d1a57221fc698255d9feca8fecdfee4
+  sha256: 2704fbd543d7cd1a5e81f763bebd72393bcb0065e542e6f00855faa2bff394ea
   kind: review_report
 - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-04/revision-0001/review_findings.tsv
-  sha256: ec07d1ddd8d1d583d31fc63a7ac3daef78ea65d7cfce09ccfc5ad943e99f8c76
+  sha256: 5d0caaaa4596bb695976427c2d26fcf5e0c913a34ebd7fdcc2f161428e6f6854
   kind: review_findings
 - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-04/revision-0001/frozen_inventory_coverage.json
-  sha256: aef9e1117720a03d0833ee9c749f2920a9d40cb18e6270c45fa325fa41b0148f
+  sha256: f0bdc1cfc472e160a118fd612f571e7f1b7afa620993ddc1ec1b51aaab5faf23
   kind: supporting
 - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-04/revision-0001/structured_review.yaml
-  sha256: f8dff373573b400ffa0d5990f34f2f16f1ff536b8da7bde2f14682e8f68c73ff
+  sha256: 254081d1c7726c4f2808b6a4ea79e7112883df3569c333958ba4a2994d52aae5
   kind: supporting
 - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-04/revision-0001/structured_review.md
-  sha256: 4e83005782b0054608b4b92f829ad2481d55bcea47c7292ff3618f1f028a01e8
+  sha256: 7bc09d2c87e476d1cf8312bc7a3177ca4c068d67ba47da8187c7ff5f3331fe04
   kind: supporting
 findings:
 - finding_id: F-DEF-SRC-CYANOPHYCIN-001
   status: open
   summary: 'cyanophycin_granule.yaml (traitmech:000673) omits definition_source: DOI:10.1128/AEM.01298-18
-    from record-level evidence despite already citing DOI:10.1128/AEM.01298-18 with a verified verbatim
-    snippet on its causal_graphs edge.'
+    from record-level evidence despite already citing DOI:10.1128/AEM.01298-18 with verified verbatim
+    snippets on causal_graphs[0].edges[2].evidence[0] and causal_graphs[0].edges[3].evidence[0].'
   disposition: 'Carry forward to Stage 5 (resolve_review_findings) in group G-STAGE4-RECORD-LEVEL-DEFINITION-SOURCE:
     add DOI:10.1128/AEM.01298-18 to record-level evidence in data/traits/morphology/cyanophycin_granule.yaml
     and set definition_source: DOI:10.1128/AEM.01298-18.'
@@ -73,34 +74,36 @@ findings:
     approval outside Stage 4/5 scope.'
 - finding_id: F-COHORT-CANONICAL-EXAMPLES-SOURCE-LIMITED-006
   status: deferred
-  summary: 376 of 1,129 eligible TraitRecord files in POST_444_CANONICAL_EXAMPLE_QUEUE lack canonical_examples
-    because open-access abstracts do not report a verbatim strain-designated or species-specific positive/negative
-    value.
+  summary: 552 of 1,129 eligible TraitRecord files lack canonical_examples (577 eligible records and 578
+    total records carry verified canonical_examples) because open-access abstracts do not report a verbatim
+    strain-designated or species-specific positive/negative value.
   disposition: 'Deferred (source-limited): tracked in scripts/backfill_canonical_examples_444.py (POST_444_CANONICAL_EXAMPLE_QUEUE)
     and record-level CURATION_TODO DiscussionItems; requires primary strain characterization literature
     or IJSEM species descriptions.'
 - finding_id: F-COHORT-CAUSAL-GRAPH-BASELINES-007
   status: deferred
-  summary: 85 baselined cross-record causal-graph audit warnings across 81 TraitRecord files (74 NODE_TYPE_CONFLICT,
-    9 NODE_ID_CONFLICT, 2 NODE_LABEL_CONFLICT) in conf/causal_graph_audit_baseline.tsv.
+  summary: 85 baselined cross-record causal-graph audit warning rows (83 INCONSISTENT_NODE_TYPE, 2 DUPLICATE_GROUNDING)
+    across 72 unique eligible TraitRecord files in conf/causal_graph_audit_baseline.tsv.
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/356
   disposition: 'Deferred to cross-cohort ontology harmonization tracked in issue #356 and conf/causal_graph_audit_baseline.tsv
     (0 unbaselined regressions).'
-  issue_url: https://github.com/CultureBotAI/TraitMech/issues/356
 - finding_id: F-COHORT-DEF-SOURCE-PAYWALLED-008
   status: deferred
-  summary: 111 of 1,129 eligible TraitRecord files omit a record-level definition_source because the primary
-    discovery/characterization reference is paywalled or has no indexed PubMed/EuropePMC abstract (principally
-    phage defense systems in data/traits/genomics/ backed by open-access DefenseFinder/review evidence).
+  summary: 70 of 1,129 eligible TraitRecord files (beyond the 4 open actionable findings, out of 74 total
+    declaring a definition_source not repeated in record-level evidence; plus 50 records omitting definition_source)
+    cite a primary discovery/characterization reference in definition_source that is paywalled or has
+    no indexed PubMed/EuropePMC abstract (principally phage defense systems in data/traits/genomics/ backed
+    by open-access DefenseFinder/review evidence).
   disposition: 'Deferred (source-limited): requires full-text access to paywalled primary characterization
     articles to extract verbatim definitional snippets.'
 - finding_id: F-COHORT-METPO-UPSTREAM-MINTING-009
   status: deferred
-  summary: 735 of 1,129 eligible TraitRecord files use repository-minted traitmech:NNNNNN identifiers
-    awaiting upstream METPO term incorporation across 605 reports/metpo_proposals/ cohorts.
+  summary: 734 of 1,129 eligible TraitRecord files (735 total including excluded traitmech:000083) use
+    repository-minted traitmech:NNNNNN identifiers awaiting upstream METPO term incorporation across proposals/metpo_traitmech_v1..v611.
   issue_url: https://github.com/CultureBotAI/TraitMech/issues/364
-  disposition: 'Deferred (upstream-blocked): all 735 traitmech:NNNNNN records are already packaged into
-    verified ROBOT templates under reports/metpo_proposals/ and submitted upstream in berkeleybop/metpo#535
-    (tracked in TraitMech issue #364).'
+  disposition: 'Deferred (upstream-blocked): all 734 eligible traitmech:NNNNNN records (735 total) are
+    already packaged into verified ROBOT templates under proposals/metpo_traitmech_v1..v611 and submitted
+    upstream in berkeleybop/metpo#535 (tracked in TraitMech issue #364).'
 groups: []
 carry_forward_ids:
 - F-DEF-SRC-CYANOPHYCIN-001

@@ -18,19 +18,20 @@ skill: .claude/skills/review-yaml-category/SKILL.md
 completion: completed
 verdict: needs_curation
 scientific_review: true
-summary: Full frozen-inventory record and category-cohort review across all 1,129
-  eligible TraitRecord YAML files (1,130 total minus 1 DO_NOT_WORK excluded physiology/spore_germination.yaml)
-  in 10 category cohorts at commit b096d61ed6d2c4a78042c91bd8dc516459c9cd7a. All 1,129
+summary: 'Full frozen-inventory record and category-cohort review across all 1,129
+  eligible TraitRecord YAML files (1,130 total minus 1 DO_NOT_WORK excluded physiology/spore_germination.yaml,
+  traitmech:000083) in 10 category cohorts at commit b096d61ed6d2c4a78042c91bd8dc516459c9cd7a
+  (395 eligible METPO: records and 734 eligible traitmech:NNNNNN records). All 1,129
   eligible records pass strict schema, identifier, causal-graph, snippet, UniProt
   protein_examples, and METPO proposal checks. Four concrete minor open findings (missing
   record-level evidence entries for definition_source on cyanophycin_granule.yaml,
   cadmium_tolerant.yaml, cobalt_tolerant.yaml, and zinc_tolerant.yaml where verified
   verbatim quotes already exist in-repo) are recorded with explicit remediation actions
   for Stage 5 (resolve_review_findings), alongside five deferred cohort-level source-limited
-  or upstream-blocked findings.
+  or upstream-blocked findings.'
 source:
   git_revision: b096d61ed6d2c4a78042c91bd8dc516459c9cd7a
-  state: working_tree
+  state: git_commit
   inputs:
   - path: .claude/skills/review-yaml-category/SKILL.md
     sha256: bb113dff90c4ea42bd0abaafa3df8054009122e094c0d66b5b1d15421f4e50de
@@ -13635,7 +13636,7 @@ scope:
   - METPO:1000059
   - METPO:1000188
   exclusions:
-  - target: data/traits/physiology/spore_germination.yaml (METPO:2000043)
+  - target: data/traits/physiology/spore_germination.yaml (traitmech:000083)
     reason: Protected by DO_NOT_WORK.md (#291); excluded from curation and review.
 checks:
 - check_id: validate-strict
@@ -15920,7 +15921,8 @@ checks:
   evidence_ids:
   - ev-causal-graph-audit
   summary: 728 eligible records (729 total) carry connected causal_graphs with 0 unbaselined
-    errors; 85 historical warnings remain tracked in conf/causal_graph_audit_baseline.tsv.
+    errors; 85 historical warning rows across 72 unique eligible records remain tracked
+    in conf/causal_graph_audit_baseline.tsv.
 - check_id: audit-evidence-snippets
   name: Evidence snippet verbatim integrity and non-echo audit
   command: uv run python scripts/audit_evidence_snippets.py
@@ -19342,8 +19344,9 @@ checks:
   - METPO:1000188
   evidence_ids:
   - ev-metpo-proposal-audit
-  summary: 'All 394 eligible METPO: records and 735 traitmech:NNNNNN records align
-    with data/raw/metpo.owl and proposals/metpo_traitmech_v1..v611.'
+  summary: 'All 395 eligible METPO: records and 734 eligible traitmech:NNNNNN records
+    (735 total including excluded traitmech:000083) align with data/raw/metpo.owl
+    and proposals/metpo_traitmech_v1..v611.'
 evidence:
 - evidence_id: ev-corpus-records
   kind: record_content
@@ -19368,9 +19371,10 @@ evidence:
   locator: scripts/audit_evidence_snippets.py
   accessed_at: '2026-10-22T03:30:00Z'
   support: supports
-  summary: Snippet audit confirms 0 unbaselined snippet issues and identifies 115
-    records where definition_source is not repeated in record-level evidence (4 resolvable
-    from in-repo verified quotes, 111 paywalled/source-limited).
+  summary: Snippet audit confirms 0 unbaselined snippet issues and identifies 74 eligible
+    records declaring a definition_source not repeated in record-level evidence (4
+    resolvable from in-repo verified quotes, 70 paywalled/source-limited; plus 50
+    records that do not declare a single definition_source CURIE).
 - evidence_id: ev-causal-graph-audit
   kind: validation
   reference: conf/causal_graph_audit_baseline.tsv
@@ -19379,7 +19383,8 @@ evidence:
   support: supports
   summary: Causal graph audit verifies 728 eligible records with connected causal
     graphs, 401 eligible records without causal graphs (379 source-limited, 22 non-mechanistic
-    vocabulary), and 85 baselined cross-record consistency warnings.
+    vocabulary), and 85 baselined cross-record consistency warning rows (83 INCONSISTENT_NODE_TYPE,
+    2 DUPLICATE_GROUNDING) across 72 unique eligible records.
 - evidence_id: ev-uniprot-protein-audit
   kind: validation
   reference: reports/uniprot_grounding_audit.tsv
@@ -19395,19 +19400,21 @@ evidence:
   locator: data/raw/metpo.owl and proposals/metpo_traitmech_v1..v611
   accessed_at: '2026-10-22T03:30:00Z'
   support: supports
-  summary: 'METPO active release and ROBOT proposal verification confirm 394 eligible
-    METPO: records match active terms and 735 traitmech:NNNNNN records have tracked
-    upstream ROBOT proposals.'
+  summary: 'METPO active release and ROBOT proposal verification confirm 395 eligible
+    METPO: records match active terms and 734 eligible traitmech:NNNNNN records (735
+    total including excluded traitmech:000083) have tracked upstream ROBOT proposals.'
 - evidence_id: ev-watzer-2018-cyanophycin
   kind: primary_source
   reference: DOI:10.1128/AEM.01298-18
-  locator: data/traits/morphology/cyanophycin_granule.yaml causal_graphs[0].edges[0].evidence[0]
+  locator: data/traits/morphology/cyanophycin_granule.yaml causal_graphs[0].edges[2].evidence[0]
+    and causal_graphs[0].edges[3].evidence[0]
   accessed_at: '2026-10-22T03:30:00Z'
   support: supports
   summary: Watzer and Forchhammer 2018 (DOI:10.1128/AEM.01298-18) is declared as definition_source
-    on cyanophycin_granule.yaml and is already quoted verbatim on causal_graphs[0].edges
+    on cyanophycin_granule.yaml and is already quoted verbatim on causal_graphs[0].edges[2].evidence[0]
     ('Cyanophycin accumulates in the form of opaque and light-scattering granules
-    in the cell'), but is omitted from record-level evidence.
+    in the cell') and causal_graphs[0].edges[3].evidence[0], but is omitted from record-level
+    evidence.
 - evidence_id: ev-nies-2003-metal-tolerance
   kind: primary_source
   reference: PMID:12829273
@@ -19428,8 +19435,9 @@ assessments:
     across all 1,129 eligible records
   outcome: supported
   summary: All 1,129 eligible records have unique, properly scoped primary identifiers
-    (394 METPO:, 735 traitmech:NNNNNN), verified labels, and acyclic parent references
-    within the 10 category cohorts.
+    (395 METPO:, 734 traitmech:NNNNNN; 735 total traitmech:NNNNNN including excluded
+    traitmech:000083), verified labels, and acyclic parent references within the 10
+    category cohorts.
   target_ids:
   - METPO:1004002
   - traitmech:000626
@@ -21708,8 +21716,9 @@ assessments:
   outcome: concern
   summary: Four records (cyanophycin_granule, cadmium_tolerant, cobalt_tolerant, zinc_tolerant)
     declare a primary definition_source (DOI:10.1128/AEM.01298-18 or PMID:12829273)
-    that is already verified verbatim on the same record's causal_graphs or on parent/sibling
-    records (metal_tolerant, mercury_tolerant) but omitted from record-level evidence.
+    that is already verified verbatim on the same record's causal_graphs (edges[2]
+    and edges[3]) or on parent/sibling records (metal_tolerant, mercury_tolerant)
+    but omitted from record-level evidence.
   target_ids:
   - traitmech:000673
   - traitmech:000013
@@ -24090,15 +24099,17 @@ findings:
     from record-level evidence
   description: 'data/traits/morphology/cyanophycin_granule.yaml (traitmech:000673)
     declares definition_source: DOI:10.1128/AEM.01298-18 (Watzer and Forchhammer 2018)
-    and already cites DOI:10.1128/AEM.01298-18 with a verified verbatim snippet (''Cyanophycin
-    accumulates in the form of opaque and light-scattering granules in the cell'')
-    on causal_graphs[0].edges, but omits DOI:10.1128/AEM.01298-18 from the record-level
-    evidence list.'
+    and already cites DOI:10.1128/AEM.01298-18 with verified verbatim snippets on
+    causal_graphs[0].edges[2].evidence[0] (''Cyanophycin accumulates in the form of
+    opaque and light-scattering granules in the cell'') and causal_graphs[0].edges[3].evidence[0],
+    but omits DOI:10.1128/AEM.01298-18 from the record-level evidence list.'
   target_ids:
   - traitmech:000673
   field_paths:
   - definition_source
   - evidence
+  - causal_graphs[0].edges[2].evidence[0]
+  - causal_graphs[0].edges[3].evidence[0]
   evidence_ids:
   - ev-corpus-records
   - ev-watzer-2018-cyanophycin
@@ -24612,12 +24623,13 @@ findings:
   severity: minor
   status: deferred
   certainty: confirmed
-  title: 376 eligible records in POST_444_CANONICAL_EXAMPLE_QUEUE lack canonical_examples
-    due to taxon-general or paywalled primary sources
-  description: Across 1,129 eligible records, 753 carry verified canonical_examples
-    while 376 (tracked in POST_444_CANONICAL_EXAMPLE_QUEUE in scripts/backfill_canonical_examples_444.py)
-    lack strain- or species-explicit phenotype/value support in their currently cited
-    open abstracts.
+  title: 552 eligible records lack canonical_examples due to taxon-general, upper-level,
+    or paywalled primary sources
+  description: Across 1,129 eligible records, 577 carry verified canonical_examples
+    (578 total including excluded spore_germination.yaml) while 552 eligible records
+    (tracked across POST_444_CANONICAL_EXAMPLE_QUEUE in scripts/backfill_canonical_examples_444.py
+    and record-level CURATION_TODO items) lack strain- or species-explicit phenotype/value
+    support in their currently cited open abstracts.
   target_ids:
   - traitmech:000626
   - METPO:1001106
@@ -25177,22 +25189,22 @@ findings:
   - ev-corpus-records
   - ev-validate-strict
   ownership_note: Tracked in scripts/backfill_canonical_examples_444.py (POST_444_CANONICAL_EXAMPLE_QUEUE)
-    and 376 TraitRecord files.
+    and 552 eligible TraitRecord files.
   disposition_reason: 'Deferred: Adding canonical_examples requires primary source
     text naming an explicit organism and phenotype/value; currently cited abstracts
-    on these 376 records are taxon-general or upper-level definitions.'
+    on these 552 eligible records are taxon-general or upper-level definitions.'
 - finding_id: F-COHORT-CAUSAL-GRAPH-BASELINES-007
   issue_key: cohort-causal-graph-baselines-356
   category: consistency
   severity: minor
   status: deferred
   certainty: confirmed
-  title: 85 cross-record causal graph node-type and duplicate-grounding warnings remain
-    baselined in conf/causal_graph_audit_baseline.tsv
-  description: conf/causal_graph_audit_baseline.tsv tracks 83 INCONSISTENT_NODE_TYPE
-    rows and 2 DUPLICATE_GROUNDING rows across 83 eligible records where shared ontology
-    CURIEs play dual roles across traits (e.g., GO catalytic activity vs process,
-    or CHEBI cofactor vs small molecule).
+  title: 85 cross-record causal graph node-type and duplicate-grounding warning rows
+    across 72 unique eligible records remain baselined in conf/causal_graph_audit_baseline.tsv
+  description: conf/causal_graph_audit_baseline.tsv tracks 85 warning rows (83 INCONSISTENT_NODE_TYPE
+    and 2 DUPLICATE_GROUNDING) across 72 unique eligible TraitRecord files where shared
+    ontology CURIEs play dual roles across traits (e.g., GO catalytic activity vs
+    process, or CHEBI cofactor vs small molecule).
   target_ids:
   - traitmech:000053
   - METPO:1000602
@@ -25277,21 +25289,23 @@ findings:
   external_issues:
   - https://github.com/CultureBotAI/TraitMech/issues/356
   disposition_reason: 'Deferred under GitHub issue #356: resolving cross-record node_type
-    harmonization requires coordinated ontology-role conventions across 83 records
-    without breaking taxon-agnostic protein_examples bindings.'
+    harmonization requires coordinated ontology-role conventions across 72 unique
+    eligible records (85 warning rows) without breaking taxon-agnostic protein_examples
+    bindings.'
 - finding_id: F-COHORT-DEF-SOURCE-PAYWALLED-008
   issue_key: cohort-definition-source-paywalled
   category: evidence
   severity: minor
   status: deferred
   certainty: confirmed
-  title: 111 eligible records cite a paywalled or abstract-limited definition_source
+  title: 70 eligible records declare a paywalled or abstract-limited definition_source
     not repeated in record-level evidence
-  description: 111 eligible records (primarily DefenseFinder antiviral defense systems
-    and chemotaxonomic profile traits) declare a primary discovery DOI/PMID in definition_source
-    whose full text is paywalled or lacks a contiguous >=12-char definition quote
-    in local sources, while record-level evidence is backed by open DefenseFinder
-    wiki/catalog or companion primary sources.
+  description: 70 eligible records (beyond the 4 open actionable definition_source
+    findings, out of 74 total declaring a definition_source not repeated in record-level
+    evidence; plus 50 records omitting definition_source) declare a primary discovery
+    DOI/PMID in definition_source whose full text is paywalled or lacks a contiguous
+    >=12-char definition quote in local sources, while record-level evidence is backed
+    by open DefenseFinder wiki/catalog or companion primary sources.
   target_ids:
   - METPO:1000532
   - traitmech:000344
@@ -25369,8 +25383,8 @@ findings:
   evidence_ids:
   - ev-corpus-records
   - ev-snippet-audit
-  ownership_note: 111 TraitRecord YAML files across genomics, morphology, physiology,
-    and metabolism cohorts.
+  ownership_note: 70 eligible TraitRecord YAML files across genomics, morphology,
+    physiology, and metabolism cohorts.
   disposition_reason: 'Deferred: Primary definition_source full texts are paywalled
     or lack contiguous abstract quotes; existing record-level evidence blocks already
     provide verified open-source support.'
@@ -25380,9 +25394,10 @@ findings:
   severity: informational
   status: deferred
   certainty: confirmed
-  title: 735 eligible traitmech:NNNNNN records await upstream METPO IRI minting and
-    release incorporation
-  description: 735 eligible records use temporary repository-minted traitmech:000001..traitmech:000735
+  title: 734 eligible traitmech:NNNNNN records (735 total including excluded traitmech:000083)
+    await upstream METPO IRI minting and release incorporation
+  description: 734 eligible records (735 total including excluded physiology/spore_germination.yaml,
+    traitmech:000083) use temporary repository-minted traitmech:000001..traitmech:000735
     identifiers backed by validated ROBOT templates in proposals/metpo_traitmech_v1..v611
     awaiting upstream incorporation in berkeleybop/metpo#535.
   target_ids:
@@ -26125,7 +26140,7 @@ findings:
   - metpo_submission
   evidence_ids:
   - ev-metpo-proposal-audit
-  ownership_note: 735 TraitRecord YAML files and proposals/metpo_traitmech_v1..v611.
+  ownership_note: 734 eligible TraitRecord YAML files (735 total) and proposals/metpo_traitmech_v1..v611.
   external_issues:
   - https://github.com/CultureBotAI/TraitMech/issues/364
   disposition_reason: 'Deferred upstream dependency: ROBOT proposals are complete
@@ -26135,9 +26150,9 @@ actions:
 - action_id: ACT-DEF-SRC-CYANOPHYCIN-001
   description: Add record-level evidence entry for definition_source DOI:10.1128/AEM.01298-18
     on data/traits/morphology/cyanophycin_granule.yaml using the verified verbatim
-    snippet already present on causal_graphs[0].edges ('Cyanophycin accumulates in
-    the form of opaque and light-scattering granules in the cell'), append a CURATE
-    history event, and regenerate trait pages.
+    snippet already present on causal_graphs[0].edges[2].evidence[0] ('Cyanophycin
+    accumulates in the form of opaque and light-scattering granules in the cell'),
+    append a CURATE history event, and regenerate trait pages.
   finding_ids:
   - F-DEF-SRC-CYANOPHYCIN-001
   target_ids:
@@ -26212,13 +26227,14 @@ limitations:
 - Stage 4 is a read-only corpus and cohort review at frozen commit b096d61ed6d2c4a78042c91bd8dc516459c9cd7a;
   no TraitRecord YAML files under data/traits/ are modified in this stage, and all
   4 open findings are preserved for Stage 5 (resolve_review_findings).
-- data/traits/physiology/spore_germination.yaml (METPO:2000043) is excluded per DO_NOT_WORK.md
-  (#291).
-- 111 records with paywalled primary discovery DOIs/PMIDs in definition_source and
-  379 records lacking multi-step causal_graphs in open abstracts remain source-limited
-  without paid full-text literature retrieval.
-- '735 traitmech:NNNNNN records await upstream METPO release incorporation (berkeleybop/metpo#535,
-  issue #364).'
+- data/traits/physiology/spore_germination.yaml (traitmech:000083) is excluded per
+  DO_NOT_WORK.md (#291).
+- 70 eligible records declaring paywalled primary discovery DOIs/PMIDs in definition_source
+  (not repeated in record-level evidence), 552 eligible records lacking canonical_examples,
+  and 379 mechanistic-domain records lacking multi-step causal_graphs in open abstracts
+  remain source-limited without paid full-text literature retrieval.
+- '734 eligible traitmech:NNNNNN records (735 total including excluded traitmech:000083)
+  await upstream METPO release incorporation (berkeleybop/metpo#535, issue #364).'
 notes:
 - 'Skills executed: .claude/skills/review-yaml-record/SKILL.md and .claude/skills/review-yaml-category/SKILL.md.'
 - Parent workflow evidence manifest written to reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-04/revision-0001/evidence.yaml.

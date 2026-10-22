@@ -19,7 +19,8 @@ events:
   details: 'Executed Stage 4 (record_review) of run mech-goal-sequence-20261019, cycle 1 at frozen inventory
     commit b096d61ed6d2c4a78042c91bd8dc516459c9cd7a using repository-local review-yaml-record and
     review-yaml-category skills. Reviewed all 1,129 eligible TraitRecord YAML files (1,130 total minus
-    1 DO_NOT_WORK.md exclusion: data/traits/physiology/spore_germination.yaml) across all 10 category
+    1 DO_NOT_WORK.md exclusion: data/traits/physiology/spore_germination.yaml, identifier traitmech:000083;
+    395 eligible METPO: records and 734 eligible traitmech:NNNNNN records) across all 10 category
     cohorts (ecology: 40, environment: 122, genomics: 387, metabolism: 180, morphology: 129, observation:
     20, other: 32, physiology: 204 eligible, quantitative_property: 7, upper: 8). Persisted the versioned
     native structured review bundle (reviews/structured/20261022T033000Z-stage4-corpus-record-and-cohort-review/review.yaml
@@ -30,4 +31,12 @@ events:
     environment/cadmium_tolerant.yaml, F-DEF-SRC-COBALT-003 on environment/cobalt_tolerant.yaml, and
     F-DEF-SRC-ZINC-004 on environment/zinc_tolerant.yaml) preserved for Stage 5 grouped remediation
     (G-STAGE4-RECORD-LEVEL-DEFINITION-SOURCE), plus 5 deferred source-limited/upstream-blocked cohort
-    findings.'
+    findings (401 eligible records without causal_graphs, 552 eligible records without
+    canonical_examples, 72 records with 85 conf/causal_graph_audit_baseline.tsv warning rows, 70
+    eligible records declaring a paywalled/book definition_source not repeated in record-level
+    evidence, and 734 eligible traitmech:NNNNNN records awaiting upstream METPO minting).'
+links:
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/1979
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1980
