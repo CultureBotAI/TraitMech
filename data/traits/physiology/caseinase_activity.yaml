@@ -38,6 +38,28 @@ discussions:
     caseinase activity as an equivalent TraitRecord xref.
   posed_by: codex
   posed_date: '2026-09-11'
+- discussion_id: caseinase-activity-causal-graph-source-gap
+  prompt: Add primary microbial literature evidence for secreted extracellular caseinolytic
+    protease identification, peptide release, and strain-matched UniProtKB protein
+    accessions before constructing causal_graphs.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  attaches_to:
+  - causal_graphs
+  rationale: The current record carries two general casein-hydrolysis screening snippets
+    (DOI:10.3389/fmicb.2018.01148, DOI:10.2174/1874285801408010025) without specific
+    protease gene/enzyme or multi-step mechanism quotes.
+  posed_by: claude
+  posed_date: '2026-10-23'
+  evidence:
+  - reference: DOI:10.3389/fmicb.2018.01148
+    supports: PARTIAL
+    snippet: two enzymes secreted by a B. cereus RC6 strain that permits the degradation
+      of casein
+    explanation: Existing record-level evidence supports the trait definition and
+      diagnostic or organismal occurrence, but lacks multiple distinct pathway/enzyme
+      quotes and strain-matched UniProtKB protein accessions needed for a connected
+      causal graph.
 curation_history:
 - timestamp: '2026-09-11T00:00:00Z'
   curator: codex
@@ -45,4 +67,10 @@ curation_history:
   changes: Minted caseinase activity as a DOI-backed TraitRecord after a repository-wide
     duplicate review covering ignored and hidden files; METPO has no exact caseinase
     activity class yet.
+  llm_assisted: true
+- timestamp: '2026-10-23T09:40:49Z'
+  curator: claude
+  action: RECORD_MECHANISM_KNOWLEDGE_GAP
+  changes: Recorded OPEN KNOWLEDGE_GAP discussion (caseinase-activity-causal-graph-source-gap)
+    attached to causal_graphs documenting the source-limited mechanism gap.
   llm_assisted: true

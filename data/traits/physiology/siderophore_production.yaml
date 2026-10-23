@@ -45,6 +45,29 @@ discussions:
     rather than the organism-level biosynthesis-and-release trait.
   posed_by: codex
   posed_date: '2026-09-14'
+- discussion_id: siderophore-production-protein-example-gap
+  prompt: Add strain-matched UniProtKB protein_examples for Pseudomonas aeruginosa
+    pyoverdine synthetase/transport proteins (e.g. PvdD, PvdL, FpvA) so siderophore_production_iron_scavenging_sketch
+    can be promoted from NONMECHANISTIC to MECHANISTIC.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - causal_graphs#siderophore_production_iron_scavenging_sketch
+  rationale: The record's primary literature (DOI:10.1111/1462-2920.14937, DOI:10.15698/mic2018.10.649,
+    DOI:10.1073/pnas.0908760106) establishes pyoverdine siderophore biosynthesis and
+    extracellular iron scavenging in Pseudomonas aeruginosa (NCBITaxon:287), but verified
+    UniProtKB accessions must be curated on a GENE_OR_PROTEIN node before marking
+    the graph MECHANISTIC.
+  posed_by: claude
+  posed_date: '2026-10-23'
+  evidence:
+  - reference: DOI:10.15698/mic2018.10.649
+    supports: PARTIAL
+    snippet: Pyoverdines are fluorescent siderophores of pseudomonads that play important
+      roles for growth under iron-limiting conditions.
+    explanation: Existing record-level evidence supports the connected NONMECHANISTIC
+      pathway/function graph but does not provide strain-matched UniProtKB protein
+      accessions for protein_examples.
 curation_history:
 - timestamp: '2026-09-14T18:32:00Z'
   curator: codex
@@ -54,3 +77,83 @@ curation_history:
     siderophore class in the local snapshot and the replacement placeholder is reserved
     in proposals/metpo_traitmech_v63.
   llm_assisted: true
+- timestamp: '2026-10-23T09:40:48Z'
+  curator: claude
+  action: CURATE_CAUSAL_GRAPH
+  changes: Added NONMECHANISTIC causal_graphs entry (siderophore_production_iron_scavenging_sketch)
+    and OPEN CURATION_TODO discussion (siderophore-production-protein-example-gap)
+    anchored on existing verbatim record evidence snippets.
+  llm_assisted: true
+causal_graphs:
+- graph_id: siderophore_production_iron_scavenging_sketch
+  title: Siderophore biosynthesis, extracellular secretion, and iron scavenging
+  description: Evidence-backed physiological mechanism sketch linking siderophore
+    biosynthesis, extracellular siderophore secretion, and high-affinity iron scavenging
+    to siderophore production.
+  scope_status: NONMECHANISTIC
+  scope_notes: Biosynthesis-and-transport sketch backed by DOI:10.1111/1462-2920.14937,
+    DOI:10.15698/mic2018.10.649, and DOI:10.1073/pnas.0908760106; strain-matched UniProtKB
+    protein examples for Pseudomonas aeruginosa pyoverdine synthetases (PvdL/PvdI/PvdJ/PvdD)
+    and TonB-dependent receptor FpvA remain to be curated.
+  nodes:
+  - node_id: siderophore_production_trait
+    label: siderophore production
+    node_type: TRAIT
+    grounding: traitmech:000186
+    description: Physiological trait in which microorganisms synthesize and secrete
+      iron-chelating siderophores.
+  - node_id: siderophore_production_biosynthesis
+    label: siderophore biosynthetic process
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0019290
+    description: Cellular biosynthesis of iron-chelating siderophore molecules such
+      as pyoverdine under iron-limiting conditions.
+  - node_id: siderophore_production_siderophore
+    label: siderophore
+    node_type: CHEMICAL
+    grounding: CHEBI:26672
+    description: Secreted high-affinity iron-chelating molecule released into the
+      extracellular environment.
+  - node_id: siderophore_production_iron_import
+    label: siderophore transport
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0015891
+    description: Extracellular scavenging and cellular uptake of siderophore-chelated
+      iron.
+  edges:
+  - subject: siderophore_production_biosynthesis
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: siderophore_production_trait
+    description: Biosynthesis of iron-chelating siderophores such as pyoverdine under
+      iron-limiting conditions confers the siderophore production trait.
+    evidence:
+    - reference: DOI:10.15698/mic2018.10.649
+      snippet: Pyoverdines are fluorescent siderophores of pseudomonads that play
+        important roles for growth under iron-limiting conditions.
+      notes: Ringel and Bruser review fluorescent pyoverdine siderophores produced
+        by pseudomonads for growth under iron-limiting conditions.
+  - subject: siderophore_production_biosynthesis
+    predicate: has output
+    predicate_id: RO:0002234
+    object: siderophore_production_siderophore
+    description: Bacteria synthesize iron-chelating siderophore molecules to access
+      iron.
+    evidence:
+    - reference: DOI:10.1111/1462-2920.14937
+      snippet: Siderophores are iron-chelating molecules produced by bacteria to access
+        iron, a key nutrient.
+      notes: Schalk et al. define siderophores as iron-chelating molecules produced
+        by bacteria to access iron.
+  - subject: siderophore_production_siderophore
+    predicate: enables
+    predicate_id: RO:0002327
+    object: siderophore_production_iron_import
+    description: Secreted siderophores scavenge environmental iron and mediate its
+      uptake into the cell.
+    evidence:
+    - reference: DOI:10.1111/1462-2920.14937
+      snippet: They are released by bacteria into their environment to scavenge iron
+        and bring it back into the cells.
+      notes: Schalk et al. state that secreted siderophores scavenge environmental
+        iron and bring it back into the cells.

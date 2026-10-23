@@ -40,6 +40,28 @@ discussions:
     as a causal-node grounding rather than an equivalent TraitRecord xref.
   posed_by: codex
   posed_date: '2026-09-12'
+- discussion_id: pyrrolidonyl-arylamidase-activity-causal-graph-source-gap
+  prompt: Add primary microbial literature evidence for pyroglutamyl-peptidase I (PyrA,
+    EC 3.4.19.3) catalysis and physiological peptide turnover in the exemplar taxon
+    before constructing causal_graphs.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  attaches_to:
+  - causal_graphs
+  rationale: The current record pairs one IUBMB EC 3.4.19.3 reaction snippet with
+    a diagnostic strain-phenotyping list (DOI:10.1128/JCM.37.11.3443-3447.1999), leaving
+    only one mechanistic quote.
+  posed_by: claude
+  posed_date: '2026-10-23'
+  evidence:
+  - reference: https://iubmb.qmul.ac.uk/enzyme/EC3/4/19/3.html
+    supports: PARTIAL
+    snippet: 'Reaction: Release of an N-terminal pyroglutamyl group from a polypeptide,
+      the second amino acid generally not being Pro'
+    explanation: Existing record-level evidence supports the trait definition and
+      diagnostic or organismal occurrence, but lacks multiple distinct pathway/enzyme
+      quotes and strain-matched UniProtKB protein accessions needed for a connected
+      causal graph.
 curation_history:
 - timestamp: '2026-09-12T03:14:57Z'
   curator: codex
@@ -47,4 +69,10 @@ curation_history:
   changes: Minted pyrrolidonyl arylamidase activity as a URL/DOI-backed TraitRecord
     after a repository-wide duplicate review covering ignored and hidden files; METPO
     has no exact pyrrolidonyl arylamidase activity class yet.
+  llm_assisted: true
+- timestamp: '2026-10-23T09:40:49Z'
+  curator: claude
+  action: RECORD_MECHANISM_KNOWLEDGE_GAP
+  changes: Recorded OPEN KNOWLEDGE_GAP discussion (pyrrolidonyl-arylamidase-activity-causal-graph-source-gap)
+    attached to causal_graphs documenting the source-limited mechanism gap.
   llm_assisted: true

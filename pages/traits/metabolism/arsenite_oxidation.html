@@ -203,7 +203,7 @@
 
 
     <div class="card" id="discussions">
-      <h2>Discussions and Knowledge Gaps <span class="meta">(1)</span></h2>
+      <h2>Discussions and Knowledge Gaps <span class="meta">(2)</span></h2>
       <p class="meta">Open questions attached to this trait. Seeded by
         <code>just knowledge-gap-scan</code> and curated; see
         <a href="../../../app/discussions/index.html">the corpus-wide index</a>.</p>
@@ -238,6 +238,47 @@
 
       </div>
 
+
+      <div class="discussion" id="arsenite-oxidation-causal-graph-source-gap">
+        <p class="discussion-prompt">Add primary literature evidence for periplasmic arsenite oxidase (AioAB or ArxAB), electron transfer to c-type cytochrome/azurin, and a strain-matched canonical example before constructing causal_graphs.</p>
+        <p class="meta">
+          <span class="badge">KNOWLEDGE GAP</span>
+          <span class="badge">OPEN</span>
+          <code>arsenite-oxidation-causal-graph-source-gap</code>
+          · raised by claude
+          · 2026-10-23
+        </p>
+
+
+        <p class="meta">Attached to
+          <code>causal_graphs</code>
+        </p>
+
+
+        <p>The current record carries general detoxification/energy and strain-isolation snippets (DOI:10.3389/fmicb.2020.569282, DOI:10.1128/AEM.66.1.92-97.2000, DOI:10.1186/s12866-024-03676-9) without enzyme-level catalytic quotes or a cited canonical example.</p>
+
+
+
+
+        <h3>Evidence</h3>
+        <ul class="discussion-evidence">
+
+          <li>
+            <a href="https://doi.org/10.3389/fmicb.2020.569282" rel="nofollow noreferrer"><code>DOI:10.3389/fmicb.2020.569282</code></a>
+            <span class="badge">PARTIAL</span>
+            <blockquote>The biological oxidation of arsenite [As(III)] to arsenate [As(V)] is considered a strategy to reduce arsenic toxicity and provide energy</blockquote>
+            <span class="meta">Existing record-level evidence supports the trait definition and diagnostic or organismal occurrence, but lacks multiple distinct pathway/enzyme quotes and strain-matched UniProtKB protein accessions needed for a connected causal graph.</span>
+          </li>
+
+        </ul>
+
+
+
+
+
+
+      </div>
+
     </div>
 
 
@@ -249,6 +290,12 @@
           <time>2026-09-14T20:30:00Z</time> ·
           <strong>MINTED_TRAITMECH_ID</strong> · codex
           <p class="changes">Minted arsenite oxidation as a DOI-backed arsenic metabolism TraitRecord after a repository-wide duplicate review covering ignored and hidden files; the local METPO snapshot has only an obsolete Arsenite oxidation class and the replacement placeholder is reserved in proposals/metpo_traitmech_v66.</p>
+        </li>
+
+        <li>
+          <time>2026-10-23T09:40:48Z</time> ·
+          <strong>RECORD_MECHANISM_KNOWLEDGE_GAP</strong> · claude
+          <p class="changes">Recorded OPEN KNOWLEDGE_GAP discussion (arsenite-oxidation-causal-graph-source-gap) attached to causal_graphs documenting the source-limited mechanism gap.</p>
         </li>
 
       </ol>
@@ -327,7 +374,7 @@
       third-party source terms apply
     </div>
     <div>
-      Record as of 2026-09-14 20:30 UTC
+      Record as of 2026-10-23 09:40 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
       · embedding coverage 100.0%

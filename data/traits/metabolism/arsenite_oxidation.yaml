@@ -44,6 +44,28 @@ discussions:
     arsenite oxidation.
   posed_by: codex
   posed_date: '2026-09-14'
+- discussion_id: arsenite-oxidation-causal-graph-source-gap
+  prompt: Add primary literature evidence for periplasmic arsenite oxidase (AioAB
+    or ArxAB), electron transfer to c-type cytochrome/azurin, and a strain-matched
+    canonical example before constructing causal_graphs.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  attaches_to:
+  - causal_graphs
+  rationale: The current record carries general detoxification/energy and strain-isolation
+    snippets (DOI:10.3389/fmicb.2020.569282, DOI:10.1128/AEM.66.1.92-97.2000, DOI:10.1186/s12866-024-03676-9)
+    without enzyme-level catalytic quotes or a cited canonical example.
+  posed_by: claude
+  posed_date: '2026-10-23'
+  evidence:
+  - reference: DOI:10.3389/fmicb.2020.569282
+    supports: PARTIAL
+    snippet: The biological oxidation of arsenite [As(III)] to arsenate [As(V)] is
+      considered a strategy to reduce arsenic toxicity and provide energy
+    explanation: Existing record-level evidence supports the trait definition and
+      diagnostic or organismal occurrence, but lacks multiple distinct pathway/enzyme
+      quotes and strain-matched UniProtKB protein accessions needed for a connected
+      causal graph.
 curation_history:
 - timestamp: '2026-09-14T20:30:00Z'
   curator: codex
@@ -52,4 +74,10 @@ curation_history:
     after a repository-wide duplicate review covering ignored and hidden files; the
     local METPO snapshot has only an obsolete Arsenite oxidation class and the replacement
     placeholder is reserved in proposals/metpo_traitmech_v66.
+  llm_assisted: true
+- timestamp: '2026-10-23T09:40:48Z'
+  curator: claude
+  action: RECORD_MECHANISM_KNOWLEDGE_GAP
+  changes: Recorded OPEN KNOWLEDGE_GAP discussion (arsenite-oxidation-causal-graph-source-gap)
+    attached to causal_graphs documenting the source-limited mechanism gap.
   llm_assisted: true

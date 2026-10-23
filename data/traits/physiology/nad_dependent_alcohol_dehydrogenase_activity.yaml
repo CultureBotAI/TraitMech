@@ -58,6 +58,33 @@ discussions:
     an equivalent TraitRecord xref.
   posed_by: codex
   posed_date: '2026-09-12'
+- discussion_id: nad-dependent-alcohol-dehydrogenase-activity-causal-graph-source-gap
+  prompt: Add strain-matched UniProtKB protein_examples for Zymomonas mobilis AdhA/AdhB
+    (P0DTE6/P06758) and physiological ethanol fermentation coupling before constructing
+    a MECHANISTIC causal_graphs entry.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  attaches_to:
+  - causal_graphs
+  rationale: The current record carries an IUBMB EC 1.1.1.1 reaction snippet and two
+    Zymomonas mobilis adhB purification/cloning snippets (DOI:10.1111/j.1432-1033.1986.tb09366.x,
+    DOI:10.1128/jb.169.6.2591-2597.1987) that identify AdhB but do not state its physiological
+    acetaldehyde-to-ethanol metabolic role or include verified UniProtKB protein_examples.
+  posed_by: claude
+  posed_date: '2026-10-23'
+  evidence:
+  - reference: https://iubmb.qmul.ac.uk/enzyme/EC1/1/1/1.html
+    supports: PARTIAL
+    snippet: '<b>Reaction:</b> (1) a primary alcohol + NAD<small><sup>+</sup></small>
+      = an aldehyde + NADH + H<small><sup>+</sup></small><br>
+
+
+      (2) a secondary alcohol + NAD<small><sup>+</sup></small> = a ketone + NADH +
+      H<small><sup>+</sup></small>'
+    explanation: Existing record-level evidence supports the trait definition and
+      diagnostic or organismal occurrence, but lacks multiple distinct pathway/enzyme
+      quotes and strain-matched UniProtKB protein accessions needed for a connected
+      causal graph.
 curation_history:
 - timestamp: '2026-09-12T10:11:31Z'
   curator: codex
@@ -72,4 +99,10 @@ curation_history:
   changes: 'Narrowed the label and definition to the NAD-dependent EC 1.1.1.1 phenotype
     after PR #833 review found the cofactor-agnostic alcohol dehydrogenase activity
     label overbroad for the evidence.'
+  llm_assisted: true
+- timestamp: '2026-10-23T09:40:49Z'
+  curator: claude
+  action: RECORD_MECHANISM_KNOWLEDGE_GAP
+  changes: Recorded OPEN KNOWLEDGE_GAP discussion (nad-dependent-alcohol-dehydrogenase-activity-causal-graph-source-gap)
+    attached to causal_graphs documenting the source-limited mechanism gap.
   llm_assisted: true

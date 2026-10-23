@@ -37,6 +37,28 @@ discussions:
     xref.
   posed_by: codex
   posed_date: '2026-09-11'
+- discussion_id: alkaline-phosphatase-activity-causal-graph-source-gap
+  prompt: Add primary microbial literature evidence for PhoA/PhoX alkaline phosphatase
+    catalysis (EC 3.1.3.1), phosphate-ester hydrolysis products, and PhoBR regulation
+    before constructing causal_graphs.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  attaches_to:
+  - causal_graphs
+  rationale: The current record carries one constitutive-expression snippet and one
+    API ZYM profile list (DOI:10.1128/JB.185.16.4983-4991.2003, DOI:10.1155/2021/8888641)
+    without distinct catalytic reaction/product quotes for a multi-edge graph.
+  posed_by: claude
+  posed_date: '2026-10-23'
+  evidence:
+  - reference: DOI:10.1128/JB.185.16.4983-4991.2003
+    supports: PARTIAL
+    snippet: leads to constitutive expression of a protein with alkaline phosphatase
+      activity
+    explanation: Existing record-level evidence supports the trait definition and
+      diagnostic or organismal occurrence, but lacks multiple distinct pathway/enzyme
+      quotes and strain-matched UniProtKB protein accessions needed for a connected
+      causal graph.
 curation_history:
 - timestamp: '2026-09-11T16:01:38Z'
   curator: codex
@@ -44,4 +66,10 @@ curation_history:
   changes: Minted alkaline phosphatase activity as a DOI-backed TraitRecord after
     a repository-wide duplicate review covering ignored and hidden files; METPO has
     no exact alkaline phosphatase activity class yet.
+  llm_assisted: true
+- timestamp: '2026-10-23T09:40:48Z'
+  curator: claude
+  action: RECORD_MECHANISM_KNOWLEDGE_GAP
+  changes: Recorded OPEN KNOWLEDGE_GAP discussion (alkaline-phosphatase-activity-causal-graph-source-gap)
+    attached to causal_graphs documenting the source-limited mechanism gap.
   llm_assisted: true

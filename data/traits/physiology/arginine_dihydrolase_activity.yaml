@@ -65,6 +65,30 @@ discussions:
     source node and not an equivalent TraitRecord xref.
   posed_by: codex
   posed_date: '2026-09-12'
+- discussion_id: arginine-dihydrolase-activity-protein-example-gap
+  prompt: Add strain-matched UniProtKB protein_examples for Latilactobacillus sakei
+    arc-operon arginine deiminase pathway enzymes (ArcA, ArcB, ArcC) so arginine_dihydrolase_adi_pathway_sketch
+    can be promoted from NONMECHANISTIC to MECHANISTIC.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - causal_graphs#arginine_dihydrolase_adi_pathway_sketch
+  rationale: The record's primary literature (DOI:10.1016/j.fm.2010.11.016, DOI:10.1128/aem.07724-11,
+    DOI:10.1016/j.resmic.2012.11.004) establishes arc-operon ADI pathway conversion
+    of arginine to citrulline and ornithine in Latilactobacillus sakei (NCBITaxon:1599),
+    but verified UniProtKB accessions must be curated on a GENE_OR_PROTEIN node before
+    marking the graph MECHANISTIC.
+  posed_by: claude
+  posed_date: '2026-10-23'
+  evidence:
+  - reference: DOI:10.1016/j.resmic.2012.11.004
+    supports: PARTIAL
+    snippet: Arginine conversion through the arginine deiminase (ADI) pathway is a
+      common metabolic trait of Lactobacillus sakei which is ascribed to an arc operon
+      and which inquisitively involves citrulline excretion and re-uptake.
+    explanation: Existing record-level evidence supports the connected NONMECHANISTIC
+      pathway/function graph but does not provide strain-matched UniProtKB protein
+      accessions for protein_examples.
 curation_history:
 - timestamp: '2026-09-12T09:44:56Z'
   curator: codex
@@ -73,3 +97,86 @@ curation_history:
     a repository-wide duplicate review covering ignored and hidden files; METPO has
     no exact arginine deiminase pathway activity class yet.
   llm_assisted: true
+- timestamp: '2026-10-23T09:40:48Z'
+  curator: claude
+  action: CURATE_CAUSAL_GRAPH
+  changes: Added NONMECHANISTIC causal_graphs entry (arginine_dihydrolase_adi_pathway_sketch)
+    and OPEN CURATION_TODO discussion (arginine-dihydrolase-activity-protein-example-gap)
+    anchored on existing verbatim record evidence snippets.
+  llm_assisted: true
+causal_graphs:
+- graph_id: arginine_dihydrolase_adi_pathway_sketch
+  title: Arginine deiminase (ADI) pathway conversion of L-arginine to citrulline and
+    ornithine
+  description: Evidence-backed physiological mechanism sketch linking arginine deiminase
+    catalysis, L-citrulline and L-ornithine formation, and ADI pathway ATP generation
+    to arginine dihydrolase activity.
+  scope_status: NONMECHANISTIC
+  scope_notes: Pathway-and-activity sketch backed by EC 3.5.3.6, DOI:10.1016/j.fm.2010.11.016,
+    DOI:10.1128/aem.07724-11, and DOI:10.1016/j.resmic.2012.11.004; strain-matched
+    UniProtKB protein examples for Latilactobacillus sakei arc operon enzymes (ArcA,
+    ArcB, ArcC) remain to be curated.
+  nodes:
+  - node_id: arginine_dihydrolase_activity_trait
+    label: arginine dihydrolase activity
+    node_type: TRAIT
+    grounding: traitmech:000164
+    description: Physiological enzyme-activity phenotype mediated by the microbial
+      arginine deiminase (ADI) pathway.
+  - node_id: arginine_dihydrolase_adi_pathway
+    label: arginine catabolic process to ornithine
+    node_type: PATHWAY
+    grounding: GO:0019546
+    description: Arginine deiminase (ADI) pathway encoded by the arc operon that converts
+      arginine to citrulline and ornithine with ATP generation.
+  - node_id: arginine_dihydrolase_deiminase_activity
+    label: arginine deiminase activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0008792
+    description: Catalytic hydrolysis of L-arginine and water to L-citrulline and
+      ammonia (EC 3.5.3.6).
+  - node_id: arginine_dihydrolase_citrulline
+    label: L-citrulline
+    node_type: CHEMICAL
+    grounding: CHEBI:16349
+    description: L-citrulline intermediate produced from L-arginine by arginine deiminase.
+  edges:
+  - subject: arginine_dihydrolase_adi_pathway
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: arginine_dihydrolase_activity_trait
+    description: Arginine conversion through the arc-operon ADI pathway confers the
+      arginine dihydrolase activity trait.
+    evidence:
+    - reference: DOI:10.1016/j.resmic.2012.11.004
+      snippet: Arginine conversion through the arginine deiminase (ADI) pathway is
+        a common metabolic trait of Lactobacillus sakei which is ascribed to an arc
+        operon and which inquisitively involves citrulline excretion and re-uptake.
+      notes: Rimaux et al. describe arginine conversion through the arc-operon-encoded
+        arginine deiminase (ADI) pathway as a common metabolic trait of Lactobacillus
+        sakei.
+  - subject: arginine_dihydrolase_deiminase_activity
+    predicate: enables
+    predicate_id: RO:0002327
+    object: arginine_dihydrolase_adi_pathway
+    description: Arginine deiminase hydrolyzes L-arginine and water to L-citrulline
+      and ammonia in the first step of the ADI pathway.
+    evidence:
+    - reference: https://iubmb.qmul.ac.uk/enzyme/EC3/5/3/6.html
+      snippet: <b>Reaction:</b> <small>L</small>-arginine + H<small><sub>2</sub></small>O
+        = <small>L</small>-citrulline + NH<small><sub>3</sub></small>
+      notes: IUBMB EC 3.5.3.6 defines the arginine deiminase reaction converting L-arginine
+        and water to L-citrulline and ammonia.
+  - subject: arginine_dihydrolase_adi_pathway
+    predicate: has output
+    predicate_id: RO:0002234
+    object: arginine_dihydrolase_citrulline
+    description: Arginine conversion through the ADI pathway produces citrulline and
+      ornithine.
+    evidence:
+    - reference: DOI:10.1016/j.fm.2010.11.016
+      snippet: Arginine conversion through the ADI pathway, which was activated from
+        the stationary growth phase on, resulted in the production of both citrulline
+        and ornithine for all pH conditions tested.
+      notes: Rimaux et al. show that arginine conversion through the ADI pathway produces
+        both citrulline and ornithine.

@@ -46,6 +46,29 @@ discussions:
     exact equivalent for this bacterial adhesive-matrix trait.
   posed_by: codex
   posed_date: '2026-09-14'
+- discussion_id: holdfast-causal-graph-source-gap
+  prompt: Add primary literature evidence for holdfast polysaccharide biosynthesis/export
+    proteins (HfsDABCHG) and outer-membrane anchoring proteins (HfaABD) before constructing
+    causal_graphs.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  attaches_to:
+  - causal_graphs
+  rationale: The current record carries polar adhesin function and monosaccharide-composition
+    snippets in Caulobacterales (DOI:10.1128/jb.00276-19, DOI:10.1128/jb.00273-22)
+    without biosynthetic or anchoring protein quotes.
+  posed_by: claude
+  posed_date: '2026-10-23'
+  evidence:
+  - reference: DOI:10.1128/jb.00276-19
+    supports: PARTIAL
+    snippet: Caulobacter crescentus synthesizes a polysaccharide-based adhesin known
+      as the holdfast at one of its cell poles, which enables tight attachment to
+      exogenous surfaces.
+    explanation: Existing record-level evidence supports the trait definition and
+      diagnostic or organismal occurrence, but lacks multiple distinct pathway/enzyme
+      quotes and strain-matched UniProtKB protein accessions needed for a connected
+      causal graph.
 curation_history:
 - timestamp: '2026-09-14T06:26:17Z'
   curator: codex
@@ -53,4 +76,10 @@ curation_history:
   changes: Minted holdfast as a DOI-backed TraitRecord after a repository-wide duplicate
     review covering ignored and hidden files; live METPO has no active exact holdfast
     class and the placeholder is reserved in proposals/metpo_traitmech_v61.
+  llm_assisted: true
+- timestamp: '2026-10-23T09:40:48Z'
+  curator: claude
+  action: RECORD_MECHANISM_KNOWLEDGE_GAP
+  changes: Recorded OPEN KNOWLEDGE_GAP discussion (holdfast-causal-graph-source-gap)
+    attached to causal_graphs documenting the source-limited mechanism gap.
   llm_assisted: true

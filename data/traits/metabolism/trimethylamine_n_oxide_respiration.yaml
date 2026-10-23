@@ -46,6 +46,29 @@ discussions:
     anaerobic respiration phenotype.
   posed_by: codex
   posed_date: '2026-09-15'
+- discussion_id: trimethylamine-n-oxide-respiration-protein-example-gap
+  prompt: Add strain-matched UniProtKB protein_examples for Escherichia coli K-12
+    TMAO reductase (TorA/TorC) encoded by the torCAD operon so tmao_respiration_tor_pathway_sketch
+    can be promoted from NONMECHANISTIC to MECHANISTIC.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - causal_graphs#tmao_respiration_tor_pathway_sketch
+  rationale: The record's primary literature (DOI:10.1111/1462-2920.12726, DOI:10.3389/fmicb.2024.1467153)
+    establishes anaerobic respiratory growth on TMAO and reduction of TMAO to trimethylamine
+    by torCAD-encoded TMAO reductase in Escherichia coli K-12 (NCBITaxon:83333), but
+    verified UniProtKB accessions must be curated on a GENE_OR_PROTEIN node before
+    marking the graph MECHANISTIC.
+  posed_by: claude
+  posed_date: '2026-10-23'
+  evidence:
+  - reference: DOI:10.1111/1462-2920.12726
+    supports: PARTIAL
+    snippet: anaerobic respiratory growth with trimethylamine-N-oxide (TMAO) as the
+      terminal electron acceptor
+    explanation: Existing record-level evidence supports the connected NONMECHANISTIC
+      pathway/function graph but does not provide strain-matched UniProtKB protein
+      accessions for protein_examples.
 curation_history:
 - timestamp: '2026-09-15T02:00:15Z'
   curator: codex
@@ -55,3 +78,82 @@ curation_history:
     review covering ignored and hidden files; the local METPO snapshot has no exact
     class and the replacement placeholder is reserved in proposals/metpo_traitmech_v76.
   llm_assisted: true
+- timestamp: '2026-10-23T09:40:48Z'
+  curator: claude
+  action: CURATE_CAUSAL_GRAPH
+  changes: Added NONMECHANISTIC causal_graphs entry (tmao_respiration_tor_pathway_sketch)
+    and OPEN CURATION_TODO discussion (trimethylamine-n-oxide-respiration-protein-example-gap)
+    anchored on existing verbatim record evidence snippets.
+  llm_assisted: true
+causal_graphs:
+- graph_id: tmao_respiration_tor_pathway_sketch
+  title: torCAD-encoded TMAO reductase anaerobic respiratory pathway
+  description: Evidence-backed metabolic pathway sketch linking TMAO terminal electron
+    acceptance, torCAD-encoded TMAO reductase catalysis, and trimethylamine formation
+    to TMAO respiration.
+  scope_status: NONMECHANISTIC
+  scope_notes: Pathway-and-activity sketch backed by DOI:10.1111/1462-2920.12726 and
+    DOI:10.3389/fmicb.2024.1467153; strain-matched UniProtKB protein examples for
+    Escherichia coli K-12 TMAO reductase TorA/TorC encoded by the torCAD operon remain
+    to be curated.
+  nodes:
+  - node_id: tmao_respiration_trait
+    label: trimethylamine N-oxide respiration
+    node_type: TRAIT
+    grounding: traitmech:000199
+    description: Anaerobic respiration using trimethylamine N-oxide (TMAO) as a terminal
+      electron acceptor.
+  - node_id: tmao_respiration_tmao
+    label: trimethylamine N-oxide
+    node_type: CHEMICAL
+    grounding: CHEBI:15724
+    description: Trimethylamine N-oxide (TMAO) serving as the terminal electron acceptor
+      in anaerobic respiratory growth.
+  - node_id: tmao_respiration_reductase_activity
+    label: trimethylamine-N-oxide reductase (cytochrome c) activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0008810
+    description: Respiratory TMAO reductase activity encoded by the torCAD operon
+      reducing TMAO to trimethylamine.
+  - node_id: tmao_respiration_trimethylamine
+    label: trimethylamine
+    node_type: CHEMICAL
+    grounding: CHEBI:18139
+    description: Trimethylamine (TMA) produced by respiratory reduction of TMAO.
+  edges:
+  - subject: tmao_respiration_trait
+    predicate: has electron acceptor
+    predicate_id: METPO:2007702
+    object: tmao_respiration_tmao
+    description: Trimethylamine N-oxide (TMAO) serves as the terminal electron acceptor
+      in anaerobic respiratory growth.
+    evidence:
+    - reference: DOI:10.1111/1462-2920.12726
+      snippet: anaerobic respiratory growth with trimethylamine-N-oxide (TMAO) as
+        the terminal electron acceptor
+      notes: Denby et al. describe anaerobic respiratory growth with trimethylamine-N-oxide
+        (TMAO) as the terminal electron acceptor.
+  - subject: tmao_respiration_reductase_activity
+    predicate: has output
+    predicate_id: RO:0002234
+    object: tmao_respiration_trimethylamine
+    description: TMAO reductase encoded by the torCAD operon reduces TMAO to trimethylamine
+      (TMA).
+    evidence:
+    - reference: DOI:10.1111/1462-2920.12726
+      snippet: TMAO is reduced to TMA by the enzyme TMAO reductase, encoded by the
+        torCAD operon
+      notes: Denby et al. state that TMAO is reduced to TMA by the enzyme TMAO reductase,
+        encoded by the torCAD operon.
+  - subject: tmao_respiration_reductase_activity
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: tmao_respiration_trait
+    description: Respiratory TMAO reduction confers the trimethylamine N-oxide respiration
+      energy-metabolism mode.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2024.1467153
+      snippet: switching from aerobic intracellular energy metabolism to trimethylamine
+        N-oxide respiration
+      notes: Qiu and Tang describe switching from aerobic intracellular energy metabolism
+        to trimethylamine N-oxide respiration.

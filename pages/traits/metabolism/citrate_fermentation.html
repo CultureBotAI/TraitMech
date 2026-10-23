@@ -211,7 +211,7 @@
 
 
     <div class="card" id="discussions">
-      <h2>Discussions and Knowledge Gaps <span class="meta">(1)</span></h2>
+      <h2>Discussions and Knowledge Gaps <span class="meta">(2)</span></h2>
       <p class="meta">Open questions attached to this trait. Seeded by
         <code>just knowledge-gap-scan</code> and curated; see
         <a href="../../../app/discussions/index.html">the corpus-wide index</a>.</p>
@@ -246,6 +246,47 @@
 
       </div>
 
+
+      <div class="discussion" id="citrate-fermentation-causal-graph-source-gap">
+        <p class="discussion-prompt">Add primary literature evidence for citrate uptake (CitH/CitS), citrate lyase (CitDEF), and membrane-bound oxaloacetate decarboxylase Na+ pump (OadGAB) before constructing causal_graphs.</p>
+        <p class="meta">
+          <span class="badge">KNOWLEDGE GAP</span>
+          <span class="badge">OPEN</span>
+          <code>citrate-fermentation-causal-graph-source-gap</code>
+          · raised by claude
+          · 2026-10-23
+        </p>
+
+
+        <p class="meta">Attached to
+          <code>causal_graphs</code>
+        </p>
+
+
+        <p>The current record carries two growth-and-prevalence snippets in Klebsiella pneumoniae (DOI:10.1128/JB.183.18.5248-5256.2001, DOI:10.1186/1471-2180-9-168) without enzymatic step or intermediate quotes.</p>
+
+
+
+
+        <h3>Evidence</h3>
+        <ul class="discussion-evidence">
+
+          <li>
+            <a href="https://doi.org/10.1128/JB.183.18.5248-5256.2001" rel="nofollow noreferrer"><code>DOI:10.1128/JB.183.18.5248-5256.2001</code></a>
+            <span class="badge">PARTIAL</span>
+            <blockquote>Klebsiella pneumoniae is able to grow anaerobically with citrate as a sole carbon and energy source by a fermentative pathway</blockquote>
+            <span class="meta">Existing record-level evidence supports the trait definition and diagnostic or organismal occurrence, but lacks multiple distinct pathway/enzyme quotes and strain-matched UniProtKB protein accessions needed for a connected causal graph.</span>
+          </li>
+
+        </ul>
+
+
+
+
+
+
+      </div>
+
     </div>
 
 
@@ -263,6 +304,12 @@
           <time>2026-09-14T04:38:10Z</time> ·
           <strong>CURATION_REVIEW_REVISION</strong> · codex
           <p class="changes">Resolved PR #894 review issue #897 by narrowing the minted record from citrate utilization to pathway-scoped citrate fermentation.</p>
+        </li>
+
+        <li>
+          <time>2026-10-23T09:40:48Z</time> ·
+          <strong>RECORD_MECHANISM_KNOWLEDGE_GAP</strong> · claude
+          <p class="changes">Recorded OPEN KNOWLEDGE_GAP discussion (citrate-fermentation-causal-graph-source-gap) attached to causal_graphs documenting the source-limited mechanism gap.</p>
         </li>
 
       </ol>
@@ -341,7 +388,7 @@
       third-party source terms apply
     </div>
     <div>
-      Record as of 2026-09-14 04:38 UTC
+      Record as of 2026-10-23 09:40 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
       · embedding coverage 100.0%

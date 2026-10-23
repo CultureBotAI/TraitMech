@@ -40,6 +40,27 @@ discussions:
     production phenotype at organism-level scope.
   posed_by: codex
   posed_date: '2026-09-12'
+- discussion_id: naphthol-as-bi-phosphohydrolase-activity-causal-graph-source-gap
+  prompt: Add primary microbial literature evidence for the phosphohydrolase enzyme
+    catalyzing naphthol-AS-BI-phosphate hydrolysis and its physiological substrate
+    before constructing causal_graphs.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  attaches_to:
+  - causal_graphs
+  rationale: The current record carries two API ZYM diagnostic substrate/panel snippets
+    (DOI:10.14202/vetworld.2024.143-149, DOI:10.1128/JCM.43.8.3713-3717.2005) without
+    catalytic product or enzyme-identity quotes.
+  posed_by: claude
+  posed_date: '2026-10-23'
+  evidence:
+  - reference: DOI:10.14202/vetworld.2024.143-149
+    supports: PARTIAL
+    snippet: Naphthol-AS-BI-phosphohydrolase 5.4 Naphthol-AS-BI-phosphate
+    explanation: Existing record-level evidence supports the trait definition and
+      diagnostic or organismal occurrence, but lacks multiple distinct pathway/enzyme
+      quotes and strain-matched UniProtKB protein accessions needed for a connected
+      causal graph.
 curation_history:
 - timestamp: '2026-09-12T15:09:52Z'
   curator: codex
@@ -48,4 +69,10 @@ curation_history:
     after a repository-wide duplicate review covering ignored and hidden files; METPO
     has no exact naphthol-AS-BI-phosphohydrolase activity class yet and the placeholder
     is reserved in proposals/metpo_traitmech_v51.
+  llm_assisted: true
+- timestamp: '2026-10-23T09:40:49Z'
+  curator: claude
+  action: RECORD_MECHANISM_KNOWLEDGE_GAP
+  changes: Recorded OPEN KNOWLEDGE_GAP discussion (naphthol-as-bi-phosphohydrolase-activity-causal-graph-source-gap)
+    attached to causal_graphs documenting the source-limited mechanism gap.
   llm_assisted: true

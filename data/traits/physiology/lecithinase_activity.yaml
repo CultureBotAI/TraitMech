@@ -42,6 +42,28 @@ discussions:
     for an equivalent TraitRecord xref.
   posed_by: codex
   posed_date: '2026-09-11'
+- discussion_id: lecithinase-activity-causal-graph-source-gap
+  prompt: Add primary microbial literature evidence for phospholipase C (Plc, EC 3.1.4.3)
+    phosphatidylcholine cleavage to 1,2-diacylglycerol and phosphocholine before constructing
+    causal_graphs.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  attaches_to:
+  - causal_graphs
+  rationale: The current record carries two egg-yolk/lecithinase diagnostic assay
+    snippets (DOI:10.2147/IDR.S365254, DOI:10.1128/jb.81.6.939-945.1961) without distinct
+    phospholipid cleavage product quotes.
+  posed_by: claude
+  posed_date: '2026-10-23'
+  evidence:
+  - reference: DOI:10.2147/IDR.S365254
+    supports: PARTIAL
+    snippet: all tested isolates were positive for lecithinase reaction and showed
+      opaque zone around colonies on egg yolk agar
+    explanation: Existing record-level evidence supports the trait definition and
+      diagnostic or organismal occurrence, but lacks multiple distinct pathway/enzyme
+      quotes and strain-matched UniProtKB protein accessions needed for a connected
+      causal graph.
 curation_history:
 - timestamp: '2026-09-11T00:00:00Z'
   curator: codex
@@ -49,4 +71,10 @@ curation_history:
   changes: Minted lecithinase activity as a DOI-backed TraitRecord after a repository-wide
     duplicate review covering ignored and hidden files; METPO has no exact lecithinase
     activity class yet.
+  llm_assisted: true
+- timestamp: '2026-10-23T09:40:49Z'
+  curator: claude
+  action: RECORD_MECHANISM_KNOWLEDGE_GAP
+  changes: Recorded OPEN KNOWLEDGE_GAP discussion (lecithinase-activity-causal-graph-source-gap)
+    attached to causal_graphs documenting the source-limited mechanism gap.
   llm_assisted: true

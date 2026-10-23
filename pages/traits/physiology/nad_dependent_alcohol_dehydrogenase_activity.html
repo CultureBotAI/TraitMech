@@ -232,7 +232,7 @@
 
 
     <div class="card" id="discussions">
-      <h2>Discussions and Knowledge Gaps <span class="meta">(1)</span></h2>
+      <h2>Discussions and Knowledge Gaps <span class="meta">(2)</span></h2>
       <p class="meta">Open questions attached to this trait. Seeded by
         <code>just knowledge-gap-scan</code> and curated; see
         <a href="../../../app/discussions/index.html">the corpus-wide index</a>.</p>
@@ -267,6 +267,49 @@
 
       </div>
 
+
+      <div class="discussion" id="nad-dependent-alcohol-dehydrogenase-activity-causal-graph-source-gap">
+        <p class="discussion-prompt">Add strain-matched UniProtKB protein_examples for Zymomonas mobilis AdhA/AdhB (P0DTE6/P06758) and physiological ethanol fermentation coupling before constructing a MECHANISTIC causal_graphs entry.</p>
+        <p class="meta">
+          <span class="badge">KNOWLEDGE GAP</span>
+          <span class="badge">OPEN</span>
+          <code>nad-dependent-alcohol-dehydrogenase-activity-causal-graph-source-gap</code>
+          · raised by claude
+          · 2026-10-23
+        </p>
+
+
+        <p class="meta">Attached to
+          <code>causal_graphs</code>
+        </p>
+
+
+        <p>The current record carries an IUBMB EC 1.1.1.1 reaction snippet and two Zymomonas mobilis adhB purification/cloning snippets (DOI:10.1111/j.1432-1033.1986.tb09366.x, DOI:10.1128/jb.169.6.2591-2597.1987) that identify AdhB but do not state its physiological acetaldehyde-to-ethanol metabolic role or include verified UniProtKB protein_examples.</p>
+
+
+
+
+        <h3>Evidence</h3>
+        <ul class="discussion-evidence">
+
+          <li>
+            <a href="https://iubmb.qmul.ac.uk/enzyme/EC1/1/1/1.html" rel="nofollow noreferrer"><code>https://iubmb.qmul.ac.uk/enzyme/EC1/1/1/1.html</code></a>
+            <span class="badge">PARTIAL</span>
+            <blockquote>&lt;b&gt;Reaction:&lt;/b&gt; (1) a primary alcohol + NAD&lt;small&gt;&lt;sup&gt;+&lt;/sup&gt;&lt;/small&gt; = an aldehyde + NADH + H&lt;small&gt;&lt;sup&gt;+&lt;/sup&gt;&lt;/small&gt;&lt;br&gt;
+
+(2) a secondary alcohol + NAD&lt;small&gt;&lt;sup&gt;+&lt;/sup&gt;&lt;/small&gt; = a ketone + NADH + H&lt;small&gt;&lt;sup&gt;+&lt;/sup&gt;&lt;/small&gt;</blockquote>
+            <span class="meta">Existing record-level evidence supports the trait definition and diagnostic or organismal occurrence, but lacks multiple distinct pathway/enzyme quotes and strain-matched UniProtKB protein accessions needed for a connected causal graph.</span>
+          </li>
+
+        </ul>
+
+
+
+
+
+
+      </div>
+
     </div>
 
 
@@ -284,6 +327,12 @@
           <time>2026-09-12T10:38:00Z</time> ·
           <strong>REVIEW_FIX</strong> · codex
           <p class="changes">Narrowed the label and definition to the NAD-dependent EC 1.1.1.1 phenotype after PR #833 review found the cofactor-agnostic alcohol dehydrogenase activity label overbroad for the evidence.</p>
+        </li>
+
+        <li>
+          <time>2026-10-23T09:40:49Z</time> ·
+          <strong>RECORD_MECHANISM_KNOWLEDGE_GAP</strong> · claude
+          <p class="changes">Recorded OPEN KNOWLEDGE_GAP discussion (nad-dependent-alcohol-dehydrogenase-activity-causal-graph-source-gap) attached to causal_graphs documenting the source-limited mechanism gap.</p>
         </li>
 
       </ol>
@@ -368,7 +417,7 @@
       third-party source terms apply
     </div>
     <div>
-      Record as of 2026-09-12 10:39 UTC
+      Record as of 2026-10-23 09:40 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
       · embedding coverage 100.0%

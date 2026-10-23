@@ -40,6 +40,29 @@ discussions:
     an equivalent TraitRecord xref.
   posed_by: codex
   posed_date: '2026-09-11'
+- discussion_id: alpha-glucosidase-activity-causal-graph-source-gap
+  prompt: Add primary microbial literature evidence for alpha-glucosidase (EC 3.2.1.20)
+    catalysis of terminal alpha-D-glucosidic linkages and maltose/oligosaccharide
+    utilization before constructing causal_graphs.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  attaches_to:
+  - causal_graphs
+  rationale: The current record carries two API ZYM enzyme-panel survey snippets (DOI:10.1371/journal.pone.0322500,
+    DOI:10.3390/microorganisms13092005) without verbatim catalytic reaction or pathway
+    quotes.
+  posed_by: claude
+  posed_date: '2026-10-23'
+  evidence:
+  - reference: DOI:10.1371/journal.pone.0322500
+    supports: PARTIAL
+    snippet: Enzyme activities of acid- and alkaline-phosphatases, esterase, esterase
+      lipase, leucine arylamidase, trypsin, naphthol-AS-BI phosphohydrolase, and alpha-glucosidase
+      are present when assayed with API ZYM system.
+    explanation: Existing record-level evidence supports the trait definition and
+      diagnostic or organismal occurrence, but lacks multiple distinct pathway/enzyme
+      quotes and strain-matched UniProtKB protein accessions needed for a connected
+      causal graph.
 curation_history:
 - timestamp: '2026-09-11T17:22:13Z'
   curator: codex
@@ -47,4 +70,10 @@ curation_history:
   changes: Minted alpha-glucosidase activity as a DOI-backed TraitRecord after a repository-wide
     duplicate review covering ignored and hidden files; METPO has no exact alpha-glucosidase
     activity class yet.
+  llm_assisted: true
+- timestamp: '2026-10-23T09:40:49Z'
+  curator: claude
+  action: RECORD_MECHANISM_KNOWLEDGE_GAP
+  changes: Recorded OPEN KNOWLEDGE_GAP discussion (alpha-glucosidase-activity-causal-graph-source-gap)
+    attached to causal_graphs documenting the source-limited mechanism gap.
   llm_assisted: true

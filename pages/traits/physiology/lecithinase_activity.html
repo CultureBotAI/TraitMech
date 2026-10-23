@@ -222,7 +222,7 @@
 
 
     <div class="card" id="discussions">
-      <h2>Discussions and Knowledge Gaps <span class="meta">(1)</span></h2>
+      <h2>Discussions and Knowledge Gaps <span class="meta">(2)</span></h2>
       <p class="meta">Open questions attached to this trait. Seeded by
         <code>just knowledge-gap-scan</code> and curated; see
         <a href="../../../app/discussions/index.html">the corpus-wide index</a>.</p>
@@ -257,6 +257,47 @@
 
       </div>
 
+
+      <div class="discussion" id="lecithinase-activity-causal-graph-source-gap">
+        <p class="discussion-prompt">Add primary microbial literature evidence for phospholipase C (Plc, EC 3.1.4.3) phosphatidylcholine cleavage to 1,2-diacylglycerol and phosphocholine before constructing causal_graphs.</p>
+        <p class="meta">
+          <span class="badge">KNOWLEDGE GAP</span>
+          <span class="badge">OPEN</span>
+          <code>lecithinase-activity-causal-graph-source-gap</code>
+          · raised by claude
+          · 2026-10-23
+        </p>
+
+
+        <p class="meta">Attached to
+          <code>causal_graphs</code>
+        </p>
+
+
+        <p>The current record carries two egg-yolk/lecithinase diagnostic assay snippets (DOI:10.2147/IDR.S365254, DOI:10.1128/jb.81.6.939-945.1961) without distinct phospholipid cleavage product quotes.</p>
+
+
+
+
+        <h3>Evidence</h3>
+        <ul class="discussion-evidence">
+
+          <li>
+            <a href="https://doi.org/10.2147/IDR.S365254" rel="nofollow noreferrer"><code>DOI:10.2147/IDR.S365254</code></a>
+            <span class="badge">PARTIAL</span>
+            <blockquote>all tested isolates were positive for lecithinase reaction and showed opaque zone around colonies on egg yolk agar</blockquote>
+            <span class="meta">Existing record-level evidence supports the trait definition and diagnostic or organismal occurrence, but lacks multiple distinct pathway/enzyme quotes and strain-matched UniProtKB protein accessions needed for a connected causal graph.</span>
+          </li>
+
+        </ul>
+
+
+
+
+
+
+      </div>
+
     </div>
 
 
@@ -268,6 +309,12 @@
           <time>2026-09-11T00:00:00Z</time> ·
           <strong>MINTED_TRAITMECH_ID</strong> · codex
           <p class="changes">Minted lecithinase activity as a DOI-backed TraitRecord after a repository-wide duplicate review covering ignored and hidden files; METPO has no exact lecithinase activity class yet.</p>
+        </li>
+
+        <li>
+          <time>2026-10-23T09:40:49Z</time> ·
+          <strong>RECORD_MECHANISM_KNOWLEDGE_GAP</strong> · claude
+          <p class="changes">Recorded OPEN KNOWLEDGE_GAP discussion (lecithinase-activity-causal-graph-source-gap) attached to causal_graphs documenting the source-limited mechanism gap.</p>
         </li>
 
       </ol>
@@ -346,7 +393,7 @@
       third-party source terms apply
     </div>
     <div>
-      Record as of 2026-09-11 05:15 UTC
+      Record as of 2026-10-23 09:40 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
       · embedding coverage 100.0%

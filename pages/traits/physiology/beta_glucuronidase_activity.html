@@ -211,7 +211,7 @@
 
 
     <div class="card" id="discussions">
-      <h2>Discussions and Knowledge Gaps <span class="meta">(1)</span></h2>
+      <h2>Discussions and Knowledge Gaps <span class="meta">(2)</span></h2>
       <p class="meta">Open questions attached to this trait. Seeded by
         <code>just knowledge-gap-scan</code> and curated; see
         <a href="../../../app/discussions/index.html">the corpus-wide index</a>.</p>
@@ -246,6 +246,47 @@
 
       </div>
 
+
+      <div class="discussion" id="beta-glucuronidase-activity-causal-graph-source-gap">
+        <p class="discussion-prompt">Add primary microbial literature evidence for GusA/UidA beta-D-glucuronidase physiological glucuronide catabolism and strain-matched UniProtKB protein accessions before constructing causal_graphs.</p>
+        <p class="meta">
+          <span class="badge">KNOWLEDGE GAP</span>
+          <span class="badge">OPEN</span>
+          <code>beta-glucuronidase-activity-causal-graph-source-gap</code>
+          · raised by claude
+          · 2026-10-23
+        </p>
+
+
+        <p class="meta">Attached to
+          <code>causal_graphs</code>
+        </p>
+
+
+        <p>The current record pairs one IUBMB EC 3.2.1.31 reaction snippet with one fluorogenic MUG-assay snippet (DOI:10.1128/aem.50.6.1383-1387.1985) without physiological pathway or UniProtKB protein grounding.</p>
+
+
+
+
+        <h3>Evidence</h3>
+        <ul class="discussion-evidence">
+
+          <li>
+            <a href="https://iubmb.qmul.ac.uk/enzyme/EC3/2/1/31.html" rel="nofollow noreferrer"><code>https://iubmb.qmul.ac.uk/enzyme/EC3/2/1/31.html</code></a>
+            <span class="badge">PARTIAL</span>
+            <blockquote>Reaction: a β-D-glucuronoside + H2O = D-glucuronate + an alcohol</blockquote>
+            <span class="meta">Existing record-level evidence supports the trait definition and diagnostic or organismal occurrence, but lacks multiple distinct pathway/enzyme quotes and strain-matched UniProtKB protein accessions needed for a connected causal graph.</span>
+          </li>
+
+        </ul>
+
+
+
+
+
+
+      </div>
+
     </div>
 
 
@@ -263,6 +304,12 @@
           <time>2026-09-12T00:55:15Z</time> ·
           <strong>FIX_EVIDENCE_SNIPPET</strong> · codex
           <p class="changes">Corrected the IUBMB EC 3.2.1.31 water token from HTML-derived H_{2}O to source-visible H2O after Claude Code Review flagged the snippet as non-verbatim in https://github.com/CultureBotAI/TraitMech/issues/807.</p>
+        </li>
+
+        <li>
+          <time>2026-10-23T09:40:49Z</time> ·
+          <strong>RECORD_MECHANISM_KNOWLEDGE_GAP</strong> · claude
+          <p class="changes">Recorded OPEN KNOWLEDGE_GAP discussion (beta-glucuronidase-activity-causal-graph-source-gap) attached to causal_graphs documenting the source-limited mechanism gap.</p>
         </li>
 
       </ol>
@@ -347,7 +394,7 @@
       third-party source terms apply
     </div>
     <div>
-      Record as of 2026-09-12 00:56 UTC
+      Record as of 2026-10-23 09:40 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
       · embedding coverage 100.0%

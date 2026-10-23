@@ -52,6 +52,28 @@ discussions:
     xref.
   posed_by: codex
   posed_date: '2026-09-12'
+- discussion_id: beta-n-acetylhexosaminidase-activity-causal-graph-source-gap
+  prompt: Add primary microbial literature evidence for NagZ/Chb beta-N-acetylhexosaminidase
+    chitobiose/muropeptide cleavage and GlcNAc release in Serratia marcescens before
+    constructing causal_graphs.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  attaches_to:
+  - causal_graphs
+  rationale: The current record pairs one IUBMB EC 3.2.1.52 reaction snippet with
+    a strain enzyme-production snippet (DOI:10.1021/jf020965x) that does not state
+    a distinct second mechanistic step.
+  posed_by: claude
+  posed_date: '2026-10-23'
+  evidence:
+  - reference: https://iubmb.qmul.ac.uk/enzyme/EC3/2/1/52.html
+    supports: PARTIAL
+    snippet: 'Reaction: Hydrolysis of terminal non-reducing N-acetyl-D-hexosamine
+      residues in N-acetyl-β-D-hexosaminides'
+    explanation: Existing record-level evidence supports the trait definition and
+      diagnostic or organismal occurrence, but lacks multiple distinct pathway/enzyme
+      quotes and strain-matched UniProtKB protein accessions needed for a connected
+      causal graph.
 curation_history:
 - timestamp: '2026-09-12T04:12:07Z'
   curator: codex
@@ -59,4 +81,10 @@ curation_history:
   changes: Minted beta-N-acetylhexosaminidase activity as a URL/DOI-backed TraitRecord
     after a repository-wide duplicate review covering ignored and hidden files; METPO
     has no exact beta-N-acetylhexosaminidase activity class yet.
+  llm_assisted: true
+- timestamp: '2026-10-23T09:40:49Z'
+  curator: claude
+  action: RECORD_MECHANISM_KNOWLEDGE_GAP
+  changes: Recorded OPEN KNOWLEDGE_GAP discussion (beta-n-acetylhexosaminidase-activity-causal-graph-source-gap)
+    attached to causal_graphs documenting the source-limited mechanism gap.
   llm_assisted: true

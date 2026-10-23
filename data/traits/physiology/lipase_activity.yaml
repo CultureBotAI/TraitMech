@@ -44,6 +44,28 @@ discussions:
     xref.
   posed_by: codex
   posed_date: '2026-09-11'
+- discussion_id: lipase-activity-causal-graph-source-gap
+  prompt: Add primary microbial literature evidence for extracellular triacylglycerol
+    lipase (EC 3.1.1.3) ester hydrolysis to diacylglycerol/fatty acids and enzyme
+    identity before constructing causal_graphs.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  attaches_to:
+  - causal_graphs
+  rationale: The current record carries two tributyrin/screening assay snippets (DOI:10.22207/JPAM.16.4.27,
+    DOI:10.1016/j.mex.2018.01.004) without verbatim catalytic reaction or enzyme-mechanism
+    quotes.
+  posed_by: claude
+  posed_date: '2026-10-23'
+  evidence:
+  - reference: DOI:10.22207/JPAM.16.4.27
+    supports: PARTIAL
+    snippet: Lipase-producing bacteria were isolated using tributyrin agar as a selective
+      medium
+    explanation: Existing record-level evidence supports the trait definition and
+      diagnostic or organismal occurrence, but lacks multiple distinct pathway/enzyme
+      quotes and strain-matched UniProtKB protein accessions needed for a connected
+      causal graph.
 curation_history:
 - timestamp: '2026-09-11T00:00:00Z'
   curator: codex
@@ -51,4 +73,10 @@ curation_history:
   changes: Minted lipase activity as a DOI-backed TraitRecord after a repository-wide
     duplicate review covering ignored and hidden files; METPO has no exact lipase
     activity class yet.
+  llm_assisted: true
+- timestamp: '2026-10-23T09:40:49Z'
+  curator: claude
+  action: RECORD_MECHANISM_KNOWLEDGE_GAP
+  changes: Recorded OPEN KNOWLEDGE_GAP discussion (lipase-activity-causal-graph-source-gap)
+    attached to causal_graphs documenting the source-limited mechanism gap.
   llm_assisted: true

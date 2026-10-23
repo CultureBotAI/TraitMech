@@ -47,6 +47,28 @@ discussions:
     GO:0019332 nitrite oxidation each cover only one component of the comammox phenotype.
   posed_by: codex
   posed_date: '2026-09-14'
+- discussion_id: complete-ammonia-oxidation-causal-graph-source-gap
+  prompt: Add primary literature evidence for ammonia monooxygenase (AmoCAB), hydroxylamine
+    dehydrogenase (Hao), and nitrite oxidoreductase (NxrAB) catalysis in comammox
+    Nitrospira before constructing causal_graphs.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  attaches_to:
+  - causal_graphs
+  rationale: The current record carries three discovery and ecological-dominance snippets
+    on comammox Nitrospira (DOI:10.1038/nature16459, DOI:10.1038/nature16461, DOI:10.1128/aem.01698-23)
+    without distinct intermediate nitrite-step or enzyme quotes.
+  posed_by: claude
+  posed_date: '2026-10-23'
+  evidence:
+  - reference: DOI:10.1038/nature16459
+    supports: PARTIAL
+    snippet: Complete oxidation of ammonia to nitrate in one organism (complete ammonia
+      oxidation; comammox) is energetically feasible
+    explanation: Existing record-level evidence supports the trait definition and
+      diagnostic or organismal occurrence, but lacks multiple distinct pathway/enzyme
+      quotes and strain-matched UniProtKB protein accessions needed for a connected
+      causal graph.
 curation_history:
 - timestamp: '2026-09-14T19:03:57Z'
   curator: codex
@@ -55,4 +77,10 @@ curation_history:
     after a repository-wide duplicate review covering ignored and hidden files; METPO
     has only an obsolete Complete ammonia oxidation class in the local snapshot and
     the replacement placeholder is reserved in proposals/metpo_traitmech_v64.
+  llm_assisted: true
+- timestamp: '2026-10-23T09:40:48Z'
+  curator: claude
+  action: RECORD_MECHANISM_KNOWLEDGE_GAP
+  changes: Recorded OPEN KNOWLEDGE_GAP discussion (complete-ammonia-oxidation-causal-graph-source-gap)
+    attached to causal_graphs documenting the source-limited mechanism gap.
   llm_assisted: true

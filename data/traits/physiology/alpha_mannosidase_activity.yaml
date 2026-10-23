@@ -39,6 +39,28 @@ discussions:
     an equivalent TraitRecord xref.
   posed_by: codex
   posed_date: '2026-09-12'
+- discussion_id: alpha-mannosidase-activity-causal-graph-source-gap
+  prompt: Add primary microbial literature evidence for GH38/GH92 alpha-mannosidase
+    catalysis and mannoside utilization in the exemplar taxon before constructing
+    causal_graphs.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  attaches_to:
+  - causal_graphs
+  rationale: The current record pairs one IUBMB EC 3.2.1.24 reaction snippet with
+    a diagnostic strain-discrimination snippet (DOI:10.1128/jcm.32.3.854-855.1994),
+    leaving only one mechanistic quote.
+  posed_by: claude
+  posed_date: '2026-10-23'
+  evidence:
+  - reference: https://iubmb.qmul.ac.uk/enzyme/EC3/2/1/24.html
+    supports: PARTIAL
+    snippet: 'Reaction: Hydrolysis of terminal, non-reducing α-D-mannose residues
+      in α-D-mannosides'
+    explanation: Existing record-level evidence supports the trait definition and
+      diagnostic or organismal occurrence, but lacks multiple distinct pathway/enzyme
+      quotes and strain-matched UniProtKB protein accessions needed for a connected
+      causal graph.
 curation_history:
 - timestamp: '2026-09-12T00:19:23Z'
   curator: codex
@@ -46,4 +68,10 @@ curation_history:
   changes: Minted alpha-mannosidase activity as a URL/DOI-backed TraitRecord after
     a repository-wide duplicate review covering ignored and hidden files; METPO has
     no exact alpha-mannosidase activity class yet.
+  llm_assisted: true
+- timestamp: '2026-10-23T09:40:49Z'
+  curator: claude
+  action: RECORD_MECHANISM_KNOWLEDGE_GAP
+  changes: Recorded OPEN KNOWLEDGE_GAP discussion (alpha-mannosidase-activity-causal-graph-source-gap)
+    attached to causal_graphs documenting the source-limited mechanism gap.
   llm_assisted: true

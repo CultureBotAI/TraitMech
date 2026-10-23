@@ -1077,7 +1077,7 @@ window.searchData = [
   "source_id": "traitmech:000214",
   "source_file": "abortive_infection_system.yaml",
   "attaches_to": [],
-  "rationale": "ToxIN, AbiQ, AbiE, AbiF, AbiZ, AbiK, AbiT, AbiV, BstA, Stk2, AbiH, AbiG, AbiI, AbiR, AbiD, AbiB, AbiC, AbiU, AbiAlpha, Pif, RexAB, SpbK, CmdTAC, Abi2, AbiJ, AbiL, AbiN, AbiO, AbiP2, AbiA, and PD-T4-10 are split out as traitmech:000226, traitmech:000225, traitmech:000227, traitmech:000504, traitmech:000228, traitmech:000229, traitmech:000230, traitmech:000300, traitmech:000301, traitmech:000303, traitmech:000304, traitmech:000306, traitmech:000316, traitmech:000317, traitmech:000318, traitmech:000319, traitmech:000320, traitmech:000321, traitmech:000322, traitmech:000323, traitmech:000324, traitmech:000325, traitmech:000335, traitmech:000338, traitmech:000339, traitmech:000340, traitmech:000341, traitmech:000342, traitmech:000343, traitmech:000344, and traitmech:000394, respectively. Lopatina et al., Fineran et al., Dy et al., Garvey et al., Durmaz and Klaenhammer, Wang et al., Bouchard et al., Haaber et al., Owen et al., Depardieu et al., Prevots et al., O'Connor et al., Su et al., Twomey et al., McLandsborough et al., Parreira et al., Durmaz et al., Dai et al., Lossouarn et al., Cram et al., Parma et al., Johnson et al., Vassallo et al., Chopin et al., Anba et al., Deng et al., Prevots et al., Prevots and Ritzenthaler, Odegrip et al., Dinsmore and Klaenhammer, and Dinsmore et al. still support abortive infection as a genomically encoded phage defense strategy that spans mechanistically diverse toxin-antitoxin, pNP40-derived lactococcal AbiF DNA-replication-inhibition, premature-lysis, RT-related polymerase, two-component, translation-inhibition, prophage-encoded DNA-replication-inhibition, staphylococcal-kinase-triggered cell death, lactococcal AbiH phage resistance, two-gene lactococcal AbiG RNA-synthesis interference, single-ORF lactococcal AbiI burst-size reduction, two-separated-locus lactococcal AbiR DNA-replication impediment, pBF61-derived lactococcal AbiD burst-size reduction, lactococcal AbiB phage-transcript decay, lactococcal AbiC Prf infected-cell death, lactococcal AbiU phage-transcription delay, enterococcal AbiAlpha premature lysis, F-plasmid pif-region T7 abortive infection, lambda Rex two-component phage exclusion, ICEBs1 SpbK abortive SPβ defense, CmdTAC mRNA ADP-ribosyltransferase abortive infection, DefenseFinder Abi2/PF07751 Abi-like loci, single-profile lactococcal AbiJ loci, two-component lactococcal AbiL ATPase/TOPRIM-family loci, single-gene lactococcal AbiN loci, single-profile lactococcal AbiO loci, single-profile coliphage AbiP2 reverse-transcriptase-like loci, lactococcal AbiA loci represented by DefenseFinder AbiA-large and AbiA-small subrules, DefenseFinder PD-T4-10 two-profile loci, and other families. Additional narrower TraitRecords need separate review to ground each subfamily's trigger, effector, growth-arrest or cell-death mechanism, and phage escape routes.",
+  "rationale": "ToxIN, AbiQ, AbiE, AbiF, AbiZ, AbiK, AbiT, AbiV, BstA, Stk2, AbiH, AbiG, AbiI, AbiR, AbiD, AbiB, AbiC, AbiU, AbiAlpha, Pif, RexAB, SpbK, CmdTAC, Abi2, AbiJ, AbiL, AbiN, AbiO, AbiP2, AbiA, and PD-T4-10 are split out as traitmech:000226, traitmech:000225, traitmech:000227, traitmech:000504, traitmech:000228, traitmech:000229, traitmech:000230, traitmech:000300, traitmech:000301, traitmech:000303, traitmech:000304, traitmech:000306, traitmech:000316, traitmech:000317, traitmech:000318, traitmech:000319, traitmech:000320, traitmech:000321, traitmech:000322, traitmech:000323, traitmech:000324, traitmech:000325, traitmech:000335, traitmech:000338, traitmech:000339, traitmech:000340, traitmech:000341, traitmech:000342, traitmech:000343, traitmech:000344, and traitmech:000394, respectively. Lopatina et al., Fineran et al., Dy et al., Garvey et al., Durmaz and Klaenhammer, Wang et al., Bouchard et al., Haaber et al., Owen et al., Depardieu et al., Prevots et al., O'Connor et al., Su et al., Twomey et al., McLandsborough et al., Parreira et al., Durmaz et al., Dai et al., Lossouarn et al., Cram et al., Parma et al., Johnson et al., Vassallo et al., Chopin et al., Anba et al., Deng et al., Prevots et al., Prevots and Ritzenthaler, Odegrip et al., Dinsmore and Klaenhammer, and Dinsmore et al. still support abortive infection as a genomically encoded phage defense strategy that spans mechanistically diverse toxin-antitoxin, pNP40-derived lactococcal AbiF DNA-replication-inhibition, premature-lysis, RT-related polymerase, two-component, translation-inhibition, prophage-encoded DNA-replication-inhibition, staphylococcal-kinase-triggered cell death, lactococcal AbiH phage resistance, two-gene lactococcal AbiG RNA-synthesis interference, single-ORF lactococcal AbiI burst-size reduction, two-separated-locus lactococcal AbiR DNA-replication impediment, pBF61-derived lactococcal AbiD burst-size reduction, lactococcal AbiB phage-transcript decay, lactococcal AbiC Prf infected-cell death, lactococcal AbiU phage-transcription delay, enterococcal AbiAlpha premature lysis, F-plasmid pif-region T7 abortive infection, lambda Rex two-component phage exclusion, ICEBs1 SpbK abortive SP\u03b2 defense, CmdTAC mRNA ADP-ribosyltransferase abortive infection, DefenseFinder Abi2/PF07751 Abi-like loci, single-profile lactococcal AbiJ loci, two-component lactococcal AbiL ATPase/TOPRIM-family loci, single-gene lactococcal AbiN loci, single-profile lactococcal AbiO loci, single-profile coliphage AbiP2 reverse-transcriptase-like loci, lactococcal AbiA loci represented by DefenseFinder AbiA-large and AbiA-small subrules, DefenseFinder PD-T4-10 two-profile loci, and other families. Additional narrower TraitRecords need separate review to ground each subfamily's trigger, effector, growth-arrest or cell-death mechanism, and phage escape routes.",
   "num_experiments": 0,
   "num_evidence": 0,
   "evidence_refs": [],
@@ -7984,7 +7984,7 @@ window.searchData = [
  },
  {
   "discussion_id": "spbk-mechanism-gap",
-  "prompt": "Resolve the direct SPβ YonE trigger, SpbK TIR-domain output, essential host target, and broader SpbK homolog scope before minting narrower SpbK mechanism children.",
+  "prompt": "Resolve the direct SP\u03b2 YonE trigger, SpbK TIR-domain output, essential host target, and broader SpbK homolog scope before minting narrower SpbK mechanism children.",
   "kind": "KNOWLEDGE_GAP",
   "status": "OPEN",
   "is_gap": "Knowledge gap",
@@ -7994,7 +7994,7 @@ window.searchData = [
   "attaches_to": [
    "causal_graphs#spbk_locus_mediates_spb_defense"
   ],
-  "rationale": "Johnson et al. support ICEBs1 spbK as a YonE-dependent abortive infection gene that inhibits SPβ and causes cell death, and DefenseFinder maps SpbK to the SpbK__SpbK profile. The direct SpbK-YonE coupling event, TIR-domain output, essential host target, and homolog breadth remain unresolved.",
+  "rationale": "Johnson et al. support ICEBs1 spbK as a YonE-dependent abortive infection gene that inhibits SP\u03b2 and causes cell death, and DefenseFinder maps SpbK to the SpbK__SpbK profile. The direct SpbK-YonE coupling event, TIR-domain output, essential host target, and homolog breadth remain unresolved.",
   "num_experiments": 0,
   "num_evidence": 0,
   "evidence_refs": [],
@@ -8970,6 +8970,27 @@ window.searchData = [
   "page_url": "../../pages/traits/metabolism/acetoclastic_methanogenesis.html#acetoclastic-methanogenesis-xref-gap"
  },
  {
+  "discussion_id": "acetoclastic-methanogenesis-causal-graph-source-gap",
+  "prompt": "Add primary literature evidence for acetate activation (AckA-Pta or Acs), acetyl-CoA decarbonylase/synthase (CdhCDE), and methyl-CoM reductase (McrABG) plus a strain-matched canonical example before constructing causal_graphs.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "acetoclastic methanogenesis",
+  "source_id": "traitmech:000191",
+  "source_file": "acetoclastic_methanogenesis.yaml",
+  "attaches_to": [
+   "causal_graphs"
+  ],
+  "rationale": "The current record carries two broad overview snippets (DOI:10.1007/s00253-023-12700-3, DOI:10.3389/fmicb.2017.01198) stating that acetoclastic methanogens split acetate to CH4 and CO2, without enzymatic step quotes or a cited canonical example.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.1007/s00253-023-12700-3"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/metabolism/acetoclastic_methanogenesis.html#acetoclastic-methanogenesis-causal-graph-source-gap"
+ },
+ {
   "discussion_id": "acetone-butanol-ethanol-fermentation-xref-gap",
   "prompt": "Resolve an exact external ontology class for acetone-butanol-ethanol fermentation before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -8987,6 +9008,27 @@ window.searchData = [
   "page_url": "../../pages/traits/metabolism/acetone_butanol_ethanol_fermentation.html#acetone-butanol-ethanol-fermentation-xref-gap"
  },
  {
+  "discussion_id": "acetone-butanol-ethanol-fermentation-causal-graph-source-gap",
+  "prompt": "Add primary literature evidence for the acidogenic-to-solventogenic pathway enzymes (e.g. CoA-transferase CtfAB, acetoacetate decarboxylase Adc, and aldehyde/alcohol dehydrogenase AdhE) and strain-matched UniProtKB protein accessions before constructing causal_graphs.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "acetone-butanol-ethanol fermentation",
+  "source_id": "traitmech:000180",
+  "source_file": "acetone_butanol_ethanol_fermentation.yaml",
+  "attaches_to": [
+   "causal_graphs"
+  ],
+  "rationale": "The current record carries one overview snippet on Clostridium acetobutylicum acid reassimilation (DOI:10.1073/pnas.1423143112) and one historical industrial fermentation snippet (DOI:10.1002/bit.22003), which cannot ground a multi-edge enzymatic mechanism graph without inventing unsupported edges.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.1073/pnas.1423143112"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/metabolism/acetone_butanol_ethanol_fermentation.html#acetone-butanol-ethanol-fermentation-causal-graph-source-gap"
+ },
+ {
   "discussion_id": "anaerobic-ammonium-oxidation-xref-gap",
   "prompt": "Resolve an exact external ontology class for anaerobic ammonium oxidation before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -9002,6 +9044,27 @@ window.searchData = [
   "evidence_refs": [],
   "posed_by": "codex",
   "page_url": "../../pages/traits/metabolism/anaerobic_ammonium_oxidation.html#anaerobic-ammonium-oxidation-xref-gap"
+ },
+ {
+  "discussion_id": "anaerobic-ammonium-oxidation-causal-graph-source-gap",
+  "prompt": "Add primary literature evidence for nitrite reduction to nitric oxide (NirS), hydrazine synthase (HzsABC), and hydrazine dehydrogenase (Hdh) plus a strain-matched canonical example before constructing causal_graphs.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "anaerobic ammonium oxidation",
+  "source_id": "traitmech:000188",
+  "source_file": "anaerobic_ammonium_oxidation.yaml",
+  "attaches_to": [
+   "causal_graphs"
+  ],
+  "rationale": "The current record carries overall stoichiometry and substrate-affinity snippets (DOI:10.1038/22749, DOI:10.1128/AEM.65.7.3248-3250.1999, DOI:10.1038/nature10453) without intermediate hydrazine-pathway enzyme quotes or a cited canonical example.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.1038/22749"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/metabolism/anaerobic_ammonium_oxidation.html#anaerobic-ammonium-oxidation-causal-graph-source-gap"
  },
  {
   "discussion_id": "aromatic-compound-degradation-causal-graph-source-gap",
@@ -9059,6 +9122,27 @@ window.searchData = [
   "page_url": "../../pages/traits/metabolism/arsenate_respiration.html#arsenate-respiration-xref-gap"
  },
  {
+  "discussion_id": "arsenate-respiration-protein-example-gap",
+  "prompt": "Add strain-matched UniProtKB protein_examples for Shewanella sp. ANA-3 respiratory arsenate reductase subunits (ArrA/ArrB) so arsenate_respiration_arr_pathway_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "arsenate respiration",
+  "source_id": "traitmech:000195",
+  "source_file": "arsenate_respiration.yaml",
+  "attaches_to": [
+   "causal_graphs#arsenate_respiration_arr_pathway_sketch"
+  ],
+  "rationale": "The record's primary literature (DOI:10.1073/pnas.1834303100, DOI:10.1128/AEM.69.5.2800-2809.2003, DOI:10.1128/JB.01110-07) supports respiratory arsenate reduction to arsenite via arsenate respiratory reductase (ARR) in Shewanella sp. ANA-3 (NCBITaxon:94122), but verified UniProtKB accessions and proteome metadata must be added to a GENE_OR_PROTEIN node before marking the graph MECHANISTIC.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.1073/pnas.1834303100"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/metabolism/arsenate_respiration.html#arsenate-respiration-protein-example-gap"
+ },
+ {
   "discussion_id": "arsenite-oxidation-xref-gap",
   "prompt": "Resolve an exact external ontology class for organism-level arsenite oxidation before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -9074,6 +9158,27 @@ window.searchData = [
   "evidence_refs": [],
   "posed_by": "codex",
   "page_url": "../../pages/traits/metabolism/arsenite_oxidation.html#arsenite-oxidation-xref-gap"
+ },
+ {
+  "discussion_id": "arsenite-oxidation-causal-graph-source-gap",
+  "prompt": "Add primary literature evidence for periplasmic arsenite oxidase (AioAB or ArxAB), electron transfer to c-type cytochrome/azurin, and a strain-matched canonical example before constructing causal_graphs.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "arsenite oxidation",
+  "source_id": "traitmech:000189",
+  "source_file": "arsenite_oxidation.yaml",
+  "attaches_to": [
+   "causal_graphs"
+  ],
+  "rationale": "The current record carries general detoxification/energy and strain-isolation snippets (DOI:10.3389/fmicb.2020.569282, DOI:10.1128/AEM.66.1.92-97.2000, DOI:10.1186/s12866-024-03676-9) without enzyme-level catalytic quotes or a cited canonical example.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.3389/fmicb.2020.569282"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/metabolism/arsenite_oxidation.html#arsenite-oxidation-causal-graph-source-gap"
  },
  {
   "discussion_id": "butanediol-fermentation-xref-gap",
@@ -9093,6 +9198,27 @@ window.searchData = [
   "page_url": "../../pages/traits/metabolism/butanediol_fermentation.html#butanediol-fermentation-xref-gap"
  },
  {
+  "discussion_id": "butanediol-fermentation-causal-graph-source-gap",
+  "prompt": "Add primary literature evidence for alpha-acetolactate synthase (AlsS/BudB), alpha-acetolactate decarboxylase (AlsD/BudA), and 2,3-butanediol dehydrogenase (BdhA/BudC) plus strain-matched UniProtKB protein accessions before constructing causal_graphs.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "2,3-butanediol fermentation",
+  "source_id": "traitmech:000181",
+  "source_file": "butanediol_fermentation.yaml",
+  "attaches_to": [
+   "causal_graphs"
+  ],
+  "rationale": "The current record carries metabolite-overview and isomer-detection snippets (DOI:10.1186/s12934-023-02163-6, ASM Voges-Proskauer protocol, DOI:10.1007/s00253-014-5526-9) without enzymatic catalysis quotes for the pyruvate-to-acetoin-to-2,3-butanediol steps.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.1186/s12934-023-02163-6"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/metabolism/butanediol_fermentation.html#butanediol-fermentation-causal-graph-source-gap"
+ },
+ {
   "discussion_id": "butyric-acid-fermentation-xref-gap",
   "prompt": "Resolve an exact external ontology class for butyric acid fermentation before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -9108,6 +9234,27 @@ window.searchData = [
   "evidence_refs": [],
   "posed_by": "codex",
   "page_url": "../../pages/traits/metabolism/butyric_acid_fermentation.html#butyric-acid-fermentation-xref-gap"
+ },
+ {
+  "discussion_id": "butyric-acid-fermentation-causal-graph-source-gap",
+  "prompt": "Add primary literature evidence for thiolase, 3-hydroxybutyryl-CoA dehydrogenase, crotonase, butyryl-CoA dehydrogenase/EtfAB, and phosphotransbutyrylase/butyrate kinase or butyryl-CoA:acetate CoA-transferase in Clostridium tyrobutyricum before constructing causal_graphs.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "butyric acid fermentation",
+  "source_id": "traitmech:000179",
+  "source_file": "butyric_acid_fermentation.yaml",
+  "attaches_to": [
+   "causal_graphs"
+  ],
+  "rationale": "The current record summarizes anaerobe energy-conservation history, gene-cluster arrangements, and strain yield (DOI:10.3389/fmicb.2021.703525, DOI:10.1111/j.1574-6968.2009.01514.x, DOI:10.1111/1751-7915.12304) without distinct step-by-step enzymatic reaction quotes.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.3389/fmicb.2021.703525"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/metabolism/butyric_acid_fermentation.html#butyric-acid-fermentation-causal-graph-source-gap"
  },
  {
   "discussion_id": "chlorate-respiration-xref-gap",
@@ -9127,6 +9274,27 @@ window.searchData = [
   "page_url": "../../pages/traits/metabolism/chlorate_respiration.html#chlorate-respiration-xref-gap"
  },
  {
+  "discussion_id": "chlorate-respiration-protein-example-gap",
+  "prompt": "Add strain-matched UniProtKB protein_examples for Ideonella dechloratans chlorate reductase (ClrABC) and chlorite dismutase (Cld) so chlorate_respiration_pathway_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "chlorate respiration",
+  "source_id": "traitmech:000198",
+  "source_file": "chlorate_respiration.yaml",
+  "attaches_to": [
+   "causal_graphs#chlorate_respiration_pathway_sketch"
+  ],
+  "rationale": "The record's primary literature (DOI:10.1128/AEM.69.9.5585-5592.2003, DOI:10.1128/AEM.07303-11) supports the two-step dissimilatory chlorate reduction pathway (chlorate reduction followed by chlorite decomposition) in Ideonella dechloratans (NCBITaxon:36863), but verified UniProtKB accessions must be added to a GENE_OR_PROTEIN node before marking the graph MECHANISTIC.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.1128/AEM.69.9.5585-5592.2003"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/metabolism/chlorate_respiration.html#chlorate-respiration-protein-example-gap"
+ },
+ {
   "discussion_id": "citrate-fermentation-xref-gap",
   "prompt": "Resolve an exact external ontology class for citrate fermentation before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -9144,6 +9312,27 @@ window.searchData = [
   "page_url": "../../pages/traits/metabolism/citrate_fermentation.html#citrate-fermentation-xref-gap"
  },
  {
+  "discussion_id": "citrate-fermentation-causal-graph-source-gap",
+  "prompt": "Add primary literature evidence for citrate uptake (CitH/CitS), citrate lyase (CitDEF), and membrane-bound oxaloacetate decarboxylase Na+ pump (OadGAB) before constructing causal_graphs.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "citrate fermentation",
+  "source_id": "traitmech:000182",
+  "source_file": "citrate_fermentation.yaml",
+  "attaches_to": [
+   "causal_graphs"
+  ],
+  "rationale": "The current record carries two growth-and-prevalence snippets in Klebsiella pneumoniae (DOI:10.1128/JB.183.18.5248-5256.2001, DOI:10.1186/1471-2180-9-168) without enzymatic step or intermediate quotes.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.1128/JB.183.18.5248-5256.2001"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/metabolism/citrate_fermentation.html#citrate-fermentation-causal-graph-source-gap"
+ },
+ {
   "discussion_id": "complete-ammonia-oxidation-xref-gap",
   "prompt": "Resolve an exact external ontology class for one-organism complete ammonia oxidation before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -9159,6 +9348,27 @@ window.searchData = [
   "evidence_refs": [],
   "posed_by": "codex",
   "page_url": "../../pages/traits/metabolism/complete_ammonia_oxidation.html#complete-ammonia-oxidation-xref-gap"
+ },
+ {
+  "discussion_id": "complete-ammonia-oxidation-causal-graph-source-gap",
+  "prompt": "Add primary literature evidence for ammonia monooxygenase (AmoCAB), hydroxylamine dehydrogenase (Hao), and nitrite oxidoreductase (NxrAB) catalysis in comammox Nitrospira before constructing causal_graphs.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "complete ammonia oxidation",
+  "source_id": "traitmech:000187",
+  "source_file": "complete_ammonia_oxidation.yaml",
+  "attaches_to": [
+   "causal_graphs"
+  ],
+  "rationale": "The current record carries three discovery and ecological-dominance snippets on comammox Nitrospira (DOI:10.1038/nature16459, DOI:10.1038/nature16461, DOI:10.1128/aem.01698-23) without distinct intermediate nitrite-step or enzyme quotes.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.1038/nature16459"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/metabolism/complete_ammonia_oxidation.html#complete-ammonia-oxidation-causal-graph-source-gap"
  },
  {
   "discussion_id": "dark-hydrogen-oxidation-causal-graph-source-gap",
@@ -9216,6 +9426,27 @@ window.searchData = [
   "page_url": "../../pages/traits/metabolism/dimethyl_sulfoxide_respiration.html#dimethyl-sulfoxide-respiration-xref-gap"
  },
  {
+  "discussion_id": "dimethyl-sulfoxide-respiration-protein-example-gap",
+  "prompt": "Add strain-matched UniProtKB protein_examples for the Shewanella oneidensis MR-1 SO1427-SO1432 (DmsEFABGH) extracellular DMSO reductase complex so dmso_respiration_reductase_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "dimethyl sulfoxide respiration",
+  "source_id": "traitmech:000201",
+  "source_file": "dimethyl_sulfoxide_respiration.yaml",
+  "attaches_to": [
+   "causal_graphs#dmso_respiration_reductase_sketch"
+  ],
+  "rationale": "The record's primary literature (DOI:10.1073/pnas.0505959103, DOI:10.1111/1462-2920.15971) establishes the SO1427-SO1432 gene cluster required for extracellular DMSO respiration in Shewanella oneidensis MR-1 (NCBITaxon:211586), but verified UniProtKB accessions must be curated on a GENE_OR_PROTEIN node before marking the graph MECHANISTIC.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.1073/pnas.0505959103"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/metabolism/dimethyl_sulfoxide_respiration.html#dimethyl-sulfoxide-respiration-protein-example-gap"
+ },
+ {
   "discussion_id": "fumarate-respiration-xref-gap",
   "prompt": "Resolve an exact external ontology class for organism-level fumarate respiration before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -9231,6 +9462,27 @@ window.searchData = [
   "evidence_refs": [],
   "posed_by": "codex",
   "page_url": "../../pages/traits/metabolism/fumarate_respiration.html#fumarate-respiration-xref-gap"
+ },
+ {
+  "discussion_id": "fumarate-respiration-protein-example-gap",
+  "prompt": "Add strain-matched UniProtKB protein_examples for Bacteroides fragilis fumarate reductase subunits (FrdCAB) so fumarate_respiration_frd_pathway_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "fumarate respiration",
+  "source_id": "traitmech:000196",
+  "source_file": "fumarate_respiration.yaml",
+  "attaches_to": [
+   "causal_graphs#fumarate_respiration_frd_pathway_sketch"
+  ],
+  "rationale": "The record's primary literature (DOI:10.1128/mBio.03238-19, DOI:10.1128/JB.00389-22) establishes fumarate reductase (FRD) catalysis and NADH-to-fumarate respiratory electron transfer in Bacteroides fragilis (NCBITaxon:817), but verified UniProtKB accessions must be curated on a GENE_OR_PROTEIN node before marking the graph MECHANISTIC.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.1128/mBio.03238-19"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/metabolism/fumarate_respiration.html#fumarate-respiration-protein-example-gap"
  },
  {
   "discussion_id": "hydrocarbon-degradation-causal-graph-source-gap",
@@ -9288,6 +9540,27 @@ window.searchData = [
   "page_url": "../../pages/traits/metabolism/iodate_respiration.html#iodate-respiration-xref-gap"
  },
  {
+  "discussion_id": "iodate-respiration-causal-graph-source-gap",
+  "prompt": "Add primary literature evidence for the periplasmic iodate reductase complex (IdrABP1P2) and electron-transport coupling plus strain-matched UniProtKB protein accessions before constructing causal_graphs.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "iodate respiration",
+  "source_id": "traitmech:000203",
+  "source_file": "iodate_respiration.yaml",
+  "attaches_to": [
+   "causal_graphs"
+  ],
+  "rationale": "The current record carries growth and whole-cell IO3- to I- reduction snippets across three taxa (DOI:10.1128/AEM.00241-07, DOI:10.1038/s41396-021-01034-5, DOI:10.3389/fmicb.2021.804181) without enzyme-complex or electron-transfer quotes.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.1128/AEM.00241-07"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/metabolism/iodate_respiration.html#iodate-respiration-causal-graph-source-gap"
+ },
+ {
   "discussion_id": "lipolysis-xref-gap",
   "prompt": "Resolve an exact external ontology xref for organism-level microbial lipolysis before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -9303,6 +9576,27 @@ window.searchData = [
   "evidence_refs": [],
   "posed_by": "codex",
   "page_url": "../../pages/traits/metabolism/lipolysis.html#lipolysis-xref-gap"
+ },
+ {
+  "discussion_id": "lipolysis-causal-graph-source-gap",
+  "prompt": "Add primary literature evidence for extracellular triacylglycerol lipase secretion, fatty-acid/glycerol uptake, and a strain-matched canonical example before constructing causal_graphs.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "lipolysis",
+  "source_id": "traitmech:000190",
+  "source_file": "lipolysis.yaml",
+  "attaches_to": [
+   "causal_graphs"
+  ],
+  "rationale": "The current record carries two general definition snippets for microbial lipases EC 3.1.1.3 (DOI:10.1186/s12934-020-01428-8, DOI:10.1007/s00253-004-1568-8) without a cited canonical example or multi-step catabolic mechanism quotes.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.1186/s12934-020-01428-8"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/metabolism/lipolysis.html#lipolysis-causal-graph-source-gap"
  },
  {
   "discussion_id": "methanol-oxidation-causal-graph-source-gap",
@@ -9339,6 +9633,27 @@ window.searchData = [
   "evidence_refs": [],
   "posed_by": "codex",
   "page_url": "../../pages/traits/metabolism/methyl_based_methanogenesis.html#methyl-based-methanogenesis-xref-gap"
+ },
+ {
+  "discussion_id": "methyl-based-methanogenesis-causal-graph-source-gap",
+  "prompt": "Add primary literature evidence for substrate-specific methyltransferases (MtaABC/MtmBC/MtbA/MttBC), methyl-CoM reductase (McrABG), and a strain-matched canonical example before constructing causal_graphs.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "methyl-based methanogenesis",
+  "source_id": "traitmech:000192",
+  "source_file": "methyl_based_methanogenesis.yaml",
+  "attaches_to": [
+   "causal_graphs"
+  ],
+  "rationale": "The current record carries two pathway-classification snippets (DOI:10.1128/mmbr.00024-22, DOI:10.3389/fmicb.2017.01198) without enzymatic step quotes or a cited canonical example.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.1128/mmbr.00024-22"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/metabolism/methyl_based_methanogenesis.html#methyl-based-methanogenesis-causal-graph-source-gap"
  },
  {
   "discussion_id": "nitrate-reduction-causal-graph-source-gap",
@@ -9396,6 +9711,27 @@ window.searchData = [
   "page_url": "../../pages/traits/metabolism/nitrification.html#nitrification-component-go-xref-gap"
  },
  {
+  "discussion_id": "nitrification-causal-graph-source-gap",
+  "prompt": "Add a second independent evidence snippet covering ammonia monooxygenase / hydroxylamine oxidoreductase and nitrite oxidoreductase steps plus a strain-matched canonical example before constructing causal_graphs.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "nitrification",
+  "source_id": "METPO:1005001",
+  "source_file": "nitrification.yaml",
+  "attaches_to": [
+   "causal_graphs"
+  ],
+  "rationale": "The current record carries a single overview snippet (DOI:10.3389/fmicb.2020.01900) describing two-step oxidation of ammonia to nitrite and nitrate; a connected multi-edge graph requires at least two independent verbatim snippets without clause-splitting.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.3389/fmicb.2020.01900"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/metabolism/nitrification.html#nitrification-causal-graph-source-gap"
+ },
+ {
   "discussion_id": "nitrite-respiration-causal-graph-source-gap",
   "prompt": "Add a second independent evidence snippet covering electron donation or proton-motive-force coupling alongside NrfA/NirS/NirK nitrite reduction and a strain-matched canonical example before constructing causal_graphs.",
   "kind": "KNOWLEDGE_GAP",
@@ -9451,6 +9787,27 @@ window.searchData = [
   "page_url": "../../pages/traits/metabolism/organohalide_respiration.html#organohalide-respiration-xref-gap"
  },
  {
+  "discussion_id": "organohalide-respiration-causal-graph-source-gap",
+  "prompt": "Add primary literature evidence for corrinoid-dependent reductive dehalogenase catalysis (e.g. PceA, TceA, RdhA) and menaquinone/hydrogenase electron transport before constructing causal_graphs.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "organohalide respiration",
+  "source_id": "traitmech:000204",
+  "source_file": "organohalide_respiration.yaml",
+  "attaches_to": [
+   "causal_graphs"
+  ],
+  "rationale": "The current record carries definition, phylogenetic-distribution, and mixed-culture cofactor snippets (DOI:10.1098/rstb.2012.0322, DOI:10.1126/science.276.5318.1568) without reductive dehalogenase enzyme or dechlorination-product quotes.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.1098/rstb.2012.0322"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/metabolism/organohalide_respiration.html#organohalide-respiration-causal-graph-source-gap"
+ },
+ {
   "discussion_id": "perchlorate-respiration-xref-gap",
   "prompt": "Resolve an exact external ontology class for organism-level perchlorate respiration before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -9466,6 +9823,27 @@ window.searchData = [
   "evidence_refs": [],
   "posed_by": "codex",
   "page_url": "../../pages/traits/metabolism/perchlorate_respiration.html#perchlorate-respiration-xref-gap"
+ },
+ {
+  "discussion_id": "perchlorate-respiration-protein-example-gap",
+  "prompt": "Add a strain-matched canonical_examples entry and UniProtKB protein_examples for perchlorate reductase (PcrABCD) and chlorite dismutase (Cld) (e.g., in candidate exemplar Dechloromonas aromatica RCB) so perchlorate_respiration_reduction_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "perchlorate respiration",
+  "source_id": "traitmech:000197",
+  "source_file": "perchlorate_respiration.yaml",
+  "attaches_to": [
+   "causal_graphs#perchlorate_respiration_reduction_sketch"
+  ],
+  "rationale": "The record's primary literature by Melnyk et al. (DOI:10.1186/s12864-015-2011-5, DOI:10.1128/AEM.05758-11) supports periplasmic reduction of perchlorate to chlorite by perchlorate reductase (PcrABCD) and chlorite dismutation to chloride and O2 by chlorite dismutase (Cld), but canonical_examples and verified strain-matched UniProtKB accessions must be curated before marking the graph MECHANISTIC.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.1186/s12864-015-2011-5"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/metabolism/perchlorate_respiration.html#perchlorate-respiration-protein-example-gap"
  },
  {
   "discussion_id": "photoferrotrophy-xref-gap",
@@ -9538,6 +9916,27 @@ window.searchData = [
   "page_url": "../../pages/traits/metabolism/selenate_respiration.html#selenate-respiration-xref-gap"
  },
  {
+  "discussion_id": "selenate-respiration-causal-graph-source-gap",
+  "prompt": "Add primary literature evidence for periplasmic respiratory selenate reductase (SerABC or SrdBCA) and selenate-to-selenite reduction stoichiometry before constructing causal_graphs.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "selenate respiration",
+  "source_id": "traitmech:000202",
+  "source_file": "selenate_respiration.yaml",
+  "attaches_to": [
+   "causal_graphs"
+  ],
+  "rationale": "The current record carries strain-isolation and terminal-electron-acceptor snippets (DOI:10.1128/aem.60.8.3011-3019.1994, DOI:10.1128/AEM.02737-06, DOI:10.1016/j.syapm.2005.12.011) without enzymatic reductase or selenite-product quotes.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.1128/aem.60.8.3011-3019.1994"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/metabolism/selenate_respiration.html#selenate-respiration-causal-graph-source-gap"
+ },
+ {
   "discussion_id": "sulfur-respiration-causal-graph-source-gap",
   "prompt": "Add primary literature evidence for polysulfide/elemental-sulfur reductase (PsrABC or SreABC), sulfide production, and a strain-matched canonical example before constructing causal_graphs.",
   "kind": "KNOWLEDGE_GAP",
@@ -9572,6 +9971,27 @@ window.searchData = [
   "evidence_refs": [],
   "posed_by": "codex",
   "page_url": "../../pages/traits/metabolism/tetrathionate_respiration.html#tetrathionate-respiration-xref-gap"
+ },
+ {
+  "discussion_id": "tetrathionate-respiration-protein-example-gap",
+  "prompt": "Add strain-matched UniProtKB protein_examples for Salmonella enterica serovar Typhimurium LT2 tetrathionate reductase subunits (TtrA/TtrB/TtrC) so tetrathionate_respiration_ttr_pathway_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "tetrathionate respiration",
+  "source_id": "traitmech:000200",
+  "source_file": "tetrathionate_respiration.yaml",
+  "attaches_to": [
+   "causal_graphs#tetrathionate_respiration_ttr_pathway_sketch"
+  ],
+  "rationale": "The record's primary literature (DOI:10.1046/j.1365-2958.1999.01345.x, DOI:10.1128/JB.183.8.2463-2475.2001) identifies the ttrABC structural genes and tetrathionate-to-thiosulfate reduction in Salmonella enterica serovar Typhimurium LT2 (NCBITaxon:99287), but verified UniProtKB accessions must be curated on a GENE_OR_PROTEIN node before marking the graph MECHANISTIC.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.1046/j.1365-2958.1999.01345.x"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/metabolism/tetrathionate_respiration.html#tetrathionate-respiration-protein-example-gap"
  },
  {
   "discussion_id": "thiosulfate-respiration-causal-graph-source-gap",
@@ -9610,6 +10030,27 @@ window.searchData = [
   "page_url": "../../pages/traits/metabolism/trimethylamine_n_oxide_respiration.html#trimethylamine-n-oxide-respiration-xref-gap"
  },
  {
+  "discussion_id": "trimethylamine-n-oxide-respiration-protein-example-gap",
+  "prompt": "Add strain-matched UniProtKB protein_examples for Escherichia coli K-12 TMAO reductase (TorA/TorC) encoded by the torCAD operon so tmao_respiration_tor_pathway_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "trimethylamine N-oxide respiration",
+  "source_id": "traitmech:000199",
+  "source_file": "trimethylamine_n_oxide_respiration.yaml",
+  "attaches_to": [
+   "causal_graphs#tmao_respiration_tor_pathway_sketch"
+  ],
+  "rationale": "The record's primary literature (DOI:10.1111/1462-2920.12726, DOI:10.3389/fmicb.2024.1467153) establishes anaerobic respiratory growth on TMAO and reduction of TMAO to trimethylamine by torCAD-encoded TMAO reductase in Escherichia coli K-12 (NCBITaxon:83333), but verified UniProtKB accessions must be curated on a GENE_OR_PROTEIN node before marking the graph MECHANISTIC.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.1111/1462-2920.12726"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/metabolism/trimethylamine_n_oxide_respiration.html#trimethylamine-n-oxide-respiration-protein-example-gap"
+ },
+ {
   "discussion_id": "akinete-exact-xref-gap",
   "prompt": "Resolve exact external ontology xrefs for the cyanobacterial akinete morphology trait.",
   "kind": "CURATION_TODO",
@@ -9625,6 +10066,27 @@ window.searchData = [
   "evidence_refs": [],
   "posed_by": "codex",
   "page_url": "../../pages/traits/morphology/akinete.html#akinete-exact-xref-gap"
+ },
+ {
+  "discussion_id": "akinete-causal-graph-source-gap",
+  "prompt": "Add primary literature evidence for cyanobacterial akinete differentiation regulators (e.g. AvaK, HepA) and envelope glycolipid/polysaccharide biosynthesis before constructing causal_graphs.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "akinete",
+  "source_id": "traitmech:000185",
+  "source_file": "akinete.yaml",
+  "attaches_to": [
+   "causal_graphs"
+  ],
+  "rationale": "The current record carries morphological and ecological-survival snippets in Nostocales (DOI:10.1159/000517443, DOI:10.3389/fmicb.2025.1677844) without developmental gene or biosynthetic pathway quotes.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.1159/000517443"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/morphology/akinete.html#akinete-causal-graph-source-gap"
  },
  {
   "discussion_id": "baeocyte-formation-scope",
@@ -10550,6 +11012,27 @@ window.searchData = [
   "page_url": "../../pages/traits/morphology/holdfast.html#holdfast-exact-xref-gap"
  },
  {
+  "discussion_id": "holdfast-causal-graph-source-gap",
+  "prompt": "Add primary literature evidence for holdfast polysaccharide biosynthesis/export proteins (HfsDABCHG) and outer-membrane anchoring proteins (HfaABD) before constructing causal_graphs.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "holdfast",
+  "source_id": "traitmech:000184",
+  "source_file": "holdfast.yaml",
+  "attaches_to": [
+   "causal_graphs"
+  ],
+  "rationale": "The current record carries polar adhesin function and monosaccharide-composition snippets in Caulobacterales (DOI:10.1128/jb.00276-19, DOI:10.1128/jb.00273-22) without biosynthetic or anchoring protein quotes.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.1128/jb.00276-19"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/morphology/holdfast.html#holdfast-causal-graph-source-gap"
+ },
+ {
   "discussion_id": "hormogonium-formation-scope-and-hierarchy",
   "prompt": "Review the developmental scope independently of motility and mature cell shape.",
   "kind": "CURATION_TODO",
@@ -10975,6 +11458,27 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/acid_phosphatase_activity.html#acid-phosphatase-activity-xref-gap"
  },
  {
+  "discussion_id": "acid-phosphatase-activity-causal-graph-source-gap",
+  "prompt": "Add primary microbial literature evidence for secreted or periplasmic acid phosphatase catalysis (EC 3.1.3.2, e.g. SapM, AphA, PhoN) and substrate dephosphorylation products before constructing causal_graphs.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "acid phosphatase activity",
+  "source_id": "traitmech:000142",
+  "source_file": "acid_phosphatase_activity.yaml",
+  "attaches_to": [
+   "causal_graphs"
+  ],
+  "rationale": "The current record carries one culture-filtrate detection snippet and one API ZYM profile snippet (DOI:10.1128/JB.182.23.6850-6853.2000, DOI:10.1155/2021/8888641) without distinct catalytic substrate/product quotes for a multi-edge graph.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.1128/JB.182.23.6850-6853.2000"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/physiology/acid_phosphatase_activity.html#acid-phosphatase-activity-causal-graph-source-gap"
+ },
+ {
   "discussion_id": "stress-resistance-memory-scope-and-hierarchy",
   "prompt": "Preserve persistence after stress removal and the resistance endpoint.",
   "kind": "CURATION_TODO",
@@ -11196,6 +11700,27 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/alanine_arylamidase_activity.html#alanine-arylamidase-activity-xref-gap"
  },
  {
+  "discussion_id": "alanine-arylamidase-activity-causal-graph-source-gap",
+  "prompt": "Add primary microbial literature evidence for alanine aminopeptidase/arylamidase catalysis and physiological peptide cleavage in the exemplar taxon before constructing causal_graphs.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "alanine arylamidase activity",
+  "source_id": "traitmech:000161",
+  "source_file": "alanine_arylamidase_activity.yaml",
+  "attaches_to": [
+   "causal_graphs"
+  ],
+  "rationale": "The current record pairs one IUBMB EC 3.4.11.2 reaction snippet with a multi-enzyme API ZYM species-description list (DOI:10.1099/ijsem.0.006017), leaving only one mechanistic quote.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "https://iubmb.qmul.ac.uk/enzyme/EC3/4/11/2.html"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/physiology/alanine_arylamidase_activity.html#alanine-arylamidase-activity-causal-graph-source-gap"
+ },
+ {
   "discussion_id": "alkaline-phosphatase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for alkaline phosphatase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -11211,6 +11736,27 @@ window.searchData = [
   "evidence_refs": [],
   "posed_by": "codex",
   "page_url": "../../pages/traits/physiology/alkaline_phosphatase_activity.html#alkaline-phosphatase-activity-xref-gap"
+ },
+ {
+  "discussion_id": "alkaline-phosphatase-activity-causal-graph-source-gap",
+  "prompt": "Add primary microbial literature evidence for PhoA/PhoX alkaline phosphatase catalysis (EC 3.1.3.1), phosphate-ester hydrolysis products, and PhoBR regulation before constructing causal_graphs.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "alkaline phosphatase activity",
+  "source_id": "traitmech:000141",
+  "source_file": "alkaline_phosphatase_activity.yaml",
+  "attaches_to": [
+   "causal_graphs"
+  ],
+  "rationale": "The current record carries one constitutive-expression snippet and one API ZYM profile list (DOI:10.1128/JB.185.16.4983-4991.2003, DOI:10.1155/2021/8888641) without distinct catalytic reaction/product quotes for a multi-edge graph.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.1128/JB.185.16.4983-4991.2003"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/physiology/alkaline_phosphatase_activity.html#alkaline-phosphatase-activity-causal-graph-source-gap"
  },
  {
   "discussion_id": "alpha-chymotrypsin-activity-xref-gap",
@@ -11230,6 +11776,27 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/alpha_chymotrypsin_activity.html#alpha-chymotrypsin-activity-xref-gap"
  },
  {
+  "discussion_id": "alpha-chymotrypsin-activity-causal-graph-source-gap",
+  "prompt": "Add primary microbial literature evidence for bacterial chymotrypsin-like serine endopeptidase catalysis and substrate cleavage before constructing causal_graphs.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "alpha-chymotrypsin activity",
+  "source_id": "traitmech:000159",
+  "source_file": "alpha_chymotrypsin_activity.yaml",
+  "attaches_to": [
+   "causal_graphs"
+  ],
+  "rationale": "The current record pairs one IUBMB EC 3.4.21.1 cleavage-specificity snippet with a multi-enzyme API ZYM species-description list (DOI:10.1099/ijsem.0.006017), leaving only one mechanistic quote.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "https://iubmb.qmul.ac.uk/enzyme/EC3/4/21/1.html"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/physiology/alpha_chymotrypsin_activity.html#alpha-chymotrypsin-activity-causal-graph-source-gap"
+ },
+ {
   "discussion_id": "alpha-fucosidase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for alpha-fucosidase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -11245,6 +11812,27 @@ window.searchData = [
   "evidence_refs": [],
   "posed_by": "codex",
   "page_url": "../../pages/traits/physiology/alpha_fucosidase_activity.html#alpha-fucosidase-activity-xref-gap"
+ },
+ {
+  "discussion_id": "alpha-fucosidase-activity-causal-graph-source-gap",
+  "prompt": "Add primary microbial literature evidence for GH29/GH95 alpha-L-fucosidase catalysis and fucosylated-glycan utilization in the exemplar taxon before constructing causal_graphs.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "alpha-fucosidase activity",
+  "source_id": "traitmech:000152",
+  "source_file": "alpha_fucosidase_activity.yaml",
+  "attaches_to": [
+   "causal_graphs"
+  ],
+  "rationale": "The current record pairs one IUBMB EC 3.2.1.51 reaction snippet with a diagnostic assay-panel list (DOI:10.1128/jcm.22.3.333-335.1985), leaving only one mechanistic quote.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "https://iubmb.qmul.ac.uk/enzyme/EC3/2/1/51.html"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/physiology/alpha_fucosidase_activity.html#alpha-fucosidase-activity-causal-graph-source-gap"
  },
  {
   "discussion_id": "alpha-galactosidase-activity-xref-gap",
@@ -11264,6 +11852,27 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/alpha_galactosidase_activity.html#alpha-galactosidase-activity-xref-gap"
  },
  {
+  "discussion_id": "alpha-galactosidase-activity-causal-graph-source-gap",
+  "prompt": "Add primary microbial literature evidence for MelA/Aga alpha-galactosidase catalysis and melibiose/raffinose catabolism in the exemplar taxon before constructing causal_graphs.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "alpha-galactosidase activity",
+  "source_id": "traitmech:000149",
+  "source_file": "alpha_galactosidase_activity.yaml",
+  "attaches_to": [
+   "causal_graphs"
+  ],
+  "rationale": "The current record pairs one EC 3.2.1.22 catalytic definition snippet (DOI:10.3109/07388551.2013.794124) with a diagnostic assay-panel list (DOI:10.1128/jcm.22.3.333-335.1985), leaving only one mechanistic quote.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.3109/07388551.2013.794124"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/physiology/alpha_galactosidase_activity.html#alpha-galactosidase-activity-causal-graph-source-gap"
+ },
+ {
   "discussion_id": "alpha-glucosidase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for alpha-glucosidase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -11279,6 +11888,27 @@ window.searchData = [
   "evidence_refs": [],
   "posed_by": "codex",
   "page_url": "../../pages/traits/physiology/alpha_glucosidase_activity.html#alpha-glucosidase-activity-xref-gap"
+ },
+ {
+  "discussion_id": "alpha-glucosidase-activity-causal-graph-source-gap",
+  "prompt": "Add primary microbial literature evidence for alpha-glucosidase (EC 3.2.1.20) catalysis of terminal alpha-D-glucosidic linkages and maltose/oligosaccharide utilization before constructing causal_graphs.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "alpha-glucosidase activity",
+  "source_id": "traitmech:000145",
+  "source_file": "alpha_glucosidase_activity.yaml",
+  "attaches_to": [
+   "causal_graphs"
+  ],
+  "rationale": "The current record carries two API ZYM enzyme-panel survey snippets (DOI:10.1371/journal.pone.0322500, DOI:10.3390/microorganisms13092005) without verbatim catalytic reaction or pathway quotes.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.1371/journal.pone.0322500"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/physiology/alpha_glucosidase_activity.html#alpha-glucosidase-activity-causal-graph-source-gap"
  },
  {
   "discussion_id": "alpha-mannosidase-activity-xref-gap",
@@ -11298,6 +11928,27 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/alpha_mannosidase_activity.html#alpha-mannosidase-activity-xref-gap"
  },
  {
+  "discussion_id": "alpha-mannosidase-activity-causal-graph-source-gap",
+  "prompt": "Add primary microbial literature evidence for GH38/GH92 alpha-mannosidase catalysis and mannoside utilization in the exemplar taxon before constructing causal_graphs.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "alpha-mannosidase activity",
+  "source_id": "traitmech:000150",
+  "source_file": "alpha_mannosidase_activity.yaml",
+  "attaches_to": [
+   "causal_graphs"
+  ],
+  "rationale": "The current record pairs one IUBMB EC 3.2.1.24 reaction snippet with a diagnostic strain-discrimination snippet (DOI:10.1128/jcm.32.3.854-855.1994), leaving only one mechanistic quote.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "https://iubmb.qmul.ac.uk/enzyme/EC3/2/1/24.html"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/physiology/alpha_mannosidase_activity.html#alpha-mannosidase-activity-causal-graph-source-gap"
+ },
+ {
   "discussion_id": "amylase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for amylase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -11313,6 +11964,27 @@ window.searchData = [
   "evidence_refs": [],
   "posed_by": "codex",
   "page_url": "../../pages/traits/physiology/amylase_activity.html#amylase-activity-xref-gap"
+ },
+ {
+  "discussion_id": "amylase-activity-causal-graph-source-gap",
+  "prompt": "Add primary microbial literature evidence for alpha-amylase glycosidic bond cleavage products (maltose/maltodextrins) and starch utilization in Bacteroides ovatus before constructing causal_graphs.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "amylase activity",
+  "source_id": "traitmech:000162",
+  "source_file": "amylase_activity.yaml",
+  "attaches_to": [
+   "causal_graphs"
+  ],
+  "rationale": "The current record carries one collective definition of amylolytic enzymes (DOI:10.3389/fbioe.2020.00871) and one short enzyme-naming phrase for BoGH13ASus (DOI:10.1007/s00018-023-04812-w) without catalytic reaction/product quotes.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.3389/fbioe.2020.00871"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/physiology/amylase_activity.html#amylase-activity-causal-graph-source-gap"
  },
  {
   "discussion_id": "anisogamy-scope-and-hierarchy",
@@ -11366,6 +12038,27 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/arginine_arylamidase_activity.html#arginine-arylamidase-activity-xref-gap"
  },
  {
+  "discussion_id": "arginine-arylamidase-activity-causal-graph-source-gap",
+  "prompt": "Add primary microbial literature evidence for aminopeptidase B (EC 3.4.11.6) catalysis and physiological peptide cleavage in the exemplar taxon before constructing causal_graphs.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "arginine arylamidase activity",
+  "source_id": "traitmech:000167",
+  "source_file": "arginine_arylamidase_activity.yaml",
+  "attaches_to": [
+   "causal_graphs"
+  ],
+  "rationale": "The current record pairs one IUBMB EC 3.4.11.6 reaction snippet with two multi-enzyme diagnostic profile lists (DOI:10.3389/fgene.2023.1240581, DOI:10.1099/ijsem.0.006017), leaving only one mechanistic quote.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "https://iubmb.qmul.ac.uk/enzyme/EC3/4/11/6.html"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/physiology/arginine_arylamidase_activity.html#arginine-arylamidase-activity-causal-graph-source-gap"
+ },
+ {
   "discussion_id": "arginine-dihydrolase-activity-xref-gap",
   "prompt": "Resolve exact external ontology mappings for arginine dihydrolase activity before adding TraitRecord xrefs.",
   "kind": "CURATION_TODO",
@@ -11381,6 +12074,27 @@ window.searchData = [
   "evidence_refs": [],
   "posed_by": "codex",
   "page_url": "../../pages/traits/physiology/arginine_dihydrolase_activity.html#arginine-dihydrolase-activity-xref-gap"
+ },
+ {
+  "discussion_id": "arginine-dihydrolase-activity-protein-example-gap",
+  "prompt": "Add strain-matched UniProtKB protein_examples for Latilactobacillus sakei arc-operon arginine deiminase pathway enzymes (ArcA, ArcB, ArcC) so arginine_dihydrolase_adi_pathway_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "arginine dihydrolase activity",
+  "source_id": "traitmech:000164",
+  "source_file": "arginine_dihydrolase_activity.yaml",
+  "attaches_to": [
+   "causal_graphs#arginine_dihydrolase_adi_pathway_sketch"
+  ],
+  "rationale": "The record's primary literature (DOI:10.1016/j.fm.2010.11.016, DOI:10.1128/aem.07724-11, DOI:10.1016/j.resmic.2012.11.004) establishes arc-operon ADI pathway conversion of arginine to citrulline and ornithine in Latilactobacillus sakei (NCBITaxon:1599), but verified UniProtKB accessions must be curated on a GENE_OR_PROTEIN node before marking the graph MECHANISTIC.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.1016/j.resmic.2012.11.004"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/physiology/arginine_dihydrolase_activity.html#arginine-dihydrolase-activity-protein-example-gap"
  },
  {
   "discussion_id": "autogamy-scope-and-hierarchy",
@@ -11759,6 +12473,27 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/beta_galactosidase_activity.html#beta-galactosidase-activity-xref-gap"
  },
  {
+  "discussion_id": "beta-galactosidase-activity-causal-graph-source-gap",
+  "prompt": "Add primary microbial literature evidence for LacZ/BgaB beta-galactosidase lactose hydrolysis products and galactoside transport before constructing causal_graphs.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "beta-galactosidase activity",
+  "source_id": "traitmech:000148",
+  "source_file": "beta_galactosidase_activity.yaml",
+  "attaches_to": [
+   "causal_graphs"
+  ],
+  "rationale": "The current record pairs one EC 3.2.1.23 reaction snippet (DOI:10.3389/fmicb.2021.742300) with a diagnostic assay-panel list (DOI:10.1128/jcm.22.3.333-335.1985), leaving only one mechanistic quote.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.3389/fmicb.2021.742300"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/physiology/beta_galactosidase_activity.html#beta-galactosidase-activity-causal-graph-source-gap"
+ },
+ {
   "discussion_id": "beta-glucosidase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for beta-glucosidase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -11774,6 +12509,27 @@ window.searchData = [
   "evidence_refs": [],
   "posed_by": "codex",
   "page_url": "../../pages/traits/physiology/beta_glucosidase_activity.html#beta-glucosidase-activity-xref-gap"
+ },
+ {
+  "discussion_id": "beta-glucosidase-activity-causal-graph-source-gap",
+  "prompt": "Add primary microbial literature evidence for BglA/BglX beta-glucosidase cellobiose/beta-D-glucoside hydrolysis and glucose release before constructing causal_graphs.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "beta-glucosidase activity",
+  "source_id": "traitmech:000146",
+  "source_file": "beta_glucosidase_activity.yaml",
+  "attaches_to": [
+   "causal_graphs"
+  ],
+  "rationale": "The current record pairs one EC 3.2.1.21 definition snippet (DOI:10.1007/s13205-015-0328-z) with two API ZYM diagnostic survey snippets (DOI:10.2323/jgam.60.59, DOI:10.3390/microorganisms12040776), leaving only one mechanistic quote.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.1007/s13205-015-0328-z"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/physiology/beta_glucosidase_activity.html#beta-glucosidase-activity-causal-graph-source-gap"
  },
  {
   "discussion_id": "beta-glucuronidase-activity-xref-gap",
@@ -11793,6 +12549,27 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/beta_glucuronidase_activity.html#beta-glucuronidase-activity-xref-gap"
  },
  {
+  "discussion_id": "beta-glucuronidase-activity-causal-graph-source-gap",
+  "prompt": "Add primary microbial literature evidence for GusA/UidA beta-D-glucuronidase physiological glucuronide catabolism and strain-matched UniProtKB protein accessions before constructing causal_graphs.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "beta-glucuronidase activity",
+  "source_id": "traitmech:000151",
+  "source_file": "beta_glucuronidase_activity.yaml",
+  "attaches_to": [
+   "causal_graphs"
+  ],
+  "rationale": "The current record pairs one IUBMB EC 3.2.1.31 reaction snippet with one fluorogenic MUG-assay snippet (DOI:10.1128/aem.50.6.1383-1387.1985) without physiological pathway or UniProtKB protein grounding.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "https://iubmb.qmul.ac.uk/enzyme/EC3/2/1/31.html"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/physiology/beta_glucuronidase_activity.html#beta-glucuronidase-activity-causal-graph-source-gap"
+ },
+ {
   "discussion_id": "beta-n-acetylhexosaminidase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for beta-N-acetylhexosaminidase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -11808,6 +12585,27 @@ window.searchData = [
   "evidence_refs": [],
   "posed_by": "codex",
   "page_url": "../../pages/traits/physiology/beta_n_acetylhexosaminidase_activity.html#beta-n-acetylhexosaminidase-activity-xref-gap"
+ },
+ {
+  "discussion_id": "beta-n-acetylhexosaminidase-activity-causal-graph-source-gap",
+  "prompt": "Add primary microbial literature evidence for NagZ/Chb beta-N-acetylhexosaminidase chitobiose/muropeptide cleavage and GlcNAc release in Serratia marcescens before constructing causal_graphs.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "beta-N-acetylhexosaminidase activity",
+  "source_id": "traitmech:000157",
+  "source_file": "beta_n_acetylhexosaminidase_activity.yaml",
+  "attaches_to": [
+   "causal_graphs"
+  ],
+  "rationale": "The current record pairs one IUBMB EC 3.2.1.52 reaction snippet with a strain enzyme-production snippet (DOI:10.1021/jf020965x) that does not state a distinct second mechanistic step.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "https://iubmb.qmul.ac.uk/enzyme/EC3/2/1/52.html"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/physiology/beta_n_acetylhexosaminidase_activity.html#beta-n-acetylhexosaminidase-activity-causal-graph-source-gap"
  },
  {
   "discussion_id": "biomineralization-scope-and-mappings",
@@ -11929,6 +12727,27 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/carboxylesterase_activity.html#carboxylesterase-activity-xref-gap"
  },
  {
+  "discussion_id": "carboxylesterase-activity-causal-graph-source-gap",
+  "prompt": "Add primary microbial literature evidence for microbial carboxylesterase (EC 3.1.1.1) substrate hydrolysis and alcohol/carboxylate release in the exemplar taxon before constructing causal_graphs.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "carboxylesterase activity",
+  "source_id": "traitmech:000156",
+  "source_file": "carboxylesterase_activity.yaml",
+  "attaches_to": [
+   "causal_graphs"
+  ],
+  "rationale": "The current record pairs one IUBMB EC 3.1.1.1 reaction snippet with a diagnostic strain-characterization snippet, leaving only one catalytic reaction quote.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "https://iubmb.qmul.ac.uk/enzyme/EC3/1/1/1.html"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/physiology/carboxylesterase_activity.html#carboxylesterase-activity-causal-graph-source-gap"
+ },
+ {
   "discussion_id": "caseinase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for caseinase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -11944,6 +12763,27 @@ window.searchData = [
   "evidence_refs": [],
   "posed_by": "codex",
   "page_url": "../../pages/traits/physiology/caseinase_activity.html#caseinase-activity-xref-gap"
+ },
+ {
+  "discussion_id": "caseinase-activity-causal-graph-source-gap",
+  "prompt": "Add primary microbial literature evidence for secreted extracellular caseinolytic protease identification, peptide release, and strain-matched UniProtKB protein accessions before constructing causal_graphs.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "caseinase activity",
+  "source_id": "traitmech:000137",
+  "source_file": "caseinase_activity.yaml",
+  "attaches_to": [
+   "causal_graphs"
+  ],
+  "rationale": "The current record carries two general casein-hydrolysis screening snippets (DOI:10.3389/fmicb.2018.01148, DOI:10.2174/1874285801408010025) without specific protease gene/enzyme or multi-step mechanism quotes.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.3389/fmicb.2018.01148"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/physiology/caseinase_activity.html#caseinase-activity-causal-graph-source-gap"
  },
  {
   "discussion_id": "cell-body-contraction-scope-and-parent",
@@ -12303,6 +13143,27 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/cystine_arylamidase_activity.html#cystine-arylamidase-activity-xref-gap"
  },
  {
+  "discussion_id": "cystine-arylamidase-activity-causal-graph-source-gap",
+  "prompt": "Add primary microbial literature evidence for cystinyl aminopeptidase/arylamidase (EC 3.4.11.3) catalysis in the exemplar taxon before constructing causal_graphs.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "cystine arylamidase activity",
+  "source_id": "traitmech:000147",
+  "source_file": "cystine_arylamidase_activity.yaml",
+  "attaches_to": [
+   "causal_graphs"
+  ],
+  "rationale": "The current record pairs one IUBMB EC 3.4.11.3 reaction snippet with two multi-enzyme API ZYM diagnostic lists, leaving only one mechanistic quote.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.14202/vetworld.2024.143-149"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/physiology/cystine_arylamidase_activity.html#cystine-arylamidase-activity-causal-graph-source-gap"
+ },
+ {
   "discussion_id": "cytogamy-scope-and-hierarchy",
   "prompt": "Distinguish paired-cell self-fertilization from unpaired autogamy.",
   "kind": "CURATION_TODO",
@@ -12522,6 +13383,27 @@ window.searchData = [
   "evidence_refs": [],
   "posed_by": "codex",
   "page_url": "../../pages/traits/physiology/dnase_activity.html#dnase-activity-xref-gap"
+ },
+ {
+  "discussion_id": "dnase-activity-causal-graph-source-gap",
+  "prompt": "Add primary microbial literature evidence for secreted extracellular deoxyribonuclease (e.g. Nuc, EndA) phosphodiester cleavage and oligonucleotide products before constructing causal_graphs.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "DNase activity",
+  "source_id": "traitmech:000138",
+  "source_file": "dnase_activity.yaml",
+  "attaches_to": [
+   "causal_graphs"
+  ],
+  "rationale": "The current record carries two general DNase agar-screening snippets (DOI:10.3389/fmicb.2019.00969, DOI:10.22207/JPAM.14.1.44) without specific nuclease enzyme or catalytic product quotes.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.3389/fmicb.2019.00969"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/physiology/dnase_activity.html#dnase-activity-causal-graph-source-gap"
  },
  {
   "discussion_id": "durotaxis-stiffness-and-migration-boundaries",
@@ -13125,6 +14007,27 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/gamma_glutamyltransferase_activity.html#gamma-glutamyltransferase-activity-xref-gap"
  },
  {
+  "discussion_id": "gamma-glutamyltransferase-activity-causal-graph-source-gap",
+  "prompt": "Add primary microbial literature evidence for Ggt gamma-glutamyltransferase glutathione cleavage and gamma-glutamyl amino-acid transfer in the exemplar taxon before constructing causal_graphs.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "gamma-glutamyltransferase activity",
+  "source_id": "traitmech:000160",
+  "source_file": "gamma_glutamyltransferase_activity.yaml",
+  "attaches_to": [
+   "causal_graphs"
+  ],
+  "rationale": "The current record pairs one IUBMB EC 3.4.19.13 reaction snippet with two diagnostic strain-phenotyping snippets (DOI:10.3389/fgene.2023.1240581), leaving only one catalytic reaction quote.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "https://iubmb.qmul.ac.uk/enzyme/EC3/4/19/13.html"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/physiology/gamma_glutamyltransferase_activity.html#gamma-glutamyltransferase-activity-causal-graph-source-gap"
+ },
+ {
   "discussion_id": "gelatinase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for gelatinase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -13140,6 +14043,27 @@ window.searchData = [
   "evidence_refs": [],
   "posed_by": "codex",
   "page_url": "../../pages/traits/physiology/gelatinase_activity.html#gelatinase-activity-xref-gap"
+ },
+ {
+  "discussion_id": "gelatinase-activity-causal-graph-source-gap",
+  "prompt": "Add primary microbial literature evidence for secreted GelE/metalloprotease gelatin cleavage, peptide products, and quorum-sensing regulation before constructing causal_graphs.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "gelatinase activity",
+  "source_id": "traitmech:000136",
+  "source_file": "gelatinase_activity.yaml",
+  "attaches_to": [
+   "causal_graphs"
+  ],
+  "rationale": "The current record carries two diagnostic gelatin-liquefaction assay snippets without specific protease identity or multi-step catalytic quotes.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.1128/JB.01311-07"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/physiology/gelatinase_activity.html#gelatinase-activity-causal-graph-source-gap"
  },
  {
   "discussion_id": "glutamyl-glutamic-acid-arylamidase-activity-xref-gap",
@@ -13159,6 +14083,27 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/glutamyl_glutamic_acid_arylamidase_activity.html#glutamyl-glutamic-acid-arylamidase-activity-xref-gap"
  },
  {
+  "discussion_id": "glutamyl-glutamic-acid-arylamidase-activity-causal-graph-source-gap",
+  "prompt": "Add primary microbial literature evidence for glutamyl aminopeptidase (EC 3.4.11.7) catalysis and N-terminal dicarboxylic amino-acid cleavage before constructing causal_graphs.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "glutamyl glutamic acid arylamidase activity",
+  "source_id": "traitmech:000173",
+  "source_file": "glutamyl_glutamic_acid_arylamidase_activity.yaml",
+  "attaches_to": [
+   "causal_graphs"
+  ],
+  "rationale": "The current record carries two diagnostic enzyme-panel survey snippets (DOI:10.1099/ijsem.0.006017, DOI:10.1099/ijs.0.63642-0) without verbatim catalytic reaction or enzyme-mechanism quotes.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.1099/ijsem.0.006017"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/physiology/glutamyl_glutamic_acid_arylamidase_activity.html#glutamyl-glutamic-acid-arylamidase-activity-causal-graph-source-gap"
+ },
+ {
   "discussion_id": "glycine-arylamidase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for glycine arylamidase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -13174,6 +14119,27 @@ window.searchData = [
   "evidence_refs": [],
   "posed_by": "codex",
   "page_url": "../../pages/traits/physiology/glycine_arylamidase_activity.html#glycine-arylamidase-activity-xref-gap"
+ },
+ {
+  "discussion_id": "glycine-arylamidase-activity-causal-graph-source-gap",
+  "prompt": "Add primary microbial literature evidence for glycyl aminopeptidase/arylamidase catalysis and substrate cleavage before constructing causal_graphs.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "glycine arylamidase activity",
+  "source_id": "traitmech:000170",
+  "source_file": "glycine_arylamidase_activity.yaml",
+  "attaches_to": [
+   "causal_graphs"
+  ],
+  "rationale": "The current record carries diagnostic enzyme-panel survey snippets without verbatim catalytic reaction or multi-step mechanism quotes.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.1099/ijsem.0.006017"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/physiology/glycine_arylamidase_activity.html#glycine-arylamidase-activity-causal-graph-source-gap"
  },
  {
   "discussion_id": "gravikinesis-speed-and-direction-boundaries",
@@ -13431,6 +14397,27 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/histidine_arylamidase_activity.html#histidine-arylamidase-activity-xref-gap"
  },
  {
+  "discussion_id": "histidine-arylamidase-activity-causal-graph-source-gap",
+  "prompt": "Add primary microbial literature evidence for histidyl aminopeptidase/arylamidase catalysis and substrate cleavage before constructing causal_graphs.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "histidine arylamidase activity",
+  "source_id": "traitmech:000171",
+  "source_file": "histidine_arylamidase_activity.yaml",
+  "attaches_to": [
+   "causal_graphs"
+  ],
+  "rationale": "The current record carries diagnostic enzyme-panel survey snippets without verbatim catalytic reaction or multi-step mechanism quotes.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.1099/ijsem.0.006017"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/physiology/histidine_arylamidase_activity.html#histidine-arylamidase-activity-causal-graph-source-gap"
+ },
+ {
   "discussion_id": "homeoviscous-adaptation-xref-gap",
   "prompt": "Resolve an exact external ontology class for organism-level homeoviscous adaptation before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -13686,6 +14673,27 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/lecithinase_activity.html#lecithinase-activity-xref-gap"
  },
  {
+  "discussion_id": "lecithinase-activity-causal-graph-source-gap",
+  "prompt": "Add primary microbial literature evidence for phospholipase C (Plc, EC 3.1.4.3) phosphatidylcholine cleavage to 1,2-diacylglycerol and phosphocholine before constructing causal_graphs.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "lecithinase activity",
+  "source_id": "traitmech:000140",
+  "source_file": "lecithinase_activity.yaml",
+  "attaches_to": [
+   "causal_graphs"
+  ],
+  "rationale": "The current record carries two egg-yolk/lecithinase diagnostic assay snippets (DOI:10.2147/IDR.S365254, DOI:10.1128/jb.81.6.939-945.1961) without distinct phospholipid cleavage product quotes.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.2147/IDR.S365254"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/physiology/lecithinase_activity.html#lecithinase-activity-causal-graph-source-gap"
+ },
+ {
   "discussion_id": "lethal-algicidal-scope-and-mappings",
   "prompt": "Resolve mappings while retaining a lethal endpoint and actor-level scope.",
   "kind": "CURATION_TODO",
@@ -13773,6 +14781,27 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/leucine_arylamidase_activity.html#leucine-arylamidase-activity-xref-gap"
  },
  {
+  "discussion_id": "leucine-arylamidase-activity-causal-graph-source-gap",
+  "prompt": "Add primary microbial literature evidence for leucyl aminopeptidase (PepA/Lap, EC 3.4.11.1) catalysis and peptide turnover in the exemplar taxon before constructing causal_graphs.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "leucine arylamidase activity",
+  "source_id": "traitmech:000143",
+  "source_file": "leucine_arylamidase_activity.yaml",
+  "attaches_to": [
+   "causal_graphs"
+  ],
+  "rationale": "The current record pairs one IUBMB EC 3.4.11.1 reaction snippet with a diagnostic API ZYM panel snippet, leaving only one catalytic reaction quote.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.1099/ijsem.0.002327"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/physiology/leucine_arylamidase_activity.html#leucine-arylamidase-activity-causal-graph-source-gap"
+ },
+ {
   "discussion_id": "leucyl-glycine-arylamidase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for leucyl glycine arylamidase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -13790,6 +14819,27 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/leucyl_glycine_arylamidase_activity.html#leucyl-glycine-arylamidase-activity-xref-gap"
  },
  {
+  "discussion_id": "leucyl-glycine-arylamidase-activity-causal-graph-source-gap",
+  "prompt": "Add primary microbial literature evidence for aminopeptidase cleavage of leucyl-glycine arylamide substrates and enzyme identity before constructing causal_graphs.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "leucyl glycine arylamidase activity",
+  "source_id": "traitmech:000178",
+  "source_file": "leucyl_glycine_arylamidase_activity.yaml",
+  "attaches_to": [
+   "causal_graphs"
+  ],
+  "rationale": "The current record carries two diagnostic API rapid ID32A / species-description snippets (DOI:10.1099/ijsem.0.006017, DOI:10.1128/JCM.40.9.3427-3431.2002) without verbatim catalytic reaction quotes.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.1099/ijsem.0.006017"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/physiology/leucyl_glycine_arylamidase_activity.html#leucyl-glycine-arylamidase-activity-causal-graph-source-gap"
+ },
+ {
   "discussion_id": "lipase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for lipase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -13805,6 +14855,27 @@ window.searchData = [
   "evidence_refs": [],
   "posed_by": "codex",
   "page_url": "../../pages/traits/physiology/lipase_activity.html#lipase-activity-xref-gap"
+ },
+ {
+  "discussion_id": "lipase-activity-causal-graph-source-gap",
+  "prompt": "Add primary microbial literature evidence for extracellular triacylglycerol lipase (EC 3.1.1.3) ester hydrolysis to diacylglycerol/fatty acids and enzyme identity before constructing causal_graphs.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "lipase activity",
+  "source_id": "traitmech:000139",
+  "source_file": "lipase_activity.yaml",
+  "attaches_to": [
+   "causal_graphs"
+  ],
+  "rationale": "The current record carries two tributyrin/screening assay snippets (DOI:10.22207/JPAM.16.4.27, DOI:10.1016/j.mex.2018.01.004) without verbatim catalytic reaction or enzyme-mechanism quotes.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.22207/JPAM.16.4.27"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/physiology/lipase_activity.html#lipase-activity-causal-graph-source-gap"
  },
  {
   "discussion_id": "lipophagy-scope-and-go-alignment",
@@ -13856,6 +14927,27 @@ window.searchData = [
   "evidence_refs": [],
   "posed_by": "codex",
   "page_url": "../../pages/traits/physiology/lysine_decarboxylase_activity.html#lysine-decarboxylase-activity-xref-gap"
+ },
+ {
+  "discussion_id": "lysine-decarboxylase-activity-protein-example-gap",
+  "prompt": "Add strain-matched UniProtKB protein_examples for Escherichia coli inducible lysine decarboxylase (CadA) and lysine-cadaverine antiporter (CadB) so lysine_decarboxylase_cadba_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "lysine decarboxylase activity",
+  "source_id": "traitmech:000153",
+  "source_file": "lysine_decarboxylase_activity.yaml",
+  "attaches_to": [
+   "causal_graphs#lysine_decarboxylase_cadba_sketch"
+  ],
+  "rationale": "The record's primary literature (EC 4.1.1.18, DOI:10.1128/jb.01306-06) establishes the CadBA lysine-dependent acid-resistance decarboxylation of L-lysine to cadaverine and CO2 in Escherichia coli (NCBITaxon:562), but verified UniProtKB accessions must be curated on a GENE_OR_PROTEIN node before marking the graph MECHANISTIC.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.1128/jb.01306-06"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/physiology/lysine_decarboxylase_activity.html#lysine-decarboxylase-activity-protein-example-gap"
  },
  {
   "discussion_id": "macropinocytosis-scope-and-hierarchy",
@@ -14045,6 +15137,27 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/nad_dependent_alcohol_dehydrogenase_activity.html#nad-dependent-alcohol-dehydrogenase-activity-xref-gap"
  },
  {
+  "discussion_id": "nad-dependent-alcohol-dehydrogenase-activity-causal-graph-source-gap",
+  "prompt": "Add strain-matched UniProtKB protein_examples for Zymomonas mobilis AdhA/AdhB (P0DTE6/P06758) and physiological ethanol fermentation coupling before constructing a MECHANISTIC causal_graphs entry.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "NAD-dependent alcohol dehydrogenase activity",
+  "source_id": "traitmech:000165",
+  "source_file": "nad_dependent_alcohol_dehydrogenase_activity.yaml",
+  "attaches_to": [
+   "causal_graphs"
+  ],
+  "rationale": "The current record carries an IUBMB EC 1.1.1.1 reaction snippet and two Zymomonas mobilis adhB purification/cloning snippets (DOI:10.1111/j.1432-1033.1986.tb09366.x, DOI:10.1128/jb.169.6.2591-2597.1987) that identify AdhB but do not state its physiological acetaldehyde-to-ethanol metabolic role or include verified UniProtKB protein_examples.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "https://iubmb.qmul.ac.uk/enzyme/EC1/1/1/1.html"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/physiology/nad_dependent_alcohol_dehydrogenase_activity.html#nad-dependent-alcohol-dehydrogenase-activity-causal-graph-source-gap"
+ },
+ {
   "discussion_id": "naphthol-as-bi-phosphohydrolase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for naphthol-AS-BI-phosphohydrolase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -14060,6 +15173,27 @@ window.searchData = [
   "evidence_refs": [],
   "posed_by": "codex",
   "page_url": "../../pages/traits/physiology/naphthol_as_bi_phosphohydrolase_activity.html#naphthol-as-bi-phosphohydrolase-activity-xref-gap"
+ },
+ {
+  "discussion_id": "naphthol-as-bi-phosphohydrolase-activity-causal-graph-source-gap",
+  "prompt": "Add primary microbial literature evidence for the phosphohydrolase enzyme catalyzing naphthol-AS-BI-phosphate hydrolysis and its physiological substrate before constructing causal_graphs.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "naphthol-AS-BI-phosphohydrolase activity",
+  "source_id": "traitmech:000174",
+  "source_file": "naphthol_as_bi_phosphohydrolase_activity.yaml",
+  "attaches_to": [
+   "causal_graphs"
+  ],
+  "rationale": "The current record carries two API ZYM diagnostic substrate/panel snippets (DOI:10.14202/vetworld.2024.143-149, DOI:10.1128/JCM.43.8.3713-3717.2005) without catalytic product or enzyme-identity quotes.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.14202/vetworld.2024.143-149"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/physiology/naphthol_as_bi_phosphohydrolase_activity.html#naphthol-as-bi-phosphohydrolase-activity-causal-graph-source-gap"
  },
  {
   "discussion_id": "negative-autotropism-direction-and-self-scope",
@@ -14315,6 +15449,27 @@ window.searchData = [
   "evidence_refs": [],
   "posed_by": "codex",
   "page_url": "../../pages/traits/physiology/ornithine_decarboxylase_activity.html#ornithine-decarboxylase-activity-xref-gap"
+ },
+ {
+  "discussion_id": "ornithine-decarboxylase-activity-causal-graph-source-gap",
+  "prompt": "Add primary microbial literature evidence for inducible/biosynthetic ornithine decarboxylase (SpeF/SpeC) physiological polyamine/acid-resistance function and strain-matched UniProtKB protein accessions before constructing causal_graphs.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "ornithine decarboxylase activity",
+  "source_id": "traitmech:000154",
+  "source_file": "ornithine_decarboxylase_activity.yaml",
+  "attaches_to": [
+   "causal_graphs"
+  ],
+  "rationale": "The current record pairs one IUBMB EC 4.1.1.17 reaction snippet with one mutant-isolation sentence (DOI:10.1128/jb.124.2.791-799.1975) that does not state the enzyme's physiological pathway link to the organism-level phenotype.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "https://iubmb.qmul.ac.uk/enzyme/EC4/1/1/17.html"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/physiology/ornithine_decarboxylase_activity.html#ornithine-decarboxylase-activity-causal-graph-source-gap"
  },
  {
   "discussion_id": "osmotaxis-spatial-and-chemical-boundaries",
@@ -14640,6 +15795,27 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/phenylalanine_arylamidase_activity.html#phenylalanine-arylamidase-activity-xref-gap"
  },
  {
+  "discussion_id": "phenylalanine-arylamidase-activity-causal-graph-source-gap",
+  "prompt": "Add primary microbial literature evidence for phenylalanyl aminopeptidase/arylamidase catalysis and substrate cleavage before constructing causal_graphs.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "phenylalanine arylamidase activity",
+  "source_id": "traitmech:000168",
+  "source_file": "phenylalanine_arylamidase_activity.yaml",
+  "attaches_to": [
+   "causal_graphs"
+  ],
+  "rationale": "The current record carries two diagnostic enzyme-panel survey snippets (DOI:10.1099/ijsem.0.006017, DOI:10.1128/JCM.40.9.3427-3431.2002) without verbatim catalytic reaction quotes.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.1099/ijsem.0.006017"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/physiology/phenylalanine_arylamidase_activity.html#phenylalanine-arylamidase-activity-causal-graph-source-gap"
+ },
+ {
   "discussion_id": "photokinesis-speed-and-direction-boundaries",
   "prompt": "Preserve the speed-response scope when mapping light responses.",
   "kind": "CURATION_TODO",
@@ -14880,6 +16056,27 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/prolyl_aminopeptidase_activity.html#prolyl-aminopeptidase-activity-xref-gap"
  },
  {
+  "discussion_id": "prolyl-aminopeptidase-activity-causal-graph-source-gap",
+  "prompt": "Add primary microbial literature evidence linking Neisseria gonorrhoeae proline iminopeptidase (Pip) peptide cleavage to a physiological pathway step and strain-matched UniProtKB protein accessions before constructing causal_graphs.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "prolyl aminopeptidase activity",
+  "source_id": "traitmech:000166",
+  "source_file": "prolyl_aminopeptidase_activity.yaml",
+  "attaches_to": [
+   "causal_graphs"
+  ],
+  "rationale": "The current record carries an IUBMB EC 3.4.11.5 reaction snippet, one sentence noting that Pip is a hydrolase elaborated by Neisseria gonorrhoeae (DOI:10.1111/j.1365-2958.1993.tb01249.x), and a diagnostic enzyme list (DOI:10.1099/ijsem.0.006017), without a second non-redundant mechanistic step or UniProtKB protein_examples.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "https://iubmb.qmul.ac.uk/enzyme/EC3/4/11/5.html"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/physiology/prolyl_aminopeptidase_activity.html#prolyl-aminopeptidase-activity-causal-graph-source-gap"
+ },
+ {
   "discussion_id": "proteaphagy-cargo-scope-and-go",
   "prompt": "Review proteasome-cargo scope and qualified GO alignment.",
   "kind": "CURATION_TODO",
@@ -14999,6 +16196,27 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/pyrazinamidase_activity.html#pyrazinamidase-activity-xref-gap"
  },
  {
+  "discussion_id": "pyrazinamidase-activity-causal-graph-source-gap",
+  "prompt": "Add strain-matched UniProtKB protein_examples for Mycobacterium tuberculosis PncA (UniProtKB:I6Y493) before constructing a MECHANISTIC causal_graphs entry.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "pyrazinamidase activity",
+  "source_id": "traitmech:000163",
+  "source_file": "pyrazinamidase_activity.yaml",
+  "attaches_to": [
+   "causal_graphs"
+  ],
+  "rationale": "The current record carries an IUBMB EC 3.5.1.19 reaction snippet and two Mycobacterium tuberculosis PncA nicotinamidase/pyrazinamidase snippets (DOI:10.1111/j.1742-4658.2007.06241.x, DOI:10.1371/journal.pone.0015785), but requires verified strain-matched UniProtKB protein_examples on PncA to represent the enzyme-resolved mechanism.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "https://iubmb.qmul.ac.uk/enzyme/EC3/5/1/19.html"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/physiology/pyrazinamidase_activity.html#pyrazinamidase-activity-causal-graph-source-gap"
+ },
+ {
   "discussion_id": "pyrrolidonyl-arylamidase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for pyrrolidonyl arylamidase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -15014,6 +16232,27 @@ window.searchData = [
   "evidence_refs": [],
   "posed_by": "codex",
   "page_url": "../../pages/traits/physiology/pyrrolidonyl_arylamidase_activity.html#pyrrolidonyl-arylamidase-activity-xref-gap"
+ },
+ {
+  "discussion_id": "pyrrolidonyl-arylamidase-activity-causal-graph-source-gap",
+  "prompt": "Add primary microbial literature evidence for pyroglutamyl-peptidase I (PyrA, EC 3.4.19.3) catalysis and physiological peptide turnover in the exemplar taxon before constructing causal_graphs.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "pyrrolidonyl arylamidase activity",
+  "source_id": "traitmech:000155",
+  "source_file": "pyrrolidonyl_arylamidase_activity.yaml",
+  "attaches_to": [
+   "causal_graphs"
+  ],
+  "rationale": "The current record pairs one IUBMB EC 3.4.19.3 reaction snippet with a diagnostic strain-phenotyping list (DOI:10.1128/JCM.37.11.3443-3447.1999), leaving only one mechanistic quote.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "https://iubmb.qmul.ac.uk/enzyme/EC3/4/19/3.html"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/physiology/pyrrolidonyl_arylamidase_activity.html#pyrrolidonyl-arylamidase-activity-causal-graph-source-gap"
  },
  {
   "discussion_id": "quorum-quenching-scope-and-mappings",
@@ -15271,6 +16510,27 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/serine_arylamidase_activity.html#serine-arylamidase-activity-xref-gap"
  },
  {
+  "discussion_id": "serine-arylamidase-activity-causal-graph-source-gap",
+  "prompt": "Add primary microbial literature evidence for seryl aminopeptidase/arylamidase catalysis and substrate cleavage before constructing causal_graphs.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "serine arylamidase activity",
+  "source_id": "traitmech:000172",
+  "source_file": "serine_arylamidase_activity.yaml",
+  "attaches_to": [
+   "causal_graphs"
+  ],
+  "rationale": "The current record carries two diagnostic enzyme-panel survey snippets (DOI:10.1099/ijsem.0.006017, DOI:10.1128/JCM.40.9.3427-3431.2002) without verbatim catalytic reaction quotes.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.1099/ijsem.0.006017"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/physiology/serine_arylamidase_activity.html#serine-arylamidase-activity-causal-graph-source-gap"
+ },
+ {
   "discussion_id": "siderophore-production-xref-gap",
   "prompt": "Resolve exact external ontology xrefs for the bacterial siderophore production phenotype.",
   "kind": "CURATION_TODO",
@@ -15286,6 +16546,27 @@ window.searchData = [
   "evidence_refs": [],
   "posed_by": "codex",
   "page_url": "../../pages/traits/physiology/siderophore_production.html#siderophore-production-xref-gap"
+ },
+ {
+  "discussion_id": "siderophore-production-protein-example-gap",
+  "prompt": "Add strain-matched UniProtKB protein_examples for Pseudomonas aeruginosa pyoverdine synthetase/transport proteins (e.g. PvdD, PvdL, FpvA) so siderophore_production_iron_scavenging_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "siderophore production",
+  "source_id": "traitmech:000186",
+  "source_file": "siderophore_production.yaml",
+  "attaches_to": [
+   "causal_graphs#siderophore_production_iron_scavenging_sketch"
+  ],
+  "rationale": "The record's primary literature (DOI:10.1111/1462-2920.14937, DOI:10.15698/mic2018.10.649, DOI:10.1073/pnas.0908760106) establishes pyoverdine siderophore biosynthesis and extracellular iron scavenging in Pseudomonas aeruginosa (NCBITaxon:287), but verified UniProtKB accessions must be curated on a GENE_OR_PROTEIN node before marking the graph MECHANISTIC.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.15698/mic2018.10.649"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/physiology/siderophore_production.html#siderophore-production-protein-example-gap"
  },
  {
   "discussion_id": "siliceous-scale-production-scope-and-parent",
@@ -15630,6 +16911,27 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/trypsin_activity.html#trypsin-activity-xref-gap"
  },
  {
+  "discussion_id": "trypsin-activity-causal-graph-source-gap",
+  "prompt": "Add primary microbial literature evidence for microbial trypsin-like serine protease catalysis and physiological substrate cleavage before constructing causal_graphs.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "trypsin activity",
+  "source_id": "traitmech:000158",
+  "source_file": "trypsin_activity.yaml",
+  "attaches_to": [
+   "causal_graphs"
+  ],
+  "rationale": "The current record pairs IUBMB EC 3.4.21.4 cleavage/vertebrate-pancreas snippets with an API ZYM diagnostic survey list (DOI:10.1371/journal.pone.0322500), lacking a second microbial mechanistic quote.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "https://iubmb.qmul.ac.uk/enzyme/EC3/4/21/4.html"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/physiology/trypsin_activity.html#trypsin-activity-causal-graph-source-gap"
+ },
+ {
   "discussion_id": "tyrosine-arylamidase-activity-xref-gap",
   "prompt": "Resolve an exact external ontology class for tyrosine arylamidase activity before adding a TraitRecord xref.",
   "kind": "CURATION_TODO",
@@ -15645,6 +16947,27 @@ window.searchData = [
   "evidence_refs": [],
   "posed_by": "codex",
   "page_url": "../../pages/traits/physiology/tyrosine_arylamidase_activity.html#tyrosine-arylamidase-activity-xref-gap"
+ },
+ {
+  "discussion_id": "tyrosine-arylamidase-activity-causal-graph-source-gap",
+  "prompt": "Add primary microbial literature evidence for tyrosyl aminopeptidase/arylamidase catalysis and substrate cleavage before constructing causal_graphs.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "tyrosine arylamidase activity",
+  "source_id": "traitmech:000169",
+  "source_file": "tyrosine_arylamidase_activity.yaml",
+  "attaches_to": [
+   "causal_graphs"
+  ],
+  "rationale": "The current record carries two diagnostic enzyme-panel survey snippets (DOI:10.1099/ijsem.0.006017, DOI:10.1128/JCM.40.9.3427-3431.2002) without verbatim catalytic reaction quotes.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.1099/ijsem.0.006017"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/physiology/tyrosine_arylamidase_activity.html#tyrosine-arylamidase-activity-causal-graph-source-gap"
  },
  {
   "discussion_id": "unconventional-secretion-scope-and-mapping",
@@ -15783,6 +17106,27 @@ window.searchData = [
   "page_url": "../../pages/traits/physiology/valine_arylamidase_activity.html#valine-arylamidase-activity-xref-gap"
  },
  {
+  "discussion_id": "valine-arylamidase-activity-causal-graph-source-gap",
+  "prompt": "Add primary microbial literature evidence for valyl aminopeptidase/arylamidase catalysis and substrate cleavage before constructing causal_graphs.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "valine arylamidase activity",
+  "source_id": "traitmech:000144",
+  "source_file": "valine_arylamidase_activity.yaml",
+  "attaches_to": [
+   "causal_graphs"
+  ],
+  "rationale": "The current record carries two API ZYM diagnostic survey snippets (DOI:10.3389/fmicb.2022.1034816, DOI:10.1099/ijsem.0.002327) without verbatim catalytic reaction quotes.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.3389/fmicb.2022.1034816"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/physiology/valine_arylamidase_activity.html#valine-arylamidase-activity-causal-graph-source-gap"
+ },
+ {
   "discussion_id": "viscotaxis-direction-and-physical-boundaries",
   "prompt": "Retain directional and environmental scope of viscosity-driven migration.",
   "kind": "CURATION_TODO",
@@ -15818,8 +17162,8 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 801,
- "total_knowledge_gaps": 496,
+ "total_discussions": 865,
+ "total_knowledge_gaps": 550,
  "total_source_entries": 615,
  "kinds": [
   "CONTROVERSY",

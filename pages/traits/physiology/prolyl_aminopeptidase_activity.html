@@ -232,7 +232,7 @@
 
 
     <div class="card" id="discussions">
-      <h2>Discussions and Knowledge Gaps <span class="meta">(1)</span></h2>
+      <h2>Discussions and Knowledge Gaps <span class="meta">(2)</span></h2>
       <p class="meta">Open questions attached to this trait. Seeded by
         <code>just knowledge-gap-scan</code> and curated; see
         <a href="../../../app/discussions/index.html">the corpus-wide index</a>.</p>
@@ -267,6 +267,47 @@
 
       </div>
 
+
+      <div class="discussion" id="prolyl-aminopeptidase-activity-causal-graph-source-gap">
+        <p class="discussion-prompt">Add primary microbial literature evidence linking Neisseria gonorrhoeae proline iminopeptidase (Pip) peptide cleavage to a physiological pathway step and strain-matched UniProtKB protein accessions before constructing causal_graphs.</p>
+        <p class="meta">
+          <span class="badge">KNOWLEDGE GAP</span>
+          <span class="badge">OPEN</span>
+          <code>prolyl-aminopeptidase-activity-causal-graph-source-gap</code>
+          · raised by claude
+          · 2026-10-23
+        </p>
+
+
+        <p class="meta">Attached to
+          <code>causal_graphs</code>
+        </p>
+
+
+        <p>The current record carries an IUBMB EC 3.4.11.5 reaction snippet, one sentence noting that Pip is a hydrolase elaborated by Neisseria gonorrhoeae (DOI:10.1111/j.1365-2958.1993.tb01249.x), and a diagnostic enzyme list (DOI:10.1099/ijsem.0.006017), without a second non-redundant mechanistic step or UniProtKB protein_examples.</p>
+
+
+
+
+        <h3>Evidence</h3>
+        <ul class="discussion-evidence">
+
+          <li>
+            <a href="https://iubmb.qmul.ac.uk/enzyme/EC3/4/11/5.html" rel="nofollow noreferrer"><code>https://iubmb.qmul.ac.uk/enzyme/EC3/4/11/5.html</code></a>
+            <span class="badge">PARTIAL</span>
+            <blockquote>&lt;b&gt;Reaction:&lt;/b&gt; Release of N-terminal proline from a peptide</blockquote>
+            <span class="meta">Existing record-level evidence supports the trait definition and diagnostic or organismal occurrence, but lacks multiple distinct pathway/enzyme quotes and strain-matched UniProtKB protein accessions needed for a connected causal graph.</span>
+          </li>
+
+        </ul>
+
+
+
+
+
+
+      </div>
+
     </div>
 
 
@@ -278,6 +319,12 @@
           <time>2026-09-12T11:07:00Z</time> ·
           <strong>MINTED_TRAITMECH_ID</strong> · codex
           <p class="changes">Minted prolyl aminopeptidase activity as a URL/DOI-backed TraitRecord after a repository-wide duplicate review covering ignored and hidden files; METPO has no exact prolyl aminopeptidase activity class yet.</p>
+        </li>
+
+        <li>
+          <time>2026-10-23T09:40:49Z</time> ·
+          <strong>RECORD_MECHANISM_KNOWLEDGE_GAP</strong> · claude
+          <p class="changes">Recorded OPEN KNOWLEDGE_GAP discussion (prolyl-aminopeptidase-activity-causal-graph-source-gap) attached to causal_graphs documenting the source-limited mechanism gap.</p>
         </li>
 
       </ol>
@@ -356,7 +403,7 @@
       third-party source terms apply
     </div>
     <div>
-      Record as of 2026-09-12 11:07 UTC
+      Record as of 2026-10-23 09:40 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
       · embedding coverage 100.0%

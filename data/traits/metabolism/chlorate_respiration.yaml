@@ -47,6 +47,29 @@ discussions:
     dismutase are narrower than the whole-organism anaerobic respiration phenotype.
   posed_by: codex
   posed_date: '2026-09-15'
+- discussion_id: chlorate-respiration-protein-example-gap
+  prompt: Add strain-matched UniProtKB protein_examples for Ideonella dechloratans
+    chlorate reductase (ClrABC) and chlorite dismutase (Cld) so chlorate_respiration_pathway_sketch
+    can be promoted from NONMECHANISTIC to MECHANISTIC.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - causal_graphs#chlorate_respiration_pathway_sketch
+  rationale: The record's primary literature (DOI:10.1128/AEM.69.9.5585-5592.2003,
+    DOI:10.1128/AEM.07303-11) supports the two-step dissimilatory chlorate reduction
+    pathway (chlorate reduction followed by chlorite decomposition) in Ideonella dechloratans
+    (NCBITaxon:36863), but verified UniProtKB accessions must be added to a GENE_OR_PROTEIN
+    node before marking the graph MECHANISTIC.
+  posed_by: claude
+  posed_date: '2026-10-23'
+  evidence:
+  - reference: DOI:10.1128/AEM.69.9.5585-5592.2003
+    supports: PARTIAL
+    snippet: 'reduction of chlorate occurs in a two-step reaction: chlorate reduction
+      followed by chlorite decomposition'
+    explanation: Existing record-level evidence supports the connected NONMECHANISTIC
+      pathway/function graph but does not provide strain-matched UniProtKB protein
+      accessions for protein_examples.
 curation_history:
 - timestamp: '2026-09-15T01:28:00Z'
   curator: codex
@@ -56,3 +79,81 @@ curation_history:
     and hidden files; the local METPO snapshot has only an obsolete broad (Per)chlorate
     respiration class and the replacement placeholder is reserved in proposals/metpo_traitmech_v75.
   llm_assisted: true
+- timestamp: '2026-10-23T09:40:48Z'
+  curator: claude
+  action: CURATE_CAUSAL_GRAPH
+  changes: Added NONMECHANISTIC causal_graphs entry (chlorate_respiration_pathway_sketch)
+    and OPEN CURATION_TODO discussion (chlorate-respiration-protein-example-gap) anchored
+    on existing verbatim record evidence snippets.
+  llm_assisted: true
+causal_graphs:
+- graph_id: chlorate_respiration_pathway_sketch
+  title: Two-step dissimilatory chlorate reduction pathway via chlorite
+  description: Evidence-backed metabolic pathway sketch linking chlorate terminal
+    electron acceptance and two-step dissimilatory chlorate reduction via chlorite
+    to chlorate respiration.
+  scope_status: NONMECHANISTIC
+  scope_notes: Pathway sketch backed by DOI:10.1128/AEM.69.9.5585-5592.2003 and DOI:10.1128/AEM.07303-11;
+    strain-matched UniProtKB protein examples for Ideonella dechloratans chlorate
+    reductase (ClrABC) and chlorite dismutase (Cld) remain to be curated.
+  nodes:
+  - node_id: chlorate_respiration_trait
+    label: chlorate respiration
+    node_type: TRAIT
+    grounding: traitmech:000198
+    description: Anaerobic respiration using chlorate as a terminal electron acceptor.
+  - node_id: chlorate_respiration_chlorate
+    label: chlorate
+    node_type: CHEMICAL
+    grounding: CHEBI:17891
+    description: Chlorate oxyanion serving as the terminal electron acceptor.
+  - node_id: chlorate_respiration_dissimilatory_pathway
+    label: anaerobic respiration
+    node_type: PATHWAY
+    grounding: GO:0019645
+    description: Two-step dissimilatory chlorate reduction respiratory pathway consisting
+      of chlorate reduction followed by chlorite decomposition.
+  - node_id: chlorate_respiration_chlorite
+    label: chlorite
+    node_type: CHEMICAL
+    grounding: CHEBI:17444
+    description: Chlorite intermediate produced by chlorate reduction and decomposed
+      in the second step of the chlorate respiration pathway.
+  edges:
+  - subject: chlorate_respiration_trait
+    predicate: has electron acceptor
+    predicate_id: METPO:2007702
+    object: chlorate_respiration_chlorate
+    description: Chlorate ion serves as the sole electron acceptor for oxidation of
+      organic matter in chlorate respiration.
+    evidence:
+    - reference: DOI:10.1128/AEM.69.9.5585-5592.2003
+      snippet: chlorate ion as the sole electron acceptor for oxidation of organic
+        matter in a previously unknown mode of respiration
+      notes: Danielsson Thorell et al. show that chlorate ion serves as the sole electron
+        acceptor for oxidation of organic matter in anaerobic respiration.
+  - subject: chlorate_respiration_dissimilatory_pathway
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: chlorate_respiration_trait
+    description: Chlorate-respiring bacteria use dissimilatory chlorate reduction
+      as an anaerobic respiratory pathway.
+    evidence:
+    - reference: DOI:10.1128/AEM.07303-11
+      snippet: Perchlorate-respiring bacteria (PRB) can use both perchlorate and chlorate
+        as terminal electron acceptors, whereas chlorate-respiring bacteria (CRB)
+        use only chlorate
+      notes: Hellberg Lindqvist et al. characterize chlorate-respiring bacteria (CRB)
+        that use chlorate as a terminal electron acceptor.
+  - subject: chlorate_respiration_dissimilatory_pathway
+    predicate: has output
+    predicate_id: RO:0002234
+    object: chlorate_respiration_chlorite
+    description: Reduction of chlorate occurs in a two-step reaction producing chlorite
+      followed by chlorite decomposition.
+    evidence:
+    - reference: DOI:10.1128/AEM.69.9.5585-5592.2003
+      snippet: 'reduction of chlorate occurs in a two-step reaction: chlorate reduction
+        followed by chlorite decomposition'
+      notes: 'Danielsson Thorell et al. report that reduction of chlorate occurs in
+        a two-step reaction: chlorate reduction followed by chlorite decomposition.'

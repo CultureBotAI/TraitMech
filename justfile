@@ -494,7 +494,7 @@ curate-knowledge-gaps *args:
     uv run python scripts/curate_knowledge_gaps.py {{args}}
 
 # Replay the Stage 2 causal_graphs and source-limited knowledge-gap curation.
-# Validated dry-run by default; pass --apply to write the 24 in-scope records.
+# Validated dry-run by default; pass --apply to write the 88 in-scope records (C1S2 + C2S2).
 curate-stage2-causal-graphs *args:
     uv run python scripts/curate_stage2_causal_graphs.py {{args}}
 
