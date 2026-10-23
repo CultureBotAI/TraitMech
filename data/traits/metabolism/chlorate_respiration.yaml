@@ -29,6 +29,11 @@ evidence:
     only chlorate
   notes: Hellberg Lindqvist et al. separate chlorate-respiring bacteria from broader
     perchlorate reducers.
+- reference: DOI:10.1128/AEM.69.9.5585-5592.2003
+  snippet: The genes (clr) encoding chlorate reductase are arranged as clrABDC, where
+    clrA, clrB, and clrC encode the subunits and clrD encodes a specific chaperone.
+  notes: Danielsson Thorell et al. characterize the Ideonella dechloratans clrABDC
+    operon encoding the ClrA, ClrB, and ClrC subunits of chlorate reductase.
 canonical_examples:
 - taxon_id: NCBITaxon:36863
   taxon_label: Ideonella dechloratans
@@ -52,7 +57,7 @@ discussions:
     chlorate reductase (ClrABC) and chlorite dismutase (Cld) so chlorate_respiration_pathway_sketch
     can be promoted from NONMECHANISTIC to MECHANISTIC.
   kind: CURATION_TODO
-  status: OPEN
+  status: RESOLVED
   attaches_to:
   - causal_graphs#chlorate_respiration_pathway_sketch
   rationale: The record's primary literature (DOI:10.1128/AEM.69.9.5585-5592.2003,
@@ -70,6 +75,11 @@ discussions:
     explanation: Existing record-level evidence supports the connected NONMECHANISTIC
       pathway/function graph but does not provide strain-matched UniProtKB protein
       accessions for protein_examples.
+  resolved_date: '2026-10-23'
+  resolution_note: Promoted chlorate_respiration_pathway_sketch to MECHANISTIC by
+    adding InterPro:IPR017840-grounded GENE_OR_PROTEIN node chlorate_respiration_clr_complex
+    with reviewed Ideonella dechloratans (NCBITaxon:36863) protein_examples UniProtKB:P60068
+    (ClrA) and UniProtKB:P60069 (ClrB) backed by DOI:10.1128/AEM.69.9.5585-5592.2003.
 curation_history:
 - timestamp: '2026-09-15T01:28:00Z'
   curator: codex
@@ -86,16 +96,25 @@ curation_history:
     and OPEN CURATION_TODO discussion (chlorate-respiration-protein-example-gap) anchored
     on existing verbatim record evidence snippets.
   llm_assisted: true
+- timestamp: '2026-10-23T11:45:00Z'
+  curator: claude
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: Promoted chlorate_respiration_pathway_sketch to MECHANISTIC; added InterPro:IPR017840-grounded
+    GENE_OR_PROTEIN node chlorate_respiration_clr_complex with reviewed Ideonella
+    dechloratans (NCBITaxon:36863) protein_examples UniProtKB:P60068 (ClrA) and UniProtKB:P60069
+    (ClrB) backed by DOI:10.1128/AEM.69.9.5585-5592.2003; resolved chlorate-respiration-protein-example-gap.
+  llm_assisted: true
 causal_graphs:
 - graph_id: chlorate_respiration_pathway_sketch
   title: Two-step dissimilatory chlorate reduction pathway via chlorite
   description: Evidence-backed metabolic pathway sketch linking chlorate terminal
     electron acceptance and two-step dissimilatory chlorate reduction via chlorite
     to chlorate respiration.
-  scope_status: NONMECHANISTIC
-  scope_notes: Pathway sketch backed by DOI:10.1128/AEM.69.9.5585-5592.2003 and DOI:10.1128/AEM.07303-11;
-    strain-matched UniProtKB protein examples for Ideonella dechloratans chlorate
-    reductase (ClrABC) and chlorite dismutase (Cld) remain to be curated.
+  scope_status: MECHANISTIC
+  scope_notes: Mechanistic graph backed by DOI:10.1128/AEM.69.9.5585-5592.2003 and
+    DOI:10.1128/AEM.07303-11; exemplified on chlorate_respiration_clr_complex with
+    Ideonella dechloratans (NCBITaxon:36863) chlorate reductase subunits ClrA (UniProtKB:P60068)
+    and ClrB (UniProtKB:P60069).
   nodes:
   - node_id: chlorate_respiration_trait
     label: chlorate respiration
@@ -119,6 +138,56 @@ causal_graphs:
     grounding: CHEBI:17444
     description: Chlorite intermediate produced by chlorate reduction and decomposed
       in the second step of the chlorate respiration pathway.
+  - node_id: chlorate_respiration_clr_complex
+    label: chlorate reductase ClrABC
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR017840
+    gene_symbols:
+    - clrA
+    - clrB
+    - clrC
+    operon: clrABDC
+    description: Periplasmic heterotrimeric chlorate reductase complex (ClrABC) catalyzing
+      the reduction of chlorate to chlorite.
+    protein_examples:
+    - uniprot_id: UniProtKB:P60068
+      protein_label: Chlorate reductase subunit alpha
+      gene_symbol: clrA
+      taxon_id: NCBITaxon:36863
+      taxon_label: Ideonella dechloratans
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-23'
+      entry_version: 85
+      sequence_version: 1
+      role: ClrA is the catalytic molybdopterin-containing alpha subunit of the heterotrimeric
+        ClrABC chlorate reductase complex in Ideonella dechloratans; this accession
+        represents the alpha subunit rather than the full heterotrimer.
+      evidence:
+      - reference: DOI:10.1128/AEM.69.9.5585-5592.2003
+        snippet: The genes (clr) encoding chlorate reductase are arranged as clrABDC,
+          where clrA, clrB, and clrC encode the subunits and clrD encodes a specific
+          chaperone.
+        notes: Danielsson Thorell et al. clone and sequence the Ideonella dechloratans
+          clrABDC operon encoding chlorate reductase subunits ClrA, ClrB, and ClrC.
+    - uniprot_id: UniProtKB:P60069
+      protein_label: Chlorate reductase subunit beta
+      gene_symbol: clrB
+      taxon_id: NCBITaxon:36863
+      taxon_label: Ideonella dechloratans
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-23'
+      entry_version: 77
+      sequence_version: 1
+      role: ClrB is the iron-sulfur beta subunit of the heterotrimeric ClrABC chlorate
+        reductase complex in Ideonella dechloratans; this accession represents the
+        beta subunit rather than the full heterotrimer.
+      evidence:
+      - reference: DOI:10.1128/AEM.69.9.5585-5592.2003
+        snippet: The genes (clr) encoding chlorate reductase are arranged as clrABDC,
+          where clrA, clrB, and clrC encode the subunits and clrD encodes a specific
+          chaperone.
+        notes: Danielsson Thorell et al. clone and sequence the Ideonella dechloratans
+          clrABDC operon encoding chlorate reductase subunits ClrA, ClrB, and ClrC.
   edges:
   - subject: chlorate_respiration_trait
     predicate: has electron acceptor
@@ -157,3 +226,16 @@ causal_graphs:
         followed by chlorite decomposition'
       notes: 'Danielsson Thorell et al. report that reduction of chlorate occurs in
         a two-step reaction: chlorate reduction followed by chlorite decomposition.'
+  - subject: chlorate_respiration_clr_complex
+    predicate: enables
+    predicate_id: RO:0002327
+    object: chlorate_respiration_dissimilatory_pathway
+    description: The clrABDC-encoded ClrABC chlorate reductase complex enables the
+      dissimilatory chlorate reduction pathway in Ideonella dechloratans.
+    evidence:
+    - reference: DOI:10.1128/AEM.69.9.5585-5592.2003
+      snippet: The genes (clr) encoding chlorate reductase are arranged as clrABDC,
+        where clrA, clrB, and clrC encode the subunits and clrD encodes a specific
+        chaperone.
+      notes: Danielsson Thorell et al. identify the Ideonella dechloratans clrABDC
+        gene cluster encoding the ClrABC chlorate reductase subunits.

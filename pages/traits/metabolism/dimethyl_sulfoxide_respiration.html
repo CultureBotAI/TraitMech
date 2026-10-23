@@ -49,7 +49,7 @@
 
 
   <section class="trait-evidence" id="trait-evidence" aria-labelledby="trait-evidence-heading">
-    <h2 id="trait-evidence-heading">Trait evidence <span class="meta">(4)</span></h2>
+    <h2 id="trait-evidence-heading">Trait evidence <span class="meta">(5)</span></h2>
     <ul>
 
       <li>
@@ -76,6 +76,12 @@
         <p class="meta">Rosenbaum et al. biochemically support an induced DMSO reductase activity in Moorella thermoacetica membranes.</p>
       </li>
 
+      <li>
+        <a href="https://doi.org/10.1073/pnas.0505959103" rel="nofollow noreferrer"><code>DOI:10.1073/pnas.0505959103</code></a>
+        <blockquote>Here, we identify two gene clusters in Shewanella oneidensis strain MR-1 that each contain homologs of genes required for metal reduction and genes that are predicted to encode dimethyl sulfoxide (DMSO) reductase subunits.</blockquote>
+        <p class="meta">Gralnick et al. identify the Shewanella oneidensis MR-1 gene clusters encoding the extracellular dimethyl sulfoxide reductase subunits.</p>
+      </li>
+
     </ul>
   </section>
 
@@ -88,7 +94,7 @@
       <h2>Membrane and extracellular DMSO reductase respiratory pathway</h2>
       <p class="meta">Evidence-backed metabolic pathway sketch linking dimethyl sulfoxide terminal electron acceptance and DMSO reductase activity to dimethyl sulfoxide respiration.</p>
 
-      <p class="graph-scope"><code>NONMECHANISTIC</code> · Pathway-and-activity sketch backed by DOI:10.1073/pnas.0505959103 and DOI:10.1111/1462-2920.15971; strain-matched UniProtKB protein examples for the Shewanella oneidensis MR-1 SO1427-SO1432 (DmsEFABGH) extracellular DMSO reductase subunits remain to be curated.</p>
+      <p class="graph-scope"><code>MECHANISTIC</code> · Mechanistic graph backed by DOI:10.1073/pnas.0505959103 and DOI:10.1111/1462-2920.15971; exemplified on dmso_respiration_dms_complex with Shewanella oneidensis MR-1 (NCBITaxon:211586; UP000008186) extracellular DMSO reductase subunits DmsA (UniProtKB:Q8EH03) and DmsB (UniProtKB:Q8EH02).</p>
 
 
       <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
@@ -163,10 +169,103 @@
             </ul>
           </li>
 
+          <li id="pathograph-1-edge-4">
+            <strong>extracellular DMSO reductase DmsEFAB</strong>
+            <a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR011888/" rel="nofollow noreferrer"><code>InterPro:IPR011888</code></a>
+            <span class="edge-predicate">enables</span>
+            <strong>dimethyl-sulfoxide reductase activity</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0009388" rel="nofollow noreferrer"><code>GO:0009388</code></a>
+            <a href="http://purl.obolibrary.org/obo/RO_0002327" rel="nofollow noreferrer"><code>RO:0002327</code></a>
+            <p>The extracellular DmsEFAB DMSO reductase complex enables dimethyl-sulfoxide reductase activity.</p>
+            <ul>
+
+              <li>
+                <a href="https://doi.org/10.1073/pnas.0505959103" rel="nofollow noreferrer"><code>DOI:10.1073/pnas.0505959103</code></a>
+                <span class="evidence-snippet">Here, we identify two gene clusters in Shewanella oneidensis strain MR-1 that each contain homologs of genes required for metal reduction and genes that are predicted to encode dimethyl sulfoxide (DMSO) reductase subunits.</span>
+                <span class="meta">Gralnick et al. identify the Shewanella oneidensis MR-1 gene clusters encoding the DMSO reductase subunits.</span>
+              </li>
+
+            </ul>
+          </li>
+
         </ul>
       </div>
 
 
+
+      <div class="protein-examples">
+        <h3>Protein and taxon examples</h3>
+        <div class="protein-example-table-wrap" role="region" tabindex="0" aria-label="Membrane and extracellular DMSO reductase respiratory pathway: protein and taxon examples">
+          <table class="protein-example-table">
+            <thead>
+              <tr><th>Graph node</th><th>Protein</th><th>Taxon</th><th>UniProt status</th><th>Role and evidence</th></tr>
+            </thead>
+            <tbody>
+
+              <tr>
+                <td>extracellular DMSO reductase DmsEFAB</td>
+                <td>
+
+                  <a href="https://www.uniprot.org/uniprotkb/Q8EH03/entry" rel="nofollow noreferrer"><code>UniProtKB:Q8EH03</code></a>
+                  <br>Extracellular dimethyl sulfoxide/manganese oxide reductase molybdopterin-binding subunit DmsA <span class="meta">(dmsA)</span>
+                </td>
+                <td>
+
+                  <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=211586" rel="nofollow noreferrer">Shewanella oneidensis MR-1</a>
+                  <br><code>NCBITaxon:211586</code>
+                </td>
+                <td>
+                  <code>UNREVIEWED</code><br>
+                  <span class="meta">retrieved 2026-10-23 · entry v148 · sequence v1</span>
+                </td>
+                <td>
+                  <p>DmsA (SO_1429) is the catalytic molybdopterin-binding subunit encoded within the SO1427-SO1432 extracellular DMSO reductase gene cluster in Shewanella oneidensis MR-1; this accession represents the DmsA subunit rather than the full multi-subunit complex.</p>
+                  <ul>
+
+                    <li>
+                      <a href="https://doi.org/10.1073/pnas.0505959103" rel="nofollow noreferrer"><code>DOI:10.1073/pnas.0505959103</code></a>
+                      <span class="evidence-snippet">one (SO1427-SO1432) is required for anaerobic respiration of DMSO</span>
+                      <span class="meta">Gralnick et al. show that the Shewanella oneidensis MR-1 SO1427-SO1432 gene cluster encoding DmsEFAB is required for anaerobic respiration of DMSO.</span>
+                    </li>
+
+                  </ul>
+                </td>
+              </tr>
+
+              <tr>
+                <td>extracellular DMSO reductase DmsEFAB</td>
+                <td>
+
+                  <a href="https://www.uniprot.org/uniprotkb/Q8EH02/entry" rel="nofollow noreferrer"><code>UniProtKB:Q8EH02</code></a>
+                  <br>Extracellular dimethyl sulfoxide/manganese oxide reductase ferredoxin subunit DmsB <span class="meta">(dmsB)</span>
+                </td>
+                <td>
+
+                  <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=211586" rel="nofollow noreferrer">Shewanella oneidensis MR-1</a>
+                  <br><code>NCBITaxon:211586</code>
+                </td>
+                <td>
+                  <code>UNREVIEWED</code><br>
+                  <span class="meta">retrieved 2026-10-23 · entry v136 · sequence v1</span>
+                </td>
+                <td>
+                  <p>DmsB (SO_1430) is the iron-sulfur ferredoxin subunit encoded within the SO1427-SO1432 extracellular DMSO reductase gene cluster in Shewanella oneidensis MR-1; this accession represents the DmsB subunit rather than the full multi-subunit complex.</p>
+                  <ul>
+
+                    <li>
+                      <a href="https://doi.org/10.1073/pnas.0505959103" rel="nofollow noreferrer"><code>DOI:10.1073/pnas.0505959103</code></a>
+                      <span class="evidence-snippet">one (SO1427-SO1432) is required for anaerobic respiration of DMSO</span>
+                      <span class="meta">Gralnick et al. show that the Shewanella oneidensis MR-1 SO1427-SO1432 gene cluster encoding DmsEFAB is required for anaerobic respiration of DMSO.</span>
+                    </li>
+
+                  </ul>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
 
     </div>
 
@@ -363,7 +462,7 @@
         <p class="discussion-prompt">Add strain-matched UniProtKB protein_examples for the Shewanella oneidensis MR-1 SO1427-SO1432 (DmsEFABGH) extracellular DMSO reductase complex so dmso_respiration_reductase_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.</p>
         <p class="meta">
           <span class="badge">CURATION TODO</span>
-          <span class="badge">OPEN</span>
+          <span class="badge">RESOLVED</span>
           <code>dimethyl-sulfoxide-respiration-protein-example-gap</code>
           · raised by claude
           · 2026-10-23
@@ -394,6 +493,8 @@
 
 
 
+        <p class="meta"><em>Resolution:</em> Promoted dmso_respiration_reductase_sketch to MECHANISTIC by adding InterPro:IPR011888-grounded GENE_OR_PROTEIN node dmso_respiration_dms_complex with Shewanella oneidensis MR-1 (NCBITaxon:211586; UP000008186) protein_examples UniProtKB:Q8EH03 (DmsA) and UniProtKB:Q8EH02 (DmsB) backed by DOI:10.1073/pnas.0505959103.</p>
+
 
 
 
@@ -416,6 +517,12 @@
           <time>2026-10-23T09:40:48Z</time> ·
           <strong>CURATE_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added NONMECHANISTIC causal_graphs entry (dmso_respiration_reductase_sketch) and OPEN CURATION_TODO discussion (dimethyl-sulfoxide-respiration-protein-example-gap) anchored on existing verbatim record evidence snippets.</p>
+        </li>
+
+        <li>
+          <time>2026-10-23T11:45:00Z</time> ·
+          <strong>CURATE_PROTEIN_TAXON_EXAMPLE</strong> · claude
+          <p class="changes">Promoted dmso_respiration_reductase_sketch to MECHANISTIC; added InterPro:IPR011888-grounded GENE_OR_PROTEIN node dmso_respiration_dms_complex with Shewanella oneidensis MR-1 (NCBITaxon:211586; UP000008186) protein_examples UniProtKB:Q8EH03 (DmsA) and UniProtKB:Q8EH02 (DmsB) backed by DOI:10.1073/pnas.0505959103; resolved dimethyl-sulfoxide-respiration-protein-example-gap.</p>
         </li>
 
       </ol>
@@ -799,7 +906,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed metabolic pathway sketch linking dimethyl sulfoxide terminal electron acceptance and DMSO reductase activity to dimethyl sulfoxide respiration.", "edges": [{"description": "Dimethyl sulfoxide serves as a terminal electron acceptor in anaerobic respiration.", "evidence": [{"notes": "Rosenbaum et al. demonstrate that Moorella thermoacetica uses dimethyl sulfoxide as a terminal electron acceptor.", "reference": "DOI:10.1111/1462-2920.15971", "snippet": "M. thermoacetica can also use dimethyl sulfoxide as terminal electron acceptor"}], "id": "edge-1", "is_orphan": false, "predicate": "has electron acceptor", "predicate_id": "METPO:2007702", "source": "dmso_respiration_trait", "target": "dmso_respiration_dmso"}, {"description": "Membrane-associated DMSO reductase activity confers dimethyl sulfoxide respiration.", "evidence": [{"notes": "Rosenbaum et al. demonstrate membrane-associated DMSO reductase activity during anaerobic growth on DMSO.", "reference": "DOI:10.1111/1462-2920.15971", "snippet": "Membranes showed a DMSO reductase activity"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "dmso_respiration_reductase_activity", "target": "dmso_respiration_trait"}, {"description": "The SO1427-SO1432 gene cluster mediates extracellular anaerobic respiration of DMSO.", "evidence": [{"notes": "Gralnick et al. show that the SO1427-SO1432 gene cluster is required for anaerobic respiration of DMSO in Shewanella oneidensis.", "reference": "DOI:10.1073/pnas.0505959103", "snippet": "one (SO1427-SO1432) is required for anaerobic respiration of DMSO"}], "id": "edge-3", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "dmso_respiration_extracellular_process", "target": "dmso_respiration_trait"}], "evidence_rows": [{"description": "Dimethyl sulfoxide serves as a terminal electron acceptor in anaerobic respiration.", "edge_id": "edge-1", "evidence": [{"notes": "Rosenbaum et al. demonstrate that Moorella thermoacetica uses dimethyl sulfoxide as a terminal electron acceptor.", "reference": "DOI:10.1111/1462-2920.15971", "snippet": "M. thermoacetica can also use dimethyl sulfoxide as terminal electron acceptor"}], "predicate": "has electron acceptor", "predicate_id": "METPO:2007702", "source": "dimethyl sulfoxide respiration", "source_grounding": "traitmech:000201", "target": "dimethyl sulfoxide", "target_grounding": "CHEBI:28262"}, {"description": "Membrane-associated DMSO reductase activity confers dimethyl sulfoxide respiration.", "edge_id": "edge-2", "evidence": [{"notes": "Rosenbaum et al. demonstrate membrane-associated DMSO reductase activity during anaerobic growth on DMSO.", "reference": "DOI:10.1111/1462-2920.15971", "snippet": "Membranes showed a DMSO reductase activity"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "dimethyl-sulfoxide reductase activity", "source_grounding": "GO:0009388", "target": "dimethyl sulfoxide respiration", "target_grounding": "traitmech:000201"}, {"description": "The SO1427-SO1432 gene cluster mediates extracellular anaerobic respiration of DMSO.", "edge_id": "edge-3", "evidence": [{"notes": "Gralnick et al. show that the SO1427-SO1432 gene cluster is required for anaerobic respiration of DMSO in Shewanella oneidensis.", "reference": "DOI:10.1073/pnas.0505959103", "snippet": "one (SO1427-SO1432) is required for anaerobic respiration of DMSO"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "anaerobic respiration", "source_grounding": "GO:0019645", "target": "dimethyl sulfoxide respiration", "target_grounding": "traitmech:000201"}], "graph_id": "dmso_respiration_reductase_sketch", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Dimethyl sulfoxide serving as a terminal respiratory electron acceptor.", "grounding": "CHEBI:28262", "id": "dmso_respiration_dmso", "is_orphan": false, "label": "dimethyl sulfoxide", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Extracellular anaerobic respiratory process encoded by the SO1427-SO1432 gene cluster.", "grounding": "GO:0019645", "id": "dmso_respiration_extracellular_process", "is_orphan": false, "label": "anaerobic respiration", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#cffafe", "description": "Membrane-associated or cell-surface DMSO reductase activity catalyzing respiratory DMSO reduction.", "grounding": "GO:0009388", "id": "dmso_respiration_reductase_activity", "is_orphan": false, "label": "dimethyl-sulfoxide reductase activity", "node_type": "MOLECULAR_FUNCTION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Anaerobic respiration using dimethyl sulfoxide (DMSO) as a terminal electron acceptor.", "grounding": "traitmech:000201", "id": "dmso_respiration_trait", "is_orphan": false, "label": "dimethyl sulfoxide respiration", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "Pathway-and-activity sketch backed by DOI:10.1073/pnas.0505959103 and DOI:10.1111/1462-2920.15971; strain-matched UniProtKB protein examples for the Shewanella oneidensis MR-1 SO1427-SO1432 (DmsEFABGH) extracellular DMSO reductase subunits remain to be curated.", "scope_status": "NONMECHANISTIC", "title": "Membrane and extracellular DMSO reductase respiratory pathway"}];
+  var graphs = [{"description": "Evidence-backed metabolic pathway sketch linking dimethyl sulfoxide terminal electron acceptance and DMSO reductase activity to dimethyl sulfoxide respiration.", "edges": [{"description": "Dimethyl sulfoxide serves as a terminal electron acceptor in anaerobic respiration.", "evidence": [{"notes": "Rosenbaum et al. demonstrate that Moorella thermoacetica uses dimethyl sulfoxide as a terminal electron acceptor.", "reference": "DOI:10.1111/1462-2920.15971", "snippet": "M. thermoacetica can also use dimethyl sulfoxide as terminal electron acceptor"}], "id": "edge-1", "is_orphan": false, "predicate": "has electron acceptor", "predicate_id": "METPO:2007702", "source": "dmso_respiration_trait", "target": "dmso_respiration_dmso"}, {"description": "Membrane-associated DMSO reductase activity confers dimethyl sulfoxide respiration.", "evidence": [{"notes": "Rosenbaum et al. demonstrate membrane-associated DMSO reductase activity during anaerobic growth on DMSO.", "reference": "DOI:10.1111/1462-2920.15971", "snippet": "Membranes showed a DMSO reductase activity"}], "id": "edge-2", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "dmso_respiration_reductase_activity", "target": "dmso_respiration_trait"}, {"description": "The SO1427-SO1432 gene cluster mediates extracellular anaerobic respiration of DMSO.", "evidence": [{"notes": "Gralnick et al. show that the SO1427-SO1432 gene cluster is required for anaerobic respiration of DMSO in Shewanella oneidensis.", "reference": "DOI:10.1073/pnas.0505959103", "snippet": "one (SO1427-SO1432) is required for anaerobic respiration of DMSO"}], "id": "edge-3", "is_orphan": false, "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "dmso_respiration_extracellular_process", "target": "dmso_respiration_trait"}, {"description": "The extracellular DmsEFAB DMSO reductase complex enables dimethyl-sulfoxide reductase activity.", "evidence": [{"notes": "Gralnick et al. identify the Shewanella oneidensis MR-1 gene clusters encoding the DMSO reductase subunits.", "reference": "DOI:10.1073/pnas.0505959103", "snippet": "Here, we identify two gene clusters in Shewanella oneidensis strain MR-1 that each contain homologs of genes required for metal reduction and genes that are predicted to encode dimethyl sulfoxide (DMSO) reductase subunits."}], "id": "edge-4", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "dmso_respiration_dms_complex", "target": "dmso_respiration_reductase_activity"}], "evidence_rows": [{"description": "Dimethyl sulfoxide serves as a terminal electron acceptor in anaerobic respiration.", "edge_id": "edge-1", "evidence": [{"notes": "Rosenbaum et al. demonstrate that Moorella thermoacetica uses dimethyl sulfoxide as a terminal electron acceptor.", "reference": "DOI:10.1111/1462-2920.15971", "snippet": "M. thermoacetica can also use dimethyl sulfoxide as terminal electron acceptor"}], "predicate": "has electron acceptor", "predicate_id": "METPO:2007702", "source": "dimethyl sulfoxide respiration", "source_grounding": "traitmech:000201", "target": "dimethyl sulfoxide", "target_grounding": "CHEBI:28262"}, {"description": "Membrane-associated DMSO reductase activity confers dimethyl sulfoxide respiration.", "edge_id": "edge-2", "evidence": [{"notes": "Rosenbaum et al. demonstrate membrane-associated DMSO reductase activity during anaerobic growth on DMSO.", "reference": "DOI:10.1111/1462-2920.15971", "snippet": "Membranes showed a DMSO reductase activity"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "dimethyl-sulfoxide reductase activity", "source_grounding": "GO:0009388", "target": "dimethyl sulfoxide respiration", "target_grounding": "traitmech:000201"}, {"description": "The SO1427-SO1432 gene cluster mediates extracellular anaerobic respiration of DMSO.", "edge_id": "edge-3", "evidence": [{"notes": "Gralnick et al. show that the SO1427-SO1432 gene cluster is required for anaerobic respiration of DMSO in Shewanella oneidensis.", "reference": "DOI:10.1073/pnas.0505959103", "snippet": "one (SO1427-SO1432) is required for anaerobic respiration of DMSO"}], "predicate": "contributes to", "predicate_id": "RO:0002326", "source": "anaerobic respiration", "source_grounding": "GO:0019645", "target": "dimethyl sulfoxide respiration", "target_grounding": "traitmech:000201"}, {"description": "The extracellular DmsEFAB DMSO reductase complex enables dimethyl-sulfoxide reductase activity.", "edge_id": "edge-4", "evidence": [{"notes": "Gralnick et al. identify the Shewanella oneidensis MR-1 gene clusters encoding the DMSO reductase subunits.", "reference": "DOI:10.1073/pnas.0505959103", "snippet": "Here, we identify two gene clusters in Shewanella oneidensis strain MR-1 that each contain homologs of genes required for metal reduction and genes that are predicted to encode dimethyl sulfoxide (DMSO) reductase subunits."}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "extracellular DMSO reductase DmsEFAB", "source_grounding": "InterPro:IPR011888", "target": "dimethyl-sulfoxide reductase activity", "target_grounding": "GO:0009388"}], "graph_id": "dmso_respiration_reductase_sketch", "issues": [], "nodes": [{"color": "#f3e8ff", "description": "Extracellular dimethyl sulfoxide reductase complex encoded within the SO1427-SO1432 gene cluster.", "grounding": "InterPro:IPR011888", "id": "dmso_respiration_dms_complex", "is_orphan": false, "label": "extracellular DMSO reductase DmsEFAB", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "UNREVIEWED", "entry_version": 148, "evidence": [{"notes": "Gralnick et al. show that the Shewanella oneidensis MR-1 SO1427-SO1432 gene cluster encoding DmsEFAB is required for anaerobic respiration of DMSO.", "reference": "DOI:10.1073/pnas.0505959103", "snippet": "one (SO1427-SO1432) is required for anaerobic respiration of DMSO"}], "gene_symbol": "dmsA", "protein_label": "Extracellular dimethyl sulfoxide/manganese oxide reductase molybdopterin-binding subunit DmsA", "proteome_id": "UP000008186", "retrieved_on": "2026-10-23", "role": "DmsA (SO_1429) is the catalytic molybdopterin-binding subunit encoded within the SO1427-SO1432 extracellular DMSO reductase gene cluster in Shewanella oneidensis MR-1; this accession represents the DmsA subunit rather than the full multi-subunit complex.", "sequence_version": 1, "taxon_id": "NCBITaxon:211586", "taxon_label": "Shewanella oneidensis MR-1", "uniprot_id": "UniProtKB:Q8EH03"}, {"entry_status": "UNREVIEWED", "entry_version": 136, "evidence": [{"notes": "Gralnick et al. show that the Shewanella oneidensis MR-1 SO1427-SO1432 gene cluster encoding DmsEFAB is required for anaerobic respiration of DMSO.", "reference": "DOI:10.1073/pnas.0505959103", "snippet": "one (SO1427-SO1432) is required for anaerobic respiration of DMSO"}], "gene_symbol": "dmsB", "protein_label": "Extracellular dimethyl sulfoxide/manganese oxide reductase ferredoxin subunit DmsB", "proteome_id": "UP000008186", "retrieved_on": "2026-10-23", "role": "DmsB (SO_1430) is the iron-sulfur ferredoxin subunit encoded within the SO1427-SO1432 extracellular DMSO reductase gene cluster in Shewanella oneidensis MR-1; this accession represents the DmsB subunit rather than the full multi-subunit complex.", "sequence_version": 1, "taxon_id": "NCBITaxon:211586", "taxon_label": "Shewanella oneidensis MR-1", "uniprot_id": "UniProtKB:Q8EH02"}], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Dimethyl sulfoxide serving as a terminal respiratory electron acceptor.", "grounding": "CHEBI:28262", "id": "dmso_respiration_dmso", "is_orphan": false, "label": "dimethyl sulfoxide", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Extracellular anaerobic respiratory process encoded by the SO1427-SO1432 gene cluster.", "grounding": "GO:0019645", "id": "dmso_respiration_extracellular_process", "is_orphan": false, "label": "anaerobic respiration", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#cffafe", "description": "Membrane-associated or cell-surface DMSO reductase activity catalyzing respiratory DMSO reduction.", "grounding": "GO:0009388", "id": "dmso_respiration_reductase_activity", "is_orphan": false, "label": "dimethyl-sulfoxide reductase activity", "node_type": "MOLECULAR_FUNCTION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Anaerobic respiration using dimethyl sulfoxide (DMSO) as a terminal electron acceptor.", "grounding": "traitmech:000201", "id": "dmso_respiration_trait", "is_orphan": false, "label": "dimethyl sulfoxide respiration", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "UNREVIEWED", "entry_version": 148, "evidence": [{"notes": "Gralnick et al. show that the Shewanella oneidensis MR-1 SO1427-SO1432 gene cluster encoding DmsEFAB is required for anaerobic respiration of DMSO.", "reference": "DOI:10.1073/pnas.0505959103", "snippet": "one (SO1427-SO1432) is required for anaerobic respiration of DMSO"}], "gene_symbol": "dmsA", "node_id": "dmso_respiration_dms_complex", "node_label": "extracellular DMSO reductase DmsEFAB", "protein_label": "Extracellular dimethyl sulfoxide/manganese oxide reductase molybdopterin-binding subunit DmsA", "proteome_id": "UP000008186", "retrieved_on": "2026-10-23", "role": "DmsA (SO_1429) is the catalytic molybdopterin-binding subunit encoded within the SO1427-SO1432 extracellular DMSO reductase gene cluster in Shewanella oneidensis MR-1; this accession represents the DmsA subunit rather than the full multi-subunit complex.", "sequence_version": 1, "taxon_id": "NCBITaxon:211586", "taxon_label": "Shewanella oneidensis MR-1", "uniprot_id": "UniProtKB:Q8EH03"}, {"entry_status": "UNREVIEWED", "entry_version": 136, "evidence": [{"notes": "Gralnick et al. show that the Shewanella oneidensis MR-1 SO1427-SO1432 gene cluster encoding DmsEFAB is required for anaerobic respiration of DMSO.", "reference": "DOI:10.1073/pnas.0505959103", "snippet": "one (SO1427-SO1432) is required for anaerobic respiration of DMSO"}], "gene_symbol": "dmsB", "node_id": "dmso_respiration_dms_complex", "node_label": "extracellular DMSO reductase DmsEFAB", "protein_label": "Extracellular dimethyl sulfoxide/manganese oxide reductase ferredoxin subunit DmsB", "proteome_id": "UP000008186", "retrieved_on": "2026-10-23", "role": "DmsB (SO_1430) is the iron-sulfur ferredoxin subunit encoded within the SO1427-SO1432 extracellular DMSO reductase gene cluster in Shewanella oneidensis MR-1; this accession represents the DmsB subunit rather than the full multi-subunit complex.", "sequence_version": 1, "taxon_id": "NCBITaxon:211586", "taxon_label": "Shewanella oneidensis MR-1", "uniprot_id": "UniProtKB:Q8EH02"}], "scope_notes": "Mechanistic graph backed by DOI:10.1073/pnas.0505959103 and DOI:10.1111/1462-2920.15971; exemplified on dmso_respiration_dms_complex with Shewanella oneidensis MR-1 (NCBITaxon:211586; UP000008186) extracellular DMSO reductase subunits DmsA (UniProtKB:Q8EH03) and DmsB (UniProtKB:Q8EH02).", "scope_status": "MECHANISTIC", "title": "Membrane and extracellular DMSO reductase respiratory pathway"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -829,7 +936,7 @@ function renderPathograph(containerId, data) {
       third-party source terms apply
     </div>
     <div>
-      Record as of 2026-10-23 09:40 UTC
+      Record as of 2026-10-23 11:45 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
       · embedding coverage 100.0%

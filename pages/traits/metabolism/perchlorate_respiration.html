@@ -49,7 +49,7 @@
 
 
   <section class="trait-evidence" id="trait-evidence" aria-labelledby="trait-evidence-heading">
-    <h2 id="trait-evidence-heading">Trait evidence <span class="meta">(2)</span></h2>
+    <h2 id="trait-evidence-heading">Trait evidence <span class="meta">(3)</span></h2>
     <ul>
 
       <li>
@@ -64,6 +64,12 @@
         <p class="meta">Melnyk et al. support the PcrABCD and Cld gene modules as the two pathway-specific enzyme systems for perchlorate reduction to chloride.</p>
       </li>
 
+      <li>
+        <a href="https://doi.org/10.1128/jb.187.15.5090-5096.2005" rel="nofollow noreferrer"><code>DOI:10.1128/jb.187.15.5090-5096.2005</code></a>
+        <blockquote>Deletion of the pcrA gene in Dechloromonas aromatica abolished growth in both perchlorate and chlorate but not growth in nitrate, indicating that the pcrABCD genes play a functional role in perchlorate reduction separate from nitrate reduction.</blockquote>
+        <p class="meta">Bender et al. demonstrate that the pcrABCD perchlorate reductase genes are required for anaerobic growth on perchlorate in Dechloromonas aromatica RCB.</p>
+      </li>
+
     </ul>
   </section>
 
@@ -76,7 +82,7 @@
       <h2>Anaerobic respiratory perchlorate reduction to chloride</h2>
       <p class="meta">Evidence-backed metabolic pathway sketch linking anaerobic respiratory perchlorate reduction and chloride formation to perchlorate respiration.</p>
 
-      <p class="graph-scope"><code>NONMECHANISTIC</code> · Pathway sketch backed by Melnyk et al. (DOI:10.1186/s12864-015-2011-5 and DOI:10.1128/AEM.05758-11); canonical_examples and strain-matched UniProtKB protein examples for perchlorate reductase (PcrABCD) and chlorite dismutase (Cld) (e.g., in candidate exemplar Dechloromonas aromatica RCB) remain to be curated.</p>
+      <p class="graph-scope"><code>MECHANISTIC</code> · Mechanistic graph backed by DOI:10.1186/s12864-015-2011-5, DOI:10.1128/AEM.05758-11, and DOI:10.1128/jb.187.15.5090-5096.2005; exemplified on perchlorate_respiration_pcr_reductase with Dechloromonas aromatica RCB (NCBITaxon:159087) perchlorate reductase subunit alpha PcrA (UniProtKB:Q47CW6).</p>
 
 
       <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
@@ -132,10 +138,73 @@
             </ul>
           </li>
 
+          <li id="pathograph-1-edge-3">
+            <strong>perchlorate reductase PcrABCD</strong>
+            <a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR017840/" rel="nofollow noreferrer"><code>InterPro:IPR017840</code></a>
+            <span class="edge-predicate">enables</span>
+            <strong>anaerobic respiration</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0019645" rel="nofollow noreferrer"><code>GO:0019645</code></a>
+            <a href="http://purl.obolibrary.org/obo/RO_0002327" rel="nofollow noreferrer"><code>RO:0002327</code></a>
+            <p>The pcrABCD-encoded perchlorate reductase complex enables anaerobic respiratory perchlorate reduction.</p>
+            <ul>
+
+              <li>
+                <a href="https://doi.org/10.1128/jb.187.15.5090-5096.2005" rel="nofollow noreferrer"><code>DOI:10.1128/jb.187.15.5090-5096.2005</code></a>
+                <span class="evidence-snippet">Deletion of the pcrA gene in Dechloromonas aromatica abolished growth in both perchlorate and chlorate but not growth in nitrate, indicating that the pcrABCD genes play a functional role in perchlorate reduction separate from nitrate reduction.</span>
+                <span class="meta">Bender et al. demonstrate that pcrABCD is required for perchlorate reduction in Dechloromonas aromatica RCB.</span>
+              </li>
+
+            </ul>
+          </li>
+
         </ul>
       </div>
 
 
+
+      <div class="protein-examples">
+        <h3>Protein and taxon examples</h3>
+        <div class="protein-example-table-wrap" role="region" tabindex="0" aria-label="Anaerobic respiratory perchlorate reduction to chloride: protein and taxon examples">
+          <table class="protein-example-table">
+            <thead>
+              <tr><th>Graph node</th><th>Protein</th><th>Taxon</th><th>UniProt status</th><th>Role and evidence</th></tr>
+            </thead>
+            <tbody>
+
+              <tr>
+                <td>perchlorate reductase PcrABCD</td>
+                <td>
+
+                  <a href="https://www.uniprot.org/uniprotkb/Q47CW6/entry" rel="nofollow noreferrer"><code>UniProtKB:Q47CW6</code></a>
+                  <br>Perchlorate reductase subunit alpha <span class="meta">(pcrA)</span>
+                </td>
+                <td>
+
+                  <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=159087" rel="nofollow noreferrer">Dechloromonas aromatica RCB</a>
+                  <br><code>NCBITaxon:159087</code>
+                </td>
+                <td>
+                  <code>REVIEWED</code><br>
+                  <span class="meta">retrieved 2026-10-23 · entry v106 · sequence v1</span>
+                </td>
+                <td>
+                  <p>PcrA is the catalytic molybdopterin-containing alpha subunit of perchlorate reductase required for anaerobic growth on perchlorate in Dechloromonas aromatica RCB; this accession represents the PcrA subunit of the PcrABCD complex.</p>
+                  <ul>
+
+                    <li>
+                      <a href="https://doi.org/10.1128/jb.187.15.5090-5096.2005" rel="nofollow noreferrer"><code>DOI:10.1128/jb.187.15.5090-5096.2005</code></a>
+                      <span class="evidence-snippet">Deletion of the pcrA gene in Dechloromonas aromatica abolished growth in both perchlorate and chlorate but not growth in nitrate, indicating that the pcrABCD genes play a functional role in perchlorate reduction separate from nitrate reduction.</span>
+                      <span class="meta">Bender et al. show that deleting pcrA in Dechloromonas aromatica RCB abolishes anaerobic growth on perchlorate.</span>
+                    </li>
+
+                  </ul>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
 
     </div>
 
@@ -264,6 +333,31 @@
 
 
 
+    <div class="card" id="canonical-examples">
+      <h2>Canonical examples
+        <span class="meta">(1)</span></h2>
+      <p class="meta">Organisms cited as exemplars of this trait. Taxon ids are
+        NCBITaxon and link out to the NCBI record.</p>
+      <ul class="canonical-examples">
+
+        <li>
+          <em>Dechloromonas aromatica RCB</em>
+
+
+
+          <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=159087"
+             rel="nofollow noreferrer"><code>NCBITaxon:159087</code></a>
+
+
+
+          <a href="https://doi.org/10.1128/jb.187.15.5090-5096.2005" rel="nofollow noreferrer"><code>DOI:10.1128/jb.187.15.5090-5096.2005</code></a>
+
+          <span class="meta">Bender et al. characterized the pcrABCD perchlorate reductase genes in Dechloromonas aromatica RCB and showed that pcrA deletion abolishes anaerobic growth on perchlorate and chlorate.</span>
+        </li>
+
+      </ul>
+    </div>
+
 
 
     <div class="card" id="discussions">
@@ -307,7 +401,7 @@
         <p class="discussion-prompt">Add a strain-matched canonical_examples entry and UniProtKB protein_examples for perchlorate reductase (PcrABCD) and chlorite dismutase (Cld) (e.g., in candidate exemplar Dechloromonas aromatica RCB) so perchlorate_respiration_reduction_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.</p>
         <p class="meta">
           <span class="badge">CURATION TODO</span>
-          <span class="badge">OPEN</span>
+          <span class="badge">RESOLVED</span>
           <code>perchlorate-respiration-protein-example-gap</code>
           · raised by claude
           · 2026-10-23
@@ -338,6 +432,8 @@
 
 
 
+        <p class="meta"><em>Resolution:</em> Added canonical_examples entry Dechloromonas aromatica RCB (NCBITaxon:159087) and promoted perchlorate_respiration_reduction_sketch to MECHANISTIC by adding InterPro:IPR017840-grounded GENE_OR_PROTEIN node perchlorate_respiration_pcr_reductase with reviewed UniProtKB:Q47CW6 (PcrA) backed by DOI:10.1128/jb.187.15.5090-5096.2005.</p>
+
 
 
 
@@ -360,6 +456,12 @@
           <time>2026-10-23T09:40:48Z</time> ·
           <strong>CURATE_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added NONMECHANISTIC causal_graphs entry (perchlorate_respiration_reduction_sketch) and OPEN CURATION_TODO discussion (perchlorate-respiration-protein-example-gap) anchored on existing verbatim record evidence snippets.</p>
+        </li>
+
+        <li>
+          <time>2026-10-23T11:45:00Z</time> ·
+          <strong>CURATE_PROTEIN_TAXON_EXAMPLE</strong> · claude
+          <p class="changes">Added Dechloromonas aromatica RCB (NCBITaxon:159087; DOI:10.1128/jb.187.15.5090-5096.2005) canonical example; promoted perchlorate_respiration_reduction_sketch to MECHANISTIC with InterPro:IPR017840-grounded GENE_OR_PROTEIN node perchlorate_respiration_pcr_reductase and reviewed UniProtKB:Q47CW6 (PcrA); resolved perchlorate-respiration-protein-example-gap.</p>
         </li>
 
       </ol>
@@ -743,7 +845,7 @@ function renderPathograph(containerId, data) {
 }
 
 (function() {
-  var graphs = [{"description": "Evidence-backed metabolic pathway sketch linking anaerobic respiratory perchlorate reduction and chloride formation to perchlorate respiration.", "edges": [{"description": "Perchlorate reductase and chlorite dismutase encoded by pcrABCD and cld confer perchlorate respiration.", "evidence": [{"notes": "Melnyk et al. identify perchlorate reductase and chlorite dismutase, encoded by the pcrABCD and cld genes, as the core enzymes of perchlorate respiration.", "reference": "DOI:10.1128/AEM.05758-11", "snippet": "perchlorate reductase and chlorite dismutase, which are encoded by the pcrABCD and cld genes"}], "id": "edge-1", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "perchlorate_respiration_perchlorate_reduction", "target": "perchlorate_respiration_trait"}, {"description": "Periplasmic reduction of perchlorate to chlorite followed by chlorite dismutation yields chloride and molecular oxygen.", "evidence": [{"notes": "Melnyk et al. describe periplasmic reduction of perchlorate to chlorite by perchlorate reductase followed by dismutation of chlorite to chloride and molecular oxygen.", "reference": "DOI:10.1186/s12864-015-2011-5", "snippet": "reduction to chlorite (ClO2-) in the bacterial periplasm by perchlorate reductase, and the dismutation of chlorite to chloride and molecular oxygen"}], "id": "edge-2", "is_orphan": false, "predicate": "has output", "predicate_id": "RO:0002234", "source": "perchlorate_respiration_perchlorate_reduction", "target": "perchlorate_respiration_chloride"}], "evidence_rows": [{"description": "Perchlorate reductase and chlorite dismutase encoded by pcrABCD and cld confer perchlorate respiration.", "edge_id": "edge-1", "evidence": [{"notes": "Melnyk et al. identify perchlorate reductase and chlorite dismutase, encoded by the pcrABCD and cld genes, as the core enzymes of perchlorate respiration.", "reference": "DOI:10.1128/AEM.05758-11", "snippet": "perchlorate reductase and chlorite dismutase, which are encoded by the pcrABCD and cld genes"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "anaerobic respiration", "source_grounding": "GO:0019645", "target": "perchlorate respiration", "target_grounding": "traitmech:000197"}, {"description": "Periplasmic reduction of perchlorate to chlorite followed by chlorite dismutation yields chloride and molecular oxygen.", "edge_id": "edge-2", "evidence": [{"notes": "Melnyk et al. describe periplasmic reduction of perchlorate to chlorite by perchlorate reductase followed by dismutation of chlorite to chloride and molecular oxygen.", "reference": "DOI:10.1186/s12864-015-2011-5", "snippet": "reduction to chlorite (ClO2-) in the bacterial periplasm by perchlorate reductase, and the dismutation of chlorite to chloride and molecular oxygen"}], "predicate": "has output", "predicate_id": "RO:0002234", "source": "anaerobic respiration", "source_grounding": "GO:0019645", "target": "chloride", "target_grounding": "CHEBI:17996"}], "graph_id": "perchlorate_respiration_reduction_sketch", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Chloride anion produced as the terminal product of respiratory perchlorate reduction and chlorite dismutation.", "grounding": "CHEBI:17996", "id": "perchlorate_respiration_chloride", "is_orphan": false, "label": "chloride", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Anaerobic respiratory reduction of perchlorate by perchlorate reductase (PcrABCD) and chlorite dismutase (Cld).", "grounding": "GO:0019645", "id": "perchlorate_respiration_perchlorate_reduction", "is_orphan": false, "label": "anaerobic respiration", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Anaerobic respiration using perchlorate as a terminal electron acceptor.", "grounding": "traitmech:000197", "id": "perchlorate_respiration_trait", "is_orphan": false, "label": "perchlorate respiration", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "Pathway sketch backed by Melnyk et al. (DOI:10.1186/s12864-015-2011-5 and DOI:10.1128/AEM.05758-11); canonical_examples and strain-matched UniProtKB protein examples for perchlorate reductase (PcrABCD) and chlorite dismutase (Cld) (e.g., in candidate exemplar Dechloromonas aromatica RCB) remain to be curated.", "scope_status": "NONMECHANISTIC", "title": "Anaerobic respiratory perchlorate reduction to chloride"}];
+  var graphs = [{"description": "Evidence-backed metabolic pathway sketch linking anaerobic respiratory perchlorate reduction and chloride formation to perchlorate respiration.", "edges": [{"description": "Perchlorate reductase and chlorite dismutase encoded by pcrABCD and cld confer perchlorate respiration.", "evidence": [{"notes": "Melnyk et al. identify perchlorate reductase and chlorite dismutase, encoded by the pcrABCD and cld genes, as the core enzymes of perchlorate respiration.", "reference": "DOI:10.1128/AEM.05758-11", "snippet": "perchlorate reductase and chlorite dismutase, which are encoded by the pcrABCD and cld genes"}], "id": "edge-1", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "perchlorate_respiration_perchlorate_reduction", "target": "perchlorate_respiration_trait"}, {"description": "Periplasmic reduction of perchlorate to chlorite followed by chlorite dismutation yields chloride and molecular oxygen.", "evidence": [{"notes": "Melnyk et al. describe periplasmic reduction of perchlorate to chlorite by perchlorate reductase followed by dismutation of chlorite to chloride and molecular oxygen.", "reference": "DOI:10.1186/s12864-015-2011-5", "snippet": "reduction to chlorite (ClO2-) in the bacterial periplasm by perchlorate reductase, and the dismutation of chlorite to chloride and molecular oxygen"}], "id": "edge-2", "is_orphan": false, "predicate": "has output", "predicate_id": "RO:0002234", "source": "perchlorate_respiration_perchlorate_reduction", "target": "perchlorate_respiration_chloride"}, {"description": "The pcrABCD-encoded perchlorate reductase complex enables anaerobic respiratory perchlorate reduction.", "evidence": [{"notes": "Bender et al. demonstrate that pcrABCD is required for perchlorate reduction in Dechloromonas aromatica RCB.", "reference": "DOI:10.1128/jb.187.15.5090-5096.2005", "snippet": "Deletion of the pcrA gene in Dechloromonas aromatica abolished growth in both perchlorate and chlorate but not growth in nitrate, indicating that the pcrABCD genes play a functional role in perchlorate reduction separate from nitrate reduction."}], "id": "edge-3", "is_orphan": false, "predicate": "enables", "predicate_id": "RO:0002327", "source": "perchlorate_respiration_pcr_reductase", "target": "perchlorate_respiration_perchlorate_reduction"}], "evidence_rows": [{"description": "Perchlorate reductase and chlorite dismutase encoded by pcrABCD and cld confer perchlorate respiration.", "edge_id": "edge-1", "evidence": [{"notes": "Melnyk et al. identify perchlorate reductase and chlorite dismutase, encoded by the pcrABCD and cld genes, as the core enzymes of perchlorate respiration.", "reference": "DOI:10.1128/AEM.05758-11", "snippet": "perchlorate reductase and chlorite dismutase, which are encoded by the pcrABCD and cld genes"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "anaerobic respiration", "source_grounding": "GO:0019645", "target": "perchlorate respiration", "target_grounding": "traitmech:000197"}, {"description": "Periplasmic reduction of perchlorate to chlorite followed by chlorite dismutation yields chloride and molecular oxygen.", "edge_id": "edge-2", "evidence": [{"notes": "Melnyk et al. describe periplasmic reduction of perchlorate to chlorite by perchlorate reductase followed by dismutation of chlorite to chloride and molecular oxygen.", "reference": "DOI:10.1186/s12864-015-2011-5", "snippet": "reduction to chlorite (ClO2-) in the bacterial periplasm by perchlorate reductase, and the dismutation of chlorite to chloride and molecular oxygen"}], "predicate": "has output", "predicate_id": "RO:0002234", "source": "anaerobic respiration", "source_grounding": "GO:0019645", "target": "chloride", "target_grounding": "CHEBI:17996"}, {"description": "The pcrABCD-encoded perchlorate reductase complex enables anaerobic respiratory perchlorate reduction.", "edge_id": "edge-3", "evidence": [{"notes": "Bender et al. demonstrate that pcrABCD is required for perchlorate reduction in Dechloromonas aromatica RCB.", "reference": "DOI:10.1128/jb.187.15.5090-5096.2005", "snippet": "Deletion of the pcrA gene in Dechloromonas aromatica abolished growth in both perchlorate and chlorate but not growth in nitrate, indicating that the pcrABCD genes play a functional role in perchlorate reduction separate from nitrate reduction."}], "predicate": "enables", "predicate_id": "RO:0002327", "source": "perchlorate reductase PcrABCD", "source_grounding": "InterPro:IPR017840", "target": "anaerobic respiration", "target_grounding": "GO:0019645"}], "graph_id": "perchlorate_respiration_reduction_sketch", "issues": [], "nodes": [{"color": "#fef3c7", "description": "Chloride anion produced as the terminal product of respiratory perchlorate reduction and chlorite dismutation.", "grounding": "CHEBI:17996", "id": "perchlorate_respiration_chloride", "is_orphan": false, "label": "chloride", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#f3e8ff", "description": "Periplasmic perchlorate reductase enzyme complex (PcrABCD) required for respiratory perchlorate reduction.", "grounding": "InterPro:IPR017840", "id": "perchlorate_respiration_pcr_reductase", "is_orphan": false, "label": "perchlorate reductase PcrABCD", "node_type": "GENE_OR_PROTEIN", "protein_examples": [{"entry_status": "REVIEWED", "entry_version": 106, "evidence": [{"notes": "Bender et al. show that deleting pcrA in Dechloromonas aromatica RCB abolishes anaerobic growth on perchlorate.", "reference": "DOI:10.1128/jb.187.15.5090-5096.2005", "snippet": "Deletion of the pcrA gene in Dechloromonas aromatica abolished growth in both perchlorate and chlorate but not growth in nitrate, indicating that the pcrABCD genes play a functional role in perchlorate reduction separate from nitrate reduction."}], "gene_symbol": "pcrA", "protein_label": "Perchlorate reductase subunit alpha", "retrieved_on": "2026-10-23", "role": "PcrA is the catalytic molybdopterin-containing alpha subunit of perchlorate reductase required for anaerobic growth on perchlorate in Dechloromonas aromatica RCB; this accession represents the PcrA subunit of the PcrABCD complex.", "sequence_version": 1, "taxon_id": "NCBITaxon:159087", "taxon_label": "Dechloromonas aromatica RCB", "uniprot_id": "UniProtKB:Q47CW6"}], "related_records": [], "xrefs": []}, {"color": "#ecfccb", "description": "Anaerobic respiratory reduction of perchlorate by perchlorate reductase (PcrABCD) and chlorite dismutase (Cld).", "grounding": "GO:0019645", "id": "perchlorate_respiration_perchlorate_reduction", "is_orphan": false, "label": "anaerobic respiration", "node_type": "BIOLOGICAL_PROCESS", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#dbeafe", "description": "Anaerobic respiration using perchlorate as a terminal electron acceptor.", "grounding": "traitmech:000197", "id": "perchlorate_respiration_trait", "is_orphan": false, "label": "perchlorate respiration", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [{"entry_status": "REVIEWED", "entry_version": 106, "evidence": [{"notes": "Bender et al. show that deleting pcrA in Dechloromonas aromatica RCB abolishes anaerobic growth on perchlorate.", "reference": "DOI:10.1128/jb.187.15.5090-5096.2005", "snippet": "Deletion of the pcrA gene in Dechloromonas aromatica abolished growth in both perchlorate and chlorate but not growth in nitrate, indicating that the pcrABCD genes play a functional role in perchlorate reduction separate from nitrate reduction."}], "gene_symbol": "pcrA", "node_id": "perchlorate_respiration_pcr_reductase", "node_label": "perchlorate reductase PcrABCD", "protein_label": "Perchlorate reductase subunit alpha", "retrieved_on": "2026-10-23", "role": "PcrA is the catalytic molybdopterin-containing alpha subunit of perchlorate reductase required for anaerobic growth on perchlorate in Dechloromonas aromatica RCB; this accession represents the PcrA subunit of the PcrABCD complex.", "sequence_version": 1, "taxon_id": "NCBITaxon:159087", "taxon_label": "Dechloromonas aromatica RCB", "uniprot_id": "UniProtKB:Q47CW6"}], "scope_notes": "Mechanistic graph backed by DOI:10.1186/s12864-015-2011-5, DOI:10.1128/AEM.05758-11, and DOI:10.1128/jb.187.15.5090-5096.2005; exemplified on perchlorate_respiration_pcr_reductase with Dechloromonas aromatica RCB (NCBITaxon:159087) perchlorate reductase subunit alpha PcrA (UniProtKB:Q47CW6).", "scope_status": "MECHANISTIC", "title": "Anaerobic respiratory perchlorate reduction to chloride"}];
   graphs.forEach(function(graph, index) {
     renderPathograph("pathograph-" + (index + 1), graph);
   });
@@ -773,7 +875,7 @@ function renderPathograph(containerId, data) {
       third-party source terms apply
     </div>
     <div>
-      Record as of 2026-10-23 09:40 UTC
+      Record as of 2026-10-23 11:45 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
       · embedding coverage 100.0%

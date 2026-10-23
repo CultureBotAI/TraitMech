@@ -27,6 +27,12 @@ evidence:
     on ethanolamine or 1,2-propanediol
   notes: Price-Carter et al. support tetrathionate-dependent anaerobic growth in Salmonella
     enterica serovar Typhimurium LT2.
+- reference: DOI:10.1046/j.1365-2958.1999.01345.x
+  snippet: Sequence analysis suggests that TtrA contains a molybdopterin guanine dinucleotide
+    cofactor and a [4Fe-4S] cluster, that TtrB binds four [4Fe-4S] clusters, and that
+    TtrC is an integral membrane protein containing a quinol oxidation site.
+  notes: Hensel et al. characterize the subunit composition of Salmonella enterica
+    serovar Typhimurium LT2 tetrathionate reductase (TtrA, TtrB, and TtrC).
 canonical_examples:
 - taxon_id: NCBITaxon:99287
   taxon_label: Salmonella enterica subsp. enterica serovar Typhimurium str. LT2
@@ -51,7 +57,7 @@ discussions:
     Typhimurium LT2 tetrathionate reductase subunits (TtrA/TtrB/TtrC) so tetrathionate_respiration_ttr_pathway_sketch
     can be promoted from NONMECHANISTIC to MECHANISTIC.
   kind: CURATION_TODO
-  status: OPEN
+  status: RESOLVED
   attaches_to:
   - causal_graphs#tetrathionate_respiration_ttr_pathway_sketch
   rationale: The record's primary literature (DOI:10.1046/j.1365-2958.1999.01345.x,
@@ -68,6 +74,12 @@ discussions:
     explanation: Existing record-level evidence supports the connected NONMECHANISTIC
       pathway/function graph but does not provide strain-matched UniProtKB protein
       accessions for protein_examples.
+  resolved_date: '2026-10-23'
+  resolution_note: Promoted tetrathionate_respiration_ttr_pathway_sketch to MECHANISTIC
+    by adding InterPro:IPR037946-grounded GENE_OR_PROTEIN node tetrathionate_respiration_ttr_complex
+    with reviewed Salmonella enterica serovar Typhimurium LT2 (NCBITaxon:99287; UP000001014)
+    protein_examples UniProtKB:Q9Z4S6 (TtrA) and UniProtKB:Q7CQM9 (TtrB) backed by
+    DOI:10.1046/j.1365-2958.1999.01345.x.
 curation_history:
 - timestamp: '2026-09-15T02:26:41Z'
   curator: codex
@@ -84,17 +96,27 @@ curation_history:
     and OPEN CURATION_TODO discussion (tetrathionate-respiration-protein-example-gap)
     anchored on existing verbatim record evidence snippets.
   llm_assisted: true
+- timestamp: '2026-10-23T11:45:00Z'
+  curator: claude
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: Promoted tetrathionate_respiration_ttr_pathway_sketch to MECHANISTIC; added
+    InterPro:IPR037946-grounded GENE_OR_PROTEIN node tetrathionate_respiration_ttr_complex
+    with reviewed Salmonella enterica serovar Typhimurium LT2 (NCBITaxon:99287; UP000001014)
+    protein_examples UniProtKB:Q9Z4S6 (TtrA) and UniProtKB:Q7CQM9 (TtrB) backed by
+    DOI:10.1046/j.1365-2958.1999.01345.x; resolved tetrathionate-respiration-protein-example-gap.
+  llm_assisted: true
 causal_graphs:
 - graph_id: tetrathionate_respiration_ttr_pathway_sketch
   title: Tetrathionate reductase catalysis and anaerobic reduction to thiosulfate
   description: Evidence-backed metabolic pathway sketch linking tetrathionate terminal
     electron acceptance, TtrABC tetrathionate reductase activity, and thiosulfate
     production to tetrathionate respiration.
-  scope_status: NONMECHANISTIC
-  scope_notes: Pathway-and-activity sketch backed by DOI:10.1046/j.1365-2958.1999.01345.x
-    and DOI:10.1128/JB.183.8.2463-2475.2001; strain-matched UniProtKB protein examples
-    for Salmonella enterica serovar Typhimurium LT2 tetrathionate reductase subunits
-    TtrA/TtrB/TtrC remain to be curated.
+  scope_status: MECHANISTIC
+  scope_notes: Mechanistic graph backed by DOI:10.1046/j.1365-2958.1999.01345.x and
+    DOI:10.1128/JB.183.8.2463-2475.2001; exemplified on tetrathionate_respiration_ttr_complex
+    with Salmonella enterica subsp. enterica serovar Typhimurium str. LT2 (NCBITaxon:99287;
+    UP000001014) tetrathionate reductase subunits TtrA (UniProtKB:Q9Z4S6) and TtrB
+    (UniProtKB:Q7CQM9).
   nodes:
   - node_id: tetrathionate_respiration_trait
     label: tetrathionate respiration
@@ -119,6 +141,54 @@ causal_graphs:
     node_type: CHEMICAL
     grounding: CHEBI:26977
     description: Thiosulfate produced by respiratory reduction of tetrathionate.
+  - node_id: tetrathionate_respiration_ttr_complex
+    label: tetrathionate reductase TtrABC
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR037946
+    gene_symbols:
+    - ttrA
+    - ttrB
+    - ttrC
+    operon: ttrBCA
+    description: Membrane-bound heterotrimeric tetrathionate reductase complex encoded
+      by ttrA, ttrB, and ttrC.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q9Z4S6
+      protein_label: Tetrathionate reductase subunit A
+      gene_symbol: ttrA
+      taxon_id: NCBITaxon:99287
+      taxon_label: Salmonella enterica subsp. enterica serovar Typhimurium str. LT2
+      entry_status: REVIEWED
+      proteome_id: UP000001014
+      retrieved_on: '2026-10-23'
+      entry_version: 125
+      sequence_version: 1
+      role: TtrA is the catalytic molybdopterin-containing subunit A of the heterotrimeric
+        TtrABC tetrathionate reductase complex in Salmonella enterica serovar Typhimurium
+        LT2; this accession represents the TtrA subunit rather than the full heterotrimer.
+      evidence:
+      - reference: DOI:10.1046/j.1365-2958.1999.01345.x
+        snippet: ttrA, ttrB and ttrC are the tetrathionate reductase structural genes
+        notes: Hensel et al. identify ttrA, ttrB, and ttrC as the structural genes
+          encoding tetrathionate reductase in Salmonella enterica serovar Typhimurium.
+    - uniprot_id: UniProtKB:Q7CQM9
+      protein_label: Tetrathionate reductase subunit B
+      gene_symbol: ttrB
+      taxon_id: NCBITaxon:99287
+      taxon_label: Salmonella enterica subsp. enterica serovar Typhimurium str. LT2
+      entry_status: REVIEWED
+      proteome_id: UP000001014
+      retrieved_on: '2026-10-23'
+      entry_version: 121
+      sequence_version: 1
+      role: TtrB is the iron-sulfur electron-transfer subunit B of the heterotrimeric
+        TtrABC tetrathionate reductase complex in Salmonella enterica serovar Typhimurium
+        LT2; this accession represents the TtrB subunit rather than the full heterotrimer.
+      evidence:
+      - reference: DOI:10.1046/j.1365-2958.1999.01345.x
+        snippet: ttrA, ttrB and ttrC are the tetrathionate reductase structural genes
+        notes: Hensel et al. identify ttrA, ttrB, and ttrC as the structural genes
+          encoding tetrathionate reductase in Salmonella enterica serovar Typhimurium.
   edges:
   - subject: tetrathionate_respiration_trait
     predicate: has electron acceptor
@@ -151,3 +221,17 @@ causal_graphs:
     - reference: DOI:10.1128/JB.183.8.2463-2475.2001
       snippet: Salmonella reduces tetrathionate to thiosulfate
       notes: Price-Carter et al. report that Salmonella reduces tetrathionate to thiosulfate.
+  - subject: tetrathionate_respiration_ttr_complex
+    predicate: enables
+    predicate_id: RO:0002327
+    object: tetrathionate_respiration_ttr_activity
+    description: The heterotrimeric TtrABC tetrathionate reductase complex enables
+      respiratory tetrathionate reductase activity.
+    evidence:
+    - reference: DOI:10.1046/j.1365-2958.1999.01345.x
+      snippet: Sequence analysis suggests that TtrA contains a molybdopterin guanine
+        dinucleotide cofactor and a [4Fe-4S] cluster, that TtrB binds four [4Fe-4S]
+        clusters, and that TtrC is an integral membrane protein containing a quinol
+        oxidation site.
+      notes: Hensel et al. characterize the TtrA, TtrB, and TtrC subunits of the Salmonella
+        enterica serovar Typhimurium tetrathionate reductase complex.

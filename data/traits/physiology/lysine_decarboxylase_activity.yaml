@@ -21,11 +21,21 @@ evidence:
     acid resistance system that consumes one proton and produces the diamine cadaverine.
   notes: Moreau showed that the Escherichia coli inducible CadBA lysine-dependent
     acid resistance system produces cadaverine during phosphate starvation.
+- reference: DOI:10.1128/jb.01306-06
+  snippet: CadA activity was favored in P(i)-starved cells probably because weak organic
+    acids slowly reenter cells fermenting glucose.
+  notes: Moreau demonstrates that inducible lysine decarboxylase CadA activity protects
+    phosphate-starved Escherichia coli K-12 MG1655 cells fermenting glucose.
 canonical_examples:
 - taxon_id: NCBITaxon:562
   taxon_label: Escherichia coli
   note: Moreau reported CadBA lysine-dependent acid resistance activity in phosphate-starved
     Escherichia coli.
+  reference: DOI:10.1128/jb.01306-06
+- taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli K-12
+  note: Moreau characterized inducible CadBA lysine-dependent acid resistance and
+    cadaverine production in phosphate-starved Escherichia coli K-12 strain MG1655.
   reference: DOI:10.1128/jb.01306-06
 discussions:
 - discussion_id: lysine-decarboxylase-activity-xref-gap
@@ -44,7 +54,7 @@ discussions:
     lysine decarboxylase (CadA) and lysine-cadaverine antiporter (CadB) so lysine_decarboxylase_cadba_sketch
     can be promoted from NONMECHANISTIC to MECHANISTIC.
   kind: CURATION_TODO
-  status: OPEN
+  status: RESOLVED
   attaches_to:
   - causal_graphs#lysine_decarboxylase_cadba_sketch
   rationale: The record's primary literature (EC 4.1.1.18, DOI:10.1128/jb.01306-06)
@@ -63,6 +73,11 @@ discussions:
     explanation: Existing record-level evidence supports the connected NONMECHANISTIC
       pathway/function graph but does not provide strain-matched UniProtKB protein
       accessions for protein_examples.
+  resolved_date: '2026-10-23'
+  resolution_note: Added canonical_examples entry Escherichia coli K-12 (NCBITaxon:83333;
+    DOI:10.1128/jb.01306-06) and promoted lysine_decarboxylase_cadba_sketch to MECHANISTIC
+    by adding InterPro:IPR011193-grounded GENE_OR_PROTEIN node lysine_decarboxylase_cada
+    with reviewed protein_examples UniProtKB:P0A9H3 (CadA) and UniProtKB:P0AAE8 (CadB).
 curation_history:
 - timestamp: '2026-09-12T01:35:50Z'
   curator: codex
@@ -78,16 +93,26 @@ curation_history:
     and OPEN CURATION_TODO discussion (lysine-decarboxylase-activity-protein-example-gap)
     anchored on existing verbatim record evidence snippets.
   llm_assisted: true
+- timestamp: '2026-10-23T11:45:00Z'
+  curator: claude
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: Added Escherichia coli K-12 (NCBITaxon:83333; DOI:10.1128/jb.01306-06)
+    canonical example; promoted lysine_decarboxylase_cadba_sketch to MECHANISTIC with
+    InterPro:IPR011193-grounded GENE_OR_PROTEIN node lysine_decarboxylase_cada and
+    reviewed protein_examples UniProtKB:P0A9H3 (CadA) and UniProtKB:P0AAE8 (CadB);
+    resolved lysine-decarboxylase-activity-protein-example-gap.
+  llm_assisted: true
 causal_graphs:
 - graph_id: lysine_decarboxylase_cadba_sketch
   title: Lysine decarboxylation to cadaverine and CadBA proton-consuming acid resistance
   description: Evidence-backed physiological mechanism sketch linking lysine decarboxylase
     catalytic activity and cadaverine production to the lysine decarboxylase activity
     phenotype.
-  scope_status: NONMECHANISTIC
-  scope_notes: Activity-and-reaction sketch backed by EC 4.1.1.18 and DOI:10.1128/jb.01306-06;
-    strain-matched UniProtKB protein examples for Escherichia coli CadA inducible
-    lysine decarboxylase and CadB lysine-cadaverine antiporter remain to be curated.
+  scope_status: MECHANISTIC
+  scope_notes: Mechanistic graph backed by EC 4.1.1.18 and DOI:10.1128/jb.01306-06;
+    exemplified on lysine_decarboxylase_cada with Escherichia coli K-12 (NCBITaxon:83333;
+    UP000000625) inducible lysine decarboxylase CadA (UniProtKB:P0A9H3) and cadaverine/lysine
+    antiporter CadB (UniProtKB:P0AAE8).
   nodes:
   - node_id: lysine_decarboxylase_activity_trait
     label: lysine decarboxylase activity
@@ -106,6 +131,60 @@ causal_graphs:
     node_type: CHEMICAL
     grounding: CHEBI:18127
     description: Diamine cadaverine produced by decarboxylation of L-lysine.
+  - node_id: lysine_decarboxylase_cada
+    label: inducible lysine decarboxylase CadA
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR011193
+    gene_symbols:
+    - cadB
+    - cadA
+    operon: cadBA
+    description: Inducible lysine decarboxylase (CadA) and cadaverine/lysine antiporter
+      (CadB) acid-resistance system.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0A9H3
+      protein_label: Inducible lysine decarboxylase
+      gene_symbol: cadA
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli K-12
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-23'
+      entry_version: 145
+      sequence_version: 1
+      role: CadA is the inducible PLP-dependent lysine decarboxylase component of
+        the CadBA acid-resistance system in Escherichia coli K-12; this accession
+        represents the CadA decarboxylase subunit.
+      evidence:
+      - reference: DOI:10.1128/jb.01306-06
+        snippet: Unexpectedly, the tolerance of P(i)-starved cells to fermentation
+          acids was markedly increased as a result of the activity of the inducible
+          CadBA lysine-dependent acid resistance system that consumes one proton and
+          produces the diamine cadaverine.
+        notes: Moreau demonstrates that the inducible CadBA system in Escherichia
+          coli K-12 MG1655 decarboxylates lysine to cadaverine while consuming a proton.
+    - uniprot_id: UniProtKB:P0AAE8
+      protein_label: Cadaverine/lysine antiporter
+      gene_symbol: cadB
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli K-12
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-23'
+      entry_version: 141
+      sequence_version: 1
+      role: CadB is the inner-membrane cadaverine/lysine antiporter component of the
+        CadBA acid-resistance system in Escherichia coli K-12; this accession represents
+        the CadB antiporter subunit.
+      evidence:
+      - reference: DOI:10.1128/jb.01306-06
+        snippet: Unexpectedly, the tolerance of P(i)-starved cells to fermentation
+          acids was markedly increased as a result of the activity of the inducible
+          CadBA lysine-dependent acid resistance system that consumes one proton and
+          produces the diamine cadaverine.
+        notes: Moreau demonstrates that the inducible CadBA system in Escherichia
+          coli K-12 MG1655 mediates lysine-dependent acid resistance and cadaverine
+          export.
   edges:
   - subject: lysine_decarboxylase_catalytic_activity
     predicate: confers
@@ -131,3 +210,15 @@ causal_graphs:
       snippet: 'Reaction: L-lysine = cadaverine + CO2'
       notes: IUBMB EC 4.1.1.18 defines the lysine decarboxylase reaction converting
         L-lysine into cadaverine and CO2.
+  - subject: lysine_decarboxylase_cada
+    predicate: enables
+    predicate_id: RO:0002327
+    object: lysine_decarboxylase_catalytic_activity
+    description: Inducible lysine decarboxylase CadA enables catalytic lysine decarboxylation
+      in phosphate-starved Escherichia coli K-12 cells.
+    evidence:
+    - reference: DOI:10.1128/jb.01306-06
+      snippet: CadA activity was favored in P(i)-starved cells probably because weak
+        organic acids slowly reenter cells fermenting glucose.
+      notes: Moreau shows that inducible CadA lysine decarboxylase activity is favored
+        in phosphate-starved Escherichia coli K-12 cells fermenting glucose.

@@ -141815,6 +141815,11 @@
         "reference": "DOI:10.1128/JB.01110-07",
         "snippet": "the Shewanella sp. strain ANA-3 arsenate respiratory reductase (ARR), the key enzyme involved in this metabolism",
         "notes": "Malasarn et al. biochemically characterize ARR as the arsenate respiratory reductase for ANA-3 arsenate respiration."
+      },
+      {
+        "reference": "DOI:10.1128/JB.01110-07",
+        "snippet": "ARR is a heterodimer of approximately 131 kDa, composed of one ArrA subunit (approximately 95 kDa) and one ArrB subunit (approximately 27 kDa).",
+        "notes": "Malasarn et al. show that Shewanella sp. strain ANA-3 arsenate respiratory reductase (ARR) is a heterodimer composed of one ArrA subunit and one ArrB subunit."
       }
     ],
     "canonical_examples": [
@@ -141839,7 +141844,7 @@
         "discussion_id": "arsenate-respiration-protein-example-gap",
         "prompt": "Add strain-matched UniProtKB protein_examples for Shewanella sp. ANA-3 respiratory arsenate reductase subunits (ArrA/ArrB) so arsenate_respiration_arr_pathway_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
         "kind": "CURATION_TODO",
-        "status": "OPEN",
+        "status": "RESOLVED",
         "attaches_to": [
           "causal_graphs#arsenate_respiration_arr_pathway_sketch"
         ],
@@ -141853,7 +141858,9 @@
             "snippet": "can be used by microorganisms as a terminal electron acceptor in anaerobic respiration",
             "explanation": "Existing record-level evidence supports the connected NONMECHANISTIC pathway/function graph but does not provide strain-matched UniProtKB protein accessions for protein_examples."
           }
-        ]
+        ],
+        "resolved_date": "2026-10-23",
+        "resolution_note": "Promoted arsenate_respiration_arr_pathway_sketch to MECHANISTIC by adding InterPro:IPR053686-grounded GENE_OR_PROTEIN node arsenate_respiration_arr_complex with reviewed Shewanella sp. ANA-3 (NCBITaxon:94122) protein_examples UniProtKB:Q7WTU0 (ArrA) and UniProtKB:Q7WTT9 (ArrB) backed by DOI:10.1128/JB.01110-07."
       }
     ],
     "curation_history": [
@@ -141877,6 +141884,13 @@
         "action": "CURATE_CAUSAL_GRAPH",
         "changes": "Added NONMECHANISTIC causal_graphs entry (arsenate_respiration_arr_pathway_sketch) and OPEN CURATION_TODO discussion (arsenate-respiration-protein-example-gap) anchored on existing verbatim record evidence snippets.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-23T11:45:00Z",
+        "curator": "claude",
+        "action": "CURATE_PROTEIN_TAXON_EXAMPLE",
+        "changes": "Promoted arsenate_respiration_arr_pathway_sketch to MECHANISTIC; added InterPro:IPR053686-grounded GENE_OR_PROTEIN node arsenate_respiration_arr_complex with reviewed Shewanella sp. ANA-3 (NCBITaxon:94122) protein_examples UniProtKB:Q7WTU0 (ArrA) and UniProtKB:Q7WTT9 (ArrB) backed by DOI:10.1128/JB.01110-07; resolved arsenate-respiration-protein-example-gap.",
+        "llm_assisted": true
       }
     ],
     "causal_graphs": [
@@ -141884,8 +141898,8 @@
         "graph_id": "arsenate_respiration_arr_pathway_sketch",
         "title": "Respiratory arsenate reduction to arsenite and terminal electron acceptor pathway",
         "description": "Evidence-backed metabolic pathway sketch linking dissimilatory arsenate respiratory reductase (ARR) activity, arsenite production, and arsenate terminal electron acceptance to arsenate respiration.",
-        "scope_status": "NONMECHANISTIC",
-        "scope_notes": "Pathway-and-activity sketch backed by DOI:10.1073/pnas.1834303100, DOI:10.1128/AEM.69.5.2800-2809.2003, and DOI:10.1128/JB.01110-07; strain-matched UniProtKB protein examples for the Shewanella sp. ANA-3 respiratory arsenate reductase subunits ArrA/ArrB remain to be curated.",
+        "scope_status": "MECHANISTIC",
+        "scope_notes": "Mechanistic graph backed by DOI:10.1073/pnas.1834303100, DOI:10.1128/AEM.69.5.2800-2809.2003, and DOI:10.1128/JB.01110-07; exemplified on arsenate_respiration_arr_complex with Shewanella sp. ANA-3 (NCBITaxon:94122) respiratory arsenate reductase subunits ArrA (UniProtKB:Q7WTU0) and ArrB (UniProtKB:Q7WTT9).",
         "nodes": [
           {
             "node_id": "arsenate_respiration_trait",
@@ -141914,6 +141928,58 @@
             "node_type": "CHEMICAL",
             "grounding": "CHEBI:29866",
             "description": "Arsenite produced by respiratory reduction of arsenate As(V)."
+          },
+          {
+            "node_id": "arsenate_respiration_arr_complex",
+            "label": "arsenate respiratory reductase ArrAB",
+            "node_type": "GENE_OR_PROTEIN",
+            "grounding": "InterPro:IPR053686",
+            "gene_symbols": [
+              "arrA",
+              "arrB"
+            ],
+            "operon": "arrAB",
+            "description": "Heterodimeric respiratory arsenate reductase complex (ArrAB) catalyzing dissimilatory As(V) reduction in Shewanella sp. ANA-3.",
+            "protein_examples": [
+              {
+                "uniprot_id": "UniProtKB:Q7WTU0",
+                "protein_label": "Arsenate respiratory reductase molybdopterin-containing subunit ArrA",
+                "gene_symbol": "arrA",
+                "taxon_id": "NCBITaxon:94122",
+                "taxon_label": "Shewanella sp. ANA-3",
+                "entry_status": "REVIEWED",
+                "retrieved_on": "2026-10-23",
+                "entry_version": 148,
+                "sequence_version": 1,
+                "role": "ArrA is the catalytic molybdopterin-containing subunit of the heterodimeric ArrAB respiratory arsenate reductase complex in Shewanella sp. ANA-3; this accession represents the ArrA subunit rather than the full heterodimer.",
+                "evidence": [
+                  {
+                    "reference": "DOI:10.1128/JB.01110-07",
+                    "snippet": "ARR is a heterodimer of approximately 131 kDa, composed of one ArrA subunit (approximately 95 kDa) and one ArrB subunit (approximately 27 kDa).",
+                    "notes": "Malasarn et al. purify and characterize the Shewanella sp. strain ANA-3 heterodimeric arsenate respiratory reductase composed of ArrA and ArrB."
+                  }
+                ]
+              },
+              {
+                "uniprot_id": "UniProtKB:Q7WTT9",
+                "protein_label": "Arsenate respiratory reductase iron-sulfur subunit ArrB",
+                "gene_symbol": "arrB",
+                "taxon_id": "NCBITaxon:94122",
+                "taxon_label": "Shewanella sp. ANA-3",
+                "entry_status": "REVIEWED",
+                "retrieved_on": "2026-10-23",
+                "entry_version": 141,
+                "sequence_version": 1,
+                "role": "ArrB is the iron-sulfur electron-transfer subunit of the heterodimeric ArrAB respiratory arsenate reductase complex in Shewanella sp. ANA-3; this accession represents the ArrB subunit rather than the full heterodimer.",
+                "evidence": [
+                  {
+                    "reference": "DOI:10.1128/JB.01110-07",
+                    "snippet": "ARR is a heterodimer of approximately 131 kDa, composed of one ArrA subunit (approximately 95 kDa) and one ArrB subunit (approximately 27 kDa).",
+                    "notes": "Malasarn et al. purify and characterize the Shewanella sp. strain ANA-3 heterodimeric arsenate respiratory reductase composed of ArrA and ArrB."
+                  }
+                ]
+              }
+            ]
           }
         ],
         "edges": [
@@ -141956,6 +142022,20 @@
                 "reference": "DOI:10.1128/JB.01110-07",
                 "snippet": "the Shewanella sp. strain ANA-3 arsenate respiratory reductase (ARR), the key enzyme involved in this metabolism",
                 "notes": "Malasarn et al. characterize arsenate respiratory reductase (ARR) as the key enzyme involved in Shewanella sp. strain ANA-3 arsenate respiration."
+              }
+            ]
+          },
+          {
+            "subject": "arsenate_respiration_arr_complex",
+            "predicate": "enables",
+            "predicate_id": "RO:0002327",
+            "object": "arsenate_respiration_reductase_activity",
+            "description": "The heterodimeric ArrAB respiratory arsenate reductase complex enables dissimilatory arsenate reductase activity in Shewanella sp. ANA-3.",
+            "evidence": [
+              {
+                "reference": "DOI:10.1128/JB.01110-07",
+                "snippet": "ARR is a heterodimer of approximately 131 kDa, composed of one ArrA subunit (approximately 95 kDa) and one ArrB subunit (approximately 27 kDa).",
+                "notes": "Malasarn et al. show that Shewanella sp. strain ANA-3 arsenate respiratory reductase (ARR) is a heterodimer of ArrA and ArrB."
               }
             ]
           }
@@ -145238,6 +145318,11 @@
         "reference": "DOI:10.1128/AEM.07303-11",
         "snippet": "Perchlorate-respiring bacteria (PRB) can use both perchlorate and chlorate as terminal electron acceptors, whereas chlorate-respiring bacteria (CRB) use only chlorate",
         "notes": "Hellberg Lindqvist et al. separate chlorate-respiring bacteria from broader perchlorate reducers."
+      },
+      {
+        "reference": "DOI:10.1128/AEM.69.9.5585-5592.2003",
+        "snippet": "The genes (clr) encoding chlorate reductase are arranged as clrABDC, where clrA, clrB, and clrC encode the subunits and clrD encodes a specific chaperone.",
+        "notes": "Danielsson Thorell et al. characterize the Ideonella dechloratans clrABDC operon encoding the ClrA, ClrB, and ClrC subunits of chlorate reductase."
       }
     ],
     "canonical_examples": [
@@ -145262,7 +145347,7 @@
         "discussion_id": "chlorate-respiration-protein-example-gap",
         "prompt": "Add strain-matched UniProtKB protein_examples for Ideonella dechloratans chlorate reductase (ClrABC) and chlorite dismutase (Cld) so chlorate_respiration_pathway_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
         "kind": "CURATION_TODO",
-        "status": "OPEN",
+        "status": "RESOLVED",
         "attaches_to": [
           "causal_graphs#chlorate_respiration_pathway_sketch"
         ],
@@ -145276,7 +145361,9 @@
             "snippet": "reduction of chlorate occurs in a two-step reaction: chlorate reduction followed by chlorite decomposition",
             "explanation": "Existing record-level evidence supports the connected NONMECHANISTIC pathway/function graph but does not provide strain-matched UniProtKB protein accessions for protein_examples."
           }
-        ]
+        ],
+        "resolved_date": "2026-10-23",
+        "resolution_note": "Promoted chlorate_respiration_pathway_sketch to MECHANISTIC by adding InterPro:IPR017840-grounded GENE_OR_PROTEIN node chlorate_respiration_clr_complex with reviewed Ideonella dechloratans (NCBITaxon:36863) protein_examples UniProtKB:P60068 (ClrA) and UniProtKB:P60069 (ClrB) backed by DOI:10.1128/AEM.69.9.5585-5592.2003."
       }
     ],
     "curation_history": [
@@ -145293,6 +145380,13 @@
         "action": "CURATE_CAUSAL_GRAPH",
         "changes": "Added NONMECHANISTIC causal_graphs entry (chlorate_respiration_pathway_sketch) and OPEN CURATION_TODO discussion (chlorate-respiration-protein-example-gap) anchored on existing verbatim record evidence snippets.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-23T11:45:00Z",
+        "curator": "claude",
+        "action": "CURATE_PROTEIN_TAXON_EXAMPLE",
+        "changes": "Promoted chlorate_respiration_pathway_sketch to MECHANISTIC; added InterPro:IPR017840-grounded GENE_OR_PROTEIN node chlorate_respiration_clr_complex with reviewed Ideonella dechloratans (NCBITaxon:36863) protein_examples UniProtKB:P60068 (ClrA) and UniProtKB:P60069 (ClrB) backed by DOI:10.1128/AEM.69.9.5585-5592.2003; resolved chlorate-respiration-protein-example-gap.",
+        "llm_assisted": true
       }
     ],
     "causal_graphs": [
@@ -145300,8 +145394,8 @@
         "graph_id": "chlorate_respiration_pathway_sketch",
         "title": "Two-step dissimilatory chlorate reduction pathway via chlorite",
         "description": "Evidence-backed metabolic pathway sketch linking chlorate terminal electron acceptance and two-step dissimilatory chlorate reduction via chlorite to chlorate respiration.",
-        "scope_status": "NONMECHANISTIC",
-        "scope_notes": "Pathway sketch backed by DOI:10.1128/AEM.69.9.5585-5592.2003 and DOI:10.1128/AEM.07303-11; strain-matched UniProtKB protein examples for Ideonella dechloratans chlorate reductase (ClrABC) and chlorite dismutase (Cld) remain to be curated.",
+        "scope_status": "MECHANISTIC",
+        "scope_notes": "Mechanistic graph backed by DOI:10.1128/AEM.69.9.5585-5592.2003 and DOI:10.1128/AEM.07303-11; exemplified on chlorate_respiration_clr_complex with Ideonella dechloratans (NCBITaxon:36863) chlorate reductase subunits ClrA (UniProtKB:P60068) and ClrB (UniProtKB:P60069).",
         "nodes": [
           {
             "node_id": "chlorate_respiration_trait",
@@ -145330,6 +145424,59 @@
             "node_type": "CHEMICAL",
             "grounding": "CHEBI:17444",
             "description": "Chlorite intermediate produced by chlorate reduction and decomposed in the second step of the chlorate respiration pathway."
+          },
+          {
+            "node_id": "chlorate_respiration_clr_complex",
+            "label": "chlorate reductase ClrABC",
+            "node_type": "GENE_OR_PROTEIN",
+            "grounding": "InterPro:IPR017840",
+            "gene_symbols": [
+              "clrA",
+              "clrB",
+              "clrC"
+            ],
+            "operon": "clrABDC",
+            "description": "Periplasmic heterotrimeric chlorate reductase complex (ClrABC) catalyzing the reduction of chlorate to chlorite.",
+            "protein_examples": [
+              {
+                "uniprot_id": "UniProtKB:P60068",
+                "protein_label": "Chlorate reductase subunit alpha",
+                "gene_symbol": "clrA",
+                "taxon_id": "NCBITaxon:36863",
+                "taxon_label": "Ideonella dechloratans",
+                "entry_status": "REVIEWED",
+                "retrieved_on": "2026-10-23",
+                "entry_version": 85,
+                "sequence_version": 1,
+                "role": "ClrA is the catalytic molybdopterin-containing alpha subunit of the heterotrimeric ClrABC chlorate reductase complex in Ideonella dechloratans; this accession represents the alpha subunit rather than the full heterotrimer.",
+                "evidence": [
+                  {
+                    "reference": "DOI:10.1128/AEM.69.9.5585-5592.2003",
+                    "snippet": "The genes (clr) encoding chlorate reductase are arranged as clrABDC, where clrA, clrB, and clrC encode the subunits and clrD encodes a specific chaperone.",
+                    "notes": "Danielsson Thorell et al. clone and sequence the Ideonella dechloratans clrABDC operon encoding chlorate reductase subunits ClrA, ClrB, and ClrC."
+                  }
+                ]
+              },
+              {
+                "uniprot_id": "UniProtKB:P60069",
+                "protein_label": "Chlorate reductase subunit beta",
+                "gene_symbol": "clrB",
+                "taxon_id": "NCBITaxon:36863",
+                "taxon_label": "Ideonella dechloratans",
+                "entry_status": "REVIEWED",
+                "retrieved_on": "2026-10-23",
+                "entry_version": 77,
+                "sequence_version": 1,
+                "role": "ClrB is the iron-sulfur beta subunit of the heterotrimeric ClrABC chlorate reductase complex in Ideonella dechloratans; this accession represents the beta subunit rather than the full heterotrimer.",
+                "evidence": [
+                  {
+                    "reference": "DOI:10.1128/AEM.69.9.5585-5592.2003",
+                    "snippet": "The genes (clr) encoding chlorate reductase are arranged as clrABDC, where clrA, clrB, and clrC encode the subunits and clrD encodes a specific chaperone.",
+                    "notes": "Danielsson Thorell et al. clone and sequence the Ideonella dechloratans clrABDC operon encoding chlorate reductase subunits ClrA, ClrB, and ClrC."
+                  }
+                ]
+              }
+            ]
           }
         ],
         "edges": [
@@ -145372,6 +145519,20 @@
                 "reference": "DOI:10.1128/AEM.69.9.5585-5592.2003",
                 "snippet": "reduction of chlorate occurs in a two-step reaction: chlorate reduction followed by chlorite decomposition",
                 "notes": "Danielsson Thorell et al. report that reduction of chlorate occurs in a two-step reaction: chlorate reduction followed by chlorite decomposition."
+              }
+            ]
+          },
+          {
+            "subject": "chlorate_respiration_clr_complex",
+            "predicate": "enables",
+            "predicate_id": "RO:0002327",
+            "object": "chlorate_respiration_dissimilatory_pathway",
+            "description": "The clrABDC-encoded ClrABC chlorate reductase complex enables the dissimilatory chlorate reduction pathway in Ideonella dechloratans.",
+            "evidence": [
+              {
+                "reference": "DOI:10.1128/AEM.69.9.5585-5592.2003",
+                "snippet": "The genes (clr) encoding chlorate reductase are arranged as clrABDC, where clrA, clrB, and clrC encode the subunits and clrD encodes a specific chaperone.",
+                "notes": "Danielsson Thorell et al. identify the Ideonella dechloratans clrABDC gene cluster encoding the ClrABC chlorate reductase subunits."
               }
             ]
           }
@@ -146696,6 +146857,11 @@
         "reference": "DOI:10.1111/1462-2920.15971",
         "snippet": "Membranes showed a DMSO reductase activity",
         "notes": "Rosenbaum et al. biochemically support an induced DMSO reductase activity in Moorella thermoacetica membranes."
+      },
+      {
+        "reference": "DOI:10.1073/pnas.0505959103",
+        "snippet": "Here, we identify two gene clusters in Shewanella oneidensis strain MR-1 that each contain homologs of genes required for metal reduction and genes that are predicted to encode dimethyl sulfoxide (DMSO) reductase subunits.",
+        "notes": "Gralnick et al. identify the Shewanella oneidensis MR-1 gene clusters encoding the extracellular dimethyl sulfoxide reductase subunits."
       }
     ],
     "canonical_examples": [
@@ -146720,7 +146886,7 @@
         "discussion_id": "dimethyl-sulfoxide-respiration-protein-example-gap",
         "prompt": "Add strain-matched UniProtKB protein_examples for the Shewanella oneidensis MR-1 SO1427-SO1432 (DmsEFABGH) extracellular DMSO reductase complex so dmso_respiration_reductase_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
         "kind": "CURATION_TODO",
-        "status": "OPEN",
+        "status": "RESOLVED",
         "attaches_to": [
           "causal_graphs#dmso_respiration_reductase_sketch"
         ],
@@ -146734,7 +146900,9 @@
             "snippet": "one (SO1427-SO1432) is required for anaerobic respiration of DMSO",
             "explanation": "Existing record-level evidence supports the connected NONMECHANISTIC pathway/function graph but does not provide strain-matched UniProtKB protein accessions for protein_examples."
           }
-        ]
+        ],
+        "resolved_date": "2026-10-23",
+        "resolution_note": "Promoted dmso_respiration_reductase_sketch to MECHANISTIC by adding InterPro:IPR011888-grounded GENE_OR_PROTEIN node dmso_respiration_dms_complex with Shewanella oneidensis MR-1 (NCBITaxon:211586; UP000008186) protein_examples UniProtKB:Q8EH03 (DmsA) and UniProtKB:Q8EH02 (DmsB) backed by DOI:10.1073/pnas.0505959103."
       }
     ],
     "curation_history": [
@@ -146751,6 +146919,13 @@
         "action": "CURATE_CAUSAL_GRAPH",
         "changes": "Added NONMECHANISTIC causal_graphs entry (dmso_respiration_reductase_sketch) and OPEN CURATION_TODO discussion (dimethyl-sulfoxide-respiration-protein-example-gap) anchored on existing verbatim record evidence snippets.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-23T11:45:00Z",
+        "curator": "claude",
+        "action": "CURATE_PROTEIN_TAXON_EXAMPLE",
+        "changes": "Promoted dmso_respiration_reductase_sketch to MECHANISTIC; added InterPro:IPR011888-grounded GENE_OR_PROTEIN node dmso_respiration_dms_complex with Shewanella oneidensis MR-1 (NCBITaxon:211586; UP000008186) protein_examples UniProtKB:Q8EH03 (DmsA) and UniProtKB:Q8EH02 (DmsB) backed by DOI:10.1073/pnas.0505959103; resolved dimethyl-sulfoxide-respiration-protein-example-gap.",
+        "llm_assisted": true
       }
     ],
     "causal_graphs": [
@@ -146758,8 +146933,8 @@
         "graph_id": "dmso_respiration_reductase_sketch",
         "title": "Membrane and extracellular DMSO reductase respiratory pathway",
         "description": "Evidence-backed metabolic pathway sketch linking dimethyl sulfoxide terminal electron acceptance and DMSO reductase activity to dimethyl sulfoxide respiration.",
-        "scope_status": "NONMECHANISTIC",
-        "scope_notes": "Pathway-and-activity sketch backed by DOI:10.1073/pnas.0505959103 and DOI:10.1111/1462-2920.15971; strain-matched UniProtKB protein examples for the Shewanella oneidensis MR-1 SO1427-SO1432 (DmsEFABGH) extracellular DMSO reductase subunits remain to be curated.",
+        "scope_status": "MECHANISTIC",
+        "scope_notes": "Mechanistic graph backed by DOI:10.1073/pnas.0505959103 and DOI:10.1111/1462-2920.15971; exemplified on dmso_respiration_dms_complex with Shewanella oneidensis MR-1 (NCBITaxon:211586; UP000008186) extracellular DMSO reductase subunits DmsA (UniProtKB:Q8EH03) and DmsB (UniProtKB:Q8EH02).",
         "nodes": [
           {
             "node_id": "dmso_respiration_trait",
@@ -146788,6 +146963,61 @@
             "node_type": "BIOLOGICAL_PROCESS",
             "grounding": "GO:0019645",
             "description": "Extracellular anaerobic respiratory process encoded by the SO1427-SO1432 gene cluster."
+          },
+          {
+            "node_id": "dmso_respiration_dms_complex",
+            "label": "extracellular DMSO reductase DmsEFAB",
+            "node_type": "GENE_OR_PROTEIN",
+            "grounding": "InterPro:IPR011888",
+            "gene_symbols": [
+              "dmsE",
+              "dmsF",
+              "dmsA",
+              "dmsB"
+            ],
+            "description": "Extracellular dimethyl sulfoxide reductase complex encoded within the SO1427-SO1432 gene cluster.",
+            "protein_examples": [
+              {
+                "uniprot_id": "UniProtKB:Q8EH03",
+                "protein_label": "Extracellular dimethyl sulfoxide/manganese oxide reductase molybdopterin-binding subunit DmsA",
+                "gene_symbol": "dmsA",
+                "taxon_id": "NCBITaxon:211586",
+                "taxon_label": "Shewanella oneidensis MR-1",
+                "entry_status": "UNREVIEWED",
+                "proteome_id": "UP000008186",
+                "retrieved_on": "2026-10-23",
+                "entry_version": 148,
+                "sequence_version": 1,
+                "role": "DmsA (SO_1429) is the catalytic molybdopterin-binding subunit encoded within the SO1427-SO1432 extracellular DMSO reductase gene cluster in Shewanella oneidensis MR-1; this accession represents the DmsA subunit rather than the full multi-subunit complex.",
+                "evidence": [
+                  {
+                    "reference": "DOI:10.1073/pnas.0505959103",
+                    "snippet": "one (SO1427-SO1432) is required for anaerobic respiration of DMSO",
+                    "notes": "Gralnick et al. show that the Shewanella oneidensis MR-1 SO1427-SO1432 gene cluster encoding DmsEFAB is required for anaerobic respiration of DMSO."
+                  }
+                ]
+              },
+              {
+                "uniprot_id": "UniProtKB:Q8EH02",
+                "protein_label": "Extracellular dimethyl sulfoxide/manganese oxide reductase ferredoxin subunit DmsB",
+                "gene_symbol": "dmsB",
+                "taxon_id": "NCBITaxon:211586",
+                "taxon_label": "Shewanella oneidensis MR-1",
+                "entry_status": "UNREVIEWED",
+                "proteome_id": "UP000008186",
+                "retrieved_on": "2026-10-23",
+                "entry_version": 136,
+                "sequence_version": 1,
+                "role": "DmsB (SO_1430) is the iron-sulfur ferredoxin subunit encoded within the SO1427-SO1432 extracellular DMSO reductase gene cluster in Shewanella oneidensis MR-1; this accession represents the DmsB subunit rather than the full multi-subunit complex.",
+                "evidence": [
+                  {
+                    "reference": "DOI:10.1073/pnas.0505959103",
+                    "snippet": "one (SO1427-SO1432) is required for anaerobic respiration of DMSO",
+                    "notes": "Gralnick et al. show that the Shewanella oneidensis MR-1 SO1427-SO1432 gene cluster encoding DmsEFAB is required for anaerobic respiration of DMSO."
+                  }
+                ]
+              }
+            ]
           }
         ],
         "edges": [
@@ -146830,6 +147060,20 @@
                 "reference": "DOI:10.1073/pnas.0505959103",
                 "snippet": "one (SO1427-SO1432) is required for anaerobic respiration of DMSO",
                 "notes": "Gralnick et al. show that the SO1427-SO1432 gene cluster is required for anaerobic respiration of DMSO in Shewanella oneidensis."
+              }
+            ]
+          },
+          {
+            "subject": "dmso_respiration_dms_complex",
+            "predicate": "enables",
+            "predicate_id": "RO:0002327",
+            "object": "dmso_respiration_reductase_activity",
+            "description": "The extracellular DmsEFAB DMSO reductase complex enables dimethyl-sulfoxide reductase activity.",
+            "evidence": [
+              {
+                "reference": "DOI:10.1073/pnas.0505959103",
+                "snippet": "Here, we identify two gene clusters in Shewanella oneidensis strain MR-1 that each contain homologs of genes required for metal reduction and genes that are predicted to encode dimethyl sulfoxide (DMSO) reductase subunits.",
+                "notes": "Gralnick et al. identify the Shewanella oneidensis MR-1 gene clusters encoding the DMSO reductase subunits."
               }
             ]
           }
@@ -152648,7 +152892,8 @@
             "snippet": "under anaerobic conditions, fumarate can serve as a terminal electron acceptor, with fumarate reductase (FRD) transferring electrons from the reduced quinone, producing succinate",
             "explanation": "Existing record-level evidence supports the connected NONMECHANISTIC pathway/function graph but does not provide strain-matched UniProtKB protein accessions for protein_examples."
           }
-        ]
+        ],
+        "notes": "Cycle 2 Stage 3 UniProt audit: species-level Bacteroides fragilis (NCBITaxon:817) TrEMBL fumarate reductase entries UniProtKB:Q7X479 (frdA), UniProtKB:Q7X478 (frdB), and UniProtKB:Q7X480 (frdC) lack a UniProt proteome_id (triggering UNREVIEWED_NO_PROTEOME in audit_uniprot_grounding.py), whereas reference-proteome entries in B. fragilis NCTC 9343 (NCBITaxon:272559; UP000006731: Q5L7E5, Q5L7E6, Q5L7E7) carry only BF4126/BF4125/BF4124 orderedLocusNames without frdA/frdB/frdC gene symbols. Keeping graph NONMECHANISTIC and discussion OPEN until Swiss-Prot curation or strain-aligned canonical_examples resolves the proteome/gene-symbol gap."
       }
     ],
     "curation_history": [
@@ -152664,6 +152909,13 @@
         "curator": "claude",
         "action": "CURATE_CAUSAL_GRAPH",
         "changes": "Added NONMECHANISTIC causal_graphs entry (fumarate_respiration_frd_pathway_sketch) and OPEN CURATION_TODO discussion (fumarate-respiration-protein-example-gap) anchored on existing verbatim record evidence snippets.",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-23T11:45:00Z",
+        "curator": "claude",
+        "action": "RECORD_CURATION_DISCUSSION",
+        "changes": "Recorded Cycle 2 Stage 3 UniProtKB audit note on fumarate-respiration-protein-example-gap documenting the UNREVIEWED_NO_PROTEOME / locus-tag blocker for Bacteroides fragilis FrdCAB (Q7X479/Q7X478/Q7X480 vs NCTC 9343 Q5L7E5/Q5L7E6/Q5L7E7).",
         "llm_assisted": true
       }
     ],
@@ -159931,6 +160183,11 @@
         "reference": "DOI:10.1128/AEM.05758-11",
         "snippet": "perchlorate reductase and chlorite dismutase, which are encoded by the pcrABCD and cld genes",
         "notes": "Melnyk et al. support the PcrABCD and Cld gene modules as the two pathway-specific enzyme systems for perchlorate reduction to chloride."
+      },
+      {
+        "reference": "DOI:10.1128/jb.187.15.5090-5096.2005",
+        "snippet": "Deletion of the pcrA gene in Dechloromonas aromatica abolished growth in both perchlorate and chlorate but not growth in nitrate, indicating that the pcrABCD genes play a functional role in perchlorate reduction separate from nitrate reduction.",
+        "notes": "Bender et al. demonstrate that the pcrABCD perchlorate reductase genes are required for anaerobic growth on perchlorate in Dechloromonas aromatica RCB."
       }
     ],
     "discussions": [
@@ -159947,7 +160204,7 @@
         "discussion_id": "perchlorate-respiration-protein-example-gap",
         "prompt": "Add a strain-matched canonical_examples entry and UniProtKB protein_examples for perchlorate reductase (PcrABCD) and chlorite dismutase (Cld) (e.g., in candidate exemplar Dechloromonas aromatica RCB) so perchlorate_respiration_reduction_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
         "kind": "CURATION_TODO",
-        "status": "OPEN",
+        "status": "RESOLVED",
         "attaches_to": [
           "causal_graphs#perchlorate_respiration_reduction_sketch"
         ],
@@ -159961,7 +160218,9 @@
             "snippet": "reduction to chlorite (ClO2-) in the bacterial periplasm by perchlorate reductase, and the dismutation of chlorite to chloride and molecular oxygen",
             "explanation": "Existing record-level evidence supports the connected NONMECHANISTIC pathway/function graph but does not provide strain-matched UniProtKB protein accessions for protein_examples."
           }
-        ]
+        ],
+        "resolved_date": "2026-10-23",
+        "resolution_note": "Added canonical_examples entry Dechloromonas aromatica RCB (NCBITaxon:159087) and promoted perchlorate_respiration_reduction_sketch to MECHANISTIC by adding InterPro:IPR017840-grounded GENE_OR_PROTEIN node perchlorate_respiration_pcr_reductase with reviewed UniProtKB:Q47CW6 (PcrA) backed by DOI:10.1128/jb.187.15.5090-5096.2005."
       }
     ],
     "curation_history": [
@@ -159978,6 +160237,13 @@
         "action": "CURATE_CAUSAL_GRAPH",
         "changes": "Added NONMECHANISTIC causal_graphs entry (perchlorate_respiration_reduction_sketch) and OPEN CURATION_TODO discussion (perchlorate-respiration-protein-example-gap) anchored on existing verbatim record evidence snippets.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-23T11:45:00Z",
+        "curator": "claude",
+        "action": "CURATE_PROTEIN_TAXON_EXAMPLE",
+        "changes": "Added Dechloromonas aromatica RCB (NCBITaxon:159087; DOI:10.1128/jb.187.15.5090-5096.2005) canonical example; promoted perchlorate_respiration_reduction_sketch to MECHANISTIC with InterPro:IPR017840-grounded GENE_OR_PROTEIN node perchlorate_respiration_pcr_reductase and reviewed UniProtKB:Q47CW6 (PcrA); resolved perchlorate-respiration-protein-example-gap.",
+        "llm_assisted": true
       }
     ],
     "causal_graphs": [
@@ -159985,8 +160251,8 @@
         "graph_id": "perchlorate_respiration_reduction_sketch",
         "title": "Anaerobic respiratory perchlorate reduction to chloride",
         "description": "Evidence-backed metabolic pathway sketch linking anaerobic respiratory perchlorate reduction and chloride formation to perchlorate respiration.",
-        "scope_status": "NONMECHANISTIC",
-        "scope_notes": "Pathway sketch backed by Melnyk et al. (DOI:10.1186/s12864-015-2011-5 and DOI:10.1128/AEM.05758-11); canonical_examples and strain-matched UniProtKB protein examples for perchlorate reductase (PcrABCD) and chlorite dismutase (Cld) (e.g., in candidate exemplar Dechloromonas aromatica RCB) remain to be curated.",
+        "scope_status": "MECHANISTIC",
+        "scope_notes": "Mechanistic graph backed by DOI:10.1186/s12864-015-2011-5, DOI:10.1128/AEM.05758-11, and DOI:10.1128/jb.187.15.5090-5096.2005; exemplified on perchlorate_respiration_pcr_reductase with Dechloromonas aromatica RCB (NCBITaxon:159087) perchlorate reductase subunit alpha PcrA (UniProtKB:Q47CW6).",
         "nodes": [
           {
             "node_id": "perchlorate_respiration_trait",
@@ -160008,6 +160274,40 @@
             "node_type": "CHEMICAL",
             "grounding": "CHEBI:17996",
             "description": "Chloride anion produced as the terminal product of respiratory perchlorate reduction and chlorite dismutation."
+          },
+          {
+            "node_id": "perchlorate_respiration_pcr_reductase",
+            "label": "perchlorate reductase PcrABCD",
+            "node_type": "GENE_OR_PROTEIN",
+            "grounding": "InterPro:IPR017840",
+            "gene_symbols": [
+              "pcrA",
+              "pcrB",
+              "pcrC",
+              "pcrD"
+            ],
+            "description": "Periplasmic perchlorate reductase enzyme complex (PcrABCD) required for respiratory perchlorate reduction.",
+            "protein_examples": [
+              {
+                "uniprot_id": "UniProtKB:Q47CW6",
+                "protein_label": "Perchlorate reductase subunit alpha",
+                "gene_symbol": "pcrA",
+                "taxon_id": "NCBITaxon:159087",
+                "taxon_label": "Dechloromonas aromatica RCB",
+                "entry_status": "REVIEWED",
+                "retrieved_on": "2026-10-23",
+                "entry_version": 106,
+                "sequence_version": 1,
+                "role": "PcrA is the catalytic molybdopterin-containing alpha subunit of perchlorate reductase required for anaerobic growth on perchlorate in Dechloromonas aromatica RCB; this accession represents the PcrA subunit of the PcrABCD complex.",
+                "evidence": [
+                  {
+                    "reference": "DOI:10.1128/jb.187.15.5090-5096.2005",
+                    "snippet": "Deletion of the pcrA gene in Dechloromonas aromatica abolished growth in both perchlorate and chlorate but not growth in nitrate, indicating that the pcrABCD genes play a functional role in perchlorate reduction separate from nitrate reduction.",
+                    "notes": "Bender et al. show that deleting pcrA in Dechloromonas aromatica RCB abolishes anaerobic growth on perchlorate."
+                  }
+                ]
+              }
+            ]
           }
         ],
         "edges": [
@@ -160038,8 +160338,30 @@
                 "notes": "Melnyk et al. describe periplasmic reduction of perchlorate to chlorite by perchlorate reductase followed by dismutation of chlorite to chloride and molecular oxygen."
               }
             ]
+          },
+          {
+            "subject": "perchlorate_respiration_pcr_reductase",
+            "predicate": "enables",
+            "predicate_id": "RO:0002327",
+            "object": "perchlorate_respiration_perchlorate_reduction",
+            "description": "The pcrABCD-encoded perchlorate reductase complex enables anaerobic respiratory perchlorate reduction.",
+            "evidence": [
+              {
+                "reference": "DOI:10.1128/jb.187.15.5090-5096.2005",
+                "snippet": "Deletion of the pcrA gene in Dechloromonas aromatica abolished growth in both perchlorate and chlorate but not growth in nitrate, indicating that the pcrABCD genes play a functional role in perchlorate reduction separate from nitrate reduction.",
+                "notes": "Bender et al. demonstrate that pcrABCD is required for perchlorate reduction in Dechloromonas aromatica RCB."
+              }
+            ]
           }
         ]
+      }
+    ],
+    "canonical_examples": [
+      {
+        "taxon_id": "NCBITaxon:159087",
+        "taxon_label": "Dechloromonas aromatica RCB",
+        "note": "Bender et al. characterized the pcrABCD perchlorate reductase genes in Dechloromonas aromatica RCB and showed that pcrA deletion abolishes anaerobic growth on perchlorate and chlorate.",
+        "reference": "DOI:10.1128/jb.187.15.5090-5096.2005"
       }
     ]
   },
@@ -165146,6 +165468,11 @@
         "reference": "DOI:10.1128/JB.183.8.2463-2475.2001",
         "snippet": "the electron acceptor tetrathionate, which allows Salmonella to grow anaerobically on ethanolamine or 1,2-propanediol",
         "notes": "Price-Carter et al. support tetrathionate-dependent anaerobic growth in Salmonella enterica serovar Typhimurium LT2."
+      },
+      {
+        "reference": "DOI:10.1046/j.1365-2958.1999.01345.x",
+        "snippet": "Sequence analysis suggests that TtrA contains a molybdopterin guanine dinucleotide cofactor and a [4Fe-4S] cluster, that TtrB binds four [4Fe-4S] clusters, and that TtrC is an integral membrane protein containing a quinol oxidation site.",
+        "notes": "Hensel et al. characterize the subunit composition of Salmonella enterica serovar Typhimurium LT2 tetrathionate reductase (TtrA, TtrB, and TtrC)."
       }
     ],
     "canonical_examples": [
@@ -165170,7 +165497,7 @@
         "discussion_id": "tetrathionate-respiration-protein-example-gap",
         "prompt": "Add strain-matched UniProtKB protein_examples for Salmonella enterica serovar Typhimurium LT2 tetrathionate reductase subunits (TtrA/TtrB/TtrC) so tetrathionate_respiration_ttr_pathway_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
         "kind": "CURATION_TODO",
-        "status": "OPEN",
+        "status": "RESOLVED",
         "attaches_to": [
           "causal_graphs#tetrathionate_respiration_ttr_pathway_sketch"
         ],
@@ -165184,7 +165511,9 @@
             "snippet": "ttrA, ttrB and ttrC are the tetrathionate reductase structural genes",
             "explanation": "Existing record-level evidence supports the connected NONMECHANISTIC pathway/function graph but does not provide strain-matched UniProtKB protein accessions for protein_examples."
           }
-        ]
+        ],
+        "resolved_date": "2026-10-23",
+        "resolution_note": "Promoted tetrathionate_respiration_ttr_pathway_sketch to MECHANISTIC by adding InterPro:IPR037946-grounded GENE_OR_PROTEIN node tetrathionate_respiration_ttr_complex with reviewed Salmonella enterica serovar Typhimurium LT2 (NCBITaxon:99287; UP000001014) protein_examples UniProtKB:Q9Z4S6 (TtrA) and UniProtKB:Q7CQM9 (TtrB) backed by DOI:10.1046/j.1365-2958.1999.01345.x."
       }
     ],
     "curation_history": [
@@ -165201,6 +165530,13 @@
         "action": "CURATE_CAUSAL_GRAPH",
         "changes": "Added NONMECHANISTIC causal_graphs entry (tetrathionate_respiration_ttr_pathway_sketch) and OPEN CURATION_TODO discussion (tetrathionate-respiration-protein-example-gap) anchored on existing verbatim record evidence snippets.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-23T11:45:00Z",
+        "curator": "claude",
+        "action": "CURATE_PROTEIN_TAXON_EXAMPLE",
+        "changes": "Promoted tetrathionate_respiration_ttr_pathway_sketch to MECHANISTIC; added InterPro:IPR037946-grounded GENE_OR_PROTEIN node tetrathionate_respiration_ttr_complex with reviewed Salmonella enterica serovar Typhimurium LT2 (NCBITaxon:99287; UP000001014) protein_examples UniProtKB:Q9Z4S6 (TtrA) and UniProtKB:Q7CQM9 (TtrB) backed by DOI:10.1046/j.1365-2958.1999.01345.x; resolved tetrathionate-respiration-protein-example-gap.",
+        "llm_assisted": true
       }
     ],
     "causal_graphs": [
@@ -165208,8 +165544,8 @@
         "graph_id": "tetrathionate_respiration_ttr_pathway_sketch",
         "title": "Tetrathionate reductase catalysis and anaerobic reduction to thiosulfate",
         "description": "Evidence-backed metabolic pathway sketch linking tetrathionate terminal electron acceptance, TtrABC tetrathionate reductase activity, and thiosulfate production to tetrathionate respiration.",
-        "scope_status": "NONMECHANISTIC",
-        "scope_notes": "Pathway-and-activity sketch backed by DOI:10.1046/j.1365-2958.1999.01345.x and DOI:10.1128/JB.183.8.2463-2475.2001; strain-matched UniProtKB protein examples for Salmonella enterica serovar Typhimurium LT2 tetrathionate reductase subunits TtrA/TtrB/TtrC remain to be curated.",
+        "scope_status": "MECHANISTIC",
+        "scope_notes": "Mechanistic graph backed by DOI:10.1046/j.1365-2958.1999.01345.x and DOI:10.1128/JB.183.8.2463-2475.2001; exemplified on tetrathionate_respiration_ttr_complex with Salmonella enterica subsp. enterica serovar Typhimurium str. LT2 (NCBITaxon:99287; UP000001014) tetrathionate reductase subunits TtrA (UniProtKB:Q9Z4S6) and TtrB (UniProtKB:Q7CQM9).",
         "nodes": [
           {
             "node_id": "tetrathionate_respiration_trait",
@@ -165238,6 +165574,61 @@
             "node_type": "CHEMICAL",
             "grounding": "CHEBI:26977",
             "description": "Thiosulfate produced by respiratory reduction of tetrathionate."
+          },
+          {
+            "node_id": "tetrathionate_respiration_ttr_complex",
+            "label": "tetrathionate reductase TtrABC",
+            "node_type": "GENE_OR_PROTEIN",
+            "grounding": "InterPro:IPR037946",
+            "gene_symbols": [
+              "ttrA",
+              "ttrB",
+              "ttrC"
+            ],
+            "operon": "ttrBCA",
+            "description": "Membrane-bound heterotrimeric tetrathionate reductase complex encoded by ttrA, ttrB, and ttrC.",
+            "protein_examples": [
+              {
+                "uniprot_id": "UniProtKB:Q9Z4S6",
+                "protein_label": "Tetrathionate reductase subunit A",
+                "gene_symbol": "ttrA",
+                "taxon_id": "NCBITaxon:99287",
+                "taxon_label": "Salmonella enterica subsp. enterica serovar Typhimurium str. LT2",
+                "entry_status": "REVIEWED",
+                "proteome_id": "UP000001014",
+                "retrieved_on": "2026-10-23",
+                "entry_version": 125,
+                "sequence_version": 1,
+                "role": "TtrA is the catalytic molybdopterin-containing subunit A of the heterotrimeric TtrABC tetrathionate reductase complex in Salmonella enterica serovar Typhimurium LT2; this accession represents the TtrA subunit rather than the full heterotrimer.",
+                "evidence": [
+                  {
+                    "reference": "DOI:10.1046/j.1365-2958.1999.01345.x",
+                    "snippet": "ttrA, ttrB and ttrC are the tetrathionate reductase structural genes",
+                    "notes": "Hensel et al. identify ttrA, ttrB, and ttrC as the structural genes encoding tetrathionate reductase in Salmonella enterica serovar Typhimurium."
+                  }
+                ]
+              },
+              {
+                "uniprot_id": "UniProtKB:Q7CQM9",
+                "protein_label": "Tetrathionate reductase subunit B",
+                "gene_symbol": "ttrB",
+                "taxon_id": "NCBITaxon:99287",
+                "taxon_label": "Salmonella enterica subsp. enterica serovar Typhimurium str. LT2",
+                "entry_status": "REVIEWED",
+                "proteome_id": "UP000001014",
+                "retrieved_on": "2026-10-23",
+                "entry_version": 121,
+                "sequence_version": 1,
+                "role": "TtrB is the iron-sulfur electron-transfer subunit B of the heterotrimeric TtrABC tetrathionate reductase complex in Salmonella enterica serovar Typhimurium LT2; this accession represents the TtrB subunit rather than the full heterotrimer.",
+                "evidence": [
+                  {
+                    "reference": "DOI:10.1046/j.1365-2958.1999.01345.x",
+                    "snippet": "ttrA, ttrB and ttrC are the tetrathionate reductase structural genes",
+                    "notes": "Hensel et al. identify ttrA, ttrB, and ttrC as the structural genes encoding tetrathionate reductase in Salmonella enterica serovar Typhimurium."
+                  }
+                ]
+              }
+            ]
           }
         ],
         "edges": [
@@ -165280,6 +165671,20 @@
                 "reference": "DOI:10.1128/JB.183.8.2463-2475.2001",
                 "snippet": "Salmonella reduces tetrathionate to thiosulfate",
                 "notes": "Price-Carter et al. report that Salmonella reduces tetrathionate to thiosulfate."
+              }
+            ]
+          },
+          {
+            "subject": "tetrathionate_respiration_ttr_complex",
+            "predicate": "enables",
+            "predicate_id": "RO:0002327",
+            "object": "tetrathionate_respiration_ttr_activity",
+            "description": "The heterotrimeric TtrABC tetrathionate reductase complex enables respiratory tetrathionate reductase activity.",
+            "evidence": [
+              {
+                "reference": "DOI:10.1046/j.1365-2958.1999.01345.x",
+                "snippet": "Sequence analysis suggests that TtrA contains a molybdopterin guanine dinucleotide cofactor and a [4Fe-4S] cluster, that TtrB binds four [4Fe-4S] clusters, and that TtrC is an integral membrane protein containing a quinol oxidation site.",
+                "notes": "Hensel et al. characterize the TtrA, TtrB, and TtrC subunits of the Salmonella enterica serovar Typhimurium tetrathionate reductase complex."
               }
             ]
           }
@@ -166258,6 +166663,11 @@
         "reference": "DOI:10.3389/fmicb.2024.1467153",
         "snippet": "switching from aerobic intracellular energy metabolism to trimethylamine N-oxide respiration",
         "notes": "Qiu and Tang use the unabbreviated respiration label while linking high-pressure survival in Shewanella eurypsychrophilus YLB-09 to TMAO respiration."
+      },
+      {
+        "reference": "DOI:10.1111/1462-2920.12726",
+        "snippet": "the induction of torCAD, but not genes encoding alternative TMAO reductases",
+        "notes": "Denby et al. show that adaptation of Escherichia coli K-12 to anaerobic respiratory growth on TMAO specifically induces the torCAD operon encoding the TorCA TMAO reductase system."
       }
     ],
     "canonical_examples": [
@@ -166282,7 +166692,7 @@
         "discussion_id": "trimethylamine-n-oxide-respiration-protein-example-gap",
         "prompt": "Add strain-matched UniProtKB protein_examples for Escherichia coli K-12 TMAO reductase (TorA/TorC) encoded by the torCAD operon so tmao_respiration_tor_pathway_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
         "kind": "CURATION_TODO",
-        "status": "OPEN",
+        "status": "RESOLVED",
         "attaches_to": [
           "causal_graphs#tmao_respiration_tor_pathway_sketch"
         ],
@@ -166296,7 +166706,9 @@
             "snippet": "anaerobic respiratory growth with trimethylamine-N-oxide (TMAO) as the terminal electron acceptor",
             "explanation": "Existing record-level evidence supports the connected NONMECHANISTIC pathway/function graph but does not provide strain-matched UniProtKB protein accessions for protein_examples."
           }
-        ]
+        ],
+        "resolved_date": "2026-10-23",
+        "resolution_note": "Promoted tmao_respiration_tor_pathway_sketch to MECHANISTIC by adding InterPro:IPR041954-grounded GENE_OR_PROTEIN node tmao_respiration_tor_system with reviewed Escherichia coli K-12 (NCBITaxon:83333; UP000000625) protein_examples UniProtKB:P33225 (TorA) and UniProtKB:P33226 (TorC) backed by DOI:10.1111/1462-2920.12726."
       }
     ],
     "curation_history": [
@@ -166313,6 +166725,13 @@
         "action": "CURATE_CAUSAL_GRAPH",
         "changes": "Added NONMECHANISTIC causal_graphs entry (tmao_respiration_tor_pathway_sketch) and OPEN CURATION_TODO discussion (trimethylamine-n-oxide-respiration-protein-example-gap) anchored on existing verbatim record evidence snippets.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-23T11:45:00Z",
+        "curator": "claude",
+        "action": "CURATE_PROTEIN_TAXON_EXAMPLE",
+        "changes": "Promoted tmao_respiration_tor_pathway_sketch to MECHANISTIC; added InterPro:IPR041954-grounded GENE_OR_PROTEIN node tmao_respiration_tor_system with reviewed Escherichia coli K-12 (NCBITaxon:83333; UP000000625) protein_examples UniProtKB:P33225 (TorA) and UniProtKB:P33226 (TorC) backed by DOI:10.1111/1462-2920.12726; resolved trimethylamine-n-oxide-respiration-protein-example-gap.",
+        "llm_assisted": true
       }
     ],
     "causal_graphs": [
@@ -166320,8 +166739,8 @@
         "graph_id": "tmao_respiration_tor_pathway_sketch",
         "title": "torCAD-encoded TMAO reductase anaerobic respiratory pathway",
         "description": "Evidence-backed metabolic pathway sketch linking TMAO terminal electron acceptance, torCAD-encoded TMAO reductase catalysis, and trimethylamine formation to TMAO respiration.",
-        "scope_status": "NONMECHANISTIC",
-        "scope_notes": "Pathway-and-activity sketch backed by DOI:10.1111/1462-2920.12726 and DOI:10.3389/fmicb.2024.1467153; strain-matched UniProtKB protein examples for Escherichia coli K-12 TMAO reductase TorA/TorC encoded by the torCAD operon remain to be curated.",
+        "scope_status": "MECHANISTIC",
+        "scope_notes": "Mechanistic graph backed by DOI:10.1111/1462-2920.12726 and DOI:10.3389/fmicb.2024.1467153; exemplified on tmao_respiration_tor_system with Escherichia coli K-12 (NCBITaxon:83333; UP000000625) TMAO reductase subunits TorA (UniProtKB:P33225) and TorC (UniProtKB:P33226).",
         "nodes": [
           {
             "node_id": "tmao_respiration_trait",
@@ -166350,6 +166769,60 @@
             "node_type": "CHEMICAL",
             "grounding": "CHEBI:18139",
             "description": "Trimethylamine (TMA) produced by respiratory reduction of TMAO."
+          },
+          {
+            "node_id": "tmao_respiration_tor_system",
+            "label": "TMAO reductase TorCA",
+            "node_type": "GENE_OR_PROTEIN",
+            "grounding": "InterPro:IPR041954",
+            "gene_symbols": [
+              "torC",
+              "torA"
+            ],
+            "operon": "torCAD",
+            "description": "Periplasmic TMAO reductase (TorA) and membrane-anchored pentaheme c-type cytochrome (TorC) encoded by the torCAD operon.",
+            "protein_examples": [
+              {
+                "uniprot_id": "UniProtKB:P33225",
+                "protein_label": "Trimethylamine-N-oxide reductase 1",
+                "gene_symbol": "torA",
+                "taxon_id": "NCBITaxon:83333",
+                "taxon_label": "Escherichia coli K-12",
+                "entry_status": "REVIEWED",
+                "proteome_id": "UP000000625",
+                "retrieved_on": "2026-10-23",
+                "entry_version": 195,
+                "sequence_version": 2,
+                "role": "TorA is the periplasmic terminal molybdoenzyme subunit encoded by the torCAD operon that reduces TMAO to TMA in Escherichia coli K-12; this accession represents the TorA catalytic subunit.",
+                "evidence": [
+                  {
+                    "reference": "DOI:10.1111/1462-2920.12726",
+                    "snippet": "TMAO is reduced to TMA by the enzyme TMAO reductase, encoded by the torCAD operon",
+                    "notes": "Denby et al. characterize the Escherichia coli K-12 torCAD-encoded TMAO reductase that reduces TMAO to TMA."
+                  }
+                ]
+              },
+              {
+                "uniprot_id": "UniProtKB:P33226",
+                "protein_label": "Cytochrome c-type protein TorC",
+                "gene_symbol": "torC",
+                "taxon_id": "NCBITaxon:83333",
+                "taxon_label": "Escherichia coli K-12",
+                "entry_status": "REVIEWED",
+                "proteome_id": "UP000000625",
+                "retrieved_on": "2026-10-23",
+                "entry_version": 196,
+                "sequence_version": 3,
+                "role": "TorC is the membrane-anchored pentaheme c-type cytochrome electron-transfer subunit encoded by the torCAD operon in Escherichia coli K-12; this accession represents the TorC cytochrome subunit.",
+                "evidence": [
+                  {
+                    "reference": "DOI:10.1111/1462-2920.12726",
+                    "snippet": "TMAO is reduced to TMA by the enzyme TMAO reductase, encoded by the torCAD operon",
+                    "notes": "Denby et al. characterize the Escherichia coli K-12 torCAD operon encoding the TorCA TMAO reductase system."
+                  }
+                ]
+              }
+            ]
           }
         ],
         "edges": [
@@ -166392,6 +166865,20 @@
                 "reference": "DOI:10.3389/fmicb.2024.1467153",
                 "snippet": "switching from aerobic intracellular energy metabolism to trimethylamine N-oxide respiration",
                 "notes": "Qiu and Tang describe switching from aerobic intracellular energy metabolism to trimethylamine N-oxide respiration."
+              }
+            ]
+          },
+          {
+            "subject": "tmao_respiration_tor_system",
+            "predicate": "enables",
+            "predicate_id": "RO:0002327",
+            "object": "tmao_respiration_reductase_activity",
+            "description": "The torCAD-encoded TorCA TMAO reductase system enables respiratory TMAO reductase activity.",
+            "evidence": [
+              {
+                "reference": "DOI:10.1111/1462-2920.12726",
+                "snippet": "the induction of torCAD, but not genes encoding alternative TMAO reductases",
+                "notes": "Denby et al. show that anaerobic respiratory growth on TMAO specifically induces the torCAD operon encoding the TorCA TMAO reductase system."
               }
             ]
           }
@@ -206489,6 +206976,11 @@
         "reference": "DOI:10.1016/j.resmic.2012.11.004",
         "snippet": "Arginine conversion through the arginine deiminase (ADI) pathway is a common metabolic trait of Lactobacillus sakei which is ascribed to an arc operon and which inquisitively involves citrulline excretion and re-uptake.",
         "notes": "Rimaux et al. use the pathway-activity phrasing while studying the transporter coupled to citrulline and ornithine exchange during L. sakei ADI pathway activity."
+      },
+      {
+        "reference": "DOI:10.1128/aem.07724-11",
+        "snippet": "Furthermore, a differential relative expression of the individual genes of the arc operon was found, with the highest relative gene expression occurring for the first two genes of the arc operon (arcA and arcB).",
+        "notes": "Rimaux et al. characterize differential expression of the arc operon genes (including arcA and arcB) during ADI pathway activity in Latilactobacillus sakei."
       }
     ],
     "canonical_examples": [
@@ -206513,7 +207005,7 @@
         "discussion_id": "arginine-dihydrolase-activity-protein-example-gap",
         "prompt": "Add strain-matched UniProtKB protein_examples for Latilactobacillus sakei arc-operon arginine deiminase pathway enzymes (ArcA, ArcB, ArcC) so arginine_dihydrolase_adi_pathway_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
         "kind": "CURATION_TODO",
-        "status": "OPEN",
+        "status": "RESOLVED",
         "attaches_to": [
           "causal_graphs#arginine_dihydrolase_adi_pathway_sketch"
         ],
@@ -206527,7 +207019,9 @@
             "snippet": "Arginine conversion through the arginine deiminase (ADI) pathway is a common metabolic trait of Lactobacillus sakei which is ascribed to an arc operon and which inquisitively involves citrulline excretion and re-uptake.",
             "explanation": "Existing record-level evidence supports the connected NONMECHANISTIC pathway/function graph but does not provide strain-matched UniProtKB protein accessions for protein_examples."
           }
-        ]
+        ],
+        "resolved_date": "2026-10-23",
+        "resolution_note": "Promoted arginine_dihydrolase_adi_pathway_sketch to MECHANISTIC by adding InterPro:IPR003876-grounded GENE_OR_PROTEIN node arginine_dihydrolase_arc_system with reviewed Latilactobacillus sakei (NCBITaxon:1599) protein_examples UniProtKB:O53088 (ArcA), UniProtKB:O53089 (ArcB), and UniProtKB:O53090 (ArcC) backed by DOI:10.1016/j.resmic.2012.11.004 and DOI:10.1128/aem.07724-11."
       }
     ],
     "curation_history": [
@@ -206544,6 +207038,13 @@
         "action": "CURATE_CAUSAL_GRAPH",
         "changes": "Added NONMECHANISTIC causal_graphs entry (arginine_dihydrolase_adi_pathway_sketch) and OPEN CURATION_TODO discussion (arginine-dihydrolase-activity-protein-example-gap) anchored on existing verbatim record evidence snippets.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-23T11:45:00Z",
+        "curator": "claude",
+        "action": "CURATE_PROTEIN_TAXON_EXAMPLE",
+        "changes": "Promoted arginine_dihydrolase_adi_pathway_sketch to MECHANISTIC; added InterPro:IPR003876-grounded GENE_OR_PROTEIN node arginine_dihydrolase_arc_system with reviewed Latilactobacillus sakei (NCBITaxon:1599) protein_examples UniProtKB:O53088 (ArcA), UniProtKB:O53089 (ArcB), and UniProtKB:O53090 (ArcC) backed by DOI:10.1016/j.resmic.2012.11.004 and DOI:10.1128/aem.07724-11; resolved arginine-dihydrolase-activity-protein-example-gap.",
+        "llm_assisted": true
       }
     ],
     "causal_graphs": [
@@ -206551,8 +207052,8 @@
         "graph_id": "arginine_dihydrolase_adi_pathway_sketch",
         "title": "Arginine deiminase (ADI) pathway conversion of L-arginine to citrulline and ornithine",
         "description": "Evidence-backed physiological mechanism sketch linking arginine deiminase catalysis, L-citrulline and L-ornithine formation, and ADI pathway ATP generation to arginine dihydrolase activity.",
-        "scope_status": "NONMECHANISTIC",
-        "scope_notes": "Pathway-and-activity sketch backed by EC 3.5.3.6, DOI:10.1016/j.fm.2010.11.016, DOI:10.1128/aem.07724-11, and DOI:10.1016/j.resmic.2012.11.004; strain-matched UniProtKB protein examples for Latilactobacillus sakei arc operon enzymes (ArcA, ArcB, ArcC) remain to be curated.",
+        "scope_status": "MECHANISTIC",
+        "scope_notes": "Mechanistic graph backed by EC 3.5.3.6, DOI:10.1016/j.fm.2010.11.016, DOI:10.1128/aem.07724-11, and DOI:10.1016/j.resmic.2012.11.004; exemplified on arginine_dihydrolase_arc_system with Latilactobacillus sakei (NCBITaxon:1599) arc operon enzymes ArcA (UniProtKB:O53088), ArcB (UniProtKB:O53089), and ArcC (UniProtKB:O53090).",
         "nodes": [
           {
             "node_id": "arginine_dihydrolase_activity_trait",
@@ -206581,6 +207082,78 @@
             "node_type": "CHEMICAL",
             "grounding": "CHEBI:16349",
             "description": "L-citrulline intermediate produced from L-arginine by arginine deiminase."
+          },
+          {
+            "node_id": "arginine_dihydrolase_arc_system",
+            "label": "arginine deiminase ArcABC",
+            "node_type": "GENE_OR_PROTEIN",
+            "grounding": "InterPro:IPR003876",
+            "gene_symbols": [
+              "arcA",
+              "arcB",
+              "arcC"
+            ],
+            "operon": "arcABCTD",
+            "description": "Arginine deiminase (ArcA), catabolic ornithine carbamoyltransferase (ArcB), and carbamate kinase (ArcC) enzymes encoded by the arc operon.",
+            "protein_examples": [
+              {
+                "uniprot_id": "UniProtKB:O53088",
+                "protein_label": "Arginine deiminase",
+                "gene_symbol": "arcA",
+                "taxon_id": "NCBITaxon:1599",
+                "taxon_label": "Latilactobacillus sakei",
+                "entry_status": "REVIEWED",
+                "retrieved_on": "2026-10-23",
+                "entry_version": 106,
+                "sequence_version": 1,
+                "role": "ArcA is the arginine deiminase enzyme of the arc operon that hydrolyzes L-arginine to L-citrulline and ammonia in Latilactobacillus sakei; this accession represents the ArcA enzyme component.",
+                "evidence": [
+                  {
+                    "reference": "DOI:10.1016/j.resmic.2012.11.004",
+                    "snippet": "Arginine conversion through the arginine deiminase (ADI) pathway is a common metabolic trait of Lactobacillus sakei which is ascribed to an arc operon and which inquisitively involves citrulline excretion and re-uptake.",
+                    "notes": "Rimaux et al. characterize the Lactobacillus (Latilactobacillus) sakei arc-operon-encoded arginine deiminase (ADI) pathway."
+                  }
+                ]
+              },
+              {
+                "uniprot_id": "UniProtKB:O53089",
+                "protein_label": "Ornithine carbamoyltransferase, catabolic",
+                "gene_symbol": "arcB",
+                "taxon_id": "NCBITaxon:1599",
+                "taxon_label": "Latilactobacillus sakei",
+                "entry_status": "REVIEWED",
+                "retrieved_on": "2026-10-23",
+                "entry_version": 103,
+                "sequence_version": 1,
+                "role": "ArcB is the catabolic ornithine carbamoyltransferase of the arc operon that converts L-citrulline to L-ornithine and carbamoyl phosphate in Latilactobacillus sakei; this accession represents the ArcB enzyme component.",
+                "evidence": [
+                  {
+                    "reference": "DOI:10.1016/j.resmic.2012.11.004",
+                    "snippet": "Arginine conversion through the arginine deiminase (ADI) pathway is a common metabolic trait of Lactobacillus sakei which is ascribed to an arc operon and which inquisitively involves citrulline excretion and re-uptake.",
+                    "notes": "Rimaux et al. characterize the Lactobacillus (Latilactobacillus) sakei arc-operon-encoded arginine deiminase (ADI) pathway."
+                  }
+                ]
+              },
+              {
+                "uniprot_id": "UniProtKB:O53090",
+                "protein_label": "Carbamate kinase",
+                "gene_symbol": "arcC",
+                "taxon_id": "NCBITaxon:1599",
+                "taxon_label": "Latilactobacillus sakei",
+                "entry_status": "REVIEWED",
+                "retrieved_on": "2026-10-23",
+                "entry_version": 107,
+                "sequence_version": 1,
+                "role": "ArcC is the carbamate kinase of the arc operon that transfers phosphate from carbamoyl phosphate to ADP to generate ATP in Latilactobacillus sakei; this accession represents the ArcC enzyme component.",
+                "evidence": [
+                  {
+                    "reference": "DOI:10.1016/j.resmic.2012.11.004",
+                    "snippet": "Arginine conversion through the arginine deiminase (ADI) pathway is a common metabolic trait of Lactobacillus sakei which is ascribed to an arc operon and which inquisitively involves citrulline excretion and re-uptake.",
+                    "notes": "Rimaux et al. characterize the Lactobacillus (Latilactobacillus) sakei arc-operon-encoded arginine deiminase (ADI) pathway."
+                  }
+                ]
+              }
+            ]
           }
         ],
         "edges": [
@@ -206623,6 +207196,20 @@
                 "reference": "DOI:10.1016/j.fm.2010.11.016",
                 "snippet": "Arginine conversion through the ADI pathway, which was activated from the stationary growth phase on, resulted in the production of both citrulline and ornithine for all pH conditions tested.",
                 "notes": "Rimaux et al. show that arginine conversion through the ADI pathway produces both citrulline and ornithine."
+              }
+            ]
+          },
+          {
+            "subject": "arginine_dihydrolase_arc_system",
+            "predicate": "enables",
+            "predicate_id": "RO:0002327",
+            "object": "arginine_dihydrolase_deiminase_activity",
+            "description": "The arc-operon-encoded ArcABC system enables arginine deiminase activity and ADI pathway flux.",
+            "evidence": [
+              {
+                "reference": "DOI:10.1128/aem.07724-11",
+                "snippet": "Furthermore, a differential relative expression of the individual genes of the arc operon was found, with the highest relative gene expression occurring for the first two genes of the arc operon (arcA and arcB).",
+                "notes": "Rimaux et al. show expression of the arc operon genes (including arcA and arcB) during ADI pathway activity in Latilactobacillus sakei."
               }
             ]
           }
@@ -223867,6 +224454,11 @@
         "reference": "DOI:10.1128/jb.01306-06",
         "snippet": "Unexpectedly, the tolerance of P(i)-starved cells to fermentation acids was markedly increased as a result of the activity of the inducible CadBA lysine-dependent acid resistance system that consumes one proton and produces the diamine cadaverine.",
         "notes": "Moreau showed that the Escherichia coli inducible CadBA lysine-dependent acid resistance system produces cadaverine during phosphate starvation."
+      },
+      {
+        "reference": "DOI:10.1128/jb.01306-06",
+        "snippet": "CadA activity was favored in P(i)-starved cells probably because weak organic acids slowly reenter cells fermenting glucose.",
+        "notes": "Moreau demonstrates that inducible lysine decarboxylase CadA activity protects phosphate-starved Escherichia coli K-12 MG1655 cells fermenting glucose."
       }
     ],
     "canonical_examples": [
@@ -223874,6 +224466,12 @@
         "taxon_id": "NCBITaxon:562",
         "taxon_label": "Escherichia coli",
         "note": "Moreau reported CadBA lysine-dependent acid resistance activity in phosphate-starved Escherichia coli.",
+        "reference": "DOI:10.1128/jb.01306-06"
+      },
+      {
+        "taxon_id": "NCBITaxon:83333",
+        "taxon_label": "Escherichia coli K-12",
+        "note": "Moreau characterized inducible CadBA lysine-dependent acid resistance and cadaverine production in phosphate-starved Escherichia coli K-12 strain MG1655.",
         "reference": "DOI:10.1128/jb.01306-06"
       }
     ],
@@ -223891,7 +224489,7 @@
         "discussion_id": "lysine-decarboxylase-activity-protein-example-gap",
         "prompt": "Add strain-matched UniProtKB protein_examples for Escherichia coli inducible lysine decarboxylase (CadA) and lysine-cadaverine antiporter (CadB) so lysine_decarboxylase_cadba_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
         "kind": "CURATION_TODO",
-        "status": "OPEN",
+        "status": "RESOLVED",
         "attaches_to": [
           "causal_graphs#lysine_decarboxylase_cadba_sketch"
         ],
@@ -223905,7 +224503,9 @@
             "snippet": "Unexpectedly, the tolerance of P(i)-starved cells to fermentation acids was markedly increased as a result of the activity of the inducible CadBA lysine-dependent acid resistance system that consumes one proton and produces the diamine cadaverine.",
             "explanation": "Existing record-level evidence supports the connected NONMECHANISTIC pathway/function graph but does not provide strain-matched UniProtKB protein accessions for protein_examples."
           }
-        ]
+        ],
+        "resolved_date": "2026-10-23",
+        "resolution_note": "Added canonical_examples entry Escherichia coli K-12 (NCBITaxon:83333; DOI:10.1128/jb.01306-06) and promoted lysine_decarboxylase_cadba_sketch to MECHANISTIC by adding InterPro:IPR011193-grounded GENE_OR_PROTEIN node lysine_decarboxylase_cada with reviewed protein_examples UniProtKB:P0A9H3 (CadA) and UniProtKB:P0AAE8 (CadB)."
       }
     ],
     "curation_history": [
@@ -223922,6 +224522,13 @@
         "action": "CURATE_CAUSAL_GRAPH",
         "changes": "Added NONMECHANISTIC causal_graphs entry (lysine_decarboxylase_cadba_sketch) and OPEN CURATION_TODO discussion (lysine-decarboxylase-activity-protein-example-gap) anchored on existing verbatim record evidence snippets.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-23T11:45:00Z",
+        "curator": "claude",
+        "action": "CURATE_PROTEIN_TAXON_EXAMPLE",
+        "changes": "Added Escherichia coli K-12 (NCBITaxon:83333; DOI:10.1128/jb.01306-06) canonical example; promoted lysine_decarboxylase_cadba_sketch to MECHANISTIC with InterPro:IPR011193-grounded GENE_OR_PROTEIN node lysine_decarboxylase_cada and reviewed protein_examples UniProtKB:P0A9H3 (CadA) and UniProtKB:P0AAE8 (CadB); resolved lysine-decarboxylase-activity-protein-example-gap.",
+        "llm_assisted": true
       }
     ],
     "causal_graphs": [
@@ -223929,8 +224536,8 @@
         "graph_id": "lysine_decarboxylase_cadba_sketch",
         "title": "Lysine decarboxylation to cadaverine and CadBA proton-consuming acid resistance",
         "description": "Evidence-backed physiological mechanism sketch linking lysine decarboxylase catalytic activity and cadaverine production to the lysine decarboxylase activity phenotype.",
-        "scope_status": "NONMECHANISTIC",
-        "scope_notes": "Activity-and-reaction sketch backed by EC 4.1.1.18 and DOI:10.1128/jb.01306-06; strain-matched UniProtKB protein examples for Escherichia coli CadA inducible lysine decarboxylase and CadB lysine-cadaverine antiporter remain to be curated.",
+        "scope_status": "MECHANISTIC",
+        "scope_notes": "Mechanistic graph backed by EC 4.1.1.18 and DOI:10.1128/jb.01306-06; exemplified on lysine_decarboxylase_cada with Escherichia coli K-12 (NCBITaxon:83333; UP000000625) inducible lysine decarboxylase CadA (UniProtKB:P0A9H3) and cadaverine/lysine antiporter CadB (UniProtKB:P0AAE8).",
         "nodes": [
           {
             "node_id": "lysine_decarboxylase_activity_trait",
@@ -223952,6 +224559,60 @@
             "node_type": "CHEMICAL",
             "grounding": "CHEBI:18127",
             "description": "Diamine cadaverine produced by decarboxylation of L-lysine."
+          },
+          {
+            "node_id": "lysine_decarboxylase_cada",
+            "label": "inducible lysine decarboxylase CadA",
+            "node_type": "GENE_OR_PROTEIN",
+            "grounding": "InterPro:IPR011193",
+            "gene_symbols": [
+              "cadB",
+              "cadA"
+            ],
+            "operon": "cadBA",
+            "description": "Inducible lysine decarboxylase (CadA) and cadaverine/lysine antiporter (CadB) acid-resistance system.",
+            "protein_examples": [
+              {
+                "uniprot_id": "UniProtKB:P0A9H3",
+                "protein_label": "Inducible lysine decarboxylase",
+                "gene_symbol": "cadA",
+                "taxon_id": "NCBITaxon:83333",
+                "taxon_label": "Escherichia coli K-12",
+                "entry_status": "REVIEWED",
+                "proteome_id": "UP000000625",
+                "retrieved_on": "2026-10-23",
+                "entry_version": 145,
+                "sequence_version": 1,
+                "role": "CadA is the inducible PLP-dependent lysine decarboxylase component of the CadBA acid-resistance system in Escherichia coli K-12; this accession represents the CadA decarboxylase subunit.",
+                "evidence": [
+                  {
+                    "reference": "DOI:10.1128/jb.01306-06",
+                    "snippet": "Unexpectedly, the tolerance of P(i)-starved cells to fermentation acids was markedly increased as a result of the activity of the inducible CadBA lysine-dependent acid resistance system that consumes one proton and produces the diamine cadaverine.",
+                    "notes": "Moreau demonstrates that the inducible CadBA system in Escherichia coli K-12 MG1655 decarboxylates lysine to cadaverine while consuming a proton."
+                  }
+                ]
+              },
+              {
+                "uniprot_id": "UniProtKB:P0AAE8",
+                "protein_label": "Cadaverine/lysine antiporter",
+                "gene_symbol": "cadB",
+                "taxon_id": "NCBITaxon:83333",
+                "taxon_label": "Escherichia coli K-12",
+                "entry_status": "REVIEWED",
+                "proteome_id": "UP000000625",
+                "retrieved_on": "2026-10-23",
+                "entry_version": 141,
+                "sequence_version": 1,
+                "role": "CadB is the inner-membrane cadaverine/lysine antiporter component of the CadBA acid-resistance system in Escherichia coli K-12; this accession represents the CadB antiporter subunit.",
+                "evidence": [
+                  {
+                    "reference": "DOI:10.1128/jb.01306-06",
+                    "snippet": "Unexpectedly, the tolerance of P(i)-starved cells to fermentation acids was markedly increased as a result of the activity of the inducible CadBA lysine-dependent acid resistance system that consumes one proton and produces the diamine cadaverine.",
+                    "notes": "Moreau demonstrates that the inducible CadBA system in Escherichia coli K-12 MG1655 mediates lysine-dependent acid resistance and cadaverine export."
+                  }
+                ]
+              }
+            ]
           }
         ],
         "edges": [
@@ -223980,6 +224641,20 @@
                 "reference": "https://iubmb.qmul.ac.uk/enzyme/EC4/1/1/18.html",
                 "snippet": "Reaction: L-lysine = cadaverine + CO2",
                 "notes": "IUBMB EC 4.1.1.18 defines the lysine decarboxylase reaction converting L-lysine into cadaverine and CO2."
+              }
+            ]
+          },
+          {
+            "subject": "lysine_decarboxylase_cada",
+            "predicate": "enables",
+            "predicate_id": "RO:0002327",
+            "object": "lysine_decarboxylase_catalytic_activity",
+            "description": "Inducible lysine decarboxylase CadA enables catalytic lysine decarboxylation in phosphate-starved Escherichia coli K-12 cells.",
+            "evidence": [
+              {
+                "reference": "DOI:10.1128/jb.01306-06",
+                "snippet": "CadA activity was favored in P(i)-starved cells probably because weak organic acids slowly reenter cells fermenting glucose.",
+                "notes": "Moreau shows that inducible CadA lysine decarboxylase activity is favored in phosphate-starved Escherichia coli K-12 cells fermenting glucose."
               }
             ]
           }
@@ -235463,7 +236138,8 @@
             "snippet": "Pyoverdines are fluorescent siderophores of pseudomonads that play important roles for growth under iron-limiting conditions.",
             "explanation": "Existing record-level evidence supports the connected NONMECHANISTIC pathway/function graph but does not provide strain-matched UniProtKB protein accessions for protein_examples."
           }
-        ]
+        ],
+        "notes": "Cycle 2 Stage 3 UniProt audit: canonical_examples cites species-level Pseudomonas aeruginosa (NCBITaxon:287; DOI:10.1073/pnas.0908760106) and Pseudomonas fluorescens (NCBITaxon:294; DOI:10.15698/mic2018.10.649), whereas reviewed Swiss-Prot pyoverdine biosynthesis/transport proteins (e.g., PvdA UniProtKB:Q51548, FpvA UniProtKB:P48632) are annotated on strain Pseudomonas aeruginosa PAO1 (NCBITaxon:208964; UP000002438) and current record evidence snippets do not name individual pvd/fpv gene products. Keeping graph NONMECHANISTIC and discussion OPEN until a PAO1-specific primary source snippet and canonical_examples entry are added."
       }
     ],
     "curation_history": [
@@ -235479,6 +236155,13 @@
         "curator": "claude",
         "action": "CURATE_CAUSAL_GRAPH",
         "changes": "Added NONMECHANISTIC causal_graphs entry (siderophore_production_iron_scavenging_sketch) and OPEN CURATION_TODO discussion (siderophore-production-protein-example-gap) anchored on existing verbatim record evidence snippets.",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-23T11:45:00Z",
+        "curator": "claude",
+        "action": "RECORD_CURATION_DISCUSSION",
+        "changes": "Recorded Cycle 2 Stage 3 UniProtKB audit note on siderophore-production-protein-example-gap documenting the taxon-rank and gene-snippet blocker between species-level canonical_examples (NCBITaxon:287) and PAO1 Swiss-Prot entries (NCBITaxon:208964).",
         "llm_assisted": true
       }
     ],

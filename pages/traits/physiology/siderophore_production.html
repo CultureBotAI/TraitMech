@@ -388,6 +388,11 @@
 
 
 
+        <details class="discussion-notes">
+          <summary class="meta">Provenance</summary>
+          <p class="meta">Cycle 2 Stage 3 UniProt audit: canonical_examples cites species-level Pseudomonas aeruginosa (NCBITaxon:287; DOI:10.1073/pnas.0908760106) and Pseudomonas fluorescens (NCBITaxon:294; DOI:10.15698/mic2018.10.649), whereas reviewed Swiss-Prot pyoverdine biosynthesis/transport proteins (e.g., PvdA UniProtKB:Q51548, FpvA UniProtKB:P48632) are annotated on strain Pseudomonas aeruginosa PAO1 (NCBITaxon:208964; UP000002438) and current record evidence snippets do not name individual pvd/fpv gene products. Keeping graph NONMECHANISTIC and discussion OPEN until a PAO1-specific primary source snippet and canonical_examples entry are added.</p>
+        </details>
+
       </div>
 
     </div>
@@ -407,6 +412,12 @@
           <time>2026-10-23T09:40:48Z</time> ·
           <strong>CURATE_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added NONMECHANISTIC causal_graphs entry (siderophore_production_iron_scavenging_sketch) and OPEN CURATION_TODO discussion (siderophore-production-protein-example-gap) anchored on existing verbatim record evidence snippets.</p>
+        </li>
+
+        <li>
+          <time>2026-10-23T11:45:00Z</time> ·
+          <strong>RECORD_CURATION_DISCUSSION</strong> · claude
+          <p class="changes">Recorded Cycle 2 Stage 3 UniProtKB audit note on siderophore-production-protein-example-gap documenting the taxon-rank and gene-snippet blocker between species-level canonical_examples (NCBITaxon:287) and PAO1 Swiss-Prot entries (NCBITaxon:208964).</p>
         </li>
 
       </ol>
@@ -820,7 +831,7 @@ function renderPathograph(containerId, data) {
       third-party source terms apply
     </div>
     <div>
-      Record as of 2026-10-23 09:40 UTC
+      Record as of 2026-10-23 11:45 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
       · embedding coverage 100.0%
