@@ -27,16 +27,16 @@ previous_evidence:
   sha256: 1bb1aa12138f8562dcc3f57d321ee35461719215c7e1ca41a4f45ebd1de516d1
 artifacts:
 - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-05/revision-0001/issue_map.md
-  sha256: 77a976afa712c6ef6cafa2e7c2da2ee3e4385d804996760887fb7c4dd565798b
+  sha256: 6d354b260b16577efafda2c9bc83924779504b2070614f30e19ecb0412c74563
   kind: issue_map
 - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-05/revision-0001/validation.md
-  sha256: 6286de80246d191fbb983f46d2bd0cba69e00da5871caf74d207b6026ed8af80
+  sha256: 23d404d6c2a0ef13cb875488c60211222ffc46c9502e11fc4c21efaf35961790
   kind: validation
 - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-05/revision-0001/remediated_records_review.yaml
-  sha256: 67abca414011576a926fe12608ca826136554bd4aeb00e2fb3d25b2fb7d7a476
+  sha256: 82013a9eaa4b6c8ca7c8a3c87e1dff18d3069939291a8e1ead35398471d16e48
   kind: supporting
 - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-05/revision-0001/remediated_records_review.md
-  sha256: 138adbde3f93249eeaf5656b69b2c01ea14379505eb693431b6960db0d07c02e
+  sha256: a1cfd8d196fa9bd0f21ec582265058246a82e030e0fe79cfdb75332219b85522
   kind: supporting
 - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-05/revision-0001/c2s5_coverage_full.json
   sha256: a383b6278939d39bf91f02f864e9e5a2951f7ba8601fd21eae541300e535e81b

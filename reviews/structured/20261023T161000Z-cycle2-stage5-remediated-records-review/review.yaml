@@ -91,7 +91,7 @@ source:
     sha256: 46c47fc627b80ccbba1e8ab3fb6f2aee93bc2aef7aaf72fe9aadc3257f2c02dd
     role: context
   - path: tests/test_curate_stage5_review_findings.py
-    sha256: 7d271aaf31f5531a69dcac3a3de9edf3bbf3c13cf7a2f2bfbb6137de26d6da08
+    sha256: a542722f34038c2a81730fc18541c66630e0995038e0f24022d860b512720296
     role: context
 scope:
   description: Focused post-remediation review of all 6 TraitRecord YAML files modified

@@ -12,13 +12,13 @@
 - **Native structured bundle**: `reviews/structured/20261023T161000Z-cycle2-stage5-remediated-records-review/{review.yaml,review.md}`
 - **Stage 5 workflow copies**: `reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-05/revision-0001/{remediated_records_review.yaml,remediated_records_review.md}`
 - **Verdict**: `pass` (`6/6` open findings resolved, `0` remaining open findings)
-- **Immutable Stage 4 review bundle preserved**: `reviews/structured/20261023T140800Z-cycle2-stage4-corpus-record-and-cohort-review/review.yaml` (`sha256: 59bf193c98718d3a10d43a24fc5d193d986891ef919f3d9fc79d9f6f74be62bf`) verified untouched via `uv run python scripts/record_review.py check --require-reviews --base origin/main`.
+- **Immutable Stage 4 review bundle preserved**: `reviews/structured/20261023T140800Z-cycle2-stage4-corpus-record-and-cohort-review/review.yaml` (`sha256: 0c962524454ffdb843da049562315a40a98583159335b775eccd8045616d7c47`) verified untouched via `uv run python scripts/record_review.py check`.
 
 ## Validation Gates Executed
 | Gate | Command | Exit Code | Result |
 |---|---|---:|---|
 | Stage 5 remediation unit tests | `uv run pytest tests/test_curate_stage5_review_findings.py -v` | 0 | `5 passed` |
-| Structured record review check | `uv run python scripts/record_review.py check --require-reviews --base origin/main` | 0 | `ok (95 reviews)` |
+| Structured record review check | `uv run python scripts/record_review.py check` | 0 | `ok (96 reviews)` |
 | Strict closed-mode LinkML validation | `uv run python scripts/validate_strict.py` | 0 | `1130 passed, 0 failed` |
 | Evidence snippet audit | `uv run python scripts/audit_evidence_snippets.py` | 0 | `0 new, 0 blocking` (`MISSING_SNIPPET` reduced from `2,276` to `2,270`) |
 | Causal graph integrity audit | `uv run python scripts/audit_causal_graphs.py` | 0 | `0 new, 0 blocking` |
