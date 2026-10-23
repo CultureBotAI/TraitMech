@@ -28,6 +28,11 @@ evidence:
     N-oxide respiration
   notes: Qiu and Tang use the unabbreviated respiration label while linking high-pressure
     survival in Shewanella eurypsychrophilus YLB-09 to TMAO respiration.
+- reference: DOI:10.1111/1462-2920.12726
+  snippet: the induction of torCAD, but not genes encoding alternative TMAO reductases
+  notes: Denby et al. show that adaptation of Escherichia coli K-12 to anaerobic respiratory
+    growth on TMAO specifically induces the torCAD operon encoding the TorCA TMAO
+    reductase system.
 canonical_examples:
 - taxon_id: NCBITaxon:83333
   taxon_label: Escherichia coli K-12
@@ -51,7 +56,7 @@ discussions:
     TMAO reductase (TorA/TorC) encoded by the torCAD operon so tmao_respiration_tor_pathway_sketch
     can be promoted from NONMECHANISTIC to MECHANISTIC.
   kind: CURATION_TODO
-  status: OPEN
+  status: RESOLVED
   attaches_to:
   - causal_graphs#tmao_respiration_tor_pathway_sketch
   rationale: The record's primary literature (DOI:10.1111/1462-2920.12726, DOI:10.3389/fmicb.2024.1467153)
@@ -69,6 +74,11 @@ discussions:
     explanation: Existing record-level evidence supports the connected NONMECHANISTIC
       pathway/function graph but does not provide strain-matched UniProtKB protein
       accessions for protein_examples.
+  resolved_date: '2026-10-23'
+  resolution_note: Promoted tmao_respiration_tor_pathway_sketch to MECHANISTIC by
+    adding InterPro:IPR041954-grounded GENE_OR_PROTEIN node tmao_respiration_tor_system
+    with reviewed Escherichia coli K-12 (NCBITaxon:83333; UP000000625) protein_examples
+    UniProtKB:P33225 (TorA) and UniProtKB:P33226 (TorC) backed by DOI:10.1111/1462-2920.12726.
 curation_history:
 - timestamp: '2026-09-15T02:00:15Z'
   curator: codex
@@ -85,17 +95,24 @@ curation_history:
     and OPEN CURATION_TODO discussion (trimethylamine-n-oxide-respiration-protein-example-gap)
     anchored on existing verbatim record evidence snippets.
   llm_assisted: true
+- timestamp: '2026-10-23T11:45:00Z'
+  curator: claude
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: Promoted tmao_respiration_tor_pathway_sketch to MECHANISTIC; added InterPro:IPR041954-grounded
+    GENE_OR_PROTEIN node tmao_respiration_tor_system with reviewed Escherichia coli
+    K-12 (NCBITaxon:83333; UP000000625) protein_examples UniProtKB:P33225 (TorA) and
+    UniProtKB:P33226 (TorC) backed by DOI:10.1111/1462-2920.12726; resolved trimethylamine-n-oxide-respiration-protein-example-gap.
+  llm_assisted: true
 causal_graphs:
 - graph_id: tmao_respiration_tor_pathway_sketch
   title: torCAD-encoded TMAO reductase anaerobic respiratory pathway
   description: Evidence-backed metabolic pathway sketch linking TMAO terminal electron
     acceptance, torCAD-encoded TMAO reductase catalysis, and trimethylamine formation
     to TMAO respiration.
-  scope_status: NONMECHANISTIC
-  scope_notes: Pathway-and-activity sketch backed by DOI:10.1111/1462-2920.12726 and
-    DOI:10.3389/fmicb.2024.1467153; strain-matched UniProtKB protein examples for
-    Escherichia coli K-12 TMAO reductase TorA/TorC encoded by the torCAD operon remain
-    to be curated.
+  scope_status: MECHANISTIC
+  scope_notes: Mechanistic graph backed by DOI:10.1111/1462-2920.12726 and DOI:10.3389/fmicb.2024.1467153;
+    exemplified on tmao_respiration_tor_system with Escherichia coli K-12 (NCBITaxon:83333;
+    UP000000625) TMAO reductase subunits TorA (UniProtKB:P33225) and TorC (UniProtKB:P33226).
   nodes:
   - node_id: tmao_respiration_trait
     label: trimethylamine N-oxide respiration
@@ -120,6 +137,55 @@ causal_graphs:
     node_type: CHEMICAL
     grounding: CHEBI:18139
     description: Trimethylamine (TMA) produced by respiratory reduction of TMAO.
+  - node_id: tmao_respiration_tor_system
+    label: TMAO reductase TorCA
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR041954
+    gene_symbols:
+    - torC
+    - torA
+    operon: torCAD
+    description: Periplasmic TMAO reductase (TorA) and membrane-anchored pentaheme
+      c-type cytochrome (TorC) encoded by the torCAD operon.
+    protein_examples:
+    - uniprot_id: UniProtKB:P33225
+      protein_label: Trimethylamine-N-oxide reductase 1
+      gene_symbol: torA
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli K-12
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-23'
+      entry_version: 195
+      sequence_version: 2
+      role: TorA is the periplasmic terminal molybdoenzyme subunit encoded by the
+        torCAD operon that reduces TMAO to TMA in Escherichia coli K-12; this accession
+        represents the TorA catalytic subunit.
+      evidence:
+      - reference: DOI:10.1111/1462-2920.12726
+        snippet: TMAO is reduced to TMA by the enzyme TMAO reductase, encoded by the
+          torCAD operon
+        notes: Denby et al. characterize the Escherichia coli K-12 torCAD-encoded
+          TMAO reductase that reduces TMAO to TMA.
+    - uniprot_id: UniProtKB:P33226
+      protein_label: Cytochrome c-type protein TorC
+      gene_symbol: torC
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli K-12
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-23'
+      entry_version: 196
+      sequence_version: 3
+      role: TorC is the membrane-anchored pentaheme c-type cytochrome electron-transfer
+        subunit encoded by the torCAD operon in Escherichia coli K-12; this accession
+        represents the TorC cytochrome subunit.
+      evidence:
+      - reference: DOI:10.1111/1462-2920.12726
+        snippet: TMAO is reduced to TMA by the enzyme TMAO reductase, encoded by the
+          torCAD operon
+        notes: Denby et al. characterize the Escherichia coli K-12 torCAD operon encoding
+          the TorCA TMAO reductase system.
   edges:
   - subject: tmao_respiration_trait
     predicate: has electron acceptor
@@ -157,3 +223,14 @@ causal_graphs:
         N-oxide respiration
       notes: Qiu and Tang describe switching from aerobic intracellular energy metabolism
         to trimethylamine N-oxide respiration.
+  - subject: tmao_respiration_tor_system
+    predicate: enables
+    predicate_id: RO:0002327
+    object: tmao_respiration_reductase_activity
+    description: The torCAD-encoded TorCA TMAO reductase system enables respiratory
+      TMAO reductase activity.
+    evidence:
+    - reference: DOI:10.1111/1462-2920.12726
+      snippet: the induction of torCAD, but not genes encoding alternative TMAO reductases
+      notes: Denby et al. show that anaerobic respiratory growth on TMAO specifically
+        induces the torCAD operon encoding the TorCA TMAO reductase system.

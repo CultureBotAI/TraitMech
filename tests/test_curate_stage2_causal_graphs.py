@@ -41,7 +41,7 @@ def test_cohort_a_and_b_disjoint_and_cover_24_records() -> None:
     ]
     for idx, s1 in enumerate(all_sets):
         assert "data/traits/physiology/spore_germination.yaml" not in s1
-        for s2 in all_sets[idx + 1:]:
+        for s2 in all_sets[idx + 1 :]:
             assert s1.isdisjoint(s2)
 
 
@@ -68,9 +68,7 @@ def test_cohort_a_committed_records_have_valid_connected_causal_graphs() -> None
     polar_doc = yaml.safe_load(
         (REPO_ROOT / "data/traits/morphology/polar_flagellation.yaml").read_text(encoding="utf-8")
     )
-    polar_nodes = {
-        n["node_id"]: n for n in polar_doc["causal_graphs"][0]["nodes"]
-    }
+    polar_nodes = {n["node_id"]: n for n in polar_doc["causal_graphs"][0]["nodes"]}
     assert "polar_flagellation_flhf" in polar_nodes
     assert "polar_flagellation_flhg" in polar_nodes
     assert polar_nodes["polar_flagellation_flhf"]["grounding"] == "InterPro:IPR020006"
@@ -101,7 +99,7 @@ def test_cohort_c_committed_records_have_valid_connected_causal_graphs_and_todo(
         graphs = doc.get("causal_graphs")
         assert graphs and len(graphs) == 1, f"{rel_path}: missing causal_graphs"
         _verify_graph_invariants(rel_path, doc, graphs)
-        assert graphs[0]["scope_status"] == "NONMECHANISTIC"
+        assert graphs[0]["scope_status"] in {"NONMECHANISTIC", "MECHANISTIC"}
         graph_id = graphs[0]["graph_id"]
         disc_id = f"{path.stem.replace('_', '-')}-protein-example-gap"
         discussions = doc.get("discussions") or []
@@ -109,7 +107,10 @@ def test_cohort_c_committed_records_have_valid_connected_causal_graphs_and_todo(
         assert len(matching) == 1, f"{rel_path}: missing {disc_id}"
         disc = matching[0]
         assert disc["kind"] == "CURATION_TODO"
-        assert disc["status"] == "OPEN"
+        if graphs[0]["scope_status"] == "MECHANISTIC":
+            assert disc["status"] == "RESOLVED"
+        else:
+            assert disc["status"] == "OPEN"
         assert disc["attaches_to"] == [f"causal_graphs#{graph_id}"]
 
 

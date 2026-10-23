@@ -2298,7 +2298,9 @@ COHORT_D_GAPS: dict[str, tuple[str, str]] = {
 }
 
 
-def _verify_graph_invariants(rel_path: str, doc: dict[str, Any], graphs: list[dict[str, Any]]) -> None:
+def _verify_graph_invariants(
+    rel_path: str, doc: dict[str, Any], graphs: list[dict[str, Any]]
+) -> None:
     """Verify structural, grounding, and snippet invariants before writing."""
     trait_id = str(doc.get("identifier") or "")
     for graph in graphs:
@@ -2315,8 +2317,7 @@ def _verify_graph_invariants(rel_path: str, doc: dict[str, Any], graphs: list[di
         if len(groundings) != len(set(groundings)):
             raise ValueError(f"{rel_path}: duplicate node grounding in {groundings}")
         trait_nodes = [
-            n for n in nodes
-            if n.get("node_type") == "TRAIT" and n.get("grounding") == trait_id
+            n for n in nodes if n.get("node_type") == "TRAIT" and n.get("grounding") == trait_id
         ]
         if not trait_nodes:
             raise ValueError(f"{rel_path}: missing TRAIT anchor node grounded to {trait_id}")
@@ -2357,17 +2358,24 @@ def _verify_graph_invariants(rel_path: str, doc: dict[str, Any], graphs: list[di
                     visited.add(nb)
                     queue.append(nb)
         if len(visited) != len(node_ids):
-            raise ValueError(f"{rel_path}: disconnected graph ({len(visited)}/{len(node_ids)} reached)")
+            raise ValueError(
+                f"{rel_path}: disconnected graph ({len(visited)}/{len(node_ids)} reached)"
+            )
 
         if graph.get("scope_status") == "MECHANISTIC":
             protein_nodes_with_examples = [
-                n for n in nodes
+                n
+                for n in nodes
                 if n.get("node_type") == "GENE_OR_PROTEIN" and (n.get("protein_examples") or [])
             ]
             if not protein_nodes_with_examples:
-                raise ValueError(f"{rel_path}: MECHANISTIC graph must have >=1 GENE_OR_PROTEIN node with protein_examples")
+                raise ValueError(
+                    f"{rel_path}: MECHANISTIC graph must have >=1 GENE_OR_PROTEIN node with protein_examples"
+                )
             if not (doc.get("canonical_examples") or []):
-                raise ValueError(f"{rel_path}: MECHANISTIC graph requires cited canonical_examples on record")
+                raise ValueError(
+                    f"{rel_path}: MECHANISTIC graph requires cited canonical_examples on record"
+                )
 
 
 PECTIN_CANONICAL_EXAMPLES: list[dict[str, str]] = [
@@ -2552,7 +2560,9 @@ def process_all(apply: bool = False) -> tuple[int, int]:
         existing_disc = doc.get("discussions") or []
         disc_id = f"{path.stem.replace('_', '-')}-causal-graph-source-gap"
         disc = build_cohort_b_discussion(rel_path, doc)
-        matched = [d for d in existing_disc if isinstance(d, dict) and d.get("discussion_id") == disc_id]
+        matched = [
+            d for d in existing_disc if isinstance(d, dict) and d.get("discussion_id") == disc_id
+        ]
         if matched:
             if matched[0] == disc:
                 continue
@@ -2588,8 +2598,32 @@ def process_all(apply: bool = False) -> tuple[int, int]:
         disc = build_cohort_c_discussion(rel_path, doc, graph_id)
         disc_id = disc["discussion_id"]
         existing_disc = doc.get("discussions") or []
-        matched = [d for d in existing_disc if isinstance(d, dict) and d.get("discussion_id") == disc_id]
-        if doc.get("causal_graphs") == graphs and matched and matched[0] == disc:
+        matched = [
+            d for d in existing_disc if isinstance(d, dict) and d.get("discussion_id") == disc_id
+        ]
+        existing_graphs = doc.get("causal_graphs") or []
+        if existing_graphs == graphs and matched and matched[0] == disc:
+            continue
+        if (
+            len(existing_graphs) == 1
+            and existing_graphs[0].get("graph_id") == graph_id
+            and matched
+            and matched[0].get("kind") == "CURATION_TODO"
+            and matched[0].get("attaches_to") == [f"causal_graphs#{graph_id}"]
+            and (
+                (
+                    existing_graphs[0].get("scope_status") == "MECHANISTIC"
+                    and matched[0].get("status") == "RESOLVED"
+                    and matched[0].get("resolution_note")
+                )
+                or (
+                    existing_graphs == graphs
+                    and matched[0].get("status") == "OPEN"
+                    and matched[0].get("notes")
+                )
+            )
+        ):
+            _verify_graph_invariants(rel_path, doc, existing_graphs)
             continue
         _verify_graph_invariants(rel_path, doc, graphs)
         doc["causal_graphs"] = graphs
@@ -2626,7 +2660,9 @@ def process_all(apply: bool = False) -> tuple[int, int]:
         existing_disc = doc.get("discussions") or []
         disc = build_cohort_d_discussion(rel_path, doc)
         disc_id = disc["discussion_id"]
-        matched = [d for d in existing_disc if isinstance(d, dict) and d.get("discussion_id") == disc_id]
+        matched = [
+            d for d in existing_disc if isinstance(d, dict) and d.get("discussion_id") == disc_id
+        ]
         if matched:
             if matched[0] == disc:
                 continue

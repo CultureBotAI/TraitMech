@@ -1,0 +1,56 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/curate_stage3_protein_examples.py
+  slug: curate_stage3_protein_examples
+session:
+  id: 2026-10-23T122511Z-claude-code-bb4f06
+  timestamp: '2026-10-23T12:25:11Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+    agent_tool: antigravity
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1978
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - evidence
+  - canonical_examples
+  - discussions
+  - curation_history
+  summary: Promote 8 Cohort C NONMECHANISTIC records to MECHANISTIC with 16 verified UniProtKB
+    protein_examples and document 2 remaining Cohort C UniProtKB blockers
+  details: 'Audited all 1,130 TraitRecord YAMLs (1,129 eligible, 1 protected) and all 824
+    GENE_OR_PROTEIN causal nodes for Cycle 2 Stage 3 (protein_examples). Promoted 8 Cohort
+    C NONMECHANISTIC records from Cycle 2 Stage 2 to MECHANISTIC by adding 8 InterPro-grounded
+    GENE_OR_PROTEIN nodes with 16 verified UniProtKB protein_examples, 8 distinct verbatim
+    record-level evidence items, 2 new canonical_examples entries, and RESOLVED CURATION_TODO
+    discussions: metabolism/arsenate_respiration.yaml (InterPro:IPR053686 arsenate_respiration_arr_complex:
+    Shewanella sp. ANA-3 NCBITaxon:94122 UniProtKB:Q7WTU0 ArrA v148 and UniProtKB:Q7WTT9 ArrB
+    v141), metabolism/chlorate_respiration.yaml (InterPro:IPR017840 chlorate_respiration_clr_complex:
+    Ideonella dechloratans NCBITaxon:36863 UniProtKB:P60068 ClrA v85 and UniProtKB:P60069
+    ClrB v77), metabolism/dimethyl_sulfoxide_respiration.yaml (InterPro:IPR011888 dmso_respiration_dms_complex:
+    Shewanella oneidensis MR-1 NCBITaxon:211586 UP000008186 UniProtKB:Q8EH03 DmsA v148 and
+    UniProtKB:Q8EH02 DmsB v136), metabolism/perchlorate_respiration.yaml (added Dechloromonas
+    aromatica RCB NCBITaxon:159087 canonical_examples; InterPro:IPR017840 perchlorate_respiration_pcr_reductase:
+    UniProtKB:Q47CW6 PcrA v106), metabolism/tetrathionate_respiration.yaml (InterPro:IPR037946
+    tetrathionate_respiration_ttr_complex: Salmonella enterica serovar Typhimurium LT2 NCBITaxon:99287
+    UP000001014 UniProtKB:Q9Z4S6 TtrA v125 and UniProtKB:Q7CQM9 TtrB v121), metabolism/trimethylamine_n_oxide_respiration.yaml
+    (InterPro:IPR041954 tmao_respiration_tor_system: Escherichia coli K-12 NCBITaxon:83333
+    UP000000625 UniProtKB:P33225 TorA v195 seq v2 and UniProtKB:P33226 TorC v196 seq v3),
+    physiology/arginine_dihydrolase_activity.yaml (InterPro:IPR003876 arginine_dihydrolase_arc_system:
+    Latilactobacillus sakei NCBITaxon:1599 UniProtKB:O53088 ArcA v106, UniProtKB:O53089 ArcB
+    v103, and UniProtKB:O53090 ArcC v107), and physiology/lysine_decarboxylase_activity.yaml
+    (added Escherichia coli K-12 NCBITaxon:83333 canonical_examples; InterPro:IPR011193 lysine_decarboxylase_cada:
+    UniProtKB:P0A9H3 CadA v145 and UniProtKB:P0AAE8 CadB v141). Recorded Cycle 2 Stage 3 UniProtKB
+    blocker audit notes on the 2 remaining NONMECHANISTIC Cohort C records: metabolism/fumarate_respiration.yaml
+    (UNREVIEWED_NO_PROTEOME on NCBITaxon:817 Q7X479/Q7X478/Q7X480 vs locus-tag-only NCTC 9343
+    Q5L7E5/Q5L7E6/Q5L7E7) and physiology/siderophore_production.yaml (species-level NCBITaxon:287
+    canonical_examples vs PAO1 NCBITaxon:208964 Swiss-Prot entries). Brought reports/uniprot_grounding_audit.tsv
+    to 179 uses across 159 exemplified GENE_OR_PROTEIN nodes (147 unique accessions) with
+    0 findings and 0 skipped entry_versions.'

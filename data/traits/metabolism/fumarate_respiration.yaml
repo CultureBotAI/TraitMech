@@ -74,6 +74,14 @@ discussions:
     explanation: Existing record-level evidence supports the connected NONMECHANISTIC
       pathway/function graph but does not provide strain-matched UniProtKB protein
       accessions for protein_examples.
+  notes: 'Cycle 2 Stage 3 UniProt audit: species-level Bacteroides fragilis (NCBITaxon:817)
+    TrEMBL fumarate reductase entries UniProtKB:Q7X479 (frdA), UniProtKB:Q7X478 (frdB),
+    and UniProtKB:Q7X480 (frdC) lack a UniProt proteome_id (triggering UNREVIEWED_NO_PROTEOME
+    in audit_uniprot_grounding.py), whereas reference-proteome entries in B. fragilis
+    NCTC 9343 (NCBITaxon:272559; UP000006731: Q5L7E5, Q5L7E6, Q5L7E7) carry only BF4126/BF4125/BF4124
+    orderedLocusNames without frdA/frdB/frdC gene symbols. Keeping graph NONMECHANISTIC
+    and discussion OPEN until Swiss-Prot curation or strain-aligned canonical_examples
+    resolves the proteome/gene-symbol gap.'
 curation_history:
 - timestamp: '2026-09-15T00:25:53Z'
   curator: codex
@@ -89,6 +97,13 @@ curation_history:
   changes: Added NONMECHANISTIC causal_graphs entry (fumarate_respiration_frd_pathway_sketch)
     and OPEN CURATION_TODO discussion (fumarate-respiration-protein-example-gap) anchored
     on existing verbatim record evidence snippets.
+  llm_assisted: true
+- timestamp: '2026-10-23T11:45:00Z'
+  curator: claude
+  action: RECORD_CURATION_DISCUSSION
+  changes: Recorded Cycle 2 Stage 3 UniProtKB audit note on fumarate-respiration-protein-example-gap
+    documenting the UNREVIEWED_NO_PROTEOME / locus-tag blocker for Bacteroides fragilis
+    FrdCAB (Q7X479/Q7X478/Q7X480 vs NCTC 9343 Q5L7E5/Q5L7E6/Q5L7E7).
   llm_assisted: true
 causal_graphs:
 - graph_id: fumarate_respiration_frd_pathway_sketch

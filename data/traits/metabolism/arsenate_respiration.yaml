@@ -31,6 +31,11 @@ evidence:
     key enzyme involved in this metabolism
   notes: Malasarn et al. biochemically characterize ARR as the arsenate respiratory
     reductase for ANA-3 arsenate respiration.
+- reference: DOI:10.1128/JB.01110-07
+  snippet: ARR is a heterodimer of approximately 131 kDa, composed of one ArrA subunit
+    (approximately 95 kDa) and one ArrB subunit (approximately 27 kDa).
+  notes: Malasarn et al. show that Shewanella sp. strain ANA-3 arsenate respiratory
+    reductase (ARR) is a heterodimer composed of one ArrA subunit and one ArrB subunit.
 canonical_examples:
 - taxon_id: NCBITaxon:94122
   taxon_label: Shewanella sp. ANA-3
@@ -55,7 +60,7 @@ discussions:
     arsenate reductase subunits (ArrA/ArrB) so arsenate_respiration_arr_pathway_sketch
     can be promoted from NONMECHANISTIC to MECHANISTIC.
   kind: CURATION_TODO
-  status: OPEN
+  status: RESOLVED
   attaches_to:
   - causal_graphs#arsenate_respiration_arr_pathway_sketch
   rationale: The record's primary literature (DOI:10.1073/pnas.1834303100, DOI:10.1128/AEM.69.5.2800-2809.2003,
@@ -73,6 +78,11 @@ discussions:
     explanation: Existing record-level evidence supports the connected NONMECHANISTIC
       pathway/function graph but does not provide strain-matched UniProtKB protein
       accessions for protein_examples.
+  resolved_date: '2026-10-23'
+  resolution_note: Promoted arsenate_respiration_arr_pathway_sketch to MECHANISTIC
+    by adding InterPro:IPR053686-grounded GENE_OR_PROTEIN node arsenate_respiration_arr_complex
+    with reviewed Shewanella sp. ANA-3 (NCBITaxon:94122) protein_examples UniProtKB:Q7WTU0
+    (ArrA) and UniProtKB:Q7WTT9 (ArrB) backed by DOI:10.1128/JB.01110-07.
 curation_history:
 - timestamp: '2026-09-14T23:52:00Z'
   curator: codex
@@ -96,6 +106,15 @@ curation_history:
     and OPEN CURATION_TODO discussion (arsenate-respiration-protein-example-gap) anchored
     on existing verbatim record evidence snippets.
   llm_assisted: true
+- timestamp: '2026-10-23T11:45:00Z'
+  curator: claude
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: Promoted arsenate_respiration_arr_pathway_sketch to MECHANISTIC; added
+    InterPro:IPR053686-grounded GENE_OR_PROTEIN node arsenate_respiration_arr_complex
+    with reviewed Shewanella sp. ANA-3 (NCBITaxon:94122) protein_examples UniProtKB:Q7WTU0
+    (ArrA) and UniProtKB:Q7WTT9 (ArrB) backed by DOI:10.1128/JB.01110-07; resolved
+    arsenate-respiration-protein-example-gap.
+  llm_assisted: true
 causal_graphs:
 - graph_id: arsenate_respiration_arr_pathway_sketch
   title: Respiratory arsenate reduction to arsenite and terminal electron acceptor
@@ -103,11 +122,11 @@ causal_graphs:
   description: Evidence-backed metabolic pathway sketch linking dissimilatory arsenate
     respiratory reductase (ARR) activity, arsenite production, and arsenate terminal
     electron acceptance to arsenate respiration.
-  scope_status: NONMECHANISTIC
-  scope_notes: Pathway-and-activity sketch backed by DOI:10.1073/pnas.1834303100,
-    DOI:10.1128/AEM.69.5.2800-2809.2003, and DOI:10.1128/JB.01110-07; strain-matched
-    UniProtKB protein examples for the Shewanella sp. ANA-3 respiratory arsenate reductase
-    subunits ArrA/ArrB remain to be curated.
+  scope_status: MECHANISTIC
+  scope_notes: Mechanistic graph backed by DOI:10.1073/pnas.1834303100, DOI:10.1128/AEM.69.5.2800-2809.2003,
+    and DOI:10.1128/JB.01110-07; exemplified on arsenate_respiration_arr_complex with
+    Shewanella sp. ANA-3 (NCBITaxon:94122) respiratory arsenate reductase subunits
+    ArrA (UniProtKB:Q7WTU0) and ArrB (UniProtKB:Q7WTT9).
   nodes:
   - node_id: arsenate_respiration_trait
     label: arsenate respiration
@@ -132,6 +151,54 @@ causal_graphs:
     node_type: CHEMICAL
     grounding: CHEBI:29866
     description: Arsenite produced by respiratory reduction of arsenate As(V).
+  - node_id: arsenate_respiration_arr_complex
+    label: arsenate respiratory reductase ArrAB
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR053686
+    gene_symbols:
+    - arrA
+    - arrB
+    operon: arrAB
+    description: Heterodimeric respiratory arsenate reductase complex (ArrAB) catalyzing
+      dissimilatory As(V) reduction in Shewanella sp. ANA-3.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q7WTU0
+      protein_label: Arsenate respiratory reductase molybdopterin-containing subunit
+        ArrA
+      gene_symbol: arrA
+      taxon_id: NCBITaxon:94122
+      taxon_label: Shewanella sp. ANA-3
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-23'
+      entry_version: 148
+      sequence_version: 1
+      role: ArrA is the catalytic molybdopterin-containing subunit of the heterodimeric
+        ArrAB respiratory arsenate reductase complex in Shewanella sp. ANA-3; this
+        accession represents the ArrA subunit rather than the full heterodimer.
+      evidence:
+      - reference: DOI:10.1128/JB.01110-07
+        snippet: ARR is a heterodimer of approximately 131 kDa, composed of one ArrA
+          subunit (approximately 95 kDa) and one ArrB subunit (approximately 27 kDa).
+        notes: Malasarn et al. purify and characterize the Shewanella sp. strain ANA-3
+          heterodimeric arsenate respiratory reductase composed of ArrA and ArrB.
+    - uniprot_id: UniProtKB:Q7WTT9
+      protein_label: Arsenate respiratory reductase iron-sulfur subunit ArrB
+      gene_symbol: arrB
+      taxon_id: NCBITaxon:94122
+      taxon_label: Shewanella sp. ANA-3
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-23'
+      entry_version: 141
+      sequence_version: 1
+      role: ArrB is the iron-sulfur electron-transfer subunit of the heterodimeric
+        ArrAB respiratory arsenate reductase complex in Shewanella sp. ANA-3; this
+        accession represents the ArrB subunit rather than the full heterodimer.
+      evidence:
+      - reference: DOI:10.1128/JB.01110-07
+        snippet: ARR is a heterodimer of approximately 131 kDa, composed of one ArrA
+          subunit (approximately 95 kDa) and one ArrB subunit (approximately 27 kDa).
+        notes: Malasarn et al. purify and characterize the Shewanella sp. strain ANA-3
+          heterodimeric arsenate respiratory reductase composed of ArrA and ArrB.
   edges:
   - subject: arsenate_respiration_trait
     predicate: has electron acceptor
@@ -169,3 +236,15 @@ causal_graphs:
         the key enzyme involved in this metabolism
       notes: Malasarn et al. characterize arsenate respiratory reductase (ARR) as
         the key enzyme involved in Shewanella sp. strain ANA-3 arsenate respiration.
+  - subject: arsenate_respiration_arr_complex
+    predicate: enables
+    predicate_id: RO:0002327
+    object: arsenate_respiration_reductase_activity
+    description: The heterodimeric ArrAB respiratory arsenate reductase complex enables
+      dissimilatory arsenate reductase activity in Shewanella sp. ANA-3.
+    evidence:
+    - reference: DOI:10.1128/JB.01110-07
+      snippet: ARR is a heterodimer of approximately 131 kDa, composed of one ArrA
+        subunit (approximately 95 kDa) and one ArrB subunit (approximately 27 kDa).
+      notes: Malasarn et al. show that Shewanella sp. strain ANA-3 arsenate respiratory
+        reductase (ARR) is a heterodimer of ArrA and ArrB.

@@ -499,7 +499,7 @@ curate-stage2-causal-graphs *args:
     uv run python scripts/curate_stage2_causal_graphs.py {{args}}
 
 # Replay the Stage 3 UniProt protein_examples curation and entry_version refresh.
-# Validated dry-run by default; pass --apply to write the 104 in-scope records.
+# Validated dry-run by default; pass --apply to write the 116 in-scope records (C1S3 + C2S3).
 curate-stage3-protein-examples *args:
     uv run python scripts/curate_stage3_protein_examples.py {{args}}
 

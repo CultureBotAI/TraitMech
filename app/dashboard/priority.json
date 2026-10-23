@@ -21,9 +21,9 @@
       "DROP_GROUPING_TERM": 0,
       "LUMP_INTO_PARENT": 0,
       "CURATE_ROOT_WITH_SUBTYPES": 13,
-      "ADD_CANONICAL_EXAMPLES": 103,
+      "ADD_CANONICAL_EXAMPLES": 102,
       "BUILD_CAUSAL_GRAPH": 262,
-      "DEEPEN_CAUSAL_GRAPH": 405,
+      "DEEPEN_CAUSAL_GRAPH": 406,
       "ALREADY_DEEP": 59,
       "CURATE_ROOT": 159
     }
@@ -5469,29 +5469,6 @@
       ]
     },
     {
-      "identifier": "traitmech:000197",
-      "label": "perchlorate respiration",
-      "category": "metabolism",
-      "slug": "perchlorate_respiration",
-      "score": 42.0,
-      "action": "ADD_CANONICAL_EXAMPLES",
-      "edges": 2,
-      "nodes": 3,
-      "components": 1,
-      "orphans": 0,
-      "examples": 0,
-      "canonical_examples_reviewed_empty": false,
-      "children": 0,
-      "series": null,
-      "series_size": 0,
-      "series_overlap": null,
-      "researched": false,
-      "reasons": [
-        "thin graph (2 edges) +12",
-        "no canonical_examples +30"
-      ]
-    },
-    {
       "identifier": "traitmech:000244",
       "label": "CapRel system",
       "category": "genomics",
@@ -8933,8 +8910,8 @@
       "slug": "tetrathionate_respiration",
       "score": 15.0,
       "action": "DEEPEN_CAUSAL_GRAPH",
-      "edges": 3,
-      "nodes": 4,
+      "edges": 4,
+      "nodes": 5,
       "components": 1,
       "orphans": 0,
       "examples": 1,
@@ -8945,7 +8922,7 @@
       "series_overlap": null,
       "researched": false,
       "reasons": [
-        "thin graph (3 edges) +12",
+        "thin graph (4 edges) +12",
         "no synonyms +3"
       ]
     },
@@ -9138,11 +9115,11 @@
       "slug": "lysine_decarboxylase_activity",
       "score": 15.0,
       "action": "DEEPEN_CAUSAL_GRAPH",
-      "edges": 2,
-      "nodes": 3,
+      "edges": 3,
+      "nodes": 4,
       "components": 1,
       "orphans": 0,
-      "examples": 1,
+      "examples": 2,
       "canonical_examples_reviewed_empty": false,
       "children": 0,
       "series": null,
@@ -9150,7 +9127,7 @@
       "series_overlap": null,
       "researched": false,
       "reasons": [
-        "thin graph (2 edges) +12",
+        "thin graph (3 edges) +12",
         "no synonyms +3"
       ]
     },
@@ -14939,8 +14916,8 @@
       "slug": "arsenate_respiration",
       "score": 12.0,
       "action": "DEEPEN_CAUSAL_GRAPH",
-      "edges": 3,
-      "nodes": 4,
+      "edges": 4,
+      "nodes": 5,
       "components": 1,
       "orphans": 0,
       "examples": 1,
@@ -14951,7 +14928,7 @@
       "series_overlap": null,
       "researched": false,
       "reasons": [
-        "thin graph (3 edges) +12"
+        "thin graph (4 edges) +12"
       ]
     },
     {
@@ -14961,8 +14938,8 @@
       "slug": "chlorate_respiration",
       "score": 12.0,
       "action": "DEEPEN_CAUSAL_GRAPH",
-      "edges": 3,
-      "nodes": 4,
+      "edges": 4,
+      "nodes": 5,
       "components": 1,
       "orphans": 0,
       "examples": 1,
@@ -14973,7 +14950,7 @@
       "series_overlap": null,
       "researched": false,
       "reasons": [
-        "thin graph (3 edges) +12"
+        "thin graph (4 edges) +12"
       ]
     },
     {
@@ -14983,8 +14960,8 @@
       "slug": "dimethyl_sulfoxide_respiration",
       "score": 12.0,
       "action": "DEEPEN_CAUSAL_GRAPH",
-      "edges": 3,
-      "nodes": 4,
+      "edges": 4,
+      "nodes": 5,
       "components": 1,
       "orphans": 0,
       "examples": 1,
@@ -14995,7 +14972,7 @@
       "series_overlap": null,
       "researched": false,
       "reasons": [
-        "thin graph (3 edges) +12"
+        "thin graph (4 edges) +12"
       ]
     },
     {
@@ -15065,6 +15042,28 @@
       ]
     },
     {
+      "identifier": "traitmech:000197",
+      "label": "perchlorate respiration",
+      "category": "metabolism",
+      "slug": "perchlorate_respiration",
+      "score": 12.0,
+      "action": "DEEPEN_CAUSAL_GRAPH",
+      "edges": 3,
+      "nodes": 4,
+      "components": 1,
+      "orphans": 0,
+      "examples": 1,
+      "canonical_examples_reviewed_empty": false,
+      "children": 0,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": false,
+      "reasons": [
+        "thin graph (3 edges) +12"
+      ]
+    },
+    {
       "identifier": "traitmech:000115",
       "label": "starch degradation",
       "category": "metabolism",
@@ -15093,8 +15092,8 @@
       "slug": "trimethylamine_n_oxide_respiration",
       "score": 12.0,
       "action": "DEEPEN_CAUSAL_GRAPH",
-      "edges": 3,
-      "nodes": 4,
+      "edges": 4,
+      "nodes": 5,
       "components": 1,
       "orphans": 0,
       "examples": 1,
@@ -15105,7 +15104,7 @@
       "series_overlap": null,
       "researched": false,
       "reasons": [
-        "thin graph (3 edges) +12"
+        "thin graph (4 edges) +12"
       ]
     },
     {
@@ -15534,8 +15533,8 @@
       "slug": "arginine_dihydrolase_activity",
       "score": 12.0,
       "action": "DEEPEN_CAUSAL_GRAPH",
-      "edges": 3,
-      "nodes": 4,
+      "edges": 4,
+      "nodes": 5,
       "components": 1,
       "orphans": 0,
       "examples": 1,
@@ -15546,7 +15545,7 @@
       "series_overlap": null,
       "researched": false,
       "reasons": [
-        "thin graph (3 edges) +12"
+        "thin graph (4 edges) +12"
       ]
     },
     {
