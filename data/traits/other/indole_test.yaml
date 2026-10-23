@@ -25,6 +25,12 @@ curation_history:
   changes: 'Preserved the ASM source-local tryptophan citation marker after Claude
     Code Review issue #874 so the second evidence snippet is visibly a complete sentence.'
   llm_assisted: true
+- timestamp: '2026-10-23T20:51:41Z'
+  curator: claude
+  action: RECORD_MECHANISM_KNOWLEDGE_GAP
+  changes: Recorded OPEN KNOWLEDGE_GAP discussion (indole-test-causal-graph-source-gap)
+    attached to causal_graphs documenting the source-limited mechanism gap.
+  llm_assisted: true
 definition_source: https://asm.org/protocols/indole-test-protocol
 evidence:
 - reference: https://asm.org/protocols/indole-test-protocol
@@ -37,3 +43,25 @@ evidence:
     indole test is that the medium contains a sufficient quantity of tryptophan (5).
   notes: The protocol explains that the indole-test medium needs tryptophan so production
     of indole can report tryptophan degradation.
+discussions:
+- discussion_id: indole-test-causal-graph-source-gap
+  prompt: Keep causal mechanism curation on the positive phenotype record (indole_test_positive)
+    or add primary literature evidence for tryptophanase (TnaA) catalysis alongside
+    Kovac's/Ehrlich's reagent detection.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  attaches_to:
+  - causal_graphs
+  rationale: METPO:1005010 represents the diagnostic indole test assay protocol (ASM
+    indole test protocol) rather than the organismal tryptophan-to-indole catabolic
+    phenotype curated on indole_test_positive.yaml.
+  posed_by: claude
+  posed_date: '2026-10-23'
+  evidence:
+  - reference: https://asm.org/protocols/indole-test-protocol
+    supports: PARTIAL
+    snippet: The indole test screens for the ability of an organism to degrade the
+      amino acid tryptophan and produce indole.
+    explanation: Existing record-level evidence supports the diagnostic assay, test-outcome,
+      colony-shape, or ecological-scope definition, but does not provide multi-step
+      molecular mechanism quotes for a connected causal graph.

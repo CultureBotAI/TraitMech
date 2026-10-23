@@ -29,6 +29,13 @@ curation_history:
   changes: Reparented indole test positive below the newly curated METPO:1005010 indole
     test assay parent and marked the temporary assay-parent discussion resolved.
   llm_assisted: true
+- timestamp: '2026-10-23T20:51:41Z'
+  curator: claude
+  action: CURATE_CAUSAL_GRAPH
+  changes: Added NONMECHANISTIC causal_graphs entry (indole_test_positive_tryptophan_sketch)
+    and OPEN CURATION_TODO discussion (indole-test-positive-protein-example-gap) anchored
+    on existing verbatim record evidence snippets.
+  llm_assisted: true
 definition_source: DOI:10.1128/AEM.02787-15
 evidence:
 - reference: DOI:10.1128/AEM.02787-15
@@ -62,3 +69,76 @@ discussions:
     parent, so this assay-outcome phenotype can use its exact source superclass instead
     of a temporary direct phenotype parent; this resolves the exact METPO assay-parent
     gap, not the broader non-assay parent question for assay-outcome phenotypes.
+- discussion_id: indole-test-positive-protein-example-gap
+  prompt: Add strain-matched UniProtKB protein_examples for Escherichia coli tryptophanase
+    (TnaA) so indole_test_positive_tryptophan_sketch can be promoted from NONMECHANISTIC
+    to MECHANISTIC.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - causal_graphs#indole_test_positive_tryptophan_sketch
+  rationale: The record's primary literature (DOI:10.1128/AEM.02787-15) establishes
+    L-tryptophan degradation to indole in enterotoxigenic Escherichia coli strain
+    H10407 (NCBITaxon:316401), but a verified UniProtKB accession for tryptophanase
+    (TnaA) on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.
+  posed_by: claude
+  posed_date: '2026-10-23'
+  evidence:
+  - reference: DOI:10.1128/AEM.02787-15
+    supports: PARTIAL
+    snippet: enterotoxigenic Escherichia coli strain H10407 produces 3.3 ± 0.22 mM
+      indole during a 24-h period in the presence of 5 mM tryptophan
+    explanation: Existing record-level evidence supports the connected NONMECHANISTIC
+      pathway/function graph but does not provide strain-matched UniProtKB protein
+      accessions for protein_examples.
+causal_graphs:
+- graph_id: indole_test_positive_tryptophan_sketch
+  title: Bacterial L-tryptophan catabolism to indole
+  description: Evidence-backed metabolic pathway sketch linking bacterial tryptophan
+    catabolism and indole formation to the indole test positive phenotype.
+  scope_status: NONMECHANISTIC
+  scope_notes: Pathway-and-metabolite sketch backed by DOI:10.1128/AEM.02787-15; strain-matched
+    UniProtKB protein examples for Escherichia coli tryptophanase (TnaA) remain to
+    be curated.
+  nodes:
+  - node_id: indole_test_positive_trait
+    label: indole test positive
+    node_type: TRAIT
+    grounding: METPO:1005011
+    description: Test-outcome phenotype in which an organism degrades tryptophan to
+      produce indole.
+  - node_id: indole_test_positive_tryptophan_catabolism
+    label: L-tryptophan catabolic process
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006569
+    description: Bacterial catabolic degradation of L-tryptophan yielding extracellular
+      indole.
+  - node_id: indole_test_positive_indole
+    label: indole
+    node_type: CHEMICAL
+    grounding: CHEBI:35581
+    description: Indole metabolite produced from bacterial tryptophan degradation
+      and detected by the indole test.
+  edges:
+  - subject: indole_test_positive_tryptophan_catabolism
+    predicate: has output
+    predicate_id: RO:0002234
+    object: indole_test_positive_indole
+    description: Bacterial tryptophan degradation produces indole as a catabolic product.
+    evidence:
+    - reference: DOI:10.1128/AEM.02787-15
+      snippet: Indole, a bacterial product of tryptophan degradation
+      notes: Darkoh et al. characterize indole as a bacterial product of tryptophan
+        degradation.
+  - subject: indole_test_positive_tryptophan_catabolism
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: indole_test_positive_trait
+    description: Catabolic conversion of supplemented tryptophan into millimolar indole
+      confers the indole test positive phenotype.
+    evidence:
+    - reference: DOI:10.1128/AEM.02787-15
+      snippet: enterotoxigenic Escherichia coli strain H10407 produces 3.3 ± 0.22
+        mM indole during a 24-h period in the presence of 5 mM tryptophan
+      notes: Darkoh et al. show that enterotoxigenic Escherichia coli strain H10407
+        produces 3.3 +/- 0.22 mM indole in the presence of 5 mM tryptophan.

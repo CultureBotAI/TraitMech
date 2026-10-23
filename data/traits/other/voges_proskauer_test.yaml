@@ -19,6 +19,12 @@ curation_history:
     and acetoin-readout evidence after a repository-wide duplicate review covering
     ignored and hidden files.
   llm_assisted: true
+- timestamp: '2026-10-23T20:51:42Z'
+  curator: claude
+  action: RECORD_MECHANISM_KNOWLEDGE_GAP
+  changes: Recorded OPEN KNOWLEDGE_GAP discussion (voges-proskauer-test-causal-graph-source-gap)
+    attached to causal_graphs documenting the source-limited mechanism gap.
+  llm_assisted: true
 definition_source: https://asm.org/getmedia/40946f85-9357-4563-aa8a-994427efa825/Methyl-Red-and-Voges-Proskauer-Test-Protocols.pdf
 evidence:
 - reference: https://asm.org/getmedia/40946f85-9357-4563-aa8a-994427efa825/Methyl-Red-and-Voges-Proskauer-Test-Protocols.pdf
@@ -34,3 +40,26 @@ evidence:
     a pinkish-red-colored product (Fig. 2A).
   notes: The same protocol explains that the Voges-Proskauer reaction detects acetoin
     via Barritt chemistry that forms a pinkish-red product.
+discussions:
+- discussion_id: voges-proskauer-test-causal-graph-source-gap
+  prompt: Keep causal mechanism curation on the metabolic pathway record (butanediol_fermentation)
+    or add enzymatic evidence for alpha-acetolactate synthase (BudB) and decarboxylase
+    (BudA) alongside the KOH/alpha-naphthol assay protocol.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  attaches_to:
+  - causal_graphs
+  rationale: METPO:1005016 represents the diagnostic Voges-Proskauer assay protocol
+    (ASM Methyl Red and Voges-Proskauer protocol) detecting acetoin oxidation to diacetyl
+    in KOH rather than a standalone organismal gene-to-trait mechanism.
+  posed_by: claude
+  posed_date: '2026-10-23'
+  evidence:
+  - reference: https://asm.org/getmedia/40946f85-9357-4563-aa8a-994427efa825/Methyl-Red-and-Voges-Proskauer-Test-Protocols.pdf
+    supports: PARTIAL
+    snippet: Bacteria fermenting sugars via the butanediol pathway produce acetoin
+      (i.e., acetyl methyl carbinol or 3-hydroxybutanone) as an intermediate which
+      can be further reduced to 2,3-butanediol.
+    explanation: Existing record-level evidence supports the diagnostic assay, test-outcome,
+      colony-shape, or ecological-scope definition, but does not provide multi-step
+      molecular mechanism quotes for a connected causal graph.

@@ -2271,10 +2271,6 @@ COHORT_D_GAPS: dict[str, tuple[str, str]] = {
         "Add primary microbial literature evidence linking Neisseria gonorrhoeae proline iminopeptidase (Pip) peptide cleavage to a physiological pathway step and strain-matched UniProtKB protein accessions before constructing causal_graphs.",
         "The current record carries an IUBMB EC 3.4.11.5 reaction snippet, one sentence noting that Pip is a hydrolase elaborated by Neisseria gonorrhoeae (DOI:10.1111/j.1365-2958.1993.tb01249.x), and a diagnostic enzyme list (DOI:10.1099/ijsem.0.006017), without a second non-redundant mechanistic step or UniProtKB protein_examples.",
     ),
-    "data/traits/physiology/pyrazinamidase_activity.yaml": (
-        "Add strain-matched UniProtKB protein_examples for Mycobacterium tuberculosis PncA (UniProtKB:I6Y493) before constructing a MECHANISTIC causal_graphs entry.",
-        "The current record carries an IUBMB EC 3.5.1.19 reaction snippet and two Mycobacterium tuberculosis PncA nicotinamidase/pyrazinamidase snippets (DOI:10.1111/j.1742-4658.2007.06241.x, DOI:10.1371/journal.pone.0015785), but requires verified strain-matched UniProtKB protein_examples on PncA to represent the enzyme-resolved mechanism.",
-    ),
     "data/traits/physiology/pyrrolidonyl_arylamidase_activity.yaml": (
         "Add primary microbial literature evidence for pyroglutamyl-peptidase I (PyrA, EC 3.4.19.3) catalysis and physiological peptide turnover in the exemplar taxon before constructing causal_graphs.",
         "The current record pairs one IUBMB EC 3.4.19.3 reaction snippet with a diagnostic strain-phenotyping list (DOI:10.1128/JCM.37.11.3443-3447.1999), leaving only one mechanistic quote.",
@@ -2506,8 +2502,459 @@ def build_cohort_d_discussion(rel_path: str, doc: dict[str, Any]) -> dict[str, A
     return discussion
 
 
+COHORT_E_PATHS: tuple[str, ...] = (
+    "data/traits/other/coagulase_positive.yaml",
+    "data/traits/other/indole_test_positive.yaml",
+    "data/traits/physiology/pyrazinamidase_activity.yaml",
+)
+
+COHORT_E_PROTEIN_GAPS: dict[str, tuple[str, str, int]] = {
+    "data/traits/other/coagulase_positive.yaml": (
+        "Add strain-matched UniProtKB protein_examples for Staphylococcus aureus secreted coagulase (Coa, UniProtKB:P07767) so coagulase_positive_prothrombin_clotting_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
+        "The record's primary literature (DOI:10.1099/mic.0.000019, DOI:10.1371/journal.ppat.1001036) establishes prothrombin activation by secreted coagulase (Coa) and plasma clotting in Staphylococcus aureus (NCBITaxon:1280), but a verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
+        1,
+    ),
+    "data/traits/other/indole_test_positive.yaml": (
+        "Add strain-matched UniProtKB protein_examples for Escherichia coli tryptophanase (TnaA) so indole_test_positive_tryptophan_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
+        "The record's primary literature (DOI:10.1128/AEM.02787-15) establishes L-tryptophan degradation to indole in enterotoxigenic Escherichia coli strain H10407 (NCBITaxon:316401), but a verified UniProtKB accession for tryptophanase (TnaA) on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
+        1,
+    ),
+    "data/traits/physiology/pyrazinamidase_activity.yaml": (
+        "Add strain-matched UniProtKB protein_examples for Mycobacterium tuberculosis nicotinamidase/pyrazinamidase PncA (UniProtKB:I6Y493) so pyrazinamidase_activity_pnca_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
+        "The record's primary literature (EC 3.5.1.19, DOI:10.1111/j.1742-4658.2007.06241.x, DOI:10.1371/journal.pone.0015785) establishes nicotinamide hydrolysis to nicotinate and pyrazinamide activation to pyrazinoic acid by PncA in Mycobacterium tuberculosis (NCBITaxon:1773), but a verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
+        1,
+    ),
+}
+
+
+def build_cohort_e_graphs(rel_path: str, doc: dict[str, Any]) -> list[dict[str, Any]]:
+    """Construct the connected NONMECHANISTIC causal_graphs list for a Cohort E record."""
+    if rel_path == "data/traits/other/coagulase_positive.yaml":
+        return [
+            {
+                "graph_id": "coagulase_positive_prothrombin_clotting_sketch",
+                "title": "Coagulase-mediated prothrombin activation and plasma clotting",
+                "description": (
+                    "Evidence-backed mechanism sketch linking bacterial prothrombin "
+                    "activation and plasma clotting to the coagulase positive "
+                    "test-outcome phenotype."
+                ),
+                "scope_status": "NONMECHANISTIC",
+                "scope_notes": (
+                    "Biological-process sketch backed by DOI:10.1099/mic.0.000019 "
+                    "and DOI:10.1371/journal.ppat.1001036; strain-matched UniProtKB "
+                    "protein examples for secreted Staphylococcus aureus coagulase "
+                    "(Coa, UniProtKB:P07767) remain to be curated."
+                ),
+                "nodes": [
+                    {
+                        "node_id": "coagulase_positive_trait",
+                        "label": "coagulase positive",
+                        "node_type": "TRAIT",
+                        "grounding": "METPO:1007090",
+                        "description": "Test-outcome phenotype in which bacterial coagulase activity promotes clotting of plasma.",
+                    },
+                    {
+                        "node_id": "coagulase_positive_prothrombin_activation",
+                        "label": "zymogen activation",
+                        "node_type": "BIOLOGICAL_PROCESS",
+                        "grounding": "GO:0031638",
+                        "description": "Binding and activation of host prothrombin by secreted staphylococcal coagulase (Coa).",
+                    },
+                    {
+                        "node_id": "coagulase_positive_blood_coagulation",
+                        "label": "blood coagulation",
+                        "node_type": "BIOLOGICAL_PROCESS",
+                        "grounding": "GO:0007596",
+                        "description": "Coagulase-dependent clotting of blood plasma detected by the coagulase test.",
+                    },
+                ],
+                "edges": [
+                    {
+                        "subject": "coagulase_positive_prothrombin_activation",
+                        "predicate": "causally upstream of",
+                        "predicate_id": "RO:0002411",
+                        "object": "coagulase_positive_blood_coagulation",
+                        "description": "Secreted Staphylococcus aureus coagulase (Coa) binds to and activates prothrombin to initiate plasma clotting.",
+                        "evidence": [
+                            _ev_item(
+                                doc,
+                                1,
+                                "Cheng et al. show that clinical isolates of Staphylococcus aureus secrete coagulase (Coa), a polypeptide that binds to and activates prothrombin.",
+                            )
+                        ],
+                    },
+                    {
+                        "subject": "coagulase_positive_blood_coagulation",
+                        "predicate": "confers",
+                        "predicate_id": "METPO:2007700",
+                        "object": "coagulase_positive_trait",
+                        "description": "Coagulase-dependent clotting of plasma confers the coagulase positive test-outcome phenotype.",
+                        "evidence": [
+                            _ev_item(
+                                doc,
+                                0,
+                                "Loof et al. show that coagulase-positive Staphylococcus aureus bacteria promote clotting of plasma, which is abolished in a coagulase-deficient mutant strain.",
+                            )
+                        ],
+                    },
+                ],
+            }
+        ]
+
+    if rel_path == "data/traits/other/indole_test_positive.yaml":
+        return [
+            {
+                "graph_id": "indole_test_positive_tryptophan_sketch",
+                "title": "Bacterial L-tryptophan catabolism to indole",
+                "description": (
+                    "Evidence-backed metabolic pathway sketch linking bacterial "
+                    "tryptophan catabolism and indole formation to the indole test "
+                    "positive phenotype."
+                ),
+                "scope_status": "NONMECHANISTIC",
+                "scope_notes": (
+                    "Pathway-and-metabolite sketch backed by DOI:10.1128/AEM.02787-15; "
+                    "strain-matched UniProtKB protein examples for Escherichia coli "
+                    "tryptophanase (TnaA) remain to be curated."
+                ),
+                "nodes": [
+                    {
+                        "node_id": "indole_test_positive_trait",
+                        "label": "indole test positive",
+                        "node_type": "TRAIT",
+                        "grounding": "METPO:1005011",
+                        "description": "Test-outcome phenotype in which an organism degrades tryptophan to produce indole.",
+                    },
+                    {
+                        "node_id": "indole_test_positive_tryptophan_catabolism",
+                        "label": "L-tryptophan catabolic process",
+                        "node_type": "BIOLOGICAL_PROCESS",
+                        "grounding": "GO:0006569",
+                        "description": "Bacterial catabolic degradation of L-tryptophan yielding extracellular indole.",
+                    },
+                    {
+                        "node_id": "indole_test_positive_indole",
+                        "label": "indole",
+                        "node_type": "CHEMICAL",
+                        "grounding": "CHEBI:35581",
+                        "description": "Indole metabolite produced from bacterial tryptophan degradation and detected by the indole test.",
+                    },
+                ],
+                "edges": [
+                    {
+                        "subject": "indole_test_positive_tryptophan_catabolism",
+                        "predicate": "has output",
+                        "predicate_id": "RO:0002234",
+                        "object": "indole_test_positive_indole",
+                        "description": "Bacterial tryptophan degradation produces indole as a catabolic product.",
+                        "evidence": [
+                            _ev_item(
+                                doc,
+                                0,
+                                "Darkoh et al. characterize indole as a bacterial product of tryptophan degradation.",
+                            )
+                        ],
+                    },
+                    {
+                        "subject": "indole_test_positive_tryptophan_catabolism",
+                        "predicate": "confers",
+                        "predicate_id": "METPO:2007700",
+                        "object": "indole_test_positive_trait",
+                        "description": "Catabolic conversion of supplemented tryptophan into millimolar indole confers the indole test positive phenotype.",
+                        "evidence": [
+                            _ev_item(
+                                doc,
+                                1,
+                                "Darkoh et al. show that enterotoxigenic Escherichia coli strain H10407 produces 3.3 +/- 0.22 mM indole in the presence of 5 mM tryptophan.",
+                            )
+                        ],
+                    },
+                ],
+            }
+        ]
+
+    if rel_path == "data/traits/physiology/pyrazinamidase_activity.yaml":
+        return [
+            {
+                "graph_id": "pyrazinamidase_activity_pnca_sketch",
+                "title": "Nicotinamidase/pyrazinamidase (PncA) hydrolysis of nicotinamide and pyrazinamide",
+                "description": (
+                    "Evidence-backed physiological mechanism sketch linking "
+                    "nicotinamidase/pyrazinamidase catalytic activity, nicotinamide "
+                    "hydrolysis to nicotinate, and pyrazinamide conversion to "
+                    "pyrazinoic acid to the pyrazinamidase activity phenotype."
+                ),
+                "scope_status": "NONMECHANISTIC",
+                "scope_notes": (
+                    "Activity-and-reaction sketch backed by EC 3.5.1.19, "
+                    "DOI:10.1111/j.1742-4658.2007.06241.x, and "
+                    "DOI:10.1371/journal.pone.0015785; strain-matched UniProtKB "
+                    "protein examples for Mycobacterium tuberculosis PncA "
+                    "(UniProtKB:I6Y493) remain to be curated."
+                ),
+                "nodes": [
+                    {
+                        "node_id": "pyrazinamidase_activity_trait",
+                        "label": "pyrazinamidase activity",
+                        "node_type": "TRAIT",
+                        "grounding": "traitmech:000163",
+                        "description": "Physiological enzyme-activity phenotype in which a cell produces active nicotinamidase/pyrazinamidase enzymes.",
+                    },
+                    {
+                        "node_id": "pyrazinamidase_catalytic_activity",
+                        "label": "nicotinamidase activity",
+                        "node_type": "MOLECULAR_FUNCTION",
+                        "grounding": "GO:0008936",
+                        "description": "Catalytic hydrolysis of nicotinamide to nicotinate and ammonia (EC 3.5.1.19) and conversion of pyrazinamide to pyrazinoic acid by PncA.",
+                    },
+                    {
+                        "node_id": "pyrazinamidase_nicotinate",
+                        "label": "nicotinate",
+                        "node_type": "CHEMICAL",
+                        "grounding": "CHEBI:32544",
+                        "description": "Nicotinate produced by nicotinamidase-catalyzed hydrolysis of nicotinamide and water.",
+                    },
+                ],
+                "edges": [
+                    {
+                        "subject": "pyrazinamidase_catalytic_activity",
+                        "predicate": "confers",
+                        "predicate_id": "METPO:2007700",
+                        "object": "pyrazinamidase_activity_trait",
+                        "description": "Nicotinamidase/pyrazinamidase (PncA) catalytic activity converts pyrazinamide into pyrazinoic acid and confers the pyrazinamidase activity phenotype.",
+                        "evidence": [
+                            _ev_item(
+                                doc,
+                                1,
+                                "Zhang et al. show that the nicotinamidase/pyrazinamidase (PncA) of Mycobacterium tuberculosis converts pyrazinamide into pyrazinoic acid.",
+                            )
+                        ],
+                    },
+                    {
+                        "subject": "pyrazinamidase_catalytic_activity",
+                        "predicate": "has output",
+                        "predicate_id": "RO:0002234",
+                        "object": "pyrazinamidase_nicotinate",
+                        "description": "Nicotinamidase hydrolyzes nicotinamide and water to produce nicotinate and ammonia.",
+                        "evidence": [
+                            _ev_item(
+                                doc,
+                                0,
+                                "IUBMB EC 3.5.1.19 defines the nicotinamidase reaction converting nicotinamide and water into nicotinate and ammonia.",
+                            )
+                        ],
+                    },
+                ],
+            }
+        ]
+
+    raise KeyError(f"Unexpected Cohort E path: {rel_path}")
+
+
+def build_cohort_e_discussion(rel_path: str, doc: dict[str, Any], graph_id: str) -> dict[str, Any]:
+    """Construct the CURATION_TODO DiscussionItem for a Cohort E record."""
+    slug = Path(rel_path).stem.replace("_", "-")
+    prompt, rationale, ev_index = COHORT_E_PROTEIN_GAPS[rel_path]
+    ev_list = doc.get("evidence") or []
+    supporting_ev: list[dict[str, str]] = []
+    if len(ev_list) > ev_index and isinstance(ev_list[ev_index], dict):
+        src = ev_list[ev_index]
+        ref = str(src.get("reference") or "").strip()
+        snip = str(src.get("snippet") or "").strip()
+        if ref and snip:
+            supporting_ev.append(
+                {
+                    "reference": ref,
+                    "supports": "PARTIAL",
+                    "snippet": snip,
+                    "explanation": (
+                        "Existing record-level evidence supports the connected "
+                        "NONMECHANISTIC pathway/function graph but does not provide "
+                        "strain-matched UniProtKB protein accessions for protein_examples."
+                    ),
+                }
+            )
+    discussion: dict[str, Any] = {
+        "discussion_id": f"{slug}-protein-example-gap",
+        "prompt": prompt,
+        "kind": "CURATION_TODO",
+        "status": "OPEN",
+        "attaches_to": [f"causal_graphs#{graph_id}"],
+        "rationale": rationale,
+        "posed_by": CURATOR,
+        "posed_date": POSED_DATE_C2,
+    }
+    if supporting_ev:
+        discussion["evidence"] = supporting_ev
+    return discussion
+
+
+COHORT_F_GAPS: dict[str, tuple[str, str]] = {
+    "data/traits/other/catalase_negative.yaml": (
+        "Add primary literature evidence for the genetic or biochemical basis of catalase absence and alternative H2O2 scavenging (e.g. NADH peroxidase Npx) before constructing causal_graphs.",
+        "This record represents a negative catalase-test outcome phenotype; its evidence pairs an assay-foam snippet (DOI:10.1038/srep03081) with a single sentence noting that Enterococcus faecium is catalase negative (DOI:10.1128/iai.72.8.4512-4520.2004), which does not ground a multi-edge causal graph for the negative test state.",
+    ),
+    "data/traits/other/catalase_test.yaml": (
+        "Add multi-step mechanistic evidence or keep causal mechanism curation on the corresponding enzyme-activity record (catalase_positive / catalase activity) rather than the diagnostic assay class.",
+        "METPO:1007080 represents a diagnostic biochemical test protocol (ASM catalase test protocol; DOI:10.1038/srep03081) rather than a cellular physiological pathway; the underlying H2O2 disproportionation mechanism is curated on catalase_positive.yaml.",
+    ),
+    "data/traits/other/circular_colony.yaml": (
+        "Add primary literature evidence for the cellular growth, surface-motility, and extracellular-matrix determinants of circular colony morphology before constructing causal_graphs.",
+        "The current record carries descriptive ASM colony-morphology protocol snippets defining macroscopic circular colony form without genetic, regulatory, or biophysical mechanism quotes.",
+    ),
+    "data/traits/other/coagulase_negative.yaml": (
+        "Add primary literature evidence for the absence of coagulase genes (coa/vwb) in coagulase-negative staphylococci before considering any mechanism representation.",
+        "This record represents a negative diagnostic test-outcome phenotype uniting coagulase-negative staphylococci (DOI:10.3390/microorganisms9040830; NBK563240) by the absence of plasma clotting rather than an active multi-step biochemical pathway.",
+    ),
+    "data/traits/other/colony_morphology.yaml": (
+        "Add primary literature evidence for extracellular matrix, cell-surface appendage, and multicellular morphogenesis pathways before constructing causal_graphs on this upper colony-morphology class.",
+        "The current record carries descriptive ASM protocol snippets enumerating macroscopic colony form, elevation, and margin categories without molecular or cellular mechanism quotes.",
+    ),
+    "data/traits/other/colony_shape.yaml": (
+        "Add primary literature evidence for the biophysical and genetic determinants of macroscopic colony outline before constructing causal_graphs on this grouping class.",
+        "The current record carries descriptive ASM protocol snippets illustrating colony form diagrams without molecular, regulatory, or biomechanical mechanism quotes.",
+    ),
+    "data/traits/other/epibiont_phenotype.yaml": (
+        "Add primary literature evidence for surface attachment adhesins, biofilm formation, and host-epibiont interactions in Epibacterium ulvae before constructing causal_graphs.",
+        "The current record carries two strain-isolation habitat snippets from the surface of the marine alga Ulva australis (DOI:10.1099/ijs.0.042838-0; BacDive 24523) without molecular colonization or attachment mechanism quotes.",
+    ),
+    "data/traits/other/filamentous_colony.yaml": (
+        "Add primary literature evidence for filamentous cell-chain growth, extracellular matrix, and swarming/sliding determinants of filamentous colony outline before constructing causal_graphs.",
+        "The current record carries a single general colony-morphology overview snippet (DOI:10.7759/cureus.374) without specific genetic or cellular morphogenesis quotes.",
+    ),
+    "data/traits/other/fried_egg_shaped_colony.yaml": (
+        "Add primary literature evidence for central agar penetration versus peripheral surface growth determinants of fried-egg colony morphology before constructing causal_graphs.",
+        "The current record carries a single morphological description snippet (DOI:10.1371/journal.pone.0068373) describing the opaque center and translucent peripheral zone without molecular or cellular mechanism quotes.",
+    ),
+    "data/traits/other/generalist.yaml": (
+        "Add primary literature evidence for metabolic versatility, regulatory network plasticity, and broad resource-utilization pathways in a cited exemplar taxon before constructing causal_graphs.",
+        "The current record carries two high-level ecological classification snippets (DOI:10.1093/femsec/fiaa240; DOI:10.1038/s41559-023-02027-7) contrasting niche breadth in generalists vs specialists without molecular mechanism quotes or a canonical example.",
+    ),
+    "data/traits/other/hemolysis.yaml": (
+        "Add a second independent primary literature snippet covering cytolytic pore formation or membrane phospholipid cleavage by secreted Staphylococcus aureus hemolysins (e.g. Hla, Hlb) before constructing causal_graphs.",
+        "The current record carries a single 54-character phrase ('hemolysis to toxigenic substances secreted by S. aureus' in DOI:10.3390/toxins5061140); constructing a multi-edge graph from one short phrase would violate the snippet-diversity and anti-clause-splitting rules.",
+    ),
+    "data/traits/other/hemolytic.yaml": (
+        "Add a second independent primary literature snippet covering erythrocyte membrane lysis by secreted Staphylococcus aureus hemolysins (e.g. alpha-hemolysin Hla) before constructing causal_graphs.",
+        "The current record carries a single 54-character phrase ('hemolysis to toxigenic substances secreted by S. aureus' in DOI:10.3390/toxins5061140); constructing a multi-edge graph from one short phrase would violate the snippet-diversity and anti-clause-splitting rules.",
+    ),
+    "data/traits/other/indole_test.yaml": (
+        "Keep causal mechanism curation on the positive phenotype record (indole_test_positive) or add primary literature evidence for tryptophanase (TnaA) catalysis alongside Kovac's/Ehrlich's reagent detection.",
+        "METPO:1005010 represents the diagnostic indole test assay protocol (ASM indole test protocol) rather than the organismal tryptophan-to-indole catabolic phenotype curated on indole_test_positive.yaml.",
+    ),
+    "data/traits/other/indole_test_negative.yaml": (
+        "Add primary literature evidence for the absence or inactivation of tryptophanase (tnaA) in indole-negative Klebsiella pneumoniae isolates before considering a mechanism representation.",
+        "This record represents a negative diagnostic test-outcome phenotype (DOI:10.1128/AEM.02787-15; DOI:10.1128/JCM.00940-06) defined by the absence of indole production from tryptophan.",
+    ),
+    "data/traits/other/irregular_colony.yaml": (
+        "Add primary literature evidence for asymmetric edge expansion, nutrient-diffusion limitation, or extracellular matrix determinants of irregular colony outline before constructing causal_graphs.",
+        "The current record carries a single general colony-morphology overview snippet (DOI:10.7759/cureus.374) without specific genetic or biophysical morphogenesis quotes.",
+    ),
+    "data/traits/other/methyl_red_test.yaml": (
+        "Keep causal mechanism curation on mixed_acid_fermentation.yaml or add organism-level enzymatic evidence for mixed-acid pyruvate catabolism alongside the pH-indicator protocol.",
+        "METPO:1005013 represents the diagnostic methyl red pH-indicator assay protocol (ASM Methyl Red and Voges-Proskauer protocol), whereas the underlying metabolic pathway is curated on mixed_acid_fermentation.yaml.",
+    ),
+    "data/traits/other/methyl_red_test_negative.yaml": (
+        "Add primary literature evidence for neutral fermentation end-product routing (acetoin/2,3-butanediol conversion) in methyl-red-negative Klebsiella pneumoniae before constructing causal_graphs.",
+        "This record represents a negative diagnostic test-outcome phenotype supported by ASM protocol color-threshold and clinical panel reproducibility snippets (DOI:10.1128/JCM.42.8.3665-3669.2004) without enzymatic pathway quotes.",
+    ),
+    "data/traits/other/methyl_red_test_positive.yaml": (
+        "Add primary literature evidence for mixed-acid fermentation enzymes (e.g. PflB, LdhA, AckA-Pta) producing stable organic acids in Klebsiella ornithinolytica before constructing causal_graphs.",
+        "The current record pairs an ASM pH-indicator color-change snippet with a clinical identification panel count snippet (DOI:10.1128/JCM.42.8.3665-3669.2004), lacking enzymatic or metabolic pathway quotes for the exemplar taxon.",
+    ),
+    "data/traits/other/non_hemolytic.yaml": (
+        "Add primary literature evidence for the genetic absence of hemolysin/cytolysin operons in gamma-hemolytic strains before considering a mechanism representation.",
+        "This record represents a negative diagnostic phenotype (gamma-hemolysis / absence of red-blood-cell lysis in DOI:10.14202/vetworld.2025.3622-3630) supported by a single screening snippet without a canonical example.",
+    ),
+    "data/traits/other/osmotic_tolerance.yaml": (
+        "Add a second independent primary literature snippet covering compatible-solute uptake/synthesis (e.g. glycine betaine, trehalose, proline) and osmosensory regulation plus a canonical example before constructing causal_graphs.",
+        "The current record carries a single 49-character snippet ('tolerance against hyperosmotic conditions (400 mM sorbitol)' in DOI:10.1128/mBio.00390-21) without a second mechanistic quote or canonical example.",
+    ),
+    "data/traits/other/oxidase_negative.yaml": (
+        "Add primary literature evidence for cytochrome c oxidase absence and alternative terminal oxidases (e.g. cytochrome bd or bo3 quinol oxidases) in oxidase-negative taxa before considering a mechanism representation.",
+        "This record represents a negative diagnostic test-outcome phenotype (ASM oxidase test protocol; DOI:10.5812/chbs-160199) defined by the absence of cytochrome c oxidase indicator oxidation.",
+    ),
+    "data/traits/other/oxidase_test.yaml": (
+        "Keep causal mechanism curation on the positive enzyme-activity record (oxidase_positive) rather than the diagnostic redox-indicator assay class.",
+        "METPO:1007081 represents the diagnostic oxidase test protocol (ASM oxidase test protocol; DOI:10.5812/chbs-160199), whereas the cytochrome c oxidase respiratory mechanism is curated on oxidase_positive.yaml.",
+    ),
+    "data/traits/other/punctiform_colony.yaml": (
+        "Add primary literature evidence for slow growth rate, microcolony confinement, or metabolic constraints underlying pinpoint (<1 mm) punctiform colonies before constructing causal_graphs.",
+        "The current record carries a single general colony-morphology overview snippet (DOI:10.7759/cureus.374) without specific genetic or physiological mechanism quotes.",
+    ),
+    "data/traits/other/rhizoid_colony.yaml": (
+        "Add primary literature evidence for branching multicellular filamentation, surfactant production, or sliding motility underlying rhizoid colony morphology before constructing causal_graphs.",
+        "The current record carries a single general colony-morphology overview snippet (DOI:10.7759/cureus.374) without specific genetic or cellular morphogenesis quotes.",
+    ),
+    "data/traits/other/specialist.yaml": (
+        "Add primary literature evidence for genome reduction, narrow substrate-transport specificity, or strict host/habitat adaptation in a cited exemplar taxon before constructing causal_graphs.",
+        "The current record carries two high-level ecological classification snippets (DOI:10.1093/femsec/fiaa240; DOI:10.1038/s41559-023-02027-7) contrasting niche breadth in generalists vs specialists without molecular mechanism quotes or a canonical example.",
+    ),
+    "data/traits/other/urease_negative.yaml": (
+        "Add primary literature evidence for the absence of urease structural/accessory genes (ureABC/ureDEFG) in urease-negative taxa before considering a mechanism representation.",
+        "This record represents a negative diagnostic test-outcome phenotype supported by phenol-red urease medium indicator snippets (DOI:10.5812/chbs-160199) without a canonical example or active enzymatic pathway.",
+    ),
+    "data/traits/other/urease_test.yaml": (
+        "Keep causal mechanism curation on the positive enzyme-activity record (urease_positive) rather than the diagnostic urea-broth/agar assay class.",
+        "METPO:1007082 represents the diagnostic urease test protocol (DOI:10.5812/chbs-160199), whereas the nickel-metalloenzyme urea hydrolysis mechanism is curated on urease_positive.yaml.",
+    ),
+    "data/traits/other/voges_proskauer_test.yaml": (
+        "Keep causal mechanism curation on the metabolic pathway record (butanediol_fermentation) or add enzymatic evidence for alpha-acetolactate synthase (BudB) and decarboxylase (BudA) alongside the KOH/alpha-naphthol assay protocol.",
+        "METPO:1005016 represents the diagnostic Voges-Proskauer assay protocol (ASM Methyl Red and Voges-Proskauer protocol) detecting acetoin oxidation to diacetyl in KOH rather than a standalone organismal gene-to-trait mechanism.",
+    ),
+    "data/traits/other/voges_proskauer_test_negative.yaml": (
+        "Add primary literature evidence for the absence of the alpha-acetolactate-to-acetoin pathway in Voges-Proskauer-negative Escherichia coli before considering a mechanism representation.",
+        "This record represents a negative diagnostic test-outcome phenotype supported by a single ASM protocol color-comparison snippet without enzymatic pathway quotes.",
+    ),
+    "data/traits/other/voges_proskauer_test_positive.yaml": (
+        "Add primary literature evidence for alpha-acetolactate synthase (BudB) and alpha-acetolactate decarboxylase (BudA) acetoin biosynthesis in Klebsiella oxytoca before constructing causal_graphs.",
+        "The current record pairs an ASM KOH-oxidation reagent chemistry snippet with a clinical identification panel count snippet (DOI:10.1128/JCM.42.8.3665-3669.2004), lacking organismal enzymatic catalysis quotes for acetoin biosynthesis.",
+    ),
+}
+
+
+def build_cohort_f_discussion(rel_path: str, doc: dict[str, Any]) -> dict[str, Any]:
+    """Construct the KNOWLEDGE_GAP DiscussionItem for a Cohort F record."""
+    slug = Path(rel_path).stem.replace("_", "-")
+    prompt, rationale = COHORT_F_GAPS[rel_path]
+    ev_list = doc.get("evidence") or []
+    supporting_ev: list[dict[str, str]] = []
+    if ev_list and isinstance(ev_list[0], dict):
+        src = ev_list[0]
+        ref = str(src.get("reference") or "").strip()
+        snip = str(src.get("snippet") or "").strip()
+        if ref and snip:
+            supporting_ev.append(
+                {
+                    "reference": ref,
+                    "supports": "PARTIAL",
+                    "snippet": snip,
+                    "explanation": (
+                        "Existing record-level evidence supports the diagnostic assay, "
+                        "test-outcome, colony-shape, or ecological-scope definition, "
+                        "but does not provide multi-step molecular mechanism quotes "
+                        "for a connected causal graph."
+                    ),
+                }
+            )
+    discussion: dict[str, Any] = {
+        "discussion_id": f"{slug}-causal-graph-source-gap",
+        "prompt": prompt,
+        "kind": "KNOWLEDGE_GAP",
+        "status": "OPEN",
+        "attaches_to": ["causal_graphs"],
+        "rationale": rationale,
+        "posed_by": CURATOR,
+        "posed_date": POSED_DATE_C2,
+    }
+    if supporting_ev:
+        discussion["evidence"] = supporting_ev
+    return discussion
+
+
 def process_all(apply: bool = False) -> tuple[int, int]:
-    """Process Cohort A, B, C, and D records. Returns (graphs_added, gaps_added)."""
+    """Process Cohort A, B, C, D, E, and F records. Returns (graphs_added, gaps_added)."""
     graphs_added = 0
     gaps_added = 0
 
@@ -2659,6 +3106,129 @@ def process_all(apply: bool = False) -> tuple[int, int]:
         doc = yaml.safe_load(path.read_text(encoding="utf-8"))
         existing_disc = doc.get("discussions") or []
         disc = build_cohort_d_discussion(rel_path, doc)
+        disc_id = disc["discussion_id"]
+        matched = [
+            d for d in existing_disc if isinstance(d, dict) and d.get("discussion_id") == disc_id
+        ]
+        if matched:
+            if matched[0] == disc:
+                continue
+            for idx, d in enumerate(existing_disc):
+                if isinstance(d, dict) and d.get("discussion_id") == disc_id:
+                    existing_disc[idx] = disc
+            doc["discussions"] = existing_disc
+        else:
+            existing_disc.append(disc)
+            doc["discussions"] = existing_disc
+            record_curation_event(
+                doc,
+                action=CURATION_ACTION_GAP,
+                curator=CURATOR,
+                changes=(
+                    f"Recorded OPEN KNOWLEDGE_GAP discussion ({disc_id}) attached to "
+                    "causal_graphs documenting the source-limited mechanism gap."
+                ),
+                llm_assisted=True,
+            )
+        errors = validate_trait(doc)
+        if errors:
+            raise ValidationFailedError(path, errors)
+        if apply:
+            write_validated_trait(doc, path)
+        gaps_added += 1
+
+    for rel_path in COHORT_E_PATHS:
+        path = REPO_ROOT / rel_path
+        doc = yaml.safe_load(path.read_text(encoding="utf-8"))
+        graphs = build_cohort_e_graphs(rel_path, doc)
+        graph_id = graphs[0]["graph_id"]
+        disc = build_cohort_e_discussion(rel_path, doc, graph_id)
+        disc_id = disc["discussion_id"]
+        existing_disc = doc.get("discussions") or []
+        matched = [
+            d for d in existing_disc if isinstance(d, dict) and d.get("discussion_id") == disc_id
+        ]
+        existing_graphs = doc.get("causal_graphs") or []
+        source_gap_id = f"{path.stem.replace('_', '-')}-causal-graph-source-gap"
+        open_source_gaps = [
+            d
+            for d in existing_disc
+            if isinstance(d, dict)
+            and d.get("discussion_id") == source_gap_id
+            and (
+                d.get("status") == "OPEN"
+                or d.get("attaches_to") != [f"causal_graphs#{graph_id}"]
+            )
+        ]
+        if existing_graphs == graphs and matched and matched[0] == disc and not open_source_gaps:
+            continue
+        if (
+            len(existing_graphs) == 1
+            and existing_graphs[0].get("graph_id") == graph_id
+            and matched
+            and matched[0].get("kind") == "CURATION_TODO"
+            and matched[0].get("attaches_to") == [f"causal_graphs#{graph_id}"]
+            and not open_source_gaps
+            and (
+                (
+                    existing_graphs[0].get("scope_status") == "MECHANISTIC"
+                    and matched[0].get("status") == "RESOLVED"
+                    and matched[0].get("resolution_note")
+                )
+                or (
+                    existing_graphs == graphs
+                    and matched[0].get("status") == "OPEN"
+                    and matched[0].get("notes")
+                )
+            )
+        ):
+            _verify_graph_invariants(rel_path, doc, existing_graphs)
+            continue
+        _verify_graph_invariants(rel_path, doc, graphs)
+        doc["causal_graphs"] = graphs
+        for d in existing_disc:
+            if isinstance(d, dict) and d.get("discussion_id") == source_gap_id:
+                d["status"] = "RESOLVED"
+                d["resolved_date"] = POSED_DATE_C2
+                d["attaches_to"] = [f"causal_graphs#{graph_id}"]
+                d["resolution_note"] = (
+                    f"Added connected NONMECHANISTIC causal_graphs entry ({graph_id}) "
+                    "anchored on existing verbatim record evidence snippets, and "
+                    "tracked the remaining strain-matched UniProtKB protein-example "
+                    f"requirement in {disc_id}."
+                )
+        if matched:
+            for idx, d in enumerate(existing_disc):
+                if isinstance(d, dict) and d.get("discussion_id") == disc_id:
+                    existing_disc[idx] = disc
+            doc["discussions"] = existing_disc
+        else:
+            existing_disc.append(disc)
+            doc["discussions"] = existing_disc
+            scope_status = graphs[0]["scope_status"]
+            record_curation_event(
+                doc,
+                action=CURATION_ACTION_GRAPH,
+                curator=CURATOR,
+                changes=(
+                    f"Added {scope_status} causal_graphs entry ({graph_id}) "
+                    f"and OPEN CURATION_TODO discussion ({disc_id}) anchored on "
+                    "existing verbatim record evidence snippets."
+                ),
+                llm_assisted=True,
+            )
+        errors = validate_trait(doc)
+        if errors:
+            raise ValidationFailedError(path, errors)
+        if apply:
+            write_validated_trait(doc, path)
+        graphs_added += 1
+
+    for rel_path in sorted(COHORT_F_GAPS):
+        path = REPO_ROOT / rel_path
+        doc = yaml.safe_load(path.read_text(encoding="utf-8"))
+        existing_disc = doc.get("discussions") or []
+        disc = build_cohort_f_discussion(rel_path, doc)
         disc_id = disc["discussion_id"]
         matched = [
             d for d in existing_disc if isinstance(d, dict) and d.get("discussion_id") == disc_id

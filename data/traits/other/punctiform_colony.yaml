@@ -19,6 +19,12 @@ curation_history:
     provenance and DOI-backed pinpoint-size evidence after a repository-wide duplicate
     review covering ignored and hidden files.
   llm_assisted: true
+- timestamp: '2026-10-23T20:51:41Z'
+  curator: claude
+  action: RECORD_MECHANISM_KNOWLEDGE_GAP
+  changes: Recorded OPEN KNOWLEDGE_GAP discussion (punctiform-colony-causal-graph-source-gap)
+    attached to causal_graphs documenting the source-limited mechanism gap.
+  llm_assisted: true
 definition_source: http://purl.obolibrary.org/obo/OMP_0000240
 evidence:
 - reference: DOI:10.7759/cureus.374
@@ -29,3 +35,28 @@ evidence:
     irregular, rhomboid, umbonate, umbonate, filamentous, or rhizoid)
   notes: Kandi lists pinpoint as the smallest bacterial colony-size descriptor, matching
     the size component of the OMP-derived punctiform colony definition.
+discussions:
+- discussion_id: punctiform-colony-causal-graph-source-gap
+  prompt: Add primary literature evidence for slow growth rate, microcolony confinement,
+    or metabolic constraints underlying pinpoint (<1 mm) punctiform colonies before
+    constructing causal_graphs.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  attaches_to:
+  - causal_graphs
+  rationale: The current record carries a single general colony-morphology overview
+    snippet (DOI:10.7759/cureus.374) without specific genetic or physiological mechanism
+    quotes.
+  posed_by: claude
+  posed_date: '2026-10-23'
+  evidence:
+  - reference: DOI:10.7759/cureus.374
+    supports: PARTIAL
+    snippet: Colony morphology is one among the various characters of bacteria, which
+      is also unique to a particular genus of bacteria that could be instrumental
+      in preliminary identification. Size (measured in millimetres - pinpoint (≤ 1
+      mm), small (2-3 mm), medium (4-5 mm), and large (> 5 mm) colonies), shape (circular,
+      irregular, rhomboid, umbonate, umbonate, filamentous, or rhizoid)
+    explanation: Existing record-level evidence supports the diagnostic assay, test-outcome,
+      colony-shape, or ecological-scope definition, but does not provide multi-step
+      molecular mechanism quotes for a connected causal graph.

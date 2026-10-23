@@ -28,6 +28,12 @@ curation_history:
     Epibacterium ulvae surface-association evidence after a repository-wide duplicate
     review covering ignored and hidden files.
   llm_assisted: true
+- timestamp: '2026-10-23T20:51:41Z'
+  curator: claude
+  action: RECORD_MECHANISM_KNOWLEDGE_GAP
+  changes: Recorded OPEN KNOWLEDGE_GAP discussion (epibiont-phenotype-causal-graph-source-gap)
+    attached to causal_graphs documenting the source-limited mechanism gap.
+  llm_assisted: true
 definition_source: DOI:10.1099/ijs.0.042838-0
 evidence:
 - reference: DOI:10.1099/ijs.0.042838-0
@@ -44,3 +50,24 @@ canonical_examples:
   note: Species represented by type strain U95 (= DSM 24752 = LMG 26464), which was
     isolated from the surface of the marine green alga Ulva australis.
   reference: https://bacdive.dsmz.de/strain/24523
+discussions:
+- discussion_id: epibiont-phenotype-causal-graph-source-gap
+  prompt: Add primary literature evidence for surface attachment adhesins, biofilm
+    formation, and host-epibiont interactions in Epibacterium ulvae before constructing
+    causal_graphs.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  attaches_to:
+  - causal_graphs
+  rationale: The current record carries two strain-isolation habitat snippets from
+    the surface of the marine alga Ulva australis (DOI:10.1099/ijs.0.042838-0; BacDive
+    24523) without molecular colonization or attachment mechanism quotes.
+  posed_by: claude
+  posed_date: '2026-10-23'
+  evidence:
+  - reference: DOI:10.1099/ijs.0.042838-0
+    supports: PARTIAL
+    snippet: were isolated from the marine alga Ulva australis
+    explanation: Existing record-level evidence supports the diagnostic assay, test-outcome,
+      colony-shape, or ecological-scope definition, but does not provide multi-step
+      molecular mechanism quotes for a connected causal graph.

@@ -35,6 +35,12 @@ curation_history:
   changes: Reparented catalase negative below the newly curated METPO:1007080 catalase
     test assay parent and marked the temporary assay-parent discussion resolved.
   llm_assisted: true
+- timestamp: '2026-10-23T20:51:41Z'
+  curator: claude
+  action: RECORD_MECHANISM_KNOWLEDGE_GAP
+  changes: Recorded OPEN KNOWLEDGE_GAP discussion (catalase-negative-causal-graph-source-gap)
+    attached to causal_graphs documenting the source-limited mechanism gap.
+  llm_assisted: true
 definition_source: DOI:10.1038/srep03081
 evidence:
 - reference: DOI:10.1038/srep03081
@@ -64,3 +70,25 @@ discussions:
     than a temporary direct phenotype parent.
   posed_by: codex
   posed_date: '2026-09-11'
+- discussion_id: catalase-negative-causal-graph-source-gap
+  prompt: Add primary literature evidence for the genetic or biochemical basis of
+    catalase absence and alternative H2O2 scavenging (e.g. NADH peroxidase Npx) before
+    constructing causal_graphs.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  attaches_to:
+  - causal_graphs
+  rationale: This record represents a negative catalase-test outcome phenotype; its
+    evidence pairs an assay-foam snippet (DOI:10.1038/srep03081) with a single sentence
+    noting that Enterococcus faecium is catalase negative (DOI:10.1128/iai.72.8.4512-4520.2004),
+    which does not ground a multi-edge causal graph for the negative test state.
+  posed_by: claude
+  posed_date: '2026-10-23'
+  evidence:
+  - reference: DOI:10.1038/srep03081
+    supports: PARTIAL
+    snippet: The enzyme-generated oxygen bubbles trapped by Triton X-100 were visualized
+      as foam
+    explanation: Existing record-level evidence supports the diagnostic assay, test-outcome,
+      colony-shape, or ecological-scope definition, but does not provide multi-step
+      molecular mechanism quotes for a connected causal graph.

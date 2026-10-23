@@ -24,6 +24,12 @@ curation_history:
     hyperosmotic stress evidence after a repository-wide duplicate review covering
     ignored and hidden files.
   llm_assisted: true
+- timestamp: '2026-10-23T20:51:41Z'
+  curator: claude
+  action: RECORD_MECHANISM_KNOWLEDGE_GAP
+  changes: Recorded OPEN KNOWLEDGE_GAP discussion (osmotic-tolerance-causal-graph-source-gap)
+    attached to causal_graphs documenting the source-limited mechanism gap.
+  llm_assisted: true
 definition_source: DOI:10.1128/mBio.00390-21
 evidence:
 - reference: DOI:10.1128/mBio.00390-21
@@ -31,3 +37,24 @@ evidence:
   notes: Ledermann et al. assayed Bradyrhizobium diazoefficiens USDA 110 against 400
     mM sorbitol as the hyperosmotic nonionic condition and contrasted it with NaCl,
     MgCl2, and MgSO4 ionic stresses.
+discussions:
+- discussion_id: osmotic-tolerance-causal-graph-source-gap
+  prompt: Add a second independent primary literature snippet covering compatible-solute
+    uptake/synthesis (e.g. glycine betaine, trehalose, proline) and osmosensory regulation
+    plus a canonical example before constructing causal_graphs.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  attaches_to:
+  - causal_graphs
+  rationale: The current record carries a single 49-character snippet ('tolerance
+    against hyperosmotic conditions (400 mM sorbitol)' in DOI:10.1128/mBio.00390-21)
+    without a second mechanistic quote or canonical example.
+  posed_by: claude
+  posed_date: '2026-10-23'
+  evidence:
+  - reference: DOI:10.1128/mBio.00390-21
+    supports: PARTIAL
+    snippet: tolerance against hyperosmotic conditions (400 mM sorbitol)
+    explanation: Existing record-level evidence supports the diagnostic assay, test-outcome,
+      colony-shape, or ecological-scope definition, but does not provide multi-step
+      molecular mechanism quotes for a connected causal graph.

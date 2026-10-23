@@ -23,6 +23,12 @@ curation_history:
     evidence after a repository-wide duplicate review covering ignored and hidden
     files.
   llm_assisted: true
+- timestamp: '2026-10-23T20:51:41Z'
+  curator: claude
+  action: RECORD_MECHANISM_KNOWLEDGE_GAP
+  changes: Recorded OPEN KNOWLEDGE_GAP discussion (circular-colony-causal-graph-source-gap)
+    attached to causal_graphs documenting the source-limited mechanism gap.
+  llm_assisted: true
 definition_source: https://asm.org/asm/media/protocol-images/colony-morphology-protocol.pdf
 evidence:
 - reference: https://asm.org/asm/media/protocol-images/colony-morphology-protocol.pdf
@@ -36,3 +42,26 @@ evidence:
   notes: The ASM example records circular form separately from entire margin and convex
     elevation, supporting circular as a colony outline state rather than a margin
     or elevation descriptor.
+discussions:
+- discussion_id: circular-colony-causal-graph-source-gap
+  prompt: Add primary literature evidence for the cellular growth, surface-motility,
+    and extracellular-matrix determinants of circular colony morphology before constructing
+    causal_graphs.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  attaches_to:
+  - causal_graphs
+  rationale: The current record carries descriptive ASM colony-morphology protocol
+    snippets defining macroscopic circular colony form without genetic, regulatory,
+    or biophysical mechanism quotes.
+  posed_by: claude
+  posed_date: '2026-10-23'
+  evidence:
+  - reference: https://asm.org/asm/media/protocol-images/colony-morphology-protocol.pdf
+    supports: PARTIAL
+    snippet: Describe the form, elevation, and margin as indicated in Fig. 1. Also
+      indicate whether the colonies are smooth (shiny glistening surface), rough (dull,
+      bumpy, granular, or matte surface), or mucoid (slimy or gummy appearance).
+    explanation: Existing record-level evidence supports the diagnostic assay, test-outcome,
+      colony-shape, or ecological-scope definition, but does not provide multi-step
+      molecular mechanism quotes for a connected causal graph.

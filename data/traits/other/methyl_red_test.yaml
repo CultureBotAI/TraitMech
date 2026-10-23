@@ -31,6 +31,12 @@ curation_history:
   changes: Expanded the ASM mixed-acid evidence quote through its butanediol contrast
     and narrowed its note after PR 866 review issue 871.
   llm_assisted: true
+- timestamp: '2026-10-23T20:51:41Z'
+  curator: claude
+  action: RECORD_MECHANISM_KNOWLEDGE_GAP
+  changes: Recorded OPEN KNOWLEDGE_GAP discussion (methyl-red-test-causal-graph-source-gap)
+    attached to causal_graphs documenting the source-limited mechanism gap.
+  llm_assisted: true
 definition_source: https://asm.org/getmedia/40946f85-9357-4563-aa8a-994427efa825/Methyl-Red-and-Voges-Proskauer-Test-Protocols.pdf
 evidence:
 - reference: https://asm.org/getmedia/40946f85-9357-4563-aa8a-994427efa825/Methyl-Red-and-Voges-Proskauer-Test-Protocols.pdf
@@ -60,3 +66,34 @@ evidence:
     of glucose.
   notes: The same protocol defines the negative readout as a yellow culture reflecting
     less glucose-derived acid production.
+discussions:
+- discussion_id: methyl-red-test-causal-graph-source-gap
+  prompt: Keep causal mechanism curation on mixed_acid_fermentation.yaml or add organism-level
+    enzymatic evidence for mixed-acid pyruvate catabolism alongside the pH-indicator
+    protocol.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  attaches_to:
+  - causal_graphs
+  rationale: METPO:1005013 represents the diagnostic methyl red pH-indicator assay
+    protocol (ASM Methyl Red and Voges-Proskauer protocol), whereas the underlying
+    metabolic pathway is curated on mixed_acid_fermentation.yaml.
+  posed_by: claude
+  posed_date: '2026-10-23'
+  evidence:
+  - reference: https://asm.org/getmedia/40946f85-9357-4563-aa8a-994427efa825/Methyl-Red-and-Voges-Proskauer-Test-Protocols.pdf
+    supports: PARTIAL
+    snippet: Escherichia coli and other members of the low-ratio organisms described
+      by Clark and Lubs ferment sugars by the mixed acid pathway resulting in a low
+      ratio of CO2 to H2 gas produced by fermentation. The mixed acid pathway gives
+      4 mol of acidic products (mainly lactic and acetic acid), 1 mol of neutral fermentation
+      product (ethanol), 1 mol of CO2, and 1 mol of H2 per mol of glucose fermented
+      (9). The large quantity of acids produced causes a significant decrease in the
+      pH of the culture medium. In contrast, Enterobacter aerogenes and other members
+      of the high-ratio organisms (those that produce a high ratio of CO2 to H2 from
+      the fermentation of glucose) ferment sugars via the butanediol fermentation
+      pathway, producing only 1 mol of acid per mol of glucose. This pathway results
+      in a lower degree of acidification of the culture medium.
+    explanation: Existing record-level evidence supports the diagnostic assay, test-outcome,
+      colony-shape, or ecological-scope definition, but does not provide multi-step
+      molecular mechanism quotes for a connected causal graph.

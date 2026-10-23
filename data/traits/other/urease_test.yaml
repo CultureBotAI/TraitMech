@@ -29,6 +29,12 @@ curation_history:
     DOI-backed urea-hydrolysis and pH-indicator evidence after a repository-wide duplicate
     review covering ignored and hidden files.
   llm_assisted: true
+- timestamp: '2026-10-23T20:51:42Z'
+  curator: claude
+  action: RECORD_MECHANISM_KNOWLEDGE_GAP
+  changes: Recorded OPEN KNOWLEDGE_GAP discussion (urease-test-causal-graph-source-gap)
+    attached to causal_graphs documenting the source-limited mechanism gap.
+  llm_assisted: true
 definition_source: http://purl.obolibrary.org/obo/OMP_0000222
 evidence:
 - reference: DOI:10.5812/chbs-160199
@@ -41,3 +47,24 @@ evidence:
   snippet: Both types contain a phenol red reagent that changes color with pH variations
   notes: The review describes phenol red as the pH indicator for both liquid and solid
     urease-test media.
+discussions:
+- discussion_id: urease-test-causal-graph-source-gap
+  prompt: Keep causal mechanism curation on the positive enzyme-activity record (urease_positive)
+    rather than the diagnostic urea-broth/agar assay class.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  attaches_to:
+  - causal_graphs
+  rationale: METPO:1007082 represents the diagnostic urease test protocol (DOI:10.5812/chbs-160199),
+    whereas the nickel-metalloenzyme urea hydrolysis mechanism is curated on urease_positive.yaml.
+  posed_by: claude
+  posed_date: '2026-10-23'
+  evidence:
+  - reference: DOI:10.5812/chbs-160199
+    supports: PARTIAL
+    snippet: Urea is classified as a diamide, and certain bacteria possessing the
+      enzyme urease are capable of utilizing urea to generate ammonia, carbon dioxide,
+      and water
+    explanation: Existing record-level evidence supports the diagnostic assay, test-outcome,
+      colony-shape, or ecological-scope definition, but does not provide multi-step
+      molecular mechanism quotes for a connected causal graph.

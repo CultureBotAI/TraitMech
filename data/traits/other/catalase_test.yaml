@@ -29,6 +29,12 @@ curation_history:
     plus stable-URL and DOI-backed assay evidence after a repository-wide duplicate
     review covering ignored and hidden files.
   llm_assisted: true
+- timestamp: '2026-10-23T20:51:41Z'
+  curator: claude
+  action: RECORD_MECHANISM_KNOWLEDGE_GAP
+  changes: Recorded OPEN KNOWLEDGE_GAP discussion (catalase-test-causal-graph-source-gap)
+    attached to causal_graphs documenting the source-limited mechanism gap.
+  llm_assisted: true
 definition_source: http://purl.obolibrary.org/obo/OMP_0000218
 evidence:
 - reference: https://asm.org/protocols/catalase-test-protocol
@@ -40,3 +46,24 @@ evidence:
     as foam
   notes: Iwase et al. support the visible oxygen-bubble readout produced by catalase-mediated
     hydrogen-peroxide decomposition.
+discussions:
+- discussion_id: catalase-test-causal-graph-source-gap
+  prompt: Add multi-step mechanistic evidence or keep causal mechanism curation on
+    the corresponding enzyme-activity record (catalase_positive / catalase activity)
+    rather than the diagnostic assay class.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  attaches_to:
+  - causal_graphs
+  rationale: METPO:1007080 represents a diagnostic biochemical test protocol (ASM
+    catalase test protocol; DOI:10.1038/srep03081) rather than a cellular physiological
+    pathway; the underlying H2O2 disproportionation mechanism is curated on catalase_positive.yaml.
+  posed_by: claude
+  posed_date: '2026-10-23'
+  evidence:
+  - reference: https://asm.org/protocols/catalase-test-protocol
+    supports: PARTIAL
+    snippet: The catalase test facilitates the detection of this enzyme in bacteria
+    explanation: Existing record-level evidence supports the diagnostic assay, test-outcome,
+      colony-shape, or ecological-scope definition, but does not provide multi-step
+      molecular mechanism quotes for a connected causal graph.

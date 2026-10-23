@@ -18,6 +18,12 @@ curation_history:
     evidence after a repository-wide duplicate review covering ignored and hidden
     files.
   llm_assisted: true
+- timestamp: '2026-10-23T20:51:41Z'
+  curator: claude
+  action: RECORD_MECHANISM_KNOWLEDGE_GAP
+  changes: Recorded OPEN KNOWLEDGE_GAP discussion (non-hemolytic-causal-graph-source-gap)
+    attached to causal_graphs documenting the source-limited mechanism gap.
+  llm_assisted: true
 definition_source: DOI:10.14202/vetworld.2025.3622-3630
 evidence:
 - reference: DOI:10.14202/vetworld.2025.3622-3630
@@ -38,3 +44,23 @@ discussions:
     axis or another broader parent for hemolysis-test outcomes.
   posed_by: codex
   posed_date: '2026-09-11'
+- discussion_id: non-hemolytic-causal-graph-source-gap
+  prompt: Add primary literature evidence for the genetic absence of hemolysin/cytolysin
+    operons in gamma-hemolytic strains before considering a mechanism representation.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  attaches_to:
+  - causal_graphs
+  rationale: This record represents a negative diagnostic phenotype (gamma-hemolysis
+    / absence of red-blood-cell lysis in DOI:10.14202/vetworld.2025.3622-3630) supported
+    by a single screening snippet without a canonical example.
+  posed_by: claude
+  posed_date: '2026-10-23'
+  evidence:
+  - reference: DOI:10.14202/vetworld.2025.3622-3630
+    supports: PARTIAL
+    snippet: Hemolysis testing revealed γ-hemolysis for all strains, confirming non-hemolytic
+      and non-pathogenic properties.
+    explanation: Existing record-level evidence supports the diagnostic assay, test-outcome,
+      colony-shape, or ecological-scope definition, but does not provide multi-step
+      molecular mechanism quotes for a connected causal graph.

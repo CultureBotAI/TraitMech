@@ -18,6 +18,12 @@ curation_history:
     aureus hemolysis evidence after a repository-wide duplicate review covering ignored
     and hidden files.
   llm_assisted: true
+- timestamp: '2026-10-23T20:51:41Z'
+  curator: claude
+  action: RECORD_MECHANISM_KNOWLEDGE_GAP
+  changes: Recorded OPEN KNOWLEDGE_GAP discussion (hemolytic-causal-graph-source-gap)
+    attached to causal_graphs documenting the source-limited mechanism gap.
+  llm_assisted: true
 definition_source: DOI:10.3390/toxins5061140
 evidence:
 - reference: DOI:10.3390/toxins5061140
@@ -30,3 +36,25 @@ canonical_examples:
   note: Canonical hemolytic bacterium whose culture supernatants have long been assayed
     for rabbit red-blood-cell lysis.
   reference: DOI:10.3390/toxins5061140
+discussions:
+- discussion_id: hemolytic-causal-graph-source-gap
+  prompt: Add a second independent primary literature snippet covering erythrocyte
+    membrane lysis by secreted Staphylococcus aureus hemolysins (e.g. alpha-hemolysin
+    Hla) before constructing causal_graphs.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  attaches_to:
+  - causal_graphs
+  rationale: The current record carries a single 54-character phrase ('hemolysis to
+    toxigenic substances secreted by S. aureus' in DOI:10.3390/toxins5061140); constructing
+    a multi-edge graph from one short phrase would violate the snippet-diversity and
+    anti-clause-splitting rules.
+  posed_by: claude
+  posed_date: '2026-10-23'
+  evidence:
+  - reference: DOI:10.3390/toxins5061140
+    supports: PARTIAL
+    snippet: hemolysis to toxigenic substances secreted by S. aureus
+    explanation: Existing record-level evidence supports the diagnostic assay, test-outcome,
+      colony-shape, or ecological-scope definition, but does not provide multi-step
+      molecular mechanism quotes for a connected causal graph.
