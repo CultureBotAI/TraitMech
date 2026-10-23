@@ -14,6 +14,7 @@ session:
 links:
   prs:
   - https://github.com/CultureBotAI/TraitMech/pull/1989
+  - https://github.com/CultureBotAI/TraitMech/pull/1991
 events:
 - type: EDIT
   outcome: changed
@@ -32,8 +33,8 @@ events:
     properties), 153 metpo_2026_06_12_active_review.tsv rows (0 pending), 1,546 metpo_2026_06_12_release_delta.tsv
     rows across 1,364 unique CURIEs (0 pending), 3,478 residual causal-node occurrences across
     2,914 unique keys including 27 TRAIT/CAPACITY occurrences across 24 unique keys (0 admissible
-    standalone traits), 272 open CURATION_TODO items including 75 hierarchy/sibling items
-    (reduced from 286 in Cycle 1 Stage 1 after Cycle 1 Stage 2 resolved 14 mechanism-graph
-    CURATION_TODO items in PR #1975), and 605 METPO proposal cohorts (783 proposed classes,
-    25 Scope B/C scaffolding classes, 0 unmatched Scope A trait classes), confirming 0 new
-    admissible standalone traits.'
+    standalone traits), 286 open CURATION_TODO items out of 781 total OPEN discussions across
+    data/traits/**/*.yaml including 75 hierarchy/sibling items (0 admissible new records; all
+    blocked on upstream METPO release alignment #364 or rejected to avoid conflating distinct
+    mechanisms), and 605 METPO proposal cohorts (783 proposed classes, 25 Scope B/C scaffolding
+    classes, 0 unmatched Scope A trait classes), confirming 0 new admissible standalone traits.'
