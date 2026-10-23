@@ -196,6 +196,55 @@
 
 
 
+    <div class="card" id="discussions">
+      <h2>Discussions and Knowledge Gaps <span class="meta">(1)</span></h2>
+      <p class="meta">Open questions attached to this trait. Seeded by
+        <code>just knowledge-gap-scan</code> and curated; see
+        <a href="../../../app/discussions/index.html">the corpus-wide index</a>.</p>
+
+
+      <div class="discussion" id="voges-proskauer-test-causal-graph-source-gap">
+        <p class="discussion-prompt">Keep causal mechanism curation on the metabolic pathway record (butanediol_fermentation) or add enzymatic evidence for alpha-acetolactate synthase (BudB) and decarboxylase (BudA) alongside the KOH/alpha-naphthol assay protocol.</p>
+        <p class="meta">
+          <span class="badge">KNOWLEDGE GAP</span>
+          <span class="badge">OPEN</span>
+          <code>voges-proskauer-test-causal-graph-source-gap</code>
+          · raised by claude
+          · 2026-10-23
+        </p>
+
+
+        <p class="meta">Attached to
+          <code>causal_graphs</code>
+        </p>
+
+
+        <p>METPO:1005016 represents the diagnostic Voges-Proskauer assay protocol (ASM Methyl Red and Voges-Proskauer protocol) detecting acetoin oxidation to diacetyl in KOH rather than a standalone organismal gene-to-trait mechanism.</p>
+
+
+
+
+        <h3>Evidence</h3>
+        <ul class="discussion-evidence">
+
+          <li>
+            <a href="https://asm.org/getmedia/40946f85-9357-4563-aa8a-994427efa825/Methyl-Red-and-Voges-Proskauer-Test-Protocols.pdf" rel="nofollow noreferrer"><code>https://asm.org/getmedia/40946f85-9357-4563-aa8a-994427efa825/Methyl-Red-and-Voges-Proskauer-Test-Protocols.pdf</code></a>
+            <span class="badge">PARTIAL</span>
+            <blockquote>Bacteria fermenting sugars via the butanediol pathway produce acetoin (i.e., acetyl methyl carbinol or 3-hydroxybutanone) as an intermediate which can be further reduced to 2,3-butanediol.</blockquote>
+            <span class="meta">Existing record-level evidence supports the diagnostic assay, test-outcome, colony-shape, or ecological-scope definition, but does not provide multi-step molecular mechanism quotes for a connected causal graph.</span>
+          </li>
+
+        </ul>
+
+
+
+
+
+
+      </div>
+
+    </div>
+
 
     <div class="card">
       <h2>Curation history</h2>
@@ -211,6 +260,12 @@
           <time>2026-09-12T21:15:44Z</time> ·
           <strong>ENRICHED_FROM_LITERATURE</strong> · codex
           <p class="changes">Added the METPO Voges-Proskauer-test assay parent with stable-URL butanediol-pathway and acetoin-readout evidence after a repository-wide duplicate review covering ignored and hidden files.</p>
+        </li>
+
+        <li>
+          <time>2026-10-23T20:51:42Z</time> ·
+          <strong>RECORD_MECHANISM_KNOWLEDGE_GAP</strong> · claude
+          <p class="changes">Recorded OPEN KNOWLEDGE_GAP discussion (voges-proskauer-test-causal-graph-source-gap) attached to causal_graphs documenting the source-limited mechanism gap.</p>
         </li>
 
       </ol>
@@ -289,7 +344,7 @@
       third-party source terms apply
     </div>
     <div>
-      Record as of 2026-09-12 21:16 UTC
+      Record as of 2026-10-23 20:51 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
       · embedding coverage 100.0%

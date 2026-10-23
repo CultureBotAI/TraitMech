@@ -43,6 +43,12 @@ curation_history:
   changes: Moved the methyl-red parent-gap closure into resolution_note and resolved_date
     so the original non-assay parent rationale remains visible.
   llm_assisted: true
+- timestamp: '2026-10-23T20:51:41Z'
+  curator: claude
+  action: RECORD_MECHANISM_KNOWLEDGE_GAP
+  changes: Recorded OPEN KNOWLEDGE_GAP discussion (methyl-red-test-positive-causal-graph-source-gap)
+    attached to causal_graphs documenting the source-limited mechanism gap.
+  llm_assisted: true
 definition_source: https://asm.org/getmedia/40946f85-9357-4563-aa8a-994427efa825/Methyl-Red-and-Voges-Proskauer-Test-Protocols.pdf
 evidence:
 - reference: https://asm.org/getmedia/40946f85-9357-4563-aa8a-994427efa825/Methyl-Red-and-Voges-Proskauer-Test-Protocols.pdf
@@ -81,3 +87,25 @@ discussions:
     instead of a temporary direct phenotype parent; this resolves the exact METPO
     assay-parent gap, not the broader non-assay parent question for assay-outcome
     phenotypes.
+- discussion_id: methyl-red-test-positive-causal-graph-source-gap
+  prompt: Add primary literature evidence for mixed-acid fermentation enzymes (e.g.
+    PflB, LdhA, AckA-Pta) producing stable organic acids in Klebsiella ornithinolytica
+    before constructing causal_graphs.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  attaches_to:
+  - causal_graphs
+  rationale: The current record pairs an ASM pH-indicator color-change snippet with
+    a clinical identification panel count snippet (DOI:10.1128/JCM.42.8.3665-3669.2004),
+    lacking enzymatic or metabolic pathway quotes for the exemplar taxon.
+  posed_by: claude
+  posed_date: '2026-10-23'
+  evidence:
+  - reference: https://asm.org/getmedia/40946f85-9357-4563-aa8a-994427efa825/Methyl-Red-and-Voges-Proskauer-Test-Protocols.pdf
+    supports: PARTIAL
+    snippet: When the culture medium turns red after addition of methyl red, because
+      of a pH at or below 4.4 from the fermentation of glucose, the culture has a
+      positive result for the MR test (Fig.1A).
+    explanation: Existing record-level evidence supports the diagnostic assay, test-outcome,
+      colony-shape, or ecological-scope definition, but does not provide multi-step
+      molecular mechanism quotes for a connected causal graph.

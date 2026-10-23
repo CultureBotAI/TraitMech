@@ -28,6 +28,12 @@ curation_history:
     provenance plus stable-URL and DOI-backed assay evidence after a repository-wide
     duplicate review covering ignored and hidden files.
   llm_assisted: true
+- timestamp: '2026-10-23T20:51:41Z'
+  curator: claude
+  action: RECORD_MECHANISM_KNOWLEDGE_GAP
+  changes: Recorded OPEN KNOWLEDGE_GAP discussion (oxidase-negative-causal-graph-source-gap)
+    attached to causal_graphs documenting the source-limited mechanism gap.
+  llm_assisted: true
 definition_source: http://purl.obolibrary.org/obo/OMP_0006084
 evidence:
 - reference: https://asm.org/protocols/oxidase-test-protocol
@@ -52,3 +58,25 @@ evidence:
   notes: The review constrains interpretation of the negative assay outcome to cytochrome
     c oxidase under the oxidase-test readout, rather than absence of every terminal
     oxidase.
+discussions:
+- discussion_id: oxidase-negative-causal-graph-source-gap
+  prompt: Add primary literature evidence for cytochrome c oxidase absence and alternative
+    terminal oxidases (e.g. cytochrome bd or bo3 quinol oxidases) in oxidase-negative
+    taxa before considering a mechanism representation.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  attaches_to:
+  - causal_graphs
+  rationale: This record represents a negative diagnostic test-outcome phenotype (ASM
+    oxidase test protocol; DOI:10.5812/chbs-160199) defined by the absence of cytochrome
+    c oxidase indicator oxidation.
+  posed_by: claude
+  posed_date: '2026-10-23'
+  evidence:
+  - reference: https://asm.org/protocols/oxidase-test-protocol
+    supports: PARTIAL
+    snippet: The test can be used to distinguish Neisseria gonorrhoeae (oxidase positive)
+      from Staphylococcus spp. and Streptococcus spp. (oxidase negative)
+    explanation: Existing record-level evidence supports the diagnostic assay, test-outcome,
+      colony-shape, or ecological-scope definition, but does not provide multi-step
+      molecular mechanism quotes for a connected causal graph.

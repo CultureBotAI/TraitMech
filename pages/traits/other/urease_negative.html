@@ -196,6 +196,55 @@
 
 
 
+    <div class="card" id="discussions">
+      <h2>Discussions and Knowledge Gaps <span class="meta">(1)</span></h2>
+      <p class="meta">Open questions attached to this trait. Seeded by
+        <code>just knowledge-gap-scan</code> and curated; see
+        <a href="../../../app/discussions/index.html">the corpus-wide index</a>.</p>
+
+
+      <div class="discussion" id="urease-negative-causal-graph-source-gap">
+        <p class="discussion-prompt">Add primary literature evidence for the absence of urease structural/accessory genes (ureABC/ureDEFG) in urease-negative taxa before considering a mechanism representation.</p>
+        <p class="meta">
+          <span class="badge">KNOWLEDGE GAP</span>
+          <span class="badge">OPEN</span>
+          <code>urease-negative-causal-graph-source-gap</code>
+          · raised by claude
+          · 2026-10-23
+        </p>
+
+
+        <p class="meta">Attached to
+          <code>causal_graphs</code>
+        </p>
+
+
+        <p>This record represents a negative diagnostic test-outcome phenotype supported by phenol-red urease medium indicator snippets (DOI:10.5812/chbs-160199) without a canonical example or active enzymatic pathway.</p>
+
+
+
+
+        <h3>Evidence</h3>
+        <ul class="discussion-evidence">
+
+          <li>
+            <a href="https://doi.org/10.5812/chbs-160199" rel="nofollow noreferrer"><code>DOI:10.5812/chbs-160199</code></a>
+            <span class="badge">PARTIAL</span>
+            <blockquote>A positive reaction is indicated by the entire liquid medium and the surface of the solid medium turning pink, whereas a negative reaction is characterized by the medium remaining yellow</blockquote>
+            <span class="meta">Existing record-level evidence supports the diagnostic assay, test-outcome, colony-shape, or ecological-scope definition, but does not provide multi-step molecular mechanism quotes for a connected causal graph.</span>
+          </li>
+
+        </ul>
+
+
+
+
+
+
+      </div>
+
+    </div>
+
 
     <div class="card">
       <h2>Curation history</h2>
@@ -211,6 +260,12 @@
           <time>2026-09-11T15:41:02Z</time> ·
           <strong>ENRICHED_FROM_LITERATURE</strong> · codex
           <p class="changes">Enriched the seeded METPO urease-negative test outcome with OMP definition provenance plus DOI-backed assay evidence after a repository-wide duplicate review covering ignored and hidden files.</p>
+        </li>
+
+        <li>
+          <time>2026-10-23T20:51:41Z</time> ·
+          <strong>RECORD_MECHANISM_KNOWLEDGE_GAP</strong> · claude
+          <p class="changes">Recorded OPEN KNOWLEDGE_GAP discussion (urease-negative-causal-graph-source-gap) attached to causal_graphs documenting the source-limited mechanism gap.</p>
         </li>
 
       </ol>
@@ -289,7 +344,7 @@
       third-party source terms apply
     </div>
     <div>
-      Record as of 2026-09-11 15:41 UTC
+      Record as of 2026-10-23 20:51 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
       · embedding coverage 100.0%

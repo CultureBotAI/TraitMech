@@ -20,6 +20,12 @@ curation_history:
     evidence after a repository-wide duplicate review covering ignored and hidden
     files.
   llm_assisted: true
+- timestamp: '2026-10-23T20:51:41Z'
+  curator: claude
+  action: RECORD_MECHANISM_KNOWLEDGE_GAP
+  changes: Recorded OPEN KNOWLEDGE_GAP discussion (colony-morphology-causal-graph-source-gap)
+    attached to causal_graphs documenting the source-limited mechanism gap.
+  llm_assisted: true
 definition_source: https://asm.org/asm/media/protocol-images/colony-morphology-protocol.pdf
 evidence:
 - reference: https://asm.org/asm/media/protocol-images/colony-morphology-protocol.pdf
@@ -33,3 +39,25 @@ evidence:
     granular, or matte surface), or mucoid (slimy or gummy appearance).
   notes: The peer-reviewed ASM protocol explicitly treats colony form, elevation,
     margin, and surface texture as morphology descriptors.
+discussions:
+- discussion_id: colony-morphology-causal-graph-source-gap
+  prompt: Add primary literature evidence for extracellular matrix, cell-surface appendage,
+    and multicellular morphogenesis pathways before constructing causal_graphs on
+    this upper colony-morphology class.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  attaches_to:
+  - causal_graphs
+  rationale: The current record carries descriptive ASM protocol snippets enumerating
+    macroscopic colony form, elevation, and margin categories without molecular or
+    cellular mechanism quotes.
+  posed_by: claude
+  posed_date: '2026-10-23'
+  evidence:
+  - reference: https://asm.org/asm/media/protocol-images/colony-morphology-protocol.pdf
+    supports: PARTIAL
+    snippet: If well separated from other colonies, a colony will have a characteristic
+      shape (both in elevation and margin), size, color, and consistency.
+    explanation: Existing record-level evidence supports the diagnostic assay, test-outcome,
+      colony-shape, or ecological-scope definition, but does not provide multi-step
+      molecular mechanism quotes for a connected causal graph.

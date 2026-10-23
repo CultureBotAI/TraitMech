@@ -28,6 +28,12 @@ curation_history:
     stable-URL and DOI-backed assay evidence after a repository-wide duplicate review
     covering ignored and hidden files.
   llm_assisted: true
+- timestamp: '2026-10-23T20:51:41Z'
+  curator: claude
+  action: RECORD_MECHANISM_KNOWLEDGE_GAP
+  changes: Recorded OPEN KNOWLEDGE_GAP discussion (oxidase-test-causal-graph-source-gap)
+    attached to causal_graphs documenting the source-limited mechanism gap.
+  llm_assisted: true
 definition_source: http://purl.obolibrary.org/obo/OMP_0000220
 evidence:
 - reference: https://asm.org/protocols/oxidase-test-protocol
@@ -40,3 +46,24 @@ evidence:
     determined by performing an oxidase test
   notes: Hafezi and Khamar review oxidase-test use for determining bacterial cytochrome
     oxidase production.
+discussions:
+- discussion_id: oxidase-test-causal-graph-source-gap
+  prompt: Keep causal mechanism curation on the positive enzyme-activity record (oxidase_positive)
+    rather than the diagnostic redox-indicator assay class.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  attaches_to:
+  - causal_graphs
+  rationale: METPO:1007081 represents the diagnostic oxidase test protocol (ASM oxidase
+    test protocol; DOI:10.5812/chbs-160199), whereas the cytochrome c oxidase respiratory
+    mechanism is curated on oxidase_positive.yaml.
+  posed_by: claude
+  posed_date: '2026-10-23'
+  evidence:
+  - reference: https://asm.org/protocols/oxidase-test-protocol
+    supports: PARTIAL
+    snippet: The oxidase test is a biochemical reaction that assays for the presence
+      of cytochrome oxidase
+    explanation: Existing record-level evidence supports the diagnostic assay, test-outcome,
+      colony-shape, or ecological-scope definition, but does not provide multi-step
+      molecular mechanism quotes for a connected causal graph.

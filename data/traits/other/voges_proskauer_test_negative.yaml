@@ -19,6 +19,12 @@ curation_history:
     stable-URL VP-negative interpretation evidence after a repository-wide duplicate
     review covering ignored and hidden files.
   llm_assisted: true
+- timestamp: '2026-10-23T20:51:42Z'
+  curator: claude
+  action: RECORD_MECHANISM_KNOWLEDGE_GAP
+  changes: Recorded OPEN KNOWLEDGE_GAP discussion (voges-proskauer-test-negative-causal-graph-source-gap)
+    attached to causal_graphs documenting the source-limited mechanism gap.
+  llm_assisted: true
 definition_source: https://asm.org/getmedia/40946f85-9357-4563-aa8a-994427efa825/Methyl-Red-and-Voges-Proskauer-Test-Protocols.pdf
 evidence:
 - reference: https://asm.org/getmedia/40946f85-9357-4563-aa8a-994427efa825/Methyl-Red-and-Voges-Proskauer-Test-Protocols.pdf
@@ -32,3 +38,24 @@ canonical_examples:
   note: ASM Figure 2 presents E. coli grown in MR-VP broth for 48 hours as the VP-negative
     control culture that remains yellowish after Barritt's reagents are added.
   reference: https://asm.org/getmedia/40946f85-9357-4563-aa8a-994427efa825/Methyl-Red-and-Voges-Proskauer-Test-Protocols.pdf
+discussions:
+- discussion_id: voges-proskauer-test-negative-causal-graph-source-gap
+  prompt: Add primary literature evidence for the absence of the alpha-acetolactate-to-acetoin
+    pathway in Voges-Proskauer-negative Escherichia coli before considering a mechanism
+    representation.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  attaches_to:
+  - causal_graphs
+  rationale: This record represents a negative diagnostic test-outcome phenotype supported
+    by a single ASM protocol color-comparison snippet without enzymatic pathway quotes.
+  posed_by: claude
+  posed_date: '2026-10-23'
+  evidence:
+  - reference: https://asm.org/getmedia/40946f85-9357-4563-aa8a-994427efa825/Methyl-Red-and-Voges-Proskauer-Test-Protocols.pdf
+    supports: PARTIAL
+    snippet: VP-positive E. areogenes (A) shows red coloration on top of the culture,
+      whereas VP-negative E. coli (B) has a yellowish color.
+    explanation: Existing record-level evidence supports the diagnostic assay, test-outcome,
+      colony-shape, or ecological-scope definition, but does not provide multi-step
+      molecular mechanism quotes for a connected causal graph.

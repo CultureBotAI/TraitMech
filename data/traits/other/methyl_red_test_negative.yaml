@@ -38,6 +38,12 @@ curation_history:
   changes: Moved the methyl-red parent-gap closure into resolution_note and resolved_date
     so the original non-assay parent rationale remains visible.
   llm_assisted: true
+- timestamp: '2026-10-23T20:51:41Z'
+  curator: claude
+  action: RECORD_MECHANISM_KNOWLEDGE_GAP
+  changes: Recorded OPEN KNOWLEDGE_GAP discussion (methyl-red-test-negative-causal-graph-source-gap)
+    attached to causal_graphs documenting the source-limited mechanism gap.
+  llm_assisted: true
 definition_source: https://asm.org/getmedia/40946f85-9357-4563-aa8a-994427efa825/Methyl-Red-and-Voges-Proskauer-Test-Protocols.pdf
 evidence:
 - reference: https://asm.org/getmedia/40946f85-9357-4563-aa8a-994427efa825/Methyl-Red-and-Voges-Proskauer-Test-Protocols.pdf
@@ -89,3 +95,25 @@ discussions:
     instead of a temporary direct phenotype parent; this resolves the exact METPO
     assay-parent gap, not the broader non-assay parent question for assay-outcome
     phenotypes.
+- discussion_id: methyl-red-test-negative-causal-graph-source-gap
+  prompt: Add primary literature evidence for neutral fermentation end-product routing
+    (acetoin/2,3-butanediol conversion) in methyl-red-negative Klebsiella pneumoniae
+    before constructing causal_graphs.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  attaches_to:
+  - causal_graphs
+  rationale: This record represents a negative diagnostic test-outcome phenotype supported
+    by ASM protocol color-threshold and clinical panel reproducibility snippets (DOI:10.1128/JCM.42.8.3665-3669.2004)
+    without enzymatic pathway quotes.
+  posed_by: claude
+  posed_date: '2026-10-23'
+  evidence:
+  - reference: https://asm.org/getmedia/40946f85-9357-4563-aa8a-994427efa825/Methyl-Red-and-Voges-Proskauer-Test-Protocols.pdf
+    supports: PARTIAL
+    snippet: A negative MR test is indicated by a yellow color in the culture medium
+      (Fig. 1B), which occurs when less acid is produced (pH is higher) from the fermentation
+      of glucose.
+    explanation: Existing record-level evidence supports the diagnostic assay, test-outcome,
+      colony-shape, or ecological-scope definition, but does not provide multi-step
+      molecular mechanism quotes for a connected causal graph.

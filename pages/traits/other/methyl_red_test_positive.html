@@ -220,7 +220,7 @@
 
 
     <div class="card" id="discussions">
-      <h2>Discussions and Knowledge Gaps <span class="meta">(1)</span></h2>
+      <h2>Discussions and Knowledge Gaps <span class="meta">(2)</span></h2>
       <p class="meta">Open questions attached to this trait. Seeded by
         <code>just knowledge-gap-scan</code> and curated; see
         <a href="../../../app/discussions/index.html">the corpus-wide index</a>.</p>
@@ -251,6 +251,47 @@
 
 
         <p class="meta"><em>Resolution:</em> METPO:1005013 is now represented as the seeded methyl-red-test assay parent, so this assay-outcome phenotype can use its exact source superclass instead of a temporary direct phenotype parent; this resolves the exact METPO assay-parent gap, not the broader non-assay parent question for assay-outcome phenotypes.</p>
+
+
+
+
+      </div>
+
+
+      <div class="discussion" id="methyl-red-test-positive-causal-graph-source-gap">
+        <p class="discussion-prompt">Add primary literature evidence for mixed-acid fermentation enzymes (e.g. PflB, LdhA, AckA-Pta) producing stable organic acids in Klebsiella ornithinolytica before constructing causal_graphs.</p>
+        <p class="meta">
+          <span class="badge">KNOWLEDGE GAP</span>
+          <span class="badge">OPEN</span>
+          <code>methyl-red-test-positive-causal-graph-source-gap</code>
+          · raised by claude
+          · 2026-10-23
+        </p>
+
+
+        <p class="meta">Attached to
+          <code>causal_graphs</code>
+        </p>
+
+
+        <p>The current record pairs an ASM pH-indicator color-change snippet with a clinical identification panel count snippet (DOI:10.1128/JCM.42.8.3665-3669.2004), lacking enzymatic or metabolic pathway quotes for the exemplar taxon.</p>
+
+
+
+
+        <h3>Evidence</h3>
+        <ul class="discussion-evidence">
+
+          <li>
+            <a href="https://asm.org/getmedia/40946f85-9357-4563-aa8a-994427efa825/Methyl-Red-and-Voges-Proskauer-Test-Protocols.pdf" rel="nofollow noreferrer"><code>https://asm.org/getmedia/40946f85-9357-4563-aa8a-994427efa825/Methyl-Red-and-Voges-Proskauer-Test-Protocols.pdf</code></a>
+            <span class="badge">PARTIAL</span>
+            <blockquote>When the culture medium turns red after addition of methyl red, because of a pH at or below 4.4 from the fermentation of glucose, the culture has a positive result for the MR test (Fig.1A).</blockquote>
+            <span class="meta">Existing record-level evidence supports the diagnostic assay, test-outcome, colony-shape, or ecological-scope definition, but does not provide multi-step molecular mechanism quotes for a connected causal graph.</span>
+          </li>
+
+        </ul>
+
+
 
 
 
@@ -292,6 +333,12 @@
           <time>2026-09-12T20:44:24Z</time> ·
           <strong>CURATION_REVIEW_REVISION</strong> · codex
           <p class="changes">Moved the methyl-red parent-gap closure into resolution_note and resolved_date so the original non-assay parent rationale remains visible.</p>
+        </li>
+
+        <li>
+          <time>2026-10-23T20:51:41Z</time> ·
+          <strong>RECORD_MECHANISM_KNOWLEDGE_GAP</strong> · claude
+          <p class="changes">Recorded OPEN KNOWLEDGE_GAP discussion (methyl-red-test-positive-causal-graph-source-gap) attached to causal_graphs documenting the source-limited mechanism gap.</p>
         </li>
 
       </ol>
@@ -388,7 +435,7 @@
       third-party source terms apply
     </div>
     <div>
-      Record as of 2026-09-12 20:44 UTC
+      Record as of 2026-10-23 20:51 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
       · embedding coverage 100.0%

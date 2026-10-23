@@ -27,3 +27,32 @@ curation_history:
     review covering ignored and hidden files; the local METPO snapshot has no exact
     specialist class and the replacement placeholder is reserved in proposals/metpo_traitmech_v54.
   llm_assisted: true
+- timestamp: '2026-10-23T20:51:41Z'
+  curator: claude
+  action: RECORD_MECHANISM_KNOWLEDGE_GAP
+  changes: Recorded OPEN KNOWLEDGE_GAP discussion (specialist-causal-graph-source-gap)
+    attached to causal_graphs documenting the source-limited mechanism gap.
+  llm_assisted: true
+discussions:
+- discussion_id: specialist-causal-graph-source-gap
+  prompt: Add primary literature evidence for genome reduction, narrow substrate-transport
+    specificity, or strict host/habitat adaptation in a cited exemplar taxon before
+    constructing causal_graphs.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  attaches_to:
+  - causal_graphs
+  rationale: The current record carries two high-level ecological classification snippets
+    (DOI:10.1093/femsec/fiaa240; DOI:10.1038/s41559-023-02027-7) contrasting niche
+    breadth in generalists vs specialists without molecular mechanism quotes or a
+    canonical example.
+  posed_by: claude
+  posed_date: '2026-10-23'
+  evidence:
+  - reference: DOI:10.1093/femsec/fiaa240
+    supports: PARTIAL
+    snippet: Organisms are often categorized as generalists or specialists, corresponding
+      to broad or narrow niche requirements
+    explanation: Existing record-level evidence supports the diagnostic assay, test-outcome,
+      colony-shape, or ecological-scope definition, but does not provide multi-step
+      molecular mechanism quotes for a connected causal graph.

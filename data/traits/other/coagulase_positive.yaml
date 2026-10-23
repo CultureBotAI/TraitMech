@@ -30,6 +30,13 @@ curation_history:
     DOI-backed plasma-clotting evidence after a repository-wide duplicate review covering
     ignored and hidden files.
   llm_assisted: true
+- timestamp: '2026-10-23T20:51:41Z'
+  curator: claude
+  action: CURATE_CAUSAL_GRAPH
+  changes: Added NONMECHANISTIC causal_graphs entry (coagulase_positive_prothrombin_clotting_sketch)
+    and OPEN CURATION_TODO discussion (coagulase-positive-protein-example-gap) anchored
+    on existing verbatim record evidence snippets.
+  llm_assisted: true
 definition_source: DOI:10.1099/mic.0.000019
 evidence:
 - reference: DOI:10.1099/mic.0.000019
@@ -49,3 +56,80 @@ canonical_examples:
   note: Loof et al. use coagulase-positive S. aureus as a direct plasma-clotting example
     and contrast it with a coagulase-deficient mutant.
   reference: DOI:10.1099/mic.0.000019
+causal_graphs:
+- graph_id: coagulase_positive_prothrombin_clotting_sketch
+  title: Coagulase-mediated prothrombin activation and plasma clotting
+  description: Evidence-backed mechanism sketch linking bacterial prothrombin activation
+    and plasma clotting to the coagulase positive test-outcome phenotype.
+  scope_status: NONMECHANISTIC
+  scope_notes: Biological-process sketch backed by DOI:10.1099/mic.0.000019 and DOI:10.1371/journal.ppat.1001036;
+    strain-matched UniProtKB protein examples for secreted Staphylococcus aureus coagulase
+    (Coa, UniProtKB:P07767) remain to be curated.
+  nodes:
+  - node_id: coagulase_positive_trait
+    label: coagulase positive
+    node_type: TRAIT
+    grounding: METPO:1007090
+    description: Test-outcome phenotype in which bacterial coagulase activity promotes
+      clotting of plasma.
+  - node_id: coagulase_positive_prothrombin_activation
+    label: zymogen activation
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0031638
+    description: Binding and activation of host prothrombin by secreted staphylococcal
+      coagulase (Coa).
+  - node_id: coagulase_positive_blood_coagulation
+    label: blood coagulation
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0007596
+    description: Coagulase-dependent clotting of blood plasma detected by the coagulase
+      test.
+  edges:
+  - subject: coagulase_positive_prothrombin_activation
+    predicate: causally upstream of
+    predicate_id: RO:0002411
+    object: coagulase_positive_blood_coagulation
+    description: Secreted Staphylococcus aureus coagulase (Coa) binds to and activates
+      prothrombin to initiate plasma clotting.
+    evidence:
+    - reference: DOI:10.1371/journal.ppat.1001036
+      snippet: Clinical isolates of the human pathogen Staphylococcus aureus secrete
+        coagulase (Coa), a polypeptide that binds to and activates prothrombin
+      notes: Cheng et al. show that clinical isolates of Staphylococcus aureus secrete
+        coagulase (Coa), a polypeptide that binds to and activates prothrombin.
+  - subject: coagulase_positive_blood_coagulation
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: coagulase_positive_trait
+    description: Coagulase-dependent clotting of plasma confers the coagulase positive
+      test-outcome phenotype.
+    evidence:
+    - reference: DOI:10.1099/mic.0.000019
+      snippet: coagulase-positive S. aureus bacteria promoted clotting of plasma which
+        was not seen when a coagulase-deficient mutant strain was used
+      notes: Loof et al. show that coagulase-positive Staphylococcus aureus bacteria
+        promote clotting of plasma, which is abolished in a coagulase-deficient mutant
+        strain.
+discussions:
+- discussion_id: coagulase-positive-protein-example-gap
+  prompt: Add strain-matched UniProtKB protein_examples for Staphylococcus aureus
+    secreted coagulase (Coa, UniProtKB:P07767) so coagulase_positive_prothrombin_clotting_sketch
+    can be promoted from NONMECHANISTIC to MECHANISTIC.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - causal_graphs#coagulase_positive_prothrombin_clotting_sketch
+  rationale: The record's primary literature (DOI:10.1099/mic.0.000019, DOI:10.1371/journal.ppat.1001036)
+    establishes prothrombin activation by secreted coagulase (Coa) and plasma clotting
+    in Staphylococcus aureus (NCBITaxon:1280), but a verified UniProtKB accession
+    on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.
+  posed_by: claude
+  posed_date: '2026-10-23'
+  evidence:
+  - reference: DOI:10.1371/journal.ppat.1001036
+    supports: PARTIAL
+    snippet: Clinical isolates of the human pathogen Staphylococcus aureus secrete
+      coagulase (Coa), a polypeptide that binds to and activates prothrombin
+    explanation: Existing record-level evidence supports the connected NONMECHANISTIC
+      pathway/function graph but does not provide strain-matched UniProtKB protein
+      accessions for protein_examples.

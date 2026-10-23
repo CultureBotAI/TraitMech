@@ -11339,6 +11339,300 @@ window.searchData = [
   "page_url": "../../pages/traits/other/catalase_negative.html#catalase-negative-assay-parent-gap"
  },
  {
+  "discussion_id": "catalase-negative-causal-graph-source-gap",
+  "prompt": "Add primary literature evidence for the genetic or biochemical basis of catalase absence and alternative H2O2 scavenging (e.g. NADH peroxidase Npx) before constructing causal_graphs.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "catalase negative",
+  "source_id": "METPO:1007084",
+  "source_file": "catalase_negative.yaml",
+  "attaches_to": [
+   "causal_graphs"
+  ],
+  "rationale": "This record represents a negative catalase-test outcome phenotype; its evidence pairs an assay-foam snippet (DOI:10.1038/srep03081) with a single sentence noting that Enterococcus faecium is catalase negative (DOI:10.1128/iai.72.8.4512-4520.2004), which does not ground a multi-edge causal graph for the negative test state.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.1038/srep03081"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/other/catalase_negative.html#catalase-negative-causal-graph-source-gap"
+ },
+ {
+  "discussion_id": "catalase-test-causal-graph-source-gap",
+  "prompt": "Add multi-step mechanistic evidence or keep causal mechanism curation on the corresponding enzyme-activity record (catalase_positive / catalase activity) rather than the diagnostic assay class.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "catalase test",
+  "source_id": "METPO:1007080",
+  "source_file": "catalase_test.yaml",
+  "attaches_to": [
+   "causal_graphs"
+  ],
+  "rationale": "METPO:1007080 represents a diagnostic biochemical test protocol (ASM catalase test protocol; DOI:10.1038/srep03081) rather than a cellular physiological pathway; the underlying H2O2 disproportionation mechanism is curated on catalase_positive.yaml.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "https://asm.org/protocols/catalase-test-protocol"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/other/catalase_test.html#catalase-test-causal-graph-source-gap"
+ },
+ {
+  "discussion_id": "circular-colony-causal-graph-source-gap",
+  "prompt": "Add primary literature evidence for the cellular growth, surface-motility, and extracellular-matrix determinants of circular colony morphology before constructing causal_graphs.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "circular colony",
+  "source_id": "METPO:1007064",
+  "source_file": "circular_colony.yaml",
+  "attaches_to": [
+   "causal_graphs"
+  ],
+  "rationale": "The current record carries descriptive ASM colony-morphology protocol snippets defining macroscopic circular colony form without genetic, regulatory, or biophysical mechanism quotes.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "https://asm.org/asm/media/protocol-images/colony-morphology-protocol.pdf"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/other/circular_colony.html#circular-colony-causal-graph-source-gap"
+ },
+ {
+  "discussion_id": "coagulase-negative-causal-graph-source-gap",
+  "prompt": "Add primary literature evidence for the absence of coagulase genes (coa/vwb) in coagulase-negative staphylococci before considering any mechanism representation.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "coagulase negative",
+  "source_id": "METPO:1007091",
+  "source_file": "coagulase_negative.yaml",
+  "attaches_to": [
+   "causal_graphs"
+  ],
+  "rationale": "This record represents a negative diagnostic test-outcome phenotype uniting coagulase-negative staphylococci (DOI:10.3390/microorganisms9040830; NBK563240) by the absence of plasma clotting rather than an active multi-step biochemical pathway.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.3390/microorganisms9040830"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/other/coagulase_negative.html#coagulase-negative-causal-graph-source-gap"
+ },
+ {
+  "discussion_id": "coagulase-positive-protein-example-gap",
+  "prompt": "Add strain-matched UniProtKB protein_examples for Staphylococcus aureus secreted coagulase (Coa, UniProtKB:P07767) so coagulase_positive_prothrombin_clotting_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "coagulase positive",
+  "source_id": "METPO:1007090",
+  "source_file": "coagulase_positive.yaml",
+  "attaches_to": [
+   "causal_graphs#coagulase_positive_prothrombin_clotting_sketch"
+  ],
+  "rationale": "The record's primary literature (DOI:10.1099/mic.0.000019, DOI:10.1371/journal.ppat.1001036) establishes prothrombin activation by secreted coagulase (Coa) and plasma clotting in Staphylococcus aureus (NCBITaxon:1280), but a verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.1371/journal.ppat.1001036"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/other/coagulase_positive.html#coagulase-positive-protein-example-gap"
+ },
+ {
+  "discussion_id": "colony-morphology-causal-graph-source-gap",
+  "prompt": "Add primary literature evidence for extracellular matrix, cell-surface appendage, and multicellular morphogenesis pathways before constructing causal_graphs on this upper colony-morphology class.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "colony morphology",
+  "source_id": "METPO:1007062",
+  "source_file": "colony_morphology.yaml",
+  "attaches_to": [
+   "causal_graphs"
+  ],
+  "rationale": "The current record carries descriptive ASM protocol snippets enumerating macroscopic colony form, elevation, and margin categories without molecular or cellular mechanism quotes.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "https://asm.org/asm/media/protocol-images/colony-morphology-protocol.pdf"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/other/colony_morphology.html#colony-morphology-causal-graph-source-gap"
+ },
+ {
+  "discussion_id": "colony-shape-causal-graph-source-gap",
+  "prompt": "Add primary literature evidence for the biophysical and genetic determinants of macroscopic colony outline before constructing causal_graphs on this grouping class.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "colony shape",
+  "source_id": "METPO:1007063",
+  "source_file": "colony_shape.yaml",
+  "attaches_to": [
+   "causal_graphs"
+  ],
+  "rationale": "The current record carries descriptive ASM protocol snippets illustrating colony form diagrams without molecular, regulatory, or biomechanical mechanism quotes.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "https://asm.org/asm/media/protocol-images/colony-morphology-protocol.pdf"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/other/colony_shape.html#colony-shape-causal-graph-source-gap"
+ },
+ {
+  "discussion_id": "epibiont-phenotype-causal-graph-source-gap",
+  "prompt": "Add primary literature evidence for surface attachment adhesins, biofilm formation, and host-epibiont interactions in Epibacterium ulvae before constructing causal_graphs.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "epibiont phenotype",
+  "source_id": "METPO:1007093",
+  "source_file": "epibiont_phenotype.yaml",
+  "attaches_to": [
+   "causal_graphs"
+  ],
+  "rationale": "The current record carries two strain-isolation habitat snippets from the surface of the marine alga Ulva australis (DOI:10.1099/ijs.0.042838-0; BacDive 24523) without molecular colonization or attachment mechanism quotes.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.1099/ijs.0.042838-0"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/other/epibiont_phenotype.html#epibiont-phenotype-causal-graph-source-gap"
+ },
+ {
+  "discussion_id": "filamentous-colony-causal-graph-source-gap",
+  "prompt": "Add primary literature evidence for filamentous cell-chain growth, extracellular matrix, and swarming/sliding determinants of filamentous colony outline before constructing causal_graphs.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "filamentous colony",
+  "source_id": "METPO:1007066",
+  "source_file": "filamentous_colony.yaml",
+  "attaches_to": [
+   "causal_graphs"
+  ],
+  "rationale": "The current record carries a single general colony-morphology overview snippet (DOI:10.7759/cureus.374) without specific genetic or cellular morphogenesis quotes.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.7759/cureus.374"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/other/filamentous_colony.html#filamentous-colony-causal-graph-source-gap"
+ },
+ {
+  "discussion_id": "fried-egg-shaped-colony-causal-graph-source-gap",
+  "prompt": "Add primary literature evidence for central agar penetration versus peripheral surface growth determinants of fried-egg colony morphology before constructing causal_graphs.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "fried-egg-shaped colony",
+  "source_id": "METPO:1007069",
+  "source_file": "fried_egg_shaped_colony.yaml",
+  "attaches_to": [
+   "causal_graphs"
+  ],
+  "rationale": "The current record carries a single morphological description snippet (DOI:10.1371/journal.pone.0068373) describing the opaque center and translucent peripheral zone without molecular or cellular mechanism quotes.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.1371/journal.pone.0068373"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/other/fried_egg_shaped_colony.html#fried-egg-shaped-colony-causal-graph-source-gap"
+ },
+ {
+  "discussion_id": "generalist-causal-graph-source-gap",
+  "prompt": "Add primary literature evidence for metabolic versatility, regulatory network plasticity, and broad resource-utilization pathways in a cited exemplar taxon before constructing causal_graphs.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "generalist",
+  "source_id": "METPO:1005040",
+  "source_file": "generalist.yaml",
+  "attaches_to": [
+   "causal_graphs"
+  ],
+  "rationale": "The current record carries two high-level ecological classification snippets (DOI:10.1093/femsec/fiaa240; DOI:10.1038/s41559-023-02027-7) contrasting niche breadth in generalists vs specialists without molecular mechanism quotes or a canonical example.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.1093/femsec/fiaa240"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/other/generalist.html#generalist-causal-graph-source-gap"
+ },
+ {
+  "discussion_id": "hemolysis-causal-graph-source-gap",
+  "prompt": "Add a second independent primary literature snippet covering cytolytic pore formation or membrane phospholipid cleavage by secreted Staphylococcus aureus hemolysins (e.g. Hla, Hlb) before constructing causal_graphs.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "hemolysis",
+  "source_id": "METPO:1005025",
+  "source_file": "hemolysis.yaml",
+  "attaches_to": [
+   "causal_graphs"
+  ],
+  "rationale": "The current record carries a single 54-character phrase ('hemolysis to toxigenic substances secreted by S. aureus' in DOI:10.3390/toxins5061140); constructing a multi-edge graph from one short phrase would violate the snippet-diversity and anti-clause-splitting rules.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.3390/toxins5061140"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/other/hemolysis.html#hemolysis-causal-graph-source-gap"
+ },
+ {
+  "discussion_id": "hemolytic-causal-graph-source-gap",
+  "prompt": "Add a second independent primary literature snippet covering erythrocyte membrane lysis by secreted Staphylococcus aureus hemolysins (e.g. alpha-hemolysin Hla) before constructing causal_graphs.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "hemolytic",
+  "source_id": "METPO:1005026",
+  "source_file": "hemolytic.yaml",
+  "attaches_to": [
+   "causal_graphs"
+  ],
+  "rationale": "The current record carries a single 54-character phrase ('hemolysis to toxigenic substances secreted by S. aureus' in DOI:10.3390/toxins5061140); constructing a multi-edge graph from one short phrase would violate the snippet-diversity and anti-clause-splitting rules.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.3390/toxins5061140"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/other/hemolytic.html#hemolytic-causal-graph-source-gap"
+ },
+ {
+  "discussion_id": "indole-test-causal-graph-source-gap",
+  "prompt": "Keep causal mechanism curation on the positive phenotype record (indole_test_positive) or add primary literature evidence for tryptophanase (TnaA) catalysis alongside Kovac's/Ehrlich's reagent detection.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "indole test",
+  "source_id": "METPO:1005010",
+  "source_file": "indole_test.yaml",
+  "attaches_to": [
+   "causal_graphs"
+  ],
+  "rationale": "METPO:1005010 represents the diagnostic indole test assay protocol (ASM indole test protocol) rather than the organismal tryptophan-to-indole catabolic phenotype curated on indole_test_positive.yaml.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "https://asm.org/protocols/indole-test-protocol"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/other/indole_test.html#indole-test-causal-graph-source-gap"
+ },
+ {
   "discussion_id": "indole-test-negative-assay-parent-gap",
   "prompt": "Resolve a non-assay parent for negative indole-test phenotypes before narrowing parent_traits below phenotype.",
   "kind": "CURATION_TODO",
@@ -11354,6 +11648,27 @@ window.searchData = [
   "evidence_refs": [],
   "posed_by": "codex",
   "page_url": "../../pages/traits/other/indole_test_negative.html#indole-test-negative-assay-parent-gap"
+ },
+ {
+  "discussion_id": "indole-test-negative-causal-graph-source-gap",
+  "prompt": "Add primary literature evidence for the absence or inactivation of tryptophanase (tnaA) in indole-negative Klebsiella pneumoniae isolates before considering a mechanism representation.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "indole test negative",
+  "source_id": "METPO:1005012",
+  "source_file": "indole_test_negative.yaml",
+  "attaches_to": [
+   "causal_graphs"
+  ],
+  "rationale": "This record represents a negative diagnostic test-outcome phenotype (DOI:10.1128/AEM.02787-15; DOI:10.1128/JCM.00940-06) defined by the absence of indole production from tryptophan.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.1128/AEM.02787-15"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/other/indole_test_negative.html#indole-test-negative-causal-graph-source-gap"
  },
  {
   "discussion_id": "indole-test-positive-assay-parent-gap",
@@ -11373,6 +11688,69 @@ window.searchData = [
   "page_url": "../../pages/traits/other/indole_test_positive.html#indole-test-positive-assay-parent-gap"
  },
  {
+  "discussion_id": "indole-test-positive-protein-example-gap",
+  "prompt": "Add strain-matched UniProtKB protein_examples for Escherichia coli tryptophanase (TnaA) so indole_test_positive_tryptophan_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "indole test positive",
+  "source_id": "METPO:1005011",
+  "source_file": "indole_test_positive.yaml",
+  "attaches_to": [
+   "causal_graphs#indole_test_positive_tryptophan_sketch"
+  ],
+  "rationale": "The record's primary literature (DOI:10.1128/AEM.02787-15) establishes L-tryptophan degradation to indole in enterotoxigenic Escherichia coli strain H10407 (NCBITaxon:316401), but a verified UniProtKB accession for tryptophanase (TnaA) on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.1128/AEM.02787-15"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/other/indole_test_positive.html#indole-test-positive-protein-example-gap"
+ },
+ {
+  "discussion_id": "irregular-colony-causal-graph-source-gap",
+  "prompt": "Add primary literature evidence for asymmetric edge expansion, nutrient-diffusion limitation, or extracellular matrix determinants of irregular colony outline before constructing causal_graphs.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "irregular colony",
+  "source_id": "METPO:1007065",
+  "source_file": "irregular_colony.yaml",
+  "attaches_to": [
+   "causal_graphs"
+  ],
+  "rationale": "The current record carries a single general colony-morphology overview snippet (DOI:10.7759/cureus.374) without specific genetic or biophysical morphogenesis quotes.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.7759/cureus.374"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/other/irregular_colony.html#irregular-colony-causal-graph-source-gap"
+ },
+ {
+  "discussion_id": "methyl-red-test-causal-graph-source-gap",
+  "prompt": "Keep causal mechanism curation on mixed_acid_fermentation.yaml or add organism-level enzymatic evidence for mixed-acid pyruvate catabolism alongside the pH-indicator protocol.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "methyl red test",
+  "source_id": "METPO:1005013",
+  "source_file": "methyl_red_test.yaml",
+  "attaches_to": [
+   "causal_graphs"
+  ],
+  "rationale": "METPO:1005013 represents the diagnostic methyl red pH-indicator assay protocol (ASM Methyl Red and Voges-Proskauer protocol), whereas the underlying metabolic pathway is curated on mixed_acid_fermentation.yaml.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "https://asm.org/getmedia/40946f85-9357-4563-aa8a-994427efa825/Methyl-Red-and-Voges-Proskauer-Test-Protocols.pdf"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/other/methyl_red_test.html#methyl-red-test-causal-graph-source-gap"
+ },
+ {
   "discussion_id": "methyl-red-test-negative-assay-parent-gap",
   "prompt": "Resolve a non-assay parent for negative methyl-red-test phenotypes before narrowing parent_traits below phenotype.",
   "kind": "CURATION_TODO",
@@ -11388,6 +11766,27 @@ window.searchData = [
   "evidence_refs": [],
   "posed_by": "codex",
   "page_url": "../../pages/traits/other/methyl_red_test_negative.html#methyl-red-test-negative-assay-parent-gap"
+ },
+ {
+  "discussion_id": "methyl-red-test-negative-causal-graph-source-gap",
+  "prompt": "Add primary literature evidence for neutral fermentation end-product routing (acetoin/2,3-butanediol conversion) in methyl-red-negative Klebsiella pneumoniae before constructing causal_graphs.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "methyl red test negative",
+  "source_id": "METPO:1005015",
+  "source_file": "methyl_red_test_negative.yaml",
+  "attaches_to": [
+   "causal_graphs"
+  ],
+  "rationale": "This record represents a negative diagnostic test-outcome phenotype supported by ASM protocol color-threshold and clinical panel reproducibility snippets (DOI:10.1128/JCM.42.8.3665-3669.2004) without enzymatic pathway quotes.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "https://asm.org/getmedia/40946f85-9357-4563-aa8a-994427efa825/Methyl-Red-and-Voges-Proskauer-Test-Protocols.pdf"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/other/methyl_red_test_negative.html#methyl-red-test-negative-causal-graph-source-gap"
  },
  {
   "discussion_id": "methyl-red-test-positive-assay-parent-gap",
@@ -11407,6 +11806,27 @@ window.searchData = [
   "page_url": "../../pages/traits/other/methyl_red_test_positive.html#methyl-red-test-positive-assay-parent-gap"
  },
  {
+  "discussion_id": "methyl-red-test-positive-causal-graph-source-gap",
+  "prompt": "Add primary literature evidence for mixed-acid fermentation enzymes (e.g. PflB, LdhA, AckA-Pta) producing stable organic acids in Klebsiella ornithinolytica before constructing causal_graphs.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "methyl red test positive",
+  "source_id": "METPO:1005014",
+  "source_file": "methyl_red_test_positive.yaml",
+  "attaches_to": [
+   "causal_graphs"
+  ],
+  "rationale": "The current record pairs an ASM pH-indicator color-change snippet with a clinical identification panel count snippet (DOI:10.1128/JCM.42.8.3665-3669.2004), lacking enzymatic or metabolic pathway quotes for the exemplar taxon.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "https://asm.org/getmedia/40946f85-9357-4563-aa8a-994427efa825/Methyl-Red-and-Voges-Proskauer-Test-Protocols.pdf"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/other/methyl_red_test_positive.html#methyl-red-test-positive-causal-graph-source-gap"
+ },
+ {
   "discussion_id": "non-hemolytic-parent-gap",
   "prompt": "Resolve a neutral parent axis for absence of hemolysis before narrowing parent_traits below phenotype.",
   "kind": "CURATION_TODO",
@@ -11424,6 +11844,237 @@ window.searchData = [
   "page_url": "../../pages/traits/other/non_hemolytic.html#non-hemolytic-parent-gap"
  },
  {
+  "discussion_id": "non-hemolytic-causal-graph-source-gap",
+  "prompt": "Add primary literature evidence for the genetic absence of hemolysin/cytolysin operons in gamma-hemolytic strains before considering a mechanism representation.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "non-hemolytic",
+  "source_id": "METPO:1005027",
+  "source_file": "non_hemolytic.yaml",
+  "attaches_to": [
+   "causal_graphs"
+  ],
+  "rationale": "This record represents a negative diagnostic phenotype (gamma-hemolysis / absence of red-blood-cell lysis in DOI:10.14202/vetworld.2025.3622-3630) supported by a single screening snippet without a canonical example.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.14202/vetworld.2025.3622-3630"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/other/non_hemolytic.html#non-hemolytic-causal-graph-source-gap"
+ },
+ {
+  "discussion_id": "osmotic-tolerance-causal-graph-source-gap",
+  "prompt": "Add a second independent primary literature snippet covering compatible-solute uptake/synthesis (e.g. glycine betaine, trehalose, proline) and osmosensory regulation plus a canonical example before constructing causal_graphs.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "osmotic tolerance",
+  "source_id": "METPO:1007073",
+  "source_file": "osmotic_tolerance.yaml",
+  "attaches_to": [
+   "causal_graphs"
+  ],
+  "rationale": "The current record carries a single 49-character snippet ('tolerance against hyperosmotic conditions (400 mM sorbitol)' in DOI:10.1128/mBio.00390-21) without a second mechanistic quote or canonical example.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.1128/mBio.00390-21"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/other/osmotic_tolerance.html#osmotic-tolerance-causal-graph-source-gap"
+ },
+ {
+  "discussion_id": "oxidase-negative-causal-graph-source-gap",
+  "prompt": "Add primary literature evidence for cytochrome c oxidase absence and alternative terminal oxidases (e.g. cytochrome bd or bo3 quinol oxidases) in oxidase-negative taxa before considering a mechanism representation.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "oxidase negative",
+  "source_id": "METPO:1007086",
+  "source_file": "oxidase_negative.yaml",
+  "attaches_to": [
+   "causal_graphs"
+  ],
+  "rationale": "This record represents a negative diagnostic test-outcome phenotype (ASM oxidase test protocol; DOI:10.5812/chbs-160199) defined by the absence of cytochrome c oxidase indicator oxidation.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "https://asm.org/protocols/oxidase-test-protocol"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/other/oxidase_negative.html#oxidase-negative-causal-graph-source-gap"
+ },
+ {
+  "discussion_id": "oxidase-test-causal-graph-source-gap",
+  "prompt": "Keep causal mechanism curation on the positive enzyme-activity record (oxidase_positive) rather than the diagnostic redox-indicator assay class.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "oxidase test",
+  "source_id": "METPO:1007081",
+  "source_file": "oxidase_test.yaml",
+  "attaches_to": [
+   "causal_graphs"
+  ],
+  "rationale": "METPO:1007081 represents the diagnostic oxidase test protocol (ASM oxidase test protocol; DOI:10.5812/chbs-160199), whereas the cytochrome c oxidase respiratory mechanism is curated on oxidase_positive.yaml.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "https://asm.org/protocols/oxidase-test-protocol"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/other/oxidase_test.html#oxidase-test-causal-graph-source-gap"
+ },
+ {
+  "discussion_id": "punctiform-colony-causal-graph-source-gap",
+  "prompt": "Add primary literature evidence for slow growth rate, microcolony confinement, or metabolic constraints underlying pinpoint (<1 mm) punctiform colonies before constructing causal_graphs.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "punctiform colony",
+  "source_id": "METPO:1007067",
+  "source_file": "punctiform_colony.yaml",
+  "attaches_to": [
+   "causal_graphs"
+  ],
+  "rationale": "The current record carries a single general colony-morphology overview snippet (DOI:10.7759/cureus.374) without specific genetic or physiological mechanism quotes.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.7759/cureus.374"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/other/punctiform_colony.html#punctiform-colony-causal-graph-source-gap"
+ },
+ {
+  "discussion_id": "rhizoid-colony-causal-graph-source-gap",
+  "prompt": "Add primary literature evidence for branching multicellular filamentation, surfactant production, or sliding motility underlying rhizoid colony morphology before constructing causal_graphs.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "rhizoid colony",
+  "source_id": "METPO:1007068",
+  "source_file": "rhizoid_colony.yaml",
+  "attaches_to": [
+   "causal_graphs"
+  ],
+  "rationale": "The current record carries a single general colony-morphology overview snippet (DOI:10.7759/cureus.374) without specific genetic or cellular morphogenesis quotes.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.7759/cureus.374"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/other/rhizoid_colony.html#rhizoid-colony-causal-graph-source-gap"
+ },
+ {
+  "discussion_id": "specialist-causal-graph-source-gap",
+  "prompt": "Add primary literature evidence for genome reduction, narrow substrate-transport specificity, or strict host/habitat adaptation in a cited exemplar taxon before constructing causal_graphs.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "specialist",
+  "source_id": "traitmech:000177",
+  "source_file": "specialist.yaml",
+  "attaches_to": [
+   "causal_graphs"
+  ],
+  "rationale": "The current record carries two high-level ecological classification snippets (DOI:10.1093/femsec/fiaa240; DOI:10.1038/s41559-023-02027-7) contrasting niche breadth in generalists vs specialists without molecular mechanism quotes or a canonical example.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.1093/femsec/fiaa240"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/other/specialist.html#specialist-causal-graph-source-gap"
+ },
+ {
+  "discussion_id": "urease-negative-causal-graph-source-gap",
+  "prompt": "Add primary literature evidence for the absence of urease structural/accessory genes (ureABC/ureDEFG) in urease-negative taxa before considering a mechanism representation.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "urease negative",
+  "source_id": "METPO:1007088",
+  "source_file": "urease_negative.yaml",
+  "attaches_to": [
+   "causal_graphs"
+  ],
+  "rationale": "This record represents a negative diagnostic test-outcome phenotype supported by phenol-red urease medium indicator snippets (DOI:10.5812/chbs-160199) without a canonical example or active enzymatic pathway.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.5812/chbs-160199"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/other/urease_negative.html#urease-negative-causal-graph-source-gap"
+ },
+ {
+  "discussion_id": "urease-test-causal-graph-source-gap",
+  "prompt": "Keep causal mechanism curation on the positive enzyme-activity record (urease_positive) rather than the diagnostic urea-broth/agar assay class.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "urease test",
+  "source_id": "METPO:1007082",
+  "source_file": "urease_test.yaml",
+  "attaches_to": [
+   "causal_graphs"
+  ],
+  "rationale": "METPO:1007082 represents the diagnostic urease test protocol (DOI:10.5812/chbs-160199), whereas the nickel-metalloenzyme urea hydrolysis mechanism is curated on urease_positive.yaml.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.5812/chbs-160199"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/other/urease_test.html#urease-test-causal-graph-source-gap"
+ },
+ {
+  "discussion_id": "voges-proskauer-test-causal-graph-source-gap",
+  "prompt": "Keep causal mechanism curation on the metabolic pathway record (butanediol_fermentation) or add enzymatic evidence for alpha-acetolactate synthase (BudB) and decarboxylase (BudA) alongside the KOH/alpha-naphthol assay protocol.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Voges-Proskauer test",
+  "source_id": "METPO:1005016",
+  "source_file": "voges_proskauer_test.yaml",
+  "attaches_to": [
+   "causal_graphs"
+  ],
+  "rationale": "METPO:1005016 represents the diagnostic Voges-Proskauer assay protocol (ASM Methyl Red and Voges-Proskauer protocol) detecting acetoin oxidation to diacetyl in KOH rather than a standalone organismal gene-to-trait mechanism.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "https://asm.org/getmedia/40946f85-9357-4563-aa8a-994427efa825/Methyl-Red-and-Voges-Proskauer-Test-Protocols.pdf"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/other/voges_proskauer_test.html#voges-proskauer-test-causal-graph-source-gap"
+ },
+ {
+  "discussion_id": "voges-proskauer-test-negative-causal-graph-source-gap",
+  "prompt": "Add primary literature evidence for the absence of the alpha-acetolactate-to-acetoin pathway in Voges-Proskauer-negative Escherichia coli before considering a mechanism representation.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Voges-Proskauer test negative",
+  "source_id": "METPO:1005018",
+  "source_file": "voges_proskauer_test_negative.yaml",
+  "attaches_to": [
+   "causal_graphs"
+  ],
+  "rationale": "This record represents a negative diagnostic test-outcome phenotype supported by a single ASM protocol color-comparison snippet without enzymatic pathway quotes.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "https://asm.org/getmedia/40946f85-9357-4563-aa8a-994427efa825/Methyl-Red-and-Voges-Proskauer-Test-Protocols.pdf"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/other/voges_proskauer_test_negative.html#voges-proskauer-test-negative-causal-graph-source-gap"
+ },
+ {
   "discussion_id": "voges-proskauer-test-positive-assay-parent-gap",
   "prompt": "Resolve a non-assay parent for positive Voges-Proskauer-test phenotypes before narrowing parent_traits below phenotype.",
   "kind": "CURATION_TODO",
@@ -11439,6 +12090,27 @@ window.searchData = [
   "evidence_refs": [],
   "posed_by": "codex",
   "page_url": "../../pages/traits/other/voges_proskauer_test_positive.html#voges-proskauer-test-positive-assay-parent-gap"
+ },
+ {
+  "discussion_id": "voges-proskauer-test-positive-causal-graph-source-gap",
+  "prompt": "Add primary literature evidence for alpha-acetolactate synthase (BudB) and alpha-acetolactate decarboxylase (BudA) acetoin biosynthesis in Klebsiella oxytoca before constructing causal_graphs.",
+  "kind": "KNOWLEDGE_GAP",
+  "status": "OPEN",
+  "is_gap": "Knowledge gap",
+  "source_name": "Voges-Proskauer test positive",
+  "source_id": "METPO:1005017",
+  "source_file": "voges_proskauer_test_positive.yaml",
+  "attaches_to": [
+   "causal_graphs"
+  ],
+  "rationale": "The current record pairs an ASM KOH-oxidation reagent chemistry snippet with a clinical identification panel count snippet (DOI:10.1128/JCM.42.8.3665-3669.2004), lacking organismal enzymatic catalysis quotes for acetoin biosynthesis.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "https://asm.org/getmedia/40946f85-9357-4563-aa8a-994427efa825/Methyl-Red-and-Voges-Proskauer-Test-Protocols.pdf"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/other/voges_proskauer_test_positive.html#voges-proskauer-test-positive-causal-graph-source-gap"
  },
  {
   "discussion_id": "acid-phosphatase-activity-xref-gap",
@@ -16199,13 +16871,13 @@ window.searchData = [
   "discussion_id": "pyrazinamidase-activity-causal-graph-source-gap",
   "prompt": "Add strain-matched UniProtKB protein_examples for Mycobacterium tuberculosis PncA (UniProtKB:I6Y493) before constructing a MECHANISTIC causal_graphs entry.",
   "kind": "KNOWLEDGE_GAP",
-  "status": "OPEN",
+  "status": "RESOLVED",
   "is_gap": "Knowledge gap",
   "source_name": "pyrazinamidase activity",
   "source_id": "traitmech:000163",
   "source_file": "pyrazinamidase_activity.yaml",
   "attaches_to": [
-   "causal_graphs"
+   "causal_graphs#pyrazinamidase_activity_pnca_sketch"
   ],
   "rationale": "The current record carries an IUBMB EC 3.5.1.19 reaction snippet and two Mycobacterium tuberculosis PncA nicotinamidase/pyrazinamidase snippets (DOI:10.1111/j.1742-4658.2007.06241.x, DOI:10.1371/journal.pone.0015785), but requires verified strain-matched UniProtKB protein_examples on PncA to represent the enzyme-resolved mechanism.",
   "num_experiments": 0,
@@ -16215,6 +16887,27 @@ window.searchData = [
   ],
   "posed_by": "claude",
   "page_url": "../../pages/traits/physiology/pyrazinamidase_activity.html#pyrazinamidase-activity-causal-graph-source-gap"
+ },
+ {
+  "discussion_id": "pyrazinamidase-activity-protein-example-gap",
+  "prompt": "Add strain-matched UniProtKB protein_examples for Mycobacterium tuberculosis nicotinamidase/pyrazinamidase PncA (UniProtKB:I6Y493) so pyrazinamidase_activity_pnca_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "pyrazinamidase activity",
+  "source_id": "traitmech:000163",
+  "source_file": "pyrazinamidase_activity.yaml",
+  "attaches_to": [
+   "causal_graphs#pyrazinamidase_activity_pnca_sketch"
+  ],
+  "rationale": "The record's primary literature (EC 3.5.1.19, DOI:10.1111/j.1742-4658.2007.06241.x, DOI:10.1371/journal.pone.0015785) establishes nicotinamide hydrolysis to nicotinate and pyrazinamide activation to pyrazinoic acid by PncA in Mycobacterium tuberculosis (NCBITaxon:1773), but a verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.1111/j.1742-4658.2007.06241.x"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/physiology/pyrazinamidase_activity.html#pyrazinamidase-activity-protein-example-gap"
  },
  {
   "discussion_id": "pyrrolidonyl-arylamidase-activity-xref-gap",
@@ -17162,9 +17855,9 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 865,
- "total_knowledge_gaps": 550,
- "total_source_entries": 615,
+ "total_discussions": 898,
+ "total_knowledge_gaps": 580,
+ "total_source_entries": 640,
  "kinds": [
   "CONTROVERSY",
   "CURATION_TODO",

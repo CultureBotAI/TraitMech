@@ -28,6 +28,12 @@ curation_history:
     provenance plus DOI-backed assay evidence after a repository-wide duplicate review
     covering ignored and hidden files.
   llm_assisted: true
+- timestamp: '2026-10-23T20:51:41Z'
+  curator: claude
+  action: RECORD_MECHANISM_KNOWLEDGE_GAP
+  changes: Recorded OPEN KNOWLEDGE_GAP discussion (urease-negative-causal-graph-source-gap)
+    attached to causal_graphs documenting the source-limited mechanism gap.
+  llm_assisted: true
 definition_source: http://purl.obolibrary.org/obo/OMP_0006090
 evidence:
 - reference: DOI:10.5812/chbs-160199
@@ -40,3 +46,26 @@ evidence:
   snippet: Both types contain a phenol red reagent that changes color with pH variations
   notes: The review describes the pH-indicator readout shared by liquid and solid
     urease-test media.
+discussions:
+- discussion_id: urease-negative-causal-graph-source-gap
+  prompt: Add primary literature evidence for the absence of urease structural/accessory
+    genes (ureABC/ureDEFG) in urease-negative taxa before considering a mechanism
+    representation.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  attaches_to:
+  - causal_graphs
+  rationale: This record represents a negative diagnostic test-outcome phenotype supported
+    by phenol-red urease medium indicator snippets (DOI:10.5812/chbs-160199) without
+    a canonical example or active enzymatic pathway.
+  posed_by: claude
+  posed_date: '2026-10-23'
+  evidence:
+  - reference: DOI:10.5812/chbs-160199
+    supports: PARTIAL
+    snippet: A positive reaction is indicated by the entire liquid medium and the
+      surface of the solid medium turning pink, whereas a negative reaction is characterized
+      by the medium remaining yellow
+    explanation: Existing record-level evidence supports the diagnostic assay, test-outcome,
+      colony-shape, or ecological-scope definition, but does not provide multi-step
+      molecular mechanism quotes for a connected causal graph.

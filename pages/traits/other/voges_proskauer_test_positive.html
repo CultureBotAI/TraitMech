@@ -220,7 +220,7 @@
 
 
     <div class="card" id="discussions">
-      <h2>Discussions and Knowledge Gaps <span class="meta">(1)</span></h2>
+      <h2>Discussions and Knowledge Gaps <span class="meta">(2)</span></h2>
       <p class="meta">Open questions attached to this trait. Seeded by
         <code>just knowledge-gap-scan</code> and curated; see
         <a href="../../../app/discussions/index.html">the corpus-wide index</a>.</p>
@@ -257,6 +257,47 @@
 
       </div>
 
+
+      <div class="discussion" id="voges-proskauer-test-positive-causal-graph-source-gap">
+        <p class="discussion-prompt">Add primary literature evidence for alpha-acetolactate synthase (BudB) and alpha-acetolactate decarboxylase (BudA) acetoin biosynthesis in Klebsiella oxytoca before constructing causal_graphs.</p>
+        <p class="meta">
+          <span class="badge">KNOWLEDGE GAP</span>
+          <span class="badge">OPEN</span>
+          <code>voges-proskauer-test-positive-causal-graph-source-gap</code>
+          · raised by claude
+          · 2026-10-23
+        </p>
+
+
+        <p class="meta">Attached to
+          <code>causal_graphs</code>
+        </p>
+
+
+        <p>The current record pairs an ASM KOH-oxidation reagent chemistry snippet with a clinical identification panel count snippet (DOI:10.1128/JCM.42.8.3665-3669.2004), lacking organismal enzymatic catalysis quotes for acetoin biosynthesis.</p>
+
+
+
+
+        <h3>Evidence</h3>
+        <ul class="discussion-evidence">
+
+          <li>
+            <a href="https://asm.org/getmedia/40946f85-9357-4563-aa8a-994427efa825/Methyl-Red-and-Voges-Proskauer-Test-Protocols.pdf" rel="nofollow noreferrer"><code>https://asm.org/getmedia/40946f85-9357-4563-aa8a-994427efa825/Methyl-Red-and-Voges-Proskauer-Test-Protocols.pdf</code></a>
+            <span class="badge">PARTIAL</span>
+            <blockquote>In the presence of KOH the intermediate acetoin is oxidized to diacetyl, a reaction which is catalyzed by a-naphthol (2). Diacetyl reacts with the guanidine group associated with molecules contributed by peptone in the medium, to form a pinkish-red-colored product (Fig. 2A).</blockquote>
+            <span class="meta">Existing record-level evidence supports the diagnostic assay, test-outcome, colony-shape, or ecological-scope definition, but does not provide multi-step molecular mechanism quotes for a connected causal graph.</span>
+          </li>
+
+        </ul>
+
+
+
+
+
+
+      </div>
+
     </div>
 
 
@@ -280,6 +321,12 @@
           <time>2026-09-12T21:15:44Z</time> ·
           <strong>RESOLVED_PARENT_GAP</strong> · codex
           <p class="changes">Reparented Voges-Proskauer test positive below the newly curated METPO:1005016 Voges-Proskauer test assay parent and marked the temporary assay-parent discussion resolved.</p>
+        </li>
+
+        <li>
+          <time>2026-10-23T20:51:42Z</time> ·
+          <strong>RECORD_MECHANISM_KNOWLEDGE_GAP</strong> · claude
+          <p class="changes">Recorded OPEN KNOWLEDGE_GAP discussion (voges-proskauer-test-positive-causal-graph-source-gap) attached to causal_graphs documenting the source-limited mechanism gap.</p>
         </li>
 
       </ol>
@@ -364,7 +411,7 @@
       third-party source terms apply
     </div>
     <div>
-      Record as of 2026-09-12 21:16 UTC
+      Record as of 2026-10-23 20:51 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
       · embedding coverage 100.0%
