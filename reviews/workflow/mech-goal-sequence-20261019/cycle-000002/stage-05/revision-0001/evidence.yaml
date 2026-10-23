@@ -1,0 +1,294 @@
+schema_version: 1.0.0
+repository_key: traitmech
+github_repository: CultureBotAI/TraitMech
+run_id: mech-goal-sequence-20261019
+cycle: 2
+stage: 5
+revision: 1
+outcome: completed
+summary: 'Consumed all 11 carried-forward findings from Cycle 2 Stage 4 review evidence
+  (reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-04/revision-0001/evidence.yaml,
+  sha256 1bb1aa12138f8562dcc3f57d321ee35461719215c7e1ca41a4f45ebd1de516d1), grouped
+  them by cause and repair ownership into 6 groups, deduplicated against all 142 open
+  GitHub issues, and linked every group and finding to a real GitHub issue (#1995
+  for resolved group G-C2S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS; open issues #1982,
+  #1983, #1984, #1985, and #364 for the 5 deferred source-limited/upstream-blocked
+  cohort groups). Implemented accepted fixes for all 6 actionable open findings (F-DEF-SRC-CARBON-FIXATION-010..F-DEF-SRC-CHITINOLYSIS-015
+  on carbon_fixation.yaml, wood_ljungdahl_pathway.yaml, propionic_acid_fermentation.yaml,
+  manganese_oxidation.yaml, cellulolysis.yaml, and chitinolysis.yaml) via guarded
+  writer scripts/curate_stage5_review_findings.py, regenerated pages/, preserved all
+  immutable Stage 4 review artifacts untouched, and obtained fresh structured review
+  reviews/structured/20261023T161000Z-cycle2-stage5-remediated-records-review/review.yaml
+  confirming verdict pass and 0 remaining open findings.'
+source_revision: 901e9484e8c1e61b97ab9565e331b99e26b05813
+scope_frozen_at: '2026-10-23T15:56:57.970899Z'
+previous_evidence:
+  path: reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-04/revision-0001/evidence.yaml
+  sha256: 1bb1aa12138f8562dcc3f57d321ee35461719215c7e1ca41a4f45ebd1de516d1
+artifacts:
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-05/revision-0001/issue_map.md
+  sha256: 6d354b260b16577efafda2c9bc83924779504b2070614f30e19ecb0412c74563
+  kind: issue_map
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-05/revision-0001/validation.md
+  sha256: 23d404d6c2a0ef13cb875488c60211222ffc46c9502e11fc4c21efaf35961790
+  kind: validation
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-05/revision-0001/remediated_records_review.yaml
+  sha256: 82013a9eaa4b6c8ca7c8a3c87e1dff18d3069939291a8e1ead35398471d16e48
+  kind: supporting
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-05/revision-0001/remediated_records_review.md
+  sha256: a1cfd8d196fa9bd0f21ec582265058246a82e030e0fe79cfdb75332219b85522
+  kind: supporting
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-05/revision-0001/c2s5_coverage_full.json
+  sha256: a383b6278939d39bf91f02f864e9e5a2951f7ba8601fd21eae541300e535e81b
+  kind: supporting
+findings:
+- finding_id: F-DEF-SRC-CARBON-FIXATION-010
+  status: resolved
+  summary: carbon_fixation.yaml (traitmech:000019) cited definition_source DOI:10.1128/AEM.02473-10
+    in record-level evidence[0] with notes only and no verbatim snippet (UNQUOTED_DEFINITION_SOURCE)
+    despite already quoting DOI:10.1128/AEM.02473-10 verbatim on causal_graphs[0].edges[11].evidence[0].
+  carried_from: F-DEF-SRC-CARBON-FIXATION-010
+  group_id: G-C2S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1995
+  disposition: 'Resolved in Cycle 2 Stage 5 under group G-C2S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+    (#1995) via scripts/curate_stage5_review_findings.py: promoted verified verbatim
+    snippet for DOI:10.1128/AEM.02473-10 (Berg 2011, Appl Environ Microbiol 77:1925-1936)
+    from causal_graphs[0].edges[11].evidence[0] to record-level evidence[0] on data/traits/metabolism/carbon_fixation.yaml
+    and verified in reviews/structured/20261023T161000Z-cycle2-stage5-remediated-records-review/review.yaml.'
+- finding_id: F-DEF-SRC-WOOD-LJUNGDAHL-011
+  status: resolved
+  summary: wood_ljungdahl_pathway.yaml (traitmech:000022) cited definition_source
+    DOI:10.1016/j.bbapap.2008.08.012 in record-level evidence[0] with notes only and
+    no verbatim snippet (UNQUOTED_DEFINITION_SOURCE) despite already quoting DOI:10.1016/j.bbapap.2008.08.012
+    verbatim on causal_graphs[0].edges[0].evidence[0].
+  carried_from: F-DEF-SRC-WOOD-LJUNGDAHL-011
+  group_id: G-C2S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1995
+  disposition: 'Resolved in Cycle 2 Stage 5 under group G-C2S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+    (#1995) via scripts/curate_stage5_review_findings.py: promoted verified verbatim
+    snippet for DOI:10.1016/j.bbapap.2008.08.012 (Ragsdale & Pierce 2008, Biochim
+    Biophys Acta 1784:1873-1898) from causal_graphs[0].edges[0].evidence[0] to record-level
+    evidence[0] on data/traits/metabolism/wood_ljungdahl_pathway.yaml and verified
+    in reviews/structured/20261023T161000Z-cycle2-stage5-remediated-records-review/review.yaml.'
+- finding_id: F-DEF-SRC-PROPIONIC-FERM-012
+  status: resolved
+  summary: propionic_acid_fermentation.yaml (traitmech:000029) cited definition_source
+    DOI:10.3390/molecules31020333 in record-level evidence[0] with notes only and
+    no verbatim snippet (UNQUOTED_DEFINITION_SOURCE) despite already quoting DOI:10.3390/molecules31020333
+    verbatim on causal_graphs[0].edges[1].evidence[0].
+  carried_from: F-DEF-SRC-PROPIONIC-FERM-012
+  group_id: G-C2S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1995
+  disposition: 'Resolved in Cycle 2 Stage 5 under group G-C2S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+    (#1995) via scripts/curate_stage5_review_findings.py: promoted verified verbatim
+    snippet for DOI:10.3390/molecules31020333 (Molecules 31(2):333) from causal_graphs[0].edges[1].evidence[0]
+    to record-level evidence[0] on data/traits/metabolism/propionic_acid_fermentation.yaml
+    and verified in reviews/structured/20261023T161000Z-cycle2-stage5-remediated-records-review/review.yaml.'
+- finding_id: F-DEF-SRC-MANGANESE-OX-013
+  status: resolved
+  summary: manganese_oxidation.yaml (traitmech:000032) cited definition_source DOI:10.1016/j.tim.2005.07.009
+    in record-level evidence[0] with notes only and no verbatim snippet (UNQUOTED_DEFINITION_SOURCE)
+    despite already quoting DOI:10.1016/j.tim.2005.07.009 verbatim on causal_graphs[0].edges[3].evidence[0].
+  carried_from: F-DEF-SRC-MANGANESE-OX-013
+  group_id: G-C2S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1995
+  disposition: 'Resolved in Cycle 2 Stage 5 under group G-C2S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+    (#1995) via scripts/curate_stage5_review_findings.py: promoted verified verbatim
+    snippet for DOI:10.1016/j.tim.2005.07.009 (Tebo et al. 2005, Trends Microbiol
+    13:421-428) from causal_graphs[0].edges[3].evidence[0] to record-level evidence[0]
+    on data/traits/metabolism/manganese_oxidation.yaml and verified in reviews/structured/20261023T161000Z-cycle2-stage5-remediated-records-review/review.yaml.'
+- finding_id: F-DEF-SRC-CELLULOLYSIS-014
+  status: resolved
+  summary: cellulolysis.yaml (traitmech:000111) cited definition_source DOI:10.1128/MMBR.66.3.506-577.2002
+    in record-level evidence[0] with notes only and no verbatim snippet (UNQUOTED_DEFINITION_SOURCE)
+    despite already quoting DOI:10.1128/MMBR.66.3.506-577.2002 verbatim on causal_graphs[0].edges[15].evidence[0].
+  carried_from: F-DEF-SRC-CELLULOLYSIS-014
+  group_id: G-C2S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1995
+  disposition: 'Resolved in Cycle 2 Stage 5 under group G-C2S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+    (#1995) via scripts/curate_stage5_review_findings.py: promoted verified verbatim
+    snippet for DOI:10.1128/MMBR.66.3.506-577.2002 (Lynd et al. 2002, Microbiol Mol
+    Biol Rev 66:506-577) from causal_graphs[0].edges[15].evidence[0] to record-level
+    evidence[0] on data/traits/metabolism/cellulolysis.yaml and verified in reviews/structured/20261023T161000Z-cycle2-stage5-remediated-records-review/review.yaml.'
+- finding_id: F-DEF-SRC-CHITINOLYSIS-015
+  status: resolved
+  summary: chitinolysis.yaml (traitmech:000112) cited definition_source DOI:10.3389/fmicb.2013.00149
+    in record-level evidence[0] with notes only and no verbatim snippet (UNQUOTED_DEFINITION_SOURCE)
+    despite already quoting DOI:10.3389/fmicb.2013.00149 verbatim on causal_graphs[0].edges[6].evidence[0].
+  carried_from: F-DEF-SRC-CHITINOLYSIS-015
+  group_id: G-C2S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1995
+  disposition: 'Resolved in Cycle 2 Stage 5 under group G-C2S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+    (#1995) via scripts/curate_stage5_review_findings.py: promoted verified verbatim
+    snippet for DOI:10.3389/fmicb.2013.00149 (Beier & Bertilsson 2013, Front Microbiol
+    4:149) from causal_graphs[0].edges[6].evidence[0] to record-level evidence[0]
+    on data/traits/metabolism/chitinolysis.yaml and verified in reviews/structured/20261023T161000Z-cycle2-stage5-remediated-records-review/review.yaml.'
+- finding_id: F-COHORT-CAUSAL-GRAPHS-SOURCE-LIMITED-005
+  status: deferred
+  summary: 391 of 1,129 eligible TraitRecord files lack causal_graphs due to documented
+    source limitations (369 records where open-access PubMed/PMC/EuropePMC literature
+    lacks a multi-step causal mechanism snippet, reduced from 379 in Cycle 1 after
+    +10 Cycle 2 Stage 2 graphs, plus 22 SUPPORTING_FIELD_VOCABULARY non-mechanistic
+    hierarchy/measurement/observation records).
+  carried_from: F-COHORT-CAUSAL-GRAPHS-SOURCE-LIMITED-005
+  group_id: G-STAGE4-CAUSAL-GRAPHS-SOURCE-LIMITED
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1982
+  disposition: 'Deferred (source-limited) under open GitHub issue #1982: every one
+    of the 391 records documents its literature limitation in an open CURATION_TODO
+    DiscussionItem; requires full-text PDF acquisition or paid deep-research approval
+    outside Stage 5 scope.'
+- finding_id: F-COHORT-CANONICAL-EXAMPLES-SOURCE-LIMITED-006
+  status: deferred
+  summary: 551 of 1,129 eligible TraitRecord files lack canonical_examples (578 eligible
+    records and 579 total records carry verified canonical_examples, up from 577 eligible
+    in Cycle 1) because open-access abstracts do not report a verbatim strain-designated
+    or species-specific positive/negative value.
+  carried_from: F-COHORT-CANONICAL-EXAMPLES-SOURCE-LIMITED-006
+  group_id: G-STAGE4-CANONICAL-EXAMPLES-SOURCE-LIMITED
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1983
+  disposition: 'Deferred (source-limited) under open GitHub issue #1983: tracked in
+    scripts/backfill_canonical_examples_444.py (POST_444_CANONICAL_EXAMPLE_QUEUE)
+    and record-level CURATION_TODO DiscussionItems; requires primary strain characterization
+    literature or IJSEM species descriptions.'
+- finding_id: F-COHORT-CAUSAL-GRAPH-BASELINES-007
+  status: deferred
+  summary: 85 baselined cross-record causal-graph audit warning rows (83 INCONSISTENT_NODE_TYPE,
+    2 DUPLICATE_GROUNDING) across 72 unique eligible TraitRecord files in conf/causal_graph_audit_baseline.tsv.
+  carried_from: F-COHORT-CAUSAL-GRAPH-BASELINES-007
+  group_id: G-STAGE4-CAUSAL-GRAPH-BASELINES
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1984
+  disposition: 'Deferred under open GitHub issue #1984 (follow-up to closed #356)
+    and conf/causal_graph_audit_baseline.tsv (0 unbaselined regressions): requires
+    coordinated cross-record ontology-role conventions without breaking GENE_OR_PROTEIN
+    protein_examples bindings.'
+- finding_id: F-COHORT-DEF-SOURCE-PAYWALLED-008
+  status: deferred
+  summary: 70 of 1,129 eligible TraitRecord files (plus 88 unquoted definition_source
+    records without an intra-record verbatim quote after resolving the 6 self-quoted
+    records in Cycle 2 Stage 5, and 50 records omitting definition_source) cite a
+    primary discovery/characterization reference in definition_source that is paywalled
+    or has no indexed PubMed/EuropePMC abstract.
+  carried_from: F-COHORT-DEF-SOURCE-PAYWALLED-008
+  group_id: G-STAGE4-DEF-SOURCE-PAYWALLED
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1985
+  disposition: 'Deferred (source-limited) under open GitHub issue #1985: requires
+    full-text access to paywalled primary characterization articles to extract verbatim
+    definitional snippets.'
+- finding_id: F-COHORT-METPO-UPSTREAM-MINTING-009
+  status: deferred
+  summary: 734 of 1,129 eligible TraitRecord files (735 total including excluded traitmech:000083)
+    use repository-minted traitmech:NNNNNN identifiers awaiting upstream METPO term
+    incorporation across proposals/metpo_traitmech_v1..v611.
+  carried_from: F-COHORT-METPO-UPSTREAM-MINTING-009
+  group_id: G-STAGE4-METPO-UPSTREAM-MINTING
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/364
+  disposition: 'Deferred (upstream-blocked) under open GitHub issue #364: all 734
+    eligible traitmech:NNNNNN records (735 total) are packaged into verified ROBOT
+    templates under proposals/metpo_traitmech_v1..v611 and submitted upstream in berkeleybop/metpo#535.'
+groups:
+- group_id: G-C2S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+  finding_ids:
+  - F-DEF-SRC-CARBON-FIXATION-010
+  - F-DEF-SRC-WOOD-LJUNGDAHL-011
+  - F-DEF-SRC-PROPIONIC-FERM-012
+  - F-DEF-SRC-MANGANESE-OX-013
+  - F-DEF-SRC-CELLULOLYSIS-014
+  - F-DEF-SRC-CHITINOLYSIS-015
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1995
+  status: resolved
+  summary: 'Cause: Six METABOLISM TraitRecord files (carbon_fixation.yaml, wood_ljungdahl_pathway.yaml,
+    propionic_acid_fermentation.yaml, manganese_oxidation.yaml, cellulolysis.yaml,
+    chitinolysis.yaml) cited their primary definition_source in record-level evidence[0]
+    with notes only and no verbatim snippet (UNQUOTED_DEFINITION_SOURCE) even though
+    the exact same reference already carried a verified verbatim quote on causal_graphs[0].edges[*]
+    within the same record. Repair owner: CultureBotAI/TraitMech (scripts/curate_stage5_review_findings.py
+    and the 6 target TraitRecord files).'
+  resolution_evidence:
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-05/revision-0001/validation.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-05/revision-0001/remediated_records_review.yaml
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-05/revision-0001/remediated_records_review.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-05/revision-0001/issue_map.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-05/revision-0001/c2s5_coverage_full.json
+  disposition: 'Resolved all 6 open findings via guarded writer scripts/curate_stage5_review_findings.py,
+    validated with strict LinkML schema and snippet checks, and verified with fresh
+    structured review bundle reviews/structured/20261023T161000Z-cycle2-stage5-remediated-records-review/review.yaml
+    (verdict: pass).'
+- group_id: G-STAGE4-CAUSAL-GRAPHS-SOURCE-LIMITED
+  finding_ids:
+  - F-COHORT-CAUSAL-GRAPHS-SOURCE-LIMITED-005
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1982
+  status: deferred
+  summary: 'Cause: 391 eligible TraitRecord files lack causal_graphs because 369 records
+    cite open-access abstracts without a multi-step molecular mechanism snippet and
+    22 records belong to non-mechanistic SUPPORTING_FIELD_VOCABULARY categories. Repair
+    owner: CultureBotAI/TraitMech full-text / deep-research curation queue (data/traits/**/*.yaml).'
+  resolution_evidence:
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-05/revision-0001/issue_map.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-05/revision-0001/c2s5_coverage_full.json
+  disposition: 'Deferred under open GitHub issue #1982: source-limited without full-text
+    PDF acquisition or paid deep-research approval.'
+- group_id: G-STAGE4-CANONICAL-EXAMPLES-SOURCE-LIMITED
+  finding_ids:
+  - F-COHORT-CANONICAL-EXAMPLES-SOURCE-LIMITED-006
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1983
+  status: deferred
+  summary: 'Cause: 551 eligible TraitRecord files lack canonical_examples because
+    their currently cited open abstracts are taxon-general or upper-level definitions
+    that do not state a verbatim strain/species phenotype value. Repair owner: CultureBotAI/TraitMech
+    (scripts/backfill_canonical_examples_444.py, data/traits/**/*.yaml).'
+  resolution_evidence:
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-05/revision-0001/issue_map.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-05/revision-0001/c2s5_coverage_full.json
+  disposition: 'Deferred under open GitHub issue #1983: requires primary strain characterization
+    or IJSEM species description texts.'
+- group_id: G-STAGE4-CAUSAL-GRAPH-BASELINES
+  finding_ids:
+  - F-COHORT-CAUSAL-GRAPH-BASELINES-007
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1984
+  status: deferred
+  summary: 'Cause: 85 cross-record causal-graph warning rows (83 INCONSISTENT_NODE_TYPE,
+    2 DUPLICATE_GROUNDING) across 72 unique eligible TraitRecord files remain baselined
+    in conf/causal_graph_audit_baseline.tsv where shared GO/CHEBI/METPO CURIEs play
+    dual roles across traits. Repair owner: CultureBotAI/TraitMech (conf/causal_graph_audit_baseline.tsv,
+    scripts/audit_causal_graphs.py, data/traits/**/*.yaml).'
+  resolution_evidence:
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-05/revision-0001/issue_map.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-05/revision-0001/c2s5_coverage_full.json
+  disposition: 'Deferred under open GitHub issue #1984 (follow-up to closed #356):
+    requires coordinated cross-record ontology-role harmonization without breaking
+    GENE_OR_PROTEIN protein_examples bindings.'
+- group_id: G-STAGE4-DEF-SOURCE-PAYWALLED
+  finding_ids:
+  - F-COHORT-DEF-SOURCE-PAYWALLED-008
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1985
+  status: deferred
+  summary: 'Cause: 70 eligible TraitRecord files cite a primary discovery DOI/PMID
+    in definition_source whose full text is paywalled or lacks an open-access abstract
+    quote in PubMed/EuropePMC, while record-level evidence is backed by open DefenseFinder/review
+    sources. Repair owner: CultureBotAI/TraitMech full-text literature queue (data/traits/**/*.yaml).'
+  resolution_evidence:
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-05/revision-0001/issue_map.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-05/revision-0001/c2s5_coverage_full.json
+  disposition: 'Deferred under open GitHub issue #1985: source-limited without full-text
+    access to paywalled primary discovery articles.'
+- group_id: G-STAGE4-METPO-UPSTREAM-MINTING
+  finding_ids:
+  - F-COHORT-METPO-UPSTREAM-MINTING-009
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/364
+  status: deferred
+  summary: 'Cause: 734 eligible TraitRecord files (735 total including excluded traitmech:000083)
+    use repository-minted traitmech:NNNNNN identifiers awaiting upstream METPO release
+    incorporation. Repair owner: Upstream berkeleybop/metpo#535 and CultureBotAI/TraitMech
+    (proposals/metpo_traitmech_v1..v611).'
+  resolution_evidence:
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-05/revision-0001/issue_map.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-05/revision-0001/c2s5_coverage_full.json
+  disposition: 'Deferred (upstream-blocked) under existing open GitHub issue #364
+    and berkeleybop/metpo#535.'
+carry_forward_ids:
+- F-COHORT-CAUSAL-GRAPHS-SOURCE-LIMITED-005
+- F-COHORT-CANONICAL-EXAMPLES-SOURCE-LIMITED-006
+- F-COHORT-CAUSAL-GRAPH-BASELINES-007
+- F-COHORT-DEF-SOURCE-PAYWALLED-008
+- F-COHORT-METPO-UPSTREAM-MINTING-009
+infra_tasks: []

@@ -16,8 +16,10 @@ synonyms:
   source: DOI:10.1016/j.bbapap.2008.08.012
 evidence:
 - reference: DOI:10.1016/j.bbapap.2008.08.012
-  notes: Ragsdale & Pierce, "Acetogenesis and the Wood-Ljungdahl pathway of CO2 fixation",
-    is the reference treatment of this reductive acetyl-CoA pathway.
+  snippet: use the reductive acetyl-CoA or Wood-Ljungdahl pathway as their main mechanism
+    for energy conservation and for synthesis of acetyl-CoA and cell carbon from CO2
+  notes: Ragsdale & Pierce (2008) review the enzymology and bioenergetics of the Wood–Ljungdahl
+    pathway.
 - reference: DOI:10.1128/AEM.02473-10
   notes: Berg review places the reductive acetyl-CoA (Wood-Ljungdahl) pathway among
     the recognized autotrophic carbon-fixation pathways.
@@ -392,4 +394,12 @@ curation_history:
   action: REFRESH_UNIPROT_ENTRY_VERSION
   changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
     UniProtKB:P27988 (125 -> 126 on acetyl_coa_synthase).'
+  llm_assisted: true
+- timestamp: '2026-10-23T16:05:00Z'
+  curator: claude
+  action: ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE
+  changes: 'Added verified verbatim snippet from DOI:10.1016/j.bbapap.2008.08.012
+    (already present on causal_graphs[0].edges[0]) to record-level evidence[0] to
+    match definition_source (Cycle 2 Stage 5 remediation of F-DEF-SRC-WOOD-LJUNGDAHL-011
+    in group G-C2S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #1995).'
   llm_assisted: true

@@ -29,9 +29,10 @@ xrefs:
 - GO:0015977
 evidence:
 - reference: DOI:10.1128/AEM.02473-10
-  notes: Berg review of the distribution of autotrophic CO2-fixation pathways establishes
-    that, besides the Calvin-Benson-Bassham cycle, five further autotrophic carbon-fixation
-    pathways are known, parent of the six pathway sub-variants proposed here.
+  snippet: The reductive pentose phosphate cycle is the quantitatively most important
+    mechanism of autotrophic CO2 fixation in nature.
+  notes: Berg (2011) "Ecological aspects of the distribution of different autotrophic
+    CO2 fixation pathways" — authoritative review of the six known pathways.
 - reference: DOI:10.1146/annurev-marine-120709-142712
   notes: Hügler & Sievert, "Beyond the Calvin cycle", supports multiple autotrophic
     carbon-fixation pathways operating among ocean microorganisms.
@@ -401,4 +402,12 @@ curation_history:
   action: REFRESH_UNIPROT_ENTRY_VERSION
   changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
     UniProtKB:P42721 (153 -> 154 on rubisco).'
+  llm_assisted: true
+- timestamp: '2026-10-23T16:05:00Z'
+  curator: claude
+  action: ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE
+  changes: 'Added verified verbatim snippet from DOI:10.1128/AEM.02473-10 (already
+    present on causal_graphs[0].edges[11]) to record-level evidence[0] to match definition_source
+    (Cycle 2 Stage 5 remediation of F-DEF-SRC-CARBON-FIXATION-010 in group G-C2S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS,
+    issue #1995).'
   llm_assisted: true
