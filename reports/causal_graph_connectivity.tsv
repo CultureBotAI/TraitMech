@@ -91,6 +91,7 @@ data/traits/morphology/spore_shaped.yaml	spore_shaped_endospore_layers	18	1	18	1
 data/traits/morphology/sporulation.yaml	sporulation_spo0a_sigma_morphogenesis	19	1	19	19
 data/traits/morphology/tailed_shaped.yaml	tailed_shaped_polar_stalk_growth	11	1	11	11
 data/traits/morphology/twitching_motility.yaml	twitching_type_iv_pilus_retraction	11	1	11	11
+data/traits/other/coagulase_positive.yaml	coagulase_positive_prothrombin_clotting_sketch	4	1	4	4
 data/traits/physiology/antibiotic_resistance.yaml	antibiotic_resistance_mechanisms	12	1	12	12
 data/traits/physiology/arginine_dihydrolase_activity.yaml	arginine_dihydrolase_adi_pathway_sketch	5	1	5	5
 data/traits/physiology/autotrophic.yaml	autotrophic_inorganic_carbon_fixation	18	1	18	18
@@ -135,6 +136,7 @@ data/traits/physiology/photolithoautotrophic.yaml	photolithoautotrophic_light_in
 data/traits/physiology/photolithotrophic.yaml	photolithotrophic_inorganic_electron_donors	14	1	14	14
 data/traits/physiology/photoorganoheterotrophic.yaml	photoorganoheterotrophic_light_organic_electrons	14	1	14	14
 data/traits/physiology/phototrophic.yaml	phototrophic_light_energy_capture	13	1	13	13
+data/traits/physiology/pyrazinamidase_activity.yaml	pyrazinamidase_activity_pnca_sketch	4	1	4	4
 data/traits/physiology/quorum_sensing.yaml	quorum_sensing_autoinducer	8	1	8	8
 data/traits/physiology/sos_response.yaml	sos_response_dna_damage_regulon	8	1	8	8
 data/traits/physiology/spore_germination.yaml	spore_germination_germinant_trigger	6	1	6	6

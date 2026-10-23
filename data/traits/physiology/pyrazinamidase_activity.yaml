@@ -46,6 +46,12 @@ canonical_examples:
   note: Zhang et al. characterized active nicotinamidase/pyrazinamidase PncA from
     Mycobacterium tuberculosis.
   reference: DOI:10.1111/j.1742-4658.2007.06241.x
+- taxon_id: NCBITaxon:83332
+  taxon_label: Mycobacterium tuberculosis H37Rv
+  note: Petrella et al. determined the crystal structure and catalytic mechanism of
+    Mycobacterium tuberculosis H37Rv pyrazinamidase (PncA; Rv2043c) in pyrazinamide
+    activation to pyrazinoic acid.
+  reference: DOI:10.1371/journal.pone.0015785
 discussions:
 - discussion_id: pyrazinamidase-activity-xref-gap
   prompt: Resolve an exact external ontology class for pyrazinamidase activity before
@@ -89,7 +95,7 @@ discussions:
     nicotinamidase/pyrazinamidase PncA (UniProtKB:I6Y493) so pyrazinamidase_activity_pnca_sketch
     can be promoted from NONMECHANISTIC to MECHANISTIC.
   kind: CURATION_TODO
-  status: OPEN
+  status: RESOLVED
   attaches_to:
   - causal_graphs#pyrazinamidase_activity_pnca_sketch
   rationale: The record's primary literature (EC 3.5.1.19, DOI:10.1111/j.1742-4658.2007.06241.x,
@@ -108,6 +114,11 @@ discussions:
     explanation: Existing record-level evidence supports the connected NONMECHANISTIC
       pathway/function graph but does not provide strain-matched UniProtKB protein
       accessions for protein_examples.
+  resolved_date: '2026-10-23'
+  resolution_note: Added canonical_examples entry Mycobacterium tuberculosis H37Rv
+    (NCBITaxon:83332; DOI:10.1371/journal.pone.0015785) and promoted pyrazinamidase_activity_pnca_sketch
+    to MECHANISTIC by adding InterPro:IPR000868-grounded GENE_OR_PROTEIN node pyrazinamidase_pnca
+    with reviewed protein_examples UniProtKB:I6XD65 (PncA).
 curation_history:
 - timestamp: '2026-09-12T09:07:58Z'
   curator: codex
@@ -129,16 +140,25 @@ curation_history:
     and OPEN CURATION_TODO discussion (pyrazinamidase-activity-protein-example-gap)
     anchored on existing verbatim record evidence snippets.
   llm_assisted: true
+- timestamp: '2026-10-23T22:45:00Z'
+  curator: claude
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: Added Mycobacterium tuberculosis H37Rv (NCBITaxon:83332; DOI:10.1371/journal.pone.0015785)
+    canonical example; promoted pyrazinamidase_activity_pnca_sketch to MECHANISTIC
+    with InterPro:IPR000868-grounded GENE_OR_PROTEIN node pyrazinamidase_pnca and
+    reviewed protein_examples UniProtKB:I6XD65 (PncA); resolved pyrazinamidase-activity-protein-example-gap.
+  llm_assisted: true
 causal_graphs:
 - graph_id: pyrazinamidase_activity_pnca_sketch
   title: Nicotinamidase/pyrazinamidase (PncA) hydrolysis of nicotinamide and pyrazinamide
   description: Evidence-backed physiological mechanism sketch linking nicotinamidase/pyrazinamidase
     catalytic activity, nicotinamide hydrolysis to nicotinate, and pyrazinamide conversion
     to pyrazinoic acid to the pyrazinamidase activity phenotype.
-  scope_status: NONMECHANISTIC
-  scope_notes: Activity-and-reaction sketch backed by EC 3.5.1.19, DOI:10.1111/j.1742-4658.2007.06241.x,
-    and DOI:10.1371/journal.pone.0015785; strain-matched UniProtKB protein examples
-    for Mycobacterium tuberculosis PncA (UniProtKB:I6Y493) remain to be curated.
+  scope_status: MECHANISTIC
+  scope_notes: Mechanistic graph backed by DOI:10.1111/j.1742-4658.2007.06241.x and
+    DOI:10.1371/journal.pone.0015785; exemplified on pyrazinamidase_pnca with Mycobacterium
+    tuberculosis H37Rv (NCBITaxon:83332; UP000001584) nicotinamidase/pyrazinamidase
+    PncA (UniProtKB:I6XD65).
   nodes:
   - node_id: pyrazinamidase_activity_trait
     label: pyrazinamidase activity
@@ -158,6 +178,35 @@ causal_graphs:
     grounding: CHEBI:32544
     description: Nicotinate produced by nicotinamidase-catalyzed hydrolysis of nicotinamide
       and water.
+  - node_id: pyrazinamidase_pnca
+    label: nicotinamidase/pyrazinamidase PncA
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR000868
+    gene_symbols:
+    - pncA
+    description: Isochorismatase-like nicotinamidase/pyrazinamidase (PncA) that hydrolyzes
+      pyrazinamide and nicotinamide.
+    protein_examples:
+    - uniprot_id: UniProtKB:I6XD65
+      protein_label: Nicotinamidase/pyrazinamidase
+      gene_symbol: pncA
+      taxon_id: NCBITaxon:83332
+      taxon_label: Mycobacterium tuberculosis H37Rv
+      entry_status: REVIEWED
+      proteome_id: UP000001584
+      retrieved_on: '2026-10-23'
+      entry_version: 79
+      sequence_version: 1
+      role: PncA (Rv2043c) is the nicotinamidase/pyrazinamidase enzyme that hydrolyzes
+        pyrazinamide into pyrazinoic acid and ammonia in Mycobacterium tuberculosis
+        H37Rv.
+      evidence:
+      - reference: DOI:10.1371/journal.pone.0015785
+        snippet: Pyrazinamidase (PncA) activates the first-line antituberculous drug
+          pyrazinamide into pyrazinoic acid.
+        notes: Petrella et al. determined the crystal structure of Mycobacterium tuberculosis
+          H37Rv pyrazinamidase PncA (UniProtKB:I6XD65) and characterized its catalytic
+          mechanism.
   edges:
   - subject: pyrazinamidase_catalytic_activity
     predicate: confers
@@ -184,3 +233,15 @@ causal_graphs:
         + NH<small><sub>3</sub></small>
       notes: IUBMB EC 3.5.1.19 defines the nicotinamidase reaction converting nicotinamide
         and water into nicotinate and ammonia.
+  - subject: pyrazinamidase_pnca
+    predicate: enables
+    predicate_id: RO:0002327
+    object: pyrazinamidase_catalytic_activity
+    description: Nicotinamidase/pyrazinamidase PncA enables pyrazinamidase catalytic
+      activity.
+    evidence:
+    - reference: DOI:10.1371/journal.pone.0015785
+      snippet: Pyrazinamidase (PncA) activates the first-line antituberculous drug
+        pyrazinamide into pyrazinoic acid.
+      notes: Petrella et al. characterize Mycobacterium tuberculosis H37Rv PncA catalyzing
+        the conversion of pyrazinamide into pyrazinoic acid.

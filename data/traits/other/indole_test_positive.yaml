@@ -36,6 +36,14 @@ curation_history:
     and OPEN CURATION_TODO discussion (indole-test-positive-protein-example-gap) anchored
     on existing verbatim record evidence snippets.
   llm_assisted: true
+- timestamp: '2026-10-23T22:45:00Z'
+  curator: claude
+  action: RECORD_CURATION_DISCUSSION
+  changes: Recorded Cycle 3 Stage 3 UniProtKB audit note on indole-test-positive-protein-example-gap
+    documenting the source-snippet and strain-taxon blocker between Escherichia coli
+    H10407 (NCBITaxon:316401; DOI:10.1128/AEM.02787-15) and Escherichia coli K-12
+    Swiss-Prot TnaA (UniProtKB:P0A853; NCBITaxon:83333).
+  llm_assisted: true
 definition_source: DOI:10.1128/AEM.02787-15
 evidence:
 - reference: DOI:10.1128/AEM.02787-15
@@ -91,6 +99,13 @@ discussions:
     explanation: Existing record-level evidence supports the connected NONMECHANISTIC
       pathway/function graph but does not provide strain-matched UniProtKB protein
       accessions for protein_examples.
+  notes: 'Cycle 3 Stage 3 UniProt audit: canonical_examples cites enterotoxigenic
+    Escherichia coli strain H10407 (NCBITaxon:316401; DOI:10.1128/AEM.02787-15), an
+    analytical indole-assay study whose text does not mention tnaA or tryptophanase
+    and for which UniProtKB lacks a strain H10407 tnaA entry, whereas reviewed Swiss-Prot
+    tryptophanase TnaA (UniProtKB:P0A853) is annotated on Escherichia coli K-12 (NCBITaxon:83333;
+    UP000000625). Keeping graph NONMECHANISTIC and discussion OPEN until a K-12 tnaA
+    primary source snippet and canonical_examples entry are added.'
 causal_graphs:
 - graph_id: indole_test_positive_tryptophan_sketch
   title: Bacterial L-tryptophan catabolism to indole

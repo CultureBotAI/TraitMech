@@ -28,6 +28,15 @@
    records Cycle 2 Stage 3 UniProtKB audit blocker notes on the 2 remaining
    `NONMECHANISTIC` Cohort C records (`fumarate_respiration.yaml`,
    `siderophore_production.yaml`).
+4. In Cycle 3 Stage 3 (`C3S3_COHORT_E_PROMOTIONS` and `C3S3_COHORT_E_BLOCKERS`),
+   promotes 2 Cohort E `NONMECHANISTIC` records (`coagulase_positive.yaml`,
+   `pyrazinamidase_activity.yaml`) to `MECHANISTIC` by adding 2
+   `InterPro`-grounded `GENE_OR_PROTEIN` nodes with 2 verified reviewed UniProtKB
+   `protein_examples` (`UniProtKB:P07767` and `UniProtKB:I6XD65`), 1 distinct
+   verbatim record-level `evidence` item, 1 `canonical_examples` entry, and
+   `RESOLVED` `CURATION_TODO` discussions, and records a Cycle 3 Stage 3
+   UniProtKB audit blocker note on the remaining `NONMECHANISTIC` Cohort E
+   record (`indole_test_positive.yaml`).
 
 Default is dry-run; pass `--apply` to write changes via `write_validated_trait`
 and `record_curation_event`.
@@ -2690,6 +2699,274 @@ C2S3_COHORT_C_BLOCKERS: dict[str, dict[str, Any]] = {
     },
 }
 
+C3S3_TIMESTAMP = "2026-10-23T22:45:00Z"
+C3S3_RETRIEVED_ON = "2026-10-23"
+
+C3S3_COHORT_E_PROMOTIONS: dict[str, dict[str, Any]] = {
+    "data/traits/other/coagulase_positive.yaml": {
+        "identifier": "METPO:1007090",
+        "graph_id": "coagulase_positive_prothrombin_clotting_sketch",
+        "discussion_id": "coagulase-positive-protein-example-gap",
+        "scope_notes": (
+            "Mechanistic graph backed by DOI:10.1371/journal.ppat.1001036; "
+            "exemplified on coagulase_positive_coa with Staphylococcus aureus "
+            "(NCBITaxon:1280) secreted staphylocoagulase Coa (UniProtKB:P07767)."
+        ),
+        "new_evidence": {
+            "reference": "DOI:10.1371/journal.ppat.1001036",
+            "snippet": (
+                "Coa and vWbp promote the non-proteolytic activation of "
+                "prothrombin and cleavage of fibrinogen, reactions that are "
+                "inhibited with specific antibody against each of these molecules."
+            ),
+            "notes": (
+                "Cheng et al. demonstrate that Staphylococcus aureus "
+                "staphylocoagulase (Coa) and von Willebrand factor-binding "
+                "protein (vWbp) promote non-proteolytic activation of "
+                "prothrombin and cleavage of fibrinogen."
+            ),
+        },
+        "new_node": {
+            "node_id": "coagulase_positive_coa",
+            "label": "staphylocoagulase Coa",
+            "node_type": "GENE_OR_PROTEIN",
+            "grounding": "InterPro:IPR001443",
+            "gene_symbols": ["coa"],
+            "description": (
+                "Secreted staphylocoagulase (Coa) that binds and "
+                "non-proteolytically activates host prothrombin to cleave "
+                "fibrinogen into fibrin."
+            ),
+            "protein_examples": [
+                {
+                    "uniprot_id": "UniProtKB:P07767",
+                    "protein_label": "Staphylocoagulase",
+                    "gene_symbol": "coa",
+                    "taxon_id": "NCBITaxon:1280",
+                    "taxon_label": "Staphylococcus aureus",
+                    "entry_status": "REVIEWED",
+                    "retrieved_on": C3S3_RETRIEVED_ON,
+                    "entry_version": 82,
+                    "sequence_version": 2,
+                    "role": (
+                        "Secreted staphylocoagulase (Coa) polypeptide that "
+                        "binds and non-proteolytically activates host "
+                        "prothrombin to convert fibrinogen into fibrin in "
+                        "Staphylococcus aureus."
+                    ),
+                    "evidence": [
+                        {
+                            "reference": "DOI:10.1371/journal.ppat.1001036",
+                            "snippet": (
+                                "All natural isolates of S. aureus secrete "
+                                "coagulase (Coa), a polypeptide that binds and "
+                                "activates prothrombin, thereby converting "
+                                "fibrinogen to fibrin and promoting the clotting "
+                                "of plasma or blood."
+                            ),
+                            "notes": (
+                                "Cheng et al. show that Staphylococcus aureus "
+                                "secretes staphylocoagulase (Coa), which binds "
+                                "and activates prothrombin to convert fibrinogen "
+                                "to fibrin."
+                            ),
+                        }
+                    ],
+                }
+            ],
+        },
+        "new_edge": {
+            "subject": "coagulase_positive_coa",
+            "predicate": "enables",
+            "predicate_id": "RO:0002327",
+            "object": "coagulase_positive_prothrombin_activation",
+            "description": (
+                "Secreted staphylocoagulase Coa enables non-proteolytic "
+                "activation of prothrombin."
+            ),
+            "evidence": [
+                {
+                    "reference": "DOI:10.1371/journal.ppat.1001036",
+                    "snippet": (
+                        "Coa and vWbp promote the non-proteolytic activation of "
+                        "prothrombin and cleavage of fibrinogen, reactions that "
+                        "are inhibited with specific antibody against each of "
+                        "these molecules."
+                    ),
+                    "notes": (
+                        "Cheng et al. show that Staphylococcus aureus "
+                        "staphylocoagulase Coa promotes non-proteolytic "
+                        "activation of prothrombin and subsequent fibrinogen "
+                        "cleavage."
+                    ),
+                }
+            ],
+        },
+        "resolution_message": {
+            "author": CURATOR,
+            "timestamp": C3S3_TIMESTAMP,
+            "body": (
+                "Promoted coagulase_positive_prothrombin_clotting_sketch to "
+                "MECHANISTIC by adding InterPro:IPR001443-grounded "
+                "GENE_OR_PROTEIN node coagulase_positive_coa with reviewed "
+                "Staphylococcus aureus (NCBITaxon:1280) protein_examples "
+                "UniProtKB:P07767 (Coa) backed by DOI:10.1371/journal.ppat.1001036."
+            ),
+        },
+        "changes_summary": (
+            "Promoted coagulase_positive_prothrombin_clotting_sketch to "
+            "MECHANISTIC; added InterPro:IPR001443-grounded GENE_OR_PROTEIN "
+            "node coagulase_positive_coa with reviewed Staphylococcus aureus "
+            "(NCBITaxon:1280) protein_examples UniProtKB:P07767 (Coa) backed "
+            "by DOI:10.1371/journal.ppat.1001036; resolved "
+            "coagulase-positive-protein-example-gap."
+        ),
+    },
+    "data/traits/physiology/pyrazinamidase_activity.yaml": {
+        "identifier": "traitmech:000163",
+        "graph_id": "pyrazinamidase_activity_pnca_sketch",
+        "discussion_id": "pyrazinamidase-activity-protein-example-gap",
+        "scope_notes": (
+            "Mechanistic graph backed by DOI:10.1111/j.1742-4658.2007.06241.x "
+            "and DOI:10.1371/journal.pone.0015785; exemplified on "
+            "pyrazinamidase_pnca with Mycobacterium tuberculosis H37Rv "
+            "(NCBITaxon:83332; UP000001584) nicotinamidase/pyrazinamidase PncA "
+            "(UniProtKB:I6XD65)."
+        ),
+        "new_canonical_example": {
+            "taxon_id": "NCBITaxon:83332",
+            "taxon_label": "Mycobacterium tuberculosis H37Rv",
+            "note": (
+                "Petrella et al. determined the crystal structure and catalytic "
+                "mechanism of Mycobacterium tuberculosis H37Rv pyrazinamidase "
+                "(PncA; Rv2043c) in pyrazinamide activation to pyrazinoic acid."
+            ),
+            "reference": "DOI:10.1371/journal.pone.0015785",
+        },
+        "new_node": {
+            "node_id": "pyrazinamidase_pnca",
+            "label": "nicotinamidase/pyrazinamidase PncA",
+            "node_type": "GENE_OR_PROTEIN",
+            "grounding": "InterPro:IPR000868",
+            "gene_symbols": ["pncA"],
+            "description": (
+                "Isochorismatase-like nicotinamidase/pyrazinamidase (PncA) that "
+                "hydrolyzes pyrazinamide and nicotinamide."
+            ),
+            "protein_examples": [
+                {
+                    "uniprot_id": "UniProtKB:I6XD65",
+                    "protein_label": "Nicotinamidase/pyrazinamidase",
+                    "gene_symbol": "pncA",
+                    "taxon_id": "NCBITaxon:83332",
+                    "taxon_label": "Mycobacterium tuberculosis H37Rv",
+                    "entry_status": "REVIEWED",
+                    "proteome_id": "UP000001584",
+                    "retrieved_on": C3S3_RETRIEVED_ON,
+                    "entry_version": 79,
+                    "sequence_version": 1,
+                    "role": (
+                        "PncA (Rv2043c) is the nicotinamidase/pyrazinamidase "
+                        "enzyme that hydrolyzes pyrazinamide into pyrazinoic "
+                        "acid and ammonia in Mycobacterium tuberculosis H37Rv."
+                    ),
+                    "evidence": [
+                        {
+                            "reference": "DOI:10.1371/journal.pone.0015785",
+                            "snippet": (
+                                "Pyrazinamidase (PncA) activates the first-line "
+                                "antituberculous drug pyrazinamide into "
+                                "pyrazinoic acid."
+                            ),
+                            "notes": (
+                                "Petrella et al. determined the crystal "
+                                "structure of Mycobacterium tuberculosis H37Rv "
+                                "pyrazinamidase PncA (UniProtKB:I6XD65) and "
+                                "characterized its catalytic mechanism."
+                            ),
+                        }
+                    ],
+                }
+            ],
+        },
+        "new_edge": {
+            "subject": "pyrazinamidase_pnca",
+            "predicate": "enables",
+            "predicate_id": "RO:0002327",
+            "object": "pyrazinamidase_catalytic_activity",
+            "description": (
+                "Nicotinamidase/pyrazinamidase PncA enables pyrazinamidase "
+                "catalytic activity."
+            ),
+            "evidence": [
+                {
+                    "reference": "DOI:10.1371/journal.pone.0015785",
+                    "snippet": (
+                        "Pyrazinamidase (PncA) activates the first-line "
+                        "antituberculous drug pyrazinamide into pyrazinoic acid."
+                    ),
+                    "notes": (
+                        "Petrella et al. characterize Mycobacterium tuberculosis "
+                        "H37Rv PncA catalyzing the conversion of pyrazinamide "
+                        "into pyrazinoic acid."
+                    ),
+                }
+            ],
+        },
+        "resolution_message": {
+            "author": CURATOR,
+            "timestamp": C3S3_TIMESTAMP,
+            "body": (
+                "Added canonical_examples entry Mycobacterium tuberculosis H37Rv "
+                "(NCBITaxon:83332; DOI:10.1371/journal.pone.0015785) and promoted "
+                "pyrazinamidase_activity_pnca_sketch to MECHANISTIC by adding "
+                "InterPro:IPR000868-grounded GENE_OR_PROTEIN node "
+                "pyrazinamidase_pnca with reviewed protein_examples "
+                "UniProtKB:I6XD65 (PncA)."
+            ),
+        },
+        "changes_summary": (
+            "Added Mycobacterium tuberculosis H37Rv (NCBITaxon:83332; "
+            "DOI:10.1371/journal.pone.0015785) canonical example; promoted "
+            "pyrazinamidase_activity_pnca_sketch to MECHANISTIC with "
+            "InterPro:IPR000868-grounded GENE_OR_PROTEIN node pyrazinamidase_pnca "
+            "and reviewed protein_examples UniProtKB:I6XD65 (PncA); resolved "
+            "pyrazinamidase-activity-protein-example-gap."
+        ),
+    },
+}
+
+C3S3_COHORT_E_BLOCKERS: dict[str, dict[str, Any]] = {
+    "data/traits/other/indole_test_positive.yaml": {
+        "identifier": "METPO:1005011",
+        "graph_id": "indole_test_positive_tryptophan_sketch",
+        "discussion_id": "indole-test-positive-protein-example-gap",
+        "blocker_message": {
+            "author": CURATOR,
+            "timestamp": C3S3_TIMESTAMP,
+            "body": (
+                "Cycle 3 Stage 3 UniProt audit: canonical_examples cites "
+                "enterotoxigenic Escherichia coli strain H10407 "
+                "(NCBITaxon:316401; DOI:10.1128/AEM.02787-15), an analytical "
+                "indole-assay study whose text does not mention tnaA or "
+                "tryptophanase and for which UniProtKB lacks a strain H10407 "
+                "tnaA entry, whereas reviewed Swiss-Prot tryptophanase TnaA "
+                "(UniProtKB:P0A853) is annotated on Escherichia coli K-12 "
+                "(NCBITaxon:83333; UP000000625). Keeping graph NONMECHANISTIC "
+                "and discussion OPEN until a K-12 tnaA primary source snippet "
+                "and canonical_examples entry are added."
+            ),
+        },
+        "changes_summary": (
+            "Recorded Cycle 3 Stage 3 UniProtKB audit note on "
+            "indole-test-positive-protein-example-gap documenting the "
+            "source-snippet and strain-taxon blocker between Escherichia coli "
+            "H10407 (NCBITaxon:316401; DOI:10.1128/AEM.02787-15) and Escherichia "
+            "coli K-12 Swiss-Prot TnaA (UniProtKB:P0A853; NCBITaxon:83333)."
+        ),
+    },
+}
+
 
 def _protected_paths(repo_root: Path = REPO_ROOT) -> set[str]:
     dnw = repo_root / "DO_NOT_WORK.md"
@@ -2715,11 +2992,13 @@ def process_all(apply: bool = False, repo_root: Path = REPO_ROOT) -> tuple[int, 
     for rel_path, graph_id, node_id, curie, old_v, new_v in ENTRY_VERSION_REFRESHES:
         refreshes_by_file.setdefault(rel_path, []).append((graph_id, node_id, curie, old_v, new_v))
 
+    promotions_by_file = {**C2S3_COHORT_C_PROMOTIONS, **C3S3_COHORT_E_PROMOTIONS}
+    blockers_by_file = {**C2S3_COHORT_C_BLOCKERS, **C3S3_COHORT_E_BLOCKERS}
     all_rel_paths = sorted(
         set(refreshes_by_file)
         | set(NEW_PROTEIN_EXAMPLES)
-        | set(C2S3_COHORT_C_PROMOTIONS)
-        | set(C2S3_COHORT_C_BLOCKERS)
+        | set(promotions_by_file)
+        | set(blockers_by_file)
     )
     for rel_path in all_rel_paths:
         if rel_path in protected:
@@ -2810,8 +3089,10 @@ def process_all(apply: bool = False, repo_root: Path = REPO_ROOT) -> tuple[int, 
                     timestamp=TIMESTAMP,
                     upsert=True,
                 )
-        elif rel_path in C2S3_COHORT_C_PROMOTIONS:
-            spec = C2S3_COHORT_C_PROMOTIONS[rel_path]
+        elif rel_path in promotions_by_file:
+            spec = promotions_by_file[rel_path]
+            promo_ts = spec["resolution_message"]["timestamp"]
+            promo_date = promo_ts[:10]
             if doc.get("identifier") != spec["identifier"]:
                 raise ValueError(
                     f"Identifier mismatch for {rel_path}: {doc.get('identifier')} != {spec['identifier']}"
@@ -2894,22 +3175,22 @@ def process_all(apply: bool = False, repo_root: Path = REPO_ROOT) -> tuple[int, 
             res_body = spec["resolution_message"]["body"]
             if (
                 disc.get("status") != "RESOLVED"
-                or disc.get("resolved_date") != C2S3_RETRIEVED_ON
+                or disc.get("resolved_date") != promo_date
                 or disc.get("resolution_note") != res_body
             ):
                 disc["status"] = "RESOLVED"
-                disc["resolved_date"] = C2S3_RETRIEVED_ON
+                disc["resolved_date"] = promo_date
                 disc["resolution_note"] = res_body
                 changed = True
 
-            existing_c2s3_events = [
+            existing_promo_events = [
                 ev
                 for ev in (doc.get("curation_history") or [])
-                if ev.get("timestamp") == C2S3_TIMESTAMP and ev.get("curator") == CURATOR
+                if ev.get("timestamp") == promo_ts and ev.get("curator") == CURATOR
             ]
             if (
-                not existing_c2s3_events
-                or existing_c2s3_events[-1].get("changes") != spec["changes_summary"]
+                not existing_promo_events
+                or existing_promo_events[-1].get("changes") != spec["changes_summary"]
             ):
                 changed = True
 
@@ -2920,11 +3201,12 @@ def process_all(apply: bool = False, repo_root: Path = REPO_ROOT) -> tuple[int, 
                     action=ACTION_EXAMPLE,
                     changes=spec["changes_summary"],
                     llm_assisted=True,
-                    timestamp=C2S3_TIMESTAMP,
+                    timestamp=promo_ts,
                     upsert=True,
                 )
-        elif rel_path in C2S3_COHORT_C_BLOCKERS:
-            spec = C2S3_COHORT_C_BLOCKERS[rel_path]
+        elif rel_path in blockers_by_file:
+            spec = blockers_by_file[rel_path]
+            blocker_ts = spec["blocker_message"]["timestamp"]
             if doc.get("identifier") != spec["identifier"]:
                 raise ValueError(
                     f"Identifier mismatch for {rel_path}: {doc.get('identifier')} != {spec['identifier']}"
@@ -2942,14 +3224,14 @@ def process_all(apply: bool = False, repo_root: Path = REPO_ROOT) -> tuple[int, 
                 disc["notes"] = blocker_body
                 changed = True
 
-            existing_c2s3_events = [
+            existing_blocker_events = [
                 ev
                 for ev in (doc.get("curation_history") or [])
-                if ev.get("timestamp") == C2S3_TIMESTAMP and ev.get("curator") == CURATOR
+                if ev.get("timestamp") == blocker_ts and ev.get("curator") == CURATOR
             ]
             if (
-                not existing_c2s3_events
-                or existing_c2s3_events[-1].get("changes") != spec["changes_summary"]
+                not existing_blocker_events
+                or existing_blocker_events[-1].get("changes") != spec["changes_summary"]
             ):
                 changed = True
 
@@ -2960,7 +3242,7 @@ def process_all(apply: bool = False, repo_root: Path = REPO_ROOT) -> tuple[int, 
                     action=ACTION_DISCUSSION,
                     changes=spec["changes_summary"],
                     llm_assisted=True,
-                    timestamp=C2S3_TIMESTAMP,
+                    timestamp=blocker_ts,
                     upsert=True,
                 )
         else:

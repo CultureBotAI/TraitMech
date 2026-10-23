@@ -159,7 +159,10 @@ def test_cohort_e_committed_records_have_valid_connected_causal_graphs_and_todo(
         assert len(matching) == 1, f"{rel_path}: missing {disc_id}"
         disc = matching[0]
         assert disc["kind"] == "CURATION_TODO"
-        assert disc["status"] == "OPEN"
+        if graphs[0]["scope_status"] == "MECHANISTIC":
+            assert disc["status"] == "RESOLVED"
+        else:
+            assert disc["status"] == "OPEN"
         assert disc["attaches_to"] == [f"causal_graphs#{graph_id}"]
 
 
