@@ -203752,6 +203752,13 @@
         "action": "CURATE_CAUSAL_GRAPH",
         "changes": "Added NONMECHANISTIC causal_graphs entry (coagulase_positive_prothrombin_clotting_sketch) and OPEN CURATION_TODO discussion (coagulase-positive-protein-example-gap) anchored on existing verbatim record evidence snippets.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-23T22:45:00Z",
+        "curator": "claude",
+        "action": "CURATE_PROTEIN_TAXON_EXAMPLE",
+        "changes": "Promoted coagulase_positive_prothrombin_clotting_sketch to MECHANISTIC; added InterPro:IPR001443-grounded GENE_OR_PROTEIN node coagulase_positive_coa with reviewed Staphylococcus aureus (NCBITaxon:1280) protein_examples UniProtKB:P07767 (Coa) backed by DOI:10.1371/journal.ppat.1001036; resolved coagulase-positive-protein-example-gap.",
+        "llm_assisted": true
       }
     ],
     "definition_source": "DOI:10.1099/mic.0.000019",
@@ -203765,6 +203772,11 @@
         "reference": "DOI:10.1371/journal.ppat.1001036",
         "snippet": "Clinical isolates of the human pathogen Staphylococcus aureus secrete coagulase (Coa), a polypeptide that binds to and activates prothrombin",
         "notes": "Cheng et al. connect S. aureus Coa secretion to prothrombin activation, the clotting activity detected by the coagulase test."
+      },
+      {
+        "reference": "DOI:10.1371/journal.ppat.1001036",
+        "snippet": "Coa and vWbp promote the non-proteolytic activation of prothrombin and cleavage of fibrinogen, reactions that are inhibited with specific antibody against each of these molecules.",
+        "notes": "Cheng et al. demonstrate that Staphylococcus aureus staphylocoagulase (Coa) and von Willebrand factor-binding protein (vWbp) promote non-proteolytic activation of prothrombin and cleavage of fibrinogen."
       }
     ],
     "canonical_examples": [
@@ -203780,8 +203792,8 @@
         "graph_id": "coagulase_positive_prothrombin_clotting_sketch",
         "title": "Coagulase-mediated prothrombin activation and plasma clotting",
         "description": "Evidence-backed mechanism sketch linking bacterial prothrombin activation and plasma clotting to the coagulase positive test-outcome phenotype.",
-        "scope_status": "NONMECHANISTIC",
-        "scope_notes": "Biological-process sketch backed by DOI:10.1099/mic.0.000019 and DOI:10.1371/journal.ppat.1001036; strain-matched UniProtKB protein examples for secreted Staphylococcus aureus coagulase (Coa, UniProtKB:P07767) remain to be curated.",
+        "scope_status": "MECHANISTIC",
+        "scope_notes": "Mechanistic graph backed by DOI:10.1371/journal.ppat.1001036; exemplified on coagulase_positive_coa with Staphylococcus aureus (NCBITaxon:1280) secreted staphylocoagulase Coa (UniProtKB:P07767).",
         "nodes": [
           {
             "node_id": "coagulase_positive_trait",
@@ -203803,6 +203815,37 @@
             "node_type": "BIOLOGICAL_PROCESS",
             "grounding": "GO:0007596",
             "description": "Coagulase-dependent clotting of blood plasma detected by the coagulase test."
+          },
+          {
+            "node_id": "coagulase_positive_coa",
+            "label": "staphylocoagulase Coa",
+            "node_type": "GENE_OR_PROTEIN",
+            "grounding": "InterPro:IPR001443",
+            "gene_symbols": [
+              "coa"
+            ],
+            "description": "Secreted staphylocoagulase (Coa) that binds and non-proteolytically activates host prothrombin to cleave fibrinogen into fibrin.",
+            "protein_examples": [
+              {
+                "uniprot_id": "UniProtKB:P07767",
+                "protein_label": "Staphylocoagulase",
+                "gene_symbol": "coa",
+                "taxon_id": "NCBITaxon:1280",
+                "taxon_label": "Staphylococcus aureus",
+                "entry_status": "REVIEWED",
+                "retrieved_on": "2026-10-23",
+                "entry_version": 82,
+                "sequence_version": 2,
+                "role": "Secreted staphylocoagulase (Coa) polypeptide that binds and non-proteolytically activates host prothrombin to convert fibrinogen into fibrin in Staphylococcus aureus.",
+                "evidence": [
+                  {
+                    "reference": "DOI:10.1371/journal.ppat.1001036",
+                    "snippet": "All natural isolates of S. aureus secrete coagulase (Coa), a polypeptide that binds and activates prothrombin, thereby converting fibrinogen to fibrin and promoting the clotting of plasma or blood.",
+                    "notes": "Cheng et al. show that Staphylococcus aureus secretes staphylocoagulase (Coa), which binds and activates prothrombin to convert fibrinogen to fibrin."
+                  }
+                ]
+              }
+            ]
           }
         ],
         "edges": [
@@ -203833,6 +203876,20 @@
                 "notes": "Loof et al. show that coagulase-positive Staphylococcus aureus bacteria promote clotting of plasma, which is abolished in a coagulase-deficient mutant strain."
               }
             ]
+          },
+          {
+            "subject": "coagulase_positive_coa",
+            "predicate": "enables",
+            "predicate_id": "RO:0002327",
+            "object": "coagulase_positive_prothrombin_activation",
+            "description": "Secreted staphylocoagulase Coa enables non-proteolytic activation of prothrombin.",
+            "evidence": [
+              {
+                "reference": "DOI:10.1371/journal.ppat.1001036",
+                "snippet": "Coa and vWbp promote the non-proteolytic activation of prothrombin and cleavage of fibrinogen, reactions that are inhibited with specific antibody against each of these molecules.",
+                "notes": "Cheng et al. show that Staphylococcus aureus staphylocoagulase Coa promotes non-proteolytic activation of prothrombin and subsequent fibrinogen cleavage."
+              }
+            ]
           }
         ]
       }
@@ -203842,7 +203899,7 @@
         "discussion_id": "coagulase-positive-protein-example-gap",
         "prompt": "Add strain-matched UniProtKB protein_examples for Staphylococcus aureus secreted coagulase (Coa, UniProtKB:P07767) so coagulase_positive_prothrombin_clotting_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
         "kind": "CURATION_TODO",
-        "status": "OPEN",
+        "status": "RESOLVED",
         "attaches_to": [
           "causal_graphs#coagulase_positive_prothrombin_clotting_sketch"
         ],
@@ -203856,7 +203913,9 @@
             "snippet": "Clinical isolates of the human pathogen Staphylococcus aureus secrete coagulase (Coa), a polypeptide that binds to and activates prothrombin",
             "explanation": "Existing record-level evidence supports the connected NONMECHANISTIC pathway/function graph but does not provide strain-matched UniProtKB protein accessions for protein_examples."
           }
-        ]
+        ],
+        "resolved_date": "2026-10-23",
+        "resolution_note": "Promoted coagulase_positive_prothrombin_clotting_sketch to MECHANISTIC by adding InterPro:IPR001443-grounded GENE_OR_PROTEIN node coagulase_positive_coa with reviewed Staphylococcus aureus (NCBITaxon:1280) protein_examples UniProtKB:P07767 (Coa) backed by DOI:10.1371/journal.ppat.1001036."
       }
     ]
   },
@@ -204685,6 +204744,13 @@
         "action": "CURATE_CAUSAL_GRAPH",
         "changes": "Added NONMECHANISTIC causal_graphs entry (indole_test_positive_tryptophan_sketch) and OPEN CURATION_TODO discussion (indole-test-positive-protein-example-gap) anchored on existing verbatim record evidence snippets.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-23T22:45:00Z",
+        "curator": "claude",
+        "action": "RECORD_CURATION_DISCUSSION",
+        "changes": "Recorded Cycle 3 Stage 3 UniProtKB audit note on indole-test-positive-protein-example-gap documenting the source-snippet and strain-taxon blocker between Escherichia coli H10407 (NCBITaxon:316401; DOI:10.1128/AEM.02787-15) and Escherichia coli K-12 Swiss-Prot TnaA (UniProtKB:P0A853; NCBITaxon:83333).",
+        "llm_assisted": true
       }
     ],
     "definition_source": "DOI:10.1128/AEM.02787-15",
@@ -204738,7 +204804,8 @@
             "snippet": "enterotoxigenic Escherichia coli strain H10407 produces 3.3 \u00b1 0.22 mM indole during a 24-h period in the presence of 5 mM tryptophan",
             "explanation": "Existing record-level evidence supports the connected NONMECHANISTIC pathway/function graph but does not provide strain-matched UniProtKB protein accessions for protein_examples."
           }
-        ]
+        ],
+        "notes": "Cycle 3 Stage 3 UniProt audit: canonical_examples cites enterotoxigenic Escherichia coli strain H10407 (NCBITaxon:316401; DOI:10.1128/AEM.02787-15), an analytical indole-assay study whose text does not mention tnaA or tryptophanase and for which UniProtKB lacks a strain H10407 tnaA entry, whereas reviewed Swiss-Prot tryptophanase TnaA (UniProtKB:P0A853) is annotated on Escherichia coli K-12 (NCBITaxon:83333; UP000000625). Keeping graph NONMECHANISTIC and discussion OPEN until a K-12 tnaA primary source snippet and canonical_examples entry are added."
       }
     ],
     "causal_graphs": [
@@ -236101,6 +236168,12 @@
         "taxon_label": "Mycobacterium tuberculosis",
         "note": "Zhang et al. characterized active nicotinamidase/pyrazinamidase PncA from Mycobacterium tuberculosis.",
         "reference": "DOI:10.1111/j.1742-4658.2007.06241.x"
+      },
+      {
+        "taxon_id": "NCBITaxon:83332",
+        "taxon_label": "Mycobacterium tuberculosis H37Rv",
+        "note": "Petrella et al. determined the crystal structure and catalytic mechanism of Mycobacterium tuberculosis H37Rv pyrazinamidase (PncA; Rv2043c) in pyrazinamide activation to pyrazinoic acid.",
+        "reference": "DOI:10.1371/journal.pone.0015785"
       }
     ],
     "discussions": [
@@ -236139,7 +236212,7 @@
         "discussion_id": "pyrazinamidase-activity-protein-example-gap",
         "prompt": "Add strain-matched UniProtKB protein_examples for Mycobacterium tuberculosis nicotinamidase/pyrazinamidase PncA (UniProtKB:I6Y493) so pyrazinamidase_activity_pnca_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
         "kind": "CURATION_TODO",
-        "status": "OPEN",
+        "status": "RESOLVED",
         "attaches_to": [
           "causal_graphs#pyrazinamidase_activity_pnca_sketch"
         ],
@@ -236153,7 +236226,9 @@
             "snippet": "The nicotinamidase/pyrazinamidase (PncA) of Mycobacterium tuberculosis is involved in the activation of the important front-line antituberculosis drug pyrazinamide by converting it into the active form, pyrazinoic acid.",
             "explanation": "Existing record-level evidence supports the connected NONMECHANISTIC pathway/function graph but does not provide strain-matched UniProtKB protein accessions for protein_examples."
           }
-        ]
+        ],
+        "resolved_date": "2026-10-23",
+        "resolution_note": "Added canonical_examples entry Mycobacterium tuberculosis H37Rv (NCBITaxon:83332; DOI:10.1371/journal.pone.0015785) and promoted pyrazinamidase_activity_pnca_sketch to MECHANISTIC by adding InterPro:IPR000868-grounded GENE_OR_PROTEIN node pyrazinamidase_pnca with reviewed protein_examples UniProtKB:I6XD65 (PncA)."
       }
     ],
     "curation_history": [
@@ -236177,6 +236252,13 @@
         "action": "CURATE_CAUSAL_GRAPH",
         "changes": "Added NONMECHANISTIC causal_graphs entry (pyrazinamidase_activity_pnca_sketch) and OPEN CURATION_TODO discussion (pyrazinamidase-activity-protein-example-gap) anchored on existing verbatim record evidence snippets.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-23T22:45:00Z",
+        "curator": "claude",
+        "action": "CURATE_PROTEIN_TAXON_EXAMPLE",
+        "changes": "Added Mycobacterium tuberculosis H37Rv (NCBITaxon:83332; DOI:10.1371/journal.pone.0015785) canonical example; promoted pyrazinamidase_activity_pnca_sketch to MECHANISTIC with InterPro:IPR000868-grounded GENE_OR_PROTEIN node pyrazinamidase_pnca and reviewed protein_examples UniProtKB:I6XD65 (PncA); resolved pyrazinamidase-activity-protein-example-gap.",
+        "llm_assisted": true
       }
     ],
     "causal_graphs": [
@@ -236184,8 +236266,8 @@
         "graph_id": "pyrazinamidase_activity_pnca_sketch",
         "title": "Nicotinamidase/pyrazinamidase (PncA) hydrolysis of nicotinamide and pyrazinamide",
         "description": "Evidence-backed physiological mechanism sketch linking nicotinamidase/pyrazinamidase catalytic activity, nicotinamide hydrolysis to nicotinate, and pyrazinamide conversion to pyrazinoic acid to the pyrazinamidase activity phenotype.",
-        "scope_status": "NONMECHANISTIC",
-        "scope_notes": "Activity-and-reaction sketch backed by EC 3.5.1.19, DOI:10.1111/j.1742-4658.2007.06241.x, and DOI:10.1371/journal.pone.0015785; strain-matched UniProtKB protein examples for Mycobacterium tuberculosis PncA (UniProtKB:I6Y493) remain to be curated.",
+        "scope_status": "MECHANISTIC",
+        "scope_notes": "Mechanistic graph backed by DOI:10.1111/j.1742-4658.2007.06241.x and DOI:10.1371/journal.pone.0015785; exemplified on pyrazinamidase_pnca with Mycobacterium tuberculosis H37Rv (NCBITaxon:83332; UP000001584) nicotinamidase/pyrazinamidase PncA (UniProtKB:I6XD65).",
         "nodes": [
           {
             "node_id": "pyrazinamidase_activity_trait",
@@ -236207,6 +236289,38 @@
             "node_type": "CHEMICAL",
             "grounding": "CHEBI:32544",
             "description": "Nicotinate produced by nicotinamidase-catalyzed hydrolysis of nicotinamide and water."
+          },
+          {
+            "node_id": "pyrazinamidase_pnca",
+            "label": "nicotinamidase/pyrazinamidase PncA",
+            "node_type": "GENE_OR_PROTEIN",
+            "grounding": "InterPro:IPR000868",
+            "gene_symbols": [
+              "pncA"
+            ],
+            "description": "Isochorismatase-like nicotinamidase/pyrazinamidase (PncA) that hydrolyzes pyrazinamide and nicotinamide.",
+            "protein_examples": [
+              {
+                "uniprot_id": "UniProtKB:I6XD65",
+                "protein_label": "Nicotinamidase/pyrazinamidase",
+                "gene_symbol": "pncA",
+                "taxon_id": "NCBITaxon:83332",
+                "taxon_label": "Mycobacterium tuberculosis H37Rv",
+                "entry_status": "REVIEWED",
+                "proteome_id": "UP000001584",
+                "retrieved_on": "2026-10-23",
+                "entry_version": 79,
+                "sequence_version": 1,
+                "role": "PncA (Rv2043c) is the nicotinamidase/pyrazinamidase enzyme that hydrolyzes pyrazinamide into pyrazinoic acid and ammonia in Mycobacterium tuberculosis H37Rv.",
+                "evidence": [
+                  {
+                    "reference": "DOI:10.1371/journal.pone.0015785",
+                    "snippet": "Pyrazinamidase (PncA) activates the first-line antituberculous drug pyrazinamide into pyrazinoic acid.",
+                    "notes": "Petrella et al. determined the crystal structure of Mycobacterium tuberculosis H37Rv pyrazinamidase PncA (UniProtKB:I6XD65) and characterized its catalytic mechanism."
+                  }
+                ]
+              }
+            ]
           }
         ],
         "edges": [
@@ -236235,6 +236349,20 @@
                 "reference": "https://iubmb.qmul.ac.uk/enzyme/EC3/5/1/19.html",
                 "snippet": "<b>Reaction:</b> nicotinamide + H<small><sub>2</sub></small>O = nicotinate + NH<small><sub>3</sub></small>",
                 "notes": "IUBMB EC 3.5.1.19 defines the nicotinamidase reaction converting nicotinamide and water into nicotinate and ammonia."
+              }
+            ]
+          },
+          {
+            "subject": "pyrazinamidase_pnca",
+            "predicate": "enables",
+            "predicate_id": "RO:0002327",
+            "object": "pyrazinamidase_catalytic_activity",
+            "description": "Nicotinamidase/pyrazinamidase PncA enables pyrazinamidase catalytic activity.",
+            "evidence": [
+              {
+                "reference": "DOI:10.1371/journal.pone.0015785",
+                "snippet": "Pyrazinamidase (PncA) activates the first-line antituberculous drug pyrazinamide into pyrazinoic acid.",
+                "notes": "Petrella et al. characterize Mycobacterium tuberculosis H37Rv PncA catalyzing the conversion of pyrazinamide into pyrazinoic acid."
               }
             ]
           }

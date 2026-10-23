@@ -368,6 +368,11 @@
 
 
 
+        <details class="discussion-notes">
+          <summary class="meta">Provenance</summary>
+          <p class="meta">Cycle 3 Stage 3 UniProt audit: canonical_examples cites enterotoxigenic Escherichia coli strain H10407 (NCBITaxon:316401; DOI:10.1128/AEM.02787-15), an analytical indole-assay study whose text does not mention tnaA or tryptophanase and for which UniProtKB lacks a strain H10407 tnaA entry, whereas reviewed Swiss-Prot tryptophanase TnaA (UniProtKB:P0A853) is annotated on Escherichia coli K-12 (NCBITaxon:83333; UP000000625). Keeping graph NONMECHANISTIC and discussion OPEN until a K-12 tnaA primary source snippet and canonical_examples entry are added.</p>
+        </details>
+
       </div>
 
     </div>
@@ -399,6 +404,12 @@
           <time>2026-10-23T20:51:41Z</time> ·
           <strong>CURATE_CAUSAL_GRAPH</strong> · claude
           <p class="changes">Added NONMECHANISTIC causal_graphs entry (indole_test_positive_tryptophan_sketch) and OPEN CURATION_TODO discussion (indole-test-positive-protein-example-gap) anchored on existing verbatim record evidence snippets.</p>
+        </li>
+
+        <li>
+          <time>2026-10-23T22:45:00Z</time> ·
+          <strong>RECORD_CURATION_DISCUSSION</strong> · claude
+          <p class="changes">Recorded Cycle 3 Stage 3 UniProtKB audit note on indole-test-positive-protein-example-gap documenting the source-snippet and strain-taxon blocker between Escherichia coli H10407 (NCBITaxon:316401; DOI:10.1128/AEM.02787-15) and Escherichia coli K-12 Swiss-Prot TnaA (UniProtKB:P0A853; NCBITaxon:83333).</p>
         </li>
 
       </ol>
@@ -818,7 +829,7 @@ function renderPathograph(containerId, data) {
       third-party source terms apply
     </div>
     <div>
-      Record as of 2026-10-23 20:51 UTC
+      Record as of 2026-10-23 22:45 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
       · embedding coverage 100.0%

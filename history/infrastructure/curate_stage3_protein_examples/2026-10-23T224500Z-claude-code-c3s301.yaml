@@ -1,0 +1,43 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/curate_stage3_protein_examples.py
+  slug: curate_stage3_protein_examples
+session:
+  id: 2026-10-23T224500Z-claude-code-c3s301
+  timestamp: '2026-10-23T22:45:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+    agent_tool: antigravity
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1978
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - evidence
+  - canonical_examples
+  - discussions
+  - curation_history
+  summary: Promote 2 Cohort E NONMECHANISTIC records to MECHANISTIC with 2 verified UniProtKB
+    protein_examples and document 1 remaining Cohort E UniProtKB blocker
+  details: 'Audited all 1,130 TraitRecord YAMLs (1,129 eligible, 1 protected) and all 826
+    GENE_OR_PROTEIN causal nodes for Cycle 3 Stage 3 (protein_examples). Promoted 2 Cohort
+    E NONMECHANISTIC records from Cycle 3 Stage 2 to MECHANISTIC by adding 2 InterPro-grounded
+    GENE_OR_PROTEIN nodes with 2 verified reviewed UniProtKB protein_examples, 1 distinct
+    verbatim record-level evidence item, 1 new canonical_examples entry, and RESOLVED CURATION_TODO
+    discussions: other/coagulase_positive.yaml (InterPro:IPR001443 coagulase_positive_coa:
+    Staphylococcus aureus NCBITaxon:1280 UniProtKB:P07767 Coa v82 seq v2 backed by DOI:10.1371/journal.ppat.1001036)
+    and physiology/pyrazinamidase_activity.yaml (added Mycobacterium tuberculosis H37Rv NCBITaxon:83332
+    canonical_examples; InterPro:IPR000868 pyrazinamidase_pnca: UniProtKB:I6XD65 PncA v79
+    seq v1 UP000001584 backed by DOI:10.1371/journal.pone.0015785). Recorded Cycle 3 Stage
+    3 UniProtKB blocker audit note on other/indole_test_positive.yaml (indole-test-positive-protein-example-gap:
+    analytical assay source DOI:10.1128/AEM.02787-15 on Escherichia coli H10407 NCBITaxon:316401
+    lacks tnaA/tryptophanase mention and UniProtKB entry, whereas reviewed Swiss-Prot TnaA
+    UniProtKB:P0A853 is on Escherichia coli K-12 NCBITaxon:83333 UP000000625). Brought reports/uniprot_grounding_audit.tsv
+    to 181 uses across 161 exemplified GENE_OR_PROTEIN nodes (148 unique accessions) with
+    0 findings and 0 skipped entry_versions.'
