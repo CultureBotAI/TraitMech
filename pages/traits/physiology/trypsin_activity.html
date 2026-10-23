@@ -226,7 +226,7 @@
 
 
     <div class="card" id="discussions">
-      <h2>Discussions and Knowledge Gaps <span class="meta">(1)</span></h2>
+      <h2>Discussions and Knowledge Gaps <span class="meta">(2)</span></h2>
       <p class="meta">Open questions attached to this trait. Seeded by
         <code>just knowledge-gap-scan</code> and curated; see
         <a href="../../../app/discussions/index.html">the corpus-wide index</a>.</p>
@@ -261,6 +261,47 @@
 
       </div>
 
+
+      <div class="discussion" id="trypsin-activity-causal-graph-source-gap">
+        <p class="discussion-prompt">Add primary microbial literature evidence for microbial trypsin-like serine protease catalysis and physiological substrate cleavage before constructing causal_graphs.</p>
+        <p class="meta">
+          <span class="badge">KNOWLEDGE GAP</span>
+          <span class="badge">OPEN</span>
+          <code>trypsin-activity-causal-graph-source-gap</code>
+          · raised by claude
+          · 2026-10-23
+        </p>
+
+
+        <p class="meta">Attached to
+          <code>causal_graphs</code>
+        </p>
+
+
+        <p>The current record pairs IUBMB EC 3.4.21.4 cleavage/vertebrate-pancreas snippets with an API ZYM diagnostic survey list (DOI:10.1371/journal.pone.0322500), lacking a second microbial mechanistic quote.</p>
+
+
+
+
+        <h3>Evidence</h3>
+        <ul class="discussion-evidence">
+
+          <li>
+            <a href="https://iubmb.qmul.ac.uk/enzyme/EC3/4/21/4.html" rel="nofollow noreferrer"><code>https://iubmb.qmul.ac.uk/enzyme/EC3/4/21/4.html</code></a>
+            <span class="badge">PARTIAL</span>
+            <blockquote>&lt;b&gt;Reaction:&lt;/b&gt; Preferential cleavage: Arg&lt;img src=&#34;../../../EZgif/FISS.GIF&#34; align=top&gt;, Lys&lt;img src=&#34;../../../EZgif/FISS.GIF&#34; align=top&gt;</blockquote>
+            <span class="meta">Existing record-level evidence supports the trait definition and diagnostic or organismal occurrence, but lacks multiple distinct pathway/enzyme quotes and strain-matched UniProtKB protein accessions needed for a connected causal graph.</span>
+          </li>
+
+        </ul>
+
+
+
+
+
+
+      </div>
+
     </div>
 
 
@@ -284,6 +325,12 @@
           <time>2026-09-12T06:00:57Z</time> ·
           <strong>TIGHTENED_DEFINITION_WORDING</strong> · codex
           <p class="changes">Tightened the trypsin activity definition to describe a trypsin-like organismal phenotype instead of over-specifying production of the named vertebrate enzyme (#820).</p>
+        </li>
+
+        <li>
+          <time>2026-10-23T09:40:49Z</time> ·
+          <strong>RECORD_MECHANISM_KNOWLEDGE_GAP</strong> · claude
+          <p class="changes">Recorded OPEN KNOWLEDGE_GAP discussion (trypsin-activity-causal-graph-source-gap) attached to causal_graphs documenting the source-limited mechanism gap.</p>
         </li>
 
       </ol>
@@ -374,7 +421,7 @@
       third-party source terms apply
     </div>
     <div>
-      Record as of 2026-09-12 06:01 UTC
+      Record as of 2026-10-23 09:40 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
       · embedding coverage 100.0%

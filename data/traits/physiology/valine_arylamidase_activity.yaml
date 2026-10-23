@@ -36,6 +36,26 @@ discussions:
     phenotype at organism-level scope.
   posed_by: codex
   posed_date: '2026-09-11'
+- discussion_id: valine-arylamidase-activity-causal-graph-source-gap
+  prompt: Add primary microbial literature evidence for valyl aminopeptidase/arylamidase
+    catalysis and substrate cleavage before constructing causal_graphs.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  attaches_to:
+  - causal_graphs
+  rationale: The current record carries two API ZYM diagnostic survey snippets (DOI:10.3389/fmicb.2022.1034816,
+    DOI:10.1099/ijsem.0.002327) without verbatim catalytic reaction quotes.
+  posed_by: claude
+  posed_date: '2026-10-23'
+  evidence:
+  - reference: DOI:10.3389/fmicb.2022.1034816
+    supports: PARTIAL
+    snippet: Positive alkaline phosphatase, cystine arylamidase, esterase(C4), esterase
+      lipase(C8), leucine arylamidase, naphthol-AS-B1-phosphohydrolase, valine arylamidase
+    explanation: Existing record-level evidence supports the trait definition and
+      diagnostic or organismal occurrence, but lacks multiple distinct pathway/enzyme
+      quotes and strain-matched UniProtKB protein accessions needed for a connected
+      causal graph.
 curation_history:
 - timestamp: '2026-09-11T17:00:22Z'
   curator: codex
@@ -43,4 +63,10 @@ curation_history:
   changes: Minted valine arylamidase activity as a DOI-backed TraitRecord after a
     repository-wide duplicate review covering ignored and hidden files; METPO has
     no exact valine arylamidase activity class yet.
+  llm_assisted: true
+- timestamp: '2026-10-23T09:40:49Z'
+  curator: claude
+  action: RECORD_MECHANISM_KNOWLEDGE_GAP
+  changes: Recorded OPEN KNOWLEDGE_GAP discussion (valine-arylamidase-activity-causal-graph-source-gap)
+    attached to causal_graphs documenting the source-limited mechanism gap.
   llm_assisted: true

@@ -44,6 +44,27 @@ discussions:
     rather than an equivalent TraitRecord xref.
   posed_by: codex
   posed_date: '2026-09-12'
+- discussion_id: ornithine-decarboxylase-activity-causal-graph-source-gap
+  prompt: Add primary microbial literature evidence for inducible/biosynthetic ornithine
+    decarboxylase (SpeF/SpeC) physiological polyamine/acid-resistance function and
+    strain-matched UniProtKB protein accessions before constructing causal_graphs.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  attaches_to:
+  - causal_graphs
+  rationale: The current record pairs one IUBMB EC 4.1.1.17 reaction snippet with
+    one mutant-isolation sentence (DOI:10.1128/jb.124.2.791-799.1975) that does not
+    state the enzyme's physiological pathway link to the organism-level phenotype.
+  posed_by: claude
+  posed_date: '2026-10-23'
+  evidence:
+  - reference: https://iubmb.qmul.ac.uk/enzyme/EC4/1/1/17.html
+    supports: PARTIAL
+    snippet: 'Reaction: L-ornithine = putrescine + CO2'
+    explanation: Existing record-level evidence supports the trait definition and
+      diagnostic or organismal occurrence, but lacks multiple distinct pathway/enzyme
+      quotes and strain-matched UniProtKB protein accessions needed for a connected
+      causal graph.
 curation_history:
 - timestamp: '2026-09-12T02:38:18Z'
   curator: codex
@@ -51,4 +72,10 @@ curation_history:
   changes: Minted ornithine decarboxylase activity as a URL/DOI-backed TraitRecord
     after a repository-wide duplicate review covering ignored and hidden files; METPO
     has no exact ornithine decarboxylase activity class yet.
+  llm_assisted: true
+- timestamp: '2026-10-23T09:40:49Z'
+  curator: claude
+  action: RECORD_MECHANISM_KNOWLEDGE_GAP
+  changes: Recorded OPEN KNOWLEDGE_GAP discussion (ornithine-decarboxylase-activity-causal-graph-source-gap)
+    attached to causal_graphs documenting the source-limited mechanism gap.
   llm_assisted: true

@@ -19,6 +19,12 @@ curation_history:
     ammonia- and nitrite-oxidation evidence after a repository-wide duplicate review
     covering ignored and hidden files.
   llm_assisted: true
+- timestamp: '2026-10-23T09:40:48Z'
+  curator: claude
+  action: RECORD_MECHANISM_KNOWLEDGE_GAP
+  changes: Recorded OPEN KNOWLEDGE_GAP discussion (nitrification-causal-graph-source-gap)
+    attached to causal_graphs documenting the source-limited mechanism gap.
+  llm_assisted: true
 definition_source: DOI:10.3389/fmicb.2020.01900
 evidence:
 - reference: DOI:10.3389/fmicb.2020.01900
@@ -37,3 +43,25 @@ discussions:
     nitrification trait and is not exact enough for TraitRecord xrefs.
   posed_by: codex
   posed_date: '2026-09-11'
+- discussion_id: nitrification-causal-graph-source-gap
+  prompt: Add a second independent evidence snippet covering ammonia monooxygenase
+    / hydroxylamine oxidoreductase and nitrite oxidoreductase steps plus a strain-matched
+    canonical example before constructing causal_graphs.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  attaches_to:
+  - causal_graphs
+  rationale: The current record carries a single overview snippet (DOI:10.3389/fmicb.2020.01900)
+    describing two-step oxidation of ammonia to nitrite and nitrate; a connected multi-edge
+    graph requires at least two independent verbatim snippets without clause-splitting.
+  posed_by: claude
+  posed_date: '2026-10-23'
+  evidence:
+  - reference: DOI:10.3389/fmicb.2020.01900
+    supports: PARTIAL
+    snippet: nitrification proceeds as a two-step process, involving the oxidation
+      of ammonia to nitrite and the oxidation of nitrite to nitrate
+    explanation: Existing record-level evidence supports the trait definition and
+      diagnostic or organismal occurrence, but lacks multiple distinct pathway/enzyme
+      quotes and strain-matched UniProtKB protein accessions needed for a connected
+      causal graph.

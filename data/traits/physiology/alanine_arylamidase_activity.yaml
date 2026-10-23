@@ -55,6 +55,29 @@ discussions:
     and not as an equivalent TraitRecord xref.
   posed_by: codex
   posed_date: '2026-09-12'
+- discussion_id: alanine-arylamidase-activity-causal-graph-source-gap
+  prompt: Add primary microbial literature evidence for alanine aminopeptidase/arylamidase
+    catalysis and physiological peptide cleavage in the exemplar taxon before constructing
+    causal_graphs.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  attaches_to:
+  - causal_graphs
+  rationale: The current record pairs one IUBMB EC 3.4.11.2 reaction snippet with
+    a multi-enzyme API ZYM species-description list (DOI:10.1099/ijsem.0.006017),
+    leaving only one mechanistic quote.
+  posed_by: claude
+  posed_date: '2026-10-23'
+  evidence:
+  - reference: https://iubmb.qmul.ac.uk/enzyme/EC3/4/11/2.html
+    supports: PARTIAL
+    snippet: <b>Reaction:</b> Release of an N-terminal amino acid, Xaa<img src="../../../EZgif/FISS.GIF"
+      align=top>Yaa- from a peptide, amide or arylamide. Xaa is preferably Ala, but
+      may be most amino acids including Pro (slow action).
+    explanation: Existing record-level evidence supports the trait definition and
+      diagnostic or organismal occurrence, but lacks multiple distinct pathway/enzyme
+      quotes and strain-matched UniProtKB protein accessions needed for a connected
+      causal graph.
 curation_history:
 - timestamp: '2026-09-12T07:32:57Z'
   curator: codex
@@ -62,4 +85,10 @@ curation_history:
   changes: Minted alanine arylamidase activity as a URL/DOI-backed TraitRecord after
     a repository-wide duplicate review covering ignored and hidden files; METPO has
     no exact alanine arylamidase activity class yet.
+  llm_assisted: true
+- timestamp: '2026-10-23T09:40:48Z'
+  curator: claude
+  action: RECORD_MECHANISM_KNOWLEDGE_GAP
+  changes: Recorded OPEN KNOWLEDGE_GAP discussion (alanine-arylamidase-activity-causal-graph-source-gap)
+    attached to causal_graphs documenting the source-limited mechanism gap.
   llm_assisted: true

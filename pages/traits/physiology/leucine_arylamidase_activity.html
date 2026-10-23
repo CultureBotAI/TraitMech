@@ -211,7 +211,7 @@
 
 
     <div class="card" id="discussions">
-      <h2>Discussions and Knowledge Gaps <span class="meta">(1)</span></h2>
+      <h2>Discussions and Knowledge Gaps <span class="meta">(2)</span></h2>
       <p class="meta">Open questions attached to this trait. Seeded by
         <code>just knowledge-gap-scan</code> and curated; see
         <a href="../../../app/discussions/index.html">the corpus-wide index</a>.</p>
@@ -246,6 +246,47 @@
 
       </div>
 
+
+      <div class="discussion" id="leucine-arylamidase-activity-causal-graph-source-gap">
+        <p class="discussion-prompt">Add primary microbial literature evidence for leucyl aminopeptidase (PepA/Lap, EC 3.4.11.1) catalysis and peptide turnover in the exemplar taxon before constructing causal_graphs.</p>
+        <p class="meta">
+          <span class="badge">KNOWLEDGE GAP</span>
+          <span class="badge">OPEN</span>
+          <code>leucine-arylamidase-activity-causal-graph-source-gap</code>
+          · raised by claude
+          · 2026-10-23
+        </p>
+
+
+        <p class="meta">Attached to
+          <code>causal_graphs</code>
+        </p>
+
+
+        <p>The current record pairs one IUBMB EC 3.4.11.1 reaction snippet with a diagnostic API ZYM panel snippet, leaving only one catalytic reaction quote.</p>
+
+
+
+
+        <h3>Evidence</h3>
+        <ul class="discussion-evidence">
+
+          <li>
+            <a href="https://doi.org/10.1099/ijsem.0.002327" rel="nofollow noreferrer"><code>DOI:10.1099/ijsem.0.002327</code></a>
+            <span class="badge">PARTIAL</span>
+            <blockquote>enzyme detection with an API zym kit was positive for alkaline phosphatase, esterase, leucine arylamidase, valine arylamidase, acid phosphatase</blockquote>
+            <span class="meta">Existing record-level evidence supports the trait definition and diagnostic or organismal occurrence, but lacks multiple distinct pathway/enzyme quotes and strain-matched UniProtKB protein accessions needed for a connected causal graph.</span>
+          </li>
+
+        </ul>
+
+
+
+
+
+
+      </div>
+
     </div>
 
 
@@ -257,6 +298,12 @@
           <time>2026-09-11T16:42:06Z</time> ·
           <strong>MINTED_TRAITMECH_ID</strong> · codex
           <p class="changes">Minted leucine arylamidase activity as a DOI-backed TraitRecord after a repository-wide duplicate review covering ignored and hidden files; METPO has no exact leucine arylamidase activity class yet.</p>
+        </li>
+
+        <li>
+          <time>2026-10-23T09:40:49Z</time> ·
+          <strong>RECORD_MECHANISM_KNOWLEDGE_GAP</strong> · claude
+          <p class="changes">Recorded OPEN KNOWLEDGE_GAP discussion (leucine-arylamidase-activity-causal-graph-source-gap) attached to causal_graphs documenting the source-limited mechanism gap.</p>
         </li>
 
       </ol>
@@ -335,7 +382,7 @@
       third-party source terms apply
     </div>
     <div>
-      Record as of 2026-09-11 16:42 UTC
+      Record as of 2026-10-23 09:40 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
       · embedding coverage 100.0%

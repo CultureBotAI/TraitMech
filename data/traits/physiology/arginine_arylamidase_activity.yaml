@@ -63,6 +63,28 @@ discussions:
     grounding leads rather than equivalent TraitRecord xrefs.
   posed_by: codex
   posed_date: '2026-09-12'
+- discussion_id: arginine-arylamidase-activity-causal-graph-source-gap
+  prompt: Add primary microbial literature evidence for aminopeptidase B (EC 3.4.11.6)
+    catalysis and physiological peptide cleavage in the exemplar taxon before constructing
+    causal_graphs.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  attaches_to:
+  - causal_graphs
+  rationale: The current record pairs one IUBMB EC 3.4.11.6 reaction snippet with
+    two multi-enzyme diagnostic profile lists (DOI:10.3389/fgene.2023.1240581, DOI:10.1099/ijsem.0.006017),
+    leaving only one mechanistic quote.
+  posed_by: claude
+  posed_date: '2026-10-23'
+  evidence:
+  - reference: https://iubmb.qmul.ac.uk/enzyme/EC3/4/11/6.html
+    supports: PARTIAL
+    snippet: <b>Reaction:</b> Release of N-terminal Arg and Lys from oligopeptides
+      when P1' is not Pro. Also acts on arylamides of Arg and Lys
+    explanation: Existing record-level evidence supports the trait definition and
+      diagnostic or organismal occurrence, but lacks multiple distinct pathway/enzyme
+      quotes and strain-matched UniProtKB protein accessions needed for a connected
+      causal graph.
 curation_history:
 - timestamp: '2026-09-12T11:40:11Z'
   curator: codex
@@ -71,4 +93,10 @@ curation_history:
     a repository-wide duplicate review covering ignored and hidden files; METPO has
     no exact arginine arylamidase activity class yet and the placeholder is reserved
     in proposals/metpo_traitmech_v44.
+  llm_assisted: true
+- timestamp: '2026-10-23T09:40:49Z'
+  curator: claude
+  action: RECORD_MECHANISM_KNOWLEDGE_GAP
+  changes: Recorded OPEN KNOWLEDGE_GAP discussion (arginine-arylamidase-activity-causal-graph-source-gap)
+    attached to causal_graphs documenting the source-limited mechanism gap.
   llm_assisted: true

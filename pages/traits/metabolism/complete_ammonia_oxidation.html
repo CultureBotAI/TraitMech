@@ -226,7 +226,7 @@
 
 
     <div class="card" id="discussions">
-      <h2>Discussions and Knowledge Gaps <span class="meta">(1)</span></h2>
+      <h2>Discussions and Knowledge Gaps <span class="meta">(2)</span></h2>
       <p class="meta">Open questions attached to this trait. Seeded by
         <code>just knowledge-gap-scan</code> and curated; see
         <a href="../../../app/discussions/index.html">the corpus-wide index</a>.</p>
@@ -261,6 +261,47 @@
 
       </div>
 
+
+      <div class="discussion" id="complete-ammonia-oxidation-causal-graph-source-gap">
+        <p class="discussion-prompt">Add primary literature evidence for ammonia monooxygenase (AmoCAB), hydroxylamine dehydrogenase (Hao), and nitrite oxidoreductase (NxrAB) catalysis in comammox Nitrospira before constructing causal_graphs.</p>
+        <p class="meta">
+          <span class="badge">KNOWLEDGE GAP</span>
+          <span class="badge">OPEN</span>
+          <code>complete-ammonia-oxidation-causal-graph-source-gap</code>
+          · raised by claude
+          · 2026-10-23
+        </p>
+
+
+        <p class="meta">Attached to
+          <code>causal_graphs</code>
+        </p>
+
+
+        <p>The current record carries three discovery and ecological-dominance snippets on comammox Nitrospira (DOI:10.1038/nature16459, DOI:10.1038/nature16461, DOI:10.1128/aem.01698-23) without distinct intermediate nitrite-step or enzyme quotes.</p>
+
+
+
+
+        <h3>Evidence</h3>
+        <ul class="discussion-evidence">
+
+          <li>
+            <a href="https://doi.org/10.1038/nature16459" rel="nofollow noreferrer"><code>DOI:10.1038/nature16459</code></a>
+            <span class="badge">PARTIAL</span>
+            <blockquote>Complete oxidation of ammonia to nitrate in one organism (complete ammonia oxidation; comammox) is energetically feasible</blockquote>
+            <span class="meta">Existing record-level evidence supports the trait definition and diagnostic or organismal occurrence, but lacks multiple distinct pathway/enzyme quotes and strain-matched UniProtKB protein accessions needed for a connected causal graph.</span>
+          </li>
+
+        </ul>
+
+
+
+
+
+
+      </div>
+
     </div>
 
 
@@ -272,6 +313,12 @@
           <time>2026-09-14T19:03:57Z</time> ·
           <strong>MINTED_TRAITMECH_ID</strong> · codex
           <p class="changes">Minted complete ammonia oxidation as a DOI-backed nitrification TraitRecord after a repository-wide duplicate review covering ignored and hidden files; METPO has only an obsolete Complete ammonia oxidation class in the local snapshot and the replacement placeholder is reserved in proposals/metpo_traitmech_v64.</p>
+        </li>
+
+        <li>
+          <time>2026-10-23T09:40:48Z</time> ·
+          <strong>RECORD_MECHANISM_KNOWLEDGE_GAP</strong> · claude
+          <p class="changes">Recorded OPEN KNOWLEDGE_GAP discussion (complete-ammonia-oxidation-causal-graph-source-gap) attached to causal_graphs documenting the source-limited mechanism gap.</p>
         </li>
 
       </ol>
@@ -350,7 +397,7 @@
       third-party source terms apply
     </div>
     <div>
-      Record as of 2026-09-14 19:03 UTC
+      Record as of 2026-10-23 09:40 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
       · embedding coverage 100.0%

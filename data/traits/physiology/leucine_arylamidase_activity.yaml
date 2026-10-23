@@ -37,6 +37,27 @@ discussions:
     class for leucine arylamidase production as an organism-level phenotype.
   posed_by: codex
   posed_date: '2026-09-11'
+- discussion_id: leucine-arylamidase-activity-causal-graph-source-gap
+  prompt: Add primary microbial literature evidence for leucyl aminopeptidase (PepA/Lap,
+    EC 3.4.11.1) catalysis and peptide turnover in the exemplar taxon before constructing
+    causal_graphs.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  attaches_to:
+  - causal_graphs
+  rationale: The current record pairs one IUBMB EC 3.4.11.1 reaction snippet with
+    a diagnostic API ZYM panel snippet, leaving only one catalytic reaction quote.
+  posed_by: claude
+  posed_date: '2026-10-23'
+  evidence:
+  - reference: DOI:10.1099/ijsem.0.002327
+    supports: PARTIAL
+    snippet: enzyme detection with an API zym kit was positive for alkaline phosphatase,
+      esterase, leucine arylamidase, valine arylamidase, acid phosphatase
+    explanation: Existing record-level evidence supports the trait definition and
+      diagnostic or organismal occurrence, but lacks multiple distinct pathway/enzyme
+      quotes and strain-matched UniProtKB protein accessions needed for a connected
+      causal graph.
 curation_history:
 - timestamp: '2026-09-11T16:42:06Z'
   curator: codex
@@ -44,4 +65,10 @@ curation_history:
   changes: Minted leucine arylamidase activity as a DOI-backed TraitRecord after a
     repository-wide duplicate review covering ignored and hidden files; METPO has
     no exact leucine arylamidase activity class yet.
+  llm_assisted: true
+- timestamp: '2026-10-23T09:40:49Z'
+  curator: claude
+  action: RECORD_MECHANISM_KNOWLEDGE_GAP
+  changes: Recorded OPEN KNOWLEDGE_GAP discussion (leucine-arylamidase-activity-causal-graph-source-gap)
+    attached to causal_graphs documenting the source-limited mechanism gap.
   llm_assisted: true

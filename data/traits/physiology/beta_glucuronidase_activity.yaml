@@ -38,6 +38,27 @@ discussions:
     an equivalent TraitRecord xref.
   posed_by: codex
   posed_date: '2026-09-12'
+- discussion_id: beta-glucuronidase-activity-causal-graph-source-gap
+  prompt: Add primary microbial literature evidence for GusA/UidA beta-D-glucuronidase
+    physiological glucuronide catabolism and strain-matched UniProtKB protein accessions
+    before constructing causal_graphs.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  attaches_to:
+  - causal_graphs
+  rationale: The current record pairs one IUBMB EC 3.2.1.31 reaction snippet with
+    one fluorogenic MUG-assay snippet (DOI:10.1128/aem.50.6.1383-1387.1985) without
+    physiological pathway or UniProtKB protein grounding.
+  posed_by: claude
+  posed_date: '2026-10-23'
+  evidence:
+  - reference: https://iubmb.qmul.ac.uk/enzyme/EC3/2/1/31.html
+    supports: PARTIAL
+    snippet: 'Reaction: a β-D-glucuronoside + H2O = D-glucuronate + an alcohol'
+    explanation: Existing record-level evidence supports the trait definition and
+      diagnostic or organismal occurrence, but lacks multiple distinct pathway/enzyme
+      quotes and strain-matched UniProtKB protein accessions needed for a connected
+      causal graph.
 curation_history:
 - timestamp: '2026-09-12T00:37:27Z'
   curator: codex
@@ -52,4 +73,10 @@ curation_history:
   changes: Corrected the IUBMB EC 3.2.1.31 water token from HTML-derived H_{2}O to
     source-visible H2O after Claude Code Review flagged the snippet as non-verbatim
     in https://github.com/CultureBotAI/TraitMech/issues/807.
+  llm_assisted: true
+- timestamp: '2026-10-23T09:40:49Z'
+  curator: claude
+  action: RECORD_MECHANISM_KNOWLEDGE_GAP
+  changes: Recorded OPEN KNOWLEDGE_GAP discussion (beta-glucuronidase-activity-causal-graph-source-gap)
+    attached to causal_graphs documenting the source-limited mechanism gap.
   llm_assisted: true

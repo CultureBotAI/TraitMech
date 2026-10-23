@@ -46,6 +46,28 @@ discussions:
     anaerobic respiration phenotype.
   posed_by: codex
   posed_date: '2026-09-15'
+- discussion_id: trimethylamine-n-oxide-respiration-protein-example-gap
+  prompt: Add strain-matched UniProtKB protein_examples for Escherichia coli K-12
+    TMAO reductase (TorA/TorC) and the TorS-TorR regulator so tmao_respiration_tor_pathway_sketch
+    can be promoted from NONMECHANISTIC to MECHANISTIC.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - causal_graphs#tmao_respiration_tor_pathway_sketch
+  rationale: The record's primary literature (DOI:10.1111/1462-2920.12726, DOI:10.3389/fmicb.2024.1467153)
+    establishes respiratory TMAO reduction to trimethylamine and TorS-TorR regulation
+    in Escherichia coli K-12 (NCBITaxon:83333), but verified UniProtKB accessions
+    must be curated on a GENE_OR_PROTEIN node before marking the graph MECHANISTIC.
+  posed_by: claude
+  posed_date: '2026-10-23'
+  evidence:
+  - reference: DOI:10.1111/1462-2920.12726
+    supports: PARTIAL
+    snippet: anaerobic respiratory growth with trimethylamine-N-oxide (TMAO) as the
+      terminal electron acceptor
+    explanation: Existing record-level evidence supports the connected NONMECHANISTIC
+      pathway/function graph but does not provide strain-matched UniProtKB protein
+      accessions for protein_examples.
 curation_history:
 - timestamp: '2026-09-15T02:00:15Z'
   curator: codex
@@ -55,3 +77,81 @@ curation_history:
     review covering ignored and hidden files; the local METPO snapshot has no exact
     class and the replacement placeholder is reserved in proposals/metpo_traitmech_v76.
   llm_assisted: true
+- timestamp: '2026-10-23T09:40:48Z'
+  curator: claude
+  action: CURATE_CAUSAL_GRAPH
+  changes: Added NONMECHANISTIC causal_graphs entry (tmao_respiration_tor_pathway_sketch)
+    and OPEN CURATION_TODO discussion (trimethylamine-n-oxide-respiration-protein-example-gap)
+    anchored on existing verbatim record evidence snippets.
+  llm_assisted: true
+causal_graphs:
+- graph_id: tmao_respiration_tor_pathway_sketch
+  title: TorS-TorR regulated TMAO reductase respiratory pathway
+  description: Evidence-backed metabolic pathway sketch linking respiratory TMAO reductase
+    catalysis, trimethylamine formation, and TorS-TorR pathway regulation to TMAO
+    respiration.
+  scope_status: NONMECHANISTIC
+  scope_notes: Pathway-and-activity sketch backed by DOI:10.1111/1462-2920.12726 and
+    DOI:10.3389/fmicb.2024.1467153; strain-matched UniProtKB protein examples for
+    Escherichia coli K-12 TMAO reductase TorA/TorC and the TorS-TorR two-component
+    regulator remain to be curated.
+  nodes:
+  - node_id: tmao_respiration_trait
+    label: trimethylamine N-oxide respiration
+    node_type: TRAIT
+    grounding: traitmech:000199
+    description: Anaerobic respiration using trimethylamine N-oxide (TMAO) as a terminal
+      electron acceptor.
+  - node_id: tmao_respiration_reductase_activity
+    label: trimethylamine-N-oxide reductase (cytochrome c) activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0008810
+    description: Respiratory TMAO reductase activity reducing TMAO to trimethylamine.
+  - node_id: tmao_respiration_trimethylamine
+    label: trimethylamine
+    node_type: CHEMICAL
+    grounding: CHEBI:18139
+    description: Trimethylamine (TMA) produced by respiratory reduction of TMAO.
+  - node_id: tmao_respiration_tor_regulation
+    label: phosphorelay signal transduction system
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0000160
+    description: TorS-TorR two-component signal transduction pathway regulating anaerobic
+      TMAO respiration.
+  edges:
+  - subject: tmao_respiration_reductase_activity
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: tmao_respiration_trait
+    description: Respiratory TMAO reductase activity enables utilization of TMAO as
+      an alternative electron acceptor in oxygen-depleted environments.
+    evidence:
+    - reference: DOI:10.1111/1462-2920.12726
+      snippet: TMAO is reduced to TMA by the enzyme TMAO reductase, encoded by the
+        torCAD operon
+      notes: Leimkuhler and Iobbi-Nivol report that respiratory TMAO reductases enable
+        marine and enterobacteria to utilize N-oxides as alternative electron acceptors
+        in oxygen-depleted environments.
+  - subject: tmao_respiration_reductase_activity
+    predicate: has output
+    predicate_id: RO:0002234
+    object: tmao_respiration_trimethylamine
+    description: Respiratory TMAO reductase reduces TMAO to trimethylamine (TMA).
+    evidence:
+    - reference: DOI:10.1111/1462-2920.12726
+      snippet: anaerobic respiratory growth with trimethylamine-N-oxide (TMAO) as
+        the terminal electron acceptor
+      notes: Leimkuhler and Iobbi-Nivol state that respiratory TMAO reductases reduce
+        TMAO to trimethylamine (TMA).
+  - subject: tmao_respiration_tor_regulation
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: tmao_respiration_trait
+    description: The TorS-TorR regulatory system governs the major anaerobic TMAO
+      respiration pathway.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2024.1467153
+      snippet: switching from aerobic intracellular energy metabolism to trimethylamine
+        N-oxide respiration
+      notes: Zhang et al. describe the major anaerobic TMAO respiration pathway regulated
+        by TorS-TorR.

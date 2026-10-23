@@ -58,6 +58,28 @@ discussions:
     TraitRecord xref.
   posed_by: codex
   posed_date: '2026-09-12'
+- discussion_id: pyrazinamidase-activity-causal-graph-source-gap
+  prompt: Add strain-matched UniProtKB protein_examples for Mycobacterium tuberculosis
+    PncA (UniProtKB:I6Y493) before constructing a MECHANISTIC causal_graphs entry.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  attaches_to:
+  - causal_graphs
+  rationale: The current record carries an IUBMB EC 3.5.1.19 reaction snippet and
+    two Mycobacterium tuberculosis PncA nicotinamidase/pyrazinamidase snippets (DOI:10.1111/j.1742-4658.2007.06241.x,
+    DOI:10.1371/journal.pone.0015785), but requires verified strain-matched UniProtKB
+    protein_examples on PncA to represent the enzyme-resolved mechanism.
+  posed_by: claude
+  posed_date: '2026-10-23'
+  evidence:
+  - reference: https://iubmb.qmul.ac.uk/enzyme/EC3/5/1/19.html
+    supports: PARTIAL
+    snippet: <b>Reaction:</b> nicotinamide + H<small><sub>2</sub></small>O = nicotinate
+      + NH<small><sub>3</sub></small>
+    explanation: Existing record-level evidence supports the trait definition and
+      diagnostic or organismal occurrence, but lacks multiple distinct pathway/enzyme
+      quotes and strain-matched UniProtKB protein accessions needed for a connected
+      causal graph.
 curation_history:
 - timestamp: '2026-09-12T09:07:58Z'
   curator: codex
@@ -65,4 +87,10 @@ curation_history:
   changes: Minted pyrazinamidase activity as a URL/DOI-backed TraitRecord after a
     repository-wide duplicate review covering ignored and hidden files; METPO has
     no exact pyrazinamidase activity class yet.
+  llm_assisted: true
+- timestamp: '2026-10-23T09:40:49Z'
+  curator: claude
+  action: RECORD_MECHANISM_KNOWLEDGE_GAP
+  changes: Recorded OPEN KNOWLEDGE_GAP discussion (pyrazinamidase-activity-causal-graph-source-gap)
+    attached to causal_graphs documenting the source-limited mechanism gap.
   llm_assisted: true

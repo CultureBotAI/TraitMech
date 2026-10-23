@@ -56,6 +56,34 @@ discussions:
     fermentation class.
   posed_by: codex
   posed_date: '2026-09-14'
+- discussion_id: butyric-acid-fermentation-causal-graph-source-gap
+  prompt: Add primary literature evidence for thiolase, 3-hydroxybutyryl-CoA dehydrogenase,
+    crotonase, butyryl-CoA dehydrogenase/EtfAB, and phosphotransbutyrylase/butyrate
+    kinase or butyryl-CoA:acetate CoA-transferase in Clostridium tyrobutyricum before
+    constructing causal_graphs.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  attaches_to:
+  - causal_graphs
+  rationale: The current record summarizes anaerobe energy-conservation history, gene-cluster
+    arrangements, and strain yield (DOI:10.3389/fmicb.2021.703525, DOI:10.1111/j.1574-6968.2009.01514.x,
+    DOI:10.1111/1751-7915.12304) without distinct step-by-step enzymatic reaction
+    quotes.
+  posed_by: claude
+  posed_date: '2026-10-23'
+  evidence:
+  - reference: DOI:10.3389/fmicb.2021.703525
+    supports: PARTIAL
+    snippet: Until about 10 years ago, anaerobes were thought to exclusively use substrate
+      level phosphorylation (SLP), by which only part of the available energy could
+      be conserved. Therefore, anaerobes were regarded as unproductive and inefficient
+      energy conservers. The discovery of electrochemical Na+ gradients generated
+      by biotin-dependent decarboxylations or by reduction of NAD+ with ferredoxin
+      changed this view.
+    explanation: Existing record-level evidence supports the trait definition and
+      diagnostic or organismal occurrence, but lacks multiple distinct pathway/enzyme
+      quotes and strain-matched UniProtKB protein accessions needed for a connected
+      causal graph.
 curation_history:
 - timestamp: '2026-09-14T01:34:38Z'
   curator: codex
@@ -64,4 +92,10 @@ curation_history:
     TraitRecord after a repository-wide duplicate review covering ignored and hidden
     files; METPO has no exact butyric acid fermentation class yet and the placeholder
     is reserved in proposals/metpo_traitmech_v56.
+  llm_assisted: true
+- timestamp: '2026-10-23T09:40:48Z'
+  curator: claude
+  action: RECORD_MECHANISM_KNOWLEDGE_GAP
+  changes: Recorded OPEN KNOWLEDGE_GAP discussion (butyric-acid-fermentation-causal-graph-source-gap)
+    attached to causal_graphs documenting the source-limited mechanism gap.
   llm_assisted: true

@@ -48,6 +48,28 @@ discussions:
     anaerobic respiration phenotype.
   posed_by: codex
   posed_date: '2026-09-15'
+- discussion_id: iodate-respiration-causal-graph-source-gap
+  prompt: Add primary literature evidence for the periplasmic iodate reductase complex
+    (IdrABP1P2) and electron-transport coupling plus strain-matched UniProtKB protein
+    accessions before constructing causal_graphs.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  attaches_to:
+  - causal_graphs
+  rationale: The current record carries growth and whole-cell IO3- to I- reduction
+    snippets across three taxa (DOI:10.1128/AEM.00241-07, DOI:10.1038/s41396-021-01034-5,
+    DOI:10.3389/fmicb.2021.804181) without enzyme-complex or electron-transfer quotes.
+  posed_by: claude
+  posed_date: '2026-10-23'
+  evidence:
+  - reference: DOI:10.1128/AEM.00241-07
+    supports: PARTIAL
+    snippet: SCT was capable of anaerobic growth with 3 mM iodate as the sole electron
+      acceptor
+    explanation: Existing record-level evidence supports the trait definition and
+      diagnostic or organismal occurrence, but lacks multiple distinct pathway/enzyme
+      quotes and strain-matched UniProtKB protein accessions needed for a connected
+      causal graph.
 curation_history:
 - timestamp: '2026-09-15T03:53:45Z'
   curator: codex
@@ -56,4 +78,10 @@ curation_history:
     after a repository-wide duplicate review covering ignored and hidden files; the
     local METPO snapshot has no exact iodate respiration class and the replacement
     placeholder is reserved in proposals/metpo_traitmech_v80.
+  llm_assisted: true
+- timestamp: '2026-10-23T09:40:48Z'
+  curator: claude
+  action: RECORD_MECHANISM_KNOWLEDGE_GAP
+  changes: Recorded OPEN KNOWLEDGE_GAP discussion (iodate-respiration-causal-graph-source-gap)
+    attached to causal_graphs documenting the source-limited mechanism gap.
   llm_assisted: true

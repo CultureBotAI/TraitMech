@@ -42,6 +42,28 @@ discussions:
     TraitRecord xref.
   posed_by: codex
   posed_date: '2026-09-12'
+- discussion_id: amylase-activity-causal-graph-source-gap
+  prompt: Add primary microbial literature evidence for alpha-amylase glycosidic bond
+    cleavage products (maltose/maltodextrins) and starch utilization in Bacteroides
+    ovatus before constructing causal_graphs.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  attaches_to:
+  - causal_graphs
+  rationale: The current record carries one collective definition of amylolytic enzymes
+    (DOI:10.3389/fbioe.2020.00871) and one short enzyme-naming phrase for BoGH13ASus
+    (DOI:10.1007/s00018-023-04812-w) without catalytic reaction/product quotes.
+  posed_by: claude
+  posed_date: '2026-10-23'
+  evidence:
+  - reference: DOI:10.3389/fbioe.2020.00871
+    supports: PARTIAL
+    snippet: All enzymes capable of degrading starch are collectively indicated as
+      amylolytic enzymes.
+    explanation: Existing record-level evidence supports the trait definition and
+      diagnostic or organismal occurrence, but lacks multiple distinct pathway/enzyme
+      quotes and strain-matched UniProtKB protein accessions needed for a connected
+      causal graph.
 curation_history:
 - timestamp: '2026-09-12T08:08:43Z'
   curator: codex
@@ -49,4 +71,10 @@ curation_history:
   changes: Minted amylase activity as a DOI-backed TraitRecord after a repository-wide
     duplicate review covering ignored and hidden files; METPO has no exact amylase
     activity class yet.
+  llm_assisted: true
+- timestamp: '2026-10-23T09:40:49Z'
+  curator: claude
+  action: RECORD_MECHANISM_KNOWLEDGE_GAP
+  changes: Recorded OPEN KNOWLEDGE_GAP discussion (amylase-activity-causal-graph-source-gap)
+    attached to causal_graphs documenting the source-limited mechanism gap.
   llm_assisted: true

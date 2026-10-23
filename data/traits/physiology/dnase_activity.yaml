@@ -40,6 +40,28 @@ discussions:
     TraitRecord xref.
   posed_by: codex
   posed_date: '2026-09-11'
+- discussion_id: dnase-activity-causal-graph-source-gap
+  prompt: Add primary microbial literature evidence for secreted extracellular deoxyribonuclease
+    (e.g. Nuc, EndA) phosphodiester cleavage and oligonucleotide products before constructing
+    causal_graphs.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  attaches_to:
+  - causal_graphs
+  rationale: The current record carries two general DNase agar-screening snippets
+    (DOI:10.3389/fmicb.2019.00969, DOI:10.22207/JPAM.14.1.44) without specific nuclease
+    enzyme or catalytic product quotes.
+  posed_by: claude
+  posed_date: '2026-10-23'
+  evidence:
+  - reference: DOI:10.3389/fmicb.2019.00969
+    supports: PARTIAL
+    snippet: unexpected and widespread presence of DNase secretion in bacteria in
+      general and in MGP more specifically
+    explanation: Existing record-level evidence supports the trait definition and
+      diagnostic or organismal occurrence, but lacks multiple distinct pathway/enzyme
+      quotes and strain-matched UniProtKB protein accessions needed for a connected
+      causal graph.
 curation_history:
 - timestamp: '2026-09-11T00:00:00Z'
   curator: codex
@@ -47,4 +69,10 @@ curation_history:
   changes: Minted DNase activity as a DOI-backed TraitRecord after a repository-wide
     duplicate review covering ignored and hidden files; METPO has no exact DNase activity
     class yet.
+  llm_assisted: true
+- timestamp: '2026-10-23T09:40:49Z'
+  curator: claude
+  action: RECORD_MECHANISM_KNOWLEDGE_GAP
+  changes: Recorded OPEN KNOWLEDGE_GAP discussion (dnase-activity-causal-graph-source-gap)
+    attached to causal_graphs documenting the source-limited mechanism gap.
   llm_assisted: true

@@ -43,6 +43,29 @@ discussions:
     respiration phenotype.
   posed_by: codex
   posed_date: '2026-09-15'
+- discussion_id: organohalide-respiration-causal-graph-source-gap
+  prompt: Add primary literature evidence for corrinoid-dependent reductive dehalogenase
+    catalysis (e.g. PceA, TceA, RdhA) and menaquinone/hydrogenase electron transport
+    before constructing causal_graphs.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  attaches_to:
+  - causal_graphs
+  rationale: The current record carries definition, phylogenetic-distribution, and
+    mixed-culture cofactor snippets (DOI:10.1098/rstb.2012.0322, DOI:10.1126/science.276.5318.1568)
+    without reductive dehalogenase enzyme or dechlorination-product quotes.
+  posed_by: claude
+  posed_date: '2026-10-23'
+  evidence:
+  - reference: DOI:10.1098/rstb.2012.0322
+    supports: PARTIAL
+    snippet: Organohalide respiration is an anaerobic bacterial respiratory process
+      that uses halogenated hydrocarbons as terminal electron acceptors during electron
+      transport-based energy conservation.
+    explanation: Existing record-level evidence supports the trait definition and
+      diagnostic or organismal occurrence, but lacks multiple distinct pathway/enzyme
+      quotes and strain-matched UniProtKB protein accessions needed for a connected
+      causal graph.
 curation_history:
 - timestamp: '2026-09-15T04:25:36Z'
   curator: codex
@@ -51,4 +74,10 @@ curation_history:
     after a repository-wide duplicate review covering ignored and hidden files; the
     local METPO snapshot has only obsolete organohalide/halogenated-compound respiration
     classes and the replacement placeholder is reserved in proposals/metpo_traitmech_v81.
+  llm_assisted: true
+- timestamp: '2026-10-23T09:40:48Z'
+  curator: claude
+  action: RECORD_MECHANISM_KNOWLEDGE_GAP
+  changes: Recorded OPEN KNOWLEDGE_GAP discussion (organohalide-respiration-causal-graph-source-gap)
+    attached to causal_graphs documenting the source-limited mechanism gap.
   llm_assisted: true

@@ -63,6 +63,34 @@ discussions:
     that hydrolysis half-reaction, not as an equivalent TraitRecord xref.
   posed_by: codex
   posed_date: '2026-09-12'
+- discussion_id: gamma-glutamyltransferase-activity-causal-graph-source-gap
+  prompt: Add primary microbial literature evidence for Ggt gamma-glutamyltransferase
+    glutathione cleavage and gamma-glutamyl amino-acid transfer in the exemplar taxon
+    before constructing causal_graphs.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  attaches_to:
+  - causal_graphs
+  rationale: The current record pairs one IUBMB EC 3.4.19.13 reaction snippet with
+    two diagnostic strain-phenotyping snippets (DOI:10.3389/fgene.2023.1240581), leaving
+    only one catalytic reaction quote.
+  posed_by: claude
+  posed_date: '2026-10-23'
+  evidence:
+  - reference: https://iubmb.qmul.ac.uk/enzyme/EC3/4/19/13.html
+    supports: PARTIAL
+    snippet: The enzyme binds its substrate by forming an initial &gamma;-glutamyl-enzyme
+      intermediate, releasing the <small>L</small>-cysteinylglycine part of the molecule.
+      The enzyme then reacts with either a water molecule or a different acceptor
+      substrate (usually an <small>L</small>-amino acid or a dipeptide) to form <small>L</small>-glutamate
+      or a product containing a new &gamma;-glutamyl isopeptide bond, respectively.
+      The enzyme acts on glutathione, glutathione-<i>S</i>-conjugates, and, at a lower
+      level, on other substrates with an N-terminal <small>L</small>-&gamma;-glutamyl
+      residue.
+    explanation: Existing record-level evidence supports the trait definition and
+      diagnostic or organismal occurrence, but lacks multiple distinct pathway/enzyme
+      quotes and strain-matched UniProtKB protein accessions needed for a connected
+      causal graph.
 curation_history:
 - timestamp: '2026-09-12T06:47:37Z'
   curator: codex
@@ -71,4 +99,10 @@ curation_history:
     after a repository-wide duplicate review covering ignored and hidden files; METPO
     has no exact gamma-glutamyltransferase activity class yet and the placeholder
     is reserved in proposals/metpo_traitmech_v37.
+  llm_assisted: true
+- timestamp: '2026-10-23T09:40:49Z'
+  curator: claude
+  action: RECORD_MECHANISM_KNOWLEDGE_GAP
+  changes: Recorded OPEN KNOWLEDGE_GAP discussion (gamma-glutamyltransferase-activity-causal-graph-source-gap)
+    attached to causal_graphs documenting the source-limited mechanism gap.
   llm_assisted: true

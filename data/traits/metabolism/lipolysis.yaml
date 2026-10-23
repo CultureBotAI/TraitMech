@@ -30,6 +30,28 @@ discussions:
     fatty-acid catabolism and are broader than lipase-driven triacylglycerol hydrolysis.
   posed_by: codex
   posed_date: '2026-09-14'
+- discussion_id: lipolysis-causal-graph-source-gap
+  prompt: Add primary literature evidence for extracellular triacylglycerol lipase
+    secretion, fatty-acid/glycerol uptake, and a strain-matched canonical example
+    before constructing causal_graphs.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  attaches_to:
+  - causal_graphs
+  rationale: The current record carries two general definition snippets for microbial
+    lipases EC 3.1.1.3 (DOI:10.1186/s12934-020-01428-8, DOI:10.1007/s00253-004-1568-8)
+    without a cited canonical example or multi-step catabolic mechanism quotes.
+  posed_by: claude
+  posed_date: '2026-10-23'
+  evidence:
+  - reference: DOI:10.1186/s12934-020-01428-8
+    supports: PARTIAL
+    snippet: Microbial lipases (EC 3.1.1.3) catalyze the hydrolysis of long chain
+      triglycerides
+    explanation: Existing record-level evidence supports the trait definition and
+      diagnostic or organismal occurrence, but lacks multiple distinct pathway/enzyme
+      quotes and strain-matched UniProtKB protein accessions needed for a connected
+      causal graph.
 curation_history:
 - timestamp: '2026-09-14T21:00:00Z'
   curator: codex
@@ -37,4 +59,10 @@ curation_history:
   changes: Minted lipolysis as a DOI-backed metabolism TraitRecord after a repository-wide
     duplicate review covering ignored and hidden files; METPO has only an obsolete
     lipolysis class.
+  llm_assisted: true
+- timestamp: '2026-10-23T09:40:48Z'
+  curator: claude
+  action: RECORD_MECHANISM_KNOWLEDGE_GAP
+  changes: Recorded OPEN KNOWLEDGE_GAP discussion (lipolysis-causal-graph-source-gap)
+    attached to causal_graphs documenting the source-limited mechanism gap.
   llm_assisted: true

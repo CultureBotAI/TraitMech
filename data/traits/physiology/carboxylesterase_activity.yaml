@@ -41,6 +41,27 @@ discussions:
     a causal-node grounding rather than an equivalent TraitRecord xref.
   posed_by: codex
   posed_date: '2026-09-12'
+- discussion_id: carboxylesterase-activity-causal-graph-source-gap
+  prompt: Add primary microbial literature evidence for microbial carboxylesterase
+    (EC 3.1.1.1) substrate hydrolysis and alcohol/carboxylate release in the exemplar
+    taxon before constructing causal_graphs.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  attaches_to:
+  - causal_graphs
+  rationale: The current record pairs one IUBMB EC 3.1.1.1 reaction snippet with a
+    diagnostic strain-characterization snippet, leaving only one catalytic reaction
+    quote.
+  posed_by: claude
+  posed_date: '2026-10-23'
+  evidence:
+  - reference: https://iubmb.qmul.ac.uk/enzyme/EC3/1/1/1.html
+    supports: PARTIAL
+    snippet: 'Reaction: A carboxylic ester + H_{2}O = an alcohol + a carboxylate'
+    explanation: Existing record-level evidence supports the trait definition and
+      diagnostic or organismal occurrence, but lacks multiple distinct pathway/enzyme
+      quotes and strain-matched UniProtKB protein accessions needed for a connected
+      causal graph.
 curation_history:
 - timestamp: '2026-09-12T03:42:43Z'
   curator: codex
@@ -48,4 +69,10 @@ curation_history:
   changes: Minted carboxylesterase activity as a URL/DOI-backed TraitRecord after
     a repository-wide duplicate review covering ignored and hidden files; METPO has
     no exact carboxylesterase activity class yet.
+  llm_assisted: true
+- timestamp: '2026-10-23T09:40:49Z'
+  curator: claude
+  action: RECORD_MECHANISM_KNOWLEDGE_GAP
+  changes: Recorded OPEN KNOWLEDGE_GAP discussion (carboxylesterase-activity-causal-graph-source-gap)
+    attached to causal_graphs documenting the source-limited mechanism gap.
   llm_assisted: true

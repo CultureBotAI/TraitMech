@@ -41,6 +41,30 @@ discussions:
     resolved for this methyl-substrate branch.
   posed_by: codex
   posed_date: '2026-09-14'
+- discussion_id: methyl-based-methanogenesis-causal-graph-source-gap
+  prompt: Add primary literature evidence for substrate-specific methyltransferases
+    (MtaABC/MtmBC/MtbA/MttBC), methyl-CoM reductase (McrABG), and a strain-matched
+    canonical example before constructing causal_graphs.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  attaches_to:
+  - causal_graphs
+  rationale: The current record carries two pathway-classification snippets (DOI:10.1128/mmbr.00024-22,
+    DOI:10.3389/fmicb.2017.01198) without enzymatic step quotes or a cited canonical
+    example.
+  posed_by: claude
+  posed_date: '2026-10-23'
+  evidence:
+  - reference: DOI:10.1128/mmbr.00024-22
+    supports: PARTIAL
+    snippet: Methyl-based methanogenesis is one of three broad categories of archaeal
+      anaerobic methanogenesis, including both the methyl dismutation (methylotrophic)
+      pathway and the methyl-reducing (also known as hydrogen-dependent methylotrophic)
+      pathway
+    explanation: Existing record-level evidence supports the trait definition and
+      diagnostic or organismal occurrence, but lacks multiple distinct pathway/enzyme
+      quotes and strain-matched UniProtKB protein accessions needed for a connected
+      causal graph.
 curation_history:
 - timestamp: '2026-09-14T21:27:00Z'
   curator: codex
@@ -48,4 +72,10 @@ curation_history:
   changes: Minted methyl-based methanogenesis as a DOI-backed child of methanogenesis
     after a repository-wide duplicate review covering ignored and hidden files; the
     pinned METPO snapshot has only an obsolete Methylotrophic methanogenesis class.
+  llm_assisted: true
+- timestamp: '2026-10-23T09:40:48Z'
+  curator: claude
+  action: RECORD_MECHANISM_KNOWLEDGE_GAP
+  changes: Recorded OPEN KNOWLEDGE_GAP discussion (methyl-based-methanogenesis-causal-graph-source-gap)
+    attached to causal_graphs documenting the source-limited mechanism gap.
   llm_assisted: true

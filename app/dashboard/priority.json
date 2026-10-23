@@ -21,9 +21,9 @@
       "DROP_GROUPING_TERM": 0,
       "LUMP_INTO_PARENT": 0,
       "CURATE_ROOT_WITH_SUBTYPES": 13,
-      "ADD_CANONICAL_EXAMPLES": 102,
-      "BUILD_CAUSAL_GRAPH": 272,
-      "DEEPEN_CAUSAL_GRAPH": 396,
+      "ADD_CANONICAL_EXAMPLES": 103,
+      "BUILD_CAUSAL_GRAPH": 262,
+      "DEEPEN_CAUSAL_GRAPH": 405,
       "ALREADY_DEEP": 59,
       "CURATE_ROOT": 159
     }
@@ -2870,29 +2870,6 @@
       ]
     },
     {
-      "identifier": "traitmech:000197",
-      "label": "perchlorate respiration",
-      "category": "metabolism",
-      "slug": "perchlorate_respiration",
-      "score": 55.0,
-      "action": "BUILD_CAUSAL_GRAPH",
-      "edges": 0,
-      "nodes": 0,
-      "components": 0,
-      "orphans": 0,
-      "examples": 0,
-      "canonical_examples_reviewed_empty": false,
-      "children": 0,
-      "series": null,
-      "series_size": 0,
-      "series_overlap": null,
-      "researched": false,
-      "reasons": [
-        "no causal graph +25",
-        "no canonical_examples +30"
-      ]
-    },
-    {
       "identifier": "traitmech:000124",
       "label": "respiration of sulfur compounds",
       "category": "metabolism",
@@ -5492,6 +5469,29 @@
       ]
     },
     {
+      "identifier": "traitmech:000197",
+      "label": "perchlorate respiration",
+      "category": "metabolism",
+      "slug": "perchlorate_respiration",
+      "score": 42.0,
+      "action": "ADD_CANONICAL_EXAMPLES",
+      "edges": 2,
+      "nodes": 3,
+      "components": 1,
+      "orphans": 0,
+      "examples": 0,
+      "canonical_examples_reviewed_empty": false,
+      "children": 0,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": false,
+      "reasons": [
+        "thin graph (2 edges) +12",
+        "no canonical_examples +30"
+      ]
+    },
+    {
       "identifier": "traitmech:000244",
       "label": "CapRel system",
       "category": "genomics",
@@ -5745,29 +5745,6 @@
       "label": "organohalide respiration",
       "category": "metabolism",
       "slug": "organohalide_respiration",
-      "score": 28.0,
-      "action": "BUILD_CAUSAL_GRAPH",
-      "edges": 0,
-      "nodes": 0,
-      "components": 0,
-      "orphans": 0,
-      "examples": 1,
-      "canonical_examples_reviewed_empty": false,
-      "children": 0,
-      "series": null,
-      "series_size": 0,
-      "series_overlap": null,
-      "researched": false,
-      "reasons": [
-        "no causal graph +25",
-        "no synonyms +3"
-      ]
-    },
-    {
-      "identifier": "traitmech:000200",
-      "label": "tetrathionate respiration",
-      "category": "metabolism",
-      "slug": "tetrathionate_respiration",
       "score": 28.0,
       "action": "BUILD_CAUSAL_GRAPH",
       "edges": 0,
@@ -7098,29 +7075,6 @@
       ]
     },
     {
-      "identifier": "traitmech:000153",
-      "label": "lysine decarboxylase activity",
-      "category": "physiology",
-      "slug": "lysine_decarboxylase_activity",
-      "score": 28.0,
-      "action": "BUILD_CAUSAL_GRAPH",
-      "edges": 0,
-      "nodes": 0,
-      "components": 0,
-      "orphans": 0,
-      "examples": 1,
-      "canonical_examples_reviewed_empty": false,
-      "children": 0,
-      "series": null,
-      "series_size": 0,
-      "series_overlap": null,
-      "researched": false,
-      "reasons": [
-        "no causal graph +25",
-        "no synonyms +3"
-      ]
-    },
-    {
       "identifier": "traitmech:000634",
       "label": "macropinocytosis",
       "category": "physiology",
@@ -7424,29 +7378,6 @@
       "label": "rheotaxis",
       "category": "physiology",
       "slug": "rheotaxis",
-      "score": 28.0,
-      "action": "BUILD_CAUSAL_GRAPH",
-      "edges": 0,
-      "nodes": 0,
-      "components": 0,
-      "orphans": 0,
-      "examples": 1,
-      "canonical_examples_reviewed_empty": false,
-      "children": 0,
-      "series": null,
-      "series_size": 0,
-      "series_overlap": null,
-      "researched": false,
-      "reasons": [
-        "no causal graph +25",
-        "no synonyms +3"
-      ]
-    },
-    {
-      "identifier": "traitmech:000186",
-      "label": "siderophore production",
-      "category": "physiology",
-      "slug": "siderophore_production",
       "score": 28.0,
       "action": "BUILD_CAUSAL_GRAPH",
       "edges": 0,
@@ -7843,28 +7774,6 @@
       ]
     },
     {
-      "identifier": "traitmech:000195",
-      "label": "arsenate respiration",
-      "category": "metabolism",
-      "slug": "arsenate_respiration",
-      "score": 25.0,
-      "action": "BUILD_CAUSAL_GRAPH",
-      "edges": 0,
-      "nodes": 0,
-      "components": 0,
-      "orphans": 0,
-      "examples": 1,
-      "canonical_examples_reviewed_empty": false,
-      "children": 0,
-      "series": null,
-      "series_size": 0,
-      "series_overlap": null,
-      "researched": false,
-      "reasons": [
-        "no causal graph +25"
-      ]
-    },
-    {
       "identifier": "traitmech:000181",
       "label": "2,3-butanediol fermentation",
       "category": "metabolism",
@@ -7909,76 +7818,10 @@
       ]
     },
     {
-      "identifier": "traitmech:000198",
-      "label": "chlorate respiration",
-      "category": "metabolism",
-      "slug": "chlorate_respiration",
-      "score": 25.0,
-      "action": "BUILD_CAUSAL_GRAPH",
-      "edges": 0,
-      "nodes": 0,
-      "components": 0,
-      "orphans": 0,
-      "examples": 1,
-      "canonical_examples_reviewed_empty": false,
-      "children": 0,
-      "series": null,
-      "series_size": 0,
-      "series_overlap": null,
-      "researched": false,
-      "reasons": [
-        "no causal graph +25"
-      ]
-    },
-    {
       "identifier": "traitmech:000187",
       "label": "complete ammonia oxidation",
       "category": "metabolism",
       "slug": "complete_ammonia_oxidation",
-      "score": 25.0,
-      "action": "BUILD_CAUSAL_GRAPH",
-      "edges": 0,
-      "nodes": 0,
-      "components": 0,
-      "orphans": 0,
-      "examples": 1,
-      "canonical_examples_reviewed_empty": false,
-      "children": 0,
-      "series": null,
-      "series_size": 0,
-      "series_overlap": null,
-      "researched": false,
-      "reasons": [
-        "no causal graph +25"
-      ]
-    },
-    {
-      "identifier": "traitmech:000201",
-      "label": "dimethyl sulfoxide respiration",
-      "category": "metabolism",
-      "slug": "dimethyl_sulfoxide_respiration",
-      "score": 25.0,
-      "action": "BUILD_CAUSAL_GRAPH",
-      "edges": 0,
-      "nodes": 0,
-      "components": 0,
-      "orphans": 0,
-      "examples": 1,
-      "canonical_examples_reviewed_empty": false,
-      "children": 0,
-      "series": null,
-      "series_size": 0,
-      "series_overlap": null,
-      "researched": false,
-      "reasons": [
-        "no causal graph +25"
-      ]
-    },
-    {
-      "identifier": "traitmech:000196",
-      "label": "fumarate respiration",
-      "category": "metabolism",
-      "slug": "fumarate_respiration",
       "score": 25.0,
       "action": "BUILD_CAUSAL_GRAPH",
       "edges": 0,
@@ -8023,28 +7866,6 @@
       "label": "selenate respiration",
       "category": "metabolism",
       "slug": "selenate_respiration",
-      "score": 25.0,
-      "action": "BUILD_CAUSAL_GRAPH",
-      "edges": 0,
-      "nodes": 0,
-      "components": 0,
-      "orphans": 0,
-      "examples": 1,
-      "canonical_examples_reviewed_empty": false,
-      "children": 0,
-      "series": null,
-      "series_size": 0,
-      "series_overlap": null,
-      "researched": false,
-      "reasons": [
-        "no causal graph +25"
-      ]
-    },
-    {
-      "identifier": "traitmech:000199",
-      "label": "trimethylamine N-oxide respiration",
-      "category": "metabolism",
-      "slug": "trimethylamine_n_oxide_respiration",
       "score": 25.0,
       "action": "BUILD_CAUSAL_GRAPH",
       "edges": 0,
@@ -8331,28 +8152,6 @@
       "label": "arginine arylamidase activity",
       "category": "physiology",
       "slug": "arginine_arylamidase_activity",
-      "score": 25.0,
-      "action": "BUILD_CAUSAL_GRAPH",
-      "edges": 0,
-      "nodes": 0,
-      "components": 0,
-      "orphans": 0,
-      "examples": 1,
-      "canonical_examples_reviewed_empty": false,
-      "children": 0,
-      "series": null,
-      "series_size": 0,
-      "series_overlap": null,
-      "researched": false,
-      "reasons": [
-        "no causal graph +25"
-      ]
-    },
-    {
-      "identifier": "traitmech:000164",
-      "label": "arginine dihydrolase activity",
-      "category": "physiology",
-      "slug": "arginine_dihydrolase_activity",
       "score": 25.0,
       "action": "BUILD_CAUSAL_GRAPH",
       "edges": 0,
@@ -9128,6 +8927,29 @@
       ]
     },
     {
+      "identifier": "traitmech:000200",
+      "label": "tetrathionate respiration",
+      "category": "metabolism",
+      "slug": "tetrathionate_respiration",
+      "score": 15.0,
+      "action": "DEEPEN_CAUSAL_GRAPH",
+      "edges": 3,
+      "nodes": 4,
+      "components": 1,
+      "orphans": 0,
+      "examples": 1,
+      "canonical_examples_reviewed_empty": false,
+      "children": 0,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": false,
+      "reasons": [
+        "thin graph (3 edges) +12",
+        "no synonyms +3"
+      ]
+    },
+    {
       "identifier": "METPO:1000884",
       "label": "cell length small",
       "category": "morphology",
@@ -9310,6 +9132,29 @@
       ]
     },
     {
+      "identifier": "traitmech:000153",
+      "label": "lysine decarboxylase activity",
+      "category": "physiology",
+      "slug": "lysine_decarboxylase_activity",
+      "score": 15.0,
+      "action": "DEEPEN_CAUSAL_GRAPH",
+      "edges": 2,
+      "nodes": 3,
+      "components": 1,
+      "orphans": 0,
+      "examples": 1,
+      "canonical_examples_reviewed_empty": false,
+      "children": 0,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": false,
+      "reasons": [
+        "thin graph (2 edges) +12",
+        "no synonyms +3"
+      ]
+    },
+    {
       "identifier": "traitmech:000079",
       "label": "oxidative stress response",
       "category": "physiology",
@@ -9329,6 +9174,29 @@
       "researched": true,
       "reasons": [
         "thin graph (5 edges) +12",
+        "no synonyms +3"
+      ]
+    },
+    {
+      "identifier": "traitmech:000186",
+      "label": "siderophore production",
+      "category": "physiology",
+      "slug": "siderophore_production",
+      "score": 15.0,
+      "action": "DEEPEN_CAUSAL_GRAPH",
+      "edges": 3,
+      "nodes": 4,
+      "components": 1,
+      "orphans": 0,
+      "examples": 1,
+      "canonical_examples_reviewed_empty": false,
+      "children": 0,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": false,
+      "reasons": [
+        "thin graph (3 edges) +12",
         "no synonyms +3"
       ]
     },
@@ -15065,6 +14933,72 @@
       ]
     },
     {
+      "identifier": "traitmech:000195",
+      "label": "arsenate respiration",
+      "category": "metabolism",
+      "slug": "arsenate_respiration",
+      "score": 12.0,
+      "action": "DEEPEN_CAUSAL_GRAPH",
+      "edges": 3,
+      "nodes": 4,
+      "components": 1,
+      "orphans": 0,
+      "examples": 1,
+      "canonical_examples_reviewed_empty": false,
+      "children": 0,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": false,
+      "reasons": [
+        "thin graph (3 edges) +12"
+      ]
+    },
+    {
+      "identifier": "traitmech:000198",
+      "label": "chlorate respiration",
+      "category": "metabolism",
+      "slug": "chlorate_respiration",
+      "score": 12.0,
+      "action": "DEEPEN_CAUSAL_GRAPH",
+      "edges": 3,
+      "nodes": 4,
+      "components": 1,
+      "orphans": 0,
+      "examples": 1,
+      "canonical_examples_reviewed_empty": false,
+      "children": 0,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": false,
+      "reasons": [
+        "thin graph (3 edges) +12"
+      ]
+    },
+    {
+      "identifier": "traitmech:000201",
+      "label": "dimethyl sulfoxide respiration",
+      "category": "metabolism",
+      "slug": "dimethyl_sulfoxide_respiration",
+      "score": 12.0,
+      "action": "DEEPEN_CAUSAL_GRAPH",
+      "edges": 3,
+      "nodes": 4,
+      "components": 1,
+      "orphans": 0,
+      "examples": 1,
+      "canonical_examples_reviewed_empty": false,
+      "children": 0,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": false,
+      "reasons": [
+        "thin graph (3 edges) +12"
+      ]
+    },
+    {
       "identifier": "traitmech:000109",
       "label": "fermentative hydrogen production",
       "category": "metabolism",
@@ -15084,6 +15018,28 @@
       "researched": true,
       "reasons": [
         "thin graph (6 edges) +12"
+      ]
+    },
+    {
+      "identifier": "traitmech:000196",
+      "label": "fumarate respiration",
+      "category": "metabolism",
+      "slug": "fumarate_respiration",
+      "score": 12.0,
+      "action": "DEEPEN_CAUSAL_GRAPH",
+      "edges": 3,
+      "nodes": 4,
+      "components": 1,
+      "orphans": 0,
+      "examples": 1,
+      "canonical_examples_reviewed_empty": false,
+      "children": 0,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": false,
+      "reasons": [
+        "thin graph (3 edges) +12"
       ]
     },
     {
@@ -15128,6 +15084,28 @@
       "researched": true,
       "reasons": [
         "thin graph (6 edges) +12"
+      ]
+    },
+    {
+      "identifier": "traitmech:000199",
+      "label": "trimethylamine N-oxide respiration",
+      "category": "metabolism",
+      "slug": "trimethylamine_n_oxide_respiration",
+      "score": 12.0,
+      "action": "DEEPEN_CAUSAL_GRAPH",
+      "edges": 3,
+      "nodes": 4,
+      "components": 1,
+      "orphans": 0,
+      "examples": 1,
+      "canonical_examples_reviewed_empty": false,
+      "children": 0,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": false,
+      "reasons": [
+        "thin graph (3 edges) +12"
       ]
     },
     {
@@ -15547,6 +15525,28 @@
       "researched": false,
       "reasons": [
         "thin graph (6 edges) +12"
+      ]
+    },
+    {
+      "identifier": "traitmech:000164",
+      "label": "arginine dihydrolase activity",
+      "category": "physiology",
+      "slug": "arginine_dihydrolase_activity",
+      "score": 12.0,
+      "action": "DEEPEN_CAUSAL_GRAPH",
+      "edges": 3,
+      "nodes": 4,
+      "components": 1,
+      "orphans": 0,
+      "examples": 1,
+      "canonical_examples_reviewed_empty": false,
+      "children": 0,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": false,
+      "reasons": [
+        "thin graph (3 edges) +12"
       ]
     },
     {

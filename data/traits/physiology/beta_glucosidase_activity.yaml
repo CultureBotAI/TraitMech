@@ -44,6 +44,29 @@ discussions:
     equivalent TraitRecord xref.
   posed_by: codex
   posed_date: '2026-09-11'
+- discussion_id: beta-glucosidase-activity-causal-graph-source-gap
+  prompt: Add primary microbial literature evidence for BglA/BglX beta-glucosidase
+    cellobiose/beta-D-glucoside hydrolysis and glucose release before constructing
+    causal_graphs.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  attaches_to:
+  - causal_graphs
+  rationale: The current record pairs one EC 3.2.1.21 definition snippet (DOI:10.1007/s13205-015-0328-z)
+    with two API ZYM diagnostic survey snippets (DOI:10.2323/jgam.60.59, DOI:10.3390/microorganisms12040776),
+    leaving only one mechanistic quote.
+  posed_by: claude
+  posed_date: '2026-10-23'
+  evidence:
+  - reference: DOI:10.1007/s13205-015-0328-z
+    supports: PARTIAL
+    snippet: β-Glucosidases (β-d-glucopyrranoside glucohydrolase) [E.C.3.2.1.21] are
+      the enzymes which hydrolyze the glycosidic bond of a carbohydrate moiety to
+      release nonreducing terminal glycosyl residues, glycoside and oligosaccharides
+    explanation: Existing record-level evidence supports the trait definition and
+      diagnostic or organismal occurrence, but lacks multiple distinct pathway/enzyme
+      quotes and strain-matched UniProtKB protein accessions needed for a connected
+      causal graph.
 curation_history:
 - timestamp: '2026-09-11T17:57:39Z'
   curator: codex
@@ -51,4 +74,10 @@ curation_history:
   changes: Minted beta-glucosidase activity as a DOI-backed TraitRecord after a repository-wide
     duplicate review covering ignored and hidden files; METPO has no exact beta-glucosidase
     activity class yet.
+  llm_assisted: true
+- timestamp: '2026-10-23T09:40:49Z'
+  curator: claude
+  action: RECORD_MECHANISM_KNOWLEDGE_GAP
+  changes: Recorded OPEN KNOWLEDGE_GAP discussion (beta-glucosidase-activity-causal-graph-source-gap)
+    attached to causal_graphs documenting the source-limited mechanism gap.
   llm_assisted: true

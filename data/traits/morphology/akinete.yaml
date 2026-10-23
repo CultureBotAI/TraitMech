@@ -45,6 +45,28 @@ discussions:
     as an exact equivalent for this cyanobacterial dormant-cell trait.
   posed_by: codex
   posed_date: '2026-09-14'
+- discussion_id: akinete-causal-graph-source-gap
+  prompt: Add primary literature evidence for cyanobacterial akinete differentiation
+    regulators (e.g. AvaK, HepA) and envelope glycolipid/polysaccharide biosynthesis
+    before constructing causal_graphs.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  attaches_to:
+  - causal_graphs
+  rationale: The current record carries morphological and ecological-survival snippets
+    in Nostocales (DOI:10.1159/000517443, DOI:10.3389/fmicb.2025.1677844) without
+    developmental gene or biosynthetic pathway quotes.
+  posed_by: claude
+  posed_date: '2026-10-23'
+  evidence:
+  - reference: DOI:10.1159/000517443
+    supports: PARTIAL
+    snippet: Some cyanobacteria of the order Nostocales can form akinetes, spore-like
+      dormant cells resistant to various unfavorable environmental fluctuations.
+    explanation: Existing record-level evidence supports the trait definition and
+      diagnostic or organismal occurrence, but lacks multiple distinct pathway/enzyme
+      quotes and strain-matched UniProtKB protein accessions needed for a connected
+      causal graph.
 curation_history:
 - timestamp: '2026-09-14T15:47:55Z'
   curator: codex
@@ -52,4 +74,10 @@ curation_history:
   changes: Minted akinete as a DOI-backed TraitRecord after a repository-wide duplicate
     review covering ignored and hidden files; live METPO has no active exact akinete
     class and the placeholder is reserved in proposals/metpo_traitmech_v62.
+  llm_assisted: true
+- timestamp: '2026-10-23T09:40:48Z'
+  curator: claude
+  action: RECORD_MECHANISM_KNOWLEDGE_GAP
+  changes: Recorded OPEN KNOWLEDGE_GAP discussion (akinete-causal-graph-source-gap)
+    attached to causal_graphs documenting the source-limited mechanism gap.
   llm_assisted: true

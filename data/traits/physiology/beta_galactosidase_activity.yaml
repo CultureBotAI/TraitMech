@@ -40,6 +40,28 @@ discussions:
     an equivalent TraitRecord xref.
   posed_by: codex
   posed_date: '2026-09-11'
+- discussion_id: beta-galactosidase-activity-causal-graph-source-gap
+  prompt: Add primary microbial literature evidence for LacZ/BgaB beta-galactosidase
+    lactose hydrolysis products and galactoside transport before constructing causal_graphs.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  attaches_to:
+  - causal_graphs
+  rationale: The current record pairs one EC 3.2.1.23 reaction snippet (DOI:10.3389/fmicb.2021.742300)
+    with a diagnostic assay-panel list (DOI:10.1128/jcm.22.3.333-335.1985), leaving
+    only one mechanistic quote.
+  posed_by: claude
+  posed_date: '2026-10-23'
+  evidence:
+  - reference: DOI:10.3389/fmicb.2021.742300
+    supports: PARTIAL
+    snippet: β-Galactosidase (EC 3.2.1.23), also referred to as lactase, is an important
+      member of glycosyl hydrolase, which can hydrolyze O-glycosidic bonds of lactose
+      by hydrolysis reaction, resulting in the production of glucose and galactose
+    explanation: Existing record-level evidence supports the trait definition and
+      diagnostic or organismal occurrence, but lacks multiple distinct pathway/enzyme
+      quotes and strain-matched UniProtKB protein accessions needed for a connected
+      causal graph.
 curation_history:
 - timestamp: '2026-09-11T19:47:00Z'
   curator: codex
@@ -47,4 +69,10 @@ curation_history:
   changes: Minted beta-galactosidase activity as a DOI-backed TraitRecord after a
     repository-wide duplicate review covering ignored and hidden files; METPO has
     no exact beta-galactosidase activity class yet.
+  llm_assisted: true
+- timestamp: '2026-10-23T09:40:49Z'
+  curator: claude
+  action: RECORD_MECHANISM_KNOWLEDGE_GAP
+  changes: Recorded OPEN KNOWLEDGE_GAP discussion (beta-galactosidase-activity-causal-graph-source-gap)
+    attached to causal_graphs documenting the source-limited mechanism gap.
   llm_assisted: true

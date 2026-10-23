@@ -52,6 +52,34 @@ discussions:
     functions are shifted relative to this product-specific fermentation class.
   posed_by: codex
   posed_date: '2026-09-14'
+- discussion_id: butanediol-fermentation-causal-graph-source-gap
+  prompt: Add primary literature evidence for alpha-acetolactate synthase (AlsS/BudB),
+    alpha-acetolactate decarboxylase (AlsD/BudA), and 2,3-butanediol dehydrogenase
+    (BdhA/BudC) plus strain-matched UniProtKB protein accessions before constructing
+    causal_graphs.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  attaches_to:
+  - causal_graphs
+  rationale: The current record carries metabolite-overview and isomer-detection snippets
+    (DOI:10.1186/s12934-023-02163-6, ASM Voges-Proskauer protocol, DOI:10.1007/s00253-014-5526-9)
+    without enzymatic catalysis quotes for the pyruvate-to-acetoin-to-2,3-butanediol
+    steps.
+  posed_by: claude
+  posed_date: '2026-10-23'
+  evidence:
+  - reference: DOI:10.1186/s12934-023-02163-6
+    supports: PARTIAL
+    snippet: 3-Hydroxybutanone (Acetoin, AC) and 2,3-butanediol (BD) are two essential
+      four-carbon platform compounds with numerous pharmaceutical and chemical synthesis
+      applications. AC and BD have two and three stereoisomers, respectively, while
+      the application of the single isomer product in chemical synthesis is superior.
+      AC and BD are glucose overflow metabolites produced by biological fermentation
+      from a variety of microorganisms.
+    explanation: Existing record-level evidence supports the trait definition and
+      diagnostic or organismal occurrence, but lacks multiple distinct pathway/enzyme
+      quotes and strain-matched UniProtKB protein accessions needed for a connected
+      causal graph.
 curation_history:
 - timestamp: '2026-09-14T03:36:23Z'
   curator: codex
@@ -60,4 +88,10 @@ curation_history:
     fermentation TraitRecord after a repository-wide duplicate review covering ignored
     and hidden files; METPO has no exact 2,3-butanediol fermentation class yet and
     the placeholder is reserved in proposals/metpo_traitmech_v58.
+  llm_assisted: true
+- timestamp: '2026-10-23T09:40:48Z'
+  curator: claude
+  action: RECORD_MECHANISM_KNOWLEDGE_GAP
+  changes: Recorded OPEN KNOWLEDGE_GAP discussion (butanediol-fermentation-causal-graph-source-gap)
+    attached to causal_graphs documenting the source-limited mechanism gap.
   llm_assisted: true

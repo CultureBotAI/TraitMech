@@ -50,6 +50,27 @@ discussions:
     xref.
   posed_by: codex
   posed_date: '2026-09-12'
+- discussion_id: trypsin-activity-causal-graph-source-gap
+  prompt: Add primary microbial literature evidence for microbial trypsin-like serine
+    protease catalysis and physiological substrate cleavage before constructing causal_graphs.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  attaches_to:
+  - causal_graphs
+  rationale: The current record pairs IUBMB EC 3.4.21.4 cleavage/vertebrate-pancreas
+    snippets with an API ZYM diagnostic survey list (DOI:10.1371/journal.pone.0322500),
+    lacking a second microbial mechanistic quote.
+  posed_by: claude
+  posed_date: '2026-10-23'
+  evidence:
+  - reference: https://iubmb.qmul.ac.uk/enzyme/EC3/4/21/4.html
+    supports: PARTIAL
+    snippet: '<b>Reaction:</b> Preferential cleavage: Arg<img src="../../../EZgif/FISS.GIF"
+      align=top>, Lys<img src="../../../EZgif/FISS.GIF" align=top>'
+    explanation: Existing record-level evidence supports the trait definition and
+      diagnostic or organismal occurrence, but lacks multiple distinct pathway/enzyme
+      quotes and strain-matched UniProtKB protein accessions needed for a connected
+      causal graph.
 curation_history:
 - timestamp: '2026-09-12T04:36:25Z'
   curator: codex
@@ -70,4 +91,10 @@ curation_history:
   changes: Tightened the trypsin activity definition to describe a trypsin-like organismal
     phenotype instead of over-specifying production of the named vertebrate enzyme
     (#820).
+  llm_assisted: true
+- timestamp: '2026-10-23T09:40:49Z'
+  curator: claude
+  action: RECORD_MECHANISM_KNOWLEDGE_GAP
+  changes: Recorded OPEN KNOWLEDGE_GAP discussion (trypsin-activity-causal-graph-source-gap)
+    attached to causal_graphs documenting the source-limited mechanism gap.
   llm_assisted: true

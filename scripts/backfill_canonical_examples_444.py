@@ -935,6 +935,7 @@ POST_444_CANONICAL_EXAMPLE_QUEUE = {
     "genomics/uzume_system",
     "genomics/veles_system",
     "genomics/viperin_system",
+    "metabolism/perchlorate_respiration",
 }
 
 

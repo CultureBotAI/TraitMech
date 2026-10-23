@@ -45,6 +45,27 @@ discussions:
     DmsABC are narrower than the whole-organism anaerobic respiration phenotype.
   posed_by: codex
   posed_date: '2026-09-15'
+- discussion_id: dimethyl-sulfoxide-respiration-protein-example-gap
+  prompt: Add strain-matched UniProtKB protein_examples for the Shewanella oneidensis
+    MR-1 SO1427-SO1432 (DmsEFABGH) extracellular DMSO reductase complex so dmso_respiration_reductase_sketch
+    can be promoted from NONMECHANISTIC to MECHANISTIC.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - causal_graphs#dmso_respiration_reductase_sketch
+  rationale: The record's primary literature (DOI:10.1073/pnas.0505959103, DOI:10.1111/1462-2920.15971)
+    establishes the SO1427-SO1432 gene cluster required for extracellular DMSO respiration
+    in Shewanella oneidensis MR-1 (NCBITaxon:211586), but verified UniProtKB accessions
+    must be curated on a GENE_OR_PROTEIN node before marking the graph MECHANISTIC.
+  posed_by: claude
+  posed_date: '2026-10-23'
+  evidence:
+  - reference: DOI:10.1073/pnas.0505959103
+    supports: PARTIAL
+    snippet: one (SO1427-SO1432) is required for anaerobic respiration of DMSO
+    explanation: Existing record-level evidence supports the connected NONMECHANISTIC
+      pathway/function graph but does not provide strain-matched UniProtKB protein
+      accessions for protein_examples.
 curation_history:
 - timestamp: '2026-09-15T02:53:12Z'
   curator: codex
@@ -54,3 +75,80 @@ curation_history:
     files; the local METPO snapshot has only obsolete sulfoxide respiration classes
     and the replacement placeholder is reserved in proposals/metpo_traitmech_v78.
   llm_assisted: true
+- timestamp: '2026-10-23T09:40:48Z'
+  curator: claude
+  action: CURATE_CAUSAL_GRAPH
+  changes: Added NONMECHANISTIC causal_graphs entry (dmso_respiration_reductase_sketch)
+    and OPEN CURATION_TODO discussion (dimethyl-sulfoxide-respiration-protein-example-gap)
+    anchored on existing verbatim record evidence snippets.
+  llm_assisted: true
+causal_graphs:
+- graph_id: dmso_respiration_reductase_sketch
+  title: Membrane and extracellular DMSO reductase respiratory pathway
+  description: Evidence-backed metabolic pathway sketch linking dimethyl sulfoxide
+    terminal electron acceptance and DMSO reductase activity to dimethyl sulfoxide
+    respiration.
+  scope_status: NONMECHANISTIC
+  scope_notes: Pathway-and-activity sketch backed by DOI:10.1073/pnas.0505959103 and
+    DOI:10.1111/1462-2920.15971; strain-matched UniProtKB protein examples for the
+    Shewanella oneidensis MR-1 SO1427-SO1432 (DmsEFABGH) extracellular DMSO reductase
+    subunits remain to be curated.
+  nodes:
+  - node_id: dmso_respiration_trait
+    label: dimethyl sulfoxide respiration
+    node_type: TRAIT
+    grounding: traitmech:000201
+    description: Anaerobic respiration using dimethyl sulfoxide (DMSO) as a terminal
+      electron acceptor.
+  - node_id: dmso_respiration_dmso
+    label: dimethyl sulfoxide
+    node_type: CHEMICAL
+    grounding: CHEBI:28262
+    description: Dimethyl sulfoxide serving as a terminal respiratory electron acceptor.
+  - node_id: dmso_respiration_reductase_activity
+    label: dimethyl-sulfoxide reductase activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0009388
+    description: Membrane-associated or cell-surface DMSO reductase activity catalyzing
+      respiratory DMSO reduction.
+  - node_id: dmso_respiration_extracellular_process
+    label: anaerobic respiration
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0019645
+    description: Extracellular anaerobic respiratory process encoded by the SO1427-SO1432
+      gene cluster.
+  edges:
+  - subject: dmso_respiration_trait
+    predicate: has electron acceptor
+    predicate_id: METPO:2007702
+    object: dmso_respiration_dmso
+    description: Dimethyl sulfoxide serves as a terminal electron acceptor in anaerobic
+      respiration.
+    evidence:
+    - reference: DOI:10.1111/1462-2920.15971
+      snippet: M. thermoacetica can also use dimethyl sulfoxide as terminal electron
+        acceptor
+      notes: Rosenbaum et al. demonstrate that Moorella thermoacetica uses dimethyl
+        sulfoxide as a terminal electron acceptor.
+  - subject: dmso_respiration_reductase_activity
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: dmso_respiration_trait
+    description: Membrane-associated DMSO reductase activity confers dimethyl sulfoxide
+      respiration.
+    evidence:
+    - reference: DOI:10.1111/1462-2920.15971
+      snippet: Membranes showed a DMSO reductase activity
+      notes: Rosenbaum et al. demonstrate membrane-associated DMSO reductase activity
+        during anaerobic growth on DMSO.
+  - subject: dmso_respiration_extracellular_process
+    predicate: contributes to
+    predicate_id: RO:0002326
+    object: dmso_respiration_trait
+    description: The SO1427-SO1432 gene cluster mediates extracellular anaerobic respiration
+      of DMSO.
+    evidence:
+    - reference: DOI:10.1073/pnas.0505959103
+      snippet: one (SO1427-SO1432) is required for anaerobic respiration of DMSO
+      notes: Gralnick et al. show that the SO1427-SO1432 gene cluster is required
+        for anaerobic respiration of DMSO in Shewanella oneidensis.

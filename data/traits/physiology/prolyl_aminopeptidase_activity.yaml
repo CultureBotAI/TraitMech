@@ -61,6 +61,28 @@ discussions:
     causal-node grounding leads rather than equivalent TraitRecord xrefs.
   posed_by: codex
   posed_date: '2026-09-12'
+- discussion_id: prolyl-aminopeptidase-activity-causal-graph-source-gap
+  prompt: Add primary microbial literature evidence linking Neisseria gonorrhoeae
+    proline iminopeptidase (Pip) peptide cleavage to a physiological pathway step
+    and strain-matched UniProtKB protein accessions before constructing causal_graphs.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  attaches_to:
+  - causal_graphs
+  rationale: The current record carries an IUBMB EC 3.4.11.5 reaction snippet, one
+    sentence noting that Pip is a hydrolase elaborated by Neisseria gonorrhoeae (DOI:10.1111/j.1365-2958.1993.tb01249.x),
+    and a diagnostic enzyme list (DOI:10.1099/ijsem.0.006017), without a second non-redundant
+    mechanistic step or UniProtKB protein_examples.
+  posed_by: claude
+  posed_date: '2026-10-23'
+  evidence:
+  - reference: https://iubmb.qmul.ac.uk/enzyme/EC3/4/11/5.html
+    supports: PARTIAL
+    snippet: <b>Reaction:</b> Release of N-terminal proline from a peptide
+    explanation: Existing record-level evidence supports the trait definition and
+      diagnostic or organismal occurrence, but lacks multiple distinct pathway/enzyme
+      quotes and strain-matched UniProtKB protein accessions needed for a connected
+      causal graph.
 curation_history:
 - timestamp: '2026-09-12T11:07:00Z'
   curator: codex
@@ -68,4 +90,10 @@ curation_history:
   changes: Minted prolyl aminopeptidase activity as a URL/DOI-backed TraitRecord after
     a repository-wide duplicate review covering ignored and hidden files; METPO has
     no exact prolyl aminopeptidase activity class yet.
+  llm_assisted: true
+- timestamp: '2026-10-23T09:40:49Z'
+  curator: claude
+  action: RECORD_MECHANISM_KNOWLEDGE_GAP
+  changes: Recorded OPEN KNOWLEDGE_GAP discussion (prolyl-aminopeptidase-activity-causal-graph-source-gap)
+    attached to causal_graphs documenting the source-limited mechanism gap.
   llm_assisted: true

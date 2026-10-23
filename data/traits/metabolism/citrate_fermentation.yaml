@@ -37,6 +37,28 @@ discussions:
     pathway-scoped fermentation class.
   posed_by: codex
   posed_date: '2026-09-14'
+- discussion_id: citrate-fermentation-causal-graph-source-gap
+  prompt: Add primary literature evidence for citrate uptake (CitH/CitS), citrate
+    lyase (CitDEF), and membrane-bound oxaloacetate decarboxylase Na+ pump (OadGAB)
+    before constructing causal_graphs.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  attaches_to:
+  - causal_graphs
+  rationale: The current record carries two growth-and-prevalence snippets in Klebsiella
+    pneumoniae (DOI:10.1128/JB.183.18.5248-5256.2001, DOI:10.1186/1471-2180-9-168)
+    without enzymatic step or intermediate quotes.
+  posed_by: claude
+  posed_date: '2026-10-23'
+  evidence:
+  - reference: DOI:10.1128/JB.183.18.5248-5256.2001
+    supports: PARTIAL
+    snippet: Klebsiella pneumoniae is able to grow anaerobically with citrate as a
+      sole carbon and energy source by a fermentative pathway
+    explanation: Existing record-level evidence supports the trait definition and
+      diagnostic or organismal occurrence, but lacks multiple distinct pathway/enzyme
+      quotes and strain-matched UniProtKB protein accessions needed for a connected
+      causal graph.
 curation_history:
 - timestamp: '2026-09-14T04:09:24Z'
   curator: codex
@@ -50,4 +72,10 @@ curation_history:
   action: CURATION_REVIEW_REVISION
   changes: 'Resolved PR #894 review issue #897 by narrowing the minted record from
     citrate utilization to pathway-scoped citrate fermentation.'
+  llm_assisted: true
+- timestamp: '2026-10-23T09:40:48Z'
+  curator: claude
+  action: RECORD_MECHANISM_KNOWLEDGE_GAP
+  changes: Recorded OPEN KNOWLEDGE_GAP discussion (citrate-fermentation-causal-graph-source-gap)
+    attached to causal_graphs documenting the source-limited mechanism gap.
   llm_assisted: true

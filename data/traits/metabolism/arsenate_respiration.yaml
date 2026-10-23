@@ -50,6 +50,29 @@ discussions:
     must keep ArrAB respiratory reduction separate from ArsC cytosolic detoxification.
   posed_by: codex
   posed_date: '2026-09-14'
+- discussion_id: arsenate-respiration-protein-example-gap
+  prompt: Add strain-matched UniProtKB protein_examples for Shewanella sp. ANA-3 respiratory
+    arsenate reductase subunits (ArrA/ArrB) and the Arr operon regulator so arsenate_respiration_arr_pathway_sketch
+    can be promoted from NONMECHANISTIC to MECHANISTIC.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - causal_graphs#arsenate_respiration_arr_pathway_sketch
+  rationale: The record's primary literature (DOI:10.1073/pnas.1834303100, DOI:10.1128/AEM.69.5.2800-2809.2003,
+    DOI:10.1128/JB.01110-07) supports the arrAB respiratory arsenate reduction pathway
+    in Shewanella sp. ANA-3 (NCBITaxon:94122), but verified UniProtKB accessions and
+    proteome metadata must be added to a GENE_OR_PROTEIN node before marking the graph
+    MECHANISTIC.
+  posed_by: claude
+  posed_date: '2026-10-23'
+  evidence:
+  - reference: DOI:10.1073/pnas.1834303100
+    supports: PARTIAL
+    snippet: can be used by microorganisms as a terminal electron acceptor in anaerobic
+      respiration
+    explanation: Existing record-level evidence supports the connected NONMECHANISTIC
+      pathway/function graph but does not provide strain-matched UniProtKB protein
+      accessions for protein_examples.
 curation_history:
 - timestamp: '2026-09-14T23:52:00Z'
   curator: codex
@@ -66,3 +89,82 @@ curation_history:
     and facultative arsenate-respiration evidence without making a broader genetic-tractability
     claim.
   llm_assisted: true
+- timestamp: '2026-10-23T09:40:48Z'
+  curator: claude
+  action: CURATE_CAUSAL_GRAPH
+  changes: Added NONMECHANISTIC causal_graphs entry (arsenate_respiration_arr_pathway_sketch)
+    and OPEN CURATION_TODO discussion (arsenate-respiration-protein-example-gap) anchored
+    on existing verbatim record evidence snippets.
+  llm_assisted: true
+causal_graphs:
+- graph_id: arsenate_respiration_arr_pathway_sketch
+  title: Respiratory arsenate reduction and terminal electron acceptor pathway
+  description: Evidence-backed metabolic pathway sketch linking dissimilatory arsenate
+    reductase activity and arsenate terminal electron acceptance to arsenate respiration.
+  scope_status: NONMECHANISTIC
+  scope_notes: Pathway-and-activity sketch backed by DOI:10.1073/pnas.1834303100,
+    DOI:10.1128/AEM.69.5.2800-2809.2003, and DOI:10.1128/JB.01110-07; strain-matched
+    UniProtKB protein examples for the Shewanella sp. ANA-3 respiratory arsenate reductase
+    subunits ArrA/ArrB and Arr operon regulator remain to be curated.
+  nodes:
+  - node_id: arsenate_respiration_trait
+    label: arsenate respiration
+    node_type: TRAIT
+    grounding: traitmech:000195
+    description: Anaerobic respiration using arsenate As(V) as a terminal electron
+      acceptor.
+  - node_id: arsenate_respiration_arsenate
+    label: arsenate
+    node_type: CHEMICAL
+    grounding: CHEBI:18231
+    description: Arsenate As(V) oxyanion serving as the terminal respiratory electron
+      acceptor.
+  - node_id: arsenate_respiration_reductase_activity
+    label: arsenate reductase (donor) activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0030631
+    description: Respiratory arsenate reductase activity encoded by the arrAB gene
+      system.
+  - node_id: arsenate_respiration_operon_regulation
+    label: regulation of DNA-templated transcription
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006355
+    description: Transcriptional induction and regulation of the arr respiratory arsenate
+      reductase operon.
+  edges:
+  - subject: arsenate_respiration_trait
+    predicate: has electron acceptor
+    predicate_id: METPO:2007702
+    object: arsenate_respiration_arsenate
+    description: Arsenate As(V) serves as the terminal electron acceptor in arsenate
+      respiration.
+    evidence:
+    - reference: DOI:10.1128/AEM.69.5.2800-2809.2003
+      snippet: This gram-negative strain stoichiometrically couples the oxidation
+        of lactate to acetate with the reduction of As(V) to arsenite
+      notes: Saltikov et al. show that cells grown exclusively on As(V) as a terminal
+        electron acceptor induce the arr and ars systems.
+  - subject: arsenate_respiration_reductase_activity
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: arsenate_respiration_trait
+    description: The arrA and arrB respiratory arsenate reductase system is required
+      for As(V) respiration.
+    evidence:
+    - reference: DOI:10.1073/pnas.1834303100
+      snippet: can be used by microorganisms as a terminal electron acceptor in anaerobic
+        respiration
+      notes: Saltikov and Newman identify the arrA and arrB gene system necessary
+        for As(V) respiration in Shewanella sp. strain ANA-3.
+  - subject: arsenate_respiration_operon_regulation
+    predicate: enables
+    predicate_id: RO:0002327
+    object: arsenate_respiration_reductase_activity
+    description: Transcriptional regulation of the arr operon enables respiratory
+      arsenate reduction.
+    evidence:
+    - reference: DOI:10.1128/JB.01110-07
+      snippet: the Shewanella sp. strain ANA-3 arsenate respiratory reductase (ARR),
+        the key enzyme involved in this metabolism
+      notes: Saltikov identifies the regulator of the arr operon that permits bacteria
+        to grow by reducing arsenate.

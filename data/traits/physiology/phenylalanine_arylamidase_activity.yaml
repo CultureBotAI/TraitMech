@@ -47,6 +47,31 @@ discussions:
     production phenotype at organism-level scope.
   posed_by: codex
   posed_date: '2026-09-12'
+- discussion_id: phenylalanine-arylamidase-activity-causal-graph-source-gap
+  prompt: Add primary microbial literature evidence for phenylalanyl aminopeptidase/arylamidase
+    catalysis and substrate cleavage before constructing causal_graphs.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  attaches_to:
+  - causal_graphs
+  rationale: The current record carries two diagnostic enzyme-panel survey snippets
+    (DOI:10.1099/ijsem.0.006017, DOI:10.1128/JCM.40.9.3427-3431.2002) without verbatim
+    catalytic reaction quotes.
+  posed_by: claude
+  posed_date: '2026-10-23'
+  evidence:
+  - reference: DOI:10.1099/ijsem.0.006017
+    supports: PARTIAL
+    snippet: 'enzymatic activities are present for: α-galactosidase, N-acetyl-β-glucosaminidase,
+      arginine arylamidase, proline arylamidase, leucyl glycine arylamidase, phenylalanine
+      arylamidase, leucine arylamidase, tyrosine arylamidase, alanine arylamidase,
+      glycine arylamidase, histidine arylamidase, glutamyl glutamic acid arylamidase,
+      serine arylamidase, valine arylamidase, cysteine arylamidase, esterase, esterase
+      lipase, alpha-chymotrypsin'
+    explanation: Existing record-level evidence supports the trait definition and
+      diagnostic or organismal occurrence, but lacks multiple distinct pathway/enzyme
+      quotes and strain-matched UniProtKB protein accessions needed for a connected
+      causal graph.
 curation_history:
 - timestamp: '2026-09-12T12:08:46Z'
   curator: codex
@@ -55,4 +80,10 @@ curation_history:
     a repository-wide duplicate review covering ignored and hidden files; METPO has
     no exact phenylalanine arylamidase activity class yet and the placeholder is reserved
     in proposals/metpo_traitmech_v45.
+  llm_assisted: true
+- timestamp: '2026-10-23T09:40:49Z'
+  curator: claude
+  action: RECORD_MECHANISM_KNOWLEDGE_GAP
+  changes: Recorded OPEN KNOWLEDGE_GAP discussion (phenylalanine-arylamidase-activity-causal-graph-source-gap)
+    attached to causal_graphs documenting the source-limited mechanism gap.
   llm_assisted: true

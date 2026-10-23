@@ -39,6 +39,30 @@ discussions:
     an equivalent TraitRecord xref.
   posed_by: codex
   posed_date: '2026-09-12'
+- discussion_id: lysine-decarboxylase-activity-protein-example-gap
+  prompt: Add strain-matched UniProtKB protein_examples for Escherichia coli inducible
+    lysine decarboxylase (CadA) and lysine-cadaverine antiporter (CadB) so lysine_decarboxylase_cadba_sketch
+    can be promoted from NONMECHANISTIC to MECHANISTIC.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - causal_graphs#lysine_decarboxylase_cadba_sketch
+  rationale: The record's primary literature (EC 4.1.1.18, DOI:10.1128/jb.01306-06)
+    establishes the CadBA lysine-dependent acid-resistance decarboxylation of L-lysine
+    to cadaverine and CO2 in Escherichia coli (NCBITaxon:562), but verified UniProtKB
+    accessions must be curated on a GENE_OR_PROTEIN node before marking the graph
+    MECHANISTIC.
+  posed_by: claude
+  posed_date: '2026-10-23'
+  evidence:
+  - reference: DOI:10.1128/jb.01306-06
+    supports: PARTIAL
+    snippet: Unexpectedly, the tolerance of P(i)-starved cells to fermentation acids
+      was markedly increased as a result of the activity of the inducible CadBA lysine-dependent
+      acid resistance system that consumes one proton and produces the diamine cadaverine.
+    explanation: Existing record-level evidence supports the connected NONMECHANISTIC
+      pathway/function graph but does not provide strain-matched UniProtKB protein
+      accessions for protein_examples.
 curation_history:
 - timestamp: '2026-09-12T01:35:50Z'
   curator: codex
@@ -47,3 +71,63 @@ curation_history:
     a repository-wide duplicate review covering ignored and hidden files; METPO has
     no exact lysine decarboxylase activity class yet.
   llm_assisted: true
+- timestamp: '2026-10-23T09:40:48Z'
+  curator: claude
+  action: CURATE_CAUSAL_GRAPH
+  changes: Added NONMECHANISTIC causal_graphs entry (lysine_decarboxylase_cadba_sketch)
+    and OPEN CURATION_TODO discussion (lysine-decarboxylase-activity-protein-example-gap)
+    anchored on existing verbatim record evidence snippets.
+  llm_assisted: true
+causal_graphs:
+- graph_id: lysine_decarboxylase_cadba_sketch
+  title: Lysine decarboxylation to cadaverine and CadBA proton-consuming acid resistance
+  description: Evidence-backed physiological mechanism sketch linking lysine decarboxylase
+    catalytic activity and cadaverine production to the lysine decarboxylase activity
+    phenotype.
+  scope_status: NONMECHANISTIC
+  scope_notes: Activity-and-reaction sketch backed by EC 4.1.1.18 and DOI:10.1128/jb.01306-06;
+    strain-matched UniProtKB protein examples for Escherichia coli CadA inducible
+    lysine decarboxylase and CadB lysine-cadaverine antiporter remain to be curated.
+  nodes:
+  - node_id: lysine_decarboxylase_activity_trait
+    label: lysine decarboxylase activity
+    node_type: TRAIT
+    grounding: traitmech:000153
+    description: Physiological enzyme-activity phenotype in which L-lysine is decarboxylated
+      to cadaverine and carbon dioxide.
+  - node_id: lysine_decarboxylase_catalytic_activity
+    label: lysine decarboxylase activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0008923
+    description: Catalytic decarboxylation of L-lysine consuming a cytoplasmic proton
+      and producing cadaverine and CO2 (EC 4.1.1.18).
+  - node_id: lysine_decarboxylase_cadaverine
+    label: cadaverine
+    node_type: CHEMICAL
+    grounding: CHEBI:18127
+    description: Diamine cadaverine produced by decarboxylation of L-lysine.
+  edges:
+  - subject: lysine_decarboxylase_catalytic_activity
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: lysine_decarboxylase_activity_trait
+    description: Inducible CadBA lysine decarboxylase activity consumes a proton and
+      produces cadaverine.
+    evidence:
+    - reference: DOI:10.1128/jb.01306-06
+      snippet: Unexpectedly, the tolerance of P(i)-starved cells to fermentation acids
+        was markedly increased as a result of the activity of the inducible CadBA
+        lysine-dependent acid resistance system that consumes one proton and produces
+        the diamine cadaverine.
+      notes: Moreau shows that inducible CadBA lysine-dependent acid resistance activity
+        consumes one proton and produces the diamine cadaverine.
+  - subject: lysine_decarboxylase_catalytic_activity
+    predicate: has output
+    predicate_id: RO:0002234
+    object: lysine_decarboxylase_cadaverine
+    description: Lysine decarboxylase converts L-lysine into cadaverine and CO2.
+    evidence:
+    - reference: https://iubmb.qmul.ac.uk/enzyme/EC4/1/1/18.html
+      snippet: 'Reaction: L-lysine = cadaverine + CO2'
+      notes: IUBMB EC 4.1.1.18 defines the lysine decarboxylase reaction converting
+        L-lysine into cadaverine and CO2.

@@ -48,6 +48,28 @@ discussions:
     anaerobic respiration phenotype.
   posed_by: codex
   posed_date: '2026-09-15'
+- discussion_id: selenate-respiration-causal-graph-source-gap
+  prompt: Add primary literature evidence for periplasmic respiratory selenate reductase
+    (SerABC or SrdBCA) and selenate-to-selenite reduction stoichiometry before constructing
+    causal_graphs.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  attaches_to:
+  - causal_graphs
+  rationale: The current record carries strain-isolation and terminal-electron-acceptor
+    snippets (DOI:10.1128/aem.60.8.3011-3019.1994, DOI:10.1128/AEM.02737-06, DOI:10.1016/j.syapm.2005.12.011)
+    without enzymatic reductase or selenite-product quotes.
+  posed_by: claude
+  posed_date: '2026-10-23'
+  evidence:
+  - reference: DOI:10.1128/aem.60.8.3011-3019.1994
+    supports: PARTIAL
+    snippet: A gram-negative, strictly anaerobic, motile vibrio was isolated from
+      a selenate-respiring enrichment culture
+    explanation: Existing record-level evidence supports the trait definition and
+      diagnostic or organismal occurrence, but lacks multiple distinct pathway/enzyme
+      quotes and strain-matched UniProtKB protein accessions needed for a connected
+      causal graph.
 curation_history:
 - timestamp: '2026-09-15T03:22:39Z'
   curator: codex
@@ -56,4 +78,10 @@ curation_history:
     after a repository-wide duplicate review covering ignored and hidden files; the
     local METPO snapshot has no exact selenate respiration class and the replacement
     placeholder is reserved in proposals/metpo_traitmech_v79.
+  llm_assisted: true
+- timestamp: '2026-10-23T09:40:48Z'
+  curator: claude
+  action: RECORD_MECHANISM_KNOWLEDGE_GAP
+  changes: Recorded OPEN KNOWLEDGE_GAP discussion (selenate-respiration-causal-graph-source-gap)
+    attached to causal_graphs documenting the source-limited mechanism gap.
   llm_assisted: true

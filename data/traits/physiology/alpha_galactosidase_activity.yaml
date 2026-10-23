@@ -41,6 +41,29 @@ discussions:
     xref.
   posed_by: codex
   posed_date: '2026-09-11'
+- discussion_id: alpha-galactosidase-activity-causal-graph-source-gap
+  prompt: Add primary microbial literature evidence for MelA/Aga alpha-galactosidase
+    catalysis and melibiose/raffinose catabolism in the exemplar taxon before constructing
+    causal_graphs.
+  kind: KNOWLEDGE_GAP
+  status: OPEN
+  attaches_to:
+  - causal_graphs
+  rationale: The current record pairs one EC 3.2.1.22 catalytic definition snippet
+    (DOI:10.3109/07388551.2013.794124) with a diagnostic assay-panel list (DOI:10.1128/jcm.22.3.333-335.1985),
+    leaving only one mechanistic quote.
+  posed_by: claude
+  posed_date: '2026-10-23'
+  evidence:
+  - reference: DOI:10.3109/07388551.2013.794124
+    supports: PARTIAL
+    snippet: The enzyme α-galactosidase (α-D-galactoside galactohydrolase; EC 3.2.1.22)
+      catalyzes the hydrolysis of α-1,6-linked galactose residues in oligosaccharides
+      and polymeric galactomannan.
+    explanation: Existing record-level evidence supports the trait definition and
+      diagnostic or organismal occurrence, but lacks multiple distinct pathway/enzyme
+      quotes and strain-matched UniProtKB protein accessions needed for a connected
+      causal graph.
 curation_history:
 - timestamp: '2026-09-11T23:46:20Z'
   curator: codex
@@ -48,4 +71,10 @@ curation_history:
   changes: Minted alpha-galactosidase activity as a DOI-backed TraitRecord after a
     repository-wide duplicate review covering ignored and hidden files; METPO has
     no exact alpha-galactosidase activity class yet.
+  llm_assisted: true
+- timestamp: '2026-10-23T09:40:49Z'
+  curator: claude
+  action: RECORD_MECHANISM_KNOWLEDGE_GAP
+  changes: Recorded OPEN KNOWLEDGE_GAP discussion (alpha-galactosidase-activity-causal-graph-source-gap)
+    attached to causal_graphs documenting the source-limited mechanism gap.
   llm_assisted: true

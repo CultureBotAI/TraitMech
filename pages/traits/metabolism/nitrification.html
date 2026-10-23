@@ -189,7 +189,7 @@
 
 
     <div class="card" id="discussions">
-      <h2>Discussions and Knowledge Gaps <span class="meta">(1)</span></h2>
+      <h2>Discussions and Knowledge Gaps <span class="meta">(2)</span></h2>
       <p class="meta">Open questions attached to this trait. Seeded by
         <code>just knowledge-gap-scan</code> and curated; see
         <a href="../../../app/discussions/index.html">the corpus-wide index</a>.</p>
@@ -224,6 +224,47 @@
 
       </div>
 
+
+      <div class="discussion" id="nitrification-causal-graph-source-gap">
+        <p class="discussion-prompt">Add a second independent evidence snippet covering ammonia monooxygenase / hydroxylamine oxidoreductase and nitrite oxidoreductase steps plus a strain-matched canonical example before constructing causal_graphs.</p>
+        <p class="meta">
+          <span class="badge">KNOWLEDGE GAP</span>
+          <span class="badge">OPEN</span>
+          <code>nitrification-causal-graph-source-gap</code>
+          · raised by claude
+          · 2026-10-23
+        </p>
+
+
+        <p class="meta">Attached to
+          <code>causal_graphs</code>
+        </p>
+
+
+        <p>The current record carries a single overview snippet (DOI:10.3389/fmicb.2020.01900) describing two-step oxidation of ammonia to nitrite and nitrate; a connected multi-edge graph requires at least two independent verbatim snippets without clause-splitting.</p>
+
+
+
+
+        <h3>Evidence</h3>
+        <ul class="discussion-evidence">
+
+          <li>
+            <a href="https://doi.org/10.3389/fmicb.2020.01900" rel="nofollow noreferrer"><code>DOI:10.3389/fmicb.2020.01900</code></a>
+            <span class="badge">PARTIAL</span>
+            <blockquote>nitrification proceeds as a two-step process, involving the oxidation of ammonia to nitrite and the oxidation of nitrite to nitrate</blockquote>
+            <span class="meta">Existing record-level evidence supports the trait definition and diagnostic or organismal occurrence, but lacks multiple distinct pathway/enzyme quotes and strain-matched UniProtKB protein accessions needed for a connected causal graph.</span>
+          </li>
+
+        </ul>
+
+
+
+
+
+
+      </div>
+
     </div>
 
 
@@ -241,6 +282,12 @@
           <time>2026-09-11T06:20:00Z</time> ·
           <strong>ENRICHED_FROM_LITERATURE</strong> · codex
           <p class="changes">Enriched the active METPO nitrification class with DOI-backed two-step ammonia- and nitrite-oxidation evidence after a repository-wide duplicate review covering ignored and hidden files.</p>
+        </li>
+
+        <li>
+          <time>2026-10-23T09:40:48Z</time> ·
+          <strong>RECORD_MECHANISM_KNOWLEDGE_GAP</strong> · claude
+          <p class="changes">Recorded OPEN KNOWLEDGE_GAP discussion (nitrification-causal-graph-source-gap) attached to causal_graphs documenting the source-limited mechanism gap.</p>
         </li>
 
       </ol>
@@ -319,7 +366,7 @@
       third-party source terms apply
     </div>
     <div>
-      Record as of 2026-09-11 06:20 UTC
+      Record as of 2026-10-23 09:40 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
       · embedding coverage 100.0%
