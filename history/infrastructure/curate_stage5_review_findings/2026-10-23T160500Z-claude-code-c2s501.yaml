@@ -1,0 +1,48 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/curate_stage5_review_findings.py
+session:
+  id: 2026-10-23T160500Z-claude-code-c2s501
+  timestamp: '2026-10-23T16:05:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+    agent_tool: antigravity
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1995
+  - https://github.com/CultureBotAI/TraitMech/issues/1982
+  - https://github.com/CultureBotAI/TraitMech/issues/1983
+  - https://github.com/CultureBotAI/TraitMech/issues/1984
+  - https://github.com/CultureBotAI/TraitMech/issues/1985
+  - https://github.com/CultureBotAI/TraitMech/issues/364
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  - curation_history
+  summary: Resolve all 6 actionable Cycle 2 Stage 4 open findings in group G-C2S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+    and map 5 deferred cohort findings to open GitHub issues
+  details: 'Executed Stage 5 (resolve_review_findings) of run mech-goal-sequence-20261019, cycle 2 consuming
+    Cycle 2 Stage 4 review evidence (reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-04/revision-0001/evidence.yaml,
+    sha256 1bb1aa12138f8562dcc3f57d321ee35461719215c7e1ca41a4f45ebd1de516d1). Grouped all 11 carried-forward
+    findings into 6 cause-and-ownership groups, deduplicated against all live GitHub issues, and
+    created/reused real GitHub issues (#1995 for resolved group G-C2S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS;
+    #1982, #1983, #1984, #1985, and #364 for the 5 deferred source-limited/upstream-blocked cohort groups).
+    Remediated all 6 open findings via guarded writer scripts/curate_stage5_review_findings.py: promoted
+    verified verbatim definition_source snippets from existing causal_graphs[0].edges entries into
+    record-level evidence[0] on data/traits/metabolism/carbon_fixation.yaml (F-DEF-SRC-CARBON-FIXATION-010,
+    traitmech:000019, DOI:10.1128/AEM.02473-10), data/traits/metabolism/wood_ljungdahl_pathway.yaml
+    (F-DEF-SRC-WOOD-LJUNGDAHL-011, traitmech:000022, DOI:10.1016/j.bbapap.2008.08.012),
+    data/traits/metabolism/propionic_acid_fermentation.yaml (F-DEF-SRC-PROPIONIC-FERM-012,
+    traitmech:000029, DOI:10.3390/molecules31020333), data/traits/metabolism/manganese_oxidation.yaml
+    (F-DEF-SRC-MANGANESE-OX-013, traitmech:000032, DOI:10.1016/j.tim.2005.07.009),
+    data/traits/metabolism/cellulolysis.yaml (F-DEF-SRC-CELLULOLYSIS-014, traitmech:000111,
+    DOI:10.1128/MMBR.66.3.506-577.2002), and data/traits/metabolism/chitinolysis.yaml
+    (F-DEF-SRC-CHITINOLYSIS-015, traitmech:000112, DOI:10.3389/fmicb.2013.00149). Persisted fresh
+    structured review bundle reviews/structured/20261023T161000Z-cycle2-stage5-remediated-records-review/
+    confirming 0 open findings and verdict pass across all 6 remediated records, regenerated pages/,
+    and preserved all immutable Stage 4 review artifacts untouched.'

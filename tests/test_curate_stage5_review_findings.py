@@ -1,4 +1,4 @@
-"""Tests for Stage 5 grouped review remediation (G-STAGE4-RECORD-LEVEL-DEFINITION-SOURCE)."""
+"""Tests for Stage 5 grouped review remediation (Cycle 1 #1981 and Cycle 2 #1995)."""
 
 from __future__ import annotations
 
@@ -13,9 +13,11 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO_ROOT / "scripts"))
 sys.path.insert(0, str(REPO_ROOT / "src"))
 
+import audit_evidence_snippets as aes  # noqa: E402
 from curate_stage5_review_findings import (  # noqa: E402
     ACTION,
     CURATOR,
+    CYCLE2_TIMESTAMP,
     REMEDIATION_SPECS,
     TIMESTAMP,
     process_all,
@@ -24,7 +26,7 @@ from traitmech.validation.write_validated import validate_trait  # noqa: E402
 
 
 def test_stage5_scope_excludes_do_not_work_and_matches_counts() -> None:
-    assert len(REMEDIATION_SPECS) == 4
+    assert len(REMEDIATION_SPECS) == 10
     assert "data/traits/physiology/spore_germination.yaml" not in REMEDIATION_SPECS
     finding_ids = {spec["finding_id"] for spec in REMEDIATION_SPECS.values()}
     assert finding_ids == {
@@ -32,6 +34,12 @@ def test_stage5_scope_excludes_do_not_work_and_matches_counts() -> None:
         "F-DEF-SRC-CADMIUM-002",
         "F-DEF-SRC-COBALT-003",
         "F-DEF-SRC-ZINC-004",
+        "F-DEF-SRC-CARBON-FIXATION-010",
+        "F-DEF-SRC-WOOD-LJUNGDAHL-011",
+        "F-DEF-SRC-PROPIONIC-FERM-012",
+        "F-DEF-SRC-MANGANESE-OX-013",
+        "F-DEF-SRC-CELLULOLYSIS-014",
+        "F-DEF-SRC-CHITINOLYSIS-015",
     }
 
 
@@ -48,12 +56,19 @@ def test_stage5_remediations_committed_and_schema_valid() -> None:
         last_event = doc["curation_history"][-1]
         assert last_event["curator"] == CURATOR
         assert last_event["action"] == ACTION
-        assert last_event["timestamp"] == TIMESTAMP
+        assert last_event["timestamp"] == spec.get("timestamp", TIMESTAMP)
+        assert last_event["timestamp"] in {TIMESTAMP, CYCLE2_TIMESTAMP}
         assert last_event["changes"] == spec["changes"]
 
 
 def test_process_all_is_idempotent_on_committed_corpus() -> None:
-    assert process_all(apply=False) == (4, 0)
+    assert process_all(apply=False) == (10, 0)
+
+
+def test_zero_unquoted_definition_sources_on_remediated_records() -> None:
+    rows = aes.audit(check_reports=False, check_definition_sources=True)
+    unquoted_files = {row["file"] for row in rows if row["defect"] == "UNQUOTED_DEFINITION_SOURCE"}
+    assert unquoted_files.isdisjoint(REMEDIATION_SPECS)
 
 
 def test_protected_record_guard_raises(tmp_path: Path) -> None:

@@ -15,6 +15,8 @@ synonyms:
   source: DOI:10.1016/j.tim.2005.07.009
 evidence:
 - reference: DOI:10.1016/j.tim.2005.07.009
+  snippet: the reaction might involve a unique multicopper oxidase system capable
+    of a two-electron oxidation of the substrate
   notes: Tebo et al., "Geomicrobiology of manganese(II) oxidation", supports bacterial
     Mn(II) oxidation to Mn oxides via a multicopper-oxidase mechanism.
 - reference: DOI:10.1146/annurev.earth.32.101802.120213
@@ -298,4 +300,12 @@ curation_history:
   action: REFRESH_UNIPROT_ENTRY_VERSION
   changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
     UniProtKB:Q02567 (150 -> 151 on manganese_peroxidase).'
+  llm_assisted: true
+- timestamp: '2026-10-23T16:05:00Z'
+  curator: claude
+  action: ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE
+  changes: 'Added verified verbatim snippet from DOI:10.1016/j.tim.2005.07.009 (already
+    present on causal_graphs[0].edges[3]) to record-level evidence[0] to match definition_source
+    (Cycle 2 Stage 5 remediation of F-DEF-SRC-MANGANESE-OX-013 in group G-C2S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS,
+    issue #1995).'
   llm_assisted: true

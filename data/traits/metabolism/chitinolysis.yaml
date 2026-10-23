@@ -17,6 +17,8 @@ synonyms:
   source: DOI:10.3389/fmicb.2013.00149
 evidence:
 - reference: DOI:10.3389/fmicb.2013.00149
+  snippet: initial hydrolysis of the (1→4)-β-glycoside bond, as seen for chitinase-catalyzed
+    chitin degradation
   notes: Beier & Bertilsson review bacterial chitin degradation mechanisms and ecophysiological
     strategies.
 - reference: DOI:10.1080/07388550601168223
@@ -298,4 +300,12 @@ curation_history:
   action: REFRESH_UNIPROT_ENTRY_VERSION
   changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
     UniProtKB:P07254 (158 -> 159 on chitinase), UniProtKB:P9WEM3 (8 -> 9 on lpmo).'
+  llm_assisted: true
+- timestamp: '2026-10-23T16:05:00Z'
+  curator: claude
+  action: ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE
+  changes: 'Added verified verbatim snippet from DOI:10.3389/fmicb.2013.00149 (already
+    present on causal_graphs[0].edges[6]) to record-level evidence[0] to match definition_source
+    (Cycle 2 Stage 5 remediation of F-DEF-SRC-CHITINOLYSIS-015 in group G-C2S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS,
+    issue #1995).'
   llm_assisted: true

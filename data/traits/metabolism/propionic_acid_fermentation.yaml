@@ -15,9 +15,10 @@ synonyms:
   source: DOI:10.3390/molecules31020333
 evidence:
 - reference: DOI:10.3390/molecules31020333
-  notes: Review of classical fermentations describes propionic acid fermentation (acetic
-    acid, propionic acid, CO2) and propionibacteria as its agents, including the Wood-Werkman
-    route.
+  snippet: substrates such as glucose, glycerol or lactic acid are converted into
+    propionic acid
+  notes: Review of microbial propionic acid fermentation pathways (Wood-Werkman cycle
+    and acrylate pathway), metabolic engineering, and bioprocess optimization.
 - reference: DOI:10.3389/fmicb.2021.703525
   notes: Review of fermentative energy conservation supports propionate formation
     as a redox-balancing, energy-conserving fermentation route.
@@ -350,4 +351,12 @@ curation_history:
   action: REFRESH_UNIPROT_ENTRY_VERSION
   changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
     UniProtKB:Q8GBW6 (97 -> 98 on mmc_carboxytransferase).'
+  llm_assisted: true
+- timestamp: '2026-10-23T16:05:00Z'
+  curator: claude
+  action: ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE
+  changes: 'Added verified verbatim snippet from DOI:10.3390/molecules31020333 (already
+    present on causal_graphs[0].edges[1]) to record-level evidence[0] to match definition_source
+    (Cycle 2 Stage 5 remediation of F-DEF-SRC-PROPIONIC-FERM-012 in group G-C2S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS,
+    issue #1995).'
   llm_assisted: true

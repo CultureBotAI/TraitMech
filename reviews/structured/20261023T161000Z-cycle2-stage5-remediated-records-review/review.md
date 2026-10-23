@@ -1,0 +1,834 @@
+# Cycle 2 Stage 5 post-remediation verification review of the 6 TraitRecord files in group G-C2S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+
+- Review: 20261023T161000Z-cycle2-stage5-remediated-records-review
+- Repository: CultureBotAI/TraitMech
+- Started UTC: 2026-10-23T16:05:00Z
+- Finished UTC: 2026-10-23T16:10:00Z
+- Reviewer: antigravity (self_review)
+- Completion: completed
+- Verdict: pass
+- Scientific review: true
+
+## Summary
+
+Fresh post-remediation batch review of the 6 METABOLISM TraitRecord YAML files remediated in Cycle 2 Stage 5 (data/traits/metabolism/carbon_fixation.yaml [traitmech:000019], data/traits/metabolism/wood_ljungdahl_pathway.yaml [traitmech:000022], data/traits/metabolism/propionic_acid_fermentation.yaml [traitmech:000029], data/traits/metabolism/manganese_oxidation.yaml [traitmech:000032], data/traits/metabolism/cellulolysis.yaml [traitmech:000111], and data/traits/metabolism/chitinolysis.yaml [traitmech:000112]) under group G-C2S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS and GitHub issue #1995. All 6 Cycle 2 Stage 4 open findings (F-DEF-SRC-CARBON-FIXATION-010..F-DEF-SRC-CHITINOLYSIS-015) are verified as resolved with contiguous verbatim snippets from their primary definition_source in record-level evidence[0], append-only curation_history provenance, and 0 remaining open findings.
+
+## Scope And Provenance
+
+Focused post-remediation review of all 6 TraitRecord YAML files modified in Cycle 2 Stage 5 (resolve_review_findings) to resolve group G-C2S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS (#1995).
+
+Selection: All 6 records with open findings carried forward from Cycle 2 Stage 4 review 20261023T140800Z-cycle2-stage4-corpus-record-and-cohort-review.
+Coverage: full; 6 reviewed / 6 in the declared population.
+Source: working_tree at Git base 901e9484e8c1e61b97ab9565e331b99e26b05813.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| traitmech:000019 | data/traits/metabolism/carbon_fixation.yaml | maintained | carbon fixation |
+| traitmech:000022 | data/traits/metabolism/wood_ljungdahl_pathway.yaml | maintained | Wood–Ljungdahl pathway |
+| traitmech:000029 | data/traits/metabolism/propionic_acid_fermentation.yaml | maintained | propionic acid fermentation |
+| traitmech:000032 | data/traits/metabolism/manganese_oxidation.yaml | maintained | manganese oxidation |
+| traitmech:000111 | data/traits/metabolism/cellulolysis.yaml | maintained | cellulolysis |
+| traitmech:000112 | data/traits/metabolism/chitinolysis.yaml | maintained | chitinolysis |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Strict LinkML schema and reference validation across all TraitRecord files | passed | True | traitmech:000019, traitmech:000022, traitmech:000029, traitmech:000032, traitmech:000111, traitmech:000112 | All 1,130 TraitRecord YAML files (including all 6 Cycle 2 Stage 5 remediated records) pass strict closed-mode LinkML validation with 0 errors. |
+| Evidence snippet structural and baseline ratchet audit | passed | True | traitmech:000019, traitmech:000022, traitmech:000029, traitmech:000032, traitmech:000111, traitmech:000112 | All 6 newly added record-level evidence[0] snippets carry contiguous &gt;=12-char verbatim quotes passing scripts/audit_evidence_snippets.py with 0 new findings and reducing MISSING_SNIPPET from 2,276 to 2,270. |
+| Stage 5 guarded writer idempotency and postcondition unit tests | passed | True | traitmech:000019, traitmech:000022, traitmech:000029, traitmech:000032, traitmech:000111, traitmech:000112 | All 5 unit tests in tests/test_curate_stage5_review_findings.py pass, confirming DO_NOT_WORK protection, exact definition_source evidence alignment across all 10 remediated records (4 Cycle 1 + 6 Cycle 2), zero UNQUOTED_DEFINITION_SOURCE defects on remediated records, and dry-run/apply idempotency. |
+| Guarded YAML writer safeguard audit | passed | True | traitmech:000019, traitmech:000022, traitmech:000029, traitmech:000032, traitmech:000111, traitmech:000112 | scripts/curate_stage5_review_findings.py satisfies all writer safeguards (appends curation_history, has write safeguard, validates before write, wired into justfile). |
+
+## Scientific And Domain Assessments
+
+### Verification of record-level definition_source evidence[0] verbatim snippets across the 6 remediated records
+
+evidence: supported. Targets: traitmech:000019, traitmech:000022, traitmech:000029, traitmech:000032, traitmech:000111, traitmech:000112.
+
+All 6 records identified with open findings in Cycle 2 Stage 4 (carbon_fixation.yaml, wood_ljungdahl_pathway.yaml, propionic_acid_fermentation.yaml, manganese_oxidation.yaml, cellulolysis.yaml, and chitinolysis.yaml) now carry a verified verbatim snippet for their primary definition_source directly in record-level evidence[0].
+
+Each of the 6 remediated records was re-inspected against .claude/skills/review-yaml-record/SKILL.md: (1) data/traits/metabolism/carbon_fixation.yaml (traitmech:000019) now quotes DOI:10.1128/AEM.02473-10 in record-level evidence[0]; (2) data/traits/metabolism/wood_ljungdahl_pathway.yaml (traitmech:000022) now quotes DOI:10.1016/j.bbapap.2008.08.012 in record-level evidence[0]; (3) data/traits/metabolism/propionic_acid_fermentation.yaml (traitmech:000029) now quotes DOI:10.3390/molecules31020333 in record-level evidence[0]; (4) data/traits/metabolism/manganese_oxidation.yaml (traitmech:000032) now quotes DOI:10.1016/j.tim.2005.07.009 in record-level evidence[0]; (5) data/traits/metabolism/cellulolysis.yaml (traitmech:000111) now quotes DOI:10.1128/MMBR.66.3.506-577.2002 in record-level evidence[0]; and (6) data/traits/metabolism/chitinolysis.yaml (traitmech:000112) now quotes DOI:10.3389/fmicb.2013.00149 in record-level evidence[0].
+
+### Schema validity, curation_history provenance, and writer guardrails on remediated records
+
+provenance: supported. Targets: traitmech:000019, traitmech:000022, traitmech:000029, traitmech:000032, traitmech:000111, traitmech:000112.
+
+All 6 remediated records pass strict closed-mode LinkML validation, preserve existing canonical_examples, causal_graphs, and UniProtKB protein_examples untouched, and record append-only ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE curation_history entries referencing issue #1995.
+
+## Findings
+
+### F-DEF-SRC-CARBON-FIXATION-010: carbon_fixation.yaml now includes a verbatim snippet for definition_source DOI:10.1128/AEM.02473-10 in record-level evidence[0]
+
+minor / resolved / confirmed; issue key: carbon-fixation-definition-source-evidence.
+
+Resolved Cycle 2 Stage 4 open finding F-DEF-SRC-CARBON-FIXATION-010 on data/traits/metabolism/carbon_fixation.yaml (traitmech:000019): promoted verified verbatim snippet ('The reductive pentose phosphate cycle is the quantitatively most important mechanism of autotrophic CO2 fixation in nature.') from causal_graphs[0].edges[11] to record-level evidence[0] for definition_source DOI:10.1128/AEM.02473-10 and appended curation_history entry via scripts/curate_stage5_review_findings.py.
+
+Disposition: Resolved in Cycle 2 Stage 5 (resolve_review_findings) under group G-C2S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS and GitHub issue #1995 via guarded writer scripts/curate_stage5_review_findings.py.
+
+### F-DEF-SRC-WOOD-LJUNGDAHL-011: wood_ljungdahl_pathway.yaml now includes a verbatim snippet for definition_source DOI:10.1016/j.bbapap.2008.08.012 in record-level evidence[0]
+
+minor / resolved / confirmed; issue key: wood-ljungdahl-definition-source-evidence.
+
+Resolved Cycle 2 Stage 4 open finding F-DEF-SRC-WOOD-LJUNGDAHL-011 on data/traits/metabolism/wood_ljungdahl_pathway.yaml (traitmech:000022): promoted verified verbatim snippet ('use the reductive acetyl-CoA or Wood-Ljungdahl pathway as their main mechanism for energy conservation and for synthesis of acetyl-CoA and cell carbon from CO2') from causal_graphs[0].edges[0] to record-level evidence[0] for definition_source DOI:10.1016/j.bbapap.2008.08.012 and appended curation_history entry via scripts/curate_stage5_review_findings.py.
+
+Disposition: Resolved in Cycle 2 Stage 5 (resolve_review_findings) under group G-C2S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS and GitHub issue #1995 via guarded writer scripts/curate_stage5_review_findings.py.
+
+### F-DEF-SRC-PROPIONIC-FERM-012: propionic_acid_fermentation.yaml now includes a verbatim snippet for definition_source DOI:10.3390/molecules31020333 in record-level evidence[0]
+
+minor / resolved / confirmed; issue key: propionic-fermentation-definition-source-evidence.
+
+Resolved Cycle 2 Stage 4 open finding F-DEF-SRC-PROPIONIC-FERM-012 on data/traits/metabolism/propionic_acid_fermentation.yaml (traitmech:000029): promoted verified verbatim snippet ('substrates such as glucose, glycerol or lactic acid are converted into propionic acid') from causal_graphs[0].edges[1] to record-level evidence[0] for definition_source DOI:10.3390/molecules31020333 and appended curation_history entry via scripts/curate_stage5_review_findings.py.
+
+Disposition: Resolved in Cycle 2 Stage 5 (resolve_review_findings) under group G-C2S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS and GitHub issue #1995 via guarded writer scripts/curate_stage5_review_findings.py.
+
+### F-DEF-SRC-MANGANESE-OX-013: manganese_oxidation.yaml now includes a verbatim snippet for definition_source DOI:10.1016/j.tim.2005.07.009 in record-level evidence[0]
+
+minor / resolved / confirmed; issue key: manganese-oxidation-definition-source-evidence.
+
+Resolved Cycle 2 Stage 4 open finding F-DEF-SRC-MANGANESE-OX-013 on data/traits/metabolism/manganese_oxidation.yaml (traitmech:000032): promoted verified verbatim snippet ('the reaction might involve a unique multicopper oxidase system capable of a two-electron oxidation of the substrate') from causal_graphs[0].edges[3] to record-level evidence[0] for definition_source DOI:10.1016/j.tim.2005.07.009 and appended curation_history entry via scripts/curate_stage5_review_findings.py.
+
+Disposition: Resolved in Cycle 2 Stage 5 (resolve_review_findings) under group G-C2S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS and GitHub issue #1995 via guarded writer scripts/curate_stage5_review_findings.py.
+
+### F-DEF-SRC-CELLULOLYSIS-014: cellulolysis.yaml now includes a verbatim snippet for definition_source DOI:10.1128/MMBR.66.3.506-577.2002 in record-level evidence[0]
+
+minor / resolved / confirmed; issue key: cellulolysis-definition-source-evidence.
+
+Resolved Cycle 2 Stage 4 open finding F-DEF-SRC-CELLULOLYSIS-014 on data/traits/metabolism/cellulolysis.yaml (traitmech:000111): promoted verified verbatim snippet ('complexed cellulase systems') from causal_graphs[0].edges[15] to record-level evidence[0] for definition_source DOI:10.1128/MMBR.66.3.506-577.2002 and appended curation_history entry via scripts/curate_stage5_review_findings.py.
+
+Disposition: Resolved in Cycle 2 Stage 5 (resolve_review_findings) under group G-C2S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS and GitHub issue #1995 via guarded writer scripts/curate_stage5_review_findings.py.
+
+### F-DEF-SRC-CHITINOLYSIS-015: chitinolysis.yaml now includes a verbatim snippet for definition_source DOI:10.3389/fmicb.2013.00149 in record-level evidence[0]
+
+minor / resolved / confirmed; issue key: chitinolysis-definition-source-evidence.
+
+Resolved Cycle 2 Stage 4 open finding F-DEF-SRC-CHITINOLYSIS-015 on data/traits/metabolism/chitinolysis.yaml (traitmech:000112): promoted verified verbatim snippet ('initial hydrolysis of the (1→4)-β-glycoside bond, as seen for chitinase-catalyzed chitin degradation') from causal_graphs[0].edges[6] to record-level evidence[0] for definition_source DOI:10.3389/fmicb.2013.00149 and appended curation_history entry via scripts/curate_stage5_review_findings.py.
+
+Disposition: Resolved in Cycle 2 Stage 5 (resolve_review_findings) under group G-C2S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS and GitHub issue #1995 via guarded writer scripts/curate_stage5_review_findings.py.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| ev-prior-c2s4-review | reviews/structured/20261023T140800Z-cycle2-stage4-corpus-record-and-cohort-review/review.yaml; findings[0..5] | supports | Immutable Cycle 2 Stage 4 review bundle identifying the 6 open definition_source evidence snippet findings (F-DEF-SRC-CARBON-FIXATION-010..F-DEF-SRC-CHITINOLYSIS-015) with planned remediation actions ACT-DEF-SRC-CARBON-FIXATION-010..015. |
+| ev-berg-2011 | DOI:10.1128/AEM.02473-10; Berg 2011, Appl Environ Microbiol 77:1925-1936 (quoted on causal_graphs[0].edges[11] and promoted to evidence[0]) | supports | Primary definition_source DOI:10.1128/AEM.02473-10 for carbon fixation (traitmech:000019) verified via existing verbatim quote on causal_graphs[0].edges[11] and promoted to record-level evidence[0]. |
+| ev-ragsdale-2008 | DOI:10.1016/j.bbapap.2008.08.012; Ragsdale &amp; Pierce 2008, Biochim Biophys Acta 1784:1873-1898 (quoted on causal_graphs[0].edges[0] and promoted to evidence[0]) | supports | Primary definition_source DOI:10.1016/j.bbapap.2008.08.012 for Wood–Ljungdahl pathway (traitmech:000022) verified via existing verbatim quote on causal_graphs[0].edges[0] and promoted to record-level evidence[0]. |
+| ev-molecules-2026 | DOI:10.3390/molecules31020333; Molecules 31(2):333 (quoted on causal_graphs[0].edges[1] and promoted to evidence[0]) | supports | Primary definition_source DOI:10.3390/molecules31020333 for propionic acid fermentation (traitmech:000029) verified via existing verbatim quote on causal_graphs[0].edges[1] and promoted to record-level evidence[0]. |
+| ev-tebo-2005 | DOI:10.1016/j.tim.2005.07.009; Tebo et al. 2005, Trends Microbiol 13:421-428 (quoted on causal_graphs[0].edges[3] and promoted to evidence[0]) | supports | Primary definition_source DOI:10.1016/j.tim.2005.07.009 for manganese oxidation (traitmech:000032) verified via existing verbatim quote on causal_graphs[0].edges[3] and promoted to record-level evidence[0]. |
+| ev-lynd-2002 | DOI:10.1128/MMBR.66.3.506-577.2002; Lynd et al. 2002, Microbiol Mol Biol Rev 66:506-577 (quoted on causal_graphs[0].edges[15] and promoted to evidence[0]) | supports | Primary definition_source DOI:10.1128/MMBR.66.3.506-577.2002 for cellulolysis (traitmech:000111) verified via existing verbatim quote on causal_graphs[0].edges[15] and promoted to record-level evidence[0]. |
+| ev-beier-2013 | DOI:10.3389/fmicb.2013.00149; Beier &amp; Bertilsson 2013, Front Microbiol 4:149 (quoted on causal_graphs[0].edges[6] and promoted to evidence[0]) | supports | Primary definition_source DOI:10.3389/fmicb.2013.00149 for chitinolysis (traitmech:000112) verified via existing verbatim quote on causal_graphs[0].edges[6] and promoted to record-level evidence[0]. |
+| ev-remediated-records | data/traits/metabolism/carbon_fixation.yaml; data/traits/metabolism/wood_ljungdahl_pathway.yaml; data/traits/metabolism/propionic_acid_fermentation.yaml; data/traits/metabolism/manganese_oxidation.yaml; data/traits/metabolism/cellulolysis.yaml; data/traits/metabolism/chitinolysis.yaml; definition_source, evidence[0], curation_history | supports | All 6 remediated TraitRecord YAML files now include a verified verbatim snippet for their declared definition_source in record-level evidence[0] and an append-only ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE curation_history event. |
+| ev-stage5-writer | scripts/curate_stage5_review_findings.py; tests/test_curate_stage5_review_findings.py; process_all | supports | Guarded writer script and unit test suite verifying closed-mode LinkML validation, DO_NOT_WORK exclusion, and idempotent remediation across all 10 target records (4 Cycle 1 + 6 Cycle 2). |
+| ev-validate-strict | scripts/validate_strict.py; reports/instance_validation_failures.tsv | supports | Closed-mode LinkML schema and identifier validation passes with 0 errors across all 1,130 TraitRecord files. |
+| ev-snippet-audit | scripts/audit_evidence_snippets.py; conf/evidence_snippet_baseline.tsv | supports | All 6 new record-level evidence[0] snippets pass contiguous verbatim quote checks with 0 new warnings and eliminate all 6 self-quoted UNQUOTED_DEFINITION_SOURCE findings from Cycle 2 Stage 4. |
+
+## Limits And Additional Notes
+
+- This batch review covers the 6 records remediated in Cycle 2 Stage 5 under group G-C2S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS (#1995); the 5 cohort-level source-limited or upstream-blocked findings from Cycle 2 Stage 4 remain tracked under open GitHub issues #1982, #1983, #1984, #1985, and #364.
+- All 6 remediated records carry repository-minted traitmech:NNNNNN identifiers backed by validated ROBOT templates awaiting upstream METPO release incorporation (#364, berkeleybop/metpo#535).
+- Skills executed: .claude/skills/curate-yaml-record/SKILL.md and .claude/skills/review-yaml-record/SKILL.md.
+- Immutable Cycle 2 Stage 4 review bundle preserved untouched at reviews/structured/20261023T140800Z-cycle2-stage4-corpus-record-and-cohort-review/review.yaml.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261023T161000Z-cycle2-stage5-remediated-records-review
+kind: batch
+repository: CultureBotAI/TraitMech
+title: Cycle 2 Stage 5 post-remediation verification review of the 6 TraitRecord files
+  in group G-C2S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+started_at: '2026-10-23T16:05:00Z'
+finished_at: '2026-10-23T16:10:00Z'
+reviewer:
+  identity: antigravity
+  kind: agent
+  model: claude-opus-4-6
+  independence: self_review
+  independence_basis: Repository-local post-remediation record review verifying resolution
+    of the 6 Cycle 2 Stage 4 open findings (F-DEF-SRC-CARBON-FIXATION-010..F-DEF-SRC-CHITINOLYSIS-015)
+    under group G-C2S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS (#1995); separate from
+    independent PR adversarial review.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass
+scientific_review: true
+summary: 'Fresh post-remediation batch review of the 6 METABOLISM TraitRecord YAML
+  files remediated in Cycle 2 Stage 5 (data/traits/metabolism/carbon_fixation.yaml
+  [traitmech:000019], data/traits/metabolism/wood_ljungdahl_pathway.yaml [traitmech:000022],
+  data/traits/metabolism/propionic_acid_fermentation.yaml [traitmech:000029], data/traits/metabolism/manganese_oxidation.yaml
+  [traitmech:000032], data/traits/metabolism/cellulolysis.yaml [traitmech:000111],
+  and data/traits/metabolism/chitinolysis.yaml [traitmech:000112]) under group G-C2S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+  and GitHub issue #1995. All 6 Cycle 2 Stage 4 open findings (F-DEF-SRC-CARBON-FIXATION-010..F-DEF-SRC-CHITINOLYSIS-015)
+  are verified as resolved with contiguous verbatim snippets from their primary definition_source
+  in record-level evidence[0], append-only curation_history provenance, and 0 remaining
+  open findings.'
+source:
+  git_revision: 901e9484e8c1e61b97ab9565e331b99e26b05813
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/SKILL.md
+    sha256: 27f535d3f057d321c8b87c6506f2f35dd2d37fd005bcd5040b3e17269285075b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: bb03efa3bbd3748ee1dccf57612a6ce8fcc861f20eb57c33eb16e3ac1dd728bd
+    role: context
+  - path: CLAUDE.md
+    sha256: 4d328127022388e1affe9b71be24bc93944a971636d0d0ea902f6511e0b405c5
+    role: context
+  - path: DO_NOT_WORK.md
+    sha256: 9ae0b05cc06f4ce8938801287a568d535e471d06dda5e258fcdbbed222abf712
+    role: context
+  - path: conf/record_review.yaml
+    sha256: 5adc6244761fb2baf8a059d81f23b0c9b32a33f9426ab84094234c3ec417269d
+    role: context
+  - path: data/traits/metabolism/carbon_fixation.yaml
+    sha256: bd99cad106465d8716c70905655df5864c9d1e525dbca7449f0ad96b2b94378e
+    role: target
+  - path: data/traits/metabolism/cellulolysis.yaml
+    sha256: 6356790e611b42e654a10aaa7bfb0a21b9cde5a6d9dcaaa371cf5f96ea868293
+    role: target
+  - path: data/traits/metabolism/chitinolysis.yaml
+    sha256: 7e54463ebb5f0fc321dcc7448b7ef9490ef2f06b4d9f3d8c3f11e227d707b75b
+    role: target
+  - path: data/traits/metabolism/manganese_oxidation.yaml
+    sha256: aed4ae9adb09fa82e20e0081cbc87e2041a49854e68cb3b95804cbbcf0fbaf1b
+    role: target
+  - path: data/traits/metabolism/propionic_acid_fermentation.yaml
+    sha256: 8de700637e1aa7e0e2ecf1346277fce353fecc42ba7a18cad499ce95c2b0ecc1
+    role: target
+  - path: data/traits/metabolism/wood_ljungdahl_pathway.yaml
+    sha256: 19233b965dc211a64c8bef63ca20a84512bbcf0c2c96e2a34c4ecf63a2fe9939
+    role: target
+  - path: docs/record-review-profile.md
+    sha256: cac714488cad03263ca3847737d5f70d174d40b5be677a09e0c1d9c814d9bc6a
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/infrastructure/curate_stage5_review_findings/2026-10-23T160500Z-claude-code-c2s501.yaml
+    sha256: 0757400b1533acafed5c7344673c943c1547d2c74588a9a04876d1fec23609fc
+    role: context
+  - path: reviews/structured/20261023T140800Z-cycle2-stage4-corpus-record-and-cohort-review/review.yaml
+    sha256: 0c962524454ffdb843da049562315a40a98583159335b775eccd8045616d7c47
+    role: context
+  - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-04/revision-0001/evidence.yaml
+    sha256: 1bb1aa12138f8562dcc3f57d321ee35461719215c7e1ca41a4f45ebd1de516d1
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: scripts/curate_stage5_review_findings.py
+    sha256: 6e19a3919165921553c9bb81934f7d4212c1e60fe43174614cfaf0aaac107610
+    role: context
+  - path: src/traitmech/schema/traitmech.yaml
+    sha256: 46c47fc627b80ccbba1e8ab3fb6f2aee93bc2aef7aaf72fe9aadc3257f2c02dd
+    role: context
+  - path: tests/test_curate_stage5_review_findings.py
+    sha256: 7d271aaf31f5531a69dcac3a3de9edf3bbf3c13cf7a2f2bfbb6137de26d6da08
+    role: context
+scope:
+  description: Focused post-remediation review of all 6 TraitRecord YAML files modified
+    in Cycle 2 Stage 5 (resolve_review_findings) to resolve group G-C2S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+    (#1995).
+  selection: All 6 records with open findings carried forward from Cycle 2 Stage 4
+    review 20261023T140800Z-cycle2-stage4-corpus-record-and-cohort-review.
+  coverage: full
+  population_size: 6
+  reviewed_target_ids:
+  - traitmech:000019
+  - traitmech:000022
+  - traitmech:000029
+  - traitmech:000032
+  - traitmech:000111
+  - traitmech:000112
+targets:
+- target_id: traitmech:000019
+  path: data/traits/metabolism/carbon_fixation.yaml
+  label: carbon fixation
+  record_class: TraitRecord
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/metabolism/carbon_fixation.yaml
+    role: maintained TraitRecord YAML
+- target_id: traitmech:000022
+  path: data/traits/metabolism/wood_ljungdahl_pathway.yaml
+  label: Wood–Ljungdahl pathway
+  record_class: TraitRecord
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/metabolism/wood_ljungdahl_pathway.yaml
+    role: maintained TraitRecord YAML
+- target_id: traitmech:000029
+  path: data/traits/metabolism/propionic_acid_fermentation.yaml
+  label: propionic acid fermentation
+  record_class: TraitRecord
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/metabolism/propionic_acid_fermentation.yaml
+    role: maintained TraitRecord YAML
+- target_id: traitmech:000032
+  path: data/traits/metabolism/manganese_oxidation.yaml
+  label: manganese oxidation
+  record_class: TraitRecord
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/metabolism/manganese_oxidation.yaml
+    role: maintained TraitRecord YAML
+- target_id: traitmech:000111
+  path: data/traits/metabolism/cellulolysis.yaml
+  label: cellulolysis
+  record_class: TraitRecord
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/metabolism/cellulolysis.yaml
+    role: maintained TraitRecord YAML
+- target_id: traitmech:000112
+  path: data/traits/metabolism/chitinolysis.yaml
+  label: chitinolysis
+  record_class: TraitRecord
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/metabolism/chitinolysis.yaml
+    role: maintained TraitRecord YAML
+checks:
+- check_id: validate-strict
+  name: Strict LinkML schema and reference validation across all TraitRecord files
+  command: uv run python scripts/validate_strict.py
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000019
+  - traitmech:000022
+  - traitmech:000029
+  - traitmech:000032
+  - traitmech:000111
+  - traitmech:000112
+  evidence_ids:
+  - ev-validate-strict
+  - ev-remediated-records
+  summary: All 1,130 TraitRecord YAML files (including all 6 Cycle 2 Stage 5 remediated
+    records) pass strict closed-mode LinkML validation with 0 errors.
+- check_id: audit-snippets
+  name: Evidence snippet structural and baseline ratchet audit
+  command: uv run python scripts/audit_evidence_snippets.py
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000019
+  - traitmech:000022
+  - traitmech:000029
+  - traitmech:000032
+  - traitmech:000111
+  - traitmech:000112
+  evidence_ids:
+  - ev-snippet-audit
+  - ev-berg-2011
+  - ev-ragsdale-2008
+  - ev-molecules-2026
+  - ev-tebo-2005
+  - ev-lynd-2002
+  - ev-beier-2013
+  summary: All 6 newly added record-level evidence[0] snippets carry contiguous >=12-char
+    verbatim quotes passing scripts/audit_evidence_snippets.py with 0 new findings
+    and reducing MISSING_SNIPPET from 2,276 to 2,270.
+- check_id: stage5-writer-tests
+  name: Stage 5 guarded writer idempotency and postcondition unit tests
+  command: uv run pytest tests/test_curate_stage5_review_findings.py -v
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000019
+  - traitmech:000022
+  - traitmech:000029
+  - traitmech:000032
+  - traitmech:000111
+  - traitmech:000112
+  evidence_ids:
+  - ev-stage5-writer
+  summary: All 5 unit tests in tests/test_curate_stage5_review_findings.py pass, confirming
+    DO_NOT_WORK protection, exact definition_source evidence alignment across all
+    10 remediated records (4 Cycle 1 + 6 Cycle 2), zero UNQUOTED_DEFINITION_SOURCE
+    defects on remediated records, and dry-run/apply idempotency.
+- check_id: audit-writers
+  name: Guarded YAML writer safeguard audit
+  command: uv run python scripts/audit_writers.py
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000019
+  - traitmech:000022
+  - traitmech:000029
+  - traitmech:000032
+  - traitmech:000111
+  - traitmech:000112
+  evidence_ids:
+  - ev-stage5-writer
+  summary: scripts/curate_stage5_review_findings.py satisfies all writer safeguards
+    (appends curation_history, has write safeguard, validates before write, wired
+    into justfile).
+evidence:
+- evidence_id: ev-prior-c2s4-review
+  kind: prior_review
+  reference: reviews/structured/20261023T140800Z-cycle2-stage4-corpus-record-and-cohort-review/review.yaml
+  locator: findings[0..5]
+  accessed_at: '2026-10-23T16:05:00Z'
+  support: supports
+  summary: Immutable Cycle 2 Stage 4 review bundle identifying the 6 open definition_source
+    evidence snippet findings (F-DEF-SRC-CARBON-FIXATION-010..F-DEF-SRC-CHITINOLYSIS-015)
+    with planned remediation actions ACT-DEF-SRC-CARBON-FIXATION-010..015.
+  snapshot_sha256: 0c962524454ffdb843da049562315a40a98583159335b775eccd8045616d7c47
+- evidence_id: ev-berg-2011
+  kind: primary_source
+  reference: DOI:10.1128/AEM.02473-10
+  locator: Berg 2011, Appl Environ Microbiol 77:1925-1936 (quoted on causal_graphs[0].edges[11]
+    and promoted to evidence[0])
+  accessed_at: '2026-10-23T16:06:00Z'
+  support: supports
+  summary: Primary definition_source DOI:10.1128/AEM.02473-10 for carbon fixation
+    (traitmech:000019) verified via existing verbatim quote on causal_graphs[0].edges[11]
+    and promoted to record-level evidence[0].
+  quote: The reductive pentose phosphate cycle is the quantitatively most important
+    mechanism of autotrophic CO2 fixation in nature.
+- evidence_id: ev-ragsdale-2008
+  kind: primary_source
+  reference: DOI:10.1016/j.bbapap.2008.08.012
+  locator: Ragsdale & Pierce 2008, Biochim Biophys Acta 1784:1873-1898 (quoted on
+    causal_graphs[0].edges[0] and promoted to evidence[0])
+  accessed_at: '2026-10-23T16:06:00Z'
+  support: supports
+  summary: Primary definition_source DOI:10.1016/j.bbapap.2008.08.012 for Wood–Ljungdahl
+    pathway (traitmech:000022) verified via existing verbatim quote on causal_graphs[0].edges[0]
+    and promoted to record-level evidence[0].
+  quote: use the reductive acetyl-CoA or Wood-Ljungdahl pathway as their main mechanism
+    for energy conservation and for synthesis of acetyl-CoA and cell carbon from CO2
+- evidence_id: ev-molecules-2026
+  kind: primary_source
+  reference: DOI:10.3390/molecules31020333
+  locator: Molecules 31(2):333 (quoted on causal_graphs[0].edges[1] and promoted to
+    evidence[0])
+  accessed_at: '2026-10-23T16:06:00Z'
+  support: supports
+  summary: Primary definition_source DOI:10.3390/molecules31020333 for propionic acid
+    fermentation (traitmech:000029) verified via existing verbatim quote on causal_graphs[0].edges[1]
+    and promoted to record-level evidence[0].
+  quote: substrates such as glucose, glycerol or lactic acid are converted into propionic
+    acid
+- evidence_id: ev-tebo-2005
+  kind: primary_source
+  reference: DOI:10.1016/j.tim.2005.07.009
+  locator: Tebo et al. 2005, Trends Microbiol 13:421-428 (quoted on causal_graphs[0].edges[3]
+    and promoted to evidence[0])
+  accessed_at: '2026-10-23T16:06:00Z'
+  support: supports
+  summary: Primary definition_source DOI:10.1016/j.tim.2005.07.009 for manganese oxidation
+    (traitmech:000032) verified via existing verbatim quote on causal_graphs[0].edges[3]
+    and promoted to record-level evidence[0].
+  quote: the reaction might involve a unique multicopper oxidase system capable of
+    a two-electron oxidation of the substrate
+- evidence_id: ev-lynd-2002
+  kind: primary_source
+  reference: DOI:10.1128/MMBR.66.3.506-577.2002
+  locator: Lynd et al. 2002, Microbiol Mol Biol Rev 66:506-577 (quoted on causal_graphs[0].edges[15]
+    and promoted to evidence[0])
+  accessed_at: '2026-10-23T16:06:00Z'
+  support: supports
+  summary: Primary definition_source DOI:10.1128/MMBR.66.3.506-577.2002 for cellulolysis
+    (traitmech:000111) verified via existing verbatim quote on causal_graphs[0].edges[15]
+    and promoted to record-level evidence[0].
+  quote: complexed cellulase systems
+- evidence_id: ev-beier-2013
+  kind: primary_source
+  reference: DOI:10.3389/fmicb.2013.00149
+  locator: Beier & Bertilsson 2013, Front Microbiol 4:149 (quoted on causal_graphs[0].edges[6]
+    and promoted to evidence[0])
+  accessed_at: '2026-10-23T16:06:00Z'
+  support: supports
+  summary: Primary definition_source DOI:10.3389/fmicb.2013.00149 for chitinolysis
+    (traitmech:000112) verified via existing verbatim quote on causal_graphs[0].edges[6]
+    and promoted to record-level evidence[0].
+  quote: initial hydrolysis of the (1→4)-β-glycoside bond, as seen for chitinase-catalyzed
+    chitin degradation
+- evidence_id: ev-remediated-records
+  kind: record_content
+  reference: data/traits/metabolism/carbon_fixation.yaml; data/traits/metabolism/wood_ljungdahl_pathway.yaml;
+    data/traits/metabolism/propionic_acid_fermentation.yaml; data/traits/metabolism/manganese_oxidation.yaml;
+    data/traits/metabolism/cellulolysis.yaml; data/traits/metabolism/chitinolysis.yaml
+  locator: definition_source, evidence[0], curation_history
+  accessed_at: '2026-10-23T16:07:00Z'
+  support: supports
+  summary: All 6 remediated TraitRecord YAML files now include a verified verbatim
+    snippet for their declared definition_source in record-level evidence[0] and an
+    append-only ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE curation_history event.
+- evidence_id: ev-stage5-writer
+  kind: validation
+  reference: scripts/curate_stage5_review_findings.py; tests/test_curate_stage5_review_findings.py
+  locator: process_all
+  accessed_at: '2026-10-23T16:08:00Z'
+  support: supports
+  summary: Guarded writer script and unit test suite verifying closed-mode LinkML
+    validation, DO_NOT_WORK exclusion, and idempotent remediation across all 10 target
+    records (4 Cycle 1 + 6 Cycle 2).
+  snapshot_sha256: 6e19a3919165921553c9bb81934f7d4212c1e60fe43174614cfaf0aaac107610
+- evidence_id: ev-validate-strict
+  kind: validation
+  reference: scripts/validate_strict.py
+  locator: reports/instance_validation_failures.tsv
+  accessed_at: '2026-10-23T16:09:00Z'
+  support: supports
+  summary: Closed-mode LinkML schema and identifier validation passes with 0 errors
+    across all 1,130 TraitRecord files.
+- evidence_id: ev-snippet-audit
+  kind: validation
+  reference: scripts/audit_evidence_snippets.py
+  locator: conf/evidence_snippet_baseline.tsv
+  accessed_at: '2026-10-23T16:09:00Z'
+  support: supports
+  summary: All 6 new record-level evidence[0] snippets pass contiguous verbatim quote
+    checks with 0 new warnings and eliminate all 6 self-quoted UNQUOTED_DEFINITION_SOURCE
+    findings from Cycle 2 Stage 4.
+assessments:
+- assessment_id: assess-remediated-evidence-alignment
+  area: evidence
+  topic: Verification of record-level definition_source evidence[0] verbatim snippets
+    across the 6 remediated records
+  outcome: supported
+  summary: All 6 records identified with open findings in Cycle 2 Stage 4 (carbon_fixation.yaml,
+    wood_ljungdahl_pathway.yaml, propionic_acid_fermentation.yaml, manganese_oxidation.yaml,
+    cellulolysis.yaml, and chitinolysis.yaml) now carry a verified verbatim snippet
+    for their primary definition_source directly in record-level evidence[0].
+  target_ids:
+  - traitmech:000019
+  - traitmech:000022
+  - traitmech:000029
+  - traitmech:000032
+  - traitmech:000111
+  - traitmech:000112
+  evidence_ids:
+  - ev-prior-c2s4-review
+  - ev-berg-2011
+  - ev-ragsdale-2008
+  - ev-molecules-2026
+  - ev-tebo-2005
+  - ev-lynd-2002
+  - ev-beier-2013
+  - ev-remediated-records
+  - ev-snippet-audit
+  metrics:
+  - name: remediated_open_findings_rate
+    value: 1.0
+    unit: ratio
+    definition: Fraction of Cycle 2 Stage 4 open findings in group G-C2S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+      verified as resolved with verbatim definition_source evidence.
+    denominator: 6
+    minimum: 0.0
+    maximum: 1.0
+  details: 'Each of the 6 remediated records was re-inspected against .claude/skills/review-yaml-record/SKILL.md:
+    (1) data/traits/metabolism/carbon_fixation.yaml (traitmech:000019) now quotes
+    DOI:10.1128/AEM.02473-10 in record-level evidence[0]; (2) data/traits/metabolism/wood_ljungdahl_pathway.yaml
+    (traitmech:000022) now quotes DOI:10.1016/j.bbapap.2008.08.012 in record-level
+    evidence[0]; (3) data/traits/metabolism/propionic_acid_fermentation.yaml (traitmech:000029)
+    now quotes DOI:10.3390/molecules31020333 in record-level evidence[0]; (4) data/traits/metabolism/manganese_oxidation.yaml
+    (traitmech:000032) now quotes DOI:10.1016/j.tim.2005.07.009 in record-level evidence[0];
+    (5) data/traits/metabolism/cellulolysis.yaml (traitmech:000111) now quotes DOI:10.1128/MMBR.66.3.506-577.2002
+    in record-level evidence[0]; and (6) data/traits/metabolism/chitinolysis.yaml
+    (traitmech:000112) now quotes DOI:10.3389/fmicb.2013.00149 in record-level evidence[0].'
+- assessment_id: assess-remediated-schema-and-provenance
+  area: provenance
+  topic: Schema validity, curation_history provenance, and writer guardrails on remediated
+    records
+  outcome: supported
+  summary: 'All 6 remediated records pass strict closed-mode LinkML validation, preserve
+    existing canonical_examples, causal_graphs, and UniProtKB protein_examples untouched,
+    and record append-only ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE curation_history
+    entries referencing issue #1995.'
+  target_ids:
+  - traitmech:000019
+  - traitmech:000022
+  - traitmech:000029
+  - traitmech:000032
+  - traitmech:000111
+  - traitmech:000112
+  evidence_ids:
+  - ev-remediated-records
+  - ev-stage5-writer
+  - ev-validate-strict
+findings:
+- finding_id: F-DEF-SRC-CARBON-FIXATION-010
+  issue_key: carbon-fixation-definition-source-evidence
+  category: evidence
+  severity: minor
+  status: resolved
+  certainty: confirmed
+  title: carbon_fixation.yaml now includes a verbatim snippet for definition_source
+    DOI:10.1128/AEM.02473-10 in record-level evidence[0]
+  description: 'Resolved Cycle 2 Stage 4 open finding F-DEF-SRC-CARBON-FIXATION-010
+    on data/traits/metabolism/carbon_fixation.yaml (traitmech:000019): promoted verified
+    verbatim snippet (''The reductive pentose phosphate cycle is the quantitatively
+    most important mechanism of autotrophic CO2 fixation in nature.'') from causal_graphs[0].edges[11]
+    to record-level evidence[0] for definition_source DOI:10.1128/AEM.02473-10 and
+    appended curation_history entry via scripts/curate_stage5_review_findings.py.'
+  target_ids:
+  - traitmech:000019
+  field_paths:
+  - definition_source
+  - evidence
+  - curation_history
+  evidence_ids:
+  - ev-prior-c2s4-review
+  - ev-berg-2011
+  - ev-remediated-records
+  - ev-stage5-writer
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/metabolism/carbon_fixation.yaml
+    role: maintained TraitRecord YAML
+  disposition_reason: 'Resolved in Cycle 2 Stage 5 (resolve_review_findings) under
+    group G-C2S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS and GitHub issue #1995 via
+    guarded writer scripts/curate_stage5_review_findings.py.'
+  previous_occurrences:
+  - repository: CultureBotAI/TraitMech
+    review_id: 20261023T140800Z-cycle2-stage4-corpus-record-and-cohort-review
+    finding_id: F-DEF-SRC-CARBON-FIXATION-010
+  external_issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1995
+- finding_id: F-DEF-SRC-WOOD-LJUNGDAHL-011
+  issue_key: wood-ljungdahl-definition-source-evidence
+  category: evidence
+  severity: minor
+  status: resolved
+  certainty: confirmed
+  title: wood_ljungdahl_pathway.yaml now includes a verbatim snippet for definition_source
+    DOI:10.1016/j.bbapap.2008.08.012 in record-level evidence[0]
+  description: 'Resolved Cycle 2 Stage 4 open finding F-DEF-SRC-WOOD-LJUNGDAHL-011
+    on data/traits/metabolism/wood_ljungdahl_pathway.yaml (traitmech:000022): promoted
+    verified verbatim snippet (''use the reductive acetyl-CoA or Wood-Ljungdahl pathway
+    as their main mechanism for energy conservation and for synthesis of acetyl-CoA
+    and cell carbon from CO2'') from causal_graphs[0].edges[0] to record-level evidence[0]
+    for definition_source DOI:10.1016/j.bbapap.2008.08.012 and appended curation_history
+    entry via scripts/curate_stage5_review_findings.py.'
+  target_ids:
+  - traitmech:000022
+  field_paths:
+  - definition_source
+  - evidence
+  - curation_history
+  evidence_ids:
+  - ev-prior-c2s4-review
+  - ev-ragsdale-2008
+  - ev-remediated-records
+  - ev-stage5-writer
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/metabolism/wood_ljungdahl_pathway.yaml
+    role: maintained TraitRecord YAML
+  disposition_reason: 'Resolved in Cycle 2 Stage 5 (resolve_review_findings) under
+    group G-C2S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS and GitHub issue #1995 via
+    guarded writer scripts/curate_stage5_review_findings.py.'
+  previous_occurrences:
+  - repository: CultureBotAI/TraitMech
+    review_id: 20261023T140800Z-cycle2-stage4-corpus-record-and-cohort-review
+    finding_id: F-DEF-SRC-WOOD-LJUNGDAHL-011
+  external_issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1995
+- finding_id: F-DEF-SRC-PROPIONIC-FERM-012
+  issue_key: propionic-fermentation-definition-source-evidence
+  category: evidence
+  severity: minor
+  status: resolved
+  certainty: confirmed
+  title: propionic_acid_fermentation.yaml now includes a verbatim snippet for definition_source
+    DOI:10.3390/molecules31020333 in record-level evidence[0]
+  description: 'Resolved Cycle 2 Stage 4 open finding F-DEF-SRC-PROPIONIC-FERM-012
+    on data/traits/metabolism/propionic_acid_fermentation.yaml (traitmech:000029):
+    promoted verified verbatim snippet (''substrates such as glucose, glycerol or
+    lactic acid are converted into propionic acid'') from causal_graphs[0].edges[1]
+    to record-level evidence[0] for definition_source DOI:10.3390/molecules31020333
+    and appended curation_history entry via scripts/curate_stage5_review_findings.py.'
+  target_ids:
+  - traitmech:000029
+  field_paths:
+  - definition_source
+  - evidence
+  - curation_history
+  evidence_ids:
+  - ev-prior-c2s4-review
+  - ev-molecules-2026
+  - ev-remediated-records
+  - ev-stage5-writer
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/metabolism/propionic_acid_fermentation.yaml
+    role: maintained TraitRecord YAML
+  disposition_reason: 'Resolved in Cycle 2 Stage 5 (resolve_review_findings) under
+    group G-C2S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS and GitHub issue #1995 via
+    guarded writer scripts/curate_stage5_review_findings.py.'
+  previous_occurrences:
+  - repository: CultureBotAI/TraitMech
+    review_id: 20261023T140800Z-cycle2-stage4-corpus-record-and-cohort-review
+    finding_id: F-DEF-SRC-PROPIONIC-FERM-012
+  external_issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1995
+- finding_id: F-DEF-SRC-MANGANESE-OX-013
+  issue_key: manganese-oxidation-definition-source-evidence
+  category: evidence
+  severity: minor
+  status: resolved
+  certainty: confirmed
+  title: manganese_oxidation.yaml now includes a verbatim snippet for definition_source
+    DOI:10.1016/j.tim.2005.07.009 in record-level evidence[0]
+  description: 'Resolved Cycle 2 Stage 4 open finding F-DEF-SRC-MANGANESE-OX-013 on
+    data/traits/metabolism/manganese_oxidation.yaml (traitmech:000032): promoted verified
+    verbatim snippet (''the reaction might involve a unique multicopper oxidase system
+    capable of a two-electron oxidation of the substrate'') from causal_graphs[0].edges[3]
+    to record-level evidence[0] for definition_source DOI:10.1016/j.tim.2005.07.009
+    and appended curation_history entry via scripts/curate_stage5_review_findings.py.'
+  target_ids:
+  - traitmech:000032
+  field_paths:
+  - definition_source
+  - evidence
+  - curation_history
+  evidence_ids:
+  - ev-prior-c2s4-review
+  - ev-tebo-2005
+  - ev-remediated-records
+  - ev-stage5-writer
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/metabolism/manganese_oxidation.yaml
+    role: maintained TraitRecord YAML
+  disposition_reason: 'Resolved in Cycle 2 Stage 5 (resolve_review_findings) under
+    group G-C2S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS and GitHub issue #1995 via
+    guarded writer scripts/curate_stage5_review_findings.py.'
+  previous_occurrences:
+  - repository: CultureBotAI/TraitMech
+    review_id: 20261023T140800Z-cycle2-stage4-corpus-record-and-cohort-review
+    finding_id: F-DEF-SRC-MANGANESE-OX-013
+  external_issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1995
+- finding_id: F-DEF-SRC-CELLULOLYSIS-014
+  issue_key: cellulolysis-definition-source-evidence
+  category: evidence
+  severity: minor
+  status: resolved
+  certainty: confirmed
+  title: cellulolysis.yaml now includes a verbatim snippet for definition_source DOI:10.1128/MMBR.66.3.506-577.2002
+    in record-level evidence[0]
+  description: 'Resolved Cycle 2 Stage 4 open finding F-DEF-SRC-CELLULOLYSIS-014 on
+    data/traits/metabolism/cellulolysis.yaml (traitmech:000111): promoted verified
+    verbatim snippet (''complexed cellulase systems'') from causal_graphs[0].edges[15]
+    to record-level evidence[0] for definition_source DOI:10.1128/MMBR.66.3.506-577.2002
+    and appended curation_history entry via scripts/curate_stage5_review_findings.py.'
+  target_ids:
+  - traitmech:000111
+  field_paths:
+  - definition_source
+  - evidence
+  - curation_history
+  evidence_ids:
+  - ev-prior-c2s4-review
+  - ev-lynd-2002
+  - ev-remediated-records
+  - ev-stage5-writer
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/metabolism/cellulolysis.yaml
+    role: maintained TraitRecord YAML
+  disposition_reason: 'Resolved in Cycle 2 Stage 5 (resolve_review_findings) under
+    group G-C2S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS and GitHub issue #1995 via
+    guarded writer scripts/curate_stage5_review_findings.py.'
+  previous_occurrences:
+  - repository: CultureBotAI/TraitMech
+    review_id: 20261023T140800Z-cycle2-stage4-corpus-record-and-cohort-review
+    finding_id: F-DEF-SRC-CELLULOLYSIS-014
+  external_issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1995
+- finding_id: F-DEF-SRC-CHITINOLYSIS-015
+  issue_key: chitinolysis-definition-source-evidence
+  category: evidence
+  severity: minor
+  status: resolved
+  certainty: confirmed
+  title: chitinolysis.yaml now includes a verbatim snippet for definition_source DOI:10.3389/fmicb.2013.00149
+    in record-level evidence[0]
+  description: 'Resolved Cycle 2 Stage 4 open finding F-DEF-SRC-CHITINOLYSIS-015 on
+    data/traits/metabolism/chitinolysis.yaml (traitmech:000112): promoted verified
+    verbatim snippet (''initial hydrolysis of the (1→4)-β-glycoside bond, as seen
+    for chitinase-catalyzed chitin degradation'') from causal_graphs[0].edges[6] to
+    record-level evidence[0] for definition_source DOI:10.3389/fmicb.2013.00149 and
+    appended curation_history entry via scripts/curate_stage5_review_findings.py.'
+  target_ids:
+  - traitmech:000112
+  field_paths:
+  - definition_source
+  - evidence
+  - curation_history
+  evidence_ids:
+  - ev-prior-c2s4-review
+  - ev-beier-2013
+  - ev-remediated-records
+  - ev-stage5-writer
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/metabolism/chitinolysis.yaml
+    role: maintained TraitRecord YAML
+  disposition_reason: 'Resolved in Cycle 2 Stage 5 (resolve_review_findings) under
+    group G-C2S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS and GitHub issue #1995 via
+    guarded writer scripts/curate_stage5_review_findings.py.'
+  previous_occurrences:
+  - repository: CultureBotAI/TraitMech
+    review_id: 20261023T140800Z-cycle2-stage4-corpus-record-and-cohort-review
+    finding_id: F-DEF-SRC-CHITINOLYSIS-015
+  external_issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1995
+actions: []
+limitations:
+- 'This batch review covers the 6 records remediated in Cycle 2 Stage 5 under group
+  G-C2S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS (#1995); the 5 cohort-level source-limited
+  or upstream-blocked findings from Cycle 2 Stage 4 remain tracked under open GitHub
+  issues #1982, #1983, #1984, #1985, and #364.'
+- All 6 remediated records carry repository-minted traitmech:NNNNNN identifiers backed
+  by validated ROBOT templates awaiting upstream METPO release incorporation (#364,
+  berkeleybop/metpo#535).
+notes:
+- 'Skills executed: .claude/skills/curate-yaml-record/SKILL.md and .claude/skills/review-yaml-record/SKILL.md.'
+- Immutable Cycle 2 Stage 4 review bundle preserved untouched at reviews/structured/20261023T140800Z-cycle2-stage4-corpus-record-and-cohort-review/review.yaml.
+related_reviews:
+- repository: CultureBotAI/TraitMech
+  review_id: 20261023T140800Z-cycle2-stage4-corpus-record-and-cohort-review
+  relationship: follow_up_remediation_verification
+links:
+- https://github.com/CultureBotAI/TraitMech/issues/1995
+- https://github.com/CultureBotAI/TraitMech/issues/1982
+- https://github.com/CultureBotAI/TraitMech/issues/1983
+- https://github.com/CultureBotAI/TraitMech/issues/1984
+- https://github.com/CultureBotAI/TraitMech/issues/1985
+- https://github.com/CultureBotAI/TraitMech/issues/364
+tags:
+- cycle-02
+- stage-05
+- resolve-review-findings
+- remediation-verification
+```

@@ -143956,7 +143956,8 @@
     "evidence": [
       {
         "reference": "DOI:10.1128/AEM.02473-10",
-        "notes": "Berg review of the distribution of autotrophic CO2-fixation pathways establishes that, besides the Calvin-Benson-Bassham cycle, five further autotrophic carbon-fixation pathways are known, parent of the six pathway sub-variants proposed here."
+        "snippet": "The reductive pentose phosphate cycle is the quantitatively most important mechanism of autotrophic CO2 fixation in nature.",
+        "notes": "Berg (2011) \"Ecological aspects of the distribution of different autotrophic CO2 fixation pathways\" \u2014 authoritative review of the six known pathways."
       },
       {
         "reference": "DOI:10.1146/annurev-marine-120709-142712",
@@ -144420,6 +144421,13 @@
         "action": "REFRESH_UNIPROT_ENTRY_VERSION",
         "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P42721 (153 -> 154 on rubisco).",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-23T16:05:00Z",
+        "curator": "claude",
+        "action": "ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE",
+        "changes": "Added verified verbatim snippet from DOI:10.1128/AEM.02473-10 (already present on causal_graphs[0].edges[11]) to record-level evidence[0] to match definition_source (Cycle 2 Stage 5 remediation of F-DEF-SRC-CARBON-FIXATION-010 in group G-C2S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #1995).",
+        "llm_assisted": true
       }
     ]
   },
@@ -144449,6 +144457,7 @@
     "evidence": [
       {
         "reference": "DOI:10.1128/MMBR.66.3.506-577.2002",
+        "snippet": "complexed cellulase systems",
         "notes": "Lynd et al. review microbial cellulose utilization, its enzymology, and cellulosome systems."
       },
       {
@@ -144920,6 +144929,13 @@
         "action": "REFRESH_UNIPROT_ENTRY_VERSION",
         "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P0C2S5 (80 -> 81 on cellobiohydrolase).",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-23T16:05:00Z",
+        "curator": "claude",
+        "action": "ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE",
+        "changes": "Added verified verbatim snippet from DOI:10.1128/MMBR.66.3.506-577.2002 (already present on causal_graphs[0].edges[15]) to record-level evidence[0] to match definition_source (Cycle 2 Stage 5 remediation of F-DEF-SRC-CELLULOLYSIS-014 in group G-C2S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #1995).",
+        "llm_assisted": true
       }
     ]
   },
@@ -144949,6 +144965,7 @@
     "evidence": [
       {
         "reference": "DOI:10.3389/fmicb.2013.00149",
+        "snippet": "initial hydrolysis of the (1\u21924)-\u03b2-glycoside bond, as seen for chitinase-catalyzed chitin degradation",
         "notes": "Beier & Bertilsson review bacterial chitin degradation mechanisms and ecophysiological strategies."
       },
       {
@@ -145281,6 +145298,13 @@
         "curator": "claude",
         "action": "REFRESH_UNIPROT_ENTRY_VERSION",
         "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P07254 (158 -> 159 on chitinase), UniProtKB:P9WEM3 (8 -> 9 on lpmo).",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-23T16:05:00Z",
+        "curator": "claude",
+        "action": "ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE",
+        "changes": "Added verified verbatim snippet from DOI:10.3389/fmicb.2013.00149 (already present on causal_graphs[0].edges[6]) to record-level evidence[0] to match definition_source (Cycle 2 Stage 5 remediation of F-DEF-SRC-CHITINOLYSIS-015 in group G-C2S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #1995).",
         "llm_assisted": true
       }
     ]
@@ -156189,6 +156213,7 @@
     "evidence": [
       {
         "reference": "DOI:10.1016/j.tim.2005.07.009",
+        "snippet": "the reaction might involve a unique multicopper oxidase system capable of a two-electron oxidation of the substrate",
         "notes": "Tebo et al., \"Geomicrobiology of manganese(II) oxidation\", supports bacterial Mn(II) oxidation to Mn oxides via a multicopper-oxidase mechanism."
       },
       {
@@ -156520,6 +156545,13 @@
         "curator": "claude",
         "action": "REFRESH_UNIPROT_ENTRY_VERSION",
         "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:Q02567 (150 -> 151 on manganese_peroxidase).",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-23T16:05:00Z",
+        "curator": "claude",
+        "action": "ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE",
+        "changes": "Added verified verbatim snippet from DOI:10.1016/j.tim.2005.07.009 (already present on causal_graphs[0].edges[3]) to record-level evidence[0] to match definition_source (Cycle 2 Stage 5 remediation of F-DEF-SRC-MANGANESE-OX-013 in group G-C2S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #1995).",
         "llm_assisted": true
       }
     ]
@@ -161452,7 +161484,8 @@
     "evidence": [
       {
         "reference": "DOI:10.3390/molecules31020333",
-        "notes": "Review of classical fermentations describes propionic acid fermentation (acetic acid, propionic acid, CO2) and propionibacteria as its agents, including the Wood-Werkman route."
+        "snippet": "substrates such as glucose, glycerol or lactic acid are converted into propionic acid",
+        "notes": "Review of microbial propionic acid fermentation pathways (Wood-Werkman cycle and acrylate pathway), metabolic engineering, and bioprocess optimization."
       },
       {
         "reference": "DOI:10.3389/fmicb.2021.703525",
@@ -161879,6 +161912,13 @@
         "curator": "claude",
         "action": "REFRESH_UNIPROT_ENTRY_VERSION",
         "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:Q8GBW6 (97 -> 98 on mmc_carboxytransferase).",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-23T16:05:00Z",
+        "curator": "claude",
+        "action": "ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE",
+        "changes": "Added verified verbatim snippet from DOI:10.3390/molecules31020333 (already present on causal_graphs[0].edges[1]) to record-level evidence[0] to match definition_source (Cycle 2 Stage 5 remediation of F-DEF-SRC-PROPIONIC-FERM-012 in group G-C2S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #1995).",
         "llm_assisted": true
       }
     ]
@@ -167726,7 +167766,8 @@
     "evidence": [
       {
         "reference": "DOI:10.1016/j.bbapap.2008.08.012",
-        "notes": "Ragsdale & Pierce, \"Acetogenesis and the Wood-Ljungdahl pathway of CO2 fixation\", is the reference treatment of this reductive acetyl-CoA pathway."
+        "snippet": "use the reductive acetyl-CoA or Wood-Ljungdahl pathway as their main mechanism for energy conservation and for synthesis of acetyl-CoA and cell carbon from CO2",
+        "notes": "Ragsdale & Pierce (2008) review the enzymology and bioenergetics of the Wood\u2013Ljungdahl pathway."
       },
       {
         "reference": "DOI:10.1128/AEM.02473-10",
@@ -168177,6 +168218,13 @@
         "curator": "claude",
         "action": "REFRESH_UNIPROT_ENTRY_VERSION",
         "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P27988 (125 -> 126 on acetyl_coa_synthase).",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-23T16:05:00Z",
+        "curator": "claude",
+        "action": "ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE",
+        "changes": "Added verified verbatim snippet from DOI:10.1016/j.bbapap.2008.08.012 (already present on causal_graphs[0].edges[0]) to record-level evidence[0] to match definition_source (Cycle 2 Stage 5 remediation of F-DEF-SRC-WOOD-LJUNGDAHL-011 in group G-C2S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #1995).",
         "llm_assisted": true
       }
     ]
