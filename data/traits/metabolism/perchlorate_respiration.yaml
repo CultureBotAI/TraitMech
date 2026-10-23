@@ -37,17 +37,19 @@ discussions:
   posed_by: codex
   posed_date: '2026-09-15'
 - discussion_id: perchlorate-respiration-protein-example-gap
-  prompt: Add strain-matched UniProtKB protein_examples for Dechloromonas aromatica
-    RCB perchlorate reductase (PcrABCD) and chlorite dismutase (Cld) so perchlorate_respiration_reduction_sketch
+  prompt: Add a strain-matched canonical_examples entry and UniProtKB protein_examples
+    for perchlorate reductase (PcrABCD) and chlorite dismutase (Cld) (e.g., in candidate
+    exemplar Dechloromonas aromatica RCB) so perchlorate_respiration_reduction_sketch
     can be promoted from NONMECHANISTIC to MECHANISTIC.
   kind: CURATION_TODO
   status: OPEN
   attaches_to:
   - causal_graphs#perchlorate_respiration_reduction_sketch
-  rationale: The record's primary literature (DOI:10.1186/s12864-015-2011-5, DOI:10.1128/AEM.05758-11)
-    supports anaerobic respiratory reduction of perchlorate to chloride in Dechloromonas
-    aromatica RCB (NCBITaxon:272564), but verified UniProtKB accessions must be curated
-    on a GENE_OR_PROTEIN node before marking the graph MECHANISTIC.
+  rationale: The record's primary literature by Melnyk et al. (DOI:10.1186/s12864-015-2011-5,
+    DOI:10.1128/AEM.05758-11) supports periplasmic reduction of perchlorate to chlorite
+    by perchlorate reductase (PcrABCD) and chlorite dismutation to chloride and O2
+    by chlorite dismutase (Cld), but canonical_examples and verified strain-matched
+    UniProtKB accessions must be curated before marking the graph MECHANISTIC.
   posed_by: claude
   posed_date: '2026-10-23'
   evidence:
@@ -80,9 +82,10 @@ causal_graphs:
   description: Evidence-backed metabolic pathway sketch linking anaerobic respiratory
     perchlorate reduction and chloride formation to perchlorate respiration.
   scope_status: NONMECHANISTIC
-  scope_notes: Pathway sketch backed by DOI:10.1186/s12864-015-2011-5 and DOI:10.1128/AEM.05758-11;
-    strain-matched UniProtKB protein examples for Dechloromonas aromatica RCB perchlorate
-    reductase (PcrABCD) and chlorite dismutase (Cld) remain to be curated.
+  scope_notes: Pathway sketch backed by Melnyk et al. (DOI:10.1186/s12864-015-2011-5
+    and DOI:10.1128/AEM.05758-11); canonical_examples and strain-matched UniProtKB
+    protein examples for perchlorate reductase (PcrABCD) and chlorite dismutase (Cld)
+    (e.g., in candidate exemplar Dechloromonas aromatica RCB) remain to be curated.
   nodes:
   - node_id: perchlorate_respiration_trait
     label: perchlorate respiration
@@ -93,36 +96,37 @@ causal_graphs:
     label: anaerobic respiration
     node_type: BIOLOGICAL_PROCESS
     grounding: GO:0019645
-    description: Anaerobic respiratory reduction of perchlorate coupled to energy
-      conservation.
+    description: Anaerobic respiratory reduction of perchlorate by perchlorate reductase
+      (PcrABCD) and chlorite dismutase (Cld).
   - node_id: perchlorate_respiration_chloride
     label: chloride
     node_type: CHEMICAL
     grounding: CHEBI:17996
     description: Chloride anion produced as the terminal product of respiratory perchlorate
-      reduction.
+      reduction and chlorite dismutation.
   edges:
   - subject: perchlorate_respiration_perchlorate_reduction
     predicate: confers
     predicate_id: METPO:2007700
     object: perchlorate_respiration_trait
-    description: Energy conservation through anaerobic reduction of perchlorate confers
-      perchlorate respiration.
+    description: Perchlorate reductase and chlorite dismutase encoded by pcrABCD and
+      cld confer perchlorate respiration.
     evidence:
     - reference: DOI:10.1128/AEM.05758-11
       snippet: perchlorate reductase and chlorite dismutase, which are encoded by
         the pcrABCD and cld genes
-      notes: Bender et al. report that diverse bacteria gain energy for anaerobic
-        growth through the reduction of perchlorate.
+      notes: Melnyk et al. identify perchlorate reductase and chlorite dismutase,
+        encoded by the pcrABCD and cld genes, as the core enzymes of perchlorate respiration.
   - subject: perchlorate_respiration_perchlorate_reduction
     predicate: has output
     predicate_id: RO:0002234
     object: perchlorate_respiration_chloride
-    description: Respiratory reduction of perchlorate in the absence of oxygen yields
-      chloride.
+    description: Periplasmic reduction of perchlorate to chlorite followed by chlorite
+      dismutation yields chloride and molecular oxygen.
     evidence:
     - reference: DOI:10.1186/s12864-015-2011-5
       snippet: reduction to chlorite (ClO2-) in the bacterial periplasm by perchlorate
         reductase, and the dismutation of chlorite to chloride and molecular oxygen
-      notes: Melnyk and Coates state that perchlorate-respiring Bacteria and Archaea
-        reduce perchlorate and chlorate to chloride in the absence of oxygen.
+      notes: Melnyk et al. describe periplasmic reduction of perchlorate to chlorite
+        by perchlorate reductase followed by dismutation of chlorite to chloride and
+        molecular oxygen.

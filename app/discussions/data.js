@@ -9123,7 +9123,7 @@ window.searchData = [
  },
  {
   "discussion_id": "arsenate-respiration-protein-example-gap",
-  "prompt": "Add strain-matched UniProtKB protein_examples for Shewanella sp. ANA-3 respiratory arsenate reductase subunits (ArrA/ArrB) and the Arr operon regulator so arsenate_respiration_arr_pathway_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
+  "prompt": "Add strain-matched UniProtKB protein_examples for Shewanella sp. ANA-3 respiratory arsenate reductase subunits (ArrA/ArrB) so arsenate_respiration_arr_pathway_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
   "kind": "CURATION_TODO",
   "status": "OPEN",
   "is_gap": "Other discussion",
@@ -9133,7 +9133,7 @@ window.searchData = [
   "attaches_to": [
    "causal_graphs#arsenate_respiration_arr_pathway_sketch"
   ],
-  "rationale": "The record's primary literature (DOI:10.1073/pnas.1834303100, DOI:10.1128/AEM.69.5.2800-2809.2003, DOI:10.1128/JB.01110-07) supports the arrAB respiratory arsenate reduction pathway in Shewanella sp. ANA-3 (NCBITaxon:94122), but verified UniProtKB accessions and proteome metadata must be added to a GENE_OR_PROTEIN node before marking the graph MECHANISTIC.",
+  "rationale": "The record's primary literature (DOI:10.1073/pnas.1834303100, DOI:10.1128/AEM.69.5.2800-2809.2003, DOI:10.1128/JB.01110-07) supports respiratory arsenate reduction to arsenite via arsenate respiratory reductase (ARR) in Shewanella sp. ANA-3 (NCBITaxon:94122), but verified UniProtKB accessions and proteome metadata must be added to a GENE_OR_PROTEIN node before marking the graph MECHANISTIC.",
   "num_experiments": 0,
   "num_evidence": 1,
   "evidence_refs": [
@@ -9285,7 +9285,7 @@ window.searchData = [
   "attaches_to": [
    "causal_graphs#chlorate_respiration_pathway_sketch"
   ],
-  "rationale": "The record's primary literature (DOI:10.1128/AEM.69.9.5585-5592.2003, DOI:10.1128/AEM.07303-11) supports the two-step dissimilatory chlorate-to-chloride respiratory pathway in Ideonella dechloratans (NCBITaxon:36863), but verified UniProtKB accessions must be added to a GENE_OR_PROTEIN node before marking the graph MECHANISTIC.",
+  "rationale": "The record's primary literature (DOI:10.1128/AEM.69.9.5585-5592.2003, DOI:10.1128/AEM.07303-11) supports the two-step dissimilatory chlorate reduction pathway (chlorate reduction followed by chlorite decomposition) in Ideonella dechloratans (NCBITaxon:36863), but verified UniProtKB accessions must be added to a GENE_OR_PROTEIN node before marking the graph MECHANISTIC.",
   "num_experiments": 0,
   "num_evidence": 1,
   "evidence_refs": [
@@ -9475,7 +9475,7 @@ window.searchData = [
   "attaches_to": [
    "causal_graphs#fumarate_respiration_frd_pathway_sketch"
   ],
-  "rationale": "The record's primary literature (DOI:10.1128/mBio.03238-19, DOI:10.1128/JB.00389-22) establishes fumarate reductase (Frd) catalysis and proton-gradient ATP generation in Bacteroides fragilis (NCBITaxon:817), but verified UniProtKB accessions must be curated on a GENE_OR_PROTEIN node before marking the graph MECHANISTIC.",
+  "rationale": "The record's primary literature (DOI:10.1128/mBio.03238-19, DOI:10.1128/JB.00389-22) establishes fumarate reductase (FRD) catalysis and NADH-to-fumarate respiratory electron transfer in Bacteroides fragilis (NCBITaxon:817), but verified UniProtKB accessions must be curated on a GENE_OR_PROTEIN node before marking the graph MECHANISTIC.",
   "num_experiments": 0,
   "num_evidence": 1,
   "evidence_refs": [
@@ -9826,7 +9826,7 @@ window.searchData = [
  },
  {
   "discussion_id": "perchlorate-respiration-protein-example-gap",
-  "prompt": "Add strain-matched UniProtKB protein_examples for Dechloromonas aromatica RCB perchlorate reductase (PcrABCD) and chlorite dismutase (Cld) so perchlorate_respiration_reduction_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
+  "prompt": "Add a strain-matched canonical_examples entry and UniProtKB protein_examples for perchlorate reductase (PcrABCD) and chlorite dismutase (Cld) (e.g., in candidate exemplar Dechloromonas aromatica RCB) so perchlorate_respiration_reduction_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
   "kind": "CURATION_TODO",
   "status": "OPEN",
   "is_gap": "Other discussion",
@@ -9836,7 +9836,7 @@ window.searchData = [
   "attaches_to": [
    "causal_graphs#perchlorate_respiration_reduction_sketch"
   ],
-  "rationale": "The record's primary literature (DOI:10.1186/s12864-015-2011-5, DOI:10.1128/AEM.05758-11) supports anaerobic respiratory reduction of perchlorate to chloride in Dechloromonas aromatica RCB (NCBITaxon:272564), but verified UniProtKB accessions must be curated on a GENE_OR_PROTEIN node before marking the graph MECHANISTIC.",
+  "rationale": "The record's primary literature by Melnyk et al. (DOI:10.1186/s12864-015-2011-5, DOI:10.1128/AEM.05758-11) supports periplasmic reduction of perchlorate to chlorite by perchlorate reductase (PcrABCD) and chlorite dismutation to chloride and O2 by chlorite dismutase (Cld), but canonical_examples and verified strain-matched UniProtKB accessions must be curated before marking the graph MECHANISTIC.",
   "num_experiments": 0,
   "num_evidence": 1,
   "evidence_refs": [
@@ -10031,7 +10031,7 @@ window.searchData = [
  },
  {
   "discussion_id": "trimethylamine-n-oxide-respiration-protein-example-gap",
-  "prompt": "Add strain-matched UniProtKB protein_examples for Escherichia coli K-12 TMAO reductase (TorA/TorC) and the TorS-TorR regulator so tmao_respiration_tor_pathway_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
+  "prompt": "Add strain-matched UniProtKB protein_examples for Escherichia coli K-12 TMAO reductase (TorA/TorC) encoded by the torCAD operon so tmao_respiration_tor_pathway_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
   "kind": "CURATION_TODO",
   "status": "OPEN",
   "is_gap": "Other discussion",
@@ -10041,7 +10041,7 @@ window.searchData = [
   "attaches_to": [
    "causal_graphs#tmao_respiration_tor_pathway_sketch"
   ],
-  "rationale": "The record's primary literature (DOI:10.1111/1462-2920.12726, DOI:10.3389/fmicb.2024.1467153) establishes respiratory TMAO reduction to trimethylamine and TorS-TorR regulation in Escherichia coli K-12 (NCBITaxon:83333), but verified UniProtKB accessions must be curated on a GENE_OR_PROTEIN node before marking the graph MECHANISTIC.",
+  "rationale": "The record's primary literature (DOI:10.1111/1462-2920.12726, DOI:10.3389/fmicb.2024.1467153) establishes anaerobic respiratory growth on TMAO and reduction of TMAO to trimethylamine by torCAD-encoded TMAO reductase in Escherichia coli K-12 (NCBITaxon:83333), but verified UniProtKB accessions must be curated on a GENE_OR_PROTEIN node before marking the graph MECHANISTIC.",
   "num_experiments": 0,
   "num_evidence": 1,
   "evidence_refs": [

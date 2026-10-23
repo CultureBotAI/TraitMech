@@ -143,8 +143,8 @@ causal_graphs:
     - reference: DOI:10.1111/1462-2920.14937
       snippet: Siderophores are iron-chelating molecules produced by bacteria to access
         iron, a key nutrient.
-      notes: Kramer, Ozkaya, and Kummerli define siderophores as iron-chelating molecules
-        produced by bacteria to access iron.
+      notes: Schalk et al. define siderophores as iron-chelating molecules produced
+        by bacteria to access iron.
   - subject: siderophore_production_siderophore
     predicate: enables
     predicate_id: RO:0002327
@@ -155,5 +155,5 @@ causal_graphs:
     - reference: DOI:10.1111/1462-2920.14937
       snippet: They are released by bacteria into their environment to scavenge iron
         and bring it back into the cells.
-      notes: Kramer, Ozkaya, and Kummerli state that secreted siderophores scavenge
-        environmental iron and bring it back into the cells.
+      notes: Schalk et al. state that secreted siderophores scavenge environmental
+        iron and bring it back into the cells.

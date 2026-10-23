@@ -56,10 +56,10 @@ discussions:
   attaches_to:
   - causal_graphs#chlorate_respiration_pathway_sketch
   rationale: The record's primary literature (DOI:10.1128/AEM.69.9.5585-5592.2003,
-    DOI:10.1128/AEM.07303-11) supports the two-step dissimilatory chlorate-to-chloride
-    respiratory pathway in Ideonella dechloratans (NCBITaxon:36863), but verified
-    UniProtKB accessions must be added to a GENE_OR_PROTEIN node before marking the
-    graph MECHANISTIC.
+    DOI:10.1128/AEM.07303-11) supports the two-step dissimilatory chlorate reduction
+    pathway (chlorate reduction followed by chlorite decomposition) in Ideonella dechloratans
+    (NCBITaxon:36863), but verified UniProtKB accessions must be added to a GENE_OR_PROTEIN
+    node before marking the graph MECHANISTIC.
   posed_by: claude
   posed_date: '2026-10-23'
   evidence:
@@ -88,9 +88,9 @@ curation_history:
   llm_assisted: true
 causal_graphs:
 - graph_id: chlorate_respiration_pathway_sketch
-  title: Dissimilatory chlorate reduction pathway to chloride
+  title: Two-step dissimilatory chlorate reduction pathway via chlorite
   description: Evidence-backed metabolic pathway sketch linking chlorate terminal
-    electron acceptance and two-step dissimilatory chlorate transformation into chloride
+    electron acceptance and two-step dissimilatory chlorate reduction via chlorite
     to chlorate respiration.
   scope_status: NONMECHANISTIC
   scope_notes: Pathway sketch backed by DOI:10.1128/AEM.69.9.5585-5592.2003 and DOI:10.1128/AEM.07303-11;
@@ -106,52 +106,54 @@ causal_graphs:
     label: chlorate
     node_type: CHEMICAL
     grounding: CHEBI:17891
-    description: Chlorate oxyanion serving as an alternative terminal electron acceptor.
+    description: Chlorate oxyanion serving as the terminal electron acceptor.
   - node_id: chlorate_respiration_dissimilatory_pathway
     label: anaerobic respiration
     node_type: PATHWAY
     grounding: GO:0019645
-    description: Two-step dissimilatory chlorate reduction respiratory pathway in
-      anoxic environments.
-  - node_id: chlorate_respiration_chloride
-    label: chloride
+    description: Two-step dissimilatory chlorate reduction respiratory pathway consisting
+      of chlorate reduction followed by chlorite decomposition.
+  - node_id: chlorate_respiration_chlorite
+    label: chlorite
     node_type: CHEMICAL
-    grounding: CHEBI:17996
-    description: Chloride anion formed by the two-step transformation of chlorate.
+    grounding: CHEBI:17444
+    description: Chlorite intermediate produced by chlorate reduction and decomposed
+      in the second step of the chlorate respiration pathway.
   edges:
   - subject: chlorate_respiration_trait
     predicate: has electron acceptor
     predicate_id: METPO:2007702
     object: chlorate_respiration_chlorate
-    description: Chlorate serves as an alternative terminal electron acceptor in anaerobic
-      respiration.
+    description: Chlorate ion serves as the sole electron acceptor for oxidation of
+      organic matter in chlorate respiration.
     evidence:
     - reference: DOI:10.1128/AEM.69.9.5585-5592.2003
       snippet: chlorate ion as the sole electron acceptor for oxidation of organic
         matter in a previously unknown mode of respiration
-      notes: Thorell et al. state that chlorate serves as an alternative terminal
-        electron acceptor in bacterial anaerobic respiration.
+      notes: Danielsson Thorell et al. show that chlorate ion serves as the sole electron
+        acceptor for oxidation of organic matter in anaerobic respiration.
   - subject: chlorate_respiration_dissimilatory_pathway
     predicate: confers
     predicate_id: METPO:2007700
     object: chlorate_respiration_trait
-    description: Dissimilatory chlorate reduction serves as an anaerobic respiratory
-      pathway.
+    description: Chlorate-respiring bacteria use dissimilatory chlorate reduction
+      as an anaerobic respiratory pathway.
     evidence:
     - reference: DOI:10.1128/AEM.07303-11
       snippet: Perchlorate-respiring bacteria (PRB) can use both perchlorate and chlorate
         as terminal electron acceptors, whereas chlorate-respiring bacteria (CRB)
         use only chlorate
-      notes: Clark et al. describe dissimilatory chlorate reduction as a respiratory
-        pathway for specialized microorganisms in anoxic environments.
+      notes: Hellberg Lindqvist et al. characterize chlorate-respiring bacteria (CRB)
+        that use chlorate as a terminal electron acceptor.
   - subject: chlorate_respiration_dissimilatory_pathway
     predicate: has output
     predicate_id: RO:0002234
-    object: chlorate_respiration_chloride
-    description: Two-step respiratory transformation of chlorate yields chloride.
+    object: chlorate_respiration_chlorite
+    description: Reduction of chlorate occurs in a two-step reaction producing chlorite
+      followed by chlorite decomposition.
     evidence:
     - reference: DOI:10.1128/AEM.69.9.5585-5592.2003
       snippet: 'reduction of chlorate occurs in a two-step reaction: chlorate reduction
         followed by chlorite decomposition'
-      notes: Thorell et al. report that Ideonella dechloratans carries out a two-step
-        transformation of chlorate to chloride.
+      notes: 'Danielsson Thorell et al. report that reduction of chlorate occurs in
+        a two-step reaction: chlorate reduction followed by chlorite decomposition.'

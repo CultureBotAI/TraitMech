@@ -59,9 +59,10 @@ discussions:
   attaches_to:
   - causal_graphs#fumarate_respiration_frd_pathway_sketch
   rationale: The record's primary literature (DOI:10.1128/mBio.03238-19, DOI:10.1128/JB.00389-22)
-    establishes fumarate reductase (Frd) catalysis and proton-gradient ATP generation
-    in Bacteroides fragilis (NCBITaxon:817), but verified UniProtKB accessions must
-    be curated on a GENE_OR_PROTEIN node before marking the graph MECHANISTIC.
+    establishes fumarate reductase (FRD) catalysis and NADH-to-fumarate respiratory
+    electron transfer in Bacteroides fragilis (NCBITaxon:817), but verified UniProtKB
+    accessions must be curated on a GENE_OR_PROTEIN node before marking the graph
+    MECHANISTIC.
   posed_by: claude
   posed_date: '2026-10-23'
   evidence:
@@ -91,10 +92,10 @@ curation_history:
   llm_assisted: true
 causal_graphs:
 - graph_id: fumarate_respiration_frd_pathway_sketch
-  title: Fumarate reductase catalysis and proton-gradient energy conservation
-  description: Evidence-backed metabolic pathway sketch linking fumarate reductase
-    activity, fumarate-to-succinate reduction, and proton-gradient ATP synthesis to
-    fumarate respiration.
+  title: NADH dehydrogenase to fumarate reductase anaerobic respiratory chain
+  description: Evidence-backed metabolic pathway sketch linking NADH dehydrogenase
+    activity, fumarate reductase (FRD) catalysis, and succinate production to fumarate
+    respiration.
   scope_status: NONMECHANISTIC
   scope_notes: Pathway-and-activity sketch backed by DOI:10.1128/mBio.03238-19 and
     DOI:10.1128/JB.00389-22; strain-matched UniProtKB protein examples for Bacteroides
@@ -109,53 +110,55 @@ causal_graphs:
     label: succinate dehydrogenase activity
     node_type: MOLECULAR_FUNCTION
     grounding: GO:0000104
-    description: Fumarate reductase (Frd) catalytic activity reducing fumarate to
-      succinate during anaerobic respiration.
+    description: Fumarate reductase (FRD) catalytic activity transferring electrons
+      from reduced quinone to fumarate under anaerobic and nanaerobic conditions.
   - node_id: fumarate_respiration_succinate
     label: succinate
     node_type: CHEMICAL
     grounding: CHEBI:30031
     description: Succinate produced by fumarate reductase reduction of fumarate.
-  - node_id: fumarate_respiration_proton_motive_force
-    label: proton motive force
-    node_type: STATE
-    grounding: METPO:1007500
-    description: Transmembrane proton gradient generated during fumarate reduction
-      for ATP synthesis.
+  - node_id: fumarate_respiration_nadh_dehydrogenase_activity
+    label: NADH dehydrogenase activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0003954
+    description: NADH dehydrogenase activity initiating electron transfer in the NADH-to-fumarate
+      anaerobic respiratory chain.
   edges:
   - subject: fumarate_respiration_frd_activity
-    predicate: confers
-    predicate_id: METPO:2007700
-    object: fumarate_respiration_trait
-    description: Fumarate reductase (Frd) enables fumarate respiration and ATP synthesis
-      via an electron transport system.
+    predicate: has output
+    predicate_id: RO:0002234
+    object: fumarate_respiration_succinate
+    description: Fumarate reductase transfers electrons from reduced quinone to fumarate
+      and produces succinate.
     evidence:
     - reference: DOI:10.1128/mBio.03238-19
       snippet: under anaerobic conditions, fumarate can serve as a terminal electron
         acceptor, with fumarate reductase (FRD) transferring electrons from the reduced
         quinone, producing succinate
-      notes: Butler et al. show that fumarate reductase (Frd) enables Bacteroidetes
-        to carry out fumarate respiration.
-  - subject: fumarate_respiration_frd_activity
-    predicate: has output
-    predicate_id: RO:0002234
-    object: fumarate_respiration_succinate
-    description: Fumarate reductase catalyzes the reduction of fumarate to succinate.
+      notes: Ito et al. state that under anaerobic conditions fumarate serves as a
+        terminal electron acceptor with fumarate reductase (FRD) transferring electrons
+        from reduced quinone and producing succinate.
+  - subject: fumarate_respiration_nadh_dehydrogenase_activity
+    predicate: causally upstream of
+    predicate_id: RO:0002411
+    object: fumarate_respiration_frd_activity
+    description: NADH dehydrogenases supply electrons in the NADH-to-fumarate anaerobic
+      respiratory chain.
     evidence:
     - reference: DOI:10.1128/JB.00389-22
       snippet: The respiratory chain responsible for anaerobic respiration (NADH to
         fumarate) involves two NADH dehydrogenases
-      notes: Baughn and Malamy state that Frd catalyzes the reduction of fumarate
-        to succinate.
-  - subject: fumarate_respiration_proton_motive_force
-    predicate: contributes to
-    predicate_id: RO:0002326
+      notes: Butler et al. show that the anaerobic respiratory chain from NADH to
+        fumarate involves two NADH dehydrogenases.
+  - subject: fumarate_respiration_frd_activity
+    predicate: confers
+    predicate_id: METPO:2007700
     object: fumarate_respiration_trait
-    description: Terminal electron acceptance by fumarate generates a proton gradient
-      for ATP synthesis.
+    description: Synthesis and catalytic activity of fumarate reductase under anaerobic
+      and nanaerobic conditions confers fumarate respiration.
     evidence:
     - reference: DOI:10.1128/JB.00389-22
       snippet: Analysis of fumarate reductase showed that it is synthesized and active
         under anaerobic and nanaerobic conditions
-      notes: Baughn and Malamy describe fumarate acting as a terminal electron acceptor
-        that creates a proton gradient for energy generation by ATP synthase.
+      notes: Butler et al. show that fumarate reductase is synthesized and active
+        under anaerobic and nanaerobic respiratory conditions.

@@ -1117,13 +1117,13 @@ COHORT_C_PATHS: tuple[str, ...] = (
 
 COHORT_C_PROTEIN_GAPS: dict[str, tuple[str, str, int]] = {
     "data/traits/metabolism/arsenate_respiration.yaml": (
-        "Add strain-matched UniProtKB protein_examples for Shewanella sp. ANA-3 respiratory arsenate reductase subunits (ArrA/ArrB) and the Arr operon regulator so arsenate_respiration_arr_pathway_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
-        "The record's primary literature (DOI:10.1073/pnas.1834303100, DOI:10.1128/AEM.69.5.2800-2809.2003, DOI:10.1128/JB.01110-07) supports the arrAB respiratory arsenate reduction pathway in Shewanella sp. ANA-3 (NCBITaxon:94122), but verified UniProtKB accessions and proteome metadata must be added to a GENE_OR_PROTEIN node before marking the graph MECHANISTIC.",
+        "Add strain-matched UniProtKB protein_examples for Shewanella sp. ANA-3 respiratory arsenate reductase subunits (ArrA/ArrB) so arsenate_respiration_arr_pathway_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
+        "The record's primary literature (DOI:10.1073/pnas.1834303100, DOI:10.1128/AEM.69.5.2800-2809.2003, DOI:10.1128/JB.01110-07) supports respiratory arsenate reduction to arsenite via arsenate respiratory reductase (ARR) in Shewanella sp. ANA-3 (NCBITaxon:94122), but verified UniProtKB accessions and proteome metadata must be added to a GENE_OR_PROTEIN node before marking the graph MECHANISTIC.",
         0,
     ),
     "data/traits/metabolism/chlorate_respiration.yaml": (
         "Add strain-matched UniProtKB protein_examples for Ideonella dechloratans chlorate reductase (ClrABC) and chlorite dismutase (Cld) so chlorate_respiration_pathway_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
-        "The record's primary literature (DOI:10.1128/AEM.69.9.5585-5592.2003, DOI:10.1128/AEM.07303-11) supports the two-step dissimilatory chlorate-to-chloride respiratory pathway in Ideonella dechloratans (NCBITaxon:36863), but verified UniProtKB accessions must be added to a GENE_OR_PROTEIN node before marking the graph MECHANISTIC.",
+        "The record's primary literature (DOI:10.1128/AEM.69.9.5585-5592.2003, DOI:10.1128/AEM.07303-11) supports the two-step dissimilatory chlorate reduction pathway (chlorate reduction followed by chlorite decomposition) in Ideonella dechloratans (NCBITaxon:36863), but verified UniProtKB accessions must be added to a GENE_OR_PROTEIN node before marking the graph MECHANISTIC.",
         1,
     ),
     "data/traits/metabolism/dimethyl_sulfoxide_respiration.yaml": (
@@ -1133,12 +1133,12 @@ COHORT_C_PROTEIN_GAPS: dict[str, tuple[str, str, int]] = {
     ),
     "data/traits/metabolism/fumarate_respiration.yaml": (
         "Add strain-matched UniProtKB protein_examples for Bacteroides fragilis fumarate reductase subunits (FrdCAB) so fumarate_respiration_frd_pathway_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
-        "The record's primary literature (DOI:10.1128/mBio.03238-19, DOI:10.1128/JB.00389-22) establishes fumarate reductase (Frd) catalysis and proton-gradient ATP generation in Bacteroides fragilis (NCBITaxon:817), but verified UniProtKB accessions must be curated on a GENE_OR_PROTEIN node before marking the graph MECHANISTIC.",
+        "The record's primary literature (DOI:10.1128/mBio.03238-19, DOI:10.1128/JB.00389-22) establishes fumarate reductase (FRD) catalysis and NADH-to-fumarate respiratory electron transfer in Bacteroides fragilis (NCBITaxon:817), but verified UniProtKB accessions must be curated on a GENE_OR_PROTEIN node before marking the graph MECHANISTIC.",
         0,
     ),
     "data/traits/metabolism/perchlorate_respiration.yaml": (
-        "Add strain-matched UniProtKB protein_examples for Dechloromonas aromatica RCB perchlorate reductase (PcrABCD) and chlorite dismutase (Cld) so perchlorate_respiration_reduction_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
-        "The record's primary literature (DOI:10.1186/s12864-015-2011-5, DOI:10.1128/AEM.05758-11) supports anaerobic respiratory reduction of perchlorate to chloride in Dechloromonas aromatica RCB (NCBITaxon:272564), but verified UniProtKB accessions must be curated on a GENE_OR_PROTEIN node before marking the graph MECHANISTIC.",
+        "Add a strain-matched canonical_examples entry and UniProtKB protein_examples for perchlorate reductase (PcrABCD) and chlorite dismutase (Cld) (e.g., in candidate exemplar Dechloromonas aromatica RCB) so perchlorate_respiration_reduction_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
+        "The record's primary literature by Melnyk et al. (DOI:10.1186/s12864-015-2011-5, DOI:10.1128/AEM.05758-11) supports periplasmic reduction of perchlorate to chlorite by perchlorate reductase (PcrABCD) and chlorite dismutation to chloride and O2 by chlorite dismutase (Cld), but canonical_examples and verified strain-matched UniProtKB accessions must be curated before marking the graph MECHANISTIC.",
         0,
     ),
     "data/traits/metabolism/tetrathionate_respiration.yaml": (
@@ -1147,8 +1147,8 @@ COHORT_C_PROTEIN_GAPS: dict[str, tuple[str, str, int]] = {
         1,
     ),
     "data/traits/metabolism/trimethylamine_n_oxide_respiration.yaml": (
-        "Add strain-matched UniProtKB protein_examples for Escherichia coli K-12 TMAO reductase (TorA/TorC) and the TorS-TorR regulator so tmao_respiration_tor_pathway_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
-        "The record's primary literature (DOI:10.1111/1462-2920.12726, DOI:10.3389/fmicb.2024.1467153) establishes respiratory TMAO reduction to trimethylamine and TorS-TorR regulation in Escherichia coli K-12 (NCBITaxon:83333), but verified UniProtKB accessions must be curated on a GENE_OR_PROTEIN node before marking the graph MECHANISTIC.",
+        "Add strain-matched UniProtKB protein_examples for Escherichia coli K-12 TMAO reductase (TorA/TorC) encoded by the torCAD operon so tmao_respiration_tor_pathway_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
+        "The record's primary literature (DOI:10.1111/1462-2920.12726, DOI:10.3389/fmicb.2024.1467153) establishes anaerobic respiratory growth on TMAO and reduction of TMAO to trimethylamine by torCAD-encoded TMAO reductase in Escherichia coli K-12 (NCBITaxon:83333), but verified UniProtKB accessions must be curated on a GENE_OR_PROTEIN node before marking the graph MECHANISTIC.",
         0,
     ),
     "data/traits/physiology/arginine_dihydrolase_activity.yaml": (
@@ -1175,19 +1175,20 @@ def build_cohort_c_graphs(rel_path: str, doc: dict[str, Any]) -> list[dict[str, 
         return [
             {
                 "graph_id": "arsenate_respiration_arr_pathway_sketch",
-                "title": "Respiratory arsenate reduction and terminal electron acceptor pathway",
+                "title": "Respiratory arsenate reduction to arsenite and terminal electron acceptor pathway",
                 "description": (
                     "Evidence-backed metabolic pathway sketch linking dissimilatory "
-                    "arsenate reductase activity and arsenate terminal electron "
-                    "acceptance to arsenate respiration."
+                    "arsenate respiratory reductase (ARR) activity, arsenite "
+                    "production, and arsenate terminal electron acceptance to "
+                    "arsenate respiration."
                 ),
                 "scope_status": "NONMECHANISTIC",
                 "scope_notes": (
                     "Pathway-and-activity sketch backed by DOI:10.1073/pnas.1834303100, "
                     "DOI:10.1128/AEM.69.5.2800-2809.2003, and DOI:10.1128/JB.01110-07; "
                     "strain-matched UniProtKB protein examples for the Shewanella sp. "
-                    "ANA-3 respiratory arsenate reductase subunits ArrA/ArrB and Arr "
-                    "operon regulator remain to be curated."
+                    "ANA-3 respiratory arsenate reductase subunits ArrA/ArrB remain "
+                    "to be curated."
                 ),
                 "nodes": [
                     {
@@ -1209,14 +1210,14 @@ def build_cohort_c_graphs(rel_path: str, doc: dict[str, Any]) -> list[dict[str, 
                         "label": "arsenate reductase (donor) activity",
                         "node_type": "MOLECULAR_FUNCTION",
                         "grounding": "GO:0030631",
-                        "description": "Respiratory arsenate reductase activity encoded by the arrAB gene system.",
+                        "description": "Arsenate respiratory reductase (ARR) activity catalyzing respiratory As(V) reduction.",
                     },
                     {
-                        "node_id": "arsenate_respiration_operon_regulation",
-                        "label": "regulation of DNA-templated transcription",
-                        "node_type": "BIOLOGICAL_PROCESS",
-                        "grounding": "GO:0006355",
-                        "description": "Transcriptional induction and regulation of the arr respiratory arsenate reductase operon.",
+                        "node_id": "arsenate_respiration_arsenite",
+                        "label": "arsenite",
+                        "node_type": "CHEMICAL",
+                        "grounding": "CHEBI:29866",
+                        "description": "Arsenite produced by respiratory reduction of arsenate As(V).",
                     },
                 ],
                 "edges": [
@@ -1225,12 +1226,26 @@ def build_cohort_c_graphs(rel_path: str, doc: dict[str, Any]) -> list[dict[str, 
                         "predicate": "has electron acceptor",
                         "predicate_id": "METPO:2007702",
                         "object": "arsenate_respiration_arsenate",
-                        "description": "Arsenate As(V) serves as the terminal electron acceptor in arsenate respiration.",
+                        "description": "Arsenate As(V) serves as a terminal electron acceptor in microbial anaerobic respiration.",
+                        "evidence": [
+                            _ev_item(
+                                doc,
+                                0,
+                                "Saltikov and Newman state that arsenate can be used by microorganisms as a terminal electron acceptor in anaerobic respiration.",
+                            )
+                        ],
+                    },
+                    {
+                        "subject": "arsenate_respiration_reductase_activity",
+                        "predicate": "has output",
+                        "predicate_id": "RO:0002234",
+                        "object": "arsenate_respiration_arsenite",
+                        "description": "Respiratory arsenate reduction couples electron donor oxidation with reduction of As(V) to arsenite.",
                         "evidence": [
                             _ev_item(
                                 doc,
                                 1,
-                                "Saltikov et al. show that cells grown exclusively on As(V) as a terminal electron acceptor induce the arr and ars systems.",
+                                "Saltikov et al. show that Shewanella sp. strain ANA-3 couples lactate oxidation with the reduction of As(V) to arsenite.",
                             )
                         ],
                     },
@@ -1239,26 +1254,12 @@ def build_cohort_c_graphs(rel_path: str, doc: dict[str, Any]) -> list[dict[str, 
                         "predicate": "confers",
                         "predicate_id": "METPO:2007700",
                         "object": "arsenate_respiration_trait",
-                        "description": "The arrA and arrB respiratory arsenate reductase system is required for As(V) respiration.",
-                        "evidence": [
-                            _ev_item(
-                                doc,
-                                0,
-                                "Saltikov and Newman identify the arrA and arrB gene system necessary for As(V) respiration in Shewanella sp. strain ANA-3.",
-                            )
-                        ],
-                    },
-                    {
-                        "subject": "arsenate_respiration_operon_regulation",
-                        "predicate": "enables",
-                        "predicate_id": "RO:0002327",
-                        "object": "arsenate_respiration_reductase_activity",
-                        "description": "Transcriptional regulation of the arr operon enables respiratory arsenate reduction.",
+                        "description": "Arsenate respiratory reductase (ARR) is the key enzyme conferring arsenate respiration.",
                         "evidence": [
                             _ev_item(
                                 doc,
                                 2,
-                                "Saltikov identifies the regulator of the arr operon that permits bacteria to grow by reducing arsenate.",
+                                "Malasarn et al. characterize arsenate respiratory reductase (ARR) as the key enzyme involved in Shewanella sp. strain ANA-3 arsenate respiration.",
                             )
                         ],
                     },
@@ -1270,11 +1271,11 @@ def build_cohort_c_graphs(rel_path: str, doc: dict[str, Any]) -> list[dict[str, 
         return [
             {
                 "graph_id": "fumarate_respiration_frd_pathway_sketch",
-                "title": "Fumarate reductase catalysis and proton-gradient energy conservation",
+                "title": "NADH dehydrogenase to fumarate reductase anaerobic respiratory chain",
                 "description": (
-                    "Evidence-backed metabolic pathway sketch linking fumarate "
-                    "reductase activity, fumarate-to-succinate reduction, and "
-                    "proton-gradient ATP synthesis to fumarate respiration."
+                    "Evidence-backed metabolic pathway sketch linking NADH "
+                    "dehydrogenase activity, fumarate reductase (FRD) catalysis, "
+                    "and succinate production to fumarate respiration."
                 ),
                 "scope_status": "NONMECHANISTIC",
                 "scope_notes": (
@@ -1296,7 +1297,7 @@ def build_cohort_c_graphs(rel_path: str, doc: dict[str, Any]) -> list[dict[str, 
                         "label": "succinate dehydrogenase activity",
                         "node_type": "MOLECULAR_FUNCTION",
                         "grounding": "GO:0000104",
-                        "description": "Fumarate reductase (Frd) catalytic activity reducing fumarate to succinate during anaerobic respiration.",
+                        "description": "Fumarate reductase (FRD) catalytic activity transferring electrons from reduced quinone to fumarate under anaerobic and nanaerobic conditions.",
                     },
                     {
                         "node_id": "fumarate_respiration_succinate",
@@ -1306,53 +1307,53 @@ def build_cohort_c_graphs(rel_path: str, doc: dict[str, Any]) -> list[dict[str, 
                         "description": "Succinate produced by fumarate reductase reduction of fumarate.",
                     },
                     {
-                        "node_id": "fumarate_respiration_proton_motive_force",
-                        "label": "proton motive force",
-                        "node_type": "STATE",
-                        "grounding": "METPO:1007500",
-                        "description": "Transmembrane proton gradient generated during fumarate reduction for ATP synthesis.",
+                        "node_id": "fumarate_respiration_nadh_dehydrogenase_activity",
+                        "label": "NADH dehydrogenase activity",
+                        "node_type": "MOLECULAR_FUNCTION",
+                        "grounding": "GO:0003954",
+                        "description": "NADH dehydrogenase activity initiating electron transfer in the NADH-to-fumarate anaerobic respiratory chain.",
                     },
                 ],
                 "edges": [
                     {
                         "subject": "fumarate_respiration_frd_activity",
-                        "predicate": "confers",
-                        "predicate_id": "METPO:2007700",
-                        "object": "fumarate_respiration_trait",
-                        "description": "Fumarate reductase (Frd) enables fumarate respiration and ATP synthesis via an electron transport system.",
+                        "predicate": "has output",
+                        "predicate_id": "RO:0002234",
+                        "object": "fumarate_respiration_succinate",
+                        "description": "Fumarate reductase transfers electrons from reduced quinone to fumarate and produces succinate.",
                         "evidence": [
                             _ev_item(
                                 doc,
                                 0,
-                                "Butler et al. show that fumarate reductase (Frd) enables Bacteroidetes to carry out fumarate respiration.",
+                                "Ito et al. state that under anaerobic conditions fumarate serves as a terminal electron acceptor with fumarate reductase (FRD) transferring electrons from reduced quinone and producing succinate.",
+                            )
+                        ],
+                    },
+                    {
+                        "subject": "fumarate_respiration_nadh_dehydrogenase_activity",
+                        "predicate": "causally upstream of",
+                        "predicate_id": "RO:0002411",
+                        "object": "fumarate_respiration_frd_activity",
+                        "description": "NADH dehydrogenases supply electrons in the NADH-to-fumarate anaerobic respiratory chain.",
+                        "evidence": [
+                            _ev_item(
+                                doc,
+                                1,
+                                "Butler et al. show that the anaerobic respiratory chain from NADH to fumarate involves two NADH dehydrogenases.",
                             )
                         ],
                     },
                     {
                         "subject": "fumarate_respiration_frd_activity",
-                        "predicate": "has output",
-                        "predicate_id": "RO:0002234",
-                        "object": "fumarate_respiration_succinate",
-                        "description": "Fumarate reductase catalyzes the reduction of fumarate to succinate.",
-                        "evidence": [
-                            _ev_item(
-                                doc,
-                                1,
-                                "Baughn and Malamy state that Frd catalyzes the reduction of fumarate to succinate.",
-                            )
-                        ],
-                    },
-                    {
-                        "subject": "fumarate_respiration_proton_motive_force",
-                        "predicate": "contributes to",
-                        "predicate_id": "RO:0002326",
+                        "predicate": "confers",
+                        "predicate_id": "METPO:2007700",
                         "object": "fumarate_respiration_trait",
-                        "description": "Terminal electron acceptance by fumarate generates a proton gradient for ATP synthesis.",
+                        "description": "Synthesis and catalytic activity of fumarate reductase under anaerobic and nanaerobic conditions confers fumarate respiration.",
                         "evidence": [
                             _ev_item(
                                 doc,
                                 2,
-                                "Baughn and Malamy describe fumarate acting as a terminal electron acceptor that creates a proton gradient for energy generation by ATP synthase.",
+                                "Butler et al. show that fumarate reductase is synthesized and active under anaerobic and nanaerobic respiratory conditions.",
                             )
                         ],
                     },
@@ -1372,10 +1373,11 @@ def build_cohort_c_graphs(rel_path: str, doc: dict[str, Any]) -> list[dict[str, 
                 ),
                 "scope_status": "NONMECHANISTIC",
                 "scope_notes": (
-                    "Pathway sketch backed by DOI:10.1186/s12864-015-2011-5 and "
-                    "DOI:10.1128/AEM.05758-11; strain-matched UniProtKB protein "
-                    "examples for Dechloromonas aromatica RCB perchlorate reductase "
-                    "(PcrABCD) and chlorite dismutase (Cld) remain to be curated."
+                    "Pathway sketch backed by Melnyk et al. (DOI:10.1186/s12864-015-2011-5 "
+                    "and DOI:10.1128/AEM.05758-11); canonical_examples and strain-matched "
+                    "UniProtKB protein examples for perchlorate reductase (PcrABCD) and "
+                    "chlorite dismutase (Cld) (e.g., in candidate exemplar Dechloromonas "
+                    "aromatica RCB) remain to be curated."
                 ),
                 "nodes": [
                     {
@@ -1390,14 +1392,14 @@ def build_cohort_c_graphs(rel_path: str, doc: dict[str, Any]) -> list[dict[str, 
                         "label": "anaerobic respiration",
                         "node_type": "BIOLOGICAL_PROCESS",
                         "grounding": "GO:0019645",
-                        "description": "Anaerobic respiratory reduction of perchlorate coupled to energy conservation.",
+                        "description": "Anaerobic respiratory reduction of perchlorate by perchlorate reductase (PcrABCD) and chlorite dismutase (Cld).",
                     },
                     {
                         "node_id": "perchlorate_respiration_chloride",
                         "label": "chloride",
                         "node_type": "CHEMICAL",
                         "grounding": "CHEBI:17996",
-                        "description": "Chloride anion produced as the terminal product of respiratory perchlorate reduction.",
+                        "description": "Chloride anion produced as the terminal product of respiratory perchlorate reduction and chlorite dismutation.",
                     },
                 ],
                 "edges": [
@@ -1406,12 +1408,12 @@ def build_cohort_c_graphs(rel_path: str, doc: dict[str, Any]) -> list[dict[str, 
                         "predicate": "confers",
                         "predicate_id": "METPO:2007700",
                         "object": "perchlorate_respiration_trait",
-                        "description": "Energy conservation through anaerobic reduction of perchlorate confers perchlorate respiration.",
+                        "description": "Perchlorate reductase and chlorite dismutase encoded by pcrABCD and cld confer perchlorate respiration.",
                         "evidence": [
                             _ev_item(
                                 doc,
                                 1,
-                                "Bender et al. report that diverse bacteria gain energy for anaerobic growth through the reduction of perchlorate.",
+                                "Melnyk et al. identify perchlorate reductase and chlorite dismutase, encoded by the pcrABCD and cld genes, as the core enzymes of perchlorate respiration.",
                             )
                         ],
                     },
@@ -1420,12 +1422,12 @@ def build_cohort_c_graphs(rel_path: str, doc: dict[str, Any]) -> list[dict[str, 
                         "predicate": "has output",
                         "predicate_id": "RO:0002234",
                         "object": "perchlorate_respiration_chloride",
-                        "description": "Respiratory reduction of perchlorate in the absence of oxygen yields chloride.",
+                        "description": "Periplasmic reduction of perchlorate to chlorite followed by chlorite dismutation yields chloride and molecular oxygen.",
                         "evidence": [
                             _ev_item(
                                 doc,
                                 0,
-                                "Melnyk and Coates state that perchlorate-respiring Bacteria and Archaea reduce perchlorate and chlorate to chloride in the absence of oxygen.",
+                                "Melnyk et al. describe periplasmic reduction of perchlorate to chlorite by perchlorate reductase followed by dismutation of chlorite to chloride and molecular oxygen.",
                             )
                         ],
                     },
@@ -1437,11 +1439,11 @@ def build_cohort_c_graphs(rel_path: str, doc: dict[str, Any]) -> list[dict[str, 
         return [
             {
                 "graph_id": "chlorate_respiration_pathway_sketch",
-                "title": "Dissimilatory chlorate reduction pathway to chloride",
+                "title": "Two-step dissimilatory chlorate reduction pathway via chlorite",
                 "description": (
                     "Evidence-backed metabolic pathway sketch linking chlorate "
                     "terminal electron acceptance and two-step dissimilatory "
-                    "chlorate transformation into chloride to chlorate respiration."
+                    "chlorate reduction via chlorite to chlorate respiration."
                 ),
                 "scope_status": "NONMECHANISTIC",
                 "scope_notes": (
@@ -1463,21 +1465,21 @@ def build_cohort_c_graphs(rel_path: str, doc: dict[str, Any]) -> list[dict[str, 
                         "label": "chlorate",
                         "node_type": "CHEMICAL",
                         "grounding": "CHEBI:17891",
-                        "description": "Chlorate oxyanion serving as an alternative terminal electron acceptor.",
+                        "description": "Chlorate oxyanion serving as the terminal electron acceptor.",
                     },
                     {
                         "node_id": "chlorate_respiration_dissimilatory_pathway",
                         "label": "anaerobic respiration",
                         "node_type": "PATHWAY",
                         "grounding": "GO:0019645",
-                        "description": "Two-step dissimilatory chlorate reduction respiratory pathway in anoxic environments.",
+                        "description": "Two-step dissimilatory chlorate reduction respiratory pathway consisting of chlorate reduction followed by chlorite decomposition.",
                     },
                     {
-                        "node_id": "chlorate_respiration_chloride",
-                        "label": "chloride",
+                        "node_id": "chlorate_respiration_chlorite",
+                        "label": "chlorite",
                         "node_type": "CHEMICAL",
-                        "grounding": "CHEBI:17996",
-                        "description": "Chloride anion formed by the two-step transformation of chlorate.",
+                        "grounding": "CHEBI:17444",
+                        "description": "Chlorite intermediate produced by chlorate reduction and decomposed in the second step of the chlorate respiration pathway.",
                     },
                 ],
                 "edges": [
@@ -1486,12 +1488,12 @@ def build_cohort_c_graphs(rel_path: str, doc: dict[str, Any]) -> list[dict[str, 
                         "predicate": "has electron acceptor",
                         "predicate_id": "METPO:2007702",
                         "object": "chlorate_respiration_chlorate",
-                        "description": "Chlorate serves as an alternative terminal electron acceptor in anaerobic respiration.",
+                        "description": "Chlorate ion serves as the sole electron acceptor for oxidation of organic matter in chlorate respiration.",
                         "evidence": [
                             _ev_item(
                                 doc,
                                 0,
-                                "Thorell et al. state that chlorate serves as an alternative terminal electron acceptor in bacterial anaerobic respiration.",
+                                "Danielsson Thorell et al. show that chlorate ion serves as the sole electron acceptor for oxidation of organic matter in anaerobic respiration.",
                             )
                         ],
                     },
@@ -1500,12 +1502,12 @@ def build_cohort_c_graphs(rel_path: str, doc: dict[str, Any]) -> list[dict[str, 
                         "predicate": "confers",
                         "predicate_id": "METPO:2007700",
                         "object": "chlorate_respiration_trait",
-                        "description": "Dissimilatory chlorate reduction serves as an anaerobic respiratory pathway.",
+                        "description": "Chlorate-respiring bacteria use dissimilatory chlorate reduction as an anaerobic respiratory pathway.",
                         "evidence": [
                             _ev_item(
                                 doc,
                                 2,
-                                "Clark et al. describe dissimilatory chlorate reduction as a respiratory pathway for specialized microorganisms in anoxic environments.",
+                                "Hellberg Lindqvist et al. characterize chlorate-respiring bacteria (CRB) that use chlorate as a terminal electron acceptor.",
                             )
                         ],
                     },
@@ -1513,13 +1515,13 @@ def build_cohort_c_graphs(rel_path: str, doc: dict[str, Any]) -> list[dict[str, 
                         "subject": "chlorate_respiration_dissimilatory_pathway",
                         "predicate": "has output",
                         "predicate_id": "RO:0002234",
-                        "object": "chlorate_respiration_chloride",
-                        "description": "Two-step respiratory transformation of chlorate yields chloride.",
+                        "object": "chlorate_respiration_chlorite",
+                        "description": "Reduction of chlorate occurs in a two-step reaction producing chlorite followed by chlorite decomposition.",
                         "evidence": [
                             _ev_item(
                                 doc,
                                 1,
-                                "Thorell et al. report that Ideonella dechloratans carries out a two-step transformation of chlorate to chloride.",
+                                "Danielsson Thorell et al. report that reduction of chlorate occurs in a two-step reaction: chlorate reduction followed by chlorite decomposition.",
                             )
                         ],
                     },
@@ -1531,18 +1533,18 @@ def build_cohort_c_graphs(rel_path: str, doc: dict[str, Any]) -> list[dict[str, 
         return [
             {
                 "graph_id": "tmao_respiration_tor_pathway_sketch",
-                "title": "TorS-TorR regulated TMAO reductase respiratory pathway",
+                "title": "torCAD-encoded TMAO reductase anaerobic respiratory pathway",
                 "description": (
-                    "Evidence-backed metabolic pathway sketch linking respiratory "
-                    "TMAO reductase catalysis, trimethylamine formation, and "
-                    "TorS-TorR pathway regulation to TMAO respiration."
+                    "Evidence-backed metabolic pathway sketch linking TMAO "
+                    "terminal electron acceptance, torCAD-encoded TMAO reductase "
+                    "catalysis, and trimethylamine formation to TMAO respiration."
                 ),
                 "scope_status": "NONMECHANISTIC",
                 "scope_notes": (
                     "Pathway-and-activity sketch backed by DOI:10.1111/1462-2920.12726 "
                     "and DOI:10.3389/fmicb.2024.1467153; strain-matched UniProtKB "
                     "protein examples for Escherichia coli K-12 TMAO reductase "
-                    "TorA/TorC and the TorS-TorR two-component regulator remain to be curated."
+                    "TorA/TorC encoded by the torCAD operon remain to be curated."
                 ),
                 "nodes": [
                     {
@@ -1553,11 +1555,18 @@ def build_cohort_c_graphs(rel_path: str, doc: dict[str, Any]) -> list[dict[str, 
                         "description": "Anaerobic respiration using trimethylamine N-oxide (TMAO) as a terminal electron acceptor.",
                     },
                     {
+                        "node_id": "tmao_respiration_tmao",
+                        "label": "trimethylamine N-oxide",
+                        "node_type": "CHEMICAL",
+                        "grounding": "CHEBI:15724",
+                        "description": "Trimethylamine N-oxide (TMAO) serving as the terminal electron acceptor in anaerobic respiratory growth.",
+                    },
+                    {
                         "node_id": "tmao_respiration_reductase_activity",
                         "label": "trimethylamine-N-oxide reductase (cytochrome c) activity",
                         "node_type": "MOLECULAR_FUNCTION",
                         "grounding": "GO:0008810",
-                        "description": "Respiratory TMAO reductase activity reducing TMAO to trimethylamine.",
+                        "description": "Respiratory TMAO reductase activity encoded by the torCAD operon reducing TMAO to trimethylamine.",
                     },
                     {
                         "node_id": "tmao_respiration_trimethylamine",
@@ -1566,26 +1575,19 @@ def build_cohort_c_graphs(rel_path: str, doc: dict[str, Any]) -> list[dict[str, 
                         "grounding": "CHEBI:18139",
                         "description": "Trimethylamine (TMA) produced by respiratory reduction of TMAO.",
                     },
-                    {
-                        "node_id": "tmao_respiration_tor_regulation",
-                        "label": "phosphorelay signal transduction system",
-                        "node_type": "BIOLOGICAL_PROCESS",
-                        "grounding": "GO:0000160",
-                        "description": "TorS-TorR two-component signal transduction pathway regulating anaerobic TMAO respiration.",
-                    },
                 ],
                 "edges": [
                     {
-                        "subject": "tmao_respiration_reductase_activity",
-                        "predicate": "confers",
-                        "predicate_id": "METPO:2007700",
-                        "object": "tmao_respiration_trait",
-                        "description": "Respiratory TMAO reductase activity enables utilization of TMAO as an alternative electron acceptor in oxygen-depleted environments.",
+                        "subject": "tmao_respiration_trait",
+                        "predicate": "has electron acceptor",
+                        "predicate_id": "METPO:2007702",
+                        "object": "tmao_respiration_tmao",
+                        "description": "Trimethylamine N-oxide (TMAO) serves as the terminal electron acceptor in anaerobic respiratory growth.",
                         "evidence": [
                             _ev_item(
                                 doc,
-                                1,
-                                "Leimkuhler and Iobbi-Nivol report that respiratory TMAO reductases enable marine and enterobacteria to utilize N-oxides as alternative electron acceptors in oxygen-depleted environments.",
+                                0,
+                                "Denby et al. describe anaerobic respiratory growth with trimethylamine-N-oxide (TMAO) as the terminal electron acceptor.",
                             )
                         ],
                     },
@@ -1594,26 +1596,26 @@ def build_cohort_c_graphs(rel_path: str, doc: dict[str, Any]) -> list[dict[str, 
                         "predicate": "has output",
                         "predicate_id": "RO:0002234",
                         "object": "tmao_respiration_trimethylamine",
-                        "description": "Respiratory TMAO reductase reduces TMAO to trimethylamine (TMA).",
+                        "description": "TMAO reductase encoded by the torCAD operon reduces TMAO to trimethylamine (TMA).",
                         "evidence": [
                             _ev_item(
                                 doc,
-                                0,
-                                "Leimkuhler and Iobbi-Nivol state that respiratory TMAO reductases reduce TMAO to trimethylamine (TMA).",
+                                1,
+                                "Denby et al. state that TMAO is reduced to TMA by the enzyme TMAO reductase, encoded by the torCAD operon.",
                             )
                         ],
                     },
                     {
-                        "subject": "tmao_respiration_tor_regulation",
-                        "predicate": "contributes to",
-                        "predicate_id": "RO:0002326",
+                        "subject": "tmao_respiration_reductase_activity",
+                        "predicate": "confers",
+                        "predicate_id": "METPO:2007700",
                         "object": "tmao_respiration_trait",
-                        "description": "The TorS-TorR regulatory system governs the major anaerobic TMAO respiration pathway.",
+                        "description": "Respiratory TMAO reduction confers the trimethylamine N-oxide respiration energy-metabolism mode.",
                         "evidence": [
                             _ev_item(
                                 doc,
                                 2,
-                                "Zhang et al. describe the major anaerobic TMAO respiration pathway regulated by TorS-TorR.",
+                                "Qiu and Tang describe switching from aerobic intracellular energy metabolism to trimethylamine N-oxide respiration.",
                             )
                         ],
                     },
@@ -2051,7 +2053,7 @@ def build_cohort_c_graphs(rel_path: str, doc: dict[str, Any]) -> list[dict[str, 
                             _ev_item(
                                 doc,
                                 0,
-                                "Kramer, Ozkaya, and Kummerli define siderophores as iron-chelating molecules produced by bacteria to access iron.",
+                                "Schalk et al. define siderophores as iron-chelating molecules produced by bacteria to access iron.",
                             )
                         ],
                     },
@@ -2065,7 +2067,7 @@ def build_cohort_c_graphs(rel_path: str, doc: dict[str, Any]) -> list[dict[str, 
                             _ev_item(
                                 doc,
                                 1,
-                                "Kramer, Ozkaya, and Kummerli state that secreted siderophores scavenge environmental iron and bring it back into the cells.",
+                                "Schalk et al. state that secreted siderophores scavenge environmental iron and bring it back into the cells.",
                             )
                         ],
                     },
@@ -2599,18 +2601,18 @@ def process_all(apply: bool = False) -> tuple[int, int]:
         else:
             existing_disc.append(disc)
             doc["discussions"] = existing_disc
-        scope_status = graphs[0]["scope_status"]
-        record_curation_event(
-            doc,
-            action=CURATION_ACTION_GRAPH,
-            curator=CURATOR,
-            changes=(
-                f"Added {scope_status} causal_graphs entry ({graph_id}) "
-                f"and OPEN CURATION_TODO discussion ({disc_id}) anchored on "
-                "existing verbatim record evidence snippets."
-            ),
-            llm_assisted=True,
-        )
+            scope_status = graphs[0]["scope_status"]
+            record_curation_event(
+                doc,
+                action=CURATION_ACTION_GRAPH,
+                curator=CURATOR,
+                changes=(
+                    f"Added {scope_status} causal_graphs entry ({graph_id}) "
+                    f"and OPEN CURATION_TODO discussion ({disc_id}) anchored on "
+                    "existing verbatim record evidence snippets."
+                ),
+                llm_assisted=True,
+            )
         errors = validate_trait(doc)
         if errors:
             raise ValidationFailedError(path, errors)
