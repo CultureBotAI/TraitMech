@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0.0",
+  "repository": "CultureBotAI/TraitMech",
+  "run_id": "mech-goal-sequence-20261019",
+  "cycle": 2,
+  "stage": 6,
+  "stage_key": "infrastructure",
+  "source_revision": "1a00d990f70bab5f11c077fe0c764c1f03ab928b",
+  "scope_frozen_at": "2026-10-23T18:11:47Z",
+  "infra_snapshot_path": "reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-06/revision-0001/infra_snapshot.md",
+  "infra_snapshot_sha256": "d6116631e4d3c248b8b05b5b33b6d3a5d4e9f4244eebea5f0a36dd755324eefa",
+  "previous_stage5_evidence_path": "reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-05/revision-0001/evidence.yaml",
+  "previous_stage5_evidence_sha256": "085e93c3b575385229e2aebb9d595b1edc4a0a79f53843c4ee0008b83fe01c80",
+  "summary": {
+    "frozen_tasks_total": 4,
+    "previously_resolved_in_prior_cycles": 4,
+    "pending_at_stage6_freeze": 0,
+    "resolved_in_stage6": 0,
+    "deferred_in_stage6": 0,
+    "carry_forward_ids": []
+  },
+  "tasks": [
+    {
+      "task_id": "traitmech-infra-0001",
+      "origin_cycle": 1,
+      "origin_stage": 1,
+      "frozen_status": "resolved",
+      "final_status": "resolved",
+      "issue_url": "https://github.com/CultureBotAI/TraitMech/issues/1962",
+      "implementation_pr": "https://github.com/CultureBotAI/TraitMech/pull/1961",
+      "summary": "Replace workstation-absolute paths in .claude/skills/traitmech-evolve-workflow/SKILL.md:213 so pr-sanity and qc pass on clean checkouts",
+      "disposition": "Resolved in Cycle 1 PR #1961 prior to Cycle 2 Stage 6."
+    },
+    {
+      "task_id": "traitmech-infra-0002",
+      "origin_cycle": 1,
+      "origin_stage": 2,
+      "frozen_status": "resolved",
+      "final_status": "resolved",
+      "issue_url": "https://github.com/CultureBotAI/TraitMech/issues/1988",
+      "implementation_pr": "https://github.com/CultureBotAI/TraitMech/pull/1989",
+      "summary": "Document or support section-level attaches_to anchors on Discussion entries when target sections (e.g. causal_graphs) are not yet populated",
+      "disposition": "Resolved in Cycle 1 Stage 6 (PR #1989, issue #1988); re-verified in Cycle 2 Stage 6."
+    },
+    {
+      "task_id": "traitmech-infra-0003",
+      "origin_cycle": 1,
+      "origin_stage": 3,
+      "frozen_status": "resolved",
+      "final_status": "resolved",
+      "issue_url": "https://github.com/CultureBotAI/TraitMech/issues/1988",
+      "implementation_pr": "https://github.com/CultureBotAI/TraitMech/pull/1989",
+      "summary": "Add an offline structural consistency check for reports/uniprot_grounding_audit.tsv in audit-derived-reports so new protein_examples cannot land without refreshing the tracked report",
+      "disposition": "Resolved in Cycle 1 Stage 6 (PR #1989, issue #1988); re-verified in Cycle 2 Stage 6 across all 174 UniProtKB uses."
+    },
+    {
+      "task_id": "traitmech-infra-0004",
+      "origin_cycle": 1,
+      "origin_stage": 4,
+      "frozen_status": "resolved",
+      "final_status": "resolved",
+      "issue_url": "https://github.com/CultureBotAI/TraitMech/issues/1981",
+      "implementation_pr": "https://github.com/CultureBotAI/TraitMech/pull/1989",
+      "summary": "Add an optional definition_source evidence-coverage warning to scripts/audit_evidence_snippets.py when a record's definition_source is already quoted in-repo on causal_graphs or parent/sibling records but omitted from record-level evidence",
+      "disposition": "Resolved in Cycle 1 Stage 6 (PR #1989, issue #1981, grouped with #1988); re-verified in Cycle 2 Stage 6 across all 1,130 records."
+    }
+  ]
+}
