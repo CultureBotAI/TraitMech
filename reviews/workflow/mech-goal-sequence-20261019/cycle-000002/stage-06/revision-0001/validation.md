@@ -1,5 +1,6 @@
 # Stage 6 Infrastructure Validation Report (`mech-goal-sequence-20261019`, Cycle 2, Stage 6)
 
+- **Implementation PR**: https://github.com/CultureBotAI/TraitMech/pull/1997
 - **Source Revision (`main`)**: `1a00d990f70bab5f11c077fe0c764c1f03ab928b`
 - **Supervisor Cutoff (`scope_frozen_at`)**: `2026-10-23T18:11:47Z`
 - **Frozen `INFRA_TASKS.md` SHA-256**: `d6116631e4d3c248b8b05b5b33b6d3a5d4e9f4244eebea5f0a36dd755324eefa`

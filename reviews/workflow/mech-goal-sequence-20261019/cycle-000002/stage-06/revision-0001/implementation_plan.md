@@ -4,6 +4,7 @@
 
 - **Repository**: `CultureBotAI/TraitMech` (`traitmech`)
 - **Run / Cycle / Stage**: `mech-goal-sequence-20261019`, Cycle `2`, Stage `6` (`infrastructure`)
+- **Implementation PR**: https://github.com/CultureBotAI/TraitMech/pull/1997
 - **Source revision (`main`)**: `1a00d990f70bab5f11c077fe0c764c1f03ab928b`
 - **Supervisor cutoff (`scope_frozen_at`)**: `2026-10-23T18:11:47Z`
 - **Frozen snapshot path**: `reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-06/revision-0001/infra_snapshot.md`
