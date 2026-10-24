@@ -500,4 +500,59 @@ def test_unquoted_definition_source_parent_sibling_propagation_and_short_snippet
     assert "ELLIPTICAL_SNIPPET" in defects
 
 
+def test_unquoted_definition_source_identifier_field_and_snippet_less_evidence(
+    tmp_path, monkeypatch
+):
+    """TraitRecord YAML files use `identifier:` (not `id:`) for their primary CURIE,
+    and snippet-less record-level `evidence[]` entries for `definition_source` must
+    still trigger `UNQUOTED_DEFINITION_SOURCE` when a verbatim quote exists in-corpus."""
+    traits = _write_trait(tmp_path, monkeypatch, """
+        identifier: METPO:1001000
+        definition_source: PMID:16159787
+        evidence:
+          - reference: PMID:16159787
+            supports: SUPPORT
+        """)
+    (traits / "child.yaml").write_text(textwrap.dedent("""
+        identifier: METPO:1001001
+        parent_traits:
+          - METPO:1001000
+        definition_source: PMID:16159787
+        evidence:
+          - reference: PMID:16159787
+            supports: SUPPORT
+            snippet: The majority of known psychrophiles are Gram-negative bacteria
+        """))
+    findings = audit(check_reports=False, check_definition_sources=True)
+    unquoted = [f for f in findings if f["defect"] == "UNQUOTED_DEFINITION_SOURCE"]
+    assert len(unquoted) == 1
+    assert unquoted[0]["file"].endswith("x.yaml")
+    assert "lacks a non-elliptical verbatim snippet in record-level evidence[]" in unquoted[0]["detail"]
+
+    # Also test parent-to-child propagation via `identifier:` when child has snippet-less evidence
+    (traits / "x.yaml").write_text(textwrap.dedent("""
+        identifier: METPO:1001000
+        definition_source: PMID:16159787
+        evidence:
+          - reference: PMID:16159787
+            supports: SUPPORT
+            snippet: The majority of known psychrophiles are Gram-negative bacteria
+        """))
+    (traits / "child.yaml").write_text(textwrap.dedent("""
+        identifier: METPO:1001001
+        parent_traits:
+          - METPO:1001000
+        definition_source: PMID:16159787
+        evidence:
+          - reference: PMID:16159787
+            supports: SUPPORT
+        """))
+    findings = audit(check_reports=False, check_definition_sources=True)
+    unquoted = [f for f in findings if f["defect"] == "UNQUOTED_DEFINITION_SOURCE"]
+    assert len(unquoted) == 1
+    assert unquoted[0]["file"].endswith("child.yaml")
+    assert "lacks a non-elliptical verbatim snippet in record-level evidence[]" in unquoted[0]["detail"]
+
+
+
 
