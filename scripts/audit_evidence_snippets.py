@@ -220,7 +220,16 @@ def audit(
             continue
         docs.append((path, doc))
         if check_definition_sources:
-            rec_id = _norm(str(doc.get("id") or path.stem))
+            rec_id = _norm(str(doc.get("identifier") or doc.get("id") or path.stem))
+            rec_keys = {
+                k
+                for k in (
+                    _norm(str(doc.get("identifier") or "")),
+                    _norm(str(doc.get("id") or "")),
+                    _norm(path.stem),
+                )
+                if k
+            }
             parents = [
                 _norm(str(p)) for p in (doc.get("parent_traits") or []) if _norm(str(p))
             ]
@@ -231,7 +240,8 @@ def audit(
                 if (ref and len(snip) >= MIN_SNIPPET_CHARS
                         and "..." not in snip and "…" not in snip):
                     quoted.add(ref)
-            refs_by_record_id[rec_id] = quoted
+            for key in rec_keys or {rec_id}:
+                refs_by_record_id.setdefault(key, set()).update(quoted)
             for parent_id in parents:
                 refs_by_parent_id.setdefault(parent_id, set()).update(quoted)
 
@@ -245,35 +255,45 @@ def audit(
         per_graph: dict[str, dict[str, int]] = {}
         if check_definition_sources:
             record_refs: set[str] = set()
+            record_any_refs: set[str] = set()
             for item in doc.get("evidence") or []:
                 if not isinstance(item, dict):
                     continue
                 ref = _norm(str(item.get("reference") or ""))
                 snip = _norm(str(item.get("snippet") or ""))
+                if ref:
+                    record_any_refs.add(ref)
                 if (ref and len(snip) >= MIN_SNIPPET_CHARS
                         and "..." not in snip and "…" not in snip):
                     record_refs.add(ref)
             def_source = _norm(str(doc.get("definition_source") or ""))
-            rec_id = _norm(str(doc.get("id") or path.stem))
+            rec_id = _norm(str(doc.get("identifier") or doc.get("id") or path.stem))
             parents = [
                 _norm(str(p)) for p in (doc.get("parent_traits") or []) if _norm(str(p))
             ]
-            family_quoted = set(refs_by_record_id.get(rec_id, set()))
+            family_quoted = (
+                set(refs_by_record_id.get(rec_id, set()))
+                | set(refs_by_parent_id.get(rec_id, set()))
+            )
             for parent_id in parents:
                 family_quoted.update(refs_by_record_id.get(parent_id, set()))
                 family_quoted.update(refs_by_parent_id.get(parent_id, set()))
             if (def_source.startswith(("PMID:", "DOI:"))
                     and def_source in family_quoted
                     and def_source not in record_refs):
+                reason = (
+                    "lacks a non-elliptical verbatim snippet in record-level evidence[]"
+                    if def_source in record_any_refs
+                    else "is absent from record-level evidence[].reference"
+                )
                 findings.append({
                     "file": rel,
                     "locator": "definition_source",
                     "defect": "UNQUOTED_DEFINITION_SOURCE",
                     "severity": SEVERITY["UNQUOTED_DEFINITION_SOURCE"],
                     "detail": (
-                        f"definition_source={def_source} is absent from record-level "
-                        "evidence[].reference despite carrying a verbatim snippet on "
-                        "causal_graphs or parent/sibling records"
+                        f"definition_source={def_source} {reason} despite carrying a "
+                        "verbatim snippet on causal_graphs or parent/sibling/child records"
                     ),
                 })
 

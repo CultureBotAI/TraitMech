@@ -1,0 +1,54 @@
+schema_version: '1.0.0'
+repository_key: traitmech
+github_repository: CultureBotAI/TraitMech
+run_id: mech-goal-sequence-20261019
+cycle: 3
+stage: 6
+revision: 1
+source_revision: bb0ac42d67b473316af3f154dafc1162a9a973c4
+scope_frozen_at: '2026-10-24T06:05:25Z'
+outcome: completed
+summary: >
+  Froze INFRA_TASKS.md at the supervisor cutoff (2026-10-24T06:05:25Z,
+  sha256 f0ec81378be99a5e846068def8894db101fc208d26ef099022e3e8d4843422d4),
+  reconciled the 1 pending infrastructure task in the frozen scope
+  (traitmech-infra-0005, linked to GitHub issue #2002 as follow-up to #1981),
+  implemented parent-record CURIE lookup (doc.get("identifier") alongside id
+  and path.stem), child-to-parent quote propagation, and snippet-less
+  record-level evidence[] diagnostic differentiation on UNQUOTED_DEFINITION_SOURCE
+  in scripts/audit_evidence_snippets.py with unit tests in
+  tests/test_audit_evidence_snippets.py, validated all repository QC and
+  workflow gates, and marked traitmech-infra-0005 as resolved in INFRA_TASKS.md
+  with 0 deferred or blocked tasks remaining.
+artifacts:
+  - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-06/revision-0001/infra_snapshot.md
+    kind: infra_snapshot
+    sha256: f0ec81378be99a5e846068def8894db101fc208d26ef099022e3e8d4843422d4
+  - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-06/revision-0001/implementation_plan.md
+    kind: implementation_plan
+    sha256: 87cc1f0ab47098e4dec8c03029fdd859ada9d3af21e65d10d6947f4ac9290356
+  - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-06/revision-0001/validation.md
+    kind: validation
+    sha256: 84ee3b26ef991f0d69abce28b0fe8064506de683852ec89e763687ae4e86e70e
+  - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-06/revision-0001/c3s6_coverage_full.json
+    kind: supporting
+    sha256: 0854576b612cd40827240d95e844951dfcf3f765934ae1f0cf4f8bc3e31bce86
+findings: []
+groups: []
+infra_tasks:
+  - task_id: traitmech-infra-0005
+    summary: Fix parent-record CURIE lookup (doc.get("identifier")) and snippet-presence check in scripts/audit_evidence_snippets.py so UNQUOTED_DEFINITION_SOURCE detects unquoted or snippet-less definition_source entries when an in-corpus verbatim quote exists
+    status: resolved
+    issue_url: https://github.com/CultureBotAI/TraitMech/issues/2002
+    resolution_evidence:
+      - reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-06/revision-0001/implementation_plan.md
+      - reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-06/revision-0001/validation.md
+    disposition: >
+      Resolved in Cycle 3 Stage 6 (issue #2002, follow-up to #1981); updated
+      scripts/audit_evidence_snippets.py to index and query refs_by_record_id
+      and refs_by_parent_id by doc.get("identifier") (alongside id and
+      path.stem), propagate child quotes to parents, and distinguish
+      snippet-less record-level evidence[] entries from absent references on
+      UNQUOTED_DEFINITION_SOURCE, covered by unit tests in
+      tests/test_audit_evidence_snippets.py.
+carry_forward_ids: []
