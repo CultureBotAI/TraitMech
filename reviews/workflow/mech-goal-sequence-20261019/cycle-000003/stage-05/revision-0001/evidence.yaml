@@ -23,16 +23,16 @@ previous_evidence:
   sha256: d3d5bf0aa473a132220a4cbcc1b6acd2da713ea1bd257f6f4a5b164e4c6b6ee3
 artifacts:
 - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-05/revision-0001/issue_map.md
-  sha256: a17b17623532f9182c4ba90b6cb76007f03380bf08bd3a320c25172f7eb0ca22
+  sha256: a645267b831258497de02885325cd520e61304b6a93dcaa640cb930ebe976c17
   kind: issue_map
 - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-05/revision-0001/validation.md
   sha256: e23140cb0d885d5eb11dae6b29857fba0091a4302e034e8a14a1942c7f1adcab
   kind: validation
 - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-05/revision-0001/remediated_records_review.yaml
-  sha256: 2b46c843c053c318e4ae135c8bf0a831ea770093762853e50d41647dc0cc5fb9
+  sha256: e5a486426c0e12e65be815867ce7eb2a06e6f5604967b5124d0ea5ba1e33df1c
   kind: supporting
 - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-05/revision-0001/remediated_records_review.md
-  sha256: 783fae195fde7469c0efe53e8134f3c28f53aed3682b46ec7f3b9cb88bc64100
+  sha256: 37bd85240d4e21dd49c29c2e6c53432233202717d520e82cc0456aefde6bd887
   kind: supporting
 - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-05/revision-0001/c3s5_coverage_full.json
   sha256: 13ea3c0ba43223cbe63054e3296af9e9eeddc827fa21d2f473bc03c96a163c8d
@@ -250,9 +250,12 @@ findings:
   group_id: G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
   issue_url: https://github.com/CultureBotAI/TraitMech/issues/2002
   disposition: 'Resolved in Cycle 3 Stage 5 under group G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
-    (#2002) via scripts/curate_stage5_review_findings.py: promoted verified verbatim snippet for DOI:10.1038/nrmicro1341
-    from sibling data/traits/ecology/soil_dwelling.yaml (traitmech:000050) evidence[1] to record-level
-    evidence[0] on data/traits/ecology/free_living.yaml and verified in reviews/structured/20261024T025000Z-cycle3-stage5-remediated-records-review/review.yaml.'
+    (#2002) via scripts/curate_stage5_review_findings.py: promoted the 26-char contiguous verbatim substring
+    (''free-living microbial taxa'') for DOI:10.1038/nrmicro1341 from sibling data/traits/ecology/soil_dwelling.yaml
+    (traitmech:000050) evidence[1] (''free-living microbial taxa exhibit biogeographic patterns'') to
+    record-level evidence[0] on data/traits/ecology/free_living.yaml (keeping folded length < 40 chars
+    to avoid a false-positive ECHOES_RESEARCH_REPORT warning against research/ecology/free_living-deep-research-edison-2026-06-16.md,
+    which also quotes Martiny et al. 2006) and verified in reviews/structured/20261024T025000Z-cycle3-stage5-remediated-records-review/review.yaml.'
 - finding_id: F-C3S4-DEF-SRC-015
   status: resolved
   summary: 'data/traits/morphology/amphitrichous.yaml (traitmech:000059) declares definition_source: DOI:10.1093/femsre/fuv034

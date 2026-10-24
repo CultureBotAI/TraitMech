@@ -466,7 +466,7 @@ evidence:
   summary: Guarded writer script and unit test suite verifying closed-mode LinkML
     validation, DO_NOT_WORK exclusion, and idempotent remediation across all 27 target
     records (4 Cycle 1 + 6 Cycle 2 + 17 Cycle 3).
-  snapshot_sha256: 9733d9763f65f4ee6ce7dd6116dd6eeafdb4a252b6a6d1077e131c23543ddfd5
+  snapshot_sha256: 840268979a0b3af1a2ed15708587e376dcc446184f089121fb0f224fe14506b4
 - evidence_id: ev-validate-strict
   kind: validation
   reference: scripts/validate_strict.py
@@ -1058,10 +1058,13 @@ findings:
   title: free_living.yaml now includes a verbatim snippet for definition_source DOI:10.1038/nrmicro1341
     in record-level evidence[0]
   description: 'Resolved Cycle 3 Stage 4 open finding F-C3S4-DEF-SRC-014 on data/traits/ecology/free_living.yaml
-    (traitmech:000048): promoted verified verbatim snippet (''free-living microbial
-    taxa'') from sibling soil_dwelling.yaml evidence[1] to record-level evidence[0]
-    for definition_source DOI:10.1038/nrmicro1341 and appended curation_history entry
-    via scripts/curate_stage5_review_findings.py.'
+    (traitmech:000048): promoted the 26-char contiguous verbatim substring (''free-living
+    microbial taxa'') from sibling soil_dwelling.yaml evidence[1] (''free-living microbial
+    taxa exhibit biogeographic patterns'') to record-level evidence[0] for definition_source
+    DOI:10.1038/nrmicro1341 (keeping folded length < 40 chars to avoid a false-positive
+    ECHOES_RESEARCH_REPORT warning against research/ecology/free_living-deep-research-edison-2026-06-16.md,
+    which also quotes Martiny et al. 2006) and appended curation_history entry via
+    scripts/curate_stage5_review_findings.py.'
   target_ids:
   - traitmech:000048
   field_paths:

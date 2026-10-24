@@ -237,22 +237,13 @@ entries:
   verification:
     checks:
     - bucket: pass
-      name: qc
-      state: SUCCESS
-    - bucket: pass
       name: history
       state: SUCCESS
     - bucket: pass
-      name: label-correspondence / label-correspondence
-      state: SUCCESS
-    - bucket: pass
-      name: vendored-sync
-      state: SUCCESS
-    - bucket: pass
-      name: validate-strict
-      state: SUCCESS
-    - bucket: pass
       name: canonical-example-taxonomy
+      state: SUCCESS
+    - bucket: pass
+      name: label-correspondence / label-correspondence
       state: SUCCESS
     - bucket: pass
       name: pr-sanity
@@ -260,9 +251,18 @@ entries:
     - bucket: pass
       name: pytest
       state: SUCCESS
-    head_sha: cb2b2d56e7535bd8c0837887b4b06b5c49022638
+    - bucket: pass
+      name: qc
+      state: SUCCESS
+    - bucket: pass
+      name: validate-strict
+      state: SUCCESS
+    - bucket: pass
+      name: vendored-sync
+      state: SUCCESS
+    head_sha: a729abd9e2c388b91499e768fa8f7fc8b035f73f
     merge_commit_sha: 41928219be300e175fd73dcb12ab332c30b3ad47
-    merged_at: '2026-10-24T02:27:08Z'
+    merged_at: '2026-10-24T02:17:23Z'
     pr_number: 2001
     status: merged
-    verified_at: '2026-10-24T02:37:52.712352+00:00'
+    verified_at: '2026-10-24T02:37:48.125144+00:00'
