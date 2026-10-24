@@ -55,10 +55,10 @@ tasks:
     issue_url: https://github.com/CultureBotAI/TraitMech/issues/1981
     disposition: Resolved in Cycle 1 Stage 6 (PR #1989, issue #1981, grouped with #1988); added UNQUOTED_DEFINITION_SOURCE warning to scripts/audit_evidence_snippets.py and unit tests in tests/test_audit_evidence_snippets.py to flag any PMID:/DOI: definition_source omitted from record-level evidence[].reference when a verbatim quote already exists in-corpus.
   - task_id: traitmech-infra-0005
-    summary: Fix parent-record CURIE lookup in scripts/audit_evidence_snippets.py (use doc.get("identifier") in addition to doc.get("id") and path.stem) so UNQUOTED_DEFINITION_SOURCE detects verbatim definition_source quotes on parent_traits records
+    summary: Fix parent-record CURIE lookup (doc.get("identifier")) and snippet-presence check in scripts/audit_evidence_snippets.py so UNQUOTED_DEFINITION_SOURCE detects unquoted or snippet-less definition_source entries when an in-corpus verbatim quote exists
     status: open
-    issue_url: https://github.com/CultureBotAI/TraitMech/issues/1981
-    disposition: Queued for Cycle 3 Stage 6 infrastructure implementation (follow-up to #1981).
+    issue_url: https://github.com/CultureBotAI/TraitMech/issues/2002
+    disposition: Queued for Cycle 3 Stage 6 infrastructure implementation (follow-up to #1981 and #2002).
 ```
 <!-- mech-infra-tasks:end -->
 
@@ -108,16 +108,16 @@ tasks:
 - **Dependencies**: None (Stage 5 remediation of `F-DEF-SRC-CYANOPHYCIN-001`..`004` completed)
 - **Disposition**: Resolved in Stage 6 (PR #1989, issue #1981, grouped with #1988) by adding `UNQUOTED_DEFINITION_SOURCE` (`WARN`) to `scripts/audit_evidence_snippets.py` and unit tests in `tests/test_audit_evidence_snippets.py`.
 
-### `traitmech-infra-0005` — Fix parent-record CURIE lookup in `scripts/audit_evidence_snippets.py` (`doc.get("identifier")`) for `UNQUOTED_DEFINITION_SOURCE`
-- **Origin**: `mech-goal-sequence-20261019`, Cycle 3, Stage 4 (`record_review`)
-- **Issue**: https://github.com/CultureBotAI/TraitMech/issues/1981
+### `traitmech-infra-0005` — Fix parent-record CURIE lookup (`doc.get("identifier")`) and snippet-presence check in `scripts/audit_evidence_snippets.py` for `UNQUOTED_DEFINITION_SOURCE`
+- **Origin**: `mech-goal-sequence-20261019`, Cycle 3, Stage 4 (`record_review`) / Stage 5 (`resolve_review_findings`)
+- **Issue**: https://github.com/CultureBotAI/TraitMech/issues/2002 (follow-up to https://github.com/CultureBotAI/TraitMech/issues/1981)
 - **Status**: `open`
-- **Observation**: In `scripts/audit_evidence_snippets.py` (lines 223 and 257), `rec_id = _norm(str(doc.get("id") or path.stem))` indexes `refs_by_record_id` by `doc.get("id")` (falling back to `path.stem`), whereas `TraitRecord` YAML files store their primary CURIE (`METPO:...` or `traitmech:...`) in `doc.get("identifier")` and list parent CURIEs in `parent_traits`. As a result, `refs_by_record_id.get(parent_id)` never resolves a parent record's `evidence` or `causal_graphs` references by CURIE unless a sibling also happens to carry the reference under `refs_by_parent_id` (affecting child records such as `calvin_benson_bassham_cycle.yaml` under parent `carbon_fixation.yaml`, `traitmech:000019`, and `dissimilatory_nitrate_reduction_to_ammonium.yaml` under parent `nitrate_respiration.yaml`, `traitmech:000122`).
-- **Desired outcome**: In Cycle 3 Stage 6, update `scripts/audit_evidence_snippets.py` to index `refs_by_record_id` by `_norm(str(doc.get("identifier") or doc.get("id") or path.stem))` (and also index `path.stem` as a secondary key if needed) and add unit tests in `tests/test_audit_evidence_snippets.py` verifying parent-record `identifier` lookup for `UNQUOTED_DEFINITION_SOURCE`.
-- **Evidence paths**: `scripts/audit_evidence_snippets.py`, `tests/test_audit_evidence_snippets.py`, `reviews/structured/20261023T235000Z-cycle3-stage4-corpus-record-and-cohort-review/review.yaml`, `reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-04/revision-0001/evidence.yaml`
+- **Observation**: In `scripts/audit_evidence_snippets.py` (lines 223 and 257), `rec_id = _norm(str(doc.get("id") or path.stem))` indexes `refs_by_record_id` by `doc.get("id")` (falling back to `path.stem`), whereas `TraitRecord` YAML files store their primary CURIE (`METPO:...` or `traitmech:...`) in `doc.get("identifier")` and list parent CURIEs in `parent_traits`. Furthermore, `UNQUOTED_DEFINITION_SOURCE` checks only whether `definition_source` appears in `evidence[].reference`, without verifying that the matching record-level `evidence[]` entry carries a non-empty `snippet` when an in-corpus verbatim quote already exists (as seen across 16 of the 17 records remediated in Cycle 3 Stage 5 under `#2002`).
+- **Desired outcome**: In Cycle 3 Stage 6, update `scripts/audit_evidence_snippets.py` to index `refs_by_record_id` by `_norm(str(doc.get("identifier") or doc.get("id") or path.stem))` and require a non-empty record-level `snippet` for `definition_source` when an in-corpus verbatim quote exists, with unit tests in `tests/test_audit_evidence_snippets.py`.
+- **Evidence paths**: `scripts/audit_evidence_snippets.py`, `tests/test_audit_evidence_snippets.py`, `scripts/curate_stage5_review_findings.py`, `reviews/structured/20261023T235000Z-cycle3-stage4-corpus-record-and-cohort-review/review.yaml`, `reviews/structured/20261024T025000Z-cycle3-stage5-remediated-records-review/review.yaml`, `reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-05/revision-0001/evidence.yaml`
 - **Priority**: Medium
-- **Dependencies**: None
-- **Disposition**: Queued for Cycle 3 Stage 6 infrastructure implementation (follow-up to `#1981`).
+- **Dependencies**: None (Cycle 3 Stage 5 remediation of `F-C3S4-DEF-SRC-001`..`017` completed)
+- **Disposition**: Queued for Cycle 3 Stage 6 infrastructure implementation (follow-up to `#1981` and `#2002`).
 
 
 

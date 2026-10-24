@@ -15,6 +15,9 @@ synonyms:
   source: DOI:10.1128/mr.55.2.259-287.1991
 evidence:
 - reference: DOI:10.1128/mr.55.2.259-287.1991
+  snippet: The oxidation of organic matter coupled to the reduction of Fe(III) or
+    Mn(IV) is one of the most important biogeochemical reactions in aquatic sediments,
+    soils, and groundwater
   notes: Lovley establishes dissimilatory Fe(III)/Mn(IV) reduction as energy-conserving
     anaerobic respiration on metal-oxide acceptors.
 - reference: PMID:7826009
@@ -228,4 +231,13 @@ curation_history:
   action: REFRESH_UNIPROT_ENTRY_VERSION
   changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
     UniProtKB:Q8EG34 (125 -> 126 on mtrc).'
+  llm_assisted: true
+- timestamp: '2026-10-24T02:45:00Z'
+  curator: claude
+  action: ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE
+  changes: 'Added verified verbatim snippet from DOI:10.1128/mr.55.2.259-287.1991
+    (already present on parent record dissimilatory_metal_reduction.yaml evidence[0])
+    to record-level evidence[0] to match definition_source (Cycle 3 Stage 5 remediation
+    of F-C3S4-DEF-SRC-012 in group G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS,
+    issue #2002).'
   llm_assisted: true

@@ -23,6 +23,8 @@ xrefs:
 - GO:0005983
 evidence:
 - reference: DOI:10.1016/S0168-1656(01)00407-2
+  snippet: the use of starch-converting enzymes in the production of maltodextrin,
+    modified starches, or glucose and fructose syrups
   notes: van der Maarel et al. review starch-converting enzymes of the alpha-amylase
     family that hydrolyze starch to oligosaccharides and glucose.
 - reference: DOI:10.1093/nar/gkt1178
@@ -251,4 +253,12 @@ curation_history:
   action: REFRESH_UNIPROT_ENTRY_VERSION
   changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
     UniProtKB:P06278 (173 -> 174 on amylase).'
+  llm_assisted: true
+- timestamp: '2026-10-24T02:45:00Z'
+  curator: claude
+  action: ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE
+  changes: 'Added verified verbatim snippet from DOI:10.1016/S0168-1656(01)00407-2
+    (already present on causal_graphs[0].edges[0].evidence[0]) to record-level evidence[0]
+    to match definition_source (Cycle 3 Stage 5 remediation of F-C3S4-DEF-SRC-005
+    in group G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).'
   llm_assisted: true

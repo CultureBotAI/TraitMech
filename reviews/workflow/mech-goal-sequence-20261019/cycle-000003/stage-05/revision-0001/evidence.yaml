@@ -1,0 +1,468 @@
+schema_version: 1.0.0
+repository_key: traitmech
+github_repository: CultureBotAI/TraitMech
+run_id: mech-goal-sequence-20261019
+cycle: 3
+stage: 5
+revision: 1
+outcome: completed
+summary: 'Consumed all 22 carried-forward findings from Cycle 3 Stage 4 review evidence (reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-04/revision-0001/evidence.yaml,
+  sha256 d3d5bf0aa473a132220a4cbcc1b6acd2da713ea1bd257f6f4a5b164e4c6b6ee3), grouped them by cause and
+  repair ownership into 6 groups, deduplicated against all open GitHub issues, and linked every group
+  and finding to a real GitHub issue (#2002 for resolved group G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS;
+  open issues #1982, #1983, #1984, #1985, and #364 for the 5 deferred source-limited/upstream-blocked
+  cohort groups). Implemented accepted fixes for all 17 actionable open findings (F-C3S4-DEF-SRC-001..F-C3S4-DEF-SRC-017
+  across 17 TraitRecord files) via guarded writer scripts/curate_stage5_review_findings.py, regenerated
+  pages/, preserved all immutable Stage 4 review artifacts untouched, and obtained fresh structured review
+  reviews/structured/20261024T025000Z-cycle3-stage5-remediated-records-review/review.yaml confirming verdict
+  pass and 0 remaining open findings.'
+source_revision: 41928219be300e175fd73dcb12ab332c30b3ad47
+scope_frozen_at: '2026-10-24T02:38:00.045108Z'
+previous_evidence:
+  path: reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-04/revision-0001/evidence.yaml
+  sha256: d3d5bf0aa473a132220a4cbcc1b6acd2da713ea1bd257f6f4a5b164e4c6b6ee3
+artifacts:
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-05/revision-0001/issue_map.md
+  sha256: a645267b831258497de02885325cd520e61304b6a93dcaa640cb930ebe976c17
+  kind: issue_map
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-05/revision-0001/validation.md
+  sha256: e23140cb0d885d5eb11dae6b29857fba0091a4302e034e8a14a1942c7f1adcab
+  kind: validation
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-05/revision-0001/remediated_records_review.yaml
+  sha256: e5a486426c0e12e65be815867ce7eb2a06e6f5604967b5124d0ea5ba1e33df1c
+  kind: supporting
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-05/revision-0001/remediated_records_review.md
+  sha256: 37bd85240d4e21dd49c29c2e6c53432233202717d520e82cc0456aefde6bd887
+  kind: supporting
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-05/revision-0001/c3s5_coverage_full.json
+  sha256: 13ea3c0ba43223cbe63054e3296af9e9eeddc827fa21d2f473bc03c96a163c8d
+  kind: supporting
+findings:
+- finding_id: F-C3S4-DEF-SRC-001
+  status: resolved
+  summary: 'data/traits/physiology/photoorganoheterotrophic.yaml (METPO:1000659) declares definition_source:
+    DOI:10.1016/B978-012373944-5.00083-3 and omits DOI:10.1016/B978-012373944-5.00083-3 from record-level
+    evidence[] (MISSING_DEFINITION_SOURCE_EVIDENCE), even though causal_graphs[0].edges[0].evidence[0]
+    on the same record (photoorganoheterotrophic_trait -> light) already carries the verified verbatim
+    snippet ''use of light'' from DOI:10.1016/B978-012373944-5.00083-3.'
+  carried_from: F-C3S4-DEF-SRC-001
+  group_id: G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/2002
+  disposition: 'Resolved in Cycle 3 Stage 5 under group G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+    (#2002) via scripts/curate_stage5_review_findings.py: promoted verified verbatim snippet for DOI:10.1016/B978-012373944-5.00083-3
+    from causal_graphs[0].edges[0].evidence[0] on the same record (photoorganoheterotrophic_trait -> light)
+    to record-level evidence[2] on data/traits/physiology/photoorganoheterotrophic.yaml and verified in
+    reviews/structured/20261024T025000Z-cycle3-stage5-remediated-records-review/review.yaml.'
+- finding_id: F-C3S4-DEF-SRC-002
+  status: resolved
+  summary: 'data/traits/physiology/oxidase_activity.yaml (traitmech:000076) declares definition_source:
+    DOI:10.3390/microorganisms10050926 and cites DOI:10.3390/microorganisms10050926 in record-level evidence[0]
+    with notes only and no snippet (UNQUOTED_DEFINITION_SOURCE), even though causal_graphs[0].edges[9].evidence[0]
+    on the same record (family_a_cytochrome_c_oxidase -> cytochrome_c_oxidase) already carries the verified
+    verbatim snippet ''Cytochrome c oxidases of the heme–copper oxygen reductase family A'' from DOI:10.3390/microorganisms10050926.'
+  carried_from: F-C3S4-DEF-SRC-002
+  group_id: G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/2002
+  disposition: 'Resolved in Cycle 3 Stage 5 under group G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+    (#2002) via scripts/curate_stage5_review_findings.py: promoted verified verbatim snippet for DOI:10.3390/microorganisms10050926
+    from causal_graphs[0].edges[9].evidence[0] on the same record (family_a_cytochrome_c_oxidase -> cytochrome_c_oxidase)
+    to record-level evidence[0] on data/traits/physiology/oxidase_activity.yaml and verified in reviews/structured/20261024T025000Z-cycle3-stage5-remediated-records-review/review.yaml.'
+- finding_id: F-C3S4-DEF-SRC-003
+  status: resolved
+  summary: 'data/traits/morphology/peritrichous.yaml (traitmech:000060) declares definition_source: DOI:10.1093/femsre/fuv034
+    and cites DOI:10.1093/femsre/fuv034 in record-level evidence[0] with notes only and no snippet (UNQUOTED_DEFINITION_SOURCE),
+    even though causal_graphs[0].edges[2].evidence[0] on the same record (surface_placement -> flagellar_filament_number)
+    already carries the verified verbatim snippet ''five to six flagellar filaments distributed over the
+    cell body'' from DOI:10.1093/femsre/fuv034.'
+  carried_from: F-C3S4-DEF-SRC-003
+  group_id: G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/2002
+  disposition: 'Resolved in Cycle 3 Stage 5 under group G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+    (#2002) via scripts/curate_stage5_review_findings.py: promoted verified verbatim snippet for DOI:10.1093/femsre/fuv034
+    from causal_graphs[0].edges[2].evidence[0] on the same record (surface_placement -> flagellar_filament_number)
+    to record-level evidence[0] on data/traits/morphology/peritrichous.yaml and verified in reviews/structured/20261024T025000Z-cycle3-stage5-remediated-records-review/review.yaml.'
+- finding_id: F-C3S4-DEF-SRC-004
+  status: resolved
+  summary: 'data/traits/metabolism/proteorhodopsin_phototrophy.yaml (traitmech:000036) declares definition_source:
+    DOI:10.1126/science.289.5486.1902 and cites DOI:10.1126/science.289.5486.1902 in record-level evidence[0]
+    with notes only and no snippet (UNQUOTED_DEFINITION_SOURCE), even though causal_graphs[0].edges[0].evidence[0]
+    on the same record (proteorhodopsin -> proteorhodopsin_trait) already carries the verified verbatim
+    snippet ''bound retinal to form an active, light-driven proton pump'' from DOI:10.1126/science.289.5486.1902.'
+  carried_from: F-C3S4-DEF-SRC-004
+  group_id: G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/2002
+  disposition: 'Resolved in Cycle 3 Stage 5 under group G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+    (#2002) via scripts/curate_stage5_review_findings.py: promoted verified verbatim snippet for DOI:10.1126/science.289.5486.1902
+    from causal_graphs[0].edges[0].evidence[0] on the same record (proteorhodopsin -> proteorhodopsin_trait)
+    to record-level evidence[0] on data/traits/metabolism/proteorhodopsin_phototrophy.yaml and verified
+    in reviews/structured/20261024T025000Z-cycle3-stage5-remediated-records-review/review.yaml.'
+- finding_id: F-C3S4-DEF-SRC-005
+  status: resolved
+  summary: 'data/traits/metabolism/starch_degradation.yaml (traitmech:000115) declares definition_source:
+    DOI:10.1016/S0168-1656(01)00407-2 and cites DOI:10.1016/S0168-1656(01)00407-2 in record-level evidence[0]
+    with notes only and no snippet (UNQUOTED_DEFINITION_SOURCE), even though causal_graphs[0].edges[0].evidence[0]
+    on the same record (amylase -> starch_degradation_trait) already carries the verified verbatim snippet
+    ''the use of starch-converting enzymes in the production of maltodextrin, modified starches, or glucose
+    and fructose syrups'' from DOI:10.1016/S0168-1656(01)00407-2.'
+  carried_from: F-C3S4-DEF-SRC-005
+  group_id: G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/2002
+  disposition: 'Resolved in Cycle 3 Stage 5 under group G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+    (#2002) via scripts/curate_stage5_review_findings.py: promoted verified verbatim snippet for DOI:10.1016/S0168-1656(01)00407-2
+    from causal_graphs[0].edges[0].evidence[0] on the same record (amylase -> starch_degradation_trait)
+    to record-level evidence[0] on data/traits/metabolism/starch_degradation.yaml and verified in reviews/structured/20261024T025000Z-cycle3-stage5-remediated-records-review/review.yaml.'
+- finding_id: F-C3S4-DEF-SRC-006
+  status: resolved
+  summary: 'data/traits/metabolism/three_hydroxypropionate_bicycle.yaml (traitmech:000023) declares definition_source:
+    DOI:10.1128/AEM.02473-10 and cites DOI:10.1128/AEM.02473-10 in record-level evidence[0] with notes
+    only and no snippet (UNQUOTED_DEFINITION_SOURCE), even though causal_graphs[0].edges[9].evidence[0]
+    on the same record (acetyl_coa_carboxylase -> three_hp_bicycle_trait) already carries the verified
+    verbatim snippet ''The 3-hydroxypropionate (Fuchs-Holo) bi-cycle. Enzymes: 1, acetyl-CoA carboxylase''
+    from DOI:10.1128/AEM.02473-10.'
+  carried_from: F-C3S4-DEF-SRC-006
+  group_id: G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/2002
+  disposition: 'Resolved in Cycle 3 Stage 5 under group G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+    (#2002) via scripts/curate_stage5_review_findings.py: promoted verified verbatim snippet for DOI:10.1128/AEM.02473-10
+    from causal_graphs[0].edges[9].evidence[0] on the same record (acetyl_coa_carboxylase -> three_hp_bicycle_trait)
+    to record-level evidence[0] on data/traits/metabolism/three_hydroxypropionate_bicycle.yaml and verified
+    in reviews/structured/20261024T025000Z-cycle3-stage5-remediated-records-review/review.yaml.'
+- finding_id: F-C3S4-DEF-SRC-007
+  status: resolved
+  summary: 'data/traits/metabolism/ethanol_fermentation.yaml (traitmech:000028) declares definition_source:
+    DOI:10.3389/fmicb.2021.703525 and cites DOI:10.3389/fmicb.2021.703525 in record-level evidence[1]
+    with notes only and no snippet (UNQUOTED_DEFINITION_SOURCE), even though causal_graphs[0].edges[0].evidence[0]
+    on the same record (ethanol_fermentation_trait -> fermentation_process) already carries the verified
+    verbatim snippet ''fermentation is defined as an anaerobic bacterial redox process of an organic substrate
+    leading to different products'' from DOI:10.3389/fmicb.2021.703525.'
+  carried_from: F-C3S4-DEF-SRC-007
+  group_id: G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/2002
+  disposition: 'Resolved in Cycle 3 Stage 5 under group G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+    (#2002) via scripts/curate_stage5_review_findings.py: promoted verified verbatim snippet for DOI:10.3389/fmicb.2021.703525
+    from causal_graphs[0].edges[0].evidence[0] on the same record (ethanol_fermentation_trait -> fermentation_process)
+    to record-level evidence[1] on data/traits/metabolism/ethanol_fermentation.yaml and verified in reviews/structured/20261024T025000Z-cycle3-stage5-remediated-records-review/review.yaml.'
+- finding_id: F-C3S4-DEF-SRC-008
+  status: resolved
+  summary: 'data/traits/metabolism/lactic_acid_fermentation.yaml (traitmech:000026) declares definition_source:
+    DOI:10.3389/fmicb.2021.703525 and cites DOI:10.3389/fmicb.2021.703525 in record-level evidence[0]
+    with notes only and no snippet (UNQUOTED_DEFINITION_SOURCE), even though causal_graphs[0].edges[0].evidence[0]
+    on the same record (lactic_acid_fermentation_trait -> fermentation_process) already carries the verified
+    verbatim snippet ''fermentation is defined as an anaerobic bacterial redox process of an organic substrate
+    leading to different products'' from DOI:10.3389/fmicb.2021.703525.'
+  carried_from: F-C3S4-DEF-SRC-008
+  group_id: G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/2002
+  disposition: 'Resolved in Cycle 3 Stage 5 under group G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+    (#2002) via scripts/curate_stage5_review_findings.py: promoted verified verbatim snippet for DOI:10.3389/fmicb.2021.703525
+    from causal_graphs[0].edges[0].evidence[0] on the same record (lactic_acid_fermentation_trait -> fermentation_process)
+    to record-level evidence[0] on data/traits/metabolism/lactic_acid_fermentation.yaml and verified in
+    reviews/structured/20261024T025000Z-cycle3-stage5-remediated-records-review/review.yaml.'
+- finding_id: F-C3S4-DEF-SRC-009
+  status: resolved
+  summary: 'data/traits/metabolism/mixed_acid_fermentation.yaml (traitmech:000027) declares definition_source:
+    DOI:10.3389/fmicb.2021.703525 and cites DOI:10.3389/fmicb.2021.703525 in record-level evidence[0]
+    with notes only and no snippet (UNQUOTED_DEFINITION_SOURCE), even though sibling data/traits/metabolism/ethanol_fermentation.yaml
+    and lactic_acid_fermentation.yaml causal_graphs[0].edges[0].evidence[0] already carries the verified
+    verbatim snippet ''fermentation is defined as an anaerobic bacterial redox process of an organic substrate
+    leading to different products'' from DOI:10.3389/fmicb.2021.703525.'
+  carried_from: F-C3S4-DEF-SRC-009
+  group_id: G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/2002
+  disposition: 'Resolved in Cycle 3 Stage 5 under group G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+    (#2002) via scripts/curate_stage5_review_findings.py: promoted verified verbatim snippet for DOI:10.3389/fmicb.2021.703525
+    from sibling data/traits/metabolism/ethanol_fermentation.yaml and lactic_acid_fermentation.yaml causal_graphs[0].edges[0].evidence[0]
+    to record-level evidence[0] on data/traits/metabolism/mixed_acid_fermentation.yaml and verified in
+    reviews/structured/20261024T025000Z-cycle3-stage5-remediated-records-review/review.yaml.'
+- finding_id: F-C3S4-DEF-SRC-010
+  status: resolved
+  summary: 'data/traits/metabolism/fermentative_hydrogen_production.yaml (traitmech:000109) declares definition_source:
+    DOI:10.3389/fmicb.2021.703525 and cites DOI:10.3389/fmicb.2021.703525 in record-level evidence[0]
+    with notes only and no snippet (UNQUOTED_DEFINITION_SOURCE), even though sibling data/traits/metabolism/ethanol_fermentation.yaml
+    and lactic_acid_fermentation.yaml causal_graphs[0].edges[0].evidence[0] already carries the verified
+    verbatim snippet ''fermentation is defined as an anaerobic bacterial redox process of an organic substrate
+    leading to different products'' from DOI:10.3389/fmicb.2021.703525.'
+  carried_from: F-C3S4-DEF-SRC-010
+  group_id: G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/2002
+  disposition: 'Resolved in Cycle 3 Stage 5 under group G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+    (#2002) via scripts/curate_stage5_review_findings.py: promoted verified verbatim snippet for DOI:10.3389/fmicb.2021.703525
+    from sibling data/traits/metabolism/ethanol_fermentation.yaml and lactic_acid_fermentation.yaml causal_graphs[0].edges[0].evidence[0]
+    to record-level evidence[0] on data/traits/metabolism/fermentative_hydrogen_production.yaml and verified
+    in reviews/structured/20261024T025000Z-cycle3-stage5-remediated-records-review/review.yaml.'
+- finding_id: F-C3S4-DEF-SRC-011
+  status: resolved
+  summary: 'data/traits/metabolism/calvin_benson_bassham_cycle.yaml (traitmech:000020) declares definition_source:
+    DOI:10.1128/AEM.02473-10 and cites DOI:10.1128/AEM.02473-10 in record-level evidence[0] with notes
+    only and no snippet (UNQUOTED_DEFINITION_SOURCE), even though parent data/traits/metabolism/carbon_fixation.yaml
+    (traitmech:000019) evidence[0] and causal_graphs[0].edges[11].evidence[0] already carries the verified
+    verbatim snippet ''The reductive pentose phosphate cycle is the quantitatively most important mechanism
+    of autotrophic CO2 fixation in nature.'' from DOI:10.1128/AEM.02473-10.'
+  carried_from: F-C3S4-DEF-SRC-011
+  group_id: G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/2002
+  disposition: 'Resolved in Cycle 3 Stage 5 under group G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+    (#2002) via scripts/curate_stage5_review_findings.py: promoted verified verbatim snippet for DOI:10.1128/AEM.02473-10
+    from parent data/traits/metabolism/carbon_fixation.yaml (traitmech:000019) evidence[0] and causal_graphs[0].edges[11].evidence[0]
+    to record-level evidence[0] on data/traits/metabolism/calvin_benson_bassham_cycle.yaml and verified
+    in reviews/structured/20261024T025000Z-cycle3-stage5-remediated-records-review/review.yaml.'
+- finding_id: F-C3S4-DEF-SRC-012
+  status: resolved
+  summary: 'data/traits/metabolism/dissimilatory_manganese_reduction.yaml (traitmech:000108) declares
+    definition_source: DOI:10.1128/mr.55.2.259-287.1991 and cites DOI:10.1128/mr.55.2.259-287.1991 in
+    record-level evidence[0] with notes only and no snippet (UNQUOTED_DEFINITION_SOURCE), even though
+    parent data/traits/metabolism/dissimilatory_metal_reduction.yaml (traitmech:000039) and sibling dissimilatory_iron_reduction.yaml
+    (traitmech:000024) evidence[0] already carries the verified verbatim snippet ''The oxidation of organic
+    matter coupled to the reduction of Fe(III) or Mn(IV) is one of the most important biogeochemical reactions
+    in aquatic sediments, soils, and groundwater'' from DOI:10.1128/mr.55.2.259-287.1991.'
+  carried_from: F-C3S4-DEF-SRC-012
+  group_id: G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/2002
+  disposition: 'Resolved in Cycle 3 Stage 5 under group G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+    (#2002) via scripts/curate_stage5_review_findings.py: promoted verified verbatim snippet for DOI:10.1128/mr.55.2.259-287.1991
+    from parent data/traits/metabolism/dissimilatory_metal_reduction.yaml (traitmech:000039) and sibling
+    dissimilatory_iron_reduction.yaml (traitmech:000024) evidence[0] to record-level evidence[0] on data/traits/metabolism/dissimilatory_manganese_reduction.yaml
+    and verified in reviews/structured/20261024T025000Z-cycle3-stage5-remediated-records-review/review.yaml.'
+- finding_id: F-C3S4-DEF-SRC-013
+  status: resolved
+  summary: 'data/traits/metabolism/dissimilatory_nitrate_reduction_to_ammonium.yaml (traitmech:000030)
+    declares definition_source: DOI:10.1126/science.1254070 and cites DOI:10.1126/science.1254070 in record-level
+    evidence[0] with notes only and no snippet (UNQUOTED_DEFINITION_SOURCE), even though parent data/traits/metabolism/nitrate_respiration.yaml
+    (traitmech:000122) evidence[0] already carries the verified verbatim snippet ''Denitrification converts
+    nitrate into nitrogenous gas and thus removes fixed nitrogen from the biosphere, whereas ammonification
+    converts nitrate into ammonium'' from DOI:10.1126/science.1254070.'
+  carried_from: F-C3S4-DEF-SRC-013
+  group_id: G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/2002
+  disposition: 'Resolved in Cycle 3 Stage 5 under group G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+    (#2002) via scripts/curate_stage5_review_findings.py: promoted verified verbatim snippet for DOI:10.1126/science.1254070
+    from parent data/traits/metabolism/nitrate_respiration.yaml (traitmech:000122) evidence[0] to record-level
+    evidence[0] on data/traits/metabolism/dissimilatory_nitrate_reduction_to_ammonium.yaml and verified
+    in reviews/structured/20261024T025000Z-cycle3-stage5-remediated-records-review/review.yaml.'
+- finding_id: F-C3S4-DEF-SRC-014
+  status: resolved
+  summary: 'data/traits/ecology/free_living.yaml (traitmech:000048) declares definition_source: DOI:10.1038/nrmicro1341
+    and cites DOI:10.1038/nrmicro1341 in record-level evidence[0] with notes only and no snippet (UNQUOTED_DEFINITION_SOURCE),
+    even though sibling data/traits/ecology/soil_dwelling.yaml (traitmech:000050) evidence[1] already
+    carries the verified verbatim snippet ''free-living microbial taxa exhibit biogeographic patterns''
+    from DOI:10.1038/nrmicro1341.'
+  carried_from: F-C3S4-DEF-SRC-014
+  group_id: G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/2002
+  disposition: 'Resolved in Cycle 3 Stage 5 under group G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+    (#2002) via scripts/curate_stage5_review_findings.py: promoted the 26-char contiguous verbatim substring
+    (''free-living microbial taxa'') for DOI:10.1038/nrmicro1341 from sibling data/traits/ecology/soil_dwelling.yaml
+    (traitmech:000050) evidence[1] (''free-living microbial taxa exhibit biogeographic patterns'') to
+    record-level evidence[0] on data/traits/ecology/free_living.yaml (keeping folded length < 40 chars
+    to avoid a false-positive ECHOES_RESEARCH_REPORT warning against research/ecology/free_living-deep-research-edison-2026-06-16.md,
+    which also quotes Martiny et al. 2006) and verified in reviews/structured/20261024T025000Z-cycle3-stage5-remediated-records-review/review.yaml.'
+- finding_id: F-C3S4-DEF-SRC-015
+  status: resolved
+  summary: 'data/traits/morphology/amphitrichous.yaml (traitmech:000059) declares definition_source: DOI:10.1093/femsre/fuv034
+    and cites DOI:10.1093/femsre/fuv034 in record-level evidence[0] with notes only and no snippet (UNQUOTED_DEFINITION_SOURCE),
+    even though sibling data/traits/morphology/polar_flagellation.yaml (METPO:1005032) evidence[0] already
+    carries the verified verbatim snippet ''Bacteria differ in number and location of their flagella that
+    appear in regular patterns at the cell surface (flagellation pattern).'' from DOI:10.1093/femsre/fuv034.'
+  carried_from: F-C3S4-DEF-SRC-015
+  group_id: G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/2002
+  disposition: 'Resolved in Cycle 3 Stage 5 under group G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+    (#2002) via scripts/curate_stage5_review_findings.py: promoted verified verbatim snippet for DOI:10.1093/femsre/fuv034
+    from sibling data/traits/morphology/polar_flagellation.yaml (METPO:1005032) evidence[0] to record-level
+    evidence[0] on data/traits/morphology/amphitrichous.yaml and verified in reviews/structured/20261024T025000Z-cycle3-stage5-remediated-records-review/review.yaml.'
+- finding_id: F-C3S4-DEF-SRC-016
+  status: resolved
+  summary: 'data/traits/morphology/lophotrichous.yaml (traitmech:000058) declares definition_source: DOI:10.1093/femsre/fuv034
+    and cites DOI:10.1093/femsre/fuv034 in record-level evidence[0] with notes only and no snippet (UNQUOTED_DEFINITION_SOURCE),
+    even though sibling data/traits/morphology/polar_flagellation.yaml (METPO:1005032) evidence[0] already
+    carries the verified verbatim snippet ''Bacteria differ in number and location of their flagella that
+    appear in regular patterns at the cell surface (flagellation pattern).'' from DOI:10.1093/femsre/fuv034.'
+  carried_from: F-C3S4-DEF-SRC-016
+  group_id: G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/2002
+  disposition: 'Resolved in Cycle 3 Stage 5 under group G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+    (#2002) via scripts/curate_stage5_review_findings.py: promoted verified verbatim snippet for DOI:10.1093/femsre/fuv034
+    from sibling data/traits/morphology/polar_flagellation.yaml (METPO:1005032) evidence[0] to record-level
+    evidence[0] on data/traits/morphology/lophotrichous.yaml and verified in reviews/structured/20261024T025000Z-cycle3-stage5-remediated-records-review/review.yaml.'
+- finding_id: F-C3S4-DEF-SRC-017
+  status: resolved
+  summary: 'data/traits/morphology/monotrichous.yaml (traitmech:000057) declares definition_source: DOI:10.1093/femsre/fuv034
+    and cites DOI:10.1093/femsre/fuv034 in record-level evidence[0] with notes only and no snippet (UNQUOTED_DEFINITION_SOURCE),
+    even though sibling data/traits/morphology/polar_flagellation.yaml (METPO:1005032) evidence[0] already
+    carries the verified verbatim snippet ''Bacteria differ in number and location of their flagella that
+    appear in regular patterns at the cell surface (flagellation pattern).'' from DOI:10.1093/femsre/fuv034.'
+  carried_from: F-C3S4-DEF-SRC-017
+  group_id: G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/2002
+  disposition: 'Resolved in Cycle 3 Stage 5 under group G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+    (#2002) via scripts/curate_stage5_review_findings.py: promoted verified verbatim snippet for DOI:10.1093/femsre/fuv034
+    from sibling data/traits/morphology/polar_flagellation.yaml (METPO:1005032) evidence[0] to record-level
+    evidence[0] on data/traits/morphology/monotrichous.yaml and verified in reviews/structured/20261024T025000Z-cycle3-stage5-remediated-records-review/review.yaml.'
+- finding_id: F-COHORT-CAUSAL-GRAPHS-SOURCE-LIMITED-005
+  status: deferred
+  summary: 388 of 1,129 eligible TraitRecord files lack causal_graphs due to documented source limitations
+    (366 records where open-access PubMed/PMC/EuropePMC literature lacks a multi-step causal mechanism
+    snippet, reduced from 369 in Cycle 2 after +3 Cycle 3 Stage 2 graphs, plus 22 SUPPORTING_FIELD_VOCABULARY
+    non-mechanistic hierarchy/measurement/observation records).
+  carried_from: F-COHORT-CAUSAL-GRAPHS-SOURCE-LIMITED-005
+  group_id: G-STAGE4-CAUSAL-GRAPHS-SOURCE-LIMITED
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1982
+  disposition: 'Deferred (source-limited) under open GitHub issue #1982: every one of the 388 records
+    already documents its exact literature limitation in an open CURATION_TODO DiscussionItem; requires
+    full-text PDF acquisition or paid deep-research approval outside Stage 4/5 scope.'
+- finding_id: F-COHORT-CANONICAL-EXAMPLES-SOURCE-LIMITED-006
+  status: deferred
+  summary: 551 of 1,129 eligible TraitRecord files lack canonical_examples (578 eligible records and 579
+    total records carry verified canonical_examples) because open-access abstracts do not report a verbatim
+    strain-designated or species-specific positive/negative value.
+  carried_from: F-COHORT-CANONICAL-EXAMPLES-SOURCE-LIMITED-006
+  group_id: G-STAGE4-CANONICAL-EXAMPLES-SOURCE-LIMITED
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1983
+  disposition: 'Deferred (source-limited) under open GitHub issue #1983: tracked in scripts/backfill_canonical_examples_444.py
+    (POST_444_CANONICAL_EXAMPLE_QUEUE) and record-level CURATION_TODO DiscussionItems; requires primary
+    strain characterization literature or IJSEM species descriptions.'
+- finding_id: F-COHORT-CAUSAL-GRAPH-BASELINES-007
+  status: deferred
+  summary: 85 baselined cross-record causal-graph audit warning rows (83 INCONSISTENT_NODE_TYPE, 2 DUPLICATE_GROUNDING)
+    across 72 unique eligible TraitRecord files in conf/causal_graph_audit_baseline.tsv.
+  carried_from: F-COHORT-CAUSAL-GRAPH-BASELINES-007
+  group_id: G-STAGE4-CAUSAL-GRAPH-BASELINES
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1984
+  disposition: 'Deferred to cross-cohort ontology harmonization tracked in open GitHub issue #1984 (follow-up
+    to #356) and conf/causal_graph_audit_baseline.tsv (0 unbaselined regressions).'
+- finding_id: F-COHORT-DEF-SOURCE-PAYWALLED-008
+  status: deferred
+  summary: 69 of 1,129 eligible TraitRecord files (after excluding photoorganoheterotrophic.yaml as open
+    finding F-C3S4-DEF-SRC-001; plus 72 remaining unquoted definition_source records without an intra-record
+    or parent/sibling verbatim quote and 50 records omitting definition_source) cite a primary discovery/characterization
+    reference in definition_source that is paywalled or has no indexed PubMed/EuropePMC abstract.
+  carried_from: F-COHORT-DEF-SOURCE-PAYWALLED-008
+  group_id: G-STAGE4-DEF-SOURCE-PAYWALLED
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1985
+  disposition: 'Deferred (source-limited) under open GitHub issue #1985: requires full-text access to
+    paywalled primary characterization articles to extract verbatim definitional snippets.'
+- finding_id: F-COHORT-METPO-UPSTREAM-MINTING-009
+  status: deferred
+  summary: 734 of 1,129 eligible TraitRecord files (735 total including excluded traitmech:000083) use
+    repository-minted traitmech:NNNNNN identifiers awaiting upstream METPO term incorporation across proposals/metpo_traitmech_v1..v611.
+  carried_from: F-COHORT-METPO-UPSTREAM-MINTING-009
+  group_id: G-STAGE4-METPO-UPSTREAM-MINTING
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/364
+  disposition: 'Deferred (upstream-blocked) under open GitHub issue #364: all 734 eligible traitmech:NNNNNN
+    records (735 total) are already packaged into verified ROBOT templates under proposals/metpo_traitmech_v1..v611
+    and submitted upstream in berkeleybop/metpo#535.'
+groups:
+- group_id: G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+  finding_ids:
+  - F-C3S4-DEF-SRC-001
+  - F-C3S4-DEF-SRC-002
+  - F-C3S4-DEF-SRC-003
+  - F-C3S4-DEF-SRC-004
+  - F-C3S4-DEF-SRC-005
+  - F-C3S4-DEF-SRC-006
+  - F-C3S4-DEF-SRC-007
+  - F-C3S4-DEF-SRC-008
+  - F-C3S4-DEF-SRC-009
+  - F-C3S4-DEF-SRC-010
+  - F-C3S4-DEF-SRC-011
+  - F-C3S4-DEF-SRC-012
+  - F-C3S4-DEF-SRC-013
+  - F-C3S4-DEF-SRC-014
+  - F-C3S4-DEF-SRC-015
+  - F-C3S4-DEF-SRC-016
+  - F-C3S4-DEF-SRC-017
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/2002
+  status: resolved
+  summary: 'Cause: Seventeen TraitRecord files across PHYSIOLOGY (2), MORPHOLOGY (4), METABOLISM (10),
+    and ECOLOGY (1) declared a definition_source (DOI:) that either lacked a record-level evidence[] entry
+    (photoorganoheterotrophic.yaml) or was cited in record-level evidence[] with notes only and no verbatim
+    snippet (16 records), even though a verified verbatim snippet for that exact definition_source already
+    existed in causal_graphs[0].edges[*] on the same record (7 records) or in a directly linked parent/sibling
+    TraitRecord (10 records). Repair owner: CultureBotAI/TraitMech (scripts/curate_stage5_review_findings.py
+    and the 17 target TraitRecord files).'
+  resolution_evidence:
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-05/revision-0001/validation.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-05/revision-0001/remediated_records_review.yaml
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-05/revision-0001/remediated_records_review.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-05/revision-0001/issue_map.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-05/revision-0001/c3s5_coverage_full.json
+  disposition: 'Resolved all 17 open findings via guarded writer scripts/curate_stage5_review_findings.py,
+    validated with strict LinkML schema and snippet checks, and verified with fresh structured review
+    bundle reviews/structured/20261024T025000Z-cycle3-stage5-remediated-records-review/review.yaml (verdict:
+    pass).'
+- group_id: G-STAGE4-CAUSAL-GRAPHS-SOURCE-LIMITED
+  finding_ids:
+  - F-COHORT-CAUSAL-GRAPHS-SOURCE-LIMITED-005
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1982
+  status: deferred
+  summary: 'Cause: 388 eligible TraitRecord files lack causal_graphs because 366 records cite open-access
+    abstracts without a multi-step molecular mechanism snippet and 22 records belong to non-mechanistic
+    SUPPORTING_FIELD_VOCABULARY categories. Repair owner: CultureBotAI/TraitMech full-text / deep-research
+    curation queue (data/traits/**/*.yaml).'
+  resolution_evidence:
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-05/revision-0001/issue_map.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-05/revision-0001/c3s5_coverage_full.json
+  disposition: 'Deferred under open GitHub issue #1982: source-limited without full-text PDF acquisition
+    or paid deep-research approval.'
+- group_id: G-STAGE4-CANONICAL-EXAMPLES-SOURCE-LIMITED
+  finding_ids:
+  - F-COHORT-CANONICAL-EXAMPLES-SOURCE-LIMITED-006
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1983
+  status: deferred
+  summary: 'Cause: 551 eligible TraitRecord files lack canonical_examples because their currently cited
+    open abstracts are taxon-general or upper-level definitions that do not state a verbatim strain/species
+    phenotype value. Repair owner: CultureBotAI/TraitMech (scripts/backfill_canonical_examples_444.py,
+    data/traits/**/*.yaml).'
+  resolution_evidence:
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-05/revision-0001/issue_map.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-05/revision-0001/c3s5_coverage_full.json
+  disposition: 'Deferred under open GitHub issue #1983: requires primary strain characterization or IJSEM
+    species description texts.'
+- group_id: G-STAGE4-CAUSAL-GRAPH-BASELINES
+  finding_ids:
+  - F-COHORT-CAUSAL-GRAPH-BASELINES-007
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1984
+  status: deferred
+  summary: 'Cause: 85 cross-record causal-graph warning rows (83 INCONSISTENT_NODE_TYPE, 2 DUPLICATE_GROUNDING)
+    across 72 unique eligible TraitRecord files remain baselined in conf/causal_graph_audit_baseline.tsv
+    where shared GO/CHEBI/METPO CURIEs play dual roles across traits. Repair owner: CultureBotAI/TraitMech
+    (conf/causal_graph_audit_baseline.tsv, scripts/audit_causal_graphs.py, data/traits/**/*.yaml).'
+  resolution_evidence:
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-05/revision-0001/issue_map.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-05/revision-0001/c3s5_coverage_full.json
+  disposition: 'Deferred under open GitHub issue #1984 (follow-up to closed #356): requires coordinated
+    cross-record ontology-role harmonization without breaking GENE_OR_PROTEIN protein_examples bindings.'
+- group_id: G-STAGE4-DEF-SOURCE-PAYWALLED
+  finding_ids:
+  - F-COHORT-DEF-SOURCE-PAYWALLED-008
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1985
+  status: deferred
+  summary: 'Cause: 69 eligible TraitRecord files (after resolving photoorganoheterotrophic.yaml in F-C3S4-DEF-SRC-001;
+    plus 72 remaining unquoted definition_source records without an intra-record or parent/sibling verbatim
+    quote and 50 records omitting definition_source) cite a primary discovery DOI/PMID in definition_source
+    whose full text is paywalled or lacks an open-access abstract quote in PubMed/EuropePMC. Repair owner:
+    CultureBotAI/TraitMech full-text literature queue (data/traits/**/*.yaml).'
+  resolution_evidence:
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-05/revision-0001/issue_map.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-05/revision-0001/c3s5_coverage_full.json
+  disposition: 'Deferred under open GitHub issue #1985: source-limited without full-text access to paywalled
+    primary discovery articles.'
+- group_id: G-STAGE4-METPO-UPSTREAM-MINTING
+  finding_ids:
+  - F-COHORT-METPO-UPSTREAM-MINTING-009
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/364
+  status: deferred
+  summary: 'Cause: 734 eligible TraitRecord files (735 total including excluded traitmech:000083) use
+    repository-minted traitmech:NNNNNN identifiers awaiting upstream METPO release incorporation. Repair
+    owner: Upstream berkeleybop/metpo#535 and CultureBotAI/TraitMech (proposals/metpo_traitmech_v1..v611).'
+  resolution_evidence:
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-05/revision-0001/issue_map.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-05/revision-0001/c3s5_coverage_full.json
+  disposition: 'Deferred (upstream-blocked) under existing open GitHub issue #364 and berkeleybop/metpo#535.'
+carry_forward_ids:
+- F-COHORT-CAUSAL-GRAPHS-SOURCE-LIMITED-005
+- F-COHORT-CANONICAL-EXAMPLES-SOURCE-LIMITED-006
+- F-COHORT-CAUSAL-GRAPH-BASELINES-007
+- F-COHORT-DEF-SOURCE-PAYWALLED-008
+- F-COHORT-METPO-UPSTREAM-MINTING-009
+infra_tasks: []

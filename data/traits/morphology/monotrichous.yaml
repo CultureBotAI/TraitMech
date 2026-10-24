@@ -10,6 +10,8 @@ parent_traits:
 - traitmech:000056
 evidence:
 - reference: DOI:10.1093/femsre/fuv034
+  snippet: Bacteria differ in number and location of their flagella that appear in
+    regular patterns at the cell surface (flagellation pattern).
   notes: Schuhmacher et al. describe single-flagellum (monotrichous, polar) flagellation
     as one regular flagellation pattern.
 - reference: DOI:10.3390/biom9070279
@@ -213,4 +215,12 @@ curation_history:
     the tranche: set graph scope monotrichous_single_polar_flagellum=NONMECHANISTIC
     with scope_notes; marked 4 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (flhf_gtpase, flig_protein, flif_msring, flim_flin).'
+  llm_assisted: true
+- timestamp: '2026-10-24T02:45:00Z'
+  curator: claude
+  action: ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE
+  changes: 'Added verified verbatim snippet from DOI:10.1093/femsre/fuv034 (already
+    present on sibling record polar_flagellation.yaml evidence[0]) to record-level
+    evidence[0] to match definition_source (Cycle 3 Stage 5 remediation of F-C3S4-DEF-SRC-017
+    in group G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).'
   llm_assisted: true

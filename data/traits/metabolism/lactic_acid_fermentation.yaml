@@ -16,6 +16,8 @@ synonyms:
   source: DOI:10.3389/fmicb.2021.703525
 evidence:
 - reference: DOI:10.3389/fmicb.2021.703525
+  snippet: fermentation is defined as an anaerobic bacterial redox process of an organic
+    substrate leading to different products
   notes: Review of energy conservation in anaerobic fermentations supports lactate
     as a fermentation end product generated with substrate-level phosphorylation.
 - reference: DOI:10.3390/molecules31020333
@@ -335,4 +337,12 @@ curation_history:
     decision instead. This audit changed no causal claim or evidence field. Reviewed
     replacements: DOI:10.3390/fermentation10030168 -> DOI:10.3390/molecules31020333
     (6 edges).'
+  llm_assisted: true
+- timestamp: '2026-10-24T02:45:00Z'
+  curator: claude
+  action: ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE
+  changes: 'Added verified verbatim snippet from DOI:10.3389/fmicb.2021.703525 (already
+    present on causal_graphs[0].edges[0].evidence[0]) to record-level evidence[0]
+    to match definition_source (Cycle 3 Stage 5 remediation of F-C3S4-DEF-SRC-008
+    in group G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).'
   llm_assisted: true

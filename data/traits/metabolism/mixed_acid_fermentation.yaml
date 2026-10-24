@@ -11,6 +11,8 @@ parent_traits:
 - METPO:1002005
 evidence:
 - reference: DOI:10.3389/fmicb.2021.703525
+  snippet: fermentation is defined as an anaerobic bacterial redox process of an organic
+    substrate leading to different products
   notes: Review of fermentative energy conservation lists acetate, ethanol, lactate,
     succinate and formate as products of mixed-acid fermentation.
 - reference: DOI:10.3390/molecules31020333
@@ -334,4 +336,13 @@ curation_history:
   action: REFRESH_UNIPROT_ENTRY_VERSION
   changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
     UniProtKB:P09373 (217 -> 218 on pyruvate_formate_lyase).'
+  llm_assisted: true
+- timestamp: '2026-10-24T02:45:00Z'
+  curator: claude
+  action: ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE
+  changes: 'Added verified verbatim snippet from DOI:10.3389/fmicb.2021.703525 (already
+    present on sibling ethanol_fermentation.yaml and lactic_acid_fermentation.yaml
+    causal_graphs[0].edges[0].evidence[0]) to record-level evidence[0] to match definition_source
+    (Cycle 3 Stage 5 remediation of F-C3S4-DEF-SRC-009 in group G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS,
+    issue #2002).'
   llm_assisted: true

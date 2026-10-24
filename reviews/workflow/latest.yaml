@@ -228,3 +228,41 @@ entries:
     pr_number: 1997
     status: merged
     verified_at: '2026-10-23T19:29:42.077614+00:00'
+- cycle: 3
+  goal_evidence:
+    path: reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-04/revision-0001/evidence.yaml
+    sha256: d3d5bf0aa473a132220a4cbcc1b6acd2da713ea1bd257f6f4a5b164e4c6b6ee3
+  receipt_sha256: f82c3ddc2076f6b7e3ffd79c8b5f8832ce566ce1c5e08c85ea753d158d86afc9
+  stage: 4
+  verification:
+    checks:
+    - bucket: pass
+      name: history
+      state: SUCCESS
+    - bucket: pass
+      name: canonical-example-taxonomy
+      state: SUCCESS
+    - bucket: pass
+      name: label-correspondence / label-correspondence
+      state: SUCCESS
+    - bucket: pass
+      name: pr-sanity
+      state: SUCCESS
+    - bucket: pass
+      name: pytest
+      state: SUCCESS
+    - bucket: pass
+      name: qc
+      state: SUCCESS
+    - bucket: pass
+      name: validate-strict
+      state: SUCCESS
+    - bucket: pass
+      name: vendored-sync
+      state: SUCCESS
+    head_sha: a729abd9e2c388b91499e768fa8f7fc8b035f73f
+    merge_commit_sha: 41928219be300e175fd73dcb12ab332c30b3ad47
+    merged_at: '2026-10-24T02:17:23Z'
+    pr_number: 2001
+    status: merged
+    verified_at: '2026-10-24T02:37:48.125144+00:00'

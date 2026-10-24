@@ -15,6 +15,7 @@ synonyms:
   source: DOI:10.3390/microorganisms10050926
 evidence:
 - reference: DOI:10.3390/microorganisms10050926
+  snippet: Cytochrome c oxidases of the heme–copper oxygen reductase family A
   notes: Hederstedt reviews bacterial cytochrome c oxidase, the terminal respiratory
     oxidase detected by the oxidase test.
 - reference: DOI:10.1089/ars.2020.8039
@@ -303,4 +304,12 @@ curation_history:
   action: REFRESH_UNIPROT_ENTRY_VERSION
   changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
     UniProtKB:P08305 (132 -> 133 on family_a_cytochrome_c_oxidase).'
+  llm_assisted: true
+- timestamp: '2026-10-24T02:45:00Z'
+  curator: claude
+  action: ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE
+  changes: 'Added verified verbatim snippet from DOI:10.3390/microorganisms10050926
+    (already present on causal_graphs[0].edges[9].evidence[0]) to record-level evidence[0]
+    to match definition_source (Cycle 3 Stage 5 remediation of F-C3S4-DEF-SRC-002
+    in group G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).'
   llm_assisted: true

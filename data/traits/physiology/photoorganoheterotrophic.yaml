@@ -20,6 +20,10 @@ evidence:
   snippet: photoorganoheterotrophic
   notes: Review table classifies photoorganoheterotrophy by light with organic electron
     and carbon sources.
+- reference: DOI:10.1016/B978-012373944-5.00083-3
+  snippet: use of light
+  notes: Bryant & Frigaard (2006) overview chapter supports light as the energy source
+    in photoheterotrophy categories.
 canonical_examples:
 - taxon_id: NCBITaxon:258594
   taxon_label: Rhodopseudomonas palustris CGA009
@@ -407,4 +411,12 @@ curation_history:
   action: REFRESH_UNIPROT_ENTRY_VERSION
   changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
     UniProtKB:P10717 (119 -> 120 on photosynthetic_reaction_center).'
+  llm_assisted: true
+- timestamp: '2026-10-24T02:45:00Z'
+  curator: claude
+  action: ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE
+  changes: 'Appended record-level evidence entry for definition_source DOI:10.1016/B978-012373944-5.00083-3
+    using the verified verbatim snippet already present on causal_graphs[0].edges[0].evidence[0]
+    (Cycle 3 Stage 5 remediation of F-C3S4-DEF-SRC-001 in group G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS,
+    issue #2002).'
   llm_assisted: true

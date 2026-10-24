@@ -18,6 +18,9 @@ synonyms:
   source: DOI:10.1007/s11157-025-09719-5
 evidence:
 - reference: DOI:10.1126/science.1254070
+  snippet: Denitrification converts nitrate into nitrogenous gas and thus removes
+    fixed nitrogen from the biosphere, whereas ammonification converts nitrate into
+    ammonium
   notes: Kraft et al. show the donor-to-acceptor ratio governs whether nitrate respiration
     ends in ammonium (DNRA) or N2 (denitrification).
 - reference: DOI:10.1007/s11157-025-09719-5
@@ -274,4 +277,12 @@ curation_history:
   action: REFRESH_UNIPROT_ENTRY_VERSION
   changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
     UniProtKB:Q9S1E5 (163 -> 164 on nrfa).'
+  llm_assisted: true
+- timestamp: '2026-10-24T02:45:00Z'
+  curator: claude
+  action: ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE
+  changes: 'Added verified verbatim snippet from DOI:10.1126/science.1254070 (already
+    present on parent record nitrate_respiration.yaml evidence[0]) to record-level
+    evidence[0] to match definition_source (Cycle 3 Stage 5 remediation of F-C3S4-DEF-SRC-013
+    in group G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).'
   llm_assisted: true
