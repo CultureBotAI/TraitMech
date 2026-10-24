@@ -21,19 +21,19 @@ previous_evidence:
   sha256: 085e93c3b575385229e2aebb9d595b1edc4a0a79f53843c4ee0008b83fe01c80
 artifacts:
 - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-04/revision-0001/review_report.md
-  sha256: 8b2053a2539f8ce0af9eaf6e99f03d315cea7719b141d94d206e42f75693afa7
+  sha256: 05454bfbbee01ba93d550741ad709fb1860b0b9402dff597adfedefa6fe6ef16
   kind: review_report
 - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-04/revision-0001/review_findings.tsv
-  sha256: 2064fedce269d21cb7e8dc80cf7566278ae4c7515543f7b95f394b31af64414a
+  sha256: 373a6b2f00a0324488634d715241a4b51c4cc13f41a1e141e64361f231d179e5
   kind: review_findings
 - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-04/revision-0001/frozen_inventory_coverage.json
   sha256: 128012f2cbc0c274bbf854ec966523c9dc6fbb453ca20487d1f126fde9552e4e
   kind: supporting
 - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-04/revision-0001/structured_review.yaml
-  sha256: 4d2f0fb9b82b442d74fe1f17ab5e5de1665c9c1f370e52bdbe3f700a1535e4cf
+  sha256: b482bfe96444d86fba78d7c6a3fc56b50741a0ad5530084c81b9f1c97614db3c
   kind: supporting
 - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-04/revision-0001/structured_review.md
-  sha256: a6f1a532b270f0e8f0e0881402e70618cd9659443ae81073abab9777ea1e06f8
+  sha256: 1bca6c916cdb834c06897f0a6f238ce474044d3f53f9eeb35586bff9ef3fc9fb
   kind: supporting
 findings:
 - finding_id: F-C3S4-DEF-SRC-001
@@ -181,12 +181,12 @@ findings:
   status: open
   summary: 'data/traits/ecology/free_living.yaml (traitmech:000048) declares definition_source: DOI:10.1038/nrmicro1341
     and cites DOI:10.1038/nrmicro1341 in record-level evidence[0] with notes only and no snippet (UNQUOTED_DEFINITION_SOURCE),
-    even though sibling data/traits/ecology/soil_dwelling.yaml (traitmech:000050) evidence[0] already
+    even though sibling data/traits/ecology/soil_dwelling.yaml (traitmech:000050) evidence[1] already
     carries the verified verbatim snippet ''free-living microbial taxa exhibit biogeographic patterns''
     from DOI:10.1038/nrmicro1341.'
   disposition: 'Carry forward to Cycle 3 Stage 5 (resolve_review_findings) in group G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
     populate verified verbatim snippet for DOI:10.1038/nrmicro1341 in data/traits/ecology/free_living.yaml
-    from sibling data/traits/ecology/soil_dwelling.yaml (traitmech:000050) evidence[0].'
+    from sibling data/traits/ecology/soil_dwelling.yaml (traitmech:000050) evidence[1].'
 - finding_id: F-C3S4-DEF-SRC-015
   status: open
   summary: 'data/traits/morphology/amphitrichous.yaml (traitmech:000059) declares definition_source: DOI:10.1093/femsre/fuv034

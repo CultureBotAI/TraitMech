@@ -1182,7 +1182,7 @@ evidence: supported. Targets: METPO:1004002, traitmech:000626, traitmech:000696,
 
 evidence: concern. Targets: METPO:1000659, traitmech:000076, traitmech:000060, traitmech:000036, traitmech:000115, traitmech:000023, traitmech:000028, traitmech:000026, traitmech:000027, traitmech:000109, traitmech:000020, traitmech:000108, traitmech:000030, traitmech:000048, traitmech:000059, traitmech:000058, traitmech:000057.
 
-17 eligible records across ecology (1: free_living), metabolism (11: proteorhodopsin_phototrophy, starch_degradation, three_hydroxypropionate_bicycle, ethanol_fermentation, lactic_acid_fermentation, mixed_acid_fermentation, fermentative_hydrogen_production, calvin_benson_bassham_cycle, dissimilatory_manganese_reduction, dissimilatory_nitrate_reduction_to_ammonium), morphology (4: peritrichous, amphitrichous, lophotrichous, monotrichous), and physiology (2: photoorganoheterotrophic, oxidase_activity) omit their primary definition_source from record-level evidence (1 record) or cite it in record-level evidence with notes only and no verbatim snippet (16 records), even though a verified verbatim quote from that exact definition_source already exists on the same record's causal_graphs or on a parent/sibling TraitRecord.
+17 eligible records across ecology (1: free_living), metabolism (10: proteorhodopsin_phototrophy, starch_degradation, three_hydroxypropionate_bicycle, ethanol_fermentation, lactic_acid_fermentation, mixed_acid_fermentation, fermentative_hydrogen_production, calvin_benson_bassham_cycle, dissimilatory_manganese_reduction, dissimilatory_nitrate_reduction_to_ammonium), morphology (4: peritrichous, amphitrichous, lophotrichous, monotrichous), and physiology (2: photoorganoheterotrophic, oxidase_activity) omit their primary definition_source from record-level evidence (1 record) or cite it in record-level evidence with notes only and no verbatim snippet (16 records), even though a verified verbatim quote from that exact definition_source already exists on the same record's causal_graphs or on a parent/sibling TraitRecord.
 
 ### Causal mechanism graphs and UniProt protein_examples grounding across all 1,129 eligible records
 
@@ -1270,11 +1270,11 @@ minor / open / confirmed; issue key: dissimilatory-nitrate-reduction-to-ammonium
 
 data/traits/metabolism/dissimilatory_nitrate_reduction_to_ammonium.yaml (traitmech:000030) declares definition_source: DOI:10.1126/science.1254070 and cites DOI:10.1126/science.1254070 in record-level evidence[0] with notes only and no snippet (UNQUOTED_DEFINITION_SOURCE), even though parent data/traits/metabolism/nitrate_respiration.yaml (traitmech:000122) evidence[0] already carries the verified verbatim snippet 'Denitrification converts nitrate into nitrogenous gas and thus removes fixed nitrogen from the biosphere, whereas ammonification converts nitrate into ammonium' from DOI:10.1126/science.1254070.
 
-### F-C3S4-DEF-SRC-014: free_living.yaml cites definition_source DOI:10.1038/nrmicro1341 in record-level evidence without a verbatim snippet despite verified quote in sibling data/traits/ecology/soil_dwelling.yaml (traitmech:000050) evidence[0]
+### F-C3S4-DEF-SRC-014: free_living.yaml cites definition_source DOI:10.1038/nrmicro1341 in record-level evidence without a verbatim snippet despite verified quote in sibling data/traits/ecology/soil_dwelling.yaml (traitmech:000050) evidence[1]
 
 minor / open / confirmed; issue key: free-living-definition-source-snippet.
 
-data/traits/ecology/free_living.yaml (traitmech:000048) declares definition_source: DOI:10.1038/nrmicro1341 and cites DOI:10.1038/nrmicro1341 in record-level evidence[0] with notes only and no snippet (UNQUOTED_DEFINITION_SOURCE), even though sibling data/traits/ecology/soil_dwelling.yaml (traitmech:000050) evidence[0] already carries the verified verbatim snippet 'free-living microbial taxa exhibit biogeographic patterns' from DOI:10.1038/nrmicro1341.
+data/traits/ecology/free_living.yaml (traitmech:000048) declares definition_source: DOI:10.1038/nrmicro1341 and cites DOI:10.1038/nrmicro1341 in record-level evidence[0] with notes only and no snippet (UNQUOTED_DEFINITION_SOURCE), even though sibling data/traits/ecology/soil_dwelling.yaml (traitmech:000050) evidence[1] already carries the verified verbatim snippet 'free-living microbial taxa exhibit biogeographic patterns' from DOI:10.1038/nrmicro1341.
 
 ### F-C3S4-DEF-SRC-015: amphitrichous.yaml cites definition_source DOI:10.1093/femsre/fuv034 in record-level evidence without a verbatim snippet despite verified quote in sibling data/traits/morphology/polar_flagellation.yaml (METPO:1005032) evidence[0]
 
@@ -1345,112 +1345,112 @@ Append a record-level Evidence entry citing reference DOI:10.1016/B978-012373944
 
 ### ACT-C3S4-DEF-SRC-002
 
-Populate snippet on record-level evidence[0] (and unquoted causal_graphs[0].edges[0] where applicable) citing reference DOI:10.3390/microorganisms10050926 in data/traits/physiology/oxidase_activity.yaml using the verified verbatim snippet 'Cytochrome c oxidases of the heme–copper oxygen reductase family A' from causal_graphs[0].edges[9].evidence[0] on the same record (family_a_cytochrome_c_oxidase -&gt; cytochrome_c_oxidase), append a CURATE history event, and regenerate trait pages.
+Populate snippet on record-level evidence[0] citing reference DOI:10.3390/microorganisms10050926 in data/traits/physiology/oxidase_activity.yaml using the verified verbatim snippet 'Cytochrome c oxidases of the heme–copper oxygen reductase family A' from causal_graphs[0].edges[9].evidence[0] on the same record (family_a_cytochrome_c_oxidase -&gt; cytochrome_c_oxidase), append a CURATE history event, and regenerate trait pages.
 
 - data/traits/physiology/oxidase_activity.yaml includes a verified verbatim snippet on record-level evidence for DOI:10.3390/microorganisms10050926.
 - uv run python scripts/validate_strict.py and uv run python scripts/audit_evidence_snippets.py pass with 0 errors.
 
 ### ACT-C3S4-DEF-SRC-003
 
-Populate snippet on record-level evidence[0] (and unquoted causal_graphs[0].edges[0] where applicable) citing reference DOI:10.1093/femsre/fuv034 in data/traits/morphology/peritrichous.yaml using the verified verbatim snippet 'five to six flagellar filaments distributed over the cell body' from causal_graphs[0].edges[2].evidence[0] on the same record (surface_placement -&gt; flagellar_filament_number), append a CURATE history event, and regenerate trait pages.
+Populate snippet on record-level evidence[0] citing reference DOI:10.1093/femsre/fuv034 in data/traits/morphology/peritrichous.yaml using the verified verbatim snippet 'five to six flagellar filaments distributed over the cell body' from causal_graphs[0].edges[2].evidence[0] on the same record (surface_placement -&gt; flagellar_filament_number), append a CURATE history event, and regenerate trait pages.
 
 - data/traits/morphology/peritrichous.yaml includes a verified verbatim snippet on record-level evidence for DOI:10.1093/femsre/fuv034.
 - uv run python scripts/validate_strict.py and uv run python scripts/audit_evidence_snippets.py pass with 0 errors.
 
 ### ACT-C3S4-DEF-SRC-004
 
-Populate snippet on record-level evidence[0] (and unquoted causal_graphs[0].edges[0] where applicable) citing reference DOI:10.1126/science.289.5486.1902 in data/traits/metabolism/proteorhodopsin_phototrophy.yaml using the verified verbatim snippet 'bound retinal to form an active, light-driven proton pump' from causal_graphs[0].edges[0].evidence[0] on the same record (proteorhodopsin -&gt; proteorhodopsin_trait), append a CURATE history event, and regenerate trait pages.
+Populate snippet on record-level evidence[0] citing reference DOI:10.1126/science.289.5486.1902 in data/traits/metabolism/proteorhodopsin_phototrophy.yaml using the verified verbatim snippet 'bound retinal to form an active, light-driven proton pump' from causal_graphs[0].edges[0].evidence[0] on the same record (proteorhodopsin -&gt; proteorhodopsin_trait), append a CURATE history event, and regenerate trait pages.
 
 - data/traits/metabolism/proteorhodopsin_phototrophy.yaml includes a verified verbatim snippet on record-level evidence for DOI:10.1126/science.289.5486.1902.
 - uv run python scripts/validate_strict.py and uv run python scripts/audit_evidence_snippets.py pass with 0 errors.
 
 ### ACT-C3S4-DEF-SRC-005
 
-Populate snippet on record-level evidence[0] (and unquoted causal_graphs[0].edges[0] where applicable) citing reference DOI:10.1016/S0168-1656(01)00407-2 in data/traits/metabolism/starch_degradation.yaml using the verified verbatim snippet 'the use of starch-converting enzymes in the production of maltodextrin, modified starches, or glucose and fructose syrups' from causal_graphs[0].edges[0].evidence[0] on the same record (amylase -&gt; starch_degradation_trait), append a CURATE history event, and regenerate trait pages.
+Populate snippet on record-level evidence[0] citing reference DOI:10.1016/S0168-1656(01)00407-2 in data/traits/metabolism/starch_degradation.yaml using the verified verbatim snippet 'the use of starch-converting enzymes in the production of maltodextrin, modified starches, or glucose and fructose syrups' from causal_graphs[0].edges[0].evidence[0] on the same record (amylase -&gt; starch_degradation_trait), append a CURATE history event, and regenerate trait pages.
 
 - data/traits/metabolism/starch_degradation.yaml includes a verified verbatim snippet on record-level evidence for DOI:10.1016/S0168-1656(01)00407-2.
 - uv run python scripts/validate_strict.py and uv run python scripts/audit_evidence_snippets.py pass with 0 errors.
 
 ### ACT-C3S4-DEF-SRC-006
 
-Populate snippet on record-level evidence[0] (and unquoted causal_graphs[0].edges[0] where applicable) citing reference DOI:10.1128/AEM.02473-10 in data/traits/metabolism/three_hydroxypropionate_bicycle.yaml using the verified verbatim snippet 'The 3-hydroxypropionate (Fuchs-Holo) bi-cycle. Enzymes: 1, acetyl-CoA carboxylase' from causal_graphs[0].edges[9].evidence[0] on the same record (acetyl_coa_carboxylase -&gt; three_hp_bicycle_trait), append a CURATE history event, and regenerate trait pages.
+Populate snippet on record-level evidence[0] citing reference DOI:10.1128/AEM.02473-10 in data/traits/metabolism/three_hydroxypropionate_bicycle.yaml using the verified verbatim snippet 'The 3-hydroxypropionate (Fuchs-Holo) bi-cycle. Enzymes: 1, acetyl-CoA carboxylase' from causal_graphs[0].edges[9].evidence[0] on the same record (acetyl_coa_carboxylase -&gt; three_hp_bicycle_trait), append a CURATE history event, and regenerate trait pages.
 
 - data/traits/metabolism/three_hydroxypropionate_bicycle.yaml includes a verified verbatim snippet on record-level evidence for DOI:10.1128/AEM.02473-10.
 - uv run python scripts/validate_strict.py and uv run python scripts/audit_evidence_snippets.py pass with 0 errors.
 
 ### ACT-C3S4-DEF-SRC-007
 
-Populate snippet on record-level evidence[1] (and unquoted causal_graphs[0].edges[0] where applicable) citing reference DOI:10.3389/fmicb.2021.703525 in data/traits/metabolism/ethanol_fermentation.yaml using the verified verbatim snippet 'fermentation is defined as an anaerobic bacterial redox process of an organic substrate leading to different products' from causal_graphs[0].edges[0].evidence[0] on the same record (ethanol_fermentation_trait -&gt; fermentation_process), append a CURATE history event, and regenerate trait pages.
+Populate snippet on record-level evidence[1] citing reference DOI:10.3389/fmicb.2021.703525 in data/traits/metabolism/ethanol_fermentation.yaml using the verified verbatim snippet 'fermentation is defined as an anaerobic bacterial redox process of an organic substrate leading to different products' from causal_graphs[0].edges[0].evidence[0] on the same record (ethanol_fermentation_trait -&gt; fermentation_process), append a CURATE history event, and regenerate trait pages.
 
 - data/traits/metabolism/ethanol_fermentation.yaml includes a verified verbatim snippet on record-level evidence for DOI:10.3389/fmicb.2021.703525.
 - uv run python scripts/validate_strict.py and uv run python scripts/audit_evidence_snippets.py pass with 0 errors.
 
 ### ACT-C3S4-DEF-SRC-008
 
-Populate snippet on record-level evidence[0] (and unquoted causal_graphs[0].edges[0] where applicable) citing reference DOI:10.3389/fmicb.2021.703525 in data/traits/metabolism/lactic_acid_fermentation.yaml using the verified verbatim snippet 'fermentation is defined as an anaerobic bacterial redox process of an organic substrate leading to different products' from causal_graphs[0].edges[0].evidence[0] on the same record (lactic_acid_fermentation_trait -&gt; fermentation_process), append a CURATE history event, and regenerate trait pages.
+Populate snippet on record-level evidence[0] citing reference DOI:10.3389/fmicb.2021.703525 in data/traits/metabolism/lactic_acid_fermentation.yaml using the verified verbatim snippet 'fermentation is defined as an anaerobic bacterial redox process of an organic substrate leading to different products' from causal_graphs[0].edges[0].evidence[0] on the same record (lactic_acid_fermentation_trait -&gt; fermentation_process), append a CURATE history event, and regenerate trait pages.
 
 - data/traits/metabolism/lactic_acid_fermentation.yaml includes a verified verbatim snippet on record-level evidence for DOI:10.3389/fmicb.2021.703525.
 - uv run python scripts/validate_strict.py and uv run python scripts/audit_evidence_snippets.py pass with 0 errors.
 
 ### ACT-C3S4-DEF-SRC-009
 
-Populate snippet on record-level evidence[0] (and unquoted causal_graphs[0].edges[0] where applicable) citing reference DOI:10.3389/fmicb.2021.703525 in data/traits/metabolism/mixed_acid_fermentation.yaml using the verified verbatim snippet 'fermentation is defined as an anaerobic bacterial redox process of an organic substrate leading to different products' from sibling data/traits/metabolism/ethanol_fermentation.yaml and lactic_acid_fermentation.yaml causal_graphs[0].edges[0].evidence[0], append a CURATE history event, and regenerate trait pages.
+Populate snippet on record-level evidence[0] citing reference DOI:10.3389/fmicb.2021.703525 in data/traits/metabolism/mixed_acid_fermentation.yaml using the verified verbatim snippet 'fermentation is defined as an anaerobic bacterial redox process of an organic substrate leading to different products' from sibling data/traits/metabolism/ethanol_fermentation.yaml and lactic_acid_fermentation.yaml causal_graphs[0].edges[0].evidence[0], append a CURATE history event, and regenerate trait pages.
 
 - data/traits/metabolism/mixed_acid_fermentation.yaml includes a verified verbatim snippet on record-level evidence for DOI:10.3389/fmicb.2021.703525.
 - uv run python scripts/validate_strict.py and uv run python scripts/audit_evidence_snippets.py pass with 0 errors.
 
 ### ACT-C3S4-DEF-SRC-010
 
-Populate snippet on record-level evidence[0] (and unquoted causal_graphs[0].edges[0] where applicable) citing reference DOI:10.3389/fmicb.2021.703525 in data/traits/metabolism/fermentative_hydrogen_production.yaml using the verified verbatim snippet 'fermentation is defined as an anaerobic bacterial redox process of an organic substrate leading to different products' from sibling data/traits/metabolism/ethanol_fermentation.yaml and lactic_acid_fermentation.yaml causal_graphs[0].edges[0].evidence[0], append a CURATE history event, and regenerate trait pages.
+Populate snippet on record-level evidence[0] citing reference DOI:10.3389/fmicb.2021.703525 in data/traits/metabolism/fermentative_hydrogen_production.yaml using the verified verbatim snippet 'fermentation is defined as an anaerobic bacterial redox process of an organic substrate leading to different products' from sibling data/traits/metabolism/ethanol_fermentation.yaml and lactic_acid_fermentation.yaml causal_graphs[0].edges[0].evidence[0], append a CURATE history event, and regenerate trait pages.
 
 - data/traits/metabolism/fermentative_hydrogen_production.yaml includes a verified verbatim snippet on record-level evidence for DOI:10.3389/fmicb.2021.703525.
 - uv run python scripts/validate_strict.py and uv run python scripts/audit_evidence_snippets.py pass with 0 errors.
 
 ### ACT-C3S4-DEF-SRC-011
 
-Populate snippet on record-level evidence[0] (and unquoted causal_graphs[0].edges[0] where applicable) citing reference DOI:10.1128/AEM.02473-10 in data/traits/metabolism/calvin_benson_bassham_cycle.yaml using the verified verbatim snippet 'The reductive pentose phosphate cycle is the quantitatively most important mechanism of autotrophic CO2 fixation in nature.' from parent data/traits/metabolism/carbon_fixation.yaml (traitmech:000019) evidence[0] and causal_graphs[0].edges[11].evidence[0], append a CURATE history event, and regenerate trait pages.
+Populate snippet on record-level evidence[0] citing reference DOI:10.1128/AEM.02473-10 in data/traits/metabolism/calvin_benson_bassham_cycle.yaml using the verified verbatim snippet 'The reductive pentose phosphate cycle is the quantitatively most important mechanism of autotrophic CO2 fixation in nature.' from parent data/traits/metabolism/carbon_fixation.yaml (traitmech:000019) evidence[0] and causal_graphs[0].edges[11].evidence[0], append a CURATE history event, and regenerate trait pages.
 
 - data/traits/metabolism/calvin_benson_bassham_cycle.yaml includes a verified verbatim snippet on record-level evidence for DOI:10.1128/AEM.02473-10.
 - uv run python scripts/validate_strict.py and uv run python scripts/audit_evidence_snippets.py pass with 0 errors.
 
 ### ACT-C3S4-DEF-SRC-012
 
-Populate snippet on record-level evidence[0] (and unquoted causal_graphs[0].edges[0] where applicable) citing reference DOI:10.1128/mr.55.2.259-287.1991 in data/traits/metabolism/dissimilatory_manganese_reduction.yaml using the verified verbatim snippet 'The oxidation of organic matter coupled to the reduction of Fe(III) or Mn(IV) is one of the most important biogeochemical reactions in aquatic sediments, soils, and groundwater' from parent data/traits/metabolism/dissimilatory_metal_reduction.yaml (traitmech:000039) and sibling dissimilatory_iron_reduction.yaml (traitmech:000024) evidence[0], append a CURATE history event, and regenerate trait pages.
+Populate snippet on record-level evidence[0] citing reference DOI:10.1128/mr.55.2.259-287.1991 in data/traits/metabolism/dissimilatory_manganese_reduction.yaml using the verified verbatim snippet 'The oxidation of organic matter coupled to the reduction of Fe(III) or Mn(IV) is one of the most important biogeochemical reactions in aquatic sediments, soils, and groundwater' from parent data/traits/metabolism/dissimilatory_metal_reduction.yaml (traitmech:000039) and sibling dissimilatory_iron_reduction.yaml (traitmech:000024) evidence[0], append a CURATE history event, and regenerate trait pages.
 
 - data/traits/metabolism/dissimilatory_manganese_reduction.yaml includes a verified verbatim snippet on record-level evidence for DOI:10.1128/mr.55.2.259-287.1991.
 - uv run python scripts/validate_strict.py and uv run python scripts/audit_evidence_snippets.py pass with 0 errors.
 
 ### ACT-C3S4-DEF-SRC-013
 
-Populate snippet on record-level evidence[0] (and unquoted causal_graphs[0].edges[0] where applicable) citing reference DOI:10.1126/science.1254070 in data/traits/metabolism/dissimilatory_nitrate_reduction_to_ammonium.yaml using the verified verbatim snippet 'Denitrification converts nitrate into nitrogenous gas and thus removes fixed nitrogen from the biosphere, whereas ammonification converts nitrate into ammonium' from parent data/traits/metabolism/nitrate_respiration.yaml (traitmech:000122) evidence[0], append a CURATE history event, and regenerate trait pages.
+Populate snippet on record-level evidence[0] citing reference DOI:10.1126/science.1254070 in data/traits/metabolism/dissimilatory_nitrate_reduction_to_ammonium.yaml using the verified verbatim snippet 'Denitrification converts nitrate into nitrogenous gas and thus removes fixed nitrogen from the biosphere, whereas ammonification converts nitrate into ammonium' from parent data/traits/metabolism/nitrate_respiration.yaml (traitmech:000122) evidence[0], append a CURATE history event, and regenerate trait pages.
 
 - data/traits/metabolism/dissimilatory_nitrate_reduction_to_ammonium.yaml includes a verified verbatim snippet on record-level evidence for DOI:10.1126/science.1254070.
 - uv run python scripts/validate_strict.py and uv run python scripts/audit_evidence_snippets.py pass with 0 errors.
 
 ### ACT-C3S4-DEF-SRC-014
 
-Populate snippet on record-level evidence[0] (and unquoted causal_graphs[0].edges[0] where applicable) citing reference DOI:10.1038/nrmicro1341 in data/traits/ecology/free_living.yaml using the verified verbatim snippet 'free-living microbial taxa exhibit biogeographic patterns' from sibling data/traits/ecology/soil_dwelling.yaml (traitmech:000050) evidence[0], append a CURATE history event, and regenerate trait pages.
+Populate snippet on record-level evidence[0] citing reference DOI:10.1038/nrmicro1341 in data/traits/ecology/free_living.yaml using the verified verbatim snippet 'free-living microbial taxa exhibit biogeographic patterns' from sibling data/traits/ecology/soil_dwelling.yaml (traitmech:000050) evidence[1], append a CURATE history event, and regenerate trait pages.
 
 - data/traits/ecology/free_living.yaml includes a verified verbatim snippet on record-level evidence for DOI:10.1038/nrmicro1341.
 - uv run python scripts/validate_strict.py and uv run python scripts/audit_evidence_snippets.py pass with 0 errors.
 
 ### ACT-C3S4-DEF-SRC-015
 
-Populate snippet on record-level evidence[0] (and unquoted causal_graphs[0].edges[0] where applicable) citing reference DOI:10.1093/femsre/fuv034 in data/traits/morphology/amphitrichous.yaml using the verified verbatim snippet 'Bacteria differ in number and location of their flagella that appear in regular patterns at the cell surface (flagellation pattern).' from sibling data/traits/morphology/polar_flagellation.yaml (METPO:1005032) evidence[0], append a CURATE history event, and regenerate trait pages.
+Populate snippet on record-level evidence[0] citing reference DOI:10.1093/femsre/fuv034 in data/traits/morphology/amphitrichous.yaml using the verified verbatim snippet 'Bacteria differ in number and location of their flagella that appear in regular patterns at the cell surface (flagellation pattern).' from sibling data/traits/morphology/polar_flagellation.yaml (METPO:1005032) evidence[0], append a CURATE history event, and regenerate trait pages.
 
 - data/traits/morphology/amphitrichous.yaml includes a verified verbatim snippet on record-level evidence for DOI:10.1093/femsre/fuv034.
 - uv run python scripts/validate_strict.py and uv run python scripts/audit_evidence_snippets.py pass with 0 errors.
 
 ### ACT-C3S4-DEF-SRC-016
 
-Populate snippet on record-level evidence[0] (and unquoted causal_graphs[0].edges[0] where applicable) citing reference DOI:10.1093/femsre/fuv034 in data/traits/morphology/lophotrichous.yaml using the verified verbatim snippet 'Bacteria differ in number and location of their flagella that appear in regular patterns at the cell surface (flagellation pattern).' from sibling data/traits/morphology/polar_flagellation.yaml (METPO:1005032) evidence[0], append a CURATE history event, and regenerate trait pages.
+Populate snippet on record-level evidence[0] citing reference DOI:10.1093/femsre/fuv034 in data/traits/morphology/lophotrichous.yaml using the verified verbatim snippet 'Bacteria differ in number and location of their flagella that appear in regular patterns at the cell surface (flagellation pattern).' from sibling data/traits/morphology/polar_flagellation.yaml (METPO:1005032) evidence[0], append a CURATE history event, and regenerate trait pages.
 
 - data/traits/morphology/lophotrichous.yaml includes a verified verbatim snippet on record-level evidence for DOI:10.1093/femsre/fuv034.
 - uv run python scripts/validate_strict.py and uv run python scripts/audit_evidence_snippets.py pass with 0 errors.
 
 ### ACT-C3S4-DEF-SRC-017
 
-Populate snippet on record-level evidence[0] (and unquoted causal_graphs[0].edges[0] where applicable) citing reference DOI:10.1093/femsre/fuv034 in data/traits/morphology/monotrichous.yaml using the verified verbatim snippet 'Bacteria differ in number and location of their flagella that appear in regular patterns at the cell surface (flagellation pattern).' from sibling data/traits/morphology/polar_flagellation.yaml (METPO:1005032) evidence[0], append a CURATE history event, and regenerate trait pages.
+Populate snippet on record-level evidence[0] citing reference DOI:10.1093/femsre/fuv034 in data/traits/morphology/monotrichous.yaml using the verified verbatim snippet 'Bacteria differ in number and location of their flagella that appear in regular patterns at the cell surface (flagellation pattern).' from sibling data/traits/morphology/polar_flagellation.yaml (METPO:1005032) evidence[0], append a CURATE history event, and regenerate trait pages.
 
 - data/traits/morphology/monotrichous.yaml includes a verified verbatim snippet on record-level evidence for DOI:10.1093/femsre/fuv034.
 - uv run python scripts/validate_strict.py and uv run python scripts/audit_evidence_snippets.py pass with 0 errors.
@@ -1474,9 +1474,9 @@ Populate snippet on record-level evidence[0] (and unquoted causal_graphs[0].edge
 | --- | --- | --- | --- |
 | ev-corpus-records | data/traits; 1,129 eligible TraitRecord YAML files across 10 category directories | supports | Direct inspection of all 1,129 eligible TraitRecord YAML files at commit 8ee71cf99e270d60a2e08b550728f0cabdd6ce96 covering identity, definition, hierarchy, evidence, canonical_examples, causal_graphs, and discussions. |
 | ev-validate-strict | src/traitmech/schema/traitmech.yaml; scripts/validate_strict.py | supports | Strict LinkML and custom corpus validator confirms 0 schema or reference violations across all 1,129 eligible records. |
-| ev-snippet-audit | conf/evidence_snippet_baseline.tsv; scripts/audit_evidence_snippets.py | supports | Snippet audit confirms 0 unbaselined snippet issues, confirms all 6 Cycle 2 open definition_source findings were resolved in Cycle 2 Stage 5, and identifies 17 eligible records across ecology (1), metabolism (11), morphology (4), and physiology (2) where a verified verbatim quote from definition_source already exists on the same record's causal_graphs or on a parent/sibling TraitRecord. |
+| ev-snippet-audit | conf/evidence_snippet_baseline.tsv; scripts/audit_evidence_snippets.py | supports | Snippet audit confirms 0 unbaselined snippet issues, confirms all 6 Cycle 2 open definition_source findings were resolved in Cycle 2 Stage 5, and identifies 17 eligible records across ecology (1), metabolism (10), morphology (4), and physiology (2) where a verified verbatim quote from definition_source already exists on the same record's causal_graphs or on a parent/sibling TraitRecord. |
 | ev-causal-graph-audit | conf/causal_graph_audit_baseline.tsv; scripts/audit_causal_graphs.py | supports | Causal graph audit verifies 741 eligible records with connected causal graphs (up from 738 in Cycle 2 after +3 Cycle 3 Stage 2 graphs), 388 eligible records without causal graphs (366 source-limited, 22 non-mechanistic vocabulary), and 85 baselined cross-record consistency warning rows (83 INCONSISTENT_NODE_TYPE, 2 DUPLICATE_GROUNDING) across 72 unique eligible records. |
-| ev-uniprot-protein-audit | reports/uniprot_grounding_audit.tsv; reports/graph_protein_taxon_coverage.tsv | supports | UniProt grounding and taxon coverage audits verify 181 UniProtKB protein_examples (up from 177 in Cycle 2 after +6 additions and -2 stale deduplications in Cycle 3 Stage 3) across 161 exemplified GENE_OR_PROTEIN nodes in 144 MECHANISTIC and 597 NONMECHANISTIC eligible graphs with 0 unverified accessions or version drift. |
+| ev-uniprot-protein-audit | reports/uniprot_grounding_audit.tsv; reports/graph_protein_taxon_coverage.tsv | supports | UniProt grounding and taxon coverage audits verify 181 UniProtKB protein_examples (up from 179 in Cycle 2 after +2 additions in Cycle 3 Stage 3: UniProtKB:P07767 and UniProtKB:I6XD65) across 161 exemplified GENE_OR_PROTEIN nodes in 144 MECHANISTIC and 597 NONMECHANISTIC eligible graphs with 0 unverified accessions or version drift. |
 | ev-metpo-proposal-audit | reports/metpo_2026_06_12_active_review.tsv; data/raw/metpo.owl and proposals/metpo_traitmech_v1..v611 | supports | METPO active release and ROBOT proposal verification confirm 395 eligible METPO: records match active terms and 734 eligible traitmech:NNNNNN records (735 total including excluded traitmech:000083) have tracked upstream ROBOT proposals. |
 | ev-c3s4-def-src-001 | DOI:10.1016/B978-012373944-5.00083-3; data/traits/physiology/photoorganoheterotrophic.yaml causal_graphs[0].edges[0].evidence[0] | supports | DOI:10.1016/B978-012373944-5.00083-3 is declared as definition_source on photoorganoheterotrophic.yaml and omitted from record-level evidence[], while causal_graphs[0].edges[0].evidence[0] already quotes verbatim: 'use of light'. |
 | ev-c3s4-def-src-002 | DOI:10.3390/microorganisms10050926; data/traits/physiology/oxidase_activity.yaml causal_graphs[0].edges[9].evidence[0] | supports | DOI:10.3390/microorganisms10050926 is declared as definition_source and cited in record-level evidence[0] on oxidase_activity.yaml with notes only, while causal_graphs[0].edges[9].evidence[0] already quotes verbatim: 'Cytochrome c oxidases of the heme–copper oxygen reductase family A'. |
@@ -1489,7 +1489,7 @@ Populate snippet on record-level evidence[0] (and unquoted causal_graphs[0].edge
 | ev-c3s4-def-src-011 | DOI:10.1128/AEM.02473-10; data/traits/metabolism/carbon_fixation.yaml evidence[0] and causal_graphs[0].edges[11].evidence[0] | supports | Berg 2011 (DOI:10.1128/AEM.02473-10) is declared as definition_source and cited in record-level evidence[0] on calvin_benson_bassham_cycle.yaml with notes only, while parent carbon_fixation.yaml (traitmech:000019) already quotes verbatim: 'The reductive pentose phosphate cycle is the quantitatively most important mechanism of autotrophic CO2 fixation in nature.' |
 | ev-c3s4-def-src-012 | DOI:10.1128/mr.55.2.259-287.1991; data/traits/metabolism/dissimilatory_metal_reduction.yaml evidence[0] | supports | Lovley 1991 (DOI:10.1128/mr.55.2.259-287.1991) is declared as definition_source and cited in record-level evidence[0] on dissimilatory_manganese_reduction.yaml with notes only, while parent dissimilatory_metal_reduction.yaml (traitmech:000039) and sibling dissimilatory_iron_reduction.yaml (traitmech:000024) already quote verbatim: 'The oxidation of organic matter coupled to the reduction of Fe(III) or Mn(IV) is one of the most important biogeochemical reactions in aquatic sediments, soils, and groundwater'. |
 | ev-c3s4-def-src-013 | DOI:10.1126/science.1254070; data/traits/metabolism/nitrate_respiration.yaml evidence[0] | supports | Kraft et al. 2014 (DOI:10.1126/science.1254070) is declared as definition_source and cited in record-level evidence[0] on dissimilatory_nitrate_reduction_to_ammonium.yaml with notes only, while parent nitrate_respiration.yaml (traitmech:000122) already quotes verbatim: 'Denitrification converts nitrate into nitrogenous gas and thus removes fixed nitrogen from the biosphere, whereas ammonification converts nitrate into ammonium'. |
-| ev-c3s4-def-src-014 | DOI:10.1038/nrmicro1341; data/traits/ecology/soil_dwelling.yaml evidence[0] | supports | Martiny et al. 2006 (DOI:10.1038/nrmicro1341) is declared as definition_source and cited in record-level evidence[0] on free_living.yaml with notes only, while sibling soil_dwelling.yaml (traitmech:000050) already quotes verbatim: 'free-living microbial taxa exhibit biogeographic patterns'. |
+| ev-c3s4-def-src-014 | DOI:10.1038/nrmicro1341; data/traits/ecology/soil_dwelling.yaml evidence[1] | supports | Martiny et al. 2006 (DOI:10.1038/nrmicro1341) is declared as definition_source and cited in record-level evidence[0] on free_living.yaml with notes only, while sibling soil_dwelling.yaml (traitmech:000050) evidence[1] already quotes verbatim: 'free-living microbial taxa exhibit biogeographic patterns'. |
 | ev-c3s4-def-src-015 | DOI:10.1093/femsre/fuv034; data/traits/morphology/polar_flagellation.yaml evidence[0] | supports | Schuhmacher et al. 2015 (DOI:10.1093/femsre/fuv034) is declared as definition_source and cited in record-level evidence[0] on amphitrichous.yaml, lophotrichous.yaml, and monotrichous.yaml with notes only, while sibling polar_flagellation.yaml (METPO:1005032) already quotes verbatim: 'Bacteria differ in number and location of their flagella that appear in regular patterns at the cell surface (flagellation pattern).' |
 
 ## Limits And Additional Notes
@@ -20892,7 +20892,7 @@ evidence:
   support: supports
   summary: Snippet audit confirms 0 unbaselined snippet issues, confirms all 6 Cycle
     2 open definition_source findings were resolved in Cycle 2 Stage 5, and identifies
-    17 eligible records across ecology (1), metabolism (11), morphology (4), and physiology
+    17 eligible records across ecology (1), metabolism (10), morphology (4), and physiology
     (2) where a verified verbatim quote from definition_source already exists on the
     same record's causal_graphs or on a parent/sibling TraitRecord.
 - evidence_id: ev-causal-graph-audit
@@ -20912,10 +20912,11 @@ evidence:
   locator: reports/graph_protein_taxon_coverage.tsv
   accessed_at: '2026-10-23T23:50:00Z'
   support: supports
-  summary: UniProt grounding and taxon coverage audits verify 181 UniProtKB protein_examples
-    (up from 177 in Cycle 2 after +6 additions and -2 stale deduplications in Cycle
-    3 Stage 3) across 161 exemplified GENE_OR_PROTEIN nodes in 144 MECHANISTIC and
-    597 NONMECHANISTIC eligible graphs with 0 unverified accessions or version drift.
+  summary: 'UniProt grounding and taxon coverage audits verify 181 UniProtKB protein_examples
+    (up from 179 in Cycle 2 after +2 additions in Cycle 3 Stage 3: UniProtKB:P07767
+    and UniProtKB:I6XD65) across 161 exemplified GENE_OR_PROTEIN nodes in 144 MECHANISTIC
+    and 597 NONMECHANISTIC eligible graphs with 0 unverified accessions or version
+    drift.'
 - evidence_id: ev-metpo-proposal-audit
   kind: authority
   reference: reports/metpo_2026_06_12_active_review.tsv
@@ -21047,13 +21048,13 @@ evidence:
 - evidence_id: ev-c3s4-def-src-014
   kind: primary_source
   reference: DOI:10.1038/nrmicro1341
-  locator: data/traits/ecology/soil_dwelling.yaml evidence[0]
+  locator: data/traits/ecology/soil_dwelling.yaml evidence[1]
   accessed_at: '2026-10-23T23:50:00Z'
   support: supports
   summary: 'Martiny et al. 2006 (DOI:10.1038/nrmicro1341) is declared as definition_source
     and cited in record-level evidence[0] on free_living.yaml with notes only, while
-    sibling soil_dwelling.yaml (traitmech:000050) already quotes verbatim: ''free-living
-    microbial taxa exhibit biogeographic patterns''.'
+    sibling soil_dwelling.yaml (traitmech:000050) evidence[1] already quotes verbatim:
+    ''free-living microbial taxa exhibit biogeographic patterns''.'
 - evidence_id: ev-c3s4-def-src-015
   kind: primary_source
   reference: DOI:10.1093/femsre/fuv034
@@ -23339,7 +23340,7 @@ assessments:
   topic: Missing or unquoted record-level evidence entry for definition_source on
     17 records with verified intra-record or parent/sibling verbatim quotes
   outcome: concern
-  summary: '17 eligible records across ecology (1: free_living), metabolism (11: proteorhodopsin_phototrophy,
+  summary: '17 eligible records across ecology (1: free_living), metabolism (10: proteorhodopsin_phototrophy,
     starch_degradation, three_hydroxypropionate_bicycle, ethanol_fermentation, lactic_acid_fermentation,
     mixed_acid_fermentation, fermentative_hydrogen_production, calvin_benson_bassham_cycle,
     dissimilatory_manganese_reduction, dissimilatory_nitrate_reduction_to_ammonium),
@@ -26008,7 +26009,6 @@ findings:
   field_paths:
   - definition_source
   - evidence[0]
-  - causal_graphs[0].edges[0].evidence[0]
   evidence_ids:
   - ev-corpus-records
   - ev-snippet-audit
@@ -26039,7 +26039,6 @@ findings:
   field_paths:
   - definition_source
   - evidence[0]
-  - causal_graphs[0].edges[0].evidence[0]
   evidence_ids:
   - ev-corpus-records
   - ev-snippet-audit
@@ -26070,7 +26069,6 @@ findings:
   field_paths:
   - definition_source
   - evidence[0]
-  - causal_graphs[0].edges[0].evidence[0]
   evidence_ids:
   - ev-corpus-records
   - ev-snippet-audit
@@ -26102,7 +26100,6 @@ findings:
   field_paths:
   - definition_source
   - evidence[0]
-  - causal_graphs[0].edges[0].evidence[0]
   evidence_ids:
   - ev-corpus-records
   - ev-snippet-audit
@@ -26133,7 +26130,6 @@ findings:
   field_paths:
   - definition_source
   - evidence[0]
-  - causal_graphs[0].edges[0].evidence[0]
   evidence_ids:
   - ev-corpus-records
   - ev-snippet-audit
@@ -26150,11 +26146,11 @@ findings:
   certainty: confirmed
   title: free_living.yaml cites definition_source DOI:10.1038/nrmicro1341 in record-level
     evidence without a verbatim snippet despite verified quote in sibling data/traits/ecology/soil_dwelling.yaml
-    (traitmech:000050) evidence[0]
+    (traitmech:000050) evidence[1]
   description: 'data/traits/ecology/free_living.yaml (traitmech:000048) declares definition_source:
     DOI:10.1038/nrmicro1341 and cites DOI:10.1038/nrmicro1341 in record-level evidence[0]
     with notes only and no snippet (UNQUOTED_DEFINITION_SOURCE), even though sibling
-    data/traits/ecology/soil_dwelling.yaml (traitmech:000050) evidence[0] already
+    data/traits/ecology/soil_dwelling.yaml (traitmech:000050) evidence[1] already
     carries the verified verbatim snippet ''free-living microbial taxa exhibit biogeographic
     patterns'' from DOI:10.1038/nrmicro1341.'
   target_ids:
@@ -26162,7 +26158,6 @@ findings:
   field_paths:
   - definition_source
   - evidence[0]
-  - causal_graphs[0].edges[0].evidence[0]
   evidence_ids:
   - ev-corpus-records
   - ev-snippet-audit
@@ -26192,7 +26187,6 @@ findings:
   field_paths:
   - definition_source
   - evidence[0]
-  - causal_graphs[0].edges[0].evidence[0]
   evidence_ids:
   - ev-corpus-records
   - ev-snippet-audit
@@ -26222,7 +26216,6 @@ findings:
   field_paths:
   - definition_source
   - evidence[0]
-  - causal_graphs[0].edges[0].evidence[0]
   evidence_ids:
   - ev-corpus-records
   - ev-snippet-audit
@@ -26252,7 +26245,6 @@ findings:
   field_paths:
   - definition_source
   - evidence[0]
-  - causal_graphs[0].edges[0].evidence[0]
   evidence_ids:
   - ev-corpus-records
   - ev-snippet-audit
@@ -28251,12 +28243,11 @@ actions:
   - uv run python scripts/validate_strict.py and uv run python scripts/audit_evidence_snippets.py
     pass with 0 errors.
 - action_id: ACT-C3S4-DEF-SRC-002
-  description: Populate snippet on record-level evidence[0] (and unquoted causal_graphs[0].edges[0]
-    where applicable) citing reference DOI:10.3390/microorganisms10050926 in data/traits/physiology/oxidase_activity.yaml
-    using the verified verbatim snippet 'Cytochrome c oxidases of the heme–copper
-    oxygen reductase family A' from causal_graphs[0].edges[9].evidence[0] on the same
-    record (family_a_cytochrome_c_oxidase -> cytochrome_c_oxidase), append a CURATE
-    history event, and regenerate trait pages.
+  description: Populate snippet on record-level evidence[0] citing reference DOI:10.3390/microorganisms10050926
+    in data/traits/physiology/oxidase_activity.yaml using the verified verbatim snippet
+    'Cytochrome c oxidases of the heme–copper oxygen reductase family A' from causal_graphs[0].edges[9].evidence[0]
+    on the same record (family_a_cytochrome_c_oxidase -> cytochrome_c_oxidase), append
+    a CURATE history event, and regenerate trait pages.
   finding_ids:
   - F-C3S4-DEF-SRC-002
   target_ids:
@@ -28271,12 +28262,11 @@ actions:
   - uv run python scripts/validate_strict.py and uv run python scripts/audit_evidence_snippets.py
     pass with 0 errors.
 - action_id: ACT-C3S4-DEF-SRC-003
-  description: Populate snippet on record-level evidence[0] (and unquoted causal_graphs[0].edges[0]
-    where applicable) citing reference DOI:10.1093/femsre/fuv034 in data/traits/morphology/peritrichous.yaml
-    using the verified verbatim snippet 'five to six flagellar filaments distributed
-    over the cell body' from causal_graphs[0].edges[2].evidence[0] on the same record
-    (surface_placement -> flagellar_filament_number), append a CURATE history event,
-    and regenerate trait pages.
+  description: Populate snippet on record-level evidence[0] citing reference DOI:10.1093/femsre/fuv034
+    in data/traits/morphology/peritrichous.yaml using the verified verbatim snippet
+    'five to six flagellar filaments distributed over the cell body' from causal_graphs[0].edges[2].evidence[0]
+    on the same record (surface_placement -> flagellar_filament_number), append a
+    CURATE history event, and regenerate trait pages.
   finding_ids:
   - F-C3S4-DEF-SRC-003
   target_ids:
@@ -28291,12 +28281,11 @@ actions:
   - uv run python scripts/validate_strict.py and uv run python scripts/audit_evidence_snippets.py
     pass with 0 errors.
 - action_id: ACT-C3S4-DEF-SRC-004
-  description: Populate snippet on record-level evidence[0] (and unquoted causal_graphs[0].edges[0]
-    where applicable) citing reference DOI:10.1126/science.289.5486.1902 in data/traits/metabolism/proteorhodopsin_phototrophy.yaml
-    using the verified verbatim snippet 'bound retinal to form an active, light-driven
-    proton pump' from causal_graphs[0].edges[0].evidence[0] on the same record (proteorhodopsin
-    -> proteorhodopsin_trait), append a CURATE history event, and regenerate trait
-    pages.
+  description: Populate snippet on record-level evidence[0] citing reference DOI:10.1126/science.289.5486.1902
+    in data/traits/metabolism/proteorhodopsin_phototrophy.yaml using the verified
+    verbatim snippet 'bound retinal to form an active, light-driven proton pump' from
+    causal_graphs[0].edges[0].evidence[0] on the same record (proteorhodopsin -> proteorhodopsin_trait),
+    append a CURATE history event, and regenerate trait pages.
   finding_ids:
   - F-C3S4-DEF-SRC-004
   target_ids:
@@ -28311,12 +28300,12 @@ actions:
   - uv run python scripts/validate_strict.py and uv run python scripts/audit_evidence_snippets.py
     pass with 0 errors.
 - action_id: ACT-C3S4-DEF-SRC-005
-  description: Populate snippet on record-level evidence[0] (and unquoted causal_graphs[0].edges[0]
-    where applicable) citing reference DOI:10.1016/S0168-1656(01)00407-2 in data/traits/metabolism/starch_degradation.yaml
-    using the verified verbatim snippet 'the use of starch-converting enzymes in the
-    production of maltodextrin, modified starches, or glucose and fructose syrups'
-    from causal_graphs[0].edges[0].evidence[0] on the same record (amylase -> starch_degradation_trait),
-    append a CURATE history event, and regenerate trait pages.
+  description: Populate snippet on record-level evidence[0] citing reference DOI:10.1016/S0168-1656(01)00407-2
+    in data/traits/metabolism/starch_degradation.yaml using the verified verbatim
+    snippet 'the use of starch-converting enzymes in the production of maltodextrin,
+    modified starches, or glucose and fructose syrups' from causal_graphs[0].edges[0].evidence[0]
+    on the same record (amylase -> starch_degradation_trait), append a CURATE history
+    event, and regenerate trait pages.
   finding_ids:
   - F-C3S4-DEF-SRC-005
   target_ids:
@@ -28331,12 +28320,12 @@ actions:
   - uv run python scripts/validate_strict.py and uv run python scripts/audit_evidence_snippets.py
     pass with 0 errors.
 - action_id: ACT-C3S4-DEF-SRC-006
-  description: 'Populate snippet on record-level evidence[0] (and unquoted causal_graphs[0].edges[0]
-    where applicable) citing reference DOI:10.1128/AEM.02473-10 in data/traits/metabolism/three_hydroxypropionate_bicycle.yaml
-    using the verified verbatim snippet ''The 3-hydroxypropionate (Fuchs-Holo) bi-cycle.
-    Enzymes: 1, acetyl-CoA carboxylase'' from causal_graphs[0].edges[9].evidence[0]
-    on the same record (acetyl_coa_carboxylase -> three_hp_bicycle_trait), append
-    a CURATE history event, and regenerate trait pages.'
+  description: 'Populate snippet on record-level evidence[0] citing reference DOI:10.1128/AEM.02473-10
+    in data/traits/metabolism/three_hydroxypropionate_bicycle.yaml using the verified
+    verbatim snippet ''The 3-hydroxypropionate (Fuchs-Holo) bi-cycle. Enzymes: 1,
+    acetyl-CoA carboxylase'' from causal_graphs[0].edges[9].evidence[0] on the same
+    record (acetyl_coa_carboxylase -> three_hp_bicycle_trait), append a CURATE history
+    event, and regenerate trait pages.'
   finding_ids:
   - F-C3S4-DEF-SRC-006
   target_ids:
@@ -28351,10 +28340,10 @@ actions:
   - uv run python scripts/validate_strict.py and uv run python scripts/audit_evidence_snippets.py
     pass with 0 errors.
 - action_id: ACT-C3S4-DEF-SRC-007
-  description: Populate snippet on record-level evidence[1] (and unquoted causal_graphs[0].edges[0]
-    where applicable) citing reference DOI:10.3389/fmicb.2021.703525 in data/traits/metabolism/ethanol_fermentation.yaml
-    using the verified verbatim snippet 'fermentation is defined as an anaerobic bacterial
-    redox process of an organic substrate leading to different products' from causal_graphs[0].edges[0].evidence[0]
+  description: Populate snippet on record-level evidence[1] citing reference DOI:10.3389/fmicb.2021.703525
+    in data/traits/metabolism/ethanol_fermentation.yaml using the verified verbatim
+    snippet 'fermentation is defined as an anaerobic bacterial redox process of an
+    organic substrate leading to different products' from causal_graphs[0].edges[0].evidence[0]
     on the same record (ethanol_fermentation_trait -> fermentation_process), append
     a CURATE history event, and regenerate trait pages.
   finding_ids:
@@ -28371,10 +28360,10 @@ actions:
   - uv run python scripts/validate_strict.py and uv run python scripts/audit_evidence_snippets.py
     pass with 0 errors.
 - action_id: ACT-C3S4-DEF-SRC-008
-  description: Populate snippet on record-level evidence[0] (and unquoted causal_graphs[0].edges[0]
-    where applicable) citing reference DOI:10.3389/fmicb.2021.703525 in data/traits/metabolism/lactic_acid_fermentation.yaml
-    using the verified verbatim snippet 'fermentation is defined as an anaerobic bacterial
-    redox process of an organic substrate leading to different products' from causal_graphs[0].edges[0].evidence[0]
+  description: Populate snippet on record-level evidence[0] citing reference DOI:10.3389/fmicb.2021.703525
+    in data/traits/metabolism/lactic_acid_fermentation.yaml using the verified verbatim
+    snippet 'fermentation is defined as an anaerobic bacterial redox process of an
+    organic substrate leading to different products' from causal_graphs[0].edges[0].evidence[0]
     on the same record (lactic_acid_fermentation_trait -> fermentation_process), append
     a CURATE history event, and regenerate trait pages.
   finding_ids:
@@ -28391,13 +28380,12 @@ actions:
   - uv run python scripts/validate_strict.py and uv run python scripts/audit_evidence_snippets.py
     pass with 0 errors.
 - action_id: ACT-C3S4-DEF-SRC-009
-  description: Populate snippet on record-level evidence[0] (and unquoted causal_graphs[0].edges[0]
-    where applicable) citing reference DOI:10.3389/fmicb.2021.703525 in data/traits/metabolism/mixed_acid_fermentation.yaml
-    using the verified verbatim snippet 'fermentation is defined as an anaerobic bacterial
-    redox process of an organic substrate leading to different products' from sibling
-    data/traits/metabolism/ethanol_fermentation.yaml and lactic_acid_fermentation.yaml
-    causal_graphs[0].edges[0].evidence[0], append a CURATE history event, and regenerate
-    trait pages.
+  description: Populate snippet on record-level evidence[0] citing reference DOI:10.3389/fmicb.2021.703525
+    in data/traits/metabolism/mixed_acid_fermentation.yaml using the verified verbatim
+    snippet 'fermentation is defined as an anaerobic bacterial redox process of an
+    organic substrate leading to different products' from sibling data/traits/metabolism/ethanol_fermentation.yaml
+    and lactic_acid_fermentation.yaml causal_graphs[0].edges[0].evidence[0], append
+    a CURATE history event, and regenerate trait pages.
   finding_ids:
   - F-C3S4-DEF-SRC-009
   target_ids:
@@ -28412,13 +28400,12 @@ actions:
   - uv run python scripts/validate_strict.py and uv run python scripts/audit_evidence_snippets.py
     pass with 0 errors.
 - action_id: ACT-C3S4-DEF-SRC-010
-  description: Populate snippet on record-level evidence[0] (and unquoted causal_graphs[0].edges[0]
-    where applicable) citing reference DOI:10.3389/fmicb.2021.703525 in data/traits/metabolism/fermentative_hydrogen_production.yaml
-    using the verified verbatim snippet 'fermentation is defined as an anaerobic bacterial
-    redox process of an organic substrate leading to different products' from sibling
-    data/traits/metabolism/ethanol_fermentation.yaml and lactic_acid_fermentation.yaml
-    causal_graphs[0].edges[0].evidence[0], append a CURATE history event, and regenerate
-    trait pages.
+  description: Populate snippet on record-level evidence[0] citing reference DOI:10.3389/fmicb.2021.703525
+    in data/traits/metabolism/fermentative_hydrogen_production.yaml using the verified
+    verbatim snippet 'fermentation is defined as an anaerobic bacterial redox process
+    of an organic substrate leading to different products' from sibling data/traits/metabolism/ethanol_fermentation.yaml
+    and lactic_acid_fermentation.yaml causal_graphs[0].edges[0].evidence[0], append
+    a CURATE history event, and regenerate trait pages.
   finding_ids:
   - F-C3S4-DEF-SRC-010
   target_ids:
@@ -28433,13 +28420,12 @@ actions:
   - uv run python scripts/validate_strict.py and uv run python scripts/audit_evidence_snippets.py
     pass with 0 errors.
 - action_id: ACT-C3S4-DEF-SRC-011
-  description: Populate snippet on record-level evidence[0] (and unquoted causal_graphs[0].edges[0]
-    where applicable) citing reference DOI:10.1128/AEM.02473-10 in data/traits/metabolism/calvin_benson_bassham_cycle.yaml
-    using the verified verbatim snippet 'The reductive pentose phosphate cycle is
-    the quantitatively most important mechanism of autotrophic CO2 fixation in nature.'
-    from parent data/traits/metabolism/carbon_fixation.yaml (traitmech:000019) evidence[0]
-    and causal_graphs[0].edges[11].evidence[0], append a CURATE history event, and
-    regenerate trait pages.
+  description: Populate snippet on record-level evidence[0] citing reference DOI:10.1128/AEM.02473-10
+    in data/traits/metabolism/calvin_benson_bassham_cycle.yaml using the verified
+    verbatim snippet 'The reductive pentose phosphate cycle is the quantitatively
+    most important mechanism of autotrophic CO2 fixation in nature.' from parent data/traits/metabolism/carbon_fixation.yaml
+    (traitmech:000019) evidence[0] and causal_graphs[0].edges[11].evidence[0], append
+    a CURATE history event, and regenerate trait pages.
   finding_ids:
   - F-C3S4-DEF-SRC-011
   target_ids:
@@ -28454,11 +28440,11 @@ actions:
   - uv run python scripts/validate_strict.py and uv run python scripts/audit_evidence_snippets.py
     pass with 0 errors.
 - action_id: ACT-C3S4-DEF-SRC-012
-  description: Populate snippet on record-level evidence[0] (and unquoted causal_graphs[0].edges[0]
-    where applicable) citing reference DOI:10.1128/mr.55.2.259-287.1991 in data/traits/metabolism/dissimilatory_manganese_reduction.yaml
-    using the verified verbatim snippet 'The oxidation of organic matter coupled to
-    the reduction of Fe(III) or Mn(IV) is one of the most important biogeochemical
-    reactions in aquatic sediments, soils, and groundwater' from parent data/traits/metabolism/dissimilatory_metal_reduction.yaml
+  description: Populate snippet on record-level evidence[0] citing reference DOI:10.1128/mr.55.2.259-287.1991
+    in data/traits/metabolism/dissimilatory_manganese_reduction.yaml using the verified
+    verbatim snippet 'The oxidation of organic matter coupled to the reduction of
+    Fe(III) or Mn(IV) is one of the most important biogeochemical reactions in aquatic
+    sediments, soils, and groundwater' from parent data/traits/metabolism/dissimilatory_metal_reduction.yaml
     (traitmech:000039) and sibling dissimilatory_iron_reduction.yaml (traitmech:000024)
     evidence[0], append a CURATE history event, and regenerate trait pages.
   finding_ids:
@@ -28475,9 +28461,9 @@ actions:
   - uv run python scripts/validate_strict.py and uv run python scripts/audit_evidence_snippets.py
     pass with 0 errors.
 - action_id: ACT-C3S4-DEF-SRC-013
-  description: Populate snippet on record-level evidence[0] (and unquoted causal_graphs[0].edges[0]
-    where applicable) citing reference DOI:10.1126/science.1254070 in data/traits/metabolism/dissimilatory_nitrate_reduction_to_ammonium.yaml
-    using the verified verbatim snippet 'Denitrification converts nitrate into nitrogenous
+  description: Populate snippet on record-level evidence[0] citing reference DOI:10.1126/science.1254070
+    in data/traits/metabolism/dissimilatory_nitrate_reduction_to_ammonium.yaml using
+    the verified verbatim snippet 'Denitrification converts nitrate into nitrogenous
     gas and thus removes fixed nitrogen from the biosphere, whereas ammonification
     converts nitrate into ammonium' from parent data/traits/metabolism/nitrate_respiration.yaml
     (traitmech:000122) evidence[0], append a CURATE history event, and regenerate
@@ -28496,11 +28482,11 @@ actions:
   - uv run python scripts/validate_strict.py and uv run python scripts/audit_evidence_snippets.py
     pass with 0 errors.
 - action_id: ACT-C3S4-DEF-SRC-014
-  description: Populate snippet on record-level evidence[0] (and unquoted causal_graphs[0].edges[0]
-    where applicable) citing reference DOI:10.1038/nrmicro1341 in data/traits/ecology/free_living.yaml
-    using the verified verbatim snippet 'free-living microbial taxa exhibit biogeographic
-    patterns' from sibling data/traits/ecology/soil_dwelling.yaml (traitmech:000050)
-    evidence[0], append a CURATE history event, and regenerate trait pages.
+  description: Populate snippet on record-level evidence[0] citing reference DOI:10.1038/nrmicro1341
+    in data/traits/ecology/free_living.yaml using the verified verbatim snippet 'free-living
+    microbial taxa exhibit biogeographic patterns' from sibling data/traits/ecology/soil_dwelling.yaml
+    (traitmech:000050) evidence[1], append a CURATE history event, and regenerate
+    trait pages.
   finding_ids:
   - F-C3S4-DEF-SRC-014
   target_ids:
@@ -28515,12 +28501,12 @@ actions:
   - uv run python scripts/validate_strict.py and uv run python scripts/audit_evidence_snippets.py
     pass with 0 errors.
 - action_id: ACT-C3S4-DEF-SRC-015
-  description: Populate snippet on record-level evidence[0] (and unquoted causal_graphs[0].edges[0]
-    where applicable) citing reference DOI:10.1093/femsre/fuv034 in data/traits/morphology/amphitrichous.yaml
-    using the verified verbatim snippet 'Bacteria differ in number and location of
-    their flagella that appear in regular patterns at the cell surface (flagellation
-    pattern).' from sibling data/traits/morphology/polar_flagellation.yaml (METPO:1005032)
-    evidence[0], append a CURATE history event, and regenerate trait pages.
+  description: Populate snippet on record-level evidence[0] citing reference DOI:10.1093/femsre/fuv034
+    in data/traits/morphology/amphitrichous.yaml using the verified verbatim snippet
+    'Bacteria differ in number and location of their flagella that appear in regular
+    patterns at the cell surface (flagellation pattern).' from sibling data/traits/morphology/polar_flagellation.yaml
+    (METPO:1005032) evidence[0], append a CURATE history event, and regenerate trait
+    pages.
   finding_ids:
   - F-C3S4-DEF-SRC-015
   target_ids:
@@ -28535,12 +28521,12 @@ actions:
   - uv run python scripts/validate_strict.py and uv run python scripts/audit_evidence_snippets.py
     pass with 0 errors.
 - action_id: ACT-C3S4-DEF-SRC-016
-  description: Populate snippet on record-level evidence[0] (and unquoted causal_graphs[0].edges[0]
-    where applicable) citing reference DOI:10.1093/femsre/fuv034 in data/traits/morphology/lophotrichous.yaml
-    using the verified verbatim snippet 'Bacteria differ in number and location of
-    their flagella that appear in regular patterns at the cell surface (flagellation
-    pattern).' from sibling data/traits/morphology/polar_flagellation.yaml (METPO:1005032)
-    evidence[0], append a CURATE history event, and regenerate trait pages.
+  description: Populate snippet on record-level evidence[0] citing reference DOI:10.1093/femsre/fuv034
+    in data/traits/morphology/lophotrichous.yaml using the verified verbatim snippet
+    'Bacteria differ in number and location of their flagella that appear in regular
+    patterns at the cell surface (flagellation pattern).' from sibling data/traits/morphology/polar_flagellation.yaml
+    (METPO:1005032) evidence[0], append a CURATE history event, and regenerate trait
+    pages.
   finding_ids:
   - F-C3S4-DEF-SRC-016
   target_ids:
@@ -28555,12 +28541,12 @@ actions:
   - uv run python scripts/validate_strict.py and uv run python scripts/audit_evidence_snippets.py
     pass with 0 errors.
 - action_id: ACT-C3S4-DEF-SRC-017
-  description: Populate snippet on record-level evidence[0] (and unquoted causal_graphs[0].edges[0]
-    where applicable) citing reference DOI:10.1093/femsre/fuv034 in data/traits/morphology/monotrichous.yaml
-    using the verified verbatim snippet 'Bacteria differ in number and location of
-    their flagella that appear in regular patterns at the cell surface (flagellation
-    pattern).' from sibling data/traits/morphology/polar_flagellation.yaml (METPO:1005032)
-    evidence[0], append a CURATE history event, and regenerate trait pages.
+  description: Populate snippet on record-level evidence[0] citing reference DOI:10.1093/femsre/fuv034
+    in data/traits/morphology/monotrichous.yaml using the verified verbatim snippet
+    'Bacteria differ in number and location of their flagella that appear in regular
+    patterns at the cell surface (flagellation pattern).' from sibling data/traits/morphology/polar_flagellation.yaml
+    (METPO:1005032) evidence[0], append a CURATE history event, and regenerate trait
+    pages.
   finding_ids:
   - F-C3S4-DEF-SRC-017
   target_ids:
