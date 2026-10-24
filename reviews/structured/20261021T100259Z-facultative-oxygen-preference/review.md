@@ -1,0 +1,1904 @@
+# Documentary identity, ontology and source-attribution review of facultative oxygen preference
+
+- Review: 20261021T100259Z-facultative-oxygen-preference
+- Repository: CultureBotAI/TraitMech
+- Started UTC: 2026-10-21T09:54:04Z
+- Finished UTC: 2026-10-21T10:02:59Z
+- Reviewer: codex (independent)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The generic definition, active METPO identity/hierarchy and current taxon identifiers are supported. Two major documentary findings concern imported relation meanings on edges1/6 and a B.subtilis example attached to an E.coli paper. Two minor findings concern a gene-labelled PATHWAY node and an unlinked local human acceptance. All nine nodes, eight edges, eight references and thirteen citation placements were inventoried. Two title quotations and one abstract quotation are exact; three remain unverified. ALL EIGHT BIOLOGICAL GRAPH MECHANISMS REMAIN UNASSESSED_SCOPE; this review neither certifies nor improves pathogen hypoxia or host-survival mechanisms.
+
+## Scope And Provenance
+
+Complete field inventory and documentary review of one TraitRecord, with generic phenotype definition and canonical source attribution assessed. Full documentary coverage does not mean full biological review: every detailed graph mechanism is explicitly UNASSESSED_SCOPE. No pathogen survival mechanism was validated, extended or corrected.
+
+Selection: One entire maintained TraitRecord, read before the60-input native capture. All fields, nine nodes, eight edges, two canonical examples, eight references, thirteen citation placements, six snippets and nine history events are inventoried and documentarily assessed. Generic class definition, identifiers, ontology roles, source attribution and literal quotations are in scope. ALL EIGHT BIOLOGICAL GRAPH MECHANISMS ARE UNASSESSED_SCOPE due to pathogen hypoxia/host-survival source context. No mechanism reconstruction, corrected pathway, regulator target, intervention or efficacy interpretation. Parent, ontology, writer and research inputs are context, not additional targets; excluded spore germination is untouched.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 8eee04a8c65609fbaff6df7c54597dcaf1b9d282.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| METPO:1000612 | data/traits/environment/facultative_oxygen_preference.yaml | maintained | facultative oxygen preference |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Full-corpus graph audit | passed | True | METPO:1000612 | 74 baselined findings, zero new/blocking findings; connectivity report covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific verification of this target. |
+| Full-corpus snippet audit | passed | True | METPO:1000612 | 2419 baselined findings, zero new/blocking findings. Focused source checks and manual evidence review are recorded separately. |
+| Full-corpus pathway links | passed | True | METPO:1000612 | 19 links checked against the pinned PathwayMech snapshot. Target asserts no pathway context link. |
+| Full-corpus history integrity | passed | True | METPO:1000612 | 1277 history records checked, zero invalid links at the current 8eee source base; integrity does not establish science or human acceptance. |
+| Initial full-product validation | failed | False | METPO:1000612 | Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips. Superseded by successful network retry. |
+| Product validation with isolated local cache | failed | False | METPO:1000612 | Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful network retry. |
+| Product validation after isolated-cache download | passed | True | METPO:1000612 | Passed: 361 canonical matches, two synonym matches, one exception, 123 SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered. |
+| Focused LinkML validation | passed | True | METPO:1000612 | Passed09:54:18–19Z. Valid YAML/schema structure does not certify ontology semantics, organism-source attribution or biological mechanisms. |
+| Focused strict validation | passed | True | METPO:1000612 | Passed09:54:18–19Z. Documentary relation/type concerns remain independent of this shape check. |
+| Focused abstract snippet verification | passed | True | METPO:1000612 | Passed09:54:23–28Z: one VERIFIED and five NOT_IN_ABSTRACT. Manual documentary inspection verifies two additional title quotations; three snippets remain unverified because their bodies were not inspected. No false-quotation finding is inferred from abstract absence. |
+| Reused native full-corpus QC | passed | True | METPO:1000612 | Actual B4 execution09:19:10–09:21:17Z passed. B5 byte equality supports reuse for unchanged scientific/common-check inputs; original warnings, baselines and scope are preserved. This is not a fresh B5 run or a mechanism certification. |
+| Live UniProt instance audit | not_applicable | False | METPO:1000612 | No current protein instance or UniProt accession; reviewed label-only aggregates do not require token accessions. |
+| Structured-source runner discovery | unavailable | False | METPO:1000612 | Bounded runner discovery reused with original times; official catalog fallback used. |
+| Canonical-organism catalog applicability | passed | False | METPO:1000612 | Both canonical species have catalog entries. This checks dataset availability only, not gene membership or phenotype. |
+| Mechanism-specific expression queries | skipped | False | METPO:1000612 | Deliberately outside documentary scope because the graph sources concern pathogen hypoxia/host survival. No gene/module query, organism substitution or negative inference. |
+
+## Scientific And Domain Assessments
+
+### Native checklist: identifier, label, polarity, synonym and term kind
+
+identity: supported. Targets: METPO:1000612.
+
+Active exact METPO1000612 denotes one oxygen-preference class. Imported RELATED_SYNONYM and definition match pinned authority; CLASS is appropriate. No fallback migration, replacement relation or source artifact is substituted for the intended trait.
+
+### Native checklist: generic growth definition and narrow attribution
+
+evidence: supported. Targets: METPO:1000612.
+
+The actual CMI indexed abstract explicitly defines the generic class by growth with or without oxygen. This supports the definition despite the article’s infection focus. The generic definition is assessed independently of infection fitness or detailed molecular mechanisms, which remain unassessed.
+
+### Native checklist: strictly broader parent and environmental category
+
+identity: supported. Targets: METPO:1000612.
+
+Active parent1000601 oxygen preference is explicitly above1000612 in the pinned ontology and is strictly broader. ENVIRONMENT and CLASS describe the represented phenotype. No unsupported organism or pathway substitution is inferred.
+
+### Native checklist: two canonical identifiers and nearest source attribution
+
+evidence: concern. Targets: METPO:1000612.
+
+Both taxon identifiers are correct. The first source supports generic E.coli oxygen-regime context, with nitrate specificity not established in its text. The second is an E.coli paper and contains no B.subtilis attribution anywhere in the retrieved whole XML, so its attachment to that canonical example is materially wrong. Neither observation negates the generic phenotype or reconstructs a biological route.
+
+### Native checklist: node kinds and optional graph/model fields
+
+representation: concern. Targets: METPO:1000612.
+
+Node6 explicitly labels and describes genes while using PATHWAY, producing a bounded identity/type inconsistency. Other broad class/process labels and reviewed-label-only proteins do not automatically require splitting, a token instance or additional optional metadata. No corrective pathway is designed.
+
+### Native checklist: all nine node identifiers and meanings
+
+grounding: supported. Targets: METPO:1000612.
+
+The current METPO, GO Biological Process and ChEBI identifiers resolve with matching names/aspects. Taxon identities are exact. The material oxygen label is not automatically wrong merely because its description mentions availability. Protein aggregates are permitted without instance accessions; biological properties remain unassessed.
+
+causal_graphs[0].nodes[0]: Active exact METPO1000612 label, definition, related synonym and explicit parent1000601. It is a trait class, not an organism or metabolic mechanism. Biological mechanism: UNASSESSED_SCOPE.
+causal_graphs[0].nodes[1]: CHEBI15379 is dioxygen with molecular oxygen synonym and O2 formula. The description uses availability language; keep the chemical identity distinct from an availability condition. The edge1 actor/reactant question is assessed separately without automatically retyping this material node. Biological mechanism: UNASSESSED_SCOPE.
+causal_graphs[0].nodes[2]: GO0009060 active aerobic respiration, biological_process. Exact identifier/aspect and label confirmed; no organism-specific implementation is evaluated. Biological mechanism: UNASSESSED_SCOPE.
+causal_graphs[0].nodes[3]: The disjunctive node explicitly represents alternative processes in a broad NONMECHANISTIC class. Broadness alone is not a universal mechanistic claim. Biological applicability and sufficiency are UNASSESSED_SCOPE. Biological mechanism: UNASSESSED_SCOPE.
+causal_graphs[0].nodes[4]: Label contains regulation, but description explicitly denotes regulatory protein systems and REVIEWED_LABEL_ONLY rationale is present. No automatic process-versus-protein finding or mandatory token accession. Biological mechanism: UNASSESSED_SCOPE.
+causal_graphs[0].nodes[5]: Label explicitly names pathways and description names respiratory modules. The broad aggregate is not forced into a different category solely because no one canonical route is listed. Biological regulation is UNASSESSED_SCOPE. Biological mechanism: UNASSESSED_SCOPE.
+causal_graphs[0].nodes[6]: Node label anaerobic metabolism genes and description genes encoding functions denote genes, while node_type is PATHWAY. Native PATHWAY means a pathway or pathway-like mechanism, and maintained distinction identifies named multistep routes. The material/gene label is not that represented process/route. Flag the internal identity/type inconsistency without specifying genes, a replacement pathway, or a corrected mechanism. Biological mechanism: UNASSESSED_SCOPE.
+causal_graphs[0].nodes[7]: CHEBI17632 resolves to nitrate, formula NO3 and charge-1. Exact chemical identity verified. Its use under process-only positive regulation is a separate external relation issue; no biological mechanism is assessed. Biological mechanism: UNASSESSED_SCOPE.
+causal_graphs[0].nodes[8]: Description and label denote a protein complex actor, and REVIEWED_LABEL_ONLY rationale is explicit. No instance accession is asserted or required. All functional/host-context assertions remain UNASSESSED_SCOPE. Biological mechanism: UNASSESSED_SCOPE.
+
+### Native checklist: all eight documentary edge roles
+
+consistency: concern. Targets: METPO:1000612.
+
+Edge1 uses ROenables for an availability/input role rather than an actor executing a process; broad material-domain compatibility is retained. Edge6 assigns process regulation to a material chemical subject. Current edge7 is formally compatible after a prior correction. Unassigned predicates impose no invented external constraint. These assessments do not validate or improve any biological mechanism.
+
+causal_graphs[0].edges[0]: No predicate_id asserted. Native free-text trait -&gt; chemical relation has no imported formal domain/range constraint to violate. Its biological interpretation remains unassessed. Biological mechanism: UNASSESSED_SCOPE.
+causal_graphs[0].edges[1]: RO2327 inherited material/process types alone admit CHEMICAL -&gt; BIOLOGICAL_PROCESS. Its stronger textual actor/executor meaning is not the current availability/input role. This is a semantic role mismatch, not a claim that all chemical enablers are forbidden or that a reasoner found inconsistency. Biological mechanism: UNASSESSED_SCOPE.
+causal_graphs[0].edges[2]: No predicate_id; trait -&gt; alternative process is a class/context assertion. No compulsory grounding or detailed biological pathway judgment. Biological mechanism: UNASSESSED_SCOPE.
+causal_graphs[0].edges[3]: No predicate_id; protein aggregate -&gt; chemical wording carries no asserted external type constraint. Regulatory mechanism/efficacy entirely unassessed. Biological mechanism: UNASSESSED_SCOPE.
+causal_graphs[0].edges[4]: No predicate_id; protein -&gt; pathway has no claimed external domain/range error. Existing regulatory route is not checked or corrected. Biological mechanism: UNASSESSED_SCOPE.
+causal_graphs[0].edges[5]: No predicate_id; edge object is the node whose material gene label conflicts with PATHWAY type. This is covered by node6 representation precision, not a separate biological induction finding. Biological mechanism: UNASSESSED_SCOPE.
+causal_graphs[0].edges[6]: RO2213 inherits explicit BFO process subject/object roles via RO2211. Nitrate is CHEMICAL material, so the subject does not express a regulatory process. The object description explicitly limits this statement to one branch of the alternative-process node; do not invent a claim that nitrate enables fermentation. Biological mechanism: UNASSESSED_SCOPE.
+causal_graphs[0].edges[7]: Current protein actor -&gt; GO biological process shape fits RO2327 actor/executor roles. Prior migration fixed the old protein object; do not re-report the historical state as current. This is only formal compatibility; the actual biochemical, hypoxia or host-survival claim is UNASSESSED_SCOPE. Biological mechanism: UNASSESSED_SCOPE.
+
+### Native checklist: eight source identities and thirteen placements
+
+evidence: concern. Targets: METPO:1000612.
+
+All eight bibliographic identities resolve. Their source contexts are preserved without converting titles, abstracts or organism names into proof of detailed causal edges. The B.subtilis nearest-source attribution is wrong; the E.coli note’s nitrate specificity remains outside established source support. Complete field inventory is not complete mechanistic literature review.
+
+### Native checklist: six literal snippet occurrences
+
+evidence: unknown. Targets: METPO:1000612.
+
+Two repeated quotations are exact in the CMI article title and one respiratory-review quote is exact in its abstract. Three snippets remain unverified after body-access failures or unavailable bodies. Title quotes are valid quotations, and abstract misses do not establish nonliteral text in an unseen body.
+
+### Native checklist: all eight detailed biological mechanisms
+
+scope: unknown. Targets: METPO:1000612.
+
+UNASSESSED_SCOPE for every edge. Sources concern pathogen hypoxia, host survival, respiratory regulation and intervention contexts. This review deliberately does not assess causal sufficiency, detailed correctness, missing steps, transferable fitness implications, experimental conditions or efficacy, and supplies no corrected route, regulator target or intervention.
+
+causal_graphs[0].edges[0]: UNASSESSED_SCOPE; Bibliographic identity, source study context and any literal snippet inspected; no mechanistic correctness, missing-step reconstruction or optimization.
+causal_graphs[0].edges[1]: UNASSESSED_SCOPE; Bibliographic identity, source study context and any literal snippet inspected; no mechanistic correctness, missing-step reconstruction or optimization.
+causal_graphs[0].edges[2]: UNASSESSED_SCOPE; Bibliographic identity, source study context and any literal snippet inspected; no mechanistic correctness, missing-step reconstruction or optimization.
+causal_graphs[0].edges[3]: UNASSESSED_SCOPE; Bibliographic identity, source study context and any literal snippet inspected; no mechanistic correctness, missing-step reconstruction or optimization.
+causal_graphs[0].edges[4]: UNASSESSED_SCOPE; Bibliographic identity, source study context and any literal snippet inspected; no mechanistic correctness, missing-step reconstruction or optimization.
+causal_graphs[0].edges[5]: UNASSESSED_SCOPE; Bibliographic identity, source study context and any literal snippet inspected; no mechanistic correctness, missing-step reconstruction or optimization.
+causal_graphs[0].edges[6]: UNASSESSED_SCOPE; Bibliographic identity, source study context and any literal snippet inspected; no mechanistic correctness, missing-step reconstruction or optimization.
+causal_graphs[0].edges[7]: UNASSESSED_SCOPE; Bibliographic identity, source study context and any literal snippet inspected; no mechanistic correctness, missing-step reconstruction or optimization.
+
+### Native checklist: whole-record documentary coverage
+
+completeness: supported. Targets: METPO:1000612.
+
+All fields, nine nodes, eight edges, two examples, eight references, thirteen placements, six quotations and nine history events have documentary coverage. Optional protein instances, discussions, datasets and pathway links are not required merely to fill slots. Mechanistic completeness is expressly unassessed, not silently passed.
+
+### Native checklist: catalog applicability and bounded downstream omission
+
+evidence: supported. Targets: METPO:1000612.
+
+Both canonical organisms have catalog entries. Availability was assessed; downstream gene/module queries were skipped for scope, not treated as no match or unavailable data. Catalog membership supplies no phenotype or mechanism proof.
+
+### Native checklist: maintained mapping and historical correction owners
+
+ownership: concern. Targets: METPO:1000612.
+
+Wildcard enables/promotes mappings can restore the flagged relation assignments if IDs alone are removed. The populated-ID skip separates present validation from actual semantic repair. The historical range migration explains current edge7 and is not a basis for repeating a fixed error or proposing a new biological route.
+
+### Native checklist: history and human scientific acceptance linkage
+
+provenance: concern. Targets: METPO:1000612.
+
+Nine events disclose eight AI-assisted changes and one automated seed. Ignored-inclusive local searches and exact target-list inspection do not link a human scientific acceptance. This is a bounded provenance gap; outside acceptance remains unknown. Automated correction, native validation and this documentary review are not human sign-off.
+
+### Native checklist: actual focused execution and historical check reuse
+
+schema: supported. Targets: METPO:1000612.
+
+Focused LinkML/strict/snippet commands passed with the snippet limitations retained. Common historical diagnostics and B4 QC are reused only with documented unchanged inputs, original failures/skips and original times. None certify external ontology meanings or the unassessed mechanisms.
+
+## Findings
+
+### chemical-relation-roles: Imported relation meanings disagree with the represented chemical roles
+
+major / open / confirmed; issue key: facultative-oxygen-preference-chemical-relation-roles.
+
+Edge1 assigns RO:0002327 enables to molecular oxygen as an available input. Its broad inherited material-subject/process-object typing is compatible, but its definition requires a subject capable of and acting to execute the process; the current availability statement does not assert that actor role. This is a semantic role mismatch, not a blanket exclusion of chemicals. Separately, edge6 assigns RO:0002213 positively regulates to material nitrate, whereas its RO:0002211 ancestor explicitly requires a process subject and object. These are documentary relation mismatches, not a verdict on biological truth or a reasoner result. Wildcard mappings can restore both assignments after ID-only removal.
+
+### canonical-bsubtilis-source-attribution: The Bacillus subtilis example cites an Escherichia coli paper
+
+major / open / confirmed; issue key: facultative-oxygen-preference-canonical-bsubtilis-source-attribution.
+
+canonical_examples[1] names NCBITaxon1423 Bacillus subtilis but cites DOI10.3390/ijms25021277. Official metadata and the actual complete article identify an E.coli study; neither Bacillus nor subtilis appears in extracted whole-article text, including body, references and metadata. The attached source therefore does not substantiate the named organism example. This is a documentary organism/source attribution mismatch, not a claim the B.subtilis taxon or generic phenotype is false. Detailed source mechanisms and any replacement mechanism remain unassessed.
+
+### genes-typed-pathway: A node describing genes is typed as a pathway
+
+minor / open / confirmed; issue key: facultative-oxygen-preference-genes-typed-pathway.
+
+Node6 has label anaerobic metabolism genes and describes genes encoding functions, but node_type is PATHWAY. These words denote genetic material rather than a pathway or pathway-like mechanism under the native model. This is a bounded internal representation mismatch; the edge’s biological regulation, gene targets and suitable replacement pathway are deliberately unassessed. No correction is chosen merely to make a validator pass.
+
+### human-acceptance-link: Human scientific acceptance is not linked locally
+
+minor / open / confirmed; issue key: facultative-oxygen-preference-human-acceptance-link.
+
+The record is REVIEWED and its nine events disclose eight AI-assisted changes plus one automated seed. Bounded ignored-inclusive repository searches and matching structured target-list inspection found no target-specific human scientific acceptance link. The historical range correction does not supply such acceptance. The native status gate requires it; this is a local documentary gap, not proof no human reviewed the record privately or remotely.
+
+## Recommended Actions And Acceptance Checks
+
+### reconcile-relation-documentation
+
+In separately authorized documentary curation, reconcile the asserted relations with the existing endpoint meanings and their maintained mapping owners.
+
+- Distinguish ROenables actor/executor meaning from mere material-domain compatibility, and ROpositive-regulation process domain from a material input.
+- Review wildcard recurrence rather than clearing identifiers alone; do not invent replacement identifiers or retype existing material solely to preserve a predicate.
+- Do not reconstruct a pathogen pathway, recommend a regulator target, intervention, culture condition or efficacy improvement. Biological mechanisms remain unassessed.
+- After separately authorized edits, use guarded writes, append-only record/repository history, focused LinkML/strict/source checks, maintained graph/mapping/term checks, applicable product/history validation and just qc; regenerate affected outputs through maintained recipes.
+
+### reconcile-example-attribution
+
+Reconcile the B.subtilis example’s organism and attached documentary support through the established curation process.
+
+- The retained citation actually names and supports the retained organism example at the stated generic phenotype scope; a title-only guess or provider report is insufficient.
+- Keep taxon identity separate from source attribution. Do not infer phenotype absence or reuse the E.coli article as B.subtilis evidence.
+- No detailed mechanism, new experimental target or intervention is needed for this documentary reconciliation; preserve the existing scientific scope limits and validate citation/record provenance after authorized changes.
+
+### clarify-node-identity
+
+Resolve node6’s label/description/type disagreement at the documentary representation level.
+
+- The retained label, description and native category denote the same kind of entity.
+- Do not supply a replacement pathway, gene target or biological design as part of this review. Any later scientific mechanism work remains separately scoped.
+- Preserve AI disclosure and guarded history; use the native strict/model checks after authorized edits.
+
+### link-human-acceptance
+
+Locate and link existing human scientific acceptance or obtain it through the established process, preserving history and reassessing status if needed.
+
+- Acceptance identifies the reviewed revision and actual scientific scope, including mechanisms not assessed by this documentary review.
+- AI history, structural validation and this review do not substitute for human scientific acceptance; retain append-only provenance.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| check-audit-graphs | /private/tmp/traitmech-record-sweep.FU79Gr/audit-graphs.log; Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:29Z; metadata audit-graphs.json | context_only | 74 baselined findings, zero new/blocking findings; connectivity report covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific verification of this target. |
+| check-audit-snippets | /private/tmp/traitmech-record-sweep.FU79Gr/audit-snippets.log; Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:33Z; metadata audit-snippets.json | context_only | 2419 baselined findings, zero new/blocking findings. Focused source checks and manual evidence review are recorded separately. |
+| check-check-pathway-links | /private/tmp/traitmech-record-sweep.FU79Gr/check-pathway-links.log; Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:28Z; metadata check-pathway-links.json | context_only | 19 links checked against the pinned PathwayMech snapshot. Target asserts no pathway context link. |
+| check-validate-history | /private/tmp/traitmech-record-sweep-005.klfwsp1f/validate-history.log; Executed 2026-10-21T07:03:25Z through 2026-10-21T07:03:30Z; metadata validate-history.json | context_only | 1277 history records checked, zero invalid links at the current 8eee source base; integrity does not establish science or human acceptance. |
+| check-validate-products | /private/tmp/traitmech-record-sweep.FU79Gr/validate-products.log; Executed 2026-10-19T07:33:16Z through 2026-10-19T07:34:01Z; metadata validate-products.json | context_only | Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips. Superseded by successful network retry. |
+| check-validate-products-retry-local | /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-local.log; Executed 2026-10-19T07:34:53Z through 2026-10-19T07:35:24Z; metadata validate-products-retry-local.json | context_only | Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful network retry. |
+| check-validate-products-retry-network | /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-network.log; Executed 2026-10-19T07:35:34Z through 2026-10-19T07:36:03Z; metadata validate-products-retry-network.json | context_only | Passed: 361 canonical matches, two synonym matches, one exception, 123 SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered. |
+| check-facultative-oxygen-validate | /private/tmp/traitmech-record-sweep-005.klfwsp1f/facultative-oxygen-validate.log; Executed 2026-10-21T09:54:18Z through 2026-10-21T09:54:19Z; metadata facultative-oxygen-validate.json | context_only | Passed09:54:18–19Z. Valid YAML/schema structure does not certify ontology semantics, organism-source attribution or biological mechanisms. |
+| check-facultative-oxygen-strict | /private/tmp/traitmech-record-sweep-005.klfwsp1f/facultative-oxygen-strict.log; Executed 2026-10-21T09:54:18Z through 2026-10-21T09:54:19Z; metadata facultative-oxygen-strict.json | context_only | Passed09:54:18–19Z. Documentary relation/type concerns remain independent of this shape check. |
+| check-facultative-oxygen-snippets | /private/tmp/traitmech-record-sweep-005.klfwsp1f/facultative-oxygen-snippets.log; Executed 2026-10-21T09:54:23Z through 2026-10-21T09:54:28Z; metadata facultative-oxygen-snippets.json | context_only | Passed09:54:23–28Z: one VERIFIED and five NOT_IN_ABSTRACT. Manual documentary inspection verifies two additional title quotations; three snippets remain unverified because their bodies were not inspected. No false-quotation finding is inferred from abstract absence. |
+| check-batch004-qc | /private/tmp/traitmech-record-sweep-004.f7_g5r4w/batch004-qc.log; Executed 2026-10-21T09:19:10Z through 2026-10-21T09:21:17Z; metadata batch004-qc.json | context_only | Actual B4 execution09:19:10–09:21:17Z passed. B5 byte equality supports reuse for unchanged scientific/common-check inputs; original warnings, baselines and scope are preserved. This is not a fresh B5 run or a mechanism certification. |
+| reuse | B5 common-input byte comparison; 1130 trait files,1278 history files and19 common inputs byte-equal to B4;shared base8eee04a8 | supports | Original f25 corpus diagnostics, B3 history execution and B4 QC are reused with original timestamps, failed product attempts and no-adapter skips. File count differs from the1277 history-record validation count. Unchanged bytes do not certify newer ontology releases. |
+| reuse-independent | Independent B5 reuse verification; Ignored-inclusive corpus/common-input comparison and original diagnostic receipt chain | supports | The independent comparison confirms unchanged inputs and correct historical scope. Seven workflow/history additions distinguish the original f25 diagnostic base from8eee; no fresh scientific checks are claimed. |
+| capture | Native selected-record inspection; 60 inputs captured09:54:04–06Z after entire target read | supports | Capture includes target, parent, schema, pinned authorities, local rules, mappings, writer scripts and the historical enables-range migration. Provider text is provenance context, not primary scientific proof. |
+| capture-hashes | Independent current input-byte verification; All60 capture hashes match at09:59:28.656582Z | supports | No captured scientific or owner input changed during assessment. This verifies bytes, not correctness or completeness of the biological mechanism. |
+| record | data/traits/environment/facultative_oxygen_preference.yaml; Entire identity, definition, imported synonym, hierarchy, graph, examples and history | partial | Environmental CLASS with NONMECHANISTIC graph; nine nodes, eight edges, two label-only protein aggregates, zero protein instances. Nine events disclose eight AI-assisted events and one automated seed. Documentary consistency is reviewed; biological graph claims are all unassessed. |
+| identity | Pinned METPO complete active/deprecated label and synonym scan; METPO1000612 and direct parent1000601;1631 label elements inspected | supports | Exact active label, definition, related imported synonym and direct oxygen-preference parent match the current record. This is a positive class identity rather than a pathway or organism. No fallback or unminted predicate is asserted in this target; deprecated lexical matches are not invented replacement links. |
+| native-policy | Native schema, grounding policy and pathway/process convention; CausalNodeTypeEnum660–697;optional predicate_id502–528;GROUNDING_POLICY§2;pathway migration17–43 | supports | PATHWAY denotes a pathway or pathway-like mechanism; the maintained convention distinguishes named routes from generic processes. Literal genes are not that route. Protein systems remain permissible label-only aggregates when their descriptions name proteins. Free-text predicates are allowed, and broad NONMECHANISTIC scope does not require a token accession. |
+| live-identities | Official QuickGO, ChEBI and NCBI Taxonomy responses; GO0009060;CHEBI15379/17632;NCBITaxon562/1423;09:57:47.095361–09:57:47.909024Z | supports | Aerobic respiration is active GO Biological Process. Dioxygen includes molecular oxygen as a synonym; nitrate identity is exact. NCBI562 is Escherichia coli species and1423 is Bacillus subtilis species. These are identifier/type checks only; taxonomic correctness does not establish the nearest article supports the organism example. |
+| live-receipts | Official current identity acquisition receipts; Four successful responses with actual URL, UTC bounds, local path and SHA256 | supports | Taxonomy response finished09:57:47.593833Z;GO47.804752Z;nitrate47.884520Z;dioxygen47.909024Z. No biological mechanism or growth experiment is inferred from these records. |
+| ro | RO enables and positively-regulates recursive authority; Original cached-authority read09:52:45.989262Z;hash-verified reuse09:59:28.636428Z | supports | RO2327 admits a material subject and process object but also requires the subject to be capable of and act to execute the process. Chemical-input availability is a different role; this is not a blanket chemical-domain exclusion. RO2213 inherits process domain/range through RO2211, so material nitrate fails that represented subject role. DB SHA849e616c29fecd0d4a6c6dee0dc0f6f117ace7167dbfa1e0f043dc84868f83cb is unchanged. No reasoner execution is claimed. |
+| grounding-ledger | Independent complete documentary grounding assessment; Nine nodes/eight edges;all60 captured inputs match;all biological mechanisms UNASSESSED_SCOPE | partial | Identifier, type and relation meaning are assessed without evaluating pathway truth or proposing biological repairs. Current edge7 protein-to-process shape is formally compatible; its detailed function remains unassessed. A historical protein-object defect is not re-reported as current. |
+| node-edges | Complete documentary node/edge ledger; nodes[0–8] and edges[0–7],zero-based | partial | Explicit role/type assessments cover every node and edge. Material-domain compatibility on edge1 is preserved while its actor-versus-input meaning is distinguished. Edge6 has a process-subject mismatch. Node6 literal gene label/description disagrees with PATHWAY. No new molecular entity, pathway, condition or intervention is supplied. |
+| owners | Maintained relation mappings and writer ownership; predicate_grounding.tsv9 enables and63 promotes;ground_causal_predicates.py138–179 | supports | Both mappings have wildcard endpoint gates and may restore their assignments after an ID-only removal. The writer skips populated IDs. This recurrence issue concerns representation; no corrected biological mechanism is proposed. Current node mappings for nitrate and aerobic respiration match official identities. |
+| prior-correction | scripts/migrate_enables_range_edges.py; Target-specific decision61–79 and current history eventREGROUND_CAUSAL_EDGE | context_only | The maintained migration reversed the former chemical-to-protein assignment into the current protein-to-process edge7. This explains current representation and does not establish biological correctness or human acceptance. Its retained statement about a separate oxygen-availability edge does not settle RO executor semantics. |
+| provenance | Ignored-inclusive local human-acceptance linkage inspection; 169 matching files;9 events with8AI and1automated seed;no targeted local acceptance found | partial | The inspected target history and matching review target lists contain no explicit human scientific acceptance for this revision. The prior automated correction is not sign-off. Private/remote acceptance remains unknown; this is a bounded documentation gap. |
+| provenance-root | Root independent documentary provenance inspection; 169 matches from09:56:08.700975–09:56:08.966536Z;assessed09:57:08.875984Z | supports | The independent bounded search likewise found no matching repository history or targeted review acceptance and confirmed eight AI events plus one seed. Its initial catalog-pending status is superseded by the separately completed applicability assessment; provenance findings retain their actual time. |
+| expression | https://imodulondb.org/api/datasets; Original catalog07:36:12.732638–07:36:12.858149Z;20organisms/28datasets;reused09:56:08Z | context_only | Both canonical species have catalog entries: b_subtilis with two datasets and e_coli with five. Only catalog availability was inspected. Downstream gene/module queries were deliberately skipped for the documentary scope; they are not reported as absent, unavailable or negative biological evidence. |
+| runner | Retained structured-source runner discovery; Original PATH/B5 ignored-inclusive discovery09:27:57.380287–09:27:57.542053Z;earlier external roots08:17:15;reused09:56:08Z | context_only | The retained bounded discovery did not find an installed/local project runner. Official catalog fallback and actual canonical matches were inspected. No fresh runner search, genome/module search or mechanism interpretation was performed for this target. |
+| bibliography | Complete documentary source ledger; 8 references,13 citation placements,6 snippets,2 canonical examples;09:59:27.124067Z | partial | All citation identities resolve. Generic definition and example attribution are assessed, along with literal quotations. Two full local article XMLs support bounded organism-attribution searches; all eight detailed graph mechanisms remain UNASSESSED_SCOPE. Three quotations are exact and three unverified. |
+| source-receipts | Europe PMC bibliographic acquisition receipts; Eight DOI queries09:54:44.090389–09:54:46.155418Z | supports | Actual titles, DOI/PMID/PMCID identities, indexed abstracts, URL/status and response hashes are preserved. Citation resolution is not a biological mechanism finding or a guarantee the source supports its attached example. |
+| publication-source0 | https://doi.org/10.1016/j.celrep.2023.112444; PMID37115669;indexed identity/title/abstract;placements:causal_graphs[0].edges[1].evidence[0] | partial | Primary M.tuberculosis hypoxia/survival paper. DOI/PMID/title and indexed abstract resolve; biological interpretation deliberately unassessed_scope. Existing literal phrase is absent from inspected abstract and body was not obtained; quotation unverified, not demonstrated nonliteral. |
+| publication-source1 | https://doi.org/10.1089/ars.2011.4051; PMID22098259;indexed identity/title/abstract;placements:evidence[1];causal_graphs[0].edges[2–3].evidence[0] | partial | Bacterial respiratory/redox review. Identity and complete indexed abstract inspected for documentary context and exact literal quotation only. One of three snippets is exact in abstract; other two remain unverified after failed EPMC body and browser challenge. No regulator/network reconstruction or biological graph certification. |
+| publication-source2 | https://doi.org/10.1111/1751-7915.70051; PMID39548707;indexed identity/title/abstract;placements:canonical_examples[0] | partial | Industrial E.coli physiology/transcriptomics paper. Actual abstract and opening background explicitly support generic oxygen-limited metabolism and the species example. The canonical note adds a specific alternative-respiration claim not established in inspected source text; complete XML contains no nitrate mention. Preserve core example and source scope; no new pathway or culture procedure proposed. Mechanistic details and model extrapolation unassessed_scope. |
+| publication-source3 | https://doi.org/10.1111/cmi.13338; PMID33813807;indexed identity/title/abstract;placements:definition_source;evidence[0];causal_graphs[0].edges[0].evidence[0] | supports | Infection-focused review. Actual indexed abstract explicitly defines facultative anaerobes by growth in presence or absence of oxygen, supporting the generic definition. Both repeated short snippets are exact in article title, not abstract. Infection mechanisms and fitness claims deliberately unassessed_scope; generic definition is not a virulence assessment. |
+| publication-source4 | https://doi.org/10.1128/aem.01491-23; PMID37966212;indexed identity/title/abstract;placements:causal_graphs[0].edges[4–5].evidence[0] | partial | Review on anaerobiosis and phage-bacteria interactions. DOI/PMID/title and abstract identify source context. Detailed regulatory truth, causal necessity and host/organism transfer remain unassessed_scope; no molecular corrective target or intervention supplied. No snippet field in these placements. |
+| publication-source5 | https://doi.org/10.1128/jb.00389-22; PMID36475831;indexed identity/title/abstract;placements:causal_graphs[0].edges[7].evidence[0] | partial | Bacteroides fragilis respiratory physiology paper. Citation identity and taxon/context are established from indexed metadata/abstract. Existing molecular edge correctness and pathway improvement are unassessed_scope; no source-to-mechanism proof is inferred from title or assay category. |
+| publication-source6 | https://doi.org/10.1128/msphere.00774-23; PMID38426801;indexed identity/title/abstract;placements:causal_graphs[0].edges[6].evidence[0] | partial | S.aureus hypoxia-associated virulence/intervention paper. Only DOI/PMID/title and abstract documentary scope inspected. Mechanistic correctness, physiological optimization and interventions unassessed_scope; no supporting or corrective biological route is reconstructed. |
+| publication-source7 | https://doi.org/10.3390/ijms25021277; PMID38279276;indexed identity/title/abstract;placements:canonical_examples[1] | refutes | The cited paper is an E.coli physiology study, not a Bacillus subtilis example. Actual indexed abstract, body opening and complete local XML identity search were inspected. Neither Bacillus nor subtilis occurs anywhere in extracted whole-article text (body, references and metadata included); main body has30 paragraphs. This establishes a nearest-citation organism-attribution mismatch for the B.subtilis canonical note, not evidence the species lacks the phenotype. Detailed resistance/respiration mechanisms in this source remain unassessed_scope. |
+| browser-surfaces | Actual PubMed and PMC documentary browser surfaces; Receipt09:55:31.811897Z;PubMed33813807 lines250–251 definition,title182;PMC11568247 opening83–95 | partial | The PubMed abstract explicitly supports the generic with-or-without-oxygen class definition; repeated short phrase occurs in title. The E.coli article opening supports generic example context. Other browser requests returned challenge pages. Browser HTML bytes were not saved; the snapshot hash identifies the receipt rather than an unavailable body. |
+| documentary-bodies | Two complete article XMLs and one failed review-body request; Requests09:57:59.814875–09:58:01.718124Z;HTTP200 canonical bodies andHTTP500 respiration review | partial | The E.coli canonical and B.subtilis-attached citation bodies were acquired for organism attribution only. The review body returned an error response, and subsequent browser challenge supplied no body. Failed bytes are not article text and do not prove quotation absence. |
+| bsub-citation | https://doi.org/10.3390/ijms25021277; PMID38279276;PMC10815991;complete XML;30main-body paragraphs;organism search includes metadata/references | refutes | The source is an E.coli study. Neither Bacillus nor subtilis occurs in the extracted whole article, and the inspected identity/abstract/opening identify E.coli. Thus it does not substantiate the attached B.subtilis example. This is a nearest-citation organism mismatch, not a claim that B.subtilis lacks the phenotype. Resistance/respiration mechanisms are not assessed. |
+| ecoli-canonical | https://doi.org/10.1111/1751-7915.70051; PMID39548707;PMC11568247;abstract/opening;complete XML terminology search;33main-body paragraphs | partial | The industrial E.coli study supplies positive core species/oxygen-regime context. The canonical note’s specific nitrate detail is not established by the inspected text, and nitrate is absent from the complete extracted article. Preserve that bounded source limit without inventing a corrected mechanism or declaring the core example invalid. |
+| documentary-text | Complete available-XML identity searches and six literal-snippet comparisons; Assessed09:58:28.276952Z;two titles exact,one abstract exact,three unresolved | partial | Whole retrieved XML for the B.subtilis-attached article has zero Bacillus/subtilis matches; core source identity is independently E.coli. E.coli canonical XML has no nitrate mention. Two CMI quotation occurrences are exact title text, the respiratory-review edge2 quote is exact abstract text, and remaining three snippets stay unverified. No inaccessible-body absence is claimed. |
+
+## Limits And Additional Notes
+
+- Scientific review here means inspected generic phenotype definition, source identity/organism attribution, ontology semantics and literal quotations. All eight detailed biological mechanisms, causal sufficiency, missing steps and fitness/efficacy implications are UNASSESSED_SCOPE. Full documentary field coverage is not full biological certification.
+- Two complete article XMLs were used only for bounded organism attribution and terminology checks. No full methods, supplements, regulator network, pathway reconstruction, procedure or intervention review was performed.
+- The cited B.subtilis article is demonstrably E.coli-focused and has no Bacillus/subtilis mention in retrieved whole XML. This establishes a nearest-source mismatch without establishing that the species lacks the trait or supplying a replacement mechanism.
+- The E.coli canonical source provides positive core example context, but nitrate specificity in its note is not established by the inspected article, whose extracted text has no nitrate mention. That bounded support limit is retained without adding a corrected route or declaring the core example invalid.
+- Three snippets are exact at explicitly identified title/abstract surfaces. Three remain unverified. HTTP500 and browser challenges are not article bodies and do not demonstrate that wording is absent from inaccessible text.
+- The source on generic facultative growth has infection context, but only its explicit generic definition and literal title wording support this review. Pathogen-specific survival, virulence and intervention conclusions were neither adopted nor evaluated.
+- ROenables admits material subjects; edge1 is an actor/executor versus input-role mismatch, not a chemical-domain exclusion. Edge6 separately conflicts with an inherited process domain. No formal reasoner or native YAML validation failure is claimed.
+- Pinned METPO identity and cached RO bytes retain hashes and original read/reuse times. Fresh GO/ChEBI/NCBI identity responses retain actual09:57:47 acquisition times. No unseen newer ontology release is certified.
+- Common diagnostics, B3 history validation and B4 QC retain original times, failed attempts, skips, warnings and unchanged-input limits. They were not freshly rerun as B5 scientific mechanism checks.
+- Both canonical organisms have expression-catalog entries. Downstream gene/module queries were deliberately skipped for scope, not misreported as data absence or tool unavailability; catalog membership is not phenotype proof.
+- Human acceptance outside the declared ignored-inclusive local searches remains unknown. This documentary review does not constitute human scientific sign-off.
+- No record, mapping, history or generated product was edited. No paid provider call, corrected biological route, molecular target, protocol, intervention or organism optimization was performed.
+- Four findings: two major and two minor. Node and edge indices are zero-based.
+- Native60-input capture09:54:04–06Z followed full target read; final grounding comparison confirmed every captured hash unchanged09:59:28.656582Z.
+- Documentary source ledger completed09:59:27.124067Z, SHA256f15046b746b75170cda9bb62d496072a846561b7e2cf5b323f0f5861d7dba191. Grounding ledger completed09:59:28.657029Z. Source acquisition times remain distinct from final serialization.
+- Source count is8 original references and13 placements. Two canonical examples, two reviewed-label-only proteins, zero protein instances. History has9 events:8AI-assisted plus1automated seed.
+- Detailed graph biology remains UNASSESSED_SCOPE on every edge even where identifiers and actor/process categories are formally compatible. The historical edge7 range correction is contextual provenance, not a current defect or mechanism endorsement.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T100259Z-facultative-oxygen-preference
+kind: record
+repository: CultureBotAI/TraitMech
+title: Documentary identity, ontology and source-attribution review of facultative
+  oxygen preference
+started_at: '2026-10-21T09:54:04Z'
+finished_at: '2026-10-21T10:02:59Z'
+reviewer:
+  identity: codex
+  kind: agent
+  independence: independent
+  independence_basis: Current review session did not author or change the captured
+    trait. Supporting agents inspected sources and prepared draft observations; root
+    reviewer integrates and validates the final review. Historical Codex/Claude curation
+    events are disclosed and are not human sign-off.
+  model: GPT-6 (Codex)
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: The generic definition, active METPO identity/hierarchy and current taxon
+  identifiers are supported. Two major documentary findings concern imported relation
+  meanings on edges1/6 and a B.subtilis example attached to an E.coli paper. Two minor
+  findings concern a gene-labelled PATHWAY node and an unlinked local human acceptance.
+  All nine nodes, eight edges, eight references and thirteen citation placements were
+  inventoried. Two title quotations and one abstract quotation are exact; three remain
+  unverified. ALL EIGHT BIOLOGICAL GRAPH MECHANISMS REMAIN UNASSESSED_SCOPE; this
+  review neither certifies nor improves pathogen hypoxia or host-survival mechanisms.
+source:
+  git_revision: 8eee04a8c65609fbaff6df7c54597dcaf1b9d282
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: da8896328a0fd6cc92f1adf0d8be8980d0ddd41f3172c7936f2c7f119b293ac1
+    role: context
+  - path: .claude/skills/manage-identifiers/SKILL.md
+    sha256: a5c5aaa10943ee6d15423a5878ed2189e4e0b28a5c6e09fda80ba299ab779ebb
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: bb03efa3bbd3748ee1dccf57612a6ce8fcc861f20eb57c33eb16e3ac1dd728bd
+    role: context
+  - path: CLAUDE.md
+    sha256: 4d328127022388e1affe9b71be24bc93944a971636d0d0ea902f6511e0b405c5
+    role: context
+  - path: DO_NOT_WORK.md
+    sha256: 9ae0b05cc06f4ce8938801287a568d535e471d06dda5e258fcdbbed222abf712
+    role: context
+  - path: conf/evidence_snippet_baseline.tsv
+    sha256: cbe5c82379e796446366b292f15194d80625b928119b482a67d857a379ab31a7
+    role: context
+  - path: data/raw/biolink-model.yaml
+    sha256: 4955709e1cac1d26fd657f7a0c29d6c8390f42e41f9ebfab859c82b102f2bebb
+    role: context
+  - path: data/raw/metpo.owl
+    sha256: 8b6f8fe0510a698579e532658c8ace05da2550093365df9ca83feb0741778415
+    role: context
+  - path: data/traits/environment/facultative_oxygen_preference.yaml
+    sha256: 146151a10541d48d38410435c282cd022bbafa9630e1f004771c6b85c18c3e6f
+    role: target
+  - path: data/traits/environment/oxygen_preference.yaml
+    sha256: 16829173ea947f2fef083f673c51519aad962d6812fcd54826ea86f055c5a40b
+    role: context
+  - path: docs/CURATION_PLAYBOOK.md
+    sha256: 735e9b810471da9f7d8364e35ffe1e741edb3421480dac01727db6ea5aa65da9
+    role: context
+  - path: docs/GROUNDING_POLICY.md
+    sha256: 891678c983c2283a47c81c47950b35753981e9339d105f3bbdda92a1f5ab7f42
+    role: context
+  - path: docs/PATHWAY_LINKS.md
+    sha256: 800492750fb3c025dfdf7164813e7a00b3bd72dc8cc6f8e754e2aed5d7bbf414
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: cac714488cad03263ca3847737d5f70d174d40b5be677a09e0c1d9c814d9bc6a
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 008643042a721e84f647be6beda104ae02fe616361ff9b34fc608643a7526ee2
+    role: context
+  - path: mappings/node_grounding.tsv
+    sha256: d7de9b3ab04960c4775a5bc295a945bd1a72d81467830459f4793e654f82b3d0
+    role: context
+  - path: mappings/predicate_grounding.tsv
+    sha256: 8e28c19e93aca3dc164a3befbe2612b289241de457c59f499e65936c03b7ce52
+    role: context
+  - path: mappings/trait_exact_match_review.tsv
+    sha256: 7728593d526d9a723716e5daad64beb7e1ab5c2e4221ae8d43dd9480cd02f62b
+    role: context
+  - path: mappings/uniprot_regrounding_candidates.tsv
+    sha256: c36d8e038886d137d5a1ae609240e59ce74b6aeee17ae24f21b6c4a0d7407391
+    role: context
+  - path: proposals/metpo_traitmech_v2/metpo_proposal_properties_robot.tsv
+    sha256: 4ab5ca37ff8595210254b1099563b4425ecd737ed375dc5a932b44e2ad5c332e
+    role: context
+  - path: proposals/metpo_traitmech_v2/proposal.md
+    sha256: fe0601356b120ef9babc6f90a417f860bf02aa628c46af661517f168e01bc48f
+    role: context
+  - path: proposals/metpo_traitmech_v3/metpo_proposal_classes_robot.tsv
+    sha256: 1a1cc789782cfae195c1fc81ddaf848d06d162c7434d94cceb66838de98ab6fa
+    role: context
+  - path: proposals/metpo_traitmech_v5/metpo_proposal_classes_robot.tsv
+    sha256: d4b899de7077b33f4bdc6cb8cdebf28b5a705b7a65ba3620f3113b76d8666910
+    role: context
+  - path: proposals/metpo_traitmech_v5/proposal.md
+    sha256: 5d54623dd00ac80a8d67a0eab7b70385f7f57b36daa205c28aa1f9d6f9be6167
+    role: context
+  - path: proposals/metpo_traitmech_v6/metpo_proposal_properties_robot.tsv
+    sha256: ed877efe2d59f43c51898e2dc85440188711455dcc5c882af2dc1384fc38fc19
+    role: context
+  - path: proposals/metpo_traitmech_v6/proposal.md
+    sha256: aecbd48fd73712ccab57619d753b6084a7fa2fbf616f80623f63ce15b65871ae
+    role: context
+  - path: proposals/metpo_traitmech_v7/metpo_proposal_classes_robot.tsv
+    sha256: 99e779afa894363b32966bd15415417035d246970aab02931ce896f37c910a73
+    role: context
+  - path: proposals/metpo_traitmech_v7/proposal.md
+    sha256: bc6ea10ebc4bec0f446cee92578602889ec464295ce5ecce27fed76eb06528ce
+    role: context
+  - path: proposals/metpo_traitmech_v8/metpo_proposal_properties_robot.tsv
+    sha256: 5445e86e845e0a2638292cff4586bf3858b1341d37fecf2e86cefcdbc9a046cd
+    role: context
+  - path: proposals/metpo_traitmech_v8/proposal.md
+    sha256: 119d51e7b7194890514a9e313505212bab92aeba607f7c1b8f9d9d2edeef67e7
+    role: context
+  - path: proposals/metpo_traitmech_v9/metpo_proposal_properties_robot.tsv
+    sha256: 5ae84dd1351a4bec39adf7bcd5b3a8982af2e95fbccd0b53c0efa3efbfc89b0e
+    role: context
+  - path: proposals/metpo_traitmech_v9/proposal.md
+    sha256: 85fde22f4733863188b437cfcf7552a31fea07ad1d32c0400cf493295c1e1156
+    role: context
+  - path: reports/metpo_2026_06_12_active_review.tsv
+    sha256: 45e9c6471475635ba1f2602cd636a119d490f5dbd8dd6ac8af1aab89a321379f
+    role: context
+  - path: reports/metpo_2026_06_12_release_delta.tsv
+    sha256: afe858d2aa0ade08322c7808d5917ff370e069ba02c2642d483342db8e9323ac
+    role: context
+  - path: reports/ontology_snapshot_manifest.tsv
+    sha256: 4a157279a8c4e3fc2afb5382a45c31961991bbd1f330f26d0061b0cfd0b4d213
+    role: context
+  - path: research/traits/environment/facultative_oxygen_preference-deep-research-falcon.md
+    sha256: 5f63089c9e11d9d531591d00f4fef65502bd987d5c681e703e24a489e6af115d
+    role: context
+  - path: scripts/audit_causal_graphs.py
+    sha256: e0c26506c9de712700317284f142097e7bf69334806b8010db5d6517e905e834
+    role: context
+  - path: scripts/audit_graph_protein_taxa.py
+    sha256: d3375861829c612483b3545dd0f5e2b79872a4576b626edc08714a09fbd9a24d
+    role: context
+  - path: scripts/audit_uniprot_grounding.py
+    sha256: 91eb2165c69b3a4fcb53154dc8c835ac1070577f88065a43dfc881284d3d1052
+    role: context
+  - path: scripts/backfill_canonical_examples_444.py
+    sha256: 18ca0766789c239d693ef665e8b1d43c1209a0f414a326f1c5d890f88de7b20c
+    role: context
+  - path: scripts/curate_knowledge_gaps.py
+    sha256: 9e0fb7e01a901d84189a28f1912a2552f28d2da8733c113589e4947359d48c73
+    role: context
+  - path: scripts/finalize_metpo_2026_06_12_review.py
+    sha256: b850b386183b2d86647dada43f7f157059017dbb881f7e1fb2e220ae697d3bea
+    role: context
+  - path: scripts/ground_causal_nodes.py
+    sha256: 204ce4162544154b1752b65da2136538847ea25ced26a52f5708eadff08f5d42
+    role: context
+  - path: scripts/ground_causal_predicates.py
+    sha256: 5a788eeaabf3a56b0d82c469a3e3fe28f1d51707d9382313b9a94289be7d1381
+    role: context
+  - path: scripts/migrate_disposition_typing.py
+    sha256: ebafdd145fc0729d32f3b8a45f570d97a8e001838afadd698e2b246cb8950714
+    role: context
+  - path: scripts/migrate_enables_range_edges.py
+    sha256: 3d0d1bddcaa76baef5833973e2e979e4fee1f834c67d1abcc69a8d866ecb8f32
+    role: context
+  - path: scripts/migrate_enables_trait_edges.py
+    sha256: a5e7965ee4f6b6ba5bae3a06bced2a83cbf755f3b9b150ce6acc0cd808cb1d88
+    role: context
+  - path: scripts/migrate_microbe_domain_edges.py
+    sha256: 5187ccfb2897d415b243792a27afd6002c0eea4b167068639ff5be73ed583bb6
+    role: context
+  - path: scripts/migrate_name_match_groundings.py
+    sha256: 9b3ea1153839b9b260638cef95eba2d1ccc6d7b3825e7352c33cceb21bfe4dd4
+    role: context
+  - path: scripts/migrate_oxygen_senses.py
+    sha256: 372e977a58ec6e17cdd45021c5849895142c67187eb29b995b8c39f0e899d2f3
+    role: context
+  - path: scripts/migrate_pathway_vs_process.py
+    sha256: f236de7183048732e9001b7fac4367affff58d8b7a7d5c63286e6b058a4b38c2
+    role: context
+  - path: scripts/migrate_process_quality_consistency.py
+    sha256: 1a83ad3dba79ed0c958b875a6fcc4b9e562259af26da2f248d32d5cf7784f80a
+    role: context
+  - path: scripts/migrate_protein_vs_activity.py
+    sha256: 0b183248ff22d3d8aa66b35aece40c53b516684ca499cf73b7714206031dad49
+    role: context
+  - path: scripts/migrate_uniprot_instance_groundings.py
+    sha256: 07d2a5405cff5857239757e0a3791f411b1d25709a5760c1e49553eed066993d
+    role: context
+  - path: scripts/seed_from_metpo.py
+    sha256: 0fb9c9f7ea6a8f137eecd5c319775b511c398dba6158c81b1fbfb94210f7d851
+    role: context
+  - path: scripts/verify_metpo_proposal.py
+    sha256: f58355151f7d6a807bb50dc8b732184994b0d6145d3c57f54e29fd0bb76268b6
+    role: context
+  - path: src/traitmech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+  - path: src/traitmech/schema/traitmech.yaml
+    sha256: 46c47fc627b80ccbba1e8ab3fb6f2aee93bc2aef7aaf72fe9aadc3257f2c02dd
+    role: context
+  - path: src/traitmech/validation/write_validated.py
+    sha256: 68cfeb876a60d67fd72d5a2800cd29e41b5cf563be5a27b698398a5bb3e67231
+    role: context
+targets:
+- target_id: METPO:1000612
+  path: data/traits/environment/facultative_oxygen_preference.yaml
+  label: facultative oxygen preference
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/facultative_oxygen_preference.yaml
+    role: Maintained TraitRecord; scientific changes require guarded curation
+  - repository: CultureBotAI/TraitMech
+    path: scripts/seed_from_metpo.py
+    role: Maintained seeder for ontology-backed identity and hierarchy
+  record_class: TraitRecord
+scope:
+  description: 'Complete field inventory and documentary review of one TraitRecord,
+    with generic phenotype definition and canonical source attribution assessed. Full
+    documentary coverage does not mean full biological review: every detailed graph
+    mechanism is explicitly UNASSESSED_SCOPE. No pathogen survival mechanism was validated,
+    extended or corrected.'
+  selection: One entire maintained TraitRecord, read before the60-input native capture.
+    All fields, nine nodes, eight edges, two canonical examples, eight references,
+    thirteen citation placements, six snippets and nine history events are inventoried
+    and documentarily assessed. Generic class definition, identifiers, ontology roles,
+    source attribution and literal quotations are in scope. ALL EIGHT BIOLOGICAL GRAPH
+    MECHANISMS ARE UNASSESSED_SCOPE due to pathogen hypoxia/host-survival source context.
+    No mechanism reconstruction, corrected pathway, regulator target, intervention
+    or efficacy interpretation. Parent, ontology, writer and research inputs are context,
+    not additional targets; excluded spore germination is untouched.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - METPO:1000612
+checks:
+- check_id: audit-graphs
+  name: Full-corpus graph audit
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000612
+  command: just audit-graphs --out /private/tmp/traitmech-record-sweep.FU79Gr/causal_graph_audit.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 74 baselined findings, zero new/blocking findings; connectivity report
+    covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific
+    verification of this target.
+  evidence_ids:
+  - check-audit-graphs
+  scope_note: History validation ran in batch 003 at the same 8eee source base; batch
+    005 byte comparison confirms all history, trait and common validation inputs unchanged.
+    Other commands ran at f25; the Git delta to 8eee contains only seven added workflow/skill/infrastructure-history
+    files. Original timestamps, failures and skips are retained; these are reused
+    results, not new executions or certification against later ontology releases.
+- check_id: audit-snippets
+  name: Full-corpus snippet audit
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000612
+  command: just audit-snippets --report /private/tmp/traitmech-record-sweep.FU79Gr/evidence_snippet_audit.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 2419 baselined findings, zero new/blocking findings. Focused source checks
+    and manual evidence review are recorded separately.
+  evidence_ids:
+  - check-audit-snippets
+  scope_note: History validation ran in batch 003 at the same 8eee source base; batch
+    005 byte comparison confirms all history, trait and common validation inputs unchanged.
+    Other commands ran at f25; the Git delta to 8eee contains only seven added workflow/skill/infrastructure-history
+    files. Original timestamps, failures and skips are retained; these are reused
+    results, not new executions or certification against later ontology releases.
+- check_id: check-pathway-links
+  name: Full-corpus pathway links
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000612
+  command: just check-pathway-links
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 19 links checked against the pinned PathwayMech snapshot. Target asserts
+    no pathway context link.
+  evidence_ids:
+  - check-check-pathway-links
+  scope_note: History validation ran in batch 003 at the same 8eee source base; batch
+    005 byte comparison confirms all history, trait and common validation inputs unchanged.
+    Other commands ran at f25; the Git delta to 8eee contains only seven added workflow/skill/infrastructure-history
+    files. Original timestamps, failures and skips are retained; these are reused
+    results, not new executions or certification against later ontology releases.
+- check_id: validate-history
+  name: Full-corpus history integrity
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000612
+  command: just validate-history
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 1277 history records checked, zero invalid links at the current 8eee source
+    base; integrity does not establish science or human acceptance.
+  evidence_ids:
+  - check-validate-history
+  scope_note: History validation ran in batch 003 at the same 8eee source base; batch
+    005 byte comparison confirms all history, trait and common validation inputs unchanged.
+    Other commands ran at f25; the Git delta to 8eee contains only seven added workflow/skill/infrastructure-history
+    files. Original timestamps, failures and skips are retained; these are reused
+    results, not new executions or certification against later ontology releases.
+- check_id: validate-products
+  name: Initial full-product validation
+  status: failed
+  required: false
+  target_ids:
+  - METPO:1000612
+  command: just validate-products
+  exit_code: 2
+  expected_exit_code: 0
+  summary: Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips.
+    Superseded by successful network retry.
+  evidence_ids:
+  - check-validate-products
+  scope_note: History validation ran in batch 003 at the same 8eee source base; batch
+    005 byte comparison confirms all history, trait and common validation inputs unchanged.
+    Other commands ran at f25; the Git delta to 8eee contains only seven added workflow/skill/infrastructure-history
+    files. Original timestamps, failures and skips are retained; these are reused
+    results, not new executions or certification against later ontology releases.
+- check_id: validate-products-retry-local
+  name: Product validation with isolated local cache
+  status: failed
+  required: false
+  target_ids:
+  - METPO:1000612
+  command: just validate-products
+  exit_code: 2
+  expected_exit_code: 0
+  summary: Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful
+    network retry.
+  evidence_ids:
+  - check-validate-products-retry-local
+  scope_note: History validation ran in batch 003 at the same 8eee source base; batch
+    005 byte comparison confirms all history, trait and common validation inputs unchanged.
+    Other commands ran at f25; the Git delta to 8eee contains only seven added workflow/skill/infrastructure-history
+    files. Original timestamps, failures and skips are retained; these are reused
+    results, not new executions or certification against later ontology releases.
+- check_id: validate-products-retry-network
+  name: Product validation after isolated-cache download
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000612
+  command: just validate-products
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 'Passed: 361 canonical matches, two synonym matches, one exception, 123
+    SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered.'
+  evidence_ids:
+  - check-validate-products-retry-network
+  scope_note: History validation ran in batch 003 at the same 8eee source base; batch
+    005 byte comparison confirms all history, trait and common validation inputs unchanged.
+    Other commands ran at f25; the Git delta to 8eee contains only seven added workflow/skill/infrastructure-history
+    files. Original timestamps, failures and skips are retained; these are reused
+    results, not new executions or certification against later ontology releases.
+- check_id: facultative-oxygen-validate
+  name: Focused LinkML validation
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000612
+  command: just validate data/traits/environment/facultative_oxygen_preference.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Passed09:54:18–19Z. Valid YAML/schema structure does not certify ontology
+    semantics, organism-source attribution or biological mechanisms.
+  evidence_ids:
+  - check-facultative-oxygen-validate
+- check_id: facultative-oxygen-strict
+  name: Focused strict validation
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000612
+  command: just validate-strict data/traits/environment/facultative_oxygen_preference.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Passed09:54:18–19Z. Documentary relation/type concerns remain independent
+    of this shape check.
+  evidence_ids:
+  - check-facultative-oxygen-strict
+- check_id: facultative-oxygen-snippets
+  name: Focused abstract snippet verification
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000612
+  command: just verify-snippets --record data/traits/environment/facultative_oxygen_preference.yaml
+    --out /private/tmp/traitmech-record-sweep-005.klfwsp1f/facultative-oxygen-snippets.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 'Passed09:54:23–28Z: one VERIFIED and five NOT_IN_ABSTRACT. Manual documentary
+    inspection verifies two additional title quotations; three snippets remain unverified
+    because their bodies were not inspected. No false-quotation finding is inferred
+    from abstract absence.'
+  evidence_ids:
+  - check-facultative-oxygen-snippets
+- check_id: batch004-qc
+  name: Reused native full-corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000612
+  command: just qc
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual B4 execution09:19:10–09:21:17Z passed. B5 byte equality supports
+    reuse for unchanged scientific/common-check inputs; original warnings, baselines
+    and scope are preserved. This is not a fresh B5 run or a mechanism certification.
+  evidence_ids:
+  - check-batch004-qc
+- check_id: live-uniprot
+  name: Live UniProt instance audit
+  status: not_applicable
+  required: false
+  target_ids:
+  - METPO:1000612
+  summary: No current protein instance or UniProt accession; reviewed label-only aggregates
+    do not require token accessions.
+  evidence_ids:
+  - record
+  - grounding-ledger
+- check_id: structured-source-runner
+  name: Structured-source runner discovery
+  status: unavailable
+  required: false
+  target_ids:
+  - METPO:1000612
+  summary: Bounded runner discovery reused with original times; official catalog fallback
+    used.
+  evidence_ids:
+  - runner
+- check_id: expression-catalog
+  name: Canonical-organism catalog applicability
+  status: passed
+  required: false
+  target_ids:
+  - METPO:1000612
+  summary: Both canonical species have catalog entries. This checks dataset availability
+    only, not gene membership or phenotype.
+  evidence_ids:
+  - expression
+- check_id: expression-mechanisms
+  name: Mechanism-specific expression queries
+  status: skipped
+  required: false
+  target_ids:
+  - METPO:1000612
+  summary: Deliberately outside documentary scope because the graph sources concern
+    pathogen hypoxia/host survival. No gene/module query, organism substitution or
+    negative inference.
+  evidence_ids:
+  - expression
+evidence:
+- evidence_id: check-audit-graphs
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/audit-graphs.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:29Z; metadata audit-graphs.json
+  accessed_at: '2026-10-21T10:02:59Z'
+  support: context_only
+  summary: 74 baselined findings, zero new/blocking findings; connectivity report
+    covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific
+    verification of this target.
+  snapshot_sha256: ecce27e6a8f8b8b1fc54a9a0564a27626ee33774da508665859c6d1429337f4d
+- evidence_id: check-audit-snippets
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/audit-snippets.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:33Z; metadata audit-snippets.json
+  accessed_at: '2026-10-21T10:02:59Z'
+  support: context_only
+  summary: 2419 baselined findings, zero new/blocking findings. Focused source checks
+    and manual evidence review are recorded separately.
+  snapshot_sha256: beafaa5c82645f5cf216142b6e0369d556202bcc72fdabbf35825fce955fd59f
+- evidence_id: check-check-pathway-links
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/check-pathway-links.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:28Z; metadata check-pathway-links.json
+  accessed_at: '2026-10-21T10:02:59Z'
+  support: context_only
+  summary: 19 links checked against the pinned PathwayMech snapshot. Target asserts
+    no pathway context link.
+  snapshot_sha256: e77729b8afd6ae02cd834e516c48dd5c72d10498802e7a1b0004eebb4831f6a0
+- evidence_id: check-validate-history
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-005.klfwsp1f/validate-history.log
+  locator: Executed 2026-10-21T07:03:25Z through 2026-10-21T07:03:30Z; metadata validate-history.json
+  accessed_at: '2026-10-21T10:02:59Z'
+  support: context_only
+  summary: 1277 history records checked, zero invalid links at the current 8eee source
+    base; integrity does not establish science or human acceptance.
+  snapshot_sha256: 02f94872992b2fbc3cc455c552d56a338dd449a315e02b1bf0226b68a8d2cfe3
+- evidence_id: check-validate-products
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:34:01Z; metadata validate-products.json
+  accessed_at: '2026-10-21T10:02:59Z'
+  support: context_only
+  summary: Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips.
+    Superseded by successful network retry.
+  snapshot_sha256: 697efcbe603c9a5e27f9726e688d1b9d9f621fa548f585d9005b5157d81dadae
+- evidence_id: check-validate-products-retry-local
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-local.log
+  locator: Executed 2026-10-19T07:34:53Z through 2026-10-19T07:35:24Z; metadata validate-products-retry-local.json
+  accessed_at: '2026-10-21T10:02:59Z'
+  support: context_only
+  summary: Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful
+    network retry.
+  snapshot_sha256: b636ab6978cf8b8d4cc2cc4033f1cdca399cca46dc615a26073cfe680d44ebb5
+- evidence_id: check-validate-products-retry-network
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-network.log
+  locator: Executed 2026-10-19T07:35:34Z through 2026-10-19T07:36:03Z; metadata validate-products-retry-network.json
+  accessed_at: '2026-10-21T10:02:59Z'
+  support: context_only
+  summary: 'Passed: 361 canonical matches, two synonym matches, one exception, 123
+    SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered.'
+  snapshot_sha256: 67e91252adce1d441ad6b37d6904f0cbcea703575aec8011e65e94822fa810ea
+- evidence_id: check-facultative-oxygen-validate
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-005.klfwsp1f/facultative-oxygen-validate.log
+  locator: Executed 2026-10-21T09:54:18Z through 2026-10-21T09:54:19Z; metadata facultative-oxygen-validate.json
+  accessed_at: '2026-10-21T10:02:59Z'
+  support: context_only
+  summary: Passed09:54:18–19Z. Valid YAML/schema structure does not certify ontology
+    semantics, organism-source attribution or biological mechanisms.
+  snapshot_sha256: 4334682fe6c5fe0fac2a02649107e11cef9a85425e3054e3181464362b0214ce
+- evidence_id: check-facultative-oxygen-strict
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-005.klfwsp1f/facultative-oxygen-strict.log
+  locator: Executed 2026-10-21T09:54:18Z through 2026-10-21T09:54:19Z; metadata facultative-oxygen-strict.json
+  accessed_at: '2026-10-21T10:02:59Z'
+  support: context_only
+  summary: Passed09:54:18–19Z. Documentary relation/type concerns remain independent
+    of this shape check.
+  snapshot_sha256: 70750d629120b500cbc9eba870df369d3a02151a99a3ff22c423d8d2d40a4ac4
+- evidence_id: check-facultative-oxygen-snippets
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-005.klfwsp1f/facultative-oxygen-snippets.log
+  locator: Executed 2026-10-21T09:54:23Z through 2026-10-21T09:54:28Z; metadata facultative-oxygen-snippets.json
+  accessed_at: '2026-10-21T10:02:59Z'
+  support: context_only
+  summary: 'Passed09:54:23–28Z: one VERIFIED and five NOT_IN_ABSTRACT. Manual documentary
+    inspection verifies two additional title quotations; three snippets remain unverified
+    because their bodies were not inspected. No false-quotation finding is inferred
+    from abstract absence.'
+  snapshot_sha256: 0ad1e8c06a10eed83546e3d81e1c11eef896c1763eeaa55fbc7b806bcfeac93b
+- evidence_id: check-batch004-qc
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-004.f7_g5r4w/batch004-qc.log
+  locator: Executed 2026-10-21T09:19:10Z through 2026-10-21T09:21:17Z; metadata batch004-qc.json
+  accessed_at: '2026-10-21T10:02:59Z'
+  support: context_only
+  summary: Actual B4 execution09:19:10–09:21:17Z passed. B5 byte equality supports
+    reuse for unchanged scientific/common-check inputs; original warnings, baselines
+    and scope are preserved. This is not a fresh B5 run or a mechanism certification.
+  snapshot_sha256: 41a3fbd2beadf60e039992274e868de70b6ade8cf4b5d6028d6df932e0cfb2e5
+- evidence_id: reuse
+  kind: validation
+  reference: B5 common-input byte comparison
+  locator: 1130 trait files,1278 history files and19 common inputs byte-equal to B4;shared
+    base8eee04a8
+  accessed_at: '2026-10-21T09:22:28.661252Z'
+  support: supports
+  summary: Original f25 corpus diagnostics, B3 history execution and B4 QC are reused
+    with original timestamps, failed product attempts and no-adapter skips. File count
+    differs from the1277 history-record validation count. Unchanged bytes do not certify
+    newer ontology releases.
+  snapshot_sha256: ce111d70655cdee3528b3c85ca4a71468c47d96e84ff4b28c0932389aee61313
+- evidence_id: reuse-independent
+  kind: validation
+  reference: Independent B5 reuse verification
+  locator: Ignored-inclusive corpus/common-input comparison and original diagnostic
+    receipt chain
+  accessed_at: '2026-10-21T09:25:47.749251Z'
+  support: supports
+  summary: The independent comparison confirms unchanged inputs and correct historical
+    scope. Seven workflow/history additions distinguish the original f25 diagnostic
+    base from8eee; no fresh scientific checks are claimed.
+  snapshot_sha256: 4279ad9f488f187dd2f118a9b6274a60e5f79019225d24b33ce8b25f4ea2ca9f
+- evidence_id: capture
+  kind: validation
+  reference: Native selected-record inspection
+  locator: 60 inputs captured09:54:04–06Z after entire target read
+  accessed_at: '2026-10-21T09:54:06Z'
+  support: supports
+  summary: Capture includes target, parent, schema, pinned authorities, local rules,
+    mappings, writer scripts and the historical enables-range migration. Provider
+    text is provenance context, not primary scientific proof.
+  snapshot_sha256: cf4835dfaf6bcceea36a4f0eb0c290eab05867eacc180775685b09ad80c7da13
+- evidence_id: capture-hashes
+  kind: validation
+  reference: Independent current input-byte verification
+  locator: All60 capture hashes match at09:59:28.656582Z
+  accessed_at: '2026-10-21T09:59:28.656582Z'
+  support: supports
+  summary: No captured scientific or owner input changed during assessment. This verifies
+    bytes, not correctness or completeness of the biological mechanism.
+  snapshot_sha256: 759227774992ee45187d09ad12e6e8239f1f0397554ce74033690f615147812b
+- evidence_id: record
+  kind: record_content
+  reference: data/traits/environment/facultative_oxygen_preference.yaml
+  locator: Entire identity, definition, imported synonym, hierarchy, graph, examples
+    and history
+  accessed_at: '2026-10-21T09:54:04Z'
+  support: partial
+  summary: Environmental CLASS with NONMECHANISTIC graph; nine nodes, eight edges,
+    two label-only protein aggregates, zero protein instances. Nine events disclose
+    eight AI-assisted events and one automated seed. Documentary consistency is reviewed;
+    biological graph claims are all unassessed.
+  snapshot_sha256: 146151a10541d48d38410435c282cd022bbafa9630e1f004771c6b85c18c3e6f
+- evidence_id: identity
+  kind: authority
+  reference: Pinned METPO complete active/deprecated label and synonym scan
+  locator: METPO1000612 and direct parent1000601;1631 label elements inspected
+  accessed_at: '2026-10-21T09:57:37.269376Z'
+  support: supports
+  summary: Exact active label, definition, related imported synonym and direct oxygen-preference
+    parent match the current record. This is a positive class identity rather than
+    a pathway or organism. No fallback or unminted predicate is asserted in this target;
+    deprecated lexical matches are not invented replacement links.
+  snapshot_sha256: 47138d740dcaecdb155e93908ff252df02bcfb9afae89423556a80d76ed90847
+- evidence_id: native-policy
+  kind: authority
+  reference: Native schema, grounding policy and pathway/process convention
+  locator: CausalNodeTypeEnum660–697;optional predicate_id502–528;GROUNDING_POLICY§2;pathway
+    migration17–43
+  accessed_at: '2026-10-21T09:59:28.657029Z'
+  support: supports
+  summary: PATHWAY denotes a pathway or pathway-like mechanism; the maintained convention
+    distinguishes named routes from generic processes. Literal genes are not that
+    route. Protein systems remain permissible label-only aggregates when their descriptions
+    name proteins. Free-text predicates are allowed, and broad NONMECHANISTIC scope
+    does not require a token accession.
+  snapshot_sha256: d0a2d348911bd92da1b8c877f5af17bcd5ce8a053e165e828308210834db5b17
+- evidence_id: live-identities
+  kind: database
+  reference: Official QuickGO, ChEBI and NCBI Taxonomy responses
+  locator: GO0009060;CHEBI15379/17632;NCBITaxon562/1423;09:57:47.095361–09:57:47.909024Z
+  accessed_at: '2026-10-21T09:59:28.633252Z'
+  support: supports
+  summary: Aerobic respiration is active GO Biological Process. Dioxygen includes
+    molecular oxygen as a synonym; nitrate identity is exact. NCBI562 is Escherichia
+    coli species and1423 is Bacillus subtilis species. These are identifier/type checks
+    only; taxonomic correctness does not establish the nearest article supports the
+    organism example.
+  snapshot_sha256: 45dd07b0f0ff467c0471ae92cf145b7c3b98e411a01affd17603aa2674b06a45
+- evidence_id: live-receipts
+  kind: database
+  reference: Official current identity acquisition receipts
+  locator: Four successful responses with actual URL, UTC bounds, local path and SHA256
+  accessed_at: '2026-10-21T09:57:47.909024Z'
+  support: supports
+  summary: Taxonomy response finished09:57:47.593833Z;GO47.804752Z;nitrate47.884520Z;dioxygen47.909024Z.
+    No biological mechanism or growth experiment is inferred from these records.
+  snapshot_sha256: 6a1885dfcb9535bbe34ed2d3614f9ac0ac018182d4e33728301d5f50d628d84f
+- evidence_id: ro
+  kind: authority
+  reference: RO enables and positively-regulates recursive authority
+  locator: Original cached-authority read09:52:45.989262Z;hash-verified reuse09:59:28.636428Z
+  accessed_at: '2026-10-21T09:59:28.636428Z'
+  support: supports
+  summary: RO2327 admits a material subject and process object but also requires the
+    subject to be capable of and act to execute the process. Chemical-input availability
+    is a different role; this is not a blanket chemical-domain exclusion. RO2213 inherits
+    process domain/range through RO2211, so material nitrate fails that represented
+    subject role. DB SHA849e616c29fecd0d4a6c6dee0dc0f6f117ace7167dbfa1e0f043dc84868f83cb
+    is unchanged. No reasoner execution is claimed.
+  snapshot_sha256: 2c666b8c89d3330e4ff83ba4299a88e3aa566f594cf627e7cb9f0e5d6aea433d
+- evidence_id: grounding-ledger
+  kind: validation
+  reference: Independent complete documentary grounding assessment
+  locator: Nine nodes/eight edges;all60 captured inputs match;all biological mechanisms
+    UNASSESSED_SCOPE
+  accessed_at: '2026-10-21T09:59:28.657029Z'
+  support: partial
+  summary: Identifier, type and relation meaning are assessed without evaluating pathway
+    truth or proposing biological repairs. Current edge7 protein-to-process shape
+    is formally compatible; its detailed function remains unassessed. A historical
+    protein-object defect is not re-reported as current.
+  snapshot_sha256: a8526eeee01e9bc0e41f1daac4cdf310eb32e8d39584e0edd14d374f8d222b40
+- evidence_id: node-edges
+  kind: validation
+  reference: Complete documentary node/edge ledger
+  locator: nodes[0–8] and edges[0–7],zero-based
+  accessed_at: '2026-10-21T09:59:28.639732Z'
+  support: partial
+  summary: Explicit role/type assessments cover every node and edge. Material-domain
+    compatibility on edge1 is preserved while its actor-versus-input meaning is distinguished.
+    Edge6 has a process-subject mismatch. Node6 literal gene label/description disagrees
+    with PATHWAY. No new molecular entity, pathway, condition or intervention is supplied.
+  snapshot_sha256: 84d94cc236c8b324d0b6a512f5bd52dda80276314ae0adab400e09937c9f0839
+- evidence_id: owners
+  kind: search
+  reference: Maintained relation mappings and writer ownership
+  locator: predicate_grounding.tsv9 enables and63 promotes;ground_causal_predicates.py138–179
+  accessed_at: '2026-10-21T09:59:28.657029Z'
+  support: supports
+  summary: Both mappings have wildcard endpoint gates and may restore their assignments
+    after an ID-only removal. The writer skips populated IDs. This recurrence issue
+    concerns representation; no corrected biological mechanism is proposed. Current
+    node mappings for nitrate and aerobic respiration match official identities.
+  snapshot_sha256: d275fb468ce925bb2904792539937118aaa0ffb490b8d7c70724c579d7a093ce
+  search_scope: Ignored-inclusive mappings/scripts/proposals owner search plus whole-repository
+    label/ID/slug search; .git and .venv excluded. Exact commands retained; no remote
+    or whole-filesystem absence claim.
+- evidence_id: prior-correction
+  kind: authority
+  reference: scripts/migrate_enables_range_edges.py
+  locator: Target-specific decision61–79 and current history eventREGROUND_CAUSAL_EDGE
+  accessed_at: '2026-10-21T09:59:28.657029Z'
+  support: context_only
+  summary: The maintained migration reversed the former chemical-to-protein assignment
+    into the current protein-to-process edge7. This explains current representation
+    and does not establish biological correctness or human acceptance. Its retained
+    statement about a separate oxygen-availability edge does not settle RO executor
+    semantics.
+  snapshot_sha256: d0a2d348911bd92da1b8c877f5af17bcd5ce8a053e165e828308210834db5b17
+- evidence_id: provenance
+  kind: search
+  reference: Ignored-inclusive local human-acceptance linkage inspection
+  locator: 169 matching files;9 events with8AI and1automated seed;no targeted local
+    acceptance found
+  accessed_at: '2026-10-21T09:57:43.305513Z'
+  support: partial
+  summary: The inspected target history and matching review target lists contain no
+    explicit human scientific acceptance for this revision. The prior automated correction
+    is not sign-off. Private/remote acceptance remains unknown; this is a bounded
+    documentation gap.
+  snapshot_sha256: 4acbcd6a1b08a570b4ba696c83312aed4f42adecddcead58c809166f67b321d8
+  search_scope: rg --hidden --no-ignore over B5 repository with target identifier,
+    label and slug; excludes .git/** and .venv/**. Matching histories and structured
+    target lists inspected; no claim about private or remote acceptance.
+- evidence_id: provenance-root
+  kind: validation
+  reference: Root independent documentary provenance inspection
+  locator: 169 matches from09:56:08.700975–09:56:08.966536Z;assessed09:57:08.875984Z
+  accessed_at: '2026-10-21T09:57:08.875984Z'
+  support: supports
+  summary: The independent bounded search likewise found no matching repository history
+    or targeted review acceptance and confirmed eight AI events plus one seed. Its
+    initial catalog-pending status is superseded by the separately completed applicability
+    assessment; provenance findings retain their actual time.
+  snapshot_sha256: d5ceb79bfa9e630a74c0d460da270edde17c255cc9fcc44a8e0a725e4ecb49be
+- evidence_id: expression
+  kind: database
+  reference: https://imodulondb.org/api/datasets
+  locator: Original catalog07:36:12.732638–07:36:12.858149Z;20organisms/28datasets;reused09:56:08Z
+  accessed_at: '2026-10-21T09:57:37.874268Z'
+  support: context_only
+  summary: 'Both canonical species have catalog entries: b_subtilis with two datasets
+    and e_coli with five. Only catalog availability was inspected. Downstream gene/module
+    queries were deliberately skipped for the documentary scope; they are not reported
+    as absent, unavailable or negative biological evidence.'
+  snapshot_sha256: ef78afd3530f54a04cfafe029d449ebdd6db0fb3105e112154c4f7b864c12cc5
+- evidence_id: runner
+  kind: search
+  reference: Retained structured-source runner discovery
+  locator: Original PATH/B5 ignored-inclusive discovery09:27:57.380287–09:27:57.542053Z;earlier
+    external roots08:17:15;reused09:56:08Z
+  accessed_at: '2026-10-21T09:56:08.693496Z'
+  support: context_only
+  summary: The retained bounded discovery did not find an installed/local project
+    runner. Official catalog fallback and actual canonical matches were inspected.
+    No fresh runner search, genome/module search or mechanism interpretation was performed
+    for this target.
+  snapshot_sha256: 43597ec8b007fc605fabf9069534281f331a33bda5615b9ce9c473facf744179
+  search_scope: Hash-verified reuse of PATH, ignored-inclusive B5 filenames/pyproject
+    and bounded earlier external checkout searches. No exhaustive disk absence claim.
+- evidence_id: bibliography
+  kind: database
+  reference: Complete documentary source ledger
+  locator: 8 references,13 citation placements,6 snippets,2 canonical examples;09:59:27.124067Z
+  accessed_at: '2026-10-21T09:59:27.124067Z'
+  support: partial
+  summary: All citation identities resolve. Generic definition and example attribution
+    are assessed, along with literal quotations. Two full local article XMLs support
+    bounded organism-attribution searches; all eight detailed graph mechanisms remain
+    UNASSESSED_SCOPE. Three quotations are exact and three unverified.
+  snapshot_sha256: f15046b746b75170cda9bb62d496072a846561b7e2cf5b323f0f5861d7dba191
+- evidence_id: source-receipts
+  kind: database
+  reference: Europe PMC bibliographic acquisition receipts
+  locator: Eight DOI queries09:54:44.090389–09:54:46.155418Z
+  accessed_at: '2026-10-21T09:54:46.155418Z'
+  support: supports
+  summary: Actual titles, DOI/PMID/PMCID identities, indexed abstracts, URL/status
+    and response hashes are preserved. Citation resolution is not a biological mechanism
+    finding or a guarantee the source supports its attached example.
+  snapshot_sha256: 5c7b9b2becefb89dd8c9a642fdbec6bab28dac8ca8ce499348885ef3533bee77
+- evidence_id: publication-source0
+  kind: primary_source
+  reference: https://doi.org/10.1016/j.celrep.2023.112444
+  locator: PMID37115669;indexed identity/title/abstract;placements:causal_graphs[0].edges[1].evidence[0]
+  accessed_at: '2026-10-21T09:54:44.836982Z'
+  support: partial
+  summary: Primary M.tuberculosis hypoxia/survival paper. DOI/PMID/title and indexed
+    abstract resolve; biological interpretation deliberately unassessed_scope. Existing
+    literal phrase is absent from inspected abstract and body was not obtained; quotation
+    unverified, not demonstrated nonliteral.
+  snapshot_sha256: de39251bffc21c7df0a1c7c425808bf0fd69ef8237595964e3bec7608a61d194
+- evidence_id: publication-source1
+  kind: primary_source
+  reference: https://doi.org/10.1089/ars.2011.4051
+  locator: PMID22098259;indexed identity/title/abstract;placements:evidence[1];causal_graphs[0].edges[2–3].evidence[0]
+  accessed_at: '2026-10-21T09:54:45.172523Z'
+  support: partial
+  summary: Bacterial respiratory/redox review. Identity and complete indexed abstract
+    inspected for documentary context and exact literal quotation only. One of three
+    snippets is exact in abstract; other two remain unverified after failed EPMC body
+    and browser challenge. No regulator/network reconstruction or biological graph
+    certification.
+  snapshot_sha256: 23d12960d60bf77ccbd3429c54336b3f8a6adabaa8b8a78fc6832c5d61180967
+- evidence_id: publication-source2
+  kind: primary_source
+  reference: https://doi.org/10.1111/1751-7915.70051
+  locator: PMID39548707;indexed identity/title/abstract;placements:canonical_examples[0]
+  accessed_at: '2026-10-21T09:54:44.768968Z'
+  support: partial
+  summary: Industrial E.coli physiology/transcriptomics paper. Actual abstract and
+    opening background explicitly support generic oxygen-limited metabolism and the
+    species example. The canonical note adds a specific alternative-respiration claim
+    not established in inspected source text; complete XML contains no nitrate mention.
+    Preserve core example and source scope; no new pathway or culture procedure proposed.
+    Mechanistic details and model extrapolation unassessed_scope.
+  snapshot_sha256: 4f6217b18bf7bb79696bceee5841e45229c00b4c33d26060fca5d0516082780c
+- evidence_id: publication-source3
+  kind: primary_source
+  reference: https://doi.org/10.1111/cmi.13338
+  locator: PMID33813807;indexed identity/title/abstract;placements:definition_source;evidence[0];causal_graphs[0].edges[0].evidence[0]
+  accessed_at: '2026-10-21T09:54:45.173397Z'
+  support: supports
+  summary: Infection-focused review. Actual indexed abstract explicitly defines facultative
+    anaerobes by growth in presence or absence of oxygen, supporting the generic definition.
+    Both repeated short snippets are exact in article title, not abstract. Infection
+    mechanisms and fitness claims deliberately unassessed_scope; generic definition
+    is not a virulence assessment.
+  snapshot_sha256: eff37363e3deb0cb7c529d75988516983cf17176bddb26a48de3a1d25a5c02d0
+- evidence_id: publication-source4
+  kind: primary_source
+  reference: https://doi.org/10.1128/aem.01491-23
+  locator: PMID37966212;indexed identity/title/abstract;placements:causal_graphs[0].edges[4–5].evidence[0]
+  accessed_at: '2026-10-21T09:54:45.389826Z'
+  support: partial
+  summary: Review on anaerobiosis and phage-bacteria interactions. DOI/PMID/title
+    and abstract identify source context. Detailed regulatory truth, causal necessity
+    and host/organism transfer remain unassessed_scope; no molecular corrective target
+    or intervention supplied. No snippet field in these placements.
+  snapshot_sha256: 40527174d5ce202658ceed7446d771355ecbdcb427693cd6e8eb5403773adde1
+- evidence_id: publication-source5
+  kind: primary_source
+  reference: https://doi.org/10.1128/jb.00389-22
+  locator: PMID36475831;indexed identity/title/abstract;placements:causal_graphs[0].edges[7].evidence[0]
+  accessed_at: '2026-10-21T09:54:45.474048Z'
+  support: partial
+  summary: Bacteroides fragilis respiratory physiology paper. Citation identity and
+    taxon/context are established from indexed metadata/abstract. Existing molecular
+    edge correctness and pathway improvement are unassessed_scope; no source-to-mechanism
+    proof is inferred from title or assay category.
+  snapshot_sha256: 80420b1d9b616579813ad53b77c9f8f14b93ddeaa15717fd4a3be77ae6b324c1
+- evidence_id: publication-source6
+  kind: primary_source
+  reference: https://doi.org/10.1128/msphere.00774-23
+  locator: PMID38426801;indexed identity/title/abstract;placements:causal_graphs[0].edges[6].evidence[0]
+  accessed_at: '2026-10-21T09:54:45.899749Z'
+  support: partial
+  summary: S.aureus hypoxia-associated virulence/intervention paper. Only DOI/PMID/title
+    and abstract documentary scope inspected. Mechanistic correctness, physiological
+    optimization and interventions unassessed_scope; no supporting or corrective biological
+    route is reconstructed.
+  snapshot_sha256: ebee78cd834ee1738030c52f951204beec2274c35fa0608e6fcfb095be25d3e5
+- evidence_id: publication-source7
+  kind: primary_source
+  reference: https://doi.org/10.3390/ijms25021277
+  locator: PMID38279276;indexed identity/title/abstract;placements:canonical_examples[1]
+  accessed_at: '2026-10-21T09:54:46.155418Z'
+  support: refutes
+  summary: The cited paper is an E.coli physiology study, not a Bacillus subtilis
+    example. Actual indexed abstract, body opening and complete local XML identity
+    search were inspected. Neither Bacillus nor subtilis occurs anywhere in extracted
+    whole-article text (body, references and metadata included); main body has30 paragraphs.
+    This establishes a nearest-citation organism-attribution mismatch for the B.subtilis
+    canonical note, not evidence the species lacks the phenotype. Detailed resistance/respiration
+    mechanisms in this source remain unassessed_scope.
+  snapshot_sha256: c2c181dc92325676a8db8d511230a43d1300631a7f28510e12d211b291e8389f
+- evidence_id: browser-surfaces
+  kind: primary_source
+  reference: Actual PubMed and PMC documentary browser surfaces
+  locator: Receipt09:55:31.811897Z;PubMed33813807 lines250–251 definition,title182;PMC11568247
+    opening83–95
+  accessed_at: '2026-10-21T09:55:31.811897Z'
+  support: partial
+  summary: The PubMed abstract explicitly supports the generic with-or-without-oxygen
+    class definition; repeated short phrase occurs in title. The E.coli article opening
+    supports generic example context. Other browser requests returned challenge pages.
+    Browser HTML bytes were not saved; the snapshot hash identifies the receipt rather
+    than an unavailable body.
+  snapshot_sha256: c8cab302474cafed92a5b621425e9ab29d06e78cb04b12e47006344d3c0d013d
+- evidence_id: documentary-bodies
+  kind: primary_source
+  reference: Two complete article XMLs and one failed review-body request
+  locator: Requests09:57:59.814875–09:58:01.718124Z;HTTP200 canonical bodies andHTTP500
+    respiration review
+  accessed_at: '2026-10-21T09:58:01.718124Z'
+  support: partial
+  summary: The E.coli canonical and B.subtilis-attached citation bodies were acquired
+    for organism attribution only. The review body returned an error response, and
+    subsequent browser challenge supplied no body. Failed bytes are not article text
+    and do not prove quotation absence.
+  snapshot_sha256: 719f3c2f67849497eb3f463501879163cb60d5facbab2e3c96344cc429026522
+- evidence_id: bsub-citation
+  kind: primary_source
+  reference: https://doi.org/10.3390/ijms25021277
+  locator: PMID38279276;PMC10815991;complete XML;30main-body paragraphs;organism search
+    includes metadata/references
+  accessed_at: '2026-10-21T09:58:01.430493Z'
+  support: refutes
+  summary: The source is an E.coli study. Neither Bacillus nor subtilis occurs in
+    the extracted whole article, and the inspected identity/abstract/opening identify
+    E.coli. Thus it does not substantiate the attached B.subtilis example. This is
+    a nearest-citation organism mismatch, not a claim that B.subtilis lacks the phenotype.
+    Resistance/respiration mechanisms are not assessed.
+  snapshot_sha256: a6f1c8c60060605952ee4a8cf7bd58a1c1d6c5b683b200641b62d009b1eb421b
+- evidence_id: ecoli-canonical
+  kind: primary_source
+  reference: https://doi.org/10.1111/1751-7915.70051
+  locator: PMID39548707;PMC11568247;abstract/opening;complete XML terminology search;33main-body
+    paragraphs
+  accessed_at: '2026-10-21T09:58:01.718124Z'
+  support: partial
+  summary: The industrial E.coli study supplies positive core species/oxygen-regime
+    context. The canonical note’s specific nitrate detail is not established by the
+    inspected text, and nitrate is absent from the complete extracted article. Preserve
+    that bounded source limit without inventing a corrected mechanism or declaring
+    the core example invalid.
+  snapshot_sha256: af15704bd9d6360f04cb226d32f6eb56301a6066a1bf0b7c70d96c26ffa61713
+- evidence_id: documentary-text
+  kind: search
+  reference: Complete available-XML identity searches and six literal-snippet comparisons
+  locator: Assessed09:58:28.276952Z;two titles exact,one abstract exact,three unresolved
+  accessed_at: '2026-10-21T09:58:28.276952Z'
+  support: partial
+  summary: Whole retrieved XML for the B.subtilis-attached article has zero Bacillus/subtilis
+    matches; core source identity is independently E.coli. E.coli canonical XML has
+    no nitrate mention. Two CMI quotation occurrences are exact title text, the respiratory-review
+    edge2 quote is exact abstract text, and remaining three snippets stay unverified.
+    No inaccessible-body absence is claimed.
+  snapshot_sha256: 9254f25f06aebfc840b51f93e03725add57cac4eb16b2c7b21bb02bd62e97cf2
+  search_scope: Case-insensitive whole extracted text of the two successfully acquired
+    article XMLs, including metadata, references and body. Scope excludes unseen supplements,
+    other editions and inaccessible article bodies. Literal comparisons use inspected
+    indexed titles/abstracts only.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: 'Native checklist: identifier, label, polarity, synonym and term kind'
+  outcome: supported
+  target_ids:
+  - METPO:1000612
+  summary: Active exact METPO1000612 denotes one oxygen-preference class. Imported
+    RELATED_SYNONYM and definition match pinned authority; CLASS is appropriate. No
+    fallback migration, replacement relation or source artifact is substituted for
+    the intended trait.
+  evidence_ids:
+  - identity
+  - record
+- assessment_id: definition
+  area: evidence
+  topic: 'Native checklist: generic growth definition and narrow attribution'
+  outcome: supported
+  target_ids:
+  - METPO:1000612
+  summary: The actual CMI indexed abstract explicitly defines the generic class by
+    growth with or without oxygen. This supports the definition despite the article’s
+    infection focus. The generic definition is assessed independently of infection
+    fitness or detailed molecular mechanisms, which remain unassessed.
+  evidence_ids:
+  - publication-source3
+  - browser-surfaces
+  - identity
+- assessment_id: hierarchy
+  area: identity
+  topic: 'Native checklist: strictly broader parent and environmental category'
+  outcome: supported
+  target_ids:
+  - METPO:1000612
+  summary: Active parent1000601 oxygen preference is explicitly above1000612 in the
+    pinned ontology and is strictly broader. ENVIRONMENT and CLASS describe the represented
+    phenotype. No unsupported organism or pathway substitution is inferred.
+  evidence_ids:
+  - identity
+  - record
+- assessment_id: examples
+  area: evidence
+  topic: 'Native checklist: two canonical identifiers and nearest source attribution'
+  outcome: concern
+  target_ids:
+  - METPO:1000612
+  summary: Both taxon identifiers are correct. The first source supports generic E.coli
+    oxygen-regime context, with nitrate specificity not established in its text. The
+    second is an E.coli paper and contains no B.subtilis attribution anywhere in the
+    retrieved whole XML, so its attachment to that canonical example is materially
+    wrong. Neither observation negates the generic phenotype or reconstructs a biological
+    route.
+  evidence_ids:
+  - live-identities
+  - bsub-citation
+  - ecoli-canonical
+  - documentary-text
+- assessment_id: model
+  area: representation
+  topic: 'Native checklist: node kinds and optional graph/model fields'
+  outcome: concern
+  target_ids:
+  - METPO:1000612
+  summary: Node6 explicitly labels and describes genes while using PATHWAY, producing
+    a bounded identity/type inconsistency. Other broad class/process labels and reviewed-label-only
+    proteins do not automatically require splitting, a token instance or additional
+    optional metadata. No corrective pathway is designed.
+  evidence_ids:
+  - native-policy
+  - node-edges
+  - record
+- assessment_id: grounding
+  area: grounding
+  topic: 'Native checklist: all nine node identifiers and meanings'
+  outcome: supported
+  target_ids:
+  - METPO:1000612
+  summary: The current METPO, GO Biological Process and ChEBI identifiers resolve
+    with matching names/aspects. Taxon identities are exact. The material oxygen label
+    is not automatically wrong merely because its description mentions availability.
+    Protein aggregates are permitted without instance accessions; biological properties
+    remain unassessed.
+  evidence_ids:
+  - identity
+  - live-identities
+  - native-policy
+  - node-edges
+  details: 'causal_graphs[0].nodes[0]: Active exact METPO1000612 label, definition,
+    related synonym and explicit parent1000601. It is a trait class, not an organism
+    or metabolic mechanism. Biological mechanism: UNASSESSED_SCOPE.
+
+    causal_graphs[0].nodes[1]: CHEBI15379 is dioxygen with molecular oxygen synonym
+    and O2 formula. The description uses availability language; keep the chemical
+    identity distinct from an availability condition. The edge1 actor/reactant question
+    is assessed separately without automatically retyping this material node. Biological
+    mechanism: UNASSESSED_SCOPE.
+
+    causal_graphs[0].nodes[2]: GO0009060 active aerobic respiration, biological_process.
+    Exact identifier/aspect and label confirmed; no organism-specific implementation
+    is evaluated. Biological mechanism: UNASSESSED_SCOPE.
+
+    causal_graphs[0].nodes[3]: The disjunctive node explicitly represents alternative
+    processes in a broad NONMECHANISTIC class. Broadness alone is not a universal
+    mechanistic claim. Biological applicability and sufficiency are UNASSESSED_SCOPE.
+    Biological mechanism: UNASSESSED_SCOPE.
+
+    causal_graphs[0].nodes[4]: Label contains regulation, but description explicitly
+    denotes regulatory protein systems and REVIEWED_LABEL_ONLY rationale is present.
+    No automatic process-versus-protein finding or mandatory token accession. Biological
+    mechanism: UNASSESSED_SCOPE.
+
+    causal_graphs[0].nodes[5]: Label explicitly names pathways and description names
+    respiratory modules. The broad aggregate is not forced into a different category
+    solely because no one canonical route is listed. Biological regulation is UNASSESSED_SCOPE.
+    Biological mechanism: UNASSESSED_SCOPE.
+
+    causal_graphs[0].nodes[6]: Node label anaerobic metabolism genes and description
+    genes encoding functions denote genes, while node_type is PATHWAY. Native PATHWAY
+    means a pathway or pathway-like mechanism, and maintained distinction identifies
+    named multistep routes. The material/gene label is not that represented process/route.
+    Flag the internal identity/type inconsistency without specifying genes, a replacement
+    pathway, or a corrected mechanism. Biological mechanism: UNASSESSED_SCOPE.
+
+    causal_graphs[0].nodes[7]: CHEBI17632 resolves to nitrate, formula NO3 and charge-1.
+    Exact chemical identity verified. Its use under process-only positive regulation
+    is a separate external relation issue; no biological mechanism is assessed. Biological
+    mechanism: UNASSESSED_SCOPE.
+
+    causal_graphs[0].nodes[8]: Description and label denote a protein complex actor,
+    and REVIEWED_LABEL_ONLY rationale is explicit. No instance accession is asserted
+    or required. All functional/host-context assertions remain UNASSESSED_SCOPE. Biological
+    mechanism: UNASSESSED_SCOPE.'
+- assessment_id: relations
+  area: consistency
+  topic: 'Native checklist: all eight documentary edge roles'
+  outcome: concern
+  target_ids:
+  - METPO:1000612
+  summary: Edge1 uses ROenables for an availability/input role rather than an actor
+    executing a process; broad material-domain compatibility is retained. Edge6 assigns
+    process regulation to a material chemical subject. Current edge7 is formally compatible
+    after a prior correction. Unassigned predicates impose no invented external constraint.
+    These assessments do not validate or improve any biological mechanism.
+  evidence_ids:
+  - ro
+  - node-edges
+  - owners
+  - prior-correction
+  details: 'causal_graphs[0].edges[0]: No predicate_id asserted. Native free-text
+    trait -> chemical relation has no imported formal domain/range constraint to violate.
+    Its biological interpretation remains unassessed. Biological mechanism: UNASSESSED_SCOPE.
+
+    causal_graphs[0].edges[1]: RO2327 inherited material/process types alone admit
+    CHEMICAL -> BIOLOGICAL_PROCESS. Its stronger textual actor/executor meaning is
+    not the current availability/input role. This is a semantic role mismatch, not
+    a claim that all chemical enablers are forbidden or that a reasoner found inconsistency.
+    Biological mechanism: UNASSESSED_SCOPE.
+
+    causal_graphs[0].edges[2]: No predicate_id; trait -> alternative process is a
+    class/context assertion. No compulsory grounding or detailed biological pathway
+    judgment. Biological mechanism: UNASSESSED_SCOPE.
+
+    causal_graphs[0].edges[3]: No predicate_id; protein aggregate -> chemical wording
+    carries no asserted external type constraint. Regulatory mechanism/efficacy entirely
+    unassessed. Biological mechanism: UNASSESSED_SCOPE.
+
+    causal_graphs[0].edges[4]: No predicate_id; protein -> pathway has no claimed
+    external domain/range error. Existing regulatory route is not checked or corrected.
+    Biological mechanism: UNASSESSED_SCOPE.
+
+    causal_graphs[0].edges[5]: No predicate_id; edge object is the node whose material
+    gene label conflicts with PATHWAY type. This is covered by node6 representation
+    precision, not a separate biological induction finding. Biological mechanism:
+    UNASSESSED_SCOPE.
+
+    causal_graphs[0].edges[6]: RO2213 inherits explicit BFO process subject/object
+    roles via RO2211. Nitrate is CHEMICAL material, so the subject does not express
+    a regulatory process. The object description explicitly limits this statement
+    to one branch of the alternative-process node; do not invent a claim that nitrate
+    enables fermentation. Biological mechanism: UNASSESSED_SCOPE.
+
+    causal_graphs[0].edges[7]: Current protein actor -> GO biological process shape
+    fits RO2327 actor/executor roles. Prior migration fixed the old protein object;
+    do not re-report the historical state as current. This is only formal compatibility;
+    the actual biochemical, hypoxia or host-survival claim is UNASSESSED_SCOPE. Biological
+    mechanism: UNASSESSED_SCOPE.'
+- assessment_id: bibliography
+  area: evidence
+  topic: 'Native checklist: eight source identities and thirteen placements'
+  outcome: concern
+  target_ids:
+  - METPO:1000612
+  summary: All eight bibliographic identities resolve. Their source contexts are preserved
+    without converting titles, abstracts or organism names into proof of detailed
+    causal edges. The B.subtilis nearest-source attribution is wrong; the E.coli note’s
+    nitrate specificity remains outside established source support. Complete field
+    inventory is not complete mechanistic literature review.
+  evidence_ids:
+  - bibliography
+  - source-receipts
+  - bsub-citation
+  - ecoli-canonical
+- assessment_id: quotations
+  area: evidence
+  topic: 'Native checklist: six literal snippet occurrences'
+  outcome: unknown
+  target_ids:
+  - METPO:1000612
+  summary: Two repeated quotations are exact in the CMI article title and one respiratory-review
+    quote is exact in its abstract. Three snippets remain unverified after body-access
+    failures or unavailable bodies. Title quotes are valid quotations, and abstract
+    misses do not establish nonliteral text in an unseen body.
+  evidence_ids:
+  - documentary-text
+  - publication-source3
+  - publication-source1
+  - documentary-bodies
+  - check-facultative-oxygen-snippets
+- assessment_id: biological-mechanisms
+  area: scope
+  topic: 'Native checklist: all eight detailed biological mechanisms'
+  outcome: unknown
+  target_ids:
+  - METPO:1000612
+  summary: UNASSESSED_SCOPE for every edge. Sources concern pathogen hypoxia, host
+    survival, respiratory regulation and intervention contexts. This review deliberately
+    does not assess causal sufficiency, detailed correctness, missing steps, transferable
+    fitness implications, experimental conditions or efficacy, and supplies no corrected
+    route, regulator target or intervention.
+  evidence_ids:
+  - bibliography
+  - grounding-ledger
+  - node-edges
+  details: 'causal_graphs[0].edges[0]: UNASSESSED_SCOPE; Bibliographic identity, source
+    study context and any literal snippet inspected; no mechanistic correctness, missing-step
+    reconstruction or optimization.
+
+    causal_graphs[0].edges[1]: UNASSESSED_SCOPE; Bibliographic identity, source study
+    context and any literal snippet inspected; no mechanistic correctness, missing-step
+    reconstruction or optimization.
+
+    causal_graphs[0].edges[2]: UNASSESSED_SCOPE; Bibliographic identity, source study
+    context and any literal snippet inspected; no mechanistic correctness, missing-step
+    reconstruction or optimization.
+
+    causal_graphs[0].edges[3]: UNASSESSED_SCOPE; Bibliographic identity, source study
+    context and any literal snippet inspected; no mechanistic correctness, missing-step
+    reconstruction or optimization.
+
+    causal_graphs[0].edges[4]: UNASSESSED_SCOPE; Bibliographic identity, source study
+    context and any literal snippet inspected; no mechanistic correctness, missing-step
+    reconstruction or optimization.
+
+    causal_graphs[0].edges[5]: UNASSESSED_SCOPE; Bibliographic identity, source study
+    context and any literal snippet inspected; no mechanistic correctness, missing-step
+    reconstruction or optimization.
+
+    causal_graphs[0].edges[6]: UNASSESSED_SCOPE; Bibliographic identity, source study
+    context and any literal snippet inspected; no mechanistic correctness, missing-step
+    reconstruction or optimization.
+
+    causal_graphs[0].edges[7]: UNASSESSED_SCOPE; Bibliographic identity, source study
+    context and any literal snippet inspected; no mechanistic correctness, missing-step
+    reconstruction or optimization.'
+- assessment_id: completeness
+  area: completeness
+  topic: 'Native checklist: whole-record documentary coverage'
+  outcome: supported
+  target_ids:
+  - METPO:1000612
+  summary: All fields, nine nodes, eight edges, two examples, eight references, thirteen
+    placements, six quotations and nine history events have documentary coverage.
+    Optional protein instances, discussions, datasets and pathway links are not required
+    merely to fill slots. Mechanistic completeness is expressly unassessed, not silently
+    passed.
+  evidence_ids:
+  - record
+  - node-edges
+  - bibliography
+  - capture
+- assessment_id: expression
+  area: evidence
+  topic: 'Native checklist: catalog applicability and bounded downstream omission'
+  outcome: supported
+  target_ids:
+  - METPO:1000612
+  summary: Both canonical organisms have catalog entries. Availability was assessed;
+    downstream gene/module queries were skipped for scope, not treated as no match
+    or unavailable data. Catalog membership supplies no phenotype or mechanism proof.
+  evidence_ids:
+  - expression
+  - runner
+- assessment_id: owners
+  area: ownership
+  topic: 'Native checklist: maintained mapping and historical correction owners'
+  outcome: concern
+  target_ids:
+  - METPO:1000612
+  summary: Wildcard enables/promotes mappings can restore the flagged relation assignments
+    if IDs alone are removed. The populated-ID skip separates present validation from
+    actual semantic repair. The historical range migration explains current edge7
+    and is not a basis for repeating a fixed error or proposing a new biological route.
+  evidence_ids:
+  - owners
+  - prior-correction
+  - native-policy
+- assessment_id: audit
+  area: provenance
+  topic: 'Native checklist: history and human scientific acceptance linkage'
+  outcome: concern
+  target_ids:
+  - METPO:1000612
+  summary: Nine events disclose eight AI-assisted changes and one automated seed.
+    Ignored-inclusive local searches and exact target-list inspection do not link
+    a human scientific acceptance. This is a bounded provenance gap; outside acceptance
+    remains unknown. Automated correction, native validation and this documentary
+    review are not human sign-off.
+  evidence_ids:
+  - provenance
+  - provenance-root
+  - native-policy
+- assessment_id: native-checks
+  area: schema
+  topic: 'Native checklist: actual focused execution and historical check reuse'
+  outcome: supported
+  target_ids:
+  - METPO:1000612
+  summary: Focused LinkML/strict/snippet commands passed with the snippet limitations
+    retained. Common historical diagnostics and B4 QC are reused only with documented
+    unchanged inputs, original failures/skips and original times. None certify external
+    ontology meanings or the unassessed mechanisms.
+  evidence_ids:
+  - check-facultative-oxygen-validate
+  - check-facultative-oxygen-strict
+  - check-facultative-oxygen-snippets
+  - check-batch004-qc
+  - reuse
+  - reuse-independent
+findings:
+- finding_id: chemical-relation-roles
+  issue_key: facultative-oxygen-preference-chemical-relation-roles
+  category: grounding
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Imported relation meanings disagree with the represented chemical roles
+  description: Edge1 assigns RO:0002327 enables to molecular oxygen as an available
+    input. Its broad inherited material-subject/process-object typing is compatible,
+    but its definition requires a subject capable of and acting to execute the process;
+    the current availability statement does not assert that actor role. This is a
+    semantic role mismatch, not a blanket exclusion of chemicals. Separately, edge6
+    assigns RO:0002213 positively regulates to material nitrate, whereas its RO:0002211
+    ancestor explicitly requires a process subject and object. These are documentary
+    relation mismatches, not a verdict on biological truth or a reasoner result. Wildcard
+    mappings can restore both assignments after ID-only removal.
+  target_ids:
+  - METPO:1000612
+  field_paths:
+  - causal_graphs[0].edges[1].predicate_id
+  - causal_graphs[0].edges[6].predicate_id
+  evidence_ids:
+  - ro
+  - node-edges
+  - owners
+  - record
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/facultative_oxygen_preference.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: mappings/predicate_grounding.tsv
+    role: Wildcard enables row9 and promotes row63
+  - repository: CultureBotAI/TraitMech
+    path: scripts/ground_causal_predicates.py
+    role: Existing-ID skip and endpoint gate owner
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: major
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: canonical-bsubtilis-source-attribution
+  issue_key: facultative-oxygen-preference-canonical-bsubtilis-source-attribution
+  category: evidence
+  severity: major
+  status: open
+  certainty: confirmed
+  title: The Bacillus subtilis example cites an Escherichia coli paper
+  description: canonical_examples[1] names NCBITaxon1423 Bacillus subtilis but cites
+    DOI10.3390/ijms25021277. Official metadata and the actual complete article identify
+    an E.coli study; neither Bacillus nor subtilis appears in extracted whole-article
+    text, including body, references and metadata. The attached source therefore does
+    not substantiate the named organism example. This is a documentary organism/source
+    attribution mismatch, not a claim the B.subtilis taxon or generic phenotype is
+    false. Detailed source mechanisms and any replacement mechanism remain unassessed.
+  target_ids:
+  - METPO:1000612
+  field_paths:
+  - canonical_examples[1].reference
+  - canonical_examples[1].note
+  evidence_ids:
+  - bsub-citation
+  - documentary-text
+  - live-identities
+  - bibliography
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/facultative_oxygen_preference.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: scripts/backfill_canonical_examples_444.py
+    role: Canonical-example backfill provenance; source attribution still needs independent
+      verification
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: major
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: genes-typed-pathway
+  issue_key: facultative-oxygen-preference-genes-typed-pathway
+  category: representation
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: A node describing genes is typed as a pathway
+  description: Node6 has label anaerobic metabolism genes and describes genes encoding
+    functions, but node_type is PATHWAY. These words denote genetic material rather
+    than a pathway or pathway-like mechanism under the native model. This is a bounded
+    internal representation mismatch; the edge’s biological regulation, gene targets
+    and suitable replacement pathway are deliberately unassessed. No correction is
+    chosen merely to make a validator pass.
+  target_ids:
+  - METPO:1000612
+  field_paths:
+  - causal_graphs[0].nodes[6].label
+  - causal_graphs[0].nodes[6].node_type
+  - causal_graphs[0].nodes[6].description
+  evidence_ids:
+  - node-edges
+  - native-policy
+  - record
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/facultative_oxygen_preference.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: minor
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: human-acceptance-link
+  issue_key: facultative-oxygen-preference-human-acceptance-link
+  category: provenance
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Human scientific acceptance is not linked locally
+  description: The record is REVIEWED and its nine events disclose eight AI-assisted
+    changes plus one automated seed. Bounded ignored-inclusive repository searches
+    and matching structured target-list inspection found no target-specific human
+    scientific acceptance link. The historical range correction does not supply such
+    acceptance. The native status gate requires it; this is a local documentary gap,
+    not proof no human reviewed the record privately or remotely.
+  target_ids:
+  - METPO:1000612
+  field_paths:
+  - mapping_status
+  - curation_history
+  evidence_ids:
+  - provenance
+  - provenance-root
+  - native-policy
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/facultative_oxygen_preference.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: minor
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+actions:
+- action_id: reconcile-relation-documentation
+  description: In separately authorized documentary curation, reconcile the asserted
+    relations with the existing endpoint meanings and their maintained mapping owners.
+  finding_ids:
+  - chemical-relation-roles
+  target_ids:
+  - METPO:1000612
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/facultative_oxygen_preference.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: mappings/predicate_grounding.tsv
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: scripts/ground_causal_predicates.py
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - Distinguish ROenables actor/executor meaning from mere material-domain compatibility,
+    and ROpositive-regulation process domain from a material input.
+  - Review wildcard recurrence rather than clearing identifiers alone; do not invent
+    replacement identifiers or retype existing material solely to preserve a predicate.
+  - Do not reconstruct a pathogen pathway, recommend a regulator target, intervention,
+    culture condition or efficacy improvement. Biological mechanisms remain unassessed.
+  - After separately authorized edits, use guarded writes, append-only record/repository
+    history, focused LinkML/strict/source checks, maintained graph/mapping/term checks,
+    applicable product/history validation and just qc; regenerate affected outputs
+    through maintained recipes.
+- action_id: reconcile-example-attribution
+  description: Reconcile the B.subtilis example’s organism and attached documentary
+    support through the established curation process.
+  finding_ids:
+  - canonical-bsubtilis-source-attribution
+  target_ids:
+  - METPO:1000612
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/facultative_oxygen_preference.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: scripts/backfill_canonical_examples_444.py
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - The retained citation actually names and supports the retained organism example
+    at the stated generic phenotype scope; a title-only guess or provider report is
+    insufficient.
+  - Keep taxon identity separate from source attribution. Do not infer phenotype absence
+    or reuse the E.coli article as B.subtilis evidence.
+  - No detailed mechanism, new experimental target or intervention is needed for this
+    documentary reconciliation; preserve the existing scientific scope limits and
+    validate citation/record provenance after authorized changes.
+- action_id: clarify-node-identity
+  description: Resolve node6’s label/description/type disagreement at the documentary
+    representation level.
+  finding_ids:
+  - genes-typed-pathway
+  target_ids:
+  - METPO:1000612
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/facultative_oxygen_preference.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - The retained label, description and native category denote the same kind of entity.
+  - Do not supply a replacement pathway, gene target or biological design as part
+    of this review. Any later scientific mechanism work remains separately scoped.
+  - Preserve AI disclosure and guarded history; use the native strict/model checks
+    after authorized edits.
+- action_id: link-human-acceptance
+  description: Locate and link existing human scientific acceptance or obtain it through
+    the established process, preserving history and reassessing status if needed.
+  finding_ids:
+  - human-acceptance-link
+  target_ids:
+  - METPO:1000612
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/facultative_oxygen_preference.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - Acceptance identifies the reviewed revision and actual scientific scope, including
+    mechanisms not assessed by this documentary review.
+  - AI history, structural validation and this review do not substitute for human
+    scientific acceptance; retain append-only provenance.
+limitations:
+- Scientific review here means inspected generic phenotype definition, source identity/organism
+  attribution, ontology semantics and literal quotations. All eight detailed biological
+  mechanisms, causal sufficiency, missing steps and fitness/efficacy implications
+  are UNASSESSED_SCOPE. Full documentary field coverage is not full biological certification.
+- Two complete article XMLs were used only for bounded organism attribution and terminology
+  checks. No full methods, supplements, regulator network, pathway reconstruction,
+  procedure or intervention review was performed.
+- The cited B.subtilis article is demonstrably E.coli-focused and has no Bacillus/subtilis
+  mention in retrieved whole XML. This establishes a nearest-source mismatch without
+  establishing that the species lacks the trait or supplying a replacement mechanism.
+- The E.coli canonical source provides positive core example context, but nitrate
+  specificity in its note is not established by the inspected article, whose extracted
+  text has no nitrate mention. That bounded support limit is retained without adding
+  a corrected route or declaring the core example invalid.
+- Three snippets are exact at explicitly identified title/abstract surfaces. Three
+  remain unverified. HTTP500 and browser challenges are not article bodies and do
+  not demonstrate that wording is absent from inaccessible text.
+- The source on generic facultative growth has infection context, but only its explicit
+  generic definition and literal title wording support this review. Pathogen-specific
+  survival, virulence and intervention conclusions were neither adopted nor evaluated.
+- ROenables admits material subjects; edge1 is an actor/executor versus input-role
+  mismatch, not a chemical-domain exclusion. Edge6 separately conflicts with an inherited
+  process domain. No formal reasoner or native YAML validation failure is claimed.
+- Pinned METPO identity and cached RO bytes retain hashes and original read/reuse
+  times. Fresh GO/ChEBI/NCBI identity responses retain actual09:57:47 acquisition
+  times. No unseen newer ontology release is certified.
+- Common diagnostics, B3 history validation and B4 QC retain original times, failed
+  attempts, skips, warnings and unchanged-input limits. They were not freshly rerun
+  as B5 scientific mechanism checks.
+- Both canonical organisms have expression-catalog entries. Downstream gene/module
+  queries were deliberately skipped for scope, not misreported as data absence or
+  tool unavailability; catalog membership is not phenotype proof.
+- Human acceptance outside the declared ignored-inclusive local searches remains unknown.
+  This documentary review does not constitute human scientific sign-off.
+- No record, mapping, history or generated product was edited. No paid provider call,
+  corrected biological route, molecular target, protocol, intervention or organism
+  optimization was performed.
+notes:
+- 'Four findings: two major and two minor. Node and edge indices are zero-based.'
+- Native60-input capture09:54:04–06Z followed full target read; final grounding comparison
+  confirmed every captured hash unchanged09:59:28.656582Z.
+- Documentary source ledger completed09:59:27.124067Z, SHA256f15046b746b75170cda9bb62d496072a846561b7e2cf5b323f0f5861d7dba191.
+  Grounding ledger completed09:59:28.657029Z. Source acquisition times remain distinct
+  from final serialization.
+- Source count is8 original references and13 placements. Two canonical examples, two
+  reviewed-label-only proteins, zero protein instances. History has9 events:8AI-assisted
+  plus1automated seed.
+- Detailed graph biology remains UNASSESSED_SCOPE on every edge even where identifiers
+  and actor/process categories are formally compatible. The historical edge7 range
+  correction is contextual provenance, not a current defect or mechanism endorsement.
+tags:
+- record-review
+- facultative-oxygen-preference
+- environment
+- needs-curation
+```
