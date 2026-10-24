@@ -15,6 +15,7 @@ synonyms:
   source: DOI:10.1038/35081051
 evidence:
 - reference: DOI:10.1126/science.289.5486.1902
+  snippet: bound retinal to form an active, light-driven proton pump
   notes: Béjà et al. identified proteorhodopsin, a retinal-binding light-driven proton
     pump in an uncultivated marine bacterium, as evidence for a new type of phototrophy
     in the sea.
@@ -289,4 +290,12 @@ curation_history:
   action: REFRESH_UNIPROT_ENTRY_VERSION
   changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
     UniProtKB:Q9F7P4 (97 -> 98 on proteorhodopsin).'
+  llm_assisted: true
+- timestamp: '2026-10-24T02:45:00Z'
+  curator: claude
+  action: ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE
+  changes: 'Added verified verbatim snippet from DOI:10.1126/science.289.5486.1902
+    (already present on causal_graphs[0].edges[0].evidence[0]) to record-level evidence[0]
+    to match definition_source (Cycle 3 Stage 5 remediation of F-C3S4-DEF-SRC-004
+    in group G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).'
   llm_assisted: true

@@ -1,0 +1,46 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/curate_stage5_review_findings.py
+session:
+  id: 2026-10-24T024500Z-claude-code-c3s501
+  timestamp: '2026-10-24T02:45:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+    agent_tool: antigravity
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/2002
+  - https://github.com/CultureBotAI/TraitMech/issues/1981
+  - https://github.com/CultureBotAI/TraitMech/issues/1995
+  - https://github.com/CultureBotAI/TraitMech/issues/1982
+  - https://github.com/CultureBotAI/TraitMech/issues/1983
+  - https://github.com/CultureBotAI/TraitMech/issues/1984
+  - https://github.com/CultureBotAI/TraitMech/issues/1985
+  - https://github.com/CultureBotAI/TraitMech/issues/364
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  - curation_history
+  summary: Resolve all 17 actionable Cycle 3 Stage 4 open findings in group G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+    and map 5 deferred cohort findings to open GitHub issues
+  details: 'Executed Stage 5 (resolve_review_findings) of run mech-goal-sequence-20261019, cycle 3 consuming
+    Cycle 3 Stage 4 review evidence (reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-04/revision-0001/evidence.yaml,
+    sha256 d3d5bf0aa473a132220a4cbcc1b6acd2da713ea1bd257f6f4a5b164e4c6b6ee3). Grouped all 22 carried-forward
+    findings into 6 cause-and-ownership groups, deduplicated against all live GitHub issues, and
+    created/reused real GitHub issues (#2002 for resolved group G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS;
+    #1982, #1983, #1984, #1985, and #364 for the 5 deferred source-limited/upstream-blocked cohort groups).
+    Remediated all 17 open findings (F-C3S4-DEF-SRC-001 through F-C3S4-DEF-SRC-017) via guarded writer
+    scripts/curate_stage5_review_findings.py across photoorganoheterotrophic.yaml, oxidase_activity.yaml,
+    peritrichous.yaml, proteorhodopsin_phototrophy.yaml, starch_degradation.yaml,
+    three_hydroxypropionate_bicycle.yaml, ethanol_fermentation.yaml, lactic_acid_fermentation.yaml,
+    mixed_acid_fermentation.yaml, fermentative_hydrogen_production.yaml, calvin_benson_bassham_cycle.yaml,
+    dissimilatory_manganese_reduction.yaml, dissimilatory_nitrate_reduction_to_ammonium.yaml,
+    free_living.yaml, amphitrichous.yaml, lophotrichous.yaml, and monotrichous.yaml. Persisted fresh
+    structured review bundle reviews/structured/20261024T025000Z-cycle3-stage5-remediated-records-review/
+    confirming 0 open findings and verdict pass across all 17 remediated records, regenerated pages/,
+    and preserved all immutable Stage 4 review artifacts untouched.'

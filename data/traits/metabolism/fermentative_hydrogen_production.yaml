@@ -15,6 +15,8 @@ synonyms:
   source: DOI:10.1016/S0360-3199(02)00131-3
 evidence:
 - reference: DOI:10.3389/fmicb.2021.703525
+  snippet: fermentation is defined as an anaerobic bacterial redox process of an organic
+    substrate leading to different products
   notes: Review of fermentative energy conservation supports H2 production as a redox-balancing
     fermentation output via hydrogenases.
 - reference: DOI:10.1016/S0360-3199(02)00131-3
@@ -223,4 +225,13 @@ curation_history:
   action: REFRESH_UNIPROT_ENTRY_VERSION
   changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
     UniProtKB:O52683 (157 -> 158 on fefe_hydrogenase).'
+  llm_assisted: true
+- timestamp: '2026-10-24T02:45:00Z'
+  curator: claude
+  action: ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE
+  changes: 'Added verified verbatim snippet from DOI:10.3389/fmicb.2021.703525 (already
+    present on sibling ethanol_fermentation.yaml and lactic_acid_fermentation.yaml
+    causal_graphs[0].edges[0].evidence[0]) to record-level evidence[0] to match definition_source
+    (Cycle 3 Stage 5 remediation of F-C3S4-DEF-SRC-010 in group G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS,
+    issue #2002).'
   llm_assisted: true

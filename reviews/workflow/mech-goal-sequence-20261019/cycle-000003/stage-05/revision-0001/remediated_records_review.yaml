@@ -1,0 +1,1230 @@
+schema_version: 1.0.0
+review_id: 20261024T025000Z-cycle3-stage5-remediated-records-review
+kind: batch
+repository: CultureBotAI/TraitMech
+title: Cycle 3 Stage 5 post-remediation verification review of the 17 TraitRecord
+  files in group G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+started_at: '2026-10-24T02:45:00Z'
+finished_at: '2026-10-24T02:50:00Z'
+reviewer:
+  identity: antigravity
+  kind: agent
+  model: claude-opus-4-6
+  independence: self_review
+  independence_basis: Repository-local post-remediation record review verifying resolution
+    of the 17 Cycle 3 Stage 4 open findings (F-C3S4-DEF-SRC-001..F-C3S4-DEF-SRC-017)
+    under group G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS (#2002); separate from
+    independent PR adversarial review.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass
+scientific_review: true
+summary: 'Fresh post-remediation batch review of the 17 TraitRecord YAML files remediated
+  in Cycle 3 Stage 5 across physiology (photoorganoheterotrophic.yaml, oxidase_activity.yaml),
+  morphology (peritrichous.yaml, amphitrichous.yaml, lophotrichous.yaml, monotrichous.yaml),
+  ecology (free_living.yaml), and metabolism (proteorhodopsin_phototrophy.yaml, starch_degradation.yaml,
+  three_hydroxypropionate_bicycle.yaml, ethanol_fermentation.yaml, lactic_acid_fermentation.yaml,
+  mixed_acid_fermentation.yaml, fermentative_hydrogen_production.yaml, calvin_benson_bassham_cycle.yaml,
+  dissimilatory_manganese_reduction.yaml, dissimilatory_nitrate_reduction_to_ammonium.yaml)
+  under group G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS and GitHub issue #2002.
+  All 17 Cycle 3 Stage 4 open findings (F-C3S4-DEF-SRC-001..017) are verified as resolved
+  with contiguous verbatim snippets from their primary definition_source in record-level
+  evidence, append-only curation_history provenance, and 0 remaining open findings.'
+source:
+  git_revision: 41928219be300e175fd73dcb12ab332c30b3ad47
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/SKILL.md
+    sha256: 27f535d3f057d321c8b87c6506f2f35dd2d37fd005bcd5040b3e17269285075b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: bb03efa3bbd3748ee1dccf57612a6ce8fcc861f20eb57c33eb16e3ac1dd728bd
+    role: context
+  - path: CLAUDE.md
+    sha256: 4d328127022388e1affe9b71be24bc93944a971636d0d0ea902f6511e0b405c5
+    role: context
+  - path: DO_NOT_WORK.md
+    sha256: 9ae0b05cc06f4ce8938801287a568d535e471d06dda5e258fcdbbed222abf712
+    role: context
+  - path: conf/record_review.yaml
+    sha256: 5adc6244761fb2baf8a059d81f23b0c9b32a33f9426ab84094234c3ec417269d
+    role: context
+  - path: data/traits/ecology/free_living.yaml
+    sha256: e0674cc2e4719987a627e5ac55a318de9b292dabeedf1ba7d90be874cc4c8f02
+    role: target
+  - path: data/traits/metabolism/calvin_benson_bassham_cycle.yaml
+    sha256: 73e5ef7ca3f57b6f233ce9e6174fcaa7d9b010291707bb4eea487d33f7bc7c8d
+    role: target
+  - path: data/traits/metabolism/dissimilatory_manganese_reduction.yaml
+    sha256: 1671b8d23d83fdf2fe963d9ab6d6e769ef5d32c0e527a6f1164ebc3104797a0b
+    role: target
+  - path: data/traits/metabolism/dissimilatory_nitrate_reduction_to_ammonium.yaml
+    sha256: f2cf67177cee60525cc2c2e0329bcc60272ab29ce194ad4a2463dcbbf3fcfe1d
+    role: target
+  - path: data/traits/metabolism/ethanol_fermentation.yaml
+    sha256: eae16e9564e521df3967ae978f4cbe2ddfbbcec0f512157ea793a0fe46e502de
+    role: target
+  - path: data/traits/metabolism/fermentative_hydrogen_production.yaml
+    sha256: 41f68f5edfa95dbd458d94f7b22f0ea8ffb0aaa8dd401bbf6417c9508233a378
+    role: target
+  - path: data/traits/metabolism/lactic_acid_fermentation.yaml
+    sha256: 7d4084b958a170fa4b92ce461919a573c354aafe98f42b5911451ce6112960c0
+    role: target
+  - path: data/traits/metabolism/mixed_acid_fermentation.yaml
+    sha256: f17af160a3e0e468ea2e3df42be7109ab0ae9b246735c2efbeca2af4e7316b19
+    role: target
+  - path: data/traits/metabolism/proteorhodopsin_phototrophy.yaml
+    sha256: ba1b3c06195c6611377bf11bbfdf8a3e38ceb19ad8362afbeec5348a3876f220
+    role: target
+  - path: data/traits/metabolism/starch_degradation.yaml
+    sha256: 5435072c8eda7189305ec544eb763251bf637df7a74552466ce4129a0614fa20
+    role: target
+  - path: data/traits/metabolism/three_hydroxypropionate_bicycle.yaml
+    sha256: 8b90da8a719bd0abd551ac671ecb0310cb41e16c3c4c432dadcec7f4d386b790
+    role: target
+  - path: data/traits/morphology/amphitrichous.yaml
+    sha256: 5535714860714222ad6df366193fb628c22db14fd3da2922c07dee6f32137bab
+    role: target
+  - path: data/traits/morphology/lophotrichous.yaml
+    sha256: 3757280167b501a4e8fd712e33af85097e21313675bb1b90885103617ea2b30c
+    role: target
+  - path: data/traits/morphology/monotrichous.yaml
+    sha256: d3fd6cc99a002f42939840d6c48554b447253989d44287c2d48cbab571774ccf
+    role: target
+  - path: data/traits/morphology/peritrichous.yaml
+    sha256: 96156d8f8ac03de81bc53291a743d01a91837bd62b3789ffb8dd5d997cabd241
+    role: target
+  - path: data/traits/physiology/oxidase_activity.yaml
+    sha256: 9598fe35daf6c8c78e5415d06328608ae249e41cde3342c83e3d3ef94165558e
+    role: target
+  - path: data/traits/physiology/photoorganoheterotrophic.yaml
+    sha256: e1f418fb6102afe8062259f6c17b67224747e461671f8ef75f0571d376ea5d1e
+    role: target
+  - path: docs/record-review-profile.md
+    sha256: cac714488cad03263ca3847737d5f70d174d40b5be677a09e0c1d9c814d9bc6a
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/infrastructure/curate_stage5_review_findings/2026-10-24T024500Z-claude-code-c3s501.yaml
+    sha256: 433dd011cf3a4e4c25abfc42b013678a19428379dc3409166e83e04dace56d8c
+    role: context
+  - path: reviews/structured/20261023T235000Z-cycle3-stage4-corpus-record-and-cohort-review/review.yaml
+    sha256: b482bfe96444d86fba78d7c6a3fc56b50741a0ad5530084c81b9f1c97614db3c
+    role: context
+  - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-04/revision-0001/evidence.yaml
+    sha256: d3d5bf0aa473a132220a4cbcc1b6acd2da713ea1bd257f6f4a5b164e4c6b6ee3
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: scripts/curate_stage5_review_findings.py
+    sha256: 840268979a0b3af1a2ed15708587e376dcc446184f089121fb0f224fe14506b4
+    role: context
+  - path: src/traitmech/schema/traitmech.yaml
+    sha256: 46c47fc627b80ccbba1e8ab3fb6f2aee93bc2aef7aaf72fe9aadc3257f2c02dd
+    role: context
+  - path: tests/test_curate_stage5_review_findings.py
+    sha256: 35e9aebd42bc072e9bb77fb7f5bf05847391a78e5fcd7c5a6eead80ad51fc785
+    role: context
+scope:
+  description: Focused post-remediation review of all 17 TraitRecord YAML files modified
+    in Cycle 3 Stage 5 (resolve_review_findings) to resolve group G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+    (#2002).
+  selection: All 17 records with open findings carried forward from Cycle 3 Stage
+    4 review 20261023T235000Z-cycle3-stage4-corpus-record-and-cohort-review.
+  coverage: full
+  population_size: 17
+  reviewed_target_ids:
+  - METPO:1000659
+  - traitmech:000076
+  - traitmech:000060
+  - traitmech:000036
+  - traitmech:000115
+  - traitmech:000023
+  - traitmech:000028
+  - traitmech:000026
+  - traitmech:000027
+  - traitmech:000109
+  - traitmech:000020
+  - traitmech:000108
+  - traitmech:000030
+  - traitmech:000048
+  - traitmech:000059
+  - traitmech:000058
+  - traitmech:000057
+targets:
+- target_id: METPO:1000659
+  path: data/traits/physiology/photoorganoheterotrophic.yaml
+  label: photoorganoheterotrophic
+  record_class: TraitRecord
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/physiology/photoorganoheterotrophic.yaml
+    role: maintained TraitRecord YAML
+- target_id: traitmech:000076
+  path: data/traits/physiology/oxidase_activity.yaml
+  label: oxidase activity
+  record_class: TraitRecord
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/physiology/oxidase_activity.yaml
+    role: maintained TraitRecord YAML
+- target_id: traitmech:000060
+  path: data/traits/morphology/peritrichous.yaml
+  label: peritrichous
+  record_class: TraitRecord
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/morphology/peritrichous.yaml
+    role: maintained TraitRecord YAML
+- target_id: traitmech:000036
+  path: data/traits/metabolism/proteorhodopsin_phototrophy.yaml
+  label: proteorhodopsin phototrophy
+  record_class: TraitRecord
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/metabolism/proteorhodopsin_phototrophy.yaml
+    role: maintained TraitRecord YAML
+- target_id: traitmech:000115
+  path: data/traits/metabolism/starch_degradation.yaml
+  label: starch degradation
+  record_class: TraitRecord
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/metabolism/starch_degradation.yaml
+    role: maintained TraitRecord YAML
+- target_id: traitmech:000023
+  path: data/traits/metabolism/three_hydroxypropionate_bicycle.yaml
+  label: 3-hydroxypropionate bi-cycle
+  record_class: TraitRecord
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/metabolism/three_hydroxypropionate_bicycle.yaml
+    role: maintained TraitRecord YAML
+- target_id: traitmech:000028
+  path: data/traits/metabolism/ethanol_fermentation.yaml
+  label: ethanol fermentation
+  record_class: TraitRecord
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/metabolism/ethanol_fermentation.yaml
+    role: maintained TraitRecord YAML
+- target_id: traitmech:000026
+  path: data/traits/metabolism/lactic_acid_fermentation.yaml
+  label: lactic acid fermentation
+  record_class: TraitRecord
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/metabolism/lactic_acid_fermentation.yaml
+    role: maintained TraitRecord YAML
+- target_id: traitmech:000027
+  path: data/traits/metabolism/mixed_acid_fermentation.yaml
+  label: mixed acid fermentation
+  record_class: TraitRecord
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/metabolism/mixed_acid_fermentation.yaml
+    role: maintained TraitRecord YAML
+- target_id: traitmech:000109
+  path: data/traits/metabolism/fermentative_hydrogen_production.yaml
+  label: fermentative hydrogen production
+  record_class: TraitRecord
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/metabolism/fermentative_hydrogen_production.yaml
+    role: maintained TraitRecord YAML
+- target_id: traitmech:000020
+  path: data/traits/metabolism/calvin_benson_bassham_cycle.yaml
+  label: Calvin–Benson–Bassham cycle
+  record_class: TraitRecord
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/metabolism/calvin_benson_bassham_cycle.yaml
+    role: maintained TraitRecord YAML
+- target_id: traitmech:000108
+  path: data/traits/metabolism/dissimilatory_manganese_reduction.yaml
+  label: dissimilatory manganese reduction
+  record_class: TraitRecord
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/metabolism/dissimilatory_manganese_reduction.yaml
+    role: maintained TraitRecord YAML
+- target_id: traitmech:000030
+  path: data/traits/metabolism/dissimilatory_nitrate_reduction_to_ammonium.yaml
+  label: dissimilatory nitrate reduction to ammonium
+  record_class: TraitRecord
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/metabolism/dissimilatory_nitrate_reduction_to_ammonium.yaml
+    role: maintained TraitRecord YAML
+- target_id: traitmech:000048
+  path: data/traits/ecology/free_living.yaml
+  label: free-living
+  record_class: TraitRecord
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/free_living.yaml
+    role: maintained TraitRecord YAML
+- target_id: traitmech:000059
+  path: data/traits/morphology/amphitrichous.yaml
+  label: amphitrichous
+  record_class: TraitRecord
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/morphology/amphitrichous.yaml
+    role: maintained TraitRecord YAML
+- target_id: traitmech:000058
+  path: data/traits/morphology/lophotrichous.yaml
+  label: lophotrichous
+  record_class: TraitRecord
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/morphology/lophotrichous.yaml
+    role: maintained TraitRecord YAML
+- target_id: traitmech:000057
+  path: data/traits/morphology/monotrichous.yaml
+  label: monotrichous
+  record_class: TraitRecord
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/morphology/monotrichous.yaml
+    role: maintained TraitRecord YAML
+checks:
+- check_id: validate-strict
+  name: Strict LinkML schema and reference validation across all TraitRecord files
+  command: uv run python scripts/validate_strict.py
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - METPO:1000659
+  - traitmech:000076
+  - traitmech:000060
+  - traitmech:000036
+  - traitmech:000115
+  - traitmech:000023
+  - traitmech:000028
+  - traitmech:000026
+  - traitmech:000027
+  - traitmech:000109
+  - traitmech:000020
+  - traitmech:000108
+  - traitmech:000030
+  - traitmech:000048
+  - traitmech:000059
+  - traitmech:000058
+  - traitmech:000057
+  evidence_ids:
+  - ev-validate-strict
+  - ev-remediated-records
+  summary: All 1,130 TraitRecord YAML files (including all 17 Cycle 3 Stage 5 remediated
+    records) pass strict closed-mode LinkML validation with 0 errors.
+- check_id: audit-snippets
+  name: Evidence snippet structural and baseline ratchet audit
+  command: uv run python scripts/audit_evidence_snippets.py
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - METPO:1000659
+  - traitmech:000076
+  - traitmech:000060
+  - traitmech:000036
+  - traitmech:000115
+  - traitmech:000023
+  - traitmech:000028
+  - traitmech:000026
+  - traitmech:000027
+  - traitmech:000109
+  - traitmech:000020
+  - traitmech:000108
+  - traitmech:000030
+  - traitmech:000048
+  - traitmech:000059
+  - traitmech:000058
+  - traitmech:000057
+  evidence_ids:
+  - ev-snippet-audit
+  - ev-remediated-records
+  summary: All 17 newly added record-level evidence snippets carry contiguous >=12-char
+    verbatim quotes passing scripts/audit_evidence_snippets.py with 0 new findings.
+- check_id: stage5-writer-tests
+  name: Stage 5 guarded writer idempotency and postcondition unit tests
+  command: uv run pytest tests/test_curate_stage5_review_findings.py -v
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - METPO:1000659
+  - traitmech:000076
+  - traitmech:000060
+  - traitmech:000036
+  - traitmech:000115
+  - traitmech:000023
+  - traitmech:000028
+  - traitmech:000026
+  - traitmech:000027
+  - traitmech:000109
+  - traitmech:000020
+  - traitmech:000108
+  - traitmech:000030
+  - traitmech:000048
+  - traitmech:000059
+  - traitmech:000058
+  - traitmech:000057
+  evidence_ids:
+  - ev-stage5-writer
+  summary: All 6 unit tests in tests/test_curate_stage5_review_findings.py pass, confirming
+    DO_NOT_WORK protection, exact definition_source evidence alignment across all
+    27 remediated records (4 Cycle 1 + 6 Cycle 2 + 17 Cycle 3), zero UNQUOTED_DEFINITION_SOURCE
+    defects across the entire 1,130-record corpus, and dry-run/apply idempotency.
+- check_id: audit-writers
+  name: Guarded YAML writer safeguard audit
+  command: uv run python scripts/audit_writers.py
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - METPO:1000659
+  - traitmech:000076
+  - traitmech:000060
+  - traitmech:000036
+  - traitmech:000115
+  - traitmech:000023
+  - traitmech:000028
+  - traitmech:000026
+  - traitmech:000027
+  - traitmech:000109
+  - traitmech:000020
+  - traitmech:000108
+  - traitmech:000030
+  - traitmech:000048
+  - traitmech:000059
+  - traitmech:000058
+  - traitmech:000057
+  evidence_ids:
+  - ev-stage5-writer
+  summary: scripts/curate_stage5_review_findings.py satisfies all writer safeguards
+    (appends curation_history, has write safeguard, validates before write, wired
+    into justfile).
+evidence:
+- evidence_id: ev-prior-c3s4-review
+  kind: prior_review
+  reference: reviews/structured/20261023T235000Z-cycle3-stage4-corpus-record-and-cohort-review/review.yaml
+  locator: findings[0..16]
+  accessed_at: '2026-10-23T19:50:00Z'
+  support: supports
+  summary: Immutable Cycle 3 Stage 4 review bundle identifying the 17 open definition_source
+    evidence snippet findings (F-C3S4-DEF-SRC-001..017) with planned remediation actions
+    ACT-C3S4-DEF-SRC-001..017.
+  snapshot_sha256: b482bfe96444d86fba78d7c6a3fc56b50741a0ad5530084c81b9f1c97614db3c
+- evidence_id: ev-remediated-records
+  kind: record_content
+  reference: data/traits/physiology/photoorganoheterotrophic.yaml; data/traits/physiology/oxidase_activity.yaml;
+    data/traits/morphology/peritrichous.yaml; data/traits/metabolism/proteorhodopsin_phototrophy.yaml;
+    data/traits/metabolism/starch_degradation.yaml; data/traits/metabolism/three_hydroxypropionate_bicycle.yaml;
+    data/traits/metabolism/ethanol_fermentation.yaml; data/traits/metabolism/lactic_acid_fermentation.yaml;
+    data/traits/metabolism/mixed_acid_fermentation.yaml; data/traits/metabolism/fermentative_hydrogen_production.yaml;
+    data/traits/metabolism/calvin_benson_bassham_cycle.yaml; data/traits/metabolism/dissimilatory_manganese_reduction.yaml;
+    data/traits/metabolism/dissimilatory_nitrate_reduction_to_ammonium.yaml; data/traits/ecology/free_living.yaml;
+    data/traits/morphology/amphitrichous.yaml; data/traits/morphology/lophotrichous.yaml;
+    data/traits/morphology/monotrichous.yaml
+  locator: definition_source, evidence, curation_history
+  accessed_at: '2026-10-23T19:52:00Z'
+  support: supports
+  summary: All 17 remediated TraitRecord YAML files now include a verified verbatim
+    snippet for their declared definition_source in record-level evidence and an append-only
+    ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE curation_history event.
+- evidence_id: ev-stage5-writer
+  kind: validation
+  reference: scripts/curate_stage5_review_findings.py; tests/test_curate_stage5_review_findings.py
+  locator: process_all
+  accessed_at: '2026-10-23T19:53:00Z'
+  support: supports
+  summary: Guarded writer script and unit test suite verifying closed-mode LinkML
+    validation, DO_NOT_WORK exclusion, and idempotent remediation across all 27 target
+    records (4 Cycle 1 + 6 Cycle 2 + 17 Cycle 3).
+  snapshot_sha256: 9733d9763f65f4ee6ce7dd6116dd6eeafdb4a252b6a6d1077e131c23543ddfd5
+- evidence_id: ev-validate-strict
+  kind: validation
+  reference: scripts/validate_strict.py
+  locator: reports/instance_validation_failures.tsv
+  accessed_at: '2026-10-23T19:54:00Z'
+  support: supports
+  summary: Closed-mode LinkML schema and identifier validation passes with 0 errors
+    across all 1,130 TraitRecord files.
+- evidence_id: ev-snippet-audit
+  kind: validation
+  reference: scripts/audit_evidence_snippets.py
+  locator: conf/evidence_snippet_baseline.tsv
+  accessed_at: '2026-10-23T19:54:00Z'
+  support: supports
+  summary: All 17 new record-level evidence snippets pass contiguous verbatim quote
+    checks with 0 new warnings and eliminate all 17 UNQUOTED_DEFINITION_SOURCE findings
+    from Cycle 3 Stage 4.
+assessments:
+- assessment_id: assess-remediated-evidence-alignment
+  area: evidence
+  topic: Verification of record-level definition_source evidence verbatim snippets
+    across the 17 remediated records
+  outcome: supported
+  summary: All 17 records identified with open findings in Cycle 3 Stage 4 now carry
+    a verified verbatim snippet for their primary definition_source directly in record-level
+    evidence.
+  target_ids:
+  - METPO:1000659
+  - traitmech:000076
+  - traitmech:000060
+  - traitmech:000036
+  - traitmech:000115
+  - traitmech:000023
+  - traitmech:000028
+  - traitmech:000026
+  - traitmech:000027
+  - traitmech:000109
+  - traitmech:000020
+  - traitmech:000108
+  - traitmech:000030
+  - traitmech:000048
+  - traitmech:000059
+  - traitmech:000058
+  - traitmech:000057
+  evidence_ids:
+  - ev-prior-c3s4-review
+  - ev-remediated-records
+  - ev-snippet-audit
+  metrics:
+  - name: remediated_open_findings_rate
+    value: 1.0
+    unit: ratio
+    definition: Fraction of Cycle 3 Stage 4 open findings in group G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+      verified as resolved with verbatim definition_source evidence.
+    denominator: 17
+    minimum: 0.0
+    maximum: 1.0
+  details: Each of the 17 remediated records was re-inspected against .claude/skills/review-yaml-record/SKILL.md
+    and verified to carry a contiguous verbatim snippet for its primary definition_source
+    in record-level evidence, eliminating every remaining UNQUOTED_DEFINITION_SOURCE
+    defect across all 1,130 records.
+- assessment_id: assess-remediated-schema-and-provenance
+  area: provenance
+  topic: Schema validity, curation_history provenance, and writer guardrails on remediated
+    records
+  outcome: supported
+  summary: 'All 17 remediated records pass strict closed-mode LinkML validation, preserve
+    existing canonical_examples, causal_graphs, and UniProtKB protein_examples untouched,
+    and record append-only ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE curation_history
+    entries referencing issue #2002.'
+  target_ids:
+  - METPO:1000659
+  - traitmech:000076
+  - traitmech:000060
+  - traitmech:000036
+  - traitmech:000115
+  - traitmech:000023
+  - traitmech:000028
+  - traitmech:000026
+  - traitmech:000027
+  - traitmech:000109
+  - traitmech:000020
+  - traitmech:000108
+  - traitmech:000030
+  - traitmech:000048
+  - traitmech:000059
+  - traitmech:000058
+  - traitmech:000057
+  evidence_ids:
+  - ev-remediated-records
+  - ev-stage5-writer
+  - ev-validate-strict
+findings:
+- finding_id: F-C3S4-DEF-SRC-001
+  issue_key: photoorganoheterotrophic-definition-source-evidence
+  category: evidence
+  severity: minor
+  status: resolved
+  certainty: confirmed
+  title: photoorganoheterotrophic.yaml now includes a verbatim snippet for definition_source
+    DOI:10.1016/B978-012373944-5.00083-3 in record-level evidence[2]
+  description: 'Resolved Cycle 3 Stage 4 open finding F-C3S4-DEF-SRC-001 on data/traits/physiology/photoorganoheterotrophic.yaml
+    (METPO:1000659): promoted verified verbatim snippet (''use of light'') from causal_graphs[0].edges[0].evidence[0]
+    to record-level evidence[2] for definition_source DOI:10.1016/B978-012373944-5.00083-3
+    and appended curation_history entry via scripts/curate_stage5_review_findings.py.'
+  target_ids:
+  - METPO:1000659
+  field_paths:
+  - definition_source
+  - evidence
+  - curation_history
+  evidence_ids:
+  - ev-prior-c3s4-review
+  - ev-remediated-records
+  - ev-stage5-writer
+  - ev-snippet-audit
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/physiology/photoorganoheterotrophic.yaml
+    role: maintained TraitRecord YAML
+  disposition_reason: 'Resolved in Cycle 3 Stage 5 (resolve_review_findings) under
+    group G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS and GitHub issue #2002 via
+    guarded writer scripts/curate_stage5_review_findings.py.'
+  previous_occurrences:
+  - repository: CultureBotAI/TraitMech
+    review_id: 20261023T235000Z-cycle3-stage4-corpus-record-and-cohort-review
+    finding_id: F-C3S4-DEF-SRC-001
+  external_issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/2002
+- finding_id: F-C3S4-DEF-SRC-002
+  issue_key: oxidase-activity-definition-source-snippet
+  category: evidence
+  severity: minor
+  status: resolved
+  certainty: confirmed
+  title: oxidase_activity.yaml now includes a verbatim snippet for definition_source
+    DOI:10.3390/microorganisms10050926 in record-level evidence[0]
+  description: 'Resolved Cycle 3 Stage 4 open finding F-C3S4-DEF-SRC-002 on data/traits/physiology/oxidase_activity.yaml
+    (traitmech:000076): promoted verified verbatim snippet (''Cytochrome c oxidases
+    of the heme–copper oxygen reductase family A'') from causal_graphs[0].edges[9].evidence[0]
+    to record-level evidence[0] for definition_source DOI:10.3390/microorganisms10050926
+    and appended curation_history entry via scripts/curate_stage5_review_findings.py.'
+  target_ids:
+  - traitmech:000076
+  field_paths:
+  - definition_source
+  - evidence
+  - curation_history
+  evidence_ids:
+  - ev-prior-c3s4-review
+  - ev-remediated-records
+  - ev-stage5-writer
+  - ev-snippet-audit
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/physiology/oxidase_activity.yaml
+    role: maintained TraitRecord YAML
+  disposition_reason: 'Resolved in Cycle 3 Stage 5 (resolve_review_findings) under
+    group G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS and GitHub issue #2002 via
+    guarded writer scripts/curate_stage5_review_findings.py.'
+  previous_occurrences:
+  - repository: CultureBotAI/TraitMech
+    review_id: 20261023T235000Z-cycle3-stage4-corpus-record-and-cohort-review
+    finding_id: F-C3S4-DEF-SRC-002
+  external_issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/2002
+- finding_id: F-C3S4-DEF-SRC-003
+  issue_key: peritrichous-definition-source-snippet
+  category: evidence
+  severity: minor
+  status: resolved
+  certainty: confirmed
+  title: peritrichous.yaml now includes a verbatim snippet for definition_source DOI:10.1093/femsre/fuv034
+    in record-level evidence[0]
+  description: 'Resolved Cycle 3 Stage 4 open finding F-C3S4-DEF-SRC-003 on data/traits/morphology/peritrichous.yaml
+    (traitmech:000060): promoted verified verbatim snippet (''five to six flagellar
+    filaments distributed over the cell body'') from causal_graphs[0].edges[2].evidence[0]
+    to record-level evidence[0] for definition_source DOI:10.1093/femsre/fuv034 and
+    appended curation_history entry via scripts/curate_stage5_review_findings.py.'
+  target_ids:
+  - traitmech:000060
+  field_paths:
+  - definition_source
+  - evidence
+  - curation_history
+  evidence_ids:
+  - ev-prior-c3s4-review
+  - ev-remediated-records
+  - ev-stage5-writer
+  - ev-snippet-audit
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/morphology/peritrichous.yaml
+    role: maintained TraitRecord YAML
+  disposition_reason: 'Resolved in Cycle 3 Stage 5 (resolve_review_findings) under
+    group G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS and GitHub issue #2002 via
+    guarded writer scripts/curate_stage5_review_findings.py.'
+  previous_occurrences:
+  - repository: CultureBotAI/TraitMech
+    review_id: 20261023T235000Z-cycle3-stage4-corpus-record-and-cohort-review
+    finding_id: F-C3S4-DEF-SRC-003
+  external_issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/2002
+- finding_id: F-C3S4-DEF-SRC-004
+  issue_key: proteorhodopsin-phototrophy-definition-source-snippet
+  category: evidence
+  severity: minor
+  status: resolved
+  certainty: confirmed
+  title: proteorhodopsin_phototrophy.yaml now includes a verbatim snippet for definition_source
+    DOI:10.1126/science.289.5486.1902 in record-level evidence[0]
+  description: 'Resolved Cycle 3 Stage 4 open finding F-C3S4-DEF-SRC-004 on data/traits/metabolism/proteorhodopsin_phototrophy.yaml
+    (traitmech:000036): promoted verified verbatim snippet (''bound retinal to form
+    an active, light-driven proton pump'') from causal_graphs[0].edges[0].evidence[0]
+    to record-level evidence[0] for definition_source DOI:10.1126/science.289.5486.1902
+    and appended curation_history entry via scripts/curate_stage5_review_findings.py.'
+  target_ids:
+  - traitmech:000036
+  field_paths:
+  - definition_source
+  - evidence
+  - curation_history
+  evidence_ids:
+  - ev-prior-c3s4-review
+  - ev-remediated-records
+  - ev-stage5-writer
+  - ev-snippet-audit
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/metabolism/proteorhodopsin_phototrophy.yaml
+    role: maintained TraitRecord YAML
+  disposition_reason: 'Resolved in Cycle 3 Stage 5 (resolve_review_findings) under
+    group G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS and GitHub issue #2002 via
+    guarded writer scripts/curate_stage5_review_findings.py.'
+  previous_occurrences:
+  - repository: CultureBotAI/TraitMech
+    review_id: 20261023T235000Z-cycle3-stage4-corpus-record-and-cohort-review
+    finding_id: F-C3S4-DEF-SRC-004
+  external_issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/2002
+- finding_id: F-C3S4-DEF-SRC-005
+  issue_key: starch-degradation-definition-source-snippet
+  category: evidence
+  severity: minor
+  status: resolved
+  certainty: confirmed
+  title: starch_degradation.yaml now includes a verbatim snippet for definition_source
+    DOI:10.1016/S0168-1656(01)00407-2 in record-level evidence[0]
+  description: 'Resolved Cycle 3 Stage 4 open finding F-C3S4-DEF-SRC-005 on data/traits/metabolism/starch_degradation.yaml
+    (traitmech:000115): promoted verified verbatim snippet (''the use of starch-converting
+    enzymes in the production of maltodextrin, modified starches, or glucose and fructose
+    syrups'') from causal_graphs[0].edges[0].evidence[0] to record-level evidence[0]
+    for definition_source DOI:10.1016/S0168-1656(01)00407-2 and appended curation_history
+    entry via scripts/curate_stage5_review_findings.py.'
+  target_ids:
+  - traitmech:000115
+  field_paths:
+  - definition_source
+  - evidence
+  - curation_history
+  evidence_ids:
+  - ev-prior-c3s4-review
+  - ev-remediated-records
+  - ev-stage5-writer
+  - ev-snippet-audit
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/metabolism/starch_degradation.yaml
+    role: maintained TraitRecord YAML
+  disposition_reason: 'Resolved in Cycle 3 Stage 5 (resolve_review_findings) under
+    group G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS and GitHub issue #2002 via
+    guarded writer scripts/curate_stage5_review_findings.py.'
+  previous_occurrences:
+  - repository: CultureBotAI/TraitMech
+    review_id: 20261023T235000Z-cycle3-stage4-corpus-record-and-cohort-review
+    finding_id: F-C3S4-DEF-SRC-005
+  external_issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/2002
+- finding_id: F-C3S4-DEF-SRC-006
+  issue_key: three-hydroxypropionate-bicycle-definition-source-snippet
+  category: evidence
+  severity: minor
+  status: resolved
+  certainty: confirmed
+  title: three_hydroxypropionate_bicycle.yaml now includes a verbatim snippet for
+    definition_source DOI:10.1128/AEM.02473-10 in record-level evidence[0]
+  description: 'Resolved Cycle 3 Stage 4 open finding F-C3S4-DEF-SRC-006 on data/traits/metabolism/three_hydroxypropionate_bicycle.yaml
+    (traitmech:000023): promoted verified verbatim snippet (''The 3-hydroxypropionate
+    (Fuchs-Holo) bi-cycle. Enzymes: 1, acetyl-CoA carboxylase'') from causal_graphs[0].edges[9].evidence[0]
+    to record-level evidence[0] for definition_source DOI:10.1128/AEM.02473-10 and
+    appended curation_history entry via scripts/curate_stage5_review_findings.py.'
+  target_ids:
+  - traitmech:000023
+  field_paths:
+  - definition_source
+  - evidence
+  - curation_history
+  evidence_ids:
+  - ev-prior-c3s4-review
+  - ev-remediated-records
+  - ev-stage5-writer
+  - ev-snippet-audit
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/metabolism/three_hydroxypropionate_bicycle.yaml
+    role: maintained TraitRecord YAML
+  disposition_reason: 'Resolved in Cycle 3 Stage 5 (resolve_review_findings) under
+    group G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS and GitHub issue #2002 via
+    guarded writer scripts/curate_stage5_review_findings.py.'
+  previous_occurrences:
+  - repository: CultureBotAI/TraitMech
+    review_id: 20261023T235000Z-cycle3-stage4-corpus-record-and-cohort-review
+    finding_id: F-C3S4-DEF-SRC-006
+  external_issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/2002
+- finding_id: F-C3S4-DEF-SRC-007
+  issue_key: ethanol-fermentation-definition-source-snippet
+  category: evidence
+  severity: minor
+  status: resolved
+  certainty: confirmed
+  title: ethanol_fermentation.yaml now includes a verbatim snippet for definition_source
+    DOI:10.3389/fmicb.2021.703525 in record-level evidence[1]
+  description: 'Resolved Cycle 3 Stage 4 open finding F-C3S4-DEF-SRC-007 on data/traits/metabolism/ethanol_fermentation.yaml
+    (traitmech:000028): promoted verified verbatim snippet (''fermentation is defined
+    as an anaerobic bacterial redox process of an organic substrate leading to different
+    products'') from causal_graphs[0].edges[0].evidence[0] to record-level evidence[1]
+    for definition_source DOI:10.3389/fmicb.2021.703525 and appended curation_history
+    entry via scripts/curate_stage5_review_findings.py.'
+  target_ids:
+  - traitmech:000028
+  field_paths:
+  - definition_source
+  - evidence
+  - curation_history
+  evidence_ids:
+  - ev-prior-c3s4-review
+  - ev-remediated-records
+  - ev-stage5-writer
+  - ev-snippet-audit
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/metabolism/ethanol_fermentation.yaml
+    role: maintained TraitRecord YAML
+  disposition_reason: 'Resolved in Cycle 3 Stage 5 (resolve_review_findings) under
+    group G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS and GitHub issue #2002 via
+    guarded writer scripts/curate_stage5_review_findings.py.'
+  previous_occurrences:
+  - repository: CultureBotAI/TraitMech
+    review_id: 20261023T235000Z-cycle3-stage4-corpus-record-and-cohort-review
+    finding_id: F-C3S4-DEF-SRC-007
+  external_issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/2002
+- finding_id: F-C3S4-DEF-SRC-008
+  issue_key: lactic-acid-fermentation-definition-source-snippet
+  category: evidence
+  severity: minor
+  status: resolved
+  certainty: confirmed
+  title: lactic_acid_fermentation.yaml now includes a verbatim snippet for definition_source
+    DOI:10.3389/fmicb.2021.703525 in record-level evidence[0]
+  description: 'Resolved Cycle 3 Stage 4 open finding F-C3S4-DEF-SRC-008 on data/traits/metabolism/lactic_acid_fermentation.yaml
+    (traitmech:000026): promoted verified verbatim snippet (''fermentation is defined
+    as an anaerobic bacterial redox process of an organic substrate leading to different
+    products'') from causal_graphs[0].edges[0].evidence[0] to record-level evidence[0]
+    for definition_source DOI:10.3389/fmicb.2021.703525 and appended curation_history
+    entry via scripts/curate_stage5_review_findings.py.'
+  target_ids:
+  - traitmech:000026
+  field_paths:
+  - definition_source
+  - evidence
+  - curation_history
+  evidence_ids:
+  - ev-prior-c3s4-review
+  - ev-remediated-records
+  - ev-stage5-writer
+  - ev-snippet-audit
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/metabolism/lactic_acid_fermentation.yaml
+    role: maintained TraitRecord YAML
+  disposition_reason: 'Resolved in Cycle 3 Stage 5 (resolve_review_findings) under
+    group G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS and GitHub issue #2002 via
+    guarded writer scripts/curate_stage5_review_findings.py.'
+  previous_occurrences:
+  - repository: CultureBotAI/TraitMech
+    review_id: 20261023T235000Z-cycle3-stage4-corpus-record-and-cohort-review
+    finding_id: F-C3S4-DEF-SRC-008
+  external_issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/2002
+- finding_id: F-C3S4-DEF-SRC-009
+  issue_key: mixed-acid-fermentation-definition-source-snippet
+  category: evidence
+  severity: minor
+  status: resolved
+  certainty: confirmed
+  title: mixed_acid_fermentation.yaml now includes a verbatim snippet for definition_source
+    DOI:10.3389/fmicb.2021.703525 in record-level evidence[0]
+  description: 'Resolved Cycle 3 Stage 4 open finding F-C3S4-DEF-SRC-009 on data/traits/metabolism/mixed_acid_fermentation.yaml
+    (traitmech:000027): promoted verified verbatim snippet (''fermentation is defined
+    as an anaerobic bacterial redox process of an organic substrate leading to different
+    products'') from sibling ethanol_fermentation.yaml and lactic_acid_fermentation.yaml
+    causal_graphs[0].edges[0].evidence[0] to record-level evidence[0] for definition_source
+    DOI:10.3389/fmicb.2021.703525 and appended curation_history entry via scripts/curate_stage5_review_findings.py.'
+  target_ids:
+  - traitmech:000027
+  field_paths:
+  - definition_source
+  - evidence
+  - curation_history
+  evidence_ids:
+  - ev-prior-c3s4-review
+  - ev-remediated-records
+  - ev-stage5-writer
+  - ev-snippet-audit
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/metabolism/mixed_acid_fermentation.yaml
+    role: maintained TraitRecord YAML
+  disposition_reason: 'Resolved in Cycle 3 Stage 5 (resolve_review_findings) under
+    group G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS and GitHub issue #2002 via
+    guarded writer scripts/curate_stage5_review_findings.py.'
+  previous_occurrences:
+  - repository: CultureBotAI/TraitMech
+    review_id: 20261023T235000Z-cycle3-stage4-corpus-record-and-cohort-review
+    finding_id: F-C3S4-DEF-SRC-009
+  external_issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/2002
+- finding_id: F-C3S4-DEF-SRC-010
+  issue_key: fermentative-hydrogen-production-definition-source-snippet
+  category: evidence
+  severity: minor
+  status: resolved
+  certainty: confirmed
+  title: fermentative_hydrogen_production.yaml now includes a verbatim snippet for
+    definition_source DOI:10.3389/fmicb.2021.703525 in record-level evidence[0]
+  description: 'Resolved Cycle 3 Stage 4 open finding F-C3S4-DEF-SRC-010 on data/traits/metabolism/fermentative_hydrogen_production.yaml
+    (traitmech:000109): promoted verified verbatim snippet (''fermentation is defined
+    as an anaerobic bacterial redox process of an organic substrate leading to different
+    products'') from sibling ethanol_fermentation.yaml and lactic_acid_fermentation.yaml
+    causal_graphs[0].edges[0].evidence[0] to record-level evidence[0] for definition_source
+    DOI:10.3389/fmicb.2021.703525 and appended curation_history entry via scripts/curate_stage5_review_findings.py.'
+  target_ids:
+  - traitmech:000109
+  field_paths:
+  - definition_source
+  - evidence
+  - curation_history
+  evidence_ids:
+  - ev-prior-c3s4-review
+  - ev-remediated-records
+  - ev-stage5-writer
+  - ev-snippet-audit
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/metabolism/fermentative_hydrogen_production.yaml
+    role: maintained TraitRecord YAML
+  disposition_reason: 'Resolved in Cycle 3 Stage 5 (resolve_review_findings) under
+    group G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS and GitHub issue #2002 via
+    guarded writer scripts/curate_stage5_review_findings.py.'
+  previous_occurrences:
+  - repository: CultureBotAI/TraitMech
+    review_id: 20261023T235000Z-cycle3-stage4-corpus-record-and-cohort-review
+    finding_id: F-C3S4-DEF-SRC-010
+  external_issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/2002
+- finding_id: F-C3S4-DEF-SRC-011
+  issue_key: calvin-benson-bassham-cycle-definition-source-snippet
+  category: evidence
+  severity: minor
+  status: resolved
+  certainty: confirmed
+  title: calvin_benson_bassham_cycle.yaml now includes a verbatim snippet for definition_source
+    DOI:10.1128/AEM.02473-10 in record-level evidence[0]
+  description: 'Resolved Cycle 3 Stage 4 open finding F-C3S4-DEF-SRC-011 on data/traits/metabolism/calvin_benson_bassham_cycle.yaml
+    (traitmech:000020): promoted verified verbatim snippet (''The reductive pentose
+    phosphate cycle is the quantitatively most important mechanism of autotrophic
+    CO2 fixation in nature.'') from parent carbon_fixation.yaml evidence[0] and causal_graphs[0].edges[11].evidence[0]
+    to record-level evidence[0] for definition_source DOI:10.1128/AEM.02473-10 and
+    appended curation_history entry via scripts/curate_stage5_review_findings.py.'
+  target_ids:
+  - traitmech:000020
+  field_paths:
+  - definition_source
+  - evidence
+  - curation_history
+  evidence_ids:
+  - ev-prior-c3s4-review
+  - ev-remediated-records
+  - ev-stage5-writer
+  - ev-snippet-audit
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/metabolism/calvin_benson_bassham_cycle.yaml
+    role: maintained TraitRecord YAML
+  disposition_reason: 'Resolved in Cycle 3 Stage 5 (resolve_review_findings) under
+    group G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS and GitHub issue #2002 via
+    guarded writer scripts/curate_stage5_review_findings.py.'
+  previous_occurrences:
+  - repository: CultureBotAI/TraitMech
+    review_id: 20261023T235000Z-cycle3-stage4-corpus-record-and-cohort-review
+    finding_id: F-C3S4-DEF-SRC-011
+  external_issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/2002
+- finding_id: F-C3S4-DEF-SRC-012
+  issue_key: dissimilatory-manganese-reduction-definition-source-snippet
+  category: evidence
+  severity: minor
+  status: resolved
+  certainty: confirmed
+  title: dissimilatory_manganese_reduction.yaml now includes a verbatim snippet for
+    definition_source DOI:10.1128/mr.55.2.259-287.1991 in record-level evidence[0]
+  description: 'Resolved Cycle 3 Stage 4 open finding F-C3S4-DEF-SRC-012 on data/traits/metabolism/dissimilatory_manganese_reduction.yaml
+    (traitmech:000108): promoted verified verbatim snippet (''The oxidation of organic
+    matter coupled to the reduction of Fe(III) or Mn(IV) is one of the most important
+    biogeochemical reactions in aquatic sediments, soils, and groundwater'') from
+    parent dissimilatory_metal_reduction.yaml and sibling dissimilatory_iron_reduction.yaml
+    evidence[0] to record-level evidence[0] for definition_source DOI:10.1128/mr.55.2.259-287.1991
+    and appended curation_history entry via scripts/curate_stage5_review_findings.py.'
+  target_ids:
+  - traitmech:000108
+  field_paths:
+  - definition_source
+  - evidence
+  - curation_history
+  evidence_ids:
+  - ev-prior-c3s4-review
+  - ev-remediated-records
+  - ev-stage5-writer
+  - ev-snippet-audit
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/metabolism/dissimilatory_manganese_reduction.yaml
+    role: maintained TraitRecord YAML
+  disposition_reason: 'Resolved in Cycle 3 Stage 5 (resolve_review_findings) under
+    group G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS and GitHub issue #2002 via
+    guarded writer scripts/curate_stage5_review_findings.py.'
+  previous_occurrences:
+  - repository: CultureBotAI/TraitMech
+    review_id: 20261023T235000Z-cycle3-stage4-corpus-record-and-cohort-review
+    finding_id: F-C3S4-DEF-SRC-012
+  external_issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/2002
+- finding_id: F-C3S4-DEF-SRC-013
+  issue_key: dissimilatory-nitrate-reduction-to-ammonium-definition-source-snippet
+  category: evidence
+  severity: minor
+  status: resolved
+  certainty: confirmed
+  title: dissimilatory_nitrate_reduction_to_ammonium.yaml now includes a verbatim
+    snippet for definition_source DOI:10.1126/science.1254070 in record-level evidence[0]
+  description: 'Resolved Cycle 3 Stage 4 open finding F-C3S4-DEF-SRC-013 on data/traits/metabolism/dissimilatory_nitrate_reduction_to_ammonium.yaml
+    (traitmech:000030): promoted verified verbatim snippet (''Denitrification converts
+    nitrate into nitrogenous gas and thus removes fixed nitrogen from the biosphere,
+    whereas ammonification converts nitrate into ammonium'') from parent nitrate_respiration.yaml
+    evidence[0] to record-level evidence[0] for definition_source DOI:10.1126/science.1254070
+    and appended curation_history entry via scripts/curate_stage5_review_findings.py.'
+  target_ids:
+  - traitmech:000030
+  field_paths:
+  - definition_source
+  - evidence
+  - curation_history
+  evidence_ids:
+  - ev-prior-c3s4-review
+  - ev-remediated-records
+  - ev-stage5-writer
+  - ev-snippet-audit
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/metabolism/dissimilatory_nitrate_reduction_to_ammonium.yaml
+    role: maintained TraitRecord YAML
+  disposition_reason: 'Resolved in Cycle 3 Stage 5 (resolve_review_findings) under
+    group G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS and GitHub issue #2002 via
+    guarded writer scripts/curate_stage5_review_findings.py.'
+  previous_occurrences:
+  - repository: CultureBotAI/TraitMech
+    review_id: 20261023T235000Z-cycle3-stage4-corpus-record-and-cohort-review
+    finding_id: F-C3S4-DEF-SRC-013
+  external_issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/2002
+- finding_id: F-C3S4-DEF-SRC-014
+  issue_key: free-living-definition-source-snippet
+  category: evidence
+  severity: minor
+  status: resolved
+  certainty: confirmed
+  title: free_living.yaml now includes a verbatim snippet for definition_source DOI:10.1038/nrmicro1341
+    in record-level evidence[0]
+  description: 'Resolved Cycle 3 Stage 4 open finding F-C3S4-DEF-SRC-014 on data/traits/ecology/free_living.yaml
+    (traitmech:000048): promoted verified verbatim snippet (''free-living microbial
+    taxa'') from sibling soil_dwelling.yaml evidence[1] to record-level evidence[0]
+    for definition_source DOI:10.1038/nrmicro1341 and appended curation_history entry
+    via scripts/curate_stage5_review_findings.py.'
+  target_ids:
+  - traitmech:000048
+  field_paths:
+  - definition_source
+  - evidence
+  - curation_history
+  evidence_ids:
+  - ev-prior-c3s4-review
+  - ev-remediated-records
+  - ev-stage5-writer
+  - ev-snippet-audit
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/free_living.yaml
+    role: maintained TraitRecord YAML
+  disposition_reason: 'Resolved in Cycle 3 Stage 5 (resolve_review_findings) under
+    group G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS and GitHub issue #2002 via
+    guarded writer scripts/curate_stage5_review_findings.py.'
+  previous_occurrences:
+  - repository: CultureBotAI/TraitMech
+    review_id: 20261023T235000Z-cycle3-stage4-corpus-record-and-cohort-review
+    finding_id: F-C3S4-DEF-SRC-014
+  external_issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/2002
+- finding_id: F-C3S4-DEF-SRC-015
+  issue_key: amphitrichous-definition-source-snippet
+  category: evidence
+  severity: minor
+  status: resolved
+  certainty: confirmed
+  title: amphitrichous.yaml now includes a verbatim snippet for definition_source
+    DOI:10.1093/femsre/fuv034 in record-level evidence[0]
+  description: 'Resolved Cycle 3 Stage 4 open finding F-C3S4-DEF-SRC-015 on data/traits/morphology/amphitrichous.yaml
+    (traitmech:000059): promoted verified verbatim snippet (''Bacteria differ in number
+    and location of their flagella that appear in regular patterns at the cell surface
+    (flagellation pattern).'') from sibling polar_flagellation.yaml evidence[0] to
+    record-level evidence[0] for definition_source DOI:10.1093/femsre/fuv034 and appended
+    curation_history entry via scripts/curate_stage5_review_findings.py.'
+  target_ids:
+  - traitmech:000059
+  field_paths:
+  - definition_source
+  - evidence
+  - curation_history
+  evidence_ids:
+  - ev-prior-c3s4-review
+  - ev-remediated-records
+  - ev-stage5-writer
+  - ev-snippet-audit
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/morphology/amphitrichous.yaml
+    role: maintained TraitRecord YAML
+  disposition_reason: 'Resolved in Cycle 3 Stage 5 (resolve_review_findings) under
+    group G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS and GitHub issue #2002 via
+    guarded writer scripts/curate_stage5_review_findings.py.'
+  previous_occurrences:
+  - repository: CultureBotAI/TraitMech
+    review_id: 20261023T235000Z-cycle3-stage4-corpus-record-and-cohort-review
+    finding_id: F-C3S4-DEF-SRC-015
+  external_issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/2002
+- finding_id: F-C3S4-DEF-SRC-016
+  issue_key: lophotrichous-definition-source-snippet
+  category: evidence
+  severity: minor
+  status: resolved
+  certainty: confirmed
+  title: lophotrichous.yaml now includes a verbatim snippet for definition_source
+    DOI:10.1093/femsre/fuv034 in record-level evidence[0]
+  description: 'Resolved Cycle 3 Stage 4 open finding F-C3S4-DEF-SRC-016 on data/traits/morphology/lophotrichous.yaml
+    (traitmech:000058): promoted verified verbatim snippet (''Bacteria differ in number
+    and location of their flagella that appear in regular patterns at the cell surface
+    (flagellation pattern).'') from sibling polar_flagellation.yaml evidence[0] to
+    record-level evidence[0] for definition_source DOI:10.1093/femsre/fuv034 and appended
+    curation_history entry via scripts/curate_stage5_review_findings.py.'
+  target_ids:
+  - traitmech:000058
+  field_paths:
+  - definition_source
+  - evidence
+  - curation_history
+  evidence_ids:
+  - ev-prior-c3s4-review
+  - ev-remediated-records
+  - ev-stage5-writer
+  - ev-snippet-audit
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/morphology/lophotrichous.yaml
+    role: maintained TraitRecord YAML
+  disposition_reason: 'Resolved in Cycle 3 Stage 5 (resolve_review_findings) under
+    group G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS and GitHub issue #2002 via
+    guarded writer scripts/curate_stage5_review_findings.py.'
+  previous_occurrences:
+  - repository: CultureBotAI/TraitMech
+    review_id: 20261023T235000Z-cycle3-stage4-corpus-record-and-cohort-review
+    finding_id: F-C3S4-DEF-SRC-016
+  external_issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/2002
+- finding_id: F-C3S4-DEF-SRC-017
+  issue_key: monotrichous-definition-source-snippet
+  category: evidence
+  severity: minor
+  status: resolved
+  certainty: confirmed
+  title: monotrichous.yaml now includes a verbatim snippet for definition_source DOI:10.1093/femsre/fuv034
+    in record-level evidence[0]
+  description: 'Resolved Cycle 3 Stage 4 open finding F-C3S4-DEF-SRC-017 on data/traits/morphology/monotrichous.yaml
+    (traitmech:000057): promoted verified verbatim snippet (''Bacteria differ in number
+    and location of their flagella that appear in regular patterns at the cell surface
+    (flagellation pattern).'') from sibling polar_flagellation.yaml evidence[0] to
+    record-level evidence[0] for definition_source DOI:10.1093/femsre/fuv034 and appended
+    curation_history entry via scripts/curate_stage5_review_findings.py.'
+  target_ids:
+  - traitmech:000057
+  field_paths:
+  - definition_source
+  - evidence
+  - curation_history
+  evidence_ids:
+  - ev-prior-c3s4-review
+  - ev-remediated-records
+  - ev-stage5-writer
+  - ev-snippet-audit
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/morphology/monotrichous.yaml
+    role: maintained TraitRecord YAML
+  disposition_reason: 'Resolved in Cycle 3 Stage 5 (resolve_review_findings) under
+    group G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS and GitHub issue #2002 via
+    guarded writer scripts/curate_stage5_review_findings.py.'
+  previous_occurrences:
+  - repository: CultureBotAI/TraitMech
+    review_id: 20261023T235000Z-cycle3-stage4-corpus-record-and-cohort-review
+    finding_id: F-C3S4-DEF-SRC-017
+  external_issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/2002
+actions: []
+limitations:
+- 'This batch review covers the 17 records remediated in Cycle 3 Stage 5 under group
+  G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS (#2002); the 5 cohort-level source-limited
+  or upstream-blocked findings from Cycle 3 Stage 4 remain tracked under open GitHub
+  issues #1982, #1983, #1984, #1985, and #364.'
+- 16 of the 17 remediated records carry repository-minted traitmech:NNNNNN identifiers
+  backed by validated ROBOT templates awaiting upstream METPO release incorporation
+  (#364, berkeleybop/metpo#535); photoorganoheterotrophic.yaml carries METPO:1000659.
+notes:
+- 'Skills executed: .claude/skills/curate-yaml-record/SKILL.md and .claude/skills/review-yaml-record/SKILL.md.'
+- Immutable Cycle 3 Stage 4 review bundle preserved untouched at reviews/structured/20261023T235000Z-cycle3-stage4-corpus-record-and-cohort-review/review.yaml.
+related_reviews:
+- repository: CultureBotAI/TraitMech
+  review_id: 20261023T235000Z-cycle3-stage4-corpus-record-and-cohort-review
+  relationship: follow_up_remediation_verification
+links:
+- https://github.com/CultureBotAI/TraitMech/issues/2002
+- https://github.com/CultureBotAI/TraitMech/issues/1982
+- https://github.com/CultureBotAI/TraitMech/issues/1983
+- https://github.com/CultureBotAI/TraitMech/issues/1984
+- https://github.com/CultureBotAI/TraitMech/issues/1985
+- https://github.com/CultureBotAI/TraitMech/issues/364
+tags:
+- cycle-03
+- stage-05
+- resolve-review-findings
+- remediation-verification

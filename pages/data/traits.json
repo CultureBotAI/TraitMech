@@ -3952,6 +3952,7 @@
     "evidence": [
       {
         "reference": "DOI:10.1038/nrmicro1341",
+        "snippet": "free-living microbial taxa",
         "notes": "Martiny et al. support biogeographic patterning of free-living microbial taxa across environments."
       },
       {
@@ -4252,6 +4253,13 @@
         "curator": "codex",
         "action": "ADD_PATHWAY_CONTEXT",
         "changes": "Added pinned PathwayMech context on reviewed causal nodes with explicit route and organism limitations; retained existing groundings and exact xrefs.",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-24T02:45:00Z",
+        "curator": "claude",
+        "action": "ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE",
+        "changes": "Added verified verbatim snippet from DOI:10.1038/nrmicro1341 (already present on sibling record soil_dwelling.yaml evidence[1]) to record-level evidence[0] to match definition_source (Cycle 3 Stage 5 remediation of F-C3S4-DEF-SRC-014 in group G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).",
         "llm_assisted": true
       }
     ],
@@ -143474,6 +143482,7 @@
     "evidence": [
       {
         "reference": "DOI:10.1128/AEM.02473-10",
+        "snippet": "The reductive pentose phosphate cycle is the quantitatively most important mechanism of autotrophic CO2 fixation in nature.",
         "notes": "Berg review identifies the Calvin-Benson-Bassham (reductive pentose phosphate) cycle as the reference autotrophic pathway against which the other five are distinguished."
       },
       {
@@ -143857,6 +143866,13 @@
         "curator": "claude",
         "action": "REFRESH_UNIPROT_ENTRY_VERSION",
         "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P42721 (153 -> 154 on rubisco).",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-24T02:45:00Z",
+        "curator": "claude",
+        "action": "ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE",
+        "changes": "Added verified verbatim snippet from DOI:10.1128/AEM.02473-10 (already present on parent record carbon_fixation.yaml evidence[0]) to record-level evidence[0] to match definition_source (Cycle 3 Stage 5 remediation of F-C3S4-DEF-SRC-011 in group G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).",
         "llm_assisted": true
       }
     ]
@@ -148001,6 +148017,7 @@
     "evidence": [
       {
         "reference": "DOI:10.1128/mr.55.2.259-287.1991",
+        "snippet": "The oxidation of organic matter coupled to the reduction of Fe(III) or Mn(IV) is one of the most important biogeochemical reactions in aquatic sediments, soils, and groundwater",
         "notes": "Lovley establishes dissimilatory Fe(III)/Mn(IV) reduction as energy-conserving anaerobic respiration on metal-oxide acceptors."
       },
       {
@@ -148260,6 +148277,13 @@
         "curator": "claude",
         "action": "REFRESH_UNIPROT_ENTRY_VERSION",
         "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:Q8EG34 (125 -> 126 on mtrc).",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-24T02:45:00Z",
+        "curator": "claude",
+        "action": "ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE",
+        "changes": "Added verified verbatim snippet from DOI:10.1128/mr.55.2.259-287.1991 (already present on parent record dissimilatory_metal_reduction.yaml evidence[0]) to record-level evidence[0] to match definition_source (Cycle 3 Stage 5 remediation of F-C3S4-DEF-SRC-012 in group G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).",
         "llm_assisted": true
       }
     ]
@@ -148608,6 +148632,7 @@
     "evidence": [
       {
         "reference": "DOI:10.1126/science.1254070",
+        "snippet": "Denitrification converts nitrate into nitrogenous gas and thus removes fixed nitrogen from the biosphere, whereas ammonification converts nitrate into ammonium",
         "notes": "Kraft et al. show the donor-to-acceptor ratio governs whether nitrate respiration ends in ammonium (DNRA) or N2 (denitrification)."
       },
       {
@@ -148934,6 +148959,13 @@
         "curator": "claude",
         "action": "REFRESH_UNIPROT_ENTRY_VERSION",
         "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:Q9S1E5 (163 -> 164 on nrfa).",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-24T02:45:00Z",
+        "curator": "claude",
+        "action": "ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE",
+        "changes": "Added verified verbatim snippet from DOI:10.1126/science.1254070 (already present on parent record nitrate_respiration.yaml evidence[0]) to record-level evidence[0] to match definition_source (Cycle 3 Stage 5 remediation of F-C3S4-DEF-SRC-013 in group G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).",
         "llm_assisted": true
       }
     ]
@@ -151620,6 +151652,7 @@
       },
       {
         "reference": "DOI:10.3389/fmicb.2021.703525",
+        "snippet": "fermentation is defined as an anaerobic bacterial redox process of an organic substrate leading to different products",
         "notes": "Review of fermentative energy conservation supports ethanol as an NADH-reoxidizing fermentation end product."
       }
     ],
@@ -151969,6 +152002,13 @@
         "curator": "claude",
         "action": "REFRESH_UNIPROT_ENTRY_VERSION",
         "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P06672 (173 -> 174 on pyruvate_decarboxylase).",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-24T02:45:00Z",
+        "curator": "claude",
+        "action": "ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE",
+        "changes": "Added verified verbatim snippet from DOI:10.3389/fmicb.2021.703525 (already present on causal_graphs[0].edges[0].evidence[0]) to record-level evidence[1] to match definition_source (Cycle 3 Stage 5 remediation of F-C3S4-DEF-SRC-007 in group G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).",
         "llm_assisted": true
       }
     ]
@@ -152548,6 +152588,7 @@
     "evidence": [
       {
         "reference": "DOI:10.3389/fmicb.2021.703525",
+        "snippet": "fermentation is defined as an anaerobic bacterial redox process of an organic substrate leading to different products",
         "notes": "Review of fermentative energy conservation supports H2 production as a redox-balancing fermentation output via hydrogenases."
       },
       {
@@ -152790,6 +152831,13 @@
         "curator": "claude",
         "action": "REFRESH_UNIPROT_ENTRY_VERSION",
         "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:O52683 (157 -> 158 on fefe_hydrogenase).",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-24T02:45:00Z",
+        "curator": "claude",
+        "action": "ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE",
+        "changes": "Added verified verbatim snippet from DOI:10.3389/fmicb.2021.703525 (already present on sibling ethanol_fermentation.yaml and lactic_acid_fermentation.yaml causal_graphs[0].edges[0].evidence[0]) to record-level evidence[0] to match definition_source (Cycle 3 Stage 5 remediation of F-C3S4-DEF-SRC-010 in group G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).",
         "llm_assisted": true
       }
     ]
@@ -155295,6 +155343,7 @@
     "evidence": [
       {
         "reference": "DOI:10.3389/fmicb.2021.703525",
+        "snippet": "fermentation is defined as an anaerobic bacterial redox process of an organic substrate leading to different products",
         "notes": "Review of energy conservation in anaerobic fermentations supports lactate as a fermentation end product generated with substrate-level phosphorylation."
       },
       {
@@ -155680,6 +155729,13 @@
         "curator": "codex",
         "action": "REVIEW_EVIDENCE_REFERENCE_CHURN",
         "changes": "Offline review for issue 520 retained 6 evidence-reference replacement(s) that PR 511 made on surviving causal edges outside its stated protein-taxon scope. The pre-tranche evidence entries had references but no snippets; the retained entries supply edge-specific snippets and explanatory notes. Reverting would discard that claim-level provenance, so the scope defect is resolved by documenting the decision instead. This audit changed no causal claim or evidence field. Reviewed replacements: DOI:10.3390/fermentation10030168 -> DOI:10.3390/molecules31020333 (6 edges).",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-24T02:45:00Z",
+        "curator": "claude",
+        "action": "ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE",
+        "changes": "Added verified verbatim snippet from DOI:10.3389/fmicb.2021.703525 (already present on causal_graphs[0].edges[0].evidence[0]) to record-level evidence[0] to match definition_source (Cycle 3 Stage 5 remediation of F-C3S4-DEF-SRC-008 in group G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).",
         "llm_assisted": true
       }
     ]
@@ -157748,6 +157804,7 @@
     "evidence": [
       {
         "reference": "DOI:10.3389/fmicb.2021.703525",
+        "snippet": "fermentation is defined as an anaerobic bacterial redox process of an organic substrate leading to different products",
         "notes": "Review of fermentative energy conservation lists acetate, ethanol, lactate, succinate and formate as products of mixed-acid fermentation."
       },
       {
@@ -158170,6 +158227,13 @@
         "curator": "claude",
         "action": "REFRESH_UNIPROT_ENTRY_VERSION",
         "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P09373 (217 -> 218 on pyruvate_formate_lyase).",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-24T02:45:00Z",
+        "curator": "claude",
+        "action": "ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE",
+        "changes": "Added verified verbatim snippet from DOI:10.3389/fmicb.2021.703525 (already present on sibling ethanol_fermentation.yaml and lactic_acid_fermentation.yaml causal_graphs[0].edges[0].evidence[0]) to record-level evidence[0] to match definition_source (Cycle 3 Stage 5 remediation of F-C3S4-DEF-SRC-009 in group G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).",
         "llm_assisted": true
       }
     ]
@@ -162248,6 +162312,7 @@
     "evidence": [
       {
         "reference": "DOI:10.1126/science.289.5486.1902",
+        "snippet": "bound retinal to form an active, light-driven proton pump",
         "notes": "B\u00e9j\u00e0 et al. identified proteorhodopsin, a retinal-binding light-driven proton pump in an uncultivated marine bacterium, as evidence for a new type of phototrophy in the sea."
       },
       {
@@ -162548,6 +162613,13 @@
         "curator": "claude",
         "action": "REFRESH_UNIPROT_ENTRY_VERSION",
         "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:Q9F7P4 (97 -> 98 on proteorhodopsin).",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-24T02:45:00Z",
+        "curator": "claude",
+        "action": "ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE",
+        "changes": "Added verified verbatim snippet from DOI:10.1126/science.289.5486.1902 (already present on causal_graphs[0].edges[0].evidence[0]) to record-level evidence[0] to match definition_source (Cycle 3 Stage 5 remediation of F-C3S4-DEF-SRC-004 in group G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).",
         "llm_assisted": true
       }
     ]
@@ -163798,6 +163870,7 @@
     "evidence": [
       {
         "reference": "DOI:10.1016/S0168-1656(01)00407-2",
+        "snippet": "the use of starch-converting enzymes in the production of maltodextrin, modified starches, or glucose and fructose syrups",
         "notes": "van der Maarel et al. review starch-converting enzymes of the alpha-amylase family that hydrolyze starch to oligosaccharides and glucose."
       },
       {
@@ -164059,6 +164132,13 @@
         "curator": "claude",
         "action": "REFRESH_UNIPROT_ENTRY_VERSION",
         "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P06278 (173 -> 174 on amylase).",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-24T02:45:00Z",
+        "curator": "claude",
+        "action": "ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE",
+        "changes": "Added verified verbatim snippet from DOI:10.1016/S0168-1656(01)00407-2 (already present on causal_graphs[0].edges[0].evidence[0]) to record-level evidence[0] to match definition_source (Cycle 3 Stage 5 remediation of F-C3S4-DEF-SRC-005 in group G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).",
         "llm_assisted": true
       }
     ]
@@ -165814,6 +165894,7 @@
     "evidence": [
       {
         "reference": "DOI:10.1128/AEM.02473-10",
+        "snippet": "The 3-hydroxypropionate (Fuchs-Holo) bi-cycle. Enzymes: 1, acetyl-CoA carboxylase",
         "notes": "Berg review describes the 3-hydroxypropionate bicycle and its association with Chloroflexus."
       },
       {
@@ -166196,6 +166277,13 @@
         "curator": "codex",
         "action": "CONNECT_CAUSAL_GRAPH_COMPONENTS",
         "changes": "Resolved issue #183 graph fragmentation (5 components to 1) using 4 public-source, verbatim-snippet-backed connector(s). No paid research service was called.",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-24T02:45:00Z",
+        "curator": "claude",
+        "action": "ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE",
+        "changes": "Added verified verbatim snippet from DOI:10.1128/AEM.02473-10 (already present on causal_graphs[0].edges[9].evidence[0]) to record-level evidence[0] to match definition_source (Cycle 3 Stage 5 remediation of F-C3S4-DEF-SRC-006 in group G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).",
         "llm_assisted": true
       }
     ]
@@ -168673,6 +168761,7 @@
     "evidence": [
       {
         "reference": "DOI:10.1093/femsre/fuv034",
+        "snippet": "Bacteria differ in number and location of their flagella that appear in regular patterns at the cell surface (flagellation pattern).",
         "notes": "Schuhmacher et al. describe bipolar (amphitrichous) flagellation among the flagellation patterns governed by FlhF/FlhG."
       },
       {
@@ -168953,6 +169042,13 @@
         "curator": "claude",
         "action": "REVIEW_GRAPH_PROTEIN_TAXON",
         "changes": "Backfilled provenance (review issue 517) for the codex protein-taxon review tranche of 2026-08-24/25, which shipped without a per-record event. In this record the tranche: set graph scope amphitrichous_bipolar_flagella=NONMECHANISTIC with scope_notes; marked 4 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (flhf_gtpase, flig_protein, flif_msring, fipa_protein).",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-24T02:45:00Z",
+        "curator": "claude",
+        "action": "ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE",
+        "changes": "Added verified verbatim snippet from DOI:10.1093/femsre/fuv034 (already present on sibling record polar_flagellation.yaml evidence[0]) to record-level evidence[0] to match definition_source (Cycle 3 Stage 5 remediation of F-C3S4-DEF-SRC-015 in group G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).",
         "llm_assisted": true
       }
     ]
@@ -186521,6 +186617,7 @@
     "evidence": [
       {
         "reference": "DOI:10.1093/femsre/fuv034",
+        "snippet": "Bacteria differ in number and location of their flagella that appear in regular patterns at the cell surface (flagellation pattern).",
         "notes": "Schuhmacher et al. describe polar tufts of flagella (lophotrichous) among the regular flagellation patterns bacteria maintain."
       },
       {
@@ -186800,6 +186897,13 @@
         "curator": "codex",
         "action": "REFINE_CANONICAL_ARCHETYPES_1629",
         "changes": "Addressed independent PR 1628 review and issue 1629 by removing the S. volutans canonical-example row while retaining the Swan 1982 evidence and verbatim snippet. Recently divided unipolar cells are directly observed, but a selected division-stage observation is not used here as the schema's archetypal taxon exemplar. H. pylori remains the canonical example. This does not deny naturally unipolar S. volutans cells, assert disjoint organism-level traits or generalize the division sequence to every amphitrichous taxon. The amphitrichous record, trait identity, definition, hierarchy and graph are unchanged; the initial repair event is preserved.",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-24T02:45:00Z",
+        "curator": "claude",
+        "action": "ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE",
+        "changes": "Added verified verbatim snippet from DOI:10.1093/femsre/fuv034 (already present on sibling record polar_flagellation.yaml evidence[0]) to record-level evidence[0] to match definition_source (Cycle 3 Stage 5 remediation of F-C3S4-DEF-SRC-016 in group G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).",
         "llm_assisted": true
       }
     ]
@@ -187320,6 +187424,7 @@
     "evidence": [
       {
         "reference": "DOI:10.1093/femsre/fuv034",
+        "snippet": "Bacteria differ in number and location of their flagella that appear in regular patterns at the cell surface (flagellation pattern).",
         "notes": "Schuhmacher et al. describe single-flagellum (monotrichous, polar) flagellation as one regular flagellation pattern."
       },
       {
@@ -187571,6 +187676,13 @@
         "curator": "claude",
         "action": "REVIEW_GRAPH_PROTEIN_TAXON",
         "changes": "Backfilled provenance (review issue 517) for the codex protein-taxon review tranche of 2026-08-24/25, which shipped without a per-record event. In this record the tranche: set graph scope monotrichous_single_polar_flagellum=NONMECHANISTIC with scope_notes; marked 4 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (flhf_gtpase, flig_protein, flif_msring, flim_flin).",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-24T02:45:00Z",
+        "curator": "claude",
+        "action": "ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE",
+        "changes": "Added verified verbatim snippet from DOI:10.1093/femsre/fuv034 (already present on sibling record polar_flagellation.yaml evidence[0]) to record-level evidence[0] to match definition_source (Cycle 3 Stage 5 remediation of F-C3S4-DEF-SRC-017 in group G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).",
         "llm_assisted": true
       }
     ]
@@ -190933,6 +191045,7 @@
     "evidence": [
       {
         "reference": "DOI:10.1093/femsre/fuv034",
+        "snippet": "five to six flagellar filaments distributed over the cell body",
         "notes": "Schuhmacher et al. describe peritrichous (surface-distributed) flagellation as one of the conserved flagellation patterns."
       },
       {
@@ -191171,6 +191284,13 @@
         "curator": "claude",
         "action": "REVIEW_GRAPH_PROTEIN_TAXON",
         "changes": "Backfilled provenance (review issue 517) for the codex protein-taxon review tranche of 2026-08-24/25, which shipped without a per-record event. In this record the tranche: set graph scope peritrichous_surface_distributed_flagella=NONMECHANISTIC with scope_notes.",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-24T02:45:00Z",
+        "curator": "claude",
+        "action": "ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE",
+        "changes": "Added verified verbatim snippet from DOI:10.1093/femsre/fuv034 (already present on causal_graphs[0].edges[2].evidence[0]) to record-level evidence[0] to match definition_source (Cycle 3 Stage 5 remediation of F-C3S4-DEF-SRC-003 in group G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).",
         "llm_assisted": true
       }
     ]
@@ -230652,6 +230772,7 @@
     "evidence": [
       {
         "reference": "DOI:10.3390/microorganisms10050926",
+        "snippet": "Cytochrome c oxidases of the heme\u2013copper oxygen reductase family A",
         "notes": "Hederstedt reviews bacterial cytochrome c oxidase, the terminal respiratory oxidase detected by the oxidase test."
       },
       {
@@ -231007,6 +231128,13 @@
         "curator": "claude",
         "action": "REFRESH_UNIPROT_ENTRY_VERSION",
         "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P08305 (132 -> 133 on family_a_cytochrome_c_oxidase).",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-24T02:45:00Z",
+        "curator": "claude",
+        "action": "ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE",
+        "changes": "Added verified verbatim snippet from DOI:10.3390/microorganisms10050926 (already present on causal_graphs[0].edges[9].evidence[0]) to record-level evidence[0] to match definition_source (Cycle 3 Stage 5 remediation of F-C3S4-DEF-SRC-002 in group G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).",
         "llm_assisted": true
       }
     ]
@@ -234491,6 +234619,11 @@
         "reference": "DOI:10.1021/acsomega.3c02205",
         "snippet": "photoorganoheterotrophic",
         "notes": "Review table classifies photoorganoheterotrophy by light with organic electron and carbon sources."
+      },
+      {
+        "reference": "DOI:10.1016/B978-012373944-5.00083-3",
+        "snippet": "use of light",
+        "notes": "Bryant & Frigaard (2006) overview chapter supports light as the energy source in photoheterotrophy categories."
       }
     ],
     "canonical_examples": [
@@ -234961,6 +235094,13 @@
         "curator": "claude",
         "action": "REFRESH_UNIPROT_ENTRY_VERSION",
         "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P10717 (119 -> 120 on photosynthetic_reaction_center).",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-24T02:45:00Z",
+        "curator": "claude",
+        "action": "ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE",
+        "changes": "Appended record-level evidence entry for definition_source DOI:10.1016/B978-012373944-5.00083-3 using the verified verbatim snippet already present on causal_graphs[0].edges[0].evidence[0] (Cycle 3 Stage 5 remediation of F-C3S4-DEF-SRC-001 in group G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).",
         "llm_assisted": true
       }
     ]
