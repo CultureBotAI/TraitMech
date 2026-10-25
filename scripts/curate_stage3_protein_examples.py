@@ -2789,8 +2789,7 @@ C3S3_COHORT_E_PROMOTIONS: dict[str, dict[str, Any]] = {
             "predicate_id": "RO:0002327",
             "object": "coagulase_positive_prothrombin_activation",
             "description": (
-                "Secreted staphylocoagulase Coa enables non-proteolytic "
-                "activation of prothrombin."
+                "Secreted staphylocoagulase Coa enables non-proteolytic activation of prothrombin."
             ),
             "evidence": [
                 {
@@ -2903,8 +2902,7 @@ C3S3_COHORT_E_PROMOTIONS: dict[str, dict[str, Any]] = {
             "predicate_id": "RO:0002327",
             "object": "pyrazinamidase_catalytic_activity",
             "description": (
-                "Nicotinamidase/pyrazinamidase PncA enables pyrazinamidase "
-                "catalytic activity."
+                "Nicotinamidase/pyrazinamidase PncA enables pyrazinamidase catalytic activity."
             ),
             "evidence": [
                 {
@@ -3068,10 +3066,10 @@ C4S3_COHORT_G_PROMOTIONS: dict[str, dict[str, Any]] = {
                         {
                             "reference": "DOI:10.1111/j.1432-1033.1986.tb09366.x",
                             "snippet": (
-                                "The two alcohol dehydrogenases occurring in "
-                                "Zymomonas mobilis, designated as ZADH-1 and "
-                                "ZADH-2, were purified using dye-ligand "
-                                "chromatography."
+                                "The two alcohol dehydrogenases found in "
+                                "Zymomonas mobilis have each been purified using "
+                                "dye-ligand chromatography and affinity elution "
+                                "with nucleotides."
                             ),
                             "notes": (
                                 "Neale et al. purified and characterized "
@@ -3255,8 +3253,8 @@ C4S3_COHORT_G_PROMOTIONS: dict[str, dict[str, Any]] = {
         "graph_id": "prolyl_aminopeptidase_pip_sketch",
         "discussion_id": "prolyl-aminopeptidase-activity-protein-example-gap",
         "scope_notes": (
-            "Mechanistic graph backed by DOI:10.1111/j.1365-2958.1993.tb01249.x "
-            "and DOI:10.1128/jcm.20.4.687-692.1984; exemplified on "
+            "Mechanistic graph backed by EC 3.4.11.5 and "
+            "DOI:10.1111/j.1365-2958.1993.tb01249.x; exemplified on "
             "prolyl_aminopeptidase_pip with Neisseria gonorrhoeae (NCBITaxon:485) "
             "proline iminopeptidase Pip (UniProtKB:P42786)."
         ),
@@ -3326,8 +3324,7 @@ C4S3_COHORT_G_PROMOTIONS: dict[str, dict[str, Any]] = {
             "predicate_id": "RO:0002327",
             "object": "prolyl_aminopeptidase_catalytic_activity",
             "description": (
-                "Proline iminopeptidase Pip enables prolyl aminopeptidase "
-                "catalytic activity."
+                "Proline iminopeptidase Pip enables prolyl aminopeptidase catalytic activity."
             ),
             "evidence": [
                 {

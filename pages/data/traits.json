@@ -228252,7 +228252,7 @@
                 "evidence": [
                   {
                     "reference": "DOI:10.1111/j.1432-1033.1986.tb09366.x",
-                    "snippet": "The two alcohol dehydrogenases occurring in Zymomonas mobilis, designated as ZADH-1 and ZADH-2, were purified using dye-ligand chromatography.",
+                    "snippet": "The two alcohol dehydrogenases found in Zymomonas mobilis have each been purified using dye-ligand chromatography and affinity elution with nucleotides.",
                     "notes": "Neale et al. purified and characterized Zymomonas mobilis alcohol dehydrogenase I ZADH-1 (AdhA; UniProtKB:P20368) and alcohol dehydrogenase II ZADH-2 (AdhB; UniProtKB:P0DJA2)."
                   }
                 ]
@@ -236442,7 +236442,7 @@
         "title": "Prolyl aminopeptidase (Pip) hydrolytic release of N-terminal L-proline",
         "description": "Evidence-backed physiological mechanism sketch linking prolyl aminopeptidase catalytic activity and N-terminal L-proline release from peptides to the prolyl aminopeptidase activity phenotype.",
         "scope_status": "MECHANISTIC",
-        "scope_notes": "Mechanistic graph backed by DOI:10.1111/j.1365-2958.1993.tb01249.x and DOI:10.1128/jcm.20.4.687-692.1984; exemplified on prolyl_aminopeptidase_pip with Neisseria gonorrhoeae (NCBITaxon:485) proline iminopeptidase Pip (UniProtKB:P42786).",
+        "scope_notes": "Mechanistic graph backed by EC 3.4.11.5 and DOI:10.1111/j.1365-2958.1993.tb01249.x; exemplified on prolyl_aminopeptidase_pip with Neisseria gonorrhoeae (NCBITaxon:485) proline iminopeptidase Pip (UniProtKB:P42786).",
         "nodes": [
           {
             "node_id": "prolyl_aminopeptidase_activity_trait",
