@@ -611,3 +611,69 @@ def test_committed_pages_carry_the_curation_notice():
     disclosure = Page(re.search(r'<details class="status-meaning">.*?</details>', record, re.S).group(0))
     assert schema_status_meanings()[status] in disclosure.plain_text()
 
+
+
+# ------------------------------------------------------- sibling Mech links --
+
+# The fleet's verified sibling routes: each Mech's search route and the two
+# specific-record routes from the X-Mech unified standard's route table, every
+# one loaded live with HTTP 200 on 2026-10-25. A link elsewhere on a sibling
+# site is a guess that nothing here can check.
+VERIFIED_SIBLING_ROUTES = (
+    "https://culturebotai.github.io/CultureMech/app/browser.html?q=",
+    "https://culturebotai.github.io/MediaIngredientMech/browser.html?q=",
+    "https://culturebotai.github.io/CommunityMech/browser.html?q=",
+    "https://culturebotai.github.io/proteintraitsmech/browse.html?q=",
+    "https://culturebotai.github.io/AntibioticMech/pages/browse.html?q=",
+    "https://culturebotai.github.io/CellStructureMech/pages/browse.html?q=",
+    "https://culturebotai.github.io/HabitatMech/pages/browse.html?q=",
+    "https://culturebotai.github.io/NaturalProductMech/pages/browse.html?q=",
+    "https://culturebotai.github.io/TaxonMech/pages/browse.html?q=",
+    "https://culturebotai.github.io/TaxonMech/pages/taxon.html?id=NCBITaxon:",
+    "https://culturebotai.github.io/PathwayMech/pages/browse.html?q=",
+    "https://culturebotai.github.io/PathwayMech/pages/records/",
+    "https://culturebotai.github.io/DUFMech/index.html?q=",
+    "https://culturebotai.github.io/CMMMech/pages/browse.html?q=",
+    "https://culturebotai.github.io/AIMech/pages/browse.html?q=",
+)
+# The footer's sibling-site links carry no query: each must be exactly a site
+# root (all four answered HTTP 200 on 2026-10-25), as must the suite directory.
+SIBLING_SITE_ROOTS = {
+    "https://culturebotai.github.io/CultureMech/",
+    "https://culturebotai.github.io/MediaIngredientMech/",
+    "https://culturebotai.github.io/CommunityMech/",
+    "https://culturebotai.github.io/proteintraitsmech/",
+    "https://culturebotai.github.io/mechs/",
+}
+FLEET_URL = re.compile(r"https?://culturebotai\.github\.io/[^\s\"'<>)]*")
+
+
+def unverified_sibling_urls(text: str) -> set[str]:
+    return {url for url in FLEET_URL.findall(text)
+            if not url.startswith("https://culturebotai.github.io/TraitMech/")
+            and url not in SIBLING_SITE_ROOTS and not url.startswith(VERIFIED_SIBLING_ROUTES)}
+
+
+def test_sibling_links_in_renderer_sources_use_verified_routes():
+    sources = [*sorted(TEMPLATES.glob("*.html")),
+               *(ROOT / "scripts" / name for name in (
+                   "render_trait_pages.py", "trait_causal_graph.py", "render_discussions_shell.py"))]
+    found = {str(path.relative_to(ROOT)): unverified_sibling_urls(path.read_text()) for path in sources}
+    assert {path: urls for path, urls in found.items() if urls} == {}
+
+
+def test_every_sibling_link_in_the_built_site_uses_a_verified_route():
+    built = [*sorted((ROOT / "pages").rglob("*.html")), ROOT / "404.html",
+             ROOT / "app" / "discussions" / "index.html"]
+    assert len(built) > 1100
+    emitted: set[str] = set()
+    bad: dict[str, set[str]] = {}
+    for path in built:
+        text = path.read_text()
+        emitted |= set(FLEET_URL.findall(text))
+        if urls := unverified_sibling_urls(text):
+            bad[str(path.relative_to(ROOT))] = urls
+    assert bad == {}
+    # Not vacuous: the corpus does link sibling records, not only site roots.
+    assert any(url.startswith("https://culturebotai.github.io/PathwayMech/pages/records/")
+               for url in emitted)
