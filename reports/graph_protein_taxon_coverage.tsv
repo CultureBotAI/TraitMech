@@ -712,11 +712,13 @@ data/traits/physiology/magnetotaxis.yaml	traitmech:000176	magnetotaxis	magnetota
 data/traits/physiology/methanotrophic.yaml	METPO:1000650	methanotrophic	methanotrophic_methane_oxidation	MECHANISTIC	4	3	1	2	2	1	1	PASS	0	0	-
 data/traits/physiology/methylotrophic.yaml	METPO:1000651	methylotrophic	methylotrophic_methanol_assimilation	MECHANISTIC	8	1	7	2	2	1	1	PASS	0	0	-
 data/traits/physiology/mixotrophic.yaml	METPO:1000652	mixotrophic	mixotrophic_dual_carbon_energy_use	MECHANISTIC	1	1	0	2	2	1	1	PASS	0	0	-
+data/traits/physiology/nad_dependent_alcohol_dehydrogenase_activity.yaml	traitmech:000165	NAD-dependent alcohol dehydrogenase activity	nad_dependent_alcohol_dehydrogenase_adh_sketch	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/physiology/natural_competence.yaml	traitmech:000087	natural competence	natural_competence_dna_uptake	MECHANISTIC	5	2	3	2	2	1	1	PASS	0	0	-
 data/traits/physiology/nutrient_adaptation.yaml	METPO:1000731	nutrient adaptation	nutrient_adaptation_life_history_axis	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/physiology/oligotrophic.yaml	METPO:1000654	oligotrophic	oligotrophic_low_nutrient_efficiency	NONMECHANISTIC	1	0	1	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/physiology/organoheterotrophic.yaml	METPO:1000664	organoheterotrophic	organoheterotrophic_organic_donor_carbon	MECHANISTIC	3	3	0	2	2	1	1	PASS	0	0	-
 data/traits/physiology/organotrophic.yaml	METPO:1000655	organotrophic	organotrophic_organic_compound_oxidation	MECHANISTIC	2	2	0	3	3	1	1	PASS	0	0	-
+data/traits/physiology/ornithine_decarboxylase_activity.yaml	traitmech:000154	ornithine decarboxylase activity	ornithine_decarboxylase_spec_sketch	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/physiology/oxidase_activity.yaml	traitmech:000076	oxidase activity	oxidase_activity_terminal_oxidase	MECHANISTIC	2	1	1	3	3	1	1	PASS	0	0	-
 data/traits/physiology/oxidative_stress_response.yaml	traitmech:000079	oxidative stress response	oxidative_stress_response_ros_defense	MECHANISTIC	2	1	1	2	2	1	1	PASS	0	0	-
 data/traits/physiology/persister_cell_formation.yaml	traitmech:000082	persister cell formation	persister_dormancy_tolerance	MECHANISTIC	1	1	0	2	2	1	1	PASS	0	0	-
@@ -726,6 +728,7 @@ data/traits/physiology/photolithoautotrophic.yaml	METPO:1000665	photolithoautotr
 data/traits/physiology/photolithotrophic.yaml	METPO:1000658	photolithotrophic	photolithotrophic_inorganic_electron_donors	MECHANISTIC	1	0	1	2	2	1	1	PASS	0	0	-
 data/traits/physiology/photoorganoheterotrophic.yaml	METPO:1000659	photoorganoheterotrophic	photoorganoheterotrophic_light_organic_electrons	MECHANISTIC	2	0	2	2	2	1	1	PASS	0	0	-
 data/traits/physiology/phototrophic.yaml	METPO:1000660	phototrophic	phototrophic_light_energy_capture	MECHANISTIC	3	2	1	2	2	1	1	PASS	0	0	-
+data/traits/physiology/prolyl_aminopeptidase_activity.yaml	traitmech:000166	prolyl aminopeptidase activity	prolyl_aminopeptidase_pip_sketch	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/physiology/pyrazinamidase_activity.yaml	traitmech:000163	pyrazinamidase activity	pyrazinamidase_activity_pnca_sketch	MECHANISTIC	1	1	0	2	2	1	1	PASS	0	0	-
 data/traits/physiology/quorum_sensing.yaml	traitmech:000084	quorum sensing	quorum_sensing_autoinducer	MECHANISTIC	3	3	0	1	1	5	1	PASS	0	0	-
 data/traits/physiology/siderophore_production.yaml	traitmech:000186	siderophore production	siderophore_production_iron_scavenging_sketch	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-

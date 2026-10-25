@@ -22,8 +22,8 @@
       "LUMP_INTO_PARENT": 0,
       "CURATE_ROOT_WITH_SUBTYPES": 13,
       "ADD_CANONICAL_EXAMPLES": 102,
-      "BUILD_CAUSAL_GRAPH": 259,
-      "DEEPEN_CAUSAL_GRAPH": 409,
+      "BUILD_CAUSAL_GRAPH": 256,
+      "DEEPEN_CAUSAL_GRAPH": 412,
       "ALREADY_DEEP": 59,
       "CURATE_ROOT": 159
     }
@@ -7121,29 +7121,6 @@
       ]
     },
     {
-      "identifier": "traitmech:000154",
-      "label": "ornithine decarboxylase activity",
-      "category": "physiology",
-      "slug": "ornithine_decarboxylase_activity",
-      "score": 28.0,
-      "action": "BUILD_CAUSAL_GRAPH",
-      "edges": 0,
-      "nodes": 0,
-      "components": 0,
-      "orphans": 0,
-      "examples": 1,
-      "canonical_examples_reviewed_empty": false,
-      "children": 0,
-      "series": null,
-      "series_size": 0,
-      "series_overlap": null,
-      "researched": false,
-      "reasons": [
-        "no causal graph +25",
-        "no synonyms +3"
-      ]
-    },
-    {
       "identifier": "traitmech:000632",
       "label": "pallium feeding",
       "category": "physiology",
@@ -8367,28 +8344,6 @@
       ]
     },
     {
-      "identifier": "traitmech:000165",
-      "label": "NAD-dependent alcohol dehydrogenase activity",
-      "category": "physiology",
-      "slug": "nad_dependent_alcohol_dehydrogenase_activity",
-      "score": 25.0,
-      "action": "BUILD_CAUSAL_GRAPH",
-      "edges": 0,
-      "nodes": 0,
-      "components": 0,
-      "orphans": 0,
-      "examples": 1,
-      "canonical_examples_reviewed_empty": false,
-      "children": 0,
-      "series": null,
-      "series_size": 0,
-      "series_overlap": null,
-      "researched": false,
-      "reasons": [
-        "no causal graph +25"
-      ]
-    },
-    {
       "identifier": "traitmech:000174",
       "label": "naphthol-AS-BI-phosphohydrolase activity",
       "category": "physiology",
@@ -8437,28 +8392,6 @@
       "label": "phenylalanine arylamidase activity",
       "category": "physiology",
       "slug": "phenylalanine_arylamidase_activity",
-      "score": 25.0,
-      "action": "BUILD_CAUSAL_GRAPH",
-      "edges": 0,
-      "nodes": 0,
-      "components": 0,
-      "orphans": 0,
-      "examples": 1,
-      "canonical_examples_reviewed_empty": false,
-      "children": 0,
-      "series": null,
-      "series_size": 0,
-      "series_overlap": null,
-      "researched": false,
-      "reasons": [
-        "no causal graph +25"
-      ]
-    },
-    {
-      "identifier": "traitmech:000166",
-      "label": "prolyl aminopeptidase activity",
-      "category": "physiology",
-      "slug": "prolyl_aminopeptidase_activity",
       "score": 25.0,
       "action": "BUILD_CAUSAL_GRAPH",
       "edges": 0,
@@ -9062,6 +8995,29 @@
       "researched": false,
       "reasons": [
         "thin graph (3 edges) +12",
+        "no synonyms +3"
+      ]
+    },
+    {
+      "identifier": "traitmech:000154",
+      "label": "ornithine decarboxylase activity",
+      "category": "physiology",
+      "slug": "ornithine_decarboxylase_activity",
+      "score": 15.0,
+      "action": "DEEPEN_CAUSAL_GRAPH",
+      "edges": 2,
+      "nodes": 3,
+      "components": 1,
+      "orphans": 0,
+      "examples": 1,
+      "canonical_examples_reviewed_empty": false,
+      "children": 0,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": false,
+      "reasons": [
+        "thin graph (2 edges) +12",
         "no synonyms +3"
       ]
     },
@@ -15634,6 +15590,50 @@
       "researched": false,
       "reasons": [
         "thin graph (3 edges) +12"
+      ]
+    },
+    {
+      "identifier": "traitmech:000165",
+      "label": "NAD-dependent alcohol dehydrogenase activity",
+      "category": "physiology",
+      "slug": "nad_dependent_alcohol_dehydrogenase_activity",
+      "score": 12.0,
+      "action": "DEEPEN_CAUSAL_GRAPH",
+      "edges": 2,
+      "nodes": 3,
+      "components": 1,
+      "orphans": 0,
+      "examples": 1,
+      "canonical_examples_reviewed_empty": false,
+      "children": 0,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": false,
+      "reasons": [
+        "thin graph (2 edges) +12"
+      ]
+    },
+    {
+      "identifier": "traitmech:000166",
+      "label": "prolyl aminopeptidase activity",
+      "category": "physiology",
+      "slug": "prolyl_aminopeptidase_activity",
+      "score": 12.0,
+      "action": "DEEPEN_CAUSAL_GRAPH",
+      "edges": 2,
+      "nodes": 3,
+      "components": 1,
+      "orphans": 0,
+      "examples": 1,
+      "canonical_examples_reviewed_empty": false,
+      "children": 0,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": false,
+      "reasons": [
+        "thin graph (2 edges) +12"
       ]
     },
     {
