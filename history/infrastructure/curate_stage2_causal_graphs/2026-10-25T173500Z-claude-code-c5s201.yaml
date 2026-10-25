@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/curate_stage2_causal_graphs.py
+  slug: curate_stage2_causal_graphs
+session:
+  id: 2026-10-25T173500Z-claude-code-c5s201
+  timestamp: '2026-10-25T17:35:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+    agent_tool: antigravity
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1976
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - discussions
+  - curation_history
+  summary: Curate Cycle 5 Stage 2 causal_graphs for 3 Cohort H metabolism and physiology traits (butanediol_fermentation, beta_glucuronidase_activity, beta_n_acetylhexosaminidase_activity)
+  details: Audited all 1,129 eligible TraitRecord YAMLs for Cycle 5 Stage 2 (causal_graphs).
+    Verified 744 existing eligible CLASS records with causal_graphs have 0 new structural
+    errors, 0 new predicate-domain errors, and 0 protein-taxon gaps. Extended scripts/curate_stage2_causal_graphs.py
+    with Cohort H (3 connected NONMECHANISTIC causal_graphs anchored on distinct verbatim
+    record evidence snippets + OPEN CURATION_TODO <slug>-protein-example-gap discussions for
+    butanediol_fermentation, beta_glucuronidase_activity, and beta_n_acetylhexosaminidase_activity,
+    resolving each record's <slug>-causal-graph-source-gap). After this batch, 747/1,129 eligible
+    records carry connected schema-valid causal_graphs, 124 are non-mechanistic vocabulary/property/observation/upper
+    records, and 100% (258/258) of active CLASS records without causal_graphs carry an explicit
+    OPEN KNOWLEDGE_GAP (216) or CURATION_TODO (42) discussion.

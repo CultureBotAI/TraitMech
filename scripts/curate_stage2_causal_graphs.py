@@ -54,6 +54,7 @@ CURATION_ACTION_GAP = "RECORD_MECHANISM_KNOWLEDGE_GAP"
 POSED_DATE = "2026-10-21"
 POSED_DATE_C2 = "2026-10-23"
 POSED_DATE_C4 = "2026-10-25"
+POSED_DATE_C5 = "2026-10-25"
 
 
 def _ev_item(doc: dict[str, Any], index: int, notes: str) -> dict[str, str]:
@@ -2096,10 +2097,6 @@ COHORT_D_GAPS: dict[str, tuple[str, str]] = {
         "Add primary literature evidence for periplasmic arsenite oxidase (AioAB or ArxAB), electron transfer to c-type cytochrome/azurin, and a strain-matched canonical example before constructing causal_graphs.",
         "The current record carries general detoxification/energy and strain-isolation snippets (DOI:10.3389/fmicb.2020.569282, DOI:10.1128/AEM.66.1.92-97.2000, DOI:10.1186/s12866-024-03676-9) without enzyme-level catalytic quotes or a cited canonical example.",
     ),
-    "data/traits/metabolism/butanediol_fermentation.yaml": (
-        "Add primary literature evidence for alpha-acetolactate synthase (AlsS/BudB), alpha-acetolactate decarboxylase (AlsD/BudA), and 2,3-butanediol dehydrogenase (BdhA/BudC) plus strain-matched UniProtKB protein accessions before constructing causal_graphs.",
-        "The current record carries metabolite-overview and isomer-detection snippets (DOI:10.1186/s12934-023-02163-6, ASM Voges-Proskauer protocol, DOI:10.1007/s00253-014-5526-9) without enzymatic catalysis quotes for the pyruvate-to-acetoin-to-2,3-butanediol steps.",
-    ),
     "data/traits/metabolism/butyric_acid_fermentation.yaml": (
         "Add primary literature evidence for thiolase, 3-hydroxybutyryl-CoA dehydrogenase, crotonase, butyryl-CoA dehydrogenase/EtfAB, and phosphotransbutyrylase/butyrate kinase or butyryl-CoA:acetate CoA-transferase in Clostridium tyrobutyricum before constructing causal_graphs.",
         "The current record summarizes anaerobe energy-conservation history, gene-cluster arrangements, and strain yield (DOI:10.3389/fmicb.2021.703525, DOI:10.1111/j.1574-6968.2009.01514.x, DOI:10.1111/1751-7915.12304) without distinct step-by-step enzymatic reaction quotes.",
@@ -2191,14 +2188,6 @@ COHORT_D_GAPS: dict[str, tuple[str, str]] = {
     "data/traits/physiology/beta_glucosidase_activity.yaml": (
         "Add primary microbial literature evidence for BglA/BglX beta-glucosidase cellobiose/beta-D-glucoside hydrolysis and glucose release before constructing causal_graphs.",
         "The current record pairs one EC 3.2.1.21 definition snippet (DOI:10.1007/s13205-015-0328-z) with two API ZYM diagnostic survey snippets (DOI:10.2323/jgam.60.59, DOI:10.3390/microorganisms12040776), leaving only one mechanistic quote.",
-    ),
-    "data/traits/physiology/beta_glucuronidase_activity.yaml": (
-        "Add primary microbial literature evidence for GusA/UidA beta-D-glucuronidase physiological glucuronide catabolism and strain-matched UniProtKB protein accessions before constructing causal_graphs.",
-        "The current record pairs one IUBMB EC 3.2.1.31 reaction snippet with one fluorogenic MUG-assay snippet (DOI:10.1128/aem.50.6.1383-1387.1985) without physiological pathway or UniProtKB protein grounding.",
-    ),
-    "data/traits/physiology/beta_n_acetylhexosaminidase_activity.yaml": (
-        "Add primary microbial literature evidence for NagZ/Chb beta-N-acetylhexosaminidase chitobiose/muropeptide cleavage and GlcNAc release in Serratia marcescens before constructing causal_graphs.",
-        "The current record pairs one IUBMB EC 3.2.1.52 reaction snippet with a strain enzyme-production snippet (DOI:10.1021/jf020965x) that does not state a distinct second mechanistic step.",
     ),
     "data/traits/physiology/carboxylesterase_activity.yaml": (
         "Add primary microbial literature evidence for microbial carboxylesterase (EC 3.1.1.1) substrate hydrolysis and alcohol/carboxylate release in the exemplar taxon before constructing causal_graphs.",
@@ -3232,8 +3221,297 @@ def build_cohort_g_discussion(rel_path: str, doc: dict[str, Any], graph_id: str)
     return discussion
 
 
+COHORT_H_PATHS: tuple[str, ...] = (
+    "data/traits/metabolism/butanediol_fermentation.yaml",
+    "data/traits/physiology/beta_glucuronidase_activity.yaml",
+    "data/traits/physiology/beta_n_acetylhexosaminidase_activity.yaml",
+)
+
+COHORT_H_PROTEIN_GAPS: dict[str, tuple[str, str, int]] = {
+    "data/traits/metabolism/butanediol_fermentation.yaml": (
+        "Add strain-matched UniProtKB protein_examples for Klebsiella pneumoniae meso-2,3-butanediol dehydrogenase BudC (UniProtKB:Q48436) so butanediol_fermentation_acetoin_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
+        "The record's primary literature (DOI:10.1186/s12934-023-02163-6, ASM Methyl Red / Voges-Proskauer protocol, DOI:10.1007/s00253-014-5526-9) establishes acetoin intermediate reduction to 2,3-butanediol and stereoisomer production in Klebsiella pneumoniae (NCBITaxon:573), but a verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
+        2,
+    ),
+    "data/traits/physiology/beta_glucuronidase_activity.yaml": (
+        "Add strain-matched UniProtKB protein_examples for Escherichia coli K-12 beta-glucuronidase UidA (UniProtKB:P05804) so beta_glucuronidase_uida_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
+        "The record's primary literature (EC 3.2.1.31, DOI:10.1128/aem.50.6.1383-1387.1985) establishes beta-D-glucuronoside hydrolysis to D-glucuronate and alcohol and MUG substrate cleavage in Escherichia coli (NCBITaxon:562), but a verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
+        1,
+    ),
+    "data/traits/physiology/beta_n_acetylhexosaminidase_activity.yaml": (
+        "Add strain-matched UniProtKB protein_examples for Serratia marcescens chitobiase Chb (UniProtKB:Q54468) so beta_n_acetylhexosaminidase_chb_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
+        "The record's primary literature (EC 3.2.1.52, DOI:10.1021/jf020965x) establishes hydrolytic release of terminal non-reducing N-acetyl-D-hexosamine residues and N-acetylhexosaminidase production in Serratia marcescens (NCBITaxon:615), but a verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
+        1,
+    ),
+}
+
+
+def build_cohort_h_graphs(rel_path: str, doc: dict[str, Any]) -> list[dict[str, Any]]:
+    """Construct the connected NONMECHANISTIC causal_graphs list for a Cohort H record."""
+    if rel_path == "data/traits/metabolism/butanediol_fermentation.yaml":
+        return [
+            {
+                "graph_id": "butanediol_fermentation_acetoin_sketch",
+                "title": "Acetoin intermediate formation and reduction to 2,3-butanediol",
+                "description": (
+                    "Evidence-backed metabolic pathway sketch linking acetoin "
+                    "(3-hydroxybutanone) intermediate reduction and 2,3-butanediol "
+                    "production to the 2,3-butanediol fermentation phenotype."
+                ),
+                "scope_status": "NONMECHANISTIC",
+                "scope_notes": (
+                    "Metabolic-intermediate sketch backed by the ASM Methyl Red / "
+                    "Voges-Proskauer protocol and DOI:10.1007/s00253-014-5526-9; "
+                    "strain-matched UniProtKB protein examples for Klebsiella "
+                    "pneumoniae meso-2,3-butanediol dehydrogenase (BudC, "
+                    "UniProtKB:Q48436) remain to be curated."
+                ),
+                "nodes": [
+                    {
+                        "node_id": "butanediol_fermentation_trait",
+                        "label": "2,3-butanediol fermentation",
+                        "node_type": "TRAIT",
+                        "grounding": "traitmech:000181",
+                        "description": "Fermentation phenotype in which microorganisms convert sugars via acetoin into 2,3-butanediol neutral end products.",
+                    },
+                    {
+                        "node_id": "butanediol_fermentation_acetoin",
+                        "label": "acetoin",
+                        "node_type": "CHEMICAL",
+                        "grounding": "CHEBI:15688",
+                        "description": "Acetoin (3-hydroxybutanone), the four-carbon ketone intermediate formed during sugar fermentation via the butanediol pathway.",
+                    },
+                    {
+                        "node_id": "butanediol_fermentation_2_3_butanediol",
+                        "label": "butane-2,3-diol",
+                        "node_type": "CHEMICAL",
+                        "grounding": "CHEBI:16982",
+                        "description": "Neutral four-carbon diol product (2,3-butanediol) formed by enzymatic reduction of acetoin during butanediol fermentation.",
+                    },
+                ],
+                "edges": [
+                    {
+                        "subject": "butanediol_fermentation_acetoin",
+                        "predicate": "derives into",
+                        "predicate_id": "RO:0001001",
+                        "object": "butanediol_fermentation_2_3_butanediol",
+                        "description": "Bacteria fermenting sugars via the butanediol pathway produce acetoin as an intermediate that is further reduced to 2,3-butanediol.",
+                        "evidence": [
+                            _ev_item(
+                                doc,
+                                1,
+                                "The ASM Methyl Red / Voges-Proskauer protocol states that bacteria fermenting sugars via the butanediol pathway produce acetoin (3-hydroxybutanone) as an intermediate that can be further reduced to 2,3-butanediol.",
+                            )
+                        ],
+                    },
+                    {
+                        "subject": "butanediol_fermentation_2_3_butanediol",
+                        "predicate": "confers",
+                        "predicate_id": "METPO:2007700",
+                        "object": "butanediol_fermentation_trait",
+                        "description": "Production of meso-2,3-butanediol, (2S,3S)-butanediol, and (2R,3R)-butanediol stereoisomers in culture broth confers the 2,3-butanediol fermentation phenotype.",
+                        "evidence": [
+                            _ev_item(
+                                doc,
+                                2,
+                                "Chen et al. show that Klebsiella pneumoniae produces meso-2,3-butanediol, 2S,3S-butanediol, and 2R,3R-butanediol in culture broth.",
+                            )
+                        ],
+                    },
+                ],
+            }
+        ]
+
+    if rel_path == "data/traits/physiology/beta_glucuronidase_activity.yaml":
+        return [
+            {
+                "graph_id": "beta_glucuronidase_uida_sketch",
+                "title": "Beta-glucuronidase hydrolysis of beta-D-glucuronosides to D-glucuronate",
+                "description": (
+                    "Evidence-backed physiological mechanism sketch linking "
+                    "beta-glucuronidase catalytic activity and D-glucuronate "
+                    "release to the beta-glucuronidase activity phenotype."
+                ),
+                "scope_status": "NONMECHANISTIC",
+                "scope_notes": (
+                    "Activity-and-reaction sketch backed by EC 3.2.1.31 and "
+                    "DOI:10.1128/aem.50.6.1383-1387.1985; strain-matched UniProtKB "
+                    "protein examples for Escherichia coli K-12 beta-glucuronidase "
+                    "(UidA, UniProtKB:P05804) remain to be curated."
+                ),
+                "nodes": [
+                    {
+                        "node_id": "beta_glucuronidase_activity_trait",
+                        "label": "beta-glucuronidase activity",
+                        "node_type": "TRAIT",
+                        "grounding": "traitmech:000151",
+                        "description": "Physiological enzyme-activity phenotype in which a cell produces active beta-glucuronidase enzymes that hydrolyze beta-D-glucuronosides.",
+                    },
+                    {
+                        "node_id": "beta_glucuronidase_catalytic_activity",
+                        "label": "beta-glucuronidase activity",
+                        "node_type": "MOLECULAR_FUNCTION",
+                        "grounding": "GO:0004566",
+                        "description": "Glycosidase catalytic activity hydrolyzing a beta-D-glucuronoside with H2O to yield D-glucuronate and an alcohol (EC 3.2.1.31).",
+                    },
+                    {
+                        "node_id": "beta_glucuronidase_d_glucuronate",
+                        "label": "D-glucuronate",
+                        "node_type": "CHEMICAL",
+                        "grounding": "CHEBI:15748",
+                        "description": "Free D-glucuronate released by beta-glucuronidase hydrolysis of beta-D-glucuronosides.",
+                    },
+                ],
+                "edges": [
+                    {
+                        "subject": "beta_glucuronidase_catalytic_activity",
+                        "predicate": "confers",
+                        "predicate_id": "METPO:2007700",
+                        "object": "beta_glucuronidase_activity_trait",
+                        "description": "Cellular production of active beta-glucuronidase that cleaves beta-D-glucuronide substrates such as MUG confers the beta-glucuronidase activity phenotype.",
+                        "evidence": [
+                            _ev_item(
+                                doc,
+                                1,
+                                "Moberg shows that the beta-glucuronidase produced by Escherichia coli cleaves the MUG substrate to yield a fluorescent end product.",
+                            )
+                        ],
+                    },
+                    {
+                        "subject": "beta_glucuronidase_catalytic_activity",
+                        "predicate": "has output",
+                        "predicate_id": "RO:0002234",
+                        "object": "beta_glucuronidase_d_glucuronate",
+                        "description": "Beta-glucuronidase hydrolyzes a beta-D-glucuronoside with H2O to produce D-glucuronate and an alcohol.",
+                        "evidence": [
+                            _ev_item(
+                                doc,
+                                0,
+                                "IUBMB EC 3.2.1.31 defines the beta-glucuronidase reaction hydrolyzing a beta-D-glucuronoside with H2O to D-glucuronate and an alcohol.",
+                            )
+                        ],
+                    },
+                ],
+            }
+        ]
+
+    if rel_path == "data/traits/physiology/beta_n_acetylhexosaminidase_activity.yaml":
+        return [
+            {
+                "graph_id": "beta_n_acetylhexosaminidase_chb_sketch",
+                "title": "Beta-N-acetylhexosaminidase hydrolytic release of N-acetyl-D-hexosamine residues",
+                "description": (
+                    "Evidence-backed physiological mechanism sketch linking "
+                    "beta-N-acetylhexosaminidase catalytic activity and "
+                    "N-acetyl-D-glucosamine release to the "
+                    "beta-N-acetylhexosaminidase activity phenotype."
+                ),
+                "scope_status": "NONMECHANISTIC",
+                "scope_notes": (
+                    "Activity-and-reaction sketch backed by EC 3.2.1.52 and "
+                    "DOI:10.1021/jf020965x; strain-matched UniProtKB protein "
+                    "examples for Serratia marcescens chitobiase (Chb, "
+                    "UniProtKB:Q54468) remain to be curated."
+                ),
+                "nodes": [
+                    {
+                        "node_id": "beta_n_acetylhexosaminidase_activity_trait",
+                        "label": "beta-N-acetylhexosaminidase activity",
+                        "node_type": "TRAIT",
+                        "grounding": "traitmech:000157",
+                        "description": "Physiological enzyme-activity phenotype in which a cell produces active beta-N-acetylhexosaminidase enzymes.",
+                    },
+                    {
+                        "node_id": "beta_n_acetylhexosaminidase_catalytic_activity",
+                        "label": "beta-N-acetylhexosaminidase activity",
+                        "node_type": "MOLECULAR_FUNCTION",
+                        "grounding": "GO:0004563",
+                        "description": "Glycosidase catalytic activity hydrolyzing terminal non-reducing N-acetyl-D-hexosamine residues in N-acetyl-beta-D-hexosaminides (EC 3.2.1.52).",
+                    },
+                    {
+                        "node_id": "beta_n_acetylhexosaminidase_hexosamine",
+                        "label": "N-acetyl-D-glucosamine",
+                        "node_type": "CHEMICAL",
+                        "grounding": "CHEBI:59640",
+                        "description": "Terminal N-acetyl-D-hexosamine (N-acetyl-D-glucosamine) monomer released by beta-N-acetylhexosaminidase hydrolysis of chitooligosaccharides and N-acetyl-beta-D-hexosaminides.",
+                    },
+                ],
+                "edges": [
+                    {
+                        "subject": "beta_n_acetylhexosaminidase_catalytic_activity",
+                        "predicate": "confers",
+                        "predicate_id": "METPO:2007700",
+                        "object": "beta_n_acetylhexosaminidase_activity_trait",
+                        "description": "Production of active beta-N-acetylhexosaminidase by chitin-degrading bacteria confers the beta-N-acetylhexosaminidase activity phenotype.",
+                        "evidence": [
+                            _ev_item(
+                                doc,
+                                1,
+                                "Kurakake et al. show that Serratia marcescens YS-1, a chitin-degrading microorganism, produced mainly N-acetylhexosaminidase.",
+                            )
+                        ],
+                    },
+                    {
+                        "subject": "beta_n_acetylhexosaminidase_catalytic_activity",
+                        "predicate": "has output",
+                        "predicate_id": "RO:0002234",
+                        "object": "beta_n_acetylhexosaminidase_hexosamine",
+                        "description": "Beta-N-acetylhexosaminidase catalyzes the hydrolysis of terminal non-reducing N-acetyl-D-hexosamine residues in N-acetyl-beta-D-hexosaminides.",
+                        "evidence": [
+                            _ev_item(
+                                doc,
+                                0,
+                                "IUBMB EC 3.2.1.52 defines beta-N-acetylhexosaminidase catalysis as the hydrolysis of terminal non-reducing N-acetyl-D-hexosamine residues in N-acetyl-beta-D-hexosaminides.",
+                            )
+                        ],
+                    },
+                ],
+            }
+        ]
+
+    raise KeyError(f"Unexpected Cohort H path: {rel_path}")
+
+
+def build_cohort_h_discussion(rel_path: str, doc: dict[str, Any], graph_id: str) -> dict[str, Any]:
+    """Construct the CURATION_TODO DiscussionItem for a Cohort H record."""
+    slug = Path(rel_path).stem.replace("_", "-")
+    prompt, rationale, ev_index = COHORT_H_PROTEIN_GAPS[rel_path]
+    ev_list = doc.get("evidence") or []
+    supporting_ev: list[dict[str, str]] = []
+    if len(ev_list) > ev_index and isinstance(ev_list[ev_index], dict):
+        src = ev_list[ev_index]
+        ref = str(src.get("reference") or "").strip()
+        snip = str(src.get("snippet") or "").strip()
+        if ref and snip:
+            supporting_ev.append(
+                {
+                    "reference": ref,
+                    "supports": "PARTIAL",
+                    "snippet": snip,
+                    "explanation": (
+                        "Existing record-level evidence supports the connected "
+                        "NONMECHANISTIC pathway/function graph but does not provide "
+                        "strain-matched UniProtKB protein accessions for protein_examples."
+                    ),
+                }
+            )
+    discussion: dict[str, Any] = {
+        "discussion_id": f"{slug}-protein-example-gap",
+        "prompt": prompt,
+        "kind": "CURATION_TODO",
+        "status": "OPEN",
+        "attaches_to": [f"causal_graphs#{graph_id}"],
+        "rationale": rationale,
+        "posed_by": CURATOR,
+        "posed_date": POSED_DATE_C5,
+    }
+    if supporting_ev:
+        discussion["evidence"] = supporting_ev
+    return discussion
+
+
 def process_all(apply: bool = False) -> tuple[int, int]:
-    """Process Cohort A, B, C, D, E, F, and G records. Returns (graphs_added, gaps_added)."""
+    """Process Cohort A, B, C, D, E, F, G, and H records. Returns (graphs_added, gaps_added)."""
     graphs_added = 0
     gaps_added = 0
 
@@ -3592,6 +3870,93 @@ def process_all(apply: bool = False) -> tuple[int, int]:
             if isinstance(d, dict) and d.get("discussion_id") == source_gap_id:
                 d["status"] = "RESOLVED"
                 d["resolved_date"] = POSED_DATE_C4
+                d["attaches_to"] = [f"causal_graphs#{graph_id}"]
+                d["resolution_note"] = (
+                    f"Added connected NONMECHANISTIC causal_graphs entry ({graph_id}) "
+                    "anchored on existing verbatim record evidence snippets, and "
+                    "tracked the remaining strain-matched UniProtKB protein-example "
+                    f"requirement in {disc_id}."
+                )
+        if matched:
+            for idx, d in enumerate(existing_disc):
+                if isinstance(d, dict) and d.get("discussion_id") == disc_id:
+                    existing_disc[idx] = disc
+            doc["discussions"] = existing_disc
+        else:
+            existing_disc.append(disc)
+            doc["discussions"] = existing_disc
+            scope_status = graphs[0]["scope_status"]
+            record_curation_event(
+                doc,
+                action=CURATION_ACTION_GRAPH,
+                curator=CURATOR,
+                changes=(
+                    f"Added {scope_status} causal_graphs entry ({graph_id}) "
+                    f"and OPEN CURATION_TODO discussion ({disc_id}) anchored on "
+                    "existing verbatim record evidence snippets."
+                ),
+                llm_assisted=True,
+            )
+        errors = validate_trait(doc)
+        if errors:
+            raise ValidationFailedError(path, errors)
+        if apply:
+            write_validated_trait(doc, path)
+        graphs_added += 1
+
+    for rel_path in COHORT_H_PATHS:
+        path = REPO_ROOT / rel_path
+        doc = yaml.safe_load(path.read_text(encoding="utf-8"))
+        graphs = build_cohort_h_graphs(rel_path, doc)
+        graph_id = graphs[0]["graph_id"]
+        disc = build_cohort_h_discussion(rel_path, doc, graph_id)
+        disc_id = disc["discussion_id"]
+        existing_disc = doc.get("discussions") or []
+        matched = [
+            d for d in existing_disc if isinstance(d, dict) and d.get("discussion_id") == disc_id
+        ]
+        existing_graphs = doc.get("causal_graphs") or []
+        source_gap_id = f"{path.stem.replace('_', '-')}-causal-graph-source-gap"
+        open_source_gaps = [
+            d
+            for d in existing_disc
+            if isinstance(d, dict)
+            and d.get("discussion_id") == source_gap_id
+            and (
+                d.get("status") == "OPEN"
+                or d.get("attaches_to") != [f"causal_graphs#{graph_id}"]
+            )
+        ]
+        if existing_graphs == graphs and matched and matched[0] == disc and not open_source_gaps:
+            continue
+        if (
+            len(existing_graphs) == 1
+            and existing_graphs[0].get("graph_id") == graph_id
+            and matched
+            and matched[0].get("kind") == "CURATION_TODO"
+            and matched[0].get("attaches_to") == [f"causal_graphs#{graph_id}"]
+            and not open_source_gaps
+            and (
+                (
+                    existing_graphs[0].get("scope_status") == "MECHANISTIC"
+                    and matched[0].get("status") == "RESOLVED"
+                    and matched[0].get("resolution_note")
+                )
+                or (
+                    existing_graphs == graphs
+                    and matched[0].get("status") == "OPEN"
+                    and matched[0].get("notes")
+                )
+            )
+        ):
+            _verify_graph_invariants(rel_path, doc, existing_graphs)
+            continue
+        _verify_graph_invariants(rel_path, doc, graphs)
+        doc["causal_graphs"] = graphs
+        for d in existing_disc:
+            if isinstance(d, dict) and d.get("discussion_id") == source_gap_id:
+                d["status"] = "RESOLVED"
+                d["resolved_date"] = POSED_DATE_C5
                 d["attaches_to"] = [f"causal_graphs#{graph_id}"]
                 d["resolution_note"] = (
                     f"Added connected NONMECHANISTIC causal_graphs entry ({graph_id}) "

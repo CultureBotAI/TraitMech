@@ -57,9 +57,9 @@ discussions:
     chitobiose/muropeptide cleavage and GlcNAc release in Serratia marcescens before
     constructing causal_graphs.
   kind: KNOWLEDGE_GAP
-  status: OPEN
+  status: RESOLVED
   attaches_to:
-  - causal_graphs
+  - causal_graphs#beta_n_acetylhexosaminidase_chb_sketch
   rationale: The current record pairs one IUBMB EC 3.2.1.52 reaction snippet with
     a strain enzyme-production snippet (DOI:10.1021/jf020965x) that does not state
     a distinct second mechanistic step.
@@ -74,6 +74,33 @@ discussions:
       diagnostic or organismal occurrence, but lacks multiple distinct pathway/enzyme
       quotes and strain-matched UniProtKB protein accessions needed for a connected
       causal graph.
+  resolved_date: '2026-10-25'
+  resolution_note: Added connected NONMECHANISTIC causal_graphs entry (beta_n_acetylhexosaminidase_chb_sketch)
+    anchored on existing verbatim record evidence snippets, and tracked the remaining
+    strain-matched UniProtKB protein-example requirement in beta-n-acetylhexosaminidase-activity-protein-example-gap.
+- discussion_id: beta-n-acetylhexosaminidase-activity-protein-example-gap
+  prompt: Add strain-matched UniProtKB protein_examples for Serratia marcescens chitobiase
+    Chb (UniProtKB:Q54468) so beta_n_acetylhexosaminidase_chb_sketch can be promoted
+    from NONMECHANISTIC to MECHANISTIC.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - causal_graphs#beta_n_acetylhexosaminidase_chb_sketch
+  rationale: The record's primary literature (EC 3.2.1.52, DOI:10.1021/jf020965x)
+    establishes hydrolytic release of terminal non-reducing N-acetyl-D-hexosamine
+    residues and N-acetylhexosaminidase production in Serratia marcescens (NCBITaxon:615),
+    but a verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated before
+    marking the graph MECHANISTIC.
+  posed_by: claude
+  posed_date: '2026-10-25'
+  evidence:
+  - reference: DOI:10.1021/jf020965x
+    supports: PARTIAL
+    snippet: Serratia marcescens YS-1, a chitin-degrading microorganism, produced
+      mainly N-acetylhexosaminidase
+    explanation: Existing record-level evidence supports the connected NONMECHANISTIC
+      pathway/function graph but does not provide strain-matched UniProtKB protein
+      accessions for protein_examples.
 curation_history:
 - timestamp: '2026-09-12T04:12:07Z'
   curator: codex
@@ -88,3 +115,64 @@ curation_history:
   changes: Recorded OPEN KNOWLEDGE_GAP discussion (beta-n-acetylhexosaminidase-activity-causal-graph-source-gap)
     attached to causal_graphs documenting the source-limited mechanism gap.
   llm_assisted: true
+- timestamp: '2026-10-25T17:36:36Z'
+  curator: claude
+  action: CURATE_CAUSAL_GRAPH
+  changes: Added NONMECHANISTIC causal_graphs entry (beta_n_acetylhexosaminidase_chb_sketch)
+    and OPEN CURATION_TODO discussion (beta-n-acetylhexosaminidase-activity-protein-example-gap)
+    anchored on existing verbatim record evidence snippets.
+  llm_assisted: true
+causal_graphs:
+- graph_id: beta_n_acetylhexosaminidase_chb_sketch
+  title: Beta-N-acetylhexosaminidase hydrolytic release of N-acetyl-D-hexosamine residues
+  description: Evidence-backed physiological mechanism sketch linking beta-N-acetylhexosaminidase
+    catalytic activity and N-acetyl-D-glucosamine release to the beta-N-acetylhexosaminidase
+    activity phenotype.
+  scope_status: NONMECHANISTIC
+  scope_notes: Activity-and-reaction sketch backed by EC 3.2.1.52 and DOI:10.1021/jf020965x;
+    strain-matched UniProtKB protein examples for Serratia marcescens chitobiase (Chb,
+    UniProtKB:Q54468) remain to be curated.
+  nodes:
+  - node_id: beta_n_acetylhexosaminidase_activity_trait
+    label: beta-N-acetylhexosaminidase activity
+    node_type: TRAIT
+    grounding: traitmech:000157
+    description: Physiological enzyme-activity phenotype in which a cell produces
+      active beta-N-acetylhexosaminidase enzymes.
+  - node_id: beta_n_acetylhexosaminidase_catalytic_activity
+    label: beta-N-acetylhexosaminidase activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0004563
+    description: Glycosidase catalytic activity hydrolyzing terminal non-reducing
+      N-acetyl-D-hexosamine residues in N-acetyl-beta-D-hexosaminides (EC 3.2.1.52).
+  - node_id: beta_n_acetylhexosaminidase_hexosamine
+    label: N-acetyl-D-glucosamine
+    node_type: CHEMICAL
+    grounding: CHEBI:59640
+    description: Terminal N-acetyl-D-hexosamine (N-acetyl-D-glucosamine) monomer released
+      by beta-N-acetylhexosaminidase hydrolysis of chitooligosaccharides and N-acetyl-beta-D-hexosaminides.
+  edges:
+  - subject: beta_n_acetylhexosaminidase_catalytic_activity
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: beta_n_acetylhexosaminidase_activity_trait
+    description: Production of active beta-N-acetylhexosaminidase by chitin-degrading
+      bacteria confers the beta-N-acetylhexosaminidase activity phenotype.
+    evidence:
+    - reference: DOI:10.1021/jf020965x
+      snippet: Serratia marcescens YS-1, a chitin-degrading microorganism, produced
+        mainly N-acetylhexosaminidase
+      notes: Kurakake et al. show that Serratia marcescens YS-1, a chitin-degrading
+        microorganism, produced mainly N-acetylhexosaminidase.
+  - subject: beta_n_acetylhexosaminidase_catalytic_activity
+    predicate: has output
+    predicate_id: RO:0002234
+    object: beta_n_acetylhexosaminidase_hexosamine
+    description: Beta-N-acetylhexosaminidase catalyzes the hydrolysis of terminal
+      non-reducing N-acetyl-D-hexosamine residues in N-acetyl-beta-D-hexosaminides.
+    evidence:
+    - reference: https://iubmb.qmul.ac.uk/enzyme/EC3/2/1/52.html
+      snippet: 'Reaction: Hydrolysis of terminal non-reducing N-acetyl-D-hexosamine
+        residues in N-acetyl-β-D-hexosaminides'
+      notes: IUBMB EC 3.2.1.52 defines beta-N-acetylhexosaminidase catalysis as the
+        hydrolysis of terminal non-reducing N-acetyl-D-hexosamine residues in N-acetyl-beta-D-hexosaminides.

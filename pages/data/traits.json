@@ -142937,9 +142937,9 @@
         "discussion_id": "butanediol-fermentation-causal-graph-source-gap",
         "prompt": "Add primary literature evidence for alpha-acetolactate synthase (AlsS/BudB), alpha-acetolactate decarboxylase (AlsD/BudA), and 2,3-butanediol dehydrogenase (BdhA/BudC) plus strain-matched UniProtKB protein accessions before constructing causal_graphs.",
         "kind": "KNOWLEDGE_GAP",
-        "status": "OPEN",
+        "status": "RESOLVED",
         "attaches_to": [
-          "causal_graphs"
+          "causal_graphs#butanediol_fermentation_acetoin_sketch"
         ],
         "rationale": "The current record carries metabolite-overview and isomer-detection snippets (DOI:10.1186/s12934-023-02163-6, ASM Voges-Proskauer protocol, DOI:10.1007/s00253-014-5526-9) without enzymatic catalysis quotes for the pyruvate-to-acetoin-to-2,3-butanediol steps.",
         "posed_by": "claude",
@@ -142950,6 +142950,28 @@
             "supports": "PARTIAL",
             "snippet": "3-Hydroxybutanone (Acetoin, AC) and 2,3-butanediol (BD) are two essential four-carbon platform compounds with numerous pharmaceutical and chemical synthesis applications. AC and BD have two and three stereoisomers, respectively, while the application of the single isomer product in chemical synthesis is superior. AC and BD are glucose overflow metabolites produced by biological fermentation from a variety of microorganisms.",
             "explanation": "Existing record-level evidence supports the trait definition and diagnostic or organismal occurrence, but lacks multiple distinct pathway/enzyme quotes and strain-matched UniProtKB protein accessions needed for a connected causal graph."
+          }
+        ],
+        "resolved_date": "2026-10-25",
+        "resolution_note": "Added connected NONMECHANISTIC causal_graphs entry (butanediol_fermentation_acetoin_sketch) anchored on existing verbatim record evidence snippets, and tracked the remaining strain-matched UniProtKB protein-example requirement in butanediol-fermentation-protein-example-gap."
+      },
+      {
+        "discussion_id": "butanediol-fermentation-protein-example-gap",
+        "prompt": "Add strain-matched UniProtKB protein_examples for Klebsiella pneumoniae meso-2,3-butanediol dehydrogenase BudC (UniProtKB:Q48436) so butanediol_fermentation_acetoin_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
+        "kind": "CURATION_TODO",
+        "status": "OPEN",
+        "attaches_to": [
+          "causal_graphs#butanediol_fermentation_acetoin_sketch"
+        ],
+        "rationale": "The record's primary literature (DOI:10.1186/s12934-023-02163-6, ASM Methyl Red / Voges-Proskauer protocol, DOI:10.1007/s00253-014-5526-9) establishes acetoin intermediate reduction to 2,3-butanediol and stereoisomer production in Klebsiella pneumoniae (NCBITaxon:573), but a verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
+        "posed_by": "claude",
+        "posed_date": "2026-10-25",
+        "evidence": [
+          {
+            "reference": "DOI:10.1007/s00253-014-5526-9",
+            "supports": "PARTIAL",
+            "snippet": "Klebsiella pneumoniae is known to produce meso-2,3-butanediol and 2S,3S-butanediol, whereas 2R,3R-butanediol was detected in the culture broth of K. pneumoniae CGMCC 1.6366.",
+            "explanation": "Existing record-level evidence supports the connected NONMECHANISTIC pathway/function graph but does not provide strain-matched UniProtKB protein accessions for protein_examples."
           }
         ]
       }
@@ -142968,6 +142990,75 @@
         "action": "RECORD_MECHANISM_KNOWLEDGE_GAP",
         "changes": "Recorded OPEN KNOWLEDGE_GAP discussion (butanediol-fermentation-causal-graph-source-gap) attached to causal_graphs documenting the source-limited mechanism gap.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-25T17:50:24Z",
+        "curator": "claude",
+        "action": "CURATE_CAUSAL_GRAPH",
+        "changes": "Added NONMECHANISTIC causal_graphs entry (butanediol_fermentation_acetoin_sketch) and OPEN CURATION_TODO discussion (butanediol-fermentation-protein-example-gap) anchored on existing verbatim record evidence snippets.",
+        "llm_assisted": true
+      }
+    ],
+    "causal_graphs": [
+      {
+        "graph_id": "butanediol_fermentation_acetoin_sketch",
+        "title": "Acetoin intermediate formation and reduction to 2,3-butanediol",
+        "description": "Evidence-backed metabolic pathway sketch linking acetoin (3-hydroxybutanone) intermediate reduction and 2,3-butanediol production to the 2,3-butanediol fermentation phenotype.",
+        "scope_status": "NONMECHANISTIC",
+        "scope_notes": "Metabolic-intermediate sketch backed by the ASM Methyl Red / Voges-Proskauer protocol and DOI:10.1007/s00253-014-5526-9; strain-matched UniProtKB protein examples for Klebsiella pneumoniae meso-2,3-butanediol dehydrogenase (BudC, UniProtKB:Q48436) remain to be curated.",
+        "nodes": [
+          {
+            "node_id": "butanediol_fermentation_trait",
+            "label": "2,3-butanediol fermentation",
+            "node_type": "TRAIT",
+            "grounding": "traitmech:000181",
+            "description": "Fermentation phenotype in which microorganisms convert sugars via acetoin into 2,3-butanediol neutral end products."
+          },
+          {
+            "node_id": "butanediol_fermentation_acetoin",
+            "label": "acetoin",
+            "node_type": "CHEMICAL",
+            "grounding": "CHEBI:15688",
+            "description": "Acetoin (3-hydroxybutanone), the four-carbon ketone intermediate formed during sugar fermentation via the butanediol pathway."
+          },
+          {
+            "node_id": "butanediol_fermentation_2_3_butanediol",
+            "label": "butane-2,3-diol",
+            "node_type": "CHEMICAL",
+            "grounding": "CHEBI:16982",
+            "description": "Neutral four-carbon diol product (2,3-butanediol) formed by enzymatic reduction of acetoin during butanediol fermentation."
+          }
+        ],
+        "edges": [
+          {
+            "subject": "butanediol_fermentation_acetoin",
+            "predicate": "derives into",
+            "predicate_id": "RO:0001001",
+            "object": "butanediol_fermentation_2_3_butanediol",
+            "description": "Bacteria fermenting sugars via the butanediol pathway produce acetoin as an intermediate that is further reduced to 2,3-butanediol.",
+            "evidence": [
+              {
+                "reference": "https://asm.org/getmedia/40946f85-9357-4563-aa8a-994427efa825/Methyl-Red-and-Voges-Proskauer-Test-Protocols.pdf",
+                "snippet": "Bacteria fermenting sugars via the butanediol pathway produce acetoin (i.e., acetyl methyl carbinol or 3-hydroxybutanone) as an intermediate which can be further reduced to 2,3-butanediol.",
+                "notes": "The ASM Methyl Red / Voges-Proskauer protocol states that bacteria fermenting sugars via the butanediol pathway produce acetoin (3-hydroxybutanone) as an intermediate that can be further reduced to 2,3-butanediol."
+              }
+            ]
+          },
+          {
+            "subject": "butanediol_fermentation_2_3_butanediol",
+            "predicate": "confers",
+            "predicate_id": "METPO:2007700",
+            "object": "butanediol_fermentation_trait",
+            "description": "Production of meso-2,3-butanediol, (2S,3S)-butanediol, and (2R,3R)-butanediol stereoisomers in culture broth confers the 2,3-butanediol fermentation phenotype.",
+            "evidence": [
+              {
+                "reference": "DOI:10.1007/s00253-014-5526-9",
+                "snippet": "Klebsiella pneumoniae is known to produce meso-2,3-butanediol and 2S,3S-butanediol, whereas 2R,3R-butanediol was detected in the culture broth of K. pneumoniae CGMCC 1.6366.",
+                "notes": "Chen et al. show that Klebsiella pneumoniae produces meso-2,3-butanediol, 2S,3S-butanediol, and 2R,3R-butanediol in culture broth."
+              }
+            ]
+          }
+        ]
       }
     ]
   },
@@ -210233,9 +210324,9 @@
         "discussion_id": "beta-glucuronidase-activity-causal-graph-source-gap",
         "prompt": "Add primary microbial literature evidence for GusA/UidA beta-D-glucuronidase physiological glucuronide catabolism and strain-matched UniProtKB protein accessions before constructing causal_graphs.",
         "kind": "KNOWLEDGE_GAP",
-        "status": "OPEN",
+        "status": "RESOLVED",
         "attaches_to": [
-          "causal_graphs"
+          "causal_graphs#beta_glucuronidase_uida_sketch"
         ],
         "rationale": "The current record pairs one IUBMB EC 3.2.1.31 reaction snippet with one fluorogenic MUG-assay snippet (DOI:10.1128/aem.50.6.1383-1387.1985) without physiological pathway or UniProtKB protein grounding.",
         "posed_by": "claude",
@@ -210246,6 +210337,28 @@
             "supports": "PARTIAL",
             "snippet": "Reaction: a \u03b2-D-glucuronoside + H2O = D-glucuronate + an alcohol",
             "explanation": "Existing record-level evidence supports the trait definition and diagnostic or organismal occurrence, but lacks multiple distinct pathway/enzyme quotes and strain-matched UniProtKB protein accessions needed for a connected causal graph."
+          }
+        ],
+        "resolved_date": "2026-10-25",
+        "resolution_note": "Added connected NONMECHANISTIC causal_graphs entry (beta_glucuronidase_uida_sketch) anchored on existing verbatim record evidence snippets, and tracked the remaining strain-matched UniProtKB protein-example requirement in beta-glucuronidase-activity-protein-example-gap."
+      },
+      {
+        "discussion_id": "beta-glucuronidase-activity-protein-example-gap",
+        "prompt": "Add strain-matched UniProtKB protein_examples for Escherichia coli K-12 beta-glucuronidase UidA (UniProtKB:P05804) so beta_glucuronidase_uida_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
+        "kind": "CURATION_TODO",
+        "status": "OPEN",
+        "attaches_to": [
+          "causal_graphs#beta_glucuronidase_uida_sketch"
+        ],
+        "rationale": "The record's primary literature (EC 3.2.1.31, DOI:10.1128/aem.50.6.1383-1387.1985) establishes beta-D-glucuronoside hydrolysis to D-glucuronate and alcohol and MUG substrate cleavage in Escherichia coli (NCBITaxon:562), but a verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
+        "posed_by": "claude",
+        "posed_date": "2026-10-25",
+        "evidence": [
+          {
+            "reference": "DOI:10.1128/aem.50.6.1383-1387.1985",
+            "supports": "PARTIAL",
+            "snippet": "The beta-glucuronidase produced by E. coli cleaves the MUG substrate to yield a fluorescent end product.",
+            "explanation": "Existing record-level evidence supports the connected NONMECHANISTIC pathway/function graph but does not provide strain-matched UniProtKB protein accessions for protein_examples."
           }
         ]
       }
@@ -210271,6 +210384,75 @@
         "action": "RECORD_MECHANISM_KNOWLEDGE_GAP",
         "changes": "Recorded OPEN KNOWLEDGE_GAP discussion (beta-glucuronidase-activity-causal-graph-source-gap) attached to causal_graphs documenting the source-limited mechanism gap.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-25T17:36:36Z",
+        "curator": "claude",
+        "action": "CURATE_CAUSAL_GRAPH",
+        "changes": "Added NONMECHANISTIC causal_graphs entry (beta_glucuronidase_uida_sketch) and OPEN CURATION_TODO discussion (beta-glucuronidase-activity-protein-example-gap) anchored on existing verbatim record evidence snippets.",
+        "llm_assisted": true
+      }
+    ],
+    "causal_graphs": [
+      {
+        "graph_id": "beta_glucuronidase_uida_sketch",
+        "title": "Beta-glucuronidase hydrolysis of beta-D-glucuronosides to D-glucuronate",
+        "description": "Evidence-backed physiological mechanism sketch linking beta-glucuronidase catalytic activity and D-glucuronate release to the beta-glucuronidase activity phenotype.",
+        "scope_status": "NONMECHANISTIC",
+        "scope_notes": "Activity-and-reaction sketch backed by EC 3.2.1.31 and DOI:10.1128/aem.50.6.1383-1387.1985; strain-matched UniProtKB protein examples for Escherichia coli K-12 beta-glucuronidase (UidA, UniProtKB:P05804) remain to be curated.",
+        "nodes": [
+          {
+            "node_id": "beta_glucuronidase_activity_trait",
+            "label": "beta-glucuronidase activity",
+            "node_type": "TRAIT",
+            "grounding": "traitmech:000151",
+            "description": "Physiological enzyme-activity phenotype in which a cell produces active beta-glucuronidase enzymes that hydrolyze beta-D-glucuronosides."
+          },
+          {
+            "node_id": "beta_glucuronidase_catalytic_activity",
+            "label": "beta-glucuronidase activity",
+            "node_type": "MOLECULAR_FUNCTION",
+            "grounding": "GO:0004566",
+            "description": "Glycosidase catalytic activity hydrolyzing a beta-D-glucuronoside with H2O to yield D-glucuronate and an alcohol (EC 3.2.1.31)."
+          },
+          {
+            "node_id": "beta_glucuronidase_d_glucuronate",
+            "label": "D-glucuronate",
+            "node_type": "CHEMICAL",
+            "grounding": "CHEBI:15748",
+            "description": "Free D-glucuronate released by beta-glucuronidase hydrolysis of beta-D-glucuronosides."
+          }
+        ],
+        "edges": [
+          {
+            "subject": "beta_glucuronidase_catalytic_activity",
+            "predicate": "confers",
+            "predicate_id": "METPO:2007700",
+            "object": "beta_glucuronidase_activity_trait",
+            "description": "Cellular production of active beta-glucuronidase that cleaves beta-D-glucuronide substrates such as MUG confers the beta-glucuronidase activity phenotype.",
+            "evidence": [
+              {
+                "reference": "DOI:10.1128/aem.50.6.1383-1387.1985",
+                "snippet": "The beta-glucuronidase produced by E. coli cleaves the MUG substrate to yield a fluorescent end product.",
+                "notes": "Moberg shows that the beta-glucuronidase produced by Escherichia coli cleaves the MUG substrate to yield a fluorescent end product."
+              }
+            ]
+          },
+          {
+            "subject": "beta_glucuronidase_catalytic_activity",
+            "predicate": "has output",
+            "predicate_id": "RO:0002234",
+            "object": "beta_glucuronidase_d_glucuronate",
+            "description": "Beta-glucuronidase hydrolyzes a beta-D-glucuronoside with H2O to produce D-glucuronate and an alcohol.",
+            "evidence": [
+              {
+                "reference": "https://iubmb.qmul.ac.uk/enzyme/EC3/2/1/31.html",
+                "snippet": "Reaction: a \u03b2-D-glucuronoside + H2O = D-glucuronate + an alcohol",
+                "notes": "IUBMB EC 3.2.1.31 defines the beta-glucuronidase reaction hydrolyzing a beta-D-glucuronoside with H2O to D-glucuronate and an alcohol."
+              }
+            ]
+          }
+        ]
       }
     ]
   },
@@ -210341,9 +210523,9 @@
         "discussion_id": "beta-n-acetylhexosaminidase-activity-causal-graph-source-gap",
         "prompt": "Add primary microbial literature evidence for NagZ/Chb beta-N-acetylhexosaminidase chitobiose/muropeptide cleavage and GlcNAc release in Serratia marcescens before constructing causal_graphs.",
         "kind": "KNOWLEDGE_GAP",
-        "status": "OPEN",
+        "status": "RESOLVED",
         "attaches_to": [
-          "causal_graphs"
+          "causal_graphs#beta_n_acetylhexosaminidase_chb_sketch"
         ],
         "rationale": "The current record pairs one IUBMB EC 3.2.1.52 reaction snippet with a strain enzyme-production snippet (DOI:10.1021/jf020965x) that does not state a distinct second mechanistic step.",
         "posed_by": "claude",
@@ -210354,6 +210536,28 @@
             "supports": "PARTIAL",
             "snippet": "Reaction: Hydrolysis of terminal non-reducing N-acetyl-D-hexosamine residues in N-acetyl-\u03b2-D-hexosaminides",
             "explanation": "Existing record-level evidence supports the trait definition and diagnostic or organismal occurrence, but lacks multiple distinct pathway/enzyme quotes and strain-matched UniProtKB protein accessions needed for a connected causal graph."
+          }
+        ],
+        "resolved_date": "2026-10-25",
+        "resolution_note": "Added connected NONMECHANISTIC causal_graphs entry (beta_n_acetylhexosaminidase_chb_sketch) anchored on existing verbatim record evidence snippets, and tracked the remaining strain-matched UniProtKB protein-example requirement in beta-n-acetylhexosaminidase-activity-protein-example-gap."
+      },
+      {
+        "discussion_id": "beta-n-acetylhexosaminidase-activity-protein-example-gap",
+        "prompt": "Add strain-matched UniProtKB protein_examples for Serratia marcescens chitobiase Chb (UniProtKB:Q54468) so beta_n_acetylhexosaminidase_chb_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
+        "kind": "CURATION_TODO",
+        "status": "OPEN",
+        "attaches_to": [
+          "causal_graphs#beta_n_acetylhexosaminidase_chb_sketch"
+        ],
+        "rationale": "The record's primary literature (EC 3.2.1.52, DOI:10.1021/jf020965x) establishes hydrolytic release of terminal non-reducing N-acetyl-D-hexosamine residues and N-acetylhexosaminidase production in Serratia marcescens (NCBITaxon:615), but a verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
+        "posed_by": "claude",
+        "posed_date": "2026-10-25",
+        "evidence": [
+          {
+            "reference": "DOI:10.1021/jf020965x",
+            "supports": "PARTIAL",
+            "snippet": "Serratia marcescens YS-1, a chitin-degrading microorganism, produced mainly N-acetylhexosaminidase",
+            "explanation": "Existing record-level evidence supports the connected NONMECHANISTIC pathway/function graph but does not provide strain-matched UniProtKB protein accessions for protein_examples."
           }
         ]
       }
@@ -210372,6 +210576,75 @@
         "action": "RECORD_MECHANISM_KNOWLEDGE_GAP",
         "changes": "Recorded OPEN KNOWLEDGE_GAP discussion (beta-n-acetylhexosaminidase-activity-causal-graph-source-gap) attached to causal_graphs documenting the source-limited mechanism gap.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-25T17:36:36Z",
+        "curator": "claude",
+        "action": "CURATE_CAUSAL_GRAPH",
+        "changes": "Added NONMECHANISTIC causal_graphs entry (beta_n_acetylhexosaminidase_chb_sketch) and OPEN CURATION_TODO discussion (beta-n-acetylhexosaminidase-activity-protein-example-gap) anchored on existing verbatim record evidence snippets.",
+        "llm_assisted": true
+      }
+    ],
+    "causal_graphs": [
+      {
+        "graph_id": "beta_n_acetylhexosaminidase_chb_sketch",
+        "title": "Beta-N-acetylhexosaminidase hydrolytic release of N-acetyl-D-hexosamine residues",
+        "description": "Evidence-backed physiological mechanism sketch linking beta-N-acetylhexosaminidase catalytic activity and N-acetyl-D-glucosamine release to the beta-N-acetylhexosaminidase activity phenotype.",
+        "scope_status": "NONMECHANISTIC",
+        "scope_notes": "Activity-and-reaction sketch backed by EC 3.2.1.52 and DOI:10.1021/jf020965x; strain-matched UniProtKB protein examples for Serratia marcescens chitobiase (Chb, UniProtKB:Q54468) remain to be curated.",
+        "nodes": [
+          {
+            "node_id": "beta_n_acetylhexosaminidase_activity_trait",
+            "label": "beta-N-acetylhexosaminidase activity",
+            "node_type": "TRAIT",
+            "grounding": "traitmech:000157",
+            "description": "Physiological enzyme-activity phenotype in which a cell produces active beta-N-acetylhexosaminidase enzymes."
+          },
+          {
+            "node_id": "beta_n_acetylhexosaminidase_catalytic_activity",
+            "label": "beta-N-acetylhexosaminidase activity",
+            "node_type": "MOLECULAR_FUNCTION",
+            "grounding": "GO:0004563",
+            "description": "Glycosidase catalytic activity hydrolyzing terminal non-reducing N-acetyl-D-hexosamine residues in N-acetyl-beta-D-hexosaminides (EC 3.2.1.52)."
+          },
+          {
+            "node_id": "beta_n_acetylhexosaminidase_hexosamine",
+            "label": "N-acetyl-D-glucosamine",
+            "node_type": "CHEMICAL",
+            "grounding": "CHEBI:59640",
+            "description": "Terminal N-acetyl-D-hexosamine (N-acetyl-D-glucosamine) monomer released by beta-N-acetylhexosaminidase hydrolysis of chitooligosaccharides and N-acetyl-beta-D-hexosaminides."
+          }
+        ],
+        "edges": [
+          {
+            "subject": "beta_n_acetylhexosaminidase_catalytic_activity",
+            "predicate": "confers",
+            "predicate_id": "METPO:2007700",
+            "object": "beta_n_acetylhexosaminidase_activity_trait",
+            "description": "Production of active beta-N-acetylhexosaminidase by chitin-degrading bacteria confers the beta-N-acetylhexosaminidase activity phenotype.",
+            "evidence": [
+              {
+                "reference": "DOI:10.1021/jf020965x",
+                "snippet": "Serratia marcescens YS-1, a chitin-degrading microorganism, produced mainly N-acetylhexosaminidase",
+                "notes": "Kurakake et al. show that Serratia marcescens YS-1, a chitin-degrading microorganism, produced mainly N-acetylhexosaminidase."
+              }
+            ]
+          },
+          {
+            "subject": "beta_n_acetylhexosaminidase_catalytic_activity",
+            "predicate": "has output",
+            "predicate_id": "RO:0002234",
+            "object": "beta_n_acetylhexosaminidase_hexosamine",
+            "description": "Beta-N-acetylhexosaminidase catalyzes the hydrolysis of terminal non-reducing N-acetyl-D-hexosamine residues in N-acetyl-beta-D-hexosaminides.",
+            "evidence": [
+              {
+                "reference": "https://iubmb.qmul.ac.uk/enzyme/EC3/2/1/52.html",
+                "snippet": "Reaction: Hydrolysis of terminal non-reducing N-acetyl-D-hexosamine residues in N-acetyl-\u03b2-D-hexosaminides",
+                "notes": "IUBMB EC 3.2.1.52 defines beta-N-acetylhexosaminidase catalysis as the hydrolysis of terminal non-reducing N-acetyl-D-hexosamine residues in N-acetyl-beta-D-hexosaminides."
+              }
+            ]
+          }
+        ]
       }
     ]
   },

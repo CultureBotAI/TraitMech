@@ -9201,13 +9201,13 @@ window.searchData = [
   "discussion_id": "butanediol-fermentation-causal-graph-source-gap",
   "prompt": "Add primary literature evidence for alpha-acetolactate synthase (AlsS/BudB), alpha-acetolactate decarboxylase (AlsD/BudA), and 2,3-butanediol dehydrogenase (BdhA/BudC) plus strain-matched UniProtKB protein accessions before constructing causal_graphs.",
   "kind": "KNOWLEDGE_GAP",
-  "status": "OPEN",
+  "status": "RESOLVED",
   "is_gap": "Knowledge gap",
   "source_name": "2,3-butanediol fermentation",
   "source_id": "traitmech:000181",
   "source_file": "butanediol_fermentation.yaml",
   "attaches_to": [
-   "causal_graphs"
+   "causal_graphs#butanediol_fermentation_acetoin_sketch"
   ],
   "rationale": "The current record carries metabolite-overview and isomer-detection snippets (DOI:10.1186/s12934-023-02163-6, ASM Voges-Proskauer protocol, DOI:10.1007/s00253-014-5526-9) without enzymatic catalysis quotes for the pyruvate-to-acetoin-to-2,3-butanediol steps.",
   "num_experiments": 0,
@@ -9217,6 +9217,27 @@ window.searchData = [
   ],
   "posed_by": "claude",
   "page_url": "../../pages/traits/metabolism/butanediol_fermentation.html#butanediol-fermentation-causal-graph-source-gap"
+ },
+ {
+  "discussion_id": "butanediol-fermentation-protein-example-gap",
+  "prompt": "Add strain-matched UniProtKB protein_examples for Klebsiella pneumoniae meso-2,3-butanediol dehydrogenase BudC (UniProtKB:Q48436) so butanediol_fermentation_acetoin_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "2,3-butanediol fermentation",
+  "source_id": "traitmech:000181",
+  "source_file": "butanediol_fermentation.yaml",
+  "attaches_to": [
+   "causal_graphs#butanediol_fermentation_acetoin_sketch"
+  ],
+  "rationale": "The record's primary literature (DOI:10.1186/s12934-023-02163-6, ASM Methyl Red / Voges-Proskauer protocol, DOI:10.1007/s00253-014-5526-9) establishes acetoin intermediate reduction to 2,3-butanediol and stereoisomer production in Klebsiella pneumoniae (NCBITaxon:573), but a verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.1007/s00253-014-5526-9"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/metabolism/butanediol_fermentation.html#butanediol-fermentation-protein-example-gap"
  },
  {
   "discussion_id": "butyric-acid-fermentation-xref-gap",
@@ -13224,13 +13245,13 @@ window.searchData = [
   "discussion_id": "beta-glucuronidase-activity-causal-graph-source-gap",
   "prompt": "Add primary microbial literature evidence for GusA/UidA beta-D-glucuronidase physiological glucuronide catabolism and strain-matched UniProtKB protein accessions before constructing causal_graphs.",
   "kind": "KNOWLEDGE_GAP",
-  "status": "OPEN",
+  "status": "RESOLVED",
   "is_gap": "Knowledge gap",
   "source_name": "beta-glucuronidase activity",
   "source_id": "traitmech:000151",
   "source_file": "beta_glucuronidase_activity.yaml",
   "attaches_to": [
-   "causal_graphs"
+   "causal_graphs#beta_glucuronidase_uida_sketch"
   ],
   "rationale": "The current record pairs one IUBMB EC 3.2.1.31 reaction snippet with one fluorogenic MUG-assay snippet (DOI:10.1128/aem.50.6.1383-1387.1985) without physiological pathway or UniProtKB protein grounding.",
   "num_experiments": 0,
@@ -13240,6 +13261,27 @@ window.searchData = [
   ],
   "posed_by": "claude",
   "page_url": "../../pages/traits/physiology/beta_glucuronidase_activity.html#beta-glucuronidase-activity-causal-graph-source-gap"
+ },
+ {
+  "discussion_id": "beta-glucuronidase-activity-protein-example-gap",
+  "prompt": "Add strain-matched UniProtKB protein_examples for Escherichia coli K-12 beta-glucuronidase UidA (UniProtKB:P05804) so beta_glucuronidase_uida_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "beta-glucuronidase activity",
+  "source_id": "traitmech:000151",
+  "source_file": "beta_glucuronidase_activity.yaml",
+  "attaches_to": [
+   "causal_graphs#beta_glucuronidase_uida_sketch"
+  ],
+  "rationale": "The record's primary literature (EC 3.2.1.31, DOI:10.1128/aem.50.6.1383-1387.1985) establishes beta-D-glucuronoside hydrolysis to D-glucuronate and alcohol and MUG substrate cleavage in Escherichia coli (NCBITaxon:562), but a verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.1128/aem.50.6.1383-1387.1985"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/physiology/beta_glucuronidase_activity.html#beta-glucuronidase-activity-protein-example-gap"
  },
  {
   "discussion_id": "beta-n-acetylhexosaminidase-activity-xref-gap",
@@ -13262,13 +13304,13 @@ window.searchData = [
   "discussion_id": "beta-n-acetylhexosaminidase-activity-causal-graph-source-gap",
   "prompt": "Add primary microbial literature evidence for NagZ/Chb beta-N-acetylhexosaminidase chitobiose/muropeptide cleavage and GlcNAc release in Serratia marcescens before constructing causal_graphs.",
   "kind": "KNOWLEDGE_GAP",
-  "status": "OPEN",
+  "status": "RESOLVED",
   "is_gap": "Knowledge gap",
   "source_name": "beta-N-acetylhexosaminidase activity",
   "source_id": "traitmech:000157",
   "source_file": "beta_n_acetylhexosaminidase_activity.yaml",
   "attaches_to": [
-   "causal_graphs"
+   "causal_graphs#beta_n_acetylhexosaminidase_chb_sketch"
   ],
   "rationale": "The current record pairs one IUBMB EC 3.2.1.52 reaction snippet with a strain enzyme-production snippet (DOI:10.1021/jf020965x) that does not state a distinct second mechanistic step.",
   "num_experiments": 0,
@@ -13278,6 +13320,27 @@ window.searchData = [
   ],
   "posed_by": "claude",
   "page_url": "../../pages/traits/physiology/beta_n_acetylhexosaminidase_activity.html#beta-n-acetylhexosaminidase-activity-causal-graph-source-gap"
+ },
+ {
+  "discussion_id": "beta-n-acetylhexosaminidase-activity-protein-example-gap",
+  "prompt": "Add strain-matched UniProtKB protein_examples for Serratia marcescens chitobiase Chb (UniProtKB:Q54468) so beta_n_acetylhexosaminidase_chb_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "beta-N-acetylhexosaminidase activity",
+  "source_id": "traitmech:000157",
+  "source_file": "beta_n_acetylhexosaminidase_activity.yaml",
+  "attaches_to": [
+   "causal_graphs#beta_n_acetylhexosaminidase_chb_sketch"
+  ],
+  "rationale": "The record's primary literature (EC 3.2.1.52, DOI:10.1021/jf020965x) establishes hydrolytic release of terminal non-reducing N-acetyl-D-hexosamine residues and N-acetylhexosaminidase production in Serratia marcescens (NCBITaxon:615), but a verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.1021/jf020965x"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/physiology/beta_n_acetylhexosaminidase_activity.html#beta-n-acetylhexosaminidase-activity-protein-example-gap"
  },
  {
   "discussion_id": "biomineralization-scope-and-mappings",
@@ -17918,7 +17981,7 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 901,
+ "total_discussions": 904,
  "total_knowledge_gaps": 580,
  "total_source_entries": 640,
  "kinds": [
