@@ -39,6 +39,8 @@ xrefs:
 - GO:0019643
 evidence:
 - reference: DOI:10.1128/AEM.02473-10
+  snippet: the second autotrophic CO2 fixation cycle (the reductive citric acid cycle)
+    had been discovered
   notes: Berg review describes the reductive citric acid cycle as functional in anaerobic/microaerophilic
     autotrophs.
 - reference: DOI:10.1146/annurev-marine-120709-142712
@@ -306,4 +308,13 @@ curation_history:
   changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
     UniProtKB:Q8KDG1 (117 -> 118 on atp_citrate_lyase), UniProtKB:Q8KDG2 (117 -> 118
     on atp_citrate_lyase).'
+  llm_assisted: true
+- timestamp: '2026-10-25T12:55:00Z'
+  curator: claude
+  action: ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE
+  changes: 'Added verified verbatim snippet from DOI:10.1128/AEM.02473-10 (already
+    present on parent record carbon_fixation.yaml causal_graphs[0].edges[12].evidence[0])
+    to record-level evidence[0] to match definition_source (Cycle 4 Stage 5 remediation
+    of F-C4S4-DEF-SRC-003 in group G-C4S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS,
+    issue #2002).'
   llm_assisted: true

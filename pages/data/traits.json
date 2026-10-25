@@ -5000,6 +5000,7 @@
     "evidence": [
       {
         "reference": "DOI:10.1038/nrmicro1341",
+        "snippet": "free-living microbial taxa",
         "notes": "Martiny et al., \"Microbial biogeography\", support habitat/niche as a structuring axis of microbial distribution; parent of the habitat sub-variants."
       },
       {
@@ -5241,6 +5242,13 @@
         "curator": "codex",
         "action": "ADD_CANONICAL_EXAMPLES",
         "changes": "Resolved issue #444 after the #591 source/bin policy with 1 direct source-backed canonical example(s): Candidatus Pelagibacter ubique HTCC1062 (NCBITaxon:335992; PMID:16109880). The note retains the measured value or scopes broad-class examples to the cited branch; no paid research was used.",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-25T12:55:00Z",
+        "curator": "claude",
+        "action": "ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE",
+        "changes": "Added verified verbatim snippet from DOI:10.1038/nrmicro1341 (already present on child records free_living.yaml evidence[0] and soil_dwelling.yaml evidence[1]) to record-level evidence[0] to match definition_source (Cycle 4 Stage 5 remediation of F-C4S4-DEF-SRC-001 in group G-C4S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).",
         "llm_assisted": true
       }
     ]
@@ -28024,7 +28032,7 @@
     "evidence": [
       {
         "reference": "DOI:10.1038/nrmicro2549",
-        "snippet": "cytoplasmic pH ... must maintain for growth",
+        "snippet": "external pH values outside the cytoplasmic pH",
         "notes": "Supports pH growth preference as tied to cytoplasmic pH requirements."
       }
     ],
@@ -28381,6 +28389,13 @@
         "curator": "claude",
         "action": "REVIEW_GRAPH_PROTEIN_TAXON",
         "changes": "Backfilled provenance (review issue 517) for the codex protein-taxon review tranche of 2026-08-24/25, which shipped without a per-record event. In this record the tranche: set graph scope neutrophilic_neutral_ph_homeostasis=NONMECHANISTIC with scope_notes; marked 1 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (f1f0_atpase_proton_pump).",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-25T12:55:00Z",
+        "curator": "claude",
+        "action": "ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE",
+        "changes": "Replaced elliptical record-level evidence[0].snippet on DOI:10.1038/nrmicro2549 with contiguous verbatim snippet already present on causal_graphs[0].edges[0].evidence[0] (Cycle 4 Stage 5 remediation of F-C4S4-DEF-SRC-002 in group G-C4S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).",
         "llm_assisted": true
       }
     ]
@@ -92816,9 +92831,9 @@
     ],
     "evidence": [
       {
-        "reference": "PMID:32855333",
+        "reference": "DOI:10.1126/science.aba0372",
         "snippet": "By systematic defense gene prediction and heterologous reconstitution, here we discover 29 widespread antiviral gene cassettes, collectively present in 32% of all sequenced bacterial and archaeal genomes, that mediate protection against specific bacteriophages.",
-        "notes": "Gao et al. support a systematic defense-gene prediction and heterologous reconstitution campaign that discovered widespread antiviral gene cassettes."
+        "notes": "Gao et al. support a systematic defense-gene prediction and heterologous reconstitution campaign that discovered widespread antiviral gene cassettes (PMID:32855333 / DOI:10.1126/science.aba0372)."
       },
       {
         "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md",
@@ -92970,6 +92985,13 @@
         "action": "EDIT",
         "changes": "Removed a repeated DefenseFinder article-row citation from the Gao-Her confers edge so no graph reuses the same snippet more than twice.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-25T12:55:00Z",
+        "curator": "claude",
+        "action": "ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE",
+        "changes": "Aligned record-level evidence[0].reference from PMID:32855333 to DOI:10.1126/science.aba0372 (same Gao et al. 2020 publication) to match definition_source while preserving the verified verbatim snippet and PMID cross-reference in notes (Cycle 4 Stage 5 remediation of F-C4S4-DEF-SRC-009 in group G-C4S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).",
+        "llm_assisted": true
       }
     ]
   },
@@ -92998,9 +93020,9 @@
     ],
     "evidence": [
       {
-        "reference": "PMID:32855333",
+        "reference": "DOI:10.1126/science.aba0372",
         "snippet": "By systematic defense gene prediction and heterologous reconstitution, here we discover 29 widespread antiviral gene cassettes, collectively present in 32% of all sequenced bacterial and archaeal genomes, that mediate protection against specific bacteriophages.",
-        "notes": "Gao et al. support a systematic defense-gene prediction and heterologous reconstitution campaign that discovered widespread antiviral gene cassettes."
+        "notes": "Gao et al. support a systematic defense-gene prediction and heterologous reconstitution campaign that discovered widespread antiviral gene cassettes (PMID:32855333 / DOI:10.1126/science.aba0372)."
       },
       {
         "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md",
@@ -93140,6 +93162,13 @@
         "action": "MINTED_TRAITMECH_ID",
         "changes": "Minted Gao-Hhe system as a DOI-backed GENOMICS TraitRecord under phage defense system after an ignored-and-hidden duplicate review found no exact live TraitMech, METPO, history, or prior proposal record; the replacement placeholder is reserved in proposals/metpo_traitmech_v230.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-25T12:55:00Z",
+        "curator": "claude",
+        "action": "ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE",
+        "changes": "Aligned record-level evidence[0].reference from PMID:32855333 to DOI:10.1126/science.aba0372 (same Gao et al. 2020 publication) to match definition_source while preserving the verified verbatim snippet and PMID cross-reference in notes (Cycle 4 Stage 5 remediation of F-C4S4-DEF-SRC-010 in group G-C4S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).",
+        "llm_assisted": true
       }
     ]
   },
@@ -93173,9 +93202,9 @@
     ],
     "evidence": [
       {
-        "reference": "PMID:32855333",
+        "reference": "DOI:10.1126/science.aba0372",
         "snippet": "By systematic defense gene prediction and heterologous reconstitution, here we discover 29 widespread antiviral gene cassettes, collectively present in 32% of all sequenced bacterial and archaeal genomes, that mediate protection against specific bacteriophages.",
-        "notes": "Gao et al. support a systematic defense-gene prediction and heterologous reconstitution campaign that discovered widespread antiviral gene cassettes."
+        "notes": "Gao et al. support a systematic defense-gene prediction and heterologous reconstitution campaign that discovered widespread antiviral gene cassettes (PMID:32855333 / DOI:10.1126/science.aba0372)."
       },
       {
         "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md",
@@ -93325,6 +93354,13 @@
         "action": "MINTED_TRAITMECH_ID",
         "changes": "Minted Gao-Iet system as a DOI-backed GENOMICS TraitRecord under phage defense system after an ignored-and-hidden duplicate review found no exact live TraitMech, METPO, history, or prior proposal record; the replacement placeholder is reserved in proposals/metpo_traitmech_v231.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-25T12:55:00Z",
+        "curator": "claude",
+        "action": "ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE",
+        "changes": "Aligned record-level evidence[0].reference from PMID:32855333 to DOI:10.1126/science.aba0372 (same Gao et al. 2020 publication) to match definition_source while preserving the verified verbatim snippet and PMID cross-reference in notes (Cycle 4 Stage 5 remediation of F-C4S4-DEF-SRC-011 in group G-C4S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).",
+        "llm_assisted": true
       }
     ]
   },
@@ -93373,9 +93409,9 @@
     ],
     "evidence": [
       {
-        "reference": "PMID:32855333",
+        "reference": "DOI:10.1126/science.aba0372",
         "snippet": "By systematic defense gene prediction and heterologous reconstitution, here we discover 29 widespread antiviral gene cassettes, collectively present in 32% of all sequenced bacterial and archaeal genomes, that mediate protection against specific bacteriophages.",
-        "notes": "Gao et al. support a systematic defense-gene prediction and heterologous reconstitution campaign that discovered widespread antiviral gene cassettes."
+        "notes": "Gao et al. support a systematic defense-gene prediction and heterologous reconstitution campaign that discovered widespread antiviral gene cassettes (PMID:32855333 / DOI:10.1126/science.aba0372)."
       },
       {
         "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md",
@@ -93555,6 +93591,13 @@
         "action": "MINTED_TRAITMECH_ID",
         "changes": "Minted Gao-Mza system as a DOI-backed GENOMICS TraitRecord under phage defense system after an ignored-and-hidden duplicate review found no exact live TraitMech, METPO, history, or prior proposal record; the replacement placeholder is reserved in proposals/metpo_traitmech_v232.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-25T12:55:00Z",
+        "curator": "claude",
+        "action": "ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE",
+        "changes": "Aligned record-level evidence[0].reference from PMID:32855333 to DOI:10.1126/science.aba0372 (same Gao et al. 2020 publication) to match definition_source while preserving the verified verbatim snippet and PMID cross-reference in notes (Cycle 4 Stage 5 remediation of F-C4S4-DEF-SRC-012 in group G-C4S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).",
+        "llm_assisted": true
       }
     ]
   },
@@ -93583,9 +93626,9 @@
     ],
     "evidence": [
       {
-        "reference": "PMID:32855333",
+        "reference": "DOI:10.1126/science.aba0372",
         "snippet": "By systematic defense gene prediction and heterologous reconstitution, here we discover 29 widespread antiviral gene cassettes, collectively present in 32% of all sequenced bacterial and archaeal genomes, that mediate protection against specific bacteriophages.",
-        "notes": "Gao et al. support a systematic defense-gene prediction and heterologous reconstitution campaign that discovered widespread antiviral gene cassettes."
+        "notes": "Gao et al. support a systematic defense-gene prediction and heterologous reconstitution campaign that discovered widespread antiviral gene cassettes (PMID:32855333 / DOI:10.1126/science.aba0372)."
       },
       {
         "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md",
@@ -93725,6 +93768,13 @@
         "action": "MINTED_TRAITMECH_ID",
         "changes": "Minted Gao-Ppl system as a DOI-backed GENOMICS TraitRecord under phage defense system after an ignored-and-hidden duplicate review found no exact live TraitMech, METPO, history, or prior proposal record; the replacement placeholder is reserved in proposals/metpo_traitmech_v233.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-25T12:55:00Z",
+        "curator": "claude",
+        "action": "ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE",
+        "changes": "Aligned record-level evidence[0].reference from PMID:32855333 to DOI:10.1126/science.aba0372 (same Gao et al. 2020 publication) to match definition_source while preserving the verified verbatim snippet and PMID cross-reference in notes (Cycle 4 Stage 5 remediation of F-C4S4-DEF-SRC-013 in group G-C4S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).",
+        "llm_assisted": true
       }
     ]
   },
@@ -93768,9 +93818,9 @@
     ],
     "evidence": [
       {
-        "reference": "PMID:32855333",
+        "reference": "DOI:10.1126/science.aba0372",
         "snippet": "By systematic defense gene prediction and heterologous reconstitution, here we discover 29 widespread antiviral gene cassettes, collectively present in 32% of all sequenced bacterial and archaeal genomes, that mediate protection against specific bacteriophages.",
-        "notes": "Gao et al. support a systematic defense-gene prediction and heterologous reconstitution campaign that discovered widespread antiviral gene cassettes."
+        "notes": "Gao et al. support a systematic defense-gene prediction and heterologous reconstitution campaign that discovered widespread antiviral gene cassettes (PMID:32855333 / DOI:10.1126/science.aba0372)."
       },
       {
         "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md",
@@ -93940,6 +93990,13 @@
         "action": "MINTED_TRAITMECH_ID",
         "changes": "Minted Gao-Qat system as a DOI-backed GENOMICS TraitRecord under phage defense system after an ignored-and-hidden duplicate review found no exact live TraitMech, METPO, history, or prior proposal record; the replacement placeholder is reserved in proposals/metpo_traitmech_v236.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-25T12:55:00Z",
+        "curator": "claude",
+        "action": "ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE",
+        "changes": "Aligned record-level evidence[0].reference from PMID:32855333 to DOI:10.1126/science.aba0372 (same Gao et al. 2020 publication) to match definition_source while preserving the verified verbatim snippet and PMID cross-reference in notes (Cycle 4 Stage 5 remediation of F-C4S4-DEF-SRC-014 in group G-C4S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).",
+        "llm_assisted": true
       }
     ]
   },
@@ -93983,9 +94040,9 @@
     ],
     "evidence": [
       {
-        "reference": "PMID:32855333",
+        "reference": "DOI:10.1126/science.aba0372",
         "snippet": "By systematic defense gene prediction and heterologous reconstitution, here we discover 29 widespread antiviral gene cassettes, collectively present in 32% of all sequenced bacterial and archaeal genomes, that mediate protection against specific bacteriophages.",
-        "notes": "Gao et al. support a systematic defense-gene prediction and heterologous reconstitution campaign that discovered widespread antiviral gene cassettes."
+        "notes": "Gao et al. support a systematic defense-gene prediction and heterologous reconstitution campaign that discovered widespread antiviral gene cassettes (PMID:32855333 / DOI:10.1126/science.aba0372)."
       },
       {
         "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md",
@@ -94155,6 +94212,13 @@
         "action": "MINTED_TRAITMECH_ID",
         "changes": "Minted Gao-RL system as a DOI-backed GENOMICS TraitRecord under phage defense system after an ignored-and-hidden duplicate review found no exact live TraitMech, METPO, history, or prior proposal record; the replacement placeholder is reserved in proposals/metpo_traitmech_v229.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-25T12:55:00Z",
+        "curator": "claude",
+        "action": "ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE",
+        "changes": "Aligned record-level evidence[0].reference from PMID:32855333 to DOI:10.1126/science.aba0372 (same Gao et al. 2020 publication) to match definition_source while preserving the verified verbatim snippet and PMID cross-reference in notes (Cycle 4 Stage 5 remediation of F-C4S4-DEF-SRC-015 in group G-C4S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).",
+        "llm_assisted": true
       }
     ]
   },
@@ -94193,9 +94257,9 @@
     ],
     "evidence": [
       {
-        "reference": "PMID:32855333",
+        "reference": "DOI:10.1126/science.aba0372",
         "snippet": "By systematic defense gene prediction and heterologous reconstitution, here we discover 29 widespread antiviral gene cassettes, collectively present in 32% of all sequenced bacterial and archaeal genomes, that mediate protection against specific bacteriophages.",
-        "notes": "Gao et al. support a systematic defense-gene prediction and heterologous reconstitution campaign that discovered widespread antiviral gene cassettes."
+        "notes": "Gao et al. support a systematic defense-gene prediction and heterologous reconstitution campaign that discovered widespread antiviral gene cassettes (PMID:32855333 / DOI:10.1126/science.aba0372)."
       },
       {
         "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md",
@@ -94355,6 +94419,13 @@
         "action": "MINTED_TRAITMECH_ID",
         "changes": "Minted Gao-TerY system as a DOI-backed GENOMICS TraitRecord under phage defense system after an ignored-and-hidden duplicate review found no exact live TraitMech, METPO, history, or prior proposal record; the replacement placeholder is reserved in proposals/metpo_traitmech_v237.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-25T12:55:00Z",
+        "curator": "claude",
+        "action": "ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE",
+        "changes": "Aligned record-level evidence[0].reference from PMID:32855333 to DOI:10.1126/science.aba0372 (same Gao et al. 2020 publication) to match definition_source while preserving the verified verbatim snippet and PMID cross-reference in notes (Cycle 4 Stage 5 remediation of F-C4S4-DEF-SRC-016 in group G-C4S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).",
+        "llm_assisted": true
       }
     ]
   },
@@ -94383,9 +94454,9 @@
     ],
     "evidence": [
       {
-        "reference": "PMID:32855333",
+        "reference": "DOI:10.1126/science.aba0372",
         "snippet": "By systematic defense gene prediction and heterologous reconstitution, here we discover 29 widespread antiviral gene cassettes, collectively present in 32% of all sequenced bacterial and archaeal genomes, that mediate protection against specific bacteriophages.",
-        "notes": "Gao et al. support a systematic defense-gene prediction and heterologous reconstitution campaign that discovered widespread antiviral gene cassettes."
+        "notes": "Gao et al. support a systematic defense-gene prediction and heterologous reconstitution campaign that discovered widespread antiviral gene cassettes (PMID:32855333 / DOI:10.1126/science.aba0372)."
       },
       {
         "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md",
@@ -94525,6 +94596,13 @@
         "action": "MINTED_TRAITMECH_ID",
         "changes": "Minted Gao-Tmn system as a DOI-backed GENOMICS TraitRecord under phage defense system after an ignored-and-hidden duplicate review found no exact live TraitMech, METPO, history, or prior proposal record; the replacement placeholder is reserved in proposals/metpo_traitmech_v234.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-25T12:55:00Z",
+        "curator": "claude",
+        "action": "ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE",
+        "changes": "Aligned record-level evidence[0].reference from PMID:32855333 to DOI:10.1126/science.aba0372 (same Gao et al. 2020 publication) to match definition_source while preserving the verified verbatim snippet and PMID cross-reference in notes (Cycle 4 Stage 5 remediation of F-C4S4-DEF-SRC-017 in group G-C4S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).",
+        "llm_assisted": true
       }
     ]
   },
@@ -94553,9 +94631,9 @@
     ],
     "evidence": [
       {
-        "reference": "PMID:32855333",
+        "reference": "DOI:10.1126/science.aba0372",
         "snippet": "By systematic defense gene prediction and heterologous reconstitution, here we discover 29 widespread antiviral gene cassettes, collectively present in 32% of all sequenced bacterial and archaeal genomes, that mediate protection against specific bacteriophages.",
-        "notes": "Gao et al. support a systematic defense-gene prediction and heterologous reconstitution campaign that discovered widespread antiviral gene cassettes."
+        "notes": "Gao et al. support a systematic defense-gene prediction and heterologous reconstitution campaign that discovered widespread antiviral gene cassettes (PMID:32855333 / DOI:10.1126/science.aba0372)."
       },
       {
         "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md",
@@ -94694,6 +94772,13 @@
         "curator": "codex",
         "action": "MINTED_TRAITMECH_ID",
         "changes": "Minted Gao-Upx system as a DOI-backed GENOMICS TraitRecord under phage defense system after an ignored-and-hidden duplicate review found no exact live TraitMech, METPO, history, or prior proposal record; the replacement placeholder is reserved in proposals/metpo_traitmech_v235.",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-25T12:55:00Z",
+        "curator": "claude",
+        "action": "ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE",
+        "changes": "Aligned record-level evidence[0].reference from PMID:32855333 to DOI:10.1126/science.aba0372 (same Gao et al. 2020 publication) to match definition_source while preserving the verified verbatim snippet and PMID cross-reference in notes (Cycle 4 Stage 5 remediation of F-C4S4-DEF-SRC-018 in group G-C4S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).",
         "llm_assisted": true
       }
     ]
@@ -162734,6 +162819,7 @@
     "evidence": [
       {
         "reference": "DOI:10.1128/AEM.02473-10",
+        "snippet": "the second autotrophic CO2 fixation cycle (the reductive citric acid cycle) had been discovered",
         "notes": "Berg review describes the reductive citric acid cycle as functional in anaerobic/microaerophilic autotrophs."
       },
       {
@@ -163037,6 +163123,13 @@
         "curator": "claude",
         "action": "REFRESH_UNIPROT_ENTRY_VERSION",
         "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:Q8KDG1 (117 -> 118 on atp_citrate_lyase), UniProtKB:Q8KDG2 (117 -> 118 on atp_citrate_lyase).",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-25T12:55:00Z",
+        "curator": "claude",
+        "action": "ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE",
+        "changes": "Added verified verbatim snippet from DOI:10.1128/AEM.02473-10 (already present on parent record carbon_fixation.yaml causal_graphs[0].edges[12].evidence[0]) to record-level evidence[0] to match definition_source (Cycle 4 Stage 5 remediation of F-C4S4-DEF-SRC-003 in group G-C4S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).",
         "llm_assisted": true
       }
     ]
@@ -173762,7 +173855,7 @@
     "evidence": [
       {
         "reference": "DOI:10.1038/nrmicro1205",
-        "snippet": "bacterial cell wall ... primary role in maintaining cell shape",
+        "snippet": "primary role in maintaining cell shape",
         "notes": "Supports bacterial cell shape as determined by cell wall and cytoskeletal elements."
       }
     ],
@@ -174152,6 +174245,13 @@
         "curator": "codex",
         "action": "ADD_CANONICAL_EXAMPLES",
         "changes": "Resolved issue #444 after the #591 source/bin policy with 1 direct source-backed canonical example(s): Escherichia coli (NCBITaxon:562; DOI:10.1038/nrmicro1205). The note retains the measured value or scopes broad-class examples to the cited branch; no paid research was used.",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-25T12:55:00Z",
+        "curator": "claude",
+        "action": "ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE",
+        "changes": "Replaced elliptical record-level evidence[0].snippet on DOI:10.1038/nrmicro1205 with contiguous verbatim snippet already present on causal_graphs[0].edges[0].evidence[0] (Cycle 4 Stage 5 remediation of F-C4S4-DEF-SRC-004 in group G-C4S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).",
         "llm_assisted": true
       }
     ]
@@ -179660,6 +179760,7 @@
     "evidence": [
       {
         "reference": "DOI:10.1093/femsre/fuv034",
+        "snippet": "Bacteria differ in number and location of their flagella that appear in regular patterns at the cell surface (flagellation pattern).",
         "notes": "Schuhmacher, Thormann & Bange describe how bacteria maintain a regular number and cellular location of flagella (the flagellation pattern); parent of the specific arrangement sub-variants."
       },
       {
@@ -179918,6 +180019,13 @@
         "curator": "claude",
         "action": "ADD_CANONICAL_EXAMPLES",
         "changes": "Added 2 source-backed canonical example(s) from this record's own deep-research artifact (issue 444): Shewanella putrefaciens CN-32 (NCBITaxon:319224), Helicobacter pylori (NCBITaxon:210). Each note scopes the exemplar to the single flagellation pattern the cited source establishes, because this record is an upper class whose graph is NONMECHANISTIC and spans alternative mechanisms. Taxon ids and labels were verified against NCBI taxonomy and every DOI resolved through Crossref. No gene or operon was promoted to a primary entry.",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-25T12:55:00Z",
+        "curator": "claude",
+        "action": "ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE",
+        "changes": "Added verified verbatim snippet from DOI:10.1093/femsre/fuv034 (already present on child records polar_flagellation.yaml, amphitrichous.yaml, lophotrichous.yaml, and monotrichous.yaml evidence[0]) to record-level evidence[0] to match definition_source (Cycle 4 Stage 5 remediation of F-C4S4-DEF-SRC-005 in group G-C4S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).",
         "llm_assisted": true
       }
     ]
@@ -189790,7 +189898,7 @@
     "evidence": [
       {
         "reference": "DOI:10.1080/1040841X.2025.2526423",
-        "snippet": "orange ... pigmentation in bacteria",
+        "snippet": "red, pink, orange, and yellow pigmentation in bacteria",
         "notes": "Supports orange microbial pigmentation as a bacterial carotenoid-associated color phenotype."
       }
     ],
@@ -190176,6 +190284,13 @@
         "curator": "claude",
         "action": "REVIEW_GRAPH_PROTEIN_TAXON",
         "changes": "Backfilled provenance (review issue 517) for the codex protein-taxon review tranche of 2026-08-24/25, which shipped without a per-record event. In this record the tranche: set graph scope orange_pigmented_carotenoid_accumulation=NONMECHANISTIC with scope_notes; marked 3 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (crt_enzymes, crt_z_hydroxylase, crt_w_ketolase).",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-25T12:55:00Z",
+        "curator": "claude",
+        "action": "ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE",
+        "changes": "Replaced elliptical record-level evidence[0].snippet on DOI:10.1080/1040841X.2025.2526423 with contiguous verbatim snippet already present on parent record carotenoid_pigmentation.yaml and sibling records pink_pigmented.yaml and yellow_pigmented.yaml evidence[0] (Cycle 4 Stage 5 remediation of F-C4S4-DEF-SRC-006 in group G-C4S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).",
         "llm_assisted": true
       }
     ]
@@ -196434,7 +196549,7 @@
     "evidence": [
       {
         "reference": "DOI:10.1073/pnas.200221797",
-        "snippet": "periplasmic flagella ... confer in part its flat-wave morphology",
+        "snippet": "cell morphology is either a helix, a flat wave, or an irregularly shaped helix",
         "notes": "Supports spirochete morphology as a cell-cylinder and periplasmic-flagella interaction."
       }
     ],
@@ -196756,6 +196871,13 @@
         "curator": "claude",
         "action": "REVIEW_GRAPH_PROTEIN_TAXON",
         "changes": "Backfilled provenance (review issue 517) for the codex protein-taxon review tranche of 2026-08-24/25, which shipped without a per-record event. In this record the tranche: set graph scope spirochete_shaped_periplasmic_flagella=NONMECHANISTIC with scope_notes; marked 2 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (flhE, flgV).",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-25T12:55:00Z",
+        "curator": "claude",
+        "action": "ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE",
+        "changes": "Replaced elliptical record-level evidence[0].snippet on DOI:10.1073/pnas.200221797 with contiguous verbatim snippet already present on causal_graphs[0].edges[3].evidence[0] (Cycle 4 Stage 5 remediation of F-C4S4-DEF-SRC-007 in group G-C4S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).",
         "llm_assisted": true
       }
     ]
@@ -214074,7 +214196,7 @@
     "evidence": [
       {
         "reference": "DOI:10.1146/annurev.micro.52.1.191",
-        "snippet": "physiology ... of chemoautotrophic bacteria",
+        "snippet": "Carbon Dioxide Fixation in Chemoautotrophs",
         "notes": "Review supports chemoautotrophic bacterial CO2 fixation."
       },
       {
@@ -214569,6 +214691,13 @@
         "curator": "claude",
         "action": "REFRESH_UNIPROT_ENTRY_VERSION",
         "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P0C916 (57 -> 58 on rubisco).",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-25T12:55:00Z",
+        "curator": "claude",
+        "action": "ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE",
+        "changes": "Replaced elliptical record-level evidence[0].snippet on DOI:10.1146/annurev.micro.52.1.191 with contiguous verbatim snippet already present on causal_graphs[0].edges[5].evidence[0] and parent record chemoautotrophic.yaml evidence[0] (Cycle 4 Stage 5 remediation of F-C4S4-DEF-SRC-008 in group G-C4S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).",
         "llm_assisted": true
       }
     ]

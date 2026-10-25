@@ -1,4 +1,4 @@
-"""Tests for Stage 5 grouped review remediation (Cycle 1 #1981, Cycle 2 #1995, Cycle 3 #2002)."""
+"""Tests for Stage 5 grouped review remediation (Cycle 1 #1981, Cycle 2 #1995, Cycle 3–4 #2002)."""
 
 from __future__ import annotations
 
@@ -19,6 +19,7 @@ from curate_stage5_review_findings import (  # noqa: E402
     CURATOR,
     CYCLE2_TIMESTAMP,
     CYCLE3_TIMESTAMP,
+    CYCLE4_TIMESTAMP,
     REMEDIATION_SPECS,
     TIMESTAMP,
     process_all,
@@ -27,7 +28,7 @@ from traitmech.validation.write_validated import validate_trait  # noqa: E402
 
 
 def test_stage5_scope_excludes_do_not_work_and_matches_counts() -> None:
-    assert len(REMEDIATION_SPECS) == 27
+    assert len(REMEDIATION_SPECS) == 45
     assert "data/traits/physiology/spore_germination.yaml" not in REMEDIATION_SPECS
     finding_ids = {spec["finding_id"] for spec in REMEDIATION_SPECS.values()}
     assert finding_ids == {
@@ -58,6 +59,24 @@ def test_stage5_scope_excludes_do_not_work_and_matches_counts() -> None:
         "F-C3S4-DEF-SRC-015",
         "F-C3S4-DEF-SRC-016",
         "F-C3S4-DEF-SRC-017",
+        "F-C4S4-DEF-SRC-001",
+        "F-C4S4-DEF-SRC-002",
+        "F-C4S4-DEF-SRC-003",
+        "F-C4S4-DEF-SRC-004",
+        "F-C4S4-DEF-SRC-005",
+        "F-C4S4-DEF-SRC-006",
+        "F-C4S4-DEF-SRC-007",
+        "F-C4S4-DEF-SRC-008",
+        "F-C4S4-DEF-SRC-009",
+        "F-C4S4-DEF-SRC-010",
+        "F-C4S4-DEF-SRC-011",
+        "F-C4S4-DEF-SRC-012",
+        "F-C4S4-DEF-SRC-013",
+        "F-C4S4-DEF-SRC-014",
+        "F-C4S4-DEF-SRC-015",
+        "F-C4S4-DEF-SRC-016",
+        "F-C4S4-DEF-SRC-017",
+        "F-C4S4-DEF-SRC-018",
     }
 
 
@@ -75,12 +94,17 @@ def test_stage5_remediations_committed_and_schema_valid() -> None:
         assert last_event["curator"] == CURATOR
         assert last_event["action"] == ACTION
         assert last_event["timestamp"] == spec.get("timestamp", TIMESTAMP)
-        assert last_event["timestamp"] in {TIMESTAMP, CYCLE2_TIMESTAMP, CYCLE3_TIMESTAMP}
+        assert last_event["timestamp"] in {
+            TIMESTAMP,
+            CYCLE2_TIMESTAMP,
+            CYCLE3_TIMESTAMP,
+            CYCLE4_TIMESTAMP,
+        }
         assert last_event["changes"] == spec["changes"]
 
 
 def test_process_all_is_idempotent_on_committed_corpus() -> None:
-    assert process_all(apply=False) == (27, 0)
+    assert process_all(apply=False) == (45, 0)
 
 
 def test_zero_unquoted_definition_sources_on_remediated_records() -> None:
