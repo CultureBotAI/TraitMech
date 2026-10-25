@@ -18,7 +18,7 @@
       <a href="../../umap.html">Embedding space</a>
       <a href="../../graph.html">Graph layout</a>
       <a href="../../data/traits.json">Data JSON</a>
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
+      <a href="../../schema.html">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -443,7 +443,7 @@
         via <em>direct_metpo</em>.</p>
       <ul class="kgm-nodes">
 
-        <li><code>METPO:1004002</code> <span class="dim-preview">[-1.564, -64.092, -0.620, -28.964, …]</span></li>
+        <li><a href="https://w3id.org/metpo/1004002" rel="nofollow noreferrer">animal pathogen <code>METPO:1004002</code></a> <span class="dim-preview">[-1.564, -64.092, -0.620, -28.964, …]</span></li>
 
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
@@ -526,7 +526,7 @@
 
 The trait should represent the **realized, strain-level capacity of a microorganism to establish infection in a host belonging to Metazoa**, rather than the mere presence of a virulence-associated gene. A defensible general graph should center on five recurring functions: **host attachment/colonization, acquisition of host-limited nutrients, resistance or manipulation of host defenses, host damage, and persistence/dissemination**. Individual adhesins, secretion systems, toxins, capsules, and metabolic pathways should normally be modeled as taxon- or niche-specific implementations of those functions.
 
-A 2024 authoritative review frames bacterial host adaptation around colonization, nutrient acquisition, and immune evasion and emphasizes that host range varies from single-host restriction to infection of diverse vertebrates and invertebrates. It also notes that successful establishment requires adaptation to host-specific anatomy, physiology, immunity, and nutrient availability (published 13 July 2024; https://doi.org/10.1093/femsre/fuae019). (barber2024mechanismsofhost pages 1-2)
+A 2024 authoritative review frames bacterial host adaptation around colonization, nutrient acquisition, and immune evasion and emphasizes that host range varies from single-host restriction to infection of diverse vertebrates and invertebrates. It also notes that successful establishment requires adaptation to host-specific anatomy, physiology, immunity, and nutrient availability (published 13 July 2024; <a href="https://doi.org/10.1093/femsre/fuae019" rel="nofollow noreferrer">https://doi.org/10.1093/femsre/fuae019</a>). (barber2024mechanismsofhost pages 1-2)
 
 | module | recommended graph status | representative nodes | strongest evidence type | principal caveat |
 |---|---|---|---|---|
@@ -554,7 +554,7 @@ A 2024 authoritative review frames bacterial host adaptation around colonization
 ### Important distinctions
 
 1. **Pathogenicity versus virulence.** Pathogenicity is the ability to cause infection/disease; virulence is its degree or severity. A low-virulence pathogen still belongs in the class.
-2. **Colonizer/commensal versus pathogen.** Colonization may precede infection but is not sufficient by itself. Staphylococci illustrate this boundary: all are members of mammalian epithelial microbiota, yet only some species or lineages commonly cause disease, and colonization is a frequent source of infection (published 26 September 2023; https://doi.org/10.3390/ijms241914587). (cheung2023virulencemechanismsof pages 1-2)
+2. **Colonizer/commensal versus pathogen.** Colonization may precede infection but is not sufficient by itself. Staphylococci illustrate this boundary: all are members of mammalian epithelial microbiota, yet only some species or lineages commonly cause disease, and colonization is a frequent source of infection (published 26 September 2023; <a href="https://doi.org/10.3390/ijms241914587" rel="nofollow noreferrer">https://doi.org/10.3390/ijms241914587</a>). (cheung2023virulencemechanismsof pages 1-2)
 3. **Opportunistic pathogen.** Opportunism is compatible with the trait, but host compromise, barrier disruption, device implantation, or dysbiosis should be represented as contextual enabling factors—not as microbial mechanisms.
 4. **Zoonotic/vector-borne/reservoir status.** These are transmission/ecological traits. A strain can be an animal pathogen without transmission between animal species.
 5. **Toxigenic but non-invasive microbes.** Intoxication from a preformed toxin does not automatically demonstrate infection; distinguish toxin producer, foodborne intoxication, and pathogen.
@@ -692,7 +692,7 @@ Only high-confidence identifiers are supplied below. Label-only nodes are intent
 
         <details class="discussion-notes">
           <summary class="meta">Provenance</summary>
-          <p class="meta">Scan provenance (#409). The kg-microbe-kgscan pass raised this discussion with the prompt &#39;Knowledge gap for animal pathogen: Prokaryotes in such plastispheres are unknown to date.&#39;, whose sentence came from PMID:40891913. That sentence is about prokaryotes of marine plastispheres, not about this trait: the scan matched the hedging vocabulary of a gap statement without checking that the gap was about the trait it was filed under. The prompt above was authored instead from this record&#39;s own causal graph, and none of these references are carried as its evidence, because they support the scraped sentence rather than the question. The scan attached 3 further references whose snippets concern neither that sentence nor this trait; all 4 are reproduced here so nothing it produced is lost: PMID:40891913 &#39;Prokaryotes in such plastispheres are unknown to date.&#39;; PMID:42279816 &#39;However, in South America, their use is still limited because of complicated regulations and inconsistent evidence requirements.&#39;; PMID:41639266 &#39;However, the interacting effects of climate factors and seasonal variations in nutritional components on PMCs remain poorly understood.&#39;; PMID:42197358 &#39;While plant growth-promoting bacteria (PGPB) are known to alleviate heavy metal toxicity, their role under MP-HM co-contamination and the differential responses of rhizosphere microbial communities remain unclear.&#39;.</p>
+          <p class="meta">Scan provenance (#409). The kg-microbe-kgscan pass raised this discussion with the prompt &#39;Knowledge gap for animal pathogen: Prokaryotes in such plastispheres are unknown to date.&#39;, whose sentence came from <a href="https://pubmed.ncbi.nlm.nih.gov/40891913/" rel="nofollow noreferrer">PMID:40891913</a>. That sentence is about prokaryotes of marine plastispheres, not about this trait: the scan matched the hedging vocabulary of a gap statement without checking that the gap was about the trait it was filed under. The prompt above was authored instead from this record&#39;s own causal graph, and none of these references are carried as its evidence, because they support the scraped sentence rather than the question. The scan attached 3 further references whose snippets concern neither that sentence nor this trait; all 4 are reproduced here so nothing it produced is lost: <a href="https://pubmed.ncbi.nlm.nih.gov/40891913/" rel="nofollow noreferrer">PMID:40891913</a> &#39;Prokaryotes in such plastispheres are unknown to date.&#39;; <a href="https://pubmed.ncbi.nlm.nih.gov/42279816/" rel="nofollow noreferrer">PMID:42279816</a> &#39;However, in South America, their use is still limited because of complicated regulations and inconsistent evidence requirements.&#39;; <a href="https://pubmed.ncbi.nlm.nih.gov/41639266/" rel="nofollow noreferrer">PMID:41639266</a> &#39;However, the interacting effects of climate factors and seasonal variations in nutritional components on PMCs remain poorly understood.&#39;; <a href="https://pubmed.ncbi.nlm.nih.gov/42197358/" rel="nofollow noreferrer">PMID:42197358</a> &#39;While plant growth-promoting bacteria (PGPB) are known to alleviate heavy metal toxicity, their role under MP-HM co-contamination and the differential responses of rhizosphere microbial communities remain unclear.&#39;.</p>
         </details>
 
       </div>
@@ -1182,12 +1182,14 @@ function renderPathograph(containerId, data) {
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
       <a href="../../data/traits.json">traits.json</a> ·
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+      <a href="../../schema.html">LinkML schema</a>
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">YAML</a>)
     </div>
-    <div class="fam">
-      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
-      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
-      third-party source terms apply
+    <div class="fam license">
+      Project data: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-DATA">CC BY 4.0</a>.
+      Code: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>.
+      Third-party source material keeps its own terms
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE">licence scope</a>).
     </div>
     <div>
       Record as of 2026-08-26 03:23 UTC

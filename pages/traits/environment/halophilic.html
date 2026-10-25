@@ -18,7 +18,7 @@
       <a href="../../umap.html">Embedding space</a>
       <a href="../../graph.html">Graph layout</a>
       <a href="../../data/traits.json">Data JSON</a>
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
+      <a href="../../schema.html">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -303,7 +303,7 @@
             <span class="edge-predicate">is a</span>
             <strong>compatible solutes</strong>
             <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:25728" rel="nofollow noreferrer"><code>CHEBI:25728</code></a>
-            <code>rdfs:subClassOf</code>
+            <a href="http://www.w3.org/2000/01/rdf-schema#subClassOf" rel="nofollow noreferrer"><code>rdfs:subClassOf</code></a>
             <p>Ectoine is a major organic compatible solute used in osmoadaptation.</p>
             <ul>
 
@@ -369,7 +369,7 @@
         via <em>direct_metpo</em>.</p>
       <ul class="kgm-nodes">
 
-        <li><code>METPO:1000620</code> <span class="dim-preview">[-1.039, -0.924, -1.635, -0.067, …]</span></li>
+        <li><a href="https://w3id.org/metpo/1000620" rel="nofollow noreferrer">halophilic <code>METPO:1000620</code></a> <span class="dim-preview">[-1.039, -0.924, -1.635, -0.067, …]</span></li>
 
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
@@ -467,7 +467,7 @@ The trait should represent a **salt-dependent growth phenotype**, not merely sur
 * **Haloalkaliphilic, halothermophilic, or chaotolerant:** compound traits requiring separate evidence for pH, temperature, or chaotropic-ion dependence. For example, *Natranaerobius thermophilus* grows optimally at 3.3–3.9 M Na⁺, pH 9.5, and 53°C; its salt phenotype should be represented separately from alkaliphily and thermophily. (xing2024thepolyextremophilenatranaerobius pages 1-2)
 * **Habitat occurrence:** recovery from a saltern, salt mine, saline lake, or brine is supporting ecological context, not sufficient evidence of physiological salt requirement.
 
-The supplied *Salinicoccus albus* example is valid organism-level evidence, but the DOI-first reference is **10.1099/ijs.0.003251-0** (published April 2009; PMID:19329623). Its species description should support an organism-to-trait association, not a universal mechanism.
+The supplied *Salinicoccus albus* example is valid organism-level evidence, but the DOI-first reference is **<a href="https://doi.org/10.1099/ijs.0.003251-0%2A%2A" rel="nofollow noreferrer">10.1099/ijs.0.003251-0**</a> (published April 2009; <a href="https://pubmed.ncbi.nlm.nih.gov/19329623/" rel="nofollow noreferrer">PMID:19329623</a>). Its species description should support an organism-to-trait association, not a universal mechanism.
 
 ## 2. Mechanistic model and current understanding
 
@@ -1072,12 +1072,14 @@ function renderPathograph(containerId, data) {
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
       <a href="../../data/traits.json">traits.json</a> ·
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+      <a href="../../schema.html">LinkML schema</a>
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">YAML</a>)
     </div>
-    <div class="fam">
-      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
-      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
-      third-party source terms apply
+    <div class="fam license">
+      Project data: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-DATA">CC BY 4.0</a>.
+      Code: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>.
+      Third-party source material keeps its own terms
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE">licence scope</a>).
     </div>
     <div>
       Record as of 2026-08-26 03:23 UTC

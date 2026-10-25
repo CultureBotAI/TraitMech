@@ -18,7 +18,7 @@
       <a href="../../umap.html">Embedding space</a>
       <a href="../../graph.html">Graph layout</a>
       <a href="../../data/traits.json">Data JSON</a>
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
+      <a href="../../schema.html">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -99,7 +99,7 @@
             <a href="https://amigo.geneontology.org/amigo/term/GO:0009288" rel="nofollow noreferrer"><code>GO:0009288</code></a>
             <span class="edge-predicate">defines</span>
             <strong>flagellar arrangement</strong>
-            <code>traitmech:000056</code>
+            <a href="https://github.com/CultureBotAI/TraitMech/blob/main/data/traits/morphology/flagellar_arrangement.yaml" rel="nofollow noreferrer"><code>traitmech:000056</code></a>
             <a href="https://w3id.org/metpo/2007500" rel="nofollow noreferrer"><code>METPO:2007500</code></a>
             <p>The cellular distribution of flagella defines the arrangement.</p>
             <ul>
@@ -118,7 +118,7 @@
 
             <span class="edge-predicate">regulates</span>
             <strong>flagellar arrangement</strong>
-            <code>traitmech:000056</code>
+            <a href="https://github.com/CultureBotAI/TraitMech/blob/main/data/traits/morphology/flagellar_arrangement.yaml" rel="nofollow noreferrer"><code>traitmech:000056</code></a>
             <a href="http://purl.obolibrary.org/obo/RO_0002211" rel="nofollow noreferrer"><code>RO:0002211</code></a>
             <p>FlhF/FlhG set the species-specific flagellation pattern.</p>
             <ul>
@@ -315,7 +315,7 @@
       <h2>Synonyms (1)</h2>
       <ul class="synonyms">
 
-        <li>flagellation pattern <span class="meta">RELATED_SYNONYM · DOI:10.1093/femsre/fuv034</span></li>
+        <li>flagellation pattern <span class="meta">RELATED_SYNONYM · <a href="https://doi.org/10.1093/femsre/fuv034" rel="nofollow noreferrer"><code>DOI:10.1093/femsre/fuv034</code></a></span></li>
 
       </ul>
     </div>
@@ -331,7 +331,7 @@
         via <em>parent_proxy</em>.</p>
       <ul class="kgm-nodes">
 
-        <li><code>METPO:1000704</code> <span class="dim-preview">[-2.371, -2.707, -4.290, +4.186, …]</span></li>
+        <li><a href="../../traits/morphology/flagellated.html">flagellated <code>METPO:1000704</code></a> <span class="dim-preview">[-2.371, -2.707, -4.290, +4.186, …]</span></li>
 
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
@@ -422,16 +422,16 @@ The best-supported causal backbone for a polar-flagellation graph is:
 
 | Proposed causal edge | Evidence class | Primary taxon | Confidence / curation status | DOI |
 |---|---|---|---|---|
-| HubP/FimV directly interacts with FlhF | Direct protein-protein interaction; structural/biochemical plus localization genetics | *Shewanella putrefaciens* CN-32 | High; curate as taxon-supported polar landmark interaction, not universal across all polar flagellates (dornes2024polarconfinementof pages 1-2, dornes2024polarconfinementof pages 2-4, dornes2024polarconfinementof pages 4-6) | 10.1038/s41467-024-50274-4 |
-| FipA directly interacts with FlhF | Direct interaction by co-IP/MS and BACTH; conserved mutational support | *Vibrio parahaemolyticus*; also supported in *Pseudomonas putida* and *Shewanella putrefaciens* | High; curate as strong 2024 node-edge for FlhF-dependent polar synthesis pathway (arroyoperez2024aconservedcellpole pages 2-3, arroyoperez2024aconservedcellpole pages 14-15, arroyoperez2024aconservedcellpole pages 12-14, arroyoperez2024aconservedcellpole pages 8-11) | 10.7554/eLife.93004.3 |
-| FlhF directly binds FliG | Direct interaction; structural and biochemical mapping of FlhF FID/B-domain to FliG | *Shewanella putrefaciens* CN-32 | High; curate as core mechanistic recruitment edge for polar assembly (dornes2024polarconfinementof pages 1-2, dornes2024polarconfinementof pages 2-4, dornes2024polarconfinementof pages 6-7) | 10.1038/s41467-024-50274-4 |
-| FliG promotes/captures FliF MS-ring assembly | Biochemical assembly and localization evidence | *Vibrio* spp.; *Shewanella putrefaciens* | High but taxon-scoped; curate as assembly-promoting edge upstream of arrangement phenotype (dornes2024polarconfinementof pages 2-4, dornes2024polarconfinementof pages 6-7) | 10.1038/s41467-024-50274-4; 10.1128/JB.00236-20 |
-| FlhF-bound FliG is prevented from interacting with FliM/FliN | Direct interaction antagonism/gating from biochemical interaction assays | *Shewanella putrefaciens* CN-32 | High; curate as mechanistic checkpoint edge with explicit taxon note (dornes2024polarconfinementof pages 1-2, dornes2024polarconfinementof pages 2-4, dornes2024polarconfinementof pages 6-7) | 10.1038/s41467-024-50274-4 |
-| FlhG stimulates FlhF GTP hydrolysis | Biochemical/regulatory interaction supported by review synthesis and current model | Multiple polar-flagellated bacteria | Moderate-high; curate as conserved regulatory edge, but usually supported across taxa rather than a single universal assay system here (schuhmacher2015howbacteriamaintain pages 8-9, dornes2024polarconfinementof pages 7-8, dornes2024polarconfinementof pages 6-7) | 10.1093/femsre/fuv034; 10.1038/s41467-024-50274-4 |
-| FlhF promotes polar flagellar placement | Mutant phenotypes, localization microscopy, rescue/inference from assembly mutants | *Helicobacter pylori*; also Vibrio/*Pseudomonas*/*Shewanella* | High; curate as trait-proximal positive edge to polar placement with species-specific quantitative manifestations (gibson2023controlofthe pages 11-13, gibson2023controlofthe pages 1-2, arroyoperez2024aconservedcellpole pages 14-15) | 10.1128/JB.00110-23; 10.7554/eLife.93004.3 |
-| FlhG restricts flagellar number | Mutant phenotype genetics and review synthesis | *Helicobacter pylori*; Vibrio/*Pseudomonas*/*Shewanella* | High; curate as trait-proximal negative edge to flagellar number, with taxon-specific output distributions (gibson2023controlofthe pages 1-2, arroyoperez2024aconservedcellpole pages 1-2, gibson2023controlofthe pages 11-13) | 10.1128/JB.00110-23; 10.7554/eLife.93004.3 |
-| FipA promotes FlhF polar localization and thereby polar flagellar synthesis | Localization genetics plus loss-of-function phenotype | *Vibrio parahaemolyticus*; *Pseudomonas putida*; *Shewanella putrefaciens* | High; curate as strong 2024 licensing/localization edge, noting some species retain polar positioning despite reduced number (arroyoperez2024aconservedcellpole pages 11-12, arroyoperez2024aconservedcellpole pages 14-15, arroyoperez2024aconservedcellpole pages 12-14, arroyoperez2024aconservedcellpole pages 8-11) | 10.7554/eLife.93004.3 |
-| HubP/FimV contributes to proper polar flagellar placement/number via FlhF/FlhG pathway | Localization genetics and comparative phenotypes | *Vibrio parahaemolyticus*; *Shewanella putrefaciens* | Moderate; curate only with explicit species-variation warning because phenotypic strength differs across taxa (dornes2024polarconfinementof pages 7-8, arroyoperez2024aconservedcellpole pages 14-15) | 10.1038/s41467-024-50274-4; 10.7554/eLife.93004.3 |
+| HubP/FimV directly interacts with FlhF | Direct protein-protein interaction; structural/biochemical plus localization genetics | *Shewanella putrefaciens* CN-32 | High; curate as taxon-supported polar landmark interaction, not universal across all polar flagellates (dornes2024polarconfinementof pages 1-2, dornes2024polarconfinementof pages 2-4, dornes2024polarconfinementof pages 4-6) | <a href="https://doi.org/10.1038/s41467-024-50274-4" rel="nofollow noreferrer">10.1038/s41467-024-50274-4</a> |
+| FipA directly interacts with FlhF | Direct interaction by co-IP/MS and BACTH; conserved mutational support | *Vibrio parahaemolyticus*; also supported in *Pseudomonas putida* and *Shewanella putrefaciens* | High; curate as strong 2024 node-edge for FlhF-dependent polar synthesis pathway (arroyoperez2024aconservedcellpole pages 2-3, arroyoperez2024aconservedcellpole pages 14-15, arroyoperez2024aconservedcellpole pages 12-14, arroyoperez2024aconservedcellpole pages 8-11) | <a href="https://doi.org/10.7554/eLife.93004.3" rel="nofollow noreferrer">10.7554/eLife.93004.3</a> |
+| FlhF directly binds FliG | Direct interaction; structural and biochemical mapping of FlhF FID/B-domain to FliG | *Shewanella putrefaciens* CN-32 | High; curate as core mechanistic recruitment edge for polar assembly (dornes2024polarconfinementof pages 1-2, dornes2024polarconfinementof pages 2-4, dornes2024polarconfinementof pages 6-7) | <a href="https://doi.org/10.1038/s41467-024-50274-4" rel="nofollow noreferrer">10.1038/s41467-024-50274-4</a> |
+| FliG promotes/captures FliF MS-ring assembly | Biochemical assembly and localization evidence | *Vibrio* spp.; *Shewanella putrefaciens* | High but taxon-scoped; curate as assembly-promoting edge upstream of arrangement phenotype (dornes2024polarconfinementof pages 2-4, dornes2024polarconfinementof pages 6-7) | <a href="https://doi.org/10.1038/s41467-024-50274-4" rel="nofollow noreferrer">10.1038/s41467-024-50274-4</a>; <a href="https://doi.org/10.1128/JB.00236-20" rel="nofollow noreferrer">10.1128/JB.00236-20</a> |
+| FlhF-bound FliG is prevented from interacting with FliM/FliN | Direct interaction antagonism/gating from biochemical interaction assays | *Shewanella putrefaciens* CN-32 | High; curate as mechanistic checkpoint edge with explicit taxon note (dornes2024polarconfinementof pages 1-2, dornes2024polarconfinementof pages 2-4, dornes2024polarconfinementof pages 6-7) | <a href="https://doi.org/10.1038/s41467-024-50274-4" rel="nofollow noreferrer">10.1038/s41467-024-50274-4</a> |
+| FlhG stimulates FlhF GTP hydrolysis | Biochemical/regulatory interaction supported by review synthesis and current model | Multiple polar-flagellated bacteria | Moderate-high; curate as conserved regulatory edge, but usually supported across taxa rather than a single universal assay system here (schuhmacher2015howbacteriamaintain pages 8-9, dornes2024polarconfinementof pages 7-8, dornes2024polarconfinementof pages 6-7) | <a href="https://doi.org/10.1093/femsre/fuv034" rel="nofollow noreferrer">10.1093/femsre/fuv034</a>; <a href="https://doi.org/10.1038/s41467-024-50274-4" rel="nofollow noreferrer">10.1038/s41467-024-50274-4</a> |
+| FlhF promotes polar flagellar placement | Mutant phenotypes, localization microscopy, rescue/inference from assembly mutants | *Helicobacter pylori*; also Vibrio/*Pseudomonas*/*Shewanella* | High; curate as trait-proximal positive edge to polar placement with species-specific quantitative manifestations (gibson2023controlofthe pages 11-13, gibson2023controlofthe pages 1-2, arroyoperez2024aconservedcellpole pages 14-15) | <a href="https://doi.org/10.1128/JB.00110-23" rel="nofollow noreferrer">10.1128/JB.00110-23</a>; <a href="https://doi.org/10.7554/eLife.93004.3" rel="nofollow noreferrer">10.7554/eLife.93004.3</a> |
+| FlhG restricts flagellar number | Mutant phenotype genetics and review synthesis | *Helicobacter pylori*; Vibrio/*Pseudomonas*/*Shewanella* | High; curate as trait-proximal negative edge to flagellar number, with taxon-specific output distributions (gibson2023controlofthe pages 1-2, arroyoperez2024aconservedcellpole pages 1-2, gibson2023controlofthe pages 11-13) | <a href="https://doi.org/10.1128/JB.00110-23" rel="nofollow noreferrer">10.1128/JB.00110-23</a>; <a href="https://doi.org/10.7554/eLife.93004.3" rel="nofollow noreferrer">10.7554/eLife.93004.3</a> |
+| FipA promotes FlhF polar localization and thereby polar flagellar synthesis | Localization genetics plus loss-of-function phenotype | *Vibrio parahaemolyticus*; *Pseudomonas putida*; *Shewanella putrefaciens* | High; curate as strong 2024 licensing/localization edge, noting some species retain polar positioning despite reduced number (arroyoperez2024aconservedcellpole pages 11-12, arroyoperez2024aconservedcellpole pages 14-15, arroyoperez2024aconservedcellpole pages 12-14, arroyoperez2024aconservedcellpole pages 8-11) | <a href="https://doi.org/10.7554/eLife.93004.3" rel="nofollow noreferrer">10.7554/eLife.93004.3</a> |
+| HubP/FimV contributes to proper polar flagellar placement/number via FlhF/FlhG pathway | Localization genetics and comparative phenotypes | *Vibrio parahaemolyticus*; *Shewanella putrefaciens* | Moderate; curate only with explicit species-variation warning because phenotypic strength differs across taxa (dornes2024polarconfinementof pages 7-8, arroyoperez2024aconservedcellpole pages 14-15) | <a href="https://doi.org/10.1038/s41467-024-50274-4" rel="nofollow noreferrer">10.1038/s41467-024-50274-4</a>; <a href="https://doi.org/10.7554/eLife.93004.3" rel="nofollow noreferrer">10.7554/eLife.93004.3</a> |
 
 
 *Table: This table prioritizes the strongest causal edges currently supported for curating traitmech:000056. It highlights which interactions are direct and high-confidence versus those that are taxon-dependent and should be curated with explicit scope notes.*
@@ -583,7 +583,7 @@ This scope is consistent with the current mechanistic literature, which uses “
         <li>
           <time>2026-10-25T12:55:00Z</time> ·
           <strong>ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE</strong> · claude
-          <p class="changes">Added verified verbatim snippet from DOI:10.1093/femsre/fuv034 (already present on child records polar_flagellation.yaml, amphitrichous.yaml, lophotrichous.yaml, and monotrichous.yaml evidence[0]) to record-level evidence[0] to match definition_source (Cycle 4 Stage 5 remediation of F-C4S4-DEF-SRC-005 in group G-C4S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).</p>
+          <p class="changes">Added verified verbatim snippet from <a href="https://doi.org/10.1093/femsre/fuv034" rel="nofollow noreferrer">DOI:10.1093/femsre/fuv034</a> (already present on child records polar_flagellation.yaml, amphitrichous.yaml, lophotrichous.yaml, and monotrichous.yaml evidence[0]) to record-level evidence[0] to match definition_source (Cycle 4 Stage 5 remediation of F-C4S4-DEF-SRC-005 in group G-C4S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).</p>
         </li>
 
       </ol>
@@ -980,12 +980,14 @@ function renderPathograph(containerId, data) {
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
       <a href="../../data/traits.json">traits.json</a> ·
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+      <a href="../../schema.html">LinkML schema</a>
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">YAML</a>)
     </div>
-    <div class="fam">
-      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
-      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
-      third-party source terms apply
+    <div class="fam license">
+      Project data: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-DATA">CC BY 4.0</a>.
+      Code: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>.
+      Third-party source material keeps its own terms
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE">licence scope</a>).
     </div>
     <div>
       Record as of 2026-10-25 12:55 UTC

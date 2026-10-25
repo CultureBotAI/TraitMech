@@ -15,3 +15,5 @@
 .badge { background:var(--badge); color:var(--badge-fg); }
 .badge.gap { background:var(--gap); color:var(--gap-fg); }
 a:focus-visible, button:focus-visible, input:focus-visible { outline-color:var(--accent); }
+.shell-footer { max-width:1200px; margin:1.5rem auto 2rem; padding:1rem 1.25rem;
+  border-top:1px solid var(--line); color:var(--muted); font-size:.85rem; }

@@ -18,7 +18,7 @@
       <a href="../../umap.html">Embedding space</a>
       <a href="../../graph.html">Graph layout</a>
       <a href="../../data/traits.json">Data JSON</a>
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
+      <a href="../../schema.html">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -389,8 +389,8 @@
                 </td>
                 <td>
 
-                  <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1085" rel="nofollow noreferrer">Rhodospirillum rubrum</a>
-                  <br><code>NCBITaxon:1085</code>
+                  <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1085" rel="nofollow noreferrer">Rhodospirillum rubrum
+                  <br><code>NCBITaxon:1085</code></a>
                 </td>
                 <td>
                   <code>REVIEWED</code><br>
@@ -456,7 +456,7 @@
       <h2>Synonyms (1)</h2>
       <ul class="synonyms">
 
-        <li>photoorganoheterotroph <span class="meta">RELATED_SYNONYM · metpo.owl</span></li>
+        <li>photoorganoheterotroph <span class="meta">RELATED_SYNONYM · <code>metpo.owl</code></span></li>
 
       </ul>
     </div>
@@ -472,7 +472,7 @@
         via <em>direct_metpo</em>.</p>
       <ul class="kgm-nodes">
 
-        <li><code>METPO:1000659</code> <span class="dim-preview">[-2.409, -2.535, -5.408, -0.103, …]</span></li>
+        <li><a href="https://w3id.org/metpo/1000659" rel="nofollow noreferrer">photoorganoheterotrophic <code>METPO:1000659</code></a> <span class="dim-preview">[-2.409, -2.535, -5.408, -0.103, …]</span></li>
 
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
@@ -568,15 +568,15 @@ The common causal core is therefore **organic compounds → cellular carbon/hete
 
 | Mechanism / edge family | Generic vs taxon-specific status | Strongest DOI | Evidence strength | Recommended TraitMech action |
 |---|---|---|---|---|
-| Reaction-center phototrophy: light captured by bacteriochlorophyll-based RC systems generates proton-motive force and ATP; applicable to RC-bearing photoorganoheterotrophs | Generic within RC-based photoheterotrophs; not universal to rhodopsin-based cases | 10.1016/j.tim.2006.09.001 | Strong review-level mechanistic support; foundational, not 2023–2024 (bryant2006prokaryoticphotosynthesisand pages 2-3, thiel2018diversityofchlorophototrophic pages 2-3) | Curate as core mechanism for an RC-based subclass/branch of photoorganoheterotrophy; avoid asserting universality for all METPO:1000659 instances |
-| Proteorhodopsin phototrophy: PR + retinal light-driven proton pumping supplements ATP production without full photosynthetic electron transport | Taxon/mechanism-specific; applies to PR-bearing bacteria, not RC-based phototrophs | 10.4014/jmb.2410.10034 | Strong for specific strain physiology; recent primary data, but strain-context dependent (oh2024effectoflight pages 13-14, oh2024effectoflight pages 1-2) | Curate as alternative mechanistic branch under photoorganoheterotrophy with uncertainty/generalization note |
-| Organic carbon dependence: organisms obtain carbon from organic compounds; light supplements energy rather than replacing organic carbon requirement | Generic trait-defining feature | 10.1038/nbt923 | Strong definition-level evidence plus recent physiological support (larimer2004completegenomesequence pages 1-2, tinguely2023diurnalcyclesdrive pages 1-2, oh2024effectoflight pages 13-14) | Curate as core defining edge(s): organic compounds support biomass carbon; do not over-specify a single substrate set |
-| Oxygen boundary: aerobic anoxygenic photoheterotrophs function under oxic conditions, while many anaerobic anoxygenic phototrophs suppress photosystem biosynthesis in oxygen | Boundary is clade/mechanism-specific, not universal | 10.1146/annurev-arplant-042817-040500 | Moderate-to-strong review evidence, but not globally applicable across all photoorganoheterotrophs (thiel2018diversityofchlorophototrophic pages 10-11) | Curate only as contextual/environmental qualifiers on specific branches (e.g., AAP vs anaerobic purple bacteria), not as a global trait constraint |
-| CBB/anaplerotic redox balancing: CO2 fixation can act as electron sink during photoheterotrophic growth | Strongly supported in purple phototrophic bacteria; not yet generic to all photoorganoheterotrophs | 10.1038/s42003-024-07188-0 | Strong recent mechanistic support in mixed PPB biofilms and related PPB literature, but lineage-specific (edreira2024elucidatingmetabolictuning pages 1-2, edreira2024elucidatingmetabolictuning pages 5-6) | Curate as taxon-specific/uncertain edge set for PPB-focused branch; do not make obligatory for the whole trait |
-| PHA accumulation as excess-reductant sink under photoheterotrophic/redox-stress conditions | Taxon- and condition-specific | 10.1038/s42003-024-07188-0 | Strong recent application/mechanistic support in PPB biocathodes; clearly conditional on substrate/redox state (edreira2024elucidatingmetabolictuning pages 1-2, edreira2024elucidatingmetabolictuning pages 9-10) | Curate only as conditional, PPB-specific downstream edge; mark uncertain and context dependent |
-| Nutrient/light effects: carbon limitation, diel cycling, and nutrient status modulate growth, ATP use, survival, and competitive fitness | Broad but not universal; effects differ by mechanism and taxon | 10.1093/femsec/fiae090 | Strong recent ecological/physiological evidence, but outcomes differ across AAPB and PR systems (tinguely2023diurnalcyclesdrive pages 1-2, tinguely2023diurnalcyclesdrive pages 9-10, oh2024effectoflight pages 13-14, oh2024effectoflight pages 14-15) | Curate as environmental modulation edges with explicit assay/context notes; avoid a single directional rule for all taxa |
-| Applications: wastewater treatment, bioremediation, biomass/single-cell protein, pigments, PHA, biohydrogen, photo-bioelectrochemical CO2 upcycling | Application-level evidence is strong for PPB/PNSB, not trait-universal biology | 10.1007/s11274-023-03729-7 | Strong recent applied literature and quantitative implementations, but mostly consortium/taxon-specific engineering evidence (dhar2023anoxygenicphototrophicpurple pages 1-3, sepulvedamunoz2023wastewatertreatmentusing pages 1-2, wada2023valorizationofpurple pages 1-2, wada2023valorizationofpurple pages 11-12, edreira2024elucidatingmetabolictuning pages 1-2) | Do not curate as intrinsic causal edges of the trait; keep as downstream use-cases or annotation notes outside core TraitMech graph |
-| Photosynthesis genes/proteins (e.g., pufL, pufM, bchH/bchM, RuBisCO/cbbL in some taxa) | Taxon-specific markers of RC-based subtypes; not universal trait markers | 10.1038/s43705-023-00334-5 | Moderate-to-strong primary support for specific taxa and gene sets (tinguely2023diurnalcyclesdrive pages 2-2, yabe2022vulcanimicrobiumalpinusgen. pages 7-8) | Curate as candidate grounded nodes on subtype branches only; avoid using any single gene as universal biomarker for METPO:1000659 |
+| Reaction-center phototrophy: light captured by bacteriochlorophyll-based RC systems generates proton-motive force and ATP; applicable to RC-bearing photoorganoheterotrophs | Generic within RC-based photoheterotrophs; not universal to rhodopsin-based cases | <a href="https://doi.org/10.1016/j.tim.2006.09.001" rel="nofollow noreferrer">10.1016/j.tim.2006.09.001</a> | Strong review-level mechanistic support; foundational, not 2023–2024 (bryant2006prokaryoticphotosynthesisand pages 2-3, thiel2018diversityofchlorophototrophic pages 2-3) | Curate as core mechanism for an RC-based subclass/branch of photoorganoheterotrophy; avoid asserting universality for all METPO:1000659 instances |
+| Proteorhodopsin phototrophy: PR + retinal light-driven proton pumping supplements ATP production without full photosynthetic electron transport | Taxon/mechanism-specific; applies to PR-bearing bacteria, not RC-based phototrophs | <a href="https://doi.org/10.4014/jmb.2410.10034" rel="nofollow noreferrer">10.4014/jmb.2410.10034</a> | Strong for specific strain physiology; recent primary data, but strain-context dependent (oh2024effectoflight pages 13-14, oh2024effectoflight pages 1-2) | Curate as alternative mechanistic branch under photoorganoheterotrophy with uncertainty/generalization note |
+| Organic carbon dependence: organisms obtain carbon from organic compounds; light supplements energy rather than replacing organic carbon requirement | Generic trait-defining feature | <a href="https://doi.org/10.1038/nbt923" rel="nofollow noreferrer">10.1038/nbt923</a> | Strong definition-level evidence plus recent physiological support (larimer2004completegenomesequence pages 1-2, tinguely2023diurnalcyclesdrive pages 1-2, oh2024effectoflight pages 13-14) | Curate as core defining edge(s): organic compounds support biomass carbon; do not over-specify a single substrate set |
+| Oxygen boundary: aerobic anoxygenic photoheterotrophs function under oxic conditions, while many anaerobic anoxygenic phototrophs suppress photosystem biosynthesis in oxygen | Boundary is clade/mechanism-specific, not universal | <a href="https://doi.org/10.1146/annurev-arplant-042817-040500" rel="nofollow noreferrer">10.1146/annurev-arplant-042817-040500</a> | Moderate-to-strong review evidence, but not globally applicable across all photoorganoheterotrophs (thiel2018diversityofchlorophototrophic pages 10-11) | Curate only as contextual/environmental qualifiers on specific branches (e.g., AAP vs anaerobic purple bacteria), not as a global trait constraint |
+| CBB/anaplerotic redox balancing: CO2 fixation can act as electron sink during photoheterotrophic growth | Strongly supported in purple phototrophic bacteria; not yet generic to all photoorganoheterotrophs | <a href="https://doi.org/10.1038/s42003-024-07188-0" rel="nofollow noreferrer">10.1038/s42003-024-07188-0</a> | Strong recent mechanistic support in mixed PPB biofilms and related PPB literature, but lineage-specific (edreira2024elucidatingmetabolictuning pages 1-2, edreira2024elucidatingmetabolictuning pages 5-6) | Curate as taxon-specific/uncertain edge set for PPB-focused branch; do not make obligatory for the whole trait |
+| PHA accumulation as excess-reductant sink under photoheterotrophic/redox-stress conditions | Taxon- and condition-specific | <a href="https://doi.org/10.1038/s42003-024-07188-0" rel="nofollow noreferrer">10.1038/s42003-024-07188-0</a> | Strong recent application/mechanistic support in PPB biocathodes; clearly conditional on substrate/redox state (edreira2024elucidatingmetabolictuning pages 1-2, edreira2024elucidatingmetabolictuning pages 9-10) | Curate only as conditional, PPB-specific downstream edge; mark uncertain and context dependent |
+| Nutrient/light effects: carbon limitation, diel cycling, and nutrient status modulate growth, ATP use, survival, and competitive fitness | Broad but not universal; effects differ by mechanism and taxon | <a href="https://doi.org/10.1093/femsec/fiae090" rel="nofollow noreferrer">10.1093/femsec/fiae090</a> | Strong recent ecological/physiological evidence, but outcomes differ across AAPB and PR systems (tinguely2023diurnalcyclesdrive pages 1-2, tinguely2023diurnalcyclesdrive pages 9-10, oh2024effectoflight pages 13-14, oh2024effectoflight pages 14-15) | Curate as environmental modulation edges with explicit assay/context notes; avoid a single directional rule for all taxa |
+| Applications: wastewater treatment, bioremediation, biomass/single-cell protein, pigments, PHA, biohydrogen, photo-bioelectrochemical CO2 upcycling | Application-level evidence is strong for PPB/PNSB, not trait-universal biology | <a href="https://doi.org/10.1007/s11274-023-03729-7" rel="nofollow noreferrer">10.1007/s11274-023-03729-7</a> | Strong recent applied literature and quantitative implementations, but mostly consortium/taxon-specific engineering evidence (dhar2023anoxygenicphototrophicpurple pages 1-3, sepulvedamunoz2023wastewatertreatmentusing pages 1-2, wada2023valorizationofpurple pages 1-2, wada2023valorizationofpurple pages 11-12, edreira2024elucidatingmetabolictuning pages 1-2) | Do not curate as intrinsic causal edges of the trait; keep as downstream use-cases or annotation notes outside core TraitMech graph |
+| Photosynthesis genes/proteins (e.g., pufL, pufM, bchH/bchM, RuBisCO/cbbL in some taxa) | Taxon-specific markers of RC-based subtypes; not universal trait markers | <a href="https://doi.org/10.1038/s43705-023-00334-5" rel="nofollow noreferrer">10.1038/s43705-023-00334-5</a> | Moderate-to-strong primary support for specific taxa and gene sets (tinguely2023diurnalcyclesdrive pages 2-2, yabe2022vulcanimicrobiumalpinusgen. pages 7-8) | Curate as candidate grounded nodes on subtype branches only; avoid using any single gene as universal biomarker for METPO:1000659 |
 
 
 *Table: This table summarizes which mechanism families are safe to curate as core TraitMech content for photoorganoheterotrophy versus which should remain branch-specific, conditional, or outside the core graph. It helps separate trait-defining biology from taxon-limited mechanisms and engineering applications.*
@@ -784,7 +784,7 @@ Thus neither **“light always increases growth”** nor **“photoheterotrophy 
         <li>
           <time>2026-10-24T02:45:00Z</time> ·
           <strong>ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE</strong> · claude
-          <p class="changes">Appended record-level evidence entry for definition_source DOI:10.1016/B978-012373944-5.00083-3 using the verified verbatim snippet already present on causal_graphs[0].edges[0].evidence[0] (Cycle 3 Stage 5 remediation of F-C3S4-DEF-SRC-001 in group G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).</p>
+          <p class="changes">Appended record-level evidence entry for definition_source <a href="https://doi.org/10.1016/B978-012373944-5.00083-3" rel="nofollow noreferrer">DOI:10.1016/B978-012373944-5.00083-3</a> using the verified verbatim snippet already present on causal_graphs[0].edges[0].evidence[0] (Cycle 3 Stage 5 remediation of F-C3S4-DEF-SRC-001 in group G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).</p>
         </li>
 
       </ol>
@@ -1190,12 +1190,14 @@ function renderPathograph(containerId, data) {
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
       <a href="../../data/traits.json">traits.json</a> ·
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+      <a href="../../schema.html">LinkML schema</a>
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">YAML</a>)
     </div>
-    <div class="fam">
-      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
-      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
-      third-party source terms apply
+    <div class="fam license">
+      Project data: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-DATA">CC BY 4.0</a>.
+      Code: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>.
+      Third-party source material keeps its own terms
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE">licence scope</a>).
     </div>
     <div>
       Record as of 2026-10-24 02:45 UTC

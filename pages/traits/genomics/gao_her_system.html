@@ -18,7 +18,7 @@
       <a href="../../umap.html">Embedding space</a>
       <a href="../../graph.html">Graph layout</a>
       <a href="../../data/traits.json">Data JSON</a>
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
+      <a href="../../schema.html">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -55,7 +55,7 @@
       <li>
         <a href="https://doi.org/10.1126/science.aba0372" rel="nofollow noreferrer"><code>DOI:10.1126/science.aba0372</code></a>
         <blockquote>By systematic defense gene prediction and heterologous reconstitution, here we discover 29 widespread antiviral gene cassettes, collectively present in 32% of all sequenced bacterial and archaeal genomes, that mediate protection against specific bacteriophages.</blockquote>
-        <p class="meta">Gao et al. support a systematic defense-gene prediction and heterologous reconstitution campaign that discovered widespread antiviral gene cassettes (PMID:32855333 / DOI:10.1126/science.aba0372).</p>
+        <p class="meta">Gao et al. support a systematic defense-gene prediction and heterologous reconstitution campaign that discovered widespread antiviral gene cassettes (<a href="https://pubmed.ncbi.nlm.nih.gov/32855333/" rel="nofollow noreferrer">PMID:32855333</a> / <a href="https://doi.org/10.1126/science.aba0372" rel="nofollow noreferrer">DOI:10.1126/science.aba0372</a>).</p>
       </li>
 
       <li>
@@ -148,7 +148,7 @@
 
             <span class="edge-predicate">confers</span>
             <strong>Gao-Her system</strong>
-            <code>traitmech:000409</code>
+            <a href="https://github.com/CultureBotAI/TraitMech/blob/main/data/traits/genomics/gao_her_system.yaml" rel="nofollow noreferrer"><code>traitmech:000409</code></a>
             <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>Gao_Her-associated antiviral cassette defense realizes the Gao-Her system trait.</p>
             <ul>
@@ -164,11 +164,11 @@
 
           <li id="pathograph-1-edge-3">
             <strong>Gao-Her system</strong>
-            <code>traitmech:000409</code>
+            <a href="https://github.com/CultureBotAI/TraitMech/blob/main/data/traits/genomics/gao_her_system.yaml" rel="nofollow noreferrer"><code>traitmech:000409</code></a>
             <span class="edge-predicate">is a</span>
             <strong>phage defense system</strong>
-            <code>traitmech:000209</code>
-            <code>rdfs:subClassOf</code>
+            <a href="../../traits/genomics/phage_defense_system.html"><code>traitmech:000209</code></a>
+            <a href="http://www.w3.org/2000/01/rdf-schema#subClassOf" rel="nofollow noreferrer"><code>rdfs:subClassOf</code></a>
             <p>Gao-Her system possession is a phage-defense-system trait.</p>
             <ul>
 
@@ -250,7 +250,7 @@
       <h2>Synonyms (1)</h2>
       <ul class="synonyms">
 
-        <li>Gao_Her <span class="meta">RELATED_SYNONYM · https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md</span></li>
+        <li>Gao_Her <span class="meta">RELATED_SYNONYM · <a href="https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md" rel="nofollow noreferrer"><code>https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md</code></a></span></li>
 
       </ul>
     </div>
@@ -266,7 +266,7 @@
         via <em>parent_proxy</em>.</p>
       <ul class="kgm-nodes">
 
-        <li><code>METPO:1000188</code> <span class="dim-preview">[-0.956, -1.962, -3.148, +1.274, …]</span></li>
+        <li><a href="../../traits/upper/quality.html">quality <code>METPO:1000188</code></a> <span class="dim-preview">[-0.956, -1.962, -3.148, +1.274, …]</span></li>
 
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
@@ -395,7 +395,7 @@
         <li>
           <time>2026-10-25T12:55:00Z</time> ·
           <strong>ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE</strong> · claude
-          <p class="changes">Aligned record-level evidence[0].reference from PMID:32855333 to DOI:10.1126/science.aba0372 (same Gao et al. 2020 publication) to match definition_source while preserving the verified verbatim snippet and PMID cross-reference in notes (Cycle 4 Stage 5 remediation of F-C4S4-DEF-SRC-009 in group G-C4S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).</p>
+          <p class="changes">Aligned record-level evidence[0].reference from <a href="https://pubmed.ncbi.nlm.nih.gov/32855333/" rel="nofollow noreferrer">PMID:32855333</a> to <a href="https://doi.org/10.1126/science.aba0372" rel="nofollow noreferrer">DOI:10.1126/science.aba0372</a> (same Gao et al. 2020 publication) to match definition_source while preserving the verified verbatim snippet and PMID cross-reference in notes (Cycle 4 Stage 5 remediation of F-C4S4-DEF-SRC-009 in group G-C4S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).</p>
         </li>
 
       </ol>
@@ -801,12 +801,14 @@ function renderPathograph(containerId, data) {
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
       <a href="../../data/traits.json">traits.json</a> ·
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+      <a href="../../schema.html">LinkML schema</a>
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">YAML</a>)
     </div>
-    <div class="fam">
-      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
-      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
-      third-party source terms apply
+    <div class="fam license">
+      Project data: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-DATA">CC BY 4.0</a>.
+      Code: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>.
+      Third-party source material keeps its own terms
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE">licence scope</a>).
     </div>
     <div>
       Record as of 2026-10-25 12:55 UTC

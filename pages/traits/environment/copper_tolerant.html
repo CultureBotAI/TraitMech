@@ -18,7 +18,7 @@
       <a href="../../umap.html">Embedding space</a>
       <a href="../../graph.html">Graph layout</a>
       <a href="../../data/traits.json">Data JSON</a>
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
+      <a href="../../schema.html">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -99,7 +99,7 @@
             <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:29036" rel="nofollow noreferrer"><code>CHEBI:29036</code></a>
             <span class="edge-predicate">challenges</span>
             <strong>copper tolerant</strong>
-            <code>traitmech:000018</code>
+            <a href="https://github.com/CultureBotAI/TraitMech/blob/main/data/traits/environment/copper_tolerant.yaml" rel="nofollow noreferrer"><code>traitmech:000018</code></a>
             <a href="https://w3id.org/metpo/2007406" rel="nofollow noreferrer"><code>METPO:2007406</code></a>
             <p>Elevated cytoplasmic copper is the toxic challenge the trait counters.</p>
             <ul>
@@ -250,8 +250,8 @@
                 </td>
                 <td>
 
-                  <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=266264" rel="nofollow noreferrer">Cupriavidus metallidurans CH34</a>
-                  <br><code>NCBITaxon:266264</code>
+                  <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=266264" rel="nofollow noreferrer">Cupriavidus metallidurans CH34
+                  <br><code>NCBITaxon:266264</code></a>
                 </td>
                 <td>
                   <code>UNREVIEWED</code><br>
@@ -317,7 +317,7 @@
       <h2>Synonyms (1)</h2>
       <ul class="synonyms">
 
-        <li>copper resistant <span class="meta">RELATED_SYNONYM · DOI:10.1007/s10565-013-9262-1</span></li>
+        <li>copper resistant <span class="meta">RELATED_SYNONYM · <a href="https://doi.org/10.1007/s10565-013-9262-1" rel="nofollow noreferrer"><code>DOI:10.1007/s10565-013-9262-1</code></a></span></li>
 
       </ul>
     </div>
@@ -333,7 +333,7 @@
         via <em>parent_proxy</em>.</p>
       <ul class="kgm-nodes">
 
-        <li><code>METPO:1000059</code> <span class="dim-preview">[-2.682, -2.070, -3.656, -0.652, …]</span></li>
+        <li><a href="../../traits/upper/phenotype.html">phenotype <code>METPO:1000059</code></a> <span class="dim-preview">[-2.682, -2.070, -3.656, -0.652, …]</span></li>
 
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
@@ -454,18 +454,18 @@ The strongest curation-ready relationships are summarized below.
 
 | subject | predicate | object | taxon/condition | confidence | DOI |
 |---|---|---|---|---|---|
-| Cu(I)-bound CueR | activates transcription of | copA | *Escherichia coli*; cytoplasmic copper stress; Cue regulon (hyre2021copperhomeostaticmechanisms pages 2-4, bittner2017thecopperefflux pages 1-2, gautam2023linkingcopperassociatedsignal pages 3-5) | high | 10.1128/ecosalplus.esp-0014-2020 |
-| Cu(I)-bound CueR | activates transcription of | cueO | *Escherichia coli*; cytoplasmic copper stress; Cue regulon (hyre2021copperhomeostaticmechanisms pages 2-4, bittner2017thecopperefflux pages 1-2, gautam2023linkingcopperassociatedsignal pages 3-5) | high | 10.1128/ecosalplus.esp-0014-2020 |
-| CopZ copper chaperone | delivers cytoplasmic Cu(I) to | CopA Cu(+)-ATPase | *Pseudomonas aeruginosa*; cytoplasmic copper trafficking (virieuxpetit2022fromcoppertolerance pages 5-7, andrei2020cuhomeostasisin pages 10-12, giachino2020coppertolerancein pages 3-5) | medium | 10.3390/genes13020301 |
-| CopA/CupA P1B-type ATPase | exports | cytoplasmic Cu(I) to the periplasm | Gram-negative bacteria; strongest primary evidence in *Cupriavidus metallidurans* and reviewed broadly (hirth2023fullcopperresistance pages 16-18, andrei2020cuhomeostasisin pages 16-19, hyre2021copperhomeostaticmechanisms pages 2-4) | high | 10.1128/aem.00567-23 |
-| CueO/PcoA/CopA multicopper oxidase | oxidizes | periplasmic Cu(I) to Cu(II) | Enterobacteria and *C. metallidurans*; oxygen-dependent periplasmic detoxification (hirth2023fullcopperresistance pages 16-18, chaturvedi2014pathogenicadaptationsto pages 6-7, giachino2020coppertolerancein pages 3-5, andrei2020cuhomeostasisin pages 21-23) | high | 10.1128/aem.00567-23 |
-| CusS/CusR two-component system | activates transcription of | cusCFBA | *Escherichia coli*; periplasmic copper sensing, strongest under anaerobic conditions (rismondo2023thesensoryhistidine pages 8-10, rismondo2023thesensoryhistidine pages 2-5) | high | 10.1128/spectrum.00291-23 |
-| CusCFBA/CusCBA efflux complex | exports | periplasmic Cu(I) to the extracellular space | *E. coli* and *C. metallidurans*; especially important when oxygen is limiting (rismondo2023thesensoryhistidine pages 1-2, andrei2020cuhomeostasisin pages 19-21, hirth2023fullcopperresistance pages 16-18) | high | 10.1128/spectrum.00291-23 |
-| Glutathione (via GshA) | cooperates with | Cop/Cus/Cup copper-defense systems | *C. metallidurans*; deletion analysis showed GSH amplifies resistance but is insufficient alone (hirth2023fullcopperresistance pages 1-3, hirth2023fullcopperresistance pages 7-9, hirth2023fullcopperresistance pages 11-12) | high | 10.1128/aem.00567-23 |
-| Extracellular polymeric substances (EPS) | sequester/adsorb | copper | Deep-sea vent isolates; Cu induced EPS and adsorption of ~40–50 mg·g−1 Cu (yu2024isolationofhighly pages 4-6, yu2024isolationofhighly pages 1-2, yu2024isolationofhighly pages 2-3) | medium | 10.3389/fmicb.2024.1390451 |
-| CopA/CupA-mediated copper export | decreases | intracellular copper accumulation | *Haemophilus influenzae* and *C. metallidurans*; ΔcopZA accumulated 97% more Cu, Cup reduced accumulation at high Cu (hirth2023fullcopperresistance pages 16-18, hirth2023fullcopperresistance pages 11-12, wong2023coppereffluxsystem pages 10-12) | high | 10.1128/iai.00091-23 |
-| Reduced intracellular/periplasmic copper burden | enables | growth/survival at elevated copper | Broad bacterial trait; strongest mutant IC50/survival evidence in *C. metallidurans* and hospital-adapted *P. aeruginosa* (hirth2023fullcopperresistance pages 16-18, hirth2023fullcopperresistance pages 4-6, virieuxpetit2022fromcoppertolerance pages 8-9) | high | 10.1128/aem.00567-23 |
-| copZA copper efflux locus | promotes | lung infection fitness under host copper stress | Nontypeable *Haemophilus influenzae*; copA mutant ~4-fold and copZA mutant ~20-fold underrepresented in murine lung infection (wong2023coppereffluxsystem pages 10-12) | high | 10.1128/iai.00091-23 |
+| Cu(I)-bound CueR | activates transcription of | copA | *Escherichia coli*; cytoplasmic copper stress; Cue regulon (hyre2021copperhomeostaticmechanisms pages 2-4, bittner2017thecopperefflux pages 1-2, gautam2023linkingcopperassociatedsignal pages 3-5) | high | <a href="https://doi.org/10.1128/ecosalplus.esp-0014-2020" rel="nofollow noreferrer">10.1128/ecosalplus.esp-0014-2020</a> |
+| Cu(I)-bound CueR | activates transcription of | cueO | *Escherichia coli*; cytoplasmic copper stress; Cue regulon (hyre2021copperhomeostaticmechanisms pages 2-4, bittner2017thecopperefflux pages 1-2, gautam2023linkingcopperassociatedsignal pages 3-5) | high | <a href="https://doi.org/10.1128/ecosalplus.esp-0014-2020" rel="nofollow noreferrer">10.1128/ecosalplus.esp-0014-2020</a> |
+| CopZ copper chaperone | delivers cytoplasmic Cu(I) to | CopA Cu(+)-ATPase | *Pseudomonas aeruginosa*; cytoplasmic copper trafficking (virieuxpetit2022fromcoppertolerance pages 5-7, andrei2020cuhomeostasisin pages 10-12, giachino2020coppertolerancein pages 3-5) | medium | <a href="https://doi.org/10.3390/genes13020301" rel="nofollow noreferrer">10.3390/genes13020301</a> |
+| CopA/CupA P1B-type ATPase | exports | cytoplasmic Cu(I) to the periplasm | Gram-negative bacteria; strongest primary evidence in *Cupriavidus metallidurans* and reviewed broadly (hirth2023fullcopperresistance pages 16-18, andrei2020cuhomeostasisin pages 16-19, hyre2021copperhomeostaticmechanisms pages 2-4) | high | <a href="https://doi.org/10.1128/aem.00567-23" rel="nofollow noreferrer">10.1128/aem.00567-23</a> |
+| CueO/PcoA/CopA multicopper oxidase | oxidizes | periplasmic Cu(I) to Cu(II) | Enterobacteria and *C. metallidurans*; oxygen-dependent periplasmic detoxification (hirth2023fullcopperresistance pages 16-18, chaturvedi2014pathogenicadaptationsto pages 6-7, giachino2020coppertolerancein pages 3-5, andrei2020cuhomeostasisin pages 21-23) | high | <a href="https://doi.org/10.1128/aem.00567-23" rel="nofollow noreferrer">10.1128/aem.00567-23</a> |
+| CusS/CusR two-component system | activates transcription of | cusCFBA | *Escherichia coli*; periplasmic copper sensing, strongest under anaerobic conditions (rismondo2023thesensoryhistidine pages 8-10, rismondo2023thesensoryhistidine pages 2-5) | high | <a href="https://doi.org/10.1128/spectrum.00291-23" rel="nofollow noreferrer">10.1128/spectrum.00291-23</a> |
+| CusCFBA/CusCBA efflux complex | exports | periplasmic Cu(I) to the extracellular space | *E. coli* and *C. metallidurans*; especially important when oxygen is limiting (rismondo2023thesensoryhistidine pages 1-2, andrei2020cuhomeostasisin pages 19-21, hirth2023fullcopperresistance pages 16-18) | high | <a href="https://doi.org/10.1128/spectrum.00291-23" rel="nofollow noreferrer">10.1128/spectrum.00291-23</a> |
+| Glutathione (via GshA) | cooperates with | Cop/Cus/Cup copper-defense systems | *C. metallidurans*; deletion analysis showed GSH amplifies resistance but is insufficient alone (hirth2023fullcopperresistance pages 1-3, hirth2023fullcopperresistance pages 7-9, hirth2023fullcopperresistance pages 11-12) | high | <a href="https://doi.org/10.1128/aem.00567-23" rel="nofollow noreferrer">10.1128/aem.00567-23</a> |
+| Extracellular polymeric substances (EPS) | sequester/adsorb | copper | Deep-sea vent isolates; Cu induced EPS and adsorption of ~40–50 mg·g−1 Cu (yu2024isolationofhighly pages 4-6, yu2024isolationofhighly pages 1-2, yu2024isolationofhighly pages 2-3) | medium | <a href="https://doi.org/10.3389/fmicb.2024.1390451" rel="nofollow noreferrer">10.3389/fmicb.2024.1390451</a> |
+| CopA/CupA-mediated copper export | decreases | intracellular copper accumulation | *Haemophilus influenzae* and *C. metallidurans*; ΔcopZA accumulated 97% more Cu, Cup reduced accumulation at high Cu (hirth2023fullcopperresistance pages 16-18, hirth2023fullcopperresistance pages 11-12, wong2023coppereffluxsystem pages 10-12) | high | <a href="https://doi.org/10.1128/iai.00091-23" rel="nofollow noreferrer">10.1128/iai.00091-23</a> |
+| Reduced intracellular/periplasmic copper burden | enables | growth/survival at elevated copper | Broad bacterial trait; strongest mutant IC50/survival evidence in *C. metallidurans* and hospital-adapted *P. aeruginosa* (hirth2023fullcopperresistance pages 16-18, hirth2023fullcopperresistance pages 4-6, virieuxpetit2022fromcoppertolerance pages 8-9) | high | <a href="https://doi.org/10.1128/aem.00567-23" rel="nofollow noreferrer">10.1128/aem.00567-23</a> |
+| copZA copper efflux locus | promotes | lung infection fitness under host copper stress | Nontypeable *Haemophilus influenzae*; copA mutant ~4-fold and copZA mutant ~20-fold underrepresented in murine lung infection (wong2023coppereffluxsystem pages 10-12) | high | <a href="https://doi.org/10.1128/iai.00091-23" rel="nofollow noreferrer">10.1128/iai.00091-23</a> |
 
 
 *Table: This table lists the strongest candidate causal triples for TraitMech curation of microbial copper tolerance, prioritizing experimentally supported sensing, efflux, oxidation, sequestration, and fitness relationships. It is useful as a compact starting set for graph curation while preserving evidence strength and assay context.*
@@ -958,12 +958,14 @@ function renderPathograph(containerId, data) {
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
       <a href="../../data/traits.json">traits.json</a> ·
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+      <a href="../../schema.html">LinkML schema</a>
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">YAML</a>)
     </div>
-    <div class="fam">
-      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
-      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
-      third-party source terms apply
+    <div class="fam license">
+      Project data: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-DATA">CC BY 4.0</a>.
+      Code: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>.
+      Third-party source material keeps its own terms
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE">licence scope</a>).
     </div>
     <div>
       Record as of 2026-10-22 01:35 UTC

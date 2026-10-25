@@ -18,7 +18,7 @@
       <a href="../../umap.html">Embedding space</a>
       <a href="../../graph.html">Graph layout</a>
       <a href="../../data/traits.json">Data JSON</a>
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
+      <a href="../../schema.html">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -99,7 +99,7 @@
             <a href="http://purl.obolibrary.org/obo/ENVO_01000739" rel="nofollow noreferrer"><code>ENVO:01000739</code></a>
             <span class="edge-predicate">causes</span>
             <strong>habitat association</strong>
-            <code>traitmech:000047</code>
+            <a href="https://github.com/CultureBotAI/TraitMech/blob/main/data/traits/ecology/habitat_association.yaml" rel="nofollow noreferrer"><code>traitmech:000047</code></a>
             <a href="https://w3id.org/biolink/vocab/causes" rel="nofollow noreferrer"><code>biolink:causes</code></a>
             <p>The organism&#39;s primary habitat sets its habitat-association classification.</p>
             <ul>
@@ -115,7 +115,7 @@
 
           <li id="pathograph-1-edge-2">
             <strong>habitat association</strong>
-            <code>traitmech:000047</code>
+            <a href="https://github.com/CultureBotAI/TraitMech/blob/main/data/traits/ecology/habitat_association.yaml" rel="nofollow noreferrer"><code>traitmech:000047</code></a>
             <span class="edge-predicate">associated with</span>
             <strong>biogeographic community structure</strong>
 
@@ -307,7 +307,7 @@
       <h2>Synonyms (1)</h2>
       <ul class="synonyms">
 
-        <li>niche association <span class="meta">RELATED_SYNONYM · DOI:10.1038/nrmicro1341</span></li>
+        <li>niche association <span class="meta">RELATED_SYNONYM · <a href="https://doi.org/10.1038/nrmicro1341" rel="nofollow noreferrer"><code>DOI:10.1038/nrmicro1341</code></a></span></li>
 
       </ul>
     </div>
@@ -323,7 +323,7 @@
         via <em>parent_proxy</em>.</p>
       <ul class="kgm-nodes">
 
-        <li><code>METPO:1000059</code> <span class="dim-preview">[-2.682, -2.070, -3.656, -0.652, …]</span></li>
+        <li><a href="../../traits/upper/phenotype.html">phenotype <code>METPO:1000059</code></a> <span class="dim-preview">[-2.682, -2.070, -3.656, -0.652, …]</span></li>
 
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
@@ -542,13 +542,13 @@ The 2024 expert perspective identifies pH, salinity, oxygen, temperature, moistu
         <li>
           <time>2026-08-31T04:43:24Z</time> ·
           <strong>ADD_CANONICAL_EXAMPLES</strong> · codex
-          <p class="changes">Resolved issue #444 after the #591 source/bin policy with 1 direct source-backed canonical example(s): Candidatus Pelagibacter ubique HTCC1062 (NCBITaxon:335992; PMID:16109880). The note retains the measured value or scopes broad-class examples to the cited branch; no paid research was used.</p>
+          <p class="changes">Resolved issue #444 after the #591 source/bin policy with 1 direct source-backed canonical example(s): Candidatus Pelagibacter ubique HTCC1062 (NCBITaxon:335992; <a href="https://pubmed.ncbi.nlm.nih.gov/16109880/" rel="nofollow noreferrer">PMID:16109880</a>). The note retains the measured value or scopes broad-class examples to the cited branch; no paid research was used.</p>
         </li>
 
         <li>
           <time>2026-10-25T12:55:00Z</time> ·
           <strong>ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE</strong> · claude
-          <p class="changes">Added verified verbatim snippet from DOI:10.1038/nrmicro1341 (already present on child records free_living.yaml evidence[0] and soil_dwelling.yaml evidence[1]) to record-level evidence[0] to match definition_source (Cycle 4 Stage 5 remediation of F-C4S4-DEF-SRC-001 in group G-C4S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).</p>
+          <p class="changes">Added verified verbatim snippet from <a href="https://doi.org/10.1038/nrmicro1341" rel="nofollow noreferrer">DOI:10.1038/nrmicro1341</a> (already present on child records free_living.yaml evidence[0] and soil_dwelling.yaml evidence[1]) to record-level evidence[0] to match definition_source (Cycle 4 Stage 5 remediation of F-C4S4-DEF-SRC-001 in group G-C4S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).</p>
         </li>
 
       </ol>
@@ -945,12 +945,14 @@ function renderPathograph(containerId, data) {
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
       <a href="../../data/traits.json">traits.json</a> ·
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+      <a href="../../schema.html">LinkML schema</a>
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">YAML</a>)
     </div>
-    <div class="fam">
-      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
-      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
-      third-party source terms apply
+    <div class="fam license">
+      Project data: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-DATA">CC BY 4.0</a>.
+      Code: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>.
+      Third-party source material keeps its own terms
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE">licence scope</a>).
     </div>
     <div>
       Record as of 2026-10-25 12:55 UTC

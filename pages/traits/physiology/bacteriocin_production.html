@@ -18,7 +18,7 @@
       <a href="../../umap.html">Embedding space</a>
       <a href="../../graph.html">Graph layout</a>
       <a href="../../data/traits.json">Data JSON</a>
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
+      <a href="../../schema.html">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -82,7 +82,7 @@
       <h2>Ribosomal bacteriocin peptide production and antibacterial defense</h2>
       <p class="meta">Evidence-backed physiological mechanism linking ribosomally synthesized bacteriocin peptides to the bacteriocin production trait and microbial defense against competing bacteria.</p>
 
-      <p class="graph-scope"><code>MECHANISTIC</code> · Peptide-anchored mechanism backed by DOI:10.3389/fmicb.2016.00461 and DOI:10.1146/annurev.micro.56.012302.161024, with reviewed Lactococcus lactis subsp. lactis lantibiotic nisin-A (UniProtKB:P13068) curated on the InterPro:IPR006079 bacteriocin peptide node.</p>
+      <p class="graph-scope"><code>MECHANISTIC</code> · Peptide-anchored mechanism backed by <a href="https://doi.org/10.3389/fmicb.2016.00461" rel="nofollow noreferrer">DOI:10.3389/fmicb.2016.00461</a> and <a href="https://doi.org/10.1146/annurev.micro.56.012302.161024" rel="nofollow noreferrer">DOI:10.1146/annurev.micro.56.012302.161024</a>, with reviewed Lactococcus lactis subsp. lactis lantibiotic nisin-A (UniProtKB:P13068) curated on the InterPro:IPR006079 bacteriocin peptide node.</p>
 
 
       <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
@@ -105,7 +105,7 @@
             <a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR006079/" rel="nofollow noreferrer"><code>InterPro:IPR006079</code></a>
             <span class="edge-predicate">confers</span>
             <strong>bacteriocin production</strong>
-            <code>traitmech:000183</code>
+            <a href="https://github.com/CultureBotAI/TraitMech/blob/main/data/traits/physiology/bacteriocin_production.yaml" rel="nofollow noreferrer"><code>traitmech:000183</code></a>
             <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>Ribosomally synthesized antimicrobial bacteriocin peptides confer the bacteriocin production trait.</p>
             <ul>
@@ -161,8 +161,8 @@
                 </td>
                 <td>
 
-                  <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1360" rel="nofollow noreferrer">Lactococcus lactis subsp. lactis</a>
-                  <br><code>NCBITaxon:1360</code>
+                  <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1360" rel="nofollow noreferrer">Lactococcus lactis subsp. lactis
+                  <br><code>NCBITaxon:1360</code></a>
                 </td>
                 <td>
                   <code>REVIEWED</code><br>
@@ -242,7 +242,7 @@
         via <em>parent_proxy</em>.</p>
       <ul class="kgm-nodes">
 
-        <li><code>METPO:1000059</code> <span class="dim-preview">[-2.682, -2.070, -3.656, -0.652, …]</span></li>
+        <li><a href="../../traits/upper/phenotype.html">phenotype <code>METPO:1000059</code></a> <span class="dim-preview">[-2.682, -2.070, -3.656, -0.652, …]</span></li>
 
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
@@ -765,12 +765,14 @@ function renderPathograph(containerId, data) {
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
       <a href="../../data/traits.json">traits.json</a> ·
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+      <a href="../../schema.html">LinkML schema</a>
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">YAML</a>)
     </div>
-    <div class="fam">
-      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
-      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
-      third-party source terms apply
+    <div class="fam license">
+      Project data: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-DATA">CC BY 4.0</a>.
+      Code: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>.
+      Third-party source material keeps its own terms
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE">licence scope</a>).
     </div>
     <div>
       Record as of 2026-10-21 21:12 UTC

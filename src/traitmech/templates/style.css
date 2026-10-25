@@ -361,7 +361,8 @@ table.trait-list tr:hover { background: var(--accent-soft); }
 .protein-example-table-wrap,
 .detail-table-scroll { max-width: 100%; overflow-x: auto; overflow-wrap: normal; }
 .protein-example-table-wrap:focus-visible,
-.detail-table-scroll:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.detail-table-scroll:focus-visible,
+.data-table-scroll:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
 .protein-example-table {
   border-collapse: collapse;
   font-size: 0.8rem;
@@ -610,6 +611,11 @@ label.facet-opt .cnt {
   padding: 1rem;
   margin: 0;
 }
+/* Stacked above the content on a narrow screen, a sticky sidebar stayed pinned
+   over the catalogue table or map plot it filters while the reader scrolled. */
+@media (max-width: 860px) {
+  .facet-sidebar { position: static; max-height: none; }
+}
 .facet-sidebar h2, .facet-sidebar h3 {
   font-size: 0.78rem;
   text-transform: uppercase;
@@ -685,3 +691,19 @@ label.facet-opt .cnt {
 /* Category names and provenance remain readable on narrow screens. */
 h1 { overflow-wrap: anywhere; }
 .pathograph-status { padding: .75rem; color: var(--muted); }
+
+/* Generated schema reference (pages/schema.html). Built from existing tokens so
+   both themes are inherited; the slot tables keep their columns and scroll
+   inside their own region on a narrow screen. */
+.schema-contents, .schema-class, .schema-enum { margin: 1rem 0; overflow-wrap: anywhere; }
+.schema-class h3, .schema-enum h3 { margin: 0 0 0.4rem; }
+.schema-table { min-width: 720px; }
+.schema-table td:last-child { min-width: 20rem; }
+.schema-table caption { text-align: left; padding: 0 0 0.4rem; }
+/* Slot names are case-sensitive identifiers: undo the uppercase column-header
+   treatment table.trait-list gives every th. */
+.schema-table th[scope="row"] { font-weight: 400; white-space: nowrap; text-transform: none;
+  letter-spacing: normal; background: none; color: var(--fg); font-size: inherit; }
+.schema-table th[scope="row"], .schema-table td { vertical-align: top; }
+.schema-values dt { margin-top: 0.5rem; }
+.schema-values dd { margin-left: 1rem; color: var(--muted); }

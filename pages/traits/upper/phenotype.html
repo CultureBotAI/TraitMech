@@ -18,7 +18,7 @@
       <a href="../../umap.html">Embedding space</a>
       <a href="../../graph.html">Graph layout</a>
       <a href="../../data/traits.json">Data JSON</a>
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
+      <a href="../../schema.html">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -99,8 +99,8 @@
             <a href="https://w3id.org/metpo/1000059" rel="nofollow noreferrer"><code>METPO:1000059</code></a>
             <span class="edge-predicate">is a</span>
             <strong>quality</strong>
-            <a href="https://w3id.org/metpo/1000188" rel="nofollow noreferrer"><code>METPO:1000188</code></a>
-            <code>rdfs:subClassOf</code>
+            <a href="../../traits/upper/quality.html"><code>METPO:1000188</code></a>
+            <a href="http://www.w3.org/2000/01/rdf-schema#subClassOf" rel="nofollow noreferrer"><code>rdfs:subClassOf</code></a>
             <p>Phenotypes are modeled as qualities or quality-bearing descriptions of entities.</p>
             <ul>
 
@@ -119,7 +119,7 @@
             <span class="edge-predicate">specializes</span>
             <strong>phenotype</strong>
             <a href="https://w3id.org/metpo/1000059" rel="nofollow noreferrer"><code>METPO:1000059</code></a>
-            <code>rdfs:subClassOf</code>
+            <a href="http://www.w3.org/2000/01/rdf-schema#subClassOf" rel="nofollow noreferrer"><code>rdfs:subClassOf</code></a>
             <p>Morphology classes are non-environmental child phenotypes in TraitMech.</p>
             <ul>
 
@@ -134,11 +134,11 @@
 
           <li id="pathograph-1-edge-3">
             <strong>trophic type</strong>
-            <a href="https://w3id.org/metpo/1000631" rel="nofollow noreferrer"><code>METPO:1000631</code></a>
+            <a href="../../traits/physiology/trophic_type.html"><code>METPO:1000631</code></a>
             <span class="edge-predicate">specializes</span>
             <strong>phenotype</strong>
             <a href="https://w3id.org/metpo/1000059" rel="nofollow noreferrer"><code>METPO:1000059</code></a>
-            <code>rdfs:subClassOf</code>
+            <a href="http://www.w3.org/2000/01/rdf-schema#subClassOf" rel="nofollow noreferrer"><code>rdfs:subClassOf</code></a>
             <p>Trophic type is retained as a non-environmental physiology child under phenotype.</p>
             <ul>
 
@@ -153,11 +153,11 @@
 
           <li id="pathograph-1-edge-4">
             <strong>pathogenic to host</strong>
-            <a href="https://w3id.org/metpo/1004000" rel="nofollow noreferrer"><code>METPO:1004000</code></a>
+            <a href="../../traits/ecology/pathogenic_to_host.html"><code>METPO:1004000</code></a>
             <span class="edge-predicate">specializes</span>
             <strong>phenotype</strong>
             <a href="https://w3id.org/metpo/1000059" rel="nofollow noreferrer"><code>METPO:1000059</code></a>
-            <code>rdfs:subClassOf</code>
+            <a href="http://www.w3.org/2000/01/rdf-schema#subClassOf" rel="nofollow noreferrer"><code>rdfs:subClassOf</code></a>
             <p>Pathogenic-to-host is retained as a non-environmental ecology child under phenotype.</p>
             <ul>
 
@@ -646,7 +646,7 @@
         via <em>direct_metpo</em>.</p>
       <ul class="kgm-nodes">
 
-        <li><code>METPO:1000059</code> <span class="dim-preview">[-2.682, -2.070, -3.656, -0.652, …]</span></li>
+        <li><a href="https://w3id.org/metpo/1000059" rel="nofollow noreferrer">phenotype <code>METPO:1000059</code></a> <span class="dim-preview">[-2.682, -2.070, -3.656, -0.652, …]</span></li>
 
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
@@ -1225,12 +1225,14 @@ function renderPathograph(containerId, data) {
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
       <a href="../../data/traits.json">traits.json</a> ·
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+      <a href="../../schema.html">LinkML schema</a>
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">YAML</a>)
     </div>
-    <div class="fam">
-      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
-      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
-      third-party source terms apply
+    <div class="fam license">
+      Project data: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-DATA">CC BY 4.0</a>.
+      Code: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>.
+      Third-party source material keeps its own terms
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE">licence scope</a>).
     </div>
     <div>
       Record as of 2026-08-26 03:23 UTC

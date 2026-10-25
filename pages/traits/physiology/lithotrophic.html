@@ -18,7 +18,7 @@
       <a href="../../umap.html">Embedding space</a>
       <a href="../../graph.html">Graph layout</a>
       <a href="../../data/traits.json">Data JSON</a>
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
+      <a href="../../schema.html">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
@@ -119,7 +119,7 @@
             <span class="edge-predicate">example of</span>
             <strong>inorganic electron donor</strong>
             <a href="https://w3id.org/metpo/1007502" rel="nofollow noreferrer"><code>METPO:1007502</code></a>
-            <code>rdfs:subClassOf</code>
+            <a href="http://www.w3.org/2000/01/rdf-schema#subClassOf" rel="nofollow noreferrer"><code>rdfs:subClassOf</code></a>
             <p>Molecular hydrogen is a representative inorganic electron donor.</p>
             <ul>
 
@@ -138,7 +138,7 @@
             <span class="edge-predicate">example of</span>
             <strong>inorganic electron donor</strong>
             <a href="https://w3id.org/metpo/1007502" rel="nofollow noreferrer"><code>METPO:1007502</code></a>
-            <code>rdfs:subClassOf</code>
+            <a href="http://www.w3.org/2000/01/rdf-schema#subClassOf" rel="nofollow noreferrer"><code>rdfs:subClassOf</code></a>
             <p>Reduced sulfur compounds are representative lithotrophic electron donors.</p>
             <ul>
 
@@ -459,8 +459,8 @@
                 </td>
                 <td>
 
-                  <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=228410" rel="nofollow noreferrer">Nitrosomonas europaea ATCC 19718</a>
-                  <br><code>NCBITaxon:228410</code>
+                  <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=228410" rel="nofollow noreferrer">Nitrosomonas europaea ATCC 19718
+                  <br><code>NCBITaxon:228410</code></a>
                 </td>
                 <td>
                   <code>REVIEWED</code><br>
@@ -489,8 +489,8 @@
                 </td>
                 <td>
 
-                  <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=228410" rel="nofollow noreferrer">Nitrosomonas europaea ATCC 19718</a>
-                  <br><code>NCBITaxon:228410</code>
+                  <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=228410" rel="nofollow noreferrer">Nitrosomonas europaea ATCC 19718
+                  <br><code>NCBITaxon:228410</code></a>
                 </td>
                 <td>
                   <code>REVIEWED</code><br>
@@ -556,9 +556,9 @@
       <h2>Synonyms (2)</h2>
       <ul class="synonyms">
 
-        <li>TT_lithotroph <span class="meta">RELATED_SYNONYM · metpo.owl</span></li>
+        <li>TT_lithotroph <span class="meta">RELATED_SYNONYM · <code>metpo.owl</code></span></li>
 
-        <li>lithotroph <span class="meta">RELATED_SYNONYM · metpo.owl</span></li>
+        <li>lithotroph <span class="meta">RELATED_SYNONYM · <code>metpo.owl</code></span></li>
 
       </ul>
     </div>
@@ -574,7 +574,7 @@
         via <em>direct_metpo</em>.</p>
       <ul class="kgm-nodes">
 
-        <li><code>METPO:1000649</code> <span class="dim-preview">[-3.967, -1.575, -4.683, +0.255, …]</span></li>
+        <li><a href="https://w3id.org/metpo/1000649" rel="nofollow noreferrer">lithotrophic <code>METPO:1000649</code></a> <span class="dim-preview">[-3.967, -1.575, -4.683, +0.255, …]</span></li>
 
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
@@ -895,7 +895,7 @@ Additional sulfur nodes—HS⁻, sulfite, sulfate, tetrathionate, and polysulfid
         <li>
           <time>2026-10-22T01:35:00Z</time> ·
           <strong>CURATE_PROTEIN_TAXON_EXAMPLE</strong> · claude
-          <p class="changes">Added reviewed N. europaea ATCC 19718 HAO protein_example UniProtKB:Q50925 (hao1, v155) on hydroxylamine_oxidoreductase (DOI:10.1128/jb.185.9.2759-2773.2003), updated scope_notes, and refreshed UniProtKB:Q04507 entry_version 126 -&gt; 127 on ammonia_monooxygenase.</p>
+          <p class="changes">Added reviewed N. europaea ATCC 19718 HAO protein_example UniProtKB:Q50925 (hao1, v155) on hydroxylamine_oxidoreductase (<a href="https://doi.org/10.1128/jb.185.9.2759-2773.2003" rel="nofollow noreferrer">DOI:10.1128/jb.185.9.2759-2773.2003</a>), updated scope_notes, and refreshed UniProtKB:Q04507 entry_version 126 -&gt; 127 on ammonia_monooxygenase.</p>
         </li>
 
       </ol>
@@ -1301,12 +1301,14 @@ function renderPathograph(containerId, data) {
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
       <a href="../../data/traits.json">traits.json</a> ·
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+      <a href="../../schema.html">LinkML schema</a>
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">YAML</a>)
     </div>
-    <div class="fam">
-      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
-      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
-      third-party source terms apply
+    <div class="fam license">
+      Project data: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-DATA">CC BY 4.0</a>.
+      Code: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>.
+      Third-party source material keeps its own terms
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE">licence scope</a>).
     </div>
     <div>
       Record as of 2026-10-22 01:35 UTC
