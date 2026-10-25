@@ -21,19 +21,19 @@ previous_evidence:
   sha256: 0862f5291f00d5bcff0e41ddc71aca610a814da19509845dad736867f259df19
 artifacts:
 - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000005/stage-04/revision-0001/review_report.md
-  sha256: d5798e01c501ecf3c814ed3564e3b3cf5cd267fc70f613c7c9db0cefed1c5d23
+  sha256: ebfa22aa687e95f82b9f528d7f554790396109abdde5896e6f5c323f658003ce
   kind: review_report
 - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000005/stage-04/revision-0001/review_findings.tsv
-  sha256: 867610d92dada1d8277e0f34c6b2c2fc3ce8f6ffe60681171fc0f6777d3611fb
+  sha256: b417752bdbdce010e2b04b4f8ac1a98766151595bbe09d1dd93bc10e31ece693
   kind: review_findings
 - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000005/stage-04/revision-0001/frozen_inventory_coverage.json
   sha256: e31cba895a7b93246b05dbcf934177e9f10af3c1d5e788b454dac57e1a491474
   kind: supporting
 - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000005/stage-04/revision-0001/structured_review.yaml
-  sha256: 13eef7eaa63a51ba64b4fdbfce0bbff774c0f8405b62ed9d6ddec93668071f7a
+  sha256: 0078557515e4c7a3dfd57aed8047e5285cb30f86c6d56b4a7548a6e3a785eda9
   kind: supporting
 - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000005/stage-04/revision-0001/structured_review.md
-  sha256: e149eea6d1fd9ee97a2be86f4b9ddfaab0e594107a2fecd138eb826d1498251b
+  sha256: 420c3ede9207d88e079dd290d584b29dd0de4efc4bbb2cc2f2820d8b15e25a6a
   kind: supporting
 findings:
 - finding_id: F-C5S4-DEF-SRC-001
@@ -63,59 +63,59 @@ findings:
   summary: 'data/traits/genomics/genome_streamlining.yaml (traitmech:000099) declares definition_source:
     DOI:10.1038/ismej.2014.60 and cites DOI:10.1038/ismej.2014.60 in record-level evidence[0].snippet
     without a non-elliptical verbatim snippet (UNQUOTED_DEFINITION_SOURCE), even though data/traits/physiology/oligotrophic.yaml
-    (METPO:1000675) causal_graphs[0].edges[1].evidence[0] (streamlined_genome -> efficient_nutrient_use)
+    (METPO:1000654) causal_graphs[0].edges[2].evidence[0] (streamlined_genome -> efficient_nutrient_use)
     already carries the verified verbatim snippet ''minimizes resources required for replication'' from
     DOI:10.1038/ismej.2014.60.'
   disposition: 'Carry forward to Cycle 5 Stage 5 (resolve_review_findings) in group G-C5S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
     populate verified verbatim snippet for DOI:10.1038/ismej.2014.60 in data/traits/genomics/genome_streamlining.yaml
-    from data/traits/physiology/oligotrophic.yaml (METPO:1000675) causal_graphs[0].edges[1].evidence[0]
+    from data/traits/physiology/oligotrophic.yaml (METPO:1000654) causal_graphs[0].edges[2].evidence[0]
     (streamlined_genome -> efficient_nutrient_use).'
 - finding_id: F-C5S4-DEF-SRC-004
   status: open
   summary: 'data/traits/metabolism/biopolymer_degradation.yaml (traitmech:000110) declares definition_source:
     DOI:10.1016/j.cbpa.2015.10.018 and cites DOI:10.1016/j.cbpa.2015.10.018 in record-level evidence[0].snippet
     without a non-elliptical verbatim snippet (UNQUOTED_DEFINITION_SOURCE), even though data/traits/ecology/saprotrophy.yaml
-    (traitmech:000042) causal_graphs[0].edges[2].evidence[0] (cazymes -> hemicellulose) already carries
+    (traitmech:000055) causal_graphs[0].edges[5].evidence[0] (cazymes -> hemicellulose) already carries
     the verified verbatim snippet ''The enzymatic degradation of cellulose and hemicellulose is accomplished
     in Nature via the collective action of multiple carbohydrate-active enzymes'' from DOI:10.1016/j.cbpa.2015.10.018.'
   disposition: 'Carry forward to Cycle 5 Stage 5 (resolve_review_findings) in group G-C5S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
     populate verified verbatim snippet for DOI:10.1016/j.cbpa.2015.10.018 in data/traits/metabolism/biopolymer_degradation.yaml
-    from data/traits/ecology/saprotrophy.yaml (traitmech:000042) causal_graphs[0].edges[2].evidence[0]
+    from data/traits/ecology/saprotrophy.yaml (traitmech:000055) causal_graphs[0].edges[5].evidence[0]
     (cazymes -> hemicellulose).'
 - finding_id: F-C5S4-DEF-SRC-005
   status: open
   summary: 'data/traits/metabolism/denitrification.yaml (traitmech:000104) declares definition_source:
     DOI:10.1128/mmbr.61.4.533-616.1997 and cites DOI:10.1128/mmbr.61.4.533-616.1997 in record-level evidence[0].snippet
     without a non-elliptical verbatim snippet (UNQUOTED_DEFINITION_SOURCE), even though ancestor data/traits/metabolism/nitrogen_respiration.yaml
-    (traitmech:000126) evidence[0] and data/traits/metabolism/anaerobic_respiration.yaml (traitmech:000013)
+    (traitmech:000121) evidence[0] and data/traits/metabolism/anaerobic_respiration.yaml (METPO:1000802)
     evidence[0] already carries the verified verbatim snippet ''N oxides as terminal electron acceptors''
     from DOI:10.1128/mmbr.61.4.533-616.1997.'
   disposition: 'Carry forward to Cycle 5 Stage 5 (resolve_review_findings) in group G-C5S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
     populate verified verbatim snippet for DOI:10.1128/mmbr.61.4.533-616.1997 in data/traits/metabolism/denitrification.yaml
-    from ancestor data/traits/metabolism/nitrogen_respiration.yaml (traitmech:000126) evidence[0] and
-    data/traits/metabolism/anaerobic_respiration.yaml (traitmech:000013) evidence[0].'
+    from ancestor data/traits/metabolism/nitrogen_respiration.yaml (traitmech:000121) evidence[0] and
+    data/traits/metabolism/anaerobic_respiration.yaml (METPO:1000802) evidence[0].'
 - finding_id: F-C5S4-DEF-SRC-006
   status: open
   summary: 'data/traits/metabolism/sulfur_oxidation.yaml (traitmech:000106) declares definition_source:
     DOI:10.1111/j.1574-6976.2009.00187.x and cites DOI:10.1111/j.1574-6976.2009.00187.x in record-level
     evidence[0].snippet without a non-elliptical verbatim snippet (UNQUOTED_DEFINITION_SOURCE), even though
-    data/traits/physiology/lithotrophic.yaml (METPO:1000629) causal_graphs[0].edges[0].evidence[0] (reduced_sulfur_compound
+    data/traits/physiology/lithotrophic.yaml (METPO:1000649) causal_graphs[0].edges[2].evidence[0] (reduced_sulfur_compound
     -> inorganic_electron_donor) already carries the verified verbatim snippet ''lithotrophic sulfur oxidation''
     from DOI:10.1111/j.1574-6976.2009.00187.x.'
   disposition: 'Carry forward to Cycle 5 Stage 5 (resolve_review_findings) in group G-C5S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
     populate verified verbatim snippet for DOI:10.1111/j.1574-6976.2009.00187.x in data/traits/metabolism/sulfur_oxidation.yaml
-    from data/traits/physiology/lithotrophic.yaml (METPO:1000629) causal_graphs[0].edges[0].evidence[0]
+    from data/traits/physiology/lithotrophic.yaml (METPO:1000649) causal_graphs[0].edges[2].evidence[0]
     (reduced_sulfur_compound -> inorganic_electron_donor).'
 - finding_id: F-C5S4-DEF-SRC-007
   status: open
   summary: 'data/traits/physiology/catalase_activity.yaml (traitmech:000075) declares definition_source:
     DOI:10.1007/s00018-003-3206-5 and cites DOI:10.1007/s00018-003-3206-5 in record-level evidence[0].snippet
     without a non-elliptical verbatim snippet (UNQUOTED_DEFINITION_SOURCE), even though data/traits/physiology/oxidative_stress_response.yaml
-    (traitmech:000037) evidence[1] already carries the verified verbatim snippet ''hydrogen peroxide to
+    (traitmech:000079) evidence[1] already carries the verified verbatim snippet ''hydrogen peroxide to
     water and molecular oxygen, serving to protect cells'' from DOI:10.1007/s00018-003-3206-5.'
   disposition: 'Carry forward to Cycle 5 Stage 5 (resolve_review_findings) in group G-C5S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
     populate verified verbatim snippet for DOI:10.1007/s00018-003-3206-5 in data/traits/physiology/catalase_activity.yaml
-    from data/traits/physiology/oxidative_stress_response.yaml (traitmech:000037) evidence[1].'
+    from data/traits/physiology/oxidative_stress_response.yaml (traitmech:000079) evidence[1].'
 - finding_id: F-COHORT-CAUSAL-GRAPHS-SOURCE-LIMITED-005
   status: deferred
   carried_from: F-COHORT-CAUSAL-GRAPHS-SOURCE-LIMITED-005

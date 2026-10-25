@@ -1204,35 +1204,35 @@ minor / open / confirmed; issue key: gao-her-sir-system-definition-source-curie-
 
 data/traits/genomics/gao_her_sir_system.yaml (traitmech:000362) declares definition_source: DOI:10.1126/science.aba0372 (Gao et al. 2020, Science) while record-level evidence[0] cites its PMID alias PMID:32855333 rather than DOI:10.1126/science.aba0372 (flagged by audit_evidence_snippets.py MISSING_DEFINITION_SOURCE_EVIDENCE because parent gao_her_system.yaml cites DOI:10.1126/science.aba0372 directly with the identical verbatim snippet 'By systematic defense gene prediction and heterologous reconstitution, here we discover 29 widespread antiviral gene cassettes, collectively present in 32% of all sequenced bacterial and archaeal genomes, that mediate protection against specific bacteriophages.').
 
-### F-C5S4-DEF-SRC-003: genome_streamlining.yaml cites definition_source DOI:10.1038/ismej.2014.60 in record-level evidence without a non-elliptical verbatim snippet despite verified quote in data/traits/physiology/oligotrophic.yaml (METPO:1000675) causal_graphs[0].edges[1].evidence[0] (streamlined_genome -&gt; efficient_nutrient_use)
+### F-C5S4-DEF-SRC-003: genome_streamlining.yaml cites definition_source DOI:10.1038/ismej.2014.60 in record-level evidence without a non-elliptical verbatim snippet despite verified quote in data/traits/physiology/oligotrophic.yaml (METPO:1000654) causal_graphs[0].edges[2].evidence[0] (streamlined_genome -&gt; efficient_nutrient_use)
 
 minor / open / confirmed; issue key: genome-streamlining-definition-source-snippet.
 
-data/traits/genomics/genome_streamlining.yaml (traitmech:000099) declares definition_source: DOI:10.1038/ismej.2014.60 and cites DOI:10.1038/ismej.2014.60 in record-level evidence[0].snippet without a non-elliptical verbatim snippet (UNQUOTED_DEFINITION_SOURCE), even though data/traits/physiology/oligotrophic.yaml (METPO:1000675) causal_graphs[0].edges[1].evidence[0] (streamlined_genome -&gt; efficient_nutrient_use) already carries the verified verbatim snippet 'minimizes resources required for replication' from DOI:10.1038/ismej.2014.60.
+data/traits/genomics/genome_streamlining.yaml (traitmech:000099) declares definition_source: DOI:10.1038/ismej.2014.60 and cites DOI:10.1038/ismej.2014.60 in record-level evidence[0].snippet without a non-elliptical verbatim snippet (UNQUOTED_DEFINITION_SOURCE), even though data/traits/physiology/oligotrophic.yaml (METPO:1000654) causal_graphs[0].edges[2].evidence[0] (streamlined_genome -&gt; efficient_nutrient_use) already carries the verified verbatim snippet 'minimizes resources required for replication' from DOI:10.1038/ismej.2014.60.
 
-### F-C5S4-DEF-SRC-004: biopolymer_degradation.yaml cites definition_source DOI:10.1016/j.cbpa.2015.10.018 in record-level evidence without a non-elliptical verbatim snippet despite verified quote in data/traits/ecology/saprotrophy.yaml (traitmech:000042) causal_graphs[0].edges[2].evidence[0] (cazymes -&gt; hemicellulose)
+### F-C5S4-DEF-SRC-004: biopolymer_degradation.yaml cites definition_source DOI:10.1016/j.cbpa.2015.10.018 in record-level evidence without a non-elliptical verbatim snippet despite verified quote in data/traits/ecology/saprotrophy.yaml (traitmech:000055) causal_graphs[0].edges[5].evidence[0] (cazymes -&gt; hemicellulose)
 
 minor / open / confirmed; issue key: biopolymer-degradation-definition-source-snippet.
 
-data/traits/metabolism/biopolymer_degradation.yaml (traitmech:000110) declares definition_source: DOI:10.1016/j.cbpa.2015.10.018 and cites DOI:10.1016/j.cbpa.2015.10.018 in record-level evidence[0].snippet without a non-elliptical verbatim snippet (UNQUOTED_DEFINITION_SOURCE), even though data/traits/ecology/saprotrophy.yaml (traitmech:000042) causal_graphs[0].edges[2].evidence[0] (cazymes -&gt; hemicellulose) already carries the verified verbatim snippet 'The enzymatic degradation of cellulose and hemicellulose is accomplished in Nature via the collective action of multiple carbohydrate-active enzymes' from DOI:10.1016/j.cbpa.2015.10.018.
+data/traits/metabolism/biopolymer_degradation.yaml (traitmech:000110) declares definition_source: DOI:10.1016/j.cbpa.2015.10.018 and cites DOI:10.1016/j.cbpa.2015.10.018 in record-level evidence[0].snippet without a non-elliptical verbatim snippet (UNQUOTED_DEFINITION_SOURCE), even though data/traits/ecology/saprotrophy.yaml (traitmech:000055) causal_graphs[0].edges[5].evidence[0] (cazymes -&gt; hemicellulose) already carries the verified verbatim snippet 'The enzymatic degradation of cellulose and hemicellulose is accomplished in Nature via the collective action of multiple carbohydrate-active enzymes' from DOI:10.1016/j.cbpa.2015.10.018.
 
-### F-C5S4-DEF-SRC-005: denitrification.yaml cites definition_source DOI:10.1128/mmbr.61.4.533-616.1997 in record-level evidence without a non-elliptical verbatim snippet despite verified quote in ancestor data/traits/metabolism/nitrogen_respiration.yaml (traitmech:000126) evidence[0] and data/traits/metabolism/anaerobic_respiration.yaml (traitmech:000013) evidence[0]
+### F-C5S4-DEF-SRC-005: denitrification.yaml cites definition_source DOI:10.1128/mmbr.61.4.533-616.1997 in record-level evidence without a non-elliptical verbatim snippet despite verified quote in ancestor data/traits/metabolism/nitrogen_respiration.yaml (traitmech:000121) evidence[0] and data/traits/metabolism/anaerobic_respiration.yaml (METPO:1000802) evidence[0]
 
 minor / open / confirmed; issue key: denitrification-definition-source-snippet.
 
-data/traits/metabolism/denitrification.yaml (traitmech:000104) declares definition_source: DOI:10.1128/mmbr.61.4.533-616.1997 and cites DOI:10.1128/mmbr.61.4.533-616.1997 in record-level evidence[0].snippet without a non-elliptical verbatim snippet (UNQUOTED_DEFINITION_SOURCE), even though ancestor data/traits/metabolism/nitrogen_respiration.yaml (traitmech:000126) evidence[0] and data/traits/metabolism/anaerobic_respiration.yaml (traitmech:000013) evidence[0] already carries the verified verbatim snippet 'N oxides as terminal electron acceptors' from DOI:10.1128/mmbr.61.4.533-616.1997.
+data/traits/metabolism/denitrification.yaml (traitmech:000104) declares definition_source: DOI:10.1128/mmbr.61.4.533-616.1997 and cites DOI:10.1128/mmbr.61.4.533-616.1997 in record-level evidence[0].snippet without a non-elliptical verbatim snippet (UNQUOTED_DEFINITION_SOURCE), even though ancestor data/traits/metabolism/nitrogen_respiration.yaml (traitmech:000121) evidence[0] and data/traits/metabolism/anaerobic_respiration.yaml (METPO:1000802) evidence[0] already carries the verified verbatim snippet 'N oxides as terminal electron acceptors' from DOI:10.1128/mmbr.61.4.533-616.1997.
 
-### F-C5S4-DEF-SRC-006: sulfur_oxidation.yaml cites definition_source DOI:10.1111/j.1574-6976.2009.00187.x in record-level evidence without a non-elliptical verbatim snippet despite verified quote in data/traits/physiology/lithotrophic.yaml (METPO:1000629) causal_graphs[0].edges[0].evidence[0] (reduced_sulfur_compound -&gt; inorganic_electron_donor)
+### F-C5S4-DEF-SRC-006: sulfur_oxidation.yaml cites definition_source DOI:10.1111/j.1574-6976.2009.00187.x in record-level evidence without a non-elliptical verbatim snippet despite verified quote in data/traits/physiology/lithotrophic.yaml (METPO:1000649) causal_graphs[0].edges[2].evidence[0] (reduced_sulfur_compound -&gt; inorganic_electron_donor)
 
 minor / open / confirmed; issue key: sulfur-oxidation-definition-source-snippet.
 
-data/traits/metabolism/sulfur_oxidation.yaml (traitmech:000106) declares definition_source: DOI:10.1111/j.1574-6976.2009.00187.x and cites DOI:10.1111/j.1574-6976.2009.00187.x in record-level evidence[0].snippet without a non-elliptical verbatim snippet (UNQUOTED_DEFINITION_SOURCE), even though data/traits/physiology/lithotrophic.yaml (METPO:1000629) causal_graphs[0].edges[0].evidence[0] (reduced_sulfur_compound -&gt; inorganic_electron_donor) already carries the verified verbatim snippet 'lithotrophic sulfur oxidation' from DOI:10.1111/j.1574-6976.2009.00187.x.
+data/traits/metabolism/sulfur_oxidation.yaml (traitmech:000106) declares definition_source: DOI:10.1111/j.1574-6976.2009.00187.x and cites DOI:10.1111/j.1574-6976.2009.00187.x in record-level evidence[0].snippet without a non-elliptical verbatim snippet (UNQUOTED_DEFINITION_SOURCE), even though data/traits/physiology/lithotrophic.yaml (METPO:1000649) causal_graphs[0].edges[2].evidence[0] (reduced_sulfur_compound -&gt; inorganic_electron_donor) already carries the verified verbatim snippet 'lithotrophic sulfur oxidation' from DOI:10.1111/j.1574-6976.2009.00187.x.
 
-### F-C5S4-DEF-SRC-007: catalase_activity.yaml cites definition_source DOI:10.1007/s00018-003-3206-5 in record-level evidence without a non-elliptical verbatim snippet despite verified quote in data/traits/physiology/oxidative_stress_response.yaml (traitmech:000037) evidence[1]
+### F-C5S4-DEF-SRC-007: catalase_activity.yaml cites definition_source DOI:10.1007/s00018-003-3206-5 in record-level evidence without a non-elliptical verbatim snippet despite verified quote in data/traits/physiology/oxidative_stress_response.yaml (traitmech:000079) evidence[1]
 
 minor / open / confirmed; issue key: catalase-activity-definition-source-snippet.
 
-data/traits/physiology/catalase_activity.yaml (traitmech:000075) declares definition_source: DOI:10.1007/s00018-003-3206-5 and cites DOI:10.1007/s00018-003-3206-5 in record-level evidence[0].snippet without a non-elliptical verbatim snippet (UNQUOTED_DEFINITION_SOURCE), even though data/traits/physiology/oxidative_stress_response.yaml (traitmech:000037) evidence[1] already carries the verified verbatim snippet 'hydrogen peroxide to water and molecular oxygen, serving to protect cells' from DOI:10.1007/s00018-003-3206-5.
+data/traits/physiology/catalase_activity.yaml (traitmech:000075) declares definition_source: DOI:10.1007/s00018-003-3206-5 and cites DOI:10.1007/s00018-003-3206-5 in record-level evidence[0].snippet without a non-elliptical verbatim snippet (UNQUOTED_DEFINITION_SOURCE), even though data/traits/physiology/oxidative_stress_response.yaml (traitmech:000079) evidence[1] already carries the verified verbatim snippet 'hydrogen peroxide to water and molecular oxygen, serving to protect cells' from DOI:10.1007/s00018-003-3206-5.
 
 ### F-COHORT-CAUSAL-GRAPHS-SOURCE-LIMITED-005: 382 eligible records lack causal_graphs due to source-limited mechanism literature (360) or non-mechanistic vocabulary scope (22)
 
@@ -1292,35 +1292,35 @@ Align record-level evidence[0].reference on data/traits/genomics/gao_her_sir_sys
 
 ### ACT-C5S4-DEF-SRC-003
 
-Populate non-elliptical verbatim snippet on record-level evidence[0].snippet citing reference DOI:10.1038/ismej.2014.60 in data/traits/genomics/genome_streamlining.yaml using the verified verbatim snippet 'minimizes resources required for replication' from data/traits/physiology/oligotrophic.yaml (METPO:1000675) causal_graphs[0].edges[1].evidence[0] (streamlined_genome -&gt; efficient_nutrient_use), append a CURATE history event, and regenerate trait pages.
+Populate non-elliptical verbatim snippet on record-level evidence[0].snippet citing reference DOI:10.1038/ismej.2014.60 in data/traits/genomics/genome_streamlining.yaml using the verified verbatim snippet 'minimizes resources required for replication' from data/traits/physiology/oligotrophic.yaml (METPO:1000654) causal_graphs[0].edges[2].evidence[0] (streamlined_genome -&gt; efficient_nutrient_use), append a CURATE history event, and regenerate trait pages.
 
 - data/traits/genomics/genome_streamlining.yaml includes a verified non-elliptical verbatim snippet on record-level evidence for DOI:10.1038/ismej.2014.60.
 - uv run python scripts/validate_strict.py and uv run python scripts/audit_evidence_snippets.py pass with 0 errors.
 
 ### ACT-C5S4-DEF-SRC-004
 
-Populate non-elliptical verbatim snippet on record-level evidence[0].snippet citing reference DOI:10.1016/j.cbpa.2015.10.018 in data/traits/metabolism/biopolymer_degradation.yaml using the verified verbatim snippet 'The enzymatic degradation of cellulose and hemicellulose is accomplished in Nature via the collective action of multiple carbohydrate-active enzymes' from data/traits/ecology/saprotrophy.yaml (traitmech:000042) causal_graphs[0].edges[2].evidence[0] (cazymes -&gt; hemicellulose), append a CURATE history event, and regenerate trait pages.
+Populate non-elliptical verbatim snippet on record-level evidence[0].snippet citing reference DOI:10.1016/j.cbpa.2015.10.018 in data/traits/metabolism/biopolymer_degradation.yaml using the verified verbatim snippet 'The enzymatic degradation of cellulose and hemicellulose is accomplished in Nature via the collective action of multiple carbohydrate-active enzymes' from data/traits/ecology/saprotrophy.yaml (traitmech:000055) causal_graphs[0].edges[5].evidence[0] (cazymes -&gt; hemicellulose), append a CURATE history event, and regenerate trait pages.
 
 - data/traits/metabolism/biopolymer_degradation.yaml includes a verified non-elliptical verbatim snippet on record-level evidence for DOI:10.1016/j.cbpa.2015.10.018.
 - uv run python scripts/validate_strict.py and uv run python scripts/audit_evidence_snippets.py pass with 0 errors.
 
 ### ACT-C5S4-DEF-SRC-005
 
-Populate non-elliptical verbatim snippet on record-level evidence[0].snippet citing reference DOI:10.1128/mmbr.61.4.533-616.1997 in data/traits/metabolism/denitrification.yaml using the verified verbatim snippet 'N oxides as terminal electron acceptors' from ancestor data/traits/metabolism/nitrogen_respiration.yaml (traitmech:000126) evidence[0] and data/traits/metabolism/anaerobic_respiration.yaml (traitmech:000013) evidence[0], append a CURATE history event, and regenerate trait pages.
+Populate non-elliptical verbatim snippet on record-level evidence[0].snippet citing reference DOI:10.1128/mmbr.61.4.533-616.1997 in data/traits/metabolism/denitrification.yaml using the verified verbatim snippet 'N oxides as terminal electron acceptors' from ancestor data/traits/metabolism/nitrogen_respiration.yaml (traitmech:000121) evidence[0] and data/traits/metabolism/anaerobic_respiration.yaml (METPO:1000802) evidence[0], append a CURATE history event, and regenerate trait pages.
 
 - data/traits/metabolism/denitrification.yaml includes a verified non-elliptical verbatim snippet on record-level evidence for DOI:10.1128/mmbr.61.4.533-616.1997.
 - uv run python scripts/validate_strict.py and uv run python scripts/audit_evidence_snippets.py pass with 0 errors.
 
 ### ACT-C5S4-DEF-SRC-006
 
-Populate non-elliptical verbatim snippet on record-level evidence[0].snippet citing reference DOI:10.1111/j.1574-6976.2009.00187.x in data/traits/metabolism/sulfur_oxidation.yaml using the verified verbatim snippet 'lithotrophic sulfur oxidation' from data/traits/physiology/lithotrophic.yaml (METPO:1000629) causal_graphs[0].edges[0].evidence[0] (reduced_sulfur_compound -&gt; inorganic_electron_donor), append a CURATE history event, and regenerate trait pages.
+Populate non-elliptical verbatim snippet on record-level evidence[0].snippet citing reference DOI:10.1111/j.1574-6976.2009.00187.x in data/traits/metabolism/sulfur_oxidation.yaml using the verified verbatim snippet 'lithotrophic sulfur oxidation' from data/traits/physiology/lithotrophic.yaml (METPO:1000649) causal_graphs[0].edges[2].evidence[0] (reduced_sulfur_compound -&gt; inorganic_electron_donor), append a CURATE history event, and regenerate trait pages.
 
 - data/traits/metabolism/sulfur_oxidation.yaml includes a verified non-elliptical verbatim snippet on record-level evidence for DOI:10.1111/j.1574-6976.2009.00187.x.
 - uv run python scripts/validate_strict.py and uv run python scripts/audit_evidence_snippets.py pass with 0 errors.
 
 ### ACT-C5S4-DEF-SRC-007
 
-Populate non-elliptical verbatim snippet on record-level evidence[0].snippet citing reference DOI:10.1007/s00018-003-3206-5 in data/traits/physiology/catalase_activity.yaml using the verified verbatim snippet 'hydrogen peroxide to water and molecular oxygen, serving to protect cells' from data/traits/physiology/oxidative_stress_response.yaml (traitmech:000037) evidence[1], append a CURATE history event, and regenerate trait pages.
+Populate non-elliptical verbatim snippet on record-level evidence[0].snippet citing reference DOI:10.1007/s00018-003-3206-5 in data/traits/physiology/catalase_activity.yaml using the verified verbatim snippet 'hydrogen peroxide to water and molecular oxygen, serving to protect cells' from data/traits/physiology/oxidative_stress_response.yaml (traitmech:000079) evidence[1], append a CURATE history event, and regenerate trait pages.
 
 - data/traits/physiology/catalase_activity.yaml includes a verified non-elliptical verbatim snippet on record-level evidence for DOI:10.1007/s00018-003-3206-5.
 - uv run python scripts/validate_strict.py and uv run python scripts/audit_evidence_snippets.py pass with 0 errors.
@@ -1349,11 +1349,11 @@ Populate non-elliptical verbatim snippet on record-level evidence[0].snippet cit
 | ev-uniprot-protein-audit | reports/uniprot_grounding_audit.tsv; reports/graph_protein_taxon_coverage.tsv | supports | UniProt grounding and taxon coverage audits verify 188 UniProtKB protein_examples on eligible records (up from 185 in Cycle 4 after +3 additions in Cycle 5 Stage 2 across acetoin_production_vogues_proskauer_positive.yaml, alkaline_phosphatase_activity.yaml, and arginine_dihydrolase_activity.yaml, plus 1 entry_version refresh on methanogenesis_from_methanol.yaml in Cycle 5 Stage 3) across 167 exemplified GENE_OR_PROTEIN nodes in 150 MECHANISTIC and 597 NONMECHANISTIC eligible graphs with 0 unverified accessions or version drift. |
 | ev-metpo-proposal-audit | reports/metpo_2026_06_12_active_review.tsv; data/raw/metpo.owl and proposals/metpo_traitmech_v1..v611 | supports | METPO active release and ROBOT proposal verification confirm 395 eligible METPO: records match active terms and 734 eligible traitmech:NNNNNN records (735 total including excluded traitmech:000083) have tracked upstream ROBOT proposals. |
 | ev-c5s4-def-src-001 | DOI:10.1126/science.aba0372; data/traits/genomics/gao_her_system.yaml evidence[0] and gao_her_duf_system.yaml / gao_her_sir_system.yaml evidence[0] | supports | Gao et al. 2020 (DOI:10.1126/science.aba0372, PMID:32855333) is declared as definition_source: DOI:10.1126/science.aba0372 on both Gao-Her child defense system records (gao_her_duf_system.yaml, traitmech:000361; gao_her_sir_system.yaml, traitmech:000362), while record-level evidence[0] cites PMID:32855333 rather than DOI:10.1126/science.aba0372 with the verified verbatim snippet 'By systematic defense gene prediction and heterologous reconstitution, here we discover 29 widespread antiviral gene cassettes, collectively present in 32% of all sequenced bacterial and archaeal genomes, that mediate protection against specific bacteriophages.' (now cited directly under DOI:10.1126/science.aba0372 on parent gao_her_system.yaml after Cycle 4 Stage 5). |
-| ev-c5s4-def-src-002 | DOI:10.1038/ismej.2014.60; data/traits/physiology/oligotrophic.yaml causal_graphs[0].edges[1].evidence[0] | supports | Giovannoni et al. 2014 (DOI:10.1038/ismej.2014.60) is declared as definition_source and cited in record-level evidence[0] on genome_streamlining.yaml (traitmech:000099) with notes only, while oligotrophic.yaml (METPO:1000675) causal_graphs[0].edges[1].evidence[0] (streamlined_genome -&gt; efficient_nutrient_use) already quotes verbatim: 'minimizes resources required for replication'. |
-| ev-c5s4-def-src-003 | DOI:10.1016/j.cbpa.2015.10.018; data/traits/ecology/saprotrophy.yaml causal_graphs[0].edges[2].evidence[0] | supports | Cragg et al. 2015 (DOI:10.1016/j.cbpa.2015.10.018) is declared as definition_source and cited in record-level evidence[0] on biopolymer_degradation.yaml (traitmech:000110) with notes only, while saprotrophy.yaml (traitmech:000042) causal_graphs[0].edges[2].evidence[0] (cazymes -&gt; hemicellulose) already quotes verbatim: 'The enzymatic degradation of cellulose and hemicellulose is accomplished in Nature via the collective action of multiple carbohydrate-active enzymes'. |
-| ev-c5s4-def-src-004 | DOI:10.1128/mmbr.61.4.533-616.1997; data/traits/metabolism/nitrogen_respiration.yaml evidence[0] and anaerobic_respiration.yaml evidence[0] | supports | Zumft 1997 (DOI:10.1128/mmbr.61.4.533-616.1997) is declared as definition_source and cited in record-level evidence[0] on denitrification.yaml (traitmech:000104) with notes only, while 2-hop ancestors nitrogen_respiration.yaml (traitmech:000126) evidence[0] and anaerobic_respiration.yaml (traitmech:000013) evidence[0] already quote verbatim: 'N oxides as terminal electron acceptors'. |
-| ev-c5s4-def-src-005 | DOI:10.1111/j.1574-6976.2009.00187.x; data/traits/physiology/lithotrophic.yaml causal_graphs[0].edges[0].evidence[0] | supports | Ghosh &amp; Dam 2009 (DOI:10.1111/j.1574-6976.2009.00187.x) is declared as definition_source and cited in record-level evidence[0] on sulfur_oxidation.yaml (traitmech:000106) with notes only, while lithotrophic.yaml (METPO:1000629) causal_graphs[0].edges[0].evidence[0] (reduced_sulfur_compound -&gt; inorganic_electron_donor) already quotes verbatim: 'lithotrophic sulfur oxidation'. |
-| ev-c5s4-def-src-006 | DOI:10.1007/s00018-003-3206-5; data/traits/physiology/oxidative_stress_response.yaml evidence[1] | supports | Chelikani et al. 2004 (DOI:10.1007/s00018-003-3206-5) is declared as definition_source and cited in record-level evidence[0] on catalase_activity.yaml (traitmech:000075) with notes only, while oxidative_stress_response.yaml (traitmech:000037) evidence[1] already quotes verbatim: 'hydrogen peroxide to water and molecular oxygen, serving to protect cells'. |
+| ev-c5s4-def-src-002 | DOI:10.1038/ismej.2014.60; data/traits/physiology/oligotrophic.yaml causal_graphs[0].edges[2].evidence[0] | supports | Giovannoni et al. 2014 (DOI:10.1038/ismej.2014.60) is declared as definition_source and cited in record-level evidence[0] on genome_streamlining.yaml (traitmech:000099) with notes only, while oligotrophic.yaml (METPO:1000654) causal_graphs[0].edges[2].evidence[0] (streamlined_genome -&gt; efficient_nutrient_use) already quotes verbatim: 'minimizes resources required for replication'. |
+| ev-c5s4-def-src-003 | DOI:10.1016/j.cbpa.2015.10.018; data/traits/ecology/saprotrophy.yaml causal_graphs[0].edges[5].evidence[0] | supports | Cragg et al. 2015 (DOI:10.1016/j.cbpa.2015.10.018) is declared as definition_source and cited in record-level evidence[0] on biopolymer_degradation.yaml (traitmech:000110) with notes only, while saprotrophy.yaml (traitmech:000055) causal_graphs[0].edges[5].evidence[0] (cazymes -&gt; hemicellulose) already quotes verbatim: 'The enzymatic degradation of cellulose and hemicellulose is accomplished in Nature via the collective action of multiple carbohydrate-active enzymes'. |
+| ev-c5s4-def-src-004 | DOI:10.1128/mmbr.61.4.533-616.1997; data/traits/metabolism/nitrogen_respiration.yaml evidence[0] and anaerobic_respiration.yaml evidence[0] | supports | Zumft 1997 (DOI:10.1128/mmbr.61.4.533-616.1997) is declared as definition_source and cited in record-level evidence[0] on denitrification.yaml (traitmech:000104) with notes only, while 2-hop ancestors nitrogen_respiration.yaml (traitmech:000121) evidence[0] and anaerobic_respiration.yaml (METPO:1000802) evidence[0] already quote verbatim: 'N oxides as terminal electron acceptors'. |
+| ev-c5s4-def-src-005 | DOI:10.1111/j.1574-6976.2009.00187.x; data/traits/physiology/lithotrophic.yaml causal_graphs[0].edges[2].evidence[0] | supports | Ghosh &amp; Dam 2009 (DOI:10.1111/j.1574-6976.2009.00187.x) is declared as definition_source and cited in record-level evidence[0] on sulfur_oxidation.yaml (traitmech:000106) with notes only, while lithotrophic.yaml (METPO:1000649) causal_graphs[0].edges[2].evidence[0] (reduced_sulfur_compound -&gt; inorganic_electron_donor) already quotes verbatim: 'lithotrophic sulfur oxidation'. |
+| ev-c5s4-def-src-006 | DOI:10.1007/s00018-003-3206-5; data/traits/physiology/oxidative_stress_response.yaml evidence[1] | supports | Chelikani et al. 2004 (DOI:10.1007/s00018-003-3206-5) is declared as definition_source and cited in record-level evidence[0] on catalase_activity.yaml (traitmech:000075) with notes only, while oxidative_stress_response.yaml (traitmech:000079) evidence[1] already quotes verbatim: 'hydrogen peroxide to water and molecular oxygen, serving to protect cells'. |
 
 ## Limits And Additional Notes
 
@@ -20820,23 +20820,23 @@ evidence:
 - evidence_id: ev-c5s4-def-src-002
   kind: primary_source
   reference: DOI:10.1038/ismej.2014.60
-  locator: data/traits/physiology/oligotrophic.yaml causal_graphs[0].edges[1].evidence[0]
+  locator: data/traits/physiology/oligotrophic.yaml causal_graphs[0].edges[2].evidence[0]
   accessed_at: '2026-10-25T20:05:00Z'
   support: supports
   summary: 'Giovannoni et al. 2014 (DOI:10.1038/ismej.2014.60) is declared as definition_source
     and cited in record-level evidence[0] on genome_streamlining.yaml (traitmech:000099)
-    with notes only, while oligotrophic.yaml (METPO:1000675) causal_graphs[0].edges[1].evidence[0]
+    with notes only, while oligotrophic.yaml (METPO:1000654) causal_graphs[0].edges[2].evidence[0]
     (streamlined_genome -> efficient_nutrient_use) already quotes verbatim: ''minimizes
     resources required for replication''.'
 - evidence_id: ev-c5s4-def-src-003
   kind: primary_source
   reference: DOI:10.1016/j.cbpa.2015.10.018
-  locator: data/traits/ecology/saprotrophy.yaml causal_graphs[0].edges[2].evidence[0]
+  locator: data/traits/ecology/saprotrophy.yaml causal_graphs[0].edges[5].evidence[0]
   accessed_at: '2026-10-25T20:05:00Z'
   support: supports
   summary: 'Cragg et al. 2015 (DOI:10.1016/j.cbpa.2015.10.018) is declared as definition_source
     and cited in record-level evidence[0] on biopolymer_degradation.yaml (traitmech:000110)
-    with notes only, while saprotrophy.yaml (traitmech:000042) causal_graphs[0].edges[2].evidence[0]
+    with notes only, while saprotrophy.yaml (traitmech:000055) causal_graphs[0].edges[5].evidence[0]
     (cazymes -> hemicellulose) already quotes verbatim: ''The enzymatic degradation
     of cellulose and hemicellulose is accomplished in Nature via the collective action
     of multiple carbohydrate-active enzymes''.'
@@ -20849,18 +20849,18 @@ evidence:
   support: supports
   summary: 'Zumft 1997 (DOI:10.1128/mmbr.61.4.533-616.1997) is declared as definition_source
     and cited in record-level evidence[0] on denitrification.yaml (traitmech:000104)
-    with notes only, while 2-hop ancestors nitrogen_respiration.yaml (traitmech:000126)
-    evidence[0] and anaerobic_respiration.yaml (traitmech:000013) evidence[0] already
+    with notes only, while 2-hop ancestors nitrogen_respiration.yaml (traitmech:000121)
+    evidence[0] and anaerobic_respiration.yaml (METPO:1000802) evidence[0] already
     quote verbatim: ''N oxides as terminal electron acceptors''.'
 - evidence_id: ev-c5s4-def-src-005
   kind: primary_source
   reference: DOI:10.1111/j.1574-6976.2009.00187.x
-  locator: data/traits/physiology/lithotrophic.yaml causal_graphs[0].edges[0].evidence[0]
+  locator: data/traits/physiology/lithotrophic.yaml causal_graphs[0].edges[2].evidence[0]
   accessed_at: '2026-10-25T20:05:00Z'
   support: supports
   summary: 'Ghosh & Dam 2009 (DOI:10.1111/j.1574-6976.2009.00187.x) is declared as
     definition_source and cited in record-level evidence[0] on sulfur_oxidation.yaml
-    (traitmech:000106) with notes only, while lithotrophic.yaml (METPO:1000629) causal_graphs[0].edges[0].evidence[0]
+    (traitmech:000106) with notes only, while lithotrophic.yaml (METPO:1000649) causal_graphs[0].edges[2].evidence[0]
     (reduced_sulfur_compound -> inorganic_electron_donor) already quotes verbatim:
     ''lithotrophic sulfur oxidation''.'
 - evidence_id: ev-c5s4-def-src-006
@@ -20871,7 +20871,7 @@ evidence:
   support: supports
   summary: 'Chelikani et al. 2004 (DOI:10.1007/s00018-003-3206-5) is declared as definition_source
     and cited in record-level evidence[0] on catalase_activity.yaml (traitmech:000075)
-    with notes only, while oxidative_stress_response.yaml (traitmech:000037) evidence[1]
+    with notes only, while oxidative_stress_response.yaml (traitmech:000079) evidence[1]
     already quotes verbatim: ''hydrogen peroxide to water and molecular oxygen, serving
     to protect cells''.'
 assessments:
@@ -25616,13 +25616,13 @@ findings:
   certainty: confirmed
   title: genome_streamlining.yaml cites definition_source DOI:10.1038/ismej.2014.60
     in record-level evidence without a non-elliptical verbatim snippet despite verified
-    quote in data/traits/physiology/oligotrophic.yaml (METPO:1000675) causal_graphs[0].edges[1].evidence[0]
+    quote in data/traits/physiology/oligotrophic.yaml (METPO:1000654) causal_graphs[0].edges[2].evidence[0]
     (streamlined_genome -> efficient_nutrient_use)
   description: 'data/traits/genomics/genome_streamlining.yaml (traitmech:000099) declares
     definition_source: DOI:10.1038/ismej.2014.60 and cites DOI:10.1038/ismej.2014.60
     in record-level evidence[0].snippet without a non-elliptical verbatim snippet
     (UNQUOTED_DEFINITION_SOURCE), even though data/traits/physiology/oligotrophic.yaml
-    (METPO:1000675) causal_graphs[0].edges[1].evidence[0] (streamlined_genome -> efficient_nutrient_use)
+    (METPO:1000654) causal_graphs[0].edges[2].evidence[0] (streamlined_genome -> efficient_nutrient_use)
     already carries the verified verbatim snippet ''minimizes resources required for
     replication'' from DOI:10.1038/ismej.2014.60.'
   target_ids:
@@ -25646,13 +25646,13 @@ findings:
   certainty: confirmed
   title: biopolymer_degradation.yaml cites definition_source DOI:10.1016/j.cbpa.2015.10.018
     in record-level evidence without a non-elliptical verbatim snippet despite verified
-    quote in data/traits/ecology/saprotrophy.yaml (traitmech:000042) causal_graphs[0].edges[2].evidence[0]
+    quote in data/traits/ecology/saprotrophy.yaml (traitmech:000055) causal_graphs[0].edges[5].evidence[0]
     (cazymes -> hemicellulose)
   description: 'data/traits/metabolism/biopolymer_degradation.yaml (traitmech:000110)
     declares definition_source: DOI:10.1016/j.cbpa.2015.10.018 and cites DOI:10.1016/j.cbpa.2015.10.018
     in record-level evidence[0].snippet without a non-elliptical verbatim snippet
     (UNQUOTED_DEFINITION_SOURCE), even though data/traits/ecology/saprotrophy.yaml
-    (traitmech:000042) causal_graphs[0].edges[2].evidence[0] (cazymes -> hemicellulose)
+    (traitmech:000055) causal_graphs[0].edges[5].evidence[0] (cazymes -> hemicellulose)
     already carries the verified verbatim snippet ''The enzymatic degradation of cellulose
     and hemicellulose is accomplished in Nature via the collective action of multiple
     carbohydrate-active enzymes'' from DOI:10.1016/j.cbpa.2015.10.018.'
@@ -25677,15 +25677,15 @@ findings:
   certainty: confirmed
   title: denitrification.yaml cites definition_source DOI:10.1128/mmbr.61.4.533-616.1997
     in record-level evidence without a non-elliptical verbatim snippet despite verified
-    quote in ancestor data/traits/metabolism/nitrogen_respiration.yaml (traitmech:000126)
-    evidence[0] and data/traits/metabolism/anaerobic_respiration.yaml (traitmech:000013)
+    quote in ancestor data/traits/metabolism/nitrogen_respiration.yaml (traitmech:000121)
+    evidence[0] and data/traits/metabolism/anaerobic_respiration.yaml (METPO:1000802)
     evidence[0]
   description: 'data/traits/metabolism/denitrification.yaml (traitmech:000104) declares
     definition_source: DOI:10.1128/mmbr.61.4.533-616.1997 and cites DOI:10.1128/mmbr.61.4.533-616.1997
     in record-level evidence[0].snippet without a non-elliptical verbatim snippet
     (UNQUOTED_DEFINITION_SOURCE), even though ancestor data/traits/metabolism/nitrogen_respiration.yaml
-    (traitmech:000126) evidence[0] and data/traits/metabolism/anaerobic_respiration.yaml
-    (traitmech:000013) evidence[0] already carries the verified verbatim snippet ''N
+    (traitmech:000121) evidence[0] and data/traits/metabolism/anaerobic_respiration.yaml
+    (METPO:1000802) evidence[0] already carries the verified verbatim snippet ''N
     oxides as terminal electron acceptors'' from DOI:10.1128/mmbr.61.4.533-616.1997.'
   target_ids:
   - traitmech:000104
@@ -25708,13 +25708,13 @@ findings:
   certainty: confirmed
   title: sulfur_oxidation.yaml cites definition_source DOI:10.1111/j.1574-6976.2009.00187.x
     in record-level evidence without a non-elliptical verbatim snippet despite verified
-    quote in data/traits/physiology/lithotrophic.yaml (METPO:1000629) causal_graphs[0].edges[0].evidence[0]
+    quote in data/traits/physiology/lithotrophic.yaml (METPO:1000649) causal_graphs[0].edges[2].evidence[0]
     (reduced_sulfur_compound -> inorganic_electron_donor)
   description: 'data/traits/metabolism/sulfur_oxidation.yaml (traitmech:000106) declares
     definition_source: DOI:10.1111/j.1574-6976.2009.00187.x and cites DOI:10.1111/j.1574-6976.2009.00187.x
     in record-level evidence[0].snippet without a non-elliptical verbatim snippet
     (UNQUOTED_DEFINITION_SOURCE), even though data/traits/physiology/lithotrophic.yaml
-    (METPO:1000629) causal_graphs[0].edges[0].evidence[0] (reduced_sulfur_compound
+    (METPO:1000649) causal_graphs[0].edges[2].evidence[0] (reduced_sulfur_compound
     -> inorganic_electron_donor) already carries the verified verbatim snippet ''lithotrophic
     sulfur oxidation'' from DOI:10.1111/j.1574-6976.2009.00187.x.'
   target_ids:
@@ -25738,13 +25738,13 @@ findings:
   certainty: confirmed
   title: catalase_activity.yaml cites definition_source DOI:10.1007/s00018-003-3206-5
     in record-level evidence without a non-elliptical verbatim snippet despite verified
-    quote in data/traits/physiology/oxidative_stress_response.yaml (traitmech:000037)
+    quote in data/traits/physiology/oxidative_stress_response.yaml (traitmech:000079)
     evidence[1]
   description: 'data/traits/physiology/catalase_activity.yaml (traitmech:000075) declares
     definition_source: DOI:10.1007/s00018-003-3206-5 and cites DOI:10.1007/s00018-003-3206-5
     in record-level evidence[0].snippet without a non-elliptical verbatim snippet
     (UNQUOTED_DEFINITION_SOURCE), even though data/traits/physiology/oxidative_stress_response.yaml
-    (traitmech:000037) evidence[1] already carries the verified verbatim snippet ''hydrogen
+    (traitmech:000079) evidence[1] already carries the verified verbatim snippet ''hydrogen
     peroxide to water and molecular oxygen, serving to protect cells'' from DOI:10.1007/s00018-003-3206-5.'
   target_ids:
   - traitmech:000075
@@ -27759,7 +27759,7 @@ actions:
   description: Populate non-elliptical verbatim snippet on record-level evidence[0].snippet
     citing reference DOI:10.1038/ismej.2014.60 in data/traits/genomics/genome_streamlining.yaml
     using the verified verbatim snippet 'minimizes resources required for replication'
-    from data/traits/physiology/oligotrophic.yaml (METPO:1000675) causal_graphs[0].edges[1].evidence[0]
+    from data/traits/physiology/oligotrophic.yaml (METPO:1000654) causal_graphs[0].edges[2].evidence[0]
     (streamlined_genome -> efficient_nutrient_use), append a CURATE history event,
     and regenerate trait pages.
   finding_ids:
@@ -27780,8 +27780,8 @@ actions:
     citing reference DOI:10.1016/j.cbpa.2015.10.018 in data/traits/metabolism/biopolymer_degradation.yaml
     using the verified verbatim snippet 'The enzymatic degradation of cellulose and
     hemicellulose is accomplished in Nature via the collective action of multiple
-    carbohydrate-active enzymes' from data/traits/ecology/saprotrophy.yaml (traitmech:000042)
-    causal_graphs[0].edges[2].evidence[0] (cazymes -> hemicellulose), append a CURATE
+    carbohydrate-active enzymes' from data/traits/ecology/saprotrophy.yaml (traitmech:000055)
+    causal_graphs[0].edges[5].evidence[0] (cazymes -> hemicellulose), append a CURATE
     history event, and regenerate trait pages.
   finding_ids:
   - F-C5S4-DEF-SRC-004
@@ -27800,8 +27800,8 @@ actions:
   description: Populate non-elliptical verbatim snippet on record-level evidence[0].snippet
     citing reference DOI:10.1128/mmbr.61.4.533-616.1997 in data/traits/metabolism/denitrification.yaml
     using the verified verbatim snippet 'N oxides as terminal electron acceptors'
-    from ancestor data/traits/metabolism/nitrogen_respiration.yaml (traitmech:000126)
-    evidence[0] and data/traits/metabolism/anaerobic_respiration.yaml (traitmech:000013)
+    from ancestor data/traits/metabolism/nitrogen_respiration.yaml (traitmech:000121)
+    evidence[0] and data/traits/metabolism/anaerobic_respiration.yaml (METPO:1000802)
     evidence[0], append a CURATE history event, and regenerate trait pages.
   finding_ids:
   - F-C5S4-DEF-SRC-005
@@ -27820,7 +27820,7 @@ actions:
   description: Populate non-elliptical verbatim snippet on record-level evidence[0].snippet
     citing reference DOI:10.1111/j.1574-6976.2009.00187.x in data/traits/metabolism/sulfur_oxidation.yaml
     using the verified verbatim snippet 'lithotrophic sulfur oxidation' from data/traits/physiology/lithotrophic.yaml
-    (METPO:1000629) causal_graphs[0].edges[0].evidence[0] (reduced_sulfur_compound
+    (METPO:1000649) causal_graphs[0].edges[2].evidence[0] (reduced_sulfur_compound
     -> inorganic_electron_donor), append a CURATE history event, and regenerate trait
     pages.
   finding_ids:
@@ -27841,7 +27841,7 @@ actions:
     citing reference DOI:10.1007/s00018-003-3206-5 in data/traits/physiology/catalase_activity.yaml
     using the verified verbatim snippet 'hydrogen peroxide to water and molecular
     oxygen, serving to protect cells' from data/traits/physiology/oxidative_stress_response.yaml
-    (traitmech:000037) evidence[1], append a CURATE history event, and regenerate
+    (traitmech:000079) evidence[1], append a CURATE history event, and regenerate
     trait pages.
   finding_ids:
   - F-C5S4-DEF-SRC-007

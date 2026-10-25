@@ -64,6 +64,10 @@ tasks:
     status: resolved
     issue_url: https://github.com/CultureBotAI/TraitMech/issues/2002
     disposition: "Resolved in Cycle 4 Stage 6 (issue #2002, follow-up to #1981); updated scripts/audit_evidence_snippets.py so OBJECT_PROPERTY records do not propagate predicate-stem snippets into refs_by_record_id/refs_by_parent_id and accept any non-empty, non-elliptical predicate-stem snippet on definition_source, covered by unit tests in tests/test_audit_evidence_snippets.py."
+  - task_id: traitmech-infra-0007
+    summary: Extend UNQUOTED_DEFINITION_SOURCE in scripts/audit_evidence_snippets.py to check corpus-wide >=16-char non-elliptical quotes when definition_source is cited in evidence[].reference without a snippet
+    status: open
+    issue_url: https://github.com/CultureBotAI/TraitMech/issues/2002
 ```
 <!-- mech-infra-tasks:end -->
 
