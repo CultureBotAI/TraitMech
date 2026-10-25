@@ -1,0 +1,352 @@
+schema_version: 1.0.0
+repository_key: traitmech
+github_repository: CultureBotAI/TraitMech
+run_id: mech-goal-sequence-20261019
+cycle: 5
+stage: 5
+revision: 1
+outcome: completed
+summary: 'Consumed all 12 carried-forward findings from Cycle 5 Stage 4 review evidence
+  (reviews/workflow/mech-goal-sequence-20261019/cycle-000005/stage-04/revision-0001/evidence.yaml,
+  sha256 32cedb75ee6c8633dc7e58670db65036e1b45e1db9b2c96160ed61b528b3061e), grouped
+  them by cause and repair ownership into 6 groups, deduplicated against all open
+  GitHub issues, and linked every group and finding to a real GitHub issue (#2002
+  for resolved group G-C5S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS; open issues #1982,
+  #1983, #1984, #1985, and #364 for the 5 deferred source-limited/upstream-blocked
+  cohort groups). Implemented accepted fixes for all 7 actionable open findings (F-C5S4-DEF-SRC-001..F-C5S4-DEF-SRC-007
+  across 7 TraitRecord files) via guarded writer scripts/curate_stage5_review_findings.py,
+  regenerated pages/, preserved all immutable Stage 4 review artifacts untouched,
+  and obtained fresh structured review reviews/structured/20261025T214500Z-cycle5-stage5-remediated-records-review/review.yaml
+  confirming verdict pass and 0 remaining open findings.'
+source_revision: d5a179ca03aceaf74255d107b759cd99c4d9a7ec
+scope_frozen_at: '2026-10-25T21:34:42.707487Z'
+previous_evidence:
+  path: reviews/workflow/mech-goal-sequence-20261019/cycle-000005/stage-04/revision-0001/evidence.yaml
+  sha256: 32cedb75ee6c8633dc7e58670db65036e1b45e1db9b2c96160ed61b528b3061e
+artifacts:
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000005/stage-05/revision-0001/issue_map.md
+  sha256: 7849e345591f286a9dfd047832dcc1f9426392b2164601d196604821560f63ad
+  kind: issue_map
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000005/stage-05/revision-0001/validation.md
+  sha256: d2e3b116ee7c4a7b550b9e9fa0faf6d06c4e6efbf080e6895cfc28d730485560
+  kind: validation
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000005/stage-05/revision-0001/remediated_records_review.yaml
+  sha256: dc770e7aeed301cb5442ebff05a9289a8a930a5e83944d044874455e75144a0b
+  kind: supporting
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000005/stage-05/revision-0001/remediated_records_review.md
+  sha256: 17d317f28eab46cd31275cc92ebfb480f2505ccc43a11ebf6dda14cd235b22f9
+  kind: supporting
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000005/stage-05/revision-0001/c5s5_coverage_full.json
+  sha256: eab857a90d8d35c1c10ea3041e7df4a48fa59ea125ecbfd5fd7707ca1bcf88f8
+  kind: supporting
+findings:
+- finding_id: F-C5S4-DEF-SRC-001
+  status: resolved
+  summary: 'data/traits/genomics/gao_her_duf_system.yaml (traitmech:000361) declares
+    definition_source: DOI:10.1126/science.aba0372 (Gao et al. 2020, Science) while
+    record-level evidence[0] cites its PMID alias PMID:32855333 rather than DOI:10.1126/science.aba0372
+    (flagged by audit_evidence_snippets.py MISSING_DEFINITION_SOURCE_EVIDENCE because
+    parent gao_her_system.yaml cites DOI:10.1126/science.aba0372 directly with the
+    identical verbatim snippet ''By systematic defense gene prediction and heterologous
+    reconstitution, here we discover 29 widespread antiviral gene cassettes, collectively
+    present in 32% of all sequenced bacterial and archaeal genomes, that mediate protection
+    against specific bacteriophages.'').'
+  carried_from: F-C5S4-DEF-SRC-001
+  group_id: G-C5S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/2002
+  disposition: 'Resolved in Cycle 5 Stage 5 under group G-C5S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+    (#2002) via scripts/curate_stage5_review_findings.py: aligned evidence[0].reference
+    from PMID:32855333 to DOI:10.1126/science.aba0372 on data/traits/genomics/gao_her_duf_system.yaml
+    while preserving the verified verbatim snippet from record-level evidence[0] on
+    the same record (cited under PMID alias PMID:32855333) and parent data/traits/genomics/gao_her_system.yaml
+    (traitmech:000409) evidence[0] and verified in reviews/structured/20261025T214500Z-cycle5-stage5-remediated-records-review/review.yaml.'
+- finding_id: F-C5S4-DEF-SRC-002
+  status: resolved
+  summary: 'data/traits/genomics/gao_her_sir_system.yaml (traitmech:000362) declares
+    definition_source: DOI:10.1126/science.aba0372 (Gao et al. 2020, Science) while
+    record-level evidence[0] cites its PMID alias PMID:32855333 rather than DOI:10.1126/science.aba0372
+    (flagged by audit_evidence_snippets.py MISSING_DEFINITION_SOURCE_EVIDENCE because
+    parent gao_her_system.yaml cites DOI:10.1126/science.aba0372 directly with the
+    identical verbatim snippet ''By systematic defense gene prediction and heterologous
+    reconstitution, here we discover 29 widespread antiviral gene cassettes, collectively
+    present in 32% of all sequenced bacterial and archaeal genomes, that mediate protection
+    against specific bacteriophages.'').'
+  carried_from: F-C5S4-DEF-SRC-002
+  group_id: G-C5S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/2002
+  disposition: 'Resolved in Cycle 5 Stage 5 under group G-C5S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+    (#2002) via scripts/curate_stage5_review_findings.py: aligned evidence[0].reference
+    from PMID:32855333 to DOI:10.1126/science.aba0372 on data/traits/genomics/gao_her_sir_system.yaml
+    while preserving the verified verbatim snippet from record-level evidence[0] on
+    the same record (cited under PMID alias PMID:32855333) and parent data/traits/genomics/gao_her_system.yaml
+    (traitmech:000409) evidence[0] and verified in reviews/structured/20261025T214500Z-cycle5-stage5-remediated-records-review/review.yaml.'
+- finding_id: F-C5S4-DEF-SRC-003
+  status: resolved
+  summary: 'data/traits/genomics/genome_streamlining.yaml (traitmech:000099) declares
+    definition_source: DOI:10.1038/ismej.2014.60 and cites DOI:10.1038/ismej.2014.60
+    in record-level evidence[0].snippet without a non-elliptical verbatim snippet
+    (UNQUOTED_DEFINITION_SOURCE), even though data/traits/physiology/oligotrophic.yaml
+    (METPO:1000654) causal_graphs[0].edges[2].evidence[0] (streamlined_genome -> efficient_nutrient_use)
+    already carries the verified verbatim snippet ''minimizes resources required for
+    replication'' from DOI:10.1038/ismej.2014.60.'
+  carried_from: F-C5S4-DEF-SRC-003
+  group_id: G-C5S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/2002
+  disposition: 'Resolved in Cycle 5 Stage 5 under group G-C5S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+    (#2002) via scripts/curate_stage5_review_findings.py: promoted verified verbatim
+    snippet for DOI:10.1038/ismej.2014.60 from data/traits/physiology/oligotrophic.yaml
+    (METPO:1000654) causal_graphs[0].edges[2].evidence[0] (streamlined_genome -> efficient_nutrient_use)
+    to record-level evidence[0] on data/traits/genomics/genome_streamlining.yaml and
+    verified in reviews/structured/20261025T214500Z-cycle5-stage5-remediated-records-review/review.yaml.'
+- finding_id: F-C5S4-DEF-SRC-004
+  status: resolved
+  summary: 'data/traits/metabolism/biopolymer_degradation.yaml (traitmech:000110)
+    declares definition_source: DOI:10.1016/j.cbpa.2015.10.018 and cites DOI:10.1016/j.cbpa.2015.10.018
+    in record-level evidence[0].snippet without a non-elliptical verbatim snippet
+    (UNQUOTED_DEFINITION_SOURCE), even though data/traits/ecology/saprotrophy.yaml
+    (traitmech:000055) causal_graphs[0].edges[5].evidence[0] (cazymes -> hemicellulose)
+    already carries the verified verbatim snippet ''The enzymatic degradation of cellulose
+    and hemicellulose is accomplished in Nature via the collective action of multiple
+    carbohydrate-active enzymes'' from DOI:10.1016/j.cbpa.2015.10.018.'
+  carried_from: F-C5S4-DEF-SRC-004
+  group_id: G-C5S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/2002
+  disposition: 'Resolved in Cycle 5 Stage 5 under group G-C5S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+    (#2002) via scripts/curate_stage5_review_findings.py: promoted verified verbatim
+    snippet for DOI:10.1016/j.cbpa.2015.10.018 from data/traits/ecology/saprotrophy.yaml
+    (traitmech:000055) causal_graphs[0].edges[5].evidence[0] (cazymes -> hemicellulose)
+    to record-level evidence[0] on data/traits/metabolism/biopolymer_degradation.yaml
+    and verified in reviews/structured/20261025T214500Z-cycle5-stage5-remediated-records-review/review.yaml.'
+- finding_id: F-C5S4-DEF-SRC-005
+  status: resolved
+  summary: 'data/traits/metabolism/denitrification.yaml (traitmech:000104) declares
+    definition_source: DOI:10.1128/mmbr.61.4.533-616.1997 and cites DOI:10.1128/mmbr.61.4.533-616.1997
+    in record-level evidence[0].snippet without a non-elliptical verbatim snippet
+    (UNQUOTED_DEFINITION_SOURCE), even though ancestor data/traits/metabolism/nitrogen_respiration.yaml
+    (traitmech:000121) evidence[0] and data/traits/metabolism/anaerobic_respiration.yaml
+    (METPO:1000802) evidence[0] already carries the verified verbatim snippet ''N
+    oxides as terminal electron acceptors'' from DOI:10.1128/mmbr.61.4.533-616.1997.'
+  carried_from: F-C5S4-DEF-SRC-005
+  group_id: G-C5S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/2002
+  disposition: 'Resolved in Cycle 5 Stage 5 under group G-C5S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+    (#2002) via scripts/curate_stage5_review_findings.py: promoted verified verbatim
+    snippet for DOI:10.1128/mmbr.61.4.533-616.1997 from ancestor data/traits/metabolism/nitrogen_respiration.yaml
+    (traitmech:000121) evidence[0] and data/traits/metabolism/anaerobic_respiration.yaml
+    (METPO:1000802) evidence[0] to record-level evidence[0] on data/traits/metabolism/denitrification.yaml
+    and verified in reviews/structured/20261025T214500Z-cycle5-stage5-remediated-records-review/review.yaml.'
+- finding_id: F-C5S4-DEF-SRC-006
+  status: resolved
+  summary: 'data/traits/metabolism/sulfur_oxidation.yaml (traitmech:000106) declares
+    definition_source: DOI:10.1111/j.1574-6976.2009.00187.x and cites DOI:10.1111/j.1574-6976.2009.00187.x
+    in record-level evidence[0].snippet without a non-elliptical verbatim snippet
+    (UNQUOTED_DEFINITION_SOURCE), even though data/traits/physiology/lithotrophic.yaml
+    (METPO:1000649) causal_graphs[0].edges[2].evidence[0] (reduced_sulfur_compound
+    -> inorganic_electron_donor) already carries the verified verbatim snippet ''lithotrophic
+    sulfur oxidation'' from DOI:10.1111/j.1574-6976.2009.00187.x.'
+  carried_from: F-C5S4-DEF-SRC-006
+  group_id: G-C5S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/2002
+  disposition: 'Resolved in Cycle 5 Stage 5 under group G-C5S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+    (#2002) via scripts/curate_stage5_review_findings.py: promoted verified verbatim
+    snippet for DOI:10.1111/j.1574-6976.2009.00187.x from data/traits/physiology/lithotrophic.yaml
+    (METPO:1000649) causal_graphs[0].edges[2].evidence[0] (reduced_sulfur_compound
+    -> inorganic_electron_donor) to record-level evidence[0] on data/traits/metabolism/sulfur_oxidation.yaml
+    and verified in reviews/structured/20261025T214500Z-cycle5-stage5-remediated-records-review/review.yaml.'
+- finding_id: F-C5S4-DEF-SRC-007
+  status: resolved
+  summary: 'data/traits/physiology/catalase_activity.yaml (traitmech:000075) declares
+    definition_source: DOI:10.1007/s00018-003-3206-5 and cites DOI:10.1007/s00018-003-3206-5
+    in record-level evidence[0].snippet without a non-elliptical verbatim snippet
+    (UNQUOTED_DEFINITION_SOURCE), even though data/traits/physiology/oxidative_stress_response.yaml
+    (traitmech:000079) evidence[1] already carries the verified verbatim snippet ''hydrogen
+    peroxide to water and molecular oxygen, serving to protect cells'' from DOI:10.1007/s00018-003-3206-5.'
+  carried_from: F-C5S4-DEF-SRC-007
+  group_id: G-C5S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/2002
+  disposition: 'Resolved in Cycle 5 Stage 5 under group G-C5S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+    (#2002) via scripts/curate_stage5_review_findings.py: promoted verified verbatim
+    snippet for DOI:10.1007/s00018-003-3206-5 from data/traits/physiology/oxidative_stress_response.yaml
+    (traitmech:000079) evidence[1] to record-level evidence[0] on data/traits/physiology/catalase_activity.yaml
+    and verified in reviews/structured/20261025T214500Z-cycle5-stage5-remediated-records-review/review.yaml.'
+- finding_id: F-COHORT-CAUSAL-GRAPHS-SOURCE-LIMITED-005
+  status: deferred
+  summary: 382 of 1,129 eligible TraitRecord files lack causal_graphs due to documented
+    source limitations (360 records where open-access PubMed/PMC/EuropePMC literature
+    lacks a multi-step causal mechanism snippet, reduced from 363 in Cycle 4 after
+    +3 Cycle 5 Stage 2 graphs, plus 22 SUPPORTING_FIELD_VOCABULARY non-mechanistic
+    hierarchy/measurement/observation records).
+  carried_from: F-COHORT-CAUSAL-GRAPHS-SOURCE-LIMITED-005
+  group_id: G-STAGE4-CAUSAL-GRAPHS-SOURCE-LIMITED
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1982
+  disposition: 'Deferred (source-limited) under open GitHub issue #1982: every one
+    of the 382 records already documents its exact literature limitation in an open
+    CURATION_TODO DiscussionItem; requires full-text PDF acquisition or paid deep-research
+    approval outside Stage 4/5 scope.'
+- finding_id: F-COHORT-CANONICAL-EXAMPLES-SOURCE-LIMITED-006
+  status: deferred
+  summary: 551 of 1,129 eligible TraitRecord files lack canonical_examples (578 eligible
+    records and 579 total records carry verified canonical_examples) because open-access
+    abstracts do not report a verbatim strain-designated or species-specific positive/negative
+    value.
+  carried_from: F-COHORT-CANONICAL-EXAMPLES-SOURCE-LIMITED-006
+  group_id: G-STAGE4-CANONICAL-EXAMPLES-SOURCE-LIMITED
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1983
+  disposition: 'Deferred (source-limited) under open GitHub issue #1983: tracked in
+    scripts/backfill_canonical_examples_444.py (POST_444_CANONICAL_EXAMPLE_QUEUE)
+    and record-level CURATION_TODO DiscussionItems; requires primary strain characterization
+    literature or IJSEM species descriptions.'
+- finding_id: F-COHORT-CAUSAL-GRAPH-BASELINES-007
+  status: deferred
+  summary: 85 baselined cross-record causal-graph audit warning rows (83 INCONSISTENT_NODE_TYPE,
+    2 DUPLICATE_GROUNDING) across 72 unique eligible TraitRecord files in conf/causal_graph_audit_baseline.tsv.
+  carried_from: F-COHORT-CAUSAL-GRAPH-BASELINES-007
+  group_id: G-STAGE4-CAUSAL-GRAPH-BASELINES
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1984
+  disposition: 'Deferred to cross-cohort ontology harmonization tracked in open GitHub
+    issue #1984 (follow-up to #356) and conf/causal_graph_audit_baseline.tsv (0 unbaselined
+    regressions).'
+- finding_id: F-COHORT-DEF-SOURCE-PAYWALLED-008
+  status: deferred
+  summary: 57 of 1,129 eligible TraitRecord files (after resolving the 2 Gao-Her-*
+    defense system records in F-C5S4-DEF-SRC-001..002; plus 58 remaining unquoted
+    CLASS definition_source records without an in-corpus verbatim quote after resolving
+    F-C5S4-DEF-SRC-003..007, 31 OBJECT_PROPERTY records with short predicate-stem
+    snippets tracked under traitmech-infra-0006, and 50 records omitting definition_source)
+    cite a primary discovery/characterization reference in definition_source that
+    is paywalled or has no indexed PubMed/EuropePMC abstract.
+  carried_from: F-COHORT-DEF-SOURCE-PAYWALLED-008
+  group_id: G-STAGE4-DEF-SOURCE-PAYWALLED
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1985
+  disposition: 'Deferred (source-limited) under open GitHub issue #1985: requires
+    full-text access to paywalled primary characterization articles to extract verbatim
+    definitional snippets.'
+- finding_id: F-COHORT-METPO-UPSTREAM-MINTING-009
+  status: deferred
+  summary: 734 of 1,129 eligible TraitRecord files (735 total including excluded traitmech:000083)
+    use repository-minted traitmech:NNNNNN identifiers awaiting upstream METPO term
+    incorporation across proposals/metpo_traitmech_v1..v611.
+  carried_from: F-COHORT-METPO-UPSTREAM-MINTING-009
+  group_id: G-STAGE4-METPO-UPSTREAM-MINTING
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/364
+  disposition: 'Deferred (upstream-blocked) under open GitHub issue #364: all 734
+    eligible traitmech:NNNNNN records (735 total) are already packaged into verified
+    ROBOT templates under proposals/metpo_traitmech_v1..v611 and submitted upstream
+    in berkeleybop/metpo#535.'
+groups:
+- group_id: G-C5S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+  finding_ids:
+  - F-C5S4-DEF-SRC-001
+  - F-C5S4-DEF-SRC-002
+  - F-C5S4-DEF-SRC-003
+  - F-C5S4-DEF-SRC-004
+  - F-C5S4-DEF-SRC-005
+  - F-C5S4-DEF-SRC-006
+  - F-C5S4-DEF-SRC-007
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/2002
+  status: resolved
+  summary: 'Cause: Seven TraitRecord files across GENOMICS (3: gao_her_duf_system.yaml,
+    gao_her_sir_system.yaml, genome_streamlining.yaml), METABOLISM (3: biopolymer_degradation.yaml,
+    denitrification.yaml, sulfur_oxidation.yaml), and PHYSIOLOGY (1: catalase_activity.yaml)
+    declared a definition_source (DOI:) that either cited its PMID alias PMID:32855333
+    in record-level evidence[0].reference rather than DOI:10.1126/science.aba0372
+    (MISSING_DEFINITION_SOURCE_EVIDENCE on 2 Gao-Her-* defense system records) or
+    lacked a non-elliptical verbatim snippet in record-level evidence[0] (UNQUOTED_DEFINITION_SOURCE
+    on 5 records), even though a verified verbatim snippet for that exact definition_source
+    already existed in TraitMech (gao_her_system.yaml, oligotrophic.yaml, saprotrophy.yaml,
+    nitrogen_respiration.yaml / anaerobic_respiration.yaml, lithotrophic.yaml, and
+    oxidative_stress_response.yaml). Repair owner: CultureBotAI/TraitMech (scripts/curate_stage5_review_findings.py
+    and the 7 target TraitRecord files).'
+  resolution_evidence:
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000005/stage-05/revision-0001/validation.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000005/stage-05/revision-0001/remediated_records_review.yaml
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000005/stage-05/revision-0001/remediated_records_review.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000005/stage-05/revision-0001/issue_map.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000005/stage-05/revision-0001/c5s5_coverage_full.json
+  disposition: 'Resolved all 7 open findings via guarded writer scripts/curate_stage5_review_findings.py,
+    validated with strict LinkML schema and snippet checks, and verified with fresh
+    structured review bundle reviews/structured/20261025T214500Z-cycle5-stage5-remediated-records-review/review.yaml
+    (verdict: pass).'
+- group_id: G-STAGE4-CAUSAL-GRAPHS-SOURCE-LIMITED
+  finding_ids:
+  - F-COHORT-CAUSAL-GRAPHS-SOURCE-LIMITED-005
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1982
+  status: deferred
+  summary: 'Cause: 382 eligible TraitRecord files lack causal_graphs because 360 records
+    cite open-access abstracts without a multi-step molecular mechanism snippet and
+    22 records belong to non-mechanistic SUPPORTING_FIELD_VOCABULARY categories. Repair
+    owner: CultureBotAI/TraitMech full-text / deep-research curation queue (data/traits/**/*.yaml).'
+  resolution_evidence:
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000005/stage-05/revision-0001/issue_map.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000005/stage-05/revision-0001/c5s5_coverage_full.json
+  disposition: 'Deferred under open GitHub issue #1982: source-limited without full-text
+    PDF acquisition or paid deep-research approval.'
+- group_id: G-STAGE4-CANONICAL-EXAMPLES-SOURCE-LIMITED
+  finding_ids:
+  - F-COHORT-CANONICAL-EXAMPLES-SOURCE-LIMITED-006
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1983
+  status: deferred
+  summary: 'Cause: 551 eligible TraitRecord files lack canonical_examples because
+    their currently cited open abstracts are taxon-general or upper-level definitions
+    that do not state a verbatim strain/species phenotype value. Repair owner: CultureBotAI/TraitMech
+    (scripts/backfill_canonical_examples_444.py, data/traits/**/*.yaml).'
+  resolution_evidence:
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000005/stage-05/revision-0001/issue_map.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000005/stage-05/revision-0001/c5s5_coverage_full.json
+  disposition: 'Deferred under open GitHub issue #1983: requires primary strain characterization
+    or IJSEM species description texts.'
+- group_id: G-STAGE4-CAUSAL-GRAPH-BASELINES
+  finding_ids:
+  - F-COHORT-CAUSAL-GRAPH-BASELINES-007
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1984
+  status: deferred
+  summary: 'Cause: 85 cross-record causal-graph warning rows (83 INCONSISTENT_NODE_TYPE,
+    2 DUPLICATE_GROUNDING) across 72 unique eligible TraitRecord files remain baselined
+    in conf/causal_graph_audit_baseline.tsv where shared GO/CHEBI/METPO CURIEs play
+    dual roles across traits. Repair owner: CultureBotAI/TraitMech (conf/causal_graph_audit_baseline.tsv,
+    scripts/audit_causal_graphs.py, data/traits/**/*.yaml).'
+  resolution_evidence:
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000005/stage-05/revision-0001/issue_map.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000005/stage-05/revision-0001/c5s5_coverage_full.json
+  disposition: 'Deferred under open GitHub issue #1984 (follow-up to closed #356):
+    requires coordinated cross-record ontology-role harmonization without breaking
+    GENE_OR_PROTEIN protein_examples bindings.'
+- group_id: G-STAGE4-DEF-SOURCE-PAYWALLED
+  finding_ids:
+  - F-COHORT-DEF-SOURCE-PAYWALLED-008
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1985
+  status: deferred
+  summary: 'Cause: 57 eligible TraitRecord files (after resolving the 2 Gao-Her-*
+    defense system records in F-C5S4-DEF-SRC-001..002; plus 58 remaining unquoted
+    CLASS definition_source records without an in-corpus verbatim quote after resolving
+    F-C5S4-DEF-SRC-003..007, 31 OBJECT_PROPERTY records with short predicate-stem
+    snippets tracked under traitmech-infra-0006, and 50 records omitting definition_source)
+    cite a primary discovery DOI/PMID in definition_source whose full text is paywalled
+    or lacks an open-access abstract quote in PubMed/EuropePMC. Repair owner: CultureBotAI/TraitMech
+    full-text literature queue (data/traits/**/*.yaml).'
+  resolution_evidence:
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000005/stage-05/revision-0001/issue_map.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000005/stage-05/revision-0001/c5s5_coverage_full.json
+  disposition: 'Deferred under open GitHub issue #1985: source-limited without full-text
+    access to paywalled primary discovery articles.'
+- group_id: G-STAGE4-METPO-UPSTREAM-MINTING
+  finding_ids:
+  - F-COHORT-METPO-UPSTREAM-MINTING-009
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/364
+  status: deferred
+  summary: 'Cause: 734 eligible TraitRecord files (735 total including excluded traitmech:000083)
+    use repository-minted traitmech:NNNNNN identifiers awaiting upstream METPO release
+    incorporation. Repair owner: Upstream berkeleybop/metpo#535 and CultureBotAI/TraitMech
+    (proposals/metpo_traitmech_v1..v611).'
+  resolution_evidence:
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000005/stage-05/revision-0001/issue_map.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000005/stage-05/revision-0001/c5s5_coverage_full.json
+  disposition: 'Deferred (upstream-blocked) under existing open GitHub issue #364
+    and berkeleybop/metpo#535.'
+carry_forward_ids:
+- F-COHORT-CAUSAL-GRAPHS-SOURCE-LIMITED-005
+- F-COHORT-CANONICAL-EXAMPLES-SOURCE-LIMITED-006
+- F-COHORT-CAUSAL-GRAPH-BASELINES-007
+- F-COHORT-DEF-SOURCE-PAYWALLED-008
+- F-COHORT-METPO-UPSTREAM-MINTING-009
+infra_tasks: []

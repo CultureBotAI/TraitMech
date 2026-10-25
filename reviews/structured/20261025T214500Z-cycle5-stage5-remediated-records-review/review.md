@@ -1,0 +1,923 @@
+# Cycle 5 Stage 5 post-remediation verification review of the 7 TraitRecord files in group G-C5S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+
+- Review: 20261025T214500Z-cycle5-stage5-remediated-records-review
+- Repository: CultureBotAI/TraitMech
+- Started UTC: 2026-10-25T21:40:00Z
+- Finished UTC: 2026-10-25T21:45:00Z
+- Reviewer: antigravity (self_review)
+- Completion: completed
+- Verdict: pass
+- Scientific review: true
+
+## Summary
+
+Fresh post-remediation batch review of the 7 TraitRecord YAML files remediated in Cycle 5 Stage 5 across genomics (gao_her_duf_system.yaml, gao_her_sir_system.yaml, genome_streamlining.yaml), metabolism (biopolymer_degradation.yaml, denitrification.yaml, sulfur_oxidation.yaml), and physiology (catalase_activity.yaml) under group G-C5S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS and GitHub issue #2002. All 7 Cycle 5 Stage 4 open findings (F-C5S4-DEF-SRC-001..007) are verified as resolved with contiguous verbatim snippets from their primary definition_source in record-level evidence[0], append-only curation_history provenance, and 0 remaining open findings.
+
+## Scope And Provenance
+
+Focused post-remediation review of all 7 TraitRecord YAML files modified in Cycle 5 Stage 5 (resolve_review_findings) to resolve group G-C5S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS (#2002).
+
+Selection: All 7 records with open findings carried forward from Cycle 5 Stage 4 review 20261025T200500Z-cycle5-stage4-corpus-record-and-cohort-review.
+Coverage: full; 7 reviewed / 7 in the declared population.
+Source: working_tree at Git base d5a179ca03aceaf74255d107b759cd99c4d9a7ec.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| traitmech:000361 | data/traits/genomics/gao_her_duf_system.yaml | maintained | Gao-Her-DUF system |
+| traitmech:000362 | data/traits/genomics/gao_her_sir_system.yaml | maintained | Gao-Her-SIR system |
+| traitmech:000099 | data/traits/genomics/genome_streamlining.yaml | maintained | genome streamlining |
+| traitmech:000110 | data/traits/metabolism/biopolymer_degradation.yaml | maintained | biopolymer degradation |
+| traitmech:000104 | data/traits/metabolism/denitrification.yaml | maintained | denitrification |
+| traitmech:000106 | data/traits/metabolism/sulfur_oxidation.yaml | maintained | sulfur oxidation |
+| traitmech:000075 | data/traits/physiology/catalase_activity.yaml | maintained | catalase activity |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Strict LinkML schema and reference validation across all TraitRecord files | passed | True | traitmech:000361, traitmech:000362, traitmech:000099, traitmech:000110, traitmech:000104, traitmech:000106, traitmech:000075 | All 1,130 TraitRecord YAML files (including all 7 Cycle 5 Stage 5 remediated records) pass strict closed-mode LinkML validation with 0 errors. |
+| Evidence snippet structural and baseline ratchet audit | passed | True | traitmech:000361, traitmech:000362, traitmech:000099, traitmech:000110, traitmech:000104, traitmech:000106, traitmech:000075 | All 7 remediated records now carry a contiguous &gt;=12-char verbatim quote for their primary definition_source in record-level evidence[0], passing scripts/audit_evidence_snippets.py with 0 new findings and reducing MISSING_SNIPPET from 2,251 to 2,246 (-5), UNQUOTED_DEFINITION_SOURCE from 94 to 89 (-5; 0 remaining with in-corpus verbatim quotes), and MISSING_DEFINITION_SOURCE_EVIDENCE from 59 to 57 (-2). |
+| Stage 5 guarded writer idempotency and postcondition unit tests | passed | True | traitmech:000361, traitmech:000362, traitmech:000099, traitmech:000110, traitmech:000104, traitmech:000106, traitmech:000075 | All 5 unit tests in tests/test_curate_stage5_review_findings.py pass, confirming DO_NOT_WORK protection, exact definition_source evidence alignment across all 52 remediated specs (4 Cycle 1 + 6 Cycle 2 + 17 Cycle 3 + 18 Cycle 4 + 7 Cycle 5), zero UNQUOTED_DEFINITION_SOURCE or MISSING_DEFINITION_SOURCE_EVIDENCE defects on remediated records, and dry-run/apply idempotency. |
+| Guarded YAML writer safeguard audit | passed | True | traitmech:000361, traitmech:000362, traitmech:000099, traitmech:000110, traitmech:000104, traitmech:000106, traitmech:000075 | scripts/curate_stage5_review_findings.py satisfies all writer safeguards (appends curation_history, has write safeguard, validates before write, wired into justfile). |
+
+## Scientific And Domain Assessments
+
+### Verification of record-level definition_source evidence[0] verbatim snippets across the 7 remediated records
+
+evidence: supported. Targets: traitmech:000361, traitmech:000362, traitmech:000099, traitmech:000110, traitmech:000104, traitmech:000106, traitmech:000075.
+
+All 7 records identified with open findings in Cycle 5 Stage 4 (gao_her_duf_system.yaml, gao_her_sir_system.yaml, genome_streamlining.yaml, biopolymer_degradation.yaml, denitrification.yaml, sulfur_oxidation.yaml, and catalase_activity.yaml) now carry a verified non-elliptical verbatim snippet for their primary definition_source directly in record-level evidence[0].
+
+Each of the 7 remediated records was re-inspected against .claude/skills/review-yaml-record/SKILL.md: (1) F-C5S4-DEF-SRC-001..002 (gao_her_duf_system.yaml, gao_her_sir_system.yaml) now align evidence[0].reference with definition_source DOI:10.1126/science.aba0372 (from PMID alias PMID:32855333) while preserving the verified verbatim abstract snippet from Gao et al. 2020 (Science); and (2) F-C5S4-DEF-SRC-003..007 (genome_streamlining.yaml, biopolymer_degradation.yaml, denitrification.yaml, sulfur_oxidation.yaml, catalase_activity.yaml) now quote their declared definition_source with a contiguous non-elliptical verbatim snippet in evidence[0] promoted from cross-record verified evidence in oligotrophic.yaml, saprotrophy.yaml, nitrogen_respiration.yaml, lithotrophic.yaml, and oxidative_stress_response.yaml.
+
+### Schema validity, curation_history provenance, and writer guardrails on remediated records
+
+provenance: supported. Targets: traitmech:000361, traitmech:000362, traitmech:000099, traitmech:000110, traitmech:000104, traitmech:000106, traitmech:000075.
+
+All 7 remediated records pass strict closed-mode LinkML validation, preserve existing canonical_examples, causal_graphs, and UniProtKB protein_examples untouched, and record append-only ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE curation_history entries referencing issue #2002.
+
+## Findings
+
+### F-C5S4-DEF-SRC-001: gao_her_duf_system.yaml now includes a verified verbatim snippet for definition_source DOI:10.1126/science.aba0372 in record-level evidence[0]
+
+minor / resolved / confirmed; issue key: gao-her-duf-system-definition-source-curie-alignment.
+
+Resolved Cycle 5 Stage 4 open finding F-C5S4-DEF-SRC-001 on data/traits/genomics/gao_her_duf_system.yaml (traitmech:000361): aligned/promoted verified verbatim snippet ('By systematic defense gene prediction and heterologous reconstitution, here we discover 29 widespread antiviral gene cassettes, collectively present in 32% of all sequenced bacterial and archaeal genomes, that mediate protection against specific bacteriophages.') from record-level evidence[0] on the same record (cited under PMID alias PMID:32855333) and parent data/traits/genomics/gao_her_system.yaml (traitmech:000409) evidence[0] to record-level evidence[0] for definition_source DOI:10.1126/science.aba0372 and appended curation_history entry via scripts/curate_stage5_review_findings.py.
+
+Disposition: Resolved in Cycle 5 Stage 5 (resolve_review_findings) under group G-C5S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS and GitHub issue #2002 via guarded writer scripts/curate_stage5_review_findings.py.
+
+### F-C5S4-DEF-SRC-002: gao_her_sir_system.yaml now includes a verified verbatim snippet for definition_source DOI:10.1126/science.aba0372 in record-level evidence[0]
+
+minor / resolved / confirmed; issue key: gao-her-sir-system-definition-source-curie-alignment.
+
+Resolved Cycle 5 Stage 4 open finding F-C5S4-DEF-SRC-002 on data/traits/genomics/gao_her_sir_system.yaml (traitmech:000362): aligned/promoted verified verbatim snippet ('By systematic defense gene prediction and heterologous reconstitution, here we discover 29 widespread antiviral gene cassettes, collectively present in 32% of all sequenced bacterial and archaeal genomes, that mediate protection against specific bacteriophages.') from record-level evidence[0] on the same record (cited under PMID alias PMID:32855333) and parent data/traits/genomics/gao_her_system.yaml (traitmech:000409) evidence[0] to record-level evidence[0] for definition_source DOI:10.1126/science.aba0372 and appended curation_history entry via scripts/curate_stage5_review_findings.py.
+
+Disposition: Resolved in Cycle 5 Stage 5 (resolve_review_findings) under group G-C5S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS and GitHub issue #2002 via guarded writer scripts/curate_stage5_review_findings.py.
+
+### F-C5S4-DEF-SRC-003: genome_streamlining.yaml now includes a verified verbatim snippet for definition_source DOI:10.1038/ismej.2014.60 in record-level evidence[0]
+
+minor / resolved / confirmed; issue key: genome-streamlining-definition-source-snippet.
+
+Resolved Cycle 5 Stage 4 open finding F-C5S4-DEF-SRC-003 on data/traits/genomics/genome_streamlining.yaml (traitmech:000099): aligned/promoted verified verbatim snippet ('minimizes resources required for replication') from data/traits/physiology/oligotrophic.yaml (METPO:1000654) causal_graphs[0].edges[2].evidence[0] (streamlined_genome -&gt; efficient_nutrient_use) to record-level evidence[0] for definition_source DOI:10.1038/ismej.2014.60 and appended curation_history entry via scripts/curate_stage5_review_findings.py.
+
+Disposition: Resolved in Cycle 5 Stage 5 (resolve_review_findings) under group G-C5S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS and GitHub issue #2002 via guarded writer scripts/curate_stage5_review_findings.py.
+
+### F-C5S4-DEF-SRC-004: biopolymer_degradation.yaml now includes a verified verbatim snippet for definition_source DOI:10.1016/j.cbpa.2015.10.018 in record-level evidence[0]
+
+minor / resolved / confirmed; issue key: biopolymer-degradation-definition-source-snippet.
+
+Resolved Cycle 5 Stage 4 open finding F-C5S4-DEF-SRC-004 on data/traits/metabolism/biopolymer_degradation.yaml (traitmech:000110): aligned/promoted verified verbatim snippet ('The enzymatic degradation of cellulose and hemicellulose is accomplished in Nature via the collective action of multiple carbohydrate-active enzymes') from data/traits/ecology/saprotrophy.yaml (traitmech:000055) causal_graphs[0].edges[5].evidence[0] (cazymes -&gt; hemicellulose) to record-level evidence[0] for definition_source DOI:10.1016/j.cbpa.2015.10.018 and appended curation_history entry via scripts/curate_stage5_review_findings.py.
+
+Disposition: Resolved in Cycle 5 Stage 5 (resolve_review_findings) under group G-C5S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS and GitHub issue #2002 via guarded writer scripts/curate_stage5_review_findings.py.
+
+### F-C5S4-DEF-SRC-005: denitrification.yaml now includes a verified verbatim snippet for definition_source DOI:10.1128/mmbr.61.4.533-616.1997 in record-level evidence[0]
+
+minor / resolved / confirmed; issue key: denitrification-definition-source-snippet.
+
+Resolved Cycle 5 Stage 4 open finding F-C5S4-DEF-SRC-005 on data/traits/metabolism/denitrification.yaml (traitmech:000104): aligned/promoted verified verbatim snippet ('N oxides as terminal electron acceptors') from ancestor data/traits/metabolism/nitrogen_respiration.yaml (traitmech:000121) evidence[0] and data/traits/metabolism/anaerobic_respiration.yaml (METPO:1000802) evidence[0] to record-level evidence[0] for definition_source DOI:10.1128/mmbr.61.4.533-616.1997 and appended curation_history entry via scripts/curate_stage5_review_findings.py.
+
+Disposition: Resolved in Cycle 5 Stage 5 (resolve_review_findings) under group G-C5S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS and GitHub issue #2002 via guarded writer scripts/curate_stage5_review_findings.py.
+
+### F-C5S4-DEF-SRC-006: sulfur_oxidation.yaml now includes a verified verbatim snippet for definition_source DOI:10.1111/j.1574-6976.2009.00187.x in record-level evidence[0]
+
+minor / resolved / confirmed; issue key: sulfur-oxidation-definition-source-snippet.
+
+Resolved Cycle 5 Stage 4 open finding F-C5S4-DEF-SRC-006 on data/traits/metabolism/sulfur_oxidation.yaml (traitmech:000106): aligned/promoted verified verbatim snippet ('lithotrophic sulfur oxidation') from data/traits/physiology/lithotrophic.yaml (METPO:1000649) causal_graphs[0].edges[2].evidence[0] (reduced_sulfur_compound -&gt; inorganic_electron_donor) to record-level evidence[0] for definition_source DOI:10.1111/j.1574-6976.2009.00187.x and appended curation_history entry via scripts/curate_stage5_review_findings.py.
+
+Disposition: Resolved in Cycle 5 Stage 5 (resolve_review_findings) under group G-C5S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS and GitHub issue #2002 via guarded writer scripts/curate_stage5_review_findings.py.
+
+### F-C5S4-DEF-SRC-007: catalase_activity.yaml now includes a verified verbatim snippet for definition_source DOI:10.1007/s00018-003-3206-5 in record-level evidence[0]
+
+minor / resolved / confirmed; issue key: catalase-activity-definition-source-snippet.
+
+Resolved Cycle 5 Stage 4 open finding F-C5S4-DEF-SRC-007 on data/traits/physiology/catalase_activity.yaml (traitmech:000075): aligned/promoted verified verbatim snippet ('hydrogen peroxide to water and molecular oxygen, serving to protect cells') from data/traits/physiology/oxidative_stress_response.yaml (traitmech:000079) evidence[1] to record-level evidence[0] for definition_source DOI:10.1007/s00018-003-3206-5 and appended curation_history entry via scripts/curate_stage5_review_findings.py.
+
+Disposition: Resolved in Cycle 5 Stage 5 (resolve_review_findings) under group G-C5S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS and GitHub issue #2002 via guarded writer scripts/curate_stage5_review_findings.py.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| ev-prior-c5s4-review | reviews/structured/20261025T200500Z-cycle5-stage4-corpus-record-and-cohort-review/review.yaml; findings[0..6] | supports | Immutable Cycle 5 Stage 4 review bundle identifying the 7 open definition_source evidence snippet / CURIE alignment findings (F-C5S4-DEF-SRC-001..F-C5S4-DEF-SRC-007) with planned remediation actions ACT-C5S4-DEF-SRC-001..007. |
+| ev-c5s5-def-src-001 | DOI:10.1126/science.aba0372; Promoted/aligned on evidence[0] from record-level evidence[0] on the same record (cited under PMID alias PMID:32855333) and parent data/traits/genomics/gao_her_system.yaml (traitmech:000409) evidence[0] | supports | Primary definition_source DOI:10.1126/science.aba0372 verified via existing verbatim quote in record-level evidence[0] on the same record (cited under PMID alias PMID:32855333) and parent data/traits/genomics/gao_her_system.yaml (traitmech:000409) evidence[0] and populated/aligned in record-level evidence[0]. |
+| ev-c5s5-def-src-003 | DOI:10.1038/ismej.2014.60; Promoted/aligned on evidence[0] from data/traits/physiology/oligotrophic.yaml (METPO:1000654) causal_graphs[0].edges[2].evidence[0] (streamlined_genome -&gt; efficient_nutrient_use) | supports | Primary definition_source DOI:10.1038/ismej.2014.60 verified via existing verbatim quote in data/traits/physiology/oligotrophic.yaml (METPO:1000654) causal_graphs[0].edges[2].evidence[0] (streamlined_genome -&gt; efficient_nutrient_use) and populated/aligned in record-level evidence[0]. |
+| ev-c5s5-def-src-004 | DOI:10.1016/j.cbpa.2015.10.018; Promoted/aligned on evidence[0] from data/traits/ecology/saprotrophy.yaml (traitmech:000055) causal_graphs[0].edges[5].evidence[0] (cazymes -&gt; hemicellulose) | supports | Primary definition_source DOI:10.1016/j.cbpa.2015.10.018 verified via existing verbatim quote in data/traits/ecology/saprotrophy.yaml (traitmech:000055) causal_graphs[0].edges[5].evidence[0] (cazymes -&gt; hemicellulose) and populated/aligned in record-level evidence[0]. |
+| ev-c5s5-def-src-005 | DOI:10.1128/mmbr.61.4.533-616.1997; Promoted/aligned on evidence[0] from ancestor data/traits/metabolism/nitrogen_respiration.yaml (traitmech:000121) evidence[0] and data/traits/metabolism/anaerobic_respiration.yaml (METPO:1000802) evidence[0] | supports | Primary definition_source DOI:10.1128/mmbr.61.4.533-616.1997 verified via existing verbatim quote in ancestor data/traits/metabolism/nitrogen_respiration.yaml (traitmech:000121) evidence[0] and data/traits/metabolism/anaerobic_respiration.yaml (METPO:1000802) evidence[0] and populated/aligned in record-level evidence[0]. |
+| ev-c5s5-def-src-006 | DOI:10.1111/j.1574-6976.2009.00187.x; Promoted/aligned on evidence[0] from data/traits/physiology/lithotrophic.yaml (METPO:1000649) causal_graphs[0].edges[2].evidence[0] (reduced_sulfur_compound -&gt; inorganic_electron_donor) | supports | Primary definition_source DOI:10.1111/j.1574-6976.2009.00187.x verified via existing verbatim quote in data/traits/physiology/lithotrophic.yaml (METPO:1000649) causal_graphs[0].edges[2].evidence[0] (reduced_sulfur_compound -&gt; inorganic_electron_donor) and populated/aligned in record-level evidence[0]. |
+| ev-c5s5-def-src-007 | DOI:10.1007/s00018-003-3206-5; Promoted/aligned on evidence[0] from data/traits/physiology/oxidative_stress_response.yaml (traitmech:000079) evidence[1] | supports | Primary definition_source DOI:10.1007/s00018-003-3206-5 verified via existing verbatim quote in data/traits/physiology/oxidative_stress_response.yaml (traitmech:000079) evidence[1] and populated/aligned in record-level evidence[0]. |
+| ev-remediated-records | data/traits/genomics/gao_her_duf_system.yaml; data/traits/genomics/gao_her_sir_system.yaml; data/traits/genomics/genome_streamlining.yaml; data/traits/metabolism/biopolymer_degradation.yaml; data/traits/metabolism/denitrification.yaml; data/traits/metabolism/sulfur_oxidation.yaml; data/traits/physiology/catalase_activity.yaml; definition_source, evidence[0], curation_history | supports | All 7 remediated TraitRecord YAML files now include a verified non-elliptical verbatim snippet for their declared definition_source in record-level evidence[0] and an append-only ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE curation_history event. |
+| ev-stage5-writer | scripts/curate_stage5_review_findings.py; tests/test_curate_stage5_review_findings.py; process_all | supports | Guarded writer script and unit test suite verifying closed-mode LinkML validation, DO_NOT_WORK exclusion, and idempotent remediation across all 52 target specs (4 Cycle 1 + 6 Cycle 2 + 17 Cycle 3 + 18 Cycle 4 + 7 Cycle 5). |
+| ev-validate-strict | scripts/validate_strict.py; reports/instance_validation_failures.tsv | supports | Closed-mode LinkML schema and identifier validation passes with 0 errors across all 1,130 TraitRecord files. |
+| ev-snippet-audit | scripts/audit_evidence_snippets.py; conf/evidence_snippet_baseline.tsv | supports | All 7 remediated record-level evidence[0] entries pass contiguous verbatim quote checks with 0 new warnings and eliminate all 7 open definition_source findings from Cycle 5 Stage 4. |
+
+## Limits And Additional Notes
+
+- This batch review covers the 7 records remediated in Cycle 5 Stage 5 under group G-C5S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS (#2002); the 5 cohort-level source-limited or upstream-blocked findings from Cycle 5 Stage 4 remain tracked under open GitHub issues #1982, #1983, #1984, #1985, and #364.
+- All 7 of the remediated records carry repository-minted traitmech:NNNNNN identifiers (traitmech:000361, traitmech:000362, traitmech:000099, traitmech:000110, traitmech:000104, traitmech:000106, traitmech:000075) backed by validated ROBOT templates awaiting upstream METPO release incorporation (#364, berkeleybop/metpo#535).
+- Skills executed: .claude/skills/curate-yaml-record/SKILL.md and .claude/skills/review-yaml-record/SKILL.md.
+- Immutable Cycle 5 Stage 4 review bundle preserved untouched at reviews/structured/20261025T200500Z-cycle5-stage4-corpus-record-and-cohort-review/review.yaml.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261025T214500Z-cycle5-stage5-remediated-records-review
+kind: batch
+repository: CultureBotAI/TraitMech
+title: Cycle 5 Stage 5 post-remediation verification review of the 7 TraitRecord files
+  in group G-C5S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+started_at: '2026-10-25T21:40:00Z'
+finished_at: '2026-10-25T21:45:00Z'
+reviewer:
+  identity: antigravity
+  kind: agent
+  model: claude-opus-4-6
+  independence: self_review
+  independence_basis: Repository-local post-remediation record review verifying resolution
+    of the 7 Cycle 5 Stage 4 open findings (F-C5S4-DEF-SRC-001..F-C5S4-DEF-SRC-007)
+    under group G-C5S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS (#2002); separate from
+    independent PR adversarial review.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass
+scientific_review: true
+summary: 'Fresh post-remediation batch review of the 7 TraitRecord YAML files remediated
+  in Cycle 5 Stage 5 across genomics (gao_her_duf_system.yaml, gao_her_sir_system.yaml,
+  genome_streamlining.yaml), metabolism (biopolymer_degradation.yaml, denitrification.yaml,
+  sulfur_oxidation.yaml), and physiology (catalase_activity.yaml) under group G-C5S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+  and GitHub issue #2002. All 7 Cycle 5 Stage 4 open findings (F-C5S4-DEF-SRC-001..007)
+  are verified as resolved with contiguous verbatim snippets from their primary definition_source
+  in record-level evidence[0], append-only curation_history provenance, and 0 remaining
+  open findings.'
+source:
+  git_revision: d5a179ca03aceaf74255d107b759cd99c4d9a7ec
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/SKILL.md
+    sha256: 27f535d3f057d321c8b87c6506f2f35dd2d37fd005bcd5040b3e17269285075b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: bb03efa3bbd3748ee1dccf57612a6ce8fcc861f20eb57c33eb16e3ac1dd728bd
+    role: context
+  - path: CLAUDE.md
+    sha256: 4d328127022388e1affe9b71be24bc93944a971636d0d0ea902f6511e0b405c5
+    role: context
+  - path: DO_NOT_WORK.md
+    sha256: 9ae0b05cc06f4ce8938801287a568d535e471d06dda5e258fcdbbed222abf712
+    role: context
+  - path: conf/record_review.yaml
+    sha256: 5adc6244761fb2baf8a059d81f23b0c9b32a33f9426ab84094234c3ec417269d
+    role: context
+  - path: data/traits/genomics/gao_her_duf_system.yaml
+    sha256: 938e8658006167635507b6af68b4238cbb09516b7fadf173a934c66ae4893b61
+    role: target
+  - path: data/traits/genomics/gao_her_sir_system.yaml
+    sha256: b5d7f8a333742caca202b3a4522f48f795b378b0f1df7e3c87972f116603bc70
+    role: target
+  - path: data/traits/genomics/genome_streamlining.yaml
+    sha256: ce96111d82b46de41eb7e31caff4dcdb3885b83c80c8802d1a139571712b13e2
+    role: target
+  - path: data/traits/metabolism/biopolymer_degradation.yaml
+    sha256: b5e921fe276ac3dc831267fcc021e7e1d5a88c3fdaeffccd1700cfb2fb43b2e9
+    role: target
+  - path: data/traits/metabolism/denitrification.yaml
+    sha256: 60cfd98e8999d8bcbf50629b925fc822e9065caf1817803cf2518e98795a7051
+    role: target
+  - path: data/traits/metabolism/sulfur_oxidation.yaml
+    sha256: 4bd043c65854175efc0502841771dab197ce40def43adb283666c4ffabf2267c
+    role: target
+  - path: data/traits/physiology/catalase_activity.yaml
+    sha256: 45f025725b208d1d205b01c8f208fd68ad70a78a2f0063a7d07eae4c31dd5e26
+    role: target
+  - path: docs/record-review-profile.md
+    sha256: cac714488cad03263ca3847737d5f70d174d40b5be677a09e0c1d9c814d9bc6a
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/infrastructure/curate_stage5_review_findings/2026-10-25T214000Z-claude-code-c5s501.yaml
+    sha256: 1a77598b5472d53694a23484b0034203eb9ce8fffc02c10ca313e912a3468c10
+    role: context
+  - path: reviews/structured/20261025T200500Z-cycle5-stage4-corpus-record-and-cohort-review/review.yaml
+    sha256: 0078557515e4c7a3dfd57aed8047e5285cb30f86c6d56b4a7548a6e3a785eda9
+    role: context
+  - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000005/stage-04/revision-0001/evidence.yaml
+    sha256: 32cedb75ee6c8633dc7e58670db65036e1b45e1db9b2c96160ed61b528b3061e
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: scripts/curate_stage5_review_findings.py
+    sha256: e5de00ff4766f5728b9b75565e5e070a5727887ea6254a32acbcb759677d1908
+    role: context
+  - path: src/traitmech/schema/traitmech.yaml
+    sha256: 46c47fc627b80ccbba1e8ab3fb6f2aee93bc2aef7aaf72fe9aadc3257f2c02dd
+    role: context
+  - path: tests/test_curate_stage5_review_findings.py
+    sha256: 1bd01a5e4986ab26403a4936a6e5a458e3a4f907f2ac4545dd0a749f85c62458
+    role: context
+scope:
+  description: Focused post-remediation review of all 7 TraitRecord YAML files modified
+    in Cycle 5 Stage 5 (resolve_review_findings) to resolve group G-C5S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+    (#2002).
+  selection: All 7 records with open findings carried forward from Cycle 5 Stage 4
+    review 20261025T200500Z-cycle5-stage4-corpus-record-and-cohort-review.
+  coverage: full
+  population_size: 7
+  reviewed_target_ids:
+  - traitmech:000361
+  - traitmech:000362
+  - traitmech:000099
+  - traitmech:000110
+  - traitmech:000104
+  - traitmech:000106
+  - traitmech:000075
+targets:
+- target_id: traitmech:000361
+  path: data/traits/genomics/gao_her_duf_system.yaml
+  label: Gao-Her-DUF system
+  record_class: TraitRecord
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/genomics/gao_her_duf_system.yaml
+    role: maintained TraitRecord YAML
+- target_id: traitmech:000362
+  path: data/traits/genomics/gao_her_sir_system.yaml
+  label: Gao-Her-SIR system
+  record_class: TraitRecord
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/genomics/gao_her_sir_system.yaml
+    role: maintained TraitRecord YAML
+- target_id: traitmech:000099
+  path: data/traits/genomics/genome_streamlining.yaml
+  label: genome streamlining
+  record_class: TraitRecord
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/genomics/genome_streamlining.yaml
+    role: maintained TraitRecord YAML
+- target_id: traitmech:000110
+  path: data/traits/metabolism/biopolymer_degradation.yaml
+  label: biopolymer degradation
+  record_class: TraitRecord
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/metabolism/biopolymer_degradation.yaml
+    role: maintained TraitRecord YAML
+- target_id: traitmech:000104
+  path: data/traits/metabolism/denitrification.yaml
+  label: denitrification
+  record_class: TraitRecord
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/metabolism/denitrification.yaml
+    role: maintained TraitRecord YAML
+- target_id: traitmech:000106
+  path: data/traits/metabolism/sulfur_oxidation.yaml
+  label: sulfur oxidation
+  record_class: TraitRecord
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/metabolism/sulfur_oxidation.yaml
+    role: maintained TraitRecord YAML
+- target_id: traitmech:000075
+  path: data/traits/physiology/catalase_activity.yaml
+  label: catalase activity
+  record_class: TraitRecord
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/physiology/catalase_activity.yaml
+    role: maintained TraitRecord YAML
+checks:
+- check_id: validate-strict
+  name: Strict LinkML schema and reference validation across all TraitRecord files
+  command: uv run python scripts/validate_strict.py
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000361
+  - traitmech:000362
+  - traitmech:000099
+  - traitmech:000110
+  - traitmech:000104
+  - traitmech:000106
+  - traitmech:000075
+  evidence_ids:
+  - ev-validate-strict
+  - ev-remediated-records
+  summary: All 1,130 TraitRecord YAML files (including all 7 Cycle 5 Stage 5 remediated
+    records) pass strict closed-mode LinkML validation with 0 errors.
+- check_id: audit-snippets
+  name: Evidence snippet structural and baseline ratchet audit
+  command: uv run python scripts/audit_evidence_snippets.py
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000361
+  - traitmech:000362
+  - traitmech:000099
+  - traitmech:000110
+  - traitmech:000104
+  - traitmech:000106
+  - traitmech:000075
+  evidence_ids:
+  - ev-snippet-audit
+  - ev-c5s5-def-src-001
+  - ev-c5s5-def-src-003
+  - ev-c5s5-def-src-004
+  - ev-c5s5-def-src-005
+  - ev-c5s5-def-src-006
+  - ev-c5s5-def-src-007
+  summary: All 7 remediated records now carry a contiguous >=12-char verbatim quote
+    for their primary definition_source in record-level evidence[0], passing scripts/audit_evidence_snippets.py
+    with 0 new findings and reducing MISSING_SNIPPET from 2,251 to 2,246 (-5), UNQUOTED_DEFINITION_SOURCE
+    from 94 to 89 (-5; 0 remaining with in-corpus verbatim quotes), and MISSING_DEFINITION_SOURCE_EVIDENCE
+    from 59 to 57 (-2).
+- check_id: stage5-writer-tests
+  name: Stage 5 guarded writer idempotency and postcondition unit tests
+  command: uv run pytest tests/test_curate_stage5_review_findings.py -v
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000361
+  - traitmech:000362
+  - traitmech:000099
+  - traitmech:000110
+  - traitmech:000104
+  - traitmech:000106
+  - traitmech:000075
+  evidence_ids:
+  - ev-stage5-writer
+  summary: All 5 unit tests in tests/test_curate_stage5_review_findings.py pass, confirming
+    DO_NOT_WORK protection, exact definition_source evidence alignment across all
+    52 remediated specs (4 Cycle 1 + 6 Cycle 2 + 17 Cycle 3 + 18 Cycle 4 + 7 Cycle
+    5), zero UNQUOTED_DEFINITION_SOURCE or MISSING_DEFINITION_SOURCE_EVIDENCE defects
+    on remediated records, and dry-run/apply idempotency.
+- check_id: audit-writers
+  name: Guarded YAML writer safeguard audit
+  command: uv run python scripts/audit_writers.py
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000361
+  - traitmech:000362
+  - traitmech:000099
+  - traitmech:000110
+  - traitmech:000104
+  - traitmech:000106
+  - traitmech:000075
+  evidence_ids:
+  - ev-stage5-writer
+  summary: scripts/curate_stage5_review_findings.py satisfies all writer safeguards
+    (appends curation_history, has write safeguard, validates before write, wired
+    into justfile).
+evidence:
+- evidence_id: ev-prior-c5s4-review
+  kind: prior_review
+  reference: reviews/structured/20261025T200500Z-cycle5-stage4-corpus-record-and-cohort-review/review.yaml
+  locator: findings[0..6]
+  accessed_at: '2026-10-25T21:40:00Z'
+  support: supports
+  summary: Immutable Cycle 5 Stage 4 review bundle identifying the 7 open definition_source
+    evidence snippet / CURIE alignment findings (F-C5S4-DEF-SRC-001..F-C5S4-DEF-SRC-007)
+    with planned remediation actions ACT-C5S4-DEF-SRC-001..007.
+  snapshot_sha256: 0078557515e4c7a3dfd57aed8047e5285cb30f86c6d56b4a7548a6e3a785eda9
+- evidence_id: ev-c5s5-def-src-001
+  kind: primary_source
+  reference: DOI:10.1126/science.aba0372
+  locator: Promoted/aligned on evidence[0] from record-level evidence[0] on the same
+    record (cited under PMID alias PMID:32855333) and parent data/traits/genomics/gao_her_system.yaml
+    (traitmech:000409) evidence[0]
+  accessed_at: '2026-10-25T21:41:00Z'
+  support: supports
+  summary: Primary definition_source DOI:10.1126/science.aba0372 verified via existing
+    verbatim quote in record-level evidence[0] on the same record (cited under PMID
+    alias PMID:32855333) and parent data/traits/genomics/gao_her_system.yaml (traitmech:000409)
+    evidence[0] and populated/aligned in record-level evidence[0].
+  quote: By systematic defense gene prediction and heterologous reconstitution, here
+    we discover 29 widespread antiviral gene cassettes, collectively present in 32%
+    of all sequenced bacterial and archaeal genomes, that mediate protection against
+    specific bacteriophages.
+- evidence_id: ev-c5s5-def-src-003
+  kind: primary_source
+  reference: DOI:10.1038/ismej.2014.60
+  locator: Promoted/aligned on evidence[0] from data/traits/physiology/oligotrophic.yaml
+    (METPO:1000654) causal_graphs[0].edges[2].evidence[0] (streamlined_genome -> efficient_nutrient_use)
+  accessed_at: '2026-10-25T21:41:00Z'
+  support: supports
+  summary: Primary definition_source DOI:10.1038/ismej.2014.60 verified via existing
+    verbatim quote in data/traits/physiology/oligotrophic.yaml (METPO:1000654) causal_graphs[0].edges[2].evidence[0]
+    (streamlined_genome -> efficient_nutrient_use) and populated/aligned in record-level
+    evidence[0].
+  quote: minimizes resources required for replication
+- evidence_id: ev-c5s5-def-src-004
+  kind: primary_source
+  reference: DOI:10.1016/j.cbpa.2015.10.018
+  locator: Promoted/aligned on evidence[0] from data/traits/ecology/saprotrophy.yaml
+    (traitmech:000055) causal_graphs[0].edges[5].evidence[0] (cazymes -> hemicellulose)
+  accessed_at: '2026-10-25T21:41:00Z'
+  support: supports
+  summary: Primary definition_source DOI:10.1016/j.cbpa.2015.10.018 verified via existing
+    verbatim quote in data/traits/ecology/saprotrophy.yaml (traitmech:000055) causal_graphs[0].edges[5].evidence[0]
+    (cazymes -> hemicellulose) and populated/aligned in record-level evidence[0].
+  quote: The enzymatic degradation of cellulose and hemicellulose is accomplished
+    in Nature via the collective action of multiple carbohydrate-active enzymes
+- evidence_id: ev-c5s5-def-src-005
+  kind: primary_source
+  reference: DOI:10.1128/mmbr.61.4.533-616.1997
+  locator: Promoted/aligned on evidence[0] from ancestor data/traits/metabolism/nitrogen_respiration.yaml
+    (traitmech:000121) evidence[0] and data/traits/metabolism/anaerobic_respiration.yaml
+    (METPO:1000802) evidence[0]
+  accessed_at: '2026-10-25T21:41:00Z'
+  support: supports
+  summary: Primary definition_source DOI:10.1128/mmbr.61.4.533-616.1997 verified via
+    existing verbatim quote in ancestor data/traits/metabolism/nitrogen_respiration.yaml
+    (traitmech:000121) evidence[0] and data/traits/metabolism/anaerobic_respiration.yaml
+    (METPO:1000802) evidence[0] and populated/aligned in record-level evidence[0].
+  quote: N oxides as terminal electron acceptors
+- evidence_id: ev-c5s5-def-src-006
+  kind: primary_source
+  reference: DOI:10.1111/j.1574-6976.2009.00187.x
+  locator: Promoted/aligned on evidence[0] from data/traits/physiology/lithotrophic.yaml
+    (METPO:1000649) causal_graphs[0].edges[2].evidence[0] (reduced_sulfur_compound
+    -> inorganic_electron_donor)
+  accessed_at: '2026-10-25T21:41:00Z'
+  support: supports
+  summary: Primary definition_source DOI:10.1111/j.1574-6976.2009.00187.x verified
+    via existing verbatim quote in data/traits/physiology/lithotrophic.yaml (METPO:1000649)
+    causal_graphs[0].edges[2].evidence[0] (reduced_sulfur_compound -> inorganic_electron_donor)
+    and populated/aligned in record-level evidence[0].
+  quote: lithotrophic sulfur oxidation
+- evidence_id: ev-c5s5-def-src-007
+  kind: primary_source
+  reference: DOI:10.1007/s00018-003-3206-5
+  locator: Promoted/aligned on evidence[0] from data/traits/physiology/oxidative_stress_response.yaml
+    (traitmech:000079) evidence[1]
+  accessed_at: '2026-10-25T21:41:00Z'
+  support: supports
+  summary: Primary definition_source DOI:10.1007/s00018-003-3206-5 verified via existing
+    verbatim quote in data/traits/physiology/oxidative_stress_response.yaml (traitmech:000079)
+    evidence[1] and populated/aligned in record-level evidence[0].
+  quote: hydrogen peroxide to water and molecular oxygen, serving to protect cells
+- evidence_id: ev-remediated-records
+  kind: record_content
+  reference: data/traits/genomics/gao_her_duf_system.yaml; data/traits/genomics/gao_her_sir_system.yaml;
+    data/traits/genomics/genome_streamlining.yaml; data/traits/metabolism/biopolymer_degradation.yaml;
+    data/traits/metabolism/denitrification.yaml; data/traits/metabolism/sulfur_oxidation.yaml;
+    data/traits/physiology/catalase_activity.yaml
+  locator: definition_source, evidence[0], curation_history
+  accessed_at: '2026-10-25T21:42:00Z'
+  support: supports
+  summary: All 7 remediated TraitRecord YAML files now include a verified non-elliptical
+    verbatim snippet for their declared definition_source in record-level evidence[0]
+    and an append-only ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE curation_history
+    event.
+- evidence_id: ev-stage5-writer
+  kind: validation
+  reference: scripts/curate_stage5_review_findings.py; tests/test_curate_stage5_review_findings.py
+  locator: process_all
+  accessed_at: '2026-10-25T21:43:00Z'
+  support: supports
+  summary: Guarded writer script and unit test suite verifying closed-mode LinkML
+    validation, DO_NOT_WORK exclusion, and idempotent remediation across all 52 target
+    specs (4 Cycle 1 + 6 Cycle 2 + 17 Cycle 3 + 18 Cycle 4 + 7 Cycle 5).
+  snapshot_sha256: e5de00ff4766f5728b9b75565e5e070a5727887ea6254a32acbcb759677d1908
+- evidence_id: ev-validate-strict
+  kind: validation
+  reference: scripts/validate_strict.py
+  locator: reports/instance_validation_failures.tsv
+  accessed_at: '2026-10-25T21:44:00Z'
+  support: supports
+  summary: Closed-mode LinkML schema and identifier validation passes with 0 errors
+    across all 1,130 TraitRecord files.
+- evidence_id: ev-snippet-audit
+  kind: validation
+  reference: scripts/audit_evidence_snippets.py
+  locator: conf/evidence_snippet_baseline.tsv
+  accessed_at: '2026-10-25T21:44:00Z'
+  support: supports
+  summary: All 7 remediated record-level evidence[0] entries pass contiguous verbatim
+    quote checks with 0 new warnings and eliminate all 7 open definition_source findings
+    from Cycle 5 Stage 4.
+assessments:
+- assessment_id: assess-remediated-evidence-alignment
+  area: evidence
+  topic: Verification of record-level definition_source evidence[0] verbatim snippets
+    across the 7 remediated records
+  outcome: supported
+  summary: All 7 records identified with open findings in Cycle 5 Stage 4 (gao_her_duf_system.yaml,
+    gao_her_sir_system.yaml, genome_streamlining.yaml, biopolymer_degradation.yaml,
+    denitrification.yaml, sulfur_oxidation.yaml, and catalase_activity.yaml) now carry
+    a verified non-elliptical verbatim snippet for their primary definition_source
+    directly in record-level evidence[0].
+  target_ids:
+  - traitmech:000361
+  - traitmech:000362
+  - traitmech:000099
+  - traitmech:000110
+  - traitmech:000104
+  - traitmech:000106
+  - traitmech:000075
+  evidence_ids:
+  - ev-prior-c5s4-review
+  - ev-c5s5-def-src-001
+  - ev-c5s5-def-src-003
+  - ev-c5s5-def-src-004
+  - ev-c5s5-def-src-005
+  - ev-c5s5-def-src-006
+  - ev-c5s5-def-src-007
+  - ev-remediated-records
+  - ev-snippet-audit
+  metrics:
+  - name: remediated_open_findings_rate
+    value: 1.0
+    unit: ratio
+    definition: Fraction of Cycle 5 Stage 4 open findings in group G-C5S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+      verified as resolved with verbatim definition_source evidence.
+    denominator: 7
+    minimum: 0.0
+    maximum: 1.0
+  details: 'Each of the 7 remediated records was re-inspected against .claude/skills/review-yaml-record/SKILL.md:
+    (1) F-C5S4-DEF-SRC-001..002 (gao_her_duf_system.yaml, gao_her_sir_system.yaml)
+    now align evidence[0].reference with definition_source DOI:10.1126/science.aba0372
+    (from PMID alias PMID:32855333) while preserving the verified verbatim abstract
+    snippet from Gao et al. 2020 (Science); and (2) F-C5S4-DEF-SRC-003..007 (genome_streamlining.yaml,
+    biopolymer_degradation.yaml, denitrification.yaml, sulfur_oxidation.yaml, catalase_activity.yaml)
+    now quote their declared definition_source with a contiguous non-elliptical verbatim
+    snippet in evidence[0] promoted from cross-record verified evidence in oligotrophic.yaml,
+    saprotrophy.yaml, nitrogen_respiration.yaml, lithotrophic.yaml, and oxidative_stress_response.yaml.'
+- assessment_id: assess-remediated-schema-and-provenance
+  area: provenance
+  topic: Schema validity, curation_history provenance, and writer guardrails on remediated
+    records
+  outcome: supported
+  summary: 'All 7 remediated records pass strict closed-mode LinkML validation, preserve
+    existing canonical_examples, causal_graphs, and UniProtKB protein_examples untouched,
+    and record append-only ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE curation_history
+    entries referencing issue #2002.'
+  target_ids:
+  - traitmech:000361
+  - traitmech:000362
+  - traitmech:000099
+  - traitmech:000110
+  - traitmech:000104
+  - traitmech:000106
+  - traitmech:000075
+  evidence_ids:
+  - ev-remediated-records
+  - ev-stage5-writer
+  - ev-validate-strict
+findings:
+- finding_id: F-C5S4-DEF-SRC-001
+  issue_key: gao-her-duf-system-definition-source-curie-alignment
+  category: evidence
+  severity: minor
+  status: resolved
+  certainty: confirmed
+  title: gao_her_duf_system.yaml now includes a verified verbatim snippet for definition_source
+    DOI:10.1126/science.aba0372 in record-level evidence[0]
+  description: 'Resolved Cycle 5 Stage 4 open finding F-C5S4-DEF-SRC-001 on data/traits/genomics/gao_her_duf_system.yaml
+    (traitmech:000361): aligned/promoted verified verbatim snippet (''By systematic
+    defense gene prediction and heterologous reconstitution, here we discover 29 widespread
+    antiviral gene cassettes, collectively present in 32% of all sequenced bacterial
+    and archaeal genomes, that mediate protection against specific bacteriophages.'')
+    from record-level evidence[0] on the same record (cited under PMID alias PMID:32855333)
+    and parent data/traits/genomics/gao_her_system.yaml (traitmech:000409) evidence[0]
+    to record-level evidence[0] for definition_source DOI:10.1126/science.aba0372
+    and appended curation_history entry via scripts/curate_stage5_review_findings.py.'
+  target_ids:
+  - traitmech:000361
+  field_paths:
+  - definition_source
+  - evidence
+  - curation_history
+  evidence_ids:
+  - ev-prior-c5s4-review
+  - ev-c5s5-def-src-001
+  - ev-remediated-records
+  - ev-stage5-writer
+  - ev-snippet-audit
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/genomics/gao_her_duf_system.yaml
+    role: maintained TraitRecord YAML
+  disposition_reason: 'Resolved in Cycle 5 Stage 5 (resolve_review_findings) under
+    group G-C5S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS and GitHub issue #2002 via
+    guarded writer scripts/curate_stage5_review_findings.py.'
+  previous_occurrences:
+  - repository: CultureBotAI/TraitMech
+    review_id: 20261025T200500Z-cycle5-stage4-corpus-record-and-cohort-review
+    finding_id: F-C5S4-DEF-SRC-001
+  external_issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/2002
+- finding_id: F-C5S4-DEF-SRC-002
+  issue_key: gao-her-sir-system-definition-source-curie-alignment
+  category: evidence
+  severity: minor
+  status: resolved
+  certainty: confirmed
+  title: gao_her_sir_system.yaml now includes a verified verbatim snippet for definition_source
+    DOI:10.1126/science.aba0372 in record-level evidence[0]
+  description: 'Resolved Cycle 5 Stage 4 open finding F-C5S4-DEF-SRC-002 on data/traits/genomics/gao_her_sir_system.yaml
+    (traitmech:000362): aligned/promoted verified verbatim snippet (''By systematic
+    defense gene prediction and heterologous reconstitution, here we discover 29 widespread
+    antiviral gene cassettes, collectively present in 32% of all sequenced bacterial
+    and archaeal genomes, that mediate protection against specific bacteriophages.'')
+    from record-level evidence[0] on the same record (cited under PMID alias PMID:32855333)
+    and parent data/traits/genomics/gao_her_system.yaml (traitmech:000409) evidence[0]
+    to record-level evidence[0] for definition_source DOI:10.1126/science.aba0372
+    and appended curation_history entry via scripts/curate_stage5_review_findings.py.'
+  target_ids:
+  - traitmech:000362
+  field_paths:
+  - definition_source
+  - evidence
+  - curation_history
+  evidence_ids:
+  - ev-prior-c5s4-review
+  - ev-c5s5-def-src-001
+  - ev-remediated-records
+  - ev-stage5-writer
+  - ev-snippet-audit
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/genomics/gao_her_sir_system.yaml
+    role: maintained TraitRecord YAML
+  disposition_reason: 'Resolved in Cycle 5 Stage 5 (resolve_review_findings) under
+    group G-C5S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS and GitHub issue #2002 via
+    guarded writer scripts/curate_stage5_review_findings.py.'
+  previous_occurrences:
+  - repository: CultureBotAI/TraitMech
+    review_id: 20261025T200500Z-cycle5-stage4-corpus-record-and-cohort-review
+    finding_id: F-C5S4-DEF-SRC-002
+  external_issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/2002
+- finding_id: F-C5S4-DEF-SRC-003
+  issue_key: genome-streamlining-definition-source-snippet
+  category: evidence
+  severity: minor
+  status: resolved
+  certainty: confirmed
+  title: genome_streamlining.yaml now includes a verified verbatim snippet for definition_source
+    DOI:10.1038/ismej.2014.60 in record-level evidence[0]
+  description: 'Resolved Cycle 5 Stage 4 open finding F-C5S4-DEF-SRC-003 on data/traits/genomics/genome_streamlining.yaml
+    (traitmech:000099): aligned/promoted verified verbatim snippet (''minimizes resources
+    required for replication'') from data/traits/physiology/oligotrophic.yaml (METPO:1000654)
+    causal_graphs[0].edges[2].evidence[0] (streamlined_genome -> efficient_nutrient_use)
+    to record-level evidence[0] for definition_source DOI:10.1038/ismej.2014.60 and
+    appended curation_history entry via scripts/curate_stage5_review_findings.py.'
+  target_ids:
+  - traitmech:000099
+  field_paths:
+  - definition_source
+  - evidence
+  - curation_history
+  evidence_ids:
+  - ev-prior-c5s4-review
+  - ev-c5s5-def-src-003
+  - ev-remediated-records
+  - ev-stage5-writer
+  - ev-snippet-audit
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/genomics/genome_streamlining.yaml
+    role: maintained TraitRecord YAML
+  disposition_reason: 'Resolved in Cycle 5 Stage 5 (resolve_review_findings) under
+    group G-C5S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS and GitHub issue #2002 via
+    guarded writer scripts/curate_stage5_review_findings.py.'
+  previous_occurrences:
+  - repository: CultureBotAI/TraitMech
+    review_id: 20261025T200500Z-cycle5-stage4-corpus-record-and-cohort-review
+    finding_id: F-C5S4-DEF-SRC-003
+  external_issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/2002
+- finding_id: F-C5S4-DEF-SRC-004
+  issue_key: biopolymer-degradation-definition-source-snippet
+  category: evidence
+  severity: minor
+  status: resolved
+  certainty: confirmed
+  title: biopolymer_degradation.yaml now includes a verified verbatim snippet for
+    definition_source DOI:10.1016/j.cbpa.2015.10.018 in record-level evidence[0]
+  description: 'Resolved Cycle 5 Stage 4 open finding F-C5S4-DEF-SRC-004 on data/traits/metabolism/biopolymer_degradation.yaml
+    (traitmech:000110): aligned/promoted verified verbatim snippet (''The enzymatic
+    degradation of cellulose and hemicellulose is accomplished in Nature via the collective
+    action of multiple carbohydrate-active enzymes'') from data/traits/ecology/saprotrophy.yaml
+    (traitmech:000055) causal_graphs[0].edges[5].evidence[0] (cazymes -> hemicellulose)
+    to record-level evidence[0] for definition_source DOI:10.1016/j.cbpa.2015.10.018
+    and appended curation_history entry via scripts/curate_stage5_review_findings.py.'
+  target_ids:
+  - traitmech:000110
+  field_paths:
+  - definition_source
+  - evidence
+  - curation_history
+  evidence_ids:
+  - ev-prior-c5s4-review
+  - ev-c5s5-def-src-004
+  - ev-remediated-records
+  - ev-stage5-writer
+  - ev-snippet-audit
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/metabolism/biopolymer_degradation.yaml
+    role: maintained TraitRecord YAML
+  disposition_reason: 'Resolved in Cycle 5 Stage 5 (resolve_review_findings) under
+    group G-C5S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS and GitHub issue #2002 via
+    guarded writer scripts/curate_stage5_review_findings.py.'
+  previous_occurrences:
+  - repository: CultureBotAI/TraitMech
+    review_id: 20261025T200500Z-cycle5-stage4-corpus-record-and-cohort-review
+    finding_id: F-C5S4-DEF-SRC-004
+  external_issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/2002
+- finding_id: F-C5S4-DEF-SRC-005
+  issue_key: denitrification-definition-source-snippet
+  category: evidence
+  severity: minor
+  status: resolved
+  certainty: confirmed
+  title: denitrification.yaml now includes a verified verbatim snippet for definition_source
+    DOI:10.1128/mmbr.61.4.533-616.1997 in record-level evidence[0]
+  description: 'Resolved Cycle 5 Stage 4 open finding F-C5S4-DEF-SRC-005 on data/traits/metabolism/denitrification.yaml
+    (traitmech:000104): aligned/promoted verified verbatim snippet (''N oxides as
+    terminal electron acceptors'') from ancestor data/traits/metabolism/nitrogen_respiration.yaml
+    (traitmech:000121) evidence[0] and data/traits/metabolism/anaerobic_respiration.yaml
+    (METPO:1000802) evidence[0] to record-level evidence[0] for definition_source
+    DOI:10.1128/mmbr.61.4.533-616.1997 and appended curation_history entry via scripts/curate_stage5_review_findings.py.'
+  target_ids:
+  - traitmech:000104
+  field_paths:
+  - definition_source
+  - evidence
+  - curation_history
+  evidence_ids:
+  - ev-prior-c5s4-review
+  - ev-c5s5-def-src-005
+  - ev-remediated-records
+  - ev-stage5-writer
+  - ev-snippet-audit
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/metabolism/denitrification.yaml
+    role: maintained TraitRecord YAML
+  disposition_reason: 'Resolved in Cycle 5 Stage 5 (resolve_review_findings) under
+    group G-C5S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS and GitHub issue #2002 via
+    guarded writer scripts/curate_stage5_review_findings.py.'
+  previous_occurrences:
+  - repository: CultureBotAI/TraitMech
+    review_id: 20261025T200500Z-cycle5-stage4-corpus-record-and-cohort-review
+    finding_id: F-C5S4-DEF-SRC-005
+  external_issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/2002
+- finding_id: F-C5S4-DEF-SRC-006
+  issue_key: sulfur-oxidation-definition-source-snippet
+  category: evidence
+  severity: minor
+  status: resolved
+  certainty: confirmed
+  title: sulfur_oxidation.yaml now includes a verified verbatim snippet for definition_source
+    DOI:10.1111/j.1574-6976.2009.00187.x in record-level evidence[0]
+  description: 'Resolved Cycle 5 Stage 4 open finding F-C5S4-DEF-SRC-006 on data/traits/metabolism/sulfur_oxidation.yaml
+    (traitmech:000106): aligned/promoted verified verbatim snippet (''lithotrophic
+    sulfur oxidation'') from data/traits/physiology/lithotrophic.yaml (METPO:1000649)
+    causal_graphs[0].edges[2].evidence[0] (reduced_sulfur_compound -> inorganic_electron_donor)
+    to record-level evidence[0] for definition_source DOI:10.1111/j.1574-6976.2009.00187.x
+    and appended curation_history entry via scripts/curate_stage5_review_findings.py.'
+  target_ids:
+  - traitmech:000106
+  field_paths:
+  - definition_source
+  - evidence
+  - curation_history
+  evidence_ids:
+  - ev-prior-c5s4-review
+  - ev-c5s5-def-src-006
+  - ev-remediated-records
+  - ev-stage5-writer
+  - ev-snippet-audit
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/metabolism/sulfur_oxidation.yaml
+    role: maintained TraitRecord YAML
+  disposition_reason: 'Resolved in Cycle 5 Stage 5 (resolve_review_findings) under
+    group G-C5S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS and GitHub issue #2002 via
+    guarded writer scripts/curate_stage5_review_findings.py.'
+  previous_occurrences:
+  - repository: CultureBotAI/TraitMech
+    review_id: 20261025T200500Z-cycle5-stage4-corpus-record-and-cohort-review
+    finding_id: F-C5S4-DEF-SRC-006
+  external_issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/2002
+- finding_id: F-C5S4-DEF-SRC-007
+  issue_key: catalase-activity-definition-source-snippet
+  category: evidence
+  severity: minor
+  status: resolved
+  certainty: confirmed
+  title: catalase_activity.yaml now includes a verified verbatim snippet for definition_source
+    DOI:10.1007/s00018-003-3206-5 in record-level evidence[0]
+  description: 'Resolved Cycle 5 Stage 4 open finding F-C5S4-DEF-SRC-007 on data/traits/physiology/catalase_activity.yaml
+    (traitmech:000075): aligned/promoted verified verbatim snippet (''hydrogen peroxide
+    to water and molecular oxygen, serving to protect cells'') from data/traits/physiology/oxidative_stress_response.yaml
+    (traitmech:000079) evidence[1] to record-level evidence[0] for definition_source
+    DOI:10.1007/s00018-003-3206-5 and appended curation_history entry via scripts/curate_stage5_review_findings.py.'
+  target_ids:
+  - traitmech:000075
+  field_paths:
+  - definition_source
+  - evidence
+  - curation_history
+  evidence_ids:
+  - ev-prior-c5s4-review
+  - ev-c5s5-def-src-007
+  - ev-remediated-records
+  - ev-stage5-writer
+  - ev-snippet-audit
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/physiology/catalase_activity.yaml
+    role: maintained TraitRecord YAML
+  disposition_reason: 'Resolved in Cycle 5 Stage 5 (resolve_review_findings) under
+    group G-C5S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS and GitHub issue #2002 via
+    guarded writer scripts/curate_stage5_review_findings.py.'
+  previous_occurrences:
+  - repository: CultureBotAI/TraitMech
+    review_id: 20261025T200500Z-cycle5-stage4-corpus-record-and-cohort-review
+    finding_id: F-C5S4-DEF-SRC-007
+  external_issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/2002
+actions: []
+limitations:
+- 'This batch review covers the 7 records remediated in Cycle 5 Stage 5 under group
+  G-C5S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS (#2002); the 5 cohort-level source-limited
+  or upstream-blocked findings from Cycle 5 Stage 4 remain tracked under open GitHub
+  issues #1982, #1983, #1984, #1985, and #364.'
+- All 7 of the remediated records carry repository-minted traitmech:NNNNNN identifiers
+  (traitmech:000361, traitmech:000362, traitmech:000099, traitmech:000110, traitmech:000104,
+  traitmech:000106, traitmech:000075) backed by validated ROBOT templates awaiting
+  upstream METPO release incorporation (#364, berkeleybop/metpo#535).
+notes:
+- 'Skills executed: .claude/skills/curate-yaml-record/SKILL.md and .claude/skills/review-yaml-record/SKILL.md.'
+- Immutable Cycle 5 Stage 4 review bundle preserved untouched at reviews/structured/20261025T200500Z-cycle5-stage4-corpus-record-and-cohort-review/review.yaml.
+related_reviews:
+- repository: CultureBotAI/TraitMech
+  review_id: 20261025T200500Z-cycle5-stage4-corpus-record-and-cohort-review
+  relationship: follow_up_remediation_verification
+links:
+- https://github.com/CultureBotAI/TraitMech/issues/2002
+- https://github.com/CultureBotAI/TraitMech/issues/1982
+- https://github.com/CultureBotAI/TraitMech/issues/1983
+- https://github.com/CultureBotAI/TraitMech/issues/1984
+- https://github.com/CultureBotAI/TraitMech/issues/1985
+- https://github.com/CultureBotAI/TraitMech/issues/364
+tags:
+- cycle-05
+- stage-05
+- resolve-review-findings
+- remediation-verification
+```

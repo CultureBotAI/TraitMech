@@ -92453,9 +92453,9 @@
     ],
     "evidence": [
       {
-        "reference": "PMID:32855333",
+        "reference": "DOI:10.1126/science.aba0372",
         "snippet": "By systematic defense gene prediction and heterologous reconstitution, here we discover 29 widespread antiviral gene cassettes, collectively present in 32% of all sequenced bacterial and archaeal genomes, that mediate protection against specific bacteriophages.",
-        "notes": "Gao et al. support a systematic defense-gene prediction and heterologous reconstitution campaign that discovered widespread antiviral gene cassettes."
+        "notes": "Gao et al. support a systematic defense-gene prediction and heterologous reconstitution campaign that discovered widespread antiviral gene cassettes (PMID:32855333 / DOI:10.1126/science.aba0372)."
       },
       {
         "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md",
@@ -92614,6 +92614,13 @@
         "action": "EDIT",
         "changes": "Removed the redundant Gao-Her-to-phage subclass edge from the child graph; the Gao-Her parent record now carries that edge.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-25T21:40:00Z",
+        "curator": "claude",
+        "action": "ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE",
+        "changes": "Aligned record-level evidence[0].reference from PMID:32855333 to DOI:10.1126/science.aba0372 (same Gao et al. 2020 publication) to match definition_source while preserving the verified verbatim snippet and PMID cross-reference in notes (Cycle 5 Stage 5 remediation of F-C5S4-DEF-SRC-001 in group G-C5S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).",
+        "llm_assisted": true
       }
     ]
   },
@@ -92647,9 +92654,9 @@
     ],
     "evidence": [
       {
-        "reference": "PMID:32855333",
+        "reference": "DOI:10.1126/science.aba0372",
         "snippet": "By systematic defense gene prediction and heterologous reconstitution, here we discover 29 widespread antiviral gene cassettes, collectively present in 32% of all sequenced bacterial and archaeal genomes, that mediate protection against specific bacteriophages.",
-        "notes": "Gao et al. support a systematic defense-gene prediction and heterologous reconstitution campaign that discovered widespread antiviral gene cassettes."
+        "notes": "Gao et al. support a systematic defense-gene prediction and heterologous reconstitution campaign that discovered widespread antiviral gene cassettes (PMID:32855333 / DOI:10.1126/science.aba0372)."
       },
       {
         "reference": "https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md",
@@ -92807,6 +92814,13 @@
         "curator": "codex",
         "action": "EDIT",
         "changes": "Removed the redundant Gao-Her-to-phage subclass edge from the child graph; the Gao-Her parent record now carries that edge.",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-25T21:40:00Z",
+        "curator": "claude",
+        "action": "ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE",
+        "changes": "Aligned record-level evidence[0].reference from PMID:32855333 to DOI:10.1126/science.aba0372 (same Gao et al. 2020 publication) to match definition_source while preserving the verified verbatim snippet and PMID cross-reference in notes (Cycle 5 Stage 5 remediation of F-C5S4-DEF-SRC-002 in group G-C5S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).",
         "llm_assisted": true
       }
     ]
@@ -98236,6 +98250,7 @@
     "evidence": [
       {
         "reference": "DOI:10.1038/ismej.2014.60",
+        "snippet": "minimizes resources required for replication",
         "notes": "Giovannoni et al. set out streamlining theory, explaining small streamlined genomes of abundant oligotrophic microbes."
       },
       {
@@ -98458,6 +98473,13 @@
         "curator": "codex",
         "action": "CONNECT_CAUSAL_GRAPH",
         "changes": "Connected the vitamin-dependence branch to the genome-streamlining graph with a deliberately noncausal, model-qualified association backed by two source-verified snippets (issues 426 and 183).",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-25T21:40:00Z",
+        "curator": "claude",
+        "action": "ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE",
+        "changes": "Added verified verbatim snippet from DOI:10.1038/ismej.2014.60 (already present on oligotrophic.yaml causal_graphs[0].edges[2].evidence[0]) to record-level evidence[0] to match definition_source (Cycle 5 Stage 5 remediation of F-C5S4-DEF-SRC-003 in group G-C5S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).",
         "llm_assisted": true
       }
     ]
@@ -142296,6 +142318,7 @@
     "evidence": [
       {
         "reference": "DOI:10.1016/j.cbpa.2015.10.018",
+        "snippet": "The enzymatic degradation of cellulose and hemicellulose is accomplished in Nature via the collective action of multiple carbohydrate-active enzymes",
         "notes": "Cragg et al. review lignocellulose degradation mechanisms across the tree of life, using complementary enzymes to deconstruct plant biopolymers; parent of the polymer-specific sub-variants."
       },
       {
@@ -142723,6 +142746,13 @@
         "curator": "claude",
         "action": "REFRESH_UNIPROT_ENTRY_VERSION",
         "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P07984 (122 -> 123 on endoglucanase).",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-25T21:40:00Z",
+        "curator": "claude",
+        "action": "ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE",
+        "changes": "Added verified verbatim snippet from DOI:10.1016/j.cbpa.2015.10.018 (already present on saprotrophy.yaml causal_graphs[0].edges[5].evidence[0]) to record-level evidence[0] to match definition_source (Cycle 5 Stage 5 remediation of F-C5S4-DEF-SRC-004 in group G-C5S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).",
         "llm_assisted": true
       }
     ]
@@ -146230,6 +146260,7 @@
     "evidence": [
       {
         "reference": "DOI:10.1128/mmbr.61.4.533-616.1997",
+        "snippet": "N oxides as terminal electron acceptors",
         "notes": "Zumft reviews the cell biology and molecular basis of denitrification, the stepwise respiratory reduction of nitrate to dinitrogen."
       },
       {
@@ -146654,6 +146685,13 @@
         "curator": "codex",
         "action": "REFINE_PARENT_TRAIT",
         "changes": "Narrowed parent from anaerobic respiration to nitrate respiration.",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-25T21:40:00Z",
+        "curator": "claude",
+        "action": "ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE",
+        "changes": "Added verified verbatim snippet from DOI:10.1128/mmbr.61.4.533-616.1997 (already present on ancestor records nitrogen_respiration.yaml and anaerobic_respiration.yaml evidence[0]) to record-level evidence[0] to match definition_source (Cycle 5 Stage 5 remediation of F-C5S4-DEF-SRC-005 in group G-C5S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).",
         "llm_assisted": true
       }
     ]
@@ -164889,6 +164927,7 @@
     "evidence": [
       {
         "reference": "DOI:10.1111/j.1574-6976.2009.00187.x",
+        "snippet": "lithotrophic sulfur oxidation",
         "notes": "Ghosh & Dam review the biochemistry and molecular biology of lithotrophic sulfur oxidation across bacteria and archaea."
       },
       {
@@ -165254,6 +165293,13 @@
         "curator": "codex",
         "action": "CURATE_PROTEIN_TAXON_EXAMPLE",
         "changes": "Scoped the cross-taxon sulfur-oxidation mechanism, added a DOI-backed Thiobacillus denitrificans SQR protein example, and documented why the broad Sox, PDO, and TetH labels remain reviewed label-only nodes.",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-25T21:40:00Z",
+        "curator": "claude",
+        "action": "ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE",
+        "changes": "Added verified verbatim snippet from DOI:10.1111/j.1574-6976.2009.00187.x (already present on lithotrophic.yaml causal_graphs[0].edges[2].evidence[0]) to record-level evidence[0] to match definition_source (Cycle 5 Stage 5 remediation of F-C5S4-DEF-SRC-006 in group G-C5S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).",
         "llm_assisted": true
       }
     ]
@@ -212204,6 +212250,7 @@
     "evidence": [
       {
         "reference": "DOI:10.1007/s00018-003-3206-5",
+        "snippet": "hydrogen peroxide to water and molecular oxygen, serving to protect cells",
         "notes": "Chelikani, Fita & Loewen review the diversity of catalases, enzymes that dismutate hydrogen peroxide to water and oxygen."
       },
       {
@@ -212675,6 +212722,13 @@
         "curator": "claude",
         "action": "CURATE_PROTEIN_TAXON_EXAMPLE",
         "changes": "Added reviewed E. coli K-12 OxyR protein_example UniProtKB:P0ACQ4 (v144) on oxyr_regulator (DOI:10.1073/pnas.96.11.6161), updated scope_notes, and refreshed UniProtKB:Q2G282 entry_version 109 -> 110 on perr_regulator.",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-25T21:40:00Z",
+        "curator": "claude",
+        "action": "ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE",
+        "changes": "Added verified verbatim snippet from DOI:10.1007/s00018-003-3206-5 (already present on oxidative_stress_response.yaml evidence[1]) to record-level evidence[0] to match definition_source (Cycle 5 Stage 5 remediation of F-C5S4-DEF-SRC-007 in group G-C5S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).",
         "llm_assisted": true
       }
     ]
