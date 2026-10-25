@@ -1,0 +1,42 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/curate_stage3_protein_examples.py
+  slug: curate_stage3_protein_examples
+session:
+  id: 2026-10-25T184500Z-claude-code-c5s301
+  timestamp: '2026-10-25T18:45:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+    agent_tool: antigravity
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1978
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - evidence
+  - canonical_examples
+  - discussions
+  - curation_history
+  summary: Promote all 3 Cohort H NONMECHANISTIC records to MECHANISTIC with 3 verified
+    reviewed UniProtKB protein_examples
+  details: 'Audited all 1,130 TraitRecord YAMLs (1,129 eligible, 1 protected) and all 832
+    GENE_OR_PROTEIN causal nodes for Cycle 5 Stage 3 (protein_examples). Promoted all 3 Cohort
+    H NONMECHANISTIC records from Cycle 5 Stage 2 to MECHANISTIC by adding 3 InterPro-grounded
+    GENE_OR_PROTEIN nodes with 3 verified reviewed UniProtKB protein_examples, 3 distinct verbatim
+    record-level evidence items, 1 new canonical_examples entry, and RESOLVED CURATION_TODO
+    discussions: metabolism/butanediol_fermentation.yaml (InterPro:IPR014007 butanediol_fermentation_budc:
+    Klebsiella pneumoniae NCBITaxon:573 UniProtKB:Q48436 BudC v139 seq v2 backed by
+    DOI:10.1038/sj.jim.7000179), physiology/beta_glucuronidase_activity.yaml (added Escherichia
+    coli K-12 NCBITaxon:83333 canonical_examples; InterPro:IPR006101 beta_glucuronidase_uida:
+    Escherichia coli K-12 NCBITaxon:83333 UP000000625 UniProtKB:P05804 UidA v191 seq v2 backed
+    by DOI:10.1073/pnas.83.22.8447), and physiology/beta_n_acetylhexosaminidase_activity.yaml
+    (InterPro:IPR025705 beta_n_acetylhexosaminidase_chb: Serratia marcescens NCBITaxon:615
+    UniProtKB:Q54468 Chb v144 seq v1 backed by DOI:10.1016/0378-1119(95)00848-9). Brought
+    reports/uniprot_grounding_audit.tsv to 188 uses across 167 exemplified GENE_OR_PROTEIN
+    nodes (155 unique accessions) with 0 findings and 0 skipped entry_versions.'
