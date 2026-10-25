@@ -528,6 +528,7 @@ data/traits/metabolism/anaerobic_respiration.yaml	METPO:1000802	Anaerobic respir
 data/traits/metabolism/anoxygenic_photosynthesis.yaml	traitmech:000035	anoxygenic photosynthesis	anoxygenic_photosynthesis_sulfide_donor	MECHANISTIC	1	1	0	1	1	1	1	PASS	0	0	-
 data/traits/metabolism/arsenate_respiration.yaml	traitmech:000195	arsenate respiration	arsenate_respiration_arr_pathway_sketch	MECHANISTIC	1	1	0	1	1	2	2	PASS	0	0	-
 data/traits/metabolism/biopolymer_degradation.yaml	traitmech:000110	biopolymer degradation	biopolymer_degradation_extracellular_hydrolysis	MECHANISTIC	7	3	4	2	2	1	1	PASS	0	0	-
+data/traits/metabolism/butanediol_fermentation.yaml	traitmech:000181	2,3-butanediol fermentation	butanediol_fermentation_acetoin_sketch	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/metabolism/cable_bacteria_metabolism.yaml	METPO:1002003	Cable bacteria metabolism	cable_bacteria_long_distance_electron_transport	MECHANISTIC	1	0	1	2	2	2	2	PASS	0	0	-
 data/traits/metabolism/calvin_benson_bassham_cycle.yaml	traitmech:000020	Calvin-Benson-Bassham cycle	cbb_rubisco_co2_fixation	MECHANISTIC	4	3	1	2	2	1	1	PASS	0	0	-
 data/traits/metabolism/carbon_fixation.yaml	traitmech:000019	carbon fixation	carbon_fixation_co2_assimilation	MECHANISTIC	3	2	1	2	2	1	1	PASS	0	0	-
@@ -681,6 +682,8 @@ data/traits/physiology/antibiotic_resistance.yaml	traitmech:000088	antibiotic re
 data/traits/physiology/arginine_dihydrolase_activity.yaml	traitmech:000164	arginine dihydrolase activity	arginine_dihydrolase_adi_pathway_sketch	MECHANISTIC	1	1	0	1	1	3	3	PASS	0	0	-
 data/traits/physiology/autotrophic.yaml	METPO:1000632	autotrophic	autotrophic_inorganic_carbon_fixation	MECHANISTIC	3	2	1	3	3	1	1	PASS	0	0	-
 data/traits/physiology/bacteriocin_production.yaml	traitmech:000183	bacteriocin production	bacteriocin_production_defense_mechanism	MECHANISTIC	1	1	0	1	1	1	0	PASS	0	0	-
+data/traits/physiology/beta_glucuronidase_activity.yaml	traitmech:000151	beta-glucuronidase activity	beta_glucuronidase_uida_sketch	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/physiology/beta_n_acetylhexosaminidase_activity.yaml	traitmech:000157	beta-N-acetylhexosaminidase activity	beta_n_acetylhexosaminidase_chb_sketch	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/physiology/bioluminescence.yaml	traitmech:000085	bioluminescence	bioluminescence_luciferase	MECHANISTIC	5	2	3	1	1	1	1	PASS	0	0	-
 data/traits/physiology/carboxydotrophic.yaml	METPO:1000633	carboxydotrophic	carboxydotrophic_co_oxidation	MECHANISTIC	7	2	5	2	2	1	1	PASS	0	0	-
 data/traits/physiology/catalase_activity.yaml	traitmech:000075	catalase activity	catalase_activity_h2o2_detoxification	MECHANISTIC	3	1	2	3	3	3	1	PASS	0	0	-
