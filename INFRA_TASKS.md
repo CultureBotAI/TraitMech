@@ -135,7 +135,13 @@ tasks:
 - **Dependencies**: None
 - **Disposition**: Resolved in Cycle 4 Stage 6 (issue #2002, follow-up to #1981) by updating `scripts/audit_evidence_snippets.py` so `term_kind: OBJECT_PROPERTY` records do not propagate predicate-stem snippets into `refs_by_record_id` / `refs_by_parent_id` and accept any non-empty, non-elliptical predicate-stem snippet (`min_snip_chars = 1`) as satisfying `definition_source` coverage, verified by unit tests in `tests/test_audit_evidence_snippets.py` and full-corpus `audit(check_definition_sources=True)` (`0` `UNQUOTED_DEFINITION_SOURCE` findings across all 28 `OBJECT_PROPERTY` records).
 
-
-
-
+### `traitmech-infra-0007` — Extend `UNQUOTED_DEFINITION_SOURCE` in `scripts/audit_evidence_snippets.py` to check corpus-wide `>=16`-char non-elliptical quotes when `definition_source` is cited in `evidence[].reference` without a snippet
+- **Origin**: `mech-goal-sequence-20261019`, Cycle 5, Stage 4 (`record_review`)
+- **Issue**: https://github.com/CultureBotAI/TraitMech/issues/2002 (follow-up to https://github.com/CultureBotAI/TraitMech/issues/1981)
+- **Status**: `open`
+- **Observation**: In `scripts/audit_evidence_snippets.py` (`_collect_in_repo_quoted_refs`), `UNQUOTED_DEFINITION_SOURCE` only inspects quotes on the same record, its immediate 1-hop `parent_traits` (`refs_by_record_id`), its immediate children (`refs_by_parent_id`), or direct siblings sharing an immediate `parent_traits` entry. During Cycle 5 Stage 4 frozen-inventory review, 5 `CLASS` records (`data/traits/genomics/genome_streamlining.yaml`, `data/traits/metabolism/biopolymer_degradation.yaml`, `data/traits/metabolism/denitrification.yaml`, `data/traits/metabolism/sulfur_oxidation.yaml`, and `data/traits/physiology/catalase_activity.yaml`) were found to declare a primary `definition_source` and cite that exact reference in record-level `evidence[0]` without a `snippet`, while a verified non-elliptical verbatim quote (`>=16` chars) from the exact same `definition_source` already exists on a 2-hop ancestor (`nitrogen_respiration.yaml` / `anaerobic_respiration.yaml`) or on a cross-cohort `TraitRecord` (`oligotrophic.yaml`, `saprotrophy.yaml`, `lithotrophic.yaml`, `oxidative_stress_response.yaml`).
+- **Desired outcome**: In Cycle 5 Stage 6, extend `scripts/audit_evidence_snippets.py` so that when a `CLASS` record already cites `definition_source` in `evidence[].reference` (`def_source_in_ev == True`) without a non-elliptical verbatim `snippet`, `UNQUOTED_DEFINITION_SOURCE` also checks corpus-wide verified non-elliptical quotes (`>= 16` chars, excluding predicate-stem `OBJECT_PROPERTY` snippets) for that reference, with unit tests in `tests/test_audit_evidence_snippets.py`.
+- **Evidence paths**: `scripts/audit_evidence_snippets.py`, `tests/test_audit_evidence_snippets.py`, `reviews/structured/20261025T200500Z-cycle5-stage4-corpus-record-and-cohort-review/review.yaml`, `reviews/workflow/mech-goal-sequence-20261019/cycle-000005/stage-04/revision-0001/evidence.yaml`
+- **Priority**: Medium
+- **Dependencies**: None
 
