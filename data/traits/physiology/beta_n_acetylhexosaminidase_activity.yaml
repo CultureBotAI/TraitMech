@@ -35,6 +35,11 @@ evidence:
   notes: Kurakake et al. reported production of N-acetylhexosaminidase by Serratia
     marcescens YS-1, supporting this as a bacterial beta-N-acetylhexosaminidase activity
     phenotype.
+- reference: DOI:10.1016/0378-1119(95)00848-9
+  snippet: The chitobiase (Chb) encoding gene (chb) from Serratia marcescens (Sm)
+    has been cloned, sequenced and expressed in Escherichia coli (Ec).
+  notes: Tews et al. cloned, sequenced, and expressed the Serratia marcescens chb
+    gene encoding periplasmic N-acetylglucosaminidase (chitobiase, Chb).
 canonical_examples:
 - taxon_id: NCBITaxon:615
   taxon_label: Serratia marcescens
@@ -83,7 +88,7 @@ discussions:
     Chb (UniProtKB:Q54468) so beta_n_acetylhexosaminidase_chb_sketch can be promoted
     from NONMECHANISTIC to MECHANISTIC.
   kind: CURATION_TODO
-  status: OPEN
+  status: RESOLVED
   attaches_to:
   - causal_graphs#beta_n_acetylhexosaminidase_chb_sketch
   rationale: The record's primary literature (EC 3.2.1.52, DOI:10.1021/jf020965x)
@@ -101,6 +106,11 @@ discussions:
     explanation: Existing record-level evidence supports the connected NONMECHANISTIC
       pathway/function graph but does not provide strain-matched UniProtKB protein
       accessions for protein_examples.
+  resolved_date: '2026-10-25'
+  resolution_note: Promoted beta_n_acetylhexosaminidase_chb_sketch to MECHANISTIC
+    by adding InterPro:IPR025705-grounded GENE_OR_PROTEIN node beta_n_acetylhexosaminidase_chb
+    with reviewed Serratia marcescens (NCBITaxon:615) protein_examples UniProtKB:Q54468
+    (Chb) backed by DOI:10.1016/0378-1119(95)00848-9.
 curation_history:
 - timestamp: '2026-09-12T04:12:07Z'
   curator: codex
@@ -122,16 +132,24 @@ curation_history:
     and OPEN CURATION_TODO discussion (beta-n-acetylhexosaminidase-activity-protein-example-gap)
     anchored on existing verbatim record evidence snippets.
   llm_assisted: true
+- timestamp: '2026-10-25T18:45:00Z'
+  curator: claude
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: Promoted beta_n_acetylhexosaminidase_chb_sketch to MECHANISTIC; added InterPro:IPR025705-grounded
+    GENE_OR_PROTEIN node beta_n_acetylhexosaminidase_chb with reviewed Serratia marcescens
+    (NCBITaxon:615) protein_examples UniProtKB:Q54468 (Chb) backed by DOI:10.1016/0378-1119(95)00848-9;
+    resolved beta-n-acetylhexosaminidase-activity-protein-example-gap.
+  llm_assisted: true
 causal_graphs:
 - graph_id: beta_n_acetylhexosaminidase_chb_sketch
   title: Beta-N-acetylhexosaminidase hydrolytic release of N-acetyl-D-hexosamine residues
   description: Evidence-backed physiological mechanism sketch linking beta-N-acetylhexosaminidase
     catalytic activity and N-acetyl-D-glucosamine release to the beta-N-acetylhexosaminidase
     activity phenotype.
-  scope_status: NONMECHANISTIC
-  scope_notes: Activity-and-reaction sketch backed by EC 3.2.1.52 and DOI:10.1021/jf020965x;
-    strain-matched UniProtKB protein examples for Serratia marcescens chitobiase (Chb,
-    UniProtKB:Q54468) remain to be curated.
+  scope_status: MECHANISTIC
+  scope_notes: Mechanistic graph backed by EC 3.2.1.52, DOI:10.1021/jf020965x, and
+    DOI:10.1016/0378-1119(95)00848-9; exemplified on beta_n_acetylhexosaminidase_chb
+    with Serratia marcescens (NCBITaxon:615) chitobiase Chb (UniProtKB:Q54468).
   nodes:
   - node_id: beta_n_acetylhexosaminidase_activity_trait
     label: beta-N-acetylhexosaminidase activity
@@ -151,6 +169,33 @@ causal_graphs:
     grounding: CHEBI:59640
     description: Terminal N-acetyl-D-hexosamine (N-acetyl-D-glucosamine) monomer released
       by beta-N-acetylhexosaminidase hydrolysis of chitooligosaccharides and N-acetyl-beta-D-hexosaminides.
+  - node_id: beta_n_acetylhexosaminidase_chb
+    label: chitobiase Chb
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR025705
+    gene_symbols:
+    - chb
+    description: Glycoside hydrolase family 20 (GH20) beta-N-acetylhexosaminidase
+      / chitobiase (Chb) that hydrolyzes terminal non-reducing N-acetyl-D-hexosamine
+      residues in chitobiose and N-acetyl-beta-D-hexosaminides.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q54468
+      protein_label: Chitobiase
+      gene_symbol: chb
+      taxon_id: NCBITaxon:615
+      taxon_label: Serratia marcescens
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-25'
+      entry_version: 144
+      sequence_version: 1
+      role: Chb is the Serratia marcescens periplasmic family 20 beta-N-acetylhexosaminidase
+        (chitobiase) that hydrolyzes terminal non-reducing N-acetyl-D-hexosamine residues.
+      evidence:
+      - reference: DOI:10.1016/0378-1119(95)00848-9
+        snippet: The chitobiase (Chb) encoding gene (chb) from Serratia marcescens
+          (Sm) has been cloned, sequenced and expressed in Escherichia coli (Ec).
+        notes: Tews et al. cloned and sequenced Serratia marcescens chb encoding N-acetylglucosaminidase
+          (chitobiase, UniProtKB:Q54468).
   edges:
   - subject: beta_n_acetylhexosaminidase_catalytic_activity
     predicate: confers
@@ -176,3 +221,14 @@ causal_graphs:
         residues in N-acetyl-β-D-hexosaminides'
       notes: IUBMB EC 3.2.1.52 defines beta-N-acetylhexosaminidase catalysis as the
         hydrolysis of terminal non-reducing N-acetyl-D-hexosamine residues in N-acetyl-beta-D-hexosaminides.
+  - subject: beta_n_acetylhexosaminidase_chb
+    predicate: enables
+    predicate_id: RO:0002327
+    object: beta_n_acetylhexosaminidase_catalytic_activity
+    description: Chitobiase Chb enables beta-N-acetylhexosaminidase catalytic activity.
+    evidence:
+    - reference: DOI:10.1016/0378-1119(95)00848-9
+      snippet: The chitobiase (Chb) encoding gene (chb) from Serratia marcescens (Sm)
+        has been cloned, sequenced and expressed in Escherichia coli (Ec).
+      notes: Tews et al. cloned and expressed Serratia marcescens chb encoding enzymatically
+        active N-acetylglucosaminidase (chitobiase).

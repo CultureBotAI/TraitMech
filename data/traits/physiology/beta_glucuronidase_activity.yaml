@@ -20,12 +20,24 @@ evidence:
     yield a fluorescent end product.
   notes: Moberg used beta-glucuronidase cleavage of MUG to detect Escherichia coli
     in food samples.
+- reference: DOI:10.1073/pnas.83.22.8447
+  snippet: We have developed a gene-fusion system based on the Escherichia coli beta-glucuronidase
+    gene (uidA). The uidA gene has been cloned from E. coli K-12 and its entire nucleotide
+    sequence has been determined. beta-Glucuronidase has been purified to homogeneity
+    and characterized.
+  notes: Jefferson et al. cloned and sequenced the Escherichia coli K-12 uidA gene
+    encoding beta-glucuronidase and purified the enzyme to homogeneity.
 canonical_examples:
 - taxon_id: NCBITaxon:562
   taxon_label: Escherichia coli
   note: Moberg reported beta-glucuronidase-mediated cleavage of MUG by Escherichia
     coli in a fluorogenic detection assay.
   reference: DOI:10.1128/aem.50.6.1383-1387.1985
+- taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli K-12
+  note: Jefferson et al. cloned and sequenced the Escherichia coli K-12 uidA gene
+    encoding beta-glucuronidase and purified the enzyme to homogeneity.
+  reference: DOI:10.1073/pnas.83.22.8447
 discussions:
 - discussion_id: beta-glucuronidase-activity-xref-gap
   prompt: Resolve an exact external ontology class for beta-glucuronidase activity
@@ -68,7 +80,7 @@ discussions:
     beta-glucuronidase UidA (UniProtKB:P05804) so beta_glucuronidase_uida_sketch can
     be promoted from NONMECHANISTIC to MECHANISTIC.
   kind: CURATION_TODO
-  status: OPEN
+  status: RESOLVED
   attaches_to:
   - causal_graphs#beta_glucuronidase_uida_sketch
   rationale: The record's primary literature (EC 3.2.1.31, DOI:10.1128/aem.50.6.1383-1387.1985)
@@ -85,6 +97,12 @@ discussions:
     explanation: Existing record-level evidence supports the connected NONMECHANISTIC
       pathway/function graph but does not provide strain-matched UniProtKB protein
       accessions for protein_examples.
+  resolved_date: '2026-10-25'
+  resolution_note: Added canonical_examples entry Escherichia coli K-12 (NCBITaxon:83333;
+    DOI:10.1073/pnas.83.22.8447) and promoted beta_glucuronidase_uida_sketch to MECHANISTIC
+    by adding InterPro:IPR006101-grounded GENE_OR_PROTEIN node beta_glucuronidase_uida
+    with reviewed Escherichia coli K-12 (NCBITaxon:83333; UP000000625) protein_examples
+    UniProtKB:P05804 (UidA) backed by DOI:10.1073/pnas.83.22.8447.
 curation_history:
 - timestamp: '2026-09-12T00:37:27Z'
   curator: codex
@@ -113,16 +131,25 @@ curation_history:
     and OPEN CURATION_TODO discussion (beta-glucuronidase-activity-protein-example-gap)
     anchored on existing verbatim record evidence snippets.
   llm_assisted: true
+- timestamp: '2026-10-25T18:45:00Z'
+  curator: claude
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: Added Escherichia coli K-12 (NCBITaxon:83333; DOI:10.1073/pnas.83.22.8447)
+    canonical example; promoted beta_glucuronidase_uida_sketch to MECHANISTIC; added
+    InterPro:IPR006101-grounded GENE_OR_PROTEIN node beta_glucuronidase_uida with
+    reviewed Escherichia coli K-12 (NCBITaxon:83333) protein_examples UniProtKB:P05804
+    (UidA) backed by DOI:10.1073/pnas.83.22.8447; resolved beta-glucuronidase-activity-protein-example-gap.
+  llm_assisted: true
 causal_graphs:
 - graph_id: beta_glucuronidase_uida_sketch
   title: Beta-glucuronidase hydrolysis of beta-D-glucuronosides to D-glucuronate
   description: Evidence-backed physiological mechanism sketch linking beta-glucuronidase
     catalytic activity and D-glucuronate release to the beta-glucuronidase activity
     phenotype.
-  scope_status: NONMECHANISTIC
-  scope_notes: Activity-and-reaction sketch backed by EC 3.2.1.31 and DOI:10.1128/aem.50.6.1383-1387.1985;
-    strain-matched UniProtKB protein examples for Escherichia coli K-12 beta-glucuronidase
-    (UidA, UniProtKB:P05804) remain to be curated.
+  scope_status: MECHANISTIC
+  scope_notes: Mechanistic graph backed by EC 3.2.1.31, DOI:10.1128/aem.50.6.1383-1387.1985,
+    and DOI:10.1073/pnas.83.22.8447; exemplified on beta_glucuronidase_uida with Escherichia
+    coli K-12 (NCBITaxon:83333; UP000000625) beta-glucuronidase UidA (UniProtKB:P05804).
   nodes:
   - node_id: beta_glucuronidase_activity_trait
     label: beta-glucuronidase activity
@@ -141,6 +168,36 @@ causal_graphs:
     node_type: CHEMICAL
     grounding: CHEBI:15748
     description: Free D-glucuronate released by beta-glucuronidase hydrolysis of beta-D-glucuronosides.
+  - node_id: beta_glucuronidase_uida
+    label: beta-glucuronidase UidA
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR006101
+    gene_symbols:
+    - uidA
+    - gusA
+    description: Glycoside hydrolase family 2 (GH2) beta-glucuronidase (UidA) that
+      hydrolyzes beta-D-glucuronosides to D-glucuronate and an alcohol.
+    protein_examples:
+    - uniprot_id: UniProtKB:P05804
+      protein_label: Beta-glucuronidase
+      gene_symbol: uidA
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli K-12
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-25'
+      entry_version: 191
+      sequence_version: 2
+      role: UidA is the Escherichia coli K-12 beta-glucuronidase that hydrolyzes beta-D-glucuronosides
+        to D-glucuronate and an alcohol.
+      evidence:
+      - reference: DOI:10.1073/pnas.83.22.8447
+        snippet: We have developed a gene-fusion system based on the Escherichia coli
+          beta-glucuronidase gene (uidA). The uidA gene has been cloned from E. coli
+          K-12 and its entire nucleotide sequence has been determined. beta-Glucuronidase
+          has been purified to homogeneity and characterized.
+        notes: Jefferson et al. cloned, sequenced, and purified Escherichia coli K-12
+          uidA-encoded beta-glucuronidase (UniProtKB:P05804).
   edges:
   - subject: beta_glucuronidase_catalytic_activity
     predicate: confers
@@ -165,3 +222,16 @@ causal_graphs:
       snippet: 'Reaction: a β-D-glucuronoside + H2O = D-glucuronate + an alcohol'
       notes: IUBMB EC 3.2.1.31 defines the beta-glucuronidase reaction hydrolyzing
         a beta-D-glucuronoside with H2O to D-glucuronate and an alcohol.
+  - subject: beta_glucuronidase_uida
+    predicate: enables
+    predicate_id: RO:0002327
+    object: beta_glucuronidase_catalytic_activity
+    description: Beta-glucuronidase UidA enables beta-glucuronidase catalytic activity.
+    evidence:
+    - reference: DOI:10.1073/pnas.83.22.8447
+      snippet: We have developed a gene-fusion system based on the Escherichia coli
+        beta-glucuronidase gene (uidA). The uidA gene has been cloned from E. coli
+        K-12 and its entire nucleotide sequence has been determined. beta-Glucuronidase
+        has been purified to homogeneity and characterized.
+      notes: Jefferson et al. cloned and characterized Escherichia coli K-12 uidA
+        encoding beta-glucuronidase.
