@@ -46,6 +46,12 @@ canonical_examples:
   note: Neale et al. purified and characterized the two native alcohol dehydrogenase
     isoenzymes from Zymomonas mobilis.
   reference: DOI:10.1111/j.1432-1033.1986.tb09366.x
+- taxon_id: NCBITaxon:264203
+  taxon_label: Zymomonas mobilis subsp. mobilis ZM4
+  note: Conway et al. cloned and sequenced Zymomonas mobilis CP4 (= ZM4 / ATCC 31821)
+    adhB encoding iron-activated alcohol dehydrogenase II (ZADH-2), and Neale et al.
+    purified both NAD-dependent isoenzymes ZADH-1 (AdhA) and ZADH-2 (AdhB).
+  reference: DOI:10.1128/jb.169.6.2591-2597.1987
 discussions:
 - discussion_id: nad-dependent-alcohol-dehydrogenase-activity-xref-gap
   prompt: Resolve an exact external ontology class for NAD-dependent alcohol dehydrogenase
@@ -94,7 +100,7 @@ discussions:
     dehydrogenase II AdhB (UniProtKB:P0DTE6) so nad_dependent_alcohol_dehydrogenase_adh_sketch
     can be promoted from NONMECHANISTIC to MECHANISTIC.
   kind: CURATION_TODO
-  status: OPEN
+  status: RESOLVED
   attaches_to:
   - causal_graphs#nad_dependent_alcohol_dehydrogenase_adh_sketch
   rationale: The record's primary literature (EC 1.1.1.1, DOI:10.1111/j.1432-1033.1986.tb09366.x,
@@ -112,6 +118,12 @@ discussions:
     explanation: Existing record-level evidence supports the connected NONMECHANISTIC
       pathway/function graph but does not provide strain-matched UniProtKB protein
       accessions for protein_examples.
+  resolved_date: '2026-10-25'
+  resolution_note: Added canonical_examples entry Zymomonas mobilis subsp. mobilis
+    ZM4 (NCBITaxon:264203; DOI:10.1128/jb.169.6.2591-2597.1987) and promoted nad_dependent_alcohol_dehydrogenase_adh_sketch
+    to MECHANISTIC by adding InterPro:IPR001670-grounded GENE_OR_PROTEIN node nad_dependent_alcohol_dehydrogenase_adh
+    with active reviewed Swiss-Prot protein_examples UniProtKB:P0DJA2 (AdhB; replacing
+    demerged/inactive P06758/P0DTE6) and UniProtKB:P20368 (AdhA).
 curation_history:
 - timestamp: '2026-09-12T10:11:31Z'
   curator: codex
@@ -140,17 +152,26 @@ curation_history:
     and OPEN CURATION_TODO discussion (nad-dependent-alcohol-dehydrogenase-activity-protein-example-gap)
     anchored on existing verbatim record evidence snippets.
   llm_assisted: true
+- timestamp: '2026-10-25T08:45:00Z'
+  curator: claude
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: Added Zymomonas mobilis subsp. mobilis ZM4 (NCBITaxon:264203; DOI:10.1128/jb.169.6.2591-2597.1987)
+    canonical example; promoted nad_dependent_alcohol_dehydrogenase_adh_sketch to
+    MECHANISTIC with InterPro:IPR001670-grounded GENE_OR_PROTEIN node nad_dependent_alcohol_dehydrogenase_adh
+    and reviewed protein_examples UniProtKB:P0DJA2 (AdhB) and UniProtKB:P20368 (AdhA);
+    resolved nad-dependent-alcohol-dehydrogenase-activity-protein-example-gap.
+  llm_assisted: true
 causal_graphs:
 - graph_id: nad_dependent_alcohol_dehydrogenase_adh_sketch
   title: NAD-dependent alcohol dehydrogenase catalysis and NADH generation
   description: Evidence-backed physiological mechanism sketch linking NAD-dependent
     alcohol dehydrogenase catalytic activity and NADH generation to the NAD-dependent
     alcohol dehydrogenase activity phenotype.
-  scope_status: NONMECHANISTIC
-  scope_notes: Activity-and-reaction sketch backed by EC 1.1.1.1, DOI:10.1111/j.1432-1033.1986.tb09366.x,
-    and DOI:10.1128/jb.169.6.2591-2597.1987; strain-matched UniProtKB protein examples
-    for Zymomonas mobilis alcohol dehydrogenase II (AdhB, UniProtKB:P0DTE6) remain
-    to be curated.
+  scope_status: MECHANISTIC
+  scope_notes: Mechanistic graph backed by DOI:10.1111/j.1432-1033.1986.tb09366.x
+    and DOI:10.1128/jb.169.6.2591-2597.1987; exemplified on nad_dependent_alcohol_dehydrogenase_adh
+    with Zymomonas mobilis subsp. mobilis ZM4 (NCBITaxon:264203; UP000001173) alcohol
+    dehydrogenase 2 AdhB (UniProtKB:P0DJA2) and alcohol dehydrogenase 1 AdhA (UniProtKB:P20368).
   nodes:
   - node_id: nad_dependent_alcohol_dehydrogenase_activity_trait
     label: NAD-dependent alcohol dehydrogenase activity
@@ -170,6 +191,56 @@ causal_graphs:
     grounding: CHEBI:16908
     description: Reduced nicotinamide adenine dinucleotide cofactor produced during
       NAD+-dependent alcohol oxidation.
+  - node_id: nad_dependent_alcohol_dehydrogenase_adh
+    label: NAD-dependent alcohol dehydrogenase (AdhB/AdhA)
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR001670
+    gene_symbols:
+    - adhB
+    - adhA
+    description: NAD-dependent alcohol dehydrogenase isoenzymes (iron-activated AdhB
+      / ZADH-2 and zinc-containing AdhA / ZADH-1) that catalyze reversible interconversion
+      of ethanol and acetaldehyde with NAD+/NADH.
+    protein_examples:
+    - uniprot_id: UniProtKB:P0DJA2
+      protein_label: Alcohol dehydrogenase 2
+      gene_symbol: adhB
+      taxon_id: NCBITaxon:264203
+      taxon_label: Zymomonas mobilis subsp. mobilis ZM4
+      entry_status: REVIEWED
+      proteome_id: UP000001173
+      retrieved_on: '2026-10-25'
+      entry_version: 66
+      sequence_version: 1
+      role: AdhB (ZADH-2) is the iron-activated NAD-dependent alcohol dehydrogenase
+        II that catalyzes reversible oxidation of ethanol to acetaldehyde and reduction
+        of acetaldehyde to ethanol in Zymomonas mobilis.
+      evidence:
+      - reference: DOI:10.1128/jb.169.6.2591-2597.1987
+        snippet: The gene which encodes alcohol dehydrogenase II (adhB) from Zymomonas
+          mobilis was cloned in Escherichia coli
+        notes: Conway et al. cloned and sequenced Zymomonas mobilis adhB encoding
+          alcohol dehydrogenase II (UniProtKB:P0DJA2).
+    - uniprot_id: UniProtKB:P20368
+      protein_label: Alcohol dehydrogenase 1
+      gene_symbol: adhA
+      taxon_id: NCBITaxon:264203
+      taxon_label: Zymomonas mobilis subsp. mobilis ZM4
+      entry_status: REVIEWED
+      proteome_id: UP000001173
+      retrieved_on: '2026-10-25'
+      entry_version: 161
+      sequence_version: 2
+      role: AdhA (ZADH-1) is the zinc-containing NAD-dependent alcohol dehydrogenase
+        I isoenzyme purified from Zymomonas mobilis.
+      evidence:
+      - reference: DOI:10.1111/j.1432-1033.1986.tb09366.x
+        snippet: The two alcohol dehydrogenases found in Zymomonas mobilis have each
+          been purified using dye-ligand chromatography and affinity elution with
+          nucleotides.
+        notes: Neale et al. purified and characterized Zymomonas mobilis alcohol dehydrogenase
+          I ZADH-1 (AdhA; UniProtKB:P20368) and alcohol dehydrogenase II ZADH-2 (AdhB;
+          UniProtKB:P0DJA2).
   edges:
   - subject: nad_dependent_alcohol_dehydrogenase_catalytic_activity
     predicate: confers
@@ -199,3 +270,15 @@ causal_graphs:
         + H<small><sup>+</sup></small>'
       notes: IUBMB EC 1.1.1.1 defines the NAD-dependent alcohol dehydrogenase reaction
         producing an aldehyde or ketone, NADH, and H+.
+  - subject: nad_dependent_alcohol_dehydrogenase_adh
+    predicate: enables
+    predicate_id: RO:0002327
+    object: nad_dependent_alcohol_dehydrogenase_catalytic_activity
+    description: NAD-dependent alcohol dehydrogenase (AdhB/AdhA) enables alcohol dehydrogenase
+      (NAD+) catalytic activity.
+    evidence:
+    - reference: DOI:10.1128/jb.169.6.2591-2597.1987
+      snippet: The gene which encodes alcohol dehydrogenase II (adhB) from Zymomonas
+        mobilis was cloned in Escherichia coli
+      notes: Conway et al. cloned Zymomonas mobilis adhB encoding NAD-dependent alcohol
+        dehydrogenase II.

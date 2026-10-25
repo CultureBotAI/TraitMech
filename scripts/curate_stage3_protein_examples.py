@@ -37,6 +37,14 @@
    `RESOLVED` `CURATION_TODO` discussions, and records a Cycle 3 Stage 3
    UniProtKB audit blocker note on the remaining `NONMECHANISTIC` Cohort E
    record (`indole_test_positive.yaml`).
+5. In Cycle 4 Stage 3 (`C4S3_COHORT_G_PROMOTIONS`), promotes all 3 Cohort G
+   `NONMECHANISTIC` records (`nad_dependent_alcohol_dehydrogenase_activity.yaml`,
+   `ornithine_decarboxylase_activity.yaml`, `prolyl_aminopeptidase_activity.yaml`)
+   to `MECHANISTIC` by adding 3 `InterPro`-grounded `GENE_OR_PROTEIN` nodes with
+   4 verified reviewed UniProtKB `protein_examples` (`UniProtKB:P0DJA2`,
+   `UniProtKB:P20368`, `UniProtKB:P21169`, `UniProtKB:P42786`), 2 distinct
+   verbatim record-level `evidence` items, 1 `canonical_examples` entry, and
+   `RESOLVED` `CURATION_TODO` discussions.
 
 Default is dry-run; pass `--apply` to write changes via `write_validated_trait`
 and `record_curation_event`.
@@ -2781,8 +2789,7 @@ C3S3_COHORT_E_PROMOTIONS: dict[str, dict[str, Any]] = {
             "predicate_id": "RO:0002327",
             "object": "coagulase_positive_prothrombin_activation",
             "description": (
-                "Secreted staphylocoagulase Coa enables non-proteolytic "
-                "activation of prothrombin."
+                "Secreted staphylocoagulase Coa enables non-proteolytic activation of prothrombin."
             ),
             "evidence": [
                 {
@@ -2895,8 +2902,7 @@ C3S3_COHORT_E_PROMOTIONS: dict[str, dict[str, Any]] = {
             "predicate_id": "RO:0002327",
             "object": "pyrazinamidase_catalytic_activity",
             "description": (
-                "Nicotinamidase/pyrazinamidase PncA enables pyrazinamidase "
-                "catalytic activity."
+                "Nicotinamidase/pyrazinamidase PncA enables pyrazinamidase catalytic activity."
             ),
             "evidence": [
                 {
@@ -2967,6 +2973,399 @@ C3S3_COHORT_E_BLOCKERS: dict[str, dict[str, Any]] = {
     },
 }
 
+C4S3_TIMESTAMP = "2026-10-25T08:45:00Z"
+C4S3_RETRIEVED_ON = "2026-10-25"
+
+C4S3_COHORT_G_PROMOTIONS: dict[str, dict[str, Any]] = {
+    "data/traits/physiology/nad_dependent_alcohol_dehydrogenase_activity.yaml": {
+        "identifier": "traitmech:000165",
+        "graph_id": "nad_dependent_alcohol_dehydrogenase_adh_sketch",
+        "discussion_id": "nad-dependent-alcohol-dehydrogenase-activity-protein-example-gap",
+        "scope_notes": (
+            "Mechanistic graph backed by DOI:10.1111/j.1432-1033.1986.tb09366.x "
+            "and DOI:10.1128/jb.169.6.2591-2597.1987; exemplified on "
+            "nad_dependent_alcohol_dehydrogenase_adh with Zymomonas mobilis "
+            "subsp. mobilis ZM4 (NCBITaxon:264203; UP000001173) alcohol "
+            "dehydrogenase 2 AdhB (UniProtKB:P0DJA2) and alcohol dehydrogenase 1 "
+            "AdhA (UniProtKB:P20368)."
+        ),
+        "new_canonical_example": {
+            "taxon_id": "NCBITaxon:264203",
+            "taxon_label": "Zymomonas mobilis subsp. mobilis ZM4",
+            "note": (
+                "Conway et al. cloned and sequenced Zymomonas mobilis CP4 "
+                "(= ZM4 / ATCC 31821) adhB encoding iron-activated alcohol "
+                "dehydrogenase II (ZADH-2), and Neale et al. purified both "
+                "NAD-dependent isoenzymes ZADH-1 (AdhA) and ZADH-2 (AdhB)."
+            ),
+            "reference": "DOI:10.1128/jb.169.6.2591-2597.1987",
+        },
+        "new_node": {
+            "node_id": "nad_dependent_alcohol_dehydrogenase_adh",
+            "label": "NAD-dependent alcohol dehydrogenase (AdhB/AdhA)",
+            "node_type": "GENE_OR_PROTEIN",
+            "grounding": "InterPro:IPR001670",
+            "gene_symbols": ["adhB", "adhA"],
+            "description": (
+                "NAD-dependent alcohol dehydrogenase isoenzymes (iron-activated "
+                "AdhB / ZADH-2 and zinc-containing AdhA / ZADH-1) that catalyze "
+                "reversible interconversion of ethanol and acetaldehyde with "
+                "NAD+/NADH."
+            ),
+            "protein_examples": [
+                {
+                    "uniprot_id": "UniProtKB:P0DJA2",
+                    "protein_label": "Alcohol dehydrogenase 2",
+                    "gene_symbol": "adhB",
+                    "taxon_id": "NCBITaxon:264203",
+                    "taxon_label": "Zymomonas mobilis subsp. mobilis ZM4",
+                    "entry_status": "REVIEWED",
+                    "proteome_id": "UP000001173",
+                    "retrieved_on": C4S3_RETRIEVED_ON,
+                    "entry_version": 66,
+                    "sequence_version": 1,
+                    "role": (
+                        "AdhB (ZADH-2) is the iron-activated NAD-dependent "
+                        "alcohol dehydrogenase II that catalyzes reversible "
+                        "oxidation of ethanol to acetaldehyde and reduction of "
+                        "acetaldehyde to ethanol in Zymomonas mobilis."
+                    ),
+                    "evidence": [
+                        {
+                            "reference": "DOI:10.1128/jb.169.6.2591-2597.1987",
+                            "snippet": (
+                                "The gene which encodes alcohol dehydrogenase II "
+                                "(adhB) from Zymomonas mobilis was cloned in "
+                                "Escherichia coli"
+                            ),
+                            "notes": (
+                                "Conway et al. cloned and sequenced Zymomonas "
+                                "mobilis adhB encoding alcohol dehydrogenase II "
+                                "(UniProtKB:P0DJA2)."
+                            ),
+                        }
+                    ],
+                },
+                {
+                    "uniprot_id": "UniProtKB:P20368",
+                    "protein_label": "Alcohol dehydrogenase 1",
+                    "gene_symbol": "adhA",
+                    "taxon_id": "NCBITaxon:264203",
+                    "taxon_label": "Zymomonas mobilis subsp. mobilis ZM4",
+                    "entry_status": "REVIEWED",
+                    "proteome_id": "UP000001173",
+                    "retrieved_on": C4S3_RETRIEVED_ON,
+                    "entry_version": 161,
+                    "sequence_version": 2,
+                    "role": (
+                        "AdhA (ZADH-1) is the zinc-containing NAD-dependent "
+                        "alcohol dehydrogenase I isoenzyme purified from "
+                        "Zymomonas mobilis."
+                    ),
+                    "evidence": [
+                        {
+                            "reference": "DOI:10.1111/j.1432-1033.1986.tb09366.x",
+                            "snippet": (
+                                "The two alcohol dehydrogenases found in "
+                                "Zymomonas mobilis have each been purified using "
+                                "dye-ligand chromatography and affinity elution "
+                                "with nucleotides."
+                            ),
+                            "notes": (
+                                "Neale et al. purified and characterized "
+                                "Zymomonas mobilis alcohol dehydrogenase I "
+                                "ZADH-1 (AdhA; UniProtKB:P20368) and alcohol "
+                                "dehydrogenase II ZADH-2 (AdhB; UniProtKB:P0DJA2)."
+                            ),
+                        }
+                    ],
+                },
+            ],
+        },
+        "new_edge": {
+            "subject": "nad_dependent_alcohol_dehydrogenase_adh",
+            "predicate": "enables",
+            "predicate_id": "RO:0002327",
+            "object": "nad_dependent_alcohol_dehydrogenase_catalytic_activity",
+            "description": (
+                "NAD-dependent alcohol dehydrogenase (AdhB/AdhA) enables alcohol "
+                "dehydrogenase (NAD+) catalytic activity."
+            ),
+            "evidence": [
+                {
+                    "reference": "DOI:10.1128/jb.169.6.2591-2597.1987",
+                    "snippet": (
+                        "The gene which encodes alcohol dehydrogenase II (adhB) "
+                        "from Zymomonas mobilis was cloned in Escherichia coli"
+                    ),
+                    "notes": (
+                        "Conway et al. cloned Zymomonas mobilis adhB encoding "
+                        "NAD-dependent alcohol dehydrogenase II."
+                    ),
+                }
+            ],
+        },
+        "resolution_message": {
+            "author": CURATOR,
+            "timestamp": C4S3_TIMESTAMP,
+            "body": (
+                "Added canonical_examples entry Zymomonas mobilis subsp. mobilis "
+                "ZM4 (NCBITaxon:264203; DOI:10.1128/jb.169.6.2591-2597.1987) and "
+                "promoted nad_dependent_alcohol_dehydrogenase_adh_sketch to "
+                "MECHANISTIC by adding InterPro:IPR001670-grounded GENE_OR_PROTEIN "
+                "node nad_dependent_alcohol_dehydrogenase_adh with active reviewed "
+                "Swiss-Prot protein_examples UniProtKB:P0DJA2 (AdhB; replacing "
+                "demerged/inactive P06758/P0DTE6) and UniProtKB:P20368 (AdhA)."
+            ),
+        },
+        "changes_summary": (
+            "Added Zymomonas mobilis subsp. mobilis ZM4 (NCBITaxon:264203; "
+            "DOI:10.1128/jb.169.6.2591-2597.1987) canonical example; promoted "
+            "nad_dependent_alcohol_dehydrogenase_adh_sketch to MECHANISTIC with "
+            "InterPro:IPR001670-grounded GENE_OR_PROTEIN node "
+            "nad_dependent_alcohol_dehydrogenase_adh and reviewed protein_examples "
+            "UniProtKB:P0DJA2 (AdhB) and UniProtKB:P20368 (AdhA); resolved "
+            "nad-dependent-alcohol-dehydrogenase-activity-protein-example-gap."
+        ),
+    },
+    "data/traits/physiology/ornithine_decarboxylase_activity.yaml": {
+        "identifier": "traitmech:000154",
+        "graph_id": "ornithine_decarboxylase_spec_sketch",
+        "discussion_id": "ornithine-decarboxylase-activity-protein-example-gap",
+        "scope_notes": (
+            "Mechanistic graph backed by DOI:10.1128/jb.124.2.791-799.1975; "
+            "exemplified on ornithine_decarboxylase_spec with Escherichia coli "
+            "K-12 (NCBITaxon:83333; UP000000625) constitutive ornithine "
+            "decarboxylase SpeC (UniProtKB:P21169)."
+        ),
+        "new_evidence": {
+            "reference": "DOI:10.1128/jb.124.2.791-799.1975",
+            "snippet": (
+                "The mutation, designated speC, was mapped by P1 transduction "
+                "in several strains and was shown to have a cotransduction "
+                "frequency of 17.2% with serA. Map order was established as "
+                "serA speB speC metK."
+            ),
+            "notes": (
+                "Cunningham-Rundles and Maas genetically mapped the speC locus "
+                "encoding constitutive ornithine decarboxylase in Escherichia "
+                "coli K-12."
+            ),
+        },
+        "new_node": {
+            "node_id": "ornithine_decarboxylase_spec",
+            "label": "constitutive ornithine decarboxylase SpeC",
+            "node_type": "GENE_OR_PROTEIN",
+            "grounding": "InterPro:IPR005308",
+            "gene_symbols": ["speC"],
+            "description": (
+                "Pyridoxal 5'-phosphate-dependent constitutive ornithine "
+                "decarboxylase (SpeC) that catalyzes decarboxylation of "
+                "L-ornithine to putrescine and CO2."
+            ),
+            "protein_examples": [
+                {
+                    "uniprot_id": "UniProtKB:P21169",
+                    "protein_label": "Constitutive ornithine decarboxylase",
+                    "gene_symbol": "speC",
+                    "taxon_id": "NCBITaxon:83333",
+                    "taxon_label": "Escherichia coli K-12",
+                    "entry_status": "REVIEWED",
+                    "proteome_id": "UP000000625",
+                    "retrieved_on": C4S3_RETRIEVED_ON,
+                    "entry_version": 176,
+                    "sequence_version": 2,
+                    "role": (
+                        "SpeC is the constitutive ornithine decarboxylase that "
+                        "catalyzes decarboxylation of L-ornithine to putrescine "
+                        "in Escherichia coli K-12."
+                    ),
+                    "evidence": [
+                        {
+                            "reference": "DOI:10.1128/jb.124.2.791-799.1975",
+                            "snippet": (
+                                "The mutation, designated speC, was mapped by "
+                                "P1 transduction in several strains and was "
+                                "shown to have a cotransduction frequency of "
+                                "17.2% with serA. Map order was established as "
+                                "serA speB speC metK."
+                            ),
+                            "notes": (
+                                "Cunningham-Rundles and Maas identified and "
+                                "mapped the Escherichia coli K-12 speC gene "
+                                "encoding constitutive ornithine decarboxylase "
+                                "(UniProtKB:P21169)."
+                            ),
+                        }
+                    ],
+                }
+            ],
+        },
+        "new_edge": {
+            "subject": "ornithine_decarboxylase_spec",
+            "predicate": "enables",
+            "predicate_id": "RO:0002327",
+            "object": "ornithine_decarboxylase_catalytic_activity",
+            "description": (
+                "Constitutive ornithine decarboxylase SpeC enables ornithine "
+                "decarboxylase catalytic activity."
+            ),
+            "evidence": [
+                {
+                    "reference": "DOI:10.1128/jb.124.2.791-799.1975",
+                    "snippet": (
+                        "The mutation, designated speC, was mapped by P1 "
+                        "transduction in several strains and was shown to have a "
+                        "cotransduction frequency of 17.2% with serA. Map order "
+                        "was established as serA speB speC metK."
+                    ),
+                    "notes": (
+                        "Cunningham-Rundles and Maas mapped the speC locus "
+                        "encoding ornithine decarboxylase in Escherichia coli "
+                        "K-12."
+                    ),
+                }
+            ],
+        },
+        "resolution_message": {
+            "author": CURATOR,
+            "timestamp": C4S3_TIMESTAMP,
+            "body": (
+                "Promoted ornithine_decarboxylase_spec_sketch to MECHANISTIC by "
+                "adding InterPro:IPR005308-grounded GENE_OR_PROTEIN node "
+                "ornithine_decarboxylase_spec with reviewed Escherichia coli "
+                "K-12 (NCBITaxon:83333; UP000000625) protein_examples "
+                "UniProtKB:P21169 (SpeC) backed by "
+                "DOI:10.1128/jb.124.2.791-799.1975."
+            ),
+        },
+        "changes_summary": (
+            "Promoted ornithine_decarboxylase_spec_sketch to MECHANISTIC; added "
+            "InterPro:IPR005308-grounded GENE_OR_PROTEIN node "
+            "ornithine_decarboxylase_spec with reviewed Escherichia coli K-12 "
+            "(NCBITaxon:83333) protein_examples UniProtKB:P21169 (SpeC) backed "
+            "by DOI:10.1128/jb.124.2.791-799.1975; resolved "
+            "ornithine-decarboxylase-activity-protein-example-gap."
+        ),
+    },
+    "data/traits/physiology/prolyl_aminopeptidase_activity.yaml": {
+        "identifier": "traitmech:000166",
+        "graph_id": "prolyl_aminopeptidase_pip_sketch",
+        "discussion_id": "prolyl-aminopeptidase-activity-protein-example-gap",
+        "scope_notes": (
+            "Mechanistic graph backed by EC 3.4.11.5 and "
+            "DOI:10.1111/j.1365-2958.1993.tb01249.x; exemplified on "
+            "prolyl_aminopeptidase_pip with Neisseria gonorrhoeae (NCBITaxon:485) "
+            "proline iminopeptidase Pip (UniProtKB:P42786)."
+        ),
+        "new_evidence": {
+            "reference": "DOI:10.1111/j.1365-2958.1993.tb01249.x",
+            "snippet": (
+                "Complementation of an E. coli mutant deficient in both proline "
+                "biosynthesis and dipeptide uptake confirmed that Pip is capable "
+                "of releasing biologically active proline from peptides."
+            ),
+            "notes": (
+                "Albertson and Koomey demonstrated by genetic complementation "
+                "that Neisseria gonorrhoeae proline iminopeptidase (Pip) "
+                "hydrolyzes peptides to release biologically active L-proline."
+            ),
+        },
+        "new_node": {
+            "node_id": "prolyl_aminopeptidase_pip",
+            "label": "proline iminopeptidase Pip",
+            "node_type": "GENE_OR_PROTEIN",
+            "grounding": "InterPro:IPR005944",
+            "gene_symbols": ["pip"],
+            "description": (
+                "Serine peptidase (MEROPS family S33) proline iminopeptidase "
+                "(Pip) that hydrolyzes N-terminal L-proline residues from "
+                "peptides."
+            ),
+            "protein_examples": [
+                {
+                    "uniprot_id": "UniProtKB:P42786",
+                    "protein_label": "Proline iminopeptidase",
+                    "gene_symbol": "pip",
+                    "taxon_id": "NCBITaxon:485",
+                    "taxon_label": "Neisseria gonorrhoeae",
+                    "entry_status": "REVIEWED",
+                    "retrieved_on": C4S3_RETRIEVED_ON,
+                    "entry_version": 118,
+                    "sequence_version": 1,
+                    "role": (
+                        "Pip is the Neisseria gonorrhoeae proline iminopeptidase "
+                        "that hydrolyzes N-terminal L-proline residues from "
+                        "peptides and chromogenic L-proline substrates."
+                    ),
+                    "evidence": [
+                        {
+                            "reference": "DOI:10.1111/j.1365-2958.1993.tb01249.x",
+                            "snippet": (
+                                "Complementation of an E. coli mutant deficient "
+                                "in both proline biosynthesis and dipeptide "
+                                "uptake confirmed that Pip is capable of "
+                                "releasing biologically active proline from "
+                                "peptides."
+                            ),
+                            "notes": (
+                                "Albertson and Koomey cloned and characterized "
+                                "Neisseria gonorrhoeae pip encoding proline "
+                                "iminopeptidase (UniProtKB:P42786)."
+                            ),
+                        }
+                    ],
+                }
+            ],
+        },
+        "new_edge": {
+            "subject": "prolyl_aminopeptidase_pip",
+            "predicate": "enables",
+            "predicate_id": "RO:0002327",
+            "object": "prolyl_aminopeptidase_catalytic_activity",
+            "description": (
+                "Proline iminopeptidase Pip enables prolyl aminopeptidase catalytic activity."
+            ),
+            "evidence": [
+                {
+                    "reference": "DOI:10.1111/j.1365-2958.1993.tb01249.x",
+                    "snippet": (
+                        "Complementation of an E. coli mutant deficient in both "
+                        "proline biosynthesis and dipeptide uptake confirmed "
+                        "that Pip is capable of releasing biologically active "
+                        "proline from peptides."
+                    ),
+                    "notes": (
+                        "Albertson and Koomey showed that Neisseria gonorrhoeae "
+                        "Pip hydrolyzes peptides to release biologically active "
+                        "proline."
+                    ),
+                }
+            ],
+        },
+        "resolution_message": {
+            "author": CURATOR,
+            "timestamp": C4S3_TIMESTAMP,
+            "body": (
+                "Promoted prolyl_aminopeptidase_pip_sketch to MECHANISTIC by "
+                "adding InterPro:IPR005944-grounded GENE_OR_PROTEIN node "
+                "prolyl_aminopeptidase_pip with reviewed Neisseria gonorrhoeae "
+                "(NCBITaxon:485) protein_examples UniProtKB:P42786 (Pip) backed "
+                "by DOI:10.1111/j.1365-2958.1993.tb01249.x (replacing prompt "
+                "candidate P40051, which is Saccharomyces cerevisiae ICP55)."
+            ),
+        },
+        "changes_summary": (
+            "Promoted prolyl_aminopeptidase_pip_sketch to MECHANISTIC; added "
+            "InterPro:IPR005944-grounded GENE_OR_PROTEIN node "
+            "prolyl_aminopeptidase_pip with reviewed Neisseria gonorrhoeae "
+            "(NCBITaxon:485) protein_examples UniProtKB:P42786 (Pip) backed by "
+            "DOI:10.1111/j.1365-2958.1993.tb01249.x; resolved "
+            "prolyl-aminopeptidase-activity-protein-example-gap."
+        ),
+    },
+}
+
 
 def _protected_paths(repo_root: Path = REPO_ROOT) -> set[str]:
     dnw = repo_root / "DO_NOT_WORK.md"
@@ -2992,7 +3391,11 @@ def process_all(apply: bool = False, repo_root: Path = REPO_ROOT) -> tuple[int, 
     for rel_path, graph_id, node_id, curie, old_v, new_v in ENTRY_VERSION_REFRESHES:
         refreshes_by_file.setdefault(rel_path, []).append((graph_id, node_id, curie, old_v, new_v))
 
-    promotions_by_file = {**C2S3_COHORT_C_PROMOTIONS, **C3S3_COHORT_E_PROMOTIONS}
+    promotions_by_file = {
+        **C2S3_COHORT_C_PROMOTIONS,
+        **C3S3_COHORT_E_PROMOTIONS,
+        **C4S3_COHORT_G_PROMOTIONS,
+    }
     blockers_by_file = {**C2S3_COHORT_C_BLOCKERS, **C3S3_COHORT_E_BLOCKERS}
     all_rel_paths = sorted(
         set(refreshes_by_file)

@@ -43,6 +43,13 @@ evidence:
   notes: Srinivasan et al. listed proline arylamidase among enzymatic activities present
     in the Amygdalobacter indicium species description, supporting the API proline
     arylamidase row as a directly assayed bacterial enzyme-activity phenotype.
+- reference: DOI:10.1111/j.1365-2958.1993.tb01249.x
+  snippet: Complementation of an E. coli mutant deficient in both proline biosynthesis
+    and dipeptide uptake confirmed that Pip is capable of releasing biologically active
+    proline from peptides.
+  notes: Albertson and Koomey demonstrated by genetic complementation that Neisseria
+    gonorrhoeae proline iminopeptidase (Pip) hydrolyzes peptides to release biologically
+    active L-proline.
 canonical_examples:
 - taxon_id: NCBITaxon:485
   taxon_label: Neisseria gonorrhoeae
@@ -92,7 +99,7 @@ discussions:
     proline iminopeptidase Pip (UniProtKB:P40051) so prolyl_aminopeptidase_pip_sketch
     can be promoted from NONMECHANISTIC to MECHANISTIC.
   kind: CURATION_TODO
-  status: OPEN
+  status: RESOLVED
   attaches_to:
   - causal_graphs#prolyl_aminopeptidase_pip_sketch
   rationale: The record's primary literature (EC 3.4.11.5, DOI:10.1111/j.1365-2958.1993.tb01249.x)
@@ -110,6 +117,12 @@ discussions:
     explanation: Existing record-level evidence supports the connected NONMECHANISTIC
       pathway/function graph but does not provide strain-matched UniProtKB protein
       accessions for protein_examples.
+  resolved_date: '2026-10-25'
+  resolution_note: Promoted prolyl_aminopeptidase_pip_sketch to MECHANISTIC by adding
+    InterPro:IPR005944-grounded GENE_OR_PROTEIN node prolyl_aminopeptidase_pip with
+    reviewed Neisseria gonorrhoeae (NCBITaxon:485) protein_examples UniProtKB:P42786
+    (Pip) backed by DOI:10.1111/j.1365-2958.1993.tb01249.x (replacing prompt candidate
+    P40051, which is Saccharomyces cerevisiae ICP55).
 curation_history:
 - timestamp: '2026-09-12T11:07:00Z'
   curator: codex
@@ -131,16 +144,24 @@ curation_history:
     and OPEN CURATION_TODO discussion (prolyl-aminopeptidase-activity-protein-example-gap)
     anchored on existing verbatim record evidence snippets.
   llm_assisted: true
+- timestamp: '2026-10-25T08:45:00Z'
+  curator: claude
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: Promoted prolyl_aminopeptidase_pip_sketch to MECHANISTIC; added InterPro:IPR005944-grounded
+    GENE_OR_PROTEIN node prolyl_aminopeptidase_pip with reviewed Neisseria gonorrhoeae
+    (NCBITaxon:485) protein_examples UniProtKB:P42786 (Pip) backed by DOI:10.1111/j.1365-2958.1993.tb01249.x;
+    resolved prolyl-aminopeptidase-activity-protein-example-gap.
+  llm_assisted: true
 causal_graphs:
 - graph_id: prolyl_aminopeptidase_pip_sketch
   title: Prolyl aminopeptidase (Pip) hydrolytic release of N-terminal L-proline
   description: Evidence-backed physiological mechanism sketch linking prolyl aminopeptidase
     catalytic activity and N-terminal L-proline release from peptides to the prolyl
     aminopeptidase activity phenotype.
-  scope_status: NONMECHANISTIC
-  scope_notes: Activity-and-reaction sketch backed by EC 3.4.11.5 and DOI:10.1111/j.1365-2958.1993.tb01249.x;
-    strain-matched UniProtKB protein examples for Neisseria gonorrhoeae proline iminopeptidase
-    (Pip, UniProtKB:P40051) remain to be curated.
+  scope_status: MECHANISTIC
+  scope_notes: Mechanistic graph backed by EC 3.4.11.5 and DOI:10.1111/j.1365-2958.1993.tb01249.x;
+    exemplified on prolyl_aminopeptidase_pip with Neisseria gonorrhoeae (NCBITaxon:485)
+    proline iminopeptidase Pip (UniProtKB:P42786).
   nodes:
   - node_id: prolyl_aminopeptidase_activity_trait
     label: prolyl aminopeptidase activity
@@ -161,6 +182,33 @@ causal_graphs:
     grounding: CHEBI:17203
     description: Free L-proline released from the N-terminus of peptides by prolyl
       aminopeptidase hydrolysis.
+  - node_id: prolyl_aminopeptidase_pip
+    label: proline iminopeptidase Pip
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR005944
+    gene_symbols:
+    - pip
+    description: Serine peptidase (MEROPS family S33) proline iminopeptidase (Pip)
+      that hydrolyzes N-terminal L-proline residues from peptides.
+    protein_examples:
+    - uniprot_id: UniProtKB:P42786
+      protein_label: Proline iminopeptidase
+      gene_symbol: pip
+      taxon_id: NCBITaxon:485
+      taxon_label: Neisseria gonorrhoeae
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-25'
+      entry_version: 118
+      sequence_version: 1
+      role: Pip is the Neisseria gonorrhoeae proline iminopeptidase that hydrolyzes
+        N-terminal L-proline residues from peptides and chromogenic L-proline substrates.
+      evidence:
+      - reference: DOI:10.1111/j.1365-2958.1993.tb01249.x
+        snippet: Complementation of an E. coli mutant deficient in both proline biosynthesis
+          and dipeptide uptake confirmed that Pip is capable of releasing biologically
+          active proline from peptides.
+        notes: Albertson and Koomey cloned and characterized Neisseria gonorrhoeae
+          pip encoding proline iminopeptidase (UniProtKB:P42786).
   edges:
   - subject: prolyl_aminopeptidase_catalytic_activity
     predicate: confers
@@ -188,3 +236,16 @@ causal_graphs:
       snippet: <b>Reaction:</b> Release of N-terminal proline from a peptide
       notes: IUBMB EC 3.4.11.5 defines the prolyl aminopeptidase reaction as the release
         of N-terminal proline from a peptide.
+  - subject: prolyl_aminopeptidase_pip
+    predicate: enables
+    predicate_id: RO:0002327
+    object: prolyl_aminopeptidase_catalytic_activity
+    description: Proline iminopeptidase Pip enables prolyl aminopeptidase catalytic
+      activity.
+    evidence:
+    - reference: DOI:10.1111/j.1365-2958.1993.tb01249.x
+      snippet: Complementation of an E. coli mutant deficient in both proline biosynthesis
+        and dipeptide uptake confirmed that Pip is capable of releasing biologically
+        active proline from peptides.
+      notes: Albertson and Koomey showed that Neisseria gonorrhoeae Pip hydrolyzes
+        peptides to release biologically active proline.

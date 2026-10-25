@@ -26,6 +26,12 @@ evidence:
   notes: Cunningham-Rundles and Maas isolated Escherichia coli K-12 mutants blocked
     in ornithine decarboxylase synthesis and verified the loss of OD activity, supporting
     E. coli K-12 as a direct organismal example for the activity.
+- reference: DOI:10.1128/jb.124.2.791-799.1975
+  snippet: The mutation, designated speC, was mapped by P1 transduction in several
+    strains and was shown to have a cotransduction frequency of 17.2% with serA. Map
+    order was established as serA speB speC metK.
+  notes: Cunningham-Rundles and Maas genetically mapped the speC locus encoding constitutive
+    ornithine decarboxylase in Escherichia coli K-12.
 canonical_examples:
 - taxon_id: NCBITaxon:83333
   taxon_label: Escherichia coli K-12
@@ -74,7 +80,7 @@ discussions:
     biosynthetic ornithine decarboxylase SpeC (UniProtKB:P21169) so ornithine_decarboxylase_spec_sketch
     can be promoted from NONMECHANISTIC to MECHANISTIC.
   kind: CURATION_TODO
-  status: OPEN
+  status: RESOLVED
   attaches_to:
   - causal_graphs#ornithine_decarboxylase_spec_sketch
   rationale: The record's primary literature (EC 4.1.1.17, DOI:10.1128/jb.124.2.791-799.1975)
@@ -96,6 +102,11 @@ discussions:
     explanation: Existing record-level evidence supports the connected NONMECHANISTIC
       pathway/function graph but does not provide strain-matched UniProtKB protein
       accessions for protein_examples.
+  resolved_date: '2026-10-25'
+  resolution_note: Promoted ornithine_decarboxylase_spec_sketch to MECHANISTIC by
+    adding InterPro:IPR005308-grounded GENE_OR_PROTEIN node ornithine_decarboxylase_spec
+    with reviewed Escherichia coli K-12 (NCBITaxon:83333; UP000000625) protein_examples
+    UniProtKB:P21169 (SpeC) backed by DOI:10.1128/jb.124.2.791-799.1975.
 curation_history:
 - timestamp: '2026-09-12T02:38:18Z'
   curator: codex
@@ -117,16 +128,24 @@ curation_history:
     and OPEN CURATION_TODO discussion (ornithine-decarboxylase-activity-protein-example-gap)
     anchored on existing verbatim record evidence snippets.
   llm_assisted: true
+- timestamp: '2026-10-25T08:45:00Z'
+  curator: claude
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: Promoted ornithine_decarboxylase_spec_sketch to MECHANISTIC; added InterPro:IPR005308-grounded
+    GENE_OR_PROTEIN node ornithine_decarboxylase_spec with reviewed Escherichia coli
+    K-12 (NCBITaxon:83333) protein_examples UniProtKB:P21169 (SpeC) backed by DOI:10.1128/jb.124.2.791-799.1975;
+    resolved ornithine-decarboxylase-activity-protein-example-gap.
+  llm_assisted: true
 causal_graphs:
 - graph_id: ornithine_decarboxylase_spec_sketch
   title: Ornithine decarboxylase conversion of L-ornithine to putrescine
   description: Evidence-backed physiological mechanism sketch linking ornithine decarboxylase
     catalytic activity and putrescine biosynthesis to the ornithine decarboxylase
     activity phenotype.
-  scope_status: NONMECHANISTIC
-  scope_notes: Activity-and-reaction sketch backed by EC 4.1.1.17 and DOI:10.1128/jb.124.2.791-799.1975;
-    strain-matched UniProtKB protein examples for Escherichia coli K-12 biosynthetic
-    ornithine decarboxylase (SpeC, UniProtKB:P21169) remain to be curated.
+  scope_status: MECHANISTIC
+  scope_notes: Mechanistic graph backed by DOI:10.1128/jb.124.2.791-799.1975; exemplified
+    on ornithine_decarboxylase_spec with Escherichia coli K-12 (NCBITaxon:83333; UP000000625)
+    constitutive ornithine decarboxylase SpeC (UniProtKB:P21169).
   nodes:
   - node_id: ornithine_decarboxylase_activity_trait
     label: ornithine decarboxylase activity
@@ -146,6 +165,34 @@ causal_graphs:
     node_type: CHEMICAL
     grounding: CHEBI:17148
     description: Diamine putrescine produced by decarboxylation of L-ornithine.
+  - node_id: ornithine_decarboxylase_spec
+    label: constitutive ornithine decarboxylase SpeC
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR005308
+    gene_symbols:
+    - speC
+    description: Pyridoxal 5'-phosphate-dependent constitutive ornithine decarboxylase
+      (SpeC) that catalyzes decarboxylation of L-ornithine to putrescine and CO2.
+    protein_examples:
+    - uniprot_id: UniProtKB:P21169
+      protein_label: Constitutive ornithine decarboxylase
+      gene_symbol: speC
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli K-12
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-25'
+      entry_version: 176
+      sequence_version: 2
+      role: SpeC is the constitutive ornithine decarboxylase that catalyzes decarboxylation
+        of L-ornithine to putrescine in Escherichia coli K-12.
+      evidence:
+      - reference: DOI:10.1128/jb.124.2.791-799.1975
+        snippet: The mutation, designated speC, was mapped by P1 transduction in several
+          strains and was shown to have a cotransduction frequency of 17.2% with serA.
+          Map order was established as serA speB speC metK.
+        notes: Cunningham-Rundles and Maas identified and mapped the Escherichia coli
+          K-12 speC gene encoding constitutive ornithine decarboxylase (UniProtKB:P21169).
   edges:
   - subject: ornithine_decarboxylase_catalytic_activity
     predicate: confers
@@ -177,3 +224,16 @@ causal_graphs:
       snippet: 'Reaction: L-ornithine = putrescine + CO2'
       notes: IUBMB EC 4.1.1.17 defines the ornithine decarboxylase reaction converting
         L-ornithine into putrescine and CO2.
+  - subject: ornithine_decarboxylase_spec
+    predicate: enables
+    predicate_id: RO:0002327
+    object: ornithine_decarboxylase_catalytic_activity
+    description: Constitutive ornithine decarboxylase SpeC enables ornithine decarboxylase
+      catalytic activity.
+    evidence:
+    - reference: DOI:10.1128/jb.124.2.791-799.1975
+      snippet: The mutation, designated speC, was mapped by P1 transduction in several
+        strains and was shown to have a cotransduction frequency of 17.2% with serA.
+        Map order was established as serA speB speC metK.
+      notes: Cunningham-Rundles and Maas mapped the speC locus encoding ornithine
+        decarboxylase in Escherichia coli K-12.
