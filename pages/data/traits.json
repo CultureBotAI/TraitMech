@@ -142913,6 +142913,11 @@
         "reference": "DOI:10.1007/s00253-014-5526-9",
         "snippet": "Klebsiella pneumoniae is known to produce meso-2,3-butanediol and 2S,3S-butanediol, whereas 2R,3R-butanediol was detected in the culture broth of K. pneumoniae CGMCC 1.6366.",
         "notes": "Chen et al. directly studied 2,3-butanediol stereoisomer formation by K. pneumoniae, supporting this species as a canonical 2,3-butanediol fermenter."
+      },
+      {
+        "reference": "DOI:10.1038/sj.jim.7000179",
+        "snippet": "Acetoin reductase catalyzes the production of 2,3-butanediol from acetoin. The gene encoding the acetoin reductase of Klebsiella pneumoniae CG21 was cloned and expressed in Escherichia coli and Clostridium acetobutylicum ATCC 824.",
+        "notes": "Wardwell et al. cloned and expressed the Klebsiella pneumoniae CG21 acetoin reductase (BudC) gene that catalyzes the production of 2,3-butanediol from acetoin."
       }
     ],
     "canonical_examples": [
@@ -142959,7 +142964,7 @@
         "discussion_id": "butanediol-fermentation-protein-example-gap",
         "prompt": "Add strain-matched UniProtKB protein_examples for Klebsiella pneumoniae meso-2,3-butanediol dehydrogenase BudC (UniProtKB:Q48436) so butanediol_fermentation_acetoin_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
         "kind": "CURATION_TODO",
-        "status": "OPEN",
+        "status": "RESOLVED",
         "attaches_to": [
           "causal_graphs#butanediol_fermentation_acetoin_sketch"
         ],
@@ -142973,7 +142978,9 @@
             "snippet": "Klebsiella pneumoniae is known to produce meso-2,3-butanediol and 2S,3S-butanediol, whereas 2R,3R-butanediol was detected in the culture broth of K. pneumoniae CGMCC 1.6366.",
             "explanation": "Existing record-level evidence supports the connected NONMECHANISTIC pathway/function graph but does not provide strain-matched UniProtKB protein accessions for protein_examples."
           }
-        ]
+        ],
+        "resolved_date": "2026-10-25",
+        "resolution_note": "Promoted butanediol_fermentation_acetoin_sketch to MECHANISTIC by adding InterPro:IPR014007-grounded GENE_OR_PROTEIN node butanediol_fermentation_budc with reviewed Klebsiella pneumoniae (NCBITaxon:573) protein_examples UniProtKB:Q48436 (BudC) backed by DOI:10.1038/sj.jim.7000179."
       }
     ],
     "curation_history": [
@@ -142997,6 +143004,13 @@
         "action": "CURATE_CAUSAL_GRAPH",
         "changes": "Added NONMECHANISTIC causal_graphs entry (butanediol_fermentation_acetoin_sketch) and OPEN CURATION_TODO discussion (butanediol-fermentation-protein-example-gap) anchored on existing verbatim record evidence snippets.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-25T18:45:00Z",
+        "curator": "claude",
+        "action": "CURATE_PROTEIN_TAXON_EXAMPLE",
+        "changes": "Promoted butanediol_fermentation_acetoin_sketch to MECHANISTIC; added InterPro:IPR014007-grounded GENE_OR_PROTEIN node butanediol_fermentation_budc with reviewed Klebsiella pneumoniae (NCBITaxon:573) protein_examples UniProtKB:Q48436 (BudC) backed by DOI:10.1038/sj.jim.7000179; resolved butanediol-fermentation-protein-example-gap.",
+        "llm_assisted": true
       }
     ],
     "causal_graphs": [
@@ -143004,8 +143018,8 @@
         "graph_id": "butanediol_fermentation_acetoin_sketch",
         "title": "Acetoin intermediate formation and reduction to 2,3-butanediol",
         "description": "Evidence-backed metabolic pathway sketch linking acetoin (3-hydroxybutanone) intermediate reduction and 2,3-butanediol production to the 2,3-butanediol fermentation phenotype.",
-        "scope_status": "NONMECHANISTIC",
-        "scope_notes": "Metabolic-intermediate sketch backed by the ASM Methyl Red / Voges-Proskauer protocol and DOI:10.1007/s00253-014-5526-9; strain-matched UniProtKB protein examples for Klebsiella pneumoniae meso-2,3-butanediol dehydrogenase (BudC, UniProtKB:Q48436) remain to be curated.",
+        "scope_status": "MECHANISTIC",
+        "scope_notes": "Mechanistic graph backed by the ASM Methyl Red / Voges-Proskauer protocol, DOI:10.1007/s00253-014-5526-9, and DOI:10.1038/sj.jim.7000179; exemplified on butanediol_fermentation_budc with Klebsiella pneumoniae (NCBITaxon:573) diacetyl reductase [(S)-acetoin forming] / acetoin reductase BudC (UniProtKB:Q48436).",
         "nodes": [
           {
             "node_id": "butanediol_fermentation_trait",
@@ -143027,6 +143041,37 @@
             "node_type": "CHEMICAL",
             "grounding": "CHEBI:16982",
             "description": "Neutral four-carbon diol product (2,3-butanediol) formed by enzymatic reduction of acetoin during butanediol fermentation."
+          },
+          {
+            "node_id": "butanediol_fermentation_budc",
+            "label": "acetoin reductase / meso-2,3-butanediol dehydrogenase BudC",
+            "node_type": "GENE_OR_PROTEIN",
+            "grounding": "InterPro:IPR014007",
+            "gene_symbols": [
+              "budC"
+            ],
+            "description": "Short-chain dehydrogenase/reductase (SDR) family acetoin reductase / meso-2,3-butanediol dehydrogenase (BudC) that catalyzes the reduction of acetoin to 2,3-butanediol.",
+            "protein_examples": [
+              {
+                "uniprot_id": "UniProtKB:Q48436",
+                "protein_label": "Diacetyl reductase [(S)-acetoin forming]",
+                "gene_symbol": "budC",
+                "taxon_id": "NCBITaxon:573",
+                "taxon_label": "Klebsiella pneumoniae",
+                "entry_status": "REVIEWED",
+                "retrieved_on": "2026-10-25",
+                "entry_version": 139,
+                "sequence_version": 2,
+                "role": "BudC is the Klebsiella pneumoniae acetoin reductase / meso-2,3-butanediol dehydrogenase that catalyzes the production of 2,3-butanediol from acetoin.",
+                "evidence": [
+                  {
+                    "reference": "DOI:10.1038/sj.jim.7000179",
+                    "snippet": "Acetoin reductase catalyzes the production of 2,3-butanediol from acetoin. The gene encoding the acetoin reductase of Klebsiella pneumoniae CG21 was cloned and expressed in Escherichia coli and Clostridium acetobutylicum ATCC 824.",
+                    "notes": "Wardwell et al. cloned and expressed the Klebsiella pneumoniae CG21 acetoin reductase (budC, UniProtKB:Q48436) catalyzing 2,3-butanediol production from acetoin."
+                  }
+                ]
+              }
+            ]
           }
         ],
         "edges": [
@@ -143055,6 +143100,20 @@
                 "reference": "DOI:10.1007/s00253-014-5526-9",
                 "snippet": "Klebsiella pneumoniae is known to produce meso-2,3-butanediol and 2S,3S-butanediol, whereas 2R,3R-butanediol was detected in the culture broth of K. pneumoniae CGMCC 1.6366.",
                 "notes": "Chen et al. show that Klebsiella pneumoniae produces meso-2,3-butanediol, 2S,3S-butanediol, and 2R,3R-butanediol in culture broth."
+              }
+            ]
+          },
+          {
+            "subject": "butanediol_fermentation_budc",
+            "predicate": "produces",
+            "predicate_id": "METPO:2007800",
+            "object": "butanediol_fermentation_2_3_butanediol",
+            "description": "Acetoin reductase (BudC) catalyzes the production of 2,3-butanediol from acetoin in Klebsiella pneumoniae.",
+            "evidence": [
+              {
+                "reference": "DOI:10.1038/sj.jim.7000179",
+                "snippet": "Acetoin reductase catalyzes the production of 2,3-butanediol from acetoin. The gene encoding the acetoin reductase of Klebsiella pneumoniae CG21 was cloned and expressed in Escherichia coli and Clostridium acetobutylicum ATCC 824.",
+                "notes": "Wardwell et al. show that Klebsiella pneumoniae CG21 acetoin reductase catalyzes the production of 2,3-butanediol from acetoin."
               }
             ]
           }
@@ -210300,6 +210359,11 @@
         "reference": "DOI:10.1128/aem.50.6.1383-1387.1985",
         "snippet": "The beta-glucuronidase produced by E. coli cleaves the MUG substrate to yield a fluorescent end product.",
         "notes": "Moberg used beta-glucuronidase cleavage of MUG to detect Escherichia coli in food samples."
+      },
+      {
+        "reference": "DOI:10.1073/pnas.83.22.8447",
+        "snippet": "We have developed a gene-fusion system based on the Escherichia coli beta-glucuronidase gene (uidA). The uidA gene has been cloned from E. coli K-12 and its entire nucleotide sequence has been determined. beta-Glucuronidase has been purified to homogeneity and characterized.",
+        "notes": "Jefferson et al. cloned and sequenced the Escherichia coli K-12 uidA gene encoding beta-glucuronidase and purified the enzyme to homogeneity."
       }
     ],
     "canonical_examples": [
@@ -210308,6 +210372,12 @@
         "taxon_label": "Escherichia coli",
         "note": "Moberg reported beta-glucuronidase-mediated cleavage of MUG by Escherichia coli in a fluorogenic detection assay.",
         "reference": "DOI:10.1128/aem.50.6.1383-1387.1985"
+      },
+      {
+        "taxon_id": "NCBITaxon:83333",
+        "taxon_label": "Escherichia coli K-12",
+        "note": "Jefferson et al. cloned and sequenced the Escherichia coli K-12 uidA gene encoding beta-glucuronidase and purified the enzyme to homogeneity.",
+        "reference": "DOI:10.1073/pnas.83.22.8447"
       }
     ],
     "discussions": [
@@ -210346,7 +210416,7 @@
         "discussion_id": "beta-glucuronidase-activity-protein-example-gap",
         "prompt": "Add strain-matched UniProtKB protein_examples for Escherichia coli K-12 beta-glucuronidase UidA (UniProtKB:P05804) so beta_glucuronidase_uida_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
         "kind": "CURATION_TODO",
-        "status": "OPEN",
+        "status": "RESOLVED",
         "attaches_to": [
           "causal_graphs#beta_glucuronidase_uida_sketch"
         ],
@@ -210360,7 +210430,9 @@
             "snippet": "The beta-glucuronidase produced by E. coli cleaves the MUG substrate to yield a fluorescent end product.",
             "explanation": "Existing record-level evidence supports the connected NONMECHANISTIC pathway/function graph but does not provide strain-matched UniProtKB protein accessions for protein_examples."
           }
-        ]
+        ],
+        "resolved_date": "2026-10-25",
+        "resolution_note": "Added canonical_examples entry Escherichia coli K-12 (NCBITaxon:83333; DOI:10.1073/pnas.83.22.8447) and promoted beta_glucuronidase_uida_sketch to MECHANISTIC by adding InterPro:IPR006101-grounded GENE_OR_PROTEIN node beta_glucuronidase_uida with reviewed Escherichia coli K-12 (NCBITaxon:83333; UP000000625) protein_examples UniProtKB:P05804 (UidA) backed by DOI:10.1073/pnas.83.22.8447."
       }
     ],
     "curation_history": [
@@ -210391,6 +210463,13 @@
         "action": "CURATE_CAUSAL_GRAPH",
         "changes": "Added NONMECHANISTIC causal_graphs entry (beta_glucuronidase_uida_sketch) and OPEN CURATION_TODO discussion (beta-glucuronidase-activity-protein-example-gap) anchored on existing verbatim record evidence snippets.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-25T18:45:00Z",
+        "curator": "claude",
+        "action": "CURATE_PROTEIN_TAXON_EXAMPLE",
+        "changes": "Added Escherichia coli K-12 (NCBITaxon:83333; DOI:10.1073/pnas.83.22.8447) canonical example; promoted beta_glucuronidase_uida_sketch to MECHANISTIC; added InterPro:IPR006101-grounded GENE_OR_PROTEIN node beta_glucuronidase_uida with reviewed Escherichia coli K-12 (NCBITaxon:83333) protein_examples UniProtKB:P05804 (UidA) backed by DOI:10.1073/pnas.83.22.8447; resolved beta-glucuronidase-activity-protein-example-gap.",
+        "llm_assisted": true
       }
     ],
     "causal_graphs": [
@@ -210398,8 +210477,8 @@
         "graph_id": "beta_glucuronidase_uida_sketch",
         "title": "Beta-glucuronidase hydrolysis of beta-D-glucuronosides to D-glucuronate",
         "description": "Evidence-backed physiological mechanism sketch linking beta-glucuronidase catalytic activity and D-glucuronate release to the beta-glucuronidase activity phenotype.",
-        "scope_status": "NONMECHANISTIC",
-        "scope_notes": "Activity-and-reaction sketch backed by EC 3.2.1.31 and DOI:10.1128/aem.50.6.1383-1387.1985; strain-matched UniProtKB protein examples for Escherichia coli K-12 beta-glucuronidase (UidA, UniProtKB:P05804) remain to be curated.",
+        "scope_status": "MECHANISTIC",
+        "scope_notes": "Mechanistic graph backed by EC 3.2.1.31, DOI:10.1128/aem.50.6.1383-1387.1985, and DOI:10.1073/pnas.83.22.8447; exemplified on beta_glucuronidase_uida with Escherichia coli K-12 (NCBITaxon:83333; UP000000625) beta-glucuronidase UidA (UniProtKB:P05804).",
         "nodes": [
           {
             "node_id": "beta_glucuronidase_activity_trait",
@@ -210421,6 +210500,39 @@
             "node_type": "CHEMICAL",
             "grounding": "CHEBI:15748",
             "description": "Free D-glucuronate released by beta-glucuronidase hydrolysis of beta-D-glucuronosides."
+          },
+          {
+            "node_id": "beta_glucuronidase_uida",
+            "label": "beta-glucuronidase UidA",
+            "node_type": "GENE_OR_PROTEIN",
+            "grounding": "InterPro:IPR006101",
+            "gene_symbols": [
+              "uidA",
+              "gusA"
+            ],
+            "description": "Glycoside hydrolase family 2 (GH2) beta-glucuronidase (UidA) that hydrolyzes beta-D-glucuronosides to D-glucuronate and an alcohol.",
+            "protein_examples": [
+              {
+                "uniprot_id": "UniProtKB:P05804",
+                "protein_label": "Beta-glucuronidase",
+                "gene_symbol": "uidA",
+                "taxon_id": "NCBITaxon:83333",
+                "taxon_label": "Escherichia coli K-12",
+                "entry_status": "REVIEWED",
+                "proteome_id": "UP000000625",
+                "retrieved_on": "2026-10-25",
+                "entry_version": 191,
+                "sequence_version": 2,
+                "role": "UidA is the Escherichia coli K-12 beta-glucuronidase that hydrolyzes beta-D-glucuronosides to D-glucuronate and an alcohol.",
+                "evidence": [
+                  {
+                    "reference": "DOI:10.1073/pnas.83.22.8447",
+                    "snippet": "We have developed a gene-fusion system based on the Escherichia coli beta-glucuronidase gene (uidA). The uidA gene has been cloned from E. coli K-12 and its entire nucleotide sequence has been determined. beta-Glucuronidase has been purified to homogeneity and characterized.",
+                    "notes": "Jefferson et al. cloned, sequenced, and purified Escherichia coli K-12 uidA-encoded beta-glucuronidase (UniProtKB:P05804)."
+                  }
+                ]
+              }
+            ]
           }
         ],
         "edges": [
@@ -210449,6 +210561,20 @@
                 "reference": "https://iubmb.qmul.ac.uk/enzyme/EC3/2/1/31.html",
                 "snippet": "Reaction: a \u03b2-D-glucuronoside + H2O = D-glucuronate + an alcohol",
                 "notes": "IUBMB EC 3.2.1.31 defines the beta-glucuronidase reaction hydrolyzing a beta-D-glucuronoside with H2O to D-glucuronate and an alcohol."
+              }
+            ]
+          },
+          {
+            "subject": "beta_glucuronidase_uida",
+            "predicate": "enables",
+            "predicate_id": "RO:0002327",
+            "object": "beta_glucuronidase_catalytic_activity",
+            "description": "Beta-glucuronidase UidA enables beta-glucuronidase catalytic activity.",
+            "evidence": [
+              {
+                "reference": "DOI:10.1073/pnas.83.22.8447",
+                "snippet": "We have developed a gene-fusion system based on the Escherichia coli beta-glucuronidase gene (uidA). The uidA gene has been cloned from E. coli K-12 and its entire nucleotide sequence has been determined. beta-Glucuronidase has been purified to homogeneity and characterized.",
+                "notes": "Jefferson et al. cloned and characterized Escherichia coli K-12 uidA encoding beta-glucuronidase."
               }
             ]
           }
@@ -210499,6 +210625,11 @@
         "reference": "DOI:10.1021/jf020965x",
         "snippet": "Serratia marcescens YS-1, a chitin-degrading microorganism, produced mainly N-acetylhexosaminidase",
         "notes": "Kurakake et al. reported production of N-acetylhexosaminidase by Serratia marcescens YS-1, supporting this as a bacterial beta-N-acetylhexosaminidase activity phenotype."
+      },
+      {
+        "reference": "DOI:10.1016/0378-1119(95)00848-9",
+        "snippet": "The chitobiase (Chb) encoding gene (chb) from Serratia marcescens (Sm) has been cloned, sequenced and expressed in Escherichia coli (Ec).",
+        "notes": "Tews et al. cloned, sequenced, and expressed the Serratia marcescens chb gene encoding periplasmic N-acetylglucosaminidase (chitobiase, Chb)."
       }
     ],
     "canonical_examples": [
@@ -210545,7 +210676,7 @@
         "discussion_id": "beta-n-acetylhexosaminidase-activity-protein-example-gap",
         "prompt": "Add strain-matched UniProtKB protein_examples for Serratia marcescens chitobiase Chb (UniProtKB:Q54468) so beta_n_acetylhexosaminidase_chb_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
         "kind": "CURATION_TODO",
-        "status": "OPEN",
+        "status": "RESOLVED",
         "attaches_to": [
           "causal_graphs#beta_n_acetylhexosaminidase_chb_sketch"
         ],
@@ -210559,7 +210690,9 @@
             "snippet": "Serratia marcescens YS-1, a chitin-degrading microorganism, produced mainly N-acetylhexosaminidase",
             "explanation": "Existing record-level evidence supports the connected NONMECHANISTIC pathway/function graph but does not provide strain-matched UniProtKB protein accessions for protein_examples."
           }
-        ]
+        ],
+        "resolved_date": "2026-10-25",
+        "resolution_note": "Promoted beta_n_acetylhexosaminidase_chb_sketch to MECHANISTIC by adding InterPro:IPR025705-grounded GENE_OR_PROTEIN node beta_n_acetylhexosaminidase_chb with reviewed Serratia marcescens (NCBITaxon:615) protein_examples UniProtKB:Q54468 (Chb) backed by DOI:10.1016/0378-1119(95)00848-9."
       }
     ],
     "curation_history": [
@@ -210583,6 +210716,13 @@
         "action": "CURATE_CAUSAL_GRAPH",
         "changes": "Added NONMECHANISTIC causal_graphs entry (beta_n_acetylhexosaminidase_chb_sketch) and OPEN CURATION_TODO discussion (beta-n-acetylhexosaminidase-activity-protein-example-gap) anchored on existing verbatim record evidence snippets.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-25T18:45:00Z",
+        "curator": "claude",
+        "action": "CURATE_PROTEIN_TAXON_EXAMPLE",
+        "changes": "Promoted beta_n_acetylhexosaminidase_chb_sketch to MECHANISTIC; added InterPro:IPR025705-grounded GENE_OR_PROTEIN node beta_n_acetylhexosaminidase_chb with reviewed Serratia marcescens (NCBITaxon:615) protein_examples UniProtKB:Q54468 (Chb) backed by DOI:10.1016/0378-1119(95)00848-9; resolved beta-n-acetylhexosaminidase-activity-protein-example-gap.",
+        "llm_assisted": true
       }
     ],
     "causal_graphs": [
@@ -210590,8 +210730,8 @@
         "graph_id": "beta_n_acetylhexosaminidase_chb_sketch",
         "title": "Beta-N-acetylhexosaminidase hydrolytic release of N-acetyl-D-hexosamine residues",
         "description": "Evidence-backed physiological mechanism sketch linking beta-N-acetylhexosaminidase catalytic activity and N-acetyl-D-glucosamine release to the beta-N-acetylhexosaminidase activity phenotype.",
-        "scope_status": "NONMECHANISTIC",
-        "scope_notes": "Activity-and-reaction sketch backed by EC 3.2.1.52 and DOI:10.1021/jf020965x; strain-matched UniProtKB protein examples for Serratia marcescens chitobiase (Chb, UniProtKB:Q54468) remain to be curated.",
+        "scope_status": "MECHANISTIC",
+        "scope_notes": "Mechanistic graph backed by EC 3.2.1.52, DOI:10.1021/jf020965x, and DOI:10.1016/0378-1119(95)00848-9; exemplified on beta_n_acetylhexosaminidase_chb with Serratia marcescens (NCBITaxon:615) chitobiase Chb (UniProtKB:Q54468).",
         "nodes": [
           {
             "node_id": "beta_n_acetylhexosaminidase_activity_trait",
@@ -210613,6 +210753,37 @@
             "node_type": "CHEMICAL",
             "grounding": "CHEBI:59640",
             "description": "Terminal N-acetyl-D-hexosamine (N-acetyl-D-glucosamine) monomer released by beta-N-acetylhexosaminidase hydrolysis of chitooligosaccharides and N-acetyl-beta-D-hexosaminides."
+          },
+          {
+            "node_id": "beta_n_acetylhexosaminidase_chb",
+            "label": "chitobiase Chb",
+            "node_type": "GENE_OR_PROTEIN",
+            "grounding": "InterPro:IPR025705",
+            "gene_symbols": [
+              "chb"
+            ],
+            "description": "Glycoside hydrolase family 20 (GH20) beta-N-acetylhexosaminidase / chitobiase (Chb) that hydrolyzes terminal non-reducing N-acetyl-D-hexosamine residues in chitobiose and N-acetyl-beta-D-hexosaminides.",
+            "protein_examples": [
+              {
+                "uniprot_id": "UniProtKB:Q54468",
+                "protein_label": "Chitobiase",
+                "gene_symbol": "chb",
+                "taxon_id": "NCBITaxon:615",
+                "taxon_label": "Serratia marcescens",
+                "entry_status": "REVIEWED",
+                "retrieved_on": "2026-10-25",
+                "entry_version": 144,
+                "sequence_version": 1,
+                "role": "Chb is the Serratia marcescens periplasmic family 20 beta-N-acetylhexosaminidase (chitobiase) that hydrolyzes terminal non-reducing N-acetyl-D-hexosamine residues.",
+                "evidence": [
+                  {
+                    "reference": "DOI:10.1016/0378-1119(95)00848-9",
+                    "snippet": "The chitobiase (Chb) encoding gene (chb) from Serratia marcescens (Sm) has been cloned, sequenced and expressed in Escherichia coli (Ec).",
+                    "notes": "Tews et al. cloned and sequenced Serratia marcescens chb encoding N-acetylglucosaminidase (chitobiase, UniProtKB:Q54468)."
+                  }
+                ]
+              }
+            ]
           }
         ],
         "edges": [
@@ -210641,6 +210812,20 @@
                 "reference": "https://iubmb.qmul.ac.uk/enzyme/EC3/2/1/52.html",
                 "snippet": "Reaction: Hydrolysis of terminal non-reducing N-acetyl-D-hexosamine residues in N-acetyl-\u03b2-D-hexosaminides",
                 "notes": "IUBMB EC 3.2.1.52 defines beta-N-acetylhexosaminidase catalysis as the hydrolysis of terminal non-reducing N-acetyl-D-hexosamine residues in N-acetyl-beta-D-hexosaminides."
+              }
+            ]
+          },
+          {
+            "subject": "beta_n_acetylhexosaminidase_chb",
+            "predicate": "enables",
+            "predicate_id": "RO:0002327",
+            "object": "beta_n_acetylhexosaminidase_catalytic_activity",
+            "description": "Chitobiase Chb enables beta-N-acetylhexosaminidase catalytic activity.",
+            "evidence": [
+              {
+                "reference": "DOI:10.1016/0378-1119(95)00848-9",
+                "snippet": "The chitobiase (Chb) encoding gene (chb) from Serratia marcescens (Sm) has been cloned, sequenced and expressed in Escherichia coli (Ec).",
+                "notes": "Tews et al. cloned and expressed Serratia marcescens chb encoding enzymatically active N-acetylglucosaminidase (chitobiase)."
               }
             ]
           }
