@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Curate Stage 5 grouped review remediation (Cycle 1 #1981, Cycle 2 #1995, Cycle 3–4 #2002).
+"""Curate Stage 5 grouped review remediation (Cycle 1 #1981, Cycle 2 #1995, Cycle 3–5 #2002).
 
 Resolves the 4 actionable open findings from the Cycle 1 Stage 4 corpus-wide
 record and cohort review (`reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-04/revision-0001/evidence.yaml`,
@@ -9,14 +9,18 @@ Cycle 2 Stage 4 corpus-wide record and cohort review
 tracked in GitHub issue #1995), the 17 actionable open findings from the
 Cycle 3 Stage 4 corpus-wide record and cohort review
 (`reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-04/revision-0001/evidence.yaml`,
-tracked in GitHub issue #2002), and the 18 actionable open findings from the
+tracked in GitHub issue #2002), the 18 actionable open findings from the
 Cycle 4 Stage 4 corpus-wide record and cohort review
 (`reviews/workflow/mech-goal-sequence-20261019/cycle-000004/stage-04/revision-0001/evidence.yaml`,
+tracked in GitHub issue #2002), and the 7 actionable open findings from the
+Cycle 5 Stage 4 corpus-wide record and cohort review
+(`reviews/workflow/mech-goal-sequence-20261019/cycle-000005/stage-04/revision-0001/evidence.yaml`,
 tracked in GitHub issue #2002):
 - `F-DEF-SRC-CYANOPHYCIN-001`..`004` (Cycle 1 #1981, 4 records)
 - `F-DEF-SRC-CARBON-FIXATION-010`..`015` (Cycle 2 #1995, 6 records)
 - `F-C3S4-DEF-SRC-001`..`017` (Cycle 3 #2002, 17 records)
 - `F-C4S4-DEF-SRC-001`..`018` (Cycle 4 #2002, 18 records)
+- `F-C5S4-DEF-SRC-001`..`007` (Cycle 5 #2002, 7 records)
 
 Default is dry-run; pass `--apply` to write changes via `write_validated_trait`
 and `record_curation_event`.
@@ -52,6 +56,7 @@ TIMESTAMP = "2026-10-22T05:20:00Z"
 CYCLE2_TIMESTAMP = "2026-10-23T16:05:00Z"
 CYCLE3_TIMESTAMP = "2026-10-24T02:45:00Z"
 CYCLE4_TIMESTAMP = "2026-10-25T12:55:00Z"
+CYCLE5_TIMESTAMP = "2026-10-25T21:40:00Z"
 ACTION = "ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE"
 
 REMEDIATION_SPECS: dict[str, dict[str, Any]] = {
@@ -1193,6 +1198,185 @@ REMEDIATION_SPECS: dict[str, dict[str, Any]] = {
             "G-C4S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
         ),
     },
+    # Cycle 5 Stage 5 remediation (#2002): 7 open findings from Cycle 5 Stage 4
+    "data/traits/genomics/gao_her_duf_system.yaml": {
+        "identifier": "traitmech:000361",
+        "finding_id": "F-C5S4-DEF-SRC-001",
+        "timestamp": CYCLE5_TIMESTAMP,
+        "definition_source": "DOI:10.1126/science.aba0372",
+        "replace_reference": "PMID:32855333",
+        "evidence_entry": {
+            "reference": "DOI:10.1126/science.aba0372",
+            "snippet": (
+                "By systematic defense gene prediction and heterologous "
+                "reconstitution, here we discover 29 widespread antiviral gene "
+                "cassettes, collectively present in 32% of all sequenced bacterial "
+                "and archaeal genomes, that mediate protection against specific "
+                "bacteriophages."
+            ),
+            "notes": (
+                "Gao et al. support a systematic defense-gene prediction and "
+                "heterologous reconstitution campaign that discovered widespread "
+                "antiviral gene cassettes (PMID:32855333 / DOI:10.1126/science.aba0372)."
+            ),
+        },
+        "changes": (
+            "Aligned record-level evidence[0].reference from PMID:32855333 to "
+            "DOI:10.1126/science.aba0372 (same Gao et al. 2020 publication) to "
+            "match definition_source while preserving the verified verbatim snippet "
+            "and PMID cross-reference in notes (Cycle 5 Stage 5 remediation of "
+            "F-C5S4-DEF-SRC-001 in group "
+            "G-C5S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/genomics/gao_her_sir_system.yaml": {
+        "identifier": "traitmech:000362",
+        "finding_id": "F-C5S4-DEF-SRC-002",
+        "timestamp": CYCLE5_TIMESTAMP,
+        "definition_source": "DOI:10.1126/science.aba0372",
+        "replace_reference": "PMID:32855333",
+        "evidence_entry": {
+            "reference": "DOI:10.1126/science.aba0372",
+            "snippet": (
+                "By systematic defense gene prediction and heterologous "
+                "reconstitution, here we discover 29 widespread antiviral gene "
+                "cassettes, collectively present in 32% of all sequenced bacterial "
+                "and archaeal genomes, that mediate protection against specific "
+                "bacteriophages."
+            ),
+            "notes": (
+                "Gao et al. support a systematic defense-gene prediction and "
+                "heterologous reconstitution campaign that discovered widespread "
+                "antiviral gene cassettes (PMID:32855333 / DOI:10.1126/science.aba0372)."
+            ),
+        },
+        "changes": (
+            "Aligned record-level evidence[0].reference from PMID:32855333 to "
+            "DOI:10.1126/science.aba0372 (same Gao et al. 2020 publication) to "
+            "match definition_source while preserving the verified verbatim snippet "
+            "and PMID cross-reference in notes (Cycle 5 Stage 5 remediation of "
+            "F-C5S4-DEF-SRC-002 in group "
+            "G-C5S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/genomics/genome_streamlining.yaml": {
+        "identifier": "traitmech:000099",
+        "finding_id": "F-C5S4-DEF-SRC-003",
+        "timestamp": CYCLE5_TIMESTAMP,
+        "definition_source": "DOI:10.1038/ismej.2014.60",
+        "evidence_entry": {
+            "reference": "DOI:10.1038/ismej.2014.60",
+            "snippet": "minimizes resources required for replication",
+            "notes": (
+                "Giovannoni et al. set out streamlining theory, explaining small "
+                "streamlined genomes of abundant oligotrophic microbes."
+            ),
+        },
+        "changes": (
+            "Added verified verbatim snippet from DOI:10.1038/ismej.2014.60 "
+            "(already present on oligotrophic.yaml "
+            "causal_graphs[0].edges[2].evidence[0]) to record-level evidence[0] "
+            "to match definition_source (Cycle 5 Stage 5 remediation of "
+            "F-C5S4-DEF-SRC-003 in group "
+            "G-C5S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/metabolism/biopolymer_degradation.yaml": {
+        "identifier": "traitmech:000110",
+        "finding_id": "F-C5S4-DEF-SRC-004",
+        "timestamp": CYCLE5_TIMESTAMP,
+        "definition_source": "DOI:10.1016/j.cbpa.2015.10.018",
+        "evidence_entry": {
+            "reference": "DOI:10.1016/j.cbpa.2015.10.018",
+            "snippet": (
+                "The enzymatic degradation of cellulose and hemicellulose is "
+                "accomplished in Nature via the collective action of multiple "
+                "carbohydrate-active enzymes"
+            ),
+            "notes": (
+                "Cragg et al. review lignocellulose degradation mechanisms across "
+                "the tree of life, using complementary enzymes to deconstruct plant "
+                "biopolymers; parent of the polymer-specific sub-variants."
+            ),
+        },
+        "changes": (
+            "Added verified verbatim snippet from DOI:10.1016/j.cbpa.2015.10.018 "
+            "(already present on saprotrophy.yaml "
+            "causal_graphs[0].edges[5].evidence[0]) to record-level evidence[0] "
+            "to match definition_source (Cycle 5 Stage 5 remediation of "
+            "F-C5S4-DEF-SRC-004 in group "
+            "G-C5S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/metabolism/denitrification.yaml": {
+        "identifier": "traitmech:000104",
+        "finding_id": "F-C5S4-DEF-SRC-005",
+        "timestamp": CYCLE5_TIMESTAMP,
+        "definition_source": "DOI:10.1128/mmbr.61.4.533-616.1997",
+        "evidence_entry": {
+            "reference": "DOI:10.1128/mmbr.61.4.533-616.1997",
+            "snippet": "N oxides as terminal electron acceptors",
+            "notes": (
+                "Zumft reviews the cell biology and molecular basis of "
+                "denitrification, the stepwise respiratory reduction of nitrate to "
+                "dinitrogen."
+            ),
+        },
+        "changes": (
+            "Added verified verbatim snippet from DOI:10.1128/mmbr.61.4.533-616.1997 "
+            "(already present on ancestor records nitrogen_respiration.yaml and "
+            "anaerobic_respiration.yaml evidence[0]) to record-level evidence[0] "
+            "to match definition_source (Cycle 5 Stage 5 remediation of "
+            "F-C5S4-DEF-SRC-005 in group "
+            "G-C5S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/metabolism/sulfur_oxidation.yaml": {
+        "identifier": "traitmech:000106",
+        "finding_id": "F-C5S4-DEF-SRC-006",
+        "timestamp": CYCLE5_TIMESTAMP,
+        "definition_source": "DOI:10.1111/j.1574-6976.2009.00187.x",
+        "evidence_entry": {
+            "reference": "DOI:10.1111/j.1574-6976.2009.00187.x",
+            "snippet": "lithotrophic sulfur oxidation",
+            "notes": (
+                "Ghosh & Dam review the biochemistry and molecular biology of "
+                "lithotrophic sulfur oxidation across bacteria and archaea."
+            ),
+        },
+        "changes": (
+            "Added verified verbatim snippet from DOI:10.1111/j.1574-6976.2009.00187.x "
+            "(already present on lithotrophic.yaml "
+            "causal_graphs[0].edges[2].evidence[0]) to record-level evidence[0] "
+            "to match definition_source (Cycle 5 Stage 5 remediation of "
+            "F-C5S4-DEF-SRC-006 in group "
+            "G-C5S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/physiology/catalase_activity.yaml": {
+        "identifier": "traitmech:000075",
+        "finding_id": "F-C5S4-DEF-SRC-007",
+        "timestamp": CYCLE5_TIMESTAMP,
+        "definition_source": "DOI:10.1007/s00018-003-3206-5",
+        "evidence_entry": {
+            "reference": "DOI:10.1007/s00018-003-3206-5",
+            "snippet": (
+                "hydrogen peroxide to water and molecular oxygen, serving to "
+                "protect cells"
+            ),
+            "notes": (
+                "Chelikani, Fita & Loewen review the diversity of catalases, "
+                "enzymes that dismutate hydrogen peroxide to water and oxygen."
+            ),
+        },
+        "changes": (
+            "Added verified verbatim snippet from DOI:10.1007/s00018-003-3206-5 "
+            "(already present on oxidative_stress_response.yaml evidence[1]) to "
+            "record-level evidence[0] to match definition_source (Cycle 5 Stage 5 "
+            "remediation of F-C5S4-DEF-SRC-007 in group "
+            "G-C5S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
 }
 
 
@@ -1271,7 +1455,7 @@ def process_all(
     *,
     apply: bool = False,
 ) -> tuple[int, int]:
-    """Process all 45 Stage 5 remediation targets. Returns (findings_resolved, files_updated)."""
+    """Process all 52 Stage 5 remediation targets. Returns (findings_resolved, files_updated)."""
     excluded = load_do_not_work(repo_root / "DO_NOT_WORK.md")
     findings_resolved = 0
     files_updated = 0

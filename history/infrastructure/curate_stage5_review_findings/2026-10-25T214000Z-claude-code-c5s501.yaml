@@ -1,0 +1,43 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/curate_stage5_review_findings.py
+session:
+  id: 2026-10-25T214000Z-claude-code-c5s501
+  timestamp: '2026-10-25T21:40:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+    agent_tool: antigravity
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/2002
+  - https://github.com/CultureBotAI/TraitMech/issues/1981
+  - https://github.com/CultureBotAI/TraitMech/issues/1995
+  - https://github.com/CultureBotAI/TraitMech/issues/1982
+  - https://github.com/CultureBotAI/TraitMech/issues/1983
+  - https://github.com/CultureBotAI/TraitMech/issues/1984
+  - https://github.com/CultureBotAI/TraitMech/issues/1985
+  - https://github.com/CultureBotAI/TraitMech/issues/364
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  - curation_history
+  summary: Resolve all 7 actionable Cycle 5 Stage 4 open findings in group G-C5S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+    and map 5 deferred cohort findings to open GitHub issues
+  details: 'Executed Stage 5 (resolve_review_findings) of run mech-goal-sequence-20261019, cycle 5 consuming
+    Cycle 5 Stage 4 review evidence (reviews/workflow/mech-goal-sequence-20261019/cycle-000005/stage-04/revision-0001/evidence.yaml,
+    sha256 32cedb75ee6c8633dc7e58670db65036e1b45e1db9b2c96160ed61b528b3061e). Grouped all 12 carried-forward
+    findings into 6 cause-and-ownership groups, deduplicated against all live GitHub issues, and
+    reused real GitHub issues (#2002 for resolved group G-C5S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS;
+    #1982, #1983, #1984, #1985, and #364 for the 5 deferred source-limited/upstream-blocked cohort groups).
+    Remediated all 7 open findings (F-C5S4-DEF-SRC-001 through F-C5S4-DEF-SRC-007) via guarded writer
+    scripts/curate_stage5_review_findings.py across gao_her_duf_system.yaml, gao_her_sir_system.yaml,
+    genome_streamlining.yaml, biopolymer_degradation.yaml, denitrification.yaml, sulfur_oxidation.yaml,
+    and catalase_activity.yaml. Persisted fresh structured review bundle
+    reviews/structured/20261025T214500Z-cycle5-stage5-remediated-records-review/ confirming 0 open findings
+    and verdict pass across all 7 remediated records, regenerated pages/, and preserved all immutable
+    Stage 4 review artifacts untouched.'

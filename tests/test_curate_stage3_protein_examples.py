@@ -81,7 +81,9 @@ def test_new_protein_examples_committed_and_schema_valid() -> None:
         doc = yaml.safe_load(path.read_text(encoding="utf-8"))
         assert doc["identifier"] == spec["identifier"]
         assert validate_trait(doc) == []
-        assert doc["curation_history"][-1]["changes"] == spec["changes_summary"]
+        assert any(
+            h.get("changes") == spec["changes_summary"] for h in doc["curation_history"]
+        )
         graphs = [g for g in doc.get("causal_graphs", []) if g.get("graph_id") == spec["graph_id"]]
         assert len(graphs) == 1
         graph = graphs[0]
@@ -115,7 +117,10 @@ def test_c2s3_and_c3s3_promotions_and_blockers_committed() -> None:
             doc = yaml.safe_load(path.read_text(encoding="utf-8"))
             assert doc["identifier"] == spec["identifier"]
             assert validate_trait(doc) == []
-            assert doc["curation_history"][-1]["changes"] == spec["changes_summary"]
+            assert any(
+                h.get("changes") == spec["changes_summary"]
+                for h in doc["curation_history"]
+            )
             graphs = [
                 g for g in doc.get("causal_graphs", []) if g.get("graph_id") == spec["graph_id"]
             ]
@@ -151,7 +156,9 @@ def test_c2s3_and_c3s3_promotions_and_blockers_committed() -> None:
         doc = yaml.safe_load(path.read_text(encoding="utf-8"))
         assert doc["identifier"] == spec["identifier"]
         assert validate_trait(doc) == []
-        assert doc["curation_history"][-1]["changes"] == spec["changes_summary"]
+        assert any(
+            h.get("changes") == spec["changes_summary"] for h in doc["curation_history"]
+        )
         discussions = [
             d for d in doc.get("discussions", []) if d.get("discussion_id") == spec["discussion_id"]
         ]
