@@ -1,0 +1,53 @@
+schema_version: '1.0.0'
+repository_key: traitmech
+github_repository: CultureBotAI/TraitMech
+run_id: mech-goal-sequence-20261019
+cycle: 4
+stage: 6
+revision: 1
+source_revision: 51e1363e233cdeb08484f045ac1f2115d74171c2
+scope_frozen_at: '2026-10-25T14:45:19Z'
+outcome: completed
+summary: >
+  Froze INFRA_TASKS.md at the supervisor cutoff (2026-10-25T14:45:19Z,
+  sha256 c49c57fe6f650ba6e6950b184a8d12edc2f0d46ff58e05ff7ffd0bb73611caa5),
+  reconciled the 1 pending infrastructure task in the frozen scope
+  (traitmech-infra-0006, linked to GitHub issue #2002 as follow-up to #1981),
+  updated scripts/audit_evidence_snippets.py so term_kind OBJECT_PROPERTY
+  records do not propagate predicate-stem snippets into refs_by_record_id or
+  refs_by_parent_id and accept any non-empty, non-elliptical predicate-stem
+  snippet on definition_source, added unit tests in
+  tests/test_audit_evidence_snippets.py, validated all repository QC and
+  workflow gates, and marked traitmech-infra-0006 as resolved in INFRA_TASKS.md
+  with 0 deferred or blocked tasks remaining.
+artifacts:
+  - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000004/stage-06/revision-0001/infra_snapshot.md
+    kind: infra_snapshot
+    sha256: c49c57fe6f650ba6e6950b184a8d12edc2f0d46ff58e05ff7ffd0bb73611caa5
+  - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000004/stage-06/revision-0001/implementation_plan.md
+    kind: implementation_plan
+    sha256: 12a20b69116c106b9a8a228b9f3d93625cc933f237adc2046851f725d4b94018
+  - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000004/stage-06/revision-0001/validation.md
+    kind: validation
+    sha256: dc5f5a137aa76e9282ab93a847082464019b4958dada0d3caad49f3185498efe
+  - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000004/stage-06/revision-0001/c4s6_coverage_full.json
+    kind: supporting
+    sha256: 68222d92e6ec0afa874fc620bb65307d59dbc71352194d8c96d9f62d5db2dad7
+findings: []
+groups: []
+infra_tasks:
+  - task_id: traitmech-infra-0006
+    summary: Skip term_kind OBJECT_PROPERTY records with non-empty predicate-stem snippets in scripts/audit_evidence_snippets.py UNQUOTED_DEFINITION_SOURCE so 1-word predicate stems are not flagged as missing when sibling OBJECT_PROPERTY records have >=12-char stems
+    status: resolved
+    issue_url: https://github.com/CultureBotAI/TraitMech/issues/2002
+    resolution_evidence:
+      - reviews/workflow/mech-goal-sequence-20261019/cycle-000004/stage-06/revision-0001/implementation_plan.md
+      - reviews/workflow/mech-goal-sequence-20261019/cycle-000004/stage-06/revision-0001/validation.md
+    disposition: >
+      Resolved in Cycle 4 Stage 6 (issue #2002, follow-up to #1981); updated
+      scripts/audit_evidence_snippets.py so OBJECT_PROPERTY records do not
+      propagate predicate-stem snippets into refs_by_record_id/refs_by_parent_id
+      and accept any non-empty, non-elliptical predicate-stem snippet on
+      definition_source, covered by unit tests in
+      tests/test_audit_evidence_snippets.py.
+carry_forward_ids: []
