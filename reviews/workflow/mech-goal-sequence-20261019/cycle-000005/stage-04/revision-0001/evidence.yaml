@@ -1,0 +1,183 @@
+schema_version: 1.0.0
+repository_key: traitmech
+github_repository: CultureBotAI/TraitMech
+run_id: mech-goal-sequence-20261019
+cycle: 5
+stage: 4
+revision: 1
+outcome: completed
+summary: 'Reviewed all 1,129 eligible TraitRecord YAML files (1,130 total minus 1 DO_NOT_WORK.md exclusion:
+  data/traits/physiology/spore_germination.yaml, traitmech:000083; 395 eligible METPO: records and 734
+  eligible traitmech:NNNNNN records) across all 10 category cohorts at frozen inventory commit afb7c6f4195120046f2e7ec9d46072998c725505
+  using repository-local review-yaml-record and review-yaml-category skills and persisted the versioned
+  structured review bundle (reviews/structured/20261025T200500Z-cycle5-stage4-corpus-record-and-cohort-review/)
+  plus parent workflow evidence referencing Cycle 4 Stage 5 evidence. Identified 7 actionable open record-level
+  definition_source verbatim snippet / CURIE alignment findings (F-C5S4-DEF-SRC-001..007) for Cycle 5
+  Stage 5 grouped remediation, logged traitmech-infra-0007 in INFRA_TASKS.md (#2002), and carried forward
+  the 5 deferred source-limited/upstream-blocked cohort findings.'
+source_revision: afb7c6f4195120046f2e7ec9d46072998c725505
+previous_evidence:
+  path: reviews/workflow/mech-goal-sequence-20261019/cycle-000004/stage-05/revision-0001/evidence.yaml
+  sha256: 0862f5291f00d5bcff0e41ddc71aca610a814da19509845dad736867f259df19
+artifacts:
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000005/stage-04/revision-0001/review_report.md
+  sha256: ebfa22aa687e95f82b9f528d7f554790396109abdde5896e6f5c323f658003ce
+  kind: review_report
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000005/stage-04/revision-0001/review_findings.tsv
+  sha256: b417752bdbdce010e2b04b4f8ac1a98766151595bbe09d1dd93bc10e31ece693
+  kind: review_findings
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000005/stage-04/revision-0001/frozen_inventory_coverage.json
+  sha256: e31cba895a7b93246b05dbcf934177e9f10af3c1d5e788b454dac57e1a491474
+  kind: supporting
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000005/stage-04/revision-0001/structured_review.yaml
+  sha256: 0078557515e4c7a3dfd57aed8047e5285cb30f86c6d56b4a7548a6e3a785eda9
+  kind: supporting
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000005/stage-04/revision-0001/structured_review.md
+  sha256: 420c3ede9207d88e079dd290d584b29dd0de4efc4bbb2cc2f2820d8b15e25a6a
+  kind: supporting
+findings:
+- finding_id: F-C5S4-DEF-SRC-001
+  status: open
+  summary: 'data/traits/genomics/gao_her_duf_system.yaml (traitmech:000361) declares definition_source:
+    DOI:10.1126/science.aba0372 (Gao et al. 2020, Science) while record-level evidence[0] cites its PMID
+    alias PMID:32855333 rather than DOI:10.1126/science.aba0372 (flagged by audit_evidence_snippets.py
+    MISSING_DEFINITION_SOURCE_EVIDENCE because parent gao_her_system.yaml cites DOI:10.1126/science.aba0372
+    directly with the identical verbatim snippet ''By systematic defense gene prediction and heterologous
+    reconstitution, here we discover 29 widespread antiviral gene cassettes, collectively present in 32%
+    of all sequenced bacterial and archaeal genomes, that mediate protection against specific bacteriophages.'').'
+  disposition: 'Carry forward to Cycle 5 Stage 5 (resolve_review_findings) in group G-C5S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    align evidence[0].reference to DOI:10.1126/science.aba0372 in data/traits/genomics/gao_her_duf_system.yaml.'
+- finding_id: F-C5S4-DEF-SRC-002
+  status: open
+  summary: 'data/traits/genomics/gao_her_sir_system.yaml (traitmech:000362) declares definition_source:
+    DOI:10.1126/science.aba0372 (Gao et al. 2020, Science) while record-level evidence[0] cites its PMID
+    alias PMID:32855333 rather than DOI:10.1126/science.aba0372 (flagged by audit_evidence_snippets.py
+    MISSING_DEFINITION_SOURCE_EVIDENCE because parent gao_her_system.yaml cites DOI:10.1126/science.aba0372
+    directly with the identical verbatim snippet ''By systematic defense gene prediction and heterologous
+    reconstitution, here we discover 29 widespread antiviral gene cassettes, collectively present in 32%
+    of all sequenced bacterial and archaeal genomes, that mediate protection against specific bacteriophages.'').'
+  disposition: 'Carry forward to Cycle 5 Stage 5 (resolve_review_findings) in group G-C5S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    align evidence[0].reference to DOI:10.1126/science.aba0372 in data/traits/genomics/gao_her_sir_system.yaml.'
+- finding_id: F-C5S4-DEF-SRC-003
+  status: open
+  summary: 'data/traits/genomics/genome_streamlining.yaml (traitmech:000099) declares definition_source:
+    DOI:10.1038/ismej.2014.60 and cites DOI:10.1038/ismej.2014.60 in record-level evidence[0].snippet
+    without a non-elliptical verbatim snippet (UNQUOTED_DEFINITION_SOURCE), even though data/traits/physiology/oligotrophic.yaml
+    (METPO:1000654) causal_graphs[0].edges[2].evidence[0] (streamlined_genome -> efficient_nutrient_use)
+    already carries the verified verbatim snippet ''minimizes resources required for replication'' from
+    DOI:10.1038/ismej.2014.60.'
+  disposition: 'Carry forward to Cycle 5 Stage 5 (resolve_review_findings) in group G-C5S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    populate verified verbatim snippet for DOI:10.1038/ismej.2014.60 in data/traits/genomics/genome_streamlining.yaml
+    from data/traits/physiology/oligotrophic.yaml (METPO:1000654) causal_graphs[0].edges[2].evidence[0]
+    (streamlined_genome -> efficient_nutrient_use).'
+- finding_id: F-C5S4-DEF-SRC-004
+  status: open
+  summary: 'data/traits/metabolism/biopolymer_degradation.yaml (traitmech:000110) declares definition_source:
+    DOI:10.1016/j.cbpa.2015.10.018 and cites DOI:10.1016/j.cbpa.2015.10.018 in record-level evidence[0].snippet
+    without a non-elliptical verbatim snippet (UNQUOTED_DEFINITION_SOURCE), even though data/traits/ecology/saprotrophy.yaml
+    (traitmech:000055) causal_graphs[0].edges[5].evidence[0] (cazymes -> hemicellulose) already carries
+    the verified verbatim snippet ''The enzymatic degradation of cellulose and hemicellulose is accomplished
+    in Nature via the collective action of multiple carbohydrate-active enzymes'' from DOI:10.1016/j.cbpa.2015.10.018.'
+  disposition: 'Carry forward to Cycle 5 Stage 5 (resolve_review_findings) in group G-C5S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    populate verified verbatim snippet for DOI:10.1016/j.cbpa.2015.10.018 in data/traits/metabolism/biopolymer_degradation.yaml
+    from data/traits/ecology/saprotrophy.yaml (traitmech:000055) causal_graphs[0].edges[5].evidence[0]
+    (cazymes -> hemicellulose).'
+- finding_id: F-C5S4-DEF-SRC-005
+  status: open
+  summary: 'data/traits/metabolism/denitrification.yaml (traitmech:000104) declares definition_source:
+    DOI:10.1128/mmbr.61.4.533-616.1997 and cites DOI:10.1128/mmbr.61.4.533-616.1997 in record-level evidence[0].snippet
+    without a non-elliptical verbatim snippet (UNQUOTED_DEFINITION_SOURCE), even though ancestor data/traits/metabolism/nitrogen_respiration.yaml
+    (traitmech:000121) evidence[0] and data/traits/metabolism/anaerobic_respiration.yaml (METPO:1000802)
+    evidence[0] already carries the verified verbatim snippet ''N oxides as terminal electron acceptors''
+    from DOI:10.1128/mmbr.61.4.533-616.1997.'
+  disposition: 'Carry forward to Cycle 5 Stage 5 (resolve_review_findings) in group G-C5S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    populate verified verbatim snippet for DOI:10.1128/mmbr.61.4.533-616.1997 in data/traits/metabolism/denitrification.yaml
+    from ancestor data/traits/metabolism/nitrogen_respiration.yaml (traitmech:000121) evidence[0] and
+    data/traits/metabolism/anaerobic_respiration.yaml (METPO:1000802) evidence[0].'
+- finding_id: F-C5S4-DEF-SRC-006
+  status: open
+  summary: 'data/traits/metabolism/sulfur_oxidation.yaml (traitmech:000106) declares definition_source:
+    DOI:10.1111/j.1574-6976.2009.00187.x and cites DOI:10.1111/j.1574-6976.2009.00187.x in record-level
+    evidence[0].snippet without a non-elliptical verbatim snippet (UNQUOTED_DEFINITION_SOURCE), even though
+    data/traits/physiology/lithotrophic.yaml (METPO:1000649) causal_graphs[0].edges[2].evidence[0] (reduced_sulfur_compound
+    -> inorganic_electron_donor) already carries the verified verbatim snippet ''lithotrophic sulfur oxidation''
+    from DOI:10.1111/j.1574-6976.2009.00187.x.'
+  disposition: 'Carry forward to Cycle 5 Stage 5 (resolve_review_findings) in group G-C5S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    populate verified verbatim snippet for DOI:10.1111/j.1574-6976.2009.00187.x in data/traits/metabolism/sulfur_oxidation.yaml
+    from data/traits/physiology/lithotrophic.yaml (METPO:1000649) causal_graphs[0].edges[2].evidence[0]
+    (reduced_sulfur_compound -> inorganic_electron_donor).'
+- finding_id: F-C5S4-DEF-SRC-007
+  status: open
+  summary: 'data/traits/physiology/catalase_activity.yaml (traitmech:000075) declares definition_source:
+    DOI:10.1007/s00018-003-3206-5 and cites DOI:10.1007/s00018-003-3206-5 in record-level evidence[0].snippet
+    without a non-elliptical verbatim snippet (UNQUOTED_DEFINITION_SOURCE), even though data/traits/physiology/oxidative_stress_response.yaml
+    (traitmech:000079) evidence[1] already carries the verified verbatim snippet ''hydrogen peroxide to
+    water and molecular oxygen, serving to protect cells'' from DOI:10.1007/s00018-003-3206-5.'
+  disposition: 'Carry forward to Cycle 5 Stage 5 (resolve_review_findings) in group G-C5S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    populate verified verbatim snippet for DOI:10.1007/s00018-003-3206-5 in data/traits/physiology/catalase_activity.yaml
+    from data/traits/physiology/oxidative_stress_response.yaml (traitmech:000079) evidence[1].'
+- finding_id: F-COHORT-CAUSAL-GRAPHS-SOURCE-LIMITED-005
+  status: deferred
+  carried_from: F-COHORT-CAUSAL-GRAPHS-SOURCE-LIMITED-005
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1982
+  summary: 382 of 1,129 eligible TraitRecord files lack causal_graphs due to documented source limitations
+    (360 records where open-access PubMed/PMC/EuropePMC literature lacks a multi-step causal mechanism
+    snippet, reduced from 363 in Cycle 4 after +3 Cycle 5 Stage 2 graphs, plus 22 SUPPORTING_FIELD_VOCABULARY
+    non-mechanistic hierarchy/measurement/observation records).
+  disposition: 'Deferred (source-limited) under open GitHub issue #1982: every one of the 382 records
+    already documents its exact literature limitation in an open CURATION_TODO DiscussionItem; requires
+    full-text PDF acquisition or paid deep-research approval outside Stage 4/5 scope.'
+- finding_id: F-COHORT-CANONICAL-EXAMPLES-SOURCE-LIMITED-006
+  status: deferred
+  carried_from: F-COHORT-CANONICAL-EXAMPLES-SOURCE-LIMITED-006
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1983
+  summary: 551 of 1,129 eligible TraitRecord files lack canonical_examples (578 eligible records and 579
+    total records carry verified canonical_examples) because open-access abstracts do not report a verbatim
+    strain-designated or species-specific positive/negative value.
+  disposition: 'Deferred (source-limited) under open GitHub issue #1983: tracked in scripts/backfill_canonical_examples_444.py
+    (POST_444_CANONICAL_EXAMPLE_QUEUE) and record-level CURATION_TODO DiscussionItems; requires primary
+    strain characterization literature or IJSEM species descriptions.'
+- finding_id: F-COHORT-CAUSAL-GRAPH-BASELINES-007
+  status: deferred
+  carried_from: F-COHORT-CAUSAL-GRAPH-BASELINES-007
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1984
+  summary: 85 baselined cross-record causal-graph audit warning rows (83 INCONSISTENT_NODE_TYPE, 2 DUPLICATE_GROUNDING)
+    across 72 unique eligible TraitRecord files in conf/causal_graph_audit_baseline.tsv.
+  disposition: 'Deferred to cross-cohort ontology harmonization tracked in open GitHub issue #1984 (follow-up
+    to #356) and conf/causal_graph_audit_baseline.tsv (0 unbaselined regressions).'
+- finding_id: F-COHORT-DEF-SOURCE-PAYWALLED-008
+  status: deferred
+  carried_from: F-COHORT-DEF-SOURCE-PAYWALLED-008
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1985
+  summary: 57 of 1,129 eligible TraitRecord files (after excluding the 2 Gao-Her-* defense system records
+    promoted to open findings F-C5S4-DEF-SRC-001..002; plus 58 remaining unquoted CLASS definition_source
+    records without an in-corpus verbatim quote after promoting F-C5S4-DEF-SRC-003..007, 31 OBJECT_PROPERTY
+    records with predicate-stem snippets resolved under traitmech-infra-0006, and 50 records omitting
+    definition_source) cite a primary discovery/characterization reference in definition_source that is
+    paywalled or has no indexed PubMed/EuropePMC abstract.
+  disposition: 'Deferred (source-limited) under open GitHub issue #1985: requires full-text access to
+    paywalled primary characterization articles to extract verbatim definitional snippets.'
+- finding_id: F-COHORT-METPO-UPSTREAM-MINTING-009
+  status: deferred
+  carried_from: F-COHORT-METPO-UPSTREAM-MINTING-009
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/364
+  summary: 734 of 1,129 eligible TraitRecord files (735 total including excluded traitmech:000083) use
+    repository-minted traitmech:NNNNNN identifiers awaiting upstream METPO term incorporation across proposals/metpo_traitmech_v1..v611.
+  disposition: 'Deferred (upstream-blocked) under open GitHub issue #364: all 734 eligible traitmech:NNNNNN
+    records (735 total) are already packaged into verified ROBOT templates under proposals/metpo_traitmech_v1..v611
+    and submitted upstream in berkeleybop/metpo#535.'
+groups: []
+carry_forward_ids:
+- F-C5S4-DEF-SRC-001
+- F-C5S4-DEF-SRC-002
+- F-C5S4-DEF-SRC-003
+- F-C5S4-DEF-SRC-004
+- F-C5S4-DEF-SRC-005
+- F-C5S4-DEF-SRC-006
+- F-C5S4-DEF-SRC-007
+- F-COHORT-CAUSAL-GRAPHS-SOURCE-LIMITED-005
+- F-COHORT-CANONICAL-EXAMPLES-SOURCE-LIMITED-006
+- F-COHORT-CAUSAL-GRAPH-BASELINES-007
+- F-COHORT-DEF-SOURCE-PAYWALLED-008
+- F-COHORT-METPO-UPSTREAM-MINTING-009
+infra_tasks: []
