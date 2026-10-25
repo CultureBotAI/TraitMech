@@ -23,10 +23,15 @@ sys.path.insert(0, str(ROOT / "scripts"))
 
 from render_discussions_shell import render_shell  # noqa: E402
 from render_trait_pages import (  # noqa: E402
+    RESEARCH_PREVIEW_LINES,
+    TRAITS_DIR,
     autolink,
     curie_url,
+    research_answer,
+    research_report,
     schema_reference,
     template_environment,
+    write_html,
 )
 
 TEMPLATES = ROOT / "src" / "traitmech" / "templates"
@@ -156,6 +161,48 @@ def test_autolink_escapes_markup_and_cannot_break_out_of_the_attribute():
     assert not any(key.startswith("on") for attrs, _ in page.anchors for key in attrs)
     assert "<script>alert(1)</script>" in page.plain_text()
     assert autolink(None) == "" and str(autolink(42)) == "42"
+
+
+MARKDOWN_TOKENS = [
+    # Link syntax: the text and the target are each linked, and neither takes "](".
+    ("[10.1038/nrmicro2166](https://doi.org/10.1038/nrmicro2166)",
+     ["https://doi.org/10.1038/nrmicro2166", "https://doi.org/10.1038/nrmicro2166"]),
+    ("[https://example.org/x](https://example.org/x)",
+     ["https://example.org/x", "https://example.org/x"]),
+    # Bold and inline code close the token; the marks stay visible text.
+    ("**10.1099/ijs.0.003251-0**", ["https://doi.org/10.1099/ijs.0.003251-0"]),
+    ("`10.1146/annurev-cellbio-101011-155745`",
+     ["https://doi.org/10.1146/annurev-cellbio-101011-155745"]),
+    ("see **https://example.org/y**, and `https://example.org/z`",
+     ["https://example.org/y", "https://example.org/z"]),
+]
+
+
+@pytest.mark.parametrize("text,hrefs", MARKDOWN_TOKENS)
+def test_autolink_stops_at_markdown_syntax(text, hrefs):
+    """Research previews are Markdown, and its marks are not part of a DOI or URL (#2022)."""
+    page = Page(str(autolink(text)))
+    assert page.hrefs() == hrefs
+    assert page.plain_text() == text
+
+
+def test_research_preview_links_carry_no_markdown_debris():
+    """Every rendered preview, including the four whose DOI links were broken (#2022)."""
+    debris = re.compile(r"%5D|%5B|%2A|%60|\]\(|[*`\]]$")
+    hrefs: list[str] = []
+    previews = 0
+    for path in sorted(TRAITS_DIR.glob("*/*.yaml")):
+        report = research_report(path.parent.name, path.stem)
+        if report is None:
+            continue
+        preview = "\n".join(research_answer(report.read_text())[:RESEARCH_PREVIEW_LINES])
+        hrefs += Page(str(autolink(preview))).hrefs()
+        previews += 1
+    assert previews > 300
+    assert [href for href in hrefs if debris.search(href)] == []
+    for doi in ("10.1038/nrmicro2166", "10.1099/ijs.0.003251-0", "10.3390/biom10040550",
+                "10.1146/annurev-cellbio-101011-155745"):
+        assert f"https://doi.org/{doi}" in hrefs
 
 
 def test_free_text_references_link_in_every_record_context():
@@ -318,9 +365,13 @@ def render_schema_page() -> str:
         embedding_coverage_pct="100.0")
 
 
-def test_schema_page_anchors_resolve_and_render_is_deterministic():
-    html = render_schema_page()
-    assert html == render_schema_page()
+def test_schema_page_matches_the_committed_render_and_anchors_resolve(tmp_path):
+    """pages/schema.html was written by a separate `just gen-pages` process, so equality
+    above the footer (which carries the corpus stamp) is a cross-process check."""
+    write_html(tmp_path / "schema.html", render_schema_page())
+    html = (tmp_path / "schema.html").read_text()
+    committed = (ROOT / "pages" / "schema.html").read_text()
+    assert html.split("<footer")[0] == committed.split("<footer")[0]
     page = Page(html)
     assert {"class-TraitRecord", "class-CausalGraph", "enum-MappingStatusEnum"} <= page.ids
     internal = [href[1:] for href in page.hrefs() if href.startswith("#")]
@@ -374,12 +425,35 @@ def test_every_page_type_footer_states_the_repository_licences(template, root):
     assert "Third-party source material keeps its own terms (licence scope)." in footer
 
 
-def test_footer_licences_match_the_licence_files():
+def licence_terms() -> dict[str, str]:
+    """The data and code licences as LICENSE names them, in the form a footer prints."""
     scope = (ROOT / "LICENSE").read_text()
-    assert "Creative Commons Attribution 4.0" in scope and "CC-BY-4.0" in scope
-    assert "BSD-3-Clause" in scope and "retain their own licenses" in scope
-    assert (ROOT / "LICENSE-DATA").read_text().startswith("Attribution 4.0 International")
-    assert (ROOT / "LICENSE-CODE").read_text().startswith("BSD 3-Clause License")
+    data = re.search(r"Project-authored data,.*?licensed under .*?\((CC-BY-(\d+\.\d+))\)\.\s+"
+                     r"See LICENSE-DATA", scope, re.S)
+    code = re.search(r"Project-authored code,.*?licensed under (\S+)\.\s+See LICENSE-CODE",
+                     scope, re.S)
+    assert data and code and "retain their own licenses" in scope
+    # The scope file and the legal texts it points to must name the same licences.
+    assert (ROOT / "LICENSE-DATA").read_text().startswith(f"Attribution {data.group(2)} International")
+    assert (ROOT / "LICENSE-CODE").read_text().startswith(
+        code.group(1).replace("-", " ", 1) + " License")
+    return {"data": data.group(1).replace("-", " "), "code": code.group(1)}
+
+
+@pytest.mark.parametrize("footer_source", ["base.html", "index.html", "discussions shell"])
+def test_footer_licences_match_the_licence_files(footer_source):
+    """The footer words are derived from the licence files, then read from a rendered footer."""
+    terms = licence_terms()
+    if footer_source == "discussions shell":
+        html = render_shell(RAW_DISCUSSIONS)
+    else:
+        template, root = ("category.html", "../") if footer_source == "base.html" else (footer_source, "")
+        html = template_environment().get_template(template).render(**page_context(template, root))
+    page = Page(html)
+    assert page.anchor(f"{GH}/LICENSE-DATA")[1] == terms["data"]
+    assert page.anchor(f"{GH}/LICENSE-CODE")[1] == terms["code"]
+    assert f"Project data: {terms['data']}." in page.footer()
+    assert f"Code: {terms['code']}." in page.footer()
 
 
 RAW_DISCUSSIONS = ('<html><head></head><body><nav aria-label="Project navigation">'

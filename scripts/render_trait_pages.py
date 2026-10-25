@@ -221,20 +221,28 @@ def term_link(context, curie: object, label: object = None) -> Markup:
 # Reference tokens inside free text. URLs come first so a DOI or PMCID inside a
 # URL stays part of that URL. Matching runs on the raw string and every piece is
 # escaped on the way out, so record text can never become markup.
+#
+# Research previews are Markdown, so a token also ends at "]": in
+# "[10.1038/x](https://doi.org/10.1038/x)" the parentheses balance, and without
+# the stop the DOI swallowed "](https://...)" into its href (#2022). No DOI or
+# URL in the corpus contains a bracket.
 AUTOLINK_TOKEN = re.compile(
-    r"(?P<url>\b(?i:https?)://[^\s<>\"\\]+)"
-    r"|(?P<doi>(?:\b(?i:doi)(?::\s?|=|\s))?(?<![\w./])10\.[0-9]{4,9}/[^\s<>\"\\]+)"
+    r"(?P<url>\b(?i:https?)://[^\s<>\"\\\]]+)"
+    r"|(?P<doi>(?:\b(?i:doi)(?::\s?|=|\s))?(?<![\w./])10\.[0-9]{4,9}/[^\s<>\"\\\]]+)"
     r"|(?P<pmid>\b(?i:pmid)(?::\s?|\s)(?P<pmid_number>[0-9]{1,9})\b)"
     r"|(?P<pmcid>\bPMC[0-9]{4,9}\b)"
 )
 CLOSING = {")": "(", "]": "[", "}": "{"}
+# Sentence punctuation, plus the Markdown emphasis and code marks that close a
+# token written as **10.x/y** or `10.x/y`.
+TRAILING = ".,;:!?'\"*`"
 
 
 def _trim_token(token: str) -> str:
-    """Drop sentence punctuation and unbalanced closers that end a token."""
+    """Drop punctuation, Markdown marks and unbalanced closers that end a token."""
     while token:
         last = token[-1]
-        if last in ".,;:!?'\"" or (last in CLOSING and token.count(last) > token.count(CLOSING[last])):
+        if last in TRAILING or (last in CLOSING and token.count(last) > token.count(CLOSING[last])):
             token = token[:-1]
             continue
         break
