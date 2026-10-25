@@ -1,0 +1,45 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/curate_stage5_review_findings.py
+session:
+  id: 2026-10-25T125500Z-claude-code-c4s501
+  timestamp: '2026-10-25T12:55:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+    agent_tool: antigravity
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/2002
+  - https://github.com/CultureBotAI/TraitMech/issues/1981
+  - https://github.com/CultureBotAI/TraitMech/issues/1995
+  - https://github.com/CultureBotAI/TraitMech/issues/1982
+  - https://github.com/CultureBotAI/TraitMech/issues/1983
+  - https://github.com/CultureBotAI/TraitMech/issues/1984
+  - https://github.com/CultureBotAI/TraitMech/issues/1985
+  - https://github.com/CultureBotAI/TraitMech/issues/364
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  - curation_history
+  summary: Resolve all 18 actionable Cycle 4 Stage 4 open findings in group G-C4S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+    and map 5 deferred cohort findings to open GitHub issues
+  details: 'Executed Stage 5 (resolve_review_findings) of run mech-goal-sequence-20261019, cycle 4 consuming
+    Cycle 4 Stage 4 review evidence (reviews/workflow/mech-goal-sequence-20261019/cycle-000004/stage-04/revision-0001/evidence.yaml,
+    sha256 77587f0d4a85d9f82f21f338d1253096f6c34047375ba925d9c441341f0dddbd). Grouped all 23 carried-forward
+    findings into 6 cause-and-ownership groups, deduplicated against all live GitHub issues, and
+    reused real GitHub issues (#2002 for resolved group G-C4S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS;
+    #1982, #1983, #1984, #1985, and #364 for the 5 deferred source-limited/upstream-blocked cohort groups).
+    Remediated all 18 open findings (F-C4S4-DEF-SRC-001 through F-C4S4-DEF-SRC-018) via guarded writer
+    scripts/curate_stage5_review_findings.py across habitat_association.yaml, neutrophilic.yaml,
+    reductive_tca_cycle.yaml, cell_shape.yaml, flagellar_arrangement.yaml, orange_pigmented.yaml,
+    spirochete_shaped.yaml, chemolithoautotrophic.yaml, and 10 gao_*_system.yaml records (gao_her_system.yaml,
+    gao_hhe_system.yaml, gao_iet_system.yaml, gao_mza_system.yaml, gao_ppl_system.yaml, gao_qat_system.yaml,
+    gao_rl_system.yaml, gao_tery_system.yaml, gao_tmn_system.yaml, gao_upx_system.yaml). Persisted fresh
+    structured review bundle reviews/structured/20261025T130000Z-cycle4-stage5-remediated-records-review/
+    confirming 0 open findings and verdict pass across all 18 remediated records, regenerated pages/,
+    and preserved all immutable Stage 4 review artifacts untouched.'

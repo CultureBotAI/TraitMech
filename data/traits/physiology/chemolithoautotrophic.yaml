@@ -14,7 +14,7 @@ synonyms:
   source: metpo.owl
 evidence:
 - reference: DOI:10.1146/annurev.micro.52.1.191
-  snippet: physiology ... of chemoautotrophic bacteria
+  snippet: Carbon Dioxide Fixation in Chemoautotrophs
   notes: Review supports chemoautotrophic bacterial CO2 fixation.
 - reference: DOI:10.1016/B978-0-12-378630-2.00219-X
   snippet: growth-supporting reductant and energy source
@@ -422,4 +422,13 @@ curation_history:
   action: REFRESH_UNIPROT_ENTRY_VERSION
   changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
     UniProtKB:P0C916 (57 -> 58 on rubisco).'
+  llm_assisted: true
+- timestamp: '2026-10-25T12:55:00Z'
+  curator: claude
+  action: ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE
+  changes: 'Replaced elliptical record-level evidence[0].snippet on DOI:10.1146/annurev.micro.52.1.191
+    with contiguous verbatim snippet already present on causal_graphs[0].edges[5].evidence[0]
+    and parent record chemoautotrophic.yaml evidence[0] (Cycle 4 Stage 5 remediation
+    of F-C4S4-DEF-SRC-008 in group G-C4S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS,
+    issue #2002).'
   llm_assisted: true

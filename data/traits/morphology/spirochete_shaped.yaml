@@ -16,7 +16,8 @@ synonyms:
 created_by: Jed Dongjin Kim-Ozaeta
 evidence:
 - reference: DOI:10.1073/pnas.200221797
-  snippet: periplasmic flagella ... confer in part its flat-wave morphology
+  snippet: cell morphology is either a helix, a flat wave, or an irregularly shaped
+    helix
   notes: Supports spirochete morphology as a cell-cylinder and periplasmic-flagella
     interaction.
 canonical_examples:
@@ -282,4 +283,12 @@ curation_history:
     the tranche: set graph scope spirochete_shaped_periplasmic_flagella=NONMECHANISTIC
     with scope_notes; marked 2 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (flhE, flgV).'
+  llm_assisted: true
+- timestamp: '2026-10-25T12:55:00Z'
+  curator: claude
+  action: ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE
+  changes: 'Replaced elliptical record-level evidence[0].snippet on DOI:10.1073/pnas.200221797
+    with contiguous verbatim snippet already present on causal_graphs[0].edges[3].evidence[0]
+    (Cycle 4 Stage 5 remediation of F-C4S4-DEF-SRC-007 in group G-C4S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS,
+    issue #2002).'
   llm_assisted: true

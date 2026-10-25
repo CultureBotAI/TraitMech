@@ -1,18 +1,22 @@
 #!/usr/bin/env python3
-"""Curate Stage 5 grouped review remediation (Cycle 1 #1981, Cycle 2 #1995, Cycle 3 #2002).
+"""Curate Stage 5 grouped review remediation (Cycle 1 #1981, Cycle 2 #1995, Cycle 3–4 #2002).
 
 Resolves the 4 actionable open findings from the Cycle 1 Stage 4 corpus-wide
 record and cohort review (`reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-04/revision-0001/evidence.yaml`,
 tracked in GitHub issue #1981), the 6 actionable open findings from the
 Cycle 2 Stage 4 corpus-wide record and cohort review
 (`reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-04/revision-0001/evidence.yaml`,
-tracked in GitHub issue #1995), and the 17 actionable open findings from the
+tracked in GitHub issue #1995), the 17 actionable open findings from the
 Cycle 3 Stage 4 corpus-wide record and cohort review
 (`reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-04/revision-0001/evidence.yaml`,
+tracked in GitHub issue #2002), and the 18 actionable open findings from the
+Cycle 4 Stage 4 corpus-wide record and cohort review
+(`reviews/workflow/mech-goal-sequence-20261019/cycle-000004/stage-04/revision-0001/evidence.yaml`,
 tracked in GitHub issue #2002):
 - `F-DEF-SRC-CYANOPHYCIN-001`..`004` (Cycle 1 #1981, 4 records)
 - `F-DEF-SRC-CARBON-FIXATION-010`..`015` (Cycle 2 #1995, 6 records)
 - `F-C3S4-DEF-SRC-001`..`017` (Cycle 3 #2002, 17 records)
+- `F-C4S4-DEF-SRC-001`..`018` (Cycle 4 #2002, 18 records)
 
 Default is dry-run; pass `--apply` to write changes via `write_validated_trait`
 and `record_curation_event`.
@@ -47,6 +51,7 @@ CURATOR = "claude"
 TIMESTAMP = "2026-10-22T05:20:00Z"
 CYCLE2_TIMESTAMP = "2026-10-23T16:05:00Z"
 CYCLE3_TIMESTAMP = "2026-10-24T02:45:00Z"
+CYCLE4_TIMESTAMP = "2026-10-25T12:55:00Z"
 ACTION = "ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE"
 
 REMEDIATION_SPECS: dict[str, dict[str, Any]] = {
@@ -708,6 +713,486 @@ REMEDIATION_SPECS: dict[str, dict[str, Any]] = {
             "G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
         ),
     },
+    "data/traits/ecology/habitat_association.yaml": {
+        "identifier": "traitmech:000047",
+        "finding_id": "F-C4S4-DEF-SRC-001",
+        "timestamp": CYCLE4_TIMESTAMP,
+        "definition_source": "DOI:10.1038/nrmicro1341",
+        "evidence_entry": {
+            "reference": "DOI:10.1038/nrmicro1341",
+            "snippet": "free-living microbial taxa",
+            "notes": (
+                'Martiny et al., "Microbial biogeography", support habitat/niche as '
+                "a structuring axis of microbial distribution; parent of the habitat "
+                "sub-variants."
+            ),
+        },
+        "changes": (
+            "Added verified verbatim snippet from DOI:10.1038/nrmicro1341 "
+            "(already present on child records free_living.yaml evidence[0] and "
+            "soil_dwelling.yaml evidence[1]) to record-level evidence[0] to match "
+            "definition_source (Cycle 4 Stage 5 remediation of F-C4S4-DEF-SRC-001 "
+            "in group G-C4S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/environment/neutrophilic.yaml": {
+        "identifier": "METPO:1003001",
+        "finding_id": "F-C4S4-DEF-SRC-002",
+        "timestamp": CYCLE4_TIMESTAMP,
+        "definition_source": "DOI:10.1038/nrmicro2549",
+        "evidence_entry": {
+            "reference": "DOI:10.1038/nrmicro2549",
+            "snippet": "external pH values outside the cytoplasmic pH",
+            "notes": (
+                "Supports pH growth preference as tied to cytoplasmic pH requirements."
+            ),
+        },
+        "changes": (
+            "Replaced elliptical record-level evidence[0].snippet on "
+            "DOI:10.1038/nrmicro2549 with contiguous verbatim snippet already "
+            "present on causal_graphs[0].edges[0].evidence[0] (Cycle 4 Stage 5 "
+            "remediation of F-C4S4-DEF-SRC-002 in group "
+            "G-C4S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/metabolism/reductive_tca_cycle.yaml": {
+        "identifier": "traitmech:000021",
+        "finding_id": "F-C4S4-DEF-SRC-003",
+        "timestamp": CYCLE4_TIMESTAMP,
+        "definition_source": "DOI:10.1128/AEM.02473-10",
+        "evidence_entry": {
+            "reference": "DOI:10.1128/AEM.02473-10",
+            "snippet": (
+                "the second autotrophic CO2 fixation cycle (the reductive citric "
+                "acid cycle) had been discovered"
+            ),
+            "notes": (
+                "Berg review describes the reductive citric acid cycle as functional "
+                "in anaerobic/microaerophilic autotrophs."
+            ),
+        },
+        "changes": (
+            "Added verified verbatim snippet from DOI:10.1128/AEM.02473-10 "
+            "(already present on parent record carbon_fixation.yaml "
+            "causal_graphs[0].edges[12].evidence[0]) to record-level evidence[0] "
+            "to match definition_source (Cycle 4 Stage 5 remediation of "
+            "F-C4S4-DEF-SRC-003 in group "
+            "G-C4S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/morphology/cell_shape.yaml": {
+        "identifier": "METPO:1000666",
+        "finding_id": "F-C4S4-DEF-SRC-004",
+        "timestamp": CYCLE4_TIMESTAMP,
+        "definition_source": "DOI:10.1038/nrmicro1205",
+        "evidence_entry": {
+            "reference": "DOI:10.1038/nrmicro1205",
+            "snippet": "primary role in maintaining cell shape",
+            "notes": (
+                "Supports bacterial cell shape as determined by cell wall and "
+                "cytoskeletal elements."
+            ),
+        },
+        "changes": (
+            "Replaced elliptical record-level evidence[0].snippet on "
+            "DOI:10.1038/nrmicro1205 with contiguous verbatim snippet already "
+            "present on causal_graphs[0].edges[0].evidence[0] (Cycle 4 Stage 5 "
+            "remediation of F-C4S4-DEF-SRC-004 in group "
+            "G-C4S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/morphology/flagellar_arrangement.yaml": {
+        "identifier": "traitmech:000056",
+        "finding_id": "F-C4S4-DEF-SRC-005",
+        "timestamp": CYCLE4_TIMESTAMP,
+        "definition_source": "DOI:10.1093/femsre/fuv034",
+        "evidence_entry": {
+            "reference": "DOI:10.1093/femsre/fuv034",
+            "snippet": (
+                "Bacteria differ in number and location of their flagella that "
+                "appear in regular patterns at the cell surface (flagellation "
+                "pattern)."
+            ),
+            "notes": (
+                "Schuhmacher, Thormann & Bange describe how bacteria maintain a "
+                "regular number and cellular location of flagella (the flagellation "
+                "pattern); parent of the specific arrangement sub-variants."
+            ),
+        },
+        "changes": (
+            "Added verified verbatim snippet from DOI:10.1093/femsre/fuv034 "
+            "(already present on child records polar_flagellation.yaml, "
+            "amphitrichous.yaml, lophotrichous.yaml, and monotrichous.yaml "
+            "evidence[0]) to record-level evidence[0] to match definition_source "
+            "(Cycle 4 Stage 5 remediation of F-C4S4-DEF-SRC-005 in group "
+            "G-C4S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/morphology/orange_pigmented.yaml": {
+        "identifier": "METPO:1003026",
+        "finding_id": "F-C4S4-DEF-SRC-006",
+        "timestamp": CYCLE4_TIMESTAMP,
+        "definition_source": "DOI:10.1080/1040841X.2025.2526423",
+        "evidence_entry": {
+            "reference": "DOI:10.1080/1040841X.2025.2526423",
+            "snippet": "red, pink, orange, and yellow pigmentation in bacteria",
+            "notes": (
+                "Supports orange microbial pigmentation as a bacterial "
+                "carotenoid-associated color phenotype."
+            ),
+        },
+        "changes": (
+            "Replaced elliptical record-level evidence[0].snippet on "
+            "DOI:10.1080/1040841X.2025.2526423 with contiguous verbatim snippet "
+            "already present on parent record carotenoid_pigmentation.yaml and "
+            "sibling records pink_pigmented.yaml and yellow_pigmented.yaml "
+            "evidence[0] (Cycle 4 Stage 5 remediation of F-C4S4-DEF-SRC-006 in "
+            "group G-C4S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/morphology/spirochete_shaped.yaml": {
+        "identifier": "METPO:1000693",
+        "finding_id": "F-C4S4-DEF-SRC-007",
+        "timestamp": CYCLE4_TIMESTAMP,
+        "definition_source": "DOI:10.1073/pnas.200221797",
+        "evidence_entry": {
+            "reference": "DOI:10.1073/pnas.200221797",
+            "snippet": (
+                "cell morphology is either a helix, a flat wave, or an irregularly "
+                "shaped helix"
+            ),
+            "notes": (
+                "Supports spirochete morphology as a cell-cylinder and "
+                "periplasmic-flagella interaction."
+            ),
+        },
+        "changes": (
+            "Replaced elliptical record-level evidence[0].snippet on "
+            "DOI:10.1073/pnas.200221797 with contiguous verbatim snippet already "
+            "present on causal_graphs[0].edges[3].evidence[0] (Cycle 4 Stage 5 "
+            "remediation of F-C4S4-DEF-SRC-007 in group "
+            "G-C4S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/physiology/chemolithoautotrophic.yaml": {
+        "identifier": "METPO:1000637",
+        "finding_id": "F-C4S4-DEF-SRC-008",
+        "timestamp": CYCLE4_TIMESTAMP,
+        "definition_source": "DOI:10.1146/annurev.micro.52.1.191",
+        "evidence_entry": {
+            "reference": "DOI:10.1146/annurev.micro.52.1.191",
+            "snippet": "Carbon Dioxide Fixation in Chemoautotrophs",
+            "notes": "Review supports chemoautotrophic bacterial CO2 fixation.",
+        },
+        "changes": (
+            "Replaced elliptical record-level evidence[0].snippet on "
+            "DOI:10.1146/annurev.micro.52.1.191 with contiguous verbatim snippet "
+            "already present on causal_graphs[0].edges[5].evidence[0] and parent "
+            "record chemoautotrophic.yaml evidence[0] (Cycle 4 Stage 5 remediation "
+            "of F-C4S4-DEF-SRC-008 in group "
+            "G-C4S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/genomics/gao_her_system.yaml": {
+        "identifier": "traitmech:000409",
+        "finding_id": "F-C4S4-DEF-SRC-009",
+        "timestamp": CYCLE4_TIMESTAMP,
+        "definition_source": "DOI:10.1126/science.aba0372",
+        "replace_reference": "PMID:32855333",
+        "evidence_entry": {
+            "reference": "DOI:10.1126/science.aba0372",
+            "snippet": (
+                "By systematic defense gene prediction and heterologous "
+                "reconstitution, here we discover 29 widespread antiviral gene "
+                "cassettes, collectively present in 32% of all sequenced bacterial "
+                "and archaeal genomes, that mediate protection against specific "
+                "bacteriophages."
+            ),
+            "notes": (
+                "Gao et al. support a systematic defense-gene prediction and "
+                "heterologous reconstitution campaign that discovered widespread "
+                "antiviral gene cassettes (PMID:32855333 / DOI:10.1126/science.aba0372)."
+            ),
+        },
+        "changes": (
+            "Aligned record-level evidence[0].reference from PMID:32855333 to "
+            "DOI:10.1126/science.aba0372 (same Gao et al. 2020 publication) to "
+            "match definition_source while preserving the verified verbatim snippet "
+            "and PMID cross-reference in notes (Cycle 4 Stage 5 remediation of "
+            "F-C4S4-DEF-SRC-009 in group "
+            "G-C4S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/genomics/gao_hhe_system.yaml": {
+        "identifier": "traitmech:000353",
+        "finding_id": "F-C4S4-DEF-SRC-010",
+        "timestamp": CYCLE4_TIMESTAMP,
+        "definition_source": "DOI:10.1126/science.aba0372",
+        "replace_reference": "PMID:32855333",
+        "evidence_entry": {
+            "reference": "DOI:10.1126/science.aba0372",
+            "snippet": (
+                "By systematic defense gene prediction and heterologous "
+                "reconstitution, here we discover 29 widespread antiviral gene "
+                "cassettes, collectively present in 32% of all sequenced bacterial "
+                "and archaeal genomes, that mediate protection against specific "
+                "bacteriophages."
+            ),
+            "notes": (
+                "Gao et al. support a systematic defense-gene prediction and "
+                "heterologous reconstitution campaign that discovered widespread "
+                "antiviral gene cassettes (PMID:32855333 / DOI:10.1126/science.aba0372)."
+            ),
+        },
+        "changes": (
+            "Aligned record-level evidence[0].reference from PMID:32855333 to "
+            "DOI:10.1126/science.aba0372 (same Gao et al. 2020 publication) to "
+            "match definition_source while preserving the verified verbatim snippet "
+            "and PMID cross-reference in notes (Cycle 4 Stage 5 remediation of "
+            "F-C4S4-DEF-SRC-010 in group "
+            "G-C4S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/genomics/gao_iet_system.yaml": {
+        "identifier": "traitmech:000354",
+        "finding_id": "F-C4S4-DEF-SRC-011",
+        "timestamp": CYCLE4_TIMESTAMP,
+        "definition_source": "DOI:10.1126/science.aba0372",
+        "replace_reference": "PMID:32855333",
+        "evidence_entry": {
+            "reference": "DOI:10.1126/science.aba0372",
+            "snippet": (
+                "By systematic defense gene prediction and heterologous "
+                "reconstitution, here we discover 29 widespread antiviral gene "
+                "cassettes, collectively present in 32% of all sequenced bacterial "
+                "and archaeal genomes, that mediate protection against specific "
+                "bacteriophages."
+            ),
+            "notes": (
+                "Gao et al. support a systematic defense-gene prediction and "
+                "heterologous reconstitution campaign that discovered widespread "
+                "antiviral gene cassettes (PMID:32855333 / DOI:10.1126/science.aba0372)."
+            ),
+        },
+        "changes": (
+            "Aligned record-level evidence[0].reference from PMID:32855333 to "
+            "DOI:10.1126/science.aba0372 (same Gao et al. 2020 publication) to "
+            "match definition_source while preserving the verified verbatim snippet "
+            "and PMID cross-reference in notes (Cycle 4 Stage 5 remediation of "
+            "F-C4S4-DEF-SRC-011 in group "
+            "G-C4S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/genomics/gao_mza_system.yaml": {
+        "identifier": "traitmech:000355",
+        "finding_id": "F-C4S4-DEF-SRC-012",
+        "timestamp": CYCLE4_TIMESTAMP,
+        "definition_source": "DOI:10.1126/science.aba0372",
+        "replace_reference": "PMID:32855333",
+        "evidence_entry": {
+            "reference": "DOI:10.1126/science.aba0372",
+            "snippet": (
+                "By systematic defense gene prediction and heterologous "
+                "reconstitution, here we discover 29 widespread antiviral gene "
+                "cassettes, collectively present in 32% of all sequenced bacterial "
+                "and archaeal genomes, that mediate protection against specific "
+                "bacteriophages."
+            ),
+            "notes": (
+                "Gao et al. support a systematic defense-gene prediction and "
+                "heterologous reconstitution campaign that discovered widespread "
+                "antiviral gene cassettes (PMID:32855333 / DOI:10.1126/science.aba0372)."
+            ),
+        },
+        "changes": (
+            "Aligned record-level evidence[0].reference from PMID:32855333 to "
+            "DOI:10.1126/science.aba0372 (same Gao et al. 2020 publication) to "
+            "match definition_source while preserving the verified verbatim snippet "
+            "and PMID cross-reference in notes (Cycle 4 Stage 5 remediation of "
+            "F-C4S4-DEF-SRC-012 in group "
+            "G-C4S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/genomics/gao_ppl_system.yaml": {
+        "identifier": "traitmech:000356",
+        "finding_id": "F-C4S4-DEF-SRC-013",
+        "timestamp": CYCLE4_TIMESTAMP,
+        "definition_source": "DOI:10.1126/science.aba0372",
+        "replace_reference": "PMID:32855333",
+        "evidence_entry": {
+            "reference": "DOI:10.1126/science.aba0372",
+            "snippet": (
+                "By systematic defense gene prediction and heterologous "
+                "reconstitution, here we discover 29 widespread antiviral gene "
+                "cassettes, collectively present in 32% of all sequenced bacterial "
+                "and archaeal genomes, that mediate protection against specific "
+                "bacteriophages."
+            ),
+            "notes": (
+                "Gao et al. support a systematic defense-gene prediction and "
+                "heterologous reconstitution campaign that discovered widespread "
+                "antiviral gene cassettes (PMID:32855333 / DOI:10.1126/science.aba0372)."
+            ),
+        },
+        "changes": (
+            "Aligned record-level evidence[0].reference from PMID:32855333 to "
+            "DOI:10.1126/science.aba0372 (same Gao et al. 2020 publication) to "
+            "match definition_source while preserving the verified verbatim snippet "
+            "and PMID cross-reference in notes (Cycle 4 Stage 5 remediation of "
+            "F-C4S4-DEF-SRC-013 in group "
+            "G-C4S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/genomics/gao_qat_system.yaml": {
+        "identifier": "traitmech:000359",
+        "finding_id": "F-C4S4-DEF-SRC-014",
+        "timestamp": CYCLE4_TIMESTAMP,
+        "definition_source": "DOI:10.1126/science.aba0372",
+        "replace_reference": "PMID:32855333",
+        "evidence_entry": {
+            "reference": "DOI:10.1126/science.aba0372",
+            "snippet": (
+                "By systematic defense gene prediction and heterologous "
+                "reconstitution, here we discover 29 widespread antiviral gene "
+                "cassettes, collectively present in 32% of all sequenced bacterial "
+                "and archaeal genomes, that mediate protection against specific "
+                "bacteriophages."
+            ),
+            "notes": (
+                "Gao et al. support a systematic defense-gene prediction and "
+                "heterologous reconstitution campaign that discovered widespread "
+                "antiviral gene cassettes (PMID:32855333 / DOI:10.1126/science.aba0372)."
+            ),
+        },
+        "changes": (
+            "Aligned record-level evidence[0].reference from PMID:32855333 to "
+            "DOI:10.1126/science.aba0372 (same Gao et al. 2020 publication) to "
+            "match definition_source while preserving the verified verbatim snippet "
+            "and PMID cross-reference in notes (Cycle 4 Stage 5 remediation of "
+            "F-C4S4-DEF-SRC-014 in group "
+            "G-C4S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/genomics/gao_rl_system.yaml": {
+        "identifier": "traitmech:000352",
+        "finding_id": "F-C4S4-DEF-SRC-015",
+        "timestamp": CYCLE4_TIMESTAMP,
+        "definition_source": "DOI:10.1126/science.aba0372",
+        "replace_reference": "PMID:32855333",
+        "evidence_entry": {
+            "reference": "DOI:10.1126/science.aba0372",
+            "snippet": (
+                "By systematic defense gene prediction and heterologous "
+                "reconstitution, here we discover 29 widespread antiviral gene "
+                "cassettes, collectively present in 32% of all sequenced bacterial "
+                "and archaeal genomes, that mediate protection against specific "
+                "bacteriophages."
+            ),
+            "notes": (
+                "Gao et al. support a systematic defense-gene prediction and "
+                "heterologous reconstitution campaign that discovered widespread "
+                "antiviral gene cassettes (PMID:32855333 / DOI:10.1126/science.aba0372)."
+            ),
+        },
+        "changes": (
+            "Aligned record-level evidence[0].reference from PMID:32855333 to "
+            "DOI:10.1126/science.aba0372 (same Gao et al. 2020 publication) to "
+            "match definition_source while preserving the verified verbatim snippet "
+            "and PMID cross-reference in notes (Cycle 4 Stage 5 remediation of "
+            "F-C4S4-DEF-SRC-015 in group "
+            "G-C4S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/genomics/gao_tery_system.yaml": {
+        "identifier": "traitmech:000360",
+        "finding_id": "F-C4S4-DEF-SRC-016",
+        "timestamp": CYCLE4_TIMESTAMP,
+        "definition_source": "DOI:10.1126/science.aba0372",
+        "replace_reference": "PMID:32855333",
+        "evidence_entry": {
+            "reference": "DOI:10.1126/science.aba0372",
+            "snippet": (
+                "By systematic defense gene prediction and heterologous "
+                "reconstitution, here we discover 29 widespread antiviral gene "
+                "cassettes, collectively present in 32% of all sequenced bacterial "
+                "and archaeal genomes, that mediate protection against specific "
+                "bacteriophages."
+            ),
+            "notes": (
+                "Gao et al. support a systematic defense-gene prediction and "
+                "heterologous reconstitution campaign that discovered widespread "
+                "antiviral gene cassettes (PMID:32855333 / DOI:10.1126/science.aba0372)."
+            ),
+        },
+        "changes": (
+            "Aligned record-level evidence[0].reference from PMID:32855333 to "
+            "DOI:10.1126/science.aba0372 (same Gao et al. 2020 publication) to "
+            "match definition_source while preserving the verified verbatim snippet "
+            "and PMID cross-reference in notes (Cycle 4 Stage 5 remediation of "
+            "F-C4S4-DEF-SRC-016 in group "
+            "G-C4S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/genomics/gao_tmn_system.yaml": {
+        "identifier": "traitmech:000357",
+        "finding_id": "F-C4S4-DEF-SRC-017",
+        "timestamp": CYCLE4_TIMESTAMP,
+        "definition_source": "DOI:10.1126/science.aba0372",
+        "replace_reference": "PMID:32855333",
+        "evidence_entry": {
+            "reference": "DOI:10.1126/science.aba0372",
+            "snippet": (
+                "By systematic defense gene prediction and heterologous "
+                "reconstitution, here we discover 29 widespread antiviral gene "
+                "cassettes, collectively present in 32% of all sequenced bacterial "
+                "and archaeal genomes, that mediate protection against specific "
+                "bacteriophages."
+            ),
+            "notes": (
+                "Gao et al. support a systematic defense-gene prediction and "
+                "heterologous reconstitution campaign that discovered widespread "
+                "antiviral gene cassettes (PMID:32855333 / DOI:10.1126/science.aba0372)."
+            ),
+        },
+        "changes": (
+            "Aligned record-level evidence[0].reference from PMID:32855333 to "
+            "DOI:10.1126/science.aba0372 (same Gao et al. 2020 publication) to "
+            "match definition_source while preserving the verified verbatim snippet "
+            "and PMID cross-reference in notes (Cycle 4 Stage 5 remediation of "
+            "F-C4S4-DEF-SRC-017 in group "
+            "G-C4S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/genomics/gao_upx_system.yaml": {
+        "identifier": "traitmech:000358",
+        "finding_id": "F-C4S4-DEF-SRC-018",
+        "timestamp": CYCLE4_TIMESTAMP,
+        "definition_source": "DOI:10.1126/science.aba0372",
+        "replace_reference": "PMID:32855333",
+        "evidence_entry": {
+            "reference": "DOI:10.1126/science.aba0372",
+            "snippet": (
+                "By systematic defense gene prediction and heterologous "
+                "reconstitution, here we discover 29 widespread antiviral gene "
+                "cassettes, collectively present in 32% of all sequenced bacterial "
+                "and archaeal genomes, that mediate protection against specific "
+                "bacteriophages."
+            ),
+            "notes": (
+                "Gao et al. support a systematic defense-gene prediction and "
+                "heterologous reconstitution campaign that discovered widespread "
+                "antiviral gene cassettes (PMID:32855333 / DOI:10.1126/science.aba0372)."
+            ),
+        },
+        "changes": (
+            "Aligned record-level evidence[0].reference from PMID:32855333 to "
+            "DOI:10.1126/science.aba0372 (same Gao et al. 2020 publication) to "
+            "match definition_source while preserving the verified verbatim snippet "
+            "and PMID cross-reference in notes (Cycle 4 Stage 5 remediation of "
+            "F-C4S4-DEF-SRC-018 in group "
+            "G-C4S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
 }
 
 
@@ -744,6 +1229,12 @@ def apply_remediation_to_doc(doc: dict[str, Any], spec: dict[str, Any]) -> bool:
         (i for i, item in enumerate(evidence_list) if item.get("reference") == target_ref),
         None,
     )
+    if existing_idx is None and spec.get("replace_reference"):
+        replace_ref = spec["replace_reference"]
+        existing_idx = next(
+            (i for i, item in enumerate(evidence_list) if item.get("reference") == replace_ref),
+            None,
+        )
     if existing_idx is None:
         evidence_list.append(desired_entry)
         doc["evidence"] = evidence_list
@@ -780,7 +1271,7 @@ def process_all(
     *,
     apply: bool = False,
 ) -> tuple[int, int]:
-    """Process all 27 Stage 5 remediation targets. Returns (findings_resolved, files_updated)."""
+    """Process all 45 Stage 5 remediation targets. Returns (findings_resolved, files_updated)."""
     excluded = load_do_not_work(repo_root / "DO_NOT_WORK.md")
     findings_resolved = 0
     files_updated = 0

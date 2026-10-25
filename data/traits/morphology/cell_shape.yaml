@@ -19,7 +19,7 @@ synonyms:
 created_by: Luke Wang
 evidence:
 - reference: DOI:10.1038/nrmicro1205
-  snippet: bacterial cell wall ... primary role in maintaining cell shape
+  snippet: primary role in maintaining cell shape
   notes: Supports bacterial cell shape as determined by cell wall and cytoskeletal
     elements.
 canonical_examples:
@@ -321,4 +321,12 @@ curation_history:
     canonical example(s): Escherichia coli (NCBITaxon:562; DOI:10.1038/nrmicro1205).
     The note retains the measured value or scopes broad-class examples to the cited
     branch; no paid research was used.'
+  llm_assisted: true
+- timestamp: '2026-10-25T12:55:00Z'
+  curator: claude
+  action: ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE
+  changes: 'Replaced elliptical record-level evidence[0].snippet on DOI:10.1038/nrmicro1205
+    with contiguous verbatim snippet already present on causal_graphs[0].edges[0].evidence[0]
+    (Cycle 4 Stage 5 remediation of F-C4S4-DEF-SRC-004 in group G-C4S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS,
+    issue #2002).'
   llm_assisted: true

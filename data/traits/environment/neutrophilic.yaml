@@ -21,7 +21,7 @@ synonyms:
 created_by: Anthea Guo
 evidence:
 - reference: DOI:10.1038/nrmicro2549
-  snippet: cytoplasmic pH ... must maintain for growth
+  snippet: external pH values outside the cytoplasmic pH
   notes: Supports pH growth preference as tied to cytoplasmic pH requirements.
 canonical_examples:
 - taxon_id: NCBITaxon:562
@@ -311,4 +311,12 @@ curation_history:
     the tranche: set graph scope neutrophilic_neutral_ph_homeostasis=NONMECHANISTIC
     with scope_notes; marked 1 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (f1f0_atpase_proton_pump).'
+  llm_assisted: true
+- timestamp: '2026-10-25T12:55:00Z'
+  curator: claude
+  action: ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE
+  changes: 'Replaced elliptical record-level evidence[0].snippet on DOI:10.1038/nrmicro2549
+    with contiguous verbatim snippet already present on causal_graphs[0].edges[0].evidence[0]
+    (Cycle 4 Stage 5 remediation of F-C4S4-DEF-SRC-002 in group G-C4S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS,
+    issue #2002).'
   llm_assisted: true
