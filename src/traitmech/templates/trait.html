@@ -485,7 +485,16 @@
       <dt>Term kind</dt>
       <dd>{{ trait.term_kind }}</dd>
       <dt>Status</dt>
-      <dd>{{ trait.mapping_status }}</dd>
+      <dd>{{ trait.mapping_status }}
+        {% set status_meaning = (status_meanings or {}).get(trait.mapping_status) %}
+        {% if status_meaning %}
+        <details class="status-meaning">
+          <summary>What this status means</summary>
+          <p>{{ status_meaning }}</p>
+          <p class="meta">Quoted from the schema's <a href="{{ root }}schema.html#enum-MappingStatusEnum">status definitions</a>.</p>
+        </details>
+        {% endif %}
+      </dd>
     </dl>
   </div>
 

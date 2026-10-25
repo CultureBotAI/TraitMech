@@ -707,3 +707,19 @@ h1 { overflow-wrap: anywhere; }
 .schema-table th[scope="row"], .schema-table td { vertical-align: top; }
 .schema-values dt { margin-top: 0.5rem; }
 .schema-values dd { margin-left: 1rem; color: var(--muted); }
+
+/* Skip link: the first tab stop on every page, shown only while focused. */
+.skip-link { position: absolute; left: 1rem; top: -4rem; z-index: 2100; padding: 0.5rem 0.75rem;
+  background: var(--card-bg); color: var(--accent); border: 2px solid var(--accent); border-radius: 4px; }
+.skip-link:focus { top: 0.5rem; }
+main:focus { outline: none; }
+
+/* Curation status explained beside the status on record pages. */
+.status-meaning { margin-top: 0.35rem; }
+.status-meaning summary { cursor: pointer; color: var(--accent); font-size: 0.85rem; }
+.status-meaning p { margin: 0.35rem 0 0; }
+
+/* Not-found page (404.html at the publishing root). */
+.not-found-search { margin: 1.25rem 0; flex-wrap: wrap; }
+.not-found-search label { flex-basis: 100%; font-weight: 600; }
+.not-found-links { line-height: 1.9; }

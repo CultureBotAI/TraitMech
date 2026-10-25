@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="{{ root }}assets/style.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="{{ root }}index.html">TraitMech</a>
@@ -24,7 +25,7 @@
     </nav>
   </div>
 </header>
-<main class="wrap">
+<main class="wrap" id="main-content" tabindex="-1">
 {% block content %}{% endblock %}
 </main>
 <footer class="site-footer">
@@ -49,6 +50,7 @@
       Third-party source material keeps its own terms
       (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE">licence scope</a>).
     </div>
+    {% block provenance -%}
     <div>
       {% if generated_at %}{{ stamp_scope | default('Corpus') }} as of {{ generated_at }}{% else %}TraitMech{% endif %}
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO {{ metpo_version }}</a>
@@ -56,6 +58,7 @@
       · embedding coverage {{ embedding_coverage_pct }}%
       (kg-microbe deepwalk 512-D, 2026-04-25)
     </div>
+    {%- endblock %}
   </div>
   <p class="fam"><a href="https://culturebotai.github.io/mechs/">All Mech projects</a></p>
 </footer>

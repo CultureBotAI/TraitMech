@@ -24,9 +24,12 @@ sys.path.insert(0, str(ROOT / "scripts"))
 from render_discussions_shell import render_shell  # noqa: E402
 from render_trait_pages import (  # noqa: E402
     RESEARCH_PREVIEW_LINES,
+    SITE_ROOT,
     TRAITS_DIR,
     autolink,
     curie_url,
+    mapping_statuses,
+    render_not_found,
     research_answer,
     research_report,
     schema_reference,
@@ -511,3 +514,100 @@ def test_map_data_table_scrolls_in_a_named_focusable_region(template):
     assert match
     attrs = match.group(1)
     assert 'role="region"' in attrs and 'tabindex="0"' in attrs and 'aria-label="' in attrs
+
+
+# --------------------------------------------- catalogue candidate features --
+
+class FirstTabStop(HTMLParser):
+    """The first keyboard-focusable element in <body>, and every <main>."""
+
+    def __init__(self, html: str):
+        super().__init__(convert_charrefs=True)
+        self.first: tuple[str, dict] | None = None
+        self.mains: list[dict] = []
+        self._body = False
+        self.feed(html)
+
+    def handle_starttag(self, tag, attrs):
+        attrs = dict(attrs)
+        self._body = self._body or tag == "body"
+        if tag == "main":
+            self.mains.append(attrs)
+        focusable = ((tag == "a" and "href" in attrs)
+                     or tag in {"button", "input", "select", "textarea", "summary"}
+                     or attrs.get("tabindex") not in (None, "-1"))
+        if self._body and self.first is None and focusable:
+            self.first = (tag, attrs)
+
+
+@pytest.mark.parametrize("template,root", PAGE_TYPES + [("404.html", SITE_ROOT + "pages/")])
+def test_first_tab_stop_skips_to_main(template, root):
+    page = FirstTabStop(template_environment().get_template(template).render(
+        **page_context(template, root)))
+    tag, attrs = page.first
+    assert (tag, attrs.get("href"), attrs.get("class")) == ("a", "#main-content", "skip-link")
+    assert [main.get("id") for main in page.mains] == ["main-content"]
+
+
+def test_not_found_page_is_current_and_every_site_link_is_root_absolute(tmp_path):
+    """GitHub Pages serves /404.html for a missing URL at any depth (#2021)."""
+    write_html(tmp_path / "404.html", render_not_found(template_environment()))
+    committed = (ROOT / "404.html").read_text()
+    assert (tmp_path / "404.html").read_text() == committed
+    targets = re.findall(r'(?:href|src|action)="([^"]+)"', committed)
+    site = [target for target in targets if not target.startswith(("https://", "#"))]
+    assert len(site) >= 10
+    for target in site:
+        # A relative link would resolve against whatever missing path was asked for.
+        assert target.startswith(SITE_ROOT), target
+        assert (ROOT / target[len(SITE_ROOT):]).is_file(), target
+    page = Page(committed)
+    assert {SITE_ROOT + "pages/index.html", SITE_ROOT + "pages/browse.html"} <= set(page.hrefs())
+    assert f'action="{SITE_ROOT}pages/browse.html"' in committed
+    assert "Page not found" in page.plain_text()
+    # Independent of corpus state, so a curation PR never rewrites it.
+    assert "Corpus as of" not in committed and "TraitRecords" not in committed
+
+
+def schema_status_meanings() -> dict[str, str]:
+    from linkml_runtime.utils.schemaview import SchemaView
+
+    enum = SchemaView(str(ROOT / "src/traitmech/schema/traitmech.yaml")).get_enum("MappingStatusEnum")
+    return {text: " ".join(value.description.split())
+            for text, value in enum.permissible_values.items()}
+
+
+@pytest.mark.parametrize("status", ["SEEDED", "PROPOSED", "REVIEWED", "DEPRECATED"])
+def test_record_page_explains_its_status_in_the_schemas_words(status):
+    statuses = mapping_statuses(schema_reference())
+    html = template_environment().get_template("trait.html").render(
+        trait={"label": "Example", "trait_category": "ECOLOGY", "mapping_status": status},
+        causal_graphs=[], kgm_match={"n_kgm_nodes": 0}, parent_pages={}, parent_labels={},
+        root="../../", status_meanings={s["text"]: s["description"] for s in statuses})
+    card = Page(re.search(r'<dl class="rail-meta">.*?</dl>', html, re.S).group(0))
+    assert "What this status means" in card.plain_text()
+    assert schema_status_meanings()[status] in card.plain_text()
+    assert "../../schema.html#enum-MappingStatusEnum" in card.hrefs()
+
+
+def test_landing_states_what_each_status_means_with_its_count():
+    statuses = mapping_statuses(schema_reference())
+    context = page_context("index.html", "")
+    context.update(statuses=statuses, status_counts={"REVIEWED": 2, "PROPOSED": 1})
+    html = template_environment().get_template("index.html").render(**context)
+    notice = Page(re.search(r'<section class="notice".*?</section>', html, re.S).group(0))
+    text = notice.plain_text()
+    counts = {"SEEDED": 0, "PROPOSED": 1, "REVIEWED": 2, "DEPRECATED": 0}
+    for status, meaning in schema_status_meanings().items():
+        assert f"{status} {counts[status]} records {meaning}" in text
+    assert "schema.html#enum-MappingStatusEnum" in notice.hrefs()
+
+
+def test_committed_pages_carry_the_curation_notice():
+    landing = (ROOT / "pages" / "index.html").read_text()
+    assert '<section class="notice" aria-labelledby="curation-heading">' in landing
+    record = (ROOT / "pages/traits/ecology/animal_pathogen.html").read_text()
+    status = yaml.safe_load((ROOT / "data/traits/ecology/animal_pathogen.yaml").read_text())["mapping_status"]
+    disclosure = Page(re.search(r'<details class="status-meaning">.*?</details>', record, re.S).group(0))
+    assert schema_status_meanings()[status] in disclosure.plain_text()
+

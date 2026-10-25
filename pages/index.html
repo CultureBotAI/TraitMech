@@ -50,6 +50,18 @@
   .btn{display:inline-block;background:var(--accent);color:#fff;padding:.5em 1.15em;
        border-radius:999px;font-size:.9rem;font-weight:600}
   .btn:hover{filter:brightness(.93);text-decoration:none}
+  .skip-link{position:absolute;left:1rem;top:-4rem;z-index:2100;padding:.5rem .75rem;
+             background:var(--card);color:var(--accent);border:2px solid var(--accent);border-radius:6px}
+  .skip-link:focus{top:.5rem}
+  main:focus{outline:none}
+  .notice{margin-top:28px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px 28px}
+  .notice h2{margin:0 0 .4em;font-size:1.15rem}
+  .notice p{margin:.4em 0;color:var(--muted);font-size:.95rem}
+  .notice dl{margin:.6em 0 0;display:grid;grid-template-columns:max-content 1fr;gap:.45em 1em}
+  .notice dt{font-weight:600}
+  .notice dt span{display:block;font-weight:400;color:var(--muted);font-size:.85rem}
+  .notice dd{margin:0;color:var(--muted);font-size:.95rem;overflow-wrap:anywhere}
+  @media (max-width:560px){.notice dl{grid-template-columns:1fr}.notice dd{margin-bottom:.4em}}
   footer{border-top:1px solid var(--line);background:rgba(255,255,255,.45);
          padding:30px 24px;text-align:center;font-size:.9rem;color:var(--muted)}
   footer .fam{margin:.2em 0}
@@ -113,6 +125,7 @@
 </style>
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
   <header class="hero">
     <nav class="hero-nav" aria-label="Main navigation">
       <a href="browse.html">Browse</a>
@@ -136,7 +149,7 @@
       <a class="stat" href="umap.html"><b>100.0%</b><span>embedded</span></a>
     </div>
   </header>
-  <main class="wrap">
+  <main class="wrap" id="main-content" tabindex="-1">
     <div class="cards">
       <div class="card">
         <div class="ic">&#128270;</div>
@@ -157,6 +170,29 @@
         <p>Source code, bulk corpus JSON export, LinkML schema documentation generated from the schema, and the curation workflow.</p>
       </div>
     </div>
+
+    <section class="notice" aria-labelledby="curation-heading">
+      <h2 id="curation-heading">Curation status</h2>
+      <p>Records carry one of these statuses. Each definition is quoted from the
+        <a href="schema.html#enum-MappingStatusEnum">schema</a>; a record page explains its own
+        status beside it and lists every recorded curation event with its curator.</p>
+      <dl>
+
+        <dt>SEEDED <span>38 records</span></dt>
+        <dd>Imported verbatim from metpo.owl; not yet curator-reviewed.</dd>
+
+        <dt>PROPOSED <span>615 records</span></dt>
+        <dd>Candidate trait proposed from literature research to fill a coverage gap; not yet curator-reviewed. Must carry at least two distinct literature citations (across definition_source and evidence) — this is enforced by scripts/audit_proposals.py in the `qc` target.</dd>
+
+        <dt>REVIEWED <span>427 records</span></dt>
+        <dd>Curator has signed off on label / definition / parents.</dd>
+
+        <dt>DEPRECATED <span>50 records</span></dt>
+        <dd>Superseded by another TraitRecord.</dd>
+
+      </dl>
+    </section>
+
   </main>
   <footer>
     <div class="fam"><strong>KG-Microbe Mechs:</strong>

@@ -27,7 +27,7 @@ import gzip
 import re
 import shutil
 import sys
-from collections import defaultdict
+from collections import Counter, defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import quote, urlsplit
@@ -644,6 +644,28 @@ def schema_reference(schema_path: Path = SCHEMA_PATH) -> dict:
     }
 
 
+def mapping_statuses(schema: dict) -> list[dict]:
+    """MappingStatusEnum's values with their descriptions, as the schema states them.
+
+    Pages quote these rather than paraphrase them, so a page cannot claim more
+    about a status (who reviewed a record, and how) than the schema does.
+    """
+    return next(enum["permissible"] for enum in schema["enums"]
+                if enum["name"] == "MappingStatusEnum")
+
+
+# GitHub Pages answers a missing URL at any depth with the publishing root's
+# 404.html, served at the address the reader asked for. Relative links would
+# resolve against that missing path, so the page uses site-root-absolute ones.
+SITE_ROOT = "/TraitMech/"
+
+
+def render_not_found(env: Environment) -> str:
+    """The themed not-found page, independent of corpus state."""
+    return env.get_template("404.html").render(
+        title="Page not found", root=SITE_ROOT + "pages/")
+
+
 def render_pages(args: argparse.Namespace) -> int:
     # Output root is a parameter, not the module constant, so the staleness gate
     # can render into a temp dir and diff (#230). Checking must never dirty the
@@ -661,6 +683,9 @@ def render_pages(args: argparse.Namespace) -> int:
     # One value for every page in the run, derived from the data (#228).
     corpus_stamp = corpus_timestamp(traits)
     record_sessions = load_record_sessions()
+    schema = schema_reference()
+    statuses = mapping_statuses(schema)
+    status_meanings = {value["text"]: value["description"] for value in statuses}
 
     if args.dry_run:
         print(f"[dry-run] {len(traits)} traits; {sum(1 for v in match_table.values() if v['n_kgm_nodes'] > 0)} matched")
@@ -766,6 +791,7 @@ def render_pages(args: argparse.Namespace) -> int:
             parent_pages=parent_pages,
             parent_labels=parent_labels,
             page_path=page_path,
+            status_meanings=status_meanings,
             children=children,
             nearest_neighbors=nn_rows,
             research_md=research_md,
@@ -923,6 +949,8 @@ def render_pages(args: argparse.Namespace) -> int:
         embedding_per_category=dict(embedding_per_category),
         metpo_version=metpo_version,
         generated_at=corpus_stamp,
+        statuses=statuses,
+        status_counts=Counter(doc.get("mapping_status") for _path, doc in traits),
     )
     write_html(pages_dir / "index.html", landing)
 
@@ -945,7 +973,7 @@ def render_pages(args: argparse.Namespace) -> int:
     schema_html = env.get_template("schema.html").render(
         title="LinkML schema",
         root="",
-        schema=schema_reference(),
+        schema=schema,
         gh_blob_base=GH_BLOB_BASE,
         metpo_version=metpo_version,
         generated_at=corpus_stamp,
@@ -953,6 +981,13 @@ def render_pages(args: argparse.Namespace) -> int:
         embedding_coverage_pct=_coverage_pct(match_table, len(traits)),
     )
     write_html(pages_dir / "schema.html", schema_html)
+
+    # The site's not-found page belongs at the publishing root, which for this
+    # branch-built site is the repository root, not pages/. A render into
+    # another --out root (the staleness gate's temp dir) leaves it alone;
+    # tests/test_unified_site_features.py checks the committed copy instead.
+    if pages_dir.resolve() == PAGES_DIR.resolve():
+        write_html(REPO_ROOT / "404.html", render_not_found(env))
 
     # Write bulk corpus JSON export for downstream consumers.
     import json as _json
@@ -967,6 +1002,8 @@ def render_pages(args: argparse.Namespace) -> int:
     print("Wrote pages/index.html")
     print("Wrote pages/browse.html")
     print("Wrote pages/schema.html")
+    if pages_dir.resolve() == PAGES_DIR.resolve():
+        print("Wrote 404.html")
     print(f"Coverage: {embedded_count}/{len(traits)} ({_coverage_pct(match_table, len(traits))}%)")
     return 0
 
