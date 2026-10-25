@@ -15812,13 +15812,13 @@ window.searchData = [
   "discussion_id": "nad-dependent-alcohol-dehydrogenase-activity-causal-graph-source-gap",
   "prompt": "Add strain-matched UniProtKB protein_examples for Zymomonas mobilis AdhA/AdhB (P0DTE6/P06758) and physiological ethanol fermentation coupling before constructing a MECHANISTIC causal_graphs entry.",
   "kind": "KNOWLEDGE_GAP",
-  "status": "OPEN",
+  "status": "RESOLVED",
   "is_gap": "Knowledge gap",
   "source_name": "NAD-dependent alcohol dehydrogenase activity",
   "source_id": "traitmech:000165",
   "source_file": "nad_dependent_alcohol_dehydrogenase_activity.yaml",
   "attaches_to": [
-   "causal_graphs"
+   "causal_graphs#nad_dependent_alcohol_dehydrogenase_adh_sketch"
   ],
   "rationale": "The current record carries an IUBMB EC 1.1.1.1 reaction snippet and two Zymomonas mobilis adhB purification/cloning snippets (DOI:10.1111/j.1432-1033.1986.tb09366.x, DOI:10.1128/jb.169.6.2591-2597.1987) that identify AdhB but do not state its physiological acetaldehyde-to-ethanol metabolic role or include verified UniProtKB protein_examples.",
   "num_experiments": 0,
@@ -15828,6 +15828,27 @@ window.searchData = [
   ],
   "posed_by": "claude",
   "page_url": "../../pages/traits/physiology/nad_dependent_alcohol_dehydrogenase_activity.html#nad-dependent-alcohol-dehydrogenase-activity-causal-graph-source-gap"
+ },
+ {
+  "discussion_id": "nad-dependent-alcohol-dehydrogenase-activity-protein-example-gap",
+  "prompt": "Add strain-matched UniProtKB protein_examples for Zymomonas mobilis alcohol dehydrogenase II AdhB (UniProtKB:P0DTE6) so nad_dependent_alcohol_dehydrogenase_adh_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "NAD-dependent alcohol dehydrogenase activity",
+  "source_id": "traitmech:000165",
+  "source_file": "nad_dependent_alcohol_dehydrogenase_activity.yaml",
+  "attaches_to": [
+   "causal_graphs#nad_dependent_alcohol_dehydrogenase_adh_sketch"
+  ],
+  "rationale": "The record's primary literature (EC 1.1.1.1, DOI:10.1111/j.1432-1033.1986.tb09366.x, DOI:10.1128/jb.169.6.2591-2597.1987) establishes NAD-dependent alcohol dehydrogenase catalysis and adhB cloning/purification in Zymomonas mobilis (NCBITaxon:542), but a verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.1111/j.1432-1033.1986.tb09366.x"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/physiology/nad_dependent_alcohol_dehydrogenase_activity.html#nad-dependent-alcohol-dehydrogenase-activity-protein-example-gap"
  },
  {
   "discussion_id": "naphthol-as-bi-phosphohydrolase-activity-xref-gap",
@@ -16126,13 +16147,13 @@ window.searchData = [
   "discussion_id": "ornithine-decarboxylase-activity-causal-graph-source-gap",
   "prompt": "Add primary microbial literature evidence for inducible/biosynthetic ornithine decarboxylase (SpeF/SpeC) physiological polyamine/acid-resistance function and strain-matched UniProtKB protein accessions before constructing causal_graphs.",
   "kind": "KNOWLEDGE_GAP",
-  "status": "OPEN",
+  "status": "RESOLVED",
   "is_gap": "Knowledge gap",
   "source_name": "ornithine decarboxylase activity",
   "source_id": "traitmech:000154",
   "source_file": "ornithine_decarboxylase_activity.yaml",
   "attaches_to": [
-   "causal_graphs"
+   "causal_graphs#ornithine_decarboxylase_spec_sketch"
   ],
   "rationale": "The current record pairs one IUBMB EC 4.1.1.17 reaction snippet with one mutant-isolation sentence (DOI:10.1128/jb.124.2.791-799.1975) that does not state the enzyme's physiological pathway link to the organism-level phenotype.",
   "num_experiments": 0,
@@ -16142,6 +16163,27 @@ window.searchData = [
   ],
   "posed_by": "claude",
   "page_url": "../../pages/traits/physiology/ornithine_decarboxylase_activity.html#ornithine-decarboxylase-activity-causal-graph-source-gap"
+ },
+ {
+  "discussion_id": "ornithine-decarboxylase-activity-protein-example-gap",
+  "prompt": "Add strain-matched UniProtKB protein_examples for Escherichia coli K-12 biosynthetic ornithine decarboxylase SpeC (UniProtKB:P21169) so ornithine_decarboxylase_spec_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "ornithine decarboxylase activity",
+  "source_id": "traitmech:000154",
+  "source_file": "ornithine_decarboxylase_activity.yaml",
+  "attaches_to": [
+   "causal_graphs#ornithine_decarboxylase_spec_sketch"
+  ],
+  "rationale": "The record's primary literature (EC 4.1.1.17, DOI:10.1128/jb.124.2.791-799.1975) establishes L-ornithine decarboxylation to putrescine and CO2 and speC mutant loss of activity in Escherichia coli K-12 (NCBITaxon:83333), but a verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.1128/jb.124.2.791-799.1975"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/physiology/ornithine_decarboxylase_activity.html#ornithine-decarboxylase-activity-protein-example-gap"
  },
  {
   "discussion_id": "osmotaxis-spatial-and-chemical-boundaries",
@@ -16731,13 +16773,13 @@ window.searchData = [
   "discussion_id": "prolyl-aminopeptidase-activity-causal-graph-source-gap",
   "prompt": "Add primary microbial literature evidence linking Neisseria gonorrhoeae proline iminopeptidase (Pip) peptide cleavage to a physiological pathway step and strain-matched UniProtKB protein accessions before constructing causal_graphs.",
   "kind": "KNOWLEDGE_GAP",
-  "status": "OPEN",
+  "status": "RESOLVED",
   "is_gap": "Knowledge gap",
   "source_name": "prolyl aminopeptidase activity",
   "source_id": "traitmech:000166",
   "source_file": "prolyl_aminopeptidase_activity.yaml",
   "attaches_to": [
-   "causal_graphs"
+   "causal_graphs#prolyl_aminopeptidase_pip_sketch"
   ],
   "rationale": "The current record carries an IUBMB EC 3.4.11.5 reaction snippet, one sentence noting that Pip is a hydrolase elaborated by Neisseria gonorrhoeae (DOI:10.1111/j.1365-2958.1993.tb01249.x), and a diagnostic enzyme list (DOI:10.1099/ijsem.0.006017), without a second non-redundant mechanistic step or UniProtKB protein_examples.",
   "num_experiments": 0,
@@ -16747,6 +16789,27 @@ window.searchData = [
   ],
   "posed_by": "claude",
   "page_url": "../../pages/traits/physiology/prolyl_aminopeptidase_activity.html#prolyl-aminopeptidase-activity-causal-graph-source-gap"
+ },
+ {
+  "discussion_id": "prolyl-aminopeptidase-activity-protein-example-gap",
+  "prompt": "Add strain-matched UniProtKB protein_examples for Neisseria gonorrhoeae proline iminopeptidase Pip (UniProtKB:P40051) so prolyl_aminopeptidase_pip_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "prolyl aminopeptidase activity",
+  "source_id": "traitmech:000166",
+  "source_file": "prolyl_aminopeptidase_activity.yaml",
+  "attaches_to": [
+   "causal_graphs#prolyl_aminopeptidase_pip_sketch"
+  ],
+  "rationale": "The record's primary literature (EC 3.4.11.5, DOI:10.1111/j.1365-2958.1993.tb01249.x) establishes N-terminal proline release from peptides by proline iminopeptidase (Pip) in Neisseria gonorrhoeae (NCBITaxon:485), but a verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.1111/j.1365-2958.1993.tb01249.x"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/physiology/prolyl_aminopeptidase_activity.html#prolyl-aminopeptidase-activity-protein-example-gap"
  },
  {
   "discussion_id": "proteaphagy-cargo-scope-and-go",
@@ -17855,7 +17918,7 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 898,
+ "total_discussions": 901,
  "total_knowledge_gaps": 580,
  "total_source_entries": 640,
  "kinds": [

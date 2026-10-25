@@ -53,6 +53,7 @@ CURATION_ACTION_GRAPH = "CURATE_CAUSAL_GRAPH"
 CURATION_ACTION_GAP = "RECORD_MECHANISM_KNOWLEDGE_GAP"
 POSED_DATE = "2026-10-21"
 POSED_DATE_C2 = "2026-10-23"
+POSED_DATE_C4 = "2026-10-25"
 
 
 def _ev_item(doc: dict[str, Any], index: int, notes: str) -> dict[str, str]:
@@ -2251,25 +2252,13 @@ COHORT_D_GAPS: dict[str, tuple[str, str]] = {
         "Add primary microbial literature evidence for extracellular triacylglycerol lipase (EC 3.1.1.3) ester hydrolysis to diacylglycerol/fatty acids and enzyme identity before constructing causal_graphs.",
         "The current record carries two tributyrin/screening assay snippets (DOI:10.22207/JPAM.16.4.27, DOI:10.1016/j.mex.2018.01.004) without verbatim catalytic reaction or enzyme-mechanism quotes.",
     ),
-    "data/traits/physiology/nad_dependent_alcohol_dehydrogenase_activity.yaml": (
-        "Add strain-matched UniProtKB protein_examples for Zymomonas mobilis AdhA/AdhB (P0DTE6/P06758) and physiological ethanol fermentation coupling before constructing a MECHANISTIC causal_graphs entry.",
-        "The current record carries an IUBMB EC 1.1.1.1 reaction snippet and two Zymomonas mobilis adhB purification/cloning snippets (DOI:10.1111/j.1432-1033.1986.tb09366.x, DOI:10.1128/jb.169.6.2591-2597.1987) that identify AdhB but do not state its physiological acetaldehyde-to-ethanol metabolic role or include verified UniProtKB protein_examples.",
-    ),
     "data/traits/physiology/naphthol_as_bi_phosphohydrolase_activity.yaml": (
         "Add primary microbial literature evidence for the phosphohydrolase enzyme catalyzing naphthol-AS-BI-phosphate hydrolysis and its physiological substrate before constructing causal_graphs.",
         "The current record carries two API ZYM diagnostic substrate/panel snippets (DOI:10.14202/vetworld.2024.143-149, DOI:10.1128/JCM.43.8.3713-3717.2005) without catalytic product or enzyme-identity quotes.",
     ),
-    "data/traits/physiology/ornithine_decarboxylase_activity.yaml": (
-        "Add primary microbial literature evidence for inducible/biosynthetic ornithine decarboxylase (SpeF/SpeC) physiological polyamine/acid-resistance function and strain-matched UniProtKB protein accessions before constructing causal_graphs.",
-        "The current record pairs one IUBMB EC 4.1.1.17 reaction snippet with one mutant-isolation sentence (DOI:10.1128/jb.124.2.791-799.1975) that does not state the enzyme's physiological pathway link to the organism-level phenotype.",
-    ),
     "data/traits/physiology/phenylalanine_arylamidase_activity.yaml": (
         "Add primary microbial literature evidence for phenylalanyl aminopeptidase/arylamidase catalysis and substrate cleavage before constructing causal_graphs.",
         "The current record carries two diagnostic enzyme-panel survey snippets (DOI:10.1099/ijsem.0.006017, DOI:10.1128/JCM.40.9.3427-3431.2002) without verbatim catalytic reaction quotes.",
-    ),
-    "data/traits/physiology/prolyl_aminopeptidase_activity.yaml": (
-        "Add primary microbial literature evidence linking Neisseria gonorrhoeae proline iminopeptidase (Pip) peptide cleavage to a physiological pathway step and strain-matched UniProtKB protein accessions before constructing causal_graphs.",
-        "The current record carries an IUBMB EC 3.4.11.5 reaction snippet, one sentence noting that Pip is a hydrolase elaborated by Neisseria gonorrhoeae (DOI:10.1111/j.1365-2958.1993.tb01249.x), and a diagnostic enzyme list (DOI:10.1099/ijsem.0.006017), without a second non-redundant mechanistic step or UniProtKB protein_examples.",
     ),
     "data/traits/physiology/pyrrolidonyl_arylamidase_activity.yaml": (
         "Add primary microbial literature evidence for pyroglutamyl-peptidase I (PyrA, EC 3.4.19.3) catalysis and physiological peptide turnover in the exemplar taxon before constructing causal_graphs.",
@@ -2953,8 +2942,298 @@ def build_cohort_f_discussion(rel_path: str, doc: dict[str, Any]) -> dict[str, A
     return discussion
 
 
+COHORT_G_PATHS: tuple[str, ...] = (
+    "data/traits/physiology/nad_dependent_alcohol_dehydrogenase_activity.yaml",
+    "data/traits/physiology/ornithine_decarboxylase_activity.yaml",
+    "data/traits/physiology/prolyl_aminopeptidase_activity.yaml",
+)
+
+COHORT_G_PROTEIN_GAPS: dict[str, tuple[str, str, int]] = {
+    "data/traits/physiology/nad_dependent_alcohol_dehydrogenase_activity.yaml": (
+        "Add strain-matched UniProtKB protein_examples for Zymomonas mobilis alcohol dehydrogenase II AdhB (UniProtKB:P0DTE6) so nad_dependent_alcohol_dehydrogenase_adh_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
+        "The record's primary literature (EC 1.1.1.1, DOI:10.1111/j.1432-1033.1986.tb09366.x, DOI:10.1128/jb.169.6.2591-2597.1987) establishes NAD-dependent alcohol dehydrogenase catalysis and adhB cloning/purification in Zymomonas mobilis (NCBITaxon:542), but a verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
+        1,
+    ),
+    "data/traits/physiology/ornithine_decarboxylase_activity.yaml": (
+        "Add strain-matched UniProtKB protein_examples for Escherichia coli K-12 biosynthetic ornithine decarboxylase SpeC (UniProtKB:P21169) so ornithine_decarboxylase_spec_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
+        "The record's primary literature (EC 4.1.1.17, DOI:10.1128/jb.124.2.791-799.1975) establishes L-ornithine decarboxylation to putrescine and CO2 and speC mutant loss of activity in Escherichia coli K-12 (NCBITaxon:83333), but a verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
+        1,
+    ),
+    "data/traits/physiology/prolyl_aminopeptidase_activity.yaml": (
+        "Add strain-matched UniProtKB protein_examples for Neisseria gonorrhoeae proline iminopeptidase Pip (UniProtKB:P40051) so prolyl_aminopeptidase_pip_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
+        "The record's primary literature (EC 3.4.11.5, DOI:10.1111/j.1365-2958.1993.tb01249.x) establishes N-terminal proline release from peptides by proline iminopeptidase (Pip) in Neisseria gonorrhoeae (NCBITaxon:485), but a verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
+        1,
+    ),
+}
+
+
+def build_cohort_g_graphs(rel_path: str, doc: dict[str, Any]) -> list[dict[str, Any]]:
+    """Construct the connected NONMECHANISTIC causal_graphs list for a Cohort G record."""
+    if rel_path == "data/traits/physiology/nad_dependent_alcohol_dehydrogenase_activity.yaml":
+        return [
+            {
+                "graph_id": "nad_dependent_alcohol_dehydrogenase_adh_sketch",
+                "title": "NAD-dependent alcohol dehydrogenase catalysis and NADH generation",
+                "description": (
+                    "Evidence-backed physiological mechanism sketch linking "
+                    "NAD-dependent alcohol dehydrogenase catalytic activity and "
+                    "NADH generation to the NAD-dependent alcohol dehydrogenase "
+                    "activity phenotype."
+                ),
+                "scope_status": "NONMECHANISTIC",
+                "scope_notes": (
+                    "Activity-and-reaction sketch backed by EC 1.1.1.1, "
+                    "DOI:10.1111/j.1432-1033.1986.tb09366.x, and "
+                    "DOI:10.1128/jb.169.6.2591-2597.1987; strain-matched UniProtKB "
+                    "protein examples for Zymomonas mobilis alcohol dehydrogenase II "
+                    "(AdhB, UniProtKB:P0DTE6) remain to be curated."
+                ),
+                "nodes": [
+                    {
+                        "node_id": "nad_dependent_alcohol_dehydrogenase_activity_trait",
+                        "label": "NAD-dependent alcohol dehydrogenase activity",
+                        "node_type": "TRAIT",
+                        "grounding": "traitmech:000165",
+                        "description": "Physiological enzyme-activity phenotype in which a cell produces active NAD-dependent alcohol dehydrogenases.",
+                    },
+                    {
+                        "node_id": "nad_dependent_alcohol_dehydrogenase_catalytic_activity",
+                        "label": "alcohol dehydrogenase (NAD+) activity",
+                        "node_type": "MOLECULAR_FUNCTION",
+                        "grounding": "GO:0004022",
+                        "description": "NAD-dependent oxidoreductase activity interconverting primary or secondary alcohols with aldehydes or ketones and generating NADH (EC 1.1.1.1).",
+                    },
+                    {
+                        "node_id": "nad_dependent_alcohol_dehydrogenase_nadh",
+                        "label": "NADH",
+                        "node_type": "CHEMICAL",
+                        "grounding": "CHEBI:16908",
+                        "description": "Reduced nicotinamide adenine dinucleotide cofactor produced during NAD+-dependent alcohol oxidation.",
+                    },
+                ],
+                "edges": [
+                    {
+                        "subject": "nad_dependent_alcohol_dehydrogenase_catalytic_activity",
+                        "predicate": "confers",
+                        "predicate_id": "METPO:2007700",
+                        "object": "nad_dependent_alcohol_dehydrogenase_activity_trait",
+                        "description": "Purified NAD-dependent alcohol dehydrogenase isoenzymes confer the organismal alcohol dehydrogenase activity phenotype.",
+                        "evidence": [
+                            _ev_item(
+                                doc,
+                                1,
+                                "Neale et al. purified and characterized the two native NAD-dependent alcohol dehydrogenase isoenzymes found in Zymomonas mobilis.",
+                            )
+                        ],
+                    },
+                    {
+                        "subject": "nad_dependent_alcohol_dehydrogenase_catalytic_activity",
+                        "predicate": "has output",
+                        "predicate_id": "RO:0002234",
+                        "object": "nad_dependent_alcohol_dehydrogenase_nadh",
+                        "description": "NAD-dependent alcohol dehydrogenase oxidizes primary or secondary alcohols with NAD+ to yield an aldehyde or ketone, NADH, and H+.",
+                        "evidence": [
+                            _ev_item(
+                                doc,
+                                0,
+                                "IUBMB EC 1.1.1.1 defines the NAD-dependent alcohol dehydrogenase reaction producing an aldehyde or ketone, NADH, and H+.",
+                            )
+                        ],
+                    },
+                ],
+            }
+        ]
+
+    if rel_path == "data/traits/physiology/ornithine_decarboxylase_activity.yaml":
+        return [
+            {
+                "graph_id": "ornithine_decarboxylase_spec_sketch",
+                "title": "Ornithine decarboxylase conversion of L-ornithine to putrescine",
+                "description": (
+                    "Evidence-backed physiological mechanism sketch linking "
+                    "ornithine decarboxylase catalytic activity and putrescine "
+                    "biosynthesis to the ornithine decarboxylase activity phenotype."
+                ),
+                "scope_status": "NONMECHANISTIC",
+                "scope_notes": (
+                    "Activity-and-reaction sketch backed by EC 4.1.1.17 and "
+                    "DOI:10.1128/jb.124.2.791-799.1975; strain-matched UniProtKB "
+                    "protein examples for Escherichia coli K-12 biosynthetic "
+                    "ornithine decarboxylase (SpeC, UniProtKB:P21169) remain to be curated."
+                ),
+                "nodes": [
+                    {
+                        "node_id": "ornithine_decarboxylase_activity_trait",
+                        "label": "ornithine decarboxylase activity",
+                        "node_type": "TRAIT",
+                        "grounding": "traitmech:000154",
+                        "description": "Physiological enzyme-activity phenotype in which a cell produces active ornithine decarboxylases that decarboxylate L-ornithine to putrescine and CO2.",
+                    },
+                    {
+                        "node_id": "ornithine_decarboxylase_catalytic_activity",
+                        "label": "ornithine decarboxylase activity",
+                        "node_type": "MOLECULAR_FUNCTION",
+                        "grounding": "GO:0004586",
+                        "description": "Catalytic decarboxylation of L-ornithine to putrescine and carbon dioxide (EC 4.1.1.17).",
+                    },
+                    {
+                        "node_id": "ornithine_decarboxylase_putrescine",
+                        "label": "putrescine",
+                        "node_type": "CHEMICAL",
+                        "grounding": "CHEBI:17148",
+                        "description": "Diamine putrescine produced by decarboxylation of L-ornithine.",
+                    },
+                ],
+                "edges": [
+                    {
+                        "subject": "ornithine_decarboxylase_catalytic_activity",
+                        "predicate": "confers",
+                        "predicate_id": "METPO:2007700",
+                        "object": "ornithine_decarboxylase_activity_trait",
+                        "description": "Cellular synthesis of active ornithine decarboxylase confers the ornithine decarboxylase activity phenotype, which is abolished in E. coli K-12 OD mutants.",
+                        "evidence": [
+                            _ev_item(
+                                doc,
+                                1,
+                                "Cunningham-Rundles and Maas show that Escherichia coli K-12 mutants blocked in ornithine decarboxylase synthesis exhibit a virtual absence of OD activity in cellular extracts.",
+                            )
+                        ],
+                    },
+                    {
+                        "subject": "ornithine_decarboxylase_catalytic_activity",
+                        "predicate": "has output",
+                        "predicate_id": "RO:0002234",
+                        "object": "ornithine_decarboxylase_putrescine",
+                        "description": "Ornithine decarboxylase converts L-ornithine into putrescine and carbon dioxide.",
+                        "evidence": [
+                            _ev_item(
+                                doc,
+                                0,
+                                "IUBMB EC 4.1.1.17 defines the ornithine decarboxylase reaction converting L-ornithine into putrescine and CO2.",
+                            )
+                        ],
+                    },
+                ],
+            }
+        ]
+
+    if rel_path == "data/traits/physiology/prolyl_aminopeptidase_activity.yaml":
+        return [
+            {
+                "graph_id": "prolyl_aminopeptidase_pip_sketch",
+                "title": "Prolyl aminopeptidase (Pip) hydrolytic release of N-terminal L-proline",
+                "description": (
+                    "Evidence-backed physiological mechanism sketch linking "
+                    "prolyl aminopeptidase catalytic activity and N-terminal "
+                    "L-proline release from peptides to the prolyl aminopeptidase "
+                    "activity phenotype."
+                ),
+                "scope_status": "NONMECHANISTIC",
+                "scope_notes": (
+                    "Activity-and-reaction sketch backed by EC 3.4.11.5 and "
+                    "DOI:10.1111/j.1365-2958.1993.tb01249.x; strain-matched UniProtKB "
+                    "protein examples for Neisseria gonorrhoeae proline iminopeptidase "
+                    "(Pip, UniProtKB:P40051) remain to be curated."
+                ),
+                "nodes": [
+                    {
+                        "node_id": "prolyl_aminopeptidase_activity_trait",
+                        "label": "prolyl aminopeptidase activity",
+                        "node_type": "TRAIT",
+                        "grounding": "traitmech:000166",
+                        "description": "Physiological enzyme-activity phenotype in which a cell produces active prolyl aminopeptidases that release N-terminal proline residues from peptides.",
+                    },
+                    {
+                        "node_id": "prolyl_aminopeptidase_catalytic_activity",
+                        "label": "aminopeptidase activity",
+                        "node_type": "MOLECULAR_FUNCTION",
+                        "grounding": "GO:0004177",
+                        "description": "Prolyl aminopeptidase / proline iminopeptidase catalytic activity selectively cleaving N-terminal proline residues from peptides (EC 3.4.11.5).",
+                    },
+                    {
+                        "node_id": "prolyl_aminopeptidase_proline",
+                        "label": "L-proline",
+                        "node_type": "CHEMICAL",
+                        "grounding": "CHEBI:17203",
+                        "description": "Free L-proline released from the N-terminus of peptides by prolyl aminopeptidase hydrolysis.",
+                    },
+                ],
+                "edges": [
+                    {
+                        "subject": "prolyl_aminopeptidase_catalytic_activity",
+                        "predicate": "confers",
+                        "predicate_id": "METPO:2007700",
+                        "object": "prolyl_aminopeptidase_activity_trait",
+                        "description": "Elaboration of proline iminopeptidase (Pip) hydrolase activity selectively removing N-terminal proline residues from peptides confers the prolyl aminopeptidase activity phenotype.",
+                        "evidence": [
+                            _ev_item(
+                                doc,
+                                1,
+                                "Albertson and Koomey show that proline iminopeptidase (Pip) is a hydrolase elaborated by Neisseria gonorrhoeae that selectively removes N-terminal proline residues from peptides.",
+                            )
+                        ],
+                    },
+                    {
+                        "subject": "prolyl_aminopeptidase_catalytic_activity",
+                        "predicate": "has output",
+                        "predicate_id": "RO:0002234",
+                        "object": "prolyl_aminopeptidase_proline",
+                        "description": "Prolyl aminopeptidase catalyzes the hydrolytic release of N-terminal proline from a peptide.",
+                        "evidence": [
+                            _ev_item(
+                                doc,
+                                0,
+                                "IUBMB EC 3.4.11.5 defines the prolyl aminopeptidase reaction as the release of N-terminal proline from a peptide.",
+                            )
+                        ],
+                    },
+                ],
+            }
+        ]
+
+    raise KeyError(f"Unexpected Cohort G path: {rel_path}")
+
+
+def build_cohort_g_discussion(rel_path: str, doc: dict[str, Any], graph_id: str) -> dict[str, Any]:
+    """Construct the CURATION_TODO DiscussionItem for a Cohort G record."""
+    slug = Path(rel_path).stem.replace("_", "-")
+    prompt, rationale, ev_index = COHORT_G_PROTEIN_GAPS[rel_path]
+    ev_list = doc.get("evidence") or []
+    supporting_ev: list[dict[str, str]] = []
+    if len(ev_list) > ev_index and isinstance(ev_list[ev_index], dict):
+        src = ev_list[ev_index]
+        ref = str(src.get("reference") or "").strip()
+        snip = str(src.get("snippet") or "").strip()
+        if ref and snip:
+            supporting_ev.append(
+                {
+                    "reference": ref,
+                    "supports": "PARTIAL",
+                    "snippet": snip,
+                    "explanation": (
+                        "Existing record-level evidence supports the connected "
+                        "NONMECHANISTIC pathway/function graph but does not provide "
+                        "strain-matched UniProtKB protein accessions for protein_examples."
+                    ),
+                }
+            )
+    discussion: dict[str, Any] = {
+        "discussion_id": f"{slug}-protein-example-gap",
+        "prompt": prompt,
+        "kind": "CURATION_TODO",
+        "status": "OPEN",
+        "attaches_to": [f"causal_graphs#{graph_id}"],
+        "rationale": rationale,
+        "posed_by": CURATOR,
+        "posed_date": POSED_DATE_C4,
+    }
+    if supporting_ev:
+        discussion["evidence"] = supporting_ev
+    return discussion
+
+
 def process_all(apply: bool = False) -> tuple[int, int]:
-    """Process Cohort A, B, C, D, E, and F records. Returns (graphs_added, gaps_added)."""
+    """Process Cohort A, B, C, D, E, F, and G records. Returns (graphs_added, gaps_added)."""
     graphs_added = 0
     gaps_added = 0
 
@@ -3259,6 +3538,93 @@ def process_all(apply: bool = False) -> tuple[int, int]:
         if apply:
             write_validated_trait(doc, path)
         gaps_added += 1
+
+    for rel_path in COHORT_G_PATHS:
+        path = REPO_ROOT / rel_path
+        doc = yaml.safe_load(path.read_text(encoding="utf-8"))
+        graphs = build_cohort_g_graphs(rel_path, doc)
+        graph_id = graphs[0]["graph_id"]
+        disc = build_cohort_g_discussion(rel_path, doc, graph_id)
+        disc_id = disc["discussion_id"]
+        existing_disc = doc.get("discussions") or []
+        matched = [
+            d for d in existing_disc if isinstance(d, dict) and d.get("discussion_id") == disc_id
+        ]
+        existing_graphs = doc.get("causal_graphs") or []
+        source_gap_id = f"{path.stem.replace('_', '-')}-causal-graph-source-gap"
+        open_source_gaps = [
+            d
+            for d in existing_disc
+            if isinstance(d, dict)
+            and d.get("discussion_id") == source_gap_id
+            and (
+                d.get("status") == "OPEN"
+                or d.get("attaches_to") != [f"causal_graphs#{graph_id}"]
+            )
+        ]
+        if existing_graphs == graphs and matched and matched[0] == disc and not open_source_gaps:
+            continue
+        if (
+            len(existing_graphs) == 1
+            and existing_graphs[0].get("graph_id") == graph_id
+            and matched
+            and matched[0].get("kind") == "CURATION_TODO"
+            and matched[0].get("attaches_to") == [f"causal_graphs#{graph_id}"]
+            and not open_source_gaps
+            and (
+                (
+                    existing_graphs[0].get("scope_status") == "MECHANISTIC"
+                    and matched[0].get("status") == "RESOLVED"
+                    and matched[0].get("resolution_note")
+                )
+                or (
+                    existing_graphs == graphs
+                    and matched[0].get("status") == "OPEN"
+                    and matched[0].get("notes")
+                )
+            )
+        ):
+            _verify_graph_invariants(rel_path, doc, existing_graphs)
+            continue
+        _verify_graph_invariants(rel_path, doc, graphs)
+        doc["causal_graphs"] = graphs
+        for d in existing_disc:
+            if isinstance(d, dict) and d.get("discussion_id") == source_gap_id:
+                d["status"] = "RESOLVED"
+                d["resolved_date"] = POSED_DATE_C4
+                d["attaches_to"] = [f"causal_graphs#{graph_id}"]
+                d["resolution_note"] = (
+                    f"Added connected NONMECHANISTIC causal_graphs entry ({graph_id}) "
+                    "anchored on existing verbatim record evidence snippets, and "
+                    "tracked the remaining strain-matched UniProtKB protein-example "
+                    f"requirement in {disc_id}."
+                )
+        if matched:
+            for idx, d in enumerate(existing_disc):
+                if isinstance(d, dict) and d.get("discussion_id") == disc_id:
+                    existing_disc[idx] = disc
+            doc["discussions"] = existing_disc
+        else:
+            existing_disc.append(disc)
+            doc["discussions"] = existing_disc
+            scope_status = graphs[0]["scope_status"]
+            record_curation_event(
+                doc,
+                action=CURATION_ACTION_GRAPH,
+                curator=CURATOR,
+                changes=(
+                    f"Added {scope_status} causal_graphs entry ({graph_id}) "
+                    f"and OPEN CURATION_TODO discussion ({disc_id}) anchored on "
+                    "existing verbatim record evidence snippets."
+                ),
+                llm_assisted=True,
+            )
+        errors = validate_trait(doc)
+        if errors:
+            raise ValidationFailedError(path, errors)
+        if apply:
+            write_validated_trait(doc, path)
+        graphs_added += 1
 
     return graphs_added, gaps_added
 
