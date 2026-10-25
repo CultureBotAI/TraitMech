@@ -15,6 +15,7 @@ synonyms:
   source: DOI:10.1007/s00018-003-3206-5
 evidence:
 - reference: DOI:10.1007/s00018-003-3206-5
+  snippet: hydrogen peroxide to water and molecular oxygen, serving to protect cells
   notes: Chelikani, Fita & Loewen review the diversity of catalases, enzymes that
     dismutate hydrogen peroxide to water and oxygen.
 - reference: DOI:10.1038/nrmicro3032
@@ -443,4 +444,12 @@ curation_history:
   changes: Added reviewed E. coli K-12 OxyR protein_example UniProtKB:P0ACQ4 (v144)
     on oxyr_regulator (DOI:10.1073/pnas.96.11.6161), updated scope_notes, and refreshed
     UniProtKB:Q2G282 entry_version 109 -> 110 on perr_regulator.
+  llm_assisted: true
+- timestamp: '2026-10-25T21:40:00Z'
+  curator: claude
+  action: ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE
+  changes: 'Added verified verbatim snippet from DOI:10.1007/s00018-003-3206-5 (already
+    present on oxidative_stress_response.yaml evidence[1]) to record-level evidence[0]
+    to match definition_source (Cycle 5 Stage 5 remediation of F-C5S4-DEF-SRC-007
+    in group G-C5S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).'
   llm_assisted: true

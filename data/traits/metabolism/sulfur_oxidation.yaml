@@ -15,6 +15,7 @@ synonyms:
   source: DOI:10.1111/j.1574-6976.2009.00187.x
 evidence:
 - reference: DOI:10.1111/j.1574-6976.2009.00187.x
+  snippet: lithotrophic sulfur oxidation
   notes: Ghosh & Dam review the biochemistry and molecular biology of lithotrophic
     sulfur oxidation across bacteria and archaea.
 - reference: DOI:10.1128/AEM.67.7.2873-2882.2001
@@ -300,4 +301,13 @@ curation_history:
   changes: Scoped the cross-taxon sulfur-oxidation mechanism, added a DOI-backed Thiobacillus
     denitrificans SQR protein example, and documented why the broad Sox, PDO, and
     TetH labels remain reviewed label-only nodes.
+  llm_assisted: true
+- timestamp: '2026-10-25T21:40:00Z'
+  curator: claude
+  action: ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE
+  changes: 'Added verified verbatim snippet from DOI:10.1111/j.1574-6976.2009.00187.x
+    (already present on lithotrophic.yaml causal_graphs[0].edges[2].evidence[0]) to
+    record-level evidence[0] to match definition_source (Cycle 5 Stage 5 remediation
+    of F-C5S4-DEF-SRC-006 in group G-C5S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS,
+    issue #2002).'
   llm_assisted: true
